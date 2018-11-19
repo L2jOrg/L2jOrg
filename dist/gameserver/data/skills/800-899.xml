@@ -1,0 +1,1731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="800" levels="3" name="Master Ability: M. Def.">
+		<!--
+			Last modify:	03.02.2009
+			Description:	M. Def. is increased.
+		-->
+		<table name="#mDef">50 100 150</table>
+		<set name="icon" value="icon.skill0142"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" value="#mDef" stat="mDef"/>
+		</for>
+	</skill>
+	<skill id="801" levels="1" name="Warrior Ability: Boost CP">
+		<!--
+			Last modify:	03.02.2009
+			Description: Max. CP is increased.
+		-->
+		<set name="icon" value="icon.skill0440"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" value="738" stat="maxCp"/>
+		</for>
+	</skill>
+	<skill id="802" levels="1" name="Wizard Ability: Anti-magic">
+		<!--
+			Last modify:	03.02.2009
+			Description:
+			The probability of resisting damage magic is increased.
+		-->
+		<set name="icon" value="icon.skill0146"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" value="100" stat="mDef"/>
+		</for>
+	</skill>
+	<skill id="803" levels="1" name="Healer Ability: Divine Protection">
+		<!--
+			Last modify:	03.02.2009
+			Description:
+			Resistance to darkness/divinity attribute attacks is increased.
+		-->
+		<set name="icon" value="icon.skill1353"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" stat="defenceUnholy" value="5"/>
+			<add order="0x60" stat="defenceHoly" value="5"/>
+		</for>
+	</skill>
+	<skill id="804" levels="1" name="Knight Ability: Critical Damage Resistance">
+		<!--
+			Last modify:	03.02.2009
+			Description:
+			Received Critical damage is decreased.
+		-->
+		<set name="icon" value="icon.skill0232"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pCritDamRcpt" value="0.95"/>
+		</for>
+	</skill>
+	<skill id="805" levels="1" name="Not in Use">
+		<set name="icon" value="icon.skill0142"/>
+		<set name="magicLevel" value="75"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="806" levels="1" name="Magic Obstacle">
+		<!--
+			Description: Blows away Enhanced Abnormal Conditions of the enemies around the golem.
+		-->
+		<set name="icon" value="icon.skill_transform_etc"/>
+		<set name="reuseDelay" value="75000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="49"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="83"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="affect_range" value="200"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="reflectable" value="false"/>
+		<for>
+			<effect name="i_dispel_by_category">
+				<def name="abnormal_category" value="slot_buff"/>
+				<def name="dispel_chance" value="80"/>
+				<def name="max_count" value="5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="807" levels="1" name="Over-hit">
+		<!--
+			Last modify:	17.09.2008
+			Description: Increases the golem's power more by filling him up with special fuel.
+		-->
+		<set name="icon" value="icon.skill_transform_buff"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="25"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="99"/>
+		<set name="abnormal_type" value="pa_up"/>
+		<set name="magicLevel" value="83"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pAtk" value="1.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="808" levels="1" name="Golem Punch">
+		<!--
+			Last modify:	20.05.2009
+			Description: Throws a powerful punch with 11205 Power that both stuns and inflicts damage to an enemy. Over-hit is possible.
+		-->
+		<set name="icon" value="icon.skill_transform_debuff"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="53"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="83"/>
+		<set name="power" value="11205"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="50"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="overHit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="nextAction" value="attack"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="809" levels="1" name="Golem Tornado Swing">
+		<!--
+			Last modify:	20.05.2009
+			Description: Spinning attack strikes enemy with 6199 Power. Over-hit is possible.
+		-->
+		<set name="icon" value="icon.skill_transform_s_attack"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="53"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="83"/>
+		<set name="power" value="6199"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="50"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="overHit" value="true"/>
+		<set name="affect_range" value="200"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="814" levels="43" name="Full Swing">
+		<!--
+		      Description: Attacks nearby enemies by widely swinging a two-handed weapon. Requires a two-handed weapon. Ignores Shield Defense. Over-hit is possible. Power 744-3480.
+		-->
+		<table name="#power">893 945 998 1054 1112 1172 1234 1298 1365 1433 1503 1575 1649 1725 1803 1882 1963 2045 2129 2214 2301 2388 2476 2565 2655 2745 2836 2927 3018 3108 3198 3288 3376 3464 3551 3636 3720 3801 3881 3959 4034 4107 4176</table>
+		<table name="#magicLevel">43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#mp_consume">41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83</table>
+		<set name="icon" value="icon.skill0814"/>
+		<set name="reuseDelay" value="11000"/>
+		<set name="coolTime" value="732"/>
+		<set name="hitTime" value="1067"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="affectLimit" value="6;12"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="affect_range" value="100"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="shieldignore" value="true"/>
+		<set name="criticalRate" value="10"/>
+		<set name="overHit" value="true"/>
+		<cond msgId="113">
+			<using kind="Big Sword, Big Blunt, Pole"/>
+		</cond>
+	</skill>
+	<skill id="815" levels="43" name="Blade Hurricane">
+		<!--
+		      Description: Attacks nearby enemies with a dualsword. Requires a dual-sword weapon. Ignores Shield Defense. Over-hit is possible. Power 744-3480.
+		-->
+		<table name="#power">893 945 998 1054 1112 1172 1234 1298 1365 1433 1503 1575 1649 1725 1803 1882 1963 2045 2129 2214 2301 2388 2476 2565 2655 2745 2836 2927 3018 3108 3198 3288 3376 3464 3551 3636 3720 3801 3881 3959 4034 4107 4176</table>
+		<table name="#magicLevel">43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#mp_consume">41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83</table>
+		<set name="icon" value="icon.skill0815"/>
+		<set name="reuseDelay" value="11000"/>
+		<set name="coolTime" value="732"/>
+		<set name="hitTime" value="1067"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="affectLimit" value="6;12"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="affect_range" value="100"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="shieldignore" value="true"/>
+		<set name="criticalRate" value="10"/>
+		<set name="overHit" value="true"/>
+		<cond msgId="113">
+			<using kind="Dual Sword"/>
+		</cond>
+	</skill>
+	<skill id="816" levels="43" name="Cleave">
+		<!--
+		      Description: Delivers a powerful blow that seems to cleave the enemy in half. Requires a two-handed sword or two-handed blunt weapon. Ignores Shield Defense. Over-hit is possible. Power 744.
+		-->
+		<table name="#power">992 1049 1109 1171 1236 1302 1371 1443 1516 1592 1670 1750 1832 1917 2003 2091 2181 2272 2366 2460 2556 2653 2751 2850 2950 3050 3151 3252 3353 3453 3553 3653 3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640</table>
+		<table name="#magicLevel">43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#mp_consume">41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83</table>
+		<set name="icon" value="icon.skill0816"/>
+		<set name="reuseDelay" value="4000"/>
+		<set name="coolTime" value="1080"/>
+		<set name="hitTime" value="1620"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="hpConsume" value="1"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="shieldignore" value="true"/>
+		<set name="overHit" value="true"/>
+		<cond msgId="113">
+			<using kind="Big Sword, Big Blunt"/>
+		</cond>
+	</skill>
+	<skill id="817" levels="43" name="Double Attack">
+		<!--
+		      Description: Delivers a powerful blow to the enemy by alternating between two swords. Requires a dual-sword weapon. Ignores Shield Defense. Over-hit is possible. Power 744.
+		-->
+		<table name="#power">992 1049 1109 1171 1236 1302 1371 1443 1516 1592 1670 1750 1832 1917 2003 2091 2181 2272 2366 2460 2556 2653 2751 2850 2950 3050 3151 3252 3353 3453 3553 3653 3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640</table>
+		<table name="#magicLevel">43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#mp_consume">41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83</table>
+		<set name="icon" value="icon.skill0817"/>
+		<set name="reuseDelay" value="4000"/>
+		<set name="coolTime" value="167"/>
+		<set name="hitTime" value="1733"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="shieldignore" value="true"/>
+		<set name="criticalRate" value="10"/>
+		<set name="overHit" value="true"/>
+		<cond msgId="113">
+			<using kind="Dual Sword"/>
+		</cond>
+	</skill>
+	<skill id="818" levels="1" name="Evasion Counter">
+		<!--
+			Description:
+			During Evasion, counters by stunning the enemy and renders him senseless.
+		-->
+		<set name="icon" value="icon.skill0818"/>
+		<set name="magicLevel" value="74"/>
+		<set name="operate_type" value="P"/>
+		<triggers>
+			<trigger id="5673" level="1" type="UNDER_MISSED_ATTACK" chance="5"/>
+		</triggers>
+	</skill>
+	<skill id="819" levels="1" name="Evasion Chance">
+		<!--
+			Description:
+			During Evasion, increases the rate of successfully striking an enemy's vital organs.
+		-->
+		<set name="icon" value="icon.skill0819"/>
+		<set name="magicLevel" value="74"/>
+		<set name="operate_type" value="P"/>
+		<triggers>
+			<trigger id="5674" level="1" type="UNDER_MISSED_ATTACK" chance="5"/>
+		</triggers>
+	</skill>
+	<skill id="820" levels="1" name="Evasion Haste">
+		<!--
+			Description:
+			During Evasion, increases your Atk. Spd.
+		-->
+		<set name="icon" value="icon.skill0820"/>
+		<set name="magicLevel" value="74"/>
+		<set name="operate_type" value="P"/>
+		<triggers>
+			<trigger id="5675" level="1" type="UNDER_MISSED_ATTACK" chance="5"/>
+		</triggers>
+	</skill>
+	<skill id="821" levels="8" name="Shadow Step">
+		<table name="#mp_consume">50 55 60 65 70 75 80 85</table>
+		<set name="icon" value="icon.skill0821"/>
+		<set name="reuseDelay" value="60000"/>
+		<set name="coolTime" value="200"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="100"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="abnormal_time" value="1"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="40"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="fly_type" value="DUMMY"/>
+		<set name="fly_radius" value="600"/>
+		<set name="fly_position_degree" value="180"/>
+		<set name="fly_depends_on_heading" value="true"/>
+		<set name="isOffensive" value="true"/>
+		<set name="nextAction" value="none"/>
+		<for>
+			<effect name="i_target_cancel">
+				<def name="stop_target" value="true"/>
+			</effect>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="822" levels="3" name="Repair Golem">
+		<!--
+		      Last modify: 23.08.2008
+		      Description: Repairs a summoned golem.
+		-->
+		<table name="#effectPoint">362 467 562</table>
+		<table name="#power">8 12 15</table>
+		<table name="#magicLevel">40 49 55</table>
+		<table name="#mp_consume">61 78 88</table>
+		<set name="icon" value="icon.skill0822"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_SUMMON"/>
+		<set name="skillType" value="HEAL_PERCENT"/>
+		<set name="operate_type" value="A2"/>
+		<cond msgId="144">
+			<target race="MagicCreatures"/>
+		</cond>
+		<for>
+			<effect instant="true" name="RestoreHP" value="#power">
+				<def name="percent" value="true"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="823" levels="3" name="Strengthen Golem">
+		<!--
+		      Last modify: 23.08.2008
+		      Description: Temporarily increases a summoned golem's attack power and Atk. Spd. Effect 1,2,3.
+		-->
+		<table name="#TabpAtk">1.08 1.12 1.15</table>
+		<table name="#TabpAtkSpd">1.03 1.06 1.09</table>
+		<table name="#effectPoint">418 495 572</table>
+		<table name="#magicLevel">43 52 58</table>
+		<table name="#mp_consume">24 36 42</table>
+		<set name="icon" value="icon.skill0823"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="pa_up"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_SUMMON"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<cond msgId="144">
+			<target race="MagicCreatures"/>
+		</cond>
+		<for>
+			<effect>
+				<mul stat="pAtkSpd" value="#TabpAtkSpd"/>
+				<mul stat="pAtk" value="#TabpAtk"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="824" levels="3" name="Golem Reinforcement">
+		<!--
+		      Last modify: 23.08.2008
+		      Description: Temporarily equips a summoned golem with an additional armor plate to increase P. Def. and maximum HP. Effect 1,2,3.
+		-->
+		<table name="#TabpDef">1.08 1.12 1.15</table>
+		<table name="#TabmaxHp">1.05 1.08 1.1</table>
+		<table name="#effectPoint">362 467 562</table>
+		<table name="#magicLevel">40 49 55</table>
+		<table name="#mp_consume">35 44 44</table>
+		<set name="icon" value="icon.skill0824"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="pd_up"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_SUMMON"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<cond msgId="144">
+			<target race="MagicCreatures"/>
+		</cond>
+		<for>
+			<effect>
+				<mul stat="maxHp" value="#TabmaxHp"/>
+				<mul stat="pDef" value="#TabpDef"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="825" levels="1" name="Sharpen Edge">
+		<!--
+		      Last modify: 03.05.2009
+		      Description: Sharpens a bladed weapon to increase P. Atk. by 5% and critical rate by 20% for 10 minutes.
+		-->
+		<set name="icon" value="icon.skill0825"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="44"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="dwarf_attack_buff"/>
+		<set name="magicLevel" value="49"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pAtk" value="1.05">
+					<not>
+						<using kind="Blunt, Big Blunt, Bow"/>
+					</not>
+				</mul>
+				<add stat="pCritRate" value="20">
+					<not>
+						<using kind="Blunt, Big Blunt, Bow"/>
+					</not>
+				</add>
+			</effect>
+		</for>
+	</skill>
+	<skill id="826" levels="1" name="Spike">
+		<!--
+		      Last modify: 03.05.2009
+		      Description: Adds a spike to a blunt weapon to increase P. Atk. by 5 and its weight for shock attack by 8 for 10 minutes.
+		-->
+		<set name="icon" value="icon.skill0826"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="44"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="dwarf_attack_buff"/>
+		<set name="magicLevel" value="49"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pAtk" value="1.05">
+					<using kind="Blunt, Big Blunt"/>
+				</mul>
+				<p_attack_trait name="shock" value="8">
+					<using kind="Blunt, Big Blunt"/>
+				</p_attack_trait>
+			</effect>
+		</for>
+	</skill>
+	<skill id="827" levels="1" name="Bowstring">
+		<!--
+		      Last modify: 03.05.2008
+		      Description: Enhances the string of a bow or crossbow to increase P. Atk. by 5% and range by 100 for 10 minutes.
+		-->
+		<set name="icon" value="icon.skill0827"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="44"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="dwarf_attack_buff"/>
+		<set name="magicLevel" value="49"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pAtk" value="1.05">
+					<using kind="Bow"/>
+				</mul>
+				<add order="0x10" stat="pAtkRange" value="100">
+					<using kind="Bow"/>
+				</add>
+			</effect>
+		</for>
+	</skill>
+	<skill id="828" levels="1" name="Encase Armor">
+		<!--
+		      Last modify: 01.09.2008
+		      Description: Enhances the armor surface to increase P. Def. by 10% for 10 minutes.
+		-->
+		<set name="icon" value="icon.skill0828"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="41"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="dwarf_defence_buff"/>
+		<set name="magicLevel" value="46"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pDef" value="1.1">
+					<using armor="Heavy"/>
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="829" levels="1" name="Hard Tanning">
+		<!--
+		      Last modify: 01.09.2008
+		      Description: Tans armor to increase P. Def. by 5% and evasion by 2 for 10 minutes.
+		-->
+		<set name="icon" value="icon.skill0829"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="41"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="dwarf_defence_buff"/>
+		<set name="magicLevel" value="46"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pDef" value="1.05">
+					<using armor="Light"/>
+				</mul>
+				<add stat="pEvasRate" value="2">
+					<using armor="Light"/>
+				</add>
+			</effect>
+		</for>
+	</skill>
+	<skill id="830" levels="1" name="Embroider">
+		<!--
+		      Last modify: 03.05.2009
+		      Description: Embroiders a robe to increase P. Def. by 5% and MP recovery speed by 2 for 10 minutes.
+		-->
+		<set name="icon" value="icon.skill0830"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="41"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="dwarf_defence_buff"/>
+		<set name="magicLevel" value="46"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pDef" value="1.05">
+					<using armor="Magic"/>
+				</mul>
+				<add stat="regMp" value="2">
+					<using armor="Magic"/>
+				</add>
+			</effect>
+		</for>
+	</skill>
+	<skill id="832" levels="2" name="Fast Recovery">
+		<table name="#regHp">1.6 3.2</table>
+		<table name="#regMp">1.3 2.6</table>
+		<table name="#regCp">1.4 2.8</table>
+		<set name="icon" value="icon.skill0832"/>
+		<set name="magicLevel" value="43"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x10" stat="regHp" value="#regHp"/>
+			<mul stat="regMp" value="#regMp"/>
+			<mul stat="regCp" value="#regCp"/>
+		</for>
+	</skill>
+	<skill id="833" levels="1" name="Body Reconstruction">
+		<!--
+			Last modify: 18.09.2008
+			Description: Recovers all HP by reconstructing your body.
+		-->
+		<set name="icon" value="icon.skill0833"/>
+		<set name="reuseDelay" value="900000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="94"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="52"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HEAL_PERCENT"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect instant="true" name="RestoreHP" value="100">
+				<def name="percent" value="true"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="834" levels="1" name="Blood Pact">
+		<!--
+			Last modify: 03.05.2009
+			Description: Through a blood contract, increases party members' maximum HP by 10% and HP recovery bonus by 10 for 2 minutes.
+		-->
+		<table name="#effectPoint">611</table>
+		<set name="icon" value="icon.skill0834"/>
+		<set name="reuseDelay" value="75000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="50"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="blood_constract"/>
+		<set name="magicLevel" value="55"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="affect_range" value="1000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="maxHp" value="1.1"/>
+				<add stat="regHp" value="10"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="835" levels="4" name="Imbue Seed of Destruction">
+		<!--
+			Need correct: reuseDelay
+			Last modify: 29.10.2008
+			Description: Plants a Seed of Destruction in the enemy's body. The seed grows inside the body, sucking up the enemy's mana, and blocks the enemy's skill use when it becomes fully grown. Consumes 1 Dark Seed.
+		-->
+		<table name="#dmg">21 34 40 56</table>
+		<table name="#magicLevel">68 70 72 74</table>
+		<set name="icon" value="icon.skill0835"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="coolTime" value="720"/>
+		<set name="hitTime" value="1799"/>
+		<set name="mp_consume" value="30"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="8"/>
+		<set name="abnormal_type" value="dark_seed"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="itemConsumeId" value="10112"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="trait" value="BLEED"/>
+		<for>
+			<effect name="ManaDamOverTime" interval="1" value="#dmg">
+				<triggers>
+					<trigger id="5697" level="1" type="ON_FINISH_EFFECT"/>
+				</triggers>
+			</effect>
+		</for>
+	</skill>
+	<skill id="837" levels="1" name="Painkiller">
+		<!--
+		      Description: For 8 seconds, becomes invincible, suppressing pain and not incurring damage.
+		-->
+		<set name="icon" value="icon.skill0837"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="mp_consume" value="53"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="INVINCIBILITY"/>
+		<set name="abnormal_time" value="8"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="invincibility"/>
+		<set name="abnormal_cancel_on_action" value="true"/>
+		<set name="magicLevel" value="58"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="Invulnerable"/>
+			<effect name="p_block_debuff"/>
+		</for>
+	</skill>
+	<skill id="838" levels="1" name="Switch Stance">
+		<!--
+		      Description: Switches from an attack stance to a basic stance.
+		-->
+		<set name="icon" value="icon.skilltransform2"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="hitTime" value="5000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="43"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="useSS" value="false"/>
+		<for>
+			<effect instant="true" name="Transformation"/>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="transform"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="839" levels="1" name="Dismounts from a kukuru.">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Dismounts from a ridable mount.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.skilltransform2"/>
+		<set name="hitTime" value="2500"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="56"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="useSS" value="false"/>
+		<for>
+			<effect instant="true" name="Transformation"/>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="transform"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="843" levels="1" name="Shooting Star">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Fires a star fragment. Power 3422.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.skill0843"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="60"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="85"/>
+		<set name="power" value="3422"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="844" levels="1" name="Outpost Construction">
+		<!--
+			Last modify:	06.11.2009
+			Description:	Constructs an outpost that assists clan member recovery and reinforcement during territory battles. Territory ward capture is possible. Consumes 120 B-Grade Gemstones.
+		-->
+		<set name="icon" value="icon.skill0247"/>
+		<set name="reuseDelay" value="600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="30"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="4000"/>
+		<set name="itemConsumeId" value="2132"/>
+		<set name="itemConsumeCount" value="120"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON_FLAG"/>
+		<set name="flagType" value="OUTPOST"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSkillTimePermanent" value="true"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="845" levels="1" name="Outpost Demolition">
+		<!--
+			Last modify:	06.11.2009
+			Description:	Demolishes an outpost. After demolition, a new outpost can be constructed.
+		-->
+		<set name="icon" value="icon.skill0247"/>
+		<set name="reuseDelay" value="600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="30"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="4000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON_FLAG"/>
+		<set name="flagType" value="DESTROY"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSkillTimePermanent" value="true"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="846" levels="1" name="Possess Ward">
+		<!--
+			Last modify:	13.11.2009
+			Description: Possesses the territory ward, decreasing various battle abilities.
+		-->
+		<set name="icon" value="icon.weapon_fort_flag_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="runSpd" value="0.7"/>
+			<mul stat="mDef" value="0.7"/>
+			<mul stat="pDef" value="0.7"/>
+		</for>
+	</skill>
+	<skill id="847" levels="1" name="Ward Transport">
+		<!--
+			Last modify:	13.11.2009
+			Description:	With an opposing ward in hand, go back to your outpost and use this skill to move the ward back to your castle.
+		-->
+		<set name="icon" value="icon.weapon_fort_flag_i00"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="castRange" value="85"/>
+		<set name="hitTime" value="180000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSkillTimePermanent" value="true"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="848" levels="1" name="Gludio Territory Benefaction">
+		<!--
+		      Last modify: 25.06.2009
+		      Description: STR+1 / INT+1
+		-->
+		<set name="icon" value="icon.weapon_fort_flag_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" stat="STR" value="1"/>
+			<add order="0x60" stat="INT" value="1"/>
+		</for>
+	</skill>
+	<skill id="849" levels="1" name="Dion Territory Benefaction">
+		<!--
+		      Last modify: 25.06.2009
+		      Description: DEX+1 / WIT+1
+		-->
+		<set name="icon" value="icon.weapon_fort_flag_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" stat="DEX" value="1"/>
+			<add order="0x60" stat="WIT" value="1"/>
+		</for>
+	</skill>
+	<skill id="850" levels="1" name="Giran Territory Benefaction">
+		<!--
+		      Last modify: 25.06.2009
+		      Description: STR+1 / MEN+1
+		-->
+		<set name="icon" value="icon.weapon_fort_flag_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" stat="STR" value="1"/>
+			<add order="0x60" stat="MEN" value="1"/>
+		</for>
+	</skill>
+	<skill id="851" levels="1" name="Oren Territory Benefaction">
+		<!--
+		      Last modify: 25.06.2009
+		      Description: CON+1 / MEN+1
+		-->
+		<set name="icon" value="icon.weapon_fort_flag_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" stat="CON" value="1"/>
+			<add order="0x60" stat="MEN" value="1"/>
+		</for>
+	</skill>
+	<skill id="852" levels="1" name="Aden Territory Benefaction">
+		<!--
+		      Last modify: 25.06.2009
+		      Description: DEX+1 / MEN+1
+		-->
+		<set name="icon" value="icon.weapon_fort_flag_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" stat="DEX" value="1"/>
+			<add order="0x60" stat="MEN" value="1"/>
+		</for>
+	</skill>
+	<skill id="853" levels="1" name="Innadril Territory Benefaction">
+		<!--
+		      Last modify: 25.06.2009
+		      Description: CON+1 / INT+1
+		-->
+		<set name="icon" value="icon.weapon_fort_flag_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" stat="CON" value="1"/>
+			<add order="0x60" stat="INT" value="1"/>
+		</for>
+	</skill>
+	<skill id="854" levels="1" name="Goddard Territory Benefaction">
+		<!--
+		      Last modify: 25.06.2009
+		      Description: DEX+1 / INT+1
+		-->
+		<set name="icon" value="icon.weapon_fort_flag_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" stat="DEX" value="1"/>
+			<add order="0x60" stat="INT" value="1"/>
+		</for>
+	</skill>
+	<skill id="855" levels="1" name="Rune Territory Benefaction">
+		<!--
+		      Last modify: 25.06.2009
+		      Description: STR+1 / WIT+1
+		-->
+		<set name="icon" value="icon.weapon_fort_flag_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" stat="STR" value="1"/>
+			<add order="0x60" stat="WIT" value="1"/>
+		</for>
+	</skill>
+	<skill id="856" levels="1" name="Schuttgart Territory Benefaction">
+		<!--
+		      Last modify: 25.06.2009
+		      Description: CON+1 / WIT+1
+		-->
+		<set name="icon" value="icon.weapon_fort_flag_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" stat="CON" value="1"/>
+			<add order="0x60" stat="WIT" value="1"/>
+		</for>
+	</skill>
+	<skill id="869" levels="9" name="Mercenary Power Strike">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<table name="#magicLevel">60 70 80 81 82 83 84 85 86</table>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="coolTime" value="720"/>
+		<set name="hitTime" value="1080"/>
+		<set name="mp_consume" value="8"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="870" levels="8" name="Royal Guard Captain Power Strike">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<table name="#magicLevel">70 80 81 82 83 84 85 86</table>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="coolTime" value="720"/>
+		<set name="hitTime" value="1080"/>
+		<set name="mp_consume" value="8"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="871" levels="1" name="Might">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Increases attack power temporarily. Effect 3.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.skill1068"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="35"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="pa_up"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="872" levels="8" name="Archer Captain Power Shot">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Uses a bow to attack enemies in the distance. Over-hit is possible. Power 1.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<table name="#magicLevel">70 80 81 82 83 84 85 86</table>
+		<set name="icon" value="icon.skill0056"/>
+		<set name="reuseDelay" value="6000"/>
+		<set name="coolTime" value="800"/>
+		<set name="castRange" value="700"/>
+		<set name="hitTime" value="3200"/>
+		<set name="mp_consume" value="16"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="1"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="873" levels="1" name="Rapid Shot">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Temporarily increases your own bow Atk. Spd. Effect 2.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.skill0099"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="25"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="attack_speed_up_bow"/>
+		<set name="magicLevel" value="70"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="874" levels="8" name="Wizard Captain Flame Strike">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Launches a fireball with a wide range that causes a burning trail. Power 1.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<table name="#magicLevel">70 80 81 82 83 84 85 86</table>
+		<set name="icon" value="icon.skill1181"/>
+		<set name="reuseDelay" value="4000"/>
+		<set name="castRange" value="500"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="40"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="affectLimit" value="5;12"/>
+		<set name="power" value="1"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="875" levels="1" name="Empower">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Increases M. Atk. power temporarily. Effect 3.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.skill1059"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="70"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="ma_up"/>
+		<set name="magicLevel" value="70"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="876" levels="8" name="Centurion Enuma Elish">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Cuts everything with the Sword of Creation that divides heaven and earth. Consumes 5 souls. Over-hit is possible. Power.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<table name="#magicLevel">70 80 81 82 83 84 85 86</table>
+		<set name="icon" value="icon.skill0526"/>
+		<set name="reuseDelay" value="75000"/>
+		<set name="coolTime" value="720"/>
+		<set name="hitTime" value="1080"/>
+		<set name="mp_consume" value="25"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="affectLimit" value="5;12"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="877" levels="8" name="Centurion Disarm">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Disarms the opponent. Unable to use weapons while the effect lasts.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<table name="#magicLevel">70 80 81 82 83 84 85 86</table>
+		<set name="icon" value="icon.skill0485"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="25"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="disarm"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="878" levels="7" name="Knight Captain Power Strike">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<table name="#magicLevel">80 81 82 83 84 85 86</table>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="coolTime" value="720"/>
+		<set name="hitTime" value="1080"/>
+		<set name="mp_consume" value="1"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="879" levels="7" name="Knight Captain Curse Fear">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Frightens the enemy, causing him to flee.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<table name="#magicLevel">80 81 82 83 84 85 86</table>
+		<set name="icon" value="icon.skill1169"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="70"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="TURN_FLEE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="turn_flee"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="DERANGEMENT"/>
+	</skill>
+	<skill id="880" levels="1" name="Knight Captain Ultimate Defense">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Instantly and drastically increases tolerance to P. Def./M. Def. weakening and buff cancelling attacks. The player cannot move while the effect lasts. Effect 2.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.skill0110"/>
+		<set name="reuseDelay" value="900000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="mp_consume" value="21"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="ULTIMATE_DEFENCE"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="pd_up_special"/>
+		<set name="magicLevel" value="80"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="881" levels="7" name="Commander Twister">
+		<!--
+		      Description: Blades of wind are fired in rings. Power 1.
+		-->
+		<table name="#magicLevel">80 81 82 83 84 85 86</table>
+		<set name="icon" value="icon.skill1178"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="750"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="70"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="175"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="element" value="wind"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="882" levels="7" name="Commander Blaze">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Flames erupt from your body. Power 1.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<table name="#magicLevel">80 81 82 83 84 85 86</table>
+		<set name="icon" value="icon.skill1220"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="750"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="70"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="1"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="883" levels="7" name="Commander Seal of Binding">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Instantly apply Hold to surrounding enemies. Additional Hold is not available while effects last.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<table name="#magicLevel">80 81 82 83 84 85 86</table>
+		<set name="icon" value="icon.skill1208"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="70"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="ROOT"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="root_magically"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="affectLimit" value="10;10"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="HOLD"/>
+		<for>
+			<effect>
+				<p_defence_trait name="hold" value="100"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="884" levels="11" name="Air Assault">
+		<!--
+			Last modify:	03.08.2009
+			Description:	Moves forward quickly and inflicts damage on nearby enemies.
+		-->
+		<table name="#magicLevel">75 76 77 78 79 80 81 82 83 84 85</table>
+		<set name="icon" value="icon.skill_transform_etc"/>
+		<set name="reuseDelay" value="23000"/>
+		<set name="coolTime" value="200"/>
+		<set name="castRange" value="2500"/>
+		<set name="hitTime" value="800"/>
+		<set name="mp_consume" value="30"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="3752"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_TUNNEL"/>
+		<set name="overHit" value="true"/>
+		<set name="affect_range" value="2500"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="fly_type" value="CHARGE"/>
+		<set name="fly_radius" value="2500"/>
+		<set name="operate_type" value="A2"/>
+		<cond msgId="113">
+			<target min_distance="200"/>
+		</cond>
+	</skill>
+	<skill id="886" levels="11" name="Air Shock Bomb">
+		<!--
+			Last modify:	03.08.2009
+			Description:
+			Damages and stuns the target with 2251 Power, temporarily preventing movement.
+		-->
+		<table name="#magicLevel">75 76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#mp_consume">69 70 70 71 72 72 73 74 74 75 75</table>
+		<set name="icon" value="icon.skill_transform_debuff"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="AIR_BATTLE_SLOW"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="2251"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="887" levels="11" name="Sky Clutch">
+		<!--
+			Last modify:	03.08.2009
+			Description:
+			Inflicts damage and simultaneously holds the targeted enemy with 110 Power. Only one root effect can be used at a time.
+		-->
+		<table name="#magicLevel">75 76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#mp_consume">69 70 70 71 72 72 73 74 74 75 75</table>
+		<set name="icon" value="icon.skill_transform_debuff"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="AIR_BATTLE_ROOT"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="root_magically"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="110"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="HOLD"/>
+		<for>
+			<effect name="p_block_move"/>
+		</for>
+	</skill>
+	<skill id="888" levels="11" name="Energy Storm">
+		<!--
+			Last modify:	03.08.2009
+			Description:
+			Delivers a powerful strike with 3752 Power.
+		-->
+		<table name="#magicLevel">75 76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#power">3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640</table>
+		<table name="#mp_consume">69 70 70 71 72 72 73 74 74 75 75</table>
+		<set name="icon" value="icon.skill_transform_etc"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="castRange" value="200"/>
+		<set name="hitTime" value="1080"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="889" levels="11" name="Energy Storm">
+		<!--
+			Last modify:	03.08.2009
+			Description:
+			Delivers a powerful strike with 3752 Power.
+		-->
+		<table name="#magicLevel">75 76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#power">3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640</table>
+		<table name="#mp_consume">69 70 70 71 72 72 73 74 74 75 75</table>
+		<set name="icon" value="icon.skill_transform_etc"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="castRange" value="200"/>
+		<set name="hitTime" value="1080"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="890" levels="11" name="Prodigious Flare">
+		<!--
+			Last modify:	03.08.2009
+			Description:
+			Delivers a powerful strike with 5627 Power.
+		-->
+		<table name="#magicLevel">75 76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#power">5627 5773 5918 6060 6199 6355 6468 6598 6723 6844 6960</table>
+		<table name="#mp_consume">69 70 70 71 72 72 73 74 74 75 75</table>
+		<set name="icon" value="icon.skill_transform_s_attack"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="200"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="891" levels="11" name="Energy Shot">
+		<!--
+			Last modify:	03.08.2009
+			Description:
+			Inflicts a powerful long-range attack with 88 Power.
+		-->
+		<table name="#magicLevel">75 76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#power">88 89 90 91 92 93 94 95 96 97 98</table>
+		<table name="#mp_consume">69 70 70 71 72 72 73 74 74 75 75</table>
+		<set name="icon" value="icon.skill_transform_etc"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="3000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="892" levels="11" name="Energy Shot">
+		<!--
+			Last modify:	03.08.2009
+			Description:
+			Inflicts a powerful long-range attack with 131 Power.
+		-->
+		<table name="#magicLevel">75 76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#power">131 133 135 136 138 139 141 142 144 145 146</table>
+		<table name="#mp_consume">69 70 70 71 72 72 73 74 74 75 75</table>
+		<set name="icon" value="icon.skill_transform_etc"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="3000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="893" levels="11" name="Concentrated Energy Shot">
+		<!--
+			Last modify:	03.08.2009
+			Description:
+			Gathers strength to inflict a powerful long-range attack with 197 Power.
+		-->
+		<table name="#magicLevel">75 76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#power">197 199 202 204 206 209 211 213 215 217 219</table>
+		<table name="#mp_consume">69 70 70 71 72 72 73 74 74 75 75</table>
+		<set name="icon" value="icon.skill_transform_s_attack"/>
+		<set name="reuseDelay" value="4000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="894" levels="1" name="Exhilarate">
+		<!--
+			Last modify:	28.10.2010
+			Description:
+			Increases your overall attack abilities.
+		-->
+		<set name="icon" value="icon.skill_transform_buff"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="69"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="magicLevel" value="75"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add stat="pAccCombat" value="4"/>
+				<add stat="resist_abnormal_debuff" value="-10"/>
+				<mul stat="maxHp" value="1.2"/>
+				<mul stat="regHp" value="1.2"/>
+				<mul stat="pDef" value="1.2"/>
+				<mul stat="pAtk" value="1.1"/>
+				<mul stat="runSpd" value="0.9"/>
+				<mul stat="pAtkSpd" value="1.2"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="895" levels="1" name="Exhilarate">
+		<!--
+			Last modify:	28.10.2010
+			Description:
+			Increases your overall attack abilities.
+		-->
+		<set name="icon" value="icon.skill_transform_buff"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="70"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="magicLevel" value="75"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add stat="baseMCritRate" value="20"/>
+				<add stat="resist_abnormal_debuff" value="-10"/>
+				<mul stat="regMp" value="1.2"/>
+				<mul stat="mDef" value="1.2"/>
+				<mul stat="mAtk" value="1.2"/>
+				<mul stat="runSpd" value="0.8"/>
+				<mul stat="mAtkSpd" value="1.2"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="896" levels="6" name="Rolling Attack">
+		<!-- 01.08.09
+			Description: Inflicts a powerful blow with 9503-10440 Power.
+		-->
+		<table name="#power">9503 9702 9896 10084 10266 10440</table>
+		<table name="#magicLevel">80 81 82 83 84 85</table>
+		<table name="#mp_consume">72 73 74 74 75 75</table>
+		<set name="icon" value="icon.skill_transform_etc"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="nextAction" value="attack"/>
+	</skill>
+	<skill id="897" levels="6" name="Double Blast">
+		<!-- 01.08.09
+			Description: Inflicts a powerful long-range attack with 9503-10440 Power.
+		-->
+		<table name="#power">9503 9702 9896 10084 10266 10440</table>
+		<table name="#magicLevel">80 81 82 83 84 85</table>
+		<table name="#mp_consume">72 73 74 74 75 75</table>
+		<set name="icon" value="icon.skill_transform_etc"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="898" levels="6" name="Tornado Slash">
+		<!-- 01.08.09
+			Description: Inflicts a powerful blow on nearby enemies with 5068-5568 Power.
+		-->
+		<table name="#power">5068 5175 5278 5379 5475 5568</table>
+		<table name="#magicLevel">80 81 82 83 84 85</table>
+		<table name="#mp_consume">72 73 74 74 75 75</table>
+		<set name="icon" value="icon.skill_transform_etc"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="affectLimit" value="6;12"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="affect_range" value="200"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="899" levels="6" name="Cat Roar">
+		<!-- 01.08.09
+			Description: Uses the cry of danger to decrease P. Def./M. Def./Moving Spd./Atk. Spd. of nearby enemies and decreases Magic Spd. Power 3168.
+		-->
+		<table name="#power">3168 3234 3299 3362 3422 3480</table>
+		<table name="#magicLevel">80 81 82 83 84 85</table>
+		<table name="#mp_consume">72 73 74 74 75 75</table>
+		<set name="icon" value="icon.skill_transform_debuff"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="multi_debuff"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="affectLimit" value="6;12"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="affect_range" value="200"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="activateRate" value="50"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect>
+				<mul order="0x50" stat="pDef" value="0.7"/>
+				<mul order="0x50" stat="mDef" value="0.7"/>
+				<mul order="0x50" stat="runSpd" value="0.7"/>
+				<mul order="0x50" stat="pAtkSpd" value="0.7"/>
+				<mul order="0x50" stat="mAtkSpd" value="0.7"/>
+			</effect>
+		</for>
+	</skill>
+</list>

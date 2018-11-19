@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="49">	<!--Орк Адепт-->
+			<skill id="194" level="1" name="Везение(Lucky)" min_level="1"/>
+			<skill id="214" level="1" name="Восстановление Маны(Mana Recovery)" min_level="1"/>
+			<skill id="134" level="1" name="Выдержка(Toughness)" min_level="1"/>
+			<skill id="118" level="1" name="Движение Мага(Magician's Movement)" min_level="1"/>
+			<skill id="163" level="1" name="Искусное Колдовство(Spellcraft)" min_level="1"/>
+			<skill id="1001" level="1" name="Крик Души(Soul Cry)" min_level="1"/>
+			<skill id="146" level="1" name="Антимагия(Anti Magic)" cost="15" min_level="4"/>
+			<skill id="252" level="1" name="Владение Легкой Броней(Light Armor Mastery)" cost="15" min_level="4"/>
+			<skill id="251" level="1" name="Владение Магической Броней(Robe Mastery)" cost="15" min_level="4"/>
+			<skill id="146" level="2" name="Антимагия(Anti Magic)" cost="25" min_level="7"/>
+			<skill id="252" level="2" name="Владение Легкой Броней(Light Armor Mastery)" cost="25" min_level="7"/>
+			<skill id="251" level="2" name="Владение Магической Броней(Robe Mastery)" cost="25" min_level="7"/>
+			<skill id="250" level="1" name="Владение Оружием(Weapon Mastery)" cost="25" min_level="7"/>
+			<skill id="1090" level="1" name="Кража Жизни(Life Drain)" cost="25" min_level="7"/>
+			<skill id="1100" level="1" name="Ледяное Пламя(Chill Flame)" cost="25" min_level="7"/>
+			<skill id="1095" level="1" name="Отрава(Venom)" cost="25" min_level="7"/>
+			<skill id="1097" level="1" name="Сонный Дух(Dreaming Spirit)" cost="25" min_level="7"/>
+			<skill id="1010" level="1" name="Щит Души(Soul Shield)" cost="25" min_level="7"/>
+			<skill id="146" level="3" name="Антимагия(Anti Magic)" cost="160" min_level="11"/>
+			<skill id="252" level="3" name="Владение Легкой Броней(Light Armor Mastery)" cost="160" min_level="11"/>
+			<skill id="251" level="3" name="Владение Магической Броней(Robe Mastery)" cost="160" min_level="11"/>
+			<skill id="253" level="1" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="160" min_level="11"/>
+			<skill id="146" level="4" name="Антимагия(Anti Magic)" cost="190" min_level="14"/>
+			<skill id="252" level="4" name="Владение Легкой Броней(Light Armor Mastery)" cost="190" min_level="14"/>
+			<skill id="251" level="4" name="Владение Магической Броней(Robe Mastery)" cost="190" min_level="14"/>
+			<skill id="250" level="2" name="Владение Оружием(Weapon Mastery)" cost="190" min_level="14"/>
+			<skill id="253" level="2" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="190" min_level="14"/>
+			<skill id="1090" level="2" name="Кража Жизни(Life Drain)" cost="190" min_level="14"/>
+			<skill id="1001" level="2" name="Крик Души(Soul Cry)" cost="190" min_level="14"/>
+			<skill id="1100" level="2" name="Ледяное Пламя(Chill Flame)" cost="190" min_level="14"/>
+			<skill id="1007" level="1" name="Напев Битвы(Chant of Battle)" cost="190" min_level="14"/>
+			<skill id="1095" level="2" name="Отрава(Venom)" cost="190" min_level="14"/>
+			<skill id="1097" level="2" name="Сонный Дух(Dreaming Spirit)" cost="190" min_level="14"/>
+			<skill id="1092" level="1" name="Страх(Fear)" cost="190" min_level="14"/>
+			<!--HARDCODED: <skill id="239" level="1" name="Квалификация D(Expertise D)" min_level="20"/>-->
+			<!--HARDCODED: <skill id="239" level="2" name="Квалификация C(Expertise C)" min_level="40"/>-->
+			<!--HARDCODED: <skill id="239" level="3" name="Квалификация B(Expertise B)" min_level="52"/>-->
+		</class>
+	</normal_skill_tree>
+</list>

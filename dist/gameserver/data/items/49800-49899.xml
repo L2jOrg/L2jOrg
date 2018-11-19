@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="49800" name="Sibis Coin Box">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.event_orc_coinbox"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<armor id="49801" name="Dandy Pendant" add_name="2 hours">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bm_pendant_pve"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="49"/>
+		</for>
+	</armor>
+	<armor id="49802" name="Dandy Shining Pendant" add_name="2 hours">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bm_pendant_pve"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="52"/>
+		</for>
+	</armor>
+	<armor id="49803" name="Dandyâs Uniform">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.london_olympic_bikini"/>
+		<set name="price" value="0"/>
+		<set name="type" value="HEAVY"/>
+		<equip>
+			<slot id="FORMAL_WEAR"/>
+		</equip>
+	</armor>
+	<etcitem id="49804" name="Ice Crystal Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49805" name="Ice Crystal Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49806" name="Ice Crystal Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49807" name="Ice Crystal Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49808" name="Ice Crystal Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49809" name="Ice Crystal Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49810" name="Ice Crystal Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49811" name="Ice Crystal Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49812" name="Ice Crystal Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49813" name="Ice Crystal Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49814" name="Ice Crystal Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49815" name="Ice Crystal Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49816" name="Ice Crystal Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49817" name="Ice Crystal Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49818" name="Ice Crystal Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49819" name="Ice Crystal Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49820" name="Ice Crystal Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49821" name="Ice Crystal Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49822" name="Ice Crystal Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49823" name="Ice Crystal Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49824" name="Ice Crystal Fragment">
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49825" name="Ice Crystal Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49826" name="Ice Crystal Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49827" name="Ice Crystal Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49828" name="Ice Crystal Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49829" name="Ice Crystal Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49830" name="Ice Crystal Fragment">
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49831" name="Ice Crystal Fragment">
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49832" name="Ice Crystal Fragment">
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49833" name="Ice Crystal Fragment">
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49834" name="Ice Crystal Fragment">
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.event_cubic_piece_i00"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="49835" name="Food Sack">
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_oil_pot_white_i00"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49836" name="Food Sack">
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_oil_pot_white_i00"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49837" name="Food Sack">
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_oil_pot_white_i00"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49838" name="Food Sack">
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_oil_pot_white_i00"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49839" name="Rifken\'s Dish">
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_fish_seawater_i02"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49840" name="Rifkenâs Recipe Book">
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_spell_books_hfighter_i00"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49841" name="Bitter Cold Vodka">
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_luxury_wine_c_i00"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49842" name="Bitter Cold Vodka">
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_luxury_wine_c_i00"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49843" name="Bitter Cold Vodka">
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_luxury_wine_c_i00"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49844" name="Sayha\'s Blessing Chest">
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.bm_sayha_blessed_box"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49845" name="Sayha\'s Blessing">
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_wind_potion_i00"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49846" name="Sayha\'s Silver Light Blessing">
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.bm_sayha_silver_blessed"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49847" name="Sayha\'s Golden Light Blessing">
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.bm_sayha_gold_blessed"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49848" name="Fire Dragon Pendant Chest +10">
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.bm_pendant_pve_box"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49849" name="Land Dragon Pendant +10">
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.bm_pendant_pvp_box"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49850" name="Ornament Supply Box (A-grade)">
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i00"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49851" name="Sayha\'s Gust">
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.skill11137"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49852" name="Secret Book of Bagginsâ Enchantments - IV">
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.mercenary_certification_i02"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49853" name="Secret Book of Bagginsâ Enchantments - V">
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.mercenary_certification_i01"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49854" name="Melissaâs MP Recovery Potion">
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.freya_potion"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="POTION"/>
+		<skills>
+			<skill id="39198" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="49855" name="Sayha\'s Golden Gift">
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.bm_sayha_gold_present"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49856" name="Sayha\'s Silver Gift">
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.bm_sayha_silver_present"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49857" name="Sayha\'s Gift">
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.bm_sayha_present"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49858" name="Wind Token">
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.bm_sayha_token"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49859" name="Weapon Exchange Coupon" add_name="Event">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_exchange_ticket_i01"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49860" name="Heroâs Wondrous Cubic" add_name="7-day">
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pink_crystal_cube_pc_i00"/>
+		<set name="weight" value="0"/>
+		
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49861" name="Life Stone - Tester">
+		<set name="icon" value="icon.etc_mineral_general_i00"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49862" name="Bracelet of Border Chest">
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_readybox_bronze"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49863" name="Best Dye of STR &lt;STR +1 CON - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_str"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="20000"/>
+	</etcitem>
+	<etcitem id="49864" name="Best Dye of STR &lt;STR + 1 DEX - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_str"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="20000"/>
+	</etcitem>
+	<etcitem id="49865" name="Best Dye of CON &lt;CON + 1 STR - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_con"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="20000"/>
+	</etcitem>
+	<etcitem id="49866" name="Best Dye of CON &lt;CON + 1 DEX - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_con"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="20000"/>
+	</etcitem>
+	<etcitem id="49867" name="Best Dye of DEX &lt;DEX + 1 STR - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_dex"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="20000"/>
+	</etcitem>
+	<etcitem id="49868" name="Best Dye of DEX &lt;DEX + 1 CON - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_dex"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="20000"/>
+	</etcitem>
+	<etcitem id="49869" name="Best Dye of INT &lt;INT + 1 MEN - 3&gt;" add_name="3rd Class Transfer">
+		<set name="weight" value="150"/>
+		<set name="icon" value="icon.lv1_1_dye_int"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="20000"/>
+	</etcitem>
+	<etcitem id="49870" name="Best Dye of INT &lt;INT + 1 WIT - 3&gt;" add_name="3rd Class Transfer">
+		<set name="weight" value="150"/>
+		<set name="icon" value="icon.lv1_1_dye_int"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="20000"/>
+	</etcitem>
+	<etcitem id="49871" name="Best Dye of MEN &lt;MEN + 1 INT - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_men"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="20000"/>
+	</etcitem>
+	<etcitem id="49872" name="Best Dye of MEN &lt;MEN + 1 WIT - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_men"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="20000"/>
+	</etcitem>
+	<etcitem id="49873" name="Best Dye of WIT &lt;WIT + 1 INT - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_wit"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="20000"/>
+	</etcitem>
+	<etcitem id="49874" name="Greater Dye of WIT &lt;Wit + 1 Men - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_wit"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="20000"/>
+	</etcitem>
+	<etcitem id="49875" name="Best Dye of STR &lt;STR + 1 CON - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_str"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="30000"/>
+	</etcitem>
+	<etcitem id="49876" name="Best Dye of STR &lt;STR + 1 DEX - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_str"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="30000"/>
+	</etcitem>
+	<etcitem id="49877" name="Best Dye of CON &lt;CON + 1 STR - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_con"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="30000"/>
+	</etcitem>
+	<etcitem id="49878" name="Best Dye of CON &lt;CON + 1 DEX - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_con"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="30000"/>
+	</etcitem>
+	<etcitem id="49879" name="Best Dye of DEX &lt;DEX + 1 STR - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_dex"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="30000"/>
+	</etcitem>
+	<etcitem id="49880" name="Best Dye of DEX &lt;DEX + 1 CON - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_dex"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="30000"/>
+	</etcitem>
+	<etcitem id="49881" name="Best Dye of INT &lt;INT + 1 MEN - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_int"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="30000"/>
+	</etcitem>
+	<etcitem id="49882" name="Best Dye of INT &lt;INT + 1 WIT - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_int"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="30000"/>
+	</etcitem>
+	<etcitem id="49883" name="Best Dye of MEN &lt;MEN + 1 INT - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_men"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="30000"/>
+	</etcitem>
+	<etcitem id="49884" name="Best Dye of MEN &lt;MEN + 1 WIT - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_men"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="30000"/>
+	</etcitem>
+	<etcitem id="49885" name="Best Dye of WIT &lt;WIT + 1 INT - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_wit"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="30000"/>
+	</etcitem>
+	<etcitem id="49886" name="Best Dye of WIT &lt;WIT + 1 MEN - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_wit"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="30000"/>
+	</etcitem>
+	<etcitem id="49887" name="Best Dye of STR &lt;STR + 1 CON - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_str"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49888" name="Best Dye of STR &lt;STR + 1 DEX - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_str"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49889" name="Best Dye of CON &lt;CON + 1 STR - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_con"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49890" name="Best Dye of CON &lt;CON + 1 DEX - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_con"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49891" name="Best Dye of DEX &lt;DEX + 1 STR - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_dex"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49892" name="Best Dye of DEX &lt;DEX + 1 CON - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_dex"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49893" name="Best Dye of INT &lt;INT + 1 MEN - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_int"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49894" name="Best Dye of INT &lt;INT + 1 WIT - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_int"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49895" name="Best Dye of MEN &lt;MEN + 1 INT - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_men"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49896" name="Best Dye of MEN &lt;MEN + 1 WIT - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_men"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49897" name="Best Dye of WIT &lt;WIT + 1 INT - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_wit"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49898" name="Best Dye of WIT &lt;WIT + 1 MEN - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv1_1_dye_wit"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49899" name="Best Dye of STR &lt;STR + 2 CON - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_str"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="60000"/>
+	</etcitem>
+</list>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="35669" name="Angel Cat\'s Blessing" add_name="30 days">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.skilltransform4"/>
+		<set name="weight" value="5"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="43200"/>
+		<set name="temporal" value="true"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="9487" level="1"/>
+		</skills>
+	</etcitem>
+</list>

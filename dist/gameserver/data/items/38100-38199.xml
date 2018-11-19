@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="38154" name="Fishing Shot">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_spirit_bullet_fish_i05"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="FISHSHOT"/>
+		<skills>
+			<skill id="17386" level="1"/>	<!--Fishing Shot-->
+		</skills>
+	</etcitem>
+</list>

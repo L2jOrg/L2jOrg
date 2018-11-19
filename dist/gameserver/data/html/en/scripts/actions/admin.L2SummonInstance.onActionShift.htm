@@ -1,0 +1,60 @@
+<html><body><br>
+<title>Summon Info</title><body>
+<center>
+<font color="LEVEL">%name%</font><br>
+Level %level% %class%
+</center>
+<br><br>
+<center><font color="00ff00">Postiton</font></center>
+<table border=0 width="100%">
+	<tr><td>Pos:</td><td>%xyz%</td></tr>
+	<tr><td>Heading:</td><td>%heading%</td></tr>
+</table><br>
+<center><font color="00ff00">Info</font></center>
+<table border=0 width="100%">
+	<tr><td>Owner:</td><td>%owner%</td></tr>
+	<tr><td>Owner Id:</td><td>%ownerId%</td></tr>
+	<tr><td>NPC Id:</td><td>%npcId%</td></tr>
+	<tr><td>Object ID:</td><td><?object_id?></td></tr>
+	<tr><td>Exp Penalty:</td><td>%expPenalty%</td></tr>
+</table><br>
+<center><font color="00ff00">Combat</font></center>
+<table border=0 width="100%">
+	<tr><td>Max.HP:</td><td>%maxHp%</td></tr>
+	<tr><td>Max.MP:</td><td>%maxMp%</td></tr>
+	<tr><td>Curr HP:</td><td>%currHp%</td></tr>
+	<tr><td>Curr MP:</td><td>%currMp%</td></tr>
+	<tr><td>P. Atk:</td><td>%pAtk%</td></tr>
+	<tr><td>M. Atk:</td><td>%mAtk%</td></tr>
+	<tr><td>P. Def:</td><td>%pDef%</td></tr>
+	<tr><td>M. Def:</td><td>%mDef%</td></tr>
+	<tr><td>Acc:</td><td>%accuracy%</td></tr>
+	<tr><td>Evs:</td><td>%evasionRate%</td></tr>
+	<tr><td>Crit:</td><td>%crt%</td></tr>
+	<tr><td>Dist:</td><td>%dist%</td></tr>
+	<tr><td>Atk.Spd:</td><td>%pAtkSpd%</td></tr>
+	<tr><td>Cst.Spd:</td><td>%mAtkSpd%</td></tr>
+	<tr><td>Walk Spd:</td><td>%walkSpeed%</td></tr>
+	<tr><td>Run Spd:</td><td>%runSpeed%</td></tr>	
+</table><br>
+<center><font color="00ff00">Basic</font></center>
+<table border=0 width="100%">
+	<tr>
+		<td>STR</td>
+		<td>%STR%</td>
+		<td>DEX</td>
+		<td>%DEX%</td>
+		<td>CON</td>
+		<td>%CON%</td>
+	</tr>
+	<tr>
+		<td>INT</td>
+		<td>%INT%</td>
+		<td>WIT</td>
+		<td>%WIT%</td>
+		<td>MEN</td>
+		<td>%MEN%</td>
+	</tr>
+</table>
+<br><center><button value="Effects" action="bypass -h htmbypass_actions.OnActionShift:servitorEffects <?object_id?>" width=100 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" /></center><br>
+</body></html>

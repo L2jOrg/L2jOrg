@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT list (henna)*>
+
+	<!ELEMENT henna (class|skills)*>
+	<!ATTLIST henna
+		name CDATA #REQUIRED
+		dye_id CDATA #REQUIRED
+		dye_item_id CDATA #REQUIRED
+		dye_level CDATA #REQUIRED
+		need_count CDATA #REQUIRED
+		wear_fee CDATA #REQUIRED
+		cancel_count CDATA #REQUIRED
+		cancel_fee CDATA #REQUIRED
+		wit CDATA #IMPLIED
+		str CDATA #IMPLIED
+		int CDATA #IMPLIED
+		con CDATA #IMPLIED
+		dex CDATA #IMPLIED
+		men CDATA #IMPLIED
+		period CDATA #IMPLIED>
+
+		<!ELEMENT class (#PCDATA)>
+		<!ATTLIST class
+			id CDATA #REQUIRED>
+
+		<!ELEMENT skills (skill)*>
+
+			<!ELEMENT skill (#PCDATA)>
+			<!ATTLIST skill
+				id CDATA #REQUIRED
+				level CDATA #REQUIRED>

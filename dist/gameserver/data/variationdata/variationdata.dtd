@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!ELEMENT list (weapon|group)*>
+
+	<!ELEMENT weapon (stone)*>
+	<!ATTLIST weapon
+		type CDATA #REQUIRED>
+
+		<!ELEMENT stone (variation)*>
+		<!ATTLIST stone
+			id CDATA #REQUIRED>
+
+			<!ELEMENT variation (category)*>
+			<!ATTLIST variation
+				id CDATA #REQUIRED>
+
+				<!ELEMENT category (option)*>
+				<!ATTLIST category
+					probability CDATA #REQUIRED>
+
+					<!ELEMENT option (#PCDATA)>
+					<!ATTLIST option
+						id CDATA #REQUIRED
+						chance CDATA #REQUIRED>
+
+	<!ELEMENT group (fee)*>
+	<!ATTLIST group
+		id CDATA #REQUIRED>
+
+		<!ELEMENT fee (#PCDATA)>
+		<!ATTLIST fee
+			stone_id CDATA #REQUIRED
+			fee_item_id CDATA #REQUIRED
+			fee_item_count CDATA #REQUIRED
+			cancel_fee CDATA #REQUIRED>

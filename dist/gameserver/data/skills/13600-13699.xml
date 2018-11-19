@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="13654" levels="1" name="Put on Lv. 2 Brooch">
+		<set name="icon" value="icon.etc_bm_brooch_lavianrose_i01"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="13655" levels="1" name="Remove Lv. 2 Brooch">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="13656" levels="1" name="Lv. 1 Brooch">
+		<set name="icon" value="icon.etc_bm_brooch_lavianrose_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="13657" levels="1" name="Lv. 2 Brooch">
+		<set name="icon" value="icon.etc_bm_brooch_lavianrose_i01"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="13661" levels="2" name="Lv. 2 Brooch - Additional Effect">
+		<table name="#icon">icon.etc_bm_brooch_lavianrose_i00 icon.etc_bm_brooch_lavianrose_i01</table>
+		<set name="icon" value="#icon"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+</list>

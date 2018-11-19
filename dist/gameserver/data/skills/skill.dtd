@@ -1,0 +1,233 @@
+<!ELEMENT list (skill)*>
+
+	<!ELEMENT skill  (set|table|for|cond|triggers|enchant|restoration)*>
+	<!ATTLIST skill
+		id CDATA #REQUIRED
+		levels CDATA #REQUIRED
+		name CDATA #REQUIRED>
+
+		<!ELEMENT set (player|target|using|zone|has|game|or|not|and)*>
+		<!ATTLIST set
+			name CDATA #IMPLIED
+			order CDATA #IMPLIED
+			stat CDATA #IMPLIED
+			value CDATA #REQUIRED>
+
+		<!ELEMENT table (#PCDATA)>
+		<!ATTLIST table
+			name CDATA #REQUIRED>
+
+		<!ELEMENT start_effect (def|add|p_attack_trait|p_defence_trait|set|mul|div|sub|cond|triggers|player|target|using|zone|has|game|or|not|and)*>
+		<!ATTLIST start_effect
+			enabled CDATA #IMPLIED
+			name CDATA #IMPLIED
+			interval CDATA #IMPLIED
+			instant CDATA #IMPLIED
+			value CDATA #IMPLIED
+			chance CDATA #IMPLIED>
+
+		<!ELEMENT tick_effect (def|add|p_attack_trait|p_defence_trait|set|mul|div|sub|cond|triggers|player|target|using|zone|has|game|or|not|and)*>
+		<!ATTLIST tick_effect
+			enabled CDATA #IMPLIED
+			name CDATA #IMPLIED
+			interval CDATA #IMPLIED
+			instant CDATA #IMPLIED
+			value CDATA #IMPLIED
+			chance CDATA #IMPLIED>
+
+		<!ELEMENT self_effect (def|add|p_attack_trait|p_defence_trait|set|mul|div|sub|cond|triggers|player|target|using|zone|has|game|or|not|and)*>
+		<!ATTLIST self_effect
+			enabled CDATA #IMPLIED
+			name CDATA #IMPLIED
+			interval CDATA #IMPLIED
+			instant CDATA #IMPLIED
+			value CDATA #IMPLIED
+			chance CDATA #IMPLIED
+			type CDATA #IMPLIED>
+
+		<!ELEMENT effect (def|add|p_attack_trait|p_defence_trait|set|mul|div|sub|cond|triggers|player|target|using|zone|has|game|or|not|and)*>
+		<!ATTLIST effect
+			enabled CDATA #IMPLIED
+			name CDATA #IMPLIED
+			interval CDATA #IMPLIED
+			instant CDATA #IMPLIED
+			value CDATA #IMPLIED
+			chance CDATA #IMPLIED
+			type CDATA #IMPLIED>
+
+		<!ELEMENT end_effect (def|add|p_attack_trait|p_defence_trait|set|mul|div|sub|cond|triggers|player|target|using|zone|has|game|or|not|and)*>
+		<!ATTLIST end_effect
+			enabled CDATA #IMPLIED
+			name CDATA #IMPLIED
+			value CDATA #IMPLIED
+			chance CDATA #IMPLIED>
+
+			<!ELEMENT def (#PCDATA)>
+			<!ATTLIST def
+				name CDATA #REQUIRED
+				value CDATA #REQUIRED>
+
+		<!ELEMENT for (add|p_attack_trait|p_defence_trait|set|mul|div|sub|start_effect|tick_effect|self_effect|effect|end_effect)*>
+
+			<!ELEMENT add (player|target|using|zone|has|game|or|not|and)*>
+			<!ATTLIST add
+				order CDATA #IMPLIED
+				stat CDATA #REQUIRED
+				value CDATA #REQUIRED>
+
+			<!ELEMENT p_attack_trait (player|target|using|zone|has|game|or|not|and)*>
+			<!ATTLIST p_attack_trait
+				name CDATA #REQUIRED
+				value CDATA #REQUIRED>
+
+			<!ELEMENT p_defence_trait (player|target|using|zone|has|game|or|not|and)*>
+			<!ATTLIST p_defence_trait
+				name CDATA #REQUIRED
+				value CDATA #REQUIRED>
+
+			<!ELEMENT mul (player|target|using|zone|has|game|or|not|and)*>
+			<!ATTLIST mul
+				order CDATA #IMPLIED
+				stat CDATA #REQUIRED
+				value CDATA #REQUIRED>
+
+			<!ELEMENT div (player|target|using|zone|has|game|or|not|and)*>
+			<!ATTLIST div
+				order CDATA #IMPLIED
+				stat CDATA #REQUIRED
+				value CDATA #REQUIRED>
+
+			<!ELEMENT sub (player|target|using|zone|has|game|or|not|and)*>
+			<!ATTLIST sub
+				order CDATA #IMPLIED
+				stat CDATA #REQUIRED
+				value CDATA #REQUIRED>
+
+		<!ELEMENT cond (player|target|using|zone|has|game|or|not|and)*>
+		<!ATTLIST cond
+			msgId CDATA #IMPLIED
+			addName CDATA #IMPLIED>
+
+			<!ELEMENT or (player|target|using|zone|has|game|or|not|and)*>
+
+			<!ELEMENT not (player|target|using|zone|has|game|or|not|and)*>
+
+			<!ELEMENT and (player|target|using|zone|has|game|or|not|and)*>
+
+			<!ELEMENT player (#PCDATA)>
+			<!ATTLIST player
+				residence CDATA #IMPLIED
+				olympiad CDATA #IMPLIED
+				race CDATA #IMPLIED
+				instance_zone CDATA #IMPLIED
+				is_clan_leader CDATA #IMPLIED
+				is_hero CDATA #IMPLIED
+				sex CDATA #IMPLIED
+				classId CDATA #IMPLIED
+				minLevel CDATA #IMPLIED
+				max_level CDATA #IMPLIED
+				avail_max_sp CDATA #IMPLIED
+				quest_state CDATA #IMPLIED
+				min_pledge_rank CDATA #IMPLIED
+				class_type CDATA #IMPLIED
+				summon_siege_golem CDATA #IMPLIED
+				running CDATA #IMPLIED
+				percentHP CDATA #IMPLIED
+				resting CDATA #IMPLIED
+				max_level CDATA #IMPLIED
+				maxPK CDATA #IMPLIED
+				percentMP CDATA #IMPLIED
+				moving CDATA #IMPLIED
+				standing CDATA #IMPLIED
+				damage CDATA #IMPLIED
+				percentCP CDATA #IMPLIED
+				direction CDATA #IMPLIED
+				riding CDATA #IMPLIED
+				flying CDATA #IMPLIED
+				castle_type CDATA #IMPLIED
+				min_clan_level CDATA #IMPLIED
+				has_abnormal_type CDATA #IMPLIED
+				has_summon_id CDATA #IMPLIED
+				can_transform CDATA #IMPLIED
+				can_untransform CDATA #IMPLIED
+				agathion CDATA #IMPLIED
+				hasBuffId CDATA #IMPLIED
+				flyingTransform CDATA #IMPLIED
+				isFlagged CDATA #IMPLIED
+				can_learn_skill CDATA #IMPLIED
+				is_chaotic CDATA #IMPLIED>
+
+			<!ELEMENT target (#PCDATA)>
+			<!ATTLIST target
+				is_pet_feed CDATA #IMPLIED
+				type CDATA #IMPLIED
+				race CDATA #IMPLIED
+				hasForbiddenSkill CDATA #IMPLIED
+				mobId CDATA #IMPLIED
+				npc_class CDATA #IMPLIED
+				castledoor CDATA #IMPLIED
+				direction CDATA #IMPLIED
+				percentHP CDATA #IMPLIED
+				has_abnormal_type CDATA #IMPLIED
+				forbiddenClassIds CDATA #IMPLIED
+				min_distance CDATA #IMPLIED
+				hasBuffId CDATA #IMPLIED
+				playerRace CDATA #IMPLIED>
+
+			<!ELEMENT using (#PCDATA)>
+			<!ATTLIST using
+				slotitem CDATA #IMPLIED
+				kind CDATA #IMPLIED
+				armor CDATA #IMPLIED
+				weapon CDATA #IMPLIED
+				skill CDATA #IMPLIED>
+
+			<!ELEMENT zone (#PCDATA)>
+			<!ATTLIST zone
+				type CDATA #IMPLIED
+				name CDATA #IMPLIED>
+
+			<!ELEMENT game (#PCDATA)>
+			<!ATTLIST game
+				night CDATA #IMPLIED>
+
+			<!ELEMENT has (#PCDATA)>
+			<!ATTLIST has
+				skill CDATA #IMPLIED>
+
+		<!ELEMENT triggers (trigger)*>
+		<!ELEMENT trigger (cond|player|target|using|zone|has|game|or|not|and)*>
+		<!ATTLIST trigger
+			id CDATA #IMPLIED
+			level CDATA #IMPLIED
+			type CDATA #IMPLIED
+			chance CDATA #IMPLIED
+			cancel_effects_on_remove CDATA #IMPLIED
+			increasing CDATA #IMPLIED
+			delay CDATA #IMPLIED
+			args CDATA #IMPLIED>
+
+		<!ELEMENT enchant (table)*>
+		<!ATTLIST enchant
+			type CDATA #REQUIRED
+			levels CDATA #IMPLIED
+			group CDATA #IMPLIED
+			name CDATA #IMPLIED>
+
+		<!ELEMENT restoration (group)*>
+		<!ATTLIST restoration
+			level CDATA #REQUIRED
+			consume_item_id CDATA #IMPLIED
+			consume_item_count CDATA #IMPLIED
+			on_fail_message CDATA #IMPLIED>
+
+			<!ELEMENT group (item)*>
+			<!ATTLIST group
+				chance CDATA #REQUIRED>
+
+				<!ELEMENT item (#PCDATA)>
+				<!ATTLIST item
+					id CDATA #REQUIRED
+					min_count CDATA #REQUIRED
+					max_count CDATA #IMPLIED
+					enchant_level CDATA #IMPLIED>

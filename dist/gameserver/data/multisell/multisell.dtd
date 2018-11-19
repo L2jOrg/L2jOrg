@@ -1,0 +1,22 @@
+<!ELEMENT list (config|item)*>
+<!ELEMENT config (#PCDATA)>
+<!ATTLIST config
+	show_all CDATA #IMPLIED
+	no_tax CDATA #IMPLIED
+	no_key CDATA #IMPLIED
+	keep_enchanted CDATA #IMPLIED
+	type CDATA #IMPLIED>
+<!ELEMENT item (ingredient|production)*>
+<!ELEMENT ingredient (#PCDATA)>
+<!ATTLIST ingredient
+	count CDATA #REQUIRED
+	id CDATA #REQUIRED>
+<!ELEMENT production (#PCDATA)>
+<!ATTLIST production
+	count CDATA #REQUIRED
+	id CDATA #REQUIRED
+	chance CDATA #IMPLIED
+	flags CDATA #IMPLIED
+	durablity CDATA #IMPLIED
+	temporal CDATA #IMPLIED
+	enchant CDATA #IMPLIED>

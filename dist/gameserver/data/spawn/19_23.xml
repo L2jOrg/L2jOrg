@@ -1,0 +1,3421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<territory name="gludio_t19_23_0005">
+		<add x="-21768" y="163996" zmin="-3284" zmax="-2284"/>
+		<add x="-16244" y="163928" zmin="-3284" zmax="-2284"/>
+		<add x="-17944" y="166108" zmin="-3284" zmax="-2284"/>
+		<add x="-20232" y="165688" zmin="-3284" zmax="-2284"/>
+	</territory>
+	<spawn name="gludio_t19_23_0005" count="2" respawn="35">
+		<territory name="gludio_t19_23_0005"/>
+		<npc id="20055"/><!--Монстроглаз Смотритель-->
+	</spawn>
+	<spawn name="gludio_t19_23_0005" count="2" respawn="35">
+		<territory name="gludio_t19_23_0005"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_23_0005" count="2" respawn="35">
+		<territory name="gludio_t19_23_0005"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<territory name="gludio_t19_23_0004">
+		<add x="-20176" y="168484" zmin="-3548" zmax="-2748"/>
+		<add x="-18048" y="168908" zmin="-3548" zmax="-2748"/>
+		<add x="-17504" y="169468" zmin="-3548" zmax="-2748"/>
+		<add x="-17820" y="171296" zmin="-3548" zmax="-2748"/>
+		<add x="-19032" y="172704" zmin="-3548" zmax="-2748"/>
+		<add x="-21200" y="172152" zmin="-3548" zmax="-2748"/>
+		<add x="-22024" y="169452" zmin="-3548" zmax="-2748"/>
+	</territory>
+	<spawn name="gludio_t19_23_0004" count="3" respawn="35">
+		<territory name="gludio_t19_23_0004"/>
+		<npc id="20055"/><!--Монстроглаз Смотритель-->
+	</spawn>
+	<spawn name="gludio_t19_23_0004" count="3" respawn="35">
+		<territory name="gludio_t19_23_0004"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_23_0004" count="3" respawn="35">
+		<territory name="gludio_t19_23_0004"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<spawn name="gludio_t19_23_0004" count="3" respawn="35">
+		<territory name="gludio_t19_23_0004"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<territory name="gludio_t19_23_0003">
+		<add x="-22456" y="167356" zmin="-3236" zmax="-2836"/>
+		<add x="-21468" y="167168" zmin="-3236" zmax="-2836"/>
+		<add x="-20600" y="168036" zmin="-3236" zmax="-2836"/>
+		<add x="-22324" y="169628" zmin="-3236" zmax="-2836"/>
+	</territory>
+	<spawn name="gludio_t19_23_0003" count="1" respawn="35">
+		<territory name="gludio_t19_23_0003"/>
+		<npc id="20055"/><!--Монстроглаз Смотритель-->
+	</spawn>
+	<spawn name="gludio_t19_23_0003" count="1" respawn="35">
+		<territory name="gludio_t19_23_0003"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_23_0003" count="1" respawn="35">
+		<territory name="gludio_t19_23_0003"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<spawn name="gludio_t19_23_0003" count="1" respawn="35">
+		<territory name="gludio_t19_23_0003"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<territory name="gludio_t19_23_0002">
+		<add x="-25108" y="165576" zmin="-3344" zmax="-2844"/>
+		<add x="-23072" y="167256" zmin="-3344" zmax="-2844"/>
+		<add x="-24752" y="168768" zmin="-3344" zmax="-2844"/>
+		<add x="-25920" y="168440" zmin="-3344" zmax="-2844"/>
+		<add x="-27432" y="167076" zmin="-3344" zmax="-2844"/>
+	</territory>
+	<spawn name="gludio_t19_23_0002" count="2" respawn="35">
+		<territory name="gludio_t19_23_0002"/>
+		<npc id="20055"/><!--Монстроглаз Смотритель-->
+	</spawn>
+	<spawn name="gludio_t19_23_0002" count="1" respawn="35">
+		<territory name="gludio_t19_23_0002"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_23_0002" count="2" respawn="35">
+		<territory name="gludio_t19_23_0002"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<spawn name="gludio_t19_23_0002" count="1" respawn="35">
+		<territory name="gludio_t19_23_0002"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<territory name="gludio_t19_23_0009">
+		<add x="-10568" y="165172" zmin="-3264" zmax="-2064"/>
+		<add x="-10012" y="165040" zmin="-3264" zmax="-2064"/>
+		<add x="-7592" y="167704" zmin="-3264" zmax="-2064"/>
+		<add x="-9472" y="168532" zmin="-3264" zmax="-2064"/>
+	</territory>
+	<spawn name="gludio_t19_23_0009" count="2" respawn="35">
+		<territory name="gludio_t19_23_0009"/>
+		<npc id="20055"/><!--Монстроглаз Смотритель-->
+	</spawn>
+	<spawn name="gludio_t19_23_0009" count="1" respawn="35">
+		<territory name="gludio_t19_23_0009"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_23_0009" count="1" respawn="35">
+		<territory name="gludio_t19_23_0009"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_23_0009" count="1" respawn="35">
+		<territory name="gludio_t19_23_0009"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<territory name="gludio_t19_23_0006">
+		<add x="-16136" y="163964" zmin="-2816" zmax="-1966"/>
+		<add x="-12576" y="163944" zmin="-2816" zmax="-1966"/>
+		<add x="-13668" y="166824" zmin="-2816" zmax="-1966"/>
+		<add x="-16712" y="166920" zmin="-2816" zmax="-1966"/>
+		<add x="-17852" y="166080" zmin="-2816" zmax="-1966"/>
+	</territory>
+	<spawn name="gludio_t19_23_0006" count="2" respawn="35">
+		<territory name="gludio_t19_23_0006"/>
+		<npc id="20055"/><!--Монстроглаз Смотритель-->
+	</spawn>
+	<spawn name="gludio_t19_23_0006" count="2" respawn="35">
+		<territory name="gludio_t19_23_0006"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_23_0006" count="2" respawn="35">
+		<territory name="gludio_t19_23_0006"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<territory name="gludio_t19_23_0001">
+		<add x="-32528" y="163992" zmin="-3428" zmax="-2728"/>
+		<add x="-26020" y="163996" zmin="-3428" zmax="-2728"/>
+		<add x="-25104" y="165448" zmin="-3428" zmax="-2728"/>
+		<add x="-27572" y="167024" zmin="-3428" zmax="-2728"/>
+		<add x="-32456" y="166300" zmin="-3428" zmax="-2728"/>
+	</territory>
+	<spawn name="gludio_t19_23_0001" count="4" respawn="35">
+		<territory name="gludio_t19_23_0001"/>
+		<npc id="20055"/><!--Монстроглаз Смотритель-->
+	</spawn>
+	<spawn name="gludio_t19_23_0001" count="4" respawn="35">
+		<territory name="gludio_t19_23_0001"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_23_0001" count="4" respawn="35">
+		<territory name="gludio_t19_23_0001"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<spawn name="gludio_t19_23_0001" count="4" respawn="35">
+		<territory name="gludio_t19_23_0001"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<territory name="gludio_t19_23_0016">
+		<add x="-3664" y="184444" zmin="-3784" zmax="-2684"/>
+		<add x="-272" y="185328" zmin="-3784" zmax="-2684"/>
+		<add x="-312" y="191048" zmin="-3784" zmax="-2684"/>
+		<add x="-3320" y="190952" zmin="-3784" zmax="-2684"/>
+		<add x="-4680" y="187328" zmin="-3784" zmax="-2684"/>
+	</territory>
+	<spawn name="gludio_t19_23_0016" count="3" respawn="35">
+		<territory name="gludio_t19_23_0016"/>
+		<npc id="20059"/><!--Монстроглаз Дозорный-->
+	</spawn>
+	<spawn name="gludio_t19_23_0016" count="4" respawn="35">
+		<territory name="gludio_t19_23_0016"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_23_0016" count="2" respawn="35">
+		<territory name="gludio_t19_23_0016"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<spawn name="gludio_t19_23_0016" count="3" respawn="35">
+		<territory name="gludio_t19_23_0016"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<territory name="gludio_t19_23_0015">
+		<add x="-3916" y="180236" zmin="-3872" zmax="-2872"/>
+		<add x="-352" y="180716" zmin="-3872" zmax="-2872"/>
+		<add x="-316" y="185172" zmin="-3872" zmax="-2872"/>
+		<add x="-3524" y="184420" zmin="-3872" zmax="-2872"/>
+	</territory>
+	<spawn name="gludio_t19_23_0015" count="3" respawn="35">
+		<territory name="gludio_t19_23_0015"/>
+		<npc id="20059"/><!--Монстроглаз Дозорный-->
+	</spawn>
+	<spawn name="gludio_t19_23_0015" count="4" respawn="35">
+		<territory name="gludio_t19_23_0015"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_23_0015" count="2" respawn="35">
+		<territory name="gludio_t19_23_0015"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<spawn name="gludio_t19_23_0015" count="3" respawn="35">
+		<territory name="gludio_t19_23_0015"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<territory name="gludio_t19_23_0014">
+		<add x="-5436" y="172772" zmin="-3824" zmax="-2574"/>
+		<add x="-276" y="174128" zmin="-3824" zmax="-2574"/>
+		<add x="-464" y="180636" zmin="-3824" zmax="-2574"/>
+		<add x="-5660" y="180000" zmin="-3824" zmax="-2574"/>
+		<add x="-7052" y="179068" zmin="-3824" zmax="-2574"/>
+		<add x="-7132" y="177236" zmin="-3824" zmax="-2574"/>
+		<add x="-6552" y="174456" zmin="-3824" zmax="-2574"/>
+	</territory>
+	<spawn name="gludio_t19_23_0014" count="5" respawn="35">
+		<territory name="gludio_t19_23_0014"/>
+		<npc id="20059"/><!--Монстроглаз Дозорный-->
+	</spawn>
+	<spawn name="gludio_t19_23_0014" count="5" respawn="35">
+		<territory name="gludio_t19_23_0014"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_23_0014" count="3" respawn="35">
+		<territory name="gludio_t19_23_0014"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<spawn name="gludio_t19_23_0014" count="5" respawn="35">
+		<territory name="gludio_t19_23_0014"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<territory name="gludio_t19_23_0013">
+		<add x="-4820" y="167236" zmin="-3608" zmax="-2408"/>
+		<add x="-324" y="167312" zmin="-3608" zmax="-2408"/>
+		<add x="-300" y="174072" zmin="-3608" zmax="-2408"/>
+		<add x="-5128" y="172788" zmin="-3608" zmax="-2408"/>
+	</territory>
+	<spawn name="gludio_t19_23_0013" count="5" respawn="35">
+		<territory name="gludio_t19_23_0013"/>
+		<npc id="20055"/><!--Монстроглаз Смотритель-->
+	</spawn>
+	<spawn name="gludio_t19_23_0013" count="6" respawn="35">
+		<territory name="gludio_t19_23_0013"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_23_0013" count="3" respawn="35">
+		<territory name="gludio_t19_23_0013"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_23_0013" count="3" respawn="35">
+		<territory name="gludio_t19_23_0013"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<territory name="gludio_t19_23_0017">
+		<add x="-3356" y="191048" zmin="-3804" zmax="-2804"/>
+		<add x="-348" y="191208" zmin="-3804" zmax="-2804"/>
+		<add x="-376" y="195376" zmin="-3804" zmax="-2804"/>
+		<add x="-1280" y="196184" zmin="-3804" zmax="-2804"/>
+		<add x="-3416" y="196312" zmin="-3804" zmax="-2804"/>
+	</territory>
+	<spawn name="gludio_t19_23_0017" count="3" respawn="35">
+		<territory name="gludio_t19_23_0017"/>
+		<npc id="20059"/><!--Монстроглаз Дозорный-->
+	</spawn>
+	<spawn name="gludio_t19_23_0017" count="3" respawn="35">
+		<territory name="gludio_t19_23_0017"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_23_0017" count="2" respawn="35">
+		<territory name="gludio_t19_23_0017"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<spawn name="gludio_t19_23_0017" count="4" respawn="35">
+		<territory name="gludio_t19_23_0017"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<territory name="gludio_t19_23_0012">
+		<add x="-7692" y="164028" zmin="-3556" zmax="-2156"/>
+		<add x="-468" y="164116" zmin="-3556" zmax="-2156"/>
+		<add x="-540" y="167224" zmin="-3556" zmax="-2156"/>
+		<add x="-5080" y="167180" zmin="-3556" zmax="-2156"/>
+		<add x="-7240" y="165200" zmin="-3556" zmax="-2156"/>
+	</territory>
+	<spawn name="gludio_t19_23_0012" count="4" respawn="35">
+		<territory name="gludio_t19_23_0012"/>
+		<npc id="20055"/><!--Монстроглаз Смотритель-->
+	</spawn>
+	<spawn name="gludio_t19_23_0012" count="5" respawn="35">
+		<territory name="gludio_t19_23_0012"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_23_0012" count="3" respawn="35">
+		<territory name="gludio_t19_23_0012"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_23_0012" count="3" respawn="35">
+		<territory name="gludio_t19_23_0012"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<territory name="gludio_t19_23_0010">
+		<add x="-11192" y="172444" zmin="-3432" zmax="-2432"/>
+		<add x="-11360" y="169244" zmin="-3432" zmax="-2432"/>
+		<add x="-7660" y="167852" zmin="-3432" zmax="-2432"/>
+		<add x="-7480" y="169100" zmin="-3432" zmax="-2432"/>
+		<add x="-7852" y="172452" zmin="-3432" zmax="-2432"/>
+	</territory>
+	<spawn name="gludio_t19_23_0010" count="3" respawn="35">
+		<territory name="gludio_t19_23_0010"/>
+		<npc id="20055"/><!--Монстроглаз Смотритель-->
+	</spawn>
+	<spawn name="gludio_t19_23_0010" count="3" respawn="35">
+		<territory name="gludio_t19_23_0010"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_23_0010" count="3" respawn="35">
+		<territory name="gludio_t19_23_0010"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_23_0010" count="3" respawn="35">
+		<territory name="gludio_t19_23_0010"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<spawn name="party_t19_23_001" count="1" respawn="180">
+		<territory>
+			<add x="-31813" y="173528" zmin="-4402" zmax="-4002"/>
+			<add x="-28953" y="173580" zmin="-4402" zmax="-4002"/>
+			<add x="-29244" y="175037" zmin="-4402" zmax="-4002"/>
+			<add x="-31678" y="174933" zmin="-4402" zmax="-4002"/>
+		</territory>
+		<npc id="20745"/><!--Гигантиопс-->
+	</spawn>
+	<spawn name="party_t19_23_006" count="1" respawn="180">
+		<territory>
+			<add x="-20741" y="193504" zmin="-4391" zmax="-3991"/>
+			<add x="-20059" y="194813" zmin="-4391" zmax="-3991"/>
+			<add x="-21478" y="195818" zmin="-4391" zmax="-3991"/>
+			<add x="-22954" y="194768" zmin="-4391" zmax="-3991"/>
+			<add x="-22774" y="193273" zmin="-4391" zmax="-3991"/>
+		</territory>
+		<npc id="20745"/><!--Гигантиопс-->
+	</spawn>
+	<spawn name="party_t19_23_007" count="1" respawn="180">
+		<territory>
+			<add x="-21461" y="185163" zmin="-4370" zmax="-3870"/>
+			<add x="-19152" y="187103" zmin="-4370" zmax="-3870"/>
+			<add x="-20273" y="188306" zmin="-4370" zmax="-3870"/>
+			<add x="-22246" y="185854" zmin="-4370" zmax="-3870"/>
+		</territory>
+		<npc id="20745"/><!--Гигантиопс-->
+	</spawn>
+	<spawn name="party_t19_23_008" count="1" respawn="180">
+		<territory>
+			<add x="-23803" y="175143" zmin="-4298" zmax="-3798"/>
+			<add x="-21627" y="175970" zmin="-4298" zmax="-3798"/>
+			<add x="-22457" y="178220" zmin="-4298" zmax="-3798"/>
+			<add x="-25675" y="176291" zmin="-4298" zmax="-3798"/>
+		</territory>
+		<npc id="20745"/><!--Гигантиопс-->
+	</spawn>
+	<spawn name="party_t19_23_009" count="1" respawn="180">
+		<territory>
+			<add x="-21446" y="178814" zmin="-4205" zmax="-3705"/>
+			<add x="-19910" y="180406" zmin="-4205" zmax="-3705"/>
+			<add x="-21362" y="182298" zmin="-4205" zmax="-3705"/>
+			<add x="-23247" y="180037" zmin="-4205" zmax="-3705"/>
+		</territory>
+		<npc id="20745"/><!--Гигантиопс-->
+	</spawn>
+	<territory name="party_t19_23_002">
+		<add x="-32658" y="177917" zmin="-4279" zmax="-3879"/>
+		<add x="-28822" y="178471" zmin="-4279" zmax="-3879"/>
+		<add x="-28083" y="179741" zmin="-4279" zmax="-3879"/>
+		<add x="-32630" y="180734" zmin="-4279" zmax="-3879"/>
+	</territory>
+	<spawn name="party_t19_23_002" count="1" respawn="180">
+		<territory name="party_t19_23_002"/>
+		<npc id="20745"/><!--Гигантиопс-->
+	</spawn>
+	<spawn name="party_t19_23_002" count="1" respawn="180">
+		<territory name="party_t19_23_002"/>
+		<npc id="20745"/><!--Гигантиопс-->
+	</spawn>
+	<territory name="party_t19_23_003">
+		<add x="-26341" y="184574" zmin="-4441" zmax="-3941"/>
+		<add x="-24547" y="185676" zmin="-4441" zmax="-3941"/>
+		<add x="-25817" y="188930" zmin="-4441" zmax="-3941"/>
+		<add x="-29252" y="184834" zmin="-4441" zmax="-3941"/>
+	</territory>
+	<spawn name="party_t19_23_003" count="1" respawn="180">
+		<territory name="party_t19_23_003"/>
+		<npc id="20745"/><!--Гигантиопс-->
+	</spawn>
+	<spawn name="party_t19_23_003" count="1" respawn="180">
+		<territory name="party_t19_23_003"/>
+		<npc id="20745"/><!--Гигантиопс-->
+	</spawn>
+	<territory name="party_t19_23_004">
+		<add x="-30568" y="188566" zmin="-3854" zmax="-3354"/>
+		<add x="-29065" y="189103" zmin="-3854" zmax="-3354"/>
+		<add x="-28467" y="192324" zmin="-3854" zmax="-3354"/>
+		<add x="-32590" y="191192" zmin="-3854" zmax="-3354"/>
+		<add x="-32501" y="189671" zmin="-3854" zmax="-3354"/>
+	</territory>
+	<spawn name="party_t19_23_004" count="1" respawn="180">
+		<territory name="party_t19_23_004"/>
+		<npc id="20745"/><!--Гигантиопс-->
+	</spawn>
+	<spawn name="party_t19_23_004" count="1" respawn="180">
+		<territory name="party_t19_23_004"/>
+		<npc id="20745"/><!--Гигантиопс-->
+	</spawn>
+	<spawn name="party_t19_23_005" count="1" respawn="180">
+		<territory>
+			<add x="-24799" y="189081" zmin="-4253" zmax="-3853"/>
+			<add x="-24134" y="191942" zmin="-4253" zmax="-3853"/>
+			<add x="-25612" y="192049" zmin="-4253" zmax="-3853"/>
+			<add x="-26880" y="190486" zmin="-4253" zmax="-3853"/>
+			<add x="-27056" y="189297" zmin="-4253" zmax="-3853"/>
+		</territory>
+		<npc id="20745"/><!--Гигантиопс-->
+	</spawn>
+	<territory name="party_t19_23_010">
+		<add x="-18740" y="181877" zmin="-3981" zmax="-3181"/>
+		<add x="-15795" y="181908" zmin="-3981" zmax="-3181"/>
+		<add x="-15443" y="184600" zmin="-3981" zmax="-3181"/>
+		<add x="-18643" y="185123" zmin="-3981" zmax="-3181"/>
+	</territory>
+	<spawn name="party_t19_23_010" count="1" respawn="180">
+		<territory name="party_t19_23_010"/>
+		<npc id="20745"/><!--Гигантиопс-->
+	</spawn>
+	<spawn name="party_t19_23_010" count="1" respawn="180">
+		<territory name="party_t19_23_010"/>
+		<npc id="20745"/><!--Гигантиопс-->
+	</spawn>
+	<spawn name="party_t19_23_011" count="1" respawn="180">
+		<territory>
+			<add x="-16154" y="180378" zmin="-4286" zmax="-3786"/>
+			<add x="-13397" y="179108" zmin="-4286" zmax="-3786"/>
+			<add x="-11723" y="180286" zmin="-4286" zmax="-3786"/>
+			<add x="-12164" y="182120" zmin="-4286" zmax="-3786"/>
+			<add x="-13555" y="182826" zmin="-4286" zmax="-3786"/>
+		</territory>
+		<npc id="20745"/><!--Гигантиопс-->
+	</spawn>
+	<spawn name="party_t19_23_012" count="1" respawn="180">
+		<territory>
+			<add x="-12125" y="179180" zmin="-4286" zmax="-3786"/>
+			<add x="-10998" y="178210" zmin="-4286" zmax="-3786"/>
+			<add x="-9608" y="178625" zmin="-4286" zmax="-3786"/>
+			<add x="-9840" y="180616" zmin="-4286" zmax="-3786"/>
+			<add x="-11426" y="180738" zmin="-4286" zmax="-3786"/>
+		</territory>
+		<npc id="20745"/><!--Гигантиопс-->
+	</spawn>
+	<spawn name="party_t19_23_017" count="1" respawn="180">
+		<territory>
+			<add x="-5728" y="185501" zmin="-3719" zmax="-3219"/>
+			<add x="-5790" y="188174" zmin="-3719" zmax="-3219"/>
+			<add x="-7524" y="187703" zmin="-3719" zmax="-3219"/>
+			<add x="-7859" y="186328" zmin="-3719" zmax="-3219"/>
+		</territory>
+		<npc id="20745"/><!--Гигантиопс-->
+	</spawn>
+	<spawn name="party_t19_23_013" count="1" respawn="180">
+		<territory>
+			<add x="-10317" y="181534" zmin="-4262" zmax="-3662"/>
+			<add x="-8839" y="182665" zmin="-4262" zmax="-3662"/>
+			<add x="-8613" y="184249" zmin="-4262" zmax="-3662"/>
+			<add x="-10901" y="184847" zmin="-4262" zmax="-3662"/>
+		</territory>
+		<npc id="20745"/><!--Гигантиопс-->
+	</spawn>
+	<spawn name="party_t19_23_014" count="1" respawn="180">
+		<territory>
+			<add x="-13951" y="183599" zmin="-4389" zmax="-3689"/>
+			<add x="-12241" y="184057" zmin="-4389" zmax="-3689"/>
+			<add x="-12307" y="185791" zmin="-4389" zmax="-3689"/>
+			<add x="-14722" y="186097" zmin="-4389" zmax="-3689"/>
+		</territory>
+		<npc id="20745"/><!--Гигантиопс-->
+	</spawn>
+	<territory name="party_t19_23_015">
+		<add x="-17092" y="187175" zmin="-4389" zmax="-3689"/>
+		<add x="-13257" y="187902" zmin="-4389" zmax="-3689"/>
+		<add x="-11259" y="190497" zmin="-4389" zmax="-3689"/>
+		<add x="-13165" y="191917" zmin="-4389" zmax="-3689"/>
+		<add x="-18036" y="189142" zmin="-4389" zmax="-3689"/>
+	</territory>
+	<spawn name="party_t19_23_015" count="1" respawn="180">
+		<territory name="party_t19_23_015"/>
+		<npc id="20745"/><!--Гигантиопс-->
+	</spawn>
+	<spawn name="party_t19_23_015" count="1" respawn="180">
+		<territory name="party_t19_23_015"/>
+		<npc id="20745"/><!--Гигантиопс-->
+	</spawn>
+	<spawn name="party_t19_23_015" count="1" respawn="180">
+		<territory name="party_t19_23_015"/>
+		<npc id="20745"/><!--Гигантиопс-->
+	</spawn>
+	<spawn name="party_t19_23_016" count="1" respawn="180">
+		<territory>
+			<add x="-10802" y="189173" zmin="-4370" zmax="-3870"/>
+			<add x="-8897" y="191801" zmin="-4370" zmax="-3870"/>
+			<add x="-9965" y="191905" zmin="-4370" zmax="-3870"/>
+			<add x="-11939" y="189453" zmin="-4370" zmax="-3870"/>
+		</territory>
+		<npc id="20745"/><!--Гигантиопс-->
+	</spawn>
+	<spawn name="quest_030919_19_23_004" count="2" respawn="180">
+		<territory>
+			<add x="-10948" y="189532" zmin="-4296" zmax="-3996"/>
+			<add x="-9344" y="190868" zmin="-4296" zmax="-3996"/>
+			<add x="-10000" y="191612" zmin="-4296" zmax="-3996"/>
+			<add x="-12124" y="190824" zmin="-4296" zmax="-3996"/>
+		</territory>
+		<npc id="27100"/><!--Скелет Наемник-->
+	</spawn>
+	<spawn name="quest_030919_19_23_003" count="2" respawn="180">
+		<territory>
+			<add x="-23000" y="189912" zmin="-4632" zmax="-4132"/>
+			<add x="-21996" y="189464" zmin="-4632" zmax="-4132"/>
+			<add x="-21796" y="190336" zmin="-4632" zmax="-4132"/>
+			<add x="-22740" y="190716" zmin="-4632" zmax="-4132"/>
+		</territory>
+		<npc id="27100"/><!--Скелет Наемник-->
+	</spawn>
+	<spawn name="quest_030919_19_23_002" count="2" respawn="180">
+		<territory>
+			<add x="-27108" y="174596" zmin="-4196" zmax="-3896"/>
+			<add x="-26068" y="175068" zmin="-4196" zmax="-3896"/>
+			<add x="-26104" y="175812" zmin="-4196" zmax="-3896"/>
+			<add x="-27700" y="175460" zmin="-4196" zmax="-3896"/>
+		</territory>
+		<npc id="27100"/><!--Скелет Наемник-->
+	</spawn>
+	<spawn name="quest_030919_19_23_001" count="2" respawn="180">
+		<territory>
+			<add x="-18516" y="193540" zmin="-4312" zmax="-4012"/>
+			<add x="-17640" y="194404" zmin="-4312" zmax="-4012"/>
+			<add x="-17816" y="195400" zmin="-4312" zmax="-4012"/>
+			<add x="-19052" y="194924" zmin="-4312" zmax="-4012"/>
+		</territory>
+		<npc id="27100"/><!--Скелет Наемник-->
+	</spawn>
+	<spawn name="gludio_t19_23_017_02" count="2" respawn="35">
+		<territory>
+			<add x="-17724" y="165268" zmin="-2912" zmax="-2312"/>
+			<add x="-15640" y="164384" zmin="-2912" zmax="-2312"/>
+			<add x="-14832" y="165564" zmin="-2912" zmax="-2312"/>
+			<add x="-16716" y="166284" zmin="-2912" zmax="-2312"/>
+		</territory>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<spawn name="dg_19_23_020" count="1" respawn="180" respawn_random="120">
+		<point x="-30192" y="178928" z="-5253" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_020" count="1" respawn="180" respawn_random="120">
+		<point x="-30185" y="179173" z="-5253" h="0"/>
+		<npc id="20081"/><!--Муравей Бригадир-->
+	</spawn>
+	<spawn name="dg_19_23_020" count="1" respawn="180" respawn_random="120">
+		<point x="-30219" y="179408" z="-5253" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_023" count="1" respawn="180" respawn_random="120">
+		<point x="-27952" y="178144" z="-5253" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_023" count="1" respawn="180" respawn_random="120">
+		<point x="-27667" y="178168" z="-5253" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_023" count="1" respawn="180" respawn_random="120">
+		<point x="-27348" y="178201" z="-5253" h="0"/>
+		<npc id="20081"/><!--Муравей Бригадир-->
+	</spawn>
+	<spawn name="dg_19_23_023" count="1" respawn="180" respawn_random="120">
+		<point x="-27929" y="178351" z="-5253" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_023" count="1" respawn="180" respawn_random="120">
+		<point x="-27493" y="178384" z="-5253" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_023" count="1" respawn="180" respawn_random="120">
+		<point x="-28124" y="178551" z="-5253" h="0"/>
+		<npc id="20081"/><!--Муравей Бригадир-->
+	</spawn>
+	<spawn name="dg_19_23_023" count="1" respawn="180" respawn_random="120">
+		<point x="-27755" y="178567" z="-5253" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_023" count="1" respawn="180" respawn_random="120">
+		<point x="-27319" y="178651" z="-5253" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_023" count="1" respawn="180" respawn_random="120">
+		<point x="-27504" y="178910" z="-5253" h="0"/>
+		<npc id="20081"/><!--Муравей Бригадир-->
+	</spawn>
+	<spawn name="dg_19_23_023" count="1" respawn="180" respawn_random="120">
+		<point x="-27850" y="178809" z="-5253" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_024" count="1" respawn="180" respawn_random="120">
+		<point x="-26948" y="177648" z="-5253" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_024" count="1" respawn="180" respawn_random="120">
+		<point x="-26744" y="177536" z="-5253" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_024" count="1" respawn="180" respawn_random="120">
+		<point x="-26976" y="177417" z="-5253" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_021" count="1" respawn="180" respawn_random="120">
+		<point x="-30176" y="177968" z="-5253" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_021" count="1" respawn="180" respawn_random="120">
+		<point x="-29904" y="178048" z="-5236" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_021" count="1" respawn="180" respawn_random="120">
+		<point x="-30116" y="178204" z="-5253" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_021" count="1" respawn="180" respawn_random="120">
+		<point x="-29800" y="178240" z="-5253" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_021" count="1" respawn="180" respawn_random="120">
+		<point x="-29544" y="178272" z="-5253" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_021" count="1" respawn="180" respawn_random="120">
+		<point x="-29700" y="178448" z="-5253" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_021" count="1" respawn="180" respawn_random="120">
+		<point x="-30000" y="178416" z="-5253" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_021" count="1" respawn="180" respawn_random="120">
+		<point x="-30340" y="178344" z="-5253" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_021" count="1" respawn="180" respawn_random="120">
+		<point x="-30188" y="178560" z="-5253" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_022" count="1" respawn="180" respawn_random="120">
+		<point x="-28864" y="178368" z="-5252" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_022" count="1" respawn="180" respawn_random="120">
+		<point x="-28688" y="178480" z="-5253" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_022" count="1" respawn="180" respawn_random="120">
+		<point x="-28480" y="178592" z="-5253" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_027" count="1" respawn="180" respawn_random="120">
+		<point x="-21066" y="192388" z="-5424" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_027" count="1" respawn="180" respawn_random="120">
+		<point x="-21108" y="192771" z="-5424" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_027" count="1" respawn="180" respawn_random="120">
+		<point x="-21406" y="192943" z="-5424" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_027" count="1" respawn="180" respawn_random="120">
+		<point x="-21344" y="192270" z="-5424" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_027" count="1" respawn="180" respawn_random="120">
+		<point x="-21413" y="192615" z="-5424" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_027" count="1" respawn="180" respawn_random="120">
+		<point x="-21742" y="192711" z="-5424" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_027" count="1" respawn="180" respawn_random="120">
+		<point x="-21703" y="192360" z="-5424" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_028" count="1" respawn="180" respawn_random="120">
+		<point x="-19328" y="191072" z="-5536" h="0"/>
+		<npc id="20081"/><!--Муравей Бригадир-->
+	</spawn>
+	<spawn name="dg_19_23_028" count="1" respawn="180" respawn_random="120">
+		<point x="-19271" y="191424" z="-5536" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_028" count="1" respawn="180" respawn_random="120">
+		<point x="-19621" y="191450" z="-5536" h="0"/>
+		<npc id="20081"/><!--Муравей Бригадир-->
+	</spawn>
+	<spawn name="dg_19_23_028" count="1" respawn="180" respawn_random="120">
+		<point x="-19432" y="191812" z="-5536" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_028" count="1" respawn="180" respawn_random="120">
+		<point x="-19701" y="191991" z="-5536" h="0"/>
+		<npc id="20081"/><!--Муравей Бригадир-->
+	</spawn>
+	<spawn name="dg_19_23_025" count="1" respawn="180" respawn_random="120">
+		<point x="-28400" y="177296" z="-5253" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_025" count="1" respawn="180" respawn_random="120">
+		<point x="-28192" y="177504" z="-5088" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_025" count="1" respawn="180" respawn_random="120">
+		<point x="-28000" y="177712" z="-5253" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_026" count="1" respawn="180" respawn_random="120">
+		<point x="-20832" y="193760" z="-5355" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_026" count="1" respawn="180" respawn_random="120">
+		<point x="-20532" y="193819" z="-5355" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_026" count="1" respawn="180" respawn_random="120">
+		<point x="-20211" y="193813" z="-5355" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_029" count="1" respawn="180" respawn_random="120">
+		<point x="-20184" y="192011" z="-5536" h="0"/>
+		<npc id="20081"/><!--Муравей Бригадир-->
+	</spawn>
+	<spawn name="dg_19_23_029" count="1" respawn="180" respawn_random="120">
+		<point x="-20341" y="191691" z="-5536" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_012" count="1" respawn="180" respawn_random="120">
+		<point x="-24240" y="178768" z="-5415" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_012" count="1" respawn="180" respawn_random="120">
+		<point x="-24320" y="178992" z="-5415" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_012" count="1" respawn="180" respawn_random="120">
+		<point x="-24432" y="179168" z="-5408" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_012" count="1" respawn="180" respawn_random="120">
+		<point x="-24576" y="179488" z="-5415" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_013" count="1" respawn="180" respawn_random="120">
+		<point x="-28512" y="181759" z="-5328" h="0"/>
+		<npc id="20082"/><!--Муравей Рекрут-->
+	</spawn>
+	<spawn name="dg_19_23_013" count="1" respawn="180" respawn_random="120">
+		<point x="-28195" y="181695" z="-5328" h="0"/>
+		<npc id="20084"/><!--Муравей Ищейка-->
+	</spawn>
+	<spawn name="dg_19_23_013" count="1" respawn="180" respawn_random="120">
+		<point x="-27878" y="181691" z="-5328" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_013" count="1" respawn="180" respawn_random="120">
+		<point x="-28335" y="181981" z="-5328" h="0"/>
+		<npc id="20082"/><!--Муравей Рекрут-->
+	</spawn>
+	<spawn name="dg_19_23_013" count="1" respawn="180" respawn_random="120">
+		<point x="-27958" y="181917" z="-5328" h="0"/>
+		<npc id="20084"/><!--Муравей Ищейка-->
+	</spawn>
+	<spawn name="dg_19_23_013" count="1" respawn="180" respawn_random="120">
+		<point x="-28519" y="182289" z="-5328" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_013" count="1" respawn="180" respawn_random="120">
+		<point x="-28096" y="182219" z="-5328" h="0"/>
+		<npc id="20082"/><!--Муравей Рекрут-->
+	</spawn>
+	<spawn name="dg_19_23_013" count="1" respawn="180" respawn_random="120">
+		<point x="-27694" y="182135" z="-5328" h="0"/>
+		<npc id="20084"/><!--Муравей Ищейка-->
+	</spawn>
+	<spawn name="dg_19_23_013" count="1" respawn="180" respawn_random="120">
+		<point x="-27789" y="182402" z="-5328" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_013" count="1" respawn="180" respawn_random="120">
+		<point x="-28294" y="182443" z="-5328" h="0"/>
+		<npc id="20082"/><!--Муравей Рекрут-->
+	</spawn>
+	<spawn name="dg_19_23_011" count="1" respawn="180" respawn_random="120">
+		<point x="-26048" y="182304" z="-5408" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_011" count="1" respawn="180" respawn_random="120">
+		<point x="-25888" y="182000" z="-5415" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_011" count="1" respawn="180" respawn_random="120">
+		<point x="-25760" y="181728" z="-5415" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_011" count="1" respawn="180" respawn_random="120">
+		<point x="-25648" y="181440" z="-5415" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_016" count="1" respawn="180" respawn_random="120">
+		<point x="-27680" y="179760" z="-5328" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_016" count="1" respawn="180" respawn_random="120">
+		<point x="-27403" y="179843" z="-5328" h="0"/>
+		<npc id="20084"/><!--Муравей Ищейка-->
+	</spawn>
+	<spawn name="dg_19_23_016" count="1" respawn="180" respawn_random="120">
+		<point x="-27631" y="180060" z="-5328" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_016" count="1" respawn="180" respawn_random="120">
+		<point x="-27934" y="180261" z="-5328" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_016" count="1" respawn="180" respawn_random="120">
+		<point x="-28271" y="180336" z="-5328" h="0"/>
+		<npc id="20084"/><!--Муравей Ищейка-->
+	</spawn>
+	<spawn name="dg_19_23_016" count="1" respawn="180" respawn_random="120">
+		<point x="-27949" y="179910" z="-5328" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_016" count="1" respawn="180" respawn_random="120">
+		<point x="-28219" y="180035" z="-5328" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_016" count="1" respawn="180" respawn_random="120">
+		<point x="-27379" y="180203" z="-5328" h="0"/>
+		<npc id="20084"/><!--Муравей Ищейка-->
+	</spawn>
+	<spawn name="dg_19_23_016" count="1" respawn="180" respawn_random="120">
+		<point x="-27648" y="180396" z="-5328" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_016" count="1" respawn="180" respawn_random="120">
+		<point x="-27952" y="180605" z="-5328" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_016" count="1" respawn="180" respawn_random="120">
+		<point x="-27642" y="180697" z="-5328" h="0"/>
+		<npc id="20084"/><!--Муравей Ищейка-->
+	</spawn>
+	<spawn name="dg_19_23_016" count="1" respawn="180" respawn_random="120">
+		<point x="-27399" y="180528" z="-5328" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_017" count="1" respawn="180" respawn_random="120">
+		<point x="-29440" y="181264" z="-5275" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_017" count="1" respawn="180" respawn_random="120">
+		<point x="-29088" y="181328" z="-5328" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_017" count="1" respawn="180" respawn_random="120">
+		<point x="-28704" y="181424" z="-5328" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_014" count="1" respawn="180" respawn_random="120">
+		<point x="-28976" y="183008" z="-5328" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_014" count="1" respawn="180" respawn_random="120">
+		<point x="-28846" y="183227" z="-5328" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_014" count="1" respawn="180" respawn_random="120">
+		<point x="-29098" y="183218" z="-5328" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_015" count="1" respawn="180" respawn_random="120">
+		<point x="-26848" y="180784" z="-5328" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_015" count="1" respawn="180" respawn_random="120">
+		<point x="-26576" y="180896" z="-5312" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_015" count="1" respawn="180" respawn_random="120">
+		<point x="-26256" y="180960" z="-5349" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_018" count="1" respawn="180" respawn_random="120">
+		<point x="-29482" y="180064" z="-5253" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_018" count="1" respawn="180" respawn_random="120">
+		<point x="-29625" y="180359" z="-5253" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_018" count="1" respawn="180" respawn_random="120">
+		<point x="-29749" y="180674" z="-5253" h="0"/>
+		<npc id="20081"/><!--Муравей Бригадир-->
+	</spawn>
+	<spawn name="dg_19_23_018" count="1" respawn="180" respawn_random="120">
+		<point x="-29922" y="180989" z="-5253" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_018" count="1" respawn="180" respawn_random="120">
+		<point x="-30236" y="180886" z="-5253" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_018" count="1" respawn="180" respawn_random="120">
+		<point x="-30010" y="180612" z="-5253" h="0"/>
+		<npc id="20081"/><!--Муравей Бригадир-->
+	</spawn>
+	<spawn name="dg_19_23_018" count="1" respawn="180" respawn_random="120">
+		<point x="-29944" y="180309" z="-5253" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_018" count="1" respawn="180" respawn_random="120">
+		<point x="-30108" y="180046" z="-5253" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_018" count="1" respawn="180" respawn_random="120">
+		<point x="-30281" y="180511" z="-5253" h="0"/>
+		<npc id="20081"/><!--Муравей Бригадир-->
+	</spawn>
+	<spawn name="dg_19_23_019" count="1" respawn="180" respawn_random="120">
+		<point x="-31222" y="180912" z="-5253" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_019" count="1" respawn="180" respawn_random="120">
+		<point x="-31156" y="180668" z="-5253" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_019" count="1" respawn="180" respawn_random="120">
+		<point x="-31389" y="180704" z="-5253" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_041" count="1" respawn="180" respawn_random="120">
+		<point x="-15080" y="176743" z="-5318" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_041" count="1" respawn="180" respawn_random="120">
+		<point x="-14866" y="177033" z="-5318" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_041" count="1" respawn="180" respawn_random="120">
+		<point x="-14621" y="177354" z="-5318" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_041" count="1" respawn="180" respawn_random="120">
+		<point x="-14764" y="176785" z="-5318" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_041" count="1" respawn="180" respawn_random="120">
+		<point x="-14532" y="177100" z="-5318" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_041" count="1" respawn="180" respawn_random="120">
+		<point x="-14115" y="177281" z="-5318" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_041" count="1" respawn="180" respawn_random="120">
+		<point x="-14449" y="176871" z="-5318" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_041" count="1" respawn="180" respawn_random="120">
+		<point x="-14688" y="176569" z="-5318" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_041" count="1" respawn="180" respawn_random="120">
+		<point x="-14372" y="176362" z="-5318" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_041" count="1" respawn="180" respawn_random="120">
+		<point x="-14165" y="176569" z="-5318" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_041" count="1" respawn="180" respawn_random="120">
+		<point x="-14124" y="176878" z="-5318" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_041" count="1" respawn="180" respawn_random="120">
+		<point x="-13936" y="177104" z="-5318" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_042" count="1" respawn="180" respawn_random="120">
+		<point x="-13408" y="177584" z="-5318" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_042" count="1" respawn="180" respawn_random="120">
+		<point x="-13538" y="177829" z="-5318" h="0"/>
+		<npc id="20081"/><!--Муравей Бригадир-->
+	</spawn>
+	<spawn name="dg_19_23_042" count="1" respawn="180" respawn_random="120">
+		<point x="-13127" y="177940" z="-5318" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_042" count="1" respawn="180" respawn_random="120">
+		<point x="-13258" y="177784" z="-5318" h="0"/>
+		<npc id="20081"/><!--Муравей Бригадир-->
+	</spawn>
+	<spawn name="dg_19_23_040" count="1" respawn="180" respawn_random="120">
+		<point x="-11872" y="174064" z="-4806" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_040" count="1" respawn="180" respawn_random="120">
+		<point x="-12080" y="174224" z="-4868" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_040" count="1" respawn="180" respawn_random="120">
+		<point x="-12464" y="174496" z="-5040" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_040" count="1" respawn="180" respawn_random="120">
+		<point x="-12736" y="174736" z="-5152" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_045" count="1" respawn="180" respawn_random="120">
+		<point x="-12992" y="178272" z="-5344" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_045" count="1" respawn="180" respawn_random="120">
+		<point x="-12960" y="178560" z="-5398" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_046" count="1" respawn="180" respawn_random="120">
+		<point x="-14256" y="179120" z="-5318" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_046" count="1" respawn="180" respawn_random="120">
+		<point x="-13888" y="179280" z="-5360" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="gludio04_mb1923_01" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="-17460" y="174700" zmin="-3584" zmax="-2984"/>
+			<add x="-16872" y="174032" zmin="-3584" zmax="-2984"/>
+			<add x="-16212" y="174712" zmin="-3584" zmax="-2984"/>
+			<add x="-16368" y="175456" zmin="-3584" zmax="-2984"/>
+			<add x="-17304" y="175548" zmin="-3584" zmax="-2984"/>
+		</territory>
+		<npc id="25352"/><!--Гигантский Василиск Пустоши-->
+	</spawn>
+	<spawn name="dg_19_23_043" count="1" respawn="180" respawn_random="120">
+		<point x="-14694" y="178269" z="-5318" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_043" count="1" respawn="180" respawn_random="120">
+		<point x="-14791" y="178562" z="-5318" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_043" count="1" respawn="180" respawn_random="120">
+		<point x="-14775" y="178856" z="-5318" h="0"/>
+		<npc id="20081"/><!--Муравей Бригадир-->
+	</spawn>
+	<spawn name="dg_19_23_043" count="1" respawn="180" respawn_random="120">
+		<point x="-15062" y="178821" z="-5318" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_043" count="1" respawn="180" respawn_random="120">
+		<point x="-15424" y="178787" z="-5318" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_043" count="1" respawn="180" respawn_random="120">
+		<point x="-15697" y="178626" z="-5318" h="0"/>
+		<npc id="20081"/><!--Муравей Бригадир-->
+	</spawn>
+	<spawn name="dg_19_23_043" count="1" respawn="180" respawn_random="120">
+		<point x="-15581" y="178327" z="-5318" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_043" count="1" respawn="180" respawn_random="120">
+		<point x="-15098" y="178180" z="-5318" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_043" count="1" respawn="180" respawn_random="120">
+		<point x="-15032" y="178448" z="-5318" h="0"/>
+		<npc id="20081"/><!--Муравей Бригадир-->
+	</spawn>
+	<spawn name="dg_19_23_043" count="1" respawn="180" respawn_random="120">
+		<point x="-15470" y="178514" z="-5318" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_044" count="1" respawn="180" respawn_random="120">
+		<point x="-13232" y="180162" z="-5398" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_044" count="1" respawn="180" respawn_random="120">
+		<point x="-13417" y="179913" z="-5398" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_044" count="1" respawn="180" respawn_random="120">
+		<point x="-13048" y="179841" z="-5398" h="0"/>
+		<npc id="20081"/><!--Муравей Бригадир-->
+	</spawn>
+	<spawn name="dg_19_23_044" count="1" respawn="180" respawn_random="120">
+		<point x="-12881" y="179567" z="-5398" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_044" count="1" respawn="180" respawn_random="120">
+		<point x="-12941" y="179268" z="-5398" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_044" count="1" respawn="180" respawn_random="120">
+		<point x="-13089" y="179020" z="-5398" h="0"/>
+		<npc id="20081"/><!--Муравей Бригадир-->
+	</spawn>
+	<spawn name="dg_19_23_044" count="1" respawn="180" respawn_random="120">
+		<point x="-13252" y="179272" z="-5398" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_044" count="1" respawn="180" respawn_random="120">
+		<point x="-13463" y="179514" z="-5398" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_049" count="1" respawn="180" respawn_random="120">
+		<point x="-16299" y="179870" z="-5398" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_049" count="1" respawn="180" respawn_random="120">
+		<point x="-16119" y="180062" z="-5398" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_049" count="1" respawn="180" respawn_random="120">
+		<point x="-15990" y="179751" z="-5398" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_049" count="1" respawn="180" respawn_random="120">
+		<point x="-15735" y="179565" z="-5398" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_049" count="1" respawn="180" respawn_random="120">
+		<point x="-15416" y="179607" z="-5398" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_049" count="1" respawn="180" respawn_random="120">
+		<point x="-15199" y="179900" z="-5398" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_049" count="1" respawn="180" respawn_random="120">
+		<point x="-15271" y="180168" z="-5398" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_049" count="1" respawn="180" respawn_random="120">
+		<point x="-15570" y="180347" z="-5398" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_049" count="1" respawn="180" respawn_random="120">
+		<point x="-15768" y="180099" z="-5398" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_047" count="1" respawn="180" respawn_random="120">
+		<point x="-13808" y="178080" z="-5318" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_047" count="1" respawn="180" respawn_random="120">
+		<point x="-14135" y="178191" z="-5318" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_048" count="1" respawn="180" respawn_random="120">
+		<point x="-14737" y="180156" z="-5398" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_048" count="1" respawn="180" respawn_random="120">
+		<point x="-14356" y="180210" z="-5398" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_048" count="1" respawn="180" respawn_random="120">
+		<point x="-13949" y="180188" z="-5398" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_030" count="1" respawn="180" respawn_random="120">
+		<point x="-19553" y="190583" z="-5536" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_030" count="1" respawn="180" respawn_random="120">
+		<point x="-19781" y="190782" z="-5536" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_030" count="1" respawn="180" respawn_random="120">
+		<point x="-20132" y="190839" z="-5536" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_031" count="1" respawn="180" respawn_random="120">
+		<point x="-19274" y="188705" z="-5541" h="0"/>
+		<npc id="20082"/><!--Муравей Рекрут-->
+	</spawn>
+	<spawn name="dg_19_23_031" count="1" respawn="180" respawn_random="120">
+		<point x="-19311" y="188952" z="-5541" h="0"/>
+		<npc id="20084"/><!--Муравей Ищейка-->
+	</spawn>
+	<spawn name="dg_19_23_031" count="1" respawn="180" respawn_random="120">
+		<point x="-19006" y="188809" z="-5541" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_031" count="1" respawn="180" respawn_random="120">
+		<point x="-19091" y="189066" z="-5541" h="0"/>
+		<npc id="20082"/><!--Муравей Рекрут-->
+	</spawn>
+	<spawn name="dg_19_23_031" count="1" respawn="180" respawn_random="120">
+		<point x="-19301" y="189274" z="-5541" h="0"/>
+		<npc id="20084"/><!--Муравей Ищейка-->
+	</spawn>
+	<spawn name="dg_19_23_031" count="1" respawn="180" respawn_random="120">
+		<point x="-18694" y="189077" z="-5541" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_031" count="1" respawn="180" respawn_random="120">
+		<point x="-18905" y="189368" z="-5541" h="0"/>
+		<npc id="20082"/><!--Муравей Рекрут-->
+	</spawn>
+	<spawn name="dg_19_23_034" count="1" respawn="180" respawn_random="120">
+		<point x="-21702" y="189362" z="-5541" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_034" count="1" respawn="180" respawn_random="120">
+		<point x="-21374" y="189398" z="-5541" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_034" count="1" respawn="180" respawn_random="120">
+		<point x="-21543" y="189648" z="-5541" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_034" count="1" respawn="180" respawn_random="120">
+		<point x="-21098" y="189595" z="-5541" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_034" count="1" respawn="180" respawn_random="120">
+		<point x="-21917" y="189576" z="-5541" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_034" count="1" respawn="180" respawn_random="120">
+		<point x="-21755" y="189875" z="-5541" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_034" count="1" respawn="180" respawn_random="120">
+		<point x="-21167" y="189849" z="-5541" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_034" count="1" respawn="180" respawn_random="120">
+		<point x="-22138" y="189871" z="-5541" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_034" count="1" respawn="180" respawn_random="120">
+		<point x="-21908" y="190189" z="-5541" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_034" count="1" respawn="180" respawn_random="120">
+		<point x="-21424" y="190098" z="-5541" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_034" count="1" respawn="180" respawn_random="120">
+		<point x="-20853" y="189900" z="-5541" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_034" count="1" respawn="180" respawn_random="120">
+		<point x="-21502" y="190429" z="-5541" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_034" count="1" respawn="180" respawn_random="120">
+		<point x="-21126" y="190231" z="-5541" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_035" count="1" respawn="180" respawn_random="120">
+		<point x="-22841" y="192089" z="-5424" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_035" count="1" respawn="180" respawn_random="120">
+		<point x="-22561" y="192288" z="-5424" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_032" count="1" respawn="180" respawn_random="120">
+		<point x="-20432" y="188544" z="-5568" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_032" count="1" respawn="180" respawn_random="120">
+		<point x="-20071" y="188538" z="-5568" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_032" count="1" respawn="180" respawn_random="120">
+		<point x="-19750" y="188602" z="-5568" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_033" count="1" respawn="180" respawn_random="120">
+		<point x="-21319" y="188615" z="-5541" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_033" count="1" respawn="180" respawn_random="120">
+		<point x="-21438" y="188919" z="-5541" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_038" count="1" respawn="180" respawn_random="120">
+		<point x="-21907" y="188611" z="-5424" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_038" count="1" respawn="180" respawn_random="120">
+		<point x="-22293" y="188322" z="-5424" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_038" count="1" respawn="180" respawn_random="120">
+		<point x="-22679" y="188137" z="-5424" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_039" count="1" respawn="180" respawn_random="120">
+		<point x="-23752" y="187430" z="-5424" h="0"/>
+		<npc id="20082"/><!--Муравей Рекрут-->
+	</spawn>
+	<spawn name="dg_19_23_039" count="1" respawn="180" respawn_random="120">
+		<point x="-24090" y="187522" z="-5424" h="0"/>
+		<npc id="20084"/><!--Муравей Ищейка-->
+	</spawn>
+	<spawn name="dg_19_23_039" count="1" respawn="180" respawn_random="120">
+		<point x="-24005" y="187170" z="-5424" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_039" count="1" respawn="180" respawn_random="120">
+		<point x="-24114" y="186839" z="-5424" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_039" count="1" respawn="180" respawn_random="120">
+		<point x="-24320" y="187195" z="-5424" h="0"/>
+		<npc id="20082"/><!--Муравей Рекрут-->
+	</spawn>
+	<spawn name="dg_19_23_039" count="1" respawn="180" respawn_random="120">
+		<point x="-24429" y="187538" z="-5424" h="0"/>
+		<npc id="20084"/><!--Муравей Ищейка-->
+	</spawn>
+	<spawn name="dg_19_23_039" count="1" respawn="180" respawn_random="120">
+		<point x="-24656" y="187790" z="-5424" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_039" count="1" respawn="180" respawn_random="120">
+		<point x="-24730" y="187438" z="-5424" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_039" count="1" respawn="180" respawn_random="120">
+		<point x="-24575" y="187135" z="-5424" h="0"/>
+		<npc id="20082"/><!--Муравей Рекрут-->
+	</spawn>
+	<spawn name="dg_19_23_039" count="1" respawn="180" respawn_random="120">
+		<point x="-24538" y="186817" z="-5424" h="0"/>
+		<npc id="20084"/><!--Муравей Ищейка-->
+	</spawn>
+	<spawn name="dg_19_23_039" count="1" respawn="180" respawn_random="120">
+		<point x="-24758" y="186604" z="-5424" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_039" count="1" respawn="180" respawn_random="120">
+		<point x="-24881" y="186849" z="-5424" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_039" count="1" respawn="180" respawn_random="120">
+		<point x="-24921" y="187143" z="-5424" h="0"/>
+		<npc id="20082"/><!--Муравей Рекрут-->
+	</spawn>
+	<spawn name="dg_19_23_036" count="1" respawn="180" respawn_random="120">
+		<point x="-23725" y="190273" z="-5424" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_036" count="1" respawn="180" respawn_random="120">
+		<point x="-23398" y="190404" z="-5424" h="0"/>
+		<npc id="20081"/><!--Муравей Бригадир-->
+	</spawn>
+	<spawn name="dg_19_23_037" count="1" respawn="180" respawn_random="120">
+		<point x="-24174" y="188861" z="-5456" h="0"/>
+		<npc id="20082"/><!--Муравей Рекрут-->
+	</spawn>
+	<spawn name="dg_19_23_037" count="1" respawn="180" respawn_random="120">
+		<point x="-23944" y="189052" z="-5456" h="0"/>
+		<npc id="20084"/><!--Муравей Ищейка-->
+	</spawn>
+	<spawn name="dg_19_23_037" count="1" respawn="180" respawn_random="120">
+		<point x="-23850" y="189312" z="-5456" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_037" count="1" respawn="180" respawn_random="120">
+		<point x="-23883" y="189610" z="-5456" h="0"/>
+		<npc id="20082"/><!--Муравей Рекрут-->
+	</spawn>
+	<spawn name="dg_19_23_037" count="1" respawn="180" respawn_random="120">
+		<point x="-24227" y="189548" z="-5456" h="0"/>
+		<npc id="20084"/><!--Муравей Ищейка-->
+	</spawn>
+	<spawn name="dg_19_23_037" count="1" respawn="180" respawn_random="120">
+		<point x="-24123" y="189243" z="-5456" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_037" count="1" respawn="180" respawn_random="120">
+		<point x="-24419" y="189259" z="-5456" h="0"/>
+		<npc id="20082"/><!--Муравей Рекрут-->
+	</spawn>
+	<spawn name="dg_19_23_001" count="1" respawn="180" respawn_random="120">
+		<point x="-28020" y="174676" z="-4848" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_001" count="1" respawn="180" respawn_random="120">
+		<point x="-27832" y="174512" z="-4848" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_001" count="1" respawn="180" respawn_random="120">
+		<point x="-28328" y="174360" z="-4837" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_001" count="1" respawn="180" respawn_random="120">
+		<point x="-28020" y="174324" z="-4848" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_001" count="1" respawn="180" respawn_random="120">
+		<point x="-27600" y="174256" z="-4848" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_001" count="1" respawn="180" respawn_random="120">
+		<point x="-28288" y="174128" z="-4848" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_001" count="1" respawn="180" respawn_random="120">
+		<point x="-28104" y="173888" z="-4848" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_001" count="1" respawn="180" respawn_random="120">
+		<point x="-28528" y="173936" z="-4848" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_001" count="1" respawn="180" respawn_random="120">
+		<point x="-27808" y="174064" z="-4832" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_002" count="1" respawn="180" respawn_random="120">
+		<point x="-28836" y="176020" z="-5273" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_002" count="1" respawn="180" respawn_random="120">
+		<point x="-29005" y="176168" z="-5273" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_002" count="1" respawn="180" respawn_random="120">
+		<point x="-28635" y="176294" z="-5273" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_002" count="1" respawn="180" respawn_random="120">
+		<point x="-28851" y="176426" z="-5273" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_002" count="1" respawn="180" respawn_random="120">
+		<point x="-29225" y="176346" z="-5259" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_002" count="1" respawn="180" respawn_random="120">
+		<point x="-29498" y="176559" z="-5273" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_002" count="1" respawn="180" respawn_random="120">
+		<point x="-29042" y="176639" z="-5273" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_002" count="1" respawn="180" respawn_random="120">
+		<point x="-29227" y="176807" z="-5273" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_002" count="1" respawn="180" respawn_random="120">
+		<point x="-28941" y="176918" z="-5273" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_002" count="1" respawn="180" respawn_random="120">
+		<point x="-28678" y="176785" z="-5273" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_002" count="1" respawn="180" respawn_random="120">
+		<point x="-28500" y="176604" z="-5273" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_005" count="1" respawn="180" respawn_random="120">
+		<point x="-26396" y="176512" z="-5328" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_005" count="1" respawn="180" respawn_random="120">
+		<point x="-26102" y="176535" z="-5328" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_005" count="1" respawn="180" respawn_random="120">
+		<point x="-25793" y="176536" z="-5328" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_005" count="1" respawn="180" respawn_random="120">
+		<point x="-26259" y="176708" z="-5328" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_005" count="1" respawn="180" respawn_random="120">
+		<point x="-25951" y="176724" z="-5328" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_005" count="1" respawn="180" respawn_random="120">
+		<point x="-26116" y="176904" z="-5328" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_006" count="1" respawn="180" respawn_random="120">
+		<point x="-25088" y="177120" z="-5328" h="0"/>
+		<npc id="20082"/><!--Муравей Рекрут-->
+	</spawn>
+	<spawn name="dg_19_23_006" count="1" respawn="180" respawn_random="120">
+		<point x="-24820" y="177014" z="-5328" h="0"/>
+		<npc id="20084"/><!--Муравей Ищейка-->
+	</spawn>
+	<spawn name="dg_19_23_006" count="1" respawn="180" respawn_random="120">
+		<point x="-24885" y="177257" z="-5328" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_006" count="1" respawn="180" respawn_random="120">
+		<point x="-25056" y="177516" z="-5328" h="0"/>
+		<npc id="20082"/><!--Муравей Рекрут-->
+	</spawn>
+	<spawn name="dg_19_23_006" count="1" respawn="180" respawn_random="120">
+		<point x="-24497" y="177192" z="-5328" h="0"/>
+		<npc id="20084"/><!--Муравей Ищейка-->
+	</spawn>
+	<spawn name="dg_19_23_006" count="1" respawn="180" respawn_random="120">
+		<point x="-24967" y="177759" z="-5328" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_006" count="1" respawn="180" respawn_random="120">
+		<point x="-24708" y="177516" z="-5328" h="0"/>
+		<npc id="20082"/><!--Муравей Рекрут-->
+	</spawn>
+	<spawn name="dg_19_23_006" count="1" respawn="180" respawn_random="120">
+		<point x="-24594" y="177921" z="-5328" h="0"/>
+		<npc id="20084"/><!--Муравей Ищейка-->
+	</spawn>
+	<spawn name="dg_19_23_006" count="1" respawn="180" respawn_random="120">
+		<point x="-24335" y="177775" z="-5328" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_006" count="1" respawn="180" respawn_random="120">
+		<point x="-24311" y="177402" z="-5328" h="0"/>
+		<npc id="20082"/><!--Муравей Рекрут-->
+	</spawn>
+	<spawn name="dg_19_23_003" count="1" respawn="180" respawn_random="120">
+		<point x="-29248" y="174960" z="-5196" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_003" count="1" respawn="180" respawn_random="120">
+		<point x="-29184" y="175232" z="-5253" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_003" count="1" respawn="180" respawn_random="120">
+		<point x="-29056" y="175488" z="-5253" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_004" count="1" respawn="180" respawn_random="120">
+		<point x="-27776" y="176608" z="-5302" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_004" count="1" respawn="180" respawn_random="120">
+		<point x="-27456" y="176608" z="-5328" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_004" count="1" respawn="180" respawn_random="120">
+		<point x="-27152" y="176608" z="-5328" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_004" count="1" respawn="180" respawn_random="120">
+		<point x="-26828" y="176608" z="-5328" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_009" count="1" respawn="180" respawn_random="120">
+		<point x="-26080" y="179568" z="-5415" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_009" count="1" respawn="180" respawn_random="120">
+		<point x="-25984" y="179952" z="-5415" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_007" count="1" respawn="180" respawn_random="120">
+		<point x="-23480" y="176892" z="-5291" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_007" count="1" respawn="180" respawn_random="120">
+		<point x="-23301" y="177061" z="-5291" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_007" count="1" respawn="180" respawn_random="120">
+		<point x="-23520" y="177134" z="-5291" h="0"/>
+		<npc id="20075"/><!--Личинка Муравья-->
+	</spawn>
+	<spawn name="dg_19_23_008" count="1" respawn="180" respawn_random="120">
+		<point x="-26438" y="178135" z="-5328" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_008" count="1" respawn="180" respawn_random="120">
+		<point x="-26147" y="178168" z="-5328" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_008" count="1" respawn="180" respawn_random="120">
+		<point x="-25879" y="178330" z="-5328" h="0"/>
+		<npc id="20081"/><!--Муравей Бригадир-->
+	</spawn>
+	<spawn name="dg_19_23_008" count="1" respawn="180" respawn_random="120">
+		<point x="-26066" y="178573" z="-5328" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_008" count="1" respawn="180" respawn_random="120">
+		<point x="-26318" y="178386" z="-5328" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_008" count="1" respawn="180" respawn_random="120">
+		<point x="-26553" y="178491" z="-5328" h="0"/>
+		<npc id="20081"/><!--Муравей Бригадир-->
+	</spawn>
+	<spawn name="dg_19_23_008" count="1" respawn="180" respawn_random="120">
+		<point x="-26407" y="178694" z="-5328" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_008" count="1" respawn="180" respawn_random="120">
+		<point x="-26197" y="178799" z="-5328" h="0"/>
+		<npc id="20081"/><!--Муравей Бригадир-->
+	</spawn>
+	<spawn name="event_t19_23_001" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="-22216" y="178750" zmin="-4847" zmax="-3847"/>
+			<add x="-10936" y="189250" zmin="-4847" zmax="-3847"/>
+			<add x="-24104" y="191862" zmin="-4847" zmax="-3847"/>
+			<add x="-28412" y="185174" zmin="-4847" zmax="-3847"/>
+		</territory>
+		<npc id="25354"/><!--Лорд Горгулий Сирокко-->
+	</spawn>
+	<spawn name="dg_19_23_060" count="1" respawn="180" respawn_random="120">
+		<point x="-23152" y="184112" z="-5691" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_060" count="1" respawn="180" respawn_random="120">
+		<point x="-22960" y="184032" z="-5712" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_060" count="1" respawn="180" respawn_random="120">
+		<point x="-22896" y="184192" z="-5728" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_063" count="1" respawn="180" respawn_random="120">
+		<point x="-23744" y="185472" z="-5616" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_063" count="1" respawn="180" respawn_random="120">
+		<point x="-23472" y="185393" z="-5616" h="0"/>
+		<npc id="20089"/><!--Элитный Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_063" count="1" respawn="180" respawn_random="120">
+		<point x="-23135" y="185336" z="-5616" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_063" count="1" respawn="180" respawn_random="120">
+		<point x="-22791" y="185403" z="-5616" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_063" count="1" respawn="180" respawn_random="120">
+		<point x="-22475" y="185623" z="-5616" h="0"/>
+		<npc id="20089"/><!--Элитный Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_063" count="1" respawn="180" respawn_random="120">
+		<point x="-22467" y="185858" z="-5616" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_063" count="1" respawn="180" respawn_random="120">
+		<point x="-22823" y="185684" z="-5616" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_063" count="1" respawn="180" respawn_random="120">
+		<point x="-23201" y="185613" z="-5616" h="0"/>
+		<npc id="20089"/><!--Элитный Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_063" count="1" respawn="180" respawn_random="120">
+		<point x="-23564" y="185658" z="-5616" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_063" count="1" respawn="180" respawn_random="120">
+		<point x="-23286" y="185900" z="-5616" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_063" count="1" respawn="180" respawn_random="120">
+		<point x="-22897" y="185923" z="-5616" h="0"/>
+		<npc id="20089"/><!--Элитный Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_063" count="1" respawn="180" respawn_random="120">
+		<point x="-22714" y="186085" z="-5616" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_063" count="1" respawn="180" respawn_random="120">
+		<point x="-23114" y="186160" z="-5616" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_064" count="1" respawn="180" respawn_random="120">
+		<point x="-20464" y="186800" z="-5616" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_064" count="1" respawn="180" respawn_random="120">
+		<point x="-20112" y="186864" z="-5616" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_061" count="1" respawn="180" respawn_random="120">
+		<point x="-21632" y="184992" z="-5712" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_061" count="1" respawn="180" respawn_random="120">
+		<point x="-21696" y="185280" z="-5627" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_061" count="1" respawn="180" respawn_random="120">
+		<point x="-21536" y="185136" z="-5664" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_062" count="1" respawn="180" respawn_random="120">
+		<point x="-21856" y="185520" z="-5616" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_062" count="1" respawn="180" respawn_random="120">
+		<point x="-21540" y="185557" z="-5616" h="0"/>
+		<npc id="20089"/><!--Элитный Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_062" count="1" respawn="180" respawn_random="120">
+		<point x="-22035" y="185785" z="-5616" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_062" count="1" respawn="180" respawn_random="120">
+		<point x="-21691" y="185816" z="-5616" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_062" count="1" respawn="180" respawn_random="120">
+		<point x="-21361" y="185919" z="-5616" h="0"/>
+		<npc id="20089"/><!--Элитный Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_062" count="1" respawn="180" respawn_random="120">
+		<point x="-22024" y="186147" z="-5616" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_062" count="1" respawn="180" respawn_random="120">
+		<point x="-21555" y="186185" z="-5616" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_062" count="1" respawn="180" respawn_random="120">
+		<point x="-21130" y="186259" z="-5616" h="0"/>
+		<npc id="20089"/><!--Элитный Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_062" count="1" respawn="180" respawn_random="120">
+		<point x="-21004" y="186537" z="-5616" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_062" count="1" respawn="180" respawn_random="120">
+		<point x="-21447" y="186559" z="-5616" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_062" count="1" respawn="180" respawn_random="120">
+		<point x="-21338" y="186929" z="-5616" h="0"/>
+		<npc id="20089"/><!--Элитный Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_062" count="1" respawn="180" respawn_random="120">
+		<point x="-20811" y="186887" z="-5616" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_062" count="1" respawn="180" respawn_random="120">
+		<point x="-21827" y="186488" z="-5616" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_067" count="1" respawn="180" respawn_random="120">
+		<point x="-17040" y="181360" z="-5529" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_067" count="1" respawn="180" respawn_random="120">
+		<point x="-16752" y="181344" z="-5529" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_067" count="1" respawn="180" respawn_random="120">
+		<point x="-16400" y="181280" z="-5497" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_068" count="1" respawn="180" respawn_random="120">
+		<point x="-17216" y="180208" z="-5529" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_068" count="1" respawn="180" respawn_random="120">
+		<point x="-16960" y="180064" z="-5523" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_068" count="1" respawn="180" respawn_random="120">
+		<point x="-16688" y="179968" z="-5420" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_065" count="1" respawn="180" respawn_random="120">
+		<point x="-19603" y="186876" z="-5616" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_065" count="1" respawn="180" respawn_random="120">
+		<point x="-19264" y="186888" z="-5616" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_065" count="1" respawn="180" respawn_random="120">
+		<point x="-19036" y="187077" z="-5616" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_065" count="1" respawn="180" respawn_random="120">
+		<point x="-19413" y="187123" z="-5616" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_065" count="1" respawn="180" respawn_random="120">
+		<point x="-19794" y="187091" z="-5616" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_065" count="1" respawn="180" respawn_random="120">
+		<point x="-19691" y="187362" z="-5616" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_065" count="1" respawn="180" respawn_random="120">
+		<point x="-19300" y="187356" z="-5616" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_065" count="1" respawn="180" respawn_random="120">
+		<point x="-18986" y="187398" z="-5616" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_065" count="1" respawn="180" respawn_random="120">
+		<point x="-19229" y="187626" z="-5616" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_065" count="1" respawn="180" respawn_random="120">
+		<point x="-19550" y="187551" z="-5616" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_065" count="1" respawn="180" respawn_random="120">
+		<point x="-19754" y="187735" z="-5616" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_066" count="1" respawn="180" respawn_random="120">
+		<point x="-20315" y="187800" z="-5616" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_066" count="1" respawn="180" respawn_random="120">
+		<point x="-20609" y="187908" z="-5616" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_066" count="1" respawn="180" respawn_random="120">
+		<point x="-20889" y="188094" z="-5616" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_069" count="1" respawn="180" respawn_random="120">
+		<point x="-18384" y="180192" z="-5529" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_069" count="1" respawn="180" respawn_random="120">
+		<point x="-18584" y="179796" z="-5505" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_069" count="1" respawn="180" respawn_random="120">
+		<point x="-18696" y="179476" z="-5472" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_069" count="1" respawn="180" respawn_random="120">
+		<point x="-18768" y="179232" z="-5413" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_052" count="1" respawn="180" respawn_random="120">
+		<point x="-17792" y="178512" z="-5398" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_052" count="1" respawn="180" respawn_random="120">
+		<point x="-17536" y="178464" z="-5328" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_052" count="1" respawn="180" respawn_random="120">
+		<point x="-17248" y="178352" z="-5318" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_053" count="1" respawn="180" respawn_random="120">
+		<point x="-18614" y="178578" z="-5398" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_053" count="1" respawn="180" respawn_random="120">
+		<point x="-18334" y="178430" z="-5398" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_053" count="1" respawn="180" respawn_random="120">
+		<point x="-18519" y="178232" z="-5398" h="0"/>
+		<npc id="20082"/><!--Муравей Рекрут-->
+	</spawn>
+	<spawn name="dg_19_23_053" count="1" respawn="180" respawn_random="120">
+		<point x="-18806" y="178160" z="-5398" h="0"/>
+		<npc id="20084"/><!--Муравей Ищейка-->
+	</spawn>
+	<spawn name="dg_19_23_053" count="1" respawn="180" respawn_random="120">
+		<point x="-18979" y="178377" z="-5398" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_053" count="1" respawn="180" respawn_random="120">
+		<point x="-18862" y="178570" z="-5398" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_050" count="1" respawn="180" respawn_random="120">
+		<point x="-15952" y="177088" z="-5318" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_050" count="1" respawn="180" respawn_random="120">
+		<point x="-15646" y="176902" z="-5318" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_051" count="1" respawn="180" respawn_random="120">
+		<point x="-16852" y="178208" z="-5318" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_051" count="1" respawn="180" respawn_random="120">
+		<point x="-16899" y="177972" z="-5318" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_051" count="1" respawn="180" respawn_random="120">
+		<point x="-16455" y="178001" z="-5318" h="0"/>
+		<npc id="20081"/><!--Муравей Бригадир-->
+	</spawn>
+	<spawn name="dg_19_23_051" count="1" respawn="180" respawn_random="120">
+		<point x="-16691" y="177778" z="-5318" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_051" count="1" respawn="180" respawn_random="120">
+		<point x="-16196" y="177743" z="-5318" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_051" count="1" respawn="180" respawn_random="120">
+		<point x="-16281" y="177432" z="-5318" h="0"/>
+		<npc id="20081"/><!--Муравей Бригадир-->
+	</spawn>
+	<spawn name="dg_19_23_051" count="1" respawn="180" respawn_random="120">
+		<point x="-16605" y="177347" z="-5318" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_051" count="1" respawn="180" respawn_random="120">
+		<point x="-16451" y="177640" z="-5318" h="0"/>
+		<npc id="20081"/><!--Муравей Бригадир-->
+	</spawn>
+	<spawn name="dg_19_23_056" count="1" respawn="180" respawn_random="120">
+		<point x="-14286" y="182056" z="-5398" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_056" count="1" respawn="180" respawn_random="120">
+		<point x="-13867" y="181971" z="-5398" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_057" count="1" respawn="180" respawn_random="120">
+		<point x="-24576" y="180880" z="-5472" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_057" count="1" respawn="180" respawn_random="120">
+		<point x="-24320" y="181072" z="-5543" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_057" count="1" respawn="180" respawn_random="120">
+		<point x="-24048" y="181232" z="-5616" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_054" count="1" respawn="180" respawn_random="120">
+		<point x="-15864" y="181531" z="-5398" h="0"/>
+		<npc id="20082"/><!--Муравей Рекрут-->
+	</spawn>
+	<spawn name="dg_19_23_054" count="1" respawn="180" respawn_random="120">
+		<point x="-15508" y="181471" z="-5398" h="0"/>
+		<npc id="20084"/><!--Муравей Ищейка-->
+	</spawn>
+	<spawn name="dg_19_23_054" count="1" respawn="180" respawn_random="120">
+		<point x="-15139" y="181449" z="-5398" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_054" count="1" respawn="180" respawn_random="120">
+		<point x="-15060" y="181793" z="-5398" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_054" count="1" respawn="180" respawn_random="120">
+		<point x="-14918" y="182086" z="-5398" h="0"/>
+		<npc id="20082"/><!--Муравей Рекрут-->
+	</spawn>
+	<spawn name="dg_19_23_054" count="1" respawn="180" respawn_random="120">
+		<point x="-15406" y="181900" z="-5398" h="0"/>
+		<npc id="20084"/><!--Муравей Ищейка-->
+	</spawn>
+	<spawn name="dg_19_23_054" count="1" respawn="180" respawn_random="120">
+		<point x="-15831" y="181841" z="-5398" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_054" count="1" respawn="180" respawn_random="120">
+		<point x="-15878" y="182109" z="-5398" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_054" count="1" respawn="180" respawn_random="120">
+		<point x="-15648" y="182364" z="-5398" h="0"/>
+		<npc id="20084"/><!--Муравей Ищейка-->
+	</spawn>
+	<spawn name="dg_19_23_054" count="1" respawn="180" respawn_random="120">
+		<point x="-15241" y="182279" z="-5398" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_055" count="1" respawn="180" respawn_random="120">
+		<point x="-13371" y="181329" z="-5398" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_055" count="1" respawn="180" respawn_random="120">
+		<point x="-13292" y="181080" z="-5398" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_055" count="1" respawn="180" respawn_random="120">
+		<point x="-13251" y="180731" z="-5398" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_058" count="1" respawn="180" respawn_random="120">
+		<point x="-23536" y="181616" z="-5616" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_058" count="1" respawn="180" respawn_random="120">
+		<point x="-23799" y="181838" z="-5616" h="0"/>
+		<npc id="20089"/><!--Элитный Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_058" count="1" respawn="180" respawn_random="120">
+		<point x="-23467" y="181927" z="-5616" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_058" count="1" respawn="180" respawn_random="120">
+		<point x="-24059" y="182041" z="-5616" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_058" count="1" respawn="180" respawn_random="120">
+		<point x="-23666" y="182130" z="-5616" h="0"/>
+		<npc id="20089"/><!--Элитный Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_058" count="1" respawn="180" respawn_random="120">
+		<point x="-23480" y="182426" z="-5616" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_058" count="1" respawn="180" respawn_random="120">
+		<point x="-24279" y="182320" z="-5616" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_058" count="1" respawn="180" respawn_random="120">
+		<point x="-23898" y="182421" z="-5616" h="0"/>
+		<npc id="20089"/><!--Элитный Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_058" count="1" respawn="180" respawn_random="120">
+		<point x="-23724" y="182729" z="-5616" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_058" count="1" respawn="180" respawn_random="120">
+		<point x="-24438" y="182623" z="-5616" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_058" count="1" respawn="180" respawn_random="120">
+		<point x="-24069" y="182798" z="-5616" h="0"/>
+		<npc id="20089"/><!--Элитный Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_058" count="1" respawn="180" respawn_random="120">
+		<point x="-23927" y="183086" z="-5616" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_058" count="1" respawn="180" respawn_random="120">
+		<point x="-24398" y="182907" z="-5616" h="0"/>
+		<npc id="20089"/><!--Элитный Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_058" count="1" respawn="180" respawn_random="120">
+		<point x="-24211" y="183178" z="-5616" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_059" count="1" respawn="180" respawn_random="120">
+		<point x="-24208" y="183616" z="-5616" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_059" count="1" respawn="180" respawn_random="120">
+		<point x="-23900" y="183559" z="-5616" h="0"/>
+		<npc id="20089"/><!--Элитный Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_059" count="1" respawn="180" respawn_random="120">
+		<point x="-23665" y="183745" z="-5616" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_059" count="1" respawn="180" respawn_random="120">
+		<point x="-23454" y="184065" z="-5616" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_059" count="1" respawn="180" respawn_random="120">
+		<point x="-23645" y="184215" z="-5616" h="0"/>
+		<npc id="20089"/><!--Элитный Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_059" count="1" respawn="180" respawn_random="120">
+		<point x="-23860" y="183963" z="-5616" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_059" count="1" respawn="180" respawn_random="120">
+		<point x="-24148" y="183882" z="-5616" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_059" count="1" respawn="180" respawn_random="120">
+		<point x="-24314" y="184117" z="-5616" h="0"/>
+		<npc id="20089"/><!--Элитный Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_059" count="1" respawn="180" respawn_random="120">
+		<point x="-24079" y="184230" z="-5616" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_059" count="1" respawn="180" respawn_random="120">
+		<point x="-24063" y="184514" z="-5616" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_070" count="1" respawn="180" respawn_random="120">
+		<point x="-18304" y="181344" z="-5529" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_070" count="1" respawn="180" respawn_random="120">
+		<point x="-18007" y="181379" z="-5529" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_070" count="1" respawn="180" respawn_random="120">
+		<point x="-17711" y="181356" z="-5529" h="0"/>
+		<npc id="20089"/><!--Элитный Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_070" count="1" respawn="180" respawn_random="120">
+		<point x="-17356" y="181285" z="-5529" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_070" count="1" respawn="180" respawn_random="120">
+		<point x="-17505" y="181030" z="-5529" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_070" count="1" respawn="180" respawn_random="120">
+		<point x="-17856" y="181056" z="-5529" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_070" count="1" respawn="180" respawn_random="120">
+		<point x="-18149" y="181033" z="-5529" h="0"/>
+		<npc id="20089"/><!--Элитный Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_070" count="1" respawn="180" respawn_random="120">
+		<point x="-17892" y="180788" z="-5529" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_070" count="1" respawn="180" respawn_random="120">
+		<point x="-17557" y="180766" z="-5529" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_070" count="1" respawn="180" respawn_random="120">
+		<point x="-17318" y="180598" z="-5529" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_070" count="1" respawn="180" respawn_random="120">
+		<point x="-17486" y="180334" z="-5529" h="0"/>
+		<npc id="20089"/><!--Элитный Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_070" count="1" respawn="180" respawn_random="120">
+		<point x="-17789" y="180475" z="-5529" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_070" count="1" respawn="180" respawn_random="120">
+		<point x="-18111" y="180598" z="-5529" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_070" count="1" respawn="180" respawn_random="120">
+		<point x="-18018" y="180343" z="-5529" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_071" count="1" respawn="180" respawn_random="120">
+		<point x="-19264" y="182352" z="-5536" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_071" count="1" respawn="180" respawn_random="120">
+		<point x="-19025" y="182106" z="-5536" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_071" count="1" respawn="180" respawn_random="120">
+		<point x="-18758" y="181890" z="-5536" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_071" count="1" respawn="180" respawn_random="120">
+		<point x="-18558" y="181684" z="-5536" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_074" count="1" respawn="180" respawn_random="120">
+		<point x="-20128" y="183824" z="-5672" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_074" count="1" respawn="180" respawn_random="120">
+		<point x="-20000" y="183952" z="-5632" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_075" count="1" respawn="180" respawn_random="120">
+		<point x="-23120" y="191888" z="-5424" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_075" count="1" respawn="180" respawn_random="120">
+		<point x="-22944" y="191744" z="-5424" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_075" count="1" respawn="180" respawn_random="120">
+		<point x="-22944" y="191504" z="-5424" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_075" count="1" respawn="180" respawn_random="120">
+		<point x="-23408" y="191664" z="-5424" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_072" count="1" respawn="180" respawn_random="120">
+		<point x="-19456" y="183408" z="-5616" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_072" count="1" respawn="180" respawn_random="120">
+		<point x="-19520" y="183184" z="-5610" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_072" count="1" respawn="180" respawn_random="120">
+		<point x="-19488" y="182960" z="-5568" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_072" count="1" respawn="180" respawn_random="120">
+		<point x="-19584" y="182720" z="-5520" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_073" count="1" respawn="180" respawn_random="120">
+		<point x="-19792" y="183856" z="-5616" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_073" count="1" respawn="180" respawn_random="120">
+		<point x="-19524" y="183697" z="-5616" h="0"/>
+		<npc id="20089"/><!--Элитный Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_073" count="1" respawn="180" respawn_random="120">
+		<point x="-19247" y="183578" z="-5616" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_073" count="1" respawn="180" respawn_random="120">
+		<point x="-19047" y="183739" z="-5616" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_073" count="1" respawn="180" respawn_random="120">
+		<point x="-19370" y="183881" z="-5616" h="0"/>
+		<npc id="20089"/><!--Элитный Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_073" count="1" respawn="180" respawn_random="120">
+		<point x="-19615" y="184051" z="-5616" h="0"/>
+		<npc id="20090"/><!--Главарь Элитных Муравьев-->
+	</spawn>
+	<spawn name="dg_19_23_073" count="1" respawn="180" respawn_random="120">
+		<point x="-19164" y="184058" z="-5616" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg_19_23_076" count="1" respawn="180" respawn_random="120">
+		<point x="-22966" y="190844" z="-5424" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_076" count="1" respawn="180" respawn_random="120">
+		<point x="-23102" y="190588" z="-5424" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="dg_19_23_076" count="1" respawn="180" respawn_random="120">
+		<point x="-22838" y="190512" z="-5424" h="0"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="dg_19_23_076" count="1" respawn="180" respawn_random="120">
+		<point x="-22752" y="190256" z="-5448" h="0"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="NPC_t19_23_030917_02" count="1" respawn="60">
+		<point x="-21101" y="178989" z="-4094" h="0"/>
+		<npc id="30660"/><!--Винди Шаоринг-->
+	</spawn>
+	<spawn name="NPC_t19_23_030917_03" count="1" respawn="60">
+		<point x="-16895" y="194229" z="-4207" h="11000"/>
+		<npc id="30612"/><!--Казиан-->
+	</spawn>
+	<spawn name="NPC_t19_23_030917_01" count="1" respawn="60">
+		<point x="-671" y="179051" z="-3708" h="32768"/>
+		<npc id="30666"/><!--Сла-->
+	</spawn>
+	<spawn name="dg_19_23_010_01" count="1" respawn="180" respawn_random="120">
+		<point x="-26880" y="182640" z="-5415" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg_19_23_010_01" count="1" respawn="180" respawn_random="120">
+		<point x="-26560" y="182640" z="-5415" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-21600" y="179482" z="-5846" h="16384"/>
+		<npc id="29002"/><!--Личинка Королевы Муравьев-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-21562" y="179041" z="-5846" h="0"/>
+		<npc id="29004"/><!--Муравей Охранник-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-21139" y="179392" z="-5846" h="0"/>
+		<npc id="29004"/><!--Муравей Охранник-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-21984" y="179183" z="-5846" h="0"/>
+		<npc id="29004"/><!--Муравей Охранник-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-22020" y="179689" z="-5846" h="0"/>
+		<npc id="29004"/><!--Муравей Охранник-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-21281" y="179733" z="-5846" h="0"/>
+		<npc id="29004"/><!--Муравей Охранник-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-21925" y="180003" z="-5846" h="0"/>
+		<npc id="29004"/><!--Муравей Охранник-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-21531" y="180046" z="-5846" h="0"/>
+		<npc id="29004"/><!--Муравей Охранник-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-22154" y="181958" z="-5734" h="0"/>
+		<npc id="29004"/><!--Муравей Охранник-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-21672" y="181903" z="-5734" h="0"/>
+		<npc id="29004"/><!--Муравей Охранник-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-20992" y="181627" z="-5734" h="0"/>
+		<npc id="29004"/><!--Муравей Охранник-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-21861" y="182279" z="-5734" h="0"/>
+		<npc id="29004"/><!--Муравей Охранник-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-21693" y="182717" z="-5734" h="0"/>
+		<npc id="29004"/><!--Муравей Охранник-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-22070" y="182890" z="-5734" h="0"/>
+		<npc id="29004"/><!--Муравей Охранник-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-22262" y="183156" z="-5734" h="0"/>
+		<npc id="29004"/><!--Муравей Охранник-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-21308" y="182278" z="-5734" h="0"/>
+		<npc id="29004"/><!--Муравей Охранник-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-21113" y="182681" z="-5734" h="0"/>
+		<npc id="29004"/><!--Муравей Охранник-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-21446" y="183135" z="-5734" h="0"/>
+		<npc id="29004"/><!--Муравей Охранник-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-21854" y="183450" z="-5734" h="0"/>
+		<npc id="29004"/><!--Муравей Охранник-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-20714" y="182103" z="-5734" h="0"/>
+		<npc id="29004"/><!--Муравей Охранник-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-20720" y="182775" z="-5734" h="0"/>
+		<npc id="29004"/><!--Муравей Охранник-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-20949" y="183233" z="-5734" h="0"/>
+		<npc id="29004"/><!--Муравей Охранник-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-22349" y="182333" z="-5734" h="0"/>
+		<npc id="29004"/><!--Муравей Охранник-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-22406" y="182733" z="-5734" h="0"/>
+		<npc id="29004"/><!--Муравей Охранник-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-22700" y="182486" z="-5734" h="0"/>
+		<npc id="29004"/><!--Муравей Охранник-->
+	</spawn>
+	<spawn name="queen_ant_guard_room" count="1" respawn="60">
+		<point x="-22015" y="181518" z="-5734" h="0"/>
+		<npc id="29004"/><!--Муравей Охранник-->
+	</spawn>
+	<spawn name="dg19_23_010" count="1" respawn="180" respawn_random="120">
+		<point x="-25136" y="180000" z="-5415" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg19_23_010" count="1" respawn="180" respawn_random="120">
+		<point x="-24933" y="180186" z="-5415" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg19_23_010" count="1" respawn="180" respawn_random="120">
+		<point x="-25493" y="180080" z="-5415" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg19_23_010" count="1" respawn="180" respawn_random="120">
+		<point x="-25201" y="180258" z="-5415" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg19_23_010" count="1" respawn="180" respawn_random="120">
+		<point x="-24950" y="180558" z="-5415" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg19_23_010" count="1" respawn="180" respawn_random="120">
+		<point x="-25177" y="180785" z="-5415" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg19_23_010" count="1" respawn="180" respawn_random="120">
+		<point x="-25258" y="180501" z="-5415" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="dg19_23_010" count="1" respawn="180" respawn_random="120">
+		<point x="-25631" y="180290" z="-5415" h="0"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="dg19_23_010" count="1" respawn="180" respawn_random="120">
+		<point x="-25567" y="180549" z="-5415" h="0"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="dg19_23_010" count="1" respawn="180" respawn_random="120">
+		<point x="-25437" y="180792" z="-5415" h="0"/>
+		<npc id="20086"/><!--Муравей Страж-->
+	</spawn>
+	<spawn name="gludio_t19_23_019" count="2" respawn="35">
+		<territory>
+			<add x="-5588" y="164840" zmin="-2812" zmax="-2212"/>
+			<add x="-3196" y="164476" zmin="-2812" zmax="-2212"/>
+			<add x="-3324" y="166656" zmin="-2812" zmax="-2212"/>
+			<add x="-4736" y="166200" zmin="-2812" zmax="-2212"/>
+		</territory>
+		<npc id="20359"/><!--Воин Крысолюдов-->
+	</spawn>
+	<spawn name="gludio_t19_23_018" count="2" respawn="35">
+		<territory>
+			<add x="-12720" y="166968" zmin="-2856" zmax="-2006"/>
+			<add x="-11420" y="166436" zmin="-2856" zmax="-2006"/>
+			<add x="-10976" y="168404" zmin="-2856" zmax="-2006"/>
+			<add x="-12040" y="167820" zmin="-2856" zmax="-2006"/>
+		</territory>
+		<npc id="20359"/><!--Воин Крысолюдов-->
+	</spawn>
+	<spawn name="gludio_t19_23_027" count="2" respawn="35">
+		<territory>
+			<add x="-6548" y="168036" zmin="-3976" zmax="-3576"/>
+			<add x="-6148" y="167916" zmin="-3976" zmax="-3576"/>
+			<add x="-6300" y="170008" zmin="-3976" zmax="-3576"/>
+			<add x="-6660" y="170112" zmin="-3976" zmax="-3576"/>
+		</territory>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<territory name="gludio_t19_23_026">
+		<add x="-7672" y="166712" zmin="-4056" zmax="-3656"/>
+		<add x="-7272" y="166580" zmin="-4056" zmax="-3656"/>
+		<add x="-6140" y="167472" zmin="-4056" zmax="-3656"/>
+		<add x="-6384" y="167936" zmin="-4056" zmax="-3656"/>
+	</territory>
+	<spawn name="gludio_t19_23_026" count="2" respawn="35">
+		<territory name="gludio_t19_23_026"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_23_026" count="1" respawn="35">
+		<territory name="gludio_t19_23_026"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_23_025" count="2" respawn="35">
+		<territory>
+			<add x="-17796" y="167456" zmin="-4044" zmax="-3444"/>
+			<add x="-16400" y="168424" zmin="-4044" zmax="-3444"/>
+			<add x="-16708" y="168952" zmin="-4044" zmax="-3444"/>
+			<add x="-17848" y="168032" zmin="-4044" zmax="-3444"/>
+		</territory>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<territory name="gludio_t19_23_024">
+		<add x="-21512" y="165924" zmin="-4036" zmax="-3636"/>
+		<add x="-20124" y="166904" zmin="-4036" zmax="-3636"/>
+		<add x="-20568" y="167028" zmin="-4036" zmax="-3636"/>
+		<add x="-22072" y="166244" zmin="-4036" zmax="-3636"/>
+	</territory>
+	<spawn name="gludio_t19_23_024" count="2" respawn="35">
+		<territory name="gludio_t19_23_024"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_23_024" count="1" respawn="35">
+		<territory name="gludio_t19_23_024"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_23_023" count="2" respawn="35">
+		<territory>
+			<add x="-3372" y="186424" zmin="-3772" zmax="-3172"/>
+			<add x="-1400" y="186800" zmin="-3772" zmax="-3172"/>
+			<add x="-1824" y="189036" zmin="-3772" zmax="-3172"/>
+			<add x="-3428" y="188388" zmin="-3772" zmax="-3172"/>
+		</territory>
+		<npc id="20359"/><!--Воин Крысолюдов-->
+	</spawn>
+	<spawn name="gludio_t19_23_022" count="2" respawn="35">
+		<territory>
+			<add x="-5876" y="174624" zmin="-3296" zmax="-2696"/>
+			<add x="-4156" y="175084" zmin="-3296" zmax="-2696"/>
+			<add x="-4016" y="179160" zmin="-3296" zmax="-2696"/>
+			<add x="-6152" y="178488" zmin="-3296" zmax="-2696"/>
+		</territory>
+		<npc id="20359"/><!--Воин Крысолюдов-->
+	</spawn>
+	<spawn name="gludio_t19_23_021" count="2" respawn="35">
+		<territory>
+			<add x="-3480" y="177292" zmin="-3772" zmax="-3272"/>
+			<add x="-772" y="175992" zmin="-3772" zmax="-3272"/>
+			<add x="-784" y="178844" zmin="-3772" zmax="-3272"/>
+			<add x="-2148" y="179556" zmin="-3772" zmax="-3272"/>
+		</territory>
+		<npc id="20359"/><!--Воин Крысолюдов-->
+	</spawn>
+	<spawn name="gludio_t19_23_020" count="2" respawn="35">
+		<territory>
+			<add x="-3256" y="169972" zmin="-3432" zmax="-2832"/>
+			<add x="-864" y="169848" zmin="-3432" zmax="-2832"/>
+			<add x="-1332" y="172760" zmin="-3432" zmax="-2832"/>
+			<add x="-3580" y="172312" zmin="-3432" zmax="-2832"/>
+		</territory>
+		<npc id="20359"/><!--Воин Крысолюдов-->
+	</spawn>
+	<territory name="gludio_t19_23_008">
+		<add x="-12904" y="164856" zmin="-3108" zmax="-2108"/>
+		<add x="-11076" y="165504" zmin="-3108" zmax="-2108"/>
+		<add x="-9620" y="168724" zmin="-3108" zmax="-2108"/>
+		<add x="-11420" y="169208" zmin="-3108" zmax="-2108"/>
+		<add x="-13644" y="166828" zmin="-3108" zmax="-2108"/>
+	</territory>
+	<spawn name="gludio_t19_23_008" count="3" respawn="35">
+		<territory name="gludio_t19_23_008"/>
+		<npc id="20055"/><!--Монстроглаз Смотритель-->
+	</spawn>
+	<spawn name="gludio_t19_23_008" count="2" respawn="35">
+		<territory name="gludio_t19_23_008"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_23_008" count="3" respawn="35">
+		<territory name="gludio_t19_23_008"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_23_008" count="2" respawn="35">
+		<territory name="gludio_t19_23_008"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<spawn name="queen_ant_room" count="1" respawn="129600" respawn_random="61200">
+		<point x="-21610" y="181594" z="-5734" h="0"/>
+		<npc id="29001"/><!--Королева Муравьев-->
+	</spawn>
+	<territory name="w19_23_006">
+		<add x="-12676" y="177128" zmin="-4276" zmax="-3976"/>
+		<add x="-9808" y="178900" zmin="-4276" zmax="-3976"/>
+		<add x="-9768" y="181008" zmin="-4276" zmax="-3976"/>
+		<add x="-14032" y="179380" zmin="-4276" zmax="-3976"/>
+		<add x="-13512" y="177428" zmin="-4276" zmax="-3976"/>
+	</territory>
+	<spawn name="w19_23_006" count="3" respawn="95">
+		<territory name="w19_23_006"/>
+		<npc id="20072"/><!--Василиск-->
+	</spawn>
+	<spawn name="w19_23_006" count="2" respawn="95">
+		<territory name="w19_23_006"/>
+		<npc id="20190"/><!--Скелет Меткий Стрелок-->
+	</spawn>
+	<spawn name="w19_23_006" count="1" respawn="95">
+		<territory name="w19_23_006"/>
+		<npc id="20191"/><!--Скелет Потрошитель-->
+	</spawn>
+	<territory name="w19_23_007">
+		<add x="-8344" y="179368" zmin="-3704" zmax="-3304"/>
+		<add x="-5832" y="181092" zmin="-3704" zmax="-3304"/>
+		<add x="-6948" y="182076" zmin="-3704" zmax="-3304"/>
+		<add x="-7944" y="181692" zmin="-3704" zmax="-3304"/>
+		<add x="-8776" y="180588" zmin="-3704" zmax="-3304"/>
+		<add x="-8812" y="179676" zmin="-3704" zmax="-3304"/>
+	</territory>
+	<spawn name="w19_23_007" count="2" respawn="95">
+		<territory name="w19_23_007"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn name="w19_23_007" count="4" respawn="95">
+		<territory name="w19_23_007"/>
+		<npc id="20070"/><!--Малый Василиск-->
+	</spawn>
+	<territory name="w19_23_008">
+		<add x="-5776" y="181128" zmin="-3912" zmax="-3412"/>
+		<add x="-4732" y="181896" zmin="-3912" zmax="-3412"/>
+		<add x="-4372" y="184304" zmin="-3912" zmax="-3412"/>
+		<add x="-7648" y="182876" zmin="-3912" zmax="-3412"/>
+	</territory>
+	<spawn name="w19_23_008" count="2" respawn="95">
+		<territory name="w19_23_008"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn name="w19_23_008" count="2" respawn="95">
+		<territory name="w19_23_008"/>
+		<npc id="20070"/><!--Малый Василиск-->
+	</spawn>
+	<spawn name="w19_23_008" count="2" respawn="95">
+		<territory name="w19_23_008"/>
+		<npc id="20072"/><!--Василиск-->
+	</spawn>
+	<territory name="w19_23_009">
+		<add x="-14144" y="179364" zmin="-4268" zmax="-3868"/>
+		<add x="-9784" y="181056" zmin="-4268" zmax="-3868"/>
+		<add x="-8640" y="183024" zmin="-4268" zmax="-3868"/>
+		<add x="-9972" y="183880" zmin="-4268" zmax="-3868"/>
+		<add x="-11864" y="184044" zmin="-4268" zmax="-3868"/>
+		<add x="-14680" y="181744" zmin="-4268" zmax="-3868"/>
+		<add x="-15888" y="180144" zmin="-4268" zmax="-3868"/>
+	</territory>
+	<spawn name="w19_23_009" count="3" respawn="95">
+		<territory name="w19_23_009"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="w19_23_009" count="2" respawn="95">
+		<territory name="w19_23_009"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="w19_23_009" count="2" respawn="95">
+		<territory name="w19_23_009"/>
+		<npc id="20083"/><!--Гранитный Голем-->
+	</spawn>
+	<spawn name="w19_23_009" count="2" respawn="95">
+		<territory name="w19_23_009"/>
+		<npc id="20085"/><!--Громила-->
+	</spawn>
+	<territory name="w19_23_002">
+		<add x="-15796" y="173964" zmin="-4116" zmax="-3516"/>
+		<add x="-11904" y="173900" zmin="-4116" zmax="-3516"/>
+		<add x="-11656" y="175392" zmin="-4116" zmax="-3516"/>
+		<add x="-12592" y="176604" zmin="-4116" zmax="-3516"/>
+		<add x="-15496" y="174700" zmin="-4116" zmax="-3516"/>
+	</territory>
+	<spawn name="w19_23_002" count="2" respawn="95">
+		<territory name="w19_23_002"/>
+		<npc id="20067"/><!--Монстроглаз Наблюдатель-->
+	</spawn>
+	<spawn name="w19_23_002" count="1" respawn="95">
+		<territory name="w19_23_002"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn name="w19_23_002" count="4" respawn="95">
+		<territory name="w19_23_002"/>
+		<npc id="20070"/><!--Малый Василиск-->
+	</spawn>
+	<territory name="w19_23_003">
+		<add x="-12548" y="171556" zmin="-4112" zmax="-3712"/>
+		<add x="-12104" y="171372" zmin="-4112" zmax="-3712"/>
+		<add x="-11844" y="173824" zmin="-4112" zmax="-3712"/>
+		<add x="-13760" y="173908" zmin="-4112" zmax="-3712"/>
+		<add x="-13808" y="172916" zmin="-4112" zmax="-3712"/>
+	</territory>
+	<spawn name="w19_23_003" count="2" respawn="95">
+		<territory name="w19_23_003"/>
+		<npc id="20067"/><!--Монстроглаз Наблюдатель-->
+	</spawn>
+	<spawn name="w19_23_003" count="3" respawn="95">
+		<territory name="w19_23_003"/>
+		<npc id="20070"/><!--Малый Василиск-->
+	</spawn>
+	<territory name="w19_23_004">
+		<add x="-7980" y="173912" zmin="-4284" zmax="-3784"/>
+		<add x="-7624" y="174132" zmin="-4284" zmax="-3784"/>
+		<add x="-7800" y="175756" zmin="-4284" zmax="-3784"/>
+		<add x="-8560" y="176448" zmin="-4284" zmax="-3784"/>
+		<add x="-8660" y="175340" zmin="-4284" zmax="-3784"/>
+	</territory>
+	<spawn name="w19_23_004" count="1" respawn="95">
+		<territory name="w19_23_004"/>
+		<npc id="20067"/><!--Монстроглаз Наблюдатель-->
+	</spawn>
+	<spawn name="w19_23_004" count="2" respawn="95">
+		<territory name="w19_23_004"/>
+		<npc id="20070"/><!--Малый Василиск-->
+	</spawn>
+	<territory name="w19_23_005">
+		<add x="-12072" y="175848" zmin="-4288" zmax="-3788"/>
+		<add x="-8668" y="176332" zmin="-4288" zmax="-3788"/>
+		<add x="-9024" y="178264" zmin="-4288" zmax="-3788"/>
+		<add x="-9764" y="178888" zmin="-4288" zmax="-3788"/>
+		<add x="-12628" y="177124" zmin="-4288" zmax="-3788"/>
+	</territory>
+	<spawn name="w19_23_005" count="2" respawn="95">
+		<territory name="w19_23_005"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn name="w19_23_005" count="4" respawn="95">
+		<territory name="w19_23_005"/>
+		<npc id="20070"/><!--Малый Василиск-->
+	</spawn>
+	<spawn name="w19_23_005" count="2" respawn="95">
+		<territory name="w19_23_005"/>
+		<npc id="20072"/><!--Василиск-->
+	</spawn>
+	<territory name="w19_23_001">
+		<add x="-16320" y="171060" zmin="-4096" zmax="-3796"/>
+		<add x="-15988" y="170900" zmin="-4096" zmax="-3796"/>
+		<add x="-14676" y="172708" zmin="-4096" zmax="-3796"/>
+		<add x="-15808" y="173740" zmin="-4096" zmax="-3796"/>
+		<add x="-17144" y="172952" zmin="-4096" zmax="-3796"/>
+	</territory>
+	<spawn name="w19_23_001" count="2" respawn="95">
+		<territory name="w19_23_001"/>
+		<npc id="20067"/><!--Монстроглаз Наблюдатель-->
+	</spawn>
+	<spawn name="w19_23_001" count="3" respawn="95">
+		<territory name="w19_23_001"/>
+		<npc id="20070"/><!--Малый Василиск-->
+	</spawn>
+	<territory name="w19_23_017">
+		<add x="-11088" y="188900" zmin="-4280" zmax="-3980"/>
+		<add x="-9540" y="190224" zmin="-4280" zmax="-3980"/>
+		<add x="-8272" y="192072" zmin="-4280" zmax="-3980"/>
+		<add x="-8976" y="192912" zmin="-4280" zmax="-3980"/>
+		<add x="-11052" y="191076" zmin="-4280" zmax="-3980"/>
+	</territory>
+	<spawn name="w19_23_017" count="1" respawn="95">
+		<territory name="w19_23_017"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="w19_23_017" count="1" respawn="95">
+		<territory name="w19_23_017"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="w19_23_017" count="1" respawn="95">
+		<territory name="w19_23_017"/>
+		<npc id="20083"/><!--Гранитный Голем-->
+	</spawn>
+	<territory name="w19_23_018">
+		<add x="-20176" y="186168" zmin="-4592" zmax="-3992"/>
+		<add x="-14944" y="186088" zmin="-4592" zmax="-3992"/>
+		<add x="-12996" y="187108" zmin="-4592" zmax="-3992"/>
+		<add x="-11300" y="189028" zmin="-4592" zmax="-3992"/>
+		<add x="-11272" y="190992" zmin="-4592" zmax="-3992"/>
+		<add x="-16504" y="192636" zmin="-4592" zmax="-3992"/>
+		<add x="-19868" y="190284" zmin="-4592" zmax="-3992"/>
+	</territory>
+	<spawn name="w19_23_018" count="2" respawn="95">
+		<territory name="w19_23_018"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="w19_23_018" count="2" respawn="95">
+		<territory name="w19_23_018"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="w19_23_018" count="3" respawn="95">
+		<territory name="w19_23_018"/>
+		<npc id="20083"/><!--Гранитный Голем-->
+	</spawn>
+	<spawn name="w19_23_018" count="3" respawn="95">
+		<territory name="w19_23_018"/>
+		<npc id="20085"/><!--Громила-->
+	</spawn>
+	<spawn name="w19_23_018" count="3" respawn="95">
+		<territory name="w19_23_018"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="w19_23_018" count="2" respawn="95">
+		<territory name="w19_23_018"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<territory name="w19_23_019">
+		<add x="-13964" y="182420" zmin="-4352" zmax="-3952"/>
+		<add x="-12236" y="183908" zmin="-4352" zmax="-3952"/>
+		<add x="-13384" y="186832" zmin="-4352" zmax="-3952"/>
+		<add x="-14732" y="186076" zmin="-4352" zmax="-3952"/>
+	</territory>
+	<spawn name="w19_23_019" count="1" respawn="95">
+		<territory name="w19_23_019"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="w19_23_019" count="1" respawn="95">
+		<territory name="w19_23_019"/>
+		<npc id="20083"/><!--Гранитный Голем-->
+	</spawn>
+	<spawn name="w19_23_019" count="1" respawn="95">
+		<territory name="w19_23_019"/>
+		<npc id="20085"/><!--Громила-->
+	</spawn>
+	<territory name="w19_23_013">
+		<add x="-10896" y="195764" zmin="-3512" zmax="-3212"/>
+		<add x="-9356" y="195000" zmin="-3512" zmax="-3212"/>
+		<add x="-7884" y="196396" zmin="-3512" zmax="-3212"/>
+		<add x="-11392" y="196404" zmin="-3512" zmax="-3212"/>
+	</territory>
+	<spawn name="w19_23_013" count="2" respawn="95">
+		<territory name="w19_23_013"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn name="w19_23_013" count="2" respawn="95">
+		<territory name="w19_23_013"/>
+		<npc id="20072"/><!--Василиск-->
+	</spawn>
+	<territory name="w19_23_014">
+		<add x="-8220" y="192716" zmin="-4288" zmax="-3688"/>
+		<add x="-6644" y="192956" zmin="-4288" zmax="-3688"/>
+		<add x="-6188" y="194324" zmin="-4288" zmax="-3688"/>
+		<add x="-6364" y="195400" zmin="-4288" zmax="-3688"/>
+		<add x="-7620" y="195512" zmin="-4288" zmax="-3688"/>
+		<add x="-9492" y="194244" zmin="-4288" zmax="-3688"/>
+	</territory>
+	<spawn name="w19_23_014" count="4" respawn="95">
+		<territory name="w19_23_014"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="w19_23_014" count="1" respawn="95">
+		<territory name="w19_23_014"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="w19_23_014" count="2" respawn="95">
+		<territory name="w19_23_014"/>
+		<npc id="20083"/><!--Гранитный Голем-->
+	</spawn>
+	<territory name="w19_23_015">
+		<add x="-11328" y="192380" zmin="-4028" zmax="-3828"/>
+		<add x="-9068" y="193608" zmin="-4028" zmax="-3828"/>
+		<add x="-11484" y="194864" zmin="-4028" zmax="-3828"/>
+		<add x="-13412" y="192428" zmin="-4028" zmax="-3828"/>
+	</territory>
+	<spawn name="w19_23_015" count="3" respawn="95">
+		<territory name="w19_23_015"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="w19_23_015" count="1" respawn="95">
+		<territory name="w19_23_015"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="w19_23_015" count="1" respawn="95">
+		<territory name="w19_23_015"/>
+		<npc id="20083"/><!--Гранитный Голем-->
+	</spawn>
+	<spawn name="w19_23_015" count="1" respawn="95">
+		<territory name="w19_23_015"/>
+		<npc id="20085"/><!--Громила-->
+	</spawn>
+	<territory name="w19_23_016">
+		<add x="-14152" y="194484" zmin="-4008" zmax="-3808"/>
+		<add x="-11764" y="195292" zmin="-4008" zmax="-3808"/>
+		<add x="-12336" y="196384" zmin="-4008" zmax="-3808"/>
+		<add x="-16664" y="196392" zmin="-4008" zmax="-3808"/>
+	</territory>
+	<spawn name="w19_23_016" count="3" respawn="95">
+		<territory name="w19_23_016"/>
+		<npc id="20083"/><!--Гранитный Голем-->
+	</spawn>
+	<spawn name="w19_23_016" count="3" respawn="95">
+		<territory name="w19_23_016"/>
+		<npc id="20085"/><!--Громила-->
+	</spawn>
+	<territory name="w19_23_010">
+		<add x="-10276" y="186248" zmin="-3656" zmax="-3206"/>
+		<add x="-9540" y="185384" zmin="-3656" zmax="-3206"/>
+		<add x="-6932" y="187212" zmin="-3656" zmax="-3206"/>
+		<add x="-9988" y="187032" zmin="-3656" zmax="-3206"/>
+	</territory>
+	<spawn name="w19_23_010" count="1" respawn="95">
+		<territory name="w19_23_010"/>
+		<npc id="20190"/><!--Скелет Меткий Стрелок-->
+	</spawn>
+	<spawn name="w19_23_010" count="2" respawn="95">
+		<territory name="w19_23_010"/>
+		<npc id="20191"/><!--Скелет Потрошитель-->
+	</spawn>
+	<territory name="w19_23_011">
+		<add x="-7720" y="187268" zmin="-3756" zmax="-3256"/>
+		<add x="-5536" y="187644" zmin="-3756" zmax="-3256"/>
+		<add x="-4716" y="189132" zmin="-3756" zmax="-3256"/>
+		<add x="-4360" y="192128" zmin="-3756" zmax="-3256"/>
+		<add x="-6460" y="192020" zmin="-3756" zmax="-3256"/>
+	</territory>
+	<spawn name="w19_23_011" count="2" respawn="95">
+		<territory name="w19_23_011"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn name="w19_23_011" count="3" respawn="95">
+		<territory name="w19_23_011"/>
+		<npc id="20072"/><!--Василиск-->
+	</spawn>
+	<spawn name="w19_23_011" count="1" respawn="95">
+		<territory name="w19_23_011"/>
+		<npc id="20190"/><!--Скелет Меткий Стрелок-->
+	</spawn>
+	<spawn name="w19_23_011" count="1" respawn="95">
+		<territory name="w19_23_011"/>
+		<npc id="20191"/><!--Скелет Потрошитель-->
+	</spawn>
+	<territory name="w19_23_012">
+		<add x="-5440" y="192208" zmin="-3576" zmax="-3176"/>
+		<add x="-4188" y="192288" zmin="-3576" zmax="-3176"/>
+		<add x="-4196" y="194804" zmin="-3576" zmax="-3176"/>
+		<add x="-5424" y="196364" zmin="-3576" zmax="-3176"/>
+		<add x="-5700" y="194404" zmin="-3576" zmax="-3176"/>
+	</territory>
+	<spawn name="w19_23_012" count="4" respawn="95">
+		<territory name="w19_23_012"/>
+		<npc id="20070"/><!--Малый Василиск-->
+	</spawn>
+	<spawn name="w19_23_012" count="1" respawn="95">
+		<territory name="w19_23_012"/>
+		<npc id="20190"/><!--Скелет Меткий Стрелок-->
+	</spawn>
+	<territory name="w19_23_028">
+		<add x="-22788" y="188980" zmin="-4676" zmax="-3776"/>
+		<add x="-21360" y="188292" zmin="-4676" zmax="-3776"/>
+		<add x="-20816" y="189852" zmin="-4676" zmax="-3776"/>
+		<add x="-21152" y="190740" zmin="-4676" zmax="-3776"/>
+		<add x="-22372" y="191644" zmin="-4676" zmax="-3776"/>
+		<add x="-23416" y="191268" zmin="-4676" zmax="-3776"/>
+		<add x="-23572" y="189652" zmin="-4676" zmax="-3776"/>
+	</territory>
+	<spawn name="w19_23_028" count="3" respawn="95">
+		<territory name="w19_23_028"/>
+		<npc id="20083"/><!--Гранитный Голем-->
+	</spawn>
+	<spawn name="w19_23_028" count="3" respawn="95">
+		<territory name="w19_23_028"/>
+		<npc id="20085"/><!--Громила-->
+	</spawn>
+	<territory name="w19_23_029">
+		<add x="-32612" y="189900" zmin="-3808" zmax="-3408"/>
+		<add x="-30696" y="188508" zmin="-3808" zmax="-3408"/>
+		<add x="-29272" y="188864" zmin="-3808" zmax="-3408"/>
+		<add x="-28612" y="190896" zmin="-3808" zmax="-3408"/>
+		<add x="-32568" y="193992" zmin="-3808" zmax="-3408"/>
+	</territory>
+	<spawn name="w19_23_029" count="2" respawn="95">
+		<territory name="w19_23_029"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="w19_23_029" count="1" respawn="95">
+		<territory name="w19_23_029"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="w19_23_029" count="2" respawn="95">
+		<territory name="w19_23_029"/>
+		<npc id="20083"/><!--Гранитный Голем-->
+	</spawn>
+	<spawn name="w19_23_029" count="1" respawn="95">
+		<territory name="w19_23_029"/>
+		<npc id="20085"/><!--Громила-->
+	</spawn>
+	<territory name="w19_23_024">
+		<add x="-22936" y="194772" zmin="-4284" zmax="-3984"/>
+		<add x="-18344" y="193228" zmin="-4284" zmax="-3984"/>
+		<add x="-17400" y="196428" zmin="-4284" zmax="-3984"/>
+		<add x="-21244" y="196364" zmin="-4284" zmax="-3984"/>
+	</territory>
+	<spawn name="w19_23_024" count="3" respawn="95">
+		<territory name="w19_23_024"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="w19_23_024" count="2" respawn="95">
+		<territory name="w19_23_024"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="w19_23_024" count="2" respawn="95">
+		<territory name="w19_23_024"/>
+		<npc id="20083"/><!--Гранитный Голем-->
+	</spawn>
+	<spawn name="w19_23_024" count="2" respawn="95">
+		<territory name="w19_23_024"/>
+		<npc id="20085"/><!--Громила-->
+	</spawn>
+	<territory name="w19_23_025">
+		<add x="-24732" y="193524" zmin="-4044" zmax="-3744"/>
+		<add x="-23692" y="195036" zmin="-4044" zmax="-3744"/>
+		<add x="-23696" y="196360" zmin="-4044" zmax="-3744"/>
+		<add x="-27152" y="196368" zmin="-4044" zmax="-3744"/>
+	</territory>
+	<spawn name="w19_23_025" count="3" respawn="95">
+		<territory name="w19_23_025"/>
+		<npc id="20083"/><!--Гранитный Голем-->
+	</spawn>
+	<spawn name="w19_23_025" count="3" respawn="95">
+		<territory name="w19_23_025"/>
+		<npc id="20085"/><!--Громила-->
+	</spawn>
+	<territory name="w19_23_026">
+		<add x="-28000" y="186128" zmin="-4296" zmax="-3996"/>
+		<add x="-26500" y="185088" zmin="-4296" zmax="-3996"/>
+		<add x="-23008" y="188136" zmin="-4296" zmax="-3996"/>
+		<add x="-24692" y="190228" zmin="-4296" zmax="-3996"/>
+		<add x="-26784" y="190708" zmin="-4296" zmax="-3996"/>
+	</territory>
+	<spawn name="w19_23_026" count="3" respawn="95">
+		<territory name="w19_23_026"/>
+		<npc id="20083"/><!--Гранитный Голем-->
+	</spawn>
+	<spawn name="w19_23_026" count="2" respawn="95">
+		<territory name="w19_23_026"/>
+		<npc id="20085"/><!--Громила-->
+	</spawn>
+	<spawn name="w19_23_026" count="1" respawn="95">
+		<territory name="w19_23_026"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="w19_23_026" count="1" respawn="95">
+		<territory name="w19_23_026"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="w19_23_026" count="1" respawn="95">
+		<territory name="w19_23_026"/>
+		<npc id="20192"/><!--Тиран-->
+	</spawn>
+	<spawn name="w19_23_026" count="1" respawn="95">
+		<territory name="w19_23_026"/>
+		<npc id="20193"/><!--Опытный Тиран-->
+	</spawn>
+	<territory name="w19_23_027">
+		<add x="-26736" y="190772" zmin="-4284" zmax="-3784"/>
+		<add x="-24688" y="190276" zmin="-4284" zmax="-3784"/>
+		<add x="-23632" y="191616" zmin="-4284" zmax="-3784"/>
+		<add x="-23832" y="192928" zmin="-4284" zmax="-3784"/>
+		<add x="-25228" y="192884" zmin="-4284" zmax="-3784"/>
+		<add x="-26512" y="191776" zmin="-4284" zmax="-3784"/>
+	</territory>
+	<spawn name="w19_23_027" count="2" respawn="95">
+		<territory name="w19_23_027"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="w19_23_027" count="2" respawn="95">
+		<territory name="w19_23_027"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<territory name="w19_23_020">
+		<add x="-11808" y="184556" zmin="-4080" zmax="-3680"/>
+		<add x="-10948" y="184420" zmin="-4080" zmax="-3680"/>
+		<add x="-10924" y="188020" zmin="-4080" zmax="-3680"/>
+		<add x="-12552" y="186488" zmin="-4080" zmax="-3680"/>
+	</territory>
+	<spawn name="w19_23_020" count="2" respawn="95">
+		<territory name="w19_23_020"/>
+		<npc id="20083"/><!--Гранитный Голем-->
+	</spawn>
+	<spawn name="w19_23_020" count="1" respawn="95">
+		<territory name="w19_23_020"/>
+		<npc id="20085"/><!--Громила-->
+	</spawn>
+	<territory name="w19_23_021">
+		<add x="-10864" y="186920" zmin="-3992" zmax="-3792"/>
+		<add x="-9428" y="188320" zmin="-3992" zmax="-3792"/>
+		<add x="-8872" y="189304" zmin="-3992" zmax="-3792"/>
+		<add x="-9192" y="189556" zmin="-3992" zmax="-3792"/>
+		<add x="-10916" y="188132" zmin="-3992" zmax="-3792"/>
+	</territory>
+	<spawn name="w19_23_021" count="2" respawn="95">
+		<territory name="w19_23_021"/>
+		<npc id="20192"/><!--Тиран-->
+	</spawn>
+	<spawn name="w19_23_021" count="1" respawn="95">
+		<territory name="w19_23_021"/>
+		<npc id="20193"/><!--Опытный Тиран-->
+	</spawn>
+	<territory name="w19_23_022">
+		<add x="-8972" y="190060" zmin="-4020" zmax="-3820"/>
+		<add x="-8436" y="189620" zmin="-4020" zmax="-3820"/>
+		<add x="-7284" y="190852" zmin="-4020" zmax="-3820"/>
+		<add x="-7120" y="191880" zmin="-4020" zmax="-3820"/>
+		<add x="-7336" y="192068" zmin="-4020" zmax="-3820"/>
+	</territory>
+	<spawn name="w19_23_022" count="2" respawn="95">
+		<territory name="w19_23_022"/>
+		<npc id="20083"/><!--Гранитный Голем-->
+	</spawn>
+	<spawn name="w19_23_022" count="1" respawn="95">
+		<territory name="w19_23_022"/>
+		<npc id="20085"/><!--Громила-->
+	</spawn>
+	<territory name="w19_23_023">
+		<add x="-21676" y="192160" zmin="-4276" zmax="-3876"/>
+		<add x="-19944" y="190332" zmin="-4276" zmax="-3876"/>
+		<add x="-17944" y="191632" zmin="-4276" zmax="-3876"/>
+		<add x="-21860" y="192744" zmin="-4276" zmax="-3876"/>
+	</territory>
+	<spawn name="w19_23_023" count="3" respawn="95">
+		<territory name="w19_23_023"/>
+		<npc id="20192"/><!--Тиран-->
+	</spawn>
+	<spawn name="w19_23_023" count="2" respawn="95">
+		<territory name="w19_23_023"/>
+		<npc id="20193"/><!--Опытный Тиран-->
+	</spawn>
+	<territory name="w19_23_039">
+		<add x="-30552" y="167424" zmin="-3808" zmax="-3608"/>
+		<add x="-27900" y="167696" zmin="-3808" zmax="-3608"/>
+		<add x="-26812" y="168804" zmin="-3808" zmax="-3608"/>
+		<add x="-28268" y="169348" zmin="-3808" zmax="-3608"/>
+		<add x="-31124" y="167984" zmin="-3808" zmax="-3608"/>
+	</territory>
+	<spawn name="w19_23_039" count="5" respawn="95">
+		<territory name="w19_23_039"/>
+		<npc id="20072"/><!--Василиск-->
+	</spawn>
+	<spawn name="w19_23_039" count="2" respawn="95">
+		<territory name="w19_23_039"/>
+		<npc id="20190"/><!--Скелет Меткий Стрелок-->
+	</spawn>
+	<spawn name="w19_23_039" count="1" respawn="95">
+		<territory name="w19_23_039"/>
+		<npc id="20191"/><!--Скелет Потрошитель-->
+	</spawn>
+	<territory name="w19_23_035">
+		<add x="-20092" y="177948" zmin="-4108" zmax="-3708"/>
+		<add x="-18996" y="179580" zmin="-4108" zmax="-3708"/>
+		<add x="-21308" y="182556" zmin="-4108" zmax="-3708"/>
+		<add x="-23176" y="183276" zmin="-4108" zmax="-3708"/>
+		<add x="-25268" y="180900" zmin="-4108" zmax="-3708"/>
+	</territory>
+	<spawn name="w19_23_035" count="3" respawn="95">
+		<territory name="w19_23_035"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="w19_23_035" count="1" respawn="95">
+		<territory name="w19_23_035"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="w19_23_035" count="3" respawn="95">
+		<territory name="w19_23_035"/>
+		<npc id="20083"/><!--Гранитный Голем-->
+	</spawn>
+	<spawn name="w19_23_035" count="3" respawn="95">
+		<territory name="w19_23_035"/>
+		<npc id="20085"/><!--Громила-->
+	</spawn>
+	<spawn name="w19_23_035" count="3" respawn="95">
+		<territory name="w19_23_035"/>
+		<npc id="20192"/><!--Тиран-->
+	</spawn>
+	<spawn name="w19_23_035" count="2" respawn="95">
+		<territory name="w19_23_035"/>
+		<npc id="20193"/><!--Опытный Тиран-->
+	</spawn>
+	<territory name="w19_23_036">
+		<add x="-25332" y="175236" zmin="-4328" zmax="-3928"/>
+		<add x="-21788" y="175280" zmin="-4328" zmax="-3928"/>
+		<add x="-20152" y="176760" zmin="-4328" zmax="-3928"/>
+		<add x="-20264" y="177880" zmin="-4328" zmax="-3928"/>
+		<add x="-21324" y="178456" zmin="-4328" zmax="-3928"/>
+		<add x="-26052" y="176976" zmin="-4328" zmax="-3928"/>
+	</territory>
+	<spawn name="w19_23_036" count="3" respawn="95">
+		<territory name="w19_23_036"/>
+		<npc id="20070"/><!--Малый Василиск-->
+	</spawn>
+	<spawn name="w19_23_036" count="3" respawn="95">
+		<territory name="w19_23_036"/>
+		<npc id="20072"/><!--Василиск-->
+	</spawn>
+	<spawn name="w19_23_036" count="2" respawn="95">
+		<territory name="w19_23_036"/>
+		<npc id="20190"/><!--Скелет Меткий Стрелок-->
+	</spawn>
+	<spawn name="w19_23_036" count="2" respawn="95">
+		<territory name="w19_23_036"/>
+		<npc id="20191"/><!--Скелет Потрошитель-->
+	</spawn>
+	<territory name="w19_23_037">
+		<add x="-27636" y="174512" zmin="-4276" zmax="-3826"/>
+		<add x="-25824" y="175192" zmin="-4276" zmax="-3826"/>
+		<add x="-26444" y="176540" zmin="-4276" zmax="-3826"/>
+		<add x="-28716" y="176524" zmin="-4276" zmax="-3826"/>
+		<add x="-29604" y="175120" zmin="-4276" zmax="-3826"/>
+	</territory>
+	<spawn name="w19_23_037" count="2" respawn="95">
+		<territory name="w19_23_037"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="w19_23_037" count="1" respawn="95">
+		<territory name="w19_23_037"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="w19_23_037" count="2" respawn="95">
+		<territory name="w19_23_037"/>
+		<npc id="20083"/><!--Гранитный Голем-->
+	</spawn>
+	<spawn name="w19_23_037" count="2" respawn="95">
+		<territory name="w19_23_037"/>
+		<npc id="20085"/><!--Громила-->
+	</spawn>
+	<territory name="w19_23_038">
+		<add x="-30408" y="170904" zmin="-4396" zmax="-4196"/>
+		<add x="-28120" y="171360" zmin="-4396" zmax="-4196"/>
+		<add x="-28780" y="174608" zmin="-4396" zmax="-4196"/>
+		<add x="-29848" y="175068" zmin="-4396" zmax="-4196"/>
+		<add x="-32588" y="174912" zmin="-4396" zmax="-4196"/>
+		<add x="-32580" y="171692" zmin="-4396" zmax="-4196"/>
+	</territory>
+	<spawn name="w19_23_038" count="2" respawn="95">
+		<territory name="w19_23_038"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="w19_23_038" count="1" respawn="95">
+		<territory name="w19_23_038"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<spawn name="w19_23_038" count="2" respawn="95">
+		<territory name="w19_23_038"/>
+		<npc id="20083"/><!--Гранитный Голем-->
+	</spawn>
+	<spawn name="w19_23_038" count="2" respawn="95">
+		<territory name="w19_23_038"/>
+		<npc id="20085"/><!--Громила-->
+	</spawn>
+	<territory name="w19_23_031">
+		<add x="-27864" y="193792" zmin="-3744" zmax="-3344"/>
+		<add x="-26800" y="194620" zmin="-3744" zmax="-3344"/>
+		<add x="-27964" y="196404" zmin="-3744" zmax="-3344"/>
+		<add x="-29672" y="196420" zmin="-3744" zmax="-3344"/>
+		<add x="-30236" y="195944" zmin="-3744" zmax="-3344"/>
+	</territory>
+	<spawn name="w19_23_031" count="3" respawn="95">
+		<territory name="w19_23_031"/>
+		<npc id="20072"/><!--Василиск-->
+	</spawn>
+	<spawn name="w19_23_031" count="2" respawn="95">
+		<territory name="w19_23_031"/>
+		<npc id="20190"/><!--Скелет Меткий Стрелок-->
+	</spawn>
+	<spawn name="w19_23_031" count="1" respawn="95">
+		<territory name="w19_23_031"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="w19_23_032" count="3" respawn="95">
+		<territory>
+			<add x="-32196" y="193768" zmin="-3728" zmax="-3328"/>
+			<add x="-31700" y="193336" zmin="-3728" zmax="-3328"/>
+			<add x="-29880" y="195484" zmin="-3728" zmax="-3328"/>
+			<add x="-30260" y="195752" zmin="-3728" zmax="-3328"/>
+		</territory>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<territory name="w19_23_033">
+		<add x="-30576" y="182228" zmin="-4288" zmax="-3988"/>
+		<add x="-28852" y="182496" zmin="-4288" zmax="-3988"/>
+		<add x="-26640" y="185052" zmin="-4288" zmax="-3988"/>
+		<add x="-28024" y="185892" zmin="-4288" zmax="-3988"/>
+		<add x="-32588" y="186056" zmin="-4288" zmax="-3988"/>
+		<add x="-31860" y="182788" zmin="-4288" zmax="-3988"/>
+	</territory>
+	<spawn name="w19_23_033" count="3" respawn="95">
+		<territory name="w19_23_033"/>
+		<npc id="20083"/><!--Гранитный Голем-->
+	</spawn>
+	<spawn name="w19_23_033" count="3" respawn="95">
+		<territory name="w19_23_033"/>
+		<npc id="20085"/><!--Громила-->
+	</spawn>
+	<spawn name="w19_23_033" count="3" respawn="95">
+		<territory name="w19_23_033"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="w19_23_033" count="3" respawn="95">
+		<territory name="w19_23_033"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="w19_23_033" count="4" respawn="95">
+		<territory name="w19_23_033"/>
+		<npc id="20192"/><!--Тиран-->
+	</spawn>
+	<spawn name="w19_23_033" count="2" respawn="95">
+		<territory name="w19_23_033"/>
+		<npc id="20193"/><!--Опытный Тиран-->
+	</spawn>
+	<territory name="w19_23_034">
+		<add x="-32612" y="177980" zmin="-4416" zmax="-4016"/>
+		<add x="-28776" y="178352" zmin="-4416" zmax="-4016"/>
+		<add x="-26832" y="179964" zmin="-4416" zmax="-4016"/>
+		<add x="-27464" y="181744" zmin="-4416" zmax="-4016"/>
+		<add x="-32576" y="181616" zmin="-4416" zmax="-4016"/>
+	</territory>
+	<spawn name="w19_23_034" count="4" respawn="95">
+		<territory name="w19_23_034"/>
+		<npc id="20083"/><!--Гранитный Голем-->
+	</spawn>
+	<spawn name="w19_23_034" count="3" respawn="95">
+		<territory name="w19_23_034"/>
+		<npc id="20085"/><!--Громила-->
+	</spawn>
+	<spawn name="w19_23_034" count="3" respawn="95">
+		<territory name="w19_23_034"/>
+		<npc id="20192"/><!--Тиран-->
+	</spawn>
+	<spawn name="w19_23_034" count="2" respawn="95">
+		<territory name="w19_23_034"/>
+		<npc id="20193"/><!--Опытный Тиран-->
+	</spawn>
+	<territory name="w19_23_030">
+		<add x="-30160" y="192312" zmin="-3684" zmax="-3284"/>
+		<add x="-28556" y="191000" zmin="-3684" zmax="-3284"/>
+		<add x="-26668" y="192992" zmin="-3684" zmax="-3284"/>
+		<add x="-27076" y="194236" zmin="-3684" zmax="-3284"/>
+	</territory>
+	<spawn name="w19_23_030" count="2" respawn="95">
+		<territory name="w19_23_030"/>
+		<npc id="20079"/><!--Муравей-->
+	</spawn>
+	<spawn name="w19_23_030" count="2" respawn="95">
+		<territory name="w19_23_030"/>
+		<npc id="20080"/><!--Муравей Главарь-->
+	</spawn>
+	<territory name="w19_23_042">
+		<add x="-13228" y="179124" zmin="-4256" zmax="-3956"/>
+		<add x="-11268" y="179484" zmin="-4256" zmax="-3956"/>
+		<add x="-12120" y="181240" zmin="-4256" zmax="-3956"/>
+		<add x="-13544" y="181652" zmin="-4256" zmax="-3956"/>
+		<add x="-14040" y="180376" zmin="-4256" zmax="-3956"/>
+	</territory>
+	<spawn name="w19_23_042" count="3" respawn="95">
+		<territory name="w19_23_042"/>
+		<npc id="20070"/><!--Малый Василиск-->
+	</spawn>
+	<spawn name="w19_23_042" count="2" respawn="95">
+		<territory name="w19_23_042"/>
+		<npc id="20072"/><!--Василиск-->
+	</spawn>
+	<territory name="w19_23_043">
+		<add x="-18516" y="187488" zmin="-4436" zmax="-4036"/>
+		<add x="-16368" y="187276" zmin="-4436" zmax="-4036"/>
+		<add x="-14768" y="189244" zmin="-4436" zmax="-4036"/>
+		<add x="-16916" y="190192" zmin="-4436" zmax="-4036"/>
+		<add x="-18608" y="189668" zmin="-4436" zmax="-4036"/>
+	</territory>
+	<spawn name="w19_23_043" count="1" respawn="95">
+		<territory name="w19_23_043"/>
+		<npc id="20087"/><!--Муравей Солдат-->
+	</spawn>
+	<spawn name="w19_23_043" count="1" respawn="95">
+		<territory name="w19_23_043"/>
+		<npc id="20088"/><!--Главарь Муравьев Солдат-->
+	</spawn>
+	<spawn name="w19_23_043" count="2" respawn="95">
+		<territory name="w19_23_043"/>
+		<npc id="20192"/><!--Тиран-->
+	</spawn>
+	<spawn name="w19_23_043" count="1" respawn="95">
+		<territory name="w19_23_043"/>
+		<npc id="20193"/><!--Опытный Тиран-->
+	</spawn>
+	<territory name="w19_23_040">
+		<add x="-24768" y="170184" zmin="-3748" zmax="-3448"/>
+		<add x="-22640" y="170456" zmin="-3748" zmax="-3448"/>
+		<add x="-21764" y="172424" zmin="-3748" zmax="-3448"/>
+		<add x="-23116" y="172120" zmin="-3748" zmax="-3448"/>
+	</territory>
+	<spawn name="w19_23_040" count="4" respawn="95">
+		<territory name="w19_23_040"/>
+		<npc id="20070"/><!--Малый Василиск-->
+	</spawn>
+	<spawn name="w19_23_040" count="1" respawn="95">
+		<territory name="w19_23_040"/>
+		<npc id="20190"/><!--Скелет Меткий Стрелок-->
+	</spawn>
+	<territory name="w19_23_041">
+		<add x="-22992" y="172900" zmin="-4032" zmax="-3832"/>
+		<add x="-21536" y="174076" zmin="-4032" zmax="-3832"/>
+		<add x="-21828" y="174676" zmin="-4032" zmax="-3832"/>
+		<add x="-22772" y="174768" zmin="-4032" zmax="-3832"/>
+	</territory>
+	<spawn name="w19_23_041" count="1" respawn="95">
+		<territory name="w19_23_041"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn name="w19_23_041" count="2" respawn="95">
+		<territory name="w19_23_041"/>
+		<npc id="20070"/><!--Малый Василиск-->
+	</spawn>
+	<territory name="gludio_t19_22_007">
+		<add x="-12532" y="163960" zmin="-2756" zmax="-2156"/>
+		<add x="-10364" y="163884" zmin="-2756" zmax="-2156"/>
+		<add x="-10268" y="164732" zmin="-2756" zmax="-2156"/>
+		<add x="-12828" y="164676" zmin="-2756" zmax="-2156"/>
+	</territory>
+	<spawn name="gludio_t19_22_007" count="1" respawn="35">
+		<territory name="gludio_t19_22_007"/>
+		<npc id="20310"/><!--Бурый Медведь-->
+	</spawn>
+	<spawn name="gludio_t19_22_007" count="2" respawn="35">
+		<territory name="gludio_t19_22_007"/>
+		<npc id="20038"/><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<spawn name="gludio_t19_22_007" count="2" respawn="35">
+		<territory name="gludio_t19_22_007"/>
+		<npc id="20359"/><!--Воин Крысолюдов-->
+	</spawn>
+	<spawn name="gludio_t19_22_007" count="2" respawn="35">
+		<territory name="gludio_t19_22_007"/>
+		<npc id="20055"/><!--Монстроглаз Смотритель-->
+	</spawn>
+	<spawn name="gludio_t19_22_007" count="1" respawn="35">
+		<territory name="gludio_t19_22_007"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_22_007" count="1" respawn="35">
+		<territory name="gludio_t19_22_007"/>
+		<npc id="20055"/><!--Монстроглаз Смотритель-->
+	</spawn>
+	<spawn name="gludio_t19_22_007" count="1" respawn="35">
+		<territory name="gludio_t19_22_007"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="gludio_t19_22_007" count="1" respawn="35">
+		<territory name="gludio_t19_22_007"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<spawn name="Truten" count="1" respawn="86400" respawn_random="12000">
+		<point x="-11160" y="180312" z="-4080" h="21344"/>
+		<npc id="25738"/><!--Трутень Жрец королевы муравьев -->
+	</spawn>	
+	<spawn name="Arak" count="1" respawn="129600" respawn_random="86400">
+		<point x="-20136" y="169720" z="-3040" h="21344"/>
+		<npc id="25256"/><!--Понтифик Тайк Арак-->
+	</spawn>
+</list>

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "events.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<event id="300" name="CrumaTower_Shuttle" impl="ShuttleWay">
+		<parameter name="shuttle_id" value="3"/>
+		<parameter name="spawn_point" value="17728 114176 -3502 0"/>
+		<parameter name="next_floor_loc" value="17728 114176 -11712"/>
+		<parameter name="floor_doors_id" value="0"/>
+		<parameter name="speed" value="500"/>
+		<parameter name="return_point" value="17480 114184 -3416 0"/>
+		<on_init>
+			<init name="doors"/>
+		</on_init>
+		<on_start>
+			<close name="doors"/>
+		</on_start>
+		<on_time>
+			<on time="0">
+				<open name="doors"/>
+			</on>
+			<on time="17">
+				<start name="event"/>
+			</on>
+		</on_time>
+		<objects name="doors">
+			<door id="20210004"/>
+		</objects>
+	</event>
+	<event id="301" name="CrumaTower_Shuttle" impl="ShuttleWay">
+		<parameter name="next_floor_loc" value="17728 114176 -3502"/>
+		<parameter name="floor_doors_id" value="1"/>
+		<parameter name="speed" value="500"/>
+		<parameter name="return_point" value="17720 114424 -11632 0"/>
+		<on_init>
+			<init name="doors"/>
+		</on_init>
+		<on_start>
+			<close name="doors"/>
+		</on_start>
+		<on_time>
+			<on time="0">
+				<open name="doors"/>
+			</on>
+			<on time="17">
+				<start name="event"/>
+			</on>
+		</on_time>
+		<objects name="doors">
+			<door id="20210005"/>
+		</objects>
+	</event>
+</list>

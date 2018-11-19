@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="24">	<!--Серебряный Рейнджер-->
+			<skill id="312" level="6" name="Боевая Стойка Коварства(Vicious Stance)" cost="85000" min_level="40"/>
+			<skill id="233" level="11" name="Владение Легкой Броней(Light Armor Mastery)" cost="85000" min_level="40"/>
+			<skill id="233" level="12" name="Владение Легкой Броней(Light Armor Mastery)" cost="85000" min_level="40"/>
+			<skill id="233" level="13" name="Владение Легкой Броней(Light Armor Mastery)" cost="85000" min_level="40"/>
+			<skill id="208" level="16" name="Владение Луком(Bow Mastery)" cost="85000" min_level="40"/>
+			<skill id="208" level="17" name="Владение Луком(Bow Mastery)" cost="85000" min_level="40"/>
+			<skill id="208" level="18" name="Владение Луком(Bow Mastery)" cost="85000" min_level="40"/>
+			<skill id="21" level="2" name="Вывести Яд(Poison Recovery)" cost="85000" min_level="40"/>
+			<skill id="113" level="2" name="Дальнобойность(Long Shot)" cost="85000" min_level="40"/>
+			<skill id="19" level="1" name="Двойной Выстрел(Double Shot)" cost="85000" min_level="40"/>
+			<skill id="19" level="2" name="Двойной Выстрел(Double Shot)" cost="85000" min_level="40"/>
+			<skill id="19" level="3" name="Двойной Выстрел(Double Shot)" cost="85000" min_level="40"/>
+			<skill id="101" level="4" name="Оглушающий Выстрел(Stun Shot)" cost="85000" min_level="40"/>
+			<skill id="101" level="5" name="Оглушающий Выстрел(Stun Shot)" cost="85000" min_level="40"/>
+			<skill id="101" level="6" name="Оглушающий Выстрел(Stun Shot)" cost="85000" min_level="40"/>
+			<skill id="102" level="2" name="Опутать(Entangle)" cost="85000" min_level="40"/>
+			<skill id="15" level="16" name="Очарование(Charm)" cost="85000" min_level="40"/>
+			<skill id="15" level="17" name="Очарование(Charm)" cost="85000" min_level="40"/>
+			<skill id="15" level="18" name="Очарование(Charm)" cost="85000" min_level="40"/>
+			<skill id="58" level="19" name="Природное Лечение(Elemental Heal)" cost="85000" min_level="40"/>
+			<skill id="58" level="20" name="Природное Лечение(Elemental Heal)" cost="85000" min_level="40"/>
+			<skill id="58" level="21" name="Природное Лечение(Elemental Heal)" cost="85000" min_level="40"/>
+			<skill id="123" level="1" name="Стена Духа(Spirit Barrier)" item_id="3051" cost="85000" min_level="40"/>
+			<skill id="233" level="14" name="Владение Легкой Броней(Light Armor Mastery)" cost="100000" min_level="41"/>
+			<skill id="208" level="19" name="Владение Луком(Bow Mastery)" cost="100000" min_level="41"/>
+			<skill id="19" level="4" name="Двойной Выстрел(Double Shot)" cost="100000" min_level="41"/>
+			<skill id="101" level="7" name="Оглушающий Выстрел(Stun Shot)" cost="100000" min_level="41"/>
+			<skill id="15" level="19" name="Очарование(Charm)" cost="100000" min_level="41"/>
+			<skill id="58" level="22" name="Природное Лечение(Elemental Heal)" cost="100000" min_level="41"/>
+			<skill id="233" level="15" name="Владение Легкой Броней(Light Armor Mastery)" cost="100000" min_level="42"/>
+			<skill id="208" level="20" name="Владение Луком(Bow Mastery)" cost="100000" min_level="42"/>
+			<skill id="19" level="5" name="Двойной Выстрел(Double Shot)" cost="100000" min_level="42"/>
+			<skill id="101" level="8" name="Оглушающий Выстрел(Stun Shot)" cost="100000" min_level="42"/>
+			<skill id="15" level="20" name="Очарование(Charm)" cost="100000" min_level="42"/>
+			<skill id="58" level="23" name="Природное Лечение(Elemental Heal)" cost="100000" min_level="42"/>
+			<skill id="225" level="2" name="Акробатическое Движение(Acrobatic Move)" cost="100000" min_level="43"/>
+			<skill id="312" level="7" name="Боевая Стойка Коварства(Vicious Stance)" cost="100000" min_level="43"/>
+			<skill id="171" level="2" name="Боевой Дух(Esprit)" cost="100000" min_level="43"/>
+			<skill id="169" level="2" name="Быстрый Шаг(Quick Step)" cost="100000" min_level="43"/>
+			<skill id="233" level="16" name="Владение Легкой Броней(Light Armor Mastery)" cost="100000" min_level="43"/>
+			<skill id="208" level="21" name="Владение Луком(Bow Mastery)" cost="100000" min_level="43"/>
+			<skill id="19" level="6" name="Двойной Выстрел(Double Shot)" cost="100000" min_level="43"/>
+			<skill id="101" level="9" name="Оглушающий Выстрел(Stun Shot)" cost="100000" min_level="43"/>
+			<skill id="102" level="3" name="Опутать(Entangle)" cost="100000" min_level="43"/>
+			<skill id="15" level="21" name="Очарование(Charm)" cost="100000" min_level="43"/>
+			<skill id="58" level="24" name="Природное Лечение(Elemental Heal)" cost="100000" min_level="43"/>
+			<skill id="24" level="1" name="Взрывной Выстрел(Burst Shot)" cost="150000" min_level="44"/>
+			<skill id="233" level="17" name="Владение Легкой Броней(Light Armor Mastery)" cost="150000" min_level="44"/>
+			<skill id="208" level="22" name="Владение Луком(Bow Mastery)" cost="150000" min_level="44"/>
+			<skill id="19" level="7" name="Двойной Выстрел(Double Shot)" cost="150000" min_level="44"/>
+			<skill id="101" level="10" name="Оглушающий Выстрел(Stun Shot)" cost="150000" min_level="44"/>
+			<skill id="15" level="22" name="Очарование(Charm)" cost="150000" min_level="44"/>
+			<skill id="58" level="25" name="Природное Лечение(Elemental Heal)" cost="150000" min_level="44"/>
+			<skill id="24" level="2" name="Взрывной Выстрел(Burst Shot)" cost="150000" min_level="45"/>
+			<skill id="233" level="18" name="Владение Легкой Броней(Light Armor Mastery)" cost="150000" min_level="45"/>
+			<skill id="208" level="23" name="Владение Луком(Bow Mastery)" cost="150000" min_level="45"/>
+			<skill id="19" level="8" name="Двойной Выстрел(Double Shot)" cost="150000" min_level="45"/>
+			<skill id="101" level="11" name="Оглушающий Выстрел(Stun Shot)" cost="150000" min_level="45"/>
+			<skill id="15" level="23" name="Очарование(Charm)" cost="150000" min_level="45"/>
+			<skill id="1800" level="1" name="Пират(Pirate)" min_level="45"/>
+			<skill id="58" level="26" name="Природное Лечение(Elemental Heal)" cost="150000" min_level="45"/>
+			<skill id="312" level="8" name="Боевая Стойка Коварства(Vicious Stance)" cost="150000" min_level="46"/>
+			<skill id="171" level="3" name="Боевой Дух(Esprit)" cost="150000" min_level="46"/>
+			<skill id="24" level="3" name="Взрывной Выстрел(Burst Shot)" cost="150000" min_level="46"/>
+			<skill id="233" level="19" name="Владение Легкой Броней(Light Armor Mastery)" cost="150000" min_level="46"/>
+			<skill id="208" level="24" name="Владение Луком(Bow Mastery)" cost="150000" min_level="46"/>
+			<skill id="19" level="9" name="Двойной Выстрел(Double Shot)" cost="150000" min_level="46"/>
+			<skill id="101" level="12" name="Оглушающий Выстрел(Stun Shot)" cost="150000" min_level="46"/>
+			<skill id="102" level="4" name="Опутать(Entangle)" cost="150000" min_level="46"/>
+			<skill id="61" level="2" name="Остановка Кровотечения(Cure Bleeding)" cost="150000" min_level="46"/>
+			<skill id="15" level="24" name="Очарование(Charm)" cost="150000" min_level="46"/>
+			<skill id="58" level="27" name="Природное Лечение(Elemental Heal)" cost="150000" min_level="46"/>
+			<skill id="24" level="4" name="Взрывной Выстрел(Burst Shot)" cost="200000" min_level="47"/>
+			<skill id="233" level="20" name="Владение Легкой Броней(Light Armor Mastery)" cost="200000" min_level="47"/>
+			<skill id="208" level="25" name="Владение Луком(Bow Mastery)" cost="200000" min_level="47"/>
+			<skill id="19" level="10" name="Двойной Выстрел(Double Shot)" cost="200000" min_level="47"/>
+			<skill id="101" level="13" name="Оглушающий Выстрел(Stun Shot)" cost="200000" min_level="47"/>
+			<skill id="15" level="25" name="Очарование(Charm)" cost="200000" min_level="47"/>
+			<skill id="58" level="28" name="Природное Лечение(Elemental Heal)" cost="200000" min_level="47"/>
+			<skill id="24" level="5" name="Взрывной Выстрел(Burst Shot)" cost="200000" min_level="48"/>
+			<skill id="233" level="21" name="Владение Легкой Броней(Light Armor Mastery)" cost="200000" min_level="48"/>
+			<skill id="208" level="26" name="Владение Луком(Bow Mastery)" cost="200000" min_level="48"/>
+			<skill id="19" level="11" name="Двойной Выстрел(Double Shot)" cost="200000" min_level="48"/>
+			<skill id="101" level="14" name="Оглушающий Выстрел(Stun Shot)" cost="200000" min_level="48"/>
+			<skill id="15" level="26" name="Очарование(Charm)" cost="200000" min_level="48"/>
+			<skill id="58" level="29" name="Природное Лечение(Elemental Heal)" cost="200000" min_level="48"/>
+			<skill id="312" level="9" name="Боевая Стойка Коварства(Vicious Stance)" cost="200000" min_level="49"/>
+			<skill id="171" level="4" name="Боевой Дух(Esprit)" cost="200000" min_level="49"/>
+			<skill id="24" level="6" name="Взрывной Выстрел(Burst Shot)" cost="200000" min_level="49"/>
+			<skill id="233" level="22" name="Владение Легкой Броней(Light Armor Mastery)" cost="200000" min_level="49"/>
+			<skill id="208" level="27" name="Владение Луком(Bow Mastery)" cost="200000" min_level="49"/>
+			<skill id="19" level="12" name="Двойной Выстрел(Double Shot)" cost="200000" min_level="49"/>
+			<skill id="101" level="15" name="Оглушающий Выстрел(Stun Shot)" cost="200000" min_level="49"/>
+			<skill id="102" level="5" name="Опутать(Entangle)" cost="200000" min_level="49"/>
+			<skill id="15" level="27" name="Очарование(Charm)" cost="200000" min_level="49"/>
+			<skill id="58" level="30" name="Природное Лечение(Elemental Heal)" cost="200000" min_level="49"/>
+			<skill id="123" level="2" name="Стена Духа(Spirit Barrier)" cost="200000" min_level="49"/>
+			<skill id="24" level="7" name="Взрывной Выстрел(Burst Shot)" cost="300000" min_level="50"/>
+			<skill id="233" level="23" name="Владение Легкой Броней(Light Armor Mastery)" cost="300000" min_level="50"/>
+			<skill id="208" level="28" name="Владение Луком(Bow Mastery)" cost="300000" min_level="50"/>
+			<skill id="19" level="13" name="Двойной Выстрел(Double Shot)" cost="300000" min_level="50"/>
+			<skill id="101" level="16" name="Оглушающий Выстрел(Stun Shot)" cost="300000" min_level="50"/>
+			<skill id="15" level="28" name="Очарование(Charm)" cost="300000" min_level="50"/>
+			<skill id="58" level="31" name="Природное Лечение(Elemental Heal)" cost="300000" min_level="50"/>
+			<skill id="24" level="8" name="Взрывной Выстрел(Burst Shot)" cost="300000" min_level="51"/>
+			<skill id="233" level="24" name="Владение Легкой Броней(Light Armor Mastery)" cost="300000" min_level="51"/>
+			<skill id="208" level="29" name="Владение Луком(Bow Mastery)" cost="300000" min_level="51"/>
+			<skill id="19" level="14" name="Двойной Выстрел(Double Shot)" cost="300000" min_level="51"/>
+			<skill id="101" level="17" name="Оглушающий Выстрел(Stun Shot)" cost="300000" min_level="51"/>
+			<skill id="15" level="29" name="Очарование(Charm)" cost="300000" min_level="51"/>
+			<skill id="58" level="32" name="Природное Лечение(Elemental Heal)" cost="300000" min_level="51"/>
+			<skill id="312" level="10" name="Боевая Стойка Коварства(Vicious Stance)" cost="300000" min_level="52"/>
+			<skill id="171" level="5" name="Боевой Дух(Esprit)" cost="300000" min_level="52"/>
+			<skill id="1405" level="1" name="Божественное Вдохновение(Divine Inspiration)" item_id="8618" cost="300000" min_level="52"/>
+			<skill id="24" level="9" name="Взрывной Выстрел(Burst Shot)" cost="300000" min_level="52"/>
+			<skill id="233" level="25" name="Владение Легкой Броней(Light Armor Mastery)" cost="300000" min_level="52"/>
+			<skill id="208" level="30" name="Владение Луком(Bow Mastery)" cost="300000" min_level="52"/>
+			<skill id="19" level="15" name="Двойной Выстрел(Double Shot)" cost="300000" min_level="52"/>
+			<skill id="101" level="18" name="Оглушающий Выстрел(Stun Shot)" cost="300000" min_level="52"/>
+			<skill id="102" level="6" name="Опутать(Entangle)" cost="300000" min_level="52"/>
+			<skill id="15" level="30" name="Очарование(Charm)" cost="300000" min_level="52"/>
+			<skill id="58" level="33" name="Природное Лечение(Elemental Heal)" cost="300000" min_level="52"/>
+			<skill id="230" level="2" name="Спринт(Sprint)" cost="300000" min_level="52"/>
+			<skill id="24" level="10" name="Взрывной Выстрел(Burst Shot)" cost="410000" min_level="53"/>
+			<skill id="233" level="26" name="Владение Легкой Броней(Light Armor Mastery)" cost="410000" min_level="53"/>
+			<skill id="208" level="31" name="Владение Луком(Bow Mastery)" cost="410000" min_level="53"/>
+			<skill id="19" level="16" name="Двойной Выстрел(Double Shot)" cost="410000" min_level="53"/>
+			<skill id="101" level="19" name="Оглушающий Выстрел(Stun Shot)" cost="410000" min_level="53"/>
+			<skill id="15" level="31" name="Очарование(Charm)" cost="410000" min_level="53"/>
+			<skill id="58" level="34" name="Природное Лечение(Elemental Heal)" cost="410000" min_level="53"/>
+			<skill id="24" level="11" name="Взрывной Выстрел(Burst Shot)" cost="410000" min_level="54"/>
+			<skill id="233" level="27" name="Владение Легкой Броней(Light Armor Mastery)" cost="410000" min_level="54"/>
+			<skill id="208" level="32" name="Владение Луком(Bow Mastery)" cost="410000" min_level="54"/>
+			<skill id="19" level="17" name="Двойной Выстрел(Double Shot)" cost="410000" min_level="54"/>
+			<skill id="101" level="20" name="Оглушающий Выстрел(Stun Shot)" cost="410000" min_level="54"/>
+			<skill id="15" level="32" name="Очарование(Charm)" cost="410000" min_level="54"/>
+			<skill id="58" level="35" name="Природное Лечение(Elemental Heal)" cost="410000" min_level="54"/>
+			<skill id="225" level="3" name="Акробатическое Движение(Acrobatic Move)" cost="410000" min_level="55"/>
+			<skill id="312" level="11" name="Боевая Стойка Коварства(Vicious Stance)" cost="410000" min_level="55"/>
+			<skill id="99" level="2" name="Быстрый Выстрел(Rapid Shot)" cost="410000" min_level="55"/>
+			<skill id="24" level="12" name="Взрывной Выстрел(Burst Shot)" cost="410000" min_level="55"/>
+			<skill id="233" level="28" name="Владение Легкой Броней(Light Armor Mastery)" cost="410000" min_level="55"/>
+			<skill id="208" level="33" name="Владение Луком(Bow Mastery)" cost="410000" min_level="55"/>
+			<skill id="19" level="18" name="Двойной Выстрел(Double Shot)" cost="410000" min_level="55"/>
+			<skill id="101" level="21" name="Оглушающий Выстрел(Stun Shot)" cost="410000" min_level="55"/>
+			<skill id="102" level="7" name="Опутать(Entangle)" cost="410000" min_level="55"/>
+			<skill id="15" level="33" name="Очарование(Charm)" cost="410000" min_level="55"/>
+			<skill id="58" level="36" name="Природное Лечение(Elemental Heal)" cost="410000" min_level="55"/>
+			<skill id="24" level="13" name="Взрывной Выстрел(Burst Shot)" cost="570000" min_level="56"/>
+			<skill id="233" level="29" name="Владение Легкой Броней(Light Armor Mastery)" cost="570000" min_level="56"/>
+			<skill id="208" level="34" name="Владение Луком(Bow Mastery)" cost="570000" min_level="56"/>
+			<skill id="19" level="19" name="Двойной Выстрел(Double Shot)" cost="570000" min_level="56"/>
+			<skill id="101" level="22" name="Оглушающий Выстрел(Stun Shot)" cost="570000" min_level="56"/>
+			<skill id="15" level="34" name="Очарование(Charm)" cost="570000" min_level="56"/>
+			<skill id="58" level="37" name="Природное Лечение(Elemental Heal)" cost="570000" min_level="56"/>
+			<skill id="24" level="14" name="Взрывной Выстрел(Burst Shot)" cost="570000" min_level="57"/>
+			<skill id="233" level="30" name="Владение Легкой Броней(Light Armor Mastery)" cost="570000" min_level="57"/>
+			<skill id="208" level="35" name="Владение Луком(Bow Mastery)" cost="570000" min_level="57"/>
+			<skill id="19" level="20" name="Двойной Выстрел(Double Shot)" cost="570000" min_level="57"/>
+			<skill id="101" level="23" name="Оглушающий Выстрел(Stun Shot)" cost="570000" min_level="57"/>
+			<skill id="15" level="35" name="Очарование(Charm)" cost="570000" min_level="57"/>
+			<skill id="58" level="38" name="Природное Лечение(Elemental Heal)" cost="570000" min_level="57"/>
+			<skill id="312" level="12" name="Боевая Стойка Коварства(Vicious Stance)" cost="570000" min_level="58"/>
+			<skill id="24" level="15" name="Взрывной Выстрел(Burst Shot)" cost="570000" min_level="58"/>
+			<skill id="233" level="31" name="Владение Легкой Броней(Light Armor Mastery)" cost="570000" min_level="58"/>
+			<skill id="208" level="36" name="Владение Луком(Bow Mastery)" cost="570000" min_level="58"/>
+			<skill id="19" level="21" name="Двойной Выстрел(Double Shot)" cost="570000" min_level="58"/>
+			<skill id="101" level="24" name="Оглушающий Выстрел(Stun Shot)" cost="570000" min_level="58"/>
+			<skill id="102" level="8" name="Опутать(Entangle)" cost="570000" min_level="58"/>
+			<skill id="15" level="36" name="Очарование(Charm)" cost="570000" min_level="58"/>
+			<skill id="58" level="39" name="Природное Лечение(Elemental Heal)" cost="570000" min_level="58"/>
+			<skill id="123" level="3" name="Стена Духа(Spirit Barrier)" cost="570000" min_level="58"/>
+			<skill id="24" level="16" name="Взрывной Выстрел(Burst Shot)" cost="830000" min_level="59"/>
+			<skill id="233" level="32" name="Владение Легкой Броней(Light Armor Mastery)" cost="830000" min_level="59"/>
+			<skill id="208" level="37" name="Владение Луком(Bow Mastery)" cost="830000" min_level="59"/>
+			<skill id="19" level="22" name="Двойной Выстрел(Double Shot)" cost="830000" min_level="59"/>
+			<skill id="101" level="25" name="Оглушающий Выстрел(Stun Shot)" cost="830000" min_level="59"/>
+			<skill id="15" level="37" name="Очарование(Charm)" cost="830000" min_level="59"/>
+			<skill id="58" level="40" name="Природное Лечение(Elemental Heal)" cost="830000" min_level="59"/>
+			<skill id="413" level="1" name="Беглый Огонь(Rapid Fire)" cost="830000" min_level="60"/>
+			<skill id="312" level="13" name="Боевая Стойка Коварства(Vicious Stance)" cost="830000" min_level="60"/>
+			<skill id="24" level="17" name="Взрывной Выстрел(Burst Shot)" cost="830000" min_level="60"/>
+			<skill id="233" level="33" name="Владение Легкой Броней(Light Armor Mastery)" cost="830000" min_level="60"/>
+			<skill id="208" level="38" name="Владение Луком(Bow Mastery)" cost="830000" min_level="60"/>
+			<skill id="21" level="3" name="Вывести Яд(Poison Recovery)" cost="830000" min_level="60"/>
+			<skill id="19" level="23" name="Двойной Выстрел(Double Shot)" cost="830000" min_level="60"/>
+			<skill id="101" level="26" name="Оглушающий Выстрел(Stun Shot)" cost="830000" min_level="60"/>
+			<skill id="102" level="9" name="Опутать(Entangle)" cost="830000" min_level="60"/>
+			<skill id="15" level="38" name="Очарование(Charm)" cost="830000" min_level="60"/>
+			<skill id="58" level="41" name="Природное Лечение(Elemental Heal)" cost="830000" min_level="60"/>
+			<skill id="1801" level="1" name="Темный Ассасин(Dark Assassin)" min_level="60"/>
+			<skill id="1405" level="2" name="Божественное Вдохновение(Divine Inspiration)" item_id="8619" cost="830000" min_level="61"/>
+			<skill id="24" level="18" name="Взрывной Выстрел(Burst Shot)" cost="830000" min_level="61"/>
+			<skill id="233" level="34" name="Владение Легкой Броней(Light Armor Mastery)" cost="830000" min_level="61"/>
+			<skill id="208" level="39" name="Владение Луком(Bow Mastery)" cost="830000" min_level="61"/>
+			<skill id="19" level="24" name="Двойной Выстрел(Double Shot)" cost="830000" min_level="61"/>
+			<skill id="101" level="27" name="Оглушающий Выстрел(Stun Shot)" cost="830000" min_level="61"/>
+			<skill id="15" level="39" name="Очарование(Charm)" cost="830000" min_level="61"/>
+			<skill id="58" level="42" name="Природное Лечение(Elemental Heal)" cost="830000" min_level="61"/>
+			<skill id="413" level="2" name="Беглый Огонь(Rapid Fire)" cost="1000000" min_level="62"/>
+			<skill id="312" level="14" name="Боевая Стойка Коварства(Vicious Stance)" cost="1000000" min_level="62"/>
+			<skill id="171" level="6" name="Боевой Дух(Esprit)" cost="1000000" min_level="62"/>
+			<skill id="24" level="19" name="Взрывной Выстрел(Burst Shot)" cost="1000000" min_level="62"/>
+			<skill id="233" level="35" name="Владение Легкой Броней(Light Armor Mastery)" cost="1000000" min_level="62"/>
+			<skill id="208" level="40" name="Владение Луком(Bow Mastery)" cost="1000000" min_level="62"/>
+			<skill id="19" level="25" name="Двойной Выстрел(Double Shot)" cost="1000000" min_level="62"/>
+			<skill id="101" level="28" name="Оглушающий Выстрел(Stun Shot)" cost="1000000" min_level="62"/>
+			<skill id="102" level="10" name="Опутать(Entangle)" cost="1000000" min_level="62"/>
+			<skill id="61" level="3" name="Остановка Кровотечения(Cure Bleeding)" cost="1000000" min_level="62"/>
+			<skill id="15" level="40" name="Очарование(Charm)" cost="1000000" min_level="62"/>
+			<skill id="58" level="43" name="Природное Лечение(Elemental Heal)" cost="1000000" min_level="62"/>
+			<skill id="24" level="20" name="Взрывной Выстрел(Burst Shot)" cost="1000000" min_level="63"/>
+			<skill id="233" level="36" name="Владение Легкой Броней(Light Armor Mastery)" cost="1000000" min_level="63"/>
+			<skill id="208" level="41" name="Владение Луком(Bow Mastery)" cost="1000000" min_level="63"/>
+			<skill id="19" level="26" name="Двойной Выстрел(Double Shot)" cost="1000000" min_level="63"/>
+			<skill id="101" level="29" name="Оглушающий Выстрел(Stun Shot)" cost="1000000" min_level="63"/>
+			<skill id="15" level="41" name="Очарование(Charm)" cost="1000000" min_level="63"/>
+			<skill id="58" level="44" name="Природное Лечение(Elemental Heal)" cost="1000000" min_level="63"/>
+			<skill id="413" level="3" name="Беглый Огонь(Rapid Fire)" cost="1300000" min_level="64"/>
+			<skill id="312" level="15" name="Боевая Стойка Коварства(Vicious Stance)" cost="1300000" min_level="64"/>
+			<skill id="24" level="21" name="Взрывной Выстрел(Burst Shot)" cost="1300000" min_level="64"/>
+			<skill id="233" level="37" name="Владение Легкой Броней(Light Armor Mastery)" cost="1300000" min_level="64"/>
+			<skill id="208" level="42" name="Владение Луком(Bow Mastery)" cost="1300000" min_level="64"/>
+			<skill id="19" level="27" name="Двойной Выстрел(Double Shot)" cost="1300000" min_level="64"/>
+			<skill id="101" level="30" name="Оглушающий Выстрел(Stun Shot)" cost="1300000" min_level="64"/>
+			<skill id="102" level="11" name="Опутать(Entangle)" cost="1300000" min_level="64"/>
+			<skill id="15" level="42" name="Очарование(Charm)" cost="1300000" min_level="64"/>
+			<skill id="58" level="45" name="Природное Лечение(Elemental Heal)" cost="1300000" min_level="64"/>
+			<skill id="24" level="22" name="Взрывной Выстрел(Burst Shot)" cost="1300000" min_level="65"/>
+			<skill id="233" level="38" name="Владение Легкой Броней(Light Armor Mastery)" cost="1300000" min_level="65"/>
+			<skill id="208" level="43" name="Владение Луком(Bow Mastery)" cost="1300000" min_level="65"/>
+			<skill id="19" level="28" name="Двойной Выстрел(Double Shot)" cost="1300000" min_level="65"/>
+			<skill id="101" level="31" name="Оглушающий Выстрел(Stun Shot)" cost="1300000" min_level="65"/>
+			<skill id="15" level="43" name="Очарование(Charm)" cost="1300000" min_level="65"/>
+			<skill id="58" level="46" name="Природное Лечение(Elemental Heal)" cost="1300000" min_level="65"/>
+			<skill id="413" level="4" name="Беглый Огонь(Rapid Fire)" cost="1500000" min_level="66"/>
+			<skill id="312" level="16" name="Боевая Стойка Коварства(Vicious Stance)" cost="1500000" min_level="66"/>
+			<skill id="24" level="23" name="Взрывной Выстрел(Burst Shot)" cost="1500000" min_level="66"/>
+			<skill id="233" level="39" name="Владение Легкой Броней(Light Armor Mastery)" cost="1500000" min_level="66"/>
+			<skill id="208" level="44" name="Владение Луком(Bow Mastery)" cost="1500000" min_level="66"/>
+			<skill id="19" level="29" name="Двойной Выстрел(Double Shot)" cost="1500000" min_level="66"/>
+			<skill id="101" level="32" name="Оглушающий Выстрел(Stun Shot)" cost="1500000" min_level="66"/>
+			<skill id="102" level="12" name="Опутать(Entangle)" cost="1500000" min_level="66"/>
+			<skill id="15" level="44" name="Очарование(Charm)" cost="1500000" min_level="66"/>
+			<skill id="58" level="47" name="Природное Лечение(Elemental Heal)" cost="1500000" min_level="66"/>
+			<skill id="24" level="24" name="Взрывной Выстрел(Burst Shot)" cost="1500000" min_level="67"/>
+			<skill id="233" level="40" name="Владение Легкой Броней(Light Armor Mastery)" cost="1500000" min_level="67"/>
+			<skill id="208" level="45" name="Владение Луком(Bow Mastery)" cost="1500000" min_level="67"/>
+			<skill id="19" level="30" name="Двойной Выстрел(Double Shot)" cost="1500000" min_level="67"/>
+			<skill id="101" level="33" name="Оглушающий Выстрел(Stun Shot)" cost="1500000" min_level="67"/>
+			<skill id="15" level="45" name="Очарование(Charm)" cost="1500000" min_level="67"/>
+			<skill id="58" level="48" name="Природное Лечение(Elemental Heal)" cost="1500000" min_level="67"/>
+			<skill id="413" level="5" name="Беглый Огонь(Rapid Fire)" cost="2000000" min_level="68"/>
+			<skill id="312" level="17" name="Боевая Стойка Коварства(Vicious Stance)" cost="2000000" min_level="68"/>
+			<skill id="171" level="7" name="Боевой Дух(Esprit)" cost="2000000" min_level="68"/>
+			<skill id="24" level="25" name="Взрывной Выстрел(Burst Shot)" cost="2000000" min_level="68"/>
+			<skill id="233" level="41" name="Владение Легкой Броней(Light Armor Mastery)" cost="2000000" min_level="68"/>
+			<skill id="208" level="46" name="Владение Луком(Bow Mastery)" cost="2000000" min_level="68"/>
+			<skill id="19" level="31" name="Двойной Выстрел(Double Shot)" cost="2000000" min_level="68"/>
+			<skill id="101" level="34" name="Оглушающий Выстрел(Stun Shot)" cost="2000000" min_level="68"/>
+			<skill id="102" level="13" name="Опутать(Entangle)" cost="2000000" min_level="68"/>
+			<skill id="15" level="46" name="Очарование(Charm)" cost="2000000" min_level="68"/>
+			<skill id="58" level="49" name="Природное Лечение(Elemental Heal)" cost="2000000" min_level="68"/>
+			<skill id="24" level="26" name="Взрывной Выстрел(Burst Shot)" cost="2000000" min_level="69"/>
+			<skill id="233" level="42" name="Владение Легкой Броней(Light Armor Mastery)" cost="2000000" min_level="69"/>
+			<skill id="208" level="47" name="Владение Луком(Bow Mastery)" cost="2000000" min_level="69"/>
+			<skill id="19" level="32" name="Двойной Выстрел(Double Shot)" cost="2000000" min_level="69"/>
+			<skill id="101" level="35" name="Оглушающий Выстрел(Stun Shot)" cost="2000000" min_level="69"/>
+			<skill id="15" level="47" name="Очарование(Charm)" cost="2000000" min_level="69"/>
+			<skill id="58" level="50" name="Природное Лечение(Elemental Heal)" cost="2000000" min_level="69"/>
+			<skill id="413" level="6" name="Беглый Огонь(Rapid Fire)" cost="2500000" min_level="70"/>
+			<skill id="312" level="18" name="Боевая Стойка Коварства(Vicious Stance)" cost="2500000" min_level="70"/>
+			<skill id="24" level="27" name="Взрывной Выстрел(Burst Shot)" cost="2500000" min_level="70"/>
+			<skill id="233" level="43" name="Владение Легкой Броней(Light Armor Mastery)" cost="2500000" min_level="70"/>
+			<skill id="208" level="48" name="Владение Луком(Bow Mastery)" cost="2500000" min_level="70"/>
+			<skill id="19" level="33" name="Двойной Выстрел(Double Shot)" cost="2500000" min_level="70"/>
+			<skill id="101" level="36" name="Оглушающий Выстрел(Stun Shot)" cost="2500000" min_level="70"/>
+			<skill id="102" level="14" name="Опутать(Entangle)" cost="2500000" min_level="70"/>
+			<skill id="15" level="48" name="Очарование(Charm)" cost="2500000" min_level="70"/>
+			<skill id="58" level="51" name="Природное Лечение(Elemental Heal)" cost="2500000" min_level="70"/>
+			<skill id="1802" level="1" name="Светлый Ассасин(White Assassin)" min_level="70"/>
+			<skill id="24" level="28" name="Взрывной Выстрел(Burst Shot)" cost="2500000" min_level="71"/>
+			<skill id="233" level="44" name="Владение Легкой Броней(Light Armor Mastery)" cost="2500000" min_level="71"/>
+			<skill id="208" level="49" name="Владение Луком(Bow Mastery)" cost="2500000" min_level="71"/>
+			<skill id="19" level="34" name="Двойной Выстрел(Double Shot)" cost="2500000" min_level="71"/>
+			<skill id="101" level="37" name="Оглушающий Выстрел(Stun Shot)" cost="2500000" min_level="71"/>
+			<skill id="15" level="49" name="Очарование(Charm)" cost="2500000" min_level="71"/>
+			<skill id="58" level="52" name="Природное Лечение(Elemental Heal)" cost="2500000" min_level="71"/>
+			<skill id="413" level="7" name="Беглый Огонь(Rapid Fire)" cost="2800000" min_level="72"/>
+			<skill id="312" level="19" name="Боевая Стойка Коварства(Vicious Stance)" cost="2800000" min_level="72"/>
+			<skill id="24" level="29" name="Взрывной Выстрел(Burst Shot)" cost="2800000" min_level="72"/>
+			<skill id="233" level="45" name="Владение Легкой Броней(Light Armor Mastery)" cost="2800000" min_level="72"/>
+			<skill id="208" level="50" name="Владение Луком(Bow Mastery)" cost="2800000" min_level="72"/>
+			<skill id="19" level="35" name="Двойной Выстрел(Double Shot)" cost="2800000" min_level="72"/>
+			<skill id="101" level="38" name="Оглушающий Выстрел(Stun Shot)" cost="2800000" min_level="72"/>
+			<skill id="102" level="15" name="Опутать(Entangle)" cost="2800000" min_level="72"/>
+			<skill id="15" level="50" name="Очарование(Charm)" cost="2800000" min_level="72"/>
+			<skill id="58" level="53" name="Природное Лечение(Elemental Heal)" cost="2800000" min_level="72"/>
+			<skill id="24" level="30" name="Взрывной Выстрел(Burst Shot)" cost="2800000" min_level="73"/>
+			<skill id="233" level="46" name="Владение Легкой Броней(Light Armor Mastery)" cost="2800000" min_level="73"/>
+			<skill id="208" level="51" name="Владение Луком(Bow Mastery)" cost="2800000" min_level="73"/>
+			<skill id="19" level="36" name="Двойной Выстрел(Double Shot)" cost="2800000" min_level="73"/>
+			<skill id="101" level="39" name="Оглушающий Выстрел(Stun Shot)" cost="2800000" min_level="73"/>
+			<skill id="15" level="51" name="Очарование(Charm)" cost="2800000" min_level="73"/>
+			<skill id="58" level="54" name="Природное Лечение(Elemental Heal)" cost="2800000" min_level="73"/>
+			<skill id="413" level="8" name="Беглый Огонь(Rapid Fire)" cost="2800000" min_level="74"/>
+			<skill id="312" level="20" name="Боевая Стойка Коварства(Vicious Stance)" cost="2800000" min_level="74"/>
+			<skill id="171" level="8" name="Боевой Дух(Esprit)" cost="2800000" min_level="74"/>
+			<skill id="24" level="31" name="Взрывной Выстрел(Burst Shot)" cost="2800000" min_level="74"/>
+			<skill id="233" level="47" name="Владение Легкой Броней(Light Armor Mastery)" cost="2800000" min_level="74"/>
+			<skill id="208" level="52" name="Владение Луком(Bow Mastery)" cost="2800000" min_level="74"/>
+			<skill id="19" level="37" name="Двойной Выстрел(Double Shot)" cost="2800000" min_level="74"/>
+			<skill id="101" level="40" name="Оглушающий Выстрел(Stun Shot)" cost="2800000" min_level="74"/>
+			<skill id="102" level="16" name="Опутать(Entangle)" cost="2800000" min_level="74"/>
+			<skill id="15" level="52" name="Очарование(Charm)" cost="2800000" min_level="74"/>
+			<skill id="58" level="55" name="Природное Лечение(Elemental Heal)" cost="2800000" min_level="74"/>
+		</class>
+	</normal_skill_tree>
+</list>

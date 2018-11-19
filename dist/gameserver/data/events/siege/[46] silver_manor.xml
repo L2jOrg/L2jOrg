@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "events.dtd">
+<list>
+	<event id="46" name="Silver Manor" impl="ClanHallAuction">
+		<on_init>
+			<spawn name="clan_hall_npcs"/>
+		</on_init>
+		<objects name="clan_hall_npcs">
+			<spawn name="silver_manor_46"/>
+		</objects>
+	</event>
+</list>

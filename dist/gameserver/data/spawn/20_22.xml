@@ -1,0 +1,2353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<territory name="dion16_2022_10">
+		<add x="16791" y="157256" zmin="-3732" zmax="-2632"/>
+		<add x="16186" y="160651" zmin="-3732" zmax="-2632"/>
+		<add x="13473" y="162095" zmin="-3732" zmax="-2632"/>
+		<add x="13216" y="157313" zmin="-3732" zmax="-2632"/>
+	</territory>
+	<spawn name="dion16_2022_10" count="2" respawn="30">
+		<territory name="dion16_2022_10"/>
+		<npc id="21102"/><!--Смотритель Равнин-->
+	</spawn>
+	<spawn name="dion16_2022_10" count="2" respawn="30">
+		<territory name="dion16_2022_10"/>
+		<npc id="21103"/><!--Черный Голем-->
+	</spawn>
+	<spawn name="dion16_2022_10" count="4" respawn="30">
+		<territory name="dion16_2022_10"/>
+		<npc id="21104"/><!--Снабженец Ящеров Делу-->
+	</spawn>
+	<spawn name="dion16_2022_10" count="2" respawn="30">
+		<territory name="dion16_2022_10"/>
+		<npc id="21105"/><!--Особый Воин Ящеров Делу-->
+	</spawn>
+	<territory name="dion16_2022_11">
+		<add x="18086" y="154007" zmin="-3732" zmax="-2632"/>
+		<add x="16954" y="157055" zmin="-3732" zmax="-2632"/>
+		<add x="13242" y="157209" zmin="-3732" zmax="-2632"/>
+		<add x="12861" y="153593" zmin="-3732" zmax="-2632"/>
+	</territory>
+	<spawn name="dion16_2022_11" count="2" respawn="30">
+		<territory name="dion16_2022_11"/>
+		<npc id="21102"/><!--Смотритель Равнин-->
+	</spawn>
+	<spawn name="dion16_2022_11" count="3" respawn="30">
+		<territory name="dion16_2022_11"/>
+		<npc id="21103"/><!--Черный Голем-->
+	</spawn>
+	<spawn name="dion16_2022_11" count="4" respawn="30">
+		<territory name="dion16_2022_11"/>
+		<npc id="21104"/><!--Снабженец Ящеров Делу-->
+	</spawn>
+	<territory name="dion16_2022_14">
+		<add x="16283" y="161819" zmin="-3843" zmax="-3143"/>
+		<add x="16677" y="163564" zmin="-3843" zmax="-3143"/>
+		<add x="13739" y="163539" zmin="-3843" zmax="-3143"/>
+		<add x="14065" y="162784" zmin="-3843" zmax="-3143"/>
+	</territory>
+	<spawn name="dion16_2022_14" count="2" respawn="30">
+		<territory name="dion16_2022_14"/>
+		<npc id="21103"/><!--Черный Голем-->
+	</spawn>
+	<spawn name="dion16_2022_14" count="3" respawn="30">
+		<territory name="dion16_2022_14"/>
+		<npc id="21104"/><!--Снабженец Ящеров Делу-->
+	</spawn>
+	<territory name="dion16_2022_12">
+		<add x="12751" y="153619" zmin="-3261" zmax="-2061"/>
+		<add x="13189" y="159415" zmin="-3261" zmax="-2061"/>
+		<add x="8434" y="158683" zmin="-3261" zmax="-2061"/>
+		<add x="7582" y="156346" zmin="-3261" zmax="-2061"/>
+		<add x="10132" y="153421" zmin="-3261" zmax="-2061"/>
+	</territory>
+	<spawn name="dion16_2022_12" count="3" respawn="30">
+		<territory name="dion16_2022_12"/>
+		<npc id="21103"/><!--Черный Голем-->
+	</spawn>
+	<spawn name="dion16_2022_12" count="7" respawn="30">
+		<territory name="dion16_2022_12"/>
+		<npc id="21104"/><!--Снабженец Ящеров Делу-->
+	</spawn>
+	<spawn name="dion16_2022_12" count="4" respawn="30">
+		<territory name="dion16_2022_12"/>
+		<npc id="21105"/><!--Особый Воин Ящеров Делу-->
+	</spawn>
+	<spawn name="dion16_2022_12" count="4" respawn="30">
+		<territory name="dion16_2022_12"/>
+		<npc id="21106"/><!--Проклятый Смотритель-->
+	</spawn>
+	<territory name="dion16_2022_13">
+		<add x="8538" y="161948" zmin="-3843" zmax="-3143"/>
+		<add x="12050" y="163548" zmin="-3843" zmax="-3143"/>
+		<add x="6846" y="163534" zmin="-3843" zmax="-3143"/>
+		<add x="5983" y="162252" zmin="-3843" zmax="-3143"/>
+	</territory>
+	<spawn name="dion16_2022_13" count="4" respawn="30">
+		<territory name="dion16_2022_13"/>
+		<npc id="21103"/><!--Черный Голем-->
+	</spawn>
+	<spawn name="dion16_2022_13" count="2" respawn="30">
+		<territory name="dion16_2022_13"/>
+		<npc id="21105"/><!--Особый Воин Ящеров Делу-->
+	</spawn>
+	<territory name="dion16_2022_08">
+		<add x="7448" y="156371" zmin="-3766" zmax="-2666"/>
+		<add x="9109" y="160944" zmin="-3766" zmax="-2666"/>
+		<add x="5419" y="161502" zmin="-3766" zmax="-2666"/>
+		<add x="3906" y="156495" zmin="-3766" zmax="-2666"/>
+	</territory>
+	<spawn name="dion16_2022_08" count="3" respawn="30">
+		<territory name="dion16_2022_08"/>
+		<npc id="21103"/><!--Черный Голем-->
+	</spawn>
+	<spawn name="dion16_2022_08" count="3" respawn="30">
+		<territory name="dion16_2022_08"/>
+		<npc id="21104"/><!--Снабженец Ящеров Делу-->
+	</spawn>
+	<spawn name="dion16_2022_08" count="3" respawn="30">
+		<territory name="dion16_2022_08"/>
+		<npc id="21105"/><!--Особый Воин Ящеров Делу-->
+	</spawn>
+	<spawn name="dion16_2022_08" count="3" respawn="30">
+		<territory name="dion16_2022_08"/>
+		<npc id="21106"/><!--Проклятый Смотритель-->
+	</spawn>
+	<territory name="dion16_2022_05">
+		<add x="17541" y="150840" zmin="-3601" zmax="-2701"/>
+		<add x="18098" y="153880" zmin="-3601" zmax="-2701"/>
+		<add x="12911" y="153484" zmin="-3601" zmax="-2701"/>
+		<add x="13924" y="150542" zmin="-3601" zmax="-2701"/>
+	</territory>
+	<spawn name="dion16_2022_05" count="4" respawn="30">
+		<territory name="dion16_2022_05"/>
+		<npc id="21103"/><!--Черный Голем-->
+	</spawn>
+	<spawn name="dion16_2022_05" count="2" respawn="30">
+		<territory name="dion16_2022_05"/>
+		<npc id="21104"/><!--Снабженец Ящеров Делу-->
+	</spawn>
+	<territory name="dion16_2022_09">
+		<add x="13163" y="159551" zmin="-3732" zmax="-2632"/>
+		<add x="13108" y="162755" zmin="-3732" zmax="-2632"/>
+		<add x="9373" y="161171" zmin="-3732" zmax="-2632"/>
+		<add x="8465" y="158834" zmin="-3732" zmax="-2632"/>
+	</territory>
+	<spawn name="dion16_2022_09" count="4" respawn="30">
+		<territory name="dion16_2022_09"/>
+		<npc id="21102"/><!--Смотритель Равнин-->
+	</spawn>
+	<spawn name="dion16_2022_09" count="3" respawn="30">
+		<territory name="dion16_2022_09"/>
+		<npc id="21104"/><!--Снабженец Ящеров Делу-->
+	</spawn>
+	<spawn name="dion16_2022_09" count="2" respawn="30">
+		<territory name="dion16_2022_09"/>
+		<npc id="21105"/><!--Особый Воин Ящеров Делу-->
+	</spawn>
+	<territory name="dion16_2022_01">
+		<add x="16628" y="148700" zmin="-3454" zmax="-2254"/>
+		<add x="11917" y="149195" zmin="-3454" zmax="-2254"/>
+		<add x="11036" y="145234" zmin="-3454" zmax="-2254"/>
+		<add x="13279" y="144929" zmin="-3454" zmax="-2254"/>
+	</territory>
+	<spawn name="dion16_2022_01" count="2" respawn="30">
+		<territory name="dion16_2022_01"/>
+		<npc id="21102"/><!--Смотритель Равнин-->
+	</spawn>
+	<spawn name="dion16_2022_01" count="2" respawn="30">
+		<territory name="dion16_2022_01"/>
+		<npc id="21103"/><!--Черный Голем-->
+	</spawn>
+	<spawn name="dion16_2022_01" count="2" respawn="30">
+		<territory name="dion16_2022_01"/>
+		<npc id="21104"/><!--Снабженец Ящеров Делу-->
+	</spawn>
+	<spawn name="dion11_npc2022_14" count="1" respawn="60" group="dion_castle_2">
+		<point x="21595" y="160208" z="-2877" h="0"/>
+		<npc id="35140"/><!--Кузнец-->
+	</spawn>
+	<spawn name="dion11_npc2022_15" count="1" respawn="60" group="dion_castle_2">
+		<point x="22110" y="159744" z="-2856" h="16384"/>
+		<npc id="35141"/><!--Рабочий Склада-->
+	</spawn>
+	<spawn name="dion11_npc2022_16" count="1" respawn="60" group="dion_castle_2">
+		<point x="21912" y="161608" z="-2226" h="0"/>
+		<npc id="35143"/><!--Ходлер-->
+	</spawn>
+	<spawn name="dion11_npc2022_17" count="1" respawn="60">
+		<point x="21836" y="160806" z="-2679" h="49152"/>
+		<npc id="35144"/><!--Салфорд Управляющий Наемниками-->
+	</spawn>
+	<spawn name="dion09_npc2022_001" count="1" respawn="60">
+		<point x="19712" y="143307" z="-3024" h="47152"/>
+		<npc id="30595"/><!--Опикс-->
+	</spawn>
+	<spawn name="dion09_npc2022_012" count="1" respawn="60" group="the_viridian_barracks_33">
+		<point x="19996" y="146216" z="-3112" h="57344"/>
+		<npc id="35407"/><!--Сет-->
+	</spawn>
+	<spawn name="dion09_npc2022_011" count="1" respawn="60">
+		<point x="19041" y="145964" z="-3064" h="8192"/>
+		<npc id="30608"/><!--Мария-->
+	</spawn>
+	<spawn name="dion09_npc2022_010" count="1" respawn="60">
+		<point x="20609" y="145993" z="-3120" h="49152"/>
+		<npc id="30620"/><!--Эмили-->
+	</spawn>
+	<spawn name="dion09_npc2022_009" count="1" respawn="60">
+		<point x="20983" y="143844" z="-3072" h="4096"/>
+		<npc id="30625"/><!--Мэйсон-->
+	</spawn>
+	<spawn name="dion09_npc2022_008" count="1" respawn="60">
+		<point x="16680" y="142368" z="-2688" h="32768"/>
+		<npc id="30629"/><!--Рукал-->
+	</spawn>
+	<spawn name="dion09_npc2022_007" count="1" respawn="60">
+		<point x="17220" y="146554" z="-3080" h="12288"/>
+		<npc id="30654"/><!--Сэр Кайль Ночной Ястреб-->
+	</spawn>
+	<spawn name="dion09_npc2022_006" count="1" respawn="60">
+		<point x="19831" y="144514" z="-3096" h="0"/>
+		<npc id="30644"/><!--Кэш-->
+	</spawn>
+	<spawn name="dion09_npc2022_004" count="1" respawn="60">
+		<point x="15795" y="142347" z="-2680" h="2365"/>
+		<npc id="30070"/><!--Сильвиан-->
+	</spawn>
+	<spawn name="dion09_npc2022_003" count="1" respawn="60">
+		<point x="16269" y="142461" z="-2688" h="48400"/>
+		<npc id="30067"/><!--Гливка-->
+	</spawn>
+	<spawn name="dion09_npc2022_003" count="1" respawn="60">
+		<point x="16456" y="142447" z="-2688" h="48400"/>
+		<npc id="30068"/><!--Шегфилд-->
+	</spawn>
+	<spawn name="dion09_npc2022_003" count="1" respawn="60">
+		<point x="16427" y="142131" z="-2688" h="15600"/>
+		<npc id="30461"/><!--Мириен-->
+	</spawn>
+	<spawn name="dion09_npc2022_003" count="1" respawn="60">
+		<point x="16236" y="142153" z="-2688" h="15600"/>
+		<npc id="30069"/><!--Роллант-->
+	</spawn>
+	<spawn name="dion09_npc2022_002" count="1" respawn="60">
+		<point x="21017" y="144481" z="-3064" h="32768"/>
+		<npc id="30594"/><!--Ранспо-->
+	</spawn>
+	<spawn name="dion09_npc2022_023" count="1" respawn="60">
+		<point x="17025" y="146070" z="-3080" h="35523"/>
+		<npc id="30956"/><!--Нанарин-->
+	</spawn>
+	<spawn name="dion09_npc2022_020" count="1" respawn="60">
+		<point x="19079" y="145762" z="-3080" h="49152"/>
+		<npc id="30737"/><!--Морган-->
+	</spawn>
+	<spawn name="dion09_npc2022_019" count="1" respawn="60">
+		<point x="16955" y="146303" z="-3104" h="28672"/>
+		<npc id="30736"/><!--Редфут-->
+	</spawn>
+	<spawn name="dion09_npc2022_018" count="1" respawn="60">
+		<point x="19264" y="144672" z="-3096" h="32768"/>
+		<npc id="30735"/><!--София-->
+	</spawn>
+	<spawn name="dion09_npc2022_017" count="1" respawn="60" group="the_scatlet_barracks_32">
+		<point x="18928" y="143391" z="-3024" h="0"/>
+		<npc id="35404"/><!--Джамал-->
+	</spawn>
+	<spawn name="dion09_npc2022_016" count="1" respawn="60" group="the_scatlet_barracks_32">
+		<point x="18634" y="143342" z="-3008" h="64500"/>
+		<npc id="35405"/><!--Флинн-->
+	</spawn>
+	<spawn name="dion09_npc2022_015" count="1" respawn="60" group="the_atramental_barracks_31">
+		<point x="17677" y="145282" z="-3048" h="22500"/>
+		<npc id="35402"/><!--Борна-->
+	</spawn>
+	<spawn name="dion09_npc2022_014" count="1" respawn="60" group="the_atramental_barracks_31">
+		<point x="17621" y="144920" z="-3032" h="12288"/>
+		<npc id="35403"/><!--Рон-->
+	</spawn>
+	<spawn name="dion09_npc2022_013" count="1" respawn="60" group="the_viridian_barracks_33">
+		<point x="20237" y="145941" z="-3120" h="49152"/>
+		<npc id="35406"/><!--Джабило-->
+	</spawn>
+	<spawn name="dion09_npc2022_033" count="1" respawn="60">
+		<point x="19932" y="143232" z="-3040" h="63000"/>
+		<npc id="30508"/><!--Сионал-->
+	</spawn>
+	<spawn name="dion09_npc2022_033" count="1" respawn="60">
+		<point x="19924" y="143196" z="-3040" h="63000"/>
+		<npc id="30510"/><!--Сомак-->
+	</spawn>
+	<spawn name="dion09_npc2022_033" count="1" respawn="60">
+		<point x="20040" y="143308" z="-3047" h="63000"/>
+		<npc id="30509"/><!--Доки-->
+	</spawn>
+	<spawn name="dion09_npc2022_033" count="1" respawn="60">
+		<point x="20000" y="143108" z="-3040" h="63000"/>
+		<npc id="30642"/><!--Чианта-->
+	</spawn>
+	<spawn name="dion09_npc2022_027" count="1" respawn="60">
+		<point x="21025" y="144931" z="-3064" h="40960"/>
+		<npc id="30960"/><!--Ящик Пива-->
+	</spawn>
+	<spawn name="dion09_npc2022_026" count="1" respawn="60">
+		<point x="19505" y="146220" z="-3064" h="42568"/>
+		<npc id="31048"/><!--МакДемотт-->
+	</spawn>
+	<spawn name="dion09_npc2022_026" count="1" respawn="60">
+		<point x="19490" y="145930" z="-3064" h="0"/>
+		<npc id="30961"/><!--Сундук с Одеждой-->
+	</spawn>
+	<spawn name="dion09_npc2022_026" count="1" respawn="60">
+		<point x="19034" y="146249" z="-3064" h="55264"/>
+		<npc id="31043"/><!--Октавия-->
+	</spawn>
+	<spawn name="dion09_npc2022_025" count="1" respawn="60">
+		<point x="20175" y="145480" z="-3112" h="16384"/>
+		<npc id="30959"/><!--Барбадо-->
+	</spawn>
+	<spawn name="dion09_npc2022_024" count="1" respawn="60">
+		<point x="18378" y="145052" z="-3072" h="64312"/>
+		<npc id="30957"/><!--Свен-->
+	</spawn>
+	<spawn name="dion09_npc2022_045" count="1" respawn="60">
+		<point x="19313" y="146229" z="-3064" h="49152"/>
+		<npc id="30062"/><!--Соня-->
+	</spawn>
+	<spawn name="dion09_npc2022_045" count="1" respawn="60">
+		<point x="19223" y="146228" z="-3064" h="49152"/>
+		<npc id="30063"/><!--Ларс-->
+	</spawn>
+	<spawn name="dion09_npc2022_044" count="1" respawn="60">
+		<point x="19708" y="144780" z="-3088" h="40960"/>
+		<npc id="30064"/><!--Терри-->
+	</spawn>
+	<spawn name="dion09_npc2022_044" count="1" respawn="60">
+		<point x="19516" y="144772" z="-3088" h="49152"/>
+		<npc id="30066"/><!--Пабрис-->
+	</spawn>
+	<spawn name="dion09_npc2022_044" count="1" respawn="60">
+		<point x="19696" y="144336" z="-3088" h="24576"/>
+		<npc id="30459"/><!--Вандиус-->
+	</spawn>
+	<spawn name="dion09_npc2022_044" count="1" respawn="60">
+		<point x="19725" y="144567" z="-3088" h="32768"/>
+		<npc id="30065"/><!--Арнель-->
+	</spawn>
+	<spawn name="dion09_npc2022_044" count="1" respawn="60">
+		<point x="19472" y="144334" z="-3088" h="8192"/>
+		<npc id="30460"/><!--Кардиен-->
+	</spawn>
+	<spawn name="dion09_npc2022_043" count="1" respawn="60">
+		<point x="20777" y="144971" z="-3064" h="53248"/>
+		<npc id="30057"/><!--Альдо-->
+	</spawn>
+	<spawn name="dion09_npc2022_043" count="1" respawn="60">
+		<point x="20750" y="144432" z="-3064" h="8192"/>
+		<npc id="30058"/><!--Хольвас-->
+	</spawn>
+	<spawn name="dion09_npc2022_043" count="1" respawn="60">
+		<point x="21040" y="144608" z="-3064" h="32768"/>
+		<npc id="30469"/><!--Джонас-->
+	</spawn>
+	<spawn name="dion09_npc2022_042" count="1" respawn="60">
+		<point x="18853" y="145939" z="-3072" h="49152"/>
+		<npc id="30767"><!--Управляющий Аукциона-->
+			<set name="town" value="dion"/>
+		</npc>
+	</spawn>
+	<spawn name="dion09_npc2022_055" count="1" respawn="60">
+		<point x="17282" y="147500" z="-3120" h="20480"/>
+		<npc id="30071"/><!--Лукас-->
+	</spawn>
+	<spawn name="dion09_npc2022_054" count="1" respawn="60">
+		<point x="19737" y="143122" z="-3024" h="29500"/>
+		<npc id="30458"/><!--Пойтан-->
+	</spawn>
+	<spawn name="dion09_npc2022_053" count="1" respawn="60">
+		<point x="15757" y="144638" z="-3056" h="36864"/>
+		<npc id="30073"/><!--Якоб-->
+	</spawn>
+	<spawn name="dion09_npc2022_052" count="1" respawn="60">
+		<point x="16937" y="144041" z="-3008" h="36864"/>
+		<npc id="30074"/><!--Харлан-->
+	</spawn>
+	<spawn name="dion09_npc2022_051" count="1" respawn="60">
+		<point x="18813" y="142439" z="-3048" h="47500"/>
+		<npc id="30075"/><!--Ксабер-->
+	</spawn>
+	<spawn name="dion09_npc2022_051" count="1" respawn="60">
+		<point x="19044" y="142392" z="-3048" h="47500"/>
+		<npc id="30076"/><!--Лиам-->
+	</spawn>
+	<spawn name="dion09_npc2022_050" count="1" respawn="60">
+		<point x="21491" y="145968" z="-3152" h="0"/>
+		<npc id="30466"/><!--Брайт-->
+	</spawn>
+	<spawn name="dion09_npc2022_050" count="1" respawn="60">
+		<point x="21495" y="145728" z="-3144" h="0"/>
+		<npc id="30465"/><!--Хервен-->
+	</spawn>
+	<spawn name="dion09_npc2022_049" count="1" respawn="60">
+		<point x="17503" y="147575" z="-3120" h="20480"/>
+		<npc id="30072"/><!--Метти-->
+	</spawn>
+	<spawn name="dion09_npc2022_048" count="1" respawn="60">
+		<point x="15631" y="142885" z="-2696" h="16000"/>
+		<npc id="30059"/><!--Триша-->
+	</spawn>
+	<spawn name="dion09_npc2022_047" count="1" respawn="60">
+		<point x="17384" y="146605" z="-3080" h="28672"/>
+		<npc id="30463"/><!--Иксия-->
+	</spawn>
+	<spawn name="dion09_npc2022_047" count="1" respawn="60">
+		<point x="17280" y="146944" z="-3080" h="45056"/>
+		<npc id="30464"/><!--Клейтон-->
+	</spawn>
+	<spawn name="dion09_npc2022_047" count="1" respawn="60">
+		<point x="17168" y="146720" z="-3080" h="2500"/>
+		<npc id="30462"/><!--Троникс-->
+	</spawn>
+	<spawn name="dion09_npc2022_046" count="1" respawn="60">
+		<point x="17999" y="144484" z="-3040" h="6000"/>
+		<npc id="30060"/><!--Сабрин-->
+	</spawn>
+	<spawn name="dion09_npc2022_046" count="1" respawn="60">
+		<point x="17948" y="144560" z="-3040" h="6000"/>
+		<npc id="30061"/><!--Кейси-->
+	</spawn>
+	<territory name="dion15_2022_04">
+		<add x="16474" y="135234" zmin="-3592" zmax="-2792"/>
+		<add x="18828" y="136392" zmin="-3592" zmax="-2792"/>
+		<add x="17333" y="139303" zmin="-3592" zmax="-2792"/>
+		<add x="15032" y="136062" zmin="-3592" zmax="-2792"/>
+	</territory>
+	<spawn name="dion15_2022_04" count="3" respawn="24">
+		<territory name="dion15_2022_04"/>
+		<npc id="20292"/><!--Шаман Орков Энку-->
+	</spawn>
+	<spawn name="dion15_2022_04" count="2" respawn="24">
+		<territory name="dion15_2022_04"/>
+		<npc id="20291"/><!--Герой Орков Энку-->
+	</spawn>
+	<spawn name="dion15_2022_04" count="2" respawn="24">
+		<territory name="dion15_2022_04"/>
+		<npc id="20224"/><!--Рейнджер Гноллов-->
+	</spawn>
+	<territory name="dion15_2022_05">
+		<add x="18835" y="136795" zmin="-3715" zmax="-2915"/>
+		<add x="21989" y="137845" zmin="-3715" zmax="-2915"/>
+		<add x="22021" y="139966" zmin="-3715" zmax="-2915"/>
+		<add x="19414" y="140687" zmin="-3715" zmax="-2915"/>
+		<add x="17408" y="139360" zmin="-3715" zmax="-2915"/>
+	</territory>
+	<spawn name="dion15_2022_05" count="2" respawn="24">
+		<territory name="dion15_2022_05"/>
+		<npc id="20224"/><!--Рейнджер Гноллов-->
+	</spawn>
+	<spawn name="dion15_2022_05" count="4" respawn="24">
+		<territory name="dion15_2022_05"/>
+		<npc id="20265"/><!--Монстроглаз Искатель-->
+	</spawn>
+	<spawn name="dion15_2022_05" count="4" respawn="24">
+		<territory name="dion15_2022_05"/>
+		<npc id="20062"/><!--Людоед Тумран-->
+	</spawn>
+	<territory name="dion15_2022_02">
+		<add x="13682" y="136736" zmin="-3388" zmax="-2588"/>
+		<add x="15340" y="139187" zmin="-3388" zmax="-2588"/>
+		<add x="13616" y="139897" zmin="-3388" zmax="-2588"/>
+		<add x="11384" y="138012" zmin="-3388" zmax="-2588"/>
+	</territory>
+	<spawn name="dion15_2022_02" count="5" respawn="24">
+		<territory name="dion15_2022_02"/>
+		<npc id="20292"/><!--Шаман Орков Энку-->
+	</spawn>
+	<spawn name="dion15_2022_02" count="2" respawn="24">
+		<territory name="dion15_2022_02"/>
+		<npc id="20291"/><!--Герой Орков Энку-->
+	</spawn>
+	<territory name="dion15_2022_03">
+		<add x="13475" y="134128" zmin="-3533" zmax="-2733"/>
+		<add x="16244" y="135212" zmin="-3533" zmax="-2733"/>
+		<add x="14275" y="136432" zmin="-3533" zmax="-2733"/>
+		<add x="11565" y="134356" zmin="-3533" zmax="-2733"/>
+	</territory>
+	<spawn name="dion15_2022_03" count="2" respawn="24">
+		<territory name="dion15_2022_03"/>
+		<npc id="20292"/><!--Шаман Орков Энку-->
+	</spawn>
+	<spawn name="dion15_2022_03" count="2" respawn="24">
+		<territory name="dion15_2022_03"/>
+		<npc id="20291"/><!--Герой Орков Энку-->
+	</spawn>
+	<spawn name="dion15_2022_03" count="1" respawn="24">
+		<territory name="dion15_2022_03"/>
+		<npc id="20224"/><!--Рейнджер Гноллов-->
+	</spawn>
+	<territory name="dion15_2022_01">
+		<add x="11433" y="134370" zmin="-3358" zmax="-2558"/>
+		<add x="13606" y="136693" zmin="-3358" zmax="-2558"/>
+		<add x="11324" y="137929" zmin="-3358" zmax="-2558"/>
+		<add x="9326" y="136305" zmin="-3358" zmax="-2558"/>
+	</territory>
+	<spawn name="dion15_2022_01" count="4" respawn="24">
+		<territory name="dion15_2022_01"/>
+		<npc id="20292"/><!--Шаман Орков Энку-->
+	</spawn>
+	<spawn name="dion15_2022_01" count="3" respawn="24">
+		<territory name="dion15_2022_01"/>
+		<npc id="20291"/><!--Герой Орков Энку-->
+	</spawn>
+	<territory name="dion15_2022_08">
+		<add x="29087" y="134594" zmin="-3237" zmax="-2537"/>
+		<add x="31029" y="133256" zmin="-3237" zmax="-2537"/>
+		<add x="32066" y="133765" zmin="-3237" zmax="-2537"/>
+		<add x="30590" y="136240" zmin="-3237" zmax="-2537"/>
+	</territory>
+	<spawn name="dion15_2022_08" count="2" respawn="24">
+		<territory name="dion15_2022_08"/>
+		<npc id="20062"/><!--Людоед Тумран-->
+	</spawn>
+	<spawn name="dion15_2022_08" count="3" respawn="24">
+		<territory name="dion15_2022_08"/>
+		<npc id="20205"/><!--Жуткий Волк-->
+	</spawn>
+	<territory name="dion15_2022_09">
+		<add x="30475" y="137105" zmin="-3280" zmax="-2680"/>
+		<add x="32576" y="134728" zmin="-3280" zmax="-2680"/>
+		<add x="32484" y="139815" zmin="-3280" zmax="-2680"/>
+		<add x="31555" y="139893" zmin="-3280" zmax="-2680"/>
+	</territory>
+	<spawn name="dion15_2022_09" count="3" respawn="24">
+		<territory name="dion15_2022_09"/>
+		<npc id="20062"/><!--Людоед Тумран-->
+	</spawn>
+	<spawn name="dion15_2022_09" count="4" respawn="24">
+		<territory name="dion15_2022_09"/>
+		<npc id="20205"/><!--Жуткий Волк-->
+	</spawn>
+	<territory name="dion15_2022_06">
+		<add x="22085" y="137808" zmin="-3715" zmax="-2715"/>
+		<add x="24152" y="135445" zmin="-3715" zmax="-2715"/>
+		<add x="26151" y="136730" zmin="-3715" zmax="-2715"/>
+		<add x="22161" y="139904" zmin="-3715" zmax="-2715"/>
+	</territory>
+	<spawn name="dion15_2022_06" count="4" respawn="24">
+		<territory name="dion15_2022_06"/>
+		<npc id="20265"/><!--Монстроглаз Искатель-->
+	</spawn>
+	<spawn name="dion15_2022_06" count="4" respawn="24">
+		<territory name="dion15_2022_06"/>
+		<npc id="20062"/><!--Людоед Тумран-->
+	</spawn>
+	<territory name="dion15_2022_07">
+		<add x="25435" y="135929" zmin="-3289" zmax="-2489"/>
+		<add x="29046" y="134625" zmin="-3289" zmax="-2489"/>
+		<add x="30512" y="136326" zmin="-3289" zmax="-2489"/>
+		<add x="26279" y="136646" zmin="-3289" zmax="-2489"/>
+	</territory>
+	<spawn name="dion15_2022_07" count="3" respawn="24">
+		<territory name="dion15_2022_07"/>
+		<npc id="20062"/><!--Людоед Тумран-->
+	</spawn>
+	<spawn name="dion15_2022_07" count="4" respawn="24">
+		<territory name="dion15_2022_07"/>
+		<npc id="20205"/><!--Жуткий Волк-->
+	</spawn>
+	<territory name="dion15_2022_20">
+		<add x="30750" y="157297" zmin="-3246" zmax="-2446"/>
+		<add x="27076" y="154608" zmin="-3246" zmax="-2446"/>
+		<add x="27873" y="151778" zmin="-3246" zmax="-2446"/>
+		<add x="31918" y="152428" zmin="-3246" zmax="-2446"/>
+	</territory>
+	<spawn name="dion15_2022_20" count="6" respawn="24">
+		<territory name="dion15_2022_20"/>
+		<npc id="20205"/><!--Жуткий Волк-->
+	</spawn>
+	<spawn name="dion15_2022_20" count="9" respawn="24">
+		<territory name="dion15_2022_20"/>
+		<npc id="20266"/><!--Монстроглаз Надзиратель-->
+	</spawn>
+	<territory name="dion15_2022_15">
+		<add x="22160" y="143428" zmin="-3466" zmax="-2666"/>
+		<add x="24808" y="142152" zmin="-3466" zmax="-2666"/>
+		<add x="24266" y="145855" zmin="-3466" zmax="-2666"/>
+		<add x="22707" y="145732" zmin="-3466" zmax="-2666"/>
+	</territory>
+	<spawn name="dion15_2022_15" count="4" respawn="24">
+		<territory name="dion15_2022_15"/>
+		<npc id="20203"/><!--Гризли Диона-->
+	</spawn>
+	<spawn name="dion15_2022_15" count="3" respawn="24">
+		<territory name="dion15_2022_15"/>
+		<npc id="20291"/><!--Герой Орков Энку-->
+	</spawn>
+	<spawn name="dion15_2022_15" count="1" respawn="24">
+		<territory name="dion15_2022_15"/>
+		<npc id="20224"/><!--Рейнджер Гноллов-->
+	</spawn>
+	<territory name="dion15_2022_16">
+		<add x="21684" y="141553" zmin="-3531" zmax="-2731"/>
+		<add x="23675" y="139994" zmin="-3531" zmax="-2731"/>
+		<add x="24787" y="142103" zmin="-3531" zmax="-2731"/>
+		<add x="22162" y="143372" zmin="-3531" zmax="-2731"/>
+	</territory>
+	<spawn name="dion15_2022_16" count="4" respawn="24">
+		<territory name="dion15_2022_16"/>
+		<npc id="20203"/><!--Гризли Диона-->
+	</spawn>
+	<spawn name="dion15_2022_16" count="3" respawn="24">
+		<territory name="dion15_2022_16"/>
+		<npc id="20147"/><!--Хобгоблин-->
+	</spawn>
+	<territory name="dion15_2022_13">
+		<add x="23686" y="139933" zmin="-3520" zmax="-2520"/>
+		<add x="27090" y="137383" zmin="-3520" zmax="-2520"/>
+		<add x="28161" y="141106" zmin="-3520" zmax="-2520"/>
+		<add x="24884" y="142077" zmin="-3520" zmax="-2520"/>
+	</territory>
+	<spawn name="dion15_2022_13" count="5" respawn="24">
+		<territory name="dion15_2022_13"/>
+		<npc id="20291"/><!--Герой Орков Энку-->
+	</spawn>
+	<spawn name="dion15_2022_13" count="5" respawn="24">
+		<territory name="dion15_2022_13"/>
+		<npc id="20265"/><!--Монстроглаз Искатель-->
+	</spawn>
+	<territory name="dion15_2022_14">
+		<add x="24887" y="142179" zmin="-3520" zmax="-2520"/>
+		<add x="28159" y="141174" zmin="-3520" zmax="-2520"/>
+		<add x="27872" y="144883" zmin="-3520" zmax="-2520"/>
+		<add x="24318" y="145875" zmin="-3520" zmax="-2520"/>
+	</territory>
+	<spawn name="dion15_2022_14" count="2" respawn="24">
+		<territory name="dion15_2022_14"/>
+		<npc id="20224"/><!--Рейнджер Гноллов-->
+	</spawn>
+	<spawn name="dion15_2022_14" count="6" respawn="24">
+		<territory name="dion15_2022_14"/>
+		<npc id="20062"/><!--Людоед Тумран-->
+	</spawn>
+	<territory name="dion15_2022_11">
+		<add x="28269" y="141141" zmin="-3335" zmax="-2535"/>
+		<add x="31458" y="139969" zmin="-3335" zmax="-2535"/>
+		<add x="30500" y="143533" zmin="-3335" zmax="-2535"/>
+		<add x="27985" y="144857" zmin="-3335" zmax="-2535"/>
+	</territory>
+	<spawn name="dion15_2022_11" count="4" respawn="24">
+		<territory name="dion15_2022_11"/>
+		<npc id="20062"/><!--Людоед Тумран-->
+	</spawn>
+	<spawn name="dion15_2022_11" count="4" respawn="24">
+		<territory name="dion15_2022_11"/>
+		<npc id="20205"/><!--Жуткий Волк-->
+	</spawn>
+	<territory name="dion15_2022_12">
+		<add x="27233" y="137465" zmin="-3335" zmax="-2635"/>
+		<add x="30407" y="137097" zmin="-3335" zmax="-2635"/>
+		<add x="31479" y="139940" zmin="-3335" zmax="-2635"/>
+		<add x="28216" y="141043" zmin="-3335" zmax="-2635"/>
+	</territory>
+	<spawn name="dion15_2022_12" count="4" respawn="24">
+		<territory name="dion15_2022_12"/>
+		<npc id="20062"/><!--Людоед Тумран-->
+	</spawn>
+	<spawn name="dion15_2022_12" count="4" respawn="24">
+		<territory name="dion15_2022_12"/>
+		<npc id="20205"/><!--Жуткий Волк-->
+	</spawn>
+	<territory name="dion15_2022_10">
+		<add x="31537" y="139996" zmin="-3335" zmax="-2835"/>
+		<add x="32502" y="139884" zmin="-3335" zmax="-2835"/>
+		<add x="32520" y="143531" zmin="-3335" zmax="-2835"/>
+		<add x="30580" y="143553" zmin="-3335" zmax="-2835"/>
+	</territory>
+	<spawn name="dion15_2022_10" count="2" respawn="24">
+		<territory name="dion15_2022_10"/>
+		<npc id="20205"/><!--Жуткий Волк-->
+	</spawn>
+	<spawn name="dion15_2022_10" count="5" respawn="24">
+		<territory name="dion15_2022_10"/>
+		<npc id="20266"/><!--Монстроглаз Надзиратель-->
+	</spawn>
+	<territory name="dion15_2022_19">
+		<add x="26574" y="155654" zmin="-3334" zmax="-2534"/>
+		<add x="20812" y="149386" zmin="-3334" zmax="-2534"/>
+		<add x="26556" y="149717" zmin="-3334" zmax="-2534"/>
+		<add x="27751" y="151791" zmin="-3334" zmax="-2534"/>
+	</territory>
+	<spawn name="dion15_2022_19" count="8" respawn="24">
+		<territory name="dion15_2022_19"/>
+		<npc id="20062"/><!--Людоед Тумран-->
+	</spawn>
+	<spawn name="dion15_2022_19" count="7" respawn="24">
+		<territory name="dion15_2022_19"/>
+		<npc id="20205"/><!--Жуткий Волк-->
+	</spawn>
+	<territory name="dion15_2022_17">
+		<add x="18320" y="148268" zmin="-3531" zmax="-2731"/>
+		<add x="19491" y="146777" zmin="-3531" zmax="-2731"/>
+		<add x="21960" y="147275" zmin="-3531" zmax="-2731"/>
+		<add x="19135" y="149598" zmin="-3531" zmax="-2731"/>
+	</territory>
+	<spawn name="dion15_2022_17" count="1" respawn="24">
+		<territory name="dion15_2022_17"/>
+		<npc id="20203"/><!--Гризли Диона-->
+	</spawn>
+	<spawn name="dion15_2022_17" count="2" respawn="24">
+		<territory name="dion15_2022_17"/>
+		<npc id="20147"/><!--Хобгоблин-->
+	</spawn>
+	<spawn name="dion15_2022_17" count="2" respawn="24">
+		<territory name="dion15_2022_17"/>
+		<npc id="20224"/><!--Рейнджер Гноллов-->
+	</spawn>
+	<territory name="dion15_2022_18">
+		<add x="20490" y="149104" zmin="-3450" zmax="-2450"/>
+		<add x="22566" y="146716" zmin="-3450" zmax="-2450"/>
+		<add x="27676" y="146173" zmin="-3450" zmax="-2450"/>
+		<add x="25976" y="149544" zmin="-3450" zmax="-2450"/>
+	</territory>
+	<spawn name="dion15_2022_18" count="4" respawn="24">
+		<territory name="dion15_2022_18"/>
+		<npc id="20224"/><!--Рейнджер Гноллов-->
+	</spawn>
+	<spawn name="dion15_2022_18" count="5" respawn="24">
+		<territory name="dion15_2022_18"/>
+		<npc id="20265"/><!--Монстроглаз Искатель-->
+	</spawn>
+	<spawn name="dion15_2022_18" count="6" respawn="24">
+		<territory name="dion15_2022_18"/>
+		<npc id="20062"/><!--Людоед Тумран-->
+	</spawn>
+	<spawn name="dion09_npc2022_premium01" count="1" respawn="60" group="vitamin_manager">
+		<point x="20560" y="144788" z="-3080" h="33000"/>
+		<npc id="32478"/><!--Менеджер Витаминов-->
+	</spawn>
+	<spawn name="dion16_npc2023_09" count="1" respawn="60">
+		<point x="10133" y="157155" z="-2383" h="0"/>
+		<npc id="30627"/><!--Дерево-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18890" y="145933" z="-3072" h="49152"/>
+		<npc id="33359"/><!--Кери-->
+	</spawn>
+	<spawn group="dion_castle_mass_gatekeeper" count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20492" y="160363" z="-1978" h="0"/>
+		<npc id="35137"/><!--Mass Gatekeeper-->
+	</spawn>
+	<spawn group="dion_castle_siege_artefact" count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22073" y="161778" z="-2674" h="49152"/>
+		<npc id="35105"/><!--Holy Artefact-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22084" y="156570" z="-2576" h="0"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22084" y="156502" z="-2576" h="0"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22066" y="156434" z="-2576" h="57344"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22034" y="156410" z="-2576" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="21997" y="156410" z="-2576" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="21960" y="156410" z="-2576" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="21922" y="156410" z="-2576" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22540" y="156570" z="-2576" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22540" y="156498" z="-2576" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22560" y="156432" z="-2576" h="40960"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22592" y="156405" z="-2576" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22629" y="156405" z="-2576" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22665" y="156405" z="-2576" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22700" y="156405" z="-2576" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22084" y="156536" z="-2576" h="0"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22084" y="156470" z="-2576" h="0"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22540" y="156533" z="-2576" h="32768"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22540" y="156464" z="-2576" h="32768"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22020" y="156475" z="-2576" h="57344"/>
+		<npc id="35123"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22599" y="156480" z="-2576" h="40960"/>
+		<npc id="35123"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22064" y="156579" z="-2567" h="0"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22064" y="156467" z="-2567" h="0"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22017" y="156408" z="-2567" h="57344"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="21950" y="156394" z="-2567" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22549" y="156540" z="-2567" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22548" y="156460" z="-2567" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22594" y="156403" z="-2567" h="40960"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22666" y="156391" z="-2567" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22549" y="156499" z="-2566" h="32768"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22560" y="156428" z="-2566" h="40960"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22054" y="156431" z="-2566" h="57344"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22064" y="156515" z="-2567" h="0"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="22648" y="156430" z="-2567" h="40960"/>
+		<npc id="35123"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege08" count="1" respawn="10800">
+		<point x="21958" y="156438" z="-2567" h="57344"/>
+		<npc id="35123"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="22136" y="158330" z="-2694" h="49152"/>
+		<npc id="35114"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="22008" y="158330" z="-2694" h="49152"/>
+		<npc id="35114"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="21945" y="158330" z="-2694" h="49152"/>
+		<npc id="35114"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="22200" y="158330" z="-2694" h="49152"/>
+		<npc id="35114"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="22331" y="158330" z="-2694" h="49152"/>
+		<npc id="35114"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="22459" y="158330" z="-2694" h="49152"/>
+		<npc id="35114"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="21817" y="158330" z="-2694" h="49152"/>
+		<npc id="35114"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="21688" y="158330" z="-2694" h="49152"/>
+		<npc id="35114"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="22264" y="158330" z="-2694" h="49152"/>
+		<npc id="35109"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="21881" y="158330" z="-2694" h="49152"/>
+		<npc id="35109"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="21624" y="158330" z="-2694" h="49152"/>
+		<npc id="35109"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="22523" y="158330" z="-2694" h="49152"/>
+		<npc id="35109"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="22072" y="158330" z="-2694" h="49152"/>
+		<npc id="35110"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="21753" y="158330" z="-2694" h="49152"/>
+		<npc id="35110"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="22395" y="158330" z="-2694" h="49152"/>
+		<npc id="35110"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="22520" y="158180" z="-2694" h="49152"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="22456" y="158180" z="-2694" h="49152"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="21624" y="158180" z="-2694" h="49152"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="21688" y="158180" z="-2694" h="49152"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="22072" y="158180" z="-2694" h="49152"/>
+		<npc id="35108"/><!--Рыцарь Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="22392" y="158180" z="-2694" h="49152"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="22328" y="158180" z="-2694" h="49152"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="22264" y="158180" z="-2694" h="49152"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="22200" y="158180" z="-2694" h="49152"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="22136" y="158180" z="-2694" h="49152"/>
+		<npc id="35108"/><!--Рыцарь Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="22009" y="158180" z="-2694" h="49152"/>
+		<npc id="35108"/><!--Рыцарь Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="21945" y="158180" z="-2694" h="49152"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="21881" y="158180" z="-2694" h="49152"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="21817" y="158180" z="-2694" h="49152"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege09" count="1" respawn="10800">
+		<point x="21753" y="158180" z="-2694" h="49152"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege06" count="1" respawn="10800">
+		<point x="21559" y="160580" z="-2527" h="48856"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege06" count="1" respawn="10800">
+		<point x="21585" y="160580" z="-2527" h="48856"/>
+		<npc id="35121"/><!--Рыцарь Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege06" count="1" respawn="10800">
+		<point x="21613" y="160580" z="-2526" h="48856"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege06" count="1" respawn="10800">
+		<point x="21559" y="160602" z="-2531" h="48856"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege06" count="1" respawn="10800">
+		<point x="21586" y="160602" z="-2531" h="48856"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege06" count="1" respawn="10800">
+		<point x="21613" y="160602" z="-2530" h="48856"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege06" count="1" respawn="10800">
+		<point x="21560" y="160627" z="-2529" h="48856"/>
+		<npc id="35124"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege06" count="1" respawn="10800">
+		<point x="21587" y="160627" z="-2529" h="48856"/>
+		<npc id="35124"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege06" count="1" respawn="10800">
+		<point x="21614" y="160626" z="-2528" h="48856"/>
+		<npc id="35124"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege06" count="1" respawn="10800">
+		<point x="21500" y="160704" z="-2529" h="48856"/>
+		<npc id="35123"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege06" count="1" respawn="10800">
+		<point x="21526" y="160704" z="-2529" h="48856"/>
+		<npc id="35123"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege06" count="1" respawn="10800">
+		<point x="21554" y="160704" z="-2528" h="48856"/>
+		<npc id="35123"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege06" count="1" respawn="10800">
+		<point x="21755" y="161277" z="-2532" h="65460"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege06" count="1" respawn="10800">
+		<point x="21754" y="161314" z="-2532" h="65460"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege06" count="1" respawn="10800">
+		<point x="21754" y="161351" z="-2531" h="65460"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege06" count="1" respawn="10800">
+		<point x="21753" y="161387" z="-2531" h="65460"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege06" count="1" respawn="10800">
+		<point x="21753" y="161423" z="-2531" h="65460"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege06" count="1" respawn="10800">
+		<point x="21752" y="161461" z="-2531" h="65460"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege06" count="1" respawn="10800">
+		<point x="21752" y="161492" z="-2530" h="65460"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege06" count="1" respawn="10800">
+		<point x="21751" y="161529" z="-2530" h="65460"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege06" count="1" respawn="10800">
+		<point x="21750" y="161564" z="-2530" h="65460"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege06" count="1" respawn="10800">
+		<point x="21750" y="161601" z="-2530" h="65460"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege06" count="1" respawn="10800">
+		<point x="21750" y="161638" z="-2530" h="65460"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege07" count="1" respawn="10800">
+		<point x="22534" y="160514" z="-2527" h="48856"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege07" count="1" respawn="10800">
+		<point x="22560" y="160514" z="-2527" h="48856"/>
+		<npc id="35121"/><!--Рыцарь Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege07" count="1" respawn="10800">
+		<point x="22603" y="160517" z="-2526" h="48856"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege07" count="1" respawn="10800">
+		<point x="22534" y="160536" z="-2531" h="48856"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege07" count="1" respawn="10800">
+		<point x="22561" y="160536" z="-2531" h="48856"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege07" count="1" respawn="10800">
+		<point x="22588" y="160536" z="-2530" h="48856"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege07" count="1" respawn="10800">
+		<point x="22535" y="160561" z="-2529" h="48856"/>
+		<npc id="35124"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege07" count="1" respawn="10800">
+		<point x="22562" y="160561" z="-2529" h="48856"/>
+		<npc id="35124"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege07" count="1" respawn="10800">
+		<point x="22589" y="160560" z="-2528" h="48856"/>
+		<npc id="35124"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege07" count="1" respawn="10800">
+		<point x="22496" y="160802" z="-2529" h="48856"/>
+		<npc id="35123"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege07" count="1" respawn="10800">
+		<point x="22522" y="160802" z="-2529" h="48856"/>
+		<npc id="35123"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege07" count="1" respawn="10800">
+		<point x="22550" y="160802" z="-2528" h="48856"/>
+		<npc id="35123"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege07" count="1" respawn="10800">
+		<point x="22388" y="161632" z="-2532" h="32384"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege07" count="1" respawn="10800">
+		<point x="22387" y="161596" z="-2532" h="32384"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege07" count="1" respawn="10800">
+		<point x="22386" y="161559" z="-2531" h="32384"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege07" count="1" respawn="10800">
+		<point x="22386" y="161523" z="-2531" h="32384"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege07" count="1" respawn="10800">
+		<point x="22386" y="161487" z="-2531" h="32384"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege07" count="1" respawn="10800">
+		<point x="22385" y="161449" z="-2531" h="32384"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege07" count="1" respawn="10800">
+		<point x="22385" y="161418" z="-2530" h="32384"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege07" count="1" respawn="10800">
+		<point x="22384" y="161381" z="-2530" h="32384"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege07" count="1" respawn="10800">
+		<point x="22384" y="161346" z="-2530" h="32384"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege07" count="1" respawn="10800">
+		<point x="22383" y="161309" z="-2530" h="32384"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege07" count="1" respawn="10800">
+		<point x="22382" y="161272" z="-2530" h="32384"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22420" y="156643" z="-2953" h="48376"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22392" y="156643" z="-2953" h="48376"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22364" y="156643" z="-2953" h="48376"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22336" y="156643" z="-2953" h="48376"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22308" y="156643" z="-2953" h="48376"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22280" y="156643" z="-2953" h="48376"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22252" y="156643" z="-2953" h="48376"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22224" y="156643" z="-2953" h="48376"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22196" y="156643" z="-2953" h="48376"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22420" y="156623" z="-2953" h="48376"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22392" y="156623" z="-2953" h="48376"/>
+		<npc id="35124"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22364" y="156623" z="-2953" h="48376"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22336" y="156623" z="-2953" h="48376"/>
+		<npc id="35124"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22308" y="156623" z="-2953" h="48376"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22280" y="156623" z="-2953" h="48376"/>
+		<npc id="35124"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22252" y="156623" z="-2953" h="48376"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22224" y="156623" z="-2953" h="48376"/>
+		<npc id="35124"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22196" y="156623" z="-2953" h="48376"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22420" y="156603" z="-2953" h="48376"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22392" y="156603" z="-2953" h="48376"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22364" y="156603" z="-2953" h="48376"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22336" y="156603" z="-2953" h="48376"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22308" y="156603" z="-2953" h="48376"/>
+		<npc id="35121"/><!--Рыцарь Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22280" y="156603" z="-2953" h="48376"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22252" y="156603" z="-2953" h="48376"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22224" y="156603" z="-2953" h="48376"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege01" count="1" respawn="10800">
+		<point x="22196" y="156603" z="-2953" h="48376"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22217" y="159415" z="-2687" h="39088"/>
+		<npc id="35124"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22200" y="159440" z="-2688" h="39088"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22176" y="159466" z="-2687" h="39088"/>
+		<npc id="35124"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22157" y="159489" z="-2687" h="39088"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22142" y="159507" z="-2686" h="39088"/>
+		<npc id="35124"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22120" y="159533" z="-2688" h="39088"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22103" y="159558" z="-2688" h="39088"/>
+		<npc id="35124"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22083" y="159579" z="-2688" h="39088"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22059" y="159590" z="-2689" h="49844"/>
+		<npc id="35124"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22034" y="159571" z="-2688" h="58336"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22016" y="159547" z="-2688" h="58336"/>
+		<npc id="35124"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22003" y="159527" z="-2687" h="58336"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="21984" y="159500" z="-2689" h="58336"/>
+		<npc id="35124"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="21965" y="159476" z="-2690" h="58336"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="21946" y="159446" z="-2689" h="58336"/>
+		<npc id="35124"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="21929" y="159421" z="-2689" h="58336"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="21916" y="159402" z="-2688" h="58336"/>
+		<npc id="35124"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22232" y="159435" z="-2689" h="39088"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22214" y="159459" z="-2690" h="39088"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22190" y="159485" z="-2689" h="39088"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22171" y="159509" z="-2689" h="39088"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22156" y="159527" z="-2688" h="39088"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22135" y="159553" z="-2690" h="39088"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22117" y="159577" z="-2690" h="39088"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22098" y="159598" z="-2690" h="39088"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22073" y="159609" z="-2691" h="49844"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22045" y="159608" z="-2688" h="49844"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22020" y="159589" z="-2687" h="58336"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22002" y="159565" z="-2687" h="58336"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="21989" y="159545" z="-2686" h="58336"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="21970" y="159518" z="-2688" h="58336"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="21951" y="159494" z="-2689" h="58336"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="21932" y="159464" z="-2688" h="58336"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="21915" y="159439" z="-2688" h="58336"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="21902" y="159420" z="-2687" h="58336"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22260" y="159540" z="-2687" h="39088"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22241" y="159563" z="-2687" h="39088"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22226" y="159581" z="-2686" h="39088"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22204" y="159607" z="-2688" h="39088"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22187" y="159632" z="-2689" h="39088"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="21959" y="159598" z="-2683" h="58336"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="21946" y="159578" z="-2682" h="58336"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="21926" y="159551" z="-2684" h="58336"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="21908" y="159527" z="-2685" h="58336"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="21889" y="159497" z="-2684" h="58336"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="21928" y="159674" z="-2685" h="48388"/>
+		<npc id="35123"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="21894" y="159674" z="-2686" h="48388"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22173" y="159677" z="-2686" h="48388"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22150" y="159676" z="-2686" h="48388"/>
+		<npc id="35123"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="10800">
+		<point x="22225" y="159402" z="-2684" h="58336"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="60">
+		<point x="22234" y="159456" z="-2687" h="39088"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="60">
+		<point x="22153" y="159547" z="-2687" h="39088"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="60">
+		<point x="21968" y="159538" z="-2687" h="39088"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege04" count="1" respawn="60">
+		<point x="21896" y="159435" z="-2687" h="39088"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="300">
+		<point x="22133" y="161560" z="-2749" h="49112"/>
+		<npc id="35106"/><!--Герцог Байрон Эштон-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="180">
+		<point x="22021" y="161563" z="-2748" h="49112"/>
+		<npc id="35107"/><!--Ивано - Сэр-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21919" y="161546" z="-2754" h="49112"/>
+		<npc id="35114"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21882" y="161547" z="-2754" h="49112"/>
+		<npc id="35114"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21849" y="161547" z="-2754" h="49112"/>
+		<npc id="35114"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21811" y="161548" z="-2754" h="49112"/>
+		<npc id="35114"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21774" y="161548" z="-2753" h="49112"/>
+		<npc id="35114"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21736" y="161549" z="-2753" h="49112"/>
+		<npc id="35114"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21704" y="161549" z="-2753" h="49112"/>
+		<npc id="35114"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21666" y="161550" z="-2753" h="49112"/>
+		<npc id="35114"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21919" y="161512" z="-2755" h="49112"/>
+		<npc id="35111"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21881" y="161513" z="-2755" h="49112"/>
+		<npc id="35111"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21848" y="161513" z="-2755" h="49112"/>
+		<npc id="35111"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21811" y="161514" z="-2755" h="49112"/>
+		<npc id="35111"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21773" y="161514" z="-2754" h="49112"/>
+		<npc id="35111"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21736" y="161515" z="-2754" h="49112"/>
+		<npc id="35111"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21703" y="161515" z="-2754" h="49112"/>
+		<npc id="35111"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21666" y="161516" z="-2754" h="49112"/>
+		<npc id="35111"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21917" y="161474" z="-2756" h="49112"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21879" y="161475" z="-2756" h="49112"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21847" y="161475" z="-2756" h="49112"/>
+		<npc id="35108"/><!--Рыцарь Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21809" y="161476" z="-2756" h="49112"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21772" y="161476" z="-2755" h="49112"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21734" y="161477" z="-2755" h="49112"/>
+		<npc id="35108"/><!--Рыцарь Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21702" y="161477" z="-2755" h="49112"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21664" y="161478" z="-2755" h="49112"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22479" y="161540" z="-2750" h="49112"/>
+		<npc id="35114"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22441" y="161540" z="-2750" h="49112"/>
+		<npc id="35114"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22409" y="161540" z="-2750" h="49112"/>
+		<npc id="35114"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22371" y="161541" z="-2750" h="49112"/>
+		<npc id="35114"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22334" y="161542" z="-2749" h="49112"/>
+		<npc id="35114"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22296" y="161542" z="-2749" h="49112"/>
+		<npc id="35114"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22263" y="161543" z="-2749" h="49112"/>
+		<npc id="35114"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22226" y="161543" z="-2749" h="49112"/>
+		<npc id="35114"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22478" y="161505" z="-2751" h="49112"/>
+		<npc id="35111"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22440" y="161506" z="-2751" h="49112"/>
+		<npc id="35111"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22408" y="161506" z="-2751" h="49112"/>
+		<npc id="35111"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22370" y="161507" z="-2751" h="49112"/>
+		<npc id="35111"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22333" y="161508" z="-2750" h="49112"/>
+		<npc id="35111"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22295" y="161508" z="-2750" h="49112"/>
+		<npc id="35111"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22263" y="161508" z="-2750" h="49112"/>
+		<npc id="35111"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22225" y="161509" z="-2750" h="49112"/>
+		<npc id="35111"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22477" y="161468" z="-2752" h="49112"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22439" y="161469" z="-2752" h="49112"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22406" y="161469" z="-2752" h="49112"/>
+		<npc id="35108"/><!--Рыцарь Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22369" y="161470" z="-2752" h="49112"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22331" y="161470" z="-2751" h="49112"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22294" y="161471" z="-2751" h="49112"/>
+		<npc id="35108"/><!--Рыцарь Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22261" y="161471" z="-2751" h="49112"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22224" y="161472" z="-2751" h="49112"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22399" y="161705" z="-2749" h="49112"/>
+		<npc id="35110"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22315" y="161705" z="-2748" h="49112"/>
+		<npc id="35110"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22236" y="161706" z="-2748" h="49112"/>
+		<npc id="35110"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="22161" y="161706" z="-2748" h="49112"/>
+		<npc id="35110"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21984" y="161706" z="-2745" h="49112"/>
+		<npc id="35110"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21901" y="161706" z="-2745" h="49112"/>
+		<npc id="35110"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21821" y="161707" z="-2745" h="49112"/>
+		<npc id="35110"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege05" count="1" respawn="120">
+		<point x="21747" y="161707" z="-2745" h="49112"/>
+		<npc id="35110"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22563" y="157021" z="-2943" h="32080"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22562" y="157052" z="-2942" h="32080"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22562" y="157082" z="-2942" h="32080"/>
+		<npc id="35121"/><!--Рыцарь Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22562" y="157112" z="-2941" h="32080"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22563" y="157143" z="-2942" h="32080"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22561" y="157172" z="-2941" h="32080"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22561" y="157202" z="-2941" h="32080"/>
+		<npc id="35121"/><!--Рыцарь Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22561" y="157232" z="-2940" h="32080"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22562" y="157263" z="-2941" h="32080"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22588" y="157039" z="-2961" h="32080"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22588" y="157069" z="-2961" h="32080"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22588" y="157100" z="-2960" h="32080"/>
+		<npc id="35124"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22589" y="157130" z="-2961" h="32080"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22587" y="157160" z="-2960" h="32080"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22587" y="157190" z="-2960" h="32080"/>
+		<npc id="35124"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22586" y="157219" z="-2959" h="32080"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22587" y="157251" z="-2960" h="32080"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22609" y="157023" z="-2965" h="32080"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22608" y="157053" z="-2965" h="32080"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22608" y="157083" z="-2964" h="32080"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22607" y="157114" z="-2964" h="32080"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22609" y="157144" z="-2964" h="32080"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22607" y="157174" z="-2963" h="32080"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22607" y="157204" z="-2963" h="32080"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22606" y="157233" z="-2962" h="32080"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22607" y="157265" z="-2963" h="32080"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22755" y="157041" z="-2966" h="32080"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22755" y="157071" z="-2965" h="32080"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22755" y="157102" z="-2965" h="32080"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22754" y="157132" z="-2964" h="32080"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22755" y="157162" z="-2964" h="32080"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22753" y="157192" z="-2964" h="32080"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22752" y="157222" z="-2963" h="32080"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22752" y="157252" z="-2963" h="32080"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22856" y="157372" z="-2957" h="48668"/>
+		<npc id="35123"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="10800">
+		<point x="22826" y="157373" z="-2958" h="48668"/>
+		<npc id="35123"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="60">
+		<point x="22618" y="157254" z="-2941" h="32080"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="60">
+		<point x="22619" y="157190" z="-2941" h="32080"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="60">
+		<point x="22619" y="157101" z="-2941" h="32080"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege02" count="1" respawn="60">
+		<point x="22616" y="157041" z="-2941" h="32080"/>
+		<npc id="35113"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22370" y="157394" z="-2692" h="48668"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22340" y="157395" z="-2693" h="48668"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22310" y="157392" z="-2692" h="48668"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22280" y="157391" z="-2692" h="48668"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22251" y="157390" z="-2691" h="48668"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22600" y="157328" z="-2690" h="48668"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22570" y="157329" z="-2691" h="48668"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22541" y="157326" z="-2690" h="48668"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22511" y="157325" z="-2690" h="48668"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22481" y="157324" z="-2689" h="48668"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22067" y="157190" z="-2691" h="64432"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22064" y="157160" z="-2692" h="64432"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22066" y="157131" z="-2691" h="64432"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22065" y="157101" z="-2691" h="64432"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22064" y="157071" z="-2690" h="64432"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="21800" y="157396" z="-2794" h="32712"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="21799" y="157430" z="-2794" h="32712"/>
+		<npc id="35121"/><!--Рыцарь Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="21795" y="157471" z="-2793" h="32712"/>
+		<npc id="35126"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="21821" y="157396" z="-2783" h="32712"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="21820" y="157430" z="-2784" h="32712"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="21816" y="157471" z="-2783" h="32712"/>
+		<npc id="35125"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="21839" y="157396" z="-2769" h="32712"/>
+		<npc id="35124"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="21838" y="157430" z="-2770" h="32712"/>
+		<npc id="35124"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="21834" y="157471" z="-2769" h="32712"/>
+		<npc id="35124"/><!--Гвардеец - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22167" y="157437" z="-2692" h="55444"/>
+		<npc id="35123"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22370" y="157394" z="-2692" h="48668"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22310" y="157392" z="-2692" h="48668"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22251" y="157390" z="-2691" h="48668"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22600" y="157328" z="-2690" h="48668"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22570" y="157329" z="-2691" h="48668"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22541" y="157326" z="-2690" h="48668"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22511" y="157325" z="-2690" h="48668"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22067" y="157190" z="-2691" h="64432"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22066" y="157131" z="-2691" h="64432"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege03" count="1" respawn="10800">
+		<point x="22064" y="157071" z="-2690" h="64432"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege11" count="1" respawn="10800">
+		<point x="22180" y="159210" z="-2694" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege11" count="1" respawn="10800">
+		<point x="22149" y="159210" z="-2694" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege11" count="1" respawn="10800">
+		<point x="22118" y="159210" z="-2694" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege11" count="1" respawn="10800">
+		<point x="22086" y="159210" z="-2694" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege11" count="1" respawn="10800">
+		<point x="22055" y="159210" z="-2694" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege11" count="1" respawn="10800">
+		<point x="22023" y="159210" z="-2694" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege11" count="1" respawn="10800">
+		<point x="21992" y="159210" z="-2694" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege11" count="1" respawn="10800">
+		<point x="21960" y="159210" z="-2694" h="49152"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege11" count="1" respawn="10800">
+		<point x="22180" y="159190" z="-2694" h="49152"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege11" count="1" respawn="10800">
+		<point x="22149" y="159190" z="-2694" h="49152"/>
+		<npc id="35123"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege11" count="1" respawn="10800">
+		<point x="22118" y="159190" z="-2694" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege11" count="1" respawn="10800">
+		<point x="22086" y="159190" z="-2694" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege11" count="1" respawn="10800">
+		<point x="22055" y="159190" z="-2694" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege11" count="1" respawn="10800">
+		<point x="22023" y="159190" z="-2694" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege11" count="1" respawn="10800">
+		<point x="21992" y="159190" z="-2694" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege11" count="1" respawn="10800">
+		<point x="21960" y="159190" z="-2694" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege12" count="1" respawn="10800">
+		<point x="20508" y="158097" z="-2570" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege12" count="1" respawn="10800">
+		<point x="20508" y="158148" z="-2570" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege12" count="1" respawn="10800">
+		<point x="20508" y="158198" z="-2570" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege12" count="1" respawn="10800">
+		<point x="20508" y="158248" z="-2570" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege12" count="1" respawn="10800">
+		<point x="20508" y="158298" z="-2570" h="32768"/>
+		<npc id="35123"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege12" count="1" respawn="10800">
+		<point x="20508" y="158348" z="-2570" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege12" count="1" respawn="10800">
+		<point x="20508" y="158398" z="-2570" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege12" count="1" respawn="10800">
+		<point x="20508" y="158448" z="-2570" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege12" count="1" respawn="10800">
+		<point x="20508" y="158498" z="-2570" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege12" count="1" respawn="10800">
+		<point x="20508" y="158548" z="-2570" h="32768"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege12" count="1" respawn="10800">
+		<point x="20508" y="158598" z="-2570" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege12" count="1" respawn="10800">
+		<point x="20508" y="158648" z="-2570" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege10" count="1" respawn="10800">
+		<point x="21840" y="159083" z="-2385" h="0"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege10" count="1" respawn="10800">
+		<point x="21841" y="158961" z="-2385" h="0"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege10" count="1" respawn="10800">
+		<point x="21786" y="158900" z="-2385" h="57344"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege10" count="1" respawn="10800">
+		<point x="21761" y="158881" z="-2385" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege10" count="1" respawn="10800">
+		<point x="21722" y="158880" z="-2385" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege10" count="1" respawn="10800">
+		<point x="21686" y="158880" z="-2385" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege10" count="1" respawn="10800">
+		<point x="21840" y="159040" z="-2385" h="0"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege10" count="1" respawn="10800">
+		<point x="21812" y="158925" z="-2385" h="57344"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege10" count="1" respawn="10800">
+		<point x="21840" y="159001" z="-2384" h="0"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege10" count="1" respawn="10800">
+		<point x="21738" y="158946" z="-2386" h="57344"/>
+		<npc id="35123"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege10" count="1" respawn="10800">
+		<point x="22293" y="159089" z="-2387" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege10" count="1" respawn="10800">
+		<point x="22293" y="159049" z="-2385" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege10" count="1" respawn="10800">
+		<point x="22293" y="158964" z="-2386" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege10" count="1" respawn="10800">
+		<point x="22351" y="158899" z="-2385" h="40960"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege10" count="1" respawn="10800">
+		<point x="22378" y="158879" z="-2384" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege10" count="1" respawn="10800">
+		<point x="22418" y="158880" z="-2385" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege10" count="1" respawn="10800">
+		<point x="22457" y="158879" z="-2385" h="49152"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege10" count="1" respawn="10800">
+		<point x="22293" y="159005" z="-2383" h="32768"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege10" count="1" respawn="10800">
+		<point x="22315" y="158935" z="-2386" h="40960"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege10" count="1" respawn="10800">
+		<point x="22395" y="158953" z="-2383" h="40960"/>
+		<npc id="35123"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege13" count="1" respawn="10800">
+		<point x="23910" y="158097" z="-2570" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege13" count="1" respawn="10800">
+		<point x="23910" y="158148" z="-2570" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege13" count="1" respawn="10800">
+		<point x="23910" y="158198" z="-2570" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege13" count="1" respawn="10800">
+		<point x="23910" y="158248" z="-2570" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege13" count="1" respawn="10800">
+		<point x="23910" y="158298" z="-2570" h="32768"/>
+		<npc id="35123"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege13" count="1" respawn="10800">
+		<point x="23910" y="158348" z="-2570" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege13" count="1" respawn="10800">
+		<point x="23910" y="158398" z="-2570" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege13" count="1" respawn="10800">
+		<point x="23910" y="158448" z="-2570" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege13" count="1" respawn="10800">
+		<point x="23910" y="158498" z="-2570" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege13" count="1" respawn="10800">
+		<point x="23910" y="158548" z="-2570" h="32768"/>
+		<npc id="35122"/><!--Маг Гвардии - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege13" count="1" respawn="10800">
+		<point x="23910" y="158598" z="-2570" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn group="dion_castle_siege" name="dion_siege13" count="1" respawn="10800">
+		<point x="23910" y="158648" z="-2570" h="32768"/>
+		<npc id="35127"/><!--Охранник - Дион-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="yellow_barracks_71">
+		<point x="16043" y="154636" z="-3632" h="4223" />
+		<npc id="36736"/><!--Ренин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="yellow_barracks_71">
+		<point x="15910" y="154561" z="-3616" h="30708" />
+		<npc id="36735"/><!--Юбен-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="brown_barracks_70">
+		<point x="14666" y="155348" z="-3504" h="4156" />
+		<npc id="36734"/><!--Мурен-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="brown_barracks_70">
+		<point x="14581" y="155317" z="-3496" h="34066" />
+		<npc id="36733"/><!--Уинснон-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="blue_barracks_69">
+		<point x="15314" y="156000" z="-3616" h="13606" />
+		<npc id="36731"/><!--Каллейн-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="blue_barracks_69">
+		<point x="15345" y="155887" z="-3624" h="48885" />
+		<npc id="36732"/><!--Корен-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="white_barracks_72">
+		<point x="16314" y="155714" z="-3632" h="47561" />
+		<npc id="36730"/><!--Паоллин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="white_barracks_72">
+		<point x="16277" y="155810" z="-3616" h="17605" />
+		<npc id="36729"/><!--Бремен-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="16721" y="154985" z="-3624" h="0" />
+		<npc id="30767"><!--Управляющий Аукциона-->
+			<set name="town" value="dion_barracks"/>
+		</npc>
+	</spawn>
+	<spawn count="1" respawn="60" group="royal_love_event">
+		<point x="15807" y="142879" z="-2696" h="18110"/>
+		<npc id="9020"/><!--Фринтеза-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="15756" y="142848" z="-2696" h="24575"/>
+		<npc id="36610"/><!--Герольд-->
+	</spawn>
+	<spawn count="1" respawn="60" group="olympiad">
+		<point x="16256" y="144256" z="-2992" h="55000"/>
+		<npc id="31690"/><!--Памятник Героям-->
+	</spawn>
+	<spawn count="1" respawn="60" group="olympiad">
+		<point x="16304" y="144288" z="-2984" h="55000"/>
+		<npc id="31688"/><!--Управляющий Олимпиады-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="19550" y="143088" z="-3024" h="9260"/>
+		<npc id="34272"/><!--Михай-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="19605" y="143308" z="-3024" h="52892"/>
+		<npc id="31597"/><!--Тобальд-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="19539" y="145987" z="-3064" h="32500"/>
+		<npc id="30012"/><!--Член Гильдии Рыболовов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="class_master">
+		<point x="18012" y="145166" z="-3075" h="64469"/>
+		<npc id="31860"/><!--Buzz the Cat-->
+	</spawn>
+</list>

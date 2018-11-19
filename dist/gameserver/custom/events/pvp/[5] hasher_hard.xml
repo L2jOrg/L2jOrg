@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "events.dtd">
+<list>
+	<event id="5" name="Hasher Hard" impl="PvP">
+		<parameter name="enabled" value="false"/>
+		<parameter name="start_time" value="45 * * * *"/>	<!--Время проведения ивента в формате cron.-->
+		<parameter name="min_level" value="40"/>
+		<parameter name="max_level" value="75"/>
+		<parameter name="min_players" value="10"/>
+		<parameter name="teams" value="1"/>
+		<parameter name="count_die_from_exit" value="3"/>
+		<parameter name="min_kill_from_reward" value="1"/>
+		<parameter name="min_kill_team_from_reward" value="1"/>
+		<parameter name="hide_nick" value="true"/>
+		<parameter name="buffs" value="1040,3;1085,3;1204,2;1077,3;1044,3;1240,3;1242,3;1036,2;1045,6;1048,6;1086,2;1087,3"/>
+		<parameter name="add_hero_last_player" value="false"/>
+
+		<on_time>
+			<on time="0">
+				<start name="registration"/>
+			</on>
+			<on time="300">
+				<stop name="registration"/>
+			</on>
+			<on time="330">
+				<start name="sort"/>
+				<start name="teleport"/>
+			</on>
+			<on time="360">
+				<start name="battle"/>
+			</on>
+			<on time="660">
+				<stop name="battle"/>
+			</on>
+		</on_time>
+
+		<objects name="team0">
+			<point x="20440" y="254488" z="-2046"/>
+			<point x="19816" y="254488" z="-2045"/>
+			<point x="19064" y="254488" z="-2043"/>
+			<point x="18552" y="254392" z="-2044"/>
+			<point x="18056" y="253880" z="-2044"/>
+			<point x="17944" y="253240" z="-2044"/>
+			<point x="17992" y="252648" z="-2046"/>
+			<point x="18456" y="252440" z="-2046"/>
+			<point x="18888" y="252392" z="-2043"/>
+			<point x="19288" y="252376" z="-2042"/>
+			<point x="19800" y="252392" z="-2043"/>
+			<point x="20296" y="252488" z="-2043"/>
+			<point x="20696" y="252776" z="-2043"/>
+			<point x="20904" y="253240" z="-2042"/>
+			<point x="20936" y="253720" z="-2044"/>
+			<point x="21448" y="252888" z="-2044"/>
+			<point x="22152" y="252744" z="-2045"/>
+			<point x="21896" y="252088" z="-2042"/>
+			<point x="17864" y="252216" z="-2045"/>
+			<point x="17448" y="251688" z="-2039"/>
+			<point x="17432" y="251144" z="-2002"/>
+			<point x="18040" y="250856" z="-1999"/>
+			<point x="18744" y="250648" z="-2031"/>
+			<point x="19352" y="250600" z="-2044"/>
+			<point x="19992" y="250568" z="-2038"/>
+		</objects>
+
+		<objects name="abnormal0">
+			<abnormal name="UNK_113"/>
+		</objects>
+
+		<objects name="reward_for_kill">
+			<reward item_id="4357" min="1" max="1" chance="100.0"/>
+		</objects>
+		<objects name="reward_for_win_team">
+			<reward item_id="4037" min="1" max="1" chance="100.0"/>
+		</objects>
+	</event>
+</list>

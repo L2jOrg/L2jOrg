@@ -1,0 +1,11 @@
+<html><head><body>
+Великий Мастер Седрик:<br>
+Хорошо, что Вы пришли в Аден, юный путешественник. Я - Седрик. Приветствую Вас от имени всех воинов Адена и его окрестностей.<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">Узнать о 2-й смене профессии</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Клан</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Альянс</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Обменять Ежедневные Монеты</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Квест</Button>
+</body></html>

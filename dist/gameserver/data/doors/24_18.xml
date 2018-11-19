@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="24180001" name="aden_castle_outter_001" hp="1018260" pdef="837" mdef="674">
+		<pos x="147278" y="8483" z="-241"/>
+		<shape ax="147277" ay="8475" bx="147463" by="8475" cx="147463" cy="8492" dx="147278" dy="8491" minz="-495" maxz="0"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24180002" name="aden_castle_outter_002" hp="1018260" pdef="837" mdef="674">
+		<pos x="147634" y="8483" z="-241"/>
+		<shape ax="147449" ay="8474" bx="147635" by="8475" cx="147634" cy="8492" dx="147448" dy="8492" minz="-495" maxz="0"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24180003" name="aden_castle_wall_in" hp="2036520" pdef="837" mdef="674" type="WALL">
+		<pos x="146770" y="6977" z="-271"/>
+		<shape ax="146440" ay="6895" bx="147100" by="6895" cx="147063" cy="7104" dx="146440" dy="7104" minz="-496" maxz="-391"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24180004" name="aden_castle_inner_002" hp="254565" pdef="837" mdef="674">
+		<pos x="147341" y="6210" z="-278"/>
+		<shape ax="147461" ay="6202" bx="147341" by="6202" cx="147341" cy="6218" dx="147461" dy="6218" minz="-430" maxz="-139"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24180005" name="aden_castle_inner_001" hp="254565" pdef="837" mdef="674">
+		<pos x="147571" y="6210" z="-278"/>
+		<shape ax="147450" ay="6202" bx="147572" by="6202" cx="147572" cy="6219" dx="147450" dy="6218" minz="-430" maxz="-139"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24180006" name="Aden_Castle_S.Aden_castle_wallhole02a" hp="2036520" pdef="837" mdef="674" type="WALL">
+		<pos x="145201" y="5504" z="-443"/>
+		<shape ax="144863" ay="5120" bx="145025" by="5119" cx="145536" cy="5888" dx="145374" dy="5889" minz="-751" maxz="-186"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24180007" name="aden_castle_left_004" hp="339453" pdef="837" mdef="674">
+		<pos x="146607" y="5384" z="48"/>
+		<shape ax="146600" ay="5318" bx="146601" by="5385" cx="146613" cy="5385" dx="146613" dy="5318" minz="-44" maxz="141"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24180008" name="aden_castle_left_003" hp="339453" pdef="837" mdef="674">
+		<pos x="146606" y="5262" z="48"/>
+		<shape ax="146600" ay="5328" bx="146600" by="5262" cx="146613" cy="5262" dx="146613" dy="5328" minz="-44" maxz="141"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24180009" name="aden_castle_right_003" hp="339453" pdef="837" mdef="674">
+		<pos x="148324" y="5384" z="48"/>
+		<shape ax="148317" ay="5319" bx="148317" by="5385" cx="148330" cy="5385" dx="148330" dy="5319" minz="-44" maxz="141"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24180010" name="aden_castle_right_004" hp="339453" pdef="837" mdef="674">
+		<pos x="148323" y="5262" z="48"/>
+		<shape ax="148316" ay="5327" bx="148317" by="5261" cx="148330" cy="5261" dx="148329" dy="5327" minz="-44" maxz="141"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24180011" name="Aden_Castle_S.Aden_castle_wallhole02a" hp="2036520" pdef="837" mdef="674" type="WALL">
+		<pos x="149711" y="5504" z="-443"/>
+		<shape ax="149886" ay="5118" bx="150048" by="5119" cx="149537" cy="5888" dx="149375" dy="5888" minz="-751" maxz="-186"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24180012" name="aden_castle_left_002" hp="339453" pdef="837" mdef="674">
+		<pos x="146001" y="4721" z="-256"/>
+		<shape ax="145992" ay="4601" bx="146010" by="4601" cx="146010" cy="4721" dx="145993" dy="4721" minz="-427" maxz="-92"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24180013" name="aden_castle_left_001" hp="339453" pdef="837" mdef="674">
+		<pos x="146001" y="4493" z="-256"/>
+		<shape ax="145992" ay="4493" bx="146009" by="4493" cx="146010" cy="4612" dx="145992" dy="4612" minz="-427" maxz="-92"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24180014" name="aden_castle_right_001" hp="339453" pdef="837" mdef="674">
+		<pos x="148908" y="4721" z="-256"/>
+		<shape ax="148899" ay="4722" bx="148917" by="4722" cx="148917" cy="4602" dx="148899" dy="4602" minz="-427" maxz="-92"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24180015" name="aden_castle_right_002" hp="339453" pdef="837" mdef="674">
+		<pos x="148908" y="4493" z="-256"/>
+		<shape ax="148900" ay="4612" bx="148917" by="4612" cx="148916" cy="4492" dx="148900" dy="4492" minz="-427" maxz="-92"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24180016" name="aden_castle_terrace" hp="339453" pdef="837" mdef="674">
+		<pos x="147511" y="2240" z="322"/>
+		<shape ax="147398" ay="2243" bx="147513" by="2243" cx="147513" cy="2245" dx="147398" dy="2245" minz="201" maxz="444"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24180018" name="aden_castle_side_door2" hp="2036520" pdef="837" mdef="674">
+		<pos x="150044" y="3783" z="21"/>
+		<shape ax="150040" ay="3903" bx="150040" by="3775" cx="150055" cy="3776" dx="150055" dy="3902" minz="-101" maxz="142"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24180019" name="aden_castle_side_door1" hp="2036520" pdef="837" mdef="674">
+		<pos x="149208" y="3077" z="1356"/>
+		<shape ax="149208" ay="3199" bx="149208" by="3072" cx="149215" cy="3072" dx="149215" dy="3199" minz="1234" maxz="1477"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24180020" name="aden_castle_side_door4" hp="2036520" pdef="837" mdef="674">
+		<pos x="144859" y="3783" z="21"/>
+		<shape ax="144848" ay="3902" bx="144848" by="3775" cx="144878" cy="3776" dx="144880" dy="3901" minz="-102" maxz="141"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24180021" name="aden_castle_side_door3" hp="2036520" pdef="837" mdef="674">
+		<pos x="145694" y="3076" z="1355"/>
+		<shape ax="145688" ay="3199" bx="145688" by="3072" cx="145711" cy="3072" dx="145711" dy="3199" minz="1234" maxz="1477"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24180022" name="aden_castle_agit_003_001" hp="158250" pdef="644" mdef="518">
+		<pos x="145358" y="25385" z="-2089"/>
+		<shape ax="145360" ay="25343" bx="145360" by="25385" cx="145356" cy="25385" dx="145356" dy="25344" minz="-2142" maxz="-1692"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="38"/>
+		</ai_params>
+	</door>
+	<door id="24180023" name="aden_castle_agit_003_002" hp="158250" pdef="644" mdef="518">
+		<pos x="145358" y="25304" z="-2089"/>
+		<shape ax="145356" ay="25345" bx="145356" by="25304" cx="145360" cy="25304" dx="145360" dy="25345" minz="-2142" maxz="-1692"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="38"/>
+		</ai_params>
+	</door>
+	<door id="24180024" name="aden_castle_agit_001_001" hp="158250" pdef="644" mdef="518">
+		<pos x="149438" y="23176" z="-2100"/>
+		<shape ax="149439" ay="23135" bx="149439" by="23176" cx="149437" cy="23176" dx="149437" dy="23135" minz="-2152" maxz="-1702"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="36"/>
+		</ai_params>
+	</door>
+	<door id="24180025" name="aden_castle_agit_001_002" hp="158250" pdef="644" mdef="518">
+		<pos x="149438" y="23095" z="-2100"/>
+		<shape ax="149437" ay="23136" bx="149437" by="23095" cx="149439" cy="23095" dx="149439" dy="23136" minz="-2152" maxz="-1702"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="36"/>
+		</ai_params>
+	</door>
+	<door id="24180026" name="aden_castle_agit_002_001" hp="158250" pdef="644" mdef="518">
+		<pos x="150299" y="23695" z="-2089"/>
+		<shape ax="150301" ay="23653" bx="150301" by="23695" cx="150297" cy="23695" dx="150298" dy="23653" minz="-2141" maxz="-1691"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="37"/>
+		</ai_params>
+	</door>
+	<door id="24180027" name="aden_castle_agit_002_002" hp="158250" pdef="644" mdef="518">
+		<pos x="150299" y="23614" z="-2089"/>
+		<shape ax="150297" ay="23655" bx="150297" by="23614" cx="150301" cy="23614" dx="150301" dy="23656" minz="-2141" maxz="-1691"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="37"/>
+		</ai_params>
+	</door>
+	<door id="24180028" name="aden_castle_agit_004_001" hp="158250" pdef="644" mdef="518">
+		<pos x="150444" y="26583" z="-2225"/>
+		<shape ax="150445" ay="26542" bx="150446" by="26583" cx="150443" cy="26583" dx="150443" dy="26542" minz="-2278" maxz="-1828"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="39"/>
+		</ai_params>
+	</door>
+	<door id="24180029" name="aden_castle_agit_004_002" hp="158250" pdef="644" mdef="518">
+		<pos x="150444" y="26502" z="-2225"/>
+		<shape ax="150443" ay="26543" bx="150443" by="26502" cx="150445" cy="26502" dx="150445" dy="26543" minz="-2278" maxz="-1828"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="39"/>
+		</ai_params>
+	</door>
+	<door id="24180030" name="aden_castle_agit_005_001" hp="158250" pdef="644" mdef="518">
+		<pos x="144358" y="28238" z="-2217"/>
+		<shape ax="144359" ay="28197" bx="144359" by="28238" cx="144357" cy="28238" dx="144357" dy="28197" minz="-2270" maxz="-1820"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="41"/>
+		</ai_params>
+	</door>
+	<door id="24180031" name="aden_castle_agit_005_002" hp="158250" pdef="644" mdef="518">
+		<pos x="144358" y="28157" z="-2217"/>
+		<shape ax="144357" ay="28198" bx="144357" by="28157" cx="144359" cy="28157" dx="144359" dy="28198" minz="-2270" maxz="-1820"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="41"/>
+		</ai_params>
+	</door>
+	<door id="24180032" name="aden_castle_agit_006_001" hp="158250" pdef="644" mdef="518">
+		<pos x="144294" y="27130" z="-2228"/>
+		<shape ax="144295" ay="27089" bx="144295" by="27130" cx="144293" cy="27130" dx="144293" dy="27090" minz="-2280" maxz="-1830"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="40"/>
+		</ai_params>
+	</door>
+	<door id="24180033" name="aden_castle_agit_006_002" hp="158250" pdef="644" mdef="518">
+		<pos x="144294" y="27049" z="-2228"/>
+		<shape ax="144293" ay="27090" bx="144293" by="27049" cx="144295" cy="27049" dx="144295" dy="27090" minz="-2280" maxz="-1830"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="40"/>
+		</ai_params>
+	</door>
+</list>

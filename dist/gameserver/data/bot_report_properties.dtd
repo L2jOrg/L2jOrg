@@ -1,0 +1,17 @@
+<!ELEMENT list (config|punishments)*>
+
+	<!ELEMENT config (#PCDATA)>
+	<!ATTLIST config
+		enabled CDATA #IMPLIED
+		report_delay CDATA #IMPLIED
+		reports_reset_time CDATA #IMPLIED
+		allow_reports_from_same_clan CDATA #IMPLIED>
+
+	<!ELEMENT punishments (punishment)*>
+
+		<!ELEMENT punishment (#PCDATA)>
+		<!ATTLIST punishment
+			need_report_count CDATA #REQUIRED
+			skill_id CDATA #REQUIRED
+			skill_level CDATA #REQUIRED
+			message_id CDATA #IMPLIED>

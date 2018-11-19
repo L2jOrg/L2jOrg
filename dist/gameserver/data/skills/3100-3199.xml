@@ -1,0 +1,2731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="3100" levels="10" name="Item Skill: Sleep">
+		<!--
+			Description:
+			Lvl 1-10 - Chance: Momentarily throws the target into a state of sleep during magic use. The target cannot be affected by any additional sleep attacks while the effect lasts.
+		-->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="1000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="SLEEP"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="sleep"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="activateRate" value="80"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="SLEEP"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SLEEP"/>
+		<for>
+			<effect name="Sleep">
+				<p_defence_trait name="sleep" value="100"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3101" levels="10" name="Item Skill: Paralyze">
+		<!--
+			Description:
+			Lvl 1-10 - Chance: Momentarily throws the target into a state of paralysis during magic use.
+		-->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="1000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="paralyze"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="activateRate" value="40"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="PARALYZE"/>
+		<for>
+			<effect>
+				<triggers>
+					<trigger id="6126" level="1" type="ON_FINISH_EFFECT"/>
+				</triggers>
+				<mul stat="runSpd" value="0.5"/>
+				<mul stat="pAtkSpd" value="0.5"/>
+				<mul stat="mAtkSpd" value="0.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3102" levels="10" name="Item Skill: Medusa">
+		<!--
+			Description:	Chance: Momentarily throws the target into a petrified state during magic use.
+			Last modify:	29.01.2009
+		-->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="1000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="FLESH_STONE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="turn_stone"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="activateRate" value="40"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PARALYZE"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="Invulnerable"/>
+			<effect name="p_block_debuff"/>
+			<effect name="Petrification">
+				<set stat="regHp" value="0"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3103" levels="10" name="Item Skill: Fear">
+		<!--
+			Description:
+			Lvl 1-10 - Chance: Momentarily throws the target into a state of fear and causes him to flee during magic use.
+		-->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="1000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="TURN_FLEE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="turn_flee"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="activateRate" value="40"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect name="Fear"/>
+		</for>
+	</skill>
+	<skill id="3104" levels="15" name="Item Skill: Poison (Magic Active)">
+		<!--
+			Description: Lvl 1 - Chance: Momentarily throws the target into a poisoned state during magic use. Effect 5. Lvl 2 - Chance: Momentarily throws the target into a poisoned state during magic use. Effect 5. Lvl 3 - Chance: Momentarily throws the target into a poisoned state during magic use. Effect 6. Lvl 4 - Chance: Momentarily throws the target into a poisoned state during magic use. Effect 6. Lvl 5 - Chance: Momentarily throws the target into a poisoned state during magic use. Effect 6. Lvl 6 - Chance: Momentarily throws the target into a poisoned state during magic use. Effect 7. Lvl 7 - Chance: Momentarily throws the target into a poisoned state during magic use. Effect 7. Lvl 8 - Chance: Momentarily throws the target into a poisoned state during magic use. Effect 7. Lvl 9 - Chance: Momentarily throws the target into a poisoned state during magic use. Effect 8. Lvl 10 - Chance: Momentarily throws the target into a poisoned state during magic use. Effect 8.
+		-->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#abnormal_level">5 5 6 6 6 7 7 7 8 8</table>
+		<table name="#power">-41 -41 -50 -50 -50 -58 -58 -58 -63 -63</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="1000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="DOT_POISON"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="poison"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="activateRate" value="80"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="poison"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="POISON"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="POISON"/>
+		<for>
+			<effect name="t_hp" interval="5" value="#power"/>
+		</for>
+	</skill>
+	<skill id="3105" levels="15" name="Item Skill: Bleed (Magic Active)">
+		<!--
+			Description: Lvl 1 - Chance: Momentarily throws the target into a bleeding state during magic use. Effect 5. Lvl 2 - Chance: Momentarily throws the target into a bleeding state during magic use. Effect 5. Lvl 3 - Chance: Momentarily throws the target into a bleeding state during magic use. Effect 6. Lvl 4 - Chance: Momentarily throws the target into a bleeding state during magic use. Effect 6. Lvl 5 - Chance: Momentarily throws the target into a bleeding state during magic use. Effect 6. Lvl 6 - Chance: Momentarily throws the target into a bleeding state during magic use. Effect 7. Lvl 7 - Chance: Momentarily throws the target into a bleeding state during magic use. Effect 7. Lvl 8 - Chance: Momentarily throws the target into a bleeding state during magic use. Effect 7. Lvl 9 - Chance: Momentarily throws the target into a bleeding state during magic use. Effect 8. Lvl 10 - Chance: Momentarily throws the target into a bleeding state during magic use. Effect 8.
+		-->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#abnormal_level">5 5 6 6 6 7 7 7 8 8</table>
+		<table name="#dot">-44 -44 -54 -54 -54 -62 -62 -62 -67 -67</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="1000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="activateRate" value="80"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="bleeding"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DOT"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="BLEED"/>
+		<for>
+			<effect name="t_hp" interval="5" value="#dot"/>
+		</for>
+	</skill>
+	<skill id="3106" levels="10" name="Item Skill: Silence">
+		<!--
+			Description:
+			Lvl 1-10 - Chance: Momentarily blocks the target's magic skill during magic use.
+		-->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="1000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="SILENCE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="silence"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="activateRate" value="40"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MUTE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect name="Mute"/>
+		</for>
+	</skill>
+	<skill id="3107" levels="10" name="Item Skill: Doom">
+		<!--
+			Description:
+			Lvl 1-10 - Chance: Momentarily blocks all of the target's physical and magic skills during magic use.
+		-->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="1000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="SILENCE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="silence_all"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="activateRate" value="40"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MUTE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect name="MuteAll"/>
+		</for>
+	</skill>
+	<skill id="3108" levels="15" name="Item Skill: Aggression Up">
+		<!--
+			Description:
+			Chance: Increases a target's urge to attack during a critical attack. Power 438-659.
+		-->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="effectPoint" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="i_target_me" chance="40"/>
+		</for>
+	</skill>
+	<skill id="3109" levels="15" name="Item Skill: Aggression Down">
+		<!--
+			Description:
+			Chance: Decreases a target's urge to attack during a critical attack. Power 219-330.
+		-->
+		<table name="#power">-219 -234 -248 -262 -275 -287 -299 -309 -318 -330</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="unaggroing" value="true"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect name="i_add_hate" value="#power"/>
+		</for>
+	</skill>
+	<skill id="3110" levels="10" name="Item Skill: Mana Burn">
+		<!--
+			Description:
+			Chance: Burns up a target's MP during a critical attack. Power 49-88.
+		-->
+		<table name="#power">49 53 57 61 66 70 74 78 82 88</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="power" value="#power"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MANADAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="3111" levels="15" name="Item Skill: Slow (Critical)">
+		<!--
+			Description:
+			Lvl 1-10 - Chance: Momentarily decreases the target's speed during a critical attack. Effect 3.
+		-->
+		<table name="#TabrunSpd">0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7</table>
+		<table name="#effectPoint">360 418 477 532 558 582 604 624 641 655</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="activateRate" value="40"/>
+		<for>
+			<effect>
+				<mul order="0x50" stat="runSpd" value="#TabrunSpd"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3112" levels="15" name="Item Skill: Winter (Critical)">
+		<!--
+			Description:
+			Lvl 1-10 - Chance: Momentarily decreases the target's Atk. Spd. during a critical attack. Effect 3.
+		-->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="attack_time_up"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="activateRate" value="40"/>
+		<for>
+			<effect>
+				<mul stat="pAtkSpd" value="0.77"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3113" levels="10" name="Item Skill: Stun">
+		<!--
+			Description:
+			Lvl 1-10 - Chance: Momentarily throws the target into a state of shock during a critical attack.
+		-->
+		<table name="#effectPoint">96 104 115 128 136 150 154 164 169 173</table>
+		<table name="#power">30 35 44 55 64 79 84 96 102 109</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="power" value="#power"/>
+		<set name="activateRate" value="50"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="nextAction" value="attack"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="3114" levels="15" name="Item Skill: Hold">
+		<!--
+			Description:
+			Lvl 1-10 - Chance: Momentarily throws the target into a state of hold during a critical attack. The target cannot be affected by any additional hold attacks while the effect lasts.
+		-->
+		<table name="#effectPoint">457 495 532 549 566 582 597 611 624 646 655</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="ROOT"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="root_magically"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="40"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="ROOT"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="HOLD"/>
+		<for>
+			<effect name="p_block_move">
+				<p_defence_trait name="hold" value="100"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3115" levels="10" name="Item Skill: Sleep">
+		<!--
+			Description:
+			Lvl 1-10 - Chance: Momentarily throws the target into a state of sleep during a critical attack. The target cannot be affected by any additional sleep attacks while the effect lasts.
+		-->
+		<table name="#effectPoint">227 285 369 438 495 549 590 624 650 655</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="SLEEP"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="sleep"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="40"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="SLEEP"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SLEEP"/>
+		<for>
+			<effect name="Sleep">
+				<p_defence_trait name="sleep" value="100"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3116" levels="10" name="Item Skill: Paralyze">
+		<!--
+			Description:
+			Lvl 1-10 - Chance: Momentarily throws the target into a state of paralysis during a critical attack.
+		-->
+		<table name="#effectPoint">457 495 532 549 566 582 597 611 624 646 655</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="paralyze"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="40"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="PARALYZE"/>
+		<for>
+			<effect>
+				<triggers>
+					<trigger id="6126" level="1" type="ON_FINISH_EFFECT"/>
+				</triggers>
+				<mul stat="runSpd" value="0.5"/>
+				<mul stat="pAtkSpd" value="0.5"/>
+				<mul stat="mAtkSpd" value="0.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3117" levels="10" name="Item Skill: Medusa">
+		<!--
+			Description:	Chance: Momentarily throws the target into a petrified state during a critical attack.
+			Last modify:	29.01.2009
+		-->
+		<table name="#effectPoint">227 285 369 438 495 549 590 624 650 655</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="FLESH_STONE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="turn_stone"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="40"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PARALYZE"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="Invulnerable"/>
+			<effect name="p_block_debuff"/>
+			<effect name="Petrification">
+				<set stat="regHp" value="0"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3118" levels="10" name="Item Skill: Fear">
+		<!--
+			Description:
+			Lvl 1-10 - Chance: Momentarily throws the target into a state of fear and causes him to flee during a critical attack.
+		-->
+		<table name="#effectPoint">227 285 369 438 495 549 590 624 650 655</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="TURN_FLEE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="turn_flee"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="activateRate" value="40"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect name="Fear"/>
+		</for>
+	</skill>
+	<skill id="3119" levels="15" name="Item Skill: Poison (Critical)">
+		<!--
+			Description: Lvl 1 - Chance: Momentarily throws the target into a poisoned state during a critical attack. Effect 5. Lvl 2 - Chance: Momentarily throws the target into a poisoned state during a critical attack. Effect 5. Lvl 3 - Chance: Momentarily throws the target into a poisoned state during a critical attack. Effect 6. Lvl 4 - Chance: Momentarily throws the target into a poisoned state during a critical attack. Effect 6. Lvl 5 - Chance: Momentarily throws the target into a poisoned state during a critical attack. Effect 6. Lvl 6 - Chance: Momentarily throws the target into a poisoned state during a critical attack. Effect 7. Lvl 7 - Chance: Momentarily throws the target into a poisoned state during a critical attack. Effect 7. Lvl 8 - Chance: Momentarily throws the target into a poisoned state during a critical attack. Effect 7. Lvl 9 - Chance: Momentarily throws the target into a poisoned state during a critical attack. Effect 8. Lvl 10 - Chance: Momentarily throws the target
+			into a poisoned state during a critical attack. Effect 8.
+		-->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#abnormal_level">5 5 6 6 6 7 7 7 8 8</table>
+		<table name="#power">-41 -41 -50 -50 -50 -58 -58 -58 -63 -63</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="DOT_POISON"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="poison"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="activateRate" value="80"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="poison"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="POISON"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="POISON"/>
+		<for>
+			<effect name="t_hp" interval="5" value="#power"/>
+		</for>
+	</skill>
+	<skill id="3120" levels="15" name="Item Skill: Bleed (Critical)">
+		<!--
+			Description: Lvl 1 - Chance: Momentarily throws the target into a bleeding state during a critical attack. Effect 5. Lvl 2 - Chance: Momentarily throws the target into a bleeding state during a critical attack. Effect 5. Lvl 3 - Chance: Momentarily throws the target into a bleeding state during a critical attack. Effect 6. Lvl 4 - Chance: Momentarily throws the target into a bleeding state during a critical attack. Effect 6. Lvl 5 - Chance: Momentarily throws the target into a bleeding state during a critical attack. Effect 6. Lvl 6 - Chance: Momentarily throws the target into a bleeding state during a critical attack. Effect 7. Lvl 7 - Chance: Momentarily throws the target into a bleeding state during a critical attack. Effect 7. Lvl 8 - Chance: Momentarily throws the target into a bleeding state during a critical attack. Effect 7. Lvl 9 - Chance: Momentarily throws the target into a bleeding state during a critical attack. Effect 8. Lvl 10 - Chance: Momentarily throws the target
+			into a bleeding state during a critical attack. Effect 8.
+		-->
+		<table name="#power">5 5 6 6 6 7 7 7 8 8</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#abnormal_level">5 5 6 6 6 7 7 7 8 8</table>
+		<table name="#dot">-44 -44 -54 -54 -54 -62 -62 -62 -67 -67</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="power" value="#power"/>
+		<set name="activateRate" value="100"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="bleeding"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DOT"/>
+		<set name="operate_type" value="A2"/>
+		<set name="nextAction" value="attack"/>
+		<set name="trait" value="BLEED"/>
+		<for>
+			<effect name="t_hp" interval="5" value="#dot"/>
+		</for>
+	</skill>
+	<skill id="3121" levels="10" name="Item Skill: Silence">
+		<!--
+			Description:
+			Lvl 1-10 - Chance: Momentarily blocks the target's magic skill during a critical attack.
+		-->
+		<table name="#effectPoint">457 495 532 549 566 582 597 611 624 646 655</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="SILENCE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="silence"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="40"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MUTE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect name="Mute"/>
+		</for>
+	</skill>
+	<skill id="3122" levels="10" name="Item Skill: Doom">
+		<!--
+			Description:
+			Lvl 1-10 - Chance: Momentarily blocks all of the target's physical and magic skills during a critical attack.
+		-->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="SILENCE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="silence_all"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="activateRate" value="40"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MUTE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect name="MuteAll"/>
+		</for>
+	</skill>
+	<skill id="3123" levels="10" name="Item Skill: Heal">
+		<!--
+			Description:
+			Active: Immediately recovers your HP. Power 308-552.
+		-->
+		<table name="#effectPoint">204 214 224 245 256 267 289 301 313 330</table>
+		<table name="#power">308 337 365 393 421 448 474 498 520 552</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<for>
+			<effect instant="true" name="RestoreHP" value="#power"/>
+		</for>
+	</skill>
+	<skill id="3124" levels="10" name="Item Skill: Blessed Body">
+		<!--
+			Last modify:	01.06.2009
+			Description:
+			Active: Increases the maximum HP by 30-300 temporarily.
+		-->
+		<table name="#addHp">30 60 90 120 150 180 210 240 270 300</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="abnormal_item"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add order="0x60" stat="maxHp" value="#addHp"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3125" levels="10" name="Item Skill: Battle Roar">
+		<!--
+			Last modify:	01.06.2009
+			Description:
+			Lvl 1-10 - Active: Increases the maximum HP temporarily and restores HP by the increased amount.
+		-->
+		<table name="#addHp">70 75 80 85 90 95 100 105 110 115</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="abnormal_item"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add order="0x60" stat="maxHp" value="#addHp"/>
+			</effect>
+			<effect instant="true" name="RestoreHP" value="#addHp">
+				<def name="ignore_bonuses" value="true"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3126" levels="10" name="Item Skill: Prayer">
+		<!--
+			Description:
+			Lvl 1-10 - Active: Increases the effectiveness of HP recovery magic temporarily.
+		-->
+		<table name="#hpEff">1.04 1.04 1.04 1.05 1.05 1.05 1.06 1.06 1.06 1.07</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="abnormal_item"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="hpEff" value="#hpEff"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3127" levels="10" name="Item Skill: Recharge">
+		<!--
+			Description:
+			Active: Regenerates MP. Power 41-69.
+		-->
+		<table name="#effectPoint">440 481 521 562 602 640 677 711 743 789</table>
+		<table name="#power">41 44 47 50 53 57 59 62 65 69</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="6000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<for>
+			<effect instant="true" name="RestoreMP" value="#power"/>
+		</for>
+	</skill>
+	<skill id="3128" levels="10" name="Item Skill: Blessed Soul">
+		<!--
+			Description:
+			Active: Increases the maximum MP by 20-200 temporarily.
+		-->
+		<table name="#addMp">20 40 60 80 100 120 140 160 180 200</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="abnormal_item"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add order="0x60" stat="maxMp" value="#addMp"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3129" levels="15" name="Item Skill: Mana Gain">
+		<!--
+			Description:
+			Lvl 1-10 - Active: Increases the recharge recover rate of MP.
+		-->
+		<table name="#RestoreMPeff">25 27 30 31 32 36 37 38 39 41</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82 82 82 82 82 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="abnormal_item"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add stat="mpEff" value="#RestoreMPeff"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3130" levels="10" name="Item Skill: Ritual">
+		<!--
+			Last edit:	04.03.2009
+			Description:
+			Active: Regenerates CP. Power 264-473.
+		-->
+		<table name="#effectPoint">440 481 521 562 602 640 677 711 743 789</table>
+		<table name="#power">264 289 313 337 361 384 406 427 446 473</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<for>
+			<effect instant="true" name="RestoreCP" value="#power"/>
+		</for>
+	</skill>
+	<skill id="3131" levels="10" name="Item Skill: Cheer">
+		<!--
+			Last change:	31.07.2009
+			Description:
+			Active: Increases the maximum CP by 30-300 temporarily.
+		-->
+		<table name="#addCp">30 60 90 120 150 180 210 240 270 300</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="abnormal_item"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add order="0x60" stat="maxCp" value="#addCp"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3132" levels="15" name="Item Skill: Might">
+		<!--
+			Last change:	29.12.2009
+			Description: Active: Increases P. Atk. temporarily.
+		-->
+		<table name="#pAtk">23.64 27.96 32.76 37.98 43.62 49.62 55.86 62.28 68.88 79.74</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82 82 82 82 82 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="abnormal_item"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add order="0x60" stat="pAtk" value="#pAtk"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3133" levels="15" name="Item Skill: Empower">
+		<!--
+			Description: Active: Increases M. Atk. temporarily.
+			Last modify:	04.06.2009
+		-->
+		<table name="#mAtk">15.9 18.65 21.6 24.9 28.4 32.15 36.05 40.1 44.2 50.95</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82 82 82 82 82 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="abnormal_item"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add order="0x60" stat="mAtk" value="#mAtk"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3134" levels="10" name="Item Skill: Might in Duel - PvP">
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="3135" levels="15" name="Item Skill: Shield">
+		<!--
+			Last change:	1.03.2009
+			Description:	Active: Increases P. Def. temporarily.
+		-->
+		<table name="#rate">30.2 33.72 37.4 41.28 45.32 49.52 53.88 58.32 62.88 70.6</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82 82 82 82 82 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="abnormal_item"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<for>
+			<effect>
+				<add order="0x60" stat="pDef" value="#rate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3136" levels="15" name="Item Skill: Magic Barrier">
+		<!--
+			Last change:	31.07.2009
+			Description: Lvl 1-10 - Active: Increases M. Def. temporarily.
+		-->
+		<table name="#rate">37 40 44 48 52 56 61 65 70 77</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82 82 82 82 82 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="abnormal_item"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add order="0x60" stat="mDef" value="#rate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3137" levels="10" name="Item Skill: Weakness in Duel">
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="3138" levels="10" name="Item Skill: Heal Empower">
+		<!--
+			Last change:	31.07.2009
+			Description: Lvl 1-10 - Active: Increases the power of HP recovery magic temporarily.
+		-->
+		<table name="#healPower">44 49 53 57 61 64 68 72 75 79</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="abnormal_item"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add order="0x60" stat="healPower" value="#healPower"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3139" levels="15" name="Item Skill: Agility">
+		<!--
+			Description:
+			Lvl 1-10 - Active: Increases Dodge temporarily.
+		-->
+		<table name="#rate">1 1 1 2 2 2 3 3 3 4</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82 82 82 82 82 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="abnormal_item"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add order="0x60" stat="pEvasRate" value="#rate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3140" levels="15" name="Item Skill: Guidance">
+		<!--
+			Description:
+			Lvl 1-10 - Active: Increases Accuracy temporarily.
+		-->
+		<table name="#pAccCombat">1 1 1 2 2 2 3 3 3 4</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82 82 82 82 82 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="abnormal_item"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add order="0x60" stat="pAccCombat" value="#pAccCombat"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3141" levels="10" name="Item Skill: Focus">
+		<!--
+			Description:
+			Lvl 1-10 - Active: Increases the chance of a critical attack temporarily.
+		-->
+		<table name="#pCritRate">5 5 5 10 10 10 15 15 15 20</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="abnormal_item"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add stat="pCritRate" value="#pCritRate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3142" levels="10" name="Item Skill: Wild Magic">
+		<!--
+			Description:
+			Lvl 1-10 - Active: Increases the critical attack rate of magic attacks temporarily.
+		-->
+		<table name="#mCritRate">10 10 10 20 20 20 30 30 30 40</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="abnormal_item"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<for>
+			<effect>
+				<add order="0x60" stat="baseMCritRate" value="#mCritRate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3143" levels="10" name="Item Skill: Eva\'s Kiss">
+		<!--
+			Description:
+			Lvl 1-10 - Active: Increases Lung Capacity temporarily.
+		-->
+		<!--. -->
+		<table name="#rate">4 4 4 4 4 6 6 6 6 6</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="abnormal_item"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="breath" value="#rate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3144" levels="10" name="Item Skill: Acrobatics">
+		<!--
+			Description:
+			Active: Increases the height from which you can jump without sustaining damage temporarily.
+		-->
+		<table name="#rate">0.8 0.8 0.8 0.8 0.8 0.6 0.6 0.6 0.6 0.6</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="abnormal_item"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="fall" value="#rate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3145" levels="15" name="Item Skill: Iron Body">
+		<table name="#rate">0.8 0.8 0.8 0.8 0.8 0.6 0.6 0.6 0.6 0.6</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82 82 82 82 82 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="abnormal_item"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="fall" value="#rate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3146" levels="1" name="Item Skill: Return">
+		<!--
+			Description:
+			Lvl 1 - Active: Teleports the caster to a village. Cannot be used in a specially designated place such as the GM Consultation Service.
+		-->
+		<!--. -->
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="mp_consume" value="110"/>
+		<set name="olympiad_use" value="false"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="40"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3147" levels="1" name="Item Skill: Quick Return">
+		<!--
+			Description:
+			Lvl 1 - Active: Teleports the caster to a village. Cannot be used in a specially designated place such as the GM Consultation Service.
+		-->
+		<!--. -->
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="159"/>
+		<set name="olympiad_use" value="false"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="56"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3148" levels="10" name="Item Skill: Vampiric Rage">
+		<!--
+			Description:
+			Lvl 1-10 - Active: Increases the ability to restore some HP from the damage inflicted on an enemy temporarily. Excludes damage by skill or long-range attacks.
+		-->
+		<!--. -->
+		<table name="#TababsorbDam">1 1 2 2 3 3 4 4 5 5</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="abnormal_item"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add order="0x60" stat="absorbDam" value="#TababsorbDam"/>
+				<add order="0x60" stat="absorbPSkillDam" value="#TababsorbDam"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3149" levels="15" name="Item Skill: Aggression">
+		<!--
+			Description: Active: Increases the target's urge to attack. Power 438, 467, 495, 523, 549, 574, 597, 617, 635, 659.
+			Last modify:	28.11.2008
+		-->
+		<table name="#effectPoint">438 467 495 523 549 574 597 617 635 659</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">21 22 24 25 27 29 30 31 33 35 35 35 35 35 35</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="coolTime" value="200"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="1000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<for>
+			<effect name="i_target_me" chance="40"/>
+		</for>
+	</skill>
+	<skill id="3150" levels="15" name="Item Skill: Charm (Active)">
+		<!--
+			Description:
+			Active: Decreases a target's urge to attack. Power 219-330.
+		-->
+		<table name="#power">-219 -234 -248 -262 -275 -287 -299 -309 -318 -330</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82 82 82 82 82 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="180000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect name="i_add_hate" value="#power"/>
+		</for>
+	</skill>
+	<skill id="3151" levels="15" name="Item Skill: Peace">
+		<!--
+			Description:
+			Lvl 1-10 - Active: Puts the opponent's mind at peace and erases the desire to attack.
+		-->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">48 53 55 59 64 65 69 73 77 82 82 82 82 82 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="180000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="AIEFFECTS"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect name="i_delete_hate" chance="80"/>
+		</for>
+	</skill>
+	<skill id="3152" levels="10" name="Item Skill: Trick">
+		<!--
+			Description:
+			Lvl 1-10 - Active: Cancels the target's status.
+		-->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">21 22 24 25 27 29 30 31 33 35</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="180000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="1200"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect name="i_target_cancel" chance="50"/>
+		</for>
+	</skill>
+	<skill id="3153" levels="10" name="Item Skill: Vampiric Touch">
+		<!--
+			Description:
+			Active: Absorbs HP. Power 49-88.
+		-->
+		<table name="#effectPoint">143 162 182 204 227 243 260 280 285 295</table>
+		<table name="#power">49 53 57 61 66 70 74 78 82 88</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">74 79 85 90 97 102 107 112 117 124</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="element" value="unholy"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DRAIN"/>
+		<set name="operate_type" value="A2"/>
+		<set name="absorbPart" value="0.4"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3154" levels="10" name="Item Skill: Mana Burn">
+		<!--
+			Description:
+			Active: Burns up the enemy's MP. Power 68-120.
+			Last modify:	25.11.2008
+		-->
+		<table name="#power">68 73 79 84 90 96 101 107 112 120</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">62 67 70 75 80 85 89 94 98 104</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MANADAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3155" levels="10" name="Item Skill: Unlock">
+		<!--
+			Description: Lvl 1 - Active: Opens level 1 doors with 100% probability, level 2 doors with 30% probability, and chests below level 36 with 90% probability. Requires 4 Keys of a Thief. Lvl 2 - Active: Opens level 1 doors with 100% probability, level 2 doors with 75% probability, and chests below level 40 with 90% probability. Requires 5 Keys of a Thief. Lvl 3 - Active: Opens doors below level 2 with 100% probability, level 3 doors with 5% probability, and chests below level 44 with 90% probability. Requires 6 Keys of a Thief. Lvl 4 - Active: Opens doors below level 2 with 100% probability, level 3 doors with 30% probability, and chests below level 48 with 90% probability. Requires 7 Keys of a Thief. Lvl 5 - Active: Opens doors below level 2 with 100% probability, level 3 doors with 75% probability, and chests below level 52 with 90% probability. Requires 8 Keys of a Thief. Lvl 6 - Active: Opens level 3 doors with 100% probability and chests below level 56 with 90% probability.
+			Requires 10 Keys of a Thief. Lvl 7 - Active: Opens level 3 doors with 100% probability and chests below level 60 with 90% probability. Requires 11 Keys of a Thief. Lvl 8 - Active: Opens level 3 doors with 100% probability and chests below level 64 with 90% probability. Requires 13 Keys of a Thief. Lvl 9 - Active: Opens level 3 doors with 100% probability and chests below level 68 with 90% probability. Requires 15 Keys of a Thief. Lvl 10 - Active: Opens level 3 doors with 100% probability and chests below level 72 with 90% probability. Requires 17 Keys of a Thief.
+		-->
+		<table name="#unlockPower">130 175 205 230 275 300 300 300 300 300</table>
+		<table name="#itemConsumeCount">4 5 6 7 8 10 11 13 15 17</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">21 22 24 25 27 29 30 31 33 35</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="2500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="1661"/>
+		<set name="itemConsumeCount" value="#itemConsumeCount"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="unlockPower" value="#unlockPower"/>
+		<set name="activateRate" value="100"/>
+		<set name="target" value="TARGET_UNLOCKABLE"/>
+		<set name="skillType" value="UNLOCK"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3156" levels="1" name="Item Skill: Firecracker">
+		<!--.
+			Description: Active: Ignites a firecracker.
+		-->
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="mp_consume" value="8"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="60"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HOT"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3157" levels="1" name="Item Skill: Large Firecracker">
+		<!--.
+			Description: Active: Ignites a large firecracker.
+		-->
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="mp_consume" value="24"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="75"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HOT"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3158" levels="1" name="Item Skill: Celestial Shield">
+		<!--
+			Last modify:	07.10.2008
+			Description:
+			Active: Momentarily becomes invincible.
+		-->
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="1800000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="mp_consume" value="82"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="7"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="invincibility"/>
+		<set name="abnormal_cancel_on_action" value="true"/>
+		<set name="magicLevel" value="75"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="Invulnerable"/>
+			<effect name="p_block_debuff"/>
+		</for>
+	</skill>
+	<skill id="3159" levels="3" name="Item Skill: Stealth">
+		<!--
+			Description:
+			Lvl 1-3 - Active: Temporarily blocks a monster's pre-emptive attack. Fighting ability significantly decreases while in effect.
+		-->
+		<table name="#pDef">0.55 0.7 0.85</table>
+		<table name="#mDef">0.55 0.7 0.85</table>
+		<table name="#pEvasRate">12 8 4</table>
+		<table name="#magicLevel">58 67 75</table>
+		<table name="#mp_consume">27 31 34</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="STEALTH"/>
+		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="abnormal_item"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<for>
+			<effect name="SilentMove">
+				<mul stat="pAtk" value="0.55"/>
+				<mul stat="pDef" value="#pDef"/>
+				<mul stat="mDef" value="#mDef"/>
+				<sub stat="pAccCombat" value="12"/>
+				<sub stat="pEvasRate" value="#pEvasRate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3160" levels="9" name="Item Skill: Resurrection">
+		<!--
+			Description:
+			Active: Resurrects a corpse. Restores about 0-70% of additional Exp.
+		-->
+		<table name="#effectPoint">121 196 290 374 460 502 542 595 624</table>
+		<table name="#power">0 20 30 40 50 55 60 65 70</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70</table>
+		<table name="#mp_consume">53 55 59 64 65 69 73 77 82</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="6000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="olympiad_use" value="false"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_CORPSE_PLAYER"/>
+		<set name="skillType" value="RESURRECT"/>
+		<set name="canPet" value="true"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3161" levels="8" name="Item Skill: Skill Clarity">
+		<!--
+			Description: Active: Temporarily decreases the MP consumption rate for physical skills.
+			Last modify:	24.11.2008
+		-->
+		<table name="#mpConsumeRate">0.9 0.85 0.8</table>
+		<table name="#magicLevel">55 64 75</table>
+		<table name="#mp_consume">54 62 69 69 69 69 69 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="abnormal_item"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<for>
+			<effect>
+				<mul stat="mpConsumePhysical" value="#mpConsumeRate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3162" levels="8" name="Item Skill: Spell Clarity">
+		<!--
+			Description: Active: Temporarily decreases the MP consumption rate for magical skills.
+			Last modify:	24.11.2008
+		-->
+		<table name="#mpConsumeRate">0.96 0.93 0.9</table>
+		<table name="#magicLevel">55 64 75</table>
+		<table name="#mp_consume">54 62 69 69 69 69 69 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="abnormal_item"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<for>
+			<effect>
+				<mul stat="mpConsum" value="#mpConsumeRate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3163" levels="3" name="Item Skill: Music Clarity">
+		<!--
+			Description: Active: Temporarily decreases the MP consumption rate for song/dance skills.
+			Last modify:	24.11.2008
+		-->
+		<table name="#magicLevel">55 64 75</table>
+		<table name="#mpDanceConsume">0.9 0.85 0.8</table>
+		<table name="#mp_consume">54 62 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="abnormal_item"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<for>
+			<effect>
+				<mul stat="mpDanceConsume" value="#mpDanceConsume"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3164" levels="3" name="Item Skill: Clarity">
+		<!--
+			Description: Active: Temporarily decreases the MP consumption rates for all skills.
+			Last modify:	21.11.2008
+		-->
+		<table name="#mpConsumeRate">0.9 0.85 0.8</table>
+		<table name="#mpConsumeMagic">0.96 0.93 0.9</table>
+		<table name="#magicLevel">55 64 75</table>
+		<table name="#mp_consume">54 62 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="abnormal_item"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<for>
+			<effect>
+				<mul stat="mpConsum" value="#mpConsumeMagic"/>
+				<mul stat="mpConsumePhysical" value="#mpConsumeRate"/>
+				<mul stat="mpDanceConsume" value="#mpConsumeRate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3165" levels="10" name="Item Skill: Prominence">
+		<!--
+			Description:
+			Active: Detonates a fireball by compressing the air around the caster. Power 61-110.
+		-->
+		<table name="#effectPoint">360 418 477 532 558 582 604 624 641 655</table>
+		<table name="#power">61 66 72 77 82 87 92 97 102 110</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="6000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="element" value="fire"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3167" levels="10" name="Item Skill: Hydro Blast">
+		<!--
+			Description:
+			Active: Unleashes a spray of highly pressurized water. Power 61-110.
+		-->
+		<table name="#effectPoint">360 418 477 532 558 582 604 624 641 655</table>
+		<table name="#power">61 66 72 77 82 87 92 97 102 110</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="6000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="element" value="water"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3168" levels="10" name="Item Skill: Hurricane">
+		<!--
+			Description:
+			Active: Creates a whirlwind of destruction. Power 61-110.
+		-->
+		<table name="#effectPoint">360 418 477 532 558 582 604 624 641 655</table>
+		<table name="#power">61 66 72 77 82 87 92 97 102 110</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="6000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="element" value="wind"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3169" levels="10" name="Item Skill: Stone">
+		<!--
+			Description:
+			Active: Attacks the target with a stone boulder. Power 61-110.
+		-->
+		<table name="#effectPoint">360 418 477 532 558 582 604 624 641 655</table>
+		<table name="#power">61 66 72 77 82 87 92 97 102 110</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="6000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="element" value="earth"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3170" levels="10" name="Item Skill: Solar Flare">
+		<!--
+			Description:
+			Active: Unleashes a holy attack. Power 61-110.
+		-->
+		<table name="#power">61 66 72 77 82 87 92 97 102 110</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="6000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="element" value="holy"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3171" levels="10" name="Item Skill: Shadow Flare">
+		<!--
+			Description:
+			Active: Unleashes a dark attack. Power 61-110.
+		-->
+		<table name="#power">61 66 72 77 82 87 92 97 102 110</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="6000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="element" value="unholy"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3172" levels="10" name="Item Skill: Aura Flare">
+		<!--
+			Description:
+			Lvl 1 - Active: Unleashes an elementally challenged attack. Power 61-110.
+		-->
+		<table name="#effectPoint">360 418 477 532 558 582 604 624 641 655</table>
+		<table name="#power">61 66 72 77 82 87 92 97 102 110</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="6000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3173" levels="10" name="Item Skill: Prominence">
+		<!--
+			Description:
+			Lvl 1 - Active: Unleashes a flaming attack against the enemies near a target. Power 31-55.
+		-->
+		<table name="#power">31 33 36 39 41 44 46 49 51 55</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="castRange" value="500"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="affectLimit" value="6;12"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="affect_range" value="200"/>
+		<set name="element" value="fire"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="3174" levels="10" name="Item Skill: Hydro Blast">
+		<!--
+			Description:
+			Active: Unleashes a powerful liquidy attack against the enemies near a target. Power 31-55
+		-->
+		<table name="#effectPoint">360 418 477 532 558 582 604 624 641 655</table>
+		<table name="#power">31 33 36 39 41 44 46 49 51 55</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="castRange" value="500"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="affectLimit" value="6;12"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="affect_range" value="200"/>
+		<set name="element" value="water"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3175" levels="10" name="Item Skill: Hurricane">
+		<!--
+			Description:
+			Active: Unleashes a powerful gusting attack against the enemies near a target. Power 31-55
+		-->
+		<table name="#effectPoint">360 418 477 532 558 582 604 624 641 655</table>
+		<table name="#power">31 33 36 39 41 44 46 49 51 55</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="castRange" value="500"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="affectLimit" value="6;12"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="affect_range" value="200"/>
+		<set name="element" value="wind"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3176" levels="10" name="Item Skill: Stone">
+		<!--
+			Description:
+			Active: Attacks the enemies near a target with a stone boulder. Power 31-55.
+		-->
+		<table name="#effectPoint">360 418 477 532 558 582 604 624 641 655</table>
+		<table name="#power">31 33 36 39 41 44 46 49 51 55</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="castRange" value="500"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="affectLimit" value="6;12"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="affect_range" value="200"/>
+		<set name="element" value="earth"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3177" levels="10" name="Item Skill: Solar Flare">
+		<!--
+			Description:
+			Active: Unleashes a holy attack against the enemies near a target. Power 31-55.
+		-->
+		<table name="#power">31 33 36 39 41 44 46 49 51 55</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="castRange" value="500"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="affectLimit" value="6;12"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="element" value="holy"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="affect_range" value="200"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3178" levels="10" name="Item Skill: Shadow Flare">
+		<!--
+			Description:
+			Active: Unleashes a dark attack against the enemies near a target. Power 31-55.
+		-->
+		<table name="#power">31 33 36 39 41 44 46 49 51 55</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="castRange" value="500"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="affectLimit" value="6;12"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="element" value="unholy"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="affect_range" value="200"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3179" levels="10" name="Item Skill: Aura Flare">
+		<!--
+			Description:
+			Active: Unleashes an elementally challenged attack against the enemies near a target. Power 31-55
+		-->
+		<table name="#effectPoint">360 418 477 532 558 582 604 624 641 655</table>
+		<table name="#power">31 33 36 39 41 44 46 49 51 55</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="castRange" value="500"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="affectLimit" value="6;12"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="affect_range" value="200"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3180" levels="10" name="Item Skill: Prominence">
+		<!--
+			Description:
+			Active: Unleashes a flaming attack against nearby enemies. Power 31-55.
+		-->
+		<table name="#power">31 33 36 39 41 44 46 49 51 55</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="affectLimit" value="6;12"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="affect_range" value="200"/>
+		<set name="element" value="fire"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3181" levels="10" name="Item Skill: Hydro Blast">
+		<!--
+			Description:
+			Active: Unleashes a powerful liquidy attack against nearby enemies. Power 31-55.
+		-->
+		<table name="#effectPoint">360 418 477 532 558 582 604 624 641 655</table>
+		<table name="#power">31 33 36 39 41 44 46 49 51 55</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="affectLimit" value="6;12"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="affect_range" value="200"/>
+		<set name="element" value="water"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3182" levels="10" name="Item Skill: Hurricane">
+		<!--
+			Description:
+			Active: Unleashes a powerful gusting attack against nearby enemies. Power 31-55.
+		-->
+		<table name="#effectPoint">360 418 477 532 558 582 604 624 641 655</table>
+		<table name="#power">31 33 36 39 41 44 46 49 51 55</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="affectLimit" value="6;12"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="affect_range" value="200"/>
+		<set name="element" value="wind"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3183" levels="10" name="Item Skill: Stone">
+		<!--
+			Description:
+			Active: Unleashes an earthen attack against nearby enemies. Power 31-55.
+		-->
+		<table name="#effectPoint">360 418 477 532 558 582 604 624 641 655</table>
+		<table name="#power">31 33 36 39 41 44 46 49 51 55</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="affectLimit" value="6;12"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="affect_range" value="200"/>
+		<set name="element" value="wind"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3184" levels="10" name="Item Skill: Solar Flare">
+		<!--
+			Description:
+			Active: Unleashes a holy attack against nearby enemies. Power 31-55.
+		-->
+		<table name="#power">31 33 36 39 41 44 46 49 51 55</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="affectLimit" value="6;12"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="element" value="holy"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="affect_range" value="200"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3185" levels="10" name="Item Skill: Shadow Flare">
+		<!--
+			Description:
+			Active: Unleashes a dark attack against nearby enemies. Power 31-55.
+		-->
+		<table name="#power">31 33 36 39 41 44 46 49 51 55</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="affectLimit" value="6;12"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="element" value="unholy"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="affect_range" value="200"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3186" levels="10" name="Item Skill: Aura Flare">
+		<!--
+			Description:
+			Active: Unleashes an elementally challenged attack against nearby enemies. Power 31-55
+		-->
+		<table name="#effectPoint">360 418 477 532 558 582 604 624 641 655</table>
+		<table name="#power">31 33 36 39 41 44 46 49 51 55</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="affectLimit" value="6;12"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="affect_range" value="200"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="3187" levels="15" name="Item Skill: Slow (Active)">
+		<!--
+			Description:
+			Lvl 1-10 - Active: Temporarily decreases a target's speed.
+		-->
+		<table name="#TabrunSpd">0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7</table>
+		<table name="#effectPoint">360 418 477 532 558 582 604 624 641 655</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69 69 69 69 69 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="80"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<for>
+			<effect>
+				<mul order="0x50" stat="runSpd" value="#TabrunSpd"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3188" levels="15" name="Item Skill: Winter (Active)">
+		<!--
+			Description:
+			Lvl 1-10 - Active: Temporarily decreases a target's Atk. Spd.
+		-->
+		<table name="#effectPoint">360 418 477 532 558 582 604 624 641 655</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69 69 69 69 69 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="attack_time_up"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="40"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="affect_range" value="200"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pAtkSpd" value="0.77"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3189" levels="10" name="Item Skill: Stun">
+		<!--
+			Description:
+			Lvl 1-10 - Active: Temporarily throws the target into a state of shock.
+		-->
+		<table name="#effectPoint">96 104 115 128 136 150 154 164 169 173</table>
+		<table name="#power">30 35 44 55 64 79 84 96 102 109</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<table name="#hitTime">4000 1500 1500 1500 1500 1500 1500 1500 1500 1500</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="hitTime" value="#hitTime"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="50"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="nextAction" value="attack"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="3190" levels="10" name="Item Skill: Hold">
+		<!--
+			Description:
+			Lvl 1-10 - Active: Temporarily throws the target into a state of hold. The target cannot be affected by any additional hold attacks while the effect lasts.
+			Last modify:	28.11.2008
+		-->
+		<table name="#effectPoint">457 495 532 549 566 582 597 611 624 646 655</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="ROOT"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="root_magically"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="40"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="ROOT"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="trait" value="HOLD"/>
+		<for>
+			<effect name="p_block_move">
+				<p_defence_trait name="hold" value="100"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3191" levels="10" name="Item Skill: Sleep">
+		<!--
+			Description:
+			Lvl 1-10 - Active: Temporarily throws the target into a state of sleep. The target cannot be affected by any additional sleep attacks while the effect lasts.
+			Last modify:	28.11.2008
+		-->
+		<table name="#effectPoint">227 285 369 438 495 549 590 624 650 655</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="SLEEP"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="sleep"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="40"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="SLEEP"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="trait" value="SLEEP"/>
+		<for>
+			<effect name="Sleep">
+				<p_defence_trait name="sleep" value="100"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3192" levels="10" name="Item Skill: Paralyze">
+		<!--
+			Description: Active: Temporarily throws the target into a state of paralysis.
+			Last modify:	02.06.2008
+		-->
+		<table name="#effectPoint">457 495 532 549 566 582 597 611 624 646 655</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="paralyze"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="40"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PARALYZE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="trait" value="PARALYZE"/>
+		<for>
+			<effect>
+				<triggers>
+					<trigger id="6126" level="1" type="ON_FINISH_EFFECT"/>
+				</triggers>
+				<mul stat="runSpd" value="0.5"/>
+				<mul stat="pAtkSpd" value="0.5"/>
+				<mul stat="mAtkSpd" value="0.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3193" levels="10" name="Item Skill: Medusa">
+		<!--
+			Description: Active: Temporarily throws the target into a petrified state.
+			Last modify:	17.06.2008
+		-->
+		<table name="#effectPoint">227 285 369 438 495 549 590 624 650 655</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="FLESH_STONE"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="turn_stone"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="20"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PARALYZE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<for>
+			<effect name="Invulnerable"/>
+			<effect name="p_block_debuff"/>
+			<effect name="Petrification">
+				<set stat="regHp" value="0"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3194" levels="10" name="Item Skill: Fear">
+		<table name="#effectPoint">227 285 369 438 495 549 590 624 650 655</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="TURN_FLEE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="turn_flee"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="activateRate" value="30"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect name="Fear"/>
+		</for>
+	</skill>
+	<skill id="3195" levels="15" name="Item Skill: Poison (Active)">
+		<table name="#effectPoint">227 285 369 438 495 549 590 624 650 655</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#abnormal_level">5 5 6 6 6 7 7 7 8 8</table>
+		<table name="#power">-41 -41 -50 -50 -50 -58 -58 -58 -63 -63</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69 83 92 69 69 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="DOT_POISON"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="poison"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="70"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="poison"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="POISON"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="trait" value="POISON"/>
+		<for>
+			<effect name="t_hp" interval="5" value="#power"/>
+		</for>
+	</skill>
+	<skill id="3196" levels="15" name="Item Skill: Bleed (Active)">
+		<table name="#effectPoint">119 120 154 180 237 250 279 311 323 333</table>
+		<table name="#power">5 5 6 6 6 7 7 7 8 8</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#abnormal_level">5 5 6 6 6 7 7 7 8 8</table>
+		<table name="#dot">-44 -44 -54 -54 -54 -62 -62 -62 -67 -67</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 78 86 95 69 69 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="100"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="bleeding"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DOT"/>
+		<set name="operate_type" value="A2"/>
+		<set name="nextAction" value="attack"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="trait" value="BLEED"/>
+		<for>
+			<effect name="t_hp" interval="5" value="#dot"/>
+		</for>
+	</skill>
+	<skill id="3197" levels="10" name="Item Skill: Silence">
+		<table name="#effectPoint">457 495 532 549 566 582 597 611 624 646 655</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="SILENCE"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="silence"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="40"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MUTE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect name="Mute"/>
+		</for>
+	</skill>
+	<skill id="3198" levels="10" name="Item Skill: Doom">
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#mp_consume">42 44 48 50 54 57 60 63 65 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="SILENCE"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="silence_all"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="40"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MUTE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect name="MuteAll"/>
+		</for>
+	</skill>
+	<skill id="3199" levels="3" name="Item Skill: Skill Refresh">
+		<!--
+			Description:
+			Active: Temporarily decreases the re-use time for physical skills.
+		-->
+		<table name="#pReuseRate">0.85 0.85 0.85</table>
+		<table name="#magicLevel">55 64 75</table>
+		<table name="#mp_consume">54 62 69</table>
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="abnormal_item"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<for>
+			<effect>
+				<mul stat="pReuse" value="#pReuseRate"/>
+			</effect>
+		</for>
+	</skill>
+</list>

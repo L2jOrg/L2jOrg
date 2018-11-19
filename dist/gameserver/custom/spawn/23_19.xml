@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="training_camp">
+		<point x="82629" y="53097" z="-1488" h="10250" />
+		<npc id="4378" /><!--Инструктор-->
+	</spawn>
+</list>

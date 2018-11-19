@@ -1,0 +1,1 @@
+ant -f build_gs.xml -l build_gs.log

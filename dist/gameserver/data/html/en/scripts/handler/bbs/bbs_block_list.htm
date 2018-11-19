@@ -1,0 +1,44 @@
+<html><body>
+<br><br>
+<table border=0 width=755><tr><td width=10></td><td width=600 align=left>
+<a action="bypass _friendlist_0_">&$904;</a>&nbsp;>&nbsp;Ignore list
+</td></tr>
+</table>
+<center>
+<img src="L2UI.squareblank" width="1" height="10">
+<table border=0 cellspacing=0 cellpadding=0 width=755 bgcolor=A7A19A>
+<tr><td WIDTH=5></td><td height=10 WIDTH=750></td></tr>
+<tr><td></td>
+<td height=20>
+<a action="bypass _friendlist_0_">[Friends list]</a>&nbsp;[Ignore list]
+</td>
+</tr>
+<tr><td></td><td height=10></td></tr>
+</table>
+<br>
+Ignore list
+<img src="L2UI.squaregray" width="755" height="1">
+<br>
+<table border=0 cellspacing=0 cellpadding=0 width=755>
+<tr><td>
+%block_list%
+</td></tr></table>
+<br>
+<img src="L2UI.squaregray" width="755" height="2">
+<br>
+<table width=755 height=45 border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td align=center><table border=0>
+<tr><td fixWIDTH=90 align=right>Character name</td>
+<td fixWIDTH=130><edit var = "Block" width=130 height=15 length="64"></td>
+<td><button value = "Добавить" action="Write _friendblockadd_ 0 0 Block Block Block" back="l2ui_ct1.button.button_df_small_down" width=70 height=25 fore="l2ui_ct1.button.button_df_small" ></td>
+</tr></table>
+</td></tr>
+<tr><td width=755 align=right>
+<img src="L2UI.squaregray" width="755" height="1">
+<img src="L2UI.squareblank" width="755" height="4">
+<button value = "Удалить всех" action="bypass _friendblockdeleteallconfirm_" back="l2ui_ct1.button.button_df_small_down" width=70 height=25 fore="l2ui_ct1.button.button_df_small">
+</td></tr>
+</table>
+%delete_all_msg%<br>
+</body></html>

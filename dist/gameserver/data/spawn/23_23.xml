@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<territory name="innadril08_2323_09">
+		<add x="113588" y="186881" zmin="-3860" zmax="-3160"/>
+		<add x="113215" y="189814" zmin="-3860" zmax="-3160"/>
+		<add x="111062" y="190668" zmin="-3860" zmax="-3160"/>
+		<add x="108486" y="189788" zmin="-3860" zmax="-3160"/>
+		<add x="111497" y="185914" zmin="-3860" zmax="-3160"/>
+	</territory>
+	<spawn name="innadril08_2323_09" count="9" respawn="60">
+		<territory name="innadril08_2323_09"/>
+		<npc id="20135"/><!--Аллигатор-->
+	</spawn>
+	<spawn name="innadril08_2323_09" count="9" respawn="60">
+		<territory name="innadril08_2323_09"/>
+		<npc id="20804"/><!--Юный Крок-->
+	</spawn>
+	<territory name="innadril08_2323_05">
+		<add x="112481" y="166383" zmin="-3574" zmax="-3074"/>
+		<add x="114906" y="167428" zmin="-3574" zmax="-3074"/>
+		<add x="113704" y="170001" zmin="-3574" zmax="-3074"/>
+		<add x="111381" y="170249" zmin="-3574" zmax="-3074"/>
+		<add x="110057" y="167640" zmin="-3574" zmax="-3074"/>
+	</territory>
+	<spawn name="innadril08_2323_05" count="4" respawn="60">
+		<territory name="innadril08_2323_05"/>
+		<npc id="20805"/><!--Юный Кайман-->
+	</spawn>
+	<spawn name="innadril08_2323_05" count="6" respawn="60">
+		<territory name="innadril08_2323_05"/>
+		<npc id="20806"/><!--Юный Крок Воин-->
+	</spawn>
+	<spawn name="innadril08_2323_05" count="4" respawn="60">
+		<territory name="innadril08_2323_05"/>
+		<npc id="20807"/><!--Юный Крок Шаман-->
+	</spawn>
+	<territory name="innadril08_2323_06">
+		<add x="117691" y="166776" zmin="-3574" zmax="-2874"/>
+		<add x="118605" y="169886" zmin="-3574" zmax="-2874"/>
+		<add x="115890" y="170365" zmin="-3574" zmax="-2874"/>
+		<add x="114133" y="169338" zmin="-3574" zmax="-2874"/>
+		<add x="115022" y="167441" zmin="-3574" zmax="-2874"/>
+	</territory>
+	<spawn name="innadril08_2323_06" count="5" respawn="60">
+		<territory name="innadril08_2323_06"/>
+		<npc id="20806"/><!--Юный Крок Воин-->
+	</spawn>
+	<spawn name="innadril08_2323_06" count="6" respawn="60">
+		<territory name="innadril08_2323_06"/>
+		<npc id="20807"/><!--Юный Крок Шаман-->
+	</spawn>
+	<spawn name="innadril08_2323_06" count="4" respawn="60">
+		<territory name="innadril08_2323_06"/>
+		<npc id="20808"/><!--Юный Рогач-->
+	</spawn>
+	<territory name="innadril08_2323_07">
+		<add x="119100" y="166684" zmin="-3549" zmax="-3149"/>
+		<add x="121510" y="167963" zmin="-3549" zmax="-3149"/>
+		<add x="121892" y="168991" zmin="-3549" zmax="-3149"/>
+		<add x="118673" y="169794" zmin="-3549" zmax="-3149"/>
+		<add x="117749" y="166749" zmin="-3549" zmax="-3149"/>
+	</territory>
+	<spawn name="innadril08_2323_07" count="4" respawn="60">
+		<territory name="innadril08_2323_07"/>
+		<npc id="20806"/><!--Юный Крок Воин-->
+	</spawn>
+	<spawn name="innadril08_2323_07" count="4" respawn="60">
+		<territory name="innadril08_2323_07"/>
+		<npc id="20807"/><!--Юный Крок Шаман-->
+	</spawn>
+	<spawn name="innadril08_2323_07" count="2" respawn="60">
+		<territory name="innadril08_2323_07"/>
+		<npc id="20808"/><!--Юный Рогач-->
+	</spawn>
+	<territory name="innadril08_2323_08">
+		<add x="109547" y="185085" zmin="-3840" zmax="-3240"/>
+		<add x="111425" y="185885" zmin="-3840" zmax="-3240"/>
+		<add x="108076" y="190208" zmin="-3840" zmax="-3240"/>
+		<add x="105992" y="187035" zmin="-3840" zmax="-3240"/>
+		<add x="108123" y="184725" zmin="-3840" zmax="-3240"/>
+	</territory>
+	<spawn name="innadril08_2323_08" count="9" respawn="60">
+		<territory name="innadril08_2323_08"/>
+		<npc id="20135"/><!--Аллигатор-->
+	</spawn>
+	<spawn name="innadril08_2323_08" count="9" respawn="60">
+		<territory name="innadril08_2323_08"/>
+		<npc id="20804"/><!--Юный Крок-->
+	</spawn>
+	<territory name="innadril08_2323_01">
+		<add x="104628" y="176783" zmin="-3837" zmax="-3237"/>
+		<add x="107993" y="178074" zmin="-3837" zmax="-3237"/>
+		<add x="106605" y="179551" zmin="-3837" zmax="-3237"/>
+		<add x="104967" y="180118" zmin="-3837" zmax="-3237"/>
+		<add x="103399" y="178771" zmin="-3837" zmax="-3237"/>
+	</territory>
+	<spawn name="innadril08_2323_01" count="4" respawn="60">
+		<territory name="innadril08_2323_01"/>
+		<npc id="20805"/><!--Юный Кайман-->
+	</spawn>
+	<spawn name="innadril08_2323_01" count="5" respawn="60">
+		<territory name="innadril08_2323_01"/>
+		<npc id="20806"/><!--Юный Крок Воин-->
+	</spawn>
+	<territory name="innadril08_2323_02">
+		<add x="105994" y="174722" zmin="-3822" zmax="-3122"/>
+		<add x="109279" y="177098" zmin="-3822" zmax="-3122"/>
+		<add x="108259" y="178061" zmin="-3822" zmax="-3122"/>
+		<add x="104674" y="176632" zmin="-3822" zmax="-3122"/>
+		<add x="104234" y="175221" zmin="-3822" zmax="-3122"/>
+	</territory>
+	<spawn name="innadril08_2323_02" count="5" respawn="60">
+		<territory name="innadril08_2323_02"/>
+		<npc id="20805"/><!--Юный Кайман-->
+	</spawn>
+	<spawn name="innadril08_2323_02" count="5" respawn="60">
+		<territory name="innadril08_2323_02"/>
+		<npc id="20806"/><!--Юный Крок Воин-->
+	</spawn>
+	<territory name="innadril08_2323_03">
+		<add x="108003" y="169603" zmin="-3845" zmax="-3145"/>
+		<add x="111108" y="170278" zmin="-3845" zmax="-3145"/>
+		<add x="109603" y="172721" zmin="-3845" zmax="-3145"/>
+		<add x="107839" y="171463" zmin="-3845" zmax="-3145"/>
+	</territory>
+	<spawn name="innadril08_2323_03" count="3" respawn="60">
+		<territory name="innadril08_2323_03"/>
+		<npc id="20805"/><!--Юный Кайман-->
+	</spawn>
+	<spawn name="innadril08_2323_03" count="3" respawn="60">
+		<territory name="innadril08_2323_03"/>
+		<npc id="20806"/><!--Юный Крок Воин-->
+	</spawn>
+	<spawn name="innadril08_2323_03" count="3" respawn="60">
+		<territory name="innadril08_2323_03"/>
+		<npc id="20807"/><!--Юный Крок Шаман-->
+	</spawn>
+	<territory name="innadril08_2323_04">
+		<add x="108366" y="167487" zmin="-3607" zmax="-3107"/>
+		<add x="109865" y="167556" zmin="-3607" zmax="-3107"/>
+		<add x="111170" y="170215" zmin="-3607" zmax="-3107"/>
+		<add x="108069" y="169469" zmin="-3607" zmax="-3107"/>
+	</territory>
+	<spawn name="innadril08_2323_04" count="1" respawn="60">
+		<territory name="innadril08_2323_04"/>
+		<npc id="20805"/><!--Юный Кайман-->
+	</spawn>
+	<spawn name="innadril08_2323_04" count="2" respawn="60">
+		<territory name="innadril08_2323_04"/>
+		<npc id="20806"/><!--Юный Крок Воин-->
+	</spawn>
+	<spawn name="innadril08_2323_04" count="2" respawn="60">
+		<territory name="innadril08_2323_04"/>
+		<npc id="20807"/><!--Юный Крок Шаман-->
+	</spawn>
+	<territory name="innadril08_2323_16">
+		<add x="119201" y="182015" zmin="-3864" zmax="-3064"/>
+		<add x="119966" y="179871" zmin="-3864" zmax="-3064"/>
+		<add x="122699" y="179881" zmin="-3864" zmax="-3064"/>
+		<add x="124635" y="183126" zmin="-3864" zmax="-3064"/>
+		<add x="122261" y="184514" zmin="-3864" zmax="-3064"/>
+		<add x="120465" y="184416" zmin="-3864" zmax="-3064"/>
+	</territory>
+	<spawn name="innadril08_2323_16" count="5" respawn="60">
+		<territory name="innadril08_2323_16"/>
+		<npc id="20807"/><!--Юный Крок Шаман-->
+	</spawn>
+	<spawn name="innadril08_2323_16" count="5" respawn="60">
+		<territory name="innadril08_2323_16"/>
+		<npc id="20808"/><!--Юный Рогач-->
+	</spawn>
+	<spawn name="innadril08_2323_16" count="2" respawn="80" respawn_random="30">
+		<territory name="innadril08_2323_16"/>
+		<npc id="20991"/><!--Болотная Тварь-->
+	</spawn>
+	<territory name="innadril08_2323_17">
+		<add x="117595" y="179184" zmin="-3864" zmax="-3164"/>
+		<add x="119428" y="176130" zmin="-3864" zmax="-3164"/>
+		<add x="122423" y="177663" zmin="-3864" zmax="-3164"/>
+		<add x="122645" y="179567" zmin="-3864" zmax="-3164"/>
+		<add x="119181" y="179822" zmin="-3864" zmax="-3164"/>
+	</territory>
+	<spawn name="innadril08_2323_17" count="3" respawn="60">
+		<territory name="innadril08_2323_17"/>
+		<npc id="20807"/><!--Юный Крок Шаман-->
+	</spawn>
+	<spawn name="innadril08_2323_17" count="3" respawn="60">
+		<territory name="innadril08_2323_17"/>
+		<npc id="20808"/><!--Юный Рогач-->
+	</spawn>
+	<spawn name="innadril08_2323_17" count="2" respawn="80" respawn_random="30">
+		<territory name="innadril08_2323_17"/>
+		<npc id="20991"/><!--Болотная Тварь-->
+	</spawn>
+	<territory name="innadril08_2323_18">
+		<add x="119441" y="176035" zmin="-3864" zmax="-3364"/>
+		<add x="120774" y="173343" zmin="-3864" zmax="-3364"/>
+		<add x="122784" y="174524" zmin="-3864" zmax="-3364"/>
+		<add x="123900" y="175774" zmin="-3864" zmax="-3364"/>
+		<add x="122192" y="177364" zmin="-3864" zmax="-3364"/>
+	</territory>
+	<spawn name="innadril08_2323_18" count="2" respawn="60">
+		<territory name="innadril08_2323_18"/>
+		<npc id="20807"/><!--Юный Крок Шаман-->
+	</spawn>
+	<spawn name="innadril08_2323_18" count="3" respawn="60">
+		<territory name="innadril08_2323_18"/>
+		<npc id="20808"/><!--Юный Рогач-->
+	</spawn>
+	<spawn name="innadril08_2323_18" count="2" respawn="80" respawn_random="30">
+		<territory name="innadril08_2323_18"/>
+		<npc id="20991"/><!--Болотная Тварь-->
+	</spawn>
+	<territory name="innadril08_2323_19">
+		<add x="117710" y="174418" zmin="-3864" zmax="-3364"/>
+		<add x="118189" y="171450" zmin="-3864" zmax="-3364"/>
+		<add x="120324" y="170244" zmin="-3864" zmax="-3364"/>
+		<add x="120615" y="173433" zmin="-3864" zmax="-3364"/>
+		<add x="119224" y="175813" zmin="-3864" zmax="-3364"/>
+	</territory>
+	<spawn name="innadril08_2323_19" count="3" respawn="60">
+		<territory name="innadril08_2323_19"/>
+		<npc id="20807"/><!--Юный Крок Шаман-->
+	</spawn>
+	<spawn name="innadril08_2323_19" count="2" respawn="60">
+		<territory name="innadril08_2323_19"/>
+		<npc id="20808"/><!--Юный Рогач-->
+	</spawn>
+	<spawn name="innadril08_2323_19" count="2" respawn="80" respawn_random="30">
+		<territory name="innadril08_2323_19"/>
+		<npc id="20991"/><!--Болотная Тварь-->
+	</spawn>
+	<territory name="innadril08_2323_12">
+		<add x="117629" y="188365" zmin="-3844" zmax="-3344"/>
+		<add x="117105" y="186532" zmin="-3844" zmax="-3344"/>
+		<add x="119683" y="185071" zmin="-3844" zmax="-3344"/>
+		<add x="120727" y="185790" zmin="-3844" zmax="-3344"/>
+		<add x="120445" y="188822" zmin="-3844" zmax="-3344"/>
+	</territory>
+	<spawn name="innadril08_2323_12" count="7" respawn="60">
+		<territory name="innadril08_2323_12"/>
+		<npc id="20804"/><!--Юный Крок-->
+	</spawn>
+	<spawn name="innadril08_2323_12" count="7" respawn="60">
+		<territory name="innadril08_2323_12"/>
+		<npc id="20805"/><!--Юный Кайман-->
+	</spawn>
+	<territory name="innadril08_2323_13">
+		<add x="117128" y="186410" zmin="-3844" zmax="-3344"/>
+		<add x="114808" y="182865" zmin="-3844" zmax="-3344"/>
+		<add x="116367" y="181630" zmin="-3844" zmax="-3344"/>
+		<add x="118263" y="182457" zmin="-3844" zmax="-3344"/>
+		<add x="119626" y="184946" zmin="-3844" zmax="-3344"/>
+	</territory>
+	<spawn name="innadril08_2323_13" count="5" respawn="60">
+		<territory name="innadril08_2323_13"/>
+		<npc id="20804"/><!--Юный Крок-->
+	</spawn>
+	<spawn name="innadril08_2323_13" count="6" respawn="60">
+		<territory name="innadril08_2323_13"/>
+		<npc id="20805"/><!--Юный Кайман-->
+	</spawn>
+	<spawn name="innadril08_2323_13" count="4" respawn="60">
+		<territory name="innadril08_2323_13"/>
+		<npc id="20806"/><!--Юный Крок Воин-->
+	</spawn>
+	<territory name="innadril08_2323_14">
+		<add x="117055" y="186454" zmin="-3859" zmax="-3159"/>
+		<add x="113657" y="186777" zmin="-3859" zmax="-3159"/>
+		<add x="109685" y="184974" zmin="-3859" zmax="-3159"/>
+		<add x="111297" y="182576" zmin="-3859" zmax="-3159"/>
+		<add x="114607" y="182717" zmin="-3859" zmax="-3159"/>
+	</territory>
+	<spawn name="innadril08_2323_14" count="10" respawn="60">
+		<territory name="innadril08_2323_14"/>
+		<npc id="20804"/><!--Юный Крок-->
+	</spawn>
+	<spawn name="innadril08_2323_14" count="10" respawn="60">
+		<territory name="innadril08_2323_14"/>
+		<npc id="20805"/><!--Юный Кайман-->
+	</spawn>
+	<spawn name="innadril08_2323_14" count="4" respawn="60">
+		<territory name="innadril08_2323_14"/>
+		<npc id="20806"/><!--Юный Крок Воин-->
+	</spawn>
+	<territory name="innadril08_2323_15">
+		<add x="114465" y="182577" zmin="-3844" zmax="-3144"/>
+		<add x="111626" y="182457" zmin="-3844" zmax="-3144"/>
+		<add x="109676" y="179701" zmin="-3844" zmax="-3144"/>
+		<add x="113393" y="179860" zmin="-3844" zmax="-3144"/>
+	</territory>
+	<spawn name="innadril08_2323_15" count="4" respawn="60">
+		<territory name="innadril08_2323_15"/>
+		<npc id="20804"/><!--Юный Крок-->
+	</spawn>
+	<spawn name="innadril08_2323_15" count="5" respawn="60">
+		<territory name="innadril08_2323_15"/>
+		<npc id="20805"/><!--Юный Кайман-->
+	</spawn>
+	<spawn name="innadril08_2323_15" count="4" respawn="60">
+		<territory name="innadril08_2323_15"/>
+		<npc id="20806"/><!--Юный Крок Воин-->
+	</spawn>
+	<territory name="innadril08_2323_10">
+		<add x="117007" y="186532" zmin="-3848" zmax="-3148"/>
+		<add x="117511" y="188443" zmin="-3848" zmax="-3148"/>
+		<add x="116997" y="190909" zmin="-3848" zmax="-3148"/>
+		<add x="113295" y="189840" zmin="-3848" zmax="-3148"/>
+		<add x="113656" y="186898" zmin="-3848" zmax="-3148"/>
+	</territory>
+	<spawn name="innadril08_2323_10" count="10" respawn="60">
+		<territory name="innadril08_2323_10"/>
+		<npc id="20135"/><!--Аллигатор-->
+	</spawn>
+	<spawn name="innadril08_2323_10" count="10" respawn="60">
+		<territory name="innadril08_2323_10"/>
+		<npc id="20804"/><!--Юный Крок-->
+	</spawn>
+	<territory name="innadril08_2323_11">
+		<add x="120460" y="188982" zmin="-3833" zmax="-3433"/>
+		<add x="119556" y="191947" zmin="-3833" zmax="-3433"/>
+		<add x="117140" y="190802" zmin="-3833" zmax="-3433"/>
+		<add x="117565" y="188450" zmin="-3833" zmax="-3433"/>
+	</territory>
+	<spawn name="innadril08_2323_11" count="5" respawn="60">
+		<territory name="innadril08_2323_11"/>
+		<npc id="20135"/><!--Аллигатор-->
+	</spawn>
+	<spawn name="innadril08_2323_11" count="6" respawn="60">
+		<territory name="innadril08_2323_11"/>
+		<npc id="20804"/><!--Юный Крок-->
+	</spawn>
+	<territory name="innadril08_2323_23">
+		<add x="124934" y="184723" zmin="-3057" zmax="-2257"/>
+		<add x="125973" y="181959" zmin="-3057" zmax="-2257"/>
+		<add x="127077" y="181975" zmin="-3057" zmax="-2257"/>
+		<add x="128031" y="183416" zmin="-3057" zmax="-2257"/>
+		<add x="128049" y="184233" zmin="-3057" zmax="-2257"/>
+		<add x="126636" y="185303" zmin="-3057" zmax="-2257"/>
+	</territory>
+	<spawn name="innadril08_2323_23" count="2" respawn="60">
+		<territory name="innadril08_2323_23"/>
+		<npc id="20807"/><!--Юный Крок Шаман-->
+	</spawn>
+	<spawn name="innadril08_2323_23" count="3" respawn="60">
+		<territory name="innadril08_2323_23"/>
+		<npc id="20808"/><!--Юный Рогач-->
+	</spawn>
+	<spawn name="innadril08_2323_23" count="1" respawn="80" respawn_random="30">
+		<territory name="innadril08_2323_23"/>
+		<npc id="20991"/><!--Болотная Тварь-->
+	</spawn>
+	<territory name="innadril08_2323_20">
+		<add x="114292" y="176728" zmin="-3864" zmax="-3264"/>
+		<add x="116023" y="173783" zmin="-3864" zmax="-3264"/>
+		<add x="117354" y="174178" zmin="-3864" zmax="-3264"/>
+		<add x="119342" y="176103" zmin="-3864" zmax="-3264"/>
+		<add x="117517" y="178950" zmin="-3864" zmax="-3264"/>
+	</territory>
+	<spawn name="innadril08_2323_20" count="2" respawn="60">
+		<territory name="innadril08_2323_20"/>
+		<npc id="20807"/><!--Юный Крок Шаман-->
+	</spawn>
+	<spawn name="innadril08_2323_20" count="3" respawn="60">
+		<territory name="innadril08_2323_20"/>
+		<npc id="20808"/><!--Юный Рогач-->
+	</spawn>
+	<spawn name="innadril08_2323_20" count="2" respawn="80" respawn_random="30">
+		<territory name="innadril08_2323_20"/>
+		<npc id="20991"/><!--Болотная Тварь-->
+	</spawn>
+	<territory name="innadril08_2323_21">
+		<add x="112204" y="174708" zmin="-3836" zmax="-3336"/>
+		<add x="114008" y="171445" zmin="-3836" zmax="-3336"/>
+		<add x="115215" y="171237" zmin="-3836" zmax="-3336"/>
+		<add x="116757" y="172286" zmin="-3836" zmax="-3336"/>
+		<add x="114547" y="176088" zmin="-3836" zmax="-3336"/>
+	</territory>
+	<spawn name="innadril08_2323_21" count="2" respawn="60">
+		<territory name="innadril08_2323_21"/>
+		<npc id="20806"/><!--Юный Крок Воин-->
+	</spawn>
+	<spawn name="innadril08_2323_21" count="3" respawn="60">
+		<territory name="innadril08_2323_21"/>
+		<npc id="20807"/><!--Юный Крок Шаман-->
+	</spawn>
+	<spawn name="innadril08_2323_21" count="2" respawn="60">
+		<territory name="innadril08_2323_21"/>
+		<npc id="20808"/><!--Юный Рогач-->
+	</spawn>
+	<spawn name="innadril08_2323_21" count="1" respawn="80" respawn_random="30">
+		<territory name="innadril08_2323_21"/>
+		<npc id="20991"/><!--Болотная Тварь-->
+	</spawn>
+	<territory name="innadril08_2323_22">
+		<add x="110438" y="173445" zmin="-3844" zmax="-3344"/>
+		<add x="111512" y="171004" zmin="-3844" zmax="-3344"/>
+		<add x="113550" y="172111" zmin="-3844" zmax="-3344"/>
+		<add x="112446" y="174137" zmin="-3844" zmax="-3344"/>
+	</territory>
+	<spawn name="innadril08_2323_22" count="3" respawn="60">
+		<territory name="innadril08_2323_22"/>
+		<npc id="20807"/><!--Юный Крок Шаман-->
+	</spawn>
+	<spawn name="innadril08_2323_22" count="2" respawn="60">
+		<territory name="innadril08_2323_22"/>
+		<npc id="20808"/><!--Юный Рогач-->
+	</spawn>
+	<spawn name="innadril08_mb2323_03" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="125168" y="189556" zmin="-3344" zmax="-2744"/>
+			<add x="126180" y="189112" zmin="-3344" zmax="-2744"/>
+			<add x="127072" y="190596" zmin="-3344" zmax="-2744"/>
+			<add x="126164" y="191364" zmin="-3344" zmax="-2744"/>
+			<add x="124876" y="190832" zmin="-3344" zmax="-2744"/>
+		</territory>
+		<npc id="25192"/><!--Панатен Хранитель Земли-->
+	</spawn>
+	<spawn name="innadril08_mb2323_02" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="106444" y="167828" zmin="-3508" zmax="-2908"/>
+			<add x="107516" y="167576" zmin="-3508" zmax="-2908"/>
+			<add x="107708" y="168688" zmin="-3508" zmax="-2908"/>
+			<add x="106972" y="169012" zmin="-3508" zmax="-2908"/>
+			<add x="106268" y="168516" zmin="-3508" zmax="-2908"/>
+		</territory>
+		<npc id="25057"/><!--Птицезмей-->
+	</spawn>
+	<spawn name="innadril08_mb2323_01" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="126076" y="173788" zmin="-3188" zmax="-2588"/>
+			<add x="126688" y="173368" zmin="-3188" zmax="-2588"/>
+			<add x="127436" y="173972" zmin="-3188" zmax="-2588"/>
+			<add x="127356" y="175192" zmin="-3188" zmax="-2588"/>
+			<add x="126672" y="175488" zmin="-3188" zmax="-2588"/>
+			<add x="125808" y="174960" zmin="-3188" zmax="-2588"/>
+		</territory>
+		<npc id="25498"/><!--Оруженосец Фафуриона Истари-->
+	</spawn>
+	<spawn name="innadril08_2323_25s" count="5" respawn="60">
+		<territory>
+			<add x="116575" y="186099" zmin="-3713" zmax="-3213"/>
+			<add x="112043" y="185565" zmin="-3713" zmax="-3213"/>
+			<add x="112856" y="184494" zmin="-3713" zmax="-3213"/>
+			<add x="115962" y="185031" zmin="-3713" zmax="-3213"/>
+		</territory>
+		<npc id="20806"/><!--Юный Крок Воин-->
+	</spawn>	
+	<spawn name="Hisildrom" count="1" respawn="86400" respawn_random="12000">
+		<point x="29096" y="179160" z="-3616" h="21344"/>
+		<npc id="25478"/><!--Хисилром Жрица Шилен-->
+	</spawn>
+</list>

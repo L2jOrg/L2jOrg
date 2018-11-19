@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<territory name="oren11_1919_01">
+		<add x="-14351" y="32923" zmin="-3771" zmax="-2971"/>
+		<add x="-9433" y="32932" zmin="-3771" zmax="-2971"/>
+		<add x="-8882" y="36682" zmin="-3771" zmax="-2971"/>
+		<add x="-12426" y="37272" zmin="-3771" zmax="-2971"/>
+	</territory>
+	<spawn name="oren11_1919_01" count="4" respawn="16">
+		<territory name="oren11_1919_01"/>
+		<npc id="20015"/><!--Лесной Эльф-Зомби-->
+	</spawn>
+	<spawn name="oren11_1919_01" count="6" respawn="16">
+		<territory name="oren11_1919_01"/>
+		<npc id="20433"/><!--Гнойная Летучая Мышь-->
+	</spawn>
+	<territory name="oren11_1919_03">
+		<add x="-23793" y="41123" zmin="-3858" zmax="-2858"/>
+		<add x="-18815" y="36887" zmin="-3858" zmax="-2858"/>
+		<add x="-17105" y="38675" zmin="-3858" zmax="-2858"/>
+		<add x="-19942" y="42882" zmin="-3858" zmax="-2858"/>
+		<add x="-24189" y="44025" zmin="-3858" zmax="-2858"/>
+	</territory>
+	<spawn name="oren11_1919_03" count="8" respawn="16">
+		<territory name="oren11_1919_03"/>
+		<npc id="20015"/><!--Лесной Эльф-Зомби-->
+	</spawn>
+	<spawn name="oren11_1919_03" count="7" respawn="16">
+		<territory name="oren11_1919_03"/>
+		<npc id="20433"/><!--Гнойная Летучая Мышь-->
+	</spawn>
+	<spawn name="oren11_1919_03" count="7" respawn="16">
+		<territory name="oren11_1919_03"/>
+		<npc id="20020"/><!--Лесной Эльф Исследователь-Зомби-->
+	</spawn>
+	<territory name="oren11_1919_02">
+		<add x="-18899" y="33037" zmin="-3768" zmax="-2768"/>
+		<add x="-14915" y="32907" zmin="-3768" zmax="-2768"/>
+		<add x="-15467" y="37314" zmin="-3768" zmax="-2768"/>
+		<add x="-17031" y="38465" zmin="-3768" zmax="-2768"/>
+		<add x="-20941" y="34652" zmin="-3768" zmax="-2768"/>
+	</territory>
+	<spawn name="oren11_1919_02" count="9" respawn="16">
+		<territory name="oren11_1919_02"/>
+		<npc id="20015"/><!--Лесной Эльф-Зомби-->
+	</spawn>
+	<spawn name="oren11_1919_02" count="10" respawn="16">
+		<territory name="oren11_1919_02"/>
+		<npc id="20433"/><!--Гнойная Летучая Мышь-->
+	</spawn>
+	<territory name="oren11_1919_10">
+		<add x="-19151" y="49353" zmin="-3858" zmax="-3258"/>
+		<add x="-19835" y="43104" zmin="-3858" zmax="-3258"/>
+		<add x="-17023" y="38730" zmin="-3858" zmax="-3258"/>
+		<add x="-14574" y="46523" zmin="-3858" zmax="-3258"/>
+	</territory>
+	<spawn name="oren11_1919_10" count="4" respawn="16">
+		<territory name="oren11_1919_10"/>
+		<npc id="20433"/><!--Гнойная Летучая Мышь-->
+	</spawn>
+	<spawn name="oren11_1919_10" count="7" respawn="16">
+		<territory name="oren11_1919_10"/>
+		<npc id="20020"/><!--Лесной Эльф Исследователь-Зомби-->
+	</spawn>
+	<spawn name="oren11_1919_10" count="7" respawn="16">
+		<territory name="oren11_1919_10"/>
+		<npc id="20379"/><!--Каменный Воитель-->
+	</spawn>
+	<spawn name="oren11_1919_10" count="4" respawn="16">
+		<territory name="oren11_1919_10"/>
+		<npc id="20025"/><!--Младший Темный Ужас-->
+	</spawn>
+	<territory name="oren11_1919_12">
+		<add x="-15755" y="57027" zmin="-3858" zmax="-3258"/>
+		<add x="-16559" y="53409" zmin="-3858" zmax="-3258"/>
+		<add x="-9814" y="50129" zmin="-3858" zmax="-3258"/>
+		<add x="-9000" y="51978" zmin="-3858" zmax="-3258"/>
+	</territory>
+	<spawn name="oren11_1919_12" count="7" respawn="16">
+		<territory name="oren11_1919_12"/>
+		<npc id="20379"/><!--Каменный Воитель-->
+	</spawn>
+	<spawn name="oren11_1919_12" count="6" respawn="16">
+		<territory name="oren11_1919_12"/>
+		<npc id="20025"/><!--Младший Темный Ужас-->
+	</spawn>
+	<spawn name="oren11_1919_12" count="7" respawn="16">
+		<territory name="oren11_1919_12"/>
+		<npc id="20392"/><!--Красноглазая Летучая Мышь-->
+	</spawn>
+	<territory name="oren11_1919_11">
+		<add x="-16650" y="53305" zmin="-3858" zmax="-3258"/>
+		<add x="-19173" y="49650" zmin="-3858" zmax="-3258"/>
+		<add x="-12703" y="45589" zmin="-3858" zmax="-3258"/>
+		<add x="-9967" y="50037" zmin="-3858" zmax="-3258"/>
+	</territory>
+	<spawn name="oren11_1919_11" count="8" respawn="16">
+		<territory name="oren11_1919_11"/>
+		<npc id="20025"/><!--Младший Темный Ужас-->
+	</spawn>
+	<spawn name="oren11_1919_11" count="9" respawn="16">
+		<territory name="oren11_1919_11"/>
+		<npc id="20392"/><!--Красноглазая Летучая Мышь-->
+	</spawn>
+	<spawn name="oren11_1919_11" count="8" respawn="16">
+		<territory name="oren11_1919_11"/>
+		<npc id="20105"/><!--Темный Ужас-->
+	</spawn>
+	<territory name="oren11_1919_14">
+		<add x="-9231" y="50912" zmin="-3858" zmax="-3258"/>
+		<add x="-13638" y="43733" zmin="-3858" zmax="-3258"/>
+		<add x="-6052" y="39392" zmin="-3858" zmax="-3258"/>
+		<add x="-5220" y="42851" zmin="-3858" zmax="-3258"/>
+	</territory>
+	<spawn name="oren11_1919_14" count="8" respawn="16">
+		<territory name="oren11_1919_14"/>
+		<npc id="20020"/><!--Лесной Эльф Исследователь-Зомби-->
+	</spawn>
+	<spawn name="oren11_1919_14" count="7" respawn="16">
+		<territory name="oren11_1919_14"/>
+		<npc id="20379"/><!--Каменный Воитель-->
+	</spawn>
+	<spawn name="oren11_1919_14" count="7" respawn="16">
+		<territory name="oren11_1919_14"/>
+		<npc id="20392"/><!--Красноглазая Летучая Мышь-->
+	</spawn>
+	<territory name="oren11_1919_13">
+		<add x="-15043" y="44369" zmin="-3858" zmax="-3258"/>
+		<add x="-16874" y="38712" zmin="-3858" zmax="-3258"/>
+		<add x="-8916" y="36846" zmin="-3858" zmax="-3258"/>
+		<add x="-6260" y="39386" zmin="-3858" zmax="-3258"/>
+	</territory>
+	<spawn name="oren11_1919_13" count="7" respawn="16">
+		<territory name="oren11_1919_13"/>
+		<npc id="20433"/><!--Гнойная Летучая Мышь-->
+	</spawn>
+	<spawn name="oren11_1919_13" count="6" respawn="16">
+		<territory name="oren11_1919_13"/>
+		<npc id="20020"/><!--Лесной Эльф Исследователь-Зомби-->
+	</spawn>
+	<spawn name="oren11_1919_13" count="7" respawn="16">
+		<territory name="oren11_1919_13"/>
+		<npc id="20025"/><!--Младший Темный Ужас-->
+	</spawn>
+	<territory name="oren11_1919_05">
+		<add x="-29947" y="49801" zmin="-3858" zmax="-3258"/>
+		<add x="-28851" y="45794" zmin="-3858" zmax="-3258"/>
+		<add x="-24392" y="44255" zmin="-3858" zmax="-3258"/>
+		<add x="-25867" y="52746" zmin="-3858" zmax="-3258"/>
+		<add x="-28741" y="52709" zmin="-3858" zmax="-3258"/>
+	</territory>
+	<spawn name="oren11_1919_05" count="7" respawn="16">
+		<territory name="oren11_1919_05"/>
+		<npc id="20020"/><!--Лесной Эльф Исследователь-Зомби-->
+	</spawn>
+	<spawn name="oren11_1919_05" count="6" respawn="16">
+		<territory name="oren11_1919_05"/>
+		<npc id="20379"/><!--Каменный Воитель-->
+	</spawn>
+	<spawn name="oren11_1919_05" count="7" respawn="16">
+		<territory name="oren11_1919_05"/>
+		<npc id="20025"/><!--Младший Темный Ужас-->
+	</spawn>
+	<territory name="oren11_1919_04">
+		<add x="-29028" y="41536" zmin="-3858" zmax="-2858"/>
+		<add x="-26274" y="38492" zmin="-3858" zmax="-2858"/>
+		<add x="-23997" y="41121" zmin="-3858" zmax="-2858"/>
+		<add x="-24360" y="44060" zmin="-3858" zmax="-2858"/>
+		<add x="-29083" y="45507" zmin="-3858" zmax="-2858"/>
+	</territory>
+	<spawn name="oren11_1919_04" count="9" respawn="16">
+		<territory name="oren11_1919_04"/>
+		<npc id="20433"/><!--Гнойная Летучая Мышь-->
+	</spawn>
+	<spawn name="oren11_1919_04" count="10" respawn="16">
+		<territory name="oren11_1919_04"/>
+		<npc id="20020"/><!--Лесной Эльф Исследователь-Зомби-->
+	</spawn>
+	<territory name="oren11_1919_07">
+		<add x="-22824" y="61382" zmin="-3858" zmax="-3258"/>
+		<add x="-24179" y="57505" zmin="-3858" zmax="-3258"/>
+		<add x="-16659" y="53435" zmin="-3858" zmax="-3258"/>
+		<add x="-15953" y="57051" zmin="-3858" zmax="-3258"/>
+		<add x="-19035" y="60852" zmin="-3858" zmax="-3258"/>
+	</territory>
+	<spawn name="oren11_1919_07" count="7" respawn="16">
+		<territory name="oren11_1919_07"/>
+		<npc id="20025"/><!--Младший Темный Ужас-->
+	</spawn>
+	<spawn name="oren11_1919_07" count="9" respawn="16">
+		<territory name="oren11_1919_07"/>
+		<npc id="20392"/><!--Красноглазая Летучая Мышь-->
+	</spawn>
+	<spawn name="oren11_1919_07" count="9" respawn="16">
+		<territory name="oren11_1919_07"/>
+		<npc id="20105"/><!--Темный Ужас-->
+	</spawn>
+	<territory name="oren11_1919_06">
+		<add x="-28868" y="58165" zmin="-3858" zmax="-3258"/>
+		<add x="-28594" y="53109" zmin="-3858" zmax="-3258"/>
+		<add x="-25951" y="52889" zmin="-3858" zmax="-3258"/>
+		<add x="-23109" y="61454" zmin="-3858" zmax="-3258"/>
+		<add x="-26727" y="61484" zmin="-3858" zmax="-3258"/>
+	</territory>
+	<spawn name="oren11_1919_06" count="10" respawn="16">
+		<territory name="oren11_1919_06"/>
+		<npc id="20025"/><!--Младший Темный Ужас-->
+	</spawn>
+	<spawn name="oren11_1919_06" count="10" respawn="16">
+		<territory name="oren11_1919_06"/>
+		<npc id="20392"/><!--Красноглазая Летучая Мышь-->
+	</spawn>
+	<territory name="oren11_1919_09">
+		<add x="-25159" y="49595" zmin="-3858" zmax="-2858"/>
+		<add x="-24187" y="44190" zmin="-3858" zmax="-2858"/>
+		<add x="-20100" y="43086" zmin="-3858" zmax="-2858"/>
+		<add x="-19330" y="49517" zmin="-3858" zmax="-2858"/>
+	</territory>
+	<spawn name="oren11_1919_09" count="3" respawn="16">
+		<territory name="oren11_1919_09"/>
+		<npc id="20433"/><!--Гнойная Летучая Мышь-->
+	</spawn>
+	<spawn name="oren11_1919_09" count="6" respawn="16">
+		<territory name="oren11_1919_09"/>
+		<npc id="20020"/><!--Лесной Эльф Исследователь-Зомби-->
+	</spawn>
+	<spawn name="oren11_1919_09" count="6" respawn="16">
+		<territory name="oren11_1919_09"/>
+		<npc id="20379"/><!--Каменный Воитель-->
+	</spawn>
+	<spawn name="oren11_1919_09" count="3" respawn="16">
+		<territory name="oren11_1919_09"/>
+		<npc id="20025"/><!--Младший Темный Ужас-->
+	</spawn>
+	<territory name="oren11_1919_08">
+		<add x="-25780" y="52869" zmin="-3858" zmax="-3258"/>
+		<add x="-25177" y="49751" zmin="-3858" zmax="-3258"/>
+		<add x="-19390" y="49709" zmin="-3858" zmax="-3258"/>
+		<add x="-16767" y="53337" zmin="-3858" zmax="-3258"/>
+		<add x="-24219" y="57249" zmin="-3858" zmax="-3258"/>
+	</territory>
+	<spawn name="oren11_1919_08" count="6" respawn="16">
+		<territory name="oren11_1919_08"/>
+		<npc id="20379"/><!--Каменный Воитель-->
+	</spawn>
+	<spawn name="oren11_1919_08" count="9" respawn="16">
+		<territory name="oren11_1919_08"/>
+		<npc id="20025"/><!--Младший Темный Ужас-->
+	</spawn>
+	<spawn name="oren11_1919_08" count="9" respawn="16">
+		<territory name="oren11_1919_08"/>
+		<npc id="20392"/><!--Красноглазая Летучая Мышь-->
+	</spawn>
+	<spawn name="oren11_1919_08" count="6" respawn="16">
+		<territory name="oren11_1919_08"/>
+		<npc id="20105"/><!--Темный Ужас-->
+	</spawn>
+	<spawn name="oren24_1919_01" count="6" respawn="20">
+		<territory>
+			<add x="-32578" y="58756" zmin="-3643" zmax="-3043"/>
+			<add x="-32590" y="52004" zmin="-3643" zmax="-3043"/>
+			<add x="-30243" y="53180" zmin="-3643" zmax="-3043"/>
+			<add x="-30174" y="58430" zmin="-3643" zmax="-3043"/>
+		</territory>
+		<npc id="20433"/><!--Гнойная Летучая Мышь-->
+	</spawn>
+	<territory name="oren24_1919_02">
+		<add x="-32548" y="65176" zmin="-3785" zmax="-3185"/>
+		<add x="-32593" y="58947" zmin="-3785" zmax="-3185"/>
+		<add x="-30127" y="58575" zmin="-3785" zmax="-3185"/>
+		<add x="-26428" y="65210" zmin="-3785" zmax="-3185"/>
+	</territory>
+	<spawn name="oren24_1919_02" count="9" respawn="20">
+		<territory name="oren24_1919_02"/>
+		<npc id="20433"/><!--Гнойная Летучая Мышь-->
+	</spawn>
+	<spawn name="oren24_1919_02" count="4" respawn="20">
+		<territory name="oren24_1919_02"/>
+		<npc id="20392"/><!--Красноглазая Летучая Мышь-->
+	</spawn>
+	<spawn name="oren01_qm1919_01" count="1" respawn="180">
+		<territory>
+			<add x="-13224" y="40592" zmin="-3904" zmax="-3504"/>
+			<add x="-11400" y="40768" zmin="-3904" zmax="-3504"/>
+			<add x="-11996" y="41948" zmin="-3904" zmax="-3504"/>
+			<add x="-13312" y="41696" zmin="-3904" zmax="-3504"/>
+		</territory>
+		<npc id="27079"/><!--Черная Ива Наблюдатель-->
+	</spawn>
+	<spawn name="oren01_qm1919_02" count="1" respawn="180">
+		<territory>
+			<add x="-11936" y="44640" zmin="-3872" zmax="-3472"/>
+			<add x="-11076" y="44696" zmin="-3872" zmax="-3472"/>
+			<add x="-11052" y="45932" zmin="-3872" zmax="-3472"/>
+			<add x="-12028" y="46368" zmin="-3872" zmax="-3472"/>
+			<add x="-12388" y="45408" zmin="-3872" zmax="-3472"/>
+		</territory>
+		<npc id="27079"/><!--Черная Ива Наблюдатель-->
+	</spawn>
+	<spawn name="oren01_qm1919_03" count="1" respawn="180">
+		<territory>
+			<add x="-16296" y="48176" zmin="-3848" zmax="-3448"/>
+			<add x="-14976" y="48072" zmin="-3848" zmax="-3448"/>
+			<add x="-14864" y="49388" zmin="-3848" zmax="-3448"/>
+			<add x="-16248" y="49484" zmin="-3848" zmax="-3448"/>
+		</territory>
+		<npc id="27079"/><!--Черная Ива Наблюдатель-->
+	</spawn>
+	<spawn name="oren01_qm1919_04" count="1" respawn="180">
+		<territory>
+			<add x="-19320" y="43592" zmin="-3880" zmax="-3480"/>
+			<add x="-17980" y="43320" zmin="-3880" zmax="-3480"/>
+			<add x="-18084" y="44700" zmin="-3880" zmax="-3480"/>
+			<add x="-19332" y="44768" zmin="-3880" zmax="-3480"/>
+		</territory>
+		<npc id="27079"/><!--Черная Ива Наблюдатель-->
+	</spawn>
+	<spawn name="oren01_qm1919_05" count="1" respawn="180">
+		<territory>
+			<add x="-20924" y="47988" zmin="-3860" zmax="-3460"/>
+			<add x="-20108" y="47912" zmin="-3860" zmax="-3460"/>
+			<add x="-19828" y="48644" zmin="-3860" zmax="-3460"/>
+			<add x="-20384" y="49320" zmin="-3860" zmax="-3460"/>
+			<add x="-21288" y="48860" zmin="-3860" zmax="-3460"/>
+		</territory>
+		<npc id="27079"/><!--Черная Ива Наблюдатель-->
+	</spawn>
+	<spawn name="oren01_qm1919_06" count="1" respawn="180">
+		<territory>
+			<add x="-25600" y="48832" zmin="-3844" zmax="-3444"/>
+			<add x="-23988" y="49036" zmin="-3844" zmax="-3444"/>
+			<add x="-24000" y="50368" zmin="-3844" zmax="-3444"/>
+			<add x="-25744" y="50348" zmin="-3844" zmax="-3444"/>
+		</territory>
+		<npc id="27079"/><!--Черная Ива Наблюдатель-->
+	</spawn>
+	<spawn name="oren01_qm1919_07" count="1" respawn="180">
+		<territory>
+			<add x="-25976" y="54092" zmin="-3844" zmax="-3444"/>
+			<add x="-24904" y="54284" zmin="-3844" zmax="-3444"/>
+			<add x="-24824" y="55444" zmin="-3844" zmax="-3444"/>
+			<add x="-25860" y="55584" zmin="-3844" zmax="-3444"/>
+		</territory>
+		<npc id="27079"/><!--Черная Ива Наблюдатель-->
+	</spawn>
+	<spawn name="oren01_qm1919_08" count="1" respawn="180">
+		<territory>
+			<add x="-21980" y="56384" zmin="-3852" zmax="-3452"/>
+			<add x="-20652" y="56644" zmin="-3852" zmax="-3452"/>
+			<add x="-21272" y="58064" zmin="-3852" zmax="-3452"/>
+			<add x="-22292" y="57840" zmin="-3852" zmax="-3452"/>
+		</territory>
+		<npc id="27079"/><!--Черная Ива Наблюдатель-->
+	</spawn>
+	<spawn name="oren01_qm1919_09" count="1" respawn="180">
+		<territory>
+			<add x="-19752" y="52820" zmin="-3868" zmax="-3468"/>
+			<add x="-18364" y="52744" zmin="-3868" zmax="-3468"/>
+			<add x="-18036" y="54216" zmin="-3868" zmax="-3468"/>
+			<add x="-19544" y="54244" zmin="-3868" zmax="-3468"/>
+		</territory>
+		<npc id="27079"/><!--Черная Ива Наблюдатель-->
+	</spawn>
+	<spawn name="oren01_qm1919_10" count="1" respawn="180">
+		<territory>
+			<add x="-3484" y="52655" zmin="-3532" zmax="-3332"/>
+			<add x="-2732" y="52765" zmin="-3532" zmax="-3332"/>
+			<add x="-2760" y="53268" zmin="-3532" zmax="-3332"/>
+			<add x="-3484" y="53103" zmin="-3532" zmax="-3332"/>
+		</territory>
+		<npc id="27110"/><!--Шисласис-->
+	</spawn>
+	<spawn name="oren01_qm1919_11" count="5" respawn="180">
+		<territory>
+			<add x="-12208" y="57184" zmin="-3808" zmax="-3608"/>
+			<add x="-10604" y="56900" zmin="-3808" zmax="-3608"/>
+			<add x="-8428" y="57860" zmin="-3808" zmax="-3608"/>
+			<add x="-8736" y="58104" zmin="-3808" zmax="-3608"/>
+			<add x="-11212" y="58436" zmin="-3808" zmax="-3608"/>
+			<add x="-12388" y="58128" zmin="-3808" zmax="-3608"/>
+		</territory>
+		<npc id="27118"/><!--Черная Ива-->
+	</spawn>
+	<spawn name="oren11_1919_16s" count="4" respawn="16">
+		<territory>
+			<add x="-14661" y="42184" zmin="-3867" zmax="-3267"/>
+			<add x="-15285" y="39296" zmin="-3867" zmax="-3267"/>
+			<add x="-10661" y="38864" zmin="-3867" zmax="-3267"/>
+			<add x="-10764" y="41228" zmin="-3867" zmax="-3267"/>
+		</territory>
+		<npc id="20379"/><!--Каменный Воитель-->
+	</spawn>
+	<spawn name="oren11_1919_15s" count="4" respawn="16">
+		<territory>
+			<add x="-11839" y="46071" zmin="-3867" zmax="-3267"/>
+			<add x="-10758" y="42398" zmin="-3867" zmax="-3267"/>
+			<add x="-7245" y="43670" zmin="-3867" zmax="-3267"/>
+			<add x="-8822" y="47958" zmin="-3867" zmax="-3267"/>
+		</territory>
+		<npc id="20025"/><!--Младший Темный Ужас-->
+	</spawn>
+	<territory name="oren11_1919_19s">
+		<add x="-21351" y="54983" zmin="-3867" zmax="-3267"/>
+		<add x="-23686" y="52500" zmin="-3867" zmax="-3267"/>
+		<add x="-20410" y="50696" zmin="-3867" zmax="-3267"/>
+		<add x="-19515" y="52735" zmin="-3867" zmax="-3267"/>
+	</territory>
+	<spawn name="oren11_1919_19s" count="2" respawn="16">
+		<territory name="oren11_1919_19s"/>
+		<npc id="20025"/><!--Младший Темный Ужас-->
+	</spawn>
+	<spawn name="oren11_1919_19s" count="3" respawn="16">
+		<territory name="oren11_1919_19s"/>
+		<npc id="20105"/><!--Темный Ужас-->
+	</spawn>
+	<spawn name="oren11_1919_18s" count="4" respawn="16">
+		<territory>
+			<add x="-15121" y="51729" zmin="-3867" zmax="-3267"/>
+			<add x="-17455" y="49246" zmin="-3867" zmax="-3267"/>
+			<add x="-14179" y="47442" zmin="-3867" zmax="-3267"/>
+			<add x="-13284" y="49481" zmin="-3867" zmax="-3267"/>
+		</territory>
+		<npc id="20105"/><!--Темный Ужас-->
+	</spawn>
+	<territory name="oren11_1919_17s">
+		<add x="-18074" y="47573" zmin="-3867" zmax="-3267"/>
+		<add x="-19235" y="44659" zmin="-3867" zmax="-3267"/>
+		<add x="-16772" y="42975" zmin="-3867" zmax="-3267"/>
+		<add x="-15345" y="46608" zmin="-3867" zmax="-3267"/>
+	</territory>
+	<spawn name="oren11_1919_17s" count="2" respawn="16">
+		<territory name="oren11_1919_17s"/>
+		<npc id="20025"/><!--Младший Темный Ужас-->
+	</spawn>
+	<spawn name="oren11_1919_17s" count="2" respawn="16">
+		<territory name="oren11_1919_17s"/>
+		<npc id="20105"/><!--Темный Ужас-->
+	</spawn>
+	<spawn name="oren07_npc1919_gd02" count="1" respawn="60">
+		<territory>
+			<add x="-26988" y="61664" zmin="-3760" zmax="-3360"/>
+			<add x="-16664" y="58936" zmin="-3760" zmax="-3360"/>
+			<add x="-19412" y="61968" zmin="-3760" zmax="-3360"/>
+			<add x="-24608" y="62524" zmin="-3760" zmax="-3360"/>
+		</territory>
+		<npc id="31850"/><!--Тлетворный Древень-->
+	</spawn>
+	<spawn name="oren07_npc1919_gd01" count="1" respawn="60">
+		<territory>
+			<add x="-15852" y="54236" zmin="-3772" zmax="-3272"/>
+			<add x="-8748" y="50036" zmin="-3772" zmax="-3272"/>
+			<add x="-7336" y="51208" zmin="-3772" zmax="-3272"/>
+			<add x="-13424" y="57060" zmin="-3772" zmax="-3272"/>
+			<add x="-16468" y="58204" zmin="-3772" zmax="-3272"/>
+		</territory>
+		<npc id="31845"/><!--Кровавая Фея-->
+	</spawn>
+	<spawn name="oren07_npc1919_gd04" count="1" respawn="60">
+		<territory>
+			<add x="-28840" y="46164" zmin="-3756" zmax="-3356"/>
+			<add x="-28368" y="46168" zmin="-3756" zmax="-3356"/>
+			<add x="-28424" y="53236" zmin="-3756" zmax="-3356"/>
+			<add x="-28956" y="53284" zmin="-3756" zmax="-3356"/>
+			<add x="-30256" y="50372" zmin="-3756" zmax="-3356"/>
+			<add x="-30076" y="48372" zmin="-3756" zmax="-3356"/>
+		</territory>
+		<npc id="31850"/><!--Тлетворный Древень-->
+	</spawn>
+	<spawn name="oren07_npc1919_gd03" count="1" respawn="60">
+		<territory>
+			<add x="-29100" y="53628" zmin="-3764" zmax="-3364"/>
+			<add x="-28392" y="53528" zmin="-3764" zmax="-3364"/>
+			<add x="-25484" y="61080" zmin="-3764" zmax="-3364"/>
+			<add x="-27016" y="61456" zmin="-3764" zmax="-3364"/>
+			<add x="-29236" y="58524" zmin="-3764" zmax="-3364"/>
+		</territory>
+		<npc id="31845"/><!--Кровавая Фея-->
+	</spawn>
+	<spawn name="oren07_npc1919_gd06" count="1" respawn="60">
+		<territory>
+			<add x="-18956" y="42656" zmin="-3848" zmax="-3448"/>
+			<add x="-10672" y="39616" zmin="-3848" zmax="-3448"/>
+			<add x="-9160" y="41708" zmin="-3848" zmax="-3448"/>
+			<add x="-10952" y="46756" zmin="-3848" zmax="-3448"/>
+			<add x="-14696" y="50656" zmin="-3848" zmax="-3448"/>
+		</territory>
+		<npc id="31850"/><!--Тлетворный Древень-->
+	</spawn>
+	<spawn name="oren07_npc1919_gd05" count="1" respawn="60">
+		<territory>
+			<add x="-27420" y="39172" zmin="-3768" zmax="-2868"/>
+			<add x="-25664" y="38172" zmin="-3768" zmax="-2868"/>
+			<add x="-23436" y="41116" zmin="-3768" zmax="-2868"/>
+			<add x="-28712" y="45228" zmin="-3768" zmax="-2868"/>
+			<add x="-29536" y="42852" zmin="-3768" zmax="-2868"/>
+			<add x="-29248" y="41228" zmin="-3768" zmax="-2868"/>
+		</territory>
+		<npc id="31845"/><!--Кровавая Фея-->
+	</spawn>
+	<spawn name="oren07_npc1919_gd07" count="1" respawn="60">
+		<territory>
+			<add x="-25392" y="47120" zmin="-3940" zmax="-3540"/>
+			<add x="-19012" y="42712" zmin="-3940" zmax="-3540"/>
+			<add x="-14920" y="50676" zmin="-3940" zmax="-3540"/>
+			<add x="-19900" y="56312" zmin="-3940" zmax="-3540"/>
+			<add x="-23628" y="57568" zmin="-3940" zmax="-3540"/>
+		</territory>
+		<npc id="31845"/><!--Кровавая Фея-->
+	</spawn>
+	<territory name="oren11_1919_20s">
+		<add x="-21849" y="49000" zmin="-3867" zmax="-3267"/>
+		<add x="-24183" y="46517" zmin="-3867" zmax="-3267"/>
+		<add x="-20907" y="44713" zmin="-3867" zmax="-3267"/>
+		<add x="-20012" y="46753" zmin="-3867" zmax="-3267"/>
+	</territory>
+	<spawn name="oren11_1919_20s" count="2" respawn="16">
+		<territory name="oren11_1919_20s"/>
+		<npc id="20025"/><!--Младший Темный Ужас-->
+	</spawn>
+	<spawn name="oren11_1919_20s" count="2" respawn="16">
+		<territory name="oren11_1919_20s"/>
+		<npc id="20105"/><!--Темный Ужас-->
+	</spawn>
+	<spawn name="oren24_1919_03s" count="4" respawn="20">
+		<territory>
+			<add x="-32403" y="65053" zmin="-3785" zmax="-3185"/>
+			<add x="-32297" y="61893" zmin="-3785" zmax="-3185"/>
+			<add x="-29390" y="62517" zmin="-3785" zmax="-3185"/>
+			<add x="-28263" y="65075" zmin="-3785" zmax="-3185"/>
+		</territory>
+		<npc id="20379"/><!--Каменный Воитель-->
+	</spawn>
+	<spawn name="oren11_npc1919_005" count="1" respawn="60">
+		<point x="-11692" y="57028" z="-3718" h="16384"/>
+		<npc id="30652"/><!--Уруха-->
+	</spawn>
+	<spawn name="oren11_npc1919_001" count="1" respawn="60">
+		<point x="-11520" y="57088" z="-3724" h="18384"/>
+		<npc id="30415"/><!--Чаркерен-->
+	</spawn>
+	<spawn name="oren11_npc1919_002" count="1" respawn="60">
+		<point x="-14158" y="44933" z="-3556" h="45056"/>
+		<npc id="30661"/><!--Загадочный Темный Эльф-->
+	</spawn>
+	<spawn name="oren11_npc1919_003" count="1" respawn="60">
+		<point x="-13742" y="44298" z="-3548" h="45056"/>
+		<npc id="30662"/><!--Лучница Пайпер-->
+	</spawn>
+	<spawn name="oren11_npc1919_004" count="1" respawn="60">
+		<point x="-3826" y="40264" z="-3676" h="32768"/>
+		<npc id="30668"/><!--Катари-->
+	</spawn>
+	<spawn name="oren07_npc1919_g01" count="1" respawn="60">
+		<territory>
+			<add x="-32433" y="35453" zmin="-3801" zmax="-2301"/>
+			<add x="-17835" y="33480" zmin="-3801" zmax="-2301"/>
+			<add x="-17790" y="39539" zmin="-3801" zmax="-2301"/>
+			<add x="-32542" y="46894" zmin="-3801" zmax="-2301"/>
+		</territory>
+		<npc id="31034"/><!--Караульный-->
+	</spawn>
+	<spawn name="oren07_npc1919_g02" count="1" respawn="60">
+		<territory>
+			<add x="-17530" y="33258" zmin="-3921" zmax="-2421"/>
+			<add x="-348" y="33098" zmin="-3921" zmax="-2421"/>
+			<add x="-576" y="43880" zmin="-3921" zmax="-2421"/>
+			<add x="-4542" y="47457" zmin="-3921" zmax="-2421"/>
+			<add x="-17422" y="39524" zmin="-3921" zmax="-2421"/>
+		</territory>
+		<npc id="31034"/><!--Караульный-->
+	</spawn>
+	<spawn name="oren07_npc1919_g05" count="1" respawn="60">
+		<territory>
+			<add x="-14599" y="55573" zmin="-3921" zmax="-2421"/>
+			<add x="-12652" y="64907" zmin="-3921" zmax="-2421"/>
+			<add x="-32488" y="65027" zmin="-3921" zmax="-2421"/>
+			<add x="-32453" y="56253" zmin="-3921" zmax="-2421"/>
+		</territory>
+		<npc id="31034"/><!--Караульный-->
+	</spawn>
+	<spawn name="oren07_npc1919_g03" count="1" respawn="60">
+		<territory>
+			<add x="-17638" y="39685" zmin="-3921" zmax="-2421"/>
+			<add x="-4731" y="47677" zmin="-3921" zmax="-2421"/>
+			<add x="-8513" y="53613" zmin="-3921" zmax="-2421"/>
+			<add x="-14815" y="55053" zmin="-3921" zmax="-2421"/>
+			<add x="-25508" y="43591" zmin="-3921" zmax="-2421"/>
+		</territory>
+		<npc id="31034"/><!--Караульный-->
+	</spawn>
+	<spawn name="oren07_npc1919_g04" count="1" respawn="60">
+		<territory>
+			<add x="-25824" y="43802" zmin="-3921" zmax="-2421"/>
+			<add x="-14929" y="55224" zmin="-3921" zmax="-2421"/>
+			<add x="-32479" y="55990" zmin="-3921" zmax="-2421"/>
+			<add x="-32543" y="47067" zmin="-3921" zmax="-2421"/>
+		</territory>
+		<npc id="31034"/><!--Караульный-->
+	</spawn>
+</list>

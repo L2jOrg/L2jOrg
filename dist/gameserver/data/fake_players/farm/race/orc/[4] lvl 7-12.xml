@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE farm SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<farm name="Orc (Lvl 7-12)" min_level="7" max_level="12" races="ORC">
+	<zones>
+		<zone>
+			<polygon>
+				<coords loc="-34167 -125078 -3200 0"/>
+				<coords loc="-36193 -108496 -3200 0"/>
+				<coords loc="-26206 -106862 -3200 0"/>
+				<coords loc="-21973 -121276 -3200 0"/>
+				<coords loc="-29172 -128675 -3200 0"/>
+			</polygon>
+		</zone>
+		<spawn_points>
+			<coords loc="-27400 -124808 -2240"/>
+			<coords loc="-23432 -124296 -2784"/>
+		</spawn_points>
+	</zones>
+	<on_obtain_max_level>
+		<action id="1"/>
+	</on_obtain_max_level>
+	<go_to_town min_farm_time="1800" max_farm_time="3600">
+		<action id="1"/>
+	</go_to_town>
+	<action id="1">
+		<wait min_delay="1000" max_delay="3000"/>
+		<random_action>
+			<ordinary_actions>
+				<move_to_point x="-27592" y="-123880" z="-2272" min_range="50" max_range="150"/>
+				<move_to_point x="-29576" y="-124120" z="-2192" min_range="50" max_range="150"/>
+				<move_to_point x="-31368" y="-124504" z="-1936" min_range="0" max_range="50"/>
+				<move_to_point x="-32472" y="-124552" z="-1672" min_range="0" max_range="50"/>
+				<move_to_point x="-33320" y="-124536" z="-1664" min_range="50" max_range="150"/>
+				<move_to_point x="-35064" y="-124552" z="-1568" min_range="0" max_range="50"/>
+				<move_to_point x="-36488" y="-124472" z="-1184" min_range="0" max_range="50"/>
+				<move_to_point x="-37992" y="-124472" z="-808" min_range="0" max_range="50"/>
+				<move_to_point x="-38952" y="-124184" z="-576" min_range="0" max_range="50"/>
+				<move_to_point x="-40680" y="-123048" z="-448" min_range="0" max_range="50"/>
+				<move_to_point x="-41976" y="-122216" z="-312" min_range="0" max_range="50"/>
+				<move_to_point x="-43544" y="-121240" z="-256" min_range="0" max_range="50"/>
+				<move_to_point x="-44936" y="-119656" z="-272" min_range="0" max_range="50"/>
+				<move_to_point x="-45960" y="-118264" z="-272" min_range="0" max_range="50"/>
+				<move_to_point x="-46152" y="-116968" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-45752" y="-115976" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-45192" y="-115128" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-44520" y="-114264" z="-240" min_range="50" max_range="150"/>
+			</ordinary_actions>
+			<use_item id="736"/>
+		</random_action>
+	</action>
+</farm>

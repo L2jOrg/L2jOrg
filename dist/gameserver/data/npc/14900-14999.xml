@@ -1,0 +1,996 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "npc.dtd">
+<list>
+	<npc id="14900" name="Magnus the Unicorn" title="">
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="collision_height" value="17"/>
+		<set name="collision_radius" value="13.5"/>
+		<set name="level" value="85"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="3066.63525666667"/>
+		<set name="baseHpRate" value="1.331"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1870"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="25"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>	<!--TODO: Проверить.-->
+		<set name="basePAtk" value="994.002873333333"/>
+		<set name="basePDef" value="364.40208"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="678.775106666667"/>
+		<set name="baseMDef" value="266.653626666667"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="SWORD"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="spiritshot_count" value="3"/>
+			<set name="soulshot_count" value="3"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="7"/>	<!--Spirits-->
+		</client_skills>
+		<skills>
+			<skill id="4408" level="4"/>	<!--HP High-->
+			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
+			<skill id="4410" level="15"/>	<!--Strong P. Atk.-->
+			<skill id="4411" level="13"/>	<!--Slightly Strong M. Atk.-->
+			<skill id="4412" level="12"/>	<!--Slightly Strong P. Def.-->
+			<skill id="4413" level="12"/>	<!--Slightly Strong M. Def.-->
+			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4415" level="3"/>	<!--One-handed Sword-->
+			<skill id="4121" level="9"/>	<!--Summoned Monster Magic Protection-->
+			<skill id="5138" level="1" use_type="PhysicalSpecial1"/>	<!--Whiplash-->
+			<skill id="5139" level="1" use_type="PhysicalSpecial2"/>	<!--Tidal Wave-->
+			<skill id="7000" level="1" use_type="PhysicalSpecial3"/>	<!--NPC Default-->
+		</skills>
+	</npc>
+	<npc id="14901" name="Spectral Lord" title="">
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="collision_height" value="33.5"/>
+		<set name="collision_radius" value="12.5"/>
+		<set name="level" value="81"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2892.79354511111"/>
+		<set name="baseHpRate" value="1.331"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1687.81333333333"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="25"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>	<!--TODO: Проверить.-->
+		<set name="basePAtk" value="901.374828888889"/>
+		<set name="basePDef" value="342.910138666667"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="615.522157777778"/>
+		<set name="baseMDef" value="250.926757777778"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="SWORD"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="spiritshot_count" value="3"/>
+			<set name="soulshot_count" value="3"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="9"/>	<!--Demons-->
+		</client_skills>
+		<skills>
+			<skill id="4408" level="4"/>	<!--HP High-->
+			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
+			<skill id="4410" level="15"/>	<!--Strong P. Atk.-->
+			<skill id="4411" level="13"/>	<!--Slightly Strong M. Atk.-->
+			<skill id="4412" level="12"/>	<!--Slightly Strong P. Def.-->
+			<skill id="4413" level="12"/>	<!--Slightly Strong M. Def.-->
+			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4415" level="3"/>	<!--One-handed Sword-->
+			<skill id="4121" level="9"/>	<!--Summoned Monster Magic Protection-->
+			<skill id="5142" level="1" use_type="PhysicalSpecial1"/>	<!--Corpse Burst-->
+			<skill id="5141" level="1" use_type="PhysicalSpecial2"/>	<!--Dicing Death-->
+			<skill id="5140" level="1" use_type="PhysicalSpecial3"/>	<!--Dark Curse-->
+		</skills>
+	</npc>
+	<npc id="14902" name="Spectral Lord" title="">
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="collision_height" value="33.5"/>
+		<set name="collision_radius" value="12.5"/>
+		<set name="level" value="81"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2905.21081022222"/>
+		<set name="baseHpRate" value="1.331"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1700.82666666667"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="25"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>	<!--TODO: Проверить.-->
+		<set name="basePAtk" value="907.991117777778"/>
+		<set name="basePDef" value="344.445277333333"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="620.040225555556"/>
+		<set name="baseMDef" value="252.050105555556"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="SWORD"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="spiritshot_count" value="3"/>
+			<set name="soulshot_count" value="3"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="9"/>	<!--Demons-->
+		</client_skills>
+		<skills>
+			<skill id="4408" level="4"/>	<!--HP High-->
+			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
+			<skill id="4410" level="15"/>	<!--Strong P. Atk.-->
+			<skill id="4411" level="13"/>	<!--Slightly Strong M. Atk.-->
+			<skill id="4412" level="12"/>	<!--Slightly Strong P. Def.-->
+			<skill id="4413" level="12"/>	<!--Slightly Strong M. Def.-->
+			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4415" level="3"/>	<!--One-handed Sword-->
+			<skill id="4121" level="9"/>	<!--Summoned Monster Magic Protection-->
+			<skill id="5142" level="1" use_type="PhysicalSpecial1"/>	<!--Corpse Burst-->
+			<skill id="5141" level="1" use_type="PhysicalSpecial2"/>	<!--Dicing Death-->
+			<skill id="5140" level="1" use_type="PhysicalSpecial3"/>	<!--Dark Curse-->
+		</skills>
+	</npc>
+	<npc id="14903" name="Spectral Lord" title="">
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="collision_height" value="33.5"/>
+		<set name="collision_radius" value="12.5"/>
+		<set name="level" value="81"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2917.62807533333"/>
+		<set name="baseHpRate" value="1.331"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1713.84"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="25"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>	<!--TODO: Проверить.-->
+		<set name="basePAtk" value="914.607406666667"/>
+		<set name="basePDef" value="345.980416"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="624.558293333333"/>
+		<set name="baseMDef" value="253.173453333333"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="SWORD"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="spiritshot_count" value="3"/>
+			<set name="soulshot_count" value="3"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="9"/>	<!--Demons-->
+		</client_skills>
+		<skills>
+			<skill id="4408" level="4"/>	<!--HP High-->
+			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
+			<skill id="4410" level="15"/>	<!--Strong P. Atk.-->
+			<skill id="4411" level="13"/>	<!--Slightly Strong M. Atk.-->
+			<skill id="4412" level="12"/>	<!--Slightly Strong P. Def.-->
+			<skill id="4413" level="12"/>	<!--Slightly Strong M. Def.-->
+			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4415" level="3"/>	<!--One-handed Sword-->
+			<skill id="4121" level="9"/>	<!--Summoned Monster Magic Protection-->
+			<skill id="5142" level="1" use_type="PhysicalSpecial1"/>	<!--Corpse Burst-->
+			<skill id="5141" level="1" use_type="PhysicalSpecial2"/>	<!--Dicing Death-->
+			<skill id="5140" level="1" use_type="PhysicalSpecial3"/>	<!--Dark Curse-->
+		</skills>
+	</npc>
+	<npc id="14904" name="Spectral Lord" title="">
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="collision_height" value="33.5"/>
+		<set name="collision_radius" value="12.5"/>
+		<set name="level" value="82"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2930.04534044444"/>
+		<set name="baseHpRate" value="1.331"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1726.85333333333"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="25"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>	<!--TODO: Проверить.-->
+		<set name="basePAtk" value="921.223695555556"/>
+		<set name="basePDef" value="347.515554666667"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="629.076361111111"/>
+		<set name="baseMDef" value="254.296801111111"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="SWORD"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="spiritshot_count" value="3"/>
+			<set name="soulshot_count" value="3"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="9"/>	<!--Demons-->
+		</client_skills>
+		<skills>
+			<skill id="4408" level="4"/>	<!--HP High-->
+			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
+			<skill id="4410" level="15"/>	<!--Strong P. Atk.-->
+			<skill id="4411" level="13"/>	<!--Slightly Strong M. Atk.-->
+			<skill id="4412" level="12"/>	<!--Slightly Strong P. Def.-->
+			<skill id="4413" level="12"/>	<!--Slightly Strong M. Def.-->
+			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4415" level="3"/>	<!--One-handed Sword-->
+			<skill id="4121" level="9"/>	<!--Summoned Monster Magic Protection-->
+			<skill id="5142" level="1" use_type="PhysicalSpecial1"/>	<!--Corpse Burst-->
+			<skill id="5141" level="1" use_type="PhysicalSpecial2"/>	<!--Dicing Death-->
+			<skill id="5140" level="1" use_type="PhysicalSpecial3"/>	<!--Dark Curse-->
+		</skills>
+	</npc>
+	<npc id="14905" name="Spectral Lord" title="">
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="collision_height" value="33.5"/>
+		<set name="collision_radius" value="12.5"/>
+		<set name="level" value="82"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2942.46260555556"/>
+		<set name="baseHpRate" value="1.331"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1739.86666666667"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="25"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>	<!--TODO: Проверить.-->
+		<set name="basePAtk" value="927.839984444444"/>
+		<set name="basePDef" value="349.050693333333"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="633.594428888889"/>
+		<set name="baseMDef" value="255.420148888889"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="SWORD"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="spiritshot_count" value="3"/>
+			<set name="soulshot_count" value="3"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="9"/>	<!--Demons-->
+		</client_skills>
+		<skills>
+			<skill id="4408" level="4"/>	<!--HP High-->
+			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
+			<skill id="4410" level="15"/>	<!--Strong P. Atk.-->
+			<skill id="4411" level="13"/>	<!--Slightly Strong M. Atk.-->
+			<skill id="4412" level="12"/>	<!--Slightly Strong P. Def.-->
+			<skill id="4413" level="12"/>	<!--Slightly Strong M. Def.-->
+			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4415" level="3"/>	<!--One-handed Sword-->
+			<skill id="4121" level="9"/>	<!--Summoned Monster Magic Protection-->
+			<skill id="5142" level="1" use_type="PhysicalSpecial1"/>	<!--Corpse Burst-->
+			<skill id="5141" level="1" use_type="PhysicalSpecial2"/>	<!--Dicing Death-->
+			<skill id="5140" level="1" use_type="PhysicalSpecial3"/>	<!--Dark Curse-->
+		</skills>
+	</npc>
+	<npc id="14906" name="Spectral Lord" title="">
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="collision_height" value="33.5"/>
+		<set name="collision_radius" value="12.5"/>
+		<set name="level" value="82"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2954.87987066667"/>
+		<set name="baseHpRate" value="1.331"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1752.88"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="25"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>	<!--TODO: Проверить.-->
+		<set name="basePAtk" value="934.456273333333"/>
+		<set name="basePDef" value="350.585832"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="638.112496666667"/>
+		<set name="baseMDef" value="256.543496666667"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="SWORD"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="spiritshot_count" value="3"/>
+			<set name="soulshot_count" value="3"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="9"/>	<!--Demons-->
+		</client_skills>
+		<skills>
+			<skill id="4408" level="4"/>	<!--HP High-->
+			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
+			<skill id="4410" level="15"/>	<!--Strong P. Atk.-->
+			<skill id="4411" level="13"/>	<!--Slightly Strong M. Atk.-->
+			<skill id="4412" level="12"/>	<!--Slightly Strong P. Def.-->
+			<skill id="4413" level="12"/>	<!--Slightly Strong M. Def.-->
+			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4415" level="3"/>	<!--One-handed Sword-->
+			<skill id="4121" level="9"/>	<!--Summoned Monster Magic Protection-->
+			<skill id="5142" level="1" use_type="PhysicalSpecial1"/>	<!--Corpse Burst-->
+			<skill id="5141" level="1" use_type="PhysicalSpecial2"/>	<!--Dicing Death-->
+			<skill id="5140" level="1" use_type="PhysicalSpecial3"/>	<!--Dark Curse-->
+		</skills>
+	</npc>
+	<npc id="14907" name="Spectral Lord" title="">
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="collision_height" value="33.5"/>
+		<set name="collision_radius" value="12.5"/>
+		<set name="level" value="83"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2967.29713577778"/>
+		<set name="baseHpRate" value="1.331"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1765.89333333333"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="25"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>	<!--TODO: Проверить.-->
+		<set name="basePAtk" value="941.072562222222"/>
+		<set name="basePDef" value="352.120970666667"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="642.630564444444"/>
+		<set name="baseMDef" value="257.666844444444"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="SWORD"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="spiritshot_count" value="3"/>
+			<set name="soulshot_count" value="3"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="9"/>	<!--Demons-->
+		</client_skills>
+		<skills>
+			<skill id="4408" level="4"/>	<!--HP High-->
+			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
+			<skill id="4410" level="15"/>	<!--Strong P. Atk.-->
+			<skill id="4411" level="13"/>	<!--Slightly Strong M. Atk.-->
+			<skill id="4412" level="12"/>	<!--Slightly Strong P. Def.-->
+			<skill id="4413" level="12"/>	<!--Slightly Strong M. Def.-->
+			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4415" level="3"/>	<!--One-handed Sword-->
+			<skill id="4121" level="9"/>	<!--Summoned Monster Magic Protection-->
+			<skill id="5142" level="1" use_type="PhysicalSpecial1"/>	<!--Corpse Burst-->
+			<skill id="5141" level="1" use_type="PhysicalSpecial2"/>	<!--Dicing Death-->
+			<skill id="5140" level="1" use_type="PhysicalSpecial3"/>	<!--Dark Curse-->
+		</skills>
+	</npc>
+	<npc id="14908" name="Spectral Lord" title="">
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="collision_height" value="33.5"/>
+		<set name="collision_radius" value="12.5"/>
+		<set name="level" value="83"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2979.71440088889"/>
+		<set name="baseHpRate" value="1.331"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1778.90666666667"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="25"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>	<!--TODO: Проверить.-->
+		<set name="basePAtk" value="947.688851111111"/>
+		<set name="basePDef" value="353.656109333333"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="647.148632222222"/>
+		<set name="baseMDef" value="258.790192222222"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="SWORD"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="spiritshot_count" value="3"/>
+			<set name="soulshot_count" value="3"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="9"/>	<!--Demons-->
+		</client_skills>
+		<skills>
+			<skill id="4408" level="4"/>	<!--HP High-->
+			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
+			<skill id="4410" level="15"/>	<!--Strong P. Atk.-->
+			<skill id="4411" level="13"/>	<!--Slightly Strong M. Atk.-->
+			<skill id="4412" level="12"/>	<!--Slightly Strong P. Def.-->
+			<skill id="4413" level="12"/>	<!--Slightly Strong M. Def.-->
+			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4415" level="3"/>	<!--One-handed Sword-->
+			<skill id="4121" level="9"/>	<!--Summoned Monster Magic Protection-->
+			<skill id="5142" level="1" use_type="PhysicalSpecial1"/>	<!--Corpse Burst-->
+			<skill id="5141" level="1" use_type="PhysicalSpecial2"/>	<!--Dicing Death-->
+			<skill id="5140" level="1" use_type="PhysicalSpecial3"/>	<!--Dark Curse-->
+		</skills>
+	</npc>
+	<npc id="14909" name="Spectral Lord" title="">
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="collision_height" value="33.5"/>
+		<set name="collision_radius" value="12.5"/>
+		<set name="level" value="83"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2992.131666"/>
+		<set name="baseHpRate" value="1.331"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1791.92"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="25"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>	<!--TODO: Проверить.-->
+		<set name="basePAtk" value="954.30514"/>
+		<set name="basePDef" value="355.191248"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="651.6667"/>
+		<set name="baseMDef" value="259.91354"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="SWORD"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="spiritshot_count" value="3"/>
+			<set name="soulshot_count" value="3"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="9"/>	<!--Demons-->
+		</client_skills>
+		<skills>
+			<skill id="4408" level="4"/>	<!--HP High-->
+			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
+			<skill id="4410" level="15"/>	<!--Strong P. Atk.-->
+			<skill id="4411" level="13"/>	<!--Slightly Strong M. Atk.-->
+			<skill id="4412" level="12"/>	<!--Slightly Strong P. Def.-->
+			<skill id="4413" level="12"/>	<!--Slightly Strong M. Def.-->
+			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4415" level="3"/>	<!--One-handed Sword-->
+			<skill id="4121" level="9"/>	<!--Summoned Monster Magic Protection-->
+			<skill id="5142" level="1" use_type="PhysicalSpecial1"/>	<!--Corpse Burst-->
+			<skill id="5141" level="1" use_type="PhysicalSpecial2"/>	<!--Dicing Death-->
+			<skill id="5140" level="1" use_type="PhysicalSpecial3"/>	<!--Dark Curse-->
+		</skills>
+	</npc>
+	<npc id="14910" name="Spectral Lord" title="">
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="collision_height" value="33.5"/>
+		<set name="collision_radius" value="12.5"/>
+		<set name="level" value="84"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="3004.54893111111"/>
+		<set name="baseHpRate" value="1.331"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1804.93333333333"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="25"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>	<!--TODO: Проверить.-->
+		<set name="basePAtk" value="960.921428888889"/>
+		<set name="basePDef" value="356.726386666667"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="656.184767777778"/>
+		<set name="baseMDef" value="261.036887777778"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="SWORD"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="spiritshot_count" value="3"/>
+			<set name="soulshot_count" value="3"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="9"/>	<!--Demons-->
+		</client_skills>
+		<skills>
+			<skill id="4408" level="4"/>	<!--HP High-->
+			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
+			<skill id="4410" level="15"/>	<!--Strong P. Atk.-->
+			<skill id="4411" level="13"/>	<!--Slightly Strong M. Atk.-->
+			<skill id="4412" level="12"/>	<!--Slightly Strong P. Def.-->
+			<skill id="4413" level="12"/>	<!--Slightly Strong M. Def.-->
+			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4415" level="3"/>	<!--One-handed Sword-->
+			<skill id="4121" level="9"/>	<!--Summoned Monster Magic Protection-->
+			<skill id="5142" level="1" use_type="PhysicalSpecial1"/>	<!--Corpse Burst-->
+			<skill id="5141" level="1" use_type="PhysicalSpecial2"/>	<!--Dicing Death-->
+			<skill id="5140" level="1" use_type="PhysicalSpecial3"/>	<!--Dark Curse-->
+		</skills>
+	</npc>
+	<npc id="14911" name="Spectral Lord" title="">
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="collision_height" value="33.5"/>
+		<set name="collision_radius" value="12.5"/>
+		<set name="level" value="84"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="3016.96619622222"/>
+		<set name="baseHpRate" value="1.331"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1817.94666666667"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="25"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>	<!--TODO: Проверить.-->
+		<set name="basePAtk" value="967.537717777778"/>
+		<set name="basePDef" value="358.261525333333"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="660.702835555556"/>
+		<set name="baseMDef" value="262.160235555556"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="SWORD"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="spiritshot_count" value="3"/>
+			<set name="soulshot_count" value="3"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="9"/>	<!--Demons-->
+		</client_skills>
+		<skills>
+			<skill id="4408" level="4"/>	<!--HP High-->
+			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
+			<skill id="4410" level="15"/>	<!--Strong P. Atk.-->
+			<skill id="4411" level="13"/>	<!--Slightly Strong M. Atk.-->
+			<skill id="4412" level="12"/>	<!--Slightly Strong P. Def.-->
+			<skill id="4413" level="12"/>	<!--Slightly Strong M. Def.-->
+			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4415" level="3"/>	<!--One-handed Sword-->
+			<skill id="4121" level="9"/>	<!--Summoned Monster Magic Protection-->
+			<skill id="5142" level="1" use_type="PhysicalSpecial1"/>	<!--Corpse Burst-->
+			<skill id="5141" level="1" use_type="PhysicalSpecial2"/>	<!--Dicing Death-->
+			<skill id="5140" level="1" use_type="PhysicalSpecial3"/>	<!--Dark Curse-->
+		</skills>
+	</npc>
+	<npc id="14912" name="Spectral Lord" title="">
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="collision_height" value="33.5"/>
+		<set name="collision_radius" value="12.5"/>
+		<set name="level" value="84"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="3029.38346133333"/>
+		<set name="baseHpRate" value="1.331"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1830.96"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="25"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>	<!--TODO: Проверить.-->
+		<set name="basePAtk" value="974.154006666667"/>
+		<set name="basePDef" value="359.796664"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="665.220903333333"/>
+		<set name="baseMDef" value="263.283583333333"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="SWORD"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="spiritshot_count" value="3"/>
+			<set name="soulshot_count" value="3"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="9"/>	<!--Demons-->
+		</client_skills>
+		<skills>
+			<skill id="4408" level="4"/>	<!--HP High-->
+			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
+			<skill id="4410" level="15"/>	<!--Strong P. Atk.-->
+			<skill id="4411" level="13"/>	<!--Slightly Strong M. Atk.-->
+			<skill id="4412" level="12"/>	<!--Slightly Strong P. Def.-->
+			<skill id="4413" level="12"/>	<!--Slightly Strong M. Def.-->
+			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4415" level="3"/>	<!--One-handed Sword-->
+			<skill id="4121" level="9"/>	<!--Summoned Monster Magic Protection-->
+			<skill id="5142" level="1" use_type="PhysicalSpecial1"/>	<!--Corpse Burst-->
+			<skill id="5141" level="1" use_type="PhysicalSpecial2"/>	<!--Dicing Death-->
+			<skill id="5140" level="1" use_type="PhysicalSpecial3"/>	<!--Dark Curse-->
+		</skills>
+	</npc>
+	<npc id="14913" name="Spectral Lord" title="">
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="collision_height" value="33.5"/>
+		<set name="collision_radius" value="12.5"/>
+		<set name="level" value="85"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="3041.80072644444"/>
+		<set name="baseHpRate" value="1.331"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1843.97333333333"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="25"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>	<!--TODO: Проверить.-->
+		<set name="basePAtk" value="980.770295555556"/>
+		<set name="basePDef" value="361.331802666667"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="669.738971111111"/>
+		<set name="baseMDef" value="264.406931111111"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="SWORD"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="spiritshot_count" value="3"/>
+			<set name="soulshot_count" value="3"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="9"/>	<!--Demons-->
+		</client_skills>
+		<skills>
+			<skill id="4408" level="4"/>	<!--HP High-->
+			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
+			<skill id="4410" level="15"/>	<!--Strong P. Atk.-->
+			<skill id="4411" level="13"/>	<!--Slightly Strong M. Atk.-->
+			<skill id="4412" level="12"/>	<!--Slightly Strong P. Def.-->
+			<skill id="4413" level="12"/>	<!--Slightly Strong M. Def.-->
+			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4415" level="3"/>	<!--One-handed Sword-->
+			<skill id="4121" level="9"/>	<!--Summoned Monster Magic Protection-->
+			<skill id="5142" level="1" use_type="PhysicalSpecial1"/>	<!--Corpse Burst-->
+			<skill id="5141" level="1" use_type="PhysicalSpecial2"/>	<!--Dicing Death-->
+			<skill id="5140" level="1" use_type="PhysicalSpecial3"/>	<!--Dark Curse-->
+		</skills>
+	</npc>
+	<npc id="14914" name="Spectral Lord" title="">
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="collision_height" value="33.5"/>
+		<set name="collision_radius" value="12.5"/>
+		<set name="level" value="85"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="3054.21799155555"/>
+		<set name="baseHpRate" value="1.331"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1856.98666666667"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="25"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>	<!--TODO: Проверить.-->
+		<set name="basePAtk" value="987.386584444444"/>
+		<set name="basePDef" value="362.866941333333"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="674.257038888889"/>
+		<set name="baseMDef" value="265.530278888889"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="SWORD"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="spiritshot_count" value="3"/>
+			<set name="soulshot_count" value="3"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="9"/>	<!--Demons-->
+		</client_skills>
+		<skills>
+			<skill id="4408" level="4"/>	<!--HP High-->
+			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
+			<skill id="4410" level="15"/>	<!--Strong P. Atk.-->
+			<skill id="4411" level="13"/>	<!--Slightly Strong M. Atk.-->
+			<skill id="4412" level="12"/>	<!--Slightly Strong P. Def.-->
+			<skill id="4413" level="12"/>	<!--Slightly Strong M. Def.-->
+			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4415" level="3"/>	<!--One-handed Sword-->
+			<skill id="4121" level="9"/>	<!--Summoned Monster Magic Protection-->
+			<skill id="5142" level="1" use_type="PhysicalSpecial1"/>	<!--Corpse Burst-->
+			<skill id="5141" level="1" use_type="PhysicalSpecial2"/>	<!--Dicing Death-->
+			<skill id="5140" level="1" use_type="PhysicalSpecial3"/>	<!--Dark Curse-->
+		</skills>
+	</npc>
+	<npc id="14915" name="Spectral Lord" title="">
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="collision_height" value="33.5"/>
+		<set name="collision_radius" value="12.5"/>
+		<set name="level" value="85"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="3066.63525666667"/>
+		<set name="baseHpRate" value="1.331"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1870"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="25"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>	<!--TODO: Проверить.-->
+		<set name="basePAtk" value="994.002873333333"/>
+		<set name="basePDef" value="364.40208"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="678.775106666667"/>
+		<set name="baseMDef" value="266.653626666667"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="SWORD"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="spiritshot_count" value="3"/>
+			<set name="soulshot_count" value="3"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="9"/>	<!--Demons-->
+		</client_skills>
+		<skills>
+			<skill id="4408" level="4"/>	<!--HP High-->
+			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
+			<skill id="4410" level="15"/>	<!--Strong P. Atk.-->
+			<skill id="4411" level="13"/>	<!--Slightly Strong M. Atk.-->
+			<skill id="4412" level="12"/>	<!--Slightly Strong P. Def.-->
+			<skill id="4413" level="12"/>	<!--Slightly Strong M. Def.-->
+			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4415" level="3"/>	<!--One-handed Sword-->
+			<skill id="4121" level="9"/>	<!--Summoned Monster Magic Protection-->
+			<skill id="5142" level="1" use_type="PhysicalSpecial1"/>	<!--Corpse Burst-->
+			<skill id="5141" level="1" use_type="PhysicalSpecial2"/>	<!--Dicing Death-->
+			<skill id="5140" level="1" use_type="PhysicalSpecial3"/>	<!--Dark Curse-->
+		</skills>
+	</npc>
+</list>

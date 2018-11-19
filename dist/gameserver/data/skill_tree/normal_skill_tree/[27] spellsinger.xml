@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="27">	<!--Певец Заклинаний-->
+			<skill id="146" level="13" name="Антимагия(Anti Magic)" cost="75000" min_level="40"/>
+			<skill id="146" level="14" name="Антимагия(Anti Magic)" cost="75000" min_level="40"/>
+			<skill id="146" level="15" name="Антимагия(Anti Magic)" cost="75000" min_level="40"/>
+			<skill id="228" level="2" name="Быстрое Чтение Заклинаний(Fast Spell Casting)" cost="75000" min_level="40"/>
+			<skill id="234" level="9" name="Владение Магической Броней(Robe Mastery)" cost="75000" min_level="40"/>
+			<skill id="234" level="10" name="Владение Магической Броней(Robe Mastery)" cost="75000" min_level="40"/>
+			<skill id="234" level="11" name="Владение Магической Броней(Robe Mastery)" cost="75000" min_level="40"/>
+			<skill id="249" level="10" name="Владение Оружием(Weapon Mastery)" cost="75000" min_level="40"/>
+			<skill id="249" level="11" name="Владение Оружием(Weapon Mastery)" cost="75000" min_level="40"/>
+			<skill id="249" level="12" name="Владение Оружием(Weapon Mastery)" cost="75000" min_level="40"/>
+			<skill id="1235" level="1" name="Волна Воды(Hydro Blast)" cost="75000" min_level="40"/>
+			<skill id="1235" level="2" name="Волна Воды(Hydro Blast)" cost="75000" min_level="40"/>
+			<skill id="1236" level="1" name="Заряд Мороза(Frost Bolt)" cost="75000" min_level="40"/>
+			<skill id="1236" level="2" name="Заряд Мороза(Frost Bolt)" cost="75000" min_level="40"/>
+			<skill id="1238" level="1" name="Леденящая Кожа(Freezing Skin)" cost="75000" min_level="40"/>
+			<skill id="1830" level="1" name="Мастер Заклинаний(Spell Master)" min_level="40"/>
+			<skill id="1164" level="6" name="Проклятие Слабости(Curse Weakness)" cost="75000" min_level="40"/>
+			<skill id="1047" level="1" name="Регенерация Маны(Mana Regeneration)" cost="75000" min_level="40"/>
+			<skill id="1297" level="1" name="Светлый Разум(Clear Mind)" item_id="49571" cost="75000" min_level="40"/>
+			<skill id="1231" level="1" name="Сияние Ауры(Aura Flare)" cost="75000" min_level="40"/>
+			<skill id="1231" level="2" name="Сияние Ауры(Aura Flare)" cost="75000" min_level="40"/>
+			<skill id="1265" level="1" name="Солнечное Сияние(Solar Flare)" cost="75000" min_level="40"/>
+			<skill id="1275" level="1" name="Стрела Ауры(Aura Bolt)" cost="75000" min_level="40"/>
+			<skill id="213" level="3" name="Увеличение Маны(Boost Mana)" cost="75000" min_level="40"/>
+			<skill id="285" level="9" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="75000" min_level="40"/>
+			<skill id="285" level="10" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="75000" min_level="40"/>
+			<skill id="1069" level="10" name="Усыпление(Sleep)" cost="75000" min_level="40"/>
+			<skill id="1069" level="11" name="Усыпление(Sleep)" cost="75000" min_level="40"/>
+			<skill id="1069" level="12" name="Усыпление(Sleep)" cost="75000" min_level="40"/>
+			<skill id="146" level="16" name="Антимагия(Anti Magic)" cost="110000" min_level="42"/>
+			<skill id="234" level="12" name="Владение Магической Броней(Robe Mastery)" cost="110000" min_level="42"/>
+			<skill id="249" level="13" name="Владение Оружием(Weapon Mastery)" cost="110000" min_level="42"/>
+			<skill id="1235" level="3" name="Волна Воды(Hydro Blast)" cost="110000" min_level="42"/>
+			<skill id="1236" level="3" name="Заряд Мороза(Frost Bolt)" cost="110000" min_level="42"/>
+			<skill id="1237" level="1" name="Ледяной Кинжал(Ice Dagger)" cost="110000" min_level="42"/>
+			<skill id="1231" level="3" name="Сияние Ауры(Aura Flare)" cost="110000" min_level="42"/>
+			<skill id="285" level="11" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="110000" min_level="42"/>
+			<skill id="1069" level="13" name="Усыпление(Sleep)" cost="110000" min_level="42"/>
+			<skill id="146" level="17" name="Антимагия(Anti Magic)" cost="110000" min_level="43"/>
+			<skill id="234" level="13" name="Владение Магической Броней(Robe Mastery)" cost="110000" min_level="43"/>
+			<skill id="249" level="14" name="Владение Оружием(Weapon Mastery)" cost="110000" min_level="43"/>
+			<skill id="1069" level="14" name="Усыпление(Sleep)" cost="110000" min_level="43"/>
+			<skill id="146" level="18" name="Антимагия(Anti Magic)" cost="110000" min_level="44"/>
+			<skill id="212" level="2" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="110000" min_level="44"/>
+			<skill id="229" level="3" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="110000" min_level="44"/>
+			<skill id="234" level="14" name="Владение Магической Броней(Robe Mastery)" cost="110000" min_level="44"/>
+			<skill id="249" level="15" name="Владение Оружием(Weapon Mastery)" cost="110000" min_level="44"/>
+			<skill id="1235" level="4" name="Волна Воды(Hydro Blast)" cost="110000" min_level="44"/>
+			<skill id="1183" level="1" name="Замораживающие Оковы(Freezing Shackle)" cost="110000" min_level="44"/>
+			<skill id="1236" level="4" name="Заряд Мороза(Frost Bolt)" cost="110000" min_level="44"/>
+			<skill id="1237" level="2" name="Ледяной Кинжал(Ice Dagger)" cost="110000" min_level="44"/>
+			<skill id="1164" level="7" name="Проклятие Слабости(Curse Weakness)" cost="110000" min_level="44"/>
+			<skill id="1231" level="4" name="Сияние Ауры(Aura Flare)" cost="110000" min_level="44"/>
+			<skill id="1265" level="2" name="Солнечное Сияние(Solar Flare)" cost="110000" min_level="44"/>
+			<skill id="1275" level="2" name="Стрела Ауры(Aura Bolt)" cost="110000" min_level="44"/>
+			<skill id="285" level="12" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="110000" min_level="44"/>
+			<skill id="1069" level="15" name="Усыпление(Sleep)" cost="110000" min_level="44"/>
+			<skill id="1072" level="1" name="Усыпляющее Облако(Sleeping Cloud)" item_id="3080" cost="110000" min_level="44"/>
+			<skill id="1800" level="1" name="Пират(Pirate)" min_level="45"/>
+			<skill id="146" level="19" name="Антимагия(Anti Magic)" cost="170000" min_level="46"/>
+			<skill id="234" level="15" name="Владение Магической Броней(Robe Mastery)" cost="170000" min_level="46"/>
+			<skill id="249" level="16" name="Владение Оружием(Weapon Mastery)" cost="170000" min_level="46"/>
+			<skill id="1235" level="5" name="Волна Воды(Hydro Blast)" cost="170000" min_level="46"/>
+			<skill id="1236" level="5" name="Заряд Мороза(Frost Bolt)" cost="170000" min_level="46"/>
+			<skill id="1237" level="3" name="Ледяной Кинжал(Ice Dagger)" cost="170000" min_level="46"/>
+			<skill id="1231" level="5" name="Сияние Ауры(Aura Flare)" cost="170000" min_level="46"/>
+			<skill id="285" level="13" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="170000" min_level="46"/>
+			<skill id="1069" level="16" name="Усыпление(Sleep)" cost="170000" min_level="46"/>
+			<skill id="146" level="20" name="Антимагия(Anti Magic)" cost="170000" min_level="47"/>
+			<skill id="234" level="16" name="Владение Магической Броней(Robe Mastery)" cost="170000" min_level="47"/>
+			<skill id="249" level="17" name="Владение Оружием(Weapon Mastery)" cost="170000" min_level="47"/>
+			<skill id="1069" level="17" name="Усыпление(Sleep)" cost="170000" min_level="47"/>
+			<skill id="146" level="21" name="Антимагия(Anti Magic)" cost="170000" min_level="48"/>
+			<skill id="164" level="3" name="Быстрый Повтор(Quick Recovery)" cost="170000" min_level="48"/>
+			<skill id="234" level="17" name="Владение Магической Броней(Robe Mastery)" cost="170000" min_level="48"/>
+			<skill id="249" level="18" name="Владение Оружием(Weapon Mastery)" cost="170000" min_level="48"/>
+			<skill id="1235" level="6" name="Волна Воды(Hydro Blast)" cost="170000" min_level="48"/>
+			<skill id="1236" level="6" name="Заряд Мороза(Frost Bolt)" cost="170000" min_level="48"/>
+			<skill id="1238" level="2" name="Леденящая Кожа(Freezing Skin)" cost="170000" min_level="48"/>
+			<skill id="1237" level="4" name="Ледяной Кинжал(Ice Dagger)" cost="170000" min_level="48"/>
+			<skill id="1056" level="1" name="Отмена(Cancellation)" item_id="3079" cost="170000" min_level="48"/>
+			<skill id="1164" level="8" name="Проклятие Слабости(Curse Weakness)" cost="170000" min_level="48"/>
+			<skill id="1047" level="2" name="Регенерация Маны(Mana Regeneration)" cost="170000" min_level="48"/>
+			<skill id="1297" level="2" name="Светлый Разум(Clear Mind)" cost="170000" min_level="48"/>
+			<skill id="1231" level="6" name="Сияние Ауры(Aura Flare)" cost="170000" min_level="48"/>
+			<skill id="1265" level="3" name="Солнечное Сияние(Solar Flare)" cost="170000" min_level="48"/>
+			<skill id="1275" level="3" name="Стрела Ауры(Aura Bolt)" cost="170000" min_level="48"/>
+			<skill id="213" level="4" name="Увеличение Маны(Boost Mana)" cost="170000" min_level="48"/>
+			<skill id="285" level="14" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="170000" min_level="48"/>
+			<skill id="1069" level="18" name="Усыпление(Sleep)" cost="170000" min_level="48"/>
+			<skill id="146" level="22" name="Антимагия(Anti Magic)" cost="270000" min_level="50"/>
+			<skill id="234" level="18" name="Владение Магической Броней(Robe Mastery)" cost="270000" min_level="50"/>
+			<skill id="249" level="19" name="Владение Оружием(Weapon Mastery)" cost="270000" min_level="50"/>
+			<skill id="1235" level="7" name="Волна Воды(Hydro Blast)" cost="270000" min_level="50"/>
+			<skill id="1236" level="7" name="Заряд Мороза(Frost Bolt)" cost="270000" min_level="50"/>
+			<skill id="1237" level="5" name="Ледяной Кинжал(Ice Dagger)" cost="270000" min_level="50"/>
+			<skill id="1231" level="7" name="Сияние Ауры(Aura Flare)" cost="270000" min_level="50"/>
+			<skill id="1174" level="1" name="Стена Мороза(Frost Wall)" cost="270000" min_level="50"/>
+			<skill id="285" level="15" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="270000" min_level="50"/>
+			<skill id="1069" level="19" name="Усыпление(Sleep)" cost="270000" min_level="50"/>
+			<skill id="146" level="23" name="Антимагия(Anti Magic)" cost="270000" min_level="51"/>
+			<skill id="234" level="19" name="Владение Магической Броней(Robe Mastery)" cost="270000" min_level="51"/>
+			<skill id="249" level="20" name="Владение Оружием(Weapon Mastery)" cost="270000" min_level="51"/>
+			<skill id="1069" level="20" name="Усыпление(Sleep)" cost="270000" min_level="51"/>
+			<skill id="146" level="24" name="Антимагия(Anti Magic)" cost="270000" min_level="52"/>
+			<skill id="1405" level="1" name="Божественное Вдохновение(Divine Inspiration)" item_id="8618" cost="270000" min_level="52"/>
+			<skill id="212" level="3" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="270000" min_level="52"/>
+			<skill id="229" level="4" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="270000" min_level="52"/>
+			<skill id="234" level="20" name="Владение Магической Броней(Robe Mastery)" cost="270000" min_level="52"/>
+			<skill id="249" level="21" name="Владение Оружием(Weapon Mastery)" cost="270000" min_level="52"/>
+			<skill id="1235" level="8" name="Волна Воды(Hydro Blast)" cost="270000" min_level="52"/>
+			<skill id="1183" level="2" name="Замораживающие Оковы(Freezing Shackle)" cost="270000" min_level="52"/>
+			<skill id="1236" level="8" name="Заряд Мороза(Frost Bolt)" cost="270000" min_level="52"/>
+			<skill id="1237" level="6" name="Ледяной Кинжал(Ice Dagger)" cost="270000" min_level="52"/>
+			<skill id="1056" level="2" name="Отмена(Cancellation)" cost="270000" min_level="52"/>
+			<skill id="1164" level="9" name="Проклятие Слабости(Curse Weakness)" cost="270000" min_level="52"/>
+			<skill id="1231" level="8" name="Сияние Ауры(Aura Flare)" cost="270000" min_level="52"/>
+			<skill id="1265" level="4" name="Солнечное Сияние(Solar Flare)" cost="270000" min_level="52"/>
+			<skill id="1174" level="2" name="Стена Мороза(Frost Wall)" cost="270000" min_level="52"/>
+			<skill id="1275" level="4" name="Стрела Ауры(Aura Bolt)" cost="270000" min_level="52"/>
+			<skill id="285" level="16" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="270000" min_level="52"/>
+			<skill id="1069" level="21" name="Усыпление(Sleep)" cost="270000" min_level="52"/>
+			<skill id="146" level="25" name="Антимагия(Anti Magic)" cost="430000" min_level="54"/>
+			<skill id="234" level="21" name="Владение Магической Броней(Robe Mastery)" cost="430000" min_level="54"/>
+			<skill id="249" level="22" name="Владение Оружием(Weapon Mastery)" cost="430000" min_level="54"/>
+			<skill id="1235" level="9" name="Волна Воды(Hydro Blast)" cost="430000" min_level="54"/>
+			<skill id="1236" level="9" name="Заряд Мороза(Frost Bolt)" cost="430000" min_level="54"/>
+			<skill id="1237" level="7" name="Ледяной Кинжал(Ice Dagger)" cost="430000" min_level="54"/>
+			<skill id="1231" level="9" name="Сияние Ауры(Aura Flare)" cost="430000" min_level="54"/>
+			<skill id="1174" level="3" name="Стена Мороза(Frost Wall)" cost="430000" min_level="54"/>
+			<skill id="285" level="17" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="430000" min_level="54"/>
+			<skill id="1069" level="22" name="Усыпление(Sleep)" cost="430000" min_level="54"/>
+			<skill id="146" level="26" name="Антимагия(Anti Magic)" cost="430000" min_level="55"/>
+			<skill id="234" level="22" name="Владение Магической Броней(Robe Mastery)" cost="430000" min_level="55"/>
+			<skill id="249" level="23" name="Владение Оружием(Weapon Mastery)" cost="430000" min_level="55"/>
+			<skill id="1069" level="23" name="Усыпление(Sleep)" cost="430000" min_level="55"/>
+			<skill id="146" level="27" name="Антимагия(Anti Magic)" cost="430000" min_level="56"/>
+			<skill id="228" level="3" name="Быстрое Чтение Заклинаний(Fast Spell Casting)" cost="430000" min_level="56"/>
+			<skill id="234" level="23" name="Владение Магической Броней(Robe Mastery)" cost="430000" min_level="56"/>
+			<skill id="249" level="24" name="Владение Оружием(Weapon Mastery)" cost="430000" min_level="56"/>
+			<skill id="1235" level="10" name="Волна Воды(Hydro Blast)" cost="430000" min_level="56"/>
+			<skill id="1236" level="10" name="Заряд Мороза(Frost Bolt)" cost="430000" min_level="56"/>
+			<skill id="1238" level="3" name="Леденящая Кожа(Freezing Skin)" cost="430000" min_level="56"/>
+			<skill id="1237" level="8" name="Ледяной Кинжал(Ice Dagger)" cost="430000" min_level="56"/>
+			<skill id="1056" level="3" name="Отмена(Cancellation)" cost="430000" min_level="56"/>
+			<skill id="1164" level="10" name="Проклятие Слабости(Curse Weakness)" cost="430000" min_level="56"/>
+			<skill id="1297" level="3" name="Светлый Разум(Clear Mind)" cost="430000" min_level="56"/>
+			<skill id="1231" level="10" name="Сияние Ауры(Aura Flare)" cost="430000" min_level="56"/>
+			<skill id="1265" level="5" name="Солнечное Сияние(Solar Flare)" cost="430000" min_level="56"/>
+			<skill id="1174" level="4" name="Стена Мороза(Frost Wall)" cost="430000" min_level="56"/>
+			<skill id="1275" level="5" name="Стрела Ауры(Aura Bolt)" cost="430000" min_level="56"/>
+			<skill id="213" level="5" name="Увеличение Маны(Boost Mana)" cost="430000" min_level="56"/>
+			<skill id="285" level="18" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="430000" min_level="56"/>
+			<skill id="1069" level="24" name="Усыпление(Sleep)" cost="430000" min_level="56"/>
+			<skill id="1072" level="2" name="Усыпляющее Облако(Sleeping Cloud)" cost="430000" min_level="56"/>
+			<skill id="146" level="28" name="Антимагия(Anti Magic)" cost="440000" min_level="57"/>
+			<skill id="234" level="24" name="Владение Магической Броней(Robe Mastery)" cost="440000" min_level="57"/>
+			<skill id="249" level="25" name="Владение Оружием(Weapon Mastery)" cost="440000" min_level="57"/>
+			<skill id="1235" level="11" name="Волна Воды(Hydro Blast)" cost="440000" min_level="57"/>
+			<skill id="1231" level="11" name="Сияние Ауры(Aura Flare)" cost="440000" min_level="57"/>
+			<skill id="1174" level="5" name="Стена Мороза(Frost Wall)" cost="440000" min_level="57"/>
+			<skill id="1069" level="25" name="Усыпление(Sleep)" cost="440000" min_level="57"/>
+			<skill id="146" level="29" name="Антимагия(Anti Magic)" cost="440000" min_level="58"/>
+			<skill id="212" level="4" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="440000" min_level="58"/>
+			<skill id="234" level="25" name="Владение Магической Броней(Robe Mastery)" cost="440000" min_level="58"/>
+			<skill id="249" level="26" name="Владение Оружием(Weapon Mastery)" cost="440000" min_level="58"/>
+			<skill id="1235" level="12" name="Волна Воды(Hydro Blast)" cost="440000" min_level="58"/>
+			<skill id="1295" level="1" name="Всплеск Воды(Aqua Splash)" cost="440000" min_level="58"/>
+			<skill id="1417" level="1" name="Вспышка Ауры(Aura Flash)" item_id="8891" cost="440000" min_level="58"/>
+			<skill id="1236" level="11" name="Заряд Мороза(Frost Bolt)" cost="440000" min_level="58"/>
+			<skill id="1237" level="9" name="Ледяной Кинжал(Ice Dagger)" cost="440000" min_level="58"/>
+			<skill id="1056" level="4" name="Отмена(Cancellation)" cost="440000" min_level="58"/>
+			<skill id="1164" level="11" name="Проклятие Слабости(Curse Weakness)" cost="440000" min_level="58"/>
+			<skill id="1231" level="12" name="Сияние Ауры(Aura Flare)" cost="440000" min_level="58"/>
+			<skill id="1265" level="6" name="Солнечное Сияние(Solar Flare)" cost="440000" min_level="58"/>
+			<skill id="1174" level="6" name="Стена Мороза(Frost Wall)" cost="440000" min_level="58"/>
+			<skill id="1275" level="6" name="Стрела Ауры(Aura Bolt)" cost="440000" min_level="58"/>
+			<skill id="285" level="19" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="440000" min_level="58"/>
+			<skill id="1069" level="26" name="Усыпление(Sleep)" cost="440000" min_level="58"/>
+			<skill id="146" level="30" name="Антимагия(Anti Magic)" cost="530000" min_level="59"/>
+			<skill id="234" level="26" name="Владение Магической Броней(Robe Mastery)" cost="530000" min_level="59"/>
+			<skill id="249" level="27" name="Владение Оружием(Weapon Mastery)" cost="530000" min_level="59"/>
+			<skill id="1235" level="13" name="Волна Воды(Hydro Blast)" cost="530000" min_level="59"/>
+			<skill id="1231" level="13" name="Сияние Ауры(Aura Flare)" cost="530000" min_level="59"/>
+			<skill id="1174" level="7" name="Стена Мороза(Frost Wall)" cost="530000" min_level="59"/>
+			<skill id="1069" level="27" name="Усыпление(Sleep)" cost="530000" min_level="59"/>
+			<skill id="146" level="31" name="Антимагия(Anti Magic)" cost="530000" min_level="60"/>
+			<skill id="229" level="5" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="530000" min_level="60"/>
+			<skill id="234" level="27" name="Владение Магической Броней(Robe Mastery)" cost="530000" min_level="60"/>
+			<skill id="249" level="28" name="Владение Оружием(Weapon Mastery)" cost="530000" min_level="60"/>
+			<skill id="1235" level="14" name="Волна Воды(Hydro Blast)" cost="530000" min_level="60"/>
+			<skill id="1295" level="2" name="Всплеск Воды(Aqua Splash)" cost="530000" min_level="60"/>
+			<skill id="1236" level="12" name="Заряд Мороза(Frost Bolt)" cost="530000" min_level="60"/>
+			<skill id="1237" level="10" name="Ледяной Кинжал(Ice Dagger)" cost="530000" min_level="60"/>
+			<skill id="1056" level="5" name="Отмена(Cancellation)" cost="530000" min_level="60"/>
+			<skill id="1164" level="12" name="Проклятие Слабости(Curse Weakness)" cost="530000" min_level="60"/>
+			<skill id="1047" level="3" name="Регенерация Маны(Mana Regeneration)" cost="530000" min_level="60"/>
+			<skill id="1231" level="14" name="Сияние Ауры(Aura Flare)" cost="530000" min_level="60"/>
+			<skill id="1265" level="7" name="Солнечное Сияние(Solar Flare)" cost="530000" min_level="60"/>
+			<skill id="1174" level="8" name="Стена Мороза(Frost Wall)" cost="530000" min_level="60"/>
+			<skill id="1275" level="7" name="Стрела Ауры(Aura Bolt)" cost="530000" min_level="60"/>
+			<skill id="1801" level="1" name="Темный Ассасин(Dark Assassin)" min_level="60"/>
+			<skill id="213" level="6" name="Увеличение Маны(Boost Mana)" cost="530000" min_level="60"/>
+			<skill id="285" level="20" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="530000" min_level="60"/>
+			<skill id="1069" level="28" name="Усыпление(Sleep)" cost="530000" min_level="60"/>
+			<skill id="146" level="32" name="Антимагия(Anti Magic)" cost="640000" min_level="61"/>
+			<skill id="1405" level="2" name="Божественное Вдохновение(Divine Inspiration)" item_id="8619" cost="640000" min_level="61"/>
+			<skill id="234" level="28" name="Владение Магической Броней(Robe Mastery)" cost="640000" min_level="61"/>
+			<skill id="249" level="29" name="Владение Оружием(Weapon Mastery)" cost="640000" min_level="61"/>
+			<skill id="1235" level="15" name="Волна Воды(Hydro Blast)" cost="640000" min_level="61"/>
+			<skill id="1231" level="15" name="Сияние Ауры(Aura Flare)" cost="640000" min_level="61"/>
+			<skill id="1174" level="9" name="Стена Мороза(Frost Wall)" cost="640000" min_level="61"/>
+			<skill id="1069" level="29" name="Усыпление(Sleep)" cost="640000" min_level="61"/>
+			<skill id="146" level="33" name="Антимагия(Anti Magic)" cost="640000" min_level="62"/>
+			<skill id="234" level="29" name="Владение Магической Броней(Robe Mastery)" cost="640000" min_level="62"/>
+			<skill id="249" level="30" name="Владение Оружием(Weapon Mastery)" cost="640000" min_level="62"/>
+			<skill id="1235" level="16" name="Волна Воды(Hydro Blast)" cost="640000" min_level="62"/>
+			<skill id="1295" level="3" name="Всплеск Воды(Aqua Splash)" cost="640000" min_level="62"/>
+			<skill id="1417" level="2" name="Вспышка Ауры(Aura Flash)" cost="640000" min_level="62"/>
+			<skill id="1236" level="13" name="Заряд Мороза(Frost Bolt)" cost="640000" min_level="62"/>
+			<skill id="1237" level="11" name="Ледяной Кинжал(Ice Dagger)" cost="640000" min_level="62"/>
+			<skill id="1056" level="6" name="Отмена(Cancellation)" cost="640000" min_level="62"/>
+			<skill id="1164" level="13" name="Проклятие Слабости(Curse Weakness)" cost="640000" min_level="62"/>
+			<skill id="1297" level="4" name="Светлый Разум(Clear Mind)" cost="640000" min_level="62"/>
+			<skill id="1231" level="16" name="Сияние Ауры(Aura Flare)" cost="640000" min_level="62"/>
+			<skill id="1265" level="8" name="Солнечное Сияние(Solar Flare)" cost="640000" min_level="62"/>
+			<skill id="1174" level="10" name="Стена Мороза(Frost Wall)" cost="640000" min_level="62"/>
+			<skill id="1275" level="8" name="Стрела Ауры(Aura Bolt)" cost="640000" min_level="62"/>
+			<skill id="285" level="21" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="640000" min_level="62"/>
+			<skill id="1069" level="30" name="Усыпление(Sleep)" cost="640000" min_level="62"/>
+			<skill id="1072" level="3" name="Усыпляющее Облако(Sleeping Cloud)" cost="640000" min_level="62"/>
+			<skill id="146" level="34" name="Антимагия(Anti Magic)" cost="800000" min_level="63"/>
+			<skill id="234" level="30" name="Владение Магической Броней(Robe Mastery)" cost="800000" min_level="63"/>
+			<skill id="249" level="31" name="Владение Оружием(Weapon Mastery)" cost="800000" min_level="63"/>
+			<skill id="1235" level="17" name="Волна Воды(Hydro Blast)" cost="800000" min_level="63"/>
+			<skill id="1231" level="17" name="Сияние Ауры(Aura Flare)" cost="800000" min_level="63"/>
+			<skill id="1174" level="11" name="Стена Мороза(Frost Wall)" cost="800000" min_level="63"/>
+			<skill id="1069" level="31" name="Усыпление(Sleep)" cost="800000" min_level="63"/>
+			<skill id="146" level="35" name="Антимагия(Anti Magic)" cost="800000" min_level="64"/>
+			<skill id="212" level="5" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="800000" min_level="64"/>
+			<skill id="234" level="31" name="Владение Магической Броней(Robe Mastery)" cost="800000" min_level="64"/>
+			<skill id="249" level="32" name="Владение Оружием(Weapon Mastery)" cost="800000" min_level="64"/>
+			<skill id="1235" level="18" name="Волна Воды(Hydro Blast)" cost="800000" min_level="64"/>
+			<skill id="1295" level="4" name="Всплеск Воды(Aqua Splash)" cost="800000" min_level="64"/>
+			<skill id="1183" level="3" name="Замораживающие Оковы(Freezing Shackle)" cost="800000" min_level="64"/>
+			<skill id="1236" level="14" name="Заряд Мороза(Frost Bolt)" cost="800000" min_level="64"/>
+			<skill id="1237" level="12" name="Ледяной Кинжал(Ice Dagger)" cost="800000" min_level="64"/>
+			<skill id="1056" level="7" name="Отмена(Cancellation)" cost="800000" min_level="64"/>
+			<skill id="1164" level="14" name="Проклятие Слабости(Curse Weakness)" cost="800000" min_level="64"/>
+			<skill id="1231" level="18" name="Сияние Ауры(Aura Flare)" cost="800000" min_level="64"/>
+			<skill id="1265" level="9" name="Солнечное Сияние(Solar Flare)" cost="800000" min_level="64"/>
+			<skill id="1174" level="12" name="Стена Мороза(Frost Wall)" cost="800000" min_level="64"/>
+			<skill id="1275" level="9" name="Стрела Ауры(Aura Bolt)" cost="800000" min_level="64"/>
+			<skill id="285" level="22" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="800000" min_level="64"/>
+			<skill id="1069" level="32" name="Усыпление(Sleep)" cost="800000" min_level="64"/>
+			<skill id="146" level="36" name="Антимагия(Anti Magic)" cost="1000000" min_level="65"/>
+			<skill id="234" level="32" name="Владение Магической Броней(Robe Mastery)" cost="1000000" min_level="65"/>
+			<skill id="249" level="33" name="Владение Оружием(Weapon Mastery)" cost="1000000" min_level="65"/>
+			<skill id="1235" level="19" name="Волна Воды(Hydro Blast)" cost="1000000" min_level="65"/>
+			<skill id="1231" level="19" name="Сияние Ауры(Aura Flare)" cost="1000000" min_level="65"/>
+			<skill id="1174" level="13" name="Стена Мороза(Frost Wall)" cost="1000000" min_level="65"/>
+			<skill id="1069" level="33" name="Усыпление(Sleep)" cost="1000000" min_level="65"/>
+			<skill id="146" level="37" name="Антимагия(Anti Magic)" cost="1000000" min_level="66"/>
+			<skill id="234" level="33" name="Владение Магической Броней(Robe Mastery)" cost="1000000" min_level="66"/>
+			<skill id="249" level="34" name="Владение Оружием(Weapon Mastery)" cost="1000000" min_level="66"/>
+			<skill id="1235" level="20" name="Волна Воды(Hydro Blast)" cost="1000000" min_level="66"/>
+			<skill id="1295" level="5" name="Всплеск Воды(Aqua Splash)" cost="1000000" min_level="66"/>
+			<skill id="1417" level="3" name="Вспышка Ауры(Aura Flash)" cost="1000000" min_level="66"/>
+			<skill id="1236" level="15" name="Заряд Мороза(Frost Bolt)" cost="1000000" min_level="66"/>
+			<skill id="1237" level="13" name="Ледяной Кинжал(Ice Dagger)" cost="1000000" min_level="66"/>
+			<skill id="1056" level="8" name="Отмена(Cancellation)" cost="1000000" min_level="66"/>
+			<skill id="1164" level="15" name="Проклятие Слабости(Curse Weakness)" cost="1000000" min_level="66"/>
+			<skill id="1231" level="20" name="Сияние Ауры(Aura Flare)" cost="1000000" min_level="66"/>
+			<skill id="1265" level="10" name="Солнечное Сияние(Solar Flare)" cost="1000000" min_level="66"/>
+			<skill id="1174" level="14" name="Стена Мороза(Frost Wall)" cost="1000000" min_level="66"/>
+			<skill id="1275" level="10" name="Стрела Ауры(Aura Bolt)" cost="1000000" min_level="66"/>
+			<skill id="213" level="7" name="Увеличение Маны(Boost Mana)" cost="1000000" min_level="66"/>
+			<skill id="285" level="23" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="1000000" min_level="66"/>
+			<skill id="1069" level="34" name="Усыпление(Sleep)" cost="1000000" min_level="66"/>
+			<skill id="1072" level="4" name="Усыпляющее Облако(Sleeping Cloud)" cost="1000000" min_level="66"/>
+			<skill id="146" level="38" name="Антимагия(Anti Magic)" cost="1200000" min_level="67"/>
+			<skill id="234" level="34" name="Владение Магической Броней(Robe Mastery)" cost="1200000" min_level="67"/>
+			<skill id="249" level="35" name="Владение Оружием(Weapon Mastery)" cost="1200000" min_level="67"/>
+			<skill id="1235" level="21" name="Волна Воды(Hydro Blast)" cost="1200000" min_level="67"/>
+			<skill id="1231" level="21" name="Сияние Ауры(Aura Flare)" cost="1200000" min_level="67"/>
+			<skill id="1174" level="15" name="Стена Мороза(Frost Wall)" cost="1200000" min_level="67"/>
+			<skill id="1069" level="35" name="Усыпление(Sleep)" cost="1200000" min_level="67"/>
+			<skill id="146" level="39" name="Антимагия(Anti Magic)" cost="1200000" min_level="68"/>
+			<skill id="1288" level="1" name="Аура Симфонии(Aura Symphony)" cost="1200000" min_level="68"/>
+			<skill id="229" level="6" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="1200000" min_level="68"/>
+			<skill id="234" level="35" name="Владение Магической Броней(Robe Mastery)" cost="1200000" min_level="68"/>
+			<skill id="249" level="36" name="Владение Оружием(Weapon Mastery)" cost="1200000" min_level="68"/>
+			<skill id="1235" level="22" name="Волна Воды(Hydro Blast)" cost="1200000" min_level="68"/>
+			<skill id="1295" level="6" name="Всплеск Воды(Aqua Splash)" cost="1200000" min_level="68"/>
+			<skill id="1236" level="16" name="Заряд Мороза(Frost Bolt)" cost="1200000" min_level="68"/>
+			<skill id="1237" level="14" name="Ледяной Кинжал(Ice Dagger)" cost="1200000" min_level="68"/>
+			<skill id="1056" level="9" name="Отмена(Cancellation)" cost="1200000" min_level="68"/>
+			<skill id="1164" level="16" name="Проклятие Слабости(Curse Weakness)" cost="1200000" min_level="68"/>
+			<skill id="1297" level="5" name="Светлый Разум(Clear Mind)" cost="1200000" min_level="68"/>
+			<skill id="1231" level="22" name="Сияние Ауры(Aura Flare)" cost="1200000" min_level="68"/>
+			<skill id="1265" level="11" name="Солнечное Сияние(Solar Flare)" cost="1200000" min_level="68"/>
+			<skill id="1174" level="16" name="Стена Мороза(Frost Wall)" cost="1200000" min_level="68"/>
+			<skill id="1275" level="11" name="Стрела Ауры(Aura Bolt)" cost="1200000" min_level="68"/>
+			<skill id="285" level="24" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="1200000" min_level="68"/>
+			<skill id="1069" level="36" name="Усыпление(Sleep)" cost="1200000" min_level="68"/>
+			<skill id="146" level="40" name="Антимагия(Anti Magic)" cost="1500000" min_level="69"/>
+			<skill id="234" level="36" name="Владение Магической Броней(Robe Mastery)" cost="1500000" min_level="69"/>
+			<skill id="249" level="37" name="Владение Оружием(Weapon Mastery)" cost="1500000" min_level="69"/>
+			<skill id="1235" level="23" name="Волна Воды(Hydro Blast)" cost="1500000" min_level="69"/>
+			<skill id="1231" level="23" name="Сияние Ауры(Aura Flare)" cost="1500000" min_level="69"/>
+			<skill id="1174" level="17" name="Стена Мороза(Frost Wall)" cost="1500000" min_level="69"/>
+			<skill id="1069" level="37" name="Усыпление(Sleep)" cost="1500000" min_level="69"/>
+			<skill id="146" level="41" name="Антимагия(Anti Magic)" cost="1500000" min_level="70"/>
+			<skill id="234" level="37" name="Владение Магической Броней(Robe Mastery)" cost="1500000" min_level="70"/>
+			<skill id="249" level="38" name="Владение Оружием(Weapon Mastery)" cost="1500000" min_level="70"/>
+			<skill id="1235" level="24" name="Волна Воды(Hydro Blast)" cost="1500000" min_level="70"/>
+			<skill id="1295" level="7" name="Всплеск Воды(Aqua Splash)" cost="1500000" min_level="70"/>
+			<skill id="1417" level="4" name="Вспышка Ауры(Aura Flash)" cost="1500000" min_level="70"/>
+			<skill id="1236" level="17" name="Заряд Мороза(Frost Bolt)" cost="1500000" min_level="70"/>
+			<skill id="1237" level="15" name="Ледяной Кинжал(Ice Dagger)" cost="1500000" min_level="70"/>
+			<skill id="1056" level="10" name="Отмена(Cancellation)" cost="1500000" min_level="70"/>
+			<skill id="1164" level="17" name="Проклятие Слабости(Curse Weakness)" cost="1500000" min_level="70"/>
+			<skill id="1047" level="4" name="Регенерация Маны(Mana Regeneration)" cost="1500000" min_level="70"/>
+			<skill id="1802" level="1" name="Светлый Ассасин(White Assassin)" min_level="70"/>
+			<skill id="1231" level="24" name="Сияние Ауры(Aura Flare)" cost="1500000" min_level="70"/>
+			<skill id="1290" level="1" name="Снежная Буря(Blizzard)" cost="1500000" min_level="70"/>
+			<skill id="1265" level="12" name="Солнечное Сияние(Solar Flare)" cost="1500000" min_level="70"/>
+			<skill id="1174" level="18" name="Стена Мороза(Frost Wall)" cost="1500000" min_level="70"/>
+			<skill id="1275" level="12" name="Стрела Ауры(Aura Bolt)" cost="1500000" min_level="70"/>
+			<skill id="285" level="25" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="1500000" min_level="70"/>
+			<skill id="1069" level="38" name="Усыпление(Sleep)" cost="1500000" min_level="70"/>
+			<skill id="1072" level="5" name="Усыпляющее Облако(Sleeping Cloud)" cost="1500000" min_level="70"/>
+			<skill id="146" level="42" name="Антимагия(Anti Magic)" cost="1800000" min_level="71"/>
+			<skill id="234" level="38" name="Владение Магической Броней(Robe Mastery)" cost="1800000" min_level="71"/>
+			<skill id="249" level="39" name="Владение Оружием(Weapon Mastery)" cost="1800000" min_level="71"/>
+			<skill id="1235" level="25" name="Волна Воды(Hydro Blast)" cost="1800000" min_level="71"/>
+			<skill id="1231" level="25" name="Сияние Ауры(Aura Flare)" cost="1800000" min_level="71"/>
+			<skill id="1174" level="19" name="Стена Мороза(Frost Wall)" cost="1800000" min_level="71"/>
+			<skill id="1069" level="39" name="Усыпление(Sleep)" cost="1800000" min_level="71"/>
+			<skill id="146" level="43" name="Антимагия(Anti Magic)" cost="1800000" min_level="72"/>
+			<skill id="234" level="39" name="Владение Магической Броней(Robe Mastery)" cost="1800000" min_level="72"/>
+			<skill id="249" level="40" name="Владение Оружием(Weapon Mastery)" cost="1800000" min_level="72"/>
+			<skill id="1235" level="26" name="Волна Воды(Hydro Blast)" cost="1800000" min_level="72"/>
+			<skill id="1295" level="8" name="Всплеск Воды(Aqua Splash)" cost="1800000" min_level="72"/>
+			<skill id="1236" level="18" name="Заряд Мороза(Frost Bolt)" cost="1800000" min_level="72"/>
+			<skill id="1237" level="16" name="Ледяной Кинжал(Ice Dagger)" cost="1800000" min_level="72"/>
+			<skill id="1056" level="11" name="Отмена(Cancellation)" cost="1800000" min_level="72"/>
+			<skill id="1164" level="18" name="Проклятие Слабости(Curse Weakness)" cost="1800000" min_level="72"/>
+			<skill id="1231" level="26" name="Сияние Ауры(Aura Flare)" cost="1800000" min_level="72"/>
+			<skill id="1265" level="13" name="Солнечное Сияние(Solar Flare)" cost="1800000" min_level="72"/>
+			<skill id="1174" level="20" name="Стена Мороза(Frost Wall)" cost="1800000" min_level="72"/>
+			<skill id="1293" level="1" name="Стихийная Симфония(Elemental Symphony)" cost="1800000" min_level="72"/>
+			<skill id="1275" level="13" name="Стрела Ауры(Aura Bolt)" cost="1800000" min_level="72"/>
+			<skill id="213" level="8" name="Увеличение Маны(Boost Mana)" cost="1800000" min_level="72"/>
+			<skill id="285" level="26" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="1800000" min_level="72"/>
+			<skill id="1069" level="40" name="Усыпление(Sleep)" cost="1800000" min_level="72"/>
+			<skill id="146" level="44" name="Антимагия(Anti Magic)" cost="2200000" min_level="73"/>
+			<skill id="234" level="40" name="Владение Магической Броней(Robe Mastery)" cost="2200000" min_level="73"/>
+			<skill id="249" level="41" name="Владение Оружием(Weapon Mastery)" cost="2200000" min_level="73"/>
+			<skill id="1235" level="27" name="Волна Воды(Hydro Blast)" cost="2200000" min_level="73"/>
+			<skill id="1231" level="27" name="Сияние Ауры(Aura Flare)" cost="2200000" min_level="73"/>
+			<skill id="1174" level="21" name="Стена Мороза(Frost Wall)" cost="2200000" min_level="73"/>
+			<skill id="1069" level="41" name="Усыпление(Sleep)" cost="2200000" min_level="73"/>
+			<skill id="146" level="45" name="Антимагия(Anti Magic)" cost="2200000" min_level="74"/>
+			<skill id="212" level="6" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="2200000" min_level="74"/>
+			<skill id="229" level="7" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="2200000" min_level="74"/>
+			<skill id="234" level="41" name="Владение Магической Броней(Robe Mastery)" cost="2200000" min_level="74"/>
+			<skill id="249" level="42" name="Владение Оружием(Weapon Mastery)" cost="2200000" min_level="74"/>
+			<skill id="1235" level="28" name="Волна Воды(Hydro Blast)" cost="2200000" min_level="74"/>
+			<skill id="1295" level="9" name="Всплеск Воды(Aqua Splash)" cost="2200000" min_level="74"/>
+			<skill id="1417" level="5" name="Вспышка Ауры(Aura Flash)" cost="2200000" min_level="74"/>
+			<skill id="1183" level="4" name="Замораживающие Оковы(Freezing Shackle)" cost="2200000" min_level="74"/>
+			<skill id="1236" level="19" name="Заряд Мороза(Frost Bolt)" cost="2200000" min_level="74"/>
+			<skill id="1237" level="17" name="Ледяной Кинжал(Ice Dagger)" cost="2200000" min_level="74"/>
+			<skill id="1056" level="12" name="Отмена(Cancellation)" cost="2200000" min_level="74"/>
+			<skill id="1164" level="19" name="Проклятие Слабости(Curse Weakness)" cost="2200000" min_level="74"/>
+			<skill id="1297" level="6" name="Светлый Разум(Clear Mind)" cost="2200000" min_level="74"/>
+			<skill id="1231" level="28" name="Сияние Ауры(Aura Flare)" cost="2200000" min_level="74"/>
+			<skill id="1265" level="14" name="Солнечное Сияние(Solar Flare)" cost="2200000" min_level="74"/>
+			<skill id="1174" level="22" name="Стена Мороза(Frost Wall)" cost="2200000" min_level="74"/>
+			<skill id="1275" level="14" name="Стрела Ауры(Aura Bolt)" cost="2200000" min_level="74"/>
+			<skill id="285" level="27" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="2200000" min_level="74"/>
+			<skill id="1069" level="42" name="Усыпление(Sleep)" cost="2200000" min_level="74"/>
+		</class>
+	</normal_skill_tree>
+</list>

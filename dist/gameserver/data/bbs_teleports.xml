@@ -1,0 +1,74 @@
+<list>
+	<teleport_list name_en="Start Villages" name_ru="Стартовые деревни">
+		<point x="-82687" y="243157" z="-3734" name_en="Talking Island" name_ru="Деревня Говорящего Острова"/>
+		<point x="45873" y="49288" z="-3064" name_en="Elf Village" name_ru="Деревня Эльфов"/>
+		<point x="12428" y="16551" z="-4588" name_en="Dark Elf Village" name_ru="Деревня Темный Эльфов"/>
+		<point x="-44133" y="-113911" z="-244" name_en="Orc Village" name_ru="Деревня Орков"/>
+		<point x="116551" y="-182493" z="-1525" name_en="Dwarf Village" name_ru="Деревня Гномов"/>
+	</teleport_list>
+	<teleport_list name_en="Towns" name_ru="Города">
+		<point x="-83063" y="150791" z="-3133" name_en="Gludin" name_ru="Глудин" />
+		<point x="-14225" y="123540" z="-3121" castle_id="1" name_en="Gludio" name_ru="Глудио" />
+		<point x="18748" y="145437" z="-3132" castle_id="2" name_en="Dion" name_ru="Дион" />
+		<point x="17144" y="170156" z="-3502" name_en="Floran" name_ru="Флоран" />
+		<point x="82698" y="148638" z="-3473" castle_id="3" name_en="Giran" name_ru="Гиран" />
+		<point x="82321" y="55139" z="-1529" castle_id="4" name_en="Oren" name_ru="Орен" />
+		<point x="116589" y="76268" z="-2734" name_en="Hunter Village" name_ru="Деревня Охотников" />
+	</teleport_list>
+	<teleport_list name_en="Town Area's" name_ru="Окрестности Городов">
+		<teleport_list name_en="Gludin Area" name_ru="Окрестности Глудина">
+			<point x="-89199" y="149962" z="-3586" name_en="Gludin Harbor" name_ru="Гавань Глудина"/>
+			<point x="-56742" y="140569" z="-2625" name_en="Abandoned Camp" name_ru="Заброшенный Лагерь"/>
+			<point x="-66931" y="120296" z="-3651" name_en="Fellmere Lake" name_ru="Озеро Фельмер"/>
+			<point x="-53838" y="179285" z="-4640" name_en="Forgotten Temple" name_ru="Забытый Храм"/>
+			<point x="-90562" y="108182" z="-3546" name_en="Orc Barracks" name_ru="Лагерь Орков"/>
+		</teleport_list>
+		<teleport_list name_en="Gludio Area" name_ru="Окрестности Глудио">
+			<point x="-56235" y="106668" z="-3773" name_en="Ruins of Agony" name_ru="Руины Страданий"/>
+			<point x="-20043" y="137688" z="-3896" name_en="Ruins of Despair" name_ru="Руины Отчаяния"/>
+			<point x="-26111" y="173692" z="-4152" name_en="Ant's Nest" name_ru="Муравейник"/>
+			<point x="-16730" y="209417" z="-3664" name_en="South of Wastelands" name_ru="Юг Пустоши"/>
+			<point x="-23403" y="186599" z="-4317" name_en="Wastelands" name_ru="Пустошь"/>
+		</teleport_list>
+		<teleport_list name_en="Dion Area" name_ru="Окрестности Диона">
+			<point x="51055" y="141959" z="-2869" name_en="Execution Grounds" name_ru="Земля Казненных"/>
+			<point x="17192" y="114178" z="-3439" name_en="Cruma Tower Entrance" name_ru="Вход в Башню Крумы"/>
+			<point x="17724" y="114004" z="-11672" name_en="Cruma Tower 1st Floor" name_ru="1й этаж Башник Крумы"/>
+			<point x="17730" y="108301" z="-9057" name_en="Cruma Tower 2nd Floor" name_ru="2й этаж Башник Крумы"/>
+		</teleport_list>
+		<teleport_list name_en="Giran Area" name_ru="Окрестности Гирана">
+			<point x="47114" y="187152" z="-3485" name_en="Giran Harbor" name_ru="Гавань Гирана"/>
+			<point x="70000" y="126636" z="-3804" name_en="Death Pass" name_ru="Долина Смерти"/>
+			<point x="105751" y="113370" z="-3199" name_en="Hardin's Academy" name_ru="Академия Хардина"/>
+			<point x="122881" y="110792" z="-3727" name_en="Dragon Valley" name_ru="Долина Драконов"/>
+			<point x="131355" y="114451" z="-3718" name_en="Antharas' Lair Entrance" name_ru="Вход в Логово Антараса"/>
+		</teleport_list>
+		<teleport_list name_en="Oren Area" name_ru="Окрестности Орена">
+			<point x="62425" y="30856" z="-3779" name_en="Sea Of Spores" name_ru="Море Спор"/>
+			<point x="85332" y="16186" z="-3673" name_en="Ivory Tower" name_ru="Башня Слоновой Кости"/>
+			<point x="70833" y="6426" z="-3639" name_en="Northern Waterfall" name_ru="Северный Водопад"/>
+			<point x="87252" y="85514" z="-3056" name_en="Plains of Lizardmen" name_ru="Долина Ящеров"/>
+		</teleport_list>
+		<teleport_list name_en="Hunters Village Area" name_ru="Окрест. Деревни Охотников">
+			<point x="104413" y="33734" z="-3795" name_en="Enchanted Valley (North)" name_ru="Волшебная Долина (Север)"/>
+			<point x="124899" y="61995" z="-3915" name_en="Enchanted Valley (South)" name_ru="Волшебная Долина (Юг)"/>
+		</teleport_list>
+	</teleport_list>
+	<teleport_list name_en="Residences" name_ru="Резиденции">
+		<teleport_list name_en="Castles" name_ru="Замки">
+			<point x="-18361" y="113887" z="-2767" castle_id="1" name_en="Gludio Castle" name_ru="Замок Глудио" />
+			<point x="22306" y="156027" z="-2953" castle_id="2" name_en="Dion Castle" name_ru="Замок Дион" />
+			<point x="112122" y="144855" z="-2751" castle_id="3" name_en="Giran Castle" name_ru="Замок Гиран" />
+			<point x="78116" y="36961" z="-2458" castle_id="4" name_en="Oren Castle" name_ru="Замок Орен" />
+		</teleport_list>
+		<teleport_list name_en="Clan Halls" name_ru="Холлы Клана">
+			<point x="45556" y="109807" z="-1995" name_en="Fortress of Resistance" name_ru="Лаген Партизан"/>
+			<point x="86575" y="-19745" z="-1936" name_en="Bandit Stronghold" name_ru="Лагерь Разбойников"/>
+		</teleport_list>
+	</teleport_list>
+	<teleport_list name_en="Arenas" name_ru="Арены">
+		<point x="-86979" y="142402" z="-3643" name_en="Gludin Arena" name_ru="Арена Глудина"/>
+		<point x="73890" y="142656" z="-3778" name_en="Giran Arena" name_ru="Арена Гирана"/>
+		<point x="12312" y="182752" z="-3558" name_en="Monster Race Track" name_ru="Гонки Монстров"/>
+	</teleport_list>
+</list>

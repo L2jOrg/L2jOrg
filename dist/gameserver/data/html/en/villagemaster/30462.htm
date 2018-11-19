@@ -1,0 +1,11 @@
+<html><head><body>
+Grand Master Tronix:<br>
+Welcome! Did the careering tendrils of chaos lead you here? No one comes here without good reason. Tell me, my young friend, what is it you need?<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="link guard_class_change1001.htm">"Can you tell me about the 1st Class Transfer?"</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Clan</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Alliance</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Exchange Daily Coins</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Quest</Button>
+</body></html>

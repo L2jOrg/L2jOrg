@@ -1,0 +1,1933 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn name="giran17_mb2323_01" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="127908" y="138360" zmin="-3564" zmax="-2964"/>
+			<add x="128532" y="137880" zmin="-3564" zmax="-2964"/>
+			<add x="128824" y="138548" zmin="-3564" zmax="-2964"/>
+			<add x="128312" y="139188" zmin="-3564" zmax="-2964"/>
+		</territory>
+		<npc id="25415"/><!--Накондас-->
+	</spawn>
+	<spawn name="giran_dominion11" count="1" respawn="10800">
+		<point x="115362" y="145020" z="-2567" h="32768"/>
+		<npc id="35165"/><!--Маг Гвардии-->
+	</spawn>
+	<spawn name="giran_dominion08" count="1" respawn="10800">
+		<point x="112602" y="144521" z="-2440" h="24576"/>
+		<npc id="35165"/><!--Маг Гвардии-->
+	</spawn>
+	<spawn name="giran_dominion08" count="1" respawn="10800">
+		<point x="112610" y="145211" z="-2440" h="40960"/>
+		<npc id="35165"/><!--Маг Гвардии-->
+	</spawn>
+	<spawn name="giran01_qm2322_01" count="1" respawn="180">
+		<territory>
+			<add x="106252" y="135416" zmin="-3531" zmax="-3331"/>
+			<add x="106452" y="135416" zmin="-3531" zmax="-3331"/>
+			<add x="106452" y="135616" zmin="-3531" zmax="-3331"/>
+			<add x="106252" y="135616" zmin="-3531" zmax="-3331"/>
+		</territory>
+		<npc id="27107"/><!--Силуэт Тилфо-->
+	</spawn>
+	<spawn name="giran_chamberlain_etc" count="1" respawn="60" respawn_random="0" period_of_day="none" group="giran_castle_light_side">
+		<point x="117095" y="144997" z="-2539" h="32768"/>
+		<npc id="35184"/><!--Камергер Света-->
+	</spawn>
+	<spawn name="giran_chamberlain_etc" count="1" respawn="60" respawn_random="0" period_of_day="none" group="giran_castle_dark_side">
+		<point x="117095" y="144997" z="-2539" h="32768"/>
+		<npc id="36655"/><!--Камергер Тьмы-->
+	</spawn>
+	<spawn name="giran_chamberlain_etc" count="1" respawn="60" group="giran_castle_3">
+		<point x="107386" y="145807" z="-3300" h="32768"/>
+		<npc id="35188"/><!--Холмес-->
+	</spawn>
+	<spawn name="giran_chamberlain_etc" count="1" respawn="10800" group="giran_castle_3">
+		<point x="112661" y="144757" z="-2817" h="32768"/>
+		<npc id="35180"/><!--Привратник Внешних Владений-->
+	</spawn>
+	<spawn name="giran_chamberlain_etc" count="1" respawn="10800" group="giran_castle_3">
+		<point x="113009" y="144703" z="-2817" h="49152"/>
+		<npc id="35180"/><!--Привратник Внешних Владений-->
+	</spawn>
+	<spawn name="giran_chamberlain_etc" count="1" respawn="10800" group="giran_castle_3">
+		<point x="115220" y="144930" z="-2527" h="32768"/>
+		<npc id="35181"/><!--Привратник Внутренних Владений-->
+	</spawn>
+	<spawn name="giran_chamberlain_etc" count="1" respawn="10800" group="giran_castle_3">
+		<point x="115575" y="144864" z="-2567" h="49152"/>
+		<npc id="35181"/><!--Привратник Внутренних Владений-->
+	</spawn>
+	<spawn name="giran17_npc2322_02" count="1" respawn="60">
+		<point x="106345" y="135523" z="-3415" h="0"/>
+		<npc id="30640"/><!--Бринтия-->
+	</spawn>
+	<territory name="giran17_2322_04">
+		<add x="105260" y="134848" zmin="-3628" zmax="-3228"/>
+		<add x="108352" y="133880" zmin="-3628" zmax="-3228"/>
+		<add x="111764" y="135268" zmin="-3628" zmax="-3228"/>
+		<add x="110768" y="137216" zmin="-3628" zmax="-3228"/>
+		<add x="107724" y="138068" zmin="-3628" zmax="-3228"/>
+	</territory>
+	<spawn name="giran17_2322_04" count="6" respawn="27">
+		<territory name="giran17_2322_04"/>
+		<npc id="20249"/><!--Воин Людоедов Турак-->
+	</spawn>
+	<spawn name="giran17_2322_04" count="6" respawn="27">
+		<territory name="giran17_2322_04"/>
+		<npc id="20158"/><!--Медуза-->
+	</spawn>
+	<spawn name="giran17_2322_04" count="6" respawn="27">
+		<territory name="giran17_2322_04"/>
+		<npc id="20176"/><!--Змей-->
+	</spawn>
+	<territory name="giran17_2322_05">
+		<add x="111856" y="135344" zmin="-3712" zmax="-2712"/>
+		<add x="118060" y="136228" zmin="-3712" zmax="-2712"/>
+		<add x="114668" y="138212" zmin="-3712" zmax="-2712"/>
+		<add x="111768" y="138656" zmin="-3712" zmax="-2712"/>
+		<add x="110916" y="137272" zmin="-3712" zmax="-2712"/>
+	</territory>
+	<spawn name="giran17_2322_05" count="5" respawn="27">
+		<territory name="giran17_2322_05"/>
+		<npc id="20249"/><!--Воин Людоедов Турак-->
+	</spawn>
+	<spawn name="giran17_2322_05" count="5" respawn="27">
+		<territory name="giran17_2322_05"/>
+		<npc id="20158"/><!--Медуза-->
+	</spawn>
+	<spawn name="giran17_2322_05" count="5" respawn="27">
+		<territory name="giran17_2322_05"/>
+		<npc id="20176"/><!--Змей-->
+	</spawn>
+	<territory name="giran17_2322_02">
+		<add x="103196" y="131248" zmin="-3656" zmax="-3056"/>
+		<add x="108356" y="131288" zmin="-3656" zmax="-3056"/>
+		<add x="108292" y="132692" zmin="-3656" zmax="-3056"/>
+		<add x="103956" y="134148" zmin="-3656" zmax="-3056"/>
+		<add x="103116" y="133776" zmin="-3656" zmax="-3056"/>
+	</territory>
+	<spawn name="giran17_2322_02" count="4" respawn="27">
+		<territory name="giran17_2322_02"/>
+		<npc id="20248"/><!--Людоед Турак-->
+	</spawn>
+	<spawn name="giran17_2322_02" count="4" respawn="27">
+		<territory name="giran17_2322_02"/>
+		<npc id="20145"/><!--Гарпия-->
+	</spawn>
+	<spawn name="giran17_2322_02" count="4" respawn="27">
+		<territory name="giran17_2322_02"/>
+		<npc id="20249"/><!--Воин Людоедов Турак-->
+	</spawn>
+	<territory name="giran17_2322_03">
+		<add x="101904" y="136448" zmin="-3688" zmax="-3228"/>
+		<add x="103108" y="135076" zmin="-3688" zmax="-3228"/>
+		<add x="105008" y="134864" zmin="-3688" zmax="-3228"/>
+		<add x="107884" y="138588" zmin="-3688" zmax="-3228"/>
+		<add x="106032" y="139908" zmin="-3688" zmax="-3228"/>
+		<add x="104556" y="139632" zmin="-3688" zmax="-3228"/>
+	</territory>
+	<spawn name="giran17_2322_03" count="5" respawn="27">
+		<territory name="giran17_2322_03"/>
+		<npc id="20248"/><!--Людоед Турак-->
+	</spawn>
+	<spawn name="giran17_2322_03" count="5" respawn="27">
+		<territory name="giran17_2322_03"/>
+		<npc id="20145"/><!--Гарпия-->
+	</spawn>
+	<spawn name="giran17_2322_03" count="5" respawn="27">
+		<territory name="giran17_2322_03"/>
+		<npc id="20249"/><!--Воин Людоедов Турак-->
+	</spawn>
+	<territory name="giran17_2322_01">
+		<add x="98552" y="131280" zmin="-3684" zmax="-3084"/>
+		<add x="103160" y="131268" zmin="-3684" zmax="-3084"/>
+		<add x="103056" y="133876" zmin="-3684" zmax="-3084"/>
+		<add x="100432" y="136044" zmin="-3684" zmax="-3084"/>
+		<add x="98604" y="136436" zmin="-3684" zmax="-3084"/>
+	</territory>
+	<spawn name="giran17_2322_01" count="6" respawn="27">
+		<territory name="giran17_2322_01"/>
+		<npc id="20248"/><!--Людоед Турак-->
+	</spawn>
+	<spawn name="giran17_2322_01" count="6" respawn="27">
+		<territory name="giran17_2322_01"/>
+		<npc id="20145"/><!--Гарпия-->
+	</spawn>
+	<spawn name="giran17_2322_01" count="6" respawn="27">
+		<territory name="giran17_2322_01"/>
+		<npc id="20249"/><!--Воин Людоедов Турак-->
+	</spawn>
+	<territory name="giran17_2322_08">
+		<add x="122928" y="133828" zmin="-3708" zmax="-2708"/>
+		<add x="126056" y="132704" zmin="-3708" zmax="-2708"/>
+		<add x="127224" y="134600" zmin="-3708" zmax="-2708"/>
+		<add x="124816" y="138108" zmin="-3708" zmax="-2708"/>
+		<add x="122572" y="137740" zmin="-3708" zmax="-2708"/>
+		<add x="122084" y="136600" zmin="-3708" zmax="-2708"/>
+	</territory>
+	<spawn name="giran17_2322_08" count="5" respawn="27">
+		<territory name="giran17_2322_08"/>
+		<npc id="20249"/><!--Воин Людоедов Турак-->
+	</spawn>
+	<spawn name="giran17_2322_08" count="5" respawn="27">
+		<territory name="giran17_2322_08"/>
+		<npc id="20158"/><!--Медуза-->
+	</spawn>
+	<spawn name="giran17_2322_08" count="5" respawn="27">
+		<territory name="giran17_2322_08"/>
+		<npc id="20176"/><!--Змей-->
+	</spawn>
+	<territory name="giran17_2322_09">
+		<add x="127360" y="134580" zmin="-3608" zmax="-2608"/>
+		<add x="129868" y="134556" zmin="-3608" zmax="-2608"/>
+		<add x="129976" y="136468" zmin="-3608" zmax="-2608"/>
+		<add x="128196" y="138976" zmin="-3608" zmax="-2608"/>
+		<add x="125852" y="138988" zmin="-3608" zmax="-2608"/>
+		<add x="124916" y="138068" zmin="-3608" zmax="-2608"/>
+	</territory>
+	<spawn name="giran17_2322_09" count="4" respawn="27">
+		<territory name="giran17_2322_09"/>
+		<npc id="20249"/><!--Воин Людоедов Турак-->
+	</spawn>
+	<spawn name="giran17_2322_09" count="4" respawn="27">
+		<territory name="giran17_2322_09"/>
+		<npc id="20158"/><!--Медуза-->
+	</spawn>
+	<spawn name="giran17_2322_09" count="4" respawn="27">
+		<territory name="giran17_2322_09"/>
+		<npc id="20176"/><!--Змей-->
+	</spawn>
+	<territory name="giran17_2322_06">
+		<add x="116428" y="135160" zmin="-3692" zmax="-3092"/>
+		<add x="119916" y="133456" zmin="-3692" zmax="-3092"/>
+		<add x="122688" y="134232" zmin="-3692" zmax="-3092"/>
+		<add x="121532" y="137616" zmin="-3692" zmax="-3092"/>
+	</territory>
+	<spawn name="giran17_2322_06" count="4" respawn="27">
+		<territory name="giran17_2322_06"/>
+		<npc id="20249"/><!--Воин Людоедов Турак-->
+	</spawn>
+	<spawn name="giran17_2322_06" count="4" respawn="27">
+		<territory name="giran17_2322_06"/>
+		<npc id="20158"/><!--Медуза-->
+	</spawn>
+	<spawn name="giran17_2322_06" count="5" respawn="27">
+		<territory name="giran17_2322_06"/>
+		<npc id="20176"/><!--Змей-->
+	</spawn>
+	<territory name="giran17_2322_07">
+		<add x="118568" y="131272" zmin="-3656" zmax="-3056"/>
+		<add x="122612" y="131248" zmin="-3656" zmax="-3056"/>
+		<add x="122700" y="134072" zmin="-3656" zmax="-3056"/>
+		<add x="120068" y="133340" zmin="-3656" zmax="-3056"/>
+	</territory>
+	<spawn name="giran17_2322_07" count="3" respawn="27">
+		<territory name="giran17_2322_07"/>
+		<npc id="20249"/><!--Воин Людоедов Турак-->
+	</spawn>
+	<spawn name="giran17_2322_07" count="3" respawn="27">
+		<territory name="giran17_2322_07"/>
+		<npc id="20158"/><!--Медуза-->
+	</spawn>
+	<spawn name="giran17_2322_07" count="3" respawn="27">
+		<territory name="giran17_2322_07"/>
+		<npc id="20176"/><!--Змей-->
+	</spawn>
+	<territory name="giran17_2322_15">
+		<add x="98540" y="147792" zmin="-3732" zmax="-3132"/>
+		<add x="101476" y="148904" zmin="-3732" zmax="-3132"/>
+		<add x="100820" y="150852" zmin="-3732" zmax="-3132"/>
+		<add x="98688" y="151548" zmin="-3732" zmax="-3132"/>
+	</territory>
+	<spawn name="giran17_2322_15" count="2" respawn="27">
+		<territory name="giran17_2322_15"/>
+		<npc id="20248"/><!--Людоед Турак-->
+	</spawn>
+	<spawn name="giran17_2322_15" count="2" respawn="27">
+		<territory name="giran17_2322_15"/>
+		<npc id="20145"/><!--Гарпия-->
+	</spawn>
+	<spawn name="giran17_2322_15" count="1" respawn="27">
+		<territory name="giran17_2322_15"/>
+		<npc id="20249"/><!--Воин Людоедов Турак-->
+	</spawn>
+	<territory name="giran17_2322_13">
+		<add x="100720" y="144180" zmin="-3688" zmax="-3088"/>
+		<add x="103764" y="143940" zmin="-3688" zmax="-3088"/>
+		<add x="106548" y="145576" zmin="-3688" zmax="-3088"/>
+		<add x="105344" y="147584" zmin="-3688" zmax="-3088"/>
+		<add x="102188" y="146140" zmin="-3688" zmax="-3088"/>
+	</territory>
+	<spawn name="giran17_2322_13" count="3" respawn="27">
+		<territory name="giran17_2322_13"/>
+		<npc id="20248"/><!--Людоед Турак-->
+	</spawn>
+	<spawn name="giran17_2322_13" count="3" respawn="27">
+		<territory name="giran17_2322_13"/>
+		<npc id="20145"/><!--Гарпия-->
+	</spawn>
+	<spawn name="giran17_2322_13" count="3" respawn="27">
+		<territory name="giran17_2322_13"/>
+		<npc id="20249"/><!--Воин Людоедов Турак-->
+	</spawn>
+	<territory name="giran17_2322_14">
+		<add x="98484" y="145328" zmin="-3760" zmax="-3160"/>
+		<add x="100636" y="144216" zmin="-3760" zmax="-3160"/>
+		<add x="102076" y="146220" zmin="-3760" zmax="-3160"/>
+		<add x="101520" y="148776" zmin="-3760" zmax="-3160"/>
+		<add x="98468" y="147624" zmin="-3760" zmax="-3160"/>
+	</territory>
+	<spawn name="giran17_2322_14" count="2" respawn="27">
+		<territory name="giran17_2322_14"/>
+		<npc id="20248"/><!--Людоед Турак-->
+	</spawn>
+	<spawn name="giran17_2322_14" count="2" respawn="27">
+		<territory name="giran17_2322_14"/>
+		<npc id="20145"/><!--Гарпия-->
+	</spawn>
+	<spawn name="giran17_2322_14" count="2" respawn="27">
+		<territory name="giran17_2322_14"/>
+		<npc id="20249"/><!--Воин Людоедов Турак-->
+	</spawn>
+	<territory name="giran17_2322_11">
+		<add x="103800" y="139548" zmin="-3700" zmax="-3100"/>
+		<add x="105820" y="139988" zmin="-3700" zmax="-3100"/>
+		<add x="106624" y="141076" zmin="-3700" zmax="-3100"/>
+		<add x="104860" y="143748" zmin="-3700" zmax="-3100"/>
+	</territory>
+	<spawn name="giran17_2322_11" count="1" respawn="27">
+		<territory name="giran17_2322_11"/>
+		<npc id="20248"/><!--Людоед Турак-->
+	</spawn>
+	<spawn name="giran17_2322_11" count="2" respawn="27">
+		<territory name="giran17_2322_11"/>
+		<npc id="20145"/><!--Гарпия-->
+	</spawn>
+	<spawn name="giran17_2322_11" count="2" respawn="27">
+		<territory name="giran17_2322_11"/>
+		<npc id="20249"/><!--Воин Людоедов Турак-->
+	</spawn>
+	<territory name="giran17_2322_12">
+		<add x="100212" y="141260" zmin="-3668" zmax="-3268"/>
+		<add x="101876" y="141168" zmin="-3668" zmax="-3268"/>
+		<add x="103216" y="141744" zmin="-3668" zmax="-3268"/>
+		<add x="103864" y="143884" zmin="-3668" zmax="-3268"/>
+		<add x="100756" y="144032" zmin="-3668" zmax="-3268"/>
+	</territory>
+	<spawn name="giran17_2322_12" count="2" respawn="27">
+		<territory name="giran17_2322_12"/>
+		<npc id="20248"/><!--Людоед Турак-->
+	</spawn>
+	<spawn name="giran17_2322_12" count="2" respawn="27">
+		<territory name="giran17_2322_12"/>
+		<npc id="20145"/><!--Гарпия-->
+	</spawn>
+	<spawn name="giran17_2322_12" count="2" respawn="27">
+		<territory name="giran17_2322_12"/>
+		<npc id="20249"/><!--Воин Людоедов Турак-->
+	</spawn>
+	<territory name="giran17_2322_10">
+		<add x="98448" y="137656" zmin="-3616" zmax="-2816"/>
+		<add x="100480" y="137220" zmin="-3616" zmax="-2816"/>
+		<add x="102272" y="138700" zmin="-3616" zmax="-2816"/>
+		<add x="101580" y="140324" zmin="-3616" zmax="-2816"/>
+		<add x="98508" y="138960" zmin="-3616" zmax="-2816"/>
+	</territory>
+	<spawn name="giran17_2322_10" count="1" respawn="27">
+		<territory name="giran17_2322_10"/>
+		<npc id="20248"/><!--Людоед Турак-->
+	</spawn>
+	<spawn name="giran17_2322_10" count="2" respawn="27">
+		<territory name="giran17_2322_10"/>
+		<npc id="20145"/><!--Гарпия-->
+	</spawn>
+	<spawn name="giran17_2322_10" count="1" respawn="27">
+		<territory name="giran17_2322_10"/>
+		<npc id="20249"/><!--Воин Людоедов Турак-->
+	</spawn>
+	<spawn name="giran15_npc2322_06" count="1" respawn="60" group="giran_castle_3">
+		<point x="117780" y="145257" z="-2099" h="49000"/>
+		<npc id="35185"/><!--Брюс-->
+	</spawn>
+	<spawn name="giran15_npc2322_04" count="1" respawn="60" group="giran_castle_3">
+		<point x="115922" y="145080" z="-2730" h="0"/>
+		<npc id="35183"/><!--Рабочий Склада-->
+	</spawn>
+	<spawn name="giran15_npc2322_03" count="1" respawn="60" group="giran_castle_3">
+		<point x="116382" y="145568" z="-2750" h="49152"/>
+		<npc id="35182"/><!--Кузнец-->
+	</spawn>
+	<spawn name="giran15_npc2322_01" count="1" respawn="60">
+		<point x="116984" y="145278" z="-2555" h="32768"/>
+		<npc id="35186"/><!--Арвид-->
+	</spawn>
+	<spawn name="giran17_mb2322_01" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="115456" y="139440" zmin="-3724" zmax="-3124"/>
+			<add x="116372" y="138980" zmin="-3724" zmax="-3124"/>
+			<add x="117104" y="139444" zmin="-3724" zmax="-3124"/>
+			<add x="115944" y="139968" zmin="-3724" zmax="-3124"/>
+		</territory>
+		<npc id="25112"/><!--Эмиссар Белефа Мина-->
+	</spawn>
+	<spawn name="giran17_mb2322_03" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="122904" y="133668" zmin="-3756" zmax="-3156"/>
+			<add x="123764" y="132856" zmin="-3756" zmax="-3156"/>
+			<add x="124344" y="133232" zmin="-3756" zmax="-3156"/>
+			<add x="123268" y="134268" zmin="-3756" zmax="-3156"/>
+		</territory>
+		<npc id="25098"/><!--Слуга Седжара-->
+	</spawn>
+	<spawn group="giran_castle_mass_gatekeeper" count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="116535" y="146677" z="-1851" h="49152"/>
+		<npc id="35179"/><!--Mass Gatekeeper-->
+	</spawn>
+	<spawn group="giran_castle_siege_artefact" count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="117950" y="145096" z="-2547" h="32768"/>
+		<npc id="35147"/><!--Holy Artefact-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege10" count="1" respawn="10800">
+		<point x="115255" y="145329" z="-2258" h="49152"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege10" count="1" respawn="10800">
+		<point x="115133" y="145328" z="-2258" h="49152"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege10" count="1" respawn="10800">
+		<point x="115072" y="145383" z="-2258" h="40960"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege10" count="1" respawn="10800">
+		<point x="115053" y="145408" z="-2258" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege10" count="1" respawn="10800">
+		<point x="115052" y="145447" z="-2258" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege10" count="1" respawn="10800">
+		<point x="115052" y="145483" z="-2258" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege10" count="1" respawn="10800">
+		<point x="115212" y="145329" z="-2258" h="49152"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege10" count="1" respawn="10800">
+		<point x="115097" y="145357" z="-2258" h="40960"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege10" count="1" respawn="10800">
+		<point x="115173" y="145329" z="-2257" h="49152"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege10" count="1" respawn="10800">
+		<point x="115118" y="145431" z="-2259" h="40960"/>
+		<npc id="35165"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege10" count="1" respawn="10800">
+		<point x="115261" y="144876" z="-2260" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege10" count="1" respawn="10800">
+		<point x="115221" y="144876" z="-2258" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege10" count="1" respawn="10800">
+		<point x="115136" y="144876" z="-2259" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege10" count="1" respawn="10800">
+		<point x="115071" y="144818" z="-2258" h="24576"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege10" count="1" respawn="10800">
+		<point x="115051" y="144791" z="-2257" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege10" count="1" respawn="10800">
+		<point x="115052" y="144751" z="-2258" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege10" count="1" respawn="10800">
+		<point x="115051" y="144712" z="-2258" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege10" count="1" respawn="10800">
+		<point x="115177" y="144876" z="-2256" h="16384"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege10" count="1" respawn="10800">
+		<point x="115107" y="144854" z="-2259" h="24576"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege10" count="1" respawn="10800">
+		<point x="115125" y="144774" z="-2256" h="24576"/>
+		<npc id="35165"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege11" count="1" respawn="10800">
+		<point x="115382" y="144989" z="-2567" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege11" count="1" respawn="10800">
+		<point x="115382" y="145020" z="-2567" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege11" count="1" respawn="10800">
+		<point x="115382" y="145051" z="-2567" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege11" count="1" respawn="10800">
+		<point x="115382" y="145083" z="-2567" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege11" count="1" respawn="10800">
+		<point x="115382" y="145114" z="-2567" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege11" count="1" respawn="10800">
+		<point x="115382" y="145146" z="-2567" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege11" count="1" respawn="10800">
+		<point x="115382" y="145177" z="-2567" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege11" count="1" respawn="10800">
+		<point x="115382" y="145209" z="-2567" h="32768"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege11" count="1" respawn="10800">
+		<point x="115362" y="144989" z="-2567" h="32768"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege11" count="1" respawn="10800">
+		<point x="115362" y="145020" z="-2567" h="32768"/>
+		<npc id="35165"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege11" count="1" respawn="10800">
+		<point x="115362" y="145051" z="-2567" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege11" count="1" respawn="10800">
+		<point x="115362" y="145083" z="-2567" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege11" count="1" respawn="10800">
+		<point x="115362" y="145114" z="-2567" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege11" count="1" respawn="10800">
+		<point x="115362" y="145146" z="-2567" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege11" count="1" respawn="10800">
+		<point x="115362" y="145177" z="-2567" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege11" count="1" respawn="10800">
+		<point x="115362" y="145209" z="-2567" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege12" count="1" respawn="10800">
+		<point x="114269" y="146661" z="-2443" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege12" count="1" respawn="10800">
+		<point x="114320" y="146661" z="-2443" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege12" count="1" respawn="10800">
+		<point x="114370" y="146661" z="-2443" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege12" count="1" respawn="10800">
+		<point x="114420" y="146661" z="-2443" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege12" count="1" respawn="10800">
+		<point x="114470" y="146661" z="-2443" h="16384"/>
+		<npc id="35165"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege12" count="1" respawn="10800">
+		<point x="114520" y="146661" z="-2443" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege12" count="1" respawn="10800">
+		<point x="114570" y="146661" z="-2443" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege12" count="1" respawn="10800">
+		<point x="114620" y="146661" z="-2443" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege12" count="1" respawn="10800">
+		<point x="114670" y="146661" z="-2443" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege12" count="1" respawn="10800">
+		<point x="114720" y="146661" z="-2443" h="16384"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege12" count="1" respawn="10800">
+		<point x="114770" y="146661" z="-2443" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege12" count="1" respawn="10800">
+		<point x="114820" y="146661" z="-2443" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege13" count="1" respawn="10800">
+		<point x="114269" y="143259" z="-2443" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege13" count="1" respawn="10800">
+		<point x="114320" y="143259" z="-2443" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege13" count="1" respawn="10800">
+		<point x="114370" y="143259" z="-2443" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege13" count="1" respawn="10800">
+		<point x="114420" y="143259" z="-2443" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege13" count="1" respawn="10800">
+		<point x="114470" y="143259" z="-2443" h="16384"/>
+		<npc id="35165"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege13" count="1" respawn="10800">
+		<point x="114520" y="143259" z="-2443" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege13" count="1" respawn="10800">
+		<point x="114570" y="143259" z="-2443" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege13" count="1" respawn="10800">
+		<point x="114620" y="143259" z="-2443" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege13" count="1" respawn="10800">
+		<point x="114670" y="143259" z="-2443" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege13" count="1" respawn="10800">
+		<point x="114720" y="143259" z="-2443" h="16384"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege13" count="1" respawn="10800">
+		<point x="114770" y="143259" z="-2443" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege13" count="1" respawn="10800">
+		<point x="114820" y="143259" z="-2443" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="300">
+		<point x="117732" y="145036" z="-2622" h="32728"/>
+		<npc id="35148"/><!--Барон Кармон Эстус-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="180">
+		<point x="117735" y="145148" z="-2621" h="32728"/>
+		<npc id="35107"/><!--Ивано - Сэр-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117718" y="145250" z="-2627" h="32728"/>
+		<npc id="35156"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117719" y="145287" z="-2627" h="32728"/>
+		<npc id="35156"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117719" y="145320" z="-2627" h="32728"/>
+		<npc id="35156"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117720" y="145358" z="-2627" h="32728"/>
+		<npc id="35156"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117720" y="145395" z="-2626" h="32728"/>
+		<npc id="35156"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117721" y="145433" z="-2626" h="32728"/>
+		<npc id="35156"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117721" y="145465" z="-2626" h="32728"/>
+		<npc id="35156"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117722" y="145503" z="-2626" h="32728"/>
+		<npc id="35156"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117684" y="145250" z="-2628" h="32728"/>
+		<npc id="35153"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117685" y="145288" z="-2628" h="32728"/>
+		<npc id="35153"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117685" y="145321" z="-2628" h="32728"/>
+		<npc id="35153"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117686" y="145358" z="-2628" h="32728"/>
+		<npc id="35153"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117686" y="145396" z="-2627" h="32728"/>
+		<npc id="35153"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117687" y="145433" z="-2627" h="32728"/>
+		<npc id="35153"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117687" y="145466" z="-2627" h="32728"/>
+		<npc id="35153"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117688" y="145503" z="-2627" h="32728"/>
+		<npc id="35153"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117646" y="145252" z="-2629" h="32728"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117647" y="145290" z="-2629" h="32728"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117647" y="145322" z="-2629" h="32728"/>
+		<npc id="35150"/><!--Рыцарь Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117648" y="145360" z="-2629" h="32728"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117648" y="145397" z="-2628" h="32728"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117649" y="145435" z="-2628" h="32728"/>
+		<npc id="35150"/><!--Рыцарь Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117649" y="145467" z="-2628" h="32728"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117650" y="145505" z="-2628" h="32728"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117712" y="144690" z="-2623" h="32728"/>
+		<npc id="35156"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117712" y="144728" z="-2623" h="32728"/>
+		<npc id="35156"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117712" y="144760" z="-2623" h="32728"/>
+		<npc id="35156"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117713" y="144798" z="-2623" h="32728"/>
+		<npc id="35156"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117714" y="144835" z="-2622" h="32728"/>
+		<npc id="35156"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117714" y="144873" z="-2622" h="32728"/>
+		<npc id="35156"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117715" y="144906" z="-2622" h="32728"/>
+		<npc id="35156"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117715" y="144943" z="-2622" h="32728"/>
+		<npc id="35156"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117677" y="144691" z="-2624" h="32728"/>
+		<npc id="35153"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117678" y="144729" z="-2624" h="32728"/>
+		<npc id="35153"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117678" y="144761" z="-2624" h="32728"/>
+		<npc id="35153"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117679" y="144799" z="-2624" h="32728"/>
+		<npc id="35153"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117680" y="144836" z="-2623" h="32728"/>
+		<npc id="35153"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117680" y="144874" z="-2623" h="32728"/>
+		<npc id="35153"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117680" y="144906" z="-2623" h="32728"/>
+		<npc id="35153"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117681" y="144944" z="-2623" h="32728"/>
+		<npc id="35153"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117640" y="144692" z="-2625" h="32728"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117641" y="144730" z="-2625" h="32728"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117641" y="144763" z="-2625" h="32728"/>
+		<npc id="35150"/><!--Рыцарь Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117642" y="144800" z="-2625" h="32728"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117642" y="144838" z="-2624" h="32728"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117643" y="144875" z="-2624" h="32728"/>
+		<npc id="35150"/><!--Рыцарь Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117643" y="144908" z="-2624" h="32728"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117644" y="144945" z="-2624" h="32728"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117877" y="144770" z="-2622" h="32728"/>
+		<npc id="35152"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117877" y="144854" z="-2621" h="32728"/>
+		<npc id="35152"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117878" y="144933" z="-2621" h="32728"/>
+		<npc id="35152"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117878" y="145008" z="-2621" h="32728"/>
+		<npc id="35152"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117878" y="145185" z="-2618" h="32728"/>
+		<npc id="35152"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117878" y="145268" z="-2618" h="32728"/>
+		<npc id="35152"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117879" y="145348" z="-2618" h="32728"/>
+		<npc id="35152"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege05" count="1" respawn="120">
+		<point x="117879" y="145422" z="-2618" h="32728"/>
+		<npc id="35152"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege06" count="1" respawn="10800">
+		<point x="116752" y="145610" z="-2400" h="32472"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege06" count="1" respawn="10800">
+		<point x="116752" y="145584" z="-2400" h="32472"/>
+		<npc id="35163"/><!--Рыцарь Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege06" count="1" respawn="10800">
+		<point x="116752" y="145556" z="-2399" h="32472"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege06" count="1" respawn="10800">
+		<point x="116774" y="145610" z="-2404" h="32472"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege06" count="1" respawn="10800">
+		<point x="116774" y="145583" z="-2404" h="32472"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege06" count="1" respawn="10800">
+		<point x="116774" y="145556" z="-2403" h="32472"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege06" count="1" respawn="10800">
+		<point x="116799" y="145609" z="-2402" h="32472"/>
+		<npc id="35166"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege06" count="1" respawn="10800">
+		<point x="116799" y="145582" z="-2402" h="32472"/>
+		<npc id="35166"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege06" count="1" respawn="10800">
+		<point x="116798" y="145555" z="-2401" h="32472"/>
+		<npc id="35166"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege06" count="1" respawn="10800">
+		<point x="116876" y="145669" z="-2402" h="32472"/>
+		<npc id="35165"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege06" count="1" respawn="10800">
+		<point x="116876" y="145643" z="-2402" h="32472"/>
+		<npc id="35165"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege06" count="1" respawn="10800">
+		<point x="116876" y="145615" z="-2401" h="32472"/>
+		<npc id="35165"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege06" count="1" respawn="10800">
+		<point x="117449" y="145414" z="-2405" h="49076"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege06" count="1" respawn="10800">
+		<point x="117486" y="145415" z="-2405" h="49076"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege06" count="1" respawn="10800">
+		<point x="117523" y="145415" z="-2404" h="49076"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege06" count="1" respawn="10800">
+		<point x="117559" y="145416" z="-2404" h="49076"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege06" count="1" respawn="10800">
+		<point x="117595" y="145416" z="-2404" h="49076"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege06" count="1" respawn="10800">
+		<point x="117633" y="145417" z="-2404" h="49076"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege06" count="1" respawn="10800">
+		<point x="117664" y="145417" z="-2403" h="49076"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege06" count="1" respawn="10800">
+		<point x="117701" y="145418" z="-2403" h="49076"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege06" count="1" respawn="10800">
+		<point x="117736" y="145419" z="-2403" h="49076"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege06" count="1" respawn="10800">
+		<point x="117773" y="145419" z="-2403" h="49076"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege06" count="1" respawn="10800">
+		<point x="117810" y="145419" z="-2403" h="49076"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege07" count="1" respawn="10800">
+		<point x="116686" y="144635" z="-2400" h="32472"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege07" count="1" respawn="10800">
+		<point x="116686" y="144609" z="-2400" h="32472"/>
+		<npc id="35163"/><!--Рыцарь Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege07" count="1" respawn="10800">
+		<point x="116689" y="144566" z="-2399" h="32472"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege07" count="1" respawn="10800">
+		<point x="116708" y="144635" z="-2404" h="32472"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege07" count="1" respawn="10800">
+		<point x="116708" y="144608" z="-2404" h="32472"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege07" count="1" respawn="10800">
+		<point x="116708" y="144581" z="-2403" h="32472"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege07" count="1" respawn="10800">
+		<point x="116733" y="144634" z="-2402" h="32472"/>
+		<npc id="35166"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege07" count="1" respawn="10800">
+		<point x="116733" y="144607" z="-2402" h="32472"/>
+		<npc id="35166"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege07" count="1" respawn="10800">
+		<point x="116732" y="144580" z="-2401" h="32472"/>
+		<npc id="35166"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege07" count="1" respawn="10800">
+		<point x="116974" y="144673" z="-2402" h="32472"/>
+		<npc id="35165"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege07" count="1" respawn="10800">
+		<point x="116974" y="144647" z="-2402" h="32472"/>
+		<npc id="35165"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege07" count="1" respawn="10800">
+		<point x="116974" y="144619" z="-2401" h="32472"/>
+		<npc id="35165"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege07" count="1" respawn="10800">
+		<point x="117804" y="144781" z="-2405" h="16000"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege07" count="1" respawn="10800">
+		<point x="117768" y="144782" z="-2405" h="16000"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege07" count="1" respawn="10800">
+		<point x="117731" y="144783" z="-2404" h="16000"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege07" count="1" respawn="10800">
+		<point x="117695" y="144783" z="-2404" h="16000"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege07" count="1" respawn="10800">
+		<point x="117659" y="144783" z="-2404" h="16000"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege07" count="1" respawn="10800">
+		<point x="117621" y="144784" z="-2404" h="16000"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege07" count="1" respawn="10800">
+		<point x="117590" y="144784" z="-2403" h="16000"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege07" count="1" respawn="10800">
+		<point x="117553" y="144785" z="-2403" h="16000"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege07" count="1" respawn="10800">
+		<point x="117518" y="144785" z="-2403" h="16000"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege07" count="1" respawn="10800">
+		<point x="117481" y="144786" z="-2403" h="16000"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege07" count="1" respawn="10800">
+		<point x="117444" y="144787" z="-2403" h="16000"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112740" y="145089" z="-2440" h="49152"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112671" y="145088" z="-2400" h="49152"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112612" y="145089" z="-2440" h="40960"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112585" y="145136" z="-2440" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112582" y="145181" z="-2440" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112582" y="145219" z="-2440" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112582" y="145259" z="-2440" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112730" y="144624" z="-2440" h="49152"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112683" y="144620" z="-2440" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112612" y="144628" z="-2440" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112582" y="144589" z="-2440" h="24576"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112577" y="144541" z="-2440" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112577" y="144503" z="-2440" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112583" y="144464" z="-2440" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112697" y="145089" z="-2440" h="16384"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112636" y="145090" z="-2440" h="24576"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112705" y="144621" z="-2440" h="40960"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112652" y="144627" z="-2440" h="49152"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112659" y="145168" z="-2440" h="24576"/>
+		<npc id="35165"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112659" y="144553" z="-2440" h="40960"/>
+		<npc id="35165"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112751" y="145105" z="-2440" h="49152"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112639" y="145105" z="-2440" h="49152"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112580" y="145152" z="-2440" h="40960"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112566" y="145219" z="-2440" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112712" y="144620" z="-2440" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112632" y="144621" z="-2440" h="16384"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112575" y="144575" z="-2440" h="24576"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112563" y="144503" z="-2440" h="32768"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112671" y="144620" z="-2439" h="16384"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112600" y="144609" z="-2439" h="24576"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112603" y="145115" z="-2439" h="40960"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112687" y="145105" z="-2440" h="49152"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112602" y="144521" z="-2440" h="24576"/>
+		<npc id="35165"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege08" count="1" respawn="10800">
+		<point x="112610" y="145211" z="-2440" h="40960"/>
+		<npc id="35165"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114502" y="145033" z="-2567" h="32768"/>
+		<npc id="35156"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114502" y="145161" z="-2567" h="32768"/>
+		<npc id="35156"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114502" y="145224" z="-2567" h="32768"/>
+		<npc id="35156"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114502" y="144969" z="-2567" h="32768"/>
+		<npc id="35156"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114502" y="144838" z="-2567" h="32768"/>
+		<npc id="35156"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114502" y="144710" z="-2567" h="32768"/>
+		<npc id="35156"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114502" y="145352" z="-2567" h="32768"/>
+		<npc id="35156"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114502" y="145481" z="-2567" h="32768"/>
+		<npc id="35156"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114502" y="144905" z="-2567" h="32768"/>
+		<npc id="35151"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114502" y="145288" z="-2567" h="32768"/>
+		<npc id="35151"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114502" y="145545" z="-2567" h="32768"/>
+		<npc id="35151"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114502" y="144646" z="-2567" h="32768"/>
+		<npc id="35151"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114502" y="145097" z="-2567" h="32768"/>
+		<npc id="35152"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114502" y="145416" z="-2567" h="32768"/>
+		<npc id="35152"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114502" y="144774" z="-2567" h="32768"/>
+		<npc id="35152"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114352" y="144649" z="-2567" h="32768"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114352" y="144713" z="-2567" h="32768"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114352" y="145545" z="-2567" h="32768"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114352" y="145481" z="-2567" h="32768"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114352" y="145097" z="-2567" h="32768"/>
+		<npc id="35150"/><!--Рыцарь Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114352" y="144777" z="-2567" h="32768"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114352" y="144841" z="-2567" h="32768"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114352" y="144905" z="-2567" h="32768"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114352" y="144969" z="-2567" h="32768"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114352" y="145033" z="-2567" h="32768"/>
+		<npc id="35150"/><!--Рыцарь Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114352" y="145160" z="-2567" h="32768"/>
+		<npc id="35150"/><!--Рыцарь Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114352" y="145224" z="-2567" h="32768"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114352" y="145288" z="-2567" h="32768"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114352" y="145352" z="-2567" h="32768"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege09" count="1" respawn="10800">
+		<point x="114352" y="145416" z="-2567" h="32768"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112815" y="144749" z="-2826" h="31992"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112815" y="144777" z="-2826" h="31992"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112815" y="144805" z="-2826" h="31992"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112815" y="144833" z="-2826" h="31992"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112815" y="144861" z="-2826" h="31992"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112815" y="144889" z="-2826" h="31992"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112815" y="144917" z="-2826" h="31992"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112815" y="144945" z="-2826" h="31992"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112815" y="144973" z="-2826" h="31992"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112795" y="144749" z="-2826" h="31992"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112795" y="144777" z="-2826" h="31992"/>
+		<npc id="35166"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112795" y="144805" z="-2826" h="31992"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112795" y="144833" z="-2826" h="31992"/>
+		<npc id="35166"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112795" y="144861" z="-2826" h="31992"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112795" y="144889" z="-2826" h="31992"/>
+		<npc id="35166"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112795" y="144917" z="-2826" h="31992"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112795" y="144945" z="-2826" h="31992"/>
+		<npc id="35166"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112795" y="144973" z="-2826" h="31992"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112775" y="144749" z="-2826" h="31992"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112775" y="144777" z="-2826" h="31992"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112775" y="144805" z="-2826" h="31992"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112775" y="144833" z="-2826" h="31992"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112775" y="144861" z="-2826" h="31992"/>
+		<npc id="35163"/><!--Рыцарь Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112775" y="144889" z="-2826" h="31992"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112775" y="144917" z="-2826" h="31992"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112775" y="144945" z="-2826" h="31992"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege01" count="1" respawn="10800">
+		<point x="112775" y="144973" z="-2826" h="31992"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113193" y="144606" z="-2816" h="15696"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113224" y="144607" z="-2815" h="15696"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113254" y="144607" z="-2815" h="15696"/>
+		<npc id="35163"/><!--Рыцарь Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113284" y="144607" z="-2814" h="15696"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113315" y="144606" z="-2815" h="15696"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113344" y="144608" z="-2814" h="15696"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113374" y="144608" z="-2814" h="15696"/>
+		<npc id="35163"/><!--Рыцарь Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113404" y="144608" z="-2813" h="15696"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113435" y="144607" z="-2814" h="15696"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113211" y="144581" z="-2834" h="15696"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113241" y="144581" z="-2834" h="15696"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113272" y="144581" z="-2833" h="15696"/>
+		<npc id="35166"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113302" y="144580" z="-2834" h="15696"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113332" y="144582" z="-2833" h="15696"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113362" y="144582" z="-2833" h="15696"/>
+		<npc id="35166"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113391" y="144583" z="-2832" h="15696"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113423" y="144582" z="-2833" h="15696"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113195" y="144560" z="-2838" h="15696"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113225" y="144561" z="-2838" h="15696"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113255" y="144561" z="-2837" h="15696"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113286" y="144562" z="-2837" h="15696"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113316" y="144560" z="-2837" h="15696"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113346" y="144562" z="-2836" h="15696"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113376" y="144562" z="-2836" h="15696"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113405" y="144563" z="-2835" h="15696"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113437" y="144562" z="-2836" h="15696"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113213" y="144414" z="-2839" h="15696"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113243" y="144414" z="-2838" h="15696"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113274" y="144414" z="-2838" h="15696"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113304" y="144415" z="-2837" h="15696"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113334" y="144414" z="-2837" h="15696"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113364" y="144416" z="-2837" h="15696"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113394" y="144417" z="-2836" h="15696"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113424" y="144417" z="-2836" h="15696"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113544" y="144313" z="-2830" h="32284"/>
+		<npc id="35165"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="10800">
+		<point x="113545" y="144343" z="-2831" h="32284"/>
+		<npc id="35165"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="60">
+		<point x="113426" y="144551" z="-2814" h="15696"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="60">
+		<point x="113362" y="144550" z="-2814" h="15696"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="60">
+		<point x="113273" y="144550" z="-2814" h="15696"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege02" count="1" respawn="60">
+		<point x="113213" y="144553" z="-2814" h="15696"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113566" y="144799" z="-2565" h="32284"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113567" y="144829" z="-2566" h="32284"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113564" y="144859" z="-2565" h="32284"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113563" y="144889" z="-2565" h="32284"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113562" y="144918" z="-2564" h="32284"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113500" y="144569" z="-2563" h="32284"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113501" y="144599" z="-2564" h="32284"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113498" y="144628" z="-2563" h="32284"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113497" y="144658" z="-2563" h="32284"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113496" y="144688" z="-2562" h="32284"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113362" y="145102" z="-2564" h="48048"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113332" y="145105" z="-2565" h="48048"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113303" y="145103" z="-2564" h="48048"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113273" y="145104" z="-2564" h="48048"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113243" y="145105" z="-2563" h="48048"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113568" y="145369" z="-2667" h="16328"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113602" y="145370" z="-2667" h="16328"/>
+		<npc id="35163"/><!--Рыцарь Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113643" y="145374" z="-2666" h="16328"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113568" y="145348" z="-2656" h="16328"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113602" y="145349" z="-2657" h="16328"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113643" y="145353" z="-2656" h="16328"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113568" y="145330" z="-2642" h="16328"/>
+		<npc id="35166"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113602" y="145331" z="-2643" h="16328"/>
+		<npc id="35166"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113643" y="145335" z="-2642" h="16328"/>
+		<npc id="35166"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113609" y="145002" z="-2565" h="39060"/>
+		<npc id="35165"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113566" y="144799" z="-2565" h="32284"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113564" y="144859" z="-2565" h="32284"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113562" y="144918" z="-2564" h="32284"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113500" y="144569" z="-2563" h="32284"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113501" y="144599" z="-2564" h="32284"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113498" y="144628" z="-2563" h="32284"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113497" y="144658" z="-2563" h="32284"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113362" y="145102" z="-2564" h="48048"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113303" y="145103" z="-2564" h="48048"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege03" count="1" respawn="10800">
+		<point x="113243" y="145105" z="-2563" h="48048"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115587" y="144952" z="-2560" h="22704"/>
+		<npc id="35166"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115612" y="144969" z="-2561" h="22704"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115638" y="144993" z="-2560" h="22704"/>
+		<npc id="35166"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115661" y="145012" z="-2560" h="22704"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115679" y="145027" z="-2559" h="22704"/>
+		<npc id="35166"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115705" y="145049" z="-2561" h="22704"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115730" y="145066" z="-2561" h="22704"/>
+		<npc id="35166"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115751" y="145086" z="-2561" h="22704"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115762" y="145110" z="-2562" h="33460"/>
+		<npc id="35166"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115743" y="145135" z="-2561" h="41952"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115719" y="145153" z="-2561" h="41952"/>
+		<npc id="35166"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115699" y="145166" z="-2560" h="41952"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115672" y="145185" z="-2562" h="41952"/>
+		<npc id="35166"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115648" y="145204" z="-2563" h="41952"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115618" y="145223" z="-2562" h="41952"/>
+		<npc id="35166"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115593" y="145240" z="-2562" h="41952"/>
+		<npc id="35168"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115574" y="145253" z="-2561" h="41952"/>
+		<npc id="35166"/><!--Гвардеец - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115607" y="144937" z="-2562" h="22704"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115631" y="144955" z="-2563" h="22704"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115657" y="144979" z="-2562" h="22704"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115681" y="144998" z="-2562" h="22704"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115699" y="145013" z="-2561" h="22704"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115725" y="145034" z="-2563" h="22704"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115749" y="145052" z="-2563" h="22704"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115770" y="145071" z="-2563" h="22704"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115781" y="145096" z="-2564" h="33460"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115780" y="145124" z="-2561" h="33460"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115761" y="145149" z="-2560" h="41952"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115737" y="145167" z="-2560" h="41952"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115717" y="145180" z="-2559" h="41952"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115690" y="145199" z="-2561" h="41952"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115666" y="145218" z="-2562" h="41952"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115636" y="145237" z="-2561" h="41952"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115611" y="145254" z="-2561" h="41952"/>
+		<npc id="35167"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115592" y="145267" z="-2560" h="41952"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115712" y="144909" z="-2560" h="22704"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115735" y="144928" z="-2560" h="22704"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115753" y="144943" z="-2559" h="22704"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115779" y="144965" z="-2561" h="22704"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115804" y="144982" z="-2562" h="22704"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115770" y="145210" z="-2556" h="41952"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115750" y="145223" z="-2555" h="41952"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115723" y="145243" z="-2557" h="41952"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115699" y="145261" z="-2558" h="41952"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115669" y="145280" z="-2557" h="41952"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115846" y="145241" z="-2558" h="32004"/>
+		<npc id="35165"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115846" y="145275" z="-2559" h="32004"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115849" y="144996" z="-2559" h="32004"/>
+		<npc id="35164"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115848" y="145019" z="-2559" h="32004"/>
+		<npc id="35165"/><!--Маг Гвардии - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="10800">
+		<point x="115574" y="144944" z="-2557" h="41952"/>
+		<npc id="35169"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="60">
+		<point x="115628" y="144935" z="-2560" h="22704"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="60">
+		<point x="115719" y="145016" z="-2560" h="22704"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="60">
+		<point x="115710" y="145201" z="-2560" h="22704"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn group="giran_castle_siege" name="giran_siege04" count="1" respawn="60">
+		<point x="115607" y="145273" z="-2560" h="22704"/>
+		<npc id="35155"/><!--Охранник - Гиран-->
+	</spawn>
+	<spawn name="Ferma" count="1" respawn="60">
+		<point x="105288" y="162616" z="-3600" h="41760"/>
+		<npc id="30015"/><!--Ферма-->
+	</spawn>
+</list>

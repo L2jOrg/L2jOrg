@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE farm SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<farm name="Gorgon Flower Garden" min_level="29" max_level="38">
+	<zones>
+		<zone>
+			<polygon>
+				<coords loc="93685 124440 -4000 -1000"/>
+				<coords loc="94907 141661 -4000 -1000"/>
+				<coords loc="127855 135899 -4000 -1000"/>
+				<coords loc="127478 123496 -4000 -1000"/>
+				<coords loc="112098 125309 -4000 -1000"/>
+			</polygon>
+		</zone>
+		<spawn_points>
+			<coords loc="108474 131040 -3200"/>
+			<coords loc="120457 130868 -3600"/>
+		</spawn_points>
+	</zones>
+	<on_obtain_max_level>
+		<action id="1"/>
+	</on_obtain_max_level>
+	<go_to_town min_farm_time="1800" max_farm_time="3600">
+		<action id="1"/>
+	</go_to_town>
+	<action id="1">
+		<wait min_delay="1000" max_delay="3000"/>
+		<use_item id="736"/>
+	</action>
+</farm>

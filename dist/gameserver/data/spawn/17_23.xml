@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<territory name="gludio34_1723_06s">
+		<add x="-70521" y="170043" zmin="-3764" zmax="-3064"/>
+		<add x="-67872" y="168756" zmin="-3764" zmax="-3064"/>
+		<add x="-67115" y="171426" zmin="-3764" zmax="-3064"/>
+		<add x="-69289" y="171970" zmin="-3764" zmax="-3064"/>
+	</territory>
+	<spawn name="gludio34_1723_06s" count="2" respawn="21">
+		<territory name="gludio34_1723_06s"/>
+		<npc id="20030"/><!--Ящер Лангк-->
+	</spawn>
+	<spawn name="gludio34_1723_06s" count="2" respawn="21">
+		<territory name="gludio34_1723_06s"/>
+		<npc id="20017"/><!--Воин Орков Вуку-->
+	</spawn>
+	<territory name="gludio34_1723_07s">
+		<add x="-70675" y="164924" zmin="-3764" zmax="-3064"/>
+		<add x="-68364" y="164342" zmin="-3764" zmax="-3064"/>
+		<add x="-67508" y="166448" zmin="-3764" zmax="-3064"/>
+		<add x="-69174" y="167754" zmin="-3764" zmax="-3064"/>
+	</territory>
+	<spawn name="gludio34_1723_07s" count="2" respawn="21">
+		<territory name="gludio34_1723_07s"/>
+		<npc id="20017"/><!--Воин Орков Вуку-->
+	</spawn>
+	<spawn name="gludio34_1723_07s" count="2" respawn="21">
+		<territory name="gludio34_1723_07s"/>
+		<npc id="20038"/><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<territory name="gludio34_1723_05s">
+		<add x="-68365" y="174048" zmin="-3764" zmax="-3064"/>
+		<add x="-66111" y="172916" zmin="-3764" zmax="-3064"/>
+		<add x="-66030" y="175473" zmin="-3764" zmax="-3064"/>
+		<add x="-67795" y="176370" zmin="-3764" zmax="-3064"/>
+	</territory>
+	<spawn name="gludio34_1723_05s" count="2" respawn="21">
+		<territory name="gludio34_1723_05s"/>
+		<npc id="20030"/><!--Ящер Лангк-->
+	</spawn>
+	<spawn name="gludio34_1723_05s" count="2" respawn="21">
+		<territory name="gludio34_1723_05s"/>
+		<npc id="20017"/><!--Воин Орков Вуку-->
+	</spawn>
+	<territory name="gludio34_1723_08s">
+		<add x="-74778" y="166929" zmin="-3764" zmax="-3064"/>
+		<add x="-72707" y="165515" zmin="-3764" zmax="-3064"/>
+		<add x="-70878" y="167465" zmin="-3764" zmax="-3064"/>
+		<add x="-73235" y="168518" zmin="-3764" zmax="-3064"/>
+	</territory>
+	<spawn name="gludio34_1723_08s" count="2" respawn="21">
+		<territory name="gludio34_1723_08s"/>
+		<npc id="20017"/><!--Воин Орков Вуку-->
+	</spawn>
+	<spawn name="gludio34_1723_08s" count="2" respawn="21">
+		<territory name="gludio34_1723_08s"/>
+		<npc id="20043"/><!--Арахнид Охотник-->
+	</spawn>
+	<territory name="gludio34_1723_04">
+		<add x="-70751" y="174144" zmin="-3764" zmax="-3064"/>
+		<add x="-65817" y="172251" zmin="-3764" zmax="-3064"/>
+		<add x="-65849" y="178207" zmin="-3764" zmax="-3064"/>
+		<add x="-67684" y="178315" zmin="-3764" zmax="-3064"/>
+	</territory>
+	<spawn name="gludio34_1723_04" count="5" respawn="21">
+		<territory name="gludio34_1723_04"/>
+		<npc id="20043"/><!--Арахнид Охотник-->
+	</spawn>
+	<spawn name="gludio34_1723_04" count="3" respawn="21">
+		<territory name="gludio34_1723_04"/>
+		<npc id="20050"/><!--Ядовитый Шипоног-->
+	</spawn>
+	<territory name="gludio34_1723_03">
+		<add x="-74404" y="169620" zmin="-3764" zmax="-3064"/>
+		<add x="-65854" y="168232" zmin="-3764" zmax="-3064"/>
+		<add x="-65833" y="172134" zmin="-3764" zmax="-3064"/>
+		<add x="-70810" y="174081" zmin="-3764" zmax="-3064"/>
+	</territory>
+	<spawn name="gludio34_1723_03" count="8" respawn="21">
+		<territory name="gludio34_1723_03"/>
+		<npc id="20017"/><!--Воин Орков Вуку-->
+	</spawn>
+	<spawn name="gludio34_1723_03" count="5" respawn="21">
+		<territory name="gludio34_1723_03"/>
+		<npc id="20038"/><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<spawn name="gludio34_1723_03" count="5" respawn="21">
+		<territory name="gludio34_1723_03"/>
+		<npc id="20043"/><!--Арахнид Охотник-->
+	</spawn>
+	<territory name="gludio34_1723_02">
+		<add x="-72204" y="163988" zmin="-3879" zmax="-2979"/>
+		<add x="-65828" y="164053" zmin="-3879" zmax="-2979"/>
+		<add x="-65850" y="168094" zmin="-3879" zmax="-2979"/>
+		<add x="-69278" y="168439" zmin="-3879" zmax="-2979"/>
+	</territory>
+	<spawn name="gludio34_1723_02" count="6" respawn="21">
+		<territory name="gludio34_1723_02"/>
+		<npc id="20017"/><!--Воин Орков Вуку-->
+	</spawn>
+	<spawn name="gludio34_1723_02" count="4" respawn="21">
+		<territory name="gludio34_1723_02"/>
+		<npc id="20038"/><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<territory name="gludio34_1723_01">
+		<add x="-78051" y="164047" zmin="-3764" zmax="-3064"/>
+		<add x="-72417" y="163960" zmin="-3764" zmax="-3064"/>
+		<add x="-69351" y="168540" zmin="-3764" zmax="-3064"/>
+		<add x="-75103" y="169497" zmin="-3764" zmax="-3064"/>
+	</territory>
+	<spawn name="gludio34_1723_01" count="6" respawn="21">
+		<territory name="gludio34_1723_01"/>
+		<npc id="20030"/><!--Ящер Лангк-->
+	</spawn>
+	<spawn name="gludio34_1723_01" count="7" respawn="21">
+		<territory name="gludio34_1723_01"/>
+		<npc id="20017"/><!--Воин Орков Вуку-->
+	</spawn>
+	<spawn name="gludio34_1723_01" count="5" respawn="21">
+		<territory name="gludio34_1723_01"/>
+		<npc id="20038"/><!--Гигантский Ядовитый Паук-->
+	</spawn>
+</list>

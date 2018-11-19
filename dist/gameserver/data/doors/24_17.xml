@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="24170001" name="border_door_02" hp="158250" pdef="644" mdef="518">
+		<pos x="157981" y="-25122" z="-1195"/>
+		<shape ax="157859" ay="-25097" bx="158095" by="-25172" cx="158104" cy="-25144" dx="157870" dy="-25069" minz="-1344" maxz="-1088"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="180"/>
+	</door>
+</list>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="13009" name="Inventory3">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="None"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="13015" name="My Teleport Book">
+		<set name="sellable" value="false"/>
+		<set name="handler" value="BookMark"/>
+		<set name="icon" value="icon.bookmark_book_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="13016" name="My Teleport Scroll">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.bookmark_scroll_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="13021" name="Color Title">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.color_name_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<armor id="13025" name="Agathion - Joy">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_rbracelet_aga_agit_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="30"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+		<skills>
+			<skill id="8256" level="1"/>
+			<skill id="3267" level="1"/>
+			<skill id="39053" level="1"/>
+			<skill id="39054" level="1"/>
+			<skill id="39055" level="1"/>
+			<skill id="39056" level="1"/>
+			<skill id="39100" level="1"/>
+			<skill id="39101" level="1"/>
+			<skill id="39102" level="1"/>
+		</skills>
+	</armor>
+</list>

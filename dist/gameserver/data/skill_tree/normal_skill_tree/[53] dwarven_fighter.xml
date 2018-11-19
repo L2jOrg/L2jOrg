@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="53">	<!--Подмастерье-->
+			<skill id="194" level="1" name="Везение(Lucky)" min_level="1"/>
+			<skill id="1321" level="1" name="Ремесло Гномов(Dwarven Craft)" min_level="1" race="DWARF"/>
+			<skill id="142" level="1" name="Владение Броней(Armor Mastery)" cost="15" min_level="5"/>
+			<skill id="141" level="1" name="Владение Оружием(Weapon Mastery)" cost="15" min_level="5"/>
+			<skill id="254" level="1" name="Оценка(Spoil)" cost="15" min_level="5"/>
+			<skill id="42" level="1" name="Присвоение(Sweeper)" cost="15" min_level="5"/>
+			<skill id="172" level="1" name="Создать Предмет(Create Item)" cost="15" min_level="5" race="DWARF"/>
+			<skill id="142" level="2" name="Владение Броней(Armor Mastery)" cost="100" min_level="8"/>
+			<skill id="142" level="3" name="Владение Броней(Armor Mastery)" cost="100" min_level="10"/>
+			<skill id="141" level="2" name="Владение Оружием(Weapon Mastery)" cost="100" min_level="10"/>
+			<skill id="150" level="1" name="Лимит Веса(Weight Limit)" cost="100" min_level="10"/>
+			<skill id="142" level="4" name="Владение Броней(Armor Mastery)" cost="400" min_level="13"/>
+			<skill id="142" level="5" name="Владение Броней(Armor Mastery)" cost="400" min_level="15"/>
+			<skill id="141" level="3" name="Владение Оружием(Weapon Mastery)" cost="400" min_level="15"/>
+			<!--HARDCODED: <skill id="239" level="1" name="Квалификация D(Expertise D)" min_level="20"/>-->
+			<!--HARDCODED: <skill id="239" level="2" name="Квалификация C(Expertise C)" min_level="40"/>-->
+			<!--HARDCODED: <skill id="239" level="3" name="Квалификация B(Expertise B)" min_level="52"/>-->
+		</class>
+	</normal_skill_tree>
+</list>

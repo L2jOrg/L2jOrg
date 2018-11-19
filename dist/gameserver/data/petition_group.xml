@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "petition_group.dtd">
+<list>
+	<group id="0">
+		<name lang="ENGLISH">First Group</name>
+		<name lang="RUSSIAN">Первая група</name>
+		<description lang="ENGLISH">Description of first group</description>
+		<description lang="RUSSIAN">Описания первой групы</description>
+		<sub_group id="0" handler="SimplePetitionHandler">
+			<name lang="ENGLISH">First SubGroup</name>
+			<name lang="RUSSIAN">Первая сабгрупа</name>
+			<description lang="ENGLISH">Description of first subgroup</description>
+			<description lang="RUSSIAN">Описания первой сабгрупы</description>
+		</sub_group>
+		<sub_group id="1" handler="SimplePetitionHandler">
+			<name lang="ENGLISH">Second SubGroup</name>
+			<name lang="RUSSIAN">Вторая сабгрупа</name>
+			<description lang="ENGLISH">Description of second subgroup</description>
+			<description lang="RUSSIAN">Описания второй сабгрупы</description>
+		</sub_group>
+		<sub_group id="2" handler="SimplePetitionHandler">
+			<name lang="ENGLISH">Third SubGroup</name>
+			<name lang="RUSSIAN">Третья сабгрупа</name>
+			<description lang="ENGLISH">Description of third subgroup</description>
+			<description lang="RUSSIAN">Описания третья сабгрупы</description>
+		</sub_group>
+	</group>
+</list>

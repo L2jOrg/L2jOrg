@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="6">	<!--Мститель-->
+			<skill id="28" level="13" name="Агрессия(Aggression)" cost="62000" min_level="40"/>
+			<skill id="28" level="14" name="Агрессия(Aggression)" cost="62000" min_level="40"/>
+			<skill id="28" level="15" name="Агрессия(Aggression)" cost="62000" min_level="40"/>
+			<skill id="984" level="1" name="Атака Щитом(Shield Strike)" cost="62000" min_level="40"/>
+			<skill id="18" level="1" name="Аура Ненависти(Aggression Aura)" cost="62000" min_level="40"/>
+			<skill id="18" level="2" name="Аура Ненависти(Aggression Aura)" cost="62000" min_level="40"/>
+			<skill id="18" level="3" name="Аура Ненависти(Aggression Aura)" cost="62000" min_level="40"/>
+			<skill id="82" level="2" name="Величие(Majesty)" cost="62000" min_level="40"/>
+			<skill id="217" level="9" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="62000" min_level="40"/>
+			<skill id="217" level="10" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="62000" min_level="40"/>
+			<skill id="217" level="11" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="62000" min_level="40"/>
+			<skill id="232" level="16" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="62000" min_level="40"/>
+			<skill id="232" level="17" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="62000" min_level="40"/>
+			<skill id="232" level="18" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="62000" min_level="40"/>
+			<skill id="153" level="3" name="Владение Щитом(Shield Mastery)" cost="62000" min_level="40"/>
+			<skill id="70" level="14" name="Кража Здоровья(Drain HP)" cost="62000" min_level="40"/>
+			<skill id="70" level="15" name="Кража Здоровья(Drain HP)" cost="62000" min_level="40"/>
+			<skill id="70" level="16" name="Кража Здоровья(Drain HP)" cost="62000" min_level="40"/>
+			<skill id="70" level="17" name="Кража Здоровья(Drain HP)" cost="62000" min_level="40"/>
+			<skill id="70" level="18" name="Кража Здоровья(Drain HP)" cost="62000" min_level="40"/>
+			<skill id="70" level="19" name="Кража Здоровья(Drain HP)" cost="62000" min_level="40"/>
+			<skill id="147" level="15" name="Магическое Сопротивление(M. Def.)" cost="62000" min_level="40"/>
+			<skill id="147" level="16" name="Магическое Сопротивление(M. Def.)" cost="62000" min_level="40"/>
+			<skill id="147" level="17" name="Магическое Сопротивление(M. Def.)" cost="62000" min_level="40"/>
+			<skill id="92" level="16" name="Оглушение Щитом(Shield Stun)" cost="62000" min_level="40"/>
+			<skill id="92" level="17" name="Оглушение Щитом(Shield Stun)" cost="62000" min_level="40"/>
+			<skill id="92" level="18" name="Оглушение Щитом(Shield Stun)" cost="62000" min_level="40"/>
+			<skill id="46" level="1" name="Отделение Жизни(Life Scavenge)" cost="62000" min_level="40"/>
+			<skill id="86" level="1" name="Отражение Урона(Reflect Damage)" cost="62000" min_level="40"/>
+			<skill id="283" level="1" name="Призвать Темную Пантеру(Summon Dark Panther)" cost="62000" min_level="40"/>
+			<skill id="28" level="16" name="Агрессия(Aggression)" cost="72000" min_level="41"/>
+			<skill id="18" level="4" name="Аура Ненависти(Aggression Aura)" cost="72000" min_level="41"/>
+			<skill id="217" level="12" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="72000" min_level="41"/>
+			<skill id="232" level="19" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="72000" min_level="41"/>
+			<skill id="70" level="20" name="Кража Здоровья(Drain HP)" cost="72000" min_level="41"/>
+			<skill id="147" level="18" name="Магическое Сопротивление(M. Def.)" cost="72000" min_level="41"/>
+			<skill id="92" level="19" name="Оглушение Щитом(Shield Stun)" cost="72000" min_level="41"/>
+			<skill id="28" level="17" name="Агрессия(Aggression)" cost="72000" min_level="42"/>
+			<skill id="18" level="5" name="Аура Ненависти(Aggression Aura)" cost="72000" min_level="42"/>
+			<skill id="217" level="13" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="72000" min_level="42"/>
+			<skill id="232" level="20" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="72000" min_level="42"/>
+			<skill id="70" level="21" name="Кража Здоровья(Drain HP)" cost="72000" min_level="42"/>
+			<skill id="147" level="19" name="Магическое Сопротивление(M. Def.)" cost="72000" min_level="42"/>
+			<skill id="92" level="20" name="Оглушение Щитом(Shield Stun)" cost="72000" min_level="42"/>
+			<skill id="28" level="18" name="Агрессия(Aggression)" cost="72000" min_level="43"/>
+			<skill id="984" level="2" name="Атака Щитом(Shield Strike)" cost="72000" min_level="43"/>
+			<skill id="18" level="6" name="Аура Ненависти(Aggression Aura)" cost="72000" min_level="43"/>
+			<skill id="217" level="14" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="72000" min_level="43"/>
+			<skill id="232" level="21" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="72000" min_level="43"/>
+			<skill id="72" level="1" name="Железная Воля(Iron Will)" item_id="3047" cost="72000" min_level="43"/>
+			<skill id="70" level="22" name="Кража Здоровья(Drain HP)" cost="72000" min_level="43"/>
+			<skill id="147" level="20" name="Магическое Сопротивление(M. Def.)" cost="72000" min_level="43"/>
+			<skill id="92" level="21" name="Оглушение Щитом(Shield Stun)" cost="72000" min_level="43"/>
+			<skill id="46" level="2" name="Отделение Жизни(Life Scavenge)" cost="72000" min_level="43"/>
+			<skill id="112" level="3" name="Отклонить Стрелу(Deflect Arrow)" cost="72000" min_level="43"/>
+			<skill id="127" level="1" name="Увечье(Hamstring)" item_id="3052" cost="72000" min_level="43"/>
+			<skill id="191" level="2" name="Фокусировка Разума(Focus Mind)" cost="72000" min_level="43"/>
+			<skill id="28" level="19" name="Агрессия(Aggression)" cost="110000" min_level="44"/>
+			<skill id="18" level="7" name="Аура Ненависти(Aggression Aura)" cost="110000" min_level="44"/>
+			<skill id="217" level="15" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="110000" min_level="44"/>
+			<skill id="232" level="22" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="110000" min_level="44"/>
+			<skill id="70" level="23" name="Кража Здоровья(Drain HP)" cost="110000" min_level="44"/>
+			<skill id="147" level="21" name="Магическое Сопротивление(M. Def.)" cost="110000" min_level="44"/>
+			<skill id="92" level="22" name="Оглушение Щитом(Shield Stun)" cost="110000" min_level="44"/>
+			<skill id="28" level="20" name="Агрессия(Aggression)" cost="110000" min_level="45"/>
+			<skill id="18" level="8" name="Аура Ненависти(Aggression Aura)" cost="110000" min_level="45"/>
+			<skill id="217" level="16" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="110000" min_level="45"/>
+			<skill id="232" level="23" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="110000" min_level="45"/>
+			<skill id="70" level="24" name="Кража Здоровья(Drain HP)" cost="110000" min_level="45"/>
+			<skill id="147" level="22" name="Магическое Сопротивление(M. Def.)" cost="110000" min_level="45"/>
+			<skill id="92" level="23" name="Оглушение Щитом(Shield Stun)" cost="110000" min_level="45"/>
+			<skill id="1800" level="1" name="Пират(Pirate)" min_level="45"/>
+			<skill id="110" level="2" name="Абсолютная Защита(Ultimate Defense)" cost="110000" min_level="46"/>
+			<skill id="28" level="21" name="Агрессия(Aggression)" cost="110000" min_level="46"/>
+			<skill id="984" level="3" name="Атака Щитом(Shield Strike)" cost="110000" min_level="46"/>
+			<skill id="18" level="9" name="Аура Ненависти(Aggression Aura)" cost="110000" min_level="46"/>
+			<skill id="217" level="17" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="110000" min_level="46"/>
+			<skill id="232" level="24" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="110000" min_level="46"/>
+			<skill id="70" level="25" name="Кража Здоровья(Drain HP)" cost="110000" min_level="46"/>
+			<skill id="147" level="23" name="Магическое Сопротивление(M. Def.)" cost="110000" min_level="46"/>
+			<skill id="92" level="24" name="Оглушение Щитом(Shield Stun)" cost="110000" min_level="46"/>
+			<skill id="46" level="3" name="Отделение Жизни(Life Scavenge)" cost="110000" min_level="46"/>
+			<skill id="86" level="2" name="Отражение Урона(Reflect Damage)" cost="110000" min_level="46"/>
+			<skill id="103" level="1" name="Трупная Чума(Corpse Plague)" cost="110000" min_level="46"/>
+			<skill id="127" level="2" name="Увечье(Hamstring)" cost="110000" min_level="46"/>
+			<skill id="65" level="1" name="Ужас(Horror)" item_id="3044" cost="110000" min_level="46"/>
+			<skill id="28" level="22" name="Агрессия(Aggression)" cost="150000" min_level="47"/>
+			<skill id="18" level="10" name="Аура Ненависти(Aggression Aura)" cost="150000" min_level="47"/>
+			<skill id="217" level="18" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="150000" min_level="47"/>
+			<skill id="232" level="25" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="150000" min_level="47"/>
+			<skill id="70" level="26" name="Кража Здоровья(Drain HP)" cost="150000" min_level="47"/>
+			<skill id="147" level="24" name="Магическое Сопротивление(M. Def.)" cost="150000" min_level="47"/>
+			<skill id="92" level="25" name="Оглушение Щитом(Shield Stun)" cost="150000" min_level="47"/>
+			<skill id="28" level="23" name="Агрессия(Aggression)" cost="150000" min_level="48"/>
+			<skill id="18" level="11" name="Аура Ненависти(Aggression Aura)" cost="150000" min_level="48"/>
+			<skill id="217" level="19" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="150000" min_level="48"/>
+			<skill id="232" level="26" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="150000" min_level="48"/>
+			<skill id="70" level="27" name="Кража Здоровья(Drain HP)" cost="150000" min_level="48"/>
+			<skill id="147" level="25" name="Магическое Сопротивление(M. Def.)" cost="150000" min_level="48"/>
+			<skill id="92" level="26" name="Оглушение Щитом(Shield Stun)" cost="150000" min_level="48"/>
+			<skill id="28" level="24" name="Агрессия(Aggression)" cost="150000" min_level="49"/>
+			<skill id="984" level="4" name="Атака Щитом(Shield Strike)" cost="150000" min_level="49"/>
+			<skill id="18" level="12" name="Аура Ненависти(Aggression Aura)" cost="150000" min_level="49"/>
+			<skill id="217" level="20" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="150000" min_level="49"/>
+			<skill id="232" level="27" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="150000" min_level="49"/>
+			<skill id="72" level="2" name="Железная Воля(Iron Will)" cost="150000" min_level="49"/>
+			<skill id="70" level="28" name="Кража Здоровья(Drain HP)" cost="150000" min_level="49"/>
+			<skill id="147" level="26" name="Магическое Сопротивление(M. Def.)" cost="150000" min_level="49"/>
+			<skill id="92" level="27" name="Оглушение Щитом(Shield Stun)" cost="150000" min_level="49"/>
+			<skill id="46" level="4" name="Отделение Жизни(Life Scavenge)" cost="150000" min_level="49"/>
+			<skill id="112" level="4" name="Отклонить Стрелу(Deflect Arrow)" cost="150000" min_level="49"/>
+			<skill id="283" level="2" name="Призвать Темную Пантеру(Summon Dark Panther)" cost="150000" min_level="49"/>
+			<skill id="127" level="3" name="Увечье(Hamstring)" cost="150000" min_level="49"/>
+			<skill id="65" level="2" name="Ужас(Horror)" cost="150000" min_level="49"/>
+			<skill id="191" level="3" name="Фокусировка Разума(Focus Mind)" cost="150000" min_level="49"/>
+			<skill id="28" level="25" name="Агрессия(Aggression)" cost="210000" min_level="50"/>
+			<skill id="18" level="13" name="Аура Ненависти(Aggression Aura)" cost="210000" min_level="50"/>
+			<skill id="217" level="21" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="210000" min_level="50"/>
+			<skill id="232" level="28" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="210000" min_level="50"/>
+			<skill id="70" level="29" name="Кража Здоровья(Drain HP)" cost="210000" min_level="50"/>
+			<skill id="147" level="27" name="Магическое Сопротивление(M. Def.)" cost="210000" min_level="50"/>
+			<skill id="92" level="28" name="Оглушение Щитом(Shield Stun)" cost="210000" min_level="50"/>
+			<skill id="28" level="26" name="Агрессия(Aggression)" cost="210000" min_level="51"/>
+			<skill id="18" level="14" name="Аура Ненависти(Aggression Aura)" cost="210000" min_level="51"/>
+			<skill id="217" level="22" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="210000" min_level="51"/>
+			<skill id="232" level="29" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="210000" min_level="51"/>
+			<skill id="70" level="30" name="Кража Здоровья(Drain HP)" cost="210000" min_level="51"/>
+			<skill id="147" level="28" name="Магическое Сопротивление(M. Def.)" cost="210000" min_level="51"/>
+			<skill id="92" level="29" name="Оглушение Щитом(Shield Stun)" cost="210000" min_level="51"/>
+			<skill id="28" level="27" name="Агрессия(Aggression)" cost="210000" min_level="52"/>
+			<skill id="984" level="5" name="Атака Щитом(Shield Strike)" cost="210000" min_level="52"/>
+			<skill id="18" level="15" name="Аура Ненависти(Aggression Aura)" cost="210000" min_level="52"/>
+			<skill id="1405" level="1" name="Божественное Вдохновение(Divine Inspiration)" item_id="8618" cost="210000" min_level="52"/>
+			<skill id="217" level="23" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="210000" min_level="52"/>
+			<skill id="232" level="30" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="210000" min_level="52"/>
+			<skill id="153" level="4" name="Владение Щитом(Shield Mastery)" cost="210000" min_level="52"/>
+			<skill id="70" level="31" name="Кража Здоровья(Drain HP)" cost="210000" min_level="52"/>
+			<skill id="147" level="29" name="Магическое Сопротивление(M. Def.)" cost="210000" min_level="52"/>
+			<skill id="92" level="30" name="Оглушение Щитом(Shield Stun)" cost="210000" min_level="52"/>
+			<skill id="46" level="5" name="Отделение Жизни(Life Scavenge)" cost="210000" min_level="52"/>
+			<skill id="86" level="3" name="Отражение Урона(Reflect Damage)" cost="210000" min_level="52"/>
+			<skill id="291" level="1" name="Последний Рубеж(Final Fortress)" cost="210000" min_level="52"/>
+			<skill id="127" level="4" name="Увечье(Hamstring)" cost="210000" min_level="52"/>
+			<skill id="65" level="3" name="Ужас(Horror)" cost="210000" min_level="52"/>
+			<skill id="28" level="28" name="Агрессия(Aggression)" cost="300000" min_level="53"/>
+			<skill id="18" level="16" name="Аура Ненависти(Aggression Aura)" cost="300000" min_level="53"/>
+			<skill id="217" level="24" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="300000" min_level="53"/>
+			<skill id="232" level="31" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="300000" min_level="53"/>
+			<skill id="70" level="32" name="Кража Здоровья(Drain HP)" cost="300000" min_level="53"/>
+			<skill id="147" level="30" name="Магическое Сопротивление(M. Def.)" cost="300000" min_level="53"/>
+			<skill id="92" level="31" name="Оглушение Щитом(Shield Stun)" cost="300000" min_level="53"/>
+			<skill id="28" level="29" name="Агрессия(Aggression)" cost="300000" min_level="54"/>
+			<skill id="18" level="17" name="Аура Ненависти(Aggression Aura)" cost="300000" min_level="54"/>
+			<skill id="217" level="25" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="300000" min_level="54"/>
+			<skill id="232" level="32" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="300000" min_level="54"/>
+			<skill id="70" level="33" name="Кража Здоровья(Drain HP)" cost="300000" min_level="54"/>
+			<skill id="147" level="31" name="Магическое Сопротивление(M. Def.)" cost="300000" min_level="54"/>
+			<skill id="92" level="32" name="Оглушение Щитом(Shield Stun)" cost="300000" min_level="54"/>
+			<skill id="28" level="30" name="Агрессия(Aggression)" cost="300000" min_level="55"/>
+			<skill id="984" level="6" name="Атака Щитом(Shield Strike)" cost="300000" min_level="55"/>
+			<skill id="18" level="18" name="Аура Ненависти(Aggression Aura)" cost="300000" min_level="55"/>
+			<skill id="217" level="26" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="300000" min_level="55"/>
+			<skill id="232" level="33" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="300000" min_level="55"/>
+			<skill id="72" level="3" name="Железная Воля(Iron Will)" cost="300000" min_level="55"/>
+			<skill id="70" level="34" name="Кража Здоровья(Drain HP)" cost="300000" min_level="55"/>
+			<skill id="147" level="32" name="Магическое Сопротивление(M. Def.)" cost="300000" min_level="55"/>
+			<skill id="92" level="33" name="Оглушение Щитом(Shield Stun)" cost="300000" min_level="55"/>
+			<skill id="46" level="6" name="Отделение Жизни(Life Scavenge)" cost="300000" min_level="55"/>
+			<skill id="291" level="2" name="Последний Рубеж(Final Fortress)" cost="300000" min_level="55"/>
+			<skill id="127" level="5" name="Увечье(Hamstring)" cost="300000" min_level="55"/>
+			<skill id="65" level="4" name="Ужас(Horror)" cost="300000" min_level="55"/>
+			<skill id="191" level="4" name="Фокусировка Разума(Focus Mind)" cost="300000" min_level="55"/>
+			<skill id="28" level="31" name="Агрессия(Aggression)" cost="410000" min_level="56"/>
+			<skill id="18" level="19" name="Аура Ненависти(Aggression Aura)" cost="410000" min_level="56"/>
+			<skill id="217" level="27" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="410000" min_level="56"/>
+			<skill id="232" level="34" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="410000" min_level="56"/>
+			<skill id="70" level="35" name="Кража Здоровья(Drain HP)" cost="410000" min_level="56"/>
+			<skill id="147" level="33" name="Магическое Сопротивление(M. Def.)" cost="410000" min_level="56"/>
+			<skill id="92" level="34" name="Оглушение Щитом(Shield Stun)" cost="410000" min_level="56"/>
+			<skill id="28" level="32" name="Агрессия(Aggression)" cost="410000" min_level="57"/>
+			<skill id="18" level="20" name="Аура Ненависти(Aggression Aura)" cost="410000" min_level="57"/>
+			<skill id="217" level="28" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="410000" min_level="57"/>
+			<skill id="232" level="35" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="410000" min_level="57"/>
+			<skill id="70" level="36" name="Кража Здоровья(Drain HP)" cost="410000" min_level="57"/>
+			<skill id="147" level="34" name="Магическое Сопротивление(M. Def.)" cost="410000" min_level="57"/>
+			<skill id="92" level="35" name="Оглушение Щитом(Shield Stun)" cost="410000" min_level="57"/>
+			<skill id="28" level="33" name="Агрессия(Aggression)" cost="410000" min_level="58"/>
+			<skill id="984" level="7" name="Атака Щитом(Shield Strike)" cost="410000" min_level="58"/>
+			<skill id="18" level="21" name="Аура Ненависти(Aggression Aura)" cost="410000" min_level="58"/>
+			<skill id="82" level="3" name="Величие(Majesty)" cost="410000" min_level="58"/>
+			<skill id="217" level="29" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="410000" min_level="58"/>
+			<skill id="232" level="36" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="410000" min_level="58"/>
+			<skill id="70" level="37" name="Кража Здоровья(Drain HP)" cost="410000" min_level="58"/>
+			<skill id="147" level="35" name="Магическое Сопротивление(M. Def.)" cost="410000" min_level="58"/>
+			<skill id="92" level="36" name="Оглушение Щитом(Shield Stun)" cost="410000" min_level="58"/>
+			<skill id="46" level="7" name="Отделение Жизни(Life Scavenge)" cost="410000" min_level="58"/>
+			<skill id="291" level="3" name="Последний Рубеж(Final Fortress)" cost="410000" min_level="58"/>
+			<skill id="283" level="3" name="Призвать Темную Пантеру(Summon Dark Panther)" cost="410000" min_level="58"/>
+			<skill id="103" level="2" name="Трупная Чума(Corpse Plague)" cost="410000" min_level="58"/>
+			<skill id="127" level="6" name="Увечье(Hamstring)" cost="410000" min_level="58"/>
+			<skill id="65" level="5" name="Ужас(Horror)" cost="410000" min_level="58"/>
+			<skill id="28" level="34" name="Агрессия(Aggression)" cost="600000" min_level="59"/>
+			<skill id="18" level="22" name="Аура Ненависти(Aggression Aura)" cost="600000" min_level="59"/>
+			<skill id="217" level="30" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="600000" min_level="59"/>
+			<skill id="232" level="37" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="600000" min_level="59"/>
+			<skill id="70" level="38" name="Кража Здоровья(Drain HP)" cost="600000" min_level="59"/>
+			<skill id="147" level="36" name="Магическое Сопротивление(M. Def.)" cost="600000" min_level="59"/>
+			<skill id="92" level="37" name="Оглушение Щитом(Shield Stun)" cost="600000" min_level="59"/>
+			<skill id="28" level="35" name="Агрессия(Aggression)" cost="600000" min_level="60"/>
+			<skill id="984" level="8" name="Атака Щитом(Shield Strike)" cost="600000" min_level="60"/>
+			<skill id="18" level="23" name="Аура Ненависти(Aggression Aura)" cost="600000" min_level="60"/>
+			<skill id="217" level="31" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="600000" min_level="60"/>
+			<skill id="232" level="38" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="600000" min_level="60"/>
+			<skill id="70" level="39" name="Кража Здоровья(Drain HP)" cost="600000" min_level="60"/>
+			<skill id="147" level="37" name="Магическое Сопротивление(M. Def.)" cost="600000" min_level="60"/>
+			<skill id="92" level="38" name="Оглушение Щитом(Shield Stun)" cost="600000" min_level="60"/>
+			<skill id="46" level="8" name="Отделение Жизни(Life Scavenge)" cost="600000" min_level="60"/>
+			<skill id="291" level="4" name="Последний Рубеж(Final Fortress)" cost="600000" min_level="60"/>
+			<skill id="1801" level="1" name="Темный Ассасин(Dark Assassin)" min_level="60"/>
+			<skill id="127" level="7" name="Увечье(Hamstring)" cost="600000" min_level="60"/>
+			<skill id="65" level="6" name="Ужас(Horror)" cost="600000" min_level="60"/>
+			<skill id="916" level="1" name="Щит Отражения Магии(Shield Deflect Magic)" item_id="49427" cost="600000" min_level="60"/>
+			<skill id="28" level="36" name="Агрессия(Aggression)" cost="600000" min_level="61"/>
+			<skill id="18" level="24" name="Аура Ненависти(Aggression Aura)" cost="600000" min_level="61"/>
+			<skill id="1405" level="2" name="Божественное Вдохновение(Divine Inspiration)" item_id="8619" cost="600000" min_level="61"/>
+			<skill id="217" level="32" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="600000" min_level="61"/>
+			<skill id="232" level="39" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="600000" min_level="61"/>
+			<skill id="70" level="40" name="Кража Здоровья(Drain HP)" cost="600000" min_level="61"/>
+			<skill id="147" level="38" name="Магическое Сопротивление(M. Def.)" cost="600000" min_level="61"/>
+			<skill id="92" level="39" name="Оглушение Щитом(Shield Stun)" cost="600000" min_level="61"/>
+			<skill id="28" level="37" name="Агрессия(Aggression)" cost="740000" min_level="62"/>
+			<skill id="984" level="9" name="Атака Щитом(Shield Strike)" cost="740000" min_level="62"/>
+			<skill id="18" level="25" name="Аура Ненависти(Aggression Aura)" cost="740000" min_level="62"/>
+			<skill id="217" level="33" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="740000" min_level="62"/>
+			<skill id="232" level="40" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="740000" min_level="62"/>
+			<skill id="70" level="41" name="Кража Здоровья(Drain HP)" cost="740000" min_level="62"/>
+			<skill id="147" level="39" name="Магическое Сопротивление(M. Def.)" cost="740000" min_level="62"/>
+			<skill id="92" level="40" name="Оглушение Щитом(Shield Stun)" cost="740000" min_level="62"/>
+			<skill id="46" level="9" name="Отделение Жизни(Life Scavenge)" cost="740000" min_level="62"/>
+			<skill id="291" level="5" name="Последний Рубеж(Final Fortress)" cost="740000" min_level="62"/>
+			<skill id="283" level="4" name="Призвать Темную Пантеру(Summon Dark Panther)" cost="740000" min_level="62"/>
+			<skill id="103" level="3" name="Трупная Чума(Corpse Plague)" cost="740000" min_level="62"/>
+			<skill id="127" level="8" name="Увечье(Hamstring)" cost="740000" min_level="62"/>
+			<skill id="65" level="7" name="Ужас(Horror)" cost="740000" min_level="62"/>
+			<skill id="28" level="38" name="Агрессия(Aggression)" cost="740000" min_level="63"/>
+			<skill id="18" level="26" name="Аура Ненависти(Aggression Aura)" cost="740000" min_level="63"/>
+			<skill id="217" level="34" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="740000" min_level="63"/>
+			<skill id="232" level="41" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="740000" min_level="63"/>
+			<skill id="70" level="42" name="Кража Здоровья(Drain HP)" cost="740000" min_level="63"/>
+			<skill id="147" level="40" name="Магическое Сопротивление(M. Def.)" cost="740000" min_level="63"/>
+			<skill id="92" level="41" name="Оглушение Щитом(Shield Stun)" cost="740000" min_level="63"/>
+			<skill id="28" level="39" name="Агрессия(Aggression)" cost="930000" min_level="64"/>
+			<skill id="984" level="10" name="Атака Щитом(Shield Strike)" cost="930000" min_level="64"/>
+			<skill id="18" level="27" name="Аура Ненависти(Aggression Aura)" cost="930000" min_level="64"/>
+			<skill id="217" level="35" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="930000" min_level="64"/>
+			<skill id="232" level="42" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="930000" min_level="64"/>
+			<skill id="70" level="43" name="Кража Здоровья(Drain HP)" cost="930000" min_level="64"/>
+			<skill id="322" level="1" name="Крепость Щитов(Shield Fortress)" cost="930000" min_level="64"/>
+			<skill id="147" level="41" name="Магическое Сопротивление(M. Def.)" cost="930000" min_level="64"/>
+			<skill id="92" level="42" name="Оглушение Щитом(Shield Stun)" cost="930000" min_level="64"/>
+			<skill id="46" level="10" name="Отделение Жизни(Life Scavenge)" cost="930000" min_level="64"/>
+			<skill id="291" level="6" name="Последний Рубеж(Final Fortress)" cost="930000" min_level="64"/>
+			<skill id="127" level="9" name="Увечье(Hamstring)" cost="930000" min_level="64"/>
+			<skill id="65" level="8" name="Ужас(Horror)" cost="930000" min_level="64"/>
+			<skill id="191" level="5" name="Фокусировка Разума(Focus Mind)" cost="930000" min_level="64"/>
+			<skill id="916" level="2" name="Щит Отражения Магии(Shield Deflect Magic)" cost="930000" min_level="64"/>
+			<skill id="28" level="40" name="Агрессия(Aggression)" cost="930000" min_level="65"/>
+			<skill id="18" level="28" name="Аура Ненависти(Aggression Aura)" cost="930000" min_level="65"/>
+			<skill id="217" level="36" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="930000" min_level="65"/>
+			<skill id="232" level="43" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="930000" min_level="65"/>
+			<skill id="70" level="44" name="Кража Здоровья(Drain HP)" cost="930000" min_level="65"/>
+			<skill id="147" level="42" name="Магическое Сопротивление(M. Def.)" cost="930000" min_level="65"/>
+			<skill id="92" level="43" name="Оглушение Щитом(Shield Stun)" cost="930000" min_level="65"/>
+			<skill id="28" level="41" name="Агрессия(Aggression)" cost="1000000" min_level="66"/>
+			<skill id="984" level="11" name="Атака Щитом(Shield Strike)" cost="1000000" min_level="66"/>
+			<skill id="18" level="29" name="Аура Ненависти(Aggression Aura)" cost="1000000" min_level="66"/>
+			<skill id="217" level="37" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1000000" min_level="66"/>
+			<skill id="232" level="44" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1000000" min_level="66"/>
+			<skill id="70" level="45" name="Кража Здоровья(Drain HP)" cost="1000000" min_level="66"/>
+			<skill id="322" level="2" name="Крепость Щитов(Shield Fortress)" cost="1000000" min_level="66"/>
+			<skill id="147" level="43" name="Магическое Сопротивление(M. Def.)" cost="1000000" min_level="66"/>
+			<skill id="92" level="44" name="Оглушение Щитом(Shield Stun)" cost="1000000" min_level="66"/>
+			<skill id="46" level="11" name="Отделение Жизни(Life Scavenge)" cost="1000000" min_level="66"/>
+			<skill id="291" level="7" name="Последний Рубеж(Final Fortress)" cost="1000000" min_level="66"/>
+			<skill id="283" level="5" name="Призвать Темную Пантеру(Summon Dark Panther)" cost="1000000" min_level="66"/>
+			<skill id="127" level="10" name="Увечье(Hamstring)" cost="1000000" min_level="66"/>
+			<skill id="65" level="9" name="Ужас(Horror)" cost="1000000" min_level="66"/>
+			<skill id="28" level="42" name="Агрессия(Aggression)" cost="1000000" min_level="67"/>
+			<skill id="18" level="30" name="Аура Ненависти(Aggression Aura)" cost="1000000" min_level="67"/>
+			<skill id="217" level="38" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1000000" min_level="67"/>
+			<skill id="232" level="45" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1000000" min_level="67"/>
+			<skill id="70" level="46" name="Кража Здоровья(Drain HP)" cost="1000000" min_level="67"/>
+			<skill id="147" level="44" name="Магическое Сопротивление(M. Def.)" cost="1000000" min_level="67"/>
+			<skill id="92" level="45" name="Оглушение Щитом(Shield Stun)" cost="1000000" min_level="67"/>
+			<skill id="28" level="43" name="Агрессия(Aggression)" cost="1400000" min_level="68"/>
+			<skill id="984" level="12" name="Атака Щитом(Shield Strike)" cost="1400000" min_level="68"/>
+			<skill id="18" level="31" name="Аура Ненависти(Aggression Aura)" cost="1400000" min_level="68"/>
+			<skill id="217" level="39" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1400000" min_level="68"/>
+			<skill id="232" level="46" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1400000" min_level="68"/>
+			<skill id="70" level="47" name="Кража Здоровья(Drain HP)" cost="1400000" min_level="68"/>
+			<skill id="322" level="3" name="Крепость Щитов(Shield Fortress)" cost="1400000" min_level="68"/>
+			<skill id="147" level="45" name="Магическое Сопротивление(M. Def.)" cost="1400000" min_level="68"/>
+			<skill id="92" level="46" name="Оглушение Щитом(Shield Stun)" cost="1400000" min_level="68"/>
+			<skill id="46" level="12" name="Отделение Жизни(Life Scavenge)" cost="1400000" min_level="68"/>
+			<skill id="291" level="8" name="Последний Рубеж(Final Fortress)" cost="1400000" min_level="68"/>
+			<skill id="127" level="11" name="Увечье(Hamstring)" cost="1400000" min_level="68"/>
+			<skill id="65" level="10" name="Ужас(Horror)" cost="1400000" min_level="68"/>
+			<skill id="916" level="3" name="Щит Отражения Магии(Shield Deflect Magic)" cost="1400000" min_level="68"/>
+			<skill id="28" level="44" name="Агрессия(Aggression)" cost="1400000" min_level="69"/>
+			<skill id="18" level="32" name="Аура Ненависти(Aggression Aura)" cost="1400000" min_level="69"/>
+			<skill id="217" level="40" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1400000" min_level="69"/>
+			<skill id="232" level="47" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1400000" min_level="69"/>
+			<skill id="70" level="48" name="Кража Здоровья(Drain HP)" cost="1400000" min_level="69"/>
+			<skill id="147" level="46" name="Магическое Сопротивление(M. Def.)" cost="1400000" min_level="69"/>
+			<skill id="92" level="47" name="Оглушение Щитом(Shield Stun)" cost="1400000" min_level="69"/>
+			<skill id="28" level="45" name="Агрессия(Aggression)" cost="1800000" min_level="70"/>
+			<skill id="984" level="13" name="Атака Щитом(Shield Strike)" cost="1800000" min_level="70"/>
+			<skill id="18" level="33" name="Аура Ненависти(Aggression Aura)" cost="1800000" min_level="70"/>
+			<skill id="217" level="41" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1800000" min_level="70"/>
+			<skill id="232" level="48" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1800000" min_level="70"/>
+			<skill id="70" level="49" name="Кража Здоровья(Drain HP)" cost="1800000" min_level="70"/>
+			<skill id="322" level="4" name="Крепость Щитов(Shield Fortress)" cost="1800000" min_level="70"/>
+			<skill id="147" level="47" name="Магическое Сопротивление(M. Def.)" cost="1800000" min_level="70"/>
+			<skill id="92" level="48" name="Оглушение Щитом(Shield Stun)" cost="1800000" min_level="70"/>
+			<skill id="46" level="13" name="Отделение Жизни(Life Scavenge)" cost="1800000" min_level="70"/>
+			<skill id="291" level="9" name="Последний Рубеж(Final Fortress)" cost="1800000" min_level="70"/>
+			<skill id="283" level="6" name="Призвать Темную Пантеру(Summon Dark Panther)" cost="1800000" min_level="70"/>
+			<skill id="1802" level="1" name="Светлый Ассасин(White Assassin)" min_level="70"/>
+			<skill id="103" level="4" name="Трупная Чума(Corpse Plague)" cost="1800000" min_level="70"/>
+			<skill id="127" level="12" name="Увечье(Hamstring)" cost="1800000" min_level="70"/>
+			<skill id="65" level="11" name="Ужас(Horror)" cost="1800000" min_level="70"/>
+			<skill id="28" level="46" name="Агрессия(Aggression)" cost="1800000" min_level="71"/>
+			<skill id="18" level="34" name="Аура Ненависти(Aggression Aura)" cost="1800000" min_level="71"/>
+			<skill id="217" level="42" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1800000" min_level="71"/>
+			<skill id="232" level="49" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1800000" min_level="71"/>
+			<skill id="70" level="50" name="Кража Здоровья(Drain HP)" cost="1800000" min_level="71"/>
+			<skill id="147" level="48" name="Магическое Сопротивление(M. Def.)" cost="1800000" min_level="71"/>
+			<skill id="92" level="49" name="Оглушение Щитом(Shield Stun)" cost="1800000" min_level="71"/>
+			<skill id="28" level="47" name="Агрессия(Aggression)" cost="2000000" min_level="72"/>
+			<skill id="984" level="14" name="Атака Щитом(Shield Strike)" cost="2000000" min_level="72"/>
+			<skill id="18" level="35" name="Аура Ненависти(Aggression Aura)" cost="2000000" min_level="72"/>
+			<skill id="217" level="43" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="2000000" min_level="72"/>
+			<skill id="232" level="50" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="2000000" min_level="72"/>
+			<skill id="70" level="51" name="Кража Здоровья(Drain HP)" cost="2000000" min_level="72"/>
+			<skill id="322" level="5" name="Крепость Щитов(Shield Fortress)" cost="2000000" min_level="72"/>
+			<skill id="147" level="49" name="Магическое Сопротивление(M. Def.)" cost="2000000" min_level="72"/>
+			<skill id="92" level="50" name="Оглушение Щитом(Shield Stun)" cost="2000000" min_level="72"/>
+			<skill id="46" level="14" name="Отделение Жизни(Life Scavenge)" cost="2000000" min_level="72"/>
+			<skill id="291" level="10" name="Последний Рубеж(Final Fortress)" cost="2000000" min_level="72"/>
+			<skill id="127" level="13" name="Увечье(Hamstring)" cost="2000000" min_level="72"/>
+			<skill id="65" level="12" name="Ужас(Horror)" cost="2000000" min_level="72"/>
+			<skill id="191" level="6" name="Фокусировка Разума(Focus Mind)" cost="2000000" min_level="72"/>
+			<skill id="916" level="4" name="Щит Отражения Магии(Shield Deflect Magic)" cost="2000000" min_level="72"/>
+			<skill id="28" level="48" name="Агрессия(Aggression)" cost="2000000" min_level="73"/>
+			<skill id="18" level="36" name="Аура Ненависти(Aggression Aura)" cost="2000000" min_level="73"/>
+			<skill id="217" level="44" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="2000000" min_level="73"/>
+			<skill id="232" level="51" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="2000000" min_level="73"/>
+			<skill id="70" level="52" name="Кража Здоровья(Drain HP)" cost="2000000" min_level="73"/>
+			<skill id="147" level="50" name="Магическое Сопротивление(M. Def.)" cost="2000000" min_level="73"/>
+			<skill id="92" level="51" name="Оглушение Щитом(Shield Stun)" cost="2000000" min_level="73"/>
+			<skill id="28" level="49" name="Агрессия(Aggression)" cost="2000000" min_level="74"/>
+			<skill id="984" level="15" name="Атака Щитом(Shield Strike)" cost="2000000" min_level="74"/>
+			<skill id="18" level="37" name="Аура Ненависти(Aggression Aura)" cost="2000000" min_level="74"/>
+			<skill id="217" level="45" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="2000000" min_level="74"/>
+			<skill id="232" level="52" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="2000000" min_level="74"/>
+			<skill id="70" level="53" name="Кража Здоровья(Drain HP)" cost="2000000" min_level="74"/>
+			<skill id="322" level="6" name="Крепость Щитов(Shield Fortress)" cost="2000000" min_level="74"/>
+			<skill id="147" level="51" name="Магическое Сопротивление(M. Def.)" cost="2000000" min_level="74"/>
+			<skill id="92" level="52" name="Оглушение Щитом(Shield Stun)" cost="2000000" min_level="74"/>
+			<skill id="46" level="15" name="Отделение Жизни(Life Scavenge)" cost="2000000" min_level="74"/>
+			<skill id="291" level="11" name="Последний Рубеж(Final Fortress)" cost="2000000" min_level="74"/>
+			<skill id="283" level="7" name="Призвать Темную Пантеру(Summon Dark Panther)" cost="2000000" min_level="74"/>
+			<skill id="127" level="14" name="Увечье(Hamstring)" cost="2000000" min_level="74"/>
+			<skill id="65" level="13" name="Ужас(Horror)" cost="2000000" min_level="74"/>
+		</class>
+	</normal_skill_tree>
+</list>

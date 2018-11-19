@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="26190002" name="Magmell_Orbis_S.B1F.Orbis_Passage_Door" hp="150" pdef="1" mdef="1">
+		<pos x="211583" y="50508" z="-8446"/>
+		<shape ax="211619" ay="50352" bx="211620" by="50668" cx="211548" cy="50671" dx="211549" dy="50350" minz="-8464" maxz="-8464"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/> 
+	</door>
+	<door id="26190004" name="Magmell_Orbis_S.B1F.Orbis_Passage_Door" hp="150" pdef="1" mdef="1">
+		<pos x="207777" y="46999" z="-8645"/>
+		<shape ax="207650" ay="46979" bx="207902" by="46975" cx="207902" cy="47023" dx="207651" dy="47020" minz="-8669" maxz="-8669"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/> 
+	</door>
+	<door id="26190017" name="Magmell_Orbis_S.B1F.Orbis_Passage_Door" hp="150" pdef="1" mdef="1">
+		<pos x="209718" y="45696" z="-15167"/>
+		<shape ax="209684" ay="45824" bx="209679" by="45574" cx="209756" cy="45572" dx="209748" dy="45823" minz="-15191" maxz="-15191"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/> 
+	</door>
+	<door id="26190005" name="Magmell_Orbis_S.B1F.Orbis_Passage_Door" hp="150" pdef="1" mdef="1">
+		<pos x="207777" y="53351" z="-8645"/>
+		<shape ax="207650" ay="53331" bx="207902" by="53327" cx="207902" cy="53375" dx="207651" dy="53372" minz="-8669" maxz="-8669"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/> 
+	</door>
+	<door id="26190003" name="Magmell_Orbis_S.B1F.Orbis_Passage_Door" hp="150" pdef="1" mdef="1">
+		<pos x="214476" y="50507" z="-8446"/>
+		<shape ax="214512" ay="50351" bx="214513" by="50667" cx="214441" cy="50670" dx="214442" dy="50349" minz="-8464" maxz="-8464"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/> 
+	</door>
+	<door id="26190019" name="Magmell_Orbis_S.B1F.Orbis_Passage_Door" hp="150" pdef="1" mdef="1">
+		<pos x="211507" y="50503" z="-14655"/>
+		<shape ax="211543" ay="50347" bx="211544" by="50663" cx="211472" cy="50666" dx="211473" dy="50345" minz="-14673" maxz="-14673"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/> 
+	</door>
+	<door id="26190006" name="Magmell_Orbis_S.B1F.Orbis_Passage_Door" hp="150" pdef="1" mdef="1">
+		<pos x="209728" y="54656" z="-8706"/>
+		<shape ax="209694" ay="54784" bx="209689" by="54534" cx="209766" cy="54532" dx="209758" dy="54783" minz="-8730" maxz="-8730"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/> 
+	</door>
+	<door id="26190007" name="Magmell_Orbis_S.B1F.Orbis_Passage_Door" hp="150" pdef="1" mdef="1">
+		<pos x="212256" y="54656" z="-8708"/>
+		<shape ax="212222" ay="54784" bx="212217" by="54534" cx="212294" cy="54532" dx="212286" dy="54783" minz="-8732" maxz="-8732"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/> 
+	</door>
+	<door id="26190001" name="Magmell_Orbis_S.B1F.Orbis_Passage_Door" hp="150" pdef="1" mdef="1">
+		<pos x="211583" y="52035" z="-8446"/>
+		<shape ax="211619" ay="51879" bx="211620" by="52195" cx="211548" cy="52198" dx="211549" dy="51877" minz="-8464" maxz="-8464"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/> 
+	</door>
+</list>

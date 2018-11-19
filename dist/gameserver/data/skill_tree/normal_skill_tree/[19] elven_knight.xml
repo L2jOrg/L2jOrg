@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="19">	<!--Светлый Рыцарь-->
+			<skill id="110" level="1" name="Абсолютная Защита(Ultimate Defense)" cost="1000" min_level="20"/>
+			<skill id="91" level="2" name="Аура Защиты(Defense Aura)" cost="1000" min_level="20"/>
+			<skill id="217" level="1" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1000" min_level="20"/>
+			<skill id="232" level="1" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1000" min_level="20"/>
+			<skill id="232" level="2" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1000" min_level="20"/>
+			<skill id="232" level="3" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1000" min_level="20"/>
+			<skill id="153" level="1" name="Владение Щитом(Shield Mastery)" cost="1000" min_level="20"/>
+			<skill id="21" level="1" name="Вывести Яд(Poison Recovery)" cost="1000" min_level="20"/>
+			<skill id="147" level="1" name="Магическое Сопротивление(M. Def.)" cost="1000" min_level="20"/>
+			<skill id="147" level="2" name="Магическое Сопротивление(M. Def.)" cost="1000" min_level="20"/>
+			<skill id="15" level="1" name="Очарование(Charm)" cost="1000" min_level="20"/>
+			<skill id="15" level="2" name="Очарование(Charm)" cost="1000" min_level="20"/>
+			<skill id="15" level="3" name="Очарование(Charm)" cost="1000" min_level="20"/>
+			<skill id="58" level="4" name="Природное Лечение(Elemental Heal)" cost="1000" min_level="20"/>
+			<skill id="58" level="5" name="Природное Лечение(Elemental Heal)" cost="1000" min_level="20"/>
+			<skill id="58" level="6" name="Природное Лечение(Elemental Heal)" cost="1000" min_level="20"/>
+			<skill id="28" level="1" name="Агрессия(Aggression)" cost="2800" min_level="22"/>
+			<skill id="232" level="4" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="2800" min_level="22"/>
+			<skill id="147" level="3" name="Магическое Сопротивление(M. Def.)" cost="2800" min_level="22"/>
+			<skill id="15" level="4" name="Очарование(Charm)" cost="2800" min_level="22"/>
+			<skill id="58" level="7" name="Природное Лечение(Elemental Heal)" cost="2800" min_level="22"/>
+			<skill id="28" level="2" name="Агрессия(Aggression)" cost="2800" min_level="23"/>
+			<skill id="232" level="5" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="2800" min_level="23"/>
+			<skill id="147" level="4" name="Магическое Сопротивление(M. Def.)" cost="2800" min_level="23"/>
+			<skill id="15" level="5" name="Очарование(Charm)" cost="2800" min_level="23"/>
+			<skill id="58" level="8" name="Природное Лечение(Elemental Heal)" cost="2800" min_level="23"/>
+			<skill id="28" level="3" name="Агрессия(Aggression)" cost="2800" min_level="24"/>
+			<skill id="217" level="2" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="2800" min_level="24"/>
+			<skill id="232" level="6" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="2800" min_level="24"/>
+			<skill id="147" level="5" name="Магическое Сопротивление(M. Def.)" cost="2800" min_level="24"/>
+			<skill id="61" level="1" name="Остановка Кровотечения(Cure Bleeding)" cost="2800" min_level="24"/>
+			<skill id="112" level="1" name="Отклонить Стрелу(Deflect Arrow)" cost="2800" min_level="24"/>
+			<skill id="15" level="6" name="Очарование(Charm)" cost="2800" min_level="24"/>
+			<skill id="58" level="9" name="Природное Лечение(Elemental Heal)" cost="2800" min_level="24"/>
+			<skill id="28" level="4" name="Агрессия(Aggression)" cost="5700" min_level="26"/>
+			<skill id="217" level="3" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="5700" min_level="26"/>
+			<skill id="232" level="7" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="5700" min_level="26"/>
+			<skill id="147" level="6" name="Магическое Сопротивление(M. Def.)" cost="5700" min_level="26"/>
+			<skill id="15" level="7" name="Очарование(Charm)" cost="5700" min_level="26"/>
+			<skill id="58" level="10" name="Природное Лечение(Elemental Heal)" cost="5700" min_level="26"/>
+			<skill id="28" level="5" name="Агрессия(Aggression)" cost="5700" min_level="27"/>
+			<skill id="232" level="8" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="5700" min_level="27"/>
+			<skill id="147" level="7" name="Магическое Сопротивление(M. Def.)" cost="5700" min_level="27"/>
+			<skill id="15" level="8" name="Очарование(Charm)" cost="5700" min_level="27"/>
+			<skill id="58" level="11" name="Природное Лечение(Elemental Heal)" cost="5700" min_level="27"/>
+			<skill id="28" level="6" name="Агрессия(Aggression)" cost="5700" min_level="28"/>
+			<skill id="77" level="2" name="Аура Атаки(Attack Aura)" cost="5700" min_level="28"/>
+			<skill id="217" level="4" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="5700" min_level="28"/>
+			<skill id="232" level="9" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="5700" min_level="28"/>
+			<skill id="153" level="2" name="Владение Щитом(Shield Mastery)" cost="5700" min_level="28"/>
+			<skill id="147" level="8" name="Магическое Сопротивление(M. Def.)" cost="5700" min_level="28"/>
+			<skill id="15" level="9" name="Очарование(Charm)" cost="5700" min_level="28"/>
+			<skill id="58" level="12" name="Природное Лечение(Elemental Heal)" cost="5700" min_level="28"/>
+			<skill id="28" level="7" name="Агрессия(Aggression)" cost="11000" min_level="30"/>
+			<skill id="217" level="5" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="11000" min_level="30"/>
+			<skill id="232" level="10" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="11000" min_level="30"/>
+			<skill id="147" level="9" name="Магическое Сопротивление(M. Def.)" cost="11000" min_level="30"/>
+			<skill id="15" level="10" name="Очарование(Charm)" cost="11000" min_level="30"/>
+			<skill id="58" level="13" name="Природное Лечение(Elemental Heal)" cost="11000" min_level="30"/>
+			<skill id="28" level="8" name="Агрессия(Aggression)" cost="11000" min_level="31"/>
+			<skill id="232" level="11" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="11000" min_level="31"/>
+			<skill id="147" level="10" name="Магическое Сопротивление(M. Def.)" cost="11000" min_level="31"/>
+			<skill id="15" level="11" name="Очарование(Charm)" cost="11000" min_level="31"/>
+			<skill id="58" level="14" name="Природное Лечение(Elemental Heal)" cost="11000" min_level="31"/>
+			<skill id="28" level="9" name="Агрессия(Aggression)" cost="11000" min_level="32"/>
+			<skill id="217" level="6" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="11000" min_level="32"/>
+			<skill id="232" level="12" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="11000" min_level="32"/>
+			<skill id="147" level="11" name="Магическое Сопротивление(M. Def.)" cost="11000" min_level="32"/>
+			<skill id="112" level="2" name="Отклонить Стрелу(Deflect Arrow)" cost="11000" min_level="32"/>
+			<skill id="15" level="12" name="Очарование(Charm)" cost="11000" min_level="32"/>
+			<skill id="58" level="15" name="Природное Лечение(Elemental Heal)" cost="11000" min_level="32"/>
+			<skill id="230" level="1" name="Спринт(Sprint)" item_id="1384" cost="11000" min_level="32"/>
+			<skill id="28" level="10" name="Агрессия(Aggression)" cost="20000" min_level="34"/>
+			<skill id="217" level="7" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="20000" min_level="34"/>
+			<skill id="232" level="13" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="20000" min_level="34"/>
+			<skill id="147" level="12" name="Магическое Сопротивление(M. Def.)" cost="20000" min_level="34"/>
+			<skill id="15" level="13" name="Очарование(Charm)" cost="20000" min_level="34"/>
+			<skill id="58" level="16" name="Природное Лечение(Elemental Heal)" cost="20000" min_level="34"/>
+			<skill id="28" level="11" name="Агрессия(Aggression)" cost="20000" min_level="35"/>
+			<skill id="232" level="14" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="20000" min_level="35"/>
+			<skill id="147" level="13" name="Магическое Сопротивление(M. Def.)" cost="20000" min_level="35"/>
+			<skill id="15" level="14" name="Очарование(Charm)" cost="20000" min_level="35"/>
+			<skill id="58" level="17" name="Природное Лечение(Elemental Heal)" cost="20000" min_level="35"/>
+			<skill id="28" level="12" name="Агрессия(Aggression)" cost="20000" min_level="36"/>
+			<skill id="217" level="8" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="20000" min_level="36"/>
+			<skill id="232" level="15" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="20000" min_level="36"/>
+			<skill id="147" level="14" name="Магическое Сопротивление(M. Def.)" cost="20000" min_level="36"/>
+			<skill id="102" level="1" name="Опутать(Entangle)" item_id="1380" cost="20000" min_level="36"/>
+			<skill id="15" level="15" name="Очарование(Charm)" cost="20000" min_level="36"/>
+			<skill id="58" level="18" name="Природное Лечение(Elemental Heal)" cost="20000" min_level="36"/>
+			<skill id="191" level="1" name="Фокусировка Разума(Focus Mind)" cost="20000" min_level="36"/>
+		</class>
+	</normal_skill_tree>
+</list>

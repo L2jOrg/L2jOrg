@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "npc.dtd">
+<list>
+	<npc id="29190" name="Tarask Dragon" title="">
+		<set name="type" value="SpecialMinion"/>
+		<set name="ai_type" value="freya.AntharasMinion"/>
+		<set name="collision_height" value="54"/>
+		<set name="collision_radius" value="63"/>
+		<set name="level" value="85"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="292335"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="76.71"/>
+		<set name="baseMpMax" value="22800"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="60"/>
+		<set name="baseCON" value="57"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseWIT" value="70"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="3584.56902102981"/>
+		<set name="basePDef" value="1071.29474264312"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="1386.66000087809"/>
+		<set name="baseMDef" value="522.626863116263"/>
+		<set name="baseWalkSpd" value="180"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="SWORD"/>
+		<set name="basePHitModify" value="5"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="300"/>
+		<!--TODO:-->
+		<set name="shots" value="NONE"/>
+		<set name="texture" value="LineageMonster3.antaras_ex_a"/>
+		<!---->
+		<set name="ai_type" value="Fighter"/>
+		<set name="type" value="Monster"/>
+		<ai_params>
+			<set name="max_pursue_range" value="10000"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="10"/>	<!--Dragons-->
+			<skill id="5465" level="1"/>	<!--Earth Attack-->
+		</client_skills>
+	</npc>
+</list>

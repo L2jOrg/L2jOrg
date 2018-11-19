@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn name="aden18_npc2419_01" count="1" respawn="60">
+		<point x="147508" y="47042" z="-3400" h="49000"/>
+		<npc id="31226"/><!--Бригадир Арены-->
+	</spawn>
+	<spawn name="aden18_npc2419_02" count="1" respawn="60">
+		<point x="151484" y="46383" z="-3400" h="16000"/>
+		<npc id="31226"/><!--Бригадир Арены-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="161550" y="37880" z="-3712" h="13998" />
+		<npc id="27320" /><!--Чудище Холода-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="161054" y="39005" z="-3712" h="3638" />
+		<npc id="27320" /><!--Чудище Холода-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="161464" y="38213" z="-3712" h="38282" />
+		<npc id="27319" /><!--Призрак Одиночества-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="161417" y="37663" z="-3704" h="6894" />
+		<npc id="27320" /><!--Чудище Холода-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="161561" y="37969" z="-3712" h="61988" />
+		<npc id="27321" /><!--Дух Холода-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="161091" y="38568" z="-3720" h="62622" />
+		<npc id="27320" /><!--Чудище Холода-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="160681" y="38719" z="-3704" h="33923" />
+		<npc id="27321" /><!--Дух Холода-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="160702" y="38390" z="-3696" h="55642" />
+		<npc id="27320" /><!--Чудище Холода-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="160232" y="38666" z="-3688" h="54611" />
+		<npc id="27321" /><!--Дух Холода-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="160882" y="38990" z="-3712" h="3102" />
+		<npc id="27319" /><!--Призрак Одиночества-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="161573" y="37482" z="-3696" h="62682" />
+		<npc id="27321" /><!--Дух Холода-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="161750" y="38561" z="-3720" h="42129" />
+		<npc id="27320" /><!--Чудище Холода-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="160725" y="38341" z="-3696" h="28087" />
+		<npc id="27321" /><!--Дух Холода-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="160241" y="37933" z="-3648" h="63193" />
+		<npc id="27319" /><!--Призрак Одиночества-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="160532" y="38724" z="-3704" h="23081" />
+		<npc id="27319" /><!--Призрак Одиночества-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="160705" y="38986" z="-3712" h="2650" />
+		<npc id="27320" /><!--Чудище Холода-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="160271" y="38458" z="-3672" h="47525" />
+		<npc id="27321" /><!--Дух Холода-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="160575" y="37792" z="-3320" h="21378" />
+		<npc id="27319" /><!--Призрак Одиночества-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="160641" y="38959" z="-3712" h="12587" />
+		<npc id="27320" /><!--Чудище Холода-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="160701" y="39060" z="-3704" h="59664" />
+		<npc id="27319" /><!--Призрак Одиночества-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="162371" y="38610" z="-3720" h="6537" />
+		<npc id="27319" /><!--Призрак Одиночества-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="161546" y="37790" z="-3712" h="18664" />
+		<npc id="27321" /><!--Дух Холода-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="161617" y="37701" z="-3704" h="45614" />
+		<npc id="27321" /><!--Дух Холода-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="162079" y="39069" z="-3720" h="34350" />
+		<npc id="27319" /><!--Призрак Одиночества-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="157869" y="36721" z="-3320" h="25007" />
+		<npc id="27318" /><!--Душа Холода-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="159722" y="35855" z="-3272" h="14804" />
+		<npc id="27318" /><!--Душа Холода-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="159317" y="35635" z="-3312" h="43738" />
+		<npc id="27316" /><!--Ледяной Монстр-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="159829" y="36590" z="-3360" h="56416" />
+		<npc id="27316" /><!--Ледяной Монстр-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="158337" y="36225" z="-3248" h="28750" />
+		<npc id="27316" /><!--Ледяной Монстр-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="158007" y="35762" z="-3304" h="29698" />
+		<npc id="27317" /><!--Дух Утопленника-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="159293" y="35621" z="-3312" h="57115" />
+		<npc id="27317" /><!--Дух Утопленника-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="159696" y="36248" z="-3296" h="37412" />
+		<npc id="27318" /><!--Душа Холода-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="159194" y="36184" z="-3304" h="50106" />
+		<npc id="27317" /><!--Дух Утопленника-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="159183" y="35500" z="-3320" h="53057" />
+		<npc id="27316" /><!--Ледяной Монстр-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="159738" y="35299" z="-3320" h="59042" />
+		<npc id="27317" /><!--Дух Утопленника-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="158700" y="35335" z="-3336" h="61794" />
+		<npc id="27316" /><!--Ледяной Монстр-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="159749" y="36200" z="-3272" h="29411" />
+		<npc id="27318" /><!--Душа Холода-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="159178" y="35727" z="-3312" h="27368" />
+		<npc id="27317" /><!--Дух Утопленника-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="159461" y="36762" z="-3376" h="44791" />
+		<npc id="27316" /><!--Ледяной Монстр-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="159668" y="36585" z="-3376" h="38950" />
+		<npc id="27317" /><!--Дух Утопленника-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="159448" y="35175" z="-3336" h="48632" />
+		<npc id="27316" /><!--Ледяной Монстр-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="159512" y="36680" z="-3376" h="14830" />
+		<npc id="27317" /><!--Дух Утопленника-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="159461" y="36519" z="-3328" h="13998" />
+		<npc id="27317" /><!--Дух Утопленника-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="158550" y="35702" z="-3304" h="56750" />
+		<npc id="27318" /><!--Душа Холода-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="158106" y="35969" z="-3288" h="21264" />
+		<npc id="27318" /><!--Душа Холода-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="159705" y="35496" z="-3296" h="20675" />
+		<npc id="27318" /><!--Душа Холода-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="159591" y="35751" z="-3288" h="47984" />
+		<npc id="27316" /><!--Ледяной Монстр-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="159601" y="36108" z="-3296" h="16734" />
+		<npc id="27318" /><!--Душа Холода-->
+	</spawn>
+	<spawn name="Ravolas" count="1" respawn="86400" respawn_random="12000">
+		<point x="165720" y="38200" z="-3648" h="21344"/>
+		<npc id="25774"/><!--Злой Орк Раволас-->
+	</spawn>
+</list>

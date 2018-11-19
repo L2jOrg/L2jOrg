@@ -1,0 +1,14 @@
+<!ELEMENT list (group)*>
+<!ELEMENT group (name|description|sub_group)*>
+<!ATTLIST group
+	id CDATA #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name
+	lang CDATA #REQUIRED>
+<!ELEMENT description (#PCDATA)
+><!ATTLIST description
+	lang CDATA #REQUIRED>
+<!ELEMENT sub_group (name|description)*>
+<!ATTLIST sub_group
+	handler CDATA #REQUIRED
+	id CDATA #REQUIRED>

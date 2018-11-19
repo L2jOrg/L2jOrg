@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="110">	<!--Повелитель Бури-->
+			<skill id="146" level="46" name="Антимагия(Anti Magic)" cost="5700000" min_level="76"/>
+			<skill id="1064" level="15" name="Безмолвие(Silence)" cost="5700000" min_level="76"/>
+			<skill id="1405" level="3" name="Божественное Вдохновение(Divine Inspiration)" item_id="8620" cost="5700000" min_level="76"/>
+			<skill id="1405" level="4" name="Божественное Вдохновение(Divine Inspiration)" item_id="8621" cost="5700000" min_level="76"/>
+			<skill id="1176" level="16" name="Буря(Tempest)" cost="5700000" min_level="76"/>
+			<skill id="234" level="42" name="Владение Магической Броней(Robe Mastery)" cost="5700000" min_level="76"/>
+			<skill id="249" level="43" name="Владение Оружием(Weapon Mastery)" cost="5700000" min_level="76"/>
+			<skill id="1341" level="1" name="Воздушный Вихрь(Wind Vortex)" cost="5700000" min_level="76"/>
+			<skill id="1291" level="2" name="Дьявольский Ветер(Demon Wind)" cost="5700000" min_level="76"/>
+			<skill id="1160" level="16" name="Замедление(Slow)" cost="5700000" min_level="76"/>
+			<skill id="1234" level="29" name="Коготь Вампира(Vampiric Claw)" cost="5700000" min_level="76"/>
+			<skill id="1835" level="1" name="Оседлать Саблезубого Кугуара(Mount Saber Tooth Cougar)" item_id="90040" min_level="76"/>
+			<skill id="1151" level="17" name="Подпитка от Трупа(Corpse Life Drain)" cost="5700000" min_level="76"/>
+			<skill id="1159" level="23" name="Проклятие Смертельной Связи(Curse Death Link)" cost="5700000" min_level="76"/>
+			<skill id="1222" level="16" name="Проклятие Хаоса(Curse Chaos)" cost="5700000" min_level="76"/>
+			<skill id="1239" level="29" name="Ураган(Hurricane)" cost="5700000" min_level="76"/>
+			<skill id="1069" level="43" name="Усыпление(Sleep)" cost="5700000" min_level="76"/>
+			<skill id="146" level="47" name="Антимагия(Anti Magic)" cost="5700000" min_level="77"/>
+			<skill id="234" level="43" name="Владение Магической Броней(Robe Mastery)" cost="5700000" min_level="77"/>
+			<skill id="249" level="44" name="Владение Оружием(Weapon Mastery)" cost="5700000" min_level="77"/>
+			<skill id="1234" level="30" name="Коготь Вампира(Vampiric Claw)" cost="5700000" min_level="77"/>
+			<skill id="1159" level="24" name="Проклятие Смертельной Связи(Curse Death Link)" cost="5700000" min_level="77"/>
+			<skill id="337" level="1" name="Тайная Мощь(Arcane Power)" item_id="90081" cost="5700000" min_level="77"/>
+			<skill id="1239" level="30" name="Ураган(Hurricane)" cost="5700000" min_level="77"/>
+			<skill id="1069" level="44" name="Усыпление(Sleep)" cost="5700000" min_level="77"/>
+			<skill id="146" level="48" name="Антимагия(Anti Magic)" cost="12400000" min_level="78"/>
+			<skill id="1064" level="16" name="Безмолвие(Silence)" cost="12400000" min_level="78"/>
+			<skill id="1176" level="17" name="Буря(Tempest)" cost="12400000" min_level="78"/>
+			<skill id="234" level="44" name="Владение Магической Броней(Robe Mastery)" cost="12400000" min_level="78"/>
+			<skill id="249" level="45" name="Владение Оружием(Weapon Mastery)" cost="12400000" min_level="78"/>
+			<skill id="1160" level="17" name="Замедление(Slow)" cost="12400000" min_level="78"/>
+			<skill id="1234" level="31" name="Коготь Вампира(Vampiric Claw)" cost="12400000" min_level="78"/>
+			<skill id="1151" level="18" name="Подпитка от Трупа(Corpse Life Drain)" cost="12400000" min_level="78"/>
+			<skill id="1456" level="1" name="Порыв Воздушного Вихря(Wind Vortex Slug)" item_id="90084" cost="12400000" min_level="78"/>
+			<skill id="1159" level="25" name="Проклятие Смертельной Связи(Curse Death Link)" cost="12400000" min_level="78"/>
+			<skill id="1222" level="17" name="Проклятие Хаоса(Curse Chaos)" cost="12400000" min_level="78"/>
+			<skill id="1239" level="31" name="Ураган(Hurricane)" cost="12400000" min_level="78"/>
+			<skill id="1069" level="45" name="Усыпление(Sleep)" cost="12400000" min_level="78"/>
+			<skill id="1167" level="7" name="Ядовитое Облако(Poisonous Cloud)" cost="12400000" min_level="78"/>
+			<skill id="1338" level="1" name="Тайный Хаос(Arcane Chaos)" item_id="90085" cost="12400000" min_level="79"/>
+			<skill id="1556" level="1" name="Мистический Щит(Arcane Shield)" item_id="90086" cost="12400000" min_level="80"/>
+		</class>
+	</normal_skill_tree>
+</list>

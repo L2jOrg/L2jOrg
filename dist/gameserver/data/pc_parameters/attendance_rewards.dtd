@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT list (config|normal_account_rewards|premium_account_rewards)*>
+
+	<!ELEMENT config (#PCDATA)>
+	<!ATTLIST config
+		reward_by_account CDATA #IMPLIED>
+
+	<!ELEMENT normal_account_rewards (item)*>
+	<!ELEMENT premium_account_rewards (item)*>
+
+		<!ELEMENT item (#PCDATA)>
+		<!ATTLIST item
+			id CDATA #REQUIRED
+			count CDATA #REQUIRED
+			unknown CDATA #IMPLIED
+			is_best CDATA #IMPLIED>

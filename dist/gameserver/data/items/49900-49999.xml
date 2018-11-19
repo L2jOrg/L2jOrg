@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="49900" name="Best Dye of STR &lt;STR + 2 DEX - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_str"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="60000"/>
+	</etcitem>
+	<etcitem id="49901" name="Best Dye of CON &lt;CON + 2 STR - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_con"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="60000"/>
+	</etcitem>
+	<etcitem id="49902" name="Best Dye of CON &lt;CON + 2 DEX - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_con"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="60000"/>
+	</etcitem>
+	<etcitem id="49903" name="Best Dye of DEX &lt;DEX + 2 STR - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_dex"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="60000"/>
+	</etcitem>
+	<etcitem id="49904" name="Best Dye of DEX &lt;DEX + 2 CON - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_dex"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="60000"/>
+	</etcitem>
+	<etcitem id="49905" name="Best Dye of INT &lt;INT + 2 MEN - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_int"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="60000"/>
+	</etcitem>
+	<etcitem id="49906" name="Best Dye of INT &lt;INT + 2 WIT - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_int"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="60000"/>
+	</etcitem>
+	<etcitem id="49907" name="Best Dye of MEN &lt;MEN + 2 INT - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_men"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="60000"/>
+	</etcitem>
+	<etcitem id="49908" name="Best Dye of MEN &lt;MEN + 2 WIT - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_men"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="60000"/>
+	</etcitem>
+	<etcitem id="49909" name="Best Dye of WIT &lt;WIT + 2 INT - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_wit"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="60000"/>
+	</etcitem>
+	<etcitem id="49910" name="Best Dye of WIT &lt;WIT + 2 MEN - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_wit"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="60000"/>
+	</etcitem>
+	<etcitem id="49911" name="Best Dye of STR &lt;STR + 2 CON - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_str"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="90000"/>
+	</etcitem>
+	<etcitem id="49912" name="Best Dye of STR &lt;STR + 2 DEX - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_str"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="90000"/>
+	</etcitem>
+	<etcitem id="49913" name="Best Dye of CON &lt;CON + 2 STR - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_con"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="90000"/>
+	</etcitem>
+	<etcitem id="49914" name="Best Dye of CON &lt;CON + 2 DEX - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_con"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="90000"/>
+	</etcitem>
+	<etcitem id="49915" name="Best Dye of DEX &lt;DEX + 2 STR - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_dex"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="90000"/>
+	</etcitem>
+	<etcitem id="49916" name="Best Dye of DEX &lt;DEX + 2 CON - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_dex"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="90000"/>
+	</etcitem>
+	<etcitem id="49917" name="Best Dye of INT &lt;INT + 2 MEN - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_int"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="90000"/>
+	</etcitem>
+	<etcitem id="49918" name="Best Dye of INT &lt;INT + 2 WIT - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_int"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="90000"/>
+	</etcitem>
+	<etcitem id="49919" name="Best Dye of MEN &lt;MEN + 2 INT - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_men"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="90000"/>
+	</etcitem>
+	<etcitem id="49920" name="Best Dye of MEN &lt;MEN + 2 WIT - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_men"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="90000"/>
+	</etcitem>
+	<etcitem id="49921" name="Best Dye of WIT &lt;WIT + 2 INT - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_wit"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="90000"/>
+	</etcitem>
+	<etcitem id="49922" name="Best Dye of WIT &lt;WIT + 2 MEN - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_wit"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="90000"/>
+	</etcitem>
+	<etcitem id="49923" name="Best Dye of STR &lt;STR + 2 CON - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_str"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49924" name="Best Dye of STR &lt;STR + 2 DEX - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_str"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49925" name="Best Dye of CON &lt;CON + 2 STR - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_con"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49926" name="Best Dye of CON &lt;CON + 2 DEX - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_con"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49927" name="Best Dye of DEX &lt;DEX + 2 STR - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_dex"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49928" name="Best Dye of DEX &lt;DEX + 2 CON - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_dex"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49929" name="Best Dye of INT &lt;INT + 2 MEN - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_int"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49930" name="Best Dye of INT &lt;INT + 2 WIT - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_int"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49931" name="Best Dye of MEN &lt;MEN + 2 INT - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_men"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49932" name="Best Dye of MEN &lt;MEN + 2 WIT - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_men"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49933" name="Best Dye of WIT &lt;WIT + 2 INT - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_wit"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49934" name="Best Dye of WIT &lt;WIT + 2 MEN - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv2_1_dye_wit"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49935" name="Best Dye of STR &lt;STR + 3 CON - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_str"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="240000"/>
+	</etcitem>
+	<etcitem id="49936" name="Best Dye of STR &lt;STR + 3 DEX - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_str"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="240000"/>
+	</etcitem>
+	<etcitem id="49937" name="Best Dye of CON &lt;CON + 3 STR - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_con"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="240000"/>
+	</etcitem>
+	<etcitem id="49938" name="Best Dye of CON &lt;CON + 3 DEX - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_con"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="240000"/>
+	</etcitem>
+	<etcitem id="49939" name="Best Dye of DEX &lt;DEX + 3 STR - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_dex"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="240000"/>
+	</etcitem>
+	<etcitem id="49940" name="Best Dye of DEX &lt;DEX + 3 CON - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_dex"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="240000"/>
+	</etcitem>
+	<etcitem id="49941" name="Best Dye of INT &lt;INT + 3 MEN - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_int"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="240000"/>
+	</etcitem>
+	<etcitem id="49942" name="Best Dye of INT &lt;INT + 3 WIT - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_int"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="240000"/>
+	</etcitem>
+	<etcitem id="49943" name="Best Dye of MEN &lt;MEN + 3 INT - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_men"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="240000"/>
+	</etcitem>
+	<etcitem id="49944" name="Best Dye of MEN &lt;MEN + 3 WIT - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_men"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="240000"/>
+	</etcitem>
+	<etcitem id="49945" name="Best Dye of WIT &lt;WIT + 3 INT - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_wit"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="240000"/>
+	</etcitem>
+	<etcitem id="49946" name="Best Dye of WIT &lt;WIT + 3 MEN - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_wit"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="240000"/>
+	</etcitem>
+	<etcitem id="49947" name="Best Dye of STR &lt;STR + 3 CON - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_str"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49948" name="Best Dye of STR &lt;STR + 3 DEX - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_str"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49949" name="Best Dye of CON &lt;CON + 3 STR - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_con"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49950" name="Best Dye of CON &lt;CON + 3 DEX - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_con"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49951" name="Best Dye of DEX &lt;DEX + 3 STR - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_dex"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49952" name="Best Dye of DEX &lt;DEX + 3 CON - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_dex"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49953" name="Best Dye of INT &lt;INT + 3 MEN - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_int"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49954" name="Best Dye of INT &lt;INT + 3 WIT - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_int"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49955" name="Best Dye of MEN &lt;MEN + 3 INT - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_men"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49956" name="Best Dye of MEN &lt;MEN + 3 WIT - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_men"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49957" name="Best Dye of WIT &lt;WIT + 3 INT - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_wit"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49958" name="Best Dye of WIT &lt;WIT + 3 MEN - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_wit"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49959" name="Best Dye of STR &lt;STR + 3 CON - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_str"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49960" name="Best Dye of STR &lt;STR + 3 DEX - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_str"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49961" name="Best Dye of CON &lt;CON + 3 STR - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_con"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49962" name="Best Dye of CON &lt;CON + 3 DEX - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_con"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49963" name="Best Dye of DEX &lt;DEX + 3 STR - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_dex"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49964" name="Best Dye of DEX &lt;DEX + 3 CON - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_dex"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49965" name="Best Dye of INT &lt;INT + 3 MEN - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_int"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49966" name="Best Dye of INT &lt;INT + 3 WIT - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_int"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49967" name="Best Dye of MEN &lt;MEN + 3 INT - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_men"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49968" name="Best Dye of MEN &lt;MEN + 3 WIT - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_men"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49969" name="Best Dye of WIT &lt;WIT + 3 INT - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_wit"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49970" name="Best Dye of WIT &lt;WIT + 2 MEN - 1&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv3_1_dye_wit"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49971" name="Best Dye of STR &lt;STR + 4 CON - 4&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_str"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="800000"/>
+	</etcitem>
+	<etcitem id="49972" name="Best Dye of STR &lt;STR + 4 DEX - 4&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_str"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="800000"/>
+	</etcitem>
+	<etcitem id="49973" name="Best Dye of CON &lt;CON + 4 STR - 4&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_con"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="800000"/>
+	</etcitem>
+	<etcitem id="49974" name="Best Dye of CON &lt;CON + 4 DEX - 4&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_con"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="800000"/>
+	</etcitem>
+	<etcitem id="49975" name="Best Dye of DEX &lt;DEX + 4 STR - 4&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_dex"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="800000"/>
+	</etcitem>
+	<etcitem id="49976" name="Best Dye of DEX &lt;DEX + 4 CON - 4&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_dex"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="800000"/>
+	</etcitem>
+	<etcitem id="49977" name="Best Dye of INT &lt;INT + 4 MEN - 4&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_int"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="800000"/>
+	</etcitem>
+	<etcitem id="49978" name="Best Dye of INT &lt;INT + 4 WIT - 4&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_int"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="800000"/>
+	</etcitem>
+	<etcitem id="49979" name="Best Dye of MEN &lt;MEN + 4 INT - 4&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_men"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="800000"/>
+	</etcitem>
+	<etcitem id="49980" name="Best Dye of MEN &lt;MEN + 4 WIT - 4&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_men"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="800000"/>
+	</etcitem>
+	<etcitem id="49981" name="Best Dye of WIT &lt;WIT + 4 INT - 4&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_wit"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="800000"/>
+	</etcitem>
+	<etcitem id="49982" name="Best Dye of WIT &lt;WIT + 4 MEN - 4&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_wit"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+		<set name="price" value="800000"/>
+	</etcitem>
+	<etcitem id="49983" name="Best Dye of STR &lt;STR + 4 CON - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_str"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49984" name="Best Dye of STR &lt;STR + 4 DEX - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_str"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49985" name="Best Dye of CON &lt;CON + 4 STR - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_con"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49986" name="Best Dye of CON &lt;CON + 4 DEX - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_con"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49987" name="Best Dye of DEX &lt;DEX + 4 STR - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_dex"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49988" name="Best Dye of DEX &lt;DEX + 4 CON - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_dex"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49989" name="Best Dye of INT &lt;INT + 4 MEN - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_int"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49990" name="Best Dye of INT &lt;INT + 4 WIT - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_int"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49991" name="Best Dye of MEN &lt;MEN + 4 INT - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_men"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49992" name="Best Dye of MEN &lt;MEN + 4 WIT - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_men"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49993" name="Best Dye of WIT &lt;WIT + 4 INT - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_wit"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49994" name="Best Dye of WIT &lt;WIT + 4 MEN - 3&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_wit"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49995" name="Best Dye of STR &lt;STR + 4 CON - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_str"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49996" name="Best Dye of STR &lt;STR + 4 DEX - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_str"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49997" name="Best Dye of CON &lt;CON + 4 STR - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_con"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49998" name="Best Dye of CON &lt;CON + 4 DEX - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_con"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="49999" name="Best Dye of DEX &lt;DEX + 4 STR - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_dex"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+</list>

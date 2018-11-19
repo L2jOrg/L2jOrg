@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "multisell.dtd">
+<list>
+	<config show_all="true" no_tax="true" keep_enchanted="false" />
+	<item>
+		<production id="1419" count="1"/>
+		<ingredient id="57" count="5000000"/>
+	</item>
+	<item>
+		<production id="3874" count="1"/>
+		<ingredient id="57" count="10000000"/>
+	</item>
+	<item>
+		<production id="3870" count="1"/>
+		<ingredient id="57" count="15000000"/>
+	</item>
+</list>

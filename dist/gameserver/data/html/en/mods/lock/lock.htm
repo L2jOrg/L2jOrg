@@ -1,0 +1,18 @@
+<html><title>Safety system</title><body>
+<font color="00ff66">Possible lock Account:</font><br1>
+- Restricting by IP<font color="LEVEL">(%ip_block%)</font><br1>
+- Restricting by Hwid <font color="LEVEL">(%hwid_block%)</font>
+<br>
+<font color="00ff66">Warning for precaution:</font><br1>
+- IP varies periodically<br1>
+- HWid - is: <font color="LEVEL">%hwid_val%</font><br1>
+- HWid changes during the upgrade PCs
+<br>
+<font color="00ff66">Status of the current session :</font><br1>
+IP address: <font color="LEVEL">%curIP%</font>
+<br>
+<button value="Install a lock by IP" action="bypass -h user_lockIp" width=280 height=22 back="L2UI_CT1.Button_DF" fore="L2UI_CT1.Button_DF"/><br1>
+<button value="Install a lock by Hwid" action="bypass -h user_lockHwid" width=280 height=22 back="L2UI_CT1.Button_DF" fore="L2UI_CT1.Button_DF"/><br1>
+<button value="Remove a lock by IP" action="bypass -h user_unlockIp" width=280 height=22 back="L2UI_CT1.Button_DF" fore="L2UI_CT1.Button_DF"/><br1>
+<button value="Remove a lock by Hwid" action="bypass -h user_unlockHwid" width=280 height=22 back="L2UI_CT1.Button_DF" fore="L2UI_CT1.Button_DF"/><br>
+</body></html>

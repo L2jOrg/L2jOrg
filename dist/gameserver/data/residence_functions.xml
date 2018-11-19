@@ -1,0 +1,299 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "residence_functions.dtd">
+<!--PTS: decodata.txt-->
+<!--AUTHOR: Bonux-->
+<list>
+	<residence_function id="1" name="[fireplace_12]" type="RESTORE_HP" level="1" depth="1" period="1" cost="700">
+		<funcs>
+			<hp_regen value="1.2"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="2" name="[fireplace_14]" type="RESTORE_HP" level="2" depth="1" period="1" cost="800">
+		<funcs>
+			<hp_regen value="1.4"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="3" name="[fireplace_16]" type="RESTORE_HP" level="3" depth="1" period="1" cost="900">
+		<funcs>
+			<hp_regen value="1.6"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="4" name="[fireplace_18]" type="RESTORE_HP" level="4" depth="1" period="1" cost="1000">
+		<funcs>
+			<hp_regen value="1.8"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="5" name="[fireplace_20]" type="RESTORE_HP" level="5" depth="1" period="3" cost="3500">
+		<funcs>
+			<hp_regen value="2.0"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="6" name="[fireplace_22]" type="RESTORE_HP" level="6" depth="1" period="1" cost="1500">
+		<funcs>
+			<hp_regen value="2.2"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="7" name="[fireplace_24]" type="RESTORE_HP" level="7" depth="1" period="1" cost="1750">
+		<funcs>
+			<hp_regen value="2.4"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="8" name="[fireplace_26]" type="RESTORE_HP" level="8" depth="2" period="1" cost="2000">
+		<funcs>
+			<hp_regen value="2.6"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="9" name="[fireplace_28]" type="RESTORE_HP" level="9" depth="1" period="1" cost="2250">
+		<funcs>
+			<hp_regen value="2.8"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="10" name="[fireplace_30]" type="RESTORE_HP" level="10" depth="2" period="3" cost="7500">
+		<funcs>
+			<hp_regen value="3.0"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="11" name="[fireplace_32]" type="RESTORE_HP" level="11" depth="1" period="1" cost="3250">
+		<funcs>
+			<hp_regen value="3.2"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="12" name="[fireplace_34]" type="RESTORE_HP" level="12" depth="2" period="1" cost="3750">
+		<funcs>
+			<hp_regen value="3.4"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="13" name="[fireplace_36]" type="RESTORE_HP" level="13" depth="2" period="1" cost="4250">
+		<funcs>
+			<hp_regen value="3.6"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="14" name="[fireplace_38]" type="RESTORE_HP" level="14" depth="1" period="1" cost="4750">
+		<funcs>
+			<hp_regen value="3.8"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="15" name="[fireplace_40]" type="RESTORE_HP" level="15" depth="2" period="3" cost="15500">
+		<funcs>
+			<hp_regen value="4.0"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="16" name="[fireplace_42]" type="RESTORE_HP" level="16" depth="1" period="1" cost="6250">
+		<funcs>
+			<hp_regen value="4.2"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="17" name="[fireplace_44]" type="RESTORE_HP" level="17" depth="1" period="1" cost="7000">
+		<funcs>
+			<hp_regen value="4.4"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="18" name="[fireplace_46]" type="RESTORE_HP" level="18" depth="1" period="1" cost="7750">
+		<funcs>
+			<hp_regen value="4.6"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="19" name="[fireplace_48]" type="RESTORE_HP" level="19" depth="1" period="1" cost="8500">
+		<funcs>
+			<hp_regen value="4.8"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="20" name="[fireplace_50]" type="RESTORE_HP" level="20" depth="2" period="3" cost="26500">
+		<funcs>
+			<hp_regen value="5.0"/>
+		</funcs>
+	</residence_function>
+
+	<residence_function id="21" name="[rug_105]" type="RESTORE_MP" level="1" depth="1" period="1" cost="2000">
+		<funcs>
+			<mp_regen value="1.05"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="22" name="[rug_110]" type="RESTORE_MP" level="2" depth="1" period="2" cost="7500">
+		<funcs>
+			<mp_regen value="1.10"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="23" name="[rug_115]" type="RESTORE_MP" level="3" depth="1" period="1" cost="6500">
+		<funcs>
+			<mp_regen value="1.15"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="24" name="[rug_120]" type="RESTORE_MP" level="4" depth="2" period="2" cost="17000">
+		<funcs>
+			<mp_regen value="1.20"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="25" name="[rug_125]" type="RESTORE_MP" level="5" depth="2" period="1" cost="12000">
+		<funcs>
+			<mp_regen value="1.25"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="26" name="[rug_130]" type="RESTORE_MP" level="6" depth="2" period="2" cost="27500">
+		<funcs>
+			<mp_regen value="1.30"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="27" name="[rug_135]" type="RESTORE_MP" level="7" depth="1" period="1" cost="18500">
+		<funcs>
+			<mp_regen value="1.35"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="28" name="[rug_140]" type="RESTORE_MP" level="8" depth="2" period="2" cost="40000">
+		<funcs>
+			<mp_regen value="1.40"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="29" name="[rug_145]" type="RESTORE_MP" level="9" depth="1" period="1" cost="26000">
+		<funcs>
+			<mp_regen value="1.45"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="30" name="[rug_150]" type="RESTORE_MP" level="10" depth="2" period="2" cost="55000">
+		<funcs>
+			<mp_regen value="1.50"/>
+		</funcs>
+	</residence_function>
+
+	<residence_function id="31" name="[statue_1]" type="RESTORE_CP" level="1" depth="1" period="1" cost="1000"/>
+	<residence_function id="32" name="[statue_2]" type="RESTORE_CP" level="2" depth="2" period="1" cost="2000"/>
+
+	<residence_function id="33" name="[chandelier_05]" type="RESTORE_EXP" level="1" depth="1" period="1" cost="3000">
+		<funcs>
+			<exp_restore value="0.05"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="34" name="[chandelier_10]" type="RESTORE_EXP" level="2" depth="1" period="1" cost="6000">
+		<funcs>
+			<exp_restore value="0.10"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="35" name="[chandelier_15]" type="RESTORE_EXP" level="3" depth="1" period="1" cost="9000">
+		<funcs>
+			<exp_restore value="0.15"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="36" name="[chandelier_20]" type="RESTORE_EXP" level="4" depth="1" period="3" cost="35000">
+		<funcs>
+			<exp_restore value="0.20"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="37" name="[chandelier_25]" type="RESTORE_EXP" level="5" depth="2" period="1" cost="15000">
+		<funcs>
+			<exp_restore value="0.25"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="38" name="[chandelier_30]" type="RESTORE_EXP" level="6" depth="2" period="1" cost="18000">
+		<funcs>
+			<exp_restore value="0.30"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="39" name="[chandelier_35]" type="RESTORE_EXP" level="7" depth="2" period="1" cost="21000">
+		<funcs>
+			<exp_restore value="0.35"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="40" name="[chandelier_40]" type="RESTORE_EXP" level="8" depth="2" period="3" cost="70000">
+		<funcs>
+			<exp_restore value="0.40"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="41" name="[chandelier_45]" type="RESTORE_EXP" level="9" depth="1" period="1" cost="27000">
+		<funcs>
+			<exp_restore value="0.45"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="42" name="[chandelier_50]" type="RESTORE_EXP" level="10" depth="2" period="1" cost="30000">
+		<funcs>
+			<exp_restore value="0.50"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="43" name="[chandelier_55]" type="RESTORE_EXP" level="11" depth="1" period="1" cost="33000">
+		<funcs>
+			<exp_restore value="0.55"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="44" name="[chandelier_60]" type="RESTORE_EXP" level="12" depth="2" period="3" cost="105000">
+		<funcs>
+			<exp_restore value="0.60"/>
+		</funcs>
+	</residence_function>
+
+	<residence_function id="45" name="[mirror_1]" type="TELEPORT" level="1" depth="1" period="7" cost="7000"/>
+	<residence_function id="46" name="[mirror_2]" type="TELEPORT" level="2" depth="2" period="3" cost="6000"/>
+	<residence_function id="47" name="[mirror_3]" type="TELEPORT" level="3" depth="2" period="2" cost="6000"/>
+	<residence_function id="48" name="[mirror_4]" type="TELEPORT" level="4" depth="2" period="2" cost="8000"/>
+
+	<residence_function id="49" name="[crystal_1]" type="BROADCAST" level="1" depth="1" period="1" cost="30000"/>
+	<residence_function id="50" name="[crystal_2]" type="BROADCAST" level="2" depth="2" period="1" cost="40000"/>
+
+	<residence_function id="51" name="[curtain_1]" type="CURTAIN" level="1" depth="1" period="7" cost="2000"/>
+	<residence_function id="52" name="[curtain_2]" type="CURTAIN" level="2" depth="2" period="7" cost="2500"/>
+
+	<residence_function id="53" name="[hanging_1]" type="HANGING" level="1" depth="1" period="1" cost="30000"/>
+	<residence_function id="54" name="[hanging_2]" type="HANGING" level="2" depth="2" period="1" cost="70000"/>
+
+	<residence_function id="55" name="[bunting_1]" type="SUPPORT" level="1" depth="1" period="1" cost="2500"/>
+	<residence_function id="56" name="[bunting_2]" type="SUPPORT" level="2" depth="2" period="1" cost="5000"/>
+	<residence_function id="57" name="[bunting_3]" type="SUPPORT" level="3" depth="1" period="1" cost="5000"/>
+	<residence_function id="58" name="[bunting_4]" type="SUPPORT" level="4" depth="2" period="1" cost="11000"/>
+	<residence_function id="59" name="[bunting_5]" type="SUPPORT" level="5" depth="2" period="1" cost="21000"/>
+	<residence_function id="60" name="[bunting_6]" type="SUPPORT" level="6" depth="2" period="1" cost="36000"/>
+	<residence_function id="61" name="[bunting_7]" type="SUPPORT" level="7" depth="2" period="1" cost="37000"/>
+	<residence_function id="62" name="[bunting_8]" type="SUPPORT" level="8" depth="2" period="1" cost="52000"/>
+	<residence_function id="63" name="[bunting_9]" type="SUPPORT" level="9" depth="2" period="1" cost="67000"/>
+
+	<residence_function id="64" name="[flag_1]" type="OUTERFLAG" level="1" depth="1" period="1" cost="11000000"/>
+	<residence_function id="65" name="[flag_2]" type="OUTERFLAG" level="2" depth="2" period="1" cost="12000000"/>
+
+	<residence_function id="66" name="[platform_1]" type="PLATFORM" level="1" depth="1" period="3" cost="1300"/>
+	<residence_function id="67" name="[platform_2]" type="PLATFORM" level="2" depth="2" period="3" cost="4000"/>
+
+	<residence_function id="68" name="[machine_1]" type="ITEM_CREATE" level="1" depth="1" period="1" cost="30000"/>
+	<residence_function id="69" name="[machine_2]" type="ITEM_CREATE" level="2" depth="2" period="1" cost="70000"/>
+	<residence_function id="70" name="[machine_3]" type="ITEM_CREATE" level="3" depth="2" period="1" cost="140000"/>
+	<residence_function id="71" name="[steward_item_1]" type="ITEM_CREATE" level="11" depth="1" period="7" cost="70000"/>
+	<residence_function id="72" name="[steward_item_2]" type="ITEM_CREATE" level="12" depth="1" period="7" cost="160000"/>
+	<residence_function id="73" name="[steward_item_3]" type="ITEM_CREATE" level="13" depth="1" period="7" cost="320000"/>
+
+	<residence_function id="74" name="[steward_hpregen_1]" type="RESTORE_HP" level="25" depth="1" period="7" cost="12000">
+		<funcs>
+			<hp_regen value="4.0"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="75" name="[steward_hpregen_2]" type="RESTORE_HP" level="30" depth="1" period="7" cost="20000">
+		<funcs>
+			<hp_regen value="5.0"/>
+		</funcs>
+	</residence_function>
+
+	<residence_function id="76" name="[steward_mpregen_1]" type="RESTORE_MP" level="18" depth="1" period="7" cost="45000">
+		<funcs>
+			<hp_regen value="1.40"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="77" name="[steward_mpregen_2]" type="RESTORE_MP" level="20" depth="1" period="7" cost="65000">
+		<funcs>
+			<hp_regen value="1.50"/>
+		</funcs>
+	</residence_function>
+
+	<residence_function id="78" name="[steward_xpregen_1]" type="RESTORE_EXP" level="19" depth="1" period="7" cost="63000">
+		<funcs>
+			<exp_restore value="0.45"/>
+		</funcs>
+	</residence_function>
+	<residence_function id="79" name="[steward_xpregen_2]" type="RESTORE_EXP" level="20" depth="1" period="7" cost="70000">
+		<funcs>
+			<exp_restore value="0.50"/>
+		</funcs>
+	</residence_function>
+
+	<residence_function id="80" name="[steward_teleport_1]" type="TELEPORT" level="11" depth="1" period="7" cost="1000"/>
+	<residence_function id="81" name="[steward_teleport_2]" type="TELEPORT" level="12" depth="1" period="7" cost="10000"/>
+
+	<residence_function id="82" name="[steward_broadcast_1]" type="BROADCAST" level="11" depth="1" period="7" cost="70000"/>
+
+	<residence_function id="83" name="[steward_buff_1]" type="SUPPORT" level="15" depth="1" period="7" cost="49000"/>
+	<residence_function id="84" name="[steward_buff_2]" type="SUPPORT" level="18" depth="1" period="7" cost="120000"/>
+</list>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="34603" name="Mysterious No-grade Soulshot">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_spirit_bullet_white_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SOULSHOT"/>
+		<skills>
+			<skill id="9293" level="1"/>	<!--Чудесный Заряд Души (Без ранга)-->
+		</skills>
+	</etcitem>
+	<etcitem id="34604" name="Mysterious Soulshot (D-grade)">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_spirit_bullet_blue_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="D"/>
+		<set name="type" value="SOULSHOT"/>
+		<skills>
+			<skill id="9294" level="1"/>	<!--Чудесный Заряд Души - Ранг D-->
+		</skills>
+	</etcitem>
+	<etcitem id="34605" name="Mysterious Soulshot (C-grade)">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_spirit_bullet_green_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="C"/>
+		<set name="type" value="SOULSHOT"/>
+		<skills>
+			<skill id="9295" level="1"/>	<!--Чудесный Заряд Души - Ранг C-->
+		</skills>
+	</etcitem>
+	<etcitem id="34606" name="Mysterious Soulshot (B-grade)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_spirit_bullet_red_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="B"/>
+		<set name="type" value="SOULSHOT"/>
+		<skills>
+			<skill id="9296" level="1"/>	<!--Mysterious Soulshot (B-grade)-->
+		</skills>
+	</etcitem>
+	<etcitem id="34607" name="Mysterious Soulshot (A-grade)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_spirit_bullet_silver_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="A"/>
+		<set name="type" value="SOULSHOT"/>
+		<skills>
+			<skill id="9297" level="1"/>	<!--Mysterious Soulshot (A-grade)-->
+		</skills>
+	</etcitem>
+	<etcitem id="34610" name="Mysterious Blessed No-grade Spiritshot">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_spell_shot_white_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="BLESSED_SPIRITSHOT"/>
+		<skills>
+			<skill id="9300" level="1"/>	<!--Чудесный Благ. Заряд Духа (Без ранга)-->
+		</skills>
+	</etcitem>
+	<etcitem id="34611" name="Mysterious Blessed Spiritshot (D-grade)">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_spell_shot_blue_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="D"/>
+		<set name="type" value="BLESSED_SPIRITSHOT"/>
+		<skills>
+			<skill id="9301" level="1"/>	<!--Чудесный Благ. Заряд Духа - Ранг D-->
+		</skills>
+	</etcitem>
+	<etcitem id="34612" name="Mysterious Blessed Spiritshot (C-grade)">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_spell_shot_green_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="C"/>
+		<set name="type" value="BLESSED_SPIRITSHOT"/>
+		<skills>
+			<skill id="9302" level="1"/>	<!--Чудесный Благ. Заряд Духа - Ранг C-->
+		</skills>
+	</etcitem>
+	<etcitem id="34613" name="Mysterious Blessed Spiritshot (B-grade)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_spell_shot_red_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="B"/>
+		<set name="type" value="BLESSED_SPIRITSHOT"/>
+		<skills>
+			<skill id="8906" level="1"/>	<!--Mysterious Blessed Spiritshot (B-grade)-->
+		</skills>
+	</etcitem>
+	<etcitem id="34614" name="Mysterious Blessed Spiritshot (A-grade)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_spell_shot_silver_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="A"/>
+		<set name="type" value="BLESSED_SPIRITSHOT"/>
+		<skills>
+			<skill id="8907" level="1"/>	<!--Mysterious Blessed Spiritshot (A-grade)-->
+		</skills>
+	</etcitem>
+</list>

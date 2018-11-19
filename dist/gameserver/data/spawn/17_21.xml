@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-68632" y="122850" z="-3552" h="45323" />
+		<npc id="30940" /><!--Амора-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-74495" y="121177" z="-3672" h="42496" />
+		<npc id="30941" /><!--Гудз-->
+	</spawn>
+	<territory name="gludio33_1721_11s">
+		<add x="-67730" y="109552" zmin="-4024" zmax="-3424"/>
+		<add x="-65986" y="110263" zmin="-4024" zmax="-3424"/>
+		<add x="-66441" y="112216" zmin="-4024" zmax="-3424"/>
+		<add x="-68269" y="111984" zmin="-4024" zmax="-3424"/>
+	</territory>
+	<spawn name="gludio33_1721_11s" count="4" respawn="25">
+		<territory name="gludio33_1721_11s"/>
+		<npc id="21097"/><!--Молодой Арахнид-->
+	</spawn>
+	<spawn name="gludio33_1721_11s" count="4" respawn="25">
+		<territory name="gludio33_1721_11s"/>
+		<npc id="21098"/><!--Обыкновенный Гризли-->
+	</spawn>
+	<spawn name="gludio33_1721_10s" count="5" respawn="25">
+		<territory>
+			<add x="-72854" y="101474" zmin="-4024" zmax="-3424"/>
+			<add x="-71697" y="102141" zmin="-4024" zmax="-3424"/>
+			<add x="-72117" y="103293" zmin="-4024" zmax="-3424"/>
+			<add x="-73162" y="103159" zmin="-4024" zmax="-3424"/>
+			<add x="-73532" y="102346" zmin="-4024" zmax="-3424"/>
+		</territory>
+		<npc id="20050"/><!--Ядовитый Шипоног-->
+	</spawn>
+	<territory name="gludio33_1721_05">
+		<add x="-73852" y="112288" zmin="-4020" zmax="-2620"/>
+		<add x="-70528" y="110632" zmin="-4020" zmax="-2620"/>
+		<add x="-69400" y="114092" zmin="-4020" zmax="-2620"/>
+		<add x="-71772" y="115060" zmin="-4020" zmax="-2620"/>
+		<add x="-73884" y="114020" zmin="-4020" zmax="-2620"/>
+	</territory>
+	<spawn name="gludio33_1721_05" count="3" respawn="25">
+		<territory name="gludio33_1721_05"/>
+		<npc id="20050"/><!--Ядовитый Шипоног-->
+	</spawn>
+	<spawn name="gludio33_1721_05" count="5" respawn="25">
+		<territory name="gludio33_1721_05"/>
+		<npc id="21095"/><!--Гигантская Ядовитая Пчела-->
+	</spawn>
+	<spawn name="gludio33_1721_05" count="6" respawn="25">
+		<territory name="gludio33_1721_05"/>
+		<npc id="21096"/><!--Облачный Зверь-->
+	</spawn>
+	<territory name="gludio33_1721_06">
+		<add x="-77061" y="118807" zmin="-4128" zmax="-3028"/>
+		<add x="-73631" y="116615" zmin="-4128" zmax="-3028"/>
+		<add x="-69022" y="115975" zmin="-4128" zmax="-3028"/>
+		<add x="-70114" y="120343" zmin="-4128" zmax="-3028"/>
+		<add x="-74272" y="124076" zmin="-4128" zmax="-3028"/>
+		<add x="-78642" y="121529" zmin="-4128" zmax="-3028"/>
+	</territory>
+	<spawn name="gludio33_1721_06" count="10" respawn="25">
+		<territory name="gludio33_1721_06"/>
+		<npc id="21095"/><!--Гигантская Ядовитая Пчела-->
+	</spawn>
+	<spawn name="gludio33_1721_06" count="10" respawn="25">
+		<territory name="gludio33_1721_06"/>
+		<npc id="21096"/><!--Облачный Зверь-->
+	</spawn>
+	<spawn name="gludio33_1721_06" count="10" respawn="25">
+		<territory name="gludio33_1721_06"/>
+		<npc id="21097"/><!--Молодой Арахнид-->
+	</spawn>
+	<spawn name="gludio33_1721_06" count="10" respawn="25">
+		<territory name="gludio33_1721_06"/>
+		<npc id="21098"/><!--Обыкновенный Гризли-->
+	</spawn>
+	<territory name="gludio33_1721_03">
+		<add x="-76792" y="105240" zmin="-3956" zmax="-2956"/>
+		<add x="-68400" y="105556" zmin="-3956" zmax="-2956"/>
+		<add x="-70800" y="109640" zmin="-3956" zmax="-2956"/>
+		<add x="-74276" y="108592" zmin="-3956" zmax="-2956"/>
+	</territory>
+	<spawn name="gludio33_1721_03" count="5" respawn="25">
+		<territory name="gludio33_1721_03"/>
+		<npc id="20043"/><!--Арахнид Охотник-->
+	</spawn>
+	<spawn name="gludio33_1721_03" count="6" respawn="25">
+		<territory name="gludio33_1721_03"/>
+		<npc id="20050"/><!--Ядовитый Шипоног-->
+	</spawn>
+	<spawn name="gludio33_1721_03" count="5" respawn="25">
+		<territory name="gludio33_1721_03"/>
+		<npc id="21095"/><!--Гигантская Ядовитая Пчела-->
+	</spawn>
+	<territory name="gludio33_1721_04">
+		<add x="-68316" y="105524" zmin="-3948" zmax="-3148"/>
+		<add x="-65792" y="105728" zmin="-3948" zmax="-3148"/>
+		<add x="-65752" y="112148" zmin="-3948" zmax="-3148"/>
+		<add x="-69168" y="114312" zmin="-3948" zmax="-3148"/>
+		<add x="-70752" y="109616" zmin="-3948" zmax="-3148"/>
+	</territory>
+	<spawn name="gludio33_1721_04" count="8" respawn="25">
+		<territory name="gludio33_1721_04"/>
+		<npc id="20014"/><!--Воин Ящеров Фелим-->
+	</spawn>
+	<spawn name="gludio33_1721_04" count="8" respawn="25">
+		<territory name="gludio33_1721_04"/>
+		<npc id="20358"/><!--Охотник Крысолюдов-->
+	</spawn>
+	<spawn name="gludio33_1721_04" count="7" respawn="25">
+		<territory name="gludio33_1721_04"/>
+		<npc id="20043"/><!--Арахнид Охотник-->
+	</spawn>
+	<territory name="gludio33_1721_07">
+		<add x="-76699" y="122807" zmin="-4276" zmax="-3376"/>
+		<add x="-74416" y="124192" zmin="-4276" zmax="-3376"/>
+		<add x="-74392" y="128564" zmin="-4276" zmax="-3376"/>
+		<add x="-78265" y="127654" zmin="-4276" zmax="-3376"/>
+		<add x="-79970" y="124281" zmin="-4276" zmax="-3376"/>
+	</territory>
+	<spawn name="gludio33_1721_07" count="5" respawn="25">
+		<territory name="gludio33_1721_07"/>
+		<npc id="21096"/><!--Облачный Зверь-->
+	</spawn>
+	<spawn name="gludio33_1721_07" count="6" respawn="25">
+		<territory name="gludio33_1721_07"/>
+		<npc id="21097"/><!--Молодой Арахнид-->
+	</spawn>
+	<spawn name="gludio33_1721_07" count="4" respawn="25">
+		<territory name="gludio33_1721_07"/>
+		<npc id="21098"/><!--Обыкновенный Гризли-->
+	</spawn>
+	<spawn name="gludio33_1721_07" count="3" respawn="25">
+		<territory name="gludio33_1721_07"/>
+		<npc id="21099"/><!--Облачный Зверь Турен-->
+	</spawn>
+	<territory name="gludio33_1721_08">
+		<add x="-83507" y="125491" zmin="-3752" zmax="-2952"/>
+		<add x="-80037" y="124317" zmin="-3752" zmax="-2952"/>
+		<add x="-78361" y="127709" zmin="-3752" zmax="-2952"/>
+		<add x="-79256" y="129085" zmin="-3752" zmax="-2952"/>
+		<add x="-82268" y="130460" zmin="-3752" zmax="-2952"/>
+		<add x="-84110" y="127369" zmin="-3752" zmax="-2952"/>
+	</territory>
+	<spawn name="gludio33_1721_08" count="3" respawn="25">
+		<territory name="gludio33_1721_08"/>
+		<npc id="21097"/><!--Молодой Арахнид-->
+	</spawn>
+	<spawn name="gludio33_1721_08" count="7" respawn="25">
+		<territory name="gludio33_1721_08"/>
+		<npc id="21098"/><!--Обыкновенный Гризли-->
+	</spawn>
+	<spawn name="gludio33_1721_08" count="10" respawn="25">
+		<territory name="gludio33_1721_08"/>
+		<npc id="21099"/><!--Облачный Зверь Турен-->
+	</spawn>
+	<territory name="gludio33_1721_01">
+		<add x="-76816" y="105113" zmin="-3996" zmax="-2996"/>
+		<add x="-78950" y="102239" zmin="-3996" zmax="-2996"/>
+		<add x="-71254" y="100706" zmin="-3996" zmax="-2996"/>
+		<add x="-68344" y="105376" zmin="-3996" zmax="-2996"/>
+	</territory>
+	<spawn name="gludio33_1721_01" count="13" respawn="25">
+		<territory name="gludio33_1721_01"/>
+		<npc id="20358"/><!--Охотник Крысолюдов-->
+	</spawn>
+	<spawn name="gludio33_1721_01" count="7" respawn="25">
+		<territory name="gludio33_1721_01"/>
+		<npc id="20043"/><!--Арахнид Охотник-->
+	</spawn>
+	<spawn name="gludio33_1721_01" count="5" respawn="25">
+		<territory name="gludio33_1721_01"/>
+		<npc id="20050"/><!--Ядовитый Шипоног-->
+	</spawn>
+	<territory name="gludio33_1721_02">
+		<add x="-71100" y="100740" zmin="-4000" zmax="-3200"/>
+		<add x="-65780" y="99760" zmin="-4000" zmax="-3200"/>
+		<add x="-65748" y="105540" zmin="-4000" zmax="-3200"/>
+		<add x="-68252" y="105280" zmin="-4000" zmax="-3200"/>
+	</territory>
+	<spawn name="gludio33_1721_02" count="4" respawn="25">
+		<territory name="gludio33_1721_02"/>
+		<npc id="20010"/><!--Разведчик Ящеров Фелим-->
+	</spawn>
+	<spawn name="gludio33_1721_02" count="5" respawn="25">
+		<territory name="gludio33_1721_02"/>
+		<npc id="20012"/><!--Белый Оборотень-->
+	</spawn>
+	<spawn name="gludio33_1721_02" count="6" respawn="25">
+		<territory name="gludio33_1721_02"/>
+		<npc id="20335"/><!--Гризли-->
+	</spawn>
+	<spawn name="gludio33_1721_02" count="5" respawn="25">
+		<territory name="gludio33_1721_02"/>
+		<npc id="20038"/><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<spawn name="gludio15_npc1721_004" count="1" respawn="60">
+		<point x="-85700" y="106591" z="-3555" h="16384"/>
+		<npc id="30597"/><!--Пиотур-->
+	</spawn>
+	<spawn name="gludio15_npc1721_003" count="1" respawn="60">
+		<point x="-94368" y="110848" z="-3703" h="0"/>
+		<npc id="30617"/><!--Бурай-->
+	</spawn>
+	<spawn name="gludio15_npc1721_002" count="1" respawn="60">
+		<point x="-85002" y="105749" z="-3593" h="20480"/>
+		<npc id="30648"/><!--Сантьяго-->
+	</spawn>
+	<spawn name="gludio15_npc1721_001" count="1" respawn="60">
+		<point x="-97611" y="106574" z="-3388" h="0"/>
+		<npc id="30674"/><!--Дорин Молотобоец-->
+	</spawn>
+	<territory name="gludio15_1721_28s">
+		<add x="-97303" y="110259" zmin="-3712" zmax="-3312"/>
+		<add x="-96745" y="110429" zmin="-3712" zmax="-3312"/>
+		<add x="-96816" y="110831" zmin="-3712" zmax="-3312"/>
+		<add x="-97394" y="111039" zmin="-3712" zmax="-3312"/>
+		<add x="-97576" y="110561" zmin="-3712" zmax="-3312"/>
+	</territory>
+	<spawn name="gludio15_1721_28s" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_28s"/>
+		<npc id="20501"/><!--Провидец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_28s" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_28s"/>
+		<npc id="20495"/><!--Владыка Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_28s" count="1" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_28s"/>
+		<npc id="20546"/><!--Тетрарх Орк Турек-->
+	</spawn>
+	<territory name="gludio15_1721_27s">
+		<add x="-93798" y="107508" zmin="-4016" zmax="-3716"/>
+		<add x="-93041" y="107627" zmin="-4016" zmax="-3716"/>
+		<add x="-93046" y="108165" zmin="-4016" zmax="-3716"/>
+		<add x="-93405" y="108426" zmin="-4016" zmax="-3716"/>
+		<add x="-93901" y="108202" zmin="-4016" zmax="-3716"/>
+	</territory>
+	<spawn name="gludio15_1721_27s" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_27s"/>
+		<npc id="20501"/><!--Провидец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_27s" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_27s"/>
+		<npc id="20495"/><!--Владыка Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_27s" count="1" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_27s"/>
+		<npc id="20546"/><!--Тетрарх Орк Турек-->
+	</spawn>
+	<territory name="gludio15_1721_29s">
+		<add x="-91560" y="109640" zmin="-3716" zmax="-3216"/>
+		<add x="-91120" y="109892" zmin="-3716" zmax="-3216"/>
+		<add x="-91264" y="110508" zmin="-3716" zmax="-3216"/>
+		<add x="-91792" y="110424" zmin="-3716" zmax="-3216"/>
+		<add x="-91888" y="109888" zmin="-3716" zmax="-3216"/>
+	</territory>
+	<spawn name="gludio15_1721_29s" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_29s"/>
+		<npc id="20501"/><!--Провидец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_29s" count="1" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_29s"/>
+		<npc id="20495"/><!--Владыка Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_29s" count="1" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_29s"/>
+		<npc id="20546"/><!--Тетрарх Орк Турек-->
+	</spawn>
+	<territory name="gludio15_1721_24s">
+		<add x="-88803" y="102890" zmin="-3628" zmax="-3128"/>
+		<add x="-88175" y="102599" zmin="-3628" zmax="-3128"/>
+		<add x="-87878" y="102983" zmin="-3628" zmax="-3128"/>
+		<add x="-87976" y="103336" zmin="-3628" zmax="-3128"/>
+		<add x="-88316" y="103501" zmin="-3628" zmax="-3128"/>
+		<add x="-88680" y="103308" zmin="-3628" zmax="-3128"/>
+	</territory>
+	<spawn name="gludio15_1721_24s" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_24s"/>
+		<npc id="20497"/><!--Бандит Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_24s" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_24s"/>
+		<npc id="20501"/><!--Провидец Орков Турек-->
+	</spawn>
+	<territory name="gludio15_1721_23s">
+		<add x="-90379" y="99890" zmin="-3728" zmax="-3228"/>
+		<add x="-90090" y="100200" zmin="-3728" zmax="-3228"/>
+		<add x="-90159" y="100585" zmin="-3728" zmax="-3228"/>
+		<add x="-90697" y="100722" zmin="-3728" zmax="-3228"/>
+		<add x="-90933" y="100205" zmin="-3728" zmax="-3228"/>
+	</territory>
+	<spawn name="gludio15_1721_23s" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_23s"/>
+		<npc id="20497"/><!--Бандит Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_23s" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_23s"/>
+		<npc id="20501"/><!--Провидец Орков Турек-->
+	</spawn>
+	<territory name="gludio15_1721_26s">
+		<add x="-94151" y="106168" zmin="-3844" zmax="-3544"/>
+		<add x="-93299" y="105623" zmin="-3844" zmax="-3544"/>
+		<add x="-92826" y="106323" zmin="-3844" zmax="-3544"/>
+		<add x="-93646" y="106877" zmin="-3844" zmax="-3544"/>
+	</territory>
+	<spawn name="gludio15_1721_26s" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_26s"/>
+		<npc id="20501"/><!--Провидец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_26s" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_26s"/>
+		<npc id="20495"/><!--Владыка Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_26s" count="1" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_26s"/>
+		<npc id="20546"/><!--Тетрарх Орк Турек-->
+	</spawn>
+	<territory name="gludio15_1721_25s">
+		<add x="-97492" y="106352" zmin="-3512" zmax="-3012"/>
+		<add x="-97028" y="106404" zmin="-3512" zmax="-3012"/>
+		<add x="-96868" y="106828" zmin="-3512" zmax="-3012"/>
+		<add x="-97076" y="107172" zmin="-3512" zmax="-3012"/>
+		<add x="-97459" y="107140" zmin="-3512" zmax="-3012"/>
+		<add x="-97663" y="106816" zmin="-3512" zmax="-3012"/>
+	</territory>
+	<spawn name="gludio15_1721_25s" count="1" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_25s"/>
+		<npc id="20501"/><!--Провидец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_25s" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_25s"/>
+		<npc id="20495"/><!--Владыка Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_25s" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_25s"/>
+		<npc id="20546"/><!--Тетрарх Орк Турек-->
+	</spawn>
+	<territory name="gludio15_1721_21s">
+		<add x="-95382" y="101898" zmin="-3720" zmax="-3120"/>
+		<add x="-94802" y="101966" zmin="-3720" zmax="-3120"/>
+		<add x="-94767" y="102625" zmin="-3720" zmax="-3120"/>
+		<add x="-95160" y="102693" zmin="-3720" zmax="-3120"/>
+		<add x="-95595" y="102504" zmin="-3720" zmax="-3120"/>
+	</territory>
+	<spawn name="gludio15_1721_21s" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_21s"/>
+		<npc id="20501"/><!--Провидец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_21s" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_21s"/>
+		<npc id="20495"/><!--Владыка Орков Турек-->
+	</spawn>
+	<territory name="gludio15_1721_36s">
+		<add x="-91648" y="113612" zmin="-3644" zmax="-3144"/>
+		<add x="-90332" y="113584" zmin="-3644" zmax="-3144"/>
+		<add x="-90288" y="116760" zmin="-3644" zmax="-3144"/>
+		<add x="-91668" y="116732" zmin="-3644" zmax="-3144"/>
+	</territory>
+	<spawn name="gludio15_1721_36s" count="4" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_36s"/>
+		<npc id="20501"/><!--Провидец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_36s" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_36s"/>
+		<npc id="20495"/><!--Владыка Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_36s" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_36s"/>
+		<npc id="20546"/><!--Тетрарх Орк Турек-->
+	</spawn>
+	<territory name="gludio15_1721_35s">
+		<add x="-92359" y="119084" zmin="-3584" zmax="-3084"/>
+		<add x="-91724" y="118862" zmin="-3584" zmax="-3084"/>
+		<add x="-91605" y="119607" zmin="-3584" zmax="-3084"/>
+		<add x="-92284" y="119789" zmin="-3584" zmax="-3084"/>
+	</territory>
+	<spawn name="gludio15_1721_35s" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_35s"/>
+		<npc id="20501"/><!--Провидец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_35s" count="1" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_35s"/>
+		<npc id="20495"/><!--Владыка Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_35s" count="1" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_35s"/>
+		<npc id="20546"/><!--Тетрарх Орк Турек-->
+	</spawn>
+	<territory name="gludio15_1721_32s">
+		<add x="-97396" y="114024" zmin="-3712" zmax="-3212"/>
+		<add x="-96644" y="113988" zmin="-3712" zmax="-3212"/>
+		<add x="-96588" y="114708" zmin="-3712" zmax="-3212"/>
+		<add x="-97496" y="114600" zmin="-3712" zmax="-3212"/>
+	</territory>
+	<spawn name="gludio15_1721_32s" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_32s"/>
+		<npc id="20501"/><!--Провидец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_32s" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_32s"/>
+		<npc id="20495"/><!--Владыка Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_32s" count="1" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_32s"/>
+		<npc id="20546"/><!--Тетрарх Орк Турек-->
+	</spawn>
+	<territory name="gludio15_1721_31s">
+		<add x="-93687" y="111529" zmin="-3808" zmax="-3408"/>
+		<add x="-93143" y="111844" zmin="-3808" zmax="-3408"/>
+		<add x="-93012" y="112700" zmin="-3808" zmax="-3408"/>
+		<add x="-93891" y="113293" zmin="-3808" zmax="-3408"/>
+		<add x="-94746" y="112718" zmin="-3808" zmax="-3408"/>
+		<add x="-94560" y="111746" zmin="-3808" zmax="-3408"/>
+	</territory>
+	<spawn name="gludio15_1721_31s" count="4" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_31s"/>
+		<npc id="20501"/><!--Провидец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_31s" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_31s"/>
+		<npc id="20495"/><!--Владыка Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_31s" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_31s"/>
+		<npc id="20546"/><!--Тетрарх Орк Турек-->
+	</spawn>
+	<territory name="gludio15_1721_34s">
+		<add x="-94171" y="117321" zmin="-3716" zmax="-3216"/>
+		<add x="-93541" y="117368" zmin="-3716" zmax="-3216"/>
+		<add x="-93455" y="117896" zmin="-3716" zmax="-3216"/>
+		<add x="-94029" y="118121" zmin="-3716" zmax="-3216"/>
+		<add x="-94348" y="117765" zmin="-3716" zmax="-3216"/>
+	</territory>
+	<spawn name="gludio15_1721_34s" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_34s"/>
+		<npc id="20501"/><!--Провидец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_34s" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_34s"/>
+		<npc id="20495"/><!--Владыка Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_34s" count="1" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_34s"/>
+		<npc id="20546"/><!--Тетрарх Орк Турек-->
+	</spawn>
+	<territory name="gludio15_1721_33s">
+		<add x="-97492" y="117748" zmin="-3556" zmax="-3056"/>
+		<add x="-96976" y="117684" zmin="-3556" zmax="-3056"/>
+		<add x="-96840" y="118004" zmin="-3556" zmax="-3056"/>
+		<add x="-97108" y="118284" zmin="-3556" zmax="-3056"/>
+		<add x="-97504" y="118184" zmin="-3556" zmax="-3056"/>
+	</territory>
+	<spawn name="gludio15_1721_33s" count="1" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_33s"/>
+		<npc id="20501"/><!--Провидец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_33s" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_33s"/>
+		<npc id="20495"/><!--Владыка Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_33s" count="1" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_33s"/>
+		<npc id="20546"/><!--Тетрарх Орк Турек-->
+	</spawn>
+	<territory name="gludio15_1721_30s">
+		<add x="-90836" y="111220" zmin="-3576" zmax="-3176"/>
+		<add x="-90252" y="111188" zmin="-3576" zmax="-3176"/>
+		<add x="-90148" y="111808" zmin="-3576" zmax="-3176"/>
+		<add x="-90776" y="111760" zmin="-3576" zmax="-3176"/>
+	</territory>
+	<spawn name="gludio15_1721_30s" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_30s"/>
+		<npc id="20501"/><!--Провидец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_30s" count="1" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_30s"/>
+		<npc id="20495"/><!--Владыка Орков Турек-->
+	</spawn>
+	<spawn name="gludio33_npc1721_005" count="1" respawn="60">
+		<point x="-69734" y="116264" z="-3536" h="16384"/>
+		<npc id="30591"/><!--Торуку-->
+	</spawn>
+	<territory name="gludio15_1721_07">
+		<add x="-95637" y="109483" zmin="-3912" zmax="-3112"/>
+		<add x="-95581" y="107558" zmin="-3912" zmax="-3112"/>
+		<add x="-91717" y="106862" zmin="-3912" zmax="-3112"/>
+		<add x="-91112" y="107928" zmin="-3912" zmax="-3112"/>
+		<add x="-93361" y="109981" zmin="-3912" zmax="-3112"/>
+	</territory>
+	<spawn name="gludio15_1721_07" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_07"/>
+		<npc id="20499"/><!--Пехотинец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_07" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_07"/>
+		<npc id="20496"/><!--Лучник Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_07" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_07"/>
+		<npc id="20498"/><!--Снабженец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_07" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_07"/>
+		<npc id="20497"/><!--Бандит Орков Турек-->
+	</spawn>
+	<territory name="gludio15_1721_08">
+		<add x="-98228" y="108800" zmin="-3676" zmax="-3076"/>
+		<add x="-95895" y="109146" zmin="-3676" zmax="-3076"/>
+		<add x="-95524" y="110170" zmin="-3676" zmax="-3076"/>
+		<add x="-96588" y="112416" zmin="-3676" zmax="-3076"/>
+		<add x="-98224" y="112417" zmin="-3676" zmax="-3076"/>
+	</territory>
+	<spawn name="gludio15_1721_08" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_08"/>
+		<npc id="20499"/><!--Пехотинец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_08" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_08"/>
+		<npc id="20496"/><!--Лучник Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_08" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_08"/>
+		<npc id="20498"/><!--Снабженец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_08" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_08"/>
+		<npc id="20497"/><!--Бандит Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_08" count="1" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_08"/>
+		<npc id="20501"/><!--Провидец Орков Турек-->
+	</spawn>
+	<territory name="gludio15_1721_09">
+		<add x="-98218" y="112506" zmin="-3736" zmax="-2936"/>
+		<add x="-96542" y="112511" zmin="-3736" zmax="-2936"/>
+		<add x="-95144" y="114945" zmin="-3736" zmax="-2936"/>
+		<add x="-97220" y="116900" zmin="-3736" zmax="-2936"/>
+		<add x="-98212" y="116972" zmin="-3736" zmax="-2936"/>
+	</territory>
+	<spawn name="gludio15_1721_09" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_09"/>
+		<npc id="20499"/><!--Пехотинец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_09" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_09"/>
+		<npc id="20496"/><!--Лучник Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_09" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_09"/>
+		<npc id="20498"/><!--Снабженец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_09" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_09"/>
+		<npc id="20497"/><!--Бандит Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_09" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_09"/>
+		<npc id="20501"/><!--Провидец Орков Турек-->
+	</spawn>
+	<territory name="gludio15_1721_10">
+		<add x="-95200" y="110248" zmin="-3916" zmax="-2716"/>
+		<add x="-93384" y="110120" zmin="-3916" zmax="-2716"/>
+		<add x="-91156" y="112612" zmin="-3916" zmax="-2716"/>
+		<add x="-93590" y="114946" zmin="-3916" zmax="-2716"/>
+		<add x="-95066" y="114882" zmin="-3916" zmax="-2716"/>
+		<add x="-96464" y="112391" zmin="-3916" zmax="-2716"/>
+	</territory>
+	<spawn name="gludio15_1721_10" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_10"/>
+		<npc id="20500"/><!--Часовой Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_10" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_10"/>
+		<npc id="20499"/><!--Пехотинец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_10" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_10"/>
+		<npc id="20496"/><!--Лучник Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_10" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_10"/>
+		<npc id="20498"/><!--Снабженец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_10" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_10"/>
+		<npc id="20497"/><!--Бандит Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_10" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_10"/>
+		<npc id="20501"/><!--Провидец Орков Турек-->
+	</spawn>
+	<territory name="gludio15_1721_11">
+		<add x="-90132" y="107440" zmin="-3908" zmax="-2708"/>
+		<add x="-87572" y="110732" zmin="-3908" zmax="-2708"/>
+		<add x="-91108" y="112492" zmin="-3908" zmax="-2708"/>
+		<add x="-93225" y="110080" zmin="-3908" zmax="-2708"/>
+	</territory>
+	<spawn name="gludio15_1721_11" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_11"/>
+		<npc id="20500"/><!--Часовой Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_11" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_11"/>
+		<npc id="20499"/><!--Пехотинец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_11" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_11"/>
+		<npc id="20496"/><!--Лучник Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_11" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_11"/>
+		<npc id="20498"/><!--Снабженец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_11" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_11"/>
+		<npc id="20497"/><!--Бандит Орков Турек-->
+	</spawn>
+	<territory name="gludio15_1721_12">
+		<add x="-98248" y="117028" zmin="-3684" zmax="-2884"/>
+		<add x="-96654" y="117468" zmin="-3684" zmax="-2884"/>
+		<add x="-94744" y="120383" zmin="-3684" zmax="-2884"/>
+		<add x="-96338" y="120746" zmin="-3684" zmax="-2884"/>
+		<add x="-98264" y="119450" zmin="-3684" zmax="-2884"/>
+	</territory>
+	<spawn name="gludio15_1721_12" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_12"/>
+		<npc id="20499"/><!--Пехотинец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_12" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_12"/>
+		<npc id="20496"/><!--Лучник Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_12" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_12"/>
+		<npc id="20498"/><!--Снабженец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_12" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_12"/>
+		<npc id="20497"/><!--Бандит Орков Турек-->
+	</spawn>
+	<territory name="gludio15_1721_13">
+		<add x="-93507" y="115075" zmin="-3676" zmax="-2776"/>
+		<add x="-90746" y="118919" zmin="-3676" zmax="-2776"/>
+		<add x="-92167" y="120462" zmin="-3676" zmax="-2776"/>
+		<add x="-94626" y="120366" zmin="-3676" zmax="-2776"/>
+		<add x="-96153" y="117076" zmin="-3676" zmax="-2776"/>
+		<add x="-95000" y="115033" zmin="-3676" zmax="-2776"/>
+	</territory>
+	<spawn name="gludio15_1721_13" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_13"/>
+		<npc id="20500"/><!--Часовой Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_13" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_13"/>
+		<npc id="20499"/><!--Пехотинец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_13" count="4" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_13"/>
+		<npc id="20496"/><!--Лучник Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_13" count="4" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_13"/>
+		<npc id="20498"/><!--Снабженец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_13" count="4" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_13"/>
+		<npc id="20497"/><!--Бандит Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_13" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_13"/>
+		<npc id="20501"/><!--Провидец Орков Турек-->
+	</spawn>
+	<territory name="gludio15_1721_14">
+		<add x="-93410" y="115021" zmin="-3636" zmax="-2836"/>
+		<add x="-91016" y="112672" zmin="-3636" zmax="-2836"/>
+		<add x="-88716" y="115276" zmin="-3636" zmax="-2836"/>
+		<add x="-88832" y="118440" zmin="-3636" zmax="-2836"/>
+		<add x="-90588" y="118896" zmin="-3636" zmax="-2836"/>
+	</territory>
+	<spawn name="gludio15_1721_14" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_14"/>
+		<npc id="20499"/><!--Пехотинец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_14" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_14"/>
+		<npc id="20496"/><!--Лучник Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_14" count="4" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_14"/>
+		<npc id="20498"/><!--Снабженец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_14" count="4" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_14"/>
+		<npc id="20497"/><!--Бандит Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_14" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_14"/>
+		<npc id="20501"/><!--Провидец Орков Турек-->
+	</spawn>
+	<territory name="gludio15_1721_15">
+		<add x="-90984" y="112628" zmin="-3600" zmax="-2800"/>
+		<add x="-87988" y="111064" zmin="-3600" zmax="-2800"/>
+		<add x="-86960" y="114732" zmin="-3600" zmax="-2800"/>
+		<add x="-88752" y="115056" zmin="-3600" zmax="-2800"/>
+	</territory>
+	<spawn name="gludio15_1721_15" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_15"/>
+		<npc id="20500"/><!--Часовой Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_15" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_15"/>
+		<npc id="20499"/><!--Пехотинец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_15" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_15"/>
+		<npc id="20496"/><!--Лучник Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_15" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_15"/>
+		<npc id="20498"/><!--Снабженец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_15" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_15"/>
+		<npc id="20497"/><!--Бандит Орков Турек-->
+	</spawn>
+	<territory name="gludio15_1721_01">
+		<add x="-98220" y="100314" zmin="-3664" zmax="-2864"/>
+		<add x="-93925" y="102007" zmin="-3664" zmax="-2864"/>
+		<add x="-95754" y="103735" zmin="-3664" zmax="-2864"/>
+		<add x="-98186" y="102776" zmin="-3664" zmax="-2864"/>
+	</territory>
+	<spawn name="gludio15_1721_01" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_01"/>
+		<npc id="20494"/><!--Гончая Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_01" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_01"/>
+		<npc id="20500"/><!--Часовой Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_01" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_01"/>
+		<npc id="20499"/><!--Пехотинец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_01" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_01"/>
+		<npc id="20496"/><!--Лучник Орков Турек-->
+	</spawn>
+	<territory name="gludio15_1721_02">
+		<add x="-96564" y="98436" zmin="-3740" zmax="-3040"/>
+		<add x="-92323" y="99029" zmin="-3740" zmax="-3040"/>
+		<add x="-91976" y="103016" zmin="-3740" zmax="-3040"/>
+		<add x="-97591" y="99988" zmin="-3740" zmax="-3040"/>
+	</territory>
+	<spawn name="gludio15_1721_02" count="4" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_02"/>
+		<npc id="20494"/><!--Гончая Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_02" count="7" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_02"/>
+		<npc id="20500"/><!--Часовой Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_02" count="6" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_02"/>
+		<npc id="20499"/><!--Пехотинец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_02" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_02"/>
+		<npc id="20496"/><!--Лучник Орков Турек-->
+	</spawn>
+	<territory name="gludio15_1721_03">
+		<add x="-92222" y="99365" zmin="-3716" zmax="-2916"/>
+		<add x="-87934" y="99872" zmin="-3716" zmax="-2916"/>
+		<add x="-87088" y="101108" zmin="-3716" zmax="-2916"/>
+		<add x="-90154" y="103859" zmin="-3716" zmax="-2916"/>
+		<add x="-91868" y="103040" zmin="-3716" zmax="-2916"/>
+	</territory>
+	<spawn name="gludio15_1721_03" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_03"/>
+		<npc id="20494"/><!--Гончая Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_03" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_03"/>
+		<npc id="20500"/><!--Часовой Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_03" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_03"/>
+		<npc id="20499"/><!--Пехотинец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_03" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_03"/>
+		<npc id="20496"/><!--Лучник Орков Турек-->
+	</spawn>
+	<territory name="gludio15_1721_04">
+		<add x="-87013" y="101152" zmin="-3572" zmax="-2972"/>
+		<add x="-86290" y="102891" zmin="-3572" zmax="-2972"/>
+		<add x="-86637" y="104750" zmin="-3572" zmax="-2972"/>
+		<add x="-88038" y="105818" zmin="-3572" zmax="-2972"/>
+		<add x="-89004" y="105604" zmin="-3572" zmax="-2972"/>
+		<add x="-90074" y="103901" zmin="-3572" zmax="-2972"/>
+	</territory>
+	<spawn name="gludio15_1721_04" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_04"/>
+		<npc id="20494"/><!--Гончая Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_04" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_04"/>
+		<npc id="20500"/><!--Часовой Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_04" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_04"/>
+		<npc id="20499"/><!--Пехотинец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_04" count="1" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_04"/>
+		<npc id="20496"/><!--Лучник Орков Турек-->
+	</spawn>
+	<territory name="gludio15_1721_05">
+		<add x="-95250" y="105015" zmin="-3640" zmax="-3140"/>
+		<add x="-95937" y="109031" zmin="-3640" zmax="-3140"/>
+		<add x="-98216" y="108700" zmin="-3640" zmax="-3140"/>
+		<add x="-98128" y="104096" zmin="-3640" zmax="-3140"/>
+	</territory>
+	<spawn name="gludio15_1721_05" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_05"/>
+		<npc id="20496"/><!--Лучник Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_05" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_05"/>
+		<npc id="20498"/><!--Снабженец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_05" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_05"/>
+		<npc id="20497"/><!--Бандит Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_05" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_05"/>
+		<npc id="20501"/><!--Провидец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_05" count="3" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_05"/>
+		<npc id="20495"/><!--Владыка Орков Турек-->
+	</spawn>
+	<territory name="gludio15_1721_06">
+		<add x="-92850" y="104286" zmin="-3908" zmax="-2708"/>
+		<add x="-90889" y="104952" zmin="-3908" zmax="-2708"/>
+		<add x="-91756" y="106782" zmin="-3908" zmax="-2708"/>
+		<add x="-95570" y="107440" zmin="-3908" zmax="-2708"/>
+		<add x="-95130" y="104826" zmin="-3908" zmax="-2708"/>
+	</territory>
+	<spawn name="gludio15_1721_06" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_06"/>
+		<npc id="20500"/><!--Часовой Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_06" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_06"/>
+		<npc id="20499"/><!--Пехотинец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_06" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_06"/>
+		<npc id="20496"/><!--Лучник Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_06" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_06"/>
+		<npc id="20498"/><!--Снабженец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1721_06" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1721_06"/>
+		<npc id="20497"/><!--Бандит Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_mb1721_01" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="-91272" y="116168" zmin="-3508" zmax="-2908"/>
+			<add x="-90752" y="116164" zmin="-3508" zmax="-2908"/>
+			<add x="-90752" y="116508" zmin="-3508" zmax="-2908"/>
+			<add x="-91260" y="116516" zmin="-3508" zmax="-2908"/>
+		</territory>
+		<npc id="25063"/><!--Чертуба Великий Дух-->
+	</spawn>
+	<spawn name="gludio15_mb1721_02" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="-94752" y="100044" zmin="-3612" zmax="-3012"/>
+			<add x="-94228" y="99620" zmin="-3612" zmax="-3012"/>
+			<add x="-93304" y="100356" zmin="-3612" zmax="-3012"/>
+			<add x="-94120" y="100932" zmin="-3612" zmax="-3012"/>
+		</territory>
+		<npc id="25004"/><!--Главарь Наемников Турек-->
+	</spawn>
+	<spawn name="gludio33_1721_09s" count="4" respawn="25">
+		<territory>
+			<add x="-76247" y="119894" zmin="-3824" zmax="-3024"/>
+			<add x="-74327" y="118404" zmin="-3824" zmax="-3024"/>
+			<add x="-72043" y="120734" zmin="-3824" zmax="-3024"/>
+			<add x="-74247" y="122505" zmin="-3824" zmax="-3024"/>
+			<add x="-76289" y="121655" zmin="-3824" zmax="-3024"/>
+		</territory>
+		<npc id="21095"/><!--Гигантская Ядовитая Пчела-->
+	</spawn>
+</list>

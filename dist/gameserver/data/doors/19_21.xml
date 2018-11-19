@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="19210001" name="gludio_castle_outter_001" hp="949500" pdef="644" mdef="518">
+		<pos x="-18481" y="113065" z="-2476"/>
+		<shape ax="-18481" ay="113059" bx="-18351" by="113059" cx="-18351" cy="113071" dx="-18481" dy="113071" minz="-2799" maxz="-2479"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="19210002" name="gludio_castle_outter_002" hp="949500" pdef="644" mdef="518">
+		<pos x="-18219" y="113065" z="-2476"/>
+		<shape ax="-18350" ay="113059" bx="-18219" by="113059" cx="-18219" cy="113071" dx="-18350" dy="113071" minz="-2799" maxz="-2479"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="19210003" name="gludio_castle_wall_001" hp="2036520" pdef="837" mdef="674" type="WALL">
+		<pos x="-19912" y="111381" z="-2688"/>
+		<shape ax="-19975" ay="111082" bx="-19849" by="111082" cx="-19848" cy="111680" dx="-19975" dy="111680" minz="-2922" maxz="-2462"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="19210004" name="gludio_castle_wall_002" hp="2036520" pdef="837" mdef="674" type="WALL">
+		<pos x="-16586" y="111382" z="-2688"/>
+		<shape ax="-16649" ay="111083" bx="-16522" by="111083" cx="-16522" cy="111681" dx="-16649" dy="111681" minz="-2922" maxz="-2462"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="19210005" name="gludio_castle_inner_001" hp="474750" pdef="644" mdef="518">
+		<pos x="-18244" y="110520" z="-2289"/>
+		<shape ax="-18244" ay="110514" bx="-18114" by="110514" cx="-18114" cy="110526" dx="-18244" dy="110526" minz="-2547" maxz="-2292"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="19210006" name="gludio_castle_inner_002" hp="474750" pdef="644" mdef="518">
+		<pos x="-17981" y="110520" z="-2289"/>
+		<shape ax="-18112" ay="110514" bx="-17981" by="110514" cx="-17981" cy="110526" dx="-18112" dy="110526" minz="-2547" maxz="-2292"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="19210007" name="gludio_castle_small_002" hp="474750" pdef="644" mdef="518">
+		<pos x="-19235" y="108276" z="-2289"/>
+		<shape ax="-19332" ay="108276" bx="-19332" by="108276" cx="-19235" cy="108276" dx="-19235" dy="108276" minz="-2408" maxz="-2280"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="19210008" name="gludio_castle_station" hp="474750" pdef="644" mdef="518">
+		<pos x="-18997" y="108062" z="-1817"/>
+		<shape ax="-19003" ay="108057" bx="-18991" by="108057" cx="-18991" cy="108207" dx="-19003" dy="108207" minz="-2069" maxz="-1819"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="19210009" name="gludio_castle_small_001" hp="474750" pdef="644" mdef="518">
+		<pos x="-17939" y="107109" z="-2289"/>
+		<shape ax="-17939" ay="107011" bx="-17939" by="107011" cx="-17939" cy="107109" dx="-17939" dy="107109" minz="-2408" maxz="-2280"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="19210011" name="gludio_castle_agit_002_001" hp="158250" pdef="644" mdef="518">
+		<pos x="-14790" y="125632" z="-3123"/>
+		<shape ax="-14791" ay="125632" bx="-14791" by="125595" cx="-14789" cy="125595" dx="-14789" dy="125632" minz="-3158" maxz="-2708"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="23"/>
+		</ai_params>
+	</door>
+	<door id="19210012" name="gludio_castle_agit_002_002" hp="158250" pdef="644" mdef="518">
+		<pos x="-14790" y="125557" z="-3123"/>
+		<shape ax="-14789" ay="125557" bx="-14789" by="125594" cx="-14791" cy="125594" dx="-14791" dy="125557" minz="-3158" maxz="-2708"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="23"/>
+		</ai_params>
+	</door>
+	<door id="19210013" name="gludio_castle_agit_003_001" hp="158250" pdef="644" mdef="518">
+		<pos x="-14116" y="125602" z="-3122"/>
+		<shape ax="-14115" ay="125602" bx="-14115" by="125639" cx="-14117" cy="125639" dx="-14117" dy="125602" minz="-3157" maxz="-2707"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="24"/>
+		</ai_params>
+	</door>
+	<door id="19210014" name="gludio_castle_agit_003_002" hp="158250" pdef="644" mdef="518">
+		<pos x="-14116" y="125677" z="-3122"/>
+		<shape ax="-14117" ay="125677" bx="-14117" by="125640" cx="-14115" cy="125640" dx="-14115" dy="125677" minz="-3157" maxz="-2707"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="24"/>
+		</ai_params>
+	</door>
+	<door id="19210015" name="gludio_castle_agit_004_001" hp="158250" pdef="644" mdef="518">
+		<pos x="-12600" y="123885" z="-3096"/>
+		<shape ax="-12600" ay="123886" bx="-12637" by="123886" cx="-12637" cy="123884" dx="-12600" dy="123884" minz="-3131" maxz="-2681"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="25"/>
+		</ai_params>
+	</door>
+	<door id="19210016" name="gludio_castle_agit_004_002" hp="158250" pdef="644" mdef="518">
+		<pos x="-12676" y="123885" z="-3096"/>
+		<shape ax="-12676" ay="123884" bx="-12639" by="123884" cx="-12639" cy="123886" dx="-12676" dy="123886" minz="-3131" maxz="-2681"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="25"/>
+		</ai_params>
+	</door>
+	<door id="19210017" name="gludio_castle_agit_001_001" hp="158250" pdef="644" mdef="518">
+		<pos x="-15981" y="123746" z="-3096"/>
+		<shape ax="-15981" ay="123746" bx="-15946" by="123734" cx="-15945" cy="123737" dx="-15981" dy="123747" minz="-3131" maxz="-2681"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="22"/>
+		</ai_params>
+	</door>
+	<door id="19210018" name="gludio_castle_agit_001_002" hp="158250" pdef="644" mdef="518">
+		<pos x="-15909" y="123724" z="-3096"/>
+		<shape ax="-15909" ay="123725" bx="-15944" by="123736" cx="-15945" cy="123733" dx="-15909" dy="123723" minz="-3131" maxz="-2681"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="22"/>
+		</ai_params>
+	</door>
+	<door id="19210111" name="Door_Set_S.Human_Door_Set.H_Door_OP_01" hp="158250" pdef="644" mdef="518">
+		<pos x="-28355" y="121789" z="-3699"/>
+		<shape ax="-28356" ay="121789" bx="-28357" by="121751" cx="-28354" cy="121751" dx="-28354" dy="121789" minz="-3834" maxz="-3334"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="66"/>
+		</ai_params>
+	</door>
+	<door id="19210112" name="Door_Set_S.Human_Door_Set.H_Door_OP_01" hp="158250" pdef="644" mdef="518">
+		<pos x="-28355" y="121713" z="-3699"/>
+		<shape ax="-28353" ay="121713" bx="-28354" by="121751" cx="-28357" cy="121751" dx="-28356" dy="121713" minz="-3834" maxz="-3334"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="66"/>
+		</ai_params>
+	</door>
+	<door id="19210113" name="Door_Set_S.Human_Door_Set.H_Door_OP_01" hp="158250" pdef="644" mdef="518">
+		<pos x="-27852" y="121073" z="-3702"/>
+		<shape ax="-27852" ay="121071" bx="-27813" by="121071" cx="-27813" cy="121075" dx="-27852" dy="121075" minz="-3737" maxz="-3237"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="67"/>
+		</ai_params>
+	</door>
+	<door id="19210114" name="Door_Set_S.Human_Door_Set.H_Door_OP_01" hp="158250" pdef="644" mdef="518">
+		<pos x="-27777" y="121073" z="-3702"/>
+		<shape ax="-27776" ay="121075" bx="-27815" by="121075" cx="-27815" cy="121071" dx="-27776" dy="121071" minz="-3737" maxz="-3237"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="67"/>
+		</ai_params>
+	</door>
+	<door id="19210115" name="Door_Set_S.Human_Door_Set.H_Door_OP_01" hp="158250" pdef="644" mdef="518">
+		<pos x="-27620" y="121621" z="-3699"/>
+		<shape ax="-27617" ay="121620" bx="-27617" by="121662" cx="-27624" cy="121662" dx="-27622" dy="121620" minz="-3734" maxz="-3234"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="68"/>
+		</ai_params>
+	</door>
+	<door id="19210116" name="Door_Set_S.Human_Door_Set.H_Door_OP_01" hp="158250" pdef="644" mdef="518">
+		<pos x="-27620" y="121697" z="-3699"/>
+		<shape ax="-27622" ay="121697" bx="-27624" by="121656" cx="-27617" cy="121656" dx="-27617" dy="121697" minz="-3734" maxz="-3234"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="68"/>
+		</ai_params>
+	</door>
+	<door id="19210117" name="Door_Set_S.Human_Door_Set.H_Door_OP_01" hp="158250" pdef="644" mdef="518">
+		<pos x="-27578" y="122522" z="-3701"/>
+		<shape ax="-27577" ay="122522" bx="-27577" by="122560" cx="-27579" cy="122560" dx="-27579" dy="122522" minz="-3836" maxz="-3336"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="65"/>
+		</ai_params>
+	</door>
+	<door id="19210118" name="Door_Set_S.Human_Door_Set.H_Door_OP_01" hp="158250" pdef="644" mdef="518">
+		<pos x="-27578" y="122597" z="-3701"/>
+		<shape ax="-27579" ay="122598" bx="-27579" by="122560" cx="-27577" cy="122560" dx="-27577" dy="122598" minz="-3836" maxz="-3336"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="65"/>
+		</ai_params>
+	</door>
+</list>

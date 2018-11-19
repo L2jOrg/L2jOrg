@@ -1,0 +1,42 @@
+<html><body><br>
+The minimum bid for this clan hall is <font color="aaccff">%min_bid%</font> Adena, and the last bid was <font color="aaccff">%last_bid%</font> Adena.<br>
+All bids are subject to a non-refundable <font color="LEVEL">10% transaction tax</font>, which will be automatically deducted from the bid.
+<br>Would you like to set a minimum bid?
+<table width=270 border=0>
+	<tr>
+		<td width=220 align=right>
+			<edit var=minbid width=230 align=right type=number>
+		</td>
+		<td width=40 align=right>Adena</td>
+	</tr>
+</table>
+<br>
+<table width=270 border=0>
+	<tr>
+		<td width=220>How long do you want the auction to run?</td>
+		<td width=40 align=right>
+			<combobox width=40 var=day list="7;3;1">
+		</td>
+		<td width=50 align=right>
+			day(s)
+		</td>
+	</tr>
+</table><br>
+Describe the clan hall:
+<multiedit var="comment" width=270>
+<img src="L2UI.SquareBlank" width=270 height=10>
+<img src="L2UI.SquareWhite" width=270 height=1>
+<img src="L2UI.SquareBlank" width=270 height=5>
+<table width=270 border=0>
+	<tr>
+		<td width=100></td>
+		<td width=80 align=center>
+			<button action="bypass -h npc_%objectId%_register_start" value="Back" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+		</td>
+		<td width=80 align=center>
+			<button action="bypass -h npc_%objectId%_register_next2 $day $minbid $comment" value="Next" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+		</td>
+	</tr>
+</table>
+<br><br>
+</body></html>

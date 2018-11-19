@@ -1,0 +1,11 @@
+<html><head><body>
+Начальник Склада Круп:<br>
+Меня зовут Круп. Я - Начальник Склада Гильдии Железных Врат в Орене. Я занимаюсь делами склада и помогаю Собирателям, которые хотят стать Охотниками за Наградой. О, так Вы тоже пришли, чтобы стать Охотником за Наградой?<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">Узнать о 2-й смене профессии</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Клан</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Альянс</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Обменять Ежедневные Монеты</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Квест</Button>
+</body></html>

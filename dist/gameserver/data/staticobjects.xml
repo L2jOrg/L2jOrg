@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "staticobjects.dtd">
+<list>
+	<!--Create by VISTALL-->
+	<!--thrones-->
+	<staticobject name="gludio_castle_throne" id="19210010" x="-18112" y="108761" z="-2492" stype="1" path="none" map_x="0" map_y="0" spawn="true"/>
+	<staticobject name="dion_castle_throne" id="20220010" x="22073" y="160989" z="-2686" stype="1" path="none" map_x="0" map_y="0" spawn="true"/>
+	<staticobject name="oren_castle_throne" id="22190010" x="83237" y="37192" z="-2286" stype="1" path="none" map_x="0" map_y="0" spawn="true"/>
+	<staticobject name="giran_castle_throne" id="23220010" x="117161" y="145097" z="-2559" stype="1" path="none" map_x="0" map_y="0" spawn="true"/>
+	<staticobject name="aden_castle_throne" id="24180017" x="147456" y="3272" z="-42" stype="1" path="none" map_x="0" map_y="0" spawn="true"/>
+	<!--signboards-->
+	<staticobject name="town_map_talking_1" id="17250001" x="-82873" y="244808" z="-3717" stype="2" path="town_map.town_map_talking_t00" map_x="365" map_y="152" spawn="true"/>
+	<staticobject name="town_map_talking_2" id="17250002" x="-82765" y="241438" z="-3718" stype="2" path="town_map.town_map_talking_t00" map_x="164" map_y="154" spawn="true"/>
+	<staticobject name="town_map_talking_3" id="17250003" x="-86121" y="241452" z="-3719" stype="2" path="town_map.town_map_talking_t00" map_x="146" map_y="358" spawn="true"/>
+	<staticobject name="town_map_elf_1" id="21190001" x="47615" y="51349" z="-2967" stype="2" path="town_map.town_map_elf_t00" map_x="430" map_y="315" spawn="true"/>
+	<staticobject name="town_map_elf_2" id="21190002" x="45914" y="46695" z="-2968" stype="2" path="town_map.town_map_elf_t00" map_x="248" map_y="106" spawn="true"/>
+	<staticobject name="town_map_elf_3" id="21190003" x="43175" y="51424" z="-2967" stype="2" path="town_map.town_map_elf_t00" map_x="110" map_y="346" spawn="true"/>
+	<staticobject name="town_map_darkelf_1" id="20180001" x="15258" y="15630" z="-4366" stype="2" path="town_map.town_map_darkelf_t00" map_x="339" map_y="170" spawn="true"/>
+	<staticobject name="town_map_darkelf_2" id="20180002" x="7556" y="18054" z="-4366" stype="2" path="town_map.town_map_darkelf_t00" map_x="54" map_y="315" spawn="true"/>
+	<staticobject name="town_map_orc_1" id="18140001" x="-45824" y="-116763" z="-219" stype="2" path="town_map.town_map_orc_t00" map_x="165" map_y="386" spawn="true"/>
+	<staticobject name="town_map_orc_2" id="18140002" x="-46504" y="-110394" z="-220" stype="2" path="town_map.town_map_orc_t00" map_x="368" map_y="161" spawn="true"/>
+	<staticobject name="town_map_orc_3" id="18140003" x="-47332" y="-113245" z="-220" stype="2" path="town_map.town_map_orc_t00" map_x="319" map_y="110" spawn="true"/>
+	<staticobject name="town_map_dwarf_1" id="23120001" x="115462" y="-177294" z="-880" stype="2" path="town_map.town_map_dwarf_t00" map_x="168" map_y="386" spawn="true"/>
+	<staticobject name="town_map_dwarf_2" id="23120002" x="117449" y="-182298" z="-1488" stype="2" path="town_map.town_map_dwarf_t00" map_x="368" map_y="161" spawn="true"/>
+	<staticobject name="town_map_dwarf_3" id="23120003" x="116657" y="-183997" z="-1550" stype="2" path="town_map.town_map_dwarf_t00" map_x="319" map_y="110" spawn="true"/>
+	<!--Arenas-->
+	<staticobject name="gludin_arena_001" id="17220015" x="-88697" y="142316" z="-3621" stype="0" path="none" map_x="0" map_y="0" spawn="false"/>
+	<staticobject name="gludin_arena_002" id="17220016" x="-87136" y="142491" z="-3623" stype="0" path="none" map_x="0" map_y="0" spawn="false"/>
+	<staticobject name="giran_arena_001" id="22220001" x="73766" y="142489" z="-3748" stype="0" path="none" map_x="0" map_y="0" spawn="false"/>
+	<staticobject name="giran_arena_002" id="22220002" x="72200" y="143102" z="-3748" stype="0" path="none" map_x="0" map_y="0" spawn="false"/>
+	<staticobject name="floran_arena_001" id="20230001" x="12110" y="182771" z="-3538" stype="0" path="none" map_x="0" map_y="0" spawn="false"/>
+	<staticobject name="floran_arena_002" id="20230002" x="12979" y="183365" z="-3538" stype="0" path="none" map_x="0" map_y="0" spawn="false"/>
+</list>

@@ -1,0 +1,1960 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="4700" levels="13" name="Gift of Queen">
+		<!--
+			Last modify:	07.06.2009
+		-->
+		<table name="#pAtk">1.06 1.08 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10</table>
+		<table name="#effectPoint">541 611 659 666 669 673 676 679 681 684 687 689 692</table>
+		<table name="#abnormal_time">120 120 120 150 165 180 195 210 225 240 255 270 285</table>
+		<table name="#magicLevel">57 66 75 77 78 79 80 81 82 83 84 85 86</table>
+		<table name="#abnormal_level">1 2 3 3 3 3 3 3 3 3 3 3 3</table>
+		<table name="#mp_consume">122 157 194 202 207 212 215 220 224 229 233 237 242</table>
+		<set name="icon" value="icon.skill1331"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="buff_queen_of_cat"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="affect_range" value="1000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pAtk" value="#pAtk"/>
+				<add stat="pAccCombat" value="2"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4701" levels="13" name="Cure of Queen">
+		<table name="#dispel_chance">40 45 50 55 60 65 70 75 80 85 90 95 100</table>
+		<table name="#effectPoint">541 611 659 666 669 673 676 679 681 684 687 689 692</table>
+		<table name="#magicLevel">57 66 75 77 78 79 80 81 82 83 84 85 86</table>
+		<table name="#mp_consume">62 79 98 102 104 107 108 110 113 115 117 119 122</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="affect_range" value="1000"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="i_dispel_by_slot_probability">
+				<def name="abnormal_type" value="attack_time_up"/>
+				<def name="dispel_chance" value="#dispel_chance"/>
+			</effect>
+			<effect name="i_dispel_by_slot_probability">
+				<def name="abnormal_type" value="hit_down"/>
+				<def name="dispel_chance" value="#dispel_chance"/>
+			</effect>
+			<effect name="i_dispel_by_slot_probability">
+				<def name="abnormal_type" value="pa_down"/>
+				<def name="dispel_chance" value="#dispel_chance"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4702" levels="13" name="Blessing of Seraphim">
+		<table name="#effectPoint">541 611 659 666 669 673 676 679 681 684 687 689 692</table>
+		<table name="#regMp">1.30 1.32 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35</table>
+		<table name="#abnormal_time">120 120 120 150 165 180 195 210 225 240 255 270 285</table>
+		<table name="#magicLevel">57 66 75 77 78 79 80 81 82 83 84 85 86</table>
+		<table name="#abnormal_level">1 2 3 3 3 3 3 3 3 3 3 3 3</table>
+		<table name="#mp_consume">122 157 194 202 207 212 215 220 224 229 233 237 242</table>
+		<set name="icon" value="icon.skill1332"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="buff_unicorn_seraphim"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="affect_range" value="1000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="regMp" value="#regMp"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4703" levels="13" name="Gift of Seraphim">
+		<table name="#effectPoint">541 611 659 666 669 673 676 679 681 684 687 689 692</table>
+		<table name="#reuse">0.7 0.68 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65</table>
+		<table name="#abnormal_time">120 120 120 150 165 180 195 210 225 240 255 270 285</table>
+		<table name="#magicLevel">57 66 75 77 78 79 80 81 82 83 84 85 86</table>
+		<table name="#abnormal_level">1 2 3 3 3 3 3 3 3 3 3 3 3</table>
+		<table name="#mp_consume">122 157 194 202 207 212 215 220 224 229 233 237 242</table>
+		<set name="icon" value="icon.skill1332"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="buff_unicorn_seraphim"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="affect_range" value="1000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="mReuse" value="#reuse"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4704" levels="13" name="Cure of Seraphim">
+		<table name="#dispel_chance">40 45 50 55 60 65 70 75 80 85 90 95 100</table>
+		<table name="#effectPoint">541 611 659 666 669 673 676 679 681 684 687 689 692</table>
+		<table name="#magicLevel">57 66 75 77 78 79 80 81 82 83 84 85 86</table>
+		<table name="#mp_consume">62 79 98 102 104 107 108 110 113 115 117 119 122</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="affect_range" value="1000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="i_dispel_by_slot_probability">
+				<def name="abnormal_type" value="sleep"/>
+				<def name="dispel_chance" value="#dispel_chance"/>
+			</effect>
+			<effect name="i_dispel_by_slot_probability">
+				<def name="abnormal_type" value="root_magically"/>
+				<def name="dispel_chance" value="#dispel_chance"/>
+			</effect>
+			<effect name="i_dispel_by_slot_probability">
+				<def name="abnormal_type" value="stun"/>
+				<def name="dispel_chance" value="#dispel_chance"/>
+			</effect>
+			<effect name="i_dispel_by_slot_probability">
+				<def name="abnormal_type" value="paralyze"/>
+				<def name="dispel_chance" value="#dispel_chance"/>
+			</effect>
+			<effect name="i_dispel_by_slot_probability">
+				<def name="abnormal_type" value="silence"/>
+				<def name="dispel_chance" value="#dispel_chance"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4705" levels="13" name="Curse of Shade">
+		<table name="#effectPoint">1621 1831 1975 1997 2007 2017 2026 2035 2043 2051 2059 2066 2074</table>
+		<table name="#tab">0.94 0.92 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9</table>
+		<table name="#activateRate">40 40 40 41 42 43 44 45 46 47 48 49 50</table>
+		<table name="#magicLevel">57 66 75 77 78 79 80 81 82 83 84 85 86</table>
+		<table name="#abnormal_level">1 2 3 3 3 3 3 3 3 3 3 3 3</table>
+		<table name="#mp_consume">53 62 69 70 72 73 73 73 74 74 75 75 75</table>
+		<set name="icon" value="icon.skill1333"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="debuff_nightshade"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isOffensive" value="true"/>
+		<set name="element" value="unholy"/>
+		<set name="elementPower" value="20"/>
+		<for>
+			<effect name="i_target_me" chance="80"/>
+			<effect>
+				<mul stat="mDef" value="#tab"/>
+				<mul stat="pDef" value="#tab"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4706" levels="13" name="Mass Curse of Shade">
+		<table name="#tab">0.94 0.92 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9</table>
+		<table name="#activateRate">40 40 40 41 42 43 44 45 46 47 48 49 50</table>
+		<table name="#effectPoint">1621 1831 1975 1997 2007 2017 2026 2035 2043 2051 2059 2066 2074</table>
+		<table name="#magicLevel">57 66 75 77 78 79 80 81 82 83 84 85 86</table>
+		<table name="#abnormal_level">1 2 3 3 3 3 3 3 3 3 3 3 3</table>
+		<table name="#mp_consume">79 93 104 105 107 108 109 109 110 112 112 113 113</table>
+		<set name="icon" value="icon.skill1333"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="debuff_nightshade"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="affectLimit" value="5;12"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="affect_range" value="200"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="element" value="unholy"/>
+		<set name="elementPower" value="20"/>
+		<for>
+			<effect name="i_target_me" chance="40"/>
+			<effect>
+				<mul stat="mDef" value="#tab"/>
+				<mul stat="pDef" value="#tab"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4707" levels="13" name="Shade Sacrifice">
+		<table name="#effectPoint">588 700 789 804 811 817 823 828 833 838 842 845 848</table>
+		<table name="#power">589 700 789 804 810 816 826 835 844 852 860 867 874</table>
+		<table name="#magicLevel">57 66 75 77 78 79 80 81 82 83 84 85 86</table>
+		<table name="#hpConsume">706 840 946 964 972 979 991 1002 1013 1023 1032 1041 1049</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="2000"/>
+		<set name="hpConsume" value="#hpConsume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect instant="true" name="RestoreHP" value="#power"/>
+		</for>
+	</skill>
+	<skill id="4708" levels="14" name="Cursed Strike">
+		<table name="#effectPoint">279 296 311 323 328 333 337 340 341 342</table>
+		<table name="#power">1046 1230 1425 1626 1727 1827 1925 2020 2067 2112</table>
+		<table name="#magicLevel">58 62 66 70 72 74 76 78 79 80</table>
+		<table name="#mp_consume">58 62 67 71 73 75 77 78 79 80 80 80 80 80</table>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="50"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="4709" levels="14" name="Cursed Blow">
+		<table name="#effectPoint">279 296 311 323 328 333 337 340 341 342</table>
+		<table name="#power">1249 2164 3408 4878 5627 6335 7698 8079 8265 8447</table>
+		<table name="#magicLevel">58 62 66 70 72 74 76 78 79 80</table>
+		<table name="#mp_consume">58 62 67 71 73 75 77 78 79 80 80 80 80 80</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="blow" value="true"/>
+		<set name="onCrit" value="true"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4710" levels="12" name="Wild Stun">
+		<table name="#effectPoint">49 73 102 135 170 202 226 235 240 243 246 248</table>
+		<table name="#power">16 35 73 138 238 375 537 619 697 766 821 864</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mp_consume">3 5 7 9 12 14 17 18 18 19 20 20</table>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="reuseDelay" value="12000"/>
+		<set name="coolTime" value="400"/>
+		<set name="hitTime" value="1100"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="15"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="4711" levels="12" name="Wild Defense">
+		<table name="#effectPoint">138 204 285 379 477 566 635 659 676 689 700 709</table>
+		<table name="#mDef">1350 1575 1800 2025 2250 2475 2700 2925 3150 3375 3600 3825</table>
+		<table name="#pDef">1800 2100 2400 2700 3000 3300 3600 3900 4200 4500 4800 5100</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mp_consume">46 76 104 139 179 220 258 275 288 298 305 309</table>
+		<set name="icon" value="icon.skill0110"/>
+		<set name="reuseDelay" value="1200000"/>
+		<set name="coolTime" value="400"/>
+		<set name="hitTime" value="1100"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="ultimate_buff"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add stat="pDef" value="#pDef"/>
+				<add stat="mDef" value="#mDef"/>
+				<mul stat="runSpd" value="0.1"/>
+				<mul stat="pAtkSpd" value="0.2"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4712" levels="12" name="Bright Burst">
+		<table name="#effectPoint">138 204 285 379 477 566 635 659 676 689 700 709</table>
+		<table name="#power">6 9 13 17 23 28 34 36 39 41 42 43</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mp_consume">6 6 7 7 8 8 9 9 10 10 11 11</table>
+		<set name="icon" value="icon.skill4712"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="1000"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="element" value="fire"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4713" levels="12" name="Bright Heal">
+		<table name="#effectPoint">33 61 98 145 198 251 298 316 330 338 342 341</table>
+		<table name="#power">33 61 98 145 198 251 298 316 330 338 342 341</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mp_consume">5 9 12 15 19 23 27 28 30 30 32 32</table>
+		<set name="icon" value="icon.skill4713"/>
+		<set name="reuseDelay" value="12000"/>
+		<set name="coolTime" value="1000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="1000"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect instant="true" name="RestoreHP" value="#power"/>
+		</for>
+	</skill>
+	<skill id="4714" levels="1" name="Twilight Dragon">
+		<set name="icon" value="icon.skill1373"/>
+		<set name="magicLevel" value="35"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4715" levels="1" name="Wind Dragon">
+		<set name="icon" value="icon.skill1373"/>
+		<set name="magicLevel" value="35"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4716" levels="1" name="Star Dragon">
+		<set name="icon" value="icon.skill1373"/>
+		<set name="magicLevel" value="35"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4717" levels="12" name="Heal Trick">
+		<table name="#power">9 16 25 37 50 63 75 79 83 87 90 92</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mp_consume">5 8 12 17 20 25 29 32 33 33 34 34</table>
+		<set name="icon" value="icon.skill4717"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_OWNER"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect instant="true" name="RestoreHP" value="#power"/>
+		</for>
+	</skill>
+	<skill id="4718" levels="12" name="Greater Heal Trick">
+		<table name="#power">37 64 99 139 171 205 236 266 300 332 355 368</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mp_consume">33 59 88 122 159 195 228 242 252 259 262 262</table>
+		<set name="icon" value="icon.skill4718"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_OWNER"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect instant="true" name="RestoreHP" value="#power"/>
+		</for>
+	</skill>
+	<skill id="4719" levels="12" name="Power Strike">
+		<table name="#power">112 302 834 2177 5631 11008 17044 20119 23243 26363 29567 32796</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4720" levels="12" name="Power Strike">
+		<table name="#power">95 255 705 1840 4754 9291 14390 16978 19710 22699 25871 28860</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4721" levels="12" name="Power Strike">
+		<table name="#power">51 136 375 982 2536 4958 7667 9037 10483 12074 13778 15349</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4722" levels="12" name="Power Strike">
+		<table name="#power">48 128 352 922 2377 4651 7195 8489 9855 11363 12921 14430</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4723" levels="12" name="Power Strike">
+		<table name="#power">45 120 330 858 2218 4344 6724 7942 9228 10625 12093 13512</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4724" levels="12" name="Stun">
+		<table name="#power">56 151 417 1089 2816 5504 8522 10060 11622 13182 14784 16398</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="4725" levels="12" name="Stun">
+		<table name="#power">48 128 352 920 2377 4645 7195 8490 9855 11350 12936 14430</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="4726" levels="12" name="Stun">
+		<table name="#power">26 68 188 491 1268 2479 3834 4519 5242 6037 6889 7675</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="4727" levels="12" name="Stun">
+		<table name="#power">24 64 176 461 1189 2326 3598 4245 4928 5682 6461 7215</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="4728" levels="12" name="Stun">
+		<table name="#power">23 60 165 429 1109 2172 3362 3971 4614 5313 6047 6756</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="4729" levels="12" name="Mortal Blow">
+		<table name="#power">168 453 1251 3265 8446 16511 25566 30178 34864 39544 44350 49193</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="onCrit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="blow" value="true"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4730" levels="12" name="Mortal Blow">
+		<table name="#power">142 382 1056 2760 7131 13935 21585 25467 29565 34048 38806 43290</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="onCrit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="blow" value="true"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4731" levels="12" name="Mortal Blow">
+		<table name="#power">76 204 563 1473 3804 7437 11500 13555 15724 18112 20667 23023</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="onCrit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="blow" value="true"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4732" levels="12" name="Mortal Blow">
+		<table name="#power">71 191 528 1382 3566 6977 10793 12734 14783 17044 19381 21645</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="onCrit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="blow" value="true"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4733" levels="12" name="Mortal Blow">
+		<table name="#power">67 179 494 1287 3327 6516 10085 11913 13841 15937 18140 20268</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="onCrit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="blow" value="true"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4734" levels="12" name="Spinning Slasher">
+		<table name="#power">56 151 417 1089 2816 5504 8522 10060 11622 13182 14784 16398</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="affect_range" value="200"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4735" levels="12" name="Spinning Slasher">
+		<table name="#power">48 128 352 920 2377 4645 7195 8490 9855 11350 12936 14430</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="affect_range" value="200"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4736" levels="12" name="Spinning Slasher">
+		<table name="#power">26 68 188 491 1268 2479 3834 4519 5242 6037 6889 7675</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="affect_range" value="200"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4737" levels="12" name="Spinning Slasher">
+		<table name="#power">24 64 176 461 1189 2326 3598 4245 4928 5682 6461 7215</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="affect_range" value="200"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4738" levels="12" name="Spinning Slasher">
+		<table name="#power">23 60 165 429 1109 2172 3362 3971 4614 5313 6047 6756</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="affect_range" value="200"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4739" levels="12" name="Power Strike">
+		<table name="#power">112 302 834 2177 5631 11008 17044 20119 23243 26363 29567 32796</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4740" levels="12" name="Power Strike">
+		<table name="#power">95 255 705 1840 4754 9291 14390 16978 19710 22699 25871 28860</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4741" levels="12" name="Power Strike">
+		<table name="#power">51 136 375 982 2536 4958 7667 9037 10483 12074 13778 15349</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4742" levels="12" name="Power Strike">
+		<table name="#power">48 128 352 922 2377 4651 7195 8489 9855 11363 12921 14430</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4743" levels="12" name="Power Strike">
+		<table name="#power">45 120 330 858 2218 4344 6724 7942 9228 10625 12093 13512</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4744" levels="12" name="Stun">
+		<table name="#power">56 151 417 1089 2816 5504 8522 10060 11622 13182 14784 16398</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="4745" levels="12" name="Stun">
+		<table name="#power">48 128 352 920 2377 4645 7195 8490 9855 11350 12936 14430</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="4746" levels="12" name="Stun">
+		<table name="#power">26 68 188 491 1268 2479 3834 4519 5242 6037 6889 7675</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="4747" levels="12" name="Stun">
+		<table name="#power">24 64 176 461 1189 2326 3598 4245 4928 5682 6461 7215</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="4748" levels="12" name="Stun">
+		<table name="#power">23 60 165 429 1109 2172 3362 3971 4614 5313 6047 6756</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="4749" levels="12" name="Mortal Blow">
+		<table name="#power">280 755 2084 5441 14076 27518 42610 50296 58107 65907 73917 81989</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="onCrit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="blow" value="true"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4750" levels="12" name="Mortal Blow">
+		<table name="#power">236 637 1761 4600 11884 23226 35974 42445 49275 56746 64677 72150</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="onCrit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="blow" value="true"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4751" levels="12" name="Mortal Blow">
+		<table name="#power">126 339 937 2455 6339 12395 19166 22591 26206 30185 34445 38371</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="onCrit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="blow" value="true"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4752" levels="12" name="Mortal Blow">
+		<table name="#power">118 319 879 2303 5942 11627 17987 21223 24638 28406 32302 36075</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="onCrit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="blow" value="true"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4753" levels="12" name="Mortal Blow">
+		<table name="#power">111 298 824 2145 5545 10860 16808 19855 23069 26561 30232 33780</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="onCrit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="blow" value="true"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4754" levels="12" name="Power Shot">
+		<table name="#power">327 882 2435 6357 16445 32150 49783 58763 67888 77001 86359 95790</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4755" levels="12" name="Power Shot">
+		<table name="#power">275 744 2057 5374 13885 27135 42030 49590 57569 66298 75565 84295</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4756" levels="12" name="Power Shot">
+		<table name="#power">147 396 1095 2868 7407 14481 22392 26393 30618 35267 40244 44830</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4757" levels="12" name="Power Shot">
+		<table name="#power">138 372 1027 2691 6943 13584 21015 24795 28785 33188 37739 42148</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4758" levels="12" name="Power Shot">
+		<table name="#power">129 348 962 2506 6479 12688 19638 23198 26952 31032 35321 39466</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4759" levels="12" name="Stun">
+		<table name="#power">164 441 1218 3179 8223 16075 24892 29382 33944 38501 43180 47895</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="4760" levels="12" name="Stun">
+		<table name="#power">138 372 1029 2687 6943 13568 21015 24795 28795 33149 37783 42148</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="4761" levels="12" name="Stun">
+		<table name="#power">74 198 548 1434 3704 7241 11196 13197 15309 17634 20122 22415</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="4762" levels="12" name="Stun">
+		<table name="#power">69 186 514 1346 3472 6792 10508 12398 14393 16594 18870 21074</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="4763" levels="12" name="Stun">
+		<table name="#power">65 174 481 1253 3240 6344 9819 11599 13476 15516 17661 19733</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="4764" levels="12" name="Power Shot">
+		<table name="#power">327 882 2435 6357 16445 32150 49783 58763 67888 77001 86359 95790</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4765" levels="12" name="Power Shot">
+		<table name="#power">275 744 2057 5374 13885 27135 42030 49590 57569 66298 75565 84295</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4766" levels="12" name="Power Shot">
+		<table name="#power">147 396 1095 2868 7407 14481 22392 26393 30618 35267 40244 44830</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4767" levels="12" name="Power Shot">
+		<table name="#power">138 372 1027 2691 6943 13584 21015 24795 28785 33188 37739 42148</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4768" levels="12" name="Power Shot">
+		<table name="#power">129 348 962 2506 6479 12688 19638 23198 26952 31032 35321 39466</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4769" levels="12" name="Stun">
+		<table name="#power">164 441 1218 3179 8223 16075 24892 29382 33944 38501 43180 47895</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="4770" levels="12" name="Stun">
+		<table name="#power">138 372 1029 2687 6943 13568 21015 24795 28795 33149 37783 42148</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="4771" levels="12" name="Stun">
+		<table name="#power">74 198 548 1434 3704 7241 11196 13197 15309 17634 20122 22415</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="4772" levels="12" name="Stun">
+		<table name="#power">69 186 514 1346 3472 6792 10508 12398 14393 16594 18870 21074</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="4773" levels="12" name="Stun">
+		<table name="#power">65 174 481 1253 3240 6344 9819 11599 13476 15516 17661 19733</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="4774" levels="12" name="Spear Attack">
+		<table name="#power">352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4775" levels="12" name="Spear Attack">
+		<table name="#power">352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4776" levels="12" name="Spear Attack">
+		<table name="#power">352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4777" levels="12" name="Spear Attack">
+		<table name="#power">352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4778" levels="12" name="Spear Attack">
+		<table name="#power">352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4779" levels="12" name="Heal">
+		<table name="#power">1640 2824 4501 6612 9334 11649 12865 13406 13624 13544 13303 13157</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">21 34 50 67 86 104 119 125 129 131 131 132</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="700"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<effect instant="true" name="RestoreHP" value="#power"/>
+		</for>
+	</skill>
+	<skill id="4780" levels="12" name="Heal">
+		<table name="#power">1382 2381 3802 5590 7881 9832 10862 11314 11553 11661 11640 11578</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">21 34 50 67 86 104 119 125 129 131 131 132</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="700"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<effect instant="true" name="RestoreHP" value="#power"/>
+		</for>
+	</skill>
+	<skill id="4781" levels="12" name="Heal">
+		<table name="#power">736 1267 2024 2983 4204 5247 5787 6022 6144 6203 6199 6158</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">21 34 50 67 86 104 119 125 129 131 131 132</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="700"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<effect instant="true" name="RestoreHP" value="#power"/>
+		</for>
+	</skill>
+	<skill id="4782" levels="12" name="Heal">
+		<table name="#power">691 1191 1899 2799 3941 4922 5431 5657 5777 5838 5813 5789</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">21 34 50 67 86 104 119 125 129 131 131 132</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="700"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<effect instant="true" name="RestoreHP" value="#power"/>
+		</for>
+	</skill>
+	<skill id="4783" levels="12" name="Heal">
+		<table name="#power">647 1115 1778 2607 3677 4597 5075 5293 5409 5458 5441 5421</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">21 34 50 67 86 104 119 125 129 131 131 132</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="700"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<effect instant="true" name="RestoreHP" value="#power"/>
+		</for>
+	</skill>
+	<skill id="4784" levels="12" name="Chant of Life">
+		<table name="#RestoreHP">118 202 322 473 667 833 919 958 974 968 951 940</table>
+		<table name="#power">11 12 13 14 15 16 17 17 18 18 19 19</table>
+		<table name="#abnormal_level">11 12 13 14 15 16 17 17 18 18 19 19</table>
+		<table name="#mp_consume">43 69 99 134 173 207 239 250 258 262 262 263</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="700"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="life_force_others"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_CLAN"/>
+		<set name="affect_range" value="1000"/>
+		<set name="skillType" value="HOT"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="RestoreHP" interval="1" value="#RestoreHP"/>
+		</for>
+	</skill>
+	<skill id="4785" levels="12" name="Chant of Life">
+		<table name="#RestoreHP">99 171 272 400 563 703 776 809 826 833 832 827</table>
+		<table name="#power">11 12 13 14 15 16 17 17 18 18 19 19</table>
+		<table name="#abnormal_level">11 12 13 14 15 16 17 17 18 18 19 19</table>
+		<table name="#mp_consume">43 69 99 134 173 207 239 250 258 262 262 263</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="700"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="life_force_others"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_CLAN"/>
+		<set name="affect_range" value="1000"/>
+		<set name="skillType" value="HOT"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="RestoreHP" interval="1" value="#RestoreHP"/>
+		</for>
+	</skill>
+	<skill id="4786" levels="12" name="Chant of Life">
+		<table name="#RestoreHP">53 91 145 214 301 375 414 431 439 444 443 440</table>
+		<table name="#power">11 12 13 14 15 16 17 17 18 18 19 19</table>
+		<table name="#abnormal_level">11 12 13 14 15 16 17 17 18 18 19 19</table>
+		<table name="#mp_consume">43 69 99 134 173 207 239 250 258 262 262 263</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="700"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="life_force_others"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_CLAN"/>
+		<set name="affect_range" value="1000"/>
+		<set name="skillType" value="HOT"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="RestoreHP" interval="1" value="#RestoreHP"/>
+		</for>
+	</skill>
+	<skill id="4787" levels="12" name="Chant of Life">
+		<table name="#RestoreHP">50 86 136 200 282 352 388 405 413 417 416 414</table>
+		<table name="#power">11 12 13 14 15 16 17 17 18 18 19 19</table>
+		<table name="#abnormal_level">11 12 13 14 15 16 17 17 18 18 19 19</table>
+		<table name="#mp_consume">43 69 99 134 173 207 239 250 258 262 262 263</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="700"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="life_force_others"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_CLAN"/>
+		<set name="affect_range" value="1000"/>
+		<set name="skillType" value="HOT"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="RestoreHP" interval="1" value="#RestoreHP"/>
+		</for>
+	</skill>
+	<skill id="4788" levels="12" name="Chant of Life">
+		<table name="#RestoreHP">47 80 127 187 263 329 363 379 387 390 389 388</table>
+		<table name="#power">11 12 13 14 15 16 17 17 18 18 19 19</table>
+		<table name="#abnormal_level">11 12 13 14 15 16 17 17 18 18 19 19</table>
+		<table name="#mp_consume">43 69 99 134 173 207 239 250 258 262 262 263</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="700"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="life_force_others"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_CLAN"/>
+		<set name="affect_range" value="1000"/>
+		<set name="skillType" value="HOT"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="RestoreHP" interval="1" value="#RestoreHP"/>
+		</for>
+	</skill>
+	<skill id="4789" levels="10" name="High Lv.">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="4790" levels="1" name="Raid Boss (Lv. 23)">
+		<set name="icon" value="icon.skillraid"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="4791" levels="1" name="Raid Boss (Lv. 30)">
+		<set name="icon" value="icon.skillraid"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="4792" levels="1" name="Raid Boss (Lv. 42)">
+		<set name="icon" value="icon.skillraid"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="4793" levels="1" name="Raid Boss (Lv. 55)">
+		<set name="icon" value="icon.skillraid"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="4794" levels="1" name="Raid Boss (Lv. 50)">
+		<set name="icon" value="icon.skillraid"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="4795" levels="1" name="Raid Boss (Lv. 60)">
+		<set name="icon" value="icon.skillraid"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="4796" levels="1" name="Raid Boss (Lv. 25)">
+		<set name="icon" value="icon.skillraid"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="4797" levels="1" name="Raid Boss (Lv. 34)">
+		<set name="icon" value="icon.skillraid"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="4798" levels="1" name="Raid Boss (Lv. 34)">
+		<set name="icon" value="icon.skillraid"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="4799" levels="1" name="Raid Boss (Lv. 49)">
+		<set name="icon" value="icon.skillraid"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+</list>

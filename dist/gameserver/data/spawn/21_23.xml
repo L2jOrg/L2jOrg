@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn name="giran09_npc2123_03" count="1" respawn="60">
+		<point x="47984" y="186832" z="-3445" h="42000"/>
+		<npc id="30878"/><!--Ангелина-->
+	</spawn>
+	<territory name="giran_t21_23_006">
+		<add x="42187" y="170540" zmin="-3681" zmax="-2681"/>
+		<add x="44703" y="170504" zmin="-3681" zmax="-2681"/>
+		<add x="46935" y="173540" zmin="-3681" zmax="-2681"/>
+		<add x="46843" y="175980" zmin="-3681" zmax="-2681"/>
+		<add x="45171" y="175396" zmin="-3681" zmax="-2681"/>
+		<add x="42759" y="173120" zmin="-3681" zmax="-2681"/>
+	</territory>
+	<spawn name="giran_t21_23_006" count="5" respawn="95">
+		<territory name="giran_t21_23_006"/>
+		<npc id="20251"/><!--Ящер Делу-->
+	</spawn>
+	<spawn name="giran_t21_23_006" count="2" respawn="95">
+		<territory name="giran_t21_23_006"/>
+		<npc id="20252"/><!--Разведчик Ящеров Делу-->
+	</spawn>
+	<spawn name="giran_t21_23_006" count="3" respawn="95">
+		<territory name="giran_t21_23_006"/>
+		<npc id="20253"/><!--Воин Ящеров Делу-->
+	</spawn>
+	<territory name="giran_t21_23_007">
+		<add x="47128" y="175385" zmin="-3710" zmax="-2110"/>
+		<add x="49920" y="175849" zmin="-3710" zmax="-2110"/>
+		<add x="48536" y="177613" zmin="-3710" zmax="-2110"/>
+		<add x="46440" y="178389" zmin="-3710" zmax="-2110"/>
+		<add x="45100" y="175657" zmin="-3710" zmax="-2110"/>
+	</territory>
+	<spawn name="giran_t21_23_007" count="4" respawn="95">
+		<territory name="giran_t21_23_007"/>
+		<npc id="20251"/><!--Ящер Делу-->
+	</spawn>
+	<spawn name="giran_t21_23_007" count="3" respawn="95">
+		<territory name="giran_t21_23_007"/>
+		<npc id="20252"/><!--Разведчик Ящеров Делу-->
+	</spawn>
+	<territory name="giran_t21_23_004">
+		<add x="33061" y="173203" zmin="-3763" zmax="-2763"/>
+		<add x="37233" y="174315" zmin="-3763" zmax="-2763"/>
+		<add x="38001" y="175123" zmin="-3763" zmax="-2763"/>
+		<add x="36377" y="177819" zmin="-3763" zmax="-2763"/>
+		<add x="33073" y="175715" zmin="-3763" zmax="-2763"/>
+	</territory>
+	<spawn name="giran_t21_23_004" count="3" respawn="95">
+		<territory name="giran_t21_23_004"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<spawn name="giran_t21_23_004" count="5" respawn="95">
+		<territory name="giran_t21_23_004"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn name="giran_t21_23_004" count="3" respawn="95">
+		<territory name="giran_t21_23_004"/>
+		<npc id="20250"/><!--Стеклянный Ягуар-->
+	</spawn>
+	<territory name="giran_t21_23_005">
+		<add x="39063" y="168558" zmin="-3416" zmax="-2416"/>
+		<add x="43195" y="169318" zmin="-3416" zmax="-2416"/>
+		<add x="41975" y="170338" zmin="-3416" zmax="-2416"/>
+		<add x="37963" y="169410" zmin="-3416" zmax="-2416"/>
+	</territory>
+	<spawn name="giran_t21_23_005" count="1" respawn="95">
+		<territory name="giran_t21_23_005"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn name="giran_t21_23_005" count="2" respawn="95">
+		<territory name="giran_t21_23_005"/>
+		<npc id="20250"/><!--Стеклянный Ягуар-->
+	</spawn>
+	<spawn name="giran_t21_23_005" count="2" respawn="95">
+		<territory name="giran_t21_23_005"/>
+		<npc id="20251"/><!--Ящер Делу-->
+	</spawn>
+	<territory name="giran_t21_23_002">
+		<add x="45372" y="164113" zmin="-3259" zmax="-2159"/>
+		<add x="50956" y="163993" zmin="-3259" zmax="-2159"/>
+		<add x="46620" y="166825" zmin="-3259" zmax="-2159"/>
+		<add x="45032" y="165753" zmin="-3259" zmax="-2159"/>
+	</territory>
+	<spawn name="giran_t21_23_002" count="2" respawn="95">
+		<territory name="giran_t21_23_002"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<spawn name="giran_t21_23_002" count="3" respawn="95">
+		<territory name="giran_t21_23_002"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn name="giran_t21_23_002" count="2" respawn="95">
+		<territory name="giran_t21_23_002"/>
+		<npc id="20250"/><!--Стеклянный Ягуар-->
+	</spawn>
+	<territory name="giran_t21_23_003">
+		<add x="33049" y="169229" zmin="-3816" zmax="-2816"/>
+		<add x="36189" y="171281" zmin="-3816" zmax="-2816"/>
+		<add x="33861" y="172793" zmin="-3816" zmax="-2816"/>
+		<add x="33057" y="172437" zmin="-3816" zmax="-2816"/>
+	</territory>
+	<spawn name="giran_t21_23_003" count="1" respawn="95">
+		<territory name="giran_t21_23_003"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<spawn name="giran_t21_23_003" count="2" respawn="95">
+		<territory name="giran_t21_23_003"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn name="giran_t21_23_003" count="2" respawn="95">
+		<territory name="giran_t21_23_003"/>
+		<npc id="20250"/><!--Стеклянный Ягуар-->
+	</spawn>
+	<territory name="giran_t21_23_001">
+		<add x="32924" y="163998" zmin="-3892" zmax="-2792"/>
+		<add x="43224" y="164062" zmin="-3892" zmax="-2792"/>
+		<add x="35012" y="166042" zmin="-3892" zmax="-2792"/>
+		<add x="32872" y="164994" zmin="-3892" zmax="-2792"/>
+	</territory>
+	<spawn name="giran_t21_23_001" count="3" respawn="95">
+		<territory name="giran_t21_23_001"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<spawn name="giran_t21_23_001" count="3" respawn="95">
+		<territory name="giran_t21_23_001"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn name="giran_t21_23_001" count="3" respawn="95">
+		<territory name="giran_t21_23_001"/>
+		<npc id="20250"/><!--Стеклянный Ягуар-->
+	</spawn>
+	<territory name="giran_t21_23_008">
+		<add x="48664" y="170858" zmin="-3717" zmax="-3117"/>
+		<add x="51472" y="171194" zmin="-3717" zmax="-3117"/>
+		<add x="50708" y="172438" zmin="-3717" zmax="-3117"/>
+		<add x="47096" y="173502" zmin="-3717" zmax="-3117"/>
+		<add x="46148" y="172530" zmin="-3717" zmax="-3117"/>
+	</territory>
+	<spawn name="giran_t21_23_008" count="3" respawn="95">
+		<territory name="giran_t21_23_008"/>
+		<npc id="20251"/><!--Ящер Делу-->
+	</spawn>
+	<spawn name="giran_t21_23_008" count="2" respawn="95">
+		<territory name="giran_t21_23_008"/>
+		<npc id="20252"/><!--Разведчик Ящеров Делу-->
+	</spawn>
+	<spawn name="giran_t21_23_008" count="3" respawn="95">
+		<territory name="giran_t21_23_008"/>
+		<npc id="20168"/><!--Фавн-->
+	</spawn>
+	<territory name="giran_t21_23_009">
+		<add x="51831" y="171977" zmin="-3624" zmax="-2824"/>
+		<add x="53139" y="171741" zmin="-3624" zmax="-2824"/>
+		<add x="54207" y="172337" zmin="-3624" zmax="-2824"/>
+		<add x="54223" y="173273" zmin="-3624" zmax="-2824"/>
+		<add x="52995" y="173393" zmin="-3624" zmax="-2824"/>
+		<add x="51343" y="172825" zmin="-3624" zmax="-2824"/>
+	</territory>
+	<spawn name="giran_t21_23_009" count="3" respawn="95">
+		<territory name="giran_t21_23_009"/>
+		<npc id="20251"/><!--Ящер Делу-->
+	</spawn>
+	<spawn name="giran_t21_23_009" count="1" respawn="95">
+		<territory name="giran_t21_23_009"/>
+		<npc id="20252"/><!--Разведчик Ящеров Делу-->
+	</spawn>
+	<territory name="giran_t21_23_010">
+		<add x="54786" y="169108" zmin="-3058" zmax="-2058"/>
+		<add x="58758" y="169812" zmin="-3058" zmax="-2058"/>
+		<add x="60414" y="172184" zmin="-3058" zmax="-2058"/>
+		<add x="59710" y="173772" zmin="-3058" zmax="-2058"/>
+		<add x="57150" y="175748" zmin="-3058" zmax="-2058"/>
+		<add x="54794" y="171428" zmin="-3058" zmax="-2058"/>
+	</territory>
+	<spawn name="giran_t21_23_010" count="8" respawn="95">
+		<territory name="giran_t21_23_010"/>
+		<npc id="20251"/><!--Ящер Делу-->
+	</spawn>
+	<spawn name="giran_t21_23_010" count="3" respawn="95">
+		<territory name="giran_t21_23_010"/>
+		<npc id="20252"/><!--Разведчик Ящеров Делу-->
+	</spawn>
+	<spawn name="giran_t21_23_010" count="3" respawn="95">
+		<territory name="giran_t21_23_010"/>
+		<npc id="20253"/><!--Воин Ящеров Делу-->
+	</spawn>
+	<spawn name="giran_t21_23_010" count="6" respawn="95">
+		<territory name="giran_t21_23_010"/>
+		<npc id="20168"/><!--Фавн-->
+	</spawn>
+	<territory name="giran_t21_23_015">
+		<add x="33001" y="186861" zmin="-3361" zmax="-2761"/>
+		<add x="38093" y="184481" zmin="-3361" zmax="-2761"/>
+		<add x="37645" y="189277" zmin="-3361" zmax="-2761"/>
+		<add x="35009" y="190037" zmin="-3361" zmax="-2761"/>
+		<add x="32993" y="188949" zmin="-3361" zmax="-2761"/>
+	</territory>
+	<spawn name="giran_t21_23_015" count="3" respawn="95">
+		<territory name="giran_t21_23_015"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<spawn name="giran_t21_23_015" count="3" respawn="95">
+		<territory name="giran_t21_23_015"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn name="giran_t21_23_015" count="5" respawn="95">
+		<territory name="giran_t21_23_015"/>
+		<npc id="20250"/><!--Стеклянный Ягуар-->
+	</spawn>
+	<spawn name="giran_t21_23_015" count="6" respawn="95">
+		<territory name="giran_t21_23_015"/>
+		<npc id="20251"/><!--Ящер Делу-->
+	</spawn>
+	<territory name="giran_t21_23_011">
+		<add x="63112" y="165468" zmin="-3333" zmax="-2133"/>
+		<add x="65276" y="165852" zmin="-3333" zmax="-2133"/>
+		<add x="65272" y="170256" zmin="-3333" zmax="-2133"/>
+		<add x="62988" y="171860" zmin="-3333" zmax="-2133"/>
+		<add x="61688" y="171764" zmin="-3333" zmax="-2133"/>
+	</territory>
+	<spawn name="giran_t21_23_011" count="6" respawn="95">
+		<territory name="giran_t21_23_011"/>
+		<npc id="20251"/><!--Ящер Делу-->
+	</spawn>
+	<spawn name="giran_t21_23_011" count="2" respawn="95">
+		<territory name="giran_t21_23_011"/>
+		<npc id="20252"/><!--Разведчик Ящеров Делу-->
+	</spawn>
+	<spawn name="giran_t21_23_011" count="3" respawn="95">
+		<territory name="giran_t21_23_011"/>
+		<npc id="20253"/><!--Воин Ящеров Делу-->
+	</spawn>
+	<spawn name="giran_t21_23_011" count="4" respawn="95">
+		<territory name="giran_t21_23_011"/>
+		<npc id="20168"/><!--Фавн-->
+	</spawn>
+	<territory name="giran_t21_23_012">
+		<add x="59946" y="174362" zmin="-2924" zmax="-2324"/>
+		<add x="62066" y="175146" zmin="-2924" zmax="-2324"/>
+		<add x="63174" y="176486" zmin="-2924" zmax="-2324"/>
+		<add x="63262" y="178014" zmin="-2924" zmax="-2324"/>
+		<add x="60926" y="177722" zmin="-2924" zmax="-2324"/>
+		<add x="58558" y="175958" zmin="-2924" zmax="-2324"/>
+	</territory>
+	<spawn name="giran_t21_23_012" count="4" respawn="95">
+		<territory name="giran_t21_23_012"/>
+		<npc id="20251"/><!--Ящер Делу-->
+	</spawn>
+	<spawn name="giran_t21_23_012" count="2" respawn="95">
+		<territory name="giran_t21_23_012"/>
+		<npc id="20252"/><!--Разведчик Ящеров Делу-->
+	</spawn>
+	<spawn name="giran_t21_23_012" count="2" respawn="95">
+		<territory name="giran_t21_23_012"/>
+		<npc id="20253"/><!--Воин Ящеров Делу-->
+	</spawn>
+	<spawn name="giran_t21_23_012" count="3" respawn="95">
+		<territory name="giran_t21_23_012"/>
+		<npc id="20168"/><!--Фавн-->
+	</spawn>
+	<spawn name="quest_030919_21_23_004" count="2" respawn="180">
+		<territory>
+			<add x="58692" y="177288" zmin="-2892" zmax="-2492"/>
+			<add x="59972" y="175288" zmin="-2892" zmax="-2492"/>
+			<add x="62428" y="176220" zmin="-2892" zmax="-2492"/>
+			<add x="62304" y="177468" zmin="-2892" zmax="-2492"/>
+		</territory>
+		<npc id="20781"/><!--Шаман Ящеров Делу-->
+	</spawn>
+	<spawn name="quest_030919_21_23_002" count="3" respawn="180">
+		<territory>
+			<add x="43928" y="171096" zmin="-3664" zmax="-3164"/>
+			<add x="46960" y="172404" zmin="-3664" zmax="-3164"/>
+			<add x="46628" y="173876" zmin="-3664" zmax="-3164"/>
+			<add x="44672" y="174112" zmin="-3664" zmax="-3164"/>
+			<add x="42944" y="172408" zmin="-3664" zmax="-3164"/>
+		</territory>
+		<npc id="20781"/><!--Шаман Ящеров Делу-->
+	</spawn>
+	<spawn name="quest_030919_21_23_003" count="4" respawn="180">
+		<territory>
+			<add x="56560" y="169164" zmin="-2976" zmax="-2276"/>
+			<add x="58724" y="170020" zmin="-2976" zmax="-2276"/>
+			<add x="59264" y="171904" zmin="-2976" zmax="-2276"/>
+			<add x="57140" y="173784" zmin="-2976" zmax="-2276"/>
+			<add x="55280" y="171004" zmin="-2976" zmax="-2276"/>
+		</territory>
+		<npc id="20781"/><!--Шаман Ящеров Делу-->
+	</spawn>
+	<territory name="dion13_2123_014">
+		<add x="33061" y="178311" zmin="-3679" zmax="-2579"/>
+		<add x="37993" y="182279" zmin="-3679" zmax="-2579"/>
+		<add x="38049" y="184299" zmin="-3679" zmax="-2579"/>
+		<add x="33001" y="186667" zmin="-3679" zmax="-2579"/>
+	</territory>
+	<spawn name="dion13_2123_014" count="4" respawn="95">
+		<territory name="dion13_2123_014"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<spawn name="dion13_2123_014" count="4" respawn="95">
+		<territory name="dion13_2123_014"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn name="dion13_2123_014" count="8" respawn="95">
+		<territory name="dion13_2123_014"/>
+		<npc id="20250"/><!--Стеклянный Ягуар-->
+	</spawn>
+	<spawn name="dion13_2123_014" count="7" respawn="95">
+		<territory name="dion13_2123_014"/>
+		<npc id="20251"/><!--Ящер Делу-->
+	</spawn>
+	<territory name="dion13_2123_013">
+		<add x="55239" y="176934" zmin="-3246" zmax="-2446"/>
+		<add x="58443" y="176114" zmin="-3246" zmax="-2446"/>
+		<add x="60879" y="177838" zmin="-3246" zmax="-2446"/>
+		<add x="59575" y="179354" zmin="-3246" zmax="-2446"/>
+		<add x="56003" y="181342" zmin="-3246" zmax="-2446"/>
+	</territory>
+	<spawn name="dion13_2123_013" count="8" respawn="95">
+		<territory name="dion13_2123_013"/>
+		<npc id="20251"/><!--Ящер Делу-->
+	</spawn>
+	<spawn name="dion13_2123_013" count="3" respawn="95">
+		<territory name="dion13_2123_013"/>
+		<npc id="20252"/><!--Разведчик Ящеров Делу-->
+	</spawn>
+	<spawn name="dion13_2123_013" count="3" respawn="95">
+		<territory name="dion13_2123_013"/>
+		<npc id="20253"/><!--Воин Ящеров Делу-->
+	</spawn>
+	<spawn name="dion13_2123_013" count="5" respawn="95">
+		<territory name="dion13_2123_013"/>
+		<npc id="20168"/><!--Фавн-->
+	</spawn>
+	<spawn name="Angel" count="1" respawn="129600" respawn_random="86400">
+		<point x="56904" y="178936" z="-2624" h="21344"/>
+		<npc id="25739"/><!--Ангел Жрец Баюма-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="48668" y="186341" z="-3480" h="40000" />
+		<npc id="30013" /><!--Пьер-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="48765" y="186205" z="-3480" h="40000" />
+		<npc id="30012" /><!--Член Гильдии Рыболовов-->
+	</spawn>
+</list>

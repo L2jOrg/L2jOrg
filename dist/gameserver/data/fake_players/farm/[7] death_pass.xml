@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE farm SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<farm name="Death Pass" min_level="33" max_level="39">
+	<zones>
+		<zone>
+			<polygon>
+				<coords loc="71832 123032 -4000 -3000"/>
+				<coords loc="72152 115480 -4000 -3000"/>
+				<coords loc="71432 113336 -4000 -3000"/>
+				<coords loc="68088 112232 -4000 -3000"/>
+				<coords loc="67176 112136 -4000 -3000"/>
+				<coords loc="66792 113304 -4000 -3000"/>
+				<coords loc="66424 114088 -4000 -3000"/>
+				<coords loc="65816 114472 -4000 -3000"/>
+				<coords loc="66424 117416 -4000 -3000"/>
+				<coords loc="68456 121656 -4000 -3000"/>
+				<coords loc="70280 122216 -4000 -3000"/>
+				<coords loc="71400 122936 -4000 -3000"/>
+			</polygon>
+		</zone>
+		<spawn_points>
+			<coords loc="70024 120392 -3536"/>
+		</spawn_points>
+	</zones>
+	<on_obtain_max_level>
+		<action id="1"/>
+	</on_obtain_max_level>
+	<go_to_town min_farm_time="1800" max_farm_time="3600">
+		<action id="1"/>
+	</go_to_town>
+	<action id="1">
+		<wait min_delay="1000" max_delay="3000"/>
+		<use_item id="736"/>
+	</action>
+</farm>

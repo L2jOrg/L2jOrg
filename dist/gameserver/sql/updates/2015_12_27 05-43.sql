@@ -1,0 +1,1 @@
+INSERT INTO character_variables SELECT obj_id, '@lvl_up_reward_1', value, expire_time FROM character_variables WHERE name='@lvl_up_reward';

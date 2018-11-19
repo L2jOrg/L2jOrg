@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT list (door)*>
+<!ELEMENT door (pos|shape|set|ai_params)*>
+<!ATTLIST door
+	id CDATA #REQUIRED
+	name CDATA #REQUIRED
+	hp CDATA #REQUIRED
+	hp CDATA #REQUIRED
+	pdef CDATA #REQUIRED
+	mdef CDATA #REQUIRED
+	type CDATA #IMPLIED
+	residence_id CDATA #IMPLIED>
+<!ELEMENT pos (#PCDATA)>
+<!ATTLIST pos
+	x CDATA #REQUIRED
+	y CDATA #REQUIRED
+	z CDATA #REQUIRED>
+<!ELEMENT shape (#PCDATA)>
+<!ELEMENT ai_params (set)*>
+<!ATTLIST shape
+	ax CDATA #REQUIRED
+	ay CDATA #REQUIRED
+	bx CDATA #REQUIRED
+	by CDATA #REQUIRED
+	cx CDATA #REQUIRED
+	cy CDATA #REQUIRED
+	dx CDATA #REQUIRED
+	dy CDATA #REQUIRED
+	minz CDATA #REQUIRED
+	maxz CDATA #REQUIRED>
+<!ELEMENT set (#PCDATA)>
+<!ATTLIST set
+	name CDATA #REQUIRED
+	value CDATA #REQUIRED>

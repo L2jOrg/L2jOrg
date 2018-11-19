@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT list (npc)*>
+<!ELEMENT npc (set|faction|client_skills|skills|equip|rewardlist|database_rewardlist|minions|teleportlist|ai_params|attributes|walker_route|random_actions)*>
+<!ATTLIST npc
+	id CDATA #REQUIRED
+	template_id CDATA #IMPLIED
+	name CDATA #REQUIRED
+	title CDATA #REQUIRED>
+<!ELEMENT set (#PCDATA)>
+<!ATTLIST set
+	name CDATA #REQUIRED
+	value CDATA #REQUIRED>
+<!ELEMENT client_skills (skill)*>
+<!ELEMENT skills (skill)*>
+<!ELEMENT skill (#PCDATA)>
+<!ATTLIST skill
+	id CDATA #REQUIRED
+	level CDATA #REQUIRED
+	use_type CDATA #IMPLIED>
+<!ELEMENT faction (ignore)*>
+<!ATTLIST faction
+	names CDATA #REQUIRED
+	range CDATA #REQUIRED>
+<!ELEMENT ignore (#PCDATA)>
+<!ATTLIST ignore
+	npc_id CDATA #REQUIRED>
+<!ELEMENT equip (rhand|lhand)*>
+<!ELEMENT rhand (#PCDATA)>
+<!ATTLIST rhand
+	item_id CDATA #REQUIRED>
+<!ELEMENT lhand (#PCDATA)>
+<!ATTLIST lhand
+	item_id CDATA #REQUIRED>
+<!ELEMENT minions (minion)*>
+<!ELEMENT minion (#PCDATA)>
+<!ATTLIST minion
+	npc_id CDATA #REQUIRED
+	ai CDATA #IMPLIED
+	count CDATA #REQUIRED
+	respawn CDATA #IMPLIED>
+<!ELEMENT rewardlist (group|reward)*>
+<!ATTLIST rewardlist
+	type CDATA #REQUIRED
+	auto_loot CDATA #IMPLIED>
+<!ELEMENT database_rewardlist (reward)*>
+<!ELEMENT group (reward)*>
+<!ATTLIST group
+	chance CDATA #IMPLIED>
+<!ELEMENT reward (#PCDATA)>
+<!ATTLIST reward
+	chance CDATA #REQUIRED
+	item_id CDATA #REQUIRED
+	max CDATA #REQUIRED
+	min CDATA #REQUIRED>
+<!ELEMENT teleportlist (sublist)*>
+<!ELEMENT sublist (target)*>
+<!ATTLIST sublist
+	id CDATA #REQUIRED
+	prime_hours CDATA #IMPLIED>
+<!ELEMENT target (#PCDATA)>
+<!ATTLIST target
+	item_id CDATA #IMPLIED
+	loc CDATA #REQUIRED
+	castle_id CDATA #IMPLIED
+	name CDATA #REQUIRED
+	price CDATA #IMPLIED
+	quest_zone_id CDATA #IMPLIED>
+<!ELEMENT ai_params (set)*>
+<!ELEMENT attributes (attack|defence)*>
+<!ELEMENT attack (#PCDATA)>
+<!ATTLIST attack
+	attribute CDATA #REQUIRED
+	value CDATA #REQUIRED>
+<!ELEMENT defence (#PCDATA)>
+<!ATTLIST defence
+	attribute CDATA #REQUIRED
+	value CDATA #REQUIRED>
+<!ELEMENT walker_route (route_point)*>
+<!ATTLIST walker_route
+	id CDATA #REQUIRED
+	type CDATA #IMPLIED>
+<!ELEMENT route_point (#PCDATA)>
+<!ATTLIST route_point
+	x CDATA #REQUIRED
+	y CDATA #REQUIRED
+	z CDATA #REQUIRED
+	phrase_id CDATA #IMPLIED
+	social_action_id CDATA #IMPLIED
+	delay CDATA #IMPLIED
+	running CDATA #IMPLIED
+	teleport CDATA #IMPLIED>
+<!ELEMENT random_actions (action)*>
+<!ATTLIST random_actions
+	random_order CDATA #IMPLIED>
+<!ELEMENT action (#PCDATA)>
+<!ATTLIST action
+	id CDATA #REQUIRED
+	phrase_id CDATA #IMPLIED
+	social_action_id CDATA #IMPLIED
+	delay CDATA #IMPLIED>

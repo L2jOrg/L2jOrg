@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE farm SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<farm name="Execution Ground" min_level="32" max_level="38">
+	<zones>
+		<zone>
+			<polygon>
+				<coords loc="46008 144392 -4000 -3000"/>
+				<coords loc="46872 143480 -4000 -3000"/>
+				<coords loc="49448 143048 -4000 -3000"/>
+				<coords loc="50200 144552 -4000 -3000"/>
+				<coords loc="50664 145464 -4000 -3000"/>
+				<coords loc="51048 146008 -4000 -3000"/>
+				<coords loc="51416 146392 -4000 -3000"/>
+				<coords loc="50664 147992 -4000 -3000"/>
+				<coords loc="49528 148888 -4000 -3000"/>
+				<coords loc="48472 149752 -4000 -3000"/>
+				<coords loc="47080 149912 -4000 -3000"/>
+				<coords loc="46328 149480 -4000 -3000"/>
+				<coords loc="45816 148904 -4000 -3000"/>
+				<coords loc="44504 149128 -4000 -3000"/>
+				<coords loc="42776 147976 -4000 -3000"/>
+				<coords loc="43208 147080 -4000 -3000"/>
+				<coords loc="42824 145800 -4000 -3000"/>
+				<coords loc="45016 145592 -4000 -3000"/>
+				<coords loc="45512 144808 -4000 -3000"/>
+			</polygon>
+		</zone>
+		<spawn_points>
+			<coords loc="47848 146344 -3576"/>
+		</spawn_points>
+	</zones>
+	<on_obtain_max_level>
+		<action id="1"/>
+	</on_obtain_max_level>
+	<go_to_town min_farm_time="1800" max_farm_time="3600">
+		<action id="1"/>
+	</go_to_town>
+	<action id="1">
+		<wait min_delay="1000" max_delay="3000"/>
+		<use_item id="736"/>
+	</action>
+</farm>

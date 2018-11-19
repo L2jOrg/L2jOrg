@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE farm SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<farm name="Orc (Lvl 3-8)" min_level="3" max_level="8" races="ORC">
+	<zones>
+		<zone>
+			<polygon>
+				<coords loc="-46120 -105864 -3200 0"/>
+				<coords loc="-37570 -106903 -3200 0"/>
+				<coords loc="-33768 -124392 -3200 0"/>
+				<coords loc="-46632 -120808 -3200 0"/>
+			</polygon>
+		</zone>
+		<spawn_points>
+			<coords loc="-40008 -119224 -1840"/>
+			<coords loc="-40200 -113112 -2032"/>
+		</spawn_points>
+	</zones>
+	<on_obtain_max_level>
+		<action id="1"/>
+	</on_obtain_max_level>
+	<go_to_town min_farm_time="1800" max_farm_time="3600">
+		<action id="1"/>
+	</go_to_town>
+	<action id="1">
+		<wait min_delay="1000" max_delay="3000"/>
+		<random_action>
+			<ordinary_actions>
+				<move_to_point x="-37944" y="-111688" z="-1808" min_range="50" max_range="150"/>
+				<move_to_point x="-37384" y="-110984" z="-1760" min_range="50" max_range="150"/>
+				<move_to_point x="-38120" y="-109416" z="-1808" min_range="50" max_range="150"/>
+				<move_to_point x="-39624" y="-107400" z="-2048" min_range="50" max_range="150"/>
+				<move_to_point x="-41928" y="-107384" z="-1744" min_range="50" max_range="150"/>
+				<move_to_point x="-43352" y="-106360" z="-1376" min_range="50" max_range="150"/>
+				<move_to_point x="-45608" y="-105800" z="-960" min_range="0" max_range="50"/>
+				<move_to_point x="-46360" y="-106168" z="-776" min_range="0" max_range="50"/>
+				<move_to_point x="-45928" y="-107480" z="-592" min_range="50" max_range="150"/>
+				<move_to_point x="-46120" y="-108568" z="-352" min_range="50" max_range="150"/>
+				<move_to_point x="-46168" y="-110024" z="-288" min_range="0" max_range="50"/>
+				<move_to_point x="-45864" y="-111144" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-45208" y="-112024" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-44648" y="-112680" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-44152" y="-113672" z="-240" min_range="50" max_range="150"/>
+			</ordinary_actions>
+			<use_item id="736"/>
+		</random_action>
+	</action>
+</farm>

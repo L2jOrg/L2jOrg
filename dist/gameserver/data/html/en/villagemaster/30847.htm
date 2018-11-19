@@ -1,0 +1,12 @@
+<html><head><body>
+Head Blacksmith Ferris:<br>
+Aden Town used to be a teaming hub of blacksmith activities, especially during the war with Elmore always hovering on the horizon. Why in those days, ol' Tapoy of the Black Anvil Guild made a killing. He was able to retire in style. Bought a cute little cabin out by a lake and set up his own personal forge. Now that's the life!<br>
+I thought that when wars were finally over I'd have some time to pursue my other interests, like knitting and free climbing, but I've been busier than ever lately. Sigh.<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">"Can you tell me about the 2nd Class Transfer?"</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Clan</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Alliance</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Exchange Daily Coins</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Quest</Button>
+</body></html>

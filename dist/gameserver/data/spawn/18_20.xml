@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn name="oren25_npc1820_006" count="1" respawn="60">
+		<point x="-61717" y="75401" z="-3356" h="58500"/>
+		<npc id="30420"/><!--Тира-->
+	</spawn>
+	<spawn name="oren25_npc1820_004" count="1" respawn="60">
+		<point x="-59985" y="79234" z="-3502" h="5300"/>
+		<npc id="30661"/><!--Загадочный Темный Эльф-->
+	</spawn>
+	<spawn name="oren25_npc1820_004" count="1" respawn="60">
+		<point x="-59997" y="79458" z="-3526" h="0"/>
+		<npc id="30664"/><!--Кейн Летящий Нож-->
+	</spawn>
+	<spawn name="oren01_qm1820_01" count="15" respawn="180">
+		<territory>
+			<add x="-48196" y="72432" zmin="-3632" zmax="-2932"/>
+			<add x="-46160" y="72964" zmin="-3632" zmax="-2932"/>
+			<add x="-45760" y="76584" zmin="-3632" zmax="-2932"/>
+			<add x="-48548" y="80216" zmin="-3632" zmax="-2932"/>
+			<add x="-51460" y="80708" zmin="-3632" zmax="-2932"/>
+			<add x="-52588" y="77876" zmin="-3632" zmax="-2932"/>
+		</territory>
+		<npc id="27070"/><!--Налетчик Орков Тумран-->
+	</spawn>
+	<territory name="oren25_1820_10">
+		<add x="-49420" y="71682" zmin="-3644" zmax="-2944"/>
+		<add x="-46107" y="73367" zmin="-3644" zmax="-2944"/>
+		<add x="-46339" y="76855" zmin="-3644" zmax="-2944"/>
+		<add x="-51780" y="75218" zmin="-3644" zmax="-2944"/>
+	</territory>
+	<spawn name="oren25_1820_10" count="5" respawn="20">
+		<territory name="oren25_1820_10"/>
+		<npc id="20380"/><!--Каменный Хранитель-->
+	</spawn>
+	<spawn name="oren25_1820_10" count="5" respawn="20">
+		<territory name="oren25_1820_10"/>
+		<npc id="20034"/><!--Паук Скиталец-->
+	</spawn>
+	<territory name="oren25_1820_11">
+		<add x="-50744" y="75711" zmin="-3644" zmax="-2944"/>
+		<add x="-46930" y="76839" zmin="-3644" zmax="-2944"/>
+		<add x="-48886" y="80775" zmin="-3644" zmax="-2944"/>
+		<add x="-53980" y="79949" zmin="-3644" zmax="-2944"/>
+	</territory>
+	<spawn name="oren25_1820_11" count="5" respawn="20">
+		<territory name="oren25_1820_11"/>
+		<npc id="20034"/><!--Паук Скиталец-->
+	</spawn>
+	<spawn name="oren25_1820_11" count="5" respawn="20">
+		<territory name="oren25_1820_11"/>
+		<npc id="20038"/><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<territory name="oren25_1820_01">
+		<add x="-61349" y="68224" zmin="-3431" zmax="-2931"/>
+		<add x="-57447" y="71083" zmin="-3431" zmax="-2931"/>
+		<add x="-60608" y="73067" zmin="-3431" zmax="-2931"/>
+		<add x="-62946" y="70455" zmin="-3431" zmax="-2931"/>
+	</territory>
+	<spawn name="oren25_1820_01" count="6" respawn="20">
+		<territory name="oren25_1820_01"/>
+		<npc id="20034"/><!--Паук Скиталец-->
+	</spawn>
+	<spawn name="oren25_1820_01" count="6" respawn="20">
+		<territory name="oren25_1820_01"/>
+		<npc id="20038"/><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<territory name="oren25_1820_03">
+		<add x="-58217" y="72786" zmin="-3677" zmax="-3077"/>
+		<add x="-58197" y="77349" zmin="-3677" zmax="-3077"/>
+		<add x="-59239" y="79393" zmin="-3677" zmax="-3077"/>
+		<add x="-61090" y="78431" zmin="-3677" zmax="-3077"/>
+		<add x="-61163" y="76066" zmin="-3677" zmax="-3077"/>
+	</territory>
+	<spawn name="oren25_1820_03" count="8" respawn="20">
+		<territory name="oren25_1820_03"/>
+		<npc id="20034"/><!--Паук Скиталец-->
+	</spawn>
+	<spawn name="oren25_1820_03" count="4" respawn="20">
+		<territory name="oren25_1820_03"/>
+		<npc id="20038"/><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<territory name="oren25_1820_02">
+		<add x="-63084" y="70471" zmin="-3431" zmax="-2931"/>
+		<add x="-60639" y="73164" zmin="-3431" zmax="-2931"/>
+		<add x="-62543" y="75749" zmin="-3431" zmax="-2931"/>
+		<add x="-65415" y="75696" zmin="-3431" zmax="-2931"/>
+		<add x="-65422" y="71841" zmin="-3431" zmax="-2931"/>
+	</territory>
+	<spawn name="oren25_1820_02" count="5" respawn="20">
+		<territory name="oren25_1820_02"/>
+		<npc id="20380"/><!--Каменный Хранитель-->
+	</spawn>
+	<spawn name="oren25_1820_02" count="8" respawn="20">
+		<territory name="oren25_1820_02"/>
+		<npc id="20038"/><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<territory name="oren25_1820_05">
+		<add x="-65338" y="79823" zmin="-3773" zmax="-3173"/>
+		<add x="-63776" y="80040" zmin="-3773" zmax="-3173"/>
+		<add x="-61865" y="85901" zmin="-3773" zmax="-3173"/>
+		<add x="-65374" y="87743" zmin="-3773" zmax="-3173"/>
+	</territory>
+	<spawn name="oren25_1820_05" count="5" respawn="20">
+		<territory name="oren25_1820_05"/>
+		<npc id="20034"/><!--Паук Скиталец-->
+	</spawn>
+	<spawn name="oren25_1820_05" count="5" respawn="20">
+		<territory name="oren25_1820_05"/>
+		<npc id="20418"/><!--Кристальный Зверь-->
+	</spawn>
+	<territory name="oren25_1820_04">
+		<add x="-61475" y="76276" zmin="-3677" zmax="-3077"/>
+		<add x="-61248" y="78467" zmin="-3677" zmax="-3077"/>
+		<add x="-61753" y="80054" zmin="-3677" zmax="-3077"/>
+		<add x="-65390" y="79643" zmin="-3677" zmax="-3077"/>
+		<add x="-65417" y="75848" zmin="-3677" zmax="-3077"/>
+	</territory>
+	<spawn name="oren25_1820_04" count="8" respawn="20">
+		<territory name="oren25_1820_04"/>
+		<npc id="20034"/><!--Паук Скиталец-->
+	</spawn>
+	<spawn name="oren25_1820_04" count="8" respawn="20">
+		<territory name="oren25_1820_04"/>
+		<npc id="20418"/><!--Кристальный Зверь-->
+	</spawn>
+	<territory name="oren25_1820_06">
+		<add x="-60685" y="79268" zmin="-3773" zmax="-3173"/>
+		<add x="-59271" y="80041" zmin="-3773" zmax="-3173"/>
+		<add x="-59758" y="86963" zmin="-3773" zmax="-3173"/>
+		<add x="-62106" y="84704" zmin="-3773" zmax="-3173"/>
+	</territory>
+	<spawn name="oren25_1820_06" count="3" respawn="20">
+		<territory name="oren25_1820_06"/>
+		<npc id="20034"/><!--Паук Скиталец-->
+	</spawn>
+	<spawn name="oren25_1820_06" count="5" respawn="20">
+		<territory name="oren25_1820_06"/>
+		<npc id="20038"/><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<territory name="oren25_1820_09">
+		<add x="-53275" y="69831" zmin="-3462" zmax="-2762"/>
+		<add x="-49567" y="71591" zmin="-3462" zmax="-2762"/>
+		<add x="-51899" y="75110" zmin="-3462" zmax="-2762"/>
+		<add x="-56811" y="72388" zmin="-3462" zmax="-2762"/>
+	</territory>
+	<spawn name="oren25_1820_09" count="5" respawn="20">
+		<territory name="oren25_1820_09"/>
+		<npc id="20380"/><!--Каменный Хранитель-->
+	</spawn>
+	<spawn name="oren25_1820_09" count="5" respawn="20">
+		<territory name="oren25_1820_09"/>
+		<npc id="20034"/><!--Паук Скиталец-->
+	</spawn>
+	<territory name="oren25_1820_08">
+		<add x="-56847" y="72553" zmin="-3462" zmax="-2762"/>
+		<add x="-53384" y="74492" zmin="-3462" zmax="-2762"/>
+		<add x="-53844" y="79065" zmin="-3462" zmax="-2762"/>
+		<add x="-56893" y="77359" zmin="-3462" zmax="-2762"/>
+	</territory>
+	<spawn name="oren25_1820_08" count="4" respawn="20">
+		<territory name="oren25_1820_08"/>
+		<npc id="20380"/><!--Каменный Хранитель-->
+	</spawn>
+	<spawn name="oren25_1820_08" count="4" respawn="20">
+		<territory name="oren25_1820_08"/>
+		<npc id="20034"/><!--Паук Скиталец-->
+	</spawn>
+	<spawn name="oren25_1820_08" count="4" respawn="20">
+		<territory name="oren25_1820_08"/>
+		<npc id="20038"/><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<spawn name="oren07_npc1820_003" count="1" respawn="60">
+		<point x="-53664" y="85862" z="-3508" h="53248"/>
+		<npc id="30665"/><!--Кристина-->
+	</spawn>
+	<territory name="oren24_1820_02">
+		<add x="-46253" y="65695" zmin="-3644" zmax="-2944"/>
+		<add x="-37724" y="65684" zmin="-3644" zmax="-2944"/>
+		<add x="-37943" y="67740" zmin="-3644" zmax="-2944"/>
+		<add x="-43146" y="69786" zmin="-3644" zmax="-2944"/>
+	</territory>
+	<spawn name="oren24_1820_02" count="6" respawn="20">
+		<territory name="oren24_1820_02"/>
+		<npc id="20380"/><!--Каменный Хранитель-->
+	</spawn>
+	<spawn name="oren24_1820_02" count="9" respawn="20">
+		<territory name="oren24_1820_02"/>
+		<npc id="20034"/><!--Паук Скиталец-->
+	</spawn>
+	<territory name="oren24_1820_01">
+		<add x="-37552" y="65642" zmin="-3717" zmax="-3017"/>
+		<add x="-32989" y="65679" zmin="-3717" zmax="-3017"/>
+		<add x="-33022" y="69440" zmin="-3717" zmax="-3017"/>
+		<add x="-37829" y="68271" zmin="-3717" zmax="-3017"/>
+	</territory>
+	<spawn name="oren24_1820_01" count="7" respawn="20">
+		<territory name="oren24_1820_01"/>
+		<npc id="20380"/><!--Каменный Хранитель-->
+	</spawn>
+	<spawn name="oren24_1820_01" count="5" respawn="20">
+		<territory name="oren24_1820_01"/>
+		<npc id="20034"/><!--Паук Скиталец-->
+	</spawn>
+	<spawn name="oren24_1820_03s" count="3" respawn="20">
+		<territory>
+			<add x="-36236" y="66099" zmin="-3717" zmax="-3017"/>
+			<add x="-33602" y="65974" zmin="-3717" zmax="-3017"/>
+			<add x="-33463" y="68200" zmin="-3717" zmax="-3017"/>
+			<add x="-35831" y="67903" zmin="-3717" zmax="-3017"/>
+		</territory>
+		<npc id="20380"/><!--Каменный Хранитель-->
+	</spawn>
+	<spawn name="oren24_1820_04s" count="3" respawn="20">
+		<territory>
+			<add x="-42206" y="65856" zmin="-3717" zmax="-3117"/>
+			<add x="-38285" y="65806" zmin="-3717" zmax="-3117"/>
+			<add x="-38930" y="67552" zmin="-3717" zmax="-3117"/>
+			<add x="-41396" y="68230" zmin="-3717" zmax="-3117"/>
+		</territory>
+		<npc id="20034"/><!--Паук Скиталец-->
+	</spawn>
+	<spawn name="oren12_npc1820_002" count="1" respawn="60">
+		<point x="-44358" y="79442" z="-3709" h="48000"/>
+		<npc id="30661"/><!--Загадочный Темный Эльф-->
+	</spawn>
+	<spawn name="oren12_npc1820_001" count="1" respawn="60">
+		<point x="-42525" y="80087" z="-3855" h="49152"/>
+		<npc id="30663"/><!--Слейн Сверкающее Лезвие-->
+	</spawn>
+	<spawn name="oren12_npc1820_005" count="1" respawn="60">
+		<point x="-44225" y="79721" z="-3652" h="47152"/>
+		<npc id="30421"/><!--Варика-->
+	</spawn>
+	<spawn name="oren12_npc1820_005" count="1" respawn="60">
+		<point x="-44015" y="79683" z="-3652" h="47152"/>
+		<npc id="30419"/><!--Аркения-->
+	</spawn>
+	<spawn name="oren25_1820_20s" count="2" respawn="20">
+		<territory>
+			<add x="-49663" y="72936" zmin="-3507" zmax="-3007"/>
+			<add x="-47874" y="73110" zmin="-3507" zmax="-3007"/>
+			<add x="-48056" y="75617" zmin="-3507" zmax="-3007"/>
+			<add x="-50442" y="74445" zmin="-3507" zmax="-3007"/>
+		</territory>
+		<npc id="20034"/><!--Паук Скиталец-->
+	</spawn>
+	<spawn name="oren25_1820_21s" count="3" respawn="20">
+		<territory>
+			<add x="-51232" y="77293" zmin="-3507" zmax="-3007"/>
+			<add x="-49554" y="76893" zmin="-3507" zmax="-3007"/>
+			<add x="-50531" y="80356" zmin="-3507" zmax="-3007"/>
+			<add x="-52522" y="78745" zmin="-3507" zmax="-3007"/>
+		</territory>
+		<npc id="20038"/><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<spawn name="oren25_1820_18s" count="3" respawn="20">
+		<territory>
+			<add x="-56345" y="74656" zmin="-3284" zmax="-2684"/>
+			<add x="-54134" y="76067" zmin="-3284" zmax="-2684"/>
+			<add x="-54439" y="77887" zmin="-3284" zmax="-2684"/>
+			<add x="-56436" y="77065" zmin="-3284" zmax="-2684"/>
+		</territory>
+		<npc id="20038"/><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<spawn name="oren25_1820_19s" count="3" respawn="20">
+		<territory>
+			<add x="-54389" y="70806" zmin="-3354" zmax="-2754"/>
+			<add x="-52600" y="70980" zmin="-3354" zmax="-2754"/>
+			<add x="-52782" y="73487" zmin="-3354" zmax="-2754"/>
+			<add x="-55168" y="72314" zmin="-3354" zmax="-2754"/>
+		</territory>
+		<npc id="20038"/><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<spawn name="oren25_1820_14s" count="3" respawn="20">
+		<territory>
+			<add x="-65127" y="83768" zmin="-3768" zmax="-3168"/>
+			<add x="-62890" y="83761" zmin="-3768" zmax="-3168"/>
+			<add x="-62907" y="85891" zmin="-3768" zmax="-3168"/>
+			<add x="-65090" y="86598" zmin="-3768" zmax="-3168"/>
+		</territory>
+		<npc id="20043"/><!--Арахнид Охотник-->
+	</spawn>
+	<spawn name="oren25_1820_15s" count="3" respawn="20">
+		<territory>
+			<add x="-61039" y="81742" zmin="-3717" zmax="-3117"/>
+			<add x="-59581" y="81016" zmin="-3717" zmax="-3117"/>
+			<add x="-59861" y="84019" zmin="-3717" zmax="-3117"/>
+			<add x="-61637" y="84254" zmin="-3717" zmax="-3117"/>
+		</territory>
+		<npc id="20418"/><!--Кристальный Зверь-->
+	</spawn>
+	<spawn name="oren25_1820_12s" count="3" respawn="20">
+		<territory>
+			<add x="-65282" y="72286" zmin="-3717" zmax="-3117"/>
+			<add x="-63238" y="72130" zmin="-3717" zmax="-3117"/>
+			<add x="-62886" y="73987" zmin="-3717" zmax="-3117"/>
+			<add x="-65280" y="75136" zmin="-3717" zmax="-3117"/>
+		</territory>
+		<npc id="20418"/><!--Кристальный Зверь-->
+	</spawn>
+	<spawn name="oren25_1820_13s" count="3" respawn="20">
+		<territory>
+			<add x="-60608" y="76260" zmin="-3717" zmax="-3117"/>
+			<add x="-58563" y="76269" zmin="-3717" zmax="-3117"/>
+			<add x="-59030" y="78487" zmin="-3717" zmax="-3117"/>
+			<add x="-60641" y="78377" zmin="-3717" zmax="-3117"/>
+		</territory>
+		<npc id="20038"/><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<spawn name="oren07_npc1820_gd01" count="1" respawn="60">
+		<territory>
+			<add x="-38852" y="65704" zmin="-3988" zmax="-2988"/>
+			<add x="-33128" y="65708" zmin="-3988" zmax="-2988"/>
+			<add x="-33064" y="70480" zmin="-3988" zmax="-2988"/>
+			<add x="-39574" y="69152" zmin="-3988" zmax="-2988"/>
+			<add x="-46155" y="72222" zmin="-3988" zmax="-2988"/>
+			<add x="-54699" y="69098" zmin="-3988" zmax="-2988"/>
+			<add x="-54448" y="65648" zmin="-3988" zmax="-2988"/>
+		</territory>
+		<npc id="31845"/><!--Кровавая Фея-->
+	</spawn>
+	<spawn name="oren07_npc1820_gd04" count="1" respawn="60">
+		<territory>
+			<add x="-58046" y="81599" zmin="-3716" zmax="-2716"/>
+			<add x="-55620" y="82326" zmin="-3716" zmax="-2716"/>
+			<add x="-51319" y="81070" zmin="-3716" zmax="-2716"/>
+			<add x="-47475" y="83532" zmin="-3716" zmax="-2716"/>
+			<add x="-51651" y="88578" zmin="-3716" zmax="-2716"/>
+			<add x="-49752" y="95930" zmin="-3716" zmax="-2716"/>
+			<add x="-55942" y="93955" zmin="-3716" zmax="-2716"/>
+		</territory>
+		<npc id="31845"/><!--Кровавая Фея-->
+	</spawn>
+	<spawn name="oren07_npc1820_gd05" count="1" respawn="60">
+		<territory>
+			<add x="-39455" y="69690" zmin="-3756" zmax="-2956"/>
+			<add x="-33018" y="70895" zmin="-3756" zmax="-2956"/>
+			<add x="-33375" y="83820" zmin="-3756" zmax="-2956"/>
+			<add x="-38733" y="84511" zmin="-3756" zmax="-2956"/>
+			<add x="-41291" y="82739" zmin="-3756" zmax="-2956"/>
+			<add x="-45857" y="84895" zmin="-3756" zmax="-2956"/>
+			<add x="-48982" y="79482" zmin="-3756" zmax="-2956"/>
+			<add x="-46243" y="72682" zmin="-3756" zmax="-2956"/>
+		</territory>
+		<npc id="31845"/><!--Кровавая Фея-->
+	</spawn>
+	<spawn name="oren07_npc1820_gd02" count="1" respawn="60">
+		<territory>
+			<add x="-59578" y="66143" zmin="-3816" zmax="-2666"/>
+			<add x="-54676" y="65796" zmin="-3816" zmax="-2666"/>
+			<add x="-55100" y="70131" zmin="-3816" zmax="-2666"/>
+			<add x="-57215" y="72633" zmin="-3816" zmax="-2666"/>
+			<add x="-59073" y="87863" zmin="-3816" zmax="-2666"/>
+			<add x="-61855" y="91006" zmin="-3816" zmax="-2666"/>
+			<add x="-65142" y="89399" zmin="-3816" zmax="-2666"/>
+			<add x="-65116" y="72185" zmin="-3816" zmax="-2666"/>
+		</territory>
+		<npc id="31850"/><!--Тлетворный Древень-->
+	</spawn>
+	<spawn name="oren07_npc1820_gd03" count="1" respawn="60">
+		<territory>
+			<add x="-54278" y="69548" zmin="-3984" zmax="-2984"/>
+			<add x="-43803" y="73476" zmin="-3984" zmax="-2984"/>
+			<add x="-42931" y="78607" zmin="-3984" zmax="-2984"/>
+			<add x="-44564" y="82307" zmin="-3984" zmax="-2984"/>
+			<add x="-51145" y="80508" zmin="-3984" zmax="-2984"/>
+			<add x="-53593" y="75430" zmin="-3984" zmax="-2984"/>
+			<add x="-57134" y="75580" zmin="-3984" zmax="-2984"/>
+			<add x="-56916" y="72746" zmin="-3984" zmax="-2984"/>
+		</territory>
+		<npc id="31850"/><!--Тлетворный Древень-->
+	</spawn>
+	<spawn name="oren07_npc1820_gd06" count="1" respawn="60">
+		<territory>
+			<add x="-57238" y="75955" zmin="-3952" zmax="-3052"/>
+			<add x="-53796" y="75592" zmin="-3952" zmax="-3052"/>
+			<add x="-51588" y="80672" zmin="-3952" zmax="-3052"/>
+			<add x="-55652" y="81924" zmin="-3952" zmax="-3052"/>
+			<add x="-57934" y="81320" zmin="-3952" zmax="-3052"/>
+		</territory>
+		<npc id="31850"/><!--Тлетворный Древень-->
+	</spawn>
+			<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-55386" y="95628" z="-3360" h="4428" />
+		<npc id="20038" /><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-55338" y="95980" zmin="-3299" zmax="-3999"/>
+		<npc id="20335" /><!--Гризли-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-56284" y="97005" zmin="-3299" zmax="-3999"/>
+		<npc id="20038" /><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-55872" y="96637" zmin="-3299" zmax="-3999"/>
+		<npc id="20358" /><!--Охотник Крысолюдов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-56395" y="97330" zmin="-3299" zmax="-3999"/>
+		<npc id="20038" /><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-55989" y="97612" zmin="-3299" zmax="-3999"/>
+		<npc id="20335" /><!--Гризли-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-55851" y="97301" zmin="-3299" zmax="-3999"/>
+		<npc id="20038" /><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-56130" y="97158" zmin="-3299" zmax="-3999"/>
+		<npc id="20335" /><!--Гризли-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-56338" y="97744" zmin="-3299" zmax="-3999"/>
+		<npc id="20335" /><!--Гризли-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-55516" y="97059" zmin="-3299" zmax="-3999"/>
+		<npc id="20358" /><!--Охотник Крысолюдов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-55575" y="96528" zmin="-3299" zmax="-3999"/>
+		<npc id="20358" /><!--Охотник Крысолюдов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-55761" y="97690" zmin="-3299" zmax="-3999"/>
+		<npc id="20358" /><!--Охотник Крысолюдов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-55929" y="97627" zmin="-3299" zmax="-3999"/>
+		<npc id="20358" /><!--Охотник Крысолюдов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-54633" y="97583" zmin="-3299" zmax="-3999"/>
+		<npc id="20038" /><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-55061" y="96373" zmin="-3299" zmax="-3999"/>
+		<npc id="20335" /><!--Гризли-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-53759" y="96598" zmin="-3299" zmax="-3999"/>
+		<npc id="20335" /><!--Гризли-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-51516" y="96251" zmin="-3299" zmax="-3999"/>
+		<npc id="20358" /><!--Охотник Крысолюдов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-52614" y="97634" zmin="-3299" zmax="-3999"/>
+		<npc id="20038" /><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-52704" y="97057" zmin="-3299" zmax="-3999"/>
+		<npc id="20038" /><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-52200" y="97511" zmin="-3299" zmax="-3999"/>
+		<npc id="20038" /><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-52292" y="97200" zmin="-3299" zmax="-3999"/>
+		<npc id="20335" /><!--Гризли-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-52448" y="97107" zmin="-3299" zmax="-3999"/>
+		<npc id="20358" /><!--Охотник Крысолюдов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-51025" y="97580" zmin="-3299" zmax="-3999"/>
+		<npc id="20358" /><!--Охотник Крысолюдов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-44417" y="95367" zmin="-3299" zmax="-3999"/>
+		<npc id="20335" /><!--Гризли-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-43262" y="95516" zmin="-3299" zmax="-3999"/>
+		<npc id="20358" /><!--Охотник Крысолюдов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-44279" y="97359" zmin="-3299" zmax="-3999"/>
+		<npc id="20335" /><!--Гризли-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-43246" y="96991" zmin="-3299" zmax="-3999"/>
+		<npc id="20335" /><!--Гризли-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-43705" y="96962" zmin="-3299" zmax="-3999"/>
+		<npc id="20358" /><!--Охотник Крысолюдов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-40744" y="94649" zmin="-3299" zmax="-3999"/>
+		<npc id="20358" /><!--Охотник Крысолюдов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-39466" y="94668" zmin="-3299" zmax="-3999"/>
+		<npc id="20358" /><!--Охотник Крысолюдов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-39898" y="94928" zmin="-3299" zmax="-3999"/>
+		<npc id="20038" /><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-40581" y="94490" zmin="-3299" zmax="-3999"/>
+		<npc id="20358" /><!--Охотник Крысолюдов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-40787" y="94703" zmin="-3299" zmax="-3999"/>
+		<npc id="20038" /><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-39595" y="96916" zmin="-3299" zmax="-3999"/>
+		<npc id="20038" /><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-37816" y="94353" zmin="-3299" zmax="-3999"/>
+		<npc id="20335" /><!--Гризли-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-38353" y="96048" zmin="-3299" zmax="-3999"/>
+		<npc id="20335" /><!--Гризли-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-37736" y="95999" zmin="-3299" zmax="-3999"/>
+		<npc id="20038" /><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-38933" y="95665" zmin="-3299" zmax="-3999"/>
+		<npc id="20335" /><!--Гризли-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-38151" y="95214" zmin="-3299" zmax="-3999"/>
+		<npc id="20038" /><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-38555" y="95416" zmin="-3299" zmax="-3999"/>
+		<npc id="20335" /><!--Гризли-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-38355" y="95598" zmin="-3299" zmax="-3999"/>
+		<npc id="20335" /><!--Гризли-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-37952" y="95271" zmin="-3299" zmax="-3999"/>
+		<npc id="20038" /><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-38050" y="97738" zmin="-3299" zmax="-3999"/>
+		<npc id="20335" /><!--Гризли-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-35455" y="93921" zmin="-3299" zmax="-3999"/>
+		<npc id="20038" /><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-34843" y="94359" zmin="-3299" zmax="-3999"/>
+		<npc id="20358" /><!--Охотник Крысолюдов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-36506" y="97504" zmin="-3299" zmax="-3999"/>
+		<npc id="20038" /><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-33602" y="94176" zmin="-3299" zmax="-3999"/>
+		<npc id="20358" /><!--Охотник Крысолюдов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-33752" y="94370" zmin="-3299" zmax="-3999"/>
+		<npc id="20358" /><!--Охотник Крысолюдов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-33240" y="97523" zmin="-3299" zmax="-3999"/>
+		<npc id="20358" /><!--Охотник Крысолюдов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-34109" y="97122" zmin="-3299" zmax="-3999"/>
+		<npc id="20038" /><!--Гигантский Ядовитый Паук-->
+	</spawn>
+</list>

@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn name="innadril01_npc2324_18" count="1" respawn="60">
+		<point x="129812" y="219005" z="-3583" h="24952"/>
+		<npc id="30971"/><!--Орфеус-->
+	</spawn>	
+	<territory name="innadril13_2324_tas03">
+		<add x="102952" y="209827" zmin="-3092" zmax="-2492"/>
+		<add x="104702" y="209799" zmin="-3092" zmax="-2492"/>
+		<add x="105958" y="211507" zmin="-3092" zmax="-2492"/>
+		<add x="105550" y="213106" zmin="-3092" zmax="-2492"/>
+	</territory>
+	<spawn name="innadril13_2324_tas03" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_tas03"/>
+		<npc id="20784"/><!--Ящер Тасаба-->
+	</spawn>
+	<spawn name="innadril13_2324_tas03" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_tas03"/>
+		<npc id="20785"/><!--Шаман Ящеров Тасаба-->
+	</spawn>
+	<territory name="innadril13_2324_tas02">
+		<add x="100663" y="199952" zmin="-3784" zmax="-3584"/>
+		<add x="102840" y="199311" zmin="-3784" zmax="-3584"/>
+		<add x="102618" y="200631" zmin="-3784" zmax="-3584"/>
+		<add x="100890" y="201048" zmin="-3784" zmax="-3584"/>
+	</territory>
+	<spawn name="innadril13_2324_tas02" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_tas02"/>
+		<npc id="20784"/><!--Ящер Тасаба-->
+	</spawn>
+	<spawn name="innadril13_2324_tas02" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_tas02"/>
+		<npc id="20785"/><!--Шаман Ящеров Тасаба-->
+	</spawn>
+	<territory name="innadril13_2324_tas01">
+		<add x="104812" y="201853" zmin="-3753" zmax="-2953"/>
+		<add x="106386" y="201898" zmin="-3753" zmax="-2953"/>
+		<add x="106134" y="204477" zmin="-3753" zmax="-2953"/>
+		<add x="103123" y="203007" zmin="-3753" zmax="-2953"/>
+	</territory>
+	<spawn name="innadril13_2324_tas01" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_tas01"/>
+		<npc id="20784"/><!--Ящер Тасаба-->
+	</spawn>
+	<spawn name="innadril13_2324_tas01" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_tas01"/>
+		<npc id="20785"/><!--Шаман Ящеров Тасаба-->
+	</spawn>
+	<territory name="innadril13_2324_lien01">
+		<add x="117679" y="211677" zmin="-3816" zmax="-3016"/>
+		<add x="121408" y="208460" zmin="-3816" zmax="-3016"/>
+		<add x="123515" y="208312" zmin="-3816" zmax="-3016"/>
+		<add x="122186" y="210758" zmin="-3816" zmax="-3016"/>
+		<add x="118246" y="212386" zmin="-3816" zmax="-3016"/>
+	</territory>
+	<spawn name="innadril13_2324_lien01" count="4" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_lien01"/>
+		<npc id="20786"/><!--Аспид-->
+	</spawn>
+	<spawn name="innadril13_2324_lien01" count="4" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_lien01"/>
+		<npc id="20787"/><!--Юный Аспид-->
+	</spawn>
+	<territory name="innadril13_2324_lien04">
+		<add x="122913" y="221694" zmin="-2888" zmax="-2388"/>
+		<add x="124357" y="221694" zmin="-2888" zmax="-2388"/>
+		<add x="124464" y="223751" zmin="-2888" zmax="-2388"/>
+		<add x="122750" y="223968" zmin="-2888" zmax="-2388"/>
+	</territory>
+	<spawn name="innadril13_2324_lien04" count="4" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_lien04"/>
+		<npc id="20786"/><!--Аспид-->
+	</spawn>
+	<spawn name="innadril13_2324_lien04" count="4" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_lien04"/>
+		<npc id="20787"/><!--Юный Аспид-->
+	</spawn>
+	<territory name="innadril13_2324_lien02">
+		<add x="120905" y="213536" zmin="-3716" zmax="-3316"/>
+		<add x="125560" y="213540" zmin="-3716" zmax="-3316"/>
+		<add x="124086" y="214957" zmin="-3716" zmax="-3316"/>
+		<add x="120317" y="215065" zmin="-3716" zmax="-3316"/>
+	</territory>
+	<spawn name="innadril13_2324_lien02" count="4" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_lien02"/>
+		<npc id="20786"/><!--Аспид-->
+	</spawn>
+	<spawn name="innadril13_2324_lien02" count="4" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_lien02"/>
+		<npc id="20787"/><!--Юный Аспид-->
+	</spawn>
+	<territory name="innadril13_2324_lien03">
+		<add x="123997" y="218677" zmin="-3528" zmax="-2928"/>
+		<add x="126409" y="218588" zmin="-3528" zmax="-2928"/>
+		<add x="126114" y="220819" zmin="-3528" zmax="-2928"/>
+		<add x="123804" y="219959" zmin="-3528" zmax="-2928"/>
+	</territory>
+	<spawn name="innadril13_2324_lien03" count="4" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_lien03"/>
+		<npc id="20786"/><!--Аспид-->
+	</spawn>
+	<spawn name="innadril13_2324_lien03" count="4" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_lien03"/>
+		<npc id="20787"/><!--Юный Аспид-->
+	</spawn>
+	<territory name="innadril13_2324_croc02">
+		<add x="108889" y="197996" zmin="-3760" zmax="-3460"/>
+		<add x="112323" y="199201" zmin="-3760" zmax="-3460"/>
+		<add x="111731" y="199822" zmin="-3760" zmax="-3460"/>
+		<add x="108634" y="198284" zmin="-3760" zmax="-3460"/>
+	</territory>
+	<spawn name="innadril13_2324_croc02" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc02"/>
+		<npc id="20135"/><!--Аллигатор-->
+	</spawn>
+	<spawn name="innadril13_2324_croc02" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc02"/>
+		<npc id="20792"/><!--Крок Шаман-->
+	</spawn>
+	<spawn name="innadril13_2324_croc02" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc02"/>
+		<npc id="20789"/><!--Крок-->
+	</spawn>
+	<spawn name="innadril13_2324_croc02" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc02"/>
+		<npc id="20790"/><!--Кайман-->
+	</spawn>
+	<territory name="innadril13_2324_croc01">
+		<add x="109022" y="198572" zmin="-3814" zmax="-3014"/>
+		<add x="111677" y="199916" zmin="-3814" zmax="-3014"/>
+		<add x="109883" y="201624" zmin="-3814" zmax="-3014"/>
+		<add x="106772" y="201334" zmin="-3814" zmax="-3014"/>
+	</territory>
+	<spawn name="innadril13_2324_croc01" count="3" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc01"/>
+		<npc id="20135"/><!--Аллигатор-->
+	</spawn>
+	<spawn name="innadril13_2324_croc01" count="3" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc01"/>
+		<npc id="20792"/><!--Крок Шаман-->
+	</spawn>
+	<spawn name="innadril13_2324_croc01" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc01"/>
+		<npc id="20789"/><!--Крок-->
+	</spawn>
+	<spawn name="innadril13_2324_croc01" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc01"/>
+		<npc id="20791"/><!--Крок Воин-->
+	</spawn>
+	<territory name="innadril13_2324_croc04">
+		<add x="114020" y="199395" zmin="-3804" zmax="-3604"/>
+		<add x="115703" y="199157" zmin="-3804" zmax="-3604"/>
+		<add x="115836" y="199572" zmin="-3804" zmax="-3604"/>
+		<add x="113577" y="199902" zmin="-3804" zmax="-3604"/>
+	</territory>
+	<spawn name="innadril13_2324_croc04" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc04"/>
+		<npc id="20135"/><!--Аллигатор-->
+	</spawn>
+	<spawn name="innadril13_2324_croc04" count="1" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc04"/>
+		<npc id="20792"/><!--Крок Шаман-->
+	</spawn>
+	<spawn name="innadril13_2324_croc04" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc04"/>
+		<npc id="20789"/><!--Крок-->
+	</spawn>
+	<spawn name="innadril13_2324_croc04" count="1" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc04"/>
+		<npc id="20790"/><!--Кайман-->
+	</spawn>
+	<territory name="innadril13_2324_croc03">
+		<add x="112870" y="198916" zmin="-3814" zmax="-3014"/>
+		<add x="113997" y="199265" zmin="-3814" zmax="-3014"/>
+		<add x="112526" y="201064" zmin="-3814" zmax="-3014"/>
+		<add x="110681" y="200917" zmin="-3814" zmax="-3014"/>
+	</territory>
+	<spawn name="innadril13_2324_croc03" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc03"/>
+		<npc id="20135"/><!--Аллигатор-->
+	</spawn>
+	<spawn name="innadril13_2324_croc03" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc03"/>
+		<npc id="20792"/><!--Крок Шаман-->
+	</spawn>
+	<spawn name="innadril13_2324_croc03" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc03"/>
+		<npc id="20789"/><!--Крок-->
+	</spawn>
+	<territory name="innadril13_2324_croc06">
+		<add x="117138" y="198615" zmin="-3764" zmax="-3564"/>
+		<add x="118016" y="198989" zmin="-3764" zmax="-3564"/>
+		<add x="118183" y="199896" zmin="-3764" zmax="-3564"/>
+		<add x="116519" y="199179" zmin="-3764" zmax="-3564"/>
+	</territory>
+	<spawn name="innadril13_2324_croc06" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc06"/>
+		<npc id="20792"/><!--Крок Шаман-->
+	</spawn>
+	<spawn name="innadril13_2324_croc06" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc06"/>
+		<npc id="20789"/><!--Крок-->
+	</spawn>
+	<spawn name="innadril13_2324_croc06" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc06"/>
+		<npc id="20790"/><!--Кайман-->
+	</spawn>
+	<spawn name="innadril13_2324_croc06" count="1" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc06"/>
+		<npc id="20791"/><!--Крок Воин-->
+	</spawn>
+	<spawn name="innadril13_2324_croc06" count="1" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc06"/>
+		<npc id="20793"/><!--Рогач-->
+	</spawn>
+	<territory name="innadril13_2324_croc05">
+		<add x="113733" y="200706" zmin="-3819" zmax="-3019"/>
+		<add x="116145" y="200194" zmin="-3819" zmax="-3019"/>
+		<add x="115379" y="202202" zmin="-3819" zmax="-3019"/>
+		<add x="112944" y="202817" zmin="-3819" zmax="-3019"/>
+	</territory>
+	<spawn name="innadril13_2324_croc05" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc05"/>
+		<npc id="20789"/><!--Крок-->
+	</spawn>
+	<spawn name="innadril13_2324_croc05" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc05"/>
+		<npc id="20790"/><!--Кайман-->
+	</spawn>
+	<spawn name="innadril13_2324_croc05" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc05"/>
+		<npc id="20791"/><!--Крок Воин-->
+	</spawn>
+	<spawn name="innadril13_2324_croc05" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc05"/>
+		<npc id="20793"/><!--Рогач-->
+	</spawn>
+	<territory name="innadril13_2324_croc07">
+		<add x="123819" y="200826" zmin="-2896" zmax="-2496"/>
+		<add x="125842" y="200991" zmin="-2896" zmax="-2496"/>
+		<add x="126187" y="201710" zmin="-2896" zmax="-2496"/>
+		<add x="124150" y="201856" zmin="-2896" zmax="-2496"/>
+	</territory>
+	<spawn name="innadril13_2324_croc07" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc07"/>
+		<npc id="20792"/><!--Крок Шаман-->
+	</spawn>
+	<spawn name="innadril13_2324_croc07" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc07"/>
+		<npc id="20789"/><!--Крок-->
+	</spawn>
+	<spawn name="innadril13_2324_croc07" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc07"/>
+		<npc id="20790"/><!--Кайман-->
+	</spawn>
+	<spawn name="innadril13_2324_croc07" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc07"/>
+		<npc id="20791"/><!--Крок Воин-->
+	</spawn>
+	<spawn name="innadril13_2324_croc07" count="2" respawn="40" respawn_random="20">
+		<territory name="innadril13_2324_croc07"/>
+		<npc id="20793"/><!--Рогач-->
+	</spawn>
+	<spawn name="innadril09_npc2324_premium01" count="1" respawn="60" group="vitamin_manager">
+		<point x="109952" y="220608" z="-3480" h="16500"/>
+		<npc id="32478"/><!--Менеджер Витаминов-->
+	</spawn>
+	<spawn name="innadril09_npc2324_03" count="1" respawn="60">
+		<point x="115735" y="219407" z="-3659" h="32768"/>
+		<npc id="30921"/><!--Тимос-->
+	</spawn>
+	<spawn name="innadril09_npc2324_03" count="1" respawn="60">
+		<point x="115737" y="219156" z="-3659" h="32768"/>
+		<npc id="30920"/><!--Крайсен-->
+	</spawn>
+	<spawn name="innadril09_npc2324_02" count="1" respawn="60">
+		<point x="106938" y="218283" z="-3664" h="0"/>
+		<npc id="30917"/><!--Дупуис-->
+	</spawn>
+	<spawn name="innadril09_npc2324_01" count="1" respawn="60">
+		<point x="103710" y="218030" z="-3584" h="32852"/>
+		<npc id="30918"/><!--Кент-->
+	</spawn>
+	<spawn name="innadril09_npc2324_01" count="1" respawn="60">
+		<point x="103711" y="218289" z="-3584" h="32852"/>
+		<npc id="30919"/><!--Родик-->
+	</spawn>
+	<spawn name="innadril09_npc2324_07" count="1" respawn="60">
+		<point x="109623" y="220091" z="-3520" h="2088"/>
+		<npc id="30895"/><!--Клак-->
+	</spawn>
+	<spawn name="innadril09_npc2324_07" count="1" respawn="60">
+		<point x="109627" y="220168" z="-3520" h="0"/>
+		<npc id="30894"/><!--Натулс-->
+	</spawn>
+	<spawn name="innadril09_npc2324_07" count="1" respawn="60">
+		<point x="109625" y="220238" z="-3520" h="-3320"/>
+		<npc id="30896"/><!--Миа-->
+	</spawn>
+	<spawn name="innadril09_npc2324_07" count="1" respawn="60">
+		<point x="109707" y="220044" z="-3516" h="7656"/>
+		<npc id="30969"/><!--Ясон Хейн-->
+	</spawn>
+	<spawn name="innadril09_npc2324_06" count="1" respawn="60">
+		<point x="107253" y="217252" z="-3597" h="39408"/>
+		<npc id="31050"/><!--Тора-->
+	</spawn>
+	<spawn name="innadril09_npc2324_06" count="1" respawn="60">
+		<point x="107082" y="216673" z="-3595" h="13168"/>
+		<npc id="30892"/><!--Энверун-->
+	</spawn>
+	<spawn name="innadril09_npc2324_06" count="1" respawn="60">
+		<point x="107141" y="216674" z="-3595" h="19624"/>
+		<npc id="30893"/><!--Пауел-->
+	</spawn>
+	<spawn name="innadril09_npc2324_06" count="1" respawn="60">
+		<point x="106955" y="216987" z="-3600" h="0"/>
+		<npc id="31042"/><!--Кантабилон-->
+	</spawn>
+	<spawn name="innadril09_npc2324_05" count="1" respawn="60">
+		<point x="115799" y="217684" z="-3580" h="16416"/>
+		<npc id="30890"/><!--Эспен-->
+	</spawn>
+	<spawn name="innadril09_npc2324_05" count="1" respawn="60">
+		<point x="115957" y="217807" z="-3582" h="-36216"/>
+		<npc id="30891"/><!--Верона-->
+	</spawn>
+	<spawn name="innadril09_npc2324_04" count="1" respawn="60">
+		<point x="118944" y="219120" z="-3568" h="0"/>
+		<npc id="30922"/><!--Кейдж-->
+	</spawn>
+	<spawn name="innadril09_npc2324_04" count="1" respawn="60">
+		<point x="118944" y="219437" z="-3568" h="0"/>
+		<npc id="30923"/><!--Данст-->
+	</spawn>
+	<spawn name="innadril09_npc2324_09" count="1" respawn="60">
+		<point x="111386" y="219413" z="-3536" h="-15780"/>
+		<npc id="30899"/><!--Флоен-->
+	</spawn>
+	<spawn name="innadril09_npc2324_08" count="1" respawn="60">
+		<point x="108003" y="218963" z="-3656" h="-22328"/>
+		<npc id="30897"/><!--Роман-->
+	</spawn>
+	<spawn name="innadril09_npc2324_08" count="1" respawn="60">
+		<point x="107763" y="218725" z="-3659" h="12192"/>
+		<npc id="30898"/><!--Морнинг-->
+	</spawn>
+	<spawn name="innadril09_npc2324_13" count="1" respawn="60">
+		<point x="115904" y="219919" z="-3627" h="-32888"/>
+		<npc id="30910"/><!--Ксайракин-->
+	</spawn>
+	<spawn name="innadril09_npc2324_13" count="1" respawn="60">
+		<point x="115618" y="219666" z="-3627" h="11680"/>
+		<npc id="30911"/><!--Брикус-->
+	</spawn>
+	<spawn name="innadril09_npc2324_13" count="1" respawn="60">
+		<point x="115614" y="220280" z="-3627" h="54096"/>
+		<npc id="30912"/><!--Ксеновия-->
+	</spawn>
+	<spawn name="innadril09_npc2324_13" count="1" respawn="60">
+		<point x="115531" y="220194" z="-3627" h="-76928"/>
+		<npc id="30973"/><!--Кувшин Медиума-->
+	</spawn>
+	<spawn name="innadril09_npc2324_12" count="1" respawn="60">
+		<point x="111385" y="216821" z="-3458" h="16264"/>
+		<npc id="30905"/><!--Сквиллари-->
+	</spawn>
+	<spawn name="innadril09_npc2324_12" count="1" respawn="60">
+		<point x="111226" y="216994" z="-3458" h="5384"/>
+		<npc id="30906"/><!--Рантон-->
+	</spawn>
+	<spawn name="innadril09_npc2324_12" count="1" respawn="60">
+		<point x="111548" y="217133" z="-3458" h="28808"/>
+		<npc id="30908"/><!--Таниос-->
+	</spawn>
+	<spawn name="innadril09_npc2324_12" count="1" respawn="60">
+		<point x="111221" y="217236" z="-3458" h="5384"/>
+		<npc id="30907"/><!--Миневия-->
+	</spawn>
+	<spawn name="innadril09_npc2324_12" count="1" respawn="60">
+		<point x="111549" y="217381" z="-3458" h="28808"/>
+		<npc id="30909"/><!--Анабель-->
+	</spawn>
+	<spawn name="innadril09_npc2324_17" count="1" respawn="60">
+		<point x="114939" y="223293" z="-3736" h="38248"/>
+		<npc id="30970"/><!--Дороти-->
+	</spawn>
+	<spawn name="innadril09_npc2324_15" count="1" respawn="60">
+		<point x="112050" y="225462" z="-3627" h="40960"/>
+		<npc id="30924"/><!--Неди-->
+	</spawn>
+	<spawn name="innadril09_npc2324_15" count="1" respawn="60">
+		<point x="111487" y="224587" z="-3549" h="46320"/>
+		<npc id="30925"/><!--Морелин-->
+	</spawn>
+	<spawn name="innadril09_npc2324_15" count="1" respawn="60">
+		<point x="111053" y="224148" z="-3549" h="3400"/>
+		<npc id="30926"/><!--Рестина-->
+	</spawn>
+	<spawn name="innadril09_npc2324_15" count="1" respawn="60">
+		<point x="111657" y="223985" z="-3549" h="25456"/>
+		<npc id="30927"/><!--Алисия-->
+	</spawn>
+	<spawn name="innadril09_npc2324_10" count="1" respawn="60">
+		<point x="113739" y="218423" z="-3626" h="0"/>
+		<npc id="30900"/><!--Маркус-->
+	</spawn>
+	<spawn name="innadril09_npc2324_10" count="1" respawn="60">
+		<point x="113967" y="218584" z="-3626" h="-13336"/>
+		<npc id="30901"/><!--Арти-->
+	</spawn>
+	<spawn name="innadril09_npc2324_10" count="1" respawn="60">
+		<point x="114373" y="218268" z="-3626" h="-43712"/>
+		<npc id="30902"/><!--Каруна-->
+	</spawn>
+	<spawn name="innadril09_npc2324_10" count="1" respawn="60">
+		<point x="114251" y="219489" z="-3626" h="-10752"/>
+		<npc id="30903"/><!--Траус-->
+	</spawn>
+	<spawn name="innadril09_npc2324_10" count="1" respawn="60">
+		<point x="114205" y="219156" z="-3626" h="3208"/>
+		<npc id="30904"/><!--Нейл-->
+	</spawn>
+	<spawn name="innadril09_npc2324_19" count="1" respawn="60">
+		<point x="110605" y="219495" z="-3672" h="8192"/>
+		<npc id="31067"/><!--Руд-->
+	</spawn>
+	<spawn name="innadril09_npc2324_24" count="1" respawn="60">
+		<point x="108683" y="218942" z="-3674" h="32500"/>
+		<npc id="30913"/><!--Тушку-->
+	</spawn>
+	<spawn name="innadril09_npc2324_24" count="1" respawn="60">
+		<point x="108656" y="219056" z="-3676" h="48500"/>
+		<npc id="30914"/><!--Сорбо-->
+	</spawn>
+	<spawn name="innadril09_npc2324_24" count="1" respawn="60">
+		<point x="108652" y="218856" z="-3676" h="32500"/>
+		<npc id="30915"/><!--Такина-->
+	</spawn>
+	<spawn name="innadril09_npc2324_33" count="1" respawn="60">
+		<point x="108384" y="221563" z="-3592" h="0"/>
+		<npc id="30916"/><!--Госта-->
+	</spawn>
+	<spawn name="innadril01_qm2324_01" count="3" respawn="180">
+		<territory>
+			<add x="106252" y="197068" zmin="-4236" zmax="-4036"/>
+			<add x="106452" y="197068" zmin="-4236" zmax="-4036"/>
+			<add x="106452" y="197268" zmin="-4236" zmax="-4036"/>
+			<add x="106252" y="197268" zmin="-4236" zmax="-4036"/>
+		</territory>
+		<npc id="20314"/><!--Большая Белая Акула-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="class_master">
+		<point x="111705" y="219449" z="-3697" h="10970"/>
+		<npc id="31860"/><!--Buzz the Cat-->
+	</spawn>
+</list>

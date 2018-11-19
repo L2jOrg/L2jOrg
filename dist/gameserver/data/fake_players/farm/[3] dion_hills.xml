@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE farm SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<farm name="Dion Hills" min_level="20" max_level="26">
+	<zones>
+		<zone>
+			<polygon>
+				<coords loc="20904 140648 -3800 -2800"/>
+				<coords loc="23976 136392 -3800 -2800"/>
+				<coords loc="28008 135304 -3800 -2800"/>
+				<coords loc="28552 139080 -3800 -2800"/>
+				<coords loc="28376 143864 -3800 -2800"/>
+				<coords loc="26184 145640 -3800 -2800"/>
+				<coords loc="25272 146840 -3800 -2800"/>
+				<coords loc="24552 148632 -3800 -2800"/>
+				<coords loc="22888 149496 -3800 -2800"/>
+				<coords loc="20888 150264 -3800 -2800"/>
+				<coords loc="17448 150600 -3800 -2800"/>
+				<coords loc="17416 147960 -3800 -2800"/>
+				<coords loc="22568 146696 -3800 -2800"/>
+				<coords loc="22552 143448 -3800 -2800"/>
+				<coords loc="21224 140952 -3800 -2800"/>
+			</polygon>
+		</zone>
+		<spawn_points>
+			<coords loc="24152 142328 -3168"/>
+		</spawn_points>
+	</zones>
+	<on_obtain_max_level>
+		<action id="1"/>
+	</on_obtain_max_level>
+	<go_to_town min_farm_time="1800" max_farm_time="3600">
+		<action id="1"/>
+	</go_to_town>
+	<action id="1">
+		<wait min_delay="1000" max_delay="3000"/>
+		<use_item id="736"/>
+	</action>
+</farm>

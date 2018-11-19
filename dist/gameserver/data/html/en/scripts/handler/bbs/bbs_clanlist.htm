@@ -1,0 +1,52 @@
+<html><body>
+<br><br>
+<table border=0 width=755><tr><td width=10></td><td width=600 align=left>
+<a action="bypass _bbsclan">&$430;</a>&nbsp;>&nbsp;Clans list
+</td></tr>
+</table>
+<center>
+<img src="L2UI.squareblank" width="1" height="10">
+<table border=0 cellspacing=0 cellpadding=0 width=755 bgcolor=A7A19A>
+<tr><td WIDTH=5></td><td height=10 WIDTH=750></td></tr>
+<tr><td></td>
+<td height=20>
+<!--TEMPLATE1
+<a action="bypass _bbsclanhome_%PLEDGE_ID%">[Go to my clan]:&nbsp;%MY_PLEDGE_NAME%</a>
+TEMPLATE-->
+<?my_clan_link?>
+</td>
+<td fixWIDTH=5></td>
+</tr>
+<tr><td height=10></td></tr>
+</table>
+<br>
+<table border=0 cellspacing=0 cellpadding=2 bgcolor=A7A19A width=755>
+<tr>
+<td FIXWIDTH=5></td>
+<td FIXWIDTH=200 align=center>Name</td>
+<td FIXWIDTH=200 align=center>Leader</td>
+<td FIXWIDTH=100 align=center>Level</td>
+<td FIXWIDTH=200 align=center>Members count</td>
+<td FIXWIDTH=5></td>
+</tr>
+</table>
+<img src="L2UI.Squareblank" width="1" height="5">
+%CLAN_LIST%
+<img src="L2UI.SquareBlank" width="755" height="2">
+<table cellpadding=0 cellspacing=2 border=0><tr>
+<td><table><tr><td></td></tr><tr><td><button action="%ACTION_GO_LEFT%" back="L2UI_CT1.Button_DF_Left_Down" fore="L2UI_CT1.Button_DF_Left" width=15 height=15 ></td></tr></table></td>
+ %GO_LIST%
+<td>%NPAGE%</td>
+ %GO_LIST2%
+<td><table><tr><td></td></tr><tr><td><button action="%ACTION_GO_RIGHT%" back="L2UI_CT1.Button_DF_Right_Down" fore="L2UI_CT1.Button_DF_Right" width=15 height=15 ></td></tr></table></td>
+</tr></table> 
+<table border=0 cellspacing=0 cellpadding=0>
+<tr><td width=755 height=20></td></tr>
+</table>
+<table border=0><tr><td><combobox width=65 var=keyword list="Name;Ruler"></td><td><edit var = "Search" width=130 height=15 length="16"></td>
+<td><button value="&$420;" action="Write _bbsclansearch -1 0 Search keyword keyword" back="l2ui_ct1.button.button_df_small_down" width=70 height=25 fore="l2ui_ct1.button.button_df_small"> </td> </tr></table>
+<br>
+</center>
+<br> 
+<br><br>
+</body></html>

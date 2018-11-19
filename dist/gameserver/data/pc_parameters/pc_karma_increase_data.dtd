@@ -1,0 +1,16 @@
+<!ELEMENT list (parameters|table)*>
+
+	<!ELEMENT parameters (#PCDATA)>
+	<!ATTLIST parameters
+		penalty_start_karma CDATA #REQUIRED
+		penalty_duration_default CDATA #REQUIRED
+		penalty_duration_increase CDATA #REQUIRED
+		down_time_multiple CDATA #REQUIRED
+		criminal_duration_multiple CDATA #REQUIRED>
+
+	<!ELEMENT table (increase)*>
+
+		<!ELEMENT increase (#PCDATA)>
+		<!ATTLIST increase
+			lvl CDATA #REQUIRED
+			value CDATA #REQUIRED>

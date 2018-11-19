@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "premium_accounts.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<!--based_on_gameserver - премиум аккаунт будет храниться в гейм сервере.-->
+	<!--free_type - тип премиум аккаунта, выдаваемого бесплатно, при создании первого персонажа.-->
+	<!--free_delay - время действия премиум аккаунта, выдаваемого бесплатно, при создании первого персонажа (в часах).-->
+	<!--notify_free - сообщать персонажу о выдаче бесплатного премиум аккаунта.-->
+	<config enabled="false" based_on_gameserver="true" free_type="0" free_delay="0" notify_free="true"/>
+	<account type="1">
+		<name>
+			<en>Rates x1.5</en>
+			<ru>Рейты x1.5</ru>
+		</name>
+		<!--<properties name_color="FFFFFF" title_color="FFFF77"/>-->
+		<rates exp="1.5" sp="1.5" adena="1.5" drop="1.5" spoil="1.5" quest_drop="1.5" quest_reward="1.5"/>
+		<modifiers drop_chance="1" spoil_chance="1"/>
+		<bonus enchant_chance="5" craft_chance="0"/>
+		<give_items_on_start>
+			<item id="20662" count="1"/>	<!--Браслет Печати Агатиона - Утанка-->
+		</give_items_on_start>
+		<take_items_on_end>
+			<item id="20662" count="1"/>	<!--Браслет Печати Агатиона - Утанка-->
+		</take_items_on_end>
+		<fee delay="48">
+			<item id="57" count="50000"/>	<!--Adena-->
+		</fee>
+		<!--EXAMPLE:
+		<stats>
+			<add order="0x80" stat="maxHp" value="10000"/>
+		</stats>
+		<skills>
+			<skill id="5400" level="1"/>
+		</skills>
+		<triggers>
+			<trigger id="3070" level="1" type="CRIT" chance="100"/>
+		</triggers>
+		-->
+	</account>
+	<account type="2">
+		<name>
+			<en>Rates x2</en>
+			<ru>Рейты x2</ru>
+		</name>
+		<!--<properties name_color="FFFFFF" title_color="FFFF77"/>-->
+		<rates exp="2" sp="2" adena="2" drop="2" spoil="2" quest_drop="2" quest_reward="2"/>
+		<modifiers drop_chance="1" spoil_chance="1"/>
+		<bonus enchant_chance="5" craft_chance="0"/>
+		<give_items_on_start>
+			<item id="20662" count="1"/>	<!--Браслет Печати Агатиона - Утанка-->
+		</give_items_on_start>
+		<take_items_on_end>
+			<item id="20662" count="1"/>	<!--Браслет Печати Агатиона - Утанка-->
+		</take_items_on_end>
+		<fee delay="24">
+			<item id="57" count="1000"/>	<!--Adena-->
+		</fee>
+	</account>
+	<account type="3">
+		<name>
+			<en>Rates x3</en>
+			<ru>Рейты x3</ru>
+		</name>
+		<!--<properties name_color="FFFFFF" title_color="FFFF77"/>-->
+		<rates exp="3" sp="3" adena="3" drop="3" spoil="3" quest_drop="3" quest_reward="3"/>
+		<modifiers drop_chance="1" spoil_chance="1"/>
+		<bonus enchant_chance="5" craft_chance="0"/>
+		<give_items_on_start>
+			<item id="20662" count="1"/>	<!--Браслет Печати Агатиона - Утанка-->
+		</give_items_on_start>
+		<take_items_on_end>
+			<item id="20662" count="1"/>	<!--Браслет Печати Агатиона - Утанка-->
+		</take_items_on_end>
+		<fee delay="10">
+			<item id="57" count="1000000"/>	<!--Adena-->
+		</fee>
+	</account>
+	<account type="4">
+		<name>
+			<en>Rates x5</en>
+			<ru>Рейты x5</ru>
+		</name>
+		<!--<properties name_color="FFFFFF" title_color="FFFF77"/>-->
+		<rates exp="5" sp="5" adena="5" drop="5" spoil="5" quest_drop="5" quest_reward="5"/>
+		<modifiers drop_chance="1" spoil_chance="1"/>
+		<bonus enchant_chance="5" craft_chance="0"/>
+		<give_items_on_start>
+			<item id="20662" count="1"/>	<!--Браслет Печати Агатиона - Утанка-->
+		</give_items_on_start>
+		<take_items_on_end>
+			<item id="20662" count="1"/>	<!--Браслет Печати Агатиона - Утанка-->
+		</take_items_on_end>
+		<fee delay="1">
+			<item id="57" count="100000000"/>	<!--Adena-->
+		</fee>
+	</account>
+</list>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door name="SSQ_dungeon03_S.wsaint_invi_door02" id="21100018" hp="158250" pdef="644" mdef="518">
+		<pos x="56082" y="-251867" z="-6794"/>
+		<shape ax="55926" ay="-251890" bx="56233" by="-251891" cx="56231" cy="-251841" dx="55928" dy="-251838" minz="-6794" maxz="-6694"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="true"/>
+	</door>
+	<door name="SSQ_dungeon03_S.SSQ_room02_Door01" id="21100011" hp="158250" pdef="644" mdef="518">
+		<pos x="44713" y="-248685" z="-6793"/>
+		<shape ax="44694" ay="-248550" bx="44691" by="-248816" cx="44732" cy="-248817" dx="44729" dy="-248552" minz="-6794" maxz="-6694"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="true"/>
+	</door>
+	<door name="SSQ_dungeon03_S.SSQ_room02_Door01" id="21100101" hp="158250" pdef="644" mdef="518">
+		<pos x="55598" y="-252782" z="-6795"/>
+		<shape ax="55582" ay="-252661" bx="55579" by="-252904" cx="55617" cy="-252904" dx="55612" dy="-252662" minz="-6794" maxz="-6694"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="true"/>
+	</door>
+	<door name="SSQ_dungeon03_S.SSQ_room02_Door01" id="21100102" hp="158250" pdef="644" mdef="518">
+		<pos x="55598" y="-252163" z="-6795"/>
+		<shape ax="55582" ay="-252042" bx="55579" by="-252285" cx="55617" cy="-252285" dx="55612" dy="-252043" minz="-6794" maxz="-6694"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="true"/>
+	</door>
+	<door name="SSQ_dungeon03_S.SSQ_room02_Door01" id="21100009" hp="158250" pdef="644" mdef="518">
+		<pos x="46076" y="-248686" z="-6793"/>
+		<shape ax="46057" ay="-248551" bx="46054" by="-248817" cx="46095" cy="-248818" dx="46092" dy="-248553" minz="-6794" maxz="-6694"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="true"/>
+	</door>
+	<door name="SSQ_dungeon03_S.wsaint_door01" id="21100003" hp="158250" pdef="644" mdef="518">
+		<pos x="45396" y="-250147" z="-6791"/>
+		<shape ax="45511" ay="-250162" bx="45510" by="-250133" cx="45281" cy="-250133" dx="45281" dy="-250158" minz="-6794" maxz="-6694"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="true"/>
+	</door>
+	<door name="SSQ_dungeon03_S.wsaint_invi_door01" id="21100010" hp="158250" pdef="644" mdef="518">
+		<pos x="45396" y="-248419" z="-6792"/>
+		<shape ax="45258" ay="-248395" bx="45262" by="-248442" cx="45533" cy="-248444" dx="45532" dy="-248393" minz="-6794" maxz="-6694"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="true"/>
+	</door>
+	<door name="SSQ_dungeon03_S.SSQ_room02_Door01" id="21100013" hp="158250" pdef="644" mdef="518">
+		<pos x="44435" y="-248961" z="-6793"/>
+		<shape ax="44298" ay="-248979" bx="44571" by="-248979" cx="44569" cy="-248941" dx="44295" dy="-248943" minz="-6794" maxz="-6694"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="true"/>
+	</door>
+	<door name="SSQ_dungeon03_S.SSQ_room02_Door01" id="21100002" hp="158250" pdef="644" mdef="518">
+		<pos x="44709" y="-250592" z="-6793"/>
+		<shape ax="44690" ay="-250457" bx="44687" by="-250723" cx="44728" cy="-250724" dx="44725" dy="-250459" minz="-6794" maxz="-6694"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="true"/>
+	</door>
+	<door name="SSQ_dungeon03_S.wsaint_invi_door01" id="21100006" hp="158250" pdef="644" mdef="518">
+		<pos x="46621" y="-249636" z="-6792"/>
+		<shape ax="46649" ay="-249504" bx="46595" by="-249503" cx="46596" cy="-249765" dx="46646" dy="-249766" minz="-6794" maxz="-6694"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="true"/>
+	</door>
+	<door name="SSQ_dungeon03_S.wsaint_invi_door01" id="21100001" hp="158250" pdef="644" mdef="518">
+		<pos x="45396" y="-250859" z="-6792"/>
+		<shape ax="45531" ay="-250881" bx="45531" by="-250833" cx="45262" cy="-250834" dx="45262" dy="-250882" minz="-6794" maxz="-6694"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="true"/>
+	</door>
+	<door name="SSQ_dungeon03_S.wsaint_door01" id="21100012" hp="158250" pdef="644" mdef="518">
+		<pos x="45396" y="-249135" z="-6791"/>
+		<shape ax="45511" ay="-249150" bx="45510" by="-249121" cx="45281" cy="-249121" dx="45281" dy="-249146" minz="-6794" maxz="-6694"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="true"/>
+	</door>
+	<door name="SSQ_dungeon03_S.wsaint_door01" id="21100016" hp="158250" pdef="644" mdef="518">
+		<pos x="44886" y="-249636" z="-6791"/>
+		<shape ax="44901" ay="-249522" bx="44869" by="-249523" cx="44871" cy="-249750" dx="44899" dy="-249748" minz="-6794" maxz="-6694"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="true"/>
+	</door>
+	<door name="SSQ_dungeon03_S.SSQ_room02_Door01" id="21100104" hp="158250" pdef="644" mdef="518">
+		<pos x="56566" y="-252782" z="-6795"/>
+		<shape ax="56550" ay="-252661" bx="56547" by="-252904" cx="56585" cy="-252904" dx="56580" dy="-252662" minz="-6794" maxz="-6694"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="true"/>
+	</door>
+	<door name="SSQ_dungeon03_S.SSQ_room02_Door01" id="21100015" hp="158250" pdef="644" mdef="518">
+		<pos x="44434" y="-250314" z="-6793"/>
+		<shape ax="44297" ay="-250332" bx="44570" by="-250332" cx="44568" cy="-250294" dx="44294" dy="-250296" minz="-6794" maxz="-6694"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="true"/>
+	</door>
+	<door name="SSQ_dungeon03_S.SSQ_room02_Door01" id="21100005" hp="158250" pdef="644" mdef="518">
+		<pos x="46353" y="-250317" z="-6793"/>
+		<shape ax="46216" ay="-250335" bx="46489" by="-250335" cx="46487" cy="-250297" dx="46213" dy="-250299" minz="-6794" maxz="-6694"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="true"/>
+	</door>
+	<door name="SSQ_dungeon03_S.wsaint_door01" id="21100008" hp="158250" pdef="644" mdef="518">
+		<pos x="45917" y="-249636" z="-6791"/>
+		<shape ax="45932" ay="-249522" bx="45900" by="-249523" cx="45902" cy="-249750" dx="45930" dy="-249748" minz="-6794" maxz="-6694"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="true"/>
+	</door>
+	<door name="SSQ_dungeon03_S.SSQ_room02_Door01" id="21100004" hp="158250" pdef="644" mdef="518">
+		<pos x="46072" y="-250593" z="-6793"/>
+		<shape ax="46053" ay="-250458" bx="46050" by="-250724" cx="46091" cy="-250725" dx="46088" dy="-250460" minz="-6794" maxz="-6694"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="true"/>
+	</door>
+	<door name="SSQ_dungeon03_S.SSQ_room02_Door01" id="21100007" hp="158250" pdef="644" mdef="518">
+		<pos x="46354" y="-248962" z="-6793"/>
+		<shape ax="46217" ay="-248980" bx="46490" by="-248980" cx="46488" cy="-248942" dx="46214" dy="-248944" minz="-6794" maxz="-6694"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="true"/>
+	</door>
+	<door name="SSQ_dungeon03_S.wsaint_invi_door01" id="21100014" hp="158250" pdef="644" mdef="518">
+		<pos x="44167" y="-249636" z="-6792"/>
+		<shape ax="44140" ay="-249766" bx="44194" by="-249766" cx="44196" cy="-249502" dx="44140" dy="-249504" minz="-6794" maxz="-6694"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="true"/>
+	</door>
+	<door name="SSQ_dungeon03_S.SSQ_room02_Door01" id="21100103" hp="158250" pdef="644" mdef="518">
+		<pos x="56566" y="-252164" z="-6795"/>
+		<shape ax="56550" ay="-252043" bx="56547" by="-252286" cx="56585" cy="-252286" dx="56580" dy="-252044" minz="-6794" maxz="-6694"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="true"/>
+	</door>
+</list>

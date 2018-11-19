@@ -1,0 +1,1108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<armor id="49000" name="Agathion - Singer &amp; Dancer " add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys2.icon.br_aga_singer_dancer_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="43200"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+		<skills>
+			<skill id="21233" level="1"/>
+			<skill id="3267" level="1"/>
+			<skill id="23234" level="1"/>
+			<skill id="39016" level="1"/>
+			<skill id="39017" level="1"/>
+			<skill id="39018" level="1"/>
+		</skills>
+	</armor>
+	<etcitem id="49001" name="Agathion - Singer &amp; Dancer Pack (30-day)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<armor id="49002" name="Agathion - Singer &amp; Dancer " add_name="90-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys2.icon.br_aga_singer_dancer_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="129600"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+		<skills>
+			<skill id="21233" level="1"/>
+			<skill id="3267" level="1"/>
+			<skill id="23234" level="1"/>
+			<skill id="39016" level="1"/>
+			<skill id="39017" level="1"/>
+			<skill id="39018" level="1"/>
+		</skills>
+	</armor>
+	<etcitem id="49003" name="Agathion - Singer &amp; Dancer Pack (90-day)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49004" name="Ol Mahum Memo" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_mahum_memo"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49005" name="Turek Orc Memo" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_orc_memo"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49006" name="Ol Mahum Adena Bank" add_name="15-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_mahum_coinbox"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49007" name="Turek Orc Adena Bank" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_orc_coinbox"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49008" name="Soulshot (No-grade)" add_name="Event">
+		<set name="type" value="SOULSHOT"/>
+		<set name="icon" value="icon.etc_soulshot_none_for_rookie_i00"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49009" name="Spiritshot (No-grade)" add_name="Event">
+		<set name="type" value="SPIRITSHOT"/>
+		<set name="icon" value="icon.etc_spiritshot_none_for_rookie_i00"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49010" name="Soulshot (D-grade)" add_name="Event">
+		<set name="type" value="SOULSHOT"/>
+		<set name="icon" value="icon.etc_spirit_bullet_blue_i00"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="D"/>
+	</etcitem>
+	<etcitem id="49011" name="Spiritshot (D-grade)" add_name="Event">
+		<set name="type" value="SPIRITSHOT"/>
+		<set name="icon" value="icon.etc_spell_shot_blue_i00"/>
+		<set name="weight" value="4"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="D"/>
+	</etcitem>
+	<etcitem id="49012" name="Healing Potion" add_name="Event">
+		<set name="icon" value="icon.etc_lesser_potion_red_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49013" name="Major Healing Potion" add_name="Event">
+		<set name="icon" value="icon.etc_potion_scarlet_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49014" name="Facelifting Potion - A" add_name="Event">
+		<set name="icon" value="icon.etc_lesser_potion_purple_i00"/>
+		<set name="weight" value="50"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49015" name="Facelifting Potion - B" add_name="Event">
+		<set name="icon" value="icon.etc_lesser_potion_purple_i00"/>
+		<set name="weight" value="50"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49016" name="Facelifting Potion - C" add_name="Event">
+		<set name="icon" value="icon.etc_lesser_potion_purple_i00"/>
+		<set name="weight" value="50"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49017" name="Dye Potion - A" add_name="Event">
+		<set name="icon" value="icon.etc_lesser_potion_scarlet_i00"/>
+		<set name="weight" value="50"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49018" name="Dye Potion - B" add_name="Event">
+		<set name="icon" value="icon.etc_lesser_potion_scarlet_i00"/>
+		<set name="weight" value="50"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49019" name="Dye Potion - C" add_name="Event">
+		<set name="icon" value="icon.etc_lesser_potion_scarlet_i00"/>
+		<set name="weight" value="50"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49020" name="Dye Potion - D" add_name="Event">
+		<set name="icon" value="icon.etc_lesser_potion_scarlet_i00"/>
+		<set name="weight" value="50"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49021" name="Facelifting Potion Pack" add_name="Event">
+		<set name="icon" value="icon.event_high_oriental_park_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49022" name="Dye Potion Pack" add_name="Event">
+		<set name="icon" value="icon.event_high_oriental_park_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49023" name="Scroll: Empower" add_name="Event">
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49024" name="Scroll: Might" add_name="Event">
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49025" name="Scroll: Shield" add_name="Event">
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49026" name="Scroll: PK (No-grade)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_ev_draco_pk_count_down"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="PkDecrease"/>
+		<cond>
+			<and>
+				<player is_chaotic="false"/>
+				<player minLevel="1"/>
+				<player max_level="19"/>
+			</and>
+		</cond>
+	</etcitem>
+	<etcitem id="49027" name="Scroll: PK (D-grade)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_ev_draco_pk_count_down"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="PkDecrease"/>
+		<cond>
+			<and>
+				<player is_chaotic="false"/>
+				<player minLevel="20"/>
+				<player max_level="39"/>
+			</and>
+		</cond>
+	</etcitem>
+	<etcitem id="49028" name="Scroll: PK (C-grade)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_ev_draco_pk_count_down"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="PkDecrease"/>
+		<cond>
+			<and>
+				<player is_chaotic="false"/>
+				<player minLevel="40"/>
+				<player max_level="51"/>
+			</and>
+		</cond>
+	</etcitem>
+	<etcitem id="49029" name="Scroll: PK (B-grade)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_ev_draco_pk_count_down"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="PkDecrease"/>
+		<cond>
+			<and>
+				<player is_chaotic="false"/>
+				<player minLevel="52"/>
+				<player max_level="60"/>
+			</and>
+		</cond>
+	</etcitem>
+	<etcitem id="49030" name="Scroll: PK (A-grade)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_ev_draco_pk_count_down"/>
+		<set name="price" value="540000"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="PkDecrease"/>
+		<cond>
+			<and>
+				<player is_chaotic="false"/>
+				<player minLevel="61"/>
+				<player max_level="75"/>
+			</and>
+		</cond>
+	</etcitem>
+	<armor id="49031" name="Ring of Heir">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_classic_ring"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<skills>
+			<skill id="39019" level="1"/>
+		</skills>
+		<for>
+			<add stat="mDef" order="0x10" value="14"/>
+		</for>
+	</armor>
+	<armor id="49032" name="Eva\'s Mark" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bm_soaring_bird"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="durability" value="43200"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="FACE"/>
+		</equip>
+		<skills>
+			<skill id="39025" level="1"/>
+		</skills>
+	</armor>
+	<etcitem id="49033" name="Classic Gift Box">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_box_love_pack"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49034" name="Ol Mahum Adena Bank" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_mahum_coinbox"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49035" name="Turek Orc Adena Bank" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_orc_coinbox"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49036" name="Wind Walk Potion (Novice)">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="type" value="POTION"/>
+		<set name="reuse_delay" value="500"/>
+		<set name="icon" value="icon.etc_potion_green_i00"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<skills>
+			<skill id="39028" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="49037" name="Classic Inventory 1">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="None"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49038" name="Classic Inventory 2">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="None"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<armor id="49039" name="Necklace (Novice)">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_necklace_of_knowledge_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="price" value="50"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="19"/>
+		</for>
+	</armor>
+	<armor id="49040" name="Earring (Novice)">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_mage_earing_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="price" value="40"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="14"/>
+		</for>
+	</armor>
+	<armor id="49041" name="Ring (Novice)">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_ring_of_knowledge_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="price" value="10"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="10"/>
+		</for>
+	</armor>
+	<weapon id="49042" name="Shield (Novice)">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.shield_small_shield_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1410"/>
+		<set name="price" value="270"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pEvasRate" order="0x10" value="-8"/>
+			<add stat="sDef" order="0x10" value="68"/>
+			<add stat="rShld" order="0x10" value="20"/>
+		</for>
+	</weapon>
+	<weapon id="49043" name="Sword of Solidarity (Novice)">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_long_sword_i00"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1300"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="price" value="11840"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="17"/>
+			<add stat="mAtk" order="0x10" value="12"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<weapon id="49044" name="Wand of Adept (Novice)">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_apprentices_wand_i00"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1300"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="price" value="11840"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="17"/>
+			<add stat="mAtk" order="0x10" value="15"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="49045" name="Red Sunset Staff (Novice)">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_cedar_staff_i00"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1700"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="price" value="11840"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="15"/>
+			<add stat="mAtk" order="0x10" value="18"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="49046" name="Red Sunset Sword (Novice)">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_brandish_i00"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1300"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="price" value="11840"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="17"/>
+			<add stat="mAtk" order="0x10" value="15"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<weapon id="49047" name="Sword of Sentinel (Novice)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_broad_sword_i00"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1300"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="price" value="11840"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="15"/>
+			<add stat="mAtk" order="0x10" value="12"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<weapon id="49048" name="Staff of Sentinel (Novice)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_cedar_staff_i00"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1800"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="price" value="11840"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="14"/>
+			<add stat="mAtk" order="0x10" value="16"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="49049" name="Eldritch Dagger (Novice)">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_knife_i00"/>
+		<set name="type" value="DAGGER"/>
+		<set name="weight" value="1130"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="5"/>
+		<set name="price" value="11840"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="17"/>
+			<add stat="mAtk" order="0x10" value="15"/>
+			<set stat="basePAtkSpd" order="0x08" value="433"/>
+			<set stat="basePCritRate" order="0x08" value="120"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="49050" name="Blood Saber (Novice)">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_broad_sword_i00"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1450"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="price" value="11840"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="17"/>
+			<add stat="mAtk" order="0x10" value="15"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<weapon id="49051" name="Club (Novice)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_club_i00"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1870"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="price" value="76"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="9"/>
+			<add stat="mAtk" order="0x10" value="7"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="49052" name="Butcher\'s Sword (Novice)">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_orcish_sword_i00"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1450"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="price" value="11840"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="17"/>
+			<add stat="mAtk" order="0x10" value="15"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<weapon id="49053" name="Silversmith Hammer (Novice)">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_iron_hammer_i00"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1860"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="price" value="11840"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="17"/>
+			<add stat="mAtk" order="0x10" value="15"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<etcitem id="49054" name="Soulstone Shard">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.general_energy_condense_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49055" name="Thunder Charge" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.block_boom"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49056" name="Lucky Package: Soulshots (No-grade)" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i00"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49057" name="Lucky Package: Soulshots (D-grade)" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i01"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49058" name="Lucky Package: Soulshots (C-grade)" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i07"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49059" name="Lucky Package: Spiritshots (No-grade)" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i00"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49060" name="Lucky Package: Spiritshots (D-grade)" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i01"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49061" name="Lucky Package: Spiritshots (C-grade)" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i07"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49062" name="Mysterious Spiritshot (No-grade)">
+		<set name="type" value="SPIRITSHOT"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_spell_shot_white_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<skills>
+			<skill id="39029" level="1"/>	<!--Чудесный Заряд Духа (Без ранга)-->
+		</skills>
+	</etcitem>
+	<etcitem id="49063" name="Mysterious Spiritshot (D-grade)">
+		<set name="type" value="SPIRITSHOT"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_spell_shot_blue_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="D"/>
+		<skills>
+			<skill id="39030" level="1"/>	<!--Чудесный Заряд Духа - Ранг D-->
+		</skills>
+	</etcitem>
+	<etcitem id="49064" name="Mysterious Spiritshot (C-grade)">
+		<set name="type" value="SPIRITSHOT"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_spell_shot_green_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="C"/>
+		<skills>
+			<skill id="39031" level="1"/>	<!--Чудесный Заряд Духа - Ранг C-->
+		</skills>
+	</etcitem>
+	<etcitem id="49065" name="Lucky Package: Blessed Spiritshots (No-grade)" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i00"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49066" name="Lucky Package: Blessed Spiritshots (D-grade)" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i01"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49067" name="Lucky Package: Blessed Spiritshots (C-grade)" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i07"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49068" name="Stone of Speed" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.stone_8_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49069" name="Spirit Thunder Chest: Soulshots (No-grade)" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49070" name="Spirit Thunder Chest: Soulshots (D-grade)" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49071" name="Spirit Thunder Chest: Soulshots (C-grade)" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49072" name="Spirit Thunder Chest: Spiritshots (No-grade)" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49073" name="Spirit Thunder Chest: Spiritshots (D-grade)" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49074" name="Spirit Thunder Chest: Spiritshots (C-grade)" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49075" name="Spirit Thunder Chest: Blessed Spiritshots (No-grade)" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49076" name="Spirit Thunder Chest: Blessed Spiritshots (D-grade)" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49077" name="Spirit Thunder Chest: Blessed Spiritshots (C-grade)" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49078" name="Package: Romantic Chapeau (100-day)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i02"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49079" name="Package: Romantic Chapeau (33-day)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i03"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49080" name="Rice Cake of Fighting Spirit">
+		<set name="icon" value="icon.bm_rice_cake_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="32000" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="49081" name="Rice Cake of Flaming Fighting Spirit">
+		<set name="icon" value="icon.bm_rice_cake_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="32002" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="49082" name="Get-Rich-Quick Supply Chest">
+		<set name="icon" value="icon.event_high_oriental_park_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<weapon id="49083" name="Commander\'s Dagger">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_shining_knife_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="DAGGER"/>
+		<set name="weight" value="1150"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="5"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="10"/>
+			<add stat="mAtk" order="0x10" value="9"/>
+			<set stat="basePAtkSpd" order="0x08" value="433"/>
+			<set stat="basePCritRate" order="0x08" value="120"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<etcitem id="49084" name="Greater Scroll of Resurrection">
+		<set name="icon" value="icon.etc_scroll_of_resurrection_i01"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49085" name="Battle Support Chest">
+		<set name="icon" value="icon.etc_marguene_collection_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49086" name="Rice Cake of Fighting Spirit" add_name="For XP">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.bm_rice_cake_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="32001" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="49087" name="Improved Scroll of Escape">
+		<set name="icon" value="icon.etc_scroll_of_return_i01"/>
+		<set name="type" value="SCROLL"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="price" value="20000"/>
+		<skills>
+            <skill id="39075" level="1"/>
+        </skills>
+	</etcitem>
+	<etcitem id="49088" name="Gold Medal">
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_event_medal_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49089" name="Teleport: Entrance to Cruma Tower">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i04"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49090" name="Scroll of Escape: Entrance to Dragon Valley">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i04"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49091" name="Teleport: Dragon Valley Bridge">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i04"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49092" name="Scroll of Escape: Talking Island Village">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_capture_stone_i00"/>
+		<set name="weight" value="120"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49093" name="Scroll of Escape: Elven Village">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_capture_stone_i00"/>
+		<set name="weight" value="120"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49094" name="Scroll of Escape: Dark Elf Village">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_capture_stone_i00"/>
+		<set name="weight" value="120"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49095" name="Scroll of Escape: Orc Village">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_capture_stone_i00"/>
+		<set name="weight" value="120"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49096" name="Scroll of Escape: Dwarven Village">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_capture_stone_i00"/>
+		<set name="weight" value="120"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49097" name="Scroll of Escape: Gludin">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_capture_stone_i00"/>
+		<set name="weight" value="120"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49098" name="Scroll of Escape: Gludio">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_capture_stone_i00"/>
+		<set name="weight" value="120"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49099" name="Scroll of Escape: Dion">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_capture_stone_i00"/>
+		<set name="weight" value="120"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+</list>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "doors.dtd">
+<list>
+	<door id="21120101" name="[Combine_dun_S.Comb_inst_door_01]" hp="150" pdef="1" mdef="1">
+		<pos x="42104" y="-185452" z="-7988"/>
+		<shape ax="41979" ay="-185482" bx="42228" by="-185482" cx="42228" cy="-185426" dx="41979" dy="-185426" minz="-8005" maxz="-7905"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="21120102" name="[Combine_dun_S.Comb_inst_door_01]" hp="150" pdef="1" mdef="1">
+		<pos x="56168" y="-185516" z="-7988"/>
+		<shape ax="56043" ay="-185546" bx="56292" by="-185546" cx="56292" cy="-185490" dx="56043" dy="-185490" minz="-8005" maxz="-7905"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="21120001" name="[Combine_dun_S.Comb_inst_door_01]" hp="150" pdef="1" mdef="1">
+		<pos x="42104" y="-174188" z="-7988"/>
+		<shape ax="41979" ay="-174218" bx="42228" by="-174218" cx="42228" cy="-174162" dx="41979" dy="-174162" minz="-8005" maxz="-7905"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="21120002" name="[Combine_dun_S.Comb_inst_door_01]" hp="150" pdef="1" mdef="1">
+		<pos x="56168" y="-175276" z="-7988"/>
+		<shape ax="56043" ay="-175306" bx="56292" by="-175306" cx="56292" cy="-175250" dx="56043" dy="-175250" minz="-8005" maxz="-7905"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+</list>

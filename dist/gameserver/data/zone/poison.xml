@@ -1,0 +1,4611 @@
+<?xml version='1.0' encoding='utf-8'?><!DOCTYPE list SYSTEM "zone.dtd">
+<list>
+	<zone name="[spore_boss_poison_zone]" type="poison">
+		<polygon>
+			<coords loc="43084 15944 -4468 -4118"/>
+			<coords loc="45140 15816 -4468 -4118"/>
+			<coords loc="45748 17200 -4468 -4118"/>
+			<coords loc="44504 18780 -4468 -4118"/>
+			<coords loc="43284 18952 -4468 -4118"/>
+			<coords loc="42476 18164 -4468 -4118"/>
+			<coords loc="42480 16448 -4468 -4118"/>
+		</polygon>
+	</zone>
+	<zone name="[fireswamp_1]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="30"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="120"/>
+		<set name="off_time" value="5"/>
+		<set name="random_time" value="15"/>
+		<polygon>
+			<coords loc="141408 -9676 -4752 -4352"/>
+			<coords loc="142248 -9284 -4752 -4352"/>
+			<coords loc="142428 -8732 -4752 -4352"/>
+			<coords loc="142344 -8256 -4752 -4352"/>
+			<coords loc="142096 -8136 -4752 -4352"/>
+			<coords loc="141600 -8444 -4752 -4352"/>
+			<coords loc="141264 -9352 -4752 -4352"/>
+		</polygon>
+	</zone>
+	<zone name="[fireswamp_2]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="30"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="120"/>
+		<set name="off_time" value="5"/>
+		<set name="random_time" value="15"/>
+		<polygon>
+			<coords loc="143780 -8144 -4908 -4508"/>
+			<coords loc="144504 -8484 -4908 -4508"/>
+			<coords loc="145000 -8064 -4908 -4508"/>
+			<coords loc="144948 -7372 -4908 -4508"/>
+			<coords loc="144552 -6872 -4908 -4508"/>
+			<coords loc="144120 -7076 -4908 -4508"/>
+			<coords loc="143716 -7672 -4908 -4508"/>
+		</polygon>
+	</zone>
+	<zone name="[fireswamp_3]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="30"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="120"/>
+		<set name="off_time" value="5"/>
+		<set name="random_time" value="15"/>
+		<polygon>
+			<coords loc="144144 -7020 -4776 -4376"/>
+			<coords loc="144552 -6836 -4776 -4376"/>
+			<coords loc="144564 -6324 -4776 -4376"/>
+			<coords loc="144072 -6280 -4776 -4376"/>
+		</polygon>
+	</zone>
+	<zone name="[fireswamp_4]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="30"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="120"/>
+		<set name="off_time" value="5"/>
+		<set name="random_time" value="15"/>
+		<polygon>
+			<coords loc="144060 -6240 -4888 -4288"/>
+			<coords loc="144548 -6276 -4888 -4288"/>
+			<coords loc="145416 -5772 -4888 -4288"/>
+			<coords loc="145292 -4940 -4888 -4288"/>
+			<coords loc="144208 -5076 -4888 -4288"/>
+			<coords loc="143920 -5540 -4888 -4288"/>
+		</polygon>
+	</zone>
+	<zone name="[fireswamp_5]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="30"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="120"/>
+		<set name="off_time" value="5"/>
+		<set name="random_time" value="15"/>
+		<polygon>
+			<coords loc="148616 -9208 -4672 -4272"/>
+			<coords loc="149200 -9492 -4672 -4272"/>
+			<coords loc="149992 -9472 -4672 -4272"/>
+			<coords loc="149880 -8348 -4672 -4272"/>
+			<coords loc="148452 -8308 -4672 -4272"/>
+			<coords loc="148340 -8600 -4672 -4272"/>
+		</polygon>
+	</zone>
+	<zone name="[fireswamp_6]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="30"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="120"/>
+		<set name="off_time" value="5"/>
+		<set name="random_time" value="15"/>
+		<polygon>
+			<coords loc="151636 -8512 -4676 -4276"/>
+			<coords loc="151592 -8196 -4676 -4276"/>
+			<coords loc="150644 -7904 -4676 -4276"/>
+			<coords loc="149912 -8420 -4676 -4276"/>
+			<coords loc="150040 -9404 -4676 -4276"/>
+		</polygon>
+	</zone>
+	<zone name="[fireswamp_7]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="30"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="120"/>
+		<set name="off_time" value="5"/>
+		<set name="random_time" value="15"/>
+		<polygon>
+			<coords loc="150728 -10176 -4728 -4328"/>
+			<coords loc="151352 -10536 -4728 -4328"/>
+			<coords loc="150404 -9264 -4728 -4328"/>
+			<coords loc="150072 -9444 -4728 -4328"/>
+		</polygon>
+	</zone>
+	<zone name="[fireswamp_8]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="30"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="120"/>
+		<set name="off_time" value="5"/>
+		<set name="random_time" value="15"/>
+		<polygon>
+			<coords loc="151192 -12588 -4636 -4036"/>
+			<coords loc="151612 -11884 -4636 -4036"/>
+			<coords loc="151772 -11248 -4636 -4036"/>
+			<coords loc="151572 -10860 -4636 -4036"/>
+		</polygon>
+	</zone>
+	<zone name="[fireswamp_9]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="30"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="120"/>
+		<set name="off_time" value="5"/>
+		<set name="random_time" value="15"/>
+		<polygon>
+			<coords loc="150456 -15148 -4700 -4300"/>
+			<coords loc="151760 -15072 -4700 -4300"/>
+			<coords loc="151556 -13400 -4700 -4300"/>
+			<coords loc="151148 -12856 -4700 -4300"/>
+			<coords loc="150384 -13904 -4700 -4300"/>
+		</polygon>
+	</zone>
+	<zone name="[fireswamp_10]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="30"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="120"/>
+		<set name="off_time" value="5"/>
+		<set name="random_time" value="15"/>
+		<polygon>
+			<coords loc="145032 -15132 -4572 -3972"/>
+			<coords loc="146108 -15008 -4572 -3972"/>
+			<coords loc="148212 -11784 -4572 -3972"/>
+			<coords loc="147528 -10992 -4572 -3972"/>
+			<coords loc="146000 -11072 -4572 -3972"/>
+		</polygon>
+	</zone>
+	<zone name="[fireswamp_11]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="30"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="120"/>
+		<set name="off_time" value="5"/>
+		<set name="random_time" value="15"/>
+		<polygon>
+			<coords loc="148288 -14420 -4572 -4172"/>
+			<coords loc="148432 -14428 -4572 -4172"/>
+			<coords loc="147984 -12448 -4572 -4172"/>
+			<coords loc="147228 -13572 -4572 -4172"/>
+		</polygon>
+	</zone>
+	<zone name="[fireswamp_12]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="30"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="120"/>
+		<set name="off_time" value="5"/>
+		<set name="random_time" value="15"/>
+		<polygon>
+			<coords loc="146120 -18720 -4476 -2976"/>
+			<coords loc="146276 -18884 -4476 -2976"/>
+			<coords loc="145976 -15072 -4476 -2976"/>
+			<coords loc="145056 -15200 -4476 -2976"/>
+		</polygon>
+	</zone>
+	<zone name="[fireswamp_13]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="30"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="120"/>
+		<set name="off_time" value="5"/>
+		<set name="random_time" value="15"/>
+		<polygon>
+			<coords loc="140616 -16808 -4604 -4204"/>
+			<coords loc="143708 -17160 -4604 -4204"/>
+			<coords loc="143152 -16000 -4604 -4204"/>
+			<coords loc="141268 -15872 -4604 -4204"/>
+		</polygon>
+	</zone>
+	<zone name="[fireswamp_14]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="30"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="120"/>
+		<set name="off_time" value="5"/>
+		<set name="random_time" value="15"/>
+		<polygon>
+			<coords loc="148892 -23044 -3476 -3076"/>
+			<coords loc="149160 -22280 -3476 -3076"/>
+			<coords loc="148292 -21148 -3476 -3076"/>
+			<coords loc="148080 -21508 -3476 -3076"/>
+			<coords loc="147584 -24204 -3476 -3076"/>
+			<coords loc="147948 -24056 -3476 -3076"/>
+		</polygon>
+	</zone>
+	<zone name="[fireswamp_15]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="30"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="120"/>
+		<set name="off_time" value="5"/>
+		<set name="random_time" value="15"/>
+		<polygon>
+			<coords loc="143804 -27456 -3208 -1608"/>
+			<coords loc="147168 -25768 -3208 -1608"/>
+			<coords loc="147164 -25372 -3208 -1608"/>
+			<coords loc="143308 -26812 -3208 -1608"/>
+		</polygon>
+	</zone>
+	<zone name="[devil_poison_001]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4148;4"/>
+		<set name="skill_prob" value="30"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="120"/>
+		<set name="off_time" value="5"/>
+		<set name="random_time" value="15"/>
+		<polygon>
+			<coords loc="41707 211982 -3752 -3552"/>
+			<coords loc="42025 211917 -3752 -3552"/>
+			<coords loc="42463 212012 -3752 -3552"/>
+			<coords loc="42702 212346 -3752 -3552"/>
+			<coords loc="42593 212977 -3752 -3552"/>
+			<coords loc="42301 213144 -3752 -3552"/>
+			<coords loc="41821 213081 -3752 -3552"/>
+			<coords loc="41600 212602 -3752 -3552"/>
+		</polygon>
+	</zone>
+	<zone name="[devil_poison_002]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4148;4"/>
+		<set name="skill_prob" value="30"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="120"/>
+		<set name="off_time" value="5"/>
+		<set name="random_time" value="15"/>
+		<polygon>
+			<coords loc="45296 213219 -3800 -3600"/>
+			<coords loc="46136 213081 -3800 -3600"/>
+			<coords loc="46289 213374 -3800 -3600"/>
+			<coords loc="46158 213669 -3800 -3600"/>
+			<coords loc="45105 213668 -3800 -3600"/>
+		</polygon>
+	</zone>
+	<zone name="[devil_poison_003]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4148;4"/>
+		<set name="skill_prob" value="30"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="120"/>
+		<set name="off_time" value="5"/>
+		<set name="random_time" value="15"/>
+		<polygon>
+			<coords loc="47790 220792 -3628 -3428"/>
+			<coords loc="48632 220818 -3628 -3428"/>
+			<coords loc="48683 220992 -3628 -3428"/>
+			<coords loc="47828 220980 -3628 -3428"/>
+		</polygon>
+	</zone>
+	<zone name="[conquerors_weakness]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4146;3"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<polygon>
+			<coords loc="186739 -86322 -7260 -7010"/>
+			<coords loc="190108 -86335 -7260 -7010"/>
+			<coords loc="190110 -84794 -7260 -7010"/>
+			<coords loc="186736 -84786 -7260 -7010"/>
+		</polygon>
+	</zone>
+	<zone name="[conquerors_pddown]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4145;3"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<polygon>
+			<coords loc="186739 -86322 -7260 -7010"/>
+			<coords loc="190108 -86335 -7260 -7010"/>
+			<coords loc="190110 -84794 -7260 -7010"/>
+			<coords loc="186736 -84786 -7260 -7010"/>
+		</polygon>
+	</zone>
+	<zone name="[conquerors_poison]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4148;9"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<polygon>
+			<coords loc="186739 -86322 -7260 -7010"/>
+			<coords loc="190108 -86335 -7260 -7010"/>
+			<coords loc="190110 -84794 -7260 -7010"/>
+			<coords loc="186736 -84786 -7260 -7010"/>
+		</polygon>
+	</zone>
+	<zone name="[conquerors_nonheal]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4624;9"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<polygon>
+			<coords loc="186739 -86322 -7260 -7010"/>
+			<coords loc="190108 -86335 -7260 -7010"/>
+			<coords loc="190110 -84794 -7260 -7010"/>
+			<coords loc="186736 -84786 -7260 -7010"/>
+		</polygon>
+	</zone>
+	<zone name="[lords_weakness]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4146;3"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<polygon>
+			<coords loc="185028 -89729 -7265 -7015"/>
+			<coords loc="188398 -89741 -7265 -7015"/>
+			<coords loc="188400 -88200 -7265 -7015"/>
+			<coords loc="185026 -88192 -7265 -7015"/>
+		</polygon>
+	</zone>
+	<zone name="[lords_pddown]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4145;3"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<polygon>
+			<coords loc="185028 -89729 -7265 -7015"/>
+			<coords loc="188398 -89741 -7265 -7015"/>
+			<coords loc="188400 -88200 -7265 -7015"/>
+			<coords loc="185026 -88192 -7265 -7015"/>
+		</polygon>
+	</zone>
+	<zone name="[lords_poison]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4148;9"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<polygon>
+			<coords loc="185028 -89729 -7265 -7015"/>
+			<coords loc="188398 -89741 -7265 -7015"/>
+			<coords loc="188400 -88200 -7265 -7015"/>
+			<coords loc="185026 -88192 -7265 -7015"/>
+		</polygon>
+	</zone>
+	<zone name="[lords_nonheal]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4624;9"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<polygon>
+			<coords loc="185028 -89729 -7265 -7015"/>
+			<coords loc="188398 -89741 -7265 -7015"/>
+			<coords loc="188400 -88200 -7265 -7015"/>
+			<coords loc="185026 -88192 -7265 -7015"/>
+		</polygon>
+	</zone>
+	<zone name="[savants_weakness]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4146;3"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<polygon>
+			<coords loc="172411 -81083 -7262 -7012"/>
+			<coords loc="173942 -81073 -7262 -7012"/>
+			<coords loc="173931 -77639 -7262 -7012"/>
+			<coords loc="172418 -77644 -7262 -7012"/>
+		</polygon>
+	</zone>
+	<zone name="[savants_pddown]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4145;3"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<polygon>
+			<coords loc="172411 -81083 -7262 -7012"/>
+			<coords loc="173942 -81073 -7262 -7012"/>
+			<coords loc="173931 -77639 -7262 -7012"/>
+			<coords loc="172418 -77644 -7262 -7012"/>
+		</polygon>
+	</zone>
+	<zone name="[savants_poison]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4148;9"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<polygon>
+			<coords loc="172411 -81083 -7262 -7012"/>
+			<coords loc="173942 -81073 -7262 -7012"/>
+			<coords loc="173931 -77639 -7262 -7012"/>
+			<coords loc="172418 -77644 -7262 -7012"/>
+		</polygon>
+	</zone>
+	<zone name="[savants_nonheal]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4624;9"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<polygon>
+			<coords loc="172411 -81083 -7262 -7012"/>
+			<coords loc="173942 -81073 -7262 -7012"/>
+			<coords loc="173931 -77639 -7262 -7012"/>
+			<coords loc="172418 -77644 -7262 -7012"/>
+		</polygon>
+	</zone>
+	<zone name="[magistrates_weakness]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4146;3"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<polygon>
+			<coords loc="174822 -77261 -7262 -7012"/>
+			<coords loc="176354 -77251 -7262 -7012"/>
+			<coords loc="176342 -73817 -7262 -7012"/>
+			<coords loc="174829 -73822 -7262 -7012"/>
+		</polygon>
+	</zone>
+	<zone name="[magistrates_pddown]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4145;3"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<polygon>
+			<coords loc="174822 -77261 -7262 -7012"/>
+			<coords loc="176354 -77251 -7262 -7012"/>
+			<coords loc="176342 -73817 -7262 -7012"/>
+			<coords loc="174829 -73822 -7262 -7012"/>
+		</polygon>
+	</zone>
+	<zone name="[magistrates_poison]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4148;9"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<polygon>
+			<coords loc="174822 -77261 -7262 -7012"/>
+			<coords loc="176354 -77251 -7262 -7012"/>
+			<coords loc="176342 -73817 -7262 -7012"/>
+			<coords loc="174829 -73822 -7262 -7012"/>
+		</polygon>
+	</zone>
+	<zone name="[magistrates_nonheal]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4624;9"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<polygon>
+			<coords loc="174822 -77261 -7262 -7012"/>
+			<coords loc="176354 -77251 -7262 -7012"/>
+			<coords loc="176342 -73817 -7262 -7012"/>
+			<coords loc="174829 -73822 -7262 -7012"/>
+		</polygon>
+	</zone>
+	<zone name="[spa_11]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="only_pc"/>
+		<set name="skill_name" value="4559;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="141249 -109636 -3634 -3434"/>
+			<coords loc="141473 -109798 -3634 -3434"/>
+			<coords loc="141739 -109821 -3634 -3434"/>
+			<coords loc="141924 -109669 -3634 -3434"/>
+			<coords loc="142038 -109397 -3634 -3434"/>
+			<coords loc="141852 -109130 -3634 -3434"/>
+			<coords loc="141604 -109051 -3634 -3434"/>
+			<coords loc="141321 -109091 -3634 -3434"/>
+			<coords loc="141213 -109266 -3634 -3434"/>
+		</polygon>
+	</zone>
+	<zone name="[spa_21]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="only_pc"/>
+		<set name="skill_name" value="4559;1"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="140174 -105832 -3668 -3468"/>
+			<coords loc="140490 -105875 -3668 -3468"/>
+			<coords loc="140962 -105738 -3668 -3468"/>
+			<coords loc="141039 -105378 -3668 -3468"/>
+			<coords loc="140872 -105119 -3668 -3468"/>
+			<coords loc="140081 -105295 -3668 -3468"/>
+		</polygon>
+	</zone>
+	<zone name="[spa_31]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="only_pc"/>
+		<set name="skill_name" value="4559;1"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="144927 -105193 -3724 -3524"/>
+			<coords loc="145226 -105412 -3724 -3524"/>
+			<coords loc="145576 -105344 -3724 -3524"/>
+			<coords loc="145819 -104976 -3724 -3524"/>
+			<coords loc="145575 -104555 -3724 -3524"/>
+			<coords loc="145217 -104490 -3724 -3524"/>
+			<coords loc="144935 -104684 -3724 -3524"/>
+			<coords loc="144832 -104959 -3724 -3524"/>
+		</polygon>
+	</zone>
+	<zone name="[spa_41]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="only_pc"/>
+		<set name="skill_name" value="4559;1"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="152081 -108262 -2871 -2671"/>
+			<coords loc="152455 -108588 -2871 -2671"/>
+			<coords loc="152835 -108448 -2871 -2671"/>
+			<coords loc="152992 -108120 -2871 -2671"/>
+			<coords loc="152817 -107670 -2871 -2671"/>
+			<coords loc="152310 -107632 -2871 -2671"/>
+			<coords loc="152069 -107905 -2871 -2671"/>
+		</polygon>
+	</zone>
+	<zone name="[spa_51]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="only_pc"/>
+		<set name="skill_name" value="4559;1"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="155279 -105735 -2787 -2587"/>
+			<coords loc="155448 -105880 -2787 -2587"/>
+			<coords loc="155992 -105963 -2787 -2587"/>
+			<coords loc="156201 -105790 -2787 -2587"/>
+			<coords loc="156133 -105320 -2787 -2587"/>
+			<coords loc="155896 -105229 -2787 -2587"/>
+			<coords loc="155459 -105254 -2787 -2587"/>
+			<coords loc="155283 -105478 -2787 -2587"/>
+		</polygon>
+	</zone>
+	<zone name="[spa_61]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="only_pc"/>
+		<set name="skill_name" value="4559;1"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="156838 -109948 -2717 -2517"/>
+			<coords loc="157133 -110046 -2717 -2517"/>
+			<coords loc="157436 -109918 -2717 -2517"/>
+			<coords loc="157491 -109405 -2717 -2517"/>
+			<coords loc="157197 -109197 -2717 -2517"/>
+			<coords loc="156843 -109261 -2717 -2517"/>
+			<coords loc="156683 -109569 -2717 -2517"/>
+		</polygon>
+	</zone>
+	<zone name="[spa_71]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="only_pc"/>
+		<set name="skill_name" value="4559;1"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="152063 -116732 -1609 -1409"/>
+			<coords loc="152505 -116982 -1609 -1409"/>
+			<coords loc="152904 -116927 -1609 -1409"/>
+			<coords loc="153020 -116469 -1609 -1409"/>
+			<coords loc="152881 -116221 -1609 -1409"/>
+			<coords loc="152555 -116100 -1609 -1409"/>
+			<coords loc="152285 -116160 -1609 -1409"/>
+			<coords loc="152099 -116415 -1609 -1409"/>
+		</polygon>
+	</zone>
+	<zone name="[spa_81]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="only_pc"/>
+		<set name="skill_name" value="4559;1"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="152683 -112829 -1694 -1494"/>
+			<coords loc="152796 -113129 -1694 -1494"/>
+			<coords loc="153125 -113339 -1694 -1494"/>
+			<coords loc="153557 -113190 -1694 -1494"/>
+			<coords loc="153649 -112721 -1694 -1494"/>
+			<coords loc="153344 -112385 -1694 -1494"/>
+			<coords loc="152937 -112409 -1694 -1494"/>
+		</polygon>
+	</zone>
+	<zone name="[spa_91]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="only_pc"/>
+		<set name="skill_name" value="4559;1"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="157444 -115790 -1979 -1779"/>
+			<coords loc="157774 -115907 -1979 -1779"/>
+			<coords loc="158174 -115759 -1979 -1779"/>
+			<coords loc="158017 -114971 -1979 -1779"/>
+			<coords loc="157625 -114984 -1979 -1779"/>
+			<coords loc="157439 -115101 -1979 -1779"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_fire_zone1]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;5"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="192073 -118243 -1896 -1696"/>
+			<coords loc="192185 -116883 -1896 -1696"/>
+			<coords loc="191921 -116651 -1896 -1696"/>
+			<coords loc="191330 -116793 -1896 -1696"/>
+			<coords loc="190997 -118195 -1896 -1696"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_fire_zone2]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;5"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="183700 -114976 -3384 -3184"/>
+			<coords loc="183996 -115008 -3384 -3184"/>
+			<coords loc="183988 -114940 -3384 -3184"/>
+			<coords loc="183892 -114896 -3384 -3184"/>
+			<coords loc="183768 -114912 -3384 -3184"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_fire_zone3]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;5"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="170882 -116919 -4728 -4028"/>
+			<coords loc="173775 -116885 -4728 -4028"/>
+			<coords loc="173761 -113989 -4728 -4028"/>
+			<coords loc="170896 -113924 -4728 -4028"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_fire_zone4]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;5"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="170947 -113900 -6160 -5260"/>
+			<coords loc="173759 -113954 -6160 -5260"/>
+			<coords loc="173776 -111044 -6160 -5260"/>
+			<coords loc="170920 -111048 -6160 -5260"/>
+		</polygon>
+	</zone>
+	<zone name="[fire_pot_god_hp_regen1]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="4698;7"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="185241 -118610 -3359 -2959"/>
+			<coords loc="185966 -119586 -3359 -2959"/>
+			<coords loc="187638 -117286 -3359 -2959"/>
+			<coords loc="186478 -116565 -3359 -2959"/>
+		</polygon>
+	</zone>
+	<zone name="[fire_pot_god_hp_regen2]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="4698;7"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="182713 -119880 -3246 -2846"/>
+			<coords loc="183822 -120471 -3246 -2846"/>
+			<coords loc="184986 -118671 -3246 -2846"/>
+			<coords loc="183254 -118355 -3246 -2846"/>
+		</polygon>
+	</zone>
+	<zone name="[fire_pot_god_hp_regen3]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="4698;7"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="184021 -121547 -3180 -2780"/>
+			<coords loc="185825 -121596 -3180 -2780"/>
+			<coords loc="185937 -119732 -3180 -2780"/>
+			<coords loc="184633 -119645 -3180 -2780"/>
+		</polygon>
+	</zone>
+	<zone name="[fire_pot_god_hp_regen4]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="4698;7"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="186868 -121700 -3164 -2764"/>
+			<coords loc="188500 -121604 -3164 -2764"/>
+			<coords loc="188608 -119980 -3164 -2764"/>
+			<coords loc="187088 -120020 -3164 -2764"/>
+		</polygon>
+	</zone>
+	<zone name="[fire_pot_god_hp_regen5]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="4698;7"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="189116 -121636 -3152 -2752"/>
+			<coords loc="190732 -121116 -3152 -2752"/>
+			<coords loc="190108 -119288 -3152 -2752"/>
+			<coords loc="188672 -119984 -3152 -2752"/>
+		</polygon>
+	</zone>
+	<zone name="[fire_pot_god_hp_regen6]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="4698;7"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="187636 -120012 -3388 -2988"/>
+			<coords loc="189680 -119284 -3388 -2988"/>
+			<coords loc="188696 -117896 -3388 -2988"/>
+			<coords loc="187504 -118572 -3388 -2988"/>
+		</polygon>
+	</zone>
+	<zone name="[fire_pot_god_hp_regen7]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="4698;7"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="188888 -118252 -3356 -2956"/>
+			<coords loc="191124 -118348 -3356 -2956"/>
+			<coords loc="190324 -115548 -3356 -2956"/>
+			<coords loc="188992 -116344 -3356 -2956"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster1]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="71030 -60113 -3375 -2975"/>
+			<coords loc="70966 -59549 -3375 -2975"/>
+			<coords loc="70250 -59173 -3375 -2975"/>
+			<coords loc="69622 -59597 -3375 -2975"/>
+			<coords loc="69634 -60261 -3375 -2975"/>
+			<coords loc="70026 -60593 -3375 -2975"/>
+			<coords loc="70566 -60601 -3375 -2975"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster2]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="73522 -59473 -3191 -2991"/>
+			<coords loc="73454 -58861 -3191 -2991"/>
+			<coords loc="73194 -58629 -3191 -2991"/>
+			<coords loc="72642 -58433 -3191 -2991"/>
+			<coords loc="72110 -58501 -3191 -2991"/>
+			<coords loc="71782 -59013 -3191 -2991"/>
+			<coords loc="71922 -59817 -3191 -2991"/>
+			<coords loc="72482 -60149 -3191 -2991"/>
+			<coords loc="72986 -60085 -3191 -2991"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster3]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="72376 -55558 -3335 -2935"/>
+			<coords loc="72036 -54506 -3335 -2935"/>
+			<coords loc="71188 -54130 -3335 -2935"/>
+			<coords loc="70264 -54442 -3335 -2935"/>
+			<coords loc="69748 -55206 -3335 -2935"/>
+			<coords loc="69860 -56066 -3335 -2935"/>
+			<coords loc="70708 -56830 -3335 -2935"/>
+			<coords loc="71632 -56706 -3335 -2935"/>
+			<coords loc="72132 -56258 -3335 -2935"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster4]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="76091 -53873 -3179 -2979"/>
+			<coords loc="75447 -53721 -3179 -2979"/>
+			<coords loc="75135 -54069 -3179 -2979"/>
+			<coords loc="75047 -54749 -3179 -2979"/>
+			<coords loc="75491 -55125 -3179 -2979"/>
+			<coords loc="76171 -54993 -3179 -2979"/>
+			<coords loc="76323 -54677 -3179 -2979"/>
+			<coords loc="76339 -54281 -3179 -2979"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster5]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="74415 -51769 -3255 -2955"/>
+			<coords loc="74351 -51081 -3255 -2955"/>
+			<coords loc="74075 -50837 -3255 -2955"/>
+			<coords loc="74007 -50597 -3255 -2955"/>
+			<coords loc="73335 -50669 -3255 -2955"/>
+			<coords loc="72983 -51393 -3255 -2955"/>
+			<coords loc="73167 -51845 -3255 -2955"/>
+			<coords loc="73995 -52025 -3255 -2955"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster6]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="73198 -44860 -3458 -3158"/>
+			<coords loc="72682 -44392 -3458 -3158"/>
+			<coords loc="71766 -44416 -3458 -3158"/>
+			<coords loc="71314 -44836 -3458 -3158"/>
+			<coords loc="71378 -45248 -3458 -3158"/>
+			<coords loc="71430 -45960 -3458 -3158"/>
+			<coords loc="71850 -46264 -3458 -3158"/>
+			<coords loc="72594 -46236 -3458 -3158"/>
+			<coords loc="73034 -45800 -3458 -3158"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster7]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="74049 -42558 -3418 -3118"/>
+			<coords loc="73997 -41998 -3418 -3118"/>
+			<coords loc="73513 -41622 -3418 -3118"/>
+			<coords loc="73093 -41610 -3418 -3118"/>
+			<coords loc="72537 -42338 -3418 -3118"/>
+			<coords loc="72661 -42830 -3418 -3118"/>
+			<coords loc="73325 -43018 -3418 -3118"/>
+			<coords loc="73641 -42942 -3418 -3118"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster8]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="77309 -42410 -3410 -3110"/>
+			<coords loc="76629 -41878 -3410 -3110"/>
+			<coords loc="75557 -41990 -3410 -3110"/>
+			<coords loc="74781 -42802 -3410 -3110"/>
+			<coords loc="74745 -43802 -3410 -3110"/>
+			<coords loc="75581 -44790 -3410 -3110"/>
+			<coords loc="76761 -44770 -3410 -3110"/>
+			<coords loc="77597 -44062 -3410 -3110"/>
+			<coords loc="77641 -43006 -3410 -3110"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster9]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="80214 -42670 -3422 -3122"/>
+			<coords loc="80438 -42094 -3422 -3122"/>
+			<coords loc="80314 -41546 -3422 -3122"/>
+			<coords loc="79614 -41342 -3422 -3122"/>
+			<coords loc="78754 -41710 -3422 -3122"/>
+			<coords loc="78662 -42230 -3422 -3122"/>
+			<coords loc="79062 -42894 -3422 -3122"/>
+			<coords loc="79758 -43070 -3422 -3122"/>
+			<coords loc="79930 -42834 -3422 -3122"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster10]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="83118 -41483 -3370 -3070"/>
+			<coords loc="82686 -40931 -3370 -3070"/>
+			<coords loc="82046 -40887 -3370 -3070"/>
+			<coords loc="82050 -41079 -3370 -3070"/>
+			<coords loc="81734 -41263 -3370 -3070"/>
+			<coords loc="81610 -41879 -3370 -3070"/>
+			<coords loc="82366 -42299 -3370 -3070"/>
+			<coords loc="82758 -42155 -3370 -3070"/>
+			<coords loc="82910 -41879 -3370 -3070"/>
+			<coords loc="83086 -41823 -3370 -3070"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster11]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="81654 -45503 -3366 -3066"/>
+			<coords loc="81886 -45267 -3366 -3066"/>
+			<coords loc="82222 -44899 -3366 -3066"/>
+			<coords loc="82266 -44547 -3366 -3066"/>
+			<coords loc="82098 -44207 -3366 -3066"/>
+			<coords loc="81506 -44063 -3366 -3066"/>
+			<coords loc="80846 -44375 -3366 -3066"/>
+			<coords loc="80786 -44795 -3366 -3066"/>
+			<coords loc="81094 -45271 -3366 -3066"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster12]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="79526 -51746 -2522 -2222"/>
+			<coords loc="79638 -51098 -2522 -2222"/>
+			<coords loc="79190 -50458 -2522 -2222"/>
+			<coords loc="78398 -50694 -2522 -2222"/>
+			<coords loc="78158 -51298 -2522 -2222"/>
+			<coords loc="78570 -51934 -2522 -2222"/>
+			<coords loc="79214 -51898 -2522 -2222"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster13]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="83615 -50828 -2470 -2170"/>
+			<coords loc="83507 -50428 -2470 -2170"/>
+			<coords loc="83115 -50032 -2470 -2170"/>
+			<coords loc="82447 -50180 -2470 -2170"/>
+			<coords loc="82231 -50752 -2470 -2170"/>
+			<coords loc="82535 -51328 -2470 -2170"/>
+			<coords loc="82855 -51444 -2470 -2170"/>
+			<coords loc="83535 -51204 -2470 -2170"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster14]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="81946 -53719 -2458 -2158"/>
+			<coords loc="81398 -53767 -2458 -2158"/>
+			<coords loc="80642 -53691 -2458 -2158"/>
+			<coords loc="79554 -54587 -2458 -2158"/>
+			<coords loc="79782 -55123 -2458 -2158"/>
+			<coords loc="79886 -56423 -2458 -2158"/>
+			<coords loc="81054 -57231 -2458 -2158"/>
+			<coords loc="81802 -57111 -2458 -2158"/>
+			<coords loc="82970 -56139 -2458 -2158"/>
+			<coords loc="82738 -54227 -2458 -2158"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster15]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="78226 -58454 -2542 -2242"/>
+			<coords loc="78206 -58026 -2542 -2242"/>
+			<coords loc="77858 -57766 -2542 -2242"/>
+			<coords loc="77370 -57814 -2542 -2242"/>
+			<coords loc="77058 -58266 -2542 -2242"/>
+			<coords loc="77374 -58806 -2542 -2242"/>
+			<coords loc="77966 -58870 -2542 -2242"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster16]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="77796 -61961 -2558 -2258"/>
+			<coords loc="77836 -61333 -2558 -2258"/>
+			<coords loc="77524 -60969 -2558 -2258"/>
+			<coords loc="77100 -61041 -2558 -2258"/>
+			<coords loc="76796 -61233 -2558 -2258"/>
+			<coords loc="76728 -61865 -2558 -2258"/>
+			<coords loc="77368 -62213 -2558 -2258"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster17]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="82052 -59979 -2414 -2114"/>
+			<coords loc="81588 -59123 -2414 -2114"/>
+			<coords loc="80692 -59059 -2414 -2114"/>
+			<coords loc="80152 -59707 -2414 -2114"/>
+			<coords loc="80172 -60535 -2414 -2114"/>
+			<coords loc="80824 -61043 -2414 -2114"/>
+			<coords loc="81552 -60955 -2414 -2114"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster18]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="85533 -63207 -2522 -2222"/>
+			<coords loc="85685 -62647 -2522 -2222"/>
+			<coords loc="85249 -62239 -2522 -2222"/>
+			<coords loc="84589 -62535 -2522 -2222"/>
+			<coords loc="84549 -63151 -2522 -2222"/>
+			<coords loc="85101 -63443 -2522 -2222"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster19]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="89512 -60985 -2462 -2162"/>
+			<coords loc="89712 -60141 -2462 -2162"/>
+			<coords loc="88888 -59441 -2462 -2162"/>
+			<coords loc="87948 -59557 -2462 -2162"/>
+			<coords loc="87620 -60545 -2462 -2162"/>
+			<coords loc="88136 -61165 -2462 -2162"/>
+			<coords loc="88544 -61437 -2462 -2162"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster20]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="86034 -54576 -2574 -2274"/>
+			<coords loc="85642 -54220 -2574 -2274"/>
+			<coords loc="85238 -54224 -2574 -2274"/>
+			<coords loc="84862 -54636 -2574 -2274"/>
+			<coords loc="85082 -55248 -2574 -2274"/>
+			<coords loc="85526 -55364 -2574 -2274"/>
+			<coords loc="85950 -55020 -2574 -2274"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster21]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="90080 -52443 -2727 -2427"/>
+			<coords loc="90212 -51947 -2727 -2427"/>
+			<coords loc="89700 -51239 -2727 -2427"/>
+			<coords loc="88928 -51583 -2727 -2427"/>
+			<coords loc="88764 -51991 -2727 -2427"/>
+			<coords loc="89008 -52687 -2727 -2427"/>
+			<coords loc="89688 -52723 -2727 -2427"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster22]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="92777 -52363 -2767 -2467"/>
+			<coords loc="91981 -51967 -2767 -2467"/>
+			<coords loc="91281 -52519 -2767 -2467"/>
+			<coords loc="91229 -53299 -2767 -2467"/>
+			<coords loc="91385 -53679 -2767 -2467"/>
+			<coords loc="92405 -53943 -2767 -2467"/>
+			<coords loc="93025 -53439 -2767 -2467"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster23]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="95179 -52286 -2763 -2463"/>
+			<coords loc="94747 -51982 -2763 -2463"/>
+			<coords loc="94303 -52062 -2763 -2463"/>
+			<coords loc="93927 -52458 -2763 -2463"/>
+			<coords loc="94187 -53042 -2763 -2463"/>
+			<coords loc="94707 -53150 -2763 -2463"/>
+			<coords loc="95043 -53058 -2763 -2463"/>
+			<coords loc="95211 -52546 -2763 -2463"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster24]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="85757 -59957 -2550 -2150"/>
+			<coords loc="86073 -59585 -2550 -2150"/>
+			<coords loc="86085 -59117 -2550 -2150"/>
+			<coords loc="85761 -58801 -2550 -2150"/>
+			<coords loc="85177 -58893 -2550 -2150"/>
+			<coords loc="84905 -59329 -2550 -2150"/>
+			<coords loc="85229 -59869 -2550 -2150"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster25]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="81382 -63921 -2486 -2286"/>
+			<coords loc="81826 -63537 -2486 -2286"/>
+			<coords loc="81834 -62985 -2486 -2286"/>
+			<coords loc="81298 -62773 -2486 -2286"/>
+			<coords loc="80870 -62985 -2486 -2286"/>
+			<coords loc="80798 -63309 -2486 -2286"/>
+			<coords loc="80946 -63769 -2486 -2286"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_monster26]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="npc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="93421 -55220 -2819 -2619"/>
+			<coords loc="94109 -55536 -2819 -2619"/>
+			<coords loc="94601 -55164 -2819 -2619"/>
+			<coords loc="94581 -54740 -2819 -2619"/>
+			<coords loc="94185 -54360 -2819 -2619"/>
+			<coords loc="93565 -54344 -2819 -2619"/>
+			<coords loc="93365 -54760 -2819 -2619"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pc1]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="71030 -60113 -3375 -2975"/>
+			<coords loc="70966 -59549 -3375 -2975"/>
+			<coords loc="70250 -59173 -3375 -2975"/>
+			<coords loc="69622 -59597 -3375 -2975"/>
+			<coords loc="69634 -60261 -3375 -2975"/>
+			<coords loc="70026 -60593 -3375 -2975"/>
+			<coords loc="70566 -60601 -3375 -2975"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pc2]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="73522 -59473 -3191 -2991"/>
+			<coords loc="73454 -58861 -3191 -2991"/>
+			<coords loc="73194 -58629 -3191 -2991"/>
+			<coords loc="72642 -58433 -3191 -2991"/>
+			<coords loc="72110 -58501 -3191 -2991"/>
+			<coords loc="71782 -59013 -3191 -2991"/>
+			<coords loc="71922 -59817 -3191 -2991"/>
+			<coords loc="72482 -60149 -3191 -2991"/>
+			<coords loc="72986 -60085 -3191 -2991"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pc3]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="72376 -55558 -3335 -2935"/>
+			<coords loc="72036 -54506 -3335 -2935"/>
+			<coords loc="71188 -54130 -3335 -2935"/>
+			<coords loc="70264 -54442 -3335 -2935"/>
+			<coords loc="69748 -55206 -3335 -2935"/>
+			<coords loc="69860 -56066 -3335 -2935"/>
+			<coords loc="70708 -56830 -3335 -2935"/>
+			<coords loc="71632 -56706 -3335 -2935"/>
+			<coords loc="72132 -56258 -3335 -2935"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pc4]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="76091 -53873 -3179 -2979"/>
+			<coords loc="75447 -53721 -3179 -2979"/>
+			<coords loc="75135 -54069 -3179 -2979"/>
+			<coords loc="75047 -54749 -3179 -2979"/>
+			<coords loc="75491 -55125 -3179 -2979"/>
+			<coords loc="76171 -54993 -3179 -2979"/>
+			<coords loc="76323 -54677 -3179 -2979"/>
+			<coords loc="76339 -54281 -3179 -2979"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pc5]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="74415 -51769 -3255 -2955"/>
+			<coords loc="74351 -51081 -3255 -2955"/>
+			<coords loc="74075 -50837 -3255 -2955"/>
+			<coords loc="74007 -50597 -3255 -2955"/>
+			<coords loc="73335 -50669 -3255 -2955"/>
+			<coords loc="72983 -51393 -3255 -2955"/>
+			<coords loc="73167 -51845 -3255 -2955"/>
+			<coords loc="73995 -52025 -3255 -2955"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pc6]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="73198 -44860 -3458 -3158"/>
+			<coords loc="72682 -44392 -3458 -3158"/>
+			<coords loc="71766 -44416 -3458 -3158"/>
+			<coords loc="71314 -44836 -3458 -3158"/>
+			<coords loc="71378 -45248 -3458 -3158"/>
+			<coords loc="71430 -45960 -3458 -3158"/>
+			<coords loc="71850 -46264 -3458 -3158"/>
+			<coords loc="72594 -46236 -3458 -3158"/>
+			<coords loc="73034 -45800 -3458 -3158"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pc7]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="74049 -42558 -3418 -3118"/>
+			<coords loc="73997 -41998 -3418 -3118"/>
+			<coords loc="73513 -41622 -3418 -3118"/>
+			<coords loc="73093 -41610 -3418 -3118"/>
+			<coords loc="72537 -42338 -3418 -3118"/>
+			<coords loc="72661 -42830 -3418 -3118"/>
+			<coords loc="73325 -43018 -3418 -3118"/>
+			<coords loc="73641 -42942 -3418 -3118"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pc8]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="77309 -42410 -3410 -3110"/>
+			<coords loc="76629 -41878 -3410 -3110"/>
+			<coords loc="75557 -41990 -3410 -3110"/>
+			<coords loc="74781 -42802 -3410 -3110"/>
+			<coords loc="74745 -43802 -3410 -3110"/>
+			<coords loc="75581 -44790 -3410 -3110"/>
+			<coords loc="76761 -44770 -3410 -3110"/>
+			<coords loc="77597 -44062 -3410 -3110"/>
+			<coords loc="77641 -43006 -3410 -3110"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pc9]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="80214 -42670 -3422 -3122"/>
+			<coords loc="80438 -42094 -3422 -3122"/>
+			<coords loc="80314 -41546 -3422 -3122"/>
+			<coords loc="79614 -41342 -3422 -3122"/>
+			<coords loc="78754 -41710 -3422 -3122"/>
+			<coords loc="78662 -42230 -3422 -3122"/>
+			<coords loc="79062 -42894 -3422 -3122"/>
+			<coords loc="79758 -43070 -3422 -3122"/>
+			<coords loc="79930 -42834 -3422 -3122"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pc10]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="83118 -41483 -3370 -3070"/>
+			<coords loc="82686 -40931 -3370 -3070"/>
+			<coords loc="82046 -40887 -3370 -3070"/>
+			<coords loc="82050 -41079 -3370 -3070"/>
+			<coords loc="81734 -41263 -3370 -3070"/>
+			<coords loc="81610 -41879 -3370 -3070"/>
+			<coords loc="82366 -42299 -3370 -3070"/>
+			<coords loc="82758 -42155 -3370 -3070"/>
+			<coords loc="82910 -41879 -3370 -3070"/>
+			<coords loc="83086 -41823 -3370 -3070"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pc11]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="81654 -45503 -3366 -3066"/>
+			<coords loc="81886 -45267 -3366 -3066"/>
+			<coords loc="82222 -44899 -3366 -3066"/>
+			<coords loc="82266 -44547 -3366 -3066"/>
+			<coords loc="82098 -44207 -3366 -3066"/>
+			<coords loc="81506 -44063 -3366 -3066"/>
+			<coords loc="80846 -44375 -3366 -3066"/>
+			<coords loc="80786 -44795 -3366 -3066"/>
+			<coords loc="81094 -45271 -3366 -3066"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pc12]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="79526 -51746 -2522 -2222"/>
+			<coords loc="79638 -51098 -2522 -2222"/>
+			<coords loc="79190 -50458 -2522 -2222"/>
+			<coords loc="78398 -50694 -2522 -2222"/>
+			<coords loc="78158 -51298 -2522 -2222"/>
+			<coords loc="78570 -51934 -2522 -2222"/>
+			<coords loc="79214 -51898 -2522 -2222"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pc13]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="83615 -50828 -2470 -2170"/>
+			<coords loc="83507 -50428 -2470 -2170"/>
+			<coords loc="83115 -50032 -2470 -2170"/>
+			<coords loc="82447 -50180 -2470 -2170"/>
+			<coords loc="82231 -50752 -2470 -2170"/>
+			<coords loc="82535 -51328 -2470 -2170"/>
+			<coords loc="82855 -51444 -2470 -2170"/>
+			<coords loc="83535 -51204 -2470 -2170"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pc14]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="81946 -53719 -2458 -2158"/>
+			<coords loc="81398 -53767 -2458 -2158"/>
+			<coords loc="80642 -53691 -2458 -2158"/>
+			<coords loc="79554 -54587 -2458 -2158"/>
+			<coords loc="79782 -55123 -2458 -2158"/>
+			<coords loc="79886 -56423 -2458 -2158"/>
+			<coords loc="81054 -57231 -2458 -2158"/>
+			<coords loc="81802 -57111 -2458 -2158"/>
+			<coords loc="82970 -56139 -2458 -2158"/>
+			<coords loc="82738 -54227 -2458 -2158"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pc15]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="78226 -58454 -2542 -2242"/>
+			<coords loc="78206 -58026 -2542 -2242"/>
+			<coords loc="77858 -57766 -2542 -2242"/>
+			<coords loc="77370 -57814 -2542 -2242"/>
+			<coords loc="77058 -58266 -2542 -2242"/>
+			<coords loc="77374 -58806 -2542 -2242"/>
+			<coords loc="77966 -58870 -2542 -2242"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pc16]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="77796 -61961 -2558 -2258"/>
+			<coords loc="77836 -61333 -2558 -2258"/>
+			<coords loc="77524 -60969 -2558 -2258"/>
+			<coords loc="77100 -61041 -2558 -2258"/>
+			<coords loc="76796 -61233 -2558 -2258"/>
+			<coords loc="76728 -61865 -2558 -2258"/>
+			<coords loc="77368 -62213 -2558 -2258"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pc17]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="82052 -59979 -2414 -2114"/>
+			<coords loc="81588 -59123 -2414 -2114"/>
+			<coords loc="80692 -59059 -2414 -2114"/>
+			<coords loc="80152 -59707 -2414 -2114"/>
+			<coords loc="80172 -60535 -2414 -2114"/>
+			<coords loc="80824 -61043 -2414 -2114"/>
+			<coords loc="81552 -60955 -2414 -2114"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pc18]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="85533 -63207 -2522 -2222"/>
+			<coords loc="85685 -62647 -2522 -2222"/>
+			<coords loc="85249 -62239 -2522 -2222"/>
+			<coords loc="84589 -62535 -2522 -2222"/>
+			<coords loc="84549 -63151 -2522 -2222"/>
+			<coords loc="85101 -63443 -2522 -2222"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pc19]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="89512 -60985 -2462 -2162"/>
+			<coords loc="89712 -60141 -2462 -2162"/>
+			<coords loc="88888 -59441 -2462 -2162"/>
+			<coords loc="87948 -59557 -2462 -2162"/>
+			<coords loc="87620 -60545 -2462 -2162"/>
+			<coords loc="88136 -61165 -2462 -2162"/>
+			<coords loc="88544 -61437 -2462 -2162"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pc20]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="86034 -54576 -2574 -2274"/>
+			<coords loc="85642 -54220 -2574 -2274"/>
+			<coords loc="85238 -54224 -2574 -2274"/>
+			<coords loc="84862 -54636 -2574 -2274"/>
+			<coords loc="85082 -55248 -2574 -2274"/>
+			<coords loc="85526 -55364 -2574 -2274"/>
+			<coords loc="85950 -55020 -2574 -2274"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pcr21]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="90080 -52443 -2727 -2427"/>
+			<coords loc="90212 -51947 -2727 -2427"/>
+			<coords loc="89700 -51239 -2727 -2427"/>
+			<coords loc="88928 -51583 -2727 -2427"/>
+			<coords loc="88764 -51991 -2727 -2427"/>
+			<coords loc="89008 -52687 -2727 -2427"/>
+			<coords loc="89688 -52723 -2727 -2427"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pc22]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="92777 -52363 -2767 -2467"/>
+			<coords loc="91981 -51967 -2767 -2467"/>
+			<coords loc="91281 -52519 -2767 -2467"/>
+			<coords loc="91229 -53299 -2767 -2467"/>
+			<coords loc="91385 -53679 -2767 -2467"/>
+			<coords loc="92405 -53943 -2767 -2467"/>
+			<coords loc="93025 -53439 -2767 -2467"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pc23]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="95179 -52286 -2763 -2463"/>
+			<coords loc="94747 -51982 -2763 -2463"/>
+			<coords loc="94303 -52062 -2763 -2463"/>
+			<coords loc="93927 -52458 -2763 -2463"/>
+			<coords loc="94187 -53042 -2763 -2463"/>
+			<coords loc="94707 -53150 -2763 -2463"/>
+			<coords loc="95043 -53058 -2763 -2463"/>
+			<coords loc="95211 -52546 -2763 -2463"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pc24]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="85757 -59957 -2550 -2150"/>
+			<coords loc="86073 -59585 -2550 -2150"/>
+			<coords loc="86085 -59117 -2550 -2150"/>
+			<coords loc="85761 -58801 -2550 -2150"/>
+			<coords loc="85177 -58893 -2550 -2150"/>
+			<coords loc="84905 -59329 -2550 -2150"/>
+			<coords loc="85229 -59869 -2550 -2150"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pc25]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="81382 -63921 -2486 -2286"/>
+			<coords loc="81826 -63537 -2486 -2286"/>
+			<coords loc="81834 -62985 -2486 -2286"/>
+			<coords loc="81298 -62773 -2486 -2286"/>
+			<coords loc="80870 -62985 -2486 -2286"/>
+			<coords loc="80798 -63309 -2486 -2286"/>
+			<coords loc="80946 -63769 -2486 -2286"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_swamp_pc26]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="skill_action_type" value="serial"/>
+		<polygon>
+			<coords loc="93421 -55220 -2819 -2619"/>
+			<coords loc="94109 -55536 -2819 -2619"/>
+			<coords loc="94601 -55164 -2819 -2619"/>
+			<coords loc="94581 -54740 -2819 -2619"/>
+			<coords loc="94185 -54360 -2819 -2619"/>
+			<coords loc="93565 -54344 -2819 -2619"/>
+			<coords loc="93365 -54760 -2819 -2619"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_1]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="212916 -117204 -1700 -1500"/>
+			<coords loc="213404 -117248 -1700 -1500"/>
+			<coords loc="213444 -116584 -1700 -1500"/>
+			<coords loc="213012 -116444 -1700 -1500"/>
+			<coords loc="212828 -116928 -1700 -1500"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_2]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="212304 -116608 -1800 -1600"/>
+			<coords loc="212708 -116660 -1800 -1600"/>
+			<coords loc="212820 -116300 -1800 -1600"/>
+			<coords loc="212416 -116144 -1800 -1600"/>
+			<coords loc="212140 -116336 -1800 -1600"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_3]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="214032 -116748 -1772 -1572"/>
+			<coords loc="214488 -116652 -1772 -1572"/>
+			<coords loc="214548 -116352 -1772 -1572"/>
+			<coords loc="214064 -116232 -1772 -1572"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_4]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="214424 -115452 -1800 -1600"/>
+			<coords loc="214776 -115520 -1800 -1600"/>
+			<coords loc="214944 -115248 -1800 -1600"/>
+			<coords loc="214652 -114784 -1800 -1600"/>
+			<coords loc="214460 -114824 -1800 -1600"/>
+			<coords loc="214412 -115080 -1800 -1600"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_5]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="214668 -114276 -1820 -1620"/>
+			<coords loc="214948 -113876 -1820 -1620"/>
+			<coords loc="214612 -113588 -1820 -1620"/>
+			<coords loc="214228 -113884 -1820 -1620"/>
+			<coords loc="214340 -114148 -1820 -1620"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_6]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="213916 -115660 -1768 -1568"/>
+			<coords loc="214220 -114648 -1768 -1568"/>
+			<coords loc="213392 -113112 -1768 -1568"/>
+			<coords loc="212100 -113460 -1768 -1568"/>
+			<coords loc="211292 -115164 -1768 -1568"/>
+			<coords loc="211948 -115196 -1768 -1568"/>
+			<coords loc="211976 -115628 -1768 -1568"/>
+			<coords loc="212696 -116036 -1768 -1568"/>
+			<coords loc="213200 -116136 -1768 -1568"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_7]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="210524 -114376 -1764 -1564"/>
+			<coords loc="211144 -114604 -1764 -1564"/>
+			<coords loc="211148 -114340 -1764 -1564"/>
+			<coords loc="210764 -114116 -1764 -1564"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_8]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="212276 -113016 -1716 -1516"/>
+			<coords loc="212932 -112836 -1716 -1516"/>
+			<coords loc="212860 -112600 -1716 -1516"/>
+			<coords loc="212616 -112488 -1716 -1516"/>
+			<coords loc="212188 -112604 -1716 -1516"/>
+			<coords loc="212144 -112820 -1716 -1516"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_9]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="211608 -113560 -1720 -1520"/>
+			<coords loc="211944 -113408 -1720 -1520"/>
+			<coords loc="211880 -112888 -1720 -1520"/>
+			<coords loc="211220 -112780 -1720 -1520"/>
+			<coords loc="211204 -113400 -1720 -1520"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_10]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="210596 -116292 -1732 -1532"/>
+			<coords loc="210904 -116088 -1732 -1532"/>
+			<coords loc="210972 -115760 -1732 -1532"/>
+			<coords loc="210784 -115612 -1732 -1532"/>
+			<coords loc="210308 -115904 -1732 -1532"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_11]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="211272 -117352 -1736 -1536"/>
+			<coords loc="211660 -117220 -1736 -1536"/>
+			<coords loc="211552 -117000 -1736 -1536"/>
+			<coords loc="211792 -116936 -1736 -1536"/>
+			<coords loc="212072 -116412 -1736 -1536"/>
+			<coords loc="211916 -115952 -1736 -1536"/>
+			<coords loc="211600 -115956 -1736 -1536"/>
+			<coords loc="211356 -116588 -1736 -1536"/>
+			<coords loc="210928 -116296 -1736 -1536"/>
+			<coords loc="210872 -117028 -1736 -1536"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_12]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="211528 -117312 -1748 -1548"/>
+			<coords loc="212828 -117884 -1748 -1548"/>
+			<coords loc="212756 -117068 -1748 -1548"/>
+			<coords loc="212584 -116828 -1748 -1548"/>
+			<coords loc="212300 -116812 -1748 -1548"/>
+			<coords loc="211796 -117168 -1748 -1548"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_13]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="213224 -117956 -1792 -1592"/>
+			<coords loc="213204 -117548 -1792 -1592"/>
+			<coords loc="213016 -117412 -1792 -1592"/>
+			<coords loc="212792 -117456 -1792 -1592"/>
+			<coords loc="212836 -117916 -1792 -1592"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_14]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="213440 -118004 -1812 -1612"/>
+			<coords loc="213852 -118004 -1812 -1612"/>
+			<coords loc="213728 -117728 -1812 -1612"/>
+			<coords loc="213584 -117748 -1812 -1612"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_15]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="213988 -117184 -1764 -1564"/>
+			<coords loc="213808 -117232 -1764 -1564"/>
+			<coords loc="213952 -117772 -1764 -1564"/>
+			<coords loc="213636 -118036 -1764 -1564"/>
+			<coords loc="214660 -117924 -1764 -1564"/>
+			<coords loc="214232 -117560 -1764 -1564"/>
+			<coords loc="214224 -117412 -1764 -1564"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_16]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="214564 -117840 -1716 -1516"/>
+			<coords loc="214844 -117352 -1716 -1516"/>
+			<coords loc="214616 -117172 -1716 -1516"/>
+			<coords loc="214436 -117300 -1716 -1516"/>
+			<coords loc="214304 -117592 -1716 -1516"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_17]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="215148 -117144 -1700 -1500"/>
+			<coords loc="215300 -117208 -1700 -1500"/>
+			<coords loc="215516 -116568 -1700 -1500"/>
+			<coords loc="215296 -116592 -1700 -1500"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_18]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="215356 -116304 -1684 -1484"/>
+			<coords loc="215584 -116508 -1684 -1484"/>
+			<coords loc="216472 -114732 -1684 -1484"/>
+			<coords loc="215428 -114700 -1684 -1484"/>
+			<coords loc="215204 -114556 -1684 -1484"/>
+			<coords loc="214916 -114664 -1684 -1484"/>
+			<coords loc="214932 -114920 -1684 -1484"/>
+			<coords loc="215244 -115184 -1684 -1484"/>
+			<coords loc="215116 -115408 -1684 -1484"/>
+			<coords loc="215420 -115756 -1684 -1484"/>
+			<coords loc="215296 -115852 -1684 -1484"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_19]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="214888 -114200 -1740 -1540"/>
+			<coords loc="216164 -114560 -1740 -1540"/>
+			<coords loc="216120 -113212 -1740 -1540"/>
+			<coords loc="215380 -112272 -1740 -1540"/>
+			<coords loc="214240 -113388 -1740 -1540"/>
+			<coords loc="215420 -113568 -1740 -1540"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_20]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="213792 -112592 -1792 -1592"/>
+			<coords loc="214948 -111748 -1792 -1592"/>
+			<coords loc="213932 -111516 -1792 -1592"/>
+			<coords loc="213624 -112404 -1792 -1592"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_21]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="212408 -112372 -1772 -1572"/>
+			<coords loc="212800 -111924 -1772 -1572"/>
+			<coords loc="212656 -111156 -1772 -1572"/>
+			<coords loc="211096 -111788 -1772 -1572"/>
+			<coords loc="211460 -112196 -1772 -1572"/>
+			<coords loc="211904 -112736 -1772 -1572"/>
+			<coords loc="212280 -112092 -1772 -1572"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_22]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="211120 -112784 -1744 -1544"/>
+			<coords loc="211300 -112484 -1744 -1544"/>
+			<coords loc="211116 -112048 -1744 -1544"/>
+			<coords loc="209044 -113592 -1744 -1544"/>
+			<coords loc="209900 -113652 -1744 -1544"/>
+			<coords loc="210020 -113412 -1744 -1544"/>
+			<coords loc="210812 -113544 -1744 -1544"/>
+			<coords loc="211088 -113220 -1744 -1544"/>
+			<coords loc="210720 -112888 -1744 -1544"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_23]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="209504 -113076 -1600 -1400"/>
+			<coords loc="209808 -113412 -1600 -1400"/>
+			<coords loc="210004 -112864 -1600 -1400"/>
+			<coords loc="209596 -112916 -1600 -1400"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_24]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="210400 -112656 -1528 -1328"/>
+			<coords loc="210308 -112356 -1528 -1328"/>
+			<coords loc="210152 -112260 -1528 -1328"/>
+			<coords loc="209944 -112384 -1528 -1328"/>
+			<coords loc="209804 -112308 -1528 -1328"/>
+			<coords loc="209688 -112448 -1528 -1328"/>
+			<coords loc="209804 -112564 -1528 -1328"/>
+			<coords loc="209772 -112672 -1528 -1328"/>
+			<coords loc="209968 -112884 -1528 -1328"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_25]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="210032 -112148 -1564 -1364"/>
+			<coords loc="210392 -112060 -1564 -1364"/>
+			<coords loc="210104 -111444 -1564 -1364"/>
+			<coords loc="209496 -112008 -1564 -1364"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_26]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="211096 -112400 -1572 -1372"/>
+			<coords loc="211436 -111804 -1572 -1372"/>
+			<coords loc="210812 -111712 -1572 -1372"/>
+			<coords loc="210628 -111792 -1572 -1372"/>
+			<coords loc="210600 -112004 -1572 -1372"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_27]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="210552 -111368 -1488 -1288"/>
+			<coords loc="210904 -111412 -1488 -1288"/>
+			<coords loc="210864 -111236 -1488 -1288"/>
+			<coords loc="210492 -111100 -1488 -1288"/>
+			<coords loc="210100 -111432 -1488 -1288"/>
+			<coords loc="210408 -111488 -1488 -1288"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_28]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="212136 -110836 -1492 -1292"/>
+			<coords loc="212552 -110896 -1492 -1292"/>
+			<coords loc="212704 -110776 -1492 -1292"/>
+			<coords loc="212724 -110460 -1492 -1292"/>
+			<coords loc="212064 -110576 -1492 -1292"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_29]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="212620 -111604 -1476 -1276"/>
+			<coords loc="213060 -111604 -1476 -1276"/>
+			<coords loc="212740 -111304 -1476 -1276"/>
+			<coords loc="212436 -111620 -1476 -1276"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_30]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="213416 -110968 -1452 -1252"/>
+			<coords loc="213716 -110772 -1452 -1252"/>
+			<coords loc="213752 -110376 -1452 -1252"/>
+			<coords loc="213356 -110388 -1452 -1252"/>
+			<coords loc="213328 -110760 -1452 -1252"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_31]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="214228 -111556 -1548 -1348"/>
+			<coords loc="214196 -111120 -1548 -1348"/>
+			<coords loc="213972 -111020 -1548 -1348"/>
+			<coords loc="213624 -111248 -1548 -1348"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_32]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="215120 -112132 -1484 -1284"/>
+			<coords loc="215460 -112124 -1484 -1284"/>
+			<coords loc="215564 -111836 -1484 -1284"/>
+			<coords loc="215376 -111736 -1484 -1284"/>
+			<coords loc="214924 -111792 -1484 -1284"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_33]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="215564 -111380 -1456 -1256"/>
+			<coords loc="215764 -111380 -1456 -1256"/>
+			<coords loc="215764 -111180 -1456 -1256"/>
+			<coords loc="215564 -111180 -1456 -1256"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_34]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="215776 -112812 -1616 -1416"/>
+			<coords loc="216348 -112536 -1616 -1416"/>
+			<coords loc="216268 -112392 -1616 -1416"/>
+			<coords loc="215684 -112660 -1616 -1416"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_35]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="216040 -114340 -1480 -1280"/>
+			<coords loc="216868 -114436 -1480 -1280"/>
+			<coords loc="216648 -112948 -1480 -1280"/>
+			<coords loc="216148 -113132 -1480 -1280"/>
+			<coords loc="215996 -113324 -1480 -1280"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_36]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="216136 -115280 -1520 -1320"/>
+			<coords loc="216760 -115372 -1520 -1320"/>
+			<coords loc="216880 -114792 -1520 -1320"/>
+			<coords loc="216636 -114964 -1520 -1320"/>
+			<coords loc="216428 -114976 -1520 -1320"/>
+			<coords loc="216364 -114832 -1520 -1320"/>
+			<coords loc="216068 -114768 -1520 -1320"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_37]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="215964 -115796 -1568 -1368"/>
+			<coords loc="216592 -115892 -1568 -1368"/>
+			<coords loc="216592 -115580 -1568 -1368"/>
+			<coords loc="216032 -115452 -1568 -1368"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_38]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="216040 -117792 -1444 -1244"/>
+			<coords loc="216088 -117536 -1444 -1244"/>
+			<coords loc="215972 -117352 -1444 -1244"/>
+			<coords loc="215812 -117256 -1444 -1244"/>
+			<coords loc="215600 -117324 -1444 -1244"/>
+			<coords loc="215692 -117736 -1444 -1244"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_39]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="214896 -117908 -1448 -1248"/>
+			<coords loc="215156 -118020 -1448 -1248"/>
+			<coords loc="215396 -117668 -1448 -1248"/>
+			<coords loc="215204 -117084 -1448 -1248"/>
+			<coords loc="214744 -117508 -1448 -1248"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_40]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="214468 -118700 -1516 -1316"/>
+			<coords loc="214748 -118780 -1516 -1316"/>
+			<coords loc="214484 -117908 -1516 -1316"/>
+			<coords loc="214188 -118000 -1516 -1316"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_41]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="213396 -118452 -1508 -1308"/>
+			<coords loc="213652 -118588 -1508 -1308"/>
+			<coords loc="213832 -118492 -1508 -1308"/>
+			<coords loc="213776 -118092 -1508 -1308"/>
+			<coords loc="213312 -118056 -1508 -1308"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_42]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="212684 -118456 -1480 -1280"/>
+			<coords loc="213148 -118436 -1480 -1280"/>
+			<coords loc="213168 -118308 -1480 -1280"/>
+			<coords loc="213008 -118204 -1480 -1280"/>
+			<coords loc="212668 -118300 -1480 -1280"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_43]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="212156 -118020 -1500 -1300"/>
+			<coords loc="212424 -118208 -1500 -1300"/>
+			<coords loc="213256 -118080 -1500 -1300"/>
+			<coords loc="211416 -117244 -1500 -1300"/>
+			<coords loc="211676 -118104 -1500 -1300"/>
+			<coords loc="211880 -118132 -1500 -1300"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_44]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="210792 -117952 -1576 -1376"/>
+			<coords loc="211464 -117376 -1576 -1376"/>
+			<coords loc="210832 -116852 -1576 -1376"/>
+			<coords loc="210296 -117456 -1576 -1376"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_45]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="209932 -116124 -1556 -1356"/>
+			<coords loc="210112 -116340 -1556 -1356"/>
+			<coords loc="210756 -116432 -1556 -1356"/>
+			<coords loc="210080 -115704 -1556 -1356"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_46]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="209604 -115832 -1508 -1308"/>
+			<coords loc="209676 -115672 -1508 -1308"/>
+			<coords loc="209480 -115472 -1508 -1308"/>
+			<coords loc="209064 -115396 -1508 -1308"/>
+			<coords loc="209064 -116060 -1508 -1308"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_47]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="209596 -114804 -1544 -1344"/>
+			<coords loc="209880 -114812 -1544 -1344"/>
+			<coords loc="209852 -114156 -1544 -1344"/>
+			<coords loc="209528 -114576 -1544 -1344"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_48]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="209452 -113908 -1656 -1456"/>
+			<coords loc="209720 -114032 -1656 -1456"/>
+			<coords loc="209648 -113588 -1656 -1456"/>
+			<coords loc="209452 -113708 -1656 -1456"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_lava_49]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;1"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="211652 -111708 -1608 -1408"/>
+			<coords loc="212000 -111640 -1608 -1408"/>
+			<coords loc="211652 -110812 -1608 -1408"/>
+			<coords loc="211420 -110828 -1608 -1408"/>
+		</polygon>
+	</zone>
+	<zone name="[stakato_mob_buff]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="6170;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="60"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="73945 -57263 -6368 -3296"/>
+			<coords loc="90046 -57259 -6368 -3296"/>
+			<coords loc="89999 -41698 -6368 -3296"/>
+			<coords loc="73982 -41655 -6368 -3296"/>
+		</polygon>
+	</zone>
+	<zone name="[stakato_mob_buff_display]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="6169;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="60"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="73945 -57263 -6368 -3296"/>
+			<coords loc="90046 -57259 -6368 -3296"/>
+			<coords loc="89999 -41698 -6368 -3296"/>
+			<coords loc="73982 -41655 -6368 -3296"/>
+		</polygon>
+	</zone>
+	<zone name="[stakato_pc_buff]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="6171;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="60"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="73945 -57263 -6368 -3296"/>
+			<coords loc="90046 -57259 -6368 -3296"/>
+			<coords loc="89999 -41698 -6368 -3296"/>
+			<coords loc="73982 -41655 -6368 -3296"/>
+		</polygon>
+	</zone>
+	<zone name="[naia_core_poison]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4148;12"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-46980 245979 -14240 -13340"/>
+			<coords loc="-43925 245982 -14240 -13340"/>
+			<coords loc="-43925 248990 -14240 -13340"/>
+			<coords loc="-46986 248990 -14240 -13340"/>
+		</polygon>
+	</zone>
+	<zone name="[Beleth_room]" type="poison">
+		<set name="target" value="pc"/>
+		<polygon>
+			<coords loc="11214 205578 -10412 -5112"/>
+			<coords loc="20607 205578 -10412 -5112"/>
+			<coords loc="20648 220271 -10412 -5112"/>
+			<coords loc="11172 220271 -10412 -5112"/>
+		</polygon>
+	</zone>
+	<zone name="[freya_normal_freezing_01]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="6437;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="112898 -117865 -11249 -10749"/>
+			<coords loc="116554 -117891 -11249 -10749"/>
+			<coords loc="116597 -112972 -11249 -10749"/>
+			<coords loc="112920 -112997 -11249 -10749"/>
+		</polygon>
+	</zone>
+	<zone name="[freya_normal_freezing_02]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="6437;2"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="112898 -117865 -11249 -10749"/>
+			<coords loc="116554 -117891 -11249 -10749"/>
+			<coords loc="116597 -112972 -11249 -10749"/>
+			<coords loc="112920 -112997 -11249 -10749"/>
+		</polygon>
+	</zone>
+	<zone name="[freya_normal_freezing_03]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="6437;3"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="112898 -117865 -11249 -10749"/>
+			<coords loc="116554 -117891 -11249 -10749"/>
+			<coords loc="116597 -112972 -11249 -10749"/>
+			<coords loc="112920 -112997 -11249 -10749"/>
+		</polygon>
+	</zone>
+	<zone name="[freya_normal_freezing_04]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="6437;4"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="112898 -117865 -11249 -10749"/>
+			<coords loc="116554 -117891 -11249 -10749"/>
+			<coords loc="116597 -112972 -11249 -10749"/>
+			<coords loc="112920 -112997 -11249 -10749"/>
+		</polygon>
+	</zone>
+	<zone name="[freya_normal_freezing_05]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="6437;5"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="112898 -117865 -11249 -10749"/>
+			<coords loc="116554 -117891 -11249 -10749"/>
+			<coords loc="116597 -112972 -11249 -10749"/>
+			<coords loc="112920 -112997 -11249 -10749"/>
+		</polygon>
+	</zone>
+	<zone name="[freya_normal_freezing_06]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="6437;6"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="112898 -117865 -11249 -10749"/>
+			<coords loc="116554 -117891 -11249 -10749"/>
+			<coords loc="116597 -112972 -11249 -10749"/>
+			<coords loc="112920 -112997 -11249 -10749"/>
+		</polygon>
+	</zone>
+	<zone name="[freya_normal_freezing_07]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="6437;7"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="112898 -117865 -11249 -10749"/>
+			<coords loc="116554 -117891 -11249 -10749"/>
+			<coords loc="116597 -112972 -11249 -10749"/>
+			<coords loc="112920 -112997 -11249 -10749"/>
+		</polygon>
+	</zone>
+	<zone name="[freya_attack_up]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="30"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="112898 -117865 -11249 -10749"/>
+			<coords loc="116554 -117891 -11249 -10749"/>
+			<coords loc="116597 -112972 -11249 -10749"/>
+			<coords loc="112920 -112997 -11249 -10749"/>
+		</polygon>
+	</zone>
+	<zone name="[freya_pc_buff1]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="6289;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="30"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="112898 -117865 -11249 -10749"/>
+			<coords loc="116554 -117891 -11249 -10749"/>
+			<coords loc="116597 -112972 -11249 -10749"/>
+			<coords loc="112920 -112997 -11249 -10749"/>
+		</polygon>
+	</zone>
+	<zone name="[freya_pc_buff2]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="6288;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="30"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="112898 -117865 -11249 -10749"/>
+			<coords loc="116554 -117891 -11249 -10749"/>
+			<coords loc="116597 -112972 -11249 -10749"/>
+			<coords loc="112920 -112997 -11249 -10749"/>
+		</polygon>
+	</zone>
+	<zone name="[freya_attack_up_hard]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;3"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="30"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="112898 -117865 -11249 -10749"/>
+			<coords loc="116554 -117891 -11249 -10749"/>
+			<coords loc="116597 -112972 -11249 -10749"/>
+			<coords loc="112920 -112997 -11249 -10749"/>
+		</polygon>
+	</zone>
+	<zone name="[rumwarsha04_1224_area_01]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;10"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-250400 213510 -11583 -11383"/>
+			<coords loc="-250246 213506 -11583 -11383"/>
+			<coords loc="-250246 213659 -11583 -11383"/>
+			<coords loc="-250400 213658 -11583 -11383"/>
+		</polygon>
+	</zone>
+	<zone name="[rumwarsha04_1224_area_02]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;10"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-252638 213522 -11582 -11382"/>
+			<coords loc="-252482 213525 -11582 -11382"/>
+			<coords loc="-252483 213676 -11582 -11382"/>
+			<coords loc="-252640 213678 -11582 -11382"/>
+		</polygon>
+	</zone>
+	<zone name="[rumwarsha04_1224_area_02]" type="poison">
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4150;10"/>
+		<set name="skill_prob" value="50"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-252638 213522 -11582 -11382"/>
+			<coords loc="-252482 213525 -11582 -11382"/>
+			<coords loc="-252483 213676 -11582 -11382"/>
+			<coords loc="-252640 213678 -11582 -11382"/>
+		</polygon>
+	</zone>
+	<zone name="lidia_zone1" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4162;3"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="57383 -27992 356 1406"/>
+			<coords loc="58861 -27992 356 1406"/>
+			<coords loc="58859 -27011 356 1406"/>
+			<coords loc="57388 -27013 356 1406"/>
+		</polygon>
+	</zone>
+	<zone name="lidia_zone2" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5037;3"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="57383 -27992 356 1406"/>
+			<coords loc="58861 -27992 356 1406"/>
+			<coords loc="58859 -27011 356 1406"/>
+			<coords loc="57388 -27013 356 1406"/>
+		</polygon>
+	</zone>
+	<zone name="lidia_zone3" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4149;8"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="57383 -27992 356 1406"/>
+			<coords loc="58861 -27992 356 1406"/>
+			<coords loc="58859 -27011 356 1406"/>
+			<coords loc="57388 -27013 356 1406"/>
+		</polygon>
+	</zone>
+	<zone name="rainbow_slow_1" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4991;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="152125 -126751 -2267 -2067"/>
+			<coords loc="151889 -126513 -2267 -2067"/>
+			<coords loc="151557 -126424 -2267 -2067"/>
+			<coords loc="151235 -126512 -2267 -2067"/>
+			<coords loc="151004 -126754 -2267 -2067"/>
+			<coords loc="150899 -127076 -2267 -2067"/>
+			<coords loc="150988 -127402 -2267 -2067"/>
+			<coords loc="151235 -127646 -2267 -2067"/>
+			<coords loc="151561 -127730 -2267 -2067"/>
+			<coords loc="151884 -127645 -2267 -2067"/>
+			<coords loc="152123 -127398 -2267 -2067"/>
+			<coords loc="152211 -127073 -2267 -2067"/>
+		</polygon>
+	</zone>
+	<zone name="rainbow_slow_2" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4991;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="153711 -125010 -2267 -2067"/>
+			<coords loc="153475 -124772 -2267 -2067"/>
+			<coords loc="153143 -124683 -2267 -2067"/>
+			<coords loc="152821 -124770 -2267 -2067"/>
+			<coords loc="152590 -125013 -2267 -2067"/>
+			<coords loc="152485 -125334 -2267 -2067"/>
+			<coords loc="152575 -125661 -2267 -2067"/>
+			<coords loc="152821 -125905 -2267 -2067"/>
+			<coords loc="153147 -125989 -2267 -2067"/>
+			<coords loc="153471 -125904 -2267 -2067"/>
+			<coords loc="153709 -125657 -2267 -2067"/>
+			<coords loc="153798 -125331 -2267 -2067"/>
+		</polygon>
+	</zone>
+	<zone name="rainbow_slow_3" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4991;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="156228 -125418 -2267 -2067"/>
+			<coords loc="155992 -125180 -2267 -2067"/>
+			<coords loc="155660 -125091 -2267 -2067"/>
+			<coords loc="155339 -125178 -2267 -2067"/>
+			<coords loc="155108 -125421 -2267 -2067"/>
+			<coords loc="155003 -125742 -2267 -2067"/>
+			<coords loc="155092 -126069 -2267 -2067"/>
+			<coords loc="155339 -126313 -2267 -2067"/>
+			<coords loc="155664 -126397 -2267 -2067"/>
+			<coords loc="155988 -126312 -2267 -2067"/>
+			<coords loc="156226 -126065 -2267 -2067"/>
+			<coords loc="156315 -125739 -2267 -2067"/>
+		</polygon>
+	</zone>
+	<zone name="rainbow_slow_4" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4991;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="154458 -127207 -2267 -2067"/>
+			<coords loc="154222 -126969 -2267 -2067"/>
+			<coords loc="153890 -126880 -2267 -2067"/>
+			<coords loc="153569 -126968 -2267 -2067"/>
+			<coords loc="153338 -127210 -2267 -2067"/>
+			<coords loc="153233 -127532 -2267 -2067"/>
+			<coords loc="153322 -127858 -2267 -2067"/>
+			<coords loc="153569 -128102 -2267 -2067"/>
+			<coords loc="153894 -128186 -2267 -2067"/>
+			<coords loc="154218 -128101 -2267 -2067"/>
+			<coords loc="154456 -127854 -2267 -2067"/>
+			<coords loc="154545 -127528 -2267 -2067"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hos_attack_attackup_1]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="60"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-186988 204151 -9940 -8940"/>
+			<coords loc="-180431 214748 -9940 -8940"/>
+			<coords loc="-172013 216494 -9940 -8940"/>
+			<coords loc="-172034 220293 -9940 -8940"/>
+			<coords loc="-182697 217452 -9940 -8940"/>
+			<coords loc="-189221 206257 -9940 -8940"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hos_attack_attackup_2]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;2"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="60"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-186988 204151 -9940 -8940"/>
+			<coords loc="-180431 214748 -9940 -8940"/>
+			<coords loc="-172013 216494 -9940 -8940"/>
+			<coords loc="-172034 220293 -9940 -8940"/>
+			<coords loc="-182697 217452 -9940 -8940"/>
+			<coords loc="-189221 206257 -9940 -8940"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hos_attack_attackup_3]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;3"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="60"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-186988 204151 -9940 -8940"/>
+			<coords loc="-180431 214748 -9940 -8940"/>
+			<coords loc="-172013 216494 -9940 -8940"/>
+			<coords loc="-172034 220293 -9940 -8940"/>
+			<coords loc="-182697 217452 -9940 -8940"/>
+			<coords loc="-189221 206257 -9940 -8940"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hos_attack_attackup_4]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;4"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="60"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-186988 204151 -9940 -8940"/>
+			<coords loc="-180431 214748 -9940 -8940"/>
+			<coords loc="-172013 216494 -9940 -8940"/>
+			<coords loc="-172034 220293 -9940 -8940"/>
+			<coords loc="-182697 217452 -9940 -8940"/>
+			<coords loc="-189221 206257 -9940 -8940"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hos_attack_attackup_5]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;5"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="60"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-186988 204151 -9940 -8940"/>
+			<coords loc="-180431 214748 -9940 -8940"/>
+			<coords loc="-172013 216494 -9940 -8940"/>
+			<coords loc="-172034 220293 -9940 -8940"/>
+			<coords loc="-182697 217452 -9940 -8940"/>
+			<coords loc="-189221 206257 -9940 -8940"/>
+		</polygon>
+	</zone>
+
+	<zone name="[soi_hos_attack_defenceup_1]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5939;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="60"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-186988 204151 -9940 -8940"/>
+			<coords loc="-180431 214748 -9940 -8940"/>
+			<coords loc="-172013 216494 -9940 -8940"/>
+			<coords loc="-172034 220293 -9940 -8940"/>
+			<coords loc="-182697 217452 -9940 -8940"/>
+			<coords loc="-189221 206257 -9940 -8940"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hos_attack_defenceup_2]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5939;2"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="60"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-186988 204151 -9940 -8940"/>
+			<coords loc="-180431 214748 -9940 -8940"/>
+			<coords loc="-172013 216494 -9940 -8940"/>
+			<coords loc="-172034 220293 -9940 -8940"/>
+			<coords loc="-182697 217452 -9940 -8940"/>
+			<coords loc="-189221 206257 -9940 -8940"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hos_attack_defenceup_3]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5939;3"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="60"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-186988 204151 -9940 -8940"/>
+			<coords loc="-180431 214748 -9940 -8940"/>
+			<coords loc="-172013 216494 -9940 -8940"/>
+			<coords loc="-172034 220293 -9940 -8940"/>
+			<coords loc="-182697 217452 -9940 -8940"/>
+			<coords loc="-189221 206257 -9940 -8940"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hos_attack_defenceup_4]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5939;4"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="60"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-186988 204151 -9940 -8940"/>
+			<coords loc="-180431 214748 -9940 -8940"/>
+			<coords loc="-172013 216494 -9940 -8940"/>
+			<coords loc="-172034 220293 -9940 -8940"/>
+			<coords loc="-182697 217452 -9940 -8940"/>
+			<coords loc="-189221 206257 -9940 -8940"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hos_attack_defenceup_5]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5939;5"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="60"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-186988 204151 -9940 -8940"/>
+			<coords loc="-180431 214748 -9940 -8940"/>
+			<coords loc="-172013 216494 -9940 -8940"/>
+			<coords loc="-172034 220293 -9940 -8940"/>
+			<coords loc="-182697 217452 -9940 -8940"/>
+			<coords loc="-189221 206257 -9940 -8940"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hos_attack_pcbuff_6]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5934;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-175352 216456 -9700 -9400"/>
+			<coords loc="-172040 216456 -9700 -9400"/>
+			<coords loc="-172040 219640 -9700 -9400"/>
+			<coords loc="-175352 219512 -9700 -9400"/>
+		</polygon>
+	</zone>
+
+	<zone name="[soi_hoe_attack_attackup1_1]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;2"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-179062 211047 -12112 -11912"/>
+			<coords loc="-177776 211044 -12112 -11912"/>
+			<coords loc="-177780 212297 -12112 -11912"/>
+			<coords loc="-179066 212290 -12112 -11912"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_attackup1_2]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;2"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-179055 205880 -12132 -11932"/>
+			<coords loc="-177787 205878 -12132 -11932"/>
+			<coords loc="-177770 207195 -12132 -11932"/>
+			<coords loc="-179060 207178 -12132 -11932"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_attackup1_3]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;2"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-181555 205901 -12108 -11908"/>
+			<coords loc="-180256 205901 -12108 -11908"/>
+			<coords loc="-180210 207176 -12108 -11908"/>
+			<coords loc="-181550 207196 -12108 -11908"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_attackup1_4]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;2"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-181552 211012 -12116 -11916"/>
+			<coords loc="-180262 211012 -12116 -11916"/>
+			<coords loc="-180259 212302 -12116 -11916"/>
+			<coords loc="-181606 212286 -12116 -11916"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_attackup1_5]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;2"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-176304 209293 -12027 -11827"/>
+			<coords loc="-175395 209697 -12027 -11827"/>
+			<coords loc="-175860 210713 -12027 -11827"/>
+			<coords loc="-176708 210363 -12027 -11827"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_attackup1_6]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;2"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-176659 207801 -12027 -11827"/>
+			<coords loc="-175812 207513 -12027 -11827"/>
+			<coords loc="-175401 208597 -12027 -11827"/>
+			<coords loc="-176314 208925 -12027 -11827"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_attackup1_7]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;2"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-183475 207498 -12017 -11817"/>
+			<coords loc="-182689 207732 -12017 -11817"/>
+			<coords loc="-183094 208941 -12017 -11817"/>
+			<coords loc="-183930 208568 -12017 -11817"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_attackup1_8]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;2"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-183868 209471 -12029 -11829"/>
+			<coords loc="-182962 209286 -12029 -11829"/>
+			<coords loc="-182662 210431 -12029 -11829"/>
+			<coords loc="-183661 210627 -12029 -11829"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_attackup1_9]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;2"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-183868 209471 -12029 -11829"/>
+			<coords loc="-182962 209286 -12029 -11829"/>
+			<coords loc="-182662 210431 -12029 -11829"/>
+			<coords loc="-183661 210627 -12029 -11829"/>
+		</polygon>
+	</zone>
+
+	<zone name="[soi_hoe_attack_defenceup1_1]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5939;2"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-179062 211047 -12112 -11912"/>
+			<coords loc="-177776 211044 -12112 -11912"/>
+			<coords loc="-177780 212297 -12112 -11912"/>
+			<coords loc="-179066 212290 -12112 -11912"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_defenceup1_2]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5939;2"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-179055 205880 -12132 -11932"/>
+			<coords loc="-177787 205878 -12132 -11932"/>
+			<coords loc="-177770 207195 -12132 -11932"/>
+			<coords loc="-179060 207178 -12132 -11932"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_defenceup1_3]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5939;2"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-181555 205901 -12108 -11908"/>
+			<coords loc="-180256 205901 -12108 -11908"/>
+			<coords loc="-180210 207176 -12108 -11908"/>
+			<coords loc="-181550 207196 -12108 -11908"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_defenceup1_4]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5939;2"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-181552 211012 -12116 -11916"/>
+			<coords loc="-180262 211012 -12116 -11916"/>
+			<coords loc="-180259 212302 -12116 -11916"/>
+			<coords loc="-181606 212286 -12116 -11916"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_defenceup1_5]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5939;2"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-176304 209293 -12027 -11827"/>
+			<coords loc="-175395 209697 -12027 -11827"/>
+			<coords loc="-175860 210713 -12027 -11827"/>
+			<coords loc="-176708 210363 -12027 -11827"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_defenceup1_6]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5939;2"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-176659 207801 -12027 -11827"/>
+			<coords loc="-175812 207513 -12027 -11827"/>
+			<coords loc="-175401 208597 -12027 -11827"/>
+			<coords loc="-176314 208925 -12027 -11827"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_defenceup1_7]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5939;2"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-183475 207498 -12017 -11817"/>
+			<coords loc="-182689 207732 -12017 -11817"/>
+			<coords loc="-183094 208941 -12017 -11817"/>
+			<coords loc="-183930 208568 -12017 -11817"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_defenceup1_8]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5939;2"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-183868 209471 -12029 -11829"/>
+			<coords loc="-182962 209286 -12029 -11829"/>
+			<coords loc="-182662 210431 -12029 -11829"/>
+			<coords loc="-183661 210627 -12029 -11829"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_defenceup1_9]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5939;2"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-183868 209471 -12029 -11829"/>
+			<coords loc="-182962 209286 -12029 -11829"/>
+			<coords loc="-182662 210431 -12029 -11829"/>
+			<coords loc="-183661 210627 -12029 -11829"/>
+		</polygon>
+	</zone>
+
+	<zone name="[soi_hoe_attack_pc_regen_1]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5940;9"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-179062 211047 -12112 -11912"/>
+			<coords loc="-177776 211044 -12112 -11912"/>
+			<coords loc="-177780 212297 -12112 -11912"/>
+			<coords loc="-179066 212290 -12112 -11912"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_pc_regen_2]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5940;9"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-179055 205880 -12132 -11932"/>
+			<coords loc="-177787 205878 -12132 -11932"/>
+			<coords loc="-177770 207195 -12132 -11932"/>
+			<coords loc="-179060 207178 -12132 -11932"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_pc_regen_3]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5940;9"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-181555 205901 -12108 -11908"/>
+			<coords loc="-180256 205901 -12108 -11908"/>
+			<coords loc="-180210 207176 -12108 -11908"/>
+			<coords loc="-181550 207196 -12108 -11908"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_pc_regen_4]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5940;9"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-181552 211012 -12116 -11916"/>
+			<coords loc="-180262 211012 -12116 -11916"/>
+			<coords loc="-180259 212302 -12116 -11916"/>
+			<coords loc="-181606 212286 -12116 -11916"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_pc_regen_5]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5940;9"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-176304 209293 -12027 -11827"/>
+			<coords loc="-175395 209697 -12027 -11827"/>
+			<coords loc="-175860 210713 -12027 -11827"/>
+			<coords loc="-176708 210363 -12027 -11827"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_pc_regen_6]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5940;9"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-176659 207801 -12027 -11827"/>
+			<coords loc="-175812 207513 -12027 -11827"/>
+			<coords loc="-175401 208597 -12027 -11827"/>
+			<coords loc="-176314 208925 -12027 -11827"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_pc_regen_7]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5940;9"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-183475 207498 -12017 -11817"/>
+			<coords loc="-182689 207732 -12017 -11817"/>
+			<coords loc="-183094 208941 -12017 -11817"/>
+			<coords loc="-183930 208568 -12017 -11817"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_pc_regen_8]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5940;9"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-183868 209471 -12029 -11829"/>
+			<coords loc="-182962 209286 -12029 -11829"/>
+			<coords loc="-182662 210431 -12029 -11829"/>
+			<coords loc="-183661 210627 -12029 -11829"/>
+		</polygon>
+	</zone>
+
+	<zone name="[soi_hoe_attack_pc_vicera_1]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5941;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-179911 208346 -12515 -12315"/>
+			<coords loc="-179642 208391 -12515 -12315"/>
+			<coords loc="-179699 209052 -12515 -12315"/>
+			<coords loc="-180407 208786 -12515 -12315"/>
+			<coords loc="-180106 208180 -12515 -12315"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_pc_vicera_2]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5942;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-180629 208065 -12508 -12308"/>
+			<coords loc="-180115 208198 -12508 -12308"/>
+			<coords loc="-180376 208725 -12508 -12308"/>
+			<coords loc="-180846 208719 -12508 -12308"/>
+			<coords loc="-181307 208298 -12508 -12308"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_pc_vicera_3]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5943;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-181487 208667 -12513 -12313"/>
+			<coords loc="-181269 208349 -12513 -12313"/>
+			<coords loc="-180890 208698 -12513 -12313"/>
+			<coords loc="-181062 209119 -12513 -12313"/>
+			<coords loc="-181585 209113 -12513 -12313"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_pc_vicera_4]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5944;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-181580 209096 -12515 -12315"/>
+			<coords loc="-181060 209101 -12515 -12315"/>
+			<coords loc="-180931 209509 -12515 -12315"/>
+			<coords loc="-181287 209834 -12515 -12315"/>
+			<coords loc="-181467 209485 -12515 -12315"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_pc_vicera_5]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5941;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-180929 209506 -12507 -12307"/>
+			<coords loc="-180402 209575 -12507 -12307"/>
+			<coords loc="-180190 210035 -12507 -12307"/>
+			<coords loc="-180669 210136 -12507 -12307"/>
+			<coords loc="-181337 209881 -12507 -12307"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_pc_vicera_6]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5942;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-180117 209326 -12514 -12314"/>
+			<coords loc="-179681 209209 -12514 -12314"/>
+			<coords loc="-179692 209707 -12514 -12314"/>
+			<coords loc="-180195 210027 -12514 -12314"/>
+			<coords loc="-180406 209565 -12514 -12314"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_pc_vicera_7]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5943;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-179268 209291 -12509 -12309"/>
+			<coords loc="-178964 209538 -12509 -12309"/>
+			<coords loc="-179209 209975 -12509 -12309"/>
+			<coords loc="-179692 209701 -12509 -12309"/>
+			<coords loc="-179682 209215 -12509 -12309"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_pc_vicera_8]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5944;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-178404 209530 -12519 -12319"/>
+			<coords loc="-178061 209869 -12519 -12319"/>
+			<coords loc="-178622 210172 -12519 -12319"/>
+			<coords loc="-179210 209976 -12519 -12319"/>
+			<coords loc="-178966 209544 -12519 -12319"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_pc_vicera_9]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5941;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-177748 209103 -12514 -12314"/>
+			<coords loc="-177799 209398 -12514 -12314"/>
+			<coords loc="-178061 209867 -12514 -12314"/>
+			<coords loc="-178406 209528 -12514 -12314"/>
+			<coords loc="-178267 209103 -12514 -12314"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_pc_vicera_10]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5942;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-178065 208327 -12512 -12312"/>
+			<coords loc="-177791 208805 -12512 -12312"/>
+			<coords loc="-177749 209104 -12512 -12312"/>
+			<coords loc="-178265 209106 -12512 -12312"/>
+			<coords loc="-178418 208681 -12512 -12312"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_pc_vicera_11]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5943;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-178658 208043 -12509 -12309"/>
+			<coords loc="-177984 208244 -12509 -12309"/>
+			<coords loc="-178424 208687 -12509 -12309"/>
+			<coords loc="-178956 208667 -12509 -12309"/>
+			<coords loc="-179286 208168 -12509 -12309"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoe_attack_pc_vicera_12]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5944;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-179437 208327 -12516 -12316"/>
+			<coords loc="-179285 208171 -12516 -12316"/>
+			<coords loc="-178890 208764 -12516 -12316"/>
+			<coords loc="-179697 209048 -12516 -12316"/>
+			<coords loc="-179641 208377 -12516 -12316"/>
+		</polygon>
+	</zone>
+
+	<zone name="[soi_hoi_attack_attackup_1]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;3"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-178819 212427 -15550 -15450"/>
+			<coords loc="-178819 213212 -15550 -15450"/>
+			<coords loc="-179185 213605 -15550 -15450"/>
+			<coords loc="-179921 213603 -15550 -15450"/>
+			<coords loc="-180314 213217 -15550 -15450"/>
+			<coords loc="-180314 212433 -15550 -15450"/>
+			<coords loc="-179902 212045 -15550 -15450"/>
+			<coords loc="-179242 212043 -15550 -15450"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoi_attack_attackup_2]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;3"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-176050 210757 -15550 -15450"/>
+			<coords loc="-175888 211267 -15550 -15450"/>
+			<coords loc="-176229 211880 -15550 -15450"/>
+			<coords loc="-176744 212007 -15550 -15450"/>
+			<coords loc="-177459 211628 -15550 -15450"/>
+			<coords loc="-177526 210986 -15550 -15450"/>
+			<coords loc="-177313 210618 -15550 -15450"/>
+			<coords loc="-176688 210363 -15550 -15450"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoi_attack_attackup_3]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;3"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-176272 207222 -15550 -15450"/>
+			<coords loc="-175898 207841 -15550 -15450"/>
+			<coords loc="-176051 208386 -15550 -15450"/>
+			<coords loc="-176710 208789 -15550 -15450"/>
+			<coords loc="-177223 208666 -15550 -15450"/>
+			<coords loc="-177608 208000 -15550 -15450"/>
+			<coords loc="-177459 207499 -15550 -15450"/>
+			<coords loc="-176775 207113 -15550 -15450"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoi_attack_attackup_4]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;3"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-178813 205936 -15550 -15450"/>
+			<coords loc="-178815 206690 -15550 -15450"/>
+			<coords loc="-179158 207104 -15550 -15450"/>
+			<coords loc="-179952 207105 -15550 -15450"/>
+			<coords loc="-180269 206683 -15550 -15450"/>
+			<coords loc="-180268 205935 -15550 -15450"/>
+			<coords loc="-179858 205503 -15550 -15450"/>
+			<coords loc="-179222 205503 -15550 -15450"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoi_attack_attackup_5]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;3"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-181657 207504 -15550 -15450"/>
+			<coords loc="-181487 208000 -15550 -15450"/>
+			<coords loc="-181884 208679 -15550 -15450"/>
+			<coords loc="-182408 208791 -15550 -15450"/>
+			<coords loc="-183050 208360 -15550 -15450"/>
+			<coords loc="-183201 207811 -15550 -15450"/>
+			<coords loc="-182867 207245 -15550 -15450"/>
+			<coords loc="-182348 207127 -15550 -15450"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoi_attack_attackup_6]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;3"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-181883 210474 -15550 -15450"/>
+			<coords loc="-181501 211134 -15550 -15450"/>
+			<coords loc="-181652 211614 -15550 -15450"/>
+			<coords loc="-182342 212017 -15550 -15450"/>
+			<coords loc="-182916 211866 -15550 -15450"/>
+			<coords loc="-183220 211319 -15550 -15450"/>
+			<coords loc="-183071 210741 -15550 -15450"/>
+			<coords loc="-182383 210365 -15550 -15450"/>
+		</polygon>
+	</zone>
+
+	<zone name="[soi_hoi_attack_defenceup_1]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5939;3"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-178819 212427 -15550 -15450"/>
+			<coords loc="-178819 213212 -15550 -15450"/>
+			<coords loc="-179185 213605 -15550 -15450"/>
+			<coords loc="-179921 213603 -15550 -15450"/>
+			<coords loc="-180314 213217 -15550 -15450"/>
+			<coords loc="-180314 212433 -15550 -15450"/>
+			<coords loc="-179902 212045 -15550 -15450"/>
+			<coords loc="-179242 212043 -15550 -15450"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoi_attack_defenceup_2]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5939;3"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-176050 210757 -15550 -15450"/>
+			<coords loc="-175888 211267 -15550 -15450"/>
+			<coords loc="-176229 211880 -15550 -15450"/>
+			<coords loc="-176744 212007 -15550 -15450"/>
+			<coords loc="-177459 211628 -15550 -15450"/>
+			<coords loc="-177526 210986 -15550 -15450"/>
+			<coords loc="-177313 210618 -15550 -15450"/>
+			<coords loc="-176688 210363 -15550 -15450"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoi_attack_defenceup_3]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5939;3"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-176272 207222 -15550 -15450"/>
+			<coords loc="-175898 207841 -15550 -15450"/>
+			<coords loc="-176051 208386 -15550 -15450"/>
+			<coords loc="-176710 208789 -15550 -15450"/>
+			<coords loc="-177223 208666 -15550 -15450"/>
+			<coords loc="-177608 208000 -15550 -15450"/>
+			<coords loc="-177459 207499 -15550 -15450"/>
+			<coords loc="-176775 207113 -15550 -15450"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoi_attack_defenceup_4]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5939;3"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-178813 205936 -15550 -15450"/>
+			<coords loc="-178815 206690 -15550 -15450"/>
+			<coords loc="-179158 207104 -15550 -15450"/>
+			<coords loc="-179952 207105 -15550 -15450"/>
+			<coords loc="-180269 206683 -15550 -15450"/>
+			<coords loc="-180268 205935 -15550 -15450"/>
+			<coords loc="-179858 205503 -15550 -15450"/>
+			<coords loc="-179222 205503 -15550 -15450"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoi_attack_defenceup_5]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;3"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-181657 207504 -15550 -15450"/>
+			<coords loc="-181487 208000 -15550 -15450"/>
+			<coords loc="-181884 208679 -15550 -15450"/>
+			<coords loc="-182408 208791 -15550 -15450"/>
+			<coords loc="-183050 208360 -15550 -15450"/>
+			<coords loc="-183201 207811 -15550 -15450"/>
+			<coords loc="-182867 207245 -15550 -15450"/>
+			<coords loc="-182348 207127 -15550 -15450"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoi_attack_defenceup_6]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5939;3"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-181883 210474 -15550 -15450"/>
+			<coords loc="-181501 211134 -15550 -15450"/>
+			<coords loc="-181652 211614 -15550 -15450"/>
+			<coords loc="-182342 212017 -15550 -15450"/>
+			<coords loc="-182916 211866 -15550 -15450"/>
+			<coords loc="-183220 211319 -15550 -15450"/>
+			<coords loc="-183071 210741 -15550 -15450"/>
+			<coords loc="-182383 210365 -15550 -15450"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoi_attack_echdebuff_1]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5941;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-177965 208655 -15590 -15090"/>
+			<coords loc="-177964 210478 -15590 -15090"/>
+			<coords loc="-178652 211086 -15590 -15090"/>
+			<coords loc="-180438 211085 -15590 -15090"/>
+			<coords loc="-181117 210460 -15590 -15090"/>
+			<coords loc="-181116 208656 -15590 -15090"/>
+			<coords loc="-180437 208028 -15590 -15090"/>
+			<coords loc="-178666 208025 -15590 -15090"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoi_attack_echdebuff_2]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5942;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-177965 208655 -15590 -15090"/>
+			<coords loc="-177964 210478 -15590 -15090"/>
+			<coords loc="-178652 211086 -15590 -15090"/>
+			<coords loc="-180438 211085 -15590 -15090"/>
+			<coords loc="-181117 210460 -15590 -15090"/>
+			<coords loc="-181116 208656 -15590 -15090"/>
+			<coords loc="-180437 208028 -15590 -15090"/>
+			<coords loc="-178666 208025 -15590 -15090"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoi_attack_echdebuff_3]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5943;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-177965 208655 -15590 -15090"/>
+			<coords loc="-177964 210478 -15590 -15090"/>
+			<coords loc="-178652 211086 -15590 -15090"/>
+			<coords loc="-180438 211085 -15590 -15090"/>
+			<coords loc="-181117 210460 -15590 -15090"/>
+			<coords loc="-181116 208656 -15590 -15090"/>
+			<coords loc="-180437 208028 -15590 -15090"/>
+			<coords loc="-178666 208025 -15590 -15090"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hoi_attack_echdebuff_4]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="5944;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-177965 208655 -15590 -15090"/>
+			<coords loc="-177964 210478 -15590 -15090"/>
+			<coords loc="-178652 211086 -15590 -15090"/>
+			<coords loc="-180438 211085 -15590 -15090"/>
+			<coords loc="-181117 210460 -15590 -15090"/>
+			<coords loc="-181116 208656 -15590 -15090"/>
+			<coords loc="-180437 208028 -15590 -15090"/>
+			<coords loc="-178666 208025 -15590 -15090"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hos_defence_attackup_1]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-175364 216507 -9776 -9276"/>
+			<coords loc="-172165 216535 -9776 -9276"/>
+			<coords loc="-172222 219751 -9776 -9276"/>
+			<coords loc="-175316 219782 -9776 -9276"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hos_defence_attackup_2]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;2"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-175364 216507 -9776 -9276"/>
+			<coords loc="-172165 216535 -9776 -9276"/>
+			<coords loc="-172222 219751 -9776 -9276"/>
+			<coords loc="-175316 219782 -9776 -9276"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hos_defence_attackup_3]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;3"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-175364 216507 -9776 -9276"/>
+			<coords loc="-172165 216535 -9776 -9276"/>
+			<coords loc="-172222 219751 -9776 -9276"/>
+			<coords loc="-175316 219782 -9776 -9276"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hos_defence_attackup_4]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;4"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-175364 216507 -9776 -9276"/>
+			<coords loc="-172165 216535 -9776 -9276"/>
+			<coords loc="-172222 219751 -9776 -9276"/>
+			<coords loc="-175316 219782 -9776 -9276"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hos_defence_attackup_5]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5938;5"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-175364 216507 -9776 -9276"/>
+			<coords loc="-172165 216535 -9776 -9276"/>
+			<coords loc="-172222 219751 -9776 -9276"/>
+			<coords loc="-175316 219782 -9776 -9276"/>
+		</polygon>
+	</zone>
+
+	<zone name="[soi_hos_defence_defenceup_1]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5939;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-175364 216507 -9776 -9276"/>
+			<coords loc="-172165 216535 -9776 -9276"/>
+			<coords loc="-172222 219751 -9776 -9276"/>
+			<coords loc="-175316 219782 -9776 -9276"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hos_defence_defenceup_2]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5939;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-175364 216507 -9776 -9276"/>
+			<coords loc="-172165 216535 -9776 -9276"/>
+			<coords loc="-172222 219751 -9776 -9276"/>
+			<coords loc="-175316 219782 -9776 -9276"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hos_defence_defenceup_3]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5939;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-175364 216507 -9776 -9276"/>
+			<coords loc="-172165 216535 -9776 -9276"/>
+			<coords loc="-172222 219751 -9776 -9276"/>
+			<coords loc="-175316 219782 -9776 -9276"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hos_defence_defenceup_4]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5939;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-175364 216507 -9776 -9276"/>
+			<coords loc="-172165 216535 -9776 -9276"/>
+			<coords loc="-172222 219751 -9776 -9276"/>
+			<coords loc="-175316 219782 -9776 -9276"/>
+		</polygon>
+	</zone>
+	<zone name="[soi_hos_defence_defenceup_5]" type="poison">
+		<set name="enabled" value="false"/>
+		<set name="target" value="npc"/>
+		<set name="skill_name" value="5939;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="10"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="-175364 216507 -9776 -9276"/>
+			<coords loc="-172165 216535 -9776 -9276"/>
+			<coords loc="-172222 219751 -9776 -9276"/>
+			<coords loc="-175316 219782 -9776 -9276"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_kerthang_001]" type="poison">
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="target" value="pc"/>
+		<set name="enabled" value="false"/>
+		<set name="skill_name" value="4148;6"/>
+		<polygon>
+			<coords loc="-84483 -51200 -11592 -11192"/>
+			<coords loc="-84884 -51508 -11592 -11192"/>
+			<coords loc="-85064 -51972 -11592 -11192"/>
+			<coords loc="-84991 -52456 -11592 -11192"/>
+			<coords loc="-84683 -52850 -11592 -11192"/>
+			<coords loc="-84227 -53023 -11592 -11192"/>
+			<coords loc="-83731 -52947 -11592 -11192"/>
+			<coords loc="-83341 -52645 -11592 -11192"/>
+			<coords loc="-83157 -52168 -11592 -11192"/>
+			<coords loc="-83229 -51689 -11592 -11192"/>
+			<coords loc="-83531 -51310 -11592 -11192"/>
+			<coords loc="-84050 -51128 -11592 -11192"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_kerthang_002]" type="poison">
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="target" value="pc"/>
+		<set name="enabled" value="false"/>
+		<set name="skill_name" value="4148;6"/>
+		<polygon>
+			<coords loc="-84073 -52966 -11544 -11144"/>
+			<coords loc="-84107 -53251 -11544 -11144"/>
+			<coords loc="-84463 -53589 -11544 -11144"/>
+			<coords loc="-84387 -53989 -11544 -11144"/>
+			<coords loc="-84186 -54237 -11544 -11144"/>
+			<coords loc="-83867 -54292 -11544 -11144"/>
+			<coords loc="-83692 -54243 -11544 -11144"/>
+			<coords loc="-83495 -54075 -11544 -11144"/>
+			<coords loc="-83388 -53808 -11544 -11144"/>
+			<coords loc="-83430 -53557 -11544 -11144"/>
+			<coords loc="-83625 -53339 -11544 -11144"/>
+			<coords loc="-83926 -52943 -11544 -11144"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_kerthang_003]" type="poison">
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="target" value="pc"/>
+		<set name="enabled" value="false"/>
+		<set name="skill_name" value="4148;6"/>
+		<polygon>
+			<coords loc="-82843 -50854 -11556 -11156"/>
+			<coords loc="-83086 -51047 -11556 -11156"/>
+			<coords loc="-83469 -51515 -11556 -11156"/>
+			<coords loc="-83439 -51637 -11556 -11156"/>
+			<coords loc="-83239 -51644 -11556 -11156"/>
+			<coords loc="-82734 -51936 -11556 -11156"/>
+			<coords loc="-82432 -51866 -11556 -11156"/>
+			<coords loc="-82201 -51683 -11556 -11156"/>
+			<coords loc="-82104 -51422 -11556 -11156"/>
+			<coords loc="-82151 -51139 -11556 -11156"/>
+			<coords loc="-82324 -50921 -11556 -11156"/>
+			<coords loc="-82568 -50814 -11556 -11156"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_kerthang_004]" type="poison">
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="target" value="pc"/>
+		<set name="enabled" value="false"/>
+		<set name="skill_name" value="4148;6"/>
+		<polygon>
+			<coords loc="-84036 -50233 -11552 -11152"/>
+			<coords loc="-84139 -50483 -11552 -11152"/>
+			<coords loc="-84129 -50794 -11552 -11152"/>
+			<coords loc="-84074 -51204 -11552 -11152"/>
+			<coords loc="-83953 -51248 -11552 -11152"/>
+			<coords loc="-83782 -50991 -11552 -11152"/>
+			<coords loc="-83502 -50966 -11552 -11152"/>
+			<coords loc="-83317 -50807 -11552 -11152"/>
+			<coords loc="-83230 -50597 -11552 -11152"/>
+			<coords loc="-83265 -50330 -11552 -11152"/>
+			<coords loc="-83504 -50090 -11552 -11152"/>
+			<coords loc="-83781 -50087 -11552 -11152"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_kerthang_005]" type="poison">
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="target" value="pc"/>
+		<set name="enabled" value="false"/>
+		<set name="skill_name" value="4148;6"/>
+		<polygon>
+			<coords loc="-85997 -51983 -11564 -11164"/>
+			<coords loc="-86207 -52165 -11564 -11164"/>
+			<coords loc="-86298 -52409 -11564 -11164"/>
+			<coords loc="-86239 -52671 -11564 -11164"/>
+			<coords loc="-86062 -52880 -11564 -11164"/>
+			<coords loc="-85819 -52969 -11564 -11164"/>
+			<coords loc="-85542 -52935 -11564 -11164"/>
+			<coords loc="-85325 -52747 -11564 -11164"/>
+			<coords loc="-84949 -52233 -11564 -11164"/>
+			<coords loc="-84972 -52104 -11564 -11164"/>
+			<coords loc="-85447 -52027 -11564 -11164"/>
+			<coords loc="-85716 -51927 -11564 -11164"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_kerthang_006]" type="poison">
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="target" value="pc"/>
+		<set name="enabled" value="false"/>
+		<set name="skill_name" value="4148;7"/>
+		<polygon>
+			<coords loc="-80410 -51388 -11581 -11181"/>
+			<coords loc="-80641 -51679 -11581 -11181"/>
+			<coords loc="-80782 -52222 -11581 -11181"/>
+			<coords loc="-80703 -52582 -11581 -11181"/>
+			<coords loc="-80322 -53010 -11581 -11181"/>
+			<coords loc="-79758 -53098 -11581 -11181"/>
+			<coords loc="-79437 -53011 -11581 -11181"/>
+			<coords loc="-78979 -52731 -11581 -11181"/>
+			<coords loc="-78898 -52192 -11581 -11181"/>
+			<coords loc="-78856 -51814 -11581 -11181"/>
+			<coords loc="-79311 -51328 -11581 -11181"/>
+			<coords loc="-79870 -51180 -11581 -11181"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_kerthang_007]" type="poison">
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="target" value="pc"/>
+		<set name="enabled" value="false"/>
+		<set name="skill_name" value="4148;7"/>
+		<polygon>
+			<coords loc="-80276 -53424 -11540 -11140"/>
+			<coords loc="-80458 -53708 -11540 -11140"/>
+			<coords loc="-80431 -54058 -11540 -11140"/>
+			<coords loc="-80241 -54292 -11540 -11140"/>
+			<coords loc="-79923 -54378 -11540 -11140"/>
+			<coords loc="-79697 -54308 -11540 -11140"/>
+			<coords loc="-79477 -54132 -11540 -11140"/>
+			<coords loc="-79400 -53820 -11540 -11140"/>
+			<coords loc="-79491 -53558 -11540 -11140"/>
+			<coords loc="-79717 -53359 -11540 -11140"/>
+			<coords loc="-79910 -53001 -11540 -11140"/>
+			<coords loc="-80047 -52981 -11540 -11140"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_kerthang_008]" type="poison">
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="target" value="pc"/>
+		<set name="enabled" value="false"/>
+		<set name="skill_name" value="4148;7"/>
+		<polygon>
+			<coords loc="-78494 -52005 -11564 -11164"/>
+			<coords loc="-78954 -52219 -11564 -11164"/>
+			<coords loc="-78968 -52344 -11564 -11164"/>
+			<coords loc="-78705 -52433 -11564 -11164"/>
+			<coords loc="-78572 -52755 -11564 -11164"/>
+			<coords loc="-78349 -52923 -11564 -11164"/>
+			<coords loc="-78101 -52954 -11564 -11164"/>
+			<coords loc="-77819 -52831 -11564 -11164"/>
+			<coords loc="-77638 -52598 -11564 -11164"/>
+			<coords loc="-77623 -52359 -11564 -11164"/>
+			<coords loc="-77694 -52185 -11564 -11164"/>
+			<coords loc="-78009 -51850 -11564 -11164"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_kerthang_009]" type="poison">
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="target" value="pc"/>
+		<set name="enabled" value="false"/>
+		<set name="skill_name" value="4148;7"/>
+		<polygon>
+			<coords loc="-80231 -50016 -11551 -11151"/>
+			<coords loc="-80475 -50131 -11551 -11151"/>
+			<coords loc="-80674 -50439 -11551 -11151"/>
+			<coords loc="-80547 -50993 -11551 -11151"/>
+			<coords loc="-80190 -51377 -11551 -11151"/>
+			<coords loc="-80067 -51379 -11551 -11151"/>
+			<coords loc="-80020 -51091 -11551 -11151"/>
+			<coords loc="-79731 -50976 -11551 -11151"/>
+			<coords loc="-79566 -50715 -11551 -11151"/>
+			<coords loc="-79561 -50427 -11551 -11151"/>
+			<coords loc="-79707 -50172 -11551 -11151"/>
+			<coords loc="-79894 -50034 -11551 -11151"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_kerthang_010]" type="poison">
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="target" value="pc"/>
+		<set name="enabled" value="false"/>
+		<set name="skill_name" value="4148;7"/>
+		<polygon>
+			<coords loc="-81266 -50853 -11533 -11133"/>
+			<coords loc="-81517 -50943 -11533 -11133"/>
+			<coords loc="-81667 -51293 -11533 -11133"/>
+			<coords loc="-81568 -51630 -11533 -11133"/>
+			<coords loc="-81172 -51795 -11533 -11133"/>
+			<coords loc="-80663 -51863 -11533 -11133"/>
+			<coords loc="-80577 -51752 -11533 -11133"/>
+			<coords loc="-80723 -51656 -11533 -11133"/>
+			<coords loc="-80912 -51684 -11533 -11133"/>
+			<coords loc="-80748 -51445 -11533 -11133"/>
+			<coords loc="-80745 -51107 -11533 -11133"/>
+			<coords loc="-81003 -50893 -11533 -11133"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_kerthang_011]" type="poison">
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="target" value="pc"/>
+		<set name="enabled" value="false"/>
+		<set name="skill_name" value="4148;8"/>
+		<polygon>
+			<coords loc="-78718 -47247 -11588 -11188"/>
+			<coords loc="-79143 -47541 -11588 -11188"/>
+			<coords loc="-79374 -48010 -11588 -11188"/>
+			<coords loc="-79301 -48493 -11588 -11188"/>
+			<coords loc="-78992 -48907 -11588 -11188"/>
+			<coords loc="-78571 -49090 -11588 -11188"/>
+			<coords loc="-78080 -49049 -11588 -11188"/>
+			<coords loc="-77690 -48777 -11588 -11188"/>
+			<coords loc="-77462 -48280 -11588 -11188"/>
+			<coords loc="-77563 -47636 -11588 -11188"/>
+			<coords loc="-77886 -47372 -11588 -11188"/>
+			<coords loc="-78329 -47195 -11588 -11188"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_kerthang_012]" type="poison">
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="target" value="pc"/>
+		<set name="enabled" value="false"/>
+		<set name="skill_name" value="4148;8"/>
+		<polygon>
+			<coords loc="-77009 -48264 -11568 -11168"/>
+			<coords loc="-77259 -48440 -11568 -11168"/>
+			<coords loc="-77633 -48489 -11568 -11168"/>
+			<coords loc="-77690 -48615 -11568 -11168"/>
+			<coords loc="-77377 -48879 -11568 -11168"/>
+			<coords loc="-77169 -49188 -11568 -11168"/>
+			<coords loc="-76786 -49324 -11568 -11168"/>
+			<coords loc="-76451 -49108 -11568 -11168"/>
+			<coords loc="-76319 -48854 -11568 -11168"/>
+			<coords loc="-76351 -48600 -11568 -11168"/>
+			<coords loc="-76494 -48368 -11568 -11168"/>
+			<coords loc="-76757 -48254 -11568 -11168"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_kerthang_013]" type="poison">
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="target" value="pc"/>
+		<set name="enabled" value="false"/>
+		<set name="skill_name" value="4148;8"/>
+		<polygon>
+			<coords loc="-78000 -46223 -11564 -11164"/>
+			<coords loc="-78153 -46567 -11564 -11164"/>
+			<coords loc="-78113 -46882 -11564 -11164"/>
+			<coords loc="-78085 -47336 -11564 -11164"/>
+			<coords loc="-77962 -47383 -11564 -11164"/>
+			<coords loc="-77833 -47166 -11564 -11164"/>
+			<coords loc="-77456 -47148 -11564 -11164"/>
+			<coords loc="-77235 -46983 -11564 -11164"/>
+			<coords loc="-77109 -46705 -11564 -11164"/>
+			<coords loc="-77161 -46421 -11564 -11164"/>
+			<coords loc="-77319 -46231 -11564 -11164"/>
+			<coords loc="-77620 -46120 -11564 -11164"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_kerthang_014]" type="poison">
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="target" value="pc"/>
+		<set name="enabled" value="false"/>
+		<set name="skill_name" value="4148;8"/>
+		<polygon>
+			<coords loc="-79678 -47494 -11568 -11168"/>
+			<coords loc="-80091 -47328 -11568 -11168"/>
+			<coords loc="-80492 -47615 -11568 -11168"/>
+			<coords loc="-80602 -47897 -11568 -11168"/>
+			<coords loc="-80512 -48241 -11568 -11168"/>
+			<coords loc="-80230 -48460 -11568 -11168"/>
+			<coords loc="-79808 -48431 -11568 -11168"/>
+			<coords loc="-79537 -48355 -11568 -11168"/>
+			<coords loc="-79268 -48260 -11568 -11168"/>
+			<coords loc="-79224 -48133 -11568 -11168"/>
+			<coords loc="-79472 -47988 -11568 -11168"/>
+			<coords loc="-79523 -47709 -11568 -11168"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_kerthang_015]" type="poison">
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="target" value="pc"/>
+		<set name="enabled" value="false"/>
+		<set name="skill_name" value="4148;8"/>
+		<polygon>
+			<coords loc="-79808 -48756 -11556 -11156"/>
+			<coords loc="-79978 -48868 -11556 -11156"/>
+			<coords loc="-80106 -49157 -11556 -11156"/>
+			<coords loc="-80072 -49370 -11556 -11156"/>
+			<coords loc="-79866 -49573 -11556 -11156"/>
+			<coords loc="-79552 -49644 -11556 -11156"/>
+			<coords loc="-79377 -49624 -11556 -11156"/>
+			<coords loc="-79134 -49245 -11556 -11156"/>
+			<coords loc="-78940 -48848 -11556 -11156"/>
+			<coords loc="-79014 -48756 -11556 -11156"/>
+			<coords loc="-79335 -48852 -11556 -11156"/>
+			<coords loc="-79634 -48702 -11556 -11156"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_kerthang_016]" type="poison">
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="target" value="pc"/>
+		<set name="enabled" value="false"/>
+		<set name="skill_name" value="4148;9"/>
+		<polygon>
+			<coords loc="-82239 -44711 -11588 -11188"/>
+			<coords loc="-82588 -45030 -11588 -11188"/>
+			<coords loc="-82757 -45489 -11588 -11188"/>
+			<coords loc="-82667 -45972 -11588 -11188"/>
+			<coords loc="-82358 -46366 -11588 -11188"/>
+			<coords loc="-81902 -46539 -11588 -11188"/>
+			<coords loc="-81406 -46463 -11588 -11188"/>
+			<coords loc="-81016 -46161 -11588 -11188"/>
+			<coords loc="-80833 -45639 -11588 -11188"/>
+			<coords loc="-80950 -45107 -11588 -11188"/>
+			<coords loc="-81327 -44740 -11588 -11188"/>
+			<coords loc="-81805 -44621 -11588 -11188"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_kerthang_017]" type="poison">
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="target" value="pc"/>
+		<set name="enabled" value="false"/>
+		<set name="skill_name" value="4148;9"/>
+		<polygon>
+			<coords loc="-81210 -44263 -11552 -11152"/>
+			<coords loc="-81138 -44561 -11552 -11152"/>
+			<coords loc="-81212 -44951 -11552 -11152"/>
+			<coords loc="-81121 -45040 -11552 -11152"/>
+			<coords loc="-80805 -44788 -11552 -11152"/>
+			<coords loc="-80549 -44832 -11552 -11152"/>
+			<coords loc="-80196 -44492 -11552 -11152"/>
+			<coords loc="-80156 -44278 -11552 -11152"/>
+			<coords loc="-80216 -44058 -11552 -11152"/>
+			<coords loc="-80349 -43880 -11552 -11152"/>
+			<coords loc="-80664 -43767 -11552 -11152"/>
+			<coords loc="-81064 -43830 -11552 -11152"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_kerthang_018]" type="poison">
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="target" value="pc"/>
+		<set name="enabled" value="false"/>
+		<set name="skill_name" value="4148;9"/>
+		<polygon>
+			<coords loc="-83192 -43876 -11564 -11164"/>
+			<coords loc="-83402 -44074 -11564 -11164"/>
+			<coords loc="-83494 -44317 -11564 -11164"/>
+			<coords loc="-83434 -44579 -11564 -11164"/>
+			<coords loc="-83257 -44789 -11564 -11164"/>
+			<coords loc="-83014 -44877 -11564 -11164"/>
+			<coords loc="-82836 -44838 -11564 -11164"/>
+			<coords loc="-82446 -44990 -11564 -11164"/>
+			<coords loc="-82356 -44900 -11564 -11164"/>
+			<coords loc="-82462 -44126 -11564 -11164"/>
+			<coords loc="-82632 -43910 -11564 -11164"/>
+			<coords loc="-82906 -43810 -11564 -11164"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_kerthang_019]" type="poison">
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="target" value="pc"/>
+		<set name="enabled" value="false"/>
+		<set name="skill_name" value="4148;9"/>
+		<polygon>
+			<coords loc="-82317 -46433 -11620 -11220"/>
+			<coords loc="-82874 -46567 -11620 -11220"/>
+			<coords loc="-83088 -46886 -11620 -11220"/>
+			<coords loc="-83031 -47286 -11620 -11220"/>
+			<coords loc="-82811 -47535 -11620 -11220"/>
+			<coords loc="-82492 -47589 -11620 -11220"/>
+			<coords loc="-82317 -47540 -11620 -11220"/>
+			<coords loc="-82082 -47358 -11620 -11220"/>
+			<coords loc="-82014 -47105 -11620 -11220"/>
+			<coords loc="-81984 -46865 -11620 -11220"/>
+			<coords loc="-81972 -46409 -11620 -11220"/>
+			<coords loc="-82065 -46334 -11620 -11220"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_kerthang_020]" type="poison">
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="target" value="pc"/>
+		<set name="enabled" value="false"/>
+		<set name="skill_name" value="4148;9"/>
+		<polygon>
+			<coords loc="-81426 -46342 -11584 -11184"/>
+			<coords loc="-81671 -46988 -11584 -11184"/>
+			<coords loc="-81631 -47261 -11584 -11184"/>
+			<coords loc="-81552 -47398 -11584 -11184"/>
+			<coords loc="-81387 -47476 -11584 -11184"/>
+			<coords loc="-81211 -47523 -11584 -11184"/>
+			<coords loc="-81011 -47490 -11584 -11184"/>
+			<coords loc="-80830 -47320 -11584 -11184"/>
+			<coords loc="-80762 -47102 -11584 -11184"/>
+			<coords loc="-80797 -46835 -11584 -11184"/>
+			<coords loc="-80910 -46690 -11584 -11184"/>
+			<coords loc="-81303 -46300 -11584 -11184"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_kerthang_021]" type="poison">
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="target" value="pc"/>
+		<set name="enabled" value="false"/>
+		<set name="skill_name" value="4148;5"/>
+		<polygon>
+			<coords loc="-85653 -47093 -11573 -11173"/>
+			<coords loc="-86082 -47396 -11573 -11173"/>
+			<coords loc="-86269 -47854 -11573 -11173"/>
+			<coords loc="-86219 -48367 -11573 -11173"/>
+			<coords loc="-85940 -48743 -11573 -11173"/>
+			<coords loc="-85531 -48940 -11573 -11173"/>
+			<coords loc="-85000 -48917 -11573 -11173"/>
+			<coords loc="-84627 -48679 -11573 -11173"/>
+			<coords loc="-84385 -48261 -11573 -11173"/>
+			<coords loc="-84398 -47723 -11573 -11173"/>
+			<coords loc="-84700 -47244 -11573 -11173"/>
+			<coords loc="-85067 -47074 -11573 -11173"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_kerthang_022]" type="poison">
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="target" value="pc"/>
+		<set name="enabled" value="false"/>
+		<set name="skill_name" value="4148;5"/>
+		<polygon>
+			<coords loc="-87045 -48304 -11586 -11186"/>
+			<coords loc="-87255 -48487 -11586 -11186"/>
+			<coords loc="-87347 -48730 -11586 -11186"/>
+			<coords loc="-87300 -49010 -11586 -11186"/>
+			<coords loc="-87110 -49219 -11586 -11186"/>
+			<coords loc="-86837 -49329 -11586 -11186"/>
+			<coords loc="-86460 -49213 -11586 -11186"/>
+			<coords loc="-86282 -48847 -11586 -11186"/>
+			<coords loc="-86052 -48470 -11586 -11186"/>
+			<coords loc="-86112 -48361 -11586 -11186"/>
+			<coords loc="-86496 -48349 -11586 -11186"/>
+			<coords loc="-86765 -48249 -11586 -11186"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_kerthang_023]" type="poison">
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="target" value="pc"/>
+		<set name="enabled" value="false"/>
+		<set name="skill_name" value="4148;5"/>
+		<polygon>
+			<coords loc="-84541 -48397 -11590 -11190"/>
+			<coords loc="-84653 -48474 -11590 -11190"/>
+			<coords loc="-84674 -48959 -11590 -11190"/>
+			<coords loc="-84629 -49359 -11590 -11190"/>
+			<coords loc="-84397 -49608 -11590 -11190"/>
+			<coords loc="-84078 -49662 -11590 -11190"/>
+			<coords loc="-83903 -49613 -11590 -11190"/>
+			<coords loc="-83684 -49471 -11590 -11190"/>
+			<coords loc="-83582 -49260 -11590 -11190"/>
+			<coords loc="-83576 -48928 -11590 -11190"/>
+			<coords loc="-83737 -48704 -11590 -11190"/>
+			<coords loc="-83971 -48580 -11590 -11190"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_kerthang_024]" type="poison">
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="target" value="pc"/>
+		<set name="enabled" value="false"/>
+		<set name="skill_name" value="4148;5"/>
+		<polygon>
+			<coords loc="-84063 -47545 -11601 -11201"/>
+			<coords loc="-84484 -47735 -11601 -11201"/>
+			<coords loc="-84486 -47849 -11601 -11201"/>
+			<coords loc="-84164 -47930 -11601 -11201"/>
+			<coords loc="-84066 -48154 -11601 -11201"/>
+			<coords loc="-83805 -48310 -11601 -11201"/>
+			<coords loc="-83525 -48284 -11601 -11201"/>
+			<coords loc="-83340 -48126 -11601 -11201"/>
+			<coords loc="-83253 -47916 -11601 -11201"/>
+			<coords loc="-83288 -47649 -11601 -11201"/>
+			<coords loc="-83527 -47408 -11601 -11201"/>
+			<coords loc="-83804 -47405 -11601 -11201"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_kerthang_025]" type="poison">
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="5"/>
+		<set name="target" value="pc"/>
+		<set name="enabled" value="false"/>
+		<set name="skill_name" value="4148;5"/>
+		<polygon>
+			<coords loc="-86433 -46106 -11559 -11159"/>
+			<coords loc="-86693 -46266 -11559 -11159"/>
+			<coords loc="-86794 -46709 -11559 -11159"/>
+			<coords loc="-86613 -46969 -11559 -11159"/>
+			<coords loc="-86348 -47100 -11559 -11159"/>
+			<coords loc="-86051 -47143 -11559 -11159"/>
+			<coords loc="-85741 -47270 -11559 -11159"/>
+			<coords loc="-85633 -47202 -11559 -11159"/>
+			<coords loc="-85744 -46803 -11559 -11159"/>
+			<coords loc="-85746 -46374 -11559 -11159"/>
+			<coords loc="-85870 -46233 -11559 -11159"/>
+			<coords loc="-86090 -46061 -11559 -11159"/>
+		</polygon>
+	</zone>
+</list>

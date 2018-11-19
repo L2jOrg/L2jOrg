@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="17100001" name="orbis_am_09" hp="1" pdef="1" mdef="1">
+		<pos x="-89120" y="-252843" z="-3341"/>
+		<shape ax="-89135" ay="-252911" bx="-89106" by="-252912" cx="-89105" cy="-252774" dx="-89135" dy="-252774" minz="-3348" maxz="-3198"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="600"/>
+	</door>
+	<door id="17100002" name="orbis_am_09" hp="1" pdef="1" mdef="1">
+		<pos x="-87043" y="-252843" z="-3341"/>
+		<shape ax="-87058" ay="-252911" bx="-87029" by="-252912" cx="-87028" cy="-252774" dx="-87058" dy="-252774" minz="-3348" maxz="-3198"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="600"/>
+	</door>
+	<door id="17100101" name="orbis_am_09" hp="1" pdef="1" mdef="1">
+		<pos x="-76480" y="-252461" z="-7741"/>
+		<shape ax="-76495" ay="-252529" bx="-76466" by="-252530" cx="-76465" cy="-252392" dx="-76495" dy="-252392" minz="-7748" maxz="-7598"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="17100102" name="orbis_am_09" hp="1" pdef="1" mdef="1">
+		<pos x="-74450" y="-252459" z="-7741"/>
+		<shape ax="-74465" ay="-252527" bx="-74436" by="-252528" cx="-74435" cy="-252390" dx="-74465" dy="-252390" minz="-7748" maxz="-7598"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="17100201" name="HerosTrail_door01" hp="1" pdef="1" mdef="1">
+		<pos x="-88912" y="-239351" z="-8475"/>
+		<shape ax="-88931" ay="-239437" bx="-88895" by="-239437" cx="-88899" cy="-239264" dx="-88931" dy="-239265" minz="-8485" maxz="-8335"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="17100202" name="HerosTrail_door01" hp="1" pdef="1" mdef="1">
+		<pos x="-87278" y="-239351" z="-8475"/>
+		<shape ax="-87297" ay="-239437" bx="-87261" by="-239437" cx="-87265" cy="-239264" dx="-87297" dy="-239265" minz="-8485" maxz="-8335"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="17100301" name="orbis_am_09" hp="1" pdef="1" mdef="1">
+		<pos x="-76375" y="-239182" z="-8218"/>
+		<shape ax="-76384" ay="-239251" bx="-76365" by="-239250" cx="-76367" cy="-239111" dx="-76385" dy="-239110" minz="-8229" maxz="-8079"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="17100302" name="orbis_am_09" hp="1" pdef="1" mdef="1">
+		<pos x="-74538" y="-239182" z="-8218"/>
+		<shape ax="-74547" ay="-239251" bx="-74528" by="-239250" cx="-74530" cy="-239111" dx="-74548" dy="-239110" minz="-8229" maxz="-8079"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+</list>

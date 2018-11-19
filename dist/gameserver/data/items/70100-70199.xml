@@ -1,0 +1,1345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<armor id="70100" name="Stockings of Devotion" add_name="7-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.armor_t55_l_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="MAGIC"/>
+		<set name="durability" value="10080"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="19"/>
+			<add stat="maxMp" order="0x60" value="42"/>
+		</for>
+	</armor>
+	<armor id="70101" name="Refined Romantic Chapeau: Gold" add_name="7-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bm_romantic_chaperon_gold"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="durability" value="10080"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+		<skills>
+			<skill id="39044" level="1"/>	<!--Refined Romantic Chapeau: Gold 1-->
+			<skill id="39045" level="1"/>	<!--Refined Romantic Chapeau: Gold 2-->
+			<skill id="39043" level="1"/>	<!--Refined Romantic Chapeau: Gold 3-->
+		</skills>
+	</armor>
+	<etcitem id="70102" name="Adventurerâs Potion - Atk. Spd.">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_reagent_green_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="POTION"/>
+		<skills>
+			<skill id="55235" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="70103" name="Adventurerâs Potion - Casting Spd.">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_potion_of_acumen2_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="POTION"/>
+		<skills>
+			<skill id="55236" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="70104" name="Scroll: Vampiric Rage">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<skills>
+			<skill id="55237" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="70105" name="Scroll of Mana">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<skills>
+			<skill id="55241" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="70106" name="Rune of Boost" add_name="7-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="BranchSys3.lcon.g_rune_itemdrop_up"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="RUNE"/>
+		<set name="durability" value="10080"/>
+		<set name="temporal" value="true"/>
+		<skills>
+			<skill id="55246" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="70107" name="Scroll: Berserker Spirit">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<skills>
+			<skill id="55242" level="1"/>
+		</skills>
+	</etcitem>
+	<armor id="70108" name="Fire Dragon Pendant - Lv. 3" add_name="7-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pve"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="durability" value="10080"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<armor id="70109" name="Water Dragon Pendant - Lv. 3" add_name="7-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pvp_blue"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="durability" value="10080"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<etcitem id="70110" name="Scroll: Dance of the Warrior">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.etc_g_bm_dance_scroll_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<skills>
+			<skill id="55243" level="2"/>
+		</skills>
+	</etcitem>
+	<etcitem id="70111" name="Scroll: Dance of the Mystic">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.etc_g_bm_dance_scroll_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<skills>
+			<skill id="55244" level="2"/>
+		</skills>
+	</etcitem>
+	<armor id="70112" name="Refined Romantic Chapeau - Special Trait" add_name="7-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_archer_hat2_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="durability" value="10080"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+		<skills>
+			<skill id="55247" level="1"/>
+		</skills>
+	</armor>
+	<etcitem id="70113" name="Scroll of Escape: Town of Aden">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i04"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55245" level="8"/>	<!--Teleport: Town of Aden-->
+		</skills>
+	</etcitem>
+	<armor id="70114" name="Agathion - Singer &amp; Dancer " add_name="7-day">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys2.icon.br_aga_singer_dancer_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="10080"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+		<skills>
+			<skill id="21233" level="1"/>
+			<skill id="23234" level="1"/>
+			<skill id="3267" level="1"/>
+			<skill id="39016" level="1"/>
+			<skill id="39017" level="1"/>
+			<skill id="39018" level="1"/>
+		</skills>
+	</armor>
+	<etcitem id="70115" name="Fishing Coin">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.fairy_adena_joke"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<weapon id="70116" name="Mermaid\'s Elite Golden Fishing Rod" add_name="1-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bm_gold_fishing_pole"/>
+		<set name="price" value="0"/>
+		<set name="type" value="ROD"/>
+		<set name="weight" value="1000"/>
+		<set name="rnd_dam" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="1"/>
+			<add stat="mAtk" order="0x10" value="1"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="70117" name="Mermaid\'s Elite Golden Fishing Rod" add_name="3-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bm_gold_fishing_pole"/>
+		<set name="price" value="0"/>
+		<set name="type" value="ROD"/>
+		<set name="weight" value="1000"/>
+		<set name="rnd_dam" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="1"/>
+			<add stat="mAtk" order="0x10" value="1"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="70118" name="Mermaid\'s Elite Golden Fishing Rod" add_name="7-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bm_gold_fishing_pole"/>
+		<set name="price" value="0"/>
+		<set name="type" value="ROD"/>
+		<set name="weight" value="1000"/>
+		<set name="rnd_dam" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="1"/>
+			<add stat="mAtk" order="0x10" value="1"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="70119" name="Mermaid\'s Elite Golden Fishing Rod" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bm_gold_fishing_pole"/>
+		<set name="price" value="0"/>
+		<set name="type" value="ROD"/>
+		<set name="weight" value="1000"/>
+		<set name="rnd_dam" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="1"/>
+			<add stat="mAtk" order="0x10" value="1"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="70120" name="Mermaid\'s Elite Golden Fishing Rod">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bm_gold_fishing_pole"/>
+		<set name="price" value="0"/>
+		<set name="type" value="ROD"/>
+		<set name="weight" value="1000"/>
+		<set name="rnd_dam" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="1"/>
+			<add stat="mAtk" order="0x10" value="1"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<etcitem id="70121" name="Full Plate Armor Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70122" name="Full Plate Helmet Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70123" name="Full Plate Shield Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70124" name="Drake Leather Armor Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70125" name="Drake Leather Boots Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70126" name="Divine Tunic Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70127" name="Divine Stockings Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70128" name="Divine Gloves Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70129" name="Doom Shield Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="1460" min_count="15" max_count="15" chance="100.0"/> <!--кристалл Б -->
+			<capsuled_item id="1888" min_count="3" max_count="3" chance="100.0"/><!--синт кокс -->
+			<capsuled_item id="1890" min_count="9" max_count="9" chance="100.0"/><!--мифриловый сплав -->	
+			<capsuled_item id="1894" min_count="3" max_count="3" chance="100.0"/><!--выделанная кожа -->
+			<capsuled_item id="2132" min_count="4" max_count="4" chance="100.0"/><!--самоцвет ранг Б -->
+			<capsuled_item id="4043" min_count="3" max_count="3" chance="100.0"/><!--азоф -->
+			<capsuled_item id="4077" min_count="13" max_count="13" chance="100.0"/><!--часть щита рока -->
+			<capsuled_item id="4980" min_count="1" max_count="1" chance="100.0"/><!--рецепт щит рока 60% -->			
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="70130" name="Doom Plate Armor Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="1460" min_count="60" max_count="60" chance="100.0"/> <!--кристалл Б -->
+			<capsuled_item id="1887" min_count="15" max_count="15" chance="100.0"/><!--очищенный лак -->	
+			<capsuled_item id="1890" min_count="45" max_count="45" chance="100.0"/><!--мифриловый сплав -->	<capsuled_item id="1892" min_count="4" max_count="4" chance="100.0"/><!--заготовка кузнеца -->	
+			<capsuled_item id="2132" min_count="31" max_count="31" chance="100.0"/><!--самоцвет ранг Б -->
+			<capsuled_item id="4043" min_count="30" max_count="30" chance="100.0"/><!--азоф -->
+			<capsuled_item id="4081" min_count="13" max_count="13" chance="100.0"/><!--заготовка латного доспеха рока -->
+			<capsuled_item id="4983" min_count="1" max_count="1" chance="100.0"/><!--рецепт латный доспех рока 60% -->			
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="70131" name="Doom Helmet Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="1460" min_count="14" max_count="14" chance="100.0"/> <!--кристалл Б -->		
+			<capsuled_item id="1892" min_count="1" max_count="1" chance="100.0"/><!--заготовка кузнеца -->
+			<capsuled_item id="1894" min_count="40" max_count="40" chance="100.0"/><!--выделанная кожа -->	
+			<capsuled_item id="2132" min_count="7" max_count="7" chance="100.0"/><!--самоцвет ранг Б -->
+			<capsuled_item id="4043" min_count="4" max_count="4" chance="100.0"/><!--азоф -->
+			<capsuled_item id="4089" min_count="13" max_count="13" chance="100.0"/><!--модель запечатанного шлема рока -->
+			<capsuled_item id="4991" min_count="1" max_count="1" chance="100.0"/><!--рецепт запечатанный шлем рока 60% -->			
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="70132" name="Doom Gloves Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="1460" min_count="8" max_count="8" chance="100.0"/> <!--кристалл Б -->		
+			<capsuled_item id="1885" min_count="4" max_count="4" chance="100.0"/><!--качественная замша -->
+			<capsuled_item id="1894" min_count="32" max_count="32" chance="100.0"/><!--выделанная кожа -->	
+			<capsuled_item id="2132" min_count="4" max_count="4" chance="100.0"/><!--самоцвет ранг Б -->
+			<capsuled_item id="4043" min_count="4" max_count="4" chance="100.0"/><!--азоф -->
+			<capsuled_item id="4091" min_count="13" max_count="13" chance="100.0"/><!--часть запечатанных перчаток рока -->
+			<capsuled_item id="4993" min_count="1" max_count="1" chance="100.0"/><!--рецепт запечатанных перчаток рока 60% -->			
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="70133" name="Doom Boots Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="1460" min_count="8" max_count="8" chance="100.0"/> <!--кристалл Б -->		
+			<capsuled_item id="1885" min_count="4" max_count="4" chance="100.0"/><!--качественная замша -->
+			<capsuled_item id="1894" min_count="32" max_count="32" chance="100.0"/><!--выделанная кожа -->	
+			<capsuled_item id="2132" min_count="4" max_count="4" chance="100.0"/><!--самоцвет ранг Б -->
+			<capsuled_item id="4043" min_count="4" max_count="4" chance="100.0"/><!--азоф -->
+			<capsuled_item id="4099" min_count="13" max_count="13" chance="100.0"/><!--часть запечатанных сапог рока -->
+			<capsuled_item id="4999" min_count="1" max_count="1" chance="100.0"/><!--рецепт запечатанных сапог рока 60% -->			
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="70134" name="Blue Wolf Breastplate Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="1460" min_count="40" max_count="40" chance="100.0"/> <!--кристалл Б -->		
+			<capsuled_item id="1890" min_count="36" max_count="36" chance="100.0"/><!--мифриловый сплав -->	<capsuled_item id="1892" min_count="3" max_count="3" chance="100.0"/><!--заготовка кузнеца -->	
+			<capsuled_item id="2132" min_count="20" max_count="20" chance="100.0"/><!--самоцвет ранг Б -->
+			<capsuled_item id="4043" min_count="24" max_count="24" chance="100.0"/><!--азоф -->
+			<capsuled_item id="4078" min_count="13" max_count="13" chance="100.0"/><!--часть кирасы синего волка -->
+			<capsuled_item id="4981" min_count="1" max_count="1" chance="100.0"/><!--рецепт кираса синего волка 60% -->			
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="70135" name="Blue Wolf Gaiters Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="1460" min_count="20" max_count="20" chance="100.0"/> <!--кристалл Б -->		
+			<capsuled_item id="1890" min_count="24" max_count="24" chance="100.0"/><!--мифриловый сплав -->	<capsuled_item id="1892" min_count="2" max_count="2" chance="100.0"/><!--заготовка кузнеца -->	
+			<capsuled_item id="2132" min_count="12" max_count="12" chance="100.0"/><!--самоцвет ранг Б -->
+			<capsuled_item id="4043" min_count="16" max_count="16" chance="100.0"/><!--азоф -->
+			<capsuled_item id="4080" min_count="13" max_count="13" chance="100.0"/><!--материал набедренников синего волка -->
+			<capsuled_item id="4982" min_count="1" max_count="1" chance="100.0"/><!--рецепт набедренники синего волка 60% -->			
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="70136" name="Blue Wolf Helmet Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="1460" min_count="14" max_count="14" chance="100.0"/> <!--кристалл Б -->		
+			<capsuled_item id="1892" min_count="1" max_count="1" chance="100.0"/><!--заготовка кузнеца -->
+			<capsuled_item id="1894" min_count="40" max_count="40" chance="100.0"/><!--выделанная кожа -->	
+			<capsuled_item id="2132" min_count="7" max_count="7" chance="100.0"/><!--самоцвет ранг Б -->
+			<capsuled_item id="4043" min_count="4" max_count="4" chance="100.0"/><!--азоф -->
+			<capsuled_item id="4088" min_count="13" max_count="13" chance="100.0"/><!--модель запечатанного шлема синего волка -->
+			<capsuled_item id="4990" min_count="1" max_count="1" chance="100.0"/><!--рецепт запечатанный шлем синего волка 60% -->			
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="70137" name="Blue Wolf Gloves Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="1460" min_count="8" max_count="8" chance="100.0"/> <!--кристалл Б -->		
+			<capsuled_item id="1885" min_count="4" max_count="4" chance="100.0"/><!--качественная замша -->
+			<capsuled_item id="1894" min_count="32" max_count="32" chance="100.0"/><!--выделанная кожа -->	
+			<capsuled_item id="2132" min_count="4" max_count="4" chance="100.0"/><!--самоцвет ранг Б -->
+			<capsuled_item id="4043" min_count="4" max_count="4" chance="100.0"/><!--азоф -->
+			<capsuled_item id="4096" min_count="13" max_count="13" chance="100.0"/><!--материя запечатанных перчаток синего волка -->
+			<capsuled_item id="4998" min_count="1" max_count="1" chance="100.0"/><!--рецепт запечатанных перчаток синего волка 60% -->			
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="70138" name="Blue Wolf Boots Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="1460" min_count="8" max_count="8" chance="100.0"/> <!--кристалл Б -->		
+			<capsuled_item id="1885" min_count="4" max_count="4" chance="100.0"/><!--качественная замша -->
+			<capsuled_item id="1894" min_count="32" max_count="32" chance="100.0"/><!--выделанная кожа -->	
+			<capsuled_item id="2132" min_count="4" max_count="4" chance="100.0"/><!--самоцвет ранг Б -->
+			<capsuled_item id="4043" min_count="4" max_count="4" chance="100.0"/><!--азоф -->
+			<capsuled_item id="4090" min_count="13" max_count="13" chance="100.0"/><!--модель запечатанных сапог синего волка -->
+			<capsuled_item id="4992" min_count="1" max_count="1" chance="100.0"/><!--рецепт запечатанных сапог синего волка 60% -->			
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="70139" name="Doom Leather Armor Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="1460" min_count="48" max_count="48" chance="100.0"/> <!--кристалл Б -->	
+			<capsuled_item id="1889" min_count="25" max_count="25" chance="100.0"/><!--прочный шнурок -->
+			<capsuled_item id="1894" min_count="100" max_count="100" chance="100.0"/><!--выделанная кожа -->
+			<capsuled_item id="1895" min_count="50" max_count="50" chance="100.0"/><!--металическое волокно -->
+			<capsuled_item id="2132" min_count="22" max_count="22" chance="100.0"/><!--самоцвет ранг Б -->
+			<capsuled_item id="4043" min_count="25" max_count="25" chance="100.0"/><!--азоф -->
+			<capsuled_item id="4083" min_count="12" max_count="12" chance="100.0"/><!--выкройка кожанного доспеха рока -->
+			<capsuled_item id="4985" min_count="1" max_count="1" chance="100.0"/><!--рецепт кожанный доспех рока 60% -->			
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="70140" name="Avadon Robe Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="1459" min_count="95" max_count="95" chance="100.0"/> <!--кристалл С -->
+			<capsuled_item id="1889" min_count="16" max_count="16" chance="100.0"/><!--прочный шнурок -->
+			<capsuled_item id="1894" min_count="65" max_count="65" chance="100.0"/><!--выделанная кожа -->
+			<capsuled_item id="1895" min_count="32" max_count="32" chance="100.0"/><!--металическое волокно -->
+			<capsuled_item id="2132" min_count="14" max_count="14" chance="100.0"/><!--самоцвет ранг Б -->
+			<capsuled_item id="4043" min_count="16" max_count="16" chance="100.0"/><!--азоф -->
+			<capsuled_item id="4071" min_count="12" max_count="12" chance="100.0"/><!--материя мантии авадона -->
+			<capsuled_item id="4951" min_count="1" max_count="1" chance="100.0"/><!--рецепт мантия авадона 60% -->			
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="70141" name="Avadon Circlet Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="1459" min_count="30" max_count="30" chance="100.0"/> <!--кристалл С -->
+			<capsuled_item id="1892" min_count="1" max_count="1" chance="100.0"/><!--заготовка кузнеца -->
+			<capsuled_item id="1894" min_count="20" max_count="20" chance="100.0"/><!--выделанная кожа -->			
+			<capsuled_item id="2132" min_count="4" max_count="4" chance="100.0"/><!--самоцвет ранг Б -->
+			<capsuled_item id="4043" min_count="2" max_count="2" chance="100.0"/><!--азоф -->
+			<capsuled_item id="4072" min_count="12" max_count="12" chance="100.0"/><!--материя мантии авадона -->
+			<capsuled_item id="4952" min_count="1" max_count="1" chance="100.0"/><!--рецепт диадема авадона 60% -->			
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="70142" name="Avadon Gloves Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="1459" min_count="25" max_count="25" chance="100.0"/> <!--кристалл С -->
+			<capsuled_item id="1885" min_count="2" max_count="2" chance="100.0"/><!--качественная замша -->
+			<capsuled_item id="1894" min_count="16" max_count="16" chance="100.0"/><!--выделанная кожа -->			
+			<capsuled_item id="2132" min_count="2" max_count="2" chance="100.0"/><!--самоцвет ранг Б -->
+			<capsuled_item id="4043" min_count="2" max_count="2" chance="100.0"/><!--азоф -->
+			<capsuled_item id="4073" min_count="12" max_count="12" chance="100.0"/><!--часть зап перчаток авадона -->
+			<capsuled_item id="4953" min_count="1" max_count="1" chance="100.0"/><!--рецепт перчатки авадона 60% -->			
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="70143" name="Avadon Boots Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="1459" min_count="25" max_count="25" chance="100.0"/> <!--кристалл С -->
+			<capsuled_item id="1885" min_count="2" max_count="2" chance="100.0"/><!--качественная замша -->
+			<capsuled_item id="1894" min_count="16" max_count="16" chance="100.0"/><!--выделанная кожа -->			
+			<capsuled_item id="2132" min_count="2" max_count="2" chance="100.0"/><!--самоцвет ранг Б -->
+			<capsuled_item id="4043" min_count="2" max_count="2" chance="100.0"/><!--азоф -->
+			<capsuled_item id="4098" min_count="12" max_count="12" chance="100.0"/><!--часть зап перчаток авадона -->
+			<capsuled_item id="4959" min_count="1" max_count="1" chance="100.0"/><!--рецепт сапоги авадона 60% -->			
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="70144" name="Blue Wolf Tunic Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70145" name="Blue Wolf Stockings Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70146" name="Black Ore Necklace Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="1460" min_count="20" max_count="20" chance="100.0"/> <!--кристалл Б -->
+			<capsuled_item id="1887" min_count="8" max_count="8" chance="100.0"/><!--очищенный лак -->
+			<capsuled_item id="1889" min_count="40" max_count="40" chance="100.0"/><!--прочный шнурок -->
+			<capsuled_item id="1892" min_count="1" max_count="1" chance="100.0"/><!--заготовка кузнеца -->
+			<capsuled_item id="2132" min_count="8" max_count="8" chance="100.0"/><!--самоцвет ранг Б -->
+			<capsuled_item id="4044" min_count="8" max_count="8" chance="100.0"/><!--тонс -->
+			<capsuled_item id="4054" min_count="13" max_count="13" chance="100.0"/><!--бусина черного одерелья -->
+			<capsuled_item id="4975" min_count="1" max_count="1" chance="100.0"/><!--рецепт черное ож 70% -->			
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="70147" name="Black Ore Ring Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="1460" min_count="10" max_count="10" chance="100.0"/> <!--кристалл Б -->
+			<capsuled_item id="1887" min_count="8" max_count="8" chance="100.0"/><!--очищенный лак -->
+			<capsuled_item id="1886" min_count="1" max_count="1" chance="100.0"/><!--серебр заготовка -->
+			<capsuled_item id="1895" min_count="40" max_count="40" chance="100.0"/><!--металическое волокно -->
+			<capsuled_item id="2132" min_count="4" max_count="4" chance="100.0"/><!--самоцвет ранг Б -->
+			<capsuled_item id="4044" min_count="8" max_count="8" chance="100.0"/><!--тонс -->
+			<capsuled_item id="4053" min_count="13" max_count="13" chance="100.0"/><!--самоцвет черного кольца -->
+			<capsuled_item id="4974" min_count="1" max_count="1" chance="100.0"/><!--рецепт черное кольцо 70% -->			
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="70148" name="Black Ore Earring Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="1460" min_count="16" max_count="16" chance="100.0"/> <!--кристалл Б -->
+			<capsuled_item id="1887" min_count="10" max_count="10" chance="100.0"/><!--очищенный лак -->
+			<capsuled_item id="1892" min_count="1" max_count="1" chance="100.0"/><!--заготовка кузнеца -->
+			<capsuled_item id="1895" min_count="50" max_count="50" chance="100.0"/><!--металическое волокно -->
+			<capsuled_item id="2132" min_count="6" max_count="6" chance="100.0"/><!--самоцвет ранг Б -->
+			<capsuled_item id="4044" min_count="10" max_count="10" chance="100.0"/><!--тонс -->
+			<capsuled_item id="4052" min_count="13" max_count="13" chance="100.0"/><!--самоцвет черного кольца -->
+			<capsuled_item id="4973" min_count="1" max_count="1" chance="100.0"/><!--рецепт черное кольцо 70% -->			
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="70149" name="Brigandine Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70150" name="Brigandine Gaiters Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70151" name="Brigandine Helmet Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70152" name="Brigandine Shield Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70153" name="Manticore Skin Shirt Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70154" name="Manticore Skin Gaiters Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70155" name="Manticore Skin Boots Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70156" name="Mithril Tunic Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70157" name="Mithril Stockings Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70158" name="Elven Mithril Gloves Crafting Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70159" name="Mana Recovery Potion">
+		<set name="icon" value="icon.etc_potion_blue_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="POTION"/>
+		<set name="price" value="200"/>     
+        <skills> 
+            <skill id="14558" level="1"/> 
+        </skills>
+	</etcitem>
+	<etcitem id="70160" name="1st Anniversary Coin">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_11th_token"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70161" name="My Teleport Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70162" name="Valakas Treasure Chest">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.bm_sheep_agathion_30d_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70163" name="Energy of Development">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.etc_g_bonus_herb_i00"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70164" name="Powerful Energy of Development">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.etc_g_bonus_herb_i00"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70165" name="Great Energy of Development">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.etc_g_bonus_herb_i00"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70166" name="Energy of Speed">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.etc_g_bonus_herb_i01"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70167" name="Powerful Energy of Speed">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.etc_g_bonus_herb_i01"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70168" name="Great Energy of Speed">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.etc_g_bonus_herb_i01"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70169" name="Energy of Accuracy">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.etc_g_bonus_herb_i02"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70170" name="Powerful Energy of Accuracy">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.etc_g_bonus_herb_i02"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70171" name="Great Energy of Accuracy">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.etc_g_bonus_herb_i02"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70172" name="Coin of Tears">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.vip_silver_coin"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70173" name="Decayed Coin">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.vip_silver_coin"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70174" name="Shabby Coin">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.vip_silver_coin"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70175" name="Crude Coin">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.vip_silver_coin"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70176" name="Old Coin">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.vip_silver_coin"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70177" name="Box of Tears">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.bm_sheep_agathion_30d_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70178" name="Decayed Box">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.bm_sheep_agathion_30d_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70179" name="Shabby Box">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.bm_sheep_agathion_30d_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70180" name="Crude Box">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.bm_sheep_agathion_30d_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70181" name="Old Box">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.bm_sheep_agathion_30d_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<armor id="70182" name="Deviâs Ring (15-day)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.ev_11th_rare_acc_ring"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="21600"/>		
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="20"/>
+		</for>
+		<skills>
+			<skill id="55290" level="1"/>
+		</skills>
+	</armor>
+	<armor id="70183" name="Deviâs Ring">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.ev_11th_rare_acc_ring"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="20"/>
+		</for>
+		<skills>
+			<skill id="55290" level="1"/>
+		</skills>
+	</armor>
+	<armor id="70184" name="Deviâs Earring (15-day)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.ev_11th_rare_acc_earing"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="21600"/>		
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="30"/>
+			<add stat="maxMp" order="0x60" value="10"/>
+		</for>
+		<skills>
+			<skill id="55292" level="1"/>
+		</skills>
+	</armor>
+	<armor id="70185" name="Deviâs Earring">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.ev_11th_rare_acc_earing"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="30"/>
+			<add stat="maxMp" order="0x60" value="10"/>
+		</for>
+		<skills>
+			<skill id="55292" level="1"/>
+		</skills>
+	</armor>
+	<armor id="70186" name="Deviâs Necklace (15-day)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.ev_11th_rare_acc_necklace"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="21600"/>		
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="40"/>
+			<add stat="maxMp" order="0x60" value="20"/>
+		</for>
+		<skills>
+			<skill id="55294" level="1"/>
+		</skills>
+	</armor>
+	<armor id="70187" name="Deviâs Necklace">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.ev_11th_rare_acc_necklace"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="40"/>
+			<add stat="maxMp" order="0x60" value="20"/>
+		</for>
+		<skills>
+			<skill id="55294" level="1"/>
+		</skills>
+	</armor>
+	<weapon id="70188" name="1 Weapon Slot" add_name="Test Item">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_mace_of_judgment_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1280"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="is_magic_weapon" value="true"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="41"/>
+			<add stat="mAtk" order="0x10" value="43"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="70189" name="2 Weapon Slots" add_name="Test Item">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_mace_of_judgment_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1280"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="is_magic_weapon" value="true"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="41"/>
+			<add stat="mAtk" order="0x10" value="43"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="70190" name="3 Weapon Slots" add_name="Test Item">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_mace_of_judgment_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1280"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="is_magic_weapon" value="true"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="41"/>
+			<add stat="mAtk" order="0x10" value="43"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="70191" name="4 Weapon Slots" add_name="Test Item">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_mace_of_judgment_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1280"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="is_magic_weapon" value="true"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="41"/>
+			<add stat="mAtk" order="0x10" value="43"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<armor id="70192" name="Earring of Chronicle Heir" add_name="Lv. 1">
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_onyxbeastseye_earing_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="2"/>
+		</for>
+	</armor>
+	<armor id="70193" name="Earring of Chronicle Heir" add_name="Lv. 2">
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_onyxbeastseye_earing_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="4"/>
+		</for>
+	</armor>
+	<armor id="70194" name="Earring of Chronicle Heir" add_name="Lv. 3">
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_onyxbeastseye_earing_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="6"/>
+		</for>
+	</armor>
+	<armor id="70195" name="Earring of Chronicle Heir" add_name="Lv. 4">
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_onyxbeastseye_earing_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="8"/>
+		</for>
+	</armor>
+	<armor id="70196" name="Earring of Chronicle Heir" add_name="Stage 5">
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_onyxbeastseye_earing_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="10"/>
+		</for>
+	</armor>
+	<armor id="70197" name="Earring of Chronicle Heir" add_name="Lv. 6">
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_onyxbeastseye_earing_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="12"/>
+		</for>
+	</armor>
+	<armor id="70198" name="Earring of Chronicle Heir" add_name="Lv. 7">
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_onyxbeastseye_earing_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="14"/>
+		</for>
+	</armor>
+	<armor id="70199" name="Earring of Chronicle Heir" add_name="Lv. 8">
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_onyxbeastseye_earing_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="16"/>
+		</for>
+	</armor>
+</list>

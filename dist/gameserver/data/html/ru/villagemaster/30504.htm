@@ -1,0 +1,12 @@
+<html><head><body>
+Главный Кузнец Мендио:<br>
+Я председатель Гильдии Черной Наковальни в районе Глудин, Главный Кузнец Мендио. Без нашей Гильдии Черной Наковальни человеческую цивилизацию можно было бы считать абсолютно дикой. Без нас Вы все проиграли бы в какой-нибудь очередной великой битве или священной войне. Пустые разговоры. Если бы не Големы и оружие, которых мы изготовляем, человечество дралось бы врукопашную.<br>
+Тихо, Вы по какому делу ко мне пришли?<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">Узнать о 1-й смене профессии</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Клан</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Альянс</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Обменять Ежедневные Монеты</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Квест</Button>
+</body></html>

@@ -1,0 +1,1363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="55200" levels="1" name="Sealed Rune Lvl 8">
+		<set name="icon" value="BranchIcon.Icon.g_blue_sealed_rune"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="itemConsumeId" value="70007"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="12.5">
+				<item id="29825" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29845" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29865" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29885" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29905" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29925" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29945" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29965" min_count="1" max_count="1"/>
+			</group>
+		</restoration>
+	</skill>
+	<skill id="55201" levels="1" name="Sealed Rune Lvl 9">
+		<set name="icon" value="BranchIcon.Icon.g_blue_sealed_rune"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="itemConsumeId" value="70008"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="12.5">
+				<item id="29826" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29846" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29866" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29886" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29906" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29926" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29946" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29966" min_count="1" max_count="1"/>
+			</group>
+		</restoration>
+	</skill>
+	<skill id="55202" levels="1" name="Sealed Rune Lv. 10">
+		<set name="icon" value="BranchIcon.Icon.g_blue_sealed_rune"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="itemConsumeId" value="70009"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="12.5">
+				<item id="29827" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29847" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29867" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29887" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29907" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29927" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29947" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29967" min_count="1" max_count="1"/>
+			</group>
+		</restoration>
+	</skill>
+	<skill id="55203" levels="1" name="Sealed Rune Lv. 11">
+		<set name="icon" value="BranchIcon.Icon.g_red_sealed_rune_01"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="itemConsumeId" value="70010"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="12.5">
+				<item id="29828" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29848" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29868" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29888" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29908" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29928" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29948" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29968" min_count="1" max_count="1"/>
+			</group>
+		</restoration>
+	</skill>
+	<skill id="55204" levels="1" name="Sealed Rune Lv. 12">
+		<set name="icon" value="BranchIcon.Icon.g_red_sealed_rune_01"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="itemConsumeId" value="70011"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="12.5">
+				<item id="29829" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29849" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29869" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29889" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29909" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29929" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29949" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29969" min_count="1" max_count="1"/>
+			</group>
+		</restoration>
+	</skill>
+	<skill id="55205" levels="1" name="Sealed Rune Lv. 13">
+		<set name="icon" value="BranchIcon.Icon.g_red_sealed_rune_01"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="itemConsumeId" value="70012"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="12.5">
+				<item id="29830" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29850" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29870" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29890" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29910" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29930" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29950" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29970" min_count="1" max_count="1"/>
+			</group>
+		</restoration>
+	</skill>
+	<skill id="55206" levels="1" name="Sealed Rune Lv. 14">
+		<set name="icon" value="icon.card_event_black_box"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="itemConsumeId" value="70013"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="12.5">
+				<item id="29831" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29851" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29871" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29891" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29911" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29931" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29951" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29971" min_count="1" max_count="1"/>
+			</group>
+		</restoration>
+	</skill>
+	<skill id="55207" levels="1" name="Sealed Rune Lv. 15">
+		<set name="icon" value="icon.card_event_black_box"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="itemConsumeId" value="70014"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="12.5">
+				<item id="29832" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29852" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29872" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29892" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29912" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29932" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29952" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29972" min_count="1" max_count="1"/>
+			</group>
+		</restoration>
+	</skill>
+	<skill id="55208" levels="1" name="Sealed Rune Lv. 16">
+		<set name="icon" value="icon.card_event_black_box"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="itemConsumeId" value="70015"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="12.5">
+				<item id="29833" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29853" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29873" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29893" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29913" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29933" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29953" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29973" min_count="1" max_count="1"/>
+			</group>
+		</restoration>
+	</skill>
+	<skill id="55209" levels="1" name="Sealed Rune Lv. 17">
+		<set name="icon" value="icon.card_event_black_box"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="itemConsumeId" value="70016"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="12.5">
+				<item id="29834" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29854" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29874" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29894" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29914" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29934" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29954" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29974" min_count="1" max_count="1"/>
+			</group>
+		</restoration>
+	</skill>
+	<skill id="55210" levels="1" name="Sealed Rune Lv. 18">
+		<set name="icon" value="icon.card_event_black_box"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="itemConsumeId" value="70017"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="12.5">
+				<item id="29835" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29855" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29875" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29895" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29915" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29935" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29955" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29975" min_count="1" max_count="1"/>
+			</group>
+		</restoration>
+	</skill>
+	<skill id="55211" levels="1" name="Sealed Rune Lv. 19">
+		<set name="icon" value="icon.card_event_black_box"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="itemConsumeId" value="70018"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="12.5">
+				<item id="29836" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29856" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29876" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29896" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29916" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29936" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29956" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29976" min_count="1" max_count="1"/>
+			</group>
+		</restoration>
+	</skill>
+	<skill id="55212" levels="1" name="Sealed Rune Lv. 20">
+		<set name="icon" value="icon.card_event_black_box"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="itemConsumeId" value="70019"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="12.5">
+				<item id="29837" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29857" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29877" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29897" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29917" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29937" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29957" min_count="1" max_count="1"/>
+			</group>
+			<group chance="12.5">
+				<item id="29977" min_count="1" max_count="1"/>
+			</group>
+		</restoration>
+	</skill>
+	<skill id="55213" levels="1" name="Instant Acceleration Potion">
+		<set name="icon" value="icon.etc_potion_green_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55214" levels="1" name="Teleport: Entrance to Mithril Mines">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="70048"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="loc" value="178619;-184616;-360"/>	<!--TODO: Check.-->
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="55215" levels="1" name="Teleport: Entrance to the School of Dark Arts">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="70049"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="loc" value="-47129;59679;-3328"/>	<!--TODO: Check.-->
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="55216" levels="1" name="Teleport: Entrance to Orc Barracks">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="70050"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="loc" value="-90562;108182;-3568"/>	<!--TODO: Check.-->
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="55217" levels="1" name="Teleport: Entrance to Ruins of Agony">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="70051"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="loc" value="-56235;106668;-3760"/>	<!--TODO: Check.-->
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="55218" levels="1" name="Teleport: Entrance to Ruins of Despair">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="70052"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="loc" value="-20056;137608;-3872"/>	<!--TODO: Check.-->
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="55219" levels="1" name="Teleport: Abandoned Camp">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="70053"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="loc" value="-56742;140569;-2624"/>	<!--TODO: Check.-->
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="55220" levels="1" name="Teleport: Entrance to Ant Nest">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="70054"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="loc" value="-26111;173692;-4152"/>	<!--TODO: Check.-->
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="55221" levels="1" name="Teleport: Entrance to Cruma Tower">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="70055"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="loc" value="17720;115736;-11848"/>	<!--TODO: Check.-->
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="55222" levels="1" name="Teleport: Death Pass">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="70056"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="loc" value="67032;108408;-3696"/>	<!--TODO: Check.-->
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="55223" levels="1" name="Teleport: Three-way crossroads at Dragon Valley">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="70057"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="loc" value="73048;117704;-3696"/>	<!--TODO: Check.-->
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="55224" levels="1" name="Teleport: Entrance to Antharas\' Lair">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="70058"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="loc" value="131355;114451;-3712"/>	<!--TODO: Check.-->
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="55225" levels="1" name="Teleport: Outlaw Forest">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="70059"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="loc" value="85752;-7688;-3056"/>	<!--TODO: Check.-->
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="55226" levels="1" name="Teleport: Alligator Island">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="70060"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="loc" value="117128;165672;-2448"/>	<!--TODO: Check.-->
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="55227" levels="1" name="Teleport: Entrance to Forgotten Temple">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="70061"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="loc" value="-52856;190872;-3520"/>	<!--TODO: Check.-->
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="55228" levels="1" name="Scroll of Escape: Talking Island Village">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55229" levels="1" name="Scroll of Escape: Talking Island Village">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55230" levels="1" name="Scroll of Escape: Talking Island Village">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55231" levels="1" name="Scroll of Escape: Talking Island Village">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55232" levels="1" name="Scroll of Escape: Talking Island Village">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55233" levels="1" name="Scroll of Escape: Talking Island Village">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55234" levels="1" name="XP Rune 100%">
+		<set name="icon" value="icon.skill19226"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="exp_rate_multiplier" value="1"/>
+			<add stat="sp_rate_multiplier" value="1"/>
+		</for>
+	</skill>
+	<skill id="55235" levels="1" name="Adventurer�s Potion - Atk. Spd.">
+		<set name="icon" value="icon.etc_reagent_green_i00"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="attack_time_down"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pAtkSpd" value="1.15"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55236" levels="1" name="Adventurer�s Potion - Casting Spd.">
+		<set name="icon" value="icon.etc_potion_of_acumen2_i00"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="casting_time_down"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect>
+				<mul stat="mAtkSpd" value="1.23"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55237" levels="1" name="Scroll: Vampiric Rage">
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="vampiric_attack"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect>
+				<add stat="absorbDam" value="6"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55238" levels="1" name="Side Effect">
+		<set name="icon" value="icon.skill2513"/>
+		<set name="reuseDelay" value="1800000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="BIG_HEAD"/>
+		<set name="abnormal_time" value="600"/>
+		<set name="abnormal_type" value="big_head"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<set name="trait" value="ETC"/>
+		<for>
+			<effect/>
+		</for>
+	</skill>
+	<skill id="55239" levels="1" name="Holiday Hat">
+		<set name="icon" value="icon.bm_romantic_chaperon_gold"/>
+		<set name="reuseDelay" value="1800000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="5000"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="50"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_CORPSE_PLAYER"/>
+		<set name="corpse" value="true"/>
+		<set name="skillType" value="RESURRECT"/>
+		<set name="canPet" value="true"/>
+		<set name="itemConsumeId" value="3031"/>
+		<set name="itemConsumeCount" value="50"/>
+		<set name="isSkillTimePermanent" value="true"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="55240" levels="1" name="Overwhelming Power of a Holiday Hat">
+		<set name="icon" value="icon.skill19226"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="1"/>
+		<!--<set name="abnormal_type" value="vote"/>-->
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSelfDispellable" value="false"/>
+		<set name="isPreservedOnDeath" value="true"/>
+		<set name="buff_slot_type" value="-1"/>
+		<for>
+			<effect>
+				<add stat="exp_rate_multiplier" value="1.05"/>
+				<add stat="sp_rate_multiplier" value="1.05"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55241" levels="1" name="Scroll: Mana Regeneration">
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect>
+				<mul stat="regMp" value="1.2"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55242" levels="1" name="Scroll: Berserker Spirit">
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="berserker"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect>
+				<mul stat="mAtk" value="1.1"/>
+				<mul stat="pAtk" value="1.05"/>
+				<mul stat="pDef" value="0.95"/>
+				<mul stat="mDef" value="0.9"/>
+				<mul stat="mAtkSpd" value="1.05"/>
+				<mul stat="pAtkSpd" value="1.05"/>
+				<add stat="runSpd" value="5"/>
+				<sub stat="pEvasRate" value="2"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55243" levels="2" name="Scroll: Dance of the Warrior">
+		<set name="icon" value="icon.skill0271"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="hitTime" value="2500"/>
+		<set name="abnormal_time" value="600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="dance_of_warrior"/>
+		<set name="magicType" value="MUSIC"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect>
+				<mul stat="pAtk" value="1.12"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55244" levels="2" name="Scroll: Dance of the Mystic">
+		<set name="icon" value="icon.skill0273"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="hitTime" value="2500"/>
+		<set name="abnormal_time" value="600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="dance_of_mystic"/>
+		<set name="magicType" value="MUSIC"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect>
+				<mul stat="mAtk" value="1.2"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55245" levels="8" name="Teleport: Town of Aden">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="loc" value="147080;27288;-2230"/>
+		<set name="isHandler" value="true"/>
+	</skill>
+	<skill id="55246" levels="1" name="Rune of Boost">
+		<set name="icon" value="BranchSys3.lcon.g_rune_itemdrop_up"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x10" stat="STR" value="1"/>
+			<add order="0x10" stat="INT" value="1"/>
+			<add order="0x10" stat="DEX" value="1"/>
+			<add order="0x10" stat="WIT" value="1"/>
+			<add order="0x10" stat="CON" value="1"/>
+			<add order="0x10" stat="MEN" value="1"/>
+		</for>
+	</skill>
+	<skill id="55247" levels="1" name="Refined Romantic Chapeau">
+		<set name="icon" value="icon.accessory_archer_hat2_i00"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="pAtk" value="33"/>
+			<add stat="mAtk" value="41"/>
+		</for>
+	</skill>
+	<skill id="55248" levels="1" name="Bracelet of Duty - Lv. 1">
+		<set name="icon" value="BranchIcon.Icon.g_pledge_bracelet_01"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="talismansLimit" value="1"/>
+		</for>
+	</skill>
+	<skill id="55249" levels="1" name="Bracelet of Duty - Lv. 2">
+		<set name="icon" value="BranchIcon.Icon.g_pledge_bracelet_02"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x10" stat="CON" value="1"/>
+			<add stat="talismansLimit" value="1"/>
+		</for>
+	</skill>
+	<skill id="55250" levels="1" name="Bracelet of Duty - Lv. 3">
+		<set name="icon" value="BranchIcon.Icon.g_pledge_bracelet_03"/>
+		<set name="target" value="TARGET_SELF"/>
+
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x10" stat="CON" value="1"/>
+			<add order="0x10" stat="MEN" value="1"/>
+			<add stat="talismansLimit" value="2"/>
+		</for>
+	</skill>
+	<skill id="55251" levels="1" name="Bracelet of Duty - Lv. 4">
+		<set name="icon" value="BranchIcon.Icon.g_pledge_bracelet_04"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x10" stat="CON" value="1"/>
+			<add order="0x10" stat="MEN" value="1"/>
+			<add order="0x10" stat="WIT" value="1"/>
+			<add order="0x10" stat="DEX" value="1"/>
+			<add stat="talismansLimit" value="2"/>
+		</for>
+	</skill>
+	<skill id="55252" levels="1" name="Bracelet of Duty - Lv. 5">
+		<set name="icon" value="BranchIcon.Icon.g_pledge_bracelet_05"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x10" stat="CON" value="1"/>
+			<add order="0x10" stat="MEN" value="1"/>
+			<add order="0x10" stat="WIT" value="1"/>
+			<add order="0x10" stat="DEX" value="1"/>
+			<add order="0x10" stat="STR" value="1"/>
+			<add order="0x10" stat="INT" value="1"/>
+			<add stat="talismansLimit" value="3"/>
+		</for>
+	</skill>
+	<skill id="55253" levels="20" name="Sigel\'s Protection">
+		<table name="#icon">BranchIcon.Icon.g_rune_sigel_lv00 BranchIcon.Icon.g_rune_sigel_lv00 BranchIcon.Icon.g_rune_sigel_lv00 BranchIcon.Icon.g_rune_sigel_lv00 BranchIcon.Icon.g_rune_sigel_lv00 BranchIcon.Icon.g_rune_sigel_lv01 BranchIcon.Icon.g_rune_sigel_lv01 BranchIcon.Icon.g_rune_sigel_lv01 BranchIcon.Icon.g_rune_sigel_lv01 BranchIcon.Icon.g_rune_sigel_lv01 BranchIcon.Icon.g_rune_sigel_lv02 BranchIcon.Icon.g_rune_sigel_lv02 BranchIcon.Icon.g_rune_sigel_lv02 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#pDef">20.2 24.6 29.8 35.7 42.6 50.7 57.9 66.1 75.3 83.5 92.2 101.6 112.7 2 2 2 2 2 2 2</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="pDef" value="#pDef"/>
+		</for>
+	</skill>
+	<skill id="55254" levels="20" name="Sigel Protection">
+		<table name="#icon">BranchIcon.Icon.g_rune_sigel_lv00 BranchIcon.Icon.g_rune_sigel_lv00 BranchIcon.Icon.g_rune_sigel_lv00 BranchIcon.Icon.g_rune_sigel_lv00 BranchIcon.Icon.g_rune_sigel_lv00 BranchIcon.Icon.g_rune_sigel_lv01 BranchIcon.Icon.g_rune_sigel_lv01 BranchIcon.Icon.g_rune_sigel_lv01 BranchIcon.Icon.g_rune_sigel_lv01 BranchIcon.Icon.g_rune_sigel_lv01 BranchIcon.Icon.g_rune_sigel_lv02 BranchIcon.Icon.g_rune_sigel_lv02 BranchIcon.Icon.g_rune_sigel_lv02 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#maxHp">73 94 129 154 185 223 249 276 303 331 359 388 418 50 50 50 50 50 50 50</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxHp" value="#maxHp"/>
+		</for>
+	</skill>
+	<skill id="55255" levels="20" name="Tyrr Might">
+		<table name="#icon">BranchIcon.Icon.g_rune_tir_lv00 BranchIcon.Icon.g_rune_tir_lv00 BranchIcon.Icon.g_rune_tir_lv00 BranchIcon.Icon.g_rune_tir_lv00 BranchIcon.Icon.g_rune_tir_lv00 BranchIcon.Icon.g_rune_tir_lv01 BranchIcon.Icon.g_rune_tir_lv01 BranchIcon.Icon.g_rune_tir_lv01 BranchIcon.Icon.g_rune_tir_lv01 BranchIcon.Icon.g_rune_tir_lv01 BranchIcon.Icon.g_rune_tir_lv02 BranchIcon.Icon.g_rune_tir_lv02 BranchIcon.Icon.g_rune_tir_lv02 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#pAtk">2.8 3.8 5.1 7.8 10.1 12.9 15.3 18.1 21.2 24.3 28 31.9 36.5 20 20 20 20 20 20 20</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="pAtk" value="#pAtk"/>
+		</for>
+	</skill>
+	<skill id="55256" levels="20" name="Tyrr Haste">
+		<table name="#icon">BranchIcon.Icon.g_rune_tir_lv00 BranchIcon.Icon.g_rune_tir_lv00 BranchIcon.Icon.g_rune_tir_lv00 BranchIcon.Icon.g_rune_tir_lv00 BranchIcon.Icon.g_rune_tir_lv00 BranchIcon.Icon.g_rune_tir_lv01 BranchIcon.Icon.g_rune_tir_lv01 BranchIcon.Icon.g_rune_tir_lv01 BranchIcon.Icon.g_rune_tir_lv01 BranchIcon.Icon.g_rune_tir_lv01 BranchIcon.Icon.g_rune_tir_lv02 BranchIcon.Icon.g_rune_tir_lv02 BranchIcon.Icon.g_rune_tir_lv02 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#pAtkSpd">1.02 1.0225 1.025 1.0275 1.03 1.0325 1.035 1.0375 1.04 1.0425 1.045 1.0475 1.05</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pAtkSpd" value="#pAtkSpd"/>
+		</for>
+	</skill>
+	<skill id="55257" levels="20" name="Othell\'s Focus">
+		<table name="#icon">BranchIcon.Icon.g_rune_othel_lv01 BranchIcon.Icon.g_rune_othel_lv01 BranchIcon.Icon.g_rune_othel_lv01 BranchIcon.Icon.g_rune_othel_lv01 BranchIcon.Icon.g_rune_othel_lv01 BranchIcon.Icon.g_rune_othel_lv02 BranchIcon.Icon.g_rune_othel_lv02 BranchIcon.Icon.g_rune_othel_lv02 BranchIcon.Icon.g_rune_othel_lv02 BranchIcon.Icon.g_rune_othel_lv02 BranchIcon.Icon.g_rune_othel_lv03 BranchIcon.Icon.g_rune_othel_lv03 BranchIcon.Icon.g_rune_othel_lv03 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#basePCritRate">75 100 125 150 175 200 225 250 275 300 325 350 375</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="basePCritRate" value="#basePCritRate"/>
+		</for>
+	</skill>
+	<skill id="55258" levels="20" name="Othell\'s Critical Damage">
+		<table name="#icon">BranchIcon.Icon.g_rune_othel_lv01 BranchIcon.Icon.g_rune_othel_lv01 BranchIcon.Icon.g_rune_othel_lv01 BranchIcon.Icon.g_rune_othel_lv01 BranchIcon.Icon.g_rune_othel_lv01 BranchIcon.Icon.g_rune_othel_lv02 BranchIcon.Icon.g_rune_othel_lv02 BranchIcon.Icon.g_rune_othel_lv02 BranchIcon.Icon.g_rune_othel_lv02 BranchIcon.Icon.g_rune_othel_lv02 BranchIcon.Icon.g_rune_othel_lv03 BranchIcon.Icon.g_rune_othel_lv03 BranchIcon.Icon.g_rune_othel_lv03 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#p_critical_damage_diff">20 97 114 131 148 165 182 199 216 233 251 268 285 20 20 20 20 20 20 20</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="p_critical_damage_diff" value="#p_critical_damage_diff"/>
+		</for>
+	</skill>
+	<skill id="55259" levels="20" name="Yul Wind Walk">
+		<table name="#icon">BranchIcon.Icon.g_rune_yr_lv01 BranchIcon.Icon.g_rune_yr_lv01 BranchIcon.Icon.g_rune_yr_lv01 BranchIcon.Icon.g_rune_yr_lv01 BranchIcon.Icon.g_rune_yr_lv01 BranchIcon.Icon.g_rune_yr_lv02 BranchIcon.Icon.g_rune_yr_lv02 BranchIcon.Icon.g_rune_yr_lv02 BranchIcon.Icon.g_rune_yr_lv02 BranchIcon.Icon.g_rune_yr_lv02 BranchIcon.Icon.g_rune_yr_lv03 BranchIcon.Icon.g_rune_yr_lv03 BranchIcon.Icon.g_rune_yr_lv03 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#runSpd">4 4.5 5 5.5 6 6.5 7 7.5 8 8.5 9 9.5 10</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="runSpd" value="#runSpd"/>
+		</for>
+	</skill>
+	<skill id="55260" levels="20" name="Yul Guidance">
+		<table name="#icon">BranchIcon.Icon.g_rune_yr_lv01 BranchIcon.Icon.g_rune_yr_lv01 BranchIcon.Icon.g_rune_yr_lv01 BranchIcon.Icon.g_rune_yr_lv01 BranchIcon.Icon.g_rune_yr_lv01 BranchIcon.Icon.g_rune_yr_lv02 BranchIcon.Icon.g_rune_yr_lv02 BranchIcon.Icon.g_rune_yr_lv02 BranchIcon.Icon.g_rune_yr_lv02 BranchIcon.Icon.g_rune_yr_lv02 BranchIcon.Icon.g_rune_yr_lv03 BranchIcon.Icon.g_rune_yr_lv03 BranchIcon.Icon.g_rune_yr_lv03 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#pAccCombat">2.47 2.67 2.87 3.07 3.27 3.47 3.62 3.77 3.92 4.07 4.22 4.37 4.52</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="pAccCombat" value="#pAccCombat"/>
+		</for>
+	</skill>
+	<skill id="55261" levels="20" name="Feoh\'s Magical Power">
+		<table name="#icon">BranchIcon.Icon.g_rune_feoh_lv01 BranchIcon.Icon.g_rune_feoh_lv01 BranchIcon.Icon.g_rune_feoh_lv01 BranchIcon.Icon.g_rune_feoh_lv01 BranchIcon.Icon.g_rune_feoh_lv01 BranchIcon.Icon.g_rune_feoh_lv02 BranchIcon.Icon.g_rune_feoh_lv02 BranchIcon.Icon.g_rune_feoh_lv02 BranchIcon.Icon.g_rune_feoh_lv02 BranchIcon.Icon.g_rune_feoh_lv02 BranchIcon.Icon.g_rune_feoh_lv03 BranchIcon.Icon.g_rune_feoh_lv03 BranchIcon.Icon.g_rune_feoh_lv03 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#mAtk">15.97 19.84 24.31 30.48 35.84  49.24 62.99 75.86 87.22 99.39 112.26 125.66 139.41</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="mAtk" value="#mAtk"/>
+			<mul stat="mpConsum" value="1.15"/>
+		</for>
+	</skill>
+	<skill id="55262" levels="20" name="Feoh\'s Empower">
+		<table name="#icon">BranchIcon.Icon.g_rune_feoh_lv01 BranchIcon.Icon.g_rune_feoh_lv01 BranchIcon.Icon.g_rune_feoh_lv01 BranchIcon.Icon.g_rune_feoh_lv01 BranchIcon.Icon.g_rune_feoh_lv01 BranchIcon.Icon.g_rune_feoh_lv02 BranchIcon.Icon.g_rune_feoh_lv02 BranchIcon.Icon.g_rune_feoh_lv02 BranchIcon.Icon.g_rune_feoh_lv02 BranchIcon.Icon.g_rune_feoh_lv02 BranchIcon.Icon.g_rune_feoh_lv03 BranchIcon.Icon.g_rune_feoh_lv03 BranchIcon.Icon.g_rune_feoh_lv03 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#mAtk">20 27 34 41 48 55 62 69 76 83 90 97 104</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="mAtk" value="#mAtk"/>
+		</for>
+	</skill>
+	<skill id="55263" levels="20" name="Iss\' Magic Regeneration">
+		<table name="#icon">BranchIcon.Icon.g_rune_is_lv01 BranchIcon.Icon.g_rune_is_lv01 BranchIcon.Icon.g_rune_is_lv01 BranchIcon.Icon.g_rune_is_lv01 BranchIcon.Icon.g_rune_is_lv01 BranchIcon.Icon.g_rune_is_lv02 BranchIcon.Icon.g_rune_is_lv02 BranchIcon.Icon.g_rune_is_lv02 BranchIcon.Icon.g_rune_is_lv02 BranchIcon.Icon.g_rune_is_lv02 BranchIcon.Icon.g_rune_is_lv03 BranchIcon.Icon.g_rune_is_lv03 BranchIcon.Icon.g_rune_is_lv03 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#regMp">0.3 0.39 0.41 0.51 1.03 1.05 1.22 1.24 1.32 1.43 1.51 1.53 1.65</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="regMp" value="#regMp"/>
+		</for>
+	</skill>
+	<skill id="55264" levels="20" name="Iss\' Boost Mana">
+		<table name="#icon">BranchIcon.Icon.g_rune_is_lv01 BranchIcon.Icon.g_rune_is_lv01 BranchIcon.Icon.g_rune_is_lv01 BranchIcon.Icon.g_rune_is_lv01 BranchIcon.Icon.g_rune_is_lv01 BranchIcon.Icon.g_rune_is_lv02 BranchIcon.Icon.g_rune_is_lv02 BranchIcon.Icon.g_rune_is_lv02 BranchIcon.Icon.g_rune_is_lv02 BranchIcon.Icon.g_rune_is_lv02 BranchIcon.Icon.g_rune_is_lv03 BranchIcon.Icon.g_rune_is_lv03 BranchIcon.Icon.g_rune_is_lv03 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#maxMp">3.89 5 6.1 7.2 8.3 9.4 10.5 11.6 12.7 13.8 14.9 16 17.1</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxMp" value="#maxMp"/>
+		</for>
+	</skill>
+	<skill id="55265" levels="20" name="Wynn\'s Acumen">
+		<table name="#icon">BranchIcon.Icon.g_rune_wynn_lv01 BranchIcon.Icon.g_rune_wynn_lv01 BranchIcon.Icon.g_rune_wynn_lv01 BranchIcon.Icon.g_rune_wynn_lv01 BranchIcon.Icon.g_rune_wynn_lv01 BranchIcon.Icon.g_rune_wynn_lv02 BranchIcon.Icon.g_rune_wynn_lv02 BranchIcon.Icon.g_rune_wynn_lv02 BranchIcon.Icon.g_rune_wynn_lv02 BranchIcon.Icon.g_rune_wynn_lv02 BranchIcon.Icon.g_rune_wynn_lv03 BranchIcon.Icon.g_rune_wynn_lv03 BranchIcon.Icon.g_rune_wynn_lv03 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#mAtkSpd">1.02665 1.03 1.0333 1.0366 1.04 1.0432 1.0465 1.0498 1.0531 1.0564 1.0597 1.063 1.0663</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="mAtkSpd" value="#mAtkSpd"/>
+		</for>
+	</skill>
+	<skill id="55266" levels="20" name="Wynn\'s Lightness">
+		<table name="#icon">BranchIcon.Icon.g_rune_wynn_lv01 BranchIcon.Icon.g_rune_wynn_lv01 BranchIcon.Icon.g_rune_wynn_lv01 BranchIcon.Icon.g_rune_wynn_lv01 BranchIcon.Icon.g_rune_wynn_lv01 BranchIcon.Icon.g_rune_wynn_lv02 BranchIcon.Icon.g_rune_wynn_lv02 BranchIcon.Icon.g_rune_wynn_lv02 BranchIcon.Icon.g_rune_wynn_lv02 BranchIcon.Icon.g_rune_wynn_lv02 BranchIcon.Icon.g_rune_wynn_lv03 BranchIcon.Icon.g_rune_wynn_lv03 BranchIcon.Icon.g_rune_wynn_lv03 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#maxLoad">1000 1400 1800 2200 2600 3000 3400 3800 4200 4600 5000 5600 5900</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxLoad" value="#maxLoad"/>
+		</for>
+	</skill>
+	<skill id="55267" levels="20" name="Aeore\'s Regeneration">
+		<table name="#icon">BranchIcon.Icon.g_rune_eolh_lv01 BranchIcon.Icon.g_rune_eolh_lv01 BranchIcon.Icon.g_rune_eolh_lv01 BranchIcon.Icon.g_rune_eolh_lv01 BranchIcon.Icon.g_rune_eolh_lv01 BranchIcon.Icon.g_rune_eolh_lv02 BranchIcon.Icon.g_rune_eolh_lv02 BranchIcon.Icon.g_rune_eolh_lv02 BranchIcon.Icon.g_rune_eolh_lv02 BranchIcon.Icon.g_rune_eolh_lv02 BranchIcon.Icon.g_rune_eolh_lv03 BranchIcon.Icon.g_rune_eolh_lv03 BranchIcon.Icon.g_rune_eolh_lv03 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#regHp">0.57 0.88 0.92 0.95 0.98 1.01 1.38 1.41 1.44 1.47 1.5 1.53 1.96</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="regHp" value="#regHp"/>
+		</for>
+	</skill>
+	<skill id="55268" levels="20" name="Aeore\'s Heal">
+		<table name="#icon">BranchIcon.Icon.g_rune_eolh_lv01 BranchIcon.Icon.g_rune_eolh_lv01 BranchIcon.Icon.g_rune_eolh_lv01 BranchIcon.Icon.g_rune_eolh_lv01 BranchIcon.Icon.g_rune_eolh_lv01 BranchIcon.Icon.g_rune_eolh_lv02 BranchIcon.Icon.g_rune_eolh_lv02 BranchIcon.Icon.g_rune_eolh_lv02 BranchIcon.Icon.g_rune_eolh_lv02 BranchIcon.Icon.g_rune_eolh_lv02 BranchIcon.Icon.g_rune_eolh_lv03 BranchIcon.Icon.g_rune_eolh_lv03 BranchIcon.Icon.g_rune_eolh_lv03 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#hpEff">15.1 18.5 22.4 24.5 30.1 35 38.9 42.7 45.3 50.6 54.4 58.2 62.1</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="hpEff" value="#hpEff"/>
+		</for>
+	</skill>
+	<skill id="55269" levels="1" name="Valakas Treasure Chest">
+		<set name="icon" value="icon.bm_sheep_agathion_30d_box"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55270" levels="1" name="Agathion - Dance of Fury">
+		<set name="icon" value="icon.bm_agathion_fury"/>
+		<set name="hitTime" value="2000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55271" levels="1" name="Agathion - Dance of Concentration">
+		<set name="icon" value="icon.bm_agathion_concentration"/>
+		<set name="hitTime" value="2000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55272" levels="1" name="Agathion - Song of Wind">
+		<set name="icon" value="icon.bm_agathion_wind"/>
+		<set name="reuseDelay" value="600000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55273" levels="3" name="Energy of Development">
+		<set name="icon" value="BranchIcon.Icon.etc_g_bonus_herb_i00"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="hitTime" value="100"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55274" levels="3" name="Energy of Speed">
+		<set name="icon" value="BranchIcon.Icon.etc_g_bonus_herb_i01"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="hitTime" value="100"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55275" levels="3" name="Energy of Accuracy">
+		<set name="icon" value="BranchIcon.Icon.etc_g_bonus_herb_i02"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="hitTime" value="100"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55282" levels="1" name="Buff for the Hero of Ruins of Agony">
+		<set name="icon" value="BranchIcon.Icon.skill_g_field_special_buff_i00"/>
+		<set name="castRange" value="900"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55283" levels="1" name="Box of Tears Acquisition Effect">
+		<set name="icon" value="BranchIcon.Icon.skill_g_field_special_buff_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55284" levels="1" name="Box of Tears Acquisition Effect">
+		<set name="icon" value="BranchIcon.Icon.skill_g_field_special_buff_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55285" levels="1" name="Box of Tears">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55286" levels="1" name="Decayed Box">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55287" levels="1" name="Shabby Box">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55288" levels="1" name="Crude Box">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55289" levels="1" name="Old Box">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55290" levels="1" name="Devi�s Ring">
+		<set name="icon" value="icon.ev_11th_rare_acc_ring"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxHp" value="20"/>
+			<add stat="pAtk" value="5"/>
+			<add stat="mAtk" value="3"/>
+		</for>
+	</skill>
+	<skill id="55291" levels="1" name="Devi�s Ring">
+		<set name="icon" value="icon.ev_11th_rare_acc_ring"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxHp" value="20"/>
+			<add stat="pAtk" value="5"/>
+			<add stat="mAtk" value="3"/>
+		</for>
+	</skill>
+	<skill id="55292" levels="1" name="Devi�s Earring">
+		<set name="icon" value="icon.ev_11th_rare_acc_earing"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="regMp" value="0.2"/>
+			<mul stat="hpEff" value="1.02"/>
+			<add stat="maxMp" value="20"/>
+		</for>
+	</skill>
+	<skill id="55293" levels="1" name="Devi�s Earring">
+		<set name="icon" value="icon.ev_11th_rare_acc_earing"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="regMp" value="0.2"/>
+			<mul stat="hpEff" value="1.02"/>
+			<add stat="maxMp" value="20"/>
+		</for>
+	</skill>
+	<skill id="55294" levels="1" name="Devi�s Necklace">
+		<set name="icon" value="icon.ev_11th_rare_acc_necklace"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxMp" value="20"/>
+			<add stat="pDef" value="5"/>
+			<add stat="mDef" value="3"/>
+		</for>
+	</skill>
+	<skill id="55295" levels="1" name="Devi�s Necklace">
+		<set name="icon" value="icon.ev_11th_rare_acc_necklace"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxMp" value="20"/>
+			<add stat="pDef" value="5"/>
+			<add stat="mDef" value="3"/>
+		</for>
+	</skill>
+	<skill id="55296" levels="1" name="Scroll of Invisibility">
+		<set name="icon" value="icon.etc_aidcharm_cancel_valbreath_i00"/>
+		<set name="reuseDelay" value="240000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_effect" value="STEALTH"/>
+		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="SilentMove">
+				<mul stat="runSpd" value="0.6"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55297" levels="1" name="Buff for the Hero of Ruins of Despair">
+		<set name="icon" value="BranchIcon.Icon.skill_g_field_special_buff_i01"/>
+		<set name="castRange" value="900"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55298" levels="1" name="Decayed Box Acquisition Effect">
+		<set name="icon" value="BranchIcon.Icon.skill_g_field_special_buff_i01"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55299" levels="1" name="Decayed Box Acquisition Effect">
+		<set name="icon" value="BranchIcon.Icon.skill_g_field_special_buff_i01"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+</list>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "events.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<!--формат даты HH:mm dd.MM.yyyy-->
+	<event id="2" name="Summer Squash" impl="Fun">
+		<parameter name="start_time_pattern" value="06:30 19.04.2016" />
+		<parameter name="stop_time_pattern" value="06:30 10.05.2016" />
+		<on_start>
+			<spawn name="spawn_group"/>
+			<global_add_reward name="droplist"/>
+		</on_start>
+		<on_time>
+			<on time="1209600">	<!--2 Weeks-->
+				<global_remove_reward name="droplist"/>
+			</on>
+		</on_time>
+		<on_stop>
+			<despawn name="spawn_group"/>
+			<global_remove_reward name="droplist"/>
+			<global_remove_items name="event_items"/>
+		</on_stop>
+		<objects name="spawn_group">
+			<spawn_ex name="summer_squash_event"/>
+		</objects>
+		<objects name="droplist">
+			<rewardlist type="EVENT_GROUPED">
+				<group chance="20">
+					<reward item_id="6391" min="1" max="1" chance="100"/>	<!--Нектар-->
+				</group>
+			</rewardlist>
+		</objects>
+		<objects name="event_items">
+			<item id="6389"/>	<!--Семечко Тыквы-->
+			<item id="6390"/>	<!--Большое Семечко Тыквы-->
+			<item id="6391"/>	<!--Нектар-->
+		</objects>
+	</event>
+</list>

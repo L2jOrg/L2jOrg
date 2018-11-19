@@ -1,0 +1,136 @@
+<!ELEMENT list (zone)*>
+<!ELEMENT zone (polygon|circle|rectangle|banned_polygon|banned_circle|banned_rectangle|map|banned_map|set|restart_point|PKrestart_point|for)*>
+<!ATTLIST zone
+	name CDATA #REQUIRED
+	type CDATA #REQUIRED>
+<!ELEMENT polygon (coords)*>
+<!ELEMENT circle (coords)*>
+<!ELEMENT rectangle (coords)*>
+<!ELEMENT restart_point (coords)*>
+<!ELEMENT PKrestart_point (coords)*>
+<!ELEMENT banned_polygon (coords)*>
+<!ELEMENT banned_circle (coords)*>
+<!ELEMENT banned_rectangle (coords)*>
+<!ELEMENT map (#PCDATA)>
+<!ATTLIST map
+	value CDATA #REQUIRED>
+<!ELEMENT banned_map (#PCDATA)>
+<!ATTLIST banned_map
+	value CDATA #REQUIRED>
+<!ELEMENT coords (#PCDATA)>
+<!ATTLIST coords
+	loc CDATA #REQUIRED>
+<!ATTLIST circle
+	loc CDATA #IMPLIED>
+<!ATTLIST banned_circle
+	loc CDATA #IMPLIED>
+
+		<!ELEMENT set (player|target|using|has|game|or|not|and)*>
+		<!ATTLIST set
+			name CDATA #IMPLIED
+			order CDATA #IMPLIED
+			stat CDATA #IMPLIED
+			value CDATA #REQUIRED>
+
+		<!ELEMENT for (add|set|mul|sub)*>
+
+			<!ELEMENT add (player|target|using|has|game|or|not|and)*>
+			<!ATTLIST add
+				order CDATA #REQUIRED
+				stat CDATA #REQUIRED
+				value CDATA #REQUIRED>
+
+			<!ELEMENT mul (player|target|using|has|game|or|not|and)*>
+			<!ATTLIST mul
+				order CDATA #REQUIRED
+				stat CDATA #REQUIRED
+				value CDATA #REQUIRED>
+
+			<!ELEMENT sub (player|target|using|has|game|or|not|and)*>
+			<!ATTLIST sub
+				order CDATA #REQUIRED
+				stat CDATA #REQUIRED
+				value CDATA #REQUIRED>
+
+				<!ELEMENT or (player|target|using|has|game|or|not|and)*>
+
+				<!ELEMENT not (player|target|using|has|game|or|not|and)*>
+
+				<!ELEMENT and (player|target|using|has|game|or|not|and)*>
+
+				<!ELEMENT player (#PCDATA)>
+				<!ATTLIST player
+					residence CDATA #IMPLIED
+					olympiad CDATA #IMPLIED
+					race CDATA #IMPLIED
+					instance_zone CDATA #IMPLIED
+					is_clan_leader CDATA #IMPLIED
+					is_hero CDATA #IMPLIED
+					sex CDATA #IMPLIED
+					classId CDATA #IMPLIED
+					minLevel CDATA #IMPLIED
+					max_level CDATA #IMPLIED
+					avail_max_sp CDATA #IMPLIED
+					quest_state CDATA #IMPLIED
+					min_pledge_rank CDATA #IMPLIED
+					class_type CDATA #IMPLIED
+					summon_siege_golem CDATA #IMPLIED
+					running CDATA #IMPLIED
+					percentHP CDATA #IMPLIED
+					resting CDATA #IMPLIED
+					max_level CDATA #IMPLIED
+					maxPK CDATA #IMPLIED
+					percentMP CDATA #IMPLIED
+					moving CDATA #IMPLIED
+					standing CDATA #IMPLIED
+					damage CDATA #IMPLIED
+					percentCP CDATA #IMPLIED
+					direction CDATA #IMPLIED
+					riding CDATA #IMPLIED
+					flying CDATA #IMPLIED
+					castle_type CDATA #IMPLIED
+					chaos_festival CDATA #IMPLIED
+					min_clan_level CDATA #IMPLIED
+					has_abnormal_type CDATA #IMPLIED
+					has_summon_id CDATA #IMPLIED
+					can_transform CDATA #IMPLIED
+					can_untransform CDATA #IMPLIED
+					agathion CDATA #IMPLIED
+					hasBuffId CDATA #IMPLIED
+					flyingTransform CDATA #IMPLIED
+					isFlagged CDATA #IMPLIED
+					can_learn_skill CDATA #IMPLIED
+					is_chaotic CDATA #IMPLIED>
+
+				<!ELEMENT target (#PCDATA)>
+				<!ATTLIST target
+					is_pet_feed CDATA #IMPLIED
+					type CDATA #IMPLIED
+					race CDATA #IMPLIED
+					hasForbiddenSkill CDATA #IMPLIED
+					mobId CDATA #IMPLIED
+					npc_class CDATA #IMPLIED
+					castledoor CDATA #IMPLIED
+					direction CDATA #IMPLIED
+					percentHP CDATA #IMPLIED
+					has_abnormal_type CDATA #IMPLIED
+					forbiddenClassIds CDATA #IMPLIED
+					min_distance CDATA #IMPLIED
+					hasBuffId CDATA #IMPLIED
+					playerRace CDATA #IMPLIED>
+
+				<!ELEMENT using (#PCDATA)>
+				<!ATTLIST using
+					slotitem CDATA #IMPLIED
+					kind CDATA #IMPLIED
+					armor CDATA #IMPLIED
+					weapon CDATA #IMPLIED
+					skill CDATA #IMPLIED>
+
+				<!ELEMENT game (#PCDATA)>
+				<!ATTLIST game
+					night CDATA #IMPLIED>
+
+				<!ELEMENT has (#PCDATA)>
+				<!ATTLIST has
+					skill CDATA #IMPLIED>

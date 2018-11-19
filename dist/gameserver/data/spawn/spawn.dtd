@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!ELEMENT list (spawn|territory)*>
+<!ELEMENT spawn (territory|npc|point|rectangle|circle)*>
+<!ATTLIST spawn
+	name CDATA #IMPLIED
+	group CDATA #IMPLIED
+	respawn CDATA #IMPLIED
+	count CDATA #IMPLIED
+	respawn_random CDATA #IMPLIED
+	respawn_pattern CDATA #IMPLIED
+	period_of_day CDATA #IMPLIED>
+<!ELEMENT territory (banned_territory|add)*>
+<!ATTLIST territory
+	name CDATA #IMPLIED>
+<!ELEMENT banned_territory (add)*>
+<!ELEMENT add (#PCDATA)>
+<!ATTLIST add
+	x CDATA #REQUIRED
+	y CDATA #REQUIRED
+	zmin CDATA #REQUIRED
+	zmax CDATA #REQUIRED>
+<!ELEMENT npc (set|minions)*>
+<!ATTLIST npc
+	id CDATA #REQUIRED
+	max CDATA #IMPLIED
+	ai CDATA #IMPLIED>
+<!ELEMENT set (#PCDATA)>
+<!ATTLIST set
+	name CDATA #REQUIRED
+	value CDATA #REQUIRED>
+<!ELEMENT minions (minion)*>
+<!ELEMENT minion (#PCDATA)>
+<!ATTLIST minion
+	npc_id CDATA #REQUIRED
+	ai CDATA #IMPLIED
+	count CDATA #REQUIRED
+	respawn CDATA #IMPLIED>
+<!ELEMENT point (#PCDATA)>
+<!ATTLIST point
+	x CDATA #REQUIRED
+	y CDATA #REQUIRED
+	z CDATA #REQUIRED
+	h CDATA #IMPLIED>
+<!ELEMENT rectangle (#PCDATA)>
+<!ATTLIST rectangle
+	x1 CDATA #REQUIRED
+	y1 CDATA #REQUIRED
+	x2 CDATA #REQUIRED
+	y2 CDATA #REQUIRED
+	zmin CDATA #REQUIRED
+	zmax CDATA #REQUIRED>
+<!ELEMENT circle (#PCDATA)>
+<!ATTLIST circle
+	x CDATA #REQUIRED
+	y CDATA #REQUIRED
+	zmin CDATA #REQUIRED
+	zmax CDATA #REQUIRED
+	radius CDATA #REQUIRED>

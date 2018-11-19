@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "multisell.dtd">
+<list>
+	<config show_all="true" no_tax="true" keep_enchanted="false" />
+	<item>
+		<production id="1835" count="500"/>	<!--Soulshot: No Grade-->
+		<ingredient id="57" count="-1"/>	<!--Adena-->
+	</item>
+	<item>
+		<production id="1463" count="500"/>	<!--Soulshot (D-Grade)-->
+		<ingredient id="57" count="-1"/>	<!--Adena-->
+	</item>
+	<item>
+		<production id="1464" count="500"/>	<!--Soulshot (C-Grade)-->
+		<ingredient id="57" count="-1"/>	<!--Adena-->
+	</item>
+	<item>
+		<production id="3947" count="100"/>	<!--Blessed Spiritshot: No Grade-->
+		<ingredient id="57" count="-1"/>	<!--Adena-->
+	</item>
+	<item>
+		<production id="3948" count="100"/>	<!--Blessed Spiritshot (D-Grade)-->
+		<ingredient id="57" count="-1"/>	<!--Adena-->
+	</item>
+	<item>
+		<production id="3949" count="100"/>	<!--Blessed Spiritshot (C-Grade)-->
+		<ingredient id="57" count="-1"/>	<!--Adena-->
+	</item>
+</list>

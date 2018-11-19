@@ -1,0 +1,1367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="600" levels="1" name="Residence Guidance">
+		<!--
+			Last modify:	03.05.2009
+			Description:
+			The accuracy of clan members in residence increases by 4.
+		-->
+		<set name="icon" value="icon.skill0380"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="pAccCombat" value="4" order="0x60"/>
+		</for>
+	</skill>
+	<skill id="601" levels="1" name="Residence Agility">
+		<!--
+			Last modify:	03.05.2009
+			Description:
+			The evasion of clan members in residence increases by 4.
+		-->
+		<set name="icon" value="icon.skill0381"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="pEvasRate" value="4" order="0x60"/>
+		</for>
+	</skill>
+	<skill id="602" levels="1" name="Residence Shield Block">
+		<set name="icon" value="icon.skill0382"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="rShld" value="1.2" order="0x30"/>
+		</for>
+	</skill>
+	<skill id="603" levels="1" name="Residence Shield Defense">
+		<!--
+			Last modify:	03.05.2009
+			Description:
+			The shield P. Def. of clan members in residence increases by 225.
+		-->
+		<set name="icon" value="icon.skill0383"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="sDef" value="225" order="0x60"/>
+		</for>
+	</skill>
+	<skill id="604" levels="1" name="Residence Typhoon Resistance">
+		<!--
+			Last modify:	21.07.2008
+			Description:
+			Resistance to water and wind attacks of clan members in residence increases by 10.
+		-->
+		<set name="icon" value="icon.skill0384"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" stat="defenceWater" value="10"/>
+			<add order="0x60" stat="defenceWind" value="10"/>
+		</for>
+	</skill>
+	<skill id="605" levels="1" name="Residence Lava Resistance">
+		<!--
+			Last modify:	21.07.2008
+			Description:
+			Resistance to fire and earth attacks of clan members in residence increases by 10.
+		-->
+		<set name="icon" value="icon.skill0385"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" stat="defenceFire" value="10"/>
+			<add order="0x60" stat="defenceEarth" value="10"/>
+		</for>
+	</skill>
+	<skill id="606" levels="1" name="Residence Fortitude">
+		<!--
+			Last modify:	03.05.2009
+			Description:
+			Resistance to stun attacks of clan members in residence increases by 10.
+		-->
+		<set name="icon" value="icon.skill0386"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="shock" value="10"/>
+		</for>
+	</skill>
+	<skill id="607" levels="1" name="Residence Freedom">
+		<!--
+			Last modify:	03.05.2009
+			Description:
+			Resistance to hold attacks of clan members in residence increases by 10.
+		-->
+		<set name="icon" value="icon.skill0387"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="hold" value="10"/>
+		</for>
+	</skill>
+	<skill id="608" levels="1" name="Residence Vigilance">
+		<!--
+			Last modify:	03.05.2009
+			Description:
+			Resistance to sleep attacks of clan members in residence increases by 10.
+		-->
+		<set name="icon" value="icon.skill0388"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="sleep" value="10"/>
+		</for>
+	</skill>
+	<skill id="609" levels="1" name="Residence Movement">
+		<!--
+			Last modify:	03.05.2009
+			Description:
+			The movement speed of clan members in residence increases by 6.
+		-->
+		<set name="icon" value="icon.skill0389"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" stat="runSpd" value="6"/>
+		</for>
+	</skill>
+	<skill id="610" levels="1" name="Residence Death Fortune">
+		<!--
+			Last modify:	21.07.2008
+			Description:
+			When a clan member within the residence is killed by PK/ordinary monster, the Exp. points consumption rate and the probability of incurring a death after-effect are decreased.
+		-->
+		<set name="icon" value="icon.skill0390"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul order="0x50" stat="expLost" value="0.94"/>
+		</for>
+	</skill>
+	<skill id="611" levels="3" name="Fire Squad">
+		<!--
+			Last modify: 03.05.2009
+			Description:
+			1. The corresponding troops' P. Atk. increase by 17.3.
+			2. The corresponding troops' P. Atk. increase by 17.3 and critical rate increase by 15.
+			3. The corresponding troops' P. Atk. increase by 17.3, critical rate increase by 15, and critical damage increase by 100.
+		-->
+		<table name="#pAtk">17.3 17.3 17.3</table>
+		<table name="#basePCritRate">0 15 15</table>
+		<table name="#p_critical_damage_diff">0 0 100</table>
+		<set name="icon" value="icon.skill1463"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<add stat="pAtk" value="#pAtk"/>
+			<add stat="basePCritRate" value="#basePCritRate"/>
+			<add stat="p_critical_damage_diff" value="#p_critical_damage_diff"/>
+		</for>
+	</skill>
+	<skill id="612" levels="3" name="Water Squad">
+		<!--
+			Last modify: 03.05.2009
+			Description:
+			1. The corresponding troops' P. Def. increase by 27.3.
+			2. The corresponding troops' P. Def. increase by 27.3 and M. Def. increase by 17.6.
+			3. The corresponding troops' P. Def. increase by 27.3, M. Def. increase by 17.6, and shield P. Def. increase by 6%.
+		-->
+		<table name="#pDef">27.3 27.3 27.3</table>
+		<table name="#mDef">0 17.6 17.6</table>
+		<table name="#sDef">1 1 1.06</table>
+		<set name="icon" value="icon.skill1464"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<add value="#pDef" stat="pDef"/>
+			<add value="#mDef" stat="mDef"/>
+			<mul value="#sDef" stat="sDef"/>
+		</for>
+	</skill>
+	<skill id="613" levels="3" name="Wind Squad">
+		<!--
+			Last modify: 03.05.2009
+			Description:
+			1. The corresponding troops' accuracy increase by 2.
+			2. The corresponding troops' accuracy increase by 2 and evasion increase by 2.
+			3. The corresponding troops' accuracy increase by 2, evasion increase by 2, and movement speed increase by 3.
+		-->
+		<table name="#acc">2 2 2</table>
+		<table name="#evas">0 2 2</table>
+		<table name="#rSpd">0 0 3</table>
+		<set name="icon" value="icon.skill1465"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<add value="#acc" stat="pAccCombat"/>
+			<add value="#evas" stat="pEvasRate"/>
+			<add value="#rSpd" stat="runSpd"/>
+		</for>
+	</skill>
+	<skill id="614" levels="3" name="Earth Squad">
+		<!--
+			Last modify: 03.05.2009
+			Description:
+			1. The corresponding troops' M. Def. increase by 17.
+			2. The corresponding troops' M. Def. increase by 31.1.
+			3. The corresponding troops' M. Def. increase by 44.
+		-->
+		<table name="#mDef">17 31.1 44</table>
+		<set name="icon" value="icon.skill1466"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<add value="#mDef" stat="mDef"/>
+		</for>
+	</skill>
+	<skill id="615" levels="3" name="Holy Squad">
+		<!--
+			Last modify: 03.05.2009
+			Description:
+			1. The corresponding troops' heal power increase by 20.
+			2. The corresponding troops' heal power increase by 20 and Max MP increase by 30%.
+			3. The corresponding troops' heal power increase by 20, Max MP increase by 30%, and MP consumption decreases by 5%.
+		-->
+		<table name="#regHp">1.2 1.2 1.2</table>
+		<table name="#maxMp">1 1.3 1.3</table>
+		<table name="#mpConsum">1 1 0.95</table>
+		<set name="icon" value="icon.skill1043"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<mul value="#maxMp" stat="maxMp"/>
+			<mul value="#regHp" stat="regHp"/>
+			<mul value="#mpConsum" stat="mpConsum"/>
+		</for>
+	</skill>
+	<skill id="616" levels="3" name="Dark Squad">
+		<!--
+			Last modify: 03.05.2009
+			Description:
+			1. The corresponding troops' M. Atk. increase by 7.17.
+			2. The corresponding troops' M. Atk. increase by 19.32.
+			3. The corresponding troops' M. Atk. increase by 19.32 and magic critical damage rate increases by 1%.
+		-->
+		<table name="#mAtk">7.17 19.32 19.32</table>
+		<table name="#mCrit">0 0 1</table>
+		<set name="icon" value="icon.skill1443"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<add value="#mAtk" stat="mAtk"/>
+			<add value="#mCrit" stat="mCritRate"/>
+		</for>
+	</skill>
+	<skill id="619" levels="1" name="Cancel Transformation">
+		<set name="icon" value="icon.skilltransform2"/>
+		<set name="hitTime" value="2500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="622" levels="2" name="Ultimate Escape">
+		<!--
+			Last modify: 	10.05.2009
+			Description:
+				Increases user's evasion by 20 and movement speed by 33 for 20 seconds.
+				Increases user's evasion by 35, movement speed by 66 and P. Atk. skill evasion rate by 25% for 20 seconds.
+		-->
+		<table name="#pEvasRate">20 35</table>
+		<table name="#runSpd">33 66</table>
+		<table name="#pSkillEvasion">0 35</table>
+		<table name="#magicLevel">36 52</table>
+		<table name="#mp_consume">31 47</table>
+		<set name="icon" value="icon.skill0622"/>
+		<set name="reuseDelay" value="900000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="avoid_up_special"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="operate_type" value="A2"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<for>
+			<effect>
+				<add order="0x60" stat="pEvasRate" value="#pEvasRate"/>
+				<add order="0x60" stat="runSpd" value="#runSpd"/>
+				<add order="0x60" stat="pSkillEvasion" value="#pSkillEvasion"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="625" levels="1" name="Soul Gathering">
+		<!--
+			Last modify:	23.03.2008
+			Description:
+			Gathers in nearby souls. Up to 8 souls can be absorbed at once. Consumes 10 Spirit Ores.
+		-->
+		<table name="#magicLevel">46</table>
+		<set name="icon" value="icon.skill0467"/>
+		<set name="reuseDelay" value="1800000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="hpConsume" value="200"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="itemConsumeId" value="3031"/>
+		<set name="itemConsumeCount" value="10"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="CHARGE_SOUL"/>
+		<set name="numSouls" value="999"/>
+		<set name="useSS" value="false"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="626" levels="4" name="Critical Sense">
+		<!--
+			Increase critical rate and critical attack power.
+			07/03/2008
+		-->
+		<table name="#p_critical_damage_diff">111 177 253 317</table>
+		<table name="#pCritRate">10 15 20 25</table>
+		<table name="#magicLevel">43 52 60 66</table>
+		<set name="icon" value="icon.skill0312"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="p_critical_damage_diff" value="#p_critical_damage_diff"/>
+			<add stat="pCritRate" value="#pCritRate"/>
+		</for>
+	</skill>
+	<skill id="627" levels="40" name="Soul Shock">
+		<!--
+			Need correct:	reuseDelay
+			Last modify: 03.05.2009
+			Description: Fires a close-range shot that causes your target to panic. An equipped bow or crossbow is required to use this skill. Overhit available. Consumes 1 Soul.
+		-->
+		<table name="#TabactivateRate">40</table>
+		<table name="#power">344 367 391 443 471 500 530 562 595 630 666 703 742 782 823 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192</table>
+		<table name="#magicLevel">34 35 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
+		<table name="#abnormal_time">3</table>
+		<table name="#mp_consume">48 49 51 52 54 56 56 58 59 61 63 65 66 68 70 72 72 74 76 78 80 81 83 85 87 88 89 91 92 94 96 97 99 100 102 103 105 106 108 109</table>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="coolTime" value="300"/>
+		<set name="castRange" value="200"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="TURN_FLEE"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="turn_flee"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="activateRate" value="#TabactivateRate"/>
+		<set name="operate_type" value="A2"/>
+		<set name="soulBoost" value="true"/>
+		<set name="overHit" value="true"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect name="Fear"/>
+		</for>
+	</skill>
+	<skill id="630" levels="1" name="Rabbit Tornado">
+		<!--
+			Last modify: 09.06.2010
+			Description: Opens a treasure box with a spinning kick. (Only for event RabbitsToRiches)
+		-->
+		<set name="icon" value="icon.skill0027"/>
+		<set name="reuseDelay" value="60000"/>
+		<set name="hitTime" value="2500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<cond msgId="144">
+			<target mobId="13098"/>
+		</cond>
+	</skill>
+	<skill id="631" levels="6" name="Emergent Ability: Attack">
+		<!--
+			Last modify:	08.09.2009
+			Description:	Increases P. Atk.
+			DS: значения неправильные, исправить позже
+		-->
+		<table name="#pAtk">10 20 28 35 42 49</table>
+		<table name="#magicLevel">60 75 80 80 80 80</table>
+		<set name="icon" value="icon.skill0141"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" value="#pAtk" stat="pAtk"/>
+		</for>
+	</skill>
+	<skill id="632" levels="6" name="Emergent Ability: Defense">
+		<!--
+			Last modify:	03.02.2009
+			Description:	Increases P. Def.
+			DS: значения неправильные, исправить позже
+		-->
+		<table name="#pDef">10 20 30 40 50 60</table>
+		<table name="#magicLevel">60 75 80 80 80 80</table>
+		<set name="icon" value="icon.skill0142"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" value="#pDef" stat="pDef"/>
+		</for>
+	</skill>
+	<skill id="633" levels="6" name="Emergent Ability: Empower">
+		<!--
+			Last modify:	03.02.2009
+			Description:	Increases M. Atk.
+		-->
+		<table name="#mAtk">10.5 20.1 28.7 36.3 43 47.8</table>
+		<table name="#magicLevel">60 75 80 80 80 80</table>
+		<set name="icon" value="icon.skill0249"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" value="#mAtk" stat="mAtk"/>
+		</for>
+	</skill>
+	<skill id="634" levels="6" name="Emergent Ability: M. Def.">
+		<!--
+			Last modify:	31.01.2009
+			Description:	Increases M. Def.
+		-->
+		<table name="#mDef">15.1 30.2 45.4 60.5 75.6 90.7</table>
+		<table name="#magicLevel">60 75 80 80 80 80</table>
+		<set name="icon" value="icon.skill0146"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" value="#mDef" stat="mDef"/>
+		</for>
+	</skill>
+	<skill id="635" levels="3" name="Not in Use">
+		<table name="#magicLevel">60 75 80</table>
+		<set name="icon" value="icon.skill0635"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="636" levels="3" name="Not in Use">
+		<table name="#magicLevel">60 75 80</table>
+		<set name="icon" value="icon.skill0636"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="637" levels="1" name="Master Ability: Attack">
+		<!--
+			Last modify:	03.02.2009
+			Description:	Increases P. Atk.
+		-->
+		<set name="icon" value="icon.skill1068"/>
+		<set name="magicLevel" value="60"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" stat="pAtk" value="25"/>
+		</for>
+	</skill>
+	<skill id="638" levels="1" name="Master Ability: Empower">
+		<!--
+			Last modify:	03.02.2009
+			Description:	Increases M. Atk.
+		-->
+		<set name="icon" value="icon.skill1059"/>
+		<set name="magicLevel" value="60"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" stat="mAtk" value="28.65"/>
+		</for>
+	</skill>
+	<skill id="639" levels="1" name="Master Ability: Casting">
+		<!--
+			Last modify:	03.02.2009
+			Description:	Spell Casting Spd. increases.
+		-->
+		<set name="icon" value="icon.skill1085"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" stat="mAtkSpd" value="11"/>
+		</for>
+	</skill>
+	<skill id="640" levels="1" name="Master Ability: Focus">
+		<!--
+			Last modify:	03.02.2009
+			Description:
+			Critical rate increases.
+		-->
+		<set name="icon" value="icon.skill1077"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" stat="basePCritRate" value="30"/>
+		</for>
+	</skill>
+	<skill id="641" levels="1" name="Knight Ability: Boost HP">
+		<!--
+			Last modify:	03.02.2009
+			Description:	Increases Max. HP.
+		-->
+		<set name="icon" value="icon.skill0211"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" value="295" stat="maxHp"/>
+		</for>
+	</skill>
+	<skill id="642" levels="1" name="Enchanter Ability: Boost Mana">
+		<!--
+			Last modify:	03.02.2009
+			Description:	Increases Max. MP.
+		-->
+		<set name="icon" value="icon.skill0213"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" value="148" stat="maxMp"/>
+		</for>
+	</skill>
+	<skill id="643" levels="1" name="Summoner\'s Ability: Boost HP / MP">
+		<!--
+			Last modify:	03.02.2009
+			Description:	Increases Max. HP and Max. MP.
+		-->
+		<set name="icon" value="icon.skill0211"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" value="147" stat="maxHp"/>
+			<add order="0x60" value="74" stat="maxMp"/>
+		</for>
+	</skill>
+	<skill id="644" levels="1" name="Rogue Ability: Evasion">
+		<!--
+			Last modify:	03.02.2009
+			Description:
+			Increase Evasion.
+		-->
+		<set name="icon" value="icon.skill1087"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" value="4" stat="pEvasRate"/>
+		</for>
+	</skill>
+	<skill id="645" levels="1" name="Rogue Ability: Long Shot">
+		<!--
+			Last modify:	03.02.2009
+			Description:	Increases bow range.
+		-->
+		<set name="icon" value="icon.skill0113"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" stat="pAtkRange" value="100">
+				<using kind="Bow"/>
+			</add>
+		</for>
+	</skill>
+	<skill id="646" levels="1" name="Wizard Ability: Mana Gain">
+		<!--
+			Last modify:	03.02.2009
+			Description:	Increases the recovery rate of MP.
+		-->
+		<set name="icon" value="icon.skill0285"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" stat="mpEff" value="20"/>
+		</for>
+	</skill>
+	<skill id="647" levels="1" name="Enchanter Ability: Mana Recovery">
+		<!--
+			Last modify:	03.02.2009
+			Description:	Increases MP regeneration.
+		-->
+		<set name="icon" value="icon.skill0229"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="regMp" value="1.10"/>
+		</for>
+	</skill>
+	<skill id="648" levels="1" name="Healer Ability: Prayer">
+		<!--
+			Last modify:	03.02.2009
+			Description:
+			The effect of receiving HP recovery magic increases. Effect 1.
+		-->
+		<set name="icon" value="icon.skill1307"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="hpEff" value="1.06"/>
+		</for>
+	</skill>
+	<skill id="650" levels="1" name="Warrior Ability: Attribute Resistance">
+		<!--
+			Last modify:	31.01.2009
+			Description:
+			Increases the tolerance to paralysis/hold/sleep/shock/buff cancel attack.
+		-->
+		<set name="icon" value="icon.skill0287"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="hold" value="5"/>
+			<p_defence_trait name="paralyze" value="5"/>
+			<p_defence_trait name="shock" value="5"/>
+			<p_defence_trait name="sleep" value="5"/>
+			<add order="0x60" stat="cancelResist" value="5"/>
+		</for>
+	</skill>
+	<skill id="651" levels="1" name="Warrior Ability: Haste">
+		<!--
+			Description:
+			An instant raise of Atk. Spd. effect is made with a fixed rate when attacking.
+		-->
+		<set name="icon" value="icon.skill1086"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<triggers>
+			<trigger id="5572" level="1" type="ATTACK" chance="2"/>
+		</triggers>
+	</skill>
+	<skill id="652" levels="1" name="Knight Ability: Defense">
+		<!--
+			Description:
+			An instant raise of P. Def./Magic Resistance increase effect is activated by a fixed rate when being attacked.
+		-->
+		<set name="icon" value="icon.skill0110"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<triggers>
+			<trigger id="5573" level="1" type="RECEIVE_DAMAGE" chance="2">
+				<player damage="1;0"/>
+			</trigger>
+		</triggers>
+	</skill>
+	<skill id="653" levels="1" name="Rogue Ability: Critical Chance">
+		<!--
+			Description:
+			An instant raise of Critical rate effect is made with a fixed rate when attacking.
+		-->
+		<set name="icon" value="icon.skill1077"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<triggers>
+			<trigger id="5574" level="1" type="ATTACK" chance="2"/>
+		</triggers>
+	</skill>
+	<skill id="654" levels="1" name="Wizard Ability: Mana Steal">
+		<!--
+			Description:
+			Recovers MP with a fixed rate when attacking.
+		-->
+		<set name="icon" value="icon.skill1398"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<triggers>
+			<trigger id="5575" level="1" type="ATTACK" chance="2"/>
+		</triggers>
+	</skill>
+	<skill id="655" levels="1" name="Enchanter Ability: Barrier">
+		<!--
+			Description:
+			Invincible effect is created with an instant overcoat when being attacked.
+		-->
+		<set name="icon" value="icon.skill1418"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<triggers>
+			<trigger id="5576" level="1" type="RECEIVE_DAMAGE" chance="2">
+				<player damage="1;0"/>
+			</trigger>
+		</triggers>
+	</skill>
+	<skill id="675" levels="1" name="Divine Warrior Cross Slash">
+		<!--
+			Description: Flourishes the sword strongly. Critical enabled. Power 2904.
+		-->
+		<set name="icon" value="icon.skill_transform_s_attack"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="coolTime" value="167"/>
+		<set name="hitTime" value="1733"/>
+		<set name="mp_consume" value="112"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="80"/>
+		<set name="power" value="2904"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="400"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="overHit" value="true"/>
+		<set name="criticalRate" value="10"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="nextAction" value="attack"/>
+	</skill>
+	<skill id="676" levels="1" name="Divine Warrior Sonic Blaster">
+		<!--
+			Description: Strikes the enemy a blow in a distance using sword energy. Critical enabled. Power 2323.
+		-->
+		<set name="icon" value="icon.skill_transform_s_attack"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="1899"/>
+		<set name="mp_consume" value="56"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="80"/>
+		<set name="power" value="2323"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="40"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="overHit" value="true"/>
+		<set name="criticalRate" value="10"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="nextAction" value="attack"/>
+	</skill>
+	<skill id="677" levels="1" name="Divine Warrior Transfixion of Earth">
+		<!--
+			Description: Attacks nearby enemies strongly by cutting with a downward blow. Ignore shield defense. Over-hit is available. Power 2323.
+		-->
+		<set name="icon" value="icon.skill_transform_s_attack"/>
+		<set name="reuseDelay" value="4000"/>
+		<set name="coolTime" value="732"/>
+		<set name="hitTime" value="1067"/>
+		<set name="mp_consume" value="80"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="80"/>
+		<set name="affectLimit" value="6;12"/>
+		<set name="power" value="2323"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="shieldignore" value="true"/>
+		<set name="affect_range" value="200"/>
+		<set name="overHit" value="true"/>
+		<set name="nextAction" value="attack"/>
+	</skill>
+	<skill id="678" levels="1" name="Divine Warrior War Cry">
+		<!--
+			Last modify: 03.05.2009
+			Description: Increases one's own P. Atk. by 25% for 1 minutes.
+		-->
+		<set name="icon" value="icon.skill_transform_buff"/>
+		<set name="reuseDelay" value="45000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="36"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="pa_up_special"/>
+		<set name="magicLevel" value="80"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pAtk" value="1.25"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="679" levels="1" name="Sacrifice Warrior">
+		<!--
+			Last modify: 03.05.2009
+			Description: Sacrifices oneself to increase the P. Atk. of all party members by 20% for 30 seconds. Available only when HP is under 30%.
+		-->
+		<set name="icon" value="icon.skill_transform_buff"/>
+		<set name="reuseDelay" value="1800000"/>
+		<set name="hitTime" value="2500"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="transform_scrifice"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="affect_range" value="300"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<cond msgId="113">
+			<player percentHP="30"/>
+		</cond>
+		<for>
+			<effect>
+				<mul stat="pAtk" value="1.2"/>
+			</effect>
+			<self_effect name="i_call_skill">
+				<def name="skill" value="5602-1"/>
+			</self_effect>
+		</for>
+	</skill>
+	<skill id="680" levels="1" name="Divine Knight Hate">
+		<!--
+			Description: Provokes your opponent into attacking. Power 6752.
+		-->
+		<set name="icon" value="icon.skill_transform_etc"/>
+		<set name="reuseDelay" value="6000"/>
+		<set name="coolTime" value="200"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="699"/>
+		<set name="mp_consume" value="51"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="target_lock"/>
+		<set name="magicLevel" value="80"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="6752"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<for>
+			<effect name="p_target_me"/>
+		</for>
+	</skill>
+	<skill id="681" levels="1" name="Divine Knight Aggression Aura">
+		<!--
+			Description: Stimulates the attacking desire of the enemies nearby. Power 6752.
+		-->
+		<set name="icon" value="icon.skill_transform_etc"/>
+		<set name="reuseDelay" value="40000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="mp_consume" value="144"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="target_lock"/>
+		<set name="magicLevel" value="80"/>
+		<set name="affectLimit" value="10;10"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="6752"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="affect_range" value="200"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<for>
+			<effect name="p_target_me"/>
+		</for>
+	</skill>
+	<skill id="682" levels="1" name="Divine Knight Stun Attack">
+		<!--
+			Description: Cause damage and shock together at the same time. Make the enemies shocked momentarily. Over-hit is available. Power 1162.
+		-->
+		<set name="icon" value="icon.skill_transform_debuff"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="coolTime" value="720"/>
+		<set name="hitTime" value="1080"/>
+		<set name="mp_consume" value="76"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="80"/>
+		<set name="power" value="1162"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="50"/>
+		<set name="effectPoint" value="400"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="overHit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="nextAction" value="attack"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="683" levels="1" name="Divine Knight Thunder Storm">
+		<!--
+			Description: Inflicts shock and damage to the enemies nearby at the same time. Instantly makes nearby enemies shocked. Ignore shield defense. Over-hit is available. Power 775.
+		-->
+		<set name="icon" value="icon.skill_transform_debuff"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="coolTime" value="720"/>
+		<set name="hitTime" value="1080"/>
+		<set name="mp_consume" value="114"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="80"/>
+		<set name="affectLimit" value="6;12"/>
+		<set name="power" value="775"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="50"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="affect_range" value="200"/>
+		<set name="overHit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="shieldignore" value="true"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="684" levels="1" name="Divine Knight Ultimate Defense">
+		<!--
+			Description: "Instantly and drastically increases tolerance to P. Def./M. Def, buff cancel attacks. The player cannot move while the effect lasts. Effect 2."
+		-->
+		<set name="icon" value="icon.skill_transform_buff"/>
+		<set name="reuseDelay" value="900000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="mp_consume" value="36"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="ULTIMATE_DEFENCE"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="pd_up_special"/>
+		<set name="magicLevel" value="80"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="438"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="p_block_move">
+				<add stat="pDef" value="3600"/>
+				<add stat="mDef" value="2700"/>
+				<add stat="cancelResist" value="90"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="685" levels="1" name="Sacrifice Knight">
+		<!--
+			Description: Increases the P. Def. of the party members by sacrificing yourself. Available only when HP is under 30 percent.
+		-->
+		<set name="icon" value="icon.skill_transform_buff"/>
+		<set name="reuseDelay" value="1800000"/>
+		<set name="hitTime" value="2500"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="transform_scrifice"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="affect_range" value="300"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<cond msgId="113">
+			<player percentHP="30"/>
+		</cond>
+		<for>
+			<effect>
+				<mul stat="pDef" value="1.15"/>
+			</effect>
+			<self_effect name="i_call_skill">
+				<def name="skill" value="5602-1"/>
+			</self_effect>
+		</for>
+	</skill>
+	<skill id="686" levels="1" name="Divine Rogue Stun Shot">
+		<!--
+			Description: Shoots arrows that inflict both damage and shock to the enemy in order to cancel target state. Puts an enemy into shock momentarily. Over-hit possible. Power 2323.
+		-->
+		<set name="icon" value="icon.skill_transform_debuff"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="coolTime" value="1000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="3000"/>
+		<set name="mp_consume" value="116"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="80"/>
+		<set name="power" value="2323"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="50"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="overHit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+			<effect name="i_target_cancel" chance="40"/>
+		</for>
+	</skill>
+	<skill id="687" levels="1" name="Divine Rogue Double Shot">
+		<!--
+			Description: Shoots 2 arrows continuously. Critical enabled. Over-hit possible. Power 6195.
+		-->
+		<set name="icon" value="icon.skill_transform_s_attack"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="coolTime" value="1000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="3000"/>
+		<set name="mp_consume" value="159"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="80"/>
+		<set name="power" value="6195"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="criticalRate" value="10"/>
+		<set name="overHit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="688" levels="1" name="Divine Rogue Bleed Attack">
+		<!--
+			Description: Causes injury by deadly attacks. Instantly causes the enemies to bleed. Over-hit is available. Power 1549. Effect 3.
+		-->
+		<set name="icon" value="icon.skill_transform_debuff"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="coolTime" value="720"/>
+		<set name="hitTime" value="1080"/>
+		<set name="mp_consume" value="80"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="80"/>
+		<set name="power" value="1549"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="bleeding"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="overHit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="nextAction" value="attack"/>
+		<set name="trait" value="BLEED"/>
+		<for>
+			<effect name="t_hp" interval="5" value="-139"/>
+		</for>
+	</skill>
+	<skill id="689" levels="1" name="Divine Rogue Deadly Blow">
+		<!--
+			Description: Attempts a potentially deadly attack. Lethal Strike is possible. Over-hit is possible. Power 6969.
+		-->
+		<set name="icon" value="icon.skill_transform_s_attack"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="coolTime" value="720"/>
+		<set name="hitTime" value="1080"/>
+		<set name="mp_consume" value="72"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="80"/>
+		<set name="power" value="6969"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="overHit" value="true"/>
+		<set name="onCrit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="blow" value="true"/>
+		<set name="operate_type" value="A2"/>
+		<set name="lethal1" value="10"/>
+		<set name="nextAction" value="attack"/>
+	</skill>
+	<skill id="690" levels="1" name="Divine Rogue Agility">
+		<!--
+			Description: Temporarily increase Evasion. Effect 3.
+		-->
+		<set name="icon" value="icon.skill_transform_buff"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="73"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="avoid_up"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="900"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add stat="pEvasRate" value="4"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="691" levels="1" name="Sacrifice Rogue">
+		<!--
+			Description: Increase party member's Evasion by sacrificing yourself. Available only when HP is under 30 percent.
+		-->
+		<set name="icon" value="icon.skill_transform_buff"/>
+		<set name="reuseDelay" value="1800000"/>
+		<set name="hitTime" value="2500"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="transform_scrifice"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="affect_range" value="300"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<cond msgId="113">
+			<player percentHP="30"/>
+		</cond>
+		<for>
+			<effect>
+				<add stat="pEvasRate" value="4"/>
+			</effect>
+			<self_effect name="i_call_skill">
+				<def name="skill" value="5602-1"/>
+			</self_effect>
+		</for>
+	</skill>
+	<skill id="692" levels="1" name="Divine Wizard Divine Flare">
+		<!--
+			Description: Attacks a contacted target with non-attribute attack. Temporarily decreases your magic attack power during PvP. Power 102.
+		-->
+		<set name="icon" value="icon.skill_transform_debuff"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="castRange" value="150"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="73"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_type" value="ma_down"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="102"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<self_effect>
+				<mul order="0x50" stat="pvpMagicSkillDmgBonus" value="0.5"/>
+			</self_effect>
+		</for>
+	</skill>
+	<skill id="693" levels="1" name="Divine Wizard Holy Strike">
+		<!--
+			Description: Unleashes divine attack. Over-hit is available. Power 128.
+		-->
+		<set name="icon" value="icon.skill_transform_s_attack"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="90"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="128"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="overHit" value="true"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="element" value="holy"/>
+		<set name="elementPower" value="20"/>
+	</skill>
+	<skill id="694" levels="1" name="Divine Wizard Divine Curtain">
+		<!--
+			Description: Attack a large number of enemies with divine rainstorm. Power 64.
+		-->
+		<set name="icon" value="icon.skill_transform_s_attack"/>
+		<set name="reuseDelay" value="4000"/>
+		<set name="castRange" value="500"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="109"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="affectLimit" value="5;12"/>
+		<set name="power" value="64"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="affect_range" value="200"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="element" value="holy"/>
+		<set name="elementPower" value="20"/>
+	</skill>
+	<skill id="695" levels="1" name="Divine Wizard Divine Cloud">
+		<!--
+			Description: Instantly bring divine clouds making nearby enemies sleep. Decrease probability of additional sleep state while effects last.
+		-->
+		<set name="icon" value="icon.skill_transform_debuff"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="500"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="109"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="SLEEP"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="sleep"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="affectLimit" value="9;10"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="skillType" value="SLEEP"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SLEEP"/>
+		<for>
+			<effect name="Sleep">
+				<p_defence_trait name="sleep" value="100"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="696" levels="1" name="Divine Wizard Surrender to Holy">
+		<!--
+			Description: Instantly decrease resistance to divine attacks, and increase resistance to darkness attacks. Effect 3.
+		-->
+		<set name="icon" value="icon.skill_transform_debuff"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="750"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="73"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="armor_unholy"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="element" value="unholy"/>
+		<set name="elementPower" value="20"/>
+		<for>
+			<effect>
+				<sub stat="defenceHoly" value="25"/>
+				<add stat="defenceUnholy" value="12"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="697" levels="1" name="Sacrifice Wizard">
+		<!--
+			Description: Increase party member's magic power by sacrificing yourself. Usable only when MP is under 10 percent.
+		-->
+		<set name="icon" value="icon.skill_transform_buff"/>
+		<set name="reuseDelay" value="1800000"/>
+		<set name="hitTime" value="2500"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="transform_scrifice"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="affect_range" value="300"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<cond msgId="113">
+			<player percentMP="10"/>
+		</cond>
+		<for>
+			<effect>
+				<mul stat="mAtk" value="1.55"/>
+			</effect>
+			<self_effect name="i_call_skill">
+				<def name="skill" value="5602-1"/>
+			</self_effect>
+		</for>
+	</skill>
+	<skill id="698" levels="1" name="Divine Healer Major Heal">
+		<!--
+			Description: Regenerate the target's HP immediately. Power 946.
+		-->
+		<set name="icon" value="icon.skill_transform_etc"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="84"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect instant="true" name="RestoreHP" value="946"/>
+		</for>
+	</skill>
+	<skill id="699" levels="1" name="Divine Healer Battle Heal">
+		<!--
+			Description: Quickly recovers HP. Power 826.
+		-->
+		<set name="icon" value="icon.skill_transform_etc"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="189"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect instant="true" name="RestoreHP" value="826"/>
+		</for>
+	</skill>
+</list>

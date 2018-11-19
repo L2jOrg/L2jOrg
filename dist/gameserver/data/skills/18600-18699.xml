@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="18672" levels="1" name="Christmas Party Herb. For $s1 XP and SP received through hunting +$s2, P. / M. Atk. +$s3, P. / M. Def. +$s4, Atk. Spd. / Casting Spd. +$s5, Speed +$s6, Sayha\'s Speed -$s7. Appearance changes to that of Santa Claus. Disappears after restart.">
+		<set name="icon" value="BranchSys.icon.br_xmas_present_fun_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+</list>

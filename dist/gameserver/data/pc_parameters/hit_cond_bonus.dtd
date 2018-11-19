@@ -1,0 +1,6 @@
+<!ELEMENT list (bonus)*>
+
+	<!ELEMENT bonus (#PCDATA)>
+	<!ATTLIST bonus
+		type CDATA #REQUIRED
+		value CDATA #REQUIRED>

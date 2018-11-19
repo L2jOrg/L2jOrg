@@ -1,0 +1,504 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "option_data.dtd">
+<list>
+	<option_data id="15100">
+		<skills>
+			<skill id="3206" level="1"/> <!--Item Skill: Music-->
+		</skills>
+	</option_data>
+	<option_data id="15101">
+		<skills>
+			<skill id="3157" level="1"/> <!--Item Skill: Large Firework-->
+		</skills>
+	</option_data>
+	<option_data id="15102">
+		<triggers>
+			<trigger id="3081" level="4" type="ATTACK" chance="1.0"/> <!--Item Skill: Charm-->
+		</triggers>
+	</option_data>
+	<option_data id="15103">
+		<triggers>
+			<trigger id="3080" level="4" type="ATTACK" chance="1.0"/> <!--Item Skill: Aggression-->
+		</triggers>
+	</option_data>
+	<option_data id="15104">
+		<triggers>
+			<trigger id="3083" level="4" type="ATTACK" chance="1.0"/> <!--Item Skill: Slow-->
+		</triggers>
+	</option_data>
+	<option_data id="15105">
+		<triggers>
+			<trigger id="3109" level="4" type="CRIT" chance="5.0"/> <!--Item Skill: Aggression Down-->
+		</triggers>
+	</option_data>
+	<option_data id="15106">
+		<triggers>
+			<trigger id="3108" level="4" type="CRIT" chance="5.0"/> <!--Item Skill: Aggression Up-->
+		</triggers>
+	</option_data>
+	<option_data id="15107">
+		<triggers>
+			<trigger id="3111" level="4" type="CRIT" chance="5.0"/> <!--Item Skill: Slow-->
+		</triggers>
+	</option_data>
+	<option_data id="15108">
+		<triggers>
+			<trigger id="3096" level="4" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="2.0"/> <!--Item Skill: Slow-->
+		</triggers>
+	</option_data>
+	<option_data id="15109">
+		<skills>
+			<skill id="3252" level="4"/> <!--Item Skill: Kiss of Eva-->
+		</skills>
+	</option_data>
+	<option_data id="15110">
+		<skills>
+			<skill id="3253" level="4"/> <!--Item Skill: Acrobatics-->
+		</skills>
+	</option_data>
+	<option_data id="15111">
+		<skills>
+			<skill id="3254" level="4"/> <!--Item Skill: Iron Body-->
+		</skills>
+	</option_data>
+	<option_data id="15112">
+		<skills>
+			<skill id="3188" level="4"/> <!--Item Skill: Winter-->
+		</skills>
+	</option_data>
+	<option_data id="15113">
+		<skills>
+			<skill id="3139" level="4"/> <!--Item Skill: Agility-->
+		</skills>
+	</option_data>
+	<option_data id="15114">
+		<skills>
+			<skill id="3196" level="4"/> <!--Item Skill: Bleed-->
+		</skills>
+	</option_data>
+	<option_data id="15115">
+		<skills>
+			<skill id="3130" level="4"/> <!--Item Skill: Ritual-->
+		</skills>
+	</option_data>
+	<option_data id="15116">
+		<skills>
+			<skill id="3169" level="4"/> <!--Item Skill: Stone-->
+		</skills>
+	</option_data>
+	<option_data id="15117">
+		<skills>
+			<skill id="3194" level="4"/> <!--Item Skill: Fear-->
+		</skills>
+	</option_data>
+	<option_data id="15118">
+		<skills>
+			<skill id="3165" level="4"/> <!--Item Skill: Prominence-->
+		</skills>
+	</option_data>
+	<option_data id="15119">
+		<skills>
+			<skill id="3151" level="4"/> <!--Item Skill: Peace-->
+		</skills>
+	</option_data>
+	<option_data id="15120">
+		<skills>
+			<skill id="3150" level="4"/> <!--Item Skill: Charm-->
+		</skills>
+	</option_data>
+	<option_data id="15121">
+		<skills>
+			<skill id="3149" level="4"/> <!--Item Skill: Aggression-->
+		</skills>
+	</option_data>
+	<option_data id="15122">
+		<skills>
+			<skill id="3140" level="4"/> <!--Item Skill: Guidance-->
+		</skills>
+	</option_data>
+	<option_data id="15123">
+		<skills>
+			<skill id="3190" level="4"/> <!--Item Skill: Hold-->
+		</skills>
+	</option_data>
+	<option_data id="15124">
+		<skills>
+			<skill id="3170" level="4"/> <!--Item Skill: Solar Flare-->
+		</skills>
+	</option_data>
+	<option_data id="15125">
+		<skills>
+			<skill id="3138" level="4"/> <!--Item Skill: Heal Empower-->
+		</skills>
+	</option_data>
+	<option_data id="15126">
+		<skills>
+			<skill id="3126" level="4"/> <!--Item Skill: Prayer-->
+		</skills>
+	</option_data>
+	<option_data id="15127">
+		<skills>
+			<skill id="3123" level="4"/> <!--Item Skill: Heal-->
+		</skills>
+	</option_data>
+	<option_data id="15128">
+		<skills>
+			<skill id="3133" level="4"/> <!--Item Skill: Empower-->
+		</skills>
+	</option_data>
+	<option_data id="15129">
+		<skills>
+			<skill id="3131" level="4"/> <!--Item Skill: Cheer-->
+		</skills>
+	</option_data>
+	<option_data id="15130">
+		<skills>
+			<skill id="3125" level="4"/> <!--Item Skill: Battle Roar-->
+		</skills>
+	</option_data>
+	<option_data id="15131">
+		<skills>
+			<skill id="3124" level="4"/> <!--Item Skill: Blessed Body-->
+		</skills>
+	</option_data>
+	<option_data id="15132">
+		<skills>
+			<skill id="3128" level="4"/> <!--Item Skill: Blessed Soul-->
+		</skills>
+	</option_data>
+	<option_data id="15133">
+		<skills>
+			<skill id="3136" level="4"/> <!--Item Skill: Magic Barrier-->
+		</skills>
+	</option_data>
+	<option_data id="15134">
+		<skills>
+			<skill id="3154" level="4"/> <!--Item Skill: Mana Burn-->
+		</skills>
+	</option_data>
+	<option_data id="15135">
+		<skills>
+			<skill id="3129" level="4"/> <!--Item Skill: Mana Gain-->
+		</skills>
+	</option_data>
+	<option_data id="15136">
+		<skills>
+			<skill id="3127" level="4"/> <!--Item Skill: Recharge-->
+		</skills>
+	</option_data>
+	<option_data id="15137">
+		<skills>
+			<skill id="3172" level="4"/> <!--Item Skill: Aura Flare-->
+		</skills>
+	</option_data>
+	<option_data id="15138">
+		<skills>
+			<skill id="3132" level="4"/> <!--Item Skill: Might-->
+		</skills>
+	</option_data>
+	<option_data id="15139">
+		<skills>
+			<skill id="3192" level="4"/> <!--Item Skill: Paralyze-->
+		</skills>
+	</option_data>
+	<option_data id="15140">
+		<skills>
+			<skill id="3135" level="4"/> <!--Item Skill: Shield-->
+		</skills>
+	</option_data>
+	<option_data id="15141">
+		<skills>
+			<skill id="3195" level="4"/> <!--Item Skill: Poison-->
+		</skills>
+	</option_data>
+	<option_data id="15142">
+		<skills>
+			<skill id="3137" level="4"/> <!--Item Skill: Duel Weakness-->
+		</skills>
+	</option_data>
+	<option_data id="15143">
+		<skills>
+			<skill id="3134" level="4"/> <!--Item Skill: Duel Might-->
+		</skills>
+	</option_data>
+	<option_data id="15144">
+		<skills>
+			<skill id="3146" level="1"/> <!--Item Skill: Recall-->
+		</skills>
+	</option_data>
+	<option_data id="15145">
+		<skills>
+			<skill id="3160" level="4"/> <!--Item Skill: Resurrection-->
+		</skills>
+	</option_data>
+	<option_data id="15146">
+		<skills>
+			<skill id="3183" level="4"/> <!--Item Skill: Stone-->
+		</skills>
+	</option_data>
+	<option_data id="15147">
+		<skills>
+			<skill id="3180" level="4"/> <!--Item Skill: Prominence-->
+		</skills>
+	</option_data>
+	<option_data id="15148">
+		<skills>
+			<skill id="3184" level="4"/> <!--Item Skill: Solar Flare-->
+		</skills>
+	</option_data>
+	<option_data id="15149">
+		<skills>
+			<skill id="3186" level="4"/> <!--Item Skill: Aura Flare-->
+		</skills>
+	</option_data>
+	<option_data id="15150">
+		<skills>
+			<skill id="3185" level="4"/> <!--Item Skill: Shadow Flare-->
+		</skills>
+	</option_data>
+	<option_data id="15151">
+		<skills>
+			<skill id="3181" level="4"/> <!--Item Skill: Hydro Blast-->
+		</skills>
+	</option_data>
+	<option_data id="15152">
+		<skills>
+			<skill id="3182" level="4"/> <!--Item Skill: Hurricane-->
+		</skills>
+	</option_data>
+	<option_data id="15153">
+		<skills>
+			<skill id="3191" level="4"/> <!--Item Skill: Sleep-->
+		</skills>
+	</option_data>
+	<option_data id="15154">
+		<skills>
+			<skill id="3187" level="4"/> <!--Item Skill: Slow-->
+		</skills>
+	</option_data>
+	<option_data id="15155">
+		<skills>
+			<skill id="3189" level="4"/> <!--Item Skill: Stun-->
+		</skills>
+	</option_data>
+	<option_data id="15156">
+		<skills>
+			<skill id="3176" level="4"/> <!--Item Skill: Stone-->
+		</skills>
+	</option_data>
+	<option_data id="15157">
+		<skills>
+			<skill id="3173" level="4"/> <!--Item Skill: Prominence-->
+		</skills>
+	</option_data>
+	<option_data id="15158">
+		<skills>
+			<skill id="3177" level="4"/> <!--Item Skill: Solar Flare-->
+		</skills>
+	</option_data>
+	<option_data id="15159">
+		<skills>
+			<skill id="3179" level="4"/> <!--Item Skill: Aura Flare-->
+		</skills>
+	</option_data>
+	<option_data id="15160">
+		<skills>
+			<skill id="3178" level="4"/> <!--Item Skill: Shadow Flare-->
+		</skills>
+	</option_data>
+	<option_data id="15161">
+		<skills>
+			<skill id="3174" level="4"/> <!--Item Skill: Hydro Blast-->
+		</skills>
+	</option_data>
+	<option_data id="15162">
+		<skills>
+			<skill id="3175" level="4"/> <!--Item Skill: Hurricane-->
+		</skills>
+	</option_data>
+	<option_data id="15163">
+		<skills>
+			<skill id="3152" level="4"/> <!--Item Skill: Trick-->
+		</skills>
+	</option_data>
+	<option_data id="15164">
+		<skills>
+			<skill id="3193" level="4"/> <!--Item Skill: Medusa-->
+		</skills>
+	</option_data>
+	<option_data id="15165">
+		<skills>
+			<skill id="3171" level="4"/> <!--Item Skill: Shadow Flare-->
+		</skills>
+	</option_data>
+	<option_data id="15166">
+		<skills>
+			<skill id="3155" level="4"/> <!--Item Skill: Unlock-->
+		</skills>
+	</option_data>
+	<option_data id="15167">
+		<skills>
+			<skill id="3153" level="4"/> <!--Item Skill: Vampiric Touch-->
+		</skills>
+	</option_data>
+	<option_data id="15168">
+		<skills>
+			<skill id="3167" level="4"/> <!--Item Skill: Hydro Blast-->
+		</skills>
+	</option_data>
+	<option_data id="15169">
+		<skills>
+			<skill id="3168" level="4"/> <!--Item Skill: Tempest-->
+		</skills>
+	</option_data>
+	<option_data id="15170">
+		<triggers>
+			<trigger id="3084" level="4" type="ATTACK" chance="1.0"/> <!--Item Skill: Winter-->
+		</triggers>
+	</option_data>
+	<option_data id="15171">
+		<triggers>
+			<trigger id="3092" level="4" type="ATTACK" chance="1.0"/> <!--Item Skill: Bleed-->
+		</triggers>
+	</option_data>
+	<option_data id="15172">
+		<triggers>
+			<trigger id="3090" level="4" type="ATTACK" chance="1.0"/> <!--Item Skill: Fear-->
+		</triggers>
+	</option_data>
+	<option_data id="15173">
+		<triggers>
+			<trigger id="3086" level="4" type="ATTACK" chance="1.0"/> <!--Item Skill: Hold-->
+		</triggers>
+	</option_data>
+	<option_data id="15174">
+		<triggers>
+			<trigger id="3091" level="4" type="ATTACK" chance="1.0"/> <!--Item Skill: Poison-->
+		</triggers>
+	</option_data>
+	<option_data id="15175">
+		<triggers>
+			<trigger id="3089" level="4" type="ATTACK" chance="1.0"/> <!--Item Skill: Medusa-->
+		</triggers>
+	</option_data>
+	<option_data id="15176">
+		<triggers>
+			<trigger id="3112" level="4" type="CRIT" chance="5.0"/> <!--Item Skill: Winter-->
+		</triggers>
+	</option_data>
+	<option_data id="15177">
+		<triggers>
+			<trigger id="3120" level="4" type="CRIT" chance="5.0"/> <!--Item Skill: Bleed-->
+		</triggers>
+	</option_data>
+	<option_data id="15178">
+		<triggers>
+			<trigger id="3118" level="4" type="CRIT" chance="5.0"/> <!--Item Skill: Fear-->
+		</triggers>
+	</option_data>
+	<option_data id="15179">
+		<triggers>
+			<trigger id="3114" level="4" type="CRIT" chance="5.0"/> <!--Item Skill: Hold-->
+		</triggers>
+	</option_data>
+	<option_data id="15180">
+		<triggers>
+			<trigger id="3119" level="4" type="CRIT" chance="5.0"/> <!--Item Skill: Poison-->
+		</triggers>
+	</option_data>
+	<option_data id="15181">
+		<triggers>
+			<trigger id="3117" level="4" type="CRIT" chance="5.0"/> <!--Item Skill: Medusa-->
+		</triggers>
+	</option_data>
+	<option_data id="15182">
+		<skills>
+			<skill id="3227" level="4"/> <!--Item Skill: Winter-->
+		</skills>
+	</option_data>
+	<option_data id="15183">
+		<skills>
+			<skill id="3221" level="4"/> <!--Item Skill: Agility-->
+		</skills>
+	</option_data>
+	<option_data id="15184">
+		<skills>
+			<skill id="3235" level="4"/> <!--Item Skill: Bleed-->
+		</skills>
+	</option_data>
+	<option_data id="15185">
+		<skills>
+			<skill id="3213" level="4"/> <!--Item Skill: Ritual-->
+		</skills>
+	</option_data>
+	<option_data id="15186">
+		<skills>
+			<skill id="3223" level="4"/> <!--Item Skill: Focus-->
+		</skills>
+	</option_data>
+	<option_data id="15187">
+		<skills>
+			<skill id="3225" level="4"/> <!--Item Skill: Charm-->
+		</skills>
+	</option_data>
+	<option_data id="15188">
+		<skills>
+			<skill id="3222" level="4"/> <!--Item Skill: Guidance-->
+		</skills>
+	</option_data>
+	<option_data id="15189">
+		<skills>
+			<skill id="3229" level="4"/> <!--Item Skill: Hold-->
+		</skills>
+	</option_data>
+	<option_data id="15190">
+		<skills>
+			<skill id="3209" level="4"/> <!--Item Skill: Prayer-->
+		</skills>
+	</option_data>
+	<option_data id="15191">
+		<skills>
+			<skill id="3207" level="4"/> <!--Item Skill: Heal-->
+		</skills>
+	</option_data>
+	<option_data id="15192">
+		<skills>
+			<skill id="3216" level="4"/> <!--Item Skill: Empower-->
+		</skills>
+	</option_data>
+	<option_data id="15193">
+		<skills>
+			<skill id="3224" level="4"/> <!--Item Skill: Wild Magic-->
+		</skills>
+	</option_data>
+	<option_data id="15194">
+		<skills>
+			<skill id="3214" level="4"/> <!--Item Skill: Cheer-->
+		</skills>
+	</option_data>
+	<option_data id="15195">
+		<skills>
+			<skill id="3208" level="4"/> <!--Item Skill: Blessed Body-->
+		</skills>
+	</option_data>
+	<option_data id="15196">
+		<skills>
+			<skill id="3211" level="4"/> <!--Item Skill: Blessed Soul-->
+		</skills>
+	</option_data>
+	<option_data id="15197">
+		<skills>
+			<skill id="3219" level="4"/> <!--Item Skill: Magic Barrier-->
+		</skills>
+	</option_data>
+	<option_data id="15198">
+		<skills>
+			<skill id="3215" level="4"/> <!--Item Skill: Might-->
+		</skills>
+	</option_data>
+	<option_data id="15199">
+		<skills>
+			<skill id="3218" level="4"/> <!--Item Skill: Shield-->
+		</skills>
+	</option_data>
+</list>

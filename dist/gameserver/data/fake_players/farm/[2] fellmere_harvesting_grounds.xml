@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE farm SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<farm name="Fellmere Harvesting Grounds" min_level="17" max_level="23">
+	<zones>
+		<zone>
+			<polygon>
+				<coords loc="-63544 102120 -4200 -3000"/>
+				<coords loc="-64664 101720 -4200 -3000"/>
+				<coords loc="-64728 100664 -4200 -3000"/>
+				<coords loc="-66200 99688 -4200 -3000"/>
+				<coords loc="-69704 100520 -4200 -3000"/>
+				<coords loc="-70920 100888 -4200 -3000"/>
+				<coords loc="-72104 101816 -4200 -3000"/>
+				<coords loc="-71160 105240 -4200 -3000"/>
+				<coords loc="-70072 109320 -4200 -3000"/>
+				<coords loc="-68920 110280 -4200 -3000"/>
+				<coords loc="-66104 110664 -4200 -3000"/>
+				<coords loc="-63896 109160 -4200 -3000"/>
+				<coords loc="-63640 108568 -4200 -3000"/>
+				<coords loc="-64184 102296 -4200 -3000"/>
+			</polygon>
+		</zone>
+		<spawn_points>
+			<coords loc="-66776 102792 -3728"/>
+		</spawn_points>
+	</zones>
+	<on_obtain_max_level>
+		<action id="1"/>
+	</on_obtain_max_level>
+	<go_to_town min_farm_time="1800" max_farm_time="3600">
+		<action id="1"/>
+	</go_to_town>
+	<action id="1">
+		<wait min_delay="1000" max_delay="3000"/>
+		<use_item id="736"/>
+	</action>
+</farm>

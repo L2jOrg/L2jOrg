@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="22220003" name="giran_castle_agit_005_001" hp="158250" pdef="644" mdef="518">
+		<pos x="81873" y="151943" z="-3488"/>
+		<shape ax="81871" ay="151944" bx="81870" by="151892" cx="81877" cy="151892" dx="81876" dy="151944" minz="-3545" maxz="-3095"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="46"/>
+		</ai_params>
+	</door>
+	<door id="22220004" name="giran_castle_agit_005_002" hp="158250" pdef="644" mdef="518">
+		<pos x="81873" y="151842" z="-3488"/>
+		<shape ax="81876" ay="151842" bx="81877" by="151893" cx="81870" cy="151894" dx="81870" dy="151842" minz="-3545" maxz="-3095"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="46"/>
+		</ai_params>
+	</door>
+	<door id="22220005" name="giran_castle_agit_004_002" hp="158250" pdef="644" mdef="518">
+		<pos x="81196" y="151657" z="-3490"/>
+		<shape ax="81193" ay="151658" bx="81192" by="151605" cx="81200" cy="151605" dx="81200" dy="151658" minz="-3546" maxz="-3096"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="45"/>
+		</ai_params>
+	</door>
+	<door id="22220006" name="giran_castle_agit_004_001" hp="158250" pdef="644" mdef="518">
+		<pos x="81196" y="151556" z="-3490"/>
+		<shape ax="81200" ay="151555" bx="81200" by="151607" cx="81192" cy="151607" dx="81192" dy="151555" minz="-3546" maxz="-3096"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="45"/>
+		</ai_params>
+	</door>
+	<door id="22220007" name="giran_castle_agit_001_001" hp="158250" pdef="644" mdef="518">
+		<pos x="78622" y="148327" z="-3553"/>
+		<shape ax="78622" ay="148331" bx="78570" by="148331" cx="78570" cy="148323" dx="78623" dy="148324" minz="-3614" maxz="-3164"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="42"/>
+		</ai_params>
+	</door>
+	<door id="22220008" name="giran_castle_agit_001_002" hp="158250" pdef="644" mdef="518">
+		<pos x="78521" y="148327" z="-3553"/>
+		<shape ax="78520" ay="148323" bx="78572" by="148323" cx="78572" cy="148330" dx="78520" dy="148331" minz="-3614" maxz="-3164"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="42"/>
+		</ai_params>
+	</door>
+	<door id="22220009" name="giran_castle_agit_002_001" hp="158250" pdef="644" mdef="518">
+		<pos x="81831" y="145368" z="-3489"/>
+		<shape ax="81827" ay="145369" bx="81828" by="145316" cx="81835" cy="145316" dx="81835" dy="145369" minz="-3546" maxz="-3096"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="43"/>
+		</ai_params>
+	</door>
+	<door id="22220010" name="giran_castle_agit_002_002" hp="158250" pdef="644" mdef="518">
+		<pos x="81831" y="145267" z="-3489"/>
+		<shape ax="81834" ay="145265" bx="81835" by="145319" cx="81828" cy="145319" dx="81828" dy="145265" minz="-3546" maxz="-3096"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="43"/>
+		</ai_params>
+	</door>
+	<door id="22220011" name="giran_castle_agit_003_002" hp="158250" pdef="644" mdef="518">
+		<pos x="83618" y="145382" z="-3360"/>
+		<shape ax="83614" ay="145383" bx="83614" by="145331" cx="83622" cy="145330" dx="83623" dy="145383" minz="-3417" maxz="-2967"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="44"/>
+		</ai_params>
+	</door>
+	<door id="22220012" name="giran_castle_agit_003_001" hp="158250" pdef="644" mdef="518">
+		<pos x="83618" y="145281" z="-3360"/>
+		<shape ax="83621" ay="145280" bx="83622" by="145332" cx="83615" cy="145332" dx="83614" dy="145280" minz="-3417" maxz="-2967"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="44"/>
+		</ai_params>
+	</door>
+</list>

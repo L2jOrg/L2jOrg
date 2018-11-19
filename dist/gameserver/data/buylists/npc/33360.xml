@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "buylist.dtd">
+<!--AUTHOR: Bonux-->
+<!--TODO: Сверить с оффом.-->
+<list>
+	<npc id="33360">	<!--Maid-->
+		<buylist id="1" base_markup="10">
+			<item id="1829" count="10" time="3600"/>	<!--Свиток Телепорта: Холл Клана-->
+			<item id="5858" count="3" time="3600"/>	<!--Благословенный Свиток Телепорта: Холл Клана-->
+			<item id="5595" count="2" time="1800"/>	<!--Большой Свиток SP-->
+		</buylist>
+	</npc>
+</list>

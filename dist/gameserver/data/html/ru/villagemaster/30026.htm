@@ -1,0 +1,11 @@
+<html><head><body>
+Великий Мастер Битц:<br>
+Здравствуйте! Я Великий Мастер Битц из Гильдии Воинов. Я могу рассказать о том, как сменить профессию, однако, чтобы сделать это, Вам придется отправиться в Королевство Аден. Учтите - изменение класса доступно только опытным и отважным путешественникам.<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">Узнать о 1-й смене профессии</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Клан</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Альянс</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Обменять Ежедневные Монеты</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Квест</Button>
+</body></html>

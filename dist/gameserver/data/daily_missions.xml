@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "daily_missions.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<!--For enable or disable configure ext.properties, set UseToDoList=True/False-->
+	<mission id="24" handler="LevelUp" value="2">	<!--Получить 2-й уровень-->
+		<rewards>
+			<reward id="29651" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="25" handler="LevelUp" value="3">	<!--Получить 3-й уровень-->
+		<rewards>
+			<reward id="29651" count="10"/>
+		</rewards>
+	</mission>
+	<mission id="26" handler="LevelUp" value="4">	<!--Получить 4-й уровень-->
+		<rewards>
+			<reward id="10650" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="27" handler="LevelUp" value="5">	<!--Получить 5-й уровень-->
+		<rewards>
+			<reward id="70094" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="28" handler="LevelUp" value="6">	<!--Получить 6-й уровень-->
+		<rewards>
+			<reward id="29650" count="3"/>
+		</rewards>
+	</mission>
+	<mission id="29" handler="LevelUp" value="7">	<!--Получить 7-й уровень-->
+		<rewards>
+			<reward id="29654" count="2"/>
+		</rewards>
+	</mission>
+	<mission id="30" handler="LevelUp" value="8">	<!--Получить 8-й уровень-->
+		<rewards>
+			<reward id="29651" count="10"/>
+		</rewards>
+	</mission>
+	<mission id="31" handler="LevelUp" value="9">	<!--Получить 9-й уровень-->
+		<rewards>
+			<reward id="10650" count="5"/>
+			<reward id="49036" count="10"/>
+		</rewards>
+	</mission>	
+	<mission id="32" handler="LevelUp" value="10">	<!--Получить 10-й уровень-->
+		<rewards classes="0,18,31,44,53,1,4,19,32,45,56,2,3,5,6,20,21,33,34,46,57,88,89,90,91,99,100,106,107,113,117,118">	<!--(для воинов)-->
+			<reward id="70095" count="1"/>
+			<reward id="70096" count="1"/>
+			<reward id="70097" count="1"/>
+		</rewards>
+		<rewards classes="7,22,35,47,8,9,23,24,36,37,54,55,48,92,93,101,102,108,109,114,115,116">	<!--(для воинов)-->
+			<reward id="70095" count="1"/>
+			<reward id="70096" count="1"/>
+			<reward id="70097" count="1"/>
+		</rewards>
+		<rewards classes="10,25,38,11,15,26,29,39,42,12,13,14,16,17,27,28,30,40,41,43,49,50,51,52,94,95,96,97,98,103,104,105,110,111,112">	<!--(для магов)-->
+			<reward id="70098" count="1"/>
+			<reward id="70099" count="1"/>
+			<reward id="70100" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="33" handler="LevelUp" value="11">	<!--Получить 11-й уровень-->
+		<rewards>
+			<reward id="29651" count="10"/>
+		</rewards>
+	</mission>	
+	<mission id="34" handler="LevelUp" value="12">	<!--Получить 12-й уровень-->
+		<rewards>
+			<reward id="29650" count="3"/>
+		</rewards>
+	</mission>
+	<mission id="35" handler="LevelUp" value="13">	<!--Получить 13-й уровень-->
+		<rewards>
+			<reward id="29654" count="2"/>
+		</rewards>
+	</mission>		
+	<mission id="36" handler="LevelUp" value="14">	<!--Получить 14-й уровень-->
+		<rewards>
+			<reward id="29652" count="15"/>
+		</rewards>
+	</mission>
+	<mission id="37" handler="LevelUp" value="15">	<!--Получить 15-й уровень-->
+		<rewards>
+			<reward id="70101" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="38" handler="LevelUp" value="16">	<!--Получить 16-й уровень-->
+		<rewards>
+			<reward id="29650" count="3"/>
+		</rewards>
+	</mission>	
+	<mission id="39" handler="LevelUp" value="17">	<!--Получить 17-й уровень-->
+		<rewards>
+			<reward id="29654" count="3"/>
+		</rewards>
+	</mission>		
+	<mission id="40" handler="LevelUp" value="18">	<!--Получить 18-й уровень-->
+		<rewards classes="0,18,31,44,53,1,4,19,32,45,56,2,3,5,6,20,21,33,34,46,57,88,89,90,91,99,100,106,107,113,117,118">	<!--(для воинов)-->
+			<reward id="70102" count="10"/>
+		</rewards>
+		<rewards classes="7,22,35,47,8,9,23,24,36,37,54,55,48,92,93,101,102,108,109,114,115,116">	<!--(для воинов)-->
+			<reward id="70102" count="10"/>
+		</rewards>
+		<rewards classes="10,25,38,11,15,26,29,39,42,12,13,14,16,17,27,28,30,40,41,43,49,50,51,52,94,95,96,97,98,103,104,105,110,111,112">	<!--(для магов)-->
+			<reward id="70103" count="10"/>
+		</rewards>
+	</mission>
+	<mission id="41" handler="LevelUp" value="19">	<!--Получить 19-й уровень-->
+		<rewards>
+			<reward id="49036" count="10"/>
+		</rewards>
+	</mission>
+	<mission id="42" handler="LevelUp" value="20">	<!--Получить 20-й уровень-->
+		<rewards>
+			<reward id="70024" count="20"/>
+			<reward id="70182" count="1"/>
+			<reward id="70184" count="1"/>
+			<reward id="70186" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="43" handler="LevelUp" value="21">	<!--Получить 21-й уровень-->
+		<rewards>
+			<reward id="29650" count="3"/>
+		</rewards>
+	</mission>
+	<mission id="44" handler="LevelUp" value="22">	<!--Получить 22-й уровень-->
+		<rewards>
+			<reward id="29654" count="3"/>
+		</rewards>
+	</mission>
+	<mission id="45" handler="LevelUp" value="23">	<!--Получить 23-й уровень-->
+		<rewards classes="0,18,31,44,53,1,4,19,32,45,56,2,3,5,6,20,21,33,34,46,57,88,89,90,91,99,100,106,107,113,117,118">	<!--(для воинов)-->
+			<reward id="70104" count="3"/>
+		</rewards>
+		<rewards classes="7,22,35,47,8,9,23,24,36,37,54,55,48,92,93,101,102,108,109,114,115,116">	<!--(для воинов)-->
+			<reward id="70104" count="3"/>
+		</rewards>
+		<rewards classes="10,25,38,11,15,26,29,39,42,12,13,14,16,17,27,28,30,40,41,43,49,50,51,52,94,95,96,97,98,103,104,105,110,111,112">	<!--(для магов)-->
+			<reward id="70105" count="3"/>
+		</rewards>
+	</mission>
+	<mission id="46" handler="LevelUp" value="24">	<!--Получить 24-й уровень-->
+		<rewards>
+			<reward id="29648" count="6"/>
+		</rewards>
+	</mission>
+	<mission id="47" handler="LevelUp" value="25">	<!--Получить 25-й уровень-->
+		<rewards>
+			<reward id="70114" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="48" handler="LevelUp" value="26">	<!--Получить 26-й уровень-->
+		<rewards>
+			<reward id="29648" count="6"/>
+		</rewards>
+	</mission>
+	<mission id="49" handler="LevelUp" value="27">	<!--Получить 27-й уровень-->
+		<rewards>
+			<reward id="29654" count="3"/>
+		</rewards>
+	</mission>
+	<mission id="50" handler="LevelUp" value="28">	<!--Получить 28-й уровень-->
+		<rewards classes="0,18,31,44,53,1,4,19,32,45,56,2,3,5,6,20,21,33,34,46,57,88,89,90,91,99,100,106,107,113,117,118">	<!--(для воинов)-->
+			<reward id="70104" count="3"/>
+		</rewards>
+		<rewards classes="7,22,35,47,8,9,23,24,36,37,54,55,48,92,93,101,102,108,109,114,115,116">	<!--(для воинов)-->
+			<reward id="70104" count="3"/>
+		</rewards>
+		<rewards classes="10,25,38,11,15,26,29,39,42,12,13,14,16,17,27,28,30,40,41,43,49,50,51,52,94,95,96,97,98,103,104,105,110,111,112">	<!--(для магов)-->
+			<reward id="70105" count="3"/>
+		</rewards>
+	</mission>
+	<mission id="51" handler="LevelUp" value="29">	<!--Получить 29-й уровень-->
+		<rewards>
+			<reward id="29648" count="6"/>
+		</rewards>
+	</mission>
+	<mission id="52" handler="LevelUp" value="30">	<!--Получить 30-й уровень-->
+		<rewards>
+			<reward id="70106" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="53" handler="LevelUp" value="31">	<!--Получить 31-й уровень-->
+		<rewards>
+			<reward id="29648" count="6"/>
+		</rewards>
+	</mission>
+	<mission id="54" handler="LevelUp" value="32">	<!--Получить 32-й уровень-->
+		<rewards>
+			<reward id="29654" count="3"/>
+		</rewards>
+	</mission>
+	<mission id="55" handler="LevelUp" value="33">	<!--Получить 33-й уровень-->
+		<rewards>
+			<reward id="70107" count="3"/>
+		</rewards>
+	</mission>
+	<mission id="56" handler="LevelUp" value="34">	<!--Получить 34-й уровень-->
+		<rewards>
+			<reward id="29648" count="6"/>
+		</rewards>
+	</mission>
+	<mission id="57" handler="LevelUp" value="35">	<!--Получить 35-й уровень-->
+		<rewards>
+			<reward id="29648" count="6"/>
+		</rewards>
+	</mission>
+	<mission id="58" handler="LevelUp" value="36">	<!--Получить 36-й уровень-->
+		<rewards>
+			<reward id="29654" count="3"/>
+		</rewards>
+	</mission>
+	<mission id="59" handler="LevelUp" value="37">	<!--Получить 37-й уровень-->
+		<rewards>
+			<reward id="70107" count="3"/>
+		</rewards>
+	</mission>
+	<mission id="60" handler="LevelUp" value="38">	<!--Получить 38-й уровень-->
+		<rewards classes="0,18,31,44,53,1,4,19,32,45,56,2,3,5,6,20,21,33,34,46,57,88,89,90,91,99,100,106,107,113,117,118">	<!--(для воинов)-->
+			<reward id="70108" count="1"/>
+		</rewards>
+		<rewards classes="7,22,35,47,8,9,23,24,36,37,54,55,48,92,93,101,102,108,109,114,115,116">	<!--(для воинов)-->
+			<reward id="70108" count="1"/>
+		</rewards>
+		<rewards classes="10,25,38,11,15,26,29,39,42,12,13,14,16,17,27,28,30,40,41,43,49,50,51,52,94,95,96,97,98,103,104,105,110,111,112">	<!--(для магов)-->
+			<reward id="70109" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="61" handler="LevelUp" value="39">	<!--Получить 39-й уровень-->
+		<rewards>
+			<reward id="29517" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="62" handler="LevelUp" value="40">	<!--Получить 40-й уровень-->
+		<rewards>
+			<reward id="70024" count="20"/>
+		</rewards>
+	</mission>
+	<mission id="63" handler="LevelUp" value="41">	<!--Получить 41-й уровень-->
+		<rewards>
+			<reward id="29648" count="6"/>
+		</rewards>
+	</mission>
+	<mission id="64" handler="LevelUp" value="42">	<!--Получить 42-й уровень-->
+		<rewards>
+			<reward id="29655" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="65" handler="LevelUp" value="43">	<!--Получить 43-й уровень-->
+		<rewards classes="0,18,31,44,53,1,4,19,32,45,56,2,3,5,6,20,21,33,34,46,57,88,89,90,91,99,100,106,107,113,117,118">	<!--(для воинов)-->
+			<reward id="70110" count="5"/>
+		</rewards>
+		<rewards classes="7,22,35,47,8,9,23,24,36,37,54,55,48,92,93,101,102,108,109,114,115,116">	<!--(для воинов)-->
+			<reward id="70110" count="5"/>
+		</rewards>
+		<rewards classes="10,25,38,11,15,26,29,39,42,12,13,14,16,17,27,28,30,40,41,43,49,50,51,52,94,95,96,97,98,103,104,105,110,111,112">	<!--(для магов)-->
+			<reward id="70111" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="66" handler="LevelUp" value="44">	<!--Получить 44-й уровень-->
+		<rewards>
+			<reward id="29517" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="67" handler="LevelUp" value="45">	<!--Получить 45-й уровень-->
+		<rewards>
+			<reward id="70112" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="68" handler="LevelUp" value="46">	<!--Получить 46-й уровень-->
+		<rewards>
+			<reward id="29648" count="10"/>
+		</rewards>
+	</mission>
+	<mission id="69" handler="LevelUp" value="47">	<!--Получить 47-й уровень-->
+		<rewards>
+			<reward id="29655" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="70" handler="LevelUp" value="48">	<!--Получить 48-й уровень-->
+		<rewards classes="0,18,31,44,53,1,4,19,32,45,56,2,3,5,6,20,21,33,34,46,57,88,89,90,91,99,100,106,107,113,117,118">	<!--(для воинов)-->
+			<reward id="70110" count="5"/>
+		</rewards>
+		<rewards classes="7,22,35,47,8,9,23,24,36,37,54,55,48,92,93,101,102,108,109,114,115,116">	<!--(для воинов)-->
+			<reward id="70110" count="5"/>
+		</rewards>
+		<rewards classes="10,25,38,11,15,26,29,39,42,12,13,14,16,17,27,28,30,40,41,43,49,50,51,52,94,95,96,97,98,103,104,105,110,111,112">	<!--(для магов)-->
+			<reward id="70111" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="71" handler="LevelUp" value="49">	<!--Получить 49-й уровень-->
+		<rewards>
+			<reward id="29517" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="72" handler="LevelUp" value="50">	<!--Получить 50-й уровень-->
+		<rewards>
+			<reward id="49477" count="1"/>
+			<reward id="49493" count="1"/>
+			<reward id="49509" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="73" handler="LevelUp" value="51">	<!--Получить 51-й уровень-->
+		<rewards>
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+			<reward id="70101" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="74" handler="LevelUp" value="52">	<!--Получить 52-й уровень-->
+		<rewards classes="0,18,31,44,53,1,4,19,32,45,56,2,3,5,6,20,21,33,34,46,57,88,89,90,91,99,100,106,107,113,117,118">	<!--(для воинов)-->
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+			<reward id="70114" count="1"/>
+		</rewards>
+		<rewards classes="7,22,35,47,8,9,23,24,36,37,54,55,48,92,93,101,102,108,109,114,115,116">	<!--(для воинов)-->
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+			<reward id="70114" count="1"/>
+		</rewards>
+		<rewards classes="10,25,38,11,15,26,29,39,42,12,13,14,16,17,27,28,30,40,41,43,49,50,51,52,94,95,96,97,98,103,104,105,110,111,112">	<!--(для магов)-->
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+			<reward id="70114" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="75" handler="LevelUp" value="53">	<!--Получить 53-й уровень-->
+		<rewards>
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="76" handler="LevelUp" value="54">	<!--Получить 54-й уровень-->
+		<rewards>
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="77" handler="LevelUp" value="55">	<!--Получить 55-й уровень-->
+		<rewards>
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+			<reward id="29650" count="3"/>
+			<reward id="90793" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="78" handler="LevelUp" value="56">	<!--Получить 56-й уровень-->
+		<rewards>
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="79" handler="LevelUp" value="57">	<!--Получить 57-й уровень-->
+		<rewards>
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="80" handler="LevelUp" value="58">	<!--Получить 58-й уровень-->
+		<rewards>
+			<reward id="49488" count="20"/>
+			<reward id="49488" count="20"/>
+			<reward id="29817" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="81" handler="LevelUp" value="59">	<!--Получить 59-й уровень-->
+		<rewards>
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="82" handler="LevelUp" value="60">	<!--Получить 60-й уровень-->
+		<rewards>
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+			<reward id="29650" count="3"/>
+			<reward id="90793" count="1"/>
+			<reward id="70101" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="83" handler="LevelUp" value="61">	<!--Получить 61-й уровень-->
+		<rewards classes="0,18,31,44,53,1,4,19,32,45,56,2,3,5,6,20,21,33,34,46,57,88,89,90,91,99,100,106,107,113,117,118">	<!--(для воинов)-->
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+			<reward id="70114" count="1"/>
+		</rewards>
+		<rewards classes="7,22,35,47,8,9,23,24,36,37,54,55,48,92,93,101,102,108,109,114,115,116">	<!--(для воинов)-->
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+			<reward id="70114" count="1"/>
+		</rewards>
+		<rewards classes="10,25,38,11,15,26,29,39,42,12,13,14,16,17,27,28,30,40,41,43,49,50,51,52,94,95,96,97,98,103,104,105,110,111,112">	<!--(для магов)-->
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+			<reward id="70114" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="84" handler="LevelUp" value="62">	<!--Получить 62-й уровень-->
+		<rewards>
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="85" handler="LevelUp" value="63">	<!--Получить 63-й уровень-->
+		<rewards>
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="86" handler="LevelUp" value="64">	<!--Получить 64-й уровень-->
+		<rewards>
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="87" handler="LevelUp" value="65">	<!--Получить 65-й уровень-->
+		<rewards>
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+			<reward id="29650" count="3"/>
+			<reward id="90793" count="2"/>
+		</rewards>
+	</mission>
+	<mission id="88" handler="LevelUp" value="66">	<!--Получить 66-й уровень-->
+		<rewards>
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="89" handler="LevelUp" value="67">	<!--Получить 67-й уровень-->
+		<rewards>
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="90" handler="LevelUp" value="68">	<!--Получить 68-й уровень-->
+		<rewards>
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="91" handler="LevelUp" value="69">	<!--Получить 69-й уровень-->
+		<rewards>
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="92" handler="LevelUp" value="70">	<!--Получить 70-й уровень-->
+		<rewards>
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+			<reward id="29650" count="3"/>
+			<reward id="90793" count="2"/>
+			<reward id="70112" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="93" handler="LevelUp" value="71">	<!--Получить 71-й уровень-->
+		<rewards>
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="94" handler="LevelUp" value="72">	<!--Получить 72-й уровень-->
+		<rewards>
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="95" handler="LevelUp" value="73">	<!--Получить 73-й уровень-->
+		<rewards>
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="96" handler="LevelUp" value="74">	<!--Получить 74-й уровень-->
+		<rewards>
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+		</rewards>
+	</mission>
+	<mission id="97" handler="LevelUp" value="75">	<!--Получить 75-й уровень-->
+		<rewards>
+			<reward id="49488" count="20"/>
+			<reward id="90415" count="20"/>
+			<reward id="29817" count="5"/>
+			<reward id="29650" count="3"/>
+			<reward id="90793" count="3"/>
+			<reward id="70101" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="98" handler="LevelUp" value="76">	<!--Получить 76-й уровень-->
+		<rewards classes="0,18,31,44,53,1,4,19,32,45,56,2,3,5,6,20,21,33,34,46,57,88,89,90,91,99,100,106,107,113,117,118">	<!--(для воинов)-->
+			<reward id="49488" count="30"/>
+			<reward id="90415" count="30"/>
+			<reward id="29817" count="5"/>
+			<reward id="90157" count="1"/>
+			<reward id="70560" count="1"/>
+			<reward id="90836" count="1"/>
+		</rewards>
+		<rewards classes="7,22,35,47,8,9,23,24,36,37,54,55,48,92,93,101,102,108,109,114,115,116">	<!--(для воинов)-->
+			<reward id="49488" count="30"/>
+			<reward id="90415" count="30"/>
+			<reward id="29817" count="5"/>
+			<reward id="90157" count="1"/>
+			<reward id="70560" count="1"/>
+			<reward id="90836" count="1"/>
+		</rewards>
+		<rewards classes="10,25,38,11,15,26,29,39,42,12,13,14,16,17,27,28,30,40,41,43,49,50,51,52,94,95,96,97,98,103,104,105,110,111,112">	<!--(для магов)-->
+			<reward id="49488" count="30"/>
+			<reward id="90415" count="30"/>
+			<reward id="29817" count="5"/>
+			<reward id="90157" count="1"/>
+			<reward id="70560" count="1"/>
+			<reward id="90836" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="99" handler="LevelUp" value="77">	<!--Получить 77-й уровень-->
+		<rewards>
+			<reward id="49488" count="30"/>
+			<reward id="90415" count="30"/>
+			<reward id="29817" count="5"/>
+			<reward id="29650" count="3"/>
+			<reward id="70220" count="1"/>
+			<reward id="70221" count="1"/>
+			<reward id="90818" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="100" handler="LevelUp" value="78">	<!--Получить 78-й уровень-->
+		<rewards>
+			<reward id="49488" count="30"/>
+			<reward id="90415" count="30"/>
+			<reward id="29817" count="5"/>
+			<reward id="29650" count="3"/>
+			<reward id="70220" count="1"/>
+			<reward id="70221" count="1"/>
+			<reward id="90818" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="101" handler="LevelUp" value="79">	<!--Получить 79-й уровень-->
+		<rewards>
+			<reward id="49488" count="30"/>
+			<reward id="90415" count="30"/>
+			<reward id="29817" count="5"/>
+			<reward id="29650" count="3"/>
+			<reward id="70220" count="1"/>
+			<reward id="70221" count="1"/>
+			<reward id="90818" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="102" handler="LevelUp" value="80">	<!--Получить 80-й уровень-->
+		<rewards>
+			<reward id="70773" count="1"/>
+			<reward id="70774" count="1"/>
+			<reward id="70775" count="1"/>
+			<reward id="70776" count="1"/>
+			<reward id="70777" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="224" handler="Weekend">	<!--Зайти в игру на выходных-->
+		<rewards>
+			<reward id="49499" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="225" handler="Monthly">	<!--Зайти в игру раз в месяц-->
+		<rewards>
+			<reward id="29648" count="4"/>
+		</rewards>
+	</mission>
+	<mission id="226" handler="QuestComplete" value="2">	<!--Квестомания-->
+		<rewards>
+			<reward id="29648" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="231" handler="Fishing" value="5">	<!--Заядлый рыболов-->
+		<rewards>
+			<reward id="49508" count="360"/>
+		</rewards>
+	</mission>
+	<mission id="232" handler="PledgeEnter">	<!--Вступай в клан!-->
+		<rewards>
+			<reward id="29978" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="233" handler="OlympiadBattle" value="1">	<!--Участвуй в Олимпиаде!-->
+		<rewards>
+			<reward id="70767" count="1"/>
+			
+		</rewards>
+	</mission>
+	<mission id="234" handler="OlympiadBattle" value="10">	<!--Участвуй в Олимпиаде!-->
+		<rewards>
+			<reward id="29648" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="235" handler="OlympiadBattle" value="30">	<!--Участвуй в Олимпиаде!-->
+		<rewards>
+			<reward id="70280" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="241" handler="OlympiadWinner" value="15">	<!--Стань победителем Олимпиады!-->
+		<rewards>
+			<reward id="70024" count="15"/>
+		</rewards>
+	</mission>
+	<!--<mission id="250" handler="?" value="100">	#Исследуй Остров Дьявола!#
+		#Награда выдается за убийство 100 монстров, обитающих на Острове Дьявола.#
+		#Убить на Острове Дьявола 100 монстров.#
+		<rewards>
+			<reward id="29650" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="251" handler="?">	#Рейд на Закена#
+		#Награда выдается за участие в рейде на Закена.#
+		#Принять участие в рейде на Закена.#
+		<rewards>
+			<reward id="90767" count="1"/>
+		</rewards>
+	</mission>-->
+	<mission id="252" handler="ParticipateInCastleSiege">	<!--Участвуй в осаде!-->
+		<!--Награда выдается за участие в осаде.-->
+		<!--Принять участие в Осаде.-->
+		<rewards>
+			<reward id="29648" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="253" handler="EnchantItem">	<!--Модифицируй предмет!-->
+		<!--Награда выдается за попытку модификации хотя бы одного предмета. Результат модификации не имеет значения.-->
+		<!--Модифицировать хотя бы один предмет.-->
+		<rewards>
+			<reward id="49489" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="254" handler="DailyHunting" value="30" max_level="20">	<!--Ежедневная охота (до Ур. 20)-->
+		<!--Награда выдается за убийство 30 любых монстров. Монстры ниже персонажа на 5 уровней в зачет не идут.-->
+		<!--Убить 30 монстров.-->
+		<rewards>
+			<reward id="70767" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="255" handler="DailyHunting" value="30" min_level="11" max_level="40">	<!--Ежедневная охота (Ур. 21-40)-->
+		<!--Награда выдается за убийство 30 любых монстров. Монстры ниже персонажа на 5 уровней в зачет не идут.-->
+		<!--Убить 30 монстров.-->
+		<rewards>
+			<reward id="70767" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="256" handler="DailyHunting" value="30" min_level="41" max_level="50">	<!--Ежедневная охота (Ур. 41-50)-->
+		<!--Награда выдается за убийство 30 любых монстров. Монстры ниже персонажа на 5 уровней в зачет не идут.-->
+		<!--Убить 30 монстров.-->
+		<rewards>
+			<reward id="70767" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="257" handler="DailyHunting" value="30" min_level="51" max_level="60">	<!--Ежедневная охота (Ур. 51-60)-->
+		<!--Награда выдается за убийство 30 любых монстров. Монстры ниже персонажа на 5 уровней в зачет не идут.-->
+		<!--Убить 30 монстров.-->
+		<rewards>
+			<reward id="70767" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="258" handler="DailyHunting" value="30" min_level="61" max_level="70">	<!--Ежедневная охота (Ур. 61-70)-->
+		<!--Награда выдается за убийство 30 любых монстров. Монстры ниже персонажа на 5 уровней в зачет не идут.-->
+		<!--Убить 30 монстров.-->
+		<rewards>
+			<reward id="70767" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="259" handler="DailyHunting" value="30" min_level="71" max_level="75">	<!--Ежедневная охота (Ур. 71-75)-->
+		<!--Награда выдается за убийство 30 любых монстров. Монстры ниже персонажа на 5 уровней в зачет не идут.-->
+		<!--Убить 30 монстров.-->
+		<rewards>
+			<reward id="70767" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="260" handler="DailyHunting" value="30" min_level="76">	<!--Ежедневная охота (Ур. 76 и выше)-->
+		<!--Награда выдается за убийство 30 любых монстров. Монстры ниже персонажа на 5 уровней в зачет не идут.-->
+		<!--Убить 30 монстров.-->
+		<rewards>
+			<reward id="70767" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="261" handler="WeeklyHunting" value="100" max_level="20">	<!--Еженедельная охота (до Ур. 20)-->
+		<!--Награда выдается за убийство 100 любых монстров. Монстры ниже персонажа на 5 уровней в зачет не идут.-->
+		<!--Убить 100 монстров.-->
+		<rewards>
+			<reward id="29648" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="262" handler="WeeklyHunting" value="150" min_level="21" max_level="40">	<!--Еженедельная охота (Ур. 21-40)-->
+		<!--Награда выдается за убийство 150 любых монстров. Монстры ниже персонажа на 5 уровней в зачет не идут.-->
+		<!--Убить 150 монстров.-->
+		<rewards>
+			<reward id="29648" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="263" handler="WeeklyHunting" value="200" min_level="41" max_level="50">	<!--Еженедельная охота (Ур. 41-50)-->
+		<!--Награда выдается за убийство 200 любых монстров. Монстры ниже персонажа на 5 уровней в зачет не идут.-->
+		<!--Убить 200 монстров.-->
+		<rewards>
+			<reward id="29648" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="264" handler="WeeklyHunting" value="250" min_level="51" max_level="60">	<!--Еженедельная охота (Ур. 51-60)-->
+		<!--Награда выдается за убийство 250 любых монстров. Монстры ниже персонажа на 5 уровней в зачет не идут.-->
+		<!--Убить 250 монстров.-->
+		<rewards>
+			<reward id="29649" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="265" handler="WeeklyHunting" value="300" min_level="61" max_level="70">	<!--Еженедельная охота (Ур. 61-70)-->
+		<!--Награда выдается за убийство 300 любых монстров. Монстры ниже персонажа на 5 уровней в зачет не идут.-->
+		<!--Убить 300 монстров.-->
+		<rewards>
+			<reward id="29649" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="266" handler="WeeklyHunting" value="400" min_level="71" max_level="75">	<!--Еженедельная охота (Ур. 71-75)-->
+		<!--Награда выдается за убийство 400 любых монстров. Монстры ниже персонажа на 5 уровней в зачет не идут.-->
+		<!--Убить 400 монстров.-->
+		<rewards>
+			<reward id="29649" count="1"/>
+		</rewards>
+	</mission>
+	<mission id="267" handler="WeeklyHunting" value="500" min_level="76">	<!--Еженедельная охота (Ур. 76 и выше)-->
+		<!--Награда выдается за убийство 500 любых монстров. Монстры ниже персонажа на 5 уровней в зачет не идут.-->
+		<!--Убить 500 монстров.-->
+		<rewards>
+			<reward id="29649" count="1"/>
+		</rewards>
+	</mission>
+</list>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="50">	<!--Шаман-->
+			<skill id="146" level="5" name="Антимагия(Anti Magic)" cost="600" min_level="20"/>
+			<skill id="146" level="6" name="Антимагия(Anti Magic)" cost="600" min_level="20"/>
+			<skill id="100" level="1" name="Атака Оглушением(Shock Attack)" cost="600" min_level="20"/>
+			<skill id="100" level="2" name="Атака Оглушением(Shock Attack)" cost="600" min_level="20"/>
+			<skill id="100" level="3" name="Атака Оглушением(Shock Attack)" cost="600" min_level="20"/>
+			<skill id="164" level="1" name="Быстрый Повтор(Quick Recovery)" cost="600" min_level="20"/>
+			<skill id="252" level="5" name="Владение Легкой Броней(Light Armor Mastery)" cost="600" min_level="20"/>
+			<skill id="252" level="6" name="Владение Легкой Броней(Light Armor Mastery)" cost="600" min_level="20"/>
+			<skill id="251" level="5" name="Владение Магической Броней(Robe Mastery)" cost="600" min_level="20"/>
+			<skill id="251" level="6" name="Владение Магической Броней(Robe Mastery)" cost="600" min_level="20"/>
+			<skill id="250" level="3" name="Владение Оружием(Weapon Mastery)" cost="600" min_level="20"/>
+			<skill id="253" level="3" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="600" min_level="20"/>
+			<skill id="253" level="4" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="600" min_level="20"/>
+			<skill id="1090" level="3" name="Кража Жизни(Life Drain)" cost="600" min_level="20"/>
+			<skill id="1107" level="1" name="Морозное Пламя(Frost Flame)" cost="600" min_level="20"/>
+			<skill id="1229" level="1" name="Напев Жизни(Chant of Life)" cost="600" min_level="20"/>
+			<skill id="1009" level="1" name="Напев Защиты(Chant of Shielding)" item_id="1523" cost="600" min_level="20"/>
+			<skill id="1006" level="1" name="Напев Огня(Chant of Fire)" item_id="1521" cost="600" min_level="20"/>
+			<skill id="1095" level="3" name="Отрава(Venom)" cost="600" min_level="20"/>
+			<skill id="1209" level="1" name="Печать Яда(Seal of Poison)" cost="600" min_level="20"/>
+			<skill id="1097" level="3" name="Сонный Дух(Dreaming Spirit)" cost="600" min_level="20"/>
+			<skill id="1610" level="1" name="Спасение Жизни(Life Rescue)" cost="600" min_level="20"/>
+			<skill id="1092" level="2" name="Страх(Fear)" cost="600" min_level="20"/>
+			<skill id="1105" level="1" name="Сумасшествие(Madness)" cost="600" min_level="20"/>
+			<skill id="213" level="1" name="Увеличение Маны(Boost Mana)" cost="600" min_level="20"/>
+			<skill id="1610" level="2" name="Спасение Жизни(Life Rescue)" cost="2300" min_level="22"/>
+			<skill id="146" level="7" name="Антимагия(Anti Magic)" cost="2300" min_level="23"/>
+			<skill id="100" level="4" name="Атака Оглушением(Shock Attack)" cost="2300" min_level="23"/>
+			<skill id="252" level="7" name="Владение Легкой Броней(Light Armor Mastery)" cost="2300" min_level="23"/>
+			<skill id="251" level="7" name="Владение Магической Броней(Robe Mastery)" cost="2300" min_level="23"/>
+			<skill id="250" level="4" name="Владение Оружием(Weapon Mastery)" cost="2300" min_level="23"/>
+			<skill id="253" level="5" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="2300" min_level="23"/>
+			<skill id="100" level="5" name="Атака Оглушением(Shock Attack)" cost="2300" min_level="24"/>
+			<skill id="146" level="8" name="Антимагия(Anti Magic)" cost="2300" min_level="25"/>
+			<skill id="100" level="6" name="Атака Оглушением(Shock Attack)" cost="2300" min_level="25"/>
+			<skill id="229" level="1" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="2300" min_level="25"/>
+			<skill id="228" level="1" name="Быстрое Чтение Заклинаний(Fast Spell Casting)" cost="2300" min_level="25"/>
+			<skill id="252" level="8" name="Владение Легкой Броней(Light Armor Mastery)" cost="2300" min_level="25"/>
+			<skill id="251" level="8" name="Владение Магической Броней(Robe Mastery)" cost="2300" min_level="25"/>
+			<skill id="250" level="5" name="Владение Оружием(Weapon Mastery)" cost="2300" min_level="25"/>
+			<skill id="253" level="6" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="2300" min_level="25"/>
+			<skill id="1101" level="1" name="Жгучее Пламя(Blaze Quake)" cost="2300" min_level="25"/>
+			<skill id="1090" level="4" name="Кража Жизни(Life Drain)" cost="2300" min_level="25"/>
+			<skill id="1001" level="3" name="Крик Души(Soul Cry)" cost="2300" min_level="25"/>
+			<skill id="1007" level="2" name="Напев Битвы(Chant of Battle)" cost="2300" min_level="25"/>
+			<skill id="1229" level="2" name="Напев Жизни(Chant of Life)" cost="2300" min_level="25"/>
+			<skill id="1102" level="1" name="Ослабление Ауры(Aura Sink)" cost="2300" min_level="25"/>
+			<skill id="1208" level="1" name="Печать Оков(Seal of Binding)" item_id="1536" cost="2300" min_level="25"/>
+			<skill id="1097" level="4" name="Сонный Дух(Dreaming Spirit)" cost="2300" min_level="25"/>
+			<skill id="1092" level="3" name="Страх(Fear)" cost="2300" min_level="25"/>
+			<skill id="1105" level="2" name="Сумасшествие(Madness)" cost="2300" min_level="25"/>
+			<skill id="1010" level="2" name="Щит Души(Soul Shield)" cost="2300" min_level="25"/>
+			<skill id="1610" level="3" name="Спасение Жизни(Life Rescue)" cost="2300" min_level="26"/>
+			<skill id="146" level="9" name="Антимагия(Anti Magic)" cost="5700" min_level="28"/>
+			<skill id="100" level="7" name="Атака Оглушением(Shock Attack)" cost="5700" min_level="28"/>
+			<skill id="252" level="9" name="Владение Легкой Броней(Light Armor Mastery)" cost="5700" min_level="28"/>
+			<skill id="251" level="9" name="Владение Магической Броней(Robe Mastery)" cost="5700" min_level="28"/>
+			<skill id="250" level="6" name="Владение Оружием(Weapon Mastery)" cost="5700" min_level="28"/>
+			<skill id="253" level="7" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="5700" min_level="28"/>
+			<skill id="100" level="8" name="Атака Оглушением(Shock Attack)" cost="5700" min_level="29"/>
+			<skill id="146" level="10" name="Антимагия(Anti Magic)" cost="5700" min_level="30"/>
+			<skill id="100" level="9" name="Атака Оглушением(Shock Attack)" cost="5700" min_level="30"/>
+			<skill id="164" level="2" name="Быстрый Повтор(Quick Recovery)" cost="5700" min_level="30"/>
+			<skill id="252" level="10" name="Владение Легкой Броней(Light Armor Mastery)" cost="5700" min_level="30"/>
+			<skill id="251" level="10" name="Владение Магической Броней(Robe Mastery)" cost="5700" min_level="30"/>
+			<skill id="250" level="7" name="Владение Оружием(Weapon Mastery)" cost="5700" min_level="30"/>
+			<skill id="253" level="8" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="5700" min_level="30"/>
+			<skill id="1003" level="1" name="Дар Паагрио(Pa'agrio's Gift)" item_id="1519" cost="5700" min_level="30"/>
+			<skill id="1090" level="5" name="Кража Жизни(Life Drain)" cost="5700" min_level="30"/>
+			<skill id="1107" level="2" name="Морозное Пламя(Frost Flame)" cost="5700" min_level="30"/>
+			<skill id="1229" level="3" name="Напев Жизни(Chant of Life)" cost="5700" min_level="30"/>
+			<skill id="1009" level="2" name="Напев Защиты(Chant of Shielding)" cost="5700" min_level="30"/>
+			<skill id="1002" level="1" name="Напев Пламени(Chant of Flame)" item_id="1518" cost="5700" min_level="30"/>
+			<skill id="1208" level="2" name="Печать Оков(Seal of Binding)" cost="5700" min_level="30"/>
+			<skill id="1096" level="1" name="Печать Хаоса(Seal of Chaos)" cost="5700" min_level="30"/>
+			<skill id="1209" level="2" name="Печать Яда(Seal of Poison)" cost="5700" min_level="30"/>
+			<skill id="1097" level="5" name="Сонный Дух(Dreaming Spirit)" cost="5700" min_level="30"/>
+			<skill id="1610" level="4" name="Спасение Жизни(Life Rescue)" cost="5700" min_level="30"/>
+			<skill id="1092" level="4" name="Страх(Fear)" cost="5700" min_level="30"/>
+			<skill id="1105" level="3" name="Сумасшествие(Madness)" cost="5700" min_level="30"/>
+			<skill id="213" level="2" name="Увеличение Маны(Boost Mana)" cost="5700" min_level="30"/>
+			<skill id="146" level="11" name="Антимагия(Anti Magic)" cost="13000" min_level="33"/>
+			<skill id="100" level="10" name="Атака Оглушением(Shock Attack)" cost="13000" min_level="33"/>
+			<skill id="252" level="11" name="Владение Легкой Броней(Light Armor Mastery)" cost="13000" min_level="33"/>
+			<skill id="251" level="11" name="Владение Магической Броней(Robe Mastery)" cost="13000" min_level="33"/>
+			<skill id="250" level="8" name="Владение Оружием(Weapon Mastery)" cost="13000" min_level="33"/>
+			<skill id="253" level="9" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="13000" min_level="33"/>
+			<skill id="100" level="11" name="Атака Оглушением(Shock Attack)" cost="13000" min_level="34"/>
+			<skill id="1610" level="5" name="Спасение Жизни(Life Rescue)" cost="13000" min_level="34"/>
+			<skill id="146" level="12" name="Антимагия(Anti Magic)" cost="13000" min_level="35"/>
+			<skill id="100" level="12" name="Атака Оглушением(Shock Attack)" cost="13000" min_level="35"/>
+			<skill id="1005" level="1" name="Благословение Паагрио(Pa'agrio's Blessing)" cost="13000" min_level="35"/>
+			<skill id="212" level="1" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="13000" min_level="35"/>
+			<skill id="229" level="2" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="13000" min_level="35"/>
+			<skill id="252" level="12" name="Владение Легкой Броней(Light Armor Mastery)" cost="13000" min_level="35"/>
+			<skill id="251" level="12" name="Владение Магической Броней(Robe Mastery)" cost="13000" min_level="35"/>
+			<skill id="250" level="9" name="Владение Оружием(Weapon Mastery)" cost="13000" min_level="35"/>
+			<skill id="253" level="10" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="13000" min_level="35"/>
+			<skill id="1101" level="2" name="Жгучее Пламя(Blaze Quake)" cost="13000" min_level="35"/>
+			<skill id="1090" level="6" name="Кража Жизни(Life Drain)" cost="13000" min_level="35"/>
+			<skill id="1001" level="4" name="Крик Души(Soul Cry)" cost="13000" min_level="35"/>
+			<skill id="1229" level="4" name="Напев Жизни(Chant of Life)" cost="13000" min_level="35"/>
+			<skill id="1102" level="2" name="Ослабление Ауры(Aura Sink)" cost="13000" min_level="35"/>
+			<skill id="1099" level="1" name="Печать Замедления(Seal of Slow)" item_id="1530" cost="13000" min_level="35"/>
+			<skill id="1208" level="3" name="Печать Оков(Seal of Binding)" cost="13000" min_level="35"/>
+			<skill id="1096" level="2" name="Печать Хаоса(Seal of Chaos)" cost="13000" min_level="35"/>
+			<skill id="1097" level="6" name="Сонный Дух(Dreaming Spirit)" cost="13000" min_level="35"/>
+			<skill id="1092" level="5" name="Страх(Fear)" cost="13000" min_level="35"/>
+			<skill id="1105" level="4" name="Сумасшествие(Madness)" cost="13000" min_level="35"/>
+			<skill id="1010" level="3" name="Щит Души(Soul Shield)" cost="13000" min_level="35"/>
+		</class>
+	</normal_skill_tree>
+</list>

@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE fake_player_ai SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<fake_player_ai race="HUMAN" type="FIGHTER">
+	<on_character_create>	<!--Создается персонаж-->
+		<wait min_delay="3000" max_delay="9000"/>
+		<move_to_npc id="30009"/>
+		<speak_with_npc id="30009"/>
+		<wait min_delay="1000" max_delay="3000"/>
+		<wait min_delay="500" max_delay="1500"/>
+		<farm/>
+	</on_character_create>
+	<farm name="Cedric Training School" min_level="1" max_level="3">
+		<zones>
+			<zone>
+				<circle loc="-71336 258392 800 -3200 -3000"/>
+			</zone>
+			<spawn_points>
+				<coords loc="-71338 258271 -3104"/>
+				<coords loc="-71417 258270 -3104"/>
+				<coords loc="-71453 258305 -3104"/>
+				<coords loc="-71467 258378 -3104"/>
+			</spawn_points>
+		</zones>
+		<farm_monsters>
+			<npc id="18342"/>
+		</farm_monsters>
+		<on_obtain_max_level>
+			<wait min_delay="1000" max_delay="3000"/>
+			<action id="1"/>
+			<action id="2" chance="60"/>
+			<farm/>
+		</on_obtain_max_level>
+	</farm>
+	<farm name="Human Fighter Farm 1" min_level="2" max_level="4">
+		<zones>
+			<zone>
+				<polygon>
+					<coords loc="-75240 251592 -3550 -3050"/>
+					<coords loc="-70920 254792 -3550 -3050"/>
+					<coords loc="-73880 257752 -3550 -3050"/>
+					<coords loc="-75912 256024 -3550 -3050"/>
+					<coords loc="-77048 253608 -3550 -3050"/>
+				</polygon>
+			</zone>
+			<spawn_points>
+				<coords loc="-81064 247160 -3648"/>
+			</spawn_points>
+		</zones>
+		<on_obtain_max_level>
+			<wait min_delay="1000" max_delay="3000"/>
+			<action id="2"/>
+			<action id="3"/>
+		</on_obtain_max_level>
+	</farm>
+	<farm name="Human Fighter Farm 2" min_level="2" max_level="4">
+		<zones>
+			<zone>
+				<polygon>
+					<coords loc="-79592 248088 -3850 -3450"/>
+					<coords loc="-80824 243640 -3850 -3450"/>
+					<coords loc="-84120 246584 -3850 -3450"/>
+					<coords loc="-80952 249576 -3850 -3450"/>
+				</polygon>
+			</zone>
+			<spawn_points>
+				<coords loc="-81064 247160 -3648"/>
+			</spawn_points>
+		</zones>
+		<on_obtain_max_level>
+			<wait min_delay="1000" max_delay="3000"/>
+			<action id="3"/>
+		</on_obtain_max_level>
+	</farm>
+	<action id="1">	<!--Выходим из Школы Седрика-->
+		<move_to_point x="-71512" y="258200" z="-3104" min_range="0" max_range="50"/>
+		<move_to_point x="-71688" y="257976" z="-3096" min_range="0" max_range="50"/>
+		<move_to_point x="-72104" y="257480" z="-3120" min_range="50" max_range="150"/>
+		<move_to_point x="-72712" y="256792" z="-3120" min_range="0" max_range="50"/>
+		<move_to_point x="-73192" y="256200" z="-3120" min_range="50" max_range="150"/>
+		<move_to_point x="-73752" y="255704" z="-3136" min_range="50" max_range="150"/>
+	</action>
+	<action id="2">	<!--Идем через мост под южную часть деревни-->
+		<move_to_point x="-74440" y="254952" z="-3248" min_range="50" max_range="150"/>
+		<move_to_point x="-75064" y="254152" z="-3328" min_range="50" max_range="150"/>
+		<move_to_point x="-75832" y="253096" z="-3328" min_range="50" max_range="150"/>
+		<move_to_point x="-76440" y="252360" z="-3328" min_range="0" max_range="50"/>
+		<move_to_point x="-77048" y="251640" z="-3328" min_range="0" max_range="50"/>
+		<move_to_point x="-77272" y="251368" z="-3360" min_range="0" max_range="50"/>
+		<move_to_point x="-77592" y="251000" z="-3424" min_range="0" max_range="50"/>
+		<move_to_point x="-77848" y="250696" z="-3472" min_range="0" max_range="0"/>
+		<move_to_point x="-78072" y="250424" z="-3552" min_range="0" max_range="50"/>
+		<move_to_point x="-78536" y="249864" z="-3568" min_range="0" max_range="50"/>
+		<move_to_point x="-79384" y="248872" z="-3568" min_range="0" max_range="50"/>
+		<move_to_point x="-79912" y="248280" z="-3632" min_range="50" max_range="150"/>
+		<move_to_point x="-80456" y="247704" z="-3632" min_range="50" max_range="150"/>
+	</action>
+	<action id="3">	<!--Идем в дервеню от южной части деревни-->
+		<move_to_point x="-81144" y="246792" z="-3664" min_range="50" max_range="150"/>
+		<move_to_point x="-81560" y="246200" z="-3696" min_range="50" max_range="150"/>
+		<move_to_point x="-82200" y="245256" z="-3712" min_range="50" max_range="150"/>
+		<move_to_point x="-82872" y="244504" z="-3728" min_range="50" max_range="150"/>
+		<move_to_point x="-83336" y="244056" z="-3728" min_range="50" max_range="150"/>
+		<move_to_point x="-83944" y="243384" z="-3728" min_range="0" max_range="50"/>
+	</action>
+</fake_player_ai>

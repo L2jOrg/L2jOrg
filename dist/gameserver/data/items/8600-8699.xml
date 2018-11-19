@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="8618" name="Ancient Book: Divine Inspiration (Modern Language Version)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_add_buffslot_i00"/>
+		
+		<set name="weight" value="120"/>
+	</etcitem>
+	<etcitem id="8619" name="Ancient Book: Divine Inspiration (Original Language Version)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_add_buffslot_i01"/>
+		
+		<set name="weight" value="120"/>
+	</etcitem>
+	<etcitem id="8620" name="Ancient Book: Divine Inspiration (Manuscript)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_add_buffslot_i02"/>
+		
+		<set name="weight" value="120"/>
+	</etcitem>
+	<etcitem id="8621" name="Ancient Book: Divine Inspiration (Original Version)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_add_buffslot_i03"/>
+		
+		<set name="weight" value="120"/>
+	</etcitem>
+	<weapon id="8678" name="Sirra\'s Blade">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="2157"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_sirr_blade_i00"/>
+		<set name="price" value="26968400"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1300"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			 <slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="251"/>
+			<add stat="mAtk" order="0x10" value="121"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<weapon id="8679" name="Sword of Ipos">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;46;120"/>
+		<set name="crystal_count" value="2157"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_sword_of_ipos_i00"/>
+		<set name="price" value="26968400"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1820"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="305"/>
+			<add stat="mAtk" order="0x10" value="121"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<weapon id="8680" name="Barakiel\'s Axe">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="2157"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_barakiel_axe_i00"/>
+		<set name="price" value="26968400"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1550"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			 <slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="251"/>
+			<add stat="mAtk" order="0x10" value="121"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="8681" name="Behemoth\' Tuning Fork">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;44;120"/>
+		<set name="crystal_count" value="2157"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_tuning_fork_of_behemoth_i00"/>
+		<set name="price" value="26968400"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1890"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="305"/>
+			<add stat="mAtk" order="0x10" value="121"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="8682" name="Naga Storm">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="2157"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_naga_storm_i00"/>
+		<set name="price" value="26968400"/>
+		<set name="type" value="DAGGER"/>
+		<set name="weight" value="930"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="5"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="220"/>
+			<add stat="mAtk" order="0x10" value="121"/>
+			<set stat="basePAtkSpd" order="0x08" value="433"/>
+			<set stat="basePCritRate" order="0x08" value="120"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="8683" name="Tiphon\'s Spear">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;66;120"/>
+		<set name="crystal_count" value="2157"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_tiphon_spear_i00"/>
+		<set name="price" value="26968400"/>
+		<set name="type" value="POLE"/>
+		<set name="weight" value="1820"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<skills>
+			<skill id="3599" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="251"/>
+			<add stat="mAtk" order="0x10" value="121"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="8684" name="Shyeed\'s Bow">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;10;0"/>
+		<set name="crystal_count" value="2157"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_shyid_bow_i00"/>
+		<set name="price" value="26968400"/>
+		<set name="type" value="BOW"/>
+		<set name="weight" value="1640"/>
+		<set name="soulshots" value="2"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="5"/>
+		<set name="mp_consume" value="5"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="570"/>
+			<add stat="mAtk" order="0x10" value="133"/>
+			<set stat="basePAtkSpd" order="0x08" value="227"/>
+			<set stat="basePCritRate" order="0x08" value="120"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="8685" name="Sobekk\'s Hurricane">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;32;120"/>
+		<set name="crystal_count" value="2157"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_sobekk_hurricane_i00"/>
+		<set name="price" value="26968400"/>
+		<set name="type" value="DUALFIST"/>
+		<set name="weight" value="1330"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="5"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="305"/>
+			<add stat="mAtk" order="0x10" value="121"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="8686" name="Themis\' Tongue">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="2157"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_tongue_of_themis_i00"/>
+		<set name="price" value="26968400"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="820"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="is_magic_weapon" value="true"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="202"/>
+			<add stat="mAtk" order="0x10" value="161"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<weapon id="8687" name="Cabrio\'s Hand">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="2157"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_hand_of_cabrio_i00"/>
+		<set name="price" value="26968400"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1510"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="is_magic_weapon" value="true"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="202"/>
+			<add stat="mAtk" order="0x10" value="161"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="8688" name="Daimon Crystal">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="2157"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_crystal_of_deamon_i00"/>
+		<set name="price" value="26968400"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="880"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="is_magic_weapon" value="true"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="245"/>
+			<add stat="mAtk" order="0x10" value="177"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<etcitem id="8690" name="Recipe: Sirra\'s Blade (60%)">
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="8691" name="Recipe: Sirra\'s Blade (100%)">
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="8692" name="Recipe: Sword of Ipos (60%)">
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="8693" name="Recipe: Sword of Ipos (100%)">
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="8694" name="Recipe: Barakiel\'s Axe (60%)">
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="8695" name="Recipe: Barakiel\'s Axe (100%)">
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="8696" name="Recipe: Behemoth\' Tuning Fork (60%)">
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="8697" name="Recipe: Behemoth\' Tuning Fork (100%)">
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="8698" name="Recipe: Naga Storm (60%)">
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="8699" name="Recipe: Naga Storm (100%)">
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+</list>

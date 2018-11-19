@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="5">	<!--Паладин-->
+			<skill id="28" level="13" name="Агрессия(Aggression)" cost="62000" min_level="40"/>
+			<skill id="28" level="14" name="Агрессия(Aggression)" cost="62000" min_level="40"/>
+			<skill id="28" level="15" name="Агрессия(Aggression)" cost="62000" min_level="40"/>
+			<skill id="984" level="1" name="Атака Щитом(Shield Strike)" cost="62000" min_level="40"/>
+			<skill id="18" level="1" name="Аура Ненависти(Aggression Aura)" cost="62000" min_level="40"/>
+			<skill id="18" level="2" name="Аура Ненависти(Aggression Aura)" cost="62000" min_level="40"/>
+			<skill id="18" level="3" name="Аура Ненависти(Aggression Aura)" cost="62000" min_level="40"/>
+			<skill id="82" level="2" name="Величие(Majesty)" cost="62000" min_level="40"/>
+			<skill id="217" level="9" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="62000" min_level="40"/>
+			<skill id="217" level="10" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="62000" min_level="40"/>
+			<skill id="217" level="11" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="62000" min_level="40"/>
+			<skill id="232" level="16" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="62000" min_level="40"/>
+			<skill id="232" level="17" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="62000" min_level="40"/>
+			<skill id="232" level="18" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="62000" min_level="40"/>
+			<skill id="153" level="3" name="Владение Щитом(Shield Mastery)" cost="62000" min_level="40"/>
+			<skill id="44" level="1" name="Лекарство(Remedy)" cost="62000" min_level="40"/>
+			<skill id="147" level="15" name="Магическое Сопротивление(M. Def.)" cost="62000" min_level="40"/>
+			<skill id="147" level="16" name="Магическое Сопротивление(M. Def.)" cost="62000" min_level="40"/>
+			<skill id="147" level="17" name="Магическое Сопротивление(M. Def.)" cost="62000" min_level="40"/>
+			<skill id="92" level="16" name="Оглушение Щитом(Shield Stun)" cost="62000" min_level="40"/>
+			<skill id="92" level="17" name="Оглушение Щитом(Shield Stun)" cost="62000" min_level="40"/>
+			<skill id="92" level="18" name="Оглушение Щитом(Shield Stun)" cost="62000" min_level="40"/>
+			<skill id="197" level="1" name="Святая Броня(Holy Armor)" cost="62000" min_level="40"/>
+			<skill id="262" level="1" name="Святое Благословение(Divine Blessing)" cost="62000" min_level="40"/>
+			<skill id="262" level="2" name="Святое Благословение(Divine Blessing)" cost="62000" min_level="40"/>
+			<skill id="262" level="3" name="Святое Благословение(Divine Blessing)" cost="62000" min_level="40"/>
+			<skill id="28" level="16" name="Агрессия(Aggression)" cost="73000" min_level="41"/>
+			<skill id="18" level="4" name="Аура Ненависти(Aggression Aura)" cost="73000" min_level="41"/>
+			<skill id="217" level="12" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="73000" min_level="41"/>
+			<skill id="232" level="19" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="73000" min_level="41"/>
+			<skill id="147" level="18" name="Магическое Сопротивление(M. Def.)" cost="73000" min_level="41"/>
+			<skill id="92" level="19" name="Оглушение Щитом(Shield Stun)" cost="73000" min_level="41"/>
+			<skill id="262" level="4" name="Святое Благословение(Divine Blessing)" cost="73000" min_level="41"/>
+			<skill id="28" level="17" name="Агрессия(Aggression)" cost="73000" min_level="42"/>
+			<skill id="18" level="5" name="Аура Ненависти(Aggression Aura)" cost="73000" min_level="42"/>
+			<skill id="217" level="13" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="73000" min_level="42"/>
+			<skill id="232" level="20" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="73000" min_level="42"/>
+			<skill id="147" level="19" name="Магическое Сопротивление(M. Def.)" cost="73000" min_level="42"/>
+			<skill id="92" level="20" name="Оглушение Щитом(Shield Stun)" cost="73000" min_level="42"/>
+			<skill id="262" level="5" name="Святое Благословение(Divine Blessing)" cost="73000" min_level="42"/>
+			<skill id="28" level="18" name="Агрессия(Aggression)" cost="73000" min_level="43"/>
+			<skill id="984" level="2" name="Атака Щитом(Shield Strike)" cost="73000" min_level="43"/>
+			<skill id="18" level="6" name="Аура Ненависти(Aggression Aura)" cost="73000" min_level="43"/>
+			<skill id="217" level="14" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="73000" min_level="43"/>
+			<skill id="232" level="21" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="73000" min_level="43"/>
+			<skill id="72" level="1" name="Железная Воля(Iron Will)" item_id="3047" cost="73000" min_level="43"/>
+			<skill id="147" level="20" name="Магическое Сопротивление(M. Def.)" cost="73000" min_level="43"/>
+			<skill id="92" level="21" name="Оглушение Щитом(Shield Stun)" cost="73000" min_level="43"/>
+			<skill id="112" level="3" name="Отклонить Стрелу(Deflect Arrow)" cost="73000" min_level="43"/>
+			<skill id="262" level="6" name="Святое Благословение(Divine Blessing)" cost="73000" min_level="43"/>
+			<skill id="196" level="1" name="Святой Клинок(Holy Blade)" cost="73000" min_level="43"/>
+			<skill id="191" level="2" name="Фокусировка Разума(Focus Mind)" cost="73000" min_level="43"/>
+			<skill id="28" level="19" name="Агрессия(Aggression)" cost="110000" min_level="44"/>
+			<skill id="18" level="7" name="Аура Ненависти(Aggression Aura)" cost="110000" min_level="44"/>
+			<skill id="217" level="15" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="110000" min_level="44"/>
+			<skill id="232" level="22" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="110000" min_level="44"/>
+			<skill id="147" level="21" name="Магическое Сопротивление(M. Def.)" cost="110000" min_level="44"/>
+			<skill id="92" level="22" name="Оглушение Щитом(Shield Stun)" cost="110000" min_level="44"/>
+			<skill id="262" level="7" name="Святое Благословение(Divine Blessing)" cost="110000" min_level="44"/>
+			<skill id="49" level="1" name="Священный Удар(Holy Strike)" cost="110000" min_level="44"/>
+			<skill id="28" level="20" name="Агрессия(Aggression)" cost="110000" min_level="45"/>
+			<skill id="18" level="8" name="Аура Ненависти(Aggression Aura)" cost="110000" min_level="45"/>
+			<skill id="217" level="16" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="110000" min_level="45"/>
+			<skill id="232" level="23" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="110000" min_level="45"/>
+			<skill id="147" level="22" name="Магическое Сопротивление(M. Def.)" cost="110000" min_level="45"/>
+			<skill id="92" level="23" name="Оглушение Щитом(Shield Stun)" cost="110000" min_level="45"/>
+			<skill id="1800" level="1" name="Пират(Pirate)" min_level="45"/>
+			<skill id="262" level="8" name="Святое Благословение(Divine Blessing)" cost="110000" min_level="45"/>
+			<skill id="110" level="2" name="Абсолютная Защита(Ultimate Defense)" cost="110000" min_level="46"/>
+			<skill id="28" level="21" name="Агрессия(Aggression)" cost="110000" min_level="46"/>
+			<skill id="984" level="3" name="Атака Щитом(Shield Strike)" cost="110000" min_level="46"/>
+			<skill id="18" level="9" name="Аура Ненависти(Aggression Aura)" cost="110000" min_level="46"/>
+			<skill id="217" level="17" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="110000" min_level="46"/>
+			<skill id="232" level="24" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="110000" min_level="46"/>
+			<skill id="147" level="23" name="Магическое Сопротивление(M. Def.)" cost="110000" min_level="46"/>
+			<skill id="92" level="24" name="Оглушение Щитом(Shield Stun)" cost="110000" min_level="46"/>
+			<skill id="197" level="2" name="Святая Броня(Holy Armor)" cost="110000" min_level="46"/>
+			<skill id="262" level="9" name="Святое Благословение(Divine Blessing)" cost="110000" min_level="46"/>
+			<skill id="49" level="2" name="Священный Удар(Holy Strike)" cost="110000" min_level="46"/>
+			<skill id="28" level="22" name="Агрессия(Aggression)" cost="150000" min_level="47"/>
+			<skill id="18" level="10" name="Аура Ненависти(Aggression Aura)" cost="150000" min_level="47"/>
+			<skill id="217" level="18" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="150000" min_level="47"/>
+			<skill id="232" level="25" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="150000" min_level="47"/>
+			<skill id="147" level="24" name="Магическое Сопротивление(M. Def.)" cost="150000" min_level="47"/>
+			<skill id="92" level="25" name="Оглушение Щитом(Shield Stun)" cost="150000" min_level="47"/>
+			<skill id="262" level="10" name="Святое Благословение(Divine Blessing)" cost="150000" min_level="47"/>
+			<skill id="49" level="3" name="Священный Удар(Holy Strike)" cost="150000" min_level="47"/>
+			<skill id="28" level="23" name="Агрессия(Aggression)" cost="150000" min_level="48"/>
+			<skill id="18" level="11" name="Аура Ненависти(Aggression Aura)" cost="150000" min_level="48"/>
+			<skill id="217" level="19" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="150000" min_level="48"/>
+			<skill id="232" level="26" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="150000" min_level="48"/>
+			<skill id="147" level="25" name="Магическое Сопротивление(M. Def.)" cost="150000" min_level="48"/>
+			<skill id="92" level="26" name="Оглушение Щитом(Shield Stun)" cost="150000" min_level="48"/>
+			<skill id="262" level="11" name="Святое Благословение(Divine Blessing)" cost="150000" min_level="48"/>
+			<skill id="28" level="24" name="Агрессия(Aggression)" cost="150000" min_level="49"/>
+			<skill id="984" level="4" name="Атака Щитом(Shield Strike)" cost="150000" min_level="49"/>
+			<skill id="18" level="12" name="Аура Ненависти(Aggression Aura)" cost="150000" min_level="49"/>
+			<skill id="217" level="20" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="150000" min_level="49"/>
+			<skill id="232" level="27" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="150000" min_level="49"/>
+			<skill id="72" level="2" name="Железная Воля(Iron Will)" cost="150000" min_level="49"/>
+			<skill id="44" level="2" name="Лекарство(Remedy)" cost="150000" min_level="49"/>
+			<skill id="147" level="26" name="Магическое Сопротивление(M. Def.)" cost="150000" min_level="49"/>
+			<skill id="92" level="27" name="Оглушение Щитом(Shield Stun)" cost="150000" min_level="49"/>
+			<skill id="112" level="4" name="Отклонить Стрелу(Deflect Arrow)" cost="150000" min_level="49"/>
+			<skill id="262" level="12" name="Святое Благословение(Divine Blessing)" cost="150000" min_level="49"/>
+			<skill id="49" level="4" name="Священный Удар(Holy Strike)" cost="150000" min_level="49"/>
+			<skill id="191" level="3" name="Фокусировка Разума(Focus Mind)" cost="150000" min_level="49"/>
+			<skill id="28" level="25" name="Агрессия(Aggression)" cost="220000" min_level="50"/>
+			<skill id="18" level="13" name="Аура Ненависти(Aggression Aura)" cost="220000" min_level="50"/>
+			<skill id="217" level="21" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="220000" min_level="50"/>
+			<skill id="232" level="28" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="220000" min_level="50"/>
+			<skill id="69" level="1" name="Жертвоприношение(Sacrifice)" item_id="3046" cost="220000" min_level="50"/>
+			<skill id="147" level="27" name="Магическое Сопротивление(M. Def.)" cost="220000" min_level="50"/>
+			<skill id="92" level="28" name="Оглушение Щитом(Shield Stun)" cost="220000" min_level="50"/>
+			<skill id="262" level="13" name="Святое Благословение(Divine Blessing)" cost="220000" min_level="50"/>
+			<skill id="49" level="5" name="Священный Удар(Holy Strike)" cost="220000" min_level="50"/>
+			<skill id="28" level="26" name="Агрессия(Aggression)" cost="220000" min_level="51"/>
+			<skill id="18" level="14" name="Аура Ненависти(Aggression Aura)" cost="220000" min_level="51"/>
+			<skill id="217" level="22" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="220000" min_level="51"/>
+			<skill id="232" level="29" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="220000" min_level="51"/>
+			<skill id="69" level="2" name="Жертвоприношение(Sacrifice)" cost="220000" min_level="51"/>
+			<skill id="147" level="28" name="Магическое Сопротивление(M. Def.)" cost="220000" min_level="51"/>
+			<skill id="92" level="29" name="Оглушение Щитом(Shield Stun)" cost="220000" min_level="51"/>
+			<skill id="262" level="14" name="Святое Благословение(Divine Blessing)" cost="220000" min_level="51"/>
+			<skill id="28" level="27" name="Агрессия(Aggression)" cost="220000" min_level="52"/>
+			<skill id="984" level="5" name="Атака Щитом(Shield Strike)" cost="220000" min_level="52"/>
+			<skill id="18" level="15" name="Аура Ненависти(Aggression Aura)" cost="220000" min_level="52"/>
+			<skill id="1405" level="1" name="Божественное Вдохновение(Divine Inspiration)" item_id="8618" cost="220000" min_level="52"/>
+			<skill id="217" level="23" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="220000" min_level="52"/>
+			<skill id="232" level="30" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="220000" min_level="52"/>
+			<skill id="153" level="4" name="Владение Щитом(Shield Mastery)" cost="220000" min_level="52"/>
+			<skill id="69" level="3" name="Жертвоприношение(Sacrifice)" cost="220000" min_level="52"/>
+			<skill id="147" level="29" name="Магическое Сопротивление(M. Def.)" cost="220000" min_level="52"/>
+			<skill id="92" level="30" name="Оглушение Щитом(Shield Stun)" cost="220000" min_level="52"/>
+			<skill id="291" level="1" name="Последний Рубеж(Final Fortress)" cost="220000" min_level="52"/>
+			<skill id="97" level="1" name="Святилище(Sanctuary)" cost="220000" min_level="52"/>
+			<skill id="262" level="15" name="Святое Благословение(Divine Blessing)" cost="220000" min_level="52"/>
+			<skill id="49" level="6" name="Священный Удар(Holy Strike)" cost="220000" min_level="52"/>
+			<skill id="28" level="28" name="Агрессия(Aggression)" cost="300000" min_level="53"/>
+			<skill id="18" level="16" name="Аура Ненависти(Aggression Aura)" cost="300000" min_level="53"/>
+			<skill id="217" level="24" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="300000" min_level="53"/>
+			<skill id="232" level="31" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="300000" min_level="53"/>
+			<skill id="69" level="4" name="Жертвоприношение(Sacrifice)" cost="300000" min_level="53"/>
+			<skill id="147" level="30" name="Магическое Сопротивление(M. Def.)" cost="300000" min_level="53"/>
+			<skill id="92" level="31" name="Оглушение Щитом(Shield Stun)" cost="300000" min_level="53"/>
+			<skill id="262" level="16" name="Святое Благословение(Divine Blessing)" cost="300000" min_level="53"/>
+			<skill id="49" level="7" name="Священный Удар(Holy Strike)" cost="300000" min_level="53"/>
+			<skill id="28" level="29" name="Агрессия(Aggression)" cost="300000" min_level="54"/>
+			<skill id="18" level="17" name="Аура Ненависти(Aggression Aura)" cost="300000" min_level="54"/>
+			<skill id="217" level="25" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="300000" min_level="54"/>
+			<skill id="232" level="32" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="300000" min_level="54"/>
+			<skill id="69" level="5" name="Жертвоприношение(Sacrifice)" cost="300000" min_level="54"/>
+			<skill id="147" level="31" name="Магическое Сопротивление(M. Def.)" cost="300000" min_level="54"/>
+			<skill id="92" level="32" name="Оглушение Щитом(Shield Stun)" cost="300000" min_level="54"/>
+			<skill id="262" level="17" name="Святое Благословение(Divine Blessing)" cost="300000" min_level="54"/>
+			<skill id="28" level="30" name="Агрессия(Aggression)" cost="300000" min_level="55"/>
+			<skill id="984" level="6" name="Атака Щитом(Shield Strike)" cost="300000" min_level="55"/>
+			<skill id="18" level="18" name="Аура Ненависти(Aggression Aura)" cost="300000" min_level="55"/>
+			<skill id="217" level="26" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="300000" min_level="55"/>
+			<skill id="232" level="33" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="300000" min_level="55"/>
+			<skill id="72" level="3" name="Железная Воля(Iron Will)" cost="300000" min_level="55"/>
+			<skill id="69" level="6" name="Жертвоприношение(Sacrifice)" cost="300000" min_level="55"/>
+			<skill id="147" level="32" name="Магическое Сопротивление(M. Def.)" cost="300000" min_level="55"/>
+			<skill id="92" level="33" name="Оглушение Щитом(Shield Stun)" cost="300000" min_level="55"/>
+			<skill id="291" level="2" name="Последний Рубеж(Final Fortress)" cost="300000" min_level="55"/>
+			<skill id="97" level="2" name="Святилище(Sanctuary)" cost="300000" min_level="55"/>
+			<skill id="262" level="18" name="Святое Благословение(Divine Blessing)" cost="300000" min_level="55"/>
+			<skill id="49" level="8" name="Священный Удар(Holy Strike)" cost="300000" min_level="55"/>
+			<skill id="191" level="4" name="Фокусировка Разума(Focus Mind)" cost="300000" min_level="55"/>
+			<skill id="28" level="31" name="Агрессия(Aggression)" cost="420000" min_level="56"/>
+			<skill id="18" level="19" name="Аура Ненависти(Aggression Aura)" cost="420000" min_level="56"/>
+			<skill id="217" level="27" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="420000" min_level="56"/>
+			<skill id="232" level="34" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="420000" min_level="56"/>
+			<skill id="69" level="7" name="Жертвоприношение(Sacrifice)" cost="420000" min_level="56"/>
+			<skill id="147" level="33" name="Магическое Сопротивление(M. Def.)" cost="420000" min_level="56"/>
+			<skill id="92" level="34" name="Оглушение Щитом(Shield Stun)" cost="420000" min_level="56"/>
+			<skill id="262" level="19" name="Святое Благословение(Divine Blessing)" cost="420000" min_level="56"/>
+			<skill id="49" level="9" name="Священный Удар(Holy Strike)" cost="420000" min_level="56"/>
+			<skill id="28" level="32" name="Агрессия(Aggression)" cost="420000" min_level="57"/>
+			<skill id="18" level="20" name="Аура Ненависти(Aggression Aura)" cost="420000" min_level="57"/>
+			<skill id="217" level="28" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="420000" min_level="57"/>
+			<skill id="232" level="35" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="420000" min_level="57"/>
+			<skill id="69" level="8" name="Жертвоприношение(Sacrifice)" cost="420000" min_level="57"/>
+			<skill id="147" level="34" name="Магическое Сопротивление(M. Def.)" cost="420000" min_level="57"/>
+			<skill id="92" level="35" name="Оглушение Щитом(Shield Stun)" cost="420000" min_level="57"/>
+			<skill id="262" level="20" name="Святое Благословение(Divine Blessing)" cost="420000" min_level="57"/>
+			<skill id="28" level="33" name="Агрессия(Aggression)" cost="420000" min_level="58"/>
+			<skill id="406" level="1" name="Ангельский Образ(Angelic Archon)" cost="420000" min_level="58"/>
+			<skill id="984" level="7" name="Атака Щитом(Shield Strike)" cost="420000" min_level="58"/>
+			<skill id="18" level="21" name="Аура Ненависти(Aggression Aura)" cost="420000" min_level="58"/>
+			<skill id="82" level="3" name="Величие(Majesty)" cost="420000" min_level="58"/>
+			<skill id="217" level="29" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="420000" min_level="58"/>
+			<skill id="232" level="36" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="420000" min_level="58"/>
+			<skill id="69" level="9" name="Жертвоприношение(Sacrifice)" cost="420000" min_level="58"/>
+			<skill id="147" level="35" name="Магическое Сопротивление(M. Def.)" cost="420000" min_level="58"/>
+			<skill id="404" level="1" name="Массовые Кандалы(Mass Shackling)" cost="420000" min_level="58"/>
+			<skill id="92" level="36" name="Оглушение Щитом(Shield Stun)" cost="420000" min_level="58"/>
+			<skill id="291" level="3" name="Последний Рубеж(Final Fortress)" cost="420000" min_level="58"/>
+			<skill id="97" level="3" name="Святилище(Sanctuary)" cost="420000" min_level="58"/>
+			<skill id="262" level="21" name="Святое Благословение(Divine Blessing)" cost="420000" min_level="58"/>
+			<skill id="49" level="10" name="Священный Удар(Holy Strike)" cost="420000" min_level="58"/>
+			<skill id="28" level="34" name="Агрессия(Aggression)" cost="610000" min_level="59"/>
+			<skill id="18" level="22" name="Аура Ненависти(Aggression Aura)" cost="610000" min_level="59"/>
+			<skill id="217" level="30" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="610000" min_level="59"/>
+			<skill id="232" level="37" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="610000" min_level="59"/>
+			<skill id="69" level="10" name="Жертвоприношение(Sacrifice)" cost="610000" min_level="59"/>
+			<skill id="147" level="36" name="Магическое Сопротивление(M. Def.)" cost="610000" min_level="59"/>
+			<skill id="92" level="37" name="Оглушение Щитом(Shield Stun)" cost="610000" min_level="59"/>
+			<skill id="262" level="22" name="Святое Благословение(Divine Blessing)" cost="610000" min_level="59"/>
+			<skill id="49" level="11" name="Священный Удар(Holy Strike)" cost="610000" min_level="59"/>
+			<skill id="28" level="35" name="Агрессия(Aggression)" cost="610000" min_level="60"/>
+			<skill id="984" level="8" name="Атака Щитом(Shield Strike)" cost="610000" min_level="60"/>
+			<skill id="18" level="23" name="Аура Ненависти(Aggression Aura)" cost="610000" min_level="60"/>
+			<skill id="217" level="31" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="610000" min_level="60"/>
+			<skill id="232" level="38" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="610000" min_level="60"/>
+			<skill id="69" level="11" name="Жертвоприношение(Sacrifice)" cost="610000" min_level="60"/>
+			<skill id="147" level="37" name="Магическое Сопротивление(M. Def.)" cost="610000" min_level="60"/>
+			<skill id="92" level="38" name="Оглушение Щитом(Shield Stun)" cost="610000" min_level="60"/>
+			<skill id="291" level="4" name="Последний Рубеж(Final Fortress)" cost="610000" min_level="60"/>
+			<skill id="97" level="4" name="Святилище(Sanctuary)" cost="610000" min_level="60"/>
+			<skill id="262" level="23" name="Святое Благословение(Divine Blessing)" cost="610000" min_level="60"/>
+			<skill id="49" level="12" name="Священный Удар(Holy Strike)" cost="610000" min_level="60"/>
+			<skill id="1801" level="1" name="Темный Ассасин(Dark Assassin)" min_level="60"/>
+			<skill id="916" level="1" name="Щит Отражения Магии(Shield Deflect Magic)" item_id="49427" cost="610000" min_level="60"/>
+			<skill id="28" level="36" name="Агрессия(Aggression)" cost="610000" min_level="61"/>
+			<skill id="18" level="24" name="Аура Ненависти(Aggression Aura)" cost="610000" min_level="61"/>
+			<skill id="1405" level="2" name="Божественное Вдохновение(Divine Inspiration)" item_id="8619" cost="610000" min_level="61"/>
+			<skill id="217" level="32" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="610000" min_level="61"/>
+			<skill id="232" level="39" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="610000" min_level="61"/>
+			<skill id="69" level="12" name="Жертвоприношение(Sacrifice)" cost="610000" min_level="61"/>
+			<skill id="147" level="38" name="Магическое Сопротивление(M. Def.)" cost="610000" min_level="61"/>
+			<skill id="92" level="39" name="Оглушение Щитом(Shield Stun)" cost="610000" min_level="61"/>
+			<skill id="262" level="24" name="Святое Благословение(Divine Blessing)" cost="610000" min_level="61"/>
+			<skill id="49" level="13" name="Священный Удар(Holy Strike)" cost="610000" min_level="61"/>
+			<skill id="28" level="37" name="Агрессия(Aggression)" cost="750000" min_level="62"/>
+			<skill id="984" level="9" name="Атака Щитом(Shield Strike)" cost="750000" min_level="62"/>
+			<skill id="18" level="25" name="Аура Ненависти(Aggression Aura)" cost="750000" min_level="62"/>
+			<skill id="217" level="33" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="750000" min_level="62"/>
+			<skill id="232" level="40" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="750000" min_level="62"/>
+			<skill id="69" level="13" name="Жертвоприношение(Sacrifice)" cost="750000" min_level="62"/>
+			<skill id="44" level="3" name="Лекарство(Remedy)" cost="750000" min_level="62"/>
+			<skill id="147" level="39" name="Магическое Сопротивление(M. Def.)" cost="750000" min_level="62"/>
+			<skill id="404" level="2" name="Массовые Кандалы(Mass Shackling)" cost="750000" min_level="62"/>
+			<skill id="92" level="40" name="Оглушение Щитом(Shield Stun)" cost="750000" min_level="62"/>
+			<skill id="291" level="5" name="Последний Рубеж(Final Fortress)" cost="750000" min_level="62"/>
+			<skill id="97" level="5" name="Святилище(Sanctuary)" cost="750000" min_level="62"/>
+			<skill id="262" level="25" name="Святое Благословение(Divine Blessing)" cost="750000" min_level="62"/>
+			<skill id="49" level="14" name="Священный Удар(Holy Strike)" cost="750000" min_level="62"/>
+			<skill id="28" level="38" name="Агрессия(Aggression)" cost="750000" min_level="63"/>
+			<skill id="18" level="26" name="Аура Ненависти(Aggression Aura)" cost="750000" min_level="63"/>
+			<skill id="217" level="34" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="750000" min_level="63"/>
+			<skill id="232" level="41" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="750000" min_level="63"/>
+			<skill id="69" level="14" name="Жертвоприношение(Sacrifice)" cost="750000" min_level="63"/>
+			<skill id="147" level="40" name="Магическое Сопротивление(M. Def.)" cost="750000" min_level="63"/>
+			<skill id="92" level="41" name="Оглушение Щитом(Shield Stun)" cost="750000" min_level="63"/>
+			<skill id="262" level="26" name="Святое Благословение(Divine Blessing)" cost="750000" min_level="63"/>
+			<skill id="49" level="15" name="Священный Удар(Holy Strike)" cost="750000" min_level="63"/>
+			<skill id="28" level="39" name="Агрессия(Aggression)" cost="950000" min_level="64"/>
+			<skill id="984" level="10" name="Атака Щитом(Shield Strike)" cost="950000" min_level="64"/>
+			<skill id="18" level="27" name="Аура Ненависти(Aggression Aura)" cost="950000" min_level="64"/>
+			<skill id="217" level="35" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="950000" min_level="64"/>
+			<skill id="232" level="42" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="950000" min_level="64"/>
+			<skill id="69" level="15" name="Жертвоприношение(Sacrifice)" cost="950000" min_level="64"/>
+			<skill id="322" level="1" name="Крепость Щитов(Shield Fortress)" cost="950000" min_level="64"/>
+			<skill id="147" level="41" name="Магическое Сопротивление(M. Def.)" cost="950000" min_level="64"/>
+			<skill id="92" level="42" name="Оглушение Щитом(Shield Stun)" cost="950000" min_level="64"/>
+			<skill id="291" level="6" name="Последний Рубеж(Final Fortress)" cost="950000" min_level="64"/>
+			<skill id="97" level="6" name="Святилище(Sanctuary)" cost="950000" min_level="64"/>
+			<skill id="262" level="27" name="Святое Благословение(Divine Blessing)" cost="950000" min_level="64"/>
+			<skill id="49" level="16" name="Священный Удар(Holy Strike)" cost="950000" min_level="64"/>
+			<skill id="191" level="5" name="Фокусировка Разума(Focus Mind)" cost="950000" min_level="64"/>
+			<skill id="916" level="2" name="Щит Отражения Магии(Shield Deflect Magic)" cost="950000" min_level="64"/>
+			<skill id="28" level="40" name="Агрессия(Aggression)" cost="950000" min_level="65"/>
+			<skill id="18" level="28" name="Аура Ненависти(Aggression Aura)" cost="950000" min_level="65"/>
+			<skill id="217" level="36" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="950000" min_level="65"/>
+			<skill id="232" level="43" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="950000" min_level="65"/>
+			<skill id="69" level="16" name="Жертвоприношение(Sacrifice)" cost="950000" min_level="65"/>
+			<skill id="147" level="42" name="Магическое Сопротивление(M. Def.)" cost="950000" min_level="65"/>
+			<skill id="92" level="43" name="Оглушение Щитом(Shield Stun)" cost="950000" min_level="65"/>
+			<skill id="262" level="28" name="Святое Благословение(Divine Blessing)" cost="950000" min_level="65"/>
+			<skill id="49" level="17" name="Священный Удар(Holy Strike)" cost="950000" min_level="65"/>
+			<skill id="28" level="41" name="Агрессия(Aggression)" cost="1100000" min_level="66"/>
+			<skill id="406" level="2" name="Ангельский Образ(Angelic Archon)" cost="1100000" min_level="66"/>
+			<skill id="984" level="11" name="Атака Щитом(Shield Strike)" cost="1100000" min_level="66"/>
+			<skill id="18" level="29" name="Аура Ненависти(Aggression Aura)" cost="1100000" min_level="66"/>
+			<skill id="217" level="37" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1100000" min_level="66"/>
+			<skill id="232" level="44" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1100000" min_level="66"/>
+			<skill id="69" level="17" name="Жертвоприношение(Sacrifice)" cost="1100000" min_level="66"/>
+			<skill id="322" level="2" name="Крепость Щитов(Shield Fortress)" cost="1100000" min_level="66"/>
+			<skill id="147" level="43" name="Магическое Сопротивление(M. Def.)" cost="1100000" min_level="66"/>
+			<skill id="404" level="3" name="Массовые Кандалы(Mass Shackling)" cost="1100000" min_level="66"/>
+			<skill id="92" level="44" name="Оглушение Щитом(Shield Stun)" cost="1100000" min_level="66"/>
+			<skill id="291" level="7" name="Последний Рубеж(Final Fortress)" cost="1100000" min_level="66"/>
+			<skill id="97" level="7" name="Святилище(Sanctuary)" cost="1100000" min_level="66"/>
+			<skill id="262" level="29" name="Святое Благословение(Divine Blessing)" cost="1100000" min_level="66"/>
+			<skill id="49" level="18" name="Священный Удар(Holy Strike)" cost="1100000" min_level="66"/>
+			<skill id="28" level="42" name="Агрессия(Aggression)" cost="1100000" min_level="67"/>
+			<skill id="18" level="30" name="Аура Ненависти(Aggression Aura)" cost="1100000" min_level="67"/>
+			<skill id="217" level="38" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1100000" min_level="67"/>
+			<skill id="232" level="45" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1100000" min_level="67"/>
+			<skill id="69" level="18" name="Жертвоприношение(Sacrifice)" cost="1100000" min_level="67"/>
+			<skill id="147" level="44" name="Магическое Сопротивление(M. Def.)" cost="1100000" min_level="67"/>
+			<skill id="92" level="45" name="Оглушение Щитом(Shield Stun)" cost="1100000" min_level="67"/>
+			<skill id="262" level="30" name="Святое Благословение(Divine Blessing)" cost="1100000" min_level="67"/>
+			<skill id="49" level="19" name="Священный Удар(Holy Strike)" cost="1100000" min_level="67"/>
+			<skill id="28" level="43" name="Агрессия(Aggression)" cost="1500000" min_level="68"/>
+			<skill id="984" level="12" name="Атака Щитом(Shield Strike)" cost="1500000" min_level="68"/>
+			<skill id="18" level="31" name="Аура Ненависти(Aggression Aura)" cost="1500000" min_level="68"/>
+			<skill id="217" level="39" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1500000" min_level="68"/>
+			<skill id="232" level="46" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1500000" min_level="68"/>
+			<skill id="69" level="19" name="Жертвоприношение(Sacrifice)" cost="1500000" min_level="68"/>
+			<skill id="322" level="3" name="Крепость Щитов(Shield Fortress)" cost="1500000" min_level="68"/>
+			<skill id="147" level="45" name="Магическое Сопротивление(M. Def.)" cost="1500000" min_level="68"/>
+			<skill id="92" level="46" name="Оглушение Щитом(Shield Stun)" cost="1500000" min_level="68"/>
+			<skill id="291" level="8" name="Последний Рубеж(Final Fortress)" cost="1500000" min_level="68"/>
+			<skill id="97" level="8" name="Святилище(Sanctuary)" cost="1500000" min_level="68"/>
+			<skill id="262" level="31" name="Святое Благословение(Divine Blessing)" cost="1500000" min_level="68"/>
+			<skill id="49" level="20" name="Священный Удар(Holy Strike)" cost="1500000" min_level="68"/>
+			<skill id="916" level="3" name="Щит Отражения Магии(Shield Deflect Magic)" cost="1500000" min_level="68"/>
+			<skill id="28" level="44" name="Агрессия(Aggression)" cost="1500000" min_level="69"/>
+			<skill id="18" level="32" name="Аура Ненависти(Aggression Aura)" cost="1500000" min_level="69"/>
+			<skill id="217" level="40" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1500000" min_level="69"/>
+			<skill id="232" level="47" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1500000" min_level="69"/>
+			<skill id="69" level="20" name="Жертвоприношение(Sacrifice)" cost="1500000" min_level="69"/>
+			<skill id="147" level="46" name="Магическое Сопротивление(M. Def.)" cost="1500000" min_level="69"/>
+			<skill id="92" level="47" name="Оглушение Щитом(Shield Stun)" cost="1500000" min_level="69"/>
+			<skill id="262" level="32" name="Святое Благословение(Divine Blessing)" cost="1500000" min_level="69"/>
+			<skill id="49" level="21" name="Священный Удар(Holy Strike)" cost="1500000" min_level="69"/>
+			<skill id="28" level="45" name="Агрессия(Aggression)" cost="1800000" min_level="70"/>
+			<skill id="984" level="13" name="Атака Щитом(Shield Strike)" cost="1800000" min_level="70"/>
+			<skill id="18" level="33" name="Аура Ненависти(Aggression Aura)" cost="1800000" min_level="70"/>
+			<skill id="217" level="41" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1800000" min_level="70"/>
+			<skill id="232" level="48" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1800000" min_level="70"/>
+			<skill id="69" level="21" name="Жертвоприношение(Sacrifice)" cost="1800000" min_level="70"/>
+			<skill id="322" level="4" name="Крепость Щитов(Shield Fortress)" cost="1800000" min_level="70"/>
+			<skill id="147" level="47" name="Магическое Сопротивление(M. Def.)" cost="1800000" min_level="70"/>
+			<skill id="404" level="4" name="Массовые Кандалы(Mass Shackling)" cost="1800000" min_level="70"/>
+			<skill id="92" level="48" name="Оглушение Щитом(Shield Stun)" cost="1800000" min_level="70"/>
+			<skill id="291" level="9" name="Последний Рубеж(Final Fortress)" cost="1800000" min_level="70"/>
+			<skill id="1802" level="1" name="Светлый Ассасин(White Assassin)" min_level="70"/>
+			<skill id="97" level="9" name="Святилище(Sanctuary)" cost="1800000" min_level="70"/>
+			<skill id="262" level="33" name="Святое Благословение(Divine Blessing)" cost="1800000" min_level="70"/>
+			<skill id="49" level="22" name="Священный Удар(Holy Strike)" cost="1800000" min_level="70"/>
+			<skill id="28" level="46" name="Агрессия(Aggression)" cost="1800000" min_level="71"/>
+			<skill id="18" level="34" name="Аура Ненависти(Aggression Aura)" cost="1800000" min_level="71"/>
+			<skill id="217" level="42" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1800000" min_level="71"/>
+			<skill id="232" level="49" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1800000" min_level="71"/>
+			<skill id="69" level="22" name="Жертвоприношение(Sacrifice)" cost="1800000" min_level="71"/>
+			<skill id="147" level="48" name="Магическое Сопротивление(M. Def.)" cost="1800000" min_level="71"/>
+			<skill id="92" level="49" name="Оглушение Щитом(Shield Stun)" cost="1800000" min_level="71"/>
+			<skill id="262" level="34" name="Святое Благословение(Divine Blessing)" cost="1800000" min_level="71"/>
+			<skill id="49" level="23" name="Священный Удар(Holy Strike)" cost="1800000" min_level="71"/>
+			<skill id="28" level="47" name="Агрессия(Aggression)" cost="2000000" min_level="72"/>
+			<skill id="984" level="14" name="Атака Щитом(Shield Strike)" cost="2000000" min_level="72"/>
+			<skill id="18" level="35" name="Аура Ненависти(Aggression Aura)" cost="2000000" min_level="72"/>
+			<skill id="217" level="43" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="2000000" min_level="72"/>
+			<skill id="232" level="50" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="2000000" min_level="72"/>
+			<skill id="69" level="23" name="Жертвоприношение(Sacrifice)" cost="2000000" min_level="72"/>
+			<skill id="322" level="5" name="Крепость Щитов(Shield Fortress)" cost="2000000" min_level="72"/>
+			<skill id="147" level="49" name="Магическое Сопротивление(M. Def.)" cost="2000000" min_level="72"/>
+			<skill id="92" level="50" name="Оглушение Щитом(Shield Stun)" cost="2000000" min_level="72"/>
+			<skill id="291" level="10" name="Последний Рубеж(Final Fortress)" cost="2000000" min_level="72"/>
+			<skill id="97" level="10" name="Святилище(Sanctuary)" cost="2000000" min_level="72"/>
+			<skill id="262" level="35" name="Святое Благословение(Divine Blessing)" cost="2000000" min_level="72"/>
+			<skill id="49" level="24" name="Священный Удар(Holy Strike)" cost="2000000" min_level="72"/>
+			<skill id="191" level="6" name="Фокусировка Разума(Focus Mind)" cost="2000000" min_level="72"/>
+			<skill id="916" level="4" name="Щит Отражения Магии(Shield Deflect Magic)" cost="2000000" min_level="72"/>
+			<skill id="28" level="48" name="Агрессия(Aggression)" cost="2000000" min_level="73"/>
+			<skill id="18" level="36" name="Аура Ненависти(Aggression Aura)" cost="2000000" min_level="73"/>
+			<skill id="217" level="44" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="2000000" min_level="73"/>
+			<skill id="232" level="51" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="2000000" min_level="73"/>
+			<skill id="69" level="24" name="Жертвоприношение(Sacrifice)" cost="2000000" min_level="73"/>
+			<skill id="147" level="50" name="Магическое Сопротивление(M. Def.)" cost="2000000" min_level="73"/>
+			<skill id="92" level="51" name="Оглушение Щитом(Shield Stun)" cost="2000000" min_level="73"/>
+			<skill id="262" level="36" name="Святое Благословение(Divine Blessing)" cost="2000000" min_level="73"/>
+			<skill id="49" level="25" name="Священный Удар(Holy Strike)" cost="2000000" min_level="73"/>
+			<skill id="28" level="49" name="Агрессия(Aggression)" cost="2000000" min_level="74"/>
+			<skill id="406" level="3" name="Ангельский Образ(Angelic Archon)" cost="2000000" min_level="74"/>
+			<skill id="984" level="15" name="Атака Щитом(Shield Strike)" cost="2000000" min_level="74"/>
+			<skill id="18" level="37" name="Аура Ненависти(Aggression Aura)" cost="2000000" min_level="74"/>
+			<skill id="217" level="45" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="2000000" min_level="74"/>
+			<skill id="232" level="52" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="2000000" min_level="74"/>
+			<skill id="69" level="25" name="Жертвоприношение(Sacrifice)" cost="2000000" min_level="74"/>
+			<skill id="322" level="6" name="Крепость Щитов(Shield Fortress)" cost="2000000" min_level="74"/>
+			<skill id="147" level="51" name="Магическое Сопротивление(M. Def.)" cost="2000000" min_level="74"/>
+			<skill id="404" level="5" name="Массовые Кандалы(Mass Shackling)" cost="2000000" min_level="74"/>
+			<skill id="92" level="52" name="Оглушение Щитом(Shield Stun)" cost="2000000" min_level="74"/>
+			<skill id="291" level="11" name="Последний Рубеж(Final Fortress)" cost="2000000" min_level="74"/>
+			<skill id="97" level="11" name="Святилище(Sanctuary)" cost="2000000" min_level="74"/>
+			<skill id="262" level="37" name="Святое Благословение(Divine Blessing)" cost="2000000" min_level="74"/>
+			<skill id="49" level="26" name="Священный Удар(Holy Strike)" cost="2000000" min_level="74"/>
+		</class>
+	</normal_skill_tree>
+</list>

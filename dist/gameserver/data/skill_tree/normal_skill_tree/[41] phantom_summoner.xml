@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="41">	<!--Последователь Тьмы-->
+			<skill id="146" level="13" name="Антимагия(Anti Magic)" cost="100000" min_level="40"/>
+			<skill id="146" level="14" name="Антимагия(Anti Magic)" cost="100000" min_level="40"/>
+			<skill id="146" level="15" name="Антимагия(Anti Magic)" cost="100000" min_level="40"/>
+			<skill id="228" level="2" name="Быстрое Чтение Заклинаний(Fast Spell Casting)" cost="100000" min_level="40"/>
+			<skill id="258" level="1" name="Владение Легкой Броней(Light Armor Mastery)" cost="100000" min_level="40"/>
+			<skill id="258" level="2" name="Владение Легкой Броней(Light Armor Mastery)" cost="100000" min_level="40"/>
+			<skill id="258" level="3" name="Владение Легкой Броней(Light Armor Mastery)" cost="100000" min_level="40"/>
+			<skill id="234" level="9" name="Владение Магической Броней(Robe Mastery)" cost="100000" min_level="40"/>
+			<skill id="234" level="10" name="Владение Магической Броней(Robe Mastery)" cost="100000" min_level="40"/>
+			<skill id="234" level="11" name="Владение Магической Броней(Robe Mastery)" cost="100000" min_level="40"/>
+			<skill id="249" level="10" name="Владение Оружием(Weapon Mastery)" cost="100000" min_level="40"/>
+			<skill id="249" level="11" name="Владение Оружием(Weapon Mastery)" cost="100000" min_level="40"/>
+			<skill id="249" level="12" name="Владение Оружием(Weapon Mastery)" cost="100000" min_level="40"/>
+			<skill id="1300" level="1" name="Излечить Слугу(Servitor Cure)" cost="100000" min_level="40"/>
+			<skill id="1127" level="13" name="Лечение Слуги(Servitor Heal)" cost="100000" min_level="40"/>
+			<skill id="1127" level="14" name="Лечение Слуги(Servitor Heal)" cost="100000" min_level="40"/>
+			<skill id="1127" level="15" name="Лечение Слуги(Servitor Heal)" cost="100000" min_level="40"/>
+			<skill id="1831" level="1" name="Мастер Заклинаний(Spell Master)" min_level="40"/>
+			<skill id="1262" level="1" name="Поделиться Болью(Transfer Pain)" cost="100000" min_level="40"/>
+			<skill id="1126" level="7" name="Подпитка Слуги(Servitor Recharge)" cost="100000" min_level="40"/>
+			<skill id="1126" level="8" name="Подпитка Слуги(Servitor Recharge)" cost="100000" min_level="40"/>
+			<skill id="1228" level="5" name="Призвать Гекату(Summon Silhouette)" cost="100000" min_level="40"/>
+			<skill id="1281" level="1" name="Призвать Искрящийся Кубик(Summon Spark Cubic)" item_id="4924" cost="100000" min_level="40"/>
+			<skill id="33" level="1" name="Призвать Призрачный Кубик(Summon Phantom Cubic)" cost="100000" min_level="40"/>
+			<skill id="1278" level="1" name="Призвать Самаэля(Summon Soulless)" cost="100000" min_level="40"/>
+			<skill id="1128" level="5" name="Призвать Тень(Summon Shadow)" cost="100000" min_level="40"/>
+			<skill id="11318" level="1" name="Призыв Зарядов Духа(Summon Spiritshots)" cost="100000" min_level="40"/>
+			<skill id="11316" level="1" name="Призыв Зарядов Души(Summon Soulshots)" cost="100000" min_level="40"/>
+			<skill id="213" level="3" name="Увеличение Маны(Boost Mana)" cost="100000" min_level="40"/>
+			<skill id="1140" level="1" name="Физический Щит Слуги(Servitor Physical Shield)" cost="100000" min_level="40"/>
+			<skill id="146" level="16" name="Антимагия(Anti Magic)" cost="140000" min_level="42"/>
+			<skill id="258" level="4" name="Владение Легкой Броней(Light Armor Mastery)" cost="140000" min_level="42"/>
+			<skill id="234" level="12" name="Владение Магической Броней(Robe Mastery)" cost="140000" min_level="42"/>
+			<skill id="249" level="13" name="Владение Оружием(Weapon Mastery)" cost="140000" min_level="42"/>
+			<skill id="1127" level="16" name="Лечение Слуги(Servitor Heal)" cost="140000" min_level="42"/>
+			<skill id="1126" level="9" name="Подпитка Слуги(Servitor Recharge)" cost="140000" min_level="42"/>
+			<skill id="146" level="17" name="Антимагия(Anti Magic)" cost="140000" min_level="43"/>
+			<skill id="258" level="5" name="Владение Легкой Броней(Light Armor Mastery)" cost="140000" min_level="43"/>
+			<skill id="234" level="13" name="Владение Магической Броней(Robe Mastery)" cost="140000" min_level="43"/>
+			<skill id="249" level="14" name="Владение Оружием(Weapon Mastery)" cost="140000" min_level="43"/>
+			<skill id="1127" level="17" name="Лечение Слуги(Servitor Heal)" cost="140000" min_level="43"/>
+			<skill id="146" level="18" name="Антимагия(Anti Magic)" cost="140000" min_level="44"/>
+			<skill id="212" level="2" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="140000" min_level="44"/>
+			<skill id="229" level="3" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="140000" min_level="44"/>
+			<skill id="143" level="1" name="Владение Кубами(Cubic Mastery)" cost="140000" min_level="44"/>
+			<skill id="258" level="6" name="Владение Легкой Броней(Light Armor Mastery)" cost="140000" min_level="44"/>
+			<skill id="234" level="14" name="Владение Магической Броней(Robe Mastery)" cost="140000" min_level="44"/>
+			<skill id="249" level="15" name="Владение Оружием(Weapon Mastery)" cost="140000" min_level="44"/>
+			<skill id="1127" level="18" name="Лечение Слуги(Servitor Heal)" cost="140000" min_level="44"/>
+			<skill id="1139" level="1" name="Магический Щит Слуги(Servitor Magic Shield)" cost="140000" min_level="44"/>
+			<skill id="1126" level="10" name="Подпитка Слуги(Servitor Recharge)" cost="140000" min_level="44"/>
+			<skill id="1228" level="6" name="Призвать Гекату(Summon Silhouette)" cost="140000" min_level="44"/>
+			<skill id="1281" level="2" name="Призвать Искрящийся Кубик(Summon Spark Cubic)" cost="140000" min_level="44"/>
+			<skill id="1278" level="2" name="Призвать Самаэля(Summon Soulless)" cost="140000" min_level="44"/>
+			<skill id="1128" level="6" name="Призвать Тень(Summon Shadow)" cost="140000" min_level="44"/>
+			<skill id="1168" level="4" name="Проклятие Яда(Curse Poison)" cost="140000" min_level="44"/>
+			<skill id="1547" level="1" name="Разделение Духа(Spirit Sharing)" item_id="49562" cost="140000" min_level="44"/>
+			<skill id="1141" level="1" name="Ускорение Слуги(Servitor Haste)" cost="140000" min_level="44"/>
+			<skill id="1800" level="1" name="Пират(Pirate)" min_level="45"/>
+			<skill id="146" level="19" name="Антимагия(Anti Magic)" cost="230000" min_level="46"/>
+			<skill id="258" level="7" name="Владение Легкой Броней(Light Armor Mastery)" cost="230000" min_level="46"/>
+			<skill id="234" level="15" name="Владение Магической Броней(Robe Mastery)" cost="230000" min_level="46"/>
+			<skill id="249" level="16" name="Владение Оружием(Weapon Mastery)" cost="230000" min_level="46"/>
+			<skill id="1127" level="19" name="Лечение Слуги(Servitor Heal)" cost="230000" min_level="46"/>
+			<skill id="1126" level="11" name="Подпитка Слуги(Servitor Recharge)" cost="230000" min_level="46"/>
+			<skill id="33" level="2" name="Призвать Призрачный Кубик(Summon Phantom Cubic)" cost="230000" min_level="46"/>
+			<skill id="146" level="20" name="Антимагия(Anti Magic)" cost="230000" min_level="47"/>
+			<skill id="258" level="8" name="Владение Легкой Броней(Light Armor Mastery)" cost="230000" min_level="47"/>
+			<skill id="234" level="16" name="Владение Магической Броней(Robe Mastery)" cost="230000" min_level="47"/>
+			<skill id="249" level="17" name="Владение Оружием(Weapon Mastery)" cost="230000" min_level="47"/>
+			<skill id="1127" level="20" name="Лечение Слуги(Servitor Heal)" cost="230000" min_level="47"/>
+			<skill id="146" level="21" name="Антимагия(Anti Magic)" cost="230000" min_level="48"/>
+			<skill id="164" level="3" name="Быстрый Повтор(Quick Recovery)" cost="230000" min_level="48"/>
+			<skill id="258" level="9" name="Владение Легкой Броней(Light Armor Mastery)" cost="230000" min_level="48"/>
+			<skill id="234" level="17" name="Владение Магической Броней(Robe Mastery)" cost="230000" min_level="48"/>
+			<skill id="249" level="18" name="Владение Оружием(Weapon Mastery)" cost="230000" min_level="48"/>
+			<skill id="1300" level="2" name="Излечить Слугу(Servitor Cure)" cost="230000" min_level="48"/>
+			<skill id="1127" level="21" name="Лечение Слуги(Servitor Heal)" cost="230000" min_level="48"/>
+			<skill id="1146" level="2" name="Могучий Слуга(Mighty Servitor)" cost="230000" min_level="48"/>
+			<skill id="1262" level="2" name="Поделиться Болью(Transfer Pain)" cost="230000" min_level="48"/>
+			<skill id="1126" level="12" name="Подпитка Слуги(Servitor Recharge)" cost="230000" min_level="48"/>
+			<skill id="1611" level="1" name="Превосходство Силы(Power Supremacy)" cost="230000" min_level="48"/>
+			<skill id="1228" level="7" name="Призвать Гекату(Summon Silhouette)" cost="230000" min_level="48"/>
+			<skill id="1281" level="3" name="Призвать Искрящийся Кубик(Summon Spark Cubic)" cost="230000" min_level="48"/>
+			<skill id="1278" level="3" name="Призвать Самаэля(Summon Soulless)" cost="230000" min_level="48"/>
+			<skill id="1128" level="7" name="Призвать Тень(Summon Shadow)" cost="230000" min_level="48"/>
+			<skill id="213" level="4" name="Увеличение Маны(Boost Mana)" cost="230000" min_level="48"/>
+			<skill id="1140" level="2" name="Физический Щит Слуги(Servitor Physical Shield)" cost="230000" min_level="48"/>
+			<skill id="146" level="22" name="Антимагия(Anti Magic)" cost="370000" min_level="50"/>
+			<skill id="258" level="10" name="Владение Легкой Броней(Light Armor Mastery)" cost="370000" min_level="50"/>
+			<skill id="234" level="18" name="Владение Магической Броней(Robe Mastery)" cost="370000" min_level="50"/>
+			<skill id="249" level="19" name="Владение Оружием(Weapon Mastery)" cost="370000" min_level="50"/>
+			<skill id="1127" level="22" name="Лечение Слуги(Servitor Heal)" cost="370000" min_level="50"/>
+			<skill id="1126" level="13" name="Подпитка Слуги(Servitor Recharge)" cost="370000" min_level="50"/>
+			<skill id="146" level="23" name="Антимагия(Anti Magic)" cost="370000" min_level="51"/>
+			<skill id="258" level="11" name="Владение Легкой Броней(Light Armor Mastery)" cost="370000" min_level="51"/>
+			<skill id="234" level="19" name="Владение Магической Броней(Robe Mastery)" cost="370000" min_level="51"/>
+			<skill id="249" level="20" name="Владение Оружием(Weapon Mastery)" cost="370000" min_level="51"/>
+			<skill id="1127" level="23" name="Лечение Слуги(Servitor Heal)" cost="370000" min_level="51"/>
+			<skill id="1299" level="1" name="Абсолютная Защита Слуги(Servitor Empowerment)" cost="370000" min_level="52"/>
+			<skill id="146" level="24" name="Антимагия(Anti Magic)" cost="370000" min_level="52"/>
+			<skill id="1405" level="1" name="Божественное Вдохновение(Divine Inspiration)" item_id="8618" cost="370000" min_level="52"/>
+			<skill id="212" level="3" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="370000" min_level="52"/>
+			<skill id="229" level="4" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="370000" min_level="52"/>
+			<skill id="258" level="12" name="Владение Легкой Броней(Light Armor Mastery)" cost="370000" min_level="52"/>
+			<skill id="234" level="20" name="Владение Магической Броней(Robe Mastery)" cost="370000" min_level="52"/>
+			<skill id="249" level="21" name="Владение Оружием(Weapon Mastery)" cost="370000" min_level="52"/>
+			<skill id="1127" level="24" name="Лечение Слуги(Servitor Heal)" cost="370000" min_level="52"/>
+			<skill id="1139" level="2" name="Магический Щит Слуги(Servitor Magic Shield)" cost="370000" min_level="52"/>
+			<skill id="1126" level="14" name="Подпитка Слуги(Servitor Recharge)" cost="370000" min_level="52"/>
+			<skill id="1228" level="8" name="Призвать Гекату(Summon Silhouette)" cost="370000" min_level="52"/>
+			<skill id="1281" level="4" name="Призвать Искрящийся Кубик(Summon Spark Cubic)" cost="370000" min_level="52"/>
+			<skill id="33" level="3" name="Призвать Призрачный Кубик(Summon Phantom Cubic)" cost="370000" min_level="52"/>
+			<skill id="1278" level="4" name="Призвать Самаэля(Summon Soulless)" cost="370000" min_level="52"/>
+			<skill id="1128" level="8" name="Призвать Тень(Summon Shadow)" cost="370000" min_level="52"/>
+			<skill id="1168" level="5" name="Проклятие Яда(Curse Poison)" cost="370000" min_level="52"/>
+			<skill id="1141" level="2" name="Ускорение Слуги(Servitor Haste)" cost="370000" min_level="52"/>
+			<skill id="146" level="25" name="Антимагия(Anti Magic)" cost="590000" min_level="54"/>
+			<skill id="258" level="13" name="Владение Легкой Броней(Light Armor Mastery)" cost="590000" min_level="54"/>
+			<skill id="234" level="21" name="Владение Магической Броней(Robe Mastery)" cost="590000" min_level="54"/>
+			<skill id="249" level="22" name="Владение Оружием(Weapon Mastery)" cost="590000" min_level="54"/>
+			<skill id="1127" level="25" name="Лечение Слуги(Servitor Heal)" cost="590000" min_level="54"/>
+			<skill id="1126" level="15" name="Подпитка Слуги(Servitor Recharge)" cost="590000" min_level="54"/>
+			<skill id="146" level="26" name="Антимагия(Anti Magic)" cost="590000" min_level="55"/>
+			<skill id="258" level="14" name="Владение Легкой Броней(Light Armor Mastery)" cost="590000" min_level="55"/>
+			<skill id="234" level="22" name="Владение Магической Броней(Robe Mastery)" cost="590000" min_level="55"/>
+			<skill id="249" level="23" name="Владение Оружием(Weapon Mastery)" cost="590000" min_level="55"/>
+			<skill id="1127" level="26" name="Лечение Слуги(Servitor Heal)" cost="590000" min_level="55"/>
+			<skill id="146" level="27" name="Антимагия(Anti Magic)" cost="590000" min_level="56"/>
+			<skill id="228" level="3" name="Быстрое Чтение Заклинаний(Fast Spell Casting)" cost="590000" min_level="56"/>
+			<skill id="143" level="2" name="Владение Кубами(Cubic Mastery)" cost="590000" min_level="56"/>
+			<skill id="258" level="15" name="Владение Легкой Броней(Light Armor Mastery)" cost="590000" min_level="56"/>
+			<skill id="234" level="23" name="Владение Магической Броней(Robe Mastery)" cost="590000" min_level="56"/>
+			<skill id="249" level="24" name="Владение Оружием(Weapon Mastery)" cost="590000" min_level="56"/>
+			<skill id="1127" level="27" name="Лечение Слуги(Servitor Heal)" cost="590000" min_level="56"/>
+			<skill id="1146" level="3" name="Могучий Слуга(Mighty Servitor)" cost="590000" min_level="56"/>
+			<skill id="1262" level="3" name="Поделиться Болью(Transfer Pain)" cost="590000" min_level="56"/>
+			<skill id="1126" level="16" name="Подпитка Слуги(Servitor Recharge)" cost="590000" min_level="56"/>
+			<skill id="1611" level="2" name="Превосходство Силы(Power Supremacy)" cost="590000" min_level="56"/>
+			<skill id="1228" level="9" name="Призвать Гекату(Summon Silhouette)" cost="590000" min_level="56"/>
+			<skill id="1281" level="5" name="Призвать Искрящийся Кубик(Summon Spark Cubic)" cost="590000" min_level="56"/>
+			<skill id="1278" level="5" name="Призвать Самаэля(Summon Soulless)" cost="590000" min_level="56"/>
+			<skill id="1128" level="9" name="Призвать Тень(Summon Shadow)" cost="590000" min_level="56"/>
+			<skill id="213" level="5" name="Увеличение Маны(Boost Mana)" cost="590000" min_level="56"/>
+			<skill id="1140" level="3" name="Физический Щит Слуги(Servitor Physical Shield)" cost="590000" min_level="56"/>
+			<skill id="146" level="28" name="Антимагия(Anti Magic)" cost="600000" min_level="57"/>
+			<skill id="258" level="16" name="Владение Легкой Броней(Light Armor Mastery)" cost="600000" min_level="57"/>
+			<skill id="234" level="24" name="Владение Магической Броней(Robe Mastery)" cost="600000" min_level="57"/>
+			<skill id="249" level="25" name="Владение Оружием(Weapon Mastery)" cost="600000" min_level="57"/>
+			<skill id="1127" level="28" name="Лечение Слуги(Servitor Heal)" cost="600000" min_level="57"/>
+			<skill id="1126" level="17" name="Подпитка Слуги(Servitor Recharge)" cost="600000" min_level="57"/>
+			<skill id="146" level="29" name="Антимагия(Anti Magic)" cost="600000" min_level="58"/>
+			<skill id="212" level="4" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="600000" min_level="58"/>
+			<skill id="258" level="17" name="Владение Легкой Броней(Light Armor Mastery)" cost="600000" min_level="58"/>
+			<skill id="234" level="25" name="Владение Магической Броней(Robe Mastery)" cost="600000" min_level="58"/>
+			<skill id="249" level="26" name="Владение Оружием(Weapon Mastery)" cost="600000" min_level="58"/>
+			<skill id="1127" level="29" name="Лечение Слуги(Servitor Heal)" cost="600000" min_level="58"/>
+			<skill id="1262" level="4" name="Поделиться Болью(Transfer Pain)" cost="600000" min_level="58"/>
+			<skill id="1126" level="18" name="Подпитка Слуги(Servitor Recharge)" cost="600000" min_level="58"/>
+			<skill id="1228" level="10" name="Призвать Гекату(Summon Silhouette)" cost="600000" min_level="58"/>
+			<skill id="33" level="4" name="Призвать Призрачный Кубик(Summon Phantom Cubic)" cost="600000" min_level="58"/>
+			<skill id="1278" level="6" name="Призвать Самаэля(Summon Soulless)" cost="600000" min_level="58"/>
+			<skill id="1128" level="10" name="Призвать Тень(Summon Shadow)" cost="600000" min_level="58"/>
+			<skill id="146" level="30" name="Антимагия(Anti Magic)" cost="720000" min_level="59"/>
+			<skill id="258" level="18" name="Владение Легкой Броней(Light Armor Mastery)" cost="720000" min_level="59"/>
+			<skill id="234" level="26" name="Владение Магической Броней(Robe Mastery)" cost="720000" min_level="59"/>
+			<skill id="249" level="27" name="Владение Оружием(Weapon Mastery)" cost="720000" min_level="59"/>
+			<skill id="1127" level="30" name="Лечение Слуги(Servitor Heal)" cost="720000" min_level="59"/>
+			<skill id="1126" level="19" name="Подпитка Слуги(Servitor Recharge)" cost="720000" min_level="59"/>
+			<skill id="146" level="31" name="Антимагия(Anti Magic)" cost="720000" min_level="60"/>
+			<skill id="229" level="5" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="720000" min_level="60"/>
+			<skill id="258" level="19" name="Владение Легкой Броней(Light Armor Mastery)" cost="720000" min_level="60"/>
+			<skill id="234" level="27" name="Владение Магической Броней(Robe Mastery)" cost="720000" min_level="60"/>
+			<skill id="249" level="28" name="Владение Оружием(Weapon Mastery)" cost="720000" min_level="60"/>
+			<skill id="1300" level="3" name="Излечить Слугу(Servitor Cure)" cost="720000" min_level="60"/>
+			<skill id="1127" level="31" name="Лечение Слуги(Servitor Heal)" cost="720000" min_level="60"/>
+			<skill id="1126" level="20" name="Подпитка Слуги(Servitor Recharge)" cost="720000" min_level="60"/>
+			<skill id="1228" level="11" name="Призвать Гекату(Summon Silhouette)" cost="720000" min_level="60"/>
+			<skill id="1281" level="6" name="Призвать Искрящийся Кубик(Summon Spark Cubic)" cost="720000" min_level="60"/>
+			<skill id="1278" level="7" name="Призвать Самаэля(Summon Soulless)" cost="720000" min_level="60"/>
+			<skill id="1128" level="11" name="Призвать Тень(Summon Shadow)" cost="720000" min_level="60"/>
+			<skill id="1801" level="1" name="Темный Ассасин(Dark Assassin)" min_level="60"/>
+			<skill id="213" level="6" name="Увеличение Маны(Boost Mana)" cost="720000" min_level="60"/>
+			<skill id="146" level="32" name="Антимагия(Anti Magic)" cost="870000" min_level="61"/>
+			<skill id="1405" level="2" name="Божественное Вдохновение(Divine Inspiration)" item_id="8619" cost="870000" min_level="61"/>
+			<skill id="258" level="20" name="Владение Легкой Броней(Light Armor Mastery)" cost="870000" min_level="61"/>
+			<skill id="234" level="28" name="Владение Магической Броней(Robe Mastery)" cost="870000" min_level="61"/>
+			<skill id="249" level="29" name="Владение Оружием(Weapon Mastery)" cost="870000" min_level="61"/>
+			<skill id="1127" level="32" name="Лечение Слуги(Servitor Heal)" cost="870000" min_level="61"/>
+			<skill id="1126" level="21" name="Подпитка Слуги(Servitor Recharge)" cost="870000" min_level="61"/>
+			<skill id="146" level="33" name="Антимагия(Anti Magic)" cost="870000" min_level="62"/>
+			<skill id="1301" level="1" name="Благословение Слуги(Servitor Blessing)" cost="870000" min_level="62"/>
+			<skill id="258" level="21" name="Владение Легкой Броней(Light Armor Mastery)" cost="870000" min_level="62"/>
+			<skill id="234" level="29" name="Владение Магической Броней(Robe Mastery)" cost="870000" min_level="62"/>
+			<skill id="249" level="30" name="Владение Оружием(Weapon Mastery)" cost="870000" min_level="62"/>
+			<skill id="1127" level="33" name="Лечение Слуги(Servitor Heal)" cost="870000" min_level="62"/>
+			<skill id="1126" level="22" name="Подпитка Слуги(Servitor Recharge)" cost="870000" min_level="62"/>
+			<skill id="1228" level="12" name="Призвать Гекату(Summon Silhouette)" cost="870000" min_level="62"/>
+			<skill id="33" level="5" name="Призвать Призрачный Кубик(Summon Phantom Cubic)" cost="870000" min_level="62"/>
+			<skill id="1278" level="8" name="Призвать Самаэля(Summon Soulless)" cost="870000" min_level="62"/>
+			<skill id="1128" level="12" name="Призвать Тень(Summon Shadow)" cost="870000" min_level="62"/>
+			<skill id="1168" level="6" name="Проклятие Яда(Curse Poison)" cost="870000" min_level="62"/>
+			<skill id="1547" level="2" name="Разделение Духа(Spirit Sharing)" cost="870000" min_level="62"/>
+			<skill id="146" level="34" name="Антимагия(Anti Magic)" cost="1100000" min_level="63"/>
+			<skill id="258" level="22" name="Владение Легкой Броней(Light Armor Mastery)" cost="1100000" min_level="63"/>
+			<skill id="234" level="30" name="Владение Магической Броней(Robe Mastery)" cost="1100000" min_level="63"/>
+			<skill id="249" level="31" name="Владение Оружием(Weapon Mastery)" cost="1100000" min_level="63"/>
+			<skill id="1127" level="34" name="Лечение Слуги(Servitor Heal)" cost="1100000" min_level="63"/>
+			<skill id="1126" level="23" name="Подпитка Слуги(Servitor Recharge)" cost="1100000" min_level="63"/>
+			<skill id="146" level="35" name="Антимагия(Anti Magic)" cost="1100000" min_level="64"/>
+			<skill id="212" level="5" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="1100000" min_level="64"/>
+			<skill id="258" level="23" name="Владение Легкой Броней(Light Armor Mastery)" cost="1100000" min_level="64"/>
+			<skill id="234" level="31" name="Владение Магической Броней(Robe Mastery)" cost="1100000" min_level="64"/>
+			<skill id="249" level="32" name="Владение Оружием(Weapon Mastery)" cost="1100000" min_level="64"/>
+			<skill id="1127" level="35" name="Лечение Слуги(Servitor Heal)" cost="1100000" min_level="64"/>
+			<skill id="1126" level="24" name="Подпитка Слуги(Servitor Recharge)" cost="1100000" min_level="64"/>
+			<skill id="1611" level="3" name="Превосходство Силы(Power Supremacy)" cost="1100000" min_level="64"/>
+			<skill id="1228" level="13" name="Призвать Гекату(Summon Silhouette)" cost="1100000" min_level="64"/>
+			<skill id="1281" level="7" name="Призвать Искрящийся Кубик(Summon Spark Cubic)" cost="1100000" min_level="64"/>
+			<skill id="1278" level="9" name="Призвать Самаэля(Summon Soulless)" cost="1100000" min_level="64"/>
+			<skill id="1128" level="13" name="Призвать Тень(Summon Shadow)" cost="1100000" min_level="64"/>
+			<skill id="146" level="36" name="Антимагия(Anti Magic)" cost="1400000" min_level="65"/>
+			<skill id="258" level="24" name="Владение Легкой Броней(Light Armor Mastery)" cost="1400000" min_level="65"/>
+			<skill id="234" level="32" name="Владение Магической Броней(Robe Mastery)" cost="1400000" min_level="65"/>
+			<skill id="249" level="33" name="Владение Оружием(Weapon Mastery)" cost="1400000" min_level="65"/>
+			<skill id="1127" level="36" name="Лечение Слуги(Servitor Heal)" cost="1400000" min_level="65"/>
+			<skill id="1126" level="25" name="Подпитка Слуги(Servitor Recharge)" cost="1400000" min_level="65"/>
+			<skill id="146" level="37" name="Антимагия(Anti Magic)" cost="1400000" min_level="66"/>
+			<skill id="258" level="25" name="Владение Легкой Броней(Light Armor Mastery)" cost="1400000" min_level="66"/>
+			<skill id="234" level="33" name="Владение Магической Броней(Robe Mastery)" cost="1400000" min_level="66"/>
+			<skill id="249" level="34" name="Владение Оружием(Weapon Mastery)" cost="1400000" min_level="66"/>
+			<skill id="1127" level="37" name="Лечение Слуги(Servitor Heal)" cost="1400000" min_level="66"/>
+			<skill id="1126" level="26" name="Подпитка Слуги(Servitor Recharge)" cost="1400000" min_level="66"/>
+			<skill id="1228" level="14" name="Призвать Гекату(Summon Silhouette)" cost="1400000" min_level="66"/>
+			<skill id="33" level="6" name="Призвать Призрачный Кубик(Summon Phantom Cubic)" cost="1400000" min_level="66"/>
+			<skill id="1278" level="10" name="Призвать Самаэля(Summon Soulless)" cost="1400000" min_level="66"/>
+			<skill id="1128" level="14" name="Призвать Тень(Summon Shadow)" cost="1400000" min_level="66"/>
+			<skill id="213" level="7" name="Увеличение Маны(Boost Mana)" cost="1400000" min_level="66"/>
+			<skill id="146" level="38" name="Антимагия(Anti Magic)" cost="1700000" min_level="67"/>
+			<skill id="258" level="26" name="Владение Легкой Броней(Light Armor Mastery)" cost="1700000" min_level="67"/>
+			<skill id="234" level="34" name="Владение Магической Броней(Robe Mastery)" cost="1700000" min_level="67"/>
+			<skill id="249" level="35" name="Владение Оружием(Weapon Mastery)" cost="1700000" min_level="67"/>
+			<skill id="1127" level="38" name="Лечение Слуги(Servitor Heal)" cost="1700000" min_level="67"/>
+			<skill id="1126" level="27" name="Подпитка Слуги(Servitor Recharge)" cost="1700000" min_level="67"/>
+			<skill id="146" level="39" name="Антимагия(Anti Magic)" cost="1700000" min_level="68"/>
+			<skill id="229" level="6" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="1700000" min_level="68"/>
+			<skill id="258" level="27" name="Владение Легкой Броней(Light Armor Mastery)" cost="1700000" min_level="68"/>
+			<skill id="234" level="35" name="Владение Магической Броней(Robe Mastery)" cost="1700000" min_level="68"/>
+			<skill id="249" level="36" name="Владение Оружием(Weapon Mastery)" cost="1700000" min_level="68"/>
+			<skill id="1127" level="39" name="Лечение Слуги(Servitor Heal)" cost="1700000" min_level="68"/>
+			<skill id="1126" level="28" name="Подпитка Слуги(Servitor Recharge)" cost="1700000" min_level="68"/>
+			<skill id="1228" level="15" name="Призвать Гекату(Summon Silhouette)" cost="1700000" min_level="68"/>
+			<skill id="1281" level="8" name="Призвать Искрящийся Кубик(Summon Spark Cubic)" cost="1700000" min_level="68"/>
+			<skill id="1278" level="11" name="Призвать Самаэля(Summon Soulless)" cost="1700000" min_level="68"/>
+			<skill id="1128" level="15" name="Призвать Тень(Summon Shadow)" cost="1700000" min_level="68"/>
+			<skill id="146" level="40" name="Антимагия(Anti Magic)" cost="2000000" min_level="69"/>
+			<skill id="258" level="28" name="Владение Легкой Броней(Light Armor Mastery)" cost="2000000" min_level="69"/>
+			<skill id="234" level="36" name="Владение Магической Броней(Robe Mastery)" cost="2000000" min_level="69"/>
+			<skill id="249" level="37" name="Владение Оружием(Weapon Mastery)" cost="2000000" min_level="69"/>
+			<skill id="1127" level="40" name="Лечение Слуги(Servitor Heal)" cost="2000000" min_level="69"/>
+			<skill id="1126" level="29" name="Подпитка Слуги(Servitor Recharge)" cost="2000000" min_level="69"/>
+			<skill id="1299" level="2" name="Абсолютная Защита Слуги(Servitor Empowerment)" cost="2000000" min_level="70"/>
+			<skill id="146" level="41" name="Антимагия(Anti Magic)" cost="2000000" min_level="70"/>
+			<skill id="258" level="29" name="Владение Легкой Броней(Light Armor Mastery)" cost="2000000" min_level="70"/>
+			<skill id="234" level="37" name="Владение Магической Броней(Robe Mastery)" cost="2000000" min_level="70"/>
+			<skill id="249" level="38" name="Владение Оружием(Weapon Mastery)" cost="2000000" min_level="70"/>
+			<skill id="1127" level="41" name="Лечение Слуги(Servitor Heal)" cost="2000000" min_level="70"/>
+			<skill id="1262" level="5" name="Поделиться Болью(Transfer Pain)" cost="2000000" min_level="70"/>
+			<skill id="1126" level="30" name="Подпитка Слуги(Servitor Recharge)" cost="2000000" min_level="70"/>
+			<skill id="1228" level="16" name="Призвать Гекату(Summon Silhouette)" cost="2000000" min_level="70"/>
+			<skill id="33" level="7" name="Призвать Призрачный Кубик(Summon Phantom Cubic)" cost="2000000" min_level="70"/>
+			<skill id="1278" level="12" name="Призвать Самаэля(Summon Soulless)" cost="2000000" min_level="70"/>
+			<skill id="1128" level="16" name="Призвать Тень(Summon Shadow)" cost="2000000" min_level="70"/>
+			<skill id="1547" level="3" name="Разделение Духа(Spirit Sharing)" cost="2000000" min_level="70"/>
+			<skill id="1802" level="1" name="Светлый Ассасин(White Assassin)" min_level="70"/>
+			<skill id="146" level="42" name="Антимагия(Anti Magic)" cost="2500000" min_level="71"/>
+			<skill id="258" level="30" name="Владение Легкой Броней(Light Armor Mastery)" cost="2500000" min_level="71"/>
+			<skill id="234" level="38" name="Владение Магической Броней(Robe Mastery)" cost="2500000" min_level="71"/>
+			<skill id="249" level="39" name="Владение Оружием(Weapon Mastery)" cost="2500000" min_level="71"/>
+			<skill id="1127" level="42" name="Лечение Слуги(Servitor Heal)" cost="2500000" min_level="71"/>
+			<skill id="1126" level="31" name="Подпитка Слуги(Servitor Recharge)" cost="2500000" min_level="71"/>
+			<skill id="146" level="43" name="Антимагия(Anti Magic)" cost="2500000" min_level="72"/>
+			<skill id="258" level="31" name="Владение Легкой Броней(Light Armor Mastery)" cost="2500000" min_level="72"/>
+			<skill id="234" level="39" name="Владение Магической Броней(Robe Mastery)" cost="2500000" min_level="72"/>
+			<skill id="249" level="40" name="Владение Оружием(Weapon Mastery)" cost="2500000" min_level="72"/>
+			<skill id="1127" level="43" name="Лечение Слуги(Servitor Heal)" cost="2500000" min_level="72"/>
+			<skill id="1126" level="32" name="Подпитка Слуги(Servitor Recharge)" cost="2500000" min_level="72"/>
+			<skill id="1611" level="4" name="Превосходство Силы(Power Supremacy)" cost="2500000" min_level="72"/>
+			<skill id="1228" level="17" name="Призвать Гекату(Summon Silhouette)" cost="2500000" min_level="72"/>
+			<skill id="1281" level="9" name="Призвать Искрящийся Кубик(Summon Spark Cubic)" cost="2500000" min_level="72"/>
+			<skill id="1278" level="13" name="Призвать Самаэля(Summon Soulless)" cost="2500000" min_level="72"/>
+			<skill id="1128" level="17" name="Призвать Тень(Summon Shadow)" cost="2500000" min_level="72"/>
+			<skill id="1168" level="7" name="Проклятие Яда(Curse Poison)" cost="2500000" min_level="72"/>
+			<skill id="213" level="8" name="Увеличение Маны(Boost Mana)" cost="2500000" min_level="72"/>
+			<skill id="146" level="44" name="Антимагия(Anti Magic)" cost="3000000" min_level="73"/>
+			<skill id="258" level="32" name="Владение Легкой Броней(Light Armor Mastery)" cost="3000000" min_level="73"/>
+			<skill id="234" level="40" name="Владение Магической Броней(Robe Mastery)" cost="3000000" min_level="73"/>
+			<skill id="249" level="41" name="Владение Оружием(Weapon Mastery)" cost="3000000" min_level="73"/>
+			<skill id="1127" level="44" name="Лечение Слуги(Servitor Heal)" cost="3000000" min_level="73"/>
+			<skill id="1126" level="33" name="Подпитка Слуги(Servitor Recharge)" cost="3000000" min_level="73"/>
+			<skill id="146" level="45" name="Антимагия(Anti Magic)" cost="3000000" min_level="74"/>
+			<skill id="212" level="6" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="3000000" min_level="74"/>
+			<skill id="229" level="7" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="3000000" min_level="74"/>
+			<skill id="258" level="33" name="Владение Легкой Броней(Light Armor Mastery)" cost="3000000" min_level="74"/>
+			<skill id="234" level="41" name="Владение Магической Броней(Robe Mastery)" cost="3000000" min_level="74"/>
+			<skill id="249" level="42" name="Владение Оружием(Weapon Mastery)" cost="3000000" min_level="74"/>
+			<skill id="1127" level="45" name="Лечение Слуги(Servitor Heal)" cost="3000000" min_level="74"/>
+			<skill id="1126" level="34" name="Подпитка Слуги(Servitor Recharge)" cost="3000000" min_level="74"/>
+			<skill id="1228" level="18" name="Призвать Гекату(Summon Silhouette)" cost="3000000" min_level="74"/>
+			<skill id="33" level="8" name="Призвать Призрачный Кубик(Summon Phantom Cubic)" cost="3000000" min_level="74"/>
+			<skill id="1278" level="14" name="Призвать Самаэля(Summon Soulless)" cost="3000000" min_level="74"/>
+			<skill id="1128" level="18" name="Призвать Тень(Summon Shadow)" cost="3000000" min_level="74"/>
+		</class>
+	</normal_skill_tree>
+</list>

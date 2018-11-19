@@ -1,0 +1,43 @@
+<html><body>
+<center><font color="LEVEL">
+	<?npc_name?> [AI: %ai_type%]<br1>
+	Level <?level?> %class%, faction %factionId%
+</font></center>
+<table border=0 width="100%">
+<tr><td>Aggro</td><td>%aggro%</td><td>Respawn</td><td>%respawn%</td></tr>
+<tr><td>NpcId</td><td><?id?></td><td>Location</td><td>%loc%</td></tr>
+</table><table border=0 width="100%">
+<tr><td>Pos</td><td>%xyz%</td><td>Direction</td><td>%direction%</td></tr>
+</table>
+<table border=0 width="100%">
+<tr><td><font color="LEVEL">Combat</font></td><td></td></tr>
+<tr><td>Cur.HP</td><td>%currentHP%</td><td>Cur.MP</td><td>%currentMP%</td></tr>
+<tr><td>Max.HP</td><td><?max_hp?></td><td>Max.MP</td><td><?max_mp?></td></tr>
+<tr><td>Regen.HP</td><td>%hp_regen%</td><td>Regen.MP</td><td>%mp_regen%</td></tr>
+<tr><td>P.Atk.</td><td>%pAtk%</td><td>M.Atk.</td><td>%mAtk%</td></tr>
+<tr><td>P.Def.</td><td>%pDef%</td><td>M.Def.</td><td>%mDef%</td></tr>
+<tr><td>P. Acc.</td><td>%pacc%</td><td>M. Acc.</td><td>%macc%</td></tr>
+<tr><td>P. Evs.</td><td>%pevs%</td><td>M. Evs.</td><td>%mevs%</td></tr>
+<tr><td>P. Crit.</td><td>%pcrt%</td><td>M. Crit.</td><td>%mcrt%</td></tr>
+<tr><td>Spd</td><td>%walkSpeed%/%runSpeed%</td><td></td><td></td></tr>
+<tr><td>Atk.Spd</td><td>%aspd%</td><td>Cst.Spd</td><td>%cspd%</td></tr>
+<tr><td>Dist.</td><td>%dist%</td><td>Killed</td><td>%killed%</td></tr>
+<tr><td>Exp</td><td><?xp_reward?></td><td>Sp</td><td><?sp_reward?></td></tr>
+</table>
+<br>
+Event: %event%
+<br>
+<table>
+<tr>
+	<td><button value="Drop List" action="bypass -h htmbypass_actions.OnActionShift:droplist" width=80 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+	<td><button value="Resists" action="bypass -h htmbypass_actions.OnActionShift:resists" width=80 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+	<td><button value="Aggro" action="bypass -h htmbypass_actions.OnActionShift:aggro" width=80 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+<tr>
+	<td><button value="Quests" action="bypass -h htmbypass_actions.OnActionShift:quests" width=80 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+	<td><button value="Skills" action="bypass -h htmbypass_actions.OnActionShift:skills" width=80 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+	<td><button value="Effects" action="bypass -h htmbypass_actions.OnActionShift:effects" width=80 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr><br>
+</table><br>
+%AI%<br>
+</body></html>

@@ -1,0 +1,52 @@
+<!--AUTHOR: Bonux-->
+<html><head>
+<title>Номер Телефона</title>
+<body scroll="no">
+<table border=0 cellpadding=0 cellspacing=0 width=292>
+	<?message?>
+	<tr>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=292 height=170 background="L2UI_CH3.refinewnd_back_Pattern">
+				<tr>
+					<td align=center height=120>
+						<br><br><br>
+						<table width=240>
+							<tr><td fixwidth=100><font name="CreditText" color="DDD3B6">Текущий номер:</font></td><td fixwidth=10></td><td fixwidth=120 align=right><font name="CreditTextNormal" color="FF6A00"><?current_number?></font></td></tr>
+							<tr><td fixwidth=100><font name="CreditText" color="DDD3B6">Новый номер<font color="LEVEL">*</font>:</font></td><td fixwidth=10>+</td><td fixwidth=120 height=29 align=right><edit var="newnumber" width=115 height=15 /></td></tr>
+						</table>
+						<br><button value="Изменить" action="bypass -h user_phonenumber $newnumber" back="l2ui_ct1.Button_DF_Msn_down" width=200 height=30 fore="l2ui_ct1.Button_DF_Msn">
+					</td>
+				</tr>
+				<tr><td align=center height=50><font color="LEVEL">* Телефон нужно указывать цифрами<br1>без каких-либо символов.</font></td></tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</body></html>
+<!--TEMPLATE1
+Не указан
+TEMPLATE-->
+<!--TEMPLATE2
+<tr>
+	<td>
+		<table width=292 border=0 background="L2UI_CT1.editbox_df_bg">
+			<tr><td align=center width=5></td><td align=center height=10></td><td align=center width=5></td></tr>
+			<tr><td align=center width=5></td><td align=center width=292><?message_text?></td><td align=center width=5></td></tr>
+			<tr><td align=center width=5></td><td align=center height=10></td><td align=center width=5></td></tr>
+		</table>
+		<br>
+	</td>
+</tr>
+TEMPLATE-->
+<!--TEMPLATE3
+<font color="FF0000">Телефон указан в неверном формате!<br1>Введите номер телефона заново.</font>
+TEMPLATE-->
+<!--TEMPLATE4
+<font color="FF0000">Связь с сервером авторизации не установлена!<br1>Повторите попытку позже.</font>
+TEMPLATE-->
+<!--TEMPLATE5
+<font color="FF0000">Вы указали номер соответствующий текущему!<br1>Изменение номера невозможно.</font>
+TEMPLATE-->
+<!--TEMPLATE6
+<font color="B6FF00">Вы успешно изменили номер телефона!</font>
+TEMPLATE-->

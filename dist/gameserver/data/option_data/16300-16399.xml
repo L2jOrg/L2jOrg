@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "option_data.dtd">
+<list>
+	<option_data id="16300">
+		<skills>
+			<skill id="3163" level="3"/> <!--Item Skill: Music Clarity-->
+		</skills>
+	</option_data>
+	<option_data id="16301">
+		<skills>
+			<skill id="3200" level="3"/> <!--Item Skill: Spell Refresh-->
+		</skills>
+	</option_data>
+	<option_data id="16302">
+		<skills>
+			<skill id="3162" level="3"/> <!--Item Skill: Spell Clarity-->
+		</skills>
+	</option_data>
+	<option_data id="16303">
+		<skills>
+			<skill id="3159" level="3"/> <!--Item Skill: Stealth-->
+		</skills>
+	</option_data>
+	<option_data id="16304">
+		<skills>
+			<skill id="3148" level="10"/> <!--Item Skill: Vampiric Rage-->
+		</skills>
+	</option_data>
+	<option_data id="16305">
+		<triggers>
+			<trigger id="3094" level="10" type="ATTACK" chance="1.0"/> <!--Item Skill: Doom-->
+		</triggers>
+	</option_data>
+	<option_data id="16306">
+		<triggers>
+			<trigger id="3082" level="10" type="ATTACK" chance="1.0"/> <!--Item Skill: Mana Burn-->
+		</triggers>
+	</option_data>
+	<option_data id="16307">
+		<triggers>
+			<trigger id="3088" level="10" type="ATTACK" chance="1.0"/> <!--Item Skill: Paralyze-->
+		</triggers>
+	</option_data>
+	<option_data id="16308">
+		<triggers>
+			<trigger id="3093" level="10" type="ATTACK" chance="1.0"/> <!--Item Skill: Silence-->
+		</triggers>
+	</option_data>
+	<option_data id="16309">
+		<triggers>
+			<trigger id="3087" level="10" type="ATTACK" chance="1.0"/> <!--Item Skill: Sleep-->
+		</triggers>
+	</option_data>
+	<option_data id="16310">
+		<triggers>
+			<trigger id="3085" level="10" type="ATTACK" chance="1.0"/> <!--Item Skill: Stun-->
+		</triggers>
+	</option_data>
+	<option_data id="16311">
+		<triggers>
+			<trigger id="3122" level="10" type="CRIT" chance="5.0"/> <!--Item Skill: Doom-->
+		</triggers>
+	</option_data>
+	<option_data id="16312">
+		<triggers>
+			<trigger id="3110" level="10" type="CRIT" chance="5.0"/> <!--Item Skill: Mana Burn-->
+		</triggers>
+	</option_data>
+	<option_data id="16313">
+		<triggers>
+			<trigger id="3116" level="10" type="CRIT" chance="5.0"/> <!--Item Skill: Paralyze-->
+		</triggers>
+	</option_data>
+	<option_data id="16314">
+		<triggers>
+			<trigger id="3121" level="10" type="CRIT" chance="5.0"/> <!--Item Skill: Silence-->
+		</triggers>
+	</option_data>
+	<option_data id="16315">
+		<triggers>
+			<trigger id="3115" level="10" type="CRIT" chance="5.0"/> <!--Item Skill: Sleep-->
+		</triggers>
+	</option_data>
+	<option_data id="16316">
+		<triggers>
+			<trigger id="3113" level="10" type="CRIT" chance="5.0"/> <!--Item Skill: Stun-->
+		</triggers>
+	</option_data>
+	<option_data id="16317">
+		<skills>
+			<skill id="3237" level="10"/> <!--Item Skill: Doom-->
+		</skills>
+	</option_data>
+	<option_data id="16318">
+		<skills>
+			<skill id="3233" level="10"/> <!--Item Skill: Fear-->
+		</skills>
+	</option_data>
+	<option_data id="16319">
+		<skills>
+			<skill id="3212" level="10"/> <!--Item Skill: Mana Gain-->
+		</skills>
+	</option_data>
+	<option_data id="16320">
+		<skills>
+			<skill id="3210" level="10"/> <!--Item Skill: Recharge-->
+		</skills>
+	</option_data>
+	<option_data id="16321">
+		<skills>
+			<skill id="3231" level="10"/> <!--Item Skill: Paralyze-->
+		</skills>
+	</option_data>
+	<option_data id="16322">
+		<skills>
+			<skill id="3236" level="10"/> <!--Item Skill: Silence-->
+		</skills>
+	</option_data>
+	<option_data id="16323">
+		<skills>
+			<skill id="3228" level="10"/> <!--Item Skill: Stun-->
+		</skills>
+	</option_data>
+	<option_data id="16324">
+		<skills>
+			<skill id="3232" level="10"/> <!--Item Skill: Medusa-->
+		</skills>
+	</option_data>
+	<option_data id="16325">
+		<triggers>
+			<trigger id="3107" level="10" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="2.0"/> <!--Item Skill: Doom-->
+		</triggers>
+	</option_data>
+	<option_data id="16326">
+		<triggers>
+			<trigger id="3095" level="10" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="2.0"/> <!--Item Skill: Mana Burn-->
+		</triggers>
+	</option_data>
+	<option_data id="16327">
+		<triggers>
+			<trigger id="3101" level="10" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="2.0"/> <!--Item Skill: Paralyze-->
+		</triggers>
+	</option_data>
+	<option_data id="16328">
+		<triggers>
+			<trigger id="3106" level="10" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="2.0"/> <!--Item Skill: Silence-->
+		</triggers>
+	</option_data>
+	<option_data id="16329">
+		<triggers>
+			<trigger id="3100" level="10" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="2.0"/> <!--Item Skill: Sleep-->
+		</triggers>
+	</option_data>
+	<option_data id="16330">
+		<triggers>
+			<trigger id="3098" level="10" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="2.0"/> <!--Item Skill: Stun-->
+		</triggers>
+	</option_data>
+	<option_data id="16331">
+		<skills>
+			<skill id="3258" level="3"/> <!--Item Skill: Clarity-->
+		</skills>
+	</option_data>
+	<option_data id="16332">
+		<skills>
+			<skill id="3247" level="10"/> <!--Item Skill: Agility-->
+		</skills>
+	</option_data>
+	<option_data id="16333">
+		<skills>
+			<skill id="3249" level="10"/> <!--Item Skill: Focus-->
+		</skills>
+	</option_data>
+	<option_data id="16334">
+		<skills>
+			<skill id="3259" level="3"/> <!--Item Skill: Reflect Damage-->
+		</skills>
+	</option_data>
+	<option_data id="16335">
+		<skills>
+			<skill id="3248" level="10"/> <!--Item Skill: Guidance-->
+		</skills>
+	</option_data>
+	<option_data id="16336">
+		<skills>
+			<skill id="3250" level="10"/> <!--Item Skill: Wild Magic-->
+		</skills>
+	</option_data>
+	<option_data id="16337">
+		<skills>
+			<skill id="3239" level="10"/> <!--Item Skill: Mana Gain-->
+		</skills>
+	</option_data>
+	<option_data id="16338">
+		<skills>
+			<skill id="3255" level="3"/> <!--Item Skill: Skill Clarity-->
+		</skills>
+	</option_data>
+	<option_data id="16339">
+		<skills>
+			<skill id="3257" level="3"/> <!--Item Skill: Music Clarity-->
+		</skills>
+	</option_data>
+	<option_data id="16340">
+		<skills>
+			<skill id="3256" level="3"/> <!--Item Skill: Spell Clarity-->
+		</skills>
+	</option_data>
+	<option_data id="16377">
+		<for>
+			<add order="0x60" stat="STR" value="1.0"/>
+		</for>
+	</option_data>
+	<option_data id="16378">
+		<for>
+			<add order="0x60" stat="CON" value="1.0"/>
+		</for>
+	</option_data>
+	<option_data id="16379">
+		<for>
+			<add order="0x60" stat="INT" value="1.0"/>
+		</for>
+	</option_data>
+	<option_data id="16380">
+		<for>
+			<add order="0x60" stat="MEN" value="1.0"/>
+		</for>
+	</option_data>
+</list>

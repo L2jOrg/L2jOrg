@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="25140004" name="Godad_Dragoncave_S.1F_UP.Godad_DC_door" hp="158250" pdef="644" mdef="518">
+		<pos x="190918" y="-115529" z="-1529"/>
+		<shape ax="190891" ay="-115627" bx="190944" by="-115628" cx="190945" cy="-115430" dx="190892" dy="-115430" minz="-1780" maxz="-1480"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="25140005" name="Godad_Dragoncave_S.1F_UP.Godad_DC_door" hp="158250" pdef="644" mdef="518">
+		<pos x="189480" y="-108511" z="-964"/>
+		<shape ax="189571" ay="-108551" bx="189580" by="-108510" cx="189388" cy="-108473" dx="189380" dy="-108507" minz="-1218" maxz="-918"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="25140006" name="Godad_Dragoncave_S.1F_UP.Godad_DC_door" hp="158250" pdef="644" mdef="518">
+		<pos x="191458" y="-108107" z="-962"/>
+		<shape ax="191357" ay="-108120" bx="191369" by="-108154" cx="191558" cy="-108095" dx="191549" dy="-108058" minz="-1216" maxz="-916"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+</list>

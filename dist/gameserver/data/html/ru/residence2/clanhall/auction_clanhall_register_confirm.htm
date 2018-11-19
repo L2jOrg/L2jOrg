@@ -1,0 +1,61 @@
+<html>
+<body>
+<table width=270 border=0>
+	<tr>
+		<td width=90>
+			Стандартная Цена Аукциона:
+		</td>
+		<td width=180>
+			<font color="aaccff">%base_bid%</font> Аден
+		</td>
+	</tr>
+	<tr>
+		<td width=90>
+			Минимальная ставка:
+		</td>
+		<td width=180>
+			<font color="aaccff">%bid%</font> Аден
+		</td>
+	</tr>
+	<tr>
+		<td width=90>
+			Сроки проведения торгов:
+		</td>
+		<td width=180>
+			%day% days
+		</td>
+	</tr>
+	<tr>
+		<td width=90>
+			Дата закрытия:
+		</td>
+		<td width=180>%hour% hour %date%
+		</td>
+	</tr>
+</table>
+<table width=270 border=0 bgcolor=333333>
+	<tr>
+		<td width=270>
+			%description%
+		</td>
+	</tr>
+</table>
+Вы можете изменить информацию, нажав "Назад".<br>
+Вы хотите зарегистрировать холл клана на аукцион?
+<img src="L2UI.SquareBlank" width=270 height=10>
+<img src="L2UI.SquareWhite" width=270 height=1>
+<img src="L2UI.SquareBlank" width=270 height=5>
+<table width=270 border=0>
+	<tr>
+		<td width=100></td>
+		<td width=80 align=center>
+			<button action="bypass -h npc_%objectId%_register_next" value="Назад" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+		</td>
+		<td width=80 align=center>
+			<button action="bypass -h npc_%objectId%_register_confirm %day% %bid% %description%" value="Подтвердить" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+		</td>
+	</tr>
+</table>
+&nbsp;<br>
+</body>
+</html>

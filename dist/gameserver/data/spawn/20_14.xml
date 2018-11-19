@@ -1,0 +1,1207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<territory name="oren_t20_14_018">
+		<add x="5792" y="-105892" zmin="-2784" zmax="-1684"/>
+		<add x="8680" y="-105600" zmin="-2784" zmax="-1684"/>
+		<add x="8220" y="-102876" zmin="-2784" zmax="-1684"/>
+		<add x="6712" y="-100884" zmin="-2784" zmax="-1684"/>
+		<add x="3580" y="-100228" zmin="-2784" zmax="-1684"/>
+		<add x="3424" y="-103024" zmin="-2784" zmax="-1684"/>
+	</territory>
+	<spawn name="oren_t20_14_018" count="4" respawn="15">
+		<territory name="oren_t20_14_018"/>
+		<npc id="21121"/><!--Жуткий Волк Кхаши-->
+	</spawn>
+	<spawn name="oren_t20_14_018" count="5" respawn="15">
+		<territory name="oren_t20_14_018"/>
+		<npc id="21122"/><!--Людоед Кхаши-->
+	</spawn>
+	<spawn name="oren_t20_14_018" count="4" respawn="15">
+		<territory name="oren_t20_14_018"/>
+		<npc id="21123"/><!--Баал Разрушитель Дре Ванул-->
+	</spawn>
+	<spawn name="lyonn01_qm2014_04" count="1" respawn="180">
+		<territory>
+			<add x="16150" y="-119917" zmin="-3196" zmax="-2996"/>
+			<add x="16612" y="-119812" zmin="-3196" zmax="-2996"/>
+			<add x="16429" y="-119166" zmin="-3196" zmax="-2996"/>
+			<add x="15966" y="-119324" zmin="-3196" zmax="-2996"/>
+		</territory>
+		<npc id="27133"/><!--Монарх Око Зла-->
+	</spawn>
+	<territory name="lyonn01_qm2014_02">
+		<add x="10900" y="-108040" zmin="-3624" zmax="-3024"/>
+		<add x="12392" y="-107080" zmin="-3624" zmax="-3024"/>
+		<add x="12524" y="-106076" zmin="-3624" zmax="-3024"/>
+		<add x="11524" y="-105636" zmin="-3624" zmax="-3024"/>
+		<add x="10536" y="-106760" zmin="-3624" zmax="-3024"/>
+	</territory>
+	<spawn name="lyonn01_qm2014_02" count="2" respawn="180">
+		<territory name="lyonn01_qm2014_02"/>
+		<npc id="20778"/><!--Владыка Орков Рагна-->
+	</spawn>
+	<spawn name="lyonn01_qm2014_02" count="2" respawn="180">
+		<territory name="lyonn01_qm2014_02"/>
+		<npc id="20779"/><!--Провидец Орков Рагна-->
+	</spawn>
+	<spawn name="lyonn01_qm2014_01" count="1" respawn="300">
+		<point x="16576" y="-118592" z="-768" h="0"/>
+		<npc id="27041"/><!--Посланник Фаранги-->
+	</spawn>
+	<spawn name="lyonn01_npc2014_g02" count="1" respawn="60">
+		<territory>
+			<add x="744" y="-113032" zmin="-2808" zmax="-1708"/>
+			<add x="96" y="-98928" zmin="-2808" zmax="-1708"/>
+			<add x="9608" y="-99108" zmin="-2808" zmax="-1708"/>
+			<add x="10344" y="-104944" zmin="-2808" zmax="-1708"/>
+			<add x="6614" y="-106775" zmin="-2808" zmax="-1708"/>
+			<add x="6782" y="-113507" zmin="-2808" zmax="-1708"/>
+			<add x="2733" y="-109789" zmin="-2808" zmax="-1708"/>
+		</territory>
+		<npc id="31036"/><!--Центурион-->
+	</spawn>
+	<spawn name="lyonn01_npc2014_g01" count="1" respawn="60">
+		<territory>
+			<add x="14664" y="-130848" zmin="-3528" zmax="-1128"/>
+			<add x="14522" y="-126893" zmin="-3528" zmax="-1128"/>
+			<add x="14770" y="-124902" zmin="-3528" zmax="-1128"/>
+			<add x="10444" y="-120775" zmin="-3528" zmax="-1128"/>
+			<add x="9805" y="-117971" zmin="-3528" zmax="-1128"/>
+			<add x="7253" y="-113790" zmin="-3528" zmax="-1128"/>
+			<add x="399" y="-116319" zmin="-3528" zmax="-1128"/>
+			<add x="174" y="-130931" zmin="-3528" zmax="-1128"/>
+		</territory>
+		<npc id="31036"/><!--Центурион-->
+	</spawn>
+	<spawn name="lyonn05_npc2014_002" count="1" respawn="60">
+		<point x="19092" y="-117187" z="-3136" h="32768"/>
+		<npc id="30672"/><!--Дубабах-->
+	</spawn>
+	<spawn name="lyonn05_npc2014_001" count="1" respawn="60">
+		<point x="21171" y="-107730" z="-3038" h="30000"/>
+		<npc id="30649"/><!--Прародитель Мартанкус-->
+	</spawn>
+	<spawn name="lyonn05_npc2014_003" count="1" respawn="60">
+		<point x="19412" y="-118142" z="-3136" h="0"/>
+		<npc id="30675"/><!--Труп Камура-->
+	</spawn>
+	<territory name="lyonn09_2014_13">
+		<add x="3960" y="-119404" zmin="-2800" zmax="-1900"/>
+		<add x="5296" y="-118632" zmin="-2800" zmax="-1900"/>
+		<add x="6308" y="-117660" zmin="-2800" zmax="-1900"/>
+		<add x="3544" y="-115664" zmin="-2800" zmax="-1900"/>
+		<add x="360" y="-116448" zmin="-2800" zmax="-1900"/>
+		<add x="324" y="-118324" zmin="-2800" zmax="-1900"/>
+	</territory>
+	<spawn name="lyonn09_2014_13" count="4" respawn="15">
+		<territory name="lyonn09_2014_13"/>
+		<npc id="21257"/><!--Блюститель Око Зла-->
+	</spawn>
+	<spawn name="lyonn09_2014_13" count="5" respawn="15">
+		<territory name="lyonn09_2014_13"/>
+		<npc id="21117"/><!--Бес Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2014_13" count="4" respawn="15">
+		<territory name="lyonn09_2014_13"/>
+		<npc id="21118"/><!--Баал Дре Ванул-->
+	</spawn>
+	<territory name="lyonn09_2014_19">
+		<add x="324" y="-102876" zmin="-2356" zmax="-1556"/>
+		<add x="3308" y="-102828" zmin="-2356" zmax="-1556"/>
+		<add x="3512" y="-98596" zmin="-2356" zmax="-1556"/>
+		<add x="280" y="-98572" zmin="-2356" zmax="-1556"/>
+	</territory>
+	<spawn name="lyonn09_2014_19" count="4" respawn="15">
+		<territory name="lyonn09_2014_19"/>
+		<npc id="21121"/><!--Жуткий Волк Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2014_19" count="4" respawn="15">
+		<territory name="lyonn09_2014_19"/>
+		<npc id="21122"/><!--Людоед Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2014_19" count="3" respawn="15">
+		<territory name="lyonn09_2014_19"/>
+		<npc id="21123"/><!--Баал Разрушитель Дре Ванул-->
+	</spawn>
+	<spawn name="lyonn09_2014_24" count="2" respawn="15">
+		<territory>
+			<add x="1660" y="-107844" zmin="-2812" zmax="-2312"/>
+			<add x="3432" y="-106452" zmin="-2812" zmax="-2312"/>
+			<add x="1860" y="-104116" zmin="-2812" zmax="-2312"/>
+			<add x="704" y="-105932" zmin="-2812" zmax="-2312"/>
+		</territory>
+		<npc id="21119"/><!--Хобгоблин Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2014_25" count="2" respawn="15">
+		<territory>
+			<add x="5064" y="-104412" zmin="-2732" zmax="-1982"/>
+			<add x="7412" y="-104164" zmin="-2732" zmax="-1982"/>
+			<add x="5524" y="-101616" zmin="-2732" zmax="-1982"/>
+			<add x="3904" y="-102704" zmin="-2732" zmax="-1982"/>
+		</territory>
+		<npc id="21122"/><!--Людоед Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2014_26" count="2" respawn="15">
+		<territory>
+			<add x="1004" y="-101520" zmin="-2104" zmax="-1704"/>
+			<add x="2520" y="-102348" zmin="-2104" zmax="-1704"/>
+			<add x="3072" y="-100176" zmin="-2104" zmax="-1704"/>
+			<add x="1820" y="-99376" zmin="-2104" zmax="-1704"/>
+		</territory>
+		<npc id="21122"/><!--Людоед Кхаши-->
+	</spawn>
+	<territory name="lyonn09_2014_27">
+		<add x="24384" y="-124680" zmin="-892" zmax="-592"/>
+		<add x="25044" y="-126792" zmin="-892" zmax="-592"/>
+		<add x="26576" y="-126544" zmin="-892" zmax="-592"/>
+		<add x="27584" y="-125232" zmin="-892" zmax="-592"/>
+		<add x="26704" y="-123556" zmin="-892" zmax="-592"/>
+		<add x="24848" y="-122724" zmin="-892" zmax="-592"/>
+	</territory>
+	<spawn name="lyonn09_2014_27" count="3" respawn="21">
+		<territory name="lyonn09_2014_27"/>
+		<npc id="20479"/><!--Медведь Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2014_27" count="2" respawn="21">
+		<territory name="lyonn09_2014_27"/>
+		<npc id="20476"/><!--Клыкастый Паук Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2014_27" count="2" respawn="21">
+		<territory name="lyonn09_2014_27"/>
+		<npc id="20478"/><!--Опасный Паук Кхаши-->
+	</spawn>
+	<territory name="lyonn09_2014_20">
+		<add x="3528" y="-100132" zmin="-2160" zmax="-1560"/>
+		<add x="6596" y="-100808" zmin="-2160" zmax="-1560"/>
+		<add x="6180" y="-98504" zmin="-2160" zmax="-1560"/>
+		<add x="3524" y="-98560" zmin="-2160" zmax="-1560"/>
+	</territory>
+	<spawn name="lyonn09_2014_20" count="3" respawn="15">
+		<territory name="lyonn09_2014_20"/>
+		<npc id="21121"/><!--Жуткий Волк Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2014_20" count="2" respawn="15">
+		<territory name="lyonn09_2014_20"/>
+		<npc id="21122"/><!--Людоед Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2014_20" count="2" respawn="15">
+		<territory name="lyonn09_2014_20"/>
+		<npc id="21123"/><!--Баал Разрушитель Дре Ванул-->
+	</spawn>
+	<territory name="lyonn09_2014_21">
+		<add x="8660" y="-102272" zmin="-2524" zmax="-1624"/>
+		<add x="10332" y="-101652" zmin="-2524" zmax="-1624"/>
+		<add x="10292" y="-98612" zmin="-2524" zmax="-1624"/>
+		<add x="6776" y="-98572" zmin="-2524" zmax="-1624"/>
+		<add x="7036" y="-100520" zmin="-2524" zmax="-1624"/>
+	</territory>
+	<spawn name="lyonn09_2014_21" count="3" respawn="15">
+		<territory name="lyonn09_2014_21"/>
+		<npc id="21121"/><!--Жуткий Волк Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2014_21" count="3" respawn="15">
+		<territory name="lyonn09_2014_21"/>
+		<npc id="21122"/><!--Людоед Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2014_21" count="3" respawn="15">
+		<territory name="lyonn09_2014_21"/>
+		<npc id="21123"/><!--Баал Разрушитель Дре Ванул-->
+	</spawn>
+	<spawn name="lyonn09_2014_22" count="3" respawn="21">
+		<territory>
+			<add x="6044" y="-126916" zmin="-2920" zmax="-2370"/>
+			<add x="7228" y="-125940" zmin="-2920" zmax="-2370"/>
+			<add x="6492" y="-124424" zmin="-2920" zmax="-2370"/>
+			<add x="4404" y="-124716" zmin="-2920" zmax="-2370"/>
+		</territory>
+		<npc id="20478"/><!--Опасный Паук Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2014_23" count="3" respawn="21">
+		<territory>
+			<add x="11340" y="-130252" zmin="-1996" zmax="-1146"/>
+			<add x="13368" y="-130292" zmin="-1996" zmax="-1146"/>
+			<add x="12416" y="-127672" zmin="-1996" zmax="-1146"/>
+			<add x="10532" y="-127992" zmin="-1996" zmax="-1146"/>
+		</territory>
+		<npc id="20478"/><!--Опасный Паук Кхаши-->
+	</spawn>
+	<territory name="lyonn08_2014_11">
+		<add x="19028" y="-120460" zmin="-972" zmax="-372"/>
+		<add x="22100" y="-122932" zmin="-972" zmax="-372"/>
+		<add x="24024" y="-121356" zmin="-972" zmax="-372"/>
+		<add x="21668" y="-120008" zmin="-972" zmax="-372"/>
+	</territory>
+	<spawn name="lyonn08_2014_11" count="3" respawn="21">
+		<territory name="lyonn08_2014_11"/>
+		<npc id="20479"/><!--Медведь Кхаши-->
+	</spawn>
+	<spawn name="lyonn08_2014_11" count="3" respawn="21">
+		<territory name="lyonn08_2014_11"/>
+		<npc id="20476"/><!--Клыкастый Паук Кхаши-->
+	</spawn>
+	<spawn name="lyonn08_2014_11" count="3" respawn="21">
+		<territory name="lyonn08_2014_11"/>
+		<npc id="20478"/><!--Опасный Паук Кхаши-->
+	</spawn>
+	<territory name="lyonn08_2014_10">
+		<add x="25712" y="-128236" zmin="-956" zmax="-406"/>
+		<add x="28256" y="-126992" zmin="-956" zmax="-406"/>
+		<add x="29276" y="-124396" zmin="-956" zmax="-406"/>
+		<add x="24072" y="-121376" zmin="-956" zmax="-406"/>
+		<add x="22096" y="-123184" zmin="-956" zmax="-406"/>
+		<add x="23316" y="-126552" zmin="-956" zmax="-406"/>
+	</territory>
+	<spawn name="lyonn08_2014_10" count="6" respawn="21">
+		<territory name="lyonn08_2014_10"/>
+		<npc id="20479"/><!--Медведь Кхаши-->
+	</spawn>
+	<spawn name="lyonn08_2014_10" count="6" respawn="21">
+		<territory name="lyonn08_2014_10"/>
+		<npc id="20476"/><!--Клыкастый Паук Кхаши-->
+	</spawn>
+	<spawn name="lyonn08_2014_10" count="6" respawn="21">
+		<territory name="lyonn08_2014_10"/>
+		<npc id="20478"/><!--Опасный Паук Кхаши-->
+	</spawn>
+	<territory name="lyonn08_2014_04">
+		<add x="6476" y="-130768" zmin="-3136" zmax="-1886"/>
+		<add x="10388" y="-130972" zmin="-3136" zmax="-1886"/>
+		<add x="9324" y="-125580" zmin="-3136" zmax="-1886"/>
+		<add x="6416" y="-128988" zmin="-3136" zmax="-1886"/>
+	</territory>
+	<spawn name="lyonn08_2014_04" count="4" respawn="21">
+		<territory name="lyonn08_2014_04"/>
+		<npc id="20428"/><!--Дозорный Око Зла-->
+	</spawn>
+	<spawn name="lyonn08_2014_04" count="5" respawn="21">
+		<territory name="lyonn08_2014_04"/>
+		<npc id="20364"/><!--Вожак Оборотней Мараку-->
+	</spawn>
+	<spawn name="lyonn08_2014_04" count="4" respawn="21">
+		<territory name="lyonn08_2014_04"/>
+		<npc id="20474"/><!--Паук Кхаши-->
+	</spawn>
+	<territory name="lyonn08_2014_03">
+		<add x="3768" y="-122744" zmin="-2820" zmax="-1420"/>
+		<add x="9164" y="-125284" zmin="-2820" zmax="-1420"/>
+		<add x="11372" y="-123208" zmin="-2820" zmax="-1420"/>
+		<add x="9132" y="-121264" zmin="-2820" zmax="-1420"/>
+		<add x="5784" y="-119992" zmin="-2820" zmax="-1420"/>
+		<add x="3812" y="-121060" zmin="-2820" zmax="-1420"/>
+	</territory>
+	<spawn name="lyonn08_2014_03" count="5" respawn="21">
+		<territory name="lyonn08_2014_03"/>
+		<npc id="20479"/><!--Медведь Кхаши-->
+	</spawn>
+	<spawn name="lyonn08_2014_03" count="6" respawn="21">
+		<territory name="lyonn08_2014_03"/>
+		<npc id="20476"/><!--Клыкастый Паук Кхаши-->
+	</spawn>
+	<spawn name="lyonn08_2014_03" count="5" respawn="21">
+		<territory name="lyonn08_2014_03"/>
+		<npc id="20478"/><!--Опасный Паук Кхаши-->
+	</spawn>
+	<territory name="lyonn08_2014_02">
+		<add x="3260" y="-127148" zmin="-3336" zmax="-2086"/>
+		<add x="6500" y="-128716" zmin="-3336" zmax="-2086"/>
+		<add x="9140" y="-125308" zmin="-3336" zmax="-2086"/>
+		<add x="3532" y="-122676" zmin="-3336" zmax="-2086"/>
+	</territory>
+	<spawn name="lyonn08_2014_02" count="5" respawn="21">
+		<territory name="lyonn08_2014_02"/>
+		<npc id="20364"/><!--Вожак Оборотней Мараку-->
+	</spawn>
+	<spawn name="lyonn08_2014_02" count="5" respawn="21">
+		<territory name="lyonn08_2014_02"/>
+		<npc id="20474"/><!--Паук Кхаши-->
+	</spawn>
+	<spawn name="lyonn08_2014_02" count="5" respawn="21">
+		<territory name="lyonn08_2014_02"/>
+		<npc id="20479"/><!--Медведь Кхаши-->
+	</spawn>
+	<territory name="lyonn08_2014_01">
+		<add x="396" y="-127640" zmin="-3388" zmax="-2388"/>
+		<add x="3136" y="-126500" zmin="-3388" zmax="-2388"/>
+		<add x="3464" y="-120532" zmin="-3388" zmax="-2388"/>
+		<add x="1040" y="-119436" zmin="-3388" zmax="-2388"/>
+		<add x="364" y="-119688" zmin="-3388" zmax="-2388"/>
+	</territory>
+	<spawn name="lyonn08_2014_01" count="4" respawn="21">
+		<territory name="lyonn08_2014_01"/>
+		<npc id="20474"/><!--Паук Кхаши-->
+	</spawn>
+	<spawn name="lyonn08_2014_01" count="5" respawn="21">
+		<territory name="lyonn08_2014_01"/>
+		<npc id="20479"/><!--Медведь Кхаши-->
+	</spawn>
+	<spawn name="lyonn08_2014_01" count="4" respawn="21">
+		<territory name="lyonn08_2014_01"/>
+		<npc id="20476"/><!--Клыкастый Паук Кхаши-->
+	</spawn>
+	<territory name="lyonn08_2014_08">
+		<add x="18568" y="-130976" zmin="-1832" zmax="-1432"/>
+		<add x="22048" y="-130984" zmin="-1832" zmax="-1432"/>
+		<add x="22664" y="-129468" zmin="-1832" zmax="-1432"/>
+		<add x="21004" y="-128996" zmin="-1832" zmax="-1432"/>
+		<add x="19348" y="-129676" zmin="-1832" zmax="-1432"/>
+	</territory>
+	<spawn name="lyonn08_2014_08" count="3" respawn="21">
+		<territory name="lyonn08_2014_08"/>
+		<npc id="20479"/><!--Медведь Кхаши-->
+	</spawn>
+	<spawn name="lyonn08_2014_08" count="2" respawn="21">
+		<territory name="lyonn08_2014_08"/>
+		<npc id="20476"/><!--Клыкастый Паук Кхаши-->
+	</spawn>
+	<spawn name="lyonn08_2014_08" count="2" respawn="21">
+		<territory name="lyonn08_2014_08"/>
+		<npc id="20478"/><!--Опасный Паук Кхаши-->
+	</spawn>
+	<territory name="lyonn09_2015_14">
+		<add x="6244" y="-117420" zmin="-2244" zmax="-1594"/>
+		<add x="8212" y="-115348" zmin="-2244" zmax="-1594"/>
+		<add x="6920" y="-113100" zmin="-2244" zmax="-1594"/>
+		<add x="4028" y="-112808" zmin="-2244" zmax="-1594"/>
+		<add x="4144" y="-115688" zmin="-2244" zmax="-1594"/>
+	</territory>
+	<spawn name="lyonn09_2015_14" count="4" respawn="15">
+		<territory name="lyonn09_2015_14"/>
+		<npc id="21257"/><!--Блюститель Око Зла-->
+	</spawn>
+	<spawn name="lyonn09_2015_14" count="4" respawn="15">
+		<territory name="lyonn09_2015_14"/>
+		<npc id="21117"/><!--Бес Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_14" count="4" respawn="15">
+		<territory name="lyonn09_2015_14"/>
+		<npc id="21118"/><!--Баал Дре Ванул-->
+	</spawn>
+	<territory name="lyonn09_2015_15">
+		<add x="3036" y="-112136" zmin="-2420" zmax="-1620"/>
+		<add x="6820" y="-112956" zmin="-2420" zmax="-1620"/>
+		<add x="7980" y="-108752" zmin="-2420" zmax="-1620"/>
+		<add x="6208" y="-106892" zmin="-2420" zmax="-1620"/>
+	</territory>
+	<spawn name="lyonn09_2015_15" count="4" respawn="15">
+		<territory name="lyonn09_2015_15"/>
+		<npc id="21257"/><!--Блюститель Око Зла-->
+	</spawn>
+	<spawn name="lyonn09_2015_15" count="5" respawn="15">
+		<territory name="lyonn09_2015_15"/>
+		<npc id="21117"/><!--Бес Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_15" count="4" respawn="15">
+		<territory name="lyonn09_2015_15"/>
+		<npc id="21118"/><!--Баал Дре Ванул-->
+	</spawn>
+	<territory name="lyonn09_2015_16">
+		<add x="160" y="-111692" zmin="-2812" zmax="-2262"/>
+		<add x="1300" y="-111912" zmin="-2812" zmax="-2262"/>
+		<add x="3060" y="-109708" zmin="-2812" zmax="-2262"/>
+		<add x="208" y="-107904" zmin="-2812" zmax="-2262"/>
+	</territory>
+	<spawn name="lyonn09_2015_16" count="3" respawn="15">
+		<territory name="lyonn09_2015_16"/>
+		<npc id="21119"/><!--Хобгоблин Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_16" count="3" respawn="15">
+		<territory name="lyonn09_2015_16"/>
+		<npc id="21120"/><!--Бес Турен Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_16" count="3" respawn="15">
+		<territory name="lyonn09_2015_16"/>
+		<npc id="21121"/><!--Жуткий Волк Кхаши-->
+	</spawn>
+	<territory name="lyonn09_2015_17">
+		<add x="248" y="-107680" zmin="-2904" zmax="-2104"/>
+		<add x="3112" y="-109648" zmin="-2904" zmax="-2104"/>
+		<add x="5788" y="-106140" zmin="-2904" zmax="-2104"/>
+		<add x="3432" y="-103096" zmin="-2904" zmax="-2104"/>
+		<add x="200" y="-103140" zmin="-2904" zmax="-2104"/>
+	</territory>
+	<spawn name="lyonn09_2015_17" count="6" respawn="15">
+		<territory name="lyonn09_2015_17"/>
+		<npc id="21119"/><!--Хобгоблин Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_17" count="6" respawn="15">
+		<territory name="lyonn09_2015_17"/>
+		<npc id="21120"/><!--Бес Турен Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_17" count="6" respawn="15">
+		<territory name="lyonn09_2015_17"/>
+		<npc id="21121"/><!--Жуткий Волк Кхаши-->
+	</spawn>
+	<territory name="lyonn09_2015_12">
+		<add x="5440" y="-118744" zmin="-2112" zmax="-1462"/>
+		<add x="10000" y="-120784" zmin="-2112" zmax="-1462"/>
+		<add x="10892" y="-119492" zmin="-2112" zmax="-1462"/>
+		<add x="8424" y="-115948" zmin="-2112" zmax="-1462"/>
+	</territory>
+	<spawn name="lyonn09_2015_12" count="4" respawn="15">
+		<territory name="lyonn09_2015_12"/>
+		<npc id="21257"/><!--Блюститель Око Зла-->
+	</spawn>
+	<spawn name="lyonn09_2015_12" count="5" respawn="15">
+		<territory name="lyonn09_2015_12"/>
+		<npc id="21117"/><!--Бес Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_12" count="4" respawn="15">
+		<territory name="lyonn09_2015_12"/>
+		<npc id="21118"/><!--Баал Дре Ванул-->
+	</spawn>
+	<spawn name="lyonn05_2014_55" count="1" respawn="68" respawn_random="20">
+		<territory>
+			<add x="22252" y="-118984" zmin="-3332" zmax="-3132"/>
+			<add x="22884" y="-118984" zmin="-3332" zmax="-3132"/>
+			<add x="23544" y="-118757" zmin="-3332" zmax="-3132"/>
+			<add x="23128" y="-118474" zmin="-3332" zmax="-3132"/>
+			<add x="21799" y="-118250" zmin="-3332" zmax="-3132"/>
+		</territory>
+		<npc id="20341"/><!--Нежить Невольник-->
+	</spawn>
+	<spawn name="lyonn05_2014_56" count="1" respawn="68" respawn_random="20">
+		<territory>
+			<add x="23452" y="-118044" zmin="-3428" zmax="-3228"/>
+			<add x="23854" y="-118462" zmin="-3428" zmax="-3228"/>
+			<add x="24043" y="-118046" zmin="-3428" zmax="-3228"/>
+			<add x="23776" y="-117116" zmin="-3428" zmax="-3228"/>
+			<add x="23606" y="-117149" zmin="-3428" zmax="-3228"/>
+		</territory>
+		<npc id="20341"/><!--Нежить Невольник-->
+	</spawn>
+	<territory name="lyonn08_2015_05">
+		<add x="10512" y="-130884" zmin="-2212" zmax="-962"/>
+		<add x="14492" y="-130944" zmin="-2212" zmax="-962"/>
+		<add x="15164" y="-129820" zmin="-2212" zmax="-962"/>
+		<add x="14308" y="-126832" zmin="-2212" zmax="-962"/>
+		<add x="9644" y="-126112" zmin="-2212" zmax="-962"/>
+	</territory>
+	<spawn name="lyonn08_2015_05" count="5" respawn="21">
+		<territory name="lyonn08_2015_05"/>
+		<npc id="20364"/><!--Вожак Оборотней Мараку-->
+	</spawn>
+	<spawn name="lyonn08_2015_05" count="6" respawn="21">
+		<territory name="lyonn08_2015_05"/>
+		<npc id="20474"/><!--Паук Кхаши-->
+	</spawn>
+	<spawn name="lyonn08_2015_05" count="6" respawn="21">
+		<territory name="lyonn08_2015_05"/>
+		<npc id="20479"/><!--Медведь Кхаши-->
+	</spawn>
+	<territory name="lyonn08_2015_06">
+		<add x="9684" y="-125988" zmin="-2168" zmax="-1068"/>
+		<add x="14280" y="-126724" zmin="-2168" zmax="-1068"/>
+		<add x="15332" y="-125616" zmin="-2168" zmax="-1068"/>
+		<add x="15048" y="-124416" zmin="-2168" zmax="-1068"/>
+		<add x="11956" y="-122892" zmin="-2168" zmax="-1068"/>
+	</territory>
+	<spawn name="lyonn08_2015_06" count="4" respawn="21">
+		<territory name="lyonn08_2015_06"/>
+		<npc id="20479"/><!--Медведь Кхаши-->
+	</spawn>
+	<spawn name="lyonn08_2015_06" count="4" respawn="21">
+		<territory name="lyonn08_2015_06"/>
+		<npc id="20476"/><!--Клыкастый Паук Кхаши-->
+	</spawn>
+	<spawn name="lyonn08_2015_06" count="4" respawn="21">
+		<territory name="lyonn08_2015_06"/>
+		<npc id="20478"/><!--Опасный Паук Кхаши-->
+	</spawn>
+	<territory name="lyonn08_2015_07">
+		<add x="2180" y="-130896" zmin="-3528" zmax="-2828"/>
+		<add x="6468" y="-130892" zmin="-3528" zmax="-2828"/>
+		<add x="6424" y="-128680" zmin="-3528" zmax="-2828"/>
+		<add x="3076" y="-127080" zmin="-3528" zmax="-2828"/>
+	</territory>
+	<spawn name="lyonn08_2015_07" count="4" respawn="21">
+		<territory name="lyonn08_2015_07"/>
+		<npc id="20428"/><!--Дозорный Око Зла-->
+	</spawn>
+	<spawn name="lyonn08_2015_07" count="4" respawn="21">
+		<territory name="lyonn08_2015_07"/>
+		<npc id="20364"/><!--Вожак Оборотней Мараку-->
+	</spawn>
+	<spawn name="lyonn08_2015_07" count="4" respawn="21">
+		<territory name="lyonn08_2015_07"/>
+		<npc id="20474"/><!--Паук Кхаши-->
+	</spawn>
+	<spawn name="lyonn05_2014_46" count="1" respawn="68" respawn_random="20">
+		<territory>
+			<add x="19220" y="-119352" zmin="-3200" zmax="-3000"/>
+			<add x="19988" y="-119690" zmin="-3200" zmax="-3000"/>
+			<add x="19804" y="-119382" zmin="-3200" zmax="-3000"/>
+			<add x="19266" y="-119091" zmin="-3200" zmax="-3000"/>
+			<add x="19090" y="-119099" zmin="-3200" zmax="-3000"/>
+		</territory>
+		<npc id="20429"/><!--Защитник Око Зла-->
+	</spawn>
+	<spawn name="lyonn05_2014_47" count="1" respawn="68" respawn_random="20">
+		<territory>
+			<add x="19074" y="-119079" zmin="-3200" zmax="-3000"/>
+			<add x="19236" y="-119068" zmin="-3200" zmax="-3000"/>
+			<add x="19170" y="-118619" zmin="-3200" zmax="-3000"/>
+			<add x="19090" y="-118619" zmin="-3200" zmax="-3000"/>
+		</territory>
+		<npc id="20429"/><!--Защитник Око Зла-->
+	</spawn>
+	<spawn name="lyonn05_2014_40" count="1" respawn="68" respawn_random="20">
+		<territory>
+			<add x="15082" y="-116832" zmin="-3232" zmax="-3032"/>
+			<add x="16120" y="-116877" zmin="-3232" zmax="-3032"/>
+			<add x="15881" y="-116588" zmin="-3232" zmax="-3032"/>
+			<add x="14887" y="-116558" zmin="-3232" zmax="-3032"/>
+		</territory>
+		<npc id="20340"/><!--Скелет Невольник-->
+	</spawn>
+	<spawn name="lyonn05_2014_41" count="1" respawn="68" respawn_random="20">
+		<territory>
+			<add x="15917" y="-118260" zmin="-3248" zmax="-3048"/>
+			<add x="16121" y="-118260" zmin="-3248" zmax="-3048"/>
+			<add x="16132" y="-117108" zmin="-3248" zmax="-3048"/>
+			<add x="15932" y="-117108" zmin="-3248" zmax="-3048"/>
+		</territory>
+		<npc id="20340"/><!--Скелет Невольник-->
+	</spawn>
+	<territory name="lyonn05_2014_44">
+		<add x="18063" y="-120469" zmin="-3192" zmax="-2992"/>
+		<add x="18432" y="-120730" zmin="-3192" zmax="-2992"/>
+		<add x="18938" y="-120683" zmin="-3192" zmax="-2992"/>
+		<add x="19091" y="-120591" zmin="-3192" zmax="-2992"/>
+		<add x="19130" y="-120200" zmin="-3192" zmax="-2992"/>
+		<add x="18884" y="-120047" zmin="-3192" zmax="-2992"/>
+		<add x="18424" y="-120093" zmin="-3192" zmax="-2992"/>
+		<add x="18086" y="-120323" zmin="-3192" zmax="-2992"/>
+	</territory>
+	<spawn name="lyonn05_2014_44" count="1" respawn="68" respawn_random="20">
+		<territory name="lyonn05_2014_44"/>
+		<npc id="20429"/><!--Защитник Око Зла-->
+	</spawn>
+	<spawn name="lyonn05_2014_44" count="1" respawn="68" respawn_random="20">
+		<territory name="lyonn05_2014_44"/>
+		<npc id="20489"/><!--Ртутный Зверь-->
+	</spawn>
+	<spawn name="lyonn05_2014_45" count="1" respawn="68" respawn_random="20">
+		<territory>
+			<add x="19213" y="-120478" zmin="-3196" zmax="-2996"/>
+			<add x="19705" y="-120386" zmin="-3196" zmax="-2996"/>
+			<add x="19966" y="-120047" zmin="-3196" zmax="-2996"/>
+			<add x="19781" y="-120063" zmin="-3196" zmax="-2996"/>
+			<add x="19236" y="-120347" zmin="-3196" zmax="-2996"/>
+		</territory>
+		<npc id="20429"/><!--Защитник Око Зла-->
+	</spawn>
+	<spawn name="lyonn05_2014_42" count="2" respawn="68" respawn_random="20">
+		<territory>
+			<add x="16094" y="-120086" zmin="-3200" zmax="-3000"/>
+			<add x="16474" y="-120101" zmin="-3200" zmax="-3000"/>
+			<add x="16623" y="-119961" zmin="-3200" zmax="-3000"/>
+			<add x="16513" y="-118734" zmin="-3200" zmax="-3000"/>
+			<add x="16284" y="-118534" zmin="-3200" zmax="-3000"/>
+			<add x="15820" y="-118429" zmin="-3200" zmax="-3000"/>
+			<add x="15625" y="-118744" zmin="-3200" zmax="-3000"/>
+		</territory>
+		<npc id="20429"/><!--Защитник Око Зла-->
+	</spawn>
+	<spawn name="lyonn05_2014_43" count="1" respawn="68" respawn_random="20">
+		<territory>
+			<add x="17066" y="-120575" zmin="-3196" zmax="-2996"/>
+			<add x="17999" y="-120456" zmin="-3196" zmax="-2996"/>
+			<add x="18014" y="-120330" zmin="-3196" zmax="-2996"/>
+			<add x="17021" y="-120271" zmin="-3196" zmax="-2996"/>
+			<add x="16507" y="-120386" zmin="-3196" zmax="-2996"/>
+		</territory>
+		<npc id="20429"/><!--Защитник Око Зла-->
+	</spawn>
+	<spawn name="lyonn05_2014_27" count="1" respawn="68" respawn_random="20">
+		<territory>
+			<add x="19450" y="-107505" zmin="-3076" zmax="-2876"/>
+			<add x="20673" y="-107807" zmin="-3076" zmax="-2876"/>
+			<add x="20704" y="-107491" zmin="-3076" zmax="-2876"/>
+			<add x="19458" y="-107267" zmin="-3076" zmax="-2876"/>
+		</territory>
+		<npc id="20488"/><!--Охотник Крысолюдов Курука-->
+	</spawn>
+	<territory name="lyonn05_2014_16">
+		<add x="21708" y="-111984" zmin="-3344" zmax="-3144"/>
+		<add x="22150" y="-112259" zmin="-3344" zmax="-3144"/>
+		<add x="22144" y="-111886" zmin="-3344" zmax="-3144"/>
+		<add x="21887" y="-111420" zmin="-3344" zmax="-3144"/>
+		<add x="21373" y="-111632" zmin="-3344" zmax="-3144"/>
+	</territory>
+	<spawn name="lyonn05_2014_16" count="1" respawn="68" respawn_random="20">
+		<territory name="lyonn05_2014_16"/>
+		<npc id="20329"/><!--Призрак Страж-->
+	</spawn>
+		<territory name="lyonn05_2014_12">
+		<add x="20978" y="-109827" zmin="-3328" zmax="-3128"/>
+		<add x="21980" y="-109799" zmin="-3328" zmax="-3128"/>
+		<add x="21537" y="-109295" zmin="-3328" zmax="-3128"/>
+		<add x="21337" y="-109171" zmin="-3328" zmax="-3128"/>
+		<add x="21037" y="-109243" zmin="-3328" zmax="-3128"/>
+		<add x="20774" y="-109506" zmin="-3328" zmax="-3128"/>
+	</territory>
+	<spawn name="lyonn05_2014_12" count="1" respawn="68" respawn_random="20">
+		<territory name="lyonn05_2014_12"/>
+		<npc id="20542"/><!--Скелет с Длинным Луком-->
+	</spawn>
+	<spawn name="lyonn05_2014_12" count="1" respawn="68" respawn_random="20">
+		<territory name="lyonn05_2014_12"/>
+		<npc id="20341"/><!--Нежить Невольник-->
+	</spawn>
+	<spawn name="lyonn05_2014_10" count="1" respawn="68" respawn_random="20">
+		<territory>
+			<add x="19761" y="-110684" zmin="-3328" zmax="-3178"/>
+			<add x="20154" y="-110670" zmin="-3328" zmax="-3178"/>
+			<add x="20513" y="-110097" zmin="-3328" zmax="-3178"/>
+			<add x="20410" y="-109862" zmin="-3328" zmax="-3178"/>
+			<add x="19999" y="-110211" zmin="-3328" zmax="-3178"/>
+		</territory>
+		<npc id="20488"/><!--Охотник Крысолюдов Курука-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13600" y="-110016" z="-3448" h="0" />
+		<npc id="20489" /><!--Ртутный Зверь-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13819" y="-109528" z="-3448" h="16036" />
+		<npc id="20489" /><!--Ртутный Зверь-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13628" y="-109539" z="-3448" h="1167" />
+		<npc id="20489" /><!--Ртутный Зверь-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13164" y="-109978" z="-3448" h="50639" />
+		<npc id="20488" /><!--Охотник Крысолюдов Курука-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13667" y="-109621" z="-3448" h="55830" />
+		<npc id="20488" /><!--Охотник Крысолюдов Курука-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15998" y="-112495" z="-3136" h="47178" />
+		<npc id="20415" /><!--Алая Саламандра-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="16047" y="-112670" z="-3136" h="61249" />
+		<npc id="20415" /><!--Алая Саламандра-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15986" y="-112393" z="-3136" h="9867" />
+		<npc id="20416" /><!--Старшая Алая Саламандра-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14706" y="-110655" z="-3336" h="60440" />
+		<npc id="20489" /><!--Ртутный Зверь-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14299" y="-109826" z="-3448" h="64565" />
+		<npc id="20488" /><!--Охотник Крысолюдов Курука-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14334" y="-109793" z="-3448" h="26327" />
+		<npc id="20487" /><!--Крысолюд Курука-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="16409" y="-112753" z="-3184" h="29685" />
+		<npc id="20416" /><!--Старшая Алая Саламандра-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="16525" y="-112849" z="-3184" h="2142" />
+		<npc id="20415" /><!--Алая Саламандра-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="16569" y="-112738" z="-3184" h="41226" />
+		<npc id="20416" /><!--Старшая Алая Саламандра-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17570" y="-112286" z="-3136" h="63029" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="16592" y="-112048" z="-3136" h="30197" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="16487" y="-111824" z="-3136" h="18761" />
+		<npc id="20416" /><!--Старшая Алая Саламандра-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17202" y="-112268" z="-3136" h="62981" />
+		<npc id="20415" /><!--Алая Саламандра-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="16686" y="-112154" z="-3136" h="28512" />
+		<npc id="20415" /><!--Алая Саламандра-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="16255" y="-112304" z="-3136" h="38133" />
+		<npc id="20415" /><!--Алая Саламандра-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="16720" y="-111917" z="-3136" h="4945" />
+		<npc id="20416" /><!--Старшая Алая Саламандра-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18405" y="-109371" z="-3040" h="58961" />
+		<npc id="20368" /><!--Хранитель Могил-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18619" y="-109437" z="-3032" h="42683" />
+		<npc id="20368" /><!--Хранитель Могил-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="16346" y="-108782" z="-3040" h="20171" />
+		<npc id="20487" /><!--Крысолюд Курука-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="16443" y="-108443" z="-3024" h="55394" />
+		<npc id="20488" /><!--Охотник Крысолюдов Курука-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="16799" y="-108400" z="-3040" h="39608" />
+		<npc id="20487" /><!--Крысолюд Курука-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="16484" y="-108394" z="-3024" h="6024" />
+		<npc id="20487" /><!--Крысолюд Курука-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="16471" y="-108772" z="-3040" h="54576" />
+		<npc id="20488" /><!--Охотник Крысолюдов Курука-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14958" y="-114614" z="-3320" h="14661" />
+		<npc id="20489" /><!--Ртутный Зверь-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15082" y="-115744" z="-3320" h="62402" />
+		<npc id="20341" /><!--Нежить Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14678" y="-115452" z="-3320" h="26698" />
+		<npc id="20341" /><!--Нежить Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15323" y="-115690" z="-3320" h="7695" />
+		<npc id="20341" /><!--Нежить Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14586" y="-115447" z="-3320" h="55581" />
+		<npc id="20341" /><!--Нежить Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14966" y="-115471" z="-3320" h="32419" />
+		<npc id="20341" /><!--Нежить Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14960" y="-114032" z="-3320" h="0" />
+		<npc id="20489" /><!--Ртутный Зверь-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="16048" y="-117015" z="-3192" h="17879" />
+		<npc id="20489" /><!--Ртутный Зверь-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15864" y="-116942" z="-3192" h="28033" />
+		<npc id="20489" /><!--Ртутный Зверь-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="19503" y="-113019" z="-3232" h="41780" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18548" y="-112544" z="-3232" h="64315" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18746" y="-112892" z="-3232" h="3904" />
+		<npc id="20341" /><!--Нежить Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="19724" y="-112939" z="-3224" h="12286" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20439" y="-114740" z="-3296" h="55830" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="19198" y="-113435" z="-3232" h="40961" />
+		<npc id="20427" /><!--Смотритель Око Зла-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="19630" y="-113202" z="-3232" h="49540" />
+		<npc id="20427" /><!--Смотритель Око Зла-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="16260" y="-119522" z="-3160" h="24172" />
+		<npc id="27133" /><!--Монарх Око Зла-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="16186" y="-119354" z="-3160" h="59920" />
+		<npc id="20429" /><!--Защитник Око Зла-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="16077" y="-118897" z="-3168" h="19401" />
+		<npc id="20429" /><!--Защитник Око Зла-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="16379" y="-119790" z="-3160" h="60856" />
+		<npc id="20427" /><!--Смотритель Око Зла-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18845" y="-120490" z="-3152" h="59556" />
+		<npc id="20429" /><!--Защитник Око Зла-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18639" y="-120438" z="-3160" h="63382" />
+		<npc id="20427" /><!--Смотритель Око Зла-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18585" y="-120315" z="-3160" h="42784" />
+		<npc id="20429" /><!--Защитник Око Зла-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18369" y="-120364" z="-3160" h="2743" />
+		<npc id="20427" /><!--Смотритель Око Зла-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20798" y="-120952" z="-600" h="43242" />
+		<npc id="20476" /><!--Клыкастый Паук Кхаши-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22683" y="-119993" z="-3296" h="4648" />
+		<npc id="20491" /><!--Ужас Склепа-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22600" y="-119684" z="-3296" h="21219" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21838" y="-119777" z="-3280" h="61014" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21736" y="-119967" z="-3288" h="21990" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22295" y="-120420" z="-3296" h="31692" />
+		<npc id="20491" /><!--Ужас Склепа-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22418" y="-120833" z="-640" h="42521" />
+		<npc id="20479" /><!--Медведь Кхаши-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22168" y="-120248" z="-3296" h="12326" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20704" y="-120871" z="-624" h="51327" />
+		<npc id="20479" /><!--Медведь Кхаши-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22064" y="-120847" z="-640" h="59404" />
+		<npc id="20479" /><!--Медведь Кхаши-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21004" y="-120428" z="-560" h="14906" />
+		<npc id="20476" /><!--Клыкастый Паук Кхаши-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22052" y="-118526" z="-3296" h="49459" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22609" y="-118542" z="-3296" h="43479" />
+		<npc id="20429" /><!--Защитник Око Зла-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20433" y="-115097" z="-3296" h="45575" />
+		<npc id="20341" /><!--Нежить Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21840" y="-116157" z="-3296" h="15856" />
+		<npc id="20491" /><!--Ужас Склепа-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21892" y="-115359" z="-3296" h="30525" />
+		<npc id="20491" /><!--Ужас Склепа-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21627" y="-115169" z="-3296" h="47895" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21784" y="-115397" z="-3296" h="56282" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20555" y="-115469" z="-3272" h="2371" />
+		<npc id="20427" /><!--Смотритель Око Зла-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20856" y="-115160" z="-3288" h="53546" />
+		<npc id="20429" /><!--Защитник Око Зла-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21642" y="-115777" z="-3296" h="31839" />
+		<npc id="20429" /><!--Защитник Око Зла-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="19201" y="-111260" z="-3232" h="34506" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="19787" y="-111323" z="-3232" h="52509" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="19931" y="-112524" z="-3232" h="6874" />
+		<npc id="20427" /><!--Смотритель Око Зла-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="19257" y="-111424" z="-3232" h="64683" />
+		<npc id="20341" /><!--Нежить Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="19929" y="-111680" z="-3232" h="56027" />
+		<npc id="20427" /><!--Смотритель Око Зла-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18808" y="-111520" z="-3232" h="59065" />
+		<npc id="20429" /><!--Защитник Око Зла-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18963" y="-109679" z="-3032" h="10125" />
+		<npc id="20368" /><!--Хранитель Могил-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18301" y="-109240" z="-3040" h="12101" />
+		<npc id="20368" /><!--Хранитель Могил-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18706" y="-109648" z="-3040" h="56694" />
+		<npc id="20368" /><!--Хранитель Могил-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21466" y="-111450" z="-3296" h="45879" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21505" y="-111043" z="-3280" h="51033" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21449" y="-110674" z="-3296" h="61405" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21388" y="-110877" z="-3296" h="40961" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18416" y="-112448" z="-3232" h="0" />
+		<npc id="20340" /><!--Скелет Невольник-->	
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23063" y="-118775" z="-3296" h="36356" />
+		<npc id="20491" /><!--Ужас Склепа-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22935" y="-118823" z="-3256" h="59840" />
+		<npc id="20429" /><!--Защитник Око Зла-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23386" y="-118611" z="-3296" h="14279" />
+		<npc id="20341" /><!--Нежить Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23644" y="-114952" z="-3416" h="11571" />
+		<npc id="20491" /><!--Ужас Склепа-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23664" y="-115982" z="-3416" h="54113" />
+		<npc id="20491" /><!--Ужас Склепа-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23299" y="-115893" z="-3416" h="62014" />
+		<npc id="20491" /><!--Ужас Склепа-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23886" y="-115627" z="-3400" h="17078" />
+		<npc id="20341" /><!--Нежить Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23489" y="-114962" z="-3416" h="15689" />
+		<npc id="20341" /><!--Нежить Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23944" y="-115026" z="-3416" h="57773" />
+		<npc id="20427" /><!--Смотритель Око Зла-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23618" y="-115948" z="-3416" h="61133" />
+		<npc id="20427" /><!--Смотритель Око Зла-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23688" y="-115146" z="-3416" h="47630" />
+		<npc id="20429" /><!--Защитник Око Зла-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="24200" y="-114518" z="-3416" h="52055" />
+		<npc id="20429" /><!--Защитник Око Зла-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20352" y="-114608" z="-3296" h="0" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22991" y="-119576" z="-3296" h="3900" />
+		<npc id="20491" /><!--Ужас Склепа-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22797" y="-120006" z="-3296" h="20495" />
+		<npc id="20429" /><!--Защитник Око Зла-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23421" y="-119538" z="-3296" h="15340" />
+		<npc id="20427" /><!--Смотритель Око Зла-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22904" y="-120386" z="-3296" h="50761" />
+		<npc id="20491" /><!--Ужас Склепа-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22448" y="-118832" z="-3296" h="0" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20953" y="-110088" z="-3296" h="21104" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21268" y="-109562" z="-3296" h="7905" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21726" y="-109844" z="-3296" h="53073" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21085" y="-109574" z="-3296" h="31727" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20892" y="-110218" z="-3296" h="61899" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18131" y="-107704" z="-3056" h="16070" />
+		<npc id="20329" /><!--Призрак Страж-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="16707" y="-108288" z="-3040" h="22182" />
+		<npc id="20487" /><!--Крысолюд Курука-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18350" y="-108058" z="-3024" h="58524" />
+		<npc id="20329" /><!--Призрак Страж-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18436" y="-108198" z="-3040" h="62904" />
+		<npc id="20329" /><!--Призрак Страж-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17908" y="-107932" z="-3024" h="23628" />
+		<npc id="20329" /><!--Призрак Страж-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18991" y="-107516" z="-3024" h="59028" />
+		<npc id="20329" /><!--Призрак Страж-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="19068" y="-107842" z="-3024" h="54827" />
+		<npc id="20329" /><!--Призрак Страж-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18868" y="-107410" z="-3032" h="46188" />
+		<npc id="20329" /><!--Призрак Страж-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23460" y="-110780" z="-3336" h="888" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23421" y="-110145" z="-3336" h="15949" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23362" y="-109969" z="-3336" h="43" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23924" y="-109862" z="-3328" h="8629" />
+		<npc id="20488" /><!--Охотник Крысолюдов Курука-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23225" y="-109796" z="-3336" h="42384" />
+		<npc id="20491" /><!--Ужас Склепа-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23639" y="-110732" z="-3336" h="40048" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23629" y="-110027" z="-3336" h="20126" />
+		<npc id="20487" /><!--Крысолюд Курука-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23539" y="-109019" z="-3336" h="13623" />
+		<npc id="20487" /><!--Крысолюд Курука-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23600" y="-109566" z="-3336" h="63375" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="24072" y="-109369" z="-3336" h="24783" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23303" y="-108397" z="-3336" h="46169" />
+		<npc id="20374" /><!--Страж Фаранги-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23277" y="-108514" z="-3336" h="54301" />
+		<npc id="20375" /><!--Охранник Фаранги-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23299" y="-108684" z="-3336" h="54525" />
+		<npc id="20374" /><!--Страж Фаранги-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23120" y="-108344" z="-3336" h="38733" />
+		<npc id="20375" /><!--Охранник Фаранги-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23275" y="-108545" z="-3336" h="41422" />
+		<npc id="20375" /><!--Охранник Фаранги-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21504" y="-111536" z="-3296" h="0" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21264" y="-109568" z="-3296" h="0" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21056" y="-110640" z="-3280" h="0" />
+		<npc id="20340" /><!--Скелет Невольник-->
+	</spawn>
+</list>

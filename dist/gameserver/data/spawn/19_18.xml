@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<territory name="oren11_1918_01">
+		<add x="-18281" y="32484" zmin="-3779" zmax="-3079"/>
+		<add x="-15057" y="30476" zmin="-3779" zmax="-3079"/>
+		<add x="-14175" y="31753" zmin="-3779" zmax="-3079"/>
+		<add x="-14593" y="32486" zmin="-3779" zmax="-3079"/>
+	</territory>
+	<spawn name="oren11_1918_01" count="3" respawn="16">
+		<territory name="oren11_1918_01"/>
+		<npc id="20015"/><!--Лесной Эльф-Зомби-->
+	</spawn>
+	<spawn name="oren11_1918_01" count="6" respawn="16">
+		<territory name="oren11_1918_01"/>
+		<npc id="20433"/><!--Гнойная Летучая Мышь-->
+	</spawn>
+	<spawn name="oren07_1918_14s" count="5" respawn="20">
+		<territory>
+			<add x="-22058" y="23659" zmin="-3895" zmax="-3095"/>
+			<add x="-20486" y="20926" zmin="-3895" zmax="-3095"/>
+			<add x="-17980" y="21350" zmin="-3895" zmax="-3095"/>
+			<add x="-19031" y="24094" zmin="-3895" zmax="-3095"/>
+		</territory>
+		<npc id="20321"/><!--Вор Гоблинов-->
+	</spawn>
+	<spawn name="oren07_1918_13s" count="5" respawn="20">
+		<territory>
+			<add x="-18353" y="25172" zmin="-3874" zmax="-3074"/>
+			<add x="-15457" y="21515" zmin="-3874" zmax="-3074"/>
+			<add x="-14116" y="23754" zmin="-3874" zmax="-3074"/>
+			<add x="-16079" y="25539" zmin="-3874" zmax="-3074"/>
+		</territory>
+		<npc id="20321"/><!--Вор Гоблинов-->
+	</spawn>
+	<territory name="oren07_1918_16s">
+		<add x="-30756" y="30293" zmin="-3639" zmax="-2939"/>
+		<add x="-30055" y="26677" zmin="-3639" zmax="-2939"/>
+		<add x="-28565" y="27029" zmin="-3639" zmax="-2939"/>
+		<add x="-28503" y="30160" zmin="-3639" zmax="-2939"/>
+	</territory>
+	<spawn name="oren07_1918_16s" count="2" respawn="20">
+		<territory name="oren07_1918_16s"/>
+		<npc id="20388"/><!--Адъютант Воинов Орков Балор-->
+	</spawn>
+	<spawn name="oren07_1918_16s" count="3" respawn="20">
+		<territory name="oren07_1918_16s"/>
+		<npc id="20387"/><!--Главарь Воинов Орков Балор-->
+	</spawn>
+	<territory name="oren07_1918_15s">
+		<add x="-28280" y="20225" zmin="-3837" zmax="-3137"/>
+		<add x="-26708" y="17492" zmin="-3837" zmax="-3137"/>
+		<add x="-24202" y="17917" zmin="-3837" zmax="-3137"/>
+		<add x="-25253" y="20661" zmin="-3837" zmax="-3137"/>
+	</territory>
+	<spawn name="oren07_1918_15s" count="2" respawn="20">
+		<territory name="oren07_1918_15s"/>
+		<npc id="20388"/><!--Адъютант Воинов Орков Балор-->
+	</spawn>
+	<spawn name="oren07_1918_15s" count="3" respawn="20">
+		<territory name="oren07_1918_15s"/>
+		<npc id="20387"/><!--Главарь Воинов Орков Балор-->
+	</spawn>
+	<spawn name="oren07_npc1918_g05" count="1" respawn="60">
+		<territory>
+			<add x="-27089" y="32223" zmin="-3830" zmax="-1830"/>
+			<add x="-19214" y="23880" zmin="-3830" zmax="-1830"/>
+			<add x="-11375" y="27980" zmin="-3830" zmax="-1830"/>
+			<add x="-7179" y="32263" zmin="-3830" zmax="-1830"/>
+		</territory>
+		<npc id="31034"/><!--Караульный-->
+	</spawn>
+	<spawn name="oren07_npc1918_g04" count="1" respawn="60">
+		<territory>
+			<add x="-31616" y="31933" zmin="-3830" zmax="-2530"/>
+			<add x="-28101" y="17011" zmin="-3830" zmax="-2530"/>
+			<add x="-19639" y="23952" zmin="-3830" zmax="-2530"/>
+			<add x="-27927" y="32147" zmin="-3830" zmax="-2530"/>
+		</territory>
+		<npc id="31034"/><!--Караульный-->
+	</spawn>
+	<spawn name="oren07_npc1918_g03" count="1" respawn="60">
+		<territory>
+			<add x="-27894" y="16717" zmin="-3830" zmax="-2530"/>
+			<add x="-19096" y="9868" zmin="-3830" zmax="-2530"/>
+			<add x="-12180" y="17407" zmin="-3830" zmax="-2530"/>
+			<add x="-18972" y="23584" zmin="-3830" zmax="-2530"/>
+		</territory>
+		<npc id="31034"/><!--Караульный-->
+	</spawn>
+	<spawn name="oren07_npc1918_g02" count="1" respawn="60">
+		<territory>
+			<add x="-18765" y="9549" zmin="-3830" zmax="-2330"/>
+			<add x="-6379" y="3623" zmin="-3830" zmax="-2330"/>
+			<add x="-6813" y="12731" zmin="-3830" zmax="-2330"/>
+			<add x="-11862" y="17164" zmin="-3830" zmax="-2330"/>
+		</territory>
+		<npc id="31034"/><!--Караульный-->
+	</spawn>
+	<spawn name="oren07_npc1918_g01" count="1" respawn="60">
+		<territory>
+			<add x="-18666" y="23702" zmin="-3842" zmax="-2542"/>
+			<add x="-9788" y="15777" zmin="-3842" zmax="-2542"/>
+			<add x="-4573" y="25303" zmin="-3842" zmax="-2542"/>
+			<add x="-7847" y="29238" zmin="-3842" zmax="-2542"/>
+		</territory>
+		<npc id="31034"/><!--Караульный-->
+	</spawn>
+	<spawn name="oren07_npc1918_gd04" count="1" respawn="60">
+		<territory>
+			<add x="-16748" y="32476" zmin="-3768" zmax="-2518"/>
+			<add x="-13436" y="27360" zmin="-3768" zmax="-2518"/>
+			<add x="-10540" y="32448" zmin="-3768" zmax="-2518"/>
+		</territory>
+		<npc id="31845"/><!--Кровавая Фея-->
+	</spawn>
+	<spawn name="oren07_npc1918_gd01" count="1" respawn="60">
+		<territory>
+			<add x="-24536" y="14068" zmin="-3780" zmax="-2780"/>
+			<add x="-16680" y="7836" zmin="-3780" zmax="-2780"/>
+			<add x="-10312" y="14416" zmin="-3780" zmax="-2780"/>
+			<add x="-17296" y="20564" zmin="-3780" zmax="-2780"/>
+			<add x="-22876" y="18244" zmin="-3780" zmax="-2780"/>
+		</territory>
+		<npc id="31845"/><!--Кровавая Фея-->
+	</spawn>
+	<spawn name="oren07_npc1918_gd02" count="1" respawn="60">
+		<territory>
+			<add x="-14052" y="19268" zmin="-3804" zmax="-2954"/>
+			<add x="-10428" y="15740" zmin="-3804" zmax="-2954"/>
+			<add x="-7016" y="19428" zmin="-3804" zmax="-2954"/>
+			<add x="-12428" y="23844" zmin="-3804" zmax="-2954"/>
+		</territory>
+		<npc id="31850"/><!--Тлетворный Древень-->
+	</spawn>
+	<spawn name="oren07_npc1918_gd03" count="1" respawn="60">
+		<territory>
+			<add x="-8864" y="23044" zmin="-3752" zmax="-2502"/>
+			<add x="-5428" y="22956" zmin="-3752" zmax="-2502"/>
+			<add x="-5896" y="27684" zmin="-3752" zmax="-2502"/>
+			<add x="-8744" y="29348" zmin="-3752" zmax="-2502"/>
+			<add x="-10500" y="28104" zmin="-3752" zmax="-2502"/>
+			<add x="-11108" y="24596" zmin="-3752" zmax="-2502"/>
+		</territory>
+		<npc id="31850"/><!--Тлетворный Древень-->
+	</spawn>
+	<territory name="oren07_1918_06">
+		<add x="-17913" y="13632" zmin="-3832" zmax="-3032"/>
+		<add x="-13764" y="15647" zmin="-3832" zmax="-3032"/>
+		<add x="-14691" y="19322" zmin="-3832" zmax="-3032"/>
+		<add x="-20358" y="19352" zmin="-3832" zmax="-3032"/>
+	</territory>
+	<spawn name="oren07_1918_06" count="6" respawn="20">
+		<territory name="oren07_1918_06"/>
+		<npc id="20321"/><!--Вор Гоблинов-->
+	</spawn>
+	<spawn name="oren07_1918_06" count="8" respawn="20">
+		<territory name="oren07_1918_06"/>
+		<npc id="20386"/><!--Воин Орков Балор-->
+	</spawn>
+	<spawn name="oren07_1918_06" count="6" respawn="20">
+		<territory name="oren07_1918_06"/>
+		<npc id="20388"/><!--Адъютант Воинов Орков Балор-->
+	</spawn>
+	<spawn name="oren07_1918_06" count="5" respawn="20">
+		<territory name="oren07_1918_06"/>
+		<npc id="20400"/><!--Кровавый Гриб-->
+	</spawn>
+	<territory name="oren07_1918_07">
+		<add x="-9711" y="10815" zmin="-3527" zmax="-2327"/>
+		<add x="-7006" y="9164" zmin="-3527" zmax="-2327"/>
+		<add x="-6620" y="13536" zmin="-3527" zmax="-2327"/>
+		<add x="-10004" y="13087" zmin="-3527" zmax="-2327"/>
+	</territory>
+	<spawn name="oren07_1918_07" count="7" respawn="20">
+		<territory name="oren07_1918_07"/>
+		<npc id="20328"/><!--Защитник Гоблинов-->
+	</spawn>
+	<spawn name="oren07_1918_07" count="8" respawn="20">
+		<territory name="oren07_1918_07"/>
+		<npc id="20007"/><!--Зеленый Гриб-->
+	</spawn>
+	<territory name="oren07_1918_04">
+		<add x="-16103" y="7286" zmin="-3768" zmax="-2768"/>
+		<add x="-14706" y="10055" zmin="-3768" zmax="-2768"/>
+		<add x="-18166" y="13766" zmin="-3768" zmax="-2768"/>
+		<add x="-21201" y="11531" zmin="-3768" zmax="-2768"/>
+	</territory>
+	<spawn name="oren07_1918_04" count="3" respawn="20">
+		<territory name="oren07_1918_04"/>
+		<npc id="20385"/><!--Стрелок Орков Балор-->
+	</spawn>
+	<spawn name="oren07_1918_04" count="8" respawn="20">
+		<territory name="oren07_1918_04"/>
+		<npc id="20321"/><!--Вор Гоблинов-->
+	</spawn>
+	<spawn name="oren07_1918_04" count="6" respawn="20">
+		<territory name="oren07_1918_04"/>
+		<npc id="20388"/><!--Адъютант Воинов Орков Балор-->
+	</spawn>
+	<spawn name="oren07_1918_04" count="6" respawn="20">
+		<territory name="oren07_1918_04"/>
+		<npc id="20387"/><!--Главарь Воинов Орков Балор-->
+	</spawn>
+	<territory name="oren07_1918_05">
+		<add x="-21225" y="11619" zmin="-3828" zmax="-2828"/>
+		<add x="-18162" y="13941" zmin="-3828" zmax="-2828"/>
+		<add x="-20467" y="19285" zmin="-3828" zmax="-2828"/>
+		<add x="-22397" y="18125" zmin="-3828" zmax="-2828"/>
+	</territory>
+	<spawn name="oren07_1918_05" count="2" respawn="20">
+		<territory name="oren07_1918_05"/>
+		<npc id="20385"/><!--Стрелок Орков Балор-->
+	</spawn>
+	<spawn name="oren07_1918_05" count="7" respawn="20">
+		<territory name="oren07_1918_05"/>
+		<npc id="20388"/><!--Адъютант Воинов Орков Балор-->
+	</spawn>
+	<spawn name="oren07_1918_05" count="6" respawn="20">
+		<territory name="oren07_1918_05"/>
+		<npc id="20387"/><!--Главарь Воинов Орков Балор-->
+	</spawn>
+	<spawn name="oren07_1918_05" count="5" respawn="20">
+		<territory name="oren07_1918_05"/>
+		<npc id="20400"/><!--Кровавый Гриб-->
+	</spawn>
+	<territory name="oren07_1918_08">
+		<add x="-11975" y="12971" zmin="-3840" zmax="-2840"/>
+		<add x="-8615" y="13448" zmin="-3840" zmax="-2840"/>
+		<add x="-9079" y="17133" zmin="-3840" zmax="-2840"/>
+		<add x="-12000" y="18088" zmin="-3840" zmax="-2840"/>
+	</territory>
+	<spawn name="oren07_1918_08" count="3" respawn="20">
+		<territory name="oren07_1918_08"/>
+		<npc id="20385"/><!--Стрелок Орков Балор-->
+	</spawn>
+	<spawn name="oren07_1918_08" count="6" respawn="20">
+		<territory name="oren07_1918_08"/>
+		<npc id="20328"/><!--Защитник Гоблинов-->
+	</spawn>
+	<spawn name="oren07_1918_08" count="5" respawn="20">
+		<territory name="oren07_1918_08"/>
+		<npc id="20007"/><!--Зеленый Гриб-->
+	</spawn>
+	<territory name="oren07_1918_09">
+		<add x="-14566" y="19301" zmin="-3821" zmax="-3121"/>
+		<add x="-9282" y="17283" zmin="-3821" zmax="-3121"/>
+		<add x="-8351" y="21271" zmin="-3821" zmax="-3121"/>
+		<add x="-11884" y="23639" zmin="-3821" zmax="-3121"/>
+	</territory>
+	<spawn name="oren07_1918_09" count="3" respawn="20">
+		<territory name="oren07_1918_09"/>
+		<npc id="20385"/><!--Стрелок Орков Балор-->
+	</spawn>
+	<spawn name="oren07_1918_09" count="9" respawn="20">
+		<territory name="oren07_1918_09"/>
+		<npc id="20328"/><!--Защитник Гоблинов-->
+	</spawn>
+	<spawn name="oren07_1918_09" count="9" respawn="20">
+		<territory name="oren07_1918_09"/>
+		<npc id="20007"/><!--Зеленый Гриб-->
+	</spawn>
+	<spawn name="oren07_1918_09" count="3" respawn="20">
+		<territory name="oren07_1918_09"/>
+		<npc id="20386"/><!--Воин Орков Балор-->
+	</spawn>
+	<territory name="oren07_1918_02">
+		<add x="-15928" y="7151" zmin="-3694" zmax="-2994"/>
+		<add x="-11548" y="5488" zmin="-3694" zmax="-2994"/>
+		<add x="-12040" y="7859" zmin="-3694" zmax="-2994"/>
+		<add x="-15147" y="8430" zmin="-3694" zmax="-2994"/>
+	</territory>
+	<spawn name="oren07_1918_02" count="5" respawn="20">
+		<territory name="oren07_1918_02"/>
+		<npc id="20328"/><!--Защитник Гоблинов-->
+	</spawn>
+	<spawn name="oren07_1918_02" count="5" respawn="20">
+		<territory name="oren07_1918_02"/>
+		<npc id="20321"/><!--Вор Гоблинов-->
+	</spawn>
+	<territory name="oren07_1918_03">
+		<add x="-14618" y="10107" zmin="-3843" zmax="-3143"/>
+		<add x="-11954" y="10530" zmin="-3843" zmax="-3143"/>
+		<add x="-12254" y="16294" zmin="-3843" zmax="-3143"/>
+		<add x="-17750" y="13551" zmin="-3843" zmax="-3143"/>
+	</territory>
+	<spawn name="oren07_1918_03" count="3" respawn="20">
+		<territory name="oren07_1918_03"/>
+		<npc id="20385"/><!--Стрелок Орков Балор-->
+	</spawn>
+	<spawn name="oren07_1918_03" count="6" respawn="20">
+		<territory name="oren07_1918_03"/>
+		<npc id="20321"/><!--Вор Гоблинов-->
+	</spawn>
+	<spawn name="oren07_1918_03" count="8" respawn="20">
+		<territory name="oren07_1918_03"/>
+		<npc id="20386"/><!--Воин Орков Балор-->
+	</spawn>
+	<spawn name="oren07_1918_03" count="4" respawn="20">
+		<territory name="oren07_1918_03"/>
+		<npc id="20388"/><!--Адъютант Воинов Орков Балор-->
+	</spawn>
+	<spawn name="oren07_1918_03" count="4" respawn="20">
+		<territory name="oren07_1918_03"/>
+		<npc id="20387"/><!--Главарь Воинов Орков Балор-->
+	</spawn>
+	<territory name="oren07_1918_01">
+		<add x="-11445" y="5486" zmin="-3694" zmax="-2794"/>
+		<add x="-6866" y="8877" zmin="-3694" zmax="-2794"/>
+		<add x="-9827" y="10727" zmin="-3694" zmax="-2794"/>
+		<add x="-12267" y="10276" zmin="-3694" zmax="-2794"/>
+	</territory>
+	<spawn name="oren07_1918_01" count="1" respawn="20">
+		<territory name="oren07_1918_01"/>
+		<npc id="20385"/><!--Стрелок Орков Балор-->
+	</spawn>
+	<spawn name="oren07_1918_01" count="6" respawn="20">
+		<territory name="oren07_1918_01"/>
+		<npc id="20007"/><!--Зеленый Гриб-->
+	</spawn>
+	<spawn name="oren07_1918_01" count="8" respawn="20">
+		<territory name="oren07_1918_01"/>
+		<npc id="20386"/><!--Воин Орков Балор-->
+	</spawn>
+	<territory name="oren07_1918_17">
+		<add x="-11503" y="24838" zmin="-3772" zmax="-3172"/>
+		<add x="-8756" y="22832" zmin="-3772" zmax="-3172"/>
+		<add x="-6774" y="22864" zmin="-3772" zmax="-3172"/>
+		<add x="-7557" y="25157" zmin="-3772" zmax="-3172"/>
+	</territory>
+	<spawn name="oren07_1918_17" count="6" respawn="20">
+		<territory name="oren07_1918_17"/>
+		<npc id="20328"/><!--Защитник Гоблинов-->
+	</spawn>
+	<spawn name="oren07_1918_17" count="7" respawn="20">
+		<territory name="oren07_1918_17"/>
+		<npc id="20007"/><!--Зеленый Гриб-->
+	</spawn>
+	<territory name="oren07_1918_10">
+		<add x="-20412" y="19477" zmin="-3821" zmax="-3121"/>
+		<add x="-14668" y="19463" zmin="-3821" zmax="-3121"/>
+		<add x="-13630" y="25043" zmin="-3821" zmax="-3121"/>
+		<add x="-14393" y="26392" zmin="-3821" zmax="-3121"/>
+		<add x="-23537" y="24982" zmin="-3821" zmax="-3121"/>
+	</territory>
+	<spawn name="oren07_1918_10" count="3" respawn="20">
+		<territory name="oren07_1918_10"/>
+		<npc id="20385"/><!--Стрелок Орков Балор-->
+	</spawn>
+	<spawn name="oren07_1918_10" count="5" respawn="20">
+		<territory name="oren07_1918_10"/>
+		<npc id="20007"/><!--Зеленый Гриб-->
+	</spawn>
+	<spawn name="oren07_1918_10" count="7" respawn="20">
+		<territory name="oren07_1918_10"/>
+		<npc id="20386"/><!--Воин Орков Балор-->
+	</spawn>
+	<spawn name="oren07_1918_10" count="5" respawn="20">
+		<territory name="oren07_1918_10"/>
+		<npc id="20400"/><!--Кровавый Гриб-->
+	</spawn>
+	<territory name="oren07_1918_11">
+		<add x="-29227" y="18993" zmin="-3786" zmax="-2986"/>
+		<add x="-25470" y="14750" zmin="-3786" zmax="-2986"/>
+		<add x="-23381" y="17521" zmin="-3786" zmax="-2986"/>
+		<add x="-23741" y="24890" zmin="-3786" zmax="-2986"/>
+		<add x="-29864" y="25130" zmin="-3786" zmax="-2986"/>
+	</territory>
+	<spawn name="oren07_1918_11" count="8" respawn="20">
+		<territory name="oren07_1918_11"/>
+		<npc id="20388"/><!--Адъютант Воинов Орков Балор-->
+	</spawn>
+	<spawn name="oren07_1918_11" count="7" respawn="20">
+		<territory name="oren07_1918_11"/>
+		<npc id="20387"/><!--Главарь Воинов Орков Балор-->
+	</spawn>
+	<spawn name="oren07_1918_11" count="5" respawn="20">
+		<territory name="oren07_1918_11"/>
+		<npc id="20400"/><!--Кровавый Гриб-->
+	</spawn>
+	<territory name="oren07_1918_12">
+		<add x="-31993" y="32308" zmin="-3761" zmax="-2861"/>
+		<add x="-29805" y="25284" zmin="-3761" zmax="-2861"/>
+		<add x="-24697" y="25138" zmin="-3761" zmax="-2861"/>
+		<add x="-29228" y="32287" zmin="-3761" zmax="-2861"/>
+	</territory>
+	<spawn name="oren07_1918_12" count="4" respawn="20">
+		<territory name="oren07_1918_12"/>
+		<npc id="20388"/><!--Адъютант Воинов Орков Балор-->
+	</spawn>
+	<spawn name="oren07_1918_12" count="4" respawn="20">
+		<territory name="oren07_1918_12"/>
+		<npc id="20387"/><!--Главарь Воинов Орков Балор-->
+	</spawn>
+	<spawn name="oren07_1918_12" count="7" respawn="20">
+		<territory name="oren07_1918_12"/>
+		<npc id="20400"/><!--Кровавый Гриб-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-23912" y="21384" z="-3712" h="50228" />
+		<npc id="31656" /><!--Камень Познания-->
+	</spawn>
+</list>

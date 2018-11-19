@@ -1,0 +1,2336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="aquamarine_hall_68">
+		<point x="-27688" y="121729" z="-3720" h="33095"/>
+		<npc id="36728"/><!--Кадиф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="aquamarine_hall_68">
+		<point x="-27564" y="121793" z="-3704" h="61568"/>
+		<npc id="36727"/><!--Аринас-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="sapphire_hall_67">
+		<point x="-27912" y="120937" z="-3704" h="49766"/>
+		<npc id="36725"/><!--Сарина-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="crystal_hall_66">
+		<point x="-28298" y="121679" z="-3720" h="1592"/>
+		<npc id="36724"/><!--Балин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-28276" y="122445" z="-3720" h="9231"/>
+		<npc id="30767"><!--Управляющий Аукциона-->
+			<set name="town" value="gludio_barracks"/>
+		</npc>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="sapphire_hall_67">
+		<point x="-27730" y="121094" z="-3720" h="15438"/>
+		<npc id="36726"/><!--Лорелен-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="emerald_hall_65">
+		<point x="-27637" y="122637" z="-3720" h="31429"/>
+		<npc id="36722"/><!--Вини-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="crystal_hall_66">
+		<point x="-28410" y="121621" z="-3704" h="28798"/>
+		<npc id="36723"/><!--Бубек-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="emerald_hall_65">
+		<point x="-27451" y="122464" z="-3704" h="61647"/>
+		<npc id="36721"/><!--Лейна-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-27744" y="121433" z="-3720" h="32116"/>
+		<npc id="30659"/><!--Девочка Сирота-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-28029" y="121370" z="-3720" h="4449"/>
+		<npc id="30659"/><!--Девочка Сирота-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-27788" y="122087" z="-3720" h="38472"/>
+		<npc id="30659"/><!--Девочка Сирота-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-28150" y="122041" z="-3720" h="51708"/>
+		<npc id="30659"/><!--Девочка Сирота-->
+	</spawn>
+	<territory name="gludio38_1921_08">
+		<add x="-6760" y="108756" zmin="-3972" zmax="-2472"/>
+		<add x="-560" y="108744" zmin="-3972" zmax="-2472"/>
+		<add x="-548" y="114180" zmin="-3972" zmax="-2472"/>
+		<add x="-7600" y="116580" zmin="-3972" zmax="-2472"/>
+		<add x="-8472" y="114620" zmin="-3972" zmax="-2472"/>
+	</territory>
+	<spawn name="gludio38_1921_08" count="12" respawn="30">
+		<territory name="gludio38_1921_08"/>
+		<npc id="20358"/><!--Охотник Крысолюдов-->
+	</spawn>
+	<spawn name="gludio38_1921_08" count="12" respawn="30">
+		<territory name="gludio38_1921_08"/>
+		<npc id="21093"/><!--Вожак Крысолюдов-->
+	</spawn>
+	<spawn name="gludio38_1921_08" count="16" respawn="30">
+		<territory name="gludio38_1921_08"/>
+		<npc id="21094"/><!--Вождь Крысолюдов-->
+	</spawn>
+	<territory name="gludio38_1921_02">
+		<add x="-15440" y="98408" zmin="-3632" zmax="-2232"/>
+		<add x="-12488" y="98384" zmin="-3632" zmax="-2232"/>
+		<add x="-13264" y="102632" zmin="-3632" zmax="-2232"/>
+		<add x="-16636" y="101676" zmin="-3632" zmax="-2232"/>
+	</territory>
+	<spawn name="gludio38_1921_02" count="3" respawn="30">
+		<territory name="gludio38_1921_02"/>
+		<npc id="20009"/><!--Орк Вуку-->
+	</spawn>
+	<spawn name="gludio38_1921_02" count="3" respawn="30">
+		<territory name="gludio38_1921_02"/>
+		<npc id="20011"/><!--Стрелок Орков Вуку-->
+	</spawn>
+	<spawn name="gludio38_1921_02" count="4" respawn="30">
+		<territory name="gludio38_1921_02"/>
+		<npc id="20023"/><!--Сумеречный Зверь-->
+	</spawn>
+	<spawn name="gludio38_1921_02" count="4" respawn="30">
+		<territory name="gludio38_1921_02"/>
+		<npc id="20028"/><!--Паук Захватчик-->
+	</spawn>
+	<territory name="gludio38_1921_03">
+		<add x="-12396" y="98388" zmin="-3400" zmax="-2200"/>
+		<add x="-9924" y="98464" zmin="-3400" zmax="-2200"/>
+		<add x="-8944" y="102784" zmin="-3400" zmax="-2200"/>
+		<add x="-11448" y="102760" zmin="-3400" zmax="-2200"/>
+		<add x="-12952" y="101404" zmin="-3400" zmax="-2200"/>
+	</territory>
+	<spawn name="gludio38_1921_03" count="6" respawn="30">
+		<territory name="gludio38_1921_03"/>
+		<npc id="20009"/><!--Орк Вуку-->
+	</spawn>
+	<spawn name="gludio38_1921_03" count="4" respawn="30">
+		<territory name="gludio38_1921_03"/>
+		<npc id="20011"/><!--Стрелок Орков Вуку-->
+	</spawn>
+	<spawn name="gludio38_1921_03" count="5" respawn="30">
+		<territory name="gludio38_1921_03"/>
+		<npc id="20023"/><!--Сумеречный Зверь-->
+	</spawn>
+	<territory name="gludio38_1921_01">
+		<add x="-20928" y="98480" zmin="-3832" zmax="-3032"/>
+		<add x="-15540" y="98376" zmin="-3832" zmax="-3032"/>
+		<add x="-17040" y="102480" zmin="-3832" zmax="-3032"/>
+		<add x="-19416" y="101496" zmin="-3832" zmax="-3032"/>
+	</territory>
+	<spawn name="gludio38_1921_01" count="2" respawn="30">
+		<territory name="gludio38_1921_01"/>
+		<npc id="20011"/><!--Стрелок Орков Вуку-->
+	</spawn>
+	<spawn name="gludio38_1921_01" count="3" respawn="30">
+		<territory name="gludio38_1921_01"/>
+		<npc id="20023"/><!--Сумеречный Зверь-->
+	</spawn>
+	<spawn name="gludio38_1921_01" count="5" respawn="30">
+		<territory name="gludio38_1921_01"/>
+		<npc id="20028"/><!--Паук Захватчик-->
+	</spawn>
+	<territory name="gludio38_1921_06">
+		<add x="-6888" y="102688" zmin="-3916" zmax="-2516"/>
+		<add x="-5968" y="101288" zmin="-3916" zmax="-2516"/>
+		<add x="-3816" y="100204" zmin="-3916" zmax="-2516"/>
+		<add x="-192" y="102464" zmin="-3916" zmax="-2516"/>
+		<add x="-196" y="103664" zmin="-3916" zmax="-2516"/>
+		<add x="-5328" y="104428" zmin="-3916" zmax="-2516"/>
+	</territory>
+	<spawn name="gludio38_1921_06" count="9" respawn="30">
+		<territory name="gludio38_1921_06"/>
+		<npc id="20360"/><!--Шпион Крысолюдов-->
+	</spawn>
+	<spawn name="gludio38_1921_06" count="5" respawn="30">
+		<territory name="gludio38_1921_06"/>
+		<npc id="20032"/><!--Тарантул-->
+	</spawn>
+	<spawn name="gludio38_1921_06" count="7" respawn="30">
+		<territory name="gludio38_1921_06"/>
+		<npc id="20358"/><!--Охотник Крысолюдов-->
+	</spawn>
+	<territory name="gludio38_1921_07">
+		<add x="-5264" y="104808" zmin="-4064" zmax="-2564"/>
+		<add x="-316" y="103952" zmin="-4064" zmax="-2564"/>
+		<add x="-380" y="108424" zmin="-4064" zmax="-2564"/>
+		<add x="-6756" y="108288" zmin="-4064" zmax="-2564"/>
+	</territory>
+	<spawn name="gludio38_1921_07" count="7" respawn="30">
+		<territory name="gludio38_1921_07"/>
+		<npc id="20360"/><!--Шпион Крысолюдов-->
+	</spawn>
+	<spawn name="gludio38_1921_07" count="6" respawn="30">
+		<territory name="gludio38_1921_07"/>
+		<npc id="20032"/><!--Тарантул-->
+	</spawn>
+	<spawn name="gludio38_1921_07" count="5" respawn="30">
+		<territory name="gludio38_1921_07"/>
+		<npc id="20358"/><!--Охотник Крысолюдов-->
+	</spawn>
+	<spawn name="gludio38_1921_07" count="7" respawn="30">
+		<territory name="gludio38_1921_07"/>
+		<npc id="21093"/><!--Вожак Крысолюдов-->
+	</spawn>
+	<territory name="gludio38_1921_04">
+		<add x="-7564" y="116652" zmin="-3796" zmax="-2296"/>
+		<add x="-2776" y="115216" zmin="-3796" zmax="-2296"/>
+		<add x="-5656" y="121756" zmin="-3796" zmax="-2296"/>
+		<add x="-6296" y="121904" zmin="-3796" zmax="-2296"/>
+	</territory>
+	<spawn name="gludio38_1921_04" count="2" respawn="30">
+		<territory name="gludio38_1921_04"/>
+		<npc id="20358"/><!--Охотник Крысолюдов-->
+	</spawn>
+	<spawn name="gludio38_1921_04" count="4" respawn="30">
+		<territory name="gludio38_1921_04"/>
+		<npc id="21093"/><!--Вожак Крысолюдов-->
+	</spawn>
+	<spawn name="gludio38_1921_04" count="4" respawn="30">
+		<territory name="gludio38_1921_04"/>
+		<npc id="21094"/><!--Вождь Крысолюдов-->
+	</spawn>
+	<territory name="gludio38_1921_05">
+		<add x="-3840" y="98392" zmin="-3884" zmax="-3284"/>
+		<add x="-252" y="98392" zmin="-3884" zmax="-3284"/>
+		<add x="-272" y="101760" zmin="-3884" zmax="-3284"/>
+		<add x="-3780" y="99368" zmin="-3884" zmax="-3284"/>
+	</territory>
+	<spawn name="gludio38_1921_05" count="5" respawn="30">
+		<territory name="gludio38_1921_05"/>
+		<npc id="20360"/><!--Шпион Крысолюдов-->
+	</spawn>
+	<spawn name="gludio38_1921_05" count="5" respawn="30">
+		<territory name="gludio38_1921_05"/>
+		<npc id="20032"/><!--Тарантул-->
+	</spawn>
+	<spawn name="gludio23_npc1921_301" count="1" respawn="60">
+		<point x="-28030" y="121803" z="-3720" h="24449"/>
+		<npc id="30658"/><!--Гупу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="gludio_castle_light_side">
+		<point x="-14512" y="124162" z="-3120" h="0"/>
+		<npc id="36609"/><!--Герольд-->
+	</spawn>
+	<spawn name="gludio_chamberlain_etc" count="1" respawn="60" respawn_random="0" period_of_day="none" group="gludio_castle_light_side">
+		<point x="-18212" y="108827" z="-2472" h="16384"/>
+		<npc id="35100"/><!--Камергер Света-->
+	</spawn>
+	<spawn name="gludio_chamberlain_etc" count="1" respawn="60" respawn_random="0" period_of_day="none" group="gludio_castle_dark_side">
+		<point x="-18212" y="108827" z="-2472" h="16384"/>
+		<npc id="36653"/><!--Камергер Тьмы-->
+	</spawn>
+	<spawn name="gludio_chamberlain_etc" count="1" respawn="60" group="gludio_castle_1">
+		<point x="-15172" y="116723" z="-3216" h="16384"/>
+		<npc id="35104"/><!--Тайрон-->
+	</spawn>
+	<spawn name="gludio_chamberlain_etc" count="1" respawn="10800" group="gludio_castle_1">
+		<point x="-18452" y="113261" z="-2750" h="16384"/>
+		<npc id="35096"/><!--Привратник Внешних Владений-->
+	</spawn>
+	<spawn name="gludio_chamberlain_etc" count="1" respawn="10800" group="gludio_castle_1">
+		<point x="-18506" y="112913" z="-2750" h="32768"/>
+		<npc id="35096"/><!--Привратник Внешних Владений-->
+	</spawn>
+	<spawn name="gludio_chamberlain_etc" count="1" respawn="10800" group="gludio_castle_1">
+		<point x="-18279" y="110702" z="-2460" h="16384"/>
+		<npc id="35097"/><!--Привратник Внутренних Владений-->
+	</spawn>
+	<spawn name="gludio_chamberlain_etc" count="1" respawn="10800" group="gludio_castle_1">
+		<point x="-18345" y="110347" z="-2500" h="32768"/>
+		<npc id="35097"/><!--Привратник Внутренних Владений-->
+	</spawn>
+	<spawn name="gludio38_1921_09s" count="10" respawn="30">
+		<territory>
+			<add x="-4759" y="111595" zmin="-3689" zmax="-3089"/>
+			<add x="-2442" y="111751" zmin="-3689" zmax="-3089"/>
+			<add x="-2264" y="113730" zmin="-3689" zmax="-3089"/>
+			<add x="-4604" y="114162" zmin="-3689" zmax="-3089"/>
+		</territory>
+		<npc id="20775"/><!--Людоед Налетчик-->
+	</spawn>
+	<spawn name="gludio01_qm1921_01" count="10" respawn="180">
+		<territory>
+			<add x="-3792" y="109752" zmin="-3848" zmax="-3348"/>
+			<add x="-552" y="109284" zmin="-3848" zmax="-3348"/>
+			<add x="-448" y="113748" zmin="-3848" zmax="-3348"/>
+			<add x="-5032" y="112820" zmin="-3848" zmax="-3348"/>
+		</territory>
+		<npc id="20775"/><!--Людоед Налетчик-->
+	</spawn>
+	<spawn name="gludio08_npc1921_020" count="1" respawn="60">
+		<point x="-14531" y="124060" z="-3120" h="0"/>
+		<npc id="30256"/><!--Белла-->
+	</spawn>
+	<spawn name="gludio08_npc1921_020" count="1" respawn="60">
+		<point x="-13419" y="123068" z="-3104" h="40960"/>
+		<npc id="30325"/><!--Аудиберти-->
+	</spawn>
+	<spawn name="gludio08_npc1921_020" count="1" respawn="60">
+		<point x="-13691" y="123068" z="-3104" h="57344"/>
+		<npc id="30326"/><!--Леона-->
+	</spawn>
+	<spawn name="gludio08_npc1921_020" count="1" respawn="60">
+		<point x="-13693" y="122583" z="-3104" h="8192"/>
+		<npc id="30328"/><!--Рейса-->
+	</spawn>
+	<spawn name="gludio08_npc1921_021" count="1" respawn="60">
+		<point x="-14977" y="126035" z="-3136" h="32768"/>
+		<npc id="30434"/><!--Самед-->
+	</spawn>
+	<spawn name="gludio08_npc1921_022" count="1" respawn="60">
+		<point x="-12188" y="122899" z="-3104" h="32768"/>
+		<npc id="30342"/><!--Варсак-->
+	</spawn>
+	<spawn name="gludio08_npc1921_017" count="1" respawn="60">
+		<point x="-13579" y="123017" z="-3104" h="51910"/>
+		<npc id="30288"/><!--Рэйнс-->
+	</spawn>
+	<spawn name="gludio08_npc1921_017" count="1" respawn="60">
+		<point x="-13440" y="122643" z="-3104" h="28672"/>
+		<npc id="30327"/><!--Сориус-->
+	</spawn>
+	<spawn name="gludio08_npc1921_018" count="1" respawn="60">
+		<point x="-12892" y="123143" z="-3096" h="1039"/>
+		<npc id="30297"/><!--Тобиас-->
+	</spawn>
+	<spawn name="gludio08_npc1921_018" count="1" respawn="60">
+		<point x="-12791" y="123259" z="-3096" h="49152"/>
+		<npc id="30329"/><!--Вирджил-->
+	</spawn>
+	<spawn name="gludio08_npc1921_018" count="1" respawn="60">
+		<point x="-12503" y="123054" z="-3096" h="32768"/>
+		<npc id="30330"/><!--Сидра-->
+	</spawn>
+	<spawn name="gludio08_npc1921_018" count="1" respawn="60">
+		<point x="-12506" y="123405" z="-3112" h="16384"/>
+		<npc id="30416"/><!--Трискел-->
+	</spawn>
+	<spawn name="gludio08_npc1921_015" count="1" respawn="60">
+		<point x="-14934" y="124468" z="-3112" h="61440"/>
+		<npc id="30254"/><!--Гармония-->
+	</spawn>
+	<spawn name="gludio08_npc1921_015" count="1" respawn="60">
+		<point x="-14933" y="124540" z="-3112" h="4096"/>
+		<npc id="30294"/><!--Варан-->
+	</spawn>
+	<spawn name="gludio08_npc1921_016" count="1" respawn="60">
+		<point x="-15132" y="123282" z="-3104" h="12288"/>
+		<npc id="30253"/><!--Симплон-->
+	</spawn>
+	<spawn name="gludio08_npc1921_016" count="1" respawn="60">
+		<point x="-15238" y="123282" z="-3104" h="20480"/>
+		<npc id="30321"/><!--Сидни-->
+	</spawn>
+	<spawn name="gludio08_npc1921_019" count="1" respawn="60">
+		<point x="-13132" y="124988" z="-3112" h="49152"/>
+		<npc id="30255"/><!--Хапрок-->
+	</spawn>
+	<spawn name="gludio08_npc1921_019" count="1" respawn="60">
+		<point x="-13049" y="124737" z="-3112" h="16384"/>
+		<npc id="30322"/><!--Баллин-->
+	</spawn>
+	<spawn name="gludio08_npc1921_030" count="1" respawn="60">
+		<point x="-12823" y="124887" z="-3126" h="0"/>
+		<npc id="30505"/><!--Дрикус-->
+	</spawn>
+	<spawn name="gludio08_npc1921_030" count="1" respawn="60">
+		<point x="-12788" y="124976" z="-3117" h="0"/>
+		<npc id="30507"/><!--Ракой-->
+	</spawn>
+	<spawn name="gludio08_npc1921_030" count="1" respawn="60">
+		<point x="-12788" y="124764" z="-3120" h="0"/>
+		<npc id="30506"/><!--Бука-->
+	</spawn>
+	<spawn name="gludio08_npc1921_028" count="1" respawn="60" group="gludio_castle_1">
+		<point x="-18130" y="110020" z="-2662" h="49152"/>
+		<npc id="35099"/><!--Рабочий Склада-->
+	</spawn>
+	<spawn name="gludio08_npc1921_026" count="1" respawn="60">
+		<point x="-14708" y="124160" z="-3112" h="15972"/>
+		<npc id="31047"/><!--Келл-->
+	</spawn>
+	<spawn name="gludio08_npc1921_027" count="1" respawn="60" group="gludio_castle_1">
+		<point x="-17644" y="109616" z="-2680" h="33000"/>
+		<npc id="35098"/><!--Кузнец-->
+	</spawn>
+	<spawn name="gludio08_npc1921_042" count="1" respawn="60">
+		<point x="-13269" y="121884" z="-2968" h="49152"/>
+		<npc id="30030"/><!--Вивиан-->
+	</spawn>
+	<spawn name="gludio08_npc1921_042" count="1" respawn="60">
+		<point x="-13487" y="121884" z="-2968" h="49152"/>
+		<npc id="30345"/><!--Рамониэль-->
+	</spawn>
+	<spawn name="gludio08_npc1921_042" count="1" respawn="60">
+		<point x="-13269" y="121540" z="-2968" h="16384"/>
+		<npc id="30344"/><!--Ромер-->
+	</spawn>
+	<spawn name="gludio08_npc1921_042" count="1" respawn="60">
+		<point x="-13487" y="121541" z="-2968" h="16384"/>
+		<npc id="30293"/><!--Мануэль-->
+	</spawn>
+	<spawn name="gludio08_npc1921_043" count="1" respawn="60">
+		<point x="-15190" y="124756" z="-3112" h="40138"/>
+		<npc id="30504"/><!--Мендио-->
+	</spawn>
+	<spawn name="gludio08_npc1921_040" count="1" respawn="60">
+		<point x="-14767" y="122955" z="-3112" h="0"/>
+		<npc id="30767"><!--Управляющий Аукциона-->
+			<set name="town" value="gludio"/>
+		</npc>
+	</spawn>
+	<spawn name="gludio08_npc1921_041" count="1" respawn="60">
+		<point x="-12784" y="121709" z="-2952" h="33305"/>
+		<npc id="30289"/><!--Раймонд-->
+	</spawn>
+	<spawn name="gludio08_npc1921_044" count="1" respawn="60">
+		<point x="-13323" y="124989" z="-3112" h="0"/>
+		<npc id="30503"/><!--Рикадио-->
+	</spawn>
+	<spawn name="gludio08_npc1921_045" count="1" respawn="60">
+		<point x="-15443" y="124913" z="-3120" h="16384"/>
+		<npc id="30729"/><!--Борис-->
+	</spawn>
+	<spawn name="gludio08_npc1921_050" count="1" respawn="60">
+		<point x="-14409" y="121023" z="-3000" h="49152"/>
+		<npc id="30332"/><!--Батис-->
+	</spawn>
+	<spawn count="1" respawn="60" group="royal_love_event">
+		<point x="-14822" y="123708" z="-3112" h="4469"/>
+		<npc id="9020"/><!--Фринтеза-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="-14768" y="124704" z="-3112" h="49000"/>
+		<npc id="30012"/><!--Член Гильдии Рыболовов-->
+	</spawn>
+	<spawn name="gludio08_npc1921_002" count="1" respawn="60" group="moonstone_hall_22">
+		<point x="-16159" y="123728" z="-3096" h="53248"/>
+		<npc id="35384"/><!--Блэк-->
+	</spawn>
+	<spawn name="gludio08_npc1921_003" count="1" respawn="60" group="ruby_hall_25">
+		<point x="-12693" y="123815" z="-3112" h="49152"/>
+		<npc id="35391"/><!--Латиф-->
+	</spawn>
+	<spawn name="gludio08_npc1921_001" count="1" respawn="60" group="moonstone_hall_22">
+		<point x="-15882" y="123788" z="-3112" h="13288"/>
+		<npc id="35385"/><!--Рени-->
+	</spawn>
+	<spawn name="gludio08_npc1921_010" count="1" respawn="60">
+		<point x="-11940" y="123789" z="-3088" h="38420"/>
+		<npc id="30337"/><!--Моретти-->
+	</spawn>
+	<spawn name="gludio08_npc1921_010" count="1" respawn="60">
+		<point x="-11950" y="123473" z="-3088" h="24958"/>
+		<npc id="30338"/><!--Мельвил-->
+	</spawn>
+	<spawn name="gludio08_npc1921_013" count="1" respawn="60">
+		<point x="-14336" y="126546" z="-3144" h="16384"/>
+		<npc id="30335"/><!--Брин-->
+	</spawn>
+	<spawn name="gludio08_npc1921_013" count="1" respawn="60">
+		<point x="-14005" y="126542" z="-3144" h="16384"/>
+		<npc id="30336"/><!--Кертис-->
+	</spawn>
+	<spawn name="gludio08_npc1921_014" count="1" respawn="60">
+		<point x="-15349" y="124763" z="-3112" h="57344"/>
+		<npc id="30298"/><!--Пинтер-->
+	</spawn>
+	<spawn name="gludio08_npc1921_011" count="1" respawn="60">
+		<point x="-14708" y="121020" z="-3000" h="49152"/>
+		<npc id="30331"/><!--Тома-->
+	</spawn>
+	<spawn name="gludio08_npc1921_012" count="1" respawn="60">
+		<point x="-16623" y="124028" z="-3128" h="32768"/>
+		<npc id="30333"/><!--Праг-->
+	</spawn>
+	<spawn count="1" respawn="60" group="olympiad">
+		<point x="-15104" y="122040" z="-3056" h="3000"/>
+		<npc id="31690"/><!--Памятник Героям-->
+	</spawn>
+	<spawn count="1" respawn="60" group="olympiad">
+		<point x="-15120" y="122096" z="-3072" h="3000"/>
+		<npc id="31688"/><!--Управляющий Олимпиады-->
+	</spawn>
+	<spawn name="gludio08_npc1921_012" count="1" respawn="60">
+		<point x="-16621" y="124330" z="-3128" h="32768"/>
+		<npc id="30334"/><!--Бабен-->
+	</spawn>
+	<spawn name="gludio08_npc1921_006" count="1" respawn="60" group="onyx_hall_23">
+		<point x="-14852" y="125413" z="-3128" h="16384"/>
+		<npc id="35386"/><!--Бойер-->
+	</spawn>
+	<spawn name="gludio08_npc1921_007" count="1" respawn="60" group="topaz_hall_24">
+		<point x="-14145" y="125551" z="-3136" h="32768"/>
+		<npc id="35389"/><!--Лоринг-->
+	</spawn>
+	<spawn name="gludio08_npc1921_004" count="1" respawn="60" group="ruby_hall_25">
+		<point x="-12866" y="124166" z="-3096" h="57344"/>
+		<npc id="35390"/><!--Диллон-->
+	</spawn>
+	<spawn name="gludio08_npc1921_005" count="1" respawn="60" group="onyx_hall_23">
+		<point x="-14731" y="125630" z="-3136" h="0"/>
+		<npc id="35387"/><!--Бабак-->
+	</spawn>
+	<spawn name="gludio08_npc1921_008" count="1" respawn="60" group="topaz_hall_24">
+		<point x="-13745" y="125573" z="-3128" h="32768"/>
+		<npc id="35388"/><!--Тим-->
+	</spawn>
+	<spawn name="dion01_npc1921_303" count="1" respawn="60">
+		<point x="-2150" y="124443" z="-3724" h="0"/>
+		<npc id="30619"/><!--Дрико-->
+	</spawn>
+	<spawn name="gludio_dominion08" count="1" respawn="10800">
+		<point x="-18025" y="113264" z="-2384" h="16384"/>
+		<npc id="35081"/><!--Маг Гвардии-->
+	</spawn>
+	<spawn name="gludio_dominion08" count="1" respawn="10800">
+		<point x="-18704" y="113256" z="-2384" h="16384"/>
+		<npc id="35081"/><!--Маг Гвардии-->
+	</spawn>
+	<spawn name="gludio_dominion11" count="1" respawn="10800">
+		<point x="-18189" y="110560" z="-2500" h="16384"/>
+		<npc id="35081"/><!--Маг Гвардии-->
+	</spawn>
+	<spawn name="gludio19_npc1921_902" count="1" respawn="60" group="gludio_castle_1">
+		<point x="-17952" y="108142" z="-2032" h="-16384"/>
+		<npc id="35101"/><!--Град-->
+	</spawn>
+	<spawn name="gludio19_npc1921_901" count="1" respawn="60">
+		<point x="-17876" y="108944" z="-2485" h="16384"/>
+		<npc id="35102"/><!--Гринспен-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-14764" y="122994" z="-3112" h="60058"/>
+		<npc id="33359"/><!--Кери-->
+	</spawn>
+	<spawn group="gludio_castle_mass_gatekeeper" count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-16532" y="109387" z="-1784" h="32768"/>
+		<npc id="35095"/><!--Mass Gatekeeper-->
+	</spawn>
+	<spawn group="gludio_castle_siege_artefact" count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-18120" y="107984" z="-2483" h="16384"/>
+		<npc id="35063"/><!--Holy Artefact-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege13" count="1" respawn="10800">
+		<point x="-18072" y="113208" z="-2376" h="0"/>
+		<npc id="18016"/><!--Сундук с Сокровищами - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege13" count="1" respawn="10800">
+		<point x="-19832" y="111928" z="-2384" h="0"/>
+		<npc id="18016"/><!--Сундук с Сокровищами - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege13" count="1" respawn="10800">
+		<point x="-18952" y="109464" z="-2560" h="0"/>
+		<npc id="18016"/><!--Сундук с Сокровищами - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege13" count="1" respawn="10800">
+		<point x="-19128" y="108172" z="-2568" h="0"/>
+		<npc id="18016"/><!--Сундук с Сокровищами - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege13" count="1" respawn="10800">
+		<point x="-19032" y="110280" z="-2328" h="0"/>
+		<npc id="18016"/><!--Сундук с Сокровищами - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege13" count="1" respawn="10800">
+		<point x="-18440" y="107976" z="-2352" h="0"/>
+		<npc id="18016"/><!--Сундук с Сокровищами - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege13" count="1" respawn="10800">
+		<point x="-17192" y="110264" z="-2328" h="0"/>
+		<npc id="18016"/><!--Сундук с Сокровищами - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege12" count="1" respawn="10800">
+		<point x="-16548" y="111653" z="-2376" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege12" count="1" respawn="10800">
+		<point x="-16548" y="111602" z="-2376" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege12" count="1" respawn="10800">
+		<point x="-16548" y="111552" z="-2376" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege12" count="1" respawn="10800">
+		<point x="-16548" y="111502" z="-2376" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege12" count="1" respawn="10800">
+		<point x="-16548" y="111452" z="-2376" h="0"/>
+		<npc id="35081"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege12" count="1" respawn="10800">
+		<point x="-16548" y="111402" z="-2376" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege12" count="1" respawn="10800">
+		<point x="-16548" y="111352" z="-2376" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege12" count="1" respawn="10800">
+		<point x="-16548" y="111302" z="-2376" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege12" count="1" respawn="10800">
+		<point x="-16548" y="111252" z="-2376" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege12" count="1" respawn="10800">
+		<point x="-16548" y="111202" z="-2376" h="0"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege12" count="1" respawn="10800">
+		<point x="-16548" y="111152" z="-2376" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege12" count="1" respawn="10800">
+		<point x="-16548" y="111102" z="-2376" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege11" count="1" respawn="10800">
+		<point x="-18220" y="110540" z="-2500" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege11" count="1" respawn="10800">
+		<point x="-18189" y="110540" z="-2500" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege11" count="1" respawn="10800">
+		<point x="-18158" y="110540" z="-2500" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege11" count="1" respawn="10800">
+		<point x="-18126" y="110540" z="-2500" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege11" count="1" respawn="10800">
+		<point x="-18095" y="110540" z="-2500" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege11" count="1" respawn="10800">
+		<point x="-18063" y="110540" z="-2500" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege11" count="1" respawn="10800">
+		<point x="-18032" y="110540" z="-2500" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege11" count="1" respawn="10800">
+		<point x="-18000" y="110540" z="-2500" h="16384"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege11" count="1" respawn="10800">
+		<point x="-18220" y="110560" z="-2500" h="16384"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege11" count="1" respawn="10800">
+		<point x="-18189" y="110560" z="-2500" h="16384"/>
+		<npc id="35081"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege11" count="1" respawn="10800">
+		<point x="-18158" y="110560" z="-2500" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege11" count="1" respawn="10800">
+		<point x="-18126" y="110560" z="-2500" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege11" count="1" respawn="10800">
+		<point x="-18095" y="110560" z="-2500" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege11" count="1" respawn="10800">
+		<point x="-18063" y="110560" z="-2500" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege11" count="1" respawn="10800">
+		<point x="-18032" y="110560" z="-2500" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege11" count="1" respawn="10800">
+		<point x="-18000" y="110560" z="-2500" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege13" count="1" respawn="10800">
+		<point x="-19950" y="111653" z="-2376" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege13" count="1" respawn="10800">
+		<point x="-19950" y="111602" z="-2376" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege13" count="1" respawn="10800">
+		<point x="-19950" y="111552" z="-2376" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege13" count="1" respawn="10800">
+		<point x="-19950" y="111502" z="-2376" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege13" count="1" respawn="10800">
+		<point x="-19950" y="111452" z="-2376" h="0"/>
+		<npc id="35081"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege13" count="1" respawn="10800">
+		<point x="-19950" y="111402" z="-2376" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege13" count="1" respawn="10800">
+		<point x="-19950" y="111352" z="-2376" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege13" count="1" respawn="10800">
+		<point x="-19950" y="111302" z="-2376" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege13" count="1" respawn="10800">
+		<point x="-19950" y="111252" z="-2376" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege13" count="1" respawn="10800">
+		<point x="-19950" y="111202" z="-2376" h="0"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege13" count="1" respawn="10800">
+		<point x="-19950" y="111152" z="-2376" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege13" count="1" respawn="10800">
+		<point x="-19950" y="111102" z="-2376" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege10" count="1" respawn="10800">
+		<point x="-17880" y="110667" z="-2191" h="32768"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege10" count="1" respawn="10800">
+		<point x="-17881" y="110789" z="-2191" h="32768"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege10" count="1" respawn="10800">
+		<point x="-17826" y="110850" z="-2191" h="24576"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege10" count="1" respawn="10800">
+		<point x="-17801" y="110869" z="-2191" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege10" count="1" respawn="10800">
+		<point x="-17762" y="110870" z="-2191" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege10" count="1" respawn="10800">
+		<point x="-17726" y="110870" z="-2191" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege10" count="1" respawn="10800">
+		<point x="-17880" y="110710" z="-2191" h="32768"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege10" count="1" respawn="10800">
+		<point x="-17852" y="110825" z="-2191" h="24576"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege10" count="1" respawn="10800">
+		<point x="-17880" y="110749" z="-2190" h="32768"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege10" count="1" respawn="10800">
+		<point x="-17778" y="110804" z="-2192" h="24576"/>
+		<npc id="35081"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege10" count="1" respawn="10800">
+		<point x="-18333" y="110661" z="-2193" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege10" count="1" respawn="10800">
+		<point x="-18333" y="110701" z="-2191" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege10" count="1" respawn="10800">
+		<point x="-18333" y="110786" z="-2192" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege10" count="1" respawn="10800">
+		<point x="-18391" y="110851" z="-2191" h="8192"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege10" count="1" respawn="10800">
+		<point x="-18418" y="110871" z="-2190" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege10" count="1" respawn="10800">
+		<point x="-18458" y="110870" z="-2191" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege10" count="1" respawn="10800">
+		<point x="-18497" y="110871" z="-2191" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege10" count="1" respawn="10800">
+		<point x="-18333" y="110745" z="-2189" h="0"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege10" count="1" respawn="10800">
+		<point x="-18355" y="110815" z="-2192" h="8192"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege10" count="1" respawn="10800">
+		<point x="-18435" y="110797" z="-2189" h="8192"/>
+		<npc id="35081"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-18176" y="111420" z="-2500" h="16384"/>
+		<npc id="35072"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-18048" y="111420" z="-2500" h="16384"/>
+		<npc id="35072"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-17985" y="111420" z="-2500" h="16384"/>
+		<npc id="35072"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-18240" y="111420" z="-2500" h="16384"/>
+		<npc id="35072"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-18371" y="111420" z="-2500" h="16384"/>
+		<npc id="35072"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-18499" y="111420" z="-2500" h="16384"/>
+		<npc id="35072"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-17857" y="111420" z="-2500" h="16384"/>
+		<npc id="35072"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-17728" y="111420" z="-2500" h="16384"/>
+		<npc id="35072"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-18304" y="111420" z="-2500" h="16384"/>
+		<npc id="35067"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-17921" y="111420" z="-2500" h="16384"/>
+		<npc id="35067"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-17664" y="111420" z="-2500" h="16384"/>
+		<npc id="35067"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-18563" y="111420" z="-2500" h="16384"/>
+		<npc id="35067"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-18112" y="111420" z="-2500" h="16384"/>
+		<npc id="35068"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-17793" y="111420" z="-2500" h="16384"/>
+		<npc id="35068"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-18435" y="111420" z="-2500" h="16384"/>
+		<npc id="35068"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-18560" y="111570" z="-2500" h="16384"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-18496" y="111570" z="-2500" h="16384"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-17664" y="111570" z="-2500" h="16384"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-17728" y="111570" z="-2500" h="16384"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-18112" y="111570" z="-2500" h="16384"/>
+		<npc id="35066"/><!--Рыцарь Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-18432" y="111570" z="-2500" h="16384"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-18368" y="111570" z="-2500" h="16384"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-18304" y="111570" z="-2500" h="16384"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-18240" y="111570" z="-2500" h="16384"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-18176" y="111570" z="-2500" h="16384"/>
+		<npc id="35066"/><!--Рыцарь Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-18049" y="111570" z="-2500" h="16384"/>
+		<npc id="35066"/><!--Рыцарь Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-17985" y="111570" z="-2500" h="16384"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-17921" y="111570" z="-2500" h="16384"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-17857" y="111570" z="-2500" h="16384"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege09" count="1" respawn="10800">
+		<point x="-17793" y="111570" z="-2500" h="16384"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18096" y="113184" z="-2384" h="32768"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18096" y="113248" z="-2384" h="32768"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18096" y="113296" z="-2384" h="32768"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18048" y="113296" z="-2384" h="20480"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18000" y="113296" z="-2384" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-17936" y="113296" z="-2384" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-17872" y="113296" z="-2384" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18602" y="113174" z="-2376" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18608" y="113232" z="-2384" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18611" y="113295" z="-2376" h="8192"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18672" y="113296" z="-2384" h="12288"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18720" y="113296" z="-2384" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18780" y="113296" z="-2384" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18830" y="113296" z="-2384" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18096" y="113216" z="-2384" h="32768"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18096" y="113264" z="-2384" h="32768"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18608" y="113200" z="-2384" h="0"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18611" y="113261" z="-2376" h="0"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18025" y="113264" z="-2384" h="16384"/>
+		<npc id="35081"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18704" y="113256" z="-2384" h="16384"/>
+		<npc id="35081"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18648" y="113313" z="-2376" h="32768"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18692" y="113313" z="-2376" h="32768"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18759" y="113311" z="-2376" h="24576"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18804" y="113316" z="-2376" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18071" y="113326" z="-2376" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18011" y="113328" z="-2376" h="0"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-17969" y="113325" z="-2376" h="8192"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-17923" y="113326" z="-2376" h="16384"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18096" y="113216" z="-2384" h="32768"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18096" y="113264" z="-2384" h="32768"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18608" y="113200" z="-2384" h="0"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18611" y="113261" z="-2376" h="0"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18025" y="113264" z="-2384" h="16384"/>
+		<npc id="35081"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege08" count="1" respawn="10800">
+		<point x="-18704" y="113256" z="-2384" h="16384"/>
+		<npc id="35081"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="0">
+		<point x="-18173" y="108190" z="-2555" h="16344"/>
+		<npc id="35064"/><!--Барон Ливен Валднер-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="180">
+		<point x="-18061" y="108187" z="-2554" h="16344"/>
+		<npc id="35065"/><!--Кроненберг - Сэр-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17959" y="108204" z="-2560" h="16344"/>
+		<npc id="35072"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17922" y="108203" z="-2560" h="16344"/>
+		<npc id="35072"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17889" y="108203" z="-2560" h="16344"/>
+		<npc id="35072"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17851" y="108202" z="-2560" h="16344"/>
+		<npc id="35072"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17814" y="108202" z="-2559" h="16344"/>
+		<npc id="35072"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17776" y="108201" z="-2559" h="16344"/>
+		<npc id="35072"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17744" y="108201" z="-2559" h="16344"/>
+		<npc id="35072"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17706" y="108200" z="-2559" h="16344"/>
+		<npc id="35072"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17959" y="108238" z="-2561" h="16344"/>
+		<npc id="35069"/><!--Гвардеец - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17921" y="108237" z="-2561" h="16344"/>
+		<npc id="35069"/><!--Гвардеец - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17888" y="108237" z="-2561" h="16344"/>
+		<npc id="35069"/><!--Гвардеец - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17851" y="108236" z="-2561" h="16344"/>
+		<npc id="35069"/><!--Гвардеец - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17813" y="108236" z="-2560" h="16344"/>
+		<npc id="35069"/><!--Гвардеец - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17776" y="108235" z="-2560" h="16344"/>
+		<npc id="35069"/><!--Гвардеец - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17743" y="108235" z="-2560" h="16344"/>
+		<npc id="35069"/><!--Гвардеец - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17706" y="108234" z="-2560" h="16344"/>
+		<npc id="35069"/><!--Гвардеец - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17957" y="108276" z="-2562" h="16344"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17919" y="108275" z="-2562" h="16344"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17887" y="108275" z="-2562" h="16344"/>
+		<npc id="35066"/><!--Рыцарь Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17849" y="108274" z="-2562" h="16344"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17812" y="108274" z="-2561" h="16344"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17774" y="108273" z="-2561" h="16344"/>
+		<npc id="35066"/><!--Рыцарь Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17742" y="108273" z="-2561" h="16344"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17704" y="108272" z="-2561" h="16344"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18519" y="108210" z="-2556" h="16344"/>
+		<npc id="35072"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18481" y="108210" z="-2556" h="16344"/>
+		<npc id="35072"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18449" y="108210" z="-2556" h="16344"/>
+		<npc id="35072"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18411" y="108209" z="-2556" h="16344"/>
+		<npc id="35072"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18374" y="108208" z="-2555" h="16344"/>
+		<npc id="35072"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18336" y="108208" z="-2555" h="16344"/>
+		<npc id="35072"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18303" y="108207" z="-2555" h="16344"/>
+		<npc id="35072"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18266" y="108207" z="-2555" h="16344"/>
+		<npc id="35072"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18518" y="108245" z="-2557" h="16344"/>
+		<npc id="35069"/><!--Гвардеец - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18480" y="108244" z="-2557" h="16344"/>
+		<npc id="35069"/><!--Гвардеец - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18448" y="108244" z="-2557" h="16344"/>
+		<npc id="35069"/><!--Гвардеец - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18410" y="108243" z="-2557" h="16344"/>
+		<npc id="35069"/><!--Гвардеец - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18373" y="108242" z="-2556" h="16344"/>
+		<npc id="35069"/><!--Гвардеец - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18335" y="108242" z="-2556" h="16344"/>
+		<npc id="35069"/><!--Гвардеец - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18303" y="108242" z="-2556" h="16344"/>
+		<npc id="35069"/><!--Гвардеец - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18265" y="108241" z="-2556" h="16344"/>
+		<npc id="35069"/><!--Гвардеец - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18517" y="108282" z="-2558" h="16344"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18479" y="108281" z="-2558" h="16344"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18446" y="108281" z="-2558" h="16344"/>
+		<npc id="35066"/><!--Рыцарь Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18409" y="108280" z="-2558" h="16344"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18371" y="108280" z="-2557" h="16344"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18334" y="108279" z="-2557" h="16344"/>
+		<npc id="35066"/><!--Рыцарь Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18301" y="108279" z="-2557" h="16344"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18264" y="108278" z="-2557" h="16344"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18439" y="108045" z="-2555" h="16344"/>
+		<npc id="35068"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18355" y="108045" z="-2554" h="16344"/>
+		<npc id="35068"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18276" y="108044" z="-2554" h="16344"/>
+		<npc id="35068"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18201" y="108044" z="-2554" h="16344"/>
+		<npc id="35068"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-18024" y="108044" z="-2551" h="16344"/>
+		<npc id="35068"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17941" y="108044" z="-2551" h="16344"/>
+		<npc id="35068"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17861" y="108043" z="-2551" h="16344"/>
+		<npc id="35068"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege05" count="1" respawn="120">
+		<point x="-17787" y="108043" z="-2551" h="16344"/>
+		<npc id="35068"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18257" y="110335" z="-2493" h="6320"/>
+		<npc id="36783"/><!--Рыцарь - Королевская стража-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18240" y="110310" z="-2494" h="6320"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18216" y="110284" z="-2493" h="6320"/>
+		<npc id="36784"/><!--Рыцарь - Королевская стража-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18197" y="110261" z="-2493" h="6320"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18182" y="110243" z="-2492" h="6320"/>
+		<npc id="36785"/><!--Рыцарь - Королевская стража-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18160" y="110217" z="-2494" h="6320"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18143" y="110192" z="-2494" h="6320"/>
+		<npc id="36786"/><!--Рыцарь - Королевская стража-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18123" y="110171" z="-2494" h="6320"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18099" y="110160" z="-2495" h="17076"/>
+		<npc id="36787"/><!--Щит - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18074" y="110179" z="-2494" h="25568"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18056" y="110203" z="-2494" h="25568"/>
+		<npc id="36791"/><!--Рыцарь - Королевская стража-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18043" y="110223" z="-2493" h="25568"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18024" y="110250" z="-2495" h="25568"/>
+		<npc id="36790"/><!--Рыцарь - Королевская стража-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18005" y="110274" z="-2496" h="25568"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-17986" y="110304" z="-2495" h="25568"/>
+		<npc id="36789"/><!--Рыцарь - Королевская стража-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-17969" y="110329" z="-2495" h="25568"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-17956" y="110348" z="-2494" h="25568"/>
+		<npc id="36788"/><!--Рыцарь - Королевская стража-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18272" y="110315" z="-2495" h="6320"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18254" y="110291" z="-2496" h="6320"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18230" y="110265" z="-2495" h="6320"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18211" y="110241" z="-2495" h="6320"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18196" y="110223" z="-2494" h="6320"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18175" y="110197" z="-2496" h="6320"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18157" y="110173" z="-2496" h="6320"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18138" y="110152" z="-2496" h="6320"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18113" y="110141" z="-2497" h="17076"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18085" y="110142" z="-2494" h="17076"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18060" y="110161" z="-2493" h="25568"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18042" y="110185" z="-2493" h="25568"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18029" y="110205" z="-2492" h="25568"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18010" y="110232" z="-2494" h="25568"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-17991" y="110256" z="-2495" h="25568"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-17972" y="110286" z="-2494" h="25568"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-17955" y="110311" z="-2494" h="25568"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-17942" y="110330" z="-2493" h="25568"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18300" y="110210" z="-2493" h="6320"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18281" y="110187" z="-2493" h="6320"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18266" y="110169" z="-2492" h="6320"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18244" y="110143" z="-2494" h="6320"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18227" y="110118" z="-2495" h="6320"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-17999" y="110152" z="-2489" h="25568"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-17986" y="110172" z="-2488" h="25568"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-17966" y="110199" z="-2490" h="25568"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-17948" y="110223" z="-2491" h="25568"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-17929" y="110253" z="-2490" h="25568"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-17968" y="110076" z="-2491" h="15620"/>
+		<npc id="35081"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-17934" y="110076" z="-2492" h="15620"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18213" y="110073" z="-2492" h="15620"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18190" y="110074" z="-2492" h="15620"/>
+		<npc id="35081"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="10800">
+		<point x="-18265" y="110348" z="-2490" h="25568"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="60">
+		<point x="-18274" y="110294" z="-2493" h="6320"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="60">
+		<point x="-18193" y="110203" z="-2493" h="6320"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="60">
+		<point x="-18008" y="110212" z="-2493" h="6320"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege04" count="1" respawn="60">
+		<point x="-17936" y="110315" z="-2493" h="6320"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege07" count="1" respawn="10800">
+		<point x="-18574" y="109236" z="-2333" h="16088"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege07" count="1" respawn="10800">
+		<point x="-18600" y="109236" z="-2333" h="16088"/>
+		<npc id="35079"/><!--Рыцарь Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege07" count="1" respawn="10800">
+		<point x="-18643" y="109233" z="-2332" h="16088"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege07" count="1" respawn="10800">
+		<point x="-18574" y="109214" z="-2337" h="16088"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege07" count="1" respawn="10800">
+		<point x="-18601" y="109214" z="-2337" h="16088"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege07" count="1" respawn="10800">
+		<point x="-18628" y="109214" z="-2336" h="16088"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege07" count="1" respawn="10800">
+		<point x="-18575" y="109189" z="-2335" h="16088"/>
+		<npc id="35082"/><!--Гвардеец - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege07" count="1" respawn="10800">
+		<point x="-18602" y="109189" z="-2335" h="16088"/>
+		<npc id="35082"/><!--Гвардеец - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege07" count="1" respawn="10800">
+		<point x="-18629" y="109190" z="-2334" h="16088"/>
+		<npc id="35082"/><!--Гвардеец - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege07" count="1" respawn="10800">
+		<point x="-18536" y="108948" z="-2335" h="16088"/>
+		<npc id="35081"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege07" count="1" respawn="10800">
+		<point x="-18562" y="108948" z="-2335" h="16088"/>
+		<npc id="35081"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege07" count="1" respawn="10800">
+		<point x="-18590" y="108948" z="-2334" h="16088"/>
+		<npc id="35081"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege07" count="1" respawn="10800">
+		<point x="-18428" y="108118" z="-2338" h="65152"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege07" count="1" respawn="10800">
+		<point x="-18427" y="108154" z="-2338" h="65152"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege07" count="1" respawn="10800">
+		<point x="-18426" y="108191" z="-2337" h="65152"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege07" count="1" respawn="10800">
+		<point x="-18426" y="108227" z="-2337" h="65152"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege07" count="1" respawn="10800">
+		<point x="-18426" y="108263" z="-2337" h="65152"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege07" count="1" respawn="10800">
+		<point x="-18425" y="108301" z="-2337" h="65152"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege07" count="1" respawn="10800">
+		<point x="-18425" y="108332" z="-2336" h="65152"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege07" count="1" respawn="10800">
+		<point x="-18424" y="108369" z="-2336" h="65152"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege07" count="1" respawn="10800">
+		<point x="-18424" y="108404" z="-2336" h="65152"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege07" count="1" respawn="10800">
+		<point x="-18423" y="108441" z="-2336" h="65152"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege07" count="1" respawn="10800">
+		<point x="-18422" y="108478" z="-2336" h="65152"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege06" count="1" respawn="10800">
+		<point x="-17599" y="109170" z="-2333" h="16088"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege06" count="1" respawn="10800">
+		<point x="-17625" y="109170" z="-2333" h="16088"/>
+		<npc id="35079"/><!--Рыцарь Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege06" count="1" respawn="10800">
+		<point x="-17653" y="109170" z="-2332" h="16088"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege06" count="1" respawn="10800">
+		<point x="-17599" y="109148" z="-2337" h="16088"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege06" count="1" respawn="10800">
+		<point x="-17626" y="109148" z="-2337" h="16088"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege06" count="1" respawn="10800">
+		<point x="-17653" y="109148" z="-2336" h="16088"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege06" count="1" respawn="10800">
+		<point x="-17600" y="109123" z="-2335" h="16088"/>
+		<npc id="35082"/><!--Гвардеец - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege06" count="1" respawn="10800">
+		<point x="-17627" y="109123" z="-2335" h="16088"/>
+		<npc id="35082"/><!--Гвардеец - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege06" count="1" respawn="10800">
+		<point x="-17654" y="109124" z="-2334" h="16088"/>
+		<npc id="35082"/><!--Гвардеец - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege06" count="1" respawn="10800">
+		<point x="-17540" y="109046" z="-2335" h="16088"/>
+		<npc id="35081"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege06" count="1" respawn="10800">
+		<point x="-17566" y="109046" z="-2335" h="16088"/>
+		<npc id="35081"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege06" count="1" respawn="10800">
+		<point x="-17594" y="109046" z="-2334" h="16088"/>
+		<npc id="35081"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege06" count="1" respawn="10800">
+		<point x="-17795" y="108473" z="-2338" h="32692"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege06" count="1" respawn="10800">
+		<point x="-17794" y="108436" z="-2338" h="32692"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege06" count="1" respawn="10800">
+		<point x="-17794" y="108399" z="-2337" h="32692"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege06" count="1" respawn="10800">
+		<point x="-17793" y="108363" z="-2337" h="32692"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege06" count="1" respawn="10800">
+		<point x="-17793" y="108327" z="-2337" h="32692"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege06" count="1" respawn="10800">
+		<point x="-17792" y="108289" z="-2337" h="32692"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege06" count="1" respawn="10800">
+		<point x="-17792" y="108258" z="-2336" h="32692"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege06" count="1" respawn="10800">
+		<point x="-17791" y="108221" z="-2336" h="32692"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege06" count="1" respawn="10800">
+		<point x="-17790" y="108186" z="-2336" h="32692"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege06" count="1" respawn="10800">
+		<point x="-17790" y="108149" z="-2336" h="32692"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege06" count="1" respawn="10800">
+		<point x="-17790" y="108112" z="-2336" h="32692"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18460" y="113107" z="-2759" h="15608"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18432" y="113107" z="-2759" h="15608"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18404" y="113107" z="-2759" h="15608"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18376" y="113107" z="-2759" h="15608"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18348" y="113107" z="-2759" h="15608"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18320" y="113107" z="-2759" h="15608"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18292" y="113107" z="-2759" h="15608"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18264" y="113107" z="-2759" h="15608"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18236" y="113107" z="-2759" h="15608"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18460" y="113127" z="-2759" h="15608"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18432" y="113127" z="-2759" h="15608"/>
+		<npc id="36783"/><!--Рыцарь - Королевская стража-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18404" y="113127" z="-2759" h="15608"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18376" y="113127" z="-2759" h="15608"/>
+		<npc id="36784"/><!--Рыцарь - Королевская стража-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18348" y="113127" z="-2759" h="15608"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18320" y="113127" z="-2759" h="15608"/>
+		<npc id="36785"/><!--Рыцарь - Королевская стража-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18292" y="113127" z="-2759" h="15608"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18264" y="113127" z="-2759" h="15608"/>
+		<npc id="36786"/><!--Рыцарь - Королевская стража-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18236" y="113127" z="-2759" h="15608"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18460" y="113147" z="-2759" h="15608"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18432" y="113147" z="-2759" h="15608"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18404" y="113147" z="-2759" h="15608"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18376" y="113147" z="-2759" h="15608"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18348" y="113147" z="-2759" h="15608"/>
+		<npc id="35079"/><!--Рыцарь Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18320" y="113147" z="-2759" h="15608"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18292" y="113147" z="-2759" h="15608"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18264" y="113147" z="-2759" h="15608"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege01" count="1" respawn="10800">
+		<point x="-18236" y="113147" z="-2759" h="15608"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18410" y="112356" z="-2498" h="15900"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18380" y="112355" z="-2499" h="15900"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18350" y="112358" z="-2498" h="15900"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18320" y="112359" z="-2498" h="15900"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18291" y="112360" z="-2497" h="15900"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18640" y="112422" z="-2496" h="15900"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18610" y="112421" z="-2497" h="15900"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18581" y="112424" z="-2496" h="15900"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18551" y="112425" z="-2496" h="15900"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18521" y="112426" z="-2495" h="15900"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18107" y="112560" z="-2497" h="31664"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18104" y="112590" z="-2498" h="31664"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18106" y="112619" z="-2497" h="31664"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18105" y="112649" z="-2497" h="31664"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18104" y="112679" z="-2496" h="31664"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-17840" y="112354" z="-2600" h="65480"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-17839" y="112320" z="-2600" h="65480"/>
+		<npc id="35079"/><!--Рыцарь Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-17835" y="112279" z="-2599" h="65480"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-17861" y="112354" z="-2589" h="65480"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-17860" y="112320" z="-2590" h="65480"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-17856" y="112279" z="-2589" h="65480"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-17879" y="112354" z="-2575" h="65480"/>
+		<npc id="35082"/><!--Гвардеец - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-17878" y="112320" z="-2576" h="65480"/>
+		<npc id="35082"/><!--Гвардеец - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-17874" y="112279" z="-2575" h="65480"/>
+		<npc id="35082"/><!--Гвардеец - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18207" y="112313" z="-2498" h="22676"/>
+		<npc id="35081"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18410" y="112356" z="-2498" h="15900"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18350" y="112358" z="-2498" h="15900"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18291" y="112360" z="-2497" h="15900"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18640" y="112422" z="-2496" h="15900"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18610" y="112421" z="-2497" h="15900"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18581" y="112424" z="-2496" h="15900"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18551" y="112425" z="-2496" h="15900"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18107" y="112560" z="-2497" h="31664"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18106" y="112619" z="-2497" h="31664"/>
+		<npc id="35080"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege03" count="1" respawn="10800">
+		<point x="-18104" y="112679" z="-2496" h="31664"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18603" y="112729" z="-2749" h="64848"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18602" y="112698" z="-2748" h="64848"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18602" y="112668" z="-2748" h="64848"/>
+		<npc id="35079"/><!--Рыцарь Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18602" y="112638" z="-2747" h="64848"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18603" y="112607" z="-2748" h="64848"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18601" y="112578" z="-2747" h="64848"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18601" y="112548" z="-2747" h="64848"/>
+		<npc id="35079"/><!--Рыцарь Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18601" y="112518" z="-2746" h="64848"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18602" y="112487" z="-2747" h="64848"/>
+		<npc id="35084"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18628" y="112711" z="-2767" h="64848"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18628" y="112681" z="-2767" h="64848"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18628" y="112650" z="-2766" h="64848"/>
+		<npc id="36788"/><!--Рыцарь - Королевская стража-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18629" y="112620" z="-2767" h="64848"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18627" y="112590" z="-2766" h="64848"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18627" y="112560" z="-2766" h="64848"/>
+		<npc id="36789"/><!--Рыцарь - Королевская стража-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18626" y="112531" z="-2765" h="64848"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18627" y="112499" z="-2766" h="64848"/>
+		<npc id="35083"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18649" y="112727" z="-2771" h="64848"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18648" y="112697" z="-2771" h="64848"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18648" y="112667" z="-2770" h="64848"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18647" y="112636" z="-2770" h="64848"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18649" y="112606" z="-2770" h="64848"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18647" y="112576" z="-2769" h="64848"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18647" y="112546" z="-2769" h="64848"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18646" y="112517" z="-2768" h="64848"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18647" y="112485" z="-2769" h="64848"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18795" y="112709" z="-2772" h="64848"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18795" y="112679" z="-2771" h="64848"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18795" y="112648" z="-2771" h="64848"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18794" y="112618" z="-2770" h="64848"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18795" y="112588" z="-2770" h="64848"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18793" y="112558" z="-2770" h="64848"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18792" y="112528" z="-2769" h="64848"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18792" y="112498" z="-2769" h="64848"/>
+		<npc id="35085"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18896" y="112378" z="-2763" h="15900"/>
+		<npc id="35081"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="10800">
+		<point x="-18866" y="112377" z="-2764" h="15900"/>
+		<npc id="35081"/><!--Маг Гвардии - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="60">
+		<point x="-18658" y="112496" z="-2747" h="64848"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="60">
+		<point x="-18659" y="112560" z="-2747" h="64848"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="60">
+		<point x="-18659" y="112649" z="-2747" h="64848"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn group="gludio_castle_siege" name="gludio_siege02" count="1" respawn="60">
+		<point x="-18656" y="112709" z="-2747" h="64848"/>
+		<npc id="35071"/><!--Охранник - Глудио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-22747" y="119924" zmin="-3299" zmax="-3999"/>
+		<npc id="20335"/><!--Гризли-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-23821" y="121015" zmin="-3299" zmax="-3999"/>
+		<npc id="20028"/><!--Паук Захватчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-24175" y="121938" zmin="-3299" zmax="-3999"/>
+		<npc id="20510"/><!--Пума-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-24108" y="122317" zmin="-3299" zmax="-3999"/>
+		<npc id="20028"/><!--Паук Захватчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-23655" y="123370" zmin="-3299" zmax="-3999"/>
+		<npc id="20028"/><!--Паук Захватчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-22878" y="123564" zmin="-3299" zmax="-3999"/>
+		<npc id="20021"/><!--Рыжий Медведь-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-23624" y="123166" zmin="-3299" zmax="-3999"/>
+		<npc id="20510"/><!--Пума-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-22078" y="120095" zmin="-3299" zmax="-3999"/>
+		<npc id="20335"/><!--Гризли-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-21553" y="121566" zmin="-3299" zmax="-3999"/>
+		<npc id="20510"/><!--Пума-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-21583" y="121128" zmin="-3299" zmax="-3999"/>
+		<npc id="20021"/><!--Рыжий Медведь-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-19965" y="121358" zmin="-3299" zmax="-3999"/>
+		<npc id="20335"/><!--Гризли-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-20324" y="121882" zmin="-3299" zmax="-3999"/>
+		<npc id="20021"/><!--Рыжий Медведь-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-26889" y="117171" zmin="-3299" zmax="-3999"/>
+		<npc id="20360"/><!--Шпион Крысолюдов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-27709" y="117838" zmin="-3299" zmax="-3999"/>
+		<npc id="20360"/><!--Шпион Крысолюдов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-27614" y="117684" zmin="-3299" zmax="-3999"/>
+		<npc id="20012"/><!--Белый Оборотень-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-30318" y="116619" zmin="-3299" zmax="-3999"/>
+		<npc id="20012"/><!--Белый Оборотень-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-28790" y="117627" zmin="-3299" zmax="-3999"/>
+		<npc id="20360"/><!--Шпион Крысолюдов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-26865" y="115922" zmin="-3299" zmax="-3999"/>
+		<npc id="20012"/><!--Белый Оборотень-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-26569" y="114710" zmin="-3299" zmax="-3999"/>
+		<npc id="20011"/><!--Стрелок Орков Вуку-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-34979" y="117445" zmin="-3299" zmax="-3999"/>
+		<npc id="20012"/><!--Белый Оборотень-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-30242" y="113790" zmin="-3299" zmax="-3999"/>
+		<npc id="20009"/><!--Орк Вуку-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-27326" y="113464" zmin="-3299" zmax="-3999"/>
+		<npc id="20009"/><!--Орк Вуку-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-26519" y="113617" zmin="-3299" zmax="-3999"/>
+		<npc id="20510"/><!--Пума-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-26318" y="113631" zmin="-3299" zmax="-3999"/>
+		<npc id="20510"/><!--Пума-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-25611" y="114028" zmin="-3299" zmax="-3999"/>
+		<npc id="20011"/><!--Стрелок Орков Вуку-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-26559" y="113798" zmin="-3299" zmax="-3999"/>
+		<npc id="20510"/><!--Пума-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-26086" y="113530" zmin="-3299" zmax="-3999"/>
+		<npc id="20510"/><!--Пума-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-30979" y="108165" zmin="-3299" zmax="-3999"/>
+		<npc id="20510"/><!--Пума-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-30556" y="108146" zmin="-3299" zmax="-3999"/>
+		<npc id="20012"/><!--Белый Оборотень-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-29523" y="106926" zmin="-3299" zmax="-3999"/>
+		<npc id="20009"/><!--Орк Вуку-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-30354" y="107531" zmin="-3299" zmax="-3999"/>
+		<npc id="20012"/><!--Белый Оборотень-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-29083" y="106367" zmin="-3299" zmax="-3999"/>
+		<npc id="20012"/><!--Белый Оборотень-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-29655" y="109312" zmin="-3299" zmax="-3999"/>
+		<npc id="20012"/><!--Белый Оборотень-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-28865" y="108895" zmin="-3299" zmax="-3999"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-28964" y="111338" zmin="-3299" zmax="-3999"/>
+		<npc id="20510"/><!--Пума-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-28655" y="109354" zmin="-3299" zmax="-3999"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-28650" y="109276" zmin="-3299" zmax="-3999"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-26748" y="112628" zmin="-3299" zmax="-3999"/>
+		<npc id="20012"/><!--Белый Оборотень-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-30807" y="104724" zmin="-3299" zmax="-3999"/>
+		<npc id="20011"/><!--Стрелок Орков Вуку-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-29526" y="106272" zmin="-3299" zmax="-3999"/>
+		<npc id="20360"/><!--Шпион Крысолюдов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-29301" y="106493" zmin="-3299" zmax="-3999"/>
+		<npc id="20360"/><!--Шпион Крысолюдов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-30144" y="106244" zmin="-3299" zmax="-3999"/>
+		<npc id="20510"/><!--Пума-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-30068" y="106099" zmin="-3299" zmax="-3999"/>
+		<npc id="20510"/><!--Пума-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-29432" y="106312" zmin="-3299" zmax="-3999"/>
+		<npc id="20011"/><!--Стрелок Орков Вуку-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-29946" y="106364" zmin="-3299" zmax="-3999"/>
+		<npc id="20360"/><!--Шпион Крысолюдов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-29398" y="104964" zmin="-3299" zmax="-3999"/>
+		<npc id="20510"/><!--Пума-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-29484" y="104606" zmin="-3299" zmax="-3999"/>
+		<npc id="20009"/><!--Орк Вуку-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-29556" y="105834" zmin="-3299" zmax="-3999"/>
+		<npc id="20011"/><!--Стрелок Орков Вуку-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-28288" y="105620" zmin="-3299" zmax="-3999"/>
+		<npc id="20012"/><!--Белый Оборотень-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-28603" y="106295" zmin="-3299" zmax="-3999"/>
+		<npc id="20360"/><!--Шпион Крысолюдов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-25555" y="106185" zmin="-3299" zmax="-3999"/>
+		<npc id="20017"/><!--Воин Орков Вуку-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-26054" y="108484" zmin="-3299" zmax="-3999"/>
+		<npc id="20009"/><!--Орк Вуку-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-26054" y="108484" zmin="-3299" zmax="-3999"/>
+		<npc id="20009"/><!--Орк Вуку-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-27623" y="113620" zmin="-3299" zmax="-3999"/>
+		<npc id="20009"/><!--Орк Вуку-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-26519" y="113542" zmin="-3299" zmax="-3999"/>
+		<npc id="20510"/><!--Пума-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-26191" y="113701" zmin="-3299" zmax="-3999"/>
+		<npc id="20510"/><!--Пума-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-25701" y="114086" zmin="-3299" zmax="-3999"/>
+		<npc id="20011"/><!--Стрелок Орков Вуку-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-26607" y="113760" zmin="-3299" zmax="-3999"/>
+		<npc id="20510"/><!--Пума-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="-26038" y="113530" zmin="-3299" zmax="-3999"/>
+		<npc id="20510"/><!--Пума-->
+	</spawn>	
+	<spawn name="gludio08_npc1921_premium01" count="1" respawn="60" group="vitamin_manager">
+		<point x="-13283" y="124612" z="-3120" h="49000"/>
+		<npc id="32478"/><!--Менеджер Витаминов-->
+	</spawn>
+	<spawn name="gludio38_mb1921_01" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="-4076" y="112252" zmin="-3632" zmax="-3032"/>
+			<add x="-2836" y="112216" zmin="-3632" zmax="-3032"/>
+			<add x="-2840" y="113392" zmin="-3632" zmax="-3032"/>
+			<add x="-4052" y="113416" zmin="-3632" zmax="-3032"/>
+		</territory>
+		<npc id="25357"/><!--Вождь Трусливых Крысолюдов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="class_master">
+		<point x="-14022" y="123829" z="-3118" h="39678"/>
+		<npc id="31860"/><!--Buzz the Cat-->
+	</spawn>
+</list>

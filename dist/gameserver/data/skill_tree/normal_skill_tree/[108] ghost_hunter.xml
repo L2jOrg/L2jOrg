@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="108">	<!--Призрачный Охотник-->
+			<skill id="1405" level="3" name="Божественное Вдохновение(Divine Inspiration)" item_id="8620" cost="5700000" min_level="76"/>
+			<skill id="1405" level="4" name="Божественное Вдохновение(Divine Inspiration)" item_id="8621" cost="5700000" min_level="76"/>
+			<skill id="1630" level="1" name="Бросок Кровавого Кинжала(Throwing Blood Dagger)" cost="5700000" min_level="76"/>
+			<skill id="209" level="46" name="Владение Кинжалом(Dagger Mastery)" cost="5700000" min_level="76"/>
+			<skill id="233" level="48" name="Владение Легкой Броней(Light Armor Mastery)" cost="5700000" min_level="76"/>
+			<skill id="223" level="50" name="Жало(Sting)" cost="5700000" min_level="76"/>
+			<skill id="105" level="25" name="Замораживающий Удар(Freezing Strike)" cost="5700000" min_level="76"/>
+			<skill id="70" level="54" name="Кража Здоровья(Drain HP)" cost="5700000" min_level="76"/>
+			<skill id="96" level="7" name="Кровопускание(Bleed)" cost="5700000" min_level="76"/>
+			<skill id="1835" level="1" name="Оседлать Саблезубого Кугуара(Mount Saber Tooth Cougar)" item_id="90040" min_level="76"/>
+			<skill id="122" level="16" name="Сглаз(Hex)" cost="5700000" min_level="76"/>
+			<skill id="263" level="38" name="Смертельный Импульс(Deadly Blow)" cost="5700000" min_level="76"/>
+			<skill id="344" level="1" name="Смертоносный Удар(Lethal Blow)" cost="5700000" min_level="76"/>
+			<skill id="115" level="18" name="Сокрушение Мощи(Power Break)" cost="5700000" min_level="76"/>
+			<skill id="30" level="38" name="Удар в Спину(Backstab)" cost="5700000" min_level="76"/>
+			<skill id="209" level="47" name="Владение Кинжалом(Dagger Mastery)" cost="5700000" min_level="77"/>
+			<skill id="233" level="49" name="Владение Легкой Броней(Light Armor Mastery)" cost="5700000" min_level="77"/>
+			<skill id="223" level="51" name="Жало(Sting)" cost="5700000" min_level="77"/>
+			<skill id="70" level="55" name="Кража Здоровья(Drain HP)" cost="5700000" min_level="77"/>
+			<skill id="531" level="1" name="Критическая Рана(Critical Wound)" item_id="90055" cost="5700000" min_level="77"/>
+			<skill id="1631" level="1" name="Сброс Движений(Clear Movements)" item_id="90054" cost="5700000" min_level="77"/>
+			<skill id="263" level="39" name="Смертельный Импульс(Deadly Blow)" cost="5700000" min_level="77"/>
+			<skill id="30" level="39" name="Удар в Спину(Backstab)" cost="5700000" min_level="77"/>
+			<skill id="209" level="48" name="Владение Кинжалом(Dagger Mastery)" cost="13300000" min_level="78"/>
+			<skill id="233" level="50" name="Владение Легкой Броней(Light Armor Mastery)" cost="13300000" min_level="78"/>
+			<skill id="223" level="52" name="Жало(Sting)" cost="13300000" min_level="78"/>
+			<skill id="105" level="26" name="Замораживающий Удар(Freezing Strike)" cost="13300000" min_level="78"/>
+			<skill id="70" level="56" name="Кража Здоровья(Drain HP)" cost="13300000" min_level="78"/>
+			<skill id="412" level="11" name="Песочная Бомба(Sand Bomb)" cost="13300000" min_level="78"/>
+			<skill id="122" level="17" name="Сглаз(Hex)" cost="13300000" min_level="78"/>
+			<skill id="263" level="40" name="Смертельный Импульс(Deadly Blow)" cost="13300000" min_level="78"/>
+			<skill id="115" level="19" name="Сокрушение Мощи(Power Break)" cost="13300000" min_level="78"/>
+			<skill id="30" level="40" name="Удар в Спину(Backstab)" cost="13300000" min_level="78"/>
+			<skill id="357" level="1" name="Фокусировка Мощности(Focus Power)" item_id="90056" cost="13300000" min_level="78"/>
+			<skill id="355" level="1" name="Фокусировка Смерти(Focus Death)" item_id="90058" cost="13300000" min_level="78"/>
+			<skill id="821" level="8" name="Шаг из Тени(Shadow Step)" cost="13300000" min_level="78"/>
+			<skill id="447" level="1" name="Контратака(Counterattack)" item_id="90061" cost="13300000" min_level="79"/>
+			<skill id="770" level="1" name="Походка Призрака(Ghost Walking)" item_id="90135" cost="13300000" min_level="80"/>
+		</class>
+	</normal_skill_tree>
+</list>

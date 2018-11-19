@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="24210004" name="valakas_door_01" hp="158250" pdef="644" mdef="518">
+		<pos x="190917" y="-115528" z="-1519"/>
+		<shape ax="190891" ay="-115626" bx="190943" by="-115626" cx="190944" cy="-115430" dx="190892" dy="-115430" minz="-1619" maxz="-1363"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="3600"/>
+	</door>
+	<door id="24210005" name="valakas_door_02" hp="158250" pdef="644" mdef="518">
+		<pos x="189479" y="-108511" z="-952"/>
+		<shape ax="189570" ay="-108551" bx="189579" by="-108510" cx="189388" cy="-108473" dx="189380" dy="-108508" minz="-1056" maxz="-800"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="3600"/>
+	</door>
+	<door id="24210006" name="valakas_door_03" hp="158250" pdef="644" mdef="518">
+		<pos x="191458" y="-108107" z="-955"/>
+		<shape ax="191357" ay="-108119" bx="191369" by="-108153" cx="191557" cy="-108095" dx="191548" dy="-108058" minz="-1058" maxz="-802"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="3600"/>
+	</door>
+</list>

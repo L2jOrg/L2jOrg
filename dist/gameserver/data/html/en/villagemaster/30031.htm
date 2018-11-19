@@ -1,0 +1,11 @@
+<html><head><body>
+High Priest Biotin:
+<br>I am High Priest Biotin, guardian of this temple of Einhasad. The power and authority of Einhasad, the goddess of light, surpasses everything in this world. Which aspect of Einhasad's authority would you like to experience? If I can help you in any way, my young friend, it would be a blessing for me to do so.<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">"Can you tell me about the 1st Class Transfer?"</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Clan</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Alliance</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Exchange Daily Coins</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Quest</Button>
+</body></html>

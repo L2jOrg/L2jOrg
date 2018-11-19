@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<territory name="lyonn01_qm2014_03">
+		<add x="9688" y="-92960" zmin="-3100" zmax="-2400"/>
+		<add x="10460" y="-93268" zmin="-3100" zmax="-2400"/>
+		<add x="11136" y="-90396" zmin="-3100" zmax="-2400"/>
+		<add x="9608" y="-88708" zmin="-3100" zmax="-2400"/>
+		<add x="9044" y="-89312" zmin="-3100" zmax="-2400"/>
+	</territory>
+	<spawn name="lyonn01_qm2014_03" count="4" respawn="180">
+		<territory name="lyonn01_qm2014_03"/>
+		<npc id="20778"/><!--Владыка Орков Рагна-->
+	</spawn>
+	<spawn name="lyonn01_qm2014_03" count="4" respawn="180">
+		<territory name="lyonn01_qm2014_03"/>
+		<npc id="20779"/><!--Провидец Орков Рагна-->
+	</spawn>
+	<spawn name="lyonn01_npc2015_g03" count="1" respawn="60">
+		<territory>
+			<add x="12308" y="-97244" zmin="-2900" zmax="-2600"/>
+			<add x="14492" y="-97200" zmin="-2900" zmax="-2600"/>
+			<add x="14492" y="-92588" zmin="-2900" zmax="-2600"/>
+			<add x="11620" y="-92464" zmin="-2900" zmax="-2600"/>
+		</territory>
+		<npc id="31036"/><!--Центурион-->
+	</spawn>
+	<spawn name="lyonn01_npc2015_g02" count="1" respawn="60">
+		<territory>
+			<add x="244" y="-91207" zmin="-2816" zmax="-1816"/>
+			<add x="3882" y="-89421" zmin="-2816" zmax="-1816"/>
+			<add x="4248" y="-82521" zmin="-2816" zmax="-1816"/>
+			<add x="3153" y="-80767" zmin="-2816" zmax="-1816"/>
+			<add x="4261" y="-78746" zmin="-2816" zmax="-1816"/>
+			<add x="1730" y="-72503" zmin="-2816" zmax="-1816"/>
+			<add x="305" y="-74714" zmin="-2816" zmax="-1816"/>
+		</territory>
+		<npc id="31036"/><!--Центурион-->
+	</spawn>
+	<spawn name="lyonn01_npc2015_g01" count="1" respawn="60">
+		<territory>
+			<add x="1392" y="-94968" zmin="-3236" zmax="-2836"/>
+			<add x="3544" y="-94380" zmin="-3236" zmax="-2836"/>
+			<add x="3196" y="-91876" zmin="-3236" zmax="-2836"/>
+			<add x="200" y="-92620" zmin="-3236" zmax="-2836"/>
+		</territory>
+		<npc id="31036"/><!--Центурион-->
+	</spawn>
+	<territory name="lyonn09_2015_03">
+		<add x="3480" y="-98192" zmin="-2064" zmax="-1664"/>
+		<add x="6012" y="-98212" zmin="-2064" zmax="-1664"/>
+		<add x="5852" y="-95556" zmin="-2064" zmax="-1664"/>
+		<add x="4512" y="-95688" zmin="-2064" zmax="-1664"/>
+	</territory>
+	<spawn name="lyonn09_2015_03" count="3" respawn="15">
+		<territory name="lyonn09_2015_03"/>
+		<npc id="21121"/><!--Жуткий Волк Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_03" count="2" respawn="15">
+		<territory name="lyonn09_2015_03"/>
+		<npc id="21122"/><!--Людоед Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_03" count="2" respawn="15">
+		<territory name="lyonn09_2015_03"/>
+		<npc id="21123"/><!--Баал Разрушитель Дре Ванул-->
+	</spawn>
+	<territory name="lyonn09_2015_04">
+		<add x="132" y="-91464" zmin="-2256" zmax="-1656"/>
+		<add x="1584" y="-90888" zmin="-2256" zmax="-1656"/>
+		<add x="3856" y="-89028" zmin="-2256" zmax="-1656"/>
+		<add x="2224" y="-87424" zmin="-2256" zmax="-1656"/>
+		<add x="112" y="-87468" zmin="-2256" zmax="-1656"/>
+	</territory>
+	<spawn name="lyonn09_2015_04" count="3" respawn="15">
+		<territory name="lyonn09_2015_04"/>
+		<npc id="21121"/><!--Жуткий Волк Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_04" count="3" respawn="15">
+		<territory name="lyonn09_2015_04"/>
+		<npc id="21122"/><!--Людоед Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_04" count="3" respawn="15">
+		<territory name="lyonn09_2015_04"/>
+		<npc id="21123"/><!--Баал Разрушитель Дре Ванул-->
+	</spawn>
+	<territory name="lyonn09_2015_05">
+		<add x="104" y="-87432" zmin="-2432" zmax="-1732"/>
+		<add x="2132" y="-87404" zmin="-2432" zmax="-1732"/>
+		<add x="1536" y="-84616" zmin="-2432" zmax="-1732"/>
+		<add x="1212" y="-84224" zmin="-2432" zmax="-1732"/>
+		<add x="128" y="-84380" zmin="-2432" zmax="-1732"/>
+	</territory>
+	<spawn name="lyonn09_2015_05" count="2" respawn="15">
+		<territory name="lyonn09_2015_05"/>
+		<npc id="21121"/><!--Жуткий Волк Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_05" count="2" respawn="15">
+		<territory name="lyonn09_2015_05"/>
+		<npc id="21122"/><!--Людоед Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_05" count="3" respawn="15">
+		<territory name="lyonn09_2015_05"/>
+		<npc id="21123"/><!--Баал Разрушитель Дре Ванул-->
+	</spawn>
+	<territory name="lyonn09_2015_06">
+		<add x="144" y="-83108" zmin="-2808" zmax="-2408"/>
+		<add x="1752" y="-84096" zmin="-2808" zmax="-2408"/>
+		<add x="1536" y="-82792" zmin="-2808" zmax="-2408"/>
+		<add x="152" y="-81664" zmin="-2808" zmax="-2408"/>
+	</territory>
+	<spawn name="lyonn09_2015_06" count="2" respawn="15">
+		<territory name="lyonn09_2015_06"/>
+		<npc id="21121"/><!--Жуткий Волк Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_06" count="2" respawn="15">
+		<territory name="lyonn09_2015_06"/>
+		<npc id="21122"/><!--Людоед Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_06" count="2" respawn="15">
+		<territory name="lyonn09_2015_06"/>
+		<npc id="21123"/><!--Баал Разрушитель Дре Ванул-->
+	</spawn>
+	<territory name="lyonn09_2015_01">
+		<add x="1716" y="-95584" zmin="-3208" zmax="-2808"/>
+		<add x="3340" y="-95232" zmin="-3208" zmax="-2808"/>
+		<add x="3896" y="-93496" zmin="-3208" zmax="-2808"/>
+		<add x="3680" y="-92144" zmin="-3208" zmax="-2808"/>
+		<add x="2248" y="-91716" zmin="-3208" zmax="-2808"/>
+		<add x="164" y="-92840" zmin="-3208" zmax="-2808"/>
+		<add x="188" y="-94416" zmin="-3208" zmax="-2808"/>
+	</territory>
+	<spawn name="lyonn09_2015_01" count="3" respawn="15">
+		<territory name="lyonn09_2015_01"/>
+		<npc id="21121"/><!--Жуткий Волк Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_01" count="3" respawn="15">
+		<territory name="lyonn09_2015_01"/>
+		<npc id="21122"/><!--Людоед Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_01" count="3" respawn="15">
+		<territory name="lyonn09_2015_01"/>
+		<npc id="21123"/><!--Баал Разрушитель Дре Ванул-->
+	</spawn>
+	<territory name="lyonn09_2015_02">
+		<add x="176" y="-98184" zmin="-2136" zmax="-1736"/>
+		<add x="3456" y="-98240" zmin="-2136" zmax="-1736"/>
+		<add x="3292" y="-97196" zmin="-2136" zmax="-1736"/>
+		<add x="176" y="-96260" zmin="-2136" zmax="-1736"/>
+	</territory>
+	<spawn name="lyonn09_2015_02" count="3" respawn="15">
+		<territory name="lyonn09_2015_02"/>
+		<npc id="21121"/><!--Жуткий Волк Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_02" count="3" respawn="15">
+		<territory name="lyonn09_2015_02"/>
+		<npc id="21122"/><!--Людоед Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_02" count="2" respawn="15">
+		<territory name="lyonn09_2015_02"/>
+		<npc id="21123"/><!--Баал Разрушитель Дре Ванул-->
+	</spawn>
+	<territory name="lyonn09_2015_07">
+		<add x="140" y="-81596" zmin="-2792" zmax="-2492"/>
+		<add x="1840" y="-82356" zmin="-2792" zmax="-2492"/>
+		<add x="1448" y="-81084" zmin="-2792" zmax="-2492"/>
+		<add x="588" y="-79828" zmin="-2792" zmax="-2492"/>
+		<add x="124" y="-79688" zmin="-2792" zmax="-2492"/>
+	</territory>
+	<spawn name="lyonn09_2015_07" count="2" respawn="15">
+		<territory name="lyonn09_2015_07"/>
+		<npc id="21121"/><!--Жуткий Волк Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_07" count="2" respawn="15">
+		<territory name="lyonn09_2015_07"/>
+		<npc id="21122"/><!--Людоед Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_07" count="2" respawn="15">
+		<territory name="lyonn09_2015_07"/>
+		<npc id="21123"/><!--Баал Разрушитель Дре Ванул-->
+	</spawn>
+	<territory name="lyonn09_2015_08">
+		<add x="1876" y="-80128" zmin="-2572" zmax="-1672"/>
+		<add x="2832" y="-80016" zmin="-2572" zmax="-1672"/>
+		<add x="3868" y="-79408" zmin="-2572" zmax="-1672"/>
+		<add x="3920" y="-77012" zmin="-2572" zmax="-1672"/>
+		<add x="2508" y="-75780" zmin="-2572" zmax="-1672"/>
+		<add x="140" y="-76092" zmin="-2572" zmax="-1672"/>
+		<add x="212" y="-79092" zmin="-2572" zmax="-1672"/>
+	</territory>
+	<spawn name="lyonn09_2015_08" count="4" respawn="15">
+		<territory name="lyonn09_2015_08"/>
+		<npc id="21121"/><!--Жуткий Волк Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_08" count="4" respawn="15">
+		<territory name="lyonn09_2015_08"/>
+		<npc id="21122"/><!--Людоед Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_08" count="4" respawn="15">
+		<territory name="lyonn09_2015_08"/>
+		<npc id="21123"/><!--Баал Разрушитель Дре Ванул-->
+	</spawn>
+	<territory name="lyonn09_2015_09">
+		<add x="180" y="-75956" zmin="-2104" zmax="-1704"/>
+		<add x="2492" y="-75668" zmin="-2104" zmax="-1704"/>
+		<add x="2964" y="-74392" zmin="-2104" zmax="-1704"/>
+		<add x="2280" y="-73340" zmin="-2104" zmax="-1704"/>
+		<add x="1368" y="-73352" zmin="-2104" zmax="-1704"/>
+		<add x="156" y="-74496" zmin="-2104" zmax="-1704"/>
+	</territory>
+	<spawn name="lyonn09_2015_09" count="3" respawn="15">
+		<territory name="lyonn09_2015_09"/>
+		<npc id="21121"/><!--Жуткий Волк Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_09" count="2" respawn="15">
+		<territory name="lyonn09_2015_09"/>
+		<npc id="21122"/><!--Людоед Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_09" count="3" respawn="15">
+		<territory name="lyonn09_2015_09"/>
+		<npc id="21123"/><!--Баал Разрушитель Дре Ванул-->
+	</spawn>
+	<territory name="lyonn09_2015_10">
+		<add x="2896" y="-84964" zmin="-2736" zmax="-1936"/>
+		<add x="4296" y="-84972" zmin="-2736" zmax="-1936"/>
+		<add x="4608" y="-84028" zmin="-2736" zmax="-1936"/>
+		<add x="3560" y="-81260" zmin="-2736" zmax="-1936"/>
+		<add x="2572" y="-81188" zmin="-2736" zmax="-1936"/>
+	</territory>
+	<spawn name="lyonn09_2015_10" count="2" respawn="15">
+		<territory name="lyonn09_2015_10"/>
+		<npc id="21121"/><!--Жуткий Волк Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_10" count="3" respawn="15">
+		<territory name="lyonn09_2015_10"/>
+		<npc id="21122"/><!--Людоед Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_10" count="3" respawn="15">
+		<territory name="lyonn09_2015_10"/>
+		<npc id="21123"/><!--Баал Разрушитель Дре Ванул-->
+	</spawn>
+	<territory name="lyonn09_2015_11">
+		<add x="15752" y="-98104" zmin="-2952" zmax="-2552"/>
+		<add x="16304" y="-96572" zmin="-2952" zmax="-2552"/>
+		<add x="14656" y="-94140" zmin="-2952" zmax="-2552"/>
+		<add x="11096" y="-94424" zmin="-2952" zmax="-2552"/>
+		<add x="12476" y="-98124" zmin="-2952" zmax="-2552"/>
+	</territory>
+	<spawn name="lyonn09_2015_11" count="4" respawn="15">
+		<territory name="lyonn09_2015_11"/>
+		<npc id="21121"/><!--Жуткий Волк Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_11" count="4" respawn="15">
+		<territory name="lyonn09_2015_11"/>
+		<npc id="21122"/><!--Людоед Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_11" count="4" respawn="15">
+		<territory name="lyonn09_2015_11"/>
+		<npc id="21123"/><!--Баал Разрушитель Дре Ванул-->
+	</spawn>
+	<spawn name="lyonn09_2015_21" count="2" respawn="15">
+		<territory>
+			<add x="864" y="-94328" zmin="-3296" zmax="-2696"/>
+			<add x="2052" y="-94724" zmin="-3296" zmax="-2696"/>
+			<add x="3064" y="-94240" zmin="-3296" zmax="-2696"/>
+			<add x="3268" y="-93432" zmin="-3296" zmax="-2696"/>
+			<add x="2796" y="-92184" zmin="-3296" zmax="-2696"/>
+			<add x="1736" y="-92060" zmin="-3296" zmax="-2696"/>
+			<add x="988" y="-92468" zmin="-3296" zmax="-2696"/>
+			<add x="544" y="-93292" zmin="-3296" zmax="-2696"/>
+			<add x="508" y="-93896" zmin="-3296" zmax="-2696"/>
+		</territory>
+		<npc id="21123"/><!--Баал Разрушитель Дре Ванул-->
+	</spawn>
+	<spawn name="lyonn09_2015_22" count="2" respawn="15">
+		<territory>
+			<add x="13684" y="-96912" zmin="-2892" zmax="-2492"/>
+			<add x="15344" y="-96732" zmin="-2892" zmax="-2492"/>
+			<add x="15388" y="-95596" zmin="-2892" zmax="-2492"/>
+			<add x="14252" y="-94828" zmin="-2892" zmax="-2492"/>
+			<add x="13032" y="-95872" zmin="-2892" zmax="-2492"/>
+		</territory>
+		<npc id="21123"/><!--Баал Разрушитель Дре Ванул-->
+	</spawn>
+	<territory name="lyonn09_2015_20">
+		<add x="11264" y="-94340" zmin="-2884" zmax="-2284"/>
+		<add x="14592" y="-94004" zmin="-2884" zmax="-2284"/>
+		<add x="14872" y="-92360" zmin="-2884" zmax="-2284"/>
+		<add x="12216" y="-91088" zmin="-2884" zmax="-2284"/>
+		<add x="11064" y="-91476" zmin="-2884" zmax="-2284"/>
+		<add x="10752" y="-93136" zmin="-2884" zmax="-2284"/>
+	</territory>
+	<spawn name="lyonn09_2015_20" count="4" respawn="15">
+		<territory name="lyonn09_2015_20"/>
+		<npc id="21121"/><!--Жуткий Волк Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_20" count="4" respawn="15">
+		<territory name="lyonn09_2015_20"/>
+		<npc id="21122"/><!--Людоед Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_2015_20" count="3" respawn="15">
+		<territory name="lyonn09_2015_20"/>
+		<npc id="21123"/><!--Баал Разрушитель Дре Ванул-->
+	</spawn>
+</list>

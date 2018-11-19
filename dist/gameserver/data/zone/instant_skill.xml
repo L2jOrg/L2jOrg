@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "zone.dtd">
+<list>
+	<zone name="[spa_12]" type="instant_skill" >
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4557;1"/>
+		<set name="skill_prob" value="100"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="141249 -109636 -3634 -3434"/>
+			<coords loc="141473 -109798 -3634 -3434"/>
+			<coords loc="141739 -109821 -3634 -3434"/>
+			<coords loc="141924 -109669 -3634 -3434"/>
+			<coords loc="142038 -109397 -3634 -3434"/>
+			<coords loc="141852 -109130 -3634 -3434"/>
+			<coords loc="141604 -109051 -3634 -3434"/>
+			<coords loc="141321 -109091 -3634 -3434"/>
+			<coords loc="141213 -109266 -3634 -3434"/>
+		</polygon>
+	</zone>
+	<zone name="[spa_22]" type="instant_skill" >
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4556;1"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="140174 -105832 -3668 -3468"/>
+			<coords loc="140490 -105875 -3668 -3468"/>
+			<coords loc="140962 -105738 -3668 -3468"/>
+			<coords loc="141039 -105378 -3668 -3468"/>
+			<coords loc="140872 -105119 -3668 -3468"/>
+			<coords loc="140081 -105295 -3668 -3468"/>
+		</polygon>
+	</zone>
+	<zone name="[spa_32]" type="instant_skill" >
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4558;1"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="144927 -105193 -3724 -3524"/>
+			<coords loc="145226 -105412 -3724 -3524"/>
+			<coords loc="145576 -105344 -3724 -3524"/>
+			<coords loc="145819 -104976 -3724 -3524"/>
+			<coords loc="145575 -104555 -3724 -3524"/>
+			<coords loc="145217 -104490 -3724 -3524"/>
+			<coords loc="144935 -104684 -3724 -3524"/>
+			<coords loc="144832 -104959 -3724 -3524"/>
+		</polygon>
+	</zone>
+	<zone name="[spa_42]" type="instant_skill" >
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4556;1"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="152081 -108262 -2871 -2671"/>
+			<coords loc="152455 -108588 -2871 -2671"/>
+			<coords loc="152835 -108448 -2871 -2671"/>
+			<coords loc="152992 -108120 -2871 -2671"/>
+			<coords loc="152817 -107670 -2871 -2671"/>
+			<coords loc="152310 -107632 -2871 -2671"/>
+			<coords loc="152069 -107905 -2871 -2671"/>
+		</polygon>
+	</zone>
+	<zone name="[spa_52]" type="instant_skill" >
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4558;1"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="155279 -105735 -2787 -2587"/>
+			<coords loc="155448 -105880 -2787 -2587"/>
+			<coords loc="155992 -105963 -2787 -2587"/>
+			<coords loc="156201 -105790 -2787 -2587"/>
+			<coords loc="156133 -105320 -2787 -2587"/>
+			<coords loc="155896 -105229 -2787 -2587"/>
+			<coords loc="155459 -105254 -2787 -2587"/>
+			<coords loc="155283 -105478 -2787 -2587"/>
+		</polygon>
+	</zone>
+	<zone name="[spa_62]" type="instant_skill" >
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4557;1"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="156838 -109948 -2717 -2517"/>
+			<coords loc="157133 -110046 -2717 -2517"/>
+			<coords loc="157436 -109918 -2717 -2517"/>
+			<coords loc="157491 -109405 -2717 -2517"/>
+			<coords loc="157197 -109197 -2717 -2517"/>
+			<coords loc="156843 -109261 -2717 -2517"/>
+			<coords loc="156683 -109569 -2717 -2517"/>
+		</polygon>
+	</zone>
+	<zone name="[spa_72]" type="instant_skill" >
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4556;1"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="152063 -116732 -1609 -1409"/>
+			<coords loc="152505 -116982 -1609 -1409"/>
+			<coords loc="152904 -116927 -1609 -1409"/>
+			<coords loc="153020 -116469 -1609 -1409"/>
+			<coords loc="152881 -116221 -1609 -1409"/>
+			<coords loc="152555 -116100 -1609 -1409"/>
+			<coords loc="152285 -116160 -1609 -1409"/>
+			<coords loc="152099 -116415 -1609 -1409"/>
+		</polygon>
+	</zone>
+	<zone name="[spa_82]" type="instant_skill" >
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4558;1"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="152683 -112829 -1694 -1494"/>
+			<coords loc="152796 -113129 -1694 -1494"/>
+			<coords loc="153125 -113339 -1694 -1494"/>
+			<coords loc="153557 -113190 -1694 -1494"/>
+			<coords loc="153649 -112721 -1694 -1494"/>
+			<coords loc="153344 -112385 -1694 -1494"/>
+			<coords loc="152937 -112409 -1694 -1494"/>
+		</polygon>
+	</zone>
+	<zone name="[spa_92]" type="instant_skill" >
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4557;1"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="157444 -115790 -1979 -1779"/>
+			<coords loc="157774 -115907 -1979 -1779"/>
+			<coords loc="158174 -115759 -1979 -1779"/>
+			<coords loc="158017 -114971 -1979 -1779"/>
+			<coords loc="157625 -114984 -1979 -1779"/>
+			<coords loc="157439 -115101 -1979 -1779"/>
+		</polygon>
+	</zone>
+	<zone name="[spa_102]" type="instant_skill" >
+		<set name="enabled" value="true"/>
+		<set name="target" value="pc"/>
+		<set name="skill_name" value="4557;1"/>
+		<set name="skill_prob" value="70"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<polygon>
+			<coords loc="147182 -113255 -2152 -1952"/>
+			<coords loc="147194 -113430 -2152 -1952"/>
+			<coords loc="147312 -113584 -2152 -1952"/>
+			<coords loc="147467 -113630 -2152 -1952"/>
+			<coords loc="147748 -113523 -2152 -1952"/>
+			<coords loc="147816 -113273 -2152 -1952"/>
+			<coords loc="147723 -113074 -2152 -1952"/>
+			<coords loc="147512 -112956 -2152 -1952"/>
+			<coords loc="147258 -113048 -2152 -1952"/>
+		</polygon>
+	</zone>
+</list>

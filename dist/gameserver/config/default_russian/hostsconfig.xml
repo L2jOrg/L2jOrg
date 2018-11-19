@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "hostsconfig.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<authserver ip="127.0.0.1" port="9014"/>	<!--AuthServer IP and port-->
+	<gameserver>	<!--GameServer hosts-->
+		<!--id: server id in server list-->
+		<!--ip: external ip-->
+		<!--inner_ip: internal ip-->
+		<!--port: gameserver port-->
+		<host id="1" ip="127.0.0.1" inner_ip="127.0.0.1" port="7777"/>
+	</gameserver>
+</list>

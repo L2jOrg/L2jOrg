@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="29">	<!--Оракул Евы-->
+			<skill id="146" level="5" name="Антимагия(Anti Magic)" cost="600" min_level="20"/>
+			<skill id="146" level="6" name="Антимагия(Anti Magic)" cost="600" min_level="20"/>
+			<skill id="1015" level="4" name="Боевое Лечение(Battle Heal)" cost="600" min_level="20"/>
+			<skill id="1015" level="5" name="Боевое Лечение(Battle Heal)" cost="600" min_level="20"/>
+			<skill id="1015" level="6" name="Боевое Лечение(Battle Heal)" cost="600" min_level="20"/>
+			<skill id="164" level="1" name="Быстрый Повтор(Quick Recovery)" cost="600" min_level="20"/>
+			<skill id="236" level="1" name="Владение Легкой Броней(Light Armor Mastery)" cost="600" min_level="20"/>
+			<skill id="236" level="2" name="Владение Легкой Броней(Light Armor Mastery)" cost="600" min_level="20"/>
+			<skill id="235" level="1" name="Владение Магической Броней(Robe Mastery)" cost="600" min_level="20"/>
+			<skill id="235" level="2" name="Владение Магической Броней(Robe Mastery)" cost="600" min_level="20"/>
+			<skill id="249" level="3" name="Владение Оружием(Weapon Mastery)" cost="600" min_level="20"/>
+			<skill id="1016" level="1" name="Воскрешение(Resurrection)" item_id="1514" cost="600" min_level="20"/>
+			<skill id="1027" level="4" name="Групповое Лечение(Group Heal)" cost="600" min_level="20"/>
+			<skill id="1027" level="5" name="Групповое Лечение(Group Heal)" cost="600" min_level="20"/>
+			<skill id="1027" level="6" name="Групповое Лечение(Group Heal)" cost="600" min_level="20"/>
+			<skill id="1078" level="1" name="Концентрация(Concentration)" item_id="1399" cost="600" min_level="20"/>
+			<skill id="1204" level="1" name="Легкая Походка(Wind Walk)" cost="600" min_level="20"/>
+			<skill id="1011" level="7" name="Лечение(Heal)" cost="600" min_level="20"/>
+			<skill id="1011" level="8" name="Лечение(Heal)" cost="600" min_level="20"/>
+			<skill id="1011" level="9" name="Лечение(Heal)" cost="600" min_level="20"/>
+			<skill id="1068" level="2" name="Могущество(Might)" cost="600" min_level="20"/>
+			<skill id="1206" level="2" name="Оковы Ветра(Wind Shackle)" cost="600" min_level="20"/>
+			<skill id="1073" level="1" name="Поцелуй Евы(Eva's Kiss)" cost="600" min_level="20"/>
+			<skill id="1031" level="1" name="Разрушить Нежить(Disrupt Undead)" cost="600" min_level="20"/>
+			<skill id="1031" level="2" name="Разрушить Нежить(Disrupt Undead)" cost="600" min_level="20"/>
+			<skill id="213" level="1" name="Увеличение Маны(Boost Mana)" cost="600" min_level="20"/>
+			<skill id="146" level="7" name="Антимагия(Anti Magic)" cost="2300" min_level="23"/>
+			<skill id="1015" level="7" name="Боевое Лечение(Battle Heal)" cost="2300" min_level="23"/>
+			<skill id="236" level="3" name="Владение Легкой Броней(Light Armor Mastery)" cost="2300" min_level="23"/>
+			<skill id="235" level="3" name="Владение Магической Броней(Robe Mastery)" cost="2300" min_level="23"/>
+			<skill id="249" level="4" name="Владение Оружием(Weapon Mastery)" cost="2300" min_level="23"/>
+			<skill id="1027" level="7" name="Групповое Лечение(Group Heal)" cost="2300" min_level="23"/>
+			<skill id="1201" level="1" name="Корень Дриады(Dryad Root)" item_id="1415" cost="2300" min_level="23"/>
+			<skill id="1011" level="10" name="Лечение(Heal)" cost="2300" min_level="23"/>
+			<skill id="1031" level="3" name="Разрушить Нежить(Disrupt Undead)" cost="2300" min_level="23"/>
+			<skill id="1069" level="1" name="Усыпление(Sleep)" item_id="1394" cost="2300" min_level="23"/>
+			<skill id="1015" level="8" name="Боевое Лечение(Battle Heal)" cost="2300" min_level="24"/>
+			<skill id="1027" level="8" name="Групповое Лечение(Group Heal)" cost="2300" min_level="24"/>
+			<skill id="1201" level="2" name="Корень Дриады(Dryad Root)" cost="2300" min_level="24"/>
+			<skill id="1011" level="11" name="Лечение(Heal)" cost="2300" min_level="24"/>
+			<skill id="1069" level="2" name="Усыпление(Sleep)" cost="2300" min_level="24"/>
+			<skill id="146" level="8" name="Антимагия(Anti Magic)" cost="2300" min_level="25"/>
+			<skill id="1015" level="9" name="Боевое Лечение(Battle Heal)" cost="2300" min_level="25"/>
+			<skill id="229" level="1" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="2300" min_level="25"/>
+			<skill id="228" level="1" name="Быстрое Чтение Заклинаний(Fast Spell Casting)" cost="2300" min_level="25"/>
+			<skill id="236" level="4" name="Владение Легкой Броней(Light Armor Mastery)" cost="2300" min_level="25"/>
+			<skill id="235" level="4" name="Владение Магической Броней(Robe Mastery)" cost="2300" min_level="25"/>
+			<skill id="249" level="5" name="Владение Оружием(Weapon Mastery)" cost="2300" min_level="25"/>
+			<skill id="1027" level="9" name="Групповое Лечение(Group Heal)" cost="2300" min_level="25"/>
+			<skill id="1201" level="3" name="Корень Дриады(Dryad Root)" cost="2300" min_level="25"/>
+			<skill id="1011" level="12" name="Лечение(Heal)" cost="2300" min_level="25"/>
+			<skill id="1035" level="1" name="Ментальный Щит(Mental Shield)" item_id="1388" cost="2300" min_level="25"/>
+			<skill id="1206" level="3" name="Оковы Ветра(Wind Shackle)" cost="2300" min_level="25"/>
+			<skill id="1087" level="1" name="Проворство(Agility)" cost="2300" min_level="25"/>
+			<skill id="1031" level="4" name="Разрушить Нежить(Disrupt Undead)" cost="2300" min_level="25"/>
+			<skill id="1043" level="1" name="Святое Оружие(Holy Weapon)" cost="2300" min_level="25"/>
+			<skill id="1069" level="3" name="Усыпление(Sleep)" cost="2300" min_level="25"/>
+			<skill id="1040" level="2" name="Щит(Shield)" cost="2300" min_level="25"/>
+			<skill id="146" level="9" name="Антимагия(Anti Magic)" cost="5700" min_level="28"/>
+			<skill id="1015" level="10" name="Боевое Лечение(Battle Heal)" cost="5700" min_level="28"/>
+			<skill id="236" level="5" name="Владение Легкой Броней(Light Armor Mastery)" cost="5700" min_level="28"/>
+			<skill id="235" level="5" name="Владение Магической Броней(Robe Mastery)" cost="5700" min_level="28"/>
+			<skill id="249" level="6" name="Владение Оружием(Weapon Mastery)" cost="5700" min_level="28"/>
+			<skill id="1027" level="10" name="Групповое Лечение(Group Heal)" cost="5700" min_level="28"/>
+			<skill id="1201" level="4" name="Корень Дриады(Dryad Root)" cost="5700" min_level="28"/>
+			<skill id="1011" level="13" name="Лечение(Heal)" cost="5700" min_level="28"/>
+			<skill id="1013" level="1" name="Подпитка(Recharge)" item_id="1385" cost="5700" min_level="28"/>
+			<skill id="1031" level="5" name="Разрушить Нежить(Disrupt Undead)" cost="5700" min_level="28"/>
+			<skill id="1069" level="4" name="Усыпление(Sleep)" cost="5700" min_level="28"/>
+			<skill id="1015" level="11" name="Боевое Лечение(Battle Heal)" cost="5700" min_level="29"/>
+			<skill id="1027" level="11" name="Групповое Лечение(Group Heal)" cost="5700" min_level="29"/>
+			<skill id="1201" level="5" name="Корень Дриады(Dryad Root)" cost="5700" min_level="29"/>
+			<skill id="1011" level="14" name="Лечение(Heal)" cost="5700" min_level="29"/>
+			<skill id="1069" level="5" name="Усыпление(Sleep)" cost="5700" min_level="29"/>
+			<skill id="146" level="10" name="Антимагия(Anti Magic)" cost="5700" min_level="30"/>
+			<skill id="1015" level="12" name="Боевое Лечение(Battle Heal)" cost="5700" min_level="30"/>
+			<skill id="164" level="2" name="Быстрый Повтор(Quick Recovery)" cost="5700" min_level="30"/>
+			<skill id="236" level="6" name="Владение Легкой Броней(Light Armor Mastery)" cost="5700" min_level="30"/>
+			<skill id="235" level="6" name="Владение Магической Броней(Robe Mastery)" cost="5700" min_level="30"/>
+			<skill id="249" level="7" name="Владение Оружием(Weapon Mastery)" cost="5700" min_level="30"/>
+			<skill id="1016" level="2" name="Воскрешение(Resurrection)" cost="5700" min_level="30"/>
+			<skill id="1027" level="12" name="Групповое Лечение(Group Heal)" cost="5700" min_level="30"/>
+			<skill id="1078" level="2" name="Концентрация(Concentration)" cost="5700" min_level="30"/>
+			<skill id="1201" level="6" name="Корень Дриады(Dryad Root)" cost="5700" min_level="30"/>
+			<skill id="1204" level="2" name="Легкая Походка(Wind Walk)" cost="5700" min_level="30"/>
+			<skill id="1011" level="15" name="Лечение(Heal)" cost="5700" min_level="30"/>
+			<skill id="1206" level="4" name="Оковы Ветра(Wind Shackle)" cost="5700" min_level="30"/>
+			<skill id="1013" level="2" name="Подпитка(Recharge)" cost="5700" min_level="30"/>
+			<skill id="1031" level="6" name="Разрушить Нежить(Disrupt Undead)" cost="5700" min_level="30"/>
+			<skill id="213" level="2" name="Увеличение Маны(Boost Mana)" cost="5700" min_level="30"/>
+			<skill id="1069" level="6" name="Усыпление(Sleep)" cost="5700" min_level="30"/>
+			<skill id="146" level="11" name="Антимагия(Anti Magic)" cost="13000" min_level="33"/>
+			<skill id="1015" level="13" name="Боевое Лечение(Battle Heal)" cost="13000" min_level="33"/>
+			<skill id="236" level="7" name="Владение Легкой Броней(Light Armor Mastery)" cost="13000" min_level="33"/>
+			<skill id="235" level="7" name="Владение Магической Броней(Robe Mastery)" cost="13000" min_level="33"/>
+			<skill id="249" level="8" name="Владение Оружием(Weapon Mastery)" cost="13000" min_level="33"/>
+			<skill id="1027" level="13" name="Групповое Лечение(Group Heal)" cost="13000" min_level="33"/>
+			<skill id="1201" level="7" name="Корень Дриады(Dryad Root)" cost="13000" min_level="33"/>
+			<skill id="1011" level="16" name="Лечение(Heal)" cost="13000" min_level="33"/>
+			<skill id="1013" level="3" name="Подпитка(Recharge)" cost="13000" min_level="33"/>
+			<skill id="1031" level="7" name="Разрушить Нежить(Disrupt Undead)" cost="13000" min_level="33"/>
+			<skill id="1069" level="7" name="Усыпление(Sleep)" cost="13000" min_level="33"/>
+			<skill id="1015" level="14" name="Боевое Лечение(Battle Heal)" cost="13000" min_level="34"/>
+			<skill id="1027" level="14" name="Групповое Лечение(Group Heal)" cost="13000" min_level="34"/>
+			<skill id="1201" level="8" name="Корень Дриады(Dryad Root)" cost="13000" min_level="34"/>
+			<skill id="1011" level="17" name="Лечение(Heal)" cost="13000" min_level="34"/>
+			<skill id="1069" level="8" name="Усыпление(Sleep)" cost="13000" min_level="34"/>
+			<skill id="146" level="12" name="Антимагия(Anti Magic)" cost="13000" min_level="35"/>
+			<skill id="1015" level="15" name="Боевое Лечение(Battle Heal)" cost="13000" min_level="35"/>
+			<skill id="212" level="1" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="13000" min_level="35"/>
+			<skill id="229" level="2" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="13000" min_level="35"/>
+			<skill id="236" level="8" name="Владение Легкой Броней(Light Armor Mastery)" cost="13000" min_level="35"/>
+			<skill id="235" level="8" name="Владение Магической Броней(Robe Mastery)" cost="13000" min_level="35"/>
+			<skill id="249" level="9" name="Владение Оружием(Weapon Mastery)" cost="13000" min_level="35"/>
+			<skill id="1027" level="15" name="Групповое Лечение(Group Heal)" cost="13000" min_level="35"/>
+			<skill id="1012" level="2" name="Излечить Отравление(Cure Poison)" cost="13000" min_level="35"/>
+			<skill id="1201" level="9" name="Корень Дриады(Dryad Root)" cost="13000" min_level="35"/>
+			<skill id="1257" level="1" name="Легкость(Decrease Weight)" item_id="3944" cost="13000" min_level="35"/>
+			<skill id="1011" level="18" name="Лечение(Heal)" cost="13000" min_level="35"/>
+			<skill id="1206" level="5" name="Оковы Ветра(Wind Shackle)" cost="13000" min_level="35"/>
+			<skill id="1013" level="4" name="Подпитка(Recharge)" cost="13000" min_level="35"/>
+			<skill id="1031" level="8" name="Разрушить Нежить(Disrupt Undead)" cost="13000" min_level="35"/>
+			<skill id="1044" level="1" name="Регенерация(Regeneration)" cost="13000" min_level="35"/>
+			<skill id="1033" level="1" name="Сопротивление Яду(Poison Resistance)" cost="13000" min_level="35"/>
+			<skill id="1069" level="9" name="Усыпление(Sleep)" cost="13000" min_level="35"/>
+		</class>
+	</normal_skill_tree>
+</list>

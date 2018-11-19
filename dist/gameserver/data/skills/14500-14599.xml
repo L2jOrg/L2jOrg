@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="14558" levels="1" name="Recharge"> 
+        <set name="icon" value="icon.skill0000"/> 
+        <set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/> 
+        <set name="magicLevel" value="1"/> 
+        <set name="magicType" value="SPECIAL"/> 
+        <set name="isHandler" value="true"/> 
+        <set name="target" value="TARGET_SELF"/> 
+        <set name="skillType" value="HEAL"/> 
+        <set name="operate_type" value="A2"/> 
+        <for> 
+            <effect instant="true" name="RestoreMP" value="100"/> 
+        </for> 
+    </skill>
+	<skill id="14559" levels="1" name="Soul Drain Status">
+		<set name="icon" value="icon.skill1042"/>
+		<set name="castRange" value="500"/>
+		<set name="abnormal_effect" value="DOT_POISON"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="physical_stance"/>
+		<set name="magicLevel" value="90"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+</list>

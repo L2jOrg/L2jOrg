@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!ELEMENT list (set)*>
+
+<!ELEMENT set (set_skills)*>
+<!ATTLIST set
+	chests CDATA #REQUIRED
+	legs CDATA #IMPLIED
+	head CDATA #IMPLIED
+	gloves CDATA #IMPLIED
+	feet CDATA #IMPLIED
+	shield CDATA #IMPLIED
+	shield_skills CDATA #IMPLIED
+	enchant6skills CDATA #IMPLIED
+	enchant7skills CDATA #IMPLIED
+	enchant8skills CDATA #IMPLIED
+	enchant9skills CDATA #IMPLIED
+	enchant10skills CDATA #IMPLIED>
+
+<!ELEMENT set_skills (#PCDATA)>
+<!ATTLIST set_skills
+	parts CDATA #REQUIRED
+	skills CDATA #REQUIRED>

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "option_data.dtd">
+<list>
+	<option_data id="20600">
+		<for>
+			<add order="0x60" stat="regMp" value="0.067"/>
+			<add order="0x60" stat="pAccCombat" value="0.677"/>
+		</for>
+	</option_data>
+	<option_data id="20601">
+		<for>
+			<add order="0x60" stat="regMp" value="0.067"/>
+			<add order="0x60" stat="basePCritRate" value="5.28"/>
+		</for>
+	</option_data>
+	<option_data id="20602">
+		<for>
+			<add order="0x60" stat="regCp" value="0.158"/>
+			<add order="0x60" stat="pEvasRate" value="0.677"/>
+		</for>
+	</option_data>
+	<option_data id="20603">
+		<for>
+			<add order="0x60" stat="regCp" value="0.158"/>
+			<add order="0x60" stat="pAccCombat" value="0.677"/>
+		</for>
+	</option_data>
+	<option_data id="20604">
+		<for>
+			<add order="0x60" stat="regCp" value="0.158"/>
+			<add order="0x60" stat="basePCritRate" value="5.28"/>
+		</for>
+	</option_data>
+	<option_data id="20605">
+		<for>
+			<add order="0x60" stat="pEvasRate" value="0.79"/>
+			<add order="0x60" stat="pAccCombat" value="0.677"/>
+		</for>
+	</option_data>
+	<option_data id="20606">
+		<for>
+			<add order="0x60" stat="pEvasRate" value="0.79"/>
+			<add order="0x60" stat="basePCritRate" value="5.28"/>
+		</for>
+	</option_data>
+	<option_data id="20607">
+		<for>
+			<add order="0x60" stat="pAccCombat" value="0.79"/>
+			<add order="0x60" stat="basePCritRate" value="5.28"/>
+		</for>
+	</option_data>
+</list>

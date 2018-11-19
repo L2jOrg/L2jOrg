@@ -1,0 +1,56 @@
+<html><body>
+<br><br>
+<table border=0 width=755><tr><td width=10></td><td width=600 align=left>
+<a action="bypass _bbsclan">&$430;</a>&nbsp;>&nbsp;<a action="bypass _bbsclanlist_1_0_">Clans list</a>&nbsp;>&nbsp;<a action="bypass _bbsclanhome_%PLEDGE_ID%">&$802;</a>&nbsp;>&nbsp;Clan notice
+</td></tr>
+</table>
+<center>
+<img src="L2UI.squareblank" width="1" height="10">
+<table border=0 cellspacing=0 cellpadding=0 width=755 bgcolor=A7A19A>
+<tr><td WIDTH=5></td><td height=10 WIDTH=750></td></tr>
+<tr><td></td>
+<td height=20>
+<a action="bypass _bbsclanhome_%PLEDGE_ID%">[&$802;]</a>&nbsp;&nbsp;
+<a action="bypass _bbsclanadmin">[Clan management]</a>&nbsp;&nbsp;
+<a action="bypass _mailwritepledgeform">[Clan mail]</a>&nbsp;&nbsp;
+[Clan notice]&nbsp;&nbsp;
+</td>
+<td fixWIDTH=5></td>
+</tr>
+<tr><td height=10></td></tr>
+</table>
+<br>
+<table width=755 border=0 cellspacing=0 cellpadding=0>
+<tr><td fixwidth=610><font color="AAAAAA">When you use the clan notice function, clan members who are connected to the game are able to see the clan lord's notice message in a pop-up window.</font> </td></tr>
+<tr><td height=20></td></tr>
+<tr><td fixwidth=610>
+<!--TEMPLATE1
+&nbsp; off &nbsp; <a action="bypass _announcepledgeswitchshowflag_1">on</a>
+TEMPLATE-->
+<!--TEMPLATE2
+&nbsp; on &nbsp; <a action="bypass _announcepledgeswitchshowflag_0">off</a>
+TEMPLATE-->
+Clan notice:<?usage?>
+</td></tr>
+</table>
+<img src="L2UI.Squaregray" width="610" height="1">
+<br> <br>
+<table width=755 border=0 cellspacing=2 cellpadding=0>
+<tr><td>Edit notice content:</td></tr>
+<tr><td height=5></td></tr>
+<tr><td>
+<MultiEdit var ="Content" width=750 height=100>
+</td></tr>
+</table>
+<br>
+<table width=755 border=0 cellspacing=0 cellpadding=0>
+<tr><td height=5></td></tr>
+<tr>
+<td align=center FIXWIDTH=65><button value="&$140;" action="Write _announcepledgewrite_%flag% 0 0 Content Content Content" back="l2ui_ct1.button.button_df_small_down" width=70 height=25 fore="l2ui_ct1.button.button_df_small" ></td>
+<td align=center FIXWIDTH=45></td>
+<td align=center FIXWIDTH=500></td>
+</tr>
+</table>
+</center>
+<br> <br><br>
+</body></html>

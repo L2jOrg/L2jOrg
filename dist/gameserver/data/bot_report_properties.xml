@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "bot_report_properties.dtd">
+<list>
+	<config enabled="true" report_delay="30" reports_reset_time="00 00 * * *" allow_reports_from_same_clan="false"/>
+	<punishments>
+		<!-- To add a range punishments (E.G., a debuff which apply if you have 150 reports or more, use negative need_report_count -->
+		<punishment need_report_count="25" skill_id="6038" skill_level="1" message_id="2473" />
+		<punishment need_report_count="75" skill_id="6039" skill_level="1" message_id="2474" />
+		<punishment need_report_count="100" skill_id="6055" skill_level="1" message_id="2477" />
+		<punishment need_report_count="125" skill_id="6056" skill_level="1" message_id="2478" />
+		<punishment need_report_count="150" skill_id="6057" skill_level="1" message_id="2480" />
+		<punishment need_report_count="175" skill_id="6058" skill_level="1" message_id="2480" />
+		<!-- Range punisment -->
+		<punishment need_report_count="-150" skill_id="6040" skill_level="1" />
+	</punishments>
+</list>

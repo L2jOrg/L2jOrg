@@ -1,0 +1,2 @@
+INSERT INTO account_variables(account_name, var, value) SELECT account_name, 'pc_bang_poins', '0' FROM characters ON DUPLICATE KEY UPDATE value='0';
+UPDATE account_variables AS a SET value=(SELECT SUM(characters.pcBangPoints) FROM characters WHERE characters.account_name=a.account_name) WHERE var='pc_bang_poins';

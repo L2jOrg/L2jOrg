@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "doors.dtd">
+<list>
+	<door id="26210005" name="[Magmell_Orbis_S.B1F.Orbis_Passage_Door]" hp="150" pdef="1" mdef="1">
+		<pos x="208736" y="118131" z="-12516"/>
+		<shape ax="208860" ay="118149" bx="208608" by="118151" cx="208611" cy="118113" dx="208860" dy="118113" minz="-12527" maxz="-11527"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210102" name="[Magmell_Orbis_S.boss.Orbis_BossStage_adoor]" hp="150" pdef="1" mdef="1">
+		<pos x="207844" y="119002" z="-10029"/>
+		<shape ax="207772" ay="118961" bx="207925" by="119024" cx="207915" cy="119043" dx="207764" dy="118980" minz="-10035" maxz="-9035"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210001" name="[Magmell_Orbis_S.B1F.Orbis_Passage_Door]" hp="150" pdef="1" mdef="1">
+		<pos x="208810" y="120575" z="-10023"/>
+		<shape ax="208792" ay="120693" bx="208789" by="120456" cx="208827" cy="120458" dx="208824" dy="120695" minz="-10034" maxz="-9034"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210002" name="[Magmell_Orbis_S.B1F.Orbis_Passage_Door]" hp="150" pdef="1" mdef="1">
+		<pos x="209356" y="120575" z="-10023"/>
+		<shape ax="209338" ay="120693" bx="209335" by="120456" cx="209373" cy="120458" dx="209370" dy="120695" minz="-10034" maxz="-9034"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210004" name="[Magmell_Orbis_S.B1F.Orbis_Passage_Door]" hp="150" pdef="1" mdef="1">
+		<pos x="209543" y="108704" z="-12578"/>
+		<shape ax="209525" ay="108822" bx="209522" by="108585" cx="209560" cy="108587" dx="209557" dy="108824" minz="-12589" maxz="-11589"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210043" name="[Magmell_Field_S.magmell_Field_Genesis_raid02]" hp="150" pdef="1" mdef="1">
+		<pos x="213044" y="115260" z="-894"/>
+		<shape ax="213066" ay="114621" bx="213056" by="115911" cx="213033" cy="115911" dx="213024" dy="114621" minz="-905" maxz="-805"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210021" name="[Magmell_Genesis_S.Wall.Genesisdoor]" hp="150" pdef="1" mdef="1">
+		<pos x="219702" y="111149" z="-1323"/>
+		<shape ax="219656" ay="110984" bx="219751" by="110983" cx="219751" cy="111319" dx="219656" dy="111322" minz="-1334" maxz="-1234"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door><!--KilRoy-->
+	<door id="26210028" name="[Magmell_Genesis_S.Wall.Genesisdoor]" hp="150" pdef="1" mdef="1">
+		<pos x="211525" y="119366" z="-1323"/>
+		<shape ax="211479" ay="119201" bx="211574" by="119200" cx="211574" cy="119536" dx="211479" dy="119539" minz="-1334" maxz="-1234"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210031" name="[Magmell_Genesis_S.Wall.Genesisdoor]" hp="150" pdef="1" mdef="1">
+		<pos x="209612" y="121291" z="-1322"/>
+		<shape ax="209790" ay="121236" bx="209794" by="121347" cx="209441" cy="121352" dx="209437" dy="121235" minz="-1334" maxz="-1234"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210033" name="[Magmell_Genesis_S.Wall.Genesisdoor]" hp="150" pdef="1" mdef="1">
+		<pos x="215866" y="115256" z="-914"/>
+		<shape ax="215820" ay="115091" bx="215915" by="115090" cx="215915" cy="115426" dx="215820" dy="115429" minz="-925" maxz="-825"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210027" name="[Magmell_Genesis_S.Wall.Genesisdoor]" hp="150" pdef="1" mdef="1">
+		<pos x="217801" y="121279" z="-1757"/>
+		<shape ax="217979" ay="121224" bx="217983" by="121335" cx="217630" cy="121340" dx="217626" dy="121223" minz="-1768" maxz="-1668"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210006" name="[Magmell_Orbis_S.B1F.Orbis_Passage_Door]" hp="150" pdef="1" mdef="1">
+		<pos x="219872" y="118125" z="-12514"/>
+		<shape ax="219996" ay="118143" bx="219744" by="118145" cx="219747" cy="118107" dx="219996" dy="118107" minz="-12525" maxz="-11525"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210103" name="[Magmell_Orbis_S.boss.Orbis_BossStage_adoor]" hp="150" pdef="1" mdef="1">
+		<pos x="208765" y="119923" z="-10029"/>
+		<shape ax="208742" ay="119844" bx="208807" by="119994" cx="208788" cy="120003" dx="208725" dy="119851" minz="-10035" maxz="-9035"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210104" name="[Magmell_Orbis_S.boss.Orbis_BossStage_adoor]" hp="150" pdef="1" mdef="1">
+		<pos x="208765" y="121227" z="-10029"/>
+		<shape ax="208807" ay="121156" bx="208742" by="121308" cx="208723" cy="121299" dx="208789" dy="121148" minz="-10035" maxz="-9035"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door><!--KilRoy-->
+	<door id="26210105" name="[Magmell_Orbis_S.boss.Orbis_BossStage_adoor]" hp="150" pdef="1" mdef="1">
+		<pos x="207844" y="122147" z="-10029"/>
+		<shape ax="207923" ay="122125" bx="207769" by="122189" cx="207765" cy="122171" dx="207917" dy="122106" minz="-10035" maxz="-9035"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210101" name="[Magmell_Orbis_S.boss.Orbis_BossStage_adoor]" hp="150" pdef="1" mdef="1">
+		<pos x="206541" y="119002" z="-10029"/>
+		<shape ax="206461" ay="119024" bx="206613" by="118960" cx="206622" cy="118981" dx="206471" dy="119044" minz="-10035" maxz="-9035"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210003" name="[Magmell_Orbis_S.B1F.Orbis_Passage_Door]" hp="150" pdef="1" mdef="1">
+		<pos x="219066" y="108704" z="-12577"/>
+		<shape ax="219048" ay="108822" bx="219045" by="108585" cx="219083" cy="108587" dx="219080" dy="108824" minz="-12588" maxz="-11588"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210106" name="[Magmell_Orbis_S.boss.Orbis_BossStage_adoor]" hp="150" pdef="1" mdef="1">
+		<pos x="206542" y="122147" z="-10029"/>
+		<shape ax="206616" ay="122188" bx="206462" by="122123" cx="206470" cy="122107" dx="206621" dy="122171" minz="-10035" maxz="-9035"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210022" name="[Magmell_Genesis_S.Wall.Genesisdoor]" hp="150" pdef="1" mdef="1">
+		<pos x="217789" y="113074" z="-1322"/>
+		<shape ax="217967" ay="113019" bx="217971" by="113130" cx="217618" cy="113135" dx="217614" dy="113018" minz="-1333" maxz="-1233"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210030" name="[Magmell_Genesis_S.Wall.Genesisdoor]" hp="150" pdef="1" mdef="1">
+		<pos x="207689" y="119372" z="-1323"/>
+		<shape ax="207643" ay="119207" bx="207738" by="119206" cx="207738" cy="119542" dx="207643" dy="119545" minz="-1334" maxz="-1233"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210026" name="[Magmell_Genesis_S.Wall.Genesisdoor]" hp="150" pdef="1" mdef="1">
+		<pos x="219714" y="119344" z="-1758"/>
+		<shape ax="219668" ay="119179" bx="219763" by="119178" cx="219763" cy="119514" dx="219668" dy="119517" minz="-1769" maxz="-1669"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210044" name="[Magmell_Field_S.magmell_Field_Genesis_raid02]" hp="150" pdef="1" mdef="1">
+		<pos x="213696" y="115911" z="-895"/>
+		<shape ax="213054" ay="115895" bx="214334" by="115891" cx="214333" cy="115934" dx="213055" dy="115930" minz="-906" maxz="-806"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210041" name="[Magmell_Field_S.magmell_Field_Genesis_raid02]" hp="150" pdef="1" mdef="1">
+		<pos x="214346" y="115263" z="-893"/>
+		<shape ax="214366" ay="114620" bx="214366" by="115907" cx="214331" cy="115906" dx="214327" dy="114618" minz="-904" maxz="-804"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210023" name="[Magmell_Genesis_S.Wall.Genesisdoor]" hp="150" pdef="1" mdef="1">
+		<pos x="215866" y="111181" z="-1323"/>
+		<shape ax="215820" ay="111016" bx="215915" by="111015" cx="215915" cy="111351" dx="215820" dy="111354" minz="-1334" maxz="-1334"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door><!--KilRoy-->
+	<door id="26210020" name="[Magmell_Genesis_S.Wall.Genesisdoor]" hp="150" pdef="1" mdef="1">
+		<pos x="217785" y="109234" z="-1322"/>
+		<shape ax="217610" ay="109201" bx="217951" by="109195" cx="217954" cy="109273" dx="217611" dy="109277" minz="-1336" maxz="-1236"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210032" name="[Magmell_Genesis_S.Wall.Genesisdoor]" hp="150" pdef="1" mdef="1">
+		<pos x="213708" y="117429" z="-916"/>
+		<shape ax="213886" ay="117374" bx="213890" by="117485" cx="213537" cy="117490" dx="213533" dy="117373" minz="-927" maxz="-827"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210025" name="[Magmell_Genesis_S.Wall.Genesisdoor]" hp="150" pdef="1" mdef="1">
+		<pos x="217797" y="117439" z="-1757"/>
+		<shape ax="217622" ay="117406" bx="217963" by="117400" cx="217966" cy="117478" dx="217623" dy="117482" minz="-1772" maxz="-1672"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210024" name="[Magmell_Genesis_S.Wall.Genesisdoor]" hp="150" pdef="1" mdef="1">
+		<pos x="215878" y="119361" z="-1758"/>
+		<shape ax="215832" ay="119196" bx="215927" by="119195" cx="215927" cy="119531" dx="215832" dy="119534" minz="-1769" maxz="-1669"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210042" name="[Magmell_Field_S.magmell_Field_Genesis_raid02]" hp="150" pdef="1" mdef="1">
+		<pos x="213694" y="114609" z="-893"/>
+		<shape ax="213057" ay="114585" bx="214332" by="114588" cx="214331" cy="114630" dx="213056" dy="114623" minz="-904" maxz="-804"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="26210029" name="[Magmell_Genesis_S.Wall.Genesisdoor]" hp="150" pdef="1" mdef="1">
+		<pos x="209608" y="117451" z="-1322"/>
+		<shape ax="209433" ay="117418" bx="209774" by="117412" cx="209777" cy="117490" dx="209434" dy="117494" minz="-1337" maxz="-1237"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="27200006" name="[Magmell_Orbis_S.B1F.Orbis_Passage_Door]" hp="150" pdef="1" mdef="1">
+		<pos x="252640" y="85357" z="-12516"/>
+		<shape ax="252764" ay="85375" bx="252512" by="85377" cx="252515" cy="85339" dx="252764" dy="85339" minz="-12527" maxz="-11527"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+</list>

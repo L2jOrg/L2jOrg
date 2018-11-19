@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn group="instantAgit_npc1611_01b" count="1" respawn="60">
+		<point x="-122360" y="-122610" z="-5840" h="16384"/>
+		<npc id="33360"/><!--Maid-->
+	</spawn>
+	<spawn group="instantAgit_npc1611_01a" count="1" respawn="60">
+		<point x="-117074" y="-122610" z="-5840" h="16384"/>
+		<npc id="33360"/><!--Maid-->
+	</spawn>
+	<spawn group="instantAgit_npc1611_03b" count="1" respawn="60">
+		<point x="-121488" y="-111294" z="-5976" h="32768"/>
+		<npc id="33360"/><!--Maid-->
+	</spawn>
+	<spawn group="instantAgit_npc1611_03a" count="1" respawn="60">
+		<point x="-116222" y="-111294" z="-5976" h="32768"/>
+		<npc id="33360"/><!--Maid-->
+	</spawn>
+	<spawn group="instantAgit_npc1611_02b" count="1" respawn="60">
+		<point x="-122627" y="-116456" z="-5728" h="0"/>
+		<npc id="33360"/><!--Maid-->
+	</spawn>
+	<spawn group="instantAgit_npc1611_02a" count="1" respawn="60">
+		<point x="-117489" y="-116463" z="-5728" h="0"/>
+		<npc id="33360"/><!--Maid-->
+	</spawn>
+</list>

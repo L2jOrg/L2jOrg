@@ -1,0 +1,13 @@
+<html><head><body>
+Hierarch Asterios:<br>
+May the blessings of Eva flood the deepest recesses of your soul.<br>
+I am Hierarch Asterios, representative of Eva, chosen by the mother of all forests and spirits! I alone remain among the 12 Tetrarchs chosen by the Mother Tree. Why have you sought me out?<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">"Can you tell me about the 1st Class Transfer?"</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Clan</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Alliance</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc?chat 1">"Tell me what's going on."</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Exchange Daily Coins</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Quest</Button>
+</body></html>

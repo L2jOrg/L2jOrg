@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="20001" levels="1" name="Block Checker Hammer Punch">
+		<set name="icon" value="BranchSys2.icon.br_s_hammerpunch_treasure1_i001"/>
+		<set name="reuseDelay" value="60000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="20002" levels="1" name="Dragon Kick">
+		<set name="icon" value="icon.skill_transform_s_attack"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="coolTime" value="167"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="55"/>
+		<set name="magicLevel" value="85"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="20003" levels="1" name="Dragon Slash">
+		<set name="icon" value="icon.skill_transform_s_attack"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="coolTime" value="167"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="55"/>
+		<set name="magicLevel" value="85"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="20004" levels="1" name="Dragon Dash">
+		<set name="icon" value="icon.skill_transform_buff"/>
+		<set name="reuseDelay" value="25000"/>
+		<set name="mp_consume" value="38"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="speed_up_special"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="20005" levels="1" name="Dragon Aura">
+		<set name="icon" value="icon.skill_transform_buff"/>
+		<set name="reuseDelay" value="1800000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="47"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="improve_crt_rate_dmg_up"/>
+		<set name="magicLevel" value="70"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="p_block_buff_slot">
+				<def name="abnormal_types" value="critical_prob_up;critical_dmg_up"/>
+			</effect>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="critical_prob_up"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="critical_dmg_up"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="20006" levels="1" name="Soul Roar">
+		<set name="icon" value="BranchSys2.icon.skill20006"/>
+		<set name="reuseDelay" value="240000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="58"/>
+		<set name="abnormal_time" value="600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="max_hp_up_k"/>
+		<set name="magicLevel" value="62"/>
+		<table name="#effectPoint">611</table>
+		<set name="hitCancelTime" value="350"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="maxHp" value="1.15"/>
+				<mul stat="maxCp" value="1.15"/>
+			</effect>
+			<effect instant="true" name="RestoreHP" value="15">
+				<def name="percent" value="true"/>
+			</effect>
+			<effect instant="true" name="RestoreCP" value="15">
+				<def name="percent" value="true"/>
+			</effect>
+		</for>
+	</skill>
+</list>

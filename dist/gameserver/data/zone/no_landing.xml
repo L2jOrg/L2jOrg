@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "zone.dtd">
+<list>
+	<zone name="[toi_no_landing]" type="no_landing" >
+		<set name="enabled" value="true"/>
+		<polygon>
+			<coords loc="120324 16042"/>
+			<coords loc="117967 10107"/>
+			<coords loc="108843 11462"/>
+			<coords loc="108774 20132"/>
+			<coords loc="115734 22851"/>
+			<coords loc="120398 19805"/>
+		</polygon>
+	</zone>
+	<zone name="[valakas_no_landing]" type="no_landing" >
+		<set name="enabled" value="true"/>
+		<polygon>
+			<coords loc="221792 -109860"/>
+			<coords loc="225518 -124715"/>
+			<coords loc="204298 -124198"/>
+			<coords loc="200852 -108578"/>
+		</polygon>
+	</zone>
+	<zone name="[Gracia_no_landing]" type="no_landing" >
+		<polygon>
+			<coords loc="-294912 294912"/>
+			<coords loc="-294912 163840"/>
+			<coords loc="-163840 163840"/>
+			<coords loc="-163840 294912"/>
+		</polygon>
+	</zone>
+</list>

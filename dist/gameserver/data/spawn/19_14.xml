@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn name="lyonn01_npc1914_g01" count="2" respawn="60">
+		<territory>
+			<add x="-18718" y="-115142" zmin="-2876" zmax="-1576"/>
+			<add x="-21003" y="-119598" zmin="-2876" zmax="-1576"/>
+			<add x="-19598" y="-123266" zmin="-2876" zmax="-1576"/>
+			<add x="-16641" y="-126523" zmin="-2876" zmax="-1576"/>
+			<add x="-12967" y="-127857" zmin="-2876" zmax="-1576"/>
+			<add x="-13690" y="-121840" zmin="-2876" zmax="-1576"/>
+			<add x="-15756" y="-119886" zmin="-2876" zmax="-1576"/>
+			<add x="-14827" y="-117935" zmin="-2876" zmax="-1576"/>
+			<add x="-11218" y="-116416" zmin="-2876" zmax="-1576"/>
+			<add x="-12323" y="-113554" zmin="-2876" zmax="-1576"/>
+		</territory>
+		<npc id="31036"/><!--Центурион-->
+	</spawn>
+	<spawn name="lyonn01_npc1914_g02" count="1" respawn="60">
+		<territory>
+			<add x="-20156" y="-113256" zmin="-2796" zmax="-1496"/>
+			<add x="-13424" y="-110607" zmin="-2796" zmax="-1496"/>
+			<add x="-12934" y="-103695" zmin="-2796" zmax="-1496"/>
+			<add x="-15495" y="-105854" zmin="-2796" zmax="-1496"/>
+			<add x="-19117" y="-105385" zmin="-2796" zmax="-1496"/>
+			<add x="-23593" y="-102962" zmin="-2796" zmax="-1496"/>
+			<add x="-23593" y="-102962" zmin="-2796" zmax="-1496"/>
+			<add x="-24461" y="-103768" zmin="-2796" zmax="-1496"/>
+			<add x="-20810" y="-108621" zmin="-2796" zmax="-1496"/>
+		</territory>
+		<npc id="31036"/><!--Центурион-->
+	</spawn>
+	<spawn name="lyonn01_npc1914_g03" count="1" respawn="60">
+		<territory>
+			<add x="-24712" y="-117359" zmin="-2532" zmax="-1632"/>
+			<add x="-24144" y="-115024" zmin="-2532" zmax="-1632"/>
+			<add x="-25719" y="-111067" zmin="-2532" zmax="-1632"/>
+			<add x="-27511" y="-112039" zmin="-2532" zmax="-1632"/>
+			<add x="-29400" y="-123099" zmin="-2532" zmax="-1632"/>
+			<add x="-25700" y="-123147" zmin="-2532" zmax="-1632"/>
+			<add x="-22866" y="-119537" zmin="-2532" zmax="-1632"/>
+		</territory>
+		<npc id="31036"/><!--Центурион-->
+	</spawn>
+	<spawn name="lyonn01_npc1914_g04" count="1" respawn="60">
+		<territory>
+			<add x="-24475" y="-127207" zmin="-3208" zmax="-2008"/>
+			<add x="-20582" y="-126104" zmin="-3208" zmax="-2008"/>
+			<add x="-20092" y="-124824" zmin="-3208" zmax="-2008"/>
+			<add x="-21824" y="-119700" zmin="-3208" zmax="-2008"/>
+			<add x="-25383" y="-123638" zmin="-3208" zmax="-2008"/>
+			<add x="-29505" y="-123418" zmin="-3208" zmax="-2008"/>
+			<add x="-29553" y="-125546" zmin="-3208" zmax="-2008"/>
+		</territory>
+		<npc id="31036"/><!--Центурион-->
+	</spawn>
+	<spawn name="lyonn01_npc1914_g05" count="1" respawn="60">
+		<territory>
+			<add x="-6457" y="-130711" zmin="-3400" zmax="-2300"/>
+			<add x="-347" y="-130550" zmin="-3400" zmax="-2300"/>
+			<add x="-325" y="-116825" zmin="-3400" zmax="-2300"/>
+			<add x="-4309" y="-116721" zmin="-3400" zmax="-2300"/>
+			<add x="-5222" y="-119204" zmin="-3400" zmax="-2300"/>
+			<add x="-4557" y="-120636" zmin="-3400" zmax="-2300"/>
+			<add x="-5667" y="-123298" zmin="-3400" zmax="-2300"/>
+			<add x="-6629" y="-125708" zmin="-3400" zmax="-2300"/>
+		</territory>
+		<npc id="31036"/><!--Центурион-->
+	</spawn>
+	<spawn name="lyonn01_npc1914_g06" count="1" respawn="60">
+		<territory>
+			<add x="-2119" y="-112424" zmin="-3068" zmax="-1868"/>
+			<add x="-392" y="-113734" zmin="-3068" zmax="-1868"/>
+			<add x="-275" y="-98706" zmin="-3068" zmax="-1868"/>
+			<add x="-4250" y="-98803" zmin="-3068" zmax="-1868"/>
+			<add x="-5703" y="-101851" zmin="-3068" zmax="-1868"/>
+			<add x="-4423" y="-105266" zmin="-3068" zmax="-1868"/>
+			<add x="-4118" y="-113309" zmin="-3068" zmax="-1868"/>
+		</territory>
+		<npc id="31036"/><!--Центурион-->
+	</spawn>
+	<territory name="lyonn09_1914_23">
+		<add x="-4284" y="-104428" zmin="-3020" zmax="-2020"/>
+		<add x="-268" y="-104080" zmin="-3020" zmax="-2020"/>
+		<add x="-216" y="-98600" zmin="-3020" zmax="-2020"/>
+		<add x="-4096" y="-98680" zmin="-3020" zmax="-2020"/>
+		<add x="-4996" y="-101508" zmin="-3020" zmax="-2020"/>
+	</territory>
+	<spawn name="lyonn09_1914_23" count="6" respawn="15">
+		<territory name="lyonn09_1914_23"/>
+		<npc id="21119"/><!--Хобгоблин Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_1914_23" count="6" respawn="15">
+		<territory name="lyonn09_1914_23"/>
+		<npc id="21120"/><!--Бес Турен Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_1914_23" count="6" respawn="15">
+		<territory name="lyonn09_1914_23"/>
+		<npc id="21121"/><!--Жуткий Волк Кхаши-->
+	</spawn>
+	<territory name="lyonn09_1914_25">
+		<add x="-4652" y="-114732" zmin="-3628" zmax="-3228"/>
+		<add x="-264" y="-115416" zmin="-3628" zmax="-3228"/>
+		<add x="-328" y="-114576" zmin="-3628" zmax="-3228"/>
+		<add x="-2512" y="-113624" zmin="-3628" zmax="-3228"/>
+	</territory>
+	<spawn name="lyonn09_1914_25" count="2" respawn="15">
+		<territory name="lyonn09_1914_25"/>
+		<npc id="21257"/><!--Блюститель Око Зла-->
+	</spawn>
+	<spawn name="lyonn09_1914_25" count="2" respawn="15">
+		<territory name="lyonn09_1914_25"/>
+		<npc id="21117"/><!--Бес Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_1914_25" count="2" respawn="15">
+		<territory name="lyonn09_1914_25"/>
+		<npc id="21118"/><!--Баал Дре Ванул-->
+	</spawn>
+	<territory name="lyonn09_1914_24">
+		<add x="-4104" y="-111884" zmin="-2820" zmax="-2320"/>
+		<add x="-292" y="-112836" zmin="-2820" zmax="-2320"/>
+		<add x="-344" y="-104192" zmin="-2820" zmax="-2320"/>
+		<add x="-4112" y="-104484" zmin="-2820" zmax="-2320"/>
+		<add x="-4744" y="-109744" zmin="-2820" zmax="-2320"/>
+	</territory>
+	<spawn name="lyonn09_1914_24" count="7" respawn="15">
+		<territory name="lyonn09_1914_24"/>
+		<npc id="21119"/><!--Хобгоблин Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_1914_24" count="7" respawn="15">
+		<territory name="lyonn09_1914_24"/>
+		<npc id="21120"/><!--Бес Турен Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_1914_24" count="7" respawn="15">
+		<territory name="lyonn09_1914_24"/>
+		<npc id="21121"/><!--Жуткий Волк Кхаши-->
+	</spawn>
+	<territory name="lyonn09_1914_27">
+		<add x="-4644" y="-123488" zmin="-3052" zmax="-2152"/>
+		<add x="-388" y="-124068" zmin="-3052" zmax="-2152"/>
+		<add x="-440" y="-119488" zmin="-3052" zmax="-2152"/>
+		<add x="-3824" y="-119084" zmin="-3052" zmax="-2152"/>
+	</territory>
+	<spawn name="lyonn09_1914_27" count="4" respawn="15">
+		<territory name="lyonn09_1914_27"/>
+		<npc id="20479"/><!--Медведь Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_1914_27" count="5" respawn="15">
+		<territory name="lyonn09_1914_27"/>
+		<npc id="20476"/><!--Клыкастый Паук Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_1914_27" count="5" respawn="15">
+		<territory name="lyonn09_1914_27"/>
+		<npc id="20478"/><!--Опасный Паук Кхаши-->
+	</spawn>
+	<territory name="lyonn09_1914_26">
+		<add x="-2868" y="-118668" zmin="-2976" zmax="-2276"/>
+		<add x="-324" y="-118600" zmin="-2976" zmax="-2276"/>
+		<add x="-296" y="-117164" zmin="-2976" zmax="-2276"/>
+		<add x="-4216" y="-117052" zmin="-2976" zmax="-2276"/>
+	</territory>
+	<spawn name="lyonn09_1914_26" count="2" respawn="15">
+		<territory name="lyonn09_1914_26"/>
+		<npc id="21257"/><!--Блюститель Око Зла-->
+	</spawn>
+	<spawn name="lyonn09_1914_26" count="2" respawn="15">
+		<territory name="lyonn09_1914_26"/>
+		<npc id="21117"/><!--Бес Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_1914_26" count="2" respawn="15">
+		<territory name="lyonn09_1914_26"/>
+		<npc id="21118"/><!--Баал Дре Ванул-->
+	</spawn>
+	<territory name="lyonn09_1914_29">
+		<add x="-7220" y="-130924" zmin="-3216" zmax="-2616"/>
+		<add x="-4208" y="-130884" zmin="-3216" zmax="-2616"/>
+		<add x="-3544" y="-129424" zmin="-3216" zmax="-2616"/>
+		<add x="-5396" y="-127676" zmin="-3216" zmax="-2616"/>
+	</territory>
+	<spawn name="lyonn09_1914_29" count="3" respawn="15">
+		<territory name="lyonn09_1914_29"/>
+		<npc id="20333"/><!--Серый Голем-->
+	</spawn>
+	<spawn name="lyonn09_1914_29" count="2" respawn="15">
+		<territory name="lyonn09_1914_29"/>
+		<npc id="20428"/><!--Дозорный Око Зла-->
+	</spawn>
+	<spawn name="lyonn09_1914_29" count="2" respawn="15">
+		<territory name="lyonn09_1914_29"/>
+		<npc id="20364"/><!--Вожак Оборотней Мараку-->
+	</spawn>
+	<territory name="lyonn09_1914_28">
+		<add x="-3432" y="-129244" zmin="-3372" zmax="-2472"/>
+		<add x="-416" y="-127604" zmin="-3372" zmax="-2472"/>
+		<add x="-396" y="-124124" zmin="-3372" zmax="-2472"/>
+		<add x="-4656" y="-123496" zmin="-3372" zmax="-2472"/>
+		<add x="-5608" y="-124820" zmin="-3372" zmax="-2472"/>
+		<add x="-5400" y="-127416" zmin="-3372" zmax="-2472"/>
+	</territory>
+	<spawn name="lyonn09_1914_28" count="5" respawn="15">
+		<territory name="lyonn09_1914_28"/>
+		<npc id="20364"/><!--Вожак Оборотней Мараку-->
+	</spawn>
+	<spawn name="lyonn09_1914_28" count="6" respawn="15">
+		<territory name="lyonn09_1914_28"/>
+		<npc id="20474"/><!--Паук Кхаши-->
+	</spawn>
+	<spawn name="lyonn09_1914_28" count="6" respawn="15">
+		<territory name="lyonn09_1914_28"/>
+		<npc id="20479"/><!--Медведь Кхаши-->
+	</spawn>
+	<territory name="lyonn08_1914_20">
+		<add x="-19896" y="-118192" zmin="-2652" zmax="-1952"/>
+		<add x="-15896" y="-119276" zmin="-2652" zmax="-1952"/>
+		<add x="-15200" y="-117424" zmin="-2652" zmax="-1952"/>
+		<add x="-14936" y="-115340" zmin="-2652" zmax="-1952"/>
+		<add x="-19392" y="-115764" zmin="-2652" zmax="-1952"/>
+	</territory>
+	<spawn name="lyonn08_1914_20" count="4" respawn="21">
+		<territory name="lyonn08_1914_20"/>
+		<npc id="20320"/><!--Предводитель Гоблинов Грабителей Могил-->
+	</spawn>
+	<spawn name="lyonn08_1914_20" count="4" respawn="21">
+		<territory name="lyonn08_1914_20"/>
+		<npc id="20333"/><!--Серый Голем-->
+	</spawn>
+	<spawn name="lyonn08_1914_20" count="4" respawn="21">
+		<territory name="lyonn08_1914_20"/>
+		<npc id="20428"/><!--Дозорный Око Зла-->
+	</spawn>
+	<territory name="lyonn08_1914_22">
+		<add x="-17044" y="-126540" zmin="-2492" zmax="-1492"/>
+		<add x="-13328" y="-127964" zmin="-2492" zmax="-1492"/>
+		<add x="-12732" y="-126488" zmin="-2492" zmax="-1492"/>
+		<add x="-14080" y="-123448" zmin="-2492" zmax="-1492"/>
+		<add x="-18552" y="-124076" zmin="-2492" zmax="-1492"/>
+	</territory>
+	<spawn name="lyonn08_1914_22" count="5" respawn="21">
+		<territory name="lyonn08_1914_22"/>
+		<npc id="20316"/><!--Темнокрылая Летучая Мышь-->
+	</spawn>
+	<spawn name="lyonn08_1914_22" count="5" respawn="21">
+		<territory name="lyonn08_1914_22"/>
+		<npc id="20143"/><!--Гризли-->
+	</spawn>
+	<spawn name="lyonn08_1914_22" count="5" respawn="21">
+		<territory name="lyonn08_1914_22"/>
+		<npc id="20320"/><!--Предводитель Гоблинов Грабителей Могил-->
+	</spawn>
+	<territory name="lyonn08_1914_21">
+		<add x="-19460" y="-123984" zmin="-2552" zmax="-1952"/>
+		<add x="-13832" y="-123220" zmin="-2552" zmax="-1952"/>
+		<add x="-15808" y="-119432" zmin="-2552" zmax="-1952"/>
+		<add x="-20592" y="-118752" zmin="-2552" zmax="-1952"/>
+		<add x="-20776" y="-120536" zmin="-2552" zmax="-1952"/>
+	</territory>
+	<spawn name="lyonn08_1914_21" count="6" respawn="21">
+		<territory name="lyonn08_1914_21"/>
+		<npc id="20320"/><!--Предводитель Гоблинов Грабителей Могил-->
+	</spawn>
+	<spawn name="lyonn08_1914_21" count="6" respawn="21">
+		<territory name="lyonn08_1914_21"/>
+		<npc id="20333"/><!--Серый Голем-->
+	</spawn>
+	<spawn name="lyonn08_1914_21" count="6" respawn="21">
+		<territory name="lyonn08_1914_21"/>
+		<npc id="20428"/><!--Дозорный Око Зла-->
+	</spawn>
+	<territory name="lyonn08_1914_17">
+		<add x="-19564" y="-104300" zmin="-1704" zmax="-404"/>
+		<add x="-15932" y="-105040" zmin="-1704" zmax="-404"/>
+		<add x="-13876" y="-103252" zmin="-1704" zmax="-404"/>
+		<add x="-15856" y="-102564" zmin="-1704" zmax="-404"/>
+	</territory>
+	<spawn name="lyonn08_1914_17" count="3" respawn="21">
+		<territory name="lyonn08_1914_17"/>
+		<npc id="20320"/><!--Предводитель Гоблинов Грабителей Могил-->
+	</spawn>
+	<spawn name="lyonn08_1914_17" count="2" respawn="21">
+		<territory name="lyonn08_1914_17"/>
+		<npc id="20333"/><!--Серый Голем-->
+	</spawn>
+	<spawn name="lyonn08_1914_17" count="3" respawn="21">
+		<territory name="lyonn08_1914_17"/>
+		<npc id="20428"/><!--Дозорный Око Зла-->
+	</spawn>
+	<territory name="lyonn08_1914_16">
+		<add x="-21376" y="-108112" zmin="-2340" zmax="-1040"/>
+		<add x="-18580" y="-105412" zmin="-2340" zmax="-1040"/>
+		<add x="-21480" y="-102904" zmin="-2340" zmax="-1040"/>
+		<add x="-24000" y="-103524" zmin="-2340" zmax="-1040"/>
+	</territory>
+	<spawn name="lyonn08_1914_16" count="4" respawn="21">
+		<territory name="lyonn08_1914_16"/>
+		<npc id="20313"/><!--Матерый Когтистый Бес-->
+	</spawn>
+	<spawn name="lyonn08_1914_16" count="4" respawn="21">
+		<territory name="lyonn08_1914_16"/>
+		<npc id="20143"/><!--Гризли-->
+	</spawn>
+	<spawn name="lyonn08_1914_16" count="4" respawn="21">
+		<territory name="lyonn08_1914_16"/>
+		<npc id="20320"/><!--Предводитель Гоблинов Грабителей Могил-->
+	</spawn>
+	<territory name="lyonn08_1914_19">
+		<add x="-15088" y="-117452" zmin="-2552" zmax="-1852"/>
+		<add x="-12724" y="-117536" zmin="-2552" zmax="-1852"/>
+		<add x="-10944" y="-116928" zmin="-2552" zmax="-1852"/>
+		<add x="-10812" y="-115636" zmin="-2552" zmax="-1852"/>
+		<add x="-13088" y="-113756" zmin="-2552" zmax="-1852"/>
+		<add x="-14780" y="-115340" zmin="-2552" zmax="-1852"/>
+	</territory>
+	<spawn name="lyonn08_1914_19" count="3" respawn="21">
+		<territory name="lyonn08_1914_19"/>
+		<npc id="20320"/><!--Предводитель Гоблинов Грабителей Могил-->
+	</spawn>
+	<spawn name="lyonn08_1914_19" count="4" respawn="21">
+		<territory name="lyonn08_1914_19"/>
+		<npc id="20333"/><!--Серый Голем-->
+	</spawn>
+	<spawn name="lyonn08_1914_19" count="4" respawn="21">
+		<territory name="lyonn08_1914_19"/>
+		<npc id="20428"/><!--Дозорный Око Зла-->
+	</spawn>
+	<territory name="lyonn08_1914_13">
+		<add x="-14692" y="-130916" zmin="-3052" zmax="-2502"/>
+		<add x="-10292" y="-130892" zmin="-3052" zmax="-2502"/>
+		<add x="-10464" y="-129804" zmin="-3052" zmax="-2502"/>
+		<add x="-17500" y="-127804" zmin="-3052" zmax="-2502"/>
+	</territory>
+	<spawn name="lyonn08_1914_13" count="4" respawn="21">
+		<territory name="lyonn08_1914_13"/>
+		<npc id="20316"/><!--Темнокрылая Летучая Мышь-->
+	</spawn>
+	<spawn name="lyonn08_1914_13" count="4" respawn="21">
+		<territory name="lyonn08_1914_13"/>
+		<npc id="20143"/><!--Гризли-->
+	</spawn>
+	<spawn name="lyonn08_1914_13" count="4" respawn="21">
+		<territory name="lyonn08_1914_13"/>
+		<npc id="20320"/><!--Предводитель Гоблинов Грабителей Могил-->
+	</spawn>
+	<territory name="lyonn08_1914_12">
+		<add x="-20188" y="-130892" zmin="-2412" zmax="-1762"/>
+		<add x="-15620" y="-130892" zmin="-2412" zmax="-1762"/>
+		<add x="-18668" y="-128052" zmin="-2412" zmax="-1762"/>
+		<add x="-20308" y="-127648" zmin="-2412" zmax="-1762"/>
+	</territory>
+	<spawn name="lyonn08_1914_12" count="3" respawn="21">
+		<territory name="lyonn08_1914_12"/>
+		<npc id="20426"/><!--Око Зла-->
+	</spawn>
+	<spawn name="lyonn08_1914_12" count="4" respawn="21">
+		<territory name="lyonn08_1914_12"/>
+		<npc id="20316"/><!--Темнокрылая Летучая Мышь-->
+	</spawn>
+	<spawn name="lyonn08_1914_12" count="3" respawn="21">
+		<territory name="lyonn08_1914_12"/>
+		<npc id="20143"/><!--Гризли-->
+	</spawn>
+	<territory name="lyonn08_1914_15">
+		<add x="-22556" y="-118584" zmin="-3076" zmax="-2676"/>
+		<add x="-21560" y="-118612" zmin="-3076" zmax="-2676"/>
+		<add x="-20328" y="-117280" zmin="-3076" zmax="-2676"/>
+		<add x="-19784" y="-114864" zmin="-3076" zmax="-2676"/>
+		<add x="-20428" y="-114016" zmin="-3076" zmax="-2676"/>
+		<add x="-22116" y="-114004" zmin="-3076" zmax="-2676"/>
+		<add x="-23496" y="-115352" zmin="-3076" zmax="-2676"/>
+		<add x="-23820" y="-117020" zmin="-3076" zmax="-2676"/>
+	</territory>
+	<spawn name="lyonn08_1914_15" count="4" respawn="21">
+		<territory name="lyonn08_1914_15"/>
+		<npc id="20363"/><!--Оборотень Мараку-->
+	</spawn>
+	<spawn name="lyonn08_1914_15" count="4" respawn="21">
+		<territory name="lyonn08_1914_15"/>
+		<npc id="20426"/><!--Око Зла-->
+	</spawn>
+	<spawn name="lyonn08_1914_15" count="4" respawn="21">
+		<territory name="lyonn08_1914_15"/>
+		<npc id="20316"/><!--Темнокрылая Летучая Мышь-->
+	</spawn>
+	<territory name="lyonn08_1914_14">
+		<add x="-18640" y="-102200" zmin="-2232" zmax="-1632"/>
+		<add x="-16708" y="-101868" zmin="-2232" zmax="-1632"/>
+		<add x="-16580" y="-100684" zmin="-2232" zmax="-1632"/>
+		<add x="-18308" y="-99944" zmin="-2232" zmax="-1632"/>
+		<add x="-19620" y="-99944" zmin="-2232" zmax="-1632"/>
+		<add x="-19252" y="-101548" zmin="-2232" zmax="-1632"/>
+	</territory>
+	<spawn name="lyonn08_1914_14" count="4" respawn="21">
+		<territory name="lyonn08_1914_14"/>
+		<npc id="20363"/><!--Оборотень Мараку-->
+	</spawn>
+	<spawn name="lyonn08_1914_14" count="4" respawn="21">
+		<territory name="lyonn08_1914_14"/>
+		<npc id="20426"/><!--Око Зла-->
+	</spawn>
+	<spawn name="lyonn08_1914_14" count="4" respawn="21">
+		<territory name="lyonn08_1914_14"/>
+		<npc id="20313"/><!--Матерый Когтистый Бес-->
+	</spawn>
+	<territory name="lyonn08_1914_11">
+		<add x="-27084" y="-127172" zmin="-3064" zmax="-2064"/>
+		<add x="-22316" y="-127464" zmin="-3064" zmax="-2064"/>
+		<add x="-20188" y="-124508" zmin="-3064" zmax="-2064"/>
+		<add x="-21536" y="-120900" zmin="-3064" zmax="-2064"/>
+		<add x="-23536" y="-121256" zmin="-3064" zmax="-2064"/>
+		<add x="-25572" y="-123824" zmin="-3064" zmax="-2064"/>
+	</territory>
+	<spawn name="lyonn08_1914_11" count="6" respawn="21">
+		<territory name="lyonn08_1914_11"/>
+		<npc id="20365"/><!--Горный Гриб-->
+	</spawn>
+	<spawn name="lyonn08_1914_11" count="6" respawn="21">
+		<territory name="lyonn08_1914_11"/>
+		<npc id="20363"/><!--Оборотень Мараку-->
+	</spawn>
+	<spawn name="lyonn08_1914_11" count="6" respawn="21">
+		<territory name="lyonn08_1914_11"/>
+		<npc id="20426"/><!--Око Зла-->
+	</spawn>
+	<territory name="lyonn08_1914_10">
+		<add x="-29760" y="-100572" zmin="-2900" zmax="-2500"/>
+		<add x="-27776" y="-100316" zmin="-2900" zmax="-2500"/>
+		<add x="-27756" y="-98632" zmin="-2900" zmax="-2500"/>
+		<add x="-29204" y="-98616" zmin="-2900" zmax="-2500"/>
+	</territory>
+	<spawn name="lyonn08_1914_10" count="2" respawn="21">
+		<territory name="lyonn08_1914_10"/>
+		<npc id="20365"/><!--Горный Гриб-->
+	</spawn>
+	<spawn name="lyonn08_1914_10" count="2" respawn="21">
+		<territory name="lyonn08_1914_10"/>
+		<npc id="20363"/><!--Оборотень Мараку-->
+	</spawn>
+	<spawn name="lyonn08_1914_10" count="2" respawn="21">
+		<territory name="lyonn08_1914_10"/>
+		<npc id="20426"/><!--Око Зла-->
+	</spawn>
+	<territory name="lyonn08_1914_09">
+		<add x="-27724" y="-100308" zmin="-2796" zmax="-2196"/>
+		<add x="-26264" y="-101608" zmin="-2796" zmax="-2196"/>
+		<add x="-23440" y="-98604" zmin="-2796" zmax="-2196"/>
+		<add x="-27644" y="-98624" zmin="-2796" zmax="-2196"/>
+	</territory>
+	<spawn name="lyonn08_1914_09" count="3" respawn="21">
+		<territory name="lyonn08_1914_09"/>
+		<npc id="20365"/><!--Горный Гриб-->
+	</spawn>
+	<spawn name="lyonn08_1914_09" count="3" respawn="21">
+		<territory name="lyonn08_1914_09"/>
+		<npc id="20363"/><!--Оборотень Мараку-->
+	</spawn>
+	<spawn name="lyonn08_1914_09" count="3" respawn="21">
+		<territory name="lyonn08_1914_09"/>
+		<npc id="20426"/><!--Око Зла-->
+	</spawn>
+	<territory name="lyonn08_1914_06">
+		<add x="-25500" y="-111024" zmin="-2232" zmax="-1282"/>
+		<add x="-24464" y="-111120" zmin="-2232" zmax="-1282"/>
+		<add x="-24492" y="-108280" zmin="-2232" zmax="-1282"/>
+		<add x="-25940" y="-107624" zmin="-2232" zmax="-1282"/>
+		<add x="-26220" y="-109900" zmin="-2232" zmax="-1282"/>
+	</territory>
+	<spawn name="lyonn08_1914_06" count="2" respawn="21">
+		<territory name="lyonn08_1914_06"/>
+		<npc id="20365"/><!--Горный Гриб-->
+	</spawn>
+	<spawn name="lyonn08_1914_06" count="3" respawn="21">
+		<territory name="lyonn08_1914_06"/>
+		<npc id="20363"/><!--Оборотень Мараку-->
+	</spawn>
+	<spawn name="lyonn08_1914_06" count="2" respawn="21">
+		<territory name="lyonn08_1914_06"/>
+		<npc id="20426"/><!--Око Зла-->
+	</spawn>
+	<territory name="lyonn08_1914_05">
+		<add x="-28152" y="-116252" zmin="-2532" zmax="-1682"/>
+		<add x="-24752" y="-116856" zmin="-2532" zmax="-1682"/>
+		<add x="-24384" y="-112600" zmin="-2532" zmax="-1682"/>
+		<add x="-26772" y="-110272" zmin="-2532" zmax="-1682"/>
+	</territory>
+	<spawn name="lyonn08_1914_05" count="4" respawn="21">
+		<territory name="lyonn08_1914_05"/>
+		<npc id="20365"/><!--Горный Гриб-->
+	</spawn>
+	<spawn name="lyonn08_1914_05" count="4" respawn="21">
+		<territory name="lyonn08_1914_05"/>
+		<npc id="20363"/><!--Оборотень Мараку-->
+	</spawn>
+	<spawn name="lyonn08_1914_05" count="4" respawn="21">
+		<territory name="lyonn08_1914_05"/>
+		<npc id="20426"/><!--Око Зла-->
+	</spawn>
+	<territory name="lyonn08_1914_08">
+		<add x="-32664" y="-102604" zmin="-3048" zmax="-2348"/>
+		<add x="-31104" y="-103592" zmin="-3048" zmax="-2348"/>
+		<add x="-30176" y="-101164" zmin="-3048" zmax="-2348"/>
+		<add x="-31392" y="-100808" zmin="-3048" zmax="-2348"/>
+		<add x="-32636" y="-101460" zmin="-3048" zmax="-2348"/>
+	</territory>
+	<spawn name="lyonn08_1914_08" count="2" respawn="21">
+		<territory name="lyonn08_1914_08"/>
+		<npc id="20312"/><!--Охотник Когтистых Бесов-->
+	</spawn>
+	<spawn name="lyonn08_1914_08" count="2" respawn="21">
+		<territory name="lyonn08_1914_08"/>
+		<npc id="20365"/><!--Горный Гриб-->
+	</spawn>
+	<territory name="lyonn08_1914_07">
+		<add x="-29712" y="-103956" zmin="-3216" zmax="-2966"/>
+		<add x="-28700" y="-104024" zmin="-3216" zmax="-2966"/>
+		<add x="-27196" y="-101524" zmin="-3216" zmax="-2966"/>
+		<add x="-27948" y="-100984" zmin="-3216" zmax="-2966"/>
+		<add x="-28900" y="-101036" zmin="-3216" zmax="-2966"/>
+		<add x="-29928" y="-102116" zmin="-3216" zmax="-2966"/>
+		<add x="-30180" y="-102992" zmin="-3216" zmax="-2966"/>
+	</territory>
+	<spawn name="lyonn08_1914_07" count="3" respawn="21">
+		<territory name="lyonn08_1914_07"/>
+		<npc id="20365"/><!--Горный Гриб-->
+	</spawn>
+	<spawn name="lyonn08_1914_07" count="3" respawn="21">
+		<territory name="lyonn08_1914_07"/>
+		<npc id="20363"/><!--Оборотень Мараку-->
+	</spawn>
+	<spawn name="lyonn08_1914_07" count="3" respawn="21">
+		<territory name="lyonn08_1914_07"/>
+		<npc id="20426"/><!--Око Зла-->
+	</spawn>
+	<territory name="lyonn08_1914_02">
+		<add x="-26512" y="-130916" zmin="-1180" zmax="-480"/>
+		<add x="-21344" y="-130920" zmin="-1180" zmax="-480"/>
+		<add x="-21520" y="-130424" zmin="-1180" zmax="-480"/>
+		<add x="-24656" y="-128684" zmin="-1180" zmax="-480"/>
+		<add x="-27008" y="-128400" zmin="-1180" zmax="-480"/>
+		<add x="-27796" y="-128556" zmin="-1180" zmax="-480"/>
+	</territory>
+	<spawn name="lyonn08_1914_02" count="3" respawn="21">
+		<territory name="lyonn08_1914_02"/>
+		<npc id="20312"/><!--Охотник Когтистых Бесов-->
+	</spawn>
+	<spawn name="lyonn08_1914_02" count="3" respawn="21">
+		<territory name="lyonn08_1914_02"/>
+		<npc id="20365"/><!--Горный Гриб-->
+	</spawn>
+	<territory name="lyonn08_1914_01">
+		<add x="-31428" y="-127472" zmin="-1392" zmax="-992"/>
+		<add x="-29104" y="-128572" zmin="-1392" zmax="-992"/>
+		<add x="-27104" y="-128344" zmin="-1392" zmax="-992"/>
+		<add x="-31364" y="-125524" zmin="-1392" zmax="-992"/>
+	</territory>
+	<spawn name="lyonn08_1914_01" count="1" respawn="21">
+		<territory name="lyonn08_1914_01"/>
+		<npc id="20312"/><!--Охотник Когтистых Бесов-->
+	</spawn>
+	<spawn name="lyonn08_1914_01" count="2" respawn="21">
+		<territory name="lyonn08_1914_01"/>
+		<npc id="20365"/><!--Горный Гриб-->
+	</spawn>
+	<territory name="lyonn08_1914_04">
+		<add x="-29212" y="-122716" zmin="-2248" zmax="-1448"/>
+		<add x="-25836" y="-123004" zmin="-2248" zmax="-1448"/>
+		<add x="-23084" y="-120028" zmin="-2248" zmax="-1448"/>
+		<add x="-23232" y="-119048" zmin="-2248" zmax="-1448"/>
+		<add x="-24896" y="-117084" zmin="-2248" zmax="-1448"/>
+		<add x="-28208" y="-116392" zmin="-2248" zmax="-1448"/>
+		<add x="-29352" y="-119996" zmin="-2248" zmax="-1448"/>
+	</territory>
+	<spawn name="lyonn08_1914_04" count="6" respawn="21">
+		<territory name="lyonn08_1914_04"/>
+		<npc id="20365"/><!--Горный Гриб-->
+	</spawn>
+	<spawn name="lyonn08_1914_04" count="6" respawn="21">
+		<territory name="lyonn08_1914_04"/>
+		<npc id="20363"/><!--Оборотень Мараку-->
+	</spawn>
+	<spawn name="lyonn08_1914_04" count="6" respawn="21">
+		<territory name="lyonn08_1914_04"/>
+		<npc id="20426"/><!--Око Зла-->
+	</spawn>
+	<territory name="lyonn08_1914_03">
+		<add x="-29420" y="-125668" zmin="-2592" zmax="-1842"/>
+		<add x="-27504" y="-126336" zmin="-2592" zmax="-1842"/>
+		<add x="-25932" y="-123680" zmin="-2592" zmax="-1842"/>
+		<add x="-29356" y="-122896" zmin="-2592" zmax="-1842"/>
+		<add x="-31624" y="-124464" zmin="-2592" zmax="-1842"/>
+	</territory>
+	<spawn name="lyonn08_1914_03" count="5" respawn="21">
+		<territory name="lyonn08_1914_03"/>
+		<npc id="20312"/><!--Охотник Когтистых Бесов-->
+	</spawn>
+	<spawn name="lyonn08_1914_03" count="5" respawn="21">
+		<territory name="lyonn08_1914_03"/>
+		<npc id="20365"/><!--Горный Гриб-->
+	</spawn>
+	<spawn name="lyonn08_1914_35" count="3" respawn="21">
+		<territory>
+			<add x="-19200" y="-109516" zmin="-2352" zmax="-1852"/>
+			<add x="-17364" y="-108516" zmin="-2352" zmax="-1852"/>
+			<add x="-18556" y="-106612" zmin="-2352" zmax="-1852"/>
+			<add x="-20896" y="-108308" zmin="-2352" zmax="-1852"/>
+		</territory>
+		<npc id="20333"/><!--Серый Голем-->
+	</spawn>
+	<spawn name="lyonn08_1914_34" count="3" respawn="21">
+		<territory>
+			<add x="-16164" y="-111300" zmin="-2436" zmax="-1836"/>
+			<add x="-14532" y="-111032" zmin="-2436" zmax="-1836"/>
+			<add x="-14100" y="-109488" zmin="-2436" zmax="-1836"/>
+			<add x="-16052" y="-109064" zmin="-2436" zmax="-1836"/>
+			<add x="-16980" y="-110004" zmin="-2436" zmax="-1836"/>
+			<add x="-16996" y="-110868" zmin="-2436" zmax="-1836"/>
+		</territory>
+		<npc id="20333"/><!--Серый Голем-->
+	</spawn>
+	<spawn name="lyonn08_1914_36" count="4" respawn="21">
+		<territory>
+			<add x="-17660" y="-122644" zmin="-2412" zmax="-1912"/>
+			<add x="-15884" y="-122448" zmin="-2412" zmax="-1912"/>
+			<add x="-16568" y="-119984" zmin="-2412" zmax="-1912"/>
+			<add x="-18584" y="-119224" zmin="-2412" zmax="-1912"/>
+			<add x="-19144" y="-120424" zmin="-2412" zmax="-1912"/>
+			<add x="-19108" y="-121664" zmin="-2412" zmax="-1912"/>
+		</territory>
+		<npc id="20363"/><!--Оборотень Мараку-->
+	</spawn>
+	<spawn name="lyonn08_1914_31" count="4" respawn="21">
+		<territory>
+			<add x="-23980" y="-125872" zmin="-3036" zmax="-2236"/>
+			<add x="-22244" y="-125880" zmin="-3036" zmax="-2236"/>
+			<add x="-21332" y="-124492" zmin="-3036" zmax="-2236"/>
+			<add x="-21928" y="-122688" zmin="-3036" zmax="-2236"/>
+			<add x="-24208" y="-124208" zmin="-3036" zmax="-2236"/>
+		</territory>
+		<npc id="20363"/><!--Оборотень Мараку-->
+	</spawn>
+	<spawn name="lyonn08_1914_30" count="4" respawn="21">
+		<territory>
+			<add x="-24440" y="-121172" zmin="-2252" zmax="-1752"/>
+			<add x="-23420" y="-120048" zmin="-2252" zmax="-1752"/>
+			<add x="-24592" y="-118656" zmin="-2252" zmax="-1752"/>
+			<add x="-26444" y="-118628" zmin="-2252" zmax="-1752"/>
+			<add x="-26280" y="-120676" zmin="-2252" zmax="-1752"/>
+		</territory>
+		<npc id="20363"/><!--Оборотень Мараку-->
+	</spawn>
+	<spawn name="lyonn08_1914_33" count="3" respawn="21">
+		<territory>
+			<add x="-21240" y="-106496" zmin="-2100" zmax="-1300"/>
+			<add x="-20200" y="-105428" zmin="-2100" zmax="-1300"/>
+			<add x="-20808" y="-104204" zmin="-2100" zmax="-1300"/>
+			<add x="-22132" y="-103864" zmin="-2100" zmax="-1300"/>
+			<add x="-22412" y="-105196" zmin="-2100" zmax="-1300"/>
+		</territory>
+		<npc id="20333"/><!--Серый Голем-->
+	</spawn>
+	<spawn name="lyonn08_1914_32" count="4" respawn="21">
+		<territory>
+			<add x="-21876" y="-117392" zmin="-3080" zmax="-2680"/>
+			<add x="-21084" y="-117284" zmin="-3080" zmax="-2680"/>
+			<add x="-20656" y="-116660" zmin="-3080" zmax="-2680"/>
+			<add x="-20500" y="-115928" zmin="-3080" zmax="-2680"/>
+			<add x="-20620" y="-115300" zmin="-3080" zmax="-2680"/>
+			<add x="-21484" y="-114868" zmin="-3080" zmax="-2680"/>
+			<add x="-22816" y="-115608" zmin="-3080" zmax="-2680"/>
+			<add x="-22996" y="-116640" zmin="-3080" zmax="-2680"/>
+			<add x="-22608" y="-117092" zmin="-3080" zmax="-2680"/>
+		</territory>
+		<npc id="20363"/><!--Оборотень Мараку-->
+	</spawn>
+</list>

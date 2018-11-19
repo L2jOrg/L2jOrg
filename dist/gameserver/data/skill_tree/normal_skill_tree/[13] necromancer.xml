@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="13">	<!--Некромант-->
+			<skill id="146" level="13" name="Антимагия(Anti Magic)" cost="55000" min_level="40"/>
+			<skill id="146" level="14" name="Антимагия(Anti Magic)" cost="55000" min_level="40"/>
+			<skill id="146" level="15" name="Антимагия(Anti Magic)" cost="55000" min_level="40"/>
+			<skill id="1064" level="1" name="Безмолвие(Silence)" item_id="3064" cost="55000" min_level="40"/>
+			<skill id="228" level="2" name="Быстрое Чтение Заклинаний(Fast Spell Casting)" cost="55000" min_level="40"/>
+			<skill id="234" level="9" name="Владение Магической Броней(Robe Mastery)" cost="55000" min_level="40"/>
+			<skill id="234" level="10" name="Владение Магической Броней(Robe Mastery)" cost="55000" min_level="40"/>
+			<skill id="234" level="11" name="Владение Магической Броней(Robe Mastery)" cost="55000" min_level="40"/>
+			<skill id="249" level="10" name="Владение Оружием(Weapon Mastery)" cost="55000" min_level="40"/>
+			<skill id="249" level="11" name="Владение Оружием(Weapon Mastery)" cost="55000" min_level="40"/>
+			<skill id="249" level="12" name="Владение Оружием(Weapon Mastery)" cost="55000" min_level="40"/>
+			<skill id="1234" level="1" name="Коготь Вампира(Vampiric Claw)" cost="55000" min_level="40"/>
+			<skill id="1234" level="2" name="Коготь Вампира(Vampiric Claw)" cost="55000" min_level="40"/>
+			<skill id="1829" level="1" name="Мастер Заклинаний(Spell Master)" min_level="40"/>
+			<skill id="1262" level="1" name="Поделиться Болью(Transfer Pain)" cost="55000" min_level="40"/>
+			<skill id="1151" level="3" name="Подпитка от Трупа(Corpse Life Drain)" cost="55000" min_level="40"/>
+			<skill id="1154" level="1" name="Призвать Порочного(Summon Corrupted Man)" cost="55000" min_level="40"/>
+			<skill id="1163" level="1" name="Проклятие Раздора(Curse Discord)" cost="55000" min_level="40"/>
+			<skill id="1164" level="6" name="Проклятие Слабости(Curse Weakness)" cost="55000" min_level="40"/>
+			<skill id="1169" level="1" name="Проклятие Страха(Curse Fear)" cost="55000" min_level="40"/>
+			<skill id="1222" level="2" name="Проклятие Хаоса(Curse Chaos)" cost="55000" min_level="40"/>
+			<skill id="1157" level="2" name="Самобичевание(Body To Mind)" cost="55000" min_level="40"/>
+			<skill id="213" level="3" name="Увеличение Маны(Boost Mana)" cost="55000" min_level="40"/>
+			<skill id="285" level="9" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="55000" min_level="40"/>
+			<skill id="285" level="10" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="55000" min_level="40"/>
+			<skill id="1069" level="10" name="Усыпление(Sleep)" cost="55000" min_level="40"/>
+			<skill id="1069" level="11" name="Усыпление(Sleep)" cost="55000" min_level="40"/>
+			<skill id="1069" level="12" name="Усыпление(Sleep)" cost="55000" min_level="40"/>
+			<skill id="1170" level="1" name="Якорь(Anchor)" item_id="3063" cost="55000" min_level="40"/>
+			<skill id="146" level="16" name="Антимагия(Anti Magic)" cost="77000" min_level="42"/>
+			<skill id="234" level="12" name="Владение Магической Броней(Robe Mastery)" cost="77000" min_level="42"/>
+			<skill id="249" level="13" name="Владение Оружием(Weapon Mastery)" cost="77000" min_level="42"/>
+			<skill id="1234" level="3" name="Коготь Вампира(Vampiric Claw)" cost="77000" min_level="42"/>
+			<skill id="285" level="11" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="77000" min_level="42"/>
+			<skill id="1069" level="13" name="Усыпление(Sleep)" cost="77000" min_level="42"/>
+			<skill id="146" level="17" name="Антимагия(Anti Magic)" cost="77000" min_level="43"/>
+			<skill id="234" level="13" name="Владение Магической Броней(Robe Mastery)" cost="77000" min_level="43"/>
+			<skill id="249" level="14" name="Владение Оружием(Weapon Mastery)" cost="77000" min_level="43"/>
+			<skill id="1069" level="14" name="Усыпление(Sleep)" cost="77000" min_level="43"/>
+			<skill id="146" level="18" name="Антимагия(Anti Magic)" cost="77000" min_level="44"/>
+			<skill id="1064" level="2" name="Безмолвие(Silence)" cost="77000" min_level="44"/>
+			<skill id="212" level="2" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="77000" min_level="44"/>
+			<skill id="229" level="3" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="77000" min_level="44"/>
+			<skill id="234" level="14" name="Владение Магической Броней(Robe Mastery)" cost="77000" min_level="44"/>
+			<skill id="249" level="15" name="Владение Оружием(Weapon Mastery)" cost="77000" min_level="44"/>
+			<skill id="1156" level="1" name="Забывчивость(Forget)" cost="77000" min_level="44"/>
+			<skill id="1234" level="4" name="Коготь Вампира(Vampiric Claw)" cost="77000" min_level="44"/>
+			<skill id="1151" level="4" name="Подпитка от Трупа(Corpse Life Drain)" cost="77000" min_level="44"/>
+			<skill id="1129" level="1" name="Призвать Воскрешенного(Summon Reanimated Man)" cost="77000" min_level="44"/>
+			<skill id="1263" level="1" name="Проклятие Мрака(Curse Gloom)" cost="77000" min_level="44"/>
+			<skill id="1163" level="2" name="Проклятие Раздора(Curse Discord)" cost="77000" min_level="44"/>
+			<skill id="1164" level="7" name="Проклятие Слабости(Curse Weakness)" cost="77000" min_level="44"/>
+			<skill id="1169" level="2" name="Проклятие Страха(Curse Fear)" cost="77000" min_level="44"/>
+			<skill id="1222" level="3" name="Проклятие Хаоса(Curse Chaos)" cost="77000" min_level="44"/>
+			<skill id="1168" level="4" name="Проклятие Яда(Curse Poison)" cost="77000" min_level="44"/>
+			<skill id="285" level="12" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="77000" min_level="44"/>
+			<skill id="1069" level="15" name="Усыпление(Sleep)" cost="77000" min_level="44"/>
+			<skill id="1148" level="1" name="Шип Смерти(Death Spike)" cost="77000" min_level="44"/>
+			<skill id="1800" level="1" name="Пират(Pirate)" min_level="45"/>
+			<skill id="146" level="19" name="Антимагия(Anti Magic)" cost="120000" min_level="46"/>
+			<skill id="1155" level="1" name="Взрыв Трупа(Corpse Burst)" cost="120000" min_level="46"/>
+			<skill id="234" level="15" name="Владение Магической Броней(Robe Mastery)" cost="120000" min_level="46"/>
+			<skill id="249" level="16" name="Владение Оружием(Weapon Mastery)" cost="120000" min_level="46"/>
+			<skill id="1234" level="5" name="Коготь Вампира(Vampiric Claw)" cost="120000" min_level="46"/>
+			<skill id="285" level="13" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="120000" min_level="46"/>
+			<skill id="1069" level="16" name="Усыпление(Sleep)" cost="120000" min_level="46"/>
+			<skill id="146" level="20" name="Антимагия(Anti Magic)" cost="120000" min_level="47"/>
+			<skill id="234" level="16" name="Владение Магической Броней(Robe Mastery)" cost="120000" min_level="47"/>
+			<skill id="249" level="17" name="Владение Оружием(Weapon Mastery)" cost="120000" min_level="47"/>
+			<skill id="1069" level="17" name="Усыпление(Sleep)" cost="120000" min_level="47"/>
+			<skill id="146" level="21" name="Антимагия(Anti Magic)" cost="120000" min_level="48"/>
+			<skill id="1064" level="3" name="Безмолвие(Silence)" cost="120000" min_level="48"/>
+			<skill id="164" level="3" name="Быстрый Повтор(Quick Recovery)" cost="120000" min_level="48"/>
+			<skill id="1155" level="2" name="Взрыв Трупа(Corpse Burst)" cost="120000" min_level="48"/>
+			<skill id="234" level="17" name="Владение Магической Броней(Robe Mastery)" cost="120000" min_level="48"/>
+			<skill id="249" level="18" name="Владение Оружием(Weapon Mastery)" cost="120000" min_level="48"/>
+			<skill id="1156" level="2" name="Забывчивость(Forget)" cost="120000" min_level="48"/>
+			<skill id="1234" level="6" name="Коготь Вампира(Vampiric Claw)" cost="120000" min_level="48"/>
+			<skill id="1262" level="2" name="Поделиться Болью(Transfer Pain)" cost="120000" min_level="48"/>
+			<skill id="1151" level="5" name="Подпитка от Трупа(Corpse Life Drain)" cost="120000" min_level="48"/>
+			<skill id="1154" level="2" name="Призвать Порочного(Summon Corrupted Man)" cost="120000" min_level="48"/>
+			<skill id="1263" level="2" name="Проклятие Мрака(Curse Gloom)" cost="120000" min_level="48"/>
+			<skill id="1163" level="3" name="Проклятие Раздора(Curse Discord)" cost="120000" min_level="48"/>
+			<skill id="1164" level="8" name="Проклятие Слабости(Curse Weakness)" cost="120000" min_level="48"/>
+			<skill id="1169" level="3" name="Проклятие Страха(Curse Fear)" cost="120000" min_level="48"/>
+			<skill id="1222" level="4" name="Проклятие Хаоса(Curse Chaos)" cost="120000" min_level="48"/>
+			<skill id="213" level="4" name="Увеличение Маны(Boost Mana)" cost="120000" min_level="48"/>
+			<skill id="285" level="14" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="120000" min_level="48"/>
+			<skill id="1069" level="18" name="Усыпление(Sleep)" cost="120000" min_level="48"/>
+			<skill id="1148" level="2" name="Шип Смерти(Death Spike)" cost="120000" min_level="48"/>
+			<skill id="1167" level="3" name="Ядовитое Облако(Poisonous Cloud)" cost="120000" min_level="48"/>
+			<skill id="1170" level="2" name="Якорь(Anchor)" cost="120000" min_level="48"/>
+			<skill id="146" level="22" name="Антимагия(Anti Magic)" cost="200000" min_level="50"/>
+			<skill id="1155" level="3" name="Взрыв Трупа(Corpse Burst)" cost="200000" min_level="50"/>
+			<skill id="234" level="18" name="Владение Магической Броней(Robe Mastery)" cost="200000" min_level="50"/>
+			<skill id="249" level="19" name="Владение Оружием(Weapon Mastery)" cost="200000" min_level="50"/>
+			<skill id="1234" level="7" name="Коготь Вампира(Vampiric Claw)" cost="200000" min_level="50"/>
+			<skill id="1159" level="1" name="Проклятие Смертельной Связи(Curse Death Link)" item_id="3066" cost="200000" min_level="50"/>
+			<skill id="285" level="15" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="200000" min_level="50"/>
+			<skill id="1069" level="19" name="Усыпление(Sleep)" cost="200000" min_level="50"/>
+			<skill id="146" level="23" name="Антимагия(Anti Magic)" cost="200000" min_level="51"/>
+			<skill id="234" level="19" name="Владение Магической Броней(Robe Mastery)" cost="200000" min_level="51"/>
+			<skill id="249" level="20" name="Владение Оружием(Weapon Mastery)" cost="200000" min_level="51"/>
+			<skill id="1069" level="20" name="Усыпление(Sleep)" cost="200000" min_level="51"/>
+			<skill id="146" level="24" name="Антимагия(Anti Magic)" cost="200000" min_level="52"/>
+			<skill id="1064" level="4" name="Безмолвие(Silence)" cost="200000" min_level="52"/>
+			<skill id="1405" level="1" name="Божественное Вдохновение(Divine Inspiration)" item_id="8618" cost="200000" min_level="52"/>
+			<skill id="212" level="3" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="200000" min_level="52"/>
+			<skill id="229" level="4" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="200000" min_level="52"/>
+			<skill id="1155" level="4" name="Взрыв Трупа(Corpse Burst)" cost="200000" min_level="52"/>
+			<skill id="234" level="20" name="Владение Магической Броней(Robe Mastery)" cost="200000" min_level="52"/>
+			<skill id="249" level="21" name="Владение Оружием(Weapon Mastery)" cost="200000" min_level="52"/>
+			<skill id="1156" level="3" name="Забывчивость(Forget)" cost="200000" min_level="52"/>
+			<skill id="1234" level="8" name="Коготь Вампира(Vampiric Claw)" cost="200000" min_level="52"/>
+			<skill id="1151" level="6" name="Подпитка от Трупа(Corpse Life Drain)" cost="200000" min_level="52"/>
+			<skill id="1129" level="2" name="Призвать Воскрешенного(Summon Reanimated Man)" cost="200000" min_level="52"/>
+			<skill id="1263" level="3" name="Проклятие Мрака(Curse Gloom)" cost="200000" min_level="52"/>
+			<skill id="1163" level="4" name="Проклятие Раздора(Curse Discord)" cost="200000" min_level="52"/>
+			<skill id="1164" level="9" name="Проклятие Слабости(Curse Weakness)" cost="200000" min_level="52"/>
+			<skill id="1159" level="2" name="Проклятие Смертельной Связи(Curse Death Link)" cost="200000" min_level="52"/>
+			<skill id="1169" level="4" name="Проклятие Страха(Curse Fear)" cost="200000" min_level="52"/>
+			<skill id="1222" level="5" name="Проклятие Хаоса(Curse Chaos)" cost="200000" min_level="52"/>
+			<skill id="1168" level="5" name="Проклятие Яда(Curse Poison)" cost="200000" min_level="52"/>
+			<skill id="1157" level="3" name="Самобичевание(Body To Mind)" cost="200000" min_level="52"/>
+			<skill id="285" level="16" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="200000" min_level="52"/>
+			<skill id="1069" level="21" name="Усыпление(Sleep)" cost="200000" min_level="52"/>
+			<skill id="1148" level="3" name="Шип Смерти(Death Spike)" cost="200000" min_level="52"/>
+			<skill id="1170" level="3" name="Якорь(Anchor)" cost="200000" min_level="52"/>
+			<skill id="146" level="25" name="Антимагия(Anti Magic)" cost="310000" min_level="54"/>
+			<skill id="1155" level="5" name="Взрыв Трупа(Corpse Burst)" cost="310000" min_level="54"/>
+			<skill id="234" level="21" name="Владение Магической Броней(Robe Mastery)" cost="310000" min_level="54"/>
+			<skill id="249" level="22" name="Владение Оружием(Weapon Mastery)" cost="310000" min_level="54"/>
+			<skill id="1234" level="9" name="Коготь Вампира(Vampiric Claw)" cost="310000" min_level="54"/>
+			<skill id="1159" level="3" name="Проклятие Смертельной Связи(Curse Death Link)" cost="310000" min_level="54"/>
+			<skill id="285" level="17" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="310000" min_level="54"/>
+			<skill id="1069" level="22" name="Усыпление(Sleep)" cost="310000" min_level="54"/>
+			<skill id="146" level="26" name="Антимагия(Anti Magic)" cost="310000" min_level="55"/>
+			<skill id="234" level="22" name="Владение Магической Броней(Robe Mastery)" cost="310000" min_level="55"/>
+			<skill id="249" level="23" name="Владение Оружием(Weapon Mastery)" cost="310000" min_level="55"/>
+			<skill id="1069" level="23" name="Усыпление(Sleep)" cost="310000" min_level="55"/>
+			<skill id="146" level="27" name="Антимагия(Anti Magic)" cost="310000" min_level="56"/>
+			<skill id="1064" level="5" name="Безмолвие(Silence)" cost="310000" min_level="56"/>
+			<skill id="228" level="3" name="Быстрое Чтение Заклинаний(Fast Spell Casting)" cost="310000" min_level="56"/>
+			<skill id="1155" level="6" name="Взрыв Трупа(Corpse Burst)" cost="310000" min_level="56"/>
+			<skill id="234" level="23" name="Владение Магической Броней(Robe Mastery)" cost="310000" min_level="56"/>
+			<skill id="249" level="24" name="Владение Оружием(Weapon Mastery)" cost="310000" min_level="56"/>
+			<skill id="1156" level="4" name="Забывчивость(Forget)" cost="310000" min_level="56"/>
+			<skill id="1234" level="10" name="Коготь Вампира(Vampiric Claw)" cost="310000" min_level="56"/>
+			<skill id="1262" level="3" name="Поделиться Болью(Transfer Pain)" cost="310000" min_level="56"/>
+			<skill id="1151" level="7" name="Подпитка от Трупа(Corpse Life Drain)" cost="310000" min_level="56"/>
+			<skill id="1154" level="3" name="Призвать Порочного(Summon Corrupted Man)" cost="310000" min_level="56"/>
+			<skill id="1263" level="4" name="Проклятие Мрака(Curse Gloom)" cost="310000" min_level="56"/>
+			<skill id="1163" level="5" name="Проклятие Раздора(Curse Discord)" cost="310000" min_level="56"/>
+			<skill id="1164" level="10" name="Проклятие Слабости(Curse Weakness)" cost="310000" min_level="56"/>
+			<skill id="1159" level="4" name="Проклятие Смертельной Связи(Curse Death Link)" cost="310000" min_level="56"/>
+			<skill id="1169" level="5" name="Проклятие Страха(Curse Fear)" cost="310000" min_level="56"/>
+			<skill id="1222" level="6" name="Проклятие Хаоса(Curse Chaos)" cost="310000" min_level="56"/>
+			<skill id="213" level="5" name="Увеличение Маны(Boost Mana)" cost="310000" min_level="56"/>
+			<skill id="285" level="18" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="310000" min_level="56"/>
+			<skill id="1069" level="24" name="Усыпление(Sleep)" cost="310000" min_level="56"/>
+			<skill id="1148" level="4" name="Шип Смерти(Death Spike)" cost="310000" min_level="56"/>
+			<skill id="1167" level="4" name="Ядовитое Облако(Poisonous Cloud)" cost="310000" min_level="56"/>
+			<skill id="1170" level="4" name="Якорь(Anchor)" cost="310000" min_level="56"/>
+			<skill id="146" level="28" name="Антимагия(Anti Magic)" cost="320000" min_level="57"/>
+			<skill id="234" level="24" name="Владение Магической Броней(Robe Mastery)" cost="320000" min_level="57"/>
+			<skill id="249" level="25" name="Владение Оружием(Weapon Mastery)" cost="320000" min_level="57"/>
+			<skill id="1234" level="11" name="Коготь Вампира(Vampiric Claw)" cost="320000" min_level="57"/>
+			<skill id="1159" level="5" name="Проклятие Смертельной Связи(Curse Death Link)" cost="320000" min_level="57"/>
+			<skill id="1069" level="25" name="Усыпление(Sleep)" cost="320000" min_level="57"/>
+			<skill id="146" level="29" name="Антимагия(Anti Magic)" cost="320000" min_level="58"/>
+			<skill id="1064" level="6" name="Безмолвие(Silence)" cost="320000" min_level="58"/>
+			<skill id="212" level="4" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="320000" min_level="58"/>
+			<skill id="1155" level="7" name="Взрыв Трупа(Corpse Burst)" cost="320000" min_level="58"/>
+			<skill id="234" level="25" name="Владение Магической Броней(Robe Mastery)" cost="320000" min_level="58"/>
+			<skill id="249" level="26" name="Владение Оружием(Weapon Mastery)" cost="320000" min_level="58"/>
+			<skill id="1156" level="5" name="Забывчивость(Forget)" cost="320000" min_level="58"/>
+			<skill id="1234" level="12" name="Коготь Вампира(Vampiric Claw)" cost="320000" min_level="58"/>
+			<skill id="1382" level="1" name="Массовое Проклятие Мрака(Mass Curse Gloom)" item_id="49570" cost="320000" min_level="58"/>
+			<skill id="1262" level="4" name="Поделиться Болью(Transfer Pain)" cost="320000" min_level="58"/>
+			<skill id="1151" level="8" name="Подпитка от Трупа(Corpse Life Drain)" cost="320000" min_level="58"/>
+			<skill id="1269" level="1" name="Проклятие Болезни(Curse Disease)" cost="320000" min_level="58"/>
+			<skill id="1263" level="5" name="Проклятие Мрака(Curse Gloom)" cost="320000" min_level="58"/>
+			<skill id="1163" level="6" name="Проклятие Раздора(Curse Discord)" cost="320000" min_level="58"/>
+			<skill id="1164" level="11" name="Проклятие Слабости(Curse Weakness)" cost="320000" min_level="58"/>
+			<skill id="1159" level="6" name="Проклятие Смертельной Связи(Curse Death Link)" cost="320000" min_level="58"/>
+			<skill id="1169" level="6" name="Проклятие Страха(Curse Fear)" cost="320000" min_level="58"/>
+			<skill id="1222" level="7" name="Проклятие Хаоса(Curse Chaos)" cost="320000" min_level="58"/>
+			<skill id="1157" level="4" name="Самобичевание(Body To Mind)" cost="320000" min_level="58"/>
+			<skill id="285" level="19" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="320000" min_level="58"/>
+			<skill id="1069" level="26" name="Усыпление(Sleep)" cost="320000" min_level="58"/>
+			<skill id="1148" level="5" name="Шип Смерти(Death Spike)" cost="320000" min_level="58"/>
+			<skill id="1170" level="5" name="Якорь(Anchor)" cost="320000" min_level="58"/>
+			<skill id="146" level="30" name="Антимагия(Anti Magic)" cost="380000" min_level="59"/>
+			<skill id="234" level="26" name="Владение Магической Броней(Robe Mastery)" cost="380000" min_level="59"/>
+			<skill id="249" level="27" name="Владение Оружием(Weapon Mastery)" cost="380000" min_level="59"/>
+			<skill id="1234" level="13" name="Коготь Вампира(Vampiric Claw)" cost="380000" min_level="59"/>
+			<skill id="1159" level="7" name="Проклятие Смертельной Связи(Curse Death Link)" cost="380000" min_level="59"/>
+			<skill id="1069" level="27" name="Усыпление(Sleep)" cost="380000" min_level="59"/>
+			<skill id="146" level="31" name="Антимагия(Anti Magic)" cost="380000" min_level="60"/>
+			<skill id="1064" level="7" name="Безмолвие(Silence)" cost="380000" min_level="60"/>
+			<skill id="229" level="5" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="380000" min_level="60"/>
+			<skill id="1155" level="8" name="Взрыв Трупа(Corpse Burst)" cost="380000" min_level="60"/>
+			<skill id="234" level="27" name="Владение Магической Броней(Robe Mastery)" cost="380000" min_level="60"/>
+			<skill id="249" level="28" name="Владение Оружием(Weapon Mastery)" cost="380000" min_level="60"/>
+			<skill id="1156" level="6" name="Забывчивость(Forget)" cost="380000" min_level="60"/>
+			<skill id="1234" level="14" name="Коготь Вампира(Vampiric Claw)" cost="380000" min_level="60"/>
+			<skill id="1151" level="9" name="Подпитка от Трупа(Corpse Life Drain)" cost="380000" min_level="60"/>
+			<skill id="1129" level="3" name="Призвать Воскрешенного(Summon Reanimated Man)" cost="380000" min_level="60"/>
+			<skill id="1269" level="2" name="Проклятие Болезни(Curse Disease)" cost="380000" min_level="60"/>
+			<skill id="1263" level="6" name="Проклятие Мрака(Curse Gloom)" cost="380000" min_level="60"/>
+			<skill id="1163" level="7" name="Проклятие Раздора(Curse Discord)" cost="380000" min_level="60"/>
+			<skill id="1164" level="12" name="Проклятие Слабости(Curse Weakness)" cost="380000" min_level="60"/>
+			<skill id="1159" level="8" name="Проклятие Смертельной Связи(Curse Death Link)" cost="380000" min_level="60"/>
+			<skill id="1169" level="7" name="Проклятие Страха(Curse Fear)" cost="380000" min_level="60"/>
+			<skill id="1222" level="8" name="Проклятие Хаоса(Curse Chaos)" cost="380000" min_level="60"/>
+			<skill id="1801" level="1" name="Темный Ассасин(Dark Assassin)" min_level="60"/>
+			<skill id="213" level="6" name="Увеличение Маны(Boost Mana)" cost="380000" min_level="60"/>
+			<skill id="285" level="20" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="380000" min_level="60"/>
+			<skill id="1069" level="28" name="Усыпление(Sleep)" cost="380000" min_level="60"/>
+			<skill id="1148" level="6" name="Шип Смерти(Death Spike)" cost="380000" min_level="60"/>
+			<skill id="1170" level="6" name="Якорь(Anchor)" cost="380000" min_level="60"/>
+			<skill id="146" level="32" name="Антимагия(Anti Magic)" cost="460000" min_level="61"/>
+			<skill id="1405" level="2" name="Божественное Вдохновение(Divine Inspiration)" item_id="8619" cost="460000" min_level="61"/>
+			<skill id="234" level="28" name="Владение Магической Броней(Robe Mastery)" cost="460000" min_level="61"/>
+			<skill id="249" level="29" name="Владение Оружием(Weapon Mastery)" cost="460000" min_level="61"/>
+			<skill id="1234" level="15" name="Коготь Вампира(Vampiric Claw)" cost="460000" min_level="61"/>
+			<skill id="1298" level="1" name="Массовое Замедление(Mass Slow)" item_id="5811" cost="460000" min_level="61"/>
+			<skill id="1159" level="9" name="Проклятие Смертельной Связи(Curse Death Link)" cost="460000" min_level="61"/>
+			<skill id="1069" level="29" name="Усыпление(Sleep)" cost="460000" min_level="61"/>
+			<skill id="146" level="33" name="Антимагия(Anti Magic)" cost="460000" min_level="62"/>
+			<skill id="1064" level="8" name="Безмолвие(Silence)" cost="460000" min_level="62"/>
+			<skill id="1155" level="9" name="Взрыв Трупа(Corpse Burst)" cost="460000" min_level="62"/>
+			<skill id="234" level="29" name="Владение Магической Броней(Robe Mastery)" cost="460000" min_level="62"/>
+			<skill id="249" level="30" name="Владение Оружием(Weapon Mastery)" cost="460000" min_level="62"/>
+			<skill id="1156" level="7" name="Забывчивость(Forget)" cost="460000" min_level="62"/>
+			<skill id="1234" level="16" name="Коготь Вампира(Vampiric Claw)" cost="460000" min_level="62"/>
+			<skill id="1298" level="2" name="Массовое Замедление(Mass Slow)" cost="460000" min_level="62"/>
+			<skill id="1382" level="2" name="Массовое Проклятие Мрака(Mass Curse Gloom)" cost="460000" min_level="62"/>
+			<skill id="1151" level="10" name="Подпитка от Трупа(Corpse Life Drain)" cost="460000" min_level="62"/>
+			<skill id="1154" level="4" name="Призвать Порочного(Summon Corrupted Man)" cost="460000" min_level="62"/>
+			<skill id="1269" level="3" name="Проклятие Болезни(Curse Disease)" cost="460000" min_level="62"/>
+			<skill id="1263" level="7" name="Проклятие Мрака(Curse Gloom)" cost="460000" min_level="62"/>
+			<skill id="1163" level="8" name="Проклятие Раздора(Curse Discord)" cost="460000" min_level="62"/>
+			<skill id="1164" level="13" name="Проклятие Слабости(Curse Weakness)" cost="460000" min_level="62"/>
+			<skill id="1159" level="10" name="Проклятие Смертельной Связи(Curse Death Link)" cost="460000" min_level="62"/>
+			<skill id="1169" level="8" name="Проклятие Страха(Curse Fear)" cost="460000" min_level="62"/>
+			<skill id="1222" level="9" name="Проклятие Хаоса(Curse Chaos)" cost="460000" min_level="62"/>
+			<skill id="1168" level="6" name="Проклятие Яда(Curse Poison)" cost="460000" min_level="62"/>
+			<skill id="285" level="21" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="460000" min_level="62"/>
+			<skill id="1069" level="30" name="Усыпление(Sleep)" cost="460000" min_level="62"/>
+			<skill id="1148" level="7" name="Шип Смерти(Death Spike)" cost="460000" min_level="62"/>
+			<skill id="1170" level="7" name="Якорь(Anchor)" cost="460000" min_level="62"/>
+			<skill id="146" level="34" name="Антимагия(Anti Magic)" cost="580000" min_level="63"/>
+			<skill id="234" level="30" name="Владение Магической Броней(Robe Mastery)" cost="580000" min_level="63"/>
+			<skill id="249" level="31" name="Владение Оружием(Weapon Mastery)" cost="580000" min_level="63"/>
+			<skill id="1234" level="17" name="Коготь Вампира(Vampiric Claw)" cost="580000" min_level="63"/>
+			<skill id="1298" level="3" name="Массовое Замедление(Mass Slow)" cost="580000" min_level="63"/>
+			<skill id="1159" level="11" name="Проклятие Смертельной Связи(Curse Death Link)" cost="580000" min_level="63"/>
+			<skill id="1069" level="31" name="Усыпление(Sleep)" cost="580000" min_level="63"/>
+			<skill id="146" level="35" name="Антимагия(Anti Magic)" cost="580000" min_level="64"/>
+			<skill id="1064" level="9" name="Безмолвие(Silence)" cost="580000" min_level="64"/>
+			<skill id="212" level="5" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="580000" min_level="64"/>
+			<skill id="1155" level="10" name="Взрыв Трупа(Corpse Burst)" cost="580000" min_level="64"/>
+			<skill id="234" level="31" name="Владение Магической Броней(Robe Mastery)" cost="580000" min_level="64"/>
+			<skill id="249" level="32" name="Владение Оружием(Weapon Mastery)" cost="580000" min_level="64"/>
+			<skill id="1156" level="8" name="Забывчивость(Forget)" cost="580000" min_level="64"/>
+			<skill id="1234" level="18" name="Коготь Вампира(Vampiric Claw)" cost="580000" min_level="64"/>
+			<skill id="1298" level="4" name="Массовое Замедление(Mass Slow)" cost="580000" min_level="64"/>
+			<skill id="1151" level="11" name="Подпитка от Трупа(Corpse Life Drain)" cost="580000" min_level="64"/>
+			<skill id="1129" level="4" name="Призвать Воскрешенного(Summon Reanimated Man)" cost="580000" min_level="64"/>
+			<skill id="1269" level="4" name="Проклятие Болезни(Curse Disease)" cost="580000" min_level="64"/>
+			<skill id="1263" level="8" name="Проклятие Мрака(Curse Gloom)" cost="580000" min_level="64"/>
+			<skill id="1163" level="9" name="Проклятие Раздора(Curse Discord)" cost="580000" min_level="64"/>
+			<skill id="1164" level="14" name="Проклятие Слабости(Curse Weakness)" cost="580000" min_level="64"/>
+			<skill id="1159" level="12" name="Проклятие Смертельной Связи(Curse Death Link)" cost="580000" min_level="64"/>
+			<skill id="1169" level="9" name="Проклятие Страха(Curse Fear)" cost="580000" min_level="64"/>
+			<skill id="1222" level="10" name="Проклятие Хаоса(Curse Chaos)" cost="580000" min_level="64"/>
+			<skill id="285" level="22" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="580000" min_level="64"/>
+			<skill id="1069" level="32" name="Усыпление(Sleep)" cost="580000" min_level="64"/>
+			<skill id="1148" level="8" name="Шип Смерти(Death Spike)" cost="580000" min_level="64"/>
+			<skill id="1167" level="5" name="Ядовитое Облако(Poisonous Cloud)" cost="580000" min_level="64"/>
+			<skill id="1170" level="8" name="Якорь(Anchor)" cost="580000" min_level="64"/>
+			<skill id="146" level="36" name="Антимагия(Anti Magic)" cost="730000" min_level="65"/>
+			<skill id="234" level="32" name="Владение Магической Броней(Robe Mastery)" cost="730000" min_level="65"/>
+			<skill id="249" level="33" name="Владение Оружием(Weapon Mastery)" cost="730000" min_level="65"/>
+			<skill id="1234" level="19" name="Коготь Вампира(Vampiric Claw)" cost="730000" min_level="65"/>
+			<skill id="1298" level="5" name="Массовое Замедление(Mass Slow)" cost="730000" min_level="65"/>
+			<skill id="1159" level="13" name="Проклятие Смертельной Связи(Curse Death Link)" cost="730000" min_level="65"/>
+			<skill id="1069" level="33" name="Усыпление(Sleep)" cost="730000" min_level="65"/>
+			<skill id="146" level="37" name="Антимагия(Anti Magic)" cost="730000" min_level="66"/>
+			<skill id="1064" level="10" name="Безмолвие(Silence)" cost="730000" min_level="66"/>
+			<skill id="1155" level="11" name="Взрыв Трупа(Corpse Burst)" cost="730000" min_level="66"/>
+			<skill id="234" level="33" name="Владение Магической Броней(Robe Mastery)" cost="730000" min_level="66"/>
+			<skill id="249" level="34" name="Владение Оружием(Weapon Mastery)" cost="730000" min_level="66"/>
+			<skill id="1156" level="9" name="Забывчивость(Forget)" cost="730000" min_level="66"/>
+			<skill id="1234" level="20" name="Коготь Вампира(Vampiric Claw)" cost="730000" min_level="66"/>
+			<skill id="1298" level="6" name="Массовое Замедление(Mass Slow)" cost="730000" min_level="66"/>
+			<skill id="1382" level="3" name="Массовое Проклятие Мрака(Mass Curse Gloom)" cost="730000" min_level="66"/>
+			<skill id="1151" level="12" name="Подпитка от Трупа(Corpse Life Drain)" cost="730000" min_level="66"/>
+			<skill id="1154" level="5" name="Призвать Порочного(Summon Corrupted Man)" cost="730000" min_level="66"/>
+			<skill id="1269" level="5" name="Проклятие Болезни(Curse Disease)" cost="730000" min_level="66"/>
+			<skill id="1263" level="9" name="Проклятие Мрака(Curse Gloom)" cost="730000" min_level="66"/>
+			<skill id="1163" level="10" name="Проклятие Раздора(Curse Discord)" cost="730000" min_level="66"/>
+			<skill id="1164" level="15" name="Проклятие Слабости(Curse Weakness)" cost="730000" min_level="66"/>
+			<skill id="1159" level="14" name="Проклятие Смертельной Связи(Curse Death Link)" cost="730000" min_level="66"/>
+			<skill id="1169" level="10" name="Проклятие Страха(Curse Fear)" cost="730000" min_level="66"/>
+			<skill id="1222" level="11" name="Проклятие Хаоса(Curse Chaos)" cost="730000" min_level="66"/>
+			<skill id="1157" level="5" name="Самобичевание(Body To Mind)" cost="730000" min_level="66"/>
+			<skill id="213" level="7" name="Увеличение Маны(Boost Mana)" cost="730000" min_level="66"/>
+			<skill id="285" level="23" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="730000" min_level="66"/>
+			<skill id="1069" level="34" name="Усыпление(Sleep)" cost="730000" min_level="66"/>
+			<skill id="1148" level="9" name="Шип Смерти(Death Spike)" cost="730000" min_level="66"/>
+			<skill id="1170" level="9" name="Якорь(Anchor)" cost="730000" min_level="66"/>
+			<skill id="146" level="38" name="Антимагия(Anti Magic)" cost="900000" min_level="67"/>
+			<skill id="234" level="34" name="Владение Магической Броней(Robe Mastery)" cost="900000" min_level="67"/>
+			<skill id="249" level="35" name="Владение Оружием(Weapon Mastery)" cost="900000" min_level="67"/>
+			<skill id="1234" level="21" name="Коготь Вампира(Vampiric Claw)" cost="900000" min_level="67"/>
+			<skill id="1298" level="7" name="Массовое Замедление(Mass Slow)" cost="900000" min_level="67"/>
+			<skill id="1159" level="15" name="Проклятие Смертельной Связи(Curse Death Link)" cost="900000" min_level="67"/>
+			<skill id="1069" level="35" name="Усыпление(Sleep)" cost="900000" min_level="67"/>
+			<skill id="146" level="39" name="Антимагия(Anti Magic)" cost="900000" min_level="68"/>
+			<skill id="1064" level="11" name="Безмолвие(Silence)" cost="900000" min_level="68"/>
+			<skill id="229" level="6" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="900000" min_level="68"/>
+			<skill id="1155" level="12" name="Взрыв Трупа(Corpse Burst)" cost="900000" min_level="68"/>
+			<skill id="234" level="35" name="Владение Магической Броней(Robe Mastery)" cost="900000" min_level="68"/>
+			<skill id="249" level="36" name="Владение Оружием(Weapon Mastery)" cost="900000" min_level="68"/>
+			<skill id="1156" level="10" name="Забывчивость(Forget)" cost="900000" min_level="68"/>
+			<skill id="1234" level="22" name="Коготь Вампира(Vampiric Claw)" cost="900000" min_level="68"/>
+			<skill id="1298" level="8" name="Массовое Замедление(Mass Slow)" cost="900000" min_level="68"/>
+			<skill id="1151" level="13" name="Подпитка от Трупа(Corpse Life Drain)" cost="900000" min_level="68"/>
+			<skill id="1129" level="5" name="Призвать Воскрешенного(Summon Reanimated Man)" cost="900000" min_level="68"/>
+			<skill id="1269" level="6" name="Проклятие Болезни(Curse Disease)" cost="900000" min_level="68"/>
+			<skill id="1263" level="10" name="Проклятие Мрака(Curse Gloom)" cost="900000" min_level="68"/>
+			<skill id="1163" level="11" name="Проклятие Раздора(Curse Discord)" cost="900000" min_level="68"/>
+			<skill id="1164" level="16" name="Проклятие Слабости(Curse Weakness)" cost="900000" min_level="68"/>
+			<skill id="1159" level="16" name="Проклятие Смертельной Связи(Curse Death Link)" cost="900000" min_level="68"/>
+			<skill id="1169" level="11" name="Проклятие Страха(Curse Fear)" cost="900000" min_level="68"/>
+			<skill id="1222" level="12" name="Проклятие Хаоса(Curse Chaos)" cost="900000" min_level="68"/>
+			<skill id="285" level="24" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="900000" min_level="68"/>
+			<skill id="1069" level="36" name="Усыпление(Sleep)" cost="900000" min_level="68"/>
+			<skill id="1148" level="10" name="Шип Смерти(Death Spike)" cost="900000" min_level="68"/>
+			<skill id="1170" level="10" name="Якорь(Anchor)" cost="900000" min_level="68"/>
+			<skill id="146" level="40" name="Антимагия(Anti Magic)" cost="1100000" min_level="69"/>
+			<skill id="234" level="36" name="Владение Магической Броней(Robe Mastery)" cost="1100000" min_level="69"/>
+			<skill id="249" level="37" name="Владение Оружием(Weapon Mastery)" cost="1100000" min_level="69"/>
+			<skill id="1234" level="23" name="Коготь Вампира(Vampiric Claw)" cost="1100000" min_level="69"/>
+			<skill id="1298" level="9" name="Массовое Замедление(Mass Slow)" cost="1100000" min_level="69"/>
+			<skill id="1159" level="17" name="Проклятие Смертельной Связи(Curse Death Link)" cost="1100000" min_level="69"/>
+			<skill id="1069" level="37" name="Усыпление(Sleep)" cost="1100000" min_level="69"/>
+			<skill id="146" level="41" name="Антимагия(Anti Magic)" cost="1100000" min_level="70"/>
+			<skill id="1064" level="12" name="Безмолвие(Silence)" cost="1100000" min_level="70"/>
+			<skill id="1155" level="13" name="Взрыв Трупа(Corpse Burst)" cost="1100000" min_level="70"/>
+			<skill id="234" level="37" name="Владение Магической Броней(Robe Mastery)" cost="1100000" min_level="70"/>
+			<skill id="249" level="38" name="Владение Оружием(Weapon Mastery)" cost="1100000" min_level="70"/>
+			<skill id="1156" level="11" name="Забывчивость(Forget)" cost="1100000" min_level="70"/>
+			<skill id="1234" level="24" name="Коготь Вампира(Vampiric Claw)" cost="1100000" min_level="70"/>
+			<skill id="1298" level="10" name="Массовое Замедление(Mass Slow)" cost="1100000" min_level="70"/>
+			<skill id="1382" level="4" name="Массовое Проклятие Мрака(Mass Curse Gloom)" cost="1100000" min_level="70"/>
+			<skill id="1262" level="5" name="Поделиться Болью(Transfer Pain)" cost="1100000" min_level="70"/>
+			<skill id="1151" level="14" name="Подпитка от Трупа(Corpse Life Drain)" cost="1100000" min_level="70"/>
+			<skill id="1154" level="6" name="Призвать Порочного(Summon Corrupted Man)" cost="1100000" min_level="70"/>
+			<skill id="1269" level="7" name="Проклятие Болезни(Curse Disease)" cost="1100000" min_level="70"/>
+			<skill id="1263" level="11" name="Проклятие Мрака(Curse Gloom)" cost="1100000" min_level="70"/>
+			<skill id="1163" level="12" name="Проклятие Раздора(Curse Discord)" cost="1100000" min_level="70"/>
+			<skill id="1164" level="17" name="Проклятие Слабости(Curse Weakness)" cost="1100000" min_level="70"/>
+			<skill id="1159" level="18" name="Проклятие Смертельной Связи(Curse Death Link)" cost="1100000" min_level="70"/>
+			<skill id="1169" level="12" name="Проклятие Страха(Curse Fear)" cost="1100000" min_level="70"/>
+			<skill id="1222" level="13" name="Проклятие Хаоса(Curse Chaos)" cost="1100000" min_level="70"/>
+			<skill id="1802" level="1" name="Светлый Ассасин(White Assassin)" min_level="70"/>
+			<skill id="285" level="25" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="1100000" min_level="70"/>
+			<skill id="1069" level="38" name="Усыпление(Sleep)" cost="1100000" min_level="70"/>
+			<skill id="1148" level="11" name="Шип Смерти(Death Spike)" cost="1100000" min_level="70"/>
+			<skill id="1170" level="11" name="Якорь(Anchor)" cost="1100000" min_level="70"/>
+			<skill id="146" level="42" name="Антимагия(Anti Magic)" cost="1300000" min_level="71"/>
+			<skill id="234" level="38" name="Владение Магической Броней(Robe Mastery)" cost="1300000" min_level="71"/>
+			<skill id="249" level="39" name="Владение Оружием(Weapon Mastery)" cost="1300000" min_level="71"/>
+			<skill id="1234" level="25" name="Коготь Вампира(Vampiric Claw)" cost="1300000" min_level="71"/>
+			<skill id="1298" level="11" name="Массовое Замедление(Mass Slow)" cost="1300000" min_level="71"/>
+			<skill id="1159" level="19" name="Проклятие Смертельной Связи(Curse Death Link)" cost="1300000" min_level="71"/>
+			<skill id="1069" level="39" name="Усыпление(Sleep)" cost="1300000" min_level="71"/>
+			<skill id="146" level="43" name="Антимагия(Anti Magic)" cost="1300000" min_level="72"/>
+			<skill id="1064" level="13" name="Безмолвие(Silence)" cost="1300000" min_level="72"/>
+			<skill id="1155" level="14" name="Взрыв Трупа(Corpse Burst)" cost="1300000" min_level="72"/>
+			<skill id="234" level="39" name="Владение Магической Броней(Robe Mastery)" cost="1300000" min_level="72"/>
+			<skill id="249" level="40" name="Владение Оружием(Weapon Mastery)" cost="1300000" min_level="72"/>
+			<skill id="1156" level="12" name="Забывчивость(Forget)" cost="1300000" min_level="72"/>
+			<skill id="1234" level="26" name="Коготь Вампира(Vampiric Claw)" cost="1300000" min_level="72"/>
+			<skill id="1298" level="12" name="Массовое Замедление(Mass Slow)" cost="1300000" min_level="72"/>
+			<skill id="1151" level="15" name="Подпитка от Трупа(Corpse Life Drain)" cost="1300000" min_level="72"/>
+			<skill id="1129" level="6" name="Призвать Воскрешенного(Summon Reanimated Man)" cost="1300000" min_level="72"/>
+			<skill id="1269" level="8" name="Проклятие Болезни(Curse Disease)" cost="1300000" min_level="72"/>
+			<skill id="1263" level="12" name="Проклятие Мрака(Curse Gloom)" cost="1300000" min_level="72"/>
+			<skill id="1163" level="13" name="Проклятие Раздора(Curse Discord)" cost="1300000" min_level="72"/>
+			<skill id="1164" level="18" name="Проклятие Слабости(Curse Weakness)" cost="1300000" min_level="72"/>
+			<skill id="1159" level="20" name="Проклятие Смертельной Связи(Curse Death Link)" cost="1300000" min_level="72"/>
+			<skill id="1169" level="13" name="Проклятие Страха(Curse Fear)" cost="1300000" min_level="72"/>
+			<skill id="1222" level="14" name="Проклятие Хаоса(Curse Chaos)" cost="1300000" min_level="72"/>
+			<skill id="1168" level="7" name="Проклятие Яда(Curse Poison)" cost="1300000" min_level="72"/>
+			<skill id="213" level="8" name="Увеличение Маны(Boost Mana)" cost="1300000" min_level="72"/>
+			<skill id="285" level="26" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="1300000" min_level="72"/>
+			<skill id="1069" level="40" name="Усыпление(Sleep)" cost="1300000" min_level="72"/>
+			<skill id="1148" level="12" name="Шип Смерти(Death Spike)" cost="1300000" min_level="72"/>
+			<skill id="1170" level="12" name="Якорь(Anchor)" cost="1300000" min_level="72"/>
+			<skill id="146" level="44" name="Антимагия(Anti Magic)" cost="1600000" min_level="73"/>
+			<skill id="234" level="40" name="Владение Магической Броней(Robe Mastery)" cost="1600000" min_level="73"/>
+			<skill id="249" level="41" name="Владение Оружием(Weapon Mastery)" cost="1600000" min_level="73"/>
+			<skill id="1234" level="27" name="Коготь Вампира(Vampiric Claw)" cost="1600000" min_level="73"/>
+			<skill id="1298" level="13" name="Массовое Замедление(Mass Slow)" cost="1600000" min_level="73"/>
+			<skill id="1159" level="21" name="Проклятие Смертельной Связи(Curse Death Link)" cost="1600000" min_level="73"/>
+			<skill id="1069" level="41" name="Усыпление(Sleep)" cost="1600000" min_level="73"/>
+			<skill id="146" level="45" name="Антимагия(Anti Magic)" cost="1600000" min_level="74"/>
+			<skill id="1064" level="14" name="Безмолвие(Silence)" cost="1600000" min_level="74"/>
+			<skill id="212" level="6" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="1600000" min_level="74"/>
+			<skill id="229" level="7" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="1600000" min_level="74"/>
+			<skill id="1155" level="15" name="Взрыв Трупа(Corpse Burst)" cost="1600000" min_level="74"/>
+			<skill id="234" level="41" name="Владение Магической Броней(Robe Mastery)" cost="1600000" min_level="74"/>
+			<skill id="249" level="42" name="Владение Оружием(Weapon Mastery)" cost="1600000" min_level="74"/>
+			<skill id="1156" level="13" name="Забывчивость(Forget)" cost="1600000" min_level="74"/>
+			<skill id="1234" level="28" name="Коготь Вампира(Vampiric Claw)" cost="1600000" min_level="74"/>
+			<skill id="1298" level="14" name="Массовое Замедление(Mass Slow)" cost="1600000" min_level="74"/>
+			<skill id="1382" level="5" name="Массовое Проклятие Мрака(Mass Curse Gloom)" cost="1600000" min_level="74"/>
+			<skill id="1151" level="16" name="Подпитка от Трупа(Corpse Life Drain)" cost="1600000" min_level="74"/>
+			<skill id="1129" level="7" name="Призвать Воскрешенного(Summon Reanimated Man)" cost="1600000" min_level="74"/>
+			<skill id="1269" level="9" name="Проклятие Болезни(Curse Disease)" cost="1600000" min_level="74"/>
+			<skill id="1263" level="13" name="Проклятие Мрака(Curse Gloom)" cost="1600000" min_level="74"/>
+			<skill id="1163" level="14" name="Проклятие Раздора(Curse Discord)" cost="1600000" min_level="74"/>
+			<skill id="1164" level="19" name="Проклятие Слабости(Curse Weakness)" cost="1600000" min_level="74"/>
+			<skill id="1159" level="22" name="Проклятие Смертельной Связи(Curse Death Link)" cost="1600000" min_level="74"/>
+			<skill id="1169" level="14" name="Проклятие Страха(Curse Fear)" cost="1600000" min_level="74"/>
+			<skill id="1222" level="15" name="Проклятие Хаоса(Curse Chaos)" cost="1600000" min_level="74"/>
+			<skill id="285" level="27" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="1600000" min_level="74"/>
+			<skill id="1069" level="42" name="Усыпление(Sleep)" cost="1600000" min_level="74"/>
+			<skill id="1148" level="13" name="Шип Смерти(Death Spike)" cost="1600000" min_level="74"/>
+			<skill id="1167" level="6" name="Ядовитое Облако(Poisonous Cloud)" cost="1600000" min_level="74"/>
+			<skill id="1170" level="13" name="Якорь(Anchor)" cost="1600000" min_level="74"/>
+		</class>
+	</normal_skill_tree>
+</list>

@@ -1,0 +1,11 @@
+<html><head><body>
+High Prefect Drikus:
+<br>The eternal fires of Pa'agrio have called me to teach the Orcs. It is my duty, and my honor, to help our race regain the glory that was once ours! You, young Orc warrior, you are like a tinderbox. A tiny spark who will grow to become a great blaze! In you I see the pride of our Orc tribe! How may I be of service to you?<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">"Can you tell me about the 1st Class Transfer?"</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Clan</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Alliance</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Exchange Daily Coins</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Quest</Button>
+</body></html>

@@ -1,0 +1,3045 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn name="dion05_mb2021_01" count="1" respawn="129600" respawn_random="86400">
+		<point x="22301" y="118762" z="-12080" h="0" />
+		<npc id="25395"/><!--Сусцептор Архонт-->
+	</spawn>
+	<spawn name="core_cube" count="1" respawn="216000" respawn_random="82800">
+		<point x="17726" y="108915" z="-6480" h="0"/>
+		<npc id="29006"/><!--Ядро-->
+	</spawn>
+	<spawn name="core_cube" count="1" respawn="60">
+		<point x="16502" y="110165" z="-6394" h="0"/>
+		<npc id="31842"/><!--Сфера Телепортации-->
+	</spawn>
+	<spawn name="core_cube" count="1" respawn="60">
+		<point x="18948" y="110166" z="-6397" h="0"/>
+		<npc id="31842"/><!--Сфера Телепортации-->
+	</spawn>
+	<spawn name="dion04_npc2021_04" count="1" respawn="60">
+		<point x="10580" y="118027" z="-3672" h="59000"/>
+		<npc id="30621"/><!--Николя-->
+	</spawn>
+	<spawn name="dion04_npc2021_02" count="1" respawn="60">
+		<point x="16460" y="113488" z="-3575" h="0"/>
+		<npc id="30673"/><!--Лорейн-->
+	</spawn>
+	<spawn name="dion04_npc2021_01" count="1" respawn="60">
+		<point x="23066" y="118944" z="-3705" h="8192"/>
+		<npc id="30637"/><!--Бельтус-->
+	</spawn>
+	<spawn name="dion04_qm2021_00" count="1" respawn="180">
+		<point x="9209" y="127105" z="-3640" h="0"/>
+		<npc id="27139"/><!--Дерево Тайник-->
+	</spawn>
+	<spawn name="dion04_qm2021_01" count="1" respawn="180">
+		<point x="23031" y="118953" z="-3704" h="8192"/>
+		<npc id="27104"/><!--Сумеречный Турен-->
+	</spawn>
+	<spawn name="dg_20_21_03f_tele" count="1" respawn="180">
+		<point x="17719" y="115430" z="-6584" h="0" />
+		<npc id="31843"/><!--Сфера Телепортации-->
+	</spawn>
+	<territory name="dion04_2021_19">
+		<add x="13376" y="115047" zmin="-3831" zmax="-3231"/>
+		<add x="15363" y="115113" zmin="-3831" zmax="-3231"/>
+		<add x="15203" y="118033" zmin="-3831" zmax="-3231"/>
+		<add x="13999" y="117572" zmin="-3831" zmax="-3231"/>
+	</territory>
+	<spawn name="dion04_2021_19" count="3" respawn="25">
+		<territory name="dion04_2021_19"/>
+		<npc id="20229"/><!--Жалящая Оса-->
+	</spawn>
+	<spawn name="dion04_2021_19" count="5" respawn="25">
+		<territory name="dion04_2021_19"/>
+		<npc id="20230"/><!--Рабочий Болотных Стакато-->
+	</spawn>
+	<territory name="dion04_2021_18">
+		<add x="12625" y="111910" zmin="-3831" zmax="-3231"/>
+		<add x="14909" y="110738" zmin="-3831" zmax="-3231"/>
+		<add x="15864" y="113460" zmin="-3831" zmax="-3231"/>
+		<add x="13034" y="113634" zmin="-3831" zmax="-3231"/>
+	</territory>
+	<spawn name="dion04_2021_18" count="6" respawn="25">
+		<territory name="dion04_2021_18"/>
+		<npc id="20230"/><!--Рабочий Болотных Стакато-->
+	</spawn>
+	<spawn name="dion04_2021_18" count="2" respawn="25">
+		<territory name="dion04_2021_18"/>
+		<npc id="20231"/><!--Повелитель Жаб-->
+	</spawn>
+	<territory name="dion04_2021_17">
+		<add x="14940" y="110676" zmin="-3831" zmax="-3231"/>
+		<add x="18097" y="109107" zmin="-3831" zmax="-3231"/>
+		<add x="19441" y="112923" zmin="-3831" zmax="-3231"/>
+		<add x="16973" y="112903" zmin="-3831" zmax="-3231"/>
+	</territory>
+	<spawn name="dion04_2021_17" count="2" respawn="25">
+		<territory name="dion04_2021_17"/>
+		<npc id="20230"/><!--Рабочий Болотных Стакато-->
+	</spawn>
+	<spawn name="dion04_2021_17" count="4" respawn="25">
+		<territory name="dion04_2021_17"/>
+		<npc id="20231"/><!--Повелитель Жаб-->
+	</spawn>
+	<spawn name="dion04_2021_17" count="2" respawn="25">
+		<territory name="dion04_2021_17"/>
+		<npc id="20232"/><!--Солдат Болотных Стакато-->
+	</spawn>
+	<territory name="dion04_2021_16">
+		<add x="18137" y="109054" zmin="-3831" zmax="-3231"/>
+		<add x="22583" y="110168" zmin="-3831" zmax="-3231"/>
+		<add x="22541" y="113269" zmin="-3831" zmax="-3231"/>
+		<add x="18978" y="111334" zmin="-3831" zmax="-3231"/>
+	</territory>
+	<spawn name="dion04_2021_16" count="2" respawn="25">
+		<territory name="dion04_2021_16"/>
+		<npc id="20231"/><!--Повелитель Жаб-->
+	</spawn>
+	<spawn name="dion04_2021_16" count="4" respawn="25">
+		<territory name="dion04_2021_16"/>
+		<npc id="20232"/><!--Солдат Болотных Стакато-->
+	</spawn>
+	<spawn name="dion04_2021_16" count="4" respawn="25">
+		<territory name="dion04_2021_16"/>
+		<npc id="20233"/><!--Болотный Паук-->
+	</spawn>
+	<territory name="dion04_2021_15">
+		<add x="22137" y="105062" zmin="-3831" zmax="-3231"/>
+		<add x="25559" y="107832" zmin="-3831" zmax="-3231"/>
+		<add x="22589" y="110078" zmin="-3831" zmax="-3231"/>
+		<add x="18126" y="108935" zmin="-3831" zmax="-3231"/>
+		<add x="17480" y="106067" zmin="-3831" zmax="-3231"/>
+	</territory>
+	<spawn name="dion04_2021_15" count="7" respawn="25">
+		<territory name="dion04_2021_15"/>
+		<npc id="20232"/><!--Солдат Болотных Стакато-->
+	</spawn>
+	<spawn name="dion04_2021_15" count="6" respawn="25">
+		<territory name="dion04_2021_15"/>
+		<npc id="20233"/><!--Болотный Паук-->
+	</spawn>
+	<spawn name="dion04_2021_15" count="7" respawn="25">
+		<territory name="dion04_2021_15"/>
+		<npc id="20234"/><!--Трутень Болотных Стакато-->
+	</spawn>
+	<territory name="dion04_2021_14">
+		<add x="25748" y="107864" zmin="-3831" zmax="-3231"/>
+		<add x="26253" y="112203" zmin="-3831" zmax="-3231"/>
+		<add x="25122" y="114902" zmin="-3831" zmax="-3231"/>
+		<add x="22598" y="113291" zmin="-3831" zmax="-3231"/>
+		<add x="22622" y="110180" zmin="-3831" zmax="-3231"/>
+	</territory>
+	<spawn name="dion04_2021_14" count="6" respawn="25">
+		<territory name="dion04_2021_14"/>
+		<npc id="20232"/><!--Солдат Болотных Стакато-->
+	</spawn>
+	<spawn name="dion04_2021_14" count="5" respawn="25">
+		<territory name="dion04_2021_14"/>
+		<npc id="20233"/><!--Болотный Паук-->
+	</spawn>
+	<spawn name="dion04_2021_14" count="6" respawn="25">
+		<territory name="dion04_2021_14"/>
+		<npc id="20234"/><!--Трутень Болотных Стакато-->
+	</spawn>
+	<territory name="dion04_2021_13">
+		<add x="22565" y="113505" zmin="-3831" zmax="-3231"/>
+		<add x="25545" y="115492" zmin="-3831" zmax="-3231"/>
+		<add x="21069" y="120568" zmin="-3831" zmax="-3231"/>
+		<add x="18411" y="119435" zmin="-3831" zmax="-3231"/>
+	</territory>
+	<spawn name="dion04_2021_13" count="6" respawn="25">
+		<territory name="dion04_2021_13"/>
+		<npc id="20229"/><!--Жалящая Оса-->
+	</spawn>
+	<spawn name="dion04_2021_13" count="8" respawn="25">
+		<territory name="dion04_2021_13"/>
+		<npc id="20230"/><!--Рабочий Болотных Стакато-->
+	</spawn>
+	<spawn name="dion04_2021_13" count="8" respawn="25">
+		<territory name="dion04_2021_13"/>
+		<npc id="20231"/><!--Повелитель Жаб-->
+	</spawn>
+	<territory name="dion04_2021_12">
+		<add x="13985" y="117660" zmin="-3831" zmax="-3231"/>
+		<add x="21481" y="120882" zmin="-3831" zmax="-3231"/>
+		<add x="18086" y="121855" zmin="-3831" zmax="-3231"/>
+		<add x="12596" y="120710" zmin="-3831" zmax="-3231"/>
+	</territory>
+	<spawn name="dion04_2021_12" count="4" respawn="25">
+		<territory name="dion04_2021_12"/>
+		<npc id="20227"/><!--Туманный Потрошитель-->
+	</spawn>
+	<spawn name="dion04_2021_12" count="5" respawn="25">
+		<territory name="dion04_2021_12"/>
+		<npc id="20228"/><!--Гигантский Багровый Муравей-->
+	</spawn>
+	<spawn name="dion04_2021_12" count="7" respawn="25">
+		<territory name="dion04_2021_12"/>
+		<npc id="20157"/><!--Болотный Стакато-->
+	</spawn>
+	<territory name="dion04_2021_11">
+		<add x="12531" y="111947" zmin="-3831" zmax="-3231"/>
+		<add x="13878" y="117665" zmin="-3831" zmax="-3231"/>
+		<add x="12429" y="120853" zmin="-3831" zmax="-3231"/>
+		<add x="9364" y="113513" zmin="-3831" zmax="-3231"/>
+	</territory>
+	<spawn name="dion04_2021_11" count="6" respawn="25">
+		<territory name="dion04_2021_11"/>
+		<npc id="20227"/><!--Туманный Потрошитель-->
+	</spawn>
+	<spawn name="dion04_2021_11" count="4" respawn="25">
+		<territory name="dion04_2021_11"/>
+		<npc id="20228"/><!--Гигантский Багровый Муравей-->
+	</spawn>
+	<spawn name="dion04_2021_11" count="6" respawn="25">
+		<territory name="dion04_2021_11"/>
+		<npc id="20157"/><!--Болотный Стакато-->
+	</spawn>
+	<territory name="dion04_2021_10">
+		<add x="17300" y="106034" zmin="-3831" zmax="-3231"/>
+		<add x="18020" y="109017" zmin="-3831" zmax="-3231"/>
+		<add x="9459" y="113372" zmin="-3831" zmax="-3231"/>
+		<add x="12518" y="107510" zmin="-3831" zmax="-3231"/>
+	</territory>
+	<spawn name="dion04_2021_10" count="6" respawn="25">
+		<territory name="dion04_2021_10"/>
+		<npc id="20229"/><!--Жалящая Оса-->
+	</spawn>
+	<spawn name="dion04_2021_10" count="8" respawn="25">
+		<territory name="dion04_2021_10"/>
+		<npc id="20230"/><!--Рабочий Болотных Стакато-->
+	</spawn>
+	<spawn name="dion04_2021_10" count="7" respawn="25">
+		<territory name="dion04_2021_10"/>
+		<npc id="20231"/><!--Повелитель Жаб-->
+	</spawn>
+	<spawn name="dion04_2021_10" count="4" respawn="25">
+		<territory name="dion04_2021_10"/>
+		<npc id="20232"/><!--Солдат Болотных Стакато-->
+	</spawn>
+	<territory name="dion04_2021_21">
+		<add x="20572" y="112349" zmin="-3831" zmax="-3231"/>
+		<add x="22531" y="113378" zmin="-3831" zmax="-3231"/>
+		<add x="20708" y="115963" zmin="-3831" zmax="-3231"/>
+		<add x="19738" y="115177" zmin="-3831" zmax="-3231"/>
+		<add x="19760" y="113268" zmin="-3831" zmax="-3231"/>
+	</territory>
+	<spawn name="dion04_2021_21" count="5" respawn="25">
+		<territory name="dion04_2021_21"/>
+		<npc id="20230"/><!--Рабочий Болотных Стакато-->
+	</spawn>
+	<spawn name="dion04_2021_21" count="3" respawn="25">
+		<territory name="dion04_2021_21"/>
+		<npc id="20232"/><!--Солдат Болотных Стакато-->
+	</spawn>
+	<territory name="dion04_2021_20">
+		<add x="18832" y="116293" zmin="-3831" zmax="-3231"/>
+		<add x="19473" y="117771" zmin="-3831" zmax="-3231"/>
+		<add x="18282" y="119361" zmin="-3831" zmax="-3231"/>
+		<add x="15243" y="118089" zmin="-3831" zmax="-3231"/>
+		<add x="16178" y="116547" zmin="-3831" zmax="-3231"/>
+	</territory>
+	<spawn name="dion04_2021_20" count="3" respawn="25">
+		<territory name="dion04_2021_20"/>
+		<npc id="20229"/><!--Жалящая Оса-->
+	</spawn>
+	<spawn name="dion04_2021_20" count="7" respawn="25">
+		<territory name="dion04_2021_20"/>
+		<npc id="20230"/><!--Рабочий Болотных Стакато-->
+	</spawn>
+	<territory name="dion04_2021_09">
+		<add x="22375" y="101192" zmin="-3831" zmax="-3231"/>
+		<add x="22131" y="104854" zmin="-3831" zmax="-3231"/>
+		<add x="17449" y="105773" zmin="-3831" zmax="-3231"/>
+		<add x="15885" y="101594" zmin="-3831" zmax="-3231"/>
+	</territory>
+	<spawn name="dion04_2021_09" count="10" respawn="25">
+		<territory name="dion04_2021_09"/>
+		<npc id="20231"/><!--Повелитель Жаб-->
+	</spawn>
+	<spawn name="dion04_2021_09" count="8" respawn="25">
+		<territory name="dion04_2021_09"/>
+		<npc id="20232"/><!--Солдат Болотных Стакато-->
+	</spawn>
+	<spawn name="dion04_2021_09" count="7" respawn="25">
+		<territory name="dion04_2021_09"/>
+		<npc id="20233"/><!--Болотный Паук-->
+	</spawn>
+	<territory name="dion04_2021_08">
+		<add x="27956" y="106003" zmin="-3831" zmax="-3231"/>
+		<add x="25665" y="107760" zmin="-3831" zmax="-3231"/>
+		<add x="22265" y="104874" zmin="-3831" zmax="-3231"/>
+		<add x="22630" y="100825" zmin="-3831" zmax="-3231"/>
+	</territory>
+	<spawn name="dion04_2021_08" count="7" respawn="25">
+		<territory name="dion04_2021_08"/>
+		<npc id="20232"/><!--Солдат Болотных Стакато-->
+	</spawn>
+	<spawn name="dion04_2021_08" count="10" respawn="25">
+		<territory name="dion04_2021_08"/>
+		<npc id="20233"/><!--Болотный Паук-->
+	</spawn>
+	<spawn name="dion04_2021_08" count="8" respawn="25">
+		<territory name="dion04_2021_08"/>
+		<npc id="20234"/><!--Трутень Болотных Стакато-->
+	</spawn>
+	<territory name="dion04_2021_07">
+		<add x="30747" y="113707" zmin="-3831" zmax="-3231"/>
+		<add x="26385" y="112125" zmin="-3831" zmax="-3231"/>
+		<add x="25907" y="107829" zmin="-3831" zmax="-3231"/>
+		<add x="28587" y="105722" zmin="-3831" zmax="-3231"/>
+	</territory>
+	<spawn name="dion04_2021_07" count="5" respawn="25">
+		<territory name="dion04_2021_07"/>
+		<npc id="20231"/><!--Повелитель Жаб-->
+	</spawn>
+	<spawn name="dion04_2021_07" count="5" respawn="25">
+		<territory name="dion04_2021_07"/>
+		<npc id="20232"/><!--Солдат Болотных Стакато-->
+	</spawn>
+	<spawn name="dion04_2021_07" count="7" respawn="25">
+		<territory name="dion04_2021_07"/>
+		<npc id="20233"/><!--Болотный Паук-->
+	</spawn>
+	<spawn name="dion04_2021_07" count="8" respawn="25">
+		<territory name="dion04_2021_07"/>
+		<npc id="20234"/><!--Трутень Болотных Стакато-->
+	</spawn>
+	<territory name="dion04_2021_06">
+		<add x="27441" y="120344" zmin="-3831" zmax="-3231"/>
+		<add x="24536" y="120568" zmin="-3831" zmax="-3231"/>
+		<add x="26351" y="112226" zmin="-3831" zmax="-3231"/>
+		<add x="30789" y="113867" zmin="-3831" zmax="-3231"/>
+	</territory>
+	<spawn name="dion04_2021_06" count="12" respawn="25">
+		<territory name="dion04_2021_06"/>
+		<npc id="20229"/><!--Жалящая Оса-->
+	</spawn>
+	<spawn name="dion04_2021_06" count="10" respawn="25">
+		<territory name="dion04_2021_06"/>
+		<npc id="20230"/><!--Рабочий Болотных Стакато-->
+	</spawn>
+	<spawn name="dion04_2021_06" count="10" respawn="25">
+		<territory name="dion04_2021_06"/>
+		<npc id="20231"/><!--Повелитель Жаб-->
+	</spawn>
+	<territory name="dion04_2021_05">
+		<add x="18106" y="126591" zmin="-3831" zmax="-3231"/>
+		<add x="18148" y="121963" zmin="-3831" zmax="-3231"/>
+		<add x="24549" y="120179" zmin="-3831" zmax="-3231"/>
+		<add x="24076" y="123052" zmin="-3831" zmax="-3231"/>
+	</territory>
+	<spawn name="dion04_2021_05" count="7" respawn="25">
+		<territory name="dion04_2021_05"/>
+		<npc id="20227"/><!--Туманный Потрошитель-->
+	</spawn>
+	<spawn name="dion04_2021_05" count="8" respawn="25">
+		<territory name="dion04_2021_05"/>
+		<npc id="20228"/><!--Гигантский Багровый Муравей-->
+	</spawn>
+	<spawn name="dion04_2021_05" count="9" respawn="25">
+		<territory name="dion04_2021_05"/>
+		<npc id="20157"/><!--Болотный Стакато-->
+	</spawn>
+	<territory name="dion04_2021_04">
+		<add x="10218" y="123373" zmin="-3831" zmax="-3231"/>
+		<add x="12571" y="120869" zmin="-3831" zmax="-3231"/>
+		<add x="18009" y="121973" zmin="-3831" zmax="-3231"/>
+		<add x="18018" y="126581" zmin="-3831" zmax="-3231"/>
+		<add x="12722" y="126534" zmin="-3831" zmax="-3231"/>
+	</territory>
+	<spawn name="dion04_2021_04" count="12" respawn="25">
+		<territory name="dion04_2021_04"/>
+		<npc id="20225"/><!--Гигантская Туманная Пиявка-->
+	</spawn>
+	<spawn name="dion04_2021_04" count="10" respawn="25">
+		<territory name="dion04_2021_04"/>
+		<npc id="20226"/><!--Серый Муравей-->
+	</spawn>
+	<spawn name="dion04_2021_04" count="8" respawn="25">
+		<territory name="dion04_2021_04"/>
+		<npc id="20227"/><!--Туманный Потрошитель-->
+	</spawn>
+	<territory name="dion04_2021_03">
+		<add x="4753" y="113545" zmin="-3831" zmax="-3231"/>
+		<add x="9222" y="113571" zmin="-3831" zmax="-3231"/>
+		<add x="12330" y="120913" zmin="-3831" zmax="-3231"/>
+		<add x="10051" y="123286" zmin="-3831" zmax="-3231"/>
+		<add x="5076" y="119035" zmin="-3831" zmax="-3231"/>
+	</territory>
+	<spawn name="dion04_2021_03" count="8" respawn="25">
+		<territory name="dion04_2021_03"/>
+		<npc id="20225"/><!--Гигантская Туманная Пиявка-->
+	</spawn>
+	<spawn name="dion04_2021_03" count="7" respawn="25">
+		<territory name="dion04_2021_03"/>
+		<npc id="20226"/><!--Серый Муравей-->
+	</spawn>
+	<spawn name="dion04_2021_03" count="8" respawn="25">
+		<territory name="dion04_2021_03"/>
+		<npc id="20227"/><!--Туманный Потрошитель-->
+	</spawn>
+	<territory name="dion04_2021_02">
+		<add x="5649" y="108487" zmin="-3831" zmax="-3231"/>
+		<add x="9825" y="104907" zmin="-3831" zmax="-3231"/>
+		<add x="12410" y="107417" zmin="-3831" zmax="-3231"/>
+		<add x="9242" y="113454" zmin="-3831" zmax="-3231"/>
+		<add x="4747" y="113401" zmin="-3831" zmax="-3231"/>
+	</territory>
+	<spawn name="dion04_2021_02" count="9" respawn="25">
+		<territory name="dion04_2021_02"/>
+		<npc id="20227"/><!--Туманный Потрошитель-->
+	</spawn>
+	<spawn name="dion04_2021_02" count="7" respawn="25">
+		<territory name="dion04_2021_02"/>
+		<npc id="20228"/><!--Гигантский Багровый Муравей-->
+	</spawn>
+	<spawn name="dion04_2021_02" count="7" respawn="25">
+		<territory name="dion04_2021_02"/>
+		<npc id="20157"/><!--Болотный Стакато-->
+	</spawn>
+	<territory name="dion04_2021_01">
+		<add x="9868" y="104802" zmin="-3831" zmax="-3231"/>
+		<add x="15668" y="101684" zmin="-3831" zmax="-3231"/>
+		<add x="17258" y="105870" zmin="-3831" zmax="-3231"/>
+		<add x="12527" y="107380" zmin="-3831" zmax="-3231"/>
+	</territory>
+	<spawn name="dion04_2021_01" count="7" respawn="25">
+		<territory name="dion04_2021_01"/>
+		<npc id="20157"/><!--Болотный Стакато-->
+	</spawn>
+	<spawn name="dion04_2021_01" count="10" respawn="25">
+		<territory name="dion04_2021_01"/>
+		<npc id="20229"/><!--Жалящая Оса-->
+	</spawn>
+	<spawn name="dion04_2021_01" count="8" respawn="25">
+		<territory name="dion04_2021_01"/>
+		<npc id="20230"/><!--Рабочий Болотных Стакато-->
+	</spawn>
+	<spawn name="dion04_mb2021_01" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="9600" y="126452" zmin="-3732" zmax="-3132"/>
+			<add x="11212" y="126132" zmin="-3732" zmax="-3132"/>
+			<add x="11336" y="127624" zmin="-3732" zmax="-3132"/>
+			<add x="9952" y="127352" zmin="-3732" zmax="-3132"/>
+		</territory>
+		<npc id="25041"/><!--Реммель-->
+	</spawn>
+	<spawn name="dion04_mb2021_04" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="29592" y="106484" zmin="-3772" zmax="-3572"/>
+			<add x="30604" y="107032" zmin="-3772" zmax="-3572"/>
+			<add x="30184" y="107824" zmin="-3772" zmax="-3572"/>
+			<add x="29184" y="107464" zmin="-3772" zmax="-3572"/>
+		</territory>
+		<npc id="25392"/><!--Капитан Королевской Гвардии-->
+	</spawn>
+	<spawn name="dion04_mb2021_03" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="25800" y="101804" zmin="-3792" zmax="-3192"/>
+			<add x="25904" y="100388" zmin="-3792" zmax="-3192"/>
+			<add x="27972" y="100540" zmin="-3792" zmax="-3192"/>
+			<add x="29112" y="103004" zmin="-3792" zmax="-3192"/>
+			<add x="27116" y="103412" zmin="-3792" zmax="-3192"/>
+		</territory>
+		<npc id="25023"/><!--Королева Стакато Зирна-->
+	</spawn>
+	<spawn name="dion04_mb2021_02" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="25544" y="121216" zmin="-3788" zmax="-3488"/>
+			<add x="27136" y="121432" zmin="-3788" zmax="-3488"/>
+			<add x="26463" y="123951" zmin="-3788" zmax="-3488"/>
+			<add x="25290" y="122425" zmin="-3788" zmax="-3488"/>
+		</territory>
+		<npc id="25170"/><!--Глава Ящеров Хеллион-->
+	</spawn>
+	<spawn name="dion05_npc2021_04" count="1" respawn="60">
+		<point x="17725" y="108220" z="-9057" h="16384"/>
+		<npc id="30485"/><!--Белкати-->
+	</spawn>
+	<spawn name="dion05_npc2021_06" count="1" respawn="60">
+		<point x="15433" y="119727" z="-12088" h="25728"/>
+		<npc id="30622"/><!--Ящик Гигантов-->
+	</spawn>
+	<spawn name="dion05_npc2021_05" count="1" respawn="60">
+		<point x="17722" y="119749" z="-9068" h="49152"/>
+		<npc id="30486"/><!--Иан-->
+	</spawn>
+	<territory name="dion04_2021_23s">
+		<add x="8209" y="106709" zmin="-3831" zmax="-3231"/>
+		<add x="10636" y="107268" zmin="-3831" zmax="-3231"/>
+		<add x="10555" y="110159" zmin="-3831" zmax="-3231"/>
+		<add x="7618" y="112259" zmin="-3831" zmax="-3231"/>
+	</territory>
+	<spawn name="dion04_2021_23s" count="2" respawn="25">
+		<territory name="dion04_2021_23s"/>
+		<npc id="20228"/><!--Гигантский Багровый Муравей-->
+	</spawn>
+	<spawn name="dion04_2021_23s" count="5" respawn="25">
+		<territory name="dion04_2021_23s"/>
+		<npc id="20229"/><!--Жалящая Оса-->
+	</spawn>
+	<territory name="dion04_2021_22s">
+		<add x="5831" y="114948" zmin="-3831" zmax="-3231"/>
+		<add x="8701" y="114974" zmin="-3831" zmax="-3231"/>
+		<add x="9127" y="118060" zmin="-3831" zmax="-3231"/>
+		<add x="6670" y="119263" zmin="-3831" zmax="-3231"/>
+	</territory>
+	<spawn name="dion04_2021_22s" count="4" respawn="25">
+		<territory name="dion04_2021_22s"/>
+		<npc id="20225"/><!--Гигантская Туманная Пиявка-->
+	</spawn>
+	<spawn name="dion04_2021_22s" count="3" respawn="25">
+		<territory name="dion04_2021_22s"/>
+		<npc id="20226"/><!--Серый Муравей-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17289" y="114112" z="-3440" h="33224" />
+		<npc id="30483" /><!--Красус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17636" y="114744" z="-11680" h="6843" />
+		<npc id="30484" /><!--Янсен-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17811" y="114750" z="-11680" h="25785" />
+		<npc id="30487" /><!--Ромбель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17355" y="108310" z="-6488" h="4964" />
+		<npc id="29007" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17218" y="108404" z="-6488" h="23481" />
+		<npc id="29007" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17531" y="108456" z="-6480" h="1407" />
+		<npc id="29007" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17800" y="108184" z="-6488" h="3204" />
+		<npc id="29007" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17618" y="108402" z="-6488" h="55071" />
+		<npc id="29007" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17347" y="108286" z="-6488" h="33741" />
+		<npc id="29007" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17185" y="108201" z="-6488" h="3898" />
+		<npc id="29007" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17289" y="108086" z="-6488" h="6558" />
+		<npc id="29007" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17260" y="108139" z="-6488" h="42441" />
+		<npc id="29007" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17333" y="108143" z="-6488" h="27064" />
+		<npc id="29007" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17916" y="108239" z="-6488" h="26133" />
+		<npc id="29007" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17127" y="108185" z="-6488" h="42135" />
+		<npc id="29007" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17744" y="108325" z="-6488" h="55555" />
+		<npc id="29007" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17229" y="108282" z="-6488" h="33186" />
+		<npc id="29008" /><!--Рыцарь Рока-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17826" y="108129" z="-6488" h="35324" />
+		<npc id="29007" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17737" y="108374" z="-6488" h="50515" />
+		<npc id="29008" /><!--Рыцарь Рока-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17628" y="108408" z="-6488" h="486" />
+		<npc id="29008" /><!--Рыцарь Рока-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17588" y="108569" z="-6472" h="1956" />
+		<npc id="29008" /><!--Рыцарь Рока-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17701" y="108606" z="-6472" h="19937" />
+		<npc id="29008" /><!--Рыцарь Рока-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17432" y="108568" z="-6480" h="51222" />
+		<npc id="29008" /><!--Рыцарь Рока-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18227" y="110116" z="-3712" h="4731" />
+		<npc id="20232" /><!--Солдат Болотных Стакато-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="16761" y="109479" z="-3696" h="32651" />
+		<npc id="20232" /><!--Солдат Болотных Стакато-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17381" y="108975" z="-3728" h="6871" />
+		<npc id="20230" /><!--Рабочий Болотных Стакато-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="16720" y="110162" z="-3752" h="35274" />
+		<npc id="20231" /><!--Повелитель Жаб-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17785" y="110392" z="-3752" h="0" />
+		<npc id="20231" /><!--Повелитель Жаб-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18265" y="109949" z="-3688" h="33290" />
+		<npc id="20230" /><!--Рабочий Болотных Стакато-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17110" y="110282" z="-3736" h="11001" />
+		<npc id="20232" /><!--Солдат Болотных Стакато-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18000" y="110319" z="-3752" h="28352" />
+		<npc id="20231" /><!--Повелитель Жаб-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17895" y="108811" z="-6472" h="3295" />
+		<npc id="29011" /><!--Каменолюд-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17833" y="108628" z="-6472" h="9361" />
+		<npc id="29011" /><!--Каменолюд-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17775" y="108441" z="-6480" h="55903" />
+		<npc id="29011" /><!--Каменолюд-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18011" y="108723" z="-6472" h="61087" />
+		<npc id="29011" /><!--Каменолюд-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17794" y="108734" z="-6472" h="15612" />
+		<npc id="29011" /><!--Каменолюд-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17578" y="108684" z="-6472" h="22853" />
+		<npc id="29011" /><!--Каменолюд-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17824" y="108556" z="-6472" h="63730" />
+		<npc id="29011" /><!--Каменолюд-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17327" y="108508" z="-6488" h="48762" />
+		<npc id="29007" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17709" y="108916" z="-6472" h="55711" />
+		<npc id="29011" /><!--Каменолюд-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17853" y="112588" z="-6584" h="63478" />
+		<npc id="29011" /><!--Каменолюд-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17814" y="112877" z="-6584" h="20531" />
+		<npc id="29011" /><!--Каменолюд-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17929" y="112781" z="-6584" h="26982" />
+		<npc id="29011" /><!--Каменолюд-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17943" y="112715" z="-6584" h="45857" />
+		<npc id="29011" /><!--Каменолюд-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18066" y="112877" z="-6584" h="8603" />
+		<npc id="29011" /><!--Каменолюд-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20424" y="108199" z="-12088" h="30864" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20341" y="108686" z="-12080" h="6843" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20378" y="108812" z="-12080" h="49757" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20272" y="110699" z="-12080" h="3598" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20160" y="109535" z="-9048" h="5655" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20282" y="109361" z="-9048" h="33732" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20237" y="109307" z="-9048" h="53985" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="19901" y="110019" z="-9040" h="29034" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20099" y="109151" z="-9048" h="31077" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20184" y="108673" z="-9048" h="7848" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20511" y="109480" z="-9048" h="57926" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20300" y="109949" z="-9040" h="60634" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20292" y="111064" z="-12088" h="45667" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20028" y="110581" z="-12080" h="28035" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20254" y="111516" z="-12080" h="19631" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20161" y="110505" z="-3752" h="64196" />
+		<npc id="20233" /><!--Болотный Паук-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20404" y="111793" z="-12080" h="5557" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20175" y="110881" z="-12080" h="62540" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20640" y="108273" z="-12088" h="52117" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21411" y="107743" z="-12080" h="43742" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20500" y="107556" z="-12080" h="27830" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20407" y="107990" z="-12080" h="15743" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21215" y="107732" z="-12080" h="9133" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20744" y="107583" z="-12080" h="28293" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20452" y="107957" z="-12088" h="2134" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21010" y="110218" z="-12080" h="45066" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21413" y="110520" z="-9040" h="47583" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22199" y="110513" z="-12080" h="0" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21755" y="109356" z="-8976" h="0" />
+		<npc id="20136" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21350" y="109180" z="-12080" h="9166" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20864" y="110225" z="-12080" h="5499" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21311" y="110210" z="-12080" h="3859" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21445" y="110737" z="-9040" h="48241" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21968" y="110775" z="-3752" h="0" />
+		<npc id="20233" /><!--Болотный Паук-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20355" y="108896" z="-12080" h="21728" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20392" y="110373" z="-12080" h="56385" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21416" y="110833" z="-12088" h="23934" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21430" y="110851" z="-9040" h="0" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22545" y="111294" z="-12080" h="47792" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20845" y="110604" z="-12088" h="32314" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21416" y="111196" z="-9040" h="0" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21059" y="111161" z="-12088" h="42957" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20583" y="111086" z="-12088" h="35179" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21411" y="111490" z="-9040" h="0" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21513" y="111086" z="-9040" h="1195" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20449" y="111673" z="-12080" h="59404" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21498" y="111213" z="-12080" h="19776" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21290" y="111668" z="-12080" h="3355" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21402" y="111816" z="-12080" h="18442" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21684" y="111403" z="-3744" h="17742" />
+		<npc id="20233" /><!--Болотный Паук-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21385" y="111406" z="-9040" h="42782" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21473" y="111363" z="-9040" h="59067" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21566" y="111022" z="-9040" h="2039" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21636" y="111224" z="-9040" h="41818" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23935" y="107999" z="-12088" h="42219" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23491" y="108259" z="-12088" h="28336" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23916" y="108303" z="-12088" h="13856" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="24155" y="108380" z="-12088" h="8595" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23979" y="107788" z="-12080" h="33824" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="24105" y="107794" z="-12080" h="28483" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23743" y="108122" z="-12088" h="19143" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="24395" y="107685" z="-12080" h="49384" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="24234" y="108096" z="-12088" h="45008" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23828" y="110342" z="-12080" h="31638" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="24213" y="109858" z="-3736" h="6331" />
+		<npc id="20233" /><!--Болотный Паук-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23833" y="108870" z="-12088" h="54640" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23893" y="109063" z="-12080" h="47183" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23913" y="108628" z="-12088" h="62613" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23205" y="108987" z="-12080" h="50302" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23606" y="109896" z="-9048" h="51621" />
+		<npc id="20220" /><!--Дикор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23589" y="109207" z="-12080" h="20711" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23450" y="109924" z="-9048" h="21564" />
+		<npc id="20220" /><!--Дикор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23807" y="110081" z="-9048" h="27842" />
+		<npc id="20220" /><!--Дикор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22948" y="109905" z="-9040" h="30401" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23783" y="110040" z="-9048" h="9223" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23793" y="109432" z="-9040" h="44896" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23056" y="109831" z="-9040" h="58557" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23501" y="110160" z="-9048" h="59349" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23771" y="109876" z="-9048" h="55177" />
+		<npc id="20220" /><!--Дикор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23935" y="110577" z="-12088" h="44216" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23635" y="111367" z="-12088" h="6778" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="24025" y="110683" z="-12088" h="19438" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23931" y="110817" z="-9048" h="7670" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="24332" y="111515" z="-12080" h="64608" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="24257" y="111326" z="-12080" h="16183" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23398" y="110814" z="-9048" h="59620" />
+		<npc id="20220" /><!--Дикор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23643" y="110593" z="-12088" h="37295" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23435" y="111125" z="-9048" h="25940" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23963" y="110497" z="-9040" h="44641" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23858" y="111457" z="-12088" h="3687" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23644" y="111060" z="-9048" h="65531" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="24050" y="111027" z="-12088" h="64685" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21369" y="109350" z="-8976" h="0" />
+		<npc id="20136" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21027" y="108882" z="-12080" h="0" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21279" y="110995" z="-12088" h="0" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22171" y="111095" z="-12080" h="0" />
+		<npc id="20215" /><!--Мордео-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20841" y="107861" z="-12088" h="0" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="24182" y="111069" z="-12088" h="0" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22533" y="109860" z="-12080" h="0" />
+		<npc id="20215" /><!--Мордео-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22444" y="114194" z="-9064" h="28629" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21714" y="114587" z="-9048" h="53754" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22439" y="113975" z="-9064" h="13027" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23709" y="113997" z="-9040" h="44661" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23251" y="113192" z="-9040" h="64479" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="24028" y="111703" z="-12080" h="0" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22549" y="110500" z="-12080" h="0" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22531" y="109322" z="-12080" h="0" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23862" y="110888" z="-12088" h="0" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23318" y="110942" z="-12088" h="0" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23769" y="114355" z="-9040" h="0" />
+		<npc id="20136" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20666" y="116673" z="-12080" h="11219" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21165" y="116482" z="-12080" h="13758" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20406" y="116640" z="-12080" h="60944" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21528" y="116721" z="-12080" h="17756" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21568" y="116814" z="-9040" h="27931" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21487" y="116666" z="-9040" h="43516" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23802" y="116499" z="-12080" h="55003" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23671" y="115098" z="-9040" h="41400" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23516" y="114892" z="-9040" h="9148" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23699" y="115184" z="-9048" h="47833" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22871" y="114982" z="-9040" h="37605" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21576" y="114848" z="-9040" h="0" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23289" y="113880" z="-9064" h="0" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22508" y="111649" z="-12080" h="0" />
+		<npc id="20215" /><!--Мордео-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23952" y="111255" z="-12088" h="0" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18917" y="113218" z="-6584" h="38902" />
+		<npc id="29013" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="19039" y="113019" z="-6584" h="20616" />
+		<npc id="29010" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18494" y="112659" z="-6584" h="38448" />
+		<npc id="29010" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22938" y="114850" z="-9040" h="0" />
+		<npc id="20136" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20292" y="117929" z="-12080" h="52149" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20130" y="118682" z="-9048" h="33260" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20449" y="118727" z="-9048" h="40048" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21417" y="118604" z="-9048" h="0" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20857" y="117740" z="-12088" h="3282" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20849" y="117692" z="-12088" h="30989" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20683" y="117114" z="-12088" h="41277" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22448" y="117733" z="-12080" h="12494" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20743" y="117318" z="-12088" h="33222" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21136" y="116694" z="-12080" h="23278" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21069" y="117002" z="-12088" h="60159" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21366" y="117646" z="-12088" h="13276" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21428" y="117665" z="-9048" h="3742" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21223" y="117081" z="-9040" h="35216" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21652" y="116749" z="-12080" h="2309" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21957" y="117198" z="-9048" h="12933" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21102" y="116954" z="-12088" h="30595" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22326" y="116619" z="-12080" h="2555" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22209" y="116943" z="-12080" h="17756" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21665" y="117988" z="-9048" h="59888" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21796" y="116986" z="-9048" h="7943" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21563" y="117110" z="-9048" h="26777" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	
+	
+	
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22618" y="117052" z="-12080" h="0" />
+		<npc id="20215" /><!--Мордео-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23542" y="117540" z="-12088" h="17605" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23652" y="118735" z="-9040" h="0" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23392" y="117820" z="-12088" h="19999" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="24203" y="117845" z="-12088" h="63689" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23707" y="117338" z="-9040" h="47362" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23672" y="118381" z="-9040" h="48202" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23606" y="118742" z="-9040" h="59997" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23695" y="116620" z="-12080" h="3809" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23400" y="117500" z="-12088" h="33898" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="24166" y="117613" z="-12088" h="22548" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="24004" y="116806" z="-12080" h="24914" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23845" y="118138" z="-9040" h="11480" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23652" y="116756" z="-9040" h="0" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23864" y="118173" z="-12080" h="21064" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23671" y="117957" z="-12080" h="41243" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="24305" y="117331" z="-12080" h="31079" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23990" y="117804" z="-12088" h="43910" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="24096" y="117674" z="-12088" h="39306" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23511" y="117547" z="-12088" h="64766" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23974" y="117189" z="-9040" h="62598" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23833" y="118865" z="-9040" h="31263" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23687" y="118686" z="-9040" h="41320" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22518" y="118497" z="-12080" h="50384" />
+		<npc id="20215" /><!--Мордео-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22203" y="117493" z="-9048" h="0" />
+		<npc id="20220" /><!--Дикор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22512" y="118442" z="-12080" h="50436" />
+		<npc id="20215" /><!--Мордео-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22798" y="113802" z="-9064" h="0" />
+		<npc id="20136" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23906" y="117367" z="-9040" h="0" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20132" y="119570" z="-9048" h="36973" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20395" y="119172" z="-9048" h="9836" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="19940" y="119054" z="-9040" h="10401" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20157" y="118839" z="-9048" h="31322" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20283" y="118983" z="-9048" h="52151" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20428" y="119199" z="-12080" h="24911" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20232" y="119599" z="-12088" h="58015" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20178" y="120351" z="-12088" h="4655" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22356" y="119889" z="-12080" h="61456" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20242" y="119269" z="-9048" h="40435" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20664" y="120821" z="-12080" h="21155" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20957" y="120473" z="-12080" h="27209" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20993" y="120523" z="-12080" h="36089" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21019" y="120084" z="-12088" h="33222" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20324" y="119671" z="-12088" h="56325" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20930" y="119357" z="-12080" h="23674" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21139" y="120236" z="-12080" h="47094" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20476" y="119884" z="-12088" h="33589" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20481" y="119166" z="-12080" h="20099" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20876" y="119530" z="-12088" h="5443" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20624" y="119373" z="-12080" h="26209" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="24019" y="119412" z="-8976" h="0" />
+		<npc id="20136" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23686" y="119331" z="-8976" h="9981" />
+		<npc id="20136" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23291" y="120659" z="-12080" h="0" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23490" y="120546" z="-12080" h="924" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23338" y="120315" z="-12088" h="16383" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="24342" y="119913" z="-12080" h="54538" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="24222" y="120185" z="-12080" h="61371" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23702" y="119850" z="-12088" h="12527" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23360" y="120610" z="-12080" h="10347" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22292" y="117088" z="-9040" h="0" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23291" y="117994" z="-12080" h="0" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23643" y="117365" z="-9040" h="0" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23226" y="119552" z="-12080" h="0" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21543" y="116738" z="-9040" h="0" />
+		<npc id="20220" /><!--Дикор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23526" y="119769" z="-12088" h="0" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22602" y="117680" z="-12080" h="0" />
+		<npc id="20215" /><!--Мордео-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22609" y="118924" z="-12080" h="0" />
+		<npc id="20215" /><!--Мордео-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22247" y="119623" z="-12080" h="0" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22235" y="118927" z="-12080" h="0" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17310" y="119371" z="-9064" h="61253" />
+		<npc id="20220" /><!--Дикор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17367" y="119369" z="-9064" h="60270" />
+		<npc id="20220" /><!--Дикор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20125" y="117455" z="-12080" h="0" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14615" y="117014" z="-12088" h="63430" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14912" y="117167" z="-3704" h="7574" />
+		<npc id="20229" /><!--Жалящая Оса-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15318" y="118294" z="-9040" h="0" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15134" y="118515" z="-9048" h="4939" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14481" y="116539" z="-12080" h="32116" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15252" y="118538" z="-12080" h="11616" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15801" y="117442" z="-3752" h="44451" />
+		<npc id="20229" /><!--Жалящая Оса-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14921" y="118029" z="-12080" h="16538" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15002" y="118638" z="-12088" h="24415" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14982" y="117565" z="-12088" h="14427" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14841" y="120352" z="-12088" h="0" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14434" y="120620" z="-12088" h="2170" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14658" y="120331" z="-12080" h="52224" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14861" y="118964" z="-12088" h="5473" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14934" y="119346" z="-9048" h="39129" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15355" y="119459" z="-9040" h="56418" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15299" y="119560" z="-9048" h="39696" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15030" y="119569" z="-9048" h="29752" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14939" y="119585" z="-9048" h="4522" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15200" y="119123" z="-12088" h="1413" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15134" y="119271" z="-12088" h="8958" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14956" y="119180" z="-12088" h="55411" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14615" y="118824" z="-12088" h="63478" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12801" y="117555" z="-12080" h="12381" />
+		<npc id="20215" /><!--Мордео-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13591" y="116949" z="-9040" h="41291" />
+		<npc id="20136" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13971" y="117475" z="-12088" h="21573" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12813" y="116838" z="-9040" h="0" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14263" y="117988" z="-12080" h="64842" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13023" y="117651" z="-9064" h="23134" />
+		<npc id="20136" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12604" y="117374" z="-12080" h="34152" />
+		<npc id="20215" /><!--Мордео-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14296" y="117323" z="-12088" h="22769" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12796" y="118440" z="-12080" h="48248" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12504" y="117921" z="-12080" h="34916" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13112" y="117101" z="-9040" h="57068" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13502" y="116918" z="-9040" h="34375" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12562" y="117496" z="-12080" h="7216" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12493" y="117817" z="-12080" h="35379" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12806" y="117731" z="-12080" h="13856" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13664" y="118035" z="-9040" h="62513" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12627" y="118710" z="-9064" h="23339" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12727" y="119761" z="-12080" h="37038" />
+		<npc id="20215" /><!--Мордео-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12712" y="120401" z="-12080" h="15858" />
+		<npc id="20215" /><!--Мордео-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13731" y="120327" z="-12080" h="37295" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12869" y="120497" z="-12080" h="48286" />
+		<npc id="20215" /><!--Мордео-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12621" y="119261" z="-9064" h="48126" />
+		<npc id="20136" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14552" y="120584" z="-12088" h="64792" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12494" y="119848" z="-12080" h="15618" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13959" y="120556" z="-12088" h="63304" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12701" y="118951" z="-12080" h="64885" />
+		<npc id="20215" /><!--Мордео-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13371" y="119017" z="-9048" h="52204" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12386" y="119774" z="-9040" h="17561" />
+		<npc id="20220" /><!--Дикор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13571" y="118945" z="-9040" h="43271" />
+		<npc id="20220" /><!--Дикор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12881" y="118329" z="-12080" h="0" />
+		<npc id="20215" /><!--Мордео-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14792" y="116812" z="-12088" h="0" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12547" y="119362" z="-9048" h="5010" />
+		<npc id="20136" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11761" y="116455" z="-12080" h="60094" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11755" y="116680" z="-12080" h="18689" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11040" y="116638" z="-12080" h="47331" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11847" y="116651" z="-12080" h="54179" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11268" y="116948" z="-12088" h="4430" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11388" y="117962" z="-12080" h="13400" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11292" y="117757" z="-12088" h="57077" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11645" y="116522" z="-12080" h="52417" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11642" y="117569" z="-9040" h="51148" />
+		<npc id="20220" /><!--Дикор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11694" y="117028" z="-12088" h="54289" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12031" y="118379" z="-9064" h="65079" />
+		<npc id="20220" /><!--Дикор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="10737" y="117400" z="-3688" h="48372" />
+		<npc id="20226" /><!--Серый Муравей-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11786" y="117069" z="-12088" h="21898" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11230" y="117603" z="-12088" h="13926" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11405" y="117901" z="-12080" h="8411" />
+		<npc id="21036" /><!--Лик Хаоса-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11443" y="118133" z="-12080" h="29727" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11563" y="117607" z="-12088" h="62843" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11525" y="116733" z="-12080" h="18043" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11308" y="117176" z="-12088" h="24788" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11534" y="117409" z="-9040" h="22468" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="10580" y="118027" z="-3672" h="59000" />
+		<npc id="30621" /><!--Николя-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11516" y="119625" z="-9040" h="41843" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12027" y="118924" z="-9064" h="20985" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11542" y="119502" z="-9040" h="49153" />
+		<npc id="20136" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12292" y="119190" z="-9064" h="16116" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11477" y="120640" z="-12080" h="17184" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11511" y="120080" z="-12088" h="62759" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11906" y="119673" z="-12088" h="20099" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11481" y="119883" z="-12088" h="63538" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11673" y="119174" z="-12080" h="15923" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11711" y="119888" z="-12088" h="61444" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11106" y="120528" z="-12080" h="6104" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11329" y="119346" z="-12080" h="58746" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11753" y="120321" z="-12088" h="58484" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11497" y="119541" z="-12088" h="25885" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11208" y="120428" z="-12088" h="22484" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11228" y="120672" z="-12080" h="51068" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11514" y="120736" z="-12080" h="39165" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12654" y="116780" z="-12080" h="61245" />
+		<npc id="20215" /><!--Мордео-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14195" y="116605" z="-12080" h="64315" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13720" y="115119" z="-9064" h="12956" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13716" y="114938" z="-9064" h="21278" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13683" y="115855" z="-9000" h="15315" />
+		<npc id="20136" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13615" y="114926" z="-9064" h="27753" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13807" y="115282" z="-9064" h="26055" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13818" y="116228" z="-9000" h="11459" />
+		<npc id="20136" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11884" y="114855" z="-9064" h="0" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14889" y="118304" z="-9040" h="0" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13127" y="118356" z="-9064" h="0" />
+		<npc id="20136" /><!--Рыцарь Смерти-->
+	</spawn>
+		<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12017" y="108491" z="-9040" h="9110" />
+		<npc id="20220" /><!--Дикор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="11526" y="108303" zmin="-12080" zmax="-12090" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="11531" y="108338" zmin="-12080" zmax="-12090" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="11554" y="108324" zmin="-12080" zmax="-12090" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="11536" y="108347" zmin="-12080" zmax="-12090" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11187" y="107604" z="-12080" h="50313" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="11629" y="108255" zmin="-12080" zmax="-12090" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="11556" y="108349" zmin="-12080" zmax="-12090" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="11622" y="108265" zmin="-12080" zmax="-12090" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="11566" y="108343" zmin="-12080" zmax="-12090" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="11541" y="108351" zmin="-12080" zmax="-12090" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="11568" y="108344" zmin="-12080" zmax="-12090" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11500" y="110424" z="-12080" h="44216" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12179" y="110329" z="-12080" h="31414" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11215" y="110324" z="-12080" h="37555" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11106" y="108932" z="-12080" h="1755" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11901" y="109840" z="-9040" h="64187" />
+		<npc id="20220" /><!--Дикор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11922" y="109859" z="-9040" h="16968" />
+		<npc id="20136" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11624" y="109305" z="-9040" h="52509" />
+		<npc id="20220" /><!--Дикор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12391" y="109787" z="-9064" h="17018" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11824" y="108776" z="-9040" h="7954" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11725" y="109665" z="-9040" h="12775" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12020" y="108408" z="-9040" h="0" />
+		<npc id="20136" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12122" y="109796" z="-9064" h="3604" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11647" y="110780" z="-12088" h="40368" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11343" y="110972" z="-12088" h="46888" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11225" y="111664" z="-12080" h="0" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11591" y="111505" z="-12088" h="35050" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11913" y="111757" z="-12080" h="51900" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11852" y="111047" z="-12088" h="62634" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11276" y="111442" z="-12080" h="33674" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11872" y="111022" z="-12088" h="30071" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12015" y="110700" z="-12088" h="37154" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11668" y="111053" z="-12088" h="51653" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11695" y="111108" z="-12088" h="16935" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11561" y="112503" z="-9000" h="7429" />
+		<npc id="20136" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11892" y="112377" z="-9000" h="3577" />
+		<npc id="20136" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13130" y="108192" z="-12080" h="35050" />
+		<npc id="20215" /><!--Мордео-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13855" y="108270" z="-12088" h="8327" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13711" y="108283" z="-12080" h="15770" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13829" y="108704" z="-12080" h="19051" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14135" y="107656" z="-12080" h="55411" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13303" y="107975" z="-12080" h="42122" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13084" y="107569" z="-12080" h="47820" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14266" y="107499" z="-12080" h="38212" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13720" y="108206" z="-12080" h="38619" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13934" y="107816" z="-12088" h="52829" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14288" y="108086" z="-12088" h="51168" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13691" y="109418" z="-12080" h="0" />
+		<npc id="20215" /><!--Мордео-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13611" y="109438" z="-12080" h="20808" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14350" y="109927" z="-12080" h="35379" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12476" y="109162" z="-9064" h="44023" />
+		<npc id="20220" /><!--Дикор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12675" y="109498" z="-12080" h="6315" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13444" y="109408" z="-12080" h="60094" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13036" y="110132" z="-12080" h="27730" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13251" y="110384" z="-12080" h="39151" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13521" y="109543" z="-12080" h="46872" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13597" y="109878" z="-9056" h="1249" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13903" y="110048" z="-9040" h="36949" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12995" y="108560" z="-12080" h="12372" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13826" y="109425" z="-12080" h="65420" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13107" y="108414" z="-12080" h="43566" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13855" y="109751" z="-12080" h="55569" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12943" y="109034" z="-12080" h="12160" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12629" y="110440" z="-9064" h="21685" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13107" y="108482" z="-9040" h="33550" />
+		<npc id="20220" /><!--Дикор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13951" y="108639" z="-9040" h="16383" />
+		<npc id="20136" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13427" y="109049" z="-9064" h="36659" />
+		<npc id="20220" /><!--Дикор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12735" y="108897" z="-9048" h="61945" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13442" y="108588" z="-9040" h="20357" />
+		<npc id="20136" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13834" y="110123" z="-9040" h="16913" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13166" y="109156" z="-9064" h="5198" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13969" y="110653" z="-12080" h="23500" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13557" y="112063" z="-9064" h="10568" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12630" y="110816" z="-9064" h="5636" />
+		<npc id="20220" /><!--Дикор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12392" y="111044" z="-9048" h="60363" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12485" y="110952" z="-9056" h="42772" />
+		<npc id="20136" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12819" y="111159" z="-9040" h="50891" />
+		<npc id="20136" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13339" y="111837" z="-12080" h="4146" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13781" y="112018" z="-9064" h="59692" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13062" y="111474" z="-9040" h="9139" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14682" y="108030" z="-12088" h="6735" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14741" y="108318" z="-12088" h="21193" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14505" y="108231" z="-12088" h="42764" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14494" y="107721" z="-12088" h="43612" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14443" y="107942" z="-12088" h="11820" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14572" y="108585" z="-12088" h="40535" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14682" y="108335" z="-12088" h="56167" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14363" y="107804" z="-12088" h="31287" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15209" y="109577" z="-12080" h="57304" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15355" y="109096" z="-9040" h="45301" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14976" y="109292" z="-9048" h="49523" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14972" y="110325" z="-9040" h="34493" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15201" y="108856" z="-9048" h="41451" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14802" y="108923" z="-9040" h="14598" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15255" y="110269" z="-9040" h="5655" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15166" y="109517" z="-9048" h="61992" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15204" y="109983" z="-9048" h="60234" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11189" y="110733" z="-12080" h="0" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11916" y="110480" z="-12080" h="0" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11884" y="113808" z="-9064" h="15053" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13807" y="114101" z="-9064" h="19065" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13745" y="114129" z="-9064" h="4998" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13602" y="112781" z="-9064" h="16386" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13828" y="113143" z="-9064" h="61399" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13515" y="113618" z="-9064" h="24400" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13649" y="114389" z="-9064" h="46942" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13675" y="112811" z="-9064" h="13035" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13781" y="112949" z="-9064" h="16183" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13506" y="113575" z="-9064" h="19574" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13758" y="112829" z="-9064" h="20453" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13754" y="114130" z="-9064" h="54272" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15153" y="110588" z="-12080" h="0" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14260" y="111614" z="-12088" h="0" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14048" y="110375" z="-12080" h="0" />
+		<npc id="20214" /><!--Экскуро-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12056" y="110694" z="-12088" h="0" />
+		<npc id="20213" /><!--Порта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13941" y="110687" z="-12080" h="0" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11887" y="114511" z="-9064" h="0" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11734" y="115100" z="-9064" h="45791" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11667" y="115547" z="-9064" h="0" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11935" y="116022" z="-9064" h="0" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11829" y="115482" z="-9064" h="48631" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11391" y="116585" z="-12080" h="63908" />
+		<npc id="20218" /><!--Премо-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11786" y="116658" z="-12080" h="63388" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11146" y="116822" z="-12080" h="16956" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14065" y="116512" z="-12080" h="54596" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12819" y="116614" z="-12080" h="48805" />
+		<npc id="20215" /><!--Мордео-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13615" y="114969" z="-9064" h="14904" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13638" y="115066" z="-9064" h="57869" />
+		<npc id="20222" /><!--Торфе-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13803" y="114856" z="-9064" h="22330" />
+		<npc id="20219" /><!--Валидус-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13817" y="114837" z="-9064" h="13031" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13674" y="116224" z="-9000" h="21870" />
+		<npc id="20136" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13811" y="115392" z="-9048" h="42644" />
+		<npc id="20221" /><!--Перум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13886" y="115670" z="-9000" h="2683" />
+		<npc id="20136" /><!--Рыцарь Смерти-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14493" y="116538" z="-12080" h="0" />
+		<npc id="20216" /><!--Риценсио-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15087" y="116426" z="-12080" h="48270" />
+		<npc id="20215" /><!--Мордео-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14568" y="117416" z="-12114" h="47988" />
+		<npc id="20215" /><!--Мордео-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14968" y="117784" z="-12114" h="51689" />
+		<npc id="20215" /><!--Мордео-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14152" y="117416" z="-12114" h="46768" />
+		<npc id="20215" /><!--Мордео-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14488" y="116696" z="-12111" h="47837" />
+		<npc id="20215" /><!--Мордео-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14300" y="110805" z="-12088" h="0" />
+		<npc id="20217" /><!--Кратор-->
+	</spawn>
+	<territory name="dion18_2021_21">
+		<add x="22184" y="117231" zmin="-12133" zmax="-11903"/>
+		<add x="22651" y="117244" zmin="-12133" zmax="-11903"/>
+		<add x="22660" y="119913" zmin="-12133" zmax="-11903"/>
+		<add x="22205" y="119911" zmin="-12133" zmax="-11903"/>
+	</territory>
+	<spawn name="dion18_2021_21" count="2" respawn="45" respawn_random="15">
+		<territory name="dion18_2021_21"/>
+		<npc id="20751"/><!--Пума из Магмы-->
+	</spawn>
+	<territory name="dion18_2021_16">
+		<add x="20077" y="107473" zmin="-12121" zmax="-11891"/>
+		<add x="21638" y="107472" zmin="-12121" zmax="-11891"/>
+		<add x="21645" y="109264" zmin="-12121" zmax="-11891"/>
+		<add x="20068" y="109271" zmin="-12121" zmax="-11891"/>
+	</territory>
+	<spawn name="dion18_2021_16" count="1" respawn="45" respawn_random="15">
+		<territory name="dion18_2021_16"/>
+		<npc id="20751"/><!--Пума из Магмы-->
+	</spawn>
+	<territory name="dion18_2021_14">
+		<add x="11062" y="107478" zmin="-12128" zmax="-11898"/>
+		<add x="12431" y="107474" zmin="-12128" zmax="-11898"/>
+		<add x="12414" y="108947" zmin="-12128" zmax="-11898"/>
+		<add x="11035" y="108960" zmin="-12128" zmax="-11898"/>
+	</territory>
+	<spawn name="dion18_2021_14" count="1" respawn="45" respawn_random="15">
+		<territory name="dion18_2021_14"/>
+		<npc id="20751"/><!--Пума из Магмы-->
+	</spawn>
+	<territory name="dion18_2021_17">
+		<add x="22084" y="108308" zmin="-12133" zmax="-11903"/>
+		<add x="22567" y="108313" zmin="-12133" zmax="-11903"/>
+		<add x="22549" y="110939" zmin="-12133" zmax="-11903"/>
+		<add x="22099" y="110936" zmin="-12133" zmax="-11903"/>
+	</territory>
+	<spawn name="dion18_2021_17" count="1" respawn="45" respawn_random="15">
+		<territory name="dion18_2021_17"/>
+	<npc id="20751"/><!--Пума из Магмы-->
+	</spawn>
+	<spawn name="dion18_2021_17" count="1" respawn="45" respawn_random="15">
+		<territory name="dion18_2021_17"/>
+		<npc id="20751"/><!--Пума из Магмы-->
+	</spawn>
+	<territory name="dion18_2021_08">
+		<add x="13021" y="107948" zmin="-12133" zmax="-11903"/>
+		<add x="13034" y="111161" zmin="-12133" zmax="-11903"/>
+		<add x="12805" y="111167" zmin="-12133" zmax="-11903"/>
+		<add x="12806" y="109955" zmin="-12133" zmax="-11903"/>
+		<add x="11772" y="109915" zmin="-12133" zmax="-11903"/>
+		<add x="11776" y="109356" zmin="-12133" zmax="-11903"/>
+		<add x="12774" y="109332" zmin="-12133" zmax="-11903"/>
+		<add x="12804" y="107948" zmin="-12133" zmax="-11903"/>
+	</territory>
+	<spawn name="dion18_2021_08" count="2" respawn="45" respawn_random="15">
+		<territory name="dion18_2021_08"/>
+		<npc id="20751"/><!--Пума из Магмы-->
+	</spawn>
+	<spawn name="party_20_21_dg_010" count="1" respawn="900" respawn_random="240">
+		<territory>
+			<add x="21190" y="116650" zmin="-9076" zmax="-8876"/>
+			<add x="22451" y="116650" zmin="-9076" zmax="-8876"/>
+			<add x="22464" y="118890" zmin="-9076" zmax="-8876"/>
+			<add x="21190" y="118890" zmin="-9076" zmax="-8876"/>
+		</territory>
+		<npc id="20753"/><!--Монарх Тьмы-->
+	</spawn>
+	<spawn name="party_20_21_dg_02f_017" count="1" respawn="900" respawn_random="240">
+		<territory>
+			<add x="19883" y="108294" zmin="-9080" zmax="-8880"/>
+			<add x="20739" y="108294" zmin="-9080" zmax="-8880"/>
+			<add x="20739" y="110069" zmin="-9080" zmax="-8880"/>
+			<add x="19883" y="110069" zmin="-9080" zmax="-8880"/>
+		</territory>
+		<npc id="20753"/><!--Монарх Тьмы-->
+	</spawn>
+	<spawn name="party_20_21_dg_02f_014" count="1" respawn="900" respawn_random="240">
+		<territory>
+			<add x="22927" y="109349" zmin="-9080" zmax="-8880"/>
+			<add x="24105" y="109349" zmin="-9080" zmax="-8880"/>
+			<add x="24119" y="111561" zmin="-9080" zmax="-8880"/>
+			<add x="22941" y="111561" zmin="-9080" zmax="-8880"/>
+		</territory>
+		<npc id="20753"/><!--Монарх Тьмы-->
+	</spawn>
+	<spawn name="party_20_21_dg_02f_015" count="1" respawn="900" respawn_random="240">
+		<territory>
+			<add x="21332" y="109751" zmin="-9076" zmax="-8876"/>
+			<add x="21752" y="109751" zmin="-9076" zmax="-8876"/>
+			<add x="21752" y="111591" zmin="-9076" zmax="-8876"/>
+			<add x="21332" y="111591" zmin="-9076" zmax="-8876"/>
+		</territory>
+		<npc id="20753"/><!--Монарх Тьмы-->
+	</spawn>
+	<territory name="party_20_21_dg_02f_013">
+		<add x="21370" y="113161" zmin="-9080" zmax="-8880"/>
+		<add x="24016" y="113191" zmin="-9080" zmax="-8880"/>
+		<add x="23964" y="115064" zmin="-9080" zmax="-8880"/>
+		<add x="21370" y="115024" zmin="-9080" zmax="-8880"/>
+	</territory>
+	<spawn name="party_20_21_dg_02f_013" count="1" respawn="900" respawn_random="240">
+		<territory name="party_20_21_dg_02f_013"/>
+		<npc id="20753"/><!--Монарх Тьмы-->
+	</spawn>
+	<spawn name="party_20_21_dg_02f_013" count="1" respawn="900" respawn_random="240">
+		<territory name="party_20_21_dg_02f_013"/>
+		<npc id="20753"/><!--Монарх Тьмы-->
+	</spawn>
+	<spawn name="party_20_21_dg_02f_011" count="1" respawn="900" respawn_random="240">
+		<territory>
+			<add x="23566" y="116670" zmin="-9080" zmax="-8880"/>
+			<add x="24004" y="116670" zmin="-9080" zmax="-8880"/>
+			<add x="24004" y="119047" zmin="-9080" zmax="-8880"/>
+			<add x="23566" y="119047" zmin="-9080" zmax="-8880"/>
+		</territory>
+		<npc id="20753"/><!--Монарх Тьмы-->
+	</spawn>
+	<spawn name="party_20_21_dg_02f_009" count="1" respawn="900" respawn_random="240">
+		<territory>
+			<add x="19865" y="118177" zmin="-9076" zmax="-8876"/>
+			<add x="20724" y="118177" zmin="-9076" zmax="-8876"/>
+			<add x="20724" y="119924" zmin="-9076" zmax="-8876"/>
+			<add x="19865" y="119924" zmin="-9076" zmax="-8876"/>
+		</territory>
+		<npc id="20753"/><!--Монарх Тьмы-->
+	</spawn>
+	<territory name="party_20_21_dg_02f_007">
+		<add x="11338" y="116632" zmin="-9080" zmax="-8880"/>
+		<add x="13798" y="116632" zmin="-9080" zmax="-8880"/>
+		<add x="13798" y="119860" zmin="-9080" zmax="-8880"/>
+		<add x="11338" y="119860" zmin="-9080" zmax="-8880"/>
+	</territory>
+	<spawn name="party_20_21_dg_02f_007" count="1" respawn="900" respawn_random="240">
+		<territory name="party_20_21_dg_02f_007"/>
+		<npc id="20753"/><!--Монарх Тьмы-->
+	</spawn>
+	<spawn name="party_20_21_dg_02f_007" count="1" respawn="900" respawn_random="240">
+		<territory name="party_20_21_dg_02f_007"/>
+		<npc id="20753"/><!--Монарх Тьмы-->
+	</spawn>
+	<spawn name="party_20_21_dg_02f_008" count="1" respawn="900" respawn_random="240">
+		<territory>
+			<add x="14714" y="118170" zmin="-9080" zmax="-8880"/>
+			<add x="15573" y="118170" zmin="-9080" zmax="-8880"/>
+			<add x="15573" y="119902" zmin="-9080" zmax="-8880"/>
+			<add x="14714" y="119902" zmin="-9080" zmax="-8880"/>
+		</territory>
+		<npc id="20753"/><!--Монарх Тьмы-->
+	</spawn>
+	<spawn name="party_20_21_dg_02f_005" count="1" respawn="900" respawn_random="240">
+		<territory>
+			<add x="11577" y="112740" zmin="-9104" zmax="-8904"/>
+			<add x="11958" y="112740" zmin="-9104" zmax="-8904"/>
+			<add x="11958" y="116218" zmin="-9104" zmax="-8904"/>
+			<add x="11577" y="116218" zmin="-9104" zmax="-8904"/>
+		</territory>
+		<npc id="20753"/><!--Монарх Тьмы-->
+	</spawn>
+	<spawn name="party_20_21_dg_02f_003" count="1" respawn="900" respawn_random="240">
+		<territory>
+			<add x="13496" y="111992" zmin="-9100" zmax="-8900"/>
+			<add x="13877" y="111992" zmin="-9100" zmax="-8900"/>
+			<add x="13877" y="115487" zmin="-9100" zmax="-8900"/>
+			<add x="13496" y="115487" zmin="-9100" zmax="-8900"/>
+		</territory>
+		<npc id="20753"/><!--Монарх Тьмы-->
+	</spawn>
+	<spawn name="party_20_21_dg_02f_001" count="1" respawn="900" respawn_random="240">
+		<territory>
+			<add x="14699" y="108550" zmin="-9080" zmax="-8880"/>
+			<add x="15557" y="108550" zmin="-9080" zmax="-8880"/>
+			<add x="15557" y="110359" zmin="-9080" zmax="-8880"/>
+			<add x="14699" y="110359" zmin="-9080" zmax="-8880"/>
+		</territory>
+		<npc id="20753"/><!--Монарх Тьмы-->
+	</spawn>
+	<territory name="party_20_21_dg_02f_002">
+		<add x="11520" y="108399" zmin="-9080" zmax="-8880"/>
+		<add x="14091" y="108376" zmin="-9080" zmax="-8880"/>
+		<add x="14114" y="111572" zmin="-9080" zmax="-8880"/>
+		<add x="11558" y="111580" zmin="-9080" zmax="-8880"/>
+	</territory>
+	<spawn name="party_20_21_dg_02f_002" count="1" respawn="900" respawn_random="240">
+		<territory name="party_20_21_dg_02f_002"/>
+		<npc id="20753"/><!--Монарх Тьмы-->
+	</spawn>
+	<spawn name="party_20_21_dg_02f_002" count="1" respawn="900" respawn_random="240">
+		<territory name="party_20_21_dg_02f_002"/>
+		<npc id="20753"/><!--Монарх Тьмы-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20568" y="117944" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21480" y="117848" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20744" y="116520" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20824" y="111624" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21416" y="110360" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20280" y="110568" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21528" y="108968" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20168" y="108936" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20936" y="107592" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22536" y="108904" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22296" y="110696" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23224" y="108808" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="24008" y="107976" z="-12088" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="24216" y="110440" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23192" y="110440" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23784" y="111640" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="24072" y="120616" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23240" y="120056" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23752" y="119272" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="24072" y="117848" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23496" y="116648" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22376" y="116872" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22536" y="117928" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13976" y="108664" z="-12088" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14168" y="107720" z="-12088" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15304" y="109624" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14008" y="109640" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12504" y="109688" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13128" y="108136" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13096" y="109384" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12232" y="108552" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11944" y="107624" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11176" y="108424" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11320" y="110600" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11784" y="111528" z="-12088" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14392" y="110600" z="-12088" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15144" y="111112" z="-12088" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14024" y="111528" z="-12088" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15112" y="116856" z="-12088" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14760" y="117864" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13944" y="117208" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14936" y="119112" z="-12088" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="14728" y="120520" z="-12088" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12680" y="120344" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11768" y="120504" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11496" y="119480" z="-12088" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12616" y="118296" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11736" y="117256" z="-12088" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="11176" y="117944" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20408" y="119352" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20744" y="120520" z="-12080" h="49757" />
+		<npc id="21035" /><!--Катрок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15352" y="109144" z="-9040" h="49757" />
+		<npc id="21037" /><!--Око Разрушения-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15048" y="109912" z="-9048" h="49757" />
+		<npc id="21037" /><!--Око Разрушения-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13928" y="109960" z="-9040" h="49757" />
+		<npc id="21037" /><!--Око Разрушения-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13224" y="109352" z="-9064" h="49757" />
+		<npc id="21037" /><!--Око Разрушения-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12152" y="109576" z="-9064" h="49757" />
+		<npc id="21037" /><!--Око Разрушения-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12200" y="110904" z="-9064" h="49757" />
+		<npc id="21037" /><!--Око Разрушения-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13448" y="110888" z="-9064" h="49757" />
+		<npc id="21037" /><!--Око Разрушения-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13640" y="112280" z="-9064" h="49757" />
+		<npc id="21037" /><!--Око Разрушения-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13640" y="115608" z="-9000" h="49757" />
+		<npc id="21037" /><!--Око Разрушения-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12728" y="117464" z="-9064" h="49757" />
+		<npc id="21037" /><!--Око Разрушения-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="13464" y="118440" z="-9040" h="49757" />
+		<npc id="21037" /><!--Око Разрушения-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="12424" y="119416" z="-9048" h="49757" />
+		<npc id="21037" /><!--Око Разрушения-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15080" y="118728" z="-9048" h="49757" />
+		<npc id="21037" /><!--Око Разрушения-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15144" y="119464" z="-9048" h="49757" />
+		<npc id="21037" /><!--Око Разрушения-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20344" y="119448" z="-9048" h="49757" />
+		<npc id="21037" /><!--Око Разрушения-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="22216" y="118440" z="-9048" h="49757" />
+		<npc id="21037" /><!--Око Разрушения-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21576" y="117224" z="-9048" h="49757" />
+		<npc id="21037" /><!--Око Разрушения-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="21672" y="114696" z="-9048" h="49757" />
+		<npc id="21037" /><!--Око Разрушения-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23240" y="113512" z="-9048" h="49757" />
+		<npc id="21037" /><!--Око Разрушения-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23736" y="116952" z="-9040" h="49757" />
+		<npc id="21037" /><!--Око Разрушения-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23864" y="118760" z="-9040" h="49757" />
+		<npc id="21037" /><!--Око Разрушения-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23768" y="111112" z="-9048" h="49757" />
+		<npc id="21037" /><!--Око Разрушения-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="23336" y="109928" z="-9048" h="49757" />
+		<npc id="21037" /><!--Око Разрушения-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20280" y="108936" z="-9048" h="49757" />
+		<npc id="21037" /><!--Око Разрушения-->
+	</spawn>
+	<spawn count="1" respawn="86400" respawn_random="12000" period_of_day="none">
+		<point x="9992" y="121896" z="-3680" h="49757" />
+		<npc id="25742" /><!--Жрец Ядра Декар -->
+	</spawn>
+	
+</list>

@@ -1,0 +1,1149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="49700" name="Scroll Box: Emperor Baium\'s Enchant">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49701" name="Steel Bracelet Fragment">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_vacualite_noglow_white_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49702" name="Bracelet of Border Fragment">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_vacualite_noglow_gold_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<armor id="49703" name="Bracelet of Border">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.dimension_bracelet_i05"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="RIGHT_BRACELET"/>
+		</equip>
+		<skills>
+			<skill id="35028" level="1"/>	<!--Bracelet of Borders-->
+		</skills>
+	</armor>
+	<etcitem id="49704" name="Talisman of Borderâs Fragment">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_armor_soul_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49705" name="Forbidden Limit Chest">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.bm_special_pendant_abradant_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49706" name="Talisman of Darkness Box">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.bm_pirate_king_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<armor id="49707" name="Talisman of Darkness - P. Atk." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_wise_man_stone_i04"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3272" level="3"/>	<!--Talisman-->
+		</skills>
+	</armor>
+	<armor id="49708" name="Talisman of Darkness - M. Atk." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_wise_man_stone_i04"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3276" level="3"/>	<!--Talisman-->
+		</skills>
+	</armor>
+	<armor id="49709" name="Talisman of Darkness - P. Def." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_wise_man_stone_i04"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3273" level="3"/>	<!--Talisman-->
+		</skills>
+	</armor>
+	<armor id="49710" name="Talisman of Darkness - M. Def." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_wise_man_stone_i04"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3277" level="3"/>	<!--Talisman-->
+		</skills>
+	</armor>
+	<armor id="49711" name="Talisman of Darkness - P. Skills Evasion" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_wise_man_stone_i04"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3274" level="3"/>	<!--Talisman-->
+		</skills>
+	</armor>
+	<armor id="49712" name="Talisman of Darkness - M. Skills Evasion" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_wise_man_stone_i04"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3278" level="3"/>	<!--Talisman-->
+		</skills>
+	</armor>
+	<armor id="49713" name="Talisman of Darkness - HP" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_wise_man_stone_i04"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3279" level="3"/>	<!--Talisman-->
+		</skills>
+	</armor>
+	<armor id="49714" name="Talisman of Darkness - MP" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_wise_man_stone_i04"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3280" level="3"/>	<!--Talisman-->
+		</skills>
+	</armor>
+	<armor id="49715" name="Talisman of Darkness - Healing Power" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_wise_man_stone_i04"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3293" level="1"/>	<!--Talisman-->
+		</skills>
+	</armor>
+	<armor id="49716" name="Talisman of Darkness - Power of Healing Magic" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_wise_man_stone_i04"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3294" level="1"/>	<!--Talisman-->
+		</skills>
+	</armor>
+	<etcitem id="49717" name="Talisman of Darkness Box - P. Atk." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_exchange_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="49707" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="49718" name="Talisman of Darkness Box - M. Atk." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_exchange_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="49708" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="49719" name="Talisman of Darkness Box - P. Def." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_exchange_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="49709" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="49720" name="Talisman of Darkness Box - M. Def." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_exchange_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="49710" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="49721" name="Talisman of Darkness Box - P. Skills Evasion" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_exchange_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="49711" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="49722" name="Talisman of Darkness Box - M. Skills Evasion" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_exchange_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="49712" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="49723" name="Talisman of Darkness Box - HP" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_exchange_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="49713" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="49724" name="Talisman of Darkness Box - MP" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_exchange_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="49714" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="49725" name="Talisman of Darkness Box - Healing Power" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_exchange_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="49715" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="49726" name="Talisman of Darkness Box - Power of Healing Magic" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_exchange_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="49716" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<armor id="49727" name="Limited Talisman of Border - Lv. 1">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bm_magic_square_talisman"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="35024" level="1"/>
+		</skills>
+	</armor>
+	<armor id="49728" name="Talisman of Border - Lv. 2">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bm_magic_square_talisman"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="35024" level="2"/>
+		</skills>
+	</armor>
+	<armor id="49729" name="Talisman of Border - Lv. 3">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bm_magic_square_talisman"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="35024" level="3"/>
+		</skills>
+	</armor>
+	<armor id="49730" name="Talisman of Border - Lv. 4">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bm_magic_square_talisman"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="35024" level="4"/>
+		</skills>
+	</armor>
+	<armor id="49731" name="Talisman of Border - Lv. 5">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bm_magic_square_talisman"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="35024" level="5"/>
+		</skills>
+	</armor>
+	<armor id="49732" name="Talisman of Border - Lv. 6">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bm_magic_square_talisman"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="35024" level="6"/>
+			<skill id="35025" level="1"/>
+		</skills>
+	</armor>
+	<armor id="49733" name="Talisman of Border - Lv. 7">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bm_magic_square_talisman"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="35024" level="7"/>
+			<skill id="35025" level="1"/>
+			<skill id="35027" level="1"/>
+		</skills>
+	</armor>
+	<armor id="49734" name="Talisman of Border - Lv. 8">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bm_magic_square_talisman"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="35024" level="8"/>
+			<skill id="35025" level="1"/>
+			<skill id="35027" level="2"/>
+		</skills>
+	</armor>
+	<armor id="49735" name="Talisman of Border - Lv. 9">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bm_magic_square_talisman"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="35024" level="9"/>
+			<skill id="35025" level="1"/>
+			<skill id="35027" level="2"/>
+		</skills>
+	</armor>
+	<armor id="49736" name="Talisman of Border - Lv. 10">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bm_magic_square_talisman"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="35024" level="10"/>
+			<skill id="35025" level="1"/>
+			<skill id="35027" level="3"/>
+		</skills>
+	</armor>
+	<armor id="49737" name="Blessed Talisman of Border">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="item_quality" value="BLESSED"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bm_blessed_magic_square_talisman"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="35024" level="11"/>
+			<skill id="35025" level="1"/>
+			<skill id="35027" level="4"/>
+		</skills>
+	</armor>
+	<etcitem id="49738" name="Sealed Blessed Talisman of Border">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.bm_blessed_magic_square_talisman"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49739" name="Blessed Soulshot (No-grade)">
+		<set name="icon" value="icon.etc_bless_spirit_bullet_white_i00"/>
+		<set name="weight" value="3"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SOULSHOT"/>
+		<skills>
+			<skill id="8915" level="1"/>	<!--Blessed Soulshot (No-grade)-->
+		</skills>
+	</etcitem>
+	<etcitem id="49740" name="Blessed Soulshot (D-grade)">
+		<set name="icon" value="icon.etc_bless_spirit_bullet_blue_i00"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="D"/>
+		<set name="type" value="SOULSHOT"/>
+		<skills>
+			<skill id="8916" level="1"/>	<!--Blessed Soulshot (D-grade)-->
+		</skills>
+	</etcitem>
+	<etcitem id="49741" name="Blessed Soulshot (C-grade)">
+		<set name="icon" value="icon.etc_bless_spirit_bullet_green_i00"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="C"/>
+		<set name="type" value="SOULSHOT"/>
+		<skills>
+			<skill id="8917" level="1"/>	<!--Blessed Soulshot (C-grade)-->
+		</skills>
+	</etcitem>
+	<etcitem id="49742" name="Blessed Soulshot (B-grade)">
+		<set name="icon" value="icon.etc_bless_spirit_bullet_red_i00"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="B"/>
+		<set name="type" value="SOULSHOT"/>
+		<skills>
+			<skill id="8918" level="1"/>	<!--Blessed Soulshot (B-grade)-->
+		</skills>
+	</etcitem>
+	<etcitem id="49743" name="Blessed Soulshot (A-grade)">
+		<set name="icon" value="icon.etc_bless_spirit_bullet_silver_i00"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="A"/>
+		<set name="type" value="SOULSHOT"/>
+		<skills>
+			<skill id="8919" level="1"/>	<!--Blessed Soulshot (A-grade)-->
+		</skills>
+	</etcitem>
+	<etcitem id="49744" name="Mysterious Blessed Soulshot (No-grade)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_bless_spirit_bullet_white_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SOULSHOT"/>
+		<skills>
+			<skill id="8910" level="1"/>	<!--Mysterious Blessed Soulshot (No-grade)-->
+		</skills>
+	</etcitem>
+	<etcitem id="49745" name="Mysterious Blessed Soulshot (D-grade)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_bless_spirit_bullet_blue_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="D"/>
+		<set name="type" value="SOULSHOT"/>
+		<skills>
+			<skill id="8911" level="1"/>	<!--Mysterious Blessed Soulshot (D-grade)-->
+		</skills>
+	</etcitem>
+	<etcitem id="49746" name="Mysterious Blessed Soulshot (C-grade)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_bless_spirit_bullet_green_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="C"/>
+		<set name="type" value="SOULSHOT"/>
+		<skills>
+			<skill id="8912" level="1"/>	<!--Mysterious Blessed Soulshot (C-grade)-->
+		</skills>
+	</etcitem>
+	<etcitem id="49747" name="Mysterious Blessed Soulshot (B-grade)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_bless_spirit_bullet_red_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="B"/>
+		<set name="type" value="SOULSHOT"/>
+		<skills>
+			<skill id="8913" level="1"/>	<!--Mysterious Blessed Soulshot (B-grade)-->
+		</skills>
+	</etcitem>
+	<etcitem id="49748" name="Mysterious Blessed Soulshot (A-grade)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_bless_spirit_bullet_silver_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="A"/>
+		<set name="type" value="SOULSHOT"/>
+		<skills>
+			<skill id="8914" level="1"/>	<!--Mysterious Blessed Soulshot (A-grade)-->
+		</skills>
+	</etcitem>
+	<etcitem id="49749" name="Mysterious Spiritshot (B-grade)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_spell_shot_red_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="B"/>
+		<set name="type" value="SPIRITSHOT"/>
+		<skills>
+			<skill id="8908" level="1"/>	<!--Mysterious Spiritshot (B-grade)-->
+		</skills>
+	</etcitem>
+	<etcitem id="49750" name="Mysterious Spiritshot (A-grade)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_spell_shot_silver_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="A"/>
+		<set name="type" value="SPIRITSHOT"/>
+		<skills>
+			<skill id="8909" level="1"/>	<!--Mysterious Spiritshot (A-grade)-->
+		</skills>
+	</etcitem>
+	<etcitem id="49751" name="Recipe: Blessed Soulshot (D)">
+		<set name="type" value="RECIPE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49752" name="Recipe: Blessed Soulshot (C)">
+		<set name="type" value="RECIPE"/>
+		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49753" name="Recipe: Blessed Soulshot (B)">
+		<set name="type" value="RECIPE"/>
+		<set name="icon" value="icon.etc_recipe_red_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49754" name="Recipe: Blessed Soulshot (A)">
+		<set name="type" value="RECIPE"/>
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49755" name="Talisman of Baium Box">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i07"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49756" name="Cloth Piece">
+		<set name="icon" value="icon.etc_piece_shirt_green_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49757" name="Sayha\'s Holy Water">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_fruit_juice_glass_bottle_i09"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49758" name="Blood Crystal">
+		<set name="icon" value="icon.etc_fire_crystal_1_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49759" name="Celestial Shard">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_unholy_crystal_1_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49760" name="A-grade Armor Supply Box">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_box_of_adventure_3_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="39151" level="1"/>	<!--Armor Supply Box (A-grade)-->
+		</skills>
+	</etcitem>
+	<etcitem id="49761" name="Ornament Supply Box (A-grade)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_box_of_adventure_2_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="39152" level="1"/>	<!--Armor Supply Box (A-grade)-->
+		</skills>
+	</etcitem>
+	<etcitem id="49762" name="Armor Ingredient Box - A-grade">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_box_of_adventure_3_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="39153" level="1"/>	<!--Armor Ingredient Box - A-grade-->
+		</skills>
+	</etcitem>
+	<etcitem id="49763" name="Ornament Ingredient Box - A-grade">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_box_of_adventure_2_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="39154" level="1"/>	<!--Ornament Ingredient Box - A-grade-->
+		</skills>
+	</etcitem>
+	<etcitem id="49764" name="Scroll: 20,000 SP">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_sp_scroll3_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49765" name="Life Control Tower\'s Scroll of Blessing">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="SCROLL"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_aidcharm_cancel_valbreath_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<skills>
+			<skill id="39155" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="49766" name="Unidentified Stone">
+		<set name="icon" value="icon.etc_magical_stone_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="39157" level="1"/>	<!--Unidentified Rock-->
+		</skills>
+	</etcitem>
+	<etcitem id="49767" name="Broken Celestial Shard">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_broken_crystal_silver_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49768" name="Scroll of Heavenly Protection">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="SCROLL"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.scroll_of_verification_i08"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<skills>
+			<skill id="39156" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="49769" name="Improved Scroll Box: Emperor Baium\'s Enchant">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49770" name="Sayhaâs Energy">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_holy_water_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49771" name="Emperor Baium\'s Secret Treasures">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_bm_jewelbox_shhadai"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49772" name="Scroll of Mood Melody">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.bm_magmeld"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<skills>
+			<skill id="39164" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="49773" name="Fighter Pirate Fruit - Attack">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_codran_i09"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="39162" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="49774" name="Fighter Pirate Fruit - Defense">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_codran_i09"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="39163" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="49775" name="Red Spinel" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.ensoul_big_pp"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49776" name="Green Spinel" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.ensoul_big_ep"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49777" name="Low-grade XP Scroll">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_recall_exp_scroll"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49778" name="Mid-grade XP Scroll">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_recall_exp_scroll"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49779" name="High-grade XP Scroll">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_recall_exp_scroll"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49780" name="Top-grade XP Scroll">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_recall_exp_scroll"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49781" name="Super XP Scroll">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_recall_exp_scroll"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49782" name="Balthus Knights Supply Items">
+		<set name="destroyable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_ev_kalie_treasure_box"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49783" name="Sibis Coin">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.ev_balthus_coin"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49784" name="Balthus Knight Mark">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.ev_balthus_token"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49785" name="Weapon Supply Box (A-grade)">
+		<set name="icon" value="icon.etc_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="39172" level="1"/>	<!--Weapon Supply Box (A-grade)-->
+		</skills>
+	</etcitem>
+	<etcitem id="49786" name="A-grade Armor Supply Box">
+		<set name="icon" value="icon.etc_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="39173" level="1"/>	<!--Armor Supply Box (A-grade)-->
+		</skills>
+	</etcitem>
+	<etcitem id="49787" name="Solid Scroll: Enchant (A-grade) Box">
+		<set name="icon" value="icon.etc_treasure_box_i03"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49788" name="Solid Scroll: Enchant (A-grade) Large Box">
+		<set name="icon" value="icon.etc_treasure_box_i03"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49789" name="+8 Enchanted Weapon Supply Box (B-grade)">
+		<set name="icon" value="icon.etc_jewel_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49790" name="+16 Enchanted Weapon Supply Box (C-grade)">
+		<set name="icon" value="icon.etc_treasure_box_i06"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<armor id="49791" name="Cadmus Transformation Bracelet - Prophet" add_name="1-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.pi_high_agathion_bracelet_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="49792" name="Cadmus Transformation Bracelet - Shillien Elder" add_name="1-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.pi_high_agathion_bracelet_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="49793" name="Cadmus Transformation Bracelet - Elven Elder" add_name="1-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.pi_high_agathion_bracelet_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="49794" name="Cadmus Transformation Bracelet - Prophet" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.pi_high_agathion_bracelet_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="49795" name="Cadmus Transformation Bracelet - Shillien Elder" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.pi_high_agathion_bracelet_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="49796" name="Cadmus Transformation Bracelet - Elven Elder" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.pi_high_agathion_bracelet_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<etcitem id="49797" name="Gift of Sated Cadmus" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_ev_draco_gift_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<weapon id="49798" name="Cheer Stamen" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.ev_12th_weapon"/>
+		<set name="price" value="0"/>
+		<set name="type" value="DUAL"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="12"/>
+			<add stat="mAtk" order="0x10" value="12"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<etcitem id="49799" name="Express Bus Pass Card">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.card_hidden"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+</list>

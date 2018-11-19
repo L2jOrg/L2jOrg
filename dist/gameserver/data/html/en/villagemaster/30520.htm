@@ -1,0 +1,12 @@
+<html><head><body>
+Warehouse Chief Reed:<br>
+Greetings, traveler! I am Warehouse Chief Reed of the famous <font color="LEVEL">Iron Gate Guild</font>.As you undoubtedly know, we are the most influential guild in the kingdom. Just look at all the banks and warehouses we operate even in the Human villages!<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">I'm looking for a class transfer</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc?chat 1">Ask about the Iron Gate Guild</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Clan</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Alliance</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Exchange Daily Coins</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Quest</Button>
+</body></html>

@@ -1,0 +1,1992 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn name="24_21_heart" count="1" respawn="60">
+		<point x="154695" y="121097" z="-3757" h="0"/>
+		<npc id="13001"/><!--Скованное Сердце-->
+	</spawn>
+	<territory name="giran05_2421_11">
+		<add x="140554" y="112461" zmin="-3757" zmax="-3557"/>
+		<add x="141593" y="113080" zmin="-3757" zmax="-3557"/>
+		<add x="140765" y="113548" zmin="-3757" zmax="-3557"/>
+		<add x="140565" y="113280" zmin="-3757" zmax="-3557"/>
+	</territory>
+	<spawn name="giran05_2421_11" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_11"/>
+		<npc id="21084"/><!--Кровавая Леди-->
+	</spawn>
+	<spawn name="giran05_2421_11" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_11"/>
+		<npc id="20406"/><!--Баньши-->
+	</spawn>
+	<spawn name="giran05_2421_11" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_11"/>
+		<npc id="20622"/><!--Солдат Малрука-->
+	</spawn>
+	<spawn name="giran05_2421_11" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_11"/>
+		<npc id="20620"/><!--Пещерный Зверь-->
+	</spawn>
+	<spawn name="giran05_2421_11" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_11"/>
+		<npc id="20621"/><!--Волна Смерти-->
+	</spawn>
+	<territory name="giran05_2421_12">
+		<add x="141212" y="112226" zmin="-3808" zmax="-3558"/>
+		<add x="142017" y="111975" zmin="-3808" zmax="-3558"/>
+		<add x="142074" y="112228" zmin="-3808" zmax="-3558"/>
+		<add x="141586" y="113035" zmin="-3808" zmax="-3558"/>
+	</territory>
+	<spawn name="giran05_2421_12" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_12"/>
+		<npc id="21084"/><!--Кровавая Леди-->
+	</spawn>
+	<spawn name="giran05_2421_12" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_12"/>
+		<npc id="20406"/><!--Баньши-->
+	</spawn>
+	<spawn name="giran05_2421_12" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_12"/>
+		<npc id="20622"/><!--Солдат Малрука-->
+	</spawn>
+	<spawn name="giran05_2421_12" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_12"/>
+		<npc id="20620"/><!--Пещерный Зверь-->
+	</spawn>
+	<spawn name="giran05_2421_12" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_12"/>
+		<npc id="20621"/><!--Волна Смерти-->
+	</spawn>
+	<territory name="giran05_2421_13">
+		<add x="142669" y="111556" zmin="-3983" zmax="-3783"/>
+		<add x="144805" y="112263" zmin="-3983" zmax="-3783"/>
+		<add x="144361" y="112923" zmin="-3983" zmax="-3783"/>
+		<add x="143941" y="113036" zmin="-3983" zmax="-3783"/>
+		<add x="143210" y="112701" zmin="-3983" zmax="-3783"/>
+		<add x="142706" y="112052" zmin="-3983" zmax="-3783"/>
+	</territory>
+	<spawn name="giran05_2421_13" count="4" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_13"/>
+		<npc id="21084"/><!--Кровавая Леди-->
+	</spawn>
+	<spawn name="giran05_2421_13" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_13"/>
+		<npc id="20406"/><!--Баньши-->
+	</spawn>
+	<spawn name="giran05_2421_13" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_13"/>
+		<npc id="20622"/><!--Солдат Малрука-->
+	</spawn>
+	<spawn name="giran05_2421_13" count="5" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_13"/>
+		<npc id="20620"/><!--Пещерный Зверь-->
+	</spawn>
+	<spawn name="giran05_2421_13" count="4" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_13"/>
+		<npc id="20621"/><!--Волна Смерти-->
+	</spawn>
+	<territory name="giran05_2421_07">
+		<add x="143160" y="114314" zmin="-3775" zmax="-3575"/>
+		<add x="145237" y="114008" zmin="-3775" zmax="-3575"/>
+		<add x="145249" y="114660" zmin="-3775" zmax="-3575"/>
+		<add x="144549" y="115282" zmin="-3775" zmax="-3575"/>
+		<add x="143585" y="114947" zmin="-3775" zmax="-3575"/>
+	</territory>
+	<spawn name="giran05_2421_07" count="3" respawn="250" respawn_random="175">
+		<territory name="giran05_2421_07"/>
+		<npc id="21084"/><!--Кровавая Леди-->
+	</spawn>
+	<spawn name="giran05_2421_07" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_07"/>
+		<npc id="20406"/><!--Баньши-->
+	</spawn>
+	<spawn name="giran05_2421_07" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_07"/>
+		<npc id="20622"/><!--Солдат Малрука-->
+	</spawn>
+	<spawn name="giran05_2421_07" count="4" respawn="250" respawn_random="175">
+		<territory name="giran05_2421_07"/>
+		<npc id="20620"/><!--Пещерный Зверь-->
+	</spawn>
+	<spawn name="giran05_2421_07" count="3" respawn="250" respawn_random="175">
+		<territory name="giran05_2421_07"/>
+		<npc id="20621"/><!--Волна Смерти-->
+	</spawn>
+	<territory name="giran05_2421_01">
+		<add x="135505" y="113767" zmin="-3748" zmax="-3548"/>
+		<add x="135809" y="113732" zmin="-3748" zmax="-3548"/>
+		<add x="135719" y="115107" zmin="-3748" zmax="-3548"/>
+		<add x="135385" y="114998" zmin="-3748" zmax="-3548"/>
+		<add x="135133" y="114652" zmin="-3748" zmax="-3548"/>
+		<add x="135107" y="114176" zmin="-3748" zmax="-3548"/>
+	</territory>
+	<spawn name="giran05_2421_01" count="3" respawn="250" respawn_random="175">
+		<territory name="giran05_2421_01"/>
+		<npc id="21084"/><!--Кровавая Леди-->
+	</spawn>
+	<spawn name="giran05_2421_01" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_01"/>
+		<npc id="20406"/><!--Баньши-->
+	</spawn>
+	<spawn name="giran05_2421_01" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_01"/>
+		<npc id="20622"/><!--Солдат Малрука-->
+	</spawn>
+	<spawn name="giran05_2421_01" count="2" respawn="250" respawn_random="175">
+		<territory name="giran05_2421_01"/>
+		<npc id="20620"/><!--Пещерный Зверь-->
+	</spawn>
+	<spawn name="giran05_2421_01" count="3" respawn="250" respawn_random="175">
+		<territory name="giran05_2421_01"/>
+		<npc id="20621"/><!--Волна Смерти-->
+	</spawn>
+	<territory name="giran05_2421_02">
+		<add x="136352" y="113594" zmin="-3760" zmax="-3560"/>
+		<add x="136640" y="113684" zmin="-3760" zmax="-3560"/>
+		<add x="137048" y="114204" zmin="-3760" zmax="-3560"/>
+		<add x="137079" y="114721" zmin="-3760" zmax="-3560"/>
+		<add x="136228" y="115234" zmin="-3760" zmax="-3560"/>
+	</territory>
+	<spawn name="giran05_2421_02" count="2" respawn="250" respawn_random="175">
+		<territory name="giran05_2421_02"/>
+		<npc id="21084"/><!--Кровавая Леди-->
+	</spawn>
+	<spawn name="giran05_2421_02" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_02"/>
+		<npc id="20406"/><!--Баньши-->
+	</spawn>
+	<spawn name="giran05_2421_02" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_02"/>
+		<npc id="20622"/><!--Солдат Малрука-->
+	</spawn>
+	<spawn name="giran05_2421_02" count="3" respawn="250" respawn_random="175">
+		<territory name="giran05_2421_02"/>
+		<npc id="20620"/><!--Пещерный Зверь-->
+	</spawn>
+	<spawn name="giran05_2421_02" count="3" respawn="250" respawn_random="175">
+		<territory name="giran05_2421_02"/>
+		<npc id="20621"/><!--Волна Смерти-->
+	</spawn>
+	<territory name="giran05_2421_04">
+		<add x="139450" y="114237" zmin="-3776" zmax="-3576"/>
+		<add x="140563" y="113691" zmin="-3776" zmax="-3576"/>
+		<add x="141298" y="114113" zmin="-3776" zmax="-3576"/>
+		<add x="141316" y="114663" zmin="-3776" zmax="-3576"/>
+		<add x="140377" y="115240" zmin="-3776" zmax="-3576"/>
+		<add x="139488" y="114608" zmin="-3776" zmax="-3576"/>
+	</territory>
+	<spawn name="giran05_2421_04" count="3" respawn="250" respawn_random="175">
+		<territory name="giran05_2421_04"/>
+		<npc id="21084"/><!--Кровавая Леди-->
+	</spawn>
+	<spawn name="giran05_2421_04" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_04"/>
+		<npc id="20406"/><!--Баньши-->
+	</spawn>
+	<spawn name="giran05_2421_04" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_04"/>
+		<npc id="20622"/><!--Солдат Малрука-->
+	</spawn>
+	<spawn name="giran05_2421_04" count="4" respawn="250" respawn_random="175">
+		<territory name="giran05_2421_04"/>
+		<npc id="20620"/><!--Пещерный Зверь-->
+	</spawn>
+	<spawn name="giran05_2421_04" count="4" respawn="250" respawn_random="175">
+		<territory name="giran05_2421_04"/>
+		<npc id="20621"/><!--Волна Смерти-->
+	</spawn>
+	<territory name="giran05_2421_45">
+		<add x="152697" y="116626" zmin="-5295" zmax="-5095"/>
+		<add x="154680" y="116602" zmin="-5295" zmax="-5095"/>
+		<add x="154528" y="117127" zmin="-5295" zmax="-5095"/>
+		<add x="153749" y="117341" zmin="-5295" zmax="-5095"/>
+		<add x="152905" y="116946" zmin="-5295" zmax="-5095"/>
+	</territory>
+	<spawn name="giran05_2421_45" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_45"/>
+		<npc id="20627"/><!--Лорд Малрука-->
+	</spawn>
+	<spawn name="giran05_2421_45" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_45"/>
+		<npc id="20407"/><!--Баньши Малрука-->
+	</spawn>
+	<territory name="giran05_2421_46">
+		<add x="152925" y="115015" zmin="-5296" zmax="-5096"/>
+		<add x="153414" y="114614" zmin="-5296" zmax="-5096"/>
+		<add x="153643" y="115711" zmin="-5296" zmax="-5096"/>
+		<add x="153343" y="116581" zmin="-5296" zmax="-5096"/>
+		<add x="153193" y="116587" zmin="-5296" zmax="-5096"/>
+	</territory>
+	<spawn name="giran05_2421_46" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_46"/>
+		<npc id="20627"/><!--Лорд Малрука-->
+	</spawn>
+	<spawn name="giran05_2421_46" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_46"/>
+		<npc id="20407"/><!--Баньши Малрука-->
+	</spawn>
+	<territory name="giran05_2421_47">
+		<add x="153475" y="114604" zmin="-5288" zmax="-5088"/>
+		<add x="153890" y="114271" zmin="-5288" zmax="-5088"/>
+		<add x="154512" y="114246" zmin="-5288" zmax="-5088"/>
+		<add x="154845" y="114729" zmin="-5288" zmax="-5088"/>
+		<add x="154878" y="115346" zmin="-5288" zmax="-5088"/>
+		<add x="153540" y="114897" zmin="-5288" zmax="-5088"/>
+	</territory>
+	<spawn name="giran05_2421_47" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_47"/>
+		<npc id="20627"/><!--Лорд Малрука-->
+	</spawn>
+	<spawn name="giran05_2421_47" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_47"/>
+		<npc id="20407"/><!--Баньши Малрука-->
+	</spawn>
+	<territory name="giran05_2421_48">
+		<add x="154518" y="115269" zmin="-5304" zmax="-5104"/>
+		<add x="154920" y="115422" zmin="-5304" zmax="-5104"/>
+		<add x="154739" y="116550" zmin="-5304" zmax="-5104"/>
+		<add x="154440" y="116574" zmin="-5304" zmax="-5104"/>
+	</territory>
+	<spawn name="giran05_2421_48" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_48"/>
+		<npc id="20627"/><!--Лорд Малрука-->
+	</spawn>
+	<spawn name="giran05_2421_48" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_48"/>
+		<npc id="20407"/><!--Баньши Малрука-->
+	</spawn>
+	<territory name="giran05_2421_20">
+		<add x="140047" y="117251" zmin="-3965" zmax="-3765"/>
+		<add x="141174" y="117524" zmin="-3965" zmax="-3765"/>
+		<add x="141238" y="117933" zmin="-3965" zmax="-3765"/>
+		<add x="140894" y="119396" zmin="-3965" zmax="-3765"/>
+		<add x="140351" y="119741" zmin="-3965" zmax="-3765"/>
+		<add x="139750" y="118884" zmin="-3965" zmax="-3765"/>
+		<add x="139734" y="118074" zmin="-3965" zmax="-3765"/>
+	</territory>
+	<spawn name="giran05_2421_20" count="6" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_20"/>
+		<npc id="20622"/><!--Солдат Малрука-->
+	</spawn>
+	<territory name="giran05_2421_18">
+		<add x="147000" y="109066" zmin="-3987" zmax="-3787"/>
+		<add x="148437" y="109324" zmin="-3987" zmax="-3787"/>
+		<add x="148547" y="110569" zmin="-3987" zmax="-3787"/>
+		<add x="148075" y="110849" zmin="-3987" zmax="-3787"/>
+		<add x="146813" y="110550" zmin="-3987" zmax="-3787"/>
+	</territory>
+	<spawn name="giran05_2421_18" count="7" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_18"/>
+		<npc id="20625"/><!--Рыцарь Малрука-->
+	</spawn>
+	<spawn name="giran05_2421_18" count="6" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_18"/>
+		<npc id="20626"/><!--Берсерк Малрука-->
+	</spawn>
+	<territory name="giran05_2421_10">
+		<add x="147184" y="117442" zmin="-3753" zmax="-3553"/>
+		<add x="148866" y="116828" zmin="-3753" zmax="-3553"/>
+		<add x="149202" y="117832" zmin="-3753" zmax="-3553"/>
+		<add x="149066" y="118350" zmin="-3753" zmax="-3553"/>
+		<add x="148602" y="118647" zmin="-3753" zmax="-3553"/>
+		<add x="148042" y="118609" zmin="-3753" zmax="-3553"/>
+	</territory>
+	<spawn name="giran05_2421_10" count="4" respawn="260" respawn_random="180">
+		<territory name="giran05_2421_10"/>
+		<npc id="20622"/><!--Солдат Малрука-->
+	</spawn>
+	<territory name="giran05_2421_14">
+		<add x="142902" y="108182" zmin="-3990" zmax="-3790"/>
+		<add x="143467" y="108568" zmin="-3990" zmax="-3790"/>
+		<add x="143551" y="108922" zmin="-3990" zmax="-3790"/>
+		<add x="143439" y="109045" zmin="-3990" zmax="-3790"/>
+		<add x="142529" y="108983" zmin="-3990" zmax="-3790"/>
+	</territory>
+	<spawn name="giran05_2421_14" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_14"/>
+		<npc id="20622"/><!--Солдат Малрука-->
+	</spawn>
+	<territory name="giran05_2421_15">
+		<add x="140434" y="107640" zmin="-3984" zmax="-3784"/>
+		<add x="141249" y="108255" zmin="-3984" zmax="-3784"/>
+		<add x="141695" y="109139" zmin="-3984" zmax="-3784"/>
+		<add x="141192" y="110593" zmin="-3984" zmax="-3784"/>
+		<add x="140433" y="111237" zmin="-3984" zmax="-3784"/>
+		<add x="140016" y="110406" zmin="-3984" zmax="-3784"/>
+	</territory>
+	<spawn name="giran05_2421_15" count="9" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_15"/>
+		<npc id="20622"/><!--Солдат Малрука-->
+	</spawn>
+	<territory name="giran05_2421_16">
+		<add x="141599" y="107146" zmin="-3952" zmax="-3752"/>
+		<add x="142500" y="106759" zmin="-3952" zmax="-3752"/>
+		<add x="142884" y="106865" zmin="-3952" zmax="-3752"/>
+		<add x="143280" y="107114" zmin="-3952" zmax="-3752"/>
+		<add x="142595" y="107832" zmin="-3952" zmax="-3752"/>
+		<add x="141536" y="107289" zmin="-3952" zmax="-3752"/>
+	</territory>
+	<spawn name="giran05_2421_16" count="5" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_16"/>
+		<npc id="20622"/><!--Солдат Малрука-->
+	</spawn>
+	<territory name="giran05_2421_17">
+		<add x="143953" y="107415" zmin="-4000" zmax="-3800"/>
+		<add x="144852" y="107172" zmin="-4000" zmax="-3800"/>
+		<add x="146008" y="108307" zmin="-4000" zmax="-3800"/>
+		<add x="146087" y="109441" zmin="-4000" zmax="-3800"/>
+		<add x="145672" y="110828" zmin="-4000" zmax="-3800"/>
+	</territory>
+	<spawn name="giran05_2421_17" count="6" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_17"/>
+		<npc id="20622"/><!--Солдат Малрука-->
+	</spawn>
+	<spawn name="giran05_2421_17" count="6" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_17"/>
+		<npc id="20625"/><!--Рыцарь Малрука-->
+	</spawn>
+	<territory name="giran05_2421_08">
+		<add x="144630" y="115316" zmin="-3760" zmax="-3560"/>
+		<add x="145136" y="114851" zmin="-3760" zmax="-3560"/>
+		<add x="146549" y="116126" zmin="-3760" zmax="-3560"/>
+		<add x="146421" y="116429" zmin="-3760" zmax="-3560"/>
+		<add x="145452" y="115969" zmin="-3760" zmax="-3560"/>
+	</territory>
+	<spawn name="giran05_2421_08" count="4" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_08"/>
+		<npc id="20622"/><!--Солдат Малрука-->
+	</spawn>
+	<territory name="giran05_2421_09">
+		<add x="146594" y="116155" zmin="-3758" zmax="-3558"/>
+		<add x="147532" y="115986" zmin="-3758" zmax="-3558"/>
+		<add x="147593" y="116581" zmin="-3758" zmax="-3558"/>
+		<add x="147396" y="116946" zmin="-3758" zmax="-3558"/>
+		<add x="146927" y="117084" zmin="-3758" zmax="-3558"/>
+	</territory>
+	<spawn name="giran05_2421_09" count="3" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_09"/>
+		<npc id="20622"/><!--Солдат Малрука-->
+	</spawn>
+	<territory name="giran05_2421_32">
+		<add x="145036" y="117436" zmin="-3955" zmax="-3755"/>
+		<add x="145870" y="117077" zmin="-3955" zmax="-3755"/>
+		<add x="146557" y="117728" zmin="-3955" zmax="-3755"/>
+		<add x="145392" y="118034" zmin="-3955" zmax="-3755"/>
+	</territory>
+	<spawn name="giran05_2421_32" count="3" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_32"/>
+		<npc id="20625"/><!--Рыцарь Малрука-->
+	</spawn>
+	<spawn name="giran05_2421_32" count="3" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_32"/>
+		<npc id="20626"/><!--Берсерк Малрука-->
+	</spawn>
+	<spawn name="giran05_2421_32" count="3" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_32"/>
+		<npc id="20627"/><!--Лорд Малрука-->
+	</spawn>
+	<spawn name="giran05_2421_32" count="3" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_32"/>
+		<npc id="20407"/><!--Баньши Малрука-->
+	</spawn>
+	<territory name="giran05_2421_38">
+		<add x="147860" y="121476" zmin="-4924" zmax="-4724"/>
+		<add x="148592" y="119509" zmin="-4924" zmax="-4724"/>
+		<add x="149382" y="119327" zmin="-4924" zmax="-4724"/>
+		<add x="150252" y="120945" zmin="-4924" zmax="-4724"/>
+		<add x="150285" y="121532" zmin="-4924" zmax="-4724"/>
+		<add x="149645" y="121765" zmin="-4924" zmax="-4724"/>
+		<add x="148420" y="121804" zmin="-4924" zmax="-4724"/>
+	</territory>
+	<spawn name="giran05_2421_38" count="10" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_38"/>
+		<npc id="20625"/><!--Рыцарь Малрука-->
+	</spawn>
+	<spawn name="giran05_2421_38" count="10" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_38"/>
+		<npc id="20626"/><!--Берсерк Малрука-->
+	</spawn>
+	<spawn name="giran05_2421_38" count="11" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_38"/>
+		<npc id="20627"/><!--Лорд Малрука-->
+	</spawn>
+	<spawn name="giran05_2421_38" count="10" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_38"/>
+		<npc id="20407"/><!--Баньши Малрука-->
+	</spawn>
+	<territory name="giran05_2421_31">
+		<add x="144727" y="116955" zmin="-3949" zmax="-3749"/>
+		<add x="145529" y="118351" zmin="-3949" zmax="-3749"/>
+		<add x="145319" y="118715" zmin="-3949" zmax="-3749"/>
+		<add x="144532" y="119031" zmin="-3949" zmax="-3749"/>
+		<add x="144440" y="118343" zmin="-3949" zmax="-3749"/>
+	</territory>
+	<spawn name="giran05_2421_31" count="3" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_31"/>
+		<npc id="20625"/><!--Рыцарь Малрука-->
+	</spawn>
+	<spawn name="giran05_2421_31" count="3" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_31"/>
+		<npc id="20626"/><!--Берсерк Малрука-->
+	</spawn>
+	<spawn name="giran05_2421_31" count="3" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_31"/>
+		<npc id="20627"/><!--Лорд Малрука-->
+	</spawn>
+	<spawn name="giran05_2421_31" count="3" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_31"/>
+		<npc id="20407"/><!--Баньши Малрука-->
+	</spawn>
+	<territory name="giran05_2421_29">
+		<add x="145675" y="119232" zmin="-3953" zmax="-3753"/>
+		<add x="146073" y="118961" zmin="-3953" zmax="-3753"/>
+		<add x="146186" y="120441" zmin="-3953" zmax="-3753"/>
+		<add x="145822" y="120935" zmin="-3953" zmax="-3753"/>
+		<add x="145347" y="120748" zmin="-3953" zmax="-3753"/>
+		<add x="145164" y="120389" zmin="-3953" zmax="-3753"/>
+	</territory>
+	<spawn name="giran05_2421_29" count="3" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_29"/>
+		<npc id="20625"/><!--Рыцарь Малрука-->
+	</spawn>
+	<spawn name="giran05_2421_29" count="3" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_29"/>
+		<npc id="20626"/><!--Берсерк Малрука-->
+	</spawn>
+	<spawn name="giran05_2421_29" count="3" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_29"/>
+		<npc id="20627"/><!--Лорд Малрука-->
+	</spawn>
+	<spawn name="giran05_2421_29" count="3" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_29"/>
+		<npc id="20407"/><!--Баньши Малрука-->
+	</spawn>
+	<territory name="giran05_2421_21">
+		<add x="142772" y="115884" zmin="-3965" zmax="-3765"/>
+		<add x="143387" y="116116" zmin="-3965" zmax="-3765"/>
+		<add x="143764" y="116888" zmin="-3965" zmax="-3765"/>
+		<add x="143727" y="117831" zmin="-3965" zmax="-3765"/>
+		<add x="143067" y="118221" zmin="-3965" zmax="-3765"/>
+		<add x="141508" y="117360" zmin="-3965" zmax="-3765"/>
+		<add x="142074" y="116185" zmin="-3965" zmax="-3765"/>
+	</territory>
+	<spawn name="giran05_2421_21" count="9" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_21"/>
+		<npc id="20622"/><!--Солдат Малрука-->
+	</spawn>
+	<territory name="giran05_2421_22">
+		<add x="141619" y="118985" zmin="-3955" zmax="-3755"/>
+		<add x="142002" y="118563" zmin="-3955" zmax="-3755"/>
+		<add x="142880" y="118427" zmin="-3955" zmax="-3755"/>
+		<add x="142905" y="119107" zmin="-3955" zmax="-3755"/>
+		<add x="142454" y="119719" zmin="-3955" zmax="-3755"/>
+		<add x="141921" y="119554" zmin="-3955" zmax="-3755"/>
+		<add x="141585" y="119246" zmin="-3955" zmax="-3755"/>
+	</territory>
+	<spawn name="giran05_2421_22" count="4" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_22"/>
+		<npc id="20622"/><!--Солдат Малрука-->
+	</spawn>
+	<territory name="giran05_2421_23">
+		<add x="140368" y="120325" zmin="-3946" zmax="-3746"/>
+		<add x="141286" y="120788" zmin="-3946" zmax="-3746"/>
+		<add x="141491" y="121006" zmin="-3946" zmax="-3746"/>
+		<add x="140159" y="121224" zmin="-3946" zmax="-3746"/>
+	</territory>
+	<spawn name="giran05_2421_23" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_23"/>
+		<npc id="20622"/><!--Солдат Малрука-->
+	</spawn>
+	<territory name="giran05_2421_24">
+		<add x="140080" y="121280" zmin="-3963" zmax="-3763"/>
+		<add x="141534" y="121907" zmin="-3963" zmax="-3763"/>
+		<add x="141160" y="122047" zmin="-3963" zmax="-3763"/>
+		<add x="140158" y="121804" zmin="-3963" zmax="-3763"/>
+	</territory>
+	<spawn name="giran05_2421_24" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_24"/>
+		<npc id="20622"/><!--Солдат Малрука-->
+	</spawn>
+	<territory name="giran05_2421_25">
+		<add x="141016" y="121131" zmin="-3951" zmax="-3751"/>
+		<add x="141547" y="121016" zmin="-3951" zmax="-3751"/>
+		<add x="142101" y="121659" zmin="-3951" zmax="-3751"/>
+		<add x="141573" y="121888" zmin="-3951" zmax="-3751"/>
+		<add x="140939" y="121607" zmin="-3951" zmax="-3751"/>
+	</territory>
+	<spawn name="giran05_2421_25" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_25"/>
+		<npc id="20622"/><!--Солдат Малрука-->
+	</spawn>
+	<territory name="giran05_2421_26">
+		<add x="142657" y="120064" zmin="-3953" zmax="-3753"/>
+		<add x="143906" y="119677" zmin="-3953" zmax="-3753"/>
+		<add x="144420" y="120127" zmin="-3953" zmax="-3753"/>
+		<add x="144652" y="121168" zmin="-3953" zmax="-3753"/>
+		<add x="143516" y="121831" zmin="-3953" zmax="-3753"/>
+		<add x="142125" y="121659" zmin="-3953" zmax="-3753"/>
+	</territory>
+	<spawn name="giran05_2421_26" count="10" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_26"/>
+		<npc id="20622"/><!--Солдат Малрука-->
+	</spawn>
+	<territory name="giran05_2421_27">
+		<add x="144693" y="121264" zmin="-3957" zmax="-3757"/>
+		<add x="146029" y="121932" zmin="-3957" zmax="-3757"/>
+		<add x="145738" y="122032" zmin="-3957" zmax="-3757"/>
+		<add x="144334" y="121605" zmin="-3957" zmax="-3757"/>
+	</territory>
+	<spawn name="giran05_2421_27" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_27"/>
+		<npc id="20625"/><!--Рыцарь Малрука-->
+	</spawn>
+	<territory name="giran05_2421_28">
+		<add x="145904" y="121034" zmin="-3953" zmax="-3753"/>
+		<add x="146163" y="120837" zmin="-3953" zmax="-3753"/>
+		<add x="146416" y="121401" zmin="-3953" zmax="-3753"/>
+		<add x="146422" y="121747" zmin="-3953" zmax="-3753"/>
+	</territory>
+	<spawn name="giran05_2421_28" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_28"/>
+		<npc id="20625"/><!--Рыцарь Малрука-->
+	</spawn>
+	<territory name="giran05_2421_61">
+		<add x="152780" y="109452" zmin="-5194" zmax="-4994"/>
+		<add x="153899" y="109404" zmin="-5194" zmax="-4994"/>
+		<add x="153824" y="109664" zmin="-5194" zmax="-4994"/>
+		<add x="153307" y="109754" zmin="-5194" zmax="-4994"/>
+	</territory>
+	<spawn name="giran05_2421_61" count="1" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_61"/>
+		<npc id="21085"/><!--Кровавый Снайпер-->
+	</spawn>
+	<territory name="giran05_2421_62">
+		<add x="153080" y="108720" zmin="-5204" zmax="-5004"/>
+		<add x="153471" y="108931" zmin="-5204" zmax="-5004"/>
+		<add x="153138" y="109392" zmin="-5204" zmax="-5004"/>
+		<add x="152822" y="109414" zmin="-5204" zmax="-5004"/>
+	</territory>
+	<spawn name="giran05_2421_62" count="1" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_62"/>
+		<npc id="21085"/><!--Кровавый Снайпер-->
+	</spawn>
+	<territory name="giran05_2421_63">
+		<add x="153618" y="108942" zmin="-5187" zmax="-4987"/>
+		<add x="153839" y="108895" zmin="-5187" zmax="-4987"/>
+		<add x="153896" y="109368" zmin="-5187" zmax="-4987"/>
+		<add x="153583" y="109389" zmin="-5187" zmax="-4987"/>
+	</territory>
+	<spawn name="giran05_2421_63" count="1" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_63"/>
+		<npc id="21085"/><!--Кровавый Снайпер-->
+	</spawn>
+	<territory name="giran05_2421_64">
+		<add x="152999" y="108159" zmin="-5194" zmax="-4994"/>
+		<add x="153800" y="107970" zmin="-5194" zmax="-4994"/>
+		<add x="154200" y="108228" zmin="-5194" zmax="-4994"/>
+		<add x="154238" y="108659" zmin="-5194" zmax="-4994"/>
+		<add x="153676" y="108871" zmin="-5194" zmax="-4994"/>
+		<add x="153153" y="108686" zmin="-5194" zmax="-4994"/>
+	</territory>
+	<spawn name="giran05_2421_64" count="1" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_64"/>
+		<npc id="21085"/><!--Кровавый Снайпер-->
+	</spawn>
+	<territory name="giran05_2421_56">
+		<add x="150201" y="110811" zmin="-5555" zmax="-5355"/>
+		<add x="150824" y="110698" zmin="-5555" zmax="-5355"/>
+		<add x="151386" y="111087" zmin="-5555" zmax="-5355"/>
+		<add x="151087" y="112418" zmin="-5555" zmax="-5355"/>
+		<add x="150373" y="112776" zmin="-5555" zmax="-5355"/>
+		<add x="150027" y="112646" zmin="-5555" zmax="-5355"/>
+		<add x="149825" y="112048" zmin="-5555" zmax="-5355"/>
+		<add x="149816" y="111212" zmin="-5555" zmax="-5355"/>
+	</territory>
+	<spawn name="giran05_2421_56" count="3" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_56"/>
+		<npc id="21085"/><!--Кровавый Снайпер-->
+	</spawn>
+	<territory name="giran05_2421_58">
+		<add x="149699" y="109067" zmin="-5485" zmax="-5035"/>
+		<add x="150187" y="109493" zmin="-5485" zmax="-5035"/>
+		<add x="150233" y="109819" zmin="-5485" zmax="-5035"/>
+		<add x="149526" y="110699" zmin="-5485" zmax="-5035"/>
+		<add x="149292" y="110568" zmin="-5485" zmax="-5035"/>
+		<add x="149189" y="109374" zmin="-5485" zmax="-5035"/>
+	</territory>
+	<spawn name="giran05_2421_58" count="1" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_58"/>
+		<npc id="21085"/><!--Кровавый Снайпер-->
+	</spawn>
+	<territory name="giran05_2421_59">
+		<add x="150914" y="108889" zmin="-5198" zmax="-4998"/>
+		<add x="151874" y="109030" zmin="-5198" zmax="-4998"/>
+		<add x="151887" y="109401" zmin="-5198" zmax="-4998"/>
+		<add x="151445" y="109629" zmin="-5198" zmax="-4998"/>
+		<add x="150742" y="109683" zmin="-5198" zmax="-4998"/>
+		<add x="150325" y="109573" zmin="-5198" zmax="-4998"/>
+	</territory>
+	<spawn name="giran05_2421_59" count="1" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_59"/>
+		<npc id="21085"/><!--Кровавый Снайпер-->
+	</spawn>
+	<territory name="giran05_2421_50">
+		<add x="150694" y="114119" zmin="-5519" zmax="-5319"/>
+		<add x="151755" y="114876" zmin="-5519" zmax="-5319"/>
+		<add x="151878" y="115383" zmin="-5519" zmax="-5319"/>
+		<add x="151158" y="115993" zmin="-5519" zmax="-5319"/>
+		<add x="150340" y="116049" zmin="-5519" zmax="-5319"/>
+		<add x="149924" y="115430" zmin="-5519" zmax="-5319"/>
+		<add x="149834" y="114597" zmin="-5519" zmax="-5319"/>
+		<add x="150161" y="114144" zmin="-5519" zmax="-5319"/>
+	</territory>
+	<spawn name="giran05_2421_50" count="4" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_50"/>
+		<npc id="21085"/><!--Кровавый Снайпер-->
+	</spawn>
+	<territory name="giran05_2421_51">
+		<add x="148817" y="114409" zmin="-5517" zmax="-5317"/>
+		<add x="149761" y="114698" zmin="-5517" zmax="-5317"/>
+		<add x="149798" y="115429" zmin="-5517" zmax="-5317"/>
+		<add x="148817" y="115417" zmin="-5517" zmax="-5317"/>
+		<add x="148365" y="115148" zmin="-5517" zmax="-5317"/>
+		<add x="148374" y="114764" zmin="-5517" zmax="-5317"/>
+	</territory>
+	<spawn name="giran05_2421_51" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_51"/>
+		<npc id="21085"/><!--Кровавый Снайпер-->
+	</spawn>
+	<territory name="giran05_2421_53">
+		<add x="152883" y="113396" zmin="-5567" zmax="-5367"/>
+		<add x="153240" y="111220" zmin="-5567" zmax="-5367"/>
+		<add x="154421" y="111087" zmin="-5567" zmax="-5367"/>
+		<add x="154545" y="112097" zmin="-5567" zmax="-5367"/>
+		<add x="154350" y="112773" zmin="-5567" zmax="-5367"/>
+	</territory>
+	<spawn name="giran05_2421_53" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_53"/>
+		<npc id="21085"/><!--Кровавый Снайпер-->
+	</spawn>
+	<territory name="giran05_2421_65">
+		<add x="154251" y="108261" zmin="-5196" zmax="-4996"/>
+		<add x="154590" y="108011" zmin="-5196" zmax="-4996"/>
+		<add x="154811" y="108139" zmin="-5196" zmax="-4996"/>
+		<add x="154936" y="108620" zmin="-5196" zmax="-4996"/>
+		<add x="154751" y="108975" zmin="-5196" zmax="-4996"/>
+		<add x="154751" y="108975" zmin="-5196" zmax="-4996"/>
+		<add x="154313" y="108659" zmin="-5196" zmax="-4996"/>
+	</territory>
+	<spawn name="giran05_2421_65" count="1" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_65"/>
+		<npc id="21085"/><!--Кровавый Снайпер-->
+	</spawn>
+	<territory name="giran05_2421_66">
+		<add x="152211" y="107439" zmin="-5190" zmax="-4990"/>
+		<add x="153831" y="107018" zmin="-5190" zmax="-4990"/>
+		<add x="153984" y="107203" zmin="-5190" zmax="-4990"/>
+		<add x="153790" y="107939" zmin="-5190" zmax="-4990"/>
+		<add x="153001" y="108121" zmin="-5190" zmax="-4990"/>
+		<add x="152116" y="107818" zmin="-5190" zmax="-4990"/>
+	</territory>
+	<spawn name="giran05_2421_66" count="2" respawn="300" respawn_random="200">
+		<territory name="giran05_2421_66"/>
+		<npc id="21085"/><!--Кровавый Снайпер-->
+	</spawn>
+	<spawn name="party_t24_21_053" count="1" respawn="240" respawn_random="60">
+		<point x="153664" y="121568" z="-3799" h="0"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="giran_t24_21_011" count="1" respawn="240" respawn_random="120">
+		<point x="144990" y="109155" z="-3920" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_011" count="1" respawn="240" respawn_random="120">
+		<point x="145164" y="110046" z="-3920" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_011" count="1" respawn="240" respawn_random="120">
+		<point x="145306" y="110354" z="-3920" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_047" count="1" respawn="60">
+		<point x="146528" y="112192" z="-3616" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_047" count="1" respawn="60">
+		<point x="146240" y="112288" z="-3616" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_047" count="1" respawn="60">
+		<point x="146176" y="112784" z="-3696" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_047" count="1" respawn="60">
+		<point x="146384" y="112576" z="-3696" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_047" count="1" respawn="60">
+		<point x="146704" y="112608" z="-3696" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_047" count="1" respawn="60">
+		<point x="146912" y="112288" z="-3696" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_047" count="1" respawn="60">
+		<point x="147232" y="112848" z="-3696" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_047" count="1" respawn="60">
+		<point x="147632" y="112656" z="-3696" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_047" count="1" respawn="60">
+		<point x="147344" y="112096" z="-3696" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_047" count="1" respawn="60">
+		<point x="147648" y="112224" z="-3696" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="party_giran_t24_21_003" count="1" respawn="1800" respawn_random="300">
+		<territory>
+			<add x="140400" y="113484" zmin="-3836" zmax="-3636"/>
+			<add x="140928" y="113748" zmin="-3836" zmax="-3636"/>
+			<add x="141356" y="114152" zmin="-3836" zmax="-3636"/>
+			<add x="141140" y="115264" zmin="-3836" zmax="-3636"/>
+			<add x="140736" y="115708" zmin="-3836" zmax="-3636"/>
+			<add x="139368" y="114548" zmin="-3836" zmax="-3636"/>
+			<add x="139376" y="114216" zmin="-3836" zmax="-3636"/>
+		</territory>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="giran_t24_21_048" count="1" respawn="60">
+		<point x="148112" y="112192" z="-3696" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_048" count="1" respawn="60">
+		<point x="148356" y="111976" z="-3696" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_048" count="1" respawn="60">
+		<point x="148384" y="112400" z="-3680" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_048" count="1" respawn="60">
+		<point x="147984" y="112624" z="-3696" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_048" count="1" respawn="60">
+		<point x="148640" y="112688" z="-3696" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_048" count="1" respawn="60">
+		<point x="148832" y="112912" z="-3696" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_048" count="1" respawn="60">
+		<point x="148948" y="112544" z="-3696" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_048" count="1" respawn="60">
+		<point x="148740" y="112332" z="-3696" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_048" count="1" respawn="60">
+		<point x="148944" y="112096" z="-3696" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_048" count="1" respawn="60">
+		<point x="149120" y="111904" z="-3696" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_048" count="1" respawn="60">
+		<point x="148688" y="111984" z="-3680" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_048" count="1" respawn="60">
+		<point x="148784" y="111760" z="-3680" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_045" count="1" respawn="240" respawn_random="120">
+		<point x="146672" y="108064" z="-3728" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_045" count="1" respawn="240" respawn_random="120">
+		<point x="146664" y="108452" z="-3632" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_045" count="1" respawn="240" respawn_random="120">
+		<point x="146304" y="108352" z="-3606" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_046" count="1" respawn="900" respawn_random="180">
+		<point x="146288" y="111040" z="-3536" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_046" count="1" respawn="900" respawn_random="180">
+		<point x="146320" y="111408" z="-3552" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_046" count="1" respawn="900" respawn_random="180">
+		<point x="146608" y="111472" z="-3520" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_043" count="1" respawn="240" respawn_random="120">
+		<point x="150352" y="107920" z="-4672" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_043" count="1" respawn="240" respawn_random="120">
+		<point x="149824" y="108192" z="-4534" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_043" count="1" respawn="240" respawn_random="120">
+		<point x="149552" y="108528" z="-4464" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_044" count="1" respawn="240" respawn_random="120">
+		<point x="148224" y="107136" z="-4121" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_044" count="1" respawn="240" respawn_random="120">
+		<point x="147584" y="107136" z="-4007" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_044" count="1" respawn="240" respawn_random="120">
+		<point x="147216" y="107328" z="-3945" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_041" count="1" respawn="240" respawn_random="120">
+		<point x="154692" y="108532" z="-5136" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_041" count="1" respawn="240" respawn_random="120">
+		<point x="154784" y="108776" z="-5136" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_041" count="1" respawn="240" respawn_random="120">
+		<point x="154496" y="108336" z="-5136" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_040" count="1" respawn="240" respawn_random="120">
+		<point x="152928" y="107968" z="-5136" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_040" count="1" respawn="240" respawn_random="120">
+		<point x="153568" y="107248" z="-5136" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_040" count="1" respawn="240" respawn_random="120">
+		<point x="153232" y="107168" z="-5136" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_040" count="1" respawn="240" respawn_random="120">
+		<point x="152512" y="107872" z="-5072" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_040" count="1" respawn="240" respawn_random="120">
+		<point x="152784" y="107424" z="-5120" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="party_giran_t24_21_007" count="1" respawn="1800" respawn_random="300">
+		<territory>
+			<add x="143160" y="109760" zmin="-3984" zmax="-3784"/>
+			<add x="143952" y="109728" zmin="-3984" zmax="-3784"/>
+			<add x="144192" y="109896" zmin="-3984" zmax="-3784"/>
+			<add x="144316" y="110324" zmin="-3984" zmax="-3784"/>
+			<add x="144188" y="110700" zmin="-3984" zmax="-3784"/>
+			<add x="143728" y="110868" zmin="-3984" zmax="-3784"/>
+			<add x="143412" y="110776" zmin="-3984" zmax="-3784"/>
+			<add x="142996" y="110328" zmin="-3984" zmax="-3784"/>
+		</territory>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_006" count="1" respawn="1800" respawn_random="300">
+		<territory>
+			<add x="143240" y="111704" zmin="-3988" zmax="-3788"/>
+			<add x="144896" y="112268" zmin="-3988" zmax="-3788"/>
+			<add x="144268" y="113048" zmin="-3988" zmax="-3788"/>
+			<add x="143852" y="113104" zmin="-3988" zmax="-3788"/>
+			<add x="143328" y="112892" zmin="-3988" zmax="-3788"/>
+			<add x="142768" y="112244" zmin="-3988" zmax="-3788"/>
+		</territory>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<territory name="party_giran_t24_21_005">
+		<add x="140436" y="107468" zmin="-4000" zmax="-3800"/>
+		<add x="141464" y="108512" zmin="-4000" zmax="-3800"/>
+		<add x="141688" y="109696" zmin="-4000" zmax="-3800"/>
+		<add x="141216" y="110584" zmin="-4000" zmax="-3800"/>
+		<add x="140800" y="111000" zmin="-4000" zmax="-3800"/>
+		<add x="140296" y="110992" zmin="-4000" zmax="-3800"/>
+		<add x="139948" y="110428" zmin="-4000" zmax="-3800"/>
+	</territory>
+	<spawn name="party_giran_t24_21_005" count="1" respawn="1500" respawn_random="300">
+		<territory name="party_giran_t24_21_005"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_005" count="1" respawn="1500" respawn_random="300">
+		<territory name="party_giran_t24_21_005"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="giran_t24_21_049" count="1" respawn="60">
+		<point x="149456" y="115728" z="-3680" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_049" count="1" respawn="60">
+		<point x="149262" y="115926" z="-3680" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_049" count="1" respawn="60">
+		<point x="149024" y="115984" z="-3680" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_049" count="1" respawn="60">
+		<point x="149216" y="115680" z="-3680" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_049" count="1" respawn="60">
+		<point x="148768" y="115952" z="-3691" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_049" count="1" respawn="60">
+		<point x="148672" y="115712" z="-3696" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_049" count="1" respawn="60">
+		<point x="148688" y="115456" z="-3696" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_049" count="1" respawn="60">
+		<point x="148912" y="115488" z="-3696" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_049" count="1" respawn="60">
+		<point x="148960" y="115248" z="-3696" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_049" count="1" respawn="60">
+		<point x="149296" y="115200" z="-3696" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_058" count="1" respawn="60">
+		<point x="148906" y="113376" z="-3696" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_058" count="1" respawn="60">
+		<point x="148976" y="113088" z="-3696" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_058" count="1" respawn="60">
+		<point x="149228" y="113056" z="-3696" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_058" count="1" respawn="60">
+		<point x="148852" y="113614" z="-3696" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_058" count="1" respawn="60">
+		<point x="149348" y="113486" z="-3696" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_058" count="1" respawn="60">
+		<point x="148960" y="113810" z="-3696" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_058" count="1" respawn="60">
+		<point x="149136" y="113952" z="-3696" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_058" count="1" respawn="60">
+		<point x="149008" y="114192" z="-3696" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_058" count="1" respawn="60">
+		<point x="149217" y="114321" z="-3696" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_058" count="1" respawn="60">
+		<point x="149056" y="114512" z="-3696" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_058" count="1" respawn="60">
+		<point x="149184" y="114720" z="-3696" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_058" count="1" respawn="60">
+		<point x="149008" y="114896" z="-3696" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_058" count="1" respawn="60">
+		<point x="149360" y="114864" z="-3696" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_058" count="1" respawn="60">
+		<point x="149152" y="115024" z="-3696" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="party_giran_t24_21_014" count="1" respawn="1800" respawn_random="300">
+		<territory>
+			<add x="144948" y="113844" zmin="-3772" zmax="-3572"/>
+			<add x="145288" y="113956" zmin="-3772" zmax="-3572"/>
+			<add x="145432" y="115092" zmin="-3772" zmax="-3572"/>
+			<add x="144812" y="115456" zmin="-3772" zmax="-3572"/>
+			<add x="144428" y="115212" zmin="-3772" zmax="-3572"/>
+			<add x="144316" y="114276" zmin="-3772" zmax="-3572"/>
+			<add x="144528" y="113920" zmin="-3772" zmax="-3572"/>
+		</territory>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="giran_t24_21_059" count="1" respawn="60">
+		<point x="149520" y="116416" z="-3680" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_059" count="1" respawn="60">
+		<point x="149728" y="116208" z="-3680" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_059" count="1" respawn="60">
+		<point x="149728" y="116688" z="-3680" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_059" count="1" respawn="60">
+		<point x="150000" y="116544" z="-3680" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_059" count="1" respawn="60">
+		<point x="150192" y="116800" z="-3680" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_059" count="1" respawn="60">
+		<point x="149952" y="116976" z="-3680" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="party_giran_t24_21_013" count="1" respawn="1800" respawn_random="300">
+		<territory>
+			<add x="143688" y="114152" zmin="-3760" zmax="-3560"/>
+			<add x="144304" y="114244" zmin="-3760" zmax="-3560"/>
+			<add x="144424" y="115232" zmin="-3760" zmax="-3560"/>
+			<add x="143496" y="114976" zmin="-3760" zmax="-3560"/>
+			<add x="143208" y="114624" zmin="-3760" zmax="-3560"/>
+			<add x="143112" y="114328" zmin="-3760" zmax="-3560"/>
+		</territory>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="giran_t24_21_056" count="1" respawn="60">
+		<point x="146976" y="118432" z="-4000" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_056" count="1" respawn="60">
+		<point x="146496" y="118176" z="-3904" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<territory name="party_giran_t24_21_012">
+		<add x="146848" y="109040" zmin="-3980" zmax="-3780"/>
+		<add x="148204" y="109120" zmin="-3980" zmax="-3780"/>
+		<add x="148700" y="109492" zmin="-3980" zmax="-3780"/>
+		<add x="148624" y="110672" zmin="-3980" zmax="-3780"/>
+		<add x="148380" y="110892" zmin="-3980" zmax="-3780"/>
+		<add x="148028" y="110960" zmin="-3980" zmax="-3780"/>
+		<add x="146672" y="110568" zmin="-3980" zmax="-3780"/>
+	</territory>
+	<spawn name="party_giran_t24_21_012" count="1" respawn="1500" respawn_random="300">
+		<territory name="party_giran_t24_21_012"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_012" count="1" respawn="1500" respawn_random="300">
+		<territory name="party_giran_t24_21_012"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="giran_t24_21_057" count="1" respawn="60">
+		<point x="151088" y="117920" z="-5088" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_057" count="1" respawn="60">
+		<point x="151296" y="117760" z="-5143" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_054" count="1" respawn="60">
+		<point x="147264" y="120776" z="-4652" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<territory name="party_giran_t24_21_010">
+		<add x="144872" y="107076" zmin="-3984" zmax="-3784"/>
+		<add x="146120" y="108028" zmin="-3984" zmax="-3784"/>
+		<add x="146216" y="109136" zmin="-3984" zmax="-3784"/>
+		<add x="144164" y="108936" zmin="-3984" zmax="-3784"/>
+		<add x="144000" y="107696" zmin="-3984" zmax="-3784"/>
+		<add x="144140" y="107204" zmin="-3984" zmax="-3784"/>
+	</territory>
+	<spawn name="party_giran_t24_21_010" count="1" respawn="1500" respawn_random="300">
+		<territory name="party_giran_t24_21_010"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_010" count="1" respawn="1500" respawn_random="300">
+		<territory name="party_giran_t24_21_010"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="giran_t24_21_055" count="1" respawn="60">
+		<point x="147152" y="119424" z="-4304" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_055" count="1" respawn="60">
+		<point x="147168" y="119016" z="-4160" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_055" count="1" respawn="60">
+		<point x="147120" y="118752" z="-4090" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_052" count="1" respawn="60">
+		<point x="151840" y="121152" z="-3785" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_052" count="1" respawn="60">
+		<point x="152032" y="121168" z="-3785" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_052" count="1" respawn="60">
+		<point x="151968" y="121408" z="-3776" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_052" count="1" respawn="60">
+		<point x="151760" y="121616" z="-3785" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_052" count="1" respawn="60">
+		<point x="152000" y="121648" z="-3785" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_052" count="1" respawn="60">
+		<point x="152240" y="121664" z="-3785" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_052" count="1" respawn="60">
+		<point x="152464" y="121616" z="-3785" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_052" count="1" respawn="60">
+		<point x="152384" y="121904" z="-3785" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_052" count="1" respawn="60">
+		<point x="152544" y="122064" z="-3785" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_052" count="1" respawn="60">
+		<point x="152592" y="121776" z="-3785" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_050" count="1" respawn="60">
+		<point x="152160" y="119088" z="-3776" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_050" count="1" respawn="60">
+		<point x="152400" y="119040" z="-3784" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_050" count="1" respawn="60">
+		<point x="152032" y="119616" z="-3776" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_050" count="1" respawn="60">
+		<point x="152352" y="119296" z="-3776" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_050" count="1" respawn="60">
+		<point x="152592" y="119360" z="-3760" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_050" count="1" respawn="60">
+		<point x="152256" y="119552" z="-3760" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_050" count="1" respawn="60">
+		<point x="152144" y="119808" z="-3769" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_050" count="1" respawn="60">
+		<point x="152816" y="119104" z="-3776" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_050" count="1" respawn="60">
+		<point x="152800" y="119456" z="-3785" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_050" count="1" respawn="60">
+		<point x="152768" y="119696" z="-3785" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_050" count="1" respawn="60">
+		<point x="152944" y="119792" z="-3785" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_050" count="1" respawn="60">
+		<point x="153168" y="119792" z="-3785" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_050" count="1" respawn="60">
+		<point x="152752" y="119904" z="-3785" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_050" count="1" respawn="60">
+		<point x="152720" y="120176" z="-3785" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_050" count="1" respawn="60">
+		<point x="152432" y="120288" z="-3785" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_050" count="1" respawn="60">
+		<point x="152192" y="120144" z="-3785" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_050" count="1" respawn="60">
+		<point x="152288" y="119856" z="-3785" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_050" count="1" respawn="60">
+		<point x="152064" y="120016" z="-3784" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_051" count="1" respawn="60">
+		<point x="153440" y="119440" z="-3785" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_051" count="1" respawn="60">
+		<point x="153568" y="119152" z="-3785" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_051" count="1" respawn="60">
+		<point x="153824" y="119040" z="-3785" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_051" count="1" respawn="60">
+		<point x="153984" y="119280" z="-3785" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_051" count="1" respawn="60">
+		<point x="154240" y="119184" z="-3785" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_051" count="1" respawn="60">
+		<point x="154304" y="118896" z="-3785" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_051" count="1" respawn="60">
+		<point x="154384" y="118640" z="-3785" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_051" count="1" respawn="60">
+		<point x="154320" y="118368" z="-3785" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_051" count="1" respawn="60">
+		<point x="153904" y="118352" z="-3785" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_051" count="1" respawn="60">
+		<point x="153792" y="118560" z="-3785" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_051" count="1" respawn="60">
+		<point x="153728" y="118768" z="-3785" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_051" count="1" respawn="60">
+		<point x="153488" y="118704" z="-3785" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="party_giran_t24_21_019" count="1" respawn="1500" respawn_random="300">
+		<territory>
+			<add x="142404" y="118464" zmin="-3968" zmax="-3768"/>
+			<add x="143016" y="118424" zmin="-3968" zmax="-3768"/>
+			<add x="142900" y="119196" zmin="-3968" zmax="-3768"/>
+			<add x="142500" y="119812" zmin="-3968" zmax="-3768"/>
+			<add x="141404" y="119376" zmin="-3968" zmax="-3768"/>
+			<add x="141556" y="118876" zmin="-3968" zmax="-3768"/>
+		</territory>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_018" count="1" respawn="1500" respawn_random="300">
+		<territory>
+			<add x="142844" y="115768" zmin="-3952" zmax="-3752"/>
+			<add x="143584" y="116124" zmin="-3952" zmax="-3752"/>
+			<add x="143792" y="116612" zmin="-3952" zmax="-3752"/>
+			<add x="143816" y="117796" zmin="-3952" zmax="-3752"/>
+			<add x="143232" y="118280" zmin="-3952" zmax="-3752"/>
+			<add x="142608" y="118048" zmin="-3952" zmax="-3752"/>
+			<add x="141624" y="117108" zmin="-3952" zmax="-3752"/>
+			<add x="142116" y="116044" zmin="-3952" zmax="-3752"/>
+		</territory>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_018" count="1" respawn="1500" respawn_random="300">
+		<point x="142117" y="117012" z="-3920" h="0"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_017" count="1" respawn="1500" respawn_random="300">
+		<territory>
+			<add x="139924" y="117372" zmin="-3952" zmax="-3752"/>
+			<add x="141444" y="117296" zmin="-3952" zmax="-3752"/>
+			<add x="141124" y="119328" zmin="-3952" zmax="-3752"/>
+			<add x="140528" y="119796" zmin="-3952" zmax="-3752"/>
+			<add x="139908" y="119684" zmin="-3952" zmax="-3752"/>
+			<add x="139648" y="118824" zmin="-3952" zmax="-3752"/>
+			<add x="139684" y="118016" zmin="-3952" zmax="-3752"/>
+		</territory>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_017" count="1" respawn="1500" respawn_random="300">
+		<point x="140432" y="118256" z="-3920" h="0"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<territory name="party_giran_t24_21_016">
+		<add x="147360" y="117732" zmin="-3760" zmax="-3560"/>
+		<add x="148532" y="116716" zmin="-3760" zmax="-3560"/>
+		<add x="148856" y="116744" zmin="-3760" zmax="-3560"/>
+		<add x="149244" y="117764" zmin="-3760" zmax="-3560"/>
+		<add x="149140" y="118380" zmin="-3760" zmax="-3560"/>
+		<add x="148892" y="118668" zmin="-3760" zmax="-3560"/>
+		<add x="148288" y="118748" zmin="-3760" zmax="-3560"/>
+		<add x="147920" y="118580" zmin="-3760" zmax="-3560"/>
+	</territory>
+	<spawn name="party_giran_t24_21_016" count="1" respawn="1500" respawn_random="300">
+		<territory name="party_giran_t24_21_016"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_016" count="1" respawn="1500" respawn_random="300">
+		<territory name="party_giran_t24_21_016"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="giran_t24_21_016" count="1" respawn="240" respawn_random="120">
+		<point x="148582" y="117811" z="-3696" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_016" count="1" respawn="240" respawn_random="120">
+		<point x="147853" y="118301" z="-3696" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_016" count="1" respawn="240" respawn_random="120">
+		<point x="148880" y="117088" z="-3696" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_016" count="1" respawn="240" respawn_random="120">
+		<point x="148544" y="118160" z="-3696" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_016" count="1" respawn="240" respawn_random="120">
+		<point x="148880" y="118448" z="-3696" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<territory name="party_giran_t24_21_024">
+		<add x="148436" y="119484" zmin="-4904" zmax="-4704"/>
+		<add x="149400" y="119284" zmin="-4904" zmax="-4704"/>
+		<add x="150332" y="120916" zmin="-4904" zmax="-4704"/>
+		<add x="150332" y="121640" zmin="-4904" zmax="-4704"/>
+		<add x="149920" y="121900" zmin="-4904" zmax="-4704"/>
+		<add x="147920" y="121748" zmin="-4904" zmax="-4704"/>
+	</territory>
+	<spawn name="party_giran_t24_21_024" count="1" respawn="1200" respawn_random="300">
+		<territory name="party_giran_t24_21_024"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_024" count="1" respawn="1200" respawn_random="300">
+		<territory name="party_giran_t24_21_024"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="giran_t24_21_023" count="1" respawn="240" respawn_random="120">
+		<point x="145072" y="118656" z="-3888" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_023" count="1" respawn="240" respawn_random="120">
+		<point x="145384" y="118357" z="-3888" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_023" count="1" respawn="240" respawn_random="120">
+		<point x="144704" y="118048" z="-3888" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_023" count="1" respawn="240" respawn_random="120">
+		<point x="145041" y="117685" z="-3888" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_023" count="1" respawn="240" respawn_random="120">
+		<point x="144679" y="117701" z="-3888" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_023" count="1" respawn="240" respawn_random="120">
+		<point x="145455" y="117493" z="-3888" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_023" count="1" respawn="240" respawn_random="120">
+		<point x="145770" y="117260" z="-3888" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_023" count="1" respawn="240" respawn_random="120">
+		<point x="144897" y="116954" z="-3888" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_023" count="1" respawn="240" respawn_random="120">
+		<point x="145865" y="117903" z="-3888" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<territory name="party_giran_t24_21_023">
+		<add x="144704" y="116932" zmin="-3972" zmax="-3772"/>
+		<add x="144996" y="116752" zmin="-3972" zmax="-3772"/>
+		<add x="146092" y="117096" zmin="-3972" zmax="-3772"/>
+		<add x="146308" y="117500" zmin="-3972" zmax="-3772"/>
+		<add x="145312" y="118772" zmin="-3972" zmax="-3772"/>
+		<add x="144312" y="118784" zmin="-3972" zmax="-3772"/>
+	</territory>
+	<spawn name="party_giran_t24_21_023" count="1" respawn="1200" respawn_random="300">
+		<territory name="party_giran_t24_21_023"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_023" count="1" respawn="1200" respawn_random="300">
+		<territory name="party_giran_t24_21_023"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="giran_t24_21_024" count="1" respawn="240" respawn_random="120">
+		<point x="148247" y="121020" z="-4768" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_024" count="1" respawn="240" respawn_random="120">
+		<point x="148563" y="121287" z="-4832" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_024" count="1" respawn="240" respawn_random="120">
+		<point x="149244" y="121666" z="-4848" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_024" count="1" respawn="240" respawn_random="120">
+		<point x="149528" y="121280" z="-4848" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_024" count="1" respawn="240" respawn_random="120">
+		<point x="150074" y="120964" z="-4848" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_024" count="1" respawn="240" respawn_random="120">
+		<point x="149639" y="120814" z="-4848" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_024" count="1" respawn="240" respawn_random="120">
+		<point x="148806" y="120523" z="-4848" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_024" count="1" respawn="240" respawn_random="120">
+		<point x="149319" y="120459" z="-4848" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_024" count="1" respawn="240" respawn_random="120">
+		<point x="148384" y="120320" z="-4848" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_024" count="1" respawn="240" respawn_random="120">
+		<point x="149471" y="119675" z="-4848" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_024" count="1" respawn="240" respawn_random="120">
+		<point x="148508" y="119787" z="-4828" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="party_giran_t24_21_022" count="1" respawn="1200" respawn_random="300">
+		<territory>
+			<add x="145844" y="118912" zmin="-3952" zmax="-3752"/>
+			<add x="146136" y="119036" zmin="-3952" zmax="-3752"/>
+			<add x="146212" y="120732" zmin="-3952" zmax="-3752"/>
+			<add x="145912" y="121024" zmin="-3952" zmax="-3752"/>
+			<add x="145220" y="120728" zmin="-3952" zmax="-3752"/>
+			<add x="145068" y="120384" zmin="-3952" zmax="-3752"/>
+		</territory>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="giran_t24_21_021" count="1" respawn="240" respawn_random="120">
+		<point x="142966" y="121206" z="-3888" h="40"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_021" count="1" respawn="240" respawn_random="120">
+		<point x="142801" y="120827" z="-3888" h="40"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_021" count="1" respawn="240" respawn_random="120">
+		<point x="144099" y="120924" z="-3888" h="40"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_021" count="1" respawn="240" respawn_random="120">
+		<point x="142781" y="120314" z="-3888" h="40"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_021" count="1" respawn="240" respawn_random="120">
+		<point x="143702" y="120388" z="-3888" h="40"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<territory name="party_giran_t24_21_021">
+		<add x="143164" y="119884" zmin="-3964" zmax="-3764"/>
+		<add x="144464" y="120096" zmin="-3964" zmax="-3764"/>
+		<add x="144484" y="121592" zmin="-3964" zmax="-3764"/>
+		<add x="143312" y="121804" zmin="-3964" zmax="-3764"/>
+		<add x="142584" y="121656" zmin="-3964" zmax="-3764"/>
+		<add x="142332" y="120980" zmin="-3964" zmax="-3764"/>
+		<add x="142552" y="120108" zmin="-3964" zmax="-3764"/>
+	</territory>
+	<spawn name="party_giran_t24_21_021" count="1" respawn="1500" respawn_random="300">
+		<territory name="party_giran_t24_21_021"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_021" count="1" respawn="1500" respawn_random="300">
+		<territory name="party_giran_t24_21_021"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="giran_t24_21_022" count="1" respawn="240" respawn_random="120">
+		<point x="146072" y="120624" z="-3888" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_022" count="1" respawn="240" respawn_random="120">
+		<point x="146064" y="120224" z="-3888" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_022" count="1" respawn="240" respawn_random="120">
+		<point x="145424" y="120400" z="-3888" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_022" count="1" respawn="240" respawn_random="120">
+		<point x="146048" y="119776" z="-3888" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_022" count="1" respawn="240" respawn_random="120">
+		<point x="145728" y="119680" z="-3888" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_022" count="1" respawn="240" respawn_random="120">
+		<point x="146032" y="119392" z="-3888" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="party_giran_t24_21_020" count="1" respawn="1500" respawn_random="300">
+		<territory>
+			<add x="140284" y="120592" zmin="-3956" zmax="-3756"/>
+			<add x="140716" y="120380" zmin="-3956" zmax="-3756"/>
+			<add x="141924" y="121252" zmin="-3956" zmax="-3756"/>
+			<add x="142000" y="121812" zmin="-3956" zmax="-3756"/>
+			<add x="141200" y="122152" zmin="-3956" zmax="-3756"/>
+			<add x="140552" y="122112" zmin="-3956" zmax="-3756"/>
+			<add x="140048" y="121668" zmin="-3956" zmax="-3756"/>
+		</territory>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="giran_t24_21_020" count="1" respawn="240" respawn_random="120">
+		<point x="140624" y="120784" z="-3884" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_020" count="1" respawn="240" respawn_random="120">
+		<point x="140936" y="120904" z="-3888" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_020" count="1" respawn="240" respawn_random="120">
+		<point x="141140" y="121220" z="-3888" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_020" count="1" respawn="240" respawn_random="120">
+		<point x="140664" y="121844" z="-3888" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_020" count="1" respawn="240" respawn_random="120">
+		<point x="141572" y="121360" z="-3888" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_020" count="1" respawn="240" respawn_random="120">
+		<point x="141880" y="121448" z="-3888" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="party_giran_t24_21_029" count="1" respawn="1200" respawn_random="300">
+		<territory>
+			<add x="152776" y="114924" zmin="-5296" zmax="-5096"/>
+			<add x="153324" y="114728" zmin="-5296" zmax="-5096"/>
+			<add x="153816" y="115700" zmin="-5296" zmax="-5096"/>
+			<add x="153400" y="116508" zmin="-5296" zmax="-5096"/>
+			<add x="152964" y="116320" zmin="-5296" zmax="-5096"/>
+		</territory>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_028" count="1" respawn="1200" respawn_random="300">
+		<territory>
+			<add x="152956" y="116320" zmin="-5296" zmax="-5096"/>
+			<add x="154576" y="116988" zmin="-5296" zmax="-5096"/>
+			<add x="154136" y="117320" zmin="-5296" zmax="-5096"/>
+			<add x="153464" y="117336" zmin="-5296" zmax="-5096"/>
+			<add x="152840" y="117044" zmin="-5296" zmax="-5096"/>
+		</territory>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="giran_t24_21_029" count="1" respawn="240" respawn_random="120">
+		<point x="153332" y="116320" z="-5232" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_029" count="1" respawn="240" respawn_random="120">
+		<point x="153494" y="116006" z="-5232" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_029" count="1" respawn="240" respawn_random="120">
+		<point x="153629" y="115631" z="-5232" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_029" count="1" respawn="240" respawn_random="120">
+		<point x="153075" y="115495" z="-5232" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_029" count="1" respawn="240" respawn_random="120">
+		<point x="153256" y="114928" z="-5232" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_028" count="1" respawn="240" respawn_random="120">
+		<point x="153095" y="116928" z="-5232" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_028" count="1" respawn="240" respawn_random="120">
+		<point x="153427" y="116887" z="-5232" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_028" count="1" respawn="240" respawn_random="120">
+		<point x="154208" y="117021" z="-5225" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<territory name="party_giran_t24_21_036">
+		<add x="150704" y="110624" zmin="-5568" zmax="-5368"/>
+		<add x="151496" y="111076" zmin="-5568" zmax="-5368"/>
+		<add x="151236" y="112316" zmin="-5568" zmax="-5368"/>
+		<add x="150604" y="112808" zmin="-5568" zmax="-5368"/>
+		<add x="150072" y="112788" zmin="-5568" zmax="-5368"/>
+		<add x="149764" y="112140" zmin="-5568" zmax="-5368"/>
+		<add x="149724" y="111092" zmin="-5568" zmax="-5368"/>
+	</territory>
+	<spawn name="party_giran_t24_21_036" count="1" respawn="900" respawn_random="300">
+		<territory name="party_giran_t24_21_036"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_036" count="1" respawn="900" respawn_random="300">
+		<territory name="party_giran_t24_21_036"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_035" count="1" respawn="900" respawn_random="300">
+		<territory>
+			<add x="152236" y="110012" zmin="-5560" zmax="-5360"/>
+			<add x="153036" y="110436" zmin="-5560" zmax="-5360"/>
+			<add x="152940" y="110756" zmin="-5560" zmax="-5360"/>
+			<add x="152372" y="110836" zmin="-5560" zmax="-5360"/>
+			<add x="151972" y="110728" zmin="-5560" zmax="-5360"/>
+			<add x="151844" y="110432" zmin="-5560" zmax="-5360"/>
+			<add x="151944" y="110088" zmin="-5560" zmax="-5360"/>
+		</territory>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="giran_t24_21_034" count="1" respawn="240" respawn_random="120">
+		<point x="153348" y="113020" z="-5504" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_034" count="1" respawn="240" respawn_random="120">
+		<point x="153754" y="112910" z="-5504" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_034" count="1" respawn="240" respawn_random="120">
+		<point x="153386" y="112569" z="-5504" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_034" count="1" respawn="240" respawn_random="120">
+		<point x="154389" y="112120" z="-5504" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_034" count="1" respawn="240" respawn_random="120">
+		<point x="152987" y="111584" z="-5504" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<territory name="party_giran_t24_21_034">
+		<add x="153508" y="110580" zmin="-5564" zmax="-5364"/>
+		<add x="154448" y="111020" zmin="-5564" zmax="-5364"/>
+		<add x="154564" y="112432" zmin="-5564" zmax="-5364"/>
+		<add x="154312" y="112928" zmin="-5564" zmax="-5364"/>
+		<add x="153276" y="113188" zmin="-5564" zmax="-5364"/>
+		<add x="152884" y="112772" zmin="-5564" zmax="-5364"/>
+		<add x="152792" y="111376" zmin="-5564" zmax="-5364"/>
+	</territory>
+	<spawn name="party_giran_t24_21_034" count="1" respawn="900" respawn_random="300">
+		<territory name="party_giran_t24_21_034"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_034" count="1" respawn="900" respawn_random="300">
+		<territory name="party_giran_t24_21_034"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_033" count="1" respawn="900" respawn_random="300">
+		<territory>
+			<add x="148656" y="114444" zmin="-5524" zmax="-5324"/>
+			<add x="149276" y="114296" zmin="-5524" zmax="-5324"/>
+			<add x="149460" y="115484" zmin="-5524" zmax="-5324"/>
+			<add x="148732" y="115444" zmin="-5524" zmax="-5324"/>
+			<add x="148368" y="115164" zmin="-5524" zmax="-5324"/>
+			<add x="148328" y="114772" zmin="-5524" zmax="-5324"/>
+		</territory>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="giran_t24_21_032" count="1" respawn="240" respawn_random="120">
+		<point x="151634" y="114989" z="-5456" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_032" count="1" respawn="240" respawn_random="120">
+		<point x="151261" y="115189" z="-5456" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_032" count="1" respawn="240" respawn_random="120">
+		<point x="151235" y="114786" z="-5456" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_032" count="1" respawn="240" respawn_random="120">
+		<point x="149945" y="115213" z="-5456" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<territory name="party_giran_t24_21_032">
+		<add x="150408" y="113888" zmin="-5528" zmax="-5328"/>
+		<add x="151784" y="114768" zmin="-5528" zmax="-5328"/>
+		<add x="151804" y="115524" zmin="-5528" zmax="-5328"/>
+		<add x="151220" y="116100" zmin="-5528" zmax="-5328"/>
+		<add x="150296" y="116196" zmin="-5528" zmax="-5328"/>
+		<add x="149824" y="115528" zmin="-5528" zmax="-5328"/>
+		<add x="149808" y="114452" zmin="-5528" zmax="-5328"/>
+	</territory>
+	<spawn name="party_giran_t24_21_032" count="1" respawn="900" respawn_random="300">
+		<territory name="party_giran_t24_21_032"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_032" count="1" respawn="900" respawn_random="300">
+		<territory name="party_giran_t24_21_032"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_031" count="1" respawn="1200" respawn_random="300">
+		<territory>
+			<add x="153784" y="114220" zmin="-5288" zmax="-5088"/>
+			<add x="154508" y="114196" zmin="-5288" zmax="-5088"/>
+			<add x="154872" y="114580" zmin="-5288" zmax="-5088"/>
+			<add x="154920" y="115056" zmin="-5288" zmax="-5088"/>
+			<add x="153516" y="115076" zmin="-5288" zmax="-5088"/>
+			<add x="153312" y="114712" zmin="-5288" zmax="-5088"/>
+		</territory>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="giran_t24_21_030" count="1" respawn="240" respawn_random="120">
+		<point x="154242" y="116649" z="-5232" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_030" count="1" respawn="240" respawn_random="120">
+		<point x="154440" y="116251" z="-5232" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_030" count="1" respawn="240" respawn_random="120">
+		<point x="154572" y="115448" z="-5232" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="party_giran_t24_21_030" count="1" respawn="1200" respawn_random="300">
+		<territory>
+			<add x="154432" y="115108" zmin="-5308" zmax="-5108"/>
+			<add x="154920" y="115068" zmin="-5308" zmax="-5108"/>
+			<add x="154924" y="115892" zmin="-5308" zmax="-5108"/>
+			<add x="154548" y="116980" zmin="-5308" zmax="-5108"/>
+			<add x="154024" y="116752" zmin="-5308" zmax="-5108"/>
+		</territory>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="giran_t24_21_031" count="1" respawn="240" respawn_random="120">
+		<point x="153595" y="114886" z="-5232" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_031" count="1" respawn="240" respawn_random="120">
+		<point x="153965" y="114932" z="-5232" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_031" count="1" respawn="240" respawn_random="120">
+		<point x="153813" y="114352" z="-5232" h="0"/>
+		<npc id="20623"/><!--Пландо-->
+	</spawn>
+	<spawn name="giran_t24_21_031" count="1" respawn="240" respawn_random="120">
+		<point x="154282" y="114770" z="-5232" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="giran_t24_21_031" count="1" respawn="240" respawn_random="120">
+		<point x="154813" y="114729" z="-5232" h="0"/>
+		<npc id="20624"/><!--Пещерный Ревун-->
+	</spawn>
+	<spawn name="party_giran_t24_21_039" count="1" respawn="600" respawn_random="300">
+		<territory>
+			<add x="152928" y="108152" zmin="-5208" zmax="-5008"/>
+			<add x="153916" y="107960" zmin="-5208" zmax="-5008"/>
+			<add x="153904" y="109524" zmin="-5208" zmax="-5008"/>
+			<add x="153224" y="109772" zmin="-5208" zmax="-5008"/>
+			<add x="152808" y="109456" zmin="-5208" zmax="-5008"/>
+		</territory>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_038" count="1" respawn="600" respawn_random="300">
+		<territory>
+			<add x="150972" y="108700" zmin="-5220" zmax="-5020"/>
+			<add x="152164" y="109004" zmin="-5220" zmax="-5020"/>
+			<add x="151868" y="109488" zmin="-5220" zmax="-5020"/>
+			<add x="151364" y="109740" zmin="-5220" zmax="-5020"/>
+			<add x="150424" y="109752" zmin="-5220" zmax="-5020"/>
+			<add x="150400" y="109348" zmin="-5220" zmax="-5020"/>
+		</territory>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_037" count="1" respawn="600" respawn_random="300">
+		<point x="149520" y="109456" z="-5223" h="0"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_047" count="1" respawn="360" respawn_random="180">
+		<territory>
+			<add x="145900" y="112360" zmin="-3760" zmax="-3560"/>
+			<add x="147060" y="111896" zmin="-3760" zmax="-3560"/>
+			<add x="147876" y="111836" zmin="-3760" zmax="-3560"/>
+			<add x="147716" y="112908" zmin="-3760" zmax="-3560"/>
+			<add x="146836" y="113124" zmin="-3760" zmax="-3560"/>
+			<add x="146012" y="112912" zmin="-3760" zmax="-3560"/>
+		</territory>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_046" count="1" respawn="600" respawn_random="300">
+		<territory>
+			<add x="145984" y="110768" zmin="-3604" zmax="-3404"/>
+			<add x="146616" y="110576" zmin="-3604" zmax="-3404"/>
+			<add x="146724" y="111676" zmin="-3604" zmax="-3404"/>
+			<add x="145928" y="111816" zmin="-3604" zmax="-3404"/>
+		</territory>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_045" count="1" respawn="600" respawn_random="300">
+		<point x="146608" y="108176" z="-3712" h="0"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_040" count="1" respawn="600" respawn_random="300">
+		<territory>
+			<add x="153752" y="106972" zmin="-5196" zmax="-4996"/>
+			<add x="154044" y="107232" zmin="-5196" zmax="-4996"/>
+			<add x="153884" y="107964" zmin="-5196" zmax="-4996"/>
+			<add x="152904" y="108140" zmin="-5196" zmax="-4996"/>
+			<add x="152196" y="107968" zmin="-5196" zmax="-4996"/>
+			<add x="152112" y="107344" zmin="-5196" zmax="-4996"/>
+		</territory>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_049" count="1" respawn="360" respawn_random="180">
+		<territory>
+			<add x="148812" y="115172" zmin="-3764" zmax="-3564"/>
+			<add x="149432" y="115096" zmin="-3764" zmax="-3564"/>
+			<add x="149668" y="115928" zmin="-3764" zmax="-3564"/>
+			<add x="149224" y="116324" zmin="-3764" zmax="-3564"/>
+			<add x="148604" y="116128" zmin="-3764" zmax="-3564"/>
+			<add x="148324" y="115600" zmin="-3764" zmax="-3564"/>
+		</territory>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_048" count="1" respawn="360" respawn_random="180">
+		<territory>
+			<add x="148588" y="111508" zmin="-3760" zmax="-3560"/>
+			<add x="149140" y="111708" zmin="-3760" zmax="-3560"/>
+			<add x="149340" y="112916" zmin="-3760" zmax="-3560"/>
+			<add x="148412" y="113048" zmin="-3760" zmax="-3560"/>
+			<add x="147696" y="112908" zmin="-3760" zmax="-3560"/>
+			<add x="147876" y="111812" zmin="-3760" zmax="-3560"/>
+		</territory>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<territory name="party_giran_t24_21_050">
+		<add x="152188" y="118860" zmin="-3864" zmax="-3664"/>
+		<add x="153220" y="119020" zmin="-3864" zmax="-3664"/>
+		<add x="153264" y="119932" zmin="-3864" zmax="-3664"/>
+		<add x="152800" y="120392" zmin="-3864" zmax="-3664"/>
+		<add x="151832" y="120284" zmin="-3864" zmax="-3664"/>
+		<add x="151644" y="119444" zmin="-3864" zmax="-3664"/>
+	</territory>
+	<spawn name="party_giran_t24_21_050" count="1" respawn="360" respawn_random="180">
+		<territory name="party_giran_t24_21_050"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_050" count="1" respawn="360" respawn_random="180">
+		<territory name="party_giran_t24_21_050"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_052" count="1" respawn="360" respawn_random="180">
+		<territory>
+			<add x="151512" y="120888" zmin="-3848" zmax="-3648"/>
+			<add x="152200" y="121068" zmin="-3848" zmax="-3648"/>
+			<add x="152776" y="121556" zmin="-3848" zmax="-3648"/>
+			<add x="152812" y="122240" zmin="-3848" zmax="-3648"/>
+			<add x="152168" y="122124" zmin="-3848" zmax="-3648"/>
+			<add x="151604" y="121652" zmin="-3848" zmax="-3648"/>
+		</territory>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_052" count="1" respawn="360" respawn_random="180">
+		<point x="152208" y="121712" z="-3816" h="0"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_051" count="1" respawn="360" respawn_random="180">
+		<territory>
+			<add x="154064" y="118196" zmin="-3856" zmax="-3656"/>
+			<add x="154560" y="118312" zmin="-3856" zmax="-3656"/>
+			<add x="154764" y="118632" zmin="-3856" zmax="-3656"/>
+			<add x="154692" y="119188" zmin="-3856" zmax="-3656"/>
+			<add x="154172" y="119500" zmin="-3856" zmax="-3656"/>
+			<add x="153412" y="119636" zmin="-3856" zmax="-3656"/>
+			<add x="153120" y="119056" zmin="-3856" zmax="-3656"/>
+			<add x="153560" y="118336" zmin="-3856" zmax="-3656"/>
+		</territory>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="party_giran_t24_21_051" count="1" respawn="360" respawn_random="180">
+		<point x="153712" y="118768" z="-3816" h="0"/>
+		<npc id="20761"/><!--Питан-->
+	</spawn>
+	<spawn name="giran_t24_21_061" count="1" respawn="60">
+		<point x="150736" y="117840" z="-3664" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_061" count="1" respawn="60">
+		<point x="150880" y="117968" z="-3659" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_061" count="1" respawn="60">
+		<point x="151152" y="118176" z="-3744" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_061" count="1" respawn="60">
+		<point x="151232" y="118304" z="-3792" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_061" count="1" respawn="60">
+		<point x="151408" y="118272" z="-3830" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_061" count="1" respawn="60">
+		<point x="151488" y="118432" z="-3856" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_060" count="1" respawn="60">
+		<point x="150336" y="117008" z="-3676" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_060" count="1" respawn="60">
+		<point x="150192" y="117392" z="-3680" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_060" count="1" respawn="60">
+		<point x="150544" y="117040" z="-3696" h="0"/>
+		<npc id="20628"/><!--Лимал Каринесс-->
+	</spawn>
+	<spawn name="giran_t24_21_060" count="1" respawn="60">
+		<point x="150368" y="117424" z="-3680" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+	<spawn name="giran_t24_21_060" count="1" respawn="60">
+		<point x="150528" y="117296" z="-3680" h="0"/>
+		<npc id="20629"/><!--Карик-->
+	</spawn>
+</list>

@@ -1,0 +1,1248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn name="gludio33_1821_03s" count="4" respawn="25">
+		<territory>
+			<add x="-64748" y="100476" zmin="-3696" zmax="-3196"/>
+			<add x="-62840" y="100708" zmin="-3696" zmax="-3196"/>
+			<add x="-62912" y="102228" zmin="-3696" zmax="-3196"/>
+			<add x="-64812" y="102112" zmin="-3696" zmax="-3196"/>
+		</territory>
+		<npc id="20021"/><!--Рыжий Медведь-->
+	</spawn>
+	<spawn name="gludio03_mb1821_02" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="-45896" y="110708" zmin="-3880" zmax="-3280"/>
+			<add x="-44836" y="110992" zmin="-3880" zmax="-3280"/>
+			<add x="-45296" y="111588" zmin="-3880" zmax="-3280"/>
+			<add x="-46060" y="111556" zmin="-3880" zmax="-3280"/>
+			<add x="-46476" y="111088" zmin="-3880" zmax="-3280"/>
+		</territory>
+		<npc id="25369"/><!--Собиратель Душ-->
+	</spawn>
+	<spawn name="gludio03_npc1821_003" count="1" respawn="60">
+		<point x="-53760" y="110720" z="-3610" h="0"/>
+		<npc id="30409"/><!--Земляная Змея-->
+	</spawn>
+	<territory name="gludio03_1821_04">
+		<add x="-59964" y="118248" zmin="-3352" zmax="-2752"/>
+		<add x="-58064" y="117172" zmin="-3352" zmax="-2752"/>
+		<add x="-55832" y="117392" zmin="-3352" zmax="-2752"/>
+		<add x="-54700" y="118968" zmin="-3352" zmax="-2752"/>
+		<add x="-55880" y="121344" zmin="-3352" zmax="-2752"/>
+		<add x="-58400" y="120148" zmin="-3352" zmax="-2752"/>
+	</territory>
+	<spawn name="gludio03_1821_04" count="4" respawn="30">
+		<territory name="gludio03_1821_04"/>
+		<npc id="20029"/><!--Опытный Зомби Руин-->
+	</spawn>
+	<spawn name="gludio03_1821_04" count="4" respawn="30">
+		<territory name="gludio03_1821_04"/>
+		<npc id="20035"/><!--Скелет Следопыт-->
+	</spawn>
+	<spawn name="gludio03_1821_04" count="4" respawn="30">
+		<territory name="gludio03_1821_04"/>
+		<npc id="20042"/><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn name="gludio03_1821_04" count="4" respawn="30">
+		<territory name="gludio03_1821_04"/>
+		<npc id="20045"/><!--Скелет Разведчик-->
+	</spawn>
+	<territory name="gludio03_1821_01">
+		<add x="-57608" y="109044" zmin="-3624" zmax="-2624"/>
+		<add x="-55716" y="110580" zmin="-3624" zmax="-2624"/>
+		<add x="-56884" y="112668" zmin="-3624" zmax="-2624"/>
+		<add x="-59680" y="114636" zmin="-3624" zmax="-2624"/>
+	</territory>
+	<spawn name="gludio03_1821_01" count="3" respawn="30">
+		<territory name="gludio03_1821_01"/>
+		<npc id="20026"/><!--Зомби Руин-->
+	</spawn>
+	<spawn name="gludio03_1821_01" count="5" respawn="30">
+		<territory name="gludio03_1821_01"/>
+		<npc id="20029"/><!--Опытный Зомби Руин-->
+	</spawn>
+	<spawn name="gludio03_1821_01" count="4" respawn="30">
+		<territory name="gludio03_1821_01"/>
+		<npc id="20035"/><!--Скелет Следопыт-->
+	</spawn>
+	<territory name="gludio03_1821_08">
+		<add x="-55664" y="110652" zmin="-3460" zmax="-2860"/>
+		<add x="-52788" y="113300" zmin="-3460" zmax="-2860"/>
+		<add x="-53408" y="116096" zmin="-3460" zmax="-2860"/>
+		<add x="-55380" y="116924" zmin="-3460" zmax="-2860"/>
+		<add x="-56848" y="112736" zmin="-3460" zmax="-2860"/>
+	</territory>
+	<spawn name="gludio03_1821_08" count="4" respawn="30">
+		<territory name="gludio03_1821_08"/>
+		<npc id="20035"/><!--Скелет Следопыт-->
+	</spawn>
+	<spawn name="gludio03_1821_08" count="4" respawn="30">
+		<territory name="gludio03_1821_08"/>
+		<npc id="20042"/><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn name="gludio03_1821_08" count="4" respawn="30">
+		<territory name="gludio03_1821_08"/>
+		<npc id="20045"/><!--Скелет Разведчик-->
+	</spawn>
+	<spawn name="gludio03_1821_08" count="4" respawn="30">
+		<territory name="gludio03_1821_08"/>
+		<npc id="20051"/><!--Скелет Стрелец-->
+	</spawn>
+	<spawn name="gludio03_1821_08" count="4" respawn="30">
+		<territory name="gludio03_1821_08"/>
+		<npc id="20054"/><!--Скелет Руин-->
+	</spawn>
+	<territory name="gludio03_1821_07">
+		<add x="-58976" y="114212" zmin="-3240" zmax="-2740"/>
+		<add x="-57276" y="113004" zmin="-3240" zmax="-2740"/>
+		<add x="-55848" y="117172" zmin="-3240" zmax="-2740"/>
+		<add x="-57904" y="116944" zmin="-3240" zmax="-2740"/>
+	</territory>
+	<spawn name="gludio03_1821_07" count="2" respawn="30">
+		<territory name="gludio03_1821_07"/>
+		<npc id="20029"/><!--Опытный Зомби Руин-->
+	</spawn>
+	<spawn name="gludio03_1821_07" count="2" respawn="30">
+		<territory name="gludio03_1821_07"/>
+		<npc id="20035"/><!--Скелет Следопыт-->
+	</spawn>
+	<spawn name="gludio03_1821_07" count="2" respawn="30">
+		<territory name="gludio03_1821_07"/>
+		<npc id="20042"/><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn name="gludio03_1821_07" count="2" respawn="30">
+		<territory name="gludio03_1821_07"/>
+		<npc id="20045"/><!--Скелет Разведчик-->
+	</spawn>
+	<spawn name="gludio03_1821_07" count="2" respawn="30">
+		<territory name="gludio03_1821_07"/>
+		<npc id="20045"/><!--Скелет Разведчик-->
+	</spawn>
+	<spawn name="gludio03_1821_07" count="2" respawn="30">
+		<territory name="gludio03_1821_07"/>
+		<npc id="20054"/><!--Скелет Руин-->
+	</spawn>
+	<territory name="gludio03_1821_06">
+		<add x="-43492" y="121176" zmin="-3508" zmax="-2308"/>
+		<add x="-42844" y="122784" zmin="-3508" zmax="-2308"/>
+		<add x="-46100" y="124212" zmin="-3508" zmax="-2308"/>
+		<add x="-49728" y="122172" zmin="-3508" zmax="-2308"/>
+		<add x="-50372" y="121020" zmin="-3508" zmax="-2308"/>
+		<add x="-44700" y="120244" zmin="-3508" zmax="-2308"/>
+	</territory>
+	<spawn name="gludio03_1821_06" count="5" respawn="30">
+		<territory name="gludio03_1821_06"/>
+		<npc id="20029"/><!--Опытный Зомби Руин-->
+	</spawn>
+	<spawn name="gludio03_1821_06" count="5" respawn="30">
+		<territory name="gludio03_1821_06"/>
+		<npc id="20035"/><!--Скелет Следопыт-->
+	</spawn>
+	<spawn name="gludio03_1821_06" count="5" respawn="30">
+		<territory name="gludio03_1821_06"/>
+		<npc id="20042"/><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn name="gludio03_1821_06" count="5" respawn="30">
+		<territory name="gludio03_1821_06"/>
+		<npc id="20045"/><!--Скелет Разведчик-->
+	</spawn>
+	<territory name="gludio03_1821_09">
+		<add x="-54512" y="119172" zmin="-3116" zmax="-2316"/>
+		<add x="-50608" y="120916" zmin="-3116" zmax="-2316"/>
+		<add x="-49872" y="122300" zmin="-3116" zmax="-2316"/>
+		<add x="-54396" y="123420" zmin="-3116" zmax="-2316"/>
+		<add x="-55684" y="121412" zmin="-3116" zmax="-2316"/>
+	</territory>
+	<spawn name="gludio03_1821_09" count="4" respawn="30">
+		<territory name="gludio03_1821_09"/>
+		<npc id="20029"/><!--Опытный Зомби Руин-->
+	</spawn>
+	<spawn name="gludio03_1821_09" count="4" respawn="30">
+		<territory name="gludio03_1821_09"/>
+		<npc id="20035"/><!--Скелет Следопыт-->
+	</spawn>
+	<spawn name="gludio03_1821_09" count="4" respawn="30">
+		<territory name="gludio03_1821_09"/>
+		<npc id="20042"/><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn name="gludio03_1821_09" count="4" respawn="30">
+		<territory name="gludio03_1821_09"/>
+		<npc id="20045"/><!--Скелет Разведчик-->
+	</spawn>
+	<spawn name="gludio03_1821_09" count="3" respawn="30">
+		<territory name="gludio03_1821_09"/>
+		<npc id="20051"/><!--Скелет Стрелец-->
+	</spawn>
+	<territory name="gludio03_1821_11">
+		<add x="-40196" y="114100" zmin="-3360" zmax="-2760"/>
+		<add x="-39552" y="116424" zmin="-3360" zmax="-2760"/>
+		<add x="-41060" y="116628" zmin="-3360" zmax="-2760"/>
+		<add x="-41992" y="115664" zmin="-3360" zmax="-2760"/>
+		<add x="-41544" y="114172" zmin="-3360" zmax="-2760"/>
+	</territory>
+	<spawn name="gludio03_1821_11" count="2" respawn="30">
+		<territory name="gludio03_1821_11"/>
+		<npc id="20042"/><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn name="gludio03_1821_11" count="2" respawn="30">
+		<territory name="gludio03_1821_11"/>
+		<npc id="20045"/><!--Скелет Разведчик-->
+	</spawn>
+	<spawn name="gludio03_1821_11" count="2" respawn="30">
+		<territory name="gludio03_1821_11"/>
+		<npc id="20054"/><!--Скелет Руин-->
+	</spawn>
+	<territory name="gludio03_1821_10">
+		<add x="-47004" y="118892" zmin="-3588" zmax="-2888"/>
+		<add x="-48176" y="119592" zmin="-3588" zmax="-2888"/>
+		<add x="-51196" y="119760" zmin="-3588" zmax="-2888"/>
+		<add x="-53944" y="118720" zmin="-3588" zmax="-2888"/>
+		<add x="-54516" y="117404" zmin="-3588" zmax="-2888"/>
+		<add x="-51172" y="114832" zmin="-3588" zmax="-2888"/>
+		<add x="-49348" y="115996" zmin="-3588" zmax="-2888"/>
+	</territory>
+	<spawn name="gludio03_1821_10" count="5" respawn="30">
+		<territory name="gludio03_1821_10"/>
+		<npc id="20035"/><!--Скелет Следопыт-->
+	</spawn>
+	<spawn name="gludio03_1821_10" count="5" respawn="30">
+		<territory name="gludio03_1821_10"/>
+		<npc id="20042"/><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn name="gludio03_1821_10" count="5" respawn="30">
+		<territory name="gludio03_1821_10"/>
+		<npc id="20045"/><!--Скелет Разведчик-->
+	</spawn>
+	<spawn name="gludio03_1821_10" count="5" respawn="30">
+		<territory name="gludio03_1821_10"/>
+		<npc id="20051"/><!--Скелет Стрелец-->
+	</spawn>
+	<spawn name="gludio03_1821_10" count="5" respawn="30">
+		<territory name="gludio03_1821_10"/>
+		<npc id="20054"/><!--Скелет Руин-->
+	</spawn>
+	<territory name="gludio03_1821_12">
+		<add x="-42252" y="112108" zmin="-3264" zmax="-2564"/>
+		<add x="-41404" y="111832" zmin="-3264" zmax="-2564"/>
+		<add x="-39668" y="112164" zmin="-3264" zmax="-2564"/>
+		<add x="-39496" y="113244" zmin="-3264" zmax="-2564"/>
+		<add x="-40056" y="113980" zmin="-3264" zmax="-2564"/>
+		<add x="-41532" y="114016" zmin="-3264" zmax="-2564"/>
+	</territory>
+	<spawn name="gludio03_1821_12" count="2" respawn="30">
+		<territory name="gludio03_1821_12"/>
+		<npc id="20029"/><!--Опытный Зомби Руин-->
+	</spawn>
+	<spawn name="gludio03_1821_12" count="3" respawn="30">
+		<territory name="gludio03_1821_12"/>
+		<npc id="20042"/><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn name="gludio03_1821_12" count="2" respawn="30">
+		<territory name="gludio03_1821_12"/>
+		<npc id="20054"/><!--Скелет Руин-->
+	</spawn>
+	<territory name="gludio03_1821_26">
+		<add x="-46472" y="118532" zmin="-3680" zmax="-2880"/>
+		<add x="-45280" y="117552" zmin="-3680" zmax="-2880"/>
+		<add x="-44816" y="119936" zmin="-3680" zmax="-2880"/>
+		<add x="-46324" y="120536" zmin="-3680" zmax="-2880"/>
+	</territory>
+	<spawn name="gludio03_1821_26" count="3" respawn="30">
+		<territory name="gludio03_1821_26"/>
+		<npc id="20054"/><!--Скелет Руин-->
+	</spawn>
+	<spawn name="gludio03_1821_26" count="2" respawn="30">
+		<territory name="gludio03_1821_26"/>
+		<npc id="20042"/><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn name="gludio03_1821_26" count="2" respawn="30">
+		<territory name="gludio03_1821_26"/>
+		<npc id="20045"/><!--Скелет Разведчик-->
+	</spawn>
+	<territory name="gludio03_1821_23">
+		<add x="-47376" y="112452" zmin="-3852" zmax="-3052"/>
+		<add x="-44880" y="114740" zmin="-3852" zmax="-3052"/>
+		<add x="-44532" y="115632" zmin="-3852" zmax="-3052"/>
+		<add x="-45368" y="117448" zmin="-3852" zmax="-3052"/>
+		<add x="-46620" y="118436" zmin="-3852" zmax="-3052"/>
+		<add x="-48760" y="116536" zmin="-3852" zmax="-3052"/>
+		<add x="-49688" y="114780" zmin="-3852" zmax="-3052"/>
+	</territory>
+	<spawn name="gludio03_1821_23" count="3" respawn="30">
+		<territory name="gludio03_1821_23"/>
+		<npc id="20054"/><!--Скелет Руин-->
+	</spawn>
+	<spawn name="gludio03_1821_23" count="3" respawn="30">
+		<territory name="gludio03_1821_23"/>
+		<npc id="20060"/><!--Скелет Берсерк-->
+	</spawn>
+	<spawn name="gludio03_1821_23" count="3" respawn="30">
+		<territory name="gludio03_1821_23"/>
+		<npc id="20062"/><!--Людоед Тумран-->
+	</spawn>
+	<spawn name="gludio03_1821_23" count="4" respawn="30">
+		<territory name="gludio03_1821_23"/>
+		<npc id="20064"/><!--Воин Людоедов Тумран-->
+	</spawn>
+	<spawn name="gludio03_1821_23" count="4" respawn="30">
+		<territory name="gludio03_1821_23"/>
+		<npc id="20042"/><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn name="gludio03_1821_23" count="4" respawn="30">
+		<territory name="gludio03_1821_23"/>
+		<npc id="20045"/><!--Скелет Разведчик-->
+	</spawn>
+	<territory name="gludio33_1821_02">
+		<add x="-65408" y="105012" zmin="-3788" zmax="-3288"/>
+		<add x="-63384" y="105452" zmin="-3788" zmax="-3288"/>
+		<add x="-62812" y="108976" zmin="-3788" zmax="-3288"/>
+		<add x="-63332" y="111240" zmin="-3788" zmax="-3288"/>
+		<add x="-65492" y="112488" zmin="-3788" zmax="-3288"/>
+	</territory>
+	<spawn name="gludio33_1821_02" count="6" respawn="25">
+		<territory name="gludio33_1821_02"/>
+		<npc id="20008"/><!--Ящер Фелим-->
+	</spawn>
+	<spawn name="gludio33_1821_02" count="5" respawn="25">
+		<territory name="gludio33_1821_02"/>
+		<npc id="20010"/><!--Разведчик Ящеров Фелим-->
+	</spawn>
+	<spawn name="gludio33_1821_02" count="8" respawn="25">
+		<territory name="gludio33_1821_02"/>
+		<npc id="20014"/><!--Воин Ящеров Фелим-->
+	</spawn>
+	<territory name="gludio33_1821_01">
+		<add x="-65452" y="98532" zmin="-3956" zmax="-3356"/>
+		<add x="-61120" y="98604" zmin="-3956" zmax="-3356"/>
+		<add x="-61280" y="100596" zmin="-3956" zmax="-3356"/>
+		<add x="-63236" y="105264" zmin="-3956" zmax="-3356"/>
+		<add x="-65420" y="104832" zmin="-3956" zmax="-3356"/>
+	</territory>
+	<spawn name="gludio33_1821_01" count="8" respawn="25">
+		<territory name="gludio33_1821_01"/>
+		<npc id="20021"/><!--Рыжий Медведь-->
+	</spawn>
+	<spawn name="gludio33_1821_01" count="5" respawn="25">
+		<territory name="gludio33_1821_01"/>
+		<npc id="20012"/><!--Белый Оборотень-->
+	</spawn>
+	<spawn name="gludio17_npc1821_002" count="1" respawn="60">
+		<point x="-60672" y="126592" z="-2957" h="0"/>
+		<npc id="30413"/><!--Водяная Ундина-->
+	</spawn>
+	<spawn name="gludio17_mb1821_01" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="-61520" y="126320" zmin="-3112" zmax="-2512"/>
+			<add x="-60148" y="126440" zmin="-3112" zmax="-2512"/>
+			<add x="-60548" y="128388" zmin="-3112" zmax="-2512"/>
+			<add x="-61948" y="128240" zmin="-3112" zmax="-2512"/>
+		</territory>
+		<npc id="25076"/><!--Принцесса Молранг-->
+	</spawn>
+	<spawn name="gludio01_qm1821_03" count="3" respawn="180">
+		<territory>
+			<add x="-57976" y="126924" zmin="-3156" zmax="-2956"/>
+			<add x="-57184" y="126960" zmin="-3156" zmax="-2956"/>
+			<add x="-57768" y="128052" zmin="-3156" zmax="-2956"/>
+			<add x="-58180" y="128240" zmin="-3156" zmax="-2956"/>
+			<add x="-58492" y="127792" zmin="-3156" zmax="-2956"/>
+		</territory>
+		<npc id="27095"/><!--Поющий Цветок Фантазий-->
+	</spawn>
+	<spawn name="gludio01_qm1821_02" count="3" respawn="300">
+		<territory>
+			<add x="-55876" y="123656" zmin="-3120" zmax="-2620"/>
+			<add x="-55360" y="123364" zmin="-3120" zmax="-2620"/>
+			<add x="-54196" y="124816" zmin="-3120" zmax="-2620"/>
+			<add x="-54920" y="124880" zmin="-3120" zmax="-2620"/>
+		</territory>
+		<npc id="27030"/><!--Водный Пророк-->
+	</spawn>
+	<spawn name="gludio01_qm1821_01" count="3" respawn="300">
+		<territory>
+			<add x="-59344" y="122568" zmin="-3136" zmax="-2636"/>
+			<add x="-58200" y="122172" zmin="-3136" zmax="-2636"/>
+			<add x="-57508" y="123008" zmin="-3136" zmax="-2636"/>
+			<add x="-58640" y="123392" zmin="-3136" zmax="-2636"/>
+		</territory>
+		<npc id="27030"/><!--Водный Пророк-->
+	</spawn>
+	<territory name="gludio35_1821_02">
+		<add x="-50207" y="129731" zmin="-3156" zmax="-2156"/>
+		<add x="-46686" y="129223" zmin="-3156" zmax="-2156"/>
+		<add x="-46629" y="130873" zmin="-3156" zmax="-2156"/>
+		<add x="-51389" y="130839" zmin="-3156" zmax="-2156"/>
+	</territory>
+	<spawn name="gludio35_1821_02" count="3" respawn="20">
+		<territory name="gludio35_1821_02"/>
+		<npc id="20050"/><!--Ядовитый Шипоног-->
+	</spawn>
+	<spawn name="gludio35_1821_02" count="3" respawn="20">
+		<territory name="gludio35_1821_02"/>
+		<npc id="20359"/><!--Воин Крысолюдов-->
+	</spawn>
+	<territory name="gludio35_1821_03">
+		<add x="-51981" y="125242" zmin="-3236" zmax="-2336"/>
+		<add x="-46428" y="127058" zmin="-3236" zmax="-2336"/>
+		<add x="-47528" y="128440" zmin="-3236" zmax="-2336"/>
+		<add x="-50564" y="128838" zmin="-3236" zmax="-2336"/>
+		<add x="-53100" y="127446" zmin="-3236" zmax="-2336"/>
+	</territory>
+	<spawn name="gludio35_1821_03" count="3" respawn="20">
+		<territory name="gludio35_1821_03"/>
+		<npc id="20359"/><!--Воин Крысолюдов-->
+	</spawn>
+	<spawn name="gludio35_1821_03" count="3" respawn="20">
+		<territory name="gludio35_1821_03"/>
+		<npc id="20050"/><!--Ядовитый Шипоног-->
+	</spawn>
+	<territory name="gludio35_1821_04">
+		<add x="-51114" y="124296" zmin="-3104" zmax="-2104"/>
+		<add x="-45997" y="124669" zmin="-3104" zmax="-2104"/>
+		<add x="-46436" y="126944" zmin="-3104" zmax="-2104"/>
+		<add x="-51960" y="125142" zmin="-3104" zmax="-2104"/>
+	</territory>
+	<spawn name="gludio35_1821_04" count="3" respawn="20">
+		<territory name="gludio35_1821_04"/>
+		<npc id="20359"/><!--Воин Крысолюдов-->
+	</spawn>
+	<spawn name="gludio35_1821_04" count="2" respawn="20">
+		<territory name="gludio35_1821_04"/>
+		<npc id="20050"/><!--Ядовитый Шипоног-->
+	</spawn>
+	<territory name="gludio35_1821_05">
+		<add x="-44626" y="127604" zmin="-2976" zmax="-2476"/>
+		<add x="-41597" y="128634" zmin="-2976" zmax="-2476"/>
+		<add x="-41754" y="130797" zmin="-2976" zmax="-2476"/>
+		<add x="-45371" y="130743" zmin="-2976" zmax="-2476"/>
+	</territory>
+	<spawn name="gludio35_1821_05" count="3" respawn="20">
+		<territory name="gludio35_1821_05"/>
+		<npc id="20359"/><!--Воин Крысолюдов-->
+	</spawn>
+	<spawn name="gludio35_1821_05" count="2" respawn="20">
+		<territory name="gludio35_1821_05"/>
+		<npc id="20050"/><!--Ядовитый Шипоног-->
+	</spawn>
+	<territory name="gludio35_1821_01">
+		<add x="-53167" y="127488" zmin="-3192" zmax="-2792"/>
+		<add x="-51752" y="130085" zmin="-3192" zmax="-2792"/>
+		<add x="-52292" y="130760" zmin="-3192" zmax="-2792"/>
+		<add x="-55291" y="130823" zmin="-3192" zmax="-2792"/>
+		<add x="-55688" y="128988" zmin="-3192" zmax="-2792"/>
+	</territory>
+	<spawn name="gludio35_1821_01" count="3" respawn="20">
+		<territory name="gludio35_1821_01"/>
+		<npc id="20050"/><!--Ядовитый Шипоног-->
+	</spawn>
+	<spawn name="gludio35_1821_01" count="3" respawn="20">
+		<territory name="gludio35_1821_01"/>
+		<npc id="20359"/><!--Воин Крысолюдов-->
+	</spawn>
+		<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-43280" y="118673" z="-3552" h="28750" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-42898" y="117352" z="-3552" h="19856" />
+		<npc id="20060" /><!--Скелет Берсерк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-43306" y="118002" z="-3568" h="37956" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-43501" y="118063" z="-3552" h="16442" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-43642" y="117026" z="-3568" h="23836" />
+		<npc id="20060" /><!--Скелет Берсерк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-44564" y="118281" z="-3352" h="52493" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-44880" y="117086" z="-3552" h="40716" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-44809" y="117344" z="-3552" h="50020" />
+		<npc id="20060" /><!--Скелет Берсерк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-44793" y="116885" z="-3552" h="21516" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-43223" y="118850" z="-3552" h="33726" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-44108" y="118997" z="-3552" h="5576" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-44745" y="121034" z="-3032" h="53989" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-44436" y="122976" z="-2704" h="9115" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-44894" y="122086" z="-2856" h="9198" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-44411" y="122511" z="-2696" h="18669" />
+		<npc id="20035" /><!--Скелет Следопыт-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-44295" y="122025" z="-2800" h="35135" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-43346" y="122705" z="-2656" h="53350" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-42715" y="118807" z="-3552" h="35546" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-45505" y="116160" z="-3552" h="12328" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-45335" y="116083" z="-3552" h="23362" />
+		<npc id="20062" /><!--Людоед Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-46865" y="117380" z="-3552" h="24946" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-46276" y="117317" z="-3552" h="63348" />
+		<npc id="20064" /><!--Воин Людоедов Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-46797" y="117483" z="-3552" h="19905" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-45273" y="118890" z="-3480" h="14546" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-45702" y="119192" z="-3448" h="51419" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-45569" y="118853" z="-3496" h="50106" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-45931" y="119642" z="-3416" h="65406" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-45948" y="119172" z="-3432" h="59903" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-46143" y="120417" z="-3384" h="31821" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-46316" y="119519" z="-3352" h="9189" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-46182" y="119913" z="-3400" h="47094" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-45867" y="118818" z="-3472" h="49088" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-41229" y="115767" z="-3160" h="34596" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-42686" y="114895" z="-3520" h="52180" />
+		<npc id="20060" /><!--Скелет Берсерк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-46407" y="114130" z="-3576" h="28234" />
+		<npc id="20062" /><!--Людоед Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-47233" y="114753" z="-3664" h="14230" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-45833" y="113947" z="-3536" h="30280" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-46861" y="113050" z="-3352" h="20351" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-43631" y="113792" z="-3552" h="38346" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-42858" y="114601" z="-3520" h="24117" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-43115" y="113119" z="-3520" h="48361" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-43019" y="114379" z="-3512" h="10299" />
+		<npc id="20060" /><!--Скелет Берсерк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-43074" y="113272" z="-3184" h="61155" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-44169" y="113820" z="-3792" h="40974" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-41382" y="114478" z="-3152" h="56089" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-41382" y="114226" z="-3120" h="22281" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-41279" y="114374" z="-3136" h="38733" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-42487" y="113757" z="-3520" h="29494" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-42928" y="112629" z="-3488" h="51382" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-41003" y="112894" z="-2624" h="19574" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-41019" y="112813" z="-2640" h="2013" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-46730" y="111085" z="-3808" h="33994" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-46547" y="112413" z="-3784" h="33162" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-45573" y="110935" z="-3800" h="25068" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-45405" y="112301" z="-3808" h="4991" />
+		<npc id="20060" /><!--Скелет Берсерк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-45646" y="112379" z="-3808" h="4835" />
+		<npc id="20062" /><!--Людоед Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-44941" y="110798" z="-3808" h="42441" />
+		<npc id="20062" /><!--Людоед Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-41505" y="110521" z="-3360" h="49674" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-41704" y="112268" z="-2816" h="64222" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-49114" y="112402" z="-3568" h="6913" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-47695" y="111152" z="-3568" h="27761" />
+		<npc id="20062" /><!--Людоед Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-47641" y="113793" z="-3672" h="28632" />
+		<npc id="20060" /><!--Скелет Берсерк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-47199" y="113568" z="-3624" h="42470" />
+		<npc id="20064" /><!--Воин Людоедов Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-48328" y="113927" z="-3592" h="17757" />
+		<npc id="20064" /><!--Воин Людоедов Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-47111" y="114057" z="-3672" h="17097" />
+		<npc id="20062" /><!--Людоед Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-48224" y="116259" z="-3552" h="41031" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-47637" y="115764" z="-3608" h="6955" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-48918" y="114701" z="-3672" h="31334" />
+		<npc id="20064" /><!--Воин Людоедов Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-48030" y="116021" z="-3576" h="45426" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-48005" y="116227" z="-3552" h="61552" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-48219" y="116959" z="-3544" h="40646" />
+		<npc id="20060" /><!--Скелет Берсерк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-49320" y="115286" z="-3632" h="25940" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-48730" y="109187" z="-3568" h="32767" />
+		<npc id="20060" /><!--Скелет Берсерк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-48337" y="109194" z="-3608" h="33420" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-48281" y="108759" z="-3720" h="10319" />
+		<npc id="20062" /><!--Людоед Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-49230" y="108750" z="-3712" h="30930" />
+		<npc id="20060" /><!--Скелет Берсерк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-47439" y="108909" z="-3720" h="8437" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-47719" y="108794" z="-3720" h="59740" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-46584" y="109609" z="-3808" h="34270" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-45176" y="110191" z="-3808" h="29052" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-45591" y="110001" z="-3808" h="38854" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-46028" y="109746" z="-3808" h="4814" />
+		<npc id="20062" /><!--Людоед Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-46533" y="110547" z="-3808" h="57957" />
+		<npc id="20060" /><!--Скелет Берсерк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-45716" y="109548" z="-3808" h="56977" />
+		<npc id="20060" /><!--Скелет Берсерк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-46895" y="109910" z="-3808" h="41422" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-46054" y="109191" z="-3808" h="41397" />
+		<npc id="20064" /><!--Воин Людоедов Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-45578" y="109946" z="-3808" h="37775" />
+		<npc id="20064" /><!--Воин Людоедов Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-43824" y="108852" z="-3392" h="32767" />
+		<npc id="20029" /><!--Опытный Зомби Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-43437" y="108385" z="-3256" h="51834" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-44478" y="109341" z="-3432" h="51958" />
+		<npc id="20026" /><!--Зомби Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-43564" y="109627" z="-3456" h="16383" />
+		<npc id="20029" /><!--Опытный Зомби Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-43854" y="109559" z="-3464" h="42441" />
+		<npc id="20026" /><!--Зомби Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-44285" y="109291" z="-3416" h="40961" />
+		<npc id="20026" /><!--Зомби Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-50868" y="108814" z="-3720" h="41906" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-50790" y="110564" z="-3576" h="55070" />
+		<npc id="20060" /><!--Скелет Берсерк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-50548" y="109612" z="-3720" h="13808" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-49203" y="108420" z="-3720" h="51722" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-51091" y="108358" z="-3720" h="7141" />
+		<npc id="20060" /><!--Скелет Берсерк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-50120" y="109028" z="-3712" h="57406" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-50418" y="109053" z="-3720" h="43262" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-50882" y="109332" z="-3536" h="41926" />
+		<npc id="20062" /><!--Людоед Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-50644" y="108683" z="-3720" h="25685" />
+		<npc id="20062" /><!--Людоед Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-49518" y="111429" z="-3568" h="8259" />
+		<npc id="20064" /><!--Воин Людоедов Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-49911" y="112429" z="-3576" h="43169" />
+		<npc id="20064" /><!--Воин Людоедов Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-49330" y="111533" z="-3568" h="22080" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-51277" y="111969" z="-3592" h="40316" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-50182" y="112348" z="-3576" h="9443" />
+		<npc id="20064" /><!--Воин Людоедов Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-49527" y="112459" z="-3568" h="54185" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-51054" y="111754" z="-3584" h="43598" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-50814" y="111860" z="-3584" h="26634" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-49630" y="113128" z="-3576" h="50077" />
+		<npc id="20060" /><!--Скелет Берсерк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-50038" y="112506" z="-3576" h="56610" />
+		<npc id="20062" /><!--Людоед Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-50442" y="113589" z="-3576" h="57144" />
+		<npc id="20062" /><!--Людоед Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-50963" y="113107" z="-3560" h="43237" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-49868" y="114483" z="-3576" h="25998" />
+		<npc id="20062" /><!--Людоед Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-52713" y="110143" z="-3568" h="45389" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-52606" y="110472" z="-3368" h="45801" />
+		<npc id="20062" /><!--Людоед Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-52969" y="110679" z="-3568" h="9115" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-51597" y="112680" z="-3560" h="14682" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-51468" y="111964" z="-3576" h="6616" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-52164" y="110949" z="-3576" h="9776" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-52701" y="112501" z="-3576" h="12220" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-52606" y="111711" z="-3392" h="54515" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-52941" y="111635" z="-3568" h="780" />
+		<npc id="20062" /><!--Людоед Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-52045" y="112755" z="-3576" h="14278" />
+		<npc id="20064" /><!--Воин Людоедов Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-52991" y="113156" z="-3336" h="37827" />
+		<npc id="20035" /><!--Скелет Следопыт-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-52213" y="112623" z="-3576" h="47297" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-54512" y="107740" z="-3720" h="23592" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-53287" y="107746" z="-3584" h="56986" />
+		<npc id="20060" /><!--Скелет Берсерк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-53508" y="107117" z="-3720" h="22710" />
+		<npc id="20060" /><!--Скелет Берсерк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-53503" y="107252" z="-3720" h="26160" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-54948" y="109286" z="-3696" h="38126" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-55075" y="109094" z="-3696" h="39254" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-53854" y="110029" z="-3576" h="2036" />
+		<npc id="20060" /><!--Скелет Берсерк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-53998" y="110615" z="-3576" h="3548" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-53648" y="109431" z="-3592" h="25847" />
+		<npc id="20060" /><!--Скелет Берсерк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-54893" y="109389" z="-3688" h="12738" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-54506" y="109013" z="-3720" h="36825" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-55114" y="112236" z="-3208" h="13027" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-55505" y="112703" z="-3176" h="19864" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-54922" y="111610" z="-3208" h="49627" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-55366" y="111177" z="-3160" h="38160" />
+		<npc id="20051" /><!--Скелет Стрелец-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-53140" y="111699" z="-3576" h="18134" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-53656" y="112686" z="-3328" h="7456" />
+		<npc id="20051" /><!--Скелет Стрелец-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-53760" y="110720" z="-3584" h="0" />
+		<npc id="30409" /><!--Земляная Змея-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-52552" y="108352" z="-3576" h="30128" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-51109" y="108209" z="-3704" h="58490" />
+		<npc id="20060" /><!--Скелет Берсерк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-52218" y="108352" z="-3568" h="548" />
+		<npc id="20060" /><!--Скелет Берсерк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-52218" y="108212" z="-3352" h="1681" />
+		<npc id="20062" /><!--Людоед Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-52218" y="108352" z="-3568" h="7435" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-49814" y="106321" z="-3328" h="38854" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-48259" y="108193" z="-3720" h="58551" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-48730" y="107918" z="-3720" h="30127" />
+		<npc id="20060" /><!--Скелет Берсерк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-48030" y="108558" z="-3720" h="48632" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-48102" y="108271" z="-3712" h="24961" />
+		<npc id="20062" /><!--Людоед Тумран-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-48319" y="108235" z="-3720" h="24287" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-44750" y="108295" z="-3392" h="19238" />
+		<npc id="20026" /><!--Зомби Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-42980" y="106448" z="-3272" h="60584" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-43308" y="114088" z="-3376" h="38098" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-41207" y="109670" z="-3296" h="56329" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-41134" y="110111" z="-3296" h="13000" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-42920" y="109275" z="-3464" h="21531" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-40923" y="109513" z="-3280" h="64497" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-41648" y="109332" z="-3288" h="12972" />
+		<npc id="20029" /><!--Опытный Зомби Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-42874" y="109243" z="-3320" h="19597" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-41636" y="109734" z="-2928" h="15689" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-41657" y="109786" z="-3296" h="58499" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-42619" y="114379" z="-3520" h="63002" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-42506" y="113656" z="-3520" h="39633" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-42554" y="113192" z="-3520" h="11962" />
+		<npc id="20060" /><!--Скелет Берсерк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-42601" y="114089" z="-3520" h="21493" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-40795" y="109651" z="-3280" h="23708" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-40833" y="110389" z="-3288" h="12835" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-40744" y="112254" z="-3000" h="15512" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-39973" y="112338" z="-3024" h="17265" />
+		<npc id="20029" /><!--Опытный Зомби Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-39762" y="110552" z="-3320" h="54492" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-40877" y="110592" z="-3320" h="62729" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-39766" y="112291" z="-3000" h="19490" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-39326" y="111299" z="-3328" h="37061" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-38816" y="110871" z="-3320" h="55960" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-39319" y="111620" z="-3296" h="9914" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-40098" y="114801" z="-3080" h="63971" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-40592" y="113152" z="-3032" h="19961" />
+		<npc id="20029" /><!--Опытный Зомби Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-40435" y="114684" z="-3088" h="11703" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-40185" y="113772" z="-3080" h="45975" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-39719" y="112964" z="-3032" h="31188" />
+		<npc id="20029" /><!--Опытный Зомби Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-40334" y="112922" z="-2696" h="48234" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-45593" y="104417" z="-2704" h="42930" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-46972" y="106242" z="-3048" h="27291" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-47324" y="105832" z="-3344" h="34897" />
+		<npc id="20029" /><!--Опытный Зомби Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-48675" y="106260" z="-3328" h="27853" />
+		<npc id="20029" /><!--Опытный Зомби Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-48121" y="105814" z="-3328" h="20120" />
+		<npc id="20026" /><!--Зомби Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-48456" y="105939" z="-3120" h="8686" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-48055" y="106214" z="-3352" h="31587" />
+		<npc id="20029" /><!--Опытный Зомби Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-50011" y="105986" z="-3328" h="11146" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-50151" y="106251" z="-3336" h="34077" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-49460" y="106149" z="-3328" h="10445" />
+		<npc id="20026" /><!--Зомби Руин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-43165" y="114801" z="-3520" h="56516" />
+		<npc id="20042" /><!--Главарь Скелетов Следопытов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-43386" y="114768" z="-3448" h="61886" />
+		<npc id="20060" /><!--Скелет Берсерк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-41469" y="115499" z="-3168" h="42258" />
+		<npc id="20045" /><!--Скелет Разведчик-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-42750" y="114937" z="-3520" h="21219" />
+		<npc id="20054" /><!--Скелет Руин-->
+	</spawn>
+</list>

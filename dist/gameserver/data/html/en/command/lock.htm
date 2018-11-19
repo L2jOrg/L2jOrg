@@ -1,0 +1,14 @@
+<html><title>Lock</title><head>
+<font color="LEVEL">
+ You can lock or unlock your account for your current IP address.
+ Lock time can be used to avoid account loss. Lock 'll be disabled if there was no logins during selected time. Maximum lock time is 14 days. Default is 7 days.
+ CIDR notation can be used to specify subnet. If field left blank current ip 'll be used.
+</font>
+<br>
+Your current IP address: %IP%
+<br><br>
+<center>IP/CIDR address: <edit var="IP" width=80 height=15 /></center>
+<center>Lock time (days): <edit var="time" width=80 height=15 /></center>
+<center><button value="ON" action="bypass -h user_lock on $time $IP" width=100 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" /></center>
+<center><button value="OFF" action="bypass -h user_lock off" width=100 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" /></center><br><br>
+</head></html>

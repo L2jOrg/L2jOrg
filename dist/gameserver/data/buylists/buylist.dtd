@@ -1,0 +1,18 @@
+<!ELEMENT list (npc)*>
+
+	<!ELEMENT npc (buylist)*>
+	<!ATTLIST npc
+		id CDATA #REQUIRED>
+
+		<!ELEMENT buylist (item)*>
+		<!ATTLIST buylist
+			id CDATA #REQUIRED
+			base_markup CDATA #IMPLIED>
+
+			<!ELEMENT item (#PCDATA)>
+			<!ATTLIST item
+				id CDATA #REQUIRED
+				markup CDATA #IMPLIED
+				price CDATA #IMPLIED
+				count CDATA #IMPLIED
+				time CDATA #IMPLIED>

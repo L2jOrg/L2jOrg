@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="20260001" name="Steel_castleinside_S.Steel_castle_base.Iron_castle_base_room_door" hp="158250" pdef="644" mdef="518">
+		<pos x="15601" y="282676" z="-9734"/>
+		<shape ax="15595" ay="282579" bx="15609" by="282579" cx="15609" cy="282775" dx="15595" dy="282775" minz="-9734" maxz="-9584"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="9685"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="30"/>
+	</door>
+	<door id="20260002" name="Steel_castleinside_S.Steel_castle_base.Iron_castle_base_room_door" hp="158250" pdef="644" mdef="518">
+		<pos x="12763" y="280154" z="-9564"/>
+		<shape ax="12659" ay="280144" bx="12865" by="280144" cx="12866" cy="280158" dx="12659" dy="280157" minz="-9733" maxz="-9583"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="9687"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="120"/>
+	</door>
+	<door id="20260003" name="Steel_castleinside_S.Steel_castle_base.Iron_castle_base_room_door" hp="158250" pdef="644" mdef="518">
+		<pos x="14553" y="277479" z="-9727"/>
+		<shape ax="14547" ay="277570" bx="14561" by="277570" cx="14561" cy="277766" dx="14547" dy="277766" minz="-9727" maxz="-9577"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="20260004" name="Steel_castleinside_S.Steel_castle_base.Iron_castle_base_room_door" hp="158250" pdef="644" mdef="518">
+		<pos x="18055" y="277478" z="-9727"/>
+		<shape ax="18049" ay="277381" bx="18063" by="277381" cx="18063" cy="277577" dx="18049" dy="277577" minz="-9727" maxz="-9577"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="20260006" name="Steel_castleinside_S.Steel_castle_base.Iron_castle_base_room_door" hp="158250" pdef="644" mdef="518">
+		<pos x="16978" y="280541" z="-9734"/>
+		<shape ax="16972" ay="280444" bx="16986" by="280444" cx="16986" cy="280640" dx="16972" dy="280640" minz="-9734" maxz="-9584"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="9686"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="30"/>
+	</door>
+	<door id="20260005" name="Steel_castleinside_S.Steel_castle_base.Iron_castle_base_room_door" hp="158250" pdef="644" mdef="518">
+		<pos x="19848" y="280142" z="-9564"/>
+		<shape ax="19744" ay="280132" bx="19950" by="280132" cx="19951" cy="280146" dx="19744" dy="280145" minz="-9733" maxz="-9583"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="9687"/>
+		<set name="show_hp" value="false"/>
+	</door>
+</list>

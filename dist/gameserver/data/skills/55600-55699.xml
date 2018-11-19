@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="55600" levels="1" name="Blessed Support Cube">
+		<set name="icon" value="[icon.etc_golden_ore_cube_pc_i00]"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55601" levels="1" name="Party Support Cube - Lv. 2">
+		<set name="icon" value="[icon.etc_silver_ore_cube_pc_i00]"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55602" levels="1" name="Fishing Support Cube">
+		<set name="icon" value="[icon.etc_cupreous_ore_cube_pc_i00]"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55603" levels="1" name="Potion Support Cube - Lv. 2">
+		<set name="icon" value="[icon.etc_earthen_ore_cube_pc_i00]"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55604" levels="1" name="Progression Support Cube">
+		<set name="icon" value="[icon.etc_crystal_cube_event_i00]"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55605" levels="1" name="Artisan\'s Goggles &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="icon.accessory_dwarf_goggle_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55606" levels="1" name="Artisan\'s Goggles &lt;DEX +1 WIT +1&gt;">
+		<set name="icon" value="icon.accessory_dwarf_goggle_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55607" levels="1" name="Artisan\'s Goggles &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="icon.accessory_dwarf_goggle_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55608" levels="1" name="Uniform Hat &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="BranchSys.icon.br_Uniform_Hat_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55609" levels="1" name="Uniform Hat &lt;DEX +1 WIT +1&gt;">
+		<set name="icon" value="BranchSys.icon.br_Uniform_Hat_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55610" levels="1" name="Uniform Hat &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="BranchSys.icon.br_Uniform_Hat_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55611" levels="1" name="Assassin\'s Bamboo Hat &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="BranchSys.icon.br_Bamboo_Hat_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55612" levels="1" name="Assassin\'s Bamboo Hat &lt;DEX +1 WIT +1&gt;">
+		<set name="icon" value="BranchSys.icon.br_Bamboo_Hat_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55613" levels="1" name="Assassin\'s Bamboo Hat &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="BranchSys.icon.br_Bamboo_Hat_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55614" levels="1" name="Valkyrie Hat &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="BranchSys.icon.br_valkyrie_cap_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55615" levels="1" name="Valkyrie Hat &lt;DEX +1 WIT +1&gt;">
+		<set name="icon" value="BranchSys.icon.br_valkyrie_cap_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55616" levels="1" name="Valkyrie Hat &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="BranchSys.icon.br_valkyrie_cap_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55617" levels="1" name="Gatekeeper Hat &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="BranchSys.icon.br_gatekeeper_of_hat_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55618" levels="1" name="Gatekeeper Hat &lt;DEX +1 WIT +1&gt;">
+		<set name="icon" value="BranchSys.icon.br_gatekeeper_of_hat_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55619" levels="1" name="Gatekeeper Hat &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="BranchSys.icon.br_gatekeeper_of_hat_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55620" levels="1" name="Wedding Veil &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="BranchSys2.icon.br_wedding_vail_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55621" levels="1" name="Wedding Veil &lt;DEX +1 WIT +1&gt;">
+		<set name="icon" value="BranchSys2.icon.br_wedding_vail_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55622" levels="1" name="Wedding Veil &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="BranchSys2.icon.br_wedding_vail_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55623" levels="1" name="Maid Hair Accessory &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="BranchSys3.icon1.g_co_cutie_maid_hair"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55624" levels="1" name="Maid Hair Accessory &lt;DEX +1 WIT +1&gt;">
+		<set name="icon" value="BranchSys3.icon1.g_co_cutie_maid_hair"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55625" levels="1" name="Maid Hair Accessory &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="BranchSys3.icon1.g_co_cutie_maid_hair"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55626" levels="1" name="Refined Romantic Chapeau: Red &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="icon.bm_romantic_chaperon_red"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55627" levels="1" name="Refined Romantic Chapeau: Red &lt;DEX+1 WIT+1&gt;">
+		<set name="icon" value="icon.bm_romantic_chaperon_red"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55628" levels="1" name="Refined Romantic Chapeau: Red &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="icon.bm_romantic_chaperon_red"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55629" levels="1" name="Refined Angel Ring &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="icon.accessory_angel_ring_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55630" levels="1" name="Refined Angel Ring &lt;DEX +1 WIT +1&gt;">
+		<set name="icon" value="icon.accessory_angel_ring_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55631" levels="1" name="Refined Angel Ring &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="icon.accessory_angel_ring_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55632" levels="1" name="Refined Wizard Hat &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="icon.accessory_magician_cap2_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55633" levels="1" name="Refined Wizard Hat &lt;DEX +1 WIT +1&gt;">
+		<set name="icon" value="icon.accessory_magician_cap2_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55634" levels="1" name="Refined Wizard Hat &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="icon.accessory_magician_cap2_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55635" levels="1" name="Laborer Hat &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="BranchSys.icon.br_people_cap_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55636" levels="1" name="Laborer Hat &lt;DEX +1 WIT +1&gt;">
+		<set name="icon" value="BranchSys.icon.br_people_cap_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55637" levels="1" name="Laborer Hat &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="BranchSys.icon.br_people_cap_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55638" levels="1" name="Top Hat &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="icon.accessory_magicial_cap_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55639" levels="1" name="Top Hat &lt;DEX +1 WIT +1&gt;">
+		<set name="icon" value="icon.accessory_magicial_cap_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55640" levels="1" name="Wizard Hat &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="icon.accessory_magicial_cap_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55641" levels="1" name="Vigilante Hat &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="icon.zorocap"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55642" levels="1" name="Vigilante Hat &lt;DEX +1 WIT +1&gt;">
+		<set name="icon" value="icon.zorocap"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55643" levels="1" name="Vigilante Hat &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="icon.zorocap"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55644" levels="1" name="White Uniform Hat &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="BranchSys2.icon2.pi_navy_cap"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55645" levels="1" name="White Uniform Hat &lt;DEX +1 WIT +1&gt;">
+		<set name="icon" value="BranchSys2.icon2.pi_navy_cap"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55646" levels="1" name="White Uniform Hat &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="BranchSys2.icon2.pi_navy_cap"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55647" levels="1" name="Warrior\'s Helmet &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="BranchSys2.icon.br_close_helmet_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55648" levels="1" name="Warrior\'s Helmet &lt;DEX +1 WIT +1&gt;">
+		<set name="icon" value="BranchSys2.icon.br_close_helmet_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55649" levels="1" name="Warrior\'s Helmet &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="BranchSys2.icon.br_close_helmet_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55650" levels="1" name="First Mate Hat &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="icon.Accessary_middle_ages_i01"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55651" levels="1" name="First Mate Hat &lt;DEX +1 WIT +1&gt;">
+		<set name="icon" value="icon.Accessary_middle_ages_i01"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55652" levels="1" name="First Mate Hat &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="icon.Accessary_middle_ages_i01"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55653" levels="1" name="Refined Romantic Chapeau: Blue &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="icon.bm_romantic_chaperon_blue"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55654" levels="1" name="Refined Romantic Chapeau: Blue &lt;DEX+1 WIT+1&gt;">
+		<set name="icon" value="icon.bm_romantic_chaperon_blue"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55655" levels="1" name="Refined Romantic Chapeau: Blue &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="icon.bm_romantic_chaperon_blue"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55656" levels="1" name="Gold-rimmed Glasses &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="BranchSys2.icon.br_gold_eyeglass_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55657" levels="1" name="Gold-rimmed Glasses &lt;DEX+1 WIT+1&gt;">
+		<set name="icon" value="BranchSys2.icon.br_gold_eyeglass_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55658" levels="1" name="Gold-rimmed Glasses &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="BranchSys2.icon.br_gold_eyeglass_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55659" levels="1" name="Horn-rimmed Glasses &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="BranchSys.icon.br_Eye_Glasses_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55660" levels="1" name="Horn-rimmed Glasses &lt;DEX+1 WIT+1&gt;">
+		<set name="icon" value="BranchSys.icon.br_Eye_Glasses_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55661" levels="1" name="Horn-rimmed Glasses &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="BranchSys.icon.br_Eye_Glasses_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55662" levels="1" name="Stylish Straw Hat &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="BranchSys3.icon.g_straw_hat"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55663" levels="1" name="Stylish Straw Hat &lt;DEX +1 WIT +1&gt;">
+		<set name="icon" value="BranchSys3.icon.g_straw_hat"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55664" levels="1" name="Stylish Straw Hat &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="BranchSys3.icon.g_straw_hat"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55665" levels="1" name="Chic Silver Chapeau &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="BranchSys2.icon2.pi_silverchaperon"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55666" levels="1" name="Chic Silver Chapeau &lt;DEX +1 WIT +1&gt;">
+		<set name="icon" value="BranchSys2.icon2.pi_silverchaperon"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55667" levels="1" name="Chic Silver Chapeau &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="BranchSys2.icon2.pi_silverchaperon"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55668" levels="1" name="Afro Hair &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="BranchSys.icon.br_Afro_hair_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55669" levels="1" name="Afro Hair &lt;DEX +1 WIT +1&gt;">
+		<set name="icon" value="BranchSys.icon.br_Afro_hair_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55670" levels="1" name="Afro Hair &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="BranchSys.icon.br_Afro_hair_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55671" levels="1" name="Eva\'s Scroll: Enchant Hair Accessory">
+		<set name="icon" value="icon.scroll_of_unidentify_am_d"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55672" levels="1" name="Stabilized Eva\'s Scroll: Enchant Hair Accessory">
+		<set name="icon" value="icon.scroll_of_unidentify_am_d"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55673" levels="1" name="Eva\'s Enhancement Pack - Hair Accessory">
+		<set name="icon" value="Branchsys2.icon.br_lucky_bag_box_i00"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55674" levels="1" name="Eva\'s Hair Accessory Pack">
+		<set name="icon" value="BranchSys.icon.br_silver_box_i00"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55675" levels="1" name="Eva\'s Enhancement Pack - Hair Accessory">
+		<set name="icon" value="Branchsys2.icon.br_lucky_bag_box_i00"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55676" levels="1" name="Scroll: Enchant Weapon (A-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55677" levels="1" name="Shining Pendant Varnish">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55678" levels="1" name="Improved Scroll: Enchant Weapon (A-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55679" levels="1" name="Strawberry Juice">
+		<set name="icon" value="icon.etc_fruit_cocktail_i01"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55680" levels="1" name="Mango Juice">
+		<set name="icon" value="icon.etc_fruit_cocktail_i03"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55681" levels="1" name="Cherry Juice">
+		<set name="icon" value="icon.etc_fruit_cocktail_i02"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55682" levels="1" name="Special Dragons Fruit">
+		<set name="icon" value="icon.bm_dragon_fruit"/>
+		<set name="reuseDelay" value="60000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55683" levels="1" name="Royal Tears">
+		<set name="icon" value="BranchSys.icon.br_sevenlove_stone_i00"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="hitTime" value="100"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55684" levels="1" name="Red Candy of the Royal Family">
+		<set name="icon" value="etc_whiteday_candy_i05"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55685" levels="1" name="Blue Candy of the Royal Family">
+		<set name="icon" value="etc_whiteday_candy_i06"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55686" levels="1" name="The Royal Confectionary Box">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55687" levels="1" name="Ultimate confidence">
+		<set name="icon" value="icon.release_thirst"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55688" levels="1" name="Pirates Treasure Chest">
+		<set name="icon" value="icon.card_event_blue_box"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55689" levels="1" name="Talisman of the Brave Chicken">
+		<set name="icon" value="[icon.npoint_talisman_stat]"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55690" levels="2" name="Transformation Scroll: Pirate">
+		<set name="icon" value="icon.etc_charm_of_courage_i03"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55691" levels="2" name="Transformation Scroll: Dark Assassin">
+		<set name="icon" value="icon.etc_charm_of_courage_i05"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55692" levels="2" name="Transformation Scroll: White Assassin">
+		<set name="icon" value="icon.etc_charm_of_courage_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55693" levels="1" name="Blue Dynasty Transformation Scroll">
+		<set name="icon" value="icon.etc_charm_of_courage_i01"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55694" levels="1" name="Red Zubei Transformation Scroll">
+		<set name="icon" value="icon.etc_charm_of_courage_i04"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55695" levels="1" name="Transformation Support Cube">
+		<set name="icon" value="icon.etc_golden_ore_cube_pc_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55696" levels="1" name="Chicken Amulet">
+		<set name="icon" value="BranchSys2.lcon.br_life_rune_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55697" levels="1" name="Kusto Lucky Enchant Pack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55698" levels="1" name="Giant\'s Treasure Chest">
+		<set name="icon" value="icon.card_event_blue_box"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+</list>

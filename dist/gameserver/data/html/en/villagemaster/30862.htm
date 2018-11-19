@@ -1,0 +1,11 @@
+<html><head><body>
+Grand Master Oltran:<br>
+You are far from your village, adventurer. How do you feel, now that you see the great castle and the ever-changing streets that are the pride of the Humans? I'm sure you admire them, but do not be enticed by their allure. Beneath the most beautiful bed of flowers, there is often a serpent's lair. If you spend much time in this city, you may come to see what I mean...<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">"Can you tell me about the 2nd Class Transfer?"</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Clan</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Alliance</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Exchange Daily Coins</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Quest</Button>
+</body></html>

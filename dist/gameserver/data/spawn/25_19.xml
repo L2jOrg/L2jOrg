@@ -1,0 +1,1455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<territory name="aden22_2519_09">
+		<add x="166332" y="60416" zmin="-4144" zmax="-3344"/>
+		<add x="169612" y="57564" zmin="-4144" zmax="-3344"/>
+		<add x="171180" y="57928" zmin="-4144" zmax="-3344"/>
+		<add x="171784" y="59884" zmin="-4144" zmax="-3344"/>
+		<add x="168484" y="62112" zmin="-4144" zmax="-3344"/>
+	</territory>
+	<spawn name="aden22_2519_09" count="4" respawn="27">
+		<territory name="aden22_2519_09"/>
+		<npc id="21021"/><!--Острый Коготь-->
+	</spawn>
+	<spawn name="aden22_2519_09" count="3" respawn="27">
+		<territory name="aden22_2519_09"/>
+		<npc id="21022"/><!--Главный Воин Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_07">
+		<add x="163928" y="51916" zmin="-3844" zmax="-3244"/>
+		<add x="164816" y="51716" zmin="-3844" zmax="-3244"/>
+		<add x="165248" y="53408" zmin="-3844" zmax="-3244"/>
+		<add x="165176" y="55716" zmin="-3844" zmax="-3244"/>
+		<add x="163948" y="55884" zmin="-3844" zmax="-3244"/>
+	</territory>
+	<spawn name="aden22_2519_07" count="1" respawn="27">
+		<territory name="aden22_2519_07"/>
+		<npc id="20679"/><!--Болотный Сталкер-->
+	</spawn>
+	<spawn name="aden22_2519_07" count="1" respawn="27">
+		<territory name="aden22_2519_07"/>
+		<npc id="20680"/><!--Болотный Дрейк-->
+	</spawn>
+	<spawn name="aden22_2519_07" count="1" respawn="27">
+		<territory name="aden22_2519_07"/>
+		<npc id="21017"/><!--Падший Орк-->
+	</spawn>
+	<territory name="aden22_2519_08">
+		<add x="163960" y="56092" zmin="-4168" zmax="-3368"/>
+		<add x="165016" y="55956" zmin="-4168" zmax="-3368"/>
+		<add x="166272" y="60084" zmin="-4168" zmax="-3368"/>
+		<add x="165224" y="60168" zmin="-4168" zmax="-3368"/>
+		<add x="163948" y="59128" zmin="-4168" zmax="-3368"/>
+	</territory>
+	<spawn name="aden22_2519_08" count="1" respawn="27">
+		<territory name="aden22_2519_08"/>
+		<npc id="20679"/><!--Болотный Сталкер-->
+	</spawn>
+	<spawn name="aden22_2519_08" count="1" respawn="27">
+		<territory name="aden22_2519_08"/>
+		<npc id="20680"/><!--Болотный Дрейк-->
+	</spawn>
+	<spawn name="aden22_2519_08" count="1" respawn="27">
+		<territory name="aden22_2519_08"/>
+		<npc id="21017"/><!--Падший Орк-->
+	</spawn>
+	<territory name="aden22_2519_05">
+		<add x="168096" y="45832" zmin="-3924" zmax="-3524"/>
+		<add x="169904" y="46720" zmin="-3924" zmax="-3524"/>
+		<add x="170416" y="47984" zmin="-3924" zmax="-3524"/>
+		<add x="169632" y="49344" zmin="-3924" zmax="-3524"/>
+		<add x="167196" y="48172" zmin="-3924" zmax="-3524"/>
+	</territory>
+	<spawn name="aden22_2519_05" count="2" respawn="27">
+		<territory name="aden22_2519_05"/>
+		<npc id="20679"/><!--Болотный Сталкер-->
+	</spawn>
+	<spawn name="aden22_2519_05" count="2" respawn="27">
+		<territory name="aden22_2519_05"/>
+		<npc id="20680"/><!--Болотный Дрейк-->
+	</spawn>
+	<spawn name="aden22_2519_05" count="3" respawn="27">
+		<territory name="aden22_2519_05"/>
+		<npc id="21017"/><!--Падший Орк-->
+	</spawn>
+	<territory name="aden22_2519_03">
+		<add x="164072" y="42384" zmin="-3804" zmax="-3204"/>
+		<add x="166584" y="42176" zmin="-3804" zmax="-3204"/>
+		<add x="166688" y="44096" zmin="-3804" zmax="-3204"/>
+		<add x="163980" y="45784" zmin="-3804" zmax="-3204"/>
+	</territory>
+	<spawn name="aden22_2519_03" count="2" respawn="27">
+		<territory name="aden22_2519_03"/>
+		<npc id="20679"/><!--Болотный Сталкер-->
+	</spawn>
+	<spawn name="aden22_2519_03" count="3" respawn="27">
+		<territory name="aden22_2519_03"/>
+		<npc id="20680"/><!--Болотный Дрейк-->
+	</spawn>
+	<spawn name="aden22_2519_03" count="3" respawn="27">
+		<territory name="aden22_2519_03"/>
+		<npc id="21017"/><!--Падший Орк-->
+	</spawn>
+	<territory name="aden22_2519_04">
+		<add x="163944" y="45916" zmin="-3860" zmax="-3060"/>
+		<add x="166488" y="44228" zmin="-3860" zmax="-3060"/>
+		<add x="168092" y="45724" zmin="-3860" zmax="-3060"/>
+		<add x="167156" y="48180" zmin="-3860" zmax="-3060"/>
+		<add x="163912" y="46896" zmin="-3860" zmax="-3060"/>
+	</territory>
+	<spawn name="aden22_2519_04" count="2" respawn="27">
+		<territory name="aden22_2519_04"/>
+		<npc id="20679"/><!--Болотный Сталкер-->
+	</spawn>
+	<spawn name="aden22_2519_04" count="3" respawn="27">
+		<territory name="aden22_2519_04"/>
+		<npc id="20680"/><!--Болотный Дрейк-->
+	</spawn>
+	<spawn name="aden22_2519_04" count="3" respawn="27">
+		<territory name="aden22_2519_04"/>
+		<npc id="21017"/><!--Падший Орк-->
+	</spawn>
+	<territory name="aden22_2519_01">
+		<add x="165860" y="33740" zmin="-4044" zmax="-3544"/>
+		<add x="167020" y="34432" zmin="-4044" zmax="-3544"/>
+		<add x="168032" y="36124" zmin="-4044" zmax="-3544"/>
+		<add x="167468" y="36736" zmin="-4044" zmax="-3544"/>
+		<add x="167000" y="36704" zmin="-4044" zmax="-3544"/>
+		<add x="165840" y="34896" zmin="-4044" zmax="-3544"/>
+	</territory>
+	<spawn name="aden22_2519_01" count="1" respawn="27">
+		<territory name="aden22_2519_01"/>
+		<npc id="20679"/><!--Болотный Сталкер-->
+	</spawn>
+	<spawn name="aden22_2519_01" count="1" respawn="27">
+		<territory name="aden22_2519_01"/>
+		<npc id="20680"/><!--Болотный Дрейк-->
+	</spawn>
+	<spawn name="aden22_2519_01" count="1" respawn="27">
+		<territory name="aden22_2519_01"/>
+		<npc id="21017"/><!--Падший Орк-->
+	</spawn>
+	<territory name="aden22_2519_02">
+		<add x="163932" y="38340" zmin="-3832" zmax="-3232"/>
+		<add x="166888" y="38216" zmin="-3832" zmax="-3232"/>
+		<add x="167236" y="38952" zmin="-3832" zmax="-3232"/>
+		<add x="166684" y="41752" zmin="-3832" zmax="-3232"/>
+		<add x="165228" y="41804" zmin="-3832" zmax="-3232"/>
+		<add x="163960" y="41568" zmin="-3832" zmax="-3232"/>
+	</territory>
+	<spawn name="aden22_2519_02" count="3" respawn="27">
+		<territory name="aden22_2519_02"/>
+		<npc id="20679"/><!--Болотный Сталкер-->
+	</spawn>
+	<spawn name="aden22_2519_02" count="3" respawn="27">
+		<territory name="aden22_2519_02"/>
+		<npc id="20680"/><!--Болотный Дрейк-->
+	</spawn>
+	<spawn name="aden22_2519_02" count="3" respawn="27">
+		<territory name="aden22_2519_02"/>
+		<npc id="21017"/><!--Падший Орк-->
+	</spawn>
+	<territory name="aden22_2519_16">
+		<add x="176428" y="37512" zmin="-4908" zmax="-4308"/>
+		<add x="178024" y="37168" zmin="-4908" zmax="-4308"/>
+		<add x="179104" y="37172" zmin="-4908" zmax="-4308"/>
+		<add x="179116" y="38308" zmin="-4908" zmax="-4308"/>
+		<add x="177220" y="38320" zmin="-4908" zmax="-4308"/>
+	</territory>
+	<spawn name="aden22_2519_16" count="1" respawn="27">
+		<territory name="aden22_2519_16"/>
+		<npc id="21018"/><!--Древняя Горгулья-->
+	</spawn>
+	<spawn name="aden22_2519_16" count="1" respawn="27">
+		<territory name="aden22_2519_16"/>
+		<npc id="21019"/><!--Стрелок Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_16" count="1" respawn="27">
+		<territory name="aden22_2519_16"/>
+		<npc id="21258"/><!--Шаман Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_17">
+		<add x="179140" y="37168" zmin="-4888" zmax="-4488"/>
+		<add x="180808" y="36376" zmin="-4888" zmax="-4488"/>
+		<add x="181864" y="36532" zmin="-4888" zmax="-4488"/>
+		<add x="179668" y="38396" zmin="-4888" zmax="-4488"/>
+		<add x="179140" y="38312" zmin="-4888" zmax="-4488"/>
+	</territory>
+	<spawn name="aden22_2519_17" count="1" respawn="27">
+		<territory name="aden22_2519_17"/>
+		<npc id="21018"/><!--Древняя Горгулья-->
+	</spawn>
+	<spawn name="aden22_2519_17" count="1" respawn="27">
+		<territory name="aden22_2519_17"/>
+		<npc id="21019"/><!--Стрелок Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_17" count="1" respawn="27">
+		<territory name="aden22_2519_17"/>
+		<npc id="21020"/><!--Шаман Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_14">
+		<add x="171444" y="36920" zmin="-4720" zmax="-4320"/>
+		<add x="173216" y="37400" zmin="-4720" zmax="-4320"/>
+		<add x="174292" y="37916" zmin="-4720" zmax="-4320"/>
+		<add x="173536" y="39396" zmin="-4720" zmax="-4320"/>
+		<add x="171336" y="37688" zmin="-4720" zmax="-4320"/>
+	</territory>
+	<spawn name="aden22_2519_14" count="1" respawn="27">
+		<territory name="aden22_2519_14"/>
+		<npc id="21018"/><!--Древняя Горгулья-->
+	</spawn>
+	<spawn name="aden22_2519_14" count="1" respawn="27">
+		<territory name="aden22_2519_14"/>
+		<npc id="21019"/><!--Стрелок Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_14" count="1" respawn="27">
+		<territory name="aden22_2519_14"/>
+		<npc id="21258"/><!--Шаман Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_15">
+		<add x="174304" y="37940" zmin="-4804" zmax="-4204"/>
+		<add x="176420" y="37516" zmin="-4804" zmax="-4204"/>
+		<add x="177148" y="38388" zmin="-4804" zmax="-4204"/>
+		<add x="176000" y="39104" zmin="-4804" zmax="-4204"/>
+		<add x="173864" y="39076" zmin="-4804" zmax="-4204"/>
+	</territory>
+	<spawn name="aden22_2519_15" count="1" respawn="27">
+		<territory name="aden22_2519_15"/>
+		<npc id="21018"/><!--Древняя Горгулья-->
+	</spawn>
+	<spawn name="aden22_2519_15" count="1" respawn="27">
+		<territory name="aden22_2519_15"/>
+		<npc id="21019"/><!--Стрелок Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_15" count="1" respawn="27">
+		<territory name="aden22_2519_15"/>
+		<npc id="21020"/><!--Шаман Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_12">
+		<add x="167388" y="49296" zmin="-4216" zmax="-3716"/>
+		<add x="169596" y="49388" zmin="-4216" zmax="-3716"/>
+		<add x="169124" y="50244" zmin="-4216" zmax="-3716"/>
+		<add x="167792" y="52144" zmin="-4216" zmax="-3716"/>
+		<add x="165712" y="52016" zmin="-4216" zmax="-3716"/>
+		<add x="165556" y="51392" zmin="-4216" zmax="-3716"/>
+	</territory>
+	<spawn name="aden22_2519_12" count="3" respawn="27">
+		<territory name="aden22_2519_12"/>
+		<npc id="21018"/><!--Древняя Горгулья-->
+	</spawn>
+	<spawn name="aden22_2519_12" count="3" respawn="27">
+		<territory name="aden22_2519_12"/>
+		<npc id="21019"/><!--Стрелок Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_12" count="1" respawn="27">
+		<territory name="aden22_2519_12"/>
+		<npc id="21020"/><!--Шаман Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_12" count="1" respawn="27">
+		<territory name="aden22_2519_12"/>
+		<npc id="21258"/><!--Шаман Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_13">
+		<add x="169348" y="36740" zmin="-4568" zmax="-3968"/>
+		<add x="170380" y="36712" zmin="-4568" zmax="-3968"/>
+		<add x="171204" y="37652" zmin="-4568" zmax="-3968"/>
+		<add x="170952" y="37996" zmin="-4568" zmax="-3968"/>
+		<add x="169840" y="37940" zmin="-4568" zmax="-3968"/>
+	</territory>
+	<spawn name="aden22_2519_13" count="1" respawn="27">
+		<territory name="aden22_2519_13"/>
+		<npc id="21018"/><!--Древняя Горгулья-->
+	</spawn>
+	<spawn name="aden22_2519_13" count="1" respawn="27">
+		<territory name="aden22_2519_13"/>
+		<npc id="21019"/><!--Стрелок Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_13" count="1" respawn="27">
+		<territory name="aden22_2519_13"/>
+		<npc id="21020"/><!--Шаман Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_10">
+		<add x="166304" y="55068" zmin="-4268" zmax="-3668"/>
+		<add x="168292" y="54176" zmin="-4268" zmax="-3668"/>
+		<add x="169664" y="57392" zmin="-4268" zmax="-3668"/>
+		<add x="167432" y="59436" zmin="-4268" zmax="-3668"/>
+		<add x="166384" y="58908" zmin="-4268" zmax="-3668"/>
+		<add x="165424" y="57252" zmin="-4268" zmax="-3668"/>
+	</territory>
+	<spawn name="aden22_2519_10" count="4" respawn="27">
+		<territory name="aden22_2519_10"/>
+		<npc id="21021"/><!--Острый Коготь-->
+	</spawn>
+	<spawn name="aden22_2519_10" count="3" respawn="27">
+		<territory name="aden22_2519_10"/>
+		<npc id="21022"/><!--Главный Воин Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_11">
+		<add x="166280" y="52288" zmin="-4272" zmax="-3872"/>
+		<add x="167896" y="52304" zmin="-4272" zmax="-3872"/>
+		<add x="168808" y="53076" zmin="-4272" zmax="-3872"/>
+		<add x="168236" y="54124" zmin="-4272" zmax="-3872"/>
+		<add x="166356" y="55028" zmin="-4272" zmax="-3872"/>
+	</territory>
+	<spawn name="aden22_2519_11" count="2" respawn="27">
+		<territory name="aden22_2519_11"/>
+		<npc id="21018"/><!--Древняя Горгулья-->
+	</spawn>
+	<spawn name="aden22_2519_11" count="2" respawn="27">
+		<territory name="aden22_2519_11"/>
+		<npc id="21019"/><!--Стрелок Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_11" count="1" respawn="27">
+		<territory name="aden22_2519_11"/>
+		<npc id="21020"/><!--Шаман Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_11" count="1" respawn="27">
+		<territory name="aden22_2519_11"/>
+		<npc id="21258"/><!--Шаман Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_20">
+		<add x="182780" y="36696" zmin="-4060" zmax="-3460"/>
+		<add x="184268" y="37492" zmin="-4060" zmax="-3460"/>
+		<add x="184460" y="39704" zmin="-4060" zmax="-3460"/>
+		<add x="181168" y="39068" zmin="-4060" zmax="-3460"/>
+	</territory>
+	<spawn name="aden22_2519_20" count="2" respawn="27">
+		<territory name="aden22_2519_20"/>
+		<npc id="21018"/><!--Древняя Горгулья-->
+	</spawn>
+	<spawn name="aden22_2519_20" count="2" respawn="27">
+		<territory name="aden22_2519_20"/>
+		<npc id="21019"/><!--Стрелок Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_20" count="1" respawn="27">
+		<territory name="aden22_2519_20"/>
+		<npc id="21020"/><!--Шаман Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_20" count="1" respawn="27">
+		<territory name="aden22_2519_20"/>
+		<npc id="21258"/><!--Шаман Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_25">
+		<add x="173876" y="40948" zmin="-5000" zmax="-4600"/>
+		<add x="176148" y="42236" zmin="-5000" zmax="-4600"/>
+		<add x="175792" y="44880" zmin="-5000" zmax="-4600"/>
+		<add x="173184" y="44264" zmin="-5000" zmax="-4600"/>
+		<add x="172332" y="40752" zmin="-5000" zmax="-4600"/>
+	</territory>
+	<spawn name="aden22_2519_25" count="1" respawn="27">
+		<territory name="aden22_2519_25"/>
+		<npc id="21020"/><!--Шаман Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_25" count="2" respawn="27">
+		<territory name="aden22_2519_25"/>
+		<npc id="21258"/><!--Шаман Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_25" count="3" respawn="27">
+		<territory name="aden22_2519_25"/>
+		<npc id="21021"/><!--Острый Коготь-->
+	</spawn>
+	<spawn name="aden22_2519_25" count="2" respawn="27">
+		<territory name="aden22_2519_25"/>
+		<npc id="21022"/><!--Главный Воин Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_23">
+		<add x="177768" y="41668" zmin="-3944" zmax="-3444"/>
+		<add x="179416" y="40796" zmin="-3944" zmax="-3444"/>
+		<add x="180248" y="41216" zmin="-3944" zmax="-3444"/>
+		<add x="179112" y="43268" zmin="-3944" zmax="-3444"/>
+		<add x="177852" y="43136" zmin="-3944" zmax="-3444"/>
+	</territory>
+	<spawn name="aden22_2519_23" count="1" respawn="27">
+		<territory name="aden22_2519_23"/>
+		<npc id="21258"/><!--Шаман Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_23" count="1" respawn="27">
+		<territory name="aden22_2519_23"/>
+		<npc id="21021"/><!--Острый Коготь-->
+	</spawn>
+	<spawn name="aden22_2519_23" count="1" respawn="27">
+		<territory name="aden22_2519_23"/>
+		<npc id="21022"/><!--Главный Воин Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_24">
+		<add x="181024" y="41644" zmin="-3976" zmax="-3376"/>
+		<add x="181584" y="41976" zmin="-3976" zmax="-3376"/>
+		<add x="181520" y="44032" zmin="-3976" zmax="-3376"/>
+		<add x="180300" y="44148" zmin="-3976" zmax="-3376"/>
+		<add x="180164" y="42920" zmin="-3976" zmax="-3376"/>
+	</territory>
+	<spawn name="aden22_2519_24" count="1" respawn="27">
+		<territory name="aden22_2519_24"/>
+		<npc id="21020"/><!--Шаман Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_24" count="1" respawn="27">
+		<territory name="aden22_2519_24"/>
+		<npc id="21021"/><!--Острый Коготь-->
+	</spawn>
+	<spawn name="aden22_2519_24" count="1" respawn="27">
+		<territory name="aden22_2519_24"/>
+		<npc id="21022"/><!--Главный Воин Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_21">
+		<add x="181148" y="39136" zmin="-3884" zmax="-3484"/>
+		<add x="184384" y="39796" zmin="-3884" zmax="-3484"/>
+		<add x="184796" y="40692" zmin="-3884" zmax="-3484"/>
+		<add x="184360" y="41684" zmin="-3884" zmax="-3484"/>
+		<add x="181972" y="42140" zmin="-3884" zmax="-3484"/>
+		<add x="179656" y="40760" zmin="-3884" zmax="-3484"/>
+		<add x="178868" y="39556" zmin="-3884" zmax="-3484"/>
+	</territory>
+	<spawn name="aden22_2519_21" count="4" respawn="27">
+		<territory name="aden22_2519_21"/>
+		<npc id="21018"/><!--Древняя Горгулья-->
+	</spawn>
+	<spawn name="aden22_2519_21" count="4" respawn="27">
+		<territory name="aden22_2519_21"/>
+		<npc id="21019"/><!--Стрелок Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_21" count="1" respawn="27">
+		<territory name="aden22_2519_21"/>
+		<npc id="21020"/><!--Шаман Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_21" count="2" respawn="27">
+		<territory name="aden22_2519_21"/>
+		<npc id="21258"/><!--Шаман Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_22">
+		<add x="176356" y="40588" zmin="-3956" zmax="-3556"/>
+		<add x="178704" y="39708" zmin="-3956" zmax="-3556"/>
+		<add x="179228" y="40748" zmin="-3956" zmax="-3556"/>
+		<add x="177704" y="41576" zmin="-3956" zmax="-3556"/>
+	</territory>
+	<spawn name="aden22_2519_22" count="1" respawn="27">
+		<territory name="aden22_2519_22"/>
+		<npc id="21020"/><!--Шаман Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_22" count="1" respawn="27">
+		<territory name="aden22_2519_22"/>
+		<npc id="21021"/><!--Острый Коготь-->
+	</spawn>
+	<spawn name="aden22_2519_22" count="1" respawn="27">
+		<territory name="aden22_2519_22"/>
+		<npc id="21022"/><!--Главный Воин Падших Орков-->
+	</spawn>
+	<spawn name="aden07_2519_p41" count="1" respawn="150" respawn_random="50">
+		<territory>
+			<add x="183165" y="57680" zmin="-4026" zmax="-3826"/>
+			<add x="184594" y="57663" zmin="-4026" zmax="-3826"/>
+			<add x="184570" y="60104" zmin="-4026" zmax="-3826"/>
+			<add x="183150" y="60163" zmin="-4026" zmax="-3826"/>
+		</territory>
+		<npc id="20771"/><!--Бариф-->
+	</spawn>
+	<spawn name="aden07_2519_p40" count="1" respawn="150" respawn_random="50">
+		<territory>
+			<add x="183157" y="60374" zmin="-4025" zmax="-3825"/>
+			<add x="184598" y="60383" zmin="-4025" zmax="-3825"/>
+			<add x="184596" y="62754" zmin="-4025" zmax="-3825"/>
+			<add x="183177" y="62793" zmin="-4025" zmax="-3825"/>
+		</territory>
+		<npc id="20771"/><!--Бариф-->
+	</spawn>
+	<spawn name="aden07_2519_p38" count="3" respawn="150" respawn_random="50">
+		<territory>
+			<add x="185849" y="54574" zmin="-7271" zmax="-7071"/>
+			<add x="188339" y="54519" zmin="-7271" zmax="-7071"/>
+			<add x="188847" y="55458" zmin="-7271" zmax="-7071"/>
+			<add x="188857" y="57304" zmin="-7271" zmax="-7071"/>
+			<add x="188259" y="58020" zmin="-7271" zmax="-7071"/>
+			<add x="185686" y="58048" zmin="-7271" zmax="-7071"/>
+			<add x="185124" y="57580" zmin="-7271" zmax="-7071"/>
+			<add x="185112" y="55208" zmin="-7271" zmax="-7071"/>
+		</territory>
+		<npc id="20771"/><!--Бариф-->
+	</spawn>
+	<spawn name="aden07_2519_p39" count="3" respawn="150" respawn_random="50">
+		<territory>
+			<add x="185425" y="54721" zmin="-4602" zmax="-4402"/>
+			<add x="188262" y="54655" zmin="-4602" zmax="-4402"/>
+			<add x="188321" y="57871" zmin="-4602" zmax="-4402"/>
+			<add x="185415" y="57861" zmin="-4602" zmax="-4402"/>
+		</territory>
+		<npc id="20771"/><!--Бариф-->
+	</spawn>
+	<spawn name="aden07_2519_p36" count="3" respawn="150" respawn_random="50">
+		<territory>
+			<add x="189936" y="59136" zmin="-7280" zmax="-7080"/>
+			<add x="194032" y="59204" zmin="-7280" zmax="-7080"/>
+			<add x="194024" y="62400" zmin="-7280" zmax="-7080"/>
+			<add x="189948" y="62408" zmin="-7280" zmax="-7080"/>
+		</territory>
+		<npc id="20771"/><!--Бариф-->
+	</spawn>
+	<spawn name="aden07_2519_p27" count="1" respawn="150" respawn_random="50">
+		<territory>
+			<add x="186850" y="59675" zmin="-7276" zmax="-7076"/>
+			<add x="188172" y="59675" zmin="-7276" zmax="-7076"/>
+			<add x="188172" y="63020" zmin="-7276" zmax="-7076"/>
+			<add x="186850" y="63020" zmin="-7276" zmax="-7076"/>
+		</territory>
+		<npc id="20771"/><!--Бариф-->
+	</spawn>
+	<spawn name="aden07_2519_p28" count="1" respawn="150" respawn_random="50">
+		<territory>
+			<add x="182322" y="59680" zmin="-7276" zmax="-7076"/>
+			<add x="186515" y="59680" zmin="-7276" zmax="-7076"/>
+			<add x="186515" y="60255" zmin="-7276" zmax="-7076"/>
+			<add x="182322" y="60255" zmin="-7276" zmax="-7076"/>
+		</territory>
+		<npc id="20771"/><!--Бариф-->
+	</spawn>
+	<spawn name="aden07_2519_p23" count="1" respawn="150" respawn_random="50">
+		<territory>
+			<add x="186840" y="59639" zmin="-5012" zmax="-4812"/>
+			<add x="188168" y="59639" zmin="-5012" zmax="-4812"/>
+			<add x="188168" y="61951" zmin="-5012" zmax="-4812"/>
+			<add x="186840" y="61951" zmin="-5012" zmax="-4812"/>
+		</territory>
+		<npc id="20771"/><!--Бариф-->
+	</spawn>
+	<spawn name="aden07_2519_p24" count="1" respawn="150" respawn_random="50">
+		<territory>
+			<add x="192121" y="60386" zmin="-6156" zmax="-5956"/>
+			<add x="193883" y="60386" zmin="-6156" zmax="-5956"/>
+			<add x="193883" y="62929" zmin="-6156" zmax="-5956"/>
+			<add x="192121" y="62929" zmin="-6156" zmax="-5956"/>
+		</territory>
+		<npc id="20771"/><!--Бариф-->
+	</spawn>
+	<spawn name="aden07_2519_p11" count="1" respawn="150" respawn_random="50">
+		<territory>
+			<add x="189489" y="51585" zmin="-4384" zmax="-4184"/>
+			<add x="191107" y="51585" zmin="-4384" zmax="-4184"/>
+			<add x="191107" y="53322" zmin="-4384" zmax="-4184"/>
+			<add x="189489" y="53322" zmin="-4384" zmax="-4184"/>
+		</territory>
+		<npc id="21058"/><!--Лорд Зверей-->
+	</spawn>
+	<spawn name="aden07_2519_p14" count="1" respawn="150" respawn_random="50">
+		<territory>
+			<add x="192982" y="51448" zmin="-4384" zmax="-4184"/>
+			<add x="194490" y="51448" zmin="-4384" zmax="-4184"/>
+			<add x="194480" y="53401" zmin="-4384" zmax="-4184"/>
+			<add x="192982" y="53391" zmin="-4384" zmax="-4184"/>
+		</territory>
+		<npc id="21058"/><!--Лорд Зверей-->
+	</spawn>
+	<spawn name="aden07_2519_p13" count="1" respawn="150" respawn_random="50">
+		<territory>
+			<add x="191420" y="51325" zmin="-4384" zmax="-4184"/>
+			<add x="192758" y="51325" zmin="-4384" zmax="-4184"/>
+			<add x="192758" y="53122" zmin="-4384" zmax="-4184"/>
+			<add x="191420" y="53102" zmin="-4384" zmax="-4184"/>
+		</territory>
+		<npc id="21058"/><!--Лорд Зверей-->
+	</spawn>
+	<spawn name="aden07_2519_p10" count="1" respawn="150" respawn_random="50">
+		<territory>
+			<add x="190561" y="49157" zmin="-4384" zmax="-4184"/>
+			<add x="192558" y="49157" zmin="-4384" zmax="-4184"/>
+			<add x="192558" y="51114" zmin="-4384" zmax="-4184"/>
+			<add x="190561" y="51114" zmin="-4384" zmax="-4184"/>
+		</territory>
+		<npc id="21058"/><!--Лорд Зверей-->
+	</spawn>
+	<spawn name="aden07_2519_p05" count="1" respawn="150" respawn_random="50">
+		<territory>
+			<add x="181391" y="61094" zmin="-4000" zmax="-3800"/>
+			<add x="182876" y="61094" zmin="-4000" zmax="-3800"/>
+			<add x="182876" y="62824" zmin="-4000" zmax="-3800"/>
+			<add x="181391" y="62824" zmin="-4000" zmax="-3800"/>
+		</territory>
+		<npc id="21058"/><!--Лорд Зверей-->
+	</spawn>
+	<spawn name="aden07_2519_p07" count="1" respawn="150" respawn_random="50">
+		<territory>
+			<add x="177302" y="54231" zmin="-4000" zmax="-3800"/>
+			<add x="179834" y="53277" zmin="-4000" zmax="-3800"/>
+			<add x="180492" y="55004" zmin="-4000" zmax="-3800"/>
+			<add x="177959" y="55916" zmin="-4000" zmax="-3800"/>
+		</territory>
+		<npc id="21058"/><!--Лорд Зверей-->
+	</spawn>
+	<spawn name="aden07_2519_p06" count="1" respawn="150" respawn_random="50">
+		<territory>
+			<add x="178794" y="58523" zmin="-4000" zmax="-3800"/>
+			<add x="182548" y="58523" zmin="-4000" zmax="-3800"/>
+			<add x="182548" y="60512" zmin="-4000" zmax="-3800"/>
+			<add x="178794" y="60512" zmin="-4000" zmax="-3800"/>
+		</territory>
+		<npc id="21058"/><!--Лорд Зверей-->
+	</spawn>
+	<spawn name="aden07_2519_p01" count="1" respawn="150" respawn_random="50">
+		<territory>
+			<add x="173085" y="54423" zmin="-4384" zmax="-4134"/>
+			<add x="175814" y="54454" zmin="-4384" zmax="-4134"/>
+			<add x="175814" y="56345" zmin="-4384" zmax="-4134"/>
+			<add x="173085" y="56314" zmin="-4384" zmax="-4134"/>
+		</territory>
+		<npc id="21058"/><!--Лорд Зверей-->
+	</spawn>
+	<spawn name="aden07_2519_p02" count="1" respawn="150" respawn_random="50">
+		<territory>
+			<add x="173076" y="60534" zmin="-4400" zmax="-4200"/>
+			<add x="176466" y="60534" zmin="-4400" zmax="-4200"/>
+			<add x="176466" y="63146" zmin="-4400" zmax="-4200"/>
+			<add x="173076" y="63146" zmin="-4400" zmax="-4200"/>
+		</territory>
+		<npc id="21058"/><!--Лорд Зверей-->
+	</spawn>
+	<spawn name="aden07_2519_p09" count="1" respawn="150" respawn_random="50">
+		<territory>
+			<add x="185731" y="47231" zmin="-4384" zmax="-4184"/>
+			<add x="187304" y="48123" zmin="-4384" zmax="-4184"/>
+			<add x="185979" y="50443" zmin="-4384" zmax="-4184"/>
+			<add x="184333" y="49479" zmin="-4384" zmax="-4184"/>
+		</territory>
+		<npc id="21058"/><!--Лорд Зверей-->
+	</spawn>
+	<spawn name="aden07_mb2519_03" count="1" respawn="10800">
+		<territory>
+			<add x="192028" y="54902" zmin="-7658" zmax="-7458"/>
+			<add x="193405" y="56221" zmin="-7658" zmax="-7458"/>
+			<add x="193399" y="56557" zmin="-7658" zmax="-7458"/>
+			<add x="192418" y="57403" zmin="-7658" zmax="-7458"/>
+			<add x="191588" y="57428" zmin="-7658" zmax="-7458"/>
+			<add x="190899" y="56789" zmin="-7658" zmax="-7458"/>
+			<add x="191010" y="56001" zmin="-7658" zmax="-7458"/>
+		</territory>
+		<npc id="25140"/><!--Хекатон Прайм-->
+	</spawn>
+	<!--<spawn name="aden07_mb2519_02" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="193292" y="53603" zmin="-4384" zmax="-4184"/>
+			<add x="194510" y="53598" zmin="-4384" zmax="-4184"/>
+			<add x="194510" y="54667" zmin="-4384" zmax="-4184"/>
+			<add x="193297" y="54672" zmin="-4384" zmax="-4184"/>
+		</territory>
+		<npc id="25162"/>Гигант Марпанак
+	</spawn>-->
+	<!--<spawn name="aden07_mb2519_07" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="186676" y="56036" zmin="-4680" zmax="-4480"/>
+			<add x="187172" y="56016" zmin="-4680" zmax="-4480"/>
+			<add x="187180" y="56572" zmin="-4680" zmax="-4480"/>
+			<add x="186648" y="56564" zmin="-4680" zmax="-4480"/>
+		</territory>
+		<npc id="25470"/>Последний Гигант Утенус
+	</spawn>-->
+	<!--<spawn name="aden07_mb2519_08" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="185888" y="61112" zmin="-4200" zmax="-4000"/>
+			<add x="186528" y="61084" zmin="-4200" zmax="-4000"/>
+			<add x="186528" y="61852" zmin="-4200" zmax="-4000"/>
+			<add x="185896" y="61868" zmin="-4200" zmax="-4000"/>
+		</territory>
+		<npc id="25467"/>Горголос
+	</spawn>-->
+	<spawn name="aden22_qm2519_01" count="1" respawn="300">
+		<territory>
+			<add x="171708" y="43964" zmin="-4972" zmax="-4772"/>
+			<add x="171908" y="43964" zmin="-4972" zmax="-4772"/>
+			<add x="171908" y="44164" zmin="-4972" zmax="-4772"/>
+			<add x="171708" y="44164" zmin="-4972" zmax="-4772"/>
+		</territory>
+		<npc id="27316"/><!--Ледяной Монстр-->
+	</spawn>	
+	<spawn name="aden22_npc2519_02" count="1" respawn="60">
+		<point x="181264" y="36640" z="-4789" h="25000"/>
+		<npc id="31658"/><!--Камень Познания-->
+	</spawn>
+	<territory name="aden07_2519_30">
+		<add x="183961" y="58463" zmin="-7276" zmax="-7076"/>
+		<add x="184824" y="58477" zmin="-7276" zmax="-7076"/>
+		<add x="184824" y="59396" zmin="-7276" zmax="-7076"/>
+		<add x="183961" y="59396" zmin="-7276" zmax="-7076"/>
+	</territory>
+	<spawn name="aden07_2519_30" count="2" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_30"/>
+		<npc id="20655"/><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_30" count="1" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_30"/>
+		<npc id="20657"/><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_30" count="2" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_30"/>
+		<npc id="20658"/><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<territory name="aden07_2519_32">
+		<add x="182161" y="60538" zmin="-7276" zmax="-7076"/>
+		<add x="183024" y="60552" zmin="-7276" zmax="-7076"/>
+		<add x="183024" y="61471" zmin="-7276" zmax="-7076"/>
+		<add x="182161" y="61471" zmin="-7276" zmax="-7076"/>
+	</territory>
+	<spawn name="aden07_2519_32" count="2" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_32"/>
+		<npc id="20655"/><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_32" count="1" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_32"/>
+		<npc id="20657"/><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_32" count="2" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_32"/>
+		<npc id="20658"/><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<territory name="aden07_2519_31">
+		<add x="182822" y="58465" zmin="-7276" zmax="-7076"/>
+		<add x="183684" y="58479" zmin="-7276" zmax="-7076"/>
+		<add x="183684" y="59398" zmin="-7276" zmax="-7076"/>
+		<add x="182822" y="59398" zmin="-7276" zmax="-7076"/>
+	</territory>
+	<spawn name="aden07_2519_31" count="2" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_31"/>
+		<npc id="20655"/><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_31" count="1" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_31"/>
+		<npc id="20657"/><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_31" count="2" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_31"/>
+		<npc id="20658"/><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<territory name="aden07_2519_34">
+		<add x="184640" y="60542" zmin="-7276" zmax="-7076"/>
+		<add x="185502" y="60556" zmin="-7276" zmax="-7076"/>
+		<add x="185502" y="61475" zmin="-7276" zmax="-7076"/>
+		<add x="184640" y="61475" zmin="-7276" zmax="-7076"/>
+	</territory>
+	<spawn name="aden07_2519_34" count="2" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_34"/>
+		<npc id="20655"/><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_34" count="1" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_34"/>
+		<npc id="20657"/><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_34" count="2" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_34"/>
+		<npc id="20658"/><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<territory name="aden07_2519_33">
+		<add x="183474" y="60540" zmin="-7276" zmax="-7076"/>
+		<add x="184336" y="60554" zmin="-7276" zmax="-7076"/>
+		<add x="184336" y="61473" zmin="-7276" zmax="-7076"/>
+		<add x="183474" y="61473" zmin="-7276" zmax="-7076"/>
+	</territory>
+	<spawn name="aden07_2519_33" count="1" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_33"/>
+		<npc id="20655"/><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_33" count="2" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_33"/>
+		<npc id="20657"/><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_33" count="2" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_33"/>
+		<npc id="20658"/><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<territory name="aden07_2519_36">
+		<add x="189936" y="59136" zmin="-7280" zmax="-7080"/>
+		<add x="194032" y="59204" zmin="-7280" zmax="-7080"/>
+		<add x="194024" y="62400" zmin="-7280" zmax="-7080"/>
+		<add x="189948" y="62408" zmin="-7280" zmax="-7080"/>
+	</territory>
+	<spawn name="aden07_2519_36" count="10" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_36"/>
+		<npc id="20655"/><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_36" count="11" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_36"/>
+		<npc id="20657"/><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_36" count="10" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_36"/>
+		<npc id="20658"/><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<territory name="aden07_2519_35">
+		<add x="185763" y="60544" zmin="-7276" zmax="-7076"/>
+		<add x="186625" y="60558" zmin="-7276" zmax="-7076"/>
+		<add x="186625" y="61476" zmin="-7276" zmax="-7076"/>
+		<add x="185763" y="61476" zmin="-7276" zmax="-7076"/>
+	</territory>
+	<spawn name="aden07_2519_35" count="2" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_35"/>
+		<npc id="20655"/><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_35" count="1" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_35"/>
+		<npc id="20657"/><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_35" count="2" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_35"/>
+		<npc id="20658"/><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<territory name="aden07_2519_39">
+		<add x="185425" y="54721" zmin="-4602" zmax="-4402"/>
+		<add x="188262" y="54655" zmin="-4602" zmax="-4402"/>
+		<add x="188321" y="57871" zmin="-4602" zmax="-4402"/>
+		<add x="185415" y="57861" zmin="-4602" zmax="-4402"/>
+	</territory>
+	<spawn name="aden07_2519_39" count="10" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_39"/>
+		<npc id="20652"/><!--Леогул-->
+	</spawn>
+	<spawn name="aden07_2519_39" count="10" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_39"/>
+		<npc id="20654"/><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_39" count="10" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_39"/>
+		<npc id="20656"/><!--Постовой Младших Гигантов-->
+	</spawn>
+	<territory name="aden07_2519_41">
+		<add x="183165" y="57680" zmin="-4026" zmax="-3826"/>
+		<add x="184594" y="57663" zmin="-4026" zmax="-3826"/>
+		<add x="184570" y="60104" zmin="-4026" zmax="-3826"/>
+		<add x="183150" y="60163" zmin="-4026" zmax="-3826"/>
+	</territory>
+	<spawn name="aden07_2519_41" count="6" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_41"/>
+		<npc id="20652"/><!--Леогул-->
+	</spawn>
+	<spawn name="aden07_2519_41" count="6" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_41"/>
+		<npc id="20654"/><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_41" count="6" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_41"/>
+		<npc id="20656"/><!--Постовой Младших Гигантов-->
+	</spawn>
+	<territory name="aden07_2519_40">
+		<add x="183157" y="60374" zmin="-4025" zmax="-3825"/>
+		<add x="184598" y="60383" zmin="-4025" zmax="-3825"/>
+		<add x="184596" y="62754" zmin="-4025" zmax="-3825"/>
+		<add x="183177" y="62793" zmin="-4025" zmax="-3825"/>
+	</territory>
+	<spawn name="aden07_2519_40" count="6" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_40"/>
+		<npc id="20652"/><!--Леогул-->
+	</spawn>
+	<spawn name="aden07_2519_40" count="6" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_40"/>
+		<npc id="20654"/><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_40" count="6" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_40"/>
+		<npc id="20656"/><!--Постовой Младших Гигантов-->
+	</spawn>
+	<territory name="aden07_2519_19">
+		<add x="189974" y="60356" zmin="-4992" zmax="-4792"/>
+		<add x="193914" y="60362" zmin="-4992" zmax="-4792"/>
+		<add x="193917" y="62932" zmin="-4992" zmax="-4792"/>
+		<add x="189918" y="62937" zmin="-4992" zmax="-4792"/>
+	</territory>
+	<spawn name="aden07_2519_19" count="9" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_19"/>
+		<npc id="20652"/><!--Леогул-->
+	</spawn>
+	<spawn name="aden07_2519_19" count="9" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_19"/>
+		<npc id="20654"/><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_19" count="9" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_19"/>
+		<npc id="20656"/><!--Постовой Младших Гигантов-->
+	</spawn>
+	<territory name="aden07_2519_10">
+		<add x="190561" y="49157" zmin="-4384" zmax="-4184"/>
+		<add x="192558" y="49157" zmin="-4384" zmax="-4184"/>
+		<add x="192558" y="51114" zmin="-4384" zmax="-4184"/>
+		<add x="190561" y="51114" zmin="-4384" zmax="-4184"/>
+	</territory>
+	<spawn name="aden07_2519_10" count="6" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_10"/>
+		<npc id="20649"/><!--Паук Зомби-->
+	</spawn>
+	<spawn name="aden07_2519_10" count="6" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_10"/>
+		<npc id="20650"/><!--Медведь Зомби-->
+	</spawn>
+	<spawn name="aden07_2519_10" count="6" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_10"/>
+		<npc id="20651"/><!--Гамлин-->
+	</spawn>
+	<territory name="aden07_2519_12">
+		<add x="189437" y="53572" zmin="-4384" zmax="-4184"/>
+		<add x="190635" y="53572" zmin="-4384" zmax="-4184"/>
+		<add x="190635" y="54591" zmin="-4384" zmax="-4184"/>
+		<add x="189437" y="54591" zmin="-4384" zmax="-4184"/>
+	</territory>
+	<spawn name="aden07_2519_12" count="3" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_12"/>
+		<npc id="20649"/><!--Паук Зомби-->
+	</spawn>
+	<spawn name="aden07_2519_12" count="2" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_12"/>
+		<npc id="20650"/><!--Медведь Зомби-->
+	</spawn>
+	<spawn name="aden07_2519_12" count="3" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_12"/>
+		<npc id="20651"/><!--Гамлин-->
+	</spawn>
+	<territory name="aden07_2519_11">
+		<add x="189489" y="51585" zmin="-4384" zmax="-4184"/>
+		<add x="191107" y="51585" zmin="-4384" zmax="-4184"/>
+		<add x="191107" y="53322" zmin="-4384" zmax="-4184"/>
+		<add x="189489" y="53322" zmin="-4384" zmax="-4184"/>
+	</territory>
+	<spawn name="aden07_2519_11" count="5" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_11"/>
+		<npc id="20649"/><!--Паук Зомби-->
+	</spawn>
+	<spawn name="aden07_2519_11" count="5" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_11"/>
+		<npc id="20650"/><!--Медведь Зомби-->
+	</spawn>
+	<spawn name="aden07_2519_11" count="5" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_11"/>
+		<npc id="20651"/><!--Гамлин-->
+	</spawn>
+	<territory name="aden07_2519_14">
+		<add x="192982" y="51448" zmin="-4384" zmax="-4184"/>
+		<add x="194490" y="51448" zmin="-4384" zmax="-4184"/>
+		<add x="194480" y="53401" zmin="-4384" zmax="-4184"/>
+		<add x="192982" y="53391" zmin="-4384" zmax="-4184"/>
+	</territory>
+	<spawn name="aden07_2519_14" count="5" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_14"/>
+		<npc id="20649"/><!--Паук Зомби-->
+	</spawn>
+	<spawn name="aden07_2519_14" count="5" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_14"/>
+		<npc id="20650"/><!--Медведь Зомби-->
+	</spawn>
+	<spawn name="aden07_2519_14" count="5" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_14"/>
+		<npc id="20651"/><!--Гамлин-->
+	</spawn>
+	<territory name="aden07_2519_13">
+		<add x="191420" y="51325" zmin="-4384" zmax="-4184"/>
+		<add x="192758" y="51325" zmin="-4384" zmax="-4184"/>
+		<add x="192758" y="53122" zmin="-4384" zmax="-4184"/>
+		<add x="191420" y="53102" zmin="-4384" zmax="-4184"/>
+	</territory>
+	<spawn name="aden07_2519_13" count="5" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_13"/>
+		<npc id="20649"/><!--Паук Зомби-->
+	</spawn>
+	<spawn name="aden07_2519_13" count="5" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_13"/>
+		<npc id="20650"/><!--Медведь Зомби-->
+	</spawn>
+	<spawn name="aden07_2519_13" count="5" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_13"/>
+		<npc id="20651"/><!--Гамлин-->
+	</spawn>
+	<spawn name="aden07_2519_16" count="3" respawn="82" respawn_random="20">
+		<territory>
+			<add x="191851" y="54921" zmin="-4678" zmax="-4378"/>
+			<add x="192155" y="54921" zmin="-4678" zmax="-4378"/>
+			<add x="192158" y="56271" zmin="-4678" zmax="-4378"/>
+			<add x="191855" y="56271" zmin="-4678" zmax="-4378"/>
+		</territory>
+		<npc id="20650"/><!--Медведь Зомби-->
+	</spawn>
+	<spawn name="aden07_2519_18" count="2" respawn="82" respawn_random="20">
+		<territory>
+			<add x="191728" y="57997" zmin="-4816" zmax="-4616"/>
+			<add x="192291" y="57997" zmin="-4816" zmax="-4616"/>
+			<add x="192291" y="58480" zmin="-4816" zmax="-4616"/>
+			<add x="191728" y="58480" zmin="-4816" zmax="-4616"/>
+		</territory>
+		<npc id="20651"/><!--Гамлин-->
+	</spawn>
+	<spawn name="aden07_2519_17" count="3" respawn="82" respawn_random="20">
+		<territory>
+			<add x="191856" y="56313" zmin="-4812" zmax="-4512"/>
+			<add x="192160" y="56313" zmin="-4812" zmax="-4512"/>
+			<add x="192152" y="57418" zmin="-4812" zmax="-4512"/>
+			<add x="191848" y="57418" zmin="-4812" zmax="-4512"/>
+		</territory>
+		<npc id="20650"/><!--Медведь Зомби-->
+	</spawn>
+	<territory name="aden07_2519_21">
+		<add x="192881" y="58886" zmin="-4992" zmax="-4792"/>
+		<add x="194017" y="58883" zmin="-4992" zmax="-4792"/>
+		<add x="194010" y="59925" zmin="-4992" zmax="-4792"/>
+		<add x="192881" y="59928" zmin="-4992" zmax="-4792"/>
+	</territory>
+	<spawn name="aden07_2519_21" count="2" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_21"/>
+		<npc id="20652"/><!--Леогул-->
+	</spawn>
+	<spawn name="aden07_2519_21" count="3" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_21"/>
+		<npc id="20654"/><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_21" count="3" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_21"/>
+		<npc id="20656"/><!--Постовой Младших Гигантов-->
+	</spawn>
+	<territory name="aden07_2519_20">
+		<add x="190005" y="58908" zmin="-4992" zmax="-4792"/>
+		<add x="191192" y="58899" zmin="-4992" zmax="-4792"/>
+		<add x="191187" y="59954" zmin="-4992" zmax="-4792"/>
+		<add x="190036" y="59930" zmin="-4992" zmax="-4792"/>
+	</territory>
+	<spawn name="aden07_2519_20" count="3" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_20"/>
+		<npc id="20652"/><!--Леогул-->
+	</spawn>
+	<spawn name="aden07_2519_20" count="2" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_20"/>
+		<npc id="20654"/><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_20" count="3" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_20"/>
+		<npc id="20656"/><!--Постовой Младших Гигантов-->
+	</spawn>
+	<territory name="aden07_2519_23">
+		<add x="186840" y="59639" zmin="-5012" zmax="-4812"/>
+		<add x="188168" y="59639" zmin="-5012" zmax="-4812"/>
+		<add x="188168" y="61951" zmin="-5012" zmax="-4812"/>
+		<add x="186840" y="61951" zmin="-5012" zmax="-4812"/>
+	</territory>
+	<spawn name="aden07_2519_23" count="3" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_23"/>
+		<npc id="20652"/><!--Леогул-->
+	</spawn>
+	<spawn name="aden07_2519_23" count="4" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_23"/>
+		<npc id="20654"/><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_23" count="4" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_23"/>
+		<npc id="20656"/><!--Постовой Младших Гигантов-->
+	</spawn>
+	<territory name="aden07_2519_22">
+		<add x="185517" y="62272" zmin="-5016" zmax="-4816"/>
+		<add x="189701" y="62241" zmin="-5016" zmax="-4816"/>
+		<add x="189694" y="62853" zmin="-5016" zmax="-4816"/>
+		<add x="185510" y="62915" zmin="-5016" zmax="-4816"/>
+	</territory>
+	<spawn name="aden07_2519_22" count="3" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_22"/>
+		<npc id="20652"/><!--Леогул-->
+	</spawn>
+	<spawn name="aden07_2519_22" count="4" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_22"/>
+		<npc id="20654"/><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_22" count="4" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_22"/>
+		<npc id="20656"/><!--Постовой Младших Гигантов-->
+	</spawn>
+	<territory name="aden07_2519_25">
+		<add x="190079" y="60935" zmin="-6144" zmax="-5944"/>
+		<add x="191756" y="60935" zmin="-6144" zmax="-5944"/>
+		<add x="191756" y="62360" zmin="-6144" zmax="-5944"/>
+		<add x="190079" y="62360" zmin="-6144" zmax="-5944"/>
+	</territory>
+	<spawn name="aden07_2519_25" count="5" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_25"/>
+		<npc id="20652"/><!--Леогул-->
+	</spawn>
+	<spawn name="aden07_2519_25" count="5" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_25"/>
+		<npc id="20654"/><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_25" count="5" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_25"/>
+		<npc id="20656"/><!--Постовой Младших Гигантов-->
+	</spawn>
+	<territory name="aden07_2519_24">
+		<add x="192121" y="60386" zmin="-6156" zmax="-5956"/>
+		<add x="193883" y="60386" zmin="-6156" zmax="-5956"/>
+		<add x="193883" y="62929" zmin="-6156" zmax="-5956"/>
+		<add x="192121" y="62929" zmin="-6156" zmax="-5956"/>
+	</territory>
+	<spawn name="aden07_2519_24" count="5" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_24"/>
+		<npc id="20652"/><!--Леогул-->
+	</spawn>
+	<spawn name="aden07_2519_24" count="5" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_24"/>
+		<npc id="20654"/><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_24" count="5" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_24"/>
+		<npc id="20656"/><!--Постовой Младших Гигантов-->
+	</spawn>
+	<territory name="aden07_2519_27">
+		<add x="186850" y="59675" zmin="-7276" zmax="-7076"/>
+		<add x="188172" y="59675" zmin="-7276" zmax="-7076"/>
+		<add x="188172" y="63020" zmin="-7276" zmax="-7076"/>
+		<add x="186850" y="63020" zmin="-7276" zmax="-7076"/>
+	</territory>
+	<spawn name="aden07_2519_27" count="6" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_27"/>
+		<npc id="20655"/><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_27" count="6" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_27"/>
+		<npc id="20657"/><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_27" count="6" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_27"/>
+		<npc id="20658"/><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<territory name="aden07_2519_26">
+		<add x="188553" y="60853" zmin="-6136" zmax="-5936"/>
+		<add x="189707" y="60867" zmin="-6136" zmax="-5936"/>
+		<add x="189720" y="62391" zmin="-6136" zmax="-5936"/>
+		<add x="188565" y="62376" zmin="-6136" zmax="-5936"/>
+	</territory>
+	<spawn name="aden07_2519_26" count="2" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_26"/>
+		<npc id="20655"/><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_26" count="3" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_26"/>
+		<npc id="20657"/><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_26" count="3" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_26"/>
+		<npc id="20658"/><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<territory name="aden07_2519_29">
+		<add x="185115" y="58461" zmin="-7276" zmax="-7076"/>
+		<add x="185978" y="58475" zmin="-7276" zmax="-7076"/>
+		<add x="185978" y="59394" zmin="-7276" zmax="-7076"/>
+		<add x="185115" y="59394" zmin="-7276" zmax="-7076"/>
+	</territory>
+	<spawn name="aden07_2519_29" count="2" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_29"/>
+		<npc id="20655"/><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_29" count="1" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_29"/>
+		<npc id="20657"/><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_29" count="2" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_29"/>
+		<npc id="20658"/><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<territory name="aden07_2519_28">
+		<add x="182322" y="59680" zmin="-7276" zmax="-7076"/>
+		<add x="186515" y="59680" zmin="-7276" zmax="-7076"/>
+		<add x="186515" y="60255" zmin="-7276" zmax="-7076"/>
+		<add x="182322" y="60255" zmin="-7276" zmax="-7076"/>
+	</territory>
+	<spawn name="aden07_2519_28" count="5" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_28"/>
+		<npc id="20655"/><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_28" count="5" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_28"/>
+		<npc id="20657"/><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn name="aden07_2519_28" count="5" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_28"/>
+		<npc id="20658"/><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<territory name="aden23_2519_01">
+		<add x="172467" y="53837" zmin="-6072" zmax="-5572"/>
+		<add x="176223" y="53110" zmin="-6072" zmax="-5572"/>
+		<add x="177496" y="57409" zmin="-6072" zmax="-5572"/>
+		<add x="173992" y="59487" zmin="-6072" zmax="-5572"/>
+		<add x="171647" y="55312" zmin="-6072" zmax="-5572"/>
+	</territory>
+	<spawn name="aden23_2519_01" count="18" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_01"/>
+		<npc id="20965"/><!--Осколок Иллюзии-->
+	</spawn>
+	<spawn name="aden23_2519_01" count="16" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_01"/>
+		<npc id="20970"/><!--Воитель-->
+	</spawn>
+	<spawn name="aden23_2519_01" count="16" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_01"/>
+		<npc id="20966"/><!--Перевоплощенное Создание-->
+	</spawn>
+	<territory name="aden23_2519_04">
+		<add x="188630" y="47013" zmin="-6116" zmax="-5616"/>
+		<add x="187622" y="48613" zmin="-6116" zmax="-5616"/>
+		<add x="189047" y="49729" zmin="-6116" zmax="-5616"/>
+		<add x="187063" y="52435" zmin="-6116" zmax="-5616"/>
+		<add x="182230" y="48533" zmin="-6116" zmax="-5616"/>
+		<add x="187258" y="45770" zmin="-6116" zmax="-5616"/>
+	</territory>
+	<spawn name="aden23_2519_04" count="14" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_04"/>
+		<npc id="20973"/><!--Забытый Древний Житель-->
+	</spawn>
+	<spawn name="aden23_2519_04" count="16" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_04"/>
+		<npc id="20968"/><!--Несуществующий-->
+	</spawn>
+	<spawn name="aden23_2519_04" count="16" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_04"/>
+		<npc id="20969"/><!--Тень Гиганта-->
+	</spawn>
+	<spawn name="aden23_2519_04" count="6" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_04"/>
+		<npc id="20971"/><!--Воин-->
+	</spawn>
+	<territory name="aden23_2519_03">
+		<add x="179116" y="51628" zmin="-6112" zmax="-5612"/>
+		<add x="182542" y="48378" zmin="-6112" zmax="-5612"/>
+		<add x="186097" y="51828" zmin="-6112" zmax="-5612"/>
+		<add x="182545" y="55789" zmin="-6112" zmax="-5612"/>
+	</territory>
+	<spawn name="aden23_2519_03" count="10" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_03"/>
+		<npc id="20967"/><!--Древняя Тварь-->
+	</spawn>
+	<spawn name="aden23_2519_03" count="10" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_03"/>
+		<npc id="20971"/><!--Воин-->
+	</spawn>
+	<spawn name="aden23_2519_03" count="10" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_03"/>
+		<npc id="20972"/><!--Шаман-->
+	</spawn>
+	<spawn name="aden23_2519_03" count="8" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_03"/>
+		<npc id="20973"/><!--Забытый Древний Житель-->
+	</spawn>
+	<spawn name="aden23_2519_03" count="6" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_03"/>
+		<npc id="20968"/><!--Несуществующий-->
+	</spawn>
+	<spawn name="aden23_2519_03" count="6" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_03"/>
+		<npc id="20969"/><!--Тень Гиганта-->
+	</spawn>
+	<territory name="aden23_2519_02">
+		<add x="175583" y="52825" zmin="-6072" zmax="-5572"/>
+		<add x="179200" y="51623" zmin="-6072" zmax="-5572"/>
+		<add x="182800" y="55943" zmin="-6072" zmax="-5572"/>
+		<add x="177383" y="57572" zmin="-6072" zmax="-5572"/>
+	</territory>
+	<spawn name="aden23_2519_02" count="6" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_02"/>
+		<npc id="20965"/><!--Осколок Иллюзии-->
+	</spawn>
+	<spawn name="aden23_2519_02" count="6" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_02"/>
+		<npc id="20970"/><!--Воитель-->
+	</spawn>
+	<spawn name="aden23_2519_02" count="6" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_02"/>
+		<npc id="20966"/><!--Перевоплощенное Создание-->
+	</spawn>
+	<spawn name="aden23_2519_02" count="12" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_02"/>
+		<npc id="20967"/><!--Древняя Тварь-->
+	</spawn>
+	<spawn name="aden23_2519_02" count="6" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_02"/>
+		<npc id="20971"/><!--Воин-->
+	</spawn>
+	<spawn name="aden23_2519_02" count="12" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_02"/>
+		<npc id="20972"/><!--Шаман-->
+	</spawn>
+	<territory name="aden07_2519_09">
+		<add x="185731" y="47231" zmin="-4384" zmax="-4184"/>
+		<add x="187304" y="48123" zmin="-4384" zmax="-4184"/>
+		<add x="185979" y="50443" zmin="-4384" zmax="-4184"/>
+		<add x="184333" y="49479" zmin="-4384" zmax="-4184"/>
+	</territory>
+	<spawn name="aden07_2519_09" count="8" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_09"/>
+		<npc id="20646"/><!--Саблезуб-->
+	</spawn>
+	<spawn name="aden07_2519_09" count="8" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_09"/>
+		<npc id="20647"/><!--Око Хаоса-->
+	</spawn>
+	<spawn name="aden07_2519_09" count="8" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_09"/>
+		<npc id="20648"/><!--Палиот-->
+	</spawn>
+	<territory name="aden07_2519_01">
+		<add x="173085" y="54423" zmin="-4384" zmax="-4134"/>
+		<add x="175814" y="54454" zmin="-4384" zmax="-4134"/>
+		<add x="175814" y="56345" zmin="-4384" zmax="-4134"/>
+		<add x="173085" y="56314" zmin="-4384" zmax="-4134"/>
+	</territory>
+	<spawn name="aden07_2519_01" count="8" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_01"/>
+		<npc id="20646"/><!--Саблезуб-->
+	</spawn>
+	<spawn name="aden07_2519_01" count="8" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_01"/>
+		<npc id="20647"/><!--Око Хаоса-->
+	</spawn>
+	<spawn name="aden07_2519_01" count="8" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_01"/>
+		<npc id="20648"/><!--Палиот-->
+	</spawn>
+	<spawn name="aden07_2519_03" count="3" respawn="82" respawn_random="20">
+		<territory>
+			<add x="177966" y="61529" zmin="-4464" zmax="-4114"/>
+			<add x="179177" y="61529" zmin="-4464" zmax="-4114"/>
+			<add x="179170" y="61851" zmin="-4464" zmax="-4114"/>
+			<add x="177958" y="61851" zmin="-4464" zmax="-4114"/>
+		</territory>
+		<npc id="20650"/><!--Медведь Зомби-->
+	</spawn>
+	<territory name="aden07_2519_02">
+		<add x="173076" y="60534" zmin="-4400" zmax="-4200"/>
+		<add x="176466" y="60534" zmin="-4400" zmax="-4200"/>
+		<add x="176466" y="63146" zmin="-4400" zmax="-4200"/>
+		<add x="173076" y="63146" zmin="-4400" zmax="-4200"/>
+	</territory>
+	<spawn name="aden07_2519_02" count="9" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_02"/>
+		<npc id="20649"/><!--Паук Зомби-->
+	</spawn>
+	<spawn name="aden07_2519_02" count="9" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_02"/>
+		<npc id="20650"/><!--Медведь Зомби-->
+	</spawn>
+	<spawn name="aden07_2519_02" count="9" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_02"/>
+		<npc id="20651"/><!--Гамлин-->
+	</spawn>
+	<territory name="aden07_2519_05">
+		<add x="181391" y="61094" zmin="-4000" zmax="-3800"/>
+		<add x="182876" y="61094" zmin="-4000" zmax="-3800"/>
+		<add x="182876" y="62824" zmin="-4000" zmax="-3800"/>
+		<add x="181391" y="62824" zmin="-4000" zmax="-3800"/>
+	</territory>
+	<spawn name="aden07_2519_05" count="5" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_05"/>
+		<npc id="20649"/><!--Паук Зомби-->
+	</spawn>
+	<spawn name="aden07_2519_05" count="5" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_05"/>
+		<npc id="20650"/><!--Медведь Зомби-->
+	</spawn>
+	<spawn name="aden07_2519_05" count="5" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_05"/>
+		<npc id="20651"/><!--Гамлин-->
+	</spawn>
+	<spawn name="aden07_2519_04" count="3" respawn="82" respawn_random="20">
+		<territory>
+			<add x="179199" y="61529" zmin="-4316" zmax="-3966"/>
+			<add x="180662" y="61529" zmin="-4316" zmax="-3966"/>
+			<add x="180654" y="61851" zmin="-4316" zmax="-3966"/>
+			<add x="179191" y="61851" zmin="-4316" zmax="-3966"/>
+		</territory>
+		<npc id="20650"/><!--Медведь Зомби-->
+	</spawn>
+	<territory name="aden07_2519_07">
+		<add x="177302" y="54231" zmin="-4000" zmax="-3800"/>
+		<add x="179834" y="53277" zmin="-4000" zmax="-3800"/>
+		<add x="180492" y="55004" zmin="-4000" zmax="-3800"/>
+		<add x="177959" y="55916" zmin="-4000" zmax="-3800"/>
+	</territory>
+	<spawn name="aden07_2519_07" count="8" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_07"/>
+		<npc id="20646"/><!--Саблезуб-->
+	</spawn>
+	<spawn name="aden07_2519_07" count="8" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_07"/>
+		<npc id="20647"/><!--Око Хаоса-->
+	</spawn>
+	<spawn name="aden07_2519_07" count="8" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_07"/>
+		<npc id="20648"/><!--Палиот-->
+	</spawn>
+	<territory name="aden07_2519_06">
+		<add x="178794" y="58523" zmin="-4000" zmax="-3800"/>
+		<add x="182548" y="58523" zmin="-4000" zmax="-3800"/>
+		<add x="182548" y="60512" zmin="-4000" zmax="-3800"/>
+		<add x="178794" y="60512" zmin="-4000" zmax="-3800"/>
+	</territory>
+	<spawn name="aden07_2519_06" count="9" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_06"/>
+		<npc id="20649"/><!--Паук Зомби-->
+	</spawn>
+	<spawn name="aden07_2519_06" count="9" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_06"/>
+		<npc id="20650"/><!--Медведь Зомби-->
+	</spawn>
+	<spawn name="aden07_2519_06" count="9" respawn="82" respawn_random="20">
+		<territory name="aden07_2519_06"/>
+		<npc id="20651"/><!--Гамлин-->
+	</spawn>
+	<!--<spawn name="aden23_mb2519_06" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="171880" y="54868" zmin="-5992" zmax="-5392"/>
+			<add x="172232" y="55372" zmin="-5992" zmax="-5392"/>
+			<add x="171800" y="55960" zmin="-5992" zmax="-5392"/>
+			<add x="171352" y="55452" zmin="-5992" zmax="-5392"/>
+		</territory>
+		<npc id="25244"/>Последний Младший Гигант Олкут
+	</spawn>
+	<spawn name="aden23_mb2519_05" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="188809" y="47780" zmin="-5968" zmax="-5318"/>
+			<add x="189021" y="48385" zmin="-5968" zmax="-5318"/>
+			<add x="188818" y="48683" zmin="-5968" zmax="-5318"/>
+			<add x="188329" y="48292" zmin="-5968" zmax="-5318"/>
+		</territory>
+		<npc id="25245"/>Последний Младший Гигант Глаки
+	</spawn>-->
+	<spawn name="Defrektor" count="1" respawn="86400" respawn_random="12000">
+		<point x="167928" y="50696" z="-4112" h="21344"/>
+		<npc id="25775"/><!--Злой Орк Дефректор-->
+	</spawn>
+	<spawn name="Muskel" count="1" respawn="86400" respawn_random="12000">
+		<point x="171976" y="55320" z="-5920" h="21344"/>
+		<npc id="25782"/><!--Верховный Шаман Мускель-->
+	</spawn>
+	<spawn name="Varmoni" count="1" respawn="86400" respawn_random="12000">
+		<point x="174808" y="52552" z="-5856" h="21344"/>
+		<npc id="25781"/><!--Вармони-->
+	</spawn>
+	<spawn name="Elborgen" count="1" respawn="86400" respawn_random="12000">
+		<point x="174872" y="58856" z="-5856" h="21344"/>
+		<npc id="25783"/><!--Батус Эльборген-->
+	</spawn>
+	<spawn name="Daumen" count="1" respawn="86400" respawn_random="12000">
+		<point x="183640" y="54136" z="-5760" h="21344"/>
+		<npc id="25784"/><!--Кшана Даумен-->
+	</spawn>
+	<spawn name="Varbasion" count="1" respawn="86400" respawn_random="12000">
+		<point x="180488" y="50328" z="-5872" h="21344"/>
+		<npc id="25780"/><!--Варбасион-->
+	</spawn>
+	<spawn name="Garios" count="1" respawn="86400" respawn_random="12000">
+		<point x="182776" y="47480" z="-5888" h="21344"/>
+		<npc id="25779"/><!--Гариос-->
+	</spawn>
+	<spawn name="Zetal" count="1" respawn="86400" respawn_random="12000">
+		<point x="185048" y="37032" z="-4192" h="21344"/>
+		<npc id="25772"/><!--Злой Орк Зетал-->
+	</spawn>
+	<spawn name="Tabris" count="1" respawn="86400" respawn_random="12000">
+		<point x="173256" y="39128" z="-4640" h="21344"/>
+		<npc id="25773"/><!--Злой Орк Табрис-->
+	</spawn>
+	<spawn name="Turaktion" count="1" respawn="86400" respawn_random="12000">
+		<point x="173128" y="45192" z="-4800" h="21344"/>
+		<npc id="25777"/><!--Орк Амден Турактион-->
+	</spawn>
+	<spawn name="Turahot" count="1" respawn="86400" respawn_random="12000">
+		<point x="175192" y="43576" z="-4816" h="21344"/>
+		<npc id="25776"/><!--Орк Амден Турахот-->
+	</spawn>
+	<spawn name="Darfen" count="1" respawn="86400" respawn_random="12000">
+		<point x="63560" y="39000" z="-3712" h="21344"/>
+		<npc id="25745"/><!--Орк Тимак Дарфен-->
+	</spawn>
+</list>

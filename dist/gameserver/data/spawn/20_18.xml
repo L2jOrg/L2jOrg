@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn name="oren08_npc2018_s01" count="1" respawn="60">
+		<point x="28384" y="11008" z="-4233" h="32000"/>
+		<npc id="30129"/><!--Митраэль-->
+	</spawn>
+	<spawn name="oren08_npc2018_s01" count="1" respawn="60">
+		<point x="28384" y="11056" z="-4233" h="32000"/>
+		<npc id="30131"/><!--Помощник Новичков-->
+	</spawn>
+	<spawn name="oren08_npc2018_s02" count="1" respawn="60">
+		<point x="28225" y="12998" z="-3725" h="16500"/>
+		<npc id="30132"/><!--Кектинон-->
+	</spawn>
+	<spawn name="oren08_npc2018_s02" count="1" respawn="60">
+		<point x="27921" y="12991" z="-3728" h="16500"/>
+		<npc id="30133"/><!--Картия-->
+	</spawn>
+	<spawn name="oren08_npc2018_s03" count="1" respawn="60">
+		<point x="25856" y="10832" z="-3724" h="24576"/>
+		<npc id="30130"/><!--Андриас-->
+	</spawn>
+	<spawn name="oren09_npc2018_001" count="1" respawn="60">
+		<point x="12111" y="16686" z="-4582" h="63240"/>
+		<npc id="30600"/><!--Гид Новичков-->
+	</spawn>
+	<spawn name="oren09_npc2018_002" count="1" respawn="60">
+		<point x="17024" y="13296" z="-3744" h="62000"/>
+		<npc id="30600"/><!--Гид Новичков-->
+	</spawn>
+	<spawn name="oren09_npc2018_005" count="1" respawn="60">
+		<point x="10823" y="18013" z="-4552" h="61440"/>
+		<npc id="30136"/><!--Пейн-->
+	</spawn>
+	<spawn name="oren09_npc2018_005" count="1" respawn="60">
+		<point x="10580" y="17574" z="-4552" h="14000"/>
+		<npc id="30307"/><!--Кэррод-->
+	</spawn>
+	<spawn name="oren09_npc2018_005" count="1" respawn="60">
+		<point x="10761" y="17970" z="-4552" h="49152"/>
+		<npc id="30135"/><!--Ирина-->
+	</spawn>
+	<spawn name="oren09_npc2018_006" count="1" respawn="60">
+		<point x="11951" y="15661" z="-4552" h="28672"/>
+		<npc id="30137"/><!--Воллодос-->
+	</spawn>
+	<spawn name="oren09_npc2018_006" count="1" respawn="60">
+		<point x="12009" y="15704" z="-4552" h="16384"/>
+		<npc id="30138"/><!--Миналес-->
+	</spawn>
+	<spawn name="oren09_npc2018_003" count="1" respawn="60">
+		<point x="11012" y="14128" z="-4240" h="14500"/>
+		<npc id="30141"/><!--Таллот-->
+	</spawn>
+	<spawn name="oren09_npc2018_003" count="1" respawn="60">
+		<point x="11235" y="14078" z="-4240" h="24576"/>
+		<npc id="30359"/><!--Кайтар-->
+	</spawn>
+	<spawn name="oren09_npc2018_003" count="1" respawn="60">
+		<point x="10344" y="14445" z="-4240" h="63640"/>
+		<npc id="30144"/><!--Харн-->
+	</spawn>
+	<spawn name="oren09_npc2018_003" count="1" respawn="60">
+		<point x="10447" y="14620" z="-4240" h="46500"/>
+		<npc id="30360"/><!--Харант-->
+	</spawn>
+	<spawn name="oren09_npc2018_003" count="1" respawn="60">
+		<point x="11283" y="14226" z="-4240" h="31000"/>
+		<npc id="30143"/><!--Тради-->
+	</spawn>
+	<spawn name="oren09_npc2018_003" count="1" respawn="60">
+		<point x="10775" y="14190" z="-4240" h="14500"/>
+		<npc id="30358"/><!--Тифиэль-->
+	</spawn>
+	<spawn name="oren09_npc2018_003" count="1" respawn="60">
+		<point x="10315" y="14293" z="-4240" h="4096"/>
+		<npc id="30305"/><!--Велиор-->
+	</spawn>
+	<spawn name="oren09_npc2018_003" count="1" respawn="60">
+		<point x="11258" y="14431" z="-4240" h="46500"/>
+		<npc id="30145"/><!--Влэсти-->
+	</spawn>
+	<spawn name="oren09_npc2018_004" count="1" respawn="60">
+		<point x="13763" y="17501" z="-4536" h="30768"/>
+		<npc id="30350"/><!--Карлон-->
+	</spawn>
+	<spawn name="oren09_npc2018_004" count="1" respawn="60">
+		<point x="13464" y="17751" z="-4536" h="47000"/>
+		<npc id="30140"/><!--Эрвианте-->
+	</spawn>
+	<spawn name="oren09_npc2018_004" count="1" respawn="60">
+		<point x="13380" y="17430" z="-4536" h="14384"/>
+		<npc id="30139"/><!--Доранкус-->
+	</spawn>
+	<spawn name="oren09_npc2018_009" count="1" respawn="60">
+		<point x="12328" y="14947" z="-4568" h="21000"/>
+		<npc id="30351"/><!--Астарон-->
+	</spawn>
+	<spawn name="oren09_npc2018_007" count="1" respawn="60">
+		<point x="6449" y="19619" z="-3688" h="30000"/>
+		<npc id="30347"/><!--Марион-->
+	</spawn>
+	<spawn name="oren09_npc2018_007" count="1" respawn="60">
+		<point x="6532" y="19903" z="-3688" h="30000"/>
+		<npc id="30346"/><!--Кайлин-->
+	</spawn>
+	<spawn name="oren09_npc2018_008" count="1" respawn="60">
+		<point x="17306" y="13592" z="-3720" h="0"/>
+		<npc id="30348"/><!--Нельсия-->
+	</spawn>
+	<spawn name="oren09_npc2018_008" count="1" respawn="60">
+		<point x="17102" y="13002" z="-3744" h="61440"/>
+		<npc id="30349"/><!--Дженна-->
+	</spawn>
+	<spawn name="oren09_npc2018_012" count="1" respawn="60">
+		<point x="12311" y="17470" z="-4568" h="40960"/>
+		<npc id="30354"/><!--Джевел-->
+	</spawn>
+	<spawn name="oren09_npc2018_013" count="1" respawn="60">
+		<point x="13081" y="18444" z="-4568" h="46152"/>
+		<npc id="30353"/><!--Джакхед-->
+	</spawn>
+	<spawn name="oren09_npc2018_010" count="1" respawn="60">
+		<point x="9730" y="15510" z="-4536" h="5892"/>
+		<npc id="30134"/><!--Жасмин-->
+	</spawn>
+	<spawn name="oren09_npc2018_011" count="1" respawn="60">
+		<point x="10301" y="18870" z="-4568" h="55344"/>
+		<npc id="30352"/><!--Карина-->
+	</spawn>
+	<spawn name="oren09_npc2018_014" count="1" respawn="60">
+		<point x="7644" y="18048" z="-4376" h="47052"/>
+		<npc id="30357"/><!--Кристина-->
+	</spawn>
+	<spawn name="oren09_npc2018_014" count="1" respawn="60">
+		<point x="7496" y="17388" z="-4376" h="13384"/>
+		<npc id="30356"/><!--Альтима-->
+	</spawn>
+	<spawn name="oren09_npc2018_015" count="1" respawn="60">
+		<point x="15272" y="16310" z="-4376" h="47352"/>
+		<npc id="30355"/><!--Розалин-->
+	</spawn>
+	<spawn name="oren09_npc2018_015" count="1" respawn="60">
+		<point x="15120" y="15656" z="-4376" h="14384"/>
+		<npc id="30224"/><!--Райла-->
+	</spawn>
+	<spawn name="oren07_npc2018_gd011" count="1" respawn="60">
+		<territory>
+			<add x="8052" y="24820" zmin="-3764" zmax="-3314"/>
+			<add x="11076" y="24872" zmin="-3764" zmax="-3314"/>
+			<add x="15976" y="29020" zmin="-3764" zmax="-3314"/>
+			<add x="10076" y="29568" zmin="-3764" zmax="-3314"/>
+			<add x="5496" y="26128" zmin="-3764" zmax="-3314"/>
+		</territory>
+		<npc id="31850"/><!--Тлетворный Древень-->
+	</spawn>
+	<spawn name="oren07_npc2018_gd010" count="1" respawn="60">
+		<territory>
+			<add x="112" y="21584" zmin="-3768" zmax="-3118"/>
+			<add x="4076" y="21172" zmin="-3768" zmax="-3118"/>
+			<add x="3344" y="23868" zmin="-3768" zmax="-3118"/>
+			<add x="1272" y="24096" zmin="-3768" zmax="-3118"/>
+			<add x="104" y="23532" zmin="-3768" zmax="-3118"/>
+		</territory>
+		<npc id="31845"/><!--Кровавая Фея-->
+	</spawn>
+	<spawn name="oren07_npc2018_gd004" count="1" respawn="60">
+		<territory>
+			<add x="20860" y="11156" zmin="-3800" zmax="-3300"/>
+			<add x="24796" y="11200" zmin="-3800" zmax="-3300"/>
+			<add x="27824" y="13536" zmin="-3800" zmax="-3300"/>
+			<add x="27848" y="17312" zmin="-3800" zmax="-3300"/>
+			<add x="20804" y="18276" zmin="-3800" zmax="-3300"/>
+		</territory>
+		<npc id="31845"/><!--Кровавая Фея-->
+	</spawn>
+	<spawn name="oren07_npc2018_gd005" count="1" respawn="60">
+		<territory>
+			<add x="20836" y="18416" zmin="-3724" zmax="-3324"/>
+			<add x="27852" y="17404" zmin="-3724" zmax="-3324"/>
+			<add x="27816" y="21108" zmin="-3724" zmax="-3324"/>
+			<add x="25100" y="23292" zmin="-3724" zmax="-3324"/>
+			<add x="22372" y="22700" zmin="-3724" zmax="-3324"/>
+			<add x="20428" y="20000" zmin="-3724" zmax="-3324"/>
+		</territory>
+		<npc id="31850"/><!--Тлетворный Древень-->
+	</spawn>
+	<spawn name="oren07_npc2018_gd002" count="1" respawn="60">
+		<territory>
+			<add x="25400" y="3308" zmin="-3772" zmax="-3372"/>
+			<add x="28168" y="4256" zmin="-3772" zmax="-3372"/>
+			<add x="28112" y="8492" zmin="-3772" zmax="-3372"/>
+			<add x="24788" y="10940" zmin="-3772" zmax="-3372"/>
+			<add x="19620" y="10848" zmin="-3772" zmax="-3372"/>
+			<add x="17048" y="7948" zmin="-3772" zmax="-3372"/>
+			<add x="18780" y="6020" zmin="-3772" zmax="-3372"/>
+		</territory>
+		<npc id="31845"/><!--Кровавая Фея-->
+	</spawn>
+	<spawn name="oren07_npc2018_gd003" count="1" respawn="60">
+		<territory>
+			<add x="30036" y="12200" zmin="-3776" zmax="-3476"/>
+			<add x="32420" y="11992" zmin="-3776" zmax="-3476"/>
+			<add x="32460" y="19600" zmin="-3776" zmax="-3476"/>
+			<add x="29828" y="20712" zmin="-3776" zmax="-3476"/>
+			<add x="28004" y="19996" zmin="-3776" zmax="-3476"/>
+			<add x="28076" y="13480" zmin="-3776" zmax="-3476"/>
+		</territory>
+		<npc id="31850"/><!--Тлетворный Древень-->
+	</spawn>
+	<spawn name="oren07_npc2018_gd008" count="1" respawn="60">
+		<territory>
+			<add x="2472" y="3168" zmin="-3436" zmax="-2786"/>
+			<add x="4252" y="3448" zmin="-3436" zmax="-2786"/>
+			<add x="6028" y="7676" zmin="-3436" zmax="-2786"/>
+			<add x="2504" y="13380" zmin="-3436" zmax="-2786"/>
+			<add x="236" y="13532" zmin="-3436" zmax="-2786"/>
+			<add x="324" y="4196" zmin="-3436" zmax="-2786"/>
+		</territory>
+		<npc id="31850"/><!--Тлетворный Древень-->
+	</spawn>
+	<spawn name="oren07_npc2018_gd009" count="1" respawn="60">
+		<territory>
+			<add x="244" y="13704" zmin="-3380" zmax="-2980"/>
+			<add x="2492" y="13688" zmin="-3380" zmax="-2980"/>
+			<add x="2208" y="16292" zmin="-3380" zmax="-2980"/>
+			<add x="204" y="18316" zmin="-3380" zmax="-2980"/>
+		</territory>
+		<npc id="31845"/><!--Кровавая Фея-->
+	</spawn>
+	<spawn name="oren07_npc2018_gd006" count="1" respawn="60">
+		<territory>
+			<add x="12808" y="4404" zmin="-3656" zmax="-2706"/>
+			<add x="18760" y="5752" zmin="-3656" zmax="-2706"/>
+			<add x="16808" y="8040" zmin="-3656" zmax="-2706"/>
+			<add x="11224" y="7332" zmin="-3656" zmax="-2706"/>
+		</territory>
+		<npc id="31850"/><!--Тлетворный Древень-->
+	</spawn>
+	<spawn name="oren07_npc2018_gd007" count="1" respawn="60">
+		<territory>
+			<add x="8468" y="2476" zmin="-3168" zmax="-2418"/>
+			<add x="12692" y="4392" zmin="-3168" zmax="-2418"/>
+			<add x="10668" y="7916" zmin="-3168" zmax="-2418"/>
+			<add x="6240" y="8240" zmin="-3168" zmax="-2418"/>
+			<add x="4324" y="3544" zmin="-3168" zmax="-2418"/>
+		</territory>
+		<npc id="31845"/><!--Кровавая Фея-->
+	</spawn>
+	<spawn name="oren07_npc2018_gd001" count="1" respawn="60">
+		<territory>
+			<add x="28316" y="4256" zmin="-3776" zmax="-3476"/>
+			<add x="32496" y="5352" zmin="-3776" zmax="-3476"/>
+			<add x="32480" y="10004" zmin="-3776" zmax="-3476"/>
+			<add x="29872" y="9844" zmin="-3776" zmax="-3476"/>
+			<add x="28316" y="8608" zmin="-3776" zmax="-3476"/>
+		</territory>
+		<npc id="31850"/><!--Тлетворный Древень-->
+	</spawn>
+	<territory name="oren23_2018_16s">
+		<add x="23945" y="12538" zmin="-3788" zmax="-3288"/>
+		<add x="25276" y="11848" zmin="-3788" zmax="-3288"/>
+		<add x="26784" y="13578" zmin="-3788" zmax="-3288"/>
+		<add x="25225" y="15054" zmin="-3788" zmax="-3288"/>
+	</territory>
+	<spawn name="oren23_2018_16s" count="5" respawn="15">
+		<territory name="oren23_2018_16s"/>
+		<npc id="20529"/><!--Молодой Бурый Шакал-->
+	</spawn>
+	<spawn name="oren23_2018_16s" count="3" respawn="15">
+		<territory name="oren23_2018_16s"/>
+		<npc id="20532"/><!--Бурый Шакал-->
+	</spawn>
+	<territory name="oren23_2018_15s">
+		<add x="22575" y="8778" zmin="-3788" zmax="-3288"/>
+		<add x="25374" y="7911" zmin="-3788" zmax="-3288"/>
+		<add x="26382" y="8997" zmin="-3788" zmax="-3288"/>
+		<add x="25291" y="10175" zmin="-3788" zmax="-3288"/>
+		<add x="22858" y="10173" zmin="-3788" zmax="-3288"/>
+	</territory>
+	<spawn name="oren23_2018_15s" count="5" respawn="15">
+		<territory name="oren23_2018_15s"/>
+		<npc id="20529"/><!--Молодой Бурый Шакал-->
+	</spawn>
+	<spawn name="oren23_2018_15s" count="3" respawn="15">
+		<territory name="oren23_2018_15s"/>
+		<npc id="20532"/><!--Бурый Шакал-->
+	</spawn>
+	<territory name="oren23_2018_09">
+		<add x="21699" y="4773" zmin="-3813" zmax="-3313"/>
+		<add x="25523" y="3367" zmin="-3813" zmax="-3313"/>
+		<add x="27454" y="4361" zmin="-3813" zmax="-3313"/>
+		<add x="27648" y="7884" zmin="-3813" zmax="-3313"/>
+		<add x="23500" y="7171" zmin="-3813" zmax="-3313"/>
+	</territory>
+	<spawn name="oren23_2018_09" count="3" respawn="15">
+		<territory name="oren23_2018_09"/>
+		<npc id="20456"/><!--Пепельный Волк-->
+	</spawn>
+	<spawn name="oren23_2018_09" count="4" respawn="15">
+		<territory name="oren23_2018_09"/>
+		<npc id="20004"/><!--Бес-->
+	</spawn>
+	<spawn name="oren23_2018_09" count="4" respawn="15">
+		<territory name="oren23_2018_09"/>
+		<npc id="20005"/><!--Старший Бес-->
+	</spawn>
+	<territory name="oren23_2018_08">
+		<add x="18955" y="8948" zmin="-3813" zmax="-3313"/>
+		<add x="23471" y="7295" zmin="-3813" zmax="-3313"/>
+		<add x="27596" y="8002" zmin="-3813" zmax="-3313"/>
+		<add x="25389" y="10438" zmin="-3813" zmax="-3313"/>
+		<add x="20667" y="10575" zmin="-3813" zmax="-3313"/>
+	</territory>
+	<spawn name="oren23_2018_08" count="4" respawn="15">
+		<territory name="oren23_2018_08"/>
+		<npc id="20529"/><!--Молодой Бурый Шакал-->
+	</spawn>
+	<spawn name="oren23_2018_08" count="6" respawn="15">
+		<territory name="oren23_2018_08"/>
+		<npc id="20532"/><!--Бурый Шакал-->
+	</spawn>
+	<territory name="oren23_2018_05">
+		<add x="21023" y="12162" zmin="-3841" zmax="-3341"/>
+		<add x="22981" y="11725" zmin="-3841" zmax="-3341"/>
+		<add x="25071" y="15668" zmin="-3841" zmax="-3341"/>
+		<add x="23992" y="17700" zmin="-3841" zmax="-3341"/>
+		<add x="20863" y="17800" zmin="-3841" zmax="-3341"/>
+	</territory>
+	<spawn name="oren23_2018_05" count="4" respawn="15">
+		<territory name="oren23_2018_05"/>
+		<npc id="20529"/><!--Молодой Бурый Шакал-->
+	</spawn>
+	<spawn name="oren23_2018_05" count="4" respawn="15">
+		<territory name="oren23_2018_05"/>
+		<npc id="20532"/><!--Бурый Шакал-->
+	</spawn>
+	<spawn name="oren23_2018_05" count="4" respawn="15">
+		<territory name="oren23_2018_05"/>
+		<npc id="20536"/><!--Матерый Бурый Шакал-->
+	</spawn>
+	<territory name="oren23_2018_04">
+		<add x="25163" y="15686" zmin="-3841" zmax="-3341"/>
+		<add x="28557" y="16019" zmin="-3841" zmax="-3341"/>
+		<add x="28210" y="20279" zmin="-3841" zmax="-3341"/>
+		<add x="26644" y="21609" zmin="-3841" zmax="-3341"/>
+		<add x="24096" y="17724" zmin="-3841" zmax="-3341"/>
+	</territory>
+	<spawn name="oren23_2018_04" count="3" respawn="15">
+		<territory name="oren23_2018_04"/>
+		<npc id="20532"/><!--Бурый Шакал-->
+	</spawn>
+	<spawn name="oren23_2018_04" count="5" respawn="15">
+		<territory name="oren23_2018_04"/>
+		<npc id="20536"/><!--Матерый Бурый Шакал-->
+	</spawn>
+	<spawn name="oren23_2018_04" count="2" respawn="15">
+		<territory name="oren23_2018_04"/>
+		<npc id="20456"/><!--Пепельный Волк-->
+	</spawn>
+	<spawn name="oren23_2018_04" count="2" respawn="15">
+		<territory name="oren23_2018_04"/>
+		<npc id="20003"/><!--Гоблин-->
+	</spawn>
+	<territory name="oren23_2018_07">
+		<add x="27578" y="4375" zmin="-3813" zmax="-3313"/>
+		<add x="31421" y="5965" zmin="-3813" zmax="-3313"/>
+		<add x="32433" y="9577" zmin="-3813" zmax="-3313"/>
+		<add x="29722" y="9513" zmin="-3813" zmax="-3313"/>
+		<add x="27787" y="8019" zmin="-3813" zmax="-3313"/>
+	</territory>
+	<spawn name="oren23_2018_07" count="2" respawn="15">
+		<territory name="oren23_2018_07"/>
+		<npc id="20003"/><!--Гоблин-->
+	</spawn>
+	<spawn name="oren23_2018_07" count="3" respawn="15">
+		<territory name="oren23_2018_07"/>
+		<npc id="20004"/><!--Бес-->
+	</spawn>
+	<spawn name="oren23_2018_07" count="5" respawn="15">
+		<territory name="oren23_2018_07"/>
+		<npc id="20005"/><!--Старший Бес-->
+	</spawn>
+	<territory name="oren23_2018_06">
+		<add x="20851" y="17898" zmin="-3841" zmax="-3241"/>
+		<add x="24023" y="17778" zmin="-3841" zmax="-3241"/>
+		<add x="26626" y="21687" zmin="-3841" zmax="-3241"/>
+		<add x="23786" y="23599" zmin="-3841" zmax="-3241"/>
+		<add x="19844" y="19911" zmin="-3841" zmax="-3241"/>
+	</territory>
+	<spawn name="oren23_2018_06" count="5" respawn="15">
+		<territory name="oren23_2018_06"/>
+		<npc id="20456"/><!--Пепельный Волк-->
+	</spawn>
+	<spawn name="oren23_2018_06" count="3" respawn="15">
+		<territory name="oren23_2018_06"/>
+		<npc id="20003"/><!--Гоблин-->
+	</spawn>
+	<spawn name="oren23_2018_06" count="2" respawn="15">
+		<territory name="oren23_2018_06"/>
+		<npc id="20004"/><!--Бес-->
+	</spawn>
+	<spawn name="oren23_2018_06" count="2" respawn="15">
+		<territory name="oren23_2018_06"/>
+		<npc id="20005"/><!--Старший Бес-->
+	</spawn>
+	<territory name="oren23_2018_01">
+		<add x="28698" y="13261" zmin="-3841" zmax="-3241"/>
+		<add x="32528" y="11772" zmin="-3841" zmax="-3241"/>
+		<add x="32532" y="15921" zmin="-3841" zmax="-3241"/>
+		<add x="28836" y="15849" zmin="-3841" zmax="-3241"/>
+	</territory>
+	<spawn name="oren23_2018_01" count="3" respawn="15">
+		<territory name="oren23_2018_01"/>
+		<npc id="20456"/><!--Пепельный Волк-->
+	</spawn>
+	<spawn name="oren23_2018_01" count="5" respawn="15">
+		<territory name="oren23_2018_01"/>
+		<npc id="20003"/><!--Гоблин-->
+	</spawn>
+	<spawn name="oren23_2018_01" count="2" respawn="15">
+		<territory name="oren23_2018_01"/>
+		<npc id="20004"/><!--Бес-->
+	</spawn>
+	<territory name="oren23_2018_03">
+		<add x="25541" y="11582" zmin="-3841" zmax="-3341"/>
+		<add x="28378" y="13608" zmin="-3841" zmax="-3341"/>
+		<add x="28587" y="15902" zmin="-3841" zmax="-3341"/>
+		<add x="25106" y="15582" zmin="-3841" zmax="-3341"/>
+		<add x="23063" y="11697" zmin="-3841" zmax="-3341"/>
+	</territory>
+	<spawn name="oren23_2018_03" count="6" respawn="15">
+		<territory name="oren23_2018_03"/>
+		<npc id="20529"/><!--Молодой Бурый Шакал-->
+	</spawn>
+	<spawn name="oren23_2018_03" count="4" respawn="15">
+		<territory name="oren23_2018_03"/>
+		<npc id="20536"/><!--Матерый Бурый Шакал-->
+	</spawn>
+	<territory name="oren23_2018_02">
+		<add x="28663" y="15962" zmin="-3841" zmax="-3341"/>
+		<add x="32510" y="16021" zmin="-3841" zmax="-3341"/>
+		<add x="30495" y="20648" zmin="-3841" zmax="-3341"/>
+		<add x="28305" y="20243" zmin="-3841" zmax="-3341"/>
+	</territory>
+	<spawn name="oren23_2018_02" count="3" respawn="15">
+		<territory name="oren23_2018_02"/>
+		<npc id="20003"/><!--Гоблин-->
+	</spawn>
+	<spawn name="oren23_2018_02" count="3" respawn="15">
+		<territory name="oren23_2018_02"/>
+		<npc id="20004"/><!--Бес-->
+	</spawn>
+	<spawn name="oren23_2018_02" count="4" respawn="15">
+		<territory name="oren23_2018_02"/>
+		<npc id="20005"/><!--Старший Бес-->
+	</spawn>
+	<territory name="oren23_2018_10">
+		<add x="18464" y="5925" zmin="-3785" zmax="-3185"/>
+		<add x="21852" y="5271" zmin="-3785" zmax="-3185"/>
+		<add x="23309" y="7174" zmin="-3785" zmax="-3185"/>
+		<add x="18868" y="8829" zmin="-3785" zmax="-3185"/>
+		<add x="17239" y="7454" zmin="-3785" zmax="-3185"/>
+	</territory>
+	<spawn name="oren23_2018_10" count="3" respawn="15">
+		<territory name="oren23_2018_10"/>
+		<npc id="20456"/><!--Пепельный Волк-->
+	</spawn>
+	<spawn name="oren23_2018_10" count="4" respawn="15">
+		<territory name="oren23_2018_10"/>
+		<npc id="20003"/><!--Гоблин-->
+	</spawn>
+	<spawn name="oren23_2018_10" count="3" respawn="15">
+		<territory name="oren23_2018_10"/>
+		<npc id="20004"/><!--Бес-->
+	</spawn>
+	<spawn name="oren23_2018_10" count="2" respawn="15">
+		<territory name="oren23_2018_10"/>
+		<npc id="20005"/><!--Старший Бес-->
+	</spawn>
+	<territory name="oren23_2018_14">
+		<add x="250" y="21362" zmin="-3743" zmax="-3143"/>
+		<add x="3471" y="21918" zmin="-3743" zmax="-3143"/>
+		<add x="3044" y="23649" zmin="-3743" zmax="-3143"/>
+		<add x="195" y="23257" zmin="-3743" zmax="-3143"/>
+	</territory>
+	<spawn name="oren23_2018_14" count="2" respawn="15">
+		<territory name="oren23_2018_14"/>
+		<npc id="20004"/><!--Бес-->
+	</spawn>
+	<spawn name="oren23_2018_14" count="1" respawn="15">
+		<territory name="oren23_2018_14"/>
+		<npc id="20005"/><!--Старший Бес-->
+	</spawn>
+	<spawn name="oren07_npc2018_g03" count="1" respawn="60">
+		<territory>
+			<add x="22488" y="4692" zmin="-3825" zmax="-3225"/>
+			<add x="25244" y="3445" zmin="-3825" zmax="-3225"/>
+			<add x="30523" y="5031" zmin="-3825" zmax="-3225"/>
+			<add x="28846" y="7832" zmin="-3825" zmax="-3225"/>
+			<add x="25236" y="10703" zmin="-3825" zmax="-3225"/>
+		</territory>
+		<npc id="31034"/><!--Караульный-->
+	</spawn>
+	<spawn name="oren07_npc2018_g02" count="1" respawn="60">
+		<territory>
+			<add x="16561" y="5199" zmin="-3811" zmax="-2911"/>
+			<add x="22410" y="5106" zmin="-3811" zmax="-2911"/>
+			<add x="26151" y="13788" zmin="-3811" zmax="-2911"/>
+			<add x="21502" y="15081" zmin="-3811" zmax="-2911"/>
+		</territory>
+		<npc id="31034"/><!--Караульный-->
+	</spawn>
+	<spawn name="oren07_npc2018_g05" count="1" respawn="60">
+		<territory>
+			<add x="179" y="4048" zmin="-3511" zmax="-2511"/>
+			<add x="2737" y="3249" zmin="-3511" zmax="-2511"/>
+			<add x="3874" y="3455" zmin="-3511" zmax="-2511"/>
+			<add x="4324" y="11027" zmin="-3511" zmax="-2511"/>
+			<add x="159" y="20078" zmin="-3511" zmax="-2511"/>
+		</territory>
+		<npc id="31034"/><!--Караульный-->
+	</spawn>
+	<spawn name="oren07_npc2018_g04" count="1" respawn="60">
+		<territory>
+			<add x="7992" y="8001" zmin="-3453" zmax="-2253"/>
+			<add x="8651" y="2646" zmin="-3453" zmax="-2253"/>
+			<add x="16332" y="5247" zmin="-3453" zmax="-2253"/>
+			<add x="17634" y="6967" zmin="-3453" zmax="-2253"/>
+			<add x="11313" y="8233" zmin="-3453" zmax="-2253"/>
+		</territory>
+		<npc id="31034"/><!--Караульный-->
+	</spawn>
+	<spawn name="oren07_npc2018_g01" count="1" respawn="60">
+		<territory>
+			<add x="21578" y="15481" zmin="-3788" zmax="-2988"/>
+			<add x="32446" y="12033" zmin="-3788" zmax="-2988"/>
+			<add x="32415" y="19776" zmin="-3788" zmax="-2988"/>
+			<add x="24380" y="23747" zmin="-3788" zmax="-2988"/>
+			<add x="20200" y="20476" zmin="-3788" zmax="-2988"/>
+		</territory>
+		<npc id="31034"/><!--Караульный-->
+	</spawn>
+	<spawn name="oren07_npc2018_g06" count="1" respawn="60">
+		<territory>
+			<add x="6901" y="27926" zmin="-3822" zmax="-3022"/>
+			<add x="4625" y="25849" zmin="-3822" zmax="-3022"/>
+			<add x="9867" y="24404" zmin="-3822" zmax="-3022"/>
+			<add x="15956" y="28897" zmin="-3822" zmax="-3022"/>
+			<add x="10621" y="29990" zmin="-3822" zmax="-3022"/>
+		</territory>
+		<npc id="31034"/><!--Караульный-->
+	</spawn>
+	<spawn name="oren23_qm2018_00" count="15" respawn="15">
+		<territory>
+			<add x="27820" y="10364" zmin="-4268" zmax="-4068"/>
+			<add x="29036" y="10356" zmin="-4268" zmax="-4068"/>
+			<add x="29032" y="11724" zmin="-4268" zmax="-4068"/>
+			<add x="27856" y="11720" zmin="-4268" zmax="-4068"/>
+		</territory>
+		<npc id="18342"/><!--Гремлин-->
+	</spawn>
+	<spawn name="oren09_npc2018_premium01" count="1" respawn="60" group="vitamin_manager">
+		<point x="13436" y="17248" z="-4568" h="47500"/>
+		<npc id="32478"/><!--Менеджер Витаминов-->
+		</spawn>
+	<spawn count="1" respawn="60" group="royal_love_event">
+		<point x="11295" y="17704" z="-4568" h="56321"/>
+		<npc id="9020"/><!--Фринтеза-->	
+	</spawn>
+</list>

@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "residence.dtd">
+<list>
+	<residence id="4" name="Oren" impl="Castle">
+		<available_functions>
+			<function type="RESTORE_HP" level="25"/>
+			<function type="RESTORE_HP" level="30"/>
+			<function type="RESTORE_MP" level="18"/>
+			<function type="RESTORE_MP" level="20"/>
+			<function type="RESTORE_EXP" level="19"/>
+			<function type="RESTORE_EXP" level="20"/>
+			<function type="TELEPORT" level="11"/>
+			<function type="TELEPORT" level="12"/>
+			<function type="SUPPORT" level="15"/>
+			<function type="SUPPORT" level="18"/>
+		</available_functions>
+		<banish_points>
+			<point x="81353" y="39421" z="-2770"/>
+			<point x="81836" y="39623" z="-2770"/>
+			<point x="81224" y="39749" z="-2770"/>
+			<point x="81862" y="40021" z="-2770"/>
+		</banish_points>
+		<owner_restart_points>
+			<point x="82616" y="38750" z="-1593"/>
+			<point x="82623" y="38435" z="-1593"/>
+			<point x="82737" y="38645" z="-1593"/>
+			<point x="82513" y="38686" z="-1593"/>
+		</owner_restart_points>
+		<other_restart_points>
+			<point x="116127" y="76015" z="-2729"/>
+			<point x="115683" y="77610" z="-2650"/>
+			<point x="117304" y="76318" z="-2670"/>
+			<point x="119862" y="76603" z="-2220"/>
+			<point x="117671" y="78998" z="-2210"/>
+			<point x="117189" y="78952" z="-2210"/>
+			<point x="115861" y="75200" z="-2550"/>
+			<point x="118275" y="74859" z="-2557"/>
+			<point x="118229" y="74677" z="-2450"/>
+			<point x="115685" y="75072" z="-2550"/>
+			<point x="116704" y="75695" z="-2680"/>
+			<point x="116737" y="76738" z="-2650"/>
+			<point x="115193" y="77594" z="-2670"/>
+			<point x="116158" y="77443" z="-2660"/>
+		</other_restart_points>
+		<chaos_restart_points>
+			<point x="122098" y="70373" z="-2864"/>
+			<point x="118674" y="71218" z="-2743"/>
+			<point x="118040" y="67175" z="-2905"/>
+			<point x="119300" y="70660" z="-2850"/>
+			<point x="118851" y="70566" z="-2800"/>
+			<point x="112655" y="70976" z="-3122"/>
+			<point x="119712" y="66376" z="-2960"/>
+			<point x="107511" y="82890" z="-2515"/>
+			<point x="105702" y="82773" z="-2803"/>
+			<point x="104257" y="82194" z="-2581"/>
+			<point x="104474" y="81109" z="-2651"/>
+		</chaos_restart_points>
+		<merchant_guards>
+			<merchant_guard item_id="6077" npc_id="35030" max="2"/>
+			<merchant_guard item_id="6078" npc_id="35031" max="2"/>
+			<merchant_guard item_id="6079" npc_id="35032" max="5"/>
+			<merchant_guard item_id="6080" npc_id="35033" max="1"/>
+			<merchant_guard item_id="6081" npc_id="35034" max="1"/>
+			<merchant_guard item_id="6082" npc_id="35035" max="2"/>
+			<merchant_guard item_id="6083" npc_id="35036" max="2"/>
+			<merchant_guard item_id="6084" npc_id="35037" max="5"/>
+			<merchant_guard item_id="6085" npc_id="35038" max="1"/>
+			<merchant_guard item_id="6086" npc_id="35039" max="1"/>
+			<merchant_guard item_id="6145" npc_id="35020" max="5"/>
+			<merchant_guard item_id="6146" npc_id="35021" max="2"/>
+			<merchant_guard item_id="6147" npc_id="35022" max="10"/>
+			<merchant_guard item_id="6148" npc_id="35023" max="2"/>
+			<merchant_guard item_id="6149" npc_id="35024" max="2"/>
+			<merchant_guard item_id="6150" npc_id="35025" max="5"/>
+			<merchant_guard item_id="6151" npc_id="35026" max="2"/>
+			<merchant_guard item_id="6152" npc_id="35027" max="10"/>
+			<merchant_guard item_id="6153" npc_id="35028" max="2"/>
+			<merchant_guard item_id="6154" npc_id="35029" max="2"/>
+			<merchant_guard item_id="6205" npc_id="35040" max="2"/>
+			<merchant_guard item_id="6206" npc_id="35041" max="2"/>
+			<merchant_guard item_id="6207" npc_id="35042" max="5"/>
+			<merchant_guard item_id="6208" npc_id="35043" max="1"/>
+			<merchant_guard item_id="6209" npc_id="35044" max="1"/>
+			<merchant_guard item_id="6210" npc_id="35045" max="2"/>
+			<merchant_guard item_id="6211" npc_id="35046" max="2"/>
+			<merchant_guard item_id="6212" npc_id="35047" max="5"/>
+			<merchant_guard item_id="6213" npc_id="35048" max="1"/>
+			<merchant_guard item_id="6214" npc_id="35049" max="1"/>
+			<merchant_guard item_id="6265" npc_id="35050" max="5"/>
+			<merchant_guard item_id="6266" npc_id="35051" max="3"/>
+			<merchant_guard item_id="6267" npc_id="35052" max="10"/>
+			<merchant_guard item_id="6268" npc_id="35053" max="2"/>
+			<merchant_guard item_id="6269" npc_id="35054" max="2"/>
+			<merchant_guard item_id="6270" npc_id="35055" max="5"/>
+			<merchant_guard item_id="6271" npc_id="35056" max="3"/>
+			<merchant_guard item_id="6272" npc_id="35057" max="10"/>
+			<merchant_guard item_id="6273" npc_id="35058" max="2"/>
+			<merchant_guard item_id="6274" npc_id="35059" max="2"/>
+			<merchant_guard item_id="6301" npc_id="35060" max="1"/>
+			<merchant_guard item_id="6302" npc_id="35061" max="1"/>
+			<merchant_guard item_id="3999" npc_id="35010" max="5"/>
+			<merchant_guard item_id="4000" npc_id="35011" max="3"/>
+			<merchant_guard item_id="4001" npc_id="35012" max="10"/>
+			<merchant_guard item_id="4002" npc_id="35013" max="2"/>
+			<merchant_guard item_id="4003" npc_id="35014" max="2"/>
+			<merchant_guard item_id="4004" npc_id="35015" max="5"/>
+			<merchant_guard item_id="4005" npc_id="35016" max="3"/>
+			<merchant_guard item_id="4006" npc_id="35017" max="10"/>
+			<merchant_guard item_id="4007" npc_id="35018" max="2"/>
+			<merchant_guard item_id="4008" npc_id="35019" max="2"/>
+			<merchant_guard item_id="4009" npc_id="35218" max="1"/>
+			<merchant_guard item_id="4010" npc_id="35219" max="1"/>
+			<merchant_guard item_id="4011" npc_id="35220" max="1"/>
+		</merchant_guards>
+	</residence>
+</list>

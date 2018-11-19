@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="1">	<!--Воитель-->
+			<skill id="100" level="1" name="Атака Оглушением(Shock Attack)" cost="1000" min_level="20"/>
+			<skill id="100" level="2" name="Атака Оглушением(Shock Attack)" cost="1000" min_level="20"/>
+			<skill id="100" level="3" name="Атака Оглушением(Shock Attack)" cost="1000" min_level="20"/>
+			<skill id="312" level="1" name="Боевая Стойка Коварства(Vicious Stance)" cost="1000" min_level="20"/>
+			<skill id="216" level="1" name="Владение Древковым Оружием(Polearm Mastery)" cost="1000" min_level="20"/>
+			<skill id="227" level="1" name="Владение Легкой Броней(Light Armor Mastery)" cost="1000" min_level="20"/>
+			<skill id="227" level="2" name="Владение Легкой Броней(Light Armor Mastery)" cost="1000" min_level="20"/>
+			<skill id="257" level="1" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1000" min_level="20"/>
+			<skill id="231" level="1" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1000" min_level="20"/>
+			<skill id="231" level="2" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1000" min_level="20"/>
+			<skill id="245" level="1" name="Дикий Размах(Wild Sweep)" cost="1000" min_level="20"/>
+			<skill id="245" level="2" name="Дикий Размах(Wild Sweep)" cost="1000" min_level="20"/>
+			<skill id="245" level="3" name="Дикий Размах(Wild Sweep)" cost="1000" min_level="20"/>
+			<skill id="78" level="1" name="Клич Войны(War Cry)" cost="1000" min_level="20"/>
+			<skill id="255" level="1" name="Мощное Сокрушение(Power Smash)" cost="1000" min_level="20"/>
+			<skill id="255" level="2" name="Мощное Сокрушение(Power Smash)" cost="1000" min_level="20"/>
+			<skill id="255" level="3" name="Мощное Сокрушение(Power Smash)" cost="1000" min_level="20"/>
+			<skill id="211" level="1" name="Увеличение HP(Boost HP)" cost="1000" min_level="20"/>
+			<skill id="100" level="4" name="Атака Оглушением(Shock Attack)" cost="2800" min_level="22"/>
+			<skill id="227" level="3" name="Владение Легкой Броней(Light Armor Mastery)" cost="2800" min_level="22"/>
+			<skill id="231" level="3" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="2800" min_level="22"/>
+			<skill id="245" level="4" name="Дикий Размах(Wild Sweep)" cost="2800" min_level="22"/>
+			<skill id="255" level="4" name="Мощное Сокрушение(Power Smash)" cost="2800" min_level="22"/>
+			<skill id="100" level="5" name="Атака Оглушением(Shock Attack)" cost="2800" min_level="23"/>
+			<skill id="245" level="5" name="Дикий Размах(Wild Sweep)" cost="2800" min_level="23"/>
+			<skill id="255" level="5" name="Мощное Сокрушение(Power Smash)" cost="2800" min_level="23"/>
+			<skill id="100" level="6" name="Атака Оглушением(Shock Attack)" cost="2800" min_level="24"/>
+			<skill id="312" level="2" name="Боевая Стойка Коварства(Vicious Stance)" cost="2800" min_level="24"/>
+			<skill id="212" level="1" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="2800" min_level="24"/>
+			<skill id="216" level="2" name="Владение Древковым Оружием(Polearm Mastery)" cost="2800" min_level="24"/>
+			<skill id="227" level="4" name="Владение Легкой Броней(Light Armor Mastery)" cost="2800" min_level="24"/>
+			<skill id="257" level="2" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="2800" min_level="24"/>
+			<skill id="231" level="4" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="2800" min_level="24"/>
+			<skill id="245" level="6" name="Дикий Размах(Wild Sweep)" cost="2800" min_level="24"/>
+			<skill id="148" level="1" name="Жизненная Сила(Vital Force)" cost="2800" min_level="24"/>
+			<skill id="255" level="6" name="Мощное Сокрушение(Power Smash)" cost="2800" min_level="24"/>
+			<skill id="256" level="1" name="Точность(Accuracy)" cost="2800" min_level="24"/>
+			<skill id="100" level="7" name="Атака Оглушением(Shock Attack)" cost="5700" min_level="26"/>
+			<skill id="216" level="3" name="Владение Древковым Оружием(Polearm Mastery)" cost="5700" min_level="26"/>
+			<skill id="227" level="5" name="Владение Легкой Броней(Light Armor Mastery)" cost="5700" min_level="26"/>
+			<skill id="257" level="3" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="5700" min_level="26"/>
+			<skill id="231" level="5" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="5700" min_level="26"/>
+			<skill id="245" level="7" name="Дикий Размах(Wild Sweep)" cost="5700" min_level="26"/>
+			<skill id="255" level="7" name="Мощное Сокрушение(Power Smash)" cost="5700" min_level="26"/>
+			<skill id="100" level="8" name="Атака Оглушением(Shock Attack)" cost="5700" min_level="27"/>
+			<skill id="227" level="6" name="Владение Легкой Броней(Light Armor Mastery)" cost="5700" min_level="27"/>
+			<skill id="231" level="6" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="5700" min_level="27"/>
+			<skill id="245" level="8" name="Дикий Размах(Wild Sweep)" cost="5700" min_level="27"/>
+			<skill id="255" level="8" name="Мощное Сокрушение(Power Smash)" cost="5700" min_level="27"/>
+			<skill id="100" level="9" name="Атака Оглушением(Shock Attack)" cost="5700" min_level="28"/>
+			<skill id="312" level="3" name="Боевая Стойка Коварства(Vicious Stance)" cost="5700" min_level="28"/>
+			<skill id="121" level="1" name="Боевой Рев(Battle Roar)" cost="5700" min_level="28"/>
+			<skill id="216" level="4" name="Владение Древковым Оружием(Polearm Mastery)" cost="5700" min_level="28"/>
+			<skill id="227" level="7" name="Владение Легкой Броней(Light Armor Mastery)" cost="5700" min_level="28"/>
+			<skill id="257" level="4" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="5700" min_level="28"/>
+			<skill id="231" level="7" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="5700" min_level="28"/>
+			<skill id="245" level="9" name="Дикий Размах(Wild Sweep)" cost="5700" min_level="28"/>
+			<skill id="255" level="9" name="Мощное Сокрушение(Power Smash)" cost="5700" min_level="28"/>
+			<skill id="211" level="2" name="Увеличение HP(Boost HP)" cost="5700" min_level="28"/>
+			<skill id="100" level="10" name="Атака Оглушением(Shock Attack)" cost="11000" min_level="30"/>
+			<skill id="216" level="5" name="Владение Древковым Оружием(Polearm Mastery)" cost="11000" min_level="30"/>
+			<skill id="227" level="8" name="Владение Легкой Броней(Light Armor Mastery)" cost="11000" min_level="30"/>
+			<skill id="257" level="5" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="11000" min_level="30"/>
+			<skill id="231" level="8" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="11000" min_level="30"/>
+			<skill id="245" level="10" name="Дикий Размах(Wild Sweep)" cost="11000" min_level="30"/>
+			<skill id="255" level="10" name="Мощное Сокрушение(Power Smash)" cost="11000" min_level="30"/>
+			<skill id="100" level="11" name="Атака Оглушением(Shock Attack)" cost="11000" min_level="31"/>
+			<skill id="227" level="9" name="Владение Легкой Броней(Light Armor Mastery)" cost="11000" min_level="31"/>
+			<skill id="231" level="9" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="11000" min_level="31"/>
+			<skill id="245" level="11" name="Дикий Размах(Wild Sweep)" cost="11000" min_level="31"/>
+			<skill id="255" level="11" name="Мощное Сокрушение(Power Smash)" cost="11000" min_level="31"/>
+			<skill id="100" level="12" name="Атака Оглушением(Shock Attack)" cost="11000" min_level="32"/>
+			<skill id="312" level="4" name="Боевая Стойка Коварства(Vicious Stance)" cost="11000" min_level="32"/>
+			<skill id="212" level="2" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="11000" min_level="32"/>
+			<skill id="216" level="6" name="Владение Древковым Оружием(Polearm Mastery)" cost="11000" min_level="32"/>
+			<skill id="227" level="10" name="Владение Легкой Броней(Light Armor Mastery)" cost="11000" min_level="32"/>
+			<skill id="257" level="6" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="11000" min_level="32"/>
+			<skill id="231" level="10" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="11000" min_level="32"/>
+			<skill id="245" level="12" name="Дикий Размах(Wild Sweep)" cost="11000" min_level="32"/>
+			<skill id="148" level="2" name="Жизненная Сила(Vital Force)" cost="11000" min_level="32"/>
+			<skill id="255" level="12" name="Мощное Сокрушение(Power Smash)" cost="11000" min_level="32"/>
+			<skill id="75" level="1" name="Найти Уязвимость Насекомых(Detect Insect Weakness)" cost="11000" min_level="32"/>
+			<skill id="100" level="13" name="Атака Оглушением(Shock Attack)" cost="20000" min_level="34"/>
+			<skill id="216" level="7" name="Владение Древковым Оружием(Polearm Mastery)" cost="20000" min_level="34"/>
+			<skill id="227" level="11" name="Владение Легкой Броней(Light Armor Mastery)" cost="20000" min_level="34"/>
+			<skill id="257" level="7" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="20000" min_level="34"/>
+			<skill id="231" level="11" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="20000" min_level="34"/>
+			<skill id="245" level="13" name="Дикий Размах(Wild Sweep)" cost="20000" min_level="34"/>
+			<skill id="255" level="13" name="Мощное Сокрушение(Power Smash)" cost="20000" min_level="34"/>
+			<skill id="100" level="14" name="Атака Оглушением(Shock Attack)" cost="20000" min_level="35"/>
+			<skill id="227" level="12" name="Владение Легкой Броней(Light Armor Mastery)" cost="20000" min_level="35"/>
+			<skill id="231" level="12" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="20000" min_level="35"/>
+			<skill id="245" level="14" name="Дикий Размах(Wild Sweep)" cost="20000" min_level="35"/>
+			<skill id="255" level="14" name="Мощное Сокрушение(Power Smash)" cost="20000" min_level="35"/>
+			<skill id="100" level="15" name="Атака Оглушением(Shock Attack)" cost="20000" min_level="36"/>
+			<skill id="312" level="5" name="Боевая Стойка Коварства(Vicious Stance)" cost="20000" min_level="36"/>
+			<skill id="216" level="8" name="Владение Древковым Оружием(Polearm Mastery)" cost="20000" min_level="36"/>
+			<skill id="227" level="13" name="Владение Легкой Броней(Light Armor Mastery)" cost="20000" min_level="36"/>
+			<skill id="257" level="8" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="20000" min_level="36"/>
+			<skill id="231" level="13" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="20000" min_level="36"/>
+			<skill id="245" level="15" name="Дикий Размах(Wild Sweep)" cost="20000" min_level="36"/>
+			<skill id="287" level="1" name="Львиное Сердце(Lionheart)" cost="20000" min_level="36"/>
+			<skill id="255" level="15" name="Мощное Сокрушение(Power Smash)" cost="20000" min_level="36"/>
+			<skill id="211" level="3" name="Увеличение HP(Boost HP)" cost="20000" min_level="36"/>
+		</class>
+	</normal_skill_tree>
+</list>

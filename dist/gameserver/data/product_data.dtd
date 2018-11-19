@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT list (config|product)*>
+
+	<!ELEMENT config (#PCDATA)>
+	<!ATTLIST config
+		points_item_id CDATA #IMPLIED
+		recent_list_size CDATA #IMPLIED
+		default_points_type CDATA #IMPLIED>
+
+	<!ELEMENT product (component)*>
+	<!ATTLIST product
+		id CDATA #REQUIRED
+		name CDATA #REQUIRED
+		category CDATA #REQUIRED
+		price CDATA #REQUIRED
+		is_event CDATA #IMPLIED
+		is_best CDATA #IMPLIED
+		is_new CDATA #IMPLIED
+		is_top CDATA #IMPLIED
+		is_recommended CDATA #IMPLIED
+		is_popular CDATA #IMPLIED
+		on_sale CDATA #IMPLIED
+		sale_start_date CDATA #IMPLIED
+		sale_end_date CDATA #IMPLIED
+		discount CDATA #IMPLIED
+		location_id CDATA #IMPLIED
+		points_type CDATA #IMPLIED>
+
+			<!ELEMENT component (#PCDATA)>
+			<!ATTLIST component
+				item_id CDATA #REQUIRED
+				count CDATA #REQUIRED>

@@ -1,0 +1,1076 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<weapon id="300" name="Great Axe">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;66;120"/>
+		<set name="crystal_count" value="1157"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.weapon_great_axe_i00"/>
+		<set name="price" value="8680000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="POLE"/>
+		<set name="weight" value="1940"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<skills>
+			<skill id="3599" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="175"/>
+			<add stat="mAtk" order="0x10" value="91"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="301" name="scorpion">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;66;120"/>
+		<set name="crystal_count" value="1912"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_scorpion_i00"/>
+		<set name="price" value="4780000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="POLE"/>
+		<set name="weight" value="1990"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<skills>
+			<skill id="3599" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="144"/>
+			<add stat="mAtk" order="0x10" value="78"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="302" name="Body Slasher">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;66;120"/>
+		<set name="crystal_count" value="916"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_body_slasher_i00"/>
+		<set name="price" value="2290000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="POLE"/>
+		<set name="weight" value="2030"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<skills>
+			<skill id="3599" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="107"/>
+			<add stat="mAtk" order="0x10" value="61"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="303" name="Widow Maker">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;66;120"/>
+		<set name="crystal_count" value="1912"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_widow_maker_i00"/>
+		<set name="price" value="4780000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="POLE"/>
+		<set name="weight" value="1980"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<skills>
+			<skill id="3599" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="144"/>
+			<add stat="mAtk" order="0x10" value="78"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="305" name="Tallum Glaive">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;66;120"/>
+		<set name="crystal_count" value="1659"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_tallum_glaive_i00"/>
+		<set name="price" value="20741000"/>
+		<set name="type" value="POLE"/>
+		<set name="weight" value="1840"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<skills>
+			<skill id="3599" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="232"/>
+			<add stat="mAtk" order="0x10" value="114"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="308" name="Buffalo\'s Horn">
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_buffalo_horn_i00"/>
+		<set name="price" value="768"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="ETC"/>
+		<set name="weight" value="660"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="6"/>
+			<add stat="mAtk" order="0x10" value="8"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="309" name="Tears of Eva">
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_tears_of_eva_i00"/>
+		<set name="price" value="136000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="ETC"/>
+		<set name="weight" value="630"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="19"/>
+			<add stat="mAtk" order="0x10" value="22"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="310" name="Relic of the Saints">
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_apprentices_spellbook_i00"/>
+		<set name="price" value="136000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="ETC"/>
+		<set name="weight" value="610"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="19"/>
+			<add stat="mAtk" order="0x10" value="22"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="311" name="Crucifix of Blessing">
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_crucifix_of_blessing_i00"/>
+		<set name="price" value="244000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="ETC"/>
+		<set name="weight" value="620"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="25"/>
+			<add stat="mAtk" order="0x10" value="28"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="312" name="Branch of Life">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="743"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_branch_of_life_i00"/>
+		<set name="price" value="409000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="ETC"/>
+		<set name="weight" value="620"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="32"/>
+			<add stat="mAtk" order="0x10" value="35"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="313" name="Temptation of Abyss">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="743"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_temptation_of_abyss_i00"/>
+		<set name="price" value="409000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="ETC"/>
+		<set name="weight" value="610"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="32"/>
+			<add stat="mAtk" order="0x10" value="35"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="314" name="Proof of Revenge">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="743"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_proof_of_revenge_i00"/>
+		<set name="price" value="409000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="ETC"/>
+		<set name="weight" value="600"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="32"/>
+			<add stat="mAtk" order="0x10" value="35"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="315" name="Divine Tome">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="1170"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_divine_tome_i00"/>
+		<set name="price" value="644000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="ETC"/>
+		<set name="weight" value="570"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="41"/>
+			<add stat="mAtk" order="0x10" value="43"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="316" name="Sage\'s Blood">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="1758"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_blood_of_saints_i00"/>
+		<set name="price" value="967000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="ETC"/>
+		<set name="weight" value="580"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="51"/>
+			<add stat="mAtk" order="0x10" value="52"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="317" name="Tome of Blood">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="1758"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_tome_of_blood_i00"/>
+		<set name="price" value="967000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="ETC"/>
+		<set name="weight" value="570"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="51"/>
+			<add stat="mAtk" order="0x10" value="52"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="318" name="Crucifix of Blood">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="2545"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_crucifix_of_blood_i00"/>
+		<set name="price" value="1400000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="ETC"/>
+		<set name="weight" value="540"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="63"/>
+			<add stat="mAtk" order="0x10" value="63"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="319" name="Eye of Infinity">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="2545"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_apprentices_spellbook_i00"/>
+		<set name="price" value="1400000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="ETC"/>
+		<set name="weight" value="1600"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="63"/>
+			<add stat="mAtk" order="0x10" value="63"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="320" name="Blue Crystal Skull">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="2763"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_apprentices_spellbook_i00"/>
+		<set name="price" value="1520000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="ETC"/>
+		<set name="weight" value="1600"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="67"/>
+			<add stat="mAtk" order="0x10" value="66"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="321" name="Demon\'s Fangs">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="2763"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_demon_fangs_i00"/>
+		<set name="price" value="1520000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="ETC"/>
+		<set name="weight" value="1600"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="67"/>
+			<add stat="mAtk" order="0x10" value="66"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="322" name="Vajra Wand">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="3272"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_apprentices_spellbook_i00"/>
+		<set name="price" value="1800000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="ETC"/>
+		<set name="weight" value="1600"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="74"/>
+			<add stat="mAtk" order="0x10" value="72"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="323" name="Ancient Reagent">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="3272"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_apprentices_spellbook_i00"/>
+		<set name="price" value="1800000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="ETC"/>
+		<set name="weight" value="1600"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="74"/>
+			<add stat="mAtk" order="0x10" value="72"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="325" name="Horn of Glory">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="1148"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_horn_of_glory_i00"/>
+		<set name="price" value="2870000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="ETC"/>
+		<set name="weight" value="540"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="98"/>
+			<add stat="mAtk" order="0x10" value="91"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<armor id="347" name="Ring Breastplate">
+		<set name="crystal_count" value="151"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t12_u_i00"/>
+		<set name="price" value="83500"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="8820"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="77"/>
+		</for>
+	</armor>
+	<armor id="348" name="Scale Mail">
+		<set name="crystal_count" value="241"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t08_u_i00"/>
+		<set name="price" value="133000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="8720"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="87"/>
+		</for>
+	</armor>
+	<armor id="349" name="Compound Scale Mail">
+		<set name="crystal_count" value="332"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t20_u_i00"/>
+		<set name="price" value="183000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="8620"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="95"/>
+		</for>
+	</armor>
+	<armor id="350" name="Dwarven Scale Mail">
+		<set name="crystal_count" value="332"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t15_u_i00"/>
+		<set name="price" value="183000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="8540"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="95"/>
+		</for>
+	</armor>
+	<armor id="351" name="Breastplate">
+		<set name="crystal_count" value="369"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t40_u_i00"/>
+		<set name="price" value="203000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="8420"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="97"/>
+		</for>
+	</armor>
+	<armor id="352" name="Brigandine">
+		<set name="crystal_count" value="543"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t43_u_i00"/>
+		<set name="price" value="299000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="8320"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="103"/>
+		</for>
+	</armor>
+	<armor id="353" name="Half Plate Armor">
+		<set name="crystal_count" value="710"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t46_u_i00"/>
+		<set name="price" value="391000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="8220"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="111"/>
+		</for>
+	</armor>
+	<armor id="354" name="Chain Mail Shirt ">
+		<set name="crystal_count" value="202"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_t48_u_i00"/>
+		<set name="price" value="505000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="8120"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="120"/>
+		</for>
+	</armor>
+	<armor id="355" name="Dwarven Chain Mail Shirt">
+		<set name="crystal_count" value="257"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_t60_u_i00"/>
+		<set name="price" value="644000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="8070"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="129"/>
+		</for>
+	</armor>
+	<armor id="356" name="Full Plate Armor">
+		<set name="crystal_count" value="836"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_t62_ul_i00"/>
+		<set name="price" value="2090000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="10480"/>
+		<equip>
+			<slot id="FULL_ARMOR"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="239"/>
+		</for>
+	</armor>
+	<armor id="357" name="Zubei\'s Breastplate">
+		<set name="crystal_count" value="277"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t64_u_i00"/>
+		<set name="price" value="2080000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="7970"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="157"/>
+		</for>
+	</armor>
+	<armor id="358" name="Blue Wolf Breastplate">
+		<set name="crystal_count" value="429"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t68_u_i00"/>
+		<set name="price" value="3220000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="7820"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="166"/>
+		</for>
+	</armor>
+	<armor id="360" name="Armor of Victory">
+		<set name="crystal_count" value="429"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_dwarven_scale_mail_i00"/>
+		<set name="price" value="3220000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="3360"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="175"/>
+		</for>
+	</armor>
+	<armor id="361" name="Breastplate of Valor">
+		<set name="crystal_count" value="617"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_dwarven_scale_mail_i00"/>
+		<set name="price" value="4630000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="3360"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="185"/>
+		</for>
+	</armor>
+	<armor id="364" name="Elven Crystal Breastplate">
+		<set name="crystal_count" value="429"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_dwarven_scale_mail_i00"/>
+		<set name="price" value="3220000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="2400"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="175"/>
+		</for>
+	</armor>
+	<armor id="365" name="Dark Crystal Breastplate">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="285"/>
+		<set name="icon" value="icon.armor_t74_u_i00"/>
+		<set name="price" value="3562000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="7700"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="171"/>
+		</for>
+	</armor>
+	<armor id="374" name="Armor of Nightmare">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="704"/>
+		<set name="icon" value="icon.armor_t80_ul_i00"/>
+		<set name="price" value="8804000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="9580"/>
+		<equip>
+			<slot id="FULL_ARMOR"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="293"/>
+		</for>
+	</armor>
+	<armor id="376" name="Iron Plate Gaiters">
+		<set name="crystal_count" value="94"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t12_l_i00"/>
+		<set name="price" value="52200"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="3820"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="48"/>
+		</for>
+	</armor>
+	<armor id="377" name="Scale Gaiters">
+		<set name="crystal_count" value="151"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t08_l_i00"/>
+		<set name="price" value="83300"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="3860"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="54"/>
+		</for>
+	</armor>
+	<armor id="378" name="Compound Scale Gaiters">
+		<set name="crystal_count" value="230"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t20_l_i00"/>
+		<set name="price" value="127000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="3770"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="61"/>
+		</for>
+	</armor>
+	<armor id="379" name="Dwarven Scale Gaiters">
+		<set name="crystal_count" value="230"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t15_l_i00"/>
+		<set name="price" value="127000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="3840"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="61"/>
+		</for>
+	</armor>
+	<armor id="380" name="Plate Gaiters">
+		<set name="crystal_count" value="443"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t46_l_i00"/>
+		<set name="price" value="244000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="3770"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="70"/>
+		</for>
+	</armor>
+	<armor id="381" name="Chain Gaiters">
+		<set name="crystal_count" value="126"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_t48_l_i00"/>
+		<set name="price" value="316000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="3680"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="75"/>
+		</for>
+	</armor>
+	<armor id="382" name="Dwarven Chain Gaiters">
+		<set name="crystal_count" value="161"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_t60_l_i00"/>
+		<set name="price" value="403000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="3620"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="80"/>
+		</for>
+	</armor>
+	<armor id="383" name="Zubei\'s Gaiters">
+		<set name="crystal_count" value="173"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t64_l_i00"/>
+		<set name="price" value="1300000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="3570"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="98"/>
+		</for>
+	</armor>
+	<armor id="384" name="Wolf Gaiters">
+		<set name="crystal_count" value="268"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_plate_gaiters_i00"/>
+		<set name="price" value="2010000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="2560"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="109"/>
+		</for>
+	</armor>
+	<armor id="385" name="Gaiters of Victory">
+		<set name="crystal_count" value="268"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_plate_gaiters_i00"/>
+		<set name="price" value="2010000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="2240"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="109"/>
+		</for>
+	</armor>
+	<armor id="386" name="Gaiters of Valor">
+		<set name="crystal_count" value="385"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_plate_gaiters_i00"/>
+		<set name="price" value="2890000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="2240"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="116"/>
+		</for>
+	</armor>
+	<armor id="387" name="Elven Crystal Gaiters">
+		<set name="crystal_count" value="268"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_plate_gaiters_i00"/>
+		<set name="price" value="2010000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="2240"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="109"/>
+		</for>
+	</armor>
+	<armor id="388" name="Dark Crystal Gaiters">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="178"/>
+		<set name="icon" value="icon.armor_t74_l_i00"/>
+		<set name="price" value="2226000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="3320"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="107"/>
+		</for>
+	</armor>
+	<armor id="390" name="Cotton Shirt">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.armor_t07_u_i00"/>
+		<set name="price" value="20300"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="4770"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="50"/>
+		</for>
+	</armor>
+	<armor id="391" name="Puma Skin Shirt">
+		<set name="crystal_count" value="113"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t09_u_i00"/>
+		<set name="price" value="62600"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="4700"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="58"/>
+		</for>
+	</armor>
+	<armor id="392" name="Lion Skin Shirt">
+		<set name="crystal_count" value="181"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t18_u_i00"/>
+		<set name="price" value="99900"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="4580"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="65"/>
+		</for>
+	</armor>
+	<armor id="393" name="Mithril Banded Mail">
+		<set name="crystal_count" value="276"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t10_u_i00"/>
+		<set name="price" value="152000"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="4570"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="73"/>
+		</for>
+	</armor>
+	<armor id="394" name="Reinforced Leather Shirt">
+		<set name="crystal_count" value="276"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t13_u_i00"/>
+		<set name="price" value="152000"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="4570"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="73"/>
+		</for>
+	</armor>
+	<armor id="395" name="Manticore Skin Shirt">
+		<set name="crystal_count" value="407"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t42_u_i00"/>
+		<set name="price" value="224000"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="4520"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="77"/>
+		</for>
+	</armor>
+	<armor id="396" name="Salamander Skin Mail">
+		<set name="crystal_count" value="780"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t45_ul_i00"/>
+		<set name="price" value="429000"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="6100"/>
+		<equip>
+			<slot id="FULL_ARMOR"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="136"/>
+		</for>
+	</armor>
+	<armor id="397" name="Reinforced Mithril Shirt">
+		<set name="crystal_count" value="151"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_t47_u_i00"/>
+		<set name="price" value="379000"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="4470"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="90"/>
+		</for>
+	</armor>
+	<armor id="398" name="Plated Leather Armor">
+		<set name="crystal_count" value="178"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_t47_u_i00"/>
+		<set name="price" value="446000"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="4450"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="94"/>
+		</for>
+	</armor>
+	<armor id="399" name="Rind Leather Armor">
+		<set name="crystal_count" value="193"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_t49_u_i00"/>
+		<set name="price" value="483000"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="4420"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="97"/>
+		</for>
+	</armor>
+</list>

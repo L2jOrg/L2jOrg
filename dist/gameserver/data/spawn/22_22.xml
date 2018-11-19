@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="giran_castle_light_side">
+		<point x="83312" y="147907" z="-3400" h="16384"/>
+		<npc id="36611"/><!--Герольд-->
+	</spawn>
+	<spawn name="giran01_mb2222_01" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="87716" y="140240" zmin="-3560" zmax="-2960"/>
+			<add x="88636" y="139892" zmin="-3560" zmax="-2960"/>
+			<add x="89640" y="140844" zmin="-3560" zmax="-2960"/>
+			<add x="88840" y="141224" zmin="-3560" zmax="-2960"/>
+			<add x="87936" y="141032" zmin="-3560" zmax="-2960"/>
+		</territory>
+		<npc id="25082"/><!--Предводитель Кошачьей Банды-->
+	</spawn>
+	<spawn name="giran11_npc2222_premium01" count="1" respawn="60" group="vitamin_manager">
+		<point x="82652" y="146755" z="-3464" h="33000"/>
+		<npc id="32478"/><!--Менеджер Витаминов-->
+	</spawn>
+	<spawn name="giran11_npc2222_19" count="1" respawn="60">
+		<point x="79599" y="145522" z="-3496" h="0"/>
+		<npc id="30097"/><!--Галадуччи-->
+	</spawn>
+	<spawn name="giran11_npc2222_19" count="1" respawn="60">
+		<point x="79599" y="145457" z="-3496" h="0"/>
+		<npc id="30098"/><!--Александрия-->
+	</spawn>
+	<spawn name="giran11_npc2222_15" count="1" respawn="60">
+		<point x="79253" y="147049" z="-3528" h="0"/>
+		<npc id="30624"/><!--Аскалон-->
+	</spawn>
+	<spawn name="giran11_npc2222_16" count="1" respawn="60">
+		<point x="87509" y="149655" z="-3400" h="0"/>
+		<npc id="30614"/><!--Метеус-->
+	</spawn>
+	<spawn name="giran11_npc2222_17" count="1" respawn="60">
+		<point x="80511" y="149183" z="-3504" h="32768"/>
+		<npc id="30090"/><!--Сандра-->
+	</spawn>
+	<spawn name="giran11_npc2222_17" count="1" respawn="60">
+		<point x="80510" y="149250" z="-3504" h="32768"/>
+		<npc id="30091"/><!--Элли-->
+	</spawn>
+	<spawn name="giran11_npc2222_18" count="1" respawn="60">
+		<point x="79059" y="149457" z="-3592" h="47548"/>
+		<npc id="30474"/><!--Ангус-->
+	</spawn>
+	<spawn name="giran11_npc2222_18" count="1" respawn="60">
+		<point x="78766" y="149239" z="-3592" h="16384"/>
+		<npc id="30475"/><!--Стапин-->
+	</spawn>
+	<spawn name="giran11_npc2222_18" count="1" respawn="60">
+		<point x="78928" y="149041" z="-3592" h="0"/>
+		<npc id="30476"/><!--Кайра-->
+	</spawn>
+	<spawn name="giran11_npc2222_11" count="1" respawn="60">
+		<point x="86485" y="148384" z="-3400" h="16384"/>
+		<npc id="30118"/><!--Пупина-->
+	</spawn>
+	<spawn name="giran11_npc2222_11" count="1" respawn="60">
+		<point x="86472" y="148848" z="-3400" h="49152"/>
+		<npc id="30117"/><!--Примос-->
+	</spawn>
+	<spawn name="giran11_npc2222_11" count="1" respawn="60">
+		<point x="85829" y="148365" z="-3400" h="16384"/>
+		<npc id="30473"/><!--Банделлос-->
+	</spawn>
+	<spawn name="giran11_npc2222_11" count="1" respawn="60">
+		<point x="85828" y="148894" z="-3400" h="49152"/>
+		<npc id="30119"/><!--Изабелла-->
+	</spawn>
+	<spawn name="giran11_npc2222_12" count="1" respawn="60">
+		<point x="85055" y="146560" z="-3400" h="32768"/>
+		<npc id="30108"/><!--Макен-->
+	</spawn>
+	<spawn name="giran11_npc2222_13" count="1" respawn="60">
+		<point x="85655" y="146471" z="-3400" h="32441"/>
+		<npc id="30109"/><!--Ханнавальт-->
+	</spawn>
+	<spawn name="giran11_npc2222_13" count="1" respawn="60">
+		<point x="85505" y="146208" z="-3400" h="16384"/>
+		<npc id="30105"/><!--Генвиттер-->
+	</spawn>
+	<spawn name="giran11_npc2222_13" count="1" respawn="60">
+		<point x="85502" y="146752" z="-3400" h="49152"/>
+		<npc id="30107"/><!--Голдиан-->
+	</spawn>
+	<spawn name="giran11_npc2222_13" count="1" respawn="60">
+		<point x="85234" y="146634" z="-3400" h="0"/>
+		<npc id="30106"/><!--Дафнер-->
+	</spawn>
+	<spawn name="giran11_npc2222_13" count="1" respawn="60">
+		<point x="85231" y="146328" z="-3400" h="0"/>
+		<npc id="30472"/><!--Рошерия-->
+	</spawn>
+	<spawn name="giran11_npc2222_14" count="1" respawn="60">
+		<point x="84274" y="143740" z="-3400" h="32768"/>
+		<npc id="30645"/><!--Мартиен-->
+	</spawn>
+	<spawn name="giran11_npc2222_20" count="1" respawn="60">
+		<point x="90498" y="147535" z="-3512" h="0"/>
+		<npc id="30128"/><!--Атанас-->
+	</spawn>
+	<spawn name="giran11_npc2222_20" count="1" respawn="60">
+		<point x="90501" y="147180" z="-3528" h="0"/>
+		<npc id="30478"/><!--Рейкин-->
+	</spawn>
+	<spawn name="giran11_npc2222_21" count="1" respawn="60">
+		<point x="84064" y="141438" z="-3520" h="49152"/>
+		<npc id="30126"/><!--Рат-->
+	</spawn>
+	<spawn name="giran11_npc2222_21" count="1" respawn="60">
+		<point x="83705" y="141439" z="-3528" h="49152"/>
+		<npc id="30125"/><!--Белтон-->
+	</spawn>
+	<spawn name="giran11_npc2222_09" count="1" respawn="60">
+		<point x="84521" y="146372" z="-3400" h="16384"/>
+		<npc id="30756"/><!--Сэр Кристоф Родемаи-->
+	</spawn>
+	<spawn name="giran11_npc2222_04" count="1" respawn="60">
+		<point x="83305" y="150521" z="-3512" h="32768"/>
+		<npc id="30093"/><!--Грут-->
+	</spawn>
+	<spawn name="giran11_npc2222_04" count="1" respawn="60">
+		<point x="83317" y="150821" z="-3512" h="32768"/>
+		<npc id="30094"/><!--Гентлер-->
+	</spawn>
+	<spawn name="giran11_npc2222_05" count="1" respawn="60">
+		<point x="83263" y="146667" z="-3464" h="32768"/>
+		<npc id="30511"/><!--Гесто-->
+	</spawn>
+	<spawn name="giran11_npc2222_05" count="1" respawn="60">
+		<point x="83264" y="146602" z="-3464" h="32768"/>
+		<npc id="30103"/><!--Валькон-->
+	</spawn>
+	<spawn name="giran11_npc2222_05" count="1" respawn="60">
+		<point x="83263" y="146736" z="-3464" h="32768"/>
+		<npc id="30104"/><!--Парман-->
+	</spawn>
+	<spawn name="giran11_npc2222_06" count="1" respawn="60">
+		<point x="77659" y="148089" z="-3592" h="24115"/>
+		<npc id="30512"/><!--Кусто-->
+	</spawn>
+	<spawn name="giran11_npc2222_06" count="1" respawn="60">
+		<point x="77458" y="148169" z="-3592" h="0"/>
+		<npc id="30300"/><!--Пушкон-->
+	</spawn>
+	<spawn name="giran11_npc2222_06" count="1" respawn="60">
+		<point x="77712" y="148288" z="-3592" h="28672"/>
+		<npc id="30471"/><!--Рупио-->
+	</spawn>
+	<spawn name="giran11_npc2222_07" count="1" respawn="60">
+		<point x="85823" y="153248" z="-3496" h="50317"/>
+		<npc id="30115"/><!--Юрек-->
+	</spawn>
+	<spawn name="giran11_npc2222_07" count="1" respawn="60">
+		<point x="85289" y="153341" z="-3496" h="57344"/>
+		<npc id="30110"/><!--Айкер-->
+	</spawn>
+	<spawn name="giran11_npc2222_07" count="1" respawn="60">
+		<point x="86359" y="152970" z="-3496" h="24576"/>
+		<npc id="30111"/><!--Дитер-->
+	</spawn>
+	<spawn name="giran11_npc2222_07" count="1" respawn="60">
+		<point x="86362" y="153337" z="-3496" h="40960"/>
+		<npc id="30112"/><!--Мауриус-->
+	</spawn>
+	<spawn name="giran11_npc2222_07" count="1" respawn="60">
+		<point x="85253" y="153153" z="-3496" h="0"/>
+		<npc id="30113"/><!--Юрис-->
+	</spawn>
+	<spawn name="giran11_npc2222_07" count="1" respawn="60">
+		<point x="85297" y="152963" z="-3496" h="8192"/>
+		<npc id="30114"/><!--Роа-->
+	</spawn>
+	<spawn name="giran11_npc2222_01" count="1" respawn="60">
+		<point x="80518" y="147922" z="-3504" h="32768"/>
+		<npc id="30081"/><!--Хельветия-->
+	</spawn>
+	<spawn name="giran11_npc2222_01" count="1" respawn="60">
+		<point x="80518" y="147873" z="-3504" h="32768"/>
+		<npc id="30082"/><!--Денкус-->
+	</spawn>
+	<spawn name="giran11_npc2222_02" count="1" respawn="60">
+		<point x="79747" y="146492" z="-3520" h="16384"/>
+		<npc id="30084"/><!--Грэхам-->
+	</spawn>
+	<spawn name="giran11_npc2222_02" count="1" respawn="60">
+		<point x="79801" y="146493" z="-3520" h="16384"/>
+		<npc id="30085"/><!--Стэнфорд-->
+	</spawn>
+	<spawn name="giran11_npc2222_03" count="1" respawn="60">
+		<point x="79711" y="150788" z="-3520" h="49152"/>
+		<npc id="30087"/><!--Пета-->
+	</spawn>
+	<spawn name="giran11_npc2222_03" count="1" respawn="60">
+		<point x="79654" y="150788" z="-3520" h="49152"/>
+		<npc id="30088"/><!--Радия-->
+	</spawn>
+	<spawn name="giran11_npc2222_10" count="1" respawn="60">
+		<point x="87058" y="148634" z="-3400" h="32767"/>
+		<npc id="30120"/><!--Максимилиан-->
+	</spawn>
+	<spawn name="giran11_npc2222_10" count="1" respawn="60">
+		<point x="86912" y="148802" z="-3400" h="40960"/>
+		<npc id="30116"/><!--Дастин-->
+	</spawn>
+	<spawn name="giran11_npc2222_59" count="1" respawn="60">
+		<point x="81424" y="149728" z="-3464" h="49000"/>
+		<npc id="30767"><!--Управляющий Аукциона-->
+			<set name="town" value="giran"/>
+		</npc>
+	</spawn>
+	<spawn name="giran11_npc2222_44" count="1" respawn="60" group="the_bronze_chamber_45">
+		<point x="81133" y="151537" z="-3512" h="32000"/>
+		<npc id="35457"/><!--Глэдис-->
+	</spawn>
+	<spawn name="giran11_npc2222_45" count="1" respawn="60" group="silver_manor_46">
+		<point x="81808" y="151776" z="-3528" h="32000"/>
+		<npc id="35460"/><!--Трей-->
+	</spawn>
+	<spawn name="giran11_npc2222_46" count="1" respawn="60" group="silver_manor_46">
+		<point x="81920" y="151968" z="-3512" h="0"/>
+		<npc id="35459"/><!--Регина-->
+	</spawn>
+	<spawn name="giran11_npc2222_47" count="1" respawn="60">
+		<point x="80420" y="144499" z="-3536" h="61874"/>
+		<npc id="30513"/><!--Пенатус-->
+	</spawn>
+	<spawn name="giran11_npc2222_47" count="1" respawn="60">
+		<point x="80511" y="144593" z="-3528" h="1014"/>
+		<npc id="30515"/><!--Манакия-->
+	</spawn>
+	<spawn name="giran11_npc2222_47" count="1" respawn="60">
+		<point x="80511" y="144377" z="-3528" h="1014"/>
+		<npc id="30514"/><!--Вокиан-->
+	</spawn>
+	<spawn name="giran11_npc2222_37" count="1" respawn="60" group="the_silver_chamber_43">
+		<point x="81776" y="145200" z="-3512" h="32000"/>
+		<npc id="35454"/><!--Роскон-->
+	</spawn>
+	<spawn name="giran11_npc2222_38" count="1" respawn="60" group="the_silver_chamber_43">
+		<point x="81876" y="145392" z="-3512" h="0"/>
+		<npc id="35453"/><!--Адриана-->
+	</spawn>
+	<spawn name="giran11_npc2222_39" count="1" respawn="60" group="the_mithril_chamber_44">
+		<point x="83680" y="145456" z="-3400" h="0"/>
+		<npc id="35456"/><!--Стюарт-->
+	</spawn>
+	<spawn name="giran11_npc2222_40" count="1" respawn="60" group="the_mithril_chamber_44">
+		<point x="83568" y="145264" z="-3384" h="32000"/>
+		<npc id="35455"/><!--Бианка-->
+	</spawn>
+	<spawn name="giran11_npc2222_41" count="1" respawn="60" group="the_golden_chamber_42">
+		<point x="78448" y="148400" z="-3592" h="16000"/>
+		<npc id="35452"/><!--Феоболт-->
+	</spawn>
+	<spawn name="giran11_npc2222_42" count="1" respawn="60" group="the_golden_chamber_42">
+		<point x="78652" y="148280" z="-3576" h="48000"/>
+		<npc id="35451"/><!--Эмма-->
+	</spawn>
+	<spawn name="giran11_npc2222_43" count="1" respawn="60" group="the_bronze_chamber_45">
+		<point x="81264" y="151728" z="-3528" h="0"/>
+		<npc id="35458"/><!--Терон-->
+	</spawn>
+	<spawn name="giran11_npc2222_26" count="1" respawn="60">
+		<point x="80752" y="146400" z="-3528" h="16384"/>
+		<npc id="30086"/><!--Таурин-->
+	</spawn>
+	<spawn name="giran11_npc2222_27" count="1" respawn="60">
+		<point x="79248" y="149552" z="-3528" h="0"/>
+		<npc id="30092"/><!--Коллоб-->
+	</spawn>
+	<spawn name="giran11_npc2222_28" count="1" respawn="60">
+		<point x="82405" y="149905" z="-3528" h="16384"/>
+		<npc id="30095"/><!--Рандольф-->
+	</spawn>
+	<spawn name="giran11_npc2222_29" count="1" respawn="60">
+		<point x="83396" y="147904" z="-3400" h="16384"/>
+		<npc id="30080"/><!--Кларисса-->
+	</spawn>
+	<spawn name="giran11_npc2222_22" count="1" respawn="60">
+		<point x="81424" y="143472" z="-3528" h="49152"/>
+		<npc id="30123"/><!--Веса-->
+	</spawn>
+	<spawn name="giran11_npc2222_22" count="1" respawn="60">
+		<point x="81616" y="143472" z="-3528" h="49152"/>
+		<npc id="30124"/><!--Джером-->
+	</spawn>
+	<spawn name="giran11_npc2222_23" count="1" respawn="60">
+		<point x="77026" y="148813" z="-3600" h="13863"/>
+		<npc id="30452"/><!--Курт-->
+	</spawn>
+	<spawn name="giran11_npc2222_23" count="1" respawn="60">
+		<point x="77029" y="148447" z="-3592" h="32768"/>
+		<npc id="30477"/><!--Сэр Орто Лансер-->
+	</spawn>
+	<spawn name="giran11_npc2222_24" count="1" respawn="60">
+		<point x="81436" y="152950" z="-3528" h="16384"/>
+		<npc id="30121"/><!--Джеронин-->
+	</spawn>
+	<spawn name="giran11_npc2222_24" count="1" respawn="60">
+		<point x="81642" y="152955" z="-3528" h="16384"/>
+		<npc id="30122"/><!--Бэйн-->
+	</spawn>
+	<spawn name="giran11_npc2222_25" count="1" respawn="60">
+		<point x="80329" y="145482" z="-3504" h="0"/>
+		<npc id="30083"/><!--Почи-->
+	</spawn>
+	<spawn name="giran11_npc2222_30" count="1" respawn="60">
+		<point x="83264" y="150176" z="-3512" h="24576"/>
+		<npc id="31049"/><!--Пепер-->
+	</spawn>
+	<spawn name="giran11_npc2222_31" count="1" respawn="60">
+		<point x="81388" y="149728" z="-3464" h="47941"/>
+		<npc id="33359"/><!--Кери-->
+	</spawn>
+	<spawn name="giran_t22_22_041" count="3" respawn="95">
+		<territory>
+			<add x="88840" y="131531" zmin="-3742" zmax="-3342"/>
+			<add x="92412" y="131567" zmin="-3742" zmax="-3342"/>
+			<add x="92824" y="132595" zmin="-3742" zmax="-3342"/>
+			<add x="89588" y="132879" zmin="-3742" zmax="-3342"/>
+		</territory>
+		<npc id="20199"/><!--Янтарный Василиск-->
+	</spawn>
+	<spawn name="giran_t22_22_040" count="3" respawn="95">
+		<territory>
+			<add x="95349" y="134485" zmin="-3734" zmax="-3334"/>
+			<add x="97445" y="133497" zmin="-3734" zmax="-3334"/>
+			<add x="97273" y="136309" zmin="-3734" zmax="-3334"/>
+			<add x="95933" y="136705" zmin="-3734" zmax="-3334"/>
+		</territory>
+		<npc id="20199"/><!--Янтарный Василиск-->
+	</spawn>
+	<spawn name="giran_t22_22_039" count="4" respawn="95">
+		<territory>
+			<add x="95483" y="148332" zmin="-3767" zmax="-3167"/>
+			<add x="97547" y="147012" zmin="-3767" zmax="-3167"/>
+			<add x="97551" y="149976" zmin="-3767" zmax="-3167"/>
+			<add x="95587" y="150732" zmin="-3767" zmax="-3167"/>
+		</territory>
+		<npc id="20199"/><!--Янтарный Василиск-->
+	</spawn>
+	<territory name="giran_t22_22_001">
+		<add x="65689" y="131232" zmin="-3888" zmax="-3488"/>
+		<add x="70017" y="131200" zmin="-3888" zmax="-3488"/>
+		<add x="70285" y="133172" zmin="-3888" zmax="-3488"/>
+		<add x="69161" y="133608" zmin="-3888" zmax="-3488"/>
+		<add x="65693" y="132844" zmin="-3888" zmax="-3488"/>
+	</territory>
+	<spawn name="giran_t22_22_001" count="4" respawn="95">
+		<territory name="giran_t22_22_001"/>
+		<npc id="20176"/><!--Змей-->
+	</spawn>
+	<spawn name="giran_t22_22_001" count="3" respawn="95">
+		<territory name="giran_t22_22_001"/>
+		<npc id="20550"/><!--Василиск Стражник-->
+	</spawn>
+	<territory name="giran_t22_22_010">
+		<add x="65720" y="145925" zmin="-3769" zmax="-3269"/>
+		<add x="67340" y="145441" zmin="-3769" zmax="-3269"/>
+		<add x="66720" y="149689" zmin="-3769" zmax="-3269"/>
+		<add x="65740" y="150137" zmin="-3769" zmax="-3269"/>
+	</territory>
+	<spawn name="giran_t22_22_010" count="4" respawn="95">
+		<territory name="giran_t22_22_010"/>
+		<npc id="20191"/><!--Скелет Потрошитель-->
+	</spawn>
+	<spawn name="giran_t22_22_010" count="1" respawn="95">
+		<territory name="giran_t22_22_010"/>
+		<npc id="20190"/><!--Скелет Меткий Стрелок-->
+	</spawn>
+	<territory name="giran_t22_22_012">
+		<add x="67709" y="155098" zmin="-3783" zmax="-2933"/>
+		<add x="68585" y="155586" zmin="-3783" zmax="-2933"/>
+		<add x="69869" y="160642" zmin="-3783" zmax="-2933"/>
+		<add x="65701" y="161590" zmin="-3783" zmax="-2933"/>
+		<add x="65825" y="155466" zmin="-3783" zmax="-2933"/>
+	</territory>
+	<spawn name="giran_t22_22_012" count="8" respawn="95">
+		<territory name="giran_t22_22_012"/>
+		<npc id="20191"/><!--Скелет Потрошитель-->
+	</spawn>
+	<spawn name="giran_t22_22_012" count="3" respawn="95">
+		<territory name="giran_t22_22_012"/>
+		<npc id="20190"/><!--Скелет Меткий Стрелок-->
+	</spawn>
+	<territory name="giran_t22_22_003">
+		<add x="87482" y="131194" zmin="-3785" zmax="-3185"/>
+		<add x="96118" y="131206" zmin="-3785" zmax="-3185"/>
+		<add x="93554" y="133302" zmin="-3785" zmax="-3185"/>
+		<add x="88718" y="133330" zmin="-3785" zmax="-3185"/>
+	</territory>
+	<spawn name="giran_t22_22_003" count="4" respawn="95">
+		<territory name="giran_t22_22_003"/>
+		<npc id="20267"/><!--Орк Брека-->
+	</spawn>
+	<spawn name="giran_t22_22_003" count="1" respawn="95">
+		<territory name="giran_t22_22_003"/>
+		<npc id="20268"/><!--Стрелок Орков Брека-->
+	</spawn>
+	<spawn name="giran_t22_22_003" count="2" respawn="95">
+		<territory name="giran_t22_22_003"/>
+		<npc id="20271"/><!--Воин Орков Брека-->
+	</spawn>
+	<territory name="giran_t22_22_002">
+		<add x="70840" y="131233" zmin="-3757" zmax="-2757"/>
+		<add x="78424" y="131257" zmin="-3757" zmax="-2757"/>
+		<add x="76744" y="133405" zmin="-3757" zmax="-2757"/>
+		<add x="72988" y="134097" zmin="-3757" zmax="-2757"/>
+	</territory>
+	<spawn name="giran_t22_22_002" count="4" respawn="95">
+		<territory name="giran_t22_22_002"/>
+		<npc id="20176"/><!--Змей-->
+	</spawn>
+	<spawn name="giran_t22_22_002" count="4" respawn="95">
+		<territory name="giran_t22_22_002"/>
+		<npc id="20550"/><!--Василиск Стражник-->
+	</spawn>
+	<territory name="giran_t22_22_005">
+		<add x="96206" y="131377" zmin="-3709" zmax="-3109"/>
+		<add x="98010" y="131317" zmin="-3709" zmax="-3109"/>
+		<add x="97966" y="136893" zmin="-3709" zmax="-3109"/>
+		<add x="96066" y="137553" zmin="-3709" zmax="-3109"/>
+		<add x="94854" y="137037" zmin="-3709" zmax="-3109"/>
+		<add x="94754" y="132681" zmin="-3709" zmax="-3109"/>
+	</territory>
+	<spawn name="giran_t22_22_005" count="4" respawn="95">
+		<territory name="giran_t22_22_005"/>
+		<npc id="20267"/><!--Орк Брека-->
+	</spawn>
+	<spawn name="giran_t22_22_005" count="2" respawn="95">
+		<territory name="giran_t22_22_005"/>
+		<npc id="20268"/><!--Стрелок Орков Брека-->
+	</spawn>
+	<spawn name="giran_t22_22_005" count="4" respawn="95">
+		<territory name="giran_t22_22_005"/>
+		<npc id="20271"/><!--Воин Орков Брека-->
+	</spawn>
+	<spawn name="giran_t22_22_004" count="3" respawn="95">
+		<territory>
+			<add x="88643" y="134140" zmin="-3668" zmax="-3268"/>
+			<add x="89579" y="133516" zmin="-3668" zmax="-3268"/>
+			<add x="90191" y="134600" zmin="-3668" zmax="-3268"/>
+			<add x="89315" y="135392" zmin="-3668" zmax="-3268"/>
+		</territory>
+		<npc id="20270"/><!--Владыка Орков Брека-->
+	</spawn>
+	<territory name="giran_t22_22_009">
+		<add x="65767" y="139450" zmin="-3807" zmax="-3107"/>
+		<add x="70151" y="141342" zmin="-3807" zmax="-3107"/>
+		<add x="69983" y="144754" zmin="-3807" zmax="-3107"/>
+		<add x="65823" y="145886" zmin="-3807" zmax="-3107"/>
+	</territory>
+	<spawn name="giran_t22_22_009" count="9" respawn="95">
+		<territory name="giran_t22_22_009"/>
+		<npc id="20191"/><!--Скелет Потрошитель-->
+	</spawn>
+	<spawn name="giran_t22_22_009" count="4" respawn="95">
+		<territory name="giran_t22_22_009"/>
+		<npc id="20190"/><!--Скелет Меткий Стрелок-->
+	</spawn>
+	<territory name="giran_t22_22_014">
+		<add x="74261" y="158065" zmin="-3555" zmax="-2755"/>
+		<add x="76405" y="156901" zmin="-3555" zmax="-2755"/>
+		<add x="79577" y="157457" zmin="-3555" zmax="-2755"/>
+		<add x="78149" y="160153" zmin="-3555" zmax="-2755"/>
+		<add x="75081" y="160425" zmin="-3555" zmax="-2755"/>
+	</territory>
+	<spawn name="giran_t22_22_014" count="3" respawn="95">
+		<territory name="giran_t22_22_014"/>
+		<npc id="20191"/><!--Скелет Потрошитель-->
+	</spawn>
+	<spawn name="giran_t22_22_014" count="1" respawn="95">
+		<territory name="giran_t22_22_014"/>
+		<npc id="20190"/><!--Скелет Меткий Стрелок-->
+	</spawn>
+	<spawn name="giran_t22_22_014" count="4" respawn="95">
+		<territory name="giran_t22_22_014"/>
+		<npc id="20168"/><!--Фавн-->
+	</spawn>
+	<territory name="giran_t22_22_013">
+		<add x="65787" y="161627" zmin="-3522" zmax="-1922"/>
+		<add x="67379" y="161267" zmin="-3522" zmax="-1922"/>
+		<add x="67703" y="163559" zmin="-3522" zmax="-1922"/>
+		<add x="65715" y="163491" zmin="-3522" zmax="-1922"/>
+	</territory>
+	<spawn name="giran_t22_22_013" count="3" respawn="95">
+		<territory name="giran_t22_22_013"/>
+		<npc id="20191"/><!--Скелет Потрошитель-->
+	</spawn>
+	<spawn name="giran_t22_22_013" count="1" respawn="95">
+		<territory name="giran_t22_22_013"/>
+		<npc id="20190"/><!--Скелет Меткий Стрелок-->
+	</spawn>
+	<territory name="giran_t22_22_016">
+		<add x="81413" y="154704" zmin="-3595" zmax="-2995"/>
+		<add x="83497" y="155596" zmin="-3595" zmax="-2995"/>
+		<add x="83309" y="156560" zmin="-3595" zmax="-2995"/>
+		<add x="81701" y="158176" zmin="-3595" zmax="-2995"/>
+		<add x="80665" y="156504" zmin="-3595" zmax="-2995"/>
+	</territory>
+	<spawn name="giran_t22_22_016" count="2" respawn="95">
+		<territory name="giran_t22_22_016"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn name="giran_t22_22_016" count="2" respawn="95">
+		<territory name="giran_t22_22_016"/>
+		<npc id="20250"/><!--Стеклянный Ягуар-->
+	</spawn>
+	<territory name="giran_t22_22_015">
+		<add x="78156" y="153322" zmin="-3615" zmax="-2815"/>
+		<add x="80284" y="155014" zmin="-3615" zmax="-2815"/>
+		<add x="79508" y="157438" zmin="-3615" zmax="-2815"/>
+		<add x="76468" y="156902" zmin="-3615" zmax="-2815"/>
+		<add x="76488" y="156046" zmin="-3615" zmax="-2815"/>
+	</territory>
+	<spawn name="giran_t22_22_015" count="3" respawn="95">
+		<territory name="giran_t22_22_015"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn name="giran_t22_22_015" count="5" respawn="95">
+		<territory name="giran_t22_22_015"/>
+		<npc id="20250"/><!--Стеклянный Ягуар-->
+	</spawn>
+	<spawn name="giran_t22_22_030" count="3" respawn="95">
+		<territory>
+			<add x="66356" y="141015" zmin="-3841" zmax="-3241"/>
+			<add x="68936" y="141951" zmin="-3841" zmax="-3241"/>
+			<add x="67636" y="144455" zmin="-3841" zmax="-3241"/>
+			<add x="66392" y="144643" zmin="-3841" zmax="-3241"/>
+		</territory>
+		<npc id="20168"/><!--Фавн-->
+	</spawn>
+	<spawn name="giran_t22_22_032" count="3" respawn="95">
+		<territory>
+			<add x="76477" y="157430" zmin="-3563" zmax="-3063"/>
+			<add x="78669" y="157842" zmin="-3563" zmax="-3063"/>
+			<add x="77689" y="159358" zmin="-3563" zmax="-3063"/>
+			<add x="75681" y="159126" zmin="-3563" zmax="-3063"/>
+		</territory>
+		<npc id="20168"/><!--Фавн-->
+	</spawn>
+	<spawn name="giran_t22_22_031" count="3" respawn="95">
+		<territory>
+			<add x="66104" y="156543" zmin="-3740" zmax="-3340"/>
+			<add x="67892" y="156707" zmin="-3740" zmax="-3340"/>
+			<add x="67560" y="159023" zmin="-3740" zmax="-3340"/>
+			<add x="66216" y="160311" zmin="-3740" zmax="-3340"/>
+		</territory>
+		<npc id="20168"/><!--Фавн-->
+	</spawn>
+	<territory name="giran_t22_22_025">
+		<add x="89014" y="151701" zmin="-3723" zmax="-2923"/>
+		<add x="90406" y="149809" zmin="-3723" zmax="-2923"/>
+		<add x="91378" y="150273" zmin="-3723" zmax="-2923"/>
+		<add x="91394" y="152109" zmin="-3723" zmax="-2923"/>
+		<add x="89578" y="152357" zmin="-3723" zmax="-2923"/>
+	</territory>
+	<spawn name="giran_t22_22_025" count="2" respawn="95">
+		<territory name="giran_t22_22_025"/>
+		<npc id="20191"/><!--Скелет Потрошитель-->
+	</spawn>
+	<spawn name="giran_t22_22_025" count="1" respawn="95">
+		<territory name="giran_t22_22_025"/>
+		<npc id="20190"/><!--Скелет Меткий Стрелок-->
+	</spawn>
+	<spawn name="giran_t22_22_025" count="2" respawn="95">
+		<territory name="giran_t22_22_025"/>
+		<npc id="20168"/><!--Фавн-->
+	</spawn>
+	<territory name="giran_t22_22_024">
+		<add x="94871" y="147897" zmin="-3766" zmax="-2566"/>
+		<add x="97947" y="145501" zmin="-3766" zmax="-2566"/>
+		<add x="97931" y="152657" zmin="-3766" zmax="-2566"/>
+		<add x="94947" y="152985" zmin="-3766" zmax="-2566"/>
+	</territory>
+	<spawn name="giran_t22_22_024" count="9" respawn="95">
+		<territory name="giran_t22_22_024"/>
+		<npc id="20191"/><!--Скелет Потрошитель-->
+	</spawn>
+	<spawn name="giran_t22_22_024" count="3" respawn="95">
+		<territory name="giran_t22_22_024"/>
+		<npc id="20190"/><!--Скелет Меткий Стрелок-->
+	</spawn>
+	<territory name="giran_t22_22_027">
+		<add x="78243" y="139076" zmin="-3679" zmax="-2879"/>
+		<add x="80855" y="139068" zmin="-3679" zmax="-2879"/>
+		<add x="80295" y="140744" zmin="-3679" zmax="-2879"/>
+		<add x="78447" y="140648" zmin="-3679" zmax="-2879"/>
+		<add x="77275" y="139800" zmin="-3679" zmax="-2879"/>
+	</territory>
+	<spawn name="giran_t22_22_027" count="2" respawn="95">
+		<territory name="giran_t22_22_027"/>
+		<npc id="20191"/><!--Скелет Потрошитель-->
+	</spawn>
+	<spawn name="giran_t22_22_027" count="1" respawn="95">
+		<territory name="giran_t22_22_027"/>
+		<npc id="20190"/><!--Скелет Меткий Стрелок-->
+	</spawn>
+	<spawn name="giran_t22_22_027" count="3" respawn="95">
+		<territory name="giran_t22_22_027"/>
+		<npc id="20168"/><!--Фавн-->
+	</spawn>
+	<territory name="giran_t22_22_026">
+		<add x="85694" y="139720" zmin="-3636" zmax="-3036"/>
+		<add x="89270" y="139592" zmin="-3636" zmax="-3036"/>
+		<add x="89922" y="141016" zmin="-3636" zmax="-3036"/>
+		<add x="89446" y="142740" zmin="-3636" zmax="-3036"/>
+		<add x="87794" y="142916" zmin="-3636" zmax="-3036"/>
+		<add x="85582" y="141840" zmin="-3636" zmax="-3036"/>
+	</territory>
+	<spawn name="giran_t22_22_026" count="3" respawn="95">
+		<territory name="giran_t22_22_026"/>
+		<npc id="20191"/><!--Скелет Потрошитель-->
+	</spawn>
+	<spawn name="giran_t22_22_026" count="2" respawn="95">
+		<territory name="giran_t22_22_026"/>
+		<npc id="20190"/><!--Скелет Меткий Стрелок-->
+	</spawn>
+	<spawn name="giran_t22_22_026" count="4" respawn="95">
+		<territory name="giran_t22_22_026"/>
+		<npc id="20168"/><!--Фавн-->
+	</spawn>
+	<spawn name="giran_t22_22_028" count="3" respawn="95">
+		<territory>
+			<add x="72362" y="131529" zmin="-3711" zmax="-3111"/>
+			<add x="76550" y="131573" zmin="-3711" zmax="-3111"/>
+			<add x="75070" y="132945" zmin="-3711" zmax="-3111"/>
+			<add x="73102" y="132721" zmin="-3711" zmax="-3111"/>
+		</territory>
+		<npc id="20551"/><!--Придорожный Падальщик-->
+	</spawn>
+	<territory name="giran_tt22_22_011">
+		<add x="66327" y="149777" zmin="-3788" zmax="-3188"/>
+		<add x="67447" y="150953" zmin="-3788" zmax="-3188"/>
+		<add x="65655" y="154077" zmin="-3788" zmax="-3188"/>
+		<add x="65711" y="150121" zmin="-3788" zmax="-3188"/>
+	</territory>
+	<spawn name="giran_tt22_22_011" count="3" respawn="95">
+		<territory name="giran_tt22_22_011"/>
+		<npc id="20191"/><!--Скелет Потрошитель-->
+	</spawn>
+	<spawn name="giran_tt22_22_011" count="1" respawn="95">
+		<territory name="giran_tt22_22_011"/>
+		<npc id="20190"/><!--Скелет Меткий Стрелок-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="80297" y="145262" z="-3528" h="998"/>
+		<npc id="30020" /><!--Бекинс-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="80280" y="145713" z="-3528" h="2058"/>
+		<npc id="30936" /><!--Пона-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="80512" y="147712" z="-3496" h="32000"/>
+		<npc id="30012"/><!--Член Гильдии Рыболовов-->
+	</spawn>
+	<spawn count="1" respawn="60" group="royal_love_event">
+		<point x="83332" y="149160" z="-3400" h="27931"/>
+		<npc id="9020"/><!--Фринтеза-->
+	</spawn>
+	<spawn count="1" respawn="60" group="olympiad">
+		<point x="82118" y="147524" z="-3464" h="16500"/>
+		<npc id="31690"/><!--Памятник Героям-->
+	</spawn>
+	<spawn count="1" respawn="60" group="olympiad">
+		<point x="82053" y="147526" z="-3464" h="16500"/>
+		<npc id="31688"/><!--Управляющий Олимпиады-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="77477" y="148068" z="-3592" h="64278"/>
+		<npc id="34276"/><!--Наковальня Джериса-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="77503" y="148013" z="-3592" h="14903"/>
+		<npc id="34275"/><!--Джерис-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="78977" y="149036" z="-3592" h="0"/>
+		<npc id="30613"/><!--Дух Алдера-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="80289" y="145273" z="-3528" h="998"/>
+		<npc id="30021"/><!--Бекинс Деко-->
+	</spawn>
+	<spawn name="Baikal" count="1" respawn="60">
+		<point x="102248" y="155352" z="-3688" h="21344"/>
+		<npc id="30016"/><!--Байкал-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="85751" y="146255" z="-3400" h="22314" />
+		<npc id="34018" /><!--Солдат Эскорта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="85715" y="146207" z="-3400" h="22314" />
+		<npc id="34018" /><!--Солдат Эскорта-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="85704" y="146254" z="-3400" h="22314" />
+		<npc id="34017" /><!--Айгис Айн-->
+	</spawn>
+	<spawn name="ain" count="1" respawn="60">
+		<point x="36392" y="193048" z="-3088" h="47276"/>
+		<npc id="34019"/><!--Агент Острова Дьявола Фетхина-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="class_master">
+		<point x="83199" y="147870" z="-3495" h="37217"/>
+		<npc id="31860"/><!--Buzz the Cat-->
+	</spawn>
+</list>

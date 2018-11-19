@@ -1,0 +1,12 @@
+<html><head><body>
+Великий Мастер Ксенос:<br>
+У Темных Эльфов больше нет богини, которой мы могли бы довериться. Поэтому нам надо собраться силами и двигаться вперед.<br>
+Я Ксенос, Великий Мастер Гильдии Темных Эльфов. Чем я могу помочь Вам?<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">Узнать о 1-й смене профессии</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Клан</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Альянс</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Обменять Ежедневные Монеты</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Квест</Button>
+</body></html>

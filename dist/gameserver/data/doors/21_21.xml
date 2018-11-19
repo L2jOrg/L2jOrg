@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="21210001" name="partisan001" hp="158250" pdef="644" mdef="518">
+		<pos x="43643" y="108908" z="-1970"/>
+		<shape ax="43643" ay="108840" bx="43650" by="108840" cx="43651" cy="108915" dx="43643" dy="108915" minz="-2015" maxz="-1565"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="21210002" name="partisan002" hp="158250" pdef="644" mdef="518">
+		<pos x="43643" y="108783" z="-1970"/>
+		<shape ax="43643" ay="108778" bx="43651" by="108778" cx="43651" cy="108853" dx="43643" dy="108853" minz="-2015" maxz="-1565"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+</list>

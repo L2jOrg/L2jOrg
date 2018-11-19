@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE farm SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<farm name="Human (Lvl 3-6)" min_level="3" max_level="6" races="HUMAN">
+	<zones>
+		<zone>
+			<polygon>
+				<coords loc="-80760 240520 -4000 -3000"/>
+				<coords loc="-82504 241160 -4000 -3000"/>
+				<coords loc="-84152 239352 -4000 -3000"/>
+				<coords loc="-88216 242984 -4000 -3000"/>
+				<coords loc="-91080 244856 -4000 -3000"/>
+				<coords loc="-92584 243496 -4000 -3000"/>
+				<coords loc="-92760 241256 -4000 -3000"/>
+				<coords loc="-89832 239528 -4000 -3000"/>
+				<coords loc="-89624 235432 -4000 -3000"/>
+				<coords loc="-86328 236904 -4000 -3000"/>
+				<coords loc="-82888 237800 -4000 -3000"/>
+			</polygon>
+		</zone>
+		<spawn_points>
+			<coords loc="-86296 240904 -3728"/>
+		</spawn_points>
+	</zones>
+	<on_obtain_max_level>
+		<action id="1"/>
+	</on_obtain_max_level>
+	<go_to_town min_farm_time="1800" max_farm_time="3600">
+		<action id="1"/>
+	</go_to_town>
+	<action id="1">
+		<wait min_delay="1000" max_delay="3000"/>
+		<random_action>
+			<ordinary_actions>
+				<move_to_point x="-87176" y="239896" z="-3664" min_range="50" max_range="150"/>
+				<move_to_point x="-86472" y="240680" z="-3712" min_range="50" max_range="150"/>
+				<move_to_point x="-85640" y="241576" z="-3728" min_range="50" max_range="150"/>
+				<move_to_point x="-84680" y="242504" z="-3728" min_range="50" max_range="150"/>
+				<move_to_point x="-84168" y="242680" z="-3728" min_range="50" max_range="150"/>
+			</ordinary_actions>
+			<use_item id="736"/>
+		</random_action>
+	</action>
+</farm>

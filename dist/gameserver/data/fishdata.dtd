@@ -1,0 +1,38 @@
+<!ELEMENT list (config|lure|rewards|rod)*>
+
+		<!ELEMENT config (#PCDATA)>
+		<!ATTLIST config
+			only_premium_accounts CDATA #REQUIRED
+			minimum_level CDATA #REQUIRED
+			fish_drop_count_rate CDATA #REQUIRED>
+
+	<!ELEMENT lure (fish)*>
+	<!ATTLIST lure
+		id CDATA #REQUIRED
+		fail_chance CDATA #IMPLIED
+		fail_duration CDATA #IMPLIED>
+
+		<!ELEMENT fish (#PCDATA)>
+		<!ATTLIST fish
+			id CDATA #REQUIRED
+			chance CDATA #REQUIRED
+			duration CDATA #REQUIRED
+			reward_type CDATA #IMPLIED>
+
+	<!ELEMENT rewards (reward)*>
+	<!ATTLIST rewards
+		type CDATA #REQUIRED>
+
+		<!ELEMENT reward (#PCDATA)>
+		<!ATTLIST reward
+			min_level CDATA #REQUIRED
+			max_level CDATA #IMPLIED
+			exp CDATA #REQUIRED
+			sp CDATA #REQUIRED>
+
+	<!ELEMENT rod (#PCDATA)>
+	<!ATTLIST rod
+		id CDATA #REQUIRED
+		duration_modifier CDATA #REQUIRED
+		reward_modifier CDATA #REQUIRED
+		shot_consume_count CDATA #REQUIRED>

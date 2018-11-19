@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="91">	<!--Рыцарь Ада-->
+			<skill id="28" level="50" name="Агрессия(Aggression)" cost="5400000" min_level="76"/>
+			<skill id="984" level="16" name="Атака Щитом(Shield Strike)" cost="5400000" min_level="76"/>
+			<skill id="18" level="38" name="Аура Ненависти(Aggression Aura)" cost="5400000" min_level="76"/>
+			<skill id="1405" level="3" name="Божественное Вдохновение(Divine Inspiration)" item_id="8620" cost="5400000" min_level="76"/>
+			<skill id="1405" level="4" name="Божественное Вдохновение(Divine Inspiration)" item_id="8621" cost="5400000" min_level="76"/>
+			<skill id="217" level="46" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="5400000" min_level="76"/>
+			<skill id="232" level="53" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="5400000" min_level="76"/>
+			<skill id="70" level="54" name="Кража Здоровья(Drain HP)" cost="5400000" min_level="76"/>
+			<skill id="147" level="52" name="Магическое Сопротивление(M. Def.)" cost="5400000" min_level="76"/>
+			<skill id="92" level="53" name="Оглушение Щитом(Shield Stun)" cost="5400000" min_level="76"/>
+			<skill id="1833" level="1" name="Оседлать Золотого Льва(Mount - Gold Maned Lion)" item_id="90038" min_level="76"/>
+			<skill id="46" level="16" name="Отделение Жизни(Life Scavenge)" cost="5400000" min_level="76"/>
+			<skill id="335" level="1" name="Стойкость(Fortitude)" cost="5400000" min_level="76"/>
+			<skill id="127" level="15" name="Увечье(Hamstring)" cost="5400000" min_level="76"/>
+			<skill id="65" level="14" name="Ужас(Horror)" cost="5400000" min_level="76"/>
+			<skill id="10015" level="1" name="Цепной Удар(Chain Strike)" cost="5400000" min_level="76"/>
+			<skill id="28" level="51" name="Агрессия(Aggression)" cost="5400000" min_level="77"/>
+			<skill id="984" level="17" name="Атака Щитом(Shield Strike)" cost="5400000" min_level="77"/>
+			<skill id="18" level="39" name="Аура Ненависти(Aggression Aura)" cost="5400000" min_level="77"/>
+			<skill id="217" level="47" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="5400000" min_level="77"/>
+			<skill id="232" level="54" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="5400000" min_level="77"/>
+			<skill id="70" level="55" name="Кража Здоровья(Drain HP)" cost="5400000" min_level="77"/>
+			<skill id="147" level="53" name="Магическое Сопротивление(M. Def.)" cost="5400000" min_level="77"/>
+			<skill id="368" level="1" name="Мщение(Vengeance)" item_id="90046" cost="5400000" min_level="77"/>
+			<skill id="92" level="54" name="Оглушение Щитом(Shield Stun)" cost="5400000" min_level="77"/>
+			<skill id="913" level="1" name="Отклонить Магию(Deflect Magic)" cost="5400000" min_level="77"/>
+			<skill id="28" level="52" name="Агрессия(Aggression)" cost="12600000" min_level="78"/>
+			<skill id="984" level="18" name="Атака Щитом(Shield Strike)" cost="12600000" min_level="78"/>
+			<skill id="18" level="40" name="Аура Ненависти(Aggression Aura)" cost="12600000" min_level="78"/>
+			<skill id="217" level="48" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="12600000" min_level="78"/>
+			<skill id="232" level="55" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="12600000" min_level="78"/>
+			<skill id="70" level="56" name="Кража Здоровья(Drain HP)" cost="12600000" min_level="78"/>
+			<skill id="147" level="54" name="Магическое Сопротивление(M. Def.)" cost="12600000" min_level="78"/>
+			<skill id="92" level="55" name="Оглушение Щитом(Shield Stun)" cost="12600000" min_level="78"/>
+			<skill id="46" level="17" name="Отделение Жизни(Life Scavenge)" cost="12600000" min_level="78"/>
+			<skill id="283" level="8" name="Призвать Темную Пантеру(Summon Dark Panther)" cost="12600000" min_level="78"/>
+			<skill id="342" level="1" name="Прикосновение Смерти(Touch of Death)" item_id="90048" cost="12600000" min_level="78"/>
+			<skill id="429" level="1" name="Рыцарство(Knighthood)" cost="12600000" min_level="78"/>
+			<skill id="103" level="5" name="Трупная Чума(Corpse Plague)" cost="12600000" min_level="78"/>
+			<skill id="127" level="16" name="Увечье(Hamstring)" cost="12600000" min_level="78"/>
+			<skill id="65" level="15" name="Ужас(Horror)" cost="12600000" min_level="78"/>
+			<skill id="528" level="1" name="Щит Веры(Shield of Faith)" item_id="90049" cost="12600000" min_level="79"/>
+			<skill id="762" level="1" name="Безумный Сокрушитель(Insane Crusher)" item_id="90051" cost="12600000" min_level="80"/>
+		</class>
+	</normal_skill_tree>
+</list>

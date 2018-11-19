@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn name="oren07_npc2118_gd02" count="1" respawn="60">
+		<territory>
+			<add x="33004" y="12100" zmin="-3736" zmax="-3236"/>
+			<add x="36692" y="12040" zmin="-3736" zmax="-3236"/>
+			<add x="33488" y="19512" zmin="-3736" zmax="-3236"/>
+			<add x="33028" y="19508" zmin="-3736" zmax="-3236"/>
+		</territory>
+		<npc id="31845"/><!--Кровавая Фея-->
+	</spawn>
+	<spawn name="oren07_npc2118_gd01" count="1" respawn="60">
+		<territory>
+			<add x="32964" y="5608" zmin="-3732" zmax="-3082"/>
+			<add x="35748" y="5468" zmin="-3732" zmax="-3082"/>
+			<add x="40424" y="7828" zmin="-3732" zmax="-3082"/>
+			<add x="38372" y="11912" zmin="-3732" zmax="-3082"/>
+			<add x="33056" y="12080" zmin="-3732" zmax="-3082"/>
+		</territory>
+		<npc id="31845"/><!--Кровавая Фея-->
+	</spawn>
+	<spawn name="oren01_qm2118_01" count="1" respawn="180">
+		<point x="63707" y="31164" z="-3736" h="0"/>
+		<npc id="27166"/><!--II Алмаз Бездны-->
+	</spawn>
+	<spawn name="orphen_t21_18_001_01" count="1" respawn="360" respawn_random="20">
+		<point x="43656" y="17560" z="-4352" h="0"/>
+		<npc id="29018"/><!--Риба Ирен-->
+	</spawn>
+	<spawn name="orphen_t21_18_001_01" count="1" respawn="360" respawn_random="20">
+		<point x="43464" y="17048" z="-4356" h="0"/>
+		<npc id="29018"/><!--Риба Ирен-->
+	</spawn>
+	<spawn name="orphen_t21_18_001_01" count="1" respawn="360" respawn_random="20">
+		<point x="44448" y="16656" z="-4352" h="0"/>
+		<npc id="29015"/><!--Райкель-->
+	</spawn>
+	<spawn name="orphen_t21_18_001_01" count="1" respawn="360" respawn_random="20">
+		<point x="44440" y="17060" z="-4352" h="0"/>
+		<npc id="29015"/><!--Райкель-->
+	</spawn>
+	<spawn name="orphen_t21_18_001_01" count="1" respawn="360" respawn_random="20">
+		<point x="44408" y="17480" z="-4352" h="0"/>
+		<npc id="29015"/><!--Райкель-->
+	</spawn>
+	<spawn name="orphen_t21_18_001_01" count="1" respawn="360" respawn_random="20">
+		<point x="43740" y="17984" z="-4352" h="0"/>
+		<npc id="29015"/><!--Райкель-->
+	</spawn>
+	<spawn name="orphen_t21_18_001_01" count="1" respawn="360" respawn_random="20">
+		<point x="43832" y="16552" z="-4352" h="0"/>
+		<npc id="29015"/><!--Райкель-->
+	</spawn>
+	<spawn name="orphen_t21_18_001_01" count="1" respawn="360" respawn_random="20">
+		<point x="44364" y="17856" z="-4352" h="0"/>
+		<npc id="29015"/><!--Райкель-->
+	</spawn>
+	<spawn name="orphen_t21_18_001_01" count="1" respawn="360" respawn_random="20">
+		<point x="44168" y="16908" z="-4352" h="0"/>
+		<npc id="29017"/><!--Риба-->
+	</spawn>
+	<spawn name="orphen_t21_18_001_01" count="1" respawn="360" respawn_random="20">
+		<point x="44128" y="17580" z="-4352" h="0"/>
+		<npc id="29017"/><!--Риба-->
+	</spawn>
+	<spawn name="orphen_t21_18_001_01" count="1" respawn="360" respawn_random="20">
+		<point x="43916" y="17776" z="-4352" h="0"/>
+		<npc id="29017"/><!--Риба-->
+	</spawn>
+	<spawn name="orphen_t21_18_001_01" count="1" respawn="360" respawn_random="20">
+		<point x="43972" y="16740" z="-4352" h="0"/>
+		<npc id="29017"/><!--Риба-->
+	</spawn>
+	<spawn name="orphen_t21_18_001_01" count="1" respawn="360" respawn_random="20">
+		<point x="43488" y="17768" z="-4352" h="0"/>
+		<npc id="29017"/><!--Риба-->
+	</spawn>
+	<spawn name="orphen_t21_18_001_01" count="1" respawn="360" respawn_random="20">
+		<point x="43224" y="16844" z="-4352" h="0"/>
+		<npc id="29017"/><!--Риба-->
+	</spawn>
+	<spawn name="orphen_t21_18_001_01" count="1" respawn="360" respawn_random="20">
+		<point x="43128" y="17220" z="-4352" h="0"/>
+		<npc id="29017"/><!--Риба-->
+	</spawn>
+	<spawn name="orphen_t21_18_001_01" count="1" respawn="360" respawn_random="20">
+		<point x="43504" y="16644" z="-4352" h="0"/>
+		<npc id="29017"/><!--Риба-->
+	</spawn>
+	<spawn name="orphen_t21_18_001_01" count="1" respawn="360" respawn_random="20">
+		<point x="43196" y="17580" z="-4352" h="0"/>
+		<npc id="29017"/><!--Риба-->
+	</spawn>
+	<spawn name="orphen_t21_18_001_01" count="1" respawn="360" respawn_random="20">
+		<point x="44176" y="17240" z="-4352" h="0"/>
+		<npc id="29017"/><!--Риба-->
+	</spawn>
+	<spawn name="orphen_t21_18_002" count="1" respawn="172800" respawn_random="72000">
+		<territory>
+			<add x="48800" y="15112" zmin="-5796" zmax="-3796"/>
+			<add x="56556" y="12040" zmin="-5796" zmax="-3796"/>
+			<add x="59068" y="14288" zmin="-5796" zmax="-3796"/>
+			<add x="61064" y="18492" zmin="-5796" zmax="-3796"/>
+			<add x="60380" y="23672" zmin="-5796" zmax="-3796"/>
+			<add x="58724" y="27412" zmin="-5796" zmax="-3796"/>
+			<add x="55696" y="28496" zmin="-5796" zmax="-3796"/>
+			<add x="43976" y="24664" zmin="-5796" zmax="-3796"/>
+		</territory>
+		<npc id="29014"/><!--Орфен-->
+	</spawn>
+	<territory name="oren14_2118_04">
+		<add x="53856" y="12508" zmin="-5916" zmax="-5216"/>
+		<add x="54944" y="14568" zmin="-5916" zmax="-5216"/>
+		<add x="52824" y="15256" zmin="-5916" zmax="-5216"/>
+		<add x="50560" y="15236" zmin="-5916" zmax="-5216"/>
+		<add x="50724" y="14280" zmin="-5916" zmax="-5216"/>
+	</territory>
+	<spawn name="oren14_2118_04" count="3" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_04"/>
+		<npc id="20560"/><!--Паук Трисалим-->
+	</spawn>
+	<spawn name="oren14_2118_04" count="3" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_04"/>
+		<npc id="20561"/><!--Тарантул Трисалим-->
+	</spawn>
+	<spawn name="oren14_2118_04" count="3" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_04"/>
+		<npc id="20562"/><!--Споровый Зомби-->
+	</spawn>
+	<territory name="oren14_2118_03">
+		<add x="53868" y="12532" zmin="-5924" zmax="-4524"/>
+		<add x="56428" y="10868" zmin="-5924" zmax="-4524"/>
+		<add x="58548" y="13564" zmin="-5924" zmax="-4524"/>
+		<add x="54968" y="14544" zmin="-5924" zmax="-4524"/>
+	</territory>
+	<spawn name="oren14_2118_03" count="4" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_03"/>
+		<npc id="20558"/><!--Трухлявое Дерево-->
+	</spawn>
+	<spawn name="oren14_2118_03" count="4" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_03"/>
+		<npc id="20559"/><!--Гниющий Голем-->
+	</spawn>
+	<spawn name="oren14_2118_03" count="4" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_03"/>
+		<npc id="20561"/><!--Тарантул Трисалим-->
+	</spawn>
+	<territory name="oren14_2118_06">
+		<add x="52060" y="16388" zmin="-5588" zmax="-5188"/>
+		<add x="56240" y="16508" zmin="-5588" zmax="-5188"/>
+		<add x="56280" y="18740" zmin="-5588" zmax="-5188"/>
+		<add x="52564" y="18276" zmin="-5588" zmax="-5188"/>
+	</territory>
+	<spawn name="oren14_2118_06" count="4" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_06"/>
+		<npc id="20558"/><!--Трухлявое Дерево-->
+	</spawn>
+	<spawn name="oren14_2118_06" count="3" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_06"/>
+		<npc id="20559"/><!--Гниющий Голем-->
+	</spawn>
+	<spawn name="oren14_2118_06" count="3" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_06"/>
+		<npc id="20561"/><!--Тарантул Трисалим-->
+	</spawn>
+	<territory name="oren14_2118_05">
+		<add x="48768" y="16688" zmin="-5552" zmax="-5052"/>
+		<add x="52072" y="16432" zmin="-5552" zmax="-5052"/>
+		<add x="52568" y="18248" zmin="-5552" zmax="-5052"/>
+		<add x="48896" y="17520" zmin="-5552" zmax="-5052"/>
+	</territory>
+	<spawn name="oren14_2118_05" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_05"/>
+		<npc id="20560"/><!--Паук Трисалим-->
+	</spawn>
+	<spawn name="oren14_2118_05" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_05"/>
+		<npc id="20561"/><!--Тарантул Трисалим-->
+	</spawn>
+	<spawn name="oren14_2118_05" count="3" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_05"/>
+		<npc id="20562"/><!--Споровый Зомби-->
+	</spawn>
+	<territory name="oren14_2118_02">
+		<add x="56496" y="10896" zmin="-5172" zmax="-3472"/>
+		<add x="59492" y="9944" zmin="-5172" zmax="-3472"/>
+		<add x="60596" y="13416" zmin="-5172" zmax="-3472"/>
+		<add x="58804" y="13868" zmin="-5172" zmax="-3472"/>
+	</territory>
+	<spawn name="oren14_2118_02" count="3" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_02"/>
+		<npc id="20558"/><!--Трухлявое Дерево-->
+	</spawn>
+	<spawn name="oren14_2118_02" count="4" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_02"/>
+		<npc id="20556"/><!--Гигантский Монстроглаз-->
+	</spawn>
+	<spawn name="oren14_2118_02" count="4" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_02"/>
+		<npc id="20557"/><!--Жуткий Змей-->
+	</spawn>
+	<territory name="oren14_2118_01">
+		<add x="59528" y="9936" zmin="-3868" zmax="-3468"/>
+		<add x="61888" y="9412" zmin="-3868" zmax="-3468"/>
+		<add x="63172" y="10616" zmin="-3868" zmax="-3468"/>
+		<add x="62360" y="12392" zmin="-3868" zmax="-3468"/>
+		<add x="60624" y="13384" zmin="-3868" zmax="-3468"/>
+	</territory>
+	<spawn name="oren14_2118_01" count="4" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_01"/>
+		<npc id="20555"/><!--Гигантский Гриб-->
+	</spawn>
+	<spawn name="oren14_2118_01" count="4" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_01"/>
+		<npc id="20556"/><!--Гигантский Монстроглаз-->
+	</spawn>
+	<spawn name="oren14_2118_01" count="4" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_01"/>
+		<npc id="20557"/><!--Жуткий Змей-->
+	</spawn>
+	<territory name="oren14_2118_08">
+		<add x="60100" y="13656" zmin="-4157" zmax="-3557"/>
+		<add x="61080" y="13172" zmin="-4157" zmax="-3557"/>
+		<add x="62012" y="17604" zmin="-4157" zmax="-3557"/>
+		<add x="61136" y="18552" zmin="-4157" zmax="-3557"/>
+	</territory>
+	<spawn name="oren14_2118_08" count="3" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_08"/>
+		<npc id="20555"/><!--Гигантский Гриб-->
+	</spawn>
+	<spawn name="oren14_2118_08" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_08"/>
+		<npc id="20556"/><!--Гигантский Монстроглаз-->
+	</spawn>
+	<spawn name="oren14_2118_08" count="3" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_08"/>
+		<npc id="20557"/><!--Жуткий Змей-->
+	</spawn>
+	<territory name="oren14_2118_07">
+		<add x="56228" y="16524" zmin="-5556" zmax="-3956"/>
+		<add x="60536" y="16212" zmin="-5556" zmax="-3956"/>
+		<add x="61068" y="18472" zmin="-5556" zmax="-3956"/>
+		<add x="56260" y="18652" zmin="-5556" zmax="-3956"/>
+	</territory>
+	<spawn name="oren14_2118_07" count="4" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_07"/>
+		<npc id="20556"/><!--Гигантский Монстроглаз-->
+	</spawn>
+	<spawn name="oren14_2118_07" count="4" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_07"/>
+		<npc id="20557"/><!--Жуткий Змей-->
+	</spawn>
+	<spawn name="oren14_2118_07" count="4" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_07"/>
+		<npc id="20558"/><!--Трухлявое Дерево-->
+	</spawn>
+	<territory name="oren14_2118_09">
+		<add x="63796" y="15776" zmin="-3728" zmax="-2928"/>
+		<add x="64480" y="16044" zmin="-3728" zmax="-2928"/>
+		<add x="64040" y="17180" zmin="-3728" zmax="-2928"/>
+		<add x="61308" y="19628" zmin="-3728" zmax="-2928"/>
+		<add x="61184" y="18572" zmin="-3728" zmax="-2928"/>
+	</territory>
+	<spawn name="oren14_2118_09" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_09"/>
+		<npc id="20555"/><!--Гигантский Гриб-->
+	</spawn>
+	<spawn name="oren14_2118_09" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_09"/>
+		<npc id="20556"/><!--Гигантский Монстроглаз-->
+	</spawn>
+	<spawn name="oren14_2118_09" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_09"/>
+		<npc id="20557"/><!--Жуткий Змей-->
+	</spawn>
+	<territory name="oren14_2118_15">
+		<add x="51812" y="22672" zmin="-5576" zmax="-5176"/>
+		<add x="54696" y="23820" zmin="-5576" zmax="-5176"/>
+		<add x="54464" y="25180" zmin="-5576" zmax="-5176"/>
+		<add x="51068" y="23732" zmin="-5576" zmax="-5176"/>
+	</territory>
+	<spawn name="oren14_2118_15" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_15"/>
+		<npc id="20558"/><!--Трухлявое Дерево-->
+	</spawn>
+	<spawn name="oren14_2118_15" count="1" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_15"/>
+		<npc id="20559"/><!--Гниющий Голем-->
+	</spawn>
+	<spawn name="oren14_2118_15" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_15"/>
+		<npc id="20561"/><!--Тарантул Трисалим-->
+	</spawn>
+	<territory name="oren14_2118_14">
+		<add x="48352" y="21928" zmin="-5572" zmax="-5372"/>
+		<add x="51832" y="22652" zmin="-5572" zmax="-5372"/>
+		<add x="51044" y="23760" zmin="-5572" zmax="-5372"/>
+		<add x="48280" y="22376" zmin="-5572" zmax="-5372"/>
+	</territory>
+	<spawn name="oren14_2118_14" count="1" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_14"/>
+		<npc id="20560"/><!--Паук Трисалим-->
+	</spawn>
+	<spawn name="oren14_2118_14" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_14"/>
+		<npc id="20561"/><!--Тарантул Трисалим-->
+	</spawn>
+	<spawn name="oren14_2118_14" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_14"/>
+		<npc id="20562"/><!--Споровый Зомби-->
+	</spawn>
+	<territory name="oren14_2118_17">
+		<add x="57944" y="24672" zmin="-5188" zmax="-3988"/>
+		<add x="60988" y="25328" zmin="-5188" zmax="-3988"/>
+		<add x="59684" y="27540" zmin="-5188" zmax="-3988"/>
+		<add x="56924" y="25960" zmin="-5188" zmax="-3988"/>
+	</territory>
+	<spawn name="oren14_2118_17" count="3" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_17"/>
+		<npc id="20556"/><!--Гигантский Монстроглаз-->
+	</spawn>
+	<spawn name="oren14_2118_17" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_17"/>
+		<npc id="20557"/><!--Жуткий Змей-->
+	</spawn>
+	<spawn name="oren14_2118_17" count="3" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_17"/>
+		<npc id="20558"/><!--Трухлявое Дерево-->
+	</spawn>
+	<territory name="oren14_2118_16">
+		<add x="54700" y="23840" zmin="-5484" zmax="-4884"/>
+		<add x="57924" y="24696" zmin="-5484" zmax="-4884"/>
+		<add x="56388" y="26516" zmin="-5484" zmax="-4884"/>
+		<add x="54472" y="25148" zmin="-5484" zmax="-4884"/>
+	</territory>
+	<spawn name="oren14_2118_16" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_16"/>
+		<npc id="20558"/><!--Трухлявое Дерево-->
+	</spawn>
+	<spawn name="oren14_2118_16" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_16"/>
+		<npc id="20559"/><!--Гниющий Голем-->
+	</spawn>
+	<spawn name="oren14_2118_16" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_16"/>
+		<npc id="20561"/><!--Тарантул Трисалим-->
+	</spawn>
+	<spawn name="oren14_2118_16" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_16"/>
+		<npc id="20556"/><!--Гигантский Монстроглаз-->
+	</spawn>
+	<territory name="oren14_2118_11">
+		<add x="58448" y="19860" zmin="-5340" zmax="-3740"/>
+		<add x="61192" y="19428" zmin="-5340" zmax="-3740"/>
+		<add x="61976" y="23336" zmin="-5340" zmax="-3740"/>
+		<add x="57884" y="22808" zmin="-5340" zmax="-3740"/>
+	</territory>
+	<spawn name="oren14_2118_11" count="4" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_11"/>
+		<npc id="20556"/><!--Гигантский Монстроглаз-->
+	</spawn>
+	<spawn name="oren14_2118_11" count="4" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_11"/>
+		<npc id="20557"/><!--Жуткий Змей-->
+	</spawn>
+	<spawn name="oren14_2118_11" count="5" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_11"/>
+		<npc id="20558"/><!--Трухлявое Дерево-->
+	</spawn>
+	<territory name="oren14_2118_10">
+		<add x="61248" y="19656" zmin="-4208" zmax="-3608"/>
+		<add x="63116" y="19532" zmin="-4208" zmax="-3608"/>
+		<add x="64212" y="20056" zmin="-4208" zmax="-3608"/>
+		<add x="62832" y="23152" zmin="-4208" zmax="-3608"/>
+		<add x="61972" y="23316" zmin="-4208" zmax="-3608"/>
+	</territory>
+	<spawn name="oren14_2118_10" count="3" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_10"/>
+		<npc id="20555"/><!--Гигантский Гриб-->
+	</spawn>
+	<spawn name="oren14_2118_10" count="3" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_10"/>
+		<npc id="20556"/><!--Гигантский Монстроглаз-->
+	</spawn>
+	<spawn name="oren14_2118_10" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_10"/>
+		<npc id="20557"/><!--Жуткий Змей-->
+	</spawn>
+	<territory name="oren14_2118_13">
+		<add x="49708" y="19600" zmin="-5600" zmax="-5300"/>
+		<add x="53764" y="19784" zmin="-5600" zmax="-5300"/>
+		<add x="52804" y="21624" zmin="-5600" zmax="-5300"/>
+		<add x="49636" y="20300" zmin="-5600" zmax="-5300"/>
+	</territory>
+	<spawn name="oren14_2118_13" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_13"/>
+		<npc id="20560"/><!--Паук Трисалим-->
+	</spawn>
+	<spawn name="oren14_2118_13" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_13"/>
+		<npc id="20561"/><!--Тарантул Трисалим-->
+	</spawn>
+	<spawn name="oren14_2118_13" count="3" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_13"/>
+		<npc id="20562"/><!--Споровый Зомби-->
+	</spawn>
+	<territory name="oren14_2118_12">
+		<add x="53804" y="19808" zmin="-5628" zmax="-5028"/>
+		<add x="58400" y="19828" zmin="-5628" zmax="-5028"/>
+		<add x="57812" y="22836" zmin="-5628" zmax="-5028"/>
+		<add x="52852" y="21648" zmin="-5628" zmax="-5028"/>
+	</territory>
+	<spawn name="oren14_2118_12" count="6" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_12"/>
+		<npc id="20558"/><!--Трухлявое Дерево-->
+	</spawn>
+	<spawn name="oren14_2118_12" count="4" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_12"/>
+		<npc id="20559"/><!--Гниющий Голем-->
+	</spawn>
+	<spawn name="oren14_2118_12" count="5" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_12"/>
+		<npc id="20561"/><!--Тарантул Трисалим-->
+	</spawn>
+	<territory name="oren14_2118_19">
+		<add x="61436" y="25352" zmin="-3908" zmax="-3708"/>
+		<add x="63112" y="25912" zmin="-3908" zmax="-3708"/>
+		<add x="62568" y="27808" zmin="-3908" zmax="-3708"/>
+		<add x="61608" y="29260" zmin="-3908" zmax="-3708"/>
+		<add x="59860" y="28524" zmin="-3908" zmax="-3708"/>
+	</territory>
+	<spawn name="oren14_2118_19" count="3" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_19"/>
+		<npc id="20555"/><!--Гигантский Гриб-->
+	</spawn>
+	<spawn name="oren14_2118_19" count="3" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_19"/>
+		<npc id="20556"/><!--Гигантский Монстроглаз-->
+	</spawn>
+	<spawn name="oren14_2118_19" count="3" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_19"/>
+		<npc id="20557"/><!--Жуткий Змей-->
+	</spawn>
+	<territory name="oren14_2118_18">
+		<add x="61960" y="23336" zmin="-3960" zmax="-3760"/>
+		<add x="62872" y="23152" zmin="-3960" zmax="-3760"/>
+		<add x="63488" y="24140" zmin="-3960" zmax="-3760"/>
+		<add x="63104" y="25904" zmin="-3960" zmax="-3760"/>
+		<add x="61164" y="25260" zmin="-3960" zmax="-3760"/>
+	</territory>
+	<spawn name="oren14_2118_18" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_18"/>
+		<npc id="20555"/><!--Гигантский Гриб-->
+	</spawn>
+	<spawn name="oren14_2118_18" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_18"/>
+		<npc id="20556"/><!--Гигантский Монстроглаз-->
+	</spawn>
+	<spawn name="oren14_2118_18" count="1" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_18"/>
+		<npc id="20557"/><!--Жуткий Змей-->
+	</spawn>
+	<territory name="oren14_2118_20">
+		<add x="55896" y="30404" zmin="-3916" zmax="-3716"/>
+		<add x="57844" y="29920" zmin="-3916" zmax="-3716"/>
+		<add x="58780" y="30696" zmin="-3916" zmax="-3716"/>
+		<add x="57924" y="31300" zmin="-3916" zmax="-3716"/>
+		<add x="56568" y="31140" zmin="-3916" zmax="-3716"/>
+	</territory>
+	<spawn name="oren14_2118_20" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_20"/>
+		<npc id="20555"/><!--Гигантский Гриб-->
+	</spawn>
+	<spawn name="oren14_2118_20" count="1" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_20"/>
+		<npc id="20556"/><!--Гигантский Монстроглаз-->
+	</spawn>
+	<spawn name="oren14_2118_20" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_20"/>
+		<npc id="20557"/><!--Жуткий Змей-->
+	</spawn>
+	<territory name="oren14_2118_26">
+		<add x="45472" y="21880" zmin="-5292" zmax="-4592"/>
+		<add x="46876" y="22656" zmin="-5292" zmax="-4592"/>
+		<add x="47184" y="25160" zmin="-5292" zmax="-4592"/>
+		<add x="44224" y="25536" zmin="-5292" zmax="-4592"/>
+		<add x="42872" y="24352" zmin="-5292" zmax="-4592"/>
+	</territory>
+	<spawn name="oren14_2118_26" count="3" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_26"/>
+		<npc id="20558"/><!--Трухлявое Дерево-->
+	</spawn>
+	<spawn name="oren14_2118_26" count="3" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_26"/>
+		<npc id="20560"/><!--Паук Трисалим-->
+	</spawn>
+	<spawn name="oren14_2118_26" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_26"/>
+		<npc id="20561"/><!--Тарантул Трисалим-->
+	</spawn>
+	<spawn name="oren14_2118_26" count="3" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_26"/>
+		<npc id="20562"/><!--Споровый Зомби-->
+	</spawn>
+	<territory name="oren14_2118_25">
+		<add x="49964" y="25308" zmin="-5148" zmax="-4448"/>
+		<add x="50000" y="25708" zmin="-5148" zmax="-4448"/>
+		<add x="49020" y="25880" zmin="-5148" zmax="-4448"/>
+		<add x="47204" y="25156" zmin="-5148" zmax="-4448"/>
+		<add x="46872" y="22660" zmin="-5148" zmax="-4448"/>
+		<add x="49176" y="24460" zmin="-5148" zmax="-4448"/>
+	</territory>
+	<spawn name="oren14_2118_25" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_25"/>
+		<npc id="20560"/><!--Паук Трисалим-->
+	</spawn>
+	<spawn name="oren14_2118_25" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_25"/>
+		<npc id="20561"/><!--Тарантул Трисалим-->
+	</spawn>
+	<spawn name="oren14_2118_25" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_25"/>
+		<npc id="20562"/><!--Споровый Зомби-->
+	</spawn>
+	<territory name="oren14_2118_22">
+		<add x="55467" y="28377" zmin="-5308" zmax="-4408"/>
+		<add x="55884" y="27400" zmin="-5308" zmax="-4408"/>
+		<add x="58012" y="28440" zmin="-5308" zmax="-4408"/>
+		<add x="56299" y="29045" zmin="-5308" zmax="-4408"/>
+	</territory>
+	<spawn name="oren14_2118_22" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_22"/>
+		<npc id="20556"/><!--Гигантский Монстроглаз-->
+	</spawn>
+	<spawn name="oren14_2118_22" count="1" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_22"/>
+		<npc id="20557"/><!--Жуткий Змей-->
+	</spawn>
+	<spawn name="oren14_2118_22" count="1" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_22"/>
+		<npc id="20558"/><!--Трухлявое Дерево-->
+	</spawn>
+	<territory name="oren14_2118_21">
+		<add x="59884" y="28540" zmin="-3908" zmax="-3708"/>
+		<add x="61616" y="29272" zmin="-3908" zmax="-3708"/>
+		<add x="60628" y="30636" zmin="-3908" zmax="-3708"/>
+		<add x="58792" y="30700" zmin="-3908" zmax="-3708"/>
+		<add x="57824" y="29896" zmin="-3908" zmax="-3708"/>
+	</territory>
+	<spawn name="oren14_2118_21" count="1" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_21"/>
+		<npc id="20555"/><!--Гигантский Гриб-->
+	</spawn>
+	<spawn name="oren14_2118_21" count="1" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_21"/>
+		<npc id="20556"/><!--Гигантский Монстроглаз-->
+	</spawn>
+	<spawn name="oren14_2118_21" count="1" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_21"/>
+		<npc id="20557"/><!--Жуткий Змей-->
+	</spawn>
+	<territory name="oren14_2118_24">
+		<add x="51628" y="25932" zmin="-5268" zmax="-4968"/>
+		<add x="53344" y="26620" zmin="-5268" zmax="-4968"/>
+		<add x="53108" y="27492" zmin="-5268" zmax="-4968"/>
+		<add x="51628" y="26564" zmin="-5268" zmax="-4968"/>
+	</territory>
+	<spawn name="oren14_2118_24" count="1" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_24"/>
+		<npc id="20558"/><!--Трухлявое Дерево-->
+	</spawn>
+	<spawn name="oren14_2118_24" count="1" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_24"/>
+		<npc id="20559"/><!--Гниющий Голем-->
+	</spawn>
+	<spawn name="oren14_2118_24" count="1" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_24"/>
+		<npc id="20560"/><!--Паук Трисалим-->
+	</spawn>
+	<territory name="oren14_2118_23">
+		<add x="53344" y="26608" zmin="-5296" zmax="-4996"/>
+		<add x="55952" y="27268" zmin="-5296" zmax="-4996"/>
+		<add x="54748" y="28772" zmin="-5296" zmax="-4996"/>
+		<add x="53096" y="27504" zmin="-5296" zmax="-4996"/>
+	</territory>
+	<spawn name="oren14_2118_23" count="1" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_23"/>
+		<npc id="20557"/><!--Жуткий Змей-->
+	</spawn>
+	<spawn name="oren14_2118_23" count="2" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_23"/>
+		<npc id="20558"/><!--Трухлявое Дерево-->
+	</spawn>
+	<spawn name="oren14_2118_23" count="1" respawn="27" respawn_random="5">
+		<territory name="oren14_2118_23"/>
+		<npc id="20559"/><!--Гниющий Голем-->
+	</spawn>
+	<spawn name="oren14_mb2118_01" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="63916" y="15568" zmin="-3660" zmax="-3060"/>
+			<add x="64500" y="15720" zmin="-3660" zmax="-3060"/>
+			<add x="64600" y="16308" zmin="-3660" zmax="-3060"/>
+			<add x="64336" y="16756" zmin="-3660" zmax="-3060"/>
+			<add x="63244" y="16104" zmin="-3660" zmax="-3060"/>
+		</territory>
+		<npc id="25099"/><!--Трухлявое Дерево Репиро-->
+	</spawn>
+	<spawn name="oren14_mb2118_02" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="62504" y="7440" zmin="-3584" zmax="-2984"/>
+			<add x="63176" y="7684" zmin="-3584" zmax="-2984"/>
+			<add x="62992" y="8824" zmin="-3584" zmax="-2984"/>
+			<add x="62172" y="8884" zmin="-3584" zmax="-2984"/>
+			<add x="61560" y="7992" zmin="-3584" zmax="-2984"/>
+		</territory>
+		<npc id="25418"/><!--Грозный Мститель Крейвен-->
+	</spawn>
+	<spawn name="oren14_mb2118_03" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="41120" y="24152" zmin="-5008" zmax="-4408"/>
+			<add x="42192" y="22716" zmin="-5008" zmax="-4408"/>
+			<add x="43380" y="24572" zmin="-5008" zmax="-4408"/>
+			<add x="41300" y="25032" zmin="-5008" zmax="-4408"/>
+		</territory>
+		<npc id="25420"/><!--Служанка Орфен-->
+	</spawn>	
+	<spawn name="KPO" count="1" respawn="360" respawn_random="20">
+		<point x="65976" y="29864" z="-3744" h="0"/>
+		<npc id="31651"/><!--Камень Познания-->
+	</spawn>
+</list>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="23150001" name="Schtgart_SilentMona_S.SilentMona_door03" hp="158250" pdef="644" mdef="518">
+		<pos x="110717" y="-81568" z="-1536"/>
+		<shape ax="110610" ay="-81590" bx="110824" by="-81591" cx="110825" cy="-81546" dx="110611" dy="-81546" minz="-1618" maxz="-1362"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="15690"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="60"/>
+	</door>
+	<door id="23150002" name="Schtgart_SilentMona_S.SilentMona_door03" hp="158250" pdef="644" mdef="518">
+		<pos x="114881" y="-71454" z="-496"/>
+		<shape ax="114782" ay="-71472" bx="114979" by="-71473" cx="114979" cy="-71426" dx="114782" dy="-71425" minz="-578" maxz="-322"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="15690"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="60"/>
+	</door>
+	<door id="23150003" name="Schtgart_SilentMona_S.SilentMona_br_door01" hp="158250" pdef="644" mdef="518">
+		<pos x="112800" y="-78084" z="330"/>
+		<shape ax="112641" ay="-78096" bx="112816" by="-78096" cx="112816" cy="-78065" dx="112641" dy="-78064" minz="23" maxz="633"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="8056"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="30"/>
+	</door>
+	<door id="23150004" name="Schtgart_SilentMona_S.SilentMona_br_door02" hp="158250" pdef="644" mdef="518">
+		<pos x="112798" y="-78084" z="330"/>
+		<shape ax="112783" ay="-78095" bx="112957" by="-78095" cx="112957" cy="-78065" dx="112782" dy="-78065" minz="22" maxz="632"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="8056"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="30"/>
+	</door>
+</list>

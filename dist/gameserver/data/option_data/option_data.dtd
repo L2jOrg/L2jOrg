@@ -1,0 +1,68 @@
+<!ELEMENT list (option_data)*>
+<!ELEMENT option_data  (for|set|skills|triggers)*>
+<!ATTLIST option_data
+	id CDATA #REQUIRED>
+
+<!ELEMENT for (add|p_attack_trait|p_defence_trait|set|mul)*>
+<!ELEMENT mul (player|target|using|zone)*>
+<!ATTLIST mul
+	order CDATA #REQUIRED
+	stat CDATA #REQUIRED
+	value CDATA #REQUIRED>
+
+<!ELEMENT add (player|target|using|zone|or|not|and)*>
+<!ATTLIST add
+	order CDATA #REQUIRED
+	stat CDATA #REQUIRED
+	value CDATA #REQUIRED>
+
+<!ELEMENT p_attack_trait (player|target|using|zone|or|not|and)*>
+<!ATTLIST p_attack_trait
+	name CDATA #REQUIRED
+	value CDATA #REQUIRED>
+
+<!ELEMENT p_defence_trait (player|target|using|zone|or|not|and)*>
+<!ATTLIST p_defence_trait
+	name CDATA #REQUIRED
+	value CDATA #REQUIRED>
+
+<!ELEMENT set (player|target|using|zone|or|not|and)*>
+<!ATTLIST set
+	order CDATA #IMPLIED
+	stat CDATA #IMPLIED
+	value CDATA #REQUIRED>
+
+
+<!ELEMENT or (player|target|using|zone)*>
+<!ELEMENT not (player|target|using|zone)*>
+<!ELEMENT and (player|target|using|zone)*>
+
+
+
+<!ELEMENT skills (skill)*>
+<!ELEMENT skill (#PCDATA)>
+<!ATTLIST skill
+	id CDATA #REQUIRED
+	level CDATA #REQUIRED>
+
+<!ELEMENT triggers (trigger)*>
+<!ELEMENT trigger (#PCDATA)>
+<!ATTLIST trigger
+	id CDATA #REQUIRED
+	level CDATA #REQUIRED
+	type CDATA #REQUIRED
+	chance CDATA #REQUIRED>
+
+<!ELEMENT player (#PCDATA)>
+<!ATTLIST player
+	residence CDATA #IMPLIED
+	classId CDATA #IMPLIED>
+<!ELEMENT target (#PCDATA)>
+<!ATTLIST target
+	pvp CDATA #REQUIRED>
+<!ELEMENT using (#PCDATA)>
+<!ATTLIST using
+	slotitem CDATA #REQUIRED>
+<!ELEMENT zone (#PCDATA)>
+<!ATTLIST zone
+	type CDATA #REQUIRED>

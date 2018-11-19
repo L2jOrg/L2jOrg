@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="14240102" name="G_undying_dugeon_s" hp="158250" pdef="644" mdef="518">
+		<pos x="-179553" y="207192" z="-15508"/>
+		<shape ax="-179821" ay="207178" bx="-179290" by="207177" cx="-179290" cy="207211" dx="-179821" dy="207211" minz="-15546" maxz="-15396"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+	</door>
+</list>

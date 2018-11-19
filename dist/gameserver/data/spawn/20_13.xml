@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn name="lyonn06_npc2013_001" count="1" respawn="60">
+		<point x="12432" y="-141808" z="-1877" h="16384"/>
+		<npc id="30590"/><!--Рошик-->
+	</spawn>
+	<territory name="lyonn08_2013_05">
+		<add x="19796" y="-132792" zmin="-1888" zmax="-1088"/>
+		<add x="22504" y="-132144" zmin="-1888" zmax="-1088"/>
+		<add x="22440" y="-131416" zmin="-1888" zmax="-1088"/>
+		<add x="18620" y="-131452" zmin="-1888" zmax="-1088"/>
+		<add x="18432" y="-132368" zmin="-1888" zmax="-1088"/>
+	</territory>
+	<spawn name="lyonn08_2013_05" count="3" respawn="21">
+		<territory name="lyonn08_2013_05"/>
+		<npc id="20479"/><!--Медведь Кхаши-->
+	</spawn>
+	<spawn name="lyonn08_2013_05" count="2" respawn="21">
+		<territory name="lyonn08_2013_05"/>
+		<npc id="20476"/><!--Клыкастый Паук Кхаши-->
+	</spawn>
+	<spawn name="lyonn08_2013_05" count="2" respawn="21">
+		<territory name="lyonn08_2013_05"/>
+		<npc id="20478"/><!--Опасный Паук Кхаши-->
+	</spawn>
+	<territory name="lyonn08_2013_04">
+		<add x="14640" y="-138080" zmin="-1892" zmax="-692"/>
+		<add x="15816" y="-138192" zmin="-1892" zmax="-692"/>
+		<add x="18508" y="-135324" zmin="-1892" zmax="-692"/>
+		<add x="16076" y="-134756" zmin="-1892" zmax="-692"/>
+		<add x="14788" y="-135196" zmin="-1892" zmax="-692"/>
+		<add x="12892" y="-137140" zmin="-1892" zmax="-692"/>
+	</territory>
+	<spawn name="lyonn08_2013_04" count="3" respawn="21">
+		<territory name="lyonn08_2013_04"/>
+		<npc id="20364"/><!--Вожак Оборотней Мараку-->
+	</spawn>
+	<spawn name="lyonn08_2013_04" count="3" respawn="21">
+		<territory name="lyonn08_2013_04"/>
+		<npc id="20479"/><!--Медведь Кхаши-->
+	</spawn>
+	<spawn name="lyonn08_2013_04" count="3" respawn="21">
+		<territory name="lyonn08_2013_04"/>
+		<npc id="20476"/><!--Клыкастый Паук Кхаши-->
+	</spawn>
+	<territory name="lyonn08_2013_03">
+		<add x="10992" y="-135132" zmin="-1928" zmax="-1078"/>
+		<add x="12372" y="-135076" zmin="-1928" zmax="-1078"/>
+		<add x="14204" y="-131388" zmin="-1928" zmax="-1078"/>
+		<add x="10796" y="-131464" zmin="-1928" zmax="-1078"/>
+		<add x="9276" y="-134068" zmin="-1928" zmax="-1078"/>
+	</territory>
+	<spawn name="lyonn08_2013_03" count="3" respawn="21">
+		<territory name="lyonn08_2013_03"/>
+		<npc id="20428"/><!--Дозорный Око Зла-->
+	</spawn>
+	<spawn name="lyonn08_2013_03" count="3" respawn="21">
+		<territory name="lyonn08_2013_03"/>
+		<npc id="20364"/><!--Вожак Оборотней Мараку-->
+	</spawn>
+	<spawn name="lyonn08_2013_03" count="3" respawn="21">
+		<territory name="lyonn08_2013_03"/>
+		<npc id="20474"/><!--Паук Кхаши-->
+	</spawn>
+	<territory name="lyonn08_2013_02">
+		<add x="7716" y="-138436" zmin="-1272" zmax="-372"/>
+		<add x="10452" y="-136140" zmin="-1272" zmax="-372"/>
+		<add x="8764" y="-134760" zmin="-1272" zmax="-372"/>
+		<add x="5340" y="-135256" zmin="-1272" zmax="-372"/>
+		<add x="6256" y="-137512" zmin="-1272" zmax="-372"/>
+	</territory>
+	<spawn name="lyonn08_2013_02" count="3" respawn="21">
+		<territory name="lyonn08_2013_02"/>
+		<npc id="20333"/><!--Серый Голем-->
+	</spawn>
+	<spawn name="lyonn08_2013_02" count="3" respawn="21">
+		<territory name="lyonn08_2013_02"/>
+		<npc id="20428"/><!--Дозорный Око Зла-->
+	</spawn>
+	<spawn name="lyonn08_2013_02" count="3" respawn="21">
+		<territory name="lyonn08_2013_02"/>
+		<npc id="20364"/><!--Вожак Оборотней Мараку-->
+	</spawn>
+	<territory name="lyonn08_2013_01">
+		<add x="252" y="-133644" zmin="-3448" zmax="-2248"/>
+		<add x="8360" y="-132800" zmin="-3448" zmax="-2248"/>
+		<add x="9432" y="-131352" zmin="-3448" zmax="-2248"/>
+		<add x="176" y="-131360" zmin="-3448" zmax="-2248"/>
+	</territory>
+	<spawn name="lyonn08_2013_01" count="4" respawn="21">
+		<territory name="lyonn08_2013_01"/>
+		<npc id="20333"/><!--Серый Голем-->
+	</spawn>
+	<spawn name="lyonn08_2013_01" count="4" respawn="21">
+		<territory name="lyonn08_2013_01"/>
+		<npc id="20428"/><!--Дозорный Око Зла-->
+	</spawn>
+	<spawn name="lyonn08_2013_01" count="4" respawn="21">
+		<territory name="lyonn08_2013_01"/>
+		<npc id="20364"/><!--Вожак Оборотней Мараку-->
+	</spawn>
+	<territory name="lyonn08_2013_06">
+		<add x="10096" y="-141852" zmin="-1908" zmax="-1508"/>
+		<add x="10896" y="-142592" zmin="-1908" zmax="-1508"/>
+		<add x="13404" y="-142056" zmin="-1908" zmax="-1508"/>
+		<add x="15244" y="-140060" zmin="-1908" zmax="-1508"/>
+		<add x="12020" y="-137648" zmin="-1908" zmax="-1508"/>
+		<add x="10112" y="-139972" zmin="-1908" zmax="-1508"/>
+	</territory>
+	<spawn name="lyonn08_2013_06" count="4" respawn="21">
+		<territory name="lyonn08_2013_06"/>
+		<npc id="20474"/><!--Паук Кхаши-->
+	</spawn>
+	<spawn name="lyonn08_2013_06" count="4" respawn="21">
+		<territory name="lyonn08_2013_06"/>
+		<npc id="20479"/><!--Медведь Кхаши-->
+	</spawn>
+	<spawn name="lyonn08_2013_06" count="4" respawn="21">
+		<territory name="lyonn08_2013_06"/>
+		<npc id="20476"/><!--Клыкастый Паук Кхаши-->
+	</spawn>
+	<spawn name="lyonn08_2013_06" count="4" respawn="21">
+		<territory name="lyonn08_2013_06"/>
+		<npc id="20478"/><!--Опасный Паук Кхаши-->
+	</spawn>
+	<spawn name="lyonn01_npc2013_g02" count="1" respawn="60">
+		<territory>
+			<add x="11068" y="-142024" zmin="-2156" zmax="-1456"/>
+			<add x="13596" y="-141676" zmin="-2156" zmax="-1456"/>
+			<add x="16034" y="-139691" zmin="-2156" zmax="-1456"/>
+			<add x="16087" y="-138203" zmin="-2156" zmax="-1456"/>
+			<add x="15366" y="-137303" zmin="-2156" zmax="-1456"/>
+			<add x="13413" y="-138594" zmin="-2156" zmax="-1456"/>
+			<add x="11682" y="-137982" zmin="-2156" zmax="-1456"/>
+			<add x="10441" y="-140114" zmin="-2156" zmax="-1456"/>
+		</territory>
+		<npc id="31036"/><!--Центурион-->
+	</spawn>
+	<spawn name="lyonn01_npc2013_g01" count="1" respawn="60">
+		<territory>
+			<add x="9694" y="-138923" zmin="-1804" zmax="-454"/>
+			<add x="14159" y="-135140" zmin="-1804" zmax="-454"/>
+			<add x="11568" y="-131460" zmin="-1804" zmax="-454"/>
+			<add x="7823" y="-135017" zmin="-1804" zmax="-454"/>
+			<add x="4659" y="-135328" zmin="-1804" zmax="-454"/>
+			<add x="4139" y="-136005" zmin="-1804" zmax="-454"/>
+			<add x="5320" y="-137084" zmin="-1804" zmax="-454"/>
+			<add x="5563" y="-138708" zmin="-1804" zmax="-454"/>
+			<add x="6813" y="-141281" zmin="-1804" zmax="-454"/>
+			<add x="9078" y="-142782" zmin="-1804" zmax="-454"/>
+		</territory>
+		<npc id="31036"/><!--Центурион-->
+	</spawn>
+</list>

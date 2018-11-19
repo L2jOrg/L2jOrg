@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="19113" levels="1" name="No Clan Return">
+		<set name="icon" value="icon.skill_recall"/>
+		<set name="reuseDelay" value="1800000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="2000"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="clan_recall_block"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="operate_type" value="A2"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="itemConsumeId" value="49758"/>
+		<set name="itemConsumeCount" value="2"/>
+		<for>
+			<effect name="p_block_escape"/>
+		</for>
+	</skill>
+	<skill id="19114" levels="1" name="No Clan Resurrection">
+		<set name="icon" value="icon.skill_resurrection"/>
+		<set name="reuseDelay" value="1800000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="2000"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="clan_resurrection_block"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="operate_type" value="A2"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="itemConsumeId" value="49758"/>
+		<set name="itemConsumeCount" value="1"/>
+		<for>
+			<effect/>
+		</for>
+	</skill>
+	<skill id="19119" levels="1" name="Noblesse Grace">
+		<set name="icon" value="icon.skill1323"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="500"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+</list>

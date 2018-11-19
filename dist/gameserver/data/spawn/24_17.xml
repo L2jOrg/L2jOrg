@@ -1,0 +1,1231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<territory name="aden03_2417_100">
+		<add x="154020" y="-22548" zmin="-1824" zmax="-824"/>
+		<add x="156424" y="-21692" zmin="-1824" zmax="-824"/>
+		<add x="155144" y="-20788" zmin="-1824" zmax="-824"/>
+		<add x="153688" y="-20960" zmin="-1824" zmax="-824"/>
+	</territory>
+	<spawn name="aden03_2417_100" count="1" respawn="45">
+		<territory name="aden03_2417_100"/>
+		<npc id="21114"/><!--Проклятый Хранитель-->
+	</spawn>
+	<spawn name="aden03_2417_100" count="2" respawn="45">
+		<territory name="aden03_2417_100"/>
+		<npc id="21115"/><!--Шаман Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_100" count="1" respawn="45">
+		<territory name="aden03_2417_100"/>
+		<npc id="21116"/><!--Владыка Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_p20" count="1" respawn="90" respawn_random="50">
+		<territory>
+			<add x="146668" y="-10168" zmin="-4588" zmax="-3988"/>
+			<add x="148952" y="-10920" zmin="-4588" zmax="-3988"/>
+			<add x="150624" y="-10572" zmin="-4588" zmax="-3988"/>
+			<add x="149636" y="-8056" zmin="-4588" zmax="-3988"/>
+			<add x="146464" y="-7312" zmin="-4588" zmax="-3988"/>
+		</territory>
+		<npc id="20773"/><!--Лорд Зачарованных Летучих Мышей-->
+	</spawn>
+	<spawn name="aden03_2417_p21" count="1" respawn="90" respawn_random="50">
+		<territory>
+			<add x="150676" y="-10688" zmin="-4596" zmax="-3996"/>
+			<add x="153348" y="-10208" zmin="-4596" zmax="-3996"/>
+			<add x="153556" y="-8384" zmin="-4596" zmax="-3996"/>
+			<add x="150732" y="-7636" zmin="-4596" zmax="-3996"/>
+			<add x="149676" y="-8192" zmin="-4596" zmax="-3996"/>
+		</territory>
+		<npc id="20773"/><!--Лорд Зачарованных Летучих Мышей-->
+	</spawn>
+	<spawn name="aden03_2417_p07" count="1" respawn="90" respawn_random="50">
+		<territory>
+			<add x="142292" y="-21264" zmin="-3416" zmax="-2816"/>
+			<add x="144936" y="-20412" zmin="-3416" zmax="-2816"/>
+			<add x="144780" y="-19028" zmin="-3416" zmax="-2816"/>
+			<add x="143824" y="-18252" zmin="-3416" zmax="-2816"/>
+			<add x="142156" y="-17848" zmin="-3416" zmax="-2816"/>
+			<add x="140892" y="-18052" zmin="-3416" zmax="-2816"/>
+			<add x="140356" y="-19536" zmin="-3416" zmax="-2816"/>
+			<add x="141120" y="-20784" zmin="-3416" zmax="-2816"/>
+		</territory>
+		<npc id="20773"/><!--Лорд Зачарованных Летучих Мышей-->
+	</spawn>
+	<spawn name="aden03_2417_p09" count="2" respawn="90" respawn_random="50">
+		<territory>
+			<add x="148664" y="-20788" zmin="-3416" zmax="-2416"/>
+			<add x="150072" y="-20792" zmin="-3416" zmax="-2416"/>
+			<add x="152976" y="-16608" zmin="-3416" zmax="-2416"/>
+			<add x="151064" y="-16184" zmin="-3416" zmax="-2416"/>
+			<add x="147964" y="-17984" zmin="-3416" zmax="-2416"/>
+		</territory>
+		<npc id="20773"/><!--Лорд Зачарованных Летучих Мышей-->
+	</spawn>
+	<spawn name="aden03_2417_p15" count="1" respawn="90" respawn_random="50">
+		<territory>
+			<add x="147128" y="-14064" zmin="-4604" zmax="-4004"/>
+			<add x="149004" y="-13796" zmin="-4604" zmax="-4004"/>
+			<add x="148964" y="-11036" zmin="-4604" zmax="-4004"/>
+			<add x="146708" y="-10288" zmin="-4604" zmax="-4004"/>
+			<add x="144976" y="-11800" zmin="-4604" zmax="-4004"/>
+		</territory>
+		<npc id="20773"/><!--Лорд Зачарованных Летучих Мышей-->
+	</spawn>
+	<spawn name="aden03_2417_p14" count="1" respawn="90" respawn_random="50">
+		<territory>
+			<add x="149600" y="-15645" zmin="-4592" zmax="-3992"/>
+			<add x="152675" y="-15093" zmin="-4592" zmax="-3992"/>
+			<add x="152427" y="-13124" zmin="-4592" zmax="-3992"/>
+			<add x="149590" y="-13767" zmin="-4592" zmax="-3992"/>
+		</territory>
+		<npc id="20773"/><!--Лорд Зачарованных Летучих Мышей-->
+	</spawn>
+	<spawn name="aden03_2417_p16" count="1" respawn="90" respawn_random="50">
+		<territory>
+			<add x="149036" y="-13832" zmin="-4600" zmax="-4000"/>
+			<add x="152976" y="-13004" zmin="-4600" zmax="-4000"/>
+			<add x="153176" y="-10236" zmin="-4600" zmax="-4000"/>
+			<add x="149008" y="-10984" zmin="-4600" zmax="-4000"/>
+		</territory>
+		<npc id="20773"/><!--Лорд Зачарованных Летучих Мышей-->
+	</spawn>
+	<spawn name="aden03_2417_p11" count="2" respawn="90" respawn_random="50">
+		<territory>
+			<add x="140059" y="-17163" zmin="-4568" zmax="-3768"/>
+			<add x="142960" y="-16706" zmin="-4568" zmax="-3768"/>
+			<add x="142516" y="-12605" zmin="-4568" zmax="-3768"/>
+			<add x="137245" y="-13286" zmin="-4568" zmax="-3768"/>
+		</territory>
+		<npc id="20773"/><!--Лорд Зачарованных Летучих Мышей-->
+	</spawn>
+	<spawn name="aden03_2417_p13" count="1" respawn="90" respawn_random="50">
+		<territory>
+			<add x="146832" y="-17112" zmin="-4500" zmax="-3500"/>
+			<add x="149548" y="-16076" zmin="-4500" zmax="-3500"/>
+			<add x="149532" y="-13756" zmin="-4500" zmax="-3500"/>
+			<add x="147376" y="-14064" zmin="-4500" zmax="-3500"/>
+		</territory>
+		<npc id="20773"/><!--Лорд Зачарованных Летучих Мышей-->
+	</spawn>
+	<spawn name="aden03_2417_p12" count="3" respawn="90" respawn_random="50">
+		<territory>
+			<add x="143148" y="-16612" zmin="-4536" zmax="-3136"/>
+			<add x="144708" y="-17444" zmin="-4536" zmax="-3136"/>
+			<add x="146804" y="-17076" zmin="-4536" zmax="-3136"/>
+			<add x="147272" y="-14108" zmin="-4536" zmax="-3136"/>
+			<add x="145352" y="-12052" zmin="-4536" zmax="-3136"/>
+			<add x="142652" y="-12624" zmin="-4536" zmax="-3136"/>
+		</territory>
+		<npc id="20773"/><!--Лорд Зачарованных Летучих Мышей-->
+	</spawn>
+	<spawn name="aden03_2417_p19" count="1" respawn="90" respawn_random="50">
+		<territory>
+			<add x="144400" y="-11432" zmin="-4792" zmax="-4192"/>
+			<add x="146604" y="-10100" zmin="-4792" zmax="-4192"/>
+			<add x="146424" y="-7328" zmin="-4792" zmax="-4192"/>
+			<add x="143660" y="-8692" zmin="-4792" zmax="-4192"/>
+		</territory>
+		<npc id="20773"/><!--Лорд Зачарованных Летучих Мышей-->
+	</spawn>
+	<spawn name="aden03_2417_p18" count="1" respawn="90" respawn_random="50">
+		<territory>
+			<add x="141192" y="-11360" zmin="-4736" zmax="-4536"/>
+			<add x="144268" y="-11576" zmin="-4736" zmax="-4536"/>
+			<add x="143516" y="-8664" zmin="-4736" zmax="-4536"/>
+			<add x="141860" y="-7636" zmin="-4736" zmax="-4536"/>
+			<add x="139760" y="-9812" zmin="-4736" zmax="-4536"/>
+		</territory>
+		<npc id="20773"/><!--Лорд Зачарованных Летучих Мышей-->
+	</spawn>
+	<territory name="aden03_2417_03">
+		<add x="148088" y="-25056" zmin="-3524" zmax="-2824"/>
+		<add x="148924" y="-26444" zmin="-3524" zmax="-2824"/>
+		<add x="151596" y="-23608" zmin="-3524" zmax="-2824"/>
+		<add x="149684" y="-22508" zmin="-3524" zmax="-2824"/>
+	</territory>
+	<spawn name="aden03_2417_03" count="3" respawn="45">
+		<territory name="aden03_2417_03"/>
+		<npc id="21114"/><!--Проклятый Хранитель-->
+	</spawn>
+	<spawn name="aden03_2417_03" count="4" respawn="45">
+		<territory name="aden03_2417_03"/>
+		<npc id="21115"/><!--Шаман Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_03" count="3" respawn="45">
+		<territory name="aden03_2417_03"/>
+		<npc id="21116"/><!--Владыка Орков Хамес-->
+	</spawn>
+	<territory name="aden03_2417_04">
+		<add x="146642" y="-24200" zmin="-3588" zmax="-2688"/>
+		<add x="147666" y="-25178" zmin="-3588" zmax="-2688"/>
+		<add x="149522" y="-22512" zmin="-3588" zmax="-2688"/>
+		<add x="147934" y="-20768" zmin="-3588" zmax="-2688"/>
+	</territory>
+	<spawn name="aden03_2417_04" count="4" respawn="45">
+		<territory name="aden03_2417_04"/>
+		<npc id="21114"/><!--Проклятый Хранитель-->
+	</spawn>
+	<spawn name="aden03_2417_04" count="3" respawn="45">
+		<territory name="aden03_2417_04"/>
+		<npc id="21115"/><!--Шаман Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_04" count="3" respawn="45">
+		<territory name="aden03_2417_04"/>
+		<npc id="21116"/><!--Владыка Орков Хамес-->
+	</spawn>
+	<territory name="aden03_2417_01">
+		<add x="143434" y="-25858" zmin="-2356" zmax="-1856"/>
+		<add x="144940" y="-25595" zmin="-2356" zmax="-1856"/>
+		<add x="145868" y="-24724" zmin="-2356" zmax="-1856"/>
+		<add x="145164" y="-23676" zmin="-2356" zmax="-1856"/>
+		<add x="143704" y="-23776" zmin="-2356" zmax="-1856"/>
+		<add x="142792" y="-25304" zmin="-2356" zmax="-1856"/>
+	</territory>
+	<spawn name="aden03_2417_01" count="2" respawn="45">
+		<territory name="aden03_2417_01"/>
+		<npc id="21114"/><!--Проклятый Хранитель-->
+	</spawn>
+	<spawn name="aden03_2417_01" count="3" respawn="45">
+		<territory name="aden03_2417_01"/>
+		<npc id="21115"/><!--Шаман Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_01" count="2" respawn="45">
+		<territory name="aden03_2417_01"/>
+		<npc id="21116"/><!--Владыка Орков Хамес-->
+	</spawn>
+	<territory name="aden03_2417_02">
+		<add x="145941" y="-25568" zmin="-3044" zmax="-2244"/>
+		<add x="147085" y="-26580" zmin="-3044" zmax="-2244"/>
+		<add x="147861" y="-25807" zmin="-3044" zmax="-2244"/>
+		<add x="146447" y="-24356" zmin="-3044" zmax="-2244"/>
+	</territory>
+	<spawn name="aden03_2417_02" count="1" respawn="45">
+		<territory name="aden03_2417_02"/>
+		<npc id="21114"/><!--Проклятый Хранитель-->
+	</spawn>
+	<spawn name="aden03_2417_02" count="1" respawn="45">
+		<territory name="aden03_2417_02"/>
+		<npc id="21115"/><!--Шаман Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_02" count="1" respawn="45">
+		<territory name="aden03_2417_02"/>
+		<npc id="21116"/><!--Владыка Орков Хамес-->
+	</spawn>
+	<territory name="aden03_2417_07">
+		<add x="142292" y="-21264" zmin="-3416" zmax="-2816"/>
+		<add x="144936" y="-20412" zmin="-3416" zmax="-2816"/>
+		<add x="144780" y="-19028" zmin="-3416" zmax="-2816"/>
+		<add x="143824" y="-18252" zmin="-3416" zmax="-2816"/>
+		<add x="142156" y="-17848" zmin="-3416" zmax="-2816"/>
+		<add x="140892" y="-18052" zmin="-3416" zmax="-2816"/>
+		<add x="140356" y="-19536" zmin="-3416" zmax="-2816"/>
+		<add x="141120" y="-20784" zmin="-3416" zmax="-2816"/>
+	</territory>
+	<spawn name="aden03_2417_07" count="6" respawn="45">
+		<territory name="aden03_2417_07"/>
+		<npc id="21114"/><!--Проклятый Хранитель-->
+	</spawn>
+	<spawn name="aden03_2417_07" count="7" respawn="45">
+		<territory name="aden03_2417_07"/>
+		<npc id="21115"/><!--Шаман Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_07" count="6" respawn="45">
+		<territory name="aden03_2417_07"/>
+		<npc id="21116"/><!--Владыка Орков Хамес-->
+	</spawn>
+	<territory name="aden03_2417_08">
+		<add x="148692" y="-20900" zmin="-3472" zmax="-2772"/>
+		<add x="150624" y="-23016" zmin="-3472" zmax="-2772"/>
+		<add x="150632" y="-21540" zmin="-3472" zmax="-2772"/>
+		<add x="150312" y="-20924" zmin="-3472" zmax="-2772"/>
+	</territory>
+	<spawn name="aden03_2417_08" count="1" respawn="45">
+		<territory name="aden03_2417_08"/>
+		<npc id="21114"/><!--Проклятый Хранитель-->
+	</spawn>
+	<spawn name="aden03_2417_08" count="2" respawn="45">
+		<territory name="aden03_2417_08"/>
+		<npc id="21115"/><!--Шаман Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_08" count="1" respawn="45">
+		<territory name="aden03_2417_08"/>
+		<npc id="21116"/><!--Владыка Орков Хамес-->
+	</spawn>
+	<territory name="aden03_2417_05">
+		<add x="144856" y="-22684" zmin="-3484" zmax="-2584"/>
+		<add x="146736" y="-23748" zmin="-3484" zmax="-2584"/>
+		<add x="147924" y="-20712" zmin="-3484" zmax="-2584"/>
+		<add x="146936" y="-19676" zmin="-3484" zmax="-2584"/>
+	</territory>
+	<spawn name="aden03_2417_05" count="3" respawn="45">
+		<territory name="aden03_2417_05"/>
+		<npc id="21114"/><!--Проклятый Хранитель-->
+	</spawn>
+	<spawn name="aden03_2417_05" count="4" respawn="45">
+		<territory name="aden03_2417_05"/>
+		<npc id="21115"/><!--Шаман Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_05" count="3" respawn="45">
+		<territory name="aden03_2417_05"/>
+		<npc id="21116"/><!--Владыка Орков Хамес-->
+	</spawn>
+	<territory name="aden03_2417_06">
+		<add x="142500" y="-23056" zmin="-3308" zmax="-2508"/>
+		<add x="144776" y="-22628" zmin="-3308" zmax="-2508"/>
+		<add x="146076" y="-20748" zmin="-3308" zmax="-2508"/>
+		<add x="145252" y="-20336" zmin="-3308" zmax="-2508"/>
+		<add x="142592" y="-21240" zmin="-3308" zmax="-2508"/>
+	</territory>
+	<spawn name="aden03_2417_06" count="3" respawn="45">
+		<territory name="aden03_2417_06"/>
+		<npc id="21114"/><!--Проклятый Хранитель-->
+	</spawn>
+	<spawn name="aden03_2417_06" count="4" respawn="45">
+		<territory name="aden03_2417_06"/>
+		<npc id="21115"/><!--Шаман Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_06" count="3" respawn="45">
+		<territory name="aden03_2417_06"/>
+		<npc id="21116"/><!--Владыка Орков Хамес-->
+	</spawn>
+	<territory name="aden03_2417_09">
+		<add x="148664" y="-20788" zmin="-3416" zmax="-2416"/>
+		<add x="150072" y="-20792" zmin="-3416" zmax="-2416"/>
+		<add x="152976" y="-16608" zmin="-3416" zmax="-2416"/>
+		<add x="151064" y="-16184" zmin="-3416" zmax="-2416"/>
+		<add x="147964" y="-17984" zmin="-3416" zmax="-2416"/>
+	</territory>
+	<spawn name="aden03_2417_09" count="6" respawn="45">
+		<territory name="aden03_2417_09"/>
+		<npc id="21114"/><!--Проклятый Хранитель-->
+	</spawn>
+	<spawn name="aden03_2417_09" count="7" respawn="45">
+		<territory name="aden03_2417_09"/>
+		<npc id="21115"/><!--Шаман Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_09" count="6" respawn="45">
+		<territory name="aden03_2417_09"/>
+		<npc id="21116"/><!--Владыка Орков Хамес-->
+	</spawn>
+	<territory name="aden03_2417_14">
+		<add x="149600" y="-15645" zmin="-4592" zmax="-3992"/>
+		<add x="152675" y="-15093" zmin="-4592" zmax="-3992"/>
+		<add x="152427" y="-13124" zmin="-4592" zmax="-3992"/>
+		<add x="149590" y="-13767" zmin="-4592" zmax="-3992"/>
+	</territory>
+	<spawn name="aden03_2417_14" count="3" respawn="45">
+		<territory name="aden03_2417_14"/>
+		<npc id="21111"/><!--Лавовый Змей-->
+	</spawn>
+	<spawn name="aden03_2417_14" count="4" respawn="45">
+		<territory name="aden03_2417_14"/>
+		<npc id="21112"/><!--Пехотинец Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_14" count="2" respawn="45">
+		<territory name="aden03_2417_14"/>
+		<npc id="21113"/><!--Снайпер Орков Хамес-->
+	</spawn>
+	<territory name="aden03_2417_15">
+		<add x="147128" y="-14064" zmin="-4604" zmax="-4004"/>
+		<add x="149004" y="-13796" zmin="-4604" zmax="-4004"/>
+		<add x="148964" y="-11036" zmin="-4604" zmax="-4004"/>
+		<add x="146708" y="-10288" zmin="-4604" zmax="-4004"/>
+		<add x="144976" y="-11800" zmin="-4604" zmax="-4004"/>
+	</territory>
+	<spawn name="aden03_2417_15" count="4" respawn="45">
+		<territory name="aden03_2417_15"/>
+		<npc id="21111"/><!--Лавовый Змей-->
+	</spawn>
+	<spawn name="aden03_2417_15" count="4" respawn="45">
+		<territory name="aden03_2417_15"/>
+		<npc id="21112"/><!--Пехотинец Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_15" count="3" respawn="45">
+		<territory name="aden03_2417_15"/>
+		<npc id="21113"/><!--Снайпер Орков Хамес-->
+	</spawn>
+	<territory name="aden03_2417_12">
+		<add x="143148" y="-16612" zmin="-4536" zmax="-3136"/>
+		<add x="144708" y="-17444" zmin="-4536" zmax="-3136"/>
+		<add x="146804" y="-17076" zmin="-4536" zmax="-3136"/>
+		<add x="147272" y="-14108" zmin="-4536" zmax="-3136"/>
+		<add x="145352" y="-12052" zmin="-4536" zmax="-3136"/>
+		<add x="142652" y="-12624" zmin="-4536" zmax="-3136"/>
+	</territory>
+	<spawn name="aden03_2417_12" count="7" respawn="45">
+		<territory name="aden03_2417_12"/>
+		<npc id="21111"/><!--Лавовый Змей-->
+	</spawn>
+	<spawn name="aden03_2417_12" count="9" respawn="45">
+		<territory name="aden03_2417_12"/>
+		<npc id="21112"/><!--Пехотинец Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_12" count="4" respawn="45">
+		<territory name="aden03_2417_12"/>
+		<npc id="21113"/><!--Снайпер Орков Хамес-->
+	</spawn>
+	<territory name="aden03_2417_13">
+		<add x="146832" y="-17112" zmin="-4500" zmax="-3500"/>
+		<add x="149548" y="-16076" zmin="-4500" zmax="-3500"/>
+		<add x="149532" y="-13756" zmin="-4500" zmax="-3500"/>
+		<add x="147376" y="-14064" zmin="-4500" zmax="-3500"/>
+	</territory>
+	<spawn name="aden03_2417_13" count="3" respawn="45">
+		<territory name="aden03_2417_13"/>
+		<npc id="21111"/><!--Лавовый Змей-->
+	</spawn>
+	<spawn name="aden03_2417_13" count="3" respawn="45">
+		<territory name="aden03_2417_13"/>
+		<npc id="21112"/><!--Пехотинец Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_13" count="2" respawn="45">
+		<territory name="aden03_2417_13"/>
+		<npc id="21113"/><!--Снайпер Орков Хамес-->
+	</spawn>
+	<territory name="aden03_2417_18">
+		<add x="141192" y="-11360" zmin="-4736" zmax="-4536"/>
+		<add x="144268" y="-11576" zmin="-4736" zmax="-4536"/>
+		<add x="143516" y="-8664" zmin="-4736" zmax="-4536"/>
+		<add x="141860" y="-7636" zmin="-4736" zmax="-4536"/>
+		<add x="139760" y="-9812" zmin="-4736" zmax="-4536"/>
+	</territory>
+	<spawn name="aden03_2417_18" count="5" respawn="45">
+		<territory name="aden03_2417_18"/>
+		<npc id="21108"/><!--Пучок Света-->
+	</spawn>
+	<spawn name="aden03_2417_18" count="3" respawn="45">
+		<territory name="aden03_2417_18"/>
+		<npc id="21109"/><!--Разведчик Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_18" count="6" respawn="45">
+		<territory name="aden03_2417_18"/>
+		<npc id="21110"/><!--Болотный Хищник-->
+	</spawn>
+	<territory name="aden03_2417_19">
+		<add x="144400" y="-11432" zmin="-4792" zmax="-4192"/>
+		<add x="146604" y="-10100" zmin="-4792" zmax="-4192"/>
+		<add x="146424" y="-7328" zmin="-4792" zmax="-4192"/>
+		<add x="143660" y="-8692" zmin="-4792" zmax="-4192"/>
+	</territory>
+	<spawn name="aden03_2417_19" count="3" respawn="45">
+		<territory name="aden03_2417_19"/>
+		<npc id="21111"/><!--Лавовый Змей-->
+	</spawn>
+	<spawn name="aden03_2417_19" count="4" respawn="45">
+		<territory name="aden03_2417_19"/>
+		<npc id="21112"/><!--Пехотинец Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_19" count="2" respawn="45">
+		<territory name="aden03_2417_19"/>
+		<npc id="21113"/><!--Снайпер Орков Хамес-->
+	</spawn>
+	<territory name="aden03_2417_16">
+		<add x="149036" y="-13832" zmin="-4600" zmax="-4000"/>
+		<add x="152976" y="-13004" zmin="-4600" zmax="-4000"/>
+		<add x="153176" y="-10236" zmin="-4600" zmax="-4000"/>
+		<add x="149008" y="-10984" zmin="-4600" zmax="-4000"/>
+	</territory>
+	<spawn name="aden03_2417_16" count="5" respawn="45">
+		<territory name="aden03_2417_16"/>
+		<npc id="21111"/><!--Лавовый Змей-->
+	</spawn>
+	<spawn name="aden03_2417_16" count="6" respawn="45">
+		<territory name="aden03_2417_16"/>
+		<npc id="21112"/><!--Пехотинец Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_16" count="4" respawn="45">
+		<territory name="aden03_2417_16"/>
+		<npc id="21113"/><!--Снайпер Орков Хамес-->
+	</spawn>
+	<territory name="aden03_2417_17">
+		<add x="138152" y="-11656" zmin="-4724" zmax="-4324"/>
+		<add x="141128" y="-11428" zmin="-4724" zmax="-4324"/>
+		<add x="139724" y="-9836" zmin="-4724" zmax="-4324"/>
+		<add x="138532" y="-9860" zmin="-4724" zmax="-4324"/>
+	</territory>
+	<spawn name="aden03_2417_17" count="2" respawn="45">
+		<territory name="aden03_2417_17"/>
+		<npc id="21108"/><!--Пучок Света-->
+	</spawn>
+	<spawn name="aden03_2417_17" count="1" respawn="45">
+		<territory name="aden03_2417_17"/>
+		<npc id="21109"/><!--Разведчик Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_17" count="2" respawn="45">
+		<territory name="aden03_2417_17"/>
+		<npc id="21110"/><!--Болотный Хищник-->
+	</spawn>
+	<territory name="aden03_2417_10">
+		<add x="145024" y="-18548" zmin="-3828" zmax="-3028"/>
+		<add x="146876" y="-18000" zmin="-3828" zmax="-3028"/>
+		<add x="146812" y="-17128" zmin="-3828" zmax="-3028"/>
+		<add x="144716" y="-17456" zmin="-3828" zmax="-3028"/>
+	</territory>
+	<spawn name="aden03_2417_10" count="1" respawn="45">
+		<territory name="aden03_2417_10"/>
+		<npc id="21114"/><!--Проклятый Хранитель-->
+	</spawn>
+	<spawn name="aden03_2417_10" count="2" respawn="45">
+		<territory name="aden03_2417_10"/>
+		<npc id="21115"/><!--Шаман Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_10" count="1" respawn="45">
+		<territory name="aden03_2417_10"/>
+		<npc id="21116"/><!--Владыка Орков Хамес-->
+	</spawn>
+	<territory name="aden03_2417_11">
+		<add x="140059" y="-17163" zmin="-4568" zmax="-3768"/>
+		<add x="142960" y="-16706" zmin="-4568" zmax="-3768"/>
+		<add x="142516" y="-12605" zmin="-4568" zmax="-3768"/>
+		<add x="137245" y="-13286" zmin="-4568" zmax="-3768"/>
+	</territory>
+	<spawn name="aden03_2417_11" count="8" respawn="45">
+		<territory name="aden03_2417_11"/>
+		<npc id="21111"/><!--Лавовый Змей-->
+	</spawn>
+	<spawn name="aden03_2417_11" count="8" respawn="45">
+		<territory name="aden03_2417_11"/>
+		<npc id="21112"/><!--Пехотинец Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_11" count="5" respawn="45">
+		<territory name="aden03_2417_11"/>
+		<npc id="21113"/><!--Снайпер Орков Хамес-->
+	</spawn>
+	<territory name="aden03_2417_26">
+		<add x="145696" y="-6004" zmin="-4672" zmax="-4072"/>
+		<add x="146536" y="-7260" zmin="-4672" zmax="-4072"/>
+		<add x="148356" y="-7740" zmin="-4672" zmax="-4072"/>
+		<add x="148704" y="-5236" zmin="-4672" zmax="-4072"/>
+		<add x="145908" y="-3836" zmin="-4672" zmax="-4072"/>
+	</territory>
+	<spawn name="aden03_2417_26" count="2" respawn="45">
+		<territory name="aden03_2417_26"/>
+		<npc id="20676"/><!--Болотный Вершитель Судеб-->
+	</spawn>
+	<spawn name="aden03_2417_26" count="3" respawn="45">
+		<territory name="aden03_2417_26"/>
+		<npc id="20677"/><!--Крылатый Кровопийца-->
+	</spawn>
+	<spawn name="aden03_2417_26" count="2" respawn="45">
+		<territory name="aden03_2417_26"/>
+		<npc id="21108"/><!--Пучок Света-->
+	</spawn>
+	<spawn name="aden03_2417_26" count="2" respawn="45">
+		<territory name="aden03_2417_26"/>
+		<npc id="21109"/><!--Разведчик Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_26" count="2" respawn="45">
+		<territory name="aden03_2417_26"/>
+		<npc id="21110"/><!--Болотный Хищник-->
+	</spawn>
+	<territory name="aden03_2417_23">
+		<add x="141648" y="-7220" zmin="-4780" zmax="-4180"/>
+		<add x="143596" y="-8592" zmin="-4780" zmax="-4180"/>
+		<add x="146424" y="-7268" zmin="-4780" zmax="-4180"/>
+		<add x="145588" y="-6096" zmin="-4780" zmax="-4180"/>
+		<add x="141872" y="-6808" zmin="-4780" zmax="-4180"/>
+	</territory>
+	<spawn name="aden03_2417_23" count="1" respawn="45">
+		<territory name="aden03_2417_23"/>
+		<npc id="20676"/><!--Болотный Вершитель Судеб-->
+	</spawn>
+	<spawn name="aden03_2417_23" count="1" respawn="45">
+		<territory name="aden03_2417_23"/>
+		<npc id="20677"/><!--Крылатый Кровопийца-->
+	</spawn>
+	<spawn name="aden03_2417_23" count="1" respawn="45">
+		<territory name="aden03_2417_23"/>
+		<npc id="21108"/><!--Пучок Света-->
+	</spawn>
+	<spawn name="aden03_2417_23" count="1" respawn="45">
+		<territory name="aden03_2417_23"/>
+		<npc id="21109"/><!--Разведчик Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_23" count="1" respawn="45">
+		<territory name="aden03_2417_23"/>
+		<npc id="21110"/><!--Болотный Хищник-->
+	</spawn>
+	<territory name="aden03_2417_24">
+		<add x="141672" y="-6808" zmin="-4856" zmax="-4256"/>
+		<add x="143900" y="-6404" zmin="-4856" zmax="-4256"/>
+		<add x="142476" y="-4712" zmin="-4856" zmax="-4256"/>
+		<add x="140484" y="-4508" zmin="-4856" zmax="-4256"/>
+	</territory>
+	<spawn name="aden03_2417_24" count="3" respawn="45">
+		<territory name="aden03_2417_24"/>
+		<npc id="20676"/><!--Болотный Вершитель Судеб-->
+	</spawn>
+	<spawn name="aden03_2417_24" count="2" respawn="45">
+		<territory name="aden03_2417_24"/>
+		<npc id="20677"/><!--Крылатый Кровопийца-->
+	</spawn>
+	<spawn name="aden03_2417_24" count="2" respawn="45">
+		<territory name="aden03_2417_24"/>
+		<npc id="21108"/><!--Пучок Света-->
+	</spawn>
+	<spawn name="aden03_2417_24" count="2" respawn="45">
+		<territory name="aden03_2417_24"/>
+		<npc id="21109"/><!--Разведчик Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_24" count="3" respawn="45">
+		<territory name="aden03_2417_24"/>
+		<npc id="21110"/><!--Болотный Хищник-->
+	</spawn>
+	<territory name="aden03_2417_27">
+		<add x="148420" y="-7740" zmin="-4600" zmax="-4400"/>
+		<add x="149624" y="-8056" zmin="-4600" zmax="-4400"/>
+		<add x="150708" y="-7544" zmin="-4600" zmax="-4400"/>
+		<add x="150852" y="-5948" zmin="-4600" zmax="-4400"/>
+		<add x="148732" y="-5624" zmin="-4600" zmax="-4400"/>
+	</territory>
+	<spawn name="aden03_2417_27" count="2" respawn="45">
+		<territory name="aden03_2417_27"/>
+		<npc id="20676"/><!--Болотный Вершитель Судеб-->
+	</spawn>
+	<spawn name="aden03_2417_27" count="1" respawn="45">
+		<territory name="aden03_2417_27"/>
+		<npc id="20677"/><!--Крылатый Кровопийца-->
+	</spawn>
+	<spawn name="aden03_2417_27" count="2" respawn="45">
+		<territory name="aden03_2417_27"/>
+		<npc id="21108"/><!--Пучок Света-->
+	</spawn>
+	<spawn name="aden03_2417_27" count="2" respawn="45">
+		<territory name="aden03_2417_27"/>
+		<npc id="21109"/><!--Разведчик Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_27" count="1" respawn="45">
+		<territory name="aden03_2417_27"/>
+		<npc id="21110"/><!--Болотный Хищник-->
+	</spawn>
+	<territory name="aden03_2417_28">
+		<add x="150796" y="-7524" zmin="-4600" zmax="-4000"/>
+		<add x="153600" y="-8336" zmin="-4600" zmax="-4000"/>
+		<add x="154460" y="-7372" zmin="-4600" zmax="-4000"/>
+		<add x="153816" y="-5852" zmin="-4600" zmax="-4000"/>
+		<add x="150884" y="-5960" zmin="-4600" zmax="-4000"/>
+	</territory>
+	<spawn name="aden03_2417_28" count="2" respawn="45">
+		<territory name="aden03_2417_28"/>
+		<npc id="20676"/><!--Болотный Вершитель Судеб-->
+	</spawn>
+	<spawn name="aden03_2417_28" count="2" respawn="45">
+		<territory name="aden03_2417_28"/>
+		<npc id="20677"/><!--Крылатый Кровопийца-->
+	</spawn>
+	<spawn name="aden03_2417_28" count="2" respawn="45">
+		<territory name="aden03_2417_28"/>
+		<npc id="21108"/><!--Пучок Света-->
+	</spawn>
+	<spawn name="aden03_2417_28" count="2" respawn="45">
+		<territory name="aden03_2417_28"/>
+		<npc id="21109"/><!--Разведчик Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_28" count="3" respawn="45">
+		<territory name="aden03_2417_28"/>
+		<npc id="21110"/><!--Болотный Хищник-->
+	</spawn>
+	<territory name="aden03_2417_21">
+		<add x="150676" y="-10688" zmin="-4596" zmax="-3996"/>
+		<add x="153348" y="-10208" zmin="-4596" zmax="-3996"/>
+		<add x="153556" y="-8384" zmin="-4596" zmax="-3996"/>
+		<add x="150732" y="-7636" zmin="-4596" zmax="-3996"/>
+		<add x="149676" y="-8192" zmin="-4596" zmax="-3996"/>
+	</territory>
+	<spawn name="aden03_2417_21" count="2" respawn="45">
+		<territory name="aden03_2417_21"/>
+		<npc id="20676"/><!--Болотный Вершитель Судеб-->
+	</spawn>
+	<spawn name="aden03_2417_21" count="3" respawn="45">
+		<territory name="aden03_2417_21"/>
+		<npc id="20677"/><!--Крылатый Кровопийца-->
+	</spawn>
+	<spawn name="aden03_2417_21" count="2" respawn="45">
+		<territory name="aden03_2417_21"/>
+		<npc id="21108"/><!--Пучок Света-->
+	</spawn>
+	<spawn name="aden03_2417_21" count="2" respawn="45">
+		<territory name="aden03_2417_21"/>
+		<npc id="21109"/><!--Разведчик Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_21" count="3" respawn="45">
+		<territory name="aden03_2417_21"/>
+		<npc id="21110"/><!--Болотный Хищник-->
+	</spawn>
+	<territory name="aden03_2417_22">
+		<add x="139396" y="-8640" zmin="-4856" zmax="-4456"/>
+		<add x="140204" y="-8288" zmin="-4856" zmax="-4456"/>
+		<add x="141696" y="-6944" zmin="-4856" zmax="-4456"/>
+		<add x="140504" y="-5300" zmin="-4856" zmax="-4456"/>
+		<add x="139036" y="-7184" zmin="-4856" zmax="-4456"/>
+	</territory>
+	<spawn name="aden03_2417_22" count="1" respawn="45">
+		<territory name="aden03_2417_22"/>
+		<npc id="20676"/><!--Болотный Вершитель Судеб-->
+	</spawn>
+	<spawn name="aden03_2417_22" count="1" respawn="45">
+		<territory name="aden03_2417_22"/>
+		<npc id="20677"/><!--Крылатый Кровопийца-->
+	</spawn>
+	<spawn name="aden03_2417_22" count="1" respawn="45">
+		<territory name="aden03_2417_22"/>
+		<npc id="21108"/><!--Пучок Света-->
+	</spawn>
+	<spawn name="aden03_2417_22" count="1" respawn="45">
+		<territory name="aden03_2417_22"/>
+		<npc id="21109"/><!--Разведчик Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_22" count="1" respawn="45">
+		<territory name="aden03_2417_22"/>
+		<npc id="21110"/><!--Болотный Хищник-->
+	</spawn>
+	<territory name="aden03_2417_20">
+		<add x="146668" y="-10168" zmin="-4588" zmax="-3988"/>
+		<add x="148952" y="-10920" zmin="-4588" zmax="-3988"/>
+		<add x="150624" y="-10572" zmin="-4588" zmax="-3988"/>
+		<add x="149636" y="-8056" zmin="-4588" zmax="-3988"/>
+		<add x="146464" y="-7312" zmin="-4588" zmax="-3988"/>
+	</territory>
+	<spawn name="aden03_2417_20" count="3" respawn="45">
+		<territory name="aden03_2417_20"/>
+		<npc id="20676"/><!--Болотный Вершитель Судеб-->
+	</spawn>
+	<spawn name="aden03_2417_20" count="4" respawn="45">
+		<territory name="aden03_2417_20"/>
+		<npc id="20677"/><!--Крылатый Кровопийца-->
+	</spawn>
+	<spawn name="aden03_2417_20" count="4" respawn="45">
+		<territory name="aden03_2417_20"/>
+		<npc id="21108"/><!--Пучок Света-->
+	</spawn>
+	<spawn name="aden03_2417_20" count="2" respawn="45">
+		<territory name="aden03_2417_20"/>
+		<npc id="21109"/><!--Разведчик Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_20" count="4" respawn="45">
+		<territory name="aden03_2417_20"/>
+		<npc id="21110"/><!--Болотный Хищник-->
+	</spawn>
+	<territory name="aden03_2417_89">
+		<add x="149524" y="-2192" zmin="-4612" zmax="-4412"/>
+		<add x="151864" y="-2672" zmin="-4612" zmax="-4412"/>
+		<add x="152008" y="-2088" zmin="-4612" zmax="-4412"/>
+		<add x="149560" y="-1564" zmin="-4612" zmax="-4412"/>
+	</territory>
+	<spawn name="aden03_2417_89" count="1" respawn="45">
+		<territory name="aden03_2417_89"/>
+		<npc id="21111"/><!--Лавовый Змей-->
+	</spawn>
+	<spawn name="aden03_2417_89" count="1" respawn="45">
+		<territory name="aden03_2417_89"/>
+		<npc id="21112"/><!--Пехотинец Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_89" count="1" respawn="45">
+		<territory name="aden03_2417_89"/>
+		<npc id="21113"/><!--Снайпер Орков Хамес-->
+	</spawn>
+	<territory name="aden03_2417_84">
+		<add x="155148" y="-11588" zmin="-4316" zmax="-3316"/>
+		<add x="155532" y="-11508" zmin="-4316" zmax="-3316"/>
+		<add x="155216" y="-10124" zmin="-4316" zmax="-3316"/>
+		<add x="154316" y="-9896" zmin="-4316" zmax="-3316"/>
+	</territory>
+	<spawn name="aden03_2417_84" count="1" respawn="45">
+		<territory name="aden03_2417_84"/>
+		<npc id="21108"/><!--Пучок Света-->
+	</spawn>
+	<spawn name="aden03_2417_84" count="1" respawn="45">
+		<territory name="aden03_2417_84"/>
+		<npc id="21109"/><!--Разведчик Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_84" count="1" respawn="45">
+		<territory name="aden03_2417_84"/>
+		<npc id="21110"/><!--Болотный Хищник-->
+	</spawn>
+	<territory name="aden03_2417_81">
+		<add x="157004" y="-11916" zmin="-3876" zmax="-2676"/>
+		<add x="160032" y="-10972" zmin="-3876" zmax="-2676"/>
+		<add x="160580" y="-9332" zmin="-3876" zmax="-2676"/>
+		<add x="160412" y="-7464" zmin="-3876" zmax="-2676"/>
+		<add x="157916" y="-7320" zmin="-3876" zmax="-2676"/>
+		<add x="156548" y="-9512" zmin="-3876" zmax="-2676"/>
+	</territory>
+	<spawn name="aden03_2417_81" count="7" respawn="45">
+		<territory name="aden03_2417_81"/>
+		<npc id="21108"/><!--Пучок Света-->
+	</spawn>
+	<spawn name="aden03_2417_81" count="3" respawn="45">
+		<territory name="aden03_2417_81"/>
+		<npc id="21109"/><!--Разведчик Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_81" count="8" respawn="45">
+		<territory name="aden03_2417_81"/>
+		<npc id="21110"/><!--Болотный Хищник-->
+	</spawn>
+	<territory name="aden03_2417_82">
+		<add x="155516" y="-15604" zmin="-3080" zmax="-2080"/>
+		<add x="157112" y="-15568" zmin="-3080" zmax="-2080"/>
+		<add x="158352" y="-14892" zmin="-3080" zmax="-2080"/>
+		<add x="158516" y="-13584" zmin="-3080" zmax="-2080"/>
+		<add x="156344" y="-13044" zmin="-3080" zmax="-2080"/>
+		<add x="155092" y="-14880" zmin="-3080" zmax="-2080"/>
+	</territory>
+	<spawn name="aden03_2417_82" count="2" respawn="45">
+		<territory name="aden03_2417_82"/>
+		<npc id="21111"/><!--Лавовый Змей-->
+	</spawn>
+	<spawn name="aden03_2417_82" count="3" respawn="45">
+		<territory name="aden03_2417_82"/>
+		<npc id="21112"/><!--Пехотинец Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_82" count="2" respawn="45">
+		<territory name="aden03_2417_82"/>
+		<npc id="21113"/><!--Снайпер Орков Хамес-->
+	</spawn>
+	<territory name="aden03_2417_87">
+		<add x="153984" y="-3260" zmin="-4616" zmax="-4416"/>
+		<add x="155960" y="-4172" zmin="-4616" zmax="-4416"/>
+		<add x="156196" y="-3596" zmin="-4616" zmax="-4416"/>
+		<add x="154160" y="-2840" zmin="-4616" zmax="-4416"/>
+	</territory>
+	<spawn name="aden03_2417_87" count="1" respawn="45">
+		<territory name="aden03_2417_87"/>
+		<npc id="21108"/><!--Пучок Света-->
+	</spawn>
+	<spawn name="aden03_2417_87" count="1" respawn="45">
+		<territory name="aden03_2417_87"/>
+		<npc id="21109"/><!--Разведчик Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_87" count="1" respawn="45">
+		<territory name="aden03_2417_87"/>
+		<npc id="21110"/><!--Болотный Хищник-->
+	</spawn>
+	<territory name="aden03_2417_88">
+		<add x="151900" y="-2664" zmin="-4600" zmax="-4400"/>
+		<add x="153524" y="-3156" zmin="-4600" zmax="-4400"/>
+		<add x="153680" y="-2588" zmin="-4600" zmax="-4400"/>
+		<add x="152052" y="-2136" zmin="-4600" zmax="-4400"/>
+	</territory>
+	<spawn name="aden03_2417_88" count="1" respawn="45">
+		<territory name="aden03_2417_88"/>
+		<npc id="21108"/><!--Пучок Света-->
+	</spawn>
+	<spawn name="aden03_2417_88" count="1" respawn="45">
+		<territory name="aden03_2417_88"/>
+		<npc id="21109"/><!--Разведчик Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_88" count="1" respawn="45">
+		<territory name="aden03_2417_88"/>
+		<npc id="21110"/><!--Болотный Хищник-->
+	</spawn>
+	<territory name="aden03_2417_85">
+		<add x="154484" y="-9712" zmin="-4300" zmax="-3300"/>
+		<add x="155220" y="-9976" zmin="-4300" zmax="-3300"/>
+		<add x="156348" y="-8080" zmin="-4300" zmax="-3300"/>
+		<add x="155704" y="-7844" zmin="-4300" zmax="-3300"/>
+	</territory>
+	<spawn name="aden03_2417_85" count="1" respawn="45">
+		<territory name="aden03_2417_85"/>
+		<npc id="21108"/><!--Пучок Света-->
+	</spawn>
+	<spawn name="aden03_2417_85" count="1" respawn="45">
+		<territory name="aden03_2417_85"/>
+		<npc id="21109"/><!--Разведчик Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_85" count="1" respawn="45">
+		<territory name="aden03_2417_85"/>
+		<npc id="21110"/><!--Болотный Хищник-->
+	</spawn>
+	<territory name="aden03_2417_90">
+		<add x="146924" y="-2172" zmin="-4636" zmax="-4436"/>
+		<add x="149480" y="-2180" zmin="-4636" zmax="-4436"/>
+		<add x="149504" y="-1584" zmin="-4636" zmax="-4436"/>
+		<add x="146904" y="-1600" zmin="-4636" zmax="-4436"/>
+	</territory>
+	<spawn name="aden03_2417_90" count="1" respawn="45">
+		<territory name="aden03_2417_90"/>
+		<npc id="21111"/><!--Лавовый Змей-->
+	</spawn>
+	<spawn name="aden03_2417_90" count="1" respawn="45">
+		<territory name="aden03_2417_90"/>
+		<npc id="21112"/><!--Пехотинец Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_90" count="1" respawn="45">
+		<territory name="aden03_2417_90"/>
+		<npc id="21113"/><!--Снайпер Орков Хамес-->
+	</spawn>
+	<territory name="aden03_2417_91">
+		<add x="143972" y="-2188" zmin="-4636" zmax="-4436"/>
+		<add x="146472" y="-2140" zmin="-4636" zmax="-4436"/>
+		<add x="146460" y="-1664" zmin="-4636" zmax="-4436"/>
+		<add x="143952" y="-1664" zmin="-4636" zmax="-4436"/>
+	</territory>
+	<spawn name="aden03_2417_91" count="1" respawn="45">
+		<territory name="aden03_2417_91"/>
+		<npc id="21111"/><!--Лавовый Змей-->
+	</spawn>
+	<spawn name="aden03_2417_91" count="1" respawn="45">
+		<territory name="aden03_2417_91"/>
+		<npc id="21112"/><!--Пехотинец Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_91" count="1" respawn="45">
+		<territory name="aden03_2417_91"/>
+		<npc id="21113"/><!--Снайпер Орков Хамес-->
+	</spawn>
+	<territory name="aden03_2417_94">
+		<add x="137764" y="-3616" zmin="-4476" zmax="-4276"/>
+		<add x="139012" y="-2808" zmin="-4476" zmax="-4276"/>
+		<add x="138816" y="-2368" zmin="-4476" zmax="-4276"/>
+		<add x="137324" y="-3064" zmin="-4476" zmax="-4276"/>
+	</territory>
+	<spawn name="aden03_2417_94" count="1" respawn="45">
+		<territory name="aden03_2417_94"/>
+		<npc id="21108"/><!--Пучок Света-->
+	</spawn>
+	<spawn name="aden03_2417_94" count="1" respawn="45">
+		<territory name="aden03_2417_94"/>
+		<npc id="21109"/><!--Разведчик Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_94" count="1" respawn="45">
+		<territory name="aden03_2417_94"/>
+		<npc id="21110"/><!--Болотный Хищник-->
+	</spawn>
+	<territory name="aden03_2417_95">
+		<add x="136004" y="-4624" zmin="-4496" zmax="-4296"/>
+		<add x="136544" y="-4912" zmin="-4496" zmax="-4296"/>
+		<add x="137640" y="-3636" zmin="-4496" zmax="-4296"/>
+		<add x="137244" y="-3220" zmin="-4496" zmax="-4296"/>
+	</territory>
+	<spawn name="aden03_2417_95" count="1" respawn="45">
+		<territory name="aden03_2417_95"/>
+		<npc id="21108"/><!--Пучок Света-->
+	</spawn>
+	<spawn name="aden03_2417_95" count="1" respawn="45">
+		<territory name="aden03_2417_95"/>
+		<npc id="21109"/><!--Разведчик Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_95" count="1" respawn="45">
+		<territory name="aden03_2417_95"/>
+		<npc id="21110"/><!--Болотный Хищник-->
+	</spawn>
+	<territory name="aden03_2417_93">
+		<add x="139428" y="-2660" zmin="-4632" zmax="-4432"/>
+		<add x="143892" y="-2164" zmin="-4632" zmax="-4432"/>
+		<add x="143852" y="-1644" zmin="-4632" zmax="-4432"/>
+		<add x="141464" y="-1800" zmin="-4632" zmax="-4432"/>
+		<add x="139292" y="-2232" zmin="-4632" zmax="-4432"/>
+	</territory>
+	<spawn name="aden03_2417_93" count="3" respawn="45">
+		<territory name="aden03_2417_93"/>
+		<npc id="21111"/><!--Лавовый Змей-->
+	</spawn>
+	<spawn name="aden03_2417_93" count="2" respawn="45">
+		<territory name="aden03_2417_93"/>
+		<npc id="21112"/><!--Пехотинец Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_93" count="2" respawn="45">
+		<territory name="aden03_2417_93"/>
+		<npc id="21113"/><!--Снайпер Орков Хамес-->
+	</spawn>
+	<territory name="aden03_2417_98">
+		<add x="137552" y="-17024" zmin="-3968" zmax="-3368"/>
+		<add x="137964" y="-18544" zmin="-3968" zmax="-3368"/>
+		<add x="139060" y="-17100" zmin="-3968" zmax="-3368"/>
+		<add x="137836" y="-16264" zmin="-3968" zmax="-3368"/>
+	</territory>
+	<spawn name="aden03_2417_98" count="1" respawn="45">
+		<territory name="aden03_2417_98"/>
+		<npc id="21111"/><!--Лавовый Змей-->
+	</spawn>
+	<spawn name="aden03_2417_98" count="1" respawn="45">
+		<territory name="aden03_2417_98"/>
+		<npc id="21112"/><!--Пехотинец Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_98" count="1" respawn="45">
+		<territory name="aden03_2417_98"/>
+		<npc id="21113"/><!--Снайпер Орков Хамес-->
+	</spawn>
+	<territory name="aden03_2417_99">
+		<add x="154024" y="-19728" zmin="-2084" zmax="-1084"/>
+		<add x="155416" y="-20264" zmin="-2084" zmax="-1084"/>
+		<add x="156044" y="-18472" zmin="-2084" zmax="-1084"/>
+		<add x="154516" y="-17844" zmin="-2084" zmax="-1084"/>
+		<add x="153180" y="-17852" zmin="-2084" zmax="-1084"/>
+		<add x="152876" y="-18588" zmin="-2084" zmax="-1084"/>
+	</territory>
+	<spawn name="aden03_2417_99" count="2" respawn="45">
+		<territory name="aden03_2417_99"/>
+		<npc id="21114"/><!--Проклятый Хранитель-->
+	</spawn>
+	<spawn name="aden03_2417_99" count="3" respawn="45">
+		<territory name="aden03_2417_99"/>
+		<npc id="21115"/><!--Шаман Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_99" count="2" respawn="45">
+		<territory name="aden03_2417_99"/>
+		<npc id="21116"/><!--Владыка Орков Хамес-->
+	</spawn>
+	<territory name="aden03_2417_96">
+		<add x="137052" y="-5808" zmin="-3996" zmax="-3496"/>
+		<add x="137852" y="-6420" zmin="-3996" zmax="-3496"/>
+		<add x="138612" y="-4560" zmin="-3996" zmax="-3496"/>
+		<add x="137968" y="-4204" zmin="-3996" zmax="-3496"/>
+	</territory>
+	<spawn name="aden03_2417_96" count="1" respawn="45">
+		<territory name="aden03_2417_96"/>
+		<npc id="21108"/><!--Пучок Света-->
+	</spawn>
+	<spawn name="aden03_2417_96" count="1" respawn="45">
+		<territory name="aden03_2417_96"/>
+		<npc id="21109"/><!--Разведчик Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_96" count="2" respawn="45">
+		<territory name="aden03_2417_96"/>
+		<npc id="21110"/><!--Болотный Хищник-->
+	</spawn>
+	<territory name="aden03_2417_97">
+		<add x="135872" y="-6452" zmin="-4476" zmax="-3876"/>
+		<add x="136624" y="-7244" zmin="-4476" zmax="-3876"/>
+		<add x="136464" y="-5020" zmin="-4476" zmax="-3876"/>
+		<add x="136028" y="-4780" zmin="-4476" zmax="-3876"/>
+		<add x="135676" y="-5144" zmin="-4476" zmax="-3876"/>
+	</territory>
+	<spawn name="aden03_2417_97" count="1" respawn="45">
+		<territory name="aden03_2417_97"/>
+		<npc id="21108"/><!--Пучок Света-->
+	</spawn>
+	<spawn name="aden03_2417_97" count="1" respawn="45">
+		<territory name="aden03_2417_97"/>
+		<npc id="21109"/><!--Разведчик Орков Хамес-->
+	</spawn>
+	<spawn name="aden03_2417_97" count="1" respawn="45">
+		<territory name="aden03_2417_97"/>
+		<npc id="21110"/><!--Болотный Хищник-->
+	</spawn>
+	<spawn name="aden03_mb2417_05" count="1" respawn="129600" respawn_random="86400">
+		<point x="156666" y="-6009" z="-4144" h="21344"/>
+		<npc id="25453"/><!--Минас Анор-->
+	</spawn>	
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="144772" y="-21764" z="-3112" h="44684" />
+		<npc id="21651" /><!--Пылающий Дрейк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="143625" y="-22485" z="-3152" h="26583" />
+		<npc id="21651" /><!--Пылающий Дрейк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="144658" y="-21578" z="-3128" h="14374" />
+		<npc id="21651" /><!--Пылающий Дрейк-->
+	</spawn>
+		<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="145369" y="-21454" z="-3104" h="15344" />
+		<npc id="21653" /><!--Икедит-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="144768" y="-21039" z="-3160" h="59093" />
+		<npc id="21651" /><!--Пылающий Дрейк-->
+	</spawn>
+		<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="144766" y="-21714" z="-3120" h="12607" />
+		<npc id="21651" /><!--Пылающий Дрейк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="145181" y="-21709" z="-3112" h="28076" />
+		<npc id="21653" /><!--Икедит-->
+	</spawn>
+		<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="142744" y="-21351" z="-3176" h="28732" />
+		<npc id="21653" /><!--Икедит-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="143331" y="-22315" z="-3168" h="8907" />
+		<npc id="21653" /><!--Икедит-->
+	</spawn>
+		<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="143033" y="-22359" z="-3144" h="13141" />
+		<npc id="21653" /><!--Икедит-->
+	</spawn>
+		<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="145152" y="-22335" z="-3160" h="50131" />
+		<npc id="21650" /><!--Смотритель Топи-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="145523" y="-22496" z="-3144" h="5636" />
+		<npc id="21652" /><!--Пламенный Ифрит-->
+	</spawn>
+		<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="146534" y="-20459" z="-3432" h="12108" />
+		<npc id="21650" /><!--Смотритель Топи-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="147051" y="-21476" z="-3088" h="8434" />
+		<npc id="21652" /><!--Пламенный Ифрит-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="146529" y="-20440" z="-3432" h="20203" />
+		<npc id="21650" /><!--Смотритель Топи-->
+	</spawn>
+		<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="147339" y="-21567" z="-3120" h="27239" />
+		<npc id="21652" /><!--Пламенный Ифрит-->
+	</spawn>
+		<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="146604" y="-21982" z="-3096" h="58907" />
+		<npc id="21652" /><!--Пламенный Ифрит-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="147060" y="-22500" z="-3088" h="62606" />
+		<npc id="21650" /><!--Смотритель Топи-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="146157" y="-22216" z="-3096" h="48601" />
+		<npc id="21652" /><!--Пламенный Ифрит-->
+	</spawn>
+		<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="146395" y="-24695" z="-2928" h="6638" />
+		<npc id="21651" /><!--Пылающий Дрейк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="146223" y="-22736" z="-3120" h="14881" />
+		<npc id="21650" /><!--Смотритель Топи-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="147328" y="-24591" z="-3048" h="35324" />
+		<npc id="21653" /><!--Икедит-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="147477" y="-22902" z="-3248" h="65311" />
+		<npc id="21651" /><!--Пылающий Дрейк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="147589" y="-24088" z="-3160" h="41798" />
+		<npc id="21653" /><!--Икедит-->
+	</spawn>
+		<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="146298" y="-24788" z="-2896" h="3234" />
+		<npc id="21653" /><!--Икедит-->
+	</spawn>
+		<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="146665" y="-25011" z="-2928" h="9020" />
+		<npc id="21653" /><!--Икедит-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="146614" y="-24926" z="-2936" h="28884" />
+		<npc id="21653" /><!--Икедит-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="147355" y="-25300" z="-2984" h="59758" />
+		<npc id="21651" /><!--Пылающий Дрейк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="147082" y="-25119" z="-3016" h="1612" />
+		<npc id="21651" /><!--Пылающий Дрейк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="147040" y="-25107" z="-3016" h="38361" />
+		<npc id="21653" /><!--Икедит-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="147480" y="-25269" z="-2968" h="58086" />
+		<npc id="21651" /><!--Пылающий Дрейк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="146408" y="-24834" z="-2936" h="15147" />
+		<npc id="21651" /><!--Пылающий Дрейк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="145661" y="-25221" z="-2536" h="3870" />
+		<npc id="21653" /><!--Икедит-->
+	</spawn>
+		<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="148436" y="-22961" z="-3432" h="45135" />
+		<npc id="21651" /><!--Пылающий Дрейк-->
+	</spawn>
+		<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="148082" y="-23638" z="-3296" h="24695" />
+		<npc id="21651" /><!--Пылающий Дрейк-->
+	</spawn>
+		<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="148314" y="-24123" z="-3152" h="44168" />
+		<npc id="21651" /><!--Пылающий Дрейк-->
+	</spawn>
+		<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="149044" y="-22595" z="-3432" h="47710" />
+		<npc id="21653" /><!--Икедит-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="148088" y="-21470" z="-3432" h="55484" />
+		<npc id="21653" /><!--Икедит-->
+	</spawn>
+		<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="147794" y="-21658" z="-3376" h="14341" />
+		<npc id="21651" /><!--Пылающий Дрейк-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="148872" y="-21907" z="-3400" h="53026" />
+		<npc id="21653" /><!--Икедит-->
+	</spawn>
+		<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="145825" y="-15630" z="-4152" h="16452" />
+		<npc id="21652" /><!--Пламенный Ифрит-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="145889" y="-15827" z="-4120" h="29982" />
+		<npc id="21652" /><!--Пламенный Ифрит-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="146192" y="-16167" z="-4000" h="47275" />
+		<npc id="21650" /><!--Смотритель Топи-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="145485" y="-15572" z="-4184" h="24827" />
+		<npc id="21650" /><!--Смотритель Топи-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="145889" y="-15572" z="-4176" h="19868" />
+		<npc id="21650" /><!--Смотритель Топи-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="146433" y="-15831" z="-4056" h="8403" />
+		<npc id="21652" /><!--Пламенный Ифрит-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="146495" y="-15912" z="-4032" h="13083" />
+		<npc id="21650" /><!--Смотритель Топи-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="146495" y="-15997" z="-4032" h="46584" />
+		<npc id="21652" /><!--Пламенный Ифрит-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="146314" y="-16022" z="-4000" h="1856" />
+		<npc id="21650" /><!--Смотритель Топи-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="152472" y="-14712" z="-4400" h="1856" />
+		<npc id="34270" /><!--Брум-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="152600" y="-14808" z="-4400" h="1856" />
+		<npc id="34265" /><!--Мукта-->
+	</spawn>
+	<spawn name="Gigant" count="1" respawn="86400" respawn_random="12000">
+		<point x="143416" y="-5128" z="-4704" h="21344"/>
+		<npc id="25754"/><!--Гигант из Горящего Камня-->
+	</spawn>
+	<spawn name="Salamandra" count="1" respawn="86400" respawn_random="12000">
+		<point x="138584" y="-14760" z="-4336" h="21344"/>
+		<npc id="25755"/><!--Саламандра Гросс-->
+	</spawn>
+	<spawn name="Gross" count="1" respawn="86400" respawn_random="12000">
+		<point x="141624" y="-24472" z="-2016" h="21344"/>
+		<npc id="25756"/><!--Гросс Дре Ванул-->
+	</spawn>
+	<spawn name="Gross" count="1" respawn="86400" respawn_random="12000">
+		<point x="150696" y="-23448" z="-3440" h="21344"/>
+		<npc id="25757"/><!--Гросс Ифрит-->
+	</spawn>
+</list>

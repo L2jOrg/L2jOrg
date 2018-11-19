@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="12">	<!--Властитель Огня-->
+			<skill id="146" level="13" name="Антимагия(Anti Magic)" cost="84000" min_level="40"/>
+			<skill id="146" level="14" name="Антимагия(Anti Magic)" cost="84000" min_level="40"/>
+			<skill id="146" level="15" name="Антимагия(Anti Magic)" cost="84000" min_level="40"/>
+			<skill id="228" level="2" name="Быстрое Чтение Заклинаний(Fast Spell Casting)" cost="84000" min_level="40"/>
+			<skill id="234" level="9" name="Владение Магической Броней(Robe Mastery)" cost="84000" min_level="40"/>
+			<skill id="234" level="10" name="Владение Магической Броней(Robe Mastery)" cost="84000" min_level="40"/>
+			<skill id="234" level="11" name="Владение Магической Броней(Robe Mastery)" cost="84000" min_level="40"/>
+			<skill id="249" level="10" name="Владение Оружием(Weapon Mastery)" cost="84000" min_level="40"/>
+			<skill id="249" level="11" name="Владение Оружием(Weapon Mastery)" cost="84000" min_level="40"/>
+			<skill id="249" level="12" name="Владение Оружием(Weapon Mastery)" cost="84000" min_level="40"/>
+			<skill id="1160" level="2" name="Замедление(Slow)" cost="84000" min_level="40"/>
+			<skill id="1829" level="1" name="Мастер Заклинаний(Spell Master)" min_level="40"/>
+			<skill id="1230" level="1" name="Протуберанец(Prominence)" cost="84000" min_level="40"/>
+			<skill id="1230" level="2" name="Протуберанец(Prominence)" cost="84000" min_level="40"/>
+			<skill id="1232" level="1" name="Пылающая Кожа(Blazing Skin)" cost="84000" min_level="40"/>
+			<skill id="1171" level="1" name="Пылающий Круг(Blazing Circle)" cost="84000" min_level="40"/>
+			<skill id="1171" level="2" name="Пылающий Круг(Blazing Circle)" cost="84000" min_level="40"/>
+			<skill id="1297" level="1" name="Светлый Разум(Clear Mind)" item_id="49571" cost="84000" min_level="40"/>
+			<skill id="1231" level="1" name="Сияние Ауры(Aura Flare)" cost="84000" min_level="40"/>
+			<skill id="1231" level="2" name="Сияние Ауры(Aura Flare)" cost="84000" min_level="40"/>
+			<skill id="1275" level="1" name="Стрела Ауры(Aura Bolt)" cost="84000" min_level="40"/>
+			<skill id="213" level="3" name="Увеличение Маны(Boost Mana)" cost="84000" min_level="40"/>
+			<skill id="285" level="9" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="84000" min_level="40"/>
+			<skill id="285" level="10" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="84000" min_level="40"/>
+			<skill id="1069" level="10" name="Усыпление(Sleep)" cost="84000" min_level="40"/>
+			<skill id="1069" level="11" name="Усыпление(Sleep)" cost="84000" min_level="40"/>
+			<skill id="1069" level="12" name="Усыпление(Sleep)" cost="84000" min_level="40"/>
+			<skill id="146" level="16" name="Антимагия(Anti Magic)" cost="120000" min_level="42"/>
+			<skill id="234" level="12" name="Владение Магической Броней(Robe Mastery)" cost="120000" min_level="42"/>
+			<skill id="249" level="13" name="Владение Оружием(Weapon Mastery)" cost="120000" min_level="42"/>
+			<skill id="1230" level="3" name="Протуберанец(Prominence)" cost="120000" min_level="42"/>
+			<skill id="1171" level="3" name="Пылающий Круг(Blazing Circle)" cost="120000" min_level="42"/>
+			<skill id="1231" level="3" name="Сияние Ауры(Aura Flare)" cost="120000" min_level="42"/>
+			<skill id="285" level="11" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="120000" min_level="42"/>
+			<skill id="1069" level="13" name="Усыпление(Sleep)" cost="120000" min_level="42"/>
+			<skill id="146" level="17" name="Антимагия(Anti Magic)" cost="120000" min_level="43"/>
+			<skill id="234" level="13" name="Владение Магической Броней(Robe Mastery)" cost="120000" min_level="43"/>
+			<skill id="249" level="14" name="Владение Оружием(Weapon Mastery)" cost="120000" min_level="43"/>
+			<skill id="1069" level="14" name="Усыпление(Sleep)" cost="120000" min_level="43"/>
+			<skill id="146" level="18" name="Антимагия(Anti Magic)" cost="120000" min_level="44"/>
+			<skill id="212" level="2" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="120000" min_level="44"/>
+			<skill id="229" level="3" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="120000" min_level="44"/>
+			<skill id="234" level="14" name="Владение Магической Броней(Robe Mastery)" cost="120000" min_level="44"/>
+			<skill id="249" level="15" name="Владение Оружием(Weapon Mastery)" cost="120000" min_level="44"/>
+			<skill id="1160" level="3" name="Замедление(Slow)" cost="120000" min_level="44"/>
+			<skill id="1078" level="3" name="Концентрация(Concentration)" cost="120000" min_level="44"/>
+			<skill id="1230" level="4" name="Протуберанец(Prominence)" cost="120000" min_level="44"/>
+			<skill id="1171" level="4" name="Пылающий Круг(Blazing Circle)" cost="120000" min_level="44"/>
+			<skill id="1231" level="4" name="Сияние Ауры(Aura Flare)" cost="120000" min_level="44"/>
+			<skill id="1275" level="2" name="Стрела Ауры(Aura Bolt)" cost="120000" min_level="44"/>
+			<skill id="285" level="12" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="120000" min_level="44"/>
+			<skill id="1069" level="15" name="Усыпление(Sleep)" cost="120000" min_level="44"/>
+			<skill id="1072" level="1" name="Усыпляющее Облако(Sleeping Cloud)" item_id="3080" cost="120000" min_level="44"/>
+			<skill id="1800" level="1" name="Пират(Pirate)" min_level="45"/>
+			<skill id="146" level="19" name="Антимагия(Anti Magic)" cost="190000" min_level="46"/>
+			<skill id="234" level="15" name="Владение Магической Броней(Robe Mastery)" cost="190000" min_level="46"/>
+			<skill id="249" level="16" name="Владение Оружием(Weapon Mastery)" cost="190000" min_level="46"/>
+			<skill id="1230" level="5" name="Протуберанец(Prominence)" cost="190000" min_level="46"/>
+			<skill id="1171" level="5" name="Пылающий Круг(Blazing Circle)" cost="190000" min_level="46"/>
+			<skill id="1231" level="5" name="Сияние Ауры(Aura Flare)" cost="190000" min_level="46"/>
+			<skill id="285" level="13" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="190000" min_level="46"/>
+			<skill id="1069" level="16" name="Усыпление(Sleep)" cost="190000" min_level="46"/>
+			<skill id="146" level="20" name="Антимагия(Anti Magic)" cost="190000" min_level="47"/>
+			<skill id="234" level="16" name="Владение Магической Броней(Robe Mastery)" cost="190000" min_level="47"/>
+			<skill id="249" level="17" name="Владение Оружием(Weapon Mastery)" cost="190000" min_level="47"/>
+			<skill id="1069" level="17" name="Усыпление(Sleep)" cost="190000" min_level="47"/>
+			<skill id="146" level="21" name="Антимагия(Anti Magic)" cost="190000" min_level="48"/>
+			<skill id="164" level="3" name="Быстрый Повтор(Quick Recovery)" cost="190000" min_level="48"/>
+			<skill id="234" level="17" name="Владение Магической Броней(Robe Mastery)" cost="190000" min_level="48"/>
+			<skill id="249" level="18" name="Владение Оружием(Weapon Mastery)" cost="190000" min_level="48"/>
+			<skill id="1160" level="4" name="Замедление(Slow)" cost="190000" min_level="48"/>
+			<skill id="1056" level="1" name="Отмена(Cancellation)" item_id="3079" cost="190000" min_level="48"/>
+			<skill id="1230" level="6" name="Протуберанец(Prominence)" cost="190000" min_level="48"/>
+			<skill id="1232" level="2" name="Пылающая Кожа(Blazing Skin)" cost="190000" min_level="48"/>
+			<skill id="1171" level="6" name="Пылающий Круг(Blazing Circle)" cost="190000" min_level="48"/>
+			<skill id="1233" level="1" name="Разложение(Decay)" cost="190000" min_level="48"/>
+			<skill id="1297" level="2" name="Светлый Разум(Clear Mind)" cost="190000" min_level="48"/>
+			<skill id="1231" level="6" name="Сияние Ауры(Aura Flare)" cost="190000" min_level="48"/>
+			<skill id="1275" level="3" name="Стрела Ауры(Aura Bolt)" cost="190000" min_level="48"/>
+			<skill id="213" level="4" name="Увеличение Маны(Boost Mana)" cost="190000" min_level="48"/>
+			<skill id="285" level="14" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="190000" min_level="48"/>
+			<skill id="1069" level="18" name="Усыпление(Sleep)" cost="190000" min_level="48"/>
+			<skill id="146" level="22" name="Антимагия(Anti Magic)" cost="300000" min_level="50"/>
+			<skill id="234" level="18" name="Владение Магической Броней(Robe Mastery)" cost="300000" min_level="50"/>
+			<skill id="249" level="19" name="Владение Оружием(Weapon Mastery)" cost="300000" min_level="50"/>
+			<skill id="1230" level="7" name="Протуберанец(Prominence)" cost="300000" min_level="50"/>
+			<skill id="1171" level="7" name="Пылающий Круг(Blazing Circle)" cost="300000" min_level="50"/>
+			<skill id="1231" level="7" name="Сияние Ауры(Aura Flare)" cost="300000" min_level="50"/>
+			<skill id="285" level="15" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="300000" min_level="50"/>
+			<skill id="1069" level="19" name="Усыпление(Sleep)" cost="300000" min_level="50"/>
+			<skill id="146" level="23" name="Антимагия(Anti Magic)" cost="300000" min_level="51"/>
+			<skill id="234" level="19" name="Владение Магической Броней(Robe Mastery)" cost="300000" min_level="51"/>
+			<skill id="249" level="20" name="Владение Оружием(Weapon Mastery)" cost="300000" min_level="51"/>
+			<skill id="1069" level="20" name="Усыпление(Sleep)" cost="300000" min_level="51"/>
+			<skill id="146" level="24" name="Антимагия(Anti Magic)" cost="300000" min_level="52"/>
+			<skill id="1405" level="1" name="Божественное Вдохновение(Divine Inspiration)" item_id="8618" cost="300000" min_level="52"/>
+			<skill id="212" level="3" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="300000" min_level="52"/>
+			<skill id="229" level="4" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="300000" min_level="52"/>
+			<skill id="234" level="20" name="Владение Магической Броней(Robe Mastery)" cost="300000" min_level="52"/>
+			<skill id="249" level="21" name="Владение Оружием(Weapon Mastery)" cost="300000" min_level="52"/>
+			<skill id="1160" level="5" name="Замедление(Slow)" cost="300000" min_level="52"/>
+			<skill id="1078" level="4" name="Концентрация(Concentration)" cost="300000" min_level="52"/>
+			<skill id="1056" level="2" name="Отмена(Cancellation)" cost="300000" min_level="52"/>
+			<skill id="1230" level="8" name="Протуберанец(Prominence)" cost="300000" min_level="52"/>
+			<skill id="1171" level="8" name="Пылающий Круг(Blazing Circle)" cost="300000" min_level="52"/>
+			<skill id="1231" level="8" name="Сияние Ауры(Aura Flare)" cost="300000" min_level="52"/>
+			<skill id="1275" level="4" name="Стрела Ауры(Aura Bolt)" cost="300000" min_level="52"/>
+			<skill id="285" level="16" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="300000" min_level="52"/>
+			<skill id="1069" level="21" name="Усыпление(Sleep)" cost="300000" min_level="52"/>
+			<skill id="146" level="25" name="Антимагия(Anti Magic)" cost="480000" min_level="54"/>
+			<skill id="234" level="21" name="Владение Магической Броней(Robe Mastery)" cost="480000" min_level="54"/>
+			<skill id="249" level="22" name="Владение Оружием(Weapon Mastery)" cost="480000" min_level="54"/>
+			<skill id="1230" level="9" name="Протуберанец(Prominence)" cost="480000" min_level="54"/>
+			<skill id="1171" level="9" name="Пылающий Круг(Blazing Circle)" cost="480000" min_level="54"/>
+			<skill id="1231" level="9" name="Сияние Ауры(Aura Flare)" cost="480000" min_level="54"/>
+			<skill id="285" level="17" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="480000" min_level="54"/>
+			<skill id="1069" level="22" name="Усыпление(Sleep)" cost="480000" min_level="54"/>
+			<skill id="146" level="26" name="Антимагия(Anti Magic)" cost="480000" min_level="55"/>
+			<skill id="234" level="22" name="Владение Магической Броней(Robe Mastery)" cost="480000" min_level="55"/>
+			<skill id="249" level="23" name="Владение Оружием(Weapon Mastery)" cost="480000" min_level="55"/>
+			<skill id="1069" level="23" name="Усыпление(Sleep)" cost="480000" min_level="55"/>
+			<skill id="146" level="27" name="Антимагия(Anti Magic)" cost="480000" min_level="56"/>
+			<skill id="228" level="3" name="Быстрое Чтение Заклинаний(Fast Spell Casting)" cost="480000" min_level="56"/>
+			<skill id="234" level="23" name="Владение Магической Броней(Robe Mastery)" cost="480000" min_level="56"/>
+			<skill id="249" level="24" name="Владение Оружием(Weapon Mastery)" cost="480000" min_level="56"/>
+			<skill id="1160" level="6" name="Замедление(Slow)" cost="480000" min_level="56"/>
+			<skill id="1056" level="3" name="Отмена(Cancellation)" cost="480000" min_level="56"/>
+			<skill id="1230" level="10" name="Протуберанец(Prominence)" cost="480000" min_level="56"/>
+			<skill id="1232" level="3" name="Пылающая Кожа(Blazing Skin)" cost="480000" min_level="56"/>
+			<skill id="1171" level="10" name="Пылающий Круг(Blazing Circle)" cost="480000" min_level="56"/>
+			<skill id="1233" level="2" name="Разложение(Decay)" cost="480000" min_level="56"/>
+			<skill id="1297" level="3" name="Светлый Разум(Clear Mind)" cost="480000" min_level="56"/>
+			<skill id="1231" level="10" name="Сияние Ауры(Aura Flare)" cost="480000" min_level="56"/>
+			<skill id="1275" level="5" name="Стрела Ауры(Aura Bolt)" cost="480000" min_level="56"/>
+			<skill id="213" level="5" name="Увеличение Маны(Boost Mana)" cost="480000" min_level="56"/>
+			<skill id="285" level="18" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="480000" min_level="56"/>
+			<skill id="1069" level="24" name="Усыпление(Sleep)" cost="480000" min_level="56"/>
+			<skill id="1072" level="2" name="Усыпляющее Облако(Sleeping Cloud)" cost="480000" min_level="56"/>
+			<skill id="146" level="28" name="Антимагия(Anti Magic)" cost="490000" min_level="57"/>
+			<skill id="234" level="24" name="Владение Магической Броней(Robe Mastery)" cost="490000" min_level="57"/>
+			<skill id="249" level="25" name="Владение Оружием(Weapon Mastery)" cost="490000" min_level="57"/>
+			<skill id="1230" level="11" name="Протуберанец(Prominence)" cost="490000" min_level="57"/>
+			<skill id="1231" level="11" name="Сияние Ауры(Aura Flare)" cost="490000" min_level="57"/>
+			<skill id="1069" level="25" name="Усыпление(Sleep)" cost="490000" min_level="57"/>
+			<skill id="146" level="29" name="Антимагия(Anti Magic)" cost="490000" min_level="58"/>
+			<skill id="212" level="4" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="490000" min_level="58"/>
+			<skill id="234" level="25" name="Владение Магической Броней(Robe Mastery)" cost="490000" min_level="58"/>
+			<skill id="249" level="26" name="Владение Оружием(Weapon Mastery)" cost="490000" min_level="58"/>
+			<skill id="1417" level="1" name="Вспышка Ауры(Aura Flash)" item_id="8891" cost="490000" min_level="58"/>
+			<skill id="1160" level="7" name="Замедление(Decrease Speed)" cost="490000" min_level="58"/>
+			<skill id="1296" level="1" name="Огненный Дождь(Rain of Fire)" cost="490000" min_level="58"/>
+			<skill id="1056" level="4" name="Отмена(Cancellation)" cost="490000" min_level="58"/>
+			<skill id="1230" level="12" name="Протуберанец(Prominence)" cost="490000" min_level="58"/>
+			<skill id="1171" level="11" name="Пылающий Круг(Blazing Circle)" cost="490000" min_level="58"/>
+			<skill id="1231" level="12" name="Сияние Ауры(Aura Flare)" cost="490000" min_level="58"/>
+			<skill id="1275" level="6" name="Стрела Ауры(Aura Bolt)" cost="490000" min_level="58"/>
+			<skill id="285" level="19" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="490000" min_level="58"/>
+			<skill id="1069" level="26" name="Усыпление(Sleep)" cost="490000" min_level="58"/>
+			<skill id="146" level="30" name="Антимагия(Anti Magic)" cost="590000" min_level="59"/>
+			<skill id="234" level="26" name="Владение Магической Броней(Robe Mastery)" cost="590000" min_level="59"/>
+			<skill id="249" level="27" name="Владение Оружием(Weapon Mastery)" cost="590000" min_level="59"/>
+			<skill id="1230" level="13" name="Протуберанец(Prominence)" cost="590000" min_level="59"/>
+			<skill id="1231" level="13" name="Сияние Ауры(Aura Flare)" cost="590000" min_level="59"/>
+			<skill id="1069" level="27" name="Усыпление(Sleep)" cost="590000" min_level="59"/>
+			<skill id="146" level="31" name="Антимагия(Anti Magic)" cost="590000" min_level="60"/>
+			<skill id="229" level="5" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="590000" min_level="60"/>
+			<skill id="234" level="27" name="Владение Магической Броней(Robe Mastery)" cost="590000" min_level="60"/>
+			<skill id="249" level="28" name="Владение Оружием(Weapon Mastery)" cost="590000" min_level="60"/>
+			<skill id="1160" level="8" name="Замедление(Slow)" cost="590000" min_level="60"/>
+			<skill id="1078" level="5" name="Концентрация(Concentration)" cost="590000" min_level="60"/>
+			<skill id="1296" level="2" name="Огненный Дождь(Rain of Fire)" cost="590000" min_level="60"/>
+			<skill id="1056" level="5" name="Отмена(Cancellation)" cost="590000" min_level="60"/>
+			<skill id="1230" level="14" name="Протуберанец(Prominence)" cost="590000" min_level="60"/>
+			<skill id="1171" level="12" name="Пылающий Круг(Blazing Circle)" cost="590000" min_level="60"/>
+			<skill id="1231" level="14" name="Сияние Ауры(Aura Flare)" cost="590000" min_level="60"/>
+			<skill id="1275" level="7" name="Стрела Ауры(Aura Bolt)" cost="590000" min_level="60"/>
+			<skill id="1801" level="1" name="Темный Ассасин(Dark Assassin)" min_level="60"/>
+			<skill id="213" level="6" name="Увеличение Маны(Boost Mana)" cost="590000" min_level="60"/>
+			<skill id="285" level="20" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="590000" min_level="60"/>
+			<skill id="1069" level="28" name="Усыпление(Sleep)" cost="590000" min_level="60"/>
+			<skill id="146" level="32" name="Антимагия(Anti Magic)" cost="710000" min_level="61"/>
+			<skill id="1405" level="2" name="Божественное Вдохновение(Divine Inspiration)" item_id="8619" cost="710000" min_level="61"/>
+			<skill id="234" level="28" name="Владение Магической Броней(Robe Mastery)" cost="710000" min_level="61"/>
+			<skill id="249" level="29" name="Владение Оружием(Weapon Mastery)" cost="710000" min_level="61"/>
+			<skill id="1230" level="15" name="Протуберанец(Prominence)" cost="710000" min_level="61"/>
+			<skill id="1231" level="15" name="Сияние Ауры(Aura Flare)" cost="710000" min_level="61"/>
+			<skill id="1069" level="29" name="Усыпление(Sleep)" cost="710000" min_level="61"/>
+			<skill id="146" level="33" name="Антимагия(Anti Magic)" cost="710000" min_level="62"/>
+			<skill id="234" level="29" name="Владение Магической Броней(Robe Mastery)" cost="710000" min_level="62"/>
+			<skill id="249" level="30" name="Владение Оружием(Weapon Mastery)" cost="710000" min_level="62"/>
+			<skill id="1417" level="2" name="Вспышка Ауры(Aura Flash)" cost="710000" min_level="62"/>
+			<skill id="1160" level="9" name="Замедление(Slow)" cost="710000" min_level="62"/>
+			<skill id="1296" level="3" name="Огненный Дождь(Rain of Fire)" cost="710000" min_level="62"/>
+			<skill id="1056" level="6" name="Отмена(Cancellation)" cost="710000" min_level="62"/>
+			<skill id="1230" level="16" name="Протуберанец(Prominence)" cost="710000" min_level="62"/>
+			<skill id="1171" level="13" name="Пылающий Круг(Blazing Circle)" cost="710000" min_level="62"/>
+			<skill id="1297" level="4" name="Светлый Разум(Clear Mind)" cost="710000" min_level="62"/>
+			<skill id="1231" level="16" name="Сияние Ауры(Aura Flare)" cost="710000" min_level="62"/>
+			<skill id="1275" level="8" name="Стрела Ауры(Aura Bolt)" cost="710000" min_level="62"/>
+			<skill id="285" level="21" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="710000" min_level="62"/>
+			<skill id="1069" level="30" name="Усыпление(Sleep)" cost="710000" min_level="62"/>
+			<skill id="1072" level="3" name="Усыпляющее Облако(Sleeping Cloud)" cost="710000" min_level="62"/>
+			<skill id="146" level="34" name="Антимагия(Anti Magic)" cost="900000" min_level="63"/>
+			<skill id="234" level="30" name="Владение Магической Броней(Robe Mastery)" cost="900000" min_level="63"/>
+			<skill id="249" level="31" name="Владение Оружием(Weapon Mastery)" cost="900000" min_level="63"/>
+			<skill id="1230" level="17" name="Протуберанец(Prominence)" cost="900000" min_level="63"/>
+			<skill id="1231" level="17" name="Сияние Ауры(Aura Flare)" cost="900000" min_level="63"/>
+			<skill id="1069" level="31" name="Усыпление(Sleep)" cost="900000" min_level="63"/>
+			<skill id="146" level="35" name="Антимагия(Anti Magic)" cost="900000" min_level="64"/>
+			<skill id="212" level="5" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="900000" min_level="64"/>
+			<skill id="234" level="31" name="Владение Магической Броней(Robe Mastery)" cost="900000" min_level="64"/>
+			<skill id="249" level="32" name="Владение Оружием(Weapon Mastery)" cost="900000" min_level="64"/>
+			<skill id="1160" level="10" name="Замедление(Slow)" cost="900000" min_level="64"/>
+			<skill id="1296" level="4" name="Огненный Дождь(Rain of Fire)" cost="900000" min_level="64"/>
+			<skill id="1056" level="7" name="Отмена(Cancellation)" cost="900000" min_level="64"/>
+			<skill id="1230" level="18" name="Протуберанец(Prominence)" cost="900000" min_level="64"/>
+			<skill id="1171" level="14" name="Пылающий Круг(Blazing Circle)" cost="900000" min_level="64"/>
+			<skill id="1233" level="3" name="Разложение(Decay)" cost="900000" min_level="64"/>
+			<skill id="1231" level="18" name="Сияние Ауры(Aura Flare)" cost="900000" min_level="64"/>
+			<skill id="1275" level="9" name="Стрела Ауры(Aura Bolt)" cost="900000" min_level="64"/>
+			<skill id="285" level="22" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="900000" min_level="64"/>
+			<skill id="1069" level="32" name="Усыпление(Sleep)" cost="900000" min_level="64"/>
+			<skill id="146" level="36" name="Антимагия(Anti Magic)" cost="1100000" min_level="65"/>
+			<skill id="234" level="32" name="Владение Магической Броней(Robe Mastery)" cost="1100000" min_level="65"/>
+			<skill id="249" level="33" name="Владение Оружием(Weapon Mastery)" cost="1100000" min_level="65"/>
+			<skill id="1230" level="19" name="Протуберанец(Prominence)" cost="1100000" min_level="65"/>
+			<skill id="1231" level="19" name="Сияние Ауры(Aura Flare)" cost="1100000" min_level="65"/>
+			<skill id="1069" level="33" name="Усыпление(Sleep)" cost="1100000" min_level="65"/>
+			<skill id="146" level="37" name="Антимагия(Anti Magic)" cost="1100000" min_level="66"/>
+			<skill id="234" level="33" name="Владение Магической Броней(Robe Mastery)" cost="1100000" min_level="66"/>
+			<skill id="249" level="34" name="Владение Оружием(Weapon Mastery)" cost="1100000" min_level="66"/>
+			<skill id="1417" level="3" name="Вспышка Ауры(Aura Flash)" cost="1100000" min_level="66"/>
+			<skill id="1160" level="11" name="Замедление(Slow)" cost="1100000" min_level="66"/>
+			<skill id="1296" level="5" name="Огненный Дождь(Rain of Fire)" cost="1100000" min_level="66"/>
+			<skill id="1056" level="8" name="Отмена(Cancellation)" cost="1100000" min_level="66"/>
+			<skill id="1230" level="20" name="Протуберанец(Prominence)" cost="1100000" min_level="66"/>
+			<skill id="1171" level="15" name="Пылающий Круг(Blazing Circle)" cost="1100000" min_level="66"/>
+			<skill id="1231" level="20" name="Сияние Ауры(Aura Flare)" cost="1100000" min_level="66"/>
+			<skill id="1275" level="10" name="Стрела Ауры(Aura Bolt)" cost="1100000" min_level="66"/>
+			<skill id="213" level="7" name="Увеличение Маны(Boost Mana)" cost="1100000" min_level="66"/>
+			<skill id="285" level="23" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="1100000" min_level="66"/>
+			<skill id="1069" level="34" name="Усыпление(Sleep)" cost="1100000" min_level="66"/>
+			<skill id="1072" level="4" name="Усыпляющее Облако(Sleeping Cloud)" cost="1100000" min_level="66"/>
+			<skill id="146" level="38" name="Антимагия(Anti Magic)" cost="1400000" min_level="67"/>
+			<skill id="234" level="34" name="Владение Магической Броней(Robe Mastery)" cost="1400000" min_level="67"/>
+			<skill id="249" level="35" name="Владение Оружием(Weapon Mastery)" cost="1400000" min_level="67"/>
+			<skill id="1230" level="21" name="Протуберанец(Prominence)" cost="1400000" min_level="67"/>
+			<skill id="1231" level="21" name="Сияние Ауры(Aura Flare)" cost="1400000" min_level="67"/>
+			<skill id="1069" level="35" name="Усыпление(Sleep)" cost="1400000" min_level="67"/>
+			<skill id="146" level="39" name="Антимагия(Anti Magic)" cost="1400000" min_level="68"/>
+			<skill id="1288" level="1" name="Аура Симфонии(Aura Symphony)" cost="1400000" min_level="68"/>
+			<skill id="229" level="6" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="1400000" min_level="68"/>
+			<skill id="234" level="35" name="Владение Магической Броней(Robe Mastery)" cost="1400000" min_level="68"/>
+			<skill id="249" level="36" name="Владение Оружием(Weapon Mastery)" cost="1400000" min_level="68"/>
+			<skill id="1160" level="12" name="Замедление(Slow)" cost="1400000" min_level="68"/>
+			<skill id="1078" level="6" name="Концентрация(Concentration)" cost="1400000" min_level="68"/>
+			<skill id="1296" level="6" name="Огненный Дождь(Rain of Fire)" cost="1400000" min_level="68"/>
+			<skill id="1056" level="9" name="Отмена(Cancellation)" cost="1400000" min_level="68"/>
+			<skill id="1230" level="22" name="Протуберанец(Prominence)" cost="1400000" min_level="68"/>
+			<skill id="1171" level="16" name="Пылающий Круг(Blazing Circle)" cost="1400000" min_level="68"/>
+			<skill id="1297" level="5" name="Светлый Разум(Clear Mind)" cost="1400000" min_level="68"/>
+			<skill id="1231" level="22" name="Сияние Ауры(Aura Flare)" cost="1400000" min_level="68"/>
+			<skill id="1275" level="11" name="Стрела Ауры(Aura Bolt)" cost="1400000" min_level="68"/>
+			<skill id="285" level="24" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="1400000" min_level="68"/>
+			<skill id="1069" level="36" name="Усыпление(Sleep)" cost="1400000" min_level="68"/>
+			<skill id="146" level="40" name="Антимагия(Anti Magic)" cost="1700000" min_level="69"/>
+			<skill id="234" level="36" name="Владение Магической Броней(Robe Mastery)" cost="1700000" min_level="69"/>
+			<skill id="249" level="37" name="Владение Оружием(Weapon Mastery)" cost="1700000" min_level="69"/>
+			<skill id="1230" level="23" name="Протуберанец(Prominence)" cost="1700000" min_level="69"/>
+			<skill id="1231" level="23" name="Сияние Ауры(Aura Flare)" cost="1700000" min_level="69"/>
+			<skill id="1069" level="37" name="Усыпление(Sleep)" cost="1700000" min_level="69"/>
+			<skill id="146" level="41" name="Антимагия(Anti Magic)" cost="1700000" min_level="70"/>
+			<skill id="234" level="37" name="Владение Магической Броней(Robe Mastery)" cost="1700000" min_level="70"/>
+			<skill id="249" level="38" name="Владение Оружием(Weapon Mastery)" cost="1700000" min_level="70"/>
+			<skill id="1417" level="4" name="Вспышка Ауры(Aura Flash)" cost="1700000" min_level="70"/>
+			<skill id="1160" level="13" name="Замедление(Slow)" cost="1700000" min_level="70"/>
+			<skill id="1289" level="1" name="Инферно(Inferno)" cost="1700000" min_level="70"/>
+			<skill id="1296" level="7" name="Огненный Дождь(Rain of Fire)" cost="1700000" min_level="70"/>
+			<skill id="1056" level="10" name="Отмена(Cancellation)" cost="1700000" min_level="70"/>
+			<skill id="1230" level="24" name="Протуберанец(Prominence)" cost="1700000" min_level="70"/>
+			<skill id="1171" level="17" name="Пылающий Круг(Blazing Circle)" cost="1700000" min_level="70"/>
+			<skill id="1802" level="1" name="Светлый Ассасин(White Assassin)" min_level="70"/>
+			<skill id="1231" level="24" name="Сияние Ауры(Aura Flare)" cost="1700000" min_level="70"/>
+			<skill id="1275" level="12" name="Стрела Ауры(Aura Bolt)" cost="1700000" min_level="70"/>
+			<skill id="285" level="25" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="1700000" min_level="70"/>
+			<skill id="1069" level="38" name="Усыпление(Sleep)" cost="1700000" min_level="70"/>
+			<skill id="1072" level="5" name="Усыпляющее Облако(Sleeping Cloud)" cost="1700000" min_level="70"/>
+			<skill id="146" level="42" name="Антимагия(Anti Magic)" cost="2100000" min_level="71"/>
+			<skill id="234" level="38" name="Владение Магической Броней(Robe Mastery)" cost="2100000" min_level="71"/>
+			<skill id="249" level="39" name="Владение Оружием(Weapon Mastery)" cost="2100000" min_level="71"/>
+			<skill id="1230" level="25" name="Протуберанец(Prominence)" cost="2100000" min_level="71"/>
+			<skill id="1231" level="25" name="Сияние Ауры(Aura Flare)" cost="2100000" min_level="71"/>
+			<skill id="1069" level="39" name="Усыпление(Sleep)" cost="2100000" min_level="71"/>
+			<skill id="146" level="43" name="Антимагия(Anti Magic)" cost="2100000" min_level="72"/>
+			<skill id="234" level="39" name="Владение Магической Броней(Robe Mastery)" cost="2100000" min_level="72"/>
+			<skill id="249" level="40" name="Владение Оружием(Weapon Mastery)" cost="2100000" min_level="72"/>
+			<skill id="1160" level="14" name="Замедление(Slow)" cost="2100000" min_level="72"/>
+			<skill id="1296" level="8" name="Огненный Дождь(Rain of Fire)" cost="2100000" min_level="72"/>
+			<skill id="1056" level="11" name="Отмена(Cancellation)" cost="2100000" min_level="72"/>
+			<skill id="1230" level="26" name="Протуберанец(Prominence)" cost="2100000" min_level="72"/>
+			<skill id="1171" level="18" name="Пылающий Круг(Blazing Circle)" cost="2100000" min_level="72"/>
+			<skill id="1231" level="26" name="Сияние Ауры(Aura Flare)" cost="2100000" min_level="72"/>
+			<skill id="1292" level="1" name="Стихийное Нападение(Elemental Assault)" cost="2100000" min_level="72"/>
+			<skill id="1275" level="13" name="Стрела Ауры(Aura Bolt)" cost="2100000" min_level="72"/>
+			<skill id="213" level="8" name="Увеличение Маны(Boost Mana)" cost="2100000" min_level="72"/>
+			<skill id="285" level="26" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="2100000" min_level="72"/>
+			<skill id="1069" level="40" name="Усыпление(Sleep)" cost="2100000" min_level="72"/>
+			<skill id="146" level="44" name="Антимагия(Anti Magic)" cost="2500000" min_level="73"/>
+			<skill id="234" level="40" name="Владение Магической Броней(Robe Mastery)" cost="2500000" min_level="73"/>
+			<skill id="249" level="41" name="Владение Оружием(Weapon Mastery)" cost="2500000" min_level="73"/>
+			<skill id="1230" level="27" name="Протуберанец(Prominence)" cost="2500000" min_level="73"/>
+			<skill id="1231" level="27" name="Сияние Ауры(Aura Flare)" cost="2500000" min_level="73"/>
+			<skill id="1069" level="41" name="Усыпление(Sleep)" cost="2500000" min_level="73"/>
+			<skill id="146" level="45" name="Антимагия(Anti Magic)" cost="2500000" min_level="74"/>
+			<skill id="212" level="6" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="2500000" min_level="74"/>
+			<skill id="229" level="7" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="2500000" min_level="74"/>
+			<skill id="234" level="41" name="Владение Магической Броней(Robe Mastery)" cost="2500000" min_level="74"/>
+			<skill id="249" level="42" name="Владение Оружием(Weapon Mastery)" cost="2500000" min_level="74"/>
+			<skill id="1417" level="5" name="Вспышка Ауры(Aura Flash)" cost="2500000" min_level="74"/>
+			<skill id="1160" level="15" name="Замедление(Slow)" cost="2500000" min_level="74"/>
+			<skill id="1296" level="9" name="Огненный Дождь(Rain of Fire)" cost="2500000" min_level="74"/>
+			<skill id="1056" level="12" name="Отмена(Cancellation)" cost="2500000" min_level="74"/>
+			<skill id="1230" level="28" name="Протуберанец(Prominence)" cost="2500000" min_level="74"/>
+			<skill id="1171" level="19" name="Пылающий Круг(Blazing Circle)" cost="2500000" min_level="74"/>
+			<skill id="1233" level="4" name="Разложение(Decay)" cost="2500000" min_level="74"/>
+			<skill id="1297" level="6" name="Светлый Разум(Clear Mind)" cost="2500000" min_level="74"/>
+			<skill id="1231" level="28" name="Сияние Ауры(Aura Flare)" cost="2500000" min_level="74"/>
+			<skill id="1275" level="14" name="Стрела Ауры(Aura Bolt)" cost="2500000" min_level="74"/>
+			<skill id="285" level="27" name="Ускоренный Прирост Маны(Higher Mana Gain)" cost="2500000" min_level="74"/>
+			<skill id="1069" level="42" name="Усыпление(Sleep)" cost="2500000" min_level="74"/>
+		</class>
+	</normal_skill_tree>
+</list>

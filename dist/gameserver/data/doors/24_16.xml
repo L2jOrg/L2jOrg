@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="24160001" name="godad_castle_agit_001_001" hp="158250" pdef="644" mdef="518">
+		<pos x="146438" y="-55458" z="-2792"/>
+		<shape ax="146450" ay="-55504" bx="146443" by="-55453" cx="146432" cy="-55455" dx="146438" dy="-55506" minz="-2821" maxz="-2371"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="47"/>
+		</ai_params>
+	</door>
+	<door id="24160002" name="godad_castle_agit_001_002" hp="158250" pdef="644" mdef="518">
+		<pos x="146449" y="-55547" z="-2792"/>
+		<shape ax="146437" ay="-55499" bx="146444" by="-55552" cx="146455" cy="-55550" dx="146449" dy="-55497" minz="-2819" maxz="-2369"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="47"/>
+		</ai_params>
+	</door>
+	<door id="24160003" name="godad_castle_agit_002_001" hp="158250" pdef="644" mdef="518">
+		<pos x="147071" y="-56472" z="-2792"/>
+		<shape ax="147117" ay="-56489" bx="147070" by="-56465" cx="147065" cy="-56475" dx="147111" dy="-56500" minz="-2815" maxz="-2365"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="48"/>
+		</ai_params>
+	</door>
+	<door id="24160004" name="godad_castle_agit_002_002" hp="158250" pdef="644" mdef="518">
+		<pos x="147151" y="-56514" z="-2792"/>
+		<shape ax="147105" ay="-56498" bx="147151" by="-56522" cx="147158" cy="-56511" dx="147111" dy="-56486" minz="-2818" maxz="-2368"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="48"/>
+		</ai_params>
+	</door>
+	<door id="24160005" name="godad_castle_agit_003_001" hp="158250" pdef="644" mdef="518">
+		<pos x="148262" y="-56520" z="-2792"/>
+		<shape ax="148302" ay="-56490" bx="148255" by="-56515" cx="148262" cy="-56529" dx="148310" dy="-56505" minz="-2823" maxz="-2373"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="49"/>
+		</ai_params>
+	</door>
+	<door id="24160006" name="godad_castle_agit_003_002" hp="158250" pdef="644" mdef="518">
+		<pos x="148342" y="-56478" z="-2792"/>
+		<shape ax="148303" ay="-56508" bx="148348" by="-56483" cx="148342" cy="-56470" dx="148296" dy="-56494" minz="-2824" maxz="-2374"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="49"/>
+		</ai_params>
+	</door>
+	<door id="24160007" name="godad_castle_agit_004_001" hp="158250" pdef="644" mdef="518">
+		<pos x="148971" y="-55557" z="-2792"/>
+		<shape ax="148971" ay="-55509" bx="148965" by="-55560" cx="148976" cy="-55561" dx="148982" dy="-55511" minz="-2812" maxz="-2362"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="50"/>
+		</ai_params>
+	</door>
+	<door id="24160008" name="godad_castle_agit_004_002" hp="158250" pdef="644" mdef="518">
+		<pos x="148982" y="-55468" z="-2792"/>
+		<shape ax="148982" ay="-55520" bx="148988" by="-55465" cx="148978" cy="-55464" dx="148970" dy="-55518" minz="-2821" maxz="-2371"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="50"/>
+		</ai_params>
+	</door>
+	<door id="24160009" name="godad_castle_outter_002" hp="949500" pdef="644" mdef="518">
+		<pos x="147642" y="-45571" z="-1945"/>
+		<shape ax="147448" ay="-45584" bx="147663" by="-45583" cx="147663" cy="-45553" dx="147449" dy="-45552" minz="-2116" maxz="-1796"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24160010" name="godad_castle_outter_001" hp="949500" pdef="644" mdef="518">
+		<pos x="147290" y="-45571" z="-1945"/>
+		<shape ax="147273" ay="-45584" bx="147480" by="-45583" cx="147480" cy="-45552" dx="147272" dy="-45553" minz="-2116" maxz="-1796"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24160011" name="godad_castle_side_door_001" hp="474750" pdef="644" mdef="518">
+		<pos x="149143" y="-48368" z="-2223"/>
+		<shape ax="149158" ay="-48384" bx="149158" by="-48098" cx="149129" cy="-48098" dx="149129" dy="-48384" minz="-2411" maxz="-2155"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24160012" name="godad_castle_side_door_002" hp="474750" pdef="644" mdef="518">
+		<pos x="145792" y="-48368" z="-2223"/>
+		<shape ax="145809" ay="-48384" bx="145810" by="-48098" cx="145778" cy="-48098" dx="145778" dy="-48384" minz="-2410" maxz="-2154"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24160013" name="godad_castle_side_door_003" hp="949500" pdef="644" mdef="518">
+		<pos x="148997" y="-47794" z="-1511"/>
+		<shape ax="148940" ay="-47715" bx="149021" by="-47889" cx="149055" cy="-47873" dx="148974" dy="-47698" minz="-1625" maxz="-1369"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24160014" name="godad_castle_side_door_004" hp="949500" pdef="644" mdef="518">
+		<pos x="145930" y="-47793" z="-1511"/>
+		<shape ax="145954" ay="-47698" bx="145873" by="-47873" cx="145906" cy="-47889" dx="145987" dy="-47714" minz="-1625" maxz="-1369"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24160015" name="godad_castle_station_001" hp="474750" pdef="644" mdef="518">
+		<pos x="148750" y="-49120" z="-588"/>
+		<shape ax="148650" ay="-49143" bx="148866" by="-49142" cx="148865" cy="-49092" dx="148651" dy="-49092" minz="-715" maxz="-459"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24160016" name="godad_castle_station_002" hp="474750" pdef="644" mdef="518">
+		<pos x="146180" y="-49121" z="-588"/>
+		<shape ax="146080" ay="-49144" bx="146296" by="-49143" cx="146295" cy="-49093" dx="146081" dy="-49093" minz="-715" maxz="-459"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24160017" name="godad_castle_ctr_001" hp="118687.5" pdef="644" mdef="518">
+		<pos x="150248" y="-48577" z="-1659"/>
+		<shape ax="150148" ay="-48600" bx="150363" by="-48600" cx="150363" cy="-48550" dx="150148" dy="-48549" minz="-1775" maxz="-1519"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24160018" name="godad_castle_ctr_002" hp="118687.5" pdef="644" mdef="518">
+		<pos x="144682" y="-48577" z="-1659"/>
+		<shape ax="144582" ay="-48600" bx="144797" by="-48600" cx="144797" cy="-48550" dx="144582" dy="-48549" minz="-1775" maxz="-1519"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24160019" name="godad_castle_inner_001" hp="2036520" pdef="644" mdef="518">
+		<pos x="148751" y="-48603" z="-2290"/>
+		<shape ax="148736" ay="-48534" bx="148736" by="-48680" cx="148763" cy="-48679" dx="148764" dy="-48528" minz="-2415" maxz="-2159"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="24160020" name="godad_castle_inner_002" hp="2036520" pdef="644" mdef="518">
+		<pos x="146180" y="-48603" z="-2290"/>
+		<shape ax="146165" ay="-48528" bx="146165" by="-48680" cx="146192" cy="-48679" dx="146193" dy="-48528" minz="-2414" maxz="-2158"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="24160021" name="godad_castle_s.godad_castle_brokenwall01A" hp="2036520" pdef="837" mdef="674" type="WALL">
+		<pos x="150106" y="-47523" z="-2289"/>
+		<shape ax="149870" ay="-47957" bx="150635" by="-47800" cx="150332" cy="-47039" dx="149637" dy="-47345" minz="-2572" maxz="-2112"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24160022" name="godad_castle_s.godad_castle_brokenwall02A" hp="2036520" pdef="837" mdef="674" type="WALL">
+		<pos x="144824" y="-47523" z="-2289"/>
+		<shape ax="144296" ay="-47803" bx="145059" by="-47957" cx="145286" cy="-47357" dx="144600" dy="-47011" minz="-2572" maxz="-2112"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="24160023" name="godad_castle_inner_003" hp="2036520" pdef="644" mdef="518">
+		<pos x="147464" y="-46200" z="-1987"/>
+		<shape ax="147366" ay="-46217" bx="147562" by="-46217" cx="147562" cy="-46171" dx="147367" dy="-46171" minz="-2112" maxz="-1856"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+</list>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="8">	<!--Искатель Сокровищ-->
+			<skill id="221" level="1" name="Бесшумное Движение(Silent Move)" cost="95000" min_level="40"/>
+			<skill id="312" level="6" name="Боевая Стойка Коварства(Vicious Stance)" cost="95000" min_level="40"/>
+			<skill id="209" level="9" name="Владение Кинжалом(Dagger Mastery)" cost="95000" min_level="40"/>
+			<skill id="209" level="10" name="Владение Кинжалом(Dagger Mastery)" cost="95000" min_level="40"/>
+			<skill id="209" level="11" name="Владение Кинжалом(Dagger Mastery)" cost="95000" min_level="40"/>
+			<skill id="233" level="11" name="Владение Легкой Броней(Light Armor Mastery)" cost="95000" min_level="40"/>
+			<skill id="233" level="12" name="Владение Легкой Броней(Light Armor Mastery)" cost="95000" min_level="40"/>
+			<skill id="233" level="13" name="Владение Легкой Броней(Light Armor Mastery)" cost="95000" min_level="40"/>
+			<skill id="148" level="3" name="Жизненная Сила(Vital Force)" cost="95000" min_level="40"/>
+			<skill id="193" level="3" name="Критическая Мощность(Critical Damage)" cost="95000" min_level="40"/>
+			<skill id="27" level="6" name="Открыть(Unlock)" cost="95000" min_level="40"/>
+			<skill id="60" level="1" name="Притвориться Мертвым(Fake Death)" cost="95000" min_level="40"/>
+			<skill id="263" level="1" name="Смертельный Импульс(Deadly Blow)" cost="95000" min_level="40"/>
+			<skill id="263" level="2" name="Смертельный Импульс(Deadly Blow)" cost="95000" min_level="40"/>
+			<skill id="263" level="3" name="Смертельный Импульс(Deadly Blow)" cost="95000" min_level="40"/>
+			<skill id="30" level="1" name="Удар в Спину(Backstab)" cost="95000" min_level="40"/>
+			<skill id="30" level="2" name="Удар в Спину(Backstab)" cost="95000" min_level="40"/>
+			<skill id="30" level="3" name="Удар в Спину(Backstab)" cost="95000" min_level="40"/>
+			<skill id="137" level="2" name="Шанс Крит. Удара(Critical Chance)" cost="95000" min_level="40"/>
+			<skill id="209" level="12" name="Владение Кинжалом(Dagger Mastery)" cost="110000" min_level="41"/>
+			<skill id="233" level="14" name="Владение Легкой Броней(Light Armor Mastery)" cost="110000" min_level="41"/>
+			<skill id="263" level="4" name="Смертельный Импульс(Deadly Blow)" cost="110000" min_level="41"/>
+			<skill id="30" level="4" name="Удар в Спину(Backstab)" cost="110000" min_level="41"/>
+			<skill id="209" level="13" name="Владение Кинжалом(Dagger Mastery)" cost="110000" min_level="42"/>
+			<skill id="233" level="15" name="Владение Легкой Броней(Light Armor Mastery)" cost="110000" min_level="42"/>
+			<skill id="263" level="5" name="Смертельный Импульс(Deadly Blow)" cost="110000" min_level="42"/>
+			<skill id="30" level="5" name="Удар в Спину(Backstab)" cost="110000" min_level="42"/>
+			<skill id="225" level="2" name="Акробатическое Движение(Acrobatic Move)" cost="110000" min_level="43"/>
+			<skill id="312" level="7" name="Боевая Стойка Коварства(Vicious Stance)" cost="110000" min_level="43"/>
+			<skill id="171" level="2" name="Боевой Дух(Esprit)" cost="110000" min_level="43"/>
+			<skill id="169" level="2" name="Быстрый Шаг(Quick Step)" cost="110000" min_level="43"/>
+			<skill id="209" level="14" name="Владение Кинжалом(Dagger Mastery)" cost="110000" min_level="43"/>
+			<skill id="233" level="16" name="Владение Легкой Броней(Light Armor Mastery)" cost="110000" min_level="43"/>
+			<skill id="27" level="7" name="Открыть(Unlock)" cost="110000" min_level="43"/>
+			<skill id="12" level="1" name="Переключение(Switch)" cost="110000" min_level="43"/>
+			<skill id="263" level="6" name="Смертельный Импульс(Deadly Blow)" cost="110000" min_level="43"/>
+			<skill id="30" level="6" name="Удар в Спину(Backstab)" cost="110000" min_level="43"/>
+			<skill id="209" level="15" name="Владение Кинжалом(Dagger Mastery)" cost="170000" min_level="44"/>
+			<skill id="233" level="17" name="Владение Легкой Броней(Light Armor Mastery)" cost="170000" min_level="44"/>
+			<skill id="263" level="7" name="Смертельный Импульс(Deadly Blow)" cost="170000" min_level="44"/>
+			<skill id="30" level="7" name="Удар в Спину(Backstab)" cost="170000" min_level="44"/>
+			<skill id="209" level="16" name="Владение Кинжалом(Dagger Mastery)" cost="170000" min_level="45"/>
+			<skill id="233" level="18" name="Владение Легкой Броней(Light Armor Mastery)" cost="170000" min_level="45"/>
+			<skill id="1800" level="1" name="Пират(Pirate)" min_level="45"/>
+			<skill id="263" level="8" name="Смертельный Импульс(Deadly Blow)" cost="170000" min_level="45"/>
+			<skill id="30" level="8" name="Удар в Спину(Backstab)" cost="170000" min_level="45"/>
+			<skill id="312" level="8" name="Боевая Стойка Коварства(Vicious Stance)" cost="170000" min_level="46"/>
+			<skill id="171" level="3" name="Боевой Дух(Esprit)" cost="170000" min_level="46"/>
+			<skill id="209" level="17" name="Владение Кинжалом(Dagger Mastery)" cost="170000" min_level="46"/>
+			<skill id="233" level="19" name="Владение Легкой Броней(Light Armor Mastery)" cost="170000" min_level="46"/>
+			<skill id="148" level="4" name="Жизненная Сила(Vital Force)" cost="170000" min_level="46"/>
+			<skill id="27" level="8" name="Открыть(Unlock)" cost="170000" min_level="46"/>
+			<skill id="12" level="2" name="Переключение(Switch)" cost="170000" min_level="46"/>
+			<skill id="4" level="2" name="Рывок(Dash)" cost="170000" min_level="46"/>
+			<skill id="263" level="9" name="Смертельный Импульс(Deadly Blow)" cost="170000" min_level="46"/>
+			<skill id="168" level="2" name="Увеличить Скорость Атаки(Boost Atk. Spd.)" cost="170000" min_level="46"/>
+			<skill id="198" level="2" name="Увеличить Уклонение(Boost Evasion)" cost="170000" min_level="46"/>
+			<skill id="30" level="9" name="Удар в Спину(Backstab)" cost="170000" min_level="46"/>
+			<skill id="209" level="18" name="Владение Кинжалом(Dagger Mastery)" cost="230000" min_level="47"/>
+			<skill id="233" level="20" name="Владение Легкой Броней(Light Armor Mastery)" cost="230000" min_level="47"/>
+			<skill id="263" level="10" name="Смертельный Импульс(Deadly Blow)" cost="230000" min_level="47"/>
+			<skill id="30" level="10" name="Удар в Спину(Backstab)" cost="230000" min_level="47"/>
+			<skill id="209" level="19" name="Владение Кинжалом(Dagger Mastery)" cost="230000" min_level="48"/>
+			<skill id="233" level="21" name="Владение Легкой Броней(Light Armor Mastery)" cost="230000" min_level="48"/>
+			<skill id="263" level="11" name="Смертельный Импульс(Deadly Blow)" cost="230000" min_level="48"/>
+			<skill id="30" level="11" name="Удар в Спину(Backstab)" cost="230000" min_level="48"/>
+			<skill id="312" level="9" name="Боевая Стойка Коварства(Vicious Stance)" cost="230000" min_level="49"/>
+			<skill id="171" level="4" name="Боевой Дух(Esprit)" cost="230000" min_level="49"/>
+			<skill id="209" level="20" name="Владение Кинжалом(Dagger Mastery)" cost="230000" min_level="49"/>
+			<skill id="233" level="22" name="Владение Легкой Броней(Light Armor Mastery)" cost="230000" min_level="49"/>
+			<skill id="96" level="3" name="Кровопускание(Bleed)" cost="230000" min_level="49"/>
+			<skill id="12" level="3" name="Переключение(Switch)" cost="230000" min_level="49"/>
+			<skill id="263" level="12" name="Смертельный Импульс(Deadly Blow)" cost="230000" min_level="49"/>
+			<skill id="11" level="1" name="Трюк(Trick)" cost="230000" min_level="49"/>
+			<skill id="30" level="12" name="Удар в Спину(Backstab)" cost="230000" min_level="49"/>
+			<skill id="137" level="3" name="Шанс Крит. Удара(Critical Chance)" cost="230000" min_level="49"/>
+			<skill id="209" level="21" name="Владение Кинжалом(Dagger Mastery)" cost="330000" min_level="50"/>
+			<skill id="233" level="23" name="Владение Легкой Броней(Light Armor Mastery)" cost="330000" min_level="50"/>
+			<skill id="263" level="13" name="Смертельный Импульс(Deadly Blow)" cost="330000" min_level="50"/>
+			<skill id="30" level="13" name="Удар в Спину(Backstab)" cost="330000" min_level="50"/>
+			<skill id="821" level="1" name="Шаг из Тени(Shadow Step)" cost="330000" min_level="50"/>
+			<skill id="209" level="22" name="Владение Кинжалом(Dagger Mastery)" cost="330000" min_level="51"/>
+			<skill id="233" level="24" name="Владение Легкой Броней(Light Armor Mastery)" cost="330000" min_level="51"/>
+			<skill id="263" level="14" name="Смертельный Импульс(Deadly Blow)" cost="330000" min_level="51"/>
+			<skill id="922" level="1" name="Спрятаться(Hide)" item_id="49429" cost="330000" min_level="51"/>
+			<skill id="30" level="14" name="Удар в Спину(Backstab)" cost="330000" min_level="51"/>
+			<skill id="312" level="10" name="Боевая Стойка Коварства(Vicious Stance)" cost="330000" min_level="52"/>
+			<skill id="171" level="5" name="Боевой Дух(Esprit)" cost="330000" min_level="52"/>
+			<skill id="1405" level="1" name="Божественное Вдохновение(Divine Inspiration)" item_id="8618" cost="330000" min_level="52"/>
+			<skill id="209" level="23" name="Владение Кинжалом(Dagger Mastery)" cost="330000" min_level="52"/>
+			<skill id="233" level="25" name="Владение Легкой Броней(Light Armor Mastery)" cost="330000" min_level="52"/>
+			<skill id="148" level="5" name="Жизненная Сила(Vital Force)" cost="330000" min_level="52"/>
+			<skill id="51" level="1" name="Искушение(Lure)" cost="330000" min_level="52"/>
+			<skill id="193" level="4" name="Критическая Мощность(Critical Damage)" cost="330000" min_level="52"/>
+			<skill id="27" level="9" name="Открыть(Unlock)" cost="330000" min_level="52"/>
+			<skill id="12" level="4" name="Переключение(Switch)" cost="330000" min_level="52"/>
+			<skill id="263" level="15" name="Смертельный Импульс(Deadly Blow)" cost="330000" min_level="52"/>
+			<skill id="11" level="2" name="Трюк(Trick)" cost="330000" min_level="52"/>
+			<skill id="30" level="15" name="Удар в Спину(Backstab)" cost="330000" min_level="52"/>
+			<skill id="209" level="24" name="Владение Кинжалом(Dagger Mastery)" cost="460000" min_level="53"/>
+			<skill id="233" level="26" name="Владение Легкой Броней(Light Armor Mastery)" cost="460000" min_level="53"/>
+			<skill id="263" level="16" name="Смертельный Импульс(Deadly Blow)" cost="460000" min_level="53"/>
+			<skill id="30" level="16" name="Удар в Спину(Backstab)" cost="460000" min_level="53"/>
+			<skill id="209" level="25" name="Владение Кинжалом(Dagger Mastery)" cost="460000" min_level="54"/>
+			<skill id="233" level="27" name="Владение Легкой Броней(Light Armor Mastery)" cost="460000" min_level="54"/>
+			<skill id="263" level="17" name="Смертельный Импульс(Deadly Blow)" cost="460000" min_level="54"/>
+			<skill id="30" level="17" name="Удар в Спину(Backstab)" cost="460000" min_level="54"/>
+			<skill id="821" level="2" name="Шаг из Тени(Shadow Step)" cost="460000" min_level="54"/>
+			<skill id="111" level="2" name="Абсолютное Уклонение(Ultimate Evasion)" cost="460000" min_level="55"/>
+			<skill id="173" level="2" name="Акробатика(Acrobatics)" cost="460000" min_level="55"/>
+			<skill id="225" level="3" name="Акробатическое Движение(Acrobatic Move)" cost="460000" min_level="55"/>
+			<skill id="312" level="11" name="Боевая Стойка Коварства(Vicious Stance)" cost="460000" min_level="55"/>
+			<skill id="209" level="26" name="Владение Кинжалом(Dagger Mastery)" cost="460000" min_level="55"/>
+			<skill id="233" level="28" name="Владение Легкой Броней(Light Armor Mastery)" cost="460000" min_level="55"/>
+			<skill id="195" level="2" name="Глубокий Вдох(Boost Breath)" cost="460000" min_level="55"/>
+			<skill id="27" level="10" name="Открыть(Unlock)" cost="460000" min_level="55"/>
+			<skill id="12" level="5" name="Переключение(Switch)" cost="460000" min_level="55"/>
+			<skill id="412" level="1" name="Песочная Бомба(Sand Bomb)" item_id="49569" cost="460000" min_level="55"/>
+			<skill id="263" level="18" name="Смертельный Импульс(Deadly Blow)" cost="460000" min_level="55"/>
+			<skill id="11" level="3" name="Трюк(Trick)" cost="460000" min_level="55"/>
+			<skill id="30" level="18" name="Удар в Спину(Backstab)" cost="460000" min_level="55"/>
+			<skill id="209" level="27" name="Владение Кинжалом(Dagger Mastery)" cost="640000" min_level="56"/>
+			<skill id="233" level="29" name="Владение Легкой Броней(Light Armor Mastery)" cost="640000" min_level="56"/>
+			<skill id="263" level="19" name="Смертельный Импульс(Deadly Blow)" cost="640000" min_level="56"/>
+			<skill id="30" level="19" name="Удар в Спину(Backstab)" cost="640000" min_level="56"/>
+			<skill id="209" level="28" name="Владение Кинжалом(Dagger Mastery)" cost="640000" min_level="57"/>
+			<skill id="233" level="30" name="Владение Легкой Броней(Light Armor Mastery)" cost="640000" min_level="57"/>
+			<skill id="263" level="20" name="Смертельный Импульс(Deadly Blow)" cost="640000" min_level="57"/>
+			<skill id="30" level="20" name="Удар в Спину(Backstab)" cost="640000" min_level="57"/>
+			<skill id="312" level="12" name="Боевая Стойка Коварства(Vicious Stance)" cost="640000" min_level="58"/>
+			<skill id="209" level="29" name="Владение Кинжалом(Dagger Mastery)" cost="640000" min_level="58"/>
+			<skill id="233" level="31" name="Владение Легкой Броней(Light Armor Mastery)" cost="640000" min_level="58"/>
+			<skill id="148" level="6" name="Жизненная Сила(Vital Force)" cost="640000" min_level="58"/>
+			<skill id="96" level="4" name="Кровопускание(Bleed)" cost="640000" min_level="58"/>
+			<skill id="12" level="6" name="Переключение(Switch)" cost="640000" min_level="58"/>
+			<skill id="412" level="2" name="Песочная Бомба(Sand Bomb)" cost="640000" min_level="58"/>
+			<skill id="263" level="21" name="Смертельный Импульс(Deadly Blow)" cost="640000" min_level="58"/>
+			<skill id="11" level="4" name="Трюк(Trick)" cost="640000" min_level="58"/>
+			<skill id="168" level="3" name="Увеличить Скорость Атаки(Boost Atk. Spd.)" cost="640000" min_level="58"/>
+			<skill id="198" level="3" name="Увеличить Уклонение(Boost Evasion)" cost="640000" min_level="58"/>
+			<skill id="30" level="21" name="Удар в Спину(Backstab)" cost="640000" min_level="58"/>
+			<skill id="821" level="3" name="Шаг из Тени(Shadow Step)" cost="640000" min_level="58"/>
+			<skill id="209" level="30" name="Владение Кинжалом(Dagger Mastery)" cost="930000" min_level="59"/>
+			<skill id="233" level="32" name="Владение Легкой Броней(Light Armor Mastery)" cost="930000" min_level="59"/>
+			<skill id="263" level="22" name="Смертельный Импульс(Deadly Blow)" cost="930000" min_level="59"/>
+			<skill id="30" level="22" name="Удар в Спину(Backstab)" cost="930000" min_level="59"/>
+			<skill id="312" level="13" name="Боевая Стойка Коварства(Vicious Stance)" cost="930000" min_level="60"/>
+			<skill id="209" level="31" name="Владение Кинжалом(Dagger Mastery)" cost="930000" min_level="60"/>
+			<skill id="233" level="33" name="Владение Легкой Броней(Light Armor Mastery)" cost="930000" min_level="60"/>
+			<skill id="27" level="11" name="Открыть(Unlock)" cost="930000" min_level="60"/>
+			<skill id="12" level="7" name="Переключение(Switch)" cost="930000" min_level="60"/>
+			<skill id="412" level="3" name="Песочная Бомба(Sand Bomb)" cost="930000" min_level="60"/>
+			<skill id="263" level="23" name="Смертельный Импульс(Deadly Blow)" cost="930000" min_level="60"/>
+			<skill id="1801" level="1" name="Темный Ассасин(Dark Assassin)" min_level="60"/>
+			<skill id="11" level="5" name="Трюк(Trick)" cost="930000" min_level="60"/>
+			<skill id="30" level="23" name="Удар в Спину(Backstab)" cost="930000" min_level="60"/>
+			<skill id="1405" level="2" name="Божественное Вдохновение(Divine Inspiration)" item_id="8619" cost="930000" min_level="61"/>
+			<skill id="209" level="32" name="Владение Кинжалом(Dagger Mastery)" cost="930000" min_level="61"/>
+			<skill id="233" level="34" name="Владение Легкой Броней(Light Armor Mastery)" cost="930000" min_level="61"/>
+			<skill id="263" level="24" name="Смертельный Импульс(Deadly Blow)" cost="930000" min_level="61"/>
+			<skill id="922" level="2" name="Спрятаться(Hide)" cost="930000" min_level="61"/>
+			<skill id="30" level="24" name="Удар в Спину(Backstab)" cost="930000" min_level="61"/>
+			<skill id="312" level="14" name="Боевая Стойка Коварства(Vicious Stance)" cost="1200000" min_level="62"/>
+			<skill id="171" level="6" name="Боевой Дух(Esprit)" cost="1200000" min_level="62"/>
+			<skill id="209" level="33" name="Владение Кинжалом(Dagger Mastery)" cost="1200000" min_level="62"/>
+			<skill id="233" level="35" name="Владение Легкой Броней(Light Armor Mastery)" cost="1200000" min_level="62"/>
+			<skill id="12" level="8" name="Переключение(Switch)" cost="1200000" min_level="62"/>
+			<skill id="412" level="4" name="Песочная Бомба(Sand Bomb)" cost="1200000" min_level="62"/>
+			<skill id="263" level="25" name="Смертельный Импульс(Deadly Blow)" cost="1200000" min_level="62"/>
+			<skill id="11" level="6" name="Трюк(Trick)" cost="1200000" min_level="62"/>
+			<skill id="30" level="25" name="Удар в Спину(Backstab)" cost="1200000" min_level="62"/>
+			<skill id="821" level="4" name="Шаг из Тени(Shadow Step)" cost="1200000" min_level="62"/>
+			<skill id="209" level="34" name="Владение Кинжалом(Dagger Mastery)" cost="1200000" min_level="63"/>
+			<skill id="233" level="36" name="Владение Легкой Броней(Light Armor Mastery)" cost="1200000" min_level="63"/>
+			<skill id="263" level="26" name="Смертельный Импульс(Deadly Blow)" cost="1200000" min_level="63"/>
+			<skill id="30" level="26" name="Удар в Спину(Backstab)" cost="1200000" min_level="63"/>
+			<skill id="312" level="15" name="Боевая Стойка Коварства(Vicious Stance)" cost="1400000" min_level="64"/>
+			<skill id="209" level="35" name="Владение Кинжалом(Dagger Mastery)" cost="1400000" min_level="64"/>
+			<skill id="233" level="37" name="Владение Легкой Броней(Light Armor Mastery)" cost="1400000" min_level="64"/>
+			<skill id="148" level="7" name="Жизненная Сила(Vital Force)" cost="1400000" min_level="64"/>
+			<skill id="193" level="5" name="Критическая Мощность(Critical Damage)" cost="1400000" min_level="64"/>
+			<skill id="27" level="12" name="Открыть(Unlock)" cost="1400000" min_level="64"/>
+			<skill id="12" level="9" name="Переключение(Switch)" cost="1400000" min_level="64"/>
+			<skill id="412" level="5" name="Песочная Бомба(Sand Bomb)" cost="1400000" min_level="64"/>
+			<skill id="263" level="27" name="Смертельный Импульс(Deadly Blow)" cost="1400000" min_level="64"/>
+			<skill id="11" level="7" name="Трюк(Trick)" cost="1400000" min_level="64"/>
+			<skill id="30" level="27" name="Удар в Спину(Backstab)" cost="1400000" min_level="64"/>
+			<skill id="209" level="36" name="Владение Кинжалом(Dagger Mastery)" cost="1400000" min_level="65"/>
+			<skill id="233" level="38" name="Владение Легкой Броней(Light Armor Mastery)" cost="1400000" min_level="65"/>
+			<skill id="263" level="28" name="Смертельный Импульс(Deadly Blow)" cost="1400000" min_level="65"/>
+			<skill id="30" level="28" name="Удар в Спину(Backstab)" cost="1400000" min_level="65"/>
+			<skill id="312" level="16" name="Боевая Стойка Коварства(Vicious Stance)" cost="1600000" min_level="66"/>
+			<skill id="209" level="37" name="Владение Кинжалом(Dagger Mastery)" cost="1600000" min_level="66"/>
+			<skill id="233" level="39" name="Владение Легкой Броней(Light Armor Mastery)" cost="1600000" min_level="66"/>
+			<skill id="96" level="5" name="Кровопускание(Bleed)" cost="1600000" min_level="66"/>
+			<skill id="12" level="10" name="Переключение(Switch)" cost="1600000" min_level="66"/>
+			<skill id="412" level="6" name="Песочная Бомба(Sand Bomb)" cost="1600000" min_level="66"/>
+			<skill id="263" level="29" name="Смертельный Импульс(Deadly Blow)" cost="1600000" min_level="66"/>
+			<skill id="11" level="8" name="Трюк(Trick)" cost="1600000" min_level="66"/>
+			<skill id="30" level="29" name="Удар в Спину(Backstab)" cost="1600000" min_level="66"/>
+			<skill id="821" level="5" name="Шаг из Тени(Shadow Step)" cost="1600000" min_level="66"/>
+			<skill id="209" level="38" name="Владение Кинжалом(Dagger Mastery)" cost="1600000" min_level="67"/>
+			<skill id="233" level="40" name="Владение Легкой Броней(Light Armor Mastery)" cost="1600000" min_level="67"/>
+			<skill id="263" level="30" name="Смертельный Импульс(Deadly Blow)" cost="1600000" min_level="67"/>
+			<skill id="30" level="30" name="Удар в Спину(Backstab)" cost="1600000" min_level="67"/>
+			<skill id="312" level="17" name="Боевая Стойка Коварства(Vicious Stance)" cost="2200000" min_level="68"/>
+			<skill id="171" level="7" name="Боевой Дух(Esprit)" cost="2200000" min_level="68"/>
+			<skill id="209" level="39" name="Владение Кинжалом(Dagger Mastery)" cost="2200000" min_level="68"/>
+			<skill id="233" level="41" name="Владение Легкой Броней(Light Armor Mastery)" cost="2200000" min_level="68"/>
+			<skill id="27" level="13" name="Открыть(Unlock)" cost="2200000" min_level="68"/>
+			<skill id="12" level="11" name="Переключение(Switch)" cost="2200000" min_level="68"/>
+			<skill id="412" level="7" name="Песочная Бомба(Sand Bomb)" cost="2200000" min_level="68"/>
+			<skill id="263" level="31" name="Смертельный Импульс(Deadly Blow)" cost="2200000" min_level="68"/>
+			<skill id="11" level="9" name="Трюк(Trick)" cost="2200000" min_level="68"/>
+			<skill id="30" level="31" name="Удар в Спину(Backstab)" cost="2200000" min_level="68"/>
+			<skill id="209" level="40" name="Владение Кинжалом(Dagger Mastery)" cost="2200000" min_level="69"/>
+			<skill id="233" level="42" name="Владение Легкой Броней(Light Armor Mastery)" cost="2200000" min_level="69"/>
+			<skill id="263" level="32" name="Смертельный Импульс(Deadly Blow)" cost="2200000" min_level="69"/>
+			<skill id="30" level="32" name="Удар в Спину(Backstab)" cost="2200000" min_level="69"/>
+			<skill id="312" level="18" name="Боевая Стойка Коварства(Vicious Stance)" cost="2800000" min_level="70"/>
+			<skill id="209" level="41" name="Владение Кинжалом(Dagger Mastery)" cost="2800000" min_level="70"/>
+			<skill id="233" level="43" name="Владение Легкой Броней(Light Armor Mastery)" cost="2800000" min_level="70"/>
+			<skill id="96" level="6" name="Кровопускание(Bleed)" cost="2800000" min_level="70"/>
+			<skill id="12" level="12" name="Переключение(Switch)" cost="2800000" min_level="70"/>
+			<skill id="412" level="8" name="Песочная Бомба(Sand Bomb)" cost="2800000" min_level="70"/>
+			<skill id="1802" level="1" name="Светлый Ассасин(White Assassin)" min_level="70"/>
+			<skill id="263" level="33" name="Смертельный Импульс(Deadly Blow)" cost="2800000" min_level="70"/>
+			<skill id="11" level="10" name="Трюк(Trick)" cost="2800000" min_level="70"/>
+			<skill id="30" level="33" name="Удар в Спину(Backstab)" cost="2800000" min_level="70"/>
+			<skill id="821" level="6" name="Шаг из Тени(Shadow Step)" cost="2800000" min_level="70"/>
+			<skill id="209" level="42" name="Владение Кинжалом(Dagger Mastery)" cost="2800000" min_level="71"/>
+			<skill id="233" level="44" name="Владение Легкой Броней(Light Armor Mastery)" cost="2800000" min_level="71"/>
+			<skill id="263" level="34" name="Смертельный Импульс(Deadly Blow)" cost="2800000" min_level="71"/>
+			<skill id="922" level="3" name="Спрятаться(Hide)" cost="2800000" min_level="71"/>
+			<skill id="30" level="34" name="Удар в Спину(Backstab)" cost="2800000" min_level="71"/>
+			<skill id="312" level="19" name="Боевая Стойка Коварства(Vicious Stance)" cost="3100000" min_level="72"/>
+			<skill id="209" level="43" name="Владение Кинжалом(Dagger Mastery)" cost="3100000" min_level="72"/>
+			<skill id="233" level="45" name="Владение Легкой Броней(Light Armor Mastery)" cost="3100000" min_level="72"/>
+			<skill id="148" level="8" name="Жизненная Сила(Vital Force)" cost="3100000" min_level="72"/>
+			<skill id="193" level="6" name="Критическая Мощность(Critical Damage)" cost="3100000" min_level="72"/>
+			<skill id="27" level="14" name="Открыть(Unlock)" cost="3100000" min_level="72"/>
+			<skill id="12" level="13" name="Переключение(Switch)" cost="3100000" min_level="72"/>
+			<skill id="412" level="9" name="Песочная Бомба(Sand Bomb)" cost="3100000" min_level="72"/>
+			<skill id="263" level="35" name="Смертельный Импульс(Deadly Blow)" cost="3100000" min_level="72"/>
+			<skill id="11" level="11" name="Трюк(Trick)" cost="3100000" min_level="72"/>
+			<skill id="30" level="35" name="Удар в Спину(Backstab)" cost="3100000" min_level="72"/>
+			<skill id="209" level="44" name="Владение Кинжалом(Dagger Mastery)" cost="3100000" min_level="73"/>
+			<skill id="233" level="46" name="Владение Легкой Броней(Light Armor Mastery)" cost="3100000" min_level="73"/>
+			<skill id="263" level="36" name="Смертельный Импульс(Deadly Blow)" cost="3100000" min_level="73"/>
+			<skill id="30" level="36" name="Удар в Спину(Backstab)" cost="3100000" min_level="73"/>
+			<skill id="312" level="20" name="Боевая Стойка Коварства(Vicious Stance)" cost="3100000" min_level="74"/>
+			<skill id="171" level="8" name="Боевой Дух(Esprit)" cost="3100000" min_level="74"/>
+			<skill id="209" level="45" name="Владение Кинжалом(Dagger Mastery)" cost="3100000" min_level="74"/>
+			<skill id="233" level="47" name="Владение Легкой Броней(Light Armor Mastery)" cost="3100000" min_level="74"/>
+			<skill id="12" level="14" name="Переключение(Switch)" cost="3100000" min_level="74"/>
+			<skill id="412" level="10" name="Песочная Бомба(Sand Bomb)" cost="3100000" min_level="74"/>
+			<skill id="263" level="37" name="Смертельный Импульс(Deadly Blow)" cost="3100000" min_level="74"/>
+			<skill id="11" level="12" name="Трюк(Trick)" cost="3100000" min_level="74"/>
+			<skill id="30" level="37" name="Удар в Спину(Backstab)" cost="3100000" min_level="74"/>
+			<skill id="821" level="7" name="Шаг из Тени(Shadow Step)" cost="3100000" min_level="74"/>
+		</class>
+	</normal_skill_tree>
+</list>

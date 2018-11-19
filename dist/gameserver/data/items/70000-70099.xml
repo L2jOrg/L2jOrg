@@ -1,0 +1,1318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="70000" name="Sealed Rune - Stage 1">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.g_green_sealed_rune"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55193" level="1"/>	<!--Sealed Rune - Lv. 1-->
+		</skills>
+	</etcitem>
+	<etcitem id="70001" name="Sealed Rune - Stage 2">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.g_green_sealed_rune"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55194" level="1"/>	<!--Sealed Rune - Lv. 2-->
+		</skills>
+	</etcitem>
+	<etcitem id="70002" name="Sealed Rune - Stage 3">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.g_green_sealed_rune"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55195" level="1"/>	<!--Sealed Rune - Lv. 3-->
+		</skills>
+	</etcitem>
+	<etcitem id="70003" name="Sealed Rune - Stage 4">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.g_green_sealed_rune"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55196" level="1"/>	<!--Sealed Rune - Lv. 4-->
+		</skills>
+	</etcitem>
+	<etcitem id="70004" name="Sealed Rune - Stage 5">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.g_green_sealed_rune"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55197" level="1"/>	<!--Sealed Rune - Lv. 5-->
+		</skills>
+	</etcitem>
+	<etcitem id="70005" name="Sealed Rune - Stage 6">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.g_blue_sealed_rune"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55198" level="1"/>	<!--Sealed Rune - Lv. 6-->
+		</skills>
+	</etcitem>
+	<etcitem id="70006" name="Sealed Rune - Stage 7">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.g_blue_sealed_rune"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55199" level="1"/>	<!--Sealed Rune - Lv. 7-->
+		</skills>
+	</etcitem>
+	<etcitem id="70007" name="Sealed Rune - Stage 8">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.g_blue_sealed_rune"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55200" level="1"/>	<!--Sealed Rune - Lv. 8-->
+		</skills>
+	</etcitem>
+	<etcitem id="70008" name="Sealed Rune - Stage 9">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.g_blue_sealed_rune"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+			<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55201" level="1"/>	<!--Sealed Rune - Lv. 9-->
+		</skills>
+	</etcitem>
+	<etcitem id="70009" name="Sealed Rune - Stage 10">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.g_blue_sealed_rune"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55202" level="1"/>	<!--Sealed Rune - Lv. 10-->
+		</skills>
+	</etcitem>
+	<etcitem id="70010" name="Sealed Rune - Stage 11">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.g_red_sealed_rune_01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+			<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55203" level="1"/>	<!--Sealed Rune - Lv. 11-->
+		</skills>
+	</etcitem>
+	<etcitem id="70011" name="Sealed Rune - Stage 12">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.g_red_sealed_rune_01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55204" level="1"/>	<!--Sealed Rune - Lv. 12-->
+		</skills>
+	</etcitem>
+	<etcitem id="70012" name="Sealed Rune - Stage 13">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.g_red_sealed_rune_01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55205" level="1"/>	<!--Sealed Rune - Lv. 13-->
+		</skills>
+	</etcitem>
+	<etcitem id="70013" name="Sealed Rune - Stage 14" add_name="Not in Use">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.bm_pirate_king_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55206" level="1"/>	<!--Sealed Rune - Lv. 14-->
+		</skills>
+	</etcitem>
+	<etcitem id="70014" name="Sealed Rune - Stage 15" add_name="Not in Use">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.bm_pirate_king_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55207" level="1"/>	<!--Sealed Rune - Lv. 15-->
+		</skills>
+	</etcitem>
+	<etcitem id="70015" name="Sealed Rune - Stage 16" add_name="Not in Use">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.bm_pirate_king_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55208" level="1"/>	<!--Sealed Rune - Lv. 16-->
+		</skills>
+	</etcitem>
+	<etcitem id="70016" name="Sealed Rune - Stage 17" add_name="Not in Use">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.bm_pirate_king_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55209" level="1"/>	<!--Sealed Rune - Lv. 17-->
+		</skills>
+	</etcitem>
+	<etcitem id="70017" name="Sealed Rune - Stage 18" add_name="Not in Use">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.bm_pirate_king_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55210" level="1"/>	<!--Sealed Rune - Lv. 18-->
+		</skills>
+	</etcitem>
+	<etcitem id="70018" name="Sealed Rune - Stage 19" add_name="Not in Use">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.bm_pirate_king_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55211" level="1"/>	<!--Sealed Rune - Lv. 19-->
+		</skills>
+	</etcitem>
+	<etcitem id="70019" name="Sealed Rune - Stage 20" add_name="Not in Use">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.bm_pirate_king_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55212" level="1"/>	<!--Sealed Rune - Lv. 20-->
+		</skills>
+	</etcitem>
+	<etcitem id="70020" name="Clan\'s Supplies" add_name="Low Grade">
+		<set name="icon" value="icon.etc_box_of_adventure_2_i00"/>
+		<set name="weight" value="10"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<set name="stackable" value="true"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<capsuled_items>
+			<capsuled_item id="70024" min_count="1" max_count="1" chance="100.0"/>	<!--Daily Coin-->
+			<capsuled_item id="70025" min_count="1" max_count="1" chance="100.0"/>	<!--Clan's Special Supplies-->
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="70021" name="Clan\'s Supplies" add_name="Medium Grade">
+		<set name="weight" value="10"/>
+		<set name="icon" value="icon.etc_box_of_adventure_3_i00"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<set name="stackable" value="true"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<capsuled_items>
+			<capsuled_item id="70024" min_count="2" max_count="4" chance="100.0"/>	<!--Daily Coin-->
+			<capsuled_item id="70026" min_count="1" max_count="1" chance="100.0"/>	<!--Clan's Special Supplies-->
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="70022" name="Clan\'s Supplies" add_name="High Grade">
+		<set name="weight" value="10"/>
+		<set name="icon" value="icon.etc_box_of_adventure_4_i00"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<set name="stackable" value="true"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<capsuled_items>
+			<capsuled_item id="70024" min_count="4" max_count="6" chance="100.0"/>	<!--Daily Coin-->
+			<capsuled_item id="70027" min_count="1" max_count="1" chance="100.0"/>	<!--Clan's Special Supplies-->
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="70023" name="Clan\'s Supplies" add_name="Highest Grade">
+		<set name="weight" value="10"/>
+		<set name="icon" value="icon.etc_box_of_adventure_5_i00"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<set name="stackable" value="true"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<capsuled_items>
+			<capsuled_item id="70024" min_count="6" max_count="8" chance="100.0"/>	<!--Daily Coin-->
+			<capsuled_item id="70028" min_count="1" max_count="1" chance="100.0"/>	<!--Clan's Special Supplies-->
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="70024" name="Daily Coin">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.ev_festival_goldcoin"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70025" name="Clan\'s Special Supplies" add_name="Low Grade">
+		<set name="icon" value="icon.etc_box_of_adventure_2_i00"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55172" level="1"/>	<!--Clan's Special Supplies-->
+		</skills>
+	</etcitem>
+	<etcitem id="70026" name="Clan\'s Special Supplies" add_name="Medium Grade">
+		<set name="icon" value="icon.etc_box_of_adventure_3_i00"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55173" level="1"/>	<!--Clan's Special Supplies-->
+		</skills>
+	</etcitem>
+	<etcitem id="70027" name="Clan\'s Special Supplies" add_name="High Grade">
+		<set name="icon" value="icon.etc_box_of_adventure_4_i00"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55174" level="1"/>	<!--Clan's Special Supplies-->
+		</skills>
+	</etcitem>
+	<etcitem id="70028" name="Clan\'s Special Supplies" add_name="Highest Grade">
+		<set name="icon" value="icon.etc_box_of_adventure_5_i00"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55175" level="1"/>	<!--Clan's Special Supplies-->
+		</skills>
+	</etcitem>
+	<armor id="70029" name="Yellow Talisman - P. Atk.">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i02"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="55176" level="1"/>
+		</skills>
+	</armor>
+	<armor id="70030" name="Yellow Talisman - Atk. Spd.">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i02"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="55177" level="1"/>
+		</skills>
+	</armor>
+	<armor id="70031" name="Yellow Talisman - M. Def.">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i02"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="55178" level="1"/>
+		</skills>
+	</armor>
+	<armor id="70032" name="Yellow Talisman - M. Atk.">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i02"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="55179" level="1"/>
+		</skills>
+	</armor>
+	<armor id="70033" name="Yellow Talisman - Casting Spd.">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i02"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="55180" level="1"/>
+		</skills>
+	</armor>
+	<armor id="70034" name="Yellow Talisman - Accuracy">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i02"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="55181" level="1"/>
+		</skills>
+	</armor>
+	<armor id="70035" name="Yellow Talisman - P. Def.">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i02"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="55182" level="1"/>
+		</skills>
+	</armor>
+	<armor id="70036" name="Yellow Talisman - Speed">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i02"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="55183" level="1"/>
+		</skills>
+	</armor>
+	<armor id="70037" name="Yellow Talisman - Evasion">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i02"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="55184" level="1"/>
+		</skills>
+	</armor>
+	<armor id="70038" name="Yellow Talisman - Healing Power">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i02"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="55185" level="1"/>
+		</skills>
+	</armor>
+	<armor id="70039" name="Blue Talisman - Invisibility">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="55186" level="1"/>
+		</skills>
+	</armor>
+	<etcitem id="70040" name="Roast Blue Mackerel - STR">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.roasted_mackerel_buff"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70041" name="Roast Blue Mackerel - INT">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.roasted_mackerel_buff"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70042" name="Roast Blue Mackerel - CON">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.roasted_mackerel_buff"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70043" name="Roast Blue Mackerel - DEX">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.roasted_mackerel_buff"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70044" name="Roast Blue Mackerel - MEN">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.roasted_mackerel_buff"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70045" name="Roast Blue Mackerel - WIT">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.roasted_mackerel_buff"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70046" name="High Quality Bait">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_bait_i02"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="LURE"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+	</etcitem>
+	<etcitem id="70047" name="Instant Acceleration Potion">
+		<set name="icon" value="icon.etc_potion_green_i00"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70048" name="Scroll of Escape: Mithril Mines">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i04"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55214" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="70049" name="Scroll of Escape: School of Dark Arts">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i04"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55215" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="70050" name="Scroll of Escape: Orc Barracks">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i04"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55216" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="70051" name="Scroll of Escape: Ruins of Agony">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i04"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55217" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="70052" name="Scroll of Escape: Ruins of Despair">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i04"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55218" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="70053" name="Scroll of Escape: Abandoned Camp">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i04"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55219" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="70054" name="Scroll of Escape: Ant Nest">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i04"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55220" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="70055" name="Scroll of Escape: Cruma Tower">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i04"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55221" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="70056" name="Scroll of Escape: Death Pass">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i04"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55222" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="70057" name="Scroll of Escape: Dragon Valley">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i04"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55223" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="70058" name="Scroll of Escape: Antharas\' Lair">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i04"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55224" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="70059" name="Scroll of Escape: Outlaw Forest">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i04"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55225" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="70060" name="Scroll of Escape: Alligator Island">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i04"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55226" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="70061" name="Scroll of Escape: Forgotten Temple">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i04"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55227" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="70062" name="Scroll of Escape: Hunting Zone 15">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i04"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70063" name="Scroll of Escape: Hunting Zone 16">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i04"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70064" name="Scroll of Escape: Hunting Zone 17">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i04"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70065" name="Scroll of Escape: Hunting Zone 18">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i04"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70066" name="Scroll of Escape: Hunting Zone 19">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i04"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70067" name="Scroll of Escape: Hunting Zone 20">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i04"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="70068" name="Scroll of Invisibility">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_aidcharm_cancel_valbreath_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55296" level="1"/>	<!--Scroll of Invisibility-->
+		</skills>
+	</etcitem>
+	<etcitem id="70069" name="Scroll: Intense Slasher - Lv. 1">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="14826" level="1"/>	<!--Scroll: Intense Slasher - Lv. 1-->
+		</skills>
+	</etcitem>
+	<etcitem id="70070" name="Scroll: Intense Slasher - Lv. 2">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="14826" level="2"/>	<!--Scroll: Intense Slasher - Lv. 2-->
+		</skills>
+	</etcitem>
+	<etcitem id="70071" name="Scroll: Intense Slasher - Lv. 3">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="14826" level="3"/>	<!--Scroll: Intense Slasher - Lv. 3-->
+		</skills>
+	</etcitem>
+	<etcitem id="70072" name="Scroll: Intense Slasher - Lv. 4">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="14826" level="4"/>	<!--Scroll: Intense Slasher - Lv. 4-->
+		</skills>
+	</etcitem>
+	<etcitem id="70073" name="Scroll: Intense Slasher - Lv. 5">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="14826" level="5"/>	<!--Scroll: Intense Slasher - Lv. 5-->
+		</skills>
+	</etcitem>
+	<etcitem id="70074" name="Scroll: Intense Slasher - Lv. 6">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="14826" level="6"/>	<!--Scroll: Intense Slasher - Lv. 6-->
+		</skills>
+	</etcitem>
+	<etcitem id="70075" name="Purity Blast Scroll - Lv. 1">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="14828" level="1"/>	<!--Purity Blast Scroll - Lv. 1-->
+		</skills>
+	</etcitem>
+	<etcitem id="70076" name="Purity Blast Scroll - Lv. 2">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="14828" level="2"/>	<!--Purity Blast Scroll - Lv. 2-->
+		</skills>
+	</etcitem>
+	<etcitem id="70077" name="Purity Blast Scroll - Lv. 3">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="14828" level="3"/>	<!--Purity Blast Scroll - Lv. 3-->
+		</skills>
+	</etcitem>
+	<etcitem id="70078" name="Purity Blast Scroll - Lv. 4">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="14828" level="4"/>	<!--Purity Blast Scroll - Lv. 4-->
+		</skills>
+	</etcitem>
+	<etcitem id="70079" name="Purity Blast Scroll - Lv. 5">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="14828" level="5"/>	<!--Purity Blast Scroll - Lv. 5-->
+		</skills>
+	</etcitem>
+	<etcitem id="70080" name="Purity Blast Scroll - Lv. 6">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="14828" level="6"/>	<!--Purity Blast Scroll - Lv. 6-->
+		</skills>
+	</etcitem>
+	<etcitem id="70081" name="Grey Explosion Scroll - Lv. 1">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="14830" level="1"/>	<!--Grey Explosion Scroll - Lv. 1-->
+		</skills>
+	</etcitem>
+	<etcitem id="70082" name="Grey Explosion Scroll - Lv. 2">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="14830" level="2"/>	<!--Grey Explosion Scroll - Lv. 2-->
+		</skills>
+	</etcitem>
+	<etcitem id="70083" name="Grey Explosion Scroll - Lv. 3">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="14830" level="3"/>	<!--Grey Explosion Scroll - Lv. 3-->
+		</skills>
+	</etcitem>
+	<etcitem id="70084" name="Grey Explosion Scroll - Lv. 4">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="14830" level="4"/>	<!--Grey Explosion Scroll - Lv. 4-->
+		</skills>
+	</etcitem>
+	<etcitem id="70085" name="Grey Explosion Scroll - Lv. 5">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="14830" level="5"/>	<!--Grey Explosion Scroll - Lv. 5-->
+		</skills>
+	</etcitem>
+	<etcitem id="70086" name="Grey Explosion Scroll - Lv. 6">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="14830" level="6"/>	<!--Grey Explosion Scroll - Lv. 6-->
+		</skills>
+	</etcitem>
+	<etcitem id="70087" name="Platonic Tempest Scroll - Lv. 1">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="14832" level="1"/>	<!--Platonic Tempest Scroll - Lv. 1-->
+		</skills>
+	</etcitem>
+	<etcitem id="70088" name="Platonic Tempest Scroll - Lv. 1">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="14832" level="2"/>	<!--Platonic Tempest Scroll - Lv. 2-->
+		</skills>
+	</etcitem>
+	<etcitem id="70089" name="Platonic Tempest Scroll - Lv. 1">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="14832" level="3"/>	<!--Platonic Tempest Scroll - Lv. 3-->
+		</skills>
+	</etcitem>
+	<etcitem id="70090" name="Platonic Tempest Scroll - Lv. 1">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="14832" level="4"/>	<!--Platonic Tempest Scroll - Lv. 4-->
+		</skills>
+	</etcitem>
+	<etcitem id="70091" name="Platonic Tempest Scroll - Lv. 1">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="14832" level="5"/>	<!--Platonic Tempest Scroll - Lv. 5-->
+		</skills>
+	</etcitem>
+	<etcitem id="70092" name="Platonic Tempest Scroll - Lv. 1">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="14832" level="6"/>	<!--Platonic Tempest Scroll - Lv. 6-->
+		</skills>
+	</etcitem>
+	<etcitem id="70093" name="Highest Quality Bait">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_bait_i02"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="LURE"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+	</etcitem>
+	<etcitem id="70094" name="XP Rune - 100%" add_name="2 hours">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.skill19226"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="RUNE"/>
+		<set name="durability" value="120"/>
+		<set name="temporal" value="true"/>
+		<skills>
+			<skill id="55234" level="1"/>
+		</skills>
+	</etcitem>
+	<armor id="70095" name="Wooden Helmet" add_name="7-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.armor_leather_helmet_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="durability" value="10080"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="HEAD"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="19"/>
+		</for>
+	</armor>
+	<armor id="70096" name="Wooden Breastplate" add_name="7-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.armor_t06_u_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="durability" value="10080"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="47"/>
+		</for>
+	</armor>
+	<armor id="70097" name="Wooden Gaiters" add_name="7-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.armor_t06_l_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="durability" value="10080"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="29"/>
+		</for>
+	</armor>
+	<armor id="70098" name="Leather Helmet" add_name="7-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.armor_leather_helmet_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="durability" value="10080"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="HEAD"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="23"/>
+		</for>
+	</armor>
+	<armor id="70099" name="Tunic of Devotion" add_name="7-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.armor_t55_u_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="MAGIC"/>
+		<set name="durability" value="10080"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="30"/>
+			<add stat="maxMp" order="0x60" value="67"/>
+		</for>
+	</armor>
+</list>

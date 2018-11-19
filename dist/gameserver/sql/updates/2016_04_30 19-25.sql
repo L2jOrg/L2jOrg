@@ -1,0 +1,1 @@
+ALTER TABLE castle DROP COLUMN tax_percent;

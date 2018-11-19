@@ -1,0 +1,1252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<armor id="29500" name="Ring of Magic">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_enchanted_ring_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="18"/>
+		</for>
+	</armor>
+	<armor id="29501" name="Black Pearl Ring">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_black_pearl_ring_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="20"/>
+		</for>
+	</armor>
+	<armor id="29502" name="Elven Ring">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_elven_ring_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="22"/>
+		</for>
+	</armor>
+	<armor id="29503" name="Mithril Ring">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_mithril_ring_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="24"/>
+		</for>
+	</armor>
+	<armor id="29504" name="Ring of Devotion">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_ring_of_devotion_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="16"/>
+		</for>
+	</armor>
+	<etcitem id="29505" name="Normal VIP Gain Scroll">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.g_bm_vip_potion_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29506" name="Medium VIP Gain Scroll">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.g_bm_vip_potion_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29507" name="Good VIP Gain Scroll">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.g_bm_vip_potion_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29508" name="Perfect VIP Gain Scroll">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.g_bm_vip_potion_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29509" name="Feather of Blessing (temporary used by NPC)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.blessed_feather_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29510" name="Newbie Kit - Lv. 1">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29511" min_count="1" max_count="1" chance="100.0"/>	<!--Novice's Package - Lvl 2-->
+			<capsuled_item id="10650" min_count="30" max_count="30" chance="100.0"/>	<!--Novice's Scroll of Escape-->
+			<capsuled_item id="29648" min_count="30" max_count="30" chance="100.0"/>	<!--Scroll of Experience / SP - Normal-->
+			<capsuled_item id="29651" min_count="50" max_count="50" chance="100.0"/>	<!--Healing Potion-->
+			<capsuled_item id="29653" min_count="30" max_count="30" chance="100.0"/>	<!--Greater Haste Potion-->
+			<capsuled_item id="34603" min_count="5000" max_count="5000" chance="100.0"/>	<!--Mysterious No-grade Soulshot-->
+			<capsuled_item id="34610" min_count="1000" max_count="1000" chance="100.0"/>	<!--Mysterious Blessed No-grade Spiritshot-->
+			<capsuled_item id="49036" min_count="30" max_count="30" chance="100.0"/>	<!--Novice's Wind Walk Potion-->
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29511" name="Newbie Kit - Lv. 2 ">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<cond>
+			<player minLevel="10"/>
+		</cond>	
+		<capsuled_items>
+			<capsuled_item id="29512" min_count="1" max_count="1" chance="100.0"/>	<!--Novice's Package - Lvl 3-->
+			<capsuled_item id="29654" min_count="30" max_count="30" chance="100.0"/>	<!--1st Class Transfer Effect Scroll-->
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29512" name="Newbie Kit - Lv. 3">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<cond>
+			<player minLevel="20"/>
+		</cond>
+		<capsuled_items>
+			<capsuled_item id="29513" min_count="1" max_count="1" chance="100.0"/>	<!--Novice's Package - Lvl 4-->
+			<capsuled_item id="29527" min_count="1" max_count="1" chance="100.0"/>	<!--Saber*Elven Sword-->
+			<capsuled_item id="34604" min_count="9000" max_count="9000" chance="100.0"/>	<!--Mysterious Soulshot (D-grade)-->
+			<capsuled_item id="34611" min_count="2000" max_count="2000" chance="100.0"/>	<!--Mysterious Blessed Spiritshot (D-grade)-->
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29513" name="Newbie Kit - Lv. 4">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<cond>
+			<player minLevel="25"/>
+		</cond>
+		<capsuled_items>
+			<capsuled_item id="29514" min_count="1" max_count="1" chance="100.0"/>	<!--Novice's Package - Lvl 5-->
+			<capsuled_item id="29529" min_count="1" max_count="1" chance="100.0"/>	<!--Package: Magic Necklace Making-->
+			<capsuled_item id="34604" min_count="9000" max_count="9000" chance="100.0"/>	<!--Mysterious Soulshot (D-grade)-->
+			<capsuled_item id="34611" min_count="2000" max_count="2000" chance="100.0"/>	<!--Mysterious Blessed Spiritshot (D-grade)-->
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29514" name="Newbie Kit - Lv. 5">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<cond>
+			<player minLevel="30"/>
+		</cond>
+		<capsuled_items>
+			<capsuled_item id="29515" min_count="1" max_count="1" chance="100.0"/>	<!--Novice's Package - Lvl 6-->
+			<capsuled_item id="29530" min_count="1" max_count="1" chance="100.0"/>	<!--Package: Tiger's Eye Making-->
+			<capsuled_item id="34604" min_count="9000" max_count="9000" chance="100.0"/>	<!--Mysterious Soulshot (D-grade)-->
+			<capsuled_item id="34611" min_count="2000" max_count="2000" chance="100.0"/>	<!--Mysterious Blessed Spiritshot (D-grade)-->
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29515" name="Newbie Kit - Lv. 6">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<cond>
+			<player minLevel="35"/>
+		</cond>
+		<capsuled_items>
+			<capsuled_item id="29516" min_count="1" max_count="1" chance="100.0"/>	<!--Novice's Package - Lvl 7-->
+			<capsuled_item id="29649" min_count="10" max_count="10" chance="100.0"/>	<!--Scroll of Experience / SP - Medium Quality-->
+			<capsuled_item id="34604" min_count="9000" max_count="9000" chance="100.0"/>	<!--Mysterious Soulshot (D-grade)-->
+			<capsuled_item id="34611" min_count="2000" max_count="2000" chance="100.0"/>	<!--Mysterious Blessed Spiritshot (D-grade)-->
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29516" name="Newbie Kit - Lv. 7">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<cond>
+			<player minLevel="40"/>
+		</cond>
+		<capsuled_items>
+			<capsuled_item id="49573" min_count="1" max_count="1" chance="100.0"/>	<!--Samurai Black Long Sword-->
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29517" name="Blessed Scroll of Escape">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="SCROLL"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i01"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<skills> 
+            <skill id="55001" level="1"/> 
+        </skills>
+	</etcitem>
+	<etcitem id="29518" name="Blessed Scroll of Resurrection">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_resurrection_i01"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29519" name="XP/SP Scroll - Medium">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_recall_exp_scroll"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<skills>
+			<skill id="55000" level="3"/>	<!--XP/SP Scroll 40% 1-й Профессии-->
+		</skills>
+	</etcitem>
+	<etcitem id="29520" name="VIP Coin">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.etc_vip_coin_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29521" name="Package: Mysterious Soulshot (No-grade, 1000 pcs.)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_pack_of_soulshot_a_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29522" name="Package: Mysterious Blessed Spiritshot (No-grade, 1000 pcs.)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_pack_of_spiritshot_a_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29523" name="Package: Mysterious Soulshot (D-grade, 1000 pcs.)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_pack_of_soulshot_d_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29524" name="Package: Mysterious Blessed Spiritshot (D-grade, 1000 pcs.)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_pack_of_spiritshot_d_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29525" name="Package: Mysterious Soulshot (C-grade, 1000 pcs.)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_pack_of_soulshot_c_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29526" name="Package: Mysterious Blessed Spiritshot (C-grade, 1000 pcs.)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_pack_of_spiritshot_c_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<weapon id="29527" name="Saber*Elven Sword" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_dual_sword_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="DUAL"/>
+		<set name="weight" value="2510"/>
+		<set name="soulshots" value="2"/>
+		<set name="spiritshots" value="2"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="durability" value="43200"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="96"/>
+			<add stat="mAtk" order="0x10" value="47"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<etcitem id="29528" name="Package: Elven Ring Making Instruction">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="1903" min_count="7" max_count="7" chance="100.0"/>	<!--Часть Кольца Эльфов-->
+			<capsuled_item id="1886" min_count="1" max_count="1" chance="100.0"/>	<!--Серебряная Заготовка-->
+			<capsuled_item id="1884" min_count="30" max_count="30" chance="100.0"/>	<!--Веревка-->
+			<capsuled_item id="1865" min_count="6" max_count="6" chance="100.0"/>	<!--Лак-->
+			<capsuled_item id="1458" min_count="20" max_count="20" chance="100.0"/>	<!--Кристалл: Ранг D-->
+			<capsuled_item id="2130" min_count="4" max_count="4" chance="100.0"/>	<!--Самоцвет: Ранг D-->
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29529" name="Package: Magic Necklace Making">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="1900" min_count="5" max_count="5" chance="100.0"/>	<!--Цепочка Зачарованного Ожерелья-->
+			<capsuled_item id="1886" min_count="1" max_count="1" chance="100.0"/>	<!--Серебряная Заготовка-->
+			<capsuled_item id="1878" min_count="15" max_count="15" chance="100.0"/>	<!--Прочная Веревка-->
+			<capsuled_item id="1865" min_count="3" max_count="3" chance="100.0"/>	<!--Лак-->
+			<capsuled_item id="1458" min_count="18" max_count="18" chance="100.0"/>	<!--Кристалл: Ранг D-->
+			<capsuled_item id="2130" min_count="3" max_count="3" chance="100.0"/>	<!--Самоцвет: Ранг D-->
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29530" name="Package: Tiger\'s Eye Making">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="1901" min_count="6" max_count="6" chance="100.0"/>	<!--Камень Тигрового Глаза-->
+			<capsuled_item id="1886" min_count="1" max_count="1" chance="100.0"/>	<!--Серебряная Заготовка-->
+			<capsuled_item id="1884" min_count="30" max_count="30" chance="100.0"/>	<!--Веревка-->
+			<capsuled_item id="1865" min_count="6" max_count="6" chance="100.0"/>	<!--Лак-->
+			<capsuled_item id="1458" min_count="22" max_count="22" chance="100.0"/>	<!--Кристалл: Ранг D-->
+			<capsuled_item id="2130" min_count="4" max_count="4" chance="100.0"/>	<!--Самоцвет: Ранг D-->
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29531" name="Sniper\'s Mysterious Package (No-grade)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29532" name="Mystic\'s Mysterious Package (No-grade)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29533" name="Sniper\'s Mysterious Package (D-grade)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29534" name="Mystic\'s Mysterious Package (D-grade)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29535" name="Sniper\'s Mysterious Package (C-grade)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29536" name="Mystic\'s Mysterious Package (C-grade)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29537" name="Life Stone: Hair Accessory">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_crystal_ball_silver_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29538" name="Soulshot (No-grade)">
+		<set name="type" value="SOULSHOT"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.g_etc_soulshot_i01"/>
+		<set name="weight" value="3"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29539" name="Blessed Spiritshot (No-grade)">
+		<set name="type" value="BLESSED_SPIRITSHOT"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.g_etc_spiritshot_i01"/>
+		<set name="weight" value="4"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29540" name="Soulshot (D-grade)">
+		<set name="type" value="SOULSHOT"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_soulshot_d_i00"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="D"/>
+	</etcitem>
+	<etcitem id="29541" name="Blessed Spiritshot (D-grade)">
+		<set name="type" value="BLESSED_SPIRITSHOT"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_spiritshot_d_i00"/>
+		<set name="weight" value="4"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="D"/>
+	</etcitem>
+	<etcitem id="29542" name="Soulshot (C-grade)">
+		<set name="type" value="SOULSHOT"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_soulshot_c_i00"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="C"/>
+	</etcitem>
+	<etcitem id="29543" name="Blessed Spiritshot (C-grade)">
+		<set name="type" value="BLESSED_SPIRITSHOT"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_spiritshot_c_i00"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="C"/>
+	</etcitem>
+	<armor id="29544" name="Expensive Ring of Chronicle Heir ">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_classic_ring"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<skills>
+			<skill id="55040" level="1"/>	<!--Greater Scion Ring-->
+		</skills>
+		<for>
+			<add stat="mDef" order="0x10" value="14"/>
+		</for>
+	</armor>
+	<etcitem id="29545" name="Blessed Scroll of Escape">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i01"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29546" name="Blessed Scroll of Resurrection">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_resurrection_i01"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29547" name="Scroll: Enchant Weapon (D-grade)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_scrl_of_ench_wp_d_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29548" name="Scroll: Enchant Armor (D-grade)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_scrl_of_ench_am_d_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29549" name="Scroll: Enchant Weapon (C-grade)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_scrl_of_ench_wp_c_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29550" name="Scroll: Enchant Armor (C-grade)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_scrl_of_ench_am_c_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29551" name="Ring of Chronicle Heir Part">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_classic_ring"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29552" name="1st Class Buff Scroll">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<skills>
+			<skill id="55035" level="1"/>	<!--Свиток Эффектов 1-й Профессии-->
+		</skills>
+	</etcitem>
+	<etcitem id="29553" name="2nd Class Buff Scroll">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<skills>
+			<skill id="55036" level="2"/>	<!--Свиток Эффектов 2-й Профессии-->
+		</skills>
+	</etcitem>
+	<etcitem id="29554" name="Quick Healing Potion">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_potion_gold_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="POTION"/>
+		<skills>
+			<skill id="55037" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="29555" name="Major Quick Healing Potion">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_potion_gold_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="POTION"/>
+		<skills>
+			<skill id="55038" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="29556" name="Chronicle Chest">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.new_user_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29557" name="Package: Mysterious Soulshot (No-grade, 100 pcs.)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_pack_of_soulshot_a_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29558" name="Package: Mysterious Blessed Spiritshot (No-grade, 1000 pcs.)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_pack_of_spiritshot_a_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29559" name="Package: Mysterious Soulshot (D-grade, 100 pcs.)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_pack_of_soulshot_d_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29560" name="Package: Mysterious Blessed Spiritshot (D-grade, 100 pcs.)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_pack_of_spiritshot_d_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29561" name="Package: Mysterious Soulshot (C-grade, 100 pcs.)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_pack_of_soulshot_c_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29562" name="Package: Mysterious Blessed Spiritshot (C-grade, 100 pcs.)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_pack_of_spiritshot_c_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29563" name="Lucky Coin">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.etc_premium_coin_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29564" name="Attendance Coin">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.etc_att_coin_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29565" name="XP/SP Scroll">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_recall_exp_scroll"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<skills>
+			<skill id="55041" level="1"/>	<!--XP/SP Scroll 20% 1-й Профессии-->
+		</skills>
+	</etcitem>
+	<etcitem id="29566" name="Attendance XP Rune" add_name="Attendance Check">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_rune_of_exp_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="RUNE"/>
+		<set name="durability" value="10080"/>
+		<set name="temporal" value="true"/>
+		<skills>
+			<skill id="55042" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="29567" name="6-Day Reward" add_name="Attendance Check">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29568" name="7-Day Reward" add_name="Attendance Check">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29569" name="13-Day Reward" add_name="Attendance Check">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29570" name="14-Day Reward" add_name="Attendance Check">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29571" name="20-Day Reward" add_name="Attendance Check">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29572" name="21-Day Reward" add_name="Attendance Check">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29573" name="27-Day Reward" add_name="Attendance Check">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29574" name="28-Day Reward" add_name="Attendance Check">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<armor id="29575" name="Queen Ant\'s Ring" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_ring_of_queen_ant_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="43200"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<skills>
+			<skill id="3562" level="1"/>
+		</skills>
+		<for>
+			<add stat="mDef" order="0x10" value="32"/>
+			<add stat="maxMp" order="0x60" value="9"/>
+		</for>
+	</armor>
+	<armor id="29576" name="Orfen\'s Earring" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_earring_of_orfen_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="43200"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<skills>
+			<skill id="3560" level="1"/>
+		</skills>
+		<for>
+			<add stat="mDef" order="0x10" value="51"/>
+			<add stat="maxMp" order="0x60" value="19"/>
+		</for>
+	</armor>
+	<armor id="29577" name="Ring of Core" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_ring_of_core_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="43200"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<skills>
+			<skill id="3563" level="1"/>
+		</skills>
+		<for>
+			<add stat="mDef" order="0x10" value="32"/>
+			<add stat="maxMp" order="0x60" value="9"/>
+		</for>
+	</armor>
+	<etcitem id="29578" name="Rare Accessory Box">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.ev_10th_present2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55089" level="1"/>	<!--Rare Accessory Pack-->
+		</skills>
+	</etcitem>
+	<armor id="29579" name="Eva\'s Mark">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bm_soaring_bird"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+		<skills>
+			<skill id="39025" level="1"/>
+		</skills>
+	</armor>
+	<etcitem id="29580" name="Dreamin7 Coupon">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_lottery_card_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29581" name="Lineage II Chest">
+		<set name="icon" value="icon.ev_10th_present2"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="true"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55044" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="29582" name="Chronicle Chest">
+		<set name="icon" value="icon.ev_10th_present2"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="true"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55045" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="29583" name="Memories Chest">
+		<set name="icon" value="icon.ev_10th_present2"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="true"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="55046" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="29584" name="Angel Cat\'s Blessing Chest">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="35669" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<armor id="29585" name="Refined Romantic Chapeau" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_archer_hat2_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="durability" value="43200"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+		<skills>
+			<skill id="55047" level="1"/>	<!--btbody-->
+			<skill id="55048" level="1"/>	<!--wwalk-->
+		</skills>
+	</armor>
+	<etcitem id="29586" name="Exquisite Hat Chest (30-day)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<armor id="29587" name="Agathion - Singer &amp; Dancer ">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys2.icon.br_aga_singer_dancer_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+			<skills>
+			<skill id="21233" level="1"/>
+			<skill id="3267" level="1"/>
+			<skill id="23234" level="1"/>
+			<skill id="39016" level="1"/>
+			<skill id="39017" level="1"/>
+			<skill id="39018" level="1"/>
+		</skills>
+	</armor>
+	<etcitem id="29588" name="Black Long Samurai Sword Box" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29589" name="Black Long Samurai Sword Box" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<weapon id="29590" name="Samurai Black Long Sword">
+		<set name="variation_group_id" value="1"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_dual_sword_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="DUAL"/>
+		<set name="weight" value="2340"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="155"/>
+			<add stat="mAtk" order="0x10" value="70"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<weapon id="29591" name="Samurai Black Long Sword">
+		<set name="variation_group_id" value="1"/>
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_dual_sword_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="DUAL"/>
+		<set name="weight" value="2340"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="155"/>
+			<add stat="mAtk" order="0x10" value="70"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<etcitem id="29592" name="Floating Bird Box" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29593" name="Floating Bird Box" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<armor id="29594" name="Expensive Ring of Chronicle Heir " add_name="3-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_classic_ring"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="4320"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<skills>
+			<skill id="55040" level="1"/>	<!--Greater Scion Ring-->
+		</skills>
+		<for>
+			<add stat="mDef" order="0x10" value="14"/>
+		</for>
+	</armor>
+	<armor id="29595" name="Expensive Ring of Chronicle Heir " add_name="7-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_classic_ring"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="10080"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<skills>
+			<skill id="55040" level="1"/>	<!--Greater Scion Ring-->
+		</skills>
+		<for>
+			<add stat="mDef" order="0x10" value="14"/>
+		</for>
+	</armor>
+	<armor id="29596" name="Expensive Ring of Chronicle Heir " add_name="15-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_classic_ring"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="21600"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<skills>
+			<skill id="55040" level="1"/>	<!--Greater Scion Ring-->
+		</skills>
+		<for>
+			<add stat="mDef" order="0x10" value="14"/>
+		</for>
+	</armor>
+	<armor id="29597" name="Expensive Ring of Chronicle Heir " add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_classic_ring"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="43200"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<skills>
+			<skill id="55040" level="1"/>	<!--Greater Scion Ring-->
+		</skills>
+		<for>
+			<add stat="mDef" order="0x10" value="14"/>
+		</for>
+	</armor>
+	<etcitem id="29598" name="Chronic Noble Successor Box">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.ev_10th_present2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29599" name="Chronic Noble Successor Box">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.ev_10th_present2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+</list>

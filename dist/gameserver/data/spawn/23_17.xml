@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<!--<spawn name="oren32_mb2317_03" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="127576" y="-13452" zmin="-3836" zmax="-3236"/>
+			<add x="127980" y="-13600" zmin="-3836" zmax="-3236"/>
+			<add x="128320" y="-13340" zmin="-3836" zmax="-3236"/>
+			<add x="127868" y="-13072" zmin="-3836" zmax="-3236"/>
+		</territory>
+		<npc id="25248"/>Клинок Судьбы Танатос
+	</spawn>	-->
+	<territory name="oren31_2317_01">
+		<add x="98444" y="-22300" zmin="-3208" zmax="-2808"/>
+		<add x="100328" y="-21528" zmin="-3208" zmax="-2808"/>
+		<add x="102040" y="-19108" zmin="-3208" zmax="-2808"/>
+		<add x="100120" y="-17252" zmin="-3208" zmax="-2808"/>
+		<add x="98460" y="-16908" zmin="-3208" zmax="-2808"/>
+	</territory>
+	<spawn name="oren31_2317_01" count="3" respawn="41" respawn_random="5">
+		<territory name="oren31_2317_01"/>
+		<npc id="20161"/><!--Сфинкс-->
+	</spawn>
+	<spawn name="oren31_2317_01" count="3" respawn="41" respawn_random="5">
+		<territory name="oren31_2317_01"/>
+		<npc id="20575"/><!--Воин Сфинксов-->
+	</spawn>
+	<spawn name="oren31_2317_01" count="4" respawn="41" respawn_random="5">
+		<territory name="oren31_2317_01"/>
+		<npc id="20576"/><!--Шаман Сфинксов-->
+	</spawn>	
+	<territory name="oren31_2317_02">
+		<add x="100740" y="-15884" zmin="-3468" zmax="-2968"/>
+		<add x="102008" y="-13912" zmin="-3468" zmax="-2968"/>
+		<add x="100856" y="-11412" zmin="-3468" zmax="-2968"/>
+		<add x="98512" y="-9580" zmin="-3468" zmax="-2968"/>
+		<add x="98480" y="-14224" zmin="-3468" zmax="-2968"/>
+	</territory>
+	<spawn name="oren31_2317_02" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2317_02"/>
+		<npc id="20161"/><!--Сфинкс-->
+	</spawn>
+	<spawn name="oren31_2317_02" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2317_02"/>
+		<npc id="20575"/><!--Воин Сфинксов-->
+	</spawn>
+	<spawn name="oren31_2317_02" count="3" respawn="41" respawn_random="5">
+		<territory name="oren31_2317_02"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>	
+	<territory name="oren31_2317_03">
+		<add x="102008" y="-13888" zmin="-3392" zmax="-2692"/>
+		<add x="104392" y="-11652" zmin="-3392" zmax="-2692"/>
+		<add x="104408" y="-10196" zmin="-3392" zmax="-2692"/>
+		<add x="102868" y="-9900" zmin="-3392" zmax="-2692"/>
+		<add x="100960" y="-11428" zmin="-3392" zmax="-2692"/>
+	</territory>
+	<spawn name="oren31_2317_03" count="4" respawn="41" respawn_random="5">
+		<territory name="oren31_2317_03"/>
+		<npc id="20575"/><!--Воин Сфинксов-->
+	</spawn>
+	<spawn name="oren31_2317_03" count="4" respawn="41" respawn_random="5">
+		<territory name="oren31_2317_03"/>
+		<npc id="20576"/><!--Шаман Сфинксов-->
+	</spawn>	
+	<territory name="oren31_2317_04">
+		<add x="102848" y="-9896" zmin="-3296" zmax="-2696"/>
+		<add x="104420" y="-10188" zmin="-3296" zmax="-2696"/>
+		<add x="102632" y="-7164" zmin="-3296" zmax="-2696"/>
+		<add x="101056" y="-7208" zmin="-3296" zmax="-2696"/>
+	</territory>
+	<spawn name="oren31_2317_04" count="3" respawn="41" respawn_random="5">
+		<territory name="oren31_2317_04"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>
+	<spawn name="oren31_2317_04" count="4" respawn="41" respawn_random="5">
+		<territory name="oren31_2317_04"/>
+		<npc id="20576"/><!--Шаман Сфинксов-->
+	</spawn>	
+	<territory name="oren31_2317_05">
+		<add x="100940" y="-11396" zmin="-3484" zmax="-2984"/>
+		<add x="102884" y="-9924" zmin="-3484" zmax="-2984"/>
+		<add x="101012" y="-7196" zmin="-3484" zmax="-2984"/>
+		<add x="98516" y="-9572" zmin="-3484" zmax="-2984"/>
+	</territory>
+	<spawn name="oren31_2317_05" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2317_05"/>
+		<npc id="20161"/><!--Сфинкс-->
+	</spawn>
+	<spawn name="oren31_2317_05" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2317_05"/>
+		<npc id="20575"/><!--Воин Сфинксов-->
+	</spawn>
+	<spawn name="oren31_2317_05" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2317_05"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>	
+	<territory name="oren31_2317_06">
+		<add x="98500" y="-9560" zmin="-3620" zmax="-3220"/>
+		<add x="101016" y="-7168" zmin="-3620" zmax="-3220"/>
+		<add x="100604" y="-4804" zmin="-3620" zmax="-3220"/>
+		<add x="98504" y="-6416" zmin="-3620" zmax="-3220"/>
+	</territory>
+	<spawn name="oren31_2317_06" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2317_06"/>
+		<npc id="20575"/><!--Воин Сфинксов-->
+	</spawn>
+	<spawn name="oren31_2317_06" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2317_06"/>
+		<npc id="20576"/><!--Шаман Сфинксов-->
+	</spawn>
+	<spawn name="oren31_2317_06" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2317_06"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>	
+	<territory name="aden21_2317_18">
+		<add x="127544" y="-13308" zmin="-3852" zmax="-3552"/>
+		<add x="130800" y="-13504" zmin="-3852" zmax="-3552"/>
+		<add x="130740" y="-11212" zmin="-3852" zmax="-3552"/>
+		<add x="128376" y="-10380" zmin="-3852" zmax="-3552"/>
+		<add x="126412" y="-10592" zmin="-3852" zmax="-3552"/>
+	</territory>
+	<spawn name="aden21_2317_18" count="1" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_18"/>
+		<npc id="20963"/><!--Кровавый Правитель-->
+	</spawn>
+	<spawn name="aden21_2317_18" count="2" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_18"/>
+		<npc id="20959"/><!--Темный Хранитель-->
+	</spawn>
+	<territory name="aden21_2317_17">
+		<add x="128400" y="-10344" zmin="-3772" zmax="-3572"/>
+		<add x="130796" y="-11180" zmin="-3772" zmax="-3572"/>
+		<add x="130752" y="-9100" zmin="-3772" zmax="-3572"/>
+		<add x="127632" y="-7708" zmin="-3772" zmax="-3572"/>
+		<add x="126908" y="-8824" zmin="-3772" zmax="-3572"/>
+	</territory>
+	<spawn name="aden21_2317_17" count="2" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_17"/>
+		<npc id="20963"/><!--Кровавый Правитель-->
+	</spawn>
+	<spawn name="aden21_2317_17" count="2" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_17"/>
+		<npc id="20959"/><!--Темный Хранитель-->
+	</spawn>
+	<territory name="aden21_2317_16">
+		<add x="130128" y="-6580" zmin="-3472" zmax="-2472"/>
+		<add x="130360" y="-4892" zmin="-3472" zmax="-2472"/>
+		<add x="127656" y="-3760" zmin="-3472" zmax="-2472"/>
+		<add x="126192" y="-4744" zmin="-3472" zmax="-2472"/>
+		<add x="126880" y="-6088" zmin="-3472" zmax="-2472"/>
+	</territory>
+	<spawn name="aden21_2317_16" count="1" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_16"/>
+		<npc id="20963"/><!--Кровавый Правитель-->
+	</spawn>
+	<spawn name="aden21_2317_16" count="2" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_16"/>
+		<npc id="20959"/><!--Темный Хранитель-->
+	</spawn>
+	<territory name="aden21_2317_15">
+		<add x="127732" y="-3684" zmin="-2956" zmax="-1956"/>
+		<add x="130308" y="-4796" zmin="-2956" zmax="-1956"/>
+		<add x="129412" y="-1052" zmin="-2956" zmax="-1956"/>
+		<add x="127068" y="-2128" zmin="-2956" zmax="-1956"/>
+	</territory>
+	<spawn name="aden21_2317_15" count="1" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_15"/>
+		<npc id="20963"/><!--Кровавый Правитель-->
+	</spawn>
+	<spawn name="aden21_2317_15" count="2" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_15"/>
+		<npc id="20959"/><!--Темный Хранитель-->
+	</spawn>
+	<territory name="aden21_2317_14">
+		<add x="126012" y="-2848" zmin="-2772" zmax="-1872"/>
+		<add x="127032" y="-2084" zmin="-2772" zmax="-1872"/>
+		<add x="127176" y="-492" zmin="-2772" zmax="-1872"/>
+		<add x="125740" y="-308" zmin="-2772" zmax="-1872"/>
+		<add x="124092" y="-996" zmin="-2772" zmax="-1872"/>
+	</territory>
+	<spawn name="aden21_2317_14" count="2" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_14"/>
+		<npc id="20963"/><!--Кровавый Правитель-->
+	</spawn>
+	<spawn name="aden21_2317_14" count="1" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_14"/>
+		<npc id="20959"/><!--Темный Хранитель-->
+	</spawn>
+	<territory name="aden21_2317_13">
+		<add x="122280" y="-5120" zmin="-3832" zmax="-2932"/>
+		<add x="124432" y="-6468" zmin="-3832" zmax="-2932"/>
+		<add x="125172" y="-3724" zmin="-3832" zmax="-2932"/>
+		<add x="123412" y="-2760" zmin="-3832" zmax="-2932"/>
+	</territory>
+	<spawn name="aden21_2317_13" count="1" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_13"/>
+		<npc id="20956"/><!--Древний Рыцарь-->
+	</spawn>
+	<spawn name="aden21_2317_13" count="2" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_13"/>
+		<npc id="20963"/><!--Кровавый Правитель-->
+	</spawn>
+	<territory name="aden21_2317_12">
+		<add x="120696" y="-4916" zmin="-3876" zmax="-2976"/>
+		<add x="122176" y="-5392" zmin="-3876" zmax="-2976"/>
+		<add x="123396" y="-2736" zmin="-3876" zmax="-2976"/>
+		<add x="122284" y="-644" zmin="-3876" zmax="-2976"/>
+	</territory>
+	<spawn name="aden21_2317_12" count="1" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_12"/>
+		<npc id="20956"/><!--Древний Рыцарь-->
+	</spawn>
+	<spawn name="aden21_2317_12" count="2" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_12"/>
+		<npc id="20963"/><!--Кровавый Правитель-->
+	</spawn>
+	<territory name="aden21_2317_11">
+		<add x="118952" y="-4504" zmin="-4100" zmax="-3200"/>
+		<add x="120612" y="-4952" zmin="-4100" zmax="-3200"/>
+		<add x="122356" y="-444" zmin="-4100" zmax="-3200"/>
+		<add x="119372" y="-392" zmin="-4100" zmax="-3200"/>
+		<add x="117856" y="-2632" zmin="-4100" zmax="-3200"/>
+	</territory>
+	<spawn name="aden21_2317_11" count="2" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_11"/>
+		<npc id="20956"/><!--Древний Рыцарь-->
+	</spawn>
+	<spawn name="aden21_2317_11" count="1" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_11"/>
+		<npc id="20963"/><!--Кровавый Правитель-->
+	</spawn>
+	<spawn name="aden21_2317_10" count="3" respawn="37" respawn_random="10">
+		<territory>
+			<add x="115144" y="-1512" zmin="-3892" zmax="-3492"/>
+			<add x="117840" y="-2588" zmin="-3892" zmax="-3492"/>
+			<add x="119344" y="-368" zmin="-3892" zmax="-3492"/>
+			<add x="114836" y="-332" zmin="-3892" zmax="-3492"/>
+		</territory>
+		<npc id="20956"/><!--Древний Рыцарь-->
+	</spawn>
+	<territory name="aden21_2317_25">
+		<add x="113872" y="-5892" zmin="-3884" zmax="-3084"/>
+		<add x="114756" y="-4500" zmin="-3884" zmax="-3084"/>
+		<add x="113384" y="-2896" zmin="-3884" zmax="-3084"/>
+		<add x="111164" y="-2948" zmin="-3884" zmax="-3084"/>
+	</territory>
+	<spawn name="aden21_2317_25" count="2" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_25"/>
+		<npc id="20956"/><!--Древний Рыцарь-->
+	</spawn>
+	<spawn name="aden21_2317_25" count="1" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_25"/>
+		<npc id="20963"/><!--Кровавый Правитель-->
+	</spawn>
+	<territory name="aden21_2317_24">
+		<add x="116096" y="-8048" zmin="-3536" zmax="-3336"/>
+		<add x="116976" y="-6572" zmin="-3536" zmax="-3336"/>
+		<add x="116928" y="-5044" zmin="-3536" zmax="-3336"/>
+		<add x="116216" y="-4336" zmin="-3536" zmax="-3336"/>
+		<add x="114840" y="-4360" zmin="-3536" zmax="-3336"/>
+		<add x="113876" y="-5936" zmin="-3536" zmax="-3336"/>
+	</territory>
+	<spawn name="aden21_2317_24" count="1" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_24"/>
+		<npc id="20956"/><!--Древний Рыцарь-->
+	</spawn>
+	<spawn name="aden21_2317_24" count="2" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_24"/>
+		<npc id="20963"/><!--Кровавый Правитель-->
+	</spawn>
+	<territory name="aden21_2317_23">
+		<add x="118428" y="-8156" zmin="-3664" zmax="-3364"/>
+		<add x="119704" y="-7008" zmin="-3664" zmax="-3364"/>
+		<add x="118980" y="-6692" zmin="-3664" zmax="-3364"/>
+		<add x="117380" y="-7060" zmin="-3664" zmax="-3364"/>
+		<add x="117024" y="-8164" zmin="-3664" zmax="-3364"/>
+	</territory>
+	<spawn name="aden21_2317_23" count="1" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_23"/>
+		<npc id="20956"/><!--Древний Рыцарь-->
+	</spawn>
+	<spawn name="aden21_2317_23" count="1" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_23"/>
+		<npc id="20963"/><!--Кровавый Правитель-->
+	</spawn>
+	<territory name="aden21_2317_21">
+		<add x="119140" y="-9600" zmin="-3484" zmax="-2984"/>
+		<add x="120500" y="-8996" zmin="-3484" zmax="-2984"/>
+		<add x="121508" y="-6688" zmin="-3484" zmax="-2984"/>
+		<add x="120236" y="-6580" zmin="-3484" zmax="-2984"/>
+		<add x="119324" y="-7388" zmin="-3484" zmax="-2984"/>
+	</territory>
+	<spawn name="aden21_2317_21" count="1" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_21"/>
+		<npc id="20956"/><!--Древний Рыцарь-->
+	</spawn>
+	<spawn name="aden21_2317_21" count="2" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_21"/>
+		<npc id="20963"/><!--Кровавый Правитель-->
+	</spawn>
+	<territory name="aden21_2317_20">
+		<add x="124120" y="-7812" zmin="-3908" zmax="-3208"/>
+		<add x="125312" y="-10592" zmin="-3908" zmax="-3208"/>
+		<add x="125744" y="-10572" zmin="-3908" zmax="-3208"/>
+		<add x="125948" y="-8104" zmin="-3908" zmax="-3208"/>
+	</territory>
+	<spawn name="aden21_2317_20" count="1" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_20"/>
+		<npc id="20963"/><!--Кровавый Правитель-->
+	</spawn>
+	<spawn name="aden21_2317_20" count="1" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_20"/>
+		<npc id="20959"/><!--Темный Хранитель-->
+	</spawn>
+	<spawn name="aden21_2317_09" count="3" respawn="37" respawn_random="10">
+		<territory>
+			<add x="110088" y="-1580" zmin="-4008" zmax="-3508"/>
+			<add x="115112" y="-1520" zmin="-4008" zmax="-3508"/>
+			<add x="114804" y="-280" zmin="-4008" zmax="-3508"/>
+			<add x="111060" y="-404" zmin="-4008" zmax="-3508"/>
+		</territory>
+		<npc id="20956"/><!--Древний Рыцарь-->
+	</spawn>
+	<spawn name="aden21_2317_08" count="3" respawn="37" respawn_random="10">
+		<territory>
+			<add x="107196" y="-2376" zmin="-3804" zmax="-3104"/>
+			<add x="109720" y="-2056" zmin="-3804" zmax="-3104"/>
+			<add x="111072" y="-416" zmin="-3804" zmax="-3104"/>
+			<add x="105516" y="-356" zmin="-3804" zmax="-3104"/>
+		</territory>
+		<npc id="20956"/><!--Древний Рыцарь-->
+	</spawn>
+	<spawn name="aden21_2317_18s" count="1" respawn="37" respawn_random="10">
+		<territory>
+			<add x="127960" y="-11872" zmin="-3792" zmax="-3592"/>
+			<add x="129176" y="-12456" zmin="-3792" zmax="-3592"/>
+			<add x="129652" y="-11288" zmin="-3792" zmax="-3592"/>
+			<add x="128240" y="-10736" zmin="-3792" zmax="-3592"/>
+		</territory>
+		<npc id="20959"/><!--Темный Хранитель-->
+	</spawn>
+	<territory name="aden21_2317_11s">
+		<add x="118544" y="-2648" zmin="-3892" zmax="-3492"/>
+		<add x="120260" y="-3540" zmin="-3892" zmax="-3492"/>
+		<add x="120544" y="-732" zmin="-3892" zmax="-3492"/>
+		<add x="119456" y="-608" zmin="-3892" zmax="-3492"/>
+	</territory>
+	<spawn name="aden21_2317_11s" count="1" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_11s"/>
+		<npc id="20956"/><!--Древний Рыцарь-->
+	</spawn>
+	<spawn name="aden21_2317_11s" count="2" respawn="37" respawn_random="10">
+		<territory name="aden21_2317_11s"/>
+		<npc id="20963"/><!--Кровавый Правитель-->
+	</spawn>
+	<territory name="oren31_2317_02s">
+		<add x="100080" y="-15144" zmin="-3472" zmax="-3072"/>
+		<add x="101348" y="-14300" zmin="-3472" zmax="-3072"/>
+		<add x="100832" y="-11864" zmin="-3472" zmax="-3072"/>
+		<add x="99724" y="-12616" zmin="-3472" zmax="-3072"/>
+	</territory>
+	<spawn name="oren31_2317_02s" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2317_02s"/>
+		<npc id="20576"/><!--Шаман Сфинксов-->
+	</spawn>
+	<spawn name="oren31_2317_02s" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2317_02s"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>
+	<territory name="oren31_2317_05s">
+		<add x="100220" y="-8420" zmin="-3492" zmax="-3092"/>
+		<add x="100560" y="-10572" zmin="-3492" zmax="-3092"/>
+		<add x="102136" y="-10212" zmin="-3492" zmax="-3092"/>
+		<add x="100988" y="-7888" zmin="-3492" zmax="-3092"/>
+	</territory>
+	<spawn name="oren31_2317_05s" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2317_05s"/>
+		<npc id="20575"/><!--Воин Сфинксов-->
+	</spawn>
+	<spawn name="oren31_2317_05s" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2317_05s"/>
+		<npc id="20576"/><!--Шаман Сфинксов-->
+	</spawn>
+	<spawn name="godard01_mb2317_01" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="123396" y="-24700" zmin="-3604" zmax="-3004"/>
+			<add x="124404" y="-23812" zmin="-3604" zmax="-3004"/>
+			<add x="123700" y="-22728" zmin="-3604" zmax="-3004"/>
+			<add x="122440" y="-23292" zmin="-3604" zmax="-3004"/>
+		</territory>
+		<npc id="25269"/><!--Лорд Зверей Бехемот-->
+	</spawn>
+	<spawn name="aden42_mb2317_01" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="103168" y="-17004" zmin="-2036" zmax="-1436"/>
+			<add x="104412" y="-17984" zmin="-2036" zmax="-1436"/>
+			<add x="104900" y="-16224" zmin="-2036" zmax="-1436"/>
+			<add x="103728" y="-15996" zmin="-2036" zmax="-1436"/>
+		</territory>
+		<npc id="25434"/><!--Барда Предводитель Банды-->
+	</spawn>
+	<spawn name="aden01_npc2318_05" count="1" respawn="60">
+		<point x="108568" y="-6520" z="-3040" h="0"/>
+		<npc id="31652"/><!--Камень Познания-->
+	</spawn>	
+	<spawn name="Vedukel" count="1" respawn="86400" respawn_random="12000">
+		<point x="131480" y="-15848" z="-3328" h="21344"/>
+		<npc id="25762"/><!--Демон Ведюкель-->
+	</spawn>
+	<spawn name="Sarbos" count="1" respawn="86400" respawn_random="12000">
+		<point x="125576" y="-12952" z="3968" h="21344"/>
+		<npc id="25761"/><!--Демон Сарбос-->
+	</spawn>
+	<spawn name="Ludmila" count="1" respawn="86400" respawn_random="12000">
+		<point x="127960" y="-1336" z="-2115" h="21344"/>
+		<npc id="25763"/><!--Кровавая Ведьма Людмила-->
+	</spawn>
+	<spawn name="Hartemun" count="1" respawn="86400" respawn_random="12000">
+		<point x="123624" y="440" z="-3424" h="21344"/>
+		<npc id="25760"/><!--Демон Хартемун-->
+	</spawn>
+	<spawn name="Cherkia" count="1" respawn="86400" respawn_random="12000">
+		<point x="113224" y="1480" z="-3728" h="21344"/>
+		<npc id="25759"/><!--Демон Черкия-->
+	</spawn>
+	<spawn name="Gablio" count="1" respawn="86400" respawn_random="12000">
+		<point x="108712" y="-856" z="-2992" h="21344"/>
+		<npc id="25758"/><!--Демон Габлио-->
+	</spawn>
+</list>

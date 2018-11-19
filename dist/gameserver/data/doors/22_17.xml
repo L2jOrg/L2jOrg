@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="22170001" name="Bandit_001" hp="158250" pdef="644" mdef="518">
+		<pos x="85621" y="-18127" z="-1670"/>
+		<shape ax="85414" ay="-18299" bx="85633" by="-18123" cx="85629" cy="-18118" dx="85411" dy="-18295" minz="-1821" maxz="-1471"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="22170002" name="Bandit_002" hp="158250" pdef="644" mdef="518">
+		<pos x="85213" y="-18458" z="-1670"/>
+		<shape ax="85208" ay="-18466" bx="85425" by="-18291" cx="85422" cy="-18288" dx="85206" dy="-18463" minz="-1821" maxz="-1471"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="22170003" name="Bandit_003" hp="158250" pdef="644" mdef="518">
+		<pos x="80818" y="-15357" z="-1762"/>
+		<shape ax="80815" ay="-15445" bx="80821" by="-15445" cx="80821" cy="-15349" dx="80816" dy="-15349" minz="-1829" maxz="-1379"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="22170004" name="Bandit_004" hp="158250" pdef="644" mdef="518">
+		<pos x="80818" y="-15518" z="-1762"/>
+		<shape ax="80815" ay="-15525" bx="80820" by="-15525" cx="80820" cy="-15431" dx="80815" dy="-15431" minz="-1829" maxz="-1379"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+</list>

@@ -1,0 +1,18 @@
+<html><title>Настройка безопасности</title><body>
+<font color="00ff66">Варианты блокировки аккаунта:</font><br1>
+- Блокировка по IP адресу <font color="LEVEL">(%ip_block%)</font><br1>
+- Блокировка по Hwid адресу <font color="LEVEL">(%hwid_block%)</font>
+<br>
+<font color="00ff66">Предупреждение для предосторожности:</font><br1>
+- IP периодически изменяется<br1>
+- HWid - это ID: <font color="LEVEL">%hwid_val%</font><br1>
+- HWid меняется во время апгрейда ПК
+<br>
+<font color="00ff66">Состояние текущей сессии:</font><br1>
+IP адрес: <font color="LEVEL">%curIP%</font>
+<br>
+<button value="Установить блокировку по IP" action="bypass -h user_lockIp" width=280 height=22 back="L2UI_CT1.Button_DF" fore="L2UI_CT1.Button_DF"/><br1>
+<button value="Установить блокировку по Hwid" action="bypass -h user_lockHwid" width=280 height=22 back="L2UI_CT1.Button_DF" fore="L2UI_CT1.Button_DF"/><br1>
+<button value="Удалить блокировку по IP" action="bypass -h user_unlockIp" width=280 height=22 back="L2UI_CT1.Button_DF" fore="L2UI_CT1.Button_DF"/><br1>
+<button value="Удалить блокировку по Hwid" action="bypass -h user_unlockHwid" width=280 height=22 back="L2UI_CT1.Button_DF" fore="L2UI_CT1.Button_DF"/><br>
+</body></html>

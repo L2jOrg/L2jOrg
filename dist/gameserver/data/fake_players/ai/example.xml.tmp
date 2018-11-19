@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE fake_player_ai SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<fake_player_ai race="HUMAN" type="FIGHTER">
+	<on_character_create>	<!--Создается персонаж-->
+		<wait delay="" min_delay="5000" max_delay="10000" chance=""/>	<!--Ждем-->
+		<move_to_npc id="" chance=""/>	<!--Идем к Помощнику Новичков-->
+		<speak_with_npc id="" bypass="" chance=""/>	<!--Принимает квест туториала-->
+		<wait delay="" min_delay="1000" max_delay="2000" chance=""/>	<!--Ждем-->
+	</on_character_create>
+	<!--<farm name="" min_level="1" max_level="3">
+		<zone>
+			<circle x="" y="" z="" range=""/>
+		</zone>
+		<on_obtain_max_level>
+			<wait delay="" min_delay="1000" max_delay="2000" chance=""/>	#Ждем#
+			<random_action chance="">	#Идем в город#
+				<ordinary_actions chance="">	#Идем в бакалейную лавку#
+					<move_to_point x="" y="" z="" range="" min_range="" max_range="" chance=""/>	##
+					<move_to_point x="" y="" z="" range="" min_range="" max_range="" chance=""/>	##
+					<move_to_point x="" y="" z="" range="" min_range="" max_range="" chance=""/>	##
+					<move_to_point x="" y="" z="" range="" min_range="" max_range="" chance=""/>	##
+					<move_to_point x="" y="" z="" range="" min_range="" max_range="" chance=""/>	##
+				</ordinary_actions>
+				<ordinary_actions>	##
+					<move_to_point x="" y="" z="" range="" min_range="" max_range="" chance=""/>	##
+					<move_to_point x="" y="" z="" range="" min_range="" max_range="" chance=""/>	##
+					<move_to_point x="" y="" z="" range="" min_range="" max_range="" chance=""/>	##
+					<move_to_point x="" y="" z="" range="" min_range="" max_range="" chance=""/>	##
+					<move_to_point x="" y="" z="" range="" min_range="" max_range="" chance=""/>	##
+				</ordinary_actions>
+				<use_item id="" chance=""/>	#Используем SoE#
+			</random_action>
+			<wait delay="" min_delay="10000" max_delay="20000" chance=""/>	#Ждем#
+			<add_item id="" count="" min_count="" max_count="" chance=""/>	##
+			<add_item id="" count="" min_count="" max_count="" chance=""/>	##
+			<add_item id="" count="" min_count="" max_count="" chance=""/>	##
+			<add_item id="" count="" min_count="" max_count="" chance=""/>	##
+			<teleport_to_point x="" y="" z="" chance=""/>	##
+		</on_obtain_max_level>
+		<go_to_town farm_time="" min_farm_time="" max_farm_time="" chance="">
+		</go_to_town>
+	</farm>-->
+</fake_player_ai>

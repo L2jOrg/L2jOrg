@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd" updateCheck="false"
+	monitoring="autodetect">
+
+	<diskStore path="java.io.tmpdir" />
+
+	<defaultCache maxElementsInMemory="1000" eternal="false"
+		timeToIdleSeconds="120" timeToLiveSeconds="120" overflowToDisk="true"
+		diskPersistent="false" diskExpiryThreadIntervalSeconds="120" />
+
+	<!-- DropInfoCache -->
+	<cache name="DropInfoCache" maxElementsInMemory="30000" eternal="false"
+		overflowToDisk="false" timeToLiveSeconds="3600" timeToIdleSeconds="600" />
+
+	<!-- HtmCache -->
+	<cache name="l2s.gameserver.data.htm.HtmCache.KOREAN" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
+	<cache name="l2s.gameserver.data.htm.HtmCache.ENGLISH" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
+	<cache name="l2s.gameserver.data.htm.HtmCache.CHINESE" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
+	<cache name="l2s.gameserver.data.htm.HtmCache.THAI" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
+	<cache name="l2s.gameserver.data.htm.HtmCache.RUSSIAN" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
+	<cache name="l2s.gameserver.data.htm.HtmCache.ENGLISH_EU" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
+	<cache name="l2s.gameserver.data.htm.HtmCache.PORTUGUESE" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
+	<cache name="l2s.gameserver.data.htm.HtmCache.SPANISH" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
+	<cache name="l2s.gameserver.data.htm.HtmCache.ARABIC" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
+	<cache name="l2s.gameserver.data.htm.HtmCache.GREEK" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
+	<cache name="l2s.gameserver.data.htm.HtmCache.GEORGIAN" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
+	<cache name="l2s.gameserver.data.htm.HtmCache.HUNGARIAN" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
+	<cache name="l2s.gameserver.data.htm.HtmCache.FINNISH" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
+	<cache name="l2s.gameserver.data.htm.HtmCache.UKRAINIAN" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
+	<cache name="l2s.gameserver.data.htm.HtmCache.VIETNAMESE" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
+
+	<!-- ItemInfoCache -->
+	<cache name="l2s.gameserver.cache.ItemInfoCache"
+		maxElementsInMemory="10000" eternal="false" overflowToDisk="false"
+		timeToLiveSeconds="3600" timeToIdleSeconds="600" />
+
+	<cache name="l2s.gameserver.model.items.ItemInstance"
+		maxElementsInMemory="200000" eternal="false"  timeToIdleSeconds="1800" memoryStoreEvictionPolicy="LRU"
+		timeToLiveSeconds="3600" overflowToDisk="false" statistics="true" />
+
+	<cache name="l2s.gameserver.model.mail.Mail"
+		maxElementsInMemory="100000" eternal="false" timeToIdleSeconds="3600" memoryStoreEvictionPolicy="LRU"
+		timeToLiveSeconds="28800" overflowToDisk="false" statistics="true" />
+
+</ehcache>

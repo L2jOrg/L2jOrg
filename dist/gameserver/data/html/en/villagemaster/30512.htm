@@ -1,0 +1,13 @@
+<html><head><body>
+Head Blacksmith Kusto:<br>
+Well hello, stranger! I'm Head Blacksmith Kusto of the Black Anvil Guild. We're a trustworthy lot here. Unlike those Steel Door Guildies, our Guild is in it for more than just profits. We revel in the joy of creating something beautiful! To us, that takes precedence over the prospect of a few gold coins. The ability to bringing beauty and happiness into the light, now that's a worthwhile skill!<br>
+So, what has brought you to my smithy, my friend? I'll gladly provide what help I can.<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">"Can you tell me about the 2nd Class Transfer?"</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="link weapon_variation001.htm">"I want to add a Rune to the weapon".</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Clan</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Alliance</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Exchange Daily Coins</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Quest</Button>
+</body></head></html>

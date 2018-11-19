@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE farm SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<farm name="Evil Hunting Ground" min_level="16" max_level="22">
+	<zones>
+		<zone>
+			<polygon>
+				<coords loc="-2856 98648 -4000 -2500"/>
+				<coords loc="-3896 101288 -4000 -2500"/>
+				<coords loc="-6632 103080 -4000 -2500"/>
+				<coords loc="-5640 104200 -4000 -2500"/>
+				<coords loc="-3448 106088 -4000 -2500"/>
+				<coords loc="-1160 107208 -4000 -2500"/>
+				<coords loc="200 107336 -4000 -2500"/>
+				<coords loc="824 106424 -4000 -2500"/>
+				<coords loc="1256 104904 -4000 -2500"/>
+				<coords loc="920 101960 -4000 -2500"/>
+				<coords loc="408 98504 -4000 -2500"/>
+				<coords loc="8 96760 -4000 -2500"/>
+				<coords loc="-1160 95320 -4000 -2500"/>
+				<coords loc="-4056 95176 -4000 -2500"/>
+				<coords loc="-4968 98504 -4000 -2500"/>
+				<coords loc="-4104 100952 -4000 -2500"/>
+			</polygon>
+		</zone>
+		<spawn_points>
+			<coords loc="-1384 101112 -3712"/>
+		</spawn_points>
+	</zones>
+	<on_obtain_max_level>
+		<action id="1"/>
+	</on_obtain_max_level>
+	<go_to_town min_farm_time="1800" max_farm_time="3600">
+		<action id="1"/>
+	</go_to_town>
+	<action id="1">
+		<wait min_delay="1000" max_delay="3000"/>
+		<use_item id="736"/>
+	</action>
+</farm>

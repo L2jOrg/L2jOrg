@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<armor id="9589" name="Iron Bracelet">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_rbracelet_c_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_BRACELET"/>
+		</equip>
+		<skills>
+			<skill id="3322" level="1"/>
+		</skills>
+	</armor>
+	<armor id="9590" name="Bronze Bracelet">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_rbracelet_b_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_BRACELET"/>
+		</equip>
+		<skills>
+			<skill id="3323" level="1"/>
+		</skills>
+	</armor>
+	<armor id="9591" name="Steel Bracelet">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_rbracelet_a_i02"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_BRACELET"/>
+		</equip>
+		<skills>
+			<skill id="3324" level="1"/>
+		</skills>
+	</armor>
+</list>

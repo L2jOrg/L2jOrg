@@ -1,0 +1,30 @@
+<html><head><title>Clans</title>
+<table width=260>
+<tr>
+<td width=40><button value="Main" action="bypass -h admin_admin" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=180><center>Clan Management</center></td>
+<td width=40><button value="Back" action="bypass -h admin_admin" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table><br><br>
+<center>
+<table width=270>
+<tr><td><center>Command: <edit var="command" width=150 height=11></center></td></tr>
+</table>
+<br><br>
+</center>
+<center>
+<table>
+<tr>
+<td>
+<center>
+<button value="Create clan (arg:name|target:leader)" action="bypass -h admin_pledge create $command" width=250 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+<button value="Set level (arg:level|target:any member)" action="bypass -h admin_pledge setlevel $command" width=250 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+<button value="Set leader (arg:name|target:any member)" action="bypass -h admin_pledge setleader $command" width=250 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+<button value="Reset clan creation penalty (target:any member)" action="bypass -h admin_pledge resetcreate" width=260 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+<button value="Reset clan leaving penalty (target:anyone)" action="bypass -h admin_pledge resetwait" width=250 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+</center>
+</td>
+</tr>
+</table>
+</center><br><br>
+</head></html>

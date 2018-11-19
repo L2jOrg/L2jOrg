@@ -1,0 +1,31 @@
+<html><head><title>Olympiad</title>
+<table width=260>
+<tr>
+<td width=40><button value="Main" action="bypass -h admin_admin" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=180><center>Olympiad Management</center></td>
+<td width=40><button value="Back" action="bypass -h admin_admin" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table><br><br>
+<center>
+<table width=270>
+<tr><td><center>Command: <edit var="command" width=150 height=11></center></td></tr>
+</table>
+<br><br>
+</center>
+<center>
+<table>
+<tr>
+<td>
+<center>
+<button value="Save olympiad status" action="bypass -h admin_oly_save" width=250 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+<button value="Add oly points (arg:<name> <points>)" action="bypass -h admin_add_oly_points $command" width=250 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+<button value="Start olympiad" action="bypass -h admin_oly_start" width=250 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+<button value="Stop olympiad" action="bypass -h admin_oly_stop" width=250 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+<button value="Add hero (arg:<char_name>)" action="bypass -h admin_add_hero $command" width=250 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+<button value="Fix noble name (target:noble)" action="bypass -h admin_fix_noble_name" width=250 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+</center>
+</td>
+</tr>
+</table>
+</center><br><br>
+</head></html>

@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "zone.dtd">
+<list>
+	<zone name="[MDT_no_summon]" type="no_summon">
+		<polygon>
+			<coords loc="14440 181273"/>
+			<coords loc="14535 184206"/>
+			<coords loc="11678 184349"/>
+			<coords loc="11700 181241"/>
+		</polygon>
+	</zone>
+	<zone name="[Beleth_no_summon]" type="no_summon">
+		<polygon>
+			<coords loc="11214 205578 -10412 -5112"/>
+			<coords loc="20607 205578 -10412 -5112"/>
+			<coords loc="20648 220271 -10412 -5112"/>
+			<coords loc="11172 220271 -10412 -5112"/>
+		</polygon>
+	</zone>
+	<zone name="[Naia_no_summon]" type="no_summon">
+		<polygon>
+			<coords loc="-53384 242040"/>
+			<coords loc="-53384 250488"/>
+			<coords loc="-43528 250488"/>
+			<coords loc="-43528 242040"/>
+		</polygon>
+	</zone>
+	<zone name="[Gracia_no_summon]" type="no_summon">
+		<polygon>
+			<coords loc="-294912 294912"/>
+			<coords loc="-294912 163840"/>
+			<coords loc="-163840 163840"/>
+			<coords loc="-163840 294912"/>
+		</polygon>
+	</zone>
+	<zone name="[loh_first_second]" type="no_summon">
+		<polygon>
+			<coords loc="-111048 180648 -14100 -13300"/>
+			<coords loc="-110232 186632 -14100 -13300"/>
+			<coords loc="-119144 187176 -14100 -13300"/>
+			<coords loc="-117928 179752 -14100 -13300"/>
+		</polygon>
+	</zone>
+	<zone name="[loh_third]" type="no_summon">
+		<polygon>
+			<coords loc="-111048 180648 -14100 -13300"/>
+			<coords loc="-110232 186632 -14100 -13300"/>
+			<coords loc="-119144 187176 -14100 -13300"/>
+			<coords loc="-117928 179752 -14100 -13300"/>
+		</polygon>
+	</zone>
+	<zone name="[QA_no_summon]" type="no_summon">
+		<polygon>
+			<coords loc="-23176 185080 -6000 -5500"/>
+			<coords loc="-20104 185080 -6000 -5500"/>
+			<coords loc="-20104 177928 -6000 -5500"/>
+			<coords loc="-23176 177928 -6000 -5500"/>
+		</polygon>
+	</zone>
+	<zone name="[hellfire_north_stage1]" type="no_summon">
+		<polygon>
+			<coords loc="-153080 240008 -14100 -12300"/>
+			<coords loc="-141064 240008 -14100 -12300"/>
+			<coords loc="-141064 251016 -14100 -12300"/>
+			<coords loc="-153080 251016 -14100 -12300"/>
+		</polygon>
+	</zone>
+	<zone name="[hellfire_south_stage1]" type="no_summon">
+		<polygon>
+			<coords loc="-152952 142088 -14150 -12300"/>
+			<coords loc="-140936 142088 -14150 -12300"/>
+			<coords loc="-140936 153208 -14150 -12300"/>
+			<coords loc="-152952 153208 -14150 -12300"/>
+		</polygon>
+	</zone>
+	<zone name="[hellfire_north_stage2]" type="no_summon">
+		<polygon>
+			<coords loc="-151432 240008 -12400 -10000"/>
+			<coords loc="-143496 240008 -12400 -10000"/>
+			<coords loc="-143496 250232 -12400 -10000"/>
+			<coords loc="-151432 250232 -12400 -10000"/>
+		</polygon>
+	</zone>
+	<zone name="[hellfire_south_stage2]" type="no_summon">
+		<polygon>
+			<coords loc="-151304 142072 -12400 -10000"/>
+			<coords loc="-143368 142072 -12400 -10000"/>
+			<coords loc="-143368 152440 -12400 -10000"/>
+			<coords loc="-151304 152440 -12400 -10000"/>
+		</polygon>
+	</zone>
+	<zone name="[prison_exiles_darkness]" type="no_summon">
+		<polygon>
+			<coords loc="172255 149956 -12650 -11600"/>
+			<coords loc="178695 139474 -12650 -11600"/>
+			<coords loc="172236 139461 -12650 -11600"/>
+			<coords loc="178709 149982 -12650 -11600"/>
+		</polygon>
+	</zone>
+	<zone name="[heavenly_rift]" type="no_summon">
+		<polygon>
+			<coords loc="114169 13781 10800 12000"/>
+			<coords loc="112353 15581 10800 12000"/>
+			<coords loc="111219 15072 10800 12000"/>
+			<coords loc="111584 14238 10800 12000"/>
+			<coords loc="112815 12991 10800 12000"/>
+			<coords loc="113640 12642 10800 12000"/>
+		</polygon>
+	</zone>	
+</list>

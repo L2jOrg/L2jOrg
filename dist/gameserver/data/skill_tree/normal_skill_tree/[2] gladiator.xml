@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="2">	<!--Гладиатор-->
+			<skill id="312" level="6" name="Боевая Стойка Коварства(Vicious Stance)" cost="55000" min_level="40"/>
+			<skill id="212" level="3" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="55000" min_level="40"/>
+			<skill id="992" level="1" name="Владение Звуком(Sonic Mastery)" cost="55000" min_level="40"/>
+			<skill id="227" level="14" name="Владение Легкой Броней(Light Armor Mastery)" cost="55000" min_level="40"/>
+			<skill id="227" level="15" name="Владение Легкой Броней(Light Armor Mastery)" cost="55000" min_level="40"/>
+			<skill id="227" level="16" name="Владение Легкой Броней(Light Armor Mastery)" cost="55000" min_level="40"/>
+			<skill id="257" level="9" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="55000" min_level="40"/>
+			<skill id="257" level="10" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="55000" min_level="40"/>
+			<skill id="257" level="11" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="55000" min_level="40"/>
+			<skill id="144" level="1" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="55000" min_level="40"/>
+			<skill id="144" level="2" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="55000" min_level="40"/>
+			<skill id="144" level="3" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="55000" min_level="40"/>
+			<skill id="231" level="14" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="55000" min_level="40"/>
+			<skill id="231" level="15" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="55000" min_level="40"/>
+			<skill id="231" level="16" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="55000" min_level="40"/>
+			<skill id="6" level="1" name="Звуковой Импульс(Sonic Blaster)" cost="55000" min_level="40"/>
+			<skill id="6" level="2" name="Звуковой Импульс(Sonic Blaster)" cost="55000" min_level="40"/>
+			<skill id="6" level="3" name="Звуковой Импульс(Sonic Blaster)" cost="55000" min_level="40"/>
+			<skill id="87" level="1" name="Найти Уязвимость Животных(Detect Animal Weakness)" cost="55000" min_level="40"/>
+			<skill id="260" level="1" name="Сокрушение Молотом(Hammer Crush)" cost="55000" min_level="40"/>
+			<skill id="260" level="2" name="Сокрушение Молотом(Hammer Crush)" cost="55000" min_level="40"/>
+			<skill id="260" level="3" name="Сокрушение Молотом(Hammer Crush)" cost="55000" min_level="40"/>
+			<skill id="1" level="1" name="Тройное Рассечение(Triple Slash)" cost="55000" min_level="40"/>
+			<skill id="1" level="2" name="Тройное Рассечение(Triple Slash)" cost="55000" min_level="40"/>
+			<skill id="1" level="3" name="Тройное Рассечение(Triple Slash)" cost="55000" min_level="40"/>
+			<skill id="190" level="1" name="Фатальный Удар(Fatal Strike)" cost="55000" min_level="40"/>
+			<skill id="190" level="2" name="Фатальный Удар(Fatal Strike)" cost="55000" min_level="40"/>
+			<skill id="190" level="3" name="Фатальный Удар(Fatal Strike)" cost="55000" min_level="40"/>
+			<skill id="8" level="1" name="Фокусировка Звука(Sonic Focus)" cost="55000" min_level="40"/>
+			<skill id="227" level="17" name="Владение Легкой Броней(Light Armor Mastery)" cost="65000" min_level="41"/>
+			<skill id="257" level="12" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="65000" min_level="41"/>
+			<skill id="144" level="4" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="65000" min_level="41"/>
+			<skill id="231" level="17" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="65000" min_level="41"/>
+			<skill id="1605" level="1" name="Защита Парным Оружием(Dual Weapon Defense)" item_id="49423" cost="65000" min_level="41"/>
+			<skill id="9" level="1" name="Звуковая Волна(Sonic Buster)" cost="65000" min_level="41"/>
+			<skill id="6" level="4" name="Звуковой Импульс(Sonic Blaster)" cost="65000" min_level="41"/>
+			<skill id="260" level="4" name="Сокрушение Молотом(Hammer Crush)" cost="65000" min_level="41"/>
+			<skill id="1" level="4" name="Тройное Рассечение(Triple Slash)" cost="65000" min_level="41"/>
+			<skill id="190" level="4" name="Фатальный Удар(Fatal Strike)" cost="65000" min_level="41"/>
+			<skill id="227" level="18" name="Владение Легкой Броней(Light Armor Mastery)" cost="65000" min_level="42"/>
+			<skill id="257" level="13" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="65000" min_level="42"/>
+			<skill id="144" level="5" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="65000" min_level="42"/>
+			<skill id="231" level="18" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="65000" min_level="42"/>
+			<skill id="9" level="2" name="Звуковая Волна(Sonic Buster)" cost="65000" min_level="42"/>
+			<skill id="6" level="5" name="Звуковой Импульс(Sonic Blaster)" cost="65000" min_level="42"/>
+			<skill id="260" level="5" name="Сокрушение Молотом(Hammer Crush)" cost="65000" min_level="42"/>
+			<skill id="1" level="5" name="Тройное Рассечение(Triple Slash)" cost="65000" min_level="42"/>
+			<skill id="190" level="5" name="Фатальный Удар(Fatal Strike)" cost="65000" min_level="42"/>
+			<skill id="312" level="7" name="Боевая Стойка Коварства(Vicious Stance)" cost="65000" min_level="43"/>
+			<skill id="992" level="2" name="Владение Звуком(Sonic Mastery)" cost="65000" min_level="43"/>
+			<skill id="227" level="19" name="Владение Легкой Броней(Light Armor Mastery)" cost="65000" min_level="43"/>
+			<skill id="257" level="14" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="65000" min_level="43"/>
+			<skill id="144" level="6" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="65000" min_level="43"/>
+			<skill id="231" level="19" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="65000" min_level="43"/>
+			<skill id="9" level="3" name="Звуковая Волна(Sonic Buster)" cost="65000" min_level="43"/>
+			<skill id="6" level="6" name="Звуковой Импульс(Sonic Blaster)" cost="65000" min_level="43"/>
+			<skill id="78" level="2" name="Клич Войны(War Cry)" cost="65000" min_level="43"/>
+			<skill id="290" level="1" name="Предельное Безумие(Final Frenzy)" cost="65000" min_level="43"/>
+			<skill id="260" level="6" name="Сокрушение Молотом(Hammer Crush)" cost="65000" min_level="43"/>
+			<skill id="1" level="6" name="Тройное Рассечение(Triple Slash)" cost="65000" min_level="43"/>
+			<skill id="190" level="6" name="Фатальный Удар(Fatal Strike)" cost="65000" min_level="43"/>
+			<skill id="8" level="2" name="Фокусировка Звука(Sonic Focus)" cost="65000" min_level="43"/>
+			<skill id="227" level="20" name="Владение Легкой Броней(Light Armor Mastery)" cost="97000" min_level="44"/>
+			<skill id="257" level="15" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="97000" min_level="44"/>
+			<skill id="144" level="7" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="97000" min_level="44"/>
+			<skill id="231" level="20" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="97000" min_level="44"/>
+			<skill id="5" level="1" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="97000" min_level="44"/>
+			<skill id="9" level="4" name="Звуковая Волна(Sonic Buster)" cost="97000" min_level="44"/>
+			<skill id="6" level="7" name="Звуковой Импульс(Sonic Blaster)" cost="97000" min_level="44"/>
+			<skill id="260" level="7" name="Сокрушение Молотом(Hammer Crush)" cost="97000" min_level="44"/>
+			<skill id="1" level="7" name="Тройное Рассечение(Triple Slash)" cost="97000" min_level="44"/>
+			<skill id="190" level="7" name="Фатальный Удар(Fatal Strike)" cost="97000" min_level="44"/>
+			<skill id="227" level="21" name="Владение Легкой Броней(Light Armor Mastery)" cost="97000" min_level="45"/>
+			<skill id="257" level="16" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="97000" min_level="45"/>
+			<skill id="144" level="8" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="97000" min_level="45"/>
+			<skill id="231" level="21" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="97000" min_level="45"/>
+			<skill id="5" level="2" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="97000" min_level="45"/>
+			<skill id="9" level="5" name="Звуковая Волна(Sonic Buster)" cost="97000" min_level="45"/>
+			<skill id="6" level="8" name="Звуковой Импульс(Sonic Blaster)" cost="97000" min_level="45"/>
+			<skill id="1800" level="1" name="Пират(Pirate)" min_level="45"/>
+			<skill id="260" level="8" name="Сокрушение Молотом(Hammer Crush)" cost="97000" min_level="45"/>
+			<skill id="1" level="8" name="Тройное Рассечение(Triple Slash)" cost="97000" min_level="45"/>
+			<skill id="190" level="8" name="Фатальный Удар(Fatal Strike)" cost="97000" min_level="45"/>
+			<skill id="312" level="8" name="Боевая Стойка Коварства(Vicious Stance)" cost="97000" min_level="46"/>
+			<skill id="212" level="4" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="97000" min_level="46"/>
+			<skill id="227" level="22" name="Владение Легкой Броней(Light Armor Mastery)" cost="97000" min_level="46"/>
+			<skill id="257" level="17" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="97000" min_level="46"/>
+			<skill id="144" level="9" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="97000" min_level="46"/>
+			<skill id="231" level="22" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="97000" min_level="46"/>
+			<skill id="5" level="3" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="97000" min_level="46"/>
+			<skill id="9" level="6" name="Звуковая Волна(Sonic Buster)" cost="97000" min_level="46"/>
+			<skill id="6" level="9" name="Звуковой Импульс(Sonic Blaster)" cost="97000" min_level="46"/>
+			<skill id="104" level="1" name="Найти Уязвимость Растений(Detect Plant Weakness)" cost="97000" min_level="46"/>
+			<skill id="290" level="2" name="Предельное Безумие(Final Frenzy)" cost="97000" min_level="46"/>
+			<skill id="260" level="9" name="Сокрушение Молотом(Hammer Crush)" cost="97000" min_level="46"/>
+			<skill id="1" level="9" name="Тройное Рассечение(Triple Slash)" cost="97000" min_level="46"/>
+			<skill id="190" level="9" name="Фатальный Удар(Fatal Strike)" cost="97000" min_level="46"/>
+			<skill id="227" level="23" name="Владение Легкой Броней(Light Armor Mastery)" cost="130000" min_level="47"/>
+			<skill id="257" level="18" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="130000" min_level="47"/>
+			<skill id="144" level="10" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="130000" min_level="47"/>
+			<skill id="231" level="23" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="130000" min_level="47"/>
+			<skill id="5" level="4" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="130000" min_level="47"/>
+			<skill id="9" level="7" name="Звуковая Волна(Sonic Buster)" cost="130000" min_level="47"/>
+			<skill id="6" level="10" name="Звуковой Импульс(Sonic Blaster)" cost="130000" min_level="47"/>
+			<skill id="7" level="1" name="Звуковой Шторм(Sonic Storm)" cost="130000" min_level="47"/>
+			<skill id="260" level="10" name="Сокрушение Молотом(Hammer Crush)" cost="130000" min_level="47"/>
+			<skill id="1" level="10" name="Тройное Рассечение(Triple Slash)" cost="130000" min_level="47"/>
+			<skill id="190" level="10" name="Фатальный Удар(Fatal Strike)" cost="130000" min_level="47"/>
+			<skill id="227" level="24" name="Владение Легкой Броней(Light Armor Mastery)" cost="130000" min_level="48"/>
+			<skill id="257" level="19" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="130000" min_level="48"/>
+			<skill id="144" level="11" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="130000" min_level="48"/>
+			<skill id="231" level="24" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="130000" min_level="48"/>
+			<skill id="5" level="5" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="130000" min_level="48"/>
+			<skill id="9" level="8" name="Звуковая Волна(Sonic Buster)" cost="130000" min_level="48"/>
+			<skill id="6" level="11" name="Звуковой Импульс(Sonic Blaster)" cost="130000" min_level="48"/>
+			<skill id="7" level="2" name="Звуковой Шторм(Sonic Storm)" cost="130000" min_level="48"/>
+			<skill id="260" level="11" name="Сокрушение Молотом(Hammer Crush)" cost="130000" min_level="48"/>
+			<skill id="1" level="11" name="Тройное Рассечение(Triple Slash)" cost="130000" min_level="48"/>
+			<skill id="190" level="11" name="Фатальный Удар(Fatal Strike)" cost="130000" min_level="48"/>
+			<skill id="312" level="9" name="Боевая Стойка Коварства(Vicious Stance)" cost="130000" min_level="49"/>
+			<skill id="992" level="3" name="Владение Звуком(Sonic Mastery)" cost="130000" min_level="49"/>
+			<skill id="227" level="25" name="Владение Легкой Броней(Light Armor Mastery)" cost="130000" min_level="49"/>
+			<skill id="257" level="20" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="130000" min_level="49"/>
+			<skill id="144" level="12" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="130000" min_level="49"/>
+			<skill id="231" level="25" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="130000" min_level="49"/>
+			<skill id="5" level="6" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="130000" min_level="49"/>
+			<skill id="9" level="9" name="Звуковая Волна(Sonic Buster)" cost="130000" min_level="49"/>
+			<skill id="6" level="12" name="Звуковой Импульс(Sonic Blaster)" cost="130000" min_level="49"/>
+			<skill id="7" level="3" name="Звуковой Шторм(Sonic Storm)" cost="130000" min_level="49"/>
+			<skill id="287" level="2" name="Львиное Сердце(Lionheart)" cost="130000" min_level="49"/>
+			<skill id="290" level="3" name="Предельное Безумие(Final Frenzy)" cost="130000" min_level="49"/>
+			<skill id="260" level="12" name="Сокрушение Молотом(Hammer Crush)" cost="130000" min_level="49"/>
+			<skill id="1" level="12" name="Тройное Рассечение(Triple Slash)" cost="130000" min_level="49"/>
+			<skill id="190" level="12" name="Фатальный Удар(Fatal Strike)" cost="130000" min_level="49"/>
+			<skill id="8" level="3" name="Фокусировка Звука(Sonic Focus)" cost="130000" min_level="49"/>
+			<skill id="227" level="26" name="Владение Легкой Броней(Light Armor Mastery)" cost="190000" min_level="50"/>
+			<skill id="257" level="21" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="190000" min_level="50"/>
+			<skill id="144" level="13" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="190000" min_level="50"/>
+			<skill id="231" level="26" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="190000" min_level="50"/>
+			<skill id="5" level="7" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="190000" min_level="50"/>
+			<skill id="9" level="10" name="Звуковая Волна(Sonic Buster)" cost="190000" min_level="50"/>
+			<skill id="6" level="13" name="Звуковой Импульс(Sonic Blaster)" cost="190000" min_level="50"/>
+			<skill id="7" level="4" name="Звуковой Шторм(Sonic Storm)" cost="190000" min_level="50"/>
+			<skill id="260" level="13" name="Сокрушение Молотом(Hammer Crush)" cost="190000" min_level="50"/>
+			<skill id="1" level="13" name="Тройное Рассечение(Triple Slash)" cost="190000" min_level="50"/>
+			<skill id="190" level="13" name="Фатальный Удар(Fatal Strike)" cost="190000" min_level="50"/>
+			<skill id="227" level="27" name="Владение Легкой Броней(Light Armor Mastery)" cost="190000" min_level="51"/>
+			<skill id="257" level="22" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="190000" min_level="51"/>
+			<skill id="144" level="14" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="190000" min_level="51"/>
+			<skill id="231" level="27" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="190000" min_level="51"/>
+			<skill id="5" level="8" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="190000" min_level="51"/>
+			<skill id="9" level="11" name="Звуковая Волна(Sonic Buster)" cost="190000" min_level="51"/>
+			<skill id="6" level="14" name="Звуковой Импульс(Sonic Blaster)" cost="190000" min_level="51"/>
+			<skill id="7" level="5" name="Звуковой Шторм(Sonic Storm)" cost="190000" min_level="51"/>
+			<skill id="260" level="14" name="Сокрушение Молотом(Hammer Crush)" cost="190000" min_level="51"/>
+			<skill id="1" level="14" name="Тройное Рассечение(Triple Slash)" cost="190000" min_level="51"/>
+			<skill id="190" level="14" name="Фатальный Удар(Fatal Strike)" cost="190000" min_level="51"/>
+			<skill id="312" level="10" name="Боевая Стойка Коварства(Vicious Stance)" cost="190000" min_level="52"/>
+			<skill id="1405" level="1" name="Божественное Вдохновение(Divine Inspiration)" item_id="8618" cost="190000" min_level="52"/>
+			<skill id="212" level="5" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="190000" min_level="52"/>
+			<skill id="227" level="28" name="Владение Легкой Броней(Light Armor Mastery)" cost="190000" min_level="52"/>
+			<skill id="257" level="23" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="190000" min_level="52"/>
+			<skill id="144" level="15" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="190000" min_level="52"/>
+			<skill id="231" level="28" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="190000" min_level="52"/>
+			<skill id="5" level="9" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="190000" min_level="52"/>
+			<skill id="9" level="12" name="Звуковая Волна(Sonic Buster)" cost="190000" min_level="52"/>
+			<skill id="6" level="15" name="Звуковой Импульс(Sonic Blaster)" cost="190000" min_level="52"/>
+			<skill id="7" level="6" name="Звуковой Шторм(Sonic Storm)" cost="190000" min_level="52"/>
+			<skill id="80" level="1" name="Найти Уязвимость Чудовищ(Detect Beast Weakness)" cost="190000" min_level="52"/>
+			<skill id="290" level="4" name="Предельное Безумие(Final Frenzy)" cost="190000" min_level="52"/>
+			<skill id="260" level="15" name="Сокрушение Молотом(Hammer Crush)" cost="190000" min_level="52"/>
+			<skill id="1" level="15" name="Тройное Рассечение(Triple Slash)" cost="190000" min_level="52"/>
+			<skill id="190" level="15" name="Фатальный Удар(Fatal Strike)" cost="190000" min_level="52"/>
+			<skill id="227" level="29" name="Владение Легкой Броней(Light Armor Mastery)" cost="270000" min_level="53"/>
+			<skill id="257" level="24" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="270000" min_level="53"/>
+			<skill id="144" level="16" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="270000" min_level="53"/>
+			<skill id="231" level="29" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="270000" min_level="53"/>
+			<skill id="5" level="10" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="270000" min_level="53"/>
+			<skill id="9" level="13" name="Звуковая Волна(Sonic Buster)" cost="270000" min_level="53"/>
+			<skill id="6" level="16" name="Звуковой Импульс(Sonic Blaster)" cost="270000" min_level="53"/>
+			<skill id="7" level="7" name="Звуковой Шторм(Sonic Storm)" cost="270000" min_level="53"/>
+			<skill id="260" level="16" name="Сокрушение Молотом(Hammer Crush)" cost="270000" min_level="53"/>
+			<skill id="261" level="1" name="Тройное Звуковое Рассечение(Triple Sonic Slash)" cost="270000" min_level="53"/>
+			<skill id="1" level="16" name="Тройное Рассечение(Triple Slash)" cost="270000" min_level="53"/>
+			<skill id="190" level="16" name="Фатальный Удар(Fatal Strike)" cost="270000" min_level="53"/>
+			<skill id="227" level="30" name="Владение Легкой Броней(Light Armor Mastery)" cost="270000" min_level="54"/>
+			<skill id="257" level="25" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="270000" min_level="54"/>
+			<skill id="144" level="17" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="270000" min_level="54"/>
+			<skill id="231" level="30" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="270000" min_level="54"/>
+			<skill id="5" level="11" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="270000" min_level="54"/>
+			<skill id="1605" level="2" name="Защита Парным Оружием(Dual Weapon Defense)" cost="270000" min_level="54"/>
+			<skill id="9" level="14" name="Звуковая Волна(Sonic Buster)" cost="270000" min_level="54"/>
+			<skill id="6" level="17" name="Звуковой Импульс(Sonic Blaster)" cost="270000" min_level="54"/>
+			<skill id="7" level="8" name="Звуковой Шторм(Sonic Storm)" cost="270000" min_level="54"/>
+			<skill id="260" level="17" name="Сокрушение Молотом(Hammer Crush)" cost="270000" min_level="54"/>
+			<skill id="261" level="2" name="Тройное Звуковое Рассечение(Triple Sonic Slash)" cost="270000" min_level="54"/>
+			<skill id="1" level="17" name="Тройное Рассечение(Triple Slash)" cost="270000" min_level="54"/>
+			<skill id="190" level="17" name="Фатальный Удар(Fatal Strike)" cost="270000" min_level="54"/>
+			<skill id="312" level="11" name="Боевая Стойка Коварства(Vicious Stance)" cost="270000" min_level="55"/>
+			<skill id="992" level="4" name="Владение Звуком(Sonic Mastery)" cost="270000" min_level="55"/>
+			<skill id="227" level="31" name="Владение Легкой Броней(Light Armor Mastery)" cost="270000" min_level="55"/>
+			<skill id="257" level="26" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="270000" min_level="55"/>
+			<skill id="144" level="18" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="270000" min_level="55"/>
+			<skill id="231" level="31" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="270000" min_level="55"/>
+			<skill id="5" level="12" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="270000" min_level="55"/>
+			<skill id="9" level="15" name="Звуковая Волна(Sonic Buster)" cost="270000" min_level="55"/>
+			<skill id="6" level="18" name="Звуковой Импульс(Sonic Blaster)" cost="270000" min_level="55"/>
+			<skill id="6" level="19" name="Звуковой Импульс(Sonic Blaster)" cost="270000" min_level="55"/>
+			<skill id="7" level="9" name="Звуковой Шторм(Sonic Storm)" cost="270000" min_level="55"/>
+			<skill id="290" level="5" name="Предельное Безумие(Final Frenzy)" cost="270000" min_level="55"/>
+			<skill id="260" level="18" name="Сокрушение Молотом(Hammer Crush)" cost="270000" min_level="55"/>
+			<skill id="261" level="3" name="Тройное Звуковое Рассечение(Triple Sonic Slash)" cost="270000" min_level="55"/>
+			<skill id="1" level="18" name="Тройное Рассечение(Triple Slash)" cost="270000" min_level="55"/>
+			<skill id="190" level="18" name="Фатальный Удар(Fatal Strike)" cost="270000" min_level="55"/>
+			<skill id="8" level="4" name="Фокусировка Звука(Sonic Focus)" cost="270000" min_level="55"/>
+			<skill id="227" level="32" name="Владение Легкой Броней(Light Armor Mastery)" cost="370000" min_level="56"/>
+			<skill id="257" level="27" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="370000" min_level="56"/>
+			<skill id="144" level="19" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="370000" min_level="56"/>
+			<skill id="231" level="32" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="370000" min_level="56"/>
+			<skill id="5" level="13" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="370000" min_level="56"/>
+			<skill id="9" level="16" name="Звуковая Волна(Sonic Buster)" cost="370000" min_level="56"/>
+			<skill id="451" level="1" name="Звуковое Движение(Sonic Move)" item_id="49568" cost="370000" min_level="56"/>
+			<skill id="7" level="10" name="Звуковой Шторм(Sonic Storm)" cost="370000" min_level="56"/>
+			<skill id="260" level="19" name="Сокрушение Молотом(Hammer Crush)" cost="370000" min_level="56"/>
+			<skill id="261" level="4" name="Тройное Звуковое Рассечение(Triple Sonic Slash)" cost="370000" min_level="56"/>
+			<skill id="1" level="19" name="Тройное Рассечение(Triple Slash)" cost="370000" min_level="56"/>
+			<skill id="190" level="19" name="Фатальный Удар(Fatal Strike)" cost="370000" min_level="56"/>
+			<skill id="227" level="33" name="Владение Легкой Броней(Light Armor Mastery)" cost="370000" min_level="57"/>
+			<skill id="257" level="28" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="370000" min_level="57"/>
+			<skill id="144" level="20" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="370000" min_level="57"/>
+			<skill id="231" level="33" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="370000" min_level="57"/>
+			<skill id="5" level="14" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="370000" min_level="57"/>
+			<skill id="9" level="17" name="Звуковая Волна(Sonic Buster)" cost="370000" min_level="57"/>
+			<skill id="6" level="20" name="Звуковой Импульс(Sonic Blaster)" cost="370000" min_level="57"/>
+			<skill id="7" level="11" name="Звуковой Шторм(Sonic Storm)" cost="370000" min_level="57"/>
+			<skill id="260" level="20" name="Сокрушение Молотом(Hammer Crush)" cost="370000" min_level="57"/>
+			<skill id="261" level="5" name="Тройное Звуковое Рассечение(Triple Sonic Slash)" cost="370000" min_level="57"/>
+			<skill id="1" level="20" name="Тройное Рассечение(Triple Slash)" cost="370000" min_level="57"/>
+			<skill id="190" level="20" name="Фатальный Удар(Fatal Strike)" cost="370000" min_level="57"/>
+			<skill id="312" level="12" name="Боевая Стойка Коварства(Vicious Stance)" cost="370000" min_level="58"/>
+			<skill id="212" level="6" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="370000" min_level="58"/>
+			<skill id="227" level="34" name="Владение Легкой Броней(Light Armor Mastery)" cost="370000" min_level="58"/>
+			<skill id="257" level="29" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="370000" min_level="58"/>
+			<skill id="144" level="21" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="370000" min_level="58"/>
+			<skill id="231" level="34" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="370000" min_level="58"/>
+			<skill id="5" level="15" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="370000" min_level="58"/>
+			<skill id="9" level="18" name="Звуковая Волна(Sonic Buster)" cost="370000" min_level="58"/>
+			<skill id="6" level="21" name="Звуковой Импульс(Sonic Blaster)" cost="370000" min_level="58"/>
+			<skill id="7" level="12" name="Звуковой Шторм(Sonic Storm)" cost="370000" min_level="58"/>
+			<skill id="88" level="1" name="Найти Уязвимость Драконов(Detect Dragon Weakness)" cost="370000" min_level="58"/>
+			<skill id="290" level="6" name="Предельное Безумие(Final Frenzy)" cost="370000" min_level="58"/>
+			<skill id="260" level="21" name="Сокрушение Молотом(Hammer Crush)" cost="370000" min_level="58"/>
+			<skill id="261" level="6" name="Тройное Звуковое Рассечение(Triple Sonic Slash)" cost="370000" min_level="58"/>
+			<skill id="1" level="21" name="Тройное Рассечение(Triple Slash)" cost="370000" min_level="58"/>
+			<skill id="190" level="21" name="Фатальный Удар(Fatal Strike)" cost="370000" min_level="58"/>
+			<skill id="227" level="35" name="Владение Легкой Броней(Light Armor Mastery)" cost="540000" min_level="59"/>
+			<skill id="257" level="30" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="540000" min_level="59"/>
+			<skill id="144" level="22" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="540000" min_level="59"/>
+			<skill id="231" level="35" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="540000" min_level="59"/>
+			<skill id="5" level="16" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="540000" min_level="59"/>
+			<skill id="9" level="19" name="Звуковая Волна(Sonic Buster)" cost="540000" min_level="59"/>
+			<skill id="6" level="22" name="Звуковой Импульс(Sonic Blaster)" cost="540000" min_level="59"/>
+			<skill id="7" level="13" name="Звуковой Шторм(Sonic Storm)" cost="540000" min_level="59"/>
+			<skill id="260" level="22" name="Сокрушение Молотом(Hammer Crush)" cost="540000" min_level="59"/>
+			<skill id="261" level="7" name="Тройное Звуковое Рассечение(Triple Sonic Slash)" cost="540000" min_level="59"/>
+			<skill id="1" level="22" name="Тройное Рассечение(Triple Slash)" cost="540000" min_level="59"/>
+			<skill id="190" level="22" name="Фатальный Удар(Fatal Strike)" cost="540000" min_level="59"/>
+			<skill id="312" level="13" name="Боевая Стойка Коварства(Vicious Stance)" cost="540000" min_level="60"/>
+			<skill id="992" level="5" name="Владение Звуком(Sonic Mastery)" cost="540000" min_level="60"/>
+			<skill id="227" level="36" name="Владение Легкой Броней(Light Armor Mastery)" cost="540000" min_level="60"/>
+			<skill id="257" level="31" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="540000" min_level="60"/>
+			<skill id="144" level="23" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="540000" min_level="60"/>
+			<skill id="231" level="36" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="540000" min_level="60"/>
+			<skill id="5" level="17" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="540000" min_level="60"/>
+			<skill id="9" level="20" name="Звуковая Волна(Sonic Buster)" cost="540000" min_level="60"/>
+			<skill id="6" level="23" name="Звуковой Импульс(Sonic Blaster)" cost="540000" min_level="60"/>
+			<skill id="7" level="14" name="Звуковой Шторм(Sonic Storm)" cost="540000" min_level="60"/>
+			<skill id="290" level="7" name="Предельное Безумие(Final Frenzy)" cost="540000" min_level="60"/>
+			<skill id="260" level="23" name="Сокрушение Молотом(Hammer Crush)" cost="540000" min_level="60"/>
+			<skill id="1801" level="1" name="Темный Ассасин(Dark Assassin)" min_level="60"/>
+			<skill id="261" level="8" name="Тройное Звуковое Рассечение(Triple Sonic Slash)" cost="540000" min_level="60"/>
+			<skill id="1" level="23" name="Тройное Рассечение(Triple Slash)" cost="540000" min_level="60"/>
+			<skill id="190" level="23" name="Фатальный Удар(Fatal Strike)" cost="540000" min_level="60"/>
+			<skill id="8" level="5" name="Фокусировка Звука(Sonic Focus)" cost="540000" min_level="60"/>
+			<skill id="1405" level="2" name="Божественное Вдохновение(Divine Inspiration)" item_id="8619" cost="540000" min_level="61"/>
+			<skill id="227" level="37" name="Владение Легкой Броней(Light Armor Mastery)" cost="540000" min_level="61"/>
+			<skill id="257" level="32" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="540000" min_level="61"/>
+			<skill id="144" level="24" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="540000" min_level="61"/>
+			<skill id="231" level="37" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="540000" min_level="61"/>
+			<skill id="5" level="18" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="540000" min_level="61"/>
+			<skill id="9" level="21" name="Звуковая Волна(Sonic Buster)" cost="540000" min_level="61"/>
+			<skill id="6" level="24" name="Звуковой Импульс(Sonic Blaster)" cost="540000" min_level="61"/>
+			<skill id="7" level="15" name="Звуковой Шторм(Sonic Storm)" cost="540000" min_level="61"/>
+			<skill id="260" level="24" name="Сокрушение Молотом(Hammer Crush)" cost="540000" min_level="61"/>
+			<skill id="261" level="9" name="Тройное Звуковое Рассечение(Triple Sonic Slash)" cost="540000" min_level="61"/>
+			<skill id="1" level="24" name="Тройное Рассечение(Triple Slash)" cost="540000" min_level="61"/>
+			<skill id="190" level="24" name="Фатальный Удар(Fatal Strike)" cost="540000" min_level="61"/>
+			<skill id="312" level="14" name="Боевая Стойка Коварства(Vicious Stance)" cost="670000" min_level="62"/>
+			<skill id="227" level="38" name="Владение Легкой Броней(Light Armor Mastery)" cost="670000" min_level="62"/>
+			<skill id="257" level="33" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="670000" min_level="62"/>
+			<skill id="144" level="25" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="670000" min_level="62"/>
+			<skill id="231" level="38" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="670000" min_level="62"/>
+			<skill id="5" level="19" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="670000" min_level="62"/>
+			<skill id="9" level="22" name="Звуковая Волна(Sonic Buster)" cost="670000" min_level="62"/>
+			<skill id="451" level="2" name="Звуковое Движение(Sonic Move)" cost="670000" min_level="62"/>
+			<skill id="6" level="25" name="Звуковой Импульс(Sonic Blaster)" cost="670000" min_level="62"/>
+			<skill id="7" level="16" name="Звуковой Шторм(Sonic Storm)" cost="670000" min_level="62"/>
+			<skill id="287" level="3" name="Львиное Сердце(Lionheart)" cost="670000" min_level="62"/>
+			<skill id="290" level="8" name="Предельное Безумие(Final Frenzy)" cost="670000" min_level="62"/>
+			<skill id="260" level="25" name="Сокрушение Молотом(Hammer Crush)" cost="670000" min_level="62"/>
+			<skill id="261" level="10" name="Тройное Звуковое Рассечение(Triple Sonic Slash)" cost="670000" min_level="62"/>
+			<skill id="1" level="25" name="Тройное Рассечение(Triple Slash)" cost="670000" min_level="62"/>
+			<skill id="190" level="25" name="Фатальный Удар(Fatal Strike)" cost="670000" min_level="62"/>
+			<skill id="227" level="39" name="Владение Легкой Броней(Light Armor Mastery)" cost="670000" min_level="63"/>
+			<skill id="257" level="34" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="670000" min_level="63"/>
+			<skill id="144" level="26" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="670000" min_level="63"/>
+			<skill id="231" level="39" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="670000" min_level="63"/>
+			<skill id="5" level="20" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="670000" min_level="63"/>
+			<skill id="9" level="23" name="Звуковая Волна(Sonic Buster)" cost="670000" min_level="63"/>
+			<skill id="6" level="26" name="Звуковой Импульс(Sonic Blaster)" cost="670000" min_level="63"/>
+			<skill id="7" level="17" name="Звуковой Шторм(Sonic Storm)" cost="670000" min_level="63"/>
+			<skill id="260" level="26" name="Сокрушение Молотом(Hammer Crush)" cost="670000" min_level="63"/>
+			<skill id="261" level="11" name="Тройное Звуковое Рассечение(Triple Sonic Slash)" cost="670000" min_level="63"/>
+			<skill id="1" level="26" name="Тройное Рассечение(Triple Slash)" cost="670000" min_level="63"/>
+			<skill id="190" level="26" name="Фатальный Удар(Fatal Strike)" cost="670000" min_level="63"/>
+			<skill id="312" level="15" name="Боевая Стойка Коварства(Vicious Stance)" cost="840000" min_level="64"/>
+			<skill id="227" level="40" name="Владение Легкой Броней(Light Armor Mastery)" cost="840000" min_level="64"/>
+			<skill id="257" level="35" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="840000" min_level="64"/>
+			<skill id="144" level="27" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="840000" min_level="64"/>
+			<skill id="231" level="40" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="840000" min_level="64"/>
+			<skill id="5" level="21" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="840000" min_level="64"/>
+			<skill id="297" level="1" name="Дух Дуэлиста(Duelist Spirit)" cost="840000" min_level="64"/>
+			<skill id="9" level="24" name="Звуковая Волна(Sonic Buster)" cost="840000" min_level="64"/>
+			<skill id="6" level="27" name="Звуковой Импульс(Sonic Blaster)" cost="840000" min_level="64"/>
+			<skill id="7" level="18" name="Звуковой Шторм(Sonic Storm)" cost="840000" min_level="64"/>
+			<skill id="290" level="9" name="Предельное Безумие(Final Frenzy)" cost="840000" min_level="64"/>
+			<skill id="260" level="27" name="Сокрушение Молотом(Hammer Crush)" cost="840000" min_level="64"/>
+			<skill id="261" level="12" name="Тройное Звуковое Рассечение(Triple Sonic Slash)" cost="840000" min_level="64"/>
+			<skill id="1" level="27" name="Тройное Рассечение(Triple Slash)" cost="840000" min_level="64"/>
+			<skill id="190" level="27" name="Фатальный Удар(Fatal Strike)" cost="840000" min_level="64"/>
+			<skill id="227" level="41" name="Владение Легкой Броней(Light Armor Mastery)" cost="840000" min_level="65"/>
+			<skill id="257" level="36" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="840000" min_level="65"/>
+			<skill id="144" level="28" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="840000" min_level="65"/>
+			<skill id="231" level="41" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="840000" min_level="65"/>
+			<skill id="5" level="22" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="840000" min_level="65"/>
+			<skill id="9" level="25" name="Звуковая Волна(Sonic Buster)" cost="840000" min_level="65"/>
+			<skill id="6" level="28" name="Звуковой Импульс(Sonic Blaster)" cost="840000" min_level="65"/>
+			<skill id="7" level="19" name="Звуковой Шторм(Sonic Storm)" cost="840000" min_level="65"/>
+			<skill id="260" level="28" name="Сокрушение Молотом(Hammer Crush)" cost="840000" min_level="65"/>
+			<skill id="261" level="13" name="Тройное Звуковое Рассечение(Triple Sonic Slash)" cost="840000" min_level="65"/>
+			<skill id="1" level="28" name="Тройное Рассечение(Triple Slash)" cost="840000" min_level="65"/>
+			<skill id="190" level="28" name="Фатальный Удар(Fatal Strike)" cost="840000" min_level="65"/>
+			<skill id="312" level="16" name="Боевая Стойка Коварства(Vicious Stance)" cost="950000" min_level="66"/>
+			<skill id="992" level="6" name="Владение Звуком(Sonic Mastery)" cost="950000" min_level="66"/>
+			<skill id="227" level="42" name="Владение Легкой Броней(Light Armor Mastery)" cost="950000" min_level="66"/>
+			<skill id="257" level="37" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="950000" min_level="66"/>
+			<skill id="144" level="29" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="950000" min_level="66"/>
+			<skill id="231" level="42" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="950000" min_level="66"/>
+			<skill id="5" level="23" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="950000" min_level="66"/>
+			<skill id="9" level="26" name="Звуковая Волна(Sonic Buster)" cost="950000" min_level="66"/>
+			<skill id="6" level="29" name="Звуковой Импульс(Sonic Blaster)" cost="950000" min_level="66"/>
+			<skill id="7" level="20" name="Звуковой Шторм(Sonic Storm)" cost="950000" min_level="66"/>
+			<skill id="290" level="10" name="Предельное Безумие(Final Frenzy)" cost="950000" min_level="66"/>
+			<skill id="260" level="29" name="Сокрушение Молотом(Hammer Crush)" cost="950000" min_level="66"/>
+			<skill id="261" level="14" name="Тройное Звуковое Рассечение(Triple Sonic Slash)" cost="950000" min_level="66"/>
+			<skill id="1" level="29" name="Тройное Рассечение(Triple Slash)" cost="950000" min_level="66"/>
+			<skill id="190" level="29" name="Фатальный Удар(Fatal Strike)" cost="950000" min_level="66"/>
+			<skill id="8" level="6" name="Фокусировка Звука(Sonic Focus)" cost="950000" min_level="66"/>
+			<skill id="227" level="43" name="Владение Легкой Броней(Light Armor Mastery)" cost="950000" min_level="67"/>
+			<skill id="257" level="38" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="950000" min_level="67"/>
+			<skill id="144" level="30" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="950000" min_level="67"/>
+			<skill id="231" level="43" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="950000" min_level="67"/>
+			<skill id="5" level="24" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="950000" min_level="67"/>
+			<skill id="1605" level="3" name="Защита Парным Оружием(Dual Weapon Defense)" cost="950000" min_level="67"/>
+			<skill id="9" level="27" name="Звуковая Волна(Sonic Buster)" cost="950000" min_level="67"/>
+			<skill id="6" level="30" name="Звуковой Импульс(Sonic Blaster)" cost="950000" min_level="67"/>
+			<skill id="7" level="21" name="Звуковой Шторм(Sonic Storm)" cost="950000" min_level="67"/>
+			<skill id="260" level="30" name="Сокрушение Молотом(Hammer Crush)" cost="950000" min_level="67"/>
+			<skill id="261" level="15" name="Тройное Звуковое Рассечение(Triple Sonic Slash)" cost="950000" min_level="67"/>
+			<skill id="1" level="30" name="Тройное Рассечение(Triple Slash)" cost="950000" min_level="67"/>
+			<skill id="190" level="30" name="Фатальный Удар(Fatal Strike)" cost="950000" min_level="67"/>
+			<skill id="312" level="17" name="Боевая Стойка Коварства(Vicious Stance)" cost="1300000" min_level="68"/>
+			<skill id="212" level="7" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="1300000" min_level="68"/>
+			<skill id="227" level="44" name="Владение Легкой Броней(Light Armor Mastery)" cost="1300000" min_level="68"/>
+			<skill id="257" level="39" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1300000" min_level="68"/>
+			<skill id="144" level="31" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="1300000" min_level="68"/>
+			<skill id="231" level="44" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1300000" min_level="68"/>
+			<skill id="5" level="25" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="1300000" min_level="68"/>
+			<skill id="9" level="28" name="Звуковая Волна(Sonic Buster)" cost="1300000" min_level="68"/>
+			<skill id="451" level="3" name="Звуковое Движение(Sonic Move)" cost="1300000" min_level="68"/>
+			<skill id="6" level="31" name="Звуковой Импульс(Sonic Blaster)" cost="1300000" min_level="68"/>
+			<skill id="7" level="22" name="Звуковой Шторм(Sonic Storm)" cost="1300000" min_level="68"/>
+			<skill id="290" level="11" name="Предельное Безумие(Final Frenzy)" cost="1300000" min_level="68"/>
+			<skill id="260" level="31" name="Сокрушение Молотом(Hammer Crush)" cost="1300000" min_level="68"/>
+			<skill id="261" level="16" name="Тройное Звуковое Рассечение(Triple Sonic Slash)" cost="1300000" min_level="68"/>
+			<skill id="1" level="31" name="Тройное Рассечение(Triple Slash)" cost="1300000" min_level="68"/>
+			<skill id="190" level="31" name="Фатальный Удар(Fatal Strike)" cost="1300000" min_level="68"/>
+			<skill id="227" level="45" name="Владение Легкой Броней(Light Armor Mastery)" cost="1300000" min_level="69"/>
+			<skill id="257" level="40" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1300000" min_level="69"/>
+			<skill id="144" level="32" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="1300000" min_level="69"/>
+			<skill id="231" level="45" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1300000" min_level="69"/>
+			<skill id="5" level="26" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="1300000" min_level="69"/>
+			<skill id="9" level="29" name="Звуковая Волна(Sonic Buster)" cost="1300000" min_level="69"/>
+			<skill id="6" level="32" name="Звуковой Импульс(Sonic Blaster)" cost="1300000" min_level="69"/>
+			<skill id="7" level="23" name="Звуковой Шторм(Sonic Storm)" cost="1300000" min_level="69"/>
+			<skill id="260" level="32" name="Сокрушение Молотом(Hammer Crush)" cost="1300000" min_level="69"/>
+			<skill id="261" level="17" name="Тройное Звуковое Рассечение(Triple Sonic Slash)" cost="1300000" min_level="69"/>
+			<skill id="1" level="32" name="Тройное Рассечение(Triple Slash)" cost="1300000" min_level="69"/>
+			<skill id="190" level="32" name="Фатальный Удар(Fatal Strike)" cost="1300000" min_level="69"/>
+			<skill id="312" level="18" name="Боевая Стойка Коварства(Vicious Stance)" cost="1600000" min_level="70"/>
+			<skill id="992" level="7" name="Владение Звуком(Sonic Mastery)" cost="1600000" min_level="70"/>
+			<skill id="227" level="46" name="Владение Легкой Броней(Light Armor Mastery)" cost="1600000" min_level="70"/>
+			<skill id="257" level="41" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1600000" min_level="70"/>
+			<skill id="144" level="33" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="1600000" min_level="70"/>
+			<skill id="231" level="46" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1600000" min_level="70"/>
+			<skill id="5" level="27" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="1600000" min_level="70"/>
+			<skill id="9" level="30" name="Звуковая Волна(Sonic Buster)" cost="1600000" min_level="70"/>
+			<skill id="6" level="33" name="Звуковой Импульс(Sonic Blaster)" cost="1600000" min_level="70"/>
+			<skill id="7" level="24" name="Звуковой Шторм(Sonic Storm)" cost="1600000" min_level="70"/>
+			<skill id="290" level="12" name="Предельное Безумие(Final Frenzy)" cost="1600000" min_level="70"/>
+			<skill id="1802" level="1" name="Светлый Ассасин(White Assassin)" min_level="70"/>
+			<skill id="260" level="33" name="Сокрушение Молотом(Hammer Crush)" cost="1600000" min_level="70"/>
+			<skill id="261" level="18" name="Тройное Звуковое Рассечение(Triple Sonic Slash)" cost="1600000" min_level="70"/>
+			<skill id="1" level="33" name="Тройное Рассечение(Triple Slash)" cost="1600000" min_level="70"/>
+			<skill id="190" level="33" name="Фатальный Удар(Fatal Strike)" cost="1600000" min_level="70"/>
+			<skill id="8" level="7" name="Фокусировка Звука(Sonic Focus)" cost="1600000" min_level="70"/>
+			<skill id="227" level="47" name="Владение Легкой Броней(Light Armor Mastery)" cost="1600000" min_level="71"/>
+			<skill id="257" level="42" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1600000" min_level="71"/>
+			<skill id="144" level="34" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="1600000" min_level="71"/>
+			<skill id="231" level="47" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1600000" min_level="71"/>
+			<skill id="5" level="28" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="1600000" min_level="71"/>
+			<skill id="9" level="31" name="Звуковая Волна(Sonic Buster)" cost="1600000" min_level="71"/>
+			<skill id="6" level="34" name="Звуковой Импульс(Sonic Blaster)" cost="1600000" min_level="71"/>
+			<skill id="7" level="25" name="Звуковой Шторм(Sonic Storm)" cost="1600000" min_level="71"/>
+			<skill id="260" level="34" name="Сокрушение Молотом(Hammer Crush)" cost="1600000" min_level="71"/>
+			<skill id="261" level="19" name="Тройное Звуковое Рассечение(Triple Sonic Slash)" cost="1600000" min_level="71"/>
+			<skill id="1" level="34" name="Тройное Рассечение(Triple Slash)" cost="1600000" min_level="71"/>
+			<skill id="190" level="34" name="Фатальный Удар(Fatal Strike)" cost="1600000" min_level="71"/>
+			<skill id="312" level="19" name="Боевая Стойка Коварства(Vicious Stance)" cost="1800000" min_level="72"/>
+			<skill id="227" level="48" name="Владение Легкой Броней(Light Armor Mastery)" cost="1800000" min_level="72"/>
+			<skill id="257" level="43" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1800000" min_level="72"/>
+			<skill id="144" level="35" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="1800000" min_level="72"/>
+			<skill id="231" level="48" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1800000" min_level="72"/>
+			<skill id="5" level="29" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="1800000" min_level="72"/>
+			<skill id="297" level="2" name="Дух Дуэлиста(Duelist Spirit)" cost="1800000" min_level="72"/>
+			<skill id="9" level="32" name="Звуковая Волна(Sonic Buster)" cost="1800000" min_level="72"/>
+			<skill id="6" level="35" name="Звуковой Импульс(Sonic Blaster)" cost="1800000" min_level="72"/>
+			<skill id="7" level="26" name="Звуковой Шторм(Sonic Storm)" cost="1800000" min_level="72"/>
+			<skill id="290" level="13" name="Предельное Безумие(Final Frenzy)" cost="1800000" min_level="72"/>
+			<skill id="260" level="35" name="Сокрушение Молотом(Hammer Crush)" cost="1800000" min_level="72"/>
+			<skill id="261" level="20" name="Тройное Звуковое Рассечение(Triple Sonic Slash)" cost="1800000" min_level="72"/>
+			<skill id="1" level="35" name="Тройное Рассечение(Triple Slash)" cost="1800000" min_level="72"/>
+			<skill id="190" level="35" name="Фатальный Удар(Fatal Strike)" cost="1800000" min_level="72"/>
+			<skill id="227" level="49" name="Владение Легкой Броней(Light Armor Mastery)" cost="1800000" min_level="73"/>
+			<skill id="257" level="44" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1800000" min_level="73"/>
+			<skill id="144" level="36" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="1800000" min_level="73"/>
+			<skill id="231" level="49" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1800000" min_level="73"/>
+			<skill id="5" level="30" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="1800000" min_level="73"/>
+			<skill id="9" level="33" name="Звуковая Волна(Sonic Buster)" cost="1800000" min_level="73"/>
+			<skill id="6" level="36" name="Звуковой Импульс(Sonic Blaster)" cost="1800000" min_level="73"/>
+			<skill id="7" level="27" name="Звуковой Шторм(Sonic Storm)" cost="1800000" min_level="73"/>
+			<skill id="260" level="36" name="Сокрушение Молотом(Hammer Crush)" cost="1800000" min_level="73"/>
+			<skill id="261" level="21" name="Тройное Звуковое Рассечение(Triple Sonic Slash)" cost="1800000" min_level="73"/>
+			<skill id="1" level="36" name="Тройное Рассечение(Triple Slash)" cost="1800000" min_level="73"/>
+			<skill id="190" level="36" name="Фатальный Удар(Fatal Strike)" cost="1800000" min_level="73"/>
+			<skill id="312" level="20" name="Боевая Стойка Коварства(Vicious Stance)" cost="1800000" min_level="74"/>
+			<skill id="212" level="8" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="1800000" min_level="74"/>
+			<skill id="227" level="50" name="Владение Легкой Броней(Light Armor Mastery)" cost="1800000" min_level="74"/>
+			<skill id="257" level="45" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1800000" min_level="74"/>
+			<skill id="144" level="37" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="1800000" min_level="74"/>
+			<skill id="231" level="50" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1800000" min_level="74"/>
+			<skill id="5" level="31" name="Двойной Звуковой Разрез(Double Sonic Slash)" cost="1800000" min_level="74"/>
+			<skill id="9" level="34" name="Звуковая Волна(Sonic Buster)" cost="1800000" min_level="74"/>
+			<skill id="6" level="37" name="Звуковой Импульс(Sonic Blaster)" cost="1800000" min_level="74"/>
+			<skill id="7" level="28" name="Звуковой Шторм(Sonic Storm)" cost="1800000" min_level="74"/>
+			<skill id="290" level="14" name="Предельное Безумие(Final Frenzy)" cost="1800000" min_level="74"/>
+			<skill id="260" level="37" name="Сокрушение Молотом(Hammer Crush)" cost="1800000" min_level="74"/>
+			<skill id="261" level="22" name="Тройное Звуковое Рассечение(Triple Sonic Slash)" cost="1800000" min_level="74"/>
+			<skill id="1" level="37" name="Тройное Рассечение(Triple Slash)" cost="1800000" min_level="74"/>
+			<skill id="190" level="37" name="Фатальный Удар(Fatal Strike)" cost="1800000" min_level="74"/>
+		</class>
+	</normal_skill_tree>
+</list>

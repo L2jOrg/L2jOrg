@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="5200" name="Chest Key - Grade 5">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_key_i00"/>
+		<set name="price" value="1900"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="10"/>
+	</etcitem>
+	<etcitem id="5201" name="Chest Key - Grade 4">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_key_i00"/>
+		<set name="price" value="3200"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="10"/>
+	</etcitem>
+	<etcitem id="5202" name="Chest Key - Grade 3">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_key_i00"/>
+		<set name="price" value="5100"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="10"/>
+	</etcitem>
+	<etcitem id="5203" name="Chest Key - Grade 2">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_key_i00"/>
+		<set name="price" value="7400"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="10"/>
+	</etcitem>
+	<etcitem id="5204" name="Chest Key - Grade 1">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_key_i00"/>
+		<set name="price" value="10000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="10"/>
+	</etcitem>
+	<etcitem id="5205" name="Mercenary Posting Ticket (Sword/Stationary)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_sword_fix_i00"/>
+		<set name="price" value="50000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5206" name="Mercenary Posting Ticket (Spear/Stationary)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_pole_fix_i00"/>
+		<set name="price" value="60000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5207" name="Mercenary Posting Ticket (Bow/Stationary)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_bow_fix_i00"/>
+		<set name="price" value="70000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5208" name="Mercenary Posting Ticket (Cleric/Stationary)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_cleric_fix_i00"/>
+		<set name="price" value="170000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5209" name="Mercenary Posting Ticket (Wizard/Stationary)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_wizard_fix_i00"/>
+		<set name="price" value="170000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5210" name="Mercenary Posting Ticket (Sword/Mobile)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_sword_move_i00"/>
+		<set name="price" value="50000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5211" name="Mercenary Posting Ticket (Spear/Mobile)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_pole_move_i00"/>
+		<set name="price" value="60000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5212" name="Mercenary Posting Ticket (Bow/Mobile)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_bow_move_i00"/>
+		<set name="price" value="70000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5213" name="Mercenary Posting Ticket (Cleric/Mobile)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_cleric_move_i00"/>
+		<set name="price" value="170000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5214" name="Mercenary Posting Ticket (Wizard/Mobile)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_wizard_move_i00"/>
+		<set name="price" value="170000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5215" name="Mercenary Posting Ticket (Teleporter1)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_teleporter_fix_i00"/>
+		<set name="price" value="100000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5218" name="Mercenary Posting Ticket (Teleporter2)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_teleporter_fix_i00"/>
+		<set name="price" value="100000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5219" name="Mercenary Posting Ticket (Teleporter3)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_teleporter_fix_i00"/>
+		<set name="price" value="100000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5220" name="Metal Hardener">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_plate_blue_i00"/>
+		<set name="price" value="5000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="2"/>
+	</etcitem>
+	<etcitem id="5230" name="Recipe: Mithril Arrow">
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="5231" name="Recipe: Metal Hardener">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="price" value="2800"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="5232" name="White Cloth">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_piece_of_cloth_white_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<weapon id="5233" name="Keshanberk*Keshanberk">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;44;120"/>
+		<set name="crystal_count" value="1128"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_dual_sword_i00"/>
+		<set name="price" value="14098000"/>
+		<set name="type" value="DUAL"/>
+		<set name="weight" value="2080"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="259"/>
+			<add stat="mAtk" order="0x10" value="107"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<etcitem id="5234" name="Mysterious Potion">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="POTION"/>
+		<set name="reuse_delay" value="500"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_lesser_potion_clear_i00"/>
+		<set name="price" value="10000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="50"/>
+		<skills>
+			<skill id="2103" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="5235" name="Facelifting Potion - A">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="POTION"/>
+		<set name="handler" value="CharChangePotions"/>
+		<set name="reuse_delay" value="500"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_lesser_potion_purple_i00"/>
+		<set name="price" value="20000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="50"/>
+	</etcitem>
+	<etcitem id="5236" name="Facelifting Potion - B">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="POTION"/>
+		<set name="handler" value="CharChangePotions"/>
+		<set name="reuse_delay" value="500"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_lesser_potion_purple_i00"/>
+		<set name="price" value="20000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="50"/>
+	</etcitem>
+	<etcitem id="5237" name="Facelifting Potion - C">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="POTION"/>
+		<set name="handler" value="CharChangePotions"/>
+		<set name="reuse_delay" value="500"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_lesser_potion_purple_i00"/>
+		<set name="price" value="20000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="50"/>
+	</etcitem>
+	<etcitem id="5238" name="Dye Potion - A">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="POTION"/>
+		<set name="handler" value="CharChangePotions"/>
+		<set name="reuse_delay" value="500"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_lesser_potion_scarlet_i00"/>
+		<set name="price" value="20000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="50"/>
+	</etcitem>
+	<etcitem id="5239" name="Dye Potion - B">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="POTION"/>
+		<set name="handler" value="CharChangePotions"/>
+		<set name="reuse_delay" value="500"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_lesser_potion_scarlet_i00"/>
+		<set name="price" value="20000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="50"/>
+	</etcitem>
+	<etcitem id="5240" name="Dye Potion - C">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="POTION"/>
+		<set name="handler" value="CharChangePotions"/>
+		<set name="reuse_delay" value="500"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_lesser_potion_scarlet_i00"/>
+		<set name="price" value="20000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="50"/>
+	</etcitem>
+	<etcitem id="5241" name="Dye Potion - D">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="POTION"/>
+		<set name="handler" value="CharChangePotions"/>
+		<set name="reuse_delay" value="500"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_lesser_potion_scarlet_i00"/>
+		<set name="price" value="20000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="50"/>
+	</etcitem>
+	<etcitem id="5242" name="Hair Style Change Potion - A">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="POTION"/>
+		<set name="handler" value="CharChangePotions"/>
+		<set name="reuse_delay" value="500"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_lesser_potion_green_i00"/>
+		<set name="price" value="20000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="50"/>
+	</etcitem>
+	<etcitem id="5243" name="Hair Style Change Potion - B">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="POTION"/>
+		<set name="handler" value="CharChangePotions"/>
+		<set name="reuse_delay" value="500"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_lesser_potion_green_i00"/>
+		<set name="price" value="20000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="50"/>
+	</etcitem>
+	<etcitem id="5244" name="Hair Style Change Potion - C">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="POTION"/>
+		<set name="handler" value="CharChangePotions"/>
+		<set name="reuse_delay" value="500"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_lesser_potion_green_i00"/>
+		<set name="price" value="20000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="50"/>
+	</etcitem>
+	<etcitem id="5245" name="Hair Style Change Potion - D">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="POTION"/>
+		<set name="handler" value="CharChangePotions"/>
+		<set name="reuse_delay" value="500"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_lesser_potion_green_i00"/>
+		<set name="price" value="20000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="50"/>
+	</etcitem>
+	<etcitem id="5246" name="Hair Style Change Potion - E">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="POTION"/>
+		<set name="handler" value="CharChangePotions"/>
+		<set name="reuse_delay" value="500"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_lesser_potion_green_i00"/>
+		<set name="price" value="20000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="50"/>
+	</etcitem>
+	<etcitem id="5247" name="Hair Style Change Potion - F">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="POTION"/>
+		<set name="handler" value="CharChangePotions"/>
+		<set name="reuse_delay" value="500"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_lesser_potion_green_i00"/>
+		<set name="price" value="20000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="50"/>
+		<cond msgId="113">
+			<player sex="FEMALE"/>
+		</cond>
+	</etcitem>
+	<etcitem id="5248" name="Hair Style Change Potion - G">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="POTION"/>
+		<set name="handler" value="CharChangePotions"/>
+		<set name="reuse_delay" value="500"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_lesser_potion_green_i00"/>
+		<set name="price" value="20000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="50"/>
+		<cond msgId="113">
+			<player sex="FEMALE"/>
+		</cond>
+	</etcitem>
+	<etcitem id="5250" name="Greater Soulshot Compressed Package (No-grade)">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_gray_i00"/>
+		<set name="price" value="7700"/>
+		<set name="weight" value="600"/>
+		<skills>
+			<skill id="2104" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="5251" name="Greater Soulshot Compressed Package (D-grade)">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_gray_i00"/>
+		<set name="price" value="11000"/>
+		<set name="weight" value="450"/>
+		<skills>
+			<skill id="2105" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="5252" name="Greater Soulshot Compressed Package (C-grade)">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_gray_i00"/>
+		<set name="price" value="16500"/>
+		<set name="weight" value="450"/>
+		<skills>
+			<skill id="2106" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="5253" name="Greater Soulshot Compressed Package (B-grade)">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_gray_i00"/>
+		<set name="price" value="55000"/>
+		<set name="weight" value="300"/>
+		<skills>
+			<skill id="2107" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="5254" name="Greater Soulshot Compressed Package (A-grade)">
+		<set name="icon" value="icon.etc_pouch_gray_i00"/>
+		<set name="weight" value="300"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="5256" name="Greater Spiritshot Compressed Package (No-grade)">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_gray_i00"/>
+		<set name="price" value="16500"/>
+		<set name="weight" value="750"/>
+		<skills>
+			<skill id="2110" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="5257" name="Greater Spiritshot Compressed Package (D-grade)">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_gray_i00"/>
+		<set name="price" value="19800"/>
+		<set name="weight" value="750"/>
+		<skills>
+			<skill id="2111" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="5258" name="Greater Spiritshot Compressed Package (C-grade)">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_gray_i00"/>
+		<set name="price" value="38500"/>
+		<set name="weight" value="450"/>
+		<skills>
+			<skill id="2112" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="5259" name="Greater Spiritshot Compressed Package (B-grade)">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_gray_i00"/>
+		<set name="price" value="110000"/>
+		<set name="weight" value="450"/>
+		<skills>
+			<skill id="2113" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="5260" name="Greater Spiritshot Compressed Package (A-grade)">
+		<set name="icon" value="icon.etc_pouch_gray_i00"/>
+		<set name="weight" value="300"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="5262" name="Greater Blessed Spiritshot Compressed Package (No-grade)">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_gray_i00"/>
+		<set name="price" value="38500"/>
+		<set name="weight" value="750"/>
+		<skills>
+			<skill id="2116" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="5263" name="Greater Blessed Spiritshot Compressed Package (D-grade)">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_gray_i00"/>
+		<set name="price" value="49500"/>
+		<set name="weight" value="750"/>
+		<skills>
+			<skill id="2117" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="5264" name="Greater Blessed Spiritshot Compressed Package (C-grade)">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_gray_i00"/>
+		<set name="price" value="99000"/>
+		<set name="weight" value="450"/>
+		<skills>
+			<skill id="2118" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="5265" name="Greater Blessed Spiritshot Compressed Package (B-grade)">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_gray_i00"/>
+		<set name="price" value="269500"/>
+		<set name="weight" value="450"/>
+		<skills>
+			<skill id="2119" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="5266" name="Greater Blessed Spiritshot Compressed Package (A-grade)">
+		<set name="icon" value="icon.etc_pouch_gray_i00"/>
+		<set name="weight" value="300"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="5268" name="Recipe: Greater Soulshot Compressed Package (D-grade)">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="price" value="5000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="5269" name="Recipe: Greater Soulshot Compressed Package (C-grade)">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
+		<set name="price" value="60000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="5270" name="Recipe: Greater Soulshot Compressed Package (B-grade)">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_red_i00"/>
+		<set name="price" value="100000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="5271" name="Recipe: Greater Soulshot Compressed Package (A-grade)">
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="5273" name="Recipe: Greater Spiritshot Compressed Package (D-grade)">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="price" value="5000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="5274" name="Recipe: Greater Spiritshot Compressed Package (C-grade)">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
+		<set name="price" value="60000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="5275" name="Recipe: Greater Spiritshot Compressed Package (B-grade)">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_red_i00"/>
+		<set name="price" value="100000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="5276" name="Recipe: Greater Spiritshot Compressed Package (A-grade)">
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="5278" name="Recipe: Greater Blessed Spiritshot Compressed Package (D-grade)">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="price" value="5000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="5279" name="Recipe: Greater Blessed Spiritshot Compressed Package (C-grade)">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
+		<set name="price" value="60000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="5280" name="Recipe: Greater Blessed Spiritshot Compressed Package (B-grade)">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_red_i00"/>
+		<set name="price" value="100000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="5281" name="Recipe: Greater Blessed Spiritshot Compressed Package (A-grade)">
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="5283" name="Rice Cake">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="POTION"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_mochi_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<weapon id="5284" name="Zweihander">
+		<set name="damage_range" value="0;0;44;120"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_zweihander_i00"/>
+		<set name="price" value="244000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BIGSWORD"/>
+		<set name="weight" value="1530"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="38"/>
+			<add stat="mAtk" order="0x10" value="21"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+		</for>
+	</weapon>
+	<weapon id="5285" name="Heavy Sword">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;44;120"/>
+		<set name="crystal_count" value="582"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_heavy_sword_i00"/>
+		<set name="kamael_convert" value="9210"/>
+		<set name="price" value="409000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BIGSWORD"/>
+		<set name="weight" value="1520"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="49"/>
+			<add stat="mAtk" order="0x10" value="26"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+		</for>
+	</weapon>
+	<weapon id="5286" name="Berserker Blade">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;44;120"/>
+		<set name="crystal_count" value="1885"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_berserker_blade_i00"/>
+		<set name="kamael_convert" value="9296"/>
+		<set name="price" value="942700"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BIGSWORD"/>
+		<set name="weight" value="1380"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="190"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+		</for>
+	</weapon>
+	<armor id="5287" name="Sealed Dark Crystal breastplate">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="285"/>
+		<set name="icon" value="icon.armor_t74_u_i02"/>
+		<set name="price" value="3562000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="7700"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="171"/>
+		</for>
+	</armor>
+	<armor id="5288" name="Sealed Dark Crystal Gaiters">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="178"/>
+		<set name="icon" value="icon.armor_t74_l_i02"/>
+		<set name="price" value="2226000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="3320"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="107"/>
+		</for>
+	</armor>
+	<armor id="5289" name="Sealed Dark Crystal Helmet">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="107"/>
+		<set name="icon" value="icon.armor_helmet_i02"/>
+		<set name="price" value="1336000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="570"/>
+		<equip>
+			<slot id="HEAD"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="69"/>
+		</for>
+	</armor>
+	<armor id="5290" name="Sealed Dark Crystal Gloves">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="71"/>
+		<set name="icon" value="icon.armor_t74_g_i02"/>
+		<set name="price" value="890000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="580"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="46"/>
+		</for>
+	</armor>
+	<armor id="5291" name="Sealed Dark Crystal Boots">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="71"/>
+		<set name="icon" value="icon.armor_t74_b_i02"/>
+		<set name="price" value="890000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1110"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="46"/>
+		</for>
+	</armor>
+	<weapon id="5292" name="Sealed Dark Crystal Shield">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="75"/>
+		<set name="icon" value="icon.shield_dark_crystal_shield_i02"/>
+		<set name="price" value="935000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1190"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pEvasRate" order="0x10" value="-8"/>
+			<add stat="sDef" order="0x10" value="243"/>
+			<add stat="rShld" order="0x10" value="20"/>
+		</for>
+	</weapon>
+	<armor id="5293" name="Sealed Tallum Plate Armor">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="463"/>
+		<set name="icon" value="icon.armor_t77_ul_i02"/>
+		<set name="price" value="5788000"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="9780"/>
+		<equip>
+			<slot id="FULL_ARMOR"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="278"/>
+		</for>
+	</armor>
+	<armor id="5294" name="Sealed Tallum Helmet">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="107"/>
+		<set name="icon" value="icon.armor_helmet_i02"/>
+		<set name="price" value="1336000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="570"/>
+		<equip>
+			<slot id="HEAD"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="69"/>
+		</for>
+	</armor>
+	<armor id="5295" name="Sealed Tallum Gloves">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="71"/>
+		<set name="icon" value="icon.armor_t77_g_i02"/>
+		<set name="price" value="890000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="580"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="46"/>
+		</for>
+	</armor>
+	<armor id="5296" name="Sealed Tallum Boots">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="71"/>
+		<set name="icon" value="icon.armor_t77_b_i02"/>
+		<set name="price" value="890000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1130"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="46"/>
+		</for>
+	</armor>
+	<armor id="5297" name="Sealed Dark Crystal Leather Armor">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="214"/>
+		<set name="icon" value="icon.armor_t75_u_i02"/>
+		<set name="price" value="2671000"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="4300"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="128"/>
+		</for>
+	</armor>
+	<armor id="5298" name="Sealed Dark Crystal Leggings">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="134"/>
+		<set name="icon" value="icon.armor_t75_l_i02"/>
+		<set name="price" value="1670000"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="1480"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="80"/>
+		</for>
+	</armor>
+</list>

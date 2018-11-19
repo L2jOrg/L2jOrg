@@ -1,0 +1,3052 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn name="devils_isle_21_24_npc001" count="1" respawn="60">
+		<point x="41973" y="208278" z="-3752" h="0"/>
+		<npc id="34038"/><!--Телепорт-->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc002" count="1" respawn="60">
+		<point x="42403" y="209977" z="-3712" h="55146"/>
+		<npc id="18919"/><!---->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc003" count="1" respawn="60">
+		<point x="42126" y="209859" z="-3712" h="0"/>
+		<npc id="34024"/><!--Гора Костей-->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc004" count="1" respawn="60">
+		<point x="43618" y="206249" z="-3752" h="19688"/>
+		<npc id="34020"/><!--Никия-->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc005" count="1" respawn="60">
+		<point x="44128" y="206922" z="-3752" h="37689"/>
+		<npc id="34022"/><!--Дух Пирата-->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc006" count="1" respawn="60">
+		<point x="43674" y="212511" z="-3712" h="0"/>
+		<npc id="34038"/><!--Телепорт-->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc007" count="1" respawn="60">
+		<point x="42158" y="213233" z="-3712" h="0"/>
+		<npc id="34038"/><!--Телепорт-->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc008" count="1" respawn="60">
+		<point x="46727" y="210390" z="-3592" h="0"/>
+		<npc id="18919"/><!---->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc009" count="1" respawn="60">
+		<point x="43447" y="212168" z="-3712" h="0"/>
+		<npc id="18919"/><!---->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc010" count="1" respawn="60">
+		<point x="45394" y="212094" z="-3688" h="0"/>
+		<npc id="18919"/><!---->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc011" count="1" respawn="60">
+		<point x="49397" y="208093" z="-3728" h="61132"/>
+		<npc id="18919"/><!---->
+	</spawn>
+	<!--TODO: Кукони меняются, но не из-за дня и ночи.
+	<spawn name="devils_isle_21_24_npc012" count="1" respawn="60">
+		<point x="49919" y="208255" z="-3728" h="30492"/>
+		<npc id="34034"/>#Кукони#
+	</spawn>-->
+	<spawn name="devils_isle_21_24_npc012" count="1" respawn="60">
+		<point x="49919" y="208255" z="-3728" h="30492"/>
+		<npc id="34035"><!--Кукони-->
+			<set name="state_id" value="1"/>
+		</npc>
+	</spawn>
+	<spawn name="devils_isle_21_24_npc013" count="1" respawn="60">
+		<point x="49779" y="208032" z="-3728" h="22649"/>
+		<npc id="34033"><!--Галлу-->
+			<set name="state_id" value="1"/>
+		</npc>
+	</spawn>
+	<spawn name="devils_isle_21_24_npc014" count="1" respawn="60">
+		<point x="49327" y="208123" z="-3728" h="8578"/>
+		<npc id="34023"/><!--Дух Пирата-->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc015" count="1" respawn="60">
+		<point x="49312" y="208621" z="-3728" h="62768"/>
+		<npc id="34021"/><!--Гаром-->
+	</spawn>
+	<!--Сомбри появляется по неизвестным причинам.
+	<spawn name="devils_isle_21_24_npc016" count="1" respawn="60">
+		<point x="49643" y="209353" z="-3728" h="45449"/>
+		<npc id="34029"/>#Сомбри#
+	</spawn>-->
+	<spawn name="devils_isle_21_24_npc017" count="1" respawn="60">
+		<point x="49343" y="209342" z="-3728" h="49708"/>
+		<npc id="34031"><!--Риссуос-->
+			<set name="state_id" value="1"/>
+		</npc>
+	</spawn>
+	<spawn name="devils_isle_21_24_npc018" count="1" respawn="60">
+		<point x="49169" y="209172" z="-3728" h="64693"/>
+		<npc id="34037"/><!--Хорте-->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc019" count="1" respawn="60">
+		<point x="45623" y="213561" z="-3752" h="0"/>
+		<npc id="18919"/><!---->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc020" count="1" respawn="60">
+		<point x="48086" y="213427" z="-3424" h="0"/>
+		<npc id="18919"/><!---->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc021" count="1" respawn="60">
+		<point x="43614" y="218538" z="-3824" h="0"/>
+		<npc id="34038"/><!--Телепорт-->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc022" count="1" respawn="60">
+		<point x="45924" y="220547" z="-3584" h="0"/>
+		<npc id="34025"/><!--Гора Костей-->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc023" count="1" respawn="60">
+		<point x="45214" y="215884" z="-3904" h="0"/>
+		<npc id="18919"/><!---->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc024" count="1" respawn="60">
+		<point x="43453" y="215812" z="-3904" h="0"/>
+		<npc id="18919"/><!---->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc025" count="1" respawn="60">
+		<point x="46707" y="217540" z="-3752" h="0"/>
+		<npc id="18919"/><!---->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc026" count="1" respawn="60">
+		<point x="46830" y="216087" z="-3752" h="0"/>
+		<npc id="18919"/><!---->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc027" count="1" respawn="60">
+		<point x="45190" y="217513" z="-3936" h="0"/>
+		<npc id="18919"/><!---->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc028" count="1" respawn="60">
+		<point x="45139" y="216639" z="-3904" h="0"/>
+		<npc id="18919"/><!---->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc029" count="1" respawn="60">
+		<point x="43838" y="217785" z="-3904" h="0"/>
+		<npc id="18919"/><!---->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc030" count="1" respawn="60">
+		<point x="52035" y="212563" z="-3344" h="0"/>
+		<npc id="34026"/><!--Гора Костей-->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc031" count="1" respawn="60">
+		<point x="51002" y="206137" z="-3728" h="47589"/>
+		<npc id="18919"/><!---->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc032" count="1" respawn="60">
+		<point x="54288" y="206687" z="-3632" h="0"/>
+		<npc id="34038"/><!--Телепорт-->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc033" count="1" respawn="60">
+		<point x="54166" y="205817" z="-3632" h="0"/>
+		<npc id="34027"/><!--Гора Костей-->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc034" count="1" respawn="60">
+		<point x="49267" y="208183" z="-3696" h="43454"/>
+		<npc id="18919"/><!---->
+	</spawn>
+	<spawn name="devils_isle_21_24_npc035" count="1" respawn="60">
+		<point x="42643" y="210087" z="-3712" h="17508"/>
+		<npc id="18919"/><!---->
+	</spawn>
+	<territory name="devils_isle_21_24_0001">
+		<add x="45672" y="205256" zmin="-3748" zmax="-3448"/>
+		<add x="46168" y="205048" zmin="-3748" zmax="-3448"/>
+		<add x="46696" y="205048" zmin="-3748" zmax="-3448"/>
+		<add x="47032" y="205416" zmin="-3748" zmax="-3448"/>
+		<add x="47064" y="205976" zmin="-3748" zmax="-3448"/>
+		<add x="46904" y="206504" zmin="-3748" zmax="-3448"/>
+		<add x="46056" y="206392" zmin="-3748" zmax="-3448"/>
+		<add x="45816" y="205976" zmin="-3748" zmax="-3448"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0001" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0001"/>
+		<npc id="24025"/><!--Кровавый Багрянец-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0001" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0001"/>
+		<npc id="24026"/><!--Клифер-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0001" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0001"/>
+		<npc id="24027"/><!--Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0001" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0001"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0001" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0001"/>
+		<npc id="24032"/><!--Пророк-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0001" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0001"/>
+		<npc id="24033"/><!--Дух Стражника-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0001" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0001"/>
+		<npc id="24034"/><!--Ночная Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0001" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0001"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<territory name="devils_isle_21_24_0002">
+		<add x="46168" y="208088" zmin="-3796" zmax="-3496"/>
+		<add x="45432" y="208104" zmin="-3796" zmax="-3496"/>
+		<add x="45272" y="207800" zmin="-3796" zmax="-3496"/>
+		<add x="45336" y="207464" zmin="-3796" zmax="-3496"/>
+		<add x="45672" y="206952" zmin="-3796" zmax="-3496"/>
+		<add x="46136" y="206888" zmin="-3796" zmax="-3496"/>
+		<add x="46248" y="207352" zmin="-3796" zmax="-3496"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0002" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0002"/>
+		<npc id="24025"/><!--Кровавый Багрянец-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0002" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0002"/>
+		<npc id="24026"/><!--Клифер-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0002" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0002"/>
+		<npc id="24027"/><!--Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0002" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0002"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0002" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0002"/>
+		<npc id="24032"/><!--Пророк-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0002" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0002"/>
+		<npc id="24033"/><!--Дух Стражника-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0002" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0002"/>
+		<npc id="24034"/><!--Ночная Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0002" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0002"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<territory name="devils_isle_21_24_0003">
+		<add x="48744" y="205896" zmin="-3620" zmax="-3320"/>
+		<add x="48744" y="206968" zmin="-3620" zmax="-3320"/>
+		<add x="47608" y="206936" zmin="-3620" zmax="-3320"/>
+		<add x="47672" y="206152" zmin="-3620" zmax="-3320"/>
+		<add x="48008" y="205848" zmin="-3620" zmax="-3320"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0003" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0003"/>
+		<npc id="24025"/><!--Кровавый Багрянец-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0003" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0003"/>
+		<npc id="24026"/><!--Клифер-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0003" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0003"/>
+		<npc id="24027"/><!--Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0003" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0003"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0003" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0003"/>
+		<npc id="24032"/><!--Пророк-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0003" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0003"/>
+		<npc id="24033"/><!--Дух Стражника-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0003" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0003"/>
+		<npc id="24034"/><!--Ночная Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0003" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0003"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<territory name="devils_isle_21_24_0004">
+		<add x="48760" y="207000" zmin="-3620" zmax="-3320"/>
+		<add x="48728" y="207976" zmin="-3620" zmax="-3320"/>
+		<add x="47880" y="207800" zmin="-3620" zmax="-3320"/>
+		<add x="47496" y="207432" zmin="-3620" zmax="-3320"/>
+		<add x="47608" y="206936" zmin="-3620" zmax="-3320"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0004" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0004"/>
+		<npc id="24025"/><!--Кровавый Багрянец-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0004" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0004"/>
+		<npc id="24026"/><!--Клифер-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0004" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0004"/>
+		<npc id="24027"/><!--Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0004" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0004"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0004" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0004"/>
+		<npc id="24032"/><!--Пророк-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0004" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0004"/>
+		<npc id="24033"/><!--Дух Стражника-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0004" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0004"/>
+		<npc id="24034"/><!--Ночная Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0004" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0004"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<territory name="devils_isle_21_24_0005">
+		<add x="46664" y="209608" zmin="-3700" zmax="-3400"/>
+		<add x="46552" y="209048" zmin="-3700" zmax="-3400"/>
+		<add x="46600" y="208696" zmin="-3700" zmax="-3400"/>
+		<add x="47480" y="208744" zmin="-3700" zmax="-3400"/>
+		<add x="47912" y="209032" zmin="-3700" zmax="-3400"/>
+		<add x="47912" y="209560" zmin="-3700" zmax="-3400"/>
+		<add x="47448" y="209720" zmin="-3700" zmax="-3400"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0005" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0005"/>
+		<npc id="24025"/><!--Кровавый Багрянец-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0005" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0005"/>
+		<npc id="24026"/><!--Клифер-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0005" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0005"/>
+		<npc id="24027"/><!--Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0005" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0005"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0005" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0005"/>
+		<npc id="24032"/><!--Пророк-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0005" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0005"/>
+		<npc id="24033"/><!--Дух Стражника-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0005" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0005"/>
+		<npc id="24034"/><!--Ночная Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0005" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0005"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<territory name="devils_isle_21_24_0006">
+		<add x="46856" y="211192" zmin="-3700" zmax="-3400"/>
+		<add x="46232" y="211240" zmin="-3700" zmax="-3400"/>
+		<add x="45576" y="211160" zmin="-3700" zmax="-3400"/>
+		<add x="45352" y="210776" zmin="-3700" zmax="-3400"/>
+		<add x="45368" y="210360" zmin="-3700" zmax="-3400"/>
+		<add x="45688" y="209992" zmin="-3700" zmax="-3400"/>
+		<add x="46264" y="210104" zmin="-3700" zmax="-3400"/>
+		<add x="47112" y="209960" zmin="-3700" zmax="-3400"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0006" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0006"/>
+		<npc id="24025"/><!--Кровавый Багрянец-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0006" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0006"/>
+		<npc id="24026"/><!--Клифер-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0006" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0006"/>
+		<npc id="24027"/><!--Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0006" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0006"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0006" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0006"/>
+		<npc id="24032"/><!--Пророк-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0006" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0006"/>
+		<npc id="24033"/><!--Дух Стражника-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0006" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0006"/>
+		<npc id="24034"/><!--Ночная Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0006" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0006"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<territory name="devils_isle_21_24_0007">
+		<add x="47128" y="209960" zmin="-3700" zmax="-3400"/>
+		<add x="46872" y="211192" zmin="-3700" zmax="-3400"/>
+		<add x="47608" y="211224" zmin="-3700" zmax="-3400"/>
+		<add x="48008" y="211000" zmin="-3700" zmax="-3400"/>
+		<add x="48088" y="210408" zmin="-3700" zmax="-3400"/>
+		<add x="47912" y="210136" zmin="-3700" zmax="-3400"/>
+		<add x="47528" y="209912" zmin="-3700" zmax="-3400"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0007" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0007"/>
+		<npc id="24025"/><!--Кровавый Багрянец-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0007" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0007"/>
+		<npc id="24026"/><!--Клифер-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0007" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0007"/>
+		<npc id="24027"/><!--Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0007" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0007"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0007" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0007"/>
+		<npc id="24032"/><!--Пророк-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0007" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0007"/>
+		<npc id="24033"/><!--Дух Стражника-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0007" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0007"/>
+		<npc id="24034"/><!--Ночная Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0007" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0007"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<territory name="devils_isle_21_24_0008">
+		<add x="44344" y="210840" zmin="-3812" zmax="-3512"/>
+		<add x="44280" y="210104" zmin="-3812" zmax="-3512"/>
+		<add x="43640" y="209800" zmin="-3812" zmax="-3512"/>
+		<add x="42936" y="210104" zmin="-3812" zmax="-3512"/>
+		<add x="43032" y="210680" zmin="-3812" zmax="-3512"/>
+		<add x="43400" y="210888" zmin="-3812" zmax="-3512"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0008" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0008"/>
+		<npc id="24025"/><!--Кровавый Багрянец-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0008" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0008"/>
+		<npc id="24026"/><!--Клифер-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0008" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0008"/>
+		<npc id="24027"/><!--Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0008" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0008"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0008" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0008"/>
+		<npc id="24032"/><!--Пророк-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0008" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0008"/>
+		<npc id="24033"/><!--Дух Стражника-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0008" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0008"/>
+		<npc id="24034"/><!--Ночная Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0008" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0008"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<territory name="devils_isle_21_24_0009">
+		<add x="42776" y="210728" zmin="-3812" zmax="-3512"/>
+		<add x="42392" y="210968" zmin="-3812" zmax="-3512"/>
+		<add x="41576" y="210840" zmin="-3812" zmax="-3512"/>
+		<add x="41544" y="210248" zmin="-3812" zmax="-3512"/>
+		<add x="41736" y="210008" zmin="-3812" zmax="-3512"/>
+		<add x="42456" y="209864" zmin="-3812" zmax="-3512"/>
+		<add x="42808" y="210008" zmin="-3812" zmax="-3512"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0009" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0009"/>
+		<npc id="24025"/><!--Кровавый Багрянец-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0009" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0009"/>
+		<npc id="24026"/><!--Клифер-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0009" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0009"/>
+		<npc id="24027"/><!--Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0009" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0009"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0009" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0009"/>
+		<npc id="24032"/><!--Пророк-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0009" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0009"/>
+		<npc id="24033"/><!--Дух Стражника-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0009" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0009"/>
+		<npc id="24034"/><!--Ночная Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0009" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0009"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<territory name="devils_isle_21_24_0010">
+		<add x="42456" y="211992" zmin="-3812" zmax="-3512"/>
+		<add x="41768" y="211912" zmin="-3812" zmax="-3512"/>
+		<add x="41576" y="212584" zmin="-3812" zmax="-3512"/>
+		<add x="41736" y="213048" zmin="-3812" zmax="-3512"/>
+		<add x="42184" y="213160" zmin="-3812" zmax="-3512"/>
+		<add x="42568" y="213032" zmin="-3812" zmax="-3512"/>
+		<add x="42680" y="212344" zmin="-3812" zmax="-3512"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0010" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0010"/>
+		<npc id="24025"/><!--Кровавый Багрянец-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0010" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0010"/>
+		<npc id="24026"/><!--Клифер-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0010" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0010"/>
+		<npc id="24027"/><!--Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0010" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0010"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0010" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0010"/>
+		<npc id="24032"/><!--Пророк-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0010" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0010"/>
+		<npc id="24033"/><!--Дух Стражника-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0010" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0010"/>
+		<npc id="24034"/><!--Ночная Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0010" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0010"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<territory name="devils_isle_21_24_0011">
+		<add x="43016" y="213064" zmin="-3812" zmax="-3512"/>
+		<add x="42936" y="212856" zmin="-3812" zmax="-3512"/>
+		<add x="42952" y="212152" zmin="-3812" zmax="-3512"/>
+		<add x="43464" y="212168" zmin="-3812" zmax="-3512"/>
+		<add x="43608" y="212296" zmin="-3812" zmax="-3512"/>
+		<add x="43624" y="213128" zmin="-3812" zmax="-3512"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0011" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0011"/>
+		<npc id="24025"/><!--Кровавый Багрянец-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0011" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0011"/>
+		<npc id="24026"/><!--Клифер-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0011" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0011"/>
+		<npc id="24027"/><!--Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0011" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0011"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0011" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0011"/>
+		<npc id="24032"/><!--Пророк-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0011" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0011"/>
+		<npc id="24033"/><!--Дух Стражника-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0011" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0011"/>
+		<npc id="24034"/><!--Ночная Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0011" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0011"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<territory name="devils_isle_21_24_0012">
+		<add x="46104" y="211464" zmin="-3700" zmax="-3400"/>
+		<add x="46344" y="211464" zmin="-3700" zmax="-3400"/>
+		<add x="46248" y="211976" zmin="-3780" zmax="-3480"/>
+		<add x="45544" y="212104" zmin="-3796" zmax="-3496"/>
+		<add x="45320" y="211832" zmin="-3748" zmax="-3448"/>
+		<add x="45560" y="211672" zmin="-3732" zmax="-3432"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0012" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0012"/>
+		<npc id="24025"/><!--Кровавый Багрянец-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0012" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0012"/>
+		<npc id="24026"/><!--Клифер-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0012" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0012"/>
+		<npc id="24027"/><!--Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0012" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0012"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0012" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0012"/>
+		<npc id="24032"/><!--Пророк-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0012" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0012"/>
+		<npc id="24033"/><!--Дух Стражника-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0012" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0012"/>
+		<npc id="24034"/><!--Ночная Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0012" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0012"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<territory name="devils_isle_21_24_0013">
+		<add x="45128" y="212264" zmin="-3828" zmax="-3528"/>
+		<add x="46248" y="212360" zmin="-3844" zmax="-3544"/>
+		<add x="46200" y="213032" zmin="-3860" zmax="-3560"/>
+		<add x="45320" y="212968" zmin="-3860" zmax="-3560"/>
+		<add x="45080" y="212552" zmin="-3860" zmax="-3560"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0013" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0013"/>
+		<npc id="24025"/><!--Кровавый Багрянец-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0013" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0013"/>
+		<npc id="24026"/><!--Клифер-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0013" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0013"/>
+		<npc id="24027"/><!--Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0013" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0013"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0013" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0013"/>
+		<npc id="24032"/><!--Пророк-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0013" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0013"/>
+		<npc id="24033"/><!--Дух Стражника-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0013" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0013"/>
+		<npc id="24034"/><!--Ночная Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0013" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0013"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<territory name="devils_isle_21_24_0014">
+		<add x="45112" y="213672" zmin="-3860" zmax="-3560"/>
+		<add x="46136" y="213672" zmin="-3860" zmax="-3560"/>
+		<add x="46168" y="213176" zmin="-3860" zmax="-3560"/>
+		<add x="45704" y="213144" zmin="-3860" zmax="-3560"/>
+		<add x="45240" y="213240" zmin="-3860" zmax="-3560"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0014" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0014"/>
+		<npc id="24025"/><!--Кровавый Багрянец-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0014" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0014"/>
+		<npc id="24026"/><!--Клифер-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0014" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0014"/>
+		<npc id="24027"/><!--Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0014" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0014"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0014" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0014"/>
+		<npc id="24032"/><!--Пророк-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0014" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0014"/>
+		<npc id="24033"/><!--Дух Стражника-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0014" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0014"/>
+		<npc id="24034"/><!--Ночная Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0014" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0014"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<territory name="devils_isle_21_24_0015">
+		<add x="46312" y="214872" zmin="-3860" zmax="-3560"/>
+		<add x="46264" y="213992" zmin="-3860" zmax="-3560"/>
+		<add x="46104" y="213848" zmin="-3860" zmax="-3560"/>
+		<add x="45432" y="213832" zmin="-3860" zmax="-3560"/>
+		<add x="45144" y="213960" zmin="-3860" zmax="-3560"/>
+		<add x="45416" y="214616" zmin="-3860" zmax="-3560"/>
+		<add x="45832" y="214664" zmin="-3860" zmax="-3560"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0015" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0015"/>
+		<npc id="24025"/><!--Кровавый Багрянец-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0015" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0015"/>
+		<npc id="24026"/><!--Клифер-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0015" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0015"/>
+		<npc id="24027"/><!--Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0015" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0015"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0015" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0015"/>
+		<npc id="24032"/><!--Пророк-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0015" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0015"/>
+		<npc id="24033"/><!--Дух Стражника-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0015" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0015"/>
+		<npc id="24034"/><!--Ночная Сайрона-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0015" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0015"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<territory name="devils_isle_21_24_0016">
+		<add x="45720" y="215512" zmin="-3988" zmax="-3688"/>
+		<add x="45736" y="215208" zmin="-3860" zmax="-3560"/>
+		<add x="45288" y="215208" zmin="-3860" zmax="-3560"/>
+		<add x="45240" y="215512" zmin="-3988" zmax="-3688"/>
+		<add x="45128" y="215400" zmin="-4004" zmax="-3704"/>
+		<add x="44984" y="215448" zmin="-4004" zmax="-3704"/>
+		<add x="44840" y="215672" zmin="-4004" zmax="-3704"/>
+		<add x="44632" y="215736" zmin="-4004" zmax="-3704"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0016" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0016"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0016" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0016"/>
+		<npc id="24029"/><!--Хозяин Долин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0016" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0016"/>
+		<npc id="24030"/><!--Каменный Ванул-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0016" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0016"/>
+		<npc id="24031"/><!--Парящая Смерть-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0016" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0016"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0016" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0016"/>
+		<npc id="24036"/><!--Долорес-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0016" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0016"/>
+		<npc id="24037"/><!--Кукла-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0016" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0016"/>
+		<npc id="24038"/><!--Тор Скорпион-->
+	</spawn>
+	<territory name="devils_isle_21_24_0026">
+		<add x="44632" y="215944" zmin="-4004" zmax="-3704"/>
+		<add x="44632" y="216552" zmin="-4004" zmax="-3704"/>
+		<add x="44760" y="216632" zmin="-4004" zmax="-3704"/>
+		<add x="45752" y="216616" zmin="-4004" zmax="-3704"/>
+		<add x="45848" y="216216" zmin="-4004" zmax="-3704"/>
+		<add x="45800" y="216056" zmin="-4004" zmax="-3704"/>
+		<add x="45496" y="215944" zmin="-4004" zmax="-3704"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0026" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0026"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0026" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0026"/>
+		<npc id="24029"/><!--Хозяин Долин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0026" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0026"/>
+		<npc id="24030"/><!--Каменный Ванул-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0026" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0026"/>
+		<npc id="24031"/><!--Парящая Смерть-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0026" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0026"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0026" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0026"/>
+		<npc id="24036"/><!--Долорес-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0026" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0026"/>
+		<npc id="24037"/><!--Кукла-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0026" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0026"/>
+		<npc id="24038"/><!--Тор Скорпион-->
+	</spawn>
+	<territory name="devils_isle_21_24_0017">
+		<add x="43224" y="214552" zmin="-4020" zmax="-3720"/>
+		<add x="44472" y="214552" zmin="-4027" zmax="-3727"/>
+		<add x="44472" y="215656" zmin="-4029" zmax="-3729"/>
+		<add x="43224" y="215656" zmin="-4032" zmax="-3732"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0017" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0017"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0017" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0017"/>
+		<npc id="24029"/><!--Хозяин Долин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0017" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0017"/>
+		<npc id="24030"/><!--Каменный Ванул-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0017" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0017"/>
+		<npc id="24031"/><!--Парящая Смерть-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0017" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0017"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0017" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0017"/>
+		<npc id="24036"/><!--Долорес-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0017" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0017"/>
+		<npc id="24037"/><!--Кукла-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0017" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0017"/>
+		<npc id="24038"/><!--Тор Скорпион-->
+	</spawn>
+	<territory name="devils_isle_21_24_0018">
+		<add x="44456" y="215848" zmin="-4030" zmax="-3730"/>
+		<add x="44472" y="216968" zmin="-4030" zmax="-3730"/>
+		<add x="43256" y="216984" zmin="-4030" zmax="-3730"/>
+		<add x="43224" y="215864" zmin="-4029" zmax="-3729"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0018" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0018"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0018" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0018"/>
+		<npc id="24029"/><!--Хозяин Долин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0018" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0018"/>
+		<npc id="24030"/><!--Каменный Ванул-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0018" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0018"/>
+		<npc id="24031"/><!--Парящая Смерть-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0018" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0018"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0018" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0018"/>
+		<npc id="24036"/><!--Долорес-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0018" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0018"/>
+		<npc id="24037"/><!--Кукла-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0018" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0018"/>
+		<npc id="24038"/><!--Тор Скорпион-->
+	</spawn>
+	<territory name="devils_isle_21_24_0019">
+		<add x="44760" y="216904" zmin="-4020" zmax="-3720"/>
+		<add x="45736" y="216888" zmin="-4020" zmax="-3720"/>
+		<add x="45784" y="217288" zmin="-4036" zmax="-3736"/>
+		<add x="45560" y="217400" zmin="-4036" zmax="-3736"/>
+		<add x="44776" y="217400" zmin="-4036" zmax="-3736"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0019" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0019"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0019" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0019"/>
+		<npc id="24029"/><!--Хозяин Долин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0019" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0019"/>
+		<npc id="24030"/><!--Каменный Ванул-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0019" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0019"/>
+		<npc id="24031"/><!--Парящая Смерть-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0019" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0019"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0019" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0019"/>
+		<npc id="24036"/><!--Долорес-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0019" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0019"/>
+		<npc id="24037"/><!--Кукла-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0019" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0019"/>
+		<npc id="24038"/><!--Тор Скорпион-->
+	</spawn>
+	<territory name="devils_isle_21_24_0020">
+		<add x="45736" y="217544" zmin="-4052" zmax="-3752"/>
+		<add x="45720" y="218312" zmin="-4084" zmax="-3784"/>
+		<add x="45192" y="218120" zmin="-4068" zmax="-3768"/>
+		<add x="44888" y="218168" zmin="-4068" zmax="-3768"/>
+		<add x="44904" y="217768" zmin="-4052" zmax="-3752"/>
+		<add x="44776" y="217688" zmin="-4052" zmax="-3752"/>
+		<add x="44776" y="217496" zmin="-4036" zmax="-3736"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0020" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0020"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0020" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0020"/>
+		<npc id="24029"/><!--Хозяин Долин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0020" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0020"/>
+		<npc id="24030"/><!--Каменный Ванул-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0020" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0020"/>
+		<npc id="24031"/><!--Парящая Смерть-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0020" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0020"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0020" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0020"/>
+		<npc id="24036"/><!--Долорес-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0020" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0020"/>
+		<npc id="24037"/><!--Кукла-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0020" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0020"/>
+		<npc id="24038"/><!--Тор Скорпион-->
+	</spawn>
+	<territory name="devils_isle_21_24_0021">
+		<add x="43256" y="218120" zmin="-4004" zmax="-3704"/>
+		<add x="43368" y="217176" zmin="-4004" zmax="-3704"/>
+		<add x="44424" y="217160" zmin="-4004" zmax="-3704"/>
+		<add x="44456" y="218264" zmin="-4004" zmax="-3704"/>
+		<add x="43912" y="218120" zmin="-4004" zmax="-3704"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0021" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0021"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0021" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0021"/>
+		<npc id="24029"/><!--Хозяин Долин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0021" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0021"/>
+		<npc id="24030"/><!--Каменный Ванул-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0021" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0021"/>
+		<npc id="24031"/><!--Парящая Смерть-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0021" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0021"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0021" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0021"/>
+		<npc id="24036"/><!--Долорес-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0021" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0021"/>
+		<npc id="24037"/><!--Кукла-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0021" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0021"/>
+		<npc id="24038"/><!--Тор Скорпион-->
+	</spawn>
+	<territory name="devils_isle_21_24_0022">
+		<add x="45848" y="220120" zmin="-3684" zmax="-3384"/>
+		<add x="45832" y="220856" zmin="-3684" zmax="-3384"/>
+		<add x="45304" y="220984" zmin="-3684" zmax="-3384"/>
+		<add x="44696" y="220936" zmin="-3684" zmax="-3384"/>
+		<add x="44456" y="220792" zmin="-3684" zmax="-3384"/>
+		<add x="44360" y="220312" zmin="-3684" zmax="-3384"/>
+		<add x="44728" y="219944" zmin="-3684" zmax="-3384"/>
+		<add x="45272" y="219896" zmin="-3684" zmax="-3384"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0022" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0022"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0022" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0022"/>
+		<npc id="24029"/><!--Хозяин Долин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0022" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0022"/>
+		<npc id="24030"/><!--Каменный Ванул-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0022" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0022"/>
+		<npc id="24031"/><!--Парящая Смерть-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0022" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0022"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0022" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0022"/>
+		<npc id="24036"/><!--Долорес-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0022" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0022"/>
+		<npc id="24037"/><!--Кукла-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0022" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0022"/>
+		<npc id="24038"/><!--Тор Скорпион-->
+	</spawn>
+	<territory name="devils_isle_21_24_0023">
+		<add x="46024" y="220072" zmin="-3684" zmax="-3384"/>
+		<add x="46088" y="220936" zmin="-3684" zmax="-3384"/>
+		<add x="47272" y="221016" zmin="-3684" zmax="-3384"/>
+		<add x="47208" y="220296" zmin="-3684" zmax="-3384"/>
+		<add x="46872" y="219864" zmin="-3684" zmax="-3384"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0023" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0023"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0023" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0023"/>
+		<npc id="24029"/><!--Хозяин Долин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0023" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0023"/>
+		<npc id="24030"/><!--Каменный Ванул-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0023" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0023"/>
+		<npc id="24031"/><!--Парящая Смерть-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0023" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0023"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0023" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0023"/>
+		<npc id="24036"/><!--Долорес-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0023" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0023"/>
+		<npc id="24037"/><!--Кукла-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0023" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0023"/>
+		<npc id="24038"/><!--Тор Скорпион-->
+	</spawn>
+	<territory name="devils_isle_21_24_0024">
+		<add x="46136" y="218296" zmin="-3860" zmax="-3560"/>
+		<add x="46200" y="217608" zmin="-3860" zmax="-3560"/>
+		<add x="46344" y="217432" zmin="-3860" zmax="-3560"/>
+		<add x="46232" y="216840" zmin="-3860" zmax="-3560"/>
+		<add x="47064" y="216856" zmin="-3860" zmax="-3560"/>
+		<add x="47240" y="217032" zmin="-3860" zmax="-3560"/>
+		<add x="47304" y="217416" zmin="-3860" zmax="-3560"/>
+		<add x="46904" y="217880" zmin="-3860" zmax="-3560"/>
+		<add x="46872" y="218168" zmin="-3860" zmax="-3560"/>
+		<add x="46504" y="218328" zmin="-3860" zmax="-3560"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0024" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0024"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0024" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0024"/>
+		<npc id="24029"/><!--Хозяин Долин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0024" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0024"/>
+		<npc id="24030"/><!--Каменный Ванул-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0024" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0024"/>
+		<npc id="24031"/><!--Парящая Смерть-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0024" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0024"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0024" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0024"/>
+		<npc id="24036"/><!--Долорес-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0024" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0024"/>
+		<npc id="24037"/><!--Кукла-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0024" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0024"/>
+		<npc id="24038"/><!--Тор Скорпион-->
+	</spawn>
+	<territory name="devils_isle_21_24_0025">
+		<add x="46216" y="216632" zmin="-3860" zmax="-3560"/>
+		<add x="46936" y="216616" zmin="-3860" zmax="-3560"/>
+		<add x="47272" y="216328" zmin="-3860" zmax="-3560"/>
+		<add x="47304" y="216040" zmin="-3860" zmax="-3560"/>
+		<add x="46968" y="215480" zmin="-3860" zmax="-3560"/>
+		<add x="46552" y="215256" zmin="-3860" zmax="-3560"/>
+		<add x="46152" y="215208" zmin="-3860" zmax="-3560"/>
+		<add x="46168" y="215688" zmin="-3860" zmax="-3560"/>
+		<add x="46344" y="215896" zmin="-3860" zmax="-3560"/>
+		<add x="46152" y="216120" zmin="-3860" zmax="-3560"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0025" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0025"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0025" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0025"/>
+		<npc id="24029"/><!--Хозяин Долин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0025" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0025"/>
+		<npc id="24030"/><!--Каменный Ванул-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0025" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0025"/>
+		<npc id="24031"/><!--Парящая Смерть-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0025" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0025"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0025" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0025"/>
+		<npc id="24036"/><!--Долорес-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0025" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0025"/>
+		<npc id="24037"/><!--Кукла-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0025" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0025"/>
+		<npc id="24038"/><!--Тор Скорпион-->
+	</spawn>
+	<territory name="devils_isle_21_24_0027">
+		<add x="50536" y="219624" zmin="-3684" zmax="-3384"/>
+		<add x="50312" y="220392" zmin="-3684" zmax="-3384"/>
+		<add x="50056" y="220744" zmin="-3684" zmax="-3384"/>
+		<add x="49544" y="220936" zmin="-3684" zmax="-3384"/>
+		<add x="49064" y="220904" zmin="-3684" zmax="-3384"/>
+		<add x="48664" y="220408" zmin="-3684" zmax="-3384"/>
+		<add x="48760" y="220024" zmin="-3684" zmax="-3384"/>
+		<add x="49192" y="219592" zmin="-3684" zmax="-3384"/>
+		<add x="49432" y="219432" zmin="-3684" zmax="-3384"/>
+		<add x="49816" y="219320" zmin="-3684" zmax="-3384"/>
+		<add x="50152" y="219544" zmin="-3684" zmax="-3384"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0027" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0027"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0027" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0027"/>
+		<npc id="24029"/><!--Хозяин Долин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0027" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0027"/>
+		<npc id="24030"/><!--Каменный Ванул-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0027" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0027"/>
+		<npc id="24031"/><!--Парящая Смерть-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0027" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0027"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0027" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0027"/>
+		<npc id="24036"/><!--Долорес-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0027" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0027"/>
+		<npc id="24037"/><!--Кукла-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0027" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0027"/>
+		<npc id="24038"/><!--Тор Скорпион-->
+	</spawn>
+	<territory name="devils_isle_21_24_0028">
+		<add x="49176" y="219400" zmin="-3684" zmax="-3384"/>
+		<add x="48424" y="219144" zmin="-3684" zmax="-3384"/>
+		<add x="48472" y="218376" zmin="-3684" zmax="-3384"/>
+		<add x="49160" y="218264" zmin="-3684" zmax="-3384"/>
+		<add x="49544" y="218792" zmin="-3684" zmax="-3384"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0028" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0028"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0028" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0028"/>
+		<npc id="24029"/><!--Хозяин Долин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0028" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0028"/>
+		<npc id="24030"/><!--Каменный Ванул-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0028" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0028"/>
+		<npc id="24031"/><!--Парящая Смерть-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0028" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0028"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0028" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0028"/>
+		<npc id="24036"/><!--Долорес-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0028" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0028"/>
+		<npc id="24037"/><!--Кукла-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0028" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0028"/>
+		<npc id="24038"/><!--Тор Скорпион-->
+	</spawn>
+	<territory name="devils_isle_21_24_0029">
+		<add x="48376" y="219352" zmin="-3684" zmax="-3384"/>
+		<add x="48712" y="219752" zmin="-3684" zmax="-3384"/>
+		<add x="48488" y="220472" zmin="-3684" zmax="-3384"/>
+		<add x="47912" y="220488" zmin="-3684" zmax="-3384"/>
+		<add x="47944" y="219960" zmin="-3684" zmax="-3384"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0029" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0029"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0029" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0029"/>
+		<npc id="24029"/><!--Хозяин Долин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0029" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0029"/>
+		<npc id="24030"/><!--Каменный Ванул-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0029" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0029"/>
+		<npc id="24031"/><!--Парящая Смерть-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0029" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0029"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0029" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0029"/>
+		<npc id="24036"/><!--Долорес-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0029" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0029"/>
+		<npc id="24037"/><!--Кукла-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0029" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0029"/>
+		<npc id="24038"/><!--Тор Скорпион-->
+	</spawn>
+	<territory name="devils_isle_21_24_0030">
+		<add x="48424" y="216984" zmin="-3684" zmax="-3384"/>
+		<add x="48376" y="217720" zmin="-3684" zmax="-3384"/>
+		<add x="49144" y="217928" zmin="-3684" zmax="-3384"/>
+		<add x="49464" y="217624" zmin="-3684" zmax="-3384"/>
+		<add x="49432" y="217032" zmin="-3684" zmax="-3384"/>
+		<add x="49160" y="216808" zmin="-3684" zmax="-3384"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0030" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0030"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0030" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0030"/>
+		<npc id="24029"/><!--Хозяин Долин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0030" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0030"/>
+		<npc id="24030"/><!--Каменный Ванул-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0030" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0030"/>
+		<npc id="24031"/><!--Парящая Смерть-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0030" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0030"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0030" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0030"/>
+		<npc id="24036"/><!--Долорес-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0030" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0030"/>
+		<npc id="24037"/><!--Кукла-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0030" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0030"/>
+		<npc id="24038"/><!--Тор Скорпион-->
+	</spawn>
+	<territory name="devils_isle_21_24_0031">
+		<add x="48408" y="216952" zmin="-3684" zmax="-3384"/>
+		<add x="49128" y="216776" zmin="-3684" zmax="-3384"/>
+		<add x="48744" y="216392" zmin="-3684" zmax="-3384"/>
+		<add x="48536" y="215960" zmin="-3684" zmax="-3384"/>
+		<add x="48056" y="216376" zmin="-3684" zmax="-3384"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0031" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0031"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0031" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0031"/>
+		<npc id="24029"/><!--Хозяин Долин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0031" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0031"/>
+		<npc id="24030"/><!--Каменный Ванул-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0031" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0031"/>
+		<npc id="24031"/><!--Парящая Смерть-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0031" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0031"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0031" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0031"/>
+		<npc id="24036"/><!--Долорес-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0031" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0031"/>
+		<npc id="24037"/><!--Кукла-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0031" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0031"/>
+		<npc id="24038"/><!--Тор Скорпион-->
+	</spawn>
+	<territory name="devils_isle_21_24_0032">
+		<add x="50136" y="216648" zmin="-3684" zmax="-3384"/>
+		<add x="49848" y="216856" zmin="-3684" zmax="-3384"/>
+		<add x="49464" y="216760" zmin="-3684" zmax="-3384"/>
+		<add x="49144" y="216584" zmin="-3684" zmax="-3384"/>
+		<add x="48808" y="216248" zmin="-3684" zmax="-3384"/>
+		<add x="48648" y="215800" zmin="-3684" zmax="-3384"/>
+		<add x="48728" y="215304" zmin="-3684" zmax="-3384"/>
+		<add x="48920" y="215112" zmin="-3684" zmax="-3384"/>
+		<add x="49352" y="215144" zmin="-3684" zmax="-3384"/>
+		<add x="50024" y="215400" zmin="-3684" zmax="-3384"/>
+		<add x="50280" y="215736" zmin="-3684" zmax="-3384"/>
+		<add x="50472" y="216168" zmin="-3684" zmax="-3384"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0032" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0032"/>
+		<npc id="24028"/><!--Демон Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0032" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0032"/>
+		<npc id="24029"/><!--Хозяин Долин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0032" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0032"/>
+		<npc id="24030"/><!--Каменный Ванул-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0032" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0032"/>
+		<npc id="24031"/><!--Парящая Смерть-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0032" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0032"/>
+		<npc id="24035"/><!--Даймон-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0032" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0032"/>
+		<npc id="24036"/><!--Долорес-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0032" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0032"/>
+		<npc id="24037"/><!--Кукла-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0032" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0032"/>
+		<npc id="24038"/><!--Тор Скорпион-->
+	</spawn>
+	<territory name="devils_isle_21_24_0033">
+		<add x="47272" y="213736" zmin="-3524" zmax="-3224"/>
+		<add x="47256" y="213224" zmin="-3524" zmax="-3224"/>
+		<add x="47944" y="213240" zmin="-3524" zmax="-3224"/>
+		<add x="47944" y="213736" zmin="-3524" zmax="-3224"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0033" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0033"/>
+		<npc id="24050"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0033" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0033"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0033" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0033"/>
+		<npc id="24051"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0033" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0033"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<territory name="devils_isle_21_24_0034">
+		<add x="48024" y="213240" zmin="-3524" zmax="-3224"/>
+		<add x="48648" y="213224" zmin="-3524" zmax="-3224"/>
+		<add x="48664" y="213720" zmin="-3524" zmax="-3224"/>
+		<add x="47960" y="213736" zmin="-3524" zmax="-3224"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0034" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0034"/>
+		<npc id="24050"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0034" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0034"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0034" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0034"/>
+		<npc id="24051"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0034" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0034"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<territory name="devils_isle_21_24_0035">
+		<add x="47272" y="213784" zmin="-3524" zmax="-3224"/>
+		<add x="47944" y="213752" zmin="-3524" zmax="-3224"/>
+		<add x="47944" y="214344" zmin="-3524" zmax="-3224"/>
+		<add x="47272" y="214360" zmin="-3524" zmax="-3224"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0035" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0035"/>
+		<npc id="24050"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0035" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0035"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0035" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0035"/>
+		<npc id="24051"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0035" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0035"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<territory name="devils_isle_21_24_0036">
+		<add x="48008" y="214344" zmin="-3524" zmax="-3224"/>
+		<add x="48648" y="214344" zmin="-3524" zmax="-3224"/>
+		<add x="48664" y="213784" zmin="-3524" zmax="-3224"/>
+		<add x="47960" y="213752" zmin="-3524" zmax="-3224"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0036" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0036"/>
+		<npc id="24050"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0036" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0036"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0036" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0036"/>
+		<npc id="24051"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0036" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0036"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<territory name="devils_isle_21_24_0037">
+		<add x="49512" y="213784" zmin="-3524" zmax="-3224"/>
+		<add x="49496" y="213240" zmin="-3524" zmax="-3224"/>
+		<add x="50136" y="213240" zmin="-3524" zmax="-3224"/>
+		<add x="50136" y="213752" zmin="-3524" zmax="-3224"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0037" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0037"/>
+		<npc id="24050"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0037" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0037"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0037" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0037"/>
+		<npc id="24051"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0037" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0037"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<territory name="devils_isle_21_24_0038">
+		<add x="50200" y="213240" zmin="-3524" zmax="-3224"/>
+		<add x="50760" y="213224" zmin="-3524" zmax="-3224"/>
+		<add x="50760" y="213768" zmin="-3524" zmax="-3224"/>
+		<add x="50216" y="213752" zmin="-3524" zmax="-3224"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0038" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0038"/>
+		<npc id="24050"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0038" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0038"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0038" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0038"/>
+		<npc id="24051"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0038" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0038"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<territory name="devils_isle_21_24_0039">
+		<add x="50136" y="213848" zmin="-3524" zmax="-3224"/>
+		<add x="50136" y="214344" zmin="-3524" zmax="-3224"/>
+		<add x="49512" y="214344" zmin="-3524" zmax="-3224"/>
+		<add x="49496" y="213864" zmin="-3524" zmax="-3224"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0039" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0039"/>
+		<npc id="24050"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0039" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0039"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0039" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0039"/>
+		<npc id="24051"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0039" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0039"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<territory name="devils_isle_21_24_0040">
+		<add x="50216" y="214360" zmin="-3524" zmax="-3224"/>
+		<add x="50760" y="214344" zmin="-3524" zmax="-3224"/>
+		<add x="50776" y="213864" zmin="-3524" zmax="-3224"/>
+		<add x="50200" y="213864" zmin="-3524" zmax="-3224"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0040" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0040"/>
+		<npc id="24050"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0040" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0040"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0040" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0040"/>
+		<npc id="24051"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0040" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0040"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<territory name="devils_isle_21_24_0041">
+		<add x="48776" y="212504" zmin="-3444" zmax="-3144"/>
+		<add x="48744" y="211912" zmin="-3444" zmax="-3144"/>
+		<add x="49384" y="211912" zmin="-3444" zmax="-3144"/>
+		<add x="49400" y="212504" zmin="-3444" zmax="-3144"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0041" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0041"/>
+		<npc id="24050"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0041" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0041"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0041" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0041"/>
+		<npc id="24051"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0041" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0041"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<territory name="devils_isle_21_24_0042">
+		<add x="48760" y="211816" zmin="-3444" zmax="-3144"/>
+		<add x="49384" y="211816" zmin="-3444" zmax="-3144"/>
+		<add x="49384" y="211432" zmin="-3444" zmax="-3144"/>
+		<add x="48760" y="211528" zmin="-3444" zmax="-3144"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0042" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0042"/>
+		<npc id="24050"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0042" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0042"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0042" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0042"/>
+		<npc id="24051"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0042" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0042"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<territory name="devils_isle_21_24_0043">
+		<add x="47752" y="212440" zmin="-3444" zmax="-3144"/>
+		<add x="47208" y="212440" zmin="-3444" zmax="-3144"/>
+		<add x="47208" y="211960" zmin="-3444" zmax="-3144"/>
+		<add x="47880" y="211944" zmin="-3444" zmax="-3144"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0043" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0043"/>
+		<npc id="24050"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0043" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0043"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0043" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0043"/>
+		<npc id="24051"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0043" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0043"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<territory name="devils_isle_21_24_0044">
+		<add x="47960" y="211960" zmin="-3444" zmax="-3144"/>
+		<add x="48584" y="211944" zmin="-3444" zmax="-3144"/>
+		<add x="48584" y="212440" zmin="-3444" zmax="-3144"/>
+		<add x="47848" y="212456" zmin="-3444" zmax="-3144"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0044" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0044"/>
+		<npc id="24050"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0044" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0044"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0044" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0044"/>
+		<npc id="24051"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0044" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0044"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<territory name="devils_isle_21_24_0045">
+		<add x="47192" y="212520" zmin="-3444" zmax="-3144"/>
+		<add x="47192" y="213048" zmin="-3444" zmax="-3144"/>
+		<add x="47896" y="213064" zmin="-3444" zmax="-3144"/>
+		<add x="47784" y="212520" zmin="-3444" zmax="-3144"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0045" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0045"/>
+		<npc id="24050"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0045" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0045"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0045" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0045"/>
+		<npc id="24051"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0045" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0045"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<territory name="devils_isle_21_24_0046">
+		<add x="47880" y="212520" zmin="-3444" zmax="-3144"/>
+		<add x="48584" y="212504" zmin="-3444" zmax="-3144"/>
+		<add x="48584" y="213080" zmin="-3444" zmax="-3144"/>
+		<add x="47976" y="213064" zmin="-3444" zmax="-3144"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0046" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0046"/>
+		<npc id="24050"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0046" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0046"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0046" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0046"/>
+		<npc id="24051"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0046" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0046"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<territory name="devils_isle_21_24_0047">
+		<add x="49576" y="212456" zmin="-3444" zmax="-3144"/>
+		<add x="49560" y="211960" zmin="-3444" zmax="-3144"/>
+		<add x="50248" y="211944" zmin="-3444" zmax="-3144"/>
+		<add x="50264" y="212440" zmin="-3444" zmax="-3144"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0047" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0047"/>
+		<npc id="24050"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0047" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0047"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0047" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0047"/>
+		<npc id="24051"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0047" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0047"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<territory name="devils_isle_21_24_0048">
+		<add x="50312" y="212440" zmin="-3444" zmax="-3144"/>
+		<add x="50328" y="211960" zmin="-3444" zmax="-3144"/>
+		<add x="50952" y="211944" zmin="-3444" zmax="-3144"/>
+		<add x="50952" y="212456" zmin="-3444" zmax="-3144"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0048" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0048"/>
+		<npc id="24050"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0048" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0048"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0048" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0048"/>
+		<npc id="24051"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0048" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0048"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<territory name="devils_isle_21_24_0049">
+		<add x="50264" y="212472" zmin="-3444" zmax="-3144"/>
+		<add x="50232" y="213032" zmin="-3444" zmax="-3144"/>
+		<add x="49576" y="213048" zmin="-3444" zmax="-3144"/>
+		<add x="49528" y="212536" zmin="-3444" zmax="-3144"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0049" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0049"/>
+		<npc id="24050"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0049" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0049"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0049" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0049"/>
+		<npc id="24051"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0049" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0049"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<territory name="devils_isle_21_24_0050">
+		<add x="50296" y="212472" zmin="-3444" zmax="-3144"/>
+		<add x="50968" y="212520" zmin="-3444" zmax="-3144"/>
+		<add x="51000" y="213048" zmin="-3444" zmax="-3144"/>
+		<add x="50312" y="213064" zmin="-3444" zmax="-3144"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0050" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0050"/>
+		<npc id="24050"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0050" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0050"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0050" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0050"/>
+		<npc id="24051"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0050" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0050"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<territory name="devils_isle_21_24_0051">
+		<add x="51160" y="212040" zmin="-3444" zmax="-3144"/>
+		<add x="52024" y="212040" zmin="-3444" zmax="-3144"/>
+		<add x="52056" y="212472" zmin="-3444" zmax="-3144"/>
+		<add x="51176" y="212456" zmin="-3444" zmax="-3144"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0051" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0051"/>
+		<npc id="24050"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0051" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0051"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0051" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0051"/>
+		<npc id="24051"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0051" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0051"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<territory name="devils_isle_21_24_0052">
+		<add x="52072" y="212568" zmin="-3444" zmax="-3144"/>
+		<add x="52024" y="213016" zmin="-3444" zmax="-3144"/>
+		<add x="51176" y="213032" zmin="-3444" zmax="-3144"/>
+		<add x="51176" y="212552" zmin="-3444" zmax="-3144"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0052" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0052"/>
+		<npc id="24050"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0052" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0052"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0052" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0052"/>
+		<npc id="24051"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0052" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0052"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<territory name="devils_isle_21_24_0053">
+		<add x="52216" y="212568" zmin="-3444" zmax="-3144"/>
+		<add x="52216" y="212088" zmin="-3444" zmax="-3144"/>
+		<add x="52904" y="212056" zmin="-3444" zmax="-3144"/>
+		<add x="52904" y="212584" zmin="-3444" zmax="-3144"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0053" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0053"/>
+		<npc id="24050"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0053" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0053"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0053" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0053"/>
+		<npc id="24051"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0053" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0053"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<territory name="devils_isle_21_24_0054">
+		<add x="53000" y="212072" zmin="-3444" zmax="-3144"/>
+		<add x="53608" y="212088" zmin="-3444" zmax="-3144"/>
+		<add x="53608" y="212568" zmin="-3444" zmax="-3144"/>
+		<add x="52936" y="212584" zmin="-3444" zmax="-3144"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0054" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0054"/>
+		<npc id="24050"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0054" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0054"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0054" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0054"/>
+		<npc id="24051"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0054" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0054"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<territory name="devils_isle_21_24_0055">
+		<add x="52168" y="212648" zmin="-3444" zmax="-3144"/>
+		<add x="52904" y="212632" zmin="-3444" zmax="-3144"/>
+		<add x="52904" y="213208" zmin="-3444" zmax="-3144"/>
+		<add x="52200" y="213176" zmin="-3444" zmax="-3144"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0055" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0055"/>
+		<npc id="24050"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0055" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0055"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0055" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0055"/>
+		<npc id="24051"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0055" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0055"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<territory name="devils_isle_21_24_0056">
+		<add x="52936" y="212616" zmin="-3444" zmax="-3144"/>
+		<add x="53608" y="212632" zmin="-3444" zmax="-3144"/>
+		<add x="53656" y="213176" zmin="-3444" zmax="-3144"/>
+		<add x="52968" y="213192" zmin="-3444" zmax="-3144"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0056" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0056"/>
+		<npc id="24050"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0056" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0056"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0056" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0056"/>
+		<npc id="24051"/><!--Голодный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0056" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0056"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<territory name="devils_isle_21_24_0057">
+		<add x="51240" y="211288" zmin="-3124" zmax="-2824"/>
+		<add x="51240" y="210680" zmin="-3124" zmax="-2824"/>
+		<add x="51896" y="210712" zmin="-3124" zmax="-2824"/>
+		<add x="51880" y="211304" zmin="-3124" zmax="-2824"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0057" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0057"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0057" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0057"/>
+		<npc id="24054"/><!--Голодный Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0057" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0057"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0057" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0057"/>
+		<npc id="24055"/><!--Голодный Воин-->
+	</spawn>
+	<territory name="devils_isle_21_24_0058">
+		<add x="51976" y="210696" zmin="-3124" zmax="-2824"/>
+		<add x="52616" y="210712" zmin="-3124" zmax="-2824"/>
+		<add x="52600" y="211272" zmin="-3124" zmax="-2824"/>
+		<add x="51928" y="211304" zmin="-3124" zmax="-2824"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0058" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0058"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0058" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0058"/>
+		<npc id="24054"/><!--Голодный Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0058" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0058"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0058" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0058"/>
+		<npc id="24055"/><!--Голодный Воин-->
+	</spawn>
+	<territory name="devils_isle_21_24_0059">
+		<add x="51224" y="211352" zmin="-3124" zmax="-2824"/>
+		<add x="51848" y="211384" zmin="-3124" zmax="-2824"/>
+		<add x="51864" y="211864" zmin="-3124" zmax="-2824"/>
+		<add x="51192" y="211864" zmin="-3124" zmax="-2824"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0059" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0059"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0059" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0059"/>
+		<npc id="24054"/><!--Голодный Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0059" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0059"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0059" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0059"/>
+		<npc id="24055"/><!--Голодный Воин-->
+	</spawn>
+	<territory name="devils_isle_21_24_0060">
+		<add x="51944" y="211368" zmin="-3124" zmax="-2824"/>
+		<add x="52616" y="211352" zmin="-3124" zmax="-2824"/>
+		<add x="52600" y="211832" zmin="-3124" zmax="-2824"/>
+		<add x="51912" y="211864" zmin="-3124" zmax="-2824"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0060" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0060"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0060" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0060"/>
+		<npc id="24054"/><!--Голодный Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0060" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0060"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0060" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0060"/>
+		<npc id="24055"/><!--Голодный Воин-->
+	</spawn>
+	<territory name="devils_isle_21_24_0061">
+		<add x="49112" y="210280" zmin="-2804" zmax="-2504"/>
+		<add x="49128" y="209752" zmin="-2804" zmax="-2504"/>
+		<add x="49784" y="209752" zmin="-2804" zmax="-2504"/>
+		<add x="49832" y="210280" zmin="-2804" zmax="-2504"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0061" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0061"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0061" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0061"/>
+		<npc id="24054"/><!--Голодный Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0061" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0061"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0061" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0061"/>
+		<npc id="24055"/><!--Голодный Воин-->
+	</spawn>
+	<territory name="devils_isle_21_24_0062">
+		<add x="49848" y="209736" zmin="-2804" zmax="-2504"/>
+		<add x="50488" y="209768" zmin="-2804" zmax="-2504"/>
+		<add x="50520" y="210280" zmin="-2804" zmax="-2504"/>
+		<add x="49912" y="210264" zmin="-2804" zmax="-2504"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0062" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0062"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0062" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0062"/>
+		<npc id="24054"/><!--Голодный Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0062" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0062"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0062" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0062"/>
+		<npc id="24055"/><!--Голодный Воин-->
+	</spawn>
+	<territory name="devils_isle_21_24_0063">
+		<add x="49768" y="210904" zmin="-2804" zmax="-2504"/>
+		<add x="49128" y="210872" zmin="-2804" zmax="-2504"/>
+		<add x="49128" y="210360" zmin="-2804" zmax="-2504"/>
+		<add x="49848" y="210344" zmin="-2804" zmax="-2504"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0063" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0063"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0063" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0063"/>
+		<npc id="24054"/><!--Голодный Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0063" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0063"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0063" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0063"/>
+		<npc id="24055"/><!--Голодный Воин-->
+	</spawn>
+	<territory name="devils_isle_21_24_0064">
+		<add x="50520" y="210328" zmin="-2804" zmax="-2504"/>
+		<add x="50472" y="210872" zmin="-2804" zmax="-2504"/>
+		<add x="49864" y="210904" zmin="-2804" zmax="-2504"/>
+		<add x="49912" y="210344" zmin="-2804" zmax="-2504"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0064" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0064"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0064" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0064"/>
+		<npc id="24054"/><!--Голодный Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0064" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0064"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0064" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0064"/>
+		<npc id="24055"/><!--Голодный Воин-->
+	</spawn>
+	<territory name="devils_isle_21_24_0065">
+		<add x="51672" y="208248" zmin="-2564" zmax="-2264"/>
+		<add x="52216" y="208248" zmin="-2564" zmax="-2264"/>
+		<add x="52280" y="208840" zmin="-2564" zmax="-2264"/>
+		<add x="51688" y="208872" zmin="-2564" zmax="-2264"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0065" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0065"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0065" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0065"/>
+		<npc id="24054"/><!--Голодный Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0065" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0065"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0065" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0065"/>
+		<npc id="24055"/><!--Голодный Воин-->
+	</spawn>
+	<territory name="devils_isle_21_24_0066">
+		<add x="52264" y="208248" zmin="-2564" zmax="-2264"/>
+		<add x="52792" y="208248" zmin="-2564" zmax="-2264"/>
+		<add x="52776" y="208872" zmin="-2564" zmax="-2264"/>
+		<add x="52328" y="208840" zmin="-2564" zmax="-2264"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0066" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0066"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0066" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0066"/>
+		<npc id="24054"/><!--Голодный Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0066" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0066"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0066" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0066"/>
+		<npc id="24055"/><!--Голодный Воин-->
+	</spawn>
+	<territory name="devils_isle_21_24_0067">
+		<add x="51688" y="208952" zmin="-2564" zmax="-2264"/>
+		<add x="52264" y="208920" zmin="-2564" zmax="-2264"/>
+		<add x="52184" y="209608" zmin="-2564" zmax="-2264"/>
+		<add x="51688" y="209624" zmin="-2564" zmax="-2264"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0067" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0067"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0067" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0067"/>
+		<npc id="24054"/><!--Голодный Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0067" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0067"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0067" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0067"/>
+		<npc id="24055"/><!--Голодный Воин-->
+	</spawn>
+	<territory name="devils_isle_21_24_0068">
+		<add x="52264" y="209624" zmin="-2564" zmax="-2264"/>
+		<add x="52776" y="209608" zmin="-2564" zmax="-2264"/>
+		<add x="52776" y="208936" zmin="-2564" zmax="-2264"/>
+		<add x="52344" y="208936" zmin="-2564" zmax="-2264"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0068" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0068"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0068" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0068"/>
+		<npc id="24054"/><!--Голодный Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0068" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0068"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0068" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0068"/>
+		<npc id="24055"/><!--Голодный Воин-->
+	</spawn>
+	<territory name="devils_isle_21_24_0069">
+		<add x="51672" y="210328" zmin="-2564" zmax="-2264"/>
+		<add x="52200" y="210328" zmin="-2564" zmax="-2264"/>
+		<add x="52216" y="210984" zmin="-2564" zmax="-2264"/>
+		<add x="51688" y="210968" zmin="-2564" zmax="-2264"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0069" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0069"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0069" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0069"/>
+		<npc id="24054"/><!--Голодный Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0069" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0069"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0069" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0069"/>
+		<npc id="24055"/><!--Голодный Воин-->
+	</spawn>
+	<territory name="devils_isle_21_24_0070">
+		<add x="52248" y="210984" zmin="-2564" zmax="-2264"/>
+		<add x="52264" y="210312" zmin="-2564" zmax="-2264"/>
+		<add x="52792" y="210328" zmin="-2564" zmax="-2264"/>
+		<add x="52776" y="210952" zmin="-2564" zmax="-2264"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0070" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0070"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0070" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0070"/>
+		<npc id="24054"/><!--Голодный Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0070" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0070"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0070" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0070"/>
+		<npc id="24055"/><!--Голодный Воин-->
+	</spawn>
+	<territory name="devils_isle_21_24_0071">
+		<add x="52216" y="211016" zmin="-2564" zmax="-2264"/>
+		<add x="51688" y="211016" zmin="-2564" zmax="-2264"/>
+		<add x="51640" y="211688" zmin="-2564" zmax="-2264"/>
+		<add x="52280" y="211704" zmin="-2564" zmax="-2264"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0071" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0071"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0071" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0071"/>
+		<npc id="24054"/><!--Голодный Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0071" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0071"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0071" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0071"/>
+		<npc id="24055"/><!--Голодный Воин-->
+	</spawn>
+	<territory name="devils_isle_21_24_0072">
+		<add x="52248" y="211016" zmin="-2564" zmax="-2264"/>
+		<add x="52776" y="211032" zmin="-2564" zmax="-2264"/>
+		<add x="52808" y="211672" zmin="-2564" zmax="-2264"/>
+		<add x="52312" y="211688" zmin="-2564" zmax="-2264"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0072" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0072"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0072" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0072"/>
+		<npc id="24054"/><!--Голодный Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0072" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0072"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0072" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0072"/>
+		<npc id="24055"/><!--Голодный Воин-->
+	</spawn>
+	<territory name="devils_isle_21_24_0073">
+		<add x="52984" y="209688" zmin="-2564" zmax="-2264"/>
+		<add x="53752" y="209656" zmin="-2564" zmax="-2264"/>
+		<add x="53752" y="210280" zmin="-2564" zmax="-2264"/>
+		<add x="53000" y="210264" zmin="-2564" zmax="-2264"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0073" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0073"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0073" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0073"/>
+		<npc id="24054"/><!--Голодный Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0073" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0073"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0073" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0073"/>
+		<npc id="24055"/><!--Голодный Воин-->
+	</spawn>
+	<territory name="devils_isle_21_24_0074">
+		<add x="54024" y="210280" zmin="-2564" zmax="-2264"/>
+		<add x="54024" y="209672" zmin="-2564" zmax="-2264"/>
+		<add x="54680" y="209672" zmin="-2564" zmax="-2264"/>
+		<add x="54680" y="210248" zmin="-2564" zmax="-2264"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0074" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0074"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0074" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0074"/>
+		<npc id="24054"/><!--Голодный Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0074" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0074"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0074" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0074"/>
+		<npc id="24055"/><!--Голодный Воин-->
+	</spawn>
+	<territory name="devils_isle_21_24_0075">
+		<add x="53512" y="208776" zmin="-2564" zmax="-2264"/>
+		<add x="53048" y="208792" zmin="-2564" zmax="-2264"/>
+		<add x="53048" y="209528" zmin="-2564" zmax="-2264"/>
+		<add x="53528" y="209528" zmin="-2564" zmax="-2264"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0075" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0075"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0075" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0075"/>
+		<npc id="24054"/><!--Голодный Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0075" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0075"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0075" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0075"/>
+		<npc id="24055"/><!--Голодный Воин-->
+	</spawn>
+	<territory name="devils_isle_21_24_0076">
+		<add x="54136" y="208792" zmin="-2564" zmax="-2264"/>
+		<add x="54152" y="209512" zmin="-2564" zmax="-2264"/>
+		<add x="53624" y="209528" zmin="-2564" zmax="-2264"/>
+		<add x="53544" y="208808" zmin="-2564" zmax="-2264"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0076" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0076"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0076" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0076"/>
+		<npc id="24054"/><!--Голодный Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0076" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0076"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0076" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0076"/>
+		<npc id="24055"/><!--Голодный Воин-->
+	</spawn>
+	<territory name="devils_isle_21_24_0077">
+		<add x="53480" y="211096" zmin="-2564" zmax="-2264"/>
+		<add x="53032" y="211112" zmin="-2564" zmax="-2264"/>
+		<add x="53048" y="210408" zmin="-2564" zmax="-2264"/>
+		<add x="53464" y="210408" zmin="-2564" zmax="-2264"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0077" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0077"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0077" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0077"/>
+		<npc id="24054"/><!--Голодный Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0077" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0077"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0077" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0077"/>
+		<npc id="24055"/><!--Голодный Воин-->
+	</spawn>
+	<territory name="devils_isle_21_24_0078">
+		<add x="53528" y="210408" zmin="-2564" zmax="-2264"/>
+		<add x="53960" y="210392" zmin="-2564" zmax="-2264"/>
+		<add x="53944" y="211112" zmin="-2564" zmax="-2264"/>
+		<add x="53496" y="211112" zmin="-2564" zmax="-2264"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0078" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0078"/>
+		<npc id="24052"/><!--Голодный Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0078" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0078"/>
+		<npc id="24054"/><!--Голодный Воин-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0078" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0078"/>
+		<npc id="24053"/><!--Воитель-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0078" count="1" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0078"/>
+		<npc id="24055"/><!--Голодный Воин-->
+	</spawn>
+	<territory name="devils_isle_21_24_0079">
+		<add x="50168" y="208040" zmin="-3828" zmax="-3528"/>
+		<add x="50664" y="208040" zmin="-3828" zmax="-3528"/>
+		<add x="50680" y="208744" zmin="-3828" zmax="-3528"/>
+		<add x="50152" y="208664" zmin="-3828" zmax="-3528"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0079" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0079"/>
+		<npc id="24046"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0079" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0079"/>
+		<npc id="24048"/><!--Бессмертный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0079" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0079"/>
+		<npc id="24047"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0079" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0079"/>
+		<npc id="24049"/><!--Бессмертный Дух-->
+	</spawn>
+	<territory name="devils_isle_21_24_0080">
+		<add x="50728" y="208008" zmin="-3828" zmax="-3528"/>
+		<add x="51304" y="208040" zmin="-3828" zmax="-3528"/>
+		<add x="51272" y="208680" zmin="-3828" zmax="-3528"/>
+		<add x="50744" y="208744" zmin="-3828" zmax="-3528"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0080" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0080"/>
+		<npc id="24046"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0080" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0080"/>
+		<npc id="24048"/><!--Бессмертный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0080" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0080"/>
+		<npc id="24047"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0080" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0080"/>
+		<npc id="24049"/><!--Бессмертный Дух-->
+	</spawn>
+	<territory name="devils_isle_21_24_0081">
+		<add x="50168" y="208744" zmin="-3828" zmax="-3528"/>
+		<add x="50664" y="208824" zmin="-3828" zmax="-3528"/>
+		<add x="50648" y="209416" zmin="-3828" zmax="-3528"/>
+		<add x="50168" y="209432" zmin="-3828" zmax="-3528"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0081" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0081"/>
+		<npc id="24046"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0081" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0081"/>
+		<npc id="24048"/><!--Бессмертный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0081" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0081"/>
+		<npc id="24047"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0081" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0081"/>
+		<npc id="24049"/><!--Бессмертный Дух-->
+	</spawn>
+	<territory name="devils_isle_21_24_0082">
+		<add x="50760" y="208792" zmin="-3828" zmax="-3528"/>
+		<add x="51272" y="208728" zmin="-3828" zmax="-3528"/>
+		<add x="51272" y="209416" zmin="-3828" zmax="-3528"/>
+		<add x="50728" y="209432" zmin="-3828" zmax="-3528"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0082" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0082"/>
+		<npc id="24046"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0082" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0082"/>
+		<npc id="24048"/><!--Бессмертный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0082" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0082"/>
+		<npc id="24047"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0082" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0082"/>
+		<npc id="24049"/><!--Бессмертный Дух-->
+	</spawn>
+	<territory name="devils_isle_21_24_0083">
+		<add x="50168" y="206456" zmin="-3828" zmax="-3528"/>
+		<add x="50632" y="206440" zmin="-3828" zmax="-3528"/>
+		<add x="50664" y="207144" zmin="-3828" zmax="-3528"/>
+		<add x="50168" y="207112" zmin="-3828" zmax="-3528"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0083" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0083"/>
+		<npc id="24046"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0083" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0083"/>
+		<npc id="24048"/><!--Бессмертный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0083" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0083"/>
+		<npc id="24047"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0083" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0083"/>
+		<npc id="24049"/><!--Бессмертный Дух-->
+	</spawn>
+	<territory name="devils_isle_21_24_0084">
+		<add x="50712" y="206440" zmin="-3828" zmax="-3528"/>
+		<add x="51256" y="206456" zmin="-3828" zmax="-3528"/>
+		<add x="51272" y="207128" zmin="-3828" zmax="-3528"/>
+		<add x="50696" y="207144" zmin="-3828" zmax="-3528"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0084" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0084"/>
+		<npc id="24046"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0084" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0084"/>
+		<npc id="24048"/><!--Бессмертный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0084" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0084"/>
+		<npc id="24047"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0084" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0084"/>
+		<npc id="24049"/><!--Бессмертный Дух-->
+	</spawn>
+	<territory name="devils_isle_21_24_0085">
+		<add x="50648" y="207848" zmin="-3828" zmax="-3528"/>
+		<add x="50168" y="207864" zmin="-3828" zmax="-3528"/>
+		<add x="50168" y="207192" zmin="-3828" zmax="-3528"/>
+		<add x="50680" y="207160" zmin="-3828" zmax="-3528"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0085" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0085"/>
+		<npc id="24046"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0085" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0085"/>
+		<npc id="24048"/><!--Бессмертный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0085" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0085"/>
+		<npc id="24047"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0085" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0085"/>
+		<npc id="24049"/><!--Бессмертный Дух-->
+	</spawn>
+	<territory name="devils_isle_21_24_0086">
+		<add x="50712" y="207160" zmin="-3828" zmax="-3528"/>
+		<add x="51272" y="207176" zmin="-3828" zmax="-3528"/>
+		<add x="51272" y="207848" zmin="-3828" zmax="-3528"/>
+		<add x="50728" y="207864" zmin="-3828" zmax="-3528"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0086" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0086"/>
+		<npc id="24046"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0086" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0086"/>
+		<npc id="24048"/><!--Бессмертный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0086" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0086"/>
+		<npc id="24047"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0086" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0086"/>
+		<npc id="24049"/><!--Бессмертный Дух-->
+	</spawn>
+	<territory name="devils_isle_21_24_0087">
+		<add x="49304" y="205208" zmin="-3828" zmax="-3528"/>
+		<add x="50024" y="205208" zmin="-3828" zmax="-3528"/>
+		<add x="50008" y="205736" zmin="-3828" zmax="-3528"/>
+		<add x="49272" y="205800" zmin="-3828" zmax="-3528"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0087" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0087"/>
+		<npc id="24046"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0087" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0087"/>
+		<npc id="24048"/><!--Бессмертный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0087" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0087"/>
+		<npc id="24047"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0087" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0087"/>
+		<npc id="24049"/><!--Бессмертный Дух-->
+	</spawn>
+	<territory name="devils_isle_21_24_0088">
+		<add x="49272" y="205832" zmin="-3828" zmax="-3528"/>
+		<add x="49288" y="206296" zmin="-3828" zmax="-3528"/>
+		<add x="49992" y="206312" zmin="-3828" zmax="-3528"/>
+		<add x="50008" y="205784" zmin="-3828" zmax="-3528"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0088" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0088"/>
+		<npc id="24046"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0088" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0088"/>
+		<npc id="24048"/><!--Бессмертный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0088" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0088"/>
+		<npc id="24047"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0088" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0088"/>
+		<npc id="24049"/><!--Бессмертный Дух-->
+	</spawn>
+	<territory name="devils_isle_21_24_0089">
+		<add x="50776" y="205160" zmin="-3828" zmax="-3528"/>
+		<add x="51480" y="205160" zmin="-3828" zmax="-3528"/>
+		<add x="51368" y="205656" zmin="-3828" zmax="-3528"/>
+		<add x="50760" y="205752" zmin="-3828" zmax="-3528"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0089" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0089"/>
+		<npc id="24046"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0089" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0089"/>
+		<npc id="24048"/><!--Бессмертный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0089" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0089"/>
+		<npc id="24047"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0089" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0089"/>
+		<npc id="24049"/><!--Бессмертный Дух-->
+	</spawn>
+	<territory name="devils_isle_21_24_0090">
+		<add x="51544" y="205144" zmin="-3828" zmax="-3528"/>
+		<add x="52200" y="205160" zmin="-3828" zmax="-3528"/>
+		<add x="52184" y="205752" zmin="-3828" zmax="-3528"/>
+		<add x="51432" y="205656" zmin="-3828" zmax="-3528"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0090" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0090"/>
+		<npc id="24046"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0090" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0090"/>
+		<npc id="24048"/><!--Бессмертный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0090" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0090"/>
+		<npc id="24047"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0090" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0090"/>
+		<npc id="24049"/><!--Бессмертный Дух-->
+	</spawn>
+	<territory name="devils_isle_21_24_0091">
+		<add x="51368" y="205720" zmin="-3828" zmax="-3528"/>
+		<add x="51464" y="206264" zmin="-3828" zmax="-3528"/>
+		<add x="50792" y="206296" zmin="-3828" zmax="-3528"/>
+		<add x="50776" y="205848" zmin="-3828" zmax="-3528"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0091" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0091"/>
+		<npc id="24046"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0091" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0091"/>
+		<npc id="24048"/><!--Бессмертный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0091" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0091"/>
+		<npc id="24047"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0091" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0091"/>
+		<npc id="24049"/><!--Бессмертный Дух-->
+	</spawn>
+	<territory name="devils_isle_21_24_0092">
+		<add x="51448" y="205752" zmin="-3828" zmax="-3528"/>
+		<add x="52168" y="205832" zmin="-3828" zmax="-3528"/>
+		<add x="52168" y="206280" zmin="-3828" zmax="-3528"/>
+		<add x="51528" y="206264" zmin="-3828" zmax="-3528"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0092" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0092"/>
+		<npc id="24046"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0092" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0092"/>
+		<npc id="24048"/><!--Бессмертный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0092" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0092"/>
+		<npc id="24047"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0092" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0092"/>
+		<npc id="24049"/><!--Бессмертный Дух-->
+	</spawn>
+	<territory name="devils_isle_21_24_0093">
+		<add x="54168" y="205656" zmin="-3732" zmax="-3432"/>
+		<add x="54168" y="205176" zmin="-3732" zmax="-3432"/>
+		<add x="53304" y="205144" zmin="-3732" zmax="-3432"/>
+		<add x="53304" y="205768" zmin="-3732" zmax="-3432"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0093" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0093"/>
+		<npc id="24046"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0093" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0093"/>
+		<npc id="24048"/><!--Бессмертный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0093" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0093"/>
+		<npc id="24047"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0093" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0093"/>
+		<npc id="24049"/><!--Бессмертный Дух-->
+	</spawn>
+	<territory name="devils_isle_21_24_0094">
+		<add x="53304" y="205800" zmin="-3732" zmax="-3432"/>
+		<add x="53288" y="206264" zmin="-3732" zmax="-3432"/>
+		<add x="54168" y="206280" zmin="-3732" zmax="-3432"/>
+		<add x="54184" y="205720" zmin="-3732" zmax="-3432"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0094" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0094"/>
+		<npc id="24046"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0094" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0094"/>
+		<npc id="24048"/><!--Бессмертный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0094" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0094"/>
+		<npc id="24047"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0094" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0094"/>
+		<npc id="24049"/><!--Бессмертный Дух-->
+	</spawn>
+	<territory name="devils_isle_21_24_0095">
+		<add x="52904" y="206936" zmin="-3732" zmax="-3432"/>
+		<add x="52888" y="206408" zmin="-3732" zmax="-3432"/>
+		<add x="53576" y="206424" zmin="-3732" zmax="-3432"/>
+		<add x="53560" y="206936" zmin="-3732" zmax="-3432"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0095" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0095"/>
+		<npc id="24046"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0095" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0095"/>
+		<npc id="24048"/><!--Бессмертный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0095" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0095"/>
+		<npc id="24047"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0095" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0095"/>
+		<npc id="24049"/><!--Бессмертный Дух-->
+	</spawn>
+	<territory name="devils_isle_21_24_0096">
+		<add x="53608" y="206936" zmin="-3732" zmax="-3432"/>
+		<add x="53656" y="206440" zmin="-3732" zmax="-3432"/>
+		<add x="54280" y="206424" zmin="-3732" zmax="-3432"/>
+		<add x="54312" y="206968" zmin="-3732" zmax="-3432"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0096" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0096"/>
+		<npc id="24046"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0096" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0096"/>
+		<npc id="24048"/><!--Бессмертный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0096" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0096"/>
+		<npc id="24047"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0096" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0096"/>
+		<npc id="24049"/><!--Бессмертный Дух-->
+	</spawn>
+	<territory name="devils_isle_21_24_0097">
+		<add x="53560" y="206984" zmin="-3732" zmax="-3432"/>
+		<add x="52904" y="206984" zmin="-3732" zmax="-3432"/>
+		<add x="52888" y="207544" zmin="-3732" zmax="-3432"/>
+		<add x="53576" y="207544" zmin="-3732" zmax="-3432"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0097" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0097"/>
+		<npc id="24046"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0097" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0097"/>
+		<npc id="24048"/><!--Бессмертный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0097" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0097"/>
+		<npc id="24047"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0097" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0097"/>
+		<npc id="24049"/><!--Бессмертный Дух-->
+	</spawn>
+	<territory name="devils_isle_21_24_0098">
+		<add x="53608" y="206984" zmin="-3732" zmax="-3432"/>
+		<add x="54312" y="207032" zmin="-3732" zmax="-3432"/>
+		<add x="54296" y="207560" zmin="-3732" zmax="-3432"/>
+		<add x="53640" y="207528" zmin="-3732" zmax="-3432"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0098" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0098"/>
+		<npc id="24046"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0098" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0098"/>
+		<npc id="24048"/><!--Бессмертный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0098" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0098"/>
+		<npc id="24047"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0098" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0098"/>
+		<npc id="24049"/><!--Бессмертный Дух-->
+	</spawn>
+	<territory name="devils_isle_21_24_0099">
+		<add x="52184" y="206968" zmin="-3828" zmax="-3528"/>
+		<add x="52168" y="206440" zmin="-3828" zmax="-3528"/>
+		<add x="51464" y="206440" zmin="-3828" zmax="-3528"/>
+		<add x="51432" y="206952" zmin="-3828" zmax="-3528"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0099" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0099"/>
+		<npc id="24046"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0099" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0099"/>
+		<npc id="24048"/><!--Бессмертный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0099" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0099"/>
+		<npc id="24047"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0099" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0099"/>
+		<npc id="24049"/><!--Бессмертный Дух-->
+	</spawn>
+	<territory name="devils_isle_21_24_0100">
+		<add x="51448" y="207064" zmin="-3828" zmax="-3528"/>
+		<add x="52168" y="207048" zmin="-3828" zmax="-3528"/>
+		<add x="52184" y="207544" zmin="-3828" zmax="-3528"/>
+		<add x="51464" y="207560" zmin="-3828" zmax="-3528"/>
+	</territory>
+	<spawn name="devils_isle_21_24_0100" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0100"/>
+		<npc id="24046"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0100" count="1" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0100"/>
+		<npc id="24048"/><!--Бессмертный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0100" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0100"/>
+		<npc id="24047"/><!--Всевидящее Око-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0100" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0100"/>
+		<npc id="24049"/><!--Бессмертный Дух-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0102" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0001"/>
+		<territory name="devils_isle_21_24_0002"/>
+		<territory name="devils_isle_21_24_0003"/>
+		<territory name="devils_isle_21_24_0004"/>
+		<territory name="devils_isle_21_24_0005"/>
+		<territory name="devils_isle_21_24_0006"/>
+		<npc id="24039"/><!--Жемчужный Ужас-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0103" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0007"/>
+		<territory name="devils_isle_21_24_0008"/>
+		<territory name="devils_isle_21_24_0009"/>
+		<territory name="devils_isle_21_24_0010"/>
+		<territory name="devils_isle_21_24_0011"/>
+		<territory name="devils_isle_21_24_0012"/>
+		<npc id="24039"/><!--Жемчужный Ужас-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0104" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0013"/>
+		<territory name="devils_isle_21_24_0014"/>
+		<territory name="devils_isle_21_24_0015"/>
+		<territory name="devils_isle_21_24_0016"/>
+		<territory name="devils_isle_21_24_0026"/>
+		<territory name="devils_isle_21_24_0017"/>
+		<territory name="devils_isle_21_24_0018"/>
+		<npc id="24039"/><!--Жемчужный Ужас-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0105" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0019"/>
+		<territory name="devils_isle_21_24_0020"/>
+		<territory name="devils_isle_21_24_0021"/>
+		<territory name="devils_isle_21_24_0022"/>
+		<territory name="devils_isle_21_24_0023"/>
+		<territory name="devils_isle_21_24_0024"/>
+		<territory name="devils_isle_21_24_0025"/>
+		<npc id="24039"/><!--Жемчужный Ужас-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0106" count="2" respawn="80" period_of_day="day">
+		<territory name="devils_isle_21_24_0027"/>
+		<territory name="devils_isle_21_24_0028"/>
+		<territory name="devils_isle_21_24_0029"/>
+		<territory name="devils_isle_21_24_0030"/>
+		<territory name="devils_isle_21_24_0031"/>
+		<territory name="devils_isle_21_24_0032"/>
+		<npc id="24039"/><!--Жемчужный Ужас-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0102" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0001"/>
+		<territory name="devils_isle_21_24_0002"/>
+		<territory name="devils_isle_21_24_0003"/>
+		<territory name="devils_isle_21_24_0004"/>
+		<territory name="devils_isle_21_24_0005"/>
+		<territory name="devils_isle_21_24_0006"/>
+		<npc id="24040"/><!--Ночной Кошмар-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0103" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0007"/>
+		<territory name="devils_isle_21_24_0008"/>
+		<territory name="devils_isle_21_24_0009"/>
+		<territory name="devils_isle_21_24_0010"/>
+		<territory name="devils_isle_21_24_0011"/>
+		<territory name="devils_isle_21_24_0012"/>
+		<npc id="24040"/><!--Ночной Кошмар-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0104" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0013"/>
+		<territory name="devils_isle_21_24_0014"/>
+		<territory name="devils_isle_21_24_0015"/>
+		<territory name="devils_isle_21_24_0016"/>
+		<territory name="devils_isle_21_24_0026"/>
+		<territory name="devils_isle_21_24_0017"/>
+		<territory name="devils_isle_21_24_0018"/>
+		<npc id="24040"/><!--Ночной Кошмар-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0105" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0019"/>
+		<territory name="devils_isle_21_24_0020"/>
+		<territory name="devils_isle_21_24_0021"/>
+		<territory name="devils_isle_21_24_0022"/>
+		<territory name="devils_isle_21_24_0023"/>
+		<territory name="devils_isle_21_24_0024"/>
+		<territory name="devils_isle_21_24_0025"/>
+		<npc id="24040"/><!--Ночной Кошмар-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0106" count="2" respawn="80" period_of_day="night">
+		<territory name="devils_isle_21_24_0027"/>
+		<territory name="devils_isle_21_24_0028"/>
+		<territory name="devils_isle_21_24_0029"/>
+		<territory name="devils_isle_21_24_0030"/>
+		<territory name="devils_isle_21_24_0031"/>
+		<territory name="devils_isle_21_24_0032"/>
+		<npc id="24040"/><!--Ночной Кошмар-->
+	</spawn>
+	<spawn name="devils_isle_21_24_0107" count="1" respawn="60">
+		<point x="55315" y="218886" z="-3216" h="13079"/>
+		<npc id="29022"/><!--Закен-->
+	</spawn>
+</list>

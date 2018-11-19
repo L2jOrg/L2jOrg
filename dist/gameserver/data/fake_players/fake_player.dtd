@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT fake_player_ai (on_character_create|farm|action)*>
+<!ATTLIST fake_player_ai
+		race CDATA #REQUIRED
+		type CDATA #REQUIRED>
+
+	<!ELEMENT on_character_create (wait|move_to_npc|speak_with_npc|random_action|ordinary_actions|repeat_actions|move_to_point|use_item|use_community|add_item|teleport_to_point|teleport_to_closest_town|farm|action)*>
+
+		<!ELEMENT random_action (wait|move_to_npc|speak_with_npc|random_action|ordinary_actions|repeat_actions|move_to_point|use_item|use_community|add_item|teleport_to_point|teleport_to_closest_town|farm|action)*>
+		<!ATTLIST random_action
+				chance CDATA #IMPLIED>
+
+		<!ELEMENT ordinary_actions (wait|move_to_npc|speak_with_npc|random_action|ordinary_actions|repeat_actions|move_to_point|use_item|use_community|add_item|teleport_to_point|teleport_to_closest_town|farm|action)*>
+		<!ATTLIST ordinary_actions
+				chance CDATA #IMPLIED>
+
+		<!ELEMENT repeat_actions (wait|move_to_npc|speak_with_npc|random_action|ordinary_actions|repeat_actions|move_to_point|use_item|use_community|add_item|teleport_to_point|teleport_to_closest_town|farm|action)*>
+		<!ATTLIST repeat_actions
+				count CDATA #IMPLIED
+				min_count CDATA #IMPLIED
+				max_count CDATA #IMPLIED
+				chance CDATA #IMPLIED>
+
+		<!ELEMENT wait (#PCDATA)>
+		<!ATTLIST wait
+				delay CDATA #IMPLIED
+				min_delay CDATA #IMPLIED
+				max_delay CDATA #IMPLIED
+				chance CDATA #IMPLIED>
+
+		<!ELEMENT move_to_npc (#PCDATA)>
+		<!ATTLIST move_to_npc
+				id CDATA #REQUIRED
+				chance CDATA #IMPLIED>
+
+		<!ELEMENT speak_with_npc (#PCDATA)>
+		<!ATTLIST speak_with_npc
+				id CDATA #REQUIRED
+				bypass CDATA #IMPLIED
+				chance CDATA #IMPLIED>
+
+		<!ELEMENT move_to_point (#PCDATA)>
+		<!ATTLIST move_to_point
+				x CDATA #REQUIRED
+				y CDATA #REQUIRED
+				z CDATA #REQUIRED
+				range CDATA #IMPLIED
+				min_range CDATA #IMPLIED
+				max_range CDATA #IMPLIED
+				chance CDATA #IMPLIED>
+
+		<!ELEMENT use_item (#PCDATA)>
+		<!ATTLIST use_item
+				id CDATA #REQUIRED
+				chance CDATA #IMPLIED>
+
+		<!ELEMENT use_community (#PCDATA)>
+		<!ATTLIST use_community
+				bypass CDATA #REQUIRED>
+
+		<!ELEMENT add_item (#PCDATA)>
+		<!ATTLIST add_item
+				id CDATA #REQUIRED
+				count CDATA #IMPLIED
+				min_count CDATA #IMPLIED
+				max_count CDATA #IMPLIED
+				chance CDATA #IMPLIED>
+
+		<!ELEMENT teleport_to_point (#PCDATA)>
+		<!ATTLIST teleport_to_point
+				x CDATA #REQUIRED
+				y CDATA #REQUIRED
+				z CDATA #REQUIRED
+				chance CDATA #IMPLIED>
+
+		<!ELEMENT teleport_to_closest_town (#PCDATA)>
+		<!ATTLIST teleport_to_closest_town
+				chance CDATA #IMPLIED>
+
+<!ELEMENT farm (zones|farm_monsters|ignored_monsters|on_obtain_max_level|go_to_town|action)*>
+<!ATTLIST farm
+		name CDATA #IMPLIED
+		min_level CDATA #IMPLIED
+		max_level CDATA #IMPLIED
+		classes CDATA #IMPLIED
+		types CDATA #IMPLIED
+		races CDATA #IMPLIED>
+
+	<!ELEMENT zones (zone|spawn_points)*>
+
+		<!ELEMENT zone (polygon|circle|rectangle|banned_polygon|restart_point|PKrestart_point)*>
+		<!ATTLIST zone
+			name CDATA #IMPLIED>
+
+			<!ELEMENT polygon (coords)*>
+
+			<!ELEMENT circle (coords)*>
+			<!ATTLIST circle
+				loc CDATA #IMPLIED>
+
+			<!ELEMENT rectangle (coords)*>
+
+			<!ELEMENT banned_polygon (coords)*>
+
+				<!ELEMENT coords (#PCDATA)>
+				<!ATTLIST coords
+					loc CDATA #REQUIRED
+					chance CDATA #IMPLIED>
+
+		<!ELEMENT spawn_points (coords)*>
+
+	<!ELEMENT farm_monsters (npc)*>
+
+	<!ELEMENT ignored_monsters (npc)*>
+
+			<!ELEMENT npc (#PCDATA)>
+			<!ATTLIST npc
+				id CDATA #REQUIRED>
+
+	<!ELEMENT on_obtain_max_level (wait|move_to_npc|speak_with_npc|random_action|ordinary_actions|repeat_actions|move_to_point|use_item|use_community|add_item|teleport_to_point|teleport_to_closest_town|farm|action)*>
+
+	<!ELEMENT go_to_town (wait|move_to_npc|speak_with_npc|random_action|ordinary_actions|repeat_actions|move_to_point|use_item|use_community|add_item|teleport_to_point|teleport_to_closest_town|farm|action)*>
+	<!ATTLIST go_to_town
+			farm_time CDATA #IMPLIED
+			min_farm_time CDATA #IMPLIED
+			max_farm_time CDATA #IMPLIED
+			chance CDATA #IMPLIED>
+
+<!ELEMENT town (zones|actions|action)*>
+<!ATTLIST town
+		name CDATA #REQUIRED>
+
+	<!ELEMENT actions (wait|move_to_npc|speak_with_npc|random_action|ordinary_actions|repeat_actions|move_to_point|use_item|use_community|add_item|teleport_to_point|teleport_to_closest_town|farm|action)*>
+
+<!ELEMENT action (wait|move_to_npc|speak_with_npc|random_action|ordinary_actions|repeat_actions|move_to_point|use_item|use_community|add_item|teleport_to_point|teleport_to_closest_town|farm|action)*>
+<!ATTLIST action
+		id CDATA #REQUIRED
+		chance CDATA #IMPLIED>

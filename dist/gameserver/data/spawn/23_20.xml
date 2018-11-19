@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<territory name="aden24_2320_19">
+		<add x="126320" y="76732" zmin="-2468" zmax="-1668"/>
+		<add x="128544" y="76924" zmin="-2468" zmax="-1668"/>
+		<add x="126272" y="78936" zmin="-2468" zmax="-1668"/>
+		<add x="125376" y="78656" zmin="-2468" zmax="-1668"/>
+	</territory>
+	<spawn name="aden24_2320_19" count="2" respawn="25">
+		<territory name="aden24_2320_19"/>
+		<npc id="20600"/><!--Людоед Карул-->
+	</spawn>
+	<spawn name="aden24_2320_19" count="2" respawn="25">
+		<territory name="aden24_2320_19"/>
+		<npc id="20601"/><!--Орк Тамлин-->
+	</spawn>
+	<spawn name="aden24_2320_19" count="1" respawn="25">
+		<territory name="aden24_2320_19"/>
+		<npc id="20602"/><!--Стрелок Орков Тамлин-->
+	</spawn>
+	<territory name="aden24_2320_18">
+		<add x="125552" y="78748" zmin="-2948" zmax="-1348"/>
+		<add x="127676" y="79460" zmin="-2948" zmax="-1348"/>
+		<add x="127160" y="82024" zmin="-2948" zmax="-1348"/>
+		<add x="123924" y="82524" zmin="-2948" zmax="-1348"/>
+	</territory>
+	<spawn name="aden24_2320_18" count="3" respawn="25">
+		<territory name="aden24_2320_18"/>
+		<npc id="20600"/><!--Людоед Карул-->
+	</spawn>
+	<spawn name="aden24_2320_18" count="3" respawn="25">
+		<territory name="aden24_2320_18"/>
+		<npc id="20601"/><!--Орк Тамлин-->
+	</spawn>
+	<spawn name="aden24_2320_18" count="2" respawn="25">
+		<territory name="aden24_2320_18"/>
+		<npc id="20602"/><!--Стрелок Орков Тамлин-->
+	</spawn>
+	<territory name="aden24_2320_17">
+		<add x="123932" y="82624" zmin="-2912" zmax="-1012"/>
+		<add x="129196" y="81564" zmin="-2912" zmax="-1012"/>
+		<add x="128632" y="86248" zmin="-2912" zmax="-1012"/>
+		<add x="125536" y="88072" zmin="-2912" zmax="-1012"/>
+		<add x="123836" y="87164" zmin="-2912" zmax="-1012"/>
+	</territory>
+	<spawn name="aden24_2320_17" count="10" respawn="25">
+		<territory name="aden24_2320_17"/>
+		<npc id="20600"/><!--Людоед Карул-->
+	</spawn>
+	<spawn name="aden24_2320_17" count="7" respawn="25">
+		<territory name="aden24_2320_17"/>
+		<npc id="20601"/><!--Орк Тамлин-->
+	</spawn>
+	<spawn name="aden24_2320_17" count="5" respawn="25">
+		<territory name="aden24_2320_17"/>
+		<npc id="20602"/><!--Стрелок Орков Тамлин-->
+	</spawn>
+	<territory name="aden24_2320_16">
+		<add x="126120" y="88012" zmin="-2532" zmax="-1532"/>
+		<add x="128504" y="90112" zmin="-2532" zmax="-1532"/>
+		<add x="128888" y="91616" zmin="-2532" zmax="-1532"/>
+		<add x="127140" y="91824" zmin="-2532" zmax="-1532"/>
+		<add x="125568" y="90820" zmin="-2532" zmax="-1532"/>
+	</territory>
+	<spawn name="aden24_2320_16" count="2" respawn="25">
+		<territory name="aden24_2320_16"/>
+		<npc id="20603"/><!--Паук Кронбе-->
+	</spawn>
+	<spawn name="aden24_2320_16" count="2" respawn="25">
+		<territory name="aden24_2320_16"/>
+		<npc id="20604"/><!--Лакин-->
+	</spawn>
+	<spawn name="aden24_2320_16" count="3" respawn="25">
+		<territory name="aden24_2320_16"/>
+		<npc id="20605"/><!--Астральный Дрейк-->
+	</spawn>
+	<territory name="aden24_2320_14">
+		<add x="121700" y="92768" zmin="-2872" zmax="-1872"/>
+		<add x="120839" y="94926" zmin="-2872" zmax="-1872"/>
+		<add x="119576" y="95264" zmin="-2872" zmax="-1872"/>
+		<add x="117708" y="94316" zmin="-2872" zmax="-1872"/>
+	</territory>
+	<spawn name="aden24_2320_14" count="1" respawn="25">
+		<territory name="aden24_2320_14"/>
+		<npc id="20603"/><!--Паук Кронбе-->
+	</spawn>
+	<spawn name="aden24_2320_14" count="2" respawn="25">
+		<territory name="aden24_2320_14"/>
+		<npc id="20604"/><!--Лакин-->
+	</spawn>
+	<spawn name="aden24_2320_14" count="1" respawn="25">
+		<territory name="aden24_2320_14"/>
+		<npc id="20605"/><!--Астральный Дрейк-->
+	</spawn>
+	<territory name="aden24_2320_13">
+		<add x="120824" y="88228" zmin="-3292" zmax="-2992"/>
+		<add x="124096" y="88588" zmin="-3292" zmax="-2992"/>
+		<add x="124376" y="89076" zmin="-3292" zmax="-2992"/>
+		<add x="123868" y="89680" zmin="-3292" zmax="-2992"/>
+		<add x="120856" y="89780" zmin="-3292" zmax="-2992"/>
+	</territory>
+	<spawn name="aden24_2320_13" count="1" respawn="25">
+		<territory name="aden24_2320_13"/>
+		<npc id="20603"/><!--Паук Кронбе-->
+	</spawn>
+	<spawn name="aden24_2320_13" count="2" respawn="25">
+		<territory name="aden24_2320_13"/>
+		<npc id="20604"/><!--Лакин-->
+	</spawn>
+	<spawn name="aden24_2320_13" count="1" respawn="25">
+		<territory name="aden24_2320_13"/>
+		<npc id="20605"/><!--Астральный Дрейк-->
+	</spawn>
+	<territory name="aden24_2320_12">
+		<add x="117728" y="86028" zmin="-3076" zmax="-2576"/>
+		<add x="122580" y="83444" zmin="-3076" zmax="-2576"/>
+		<add x="122592" y="85196" zmin="-3076" zmax="-2576"/>
+		<add x="120772" y="87964" zmin="-3076" zmax="-2576"/>
+	</territory>
+	<spawn name="aden24_2320_12" count="4" respawn="25">
+		<territory name="aden24_2320_12"/>
+		<npc id="20603"/><!--Паук Кронбе-->
+	</spawn>
+	<spawn name="aden24_2320_12" count="3" respawn="25">
+		<territory name="aden24_2320_12"/>
+		<npc id="20604"/><!--Лакин-->
+	</spawn>
+	<spawn name="aden24_2320_12" count="4" respawn="25">
+		<territory name="aden24_2320_12"/>
+		<npc id="20605"/><!--Астральный Дрейк-->
+	</spawn>
+	<territory name="aden24_2320_11">
+		<add x="116544" y="89184" zmin="-3912" zmax="-2912"/>
+		<add x="117868" y="87400" zmin="-3912" zmax="-2912"/>
+		<add x="119328" y="87824" zmin="-3912" zmax="-2912"/>
+		<add x="120768" y="89796" zmin="-3912" zmax="-2912"/>
+		<add x="119940" y="92480" zmin="-3912" zmax="-2912"/>
+		<add x="118592" y="92184" zmin="-3912" zmax="-2912"/>
+	</territory>
+	<spawn name="aden24_2320_11" count="3" respawn="25">
+		<territory name="aden24_2320_11"/>
+		<npc id="20603"/><!--Паук Кронбе-->
+	</spawn>
+	<spawn name="aden24_2320_11" count="3" respawn="25">
+		<territory name="aden24_2320_11"/>
+		<npc id="20604"/><!--Лакин-->
+	</spawn>
+	<spawn name="aden24_2320_11" count="3" respawn="25">
+		<territory name="aden24_2320_11"/>
+		<npc id="20605"/><!--Астральный Дрейк-->
+	</spawn>
+	<territory name="aden24_2320_10">
+		<add x="111344" y="86352" zmin="-3236" zmax="-1936"/>
+		<add x="114532" y="86832" zmin="-3236" zmax="-1936"/>
+		<add x="115520" y="90968" zmin="-3236" zmax="-1936"/>
+		<add x="112312" y="93284" zmin="-3236" zmax="-1936"/>
+		<add x="108648" y="92500" zmin="-3236" zmax="-1936"/>
+	</territory>
+	<spawn name="aden24_2320_10" count="7" respawn="25">
+		<territory name="aden24_2320_10"/>
+		<npc id="20603"/><!--Паук Кронбе-->
+	</spawn>
+	<spawn name="aden24_2320_10" count="8" respawn="25">
+		<territory name="aden24_2320_10"/>
+		<npc id="20604"/><!--Лакин-->
+	</spawn>
+	<spawn name="aden24_2320_10" count="7" respawn="25">
+		<territory name="aden24_2320_10"/>
+		<npc id="20605"/><!--Астральный Дрейк-->
+	</spawn>
+	<territory name="aden24_2320_08">
+		<add x="105832" y="84928" zmin="-3204" zmax="-2604"/>
+		<add x="107764" y="85728" zmin="-3204" zmax="-2604"/>
+		<add x="108428" y="88084" zmin="-3204" zmax="-2604"/>
+		<add x="105840" y="88480" zmin="-3204" zmax="-2604"/>
+	</territory>
+	<spawn name="aden24_2320_08" count="3" respawn="25">
+		<territory name="aden24_2320_08"/>
+		<npc id="20600"/><!--Людоед Карул-->
+	</spawn>
+	<spawn name="aden24_2320_08" count="2" respawn="25">
+		<territory name="aden24_2320_08"/>
+		<npc id="20601"/><!--Орк Тамлин-->
+	</spawn>
+	<spawn name="aden24_2320_08" count="1" respawn="25">
+		<territory name="aden24_2320_08"/>
+		<npc id="20602"/><!--Стрелок Орков Тамлин-->
+	</spawn>
+	<territory name="aden24_2320_07">
+		<add x="107936" y="79612" zmin="-2852" zmax="-2552"/>
+		<add x="108904" y="79876" zmin="-2852" zmax="-2552"/>
+		<add x="108948" y="82532" zmin="-2852" zmax="-2552"/>
+		<add x="107584" y="82128" zmin="-2852" zmax="-2552"/>
+	</territory>
+	<spawn name="aden24_2320_07" count="2" respawn="25">
+		<territory name="aden24_2320_07"/>
+		<npc id="20600"/><!--Людоед Карул-->
+	</spawn>
+	<spawn name="aden24_2320_07" count="2" respawn="25">
+		<territory name="aden24_2320_07"/>
+		<npc id="20601"/><!--Орк Тамлин-->
+	</spawn>
+	<spawn name="aden24_2320_07" count="1" respawn="25">
+		<territory name="aden24_2320_07"/>
+		<npc id="20602"/><!--Стрелок Орков Тамлин-->
+	</spawn>
+	<territory name="aden24_2320_06">
+		<add x="103528" y="82200" zmin="-3284" zmax="-2184"/>
+		<add x="106404" y="81860" zmin="-3284" zmax="-2184"/>
+		<add x="109000" y="82548" zmin="-3284" zmax="-2184"/>
+		<add x="109324" y="84768" zmin="-3284" zmax="-2184"/>
+		<add x="104604" y="85136" zmin="-3284" zmax="-2184"/>
+	</territory>
+	<spawn name="aden24_2320_06" count="7" respawn="25">
+		<territory name="aden24_2320_06"/>
+		<npc id="20600"/><!--Людоед Карул-->
+	</spawn>
+	<spawn name="aden24_2320_06" count="5" respawn="25">
+		<territory name="aden24_2320_06"/>
+		<npc id="20601"/><!--Орк Тамлин-->
+	</spawn>
+	<spawn name="aden24_2320_06" count="4" respawn="25">
+		<territory name="aden24_2320_06"/>
+		<npc id="20602"/><!--Стрелок Орков Тамлин-->
+	</spawn>
+	<territory name="aden24_2320_05">
+		<add x="105272" y="79440" zmin="-2748" zmax="-2148"/>
+		<add x="106072" y="79688" zmin="-2748" zmax="-2148"/>
+		<add x="105180" y="82120" zmin="-2748" zmax="-2148"/>
+		<add x="103592" y="82080" zmin="-2748" zmax="-2148"/>
+		<add x="103664" y="80724" zmin="-2748" zmax="-2148"/>
+	</territory>
+	<spawn name="aden24_2320_05" count="2" respawn="25">
+		<territory name="aden24_2320_05"/>
+		<npc id="20600"/><!--Людоед Карул-->
+	</spawn>
+	<spawn name="aden24_2320_05" count="1" respawn="25">
+		<territory name="aden24_2320_05"/>
+		<npc id="20601"/><!--Орк Тамлин-->
+	</spawn>
+	<spawn name="aden24_2320_05" count="1" respawn="25">
+		<territory name="aden24_2320_05"/>
+		<npc id="20602"/><!--Стрелок Орков Тамлин-->
+	</spawn>
+	<territory name="aden24_2320_09">
+		<add x="106014" y="88546" zmin="-3436" zmax="-2136"/>
+		<add x="108125" y="88197" zmin="-3436" zmax="-2136"/>
+		<add x="109656" y="88836" zmin="-3436" zmax="-2136"/>
+		<add x="108780" y="92144" zmin="-3436" zmax="-2136"/>
+		<add x="107762" y="90546" zmin="-3436" zmax="-2136"/>
+	</territory>
+	<spawn name="aden24_2320_09" count="2" respawn="25">
+		<territory name="aden24_2320_09"/>
+		<npc id="20600"/><!--Людоед Карул-->
+	</spawn>
+	<spawn name="aden24_2320_09" count="2" respawn="25">
+		<territory name="aden24_2320_09"/>
+		<npc id="20601"/><!--Орк Тамлин-->
+	</spawn>
+	<spawn name="aden24_2320_09" count="2" respawn="25">
+		<territory name="aden24_2320_09"/>
+		<npc id="20602"/><!--Стрелок Орков Тамлин-->
+	</spawn>
+	<spawn name="aden14_npc2320__03" count="1" respawn="60">
+		<point x="115952" y="76000" z="-2720" h="0"/>
+		<npc id="30745"/><!--Тор -->
+	</spawn>
+	<spawn name="aden14_npc2320__01" count="1" respawn="60">
+		<point x="117380" y="75616" z="-2664" h="26000"/>
+		<npc id="30764"/><!--Бальтазар-->
+	</spawn>
+	<spawn name="aden14_npc2320__05" count="1" respawn="60">
+		<point x="116085" y="74728" z="-2584" h="10000"/>
+		<npc id="30746"/><!--Сибелин-->
+	</spawn>
+	<spawn name="aden14_npc2320__04" count="1" respawn="60">
+		<point x="117980" y="76704" z="-2592" h="32768"/>
+		<npc id="30744"/><!--Грей-->
+	</spawn>
+	<territory name="aden24_2320_29">
+		<add x="111900" y="87452" zmin="-3056" zmax="-2456"/>
+		<add x="113420" y="87908" zmin="-3056" zmax="-2456"/>
+		<add x="113960" y="89884" zmin="-3056" zmax="-2456"/>
+		<add x="111900" y="92028" zmin="-3056" zmax="-2456"/>
+		<add x="110596" y="89784" zmin="-3056" zmax="-2456"/>
+	</territory>
+	<spawn name="aden24_2320_29" count="1" respawn="25">
+		<territory name="aden24_2320_29"/>
+		<npc id="20600"/><!--Людоед Карул-->
+	</spawn>
+	<spawn name="aden24_2320_29" count="2" respawn="25">
+		<territory name="aden24_2320_29"/>
+		<npc id="20601"/><!--Орк Тамлин-->
+	</spawn>
+	<spawn name="aden24_2320_29" count="1" respawn="25">
+		<territory name="aden24_2320_29"/>
+		<npc id="20602"/><!--Стрелок Орков Тамлин-->
+	</spawn>
+	<territory name="aden24_2320_24">
+		<add x="122720" y="79396" zmin="-2804" zmax="-2004"/>
+		<add x="123688" y="79348" zmin="-2804" zmax="-2004"/>
+		<add x="123644" y="80176" zmin="-2804" zmax="-2004"/>
+		<add x="122236" y="81412" zmin="-2804" zmax="-2004"/>
+	</territory>
+	<spawn name="aden24_2320_24" count="2" respawn="25">
+		<territory name="aden24_2320_24"/>
+		<npc id="20600"/><!--Людоед Карул-->
+	</spawn>
+	<spawn name="aden24_2320_24" count="1" respawn="25">
+		<territory name="aden24_2320_24"/>
+		<npc id="20601"/><!--Орк Тамлин-->
+	</spawn>
+	<spawn name="aden24_2320_24" count="1" respawn="25">
+		<territory name="aden24_2320_24"/>
+		<npc id="20602"/><!--Стрелок Орков Тамлин-->
+	</spawn>
+	<spawn name="aden14_npc2320_premium01" count="1" respawn="60" group="vitamin_manager">
+		<point x="115656" y="76620" z="-2664" h="60000"/>
+		<npc id="32478"/><!--Менеджер Витаминов-->
+	</spawn>
+	<spawn name="aden14_npc2320_109" count="1" respawn="60">
+		<point x="119043" y="78586" z="-2160" h="39000"/>
+		<npc id="30694"/><!--Скрейди-->
+	</spawn>
+	<spawn name="aden14_npc2320_109" count="1" respawn="60">
+		<point x="119156" y="78356" z="-2160" h="28672"/>
+		<npc id="30695"/><!--Моисей-->
+	</spawn>
+	<spawn name="aden14_npc2320_109" count="1" respawn="60">
+		<point x="118890" y="78104" z="-2160" h="16384"/>
+		<npc id="30696"/><!--Пэйдж-->
+	</spawn>
+	<spawn name="aden14_npc2320_109" count="1" respawn="60">
+		<point x="118887" y="78752" z="-2160" h="49152"/>
+		<npc id="30697"/><!--Видэлрейн-->
+	</spawn>
+	<spawn name="aden14_npc2320_109" count="1" respawn="60">
+		<point x="118571" y="78513" z="-2160" h="0"/>
+		<npc id="30698"/><!--Эвелин-->
+	</spawn>
+	<spawn name="aden14_npc2320_108" count="1" respawn="60">
+		<point x="119673" y="77618" z="-2240" h="39864"/>
+		<npc id="30689"/><!--Сирия-->
+	</spawn>
+	<spawn name="aden14_npc2320_108" count="1" respawn="60">
+		<point x="119472" y="77835" z="-2240" h="49152"/>
+		<npc id="30690"/><!--Лютер-->
+	</spawn>
+	<spawn name="aden14_npc2320_108" count="1" respawn="60">
+		<point x="119249" y="77663" z="-2240" h="0"/>
+		<npc id="30691"/><!--Арен Атебальт-->
+	</spawn>
+	<spawn name="aden14_npc2320_108" count="1" respawn="60">
+		<point x="119892" y="77284" z="-2240" h="28672"/>
+		<npc id="30692"/><!--Стедмиэль-->
+	</spawn>
+	<spawn name="aden14_npc2320_108" count="1" respawn="60">
+		<point x="119727" y="77137" z="-2240" h="16384"/>
+		<npc id="30693"/><!--Квиниен-->
+	</spawn>
+	<spawn name="aden14_npc2320_107" count="1" respawn="60">
+		<point x="117129" y="76917" z="-2688" h="34000"/>
+		<npc id="30233"/><!--Эсмеральда-->
+	</spawn>
+	<spawn name="aden14_npc2320_106" count="1" respawn="60">
+		<point x="117649" y="75415" z="-2648" h="32768"/>
+		<npc id="30687"/><!--Вергара-->
+	</spawn>
+	<spawn name="aden14_npc2320_106" count="1" respawn="60">
+		<point x="117613" y="75310" z="-2648" h="24576"/>
+		<npc id="30688"/><!--Данинг-->
+	</spawn>
+	<spawn name="aden14_npc2320_101" count="1" respawn="60">
+		<point x="115791" y="75867" z="-2712" h="3000"/>
+		<npc id="30655"/><!--Изаэль Серебряная Тень-->
+	</spawn>
+	<spawn name="aden14_npc2320_105" count="1" respawn="60">
+		<point x="115647" y="77114" z="-2648" h="48327"/>
+		<npc id="30685"/><!--Бакст-->
+	</spawn>
+	<spawn name="aden14_npc2320_105" count="1" respawn="60">
+		<point x="115271" y="76705" z="-2648" h="0"/>
+		<npc id="30232"/><!--Соринт-->
+	</spawn>
+	<spawn name="aden14_npc2320_105" count="1" respawn="60">
+		<point x="115435" y="76541" z="-2648" h="12000"/>
+		<npc id="30686"/><!--Сильва-->
+	</spawn>
+	<spawn name="aden14_npc2320_104" count="1" respawn="60">
+		<point x="116109" y="75022" z="-2584" h="57344"/>
+		<npc id="30231"/><!--Гарретт-->
+	</spawn>
+	<spawn name="aden14_npc2320_104" count="1" respawn="60">
+		<point x="116646" y="74820" z="-2584" h="28672"/>
+		<npc id="30301"/><!--Халли-->
+	</spawn>
+	<spawn name="aden14_npc2320_103" count="1" respawn="60">
+		<point x="115116" y="75923" z="-2576" h="59000"/>
+		<npc id="30230"/><!--Эдрок-->
+	</spawn>
+	<spawn name="aden14_npc2320_103" count="1" respawn="60">
+		<point x="115310" y="75447" z="-2576" h="12288"/>
+		<npc id="30684"/><!--Виктор-->
+	</spawn>
+	<spawn name="aden14_npc2320_102" count="1" respawn="60">
+		<point x="117866" y="76483" z="-2688" h="35768"/>
+		<npc id="30610"/><!--Кронос-->
+	</spawn>
+	<spawn name="aden14_npc2320_118" count="1" respawn="60">
+		<point x="116320" y="74688" z="-2584" h="16300"/>
+		<npc id="31051"/><!--Кич-->
+	</spawn>
+	<spawn name="aden14_npc2320_117" count="1" respawn="60">
+		<point x="118437" y="74051" z="-2384" h="50000"/>
+		<npc id="30713"/><!--Гарднер-->
+	</spawn>
+	<spawn name="aden14_npc2320_117" count="1" respawn="60">
+		<point x="118306" y="74040" z="-2368" h="50000"/>
+		<npc id="30714"/><!--Парос-->
+	</spawn>
+	<spawn name="aden14_npc2320_111" count="1" respawn="60">
+		<point x="117598" y="77264" z="-2584" h="53248"/>
+		<npc id="30702"/><!--Бернард-->
+	</spawn>
+	<spawn name="aden14_npc2320_111" count="1" respawn="60">
+		<point x="117717" y="77273" z="-2584" h="45056"/>
+		<npc id="30703"/><!--Колин-->
+	</spawn>
+	<spawn name="aden14_npc2320_110" count="1" respawn="60">
+		<point x="120249" y="76031" z="-2256" h="37007"/>
+		<npc id="30699"/><!--Мидовн-->
+	</spawn>
+	<spawn name="aden14_npc2320_110" count="1" respawn="60">
+		<point x="120251" y="76247" z="-2264" h="40960"/>
+		<npc id="30700"/><!--Престан-->
+	</spawn>
+	<spawn name="aden14_npc2320_110" count="1" respawn="60">
+		<point x="120180" y="75807" z="-2264" h="18384"/>
+		<npc id="30701"/><!--Эрикин-->
+	</spawn>
+	<spawn name="aden14_npc2320_116" count="1" respawn="60">
+		<point x="115032" y="74395" z="-2592" h="45056"/>
+		<npc id="30711"/><!--Байрон-->
+	</spawn>
+	<spawn name="aden14_npc2320_116" count="1" respawn="60">
+		<point x="115207" y="74239" z="-2600" h="40000"/>
+		<npc id="30712"/><!--Махис-->
+	</spawn>
+	<spawn name="aden14_npc2320_115" count="1" respawn="60">
+		<point x="114564" y="78107" z="-2592" h="28672"/>
+		<npc id="30709"/><!--Нортон-->
+	</spawn>
+	<spawn name="aden14_npc2320_115" count="1" respawn="60">
+		<point x="114512" y="77966" z="-2592" h="28672"/>
+		<npc id="30710"/><!--Вестон-->
+	</spawn>
+	<spawn name="aden14_npc2320_114" count="1" respawn="60">
+		<point x="118210" y="76078" z="-2688" h="32768"/>
+		<npc id="30708"/><!--Насайн-->
+	</spawn>
+	<spawn name="aden14_npc2320_113" count="1" respawn="60">
+		<point x="116468" y="77871" z="-2680" h="40000"/>
+		<npc id="30707"/><!--Райген-->
+	</spawn>
+	<spawn name="aden14_npc2320_123" count="1" respawn="60">
+		<point x="120100" y="74739" z="-2368" h="31000"/>
+		<npc id="30704"/><!--Гарварентс-->
+	</spawn>
+	<spawn name="aden14_npc2320_123" count="1" respawn="60">
+		<point x="120079" y="74847" z="-2368" h="31000"/>
+		<npc id="30705"/><!--Чакирис-->
+	</spawn>
+	<spawn name="aden14_npc2320_123" count="1" respawn="60">
+		<point x="120039" y="74650" z="-2368" h="31000"/>
+		<npc id="30706"/><!--Лазенбай-->
+	</spawn>
+	<spawn name="aden14_mb2320_01" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="123576" y="74948" zmin="-2912" zmax="-2312"/>
+			<add x="124692" y="74788" zmin="-2912" zmax="-2312"/>
+			<add x="124672" y="76028" zmin="-2912" zmax="-2312"/>
+			<add x="123936" y="76048" zmin="-2912" zmax="-2312"/>
+		</territory>
+		<npc id="25007"/><!--Паук Клету-->
+	</spawn>
+	<spawn name="aden14_mb2320_02" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="113676" y="83900" zmin="-2832" zmax="-2232"/>
+			<add x="114192" y="84064" zmin="-2832" zmax="-2232"/>
+			<add x="114324" y="84776" zmin="-2832" zmax="-2232"/>
+			<add x="112768" y="84320" zmin="-2832" zmax="-2232"/>
+		</territory>
+		<npc id="25102"/><!--Шакрам-->
+	</spawn>
+	<spawn name="aden24_qm2320_04" count="1" respawn="60">
+		<point x="106671" y="93905" z="-2070" h="49152"/>
+		<npc id="27188"/><!--Волшебное Дерево Бездны-->
+	</spawn>
+	<spawn name="aden24_qm2320_03" count="1" respawn="60">
+		<point x="127714" y="90495" z="-2095" h="0"/>
+		<npc id="27187"/><!--Волшебное Дерево Заката-->
+	</spawn>
+	<spawn name="aden24_qm2320_02" count="1" respawn="60">
+		<point x="117733" y="94108" z="-2068" h="57344"/>
+		<npc id="27186"/><!--Волшебное Дерево Звезды-->
+	</spawn>
+	<spawn name="aden24_qm2320_01" count="1" respawn="60">
+		<point x="113356" y="93848" z="-2072" h="28672"/>
+		<npc id="27185"/><!--Волшебное Дерево Ветра-->
+	</spawn>
+	<spawn name="aden24_mb2320_03" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="110940" y="82288" zmin="-2952" zmax="-2352"/>
+			<add x="111784" y="82428" zmin="-2952" zmax="-2352"/>
+			<add x="112020" y="83900" zmin="-2952" zmax="-2352"/>
+			<add x="111088" y="83212" zmin="-2952" zmax="-2352"/>
+		</territory>
+		<npc id="25441"/><!--Злой Дух Сирион-->
+	</spawn>
+	<spawn name="aden24_mb2320_04" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="106472" y="91332" zmin="-2400" zmax="-2000"/>
+			<add x="107643" y="92132" zmin="-2400" zmax="-2000"/>
+			<add x="107497" y="92672" zmin="-2400" zmax="-2000"/>
+			<add x="106519" y="92260" zmin="-2400" zmax="-2000"/>
+		</territory>
+		<npc id="25438"/><!--Вор Келбар-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="115802" y="77016" z="-2648" h="33315"/>
+		<npc id="31604"/><!--Гримст-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="115517" y="77014" z="-2648" h="60701"/>
+		<npc id="34267"/><!--Дазлинг-->
+	</spawn>
+	<spawn count="1" respawn="60" group="olympiad">
+		<point x="116096" y="77856" z="-2680" h="49000"/>
+		<npc id="31690"/><!--Памятник Героям-->
+	</spawn>
+	<spawn count="1" respawn="60" group="olympiad">
+		<point x="116144" y="77856" z="-2680" h="49000"/>
+		<npc id="31688"/><!--Управляющий Олимпиады-->
+	</spawn>
+	<spawn count="1" respawn="60" group="royal_love_event">
+		<point x="117498" y="76630" z="-2688" h="41347"/>
+		<npc id="9020"/><!--Фринтеза-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="117536" y="77264" z="-2584" h="56000"/>
+		<npc id="31603"/><!--Черная Кошка-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="120063" y="74985" z="-2368" h="33385"/>
+		<npc id="30593"/><!--Тотемный Дух Дуда-Мара-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="119796" y="77459" z="-2240" h="37605"/>
+		<npc id="31277"/><!--Феликс-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="123960" y="65400" z="-3712" h="998"/>
+		<npc id="31650"/><!--Камень Познания-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="class_master">
+		<point x="116236" y="76957" z="-2752" h="337"/>
+		<npc id="31860"/><!--Buzz the Cat-->
+	</spawn>
+</list>

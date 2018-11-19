@@ -1,0 +1,86 @@
+<!ELEMENT list (transform)*>
+
+	<!ELEMENT transform (male|female)*>
+	<!ATTLIST transform
+		id CDATA #REQUIRED
+		type CDATA #REQUIRED
+		can_swim CDATA #REQUIRED
+		spawn_height CDATA #IMPLIED
+		normal_attackable CDATA #REQUIRED>
+
+		<!ELEMENT male (base_attributes|armor_defence|jewel_defence|set|actions|item_check|skills|additional_skills|base_stats_bonus|level_data)*>
+
+		<!ELEMENT female (base_attributes|armor_defence|jewel_defence|set|actions|item_check|skills|additional_skills|base_stats_bonus|level_data)*>
+
+			<!ELEMENT base_attributes (#PCDATA)>
+			<!ATTLIST base_attributes
+				int CDATA #REQUIRED
+				str CDATA #REQUIRED
+				con CDATA #REQUIRED
+				men CDATA #REQUIRED
+				dex CDATA #REQUIRED
+				wit CDATA #REQUIRED>
+
+			<!ELEMENT armor_defence (#PCDATA)>
+			<!ATTLIST armor_defence
+				chest CDATA #REQUIRED
+				legs CDATA #REQUIRED
+				helmet CDATA #REQUIRED
+				boots CDATA #REQUIRED
+				gloves CDATA #REQUIRED
+				pendant CDATA #REQUIRED
+				cloak CDATA #REQUIRED>
+
+			<!ELEMENT jewel_defence (#PCDATA)>
+			<!ATTLIST jewel_defence
+				r_earring CDATA #REQUIRED
+				l_earring CDATA #REQUIRED
+				r_ring CDATA #REQUIRED
+				l_ring CDATA #REQUIRED
+				necklace CDATA #REQUIRED>
+
+			<!ELEMENT set (#PCDATA)>
+			<!ATTLIST set
+				name CDATA #REQUIRED
+				value CDATA #REQUIRED>
+
+			<!ELEMENT actions (#PCDATA)>
+
+			<!ELEMENT item_check (#PCDATA)*>
+			<!ATTLIST item_check
+				action CDATA #REQUIRED>
+
+			<!ELEMENT skills (skill)*>
+
+			<!ELEMENT additional_skills (skill)*>
+
+			<!ELEMENT base_stats_bonus (bonus)*>
+
+			<!ELEMENT level_data (level)*>
+
+				<!ELEMENT skill (#PCDATA)>
+				<!ATTLIST skill
+					id CDATA #REQUIRED
+					level CDATA #REQUIRED
+					min_level CDATA #IMPLIED>
+
+				<!ELEMENT bonus (#PCDATA)>
+				<!ATTLIST bonus
+					value CDATA #REQUIRED
+					str CDATA #REQUIRED
+					dex CDATA #REQUIRED
+					con CDATA #REQUIRED
+					int CDATA #REQUIRED
+					men CDATA #REQUIRED
+					wit CDATA #REQUIRED>
+
+				<!ELEMENT level (#PCDATA)>
+				<!ATTLIST level
+					value CDATA #REQUIRED
+					mod CDATA #REQUIRED
+					hp CDATA #REQUIRED
+					mp CDATA #REQUIRED
+					cp CDATA #REQUIRED
+					hp_regen CDATA #REQUIRED
+					mp_regen CDATA #REQUIRED
+					cp_regen CDATA #REQUIRED>

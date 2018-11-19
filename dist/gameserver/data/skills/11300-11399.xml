@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="11316" levels="1" name="Summon Soulshots">
+		<set name="icon" value="icon.skill11316"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="mp_consume" value="10"/>
+		<set name="magicLevel" value="40"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="itemConsumeId" value="1785"/>
+		<set name="itemConsumeCount" value="4"/>
+		<restoration level="1">
+			<group chance="100.0">
+				<item id="6645" min_count="20" max_count="20"/>	<!--Заряд Души Зверя-->
+			</group>
+		</restoration>
+	</skill>
+	<skill id="11318" levels="1" name="Summon Spiritshots">
+		<set name="icon" value="icon.skill11316"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="mp_consume" value="10"/>
+		<set name="magicLevel" value="40"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="itemConsumeId" value="3031"/>
+		<set name="itemConsumeCount" value="4"/>
+		<restoration level="1">
+			<group chance="100.0">
+				<item id="6646" min_count="16" max_count="16"/>	<!--Заряд Духа Зверя-->
+			</group>
+		</restoration>
+	</skill>
+</list>

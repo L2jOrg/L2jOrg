@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<list>
+	<pledge_skill_tree>
+		<!--Удача Клана-->
+		<skill id="392" level="1" name="Удача Клана" min_level="1" item_id="57" item_count="10000"/>
+		<skill id="392" level="2" name="Удача Клана" min_level="2" item_id="57" item_count="300000"/>
+		<skill id="392" level="3" name="Удача Клана" min_level="3" cost="5000"/>
+		<!--Благословение Тела Клана-->
+		<skill id="370" level="1" name="Благословение Тела Клана" min_level="3" cost="1500" item_id="49758" item_count="10"/>
+		<skill id="370" level="2" name="Благословение Тела Клана" min_level="3" cost="3000" item_id="49758" item_count="20"/>
+		<skill id="370" level="3" name="Благословение Тела Клана" min_level="3" cost="7500" item_id="49758" item_count="30"/>
+		<!--Духовность Клана-->
+		<skill id="371" level="1" name="Духовность Клана" min_level="3" cost="10000" item_id="49758" item_count="10"/>
+		<skill id="371" level="2" name="Духовность Клана" min_level="3" cost="20000" item_id="49758" item_count="20"/>
+		<skill id="371" level="3" name="Духовность Клана" min_level="3" cost="50000" item_id="49758" item_count="30"/>	
+		<!--Запрет на Возвращение Клана-->
+		<skill id="19113" level="1" name="Запрет на Возвращение Клана" min_level="3" item_id="57" item_count="200000000"/>
+		<!--Запрет на Возвращение Клана-->
+		<skill id="19114" level="1" name="Запрет на Воскрешение Клана" min_level="3" item_id="57" item_count="200000000"/>
+		<!--Магический Барьер Клана-->
+		<skill id="379" level="1" name="Магический Барьер Клана" min_level="3" cost="1500" item_id="49758" item_count="10"/>
+		<skill id="379" level="2" name="Магический Барьер Клана" min_level="3" cost="3000" item_id="49758" item_count="20"/>
+		<skill id="379" level="3" name="Магический Барьер Клана" min_level="3" cost="7500" item_id="49758" item_count="30"/>
+		<!--Мораль Клана-->
+		<skill id="374" level="1" name="Мораль Клана" min_level="3" cost="1500" item_id="49758" item_count="10"/>
+		<skill id="374" level="2" name="Мораль Клана" min_level="3" cost="3000" item_id="49758" item_count="20"/>
+		<skill id="374" level="3" name="Мораль Клана" min_level="3" cost="7500" item_id="49758" item_count="30"/>
+		<!--Наведение Клана-->
+		<skill id="380" level="1" name="Наведение Клана" min_level="3" cost="1500" item_id="49758" item_count="10"/>
+		<skill id="380" level="2" name="Наведение Клана" min_level="3" cost="3000" item_id="49758" item_count="20"/>
+		<skill id="380" level="3" name="Наведение Клана" min_level="3" cost="7500" item_id="49758" item_count="30"/>
+		<!--Проворство Клана-->
+		<skill id="381" level="1" name="Проворство Клана" min_level="3" cost="1500" item_id="49758" item_count="10"/>
+		<skill id="381" level="2" name="Проворство Клана" min_level="3" cost="3000" item_id="49758" item_count="20"/>
+		<skill id="381" level="3" name="Проворство Клана" min_level="3" cost="7500" item_id="49758" item_count="30"/>
+		<!--Чистота Клана-->
+		<skill id="375" level="1" name="Чистота Клана" min_level="3" cost="1500" item_id="49758" item_count="10"/>
+		<skill id="375" level="2" name="Чистота Клана" min_level="3" cost="3000" item_id="49758" item_count="20"/>
+		<skill id="375" level="3" name="Чистота Клана" min_level="3" cost="7500" item_id="49758" item_count="30"/>
+
+		<!--Благословение Духа Клана-->
+		<skill id="372" level="1" name="Благословение Духа Клана" min_level="4" cost="1500" item_id="49758" item_count="10"/>
+		<skill id="372" level="2" name="Благословение Духа Клана" min_level="4" cost="3000" item_id="49758" item_count="20"/>
+		<skill id="372" level="3" name="Благословение Духа Клана" min_level="4" cost="7500" item_id="49758" item_count="30"/>
+		<!--Верховная Власть Клана-->
+		<skill id="391" level="1" name="Верховная Власть Клана" min_level="4"/>
+		<!--Воодушевление Клана-->
+		<skill id="378" level="1" name="Воодушевление Клана" min_level="4" cost="1500" item_id="49758" item_count="10"/>
+		<skill id="378" level="2" name="Воодушевление Клана" min_level="4" cost="3000" item_id="49758" item_count="20"/>
+		<skill id="378" level="3" name="Воодушевление Клана" min_level="4" cost="7500" item_id="49758" item_count="30"/>
+		<!--Воодушевление Клана-->
+		<skill id="378" level="1" name="Воодушевление Клана" min_level="4" cost="1500" item_id="49758" item_count="10"/>
+		<skill id="378" level="2" name="Воодушевление Клана" min_level="4" cost="3000" item_id="49758" item_count="20"/>
+		<skill id="378" level="3" name="Воодушевление Клана" min_level="4" cost="7500" item_id="49758" item_count="30"/>
+		<!--Движение Клана-->
+		<skill id="389" level="1" name="Движение Клана" min_level="4" cost="1500" item_id="49758" item_count="10"/>
+		<skill id="389" level="2" name="Движение Клана" min_level="4" cost="3000" item_id="49758" item_count="20"/>
+		<skill id="389" level="3" name="Движение Клана" min_level="4" cost="7500" item_id="49758" item_count="30"/>
+		<!--Здоровье Клана-->
+		<skill id="373" level="1" name="Здоровье Клана" min_level="4" cost="1500" item_id="49758" item_count="10"/>
+		<skill id="373" level="2" name="Здоровье Клана" min_level="4" cost="3000" item_id="49758" item_count="20"/>
+		<skill id="373" level="3" name="Здоровье Клана" min_level="4" cost="7500" item_id="49758" item_count="30"/>
+		<!--Могущество Клана-->
+		<skill id="376" level="1" name="Могущество Клана" min_level="4" cost="1500" item_id="49758" item_count="10"/>
+		<skill id="376" level="2" name="Могущество Клана" min_level="4" cost="3000" item_id="49758" item_count="20"/>
+		<skill id="376" level="3" name="Могущество Клана" min_level="4" cost="7500" item_id="49758" item_count="30"/>
+		<!--Щит Клана-->
+		<skill id="377" level="1" name="Щит Клана" min_level="4" cost="1500" item_id="49758" item_count="10"/>
+		<skill id="377" level="2" name="Щит Клана" min_level="4" cost="3000" item_id="49758" item_count="20"/>
+		<skill id="377" level="3" name="Щит Клана" min_level="4" cost="7500" item_id="49758" item_count="30"/>
+		<!--5 level-->
+		<!--HARDCODED: <skill id="19009" level="1" name="Рождение Клана" min_level="5"/>-->
+	</pledge_skill_tree>
+</list>

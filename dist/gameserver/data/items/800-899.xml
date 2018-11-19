@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="809" name="Bone Fragment">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_piece_bone_white_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="844" name="Book of Aklantoth P1 ~ P10 ">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.item_normal07"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<armor id="845" name="Cat\'s Eye">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_catseye_earing_i00"/>
+		<set name="price" value="8890"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="19"/>
+		</for>
+	</armor>
+	<armor id="846" name="Coral Earring">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_coral_earing_i00"/>
+		<set name="price" value="16000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="21"/>
+		</for>
+	</armor>
+	<armor id="847" name="Red Crescent">
+		<set name="crystal_count" value="48"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.accessary_red_cresent_earing_i00"/>
+		<set name="price" value="26900"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="24"/>
+		</for>
+	</armor>
+	<armor id="848" name="Earring of Magic">
+		<set name="crystal_count" value="77"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.accessary_enchanted_earing_i00"/>
+		<set name="price" value="42600"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="27"/>
+		</for>
+	</armor>
+	<armor id="849" name="Tiger\'s Eye">
+		<set name="crystal_count" value="116"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.accessary_tigerseye_earing_i00"/>
+		<set name="price" value="64300"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="30"/>
+		</for>
+	</armor>
+	<armor id="850" name="Elven Earring">
+		<set name="crystal_count" value="169"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.accessary_elven_earing_i00"/>
+		<set name="price" value="93400"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="34"/>
+		</for>
+	</armor>
+	<armor id="851" name="Onyx Beast\'s Eye Earring">
+		<set name="crystal_count" value="220"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.accessary_onyxbeastseye_earing_i00"/>
+		<set name="price" value="121000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="36"/>
+		</for>
+	</armor>
+	<armor id="852" name="Moonstone Earring">
+		<set name="crystal_count" value="62"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.accessary_moonstone_earing_i00"/>
+		<set name="price" value="155000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="39"/>
+		</for>
+	</armor>
+	<armor id="853" name="Earring of Protection">
+		<set name="crystal_count" value="78"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.accessary_earing_of_protection_i00"/>
+		<set name="price" value="196000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="42"/>
+		</for>
+	</armor>
+	<armor id="854" name="Earring of Seal">
+		<set name="crystal_count" value="118"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.accessary_earing_of_binding_i00"/>
+		<set name="price" value="295000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="45"/>
+		</for>
+	</armor>
+	<armor id="855" name="Nassen\'s Earring">
+		<set name="crystal_count" value="169"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.accessary_nassens_earing_i00"/>
+		<set name="price" value="424000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="48"/>
+		</for>
+	</armor>
+	<armor id="856" name="Adamantite Earring">
+		<set name="crystal_count" value="80"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.accessary_adamantite_earing_i00"/>
+		<set name="price" value="606000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="51"/>
+		</for>
+	</armor>
+	<armor id="857" name="Holy Earring">
+		<set name="crystal_count" value="169"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.accessary_blessed_earing_i00"/>
+		<set name="price" value="424000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="48"/>
+		</for>
+	</armor>
+	<armor id="859" name="Earring of Mana">
+		<set name="crystal_count" value="80"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.accessary_earing_of_mana_i00"/>
+		<set name="price" value="606000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="51"/>
+		</for>
+	</armor>
+	<armor id="860" name="Sage\'s Earring">
+		<set name="crystal_count" value="123"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.accessary_sages_earing_i00"/>
+		<set name="price" value="924000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="54"/>
+		</for>
+	</armor>
+	<armor id="862" name="Majestic Earring">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="120"/>
+		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
+		<set name="price" value="1498000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="63"/>
+			<add stat="maxMp" order="0x60" value="25"/>
+		</for>
+	</armor>
+	<armor id="864" name="Black Ore Earring">
+		<set name="crystal_count" value="123"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.accessary_earing_of_black_ore_i00"/>
+		<set name="price" value="924000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="54"/>
+		</for>
+	</armor>
+	<armor id="869" name="Earring of Grace">
+		<set name="crystal_count" value="80"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.accessary_earing_of_grace_i00"/>
+		<set name="price" value="606000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="51"/>
+		</for>
+	</armor>
+	<armor id="871" name="Phoenix Earring">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="80"/>
+		<set name="icon" value="icon.accessary_phoenixs_earing_i00"/>
+		<set name="price" value="1005000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="60"/>
+			<add stat="maxMp" order="0x60" value="20"/>
+		</for>
+	</armor>
+	<armor id="874" name="Earring of Blessing">
+		<set name="crystal_count" value="80"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.accessary_earing_of_blessing_i00"/>
+		<set name="price" value="606000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="51"/>
+		</for>
+	</armor>
+	<armor id="875" name="Ring of Knowledge">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_ring_of_knowledge_i00"/>
+		<set name="price" value="540"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="9"/>
+		</for>
+	</armor>
+	<armor id="876" name="Ring of Anguish">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_ring_of_anguish_i00"/>
+		<set name="price" value="2340"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="11"/>
+		</for>
+	</armor>
+	<armor id="877" name="Ring of Wisdom">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_ring_of_wisdom_i00"/>
+		<set name="price" value="5920"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="12"/>
+		</for>
+	</armor>
+	<armor id="878" name="Blue Coral Ring">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_blue_coral_ring_i00"/>
+		<set name="price" value="10700"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="14"/>
+		</for>
+	</armor>
+	<armor id="879" name="Ring of Magic">
+		<set name="crystal_count" value="51"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.accessary_enchanted_ring_i00"/>
+		<set name="price" value="28400"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="18"/>
+		</for>
+	</armor>
+	<armor id="880" name="Black Pearl Ring">
+		<set name="crystal_count" value="77"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.accessary_black_pearl_ring_i00"/>
+		<set name="price" value="42800"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="20"/>
+		</for>
+	</armor>
+	<armor id="881" name="Elven Ring">
+		<set name="crystal_count" value="113"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.accessary_elven_ring_i00"/>
+		<set name="price" value="62300"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="22"/>
+		</for>
+	</armor>
+	<armor id="882" name="Mithril Ring">
+		<set name="crystal_count" value="146"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.accessary_mithril_ring_i00"/>
+		<set name="price" value="80800"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="24"/>
+		</for>
+	</armor>
+	<armor id="883" name="Aquastone Ring">
+		<set name="crystal_count" value="41"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.accessary_aquastone_ring_i00"/>
+		<set name="price" value="103000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="26"/>
+		</for>
+	</armor>
+	<armor id="884" name="Ring of Protection">
+		<set name="crystal_count" value="52"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.accessary_ring_of_protection_i00"/>
+		<set name="price" value="130000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<armor id="885" name="Ring of Ages">
+		<set name="crystal_count" value="78"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.accessary_ring_of_ages_i00"/>
+		<set name="price" value="196000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="30"/>
+		</for>
+	</armor>
+	<armor id="886" name="Ring of Seal">
+		<set name="crystal_count" value="112"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.accessary_ring_of_binding_i00"/>
+		<set name="price" value="282000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="32"/>
+		</for>
+	</armor>
+	<armor id="887" name="Adamantite Ring">
+		<set name="crystal_count" value="53"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.accessary_adamantite_ring_i00"/>
+		<set name="price" value="404000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="34"/>
+		</for>
+	</armor>
+	<armor id="888" name="Blessed Ring">
+		<set name="item_quality" value="BLESSED"/>
+		<set name="crystal_count" value="112"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
+		<set name="price" value="282000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="32"/>
+		</for>
+	</armor>
+	<armor id="890" name="Ring of Devotion">
+		<set name="crystal_count" value="32"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.accessary_ring_of_devotion_i00"/>
+		<set name="price" value="18000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="16"/>
+		</for>
+	</armor>
+	<armor id="891" name="Sage\'s Ring">
+		<set name="crystal_count" value="82"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.accessary_sages_ring_i00"/>
+		<set name="price" value="616000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="36"/>
+		</for>
+	</armor>
+	<armor id="893" name="Majestic Ring">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="80"/>
+		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
+		<set name="price" value="999000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="42"/>
+			<add stat="maxMp" order="0x60" value="17"/>
+		</for>
+	</armor>
+	<armor id="895" name="Black Ore Ring">
+		<set name="crystal_count" value="82"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.accessary_ring_of_black_ore_i00"/>
+		<set name="price" value="616000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="36"/>
+		</for>
+	</armor>
+</list>

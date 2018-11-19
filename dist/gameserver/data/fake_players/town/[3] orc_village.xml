@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE town SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<town name="Orc Village">
+	<zones>
+		<zone name="[orc_town_peace1]"/>
+		<zone name="[orc_town_peace2]"/>
+	</zones>
+	<actions>
+		<wait min_delay="1000" max_delay="3000"/>
+		<random_action>
+			<ordinary_actions>
+				<move_to_point x="-45176" y="-113256" z="-224" min_range="0" max_range="50"/>
+				<move_to_point x="-44744" y="-112552" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-44248" y="-111896" z="-216" min_range="0" max_range="50"/>
+				<move_to_point x="-44136" y="-111672" z="-216" min_range="0" max_range="50"/>
+				<random_action>
+					<ordinary_actions>
+						<move_to_npc id="30558"/>
+						<speak_with_npc id="30558"/>
+					</ordinary_actions>
+					<ordinary_actions>
+						<move_to_npc id="30559"/>
+						<speak_with_npc id="30559"/>
+					</ordinary_actions>
+				</random_action>
+				<wait min_delay="2000" max_delay="5000"/>
+				<move_to_point x="-44136" y="-111672" z="-216" min_range="0" max_range="50"/>
+				<move_to_point x="-44248" y="-111896" z="-216" min_range="0" max_range="50"/>
+				<move_to_point x="-44744" y="-112552" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-45176" y="-113256" z="-224" min_range="0" max_range="50"/>
+			</ordinary_actions>
+			<ordinary_actions>
+				<move_to_point x="-45192" y="-113960" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-44680" y="-114664" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-44408" y="-115176" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-44088" y="-115592" z="-216" min_range="0" max_range="50"/>
+				<random_action>
+					<ordinary_actions>
+						<move_to_npc id="30560"/>
+						<speak_with_npc id="30560"/>
+					</ordinary_actions>
+					<ordinary_actions>
+						<move_to_npc id="30561"/>
+						<speak_with_npc id="30561"/>
+					</ordinary_actions>
+				</random_action>
+				<wait min_delay="2000" max_delay="5000"/>
+				<move_to_point x="-44088" y="-115592" z="-216" min_range="0" max_range="50"/>
+				<move_to_point x="-44408" y="-115176" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-44680" y="-114664" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-45192" y="-113960" z="-240" min_range="0" max_range="50"/>
+			</ordinary_actions>
+			<ordinary_actions>
+				<move_to_point x="-44936" y="-114136" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-44472" y="-114136" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-44104" y="-113800" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-43720" y="-113576" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-43288" y="-113560" z="-216" min_range="0" max_range="50"/>
+				<random_action>
+					<ordinary_actions>
+						<move_to_npc id="30562"/>
+						<speak_with_npc id="30562"/>
+					</ordinary_actions>
+					<ordinary_actions>
+						<move_to_npc id="30563"/>
+						<speak_with_npc id="30563"/>
+					</ordinary_actions>
+				</random_action>
+				<wait min_delay="2000" max_delay="5000"/>
+				<move_to_point x="-43288" y="-113560" z="-216" min_range="0" max_range="50"/>
+				<move_to_point x="-43720" y="-113576" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-44104" y="-113800" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-44472" y="-114136" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-44936" y="-114136" z="-240" min_range="0" max_range="50"/>
+			</ordinary_actions>
+		</random_action>
+		<ordinary_actions chance="30">
+			<move_to_point x="-45272" y="-113224" z="-240" min_range="0" max_range="50"/>
+			<move_to_point x="-44952" y="-112920" z="-240" min_range="0" max_range="50"/>
+			<move_to_point x="-45048" y="-112696" z="-240" min_range="0" max_range="50"/>
+			<move_to_point x="-45192" y="-112568" z="-240" min_range="0" max_range="50"/>
+			<move_to_npc id="30576"/>
+			<speak_with_npc id="30576"/>
+		</ordinary_actions>
+		<wait min_delay="2000" max_delay="5000"/>
+		<farm/>
+	</actions>
+</town>

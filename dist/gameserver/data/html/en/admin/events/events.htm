@@ -1,0 +1,49 @@
+<html><head><title>L2 Manage Events</title>
+<center><table width=260>
+<tr>
+<td><button value="Main" action="bypass -h admin_admin" width=50 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Events" action="bypass -h admin_events" width=50 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Chars" action="bypass -h admin_char_manage" width=50 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Server" action="bypass -h admin_server admserver.htm" width=50 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="GM Shop" action="bypass -h admin_gmshop" width=50 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr></table></center>
+<br>
+<center>
+<font color="LEVEL">Events</font><br1>
+<font color="AA3344">(Edit properties in: "data/events/fun/*.xml")</font>
+</center>
+<table width=285>
+<!--TEMPLATE1
+<tr>
+<td width=180><?event_name?></td>
+<td width=100><?button?></td>
+</tr>
+TEMPLATE-->
+<!--TEMPLATE2
+<button value="Start" action="bypass -h admin_start_event normal <?event_id?>" width=80 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+TEMPLATE-->
+<!--TEMPLATE3
+<button value="Stop" action="bypass -h admin_stop_event normal <?event_id?>" width=80 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+TEMPLATE-->
+<?events_list?>
+</table>
+<br>
+<center><img src="L2UI.SquareWhite" width=250 height=1></center>
+<br>
+<center>
+<font color="LEVEL">PvP Events</font><br1>
+<font color="AA3344">(Edit properties in: "custom/events/pvp/*.xml")</font>
+</center>
+<table width=285>
+<!--TEMPLATE4
+<button value="Start" action="bypass -h admin_start_event pvp <?event_id?>" width=80 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+TEMPLATE-->
+<!--TEMPLATE5
+<button value="Stop" action="bypass -h admin_stop_event pvp <?event_id?>" width=80 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+TEMPLATE-->
+<?pvp_events_list?>
+</table>
+<br>
+<center><img src="L2UI.SquareWhite" width=250 height=1></center>
+<br>
+</head></html>

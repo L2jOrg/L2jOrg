@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<armor id="500" name="Great Helmet">
+		<set name="crystal_count" value="96"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_helmet_i00"/>
+		<set name="price" value="242000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="610"/>
+		<equip>
+			<slot id="HEAD"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="51"/>
+		</for>
+	</armor>
+	<armor id="503" name="Sealed Zubei\'s Helmet">
+		<set name="crystal_count" value="103"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_helmet_i02"/>
+		<set name="price" value="778000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="590"/>
+		<equip>
+			<slot id="HEAD"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="62"/>
+		</for>
+	</armor>
+	<armor id="512" name="Dark Crystal Helmet">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="107"/>
+		<set name="icon" value="icon.armor_helmet_i00"/>
+		<set name="price" value="1336000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="570"/>
+		<equip>
+			<slot id="HEAD"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="69"/>
+		</for>
+	</armor>
+	<armor id="517" name="Compound Helmet">
+		<set name="crystal_count" value="147"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_leather_helmet_i00"/>
+		<set name="price" value="368000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="610"/>
+		<equip>
+			<slot id="HEAD"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="54"/>
+		</for>
+	</armor>
+	<armor id="547" name="Tallum Helmet">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="107"/>
+		<set name="icon" value="icon.armor_helmet_i00"/>
+		<set name="price" value="1336000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="570"/>
+		<equip>
+			<slot id="HEAD"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="69"/>
+		</for>
+	</armor>
+	<armor id="553" name="Iron Boots">
+		<set name="crystal_count" value="92"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t10_b_i00"/>
+		<set name="price" value="50800"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1280"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="24"/>
+		</for>
+	</armor>
+	<armor id="554" name="Sealed Zubei\'s Boots">
+		<set name="crystal_count" value="69"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t64_b_i02"/>
+		<set name="price" value="519000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1180"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="41"/>
+		</for>
+	</armor>
+	<armor id="563" name="Dark Crystal Boots">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="71"/>
+		<set name="icon" value="icon.armor_t15_b_i00"/>
+		<set name="price" value="890000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1110"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="45"/>
+		</for>
+	</armor>
+	<armor id="572" name="Boots of Silence">
+		<set name="crystal_count" value="69"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t65_b_i00"/>
+		<set name="price" value="519000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1190"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="41"/>
+		</for>
+	</armor>
+	<armor id="582" name="Paradia Boots">
+		<set name="crystal_count" value="107"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t68_b_i00"/>
+		<set name="price" value="804000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1140"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="44"/>
+		</for>
+	</armor>
+	<armor id="583" name="Majestic Boots">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="108"/>
+		<set name="icon" value="icon.armor_t45_b_i00"/>
+		<set name="price" value="1355000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1110"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="48"/>
+		</for>
+	</armor>
+	<armor id="588" name="Elemental Boots">
+		<set name="crystal_count" value="107"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t71_b_i00"/>
+		<set name="price" value="804000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1130"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="44"/>
+		</for>
+	</armor>
+	<armor id="590" name="Boots of Grace">
+		<set name="crystal_count" value="107"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t71_b_i00"/>
+		<set name="price" value="804000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1130"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="44"/>
+		</for>
+	</armor>
+	<armor id="595" name="Boots of Blessing">
+		<set name="crystal_count" value="69"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t56_b_i00"/>
+		<set name="price" value="519000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1160"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="41"/>
+		</for>
+	</armor>
+	<armor id="598" name="Tallum Boots">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="71"/>
+		<set name="icon" value="icon.armor_t45_b_i00"/>
+		<set name="price" value="890000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1130"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="45"/>
+		</for>
+	</armor>
+</list>

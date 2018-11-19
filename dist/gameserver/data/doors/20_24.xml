@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="20240001" name="bereth_S.bereth_Door01" hp="158250" pdef="644" mdef="518">
+		<pos x="16326" y="210714" z="-9399"/>
+		<shape ax="16224" ay="210719" bx="16224" by="210708" cx="16427" cy="210708" dx="16427" dy="210720" minz="-9399" maxz="-9249"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="20240002" name="bereth_S.bereth_Door01" hp="158250" pdef="644" mdef="518">
+		<pos x="14032" y="213143" z="-9399"/>
+		<shape ax="14026" ay="213045" bx="14039" by="213045" cx="14039" cy="213241" dx="14025" dy="213240" minz="-9399" maxz="-9249"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="600"/>
+	</door>
+	<door id="20240003" name="bereth_S.bereth_Door01" hp="158250" pdef="644" mdef="518">
+		<pos x="12472" y="214696" z="-9384"/>
+		<shape ax="12372" ay="214689" bx="12569" by="214688" cx="12570" cy="214702" dx="12372" dy="214703" minz="-9384" maxz="-9234"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+</list>

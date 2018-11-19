@@ -1,0 +1,9 @@
+<!ELEMENT list (domain)*>
+<!ELEMENT domain (polygon)*>
+<!ATTLIST domain
+	id CDATA #REQUIRED
+	name CDATA #IMPLIED>
+<!ELEMENT polygon (coords)*>
+<!ELEMENT coords (#PCDATA)>
+<!ATTLIST coords
+	loc CDATA #REQUIRED>

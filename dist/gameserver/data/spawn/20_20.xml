@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<territory name="oren04_2020_01">
+		<add x="5676" y="66908" zmin="-3792" zmax="-3592"/>
+		<add x="5736" y="65692" zmin="-3792" zmax="-3592"/>
+		<add x="10336" y="65788" zmin="-3792" zmax="-3592"/>
+		<add x="7800" y="67508" zmin="-3792" zmax="-3592"/>
+	</territory>
+	<spawn name="oren04_2020_01" count="2" respawn="15">
+		<territory name="oren04_2020_01"/>
+		<npc id="20036"/><!--Лирейн-->
+	</spawn>
+	<spawn name="oren04_2020_01" count="3" respawn="15">
+		<territory name="oren04_2020_01"/>
+		<npc id="20466"/><!--Паук Хелицера-->
+	</spawn>
+	<spawn name="oren04_2020_01" count="2" respawn="15">
+		<territory name="oren04_2020_01"/>
+		<npc id="20308"/><!--Цепкий Паук-->
+	</spawn>
+	<territory name="oren04_2020_03">
+		<add x="5184" y="69420" zmin="-3540" zmax="-3240"/>
+		<add x="8224" y="69864" zmin="-3540" zmax="-3240"/>
+		<add x="8464" y="71056" zmin="-3540" zmax="-3240"/>
+		<add x="5728" y="74060" zmin="-3540" zmax="-3240"/>
+	</territory>
+	<spawn name="oren04_2020_03" count="5" respawn="15">
+		<territory name="oren04_2020_03"/>
+		<npc id="20036"/><!--Лирейн-->
+	</spawn>
+	<spawn name="oren04_2020_03" count="4" respawn="15">
+		<territory name="oren04_2020_03"/>
+		<npc id="20466"/><!--Паук Хелицера-->
+	</spawn>
+	<spawn name="oren04_2020_03" count="2" respawn="15">
+		<territory name="oren04_2020_03"/>
+		<npc id="20308"/><!--Цепкий Паук-->
+	</spawn>
+	<territory name="oren04_2020_02">
+		<add x="300" y="65740" zmin="-3816" zmax="-3516"/>
+		<add x="5000" y="65724" zmin="-3816" zmax="-3516"/>
+		<add x="5092" y="66820" zmin="-3816" zmax="-3516"/>
+		<add x="208" y="69640" zmin="-3816" zmax="-3516"/>
+	</territory>
+	<spawn name="oren04_2020_02" count="3" respawn="15">
+		<territory name="oren04_2020_02"/>
+		<npc id="20036"/><!--Лирейн-->
+	</spawn>
+	<spawn name="oren04_2020_02" count="5" respawn="15">
+		<territory name="oren04_2020_02"/>
+		<npc id="20466"/><!--Паук Хелицера-->
+	</spawn>
+	<spawn name="oren04_2020_02" count="4" respawn="15">
+		<territory name="oren04_2020_02"/>
+		<npc id="20044"/><!--Старшая Лирейн-->
+	</spawn>
+	<territory name="oren04_2020_05">
+		<add x="3612" y="73264" zmin="-3872" zmax="-3572"/>
+		<add x="4676" y="73120" zmin="-3872" zmax="-3572"/>
+		<add x="5712" y="75844" zmin="-3872" zmax="-3572"/>
+		<add x="4052" y="75508" zmin="-3872" zmax="-3572"/>
+	</territory>
+	<spawn name="oren04_2020_05" count="2" respawn="15">
+		<territory name="oren04_2020_05"/>
+		<npc id="20036"/><!--Лирейн-->
+	</spawn>
+	<spawn name="oren04_2020_05" count="2" respawn="15">
+		<territory name="oren04_2020_05"/>
+		<npc id="20466"/><!--Паук Хелицера-->
+	</spawn>
+	<spawn name="oren04_2020_05" count="2" respawn="15">
+		<territory name="oren04_2020_05"/>
+		<npc id="20308"/><!--Цепкий Паук-->
+	</spawn>
+	<territory name="oren04_2020_04">
+		<add x="424" y="72732" zmin="-3892" zmax="-3392"/>
+		<add x="4356" y="69788" zmin="-3892" zmax="-3392"/>
+		<add x="2920" y="74056" zmin="-3892" zmax="-3392"/>
+		<add x="264" y="74820" zmin="-3892" zmax="-3392"/>
+	</territory>
+	<spawn name="oren04_2020_04" count="3" respawn="15">
+		<territory name="oren04_2020_04"/>
+		<npc id="20036"/><!--Лирейн-->
+	</spawn>
+	<spawn name="oren04_2020_04" count="4" respawn="15">
+		<territory name="oren04_2020_04"/>
+		<npc id="20466"/><!--Паук Хелицера-->
+	</spawn>
+	<spawn name="oren04_2020_04" count="3" respawn="15">
+		<territory name="oren04_2020_04"/>
+		<npc id="20044"/><!--Старшая Лирейн-->
+	</spawn>
+	<territory name="oren04_2020_07">
+		<add x="4728" y="75656" zmin="-3700" zmax="-3500"/>
+		<add x="5676" y="75868" zmin="-3700" zmax="-3500"/>
+		<add x="5348" y="78796" zmin="-3700" zmax="-3500"/>
+		<add x="3704" y="78528" zmin="-3700" zmax="-3500"/>
+	</territory>
+	<spawn name="oren04_2020_07" count="3" respawn="15">
+		<territory name="oren04_2020_07"/>
+		<npc id="20044"/><!--Старшая Лирейн-->
+	</spawn>
+	<spawn name="oren04_2020_07" count="3" respawn="15">
+		<territory name="oren04_2020_07"/>
+		<npc id="20466"/><!--Паук Хелицера-->
+	</spawn>
+	<territory name="oren04_2020_06">
+		<add x="232" y="75708" zmin="-3884" zmax="-3584"/>
+		<add x="3380" y="75140" zmin="-3884" zmax="-3584"/>
+		<add x="2492" y="79916" zmin="-3884" zmax="-3584"/>
+		<add x="276" y="77908" zmin="-3884" zmax="-3584"/>
+	</territory>
+	<spawn name="oren04_2020_06" count="5" respawn="15">
+		<territory name="oren04_2020_06"/>
+		<npc id="20036"/><!--Лирейн-->
+	</spawn>
+	<spawn name="oren04_2020_06" count="6" respawn="15">
+		<territory name="oren04_2020_06"/>
+		<npc id="20044"/><!--Старшая Лирейн-->
+	</spawn>
+	<territory name="oren04_2020_08">
+		<add x="3736" y="78528" zmin="-3664" zmax="-3364"/>
+		<add x="5336" y="78796" zmin="-3664" zmax="-3364"/>
+		<add x="7104" y="84200" zmin="-3664" zmax="-3364"/>
+		<add x="4376" y="85876" zmin="-3664" zmax="-3364"/>
+		<add x="3216" y="81580" zmin="-3664" zmax="-3364"/>
+	</territory>
+	<spawn name="oren04_2020_08" count="7" respawn="15">
+		<territory name="oren04_2020_08"/>
+		<npc id="20044"/><!--Старшая Лирейн-->
+	</spawn>
+	<spawn name="oren04_2020_08" count="8" respawn="15">
+		<territory name="oren04_2020_08"/>
+		<npc id="20466"/><!--Паук Хелицера-->
+	</spawn>
+	<spawn name="oren02_npc2020_001" count="1" respawn="60">
+		<point x="17925" y="86183" z="-3616" h="8192"/>
+		<npc id="30639"/><!--Селестия-->
+	</spawn>
+	<territory name="oren04_2020_08s">
+		<add x="4372" y="82036" zmin="-3644" zmax="-3344"/>
+		<add x="5380" y="82076" zmin="-3644" zmax="-3344"/>
+		<add x="5380" y="83892" zmin="-3644" zmax="-3344"/>
+		<add x="4232" y="83340" zmin="-3644" zmax="-3344"/>
+	</territory>
+	<spawn name="oren04_2020_08s" count="1" respawn="15">
+		<territory name="oren04_2020_08s"/>
+		<npc id="20044"/><!--Старшая Лирейн-->
+	</spawn>
+	<spawn name="oren04_2020_08s" count="1" respawn="15">
+		<territory name="oren04_2020_08s"/>
+		<npc id="20466"/><!--Паук Хелицера-->
+	</spawn>
+	<spawn name="oren05_npc2020_002" count="1" respawn="60">
+		<point x="28928" y="74248" z="-3773" h="8192"/>
+		<npc id="30423"/><!--Нортвинд-->
+	</spawn>
+	<spawn name="oren02_npc2020_g04" count="1" respawn="60">
+		<territory>
+			<add x="3512" y="84134" zmin="-3907" zmax="-2707"/>
+			<add x="10869" y="85069" zmin="-3907" zmax="-2707"/>
+			<add x="8589" y="93641" zmin="-3907" zmax="-2707"/>
+			<add x="3343" y="91984" zmin="-3907" zmax="-2707"/>
+		</territory>
+		<npc id="31033"/><!--Часовой-->
+	</spawn>
+	<spawn name="oren02_npc2020_g05" count="1" respawn="60">
+		<territory>
+			<add x="204" y="73155" zmin="-3907" zmax="-2707"/>
+			<add x="4792" y="69393" zmin="-3907" zmax="-2707"/>
+			<add x="7169" y="69544" zmin="-3907" zmax="-2707"/>
+			<add x="6102" y="84109" zmin="-3907" zmax="-2707"/>
+			<add x="3378" y="83972" zmin="-3907" zmax="-2707"/>
+		</territory>
+		<npc id="31033"/><!--Часовой-->
+	</spawn>
+	<spawn name="oren02_npc2020_g02" count="1" respawn="60">
+		<territory>
+			<add x="18059" y="79325" zmin="-3907" zmax="-2707"/>
+			<add x="25970" y="79486" zmin="-3907" zmax="-2707"/>
+			<add x="25489" y="91655" zmin="-3907" zmax="-2707"/>
+			<add x="18541" y="92291" zmin="-3907" zmax="-2707"/>
+		</territory>
+		<npc id="31033"/><!--Часовой-->
+	</spawn>
+	<spawn name="oren02_npc2020_g03" count="1" respawn="60">
+		<territory>
+			<add x="11061" y="85118" zmin="-3907" zmax="-2707"/>
+			<add x="17758" y="83556" zmin="-3907" zmax="-2707"/>
+			<add x="18077" y="93176" zmin="-3907" zmax="-2707"/>
+			<add x="9236" y="92696" zmin="-3907" zmax="-2707"/>
+		</territory>
+		<npc id="31033"/><!--Часовой-->
+	</spawn>
+	<spawn name="oren02_npc2020_g01" count="1" respawn="60">
+		<territory>
+			<add x="26320" y="79479" zmin="-3907" zmax="-2707"/>
+			<add x="32386" y="74761" zmin="-3907" zmax="-2707"/>
+			<add x="32099" y="89940" zmin="-3907" zmax="-2707"/>
+			<add x="25782" y="92882" zmin="-3907" zmax="-2707"/>
+		</territory>
+		<npc id="31033"/><!--Часовой-->
+	</spawn>
+	<territory name="oren05_2020_35">
+		<add x="10853" y="81667" zmin="-3869" zmax="-3719"/>
+		<add x="11042" y="81857" zmin="-3869" zmax="-3719"/>
+		<add x="11045" y="82213" zmin="-3869" zmax="-3719"/>
+		<add x="10859" y="82403" zmin="-3869" zmax="-3719"/>
+		<add x="10465" y="82375" zmin="-3869" zmax="-3719"/>
+		<add x="10307" y="82229" zmin="-3869" zmax="-3719"/>
+		<add x="10300" y="81850" zmin="-3869" zmax="-3719"/>
+		<add x="10480" y="81665" zmin="-3869" zmax="-3719"/>
+	</territory>
+	<spawn name="oren05_2020_35" count="3" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_35"/>
+		<npc id="20351"/><!--Гонитель Дре Ванул-->
+	</spawn>
+	<spawn name="oren05_2020_35" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_35"/>
+		<npc id="20353"/><!--Дре Ванул Блюститель-->
+	</spawn>
+	<spawn name="oren05_2020_32" count="5" respawn="71" respawn_random="25">
+		<territory>
+			<add x="9241" y="78078" zmin="-3882" zmax="-3632"/>
+			<add x="10288" y="78059" zmin="-3882" zmax="-3632"/>
+			<add x="10284" y="78800" zmin="-3882" zmax="-3632"/>
+			<add x="9239" y="78815" zmin="-3882" zmax="-3632"/>
+		</territory>
+		<npc id="20492"/><!--Охранник Кирунака-->
+	</spawn>
+	<spawn name="oren05_2020_33" count="2" respawn="71" respawn_random="25">
+		<territory>
+			<add x="8975" y="78321" zmin="-3767" zmax="-3617"/>
+			<add x="9208" y="78319" zmin="-3767" zmax="-3617"/>
+			<add x="9213" y="78564" zmin="-3767" zmax="-3617"/>
+			<add x="8979" y="78569" zmin="-3767" zmax="-3617"/>
+		</territory>
+		<npc id="20492"/><!--Охранник Кирунака-->
+	</spawn>
+	<territory name="oren05_2020_30">
+		<add x="11046" y="74656" zmin="-3880" zmax="-3730"/>
+		<add x="11036" y="75015" zmin="-3880" zmax="-3730"/>
+		<add x="10857" y="75208" zmin="-3880" zmax="-3730"/>
+		<add x="10492" y="75220" zmin="-3880" zmax="-3730"/>
+		<add x="10323" y="75030" zmin="-3880" zmax="-3730"/>
+		<add x="10314" y="74674" zmin="-3880" zmax="-3730"/>
+		<add x="10496" y="74503" zmin="-3880" zmax="-3730"/>
+		<add x="10876" y="74491" zmin="-3880" zmax="-3730"/>
+	</territory>
+	<spawn name="oren05_2020_30" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_30"/>
+		<npc id="20351"/><!--Гонитель Дре Ванул-->
+	</spawn>
+	<spawn name="oren05_2020_30" count="3" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_30"/>
+		<npc id="20353"/><!--Дре Ванул Блюститель-->
+	</spawn>
+	<territory name="oren05_2020_38">
+		<add x="14496" y="80172" zmin="-4128" zmax="-3978"/>
+		<add x="15568" y="80172" zmin="-4128" zmax="-3978"/>
+		<add x="15572" y="81736" zmin="-4128" zmax="-3978"/>
+		<add x="14504" y="81736" zmin="-4128" zmax="-3978"/>
+	</territory>
+	<spawn name="oren05_2020_38" count="3" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_38"/>
+		<npc id="20040"/><!--Трусливый Крысолюд-->
+	</spawn>
+	<spawn name="oren05_2020_38" count="3" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_38"/>
+		<npc id="20047"/><!--Главарь Трусливых Крысолюдов-->
+	</spawn>
+	<territory name="oren05_2020_39">
+		<add x="13224" y="77536" zmin="-4132" zmax="-3982"/>
+		<add x="13804" y="77516" zmin="-4132" zmax="-3982"/>
+		<add x="13856" y="79284" zmin="-4132" zmax="-3982"/>
+		<add x="13192" y="79296" zmin="-4132" zmax="-3982"/>
+	</territory>
+	<spawn name="oren05_2020_39" count="3" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_39"/>
+		<npc id="20040"/><!--Трусливый Крысолюд-->
+	</spawn>
+	<spawn name="oren05_2020_39" count="3" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_39"/>
+		<npc id="20047"/><!--Главарь Трусливых Крысолюдов-->
+	</spawn>
+	<spawn name="oren05_2020_36" count="4" respawn="71" respawn_random="25">
+		<territory>
+			<add x="11607" y="80753" zmin="-4116" zmax="-3966"/>
+			<add x="12274" y="80750" zmin="-4116" zmax="-3966"/>
+			<add x="12273" y="81147" zmin="-4116" zmax="-3966"/>
+			<add x="11603" y="81152" zmin="-4116" zmax="-3966"/>
+		</territory>
+		<npc id="20351"/><!--Гонитель Дре Ванул-->
+	</spawn>
+	<territory name="oren05_2020_37">
+		<add x="12444" y="79664" zmin="-4148" zmax="-3998"/>
+		<add x="14226" y="79678" zmin="-4148" zmax="-3998"/>
+		<add x="14236" y="80700" zmin="-4148" zmax="-3998"/>
+		<add x="12440" y="80692" zmin="-4148" zmax="-3998"/>
+	</territory>
+	<spawn name="oren05_2020_37" count="3" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_37"/>
+		<npc id="20040"/><!--Трусливый Крысолюд-->
+	</spawn>
+	<spawn name="oren05_2020_37" count="3" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_37"/>
+		<npc id="20047"/><!--Главарь Трусливых Крысолюдов-->
+	</spawn>
+	<spawn name="oren05_2020_01" count="3" respawn="71" respawn_random="25">
+		<territory>
+			<add x="24624" y="74620" zmin="-4144" zmax="-3994"/>
+			<add x="25656" y="74624" zmin="-4144" zmax="-3994"/>
+			<add x="25644" y="75260" zmin="-4144" zmax="-3994"/>
+			<add x="24640" y="75304" zmin="-4144" zmax="-3994"/>
+		</territory>
+		<npc id="20372"/><!--Воин Орков Барак-->
+	</spawn>
+	<territory name="oren05_2020_02">
+		<add x="23648" y="76112" zmin="-4160" zmax="-4010"/>
+		<add x="24676" y="76124" zmin="-4160" zmax="-4010"/>
+		<add x="24704" y="77716" zmin="-4160" zmax="-4010"/>
+		<add x="23652" y="77708" zmin="-4160" zmax="-4010"/>
+	</territory>
+	<spawn name="oren05_2020_02" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_02"/>
+		<npc id="20464"/><!--Подземный Скелет Воитель-->
+	</spawn>
+	<spawn name="oren05_2020_02" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_02"/>
+		<npc id="20463"/><!--Стрелок Подземных Скелетов-->
+	</spawn>
+	<spawn name="oren05_2020_02" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_02"/>
+		<npc id="20373"/><!--Главарь Воинов Орков Барак-->
+	</spawn>
+	<territory name="oren05_2020_09">
+		<add x="25250" y="81425" zmin="-4129" zmax="-3979"/>
+		<add x="25916" y="81431" zmin="-4129" zmax="-3979"/>
+		<add x="25925" y="81819" zmin="-4129" zmax="-3979"/>
+		<add x="25245" y="81822" zmin="-4129" zmax="-3979"/>
+	</territory>
+	<spawn name="oren05_2020_09" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_09"/>
+		<npc id="20464"/><!--Подземный Скелет Воитель-->
+	</spawn>
+	<spawn name="oren05_2020_09" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_09"/>
+		<npc id="20504"/><!--Притягивающий Разрушения-->
+	</spawn>
+	<spawn name="oren05_2020_07" count="2" respawn="71" respawn_random="25">
+		<territory>
+			<add x="24411" y="78908" zmin="-4130" zmax="-3980"/>
+			<add x="24425" y="79276" zmin="-4130" zmax="-3980"/>
+			<add x="24292" y="79338" zmin="-4130" zmax="-3980"/>
+			<add x="24062" y="79336" zmin="-4130" zmax="-3980"/>
+			<add x="23878" y="79216" zmin="-4130" zmax="-3980"/>
+			<add x="23877" y="78969" zmin="-4130" zmax="-3980"/>
+			<add x="24055" y="78868" zmin="-4130" zmax="-3980"/>
+			<add x="24277" y="78865" zmin="-4130" zmax="-3980"/>
+		</territory>
+		<npc id="20464"/><!--Подземный Скелет Воитель-->
+	</spawn>
+	<territory name="oren05_2020_08">
+		<add x="23690" y="80463" zmin="-4136" zmax="-3986"/>
+		<add x="24681" y="80455" zmin="-4136" zmax="-3986"/>
+		<add x="24671" y="81206" zmin="-4136" zmax="-3986"/>
+		<add x="23700" y="81214" zmin="-4136" zmax="-3986"/>
+	</territory>
+	<spawn name="oren05_2020_08" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_08"/>
+		<npc id="20464"/><!--Подземный Скелет Воитель-->
+	</spawn>
+	<spawn name="oren05_2020_08" count="1" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_08"/>
+		<npc id="20463"/><!--Стрелок Подземных Скелетов-->
+	</spawn>
+	<spawn name="oren05_2020_08" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_08"/>
+		<npc id="20504"/><!--Притягивающий Разрушения-->
+	</spawn>
+	<territory name="oren05_2020_05">
+		<add x="22724" y="77604" zmin="-4129" zmax="-3979"/>
+		<add x="23402" y="77603" zmin="-4129" zmax="-3979"/>
+		<add x="23403" y="78000" zmin="-4129" zmax="-3979"/>
+		<add x="22716" y="77992" zmin="-4129" zmax="-3979"/>
+	</territory>
+	<spawn name="oren05_2020_05" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_05"/>
+		<npc id="20372"/><!--Воин Орков Барак-->
+	</spawn>
+	<spawn name="oren05_2020_05" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_05"/>
+		<npc id="20373"/><!--Главарь Воинов Орков Барак-->
+	</spawn>
+	<territory name="oren05_2020_06">
+		<add x="22484" y="75843" zmin="-4140" zmax="-3990"/>
+		<add x="23154" y="75849" zmin="-4140" zmax="-3990"/>
+		<add x="23154" y="76236" zmin="-4140" zmax="-3990"/>
+		<add x="22489" y="76235" zmin="-4140" zmax="-3990"/>
+	</territory>
+	<spawn name="oren05_2020_06" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_06"/>
+		<npc id="20372"/><!--Воин Орков Барак-->
+	</spawn>
+	<spawn name="oren05_2020_06" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_06"/>
+		<npc id="20373"/><!--Главарь Воинов Орков Барак-->
+	</spawn>
+	<territory name="oren05_2020_03">
+		<add x="24948" y="75832" zmin="-4130" zmax="-3980"/>
+		<add x="25608" y="75836" zmin="-4130" zmax="-3980"/>
+		<add x="25624" y="76236" zmin="-4130" zmax="-3980"/>
+		<add x="24947" y="76241" zmin="-4130" zmax="-3980"/>
+	</territory>
+	<spawn name="oren05_2020_03" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_03"/>
+		<npc id="20372"/><!--Воин Орков Барак-->
+	</spawn>
+	<spawn name="oren05_2020_03" count="1" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_03"/>
+		<npc id="20373"/><!--Главарь Воинов Орков Барак-->
+	</spawn>
+	<spawn name="oren05_2020_04" count="4" respawn="71" respawn_random="25">
+		<territory>
+			<add x="24938" y="77972" zmin="-4128" zmax="-3978"/>
+			<add x="25624" y="77968" zmin="-4128" zmax="-3978"/>
+			<add x="25621" y="78364" zmin="-4128" zmax="-3978"/>
+			<add x="24947" y="78363" zmin="-4128" zmax="-3978"/>
+		</territory>
+		<npc id="20372"/><!--Воин Орков Барак-->
+	</spawn>
+	<territory name="oren05_2020_12">
+		<add x="20815" y="80168" zmin="-4136" zmax="-3986"/>
+		<add x="21652" y="80153" zmin="-4136" zmax="-3986"/>
+		<add x="21660" y="81526" zmin="-4136" zmax="-3986"/>
+		<add x="20819" y="81524" zmin="-4136" zmax="-3986"/>
+	</territory>
+	<spawn name="oren05_2020_12" count="1" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_12"/>
+		<npc id="20464"/><!--Подземный Скелет Воитель-->
+	</spawn>
+	<spawn name="oren05_2020_12" count="1" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_12"/>
+		<npc id="20463"/><!--Стрелок Подземных Скелетов-->
+	</spawn>
+	<spawn name="oren05_2020_12" count="1" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_12"/>
+		<npc id="20504"/><!--Притягивающий Разрушения-->
+	</spawn>
+	<territory name="oren05_2020_13">
+		<add x="20281" y="79280" zmin="-4134" zmax="-3984"/>
+		<add x="20924" y="79269" zmin="-4134" zmax="-3984"/>
+		<add x="20925" y="79677" zmin="-4134" zmax="-3984"/>
+		<add x="20282" y="79669" zmin="-4134" zmax="-3984"/>
+	</territory>
+	<spawn name="oren05_2020_13" count="1" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_13"/>
+		<npc id="20464"/><!--Подземный Скелет Воитель-->
+	</spawn>
+	<spawn name="oren05_2020_13" count="1" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_13"/>
+		<npc id="20463"/><!--Стрелок Подземных Скелетов-->
+	</spawn>
+	<territory name="oren05_2020_10">
+		<add x="21849" y="78742" zmin="-4156" zmax="-4006"/>
+		<add x="22979" y="78738" zmin="-4156" zmax="-4006"/>
+		<add x="22977" y="79446" zmin="-4156" zmax="-4006"/>
+		<add x="21844" y="79452" zmin="-4156" zmax="-4006"/>
+	</territory>
+	<spawn name="oren05_2020_10" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_10"/>
+		<npc id="20464"/><!--Подземный Скелет Воитель-->
+	</spawn>
+	<spawn name="oren05_2020_10" count="1" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_10"/>
+		<npc id="20463"/><!--Стрелок Подземных Скелетов-->
+	</spawn>
+	<spawn name="oren05_2020_10" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_10"/>
+		<npc id="20504"/><!--Притягивающий Разрушения-->
+	</spawn>
+	<spawn name="oren05_2020_11" count="2" respawn="71" respawn_random="25">
+		<territory>
+			<add x="22544" y="80740" zmin="-4132" zmax="-3982"/>
+			<add x="22545" y="80967" zmin="-4132" zmax="-3982"/>
+			<add x="22469" y="81109" zmin="-4132" zmax="-3982"/>
+			<add x="22173" y="81115" zmin="-4132" zmax="-3982"/>
+			<add x="22089" y="80973" zmin="-4132" zmax="-3982"/>
+			<add x="22087" y="80745" zmin="-4132" zmax="-3982"/>
+			<add x="22188" y="80559" zmin="-4132" zmax="-3982"/>
+			<add x="22435" y="80555" zmin="-4132" zmax="-3982"/>
+		</territory>
+		<npc id="20464"/><!--Подземный Скелет Воитель-->
+	</spawn>
+	<territory name="oren05_2020_18">
+		<add x="18798" y="78458" zmin="-4432" zmax="-4232"/>
+		<add x="19691" y="78455" zmin="-4432" zmax="-4232"/>
+		<add x="19697" y="80042" zmin="-4432" zmax="-4232"/>
+		<add x="18791" y="80039" zmin="-4432" zmax="-4232"/>
+	</territory>
+	<spawn name="oren05_2020_18" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_18"/>
+		<npc id="20504"/><!--Притягивающий Разрушения-->
+	</spawn>
+	<spawn name="oren05_2020_18" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_18"/>
+		<npc id="20345"/><!--Темный Жнец-->
+	</spawn>
+	<spawn name="oren05_2020_18" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_18"/>
+		<npc id="20033"/><!--Бесплотный Ужас-->
+	</spawn>
+	<territory name="oren05_2020_19">
+		<add x="17152" y="80660" zmin="-4429" zmax="-4279"/>
+		<add x="18616" y="80660" zmin="-4429" zmax="-4279"/>
+		<add x="18617" y="81566" zmin="-4429" zmax="-4279"/>
+		<add x="17156" y="81558" zmin="-4429" zmax="-4279"/>
+	</territory>
+	<spawn name="oren05_2020_19" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_19"/>
+		<npc id="20371"/><!--Туманный Жнец-->
+	</spawn>
+	<spawn name="oren05_2020_19" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_19"/>
+		<npc id="20345"/><!--Темный Жнец-->
+	</spawn>
+	<spawn name="oren05_2020_19" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_19"/>
+		<npc id="20504"/><!--Притягивающий Разрушения-->
+	</spawn>
+	<territory name="oren05_2020_16">
+		<add x="20085" y="75615" zmin="-4419" zmax="-4269"/>
+		<add x="20487" y="75612" zmin="-4419" zmax="-4269"/>
+		<add x="20485" y="76289" zmin="-4419" zmax="-4269"/>
+		<add x="20084" y="76293" zmin="-4419" zmax="-4269"/>
+	</territory>
+	<spawn name="oren05_2020_16" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_16"/>
+		<npc id="20345"/><!--Темный Жнец-->
+	</spawn>
+	<spawn name="oren05_2020_16" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_16"/>
+		<npc id="20033"/><!--Бесплотный Ужас-->
+	</spawn>
+	<spawn name="oren05_2020_17" count="4" respawn="71" respawn_random="25">
+		<territory>
+			<add x="18303" y="75473" zmin="-4424" zmax="-4274"/>
+			<add x="18980" y="75475" zmin="-4424" zmax="-4274"/>
+			<add x="18986" y="75868" zmin="-4424" zmax="-4274"/>
+			<add x="18286" y="75870" zmin="-4424" zmax="-4274"/>
+		</territory>
+		<npc id="20033"/><!--Бесплотный Ужас-->
+	</spawn>
+	<territory name="oren05_2020_14">
+		<add x="21591" y="76840" zmin="-4326" zmax="-4176"/>
+		<add x="21593" y="77118" zmin="-4326" zmax="-4176"/>
+		<add x="21395" y="77251" zmin="-4326" zmax="-4176"/>
+		<add x="21047" y="77250" zmin="-4326" zmax="-4176"/>
+		<add x="20971" y="77158" zmin="-4326" zmax="-4176"/>
+		<add x="20964" y="76809" zmin="-4326" zmax="-4176"/>
+		<add x="21036" y="76638" zmin="-4326" zmax="-4176"/>
+		<add x="21362" y="76611" zmin="-4326" zmax="-4176"/>
+	</territory>
+	<spawn name="oren05_2020_14" count="1" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_14"/>
+		<npc id="20371"/><!--Туманный Жнец-->
+	</spawn>
+	<spawn name="oren05_2020_14" count="1" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_14"/>
+		<npc id="20463"/><!--Стрелок Подземных Скелетов-->
+	</spawn>
+	<territory name="oren05_2020_15">
+		<add x="18457" y="76533" zmin="-4459" zmax="-4309"/>
+		<add x="19824" y="76493" zmin="-4459" zmax="-4309"/>
+		<add x="19822" y="77441" zmin="-4459" zmax="-4309"/>
+		<add x="18490" y="77467" zmin="-4459" zmax="-4309"/>
+	</territory>
+	<spawn name="oren05_2020_15" count="3" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_15"/>
+		<npc id="20371"/><!--Туманный Жнец-->
+	</spawn>
+	<spawn name="oren05_2020_15" count="3" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_15"/>
+		<npc id="20504"/><!--Притягивающий Разрушения-->
+	</spawn>
+	<territory name="oren05_2020_23">
+		<add x="16162" y="78470" zmin="-4458" zmax="-4308"/>
+		<add x="17063" y="78461" zmin="-4458" zmax="-4308"/>
+		<add x="17086" y="79748" zmin="-4458" zmax="-4308"/>
+		<add x="16179" y="79751" zmin="-4458" zmax="-4308"/>
+	</territory>
+	<spawn name="oren05_2020_23" count="3" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_23"/>
+		<npc id="20345"/><!--Темный Жнец-->
+	</spawn>
+	<spawn name="oren05_2020_23" count="3" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_23"/>
+		<npc id="20033"/><!--Бесплотный Ужас-->
+	</spawn>
+	<spawn name="oren05_2020_24" count="2" respawn="71" respawn_random="25">
+		<territory>
+			<add x="15209" y="78852" zmin="-4323" zmax="-4173"/>
+			<add x="15296" y="78963" zmin="-4323" zmax="-4173"/>
+			<add x="15299" y="79302" zmin="-4323" zmax="-4173"/>
+			<add x="15207" y="79389" zmin="-4323" zmax="-4173"/>
+			<add x="14861" y="79394" zmin="-4323" zmax="-4173"/>
+			<add x="14680" y="79304" zmin="-4323" zmax="-4173"/>
+			<add x="14676" y="78962" zmin="-4323" zmax="-4173"/>
+			<add x="14861" y="78854" zmin="-4323" zmax="-4173"/>
+		</territory>
+		<npc id="20033"/><!--Бесплотный Ужас-->
+	</spawn>
+	<territory name="oren05_2020_21">
+		<add x="15696" y="76505" zmin="-4453" zmax="-4303"/>
+		<add x="17222" y="76508" zmin="-4453" zmax="-4303"/>
+		<add x="17252" y="77435" zmin="-4453" zmax="-4303"/>
+		<add x="15716" y="77484" zmin="-4453" zmax="-4303"/>
+	</territory>
+	<spawn name="oren05_2020_21" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_21"/>
+		<npc id="20504"/><!--Притягивающий Разрушения-->
+	</spawn>
+	<spawn name="oren05_2020_21" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_21"/>
+		<npc id="20371"/><!--Туманный Жнец-->
+	</spawn>
+	<spawn name="oren05_2020_21" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_21"/>
+		<npc id="20345"/><!--Темный Жнец-->
+	</spawn>
+	<spawn name="oren05_2020_22" count="4" respawn="71" respawn_random="25">
+		<territory>
+			<add x="15459" y="75884" zmin="-4454" zmax="-4304"/>
+			<add x="16135" y="75887" zmin="-4454" zmax="-4304"/>
+			<add x="16132" y="76287" zmin="-4454" zmax="-4304"/>
+			<add x="15461" y="76283" zmin="-4454" zmax="-4304"/>
+		</territory>
+		<npc id="20345"/><!--Темный Жнец-->
+	</spawn>
+	<territory name="oren05_2020_20">
+		<add x="18200" y="81765" zmin="-4429" zmax="-4279"/>
+		<add x="18857" y="81770" zmin="-4429" zmax="-4279"/>
+		<add x="18849" y="82210" zmin="-4429" zmax="-4279"/>
+		<add x="18202" y="82222" zmin="-4429" zmax="-4279"/>
+	</territory>
+	<spawn name="oren05_2020_20" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_20"/>
+		<npc id="20371"/><!--Туманный Жнец-->
+	</spawn>
+	<spawn name="oren05_2020_20" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_20"/>
+		<npc id="20345"/><!--Темный Жнец-->
+	</spawn>
+	<territory name="oren05_2020_29">
+		<add x="12332" y="77613" zmin="-4218" zmax="-4018"/>
+		<add x="12980" y="77613" zmin="-4218" zmax="-4018"/>
+		<add x="12980" y="78022" zmin="-4218" zmax="-4018"/>
+		<add x="12325" y="78019" zmin="-4218" zmax="-4018"/>
+	</territory>
+	<spawn name="oren05_2020_29" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_29"/>
+		<npc id="20040"/><!--Трусливый Крысолюд-->
+	</spawn>
+	<spawn name="oren05_2020_29" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_29"/>
+		<npc id="20351"/><!--Гонитель Дре Ванул-->
+	</spawn>
+	<spawn name="oren05_2020_27" count="4" respawn="71" respawn_random="25">
+		<territory>
+			<add x="11697" y="75969" zmin="-4219" zmax="-4069"/>
+			<add x="12542" y="75971" zmin="-4219" zmax="-4069"/>
+			<add x="12540" y="77396" zmin="-4219" zmax="-4069"/>
+			<add x="11709" y="77406" zmin="-4219" zmax="-4069"/>
+		</territory>
+		<npc id="20351"/><!--Гонитель Дре Ванул-->
+	</spawn>
+	<territory name="oren05_2020_28">
+		<add x="12339" y="75167" zmin="-4216" zmax="-4066"/>
+		<add x="13219" y="75169" zmin="-4216" zmax="-4066"/>
+		<add x="13224" y="75744" zmin="-4216" zmax="-4066"/>
+		<add x="12340" y="75742" zmin="-4216" zmax="-4066"/>
+	</territory>
+	<spawn name="oren05_2020_28" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_28"/>
+		<npc id="20040"/><!--Трусливый Крысолюд-->
+	</spawn>
+	<spawn name="oren05_2020_28" count="3" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_28"/>
+		<npc id="20351"/><!--Гонитель Дре Ванул-->
+	</spawn>
+	<territory name="oren05_2020_25">
+		<add x="13678" y="76040" zmin="-4170" zmax="-4020"/>
+		<add x="13977" y="76054" zmin="-4170" zmax="-4020"/>
+		<add x="13979" y="77309" zmin="-4170" zmax="-4020"/>
+		<add x="13684" y="77316" zmin="-4170" zmax="-4020"/>
+	</territory>
+	<spawn name="oren05_2020_25" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_25"/>
+		<npc id="20040"/><!--Трусливый Крысолюд-->
+	</spawn>
+	<spawn name="oren05_2020_25" count="2" respawn="71" respawn_random="25">
+		<territory name="oren05_2020_25"/>
+		<npc id="20047"/><!--Главарь Трусливых Крысолюдов-->
+	</spawn>
+	<spawn name="oren05_2020_26" count="5" respawn="71" respawn_random="25">
+		<territory>
+			<add x="12744" y="76037" zmin="-4312" zmax="-4112"/>
+			<add x="13575" y="76026" zmin="-4312" zmax="-4112"/>
+			<add x="13581" y="77361" zmin="-4312" zmax="-4112"/>
+			<add x="12736" y="77334" zmin="-4312" zmax="-4112"/>
+		</territory>
+		<npc id="20033"/><!--Бесплотный Ужас-->
+	</spawn>
+	<spawn name="oren01_qm2020_001" count="1" respawn="300">
+		<point x="14016" y="80192" z="-4080" h="0"/>
+		<npc id="27020"/><!--Варул Грязный Коготь-->
+	</spawn>
+	<spawn name="oren01_qm2020_002" count="1" respawn="20" respawn_random="5">
+		<territory>
+			<add x="8975" y="78321" zmin="-3767" zmax="-3617"/>
+			<add x="9208" y="78319" zmin="-3767" zmax="-3617"/>
+			<add x="9213" y="78564" zmin="-3767" zmax="-3617"/>
+			<add x="8979" y="78569" zmin="-3767" zmax="-3617"/>
+		</territory>
+		<npc id="27021"/><!--Кирунак-->
+	</spawn>
+	<spawn name="dion01_qm2021_02" count="1" respawn="180">
+		<territory>
+			<add x="17832" y="86087" zmin="-3695" zmax="-3495"/>
+			<add x="18032" y="86087" zmin="-3695" zmax="-3495"/>
+			<add x="18032" y="86287" zmin="-3695" zmax="-3495"/>
+			<add x="17832" y="86287" zmin="-3695" zmax="-3495"/>
+		</territory>
+		<npc id="27106"/><!--Призрачный Единорог-->
+	</spawn>
+	<spawn name="oren01_qm2020_02" count="1" respawn="180">
+		<territory>
+			<add x="23700" y="90308" zmin="-3704" zmax="-3304"/>
+			<add x="24860" y="90184" zmin="-3704" zmax="-3304"/>
+			<add x="24856" y="91824" zmin="-3704" zmax="-3304"/>
+			<add x="23980" y="91820" zmin="-3704" zmax="-3304"/>
+			<add x="23284" y="90976" zmin="-3704" zmax="-3304"/>
+		</territory>
+		<npc id="27077"/><!--Единорог Евы-->
+	</spawn>
+	<spawn name="oren01_qm2020_01" count="1" respawn="180">
+		<territory>
+			<add x="28568" y="90100" zmin="-3728" zmax="-3328"/>
+			<add x="29416" y="89636" zmin="-3728" zmax="-3328"/>
+			<add x="29936" y="90672" zmin="-3728" zmax="-3328"/>
+			<add x="29448" y="91072" zmin="-3728" zmax="-3328"/>
+			<add x="28664" y="91000" zmin="-3728" zmax="-3328"/>
+		</territory>
+		<npc id="27077"/><!--Единорог Евы-->
+	</spawn>
+	<spawn name="oren01_qm2020_04" count="1" respawn="180">
+		<territory>
+			<add x="12844" y="91264" zmin="-3744" zmax="-3344"/>
+			<add x="14216" y="90948" zmin="-3744" zmax="-3344"/>
+			<add x="14252" y="92448" zmin="-3744" zmax="-3344"/>
+			<add x="12916" y="92152" zmin="-3744" zmax="-3344"/>
+		</territory>
+		<npc id="27077"/><!--Единорог Евы-->
+	</spawn>
+	<spawn name="oren01_qm2020_03" count="1" respawn="180">
+		<territory>
+			<add x="19380" y="89384" zmin="-3728" zmax="-3328"/>
+			<add x="20880" y="89472" zmin="-3728" zmax="-3328"/>
+			<add x="20996" y="90672" zmin="-3728" zmax="-3328"/>
+			<add x="19508" y="90844" zmin="-3728" zmax="-3328"/>
+			<add x="18820" y="90256" zmin="-3728" zmax="-3328"/>
+		</territory>
+		<npc id="27077"/><!--Единорог Евы-->
+	</spawn>
+	<spawn name="oren01_qm2020_06" count="1" respawn="180">
+		<territory>
+			<add x="3408" y="89580" zmin="-3680" zmax="-3280"/>
+			<add x="4332" y="88988" zmin="-3680" zmax="-3280"/>
+			<add x="5124" y="89688" zmin="-3680" zmax="-3280"/>
+			<add x="3836" y="90244" zmin="-3680" zmax="-3280"/>
+		</territory>
+		<npc id="27077"/><!--Единорог Евы-->
+	</spawn>
+	<spawn name="oren01_qm2020_05" count="1" respawn="180">
+		<territory>
+			<add x="6796" y="92460" zmin="-3704" zmax="-3304"/>
+			<add x="8280" y="91244" zmin="-3704" zmax="-3304"/>
+			<add x="9340" y="92424" zmin="-3704" zmax="-3304"/>
+			<add x="7660" y="93068" zmin="-3704" zmax="-3304"/>
+		</territory>
+		<npc id="27077"/><!--Единорог Евы-->
+	</spawn>
+	<spawn name="oren01_qm2019_03" count="1" respawn="180">
+		<territory>
+			<add x="29820" y="79456" zmin="-3684" zmax="-3284"/>
+			<add x="32440" y="76268" zmin="-3684" zmax="-3284"/>
+			<add x="32412" y="81272" zmin="-3684" zmax="-3284"/>
+			<add x="29724" y="81400" zmin="-3684" zmax="-3284"/>
+		</territory>
+		<npc id="27061"/><!--Батох-->
+	</spawn>
+</list>

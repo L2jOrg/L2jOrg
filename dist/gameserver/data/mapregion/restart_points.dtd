@@ -1,0 +1,20 @@
+<!ELEMENT list (restart_area|restart_loc)*>
+<!ELEMENT restart_area (polygon|region|restart)*>
+<!ELEMENT polygon (coords)*>
+<!ELEMENT region (#PCDATA)>
+<!ATTLIST region
+	map CDATA #REQUIRED>
+<!ELEMENT restart (#PCDATA)>
+<!ATTLIST restart
+	race CDATA #REQUIRED
+	loc CDATA #REQUIRED>
+<!ELEMENT coords (#PCDATA)>
+<!ATTLIST coords
+	loc CDATA #REQUIRED>
+<!ELEMENT restart_loc (restart_point|PKrestart_point)*>
+<!ATTLIST restart_loc
+	name CDATA #REQUIRED
+        bbs CDATA #IMPLIED
+        msg_id CDATA #IMPLIED>
+<!ELEMENT restart_point (coords)*>
+<!ELEMENT PKrestart_point (coords)*>

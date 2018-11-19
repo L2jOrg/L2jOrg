@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT list (config|account)*>
+
+	<!ELEMENT config (#PCDATA)>
+	<!ATTLIST config
+		enabled CDATA #REQUIRED
+		based_on_gameserver CDATA #REQUIRED
+		free_type CDATA #IMPLIED
+		free_delay CDATA #IMPLIED
+		notify_free CDATA #IMPLIED>
+
+	<!ELEMENT account (name|properties|rates|modifiers|bonus|give_items_on_start|take_items_on_end|fee|stats|skills|triggers)*>
+	<!ATTLIST account
+		type CDATA #REQUIRED>
+
+		<!ELEMENT name (ko|en|zh|th|ru|pt|es|ar|el|ka|hu|fi|uk|vi)*>
+			<!ELEMENT ko (#PCDATA)>
+			<!ELEMENT en (#PCDATA)>
+			<!ELEMENT zh (#PCDATA)>
+			<!ELEMENT th (#PCDATA)>
+			<!ELEMENT ru (#PCDATA)>
+			<!ELEMENT pt (#PCDATA)>
+			<!ELEMENT es (#PCDATA)>
+			<!ELEMENT ar (#PCDATA)>
+			<!ELEMENT el (#PCDATA)>
+			<!ELEMENT ka (#PCDATA)>
+			<!ELEMENT hu (#PCDATA)>
+			<!ELEMENT fi (#PCDATA)>
+			<!ELEMENT uk (#PCDATA)>
+			<!ELEMENT vi (#PCDATA)>
+
+		<!ELEMENT properties (#PCDATA)>
+		<!ATTLIST properties
+			name_color CDATA #IMPLIED
+			title_color CDATA #IMPLIED>
+
+		<!ELEMENT rates (#PCDATA)>
+		<!ATTLIST rates
+			exp CDATA #REQUIRED
+			sp CDATA #REQUIRED
+			adena CDATA #REQUIRED
+			drop CDATA #REQUIRED
+			spoil CDATA #REQUIRED
+			quest_drop CDATA #IMPLIED
+			quest_reward CDATA #IMPLIED>
+
+		<!ELEMENT modifiers (#PCDATA)>
+		<!ATTLIST modifiers
+			drop_chance CDATA #REQUIRED
+			spoil_chance CDATA #REQUIRED>
+
+		<!ELEMENT bonus (#PCDATA)>
+		<!ATTLIST bonus
+			enchant_chance CDATA #REQUIRED
+			craft_chance CDATA #REQUIRED>
+
+		<!ELEMENT give_items_on_start (item)*>
+		<!ELEMENT take_items_on_end (item)*>
+		<!ELEMENT fee (item)*>
+		<!ATTLIST fee
+			delay CDATA #REQUIRED>
+
+			<!ELEMENT item (#PCDATA)>
+			<!ATTLIST item
+				id CDATA #REQUIRED
+				count CDATA #REQUIRED>
+
+	<!ELEMENT stats (add|set|mul)*>
+
+		<!ELEMENT add (player|target|using|zone|or|not|and)*>
+		<!ATTLIST add
+			order CDATA #REQUIRED
+			stat CDATA #REQUIRED
+			value CDATA #REQUIRED>
+
+		<!ELEMENT mul (player|target|using|zone|or|not|and)*>
+		<!ATTLIST mul
+			order CDATA #REQUIRED
+			stat CDATA #REQUIRED
+			value CDATA #REQUIRED>
+
+		<!ELEMENT set (player|target|using|zone|or|not|and)*>
+		<!ATTLIST set
+			order CDATA #REQUIRED
+			stat CDATA #REQUIRED
+			value CDATA #REQUIRED>
+
+			<!ELEMENT or (player|target|using|zone|or|not|and)*>
+
+			<!ELEMENT not (player|target|using|zone|or|not|and)*>
+
+			<!ELEMENT and (player|target|using|zone|or|not|and)*>
+
+				<!ELEMENT player (#PCDATA)>
+				<!ATTLIST player
+					residence CDATA #IMPLIED
+					olympiad CDATA #IMPLIED
+					race CDATA #IMPLIED
+					instance_zone CDATA #IMPLIED
+					is_clan_leader CDATA #IMPLIED
+					sex CDATA #IMPLIED
+					castle_type CDATA #IMPLIED
+					classId CDATA #IMPLIED
+					minLevel CDATA #IMPLIED
+					max_level CDATA #IMPLIED
+					avail_max_sp CDATA #IMPLIED
+					chaos_festival CDATA #IMPLIED
+					quest_state CDATA #IMPLIED
+					min_pledge_rank CDATA #IMPLIED
+					class_type CDATA #IMPLIED
+					min_clan_level CDATA #IMPLIED
+					isFlagged CDATA #IMPLIED
+					is_hero CDATA #IMPLIED>
+
+				<!ELEMENT target (#PCDATA)>
+				<!ATTLIST target
+					is_pet_feed CDATA #IMPLIED
+					type CDATA #IMPLIED>
+
+				<!ELEMENT using (#PCDATA)>
+				<!ATTLIST using
+					slotitem CDATA #REQUIRED>
+
+				<!ELEMENT zone (#PCDATA)>
+				<!ATTLIST zone
+					type CDATA #IMPLIED
+					name CDATA #IMPLIED>
+
+	<!ELEMENT triggers (trigger)*>
+
+		<!ELEMENT trigger (#PCDATA)>
+		<!ATTLIST trigger
+			id CDATA #REQUIRED
+			level CDATA #REQUIRED
+			type CDATA #REQUIRED
+			chance CDATA #REQUIRED
+			cancel_effects_on_remove CDATA #IMPLIED>
+
+	<!ELEMENT skills (skill)*>
+
+		<!ELEMENT skill (#PCDATA)>
+		<!ATTLIST skill
+			id CDATA #REQUIRED
+			level CDATA #REQUIRED
+			sub_level CDATA #IMPLIED>

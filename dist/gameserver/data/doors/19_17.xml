@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="19170001" name="Broken_coloseum_S.ruin_coloseum_door" hp="158250" pdef="644" mdef="518">
+		<pos x="-21667" y="-21072" z="-3037"/>
+		<shape ax="-21679" ay="-21201" bx="-21653" by="-21200" cx="-21653" cy="-20944" dx="-21678" dy="-20944" minz="-3037" maxz="-2887"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="19170002" name="Broken_coloseum_S.ruin_coloseum_door" hp="158250" pdef="644" mdef="518">
+		<pos x="-20027" y="-21072" z="-3037"/>
+		<shape ax="-20043" ay="-21200" bx="-20008" by="-21200" cx="-20008" cy="-20944" dx="-20043" dy="-20944" minz="-3037" maxz="-2887"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+</list>

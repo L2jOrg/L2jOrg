@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "events.dtd">
+<list>
+	<event id="10" name="GiranTalkingIslandBoat" type="BOAT_EVENT" impl="BoatWay">
+		<parameter name="class" value="Vehicle" />
+		<parameter name="ticketId" value="3946" />
+		<parameter name="broadcast_point" value="48950 190613 -3610;-96622 261660 -3610" />
+		<parameter name="spawn_point" value="48950 190613 -3610 60800" />
+		<parameter name="return_point" value="46763 187041 -3451" />
+		<on_time>
+			<on time="0">
+				<play_sound type="SOUND" range="-1" sound="itemsound.ship_arrival_departure" />
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THE_FERRY_HAS_ARRIVED_AT_GIRAN_HARBOR"/>
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THE_FERRY_WILL_LEAVE_FOR_TALKING_ISLAND_HARBOR_AFTER_ANCHORING_FOR_TEN_MINUTES"/>
+			</on>
+			<on time="300">
+				<play_sound type="SOUND" range="-1" sound="itemsound.ship_5min" />
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="WE_DEPART_FOR_TALKING_ISLAND_IN_FIVE_MINUTES"/>
+			</on>
+			<on time="540">
+				<play_sound type="SOUND" range="-1" sound="itemsound.ship_1min" />
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="WE_DEPART_FOR_TALKING_ISLAND_IN_ONE_MINUTE"/>
+			</on>
+			<on time="580">
+				<play_sound type="SOUND" range="-1" sound="itemsound.ship_1min" />
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="ALL_ABOARD_FOR_TALKING_ISLAND"/>
+			</on>
+			<on time="600">
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="WE_ARE_NOW_LEAVING_FOR_TALKING_ISLAND"/>
+				<start name="event"/>
+			</on>
+			<on time="620">
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THE_FERRY_FROM_GIRAN_HARBOR_WILL_BE_ARRIVING_AT_TALKING_ISLAND_IN_APPROXIMATELY_15_MINUTES"/>
+			</on>
+			<on time="900">
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THE_FERRY_FROM_GIRAN_HARBOR_WILL_BE_ARRIVING_AT_TALKING_ISLAND_IN_APPROXIMATELY_10_MINUTES"/>
+			</on>
+			<on time="1200">
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THE_FERRY_FROM_GIRAN_HARBOR_WILL_BE_ARRIVING_AT_TALKING_ISLAND_IN_APPROXIMATELY_5_MINUTES"/>
+			</on>
+			<on time="1420">
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THE_FERRY_FROM_GIRAN_HARBOR_WILL_BE_ARRIVING_AT_TALKING_ISLAND_IN_APPROXIMATELY_1_MINUTE"/>
+			</on>
+			<on time="1500">
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THE_FERRY_FROM_GIRAN_HARBOR_TO_TALKING_ISLAND_HAS_BEEN_DELAYED"/>
+			</on>
+			<on time="1680">
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THE_FERRY_FROM_GIRAN_HARBOR_TO_TALKING_ISLAND_HAS_BEEN_DELAYED"/>
+			</on>
+			<on time="1860">
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THE_FERRY_FROM_GIRAN_HARBOR_TO_TALKING_ISLAND_HAS_BEEN_DELAYED"/>
+			</on>
+			<on time="2040">
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THE_FERRY_FROM_GIRAN_HARBOR_TO_TALKING_ISLAND_HAS_BEEN_DELAYED"/>
+			</on>
+		</on_time>
+		<objects name="boat_points">
+			<boat_point speed1="150" speed2="800" x="51914" y="189023" z="-3610"/>
+			<boat_point speed1="150" speed2="800" x="60567" y="189789" z="-3610"/>
+			<boat_point speed1="200" speed2="800" x="63732" y="197457" z="-3610"/>
+			<boat_point speed1="250" speed2="800" x="63732" y="219946" z="-3610"/>
+			<boat_point speed1="250" speed2="1200" x="62008" y="222240" z="-3610"/>
+			<boat_point speed1="250" speed2="1200" x="56115" y="226791" z="-3610"/>
+			<boat_point speed1="300" speed2="800" x="40384" y="226432" z="-3610"/>
+			<boat_point speed1="300" speed2="800" x="37760" y="226432" z="-3610"/>
+			<boat_point speed1="300" speed2="800" x="27153" y="226791" z="-3610"/>
+			<boat_point speed1="300" speed2="800" x="12672" y="227535" z="-3610"/>
+			<boat_point speed1="300" speed2="800" x="-1808" y="228280" z="-3610"/>
+			<boat_point speed1="300" speed2="800" x="-22165" y="230542" z="-3610"/> <!-- DS: коллизия с ХБ -->
+			<boat_point speed1="300" speed2="800" x="-42523" y="235205" z="-3610"/>
+			<boat_point speed1="250" speed2="800" x="-68451" y="259560" z="-3610"/>
+			<boat_point speed1="200" speed2="800" x="-70848" y="261696" z="-3610"/>
+			<boat_point speed1="200" speed2="800" x="-83344" y="261610" z="-3610"/>
+			<boat_point speed1="180" speed2="800" x="-88344" y="261660" z="-3610"/>
+			<boat_point speed1="180" speed2="800" x="-92344" y="261660" z="-3610"/>
+			<boat_point speed1="150" speed2="800" x="-96622" y="261660" z="-3610"/>
+	</objects>
+	</event>
+	<event id="11" name="GiranTalkingIslandBoat" type="BOAT_EVENT" impl="BoatWay">
+		<parameter name="ticketId" value="3945" />
+		<parameter name="broadcast_point" value="48950 190613 -3610;-96622 261660 -3610" />
+		<parameter name="return_point" value="-96970 258945 -3600" />
+		<on_time>
+			<on time="0">
+				<play_sound type="SOUND" range="-1" sound="itemsound.ship_arrival_departure" />
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THE_FERRY_HAS_ARRIVED_AT_TALKING_ISLAND_HARBOR"/>
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THE_FERRY_WILL_LEAVE_FOR_GIRAN_HARBOR_AFTER_ANCHORING_FOR_TEN_MINUTES"/>
+			</on>
+			<on time="300">
+				<play_sound type="SOUND" range="-1" sound="itemsound.ship_5min" />
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THE_FERRY_WILL_LEAVE_FOR_GIRAN_HARBOR_IN_FIVE_MINUTES"/>
+			</on>
+			<on time="540">
+				<play_sound type="SOUND" range="-1" sound="itemsound.ship_1min" />
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THE_FERRY_WILL_LEAVE_FOR_GIRAN_HARBOR_IN_ONE_MINUTE"/>
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THOSE_WISHING_TO_RIDE_THE_FERRY_SHOULD_MAKE_HASTE_TO_GET_ON"/>
+			</on>
+			<on time="580">
+				<play_sound type="SOUND" range="-1" sound="itemsound.ship_1min" />
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THE_FERRY_WILL_BE_LEAVING_SOON_FOR_GIRAN_HARBOR"/>
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THOSE_WISHING_TO_RIDE_THE_FERRY_SHOULD_MAKE_HASTE_TO_GET_ON"/>
+			</on>
+			<on time="600">
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THE_FERRY_IS_LEAVING_FOR_GIRAN_HARBOR"/>
+				<start name="event"/>
+			</on>
+			<on time="800">
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THE_FERRY_FROM_TALKING_ISLAND_WILL_BE_ARRIVING_AT_GIRAN_HARBOR_IN_APPROXIMATELY_20_MINUTES"/>
+			</on>
+			<on time="1100">
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THE_FERRY_FROM_TALKING_ISLAND_WILL_BE_ARRIVING_AT_GIRAN_HARBOR_IN_APPROXIMATELY_15_MINUTES"/>
+			</on>
+			<on time="1400">
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THE_FERRY_FROM_TALKING_ISLAND_WILL_BE_ARRIVING_AT_GIRAN_HARBOR_IN_APPROXIMATELY_10_MINUTES"/>
+			</on>
+			<on time="1700">
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THE_FERRY_FROM_TALKING_ISLAND_WILL_BE_ARRIVING_AT_GIRAN_HARBOR_IN_APPROXIMATELY_5_MINUTES"/>
+			</on>
+			<on time="1940">
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THE_FERRY_FROM_TALKING_ISLAND_WILL_BE_ARRIVING_AT_GIRAN_HARBOR_IN_APPROXIMATELY_1_MINUTE"/>
+			</on>
+			<on time="2010">
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THE_FERRY_FROM_TALKING_ISLAND_TO_GIRAN_HARBOR_HAS_BEEN_DELAYED"/>
+			</on>
+			<on time="2200">
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THE_FERRY_FROM_TALKING_ISLAND_TO_GIRAN_HARBOR_HAS_BEEN_DELAYED"/>
+			</on>
+			<on time="2280">
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THE_FERRY_FROM_TALKING_ISLAND_TO_GIRAN_HARBOR_HAS_BEEN_DELAYED"/>
+			</on>
+			<on time="2560">
+				<say how="PASSENGER_BOAT_INFO" chat="SYSTEM_MESSAGE" range="-1" text="THE_FERRY_FROM_TALKING_ISLAND_TO_GIRAN_HARBOR_HAS_BEEN_DELAYED"/>
+			</on>
+		</on_time>
+		<objects name="boat_points">
+			<boat_point speed1="150" speed2="800" x="-113925" y="261660" z="-3610"/>
+			<boat_point speed1="180" speed2="800" x="-126107" y="249116" z="-3610"/>
+			<boat_point speed1="180" speed2="800" x="-126107" y="234499" z="-3610"/>
+			<boat_point speed1="180" speed2="800" x="-126107" y="219882" z="-3610"/>
+			<boat_point speed1="180" speed2="800" x="-109414" y="204914" z="-3610"/>
+			<boat_point speed1="180" speed2="800" x="-92807" y="204914" z="-3610"/>
+			<boat_point speed1="250" speed2="800" x="-80425" y="216450" z="-3610"/>
+			<boat_point speed1="250" speed2="800" x="-68043" y="227987" z="-3610"/>
+			<boat_point speed1="250" speed2="800" x="-63744" y="231168" z="-3610"/>
+			<boat_point speed1="250" speed2="1800" x="-60844" y="231369" z="-3610"/>
+			<boat_point speed1="200" speed2="800" x="-44915" y="231369" z="-3610"/>
+			<boat_point speed1="200" speed2="800" x="-28986" y="231369" z="-3610"/>
+			<boat_point speed1="200" speed2="800" x="8233" y="207624" z="-3610"/>
+			<boat_point speed1="180" speed2="800" x="21470" y="201503" z="-3610"/>
+			<boat_point speed1="180" speed2="800" x="40058" y="195383" z="-3610"/>
+			<boat_point speed1="150" speed2="800" x="43022" y="193793" z="-3610"/>
+			<boat_point speed1="150" speed2="800" x="45986" y="192203" z="-3610"/>
+			<boat_point speed1="150" speed2="800" x="48950" y="190613" z="-3610"/>
+	</objects>
+	</event>
+</list>

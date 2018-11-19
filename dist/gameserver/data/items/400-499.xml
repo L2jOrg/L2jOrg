@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<armor id="400" name="Theca Leather Armor">
+		<set name="crystal_count" value="330"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_t63_u_i00"/>
+		<set name="price" value="825000"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="4370"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="106"/>
+		</for>
+	</armor>
+	<armor id="401" name="Drake Leather Armor">
+		<set name="crystal_count" value="628"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_t45_ul_i00"/>
+		<set name="price" value="1570000"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="5800"/>
+		<equip>
+			<slot id="FULL_ARMOR"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="179"/>
+		</for>
+	</armor>
+	<armor id="412" name="Cotton Pants">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.armor_t07_l_i00"/>
+		<set name="price" value="12700"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="1630"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="32"/>
+		</for>
+	</armor>
+	<armor id="413" name="Puma Skin Gaiters">
+		<set name="crystal_count" value="71"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t09_l_i00"/>
+		<set name="price" value="39100"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="1600"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="36"/>
+		</for>
+	</armor>
+	<armor id="414" name="Lion Skin Gaiters">
+		<set name="crystal_count" value="113"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t18_l_i00"/>
+		<set name="price" value="62500"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="1570"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="41"/>
+		</for>
+	</armor>
+	<armor id="415" name="Mithril Banded Gaiters">
+		<set name="crystal_count" value="173"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t10_l_i00"/>
+		<set name="price" value="95200"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="1580"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="46"/>
+		</for>
+	</armor>
+	<armor id="416" name="Reinforced Leather Gaiters">
+		<set name="crystal_count" value="173"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t13_l_i00"/>
+		<set name="price" value="95200"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="1570"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="46"/>
+		</for>
+	</armor>
+	<armor id="417" name="Manticore Skin Gaiters">
+		<set name="crystal_count" value="254"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t42_l_i00"/>
+		<set name="price" value="140000"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="1550"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="48"/>
+		</for>
+	</armor>
+	<armor id="418" name="Plated Leather Gaiters">
+		<set name="crystal_count" value="111"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_t47_l_i00"/>
+		<set name="price" value="279000"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="1560"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="59"/>
+		</for>
+	</armor>
+	<armor id="419" name="Rind Leather Gaiters">
+		<set name="crystal_count" value="120"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_t49_l_i00"/>
+		<set name="price" value="302000"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="1550"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="60"/>
+		</for>
+	</armor>
+	<armor id="420" name="Theca Leather Gaiters">
+		<set name="crystal_count" value="206"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_t63_l_i00"/>
+		<set name="price" value="516000"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="1530"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="66"/>
+		</for>
+	</armor>
+	<armor id="425" name="Apprentice\'s Tunic">
+		<set name="price" value="26"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.armor_t01_u_i00"/>
+		<set name="tradeable" value="false"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="2150"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="17"/>
+			<add stat="maxMp" order="0x60" value="19"/>
+		</for>
+	</armor>
+	<armor id="426" name="Tunic">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.armor_t03_u_i00"/>
+		<set name="price" value="147"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="2150"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="18"/>
+			<add stat="maxMp" order="0x60" value="24"/>
+		</for>
+	</armor>
+	<armor id="428" name="Feriotic Tunic">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.armor_t52_u_i00"/>
+		<set name="price" value="2430"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="2140"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="21"/>
+			<add stat="maxMp" order="0x60" value="38"/>
+		</for>
+	</armor>
+	<armor id="429" name="Leather Tunic">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.armor_t05_u_i00"/>
+		<set name="price" value="7960"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="2110"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="25"/>
+			<add stat="maxMp" order="0x60" value="52"/>
+		</for>
+	</armor>
+	<armor id="431" name="Robe of Magic">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.armor_cotton_robe_i02"/>
+		<set name="price" value="53900"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="2600"/>
+		<equip>
+			<slot id="FULL_ARMOR"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="56"/>
+			<add stat="maxMp" order="0x60" value="140"/>
+		</for>
+	</armor>
+	<armor id="432" name="Cursed Tunic">
+		<set name="crystal_count" value="113"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t14_u_i00"/>
+		<set name="price" value="62600"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="2090"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="39"/>
+			<add stat="maxMp" order="0x60" value="106"/>
+		</for>
+	</armor>
+	<armor id="433" name="Elven Tunic">
+		<set name="crystal_count" value="181"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t11_u_i00"/>
+		<set name="price" value="99900"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="2080"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="43"/>
+			<add stat="maxMp" order="0x60" value="126"/>
+		</for>
+	</armor>
+	<armor id="434" name="White Tunic">
+		<set name="crystal_count" value="181"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t16_u_i00"/>
+		<set name="price" value="99900"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="2040"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="43"/>
+			<add stat="maxMp" order="0x60" value="126"/>
+		</for>
+	</armor>
+	<armor id="435" name="Wizard Tunic">
+		<set name="crystal_count" value="181"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t17_u_i00"/>
+		<set name="price" value="99900"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="2030"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="43"/>
+			<add stat="maxMp" order="0x60" value="126"/>
+		</for>
+	</armor>
+	<armor id="436" name="Tunic of Knowledge">
+		<set name="crystal_count" value="276"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t41_u_i00"/>
+		<set name="price" value="152000"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="2020"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="49"/>
+			<add stat="maxMp" order="0x60" value="147"/>
+		</for>
+	</armor>
+	<armor id="437" name="Mithril Tunic">
+		<set name="crystal_count" value="407"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t51_u_i00"/>
+		<set name="price" value="224000"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="2010"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="52"/>
+			<add stat="maxMp" order="0x60" value="169"/>
+		</for>
+	</armor>
+	<armor id="438" name="Sage\'s Rags">
+		<set name="crystal_count" value="780"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t44_ul_i00"/>
+		<set name="price" value="429000"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="2580"/>
+		<equip>
+			<slot id="FULL_ARMOR"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="90"/>
+			<add stat="maxMp" order="0x60" value="320"/>
+		</for>
+	</armor>
+	<armor id="439" name="Karmian Tunic">
+		<set name="crystal_count" value="151"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_t53_u_i00"/>
+		<set name="price" value="379000"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="1980"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="60"/>
+			<add stat="maxMp" order="0x60" value="225"/>
+		</for>
+	</armor>
+	<armor id="440" name="Robe of Seal">
+		<set name="crystal_count" value="282"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_t44_ul_i00"/>
+		<set name="price" value="707000"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="2500"/>
+		<equip>
+			<slot id="FULL_ARMOR"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="105"/>
+			<add stat="maxMp" order="0x60" value="413"/>
+		</for>
+	</armor>
+	<armor id="441" name="Demon\'s Tunic">
+		<set name="crystal_count" value="294"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_t54_u_i00"/>
+		<set name="price" value="736000"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="1990"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="69"/>
+			<add stat="maxMp" order="0x60" value="284"/>
+		</for>
+	</armor>
+	<armor id="442" name="Divine Tunic">
+		<set name="crystal_count" value="428"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_t57_u_i00"/>
+		<set name="price" value="1070000"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="1980"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="74"/>
+			<add stat="maxMp" order="0x60" value="314"/>
+		</for>
+	</armor>
+	<armor id="461" name="Apprentice\'s Stockings">
+		<set name="price" value="6"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.armor_t01_l_i00"/>
+		<set name="tradeable" value="false"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="1100"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="10"/>
+			<add stat="maxMp" order="0x60" value="10"/>
+		</for>
+	</armor>
+	<armor id="462" name="Stockings">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.armor_t03_l_i00"/>
+		<set name="price" value="92"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="1080"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="11"/>
+			<add stat="maxMp" order="0x60" value="15"/>
+		</for>
+	</armor>
+	<armor id="463" name="Feriotic Stockings">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.armor_t52_l_i00"/>
+		<set name="price" value="1520"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="1070"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="13"/>
+			<add stat="maxMp" order="0x60" value="23"/>
+		</for>
+	</armor>
+	<armor id="464" name="Leather Stockings">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.armor_t05_l_i00"/>
+		<set name="price" value="4970"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="1020"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="16"/>
+			<add stat="maxMp" order="0x60" value="33"/>
+		</for>
+	</armor>
+	<armor id="465" name="Cursed Stockings">
+		<set name="crystal_count" value="71"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t14_l_i00"/>
+		<set name="price" value="39100"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="1020"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="24"/>
+			<add stat="maxMp" order="0x60" value="66"/>
+		</for>
+	</armor>
+	<armor id="466" name="Elven Stockings">
+		<set name="crystal_count" value="113"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t11_l_i00"/>
+		<set name="price" value="62500"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="1010"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="27"/>
+			<add stat="maxMp" order="0x60" value="79"/>
+		</for>
+	</armor>
+	<armor id="467" name="Dark Stockings">
+		<set name="crystal_count" value="113"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t16_l_i00"/>
+		<set name="price" value="62500"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="1000"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="27"/>
+			<add stat="maxMp" order="0x60" value="79"/>
+		</for>
+	</armor>
+	<armor id="468" name="Wizard Stockings">
+		<set name="crystal_count" value="113"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t17_l_i00"/>
+		<set name="price" value="62500"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="990"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="27"/>
+			<add stat="maxMp" order="0x60" value="79"/>
+		</for>
+	</armor>
+	<armor id="469" name="Stockings of Knowledge">
+		<set name="crystal_count" value="173"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t41_l_i00"/>
+		<set name="price" value="95200"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="1000"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="30"/>
+			<add stat="maxMp" order="0x60" value="92"/>
+		</for>
+	</armor>
+	<armor id="470" name="Mithril Stockings">
+		<set name="crystal_count" value="254"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t51_l_i00"/>
+		<set name="price" value="140000"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="980"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="32"/>
+			<add stat="maxMp" order="0x60" value="105"/>
+		</for>
+	</armor>
+	<armor id="471" name="Karmian Stockings">
+		<set name="crystal_count" value="94"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_t53_l_i00"/>
+		<set name="price" value="237000"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="970"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="37"/>
+			<add stat="maxMp" order="0x60" value="141"/>
+		</for>
+	</armor>
+	<armor id="472" name="Demon\'s Stockings">
+		<set name="crystal_count" value="184"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_t54_l_i00"/>
+		<set name="price" value="460000"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="980"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="43"/>
+			<add stat="maxMp" order="0x60" value="177"/>
+		</for>
+	</armor>
+	<armor id="473" name="Divine Stockings">
+		<set name="crystal_count" value="268"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_t57_l_i00"/>
+		<set name="price" value="671000"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="960"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="46"/>
+			<add stat="maxMp" order="0x60" value="196"/>
+		</for>
+	</armor>
+	<armor id="497" name="Chain Helmet">
+		<set name="crystal_count" value="59"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_helmet_i00"/>
+		<set name="price" value="147000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="620"/>
+		<equip>
+			<slot id="HEAD"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="45"/>
+		</for>
+	</armor>
+	<armor id="498" name="Steel Plate Helmet">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_count" value="82"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_helmet_i00"/>
+		<set name="price" value="206000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="610"/>
+		<equip>
+			<slot id="HEAD"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="49"/>
+		</for>
+	</armor>
+	<armor id="499" name="Mithril Helmet">
+		<set name="crystal_count" value="214"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_circlet_i00"/>
+		<set name="price" value="536000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="240"/>
+		<equip>
+			<slot id="HEAD"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="58"/>
+		</for>
+	</armor>
+</list>
