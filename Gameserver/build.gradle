@@ -1,0 +1,76 @@
+plugins {
+    id "java"
+    id "idea"
+    id "eclipse"
+    id "application"
+}
+
+ext.moduleName = 'org.l2j.gameserver'
+mainClassName = "org.l2j.gameserver.GameServer"
+
+version '1.0'
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/org.l2j.gameserver']
+        }
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+}
+
+dependencies {
+    compile project(':Commons')
+    compile project(':Mmocore')
+
+    compile 'org.slf4j:slf4j-api:1.8.0-beta2'
+    compile 'org.python:jython-standalone:2.7.1'
+    compile 'org.springframework.data:spring-data-jdbc:1.0.1.RELEASE'
+    runtime 'org.apache.logging.log4j:log4j-core:2.11.0'
+    runtime 'org.apache.logging.log4j:log4j-api:2.11.0'
+    runtime 'org.apache.logging.log4j:log4j-slf4j-impl:2.11.0'
+    runtime 'com.zaxxer:HikariCP:3.2.0'
+
+    runtimeOnly ('mysql:mysql-connector-java:8.0.11') {
+        transitive = false
+    }
+
+}
+
+def generalManifest = manifest {
+    attributes('Built-By': System.getProperty('user.name'),
+            'Built-Date': new Date().format("yyyy-MM-dd HH:mm:ss"))
+}
+
+jar {
+    baseName 'gameserver'
+
+    exclude('config/**')
+    manifest {
+        from(generalManifest)
+        attributes('Main-Class': 'org.l2j.gameserver.GameServer')
+    }
+}
+
+task zip(type: Zip, group: "Archive", description: "Zip Gameserver") {
+    into('lib') {
+        from([jar, configurations.runtime])
+    }
+
+    into('data') {
+        from('data')
+    }
+
+    from('bin')
+
+    from(sourceSets.main.resources) {
+        exclude('gameserver-messages*properties')
+    }
+
+    destinationDir project.buildDir
+}
+
+build.finalizedBy(zip)
+

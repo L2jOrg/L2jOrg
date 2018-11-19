@@ -97,7 +97,7 @@
 		<jar destfile="${build}/gameserver.jar">
 			<fileset dir="${build.classes}" />
 			<manifest>
-				<attribute name="Main-Class" value="l2s.gameserver.GameServer" />
+				<attribute name="Main-Class" value="org.l2j.gameserver.GameServer" />
 				<attribute name="Class-Path" value="${jar.list} commons.jar" />
 				<attribute name="Build-By" value="${user.name}" />
 				<attribute name="Build-Date" value="${build.tstamp}" />

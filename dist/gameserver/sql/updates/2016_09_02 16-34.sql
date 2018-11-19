@@ -1,1 +1,0 @@
-DELETE FROM characters WHERE account_name='fake';

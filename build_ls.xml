@@ -96,7 +96,7 @@
 		<jar destfile="${build}/authserver.jar">
 			<fileset dir="${build.classes}" />
 			<manifest>
-				<attribute name="Main-Class" value="l2s.authserver.AuthServer" />
+				<attribute name="Main-Class" value="org.l2j.authserver.AuthServer" />
 				<attribute name="Class-Path" value="${jar.list} commons.jar" />
 				<attribute name="Build-By" value="${user.name}" />
 				<attribute name="Build-Date" value="${build.tstamp}" />
