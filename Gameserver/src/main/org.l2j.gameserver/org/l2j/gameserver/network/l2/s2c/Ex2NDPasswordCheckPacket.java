@@ -21,7 +21,7 @@ public class Ex2NDPasswordCheckPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_windowType);
-		writeD(0x00);
+		writeInt(_windowType);
+		writeInt(0x00);
 	}
 }

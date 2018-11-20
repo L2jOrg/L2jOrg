@@ -5,7 +5,7 @@ public class ExRaidServerInfo extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeC(0x00);
-		writeC(0x00);
+		writeByte(0x00);
+		writeByte(0x00);
 	}
 }

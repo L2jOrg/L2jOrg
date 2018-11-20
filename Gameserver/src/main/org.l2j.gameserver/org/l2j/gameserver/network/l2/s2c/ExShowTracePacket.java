@@ -66,13 +66,13 @@ public class ExShowTracePacket extends L2GameServerPacket
     @Override
     protected final void writeImpl()
     {
-        writeH(_traces.size());
+        writeShort(_traces.size());
         for(Trace t : _traces)
         {
-            writeD(t._x);
-            writeD(t._y);
-            writeD(t._z);
-            writeH(t._time);
+            writeInt(t._x);
+            writeInt(t._y);
+            writeInt(t._z);
+            writeShort(t._time);
         }
     }
 }

@@ -48,8 +48,8 @@ public class SocialActionPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_playerId);
-		writeD(_actionId);
-		writeD(0); // ??? 0
+		writeInt(_playerId);
+		writeInt(_actionId);
+		writeInt(0); // ??? 0
 	}
 }

@@ -47,12 +47,12 @@ public class PlaySoundPacket extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		//dSdddddd
-		writeD(_type.ordinal()); //0 for quest and ship, c4 toturial = 2
-		writeS(_soundFile);
-		writeD(_hasCenterObject); //0 for quest; 1 for ship;
-		writeD(_objectId); //0 for quest; objectId of ship
-		writeD(_x); //x
-		writeD(_y); //y
-		writeD(_z); //z
+		writeInt(_type.ordinal()); //0 for quest and ship, c4 toturial = 2
+		writeString(_soundFile);
+		writeInt(_hasCenterObject); //0 for quest; 1 for ship;
+		writeInt(_objectId); //0 for quest; objectId of ship
+		writeInt(_x); //x
+		writeInt(_y); //y
+		writeInt(_z); //z
 	}
 }

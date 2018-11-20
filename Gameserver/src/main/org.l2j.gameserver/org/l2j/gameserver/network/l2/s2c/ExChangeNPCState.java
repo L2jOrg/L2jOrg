@@ -14,7 +14,7 @@ public class ExChangeNPCState extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_objId);
-		writeD(_state);
+		writeInt(_objId);
+		writeInt(_state);
 	}
 }

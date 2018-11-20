@@ -25,36 +25,36 @@ public class PartySmallWindowAllPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(leaderId); // c3 party leader id
-		writeC(loot); //c3 party loot type (0,1,2,....)
-		writeC(members.size());
+		writeInt(leaderId); // c3 party leader id
+		writeByte(loot); //c3 party loot type (0,1,2,....)
+		writeByte(members.size());
 		for(PartySmallWindowMemberInfo mi : members)
 		{
-			writeD(mi.member.objId);
-			writeS(mi.member.name);
-			writeD(mi.member.curCp);
-			writeD(mi.member.maxCp);
-			writeD(mi.member.curHp);
-			writeD(mi.member.maxHp);
-			writeD(mi.member.curMp);
-			writeD(mi.member.maxMp);
-			writeD(0x00);
-			writeC(mi.member.level);
-			writeH(mi.member.classId);
-			writeC(mi.member.sex);
-			writeH(mi.member.raceId);
-			writeD(mi.m_servitors.size()); // Pet Count
+			writeInt(mi.member.objId);
+			writeString(mi.member.name);
+			writeInt(mi.member.curCp);
+			writeInt(mi.member.maxCp);
+			writeInt(mi.member.curHp);
+			writeInt(mi.member.maxHp);
+			writeInt(mi.member.curMp);
+			writeInt(mi.member.maxMp);
+			writeInt(0x00);
+			writeByte(mi.member.level);
+			writeShort(mi.member.classId);
+			writeByte(mi.member.sex);
+			writeShort(mi.member.raceId);
+			writeInt(mi.m_servitors.size()); // Pet Count
 			for(PartyMember servitor : mi.m_servitors)
 			{
-				writeD(servitor.objId);
-				writeD(servitor.npcId);
-				writeC(servitor.type);
-				writeS(servitor.name);
-				writeD(servitor.curHp);
-				writeD(servitor.maxHp);
-				writeD(servitor.curMp);
-				writeD(servitor.maxMp);
-				writeC(servitor.level);
+				writeInt(servitor.objId);
+				writeInt(servitor.npcId);
+				writeByte(servitor.type);
+				writeString(servitor.name);
+				writeInt(servitor.curHp);
+				writeInt(servitor.maxHp);
+				writeInt(servitor.curMp);
+				writeInt(servitor.maxMp);
+				writeByte(servitor.level);
 			}
 		}
 	}

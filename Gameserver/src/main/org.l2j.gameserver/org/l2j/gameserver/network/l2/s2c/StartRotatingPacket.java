@@ -17,9 +17,9 @@ public class StartRotatingPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_charId);
-		writeD(_degree);
-		writeD(_side);
-		writeD(_speed);
+		writeInt(_charId);
+		writeInt(_degree);
+		writeInt(_side);
+		writeInt(_speed);
 	}
 }

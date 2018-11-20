@@ -23,11 +23,11 @@ public class ExPCCafePointInfoPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_pcBangPoints);
-		writeD(_mAddPoint);
-		writeC(_mPeriodType);
-		writeD(_remainTime);
-		writeC(_pointType);
-		writeD(0); // TODO: online time
+		writeInt(_pcBangPoints);
+		writeInt(_mAddPoint);
+		writeByte(_mPeriodType);
+		writeInt(_remainTime);
+		writeByte(_pointType);
+		writeInt(0); // TODO: online time
 	}
 }

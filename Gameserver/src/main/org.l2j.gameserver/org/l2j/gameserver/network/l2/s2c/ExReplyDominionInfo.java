@@ -10,6 +10,6 @@ public class ExReplyDominionInfo extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(0x00);
+		writeInt(0x00);
 	}
 }

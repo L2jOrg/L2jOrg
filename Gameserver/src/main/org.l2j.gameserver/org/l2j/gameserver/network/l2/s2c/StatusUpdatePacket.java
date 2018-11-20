@@ -96,15 +96,15 @@ public class StatusUpdatePacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_objectId);
-		writeD(_visible ? _casterId : 0x00);
-		writeC(_visible ? 0x01 : 0x00); // при 1 идет рег хп
-		writeC(_attributes.size());
+		writeInt(_objectId);
+		writeInt(_visible ? _casterId : 0x00);
+		writeByte(_visible ? 0x01 : 0x00); // при 1 идет рег хп
+		writeByte(_attributes.size());
 
 		for(Attribute temp : _attributes)
 		{
-			writeC(temp.id);
-			writeD(temp.value);
+			writeByte(temp.id);
+			writeInt(temp.value);
 		}
 	}
 

@@ -9,7 +9,7 @@ public class RequestEx2ndPasswordVerify extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_password = readS();
+		_password = readString();
 	}
 
 	@Override

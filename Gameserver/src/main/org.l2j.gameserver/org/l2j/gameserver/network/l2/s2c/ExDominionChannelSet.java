@@ -15,6 +15,6 @@ public class ExDominionChannelSet extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_active);
+		writeInt(_active);
 	}
 }

@@ -24,11 +24,11 @@ public class RecipeShopItemInfoPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_shopId);
-		writeD(_recipeId);
-		writeD(_curMp);
-		writeD(_maxMp);
-		writeD(_success);
-		writeQ(_price);
+		writeInt(_shopId);
+		writeInt(_recipeId);
+		writeInt(_curMp);
+		writeInt(_maxMp);
+		writeInt(_success);
+		writeLong(_price);
 	}
 }

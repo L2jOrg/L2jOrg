@@ -20,10 +20,10 @@ public class TargetUnselectedPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_targetId);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z);
-		writeD(0x00); // иногда бывает 1
+		writeInt(_targetId);
+		writeInt(_loc.x);
+		writeInt(_loc.y);
+		writeInt(_loc.z);
+		writeInt(0x00); // иногда бывает 1
 	}
 }

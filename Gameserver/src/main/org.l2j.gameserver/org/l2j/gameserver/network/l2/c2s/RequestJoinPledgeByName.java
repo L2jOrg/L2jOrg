@@ -22,7 +22,7 @@ public class RequestJoinPledgeByName extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_targetName = readS();
+		_targetName = readString();
 		_pledgeType = readD();
 	}
 

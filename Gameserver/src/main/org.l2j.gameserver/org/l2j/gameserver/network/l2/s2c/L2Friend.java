@@ -27,10 +27,10 @@ public class L2Friend extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_add ? 1 : 3); // 1 - добавить друга в спикок, 3 удалить друга со списка
-		writeD(0); //и снова тут идет ID персонажа в списке оффа, не object id
-		writeS(_name);
-		writeD(_online ? 1 : 0); // онлайн или оффлайн
-		writeD(_object_id); //object_id if online
+		writeInt(_add ? 1 : 3); // 1 - добавить друга в спикок, 3 удалить друга со списка
+		writeInt(0); //и снова тут идет ID персонажа в списке оффа, не object id
+		writeString(_name);
+		writeInt(_online ? 1 : 0); // онлайн или оффлайн
+		writeInt(_object_id); //object_id if online
 	}
 }

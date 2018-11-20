@@ -14,6 +14,6 @@ public class ExDuelEnd extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_duelType);
+		writeInt(_duelType);
 	}
 }

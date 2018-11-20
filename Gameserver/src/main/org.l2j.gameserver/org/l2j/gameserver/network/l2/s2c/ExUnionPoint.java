@@ -16,6 +16,6 @@ public class ExUnionPoint extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_clanId);
+		writeInt(_clanId);
 	}
 }

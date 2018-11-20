@@ -39,9 +39,9 @@ public class RequestBR_PresentBuyProduct extends L2GameClientPacket
 	{
 		_productId = readD();
 		_count = readD();
-		_receiverName = readS();
-		_topic = readS();
-		_message = readS();
+		_receiverName = readString();
+		_topic = readString();
+		_message = readString();
 	}
 
 	@Override

@@ -19,7 +19,7 @@ public final class ExEnchantFail extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_itemOne);
-		writeD(_itemTwo);
+		writeInt(_itemOne);
+		writeInt(_itemTwo);
 	}
 }

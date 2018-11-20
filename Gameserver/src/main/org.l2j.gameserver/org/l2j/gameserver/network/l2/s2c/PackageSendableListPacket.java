@@ -35,13 +35,13 @@ public class PackageSendableListPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_targetObjectId);
-		writeQ(_adena);
-		writeD(_itemList.size());
+		writeInt(_targetObjectId);
+		writeLong(_adena);
+		writeInt(_itemList.size());
 		for(ItemInfo item : _itemList)
 		{
 			writeItemInfo(item);
-			writeD(item.getObjectId());
+			writeInt(item.getObjectId());
 		}
 	}
 }

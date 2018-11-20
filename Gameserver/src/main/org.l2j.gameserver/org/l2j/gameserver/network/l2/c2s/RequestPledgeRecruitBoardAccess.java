@@ -25,8 +25,8 @@ public class RequestPledgeRecruitBoardAccess extends L2GameClientPacket
 	{
 		_pledgeAccess = readD();
 		_searchType = ClanSearchListType.getType(readD());
-		readS();
-		_desc = readS();
+		readString();
+		_desc = readString();
 		_application = readD();
 		_subUnit = readD();
 	}

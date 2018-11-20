@@ -47,14 +47,14 @@ public class AbnormalStatusUpdatePacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeH(_effects.size());
+		writeShort(_effects.size());
 
 		for(Abnormal temp : _effects)
 		{
-			writeD(temp.skillId);
-			writeH(temp.dat);
-			writeD(0x00); // UNK Ertheia
-			writeH(temp.duration);
+			writeInt(temp.skillId);
+			writeShort(temp.dat);
+			writeInt(0x00); // UNK Ertheia
+			writeShort(temp.duration);
 		}
 	}
 }

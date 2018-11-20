@@ -31,19 +31,19 @@ public class ExShowSentPostList extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD((int) (System.currentTimeMillis() / 1000L));
-		writeD(mails.size()); // количество писем
+		writeInt((int) (System.currentTimeMillis() / 1000L));
+		writeInt(mails.size()); // количество писем
 		for(Mail mail : mails)
 		{
-			writeD(mail.getMessageId()); // уникальный id письма
-			writeS(mail.getTopic()); // топик
-			writeS(mail.getReceiverName()); // получатель
-			writeD(mail.isPayOnDelivery() ? 1 : 0); // если тут 1 то письмо требует оплаты
-			writeD(mail.getExpireTime()); // время действительности письма
-			writeD(mail.isUnread() ? 1 : 0); // ?
-			writeD(mail.isReturnable()); // returnable
-			writeD(mail.getAttachments().isEmpty() ? 0 : 1); // 1 - письмо с приложением, 0 - просто письмо
-			writeD(0x00); // ???
+			writeInt(mail.getMessageId()); // уникальный id письма
+			writeString(mail.getTopic()); // топик
+			writeString(mail.getReceiverName()); // получатель
+			writeInt(mail.isPayOnDelivery() ? 1 : 0); // если тут 1 то письмо требует оплаты
+			writeInt(mail.getExpireTime()); // время действительности письма
+			writeInt(mail.isUnread() ? 1 : 0); // ?
+			writeInt(mail.isReturnable()); // returnable
+			writeInt(mail.getAttachments().isEmpty() ? 0 : 1); // 1 - письмо с приложением, 0 - просто письмо
+			writeInt(0x00); // ???
 		}
 	}
 }

@@ -23,6 +23,6 @@ public class ExReplyWritePost extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_reply); // 1 - закрыть окно письма, иное - не закрывать
+		writeInt(_reply); // 1 - закрыть окно письма, иное - не закрывать
 	}
 }

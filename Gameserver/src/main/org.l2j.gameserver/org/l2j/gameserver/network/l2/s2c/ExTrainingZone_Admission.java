@@ -29,8 +29,8 @@ public class ExTrainingZone_Admission extends L2GameServerPacket
 	@Override
 	public void writeImpl()
 	{
-		writeD(_timeElapsed);
-		writeD(_timeRemaining);
+		writeInt(_timeElapsed);
+		writeInt(_timeRemaining);
 		writeF(_maxExp);
 		writeF(_maxSp);
 	}

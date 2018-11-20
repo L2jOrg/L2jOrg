@@ -18,14 +18,14 @@ public class ExJumpToLocation extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_objectId);
+		writeInt(_objectId);
 
-		writeD(_destination.x);
-		writeD(_destination.y);
-		writeD(_destination.z);
+		writeInt(_destination.x);
+		writeInt(_destination.y);
+		writeInt(_destination.z);
 
-		writeD(_current.x);
-		writeD(_current.y);
-		writeD(_current.z);
+		writeInt(_current.x);
+		writeInt(_current.y);
+		writeInt(_current.z);
 	}
 }

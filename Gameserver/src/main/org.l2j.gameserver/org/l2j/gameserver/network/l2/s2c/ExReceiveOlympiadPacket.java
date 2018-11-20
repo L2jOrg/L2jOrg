@@ -48,15 +48,15 @@ public abstract class ExReceiveOlympiadPacket extends L2GameServerPacket
 		protected void writeImpl()
 		{
 			super.writeImpl();
-			writeD(_arenaList.size());
-			writeD(0x00); //unknown
+			writeInt(_arenaList.size());
+			writeInt(0x00); //unknown
 			for(ArenaInfo arena : _arenaList)
 			{
-				writeD(arena._id);
-				writeD(arena._matchType);
-				writeD(arena._status);
-				writeS(arena._name1);
-				writeS(arena._name2);
+				writeInt(arena._id);
+				writeInt(arena._matchType);
+				writeInt(arena._status);
+				writeString(arena._name1);
+				writeString(arena._name2);
 			}
 		}
 
@@ -114,33 +114,33 @@ public abstract class ExReceiveOlympiadPacket extends L2GameServerPacket
 		protected void writeImpl()
 		{
 			super.writeImpl();
-			writeD(_tie);
-			writeS(_name);
-			writeD(0x01);
-			writeD(_teamOne.size());
+			writeInt(_tie);
+			writeString(_name);
+			writeInt(0x01);
+			writeInt(_teamOne.size());
 			for (PlayerInfo playerInfo : _teamOne)
 			{
-				writeS(playerInfo._name);
-				writeS(playerInfo._clanName);
-				writeD(0x00);
-				writeD(playerInfo._classId);
-				writeD(playerInfo._damage);
-				writeD(playerInfo._currentPoints);
-				writeD(playerInfo._gamePoints);
-				writeD(0x00);
+				writeString(playerInfo._name);
+				writeString(playerInfo._clanName);
+				writeInt(0x00);
+				writeInt(playerInfo._classId);
+				writeInt(playerInfo._damage);
+				writeInt(playerInfo._currentPoints);
+				writeInt(playerInfo._gamePoints);
+				writeInt(0x00);
 			}
-			writeD(0x02);
-			writeD(_teamTwo.size());
+			writeInt(0x02);
+			writeInt(_teamTwo.size());
 			for(PlayerInfo playerInfo : _teamTwo)
 			{
-				writeS(playerInfo._name);
-				writeS(playerInfo._clanName);
-				writeD(0x00);
-				writeD(playerInfo._classId);
-				writeD(playerInfo._damage);
-				writeD(playerInfo._currentPoints);
-				writeD(playerInfo._gamePoints);
-				writeD(0x00);
+				writeString(playerInfo._name);
+				writeString(playerInfo._clanName);
+				writeInt(0x00);
+				writeInt(playerInfo._classId);
+				writeInt(playerInfo._damage);
+				writeInt(playerInfo._currentPoints);
+				writeInt(playerInfo._gamePoints);
+				writeInt(0x00);
 			}
 		}
 
@@ -177,6 +177,6 @@ public abstract class ExReceiveOlympiadPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_type);
+		writeInt(_type);
 	}
 }

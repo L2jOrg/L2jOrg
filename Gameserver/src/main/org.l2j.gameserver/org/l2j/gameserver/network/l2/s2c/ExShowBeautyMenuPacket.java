@@ -27,9 +27,9 @@ public class ExShowBeautyMenuPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_type);  // 0x00 - изменение стиля, 0x01 отмена стиля
-		writeD(_hairStyle);
-		writeD(_hairColor);
-		writeD(_face);
+		writeInt(_type);  // 0x00 - изменение стиля, 0x01 отмена стиля
+		writeInt(_hairStyle);
+		writeInt(_hairColor);
+		writeInt(_face);
 	}
 }

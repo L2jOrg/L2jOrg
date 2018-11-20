@@ -39,15 +39,15 @@ public class ExDuelUpdateUserInfo extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeS(_name);
-		writeD(obj_id);
-		writeD(class_id);
-		writeD(level);
-		writeD(curHp);
-		writeD(maxHp);
-		writeD(curMp);
-		writeD(maxMp);
-		writeD(curCp);
-		writeD(maxCp);
+		writeString(_name);
+		writeInt(obj_id);
+		writeInt(class_id);
+		writeInt(level);
+		writeInt(curHp);
+		writeInt(maxHp);
+		writeInt(curMp);
+		writeInt(maxMp);
+		writeInt(curCp);
+		writeInt(maxCp);
 	}
 }

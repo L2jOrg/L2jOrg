@@ -76,36 +76,36 @@ public class CastleSiegeDefenderListPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_id);
-		writeD(0x00);
-		writeD(_registrationValid);
-		writeD(0x00);
+		writeInt(_id);
+		writeInt(0x00);
+		writeInt(_registrationValid);
+		writeInt(0x00);
 
-		writeD(_defenderClans.size());
-		writeD(_defenderClans.size());
+		writeInt(_defenderClans.size());
+		writeInt(_defenderClans.size());
 		for(DefenderClan defenderClan : _defenderClans)
 		{
 			Clan clan = defenderClan._clan;
 
-			writeD(clan.getClanId());
-			writeS(clan.getName());
-			writeS(clan.getLeaderName());
-			writeD(clan.getCrestId());
-			writeD(defenderClan._time);
-			writeD(defenderClan._type);
-			writeD(clan.getAllyId());
+			writeInt(clan.getClanId());
+			writeString(clan.getName());
+			writeString(clan.getLeaderName());
+			writeInt(clan.getCrestId());
+			writeInt(defenderClan._time);
+			writeInt(defenderClan._type);
+			writeInt(clan.getAllyId());
 			Alliance alliance = clan.getAlliance();
 			if(alliance != null)
 			{
-				writeS(alliance.getAllyName());
-				writeS(alliance.getAllyLeaderName());
-				writeD(alliance.getAllyCrestId());
+				writeString(alliance.getAllyName());
+				writeString(alliance.getAllyLeaderName());
+				writeInt(alliance.getAllyCrestId());
 			}
 			else
 			{
-				writeS(StringUtils.EMPTY);
-				writeS(StringUtils.EMPTY);
-				writeD(0x00);
+				writeString(StringUtils.EMPTY);
+				writeString(StringUtils.EMPTY);
+				writeInt(0x00);
 			}
 		}
 	}

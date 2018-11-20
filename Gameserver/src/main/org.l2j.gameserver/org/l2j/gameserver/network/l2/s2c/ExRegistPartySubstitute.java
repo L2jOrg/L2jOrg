@@ -12,7 +12,7 @@ public class ExRegistPartySubstitute extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_object);
-		writeD(0x01);
+		writeInt(_object);
+		writeInt(0x01);
 	}
 }

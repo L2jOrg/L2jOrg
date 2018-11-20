@@ -28,8 +28,8 @@ public class PledgeReceivePowerInfo extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(PowerGrade);
-		writeS(member_name);
-		writeD(privs);
+		writeInt(PowerGrade);
+		writeString(member_name);
+		writeInt(privs);
 	}
 }

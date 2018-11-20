@@ -15,7 +15,7 @@ public class FriendRemove extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(1); //UNK
-		writeS(_friendName); //FriendName
+		writeInt(1); //UNK
+		writeString(_friendName); //FriendName
 	}
 }

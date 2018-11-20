@@ -22,7 +22,7 @@ public class PrivateStoreMsg extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_objId);
-		writeS(_name);
+		writeInt(_objId);
+		writeString(_name);
 	}
 }

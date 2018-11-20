@@ -55,7 +55,7 @@ public class EnterWorld extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		//readS(); - клиент всегда отправляет строку "narcasse"
+		//readString(); - клиент всегда отправляет строку "narcasse"
 	}
 
 	@Override

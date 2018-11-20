@@ -271,236 +271,236 @@ public class UIPacket extends AbstractMaskPacket<UserInfoType>
 		if(!can_writeImpl)
 			return;
 
-		writeD(obj_id);
+		writeInt(obj_id);
 
-		writeD(_initSize);
-		writeH(23);
+		writeInt(_initSize);
+		writeShort(23);
 		writeB(_masks);
 
 		if(containsMask(UserInfoType.RELATION))
-			writeD(_relation);
+			writeInt(_relation);
 
 		if(containsMask(UserInfoType.BASIC_INFO))
 		{
-			writeH(UserInfoType.BASIC_INFO.getBlockLength() + (_name.length() * 2));
+			writeShort(UserInfoType.BASIC_INFO.getBlockLength() + (_name.length() * 2));
 			writeString(_name);
-			writeC(gm_commands);
-			writeC(_race);
-			writeC(sex);
-			writeD(base_class);
-			writeD(class_id);
-			writeC(level);
+			writeByte(gm_commands);
+			writeByte(_race);
+			writeByte(sex);
+			writeInt(base_class);
+			writeInt(class_id);
+			writeByte(level);
 		}
 
 		if(containsMask(UserInfoType.BASE_STATS))
 		{
-			writeH(UserInfoType.BASE_STATS.getBlockLength());
-			writeH(_str);
-			writeH(_dex);
-			writeH(_con);
-			writeH(_int);
-			writeH(_wit);
-			writeH(_men);
-			writeH(0x00);
-			writeH(0x00);
+			writeShort(UserInfoType.BASE_STATS.getBlockLength());
+			writeShort(_str);
+			writeShort(_dex);
+			writeShort(_con);
+			writeShort(_int);
+			writeShort(_wit);
+			writeShort(_men);
+			writeShort(0x00);
+			writeShort(0x00);
 		}
 
 		if(containsMask(UserInfoType.MAX_HPCPMP))
 		{
-			writeH(UserInfoType.MAX_HPCPMP.getBlockLength());
-			writeD(maxHp);
-			writeD(maxMp);
-			writeD(maxCp);
+			writeShort(UserInfoType.MAX_HPCPMP.getBlockLength());
+			writeInt(maxHp);
+			writeInt(maxMp);
+			writeInt(maxCp);
 		}
 
 		if(containsMask(UserInfoType.CURRENT_HPMPCP_EXP_SP))
 		{
-			writeH(UserInfoType.CURRENT_HPMPCP_EXP_SP.getBlockLength());
-			writeD(curHp);
-			writeD(curMp);
-			writeD(curCp);
-			writeQ(_sp);
-			writeQ(_exp);
+			writeShort(UserInfoType.CURRENT_HPMPCP_EXP_SP.getBlockLength());
+			writeInt(curHp);
+			writeInt(curMp);
+			writeInt(curCp);
+			writeLong(_sp);
+			writeLong(_exp);
 			writeF(_expPercent);
 		}
 
 		if(containsMask(UserInfoType.ENCHANTLEVEL))
 		{
-			writeH(UserInfoType.ENCHANTLEVEL.getBlockLength());
-			writeC(_weaponEnchant);
-			writeC(_armorSetEnchant);
+			writeShort(UserInfoType.ENCHANTLEVEL.getBlockLength());
+			writeByte(_weaponEnchant);
+			writeByte(_armorSetEnchant);
 		}
 
 		if(containsMask(UserInfoType.APPAREANCE))
 		{
-			writeH(UserInfoType.APPAREANCE.getBlockLength());
-			writeD(hair_style);
-			writeD(hair_color);
-			writeD(face);
-			writeC(!_hideHeadAccessories);  //переключения прически/головного убора
+			writeShort(UserInfoType.APPAREANCE.getBlockLength());
+			writeInt(hair_style);
+			writeInt(hair_color);
+			writeInt(face);
+			writeByte(!_hideHeadAccessories);  //переключения прически/головного убора
 		}
 
 		if(containsMask(UserInfoType.STATUS))
 		{
-			writeH(UserInfoType.STATUS.getBlockLength());
-			writeC(mount_type);
-			writeC(private_store);
-			writeC(can_crystalize);
-			writeC(0x00);
+			writeShort(UserInfoType.STATUS.getBlockLength());
+			writeByte(mount_type);
+			writeByte(private_store);
+			writeByte(can_crystalize);
+			writeByte(0x00);
 		}
 
 		if(containsMask(UserInfoType.STATS))
 		{
-			writeH(UserInfoType.STATS.getBlockLength());
-			writeH(_weaponFlag);
-			writeD(_patk);
-			writeD(_patkspd);
-			writeD(_pdef);
-			writeD(_pEvasion);
-			writeD(_pAccuracy);
-			writeD(_pCrit);
-			writeD(_matk);
-			writeD(_matkspd);
-			writeD(_patkspd);
-			writeD(_mEvasion);
-			writeD(_mdef);
-			writeD(_mAccuracy);
-			writeD(_mCrit);
+			writeShort(UserInfoType.STATS.getBlockLength());
+			writeShort(_weaponFlag);
+			writeInt(_patk);
+			writeInt(_patkspd);
+			writeInt(_pdef);
+			writeInt(_pEvasion);
+			writeInt(_pAccuracy);
+			writeInt(_pCrit);
+			writeInt(_matk);
+			writeInt(_matkspd);
+			writeInt(_patkspd);
+			writeInt(_mEvasion);
+			writeInt(_mdef);
+			writeInt(_mAccuracy);
+			writeInt(_mCrit);
 		}
 
 		if(containsMask(UserInfoType.ELEMENTALS))
 		{
-			writeH(UserInfoType.ELEMENTALS.getBlockLength());
-			writeH(defenceFire);
-			writeH(defenceWater);
-			writeH(defenceWind);
-			writeH(defenceEarth);
-			writeH(defenceHoly);
-			writeH(defenceUnholy);
+			writeShort(UserInfoType.ELEMENTALS.getBlockLength());
+			writeShort(defenceFire);
+			writeShort(defenceWater);
+			writeShort(defenceWind);
+			writeShort(defenceEarth);
+			writeShort(defenceHoly);
+			writeShort(defenceUnholy);
 		}
 
 		if(containsMask(UserInfoType.POSITION))
 		{
-			writeH(UserInfoType.POSITION.getBlockLength());
-			writeD(_loc.x);
-			writeD(_loc.y);
-			writeD(_loc.z + Config.CLIENT_Z_SHIFT);
-			writeD(vehicle_obj_id);
+			writeShort(UserInfoType.POSITION.getBlockLength());
+			writeInt(_loc.x);
+			writeInt(_loc.y);
+			writeInt(_loc.z + Config.CLIENT_Z_SHIFT);
+			writeInt(vehicle_obj_id);
 		}
 
 		if(containsMask(UserInfoType.SPEED))
 		{
-			writeH(UserInfoType.SPEED.getBlockLength());
-			writeH(_runSpd);
-			writeH(_walkSpd);
-			writeH(_swimRunSpd);
-			writeH(_swimWalkSpd);
-			writeH(_flRunSpd);
-			writeH(_flWalkSpd);
-			writeH(_flyRunSpd);
-			writeH(_flyWalkSpd);
+			writeShort(UserInfoType.SPEED.getBlockLength());
+			writeShort(_runSpd);
+			writeShort(_walkSpd);
+			writeShort(_swimRunSpd);
+			writeShort(_swimWalkSpd);
+			writeShort(_flRunSpd);
+			writeShort(_flWalkSpd);
+			writeShort(_flyRunSpd);
+			writeShort(_flyWalkSpd);
 		}
 
 		if(containsMask(UserInfoType.MULTIPLIER))
 		{
-			writeH(UserInfoType.MULTIPLIER.getBlockLength());
+			writeShort(UserInfoType.MULTIPLIER.getBlockLength());
 			writeF(move_speed);
 			writeF(attack_speed);
 		}
 
 		if(containsMask(UserInfoType.COL_RADIUS_HEIGHT))
 		{
-			writeH(UserInfoType.COL_RADIUS_HEIGHT.getBlockLength());
+			writeShort(UserInfoType.COL_RADIUS_HEIGHT.getBlockLength());
 			writeF(col_radius);
 			writeF(col_height);
 		}
 
 		if(containsMask(UserInfoType.ATK_ELEMENTAL))
 		{
-			writeH(UserInfoType.ATK_ELEMENTAL.getBlockLength());
-			writeC(attackElement.getId());
-			writeH(attackElementValue);
+			writeShort(UserInfoType.ATK_ELEMENTAL.getBlockLength());
+			writeByte(attackElement.getId());
+			writeShort(attackElementValue);
 		}
 
 		if(containsMask(UserInfoType.CLAN))
 		{
-			writeH(UserInfoType.CLAN.getBlockLength() + (_title.length() * 2));
+			writeShort(UserInfoType.CLAN.getBlockLength() + (_title.length() * 2));
 			writeString(_title);
-			writeH(pledge_type);
-			writeD(clan_id);
-			writeD(large_clan_crest_id);
-			writeD(clan_crest_id);
-			writeD(ClanPrivs);
-			writeC(_isClanLeader);
-			writeD(ally_id);
-			writeD(ally_crest_id);
-			writeC(partyRoom ? 0x01 : 0x00);
+			writeShort(pledge_type);
+			writeInt(clan_id);
+			writeInt(large_clan_crest_id);
+			writeInt(clan_crest_id);
+			writeInt(ClanPrivs);
+			writeByte(_isClanLeader);
+			writeInt(ally_id);
+			writeInt(ally_crest_id);
+			writeByte(partyRoom ? 0x01 : 0x00);
 		}
 
 		if(containsMask(UserInfoType.SOCIAL))
 		{
-			writeH(UserInfoType.SOCIAL.getBlockLength());
-			writeC(pvp_flag);
-			writeD(karma);
-			writeC(0x00);
-			writeC(hero);
-			writeC(pledge_class);
-			writeD(pk_kills);
-			writeD(pvp_kills);
-			writeH(rec_left);
-			writeH(rec_have);
+			writeShort(UserInfoType.SOCIAL.getBlockLength());
+			writeByte(pvp_flag);
+			writeInt(karma);
+			writeByte(0x00);
+			writeByte(hero);
+			writeByte(pledge_class);
+			writeInt(pk_kills);
+			writeInt(pvp_kills);
+			writeShort(rec_left);
+			writeShort(rec_have);
 		}
 
 		if(containsMask(UserInfoType.VITA_FAME))
 		{
-			writeH(UserInfoType.VITA_FAME.getBlockLength());
-			writeD(0x00);
-			writeC(0x00); // Vita Bonus
-			writeD(fame);
-			writeD(0x00); // raid points
+			writeShort(UserInfoType.VITA_FAME.getBlockLength());
+			writeInt(0x00);
+			writeByte(0x00); // Vita Bonus
+			writeInt(fame);
+			writeInt(0x00); // raid points
 		}
 
 		if(containsMask(UserInfoType.SLOTS))
 		{
-			writeH(UserInfoType.SLOTS.getBlockLength());
-			writeC(talismans);
-			writeC(_jewelsLimit);
-			writeC(_team.ordinal());
-			writeC(0x00);
-			writeC(0x00);
-			writeC(0x00);
-			writeC(0x00);
+			writeShort(UserInfoType.SLOTS.getBlockLength());
+			writeByte(talismans);
+			writeByte(_jewelsLimit);
+			writeByte(_team.ordinal());
+			writeByte(0x00);
+			writeByte(0x00);
+			writeByte(0x00);
+			writeByte(0x00);
 		}
 
 		if(containsMask(UserInfoType.MOVEMENTS))
 		{
-			writeH(UserInfoType.MOVEMENTS.getBlockLength());
-			writeC(_moveType);
-			writeC(running);
+			writeShort(UserInfoType.MOVEMENTS.getBlockLength());
+			writeByte(_moveType);
+			writeByte(running);
 		}
 
 		if(containsMask(UserInfoType.COLOR))
 		{
-			writeH(UserInfoType.COLOR.getBlockLength());
-			writeD(name_color);
-			writeD(title_color);
+			writeShort(UserInfoType.COLOR.getBlockLength());
+			writeInt(name_color);
+			writeInt(title_color);
 		}
 
 		if(containsMask(UserInfoType.INVENTORY_LIMIT))
 		{
-			writeH(UserInfoType.INVENTORY_LIMIT.getBlockLength());
-			writeH(0x00);
-			writeH(0x00);
-			writeH(InventoryLimit);
-			writeC(0); // hide title - 1, 0 - no
+			writeShort(UserInfoType.INVENTORY_LIMIT.getBlockLength());
+			writeShort(0x00);
+			writeShort(0x00);
+			writeShort(InventoryLimit);
+			writeByte(0); // hide title - 1, 0 - no
 		}
 
 		if(containsMask(UserInfoType.UNK_3))
 		{
-			writeH(UserInfoType.UNK_3.getBlockLength());
-			writeD(0x00);
-			writeH(0x00);
-			writeC(0x00);
+			writeShort(UserInfoType.UNK_3.getBlockLength());
+			writeInt(0x00);
+			writeShort(0x00);
+			writeByte(0x00);
 		}
 	}
 }

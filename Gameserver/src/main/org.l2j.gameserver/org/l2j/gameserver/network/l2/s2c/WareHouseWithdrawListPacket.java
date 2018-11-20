@@ -52,26 +52,26 @@ public class WareHouseWithdrawListPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeH(_type);
-		writeQ(_adena);
-		writeH(_itemList.size());
+		writeShort(_type);
+		writeLong(_adena);
+		writeShort(_itemList.size());
 		if(_type == 1 || _type == 2)
 		{
 			if(_itemList.size() > 0)
 			{
-				writeH(0x01);
-				writeD(0x1063); // TODO: writeD(_itemList.get(0).getItemId()); первый предмет в списке.
+				writeShort(0x01);
+				writeInt(0x1063); // TODO: writeInt(_itemList.get(0).getItemId()); первый предмет в списке.
 			}
 			else
-				writeH(0x00);
+				writeShort(0x00);
 		}
-		writeD(_inventoryUsedSlots); //Количество занятых ячеек в инвентаре.
+		writeInt(_inventoryUsedSlots); //Количество занятых ячеек в инвентаре.
 		for(ItemInfo item : _itemList)
 		{
 			writeItemInfo(item);
-			writeD(item.getObjectId());
-			writeD(0);
-			writeD(0);
+			writeInt(item.getObjectId());
+			writeInt(0);
+			writeInt(0);
 		}
 	}
 }

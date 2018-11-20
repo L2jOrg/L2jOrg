@@ -58,12 +58,12 @@ public class EtcStatusUpdatePacket extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		// cdccccc
-		writeC(_increasedForce); // skill id 4271, 7 lvl
-		writeD(_weightPenalty); // skill id 4270, 4 lvl
-		writeC(_weaponPenalty); // weapon grade penalty, skill 6209 in epilogue
-		writeC(_armorPenalty); // armor grade penalty, skill 6213 in epilogue
-		writeC(0x00); //Death Penalty max lvl 15, "Combat ability is decreased due to death."
-		writeC(_consumedSouls);
-		writeC(_flags);
+		writeByte(_increasedForce); // skill id 4271, 7 lvl
+		writeInt(_weightPenalty); // skill id 4270, 4 lvl
+		writeByte(_weaponPenalty); // weapon grade penalty, skill 6209 in epilogue
+		writeByte(_armorPenalty); // armor grade penalty, skill 6213 in epilogue
+		writeByte(0x00); //Death Penalty max lvl 15, "Combat ability is decreased due to death."
+		writeByte(_consumedSouls);
+		writeByte(_flags);
 	}
 }

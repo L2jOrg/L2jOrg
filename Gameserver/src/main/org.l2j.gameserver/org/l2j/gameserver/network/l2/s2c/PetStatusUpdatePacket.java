@@ -36,22 +36,22 @@ public class PetStatusUpdatePacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(type);
-		writeD(obj_id);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z);
-		writeS(title);
-		writeD(curFed);
-		writeD(maxFed);
-		writeD(curHp);
-		writeD(maxHp);
-		writeD(curMp);
-		writeD(maxMp);
-		writeD(level);
-		writeQ(exp);
-		writeQ(exp_this_lvl);// 0% absolute value
-		writeQ(exp_next_lvl);// 100% absolute value
-		writeD(0); // ???
+		writeInt(type);
+		writeInt(obj_id);
+		writeInt(_loc.x);
+		writeInt(_loc.y);
+		writeInt(_loc.z);
+		writeString(title);
+		writeInt(curFed);
+		writeInt(maxFed);
+		writeInt(curHp);
+		writeInt(maxHp);
+		writeInt(curMp);
+		writeInt(maxMp);
+		writeInt(level);
+		writeLong(exp);
+		writeLong(exp_this_lvl);// 0% absolute value
+		writeLong(exp_next_lvl);// 100% absolute value
+		writeInt(0); // ???
 	}
 }

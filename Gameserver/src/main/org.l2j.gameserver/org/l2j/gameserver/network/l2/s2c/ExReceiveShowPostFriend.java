@@ -19,8 +19,8 @@ public class ExReceiveShowPostFriend extends L2GameServerPacket
 	@Override
 	public void writeImpl()
 	{
-		writeD(_list.size());
+		writeInt(_list.size());
 		for(String t : _list.values())
-			writeS(t);
+			writeString(t);
 	}
 }

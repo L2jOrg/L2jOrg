@@ -38,38 +38,38 @@ public class CharacterSelectedPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeS(_name);
-		writeD(char_id);
-		writeS(_title);
-		writeD(_sessionId);
-		writeD(clan_id);
-		writeD(0x00); //??
-		writeD(sex);
-		writeD(race);
-		writeD(class_id);
-		writeD(0x01); // active ??
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z);
+		writeString(_name);
+		writeInt(char_id);
+		writeString(_title);
+		writeInt(_sessionId);
+		writeInt(clan_id);
+		writeInt(0x00); //??
+		writeInt(sex);
+		writeInt(race);
+		writeInt(class_id);
+		writeInt(0x01); // active ??
+		writeInt(_loc.x);
+		writeInt(_loc.y);
+		writeInt(_loc.z);
 
 		writeF(curHp);
 		writeF(curMp);
-		writeQ(_sp);
-		writeQ(_exp);
-		writeD(level);
-		writeD(karma); //?
-		writeD(_pk);
+		writeLong(_sp);
+		writeLong(_exp);
+		writeInt(level);
+		writeInt(karma); //?
+		writeInt(_pk);
 		// extra info
-		writeD(GameTimeController.getInstance().getGameTime()); // in-game time
-		writeD(0x00); //
-		writeD(0x00); // Default classId
+		writeInt(GameTimeController.getInstance().getGameTime()); // in-game time
+		writeInt(0x00); //
+		writeInt(0x00); // Default classId
 
-		writeD(0);
-		writeD(0);
-		writeD(0);
-		writeD(0);
+		writeInt(0);
+		writeInt(0);
+		writeInt(0);
+		writeInt(0);
 
 		writeB(new byte[64]);
-		writeD(0);
+		writeInt(0);
 	}
 }

@@ -6,6 +6,6 @@ public class WareHouseDonePacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(0); //?
+		writeInt(0); //?
 	}
 }

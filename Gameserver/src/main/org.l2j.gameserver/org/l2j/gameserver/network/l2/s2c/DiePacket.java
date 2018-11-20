@@ -67,23 +67,23 @@ public class DiePacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_objectId);
-		writeD(get(RestartType.TO_VILLAGE)); // to nearest village
-		writeD(get(RestartType.TO_CLANHALL)); // to hide away
-		writeD(get(RestartType.TO_CASTLE)); // to castle
-		writeD(get(RestartType.TO_FLAG));// to siege HQ
-		writeD(_sweepable ? 0x01 : 0x00); // sweepable  (blue glow)
-		writeD(get(RestartType.FIXED));// FIXED
-		writeD(0x00); //unk
-		writeD(_blessingFeatherDelay);
-		writeD(get(RestartType.ADVENTURES_SONG));
-		writeC(_hideDieAnimation ? 0x01 : 0x00);
-		writeD(get(RestartType.AGATHION));//agathion ress button
+		writeInt(_objectId);
+		writeInt(get(RestartType.TO_VILLAGE)); // to nearest village
+		writeInt(get(RestartType.TO_CLANHALL)); // to hide away
+		writeInt(get(RestartType.TO_CASTLE)); // to castle
+		writeInt(get(RestartType.TO_FLAG));// to siege HQ
+		writeInt(_sweepable ? 0x01 : 0x00); // sweepable  (blue glow)
+		writeInt(get(RestartType.FIXED));// FIXED
+		writeInt(0x00); //unk
+		writeInt(_blessingFeatherDelay);
+		writeInt(get(RestartType.ADVENTURES_SONG));
+		writeByte(_hideDieAnimation ? 0x01 : 0x00);
+		writeInt(get(RestartType.AGATHION));//agathion ress button
 
 		int itemsCount = 0;
-		writeD(itemsCount);
+		writeInt(itemsCount);
 		for(int i = 0; i < itemsCount; i++)
-			writeD(0x00); //additional free space
+			writeInt(0x00); //additional free space
 	}
 
 	private void put(RestartType t, boolean b)

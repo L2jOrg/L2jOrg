@@ -25,8 +25,8 @@ public class ExMultiSellResult extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeC(_success);
-		writeD(_unk1);
-		writeD(_unk2);
+		writeByte(_success);
+		writeInt(_unk1);
+		writeInt(_unk2);
 	}
 }

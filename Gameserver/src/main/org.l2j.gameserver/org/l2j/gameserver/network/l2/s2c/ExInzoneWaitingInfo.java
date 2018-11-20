@@ -35,16 +35,16 @@ public class ExInzoneWaitingInfo extends L2GameServerPacket
 
 	protected void writeImpl()
 	{
-		writeC(_openWindow);
-		writeD(_currentInzoneID);
-		writeD(_instanceTimes.size());
+		writeByte(_openWindow);
+		writeInt(_currentInzoneID);
+		writeInt(_instanceTimes.size());
 
 		TIntIntIterator iterator = _instanceTimes.iterator();
 		while(iterator.hasNext())
 		{
 			iterator.advance();
-			writeD(iterator.key());
-			writeD(iterator.value());
+			writeInt(iterator.key());
+			writeInt(iterator.value());
 		}
 	}
 }

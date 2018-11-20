@@ -44,22 +44,22 @@ public abstract class ExBlockUpSetList extends L2GameServerPacket
 		@Override
 		protected void writeImpl()
 		{
-			writeD(0x00);	// type
+			writeInt(0x00);	// type
 
-			writeD(_roomNumber);
-			writeD(0xffffffff);
+			writeInt(_roomNumber);
+			writeInt(0xffffffff);
 
-			writeD(_bluePlayers.size());
+			writeInt(_bluePlayers.size());
 			for(Player player : _bluePlayers)
 			{
-				writeD(player.getObjectId());
-				writeS(player.getName());
+				writeInt(player.getObjectId());
+				writeString(player.getName());
 			}
-			writeD(_redPlayers.size());
+			writeInt(_redPlayers.size());
 			for(Player player : _redPlayers)
 			{
-				writeD(player.getObjectId());
-				writeS(player.getName());
+				writeInt(player.getObjectId());
+				writeString(player.getName());
 			}
 		}
 	}
@@ -80,13 +80,13 @@ public abstract class ExBlockUpSetList extends L2GameServerPacket
 		@Override
 		protected void writeImpl()
 		{
-			writeD(0x01);	// type
+			writeInt(0x01);	// type
 
-			writeD(0xffffffff);
+			writeInt(0xffffffff);
 
-			writeD(_isRedTeam ? 0x01 : 0x00);
-			writeD(_objectId);
-			writeS(_name);
+			writeInt(_isRedTeam ? 0x01 : 0x00);
+			writeInt(_objectId);
+			writeString(_name);
 		}
 	}
 
@@ -104,12 +104,12 @@ public abstract class ExBlockUpSetList extends L2GameServerPacket
 		@Override
 		protected void writeImpl()
 		{
-			writeD(0x02);	// type
+			writeInt(0x02);	// type
 
-			writeD(0xffffffff);
+			writeInt(0xffffffff);
 
-			writeD(_isRedTeam ? 0x01 : 0x00);
-			writeD(_objectId);
+			writeInt(_isRedTeam ? 0x01 : 0x00);
+			writeInt(_objectId);
 		}
 	}
 
@@ -125,8 +125,8 @@ public abstract class ExBlockUpSetList extends L2GameServerPacket
 		@Override
 		protected void writeImpl()
 		{
-			writeD(0x03);
-			writeD(_seconds);
+			writeInt(0x03);
+			writeInt(_seconds);
 		}
 	}
 
@@ -142,7 +142,7 @@ public abstract class ExBlockUpSetList extends L2GameServerPacket
 		@Override
 		protected void writeImpl()
 		{
-			writeD(0x04);
+			writeInt(0x04);
 		}
 	}
 
@@ -160,11 +160,11 @@ public abstract class ExBlockUpSetList extends L2GameServerPacket
 		@Override
 		protected void writeImpl()
 		{
-			writeD(0x05);
+			writeInt(0x05);
 
-			writeD(_objectId);
-			writeD(_fromRedTeam ? 1 : 0);
-			writeD(_fromRedTeam ? 0 : 1);
+			writeInt(_objectId);
+			writeInt(_fromRedTeam ? 1 : 0);
+			writeInt(_fromRedTeam ? 0 : 1);
 		}
 	}
 
@@ -180,7 +180,7 @@ public abstract class ExBlockUpSetList extends L2GameServerPacket
 		@Override
 		protected void writeImpl()
 		{
-			writeD(0xffffffff);
+			writeInt(0xffffffff);
 		}
 	}
 }

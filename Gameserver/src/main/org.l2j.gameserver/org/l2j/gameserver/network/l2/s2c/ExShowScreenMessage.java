@@ -78,16 +78,16 @@ public class ExShowScreenMessage extends NpcStringContainer
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_type); // 0 - system messages, 1 - your defined text
-		writeD(_sysMessageId); // system message id (_type must be 0 otherwise no effect)
-		writeD(_text_align.ordinal() + 1); // размещение текста
-		writeD(0x00); // ?
-		writeD(_big_font ? 0 : 1); // размер текста
-		writeD(0x00); // ?
-		writeD(_unk); // ?
-		writeD(_effect ? 1 : 0); // upper effect (0 - disabled, 1 enabled) - _position must be 2 (center) otherwise no effect
-		writeD(_time); // время отображения сообщения в милисекундах
-		writeD(0x01); // ?
+		writeInt(_type); // 0 - system messages, 1 - your defined text
+		writeInt(_sysMessageId); // system message id (_type must be 0 otherwise no effect)
+		writeInt(_text_align.ordinal() + 1); // размещение текста
+		writeInt(0x00); // ?
+		writeInt(_big_font ? 0 : 1); // размер текста
+		writeInt(0x00); // ?
+		writeInt(_unk); // ?
+		writeInt(_effect ? 1 : 0); // upper effect (0 - disabled, 1 enabled) - _position must be 2 (center) otherwise no effect
+		writeInt(_time); // время отображения сообщения в милисекундах
+		writeInt(0x01); // ?
 		writeElements();
 	}
 }

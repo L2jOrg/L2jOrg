@@ -25,21 +25,21 @@ public class ExFriendDetailInfo extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_objectId); // Character ID 
-		writeS(_friend.getName()); // Name 
-		writeD(_friend.isOnline()); // Online 
-		writeD(_friend.isOnline() ? _friend.getObjectId() : 0); // Friend OID 
-		writeH(_friend.getLevel()); // Level 
-		writeH(_friend.getClassId()); // Class 
-		writeD(_friend.getClanId()); // Pledge ID 
-		writeD(_clanCrestId); // Pledge crest ID 
-		writeS(_friend.getClanName()); // Pledge name 
-		writeD(_friend.getAllyId()); // Alliance ID 
-		writeD(_allyCrestId); // Alliance crest ID 
-		writeS(_friend.getAllyName()); // Alliance name 
-		writeC(_friend.getCreationMonth() + 1); // Creation month 
-		writeC(_friend.getCreationDay()); // Creation day 
-		writeD(_friend.getLastAccessDelay()); // Last login 
-		writeS(_friend.getMemo()); // Memo
+		writeInt(_objectId); // Character ID
+		writeString(_friend.getName()); // Name
+		writeInt(_friend.isOnline()); // Online
+		writeInt(_friend.isOnline() ? _friend.getObjectId() : 0); // Friend OID
+		writeShort(_friend.getLevel()); // Level
+		writeShort(_friend.getClassId()); // Class
+		writeInt(_friend.getClanId()); // Pledge ID
+		writeInt(_clanCrestId); // Pledge crest ID
+		writeString(_friend.getClanName()); // Pledge name
+		writeInt(_friend.getAllyId()); // Alliance ID
+		writeInt(_allyCrestId); // Alliance crest ID
+		writeString(_friend.getAllyName()); // Alliance name
+		writeByte(_friend.getCreationMonth() + 1); // Creation month
+		writeByte(_friend.getCreationDay()); // Creation day
+		writeInt(_friend.getLastAccessDelay()); // Last login
+		writeString(_friend.getMemo()); // Memo
 	}
 }

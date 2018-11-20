@@ -19,6 +19,6 @@ public class ExChangeToAwakenedClass extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_classId);
+		writeInt(_classId);
 	}
 }

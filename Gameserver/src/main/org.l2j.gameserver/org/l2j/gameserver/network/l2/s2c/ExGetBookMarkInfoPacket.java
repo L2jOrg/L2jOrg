@@ -20,19 +20,19 @@ public class ExGetBookMarkInfoPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(0x00); // должно быть 0
-		writeD(bookmarksCapacity);
-		writeD(bookmarks.length);
+		writeInt(0x00); // должно быть 0
+		writeInt(bookmarksCapacity);
+		writeInt(bookmarks.length);
 		int slotId = 0;
 		for(BookMark bookmark : bookmarks)
 		{
-			writeD(++slotId);
-			writeD(bookmark.x);
-			writeD(bookmark.y);
-			writeD(bookmark.z);
-			writeS(bookmark.getName());
-			writeD(bookmark.getIcon());
-			writeS(bookmark.getAcronym());
+			writeInt(++slotId);
+			writeInt(bookmark.x);
+			writeInt(bookmark.y);
+			writeInt(bookmark.z);
+			writeString(bookmark.getName());
+			writeInt(bookmark.getIcon());
+			writeString(bookmark.getAcronym());
 		}
 	}
 }

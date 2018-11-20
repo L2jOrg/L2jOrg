@@ -13,7 +13,7 @@ public class ExCleftList extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(CleftType);
+		writeInt(CleftType);
 		switch(CleftType)
 		{
 			case CleftType_Total:

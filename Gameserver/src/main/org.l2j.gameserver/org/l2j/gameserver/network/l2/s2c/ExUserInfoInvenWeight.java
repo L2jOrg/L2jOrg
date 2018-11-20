@@ -21,8 +21,8 @@ public class ExUserInfoInvenWeight extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_objectId);
-		writeD(_currentLoad);
-		writeD(_maxLoad);
+		writeInt(_objectId);
+		writeInt(_currentLoad);
+		writeInt(_maxLoad);
 	}
 }

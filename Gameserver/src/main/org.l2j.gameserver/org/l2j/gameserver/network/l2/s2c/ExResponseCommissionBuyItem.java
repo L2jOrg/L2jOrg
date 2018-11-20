@@ -27,12 +27,12 @@ public class ExResponseCommissionBuyItem extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_code);
+		writeInt(_code);
 		if(_code == 0)
 			return;
 
-		writeD(0x00); //unk, maybe item object Id
-		writeD(_itemId);
-		writeQ(_count);
+		writeInt(0x00); //unk, maybe item object Id
+		writeInt(_itemId);
+		writeLong(_count);
 	}
 }

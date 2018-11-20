@@ -38,14 +38,14 @@ public class MTLPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_objectId);
+		writeInt(_objectId);
 
-		writeD(_destination.x);
-		writeD(_destination.y);
-		writeD(_destination.z + _client_z_shift);
+		writeInt(_destination.x);
+		writeInt(_destination.y);
+		writeInt(_destination.z + _client_z_shift);
 
-		writeD(_current.x);
-		writeD(_current.y);
-		writeD(_current.z + _client_z_shift);
+		writeInt(_current.x);
+		writeInt(_current.y);
+		writeInt(_current.z + _client_z_shift);
 	}
 }

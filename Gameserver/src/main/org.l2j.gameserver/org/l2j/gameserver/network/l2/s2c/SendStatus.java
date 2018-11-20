@@ -58,29 +58,29 @@ public final class SendStatus extends L2GameServerPacket
 	@Override
 	protected final boolean writeOpcodes()
 	{
-		writeC(0x00);
+		writeByte(0x00);
 		return true;
 	}
 
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(0x01); // World ID
-		writeD(max_online_players); // Max Online
-		writeD(online_players); // Current Online
-		writeD(online_players); // Current Online
-		writeD(online_priv_store); // Priv.Store Chars
+		writeInt(0x01); // World ID
+		writeInt(max_online_players); // Max Online
+		writeInt(online_players); // Current Online
+		writeInt(online_players); // Current Online
+		writeInt(online_priv_store); // Priv.Store Chars
 
 		// SEND TRASH
-		writeD(0x002C0030);
+		writeInt(0x002C0030);
 		for(int x = 0; x < 10; x++)
-			writeH(41 + Rnd.get(17));
-		writeD(43 + Rnd.get(17));
+			writeShort(41 + Rnd.get(17));
+		writeInt(43 + Rnd.get(17));
 		int z = 36219 + Rnd.get(1987);
-		writeD(z);
-		writeD(z);
-		writeD(37211 + Rnd.get(2397));
-		writeD(0x00);
-		writeD(0x02);
+		writeInt(z);
+		writeInt(z);
+		writeInt(37211 + Rnd.get(2397));
+		writeInt(0x00);
+		writeInt(0x02);
 	}
 }

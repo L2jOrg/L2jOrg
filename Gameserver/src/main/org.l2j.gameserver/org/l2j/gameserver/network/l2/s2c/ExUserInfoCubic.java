@@ -18,10 +18,10 @@ public class ExUserInfoCubic extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_objectId);
-		writeH(_cubics.length);
+		writeInt(_objectId);
+		writeShort(_cubics.length);
 		for(Cubic cubic : _cubics)
-			writeH(cubic == null ? 0 : cubic.getId());
-		writeD(_agationId);
+			writeShort(cubic == null ? 0 : cubic.getId());
+		writeInt(_agationId);
 	}
 }

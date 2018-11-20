@@ -28,16 +28,16 @@ public class ExMpccRoomMember extends L2GameServerPacket
 	@Override
 	public void writeImpl()
 	{
-		writeD(_type);
-		writeD(_members.size());
+		writeInt(_type);
+		writeInt(_members.size());
 		for(MpccRoomMemberInfo member : _members)
 		{
-			writeD(member.objectId);
-			writeS(member.name);
-			writeD(member.classId);
-			writeD(member.level);
-			writeD(member.location);
-			writeD(member.memberType);
+			writeInt(member.objectId);
+			writeString(member.name);
+			writeInt(member.classId);
+			writeInt(member.level);
+			writeInt(member.location);
+			writeInt(member.memberType);
 		}
 	}
 

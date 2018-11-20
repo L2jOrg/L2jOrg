@@ -27,8 +27,8 @@ public class MagicAndSkillList extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_chaId);
-		writeD(_unk1); // в снифе было 20670
-		writeD(_unk2); // в снифе было 730502
+		writeInt(_chaId);
+		writeInt(_unk1); // в снифе было 20670
+		writeInt(_unk2); // в снифе было 730502
 	}
 }

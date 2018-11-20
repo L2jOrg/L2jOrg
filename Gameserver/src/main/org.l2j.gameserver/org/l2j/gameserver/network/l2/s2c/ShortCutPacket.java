@@ -72,14 +72,14 @@ public abstract class ShortCutPacket extends L2GameServerPacket
 		@Override
 		protected void write0(ShortCutPacket p)
 		{
-			p.writeD(_id);
-			p.writeD(_characterType);
-			p.writeD(_reuseGroup);
-			p.writeD(_currentReuse);
-			p.writeD(_basicReuse);
-			p.writeD(_variation1Id);
-			p.writeD(_variation2Id);
-			p.writeD(0x00); //TODO: [Bonux] ??HARMONY??
+			p.writeInt(_id);
+			p.writeInt(_characterType);
+			p.writeInt(_reuseGroup);
+			p.writeInt(_currentReuse);
+			p.writeInt(_basicReuse);
+			p.writeInt(_variation1Id);
+			p.writeInt(_variation2Id);
+			p.writeInt(0x00); //TODO: [Bonux] ??HARMONY??
 		}
 	}
 
@@ -101,11 +101,11 @@ public abstract class ShortCutPacket extends L2GameServerPacket
 		@Override
 		protected void write0(ShortCutPacket p)
 		{
-			p.writeD(_id);
-			p.writeD(_level);
-			p.writeD(_id); //TODO [VISTALL] skill reuse group
-			p.writeC(0x00);
-			p.writeD(_characterType);
+			p.writeInt(_id);
+			p.writeInt(_level);
+			p.writeInt(_id); //TODO [VISTALL] skill reuse group
+			p.writeByte(0x00);
+			p.writeInt(_characterType);
 		}
 	}
 
@@ -126,15 +126,15 @@ public abstract class ShortCutPacket extends L2GameServerPacket
 
 		protected void write(ShortCutPacket p)
 		{
-			p.writeD(_type);
-			p.writeD(_page);
+			p.writeInt(_type);
+			p.writeInt(_page);
 			write0(p);
 		}
 
 		protected void write0(ShortCutPacket p)
 		{
-			p.writeD(_id);
-			p.writeD(_characterType);
+			p.writeInt(_id);
+			p.writeInt(_characterType);
 		}
 	}
 }

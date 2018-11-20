@@ -23,7 +23,7 @@ public class ExBR_PresentBuyProductPacket extends L2GameServerPacket
 
 	protected void writeImpl()
 	{
-		writeD(_result);
-		writeC(0);
+		writeInt(_result);
+		writeByte(0);
 	}
 }

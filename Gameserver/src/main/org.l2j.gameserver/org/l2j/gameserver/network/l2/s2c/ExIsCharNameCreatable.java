@@ -22,6 +22,6 @@ public class ExIsCharNameCreatable extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_errorCode);
+		writeInt(_errorCode);
 	}
 }

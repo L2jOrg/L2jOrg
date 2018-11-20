@@ -4,8 +4,8 @@ public class ExResponseCommissionDelete extends L2GameServerPacket
 {
 	protected void writeImpl()
 	{
-		writeD(0x00);
-		writeD(0x00);
-		writeQ(0x00);
+		writeInt(0x00);
+		writeInt(0x00);
+		writeLong(0x00);
 	}
 }

@@ -42,8 +42,8 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot>
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_player.getObjectId());
-		writeH(InventorySlot.VALUES.length);
+		writeInt(_player.getObjectId());
+		writeShort(InventorySlot.VALUES.length);
 		writeB(_masks);
 
 		PcInventory inventory = _player.getInventory();
@@ -51,12 +51,12 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot>
 		{
 			if(containsMask(slot))
 			{
-				writeH(22); // size
-				writeD(inventory.getPaperdollObjectId(slot.getSlot()));
-				writeD(inventory.getPaperdollItemId(slot.getSlot()));
-				writeD(inventory.getPaperdollVariation1Id(slot.getSlot()));
-				writeD(inventory.getPaperdollVariation2Id(slot.getSlot()));
-				writeD(inventory.getPaperdollVisualId(slot.getSlot()));
+				writeShort(22); // size
+				writeInt(inventory.getPaperdollObjectId(slot.getSlot()));
+				writeInt(inventory.getPaperdollItemId(slot.getSlot()));
+				writeInt(inventory.getPaperdollVariation1Id(slot.getSlot()));
+				writeInt(inventory.getPaperdollVariation2Id(slot.getSlot()));
+				writeInt(inventory.getPaperdollVisualId(slot.getSlot()));
 			}
 		}
 	}

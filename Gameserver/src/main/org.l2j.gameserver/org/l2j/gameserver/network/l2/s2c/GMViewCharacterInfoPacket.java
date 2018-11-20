@@ -132,129 +132,129 @@ public class GMViewCharacterInfoPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z);
-		writeD(_loc.h);
-		writeD(obj_id);
-		writeS(_name);
-		writeD(_race);
-		writeD(_sex);
-		writeD(class_id);
-		writeD(level);
-		writeQ(_exp);
+		writeInt(_loc.x);
+		writeInt(_loc.y);
+		writeInt(_loc.z);
+		writeInt(_loc.h);
+		writeInt(obj_id);
+		writeString(_name);
+		writeInt(_race);
+		writeInt(_sex);
+		writeInt(class_id);
+		writeInt(level);
+		writeLong(_exp);
 		writeF(_expPercent);
-		writeD(_str);
-		writeD(_dex);
-		writeD(_con);
-		writeD(_int);
-		writeD(_wit);
-		writeD(_men);
-		writeD(0);
-		writeD(0);
-		writeD(maxHp);
-		writeD(curHp);
-		writeD(maxMp);
-		writeD(curMp);
-		writeQ(_sp);
-		writeD(curLoad);
-		writeD(maxLoad);
-		writeD(pk_kills);
+		writeInt(_str);
+		writeInt(_dex);
+		writeInt(_con);
+		writeInt(_int);
+		writeInt(_wit);
+		writeInt(_men);
+		writeInt(0);
+		writeInt(0);
+		writeInt(maxHp);
+		writeInt(curHp);
+		writeInt(maxMp);
+		writeInt(curMp);
+		writeLong(_sp);
+		writeInt(curLoad);
+		writeInt(maxLoad);
+		writeInt(pk_kills);
 
 		for(int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
-			writeD(_inv[PAPERDOLL_ID][0]);
+			writeInt(_inv[PAPERDOLL_ID][0]);
 
 		for(int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
-			writeD(_inv[PAPERDOLL_ID][1]);
+			writeInt(_inv[PAPERDOLL_ID][1]);
 
 		for(int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
 		{
-			writeD(_inv[PAPERDOLL_ID][2]);
-			writeD(_inv[PAPERDOLL_ID][3]);
+			writeInt(_inv[PAPERDOLL_ID][2]);
+			writeInt(_inv[PAPERDOLL_ID][3]);
 		}
 
-		writeC(talismans);
-		writeC(_jewelsLimit);
-		writeD(0x00);
-		writeH(0x00);
-		writeD(_patk);
-		writeD(_patkspd);
-		writeD(_pdef);
-		writeD(evasion);
-		writeD(accuracy);
-		writeD(crit);
-		writeD(_matk);
+		writeByte(talismans);
+		writeByte(_jewelsLimit);
+		writeInt(0x00);
+		writeShort(0x00);
+		writeInt(_patk);
+		writeInt(_patkspd);
+		writeInt(_pdef);
+		writeInt(evasion);
+		writeInt(accuracy);
+		writeInt(crit);
+		writeInt(_matk);
 
-		writeD(_matkspd);
-		writeD(_patkspd);
+		writeInt(_matkspd);
+		writeInt(_patkspd);
 
-		writeD(_mdef);
-		writeD(_mEvasion);
-		writeD(_mAccuracy);
-		writeD(_mCrit);
+		writeInt(_mdef);
+		writeInt(_mEvasion);
+		writeInt(_mAccuracy);
+		writeInt(_mCrit);
 
-		writeD(pvp_flag);
-		writeD(karma);
+		writeInt(pvp_flag);
+		writeInt(karma);
 
-		writeD(_runSpd);
-		writeD(_walkSpd);
-		writeD(_swimRunSpd); // swimspeed
-		writeD(_swimWalkSpd); // swimspeed
-		writeD(_runSpd);
-		writeD(_walkSpd);
-		writeD(_runSpd);
-		writeD(_walkSpd);
+		writeInt(_runSpd);
+		writeInt(_walkSpd);
+		writeInt(_swimRunSpd); // swimspeed
+		writeInt(_swimWalkSpd); // swimspeed
+		writeInt(_runSpd);
+		writeInt(_walkSpd);
+		writeInt(_runSpd);
+		writeInt(_walkSpd);
 		writeF(move_speed);
 		writeF(attack_speed);
 		writeF(col_radius);
 		writeF(col_height);
-		writeD(hair_style);
-		writeD(hair_color);
-		writeD(face);
-		writeD(gm_commands);
+		writeInt(hair_style);
+		writeInt(hair_color);
+		writeInt(face);
+		writeInt(gm_commands);
 
-		writeS(title);
-		writeD(clan_id);
-		writeD(clan_crest_id);
-		writeD(ally_id);
-		writeC(mount_type);
-		writeC(private_store);
-		writeC(DwarvenCraftLevel); //_cha.getDwarvenCraftLevel() > 0 ? 1 : 0
-		writeD(pk_kills);
-		writeD(pvp_kills);
+		writeString(title);
+		writeInt(clan_id);
+		writeInt(clan_crest_id);
+		writeInt(ally_id);
+		writeByte(mount_type);
+		writeByte(private_store);
+		writeByte(DwarvenCraftLevel); //_cha.getDwarvenCraftLevel() > 0 ? 1 : 0
+		writeInt(pk_kills);
+		writeInt(pvp_kills);
 
-		writeH(rec_left);
-		writeH(rec_have); //Blue value for name (0 = white, 255 = pure blue)
-		writeD(class_id);
-		writeD(0x00); // special effects? circles around player...
-		writeD(maxCp);
-		writeD(curCp);
+		writeShort(rec_left);
+		writeShort(rec_have); //Blue value for name (0 = white, 255 = pure blue)
+		writeInt(class_id);
+		writeInt(0x00); // special effects? circles around player...
+		writeInt(maxCp);
+		writeInt(curCp);
 
-		writeC(running); //changes the Speed display on Status Window
+		writeByte(running); //changes the Speed display on Status Window
 
-		writeC(321);
+		writeByte(321);
 
-		writeD(pledge_class); //changes the text above CP on Status Window
+		writeInt(pledge_class); //changes the text above CP on Status Window
 
-		writeC(0);
-		writeC(hero);
+		writeByte(0);
+		writeByte(hero);
 
-		writeD(name_color);
-		writeD(title_color);
+		writeInt(name_color);
+		writeInt(title_color);
 
-		writeH(attackElement.getId());
-		writeH(attackElementValue);
-		writeH(defenceFire);
-		writeH(defenceWater);
-		writeH(defenceWind);
-		writeH(defenceEarth);
-		writeH(defenceHoly);
-		writeH(defenceUnholy);
+		writeShort(attackElement.getId());
+		writeShort(attackElementValue);
+		writeShort(defenceFire);
+		writeShort(defenceWater);
+		writeShort(defenceWind);
+		writeShort(defenceEarth);
+		writeShort(defenceHoly);
+		writeShort(defenceUnholy);
 
-		writeD(fame);
-		writeD(0);
+		writeInt(fame);
+		writeInt(0);
 
-		writeD(0);
-		writeD(0);
+		writeInt(0);
+		writeInt(0);
 	}
 }

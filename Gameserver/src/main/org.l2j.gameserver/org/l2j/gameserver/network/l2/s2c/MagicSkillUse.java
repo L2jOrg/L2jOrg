@@ -87,42 +87,42 @@ public class MagicSkillUse extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(0);
-		writeD(_chaId);
-		writeD(_targetId);
-		writeD(_skillId);
-		writeD(_skillLevel);
-		writeD(_hitTime);
-		writeD(_reuseSkillId);
-		writeD(_reuseDelay);
-		writeD(_x);
-		writeD(_y);
-		writeD(_z);
+		writeInt(0);
+		writeInt(_chaId);
+		writeInt(_targetId);
+		writeInt(_skillId);
+		writeInt(_skillLevel);
+		writeInt(_hitTime);
+		writeInt(_reuseSkillId);
+		writeInt(_reuseDelay);
+		writeInt(_x);
+		writeInt(_y);
+		writeInt(_z);
 
 		if(_criticalBlow)
 		{
-			writeH(0x02);
+			writeShort(0x02);
 			for(int i = 0; i < 2; i++)
-				writeH(0x00);
+				writeShort(0x00);
 		}
 		else
-			writeH(0x00);
+			writeShort(0x00);
 
 		if(_groundLoc != null)
 		{
-			writeH(0x01);
-			writeD(_groundLoc.x);
-			writeD(_groundLoc.y);
-			writeD(_groundLoc.z);
+			writeShort(0x01);
+			writeInt(_groundLoc.x);
+			writeInt(_groundLoc.y);
+			writeInt(_groundLoc.z);
 		}
 		else
-			writeH(0x00);
+			writeShort(0x00);
 
-		writeD(_tx);
-		writeD(_ty);
-		writeD(_tz);
-		writeD(_isServitorSkill ? 0x01 : 0x00); // is Pet Skill
-		writeD(_actionId); // Social Action ID
+		writeInt(_tx);
+		writeInt(_ty);
+		writeInt(_tz);
+		writeInt(_isServitorSkill ? 0x01 : 0x00); // is Pet Skill
+		writeInt(_actionId); // Social Action ID
 	}
 
 	@Override

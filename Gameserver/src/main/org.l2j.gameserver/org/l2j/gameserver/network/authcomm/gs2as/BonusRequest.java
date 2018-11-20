@@ -17,9 +17,9 @@ public class BonusRequest extends SendablePacket
 
 	protected void writeImpl()
 	{
-		writeC(0x10);
-		writeS(account);
-		writeD(bonus);
-		writeD(bonusExpire);
+		writeByte(0x10);
+		writeString(account);
+		writeInt(bonus);
+		writeInt(bonusExpire);
 	}
 }

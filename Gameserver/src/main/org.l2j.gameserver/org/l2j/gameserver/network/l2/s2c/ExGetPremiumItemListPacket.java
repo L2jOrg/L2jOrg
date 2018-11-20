@@ -21,15 +21,15 @@ public class ExGetPremiumItemListPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_list.length);
+		writeInt(_list.length);
 		for(int i = 0; i < _list.length; i++)
 		{
-			writeD(i);
-			writeD(_objectId);
-			writeD(_list[i].getItemId());
-			writeQ(_list[i].getItemCount());
-			writeD(0);
-			writeS(_list[i].getSender());
+			writeInt(i);
+			writeInt(_objectId);
+			writeInt(_list[i].getItemId());
+			writeLong(_list[i].getItemCount());
+			writeInt(0);
+			writeString(_list[i].getSender());
 		}
 	}
 }

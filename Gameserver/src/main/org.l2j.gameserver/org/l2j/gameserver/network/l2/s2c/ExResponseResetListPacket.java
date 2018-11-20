@@ -25,10 +25,10 @@ public class ExResponseResetListPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeQ(_adena);
-		writeQ(_coins);
-		writeD(_hairStyle);
-		writeD(_face);
-		writeD(_hairColor);
+		writeLong(_adena);
+		writeLong(_coins);
+		writeInt(_hairStyle);
+		writeInt(_face);
+		writeInt(_hairColor);
 	}
 }

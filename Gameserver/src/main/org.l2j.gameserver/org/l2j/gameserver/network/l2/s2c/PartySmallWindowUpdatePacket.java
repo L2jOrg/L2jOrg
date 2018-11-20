@@ -43,33 +43,33 @@ public class PartySmallWindowUpdatePacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(obj_id);
-		writeH(_flags);
+		writeInt(obj_id);
+		writeShort(_flags);
 		if(containsMask(_flags, PartySmallWindowUpdateType.CURRENT_CP))
-			writeD(curCp); // c4
+			writeInt(curCp); // c4
 
 		if(containsMask(_flags, PartySmallWindowUpdateType.MAX_CP))
-			writeD(maxCp); // c4
+			writeInt(maxCp); // c4
 
 		if(containsMask(_flags, PartySmallWindowUpdateType.CURRENT_HP))
-			writeD(curHp);
+			writeInt(curHp);
 
 		if(containsMask(_flags, PartySmallWindowUpdateType.MAX_HP))
-			writeD(maxHp);
+			writeInt(maxHp);
 
 		if(containsMask(_flags, PartySmallWindowUpdateType.CURRENT_MP))
-			writeD(curMp);
+			writeInt(curMp);
 
 		if(containsMask(_flags, PartySmallWindowUpdateType.MAX_MP))
-			writeD(maxMp);
+			writeInt(maxMp);
 
 		if(containsMask(_flags, PartySmallWindowUpdateType.LEVEL))
-			writeC(level);
+			writeByte(level);
 
 		if(containsMask(_flags, PartySmallWindowUpdateType.CLASS_ID))
-			writeH(class_id);
+			writeShort(class_id);
 
 		if(containsMask(_flags, PartySmallWindowUpdateType.VITALITY_POINTS))
-			writeD(0x00);
+			writeInt(0x00);
 	}
 }

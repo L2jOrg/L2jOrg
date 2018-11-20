@@ -100,25 +100,25 @@ public class AttackPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_attackerId);
-		writeD(hits[0]._targetId);
-		writeD(_soulshot ? _addShotEffect : 0x00);
-		writeD(hits[0]._damage);
-		writeD(hits[0]._flags);
-		writeD(_soulshot ? _grade : 0x00);
-		writeD(_x);
-		writeD(_y);
-		writeD(_z);
-		writeH(hits.length - 1);
+		writeInt(_attackerId);
+		writeInt(hits[0]._targetId);
+		writeInt(_soulshot ? _addShotEffect : 0x00);
+		writeInt(hits[0]._damage);
+		writeInt(hits[0]._flags);
+		writeInt(_soulshot ? _grade : 0x00);
+		writeInt(_x);
+		writeInt(_y);
+		writeInt(_z);
+		writeShort(hits.length - 1);
 		for(int i = 1; i < hits.length; i++)
 		{
-			writeD(hits[i]._targetId);
-			writeD(hits[i]._damage);
-			writeD(hits[i]._flags);
-			writeD(_soulshot ? _grade : 0x00);
+			writeInt(hits[i]._targetId);
+			writeInt(hits[i]._damage);
+			writeInt(hits[i]._flags);
+			writeInt(_soulshot ? _grade : 0x00);
 		}
-		writeD(_tx);
-		writeD(_ty);
-		writeD(_tz);
+		writeInt(_tx);
+		writeInt(_ty);
+		writeInt(_tz);
 	}
 }

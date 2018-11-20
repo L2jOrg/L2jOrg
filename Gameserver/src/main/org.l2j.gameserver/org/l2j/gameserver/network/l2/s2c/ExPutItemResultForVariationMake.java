@@ -16,8 +16,8 @@ public class ExPutItemResultForVariationMake extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_itemObjId);
-		writeD(_unk1);
-		writeD(_unk2);
+		writeInt(_itemObjId);
+		writeInt(_unk1);
+		writeInt(_unk2);
 	}
 }

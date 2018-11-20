@@ -43,25 +43,25 @@ public class PrivateStoreBuyManageList extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		//section 1
-		writeD(_buyerId);
-		writeQ(_adena);
+		writeInt(_buyerId);
+		writeLong(_adena);
 
 		//section2
-		writeD(_buyList.size());//for potential sells
+		writeInt(_buyList.size());//for potential sells
 		for(TradeItem bi : _buyList)
 		{
 			writeItemInfo(bi);
-			writeQ(bi.getStorePrice());
+			writeLong(bi.getStorePrice());
 		}
 
 		//section 3
-		writeD(_buyList0.size());//count for any items already added for sell
+		writeInt(_buyList0.size());//count for any items already added for sell
 		for(TradeItem bi : _buyList0)
 		{
 			writeItemInfo(bi);
-			writeQ(bi.getOwnersPrice());
-			writeQ(bi.getStorePrice());
-			writeQ(bi.getCount());
+			writeLong(bi.getOwnersPrice());
+			writeLong(bi.getStorePrice());
+			writeLong(bi.getCount());
 		}
 	}
 }

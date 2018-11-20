@@ -23,13 +23,13 @@ public class ExMTLInSuttlePacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_playableObjectId); // Player ObjID
-		writeD(_shuttleId); // Shuttle ID (Arkan: 1,2; Cruma: 3)
-		writeD(_destination.x); // Destination X in shuttle
-		writeD(_destination.y); // Destination Y in shuttle
-		writeD(_destination.z); // Destination Z in shuttle
-		writeD(_origin.x); // X in shuttle
-		writeD(_origin.y); // Y in shuttle
-		writeD(_origin.z); // Z in shuttle
+		writeInt(_playableObjectId); // Player ObjID
+		writeInt(_shuttleId); // Shuttle ID (Arkan: 1,2; Cruma: 3)
+		writeInt(_destination.x); // Destination X in shuttle
+		writeInt(_destination.y); // Destination Y in shuttle
+		writeInt(_destination.z); // Destination Z in shuttle
+		writeInt(_origin.x); // X in shuttle
+		writeInt(_origin.y); // Y in shuttle
+		writeInt(_origin.z); // Z in shuttle
 	}
 }

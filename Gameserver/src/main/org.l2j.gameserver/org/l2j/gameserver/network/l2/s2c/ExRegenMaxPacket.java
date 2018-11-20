@@ -34,9 +34,9 @@ public class ExRegenMaxPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(1);
-		writeD(_count);
-		writeD(_time);
+		writeInt(1);
+		writeInt(_count);
+		writeInt(_time);
 		writeF(_max);
 	}
 }

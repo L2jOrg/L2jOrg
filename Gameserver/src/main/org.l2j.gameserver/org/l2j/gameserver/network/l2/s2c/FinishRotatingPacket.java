@@ -16,9 +16,9 @@ public class FinishRotatingPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_charId);
-		writeD(_degree);
-		writeD(_speed);
-		writeD(0x00); //??
+		writeInt(_charId);
+		writeInt(_degree);
+		writeInt(_speed);
+		writeInt(0x00); //??
 	}
 }

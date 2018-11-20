@@ -14,10 +14,10 @@ public class AskJoinPledgePacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_requestorId);
-		writeS("");
-		writeS(_pledgeName);
-		writeD(0);
-		writeS("");
+		writeInt(_requestorId);
+		writeString("");
+		writeString(_pledgeName);
+		writeInt(0);
+		writeString("");
 	}
 }

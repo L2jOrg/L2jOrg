@@ -31,16 +31,16 @@ public class HennaEquipListPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeQ(_adena);
-		writeD(_emptySlots);
-		writeD(_hennas.size());
+		writeLong(_adena);
+		writeInt(_emptySlots);
+		writeInt(_hennas.size());
 		for(HennaTemplate henna : _hennas)
 		{
-			writeD(henna.getSymbolId()); //symbolid
-			writeD(henna.getDyeId()); //itemid of dye
-			writeQ(henna.getDrawCount());
-			writeQ(henna.getDrawPrice());
-			writeD(henna.isForThisClass(_player) ? 0x01 : 0x00);
+			writeInt(henna.getSymbolId()); //symbolid
+			writeInt(henna.getDyeId()); //itemid of dye
+			writeLong(henna.getDrawCount());
+			writeLong(henna.getDrawPrice());
+			writeInt(henna.isForThisClass(_player) ? 0x01 : 0x00);
 		}
 	}
 }

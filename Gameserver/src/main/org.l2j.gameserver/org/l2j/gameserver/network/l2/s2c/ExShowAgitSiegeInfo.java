@@ -31,14 +31,14 @@ public class ExShowAgitSiegeInfo extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_infos.size());
+		writeInt(_infos.size());
 		_infos.forEach(info ->
 		{
-			writeD(info.ch_id);
-			writeD(info.siegeDate);
+			writeInt(info.ch_id);
+			writeInt(info.siegeDate);
 			writeString(info.clan_name);
 			writeString(info.leader_name);
-			writeH(info.getType);
+			writeShort(info.getType);
 		});
 	}
 

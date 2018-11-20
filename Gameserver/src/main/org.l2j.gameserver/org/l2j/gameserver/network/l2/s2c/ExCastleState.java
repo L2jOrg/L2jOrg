@@ -19,7 +19,7 @@ public class ExCastleState extends L2GameServerPacket
 
 	protected void writeImpl()
 	{
-		writeD(_id);
-		writeD(_side.ordinal());
+		writeInt(_id);
+		writeInt(_side.ordinal());
 	}
 }

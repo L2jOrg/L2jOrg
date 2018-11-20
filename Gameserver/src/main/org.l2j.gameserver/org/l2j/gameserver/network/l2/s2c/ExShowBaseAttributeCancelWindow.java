@@ -28,11 +28,11 @@ public class ExShowBaseAttributeCancelWindow extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_items.size());
+		writeInt(_items.size());
 		for(ItemInstance item : _items)
 		{
-			writeD(item.getObjectId());
-			writeQ(getAttributeRemovePrice(item));
+			writeInt(item.getObjectId());
+			writeLong(getAttributeRemovePrice(item));
 		}
 	}
 

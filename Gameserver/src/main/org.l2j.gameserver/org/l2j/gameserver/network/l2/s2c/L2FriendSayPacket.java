@@ -24,9 +24,9 @@ public class L2FriendSayPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(0);
-		writeS(_receiver);
-		writeS(_sender);
-		writeS(_message);
+		writeInt(0);
+		writeString(_receiver);
+		writeString(_sender);
+		writeString(_message);
 	}
 }

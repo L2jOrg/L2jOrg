@@ -52,19 +52,19 @@ public class ExAcquirableSkillListByClass extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeH(_type.getId());
-		writeH(_skills.size());
+		writeShort(_type.getId());
+		writeShort(_skills.size());
 
 		for(Skill temp : _skills)
 		{
-			writeD(temp.id);
-			writeH(temp.nextLevel);
-			writeH(temp.maxLevel);
-			writeC(temp.requirements);
-			writeQ(temp.cost);
-			writeC(0x01); // UNK
+			writeInt(temp.id);
+			writeShort(temp.nextLevel);
+			writeShort(temp.maxLevel);
+			writeByte(temp.requirements);
+			writeLong(temp.cost);
+			writeByte(0x01); // UNK
 			if(_type == AcquireType.SUB_UNIT)
-				writeH(temp.subUnit);
+				writeShort(temp.subUnit);
 		}
 	}
 }

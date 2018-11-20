@@ -16,8 +16,8 @@ public class ExFieldEventStep extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_own);
-		writeD(_cumulative);
-		writeD(_max);
+		writeInt(_own);
+		writeInt(_cumulative);
+		writeInt(_max);
 	}
 }

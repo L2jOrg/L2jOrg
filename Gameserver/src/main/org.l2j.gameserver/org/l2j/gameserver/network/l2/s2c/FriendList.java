@@ -18,15 +18,15 @@ public class FriendList extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_friends.length);
+		writeInt(_friends.length);
 		for(Friend f : _friends)
 		{
-			writeD(f.getObjectId());
-			writeS(f.getName());
-			writeD(f.isOnline());
-			writeD(f.isOnline() ? f.getObjectId() : 0);
-			writeD(f.getLevel());
-			writeD(f.getClassId());
+			writeInt(f.getObjectId());
+			writeString(f.getName());
+			writeInt(f.isOnline());
+			writeInt(f.isOnline() ? f.getObjectId() : 0);
+			writeInt(f.getLevel());
+			writeInt(f.getClassId());
 		}
 	}
 }

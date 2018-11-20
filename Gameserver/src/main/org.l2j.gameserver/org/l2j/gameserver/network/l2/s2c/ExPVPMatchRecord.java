@@ -44,24 +44,24 @@ public class ExPVPMatchRecord extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_type);
-		writeD(_winnerTeam.ordinal());
-		writeD(_winnerTeam.revert().ordinal());
-		writeD(_blueKills);
-		writeD(_redKills);
-		writeD(_blueList.size());
+		writeInt(_type);
+		writeInt(_winnerTeam.ordinal());
+		writeInt(_winnerTeam.revert().ordinal());
+		writeInt(_blueKills);
+		writeInt(_redKills);
+		writeInt(_blueList.size());
 		for(Member member : _blueList)
 		{
-			writeS(member.name);
-			writeD(member.kills);
-			writeD(member.deaths);
+			writeString(member.name);
+			writeInt(member.kills);
+			writeInt(member.deaths);
 		}
-		writeD(_redList.size());
+		writeInt(_redList.size());
 		for(Member member : _redList)
 		{
-			writeS(member.name);
-			writeD(member.kills);
-			writeD(member.deaths);
+			writeString(member.name);
+			writeInt(member.kills);
+			writeInt(member.deaths);
 		}
 	}
 }

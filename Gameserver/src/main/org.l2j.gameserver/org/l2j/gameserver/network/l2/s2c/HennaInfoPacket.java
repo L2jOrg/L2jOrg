@@ -19,34 +19,34 @@ public class HennaInfoPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeH(_hennaList.getINT()); //equip INT
-		writeH(_hennaList.getSTR()); //equip STR
-		writeH(_hennaList.getCON()); //equip CON
-		writeH(_hennaList.getMEN()); //equip MEN
-		writeH(_hennaList.getDEX()); //equip DEX
-		writeH(_hennaList.getWIT()); //equip WIT
-		writeH(0x00); //equip LUC
-		writeH(0x00); //equip CHA
-		writeD(HennaList.MAX_SIZE); //interlude, slots?
-		writeD(_hennaList.size());
+		writeShort(_hennaList.getINT()); //equip INT
+		writeShort(_hennaList.getSTR()); //equip STR
+		writeShort(_hennaList.getCON()); //equip CON
+		writeShort(_hennaList.getMEN()); //equip MEN
+		writeShort(_hennaList.getDEX()); //equip DEX
+		writeShort(_hennaList.getWIT()); //equip WIT
+		writeShort(0x00); //equip LUC
+		writeShort(0x00); //equip CHA
+		writeInt(HennaList.MAX_SIZE); //interlude, slots?
+		writeInt(_hennaList.size());
 		for(Henna henna : _hennaList.values(false))
 		{
-			writeD(henna.getTemplate().getSymbolId());
-			writeD(_hennaList.isActive(henna));
+			writeInt(henna.getTemplate().getSymbolId());
+			writeInt(_hennaList.isActive(henna));
 		}
 
 		Henna henna = _hennaList.getPremiumHenna();
 		if(henna != null)
 		{
-			writeD(henna.getTemplate().getSymbolId());	// Premium symbol ID
-			writeD(henna.getLeftTime());	// Premium symbol left time
-			writeD(_hennaList.isActive(henna));	// Premium symbol active
+			writeInt(henna.getTemplate().getSymbolId());	// Premium symbol ID
+			writeInt(henna.getLeftTime());	// Premium symbol left time
+			writeInt(_hennaList.isActive(henna));	// Premium symbol active
 		}
 		else
 		{
-			writeD(0x00);	// Premium symbol ID
-			writeD(0x00);	// Premium symbol left time
-			writeD(0x00);	// Premium symbol active
+			writeInt(0x00);	// Premium symbol ID
+			writeInt(0x00);	// Premium symbol left time
+			writeInt(0x00);	// Premium symbol active
 		}
 	}
 }

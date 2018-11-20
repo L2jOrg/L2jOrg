@@ -17,7 +17,7 @@ public class TutorialShowHtmlPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_windowType);
-		writeS(_html);
+		writeInt(_windowType);
+		writeString(_html);
 	}
 }

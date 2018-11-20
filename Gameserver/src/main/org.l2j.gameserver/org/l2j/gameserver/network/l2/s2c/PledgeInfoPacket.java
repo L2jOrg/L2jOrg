@@ -18,9 +18,9 @@ public class PledgeInfoPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(Config.REQUEST_ID);
-		writeD(clan_id);
-		writeS(clan_name);
-		writeS(ally_name);
+		writeInt(Config.REQUEST_ID);
+		writeInt(clan_id);
+		writeString(clan_name);
+		writeString(ally_name);
 	}
 }

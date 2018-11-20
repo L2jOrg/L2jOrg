@@ -13,6 +13,6 @@ public class ExShowOwnthingPos extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(0x00);
+		writeInt(0x00);
 	}
 }

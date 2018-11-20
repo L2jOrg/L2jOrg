@@ -26,10 +26,10 @@ public class RecipeItemMakeInfoPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_id); //ID рецепта
-		writeD(_isCommon ? 0x01 : 0x00);
-		writeD(_curMP);
-		writeD(_maxMP);
-		writeD(_status); //итог крафта; 0xFFFFFFFF нет статуса, 0 удача, 1 провал
+		writeInt(_id); //ID рецепта
+		writeInt(_isCommon ? 0x01 : 0x00);
+		writeInt(_curMP);
+		writeInt(_maxMP);
+		writeInt(_status); //итог крафта; 0xFFFFFFFF нет статуса, 0 удача, 1 провал
 	}
 }

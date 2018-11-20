@@ -56,38 +56,38 @@ public class CastleSiegeAttackerListPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_id);
+		writeInt(_id);
 
-		writeD(0x00);
-		writeD(_registrationValid);
-		writeD(0x00);
+		writeInt(0x00);
+		writeInt(_registrationValid);
+		writeInt(0x00);
 
-		writeD(_clans.size());
-		writeD(_clans.size());
+		writeInt(_clans.size());
+		writeInt(_clans.size());
 
 		for(SiegeClanObject siegeClan : _clans)
 		{
 			Clan clan = siegeClan.getClan();
 
-			writeD(clan.getClanId());
-			writeS(clan.getName());
-			writeS(clan.getLeaderName());
-			writeD(clan.getCrestId());
-			writeD((int) (siegeClan.getDate() / 1000L));
+			writeInt(clan.getClanId());
+			writeString(clan.getName());
+			writeString(clan.getLeaderName());
+			writeInt(clan.getCrestId());
+			writeInt((int) (siegeClan.getDate() / 1000L));
 
 			Alliance alliance = clan.getAlliance();
-			writeD(clan.getAllyId());
+			writeInt(clan.getAllyId());
 			if(alliance != null)
 			{
-				writeS(alliance.getAllyName());
-				writeS(alliance.getAllyLeaderName());
-				writeD(alliance.getAllyCrestId());
+				writeString(alliance.getAllyName());
+				writeString(alliance.getAllyLeaderName());
+				writeInt(alliance.getAllyCrestId());
 			}
 			else
 			{
-				writeS(StringUtils.EMPTY);
-				writeS(StringUtils.EMPTY);
-				writeD(0);
+				writeString(StringUtils.EMPTY);
+				writeString(StringUtils.EMPTY);
+				writeInt(0);
 			}
 		}
 	}

@@ -62,15 +62,15 @@ public class CastleSiegeInfoPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_id);
-		writeD(_isLeader ? 0x01 : 0x00);
-		writeD(_ownerObjectId);
-		writeS(_ownerName); // Clan Name
-		writeS(_leaderName); // Clan Leader Name
-		writeD(_allyId); // Ally ID
-		writeS(_allyName); // Ally Name
-		writeD((int) (Calendar.getInstance().getTimeInMillis() / 1000));
-		writeD(_startTime);
+		writeInt(_id);
+		writeInt(_isLeader ? 0x01 : 0x00);
+		writeInt(_ownerObjectId);
+		writeString(_ownerName); // Clan Name
+		writeString(_leaderName); // Clan Leader Name
+		writeInt(_allyId); // Ally ID
+		writeString(_allyName); // Ally Name
+		writeInt((int) (Calendar.getInstance().getTimeInMillis() / 1000));
+		writeInt(_startTime);
 		/*if(_startTime == 0) //если ноль то идет цыкл
 			writeDD(_nextTimeMillis, true);*/
 	}

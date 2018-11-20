@@ -10,10 +10,10 @@ public class ExDominionWarStart extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x00); //territory Id
-		writeD(0x00);
-		writeD(0x00); //territory Id
+		writeInt(0x00);
+		writeInt(0x00);
+		writeInt(0x00); //territory Id
+		writeInt(0x00);
+		writeInt(0x00); //territory Id
 	}
 }

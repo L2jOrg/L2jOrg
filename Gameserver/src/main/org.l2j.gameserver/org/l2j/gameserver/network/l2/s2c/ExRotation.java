@@ -13,7 +13,7 @@ public class ExRotation extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_charObjId);
-		writeD(_degree);
+		writeInt(_charObjId);
+		writeInt(_degree);
 	}
 }

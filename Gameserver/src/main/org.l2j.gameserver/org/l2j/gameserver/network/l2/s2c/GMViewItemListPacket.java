@@ -23,11 +23,11 @@ public class GMViewItemListPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeS(_name);
-		writeD(_limit); //c4?
-		writeH(1); // show window ??
+		writeString(_name);
+		writeInt(_limit); //c4?
+		writeShort(1); // show window ??
 
-		writeH(_size);
+		writeShort(_size);
 		for(ItemInstance temp : _items)
 		{
 			if(!temp.getTemplate().isQuest())

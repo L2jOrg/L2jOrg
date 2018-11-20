@@ -15,6 +15,6 @@ public class ExCuriousHouseObserveMode extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeC(_leave);
+		writeByte(_leave);
 	}
 }

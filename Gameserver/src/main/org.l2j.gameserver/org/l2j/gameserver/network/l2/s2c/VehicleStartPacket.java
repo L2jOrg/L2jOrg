@@ -15,7 +15,7 @@ public class VehicleStartPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_objectId);
-		writeD(_state);
+		writeInt(_objectId);
+		writeInt(_state);
 	}
 }

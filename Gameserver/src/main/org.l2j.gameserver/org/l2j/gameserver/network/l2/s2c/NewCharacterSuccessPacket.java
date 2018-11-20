@@ -25,32 +25,32 @@ public class NewCharacterSuccessPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_chars.size());
+		writeInt(_chars.size());
 
 		for(ClassId temp : _chars)
 		{
 			/*На оффе статты атрибутов у М и Ж одинаковы.*/
 			PlayerTemplate template = PlayerTemplateHolder.getInstance().getPlayerTemplate(temp.getRace(), temp, Sex.MALE);
-			writeD(temp.getRace().ordinal());
-			writeD(temp.getId());
-			writeD(0x46);
-			writeD(template.getBaseSTR());
-			writeD(0x0a);
-			writeD(0x46);
-			writeD(template.getBaseDEX());
-			writeD(0x0a);
-			writeD(0x46);
-			writeD(template.getBaseCON());
-			writeD(0x0a);
-			writeD(0x46);
-			writeD(template.getBaseINT());
-			writeD(0x0a);
-			writeD(0x46);
-			writeD(template.getBaseWIT());
-			writeD(0x0a);
-			writeD(0x46);
-			writeD(template.getBaseMEN());
-			writeD(0x0a);
+			writeInt(temp.getRace().ordinal());
+			writeInt(temp.getId());
+			writeInt(0x46);
+			writeInt(template.getBaseSTR());
+			writeInt(0x0a);
+			writeInt(0x46);
+			writeInt(template.getBaseDEX());
+			writeInt(0x0a);
+			writeInt(0x46);
+			writeInt(template.getBaseCON());
+			writeInt(0x0a);
+			writeInt(0x46);
+			writeInt(template.getBaseINT());
+			writeInt(0x0a);
+			writeInt(0x46);
+			writeInt(template.getBaseWIT());
+			writeInt(0x0a);
+			writeInt(0x46);
+			writeInt(template.getBaseMEN());
+			writeInt(0x0a);
 		}
 	}
 }

@@ -76,25 +76,25 @@ public class PrivateStoreManageList extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		//section 1
-		writeD(_sellerId);
-		writeD(_package ? 1 : 0);
-		writeQ(_adena);
+		writeInt(_sellerId);
+		writeInt(_package ? 1 : 0);
+		writeLong(_adena);
 
 		//Список имеющихся вещей
-		writeD(_sellList.size());
+		writeInt(_sellList.size());
 		for(TradeItem si : _sellList)
 		{
 			writeItemInfo(si);
-			writeQ(si.getStorePrice());
+			writeLong(si.getStorePrice());
 		}
 
 		//Список вещей уже поставленых на продажу
-		writeD(_sellList0.size());
+		writeInt(_sellList0.size());
 		for(TradeItem si : _sellList0)
 		{
 			writeItemInfo(si);
-			writeQ(si.getOwnersPrice());
-			writeQ(si.getStorePrice());
+			writeLong(si.getOwnersPrice());
+			writeLong(si.getStorePrice());
 		}
 	}
 }

@@ -28,35 +28,35 @@ public class ExPledgeRecruitBoardSearch extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_params.getCurrentPage());
-		writeD(ClanSearchManager.getInstance().getPageCount(PAGINATION_LIMIT));
+		writeInt(_params.getCurrentPage());
+		writeInt(ClanSearchManager.getInstance().getPageCount(PAGINATION_LIMIT));
 
-		writeD(_clans.size());
+		writeInt(_clans.size());
 
 		for(ClanSearchClan clanHolder : _clans)
 		{
-			writeD(clanHolder.getClanId());
-			writeD(0);
+			writeInt(clanHolder.getClanId());
+			writeInt(0);
 		}
 
 		for(ClanSearchClan clanHolder : _clans)
 		{
 			Clan clan = ClanTable.getInstance().getClan(clanHolder.getClanId());
 
-			writeD(clan.getCrestId());
-			writeD(clan.getAlliance() == null ? 0 : clan.getAlliance().getAllyCrestId());
+			writeInt(clan.getCrestId());
+			writeInt(clan.getAlliance() == null ? 0 : clan.getAlliance().getAllyCrestId());
 
-			writeS(clan.getName());
-			writeS(clan.getLeaderName());
+			writeString(clan.getName());
+			writeString(clan.getLeaderName());
 
-			writeD(clan.getLevel());
-			writeD(clan.getAllSize());
-			writeD(clanHolder.getSearchType().ordinal());
+			writeInt(clan.getLevel());
+			writeInt(clan.getAllSize());
+			writeInt(clanHolder.getSearchType().ordinal());
 
-			writeS("");
+			writeString("");
 
-			writeD(clanHolder.getApplication());
-			writeD(clanHolder.getSubUnit());
+			writeInt(clanHolder.getApplication());
+			writeInt(clanHolder.getSubUnit());
 		}
 	}
 }

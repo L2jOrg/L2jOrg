@@ -61,17 +61,17 @@ public class PrivateStoreBuyList extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_buyerId);
-		writeQ(_adena);
-		writeD(70);
-		writeD(_sellList.size());
+		writeInt(_buyerId);
+		writeLong(_adena);
+		writeInt(70);
+		writeInt(_sellList.size());
 		for(TradeItem si : _sellList)
 		{
 			writeItemInfo(si, si.getCurrentValue());
-			writeD(si.getObjectId());
-			writeQ(si.getOwnersPrice());
-			writeQ(si.getStorePrice());
-			writeQ(si.getCount()); // maximum possible tradecount
+			writeInt(si.getObjectId());
+			writeLong(si.getOwnersPrice());
+			writeLong(si.getStorePrice());
+			writeLong(si.getCount()); // maximum possible tradecount
 		}
 	}
 }

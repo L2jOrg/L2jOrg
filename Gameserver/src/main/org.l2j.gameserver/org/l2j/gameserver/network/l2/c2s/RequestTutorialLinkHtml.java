@@ -13,7 +13,7 @@ public class RequestTutorialLinkHtml extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_unk = readD(); //maybe itemId?
-		_bypass = readS();
+		_bypass = readString();
 	}
 
 	@Override

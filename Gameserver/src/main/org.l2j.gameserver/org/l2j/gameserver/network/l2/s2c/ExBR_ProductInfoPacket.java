@@ -25,20 +25,20 @@ public class ExBR_ProductInfoPacket extends L2GameServerPacket
 		if(_productId == null)
 			return;
 
-		writeD(_productId.getId()); //product id
-		writeD(_productId.getPoints(true)); // points
-		writeD(_productId.getComponents().size()); //size
+		writeInt(_productId.getId()); //product id
+		writeInt(_productId.getPoints(true)); // points
+		writeInt(_productId.getComponents().size()); //size
 
 		for(ProductItemComponent com : _productId.getComponents())
 		{
-			writeD(com.getId());
-			writeD((int)com.getCount());
-			writeD(com.getWeight());
-			writeD(com.isDropable() ? 1 : 0);
+			writeInt(com.getId());
+			writeInt((int)com.getCount());
+			writeInt(com.getWeight());
+			writeInt(com.isDropable() ? 1 : 0);
 		}
 
-		writeQ(_adena);
-		writeQ(_premiumPoints);
-		writeQ(_freeCoins);
+		writeLong(_adena);
+		writeLong(_premiumPoints);
+		writeLong(_freeCoins);
 	}
 }

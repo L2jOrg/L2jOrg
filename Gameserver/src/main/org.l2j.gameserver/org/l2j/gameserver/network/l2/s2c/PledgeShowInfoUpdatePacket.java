@@ -53,37 +53,37 @@ public class PledgeShowInfoUpdatePacket extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		//sending empty data so client will ask all the info in response ;)
-		writeD(clan_id);
-		writeD(Config.REQUEST_ID);
-		writeD(crest_id);
-		writeD(clan_level);
-		writeD(_hasCastle);
+		writeInt(clan_id);
+		writeInt(Config.REQUEST_ID);
+		writeInt(crest_id);
+		writeInt(clan_level);
+		writeInt(_hasCastle);
 		if(_hasInstantClanHall > 0)
 		{
-			writeD(0x01);
-			writeD(_hasInstantClanHall);
+			writeInt(0x01);
+			writeInt(_hasInstantClanHall);
 		}
 		else if(_hasClanHall != 0)
 		{
-			writeD(0x00);
-			writeD(_hasClanHall);
+			writeInt(0x00);
+			writeInt(_hasClanHall);
 		}
 		else
 		{
-			writeD(0x00);
-			writeD(0x00);
+			writeInt(0x00);
+			writeInt(0x00);
 		}
-		writeD(0x00);
-		writeD(clan_rank);// displayed in the "tree" view (with the clan skills)
-		writeD(clan_rep);
-		writeD(_isDisbanded ? 3 : 0);
-		writeD(0);
-		writeD(ally_id); //c5
-		writeS(ally_name); //c5
-		writeD(ally_crest); //c5
-		writeD(atwar); //c5
+		writeInt(0x00);
+		writeInt(clan_rank);// displayed in the "tree" view (with the clan skills)
+		writeInt(clan_rep);
+		writeInt(_isDisbanded ? 3 : 0);
+		writeInt(0);
+		writeInt(ally_id); //c5
+		writeString(ally_name); //c5
+		writeInt(ally_crest); //c5
+		writeInt(atwar); //c5
 
-		writeD(0x00);
-		writeD(0x00);
+		writeInt(0x00);
+		writeInt(0x00);
 	}
 }

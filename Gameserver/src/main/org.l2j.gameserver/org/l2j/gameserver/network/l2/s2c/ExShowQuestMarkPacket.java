@@ -13,7 +13,7 @@ public class ExShowQuestMarkPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_questId);
-		writeD(_cond);
+		writeInt(_questId);
+		writeInt(_cond);
 	}
 }

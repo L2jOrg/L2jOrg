@@ -6,18 +6,18 @@ public class ExTodoListInzone extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		int instancesCount = 0;
-		writeH(0);
+		writeShort(0);
 		for(int i = 0; i < instancesCount; i++)
 		{
-			writeC(0x00);
-			writeS("");
-			writeS("");
-			writeH(0x00);
-			writeH(0x00);
-			writeH(0x00);
-			writeH(0x00);
-			writeC(0x00);
-			writeC(0x00);
+			writeByte(0x00);
+			writeString("");
+			writeString("");
+			writeShort(0x00);
+			writeShort(0x00);
+			writeShort(0x00);
+			writeShort(0x00);
+			writeByte(0x00);
+			writeByte(0x00);
 		}
 	}
 }

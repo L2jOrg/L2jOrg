@@ -15,7 +15,7 @@ public class PetItemListPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeH(items.length);
+		writeShort(items.length);
 
 		for(ItemInstance item : items)
 			writeItemInfo(item);

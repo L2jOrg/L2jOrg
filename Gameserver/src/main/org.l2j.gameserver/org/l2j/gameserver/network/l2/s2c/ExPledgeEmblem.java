@@ -19,12 +19,12 @@ public class ExPledgeEmblem extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(Config.REQUEST_ID);
-		writeD(_clanId);
-		writeD(_crestId);
-		writeD(_crestPart);
-		writeD(_totalSize);
-		writeD(_data.length);
+		writeInt(Config.REQUEST_ID);
+		writeInt(_clanId);
+		writeInt(_crestId);
+		writeInt(_crestPart);
+		writeInt(_totalSize);
+		writeInt(_data.length);
 		writeB(_data);
 	}
 }

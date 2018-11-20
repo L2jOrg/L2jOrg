@@ -36,15 +36,15 @@ public class PartySpelledPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_type);
-		writeD(_objId);
-		writeD(_effects.size());
+		writeInt(_type);
+		writeInt(_objId);
+		writeInt(_effects.size());
 		for(Abnormal temp : _effects)
 		{
-			writeD(temp._skillId);
-			writeH(temp._level);
-			writeD(0x00); // UNK Ertheia
-			writeH(temp._duration);
+			writeInt(temp._skillId);
+			writeShort(temp._level);
+			writeInt(0x00); // UNK Ertheia
+			writeShort(temp._duration);
 		}
 	}
 

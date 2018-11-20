@@ -25,15 +25,15 @@ public class ExPartyPetWindowUpdate extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(obj_id);
-		writeD(npc_id);
-		writeD(_type);
-		writeD(owner_obj_id);
-		writeS(_name);
-		writeD(curHp);
-		writeD(maxHp);
-		writeD(curMp);
-		writeD(maxMp);
-		writeD(level);
+		writeInt(obj_id);
+		writeInt(npc_id);
+		writeInt(_type);
+		writeInt(owner_obj_id);
+		writeString(_name);
+		writeInt(curHp);
+		writeInt(maxHp);
+		writeInt(curMp);
+		writeInt(maxMp);
+		writeInt(level);
 	}
 }

@@ -23,15 +23,15 @@ public class GMViewQuestInfoPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeS(_characterName);
-		writeH(_quests.size());
+		writeString(_characterName);
+		writeShort(_quests.size());
 		for(TIntIntIterator iterator = _quests.iterator(); iterator.hasNext();)
 		{
 			iterator.advance();
 
-			writeD(iterator.key());
-			writeD(iterator.value());
+			writeInt(iterator.key());
+			writeInt(iterator.value());
 		}
-		writeH(0); //количество элементов типа: ddQd , как-то связано с предметами
+		writeShort(0); //количество элементов типа: ddQd , как-то связано с предметами
 	}
 }

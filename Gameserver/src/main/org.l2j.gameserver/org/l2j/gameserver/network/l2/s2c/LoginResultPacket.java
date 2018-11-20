@@ -26,7 +26,7 @@ public class LoginResultPacket extends L2GameServerPacket
     @Override
     protected final void writeImpl()
     {
-        writeD(_reason1);
-        writeD(_reason2);
+        writeInt(_reason1);
+        writeInt(_reason2);
     }
 }

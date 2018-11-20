@@ -26,11 +26,11 @@ public class ExPutItemResultForVariationCancel extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_itemObjectId);
-		writeD(_itemId);
-		writeD(_aug1);
-		writeD(_aug2);
-		writeQ(_price);
-		writeD(0x01);
+		writeInt(_itemObjectId);
+		writeInt(_itemId);
+		writeInt(_aug1);
+		writeInt(_aug2);
+		writeLong(_price);
+		writeInt(0x01);
 	}
 }

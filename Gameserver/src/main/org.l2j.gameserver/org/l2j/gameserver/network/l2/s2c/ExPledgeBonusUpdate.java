@@ -20,7 +20,7 @@ public class ExPledgeBonusUpdate extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeC(_type.ordinal());
-		writeD(_value);
+		writeByte(_type.ordinal());
+		writeInt(_value);
 	}
 }

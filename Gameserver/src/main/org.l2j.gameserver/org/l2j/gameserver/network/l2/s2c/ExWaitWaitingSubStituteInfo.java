@@ -14,6 +14,6 @@ public class ExWaitWaitingSubStituteInfo extends L2GameServerPacket
 
 	protected void writeImpl()
 	{
-		writeD(_open);
+		writeInt(_open);
 	}
 }

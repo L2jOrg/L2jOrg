@@ -19,6 +19,6 @@ public class ExLightingCandleEvent extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeH(_value);	// Available
+		writeShort(_value);	// Available
 	}
 }

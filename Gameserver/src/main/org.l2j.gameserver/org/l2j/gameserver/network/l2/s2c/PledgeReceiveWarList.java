@@ -25,11 +25,11 @@ public class PledgeReceiveWarList extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_page);
+		writeInt(_page);
 
 		List<ClanWar> wars = _clan.getClanWars();
 
-		writeD(wars.size());
+		writeInt(wars.size());
 		for(ClanWar war : wars)
 		{
 			Clan opposingClan = war.getAttackerClan();
@@ -46,13 +46,13 @@ public class PledgeReceiveWarList extends L2GameServerPacket
 			else if(war.getClanWarState(_clan).ordinal() <= 1)
 				duration += 345600;
 
-			writeS(opposingClan.getName());
-			writeD(war.getClanWarState(_clan).ordinal());
-			writeD(duration);
+			writeString(opposingClan.getName());
+			writeInt(war.getClanWarState(_clan).ordinal());
+			writeInt(duration);
 
-			writeD(pointDiff);
-			writeD(war.calculateWarProgress(pointDiff).ordinal());
-			writeD(opposingClan.getAllSize());
+			writeInt(pointDiff);
+			writeInt(war.calculateWarProgress(pointDiff).ordinal());
+			writeInt(opposingClan.getAllSize());
 		}
 	}
 }

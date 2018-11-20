@@ -24,9 +24,9 @@ public class ExShape_Shifting_Result extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_result); //Result
-		writeD(_targetItemId);
-		writeD(_extractItemId);
-		writeD(_period);
+		writeInt(_result); //Result
+		writeInt(_targetItemId);
+		writeInt(_extractItemId);
+		writeInt(_period);
 	}
 }

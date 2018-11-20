@@ -28,28 +28,28 @@ public class ListPartyWaitingPacket extends L2GameServerPacket
     @Override
     protected final void writeImpl()
     {
-        writeD(_page);
-        writeD(_rooms.size());
+        writeInt(_page);
+        writeInt(_rooms.size());
 
         for(MatchingRoom room : _rooms)
         {
-            writeD(room.getId()); //room id
-            writeS(room.getTopic()); // room name
-            writeD(room.getLocationId());
-            writeD(room.getMinLevel()); //min level
-            writeD(room.getMaxLevel()); //max level
-            writeD(room.getMaxMembersSize()); //max members coun
-            writeS(room.getLeader() == null ? "None" : room.getLeader().getName());
+            writeInt(room.getId()); //room id
+            writeString(room.getTopic()); // room name
+            writeInt(room.getLocationId());
+            writeInt(room.getMinLevel()); //min level
+            writeInt(room.getMaxLevel()); //max level
+            writeInt(room.getMaxMembersSize()); //max members coun
+            writeString(room.getLeader() == null ? "None" : room.getLeader().getName());
 
             Collection<Player> players = room.getPlayers();
-            writeD(players.size()); //members count
+            writeInt(players.size()); //members count
             for(Player player : players)
             {
-                writeD(player.getClassId().getId());
-                writeS(player.getName());
+                writeInt(player.getClassId().getId());
+                writeString(player.getName());
             }
         }
-        writeD(0x00);
-        writeD(0x00);
+        writeInt(0x00);
+        writeInt(0x00);
     }
 }

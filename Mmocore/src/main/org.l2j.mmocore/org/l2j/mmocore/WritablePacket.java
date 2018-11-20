@@ -180,8 +180,10 @@ public abstract class WritablePacket<T extends Client<Connection<T>>> extends Ab
     int writeData() {
 		data = new byte[max(2, packetSize())];
 		dataIndex += ReadHandler.HEADER_SIZE;
-        write();
-        return dataIndex;
+        if(write()) {
+			return dataIndex;
+		}
+		return 0;
     }
 
     private static byte pickByte(byte  le, byte  be) { return isBigEndian ? be : le; }
@@ -190,7 +192,7 @@ public abstract class WritablePacket<T extends Client<Connection<T>>> extends Ab
         return  ResourcePool.bufferSize;
     }
 
-	protected abstract void write();
+	protected abstract boolean write();
 
     void writeHeader(int dataSize) {
         var header = convertEndian((short) dataSize);

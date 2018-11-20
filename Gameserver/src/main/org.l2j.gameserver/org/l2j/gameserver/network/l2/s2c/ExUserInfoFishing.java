@@ -14,16 +14,16 @@ public class ExUserInfoFishing extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_activeChar.getObjectId());
+		writeInt(_activeChar.getObjectId());
 
 		if(_activeChar.getFishing().isInProcess())
 		{
-			writeC(0x01);
-			writeD(_activeChar.getFishing().getHookLocation().getX());
-			writeD(_activeChar.getFishing().getHookLocation().getY());
-			writeD(_activeChar.getFishing().getHookLocation().getZ());
+			writeByte(0x01);
+			writeInt(_activeChar.getFishing().getHookLocation().getX());
+			writeInt(_activeChar.getFishing().getHookLocation().getY());
+			writeInt(_activeChar.getFishing().getHookLocation().getZ());
 		}
 		else
-			writeC(0x00);
+			writeByte(0x00);
 	}
 }

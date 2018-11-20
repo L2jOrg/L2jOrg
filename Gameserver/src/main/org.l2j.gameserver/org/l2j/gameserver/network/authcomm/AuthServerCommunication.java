@@ -564,7 +564,7 @@ public class AuthServerCommunication extends Thread
 		writeLock.lock();
 		try
 		{
-			if(client.isAuthed())
+			if(client.getState() == GameClient.GameClientState.AUTHED)
 				return authedClients.remove(client.getLogin());
 			else
 				return waitingClients.remove(client.getLogin());

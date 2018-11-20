@@ -12,6 +12,6 @@ public final class ExShowStatPage extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_page);
+		writeInt(_page);
 	}
 }

@@ -56,59 +56,59 @@ public class NpcInfoPoly extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_obj.getObjectId());
-		writeD(_npcId + 1000000); // npctype id
-		writeD(0x00);
-		writeD(_x);
-		writeD(_y);
-		writeD(_z);
-		writeD(_heading);
-		writeD(0x00);
-		writeD(_mAtkSpd);
-		writeD(_pAtkSpd);
-		writeD(_runSpd);
-		writeD(_walkSpd);
-		writeD(_swimRunSpd/*0x32*/); // swimspeed
-		writeD(_swimWalkSpd/*0x32*/); // swimspeed
-		writeD(_flRunSpd);
-		writeD(_flWalkSpd);
-		writeD(_flyRunSpd);
-		writeD(_flyWalkSpd);
+		writeInt(_obj.getObjectId());
+		writeInt(_npcId + 1000000); // npctype id
+		writeInt(0x00);
+		writeInt(_x);
+		writeInt(_y);
+		writeInt(_z);
+		writeInt(_heading);
+		writeInt(0x00);
+		writeInt(_mAtkSpd);
+		writeInt(_pAtkSpd);
+		writeInt(_runSpd);
+		writeInt(_walkSpd);
+		writeInt(_swimRunSpd/*0x32*/); // swimspeed
+		writeInt(_swimWalkSpd/*0x32*/); // swimspeed
+		writeInt(_flRunSpd);
+		writeInt(_flWalkSpd);
+		writeInt(_flyRunSpd);
+		writeInt(_flyWalkSpd);
 		writeF(1/*_cha.getProperMultiplier()*/);
 		writeF(1/*_cha.getAttackSpeedMultiplier()*/);
 		writeF(colRadius);
 		writeF(colHeight);
-		writeD(_rhand); // right hand weapon
-		writeD(0);
-		writeD(_lhand); // left hand weapon
-		writeC(1); // name above char 1=true ... ??
-		writeC(_isRunning ? 1 : 0);
-		writeC(_isInCombat ? 1 : 0);
-		writeC(_isAlikeDead ? 1 : 0);
-		writeC(_isSummoned ? 2 : 0); // invisible ?? 0=false  1=true   2=summoned (only works if model has a summon animation)
-		writeS(_name);
-		writeS(_title);
-		writeD(0);
-		writeD(0);
-		writeD(0000); // hmm karma ??
+		writeInt(_rhand); // right hand weapon
+		writeInt(0);
+		writeInt(_lhand); // left hand weapon
+		writeByte(1); // name above char 1=true ... ??
+		writeByte(_isRunning ? 1 : 0);
+		writeByte(_isInCombat ? 1 : 0);
+		writeByte(_isAlikeDead ? 1 : 0);
+		writeByte(_isSummoned ? 2 : 0); // invisible ?? 0=false  1=true   2=summoned (only works if model has a summon animation)
+		writeString(_name);
+		writeString(_title);
+		writeInt(0);
+		writeInt(0);
+		writeInt(0000); // hmm karma ??
 
-		writeD(_abnormalEffect);
+		writeInt(_abnormalEffect);
 
-		writeD(0000); // C2
-		writeD(0000); // C2
-		writeD(0000); // C2
-		writeD(0000); // C2
-		writeC(0000); // C2
-		writeC(_team.ordinal());
+		writeInt(0000); // C2
+		writeInt(0000); // C2
+		writeInt(0000); // C2
+		writeInt(0000); // C2
+		writeByte(0000); // C2
+		writeByte(_team.ordinal());
 		writeF(colRadius); // тут что-то связанное с colRadius
 		writeF(colHeight); // тут что-то связанное с colHeight
-		writeD(0x00); // C4
-		writeD(0x00); // как-то связано с высотой
-		writeD(0x00);
-		writeD(0x00); // maybe show great wolf type ?
+		writeInt(0x00); // C4
+		writeInt(0x00); // как-то связано с высотой
+		writeInt(0x00);
+		writeInt(0x00); // maybe show great wolf type ?
 
-		writeC(0x00); //?GraciaFinal
-		writeC(0x00); //?GraciaFinal
-		writeD(_abnormalEffect2);
+		writeByte(0x00); //?GraciaFinal
+		writeByte(0x00); //?GraciaFinal
+		writeInt(_abnormalEffect2);
 	}
 }

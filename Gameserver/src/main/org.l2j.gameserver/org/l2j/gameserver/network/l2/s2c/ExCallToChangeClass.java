@@ -18,7 +18,7 @@ public class ExCallToChangeClass extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_classId); // New Class Id
-		writeD(_showMsg); // Show Message
+		writeInt(_classId); // New Class Id
+		writeInt(_showMsg); // Show Message
 	}
 }

@@ -20,7 +20,7 @@ public class RequestGMCommand extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_targetName = readS();
+		_targetName = readString();
 		_command = readD();
 		// readD();
 	}

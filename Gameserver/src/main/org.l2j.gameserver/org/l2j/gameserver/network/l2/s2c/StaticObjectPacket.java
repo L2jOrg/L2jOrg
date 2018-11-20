@@ -51,16 +51,16 @@ public class StaticObjectPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_staticObjectId);
-		writeD(_objectId);
-		writeD(_type);
-		writeD(_isTargetable);
-		writeD(_meshIndex);
-		writeD(_isClosed);
-		writeD(_isEnemy);
-		writeD(_currentHp);
-		writeD(_maxHp);
-		writeD(_showHp);
-		writeD(_damageGrade);
+		writeInt(_staticObjectId);
+		writeInt(_objectId);
+		writeInt(_type);
+		writeInt(_isTargetable);
+		writeInt(_meshIndex);
+		writeInt(_isClosed);
+		writeInt(_isEnemy);
+		writeInt(_currentHp);
+		writeInt(_maxHp);
+		writeInt(_showHp);
+		writeInt(_damageGrade);
 	}
 }

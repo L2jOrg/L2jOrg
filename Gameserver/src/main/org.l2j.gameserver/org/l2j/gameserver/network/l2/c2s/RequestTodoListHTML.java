@@ -11,7 +11,7 @@ public class RequestTodoListHTML extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_tab = readC();
-		_linkName = readS();
+		_linkName = readString();
 	}
 
 	@Override

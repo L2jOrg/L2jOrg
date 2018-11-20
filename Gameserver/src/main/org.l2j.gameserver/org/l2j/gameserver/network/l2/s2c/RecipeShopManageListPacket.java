@@ -35,22 +35,22 @@ public class RecipeShopManageListPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(sellerId);
-		writeD((int) Math.min(adena, Integer.MAX_VALUE)); //FIXME не менять на writeQ, в текущем клиенте там все еще D (видимо баг NCSoft)
-		writeD(isDwarven ? 0x00 : 0x01);
-		writeD(recipes.size());
+		writeInt(sellerId);
+		writeInt((int) Math.min(adena, Integer.MAX_VALUE)); //FIXME не менять на writeQ, в текущем клиенте там все еще D (видимо баг NCSoft)
+		writeInt(isDwarven ? 0x00 : 0x01);
+		writeInt(recipes.size());
 		int i = 1;
 		for(RecipeTemplate recipe : recipes)
 		{
-			writeD(recipe.getId());
-			writeD(i++);
+			writeInt(recipe.getId());
+			writeInt(i++);
 		}
-		writeD(createList.size());
+		writeInt(createList.size());
 		for(ManufactureItem mi : createList)
 		{
-			writeD(mi.getRecipeId());
-			writeD(0x00); //??
-			writeQ(mi.getCost());
+			writeInt(mi.getRecipeId());
+			writeInt(0x00); //??
+			writeLong(mi.getCost());
 		}
 	}
 }

@@ -17,7 +17,7 @@ public class RequestGiveNickName extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_target = readS(Config.CNAME_MAXLEN);
-		_title = readS();
+		_title = readString();
 	}
 
 	@Override

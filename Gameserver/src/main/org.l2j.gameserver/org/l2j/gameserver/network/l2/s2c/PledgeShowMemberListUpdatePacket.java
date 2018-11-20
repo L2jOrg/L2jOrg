@@ -50,14 +50,14 @@ public class PledgeShowMemberListUpdatePacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeS(_name);
-		writeD(_lvl);
-		writeD(_classId);
-		writeD(_sex);
-		writeD(_objectId);
-		writeD(_isOnline); // 1=online 0=offline
-		writeD(_pledgeType);
-		writeD(_isApprentice); // does a clan member have a sponsor
-		writeC(_attendance);
+		writeString(_name);
+		writeInt(_lvl);
+		writeInt(_classId);
+		writeInt(_sex);
+		writeInt(_objectId);
+		writeInt(_isOnline); // 1=online 0=offline
+		writeInt(_pledgeType);
+		writeInt(_isApprentice); // does a clan member have a sponsor
+		writeByte(_attendance);
 	}
 }

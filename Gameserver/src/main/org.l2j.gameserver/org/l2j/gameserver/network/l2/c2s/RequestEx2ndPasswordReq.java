@@ -19,9 +19,9 @@ public class RequestEx2ndPasswordReq extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_changePass = readC();
-		_password = readS();
+		_password = readString();
 		if(_changePass == 2)
-			_newPassword = readS();
+			_newPassword = readString();
 	}
 
 	@Override

@@ -17,20 +17,20 @@ public class PartySmallWindowAddPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_leaderObjectId);
-		writeD(_loot);
-		writeD(_member.objId);
-		writeS(_member.name);
-		writeD(_member.curCp);
-		writeD(_member.maxCp);
-		writeD(_member.curHp);
-		writeD(_member.maxHp);
-		writeD(_member.curMp);
-		writeD(_member.maxMp);
-		writeD(0x00);
-		writeC(_member.level);
-		writeH(_member.classId);
-		writeC(_member.sex);
-		writeH(_member.raceId);
+		writeInt(_leaderObjectId);
+		writeInt(_loot);
+		writeInt(_member.objId);
+		writeString(_member.name);
+		writeInt(_member.curCp);
+		writeInt(_member.maxCp);
+		writeInt(_member.curHp);
+		writeInt(_member.maxHp);
+		writeInt(_member.curMp);
+		writeInt(_member.maxMp);
+		writeInt(0x00);
+		writeByte(_member.level);
+		writeShort(_member.classId);
+		writeByte(_member.sex);
+		writeShort(_member.raceId);
 	}
 }

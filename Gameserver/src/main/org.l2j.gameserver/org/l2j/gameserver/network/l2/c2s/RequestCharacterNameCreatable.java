@@ -12,7 +12,7 @@ public class RequestCharacterNameCreatable extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_charname = readS();
+		_charname = readString();
 	}
 
 	@Override

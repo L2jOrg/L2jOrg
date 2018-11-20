@@ -26,28 +26,28 @@ public class MonRaceInfoPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_unknown1);
-		writeD(_unknown2);
-		writeD(8);
+		writeInt(_unknown1);
+		writeInt(_unknown2);
+		writeInt(8);
 
 		for(int i = 0; i < 8; i++)
 		{
 			//_log.info.println("MOnster "+(i+1)+" npcid "+_monsters[i].getNpcTemplate().getNpcId());
-			writeD(_monsters[i].getObjectId()); //npcObjectID
-			writeD(_monsters[i].getNpcId() + 1000000); //npcID
-			writeD(14107); //origin X
-			writeD(181875 + 58 * (7 - i)); //origin Y
-			writeD(-3566); //origin Z
-			writeD(12080); //end X
-			writeD(181875 + 58 * (7 - i)); //end Y
-			writeD(-3566); //end Z
+			writeInt(_monsters[i].getObjectId()); //npcObjectID
+			writeInt(_monsters[i].getNpcId() + 1000000); //npcID
+			writeInt(14107); //origin X
+			writeInt(181875 + 58 * (7 - i)); //origin Y
+			writeInt(-3566); //origin Z
+			writeInt(12080); //end X
+			writeInt(181875 + 58 * (7 - i)); //end Y
+			writeInt(-3566); //end Z
 			writeF(_monsters[i].getCollisionHeight()); //coll. height
 			writeF(_monsters[i].getCollisionRadius()); //coll. radius
-			writeD(120); // ?? unknown
+			writeInt(120); // ?? unknown
 			for(int j = 0; j < 20; j++)
-				writeC(_unknown1 == 0 ? _speeds[i][j] : 0);
-			writeD(0);
-			writeD(0x00); // ? GraciaFinal
+				writeByte(_unknown1 == 0 ? _speeds[i][j] : 0);
+			writeInt(0);
+			writeInt(0x00); // ? GraciaFinal
 		}
 	}
 }

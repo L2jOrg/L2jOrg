@@ -13,7 +13,7 @@ public class ExCleftState extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(CleftState);
+		writeInt(CleftState);
 		switch(CleftState)
 		{
 			case CleftState_Total:

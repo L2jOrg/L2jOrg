@@ -12,6 +12,6 @@ public class GMHidePacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(obj_id);
+		writeInt(obj_id);
 	}
 }

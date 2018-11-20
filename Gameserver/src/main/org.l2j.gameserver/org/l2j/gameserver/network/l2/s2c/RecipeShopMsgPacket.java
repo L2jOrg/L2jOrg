@@ -17,7 +17,7 @@ public class RecipeShopMsgPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_objectId);
-		writeS(_storeName);
+		writeInt(_objectId);
+		writeString(_storeName);
 	}
 }

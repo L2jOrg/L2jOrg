@@ -49,8 +49,8 @@ public class ShortBuffStatusUpdatePacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_skillId); // skill id??? CD 04 00 00 = skill 1229, hex 4CD
-		writeD(_skillLevel); //Skill Level??? 07 00 00 00 = casted by heal 7 lvl.
-		writeD(_skillDuration); //DURATION???? 0F 00 00 00 = 15 sec = overlord's heal
+		writeInt(_skillId); // skill id??? CD 04 00 00 = skill 1229, hex 4CD
+		writeInt(_skillLevel); //Skill Level??? 07 00 00 00 = casted by heal 7 lvl.
+		writeInt(_skillDuration); //DURATION???? 0F 00 00 00 = 15 sec = overlord's heal
 	}
 }

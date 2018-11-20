@@ -41,15 +41,15 @@ public class ExAbnormalStatusUpdateFromTargetPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_objectId);
-		writeH(_effects.size());
+		writeInt(_objectId);
+		writeShort(_effects.size());
 		for(Abnormal temp : _effects)
 		{
-			writeD(temp.skillId);
-			writeH(temp.dat);
-			writeH(temp.comboId); // combo type ???
-			writeH(temp.duration);
-			writeD(temp.effectorObjectId); // Buffer OID
+			writeInt(temp.skillId);
+			writeShort(temp.dat);
+			writeShort(temp.comboId); // combo type ???
+			writeShort(temp.duration);
+			writeInt(temp.effectorObjectId); // Buffer OID
 		}
 	}
 }

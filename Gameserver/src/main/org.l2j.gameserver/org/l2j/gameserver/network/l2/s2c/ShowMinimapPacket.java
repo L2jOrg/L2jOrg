@@ -14,7 +14,7 @@ public class ShowMinimapPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_mapId);
-		writeC(0x00);
+		writeInt(_mapId);
+		writeByte(0x00);
 	}
 }

@@ -24,13 +24,13 @@ public class ExMPCCShowPartyMemberInfo extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(members.size()); // Количество членов в пати
+		writeInt(members.size()); // Количество членов в пати
 
 		for(PartyMemberInfo member : members)
 		{
-			writeS(member.name); // Имя члена пати
-			writeD(member.object_id); // object Id члена пати
-			writeD(member.class_id); // id класса члена пати
+			writeString(member.name); // Имя члена пати
+			writeInt(member.object_id); // object Id члена пати
+			writeInt(member.class_id); // id класса члена пати
 		}
 
 		members.clear();

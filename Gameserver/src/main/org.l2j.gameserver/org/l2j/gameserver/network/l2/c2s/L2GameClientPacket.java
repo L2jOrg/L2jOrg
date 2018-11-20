@@ -8,13 +8,14 @@ import org.l2j.gameserver.GameServer;
 import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.network.l2.s2c.L2GameServerPacket;
 
+import org.l2j.mmocore.ReadablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
  * Packets received by the game server from clients
  */
-public abstract class L2GameClientPacket extends ReceivablePacket<GameClient>
+public abstract class L2GameClientPacket extends ReadablePacket<GameClient>
 {
 	private static final Logger _log = LoggerFactory.getLogger(L2GameClientPacket.class);
 
@@ -28,12 +29,12 @@ public abstract class L2GameClientPacket extends ReceivablePacket<GameClient>
 		}
 		catch(BufferUnderflowException e)
 		{
-			_client.onPacketReadFail();
-			_log.error("Client: " + _client + " - Failed reading: " + getType() + " - Server Version: " + GameServer.getInstance().getVersion(), e);
+			client.onPacketReadFail();
+			_log.error("Client: " + client + " - Failed reading: " + getType() + " - Server Version: " + GameServer.getInstance().getVersion(), e);
 		}
 		catch(Exception e)
 		{
-			_log.error("Client: " + _client + " - Failed reading: " + getType() + " - Server Version: " + GameServer.getInstance().getVersion(), e);
+			_log.error("Client: " + client + " - Failed reading: " + getType() + " - Server Version: " + GameServer.getInstance().getVersion(), e);
 		}
 
 		return false;
@@ -59,7 +60,7 @@ public abstract class L2GameClientPacket extends ReceivablePacket<GameClient>
 
 	protected String readS(int len)
 	{
-		String ret = readS();
+		String ret = readString();
 		return ret.length() > len ? ret.substring(0, len) : ret;
 	}
 
@@ -71,11 +72,6 @@ public abstract class L2GameClientPacket extends ReceivablePacket<GameClient>
 	protected void sendPacket(L2GameServerPacket... packets)
 	{
 		getClient().sendPacket(packets);
-	}
-
-	protected void sendPackets(List<L2GameServerPacket> packets)
-	{
-		getClient().sendPackets(packets);
 	}
 
 	public String getType()

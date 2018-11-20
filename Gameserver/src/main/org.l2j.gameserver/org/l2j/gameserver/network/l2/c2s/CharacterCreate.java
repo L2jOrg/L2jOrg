@@ -29,7 +29,7 @@ public class CharacterCreate extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_name = readS();
+		_name = readString();
 		readD(); // race
 		_sex = readD();
 		_classId = readD();

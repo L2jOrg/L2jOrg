@@ -19,19 +19,19 @@ public class ExFlyMoveBroadcast extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_objId);
+		writeInt(_objId);
 
-		writeD(0x01); //TODO: [Bonux] Maybe TYPE
-		writeD(0x00); //TODO: [Bonux]
+		writeInt(0x01); //TODO: [Bonux] Maybe TYPE
+		writeInt(0x00); //TODO: [Bonux]
 
-		writeD(_loc.getX());
-		writeD(_loc.getY());
-		writeD(_loc.getZ());
+		writeInt(_loc.getX());
+		writeInt(_loc.getY());
+		writeInt(_loc.getZ());
 
-		writeD(0x00); //TODO: [Bonux]
+		writeInt(0x00); //TODO: [Bonux]
 
-		writeD(_destLoc.getX());
-		writeD(_destLoc.getY());
-		writeD(_destLoc.getZ());
+		writeInt(_destLoc.getX());
+		writeInt(_destLoc.getY());
+		writeInt(_destLoc.getZ());
 	}
 }

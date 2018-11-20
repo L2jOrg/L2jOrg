@@ -15,6 +15,6 @@ public class ExPledgeCount extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_count);
+		writeInt(_count);
 	}
 }

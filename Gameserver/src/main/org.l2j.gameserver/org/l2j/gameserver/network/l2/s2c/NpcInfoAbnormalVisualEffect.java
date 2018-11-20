@@ -22,10 +22,10 @@ public class NpcInfoAbnormalVisualEffect extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_objectId);
-		writeD(_transformId);
-		writeH(_abnormalEffects.length);
+		writeInt(_objectId);
+		writeInt(_transformId);
+		writeShort(_abnormalEffects.length);
 		for(AbnormalEffect abnormal : _abnormalEffects)
-			writeH(abnormal.getId());
+			writeShort(abnormal.getId());
 	}
 }

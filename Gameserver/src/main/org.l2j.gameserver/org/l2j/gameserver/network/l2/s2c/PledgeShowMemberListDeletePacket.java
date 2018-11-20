@@ -12,6 +12,6 @@ public class PledgeShowMemberListDeletePacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeS(_player);
+		writeString(_player);
 	}
 }

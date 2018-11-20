@@ -20,13 +20,13 @@ public class MoveToLocationInVehiclePacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_playerObjectId);
-		writeD(_boatObjectId);
-		writeD(_destination.x);
-		writeD(_destination.y);
-		writeD(_destination.z);
-		writeD(_origin.x);
-		writeD(_origin.y);
-		writeD(_origin.z);
+		writeInt(_playerObjectId);
+		writeInt(_boatObjectId);
+		writeInt(_destination.x);
+		writeInt(_destination.y);
+		writeInt(_destination.z);
+		writeInt(_origin.x);
+		writeInt(_origin.y);
+		writeInt(_origin.z);
 	}
 }

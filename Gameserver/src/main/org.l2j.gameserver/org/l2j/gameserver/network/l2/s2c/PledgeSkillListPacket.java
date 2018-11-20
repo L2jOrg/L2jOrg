@@ -35,20 +35,20 @@ public class PledgeSkillListPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_allSkills.size());
-		writeD(_unitSkills.size());
+		writeInt(_allSkills.size());
+		writeInt(_unitSkills.size());
 
 		for(SkillInfo info : _allSkills)
 		{
-			writeD(info._id);
-			writeD(info._level);
+			writeInt(info._id);
+			writeInt(info._level);
 		}
 
 		for(UnitSkillInfo info : _unitSkills)
 		{
-			writeD(info._type);
-			writeD(info._id);
-			writeD(info._level);
+			writeInt(info._type);
+			writeInt(info._id);
+			writeInt(info._level);
 		}
 	}
 

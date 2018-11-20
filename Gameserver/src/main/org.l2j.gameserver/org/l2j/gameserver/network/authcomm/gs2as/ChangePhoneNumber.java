@@ -17,7 +17,7 @@ public class ChangePhoneNumber extends SendablePacket
 	protected void writeImpl()
 	{
 		writeC(0x0c);
-		writeS(_account);
+		writeString(_account);
 		writeQ(_phoneNumber);
 	}
 }

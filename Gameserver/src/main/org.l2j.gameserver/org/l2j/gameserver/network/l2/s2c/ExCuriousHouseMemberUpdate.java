@@ -14,11 +14,11 @@ public class ExCuriousHouseMemberUpdate extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_player.getObjectId());
-		writeD(_player.getMaxHp());
-		writeD(_player.getMaxCp());
-		writeD((int)_player.getCurrentHp());
-		writeD((int)_player.getCurrentCp());
+		writeInt(_player.getObjectId());
+		writeInt(_player.getMaxHp());
+		writeInt(_player.getMaxCp());
+		writeInt((int)_player.getCurrentHp());
+		writeInt((int)_player.getCurrentCp());
 	}
 }
 

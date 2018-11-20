@@ -15,6 +15,6 @@ public class ExStopScenePlayerPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_movieId);
+		writeInt(_movieId);
 	}
 }

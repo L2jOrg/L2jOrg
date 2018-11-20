@@ -14,7 +14,7 @@ public class StartAllianceWar extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeS(_char);
-		writeS(_allianceName);
+		writeString(_char);
+		writeString(_allianceName);
 	}
 }

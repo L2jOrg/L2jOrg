@@ -16,6 +16,6 @@ public class ExCuriousHouseState extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_state);
+		writeInt(_state);
 	}
 }

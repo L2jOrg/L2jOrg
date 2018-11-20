@@ -33,17 +33,17 @@ public class SkillListPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_skills.size());
+		writeInt(_skills.size());
 		for(SkillEntry skillEntry : _skills)
 		{
 			Skill temp = skillEntry.getTemplate();
-			writeD(temp.isActive() || temp.isToggle() ? 0 : 1); // deprecated? клиентом игнорируется
-			writeD(temp.getDisplayLevel());
-			writeD(temp.getDisplayId());
-			writeD(temp.getReuseSkillId());
-			writeC(_player.isUnActiveSkill(temp.getId()) ? 0x01 : 0x00); // иконка скилла серая если не 0
-			writeC(0x00); // для заточки: если 1 скилл можно точить
+			writeInt(temp.isActive() || temp.isToggle() ? 0 : 1); // deprecated? клиентом игнорируется
+			writeInt(temp.getDisplayLevel());
+			writeInt(temp.getDisplayId());
+			writeInt(temp.getReuseSkillId());
+			writeByte(_player.isUnActiveSkill(temp.getId()) ? 0x01 : 0x00); // иконка скилла серая если не 0
+			writeByte(0x00); // для заточки: если 1 скилл можно точить
 		}
-		writeD(_learnedSkillId);
+		writeInt(_learnedSkillId);
 	}
 }

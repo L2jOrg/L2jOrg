@@ -30,16 +30,16 @@ public class ExMultiPartyCommandChannelInfoPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeS(ChannelLeaderName); // имя лидера CC
-		writeD(0); // Looting type?
-		writeD(MemberCount); // общее число человек в СС
-		writeD(parties.size()); // общее число партий в СС
+		writeString(ChannelLeaderName); // имя лидера CC
+		writeInt(0); // Looting type?
+		writeInt(MemberCount); // общее число человек в СС
+		writeInt(parties.size()); // общее число партий в СС
 
 		for(ChannelPartyInfo party : parties)
 		{
-			writeS(party.Leader_name); // имя лидера партии
-			writeD(party.Leader_obj_id); // ObjId пати лидера
-			writeD(party.MemberCount); // количество мемберов в пати
+			writeString(party.Leader_name); // имя лидера партии
+			writeInt(party.Leader_obj_id); // ObjId пати лидера
+			writeInt(party.MemberCount); // количество мемберов в пати
 		}
 	}
 

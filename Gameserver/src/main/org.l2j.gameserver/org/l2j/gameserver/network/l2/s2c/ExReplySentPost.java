@@ -23,41 +23,41 @@ public class ExReplySentPost extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(mail.getType().ordinal());
+		writeInt(mail.getType().ordinal());
 		if(mail.getType() == Mail.SenderType.SYSTEM)
 		{
-			writeD(mail.getSystemParams()[0]);
-			writeD(mail.getSystemParams()[1]);
-			writeD(mail.getSystemParams()[2]);
-			writeD(mail.getSystemParams()[3]);
-			writeD(mail.getSystemParams()[4]);
-			writeD(mail.getSystemParams()[5]);
-			writeD(mail.getSystemParams()[6]);
-			writeD(mail.getSystemParams()[7]);
-			writeD(mail.getSystemTopic());
-			writeD(mail.getSystemBody());
+			writeInt(mail.getSystemParams()[0]);
+			writeInt(mail.getSystemParams()[1]);
+			writeInt(mail.getSystemParams()[2]);
+			writeInt(mail.getSystemParams()[3]);
+			writeInt(mail.getSystemParams()[4]);
+			writeInt(mail.getSystemParams()[5]);
+			writeInt(mail.getSystemParams()[6]);
+			writeInt(mail.getSystemParams()[7]);
+			writeInt(mail.getSystemTopic());
+			writeInt(mail.getSystemBody());
 		}
 		else if(mail.getType() == Mail.SenderType.UNKNOWN)
 		{
-			writeD(3492);
-			writeD(3493);
+			writeInt(3492);
+			writeInt(3493);
 		}
 
-		writeD(mail.getMessageId()); // id письма
-		writeD(mail.isPayOnDelivery() ? 1 : 0); // 1 - письмо с запросом оплаты, 0 - просто письмо
+		writeInt(mail.getMessageId()); // id письма
+		writeInt(mail.isPayOnDelivery() ? 1 : 0); // 1 - письмо с запросом оплаты, 0 - просто письмо
 
-		writeS(mail.getReceiverName()); // кому
-		writeS(mail.getTopic()); // топик
-		writeS(mail.getBody()); // тело
+		writeString(mail.getReceiverName()); // кому
+		writeString(mail.getTopic()); // топик
+		writeString(mail.getBody()); // тело
 
-		writeD(mail.getAttachments().size()); // количество приложенных вещей
+		writeInt(mail.getAttachments().size()); // количество приложенных вещей
 		for(ItemInstance item : mail.getAttachments())
 		{
 			writeItemInfo(item);
-			writeD(item.getObjectId());
+			writeInt(item.getObjectId());
 		}
 
-		writeQ(mail.getPrice()); // для писем с оплатой - цена
-		writeD(mail.getReceiverId()); // Не известно. В сниффе оффа значение 24225 (не равняется MessageId)
+		writeLong(mail.getPrice()); // для писем с оплатой - цена
+		writeInt(mail.getReceiverId()); // Не известно. В сниффе оффа значение 24225 (не равняется MessageId)
 	}
 }

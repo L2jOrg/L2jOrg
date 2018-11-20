@@ -15,8 +15,8 @@ public class ReduceAccountPoints extends SendablePacket
 
 	protected void writeImpl()
 	{
-		writeC(0x12);
-		writeS(account);
-		writeD(count);
+		writeByte(0x12);
+		writeString(account);
+		writeInt(count);
 	}
 }

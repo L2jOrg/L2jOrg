@@ -16,7 +16,7 @@ public class NickNameChangedPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(objectId);
-		writeS(title);
+		writeInt(objectId);
+		writeString(title);
 	}
 }

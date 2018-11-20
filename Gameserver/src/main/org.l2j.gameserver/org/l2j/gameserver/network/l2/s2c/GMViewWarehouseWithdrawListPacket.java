@@ -19,13 +19,13 @@ public class GMViewWarehouseWithdrawListPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeS(_charName);
-		writeQ(_charAdena);
-		writeH(_items.length);
+		writeString(_charName);
+		writeLong(_charAdena);
+		writeShort(_items.length);
 		for(ItemInstance temp : _items)
 		{
 			writeItemInfo(temp);
-			writeD(temp.getObjectId());
+			writeInt(temp.getObjectId());
 		}
 	}
 }

@@ -9,16 +9,16 @@ public class ExConnectedTimeAndGettableReward extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(0x00);       // unk 1
-		writeD(0x00);       // unk 2
-		writeD(0x00);       // unk 3
-		writeD(0x00);       // unk 4
-		writeD(0x00);       // unk 5
-		writeD(0x00);       // unk 6
-		writeD(0x00);       // unk 7
-		writeD(0x00);       // unk 8
-		writeD(0x00);       // unk 9
-		writeD(0x00);       // unk 10
-		writeD(0x00);       // unk 11
+		writeInt(0x00);       // unk 1
+		writeInt(0x00);       // unk 2
+		writeInt(0x00);       // unk 3
+		writeInt(0x00);       // unk 4
+		writeInt(0x00);       // unk 5
+		writeInt(0x00);       // unk 6
+		writeInt(0x00);       // unk 7
+		writeInt(0x00);       // unk 8
+		writeInt(0x00);       // unk 9
+		writeInt(0x00);       // unk 10
+		writeInt(0x00);       // unk 11
 	}
 }

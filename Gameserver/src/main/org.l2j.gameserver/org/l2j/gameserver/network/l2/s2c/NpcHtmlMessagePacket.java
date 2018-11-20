@@ -119,9 +119,9 @@ public class NpcHtmlMessagePacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_npcObjId);
-		writeS(_html);
-		writeD(_itemId);
-		writeD(!_playVoice);
+		writeInt(_npcObjId);
+		writeString(_html);
+		writeInt(_itemId);
+		writeInt(!_playVoice);
 	}
 }

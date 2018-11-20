@@ -12,6 +12,6 @@ public class ExFieldEventPoint extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_points);
+		writeInt(_points);
 	}
 }

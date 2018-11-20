@@ -52,13 +52,13 @@ public class ExPledgeWaitingListApplied extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_clanId);
-		writeS(_clanName);
-		writeS(_leaderName);
-		writeD(_clanLevel);
-		writeD(_memberCount);
-		writeD(_searchType.ordinal());
-		writeS("");
-		writeS(_desc);
+		writeInt(_clanId);
+		writeString(_clanName);
+		writeString(_leaderName);
+		writeInt(_clanLevel);
+		writeInt(_memberCount);
+		writeInt(_searchType.ordinal());
+		writeString("");
+		writeString(_desc);
 	}
 }

@@ -28,13 +28,13 @@ public class ExTryMixCube extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeC(_result);
-		writeD(0x01); // UNK
+		writeByte(_result);
+		writeInt(0x01); // UNK
 		//for(int i = 0; i < count; i++)
 		//{
-			writeC(0x00);
-			writeD(_itemId);
-			writeQ(_itemCount);
+			writeByte(0x00);
+			writeInt(_itemId);
+			writeLong(_itemCount);
 		//}
 	}
 }

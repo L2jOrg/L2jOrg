@@ -14,7 +14,7 @@ public class ExAskModifyPartyLooting extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeS(_requestor);
-		writeD(_mode);
+		writeString(_requestor);
+		writeInt(_mode);
 	}
 }

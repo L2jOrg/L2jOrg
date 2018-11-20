@@ -28,8 +28,8 @@ public class DoorInfo extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(obj_id);
-		writeD(door_id);
-		writeD(view_hp); // отображать ли хп у двери или стены
+		writeInt(obj_id);
+		writeInt(door_id);
+		writeInt(view_hp); // отображать ли хп у двери или стены
 	}
 }

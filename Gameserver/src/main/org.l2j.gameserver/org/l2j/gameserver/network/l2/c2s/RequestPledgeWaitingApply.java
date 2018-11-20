@@ -23,7 +23,7 @@ public class RequestPledgeWaitingApply extends L2GameClientPacket
 	{
 		_searchType = ClanSearchListType.getType(readD());
 		_clanId = readD();
-		_desc = readS();
+		_desc = readString();
 	}
 
 	@Override

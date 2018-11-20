@@ -5,9 +5,9 @@ public class ExTutorialList extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeS("");
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x00);
+		writeString("");
+		writeInt(0x00);
+		writeInt(0x00);
+		writeInt(0x00);
 	}
 }

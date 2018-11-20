@@ -12,7 +12,7 @@ public class RequestTutorialPassCmdToServer extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_bypass = readS();
+		_bypass = readString();
 	}
 
 	@Override

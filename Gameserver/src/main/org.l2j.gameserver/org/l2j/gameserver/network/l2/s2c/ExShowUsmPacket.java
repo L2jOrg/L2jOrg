@@ -12,6 +12,6 @@ public class ExShowUsmPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_usmVideoId);
+		writeInt(_usmVideoId);
 	}
 }

@@ -27,13 +27,13 @@ public class ExAttributeEnchantResultPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeH(0x00); // TODO
-		writeH(0x00); // TODO
-		writeC(_isWeapon ? 0x01 : 0x00); // Armor - 0x00 / Weapon - 0x01
-		writeH(_element.getId()); // Element
-		writeH(_oldValue);
-		writeH(_newValue);
-		writeH(_usedStones);
-		writeH(_failedStones);
+		writeShort(0x00); // TODO
+		writeShort(0x00); // TODO
+		writeByte(_isWeapon ? 0x01 : 0x00); // Armor - 0x00 / Weapon - 0x01
+		writeShort(_element.getId()); // Element
+		writeShort(_oldValue);
+		writeShort(_newValue);
+		writeShort(_usedStones);
+		writeShort(_failedStones);
 	}
 }

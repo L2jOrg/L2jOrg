@@ -15,6 +15,6 @@ public class ExResponseShowContents extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeS(_contents);
+		writeString(_contents);
 	}
 }

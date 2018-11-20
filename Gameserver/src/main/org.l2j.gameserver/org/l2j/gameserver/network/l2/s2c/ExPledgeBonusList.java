@@ -7,13 +7,13 @@ public class ExPledgeBonusList extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(PledgeBonusUtils.ATTENDANCE_REWARDS.get(1));
-		writeD(PledgeBonusUtils.ATTENDANCE_REWARDS.get(2));
-		writeD(PledgeBonusUtils.ATTENDANCE_REWARDS.get(3));
-		writeD(PledgeBonusUtils.ATTENDANCE_REWARDS.get(4));
-		writeD(PledgeBonusUtils.HUNTING_REWARDS.get(1));
-		writeD(PledgeBonusUtils.HUNTING_REWARDS.get(2));
-		writeD(PledgeBonusUtils.HUNTING_REWARDS.get(3));
-		writeD(PledgeBonusUtils.HUNTING_REWARDS.get(4));
+		writeInt(PledgeBonusUtils.ATTENDANCE_REWARDS.get(1));
+		writeInt(PledgeBonusUtils.ATTENDANCE_REWARDS.get(2));
+		writeInt(PledgeBonusUtils.ATTENDANCE_REWARDS.get(3));
+		writeInt(PledgeBonusUtils.ATTENDANCE_REWARDS.get(4));
+		writeInt(PledgeBonusUtils.HUNTING_REWARDS.get(1));
+		writeInt(PledgeBonusUtils.HUNTING_REWARDS.get(2));
+		writeInt(PledgeBonusUtils.HUNTING_REWARDS.get(3));
+		writeInt(PledgeBonusUtils.HUNTING_REWARDS.get(4));
 	}
 }

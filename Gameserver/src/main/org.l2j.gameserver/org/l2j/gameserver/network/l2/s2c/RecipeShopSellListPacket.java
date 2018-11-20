@@ -23,16 +23,16 @@ public class RecipeShopSellListPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(objId);
-		writeD(curMp);//Creator's MP
-		writeD(maxMp);//Creator's MP
-		writeQ(adena);
-		writeD(createList.size());
+		writeInt(objId);
+		writeInt(curMp);//Creator's MP
+		writeInt(maxMp);//Creator's MP
+		writeLong(adena);
+		writeInt(createList.size());
 		for(ManufactureItem mi : createList)
 		{
-			writeD(mi.getRecipeId());
-			writeD(0x00); //unknown
-			writeQ(mi.getCost());
+			writeInt(mi.getRecipeId());
+			writeInt(0x00); //unknown
+			writeLong(mi.getCost());
 		}
 	}
 }

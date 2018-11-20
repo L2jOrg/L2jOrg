@@ -24,6 +24,6 @@ public class ExBR_BuyProductPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_result);
+		writeInt(_result);
 	}
 }

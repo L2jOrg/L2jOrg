@@ -28,9 +28,9 @@ public class ItemListPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeH(_showWindow ? 1 : 0);
+		writeShort(_showWindow ? 1 : 0);
 
-		writeH(_size);
+		writeShort(_size);
 		for(ItemInstance temp : _items)
 		{
 			if(temp.getTemplate().isQuest())
@@ -39,12 +39,12 @@ public class ItemListPacket extends L2GameServerPacket
 			writeItemInfo(_player, temp);
 		}
 
-		writeH(_lockItems.length);
+		writeShort(_lockItems.length);
 		if(_lockItems.length > 0)
 		{
-			writeC(_lockType.ordinal());
+			writeByte(_lockType.ordinal());
 			for(int i : _lockItems)
-				writeD(i);
+				writeInt(i);
 		}
 	}
 }

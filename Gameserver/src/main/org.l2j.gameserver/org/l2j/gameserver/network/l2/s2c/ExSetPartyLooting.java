@@ -14,7 +14,7 @@ public class ExSetPartyLooting extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_result);
-		writeD(_mode);
+		writeInt(_result);
+		writeInt(_mode);
 	}
 }

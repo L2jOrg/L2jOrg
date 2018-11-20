@@ -17,8 +17,8 @@ public class ExExchangeSubstitute extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(0x00);
-		writeQ(3000000L);
-		writeD(0x00);
+		writeInt(0x00);
+		writeLong(3000000L);
+		writeInt(0x00);
 	}
 }

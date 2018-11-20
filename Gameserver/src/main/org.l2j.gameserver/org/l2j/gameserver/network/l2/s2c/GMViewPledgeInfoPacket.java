@@ -67,53 +67,53 @@ public class GMViewPledgeInfoPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(0x00);
-		writeS(_charName);
-		writeD(_clanObjectId);
-		writeD(0x00);
-		writeS(_unitName);
-		writeS(_leaderName);
+		writeInt(0x00);
+		writeString(_charName);
+		writeInt(_clanObjectId);
+		writeInt(0x00);
+		writeString(_unitName);
+		writeString(_leaderName);
 
-		writeD(_clanCrestId);
-		writeD(_level);
-		writeD(_hasCastle);
+		writeInt(_clanCrestId);
+		writeInt(_level);
+		writeInt(_hasCastle);
 		if(_hasInstantClanHall > 0)
 		{
-			writeD(0x01);
-			writeD(_hasInstantClanHall);
+			writeInt(0x01);
+			writeInt(_hasInstantClanHall);
 		}
 		else if(_hasClanHall != 0)
 		{
-			writeD(0x00);
-			writeD(_hasClanHall);
+			writeInt(0x00);
+			writeInt(_hasClanHall);
 		}
 		else
 		{
-			writeD(0x00);
-			writeD(0x00);
+			writeInt(0x00);
+			writeInt(0x00);
 		}
-		writeD(0x00);
-		writeD(_rank);
-		writeD(_reputation);
-		writeD(_isDisbanded ? 3 : 0);
-		writeD(0x00);
-		writeD(_allianceObjectId);
-		writeS(_allianceName);
-		writeD(_allianceCrestId);
-		writeD(_atClanWar);
-		writeD(0); // Territory castle ID
+		writeInt(0x00);
+		writeInt(_rank);
+		writeInt(_reputation);
+		writeInt(_isDisbanded ? 3 : 0);
+		writeInt(0x00);
+		writeInt(_allianceObjectId);
+		writeString(_allianceName);
+		writeInt(_allianceCrestId);
+		writeInt(_atClanWar);
+		writeInt(0); // Territory castle ID
 
-		writeD(_members.size());
+		writeInt(_members.size());
 		for(PledgePacketMember m : _members)
 		{
-			writeS(m._name);
-			writeD(m._level);
-			writeD(m._classId);
-			writeD(m._sex);
-			writeD(m._race);
-			writeD(m._online);
-			writeD(m._hasSponsor ? 1 : 0);
-			writeC(0x00);
+			writeString(m._name);
+			writeInt(m._level);
+			writeInt(m._classId);
+			writeInt(m._sex);
+			writeInt(m._race);
+			writeInt(m._online);
+			writeInt(m._hasSponsor ? 1 : 0);
+			writeByte(0x00);
 		}
 	}
 

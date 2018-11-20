@@ -19,12 +19,12 @@ public class RidePacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_id);
-		writeD(_mountType);
-		writeD(_mountType);
-		writeD(_rideClassID);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z);
+		writeInt(_id);
+		writeInt(_mountType);
+		writeInt(_mountType);
+		writeInt(_rideClassID);
+		writeInt(_loc.x);
+		writeInt(_loc.y);
+		writeInt(_loc.z);
 	}
 }

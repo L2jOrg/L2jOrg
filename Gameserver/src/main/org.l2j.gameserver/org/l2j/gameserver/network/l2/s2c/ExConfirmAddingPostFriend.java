@@ -26,7 +26,7 @@ public class ExConfirmAddingPostFriend extends L2GameServerPacket
 	@Override
 	public void writeImpl()
 	{
-		writeS(_name);
-		writeD(_result);
+		writeString(_name);
+		writeInt(_result);
 	}
 }

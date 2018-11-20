@@ -20,10 +20,10 @@ public class ValidateLocationPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_chaObjId);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z);
-		writeD(_loc.h);
+		writeInt(_chaObjId);
+		writeInt(_loc.x);
+		writeInt(_loc.y);
+		writeInt(_loc.z);
+		writeInt(_loc.h);
 	}
 }

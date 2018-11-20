@@ -17,6 +17,6 @@ public class ExWorldChatCnt extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_count);
+		writeInt(_count);
 	}
 }

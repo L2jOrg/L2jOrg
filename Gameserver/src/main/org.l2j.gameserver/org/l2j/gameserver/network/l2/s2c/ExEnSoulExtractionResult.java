@@ -27,16 +27,16 @@ public class ExEnSoulExtractionResult extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeC(_success);
+		writeByte(_success);
 		if(_success)
 		{
-			writeC(_normalEnsouls.length);
+			writeByte(_normalEnsouls.length);
 			for(Ensoul ensoul : _normalEnsouls)
-				writeD(ensoul.getId());
+				writeInt(ensoul.getId());
 
-			writeC(_specialEnsouls.length);
+			writeByte(_specialEnsouls.length);
 			for(Ensoul ensoul : _specialEnsouls)
-				writeD(ensoul.getId());
+				writeInt(ensoul.getId());
 		}
 	}
 }

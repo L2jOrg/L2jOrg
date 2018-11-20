@@ -29,19 +29,19 @@ public class AcquireSkillInfoPacket extends L2GameServerPacket
 	@Override
 	public void writeImpl()
 	{
-		writeD(_learn.getId());
-		writeD(_learn.getLevel());
-		writeQ(_learn.getCost()); // sp/rep
-		writeD(_type.getId());
+		writeInt(_learn.getId());
+		writeInt(_learn.getLevel());
+		writeLong(_learn.getCost()); // sp/rep
+		writeInt(_type.getId());
 
-		writeD(_reqs.size()); //requires size
+		writeInt(_reqs.size()); //requires size
 
 		for(Require temp : _reqs)
 		{
-			writeD(temp.type);
-			writeD(temp.itemId);
-			writeQ(temp.count);
-			writeD(temp.unk);
+			writeInt(temp.type);
+			writeInt(temp.itemId);
+			writeLong(temp.count);
+			writeInt(temp.unk);
 		}
 	}
 

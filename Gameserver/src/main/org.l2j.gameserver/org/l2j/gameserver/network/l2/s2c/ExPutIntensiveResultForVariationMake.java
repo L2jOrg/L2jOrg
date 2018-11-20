@@ -17,10 +17,10 @@ public class ExPutIntensiveResultForVariationMake extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_refinerItemObjId);
-		writeD(_lifestoneItemId);
-		writeD(_gemstoneItemId);
-		writeQ(_gemstoneCount);
-		writeD(_unk);
+		writeInt(_refinerItemObjId);
+		writeInt(_lifestoneItemId);
+		writeInt(_gemstoneItemId);
+		writeLong(_gemstoneCount);
+		writeInt(_unk);
 	}
 }

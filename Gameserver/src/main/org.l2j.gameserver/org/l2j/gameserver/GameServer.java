@@ -78,6 +78,7 @@ import org.l2j.gameserver.utils.velocity.VelocityUtils;
 
 import net.sf.ehcache.CacheManager;
 
+import org.l2j.mmocore.ConnectionBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -110,7 +111,6 @@ public class GameServer {
 
 	public static GameServer _instance;
 
-	private final List<SelectorThread<GameClient>> _selectorThreads = new ArrayList<SelectorThread<GameClient>>();
 	private final SelectorStats _selectorStats = new SelectorStats();
 	private String version;;
 	private TelnetServer statusServer;
@@ -119,11 +119,6 @@ public class GameServer {
 	private long _serverStartTimeMillis;
 	private final String _licenseHost;
 	private final int _onlineLimit;
-
-	public List<SelectorThread<GameClient>> getSelectorThreads()
-	{
-		return _selectorThreads;
-	}
 
 	public SelectorStats getSelectorStats()
 	{
@@ -151,17 +146,19 @@ public class GameServer {
 		_serverStartTimeMillis = System.currentTimeMillis();
 		_listeners = new GameServerListenerList();
 
-        versionInfo();
+        logVersionInfo();
 
         // Initialize config
 		ConfigParsers.parseAll();
 		Config.load();
+		// TODO Remove this, replace with some lightweight Html Render
         VelocityUtils.init();
 
         HostInfo[] hosts = HostsConfigHolder.getInstance().getGameServerHosts();
         if(hosts.length == 0)
             throw new Exception("Server hosts list is empty!");
 
+        // TODO Remove this, there is no need to have a lot of hosts in a single Execution. We need a solution more scalable
 		final TIntSet ports = new TIntHashSet();
 		for(HostInfo host : hosts)
 		{
@@ -185,6 +182,7 @@ public class GameServer {
 		Class.forName(Config.DATABASE_DRIVER).newInstance();
 		DatabaseFactory.getInstance().getConnection().close();
 
+		// TODO remove this
         UpdatesInstaller.checkAndInstall();
 
 		IdFactory _idFactory = IdFactory.getInstance();
@@ -202,6 +200,7 @@ public class GameServer {
 
 		HidenItemsDAO.LoadAllHiddenItems();
 
+		// TODO Remove This
 		CustomHeroDAO.getInstance();
 
 		HWIDBan.getInstance().load();
@@ -214,12 +213,14 @@ public class GameServer {
 
 		GeoEngine.load();
 
+		// TODO Remove This
 		Strings.reload();
 
 		GameTimeController.getInstance();
 
 		World.init();
 
+		// TODO remove this
 		Parsers.parseAll();
 
 		ItemsDAO.getInstance();
@@ -297,10 +298,14 @@ public class GameServer {
 		_log.info("GameServer Started");
 		_log.info("Maximum Numbers of Connected Players: " + getOnlineLimit());
 
-		registerSelectorThreads(ports);
+        var bindAddress =  getInetSocketAddress();
+        final GamePacketHandler gph = new GamePacketHandler();
+        var connectionHandler = ConnectionBuilder.create(bindAddress, gph, gph, gph).build();
+        connectionHandler.start();
 
 		getListeners().onStart();
 
+		// TODO remove this
         if(Config.BUFF_STORE_ENABLED)
         {
             _log.info("Restoring offline buffers...");
@@ -308,6 +313,7 @@ public class GameServer {
             _log.info("Restored " + count + " offline buffers.");
         }
 
+        // TODO remove This
         if(Config.SERVICES_OFFLINE_TRADE_RESTORE_AFTER_RESTART)
         {
             _log.info("Restoring offline traders...");
@@ -315,8 +321,10 @@ public class GameServer {
             _log.info("Restored " + count + " offline traders.");
         }
 
+        // TODO remove this
         FakePlayersTable.getInstance();
 
+        // TODO remove this
         if(Config.ONLINE_GENERATOR_ENABLED)
             ThreadPoolManager.getInstance().scheduleAtFixedRate(new OnlineTxtGenerator(), 5000L, Config.ONLINE_GENERATOR_DELAY * 60 * 1000L);
 
@@ -335,7 +343,7 @@ public class GameServer {
 		_log.info("=================================================");
 	}
 
-    private void versionInfo() {
+    private void logVersionInfo() {
         try {
             var versionProperties = new Properties();
             versionProperties.load(ClassLoader.getSystemResourceAsStream("version.properties"));
@@ -350,6 +358,17 @@ public class GameServer {
             _log.warn(e.getLocalizedMessage(), e);
         }
     }
+
+    private InetSocketAddress getInetSocketAddress() {
+        InetSocketAddress bindAddress;
+        if (!org.l2j.commons.Config.GAMESERVER_HOSTNAME.equals("*")) {
+            bindAddress = new InetSocketAddress(org.l2j.commons.Config.GAMESERVER_HOSTNAME, org.l2j.commons.Config.PORT_GAME);
+        } else {
+            bindAddress = new InetSocketAddress(org.l2j.commons.Config.PORT_GAME);
+        }
+        return bindAddress;
+    }
+
 
     public GameServerListenerList getListeners()
 	{
@@ -436,29 +455,6 @@ public class GameServer {
 
 	    return true;
     }
-
-	private void registerSelectorThreads(TIntSet ports)
-	{
-		final GamePacketHandler gph = new GamePacketHandler();
-
-		for(int port : ports.toArray())
-			registerSelectorThread(gph, null, port);
-	}
-
-	private void registerSelectorThread(GamePacketHandler gph, String ip, int port)
-	{
-		try
-		{
-			SelectorThread<GameClient> selectorThread = new SelectorThread<GameClient>(Config.SELECTOR_CONFIG, _selectorStats, gph, gph, gph, null);
-			selectorThread.openServerSocket(ip == null ? null : InetAddress.getByName(ip), port);
-			selectorThread.start();
-			_selectorThreads.add(selectorThread);
-		}
-		catch(Exception e)
-		{
-			//
-		}
-	}
 
 	public static void main(String[] args) throws Exception {
 		for(String arg : args)

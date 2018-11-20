@@ -28,19 +28,19 @@ public class ExPartyRoomMemberPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_type);
-		writeD(_members.size());
+		writeInt(_type);
+		writeInt(_members.size());
 		for(PartyRoomMemberInfo member_info : _members)
 		{
-			writeD(member_info.objectId);
-			writeS(member_info.name);
-			writeD(member_info.classId);
-			writeD(member_info.level);
-			writeD(member_info.location);
-			writeD(member_info.memberType);
-			writeD(member_info.instanceReuses.size());
+			writeInt(member_info.objectId);
+			writeString(member_info.name);
+			writeInt(member_info.classId);
+			writeInt(member_info.level);
+			writeInt(member_info.location);
+			writeInt(member_info.memberType);
+			writeInt(member_info.instanceReuses.size());
 			for(int i : member_info.instanceReuses)
-				writeD(i);
+				writeInt(i);
 		}
 	}
 

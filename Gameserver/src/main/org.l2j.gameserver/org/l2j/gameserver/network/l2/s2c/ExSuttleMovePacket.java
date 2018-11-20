@@ -17,11 +17,11 @@ public class ExSuttleMovePacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_shuttle.getBoatId()); // Shuttle ID (Arkan: 1,2; Cruma: 3)
-		writeD(_shuttle.getMoveSpeed()); // Speed
-		writeD(0x00); //unk: 0 (0x00000000)
-		writeD(_shuttle.getDestination().x); // Destination X
-		writeD(_shuttle.getDestination().y); // Destination Y
-		writeD(_shuttle.getDestination().z); // Destination Z
+		writeInt(_shuttle.getBoatId()); // Shuttle ID (Arkan: 1,2; Cruma: 3)
+		writeInt(_shuttle.getMoveSpeed()); // Speed
+		writeInt(0x00); //unk: 0 (0x00000000)
+		writeInt(_shuttle.getDestination().x); // Destination X
+		writeInt(_shuttle.getDestination().y); // Destination Y
+		writeInt(_shuttle.getDestination().z); // Destination Z
 	}
 }

@@ -71,26 +71,26 @@ public class RelationChangedPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeC(_mask);
+		writeByte(_mask);
 		if((_mask & SEND_MULTI) == SEND_MULTI)
 		{
-			writeC(_datas.size());
+			writeByte(_datas.size());
 			for(RelationChangedData data : _datas)
 				writeRelation(data);
 		}
 		else if((_mask & SEND_ONE) == SEND_ONE)
 			writeRelation(_datas.get(0));
 		else if((_mask & SEND_DEFAULT) == SEND_DEFAULT)
-			writeD(_datas.get(0).objectId);
+			writeInt(_datas.get(0).objectId);
 	}
 
 	private void writeRelation(RelationChangedData data)
 	{
-		writeD(data.objectId);
-		writeD(data.relation);
-		writeC(data.isAutoAttackable);
-		writeD(data.karma);
-		writeC(data.pvpFlag);
+		writeInt(data.objectId);
+		writeInt(data.relation);
+		writeByte(data.isAutoAttackable);
+		writeInt(data.karma);
+		writeByte(data.pvpFlag);
 	}
 
 	private static class RelationChangedData

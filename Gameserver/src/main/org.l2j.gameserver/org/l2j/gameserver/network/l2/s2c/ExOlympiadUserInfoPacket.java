@@ -24,13 +24,13 @@ public class ExOlympiadUserInfoPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeC(_side);
-		writeD(obj_id);
-		writeS(_name);
-		writeD(class_id);
-		writeD(curHp);
-		writeD(maxHp);
-		writeD(curCp);
-		writeD(maxCp);
+		writeByte(_side);
+		writeInt(obj_id);
+		writeString(_name);
+		writeInt(class_id);
+		writeInt(curHp);
+		writeInt(maxHp);
+		writeInt(curCp);
+		writeInt(maxCp);
 	}
 }

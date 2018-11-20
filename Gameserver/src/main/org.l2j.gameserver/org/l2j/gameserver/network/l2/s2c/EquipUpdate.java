@@ -42,8 +42,8 @@ public class EquipUpdate extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_item.getLastChange());
-		writeD(_item.getObjectId());
-		writeD(_item.getEquipSlot());
+		writeInt(_item.getLastChange());
+		writeInt(_item.getObjectId());
+		writeInt(_item.getEquipSlot());
 	}
 }

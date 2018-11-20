@@ -23,7 +23,7 @@ public class RequestExManageMpccRoom extends L2GameClientPacket
 		_minLevel = readD(); //min level
 		_maxLevel = readD(); //max level
 		readD(); //lootType
-		_topic = readS(); //topic
+		_topic = readString(); //topic
 	}
 
 	@Override

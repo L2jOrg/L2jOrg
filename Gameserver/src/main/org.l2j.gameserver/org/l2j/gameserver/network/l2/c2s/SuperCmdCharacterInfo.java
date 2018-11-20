@@ -14,7 +14,7 @@ class SuperCmdCharacterInfo extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_characterName = readS();
+		_characterName = readString();
 	}
 
 	@Override

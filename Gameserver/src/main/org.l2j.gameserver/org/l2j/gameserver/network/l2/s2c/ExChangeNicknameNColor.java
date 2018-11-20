@@ -12,6 +12,6 @@ public class ExChangeNicknameNColor extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_itemObjId);
+		writeInt(_itemObjId);
 	}
 }

@@ -15,7 +15,7 @@ public class RestartResponsePacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_param); //01-ok
-		writeS(_message);
+		writeInt(_param); //01-ok
+		writeString(_message);
 	}
 }

@@ -24,12 +24,12 @@ public class EnchantResultPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_resultId);
-		writeD(_crystalId); // item id кристаллов
-		writeQ(_count); // количество кристаллов
-		writeD(_enchantLevel); // уровень заточки
-		writeH(0x00); // uNK
-		writeH(0x00); // uNK
-		writeH(0x00); // uNK
+		writeInt(_resultId);
+		writeInt(_crystalId); // item id кристаллов
+		writeLong(_count); // количество кристаллов
+		writeInt(_enchantLevel); // уровень заточки
+		writeShort(0x00); // uNK
+		writeShort(0x00); // uNK
+		writeShort(0x00); // uNK
 	}
 }

@@ -36,14 +36,14 @@ public class SkillCoolTimePacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_list.size()); //Size of list
+		writeInt(_list.size()); //Size of list
 		for(int i = 0; i < _list.size(); i++)
 		{
 			Skill sk = _list.get(i);
-			writeD(sk.skillId); //Skill Id
-			writeD(sk.level); //Skill Level
-			writeD(sk.reuseBase); //Total reuse delay, seconds
-			writeD(sk.reuseCurrent); //Time remaining, seconds
+			writeInt(sk.skillId); //Skill Id
+			writeInt(sk.level); //Skill Level
+			writeInt(sk.reuseBase); //Total reuse delay, seconds
+			writeInt(sk.reuseCurrent); //Time remaining, seconds
 		}
 	}
 

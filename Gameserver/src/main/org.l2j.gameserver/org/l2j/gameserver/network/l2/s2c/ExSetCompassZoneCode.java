@@ -54,6 +54,6 @@ public class ExSetCompassZoneCode extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_zone);
+		writeInt(_zone);
 	}
 }

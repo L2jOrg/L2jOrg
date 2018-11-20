@@ -16,8 +16,8 @@ public class ExBR_GamePointPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_objectId);
-		writeQ(_points);
-		writeD(0x00); //??
+		writeInt(_objectId);
+		writeLong(_points);
+		writeInt(0x00); //??
 	}
 }

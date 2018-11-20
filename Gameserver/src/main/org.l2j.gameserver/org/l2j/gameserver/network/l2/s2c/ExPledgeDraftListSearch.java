@@ -23,14 +23,14 @@ public class ExPledgeDraftListSearch extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_waiters.size());
+		writeInt(_waiters.size());
 		for(ClanSearchPlayer waiter : _waiters)
 		{
-			writeD(waiter.getCharId());
-			writeS(waiter.getName());
-			writeD(waiter.getSearchType().ordinal());
-			writeD(waiter.getClassId());
-			writeD(waiter.getLevel());
+			writeInt(waiter.getCharId());
+			writeString(waiter.getName());
+			writeInt(waiter.getSearchType().ordinal());
+			writeInt(waiter.getClassId());
+			writeInt(waiter.getLevel());
 		}
 	}
 }

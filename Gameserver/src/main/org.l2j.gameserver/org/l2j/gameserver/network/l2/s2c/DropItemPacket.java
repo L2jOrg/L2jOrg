@@ -31,17 +31,17 @@ public class DropItemPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_playerId);
-		writeD(item_obj_id);
-		writeD(item_id);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z + Config.CLIENT_Z_SHIFT);
-		writeC(_stackable);
-		writeQ(_count);
-		writeC(1); // unknown
-		writeC(_enchantLevel);
-		writeC(0);
-		writeC(_ensoulCount);
+		writeInt(_playerId);
+		writeInt(item_obj_id);
+		writeInt(item_id);
+		writeInt(_loc.x);
+		writeInt(_loc.y);
+		writeInt(_loc.z + Config.CLIENT_Z_SHIFT);
+		writeByte(_stackable);
+		writeLong(_count);
+		writeByte(1); // unknown
+		writeByte(_enchantLevel);
+		writeByte(0);
+		writeByte(_ensoulCount);
 	}
 }

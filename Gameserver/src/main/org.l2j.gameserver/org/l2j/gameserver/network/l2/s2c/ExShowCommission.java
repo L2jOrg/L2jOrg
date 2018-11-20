@@ -13,6 +13,6 @@ public class ExShowCommission extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(0x01); // ??Open??
+		writeInt(0x01); // ??Open??
 	}
 }

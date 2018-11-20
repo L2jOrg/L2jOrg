@@ -14,11 +14,11 @@ public class PledgePowerGradeList extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_privs.length);
+		writeInt(_privs.length);
 		for(RankPrivs element : _privs)
 		{
-			writeD(element.getRank());
-			writeD(element.getParty());
+			writeInt(element.getRank());
+			writeInt(element.getParty());
 		}
 	}
 }

@@ -37,42 +37,42 @@ public class ExBR_ProductListPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeQ(_adena);                                              // Player Adena Count
-		writeQ(_freeCoins);                                          // hero coin
-		writeC(_history);                                            // producst list type (0 - store)
-		writeD(_products.size());
+		writeLong(_adena);                                              // Player Adena Count
+		writeLong(_freeCoins);                                          // hero coin
+		writeByte(_history);                                            // producst list type (0 - store)
+		writeInt(_products.size());
 		for(ProductItem product : _products)
 		{
-			writeD(product.getId());                                // product id
-			writeC(product.getCategory());                          // category 1 - Main (?) 2 - supplies 3 - Cosmetic 4 - Species  5 - enchant
-			writeC(product.getPointsType().ordinal());              // price unit (0 is coin)
-			writeD(product.getPoints(true));                         // price
-			writeC(product.getTabId());                             // tab id
-			writeD(product.getMainCategory());                      // section: 0 - not on front page, 1 - Featured, 2 - Recommended, 4 - Popular
-			writeD((int) (product.getStartTimeSale() / 1000));      // start sale unix date in seconds
-			writeD((int) (product.getEndTimeSale() / 1000));        // end sale unix date in seconds
-			writeC(127);                                      // day week (127 = not daily goods)
-			writeC(product.getStartHour());                         // start hour
-			writeC(product.getStartMin());                          // start min
-			writeC(product.getEndHour());                           // end hour
-			writeC(product.getEndMin());                            // end min
-			writeD(0x00);                                           // stock -1/0
-			writeD(-1);                                             // max stock -1/0
-			writeC(product.getDiscount()); // % скидки
-			writeC(0x00);                                           // Level restriction
-			writeC(0x00);                                           // UNK
-			writeD(0x00);                                           // UNK
-			writeD(0x00);                                           // UNK
-			writeD(0x00);                                           // Repurchase interval (days)
-			writeD(0x00);                                           // Amount (per account)
+			writeInt(product.getId());                                // product id
+			writeByte(product.getCategory());                          // category 1 - Main (?) 2 - supplies 3 - Cosmetic 4 - Species  5 - enchant
+			writeByte(product.getPointsType().ordinal());              // price unit (0 is coin)
+			writeInt(product.getPoints(true));                         // price
+			writeByte(product.getTabId());                             // tab id
+			writeInt(product.getMainCategory());                      // section: 0 - not on front page, 1 - Featured, 2 - Recommended, 4 - Popular
+			writeInt((int) (product.getStartTimeSale() / 1000));      // start sale unix date in seconds
+			writeInt((int) (product.getEndTimeSale() / 1000));        // end sale unix date in seconds
+			writeByte(127);                                      // day week (127 = not daily goods)
+			writeByte(product.getStartHour());                         // start hour
+			writeByte(product.getStartMin());                          // start min
+			writeByte(product.getEndHour());                           // end hour
+			writeByte(product.getEndMin());                            // end min
+			writeInt(0x00);                                           // stock -1/0
+			writeInt(-1);                                             // max stock -1/0
+			writeByte(product.getDiscount()); // % скидки
+			writeByte(0x00);                                           // Level restriction
+			writeByte(0x00);                                           // UNK
+			writeInt(0x00);                                           // UNK
+			writeInt(0x00);                                           // UNK
+			writeInt(0x00);                                           // Repurchase interval (days)
+			writeInt(0x00);                                           // Amount (per account)
 
-			writeC(product.getComponents().size());                 // Related Items
+			writeByte(product.getComponents().size());                 // Related Items
 			for(ProductItemComponent component : product.getComponents())
 			{
-				writeD(component.getId());
-				writeD((int)component.getCount());
-				writeD(component.getWeight());
-				writeD(component.isDropable() ? 1 : 0);
+				writeInt(component.getId());
+				writeInt((int)component.getCount());
+				writeInt(component.getWeight());
+				writeInt(component.isDropable() ? 1 : 0);
 			}
 		}
 	}

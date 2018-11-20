@@ -41,17 +41,17 @@ public class SpawnItemPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_objectId);
-		writeD(_itemId);
+		writeInt(_objectId);
+		writeInt(_itemId);
 
-		writeD(_x);
-		writeD(_y);
-		writeD(_z + Config.CLIENT_Z_SHIFT);
-		writeD(_stackable);
-		writeQ(_count);
-		writeD(0x00); //c2
-		writeC(_enchantLevel);
-		writeC(0x00);
-		writeC(_ensoulCount);
+		writeInt(_x);
+		writeInt(_y);
+		writeInt(_z + Config.CLIENT_Z_SHIFT);
+		writeInt(_stackable);
+		writeLong(_count);
+		writeInt(0x00); //c2
+		writeByte(_enchantLevel);
+		writeByte(0x00);
+		writeByte(_ensoulCount);
 	}
 }

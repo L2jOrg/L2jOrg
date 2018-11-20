@@ -20,7 +20,7 @@ public class RequestExDeletePostFriendForPostBox extends L2GameClientPacket
 	@Override
 	protected void readImpl() throws Exception
 	{
-		_name = readS();
+		_name = readString();
 	}
 
 	@Override

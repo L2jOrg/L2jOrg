@@ -20,8 +20,8 @@ public class ExNpcQuestHtmlMessage extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_npcObjId);
-		writeS(_html);
-		writeD(_questId);
+		writeInt(_npcObjId);
+		writeString(_html);
+		writeInt(_questId);
 	}
 }

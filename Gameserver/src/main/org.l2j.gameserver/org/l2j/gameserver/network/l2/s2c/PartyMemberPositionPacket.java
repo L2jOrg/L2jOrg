@@ -24,13 +24,13 @@ public class PartyMemberPositionPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(positions.size());
+		writeInt(positions.size());
 		for(Map.Entry<Integer, Location> e : positions.entrySet())
 		{
-			writeD(e.getKey());
-			writeD(e.getValue().x);
-			writeD(e.getValue().y);
-			writeD(e.getValue().z);
+			writeInt(e.getKey());
+			writeInt(e.getValue().x);
+			writeInt(e.getValue().y);
+			writeInt(e.getValue().z);
 		}
 	}
 }

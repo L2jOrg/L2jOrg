@@ -28,6 +28,6 @@ public class ExUnReadMailCount extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_count);
+		writeInt(_count);
 	}
 }

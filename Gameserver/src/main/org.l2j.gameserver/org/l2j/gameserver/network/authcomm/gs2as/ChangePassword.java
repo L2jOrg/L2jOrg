@@ -24,10 +24,10 @@ public class ChangePassword extends SendablePacket
 	@Override
 	protected void writeImpl()
 	{
-		writeC(0x08);
-		writeS(_account);
-		writeS(_oldPass);
-		writeS(_newPass);
-		writeS(_hwid);
+		writeByte(0x08);
+		writeString(_account);
+		writeString(_oldPass);
+		writeString(_newPass);
+		writeString(_hwid);
 	}
 }

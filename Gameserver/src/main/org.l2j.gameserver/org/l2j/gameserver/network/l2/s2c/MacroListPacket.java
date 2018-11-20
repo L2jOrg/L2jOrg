@@ -52,32 +52,32 @@ public class MacroListPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeC(_action.ordinal()); //unknown
-		writeD(_macroId); //Macro ID
-		writeC(_count); //count of Macros
+		writeByte(_action.ordinal()); //unknown
+		writeInt(_macroId); //Macro ID
+		writeByte(_count); //count of Macros
 
 		if(_macro != null)
 		{
-			writeC(1); //checked
-			writeD(_macro.id); //Macro ID
-			writeS(_macro.name); //Macro Name
-			writeS(_macro.descr); //Desc
-			writeS(_macro.acronym); //acronym
-			writeD(_macro.icon); //icon
+			writeByte(1); //checked
+			writeInt(_macro.id); //Macro ID
+			writeString(_macro.name); //Macro Name
+			writeString(_macro.descr); //Desc
+			writeString(_macro.acronym); //acronym
+			writeInt(_macro.icon); //icon
 
-			writeC(_macro.commands.length); //count
+			writeByte(_macro.commands.length); //count
 
 			for(int i = 0; i < _macro.commands.length; i++)
 			{
 				Macro.L2MacroCmd cmd = _macro.commands[i];
-				writeC(i + 1); //i of count
-				writeC(cmd.type); //type  1 = skill, 3 = action, 4 = shortcut
-				writeD(cmd.d1); // skill id
-				writeC(cmd.d2); // shortcut id
-				writeS(cmd.cmd); // command name
+				writeByte(i + 1); //i of count
+				writeByte(cmd.type); //type  1 = skill, 3 = action, 4 = shortcut
+				writeInt(cmd.d1); // skill id
+				writeByte(cmd.d2); // shortcut id
+				writeString(cmd.cmd); // command name
 			}
 		}
 		else
-			writeC(0); //checked
+			writeByte(0); //checked
 	}
 }

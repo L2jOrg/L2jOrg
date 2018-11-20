@@ -13,8 +13,8 @@ public class RequestUpdateFriendMemo extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_name = readS();
-		_memo = readS();
+		_name = readString();
+		_memo = readString();
 	}
 
 	@Override

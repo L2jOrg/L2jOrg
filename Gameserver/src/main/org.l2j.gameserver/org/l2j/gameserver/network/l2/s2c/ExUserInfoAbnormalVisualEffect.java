@@ -24,10 +24,10 @@ public class ExUserInfoAbnormalVisualEffect extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_objectId);
-		writeD(_transformId);
-		writeD(_abnormalEffects.size());
+		writeInt(_objectId);
+		writeInt(_transformId);
+		writeInt(_abnormalEffects.size());
 		for(AbnormalEffect abnormal : _abnormalEffects)
-			writeH(abnormal.getId());
+			writeShort(abnormal.getId());
 	}
 }

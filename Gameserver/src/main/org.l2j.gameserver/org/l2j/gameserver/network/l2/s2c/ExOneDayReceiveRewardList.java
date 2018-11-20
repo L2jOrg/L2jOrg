@@ -52,20 +52,20 @@ public class ExOneDayReceiveRewardList extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_dayRemainTime);
-		writeD(_weekRemainTime);
-		writeD(_monthRemainTime);
-		writeC(0x14);
-		writeD(_classId);
-		writeD(_dayOfWeek);
-		writeD(_missions.size());
+		writeInt(_dayRemainTime);
+		writeInt(_weekRemainTime);
+		writeInt(_monthRemainTime);
+		writeByte(0x14);
+		writeInt(_classId);
+		writeInt(_dayOfWeek);
+		writeInt(_missions.size());
 		for(DailyMission mission : _missions)
 		{
-			writeH(mission.getId());
-			writeC(mission.getStatus().ordinal());
-			writeC(0x01);
-			writeD(mission.getCurrentProgress());
-			writeD(mission.getRequiredProgress());
+			writeShort(mission.getId());
+			writeByte(mission.getStatus().ordinal());
+			writeByte(0x01);
+			writeInt(mission.getCurrentProgress());
+			writeInt(mission.getRequiredProgress());
 		}
 	}
 }

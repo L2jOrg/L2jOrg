@@ -12,6 +12,6 @@ public class ExEnterWorldPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_serverTime);
+		writeInt(_serverTime);
 	}
 }

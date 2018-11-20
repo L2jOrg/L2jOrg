@@ -28,17 +28,17 @@ public class ExListPartyMatchingWaitingRoom extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_fullSize);
-		writeD(_waitingList.size());
+		writeInt(_fullSize);
+		writeInt(_waitingList.size());
 		for(PartyMatchingWaitingInfo waitingInfo : _waitingList)
 		{
-			writeS(waitingInfo.name);
-			writeD(waitingInfo.classId);
-			writeD(waitingInfo.level);
-			writeD(waitingInfo.locationId);
-			writeD(waitingInfo.instanceReuses.size());
+			writeString(waitingInfo.name);
+			writeInt(waitingInfo.classId);
+			writeInt(waitingInfo.level);
+			writeInt(waitingInfo.locationId);
+			writeInt(waitingInfo.instanceReuses.size());
 			for(int i : waitingInfo.instanceReuses)
-				writeD(i);
+				writeInt(i);
 		}
 	}
 

@@ -24,7 +24,7 @@ public final class RequestReplyStartPledgeWar extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		/*String _reqName = */readS();
+		/*String _reqName = */readString();
 		_answer = readD();
 	}
 

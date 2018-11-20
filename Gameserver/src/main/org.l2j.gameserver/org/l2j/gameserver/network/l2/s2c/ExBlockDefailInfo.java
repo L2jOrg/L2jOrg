@@ -18,7 +18,7 @@ public class ExBlockDefailInfo extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeS(_blockName);
-		writeS(_blockMemo);
+		writeString(_blockName);
+		writeString(_blockMemo);
 	}
 }

@@ -45,10 +45,10 @@ public class TradeStartPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_targetId);
-		writeC(_flags); // UNK
-		writeC(_targetLevel);
-		writeH(_tradelist.size());
+		writeInt(_targetId);
+		writeByte(_flags); // UNK
+		writeByte(_targetLevel);
+		writeShort(_tradelist.size());
 		for(ItemInfo item : _tradelist)
 			writeItemInfo(item);
 	}

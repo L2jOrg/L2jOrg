@@ -26,28 +26,28 @@ public class HennaItemInfoPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_hennaTemplate.getSymbolId()); //symbol Id
-		writeD(_hennaTemplate.getDyeId()); //item id of dye
-		writeQ(_hennaTemplate.getDrawCount());
-		writeQ(_hennaTemplate.getDrawPrice());
-		writeD(_available); //able to draw or not 0 is false and 1 is true
-		writeQ(_adena);
-		writeD(_int); //current INT
-		writeH(_int + _hennaTemplate.getStatINT()); //equip INT
-		writeD(_str); //current STR
-		writeH(_str + _hennaTemplate.getStatSTR()); //equip STR
-		writeD(_con); //current CON
-		writeH(_con + _hennaTemplate.getStatCON()); //equip CON
-		writeD(_men); //current MEM
-		writeH(_men + _hennaTemplate.getStatMEN()); //equip MEM
-		writeD(_dex); //current DEX
-		writeH(_dex + _hennaTemplate.getStatDEX()); //equip DEX
-		writeD(_wit); //current WIT
-		writeH(_wit + _hennaTemplate.getStatWIT()); //equip WIT
-		writeD(0x00); //current LUC
-		writeH(0x00); //equip LUC
-		writeD(0x00); //current CHA
-		writeH(0x00); //equip CHA
-		writeD(_hennaTemplate.getPeriod());
+		writeInt(_hennaTemplate.getSymbolId()); //symbol Id
+		writeInt(_hennaTemplate.getDyeId()); //item id of dye
+		writeLong(_hennaTemplate.getDrawCount());
+		writeLong(_hennaTemplate.getDrawPrice());
+		writeInt(_available); //able to draw or not 0 is false and 1 is true
+		writeLong(_adena);
+		writeInt(_int); //current INT
+		writeShort(_int + _hennaTemplate.getStatINT()); //equip INT
+		writeInt(_str); //current STR
+		writeShort(_str + _hennaTemplate.getStatSTR()); //equip STR
+		writeInt(_con); //current CON
+		writeShort(_con + _hennaTemplate.getStatCON()); //equip CON
+		writeInt(_men); //current MEM
+		writeShort(_men + _hennaTemplate.getStatMEN()); //equip MEM
+		writeInt(_dex); //current DEX
+		writeShort(_dex + _hennaTemplate.getStatDEX()); //equip DEX
+		writeInt(_wit); //current WIT
+		writeShort(_wit + _hennaTemplate.getStatWIT()); //equip WIT
+		writeInt(0x00); //current LUC
+		writeShort(0x00); //equip LUC
+		writeInt(0x00); //current CHA
+		writeShort(0x00); //equip CHA
+		writeInt(_hennaTemplate.getPeriod());
 	}
 }

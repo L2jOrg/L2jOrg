@@ -32,14 +32,14 @@ public class SnoopPacket extends L2GameServerPacket
     @Override
     protected final void writeImpl()
     {
-        writeD(_convoID);
-        writeS(_name);
-        writeD(0x00); // ??
-        writeD(_type);
-        writeS(_speaker);
-        //writeD(_fStringId);
+        writeInt(_convoID);
+        writeString(_name);
+        writeInt(0x00); // ??
+        writeInt(_type);
+        writeString(_speaker);
+        //writeInt(_fStringId);
 		/*for(String param : _params)
-			writeS(param);*/
-        writeS(_msg);
+			writeString(param);*/
+        writeString(_msg);
     }
 }

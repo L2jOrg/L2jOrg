@@ -14,9 +14,9 @@ public class ExConfirmVipAttendanceCheck extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeC(_success);
-		writeC(_receivedIndex);
-		writeD(0x00);
-		writeD(0x00);
+		writeByte(_success);
+		writeByte(_receivedIndex);
+		writeInt(0x00);
+		writeInt(0x00);
 	}
 }

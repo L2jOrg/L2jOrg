@@ -22,18 +22,18 @@ public class GMViewSkillInfoPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeS(_charName);
-		writeD(_skills.size());
+		writeString(_charName);
+		writeInt(_skills.size());
 		for(SkillEntry skillEntry : _skills)
 		{
 			Skill temp = skillEntry.getTemplate();
-			writeD(temp.isActive() || temp.isToggle() ? 0 : 1);
-			writeD(temp.getDisplayLevel());
-			writeD(temp.getDisplayId());
-			writeD(temp.getReuseSkillId());
-			writeC(_targetChar.isUnActiveSkill(temp.getId()) ? 0x01 : 0x00);
-			writeC(0);
+			writeInt(temp.isActive() || temp.isToggle() ? 0 : 1);
+			writeInt(temp.getDisplayLevel());
+			writeInt(temp.getDisplayId());
+			writeInt(temp.getReuseSkillId());
+			writeByte(_targetChar.isUnActiveSkill(temp.getId()) ? 0x01 : 0x00);
+			writeByte(0);
 		}
-		writeD(0);
+		writeInt(0);
 	}
 }

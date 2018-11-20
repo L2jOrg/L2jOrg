@@ -16,8 +16,8 @@ public class ExPrivateStoreBuyingResult extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_itemObjId);
-		writeQ(_itemCount);
-		writeS(_sellerName);
+		writeInt(_itemObjId);
+		writeLong(_itemCount);
+		writeString(_sellerName);
 	}
 }

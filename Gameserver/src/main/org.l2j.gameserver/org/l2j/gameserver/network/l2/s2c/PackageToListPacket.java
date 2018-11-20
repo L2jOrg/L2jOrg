@@ -21,11 +21,11 @@ public class PackageToListPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_characters.size());
+		writeInt(_characters.size());
 		for(Map.Entry<Integer, String> entry : _characters.entrySet())
 		{
-			writeD(entry.getKey());
-			writeS(entry.getValue());
+			writeInt(entry.getKey());
+			writeString(entry.getValue());
 		}
 	}
 }

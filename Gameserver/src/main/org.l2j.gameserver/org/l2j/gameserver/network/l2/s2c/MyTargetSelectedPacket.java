@@ -47,12 +47,12 @@ public class MyTargetSelectedPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_success ? 0x01 : 0x00);
+		writeInt(_success ? 0x01 : 0x00);
 		if(_success)
 		{
-			writeD(_objectId);
-			writeH(_color);
-			writeD(_actionMenu ? 0x03 : 0x00);
+			writeInt(_objectId);
+			writeShort(_color);
+			writeInt(_actionMenu ? 0x03 : 0x00);
 		}
 	}
 }

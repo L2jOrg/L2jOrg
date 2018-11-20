@@ -24,12 +24,12 @@ public class ExFishingStartPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_charObjId);
-		writeD(_fishType); // fish type
-		writeD(_loc.x); // x poisson
-		writeD(_loc.y); // y poisson
-		writeD(_loc.z); // z poisson
-		writeC(_isNightLure ? 0x01 : 0x00); // 0 = day lure  1 = night lure
-		writeC(0x01); // result Button
+		writeInt(_charObjId);
+		writeInt(_fishType); // fish type
+		writeInt(_loc.x); // x poisson
+		writeInt(_loc.y); // y poisson
+		writeInt(_loc.z); // z poisson
+		writeByte(_isNightLure ? 0x01 : 0x00); // 0 = day lure  1 = night lure
+		writeByte(0x01); // result Button
 	}
 }

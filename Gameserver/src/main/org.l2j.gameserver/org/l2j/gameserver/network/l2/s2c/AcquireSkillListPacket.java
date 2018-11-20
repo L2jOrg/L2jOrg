@@ -29,28 +29,28 @@ public class AcquireSkillListPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeH(_skills.size());
+		writeShort(_skills.size());
 		for(SkillLearn sk : _skills)
 		{
 			Skill skill = SkillHolder.getInstance().getSkill(sk.getId(), sk.getLevel());
 			if(skill == null)
 				continue;
 
-			writeD(sk.getId());
-			writeH(sk.getLevel());
-			writeQ(sk.getCost());
-			writeC(sk.getMinLevel());
-			writeC(0x00);
+			writeInt(sk.getId());
+			writeShort(sk.getLevel());
+			writeLong(sk.getCost());
+			writeByte(sk.getMinLevel());
+			writeByte(0x00);
 
 			List<ItemData> requiredItems = sk.getRequiredItemsForLearn(AcquireType.NORMAL);
-			writeC(requiredItems.size());
+			writeByte(requiredItems.size());
 			for(ItemData item : requiredItems)
 			{
-				writeD(item.getId());
-				writeQ(item.getCount());
+				writeInt(item.getId());
+				writeLong(item.getCount());
 			}
 
-			writeC(0x00);
+			writeByte(0x00);
 		}
 	}
 }

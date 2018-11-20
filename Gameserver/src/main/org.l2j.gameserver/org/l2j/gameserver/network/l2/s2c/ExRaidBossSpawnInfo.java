@@ -14,8 +14,8 @@ public class ExRaidBossSpawnInfo extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_aliveBosses.length);
+		writeInt(_aliveBosses.length);
 		for(int bossId : _aliveBosses)
-			writeD(bossId);
+			writeInt(bossId);
 	}
 }

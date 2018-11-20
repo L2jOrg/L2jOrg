@@ -15,7 +15,7 @@ public class PetStatusShowPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_summonType);
-		writeD(_summonObjId);
+		writeInt(_summonType);
+		writeInt(_summonObjId);
 	}
 }

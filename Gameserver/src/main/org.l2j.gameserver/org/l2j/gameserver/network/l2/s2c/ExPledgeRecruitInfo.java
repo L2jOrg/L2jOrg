@@ -36,15 +36,15 @@ public class ExPledgeRecruitInfo extends L2GameServerPacket
 
 	protected void writeImpl()
 	{
-		writeS(_clanName);
-		writeS(_leaderName);
-		writeD(_clanLevel);
-		writeD(_clanMemberCount);
-		writeD(_subUnits.size());
+		writeString(_clanName);
+		writeString(_leaderName);
+		writeInt(_clanLevel);
+		writeInt(_clanMemberCount);
+		writeInt(_subUnits.size());
 		for(SubUnit su : _subUnits)
 		{
-			writeD(su.getType());
-			writeS(su.getName());
+			writeInt(su.getType());
+			writeString(su.getName());
 		}
 	}
 }

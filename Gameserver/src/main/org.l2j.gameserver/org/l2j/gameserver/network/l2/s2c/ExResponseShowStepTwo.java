@@ -25,12 +25,12 @@ public class ExResponseShowStepTwo extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		Collection<PetitionSubGroup> subGroups = _petitionMainGroup.getSubGroups();
-		writeD(subGroups.size());
-		writeS(_petitionMainGroup.getDescription(_language));
+		writeInt(subGroups.size());
+		writeString(_petitionMainGroup.getDescription(_language));
 		for(PetitionSubGroup g : subGroups)
 		{
-			writeC(g.getId());
-			writeS(g.getName(_language));
+			writeByte(g.getId());
+			writeString(g.getName(_language));
 		}
 	}
 }

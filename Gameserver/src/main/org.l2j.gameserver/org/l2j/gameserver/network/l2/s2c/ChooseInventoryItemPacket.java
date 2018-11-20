@@ -12,6 +12,6 @@ public class ChooseInventoryItemPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(ItemID);
+		writeInt(ItemID);
 	}
 }

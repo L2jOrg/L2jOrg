@@ -9,13 +9,13 @@ public class FriendAddRequestResult extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		// TODO: when implementing, consult an up-to-date packets_game_server.xml and/or savormix
-		writeD(0); // Accepted
-		writeD(0); // Character ID
-		writeS(""); // Name
-		writeD(0); // Online
-		writeD(0); // Friend OID
-		writeD(0); // Level
-		writeD(0); // Class
-		writeH(0); // ??? 0
+		writeInt(0); // Accepted
+		writeInt(0); // Character ID
+		writeString(""); // Name
+		writeInt(0); // Online
+		writeInt(0); // Friend OID
+		writeInt(0); // Level
+		writeInt(0); // Class
+		writeShort(0); // ??? 0
 	}
 }

@@ -13,7 +13,7 @@ public class ExAskCoupleAction extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_socialId);
-		writeD(_objectId);
+		writeInt(_socialId);
+		writeInt(_objectId);
 	}
 }

@@ -38,15 +38,15 @@ public class ExPledgeBonusOpen extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(PledgeBonusUtils.MAX_ATTENDANCE_PROGRESS);
-		writeD(_attendanceProgress);
-		writeD(_yesterdayAttendanceRewardId);
-		writeC(_yesterdayAttendanceReward);
-		writeC(_attendanceRewardReceivable);
-		writeD(PledgeBonusUtils.MAX_HUNTING_PROGRESS);
-		writeD(_huntingProgress);
-		writeD(_yesterdayHuntingRewardId);
-		writeC(_yesterdayHuntingReward);
-		writeC(_huntingRewardReceivable);
+		writeInt(PledgeBonusUtils.MAX_ATTENDANCE_PROGRESS);
+		writeInt(_attendanceProgress);
+		writeInt(_yesterdayAttendanceRewardId);
+		writeByte(_yesterdayAttendanceReward);
+		writeByte(_attendanceRewardReceivable);
+		writeInt(PledgeBonusUtils.MAX_HUNTING_PROGRESS);
+		writeInt(_huntingProgress);
+		writeInt(_yesterdayHuntingRewardId);
+		writeByte(_yesterdayHuntingReward);
+		writeByte(_huntingRewardReceivable);
 	}
 }

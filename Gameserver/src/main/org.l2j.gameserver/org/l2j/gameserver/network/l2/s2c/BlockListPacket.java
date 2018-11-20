@@ -18,11 +18,11 @@ public class BlockListPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_blockList.length);
+		writeInt(_blockList.length);
 		for(Block b : _blockList)
 		{
-			writeS(b.getName());
-			writeS(b.getMemo());
+			writeString(b.getName());
+			writeString(b.getMemo());
 		}
 	}
 }

@@ -43,15 +43,15 @@ public class ExShowCastleInfo extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_infos.size());
+		writeInt(_infos.size());
 		for(CastleInfo info : _infos)
 		{
-			writeD(info._id);
-			writeS(info._ownerName);
-			writeD(info._tax);
-			writeD(info._nextSiege);
-			writeC(info._inSiege);
-			writeC(info._side);
+			writeInt(info._id);
+			writeString(info._ownerName);
+			writeInt(info._tax);
+			writeInt(info._nextSiege);
+			writeByte(info._inSiege);
+			writeByte(info._side);
 		}
 		_infos.clear();
 	}

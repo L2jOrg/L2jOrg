@@ -26,8 +26,8 @@ public class ExChangeAttributeInfo extends L2GameServerPacket
 
 	protected void writeImpl()
 	{
-		writeD(_crystalItemId);//unk??
-		writeD(_attributes);
-		writeD(_itemObjId);//unk??
+		writeInt(_crystalItemId);//unk??
+		writeInt(_attributes);
+		writeInt(_itemObjId);//unk??
 	}
 }

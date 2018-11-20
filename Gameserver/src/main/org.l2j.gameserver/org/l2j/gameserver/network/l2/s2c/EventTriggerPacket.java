@@ -18,7 +18,7 @@ public class EventTriggerPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_trapId); // trap object id
-		writeC(_active ? 1 : 0); // trap activity 1 or 0
+		writeInt(_trapId); // trap object id
+		writeByte(_active ? 1 : 0); // trap activity 1 or 0
 	}
 }

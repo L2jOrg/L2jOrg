@@ -23,8 +23,8 @@ public class ExChangeClientEffectInfo extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_unk1);
-		writeD(_unk2);
-		writeD(_state);
+		writeInt(_unk1);
+		writeInt(_unk2);
+		writeInt(_state);
 	}
 }

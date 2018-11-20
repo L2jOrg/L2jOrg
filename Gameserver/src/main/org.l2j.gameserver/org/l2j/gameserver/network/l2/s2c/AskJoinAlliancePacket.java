@@ -27,9 +27,9 @@ public class AskJoinAlliancePacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_requestorId);
-		writeS(_requestorName);
-		writeS("");
-		writeS(_requestorAllyName);
+		writeInt(_requestorId);
+		writeString(_requestorName);
+		writeString("");
+		writeString(_requestorAllyName);
 	}
 }

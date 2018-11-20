@@ -60,16 +60,16 @@ public class ExBR_MiniGameLoadScores extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_place); // place of last big score of player
-		writeD(_score); // last big score of player
-		writeD(0x00); //?
-		writeD(_lastScore); //last score of list
+		writeInt(_place); // place of last big score of player
+		writeInt(_score); // last big score of player
+		writeInt(0x00); //?
+		writeInt(_lastScore); //last score of list
 		for(IntObjectPair<List<Map.Entry<String, Integer>>> entry : _entries.entrySet())
 			for(Map.Entry<String, Integer> scoreEntry : entry.getValue())
 			{
-				writeD(entry.getKey());
-				writeS(scoreEntry.getKey());
-				writeD(scoreEntry.getValue());
+				writeInt(entry.getKey());
+				writeString(scoreEntry.getKey());
+				writeInt(scoreEntry.getValue());
 			}
 	}
 }

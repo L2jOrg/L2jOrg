@@ -5,6 +5,6 @@ public class ExPartyMatchingRoomHistory extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(0);
+		writeInt(0);
 	}
 }

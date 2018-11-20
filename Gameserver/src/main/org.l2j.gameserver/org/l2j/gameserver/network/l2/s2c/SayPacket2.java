@@ -74,23 +74,23 @@ public class SayPacket2 extends NpcStringContainer
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_objectId);
-		writeD(_type.ordinal());
+		writeInt(_objectId);
+		writeInt(_type.ordinal());
 		switch(_type)
 		{
 			case SYSTEM_MESSAGE:
-				writeD(_sysString.getId());
-				writeD(_systemMsg.getId());
+				writeInt(_sysString.getId());
+				writeInt(_systemMsg.getId());
 				break;
 			case TELL:
-				writeS(_charName);
+				writeString(_charName);
 				writeElements();
-				writeC(_mask);
+				writeByte(_mask);
 				if((_mask & IS_GM) == 0)
-					writeC(_charLevel);
+					writeByte(_charLevel);
 				break;
 			default:
-				writeS(_charName);
+				writeString(_charName);
 				writeElements();
 				break;
 		}

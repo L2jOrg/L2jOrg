@@ -21,13 +21,13 @@ public class ExPledgeWaitingList extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_applicants.size());
+		writeInt(_applicants.size());
 		for(ClanSearchPlayer applicant : _applicants)
 		{
-			writeD(applicant.getCharId());
-			writeS(applicant.getName());
-			writeD(applicant.getClassId());
-			writeD(applicant.getLevel());
+			writeInt(applicant.getCharId());
+			writeString(applicant.getName());
+			writeInt(applicant.getClassId());
+			writeInt(applicant.getLevel());
 		}
 	}
 }

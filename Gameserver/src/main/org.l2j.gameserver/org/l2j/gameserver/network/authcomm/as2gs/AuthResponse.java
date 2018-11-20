@@ -46,7 +46,7 @@ public class AuthResponse extends ReceivablePacket
 	protected void readImpl()
 	{
 		int serverId = readC();
-		String serverName = readS();
+		String serverName = readString();
 		if(!getByteBuffer().hasRemaining())
 		{
 			_servers = new ArrayList<ServerInfo>(1);

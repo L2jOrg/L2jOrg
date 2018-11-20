@@ -30,81 +30,81 @@ public class MultiSellListPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeC(0x00);
-		writeD(_listId); // list id
-		writeC(0x00); // UNK
-		writeD(_page); // page
-		writeD(_finished); // finished
-		writeD(Config.MULTISELL_SIZE); // size of pages
-		writeD(_list.size()); //list length
-		writeC(0x00);
-		writeC(_type);  //Type (0x00 - Нормальный, 0xD0 - с шансом)
-		writeD(0x00);
+		writeByte(0x00);
+		writeInt(_listId); // list id
+		writeByte(0x00); // UNK
+		writeInt(_page); // page
+		writeInt(_finished); // finished
+		writeInt(Config.MULTISELL_SIZE); // size of pages
+		writeInt(_list.size()); //list length
+		writeByte(0x00);
+		writeByte(_type);  //Type (0x00 - Нормальный, 0xD0 - с шансом)
+		writeInt(0x00);
 
 		List<MultiSellIngredient> ingredients;
 		for(MultiSellEntry ent : _list)
 		{
 			ingredients = fixIngredients(ent.getIngredients());
 
-			writeD(ent.getEntryId());
-			writeC(!ent.getProduction().isEmpty() && ent.getProduction().get(0).isStackable() ? 1 : 0); // stackable?
-			writeH(0x00); // unknown
-			writeD(0x00); // инкрустация
-			writeD(0x00); // инкрустация
+			writeInt(ent.getEntryId());
+			writeByte(!ent.getProduction().isEmpty() && ent.getProduction().get(0).isStackable() ? 1 : 0); // stackable?
+			writeShort(0x00); // unknown
+			writeInt(0x00); // инкрустация
+			writeInt(0x00); // инкрустация
 
 			writeItemElements();
 			int saCount = 0;
-			writeC(0x00);
+			writeByte(0x00);
 			for(int i = 0; i < saCount; i++)
-				writeD(0x00);
+				writeInt(0x00);
 
-			writeC(0);
+			writeByte(0);
 			for (int i = 0; i < saCount; i++)
-				writeD(0x00);
+				writeInt(0x00);
 
-			writeH(ent.getProduction().size());
-			writeH(ingredients.size());
+			writeShort(ent.getProduction().size());
+			writeShort(ingredients.size());
 
 			for(MultiSellIngredient prod : ent.getProduction())
 			{
 				int itemId = prod.getItemId();
 				ItemTemplate template = itemId > 0 ? ItemHolder.getInstance().getTemplate(prod.getItemId()) : null;
-				writeD(itemId);
-				writeQ(itemId > 0 ? template.getBodyPart() : 0);
-				writeH(itemId > 0 ? template.getType2() : 0);
-				writeQ(prod.getItemCount());
-				writeH(prod.getItemEnchant());
-				writeD(prod.getChance());
-				writeD(0x00); // augment id
-				writeD(0x00); // mana
+				writeInt(itemId);
+				writeLong(itemId > 0 ? template.getBodyPart() : 0);
+				writeShort(itemId > 0 ? template.getType2() : 0);
+				writeLong(prod.getItemCount());
+				writeShort(prod.getItemEnchant());
+				writeInt(prod.getChance());
+				writeInt(0x00); // augment id
+				writeInt(0x00); // mana
 				writeItemElements(prod);
-				writeC(0x00);
+				writeByte(0x00);
 				for(int i = 0; i < saCount; i++)
-					writeD(0x00);
+					writeInt(0x00);
 
-				writeC(0);
+				writeByte(0);
 				for(int i = 0; i < saCount; i++)
-					writeD(0x00);
+					writeInt(0x00);
 			}
 
 			for(MultiSellIngredient i : ingredients)
 			{
 				int itemId = i.getItemId();
 				final ItemTemplate item = itemId > 0 ? ItemHolder.getInstance().getTemplate(i.getItemId()) : null;
-				writeD(itemId); //ID
-				writeH(itemId > 0 ? item.getType2() : 0xFFFF);
-				writeQ(i.getItemCount()); //Count
-				writeH(i.getItemEnchant()); //Enchant Level
-				writeD(0x00); // инкрустация
-				writeD(0x00); // инкрустация
+				writeInt(itemId); //ID
+				writeShort(itemId > 0 ? item.getType2() : 0xFFFF);
+				writeLong(i.getItemCount()); //Count
+				writeShort(i.getItemEnchant()); //Enchant Level
+				writeInt(0x00); // инкрустация
+				writeInt(0x00); // инкрустация
 				writeItemElements(i);
-				writeC(0x00);
+				writeByte(0x00);
 				for(int s = 0; s < saCount; s++)
-					writeD(0x00);
+					writeInt(0x00);
 
-				writeC(0x00);
+				writeByte(0x00);
 				for(int s = 0; s < saCount; s++)
-					writeD(0x00);
+					writeInt(0x00);
 			}
 		}
 	}

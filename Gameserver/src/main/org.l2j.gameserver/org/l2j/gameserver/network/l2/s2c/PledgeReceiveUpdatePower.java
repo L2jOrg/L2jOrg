@@ -12,6 +12,6 @@ public class PledgeReceiveUpdatePower extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_privs); //Filler??????
+		writeInt(_privs); //Filler??????
 	}
 }

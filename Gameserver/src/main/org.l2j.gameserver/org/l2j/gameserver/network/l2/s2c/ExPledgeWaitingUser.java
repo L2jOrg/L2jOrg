@@ -17,7 +17,7 @@ public class ExPledgeWaitingUser extends L2GameServerPacket
 
 	protected void writeImpl()
 	{
-		writeD(_charId);
-		writeS(_desc);
+		writeInt(_charId);
+		writeString(_desc);
 	}
 }

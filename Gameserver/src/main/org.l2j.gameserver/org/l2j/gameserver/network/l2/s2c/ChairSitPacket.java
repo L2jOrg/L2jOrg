@@ -20,7 +20,7 @@ public class ChairSitPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_objectId);
-		writeD(_staticObjectId);
+		writeInt(_objectId);
+		writeInt(_staticObjectId);
 	}
 }

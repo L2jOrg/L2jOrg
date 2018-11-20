@@ -25,7 +25,7 @@ public class RequestChangeNicknameColor extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_colorNum = readD();
-		_title = readS();
+		_title = readString();
 		_itemObjectId = readD();
 	}
 

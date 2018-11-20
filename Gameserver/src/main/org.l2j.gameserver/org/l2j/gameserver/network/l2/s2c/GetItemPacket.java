@@ -22,10 +22,10 @@ public class GetItemPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_playerId);
-		writeD(_itemObjId);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z);
+		writeInt(_playerId);
+		writeInt(_itemObjId);
+		writeInt(_loc.x);
+		writeInt(_loc.y);
+		writeInt(_loc.z);
 	}
 }

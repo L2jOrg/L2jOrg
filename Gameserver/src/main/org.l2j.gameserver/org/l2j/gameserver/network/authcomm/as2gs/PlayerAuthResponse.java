@@ -32,7 +32,7 @@ public class PlayerAuthResponse extends ReceivablePacket
 	@Override
 	public void readImpl()
 	{
-		account = readS();
+		account = readString();
 		authed = readC() == 1;
 		/*if(authed)
 		{
@@ -43,7 +43,7 @@ public class PlayerAuthResponse extends ReceivablePacket
 			bonus = readD();
 			bonusExpire = readD();
 			points = readD();
-			hwid = readS();
+			hwid = readString();
 			if(getByteBuffer().hasRemaining())
 				phoneNumber = readQ();
 		}*/

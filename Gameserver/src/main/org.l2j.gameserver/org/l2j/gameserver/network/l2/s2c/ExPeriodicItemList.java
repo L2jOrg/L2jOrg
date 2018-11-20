@@ -16,8 +16,8 @@ public final class ExPeriodicItemList extends L2GameServerPacket
     @Override
     protected void writeImpl()
     {
-        writeD(_result);
-        writeD(_objectID);
-        writeD(_period);
+        writeInt(_result);
+        writeInt(_objectID);
+        writeInt(_period);
     }
 }

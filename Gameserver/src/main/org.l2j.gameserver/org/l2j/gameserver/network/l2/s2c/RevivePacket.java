@@ -20,6 +20,6 @@ public class RevivePacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_objectId);
+		writeInt(_objectId);
 	}
 }

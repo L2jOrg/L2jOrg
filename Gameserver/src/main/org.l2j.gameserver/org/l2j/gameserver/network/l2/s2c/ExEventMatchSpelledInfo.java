@@ -44,13 +44,13 @@ public class ExEventMatchSpelledInfo extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(char_obj_id);
-		writeD(_effects.size());
+		writeInt(char_obj_id);
+		writeInt(_effects.size());
 		for(Abnormal temp : _effects)
 		{
-			writeD(temp.skillId);
-			writeH(temp.dat);
-			writeD(temp.duration);
+			writeInt(temp.skillId);
+			writeShort(temp.dat);
+			writeInt(temp.duration);
 		}
 	}
 }

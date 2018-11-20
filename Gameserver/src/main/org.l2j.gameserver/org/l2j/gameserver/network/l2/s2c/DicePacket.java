@@ -26,11 +26,11 @@ public class DicePacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_playerId); // object id of player
-		writeD(_itemId); //	item id of dice (spade)  4625,4626,4627,4628
-		writeD(_number); // number rolled
-		writeD(_x); // x
-		writeD(_y); // y
-		writeD(_z); // z
+		writeInt(_playerId); // object id of player
+		writeInt(_itemId); //	item id of dice (spade)  4625,4626,4627,4628
+		writeInt(_number); // number rolled
+		writeInt(_x); // x
+		writeInt(_y); // y
+		writeInt(_z); // z
 	}
 }

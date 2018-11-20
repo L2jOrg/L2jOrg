@@ -23,7 +23,7 @@ public class ShortCutInitPacket extends ShortCutPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_shortCuts.size());
+		writeInt(_shortCuts.size());
 
 		for(final ShortcutInfo sc : _shortCuts)
 			sc.write(this);

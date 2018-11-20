@@ -33,15 +33,15 @@ public class ExBlockUpSetState extends L2GameServerPacket
 		@Override
 		protected void writeImpl()
 		{
-			writeD(0x00);
+			writeInt(0x00);
 
-			writeD(_timeLeft);
-			writeD(_bluePoints);
-			writeD(_redPoints);
+			writeInt(_timeLeft);
+			writeInt(_bluePoints);
+			writeInt(_redPoints);
 
-			writeD(_isRedTeam ? 0x01 : 0x00);
-			writeD(_objectId);
-			writeD(_playerPoints);
+			writeInt(_isRedTeam ? 0x01 : 0x00);
+			writeInt(_objectId);
+			writeInt(_playerPoints);
 		}
 	}
 
@@ -57,9 +57,9 @@ public class ExBlockUpSetState extends L2GameServerPacket
 		@Override
 		protected void writeImpl()
 		{
-			writeD(0x01);
+			writeInt(0x01);
 
-			writeD(_isRedTeamWin ? 0x01 : 0x00);
+			writeInt(_isRedTeamWin ? 0x01 : 0x00);
 		}
 	}
 
@@ -79,18 +79,18 @@ public class ExBlockUpSetState extends L2GameServerPacket
 		@Override
 		protected void writeImpl()
 		{
-			writeD(0x02);
+			writeInt(0x02);
 
-			writeD(_timeLeft);
-			writeD(_bluePoints);
-			writeD(_redPoints);
+			writeInt(_timeLeft);
+			writeInt(_bluePoints);
+			writeInt(_redPoints);
 		}
 	}
 
 	@Override
 	protected void writeImpl()
 	{
-		/*writeD(BlockUpStateType);
+		/*writeInt(BlockUpStateType);
 		switch(BlockUpStateType)
 		{
 			case 0:

@@ -44,10 +44,10 @@ public class InventoryUpdatePacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeH(_items.size());
+		writeShort(_items.size());
 		for(ItemInfo temp : _items)
 		{
-			writeH(temp.getLastChange());
+			writeShort(temp.getLastChange());
 			writeItemInfo(temp);
 		}
 	}

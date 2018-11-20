@@ -16,17 +16,17 @@ public class VersionCheckPacket extends L2GameServerPacket
 	{
 		if(_key == null || _key.length == 0)
 		{
-			writeC(0x00);
+			writeByte(0x00);
 			return;
 		}
-		writeC(0x01);
+		writeByte(0x01);
 		for(int i = 0; i < 8; i++)
-			writeC(_key[i]);
-		writeD(0x01);
-		writeD(Config.REQUEST_ID);	// Server ID
-		writeC(0x01);
-		writeD(0x00); // Seed (obfuscation key)
-		writeC(0x01);	// Classic?
-		writeC(0x00);	// Classic?
+			writeByte(_key[i]);
+		writeInt(0x01);
+		writeInt(Config.REQUEST_ID);	// Server ID
+		writeByte(0x01);
+		writeInt(0x00); // Seed (obfuscation key)
+		writeByte(0x01);	// Classic?
+		writeByte(0x00);	// Classic?
 	}
 }

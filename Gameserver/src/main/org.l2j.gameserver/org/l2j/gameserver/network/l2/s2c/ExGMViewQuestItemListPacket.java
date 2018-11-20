@@ -27,9 +27,9 @@ public class ExGMViewQuestItemListPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeS(_name);
-		writeD(_limit);
-		writeH(_size);
+		writeString(_name);
+		writeInt(_limit);
+		writeShort(_size);
 		for(ItemInstance temp : _items)
 			if(temp.getTemplate().isQuest())
 				writeItemInfo(temp);

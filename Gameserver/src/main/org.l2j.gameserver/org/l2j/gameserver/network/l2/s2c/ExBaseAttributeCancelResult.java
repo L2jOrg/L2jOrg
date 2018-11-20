@@ -22,8 +22,8 @@ public class ExBaseAttributeCancelResult extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_result);
-		writeD(_objectId);
-		writeD(_element.getId());
+		writeInt(_result);
+		writeInt(_objectId);
+		writeInt(_element.getId());
 	}
 }

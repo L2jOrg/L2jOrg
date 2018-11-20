@@ -31,12 +31,12 @@ public class TeleportToLocationPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_targetId);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z + Config.CLIENT_Z_SHIFT);
-		writeD(0x00); //IsValidation
-		writeD(_loc.h);
-		writeD(0); // ??? 0
+		writeInt(_targetId);
+		writeInt(_loc.x);
+		writeInt(_loc.y);
+		writeInt(_loc.z + Config.CLIENT_Z_SHIFT);
+		writeInt(0x00); //IsValidation
+		writeInt(_loc.h);
+		writeInt(0); // ??? 0
 	}
 }

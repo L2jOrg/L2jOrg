@@ -19,15 +19,15 @@ public class ExPeriodicHenna extends L2GameServerPacket
 	{
 		if(_henna != null)
 		{
-			writeD(_henna.getTemplate().getSymbolId());	// Premium symbol ID
-			writeD(_henna.getLeftTime());	// Premium symbol left time
-			writeD(_active);	// Premium symbol active
+			writeInt(_henna.getTemplate().getSymbolId());	// Premium symbol ID
+			writeInt(_henna.getLeftTime());	// Premium symbol left time
+			writeInt(_active);	// Premium symbol active
 		}
 		else
 		{
-			writeD(0x00);	// Premium symbol ID
-			writeD(0x00);	// Premium symbol left time
-			writeD(0x00);	// Premium symbol active
+			writeInt(0x00);	// Premium symbol ID
+			writeInt(0x00);	// Premium symbol left time
+			writeInt(0x00);	// Premium symbol active
 		}
 	}
 }

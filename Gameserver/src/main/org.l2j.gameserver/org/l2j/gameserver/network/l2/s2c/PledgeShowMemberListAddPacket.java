@@ -14,14 +14,14 @@ public class PledgeShowMemberListAddPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeS(_member._name);
-		writeD(_member._level);
-		writeD(_member._classId);
-		writeD(_member._sex);
-		writeD(_member._race);
-		writeD(_member._online);
-		writeD(_member._pledgeType);
-		writeC(_member._attendance);
+		writeString(_member._name);
+		writeInt(_member._level);
+		writeInt(_member._classId);
+		writeInt(_member._sex);
+		writeInt(_member._race);
+		writeInt(_member._online);
+		writeInt(_member._pledgeType);
+		writeByte(_member._attendance);
 	}
 
 	private class PledgePacketMember

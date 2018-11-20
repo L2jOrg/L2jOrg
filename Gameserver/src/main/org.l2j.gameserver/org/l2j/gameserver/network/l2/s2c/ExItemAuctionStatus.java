@@ -5,13 +5,13 @@ public class ExItemAuctionStatus extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeH(0);
-		writeH(0);
-		writeH(0);
-		writeH(0);
-		writeH(0);
-		writeH(0);
-		writeD(0);
-		writeC(0);
+		writeShort(0);
+		writeShort(0);
+		writeShort(0);
+		writeShort(0);
+		writeShort(0);
+		writeShort(0);
+		writeInt(0);
+		writeByte(0);
 	}
 }

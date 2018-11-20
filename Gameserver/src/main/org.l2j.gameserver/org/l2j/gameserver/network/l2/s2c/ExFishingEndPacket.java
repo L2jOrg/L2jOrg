@@ -25,7 +25,7 @@ public class ExFishingEndPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_charId);
-		writeC(_type);
+		writeInt(_charId);
+		writeByte(_type);
 	}
 }

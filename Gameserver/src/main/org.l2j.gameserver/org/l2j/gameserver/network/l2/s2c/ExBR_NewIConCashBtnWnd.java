@@ -18,6 +18,6 @@ public class ExBR_NewIConCashBtnWnd extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeH(_value);	// Has Updates
+		writeShort(_value);	// Has Updates
 	}
 }

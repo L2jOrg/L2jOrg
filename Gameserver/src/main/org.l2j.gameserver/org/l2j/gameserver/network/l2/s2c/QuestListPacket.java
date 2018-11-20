@@ -67,13 +67,13 @@ public class QuestListPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeH(_quests.size());
+		writeShort(_quests.size());
 		for(TIntIntIterator iterator = _quests.iterator(); iterator.hasNext();)
 		{
 			iterator.advance();
 
-			writeD(iterator.key());
-			writeD(iterator.value());
+			writeInt(iterator.key());
+			writeInt(iterator.value());
 		}
 		writeB(_completedQuestsMask);
 	}

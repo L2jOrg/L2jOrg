@@ -12,6 +12,6 @@ public class ExFieldEventEffect extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_unk);
+		writeInt(_unk);
 	}
 }

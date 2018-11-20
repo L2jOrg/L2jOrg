@@ -19,7 +19,7 @@ public class ExAdenaInvenCount extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeQ(_adena);
-		writeH(_useInventorySlots);
+		writeLong(_adena);
+		writeShort(_useInventorySlots);
 	}
 }

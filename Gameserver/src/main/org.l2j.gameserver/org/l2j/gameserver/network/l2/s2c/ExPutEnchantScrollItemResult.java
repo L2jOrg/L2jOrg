@@ -17,6 +17,6 @@ public class ExPutEnchantScrollItemResult extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_result);
+		writeInt(_result);
 	}
 }

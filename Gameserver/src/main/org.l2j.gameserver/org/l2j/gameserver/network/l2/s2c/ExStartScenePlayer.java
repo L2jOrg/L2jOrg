@@ -12,6 +12,6 @@ public class ExStartScenePlayer extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_sceneId);
+		writeInt(_sceneId);
 	}
 }

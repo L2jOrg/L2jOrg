@@ -134,13 +134,13 @@ public class ShowBoardPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeC(_show); //c4 1 to show community 00 to hide
+		writeByte(_show); //c4 1 to show community 00 to hide
 		if(_show)
 		{
 			for(String bbsBypass : DIRECT_BYPASS)
-				writeS(bbsBypass);
-			writeS(_fav);
-			writeS(_html);
+				writeString(bbsBypass);
+			writeString(_fav);
+			writeString(_html);
 		}
 	}
 }

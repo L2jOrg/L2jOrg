@@ -15,8 +15,8 @@ public class Ex2NDPasswordAckPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeC(0x00);
-		writeD(_response == WRONG_PATTERN ? 0x01 : 0x00);
-		writeD(0x00);
+		writeByte(0x00);
+		writeInt(_response == WRONG_PATTERN ? 0x01 : 0x00);
+		writeInt(0x00);
 	}
 }

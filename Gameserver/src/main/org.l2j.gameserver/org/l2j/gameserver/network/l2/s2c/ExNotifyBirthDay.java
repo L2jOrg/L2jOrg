@@ -7,6 +7,6 @@ public class ExNotifyBirthDay extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(0); // Actor OID 
+		writeInt(0); // Actor OID
 	}
 }

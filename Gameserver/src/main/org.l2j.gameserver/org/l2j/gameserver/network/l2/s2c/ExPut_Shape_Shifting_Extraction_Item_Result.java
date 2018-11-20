@@ -18,6 +18,6 @@ public class ExPut_Shape_Shifting_Extraction_Item_Result extends L2GameServerPac
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_result); //Result
+		writeInt(_result); //Result
 	}
 }

@@ -19,9 +19,9 @@ public class FriendStatus extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_login);
-		writeS(_friend.getName());
+		writeInt(_login);
+		writeString(_friend.getName());
 		if(!_login)
-			writeD(_friend.getObjectId());
+			writeInt(_friend.getObjectId());
 	}
 }

@@ -14,7 +14,7 @@ public class ExUISettingPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(data.length);
+		writeInt(data.length);
 		writeB(data);
 	}
 }

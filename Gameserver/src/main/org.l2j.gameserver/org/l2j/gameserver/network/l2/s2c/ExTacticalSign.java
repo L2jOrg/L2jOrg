@@ -19,7 +19,7 @@ public class ExTacticalSign extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_targetId);
-		writeD(_signId);
+		writeInt(_targetId);
+		writeInt(_signId);
 	}
 }

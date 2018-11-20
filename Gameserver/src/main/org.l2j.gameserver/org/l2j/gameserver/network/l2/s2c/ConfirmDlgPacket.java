@@ -21,8 +21,8 @@ public class ConfirmDlgPacket extends SysMsgContainer<ConfirmDlgPacket>
 	protected final void writeImpl()
 	{
 		writeElements();
-		writeD(_time);
-		writeD(_requestId);
+		writeInt(_time);
+		writeInt(_requestId);
 	}
 
 	public void setRequestId(int requestId)

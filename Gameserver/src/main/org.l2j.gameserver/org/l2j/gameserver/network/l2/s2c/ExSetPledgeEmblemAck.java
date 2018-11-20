@@ -15,6 +15,6 @@ public class ExSetPledgeEmblemAck extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_part);
+		writeInt(_part);
 	}
 }

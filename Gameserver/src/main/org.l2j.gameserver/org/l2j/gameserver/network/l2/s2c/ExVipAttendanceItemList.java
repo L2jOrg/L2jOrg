@@ -25,22 +25,22 @@ public class ExVipAttendanceItemList extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeC(_indexToReceive);
-		writeC(_lastReceivedIndex);
-		writeD(0x00);
-		writeD(0x00);
-		writeC(0x01);
-		writeC(!_received);
-		writeC(250);
-		writeC(_rewards.size());
+		writeByte(_indexToReceive);
+		writeByte(_lastReceivedIndex);
+		writeInt(0x00);
+		writeInt(0x00);
+		writeByte(0x01);
+		writeByte(!_received);
+		writeByte(250);
+		writeByte(_rewards.size());
 		_rewards.forEach(reward ->
 		{
-			writeD(reward.getId());
-			writeQ(reward.getCount());
-			writeC(reward.isUnknown());
-			writeC(reward.isBest());
+			writeInt(reward.getId());
+			writeLong(reward.getCount());
+			writeByte(reward.isUnknown());
+			writeByte(reward.isBest());
 		});
-		writeC(0x00);
-		writeD(0x00);
+		writeByte(0x00);
+		writeInt(0x00);
 	}
 }

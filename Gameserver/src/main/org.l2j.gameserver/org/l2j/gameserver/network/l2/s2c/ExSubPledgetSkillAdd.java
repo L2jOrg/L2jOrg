@@ -17,8 +17,8 @@ public class ExSubPledgetSkillAdd extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_type);
-		writeD(_id);
-		writeD(_level);
+		writeInt(_type);
+		writeInt(_id);
+		writeInt(_level);
 	}
 }

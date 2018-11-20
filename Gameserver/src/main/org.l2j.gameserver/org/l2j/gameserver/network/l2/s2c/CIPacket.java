@@ -218,125 +218,125 @@ public class CIPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeC(0x00);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z + Config.CLIENT_Z_SHIFT);
-		writeD(0x00);
-		writeD(_objId);
-		writeS(_name);
-		writeH(_race);
-		writeC(_sex);
-		writeD(base_class);
+		writeByte(0x00);
+		writeInt(_loc.x);
+		writeInt(_loc.y);
+		writeInt(_loc.z + Config.CLIENT_Z_SHIFT);
+		writeInt(0x00);
+		writeInt(_objId);
+		writeString(_name);
+		writeShort(_race);
+		writeByte(_sex);
+		writeInt(base_class);
 
 		for(int PAPERDOLL_ID : PAPERDOLL_ORDER)
-			writeD(_inv[PAPERDOLL_ID][0]);
+			writeInt(_inv[PAPERDOLL_ID][0]);
 
-		writeD(_inv[Inventory.PAPERDOLL_RHAND][1]);
-		writeD(_inv[Inventory.PAPERDOLL_RHAND][2]);
+		writeInt(_inv[Inventory.PAPERDOLL_RHAND][1]);
+		writeInt(_inv[Inventory.PAPERDOLL_RHAND][2]);
 
-		writeD(_inv[Inventory.PAPERDOLL_LHAND][1]);
-		writeD(_inv[Inventory.PAPERDOLL_LHAND][2]);
+		writeInt(_inv[Inventory.PAPERDOLL_LHAND][1]);
+		writeInt(_inv[Inventory.PAPERDOLL_LHAND][2]);
 
-		writeD(_inv[Inventory.PAPERDOLL_LRHAND][1]);
-		writeD(_inv[Inventory.PAPERDOLL_LRHAND][2]);
+		writeInt(_inv[Inventory.PAPERDOLL_LRHAND][1]);
+		writeInt(_inv[Inventory.PAPERDOLL_LRHAND][2]);
 
-		writeC(_armorSetEnchant);	// Armor Enchant Effect
+		writeByte(_armorSetEnchant);	// Armor Enchant Effect
 
-		writeD(_inv[Inventory.PAPERDOLL_RHAND][3]);
-		writeD(_inv[Inventory.PAPERDOLL_LHAND][3]);
-		writeD(_inv[Inventory.PAPERDOLL_LRHAND][3]);
-		writeD(_inv[Inventory.PAPERDOLL_GLOVES][3]);
-		writeD(_inv[Inventory.PAPERDOLL_CHEST][3]);
-		writeD(_inv[Inventory.PAPERDOLL_LEGS][3]);
-		writeD(_inv[Inventory.PAPERDOLL_FEET][3]);
-		writeD(_inv[Inventory.PAPERDOLL_HAIR][3]);
-		writeD(_inv[Inventory.PAPERDOLL_DHAIR][3]);
+		writeInt(_inv[Inventory.PAPERDOLL_RHAND][3]);
+		writeInt(_inv[Inventory.PAPERDOLL_LHAND][3]);
+		writeInt(_inv[Inventory.PAPERDOLL_LRHAND][3]);
+		writeInt(_inv[Inventory.PAPERDOLL_GLOVES][3]);
+		writeInt(_inv[Inventory.PAPERDOLL_CHEST][3]);
+		writeInt(_inv[Inventory.PAPERDOLL_LEGS][3]);
+		writeInt(_inv[Inventory.PAPERDOLL_FEET][3]);
+		writeInt(_inv[Inventory.PAPERDOLL_HAIR][3]);
+		writeInt(_inv[Inventory.PAPERDOLL_DHAIR][3]);
 
-		writeC(pvp_flag);
-		writeD(karma);
+		writeByte(pvp_flag);
+		writeInt(karma);
 
-		writeD(_mAtkSpd);
-		writeD(_pAtkSpd);
+		writeInt(_mAtkSpd);
+		writeInt(_pAtkSpd);
 
-		writeH(_runSpd);
-		writeH(_walkSpd);
-		writeH(_swimRunSpd);
-		writeH(_swimWalkSpd);
-		writeH(_flRunSpd);
-		writeH(_flWalkSpd);
-		writeH(_flyRunSpd);
-		writeH(_flyWalkSpd);
+		writeShort(_runSpd);
+		writeShort(_walkSpd);
+		writeShort(_swimRunSpd);
+		writeShort(_swimWalkSpd);
+		writeShort(_flRunSpd);
+		writeShort(_flWalkSpd);
+		writeShort(_flyRunSpd);
+		writeShort(_flyWalkSpd);
 
 		writeF(speed_move); // _cha.getProperMultiplier()
 		writeF(speed_atack); // _cha.getAttackSpeedMultiplier()
 		writeF(col_radius);
 		writeF(col_height);
-		writeD(hair_style);
-		writeD(hair_color);
-		writeD(face);
-		writeS(_title);
-		writeD(clan_id);
-		writeD(clan_crest_id);
-		writeD(ally_id);
-		writeD(ally_crest_id);
+		writeInt(hair_style);
+		writeInt(hair_color);
+		writeInt(face);
+		writeString(_title);
+		writeInt(clan_id);
+		writeInt(clan_crest_id);
+		writeInt(ally_id);
+		writeInt(ally_crest_id);
 
-		writeC(_sit);
-		writeC(_run);
-		writeC(_combat);
-		writeC(_dead);
-		writeC(0x00);
-		writeC(mount_type); // 1-on Strider, 2-on Wyvern, 3-on Great Wolf, 0-no mount
-		writeC(private_store);
-		writeH(cubics.length);
+		writeByte(_sit);
+		writeByte(_run);
+		writeByte(_combat);
+		writeByte(_dead);
+		writeByte(0x00);
+		writeByte(mount_type); // 1-on Strider, 2-on Wyvern, 3-on Great Wolf, 0-no mount
+		writeByte(private_store);
+		writeShort(cubics.length);
 		for(Cubic cubic : cubics)
-			writeH(cubic == null ? 0 : cubic.getId());
-		writeC(_isPartyRoomLeader ? 0x01 : 0x00); // find party members
-		writeC(_isFlying ? 0x02 : 0x00);
-		writeH(rec_have);
-		writeD(mount_id);
-		writeD(class_id);
-		writeD(0x00);
-		writeC(_enchant);
+			writeShort(cubic == null ? 0 : cubic.getId());
+		writeByte(_isPartyRoomLeader ? 0x01 : 0x00); // find party members
+		writeByte(_isFlying ? 0x02 : 0x00);
+		writeShort(rec_have);
+		writeInt(mount_id);
+		writeInt(class_id);
+		writeInt(0x00);
+		writeByte(_enchant);
 
-		writeC(_team.ordinal()); // team circle around feet 1 = Blue, 2 = red
+		writeByte(_team.ordinal()); // team circle around feet 1 = Blue, 2 = red
 
-		writeD(large_clan_crest_id);
-		writeC(0x00);
-		writeC(_hero);
+		writeInt(large_clan_crest_id);
+		writeByte(0x00);
+		writeByte(_hero);
 
-		writeC(_fishing);
-		writeD(_fishLoc.x);
-		writeD(_fishLoc.y);
-		writeD(_fishLoc.z);
+		writeByte(_fishing);
+		writeInt(_fishLoc.x);
+		writeInt(_fishLoc.y);
+		writeInt(_fishLoc.z);
 
-		writeD(_nameColor);
-		writeD(_loc.h);
-		writeC(plg_class);
-		writeH(pledge_type);
-		writeD(_title_color);
-		writeC(0x00);
-		writeD(clan_rep_score);
-		writeD(_transform);
-		writeD(_agathion);
+		writeInt(_nameColor);
+		writeInt(_loc.h);
+		writeByte(plg_class);
+		writeShort(pledge_type);
+		writeInt(_title_color);
+		writeByte(0x00);
+		writeInt(clan_rep_score);
+		writeInt(_transform);
+		writeInt(_agathion);
 
-		writeC(0x01);	// UNK
+		writeByte(0x01);	// UNK
 
-		writeD(_curCp);
-		writeD(_curHp);
-		writeD(_maxHp);
-		writeD(_curMp);
-		writeD(_maxMp);
+		writeInt(_curCp);
+		writeInt(_curHp);
+		writeInt(_maxHp);
+		writeInt(_curMp);
+		writeInt(_maxMp);
 
-		writeC(0x00);	// UNK
+		writeByte(0x00);	// UNK
 
-		writeD(_abnormalEffects.size());
+		writeInt(_abnormalEffects.size());
 		for(AbnormalEffect abnormal : _abnormalEffects)
-			writeH(abnormal.getId());
+			writeShort(abnormal.getId());
 
-		writeC(0x00);	// UNK
-		writeC(_showHeadAccessories);
-		writeC(0x00);
+		writeByte(0x00);	// UNK
+		writeByte(_showHeadAccessories);
+		writeByte(0x00);
 	}
 
 	public static final int[] PAPERDOLL_ORDER =

@@ -38,22 +38,22 @@ public class ExListMpccWaiting extends L2GameServerPacket
 	@Override
 	public void writeImpl()
 	{
-		writeD(_page);
-		writeD(_list.size());
+		writeInt(_page);
+		writeInt(_list.size());
 		for(MatchingRoom room : _list)
 		{
-			writeD(room.getId());
+			writeInt(room.getId());
 			Player leader = room.getLeader();
-			writeS(leader == null ? StringUtils.EMPTY : leader.getName());
-			writeD(room.getPlayers().size());
-			writeD(room.getMinLevel());
-			writeD(room.getMaxLevel());
-			writeD(1);  //min group
-			writeD(room.getMaxMembersSize());   //max group
-			writeS(room.getTopic());
+			writeString(leader == null ? StringUtils.EMPTY : leader.getName());
+			writeInt(room.getPlayers().size());
+			writeInt(room.getMinLevel());
+			writeInt(room.getMaxLevel());
+			writeInt(1);  //min group
+			writeInt(room.getMaxMembersSize());   //max group
+			writeString(room.getTopic());
 		}
 
-		writeD(0);
-		writeD(0);
+		writeInt(0);
+		writeInt(0);
 	}
 }

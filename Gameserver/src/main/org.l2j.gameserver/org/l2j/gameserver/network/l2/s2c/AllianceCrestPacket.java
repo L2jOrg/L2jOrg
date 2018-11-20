@@ -16,9 +16,9 @@ public class AllianceCrestPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(Config.REQUEST_ID);
-		writeD(_crestId);
-		writeD(_data.length);
+		writeInt(Config.REQUEST_ID);
+		writeInt(_crestId);
+		writeInt(_data.length);
 		writeB(_data);
 	}
 }

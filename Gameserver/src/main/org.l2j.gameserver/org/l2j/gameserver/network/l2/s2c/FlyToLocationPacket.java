@@ -41,16 +41,16 @@ public class FlyToLocationPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_chaObjId);
-		writeD(_destLoc.x);
-		writeD(_destLoc.y);
-		writeD(_destLoc.z);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z);
-		writeD(_type.ordinal());
-		writeD(_flySpeed);
-		writeD(_flyDelay);
-		writeD(_animationSpeed);
+		writeInt(_chaObjId);
+		writeInt(_destLoc.x);
+		writeInt(_destLoc.y);
+		writeInt(_destLoc.z);
+		writeInt(_loc.x);
+		writeInt(_loc.y);
+		writeInt(_loc.z);
+		writeInt(_type.ordinal());
+		writeInt(_flySpeed);
+		writeInt(_flyDelay);
+		writeInt(_animationSpeed);
 	}
 }

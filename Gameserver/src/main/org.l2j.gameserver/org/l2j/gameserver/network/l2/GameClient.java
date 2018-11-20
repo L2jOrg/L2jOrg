@@ -10,6 +10,7 @@ import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.net.nio.impl.MMOClient;
 import org.l2j.commons.net.nio.impl.MMOConnection;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.dao.CharacterDAO;
 import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.model.CharSelectInfoPackage;
@@ -20,17 +21,19 @@ import org.l2j.gameserver.network.authcomm.SessionKey;
 import org.l2j.gameserver.network.authcomm.gs2as.PlayerLogout;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.L2GameServerPacket;
+import org.l2j.gameserver.network.l2.s2c.ServerCloseSocketPacket;
 import org.l2j.gameserver.security.HWIDUtils;
 import org.l2j.gameserver.security.SecondaryPasswordAuth;
 import org.l2j.gameserver.utils.Language;
 
+import org.l2j.mmocore.Client;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
  * Represents a client connected on Game Server
  */
-public final class GameClient extends MMOClient<MMOConnection<GameClient>>
+public final class GameClient extends Client<org.l2j.mmocore.Connection<GameClient>>
 {
 	private static final Logger _log = LoggerFactory.getLogger(GameClient.class);
 	private static final String NO_IP = "?.?.?.?";
@@ -66,13 +69,24 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 	
 	private String _hwid = null;
 	
-	public GameClient(MMOConnection<GameClient> con)
+	public GameClient(org.l2j.mmocore.Connection<GameClient> con)
 	{
 		super(con);
 
 		_state = GameClientState.CONNECTED;
-		_ip = con.getSocket().getInetAddress().getHostAddress();
+		_ip = "";
 		_crypt = new GameCrypt();
+	}
+
+	@Override
+	public int encrypt(byte[] data, int offset, int size) {
+        _crypt.encrypt(data, offset, size);
+		return size;
+	}
+
+	@Override
+	public boolean decrypt(byte[] data, int offset, int size) {
+        return _crypt.decrypt(data, offset, size);
 	}
 
 	@Override
@@ -92,7 +106,7 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 
 		if(getSessionKey() != null)
 		{
-			if(isAuthed())
+			if(_state == GameClientState.AUTHED)
 			{
 				AuthServerCommunication.getInstance().removeAuthedClient(getLogin());
 				AuthServerCommunication.getInstance().sendPacket(new PlayerLogout(getLogin()));
@@ -105,11 +119,12 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 	}
 
 	@Override
-	protected void onForcedDisconnection()
-	{
-		// TODO Auto-generated method stub
+	public void onConnected() {
+
 	}
 
+
+	// TODO move this
 	public void markRestoredChar(int charslot) throws Exception
 	{
 		int objid = getObjectIdForSlot(charslot);
@@ -138,6 +153,7 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		}
 	}
 
+	// TODO Move this
 	public void markToDeleteChar(int charslot) throws Exception
 	{
 		int objid = getObjectIdForSlot(charslot);
@@ -167,6 +183,7 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		}
 	}
 
+	// TODO Move this
 	public void deleteChar(int charslot) throws Exception
 	{
 		//have to make sure active character must be nulled
@@ -180,6 +197,7 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		CharacterDAO.getInstance().deleteCharByObjId(objid);
 	}
 
+	// TODO Move this
 	public Player loadCharFromDisk(int charslot)
 	{
 		int objectId = getObjectIdForSlot(charslot);
@@ -204,7 +222,7 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 				if(oldClient != null)
 				{
 					oldClient.setActiveChar(null);
-					oldClient.closeNow(false);
+					oldClient.closeNow();
 				}
 				oldPlayer.setNetConnection(this);
 				character = oldPlayer;
@@ -296,44 +314,19 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		this.revision = revision;
 	}
 
-	@Override
-	public boolean encrypt(final ByteBuffer buf, final int size)
-	{
-		_crypt.encrypt(buf.array(), buf.position(), size);
-		buf.position(buf.position() + size);
-		return true;
+	public void sendPacket(L2GameServerPacket gsp) {
+		if(isConnected()) {
+		    writePacket(gsp);
+        }
 	}
 
-	@Override
-	public boolean decrypt(ByteBuffer buf, int size)
-	{
-		boolean ret = _crypt.decrypt(buf.array(), buf.position(), size);
-
-		return ret;
-	}
-
-	public void sendPacket(L2GameServerPacket gsp)
-	{
-		if(isConnected())
-			getConnection().sendPacket(gsp);
-	}
-
-	public void sendPacket(L2GameServerPacket... gsp)
-	{
-		if(isConnected())
-			getConnection().sendPacket(gsp);
-	}
-
-	public void sendPackets(List<L2GameServerPacket> gsp)
-	{
-		if(isConnected())
-			getConnection().sendPackets(gsp);
-	}
-
-	public void close(L2GameServerPacket gsp)
-	{
-		if(isConnected())
-			getConnection().close(gsp);
+	public void sendPacket(L2GameServerPacket... gsp) {
+        if(!isConnected()) {
+            return;
+        }
+        for (L2GameServerPacket packet : gsp) {
+            writePacket(packet);
+        }
 	}
 
 	public String getIpAddr()
@@ -426,7 +419,7 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		if(_failedPackets++ >= 10)
 		{
 			_log.warn("Too many client packet fails, connection closed : " + this);
-			closeNow(true);
+			closeNow();
 		}
 	}
 
@@ -435,7 +428,7 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		if(_unknownPackets++ >= 10)
 		{
 			_log.warn("Too many client unknown packets, connection closed : " + this);
-			closeNow(true);
+			closeNow();
 		}
 	}
 
@@ -467,4 +460,8 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 	{
 		HWIDUtils.checkHWID(this, allowedHwid);
 	}
+
+    public void closeNow() {
+        close(new ServerCloseSocketPacket());
+    }
 }

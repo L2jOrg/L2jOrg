@@ -20,7 +20,7 @@ public class ExPut_Shape_Shifting_Target_Item_Result extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_resultId);
-		writeQ(_price);
+		writeInt(_resultId);
+		writeLong(_price);
 	}
 }

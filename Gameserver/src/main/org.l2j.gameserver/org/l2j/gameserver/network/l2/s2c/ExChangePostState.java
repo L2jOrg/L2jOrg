@@ -18,12 +18,12 @@ public class ExChangePostState extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_receivedBoard ? 1 : 0);
-		writeD(_mails.length);
+		writeInt(_receivedBoard ? 1 : 0);
+		writeInt(_mails.length);
 		for(Mail mail : _mails)
 		{
-			writeD(mail.getMessageId()); // postId
-			writeD(_changeId); // state
+			writeInt(mail.getMessageId()); // postId
+			writeInt(_changeId); // state
 		}
 	}
 }

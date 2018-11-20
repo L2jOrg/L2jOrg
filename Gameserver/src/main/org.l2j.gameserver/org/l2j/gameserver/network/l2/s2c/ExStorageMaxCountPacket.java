@@ -30,16 +30,16 @@ public class ExStorageMaxCountPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_inventory);
-		writeD(_warehouse);
-		writeD(_clan);
-		writeD(_privateSell);
-		writeD(_privateBuy);
-		writeD(_recipeDwarven);
-		writeD(_recipeCommon);
-		writeD(_inventoryExtraSlots); // belt inventory slots increase count
-		writeD(_questItemsLimit); //  quests list  by off 100 maximum
-		writeD(40); // ??? 40 slots
-		writeD(40); // ??? 40 slots
+		writeInt(_inventory);
+		writeInt(_warehouse);
+		writeInt(_clan);
+		writeInt(_privateSell);
+		writeInt(_privateBuy);
+		writeInt(_recipeDwarven);
+		writeInt(_recipeCommon);
+		writeInt(_inventoryExtraSlots); // belt inventory slots increase count
+		writeInt(_questItemsLimit); //  quests list  by off 100 maximum
+		writeInt(40); // ??? 40 slots
+		writeInt(40); // ??? 40 slots
 	}
 }

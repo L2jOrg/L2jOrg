@@ -19,6 +19,6 @@ public class ExReplyHandOverPartyMaster extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_isLeader);
+		writeInt(_isLeader);
 	}
 }

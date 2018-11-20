@@ -16,7 +16,7 @@ public class ExBR_PremiumStatePacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_objectId);
-		writeC(_state);
+		writeInt(_objectId);
+		writeByte(_state);
 	}
 }

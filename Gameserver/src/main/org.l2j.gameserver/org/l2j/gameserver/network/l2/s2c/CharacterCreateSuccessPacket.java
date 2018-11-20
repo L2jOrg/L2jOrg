@@ -7,6 +7,6 @@ public class CharacterCreateSuccessPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(0x01);
+		writeInt(0x01);
 	}
 }

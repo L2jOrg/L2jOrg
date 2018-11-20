@@ -17,10 +17,10 @@ public class ExPutCommissionResultForVariationMake extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_gemstoneObjId);
-		writeD(_unk1);
-		writeQ(_gemstoneCount);
-		writeQ(_unk2);
-		writeD(_unk3);
+		writeInt(_gemstoneObjId);
+		writeInt(_unk1);
+		writeLong(_gemstoneCount);
+		writeLong(_unk2);
+		writeInt(_unk3);
 	}
 }

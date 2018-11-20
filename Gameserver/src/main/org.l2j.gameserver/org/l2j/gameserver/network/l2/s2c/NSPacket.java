@@ -26,9 +26,9 @@ public class NSPacket extends NpcStringContainer
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_objId);
-		writeD(_type);
-		writeD(1000000 + _id);
+		writeInt(_objId);
+		writeInt(_type);
+		writeInt(1000000 + _id);
 		writeElements();
 	}
 }

@@ -19,8 +19,8 @@ public class AuthRequest extends SendablePacket
 		writeC(Config.AUTH_SERVER_GM_ONLY ? 0x01 : 0x00);
 		writeC(Config.AUTH_SERVER_BRACKETS ? 0x01 : 0x00);
 		writeC(Config.AUTH_SERVER_IS_PVP ? 0x01 : 0x00);
-		writeS(Config.EXTERNAL_HOSTNAME);
-		writeS(Config.INTERNAL_HOSTNAME);
+		writeString(Config.EXTERNAL_HOSTNAME);
+		writeString(Config.INTERNAL_HOSTNAME);
 		writeH(Config.PORT_GAME);
 		writeD(GameServer.getInstance().getOnlineLimit());
 
@@ -29,10 +29,10 @@ public class AuthRequest extends SendablePacket
 		for(HostInfo host : hosts)
 		{
 			writeC(host.getId());
-			writeS(host.getIP());
-			writeS(host.getInnerIP());
+			writeString(host.getIP());
+			writeString(host.getInnerIP());
 			writeH(host.getPort());
-			writeS(host.getKey());
+			writeString(host.getKey());
 		}
 	}
 }

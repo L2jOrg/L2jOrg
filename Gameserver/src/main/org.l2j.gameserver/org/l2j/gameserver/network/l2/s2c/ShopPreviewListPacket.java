@@ -31,18 +31,18 @@ public class ShopPreviewListPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(0x13c0); //?
-		writeQ(_money);
-		writeD(_listId);
-		writeH(_itemList.size());
+		writeInt(0x13c0); //?
+		writeLong(_money);
+		writeInt(_listId);
+		writeShort(_itemList.size());
 
 		for(ItemInfo item : _itemList)
 			if(item.getItem().isEquipable())
 			{
-				writeD(item.getItemId());
-				writeH(item.getItem().getType2()); // item type2
-				writeH(item.getItem().isEquipable() ? item.getItem().getBodyPart() : 0x00);
-				writeQ(getWearPrice(item.getItem()));
+				writeInt(item.getItemId());
+				writeShort(item.getItem().getType2()); // item type2
+				writeShort(item.getItem().isEquipable() ? item.getItem().getBodyPart() : 0x00);
+				writeLong(getWearPrice(item.getItem()));
 			}
 	}
 

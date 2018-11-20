@@ -65,53 +65,53 @@ public class PledgeShowMemberListAllPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_pledgeType == Clan.SUBUNIT_MAIN_CLAN ? 0 : 1);
-		writeD(_clanObjectId);
-		writeD(Config.REQUEST_ID);
-		writeD(_pledgeType);
-		writeS(_unitName);
-		writeS(_leaderName);
+		writeInt(_pledgeType == Clan.SUBUNIT_MAIN_CLAN ? 0 : 1);
+		writeInt(_clanObjectId);
+		writeInt(Config.REQUEST_ID);
+		writeInt(_pledgeType);
+		writeString(_unitName);
+		writeString(_leaderName);
 
-		writeD(_clanCrestId); // crest id .. is used again
-		writeD(_level);
-		writeD(_hasCastle);
+		writeInt(_clanCrestId); // crest id .. is used again
+		writeInt(_level);
+		writeInt(_hasCastle);
 		if(_hasInstantClanHall > 0)
 		{
-			writeD(0x01);
-			writeD(_hasInstantClanHall);
+			writeInt(0x01);
+			writeInt(_hasInstantClanHall);
 		}
 		else if(_hasClanHall != 0)
 		{
-			writeD(0x00);
-			writeD(_hasClanHall);
+			writeInt(0x00);
+			writeInt(_hasClanHall);
 		}
 		else
 		{
-			writeD(0x00);
-			writeD(0x00);
+			writeInt(0x00);
+			writeInt(0x00);
 		}
-		writeD(0);
-		writeD(_rank);
-		writeD(_reputation);
-		writeD(_isDisbanded ? 3 : 0);
-		writeD(0x00);
-		writeD(_allianceObjectId);
-		writeS(_allianceName);
-		writeD(_allianceCrestId);
-		writeD(_atClanWar);
-		writeD(0x00);//territory Id
+		writeInt(0);
+		writeInt(_rank);
+		writeInt(_reputation);
+		writeInt(_isDisbanded ? 3 : 0);
+		writeInt(0x00);
+		writeInt(_allianceObjectId);
+		writeString(_allianceName);
+		writeInt(_allianceCrestId);
+		writeInt(_atClanWar);
+		writeInt(0x00);//territory Id
 
-		writeD(_members.size());
+		writeInt(_members.size());
 		for(PledgePacketMember m : _members)
 		{
-			writeS(m._name);
-			writeD(m._level);
-			writeD(m._classId);
-			writeD(m._sex);
-			writeD(m._race);
-			writeD(m._online);
-			writeD(m._hasSponsor ? 1 : 0);
-			writeC(m._attendance);
+			writeString(m._name);
+			writeInt(m._level);
+			writeInt(m._classId);
+			writeInt(m._sex);
+			writeInt(m._race);
+			writeInt(m._online);
+			writeInt(m._hasSponsor ? 1 : 0);
+			writeByte(m._attendance);
 		}
 	}
 

@@ -31,41 +31,41 @@ public class ExSendUIEventPacket extends NpcStringContainer
 	{
 		if(_isHide == 5) //zatuchka tyt nixyja ne verno
 		{
-			writeD(_objectId);
-			writeD(_isHide); // 0: show timer, 1: hide timer
-			writeD(0x00); // unknown
-			writeD(0x00); // unknown
-			writeS(String.valueOf(_isIncrease)); // "0": count negative, "1": count positive
-			writeS(String.valueOf(_startTime)); // timer starting minute(s)
-			writeS(String.valueOf(_endTime)); // timer length minute(s) (timer will disappear 10 seconds before it ends)
-			writeS(String.valueOf(0)); // timer length second(s) (timer will disappear 10 seconds before it ends)
-			writeS(String.valueOf(0)); // timer starting second(s)
+			writeInt(_objectId);
+			writeInt(_isHide); // 0: show timer, 1: hide timer
+			writeInt(0x00); // unknown
+			writeInt(0x00); // unknown
+			writeString(String.valueOf(_isIncrease)); // "0": count negative, "1": count positive
+			writeString(String.valueOf(_startTime)); // timer starting minute(s)
+			writeString(String.valueOf(_endTime)); // timer length minute(s) (timer will disappear 10 seconds before it ends)
+			writeString(String.valueOf(0)); // timer length second(s) (timer will disappear 10 seconds before it ends)
+			writeString(String.valueOf(0)); // timer starting second(s)
 			writeElements();
 		}
 		else if(_isHide == 2)
 		{
-			writeD(_objectId);
-			writeD(_isHide); // 0: show timer, 1: hide timer
-			writeD(1); // unknown
-			writeD(0x00); // unknown
-			writeS(String.valueOf(_isIncrease)); // "0": count negative, "1": count positive
-			writeS(""+_startTime+"%"); // timer starting minute(s)
-			writeS(String.valueOf(0)); // timer starting second(s)
-			writeS(String.valueOf(_endTime)); // timer length minute(s) (timer will disappear 10 seconds before it ends)
-			writeS(String.valueOf(0)); // timer length second(s) (timer will disappear 10 seconds before it ends)
+			writeInt(_objectId);
+			writeInt(_isHide); // 0: show timer, 1: hide timer
+			writeInt(1); // unknown
+			writeInt(0x00); // unknown
+			writeString(String.valueOf(_isIncrease)); // "0": count negative, "1": count positive
+			writeString(""+_startTime+"%"); // timer starting minute(s)
+			writeString(String.valueOf(0)); // timer starting second(s)
+			writeString(String.valueOf(_endTime)); // timer length minute(s) (timer will disappear 10 seconds before it ends)
+			writeString(String.valueOf(0)); // timer length second(s) (timer will disappear 10 seconds before it ends)
 			writeElements();	
 		}
 		else
 		{
-			writeD(_objectId);
-			writeD(_isHide); // 0: show timer, 1: hide timer
-			writeD(0x00); // unknown
-			writeD(0x00); // unknown
-			writeS(String.valueOf(_isIncrease)); // "0": count negative, "1": count positive
-			writeS(String.valueOf(_startTime / 60)); // timer starting minute(s)
-			writeS(String.valueOf(_startTime % 60)); // timer starting second(s)
-			writeS(String.valueOf(_endTime / 60)); // timer length minute(s) (timer will disappear 10 seconds before it ends)
-			writeS(String.valueOf(_endTime % 60)); // timer length second(s) (timer will disappear 10 seconds before it ends)
+			writeInt(_objectId);
+			writeInt(_isHide); // 0: show timer, 1: hide timer
+			writeInt(0x00); // unknown
+			writeInt(0x00); // unknown
+			writeString(String.valueOf(_isIncrease)); // "0": count negative, "1": count positive
+			writeString(String.valueOf(_startTime / 60)); // timer starting minute(s)
+			writeString(String.valueOf(_startTime % 60)); // timer starting second(s)
+			writeString(String.valueOf(_endTime / 60)); // timer length minute(s) (timer will disappear 10 seconds before it ends)
+			writeString(String.valueOf(_endTime % 60)); // timer length second(s) (timer will disappear 10 seconds before it ends)
 			writeElements();
 		}
 	}

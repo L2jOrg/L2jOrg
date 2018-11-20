@@ -28,16 +28,16 @@ public class PrivateStoreList extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_sellerId);
-		writeD(_package ? 1 : 0);
-		writeQ(_adena);
-		writeD(0x00); //TODO: [Bonux] Количество свободных ячеек в инвентаре.
-		writeD(_sellList.size());
+		writeInt(_sellerId);
+		writeInt(_package ? 1 : 0);
+		writeLong(_adena);
+		writeInt(0x00); //TODO: [Bonux] Количество свободных ячеек в инвентаре.
+		writeInt(_sellList.size());
 		for(TradeItem si : _sellList)
 		{
 			writeItemInfo(si);
-			writeQ(si.getOwnersPrice());
-			writeQ(si.getStorePrice());
+			writeLong(si.getOwnersPrice());
+			writeLong(si.getStorePrice());
 		}
 	}
 }

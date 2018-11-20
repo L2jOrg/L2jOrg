@@ -9,7 +9,7 @@ public class ClientSetTimePacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(GameTimeController.getInstance().getGameTime()); // time in client minutes
-		writeD(6); //constant to match the server time( this determines the speed of the client clock)
+		writeInt(GameTimeController.getInstance().getGameTime()); // time in client minutes
+		writeInt(6); //constant to match the server time( this determines the speed of the client clock)
 	}
 }

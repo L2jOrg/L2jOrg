@@ -26,14 +26,14 @@ public class RequestHardWareInfo extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_mac = readS();
+		_mac = readString();
 		_windowsPlatformId = readD();
 		_windowsMajorVersion = readD();
 		_windowsMinorVersion = readD();
 		_windowsBuildNumber = readD();
 		_DXVersion = readD();
 		_DXRevision = readD();
-		_cpu = readS();
+		_cpu = readString();
 		_cpuSpeed = readD();
 		_cpuCoreCount = readD();
 		_unk8 = readD();
@@ -44,8 +44,8 @@ public class RequestHardWareInfo extends L2GameClientPacket
 		_videoMemory = readD();
 		_unk14 = readD();
 		_vgaVersion = readD();
-		_vgaName = readS();
-		_driverVersion = readS();
+		_vgaName = readString();
+		_driverVersion = readString();
 	}
 
 	@Override

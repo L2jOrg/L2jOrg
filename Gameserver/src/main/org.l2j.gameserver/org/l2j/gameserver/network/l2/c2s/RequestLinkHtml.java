@@ -25,7 +25,7 @@ public class RequestLinkHtml extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_link = readS();
+		_link = readString();
 	}
 
 	@Override

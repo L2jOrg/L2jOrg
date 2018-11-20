@@ -22,9 +22,9 @@ public class LockAccountIP extends SendablePacket
 	@Override
 	protected void writeImpl()
 	{	
-		writeC(0x0b);
-		writeS(_account);
-		writeS(_IP);
-		writeD(_time);
+		writeByte(0x0b);
+		writeString(_account);
+		writeString(_IP);
+		writeInt(_time);
 	}
 }

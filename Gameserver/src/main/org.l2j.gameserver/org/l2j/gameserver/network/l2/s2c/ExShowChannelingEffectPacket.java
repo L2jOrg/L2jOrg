@@ -21,8 +21,8 @@ public class ExShowChannelingEffectPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_casterObjectId);
-		writeD(_targetObjectId);
-		writeD(_state);
+		writeInt(_casterObjectId);
+		writeInt(_targetObjectId);
+		writeInt(_state);
 	}
 }

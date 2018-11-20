@@ -30,13 +30,13 @@ public class PledgeStatusChangedPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(Config.REQUEST_ID);
-		writeD(leader_id);
-		writeD(clan_id);
-		writeD(crestId);
-		writeD(allyId);
-		writeD(0);
-		writeD(0);
-		writeD(0);
+		writeInt(Config.REQUEST_ID);
+		writeInt(leader_id);
+		writeInt(clan_id);
+		writeInt(crestId);
+		writeInt(allyId);
+		writeInt(0);
+		writeInt(0);
+		writeInt(0);
 	}
 }

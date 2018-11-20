@@ -22,11 +22,11 @@ public class ExStopMoveInShuttlePacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_playerObjectId);//Player ObjID
-		writeD(_shuttleId);//Shuttle ID (Arkan: 1,2)
-		writeD(_loc.x); // X in shuttle
-		writeD(_loc.y); // Y in shuttle
-		writeD(_loc.z); // Z in shuttle
-		writeD(_playerHeading); // H in shuttle
+		writeInt(_playerObjectId);//Player ObjID
+		writeInt(_shuttleId);//Shuttle ID (Arkan: 1,2)
+		writeInt(_loc.x); // X in shuttle
+		writeInt(_loc.y); // Y in shuttle
+		writeInt(_loc.z); // Z in shuttle
+		writeInt(_playerHeading); // H in shuttle
 	}
 }

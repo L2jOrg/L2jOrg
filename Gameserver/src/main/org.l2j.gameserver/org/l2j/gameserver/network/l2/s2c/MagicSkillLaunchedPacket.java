@@ -32,15 +32,15 @@ public class MagicSkillLaunchedPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(0x00);//unk
-		writeD(_casterId);
-		writeD(_skillId);
-		writeD(_skillLevel);
-		writeD(_targets.size());
+		writeInt(0x00);//unk
+		writeInt(_casterId);
+		writeInt(_skillId);
+		writeInt(_skillLevel);
+		writeInt(_targets.size());
 		for(Creature target : _targets)
 		{
 			if(target != null)
-				writeD(target.getObjectId());
+				writeInt(target.getObjectId());
 		}
 	}
 

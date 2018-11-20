@@ -16,11 +16,11 @@ public class ShopPreviewInfoPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(Inventory.PAPERDOLL_MAX);
+		writeInt(Inventory.PAPERDOLL_MAX);
 
 		// Slots
 		for(int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
-			writeD(getFromList(PAPERDOLL_ID));
+			writeInt(getFromList(PAPERDOLL_ID));
 	}
 
 	private int getFromList(int key)

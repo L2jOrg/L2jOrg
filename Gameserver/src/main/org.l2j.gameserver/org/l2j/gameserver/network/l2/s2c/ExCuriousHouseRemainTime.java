@@ -12,6 +12,6 @@ public class ExCuriousHouseRemainTime extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_time);
+		writeInt(_time);
 	}
 }

@@ -45,15 +45,15 @@ public class SpecialCameraPacket extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		// ddddddddddd
-		writeD(_id); // object id
-		writeD(_dist); //расстояние до объекта
-		writeD(_yaw); // North=90, south=270, east=0, west=180
-		writeD(_pitch); // > 0:looks up,pitch < 0:looks down (угол наклона)
-		writeD(_time); //faster that small value is
-		writeD(_duration); //время анимации
-		writeD(_turn);
-		writeD(_rise);
-		writeD(_widescreen);
-		writeD(_unknown);
+		writeInt(_id); // object id
+		writeInt(_dist); //расстояние до объекта
+		writeInt(_yaw); // North=90, south=270, east=0, west=180
+		writeInt(_pitch); // > 0:looks up,pitch < 0:looks down (угол наклона)
+		writeInt(_time); //faster that small value is
+		writeInt(_duration); //время анимации
+		writeInt(_turn);
+		writeInt(_rise);
+		writeInt(_widescreen);
+		writeInt(_unknown);
 	}
 }

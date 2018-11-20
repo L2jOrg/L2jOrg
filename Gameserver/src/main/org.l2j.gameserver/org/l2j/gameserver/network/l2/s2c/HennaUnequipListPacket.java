@@ -21,17 +21,17 @@ public class HennaUnequipListPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeQ(_adena);
-		writeD(_hennaList.getFreeSize());
-		writeD(_hennaList.size());
+		writeLong(_adena);
+		writeInt(_hennaList.getFreeSize());
+		writeInt(_hennaList.size());
 		for(Henna henna : _hennaList.values(true))
 		{
 			HennaTemplate template = henna.getTemplate();
-			writeD(template.getSymbolId()); //symbolid
-			writeD(template.getDyeId()); //itemid of dye
-			writeQ(template.getRemoveCount());
-			writeQ(template.getRemovePrice());
-			writeD(template.isForThisClass(_player) ? 0x01 : 0x00);
+			writeInt(template.getSymbolId()); //symbolid
+			writeInt(template.getDyeId()); //itemid of dye
+			writeLong(template.getRemoveCount());
+			writeLong(template.getRemovePrice());
+			writeInt(template.isForThisClass(_player) ? 0x01 : 0x00);
 		}
 	}
 }

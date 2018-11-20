@@ -48,15 +48,15 @@ public abstract class ExBuySellListPacket extends L2GameServerPacket
 		@Override
 		protected void writeImpl()
 		{
-			writeD(0x00); // BUY LIST TYPE
-			writeQ(_adena); // current money
-			writeD(_listId);
-			writeD(0x00); //TODO [Bonux] Awakening
-			writeH(_buyList.size());
+			writeInt(0x00); // BUY LIST TYPE
+			writeLong(_adena); // current money
+			writeInt(_listId);
+			writeInt(0x00); //TODO [Bonux] Awakening
+			writeShort(_buyList.size());
 			for(TradeItem item : _buyList)
 			{
 				writeItemInfo(item, item.getCurrentValue());
-				writeQ((long) (item.getOwnersPrice() * (1. + _taxRate)));
+				writeLong((long) (item.getOwnersPrice() * (1. + _taxRate)));
 			}
 		}
 	}
@@ -100,28 +100,28 @@ public abstract class ExBuySellListPacket extends L2GameServerPacket
 		@Override
 		protected void writeImpl()
 		{
-			writeD(0x01); // SELL/REFUND LIST TYPE
-			writeD(0x00); //TODO [Bonux] Awakening
-			writeH(_sellList.size());
+			writeInt(0x01); // SELL/REFUND LIST TYPE
+			writeInt(0x00); //TODO [Bonux] Awakening
+			writeShort(_sellList.size());
 			for(TradeItem item : _sellList)
 			{
 				writeItemInfo(item);
 				if(Config.ALT_SELL_ITEM_ONE_ADENA)
-					writeQ(1);
+					writeLong(1);
 				else
-					writeQ(item.getReferencePrice() / 2);
+					writeLong(item.getReferencePrice() / 2);
 			}
-			writeH(_refundList.size());
+			writeShort(_refundList.size());
 			for(TradeItem item : _refundList)
 			{
 				writeItemInfo(item);
-				writeD(item.getObjectId());
+				writeInt(item.getObjectId());
 				if(Config.ALT_SELL_ITEM_ONE_ADENA)
-					writeQ(item.getCount());
+					writeLong(item.getCount());
 				else	
-					writeQ((long) (item.getCount() * item.getReferencePrice() / 2 * (1. - _taxRate)));
+					writeLong((long) (item.getCount() * item.getReferencePrice() / 2 * (1. - _taxRate)));
 			}
-			writeC(_done);
+			writeByte(_done);
 		}
 	}
 }

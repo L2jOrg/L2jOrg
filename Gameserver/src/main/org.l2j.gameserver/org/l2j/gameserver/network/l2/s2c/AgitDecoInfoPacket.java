@@ -16,20 +16,20 @@ public class AgitDecoInfoPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_clanHall.getId());
+		writeInt(_clanHall.getId());
 
 		for(ResidenceFunctionType type : ResidenceFunctionType.VALUES)
 		{
 			ResidenceFunction function = _clanHall.getActiveFunction(type);
 			if(function != null)
-				writeC(function.getTemplate().getDepth());
+				writeByte(function.getTemplate().getDepth());
 			else
-				writeC(0x00);
+				writeByte(0x00);
 		}
-		writeD(0);
-		writeD(0);
-		writeD(0);
-		writeD(0);
-		writeD(0);
+		writeInt(0);
+		writeInt(0);
+		writeInt(0);
+		writeInt(0);
+		writeInt(0);
 	}
 }

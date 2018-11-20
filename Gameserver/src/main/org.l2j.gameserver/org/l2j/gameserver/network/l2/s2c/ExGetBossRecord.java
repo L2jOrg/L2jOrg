@@ -21,15 +21,15 @@ public class ExGetBossRecord extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_ranking); // char ranking
-		writeD(_totalPoints); // char total points
+		writeInt(_ranking); // char ranking
+		writeInt(_totalPoints); // char total points
 
-		writeD(_bossRecordInfo.size()); // list size
+		writeInt(_bossRecordInfo.size()); // list size
 		for(BossRecordInfo w : _bossRecordInfo)
 		{
-			writeD(w._bossId);
-			writeD(w._points);
-			writeD(w._unk1);// don`t know
+			writeInt(w._bossId);
+			writeInt(w._points);
+			writeInt(w._unk1);// don`t know
 		}
 	}
 

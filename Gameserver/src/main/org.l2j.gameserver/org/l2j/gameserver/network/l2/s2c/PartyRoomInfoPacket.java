@@ -26,12 +26,12 @@ public class PartyRoomInfoPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_id); // room id
-		writeD(_maxMembers); //max members
-		writeD(_minLevel); //min level
-		writeD(_maxLevel); //max level
-		writeD(_lootDist); //loot distribution 1-Random 2-Random includ. etc
-		writeD(_location); //location
-		writeS(_title); // room name
+		writeInt(_id); // room id
+		writeInt(_maxMembers); //max members
+		writeInt(_minLevel); //min level
+		writeInt(_maxLevel); //max level
+		writeInt(_lootDist); //loot distribution 1-Random 2-Random includ. etc
+		writeInt(_location); //location
+		writeString(_title); // room name
 	}
 }

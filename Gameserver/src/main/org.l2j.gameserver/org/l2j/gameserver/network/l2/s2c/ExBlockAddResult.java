@@ -15,7 +15,7 @@ public class ExBlockAddResult extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(1); //UNK
-		writeS(_blockName);
+		writeInt(1); //UNK
+		writeString(_blockName);
 	}
 }

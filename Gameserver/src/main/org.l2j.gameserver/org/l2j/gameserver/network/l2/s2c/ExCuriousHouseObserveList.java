@@ -37,13 +37,13 @@ public class ExCuriousHouseObserveList extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_arenas.size());
+		writeInt(_arenas.size());
 		for (ArenaInfo arena : _arenas)
 		{
-			writeD(arena.id);
-			writeS(arena.unk);
-			writeH(arena.status);
-			writeD(arena.participants);
+			writeInt(arena.id);
+			writeString(arena.unk);
+			writeShort(arena.status);
+			writeInt(arena.participants);
 		}
 	}
 }

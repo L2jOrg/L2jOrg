@@ -14,7 +14,7 @@ public class ShowTutorialMarkPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeC(_quest);
-		writeD(_tutorialId);
+		writeByte(_quest);
+		writeInt(_tutorialId);
 	}
 }

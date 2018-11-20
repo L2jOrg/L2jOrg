@@ -30,27 +30,27 @@ public class ExShowReceivedPostList extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD((int) (System.currentTimeMillis() / 1000L));
-		writeD(_mails.length); // количество писем
+		writeInt((int) (System.currentTimeMillis() / 1000L));
+		writeInt(_mails.length); // количество писем
 		for(Mail mail : _mails)
 		{
-			writeD(mail.getType().ordinal()); // тип письма
+			writeInt(mail.getType().ordinal()); // тип письма
 
 			if(mail.getType() == Mail.SenderType.SYSTEM)
-				writeD(mail.getSystemTopic());
+				writeInt(mail.getSystemTopic());
 
-			writeD(mail.getMessageId()); // уникальный id письма
-			writeS(mail.getTopic()); // топик
-			writeS(mail.getSenderName()); // отправитель
-			writeD(mail.isPayOnDelivery() ? 1 : 0); // если тут 1 то письмо требует оплаты
-			writeD(mail.getExpireTime()); // время действительности письма
-			writeD(mail.isUnread() ? 1 : 0); // письмо не прочитано - его нельзя удалить и оно выделяется ярким цветом
-			writeD(mail.isReturnable()); // returnable
-			writeD(mail.getAttachments().isEmpty() ? 0 : 1); // 1 - письмо с приложением, 0 - просто письмо
-			writeD(mail.isReturned() ? 1 : 0);
-			writeD(mail.getReceiverId());
+			writeInt(mail.getMessageId()); // уникальный id письма
+			writeString(mail.getTopic()); // топик
+			writeString(mail.getSenderName()); // отправитель
+			writeInt(mail.isPayOnDelivery() ? 1 : 0); // если тут 1 то письмо требует оплаты
+			writeInt(mail.getExpireTime()); // время действительности письма
+			writeInt(mail.isUnread() ? 1 : 0); // письмо не прочитано - его нельзя удалить и оно выделяется ярким цветом
+			writeInt(mail.isReturnable()); // returnable
+			writeInt(mail.getAttachments().isEmpty() ? 0 : 1); // 1 - письмо с приложением, 0 - просто письмо
+			writeInt(mail.isReturned() ? 1 : 0);
+			writeInt(mail.getReceiverId());
 		}
-		writeD(100);
-		writeD(1000);
+		writeInt(100);
+		writeInt(1000);
 	}
 }

@@ -26,7 +26,7 @@ public class ExQuestItemListPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeH(_size);
+		writeShort(_size);
 
 		for(ItemInstance temp : _items)
 		{
@@ -36,12 +36,12 @@ public class ExQuestItemListPacket extends L2GameServerPacket
 			writeItemInfo(temp);
 		}
 
-		writeH(_lockItems.length);
+		writeShort(_lockItems.length);
 		if(_lockItems.length > 0)
 		{
-			writeC(_lockType.ordinal());
+			writeByte(_lockType.ordinal());
 			for(int i : _lockItems)
-				writeD(i);
+				writeInt(i);
 		}
 	}
 }

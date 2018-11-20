@@ -18,9 +18,9 @@ public class PledgeCrestPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(Config.REQUEST_ID);
-		writeD(_crestId);
-		writeD(_crestSize);
+		writeInt(Config.REQUEST_ID);
+		writeInt(_crestId);
+		writeInt(_crestSize);
 		writeB(_data);
 	}
 }

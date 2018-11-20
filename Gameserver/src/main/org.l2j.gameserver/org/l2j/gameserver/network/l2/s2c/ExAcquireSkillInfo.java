@@ -25,19 +25,19 @@ public class ExAcquireSkillInfo extends L2GameServerPacket
 	@Override
 	public void writeImpl()
 	{
-		writeD(_learn.getId());
-		writeD(_learn.getLevel());
-		writeQ(_learn.getCost());
-		writeH(_learn.getMinLevel());
-		writeH(0x00); // Dual-class min level.
+		writeInt(_learn.getId());
+		writeInt(_learn.getLevel());
+		writeLong(_learn.getCost());
+		writeShort(_learn.getMinLevel());
+		writeShort(0x00); // Dual-class min level.
 
-		writeD(_requiredItems.size());
+		writeInt(_requiredItems.size());
 		for(ItemData item : _requiredItems)
 		{
-			writeD(item.getId());
-			writeQ(item.getCount());
+			writeInt(item.getId());
+			writeLong(item.getCount());
 		}
 
-		writeD(0x00);
+		writeInt(0x00);
 	}
 }

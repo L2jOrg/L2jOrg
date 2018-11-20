@@ -6,7 +6,7 @@ public class RequestExChangeName extends L2GameClientPacket
 	protected void readImpl()
 	{
 		int unk1 = readD();
-		String name = readS();
+		String name = readString();
 		int unk2 = readD();
 	}
 

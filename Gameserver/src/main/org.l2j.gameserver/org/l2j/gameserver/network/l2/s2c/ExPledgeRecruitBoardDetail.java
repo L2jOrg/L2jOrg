@@ -17,11 +17,11 @@ public class ExPledgeRecruitBoardDetail extends L2GameServerPacket
 
 	protected void writeImpl()
 	{
-		writeD(_clan.getClanId());
-		writeD(_clan.getSearchType().ordinal());
-		writeS("");
-		writeS(_clan.getDesc());
-		writeD(_clan.getApplication());
-		writeD(_clan.getSubUnit());
+		writeInt(_clan.getClanId());
+		writeInt(_clan.getSearchType().ordinal());
+		writeString("");
+		writeString(_clan.getDesc());
+		writeInt(_clan.getApplication());
+		writeInt(_clan.getSubUnit());
 	}
 }

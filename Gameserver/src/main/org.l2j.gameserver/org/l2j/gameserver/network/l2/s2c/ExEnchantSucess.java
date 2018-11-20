@@ -15,6 +15,6 @@ public final class ExEnchantSucess extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_itemId);
+		writeInt(_itemId);
 	}
 }

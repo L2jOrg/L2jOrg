@@ -44,15 +44,15 @@ public class ExOlympiadSpelledInfoPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(char_obj_id);
-		writeD(_effects.size());
+		writeInt(char_obj_id);
+		writeInt(_effects.size());
 		for(Abnormal temp : _effects)
 		{
-			writeD(temp.skillId);
-			writeH(temp.dat); // @Rivelia. Skill level by mask.
-			writeH(0); // @Rivelia. Sub skill level by mask.
-			writeD(0);	//ERTHEIA
-			writeH(temp.duration);
+			writeInt(temp.skillId);
+			writeShort(temp.dat); // @Rivelia. Skill level by mask.
+			writeShort(0); // @Rivelia. Sub skill level by mask.
+			writeInt(0);	//ERTHEIA
+			writeShort(temp.duration);
 		}
 	}
 }

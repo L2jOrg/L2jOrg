@@ -15,8 +15,8 @@ public class ExNeedToChangeName extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_type);
-		writeD(_reason);
-		writeS(_origName);
+		writeInt(_type);
+		writeInt(_reason);
+		writeString(_origName);
 	}
 }

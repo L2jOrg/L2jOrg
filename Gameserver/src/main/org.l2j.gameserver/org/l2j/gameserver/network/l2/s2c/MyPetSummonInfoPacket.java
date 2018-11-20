@@ -123,76 +123,76 @@ public class MyPetSummonInfoPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeC(_type);
-		writeD(obj_id);
-		writeD(npc_id + 1000000);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z);
-		writeD(_loc.h);
-		writeD(MAtkSpd);
-		writeD(PAtkSpd);
-		writeH(_runSpd);
-		writeH(_walkSpd);
-		writeH(_runSpd/*_swimRunSpd*/);
-		writeH(_walkSpd/*_swimWalkSpd*/);
-		writeH(_runSpd/*_flRunSpd*/);
-		writeH(_walkSpd/*_flWalkSpd*/);
-		writeH(_runSpd/*_flyRunSpd*/);
-		writeH(_walkSpd/*_flyWalkSpd*/);
+		writeByte(_type);
+		writeInt(obj_id);
+		writeInt(npc_id + 1000000);
+		writeInt(_loc.x);
+		writeInt(_loc.y);
+		writeInt(_loc.z);
+		writeInt(_loc.h);
+		writeInt(MAtkSpd);
+		writeInt(PAtkSpd);
+		writeShort(_runSpd);
+		writeShort(_walkSpd);
+		writeShort(_runSpd/*_swimRunSpd*/);
+		writeShort(_walkSpd/*_swimWalkSpd*/);
+		writeShort(_runSpd/*_flRunSpd*/);
+		writeShort(_walkSpd/*_flWalkSpd*/);
+		writeShort(_runSpd/*_flyRunSpd*/);
+		writeShort(_walkSpd/*_flyWalkSpd*/);
 		writeF(_runSpdMul);
 		writeF(_atkSpdMul);
 		writeF(col_redius);
 		writeF(col_height);
-		writeD(_rhand); // right hand weapon
-		writeD(0);
-		writeD(_lhand); // left hand weapon
-		writeC(_showSpawnAnimation); // invisible ?? 0=false  1=true   2=summoned (only works if model has a summon animation)
-		writeD(-1);
-		writeS(_name);
-		writeD(-1);
-		writeS(title);
-		writeC(pvp_flag); //0=white, 1=purple, 2=purpleblink, if its greater then karma = purple
-		writeD(karma); // hmm karma ??
-		writeD(curFed); // how fed it is
-		writeD(maxFed); //max fed it can be
-		writeD(curHp); //current hp
-		writeD(maxHp); // max hp
-		writeD(curMp); //current mp
-		writeD(maxMp); //max mp
-		writeQ(_sp); //sp
-		writeC(level);// lvl
-		writeQ(exp);
-		writeQ(exp_this_lvl); // 0%  absolute value
-		writeQ(exp_next_lvl); // 100% absoulte value
-		writeD(curLoad); //weight
-		writeD(maxLoad); //max weight it can carry
-		writeD(PAtk);//patk
-		writeD(PDef);//pdef
-		writeD(_pAccuracy); // P. Accuracy
-		writeD(_pEvasion); // P. Evasion
-		writeD(_pCrit); // P. Critical
-		writeD(MAtk);//matk
-		writeD(MDef);//mdef
-		writeD(_mAccuracy); // M. Accuracy
-		writeD(_mEvasion); // M. Evasion
-		writeD(_mCrit); // M. Critical
-		writeD(_runSpd);//speed
-		writeD(PAtkSpd);//atkspeed
-		writeD(MAtkSpd);//casting speed
-		writeC(0x00);//unk
-		writeC(_team.ordinal()); // team aura (1 = blue, 2 = red)
-		writeC(ss);
-		writeC(sps);
-		writeD(type);
-		writeD(_transformId); // transform id
-		writeC(0x00); // sum points
-		writeC(0x00); // max sum points
+		writeInt(_rhand); // right hand weapon
+		writeInt(0);
+		writeInt(_lhand); // left hand weapon
+		writeByte(_showSpawnAnimation); // invisible ?? 0=false  1=true   2=summoned (only works if model has a summon animation)
+		writeInt(-1);
+		writeString(_name);
+		writeInt(-1);
+		writeString(title);
+		writeByte(pvp_flag); //0=white, 1=purple, 2=purpleblink, if its greater then karma = purple
+		writeInt(karma); // hmm karma ??
+		writeInt(curFed); // how fed it is
+		writeInt(maxFed); //max fed it can be
+		writeInt(curHp); //current hp
+		writeInt(maxHp); // max hp
+		writeInt(curMp); //current mp
+		writeInt(maxMp); //max mp
+		writeLong(_sp); //sp
+		writeByte(level);// lvl
+		writeLong(exp);
+		writeLong(exp_this_lvl); // 0%  absolute value
+		writeLong(exp_next_lvl); // 100% absoulte value
+		writeInt(curLoad); //weight
+		writeInt(maxLoad); //max weight it can carry
+		writeInt(PAtk);//patk
+		writeInt(PDef);//pdef
+		writeInt(_pAccuracy); // P. Accuracy
+		writeInt(_pEvasion); // P. Evasion
+		writeInt(_pCrit); // P. Critical
+		writeInt(MAtk);//matk
+		writeInt(MDef);//mdef
+		writeInt(_mAccuracy); // M. Accuracy
+		writeInt(_mEvasion); // M. Evasion
+		writeInt(_mCrit); // M. Critical
+		writeInt(_runSpd);//speed
+		writeInt(PAtkSpd);//atkspeed
+		writeInt(MAtkSpd);//casting speed
+		writeByte(0x00);//unk
+		writeByte(_team.ordinal()); // team aura (1 = blue, 2 = red)
+		writeByte(ss);
+		writeByte(sps);
+		writeInt(type);
+		writeInt(_transformId); // transform id
+		writeByte(0x00); // sum points
+		writeByte(0x00); // max sum points
 
-		writeH(_abnormalEffects.length);
+		writeShort(_abnormalEffects.length);
 		for(AbnormalEffect abnormal : _abnormalEffects)
-			writeH(abnormal.getId());
+			writeShort(abnormal.getId());
 
-		writeC(_flags);
+		writeByte(_flags);
 	}
 }

@@ -50,15 +50,15 @@ public class WareHouseDepositListPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeH(_whtype);
-		writeQ(_adena);
-		writeH(_depositedItemsCount); //Количество вещей которые уже есть в банке.
-		writeD(0);//TODO [Bonux]
-		writeH(_itemList.size());
+		writeShort(_whtype);
+		writeLong(_adena);
+		writeShort(_depositedItemsCount); //Количество вещей которые уже есть в банке.
+		writeInt(0);//TODO [Bonux]
+		writeShort(_itemList.size());
 		for(ItemInfo item : _itemList)
 		{
 			writeItemInfo(item);
-			writeD(item.getObjectId());
+			writeInt(item.getObjectId());
 		}
 	}
 }

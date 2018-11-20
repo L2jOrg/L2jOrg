@@ -16,6 +16,6 @@ public class ExDeletePartySubstitute extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_obj);
+		writeInt(_obj);
 	}
 }

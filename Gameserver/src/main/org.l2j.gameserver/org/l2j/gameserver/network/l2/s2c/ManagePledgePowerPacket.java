@@ -19,8 +19,8 @@ public class ManagePledgePowerPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_clanId);
-		writeD(_action);
-		writeD(privs);
+		writeInt(_clanId);
+		writeInt(_action);
+		writeInt(privs);
 	}
 }

@@ -93,14 +93,14 @@ public class ExQuestNpcLogList extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_questId);
-		writeC(_logList.size());
+		writeInt(_questId);
+		writeByte(_logList.size());
 		for(int i = 0; i < _logList.size(); i++)
 		{
 			int[] values = _logList.get(i);
-			writeD(values[0]);
-			writeC(values[1]);
-			writeD(values[2]);
+			writeInt(values[0]);
+			writeByte(values[1]);
+			writeInt(values[2]);
 		}
 	}
 }

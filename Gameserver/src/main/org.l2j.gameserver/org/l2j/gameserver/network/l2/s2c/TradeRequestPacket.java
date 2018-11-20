@@ -12,6 +12,6 @@ public class TradeRequestPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_senderId);
+		writeInt(_senderId);
 	}
 }

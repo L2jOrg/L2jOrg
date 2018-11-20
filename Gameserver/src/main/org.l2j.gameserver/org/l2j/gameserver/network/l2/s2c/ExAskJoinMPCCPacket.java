@@ -18,7 +18,7 @@ public class ExAskJoinMPCCPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeS(_requestorName); // лидер CC
-		writeD(0x00);
+		writeString(_requestorName); // лидер CC
+		writeInt(0x00);
 	}
 }

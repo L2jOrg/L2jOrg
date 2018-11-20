@@ -24,15 +24,15 @@ public class RecipeBookItemListPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeD(_isDwarvenCraft ? 0x00 : 0x01);
-		writeD(_currentMp);
+		writeInt(_isDwarvenCraft ? 0x00 : 0x01);
+		writeInt(_currentMp);
 
-		writeD(_recipes.size());
+		writeInt(_recipes.size());
 
 		for(RecipeTemplate recipe : _recipes)
 		{
-			writeD(recipe.getId());
-			writeD(1); //??
+			writeInt(recipe.getId());
+			writeInt(1); //??
 		}
 	}
 }

@@ -27,7 +27,7 @@ public class ExReplyPostItemList extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_itemsList.size());
+		writeInt(_itemsList.size());
 		for(ItemInfo item : _itemsList)
 			writeItemInfo(item);
 	}
