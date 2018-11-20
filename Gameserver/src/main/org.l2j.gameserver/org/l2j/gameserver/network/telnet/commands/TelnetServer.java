@@ -29,7 +29,7 @@ public class TelnetServer implements TelnetCommandHolder
 			@Override
 			public String handle(String[] args)
 			{
-				return "Revision : " + GameServer.getInstance().getVersion().getRevisionNumber() + " Build date : " + GameServer.getInstance().getVersion().getBuildDate() + "\n";
+				return "Revision : " + GameServer.getInstance().getVersion() + "\n";
 			}
 		});
 

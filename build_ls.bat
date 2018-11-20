@@ -1,1 +1,0 @@
-ant -f build_ls.xml -l build_ls.log

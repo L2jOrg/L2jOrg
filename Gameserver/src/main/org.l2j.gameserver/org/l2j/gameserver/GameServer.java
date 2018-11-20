@@ -1,13 +1,13 @@
 package org.l2j.gameserver;
 
-import java.io.File;
+import java.io.IOException;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
+import java.util.Properties;
 
 import gnu.trove.set.TIntSet;
 import gnu.trove.set.hash.TIntHashSet;
@@ -17,7 +17,6 @@ import org.l2j.commons.listener.Listener;
 import org.l2j.commons.listener.ListenerList;
 import org.l2j.commons.net.nio.impl.SelectorStats;
 import org.l2j.commons.net.nio.impl.SelectorThread;
-import org.l2j.commons.versioning.Version;
 import org.l2j.gameserver.cache.CrestCache;
 import org.l2j.gameserver.cache.ImagesCache;
 import org.l2j.gameserver.config.templates.HostInfo;
@@ -57,7 +56,6 @@ import org.l2j.gameserver.instancemanager.games.MiniGameScoreManager;
 import org.l2j.gameserver.listener.GameListener;
 import org.l2j.gameserver.listener.game.OnShutdownListener;
 import org.l2j.gameserver.listener.game.OnStartListener;
-import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.entity.MonsterRace;
@@ -83,14 +81,11 @@ import net.sf.ehcache.CacheManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class GameServer
-{
+public class GameServer {
 	public static boolean DEVELOP = false;
 
     private static final String LOG4J_CONFIGURATION_FILE = "log4j.configurationFile";
-    public static final String PROJECT_REVISION = "L2s [26360]";
 	public static final String UPDATE_NAME = "Classic: Saviors (Zaken)";
-
 
 	public static final int AUTH_SERVER_PROTOCOL = 2;
 
@@ -117,7 +112,7 @@ public class GameServer
 
 	private final List<SelectorThread<GameClient>> _selectorThreads = new ArrayList<SelectorThread<GameClient>>();
 	private final SelectorStats _selectorStats = new SelectorStats();
-	private Version version;
+	private String version;;
 	private TelnetServer statusServer;
 	private final GameServerListenerList _listeners;
 
@@ -151,25 +146,14 @@ public class GameServer
 	}
 
 	@SuppressWarnings("unchecked")
-	public GameServer() throws Exception
-	{
+	public GameServer() throws Exception {
 		_instance = this;
 		_serverStartTimeMillis = System.currentTimeMillis();
 		_listeners = new GameServerListenerList();
 
-		new File("./log/").mkdir();
+        versionInfo();
 
-        version = new Version(GameServer.class);
-
-        _log.info("=================================================");
-        _log.info("Project Revision: ........ " + PROJECT_REVISION);
-        _log.info("Build Revision: .......... " + version.getRevisionNumber());
-        _log.info("Update: .................. " + UPDATE_NAME);
-        _log.info("Build date: .............. " + version.getBuildDate());
-        _log.info("Compiler version: ........ " + version.getBuildJdk());
-        _log.info("=================================================");
-
-		// Initialize config
+        // Initialize config
 		ConfigParsers.parseAll();
 		Config.load();
         VelocityUtils.init();
@@ -351,7 +335,23 @@ public class GameServer
 		_log.info("=================================================");
 	}
 
-	public GameServerListenerList getListeners()
+    private void versionInfo() {
+        try {
+            var versionProperties = new Properties();
+            versionProperties.load(ClassLoader.getSystemResourceAsStream("version.properties"));
+            version = versionProperties.getProperty("version");
+            _log.info("=================================================");
+            _log.info("Build Revision: .......... {}", version);
+            _log.info("Update: .................. {}", UPDATE_NAME);
+            _log.info("Build date: .............. {}", versionProperties.getProperty("buildDate"));
+            _log.info("Compiler JDK version: .... {}", versionProperties.getProperty("compilerVersion"));
+            _log.info("=================================================");
+        } catch (IOException e) {
+            _log.warn(e.getLocalizedMessage(), e);
+        }
+    }
+
+    public GameServerListenerList getListeners()
 	{
 		return _listeners;
 	}
@@ -476,7 +476,7 @@ public class GameServer
 		_log = LoggerFactory.getLogger(GameServer.class);
 	}
 
-    public Version getVersion()
+    public String getVersion()
     {
         return version;
     }

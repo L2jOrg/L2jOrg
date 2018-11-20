@@ -1,3 +1,5 @@
+import java.text.SimpleDateFormat
+
 plugins {
     id "java"
     id "idea"
@@ -8,7 +10,7 @@ plugins {
 ext.moduleName = 'org.l2j.gameserver'
 mainClassName = "org.l2j.gameserver.GameServer"
 
-version '1.0'
+version '1.0.0'
 
 sourceSets {
     main {
@@ -74,3 +76,20 @@ task zip(type: Zip, group: "Archive", description: "Zip Gameserver") {
 
 build.finalizedBy(zip)
 
+task createProperties(dependsOn: processResources) {
+    doLast {
+        new File("$buildDir/resources/main/version.properties").withWriter { w ->
+            def p = new Properties()
+            p['version'] = project.version.toString()
+
+            def df = new SimpleDateFormat("yyyy-MM-dd")
+            p['buildDate'] = df.format(new Date())
+            p['compilerVersion'] = sourceCompatibility.toString()
+            p.store w, null
+        }
+    }
+}
+
+classes {
+    dependsOn createProperties
+}
