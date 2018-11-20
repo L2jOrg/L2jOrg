@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="4000" name="Mercenary Posting Ticket (Spear/Stationary)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_pole_fix_i00"/>
+		<set name="price" value="40000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4001" name="Mercenary Posting Ticket (Bow/Stationary)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_bow_fix_i00"/>
+		<set name="price" value="50000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4002" name="Mercenary Posting Ticket (Cleric/Stationary)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_cleric_fix_i00"/>
+		<set name="price" value="150000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4003" name="Mercenary Posting Ticket (Wizard/Stationary)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_wizard_fix_i00"/>
+		<set name="price" value="150000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4004" name="Mercenary Posting Ticket (Sword/Mobile)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_sword_move_i00"/>
+		<set name="price" value="30000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4005" name="Mercenary Posting Ticket (Spear/Mobile)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_pole_move_i00"/>
+		<set name="price" value="40000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4006" name="Mercenary Posting Ticket (Bow/Mobile)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_bow_move_i00"/>
+		<set name="price" value="50000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4007" name="Mercenary Posting Ticket (Cleric/Mobile)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_cleric_move_i00"/>
+		<set name="price" value="150000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4008" name="Mercenary Posting Ticket (Wizard/Mobile)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_wizard_move_i00"/>
+		<set name="price" value="150000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4009" name="Mercenary Posting Ticket (Teleporter1)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_teleporter_fix_i00"/>
+		<set name="price" value="100000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4010" name="Mercenary Posting Ticket (Teleporter2)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_teleporter_fix_i00"/>
+		<set name="price" value="100000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4011" name="Mercenary Posting Ticket (Teleporter3)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_teleporter_fix_i00"/>
+		<set name="price" value="100000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4012" name="Mercenary Posting Ticket (Sword/Stationary)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_sword_fix_i00"/>
+		<set name="price" value="30000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4013" name="Mercenary Posting Ticket (Spear/Stationary)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_pole_fix_i00"/>
+		<set name="price" value="40000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4014" name="Mercenary Posting Ticket (Bow/Stationary)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_bow_fix_i00"/>
+		<set name="price" value="50000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4015" name="Mercenary Posting Ticket (Cleric/Stationary)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_cleric_fix_i00"/>
+		<set name="price" value="150000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4016" name="Mercenary Posting Ticket (Wizard/Stationary)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_wizard_fix_i00"/>
+		<set name="price" value="150000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4017" name="Mercenary Posting Ticket (Sword/Mobile)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_sword_move_i00"/>
+		<set name="price" value="30000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4018" name="Mercenary Posting Ticket (Spear/Mobile)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_pole_move_i00"/>
+		<set name="price" value="40000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4019" name="Mercenary Posting Ticket (Bow/Mobile)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_bow_move_i00"/>
+		<set name="price" value="50000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4020" name="Mercenary Posting Ticket (Cleric/Mobile)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_cleric_move_i00"/>
+		<set name="price" value="150000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4021" name="Mercenary Posting Ticket (Wizard/Mobile)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_wizard_move_i00"/>
+		<set name="price" value="150000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4022" name="Mercenary Posting Ticket (Teleporter1)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_teleporter_fix_i00"/>
+		<set name="price" value="100000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4023" name="Mercenary Posting Ticket (Teleporter2)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_teleporter_fix_i00"/>
+		<set name="price" value="100000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4024" name="Mercenary Posting Ticket (Teleporter3)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_teleporter_fix_i00"/>
+		<set name="price" value="100000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4025" name="Mercenary Posting Ticket (Teleporter4)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_teleporter_fix_i00"/>
+		<set name="price" value="100000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4026" name="Mercenary Posting Ticket (Teleporter5)">
+		<set name="type" value="MERCENARY_TICKET"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.mticket_teleporter_fix_i00"/>
+		<set name="price" value="100000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<weapon id="4027" name="Bouquet">
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_plan_i00"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="8"/>
+			<add stat="mAtk" order="0x10" value="6"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="4028" name="Giant Cannon">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="743"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_monster_i00"/>
+		<set name="rnd_dam" value="5"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="DAGGER"/>
+		<set name="weight" value="300"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="5"/>
+			<add stat="mAtk" order="0x10" value="5"/>
+			<set stat="basePCritRate" order="0x08" value="120"/>
+			<set stat="basePAtkSpd" order="0x08" value="433"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<etcitem id="4029" name="Red Paper">
+		<set name="price" value="1"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_red_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="4030" name="Orange Paper">
+		<set name="price" value="1"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_red_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="4031" name="Yellow Paper">
+		<set name="price" value="1"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_red_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="4032" name="Green Paper">
+		<set name="price" value="1"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_red_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="4033" name="Blue Paper">
+		<set name="price" value="1"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_red_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="4034" name="Purple Paper">
+		<set name="price" value="1"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_red_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="4035" name="White Paper">
+		<set name="price" value="1"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_red_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="4036" name="Black Paper">
+		<set name="price" value="1"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_red_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="4037" name="Coin of Luck">
+		<set name="price" value="1"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_coins_gold_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="4039" name="Mold Glue">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_reagent_red_i00"/>
+		<set name="price" value="6000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="2"/>
+	</etcitem>
+	<etcitem id="4040" name="Mold Lubricant">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_reagent_gold_i00"/>
+		<set name="price" value="10000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="2"/>
+	</etcitem>
+	<etcitem id="4041" name="Mold Hardener">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_reagent_blue_i00"/>
+		<set name="price" value="23000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="2"/>
+	</etcitem>
+	<etcitem id="4042" name="Enria">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_gem_red_i00"/>
+		<set name="price" value="12000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="2"/>
+	</etcitem>
+	<etcitem id="4043" name="Asofe">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_gem_blue_i00"/>
+		<set name="price" value="6000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="2"/>
+	</etcitem>
+	<etcitem id="4044" name="Thons">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_gem_clear_i00"/>
+		<set name="price" value="6000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="2"/>
+	</etcitem>
+	<etcitem id="4045" name="Maestro Holder">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_lump_yellow_i00"/>
+		<set name="price" value="411000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="2"/>
+	</etcitem>
+	<etcitem id="4046" name="Maestro Anvil Lock">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_lump_dark_gray_i00"/>
+		<set name="price" value="90400"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="2"/>
+	</etcitem>
+	<etcitem id="4047" name="Craftsman Mold">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_mold_i00"/>
+		<set name="price" value="710000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="2"/>
+	</etcitem>
+	<etcitem id="4048" name="Maestro Mold">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_silver_mold_i00"/>
+		<set name="price" value="154000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="2"/>
+	</etcitem>
+	<etcitem id="4049" name="Adamantite Earring Gemstone">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_crystal_ball_gold_i00"/>
+		<set name="price" value="3813"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4050" name="Adamantite Ring Wire">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_jewel_box_i00"/>
+		<set name="price" value="3228"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4051" name="Adamantite Necklace Chain">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_jewel_box_i00"/>
+		<set name="price" value="5157"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4052" name="Black Ore Earring Piece">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_broken_crystal_silver_i00"/>
+		<set name="price" value="5649"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4053" name="Black Ore Ring Gemstone">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_gem_black_i00"/>
+		<set name="price" value="4666"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4054" name="Black Ore Necklace Beads">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys2.icon.etc_blackorenecklace_beads_i00"/>
+		<set name="price" value="10154"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4055" name="Compound Shield Fragment">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_plate_silver_i00"/>
+		<set name="price" value="3120"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4056" name="Zubei\'s Breastplate Part">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_plate_silver_i00"/>
+		<set name="price" value="11050"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4057" name="Zubei\'s Gaiter Material">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="7150"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4058" name="Implosion Boot Fragment">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_plate_silver_i00"/>
+		<set name="price" value="4455"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4059" name="Boots of Silence Fabric">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="3843"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4060" name="Guardian\'s Boot Fabric">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="3843"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4061" name="Paradia Boot Pattern">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_letter_red_i00"/>
+		<set name="price" value="4455"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4062" name="Elemental Boot Lining">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="4455"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4063" name="Boots of Grace Lining">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="4455"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4064" name="Avadon Breastplate Part">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_plate_silver_i00"/>
+		<set name="price" value="11050"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4065" name="Avadon Gaiter Material">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="7150"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4066" name="Zubei\'s Leather Shirt Fabric">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="8483"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4067" name="Zubei\'s Leather Gaiter Texture">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="5587"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4068" name="Avadon Leather Armor Lining">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="11042"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4069" name="Tunic of Zubei Fabric">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="8483"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4070" name="Stockings of Zubei Fabric">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="5587"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4071" name="Avadon Robe Fabric">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="11042"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4072" name="Sealed Avadon Circlet Pattern">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_letter_red_i00"/>
+		<set name="price" value="4453"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4073" name="Sealed Avadon Glove Fragment">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_plate_silver_i00"/>
+		<set name="price" value="3843"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4074" name="Chain Gloves of Silence Design">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_brown_i00"/>
+		<set name="price" value="3843"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4075" name="Guardian\'s Glove Design">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_brown_i00"/>
+		<set name="price" value="3843"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4076" name="Gloves of Blessing Pattern">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_letter_red_i00"/>
+		<set name="price" value="3843"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4077" name="Doom Shield Fragment">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_plate_silver_i00"/>
+		<set name="price" value="4446"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4078" name="Blue Wolf Breastplate Part">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_plate_silver_i00"/>
+		<set name="price" value="13692"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4079" name="Boots of Blessing Design">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_brown_i00"/>
+		<set name="price" value="3843"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4080" name="Blue Wolf Gaiter Material">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="9723"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4081" name="Doom Plate Armor Temper">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_lump_white_i00"/>
+		<set name="price" value="20292"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4082" name="Blue Wolf Leather Armor Texture">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="17700"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4083" name="Leather Armor of Doom Design">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_brown_i00"/>
+		<set name="price" value="17700"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4084" name="Blue Wolf Tunic Fabric">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="11508"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4085" name="Tunic of Doom Pattern">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_letter_red_i00"/>
+		<set name="price" value="11508"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4086" name="Blue Wolf Stocking Pattern">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_letter_red_i00"/>
+		<set name="price" value="8523"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4087" name="Stockings of Doom Pattern">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_letter_red_i00"/>
+		<set name="price" value="8523"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4088" name="Sealed Blue Wolf Helmet Design">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_brown_i00"/>
+		<set name="price" value="5292"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4089" name="Sealed Doom Helmet Design">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_letter_red_i00"/>
+		<set name="price" value="5292"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4090" name="Sealed Blue Wolf Boot Design">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_brown_i00"/>
+		<set name="price" value="4455"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4091" name="Sealed Doom Glove Fragment">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_plate_silver_i00"/>
+		<set name="price" value="4455"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4092" name="Elemental Glove Lining">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="4455"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4093" name="Gloves of Grace Lining">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="4455"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4094" name="Implosion Gauntlet Fabric">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="4455"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4095" name="Paradia Glove Pattern">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_letter_red_i00"/>
+		<set name="price" value="4455"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4096" name="Sealed Blue Wolf Glove Fabric">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="4455"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4097" name="Sealed Zubei\'s Boot Design">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_brown_i00"/>
+		<set name="price" value="3843"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4098" name="Sealed Avadon Boot Design">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_brown_i00"/>
+		<set name="price" value="3843"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4099" name="Sealed Doom Boot Fragment">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_plate_silver_i00"/>
+		<set name="price" value="4455"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+</list>

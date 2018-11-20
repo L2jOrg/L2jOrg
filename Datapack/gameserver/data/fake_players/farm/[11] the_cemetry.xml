@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE farm SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<farm name="The Cemetry" min_level="50" max_level="60">
+	<zones>
+		<zone>
+			<polygon>
+				<coords loc="167256 16888 -3400 -3200"/>
+				<coords loc="168056 15928 -3400 -3200"/>
+				<coords loc="170808 14872 -3400 -3200"/>
+				<coords loc="175544 14920 -3400 -3200"/>
+				<coords loc="175528 25848 -3400 -3200"/>
+				<coords loc="170536 25768 -3400 -3200"/>
+				<coords loc="167944 24616 -3400 -3200"/>
+				<coords loc="167064 23416 -3400 -3200"/>
+				<coords loc="166968 20584 -3400 -3200"/>
+				<coords loc="166696 20296 -3400 -3200"/>
+				<coords loc="166968 20024 -3400 -3200"/>
+			</polygon>
+		</zone>
+		<spawn_points>
+			<coords loc="167134 20288 -3328"/>
+		</spawn_points>
+	</zones>
+	<on_obtain_max_level>
+		<action id="1"/>
+	</on_obtain_max_level>
+	<go_to_town min_farm_time="1800" max_farm_time="3600">
+		<action id="1"/>
+	</go_to_town>
+	<action id="1">
+		<wait min_delay="1000" max_delay="3000"/>
+		<use_item id="736"/>
+	</action>
+</farm>

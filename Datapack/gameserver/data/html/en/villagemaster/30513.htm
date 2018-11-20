@@ -1,0 +1,11 @@
+<html><head><body>
+High Perfect Penatus:<br>
+I train and test Orcs, by the light of the eternal fires of Pa'agrio, so that we might one day restore the race of Orcs to glory.<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">"Can you tell me about the 2nd Class Transfer?"</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Clan</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Alliance</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Exchange Daily Coins</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Quest</Button>
+</body></html>

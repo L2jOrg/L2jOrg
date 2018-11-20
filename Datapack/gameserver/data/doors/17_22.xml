@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="17220001" name="gludin_agit_003_001" hp="158250" pdef="644" mdef="518">
+		<pos x="-84495" y="155208" z="-3150"/>
+		<shape ax="-84494" ay="155208" bx="-84494" by="155246" cx="-84497" cy="155246" dx="-84496" dy="155208" minz="-3192" maxz="-2742"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="28"/>
+		</ai_params>
+	</door>
+	<door id="17220002" name="gludin_agit_003_002" hp="158250" pdef="644" mdef="518">
+		<pos x="-84495" y="155286" z="-3150"/>
+		<shape ax="-84496" ay="155286" bx="-84496" by="155248" cx="-84494" cy="155248" dx="-84494" dy="155286" minz="-3192" maxz="-2742"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="28"/>
+		</ai_params>
+	</door>
+	<door id="17220003" name="gludin_agit_003_001" hp="158250" pdef="644" mdef="518">
+		<pos x="-83961" y="155257" z="-3149"/>
+		<shape ax="-83962" ay="155257" bx="-83962" by="155218" cx="-83960" cy="155218" dx="-83960" dy="155257" minz="-3191" maxz="-2741"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="28"/>
+		</ai_params>
+	</door>
+	<door id="17220004" name="gludin_agit_003_002" hp="158250" pdef="644" mdef="518">
+		<pos x="-83961" y="155180" z="-3149"/>
+		<shape ax="-83960" ay="155180" bx="-83960" by="155219" cx="-83962" cy="155218" dx="-83962" dy="155180" minz="-3191" maxz="-2741"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="28"/>
+		</ai_params>
+	</door>
+	<door id="17220005" name="gludin_agit_002_001" hp="158250" pdef="644" mdef="518">
+		<pos x="-83878" y="153063" z="-3149"/>
+		<shape ax="-83878" ay="153064" bx="-83917" by="153064" cx="-83916" cy="153062" dx="-83878" dy="153062" minz="-3149" maxz="-2699"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="27"/>
+		</ai_params>
+	</door>
+	<door id="17220006" name="gludin_agit_002_002" hp="158250" pdef="644" mdef="518">
+		<pos x="-83955" y="153063" z="-3149"/>
+		<shape ax="-83955" ay="153061" bx="-83916" by="153062" cx="-83917" cy="153065" dx="-83955" dy="153065" minz="-3149" maxz="-2699"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="27"/>
+		</ai_params>
+	</door>
+	<door id="17220007" name="gludin_agit_002_003" hp="158250" pdef="644" mdef="518">
+		<pos x="-83927" y="153598" z="-3149"/>
+		<shape ax="-83927" ay="153597" bx="-83889" by="153597" cx="-83889" cy="153599" dx="-83927" dy="153599" minz="-3190" maxz="-2740"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="27"/>
+		</ai_params>
+	</door>
+	<door id="17220008" name="gludin_agit_002_004" hp="158250" pdef="644" mdef="518">
+		<pos x="-83850" y="153598" z="-3149"/>
+		<shape ax="-83850" ay="153599" bx="-83888" by="153599" cx="-83889" cy="153597" dx="-83850" dy="153597" minz="-3190" maxz="-2740"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="27"/>
+		</ai_params>
+	</door>
+	<door id="17220009" name="gludin_agit_001_001" hp="158250" pdef="644" mdef="518">
+		<pos x="-83971" y="151880" z="-3111"/>
+		<shape ax="-83971" ay="151882" bx="-84009" by="151882" cx="-84009" cy="151879" dx="-83971" dy="151879" minz="-3152" maxz="-2702"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="26"/>
+		</ai_params>
+	</door>
+	<door id="17220010" name="gludin_agit_001_002" hp="158250" pdef="644" mdef="518">
+		<pos x="-84046" y="151880" z="-3111"/>
+		<shape ax="-84046" ay="151879" bx="-84008" by="151879" cx="-84008" cy="151881" dx="-84046" dy="151881" minz="-3152" maxz="-2702"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="26"/>
+		</ai_params>
+	</door>
+	<door id="17220011" name="gludin_agit_004_001" hp="158250" pdef="644" mdef="518">
+		<pos x="-79736" y="150062" z="-3026"/>
+		<shape ax="-79735" ay="150062" bx="-79735" by="150100" cx="-79737" cy="150100" dx="-79737" dy="150062" minz="-3067" maxz="-2617"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="29"/>
+		</ai_params>
+	</door>
+	<door id="17220012" name="gludin_agit_004_002" hp="158250" pdef="644" mdef="518">
+		<pos x="-79736" y="150138" z="-3026"/>
+		<shape ax="-79737" ay="150138" bx="-79737" by="150099" cx="-79735" cy="150099" dx="-79735" dy="150138" minz="-3067" maxz="-2617"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="29"/>
+		</ai_params>
+	</door>
+	<door id="17220013" name="gludin_agit_005_001" hp="158250" pdef="644" mdef="518">
+		<pos x="-79739" y="151522" z="-3027"/>
+		<shape ax="-79738" ay="151522" bx="-79738" by="151561" cx="-79740" cy="151561" dx="-79740" dy="151522" minz="-3068" maxz="-2618"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="30"/>
+		</ai_params>
+	</door>
+	<door id="17220014" name="gludin_agit_005_002" hp="158250" pdef="644" mdef="518">
+		<pos x="-79739" y="151597" z="-3027"/>
+		<shape ax="-79740" ay="151597" bx="-79740" by="151558" cx="-79738" cy="151558" dx="-79738" dy="151597" minz="-3068" maxz="-2618"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="30"/>
+		</ai_params>
+	</door>
+</list>

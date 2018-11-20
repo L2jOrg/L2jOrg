@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "events.dtd">
+<list>
+	<event id="21" name="Fortress Of Resistance" impl="ClanHallNpcSiege">
+		<parameter name="day_of_week" value="5"/>
+		<parameter name="hour_of_day" value="21"/>
+		<on_init>
+			<spawn name="clan_hall_npcs"/>
+			<spawn name="fortress_of_resistance_no_siege"/>
+			<init name="doors"/>
+			<init name="siege_zones"/>
+		</on_init>
+		<on_start>
+			<despawn name="fortress_of_resistance_no_siege"/>
+			<close name="doors"/>
+			<if name="owner">
+				<spawn name="fortress_of_resistance_siege_guards_owner"/>
+				<spawn name="fortress_of_resistance_siege_nurka_owner"/>
+			</if>
+			<else>
+				<spawn name="fortress_of_resistance_siege_guards_no_owner"/>
+				<spawn name="fortress_of_resistance_siege_nurka_no_owner"/>
+			</else>
+			<active name="siege_zones"/>
+			<teleport_players id="spectators"/>
+		</on_start>
+		<on_stop>
+			<spawn name="fortress_of_resistance_no_siege"/>
+			<if name="old_owner">
+				<despawn name="fortress_of_resistance_siege_guards_owner"/>
+				<despawn name="fortress_of_resistance_siege_nurka_owner"/>
+			</if>
+			<else>
+				<despawn name="fortress_of_resistance_siege_guards_no_owner"/>
+				<despawn name="fortress_of_resistance_siege_nurka_no_owner"/>
+			</else>
+			<teleport_players id="spectators"/>
+			<deactive name="siege_zones"/>
+		</on_stop>
+		<on_time>
+			<on time="0">
+				<start name="event"/>
+			</on>
+			<on time="300">
+				<give_item id="-300" count="190"/>
+			</on>
+			<on time="600">
+				<give_item id="-300" count="190"/>
+			</on>
+			<on time="900">
+				<give_item id="-300" count="190"/>
+			</on>
+			<on time="1200">
+				<give_item id="-300" count="190"/>
+			</on>
+			<on time="1500">
+				<give_item id="-300" count="190"/>
+			</on>
+			<on time="1800">
+				<give_item id="-300" count="190"/>
+			</on>
+			<on time="2100">
+				<give_item id="-300" count="190"/>
+			</on>
+			<on time="2400">
+				<give_item id="-300" count="190"/>
+			</on>
+			<on time="2700">
+				<give_item id="-300" count="190"/>
+			</on>
+			<on time="3000">
+				<give_item id="-300" count="190"/>
+			</on>
+			<on time="3300">
+				<give_item id="-300" count="190"/>
+			</on>
+			<on time="3600">
+				<give_item id="-300" count="190"/>
+			</on>
+			<on time="3900">
+				<give_item id="-300" count="190"/>
+			</on>
+			<on time="4200">
+				<give_item id="-300" count="190"/>
+			</on>
+			<on time="4500">
+				<give_item id="-300" count="190"/>
+			</on>
+			<on time="4800">
+				<give_item id="-300" count="190"/>
+			</on>
+			<on time="5100">
+				<give_item id="-300" count="190"/>
+			</on>
+			<on time="5400">
+				<give_item id="-300" count="190"/>
+			</on>
+			<on time="5700">
+				<give_item id="-300" count="190"/>
+			</on>
+			<on time="6000">
+				<give_item id="-300" count="190"/>
+			</on>
+			<on time="6300">
+				<give_item id="-300" count="190"/>
+			</on>
+			<on time="6600">
+				<give_item id="-300" count="190"/>
+			</on>
+			<on time="6900">
+				<give_item id="-300" count="190"/>
+			</on>
+			<on time="7200">
+				<stop name="event"/>
+			</on>
+		</on_time>
+		<objects name="clan_hall_npcs">
+			<spawn name="fortress_of_resistance_21"/>
+		</objects>
+		<!--Brakel only-->
+		<objects name="fortress_of_resistance_no_siege">
+			<spawn_ex name="fortress_of_resistance_no_siege"/>
+		</objects>
+		<!-- NO OWNER-->
+		<objects name="fortress_of_resistance_siege_guards_no_owner">
+			<spawn_ex name="fortress_of_resistance_siege_guards_no_owner"/>
+		</objects>
+		<objects name="fortress_of_resistance_siege_nurka_no_owner">
+			<spawn_ex name="fortress_of_resistance_siege_nurka_no_owner"/>
+		</objects>
+		<!--WITH OWNER-->
+		<objects name="fortress_of_resistance_siege_guards_owner">
+			<spawn_ex name="fortress_of_resistance_siege_guards_owner"/>
+		</objects>
+		<objects name="fortress_of_resistance_siege_nurka_owner">
+			<spawn_ex name="fortress_of_resistance_siege_nurka_owner"/>
+		</objects>
+		<objects name="doors">
+			<door id="21210001"/>
+			<door id="21210002"/>
+		</objects>
+		<objects name="siege_zones">
+			<zone name="[partisan_agit001_siege]"/>
+		</objects>
+	</event>
+</list>

@@ -1,0 +1,18 @@
+<!DOCTYPE list SYSTEM "instances.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<!--Provisional Clan Hall: Ellia Hall (Type A)-->
+	<instance id="187" name="Ellia Hall" maxChannels="20" collapseIfEmpty="-1">
+		<collapse on-party-dismiss="false" timer="0"/>
+		<party min="1" max="300"/>
+		<return loc="-81352 151592 -3120"/><!--TODO: Сверить по оффу.-->
+		<teleport loc="-116369 -116630 -5837"/>
+		<reuse resetReuse="* * * * *" setUponEntry="false" sharedReuseGroup="0"/>
+		<spawns>
+			<group name="instantAgit_npc1611_02a" spawned="true"/>
+		</spawns>
+		<zones>
+			<zone name="[InstantAgit_peace_zone4]" active="true"/>
+		</zones>
+	</instance>
+</list>

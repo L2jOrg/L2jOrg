@@ -1,0 +1,13 @@
+<html><head><body>
+Great Hierarch Thifiell:<br>
+May Shilen's power shade you from the harshness of the light!<br>
+On behalf of the Chief, who was sealed by those despicable servants of the light, I represent the senior council that governs the race of darkness. It was I, Great Hierarch Thifiell -- chosen by Gran Kain, the father of shadow, and Shilen, the mother of the abyss -- who led our brothers out of their underground exile and recaptured the Forest of Shadow from those moon-faced Elves of light! You, child of Shilen! What is it that you wish to know?<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">"Can you tell me about the 1st Class Transfer?"</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc?chat 1">"Tell me what's going on."</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Clan</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Alliance</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Exchange Daily Coins</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Quest</Button>
+</body></html>

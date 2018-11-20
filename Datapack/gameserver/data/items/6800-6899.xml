@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<armor id="6835" name="Circlet of Dion">
+		<set name="privatestoreable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.accessory_pledge_cap1_i02"/>
+		<set name="price" value="500000"/>
+		<set name="tradeable" value="false"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<cond msgId="113">
+			<player residence="Castle;2"/>
+		</cond>
+		<equip>
+			<slot id="FACE"/>
+		</equip>
+		<skills>
+			<skill id="3633" level="1"/>
+		</skills>
+	</armor>
+	<armor id="6837" name="Circlet of Oren">
+		<set name="privatestoreable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.accessory_pledge_cap1_i04"/>
+		<set name="price" value="500000"/>
+		<set name="tradeable" value="false"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<cond msgId="113">
+			<player residence="Castle;4"/>
+		</cond>
+		<equip>
+			<slot id="FACE"/>
+		</equip>
+		<skills>
+			<skill id="3633" level="1"/>
+		</skills>
+	</armor>
+	<armor id="6838" name="Circlet of Gludio">
+		<set name="privatestoreable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.accessory_pledge_cap1_i05"/>
+		<set name="price" value="500000"/>
+		<set name="tradeable" value="false"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<cond msgId="113">
+			<player residence="Castle;1"/>
+		</cond>
+		<equip>
+			<slot id="FACE"/>
+		</equip>
+		<skills>
+			<skill id="3633" level="1"/>
+		</skills>
+	</armor>
+	<armor id="6839" name="Circlet of Giran">
+		<set name="privatestoreable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.accessory_pledge_cap1_i06"/>
+		<set name="price" value="500000"/>
+		<set name="tradeable" value="false"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<cond msgId="113">
+			<player residence="Castle;3"/>
+		</cond>
+		<equip>
+			<slot id="FACE"/>
+		</equip>
+		<skills>
+			<skill id="3633" level="1"/>
+		</skills>
+	</armor>
+	<armor id="6840" name="Circlet of Aden">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_pledge_cap2_i07"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="FACE"/>
+		</equip>
+	</armor>
+	<armor id="6841" name="Lord\'s Crown">
+		<set name="privatestoreable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.accessory_crown_i00"/>
+		<set name="tradeable" value="false"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="FACE"/>
+		</equip>
+		<skills>
+			<skill id="3632" level="1"/>
+		</skills>
+	</armor>
+	<armor id="6842" name="Wings of Destiny Circlet">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_hero_cap_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="FACE"/>
+		</equip>
+	</armor>
+	<armor id="6843" name="Cat Ears">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_cat_ear_i00"/>
+		<set name="price" value="500000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="NONE"/>
+		</equip>
+	</armor>
+	<armor id="6845" name="Pirate\\'s Eyepatch">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_eye_bandage_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+	</armor>
+</list>

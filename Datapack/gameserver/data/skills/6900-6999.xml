@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="6900" levels="1" name="Raid Boss (Lv. 84)">
+		<!-- "In order to gather monsters that would protect its territory, Antharas created countless sacrifice victims. The Bleeding Fly was enchanted by the stench of corpses and came up above ground. This nobility of purgatory, who feeds on the blood of hatred and fear, called itself the Gatekeeper of Antharas, and it took its place on one side of the Valley where there is an endless stream of reckless challengers." -->
+		<set name="icon" value="icon.skillraid"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6901" levels="1" name="Raid Boss (Lv. 84)">
+		<!-- "A Drake warrior that was once called the right wing of Antharas in battle. During the war against the gods, it lost two of its wings to injury and fell into a deep part of Purgatory. However, it was recently awakened by Antharas's call. It hold a deep grudge against the gods, especially Einhasad, and it believes that only the darkness of Shilen can bring rest to the world." -->
+		<set name="icon" value="icon.skillraid"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6902" levels="1" name="Raid Boss (Lv. 84)">
+		<!-- "It was once the subordinate of the Dark Dragon Skelus. It was one of the nobility of Purgatory who resided deep inside. But it came above ground at Antharas's calling. It protects the Nest of Antharas, and it also informs Skelus about the area's developments. When it was in Purgatory, it was called ""Hell's Corpse Detonator"" because of its sinister pleasure in making its comrades explode." -->
+		<set name="icon" value="icon.skillraid"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6903" levels="1" name="Raid Boss (Lv. 84)">
+		<!-- "A monsters summoned from Purgatory by the demon Maluk in exchange for one finger. As part of their agreement, Maluk presented an endless supply of hunting prey. The Spike Slasher accepted the proposal and came above ground with its subordinates in tow from Purgatory." -->
+		<set name="icon" value="icon.skillraid"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6904" levels="1" name="Raid Boss (Lv. 84)">
+		<!-- The monster was created by the demon Maluk by joining a high-level demon with a dragon. It possesses the advantages of both demons and dragons. Maluk offered this exceptional creature to Antharas. Antharas fed its blood to the Muscle Bomber and appointed it as the Valley's Watcher. -->
+		<set name="icon" value="icon.skillraid"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6905" levels="1" name="Raid Boss (Lv. 85)">
+		<!-- "They say that this monster was created through the fusion of a human hero's body, who opened the Gate of Purgatory, and the spitefulness of countless monsters. However, this rumor is not confirmed. In any case, it has come above ground at Shilen's command, and it watches over the dragon's dungeon as an aide of Antharas. It possess exceptional abilities, and it is uniquely rational and cold-hearted. As such, it supposedly gives good assistance to the tyrant Antharas." -->
+		<set name="icon" value="icon.skillraid"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6906" levels="1" name="Raid Boss (Lv. 85)">
+		<!-- "A purgatory monster sent to Antharas by Shilen. The Behemoth Leader who came above ground was filled with uncontrollable madness as soon as it was unshackled. It killed countless monsters and eventually even tore off some of the flesh of Antharas, its master. Antharas burst into laughter at its foolish actions, and he cast a spell so that it would guard the Essence of Antharas, which maintains the dungeon's barrier." -->
+		<set name="icon" value="icon.skillraid"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6907" levels="1" name="Raid Boss (Lv. 85)">
+		<!-- "A Knight of Purgatory who has long assisted Antharas, together with the Black Dagger Wing. During the war against the gods, it broke both arms and fell into a deep slumber within Purgatory. It recently awakened at Antharas's call. When the Dragon Beast appeared above ground, Antharas sliced off his own flesh in order to create its two arms. Then, he made it guard the dragon's dungeon." -->
+		<set name="icon" value="icon.skillraid"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6909" levels="1" name="Charming">
+		<!-- Shows the game master's charming actions. -->
+		<set name="icon" value="icon.skilltransform1"/>
+		<set name="hitTime" value="2700"/>
+		<set name="magicLevel" value="85"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6910" levels="1" name="Dance">
+		<!-- Shows the game master's dancing skills. -->
+		<set name="icon" value="icon.skilltransform2"/>
+		<set name="hitTime" value="4800"/>
+		<set name="magicLevel" value="85"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6911" levels="1" name="Cheer">
+		<!-- Shows the game master's greeting. -->
+		<set name="icon" value="icon.skilltransform3"/>
+		<set name="hitTime" value="3200"/>
+		<set name="magicLevel" value="85"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6912" levels="1" name="Stigma Aftermath">
+		<!-- "Antharas's Stigma Aftermath. For 10 seconds, decreases 500 HP and 300 MP per second." -->
+		<set name="icon" value="icon.skill5860"/>
+		<set name="castRange" value="1200"/>
+		<set name="abnormal_effect" value="TIME_BOMB"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="time_bomb"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6913" levels="1" name="Challenge for Fate">
+		<set name="icon" value="icon.skill0985"/>
+		<set name="reuseDelay" value="60000"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="knight_shield"/>
+		<set name="magicLevel" value="83"/>
+		<set name="magicType" value="ITEM"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSaveable" value="false"/>
+		<set name="isTrigger" value="true"/>
+		<for>
+			<effect>
+				<add stat="pDef" value="360"/>
+				<add stat="mDef" value="270"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6914" levels="10" name="Haste">
+		<!-- none -->
+		<set name="icon" value="icon.skill1086"/>
+		<set name="abnormal_time" value="600"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="attack_time_down"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6915" levels="10" name="Acumen">
+		<!-- none -->
+		<set name="icon" value="icon.skill1085"/>
+		<set name="hitTime" value="1000"/>
+		<set name="abnormal_time" value="600"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="casting_time_down"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6916" levels="1" name="Antharas\' Cute Tricks">
+		<!-- You can see the summoned spirit's cute tricks. -->
+		<set name="icon" value="icon.skill_agathion_cute"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<cond msgId="2292">
+			<player agathion="16077"/>
+		</cond>
+	</skill>
+	<skill id="6917" levels="1" name="Kanna\'s Splendor">
+		<!-- Able to see the summoned spirit's splendor. -->
+		<set name="icon" value="icon.skill_agathion_cute"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="6918" levels="1" name="Kallesin\'s Splendor">
+		<!-- Able to see the summoned spirit's splendor. -->
+		<set name="icon" value="icon.skill_agathion_cute"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="6919" levels="1" name="Challenge Acceptance">
+		<!-- none -->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="morale_up"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6920" levels="1" name="Collector\'s Fortune">
+		<!-- "A collector's luck. Increases P. Atk. by 15%, Critical Rate by 10%, Critical Damage by 10%, Atk. Spd. by 3%, and Speed by 5." -->
+		<set name="icon" value="BranchSys2.icon.skill0952"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="patience"/>
+		<set name="magicType" value="ITEM"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isTrigger" value="true"/>
+		<for>
+			<effect>
+				<mul stat="pAtk" value="1.15"/>
+				<add stat="pCritRate" value="10"/>
+				<add stat="p_critical_damage_per" value="10"/>
+				<mul stat="pAtkSpd" value="1.03"/>
+				<add stat="runSpd" value="5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6921" levels="1" name="Penetrating Attack">
+		<set name="icon" value="icon.skill0122"/>
+		<set name="castRange" value="500"/>
+		<set name="mp_consume" value="1"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="pd_down"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pDef" value="0.77"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6922" levels="3" name="Adventurer\'s Might">
+		<set name="icon" value="icon.skill1068"/>
+		<set name="castRange" value="400"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6923" levels="3" name="Adventurer\'s Empower">
+		<set name="icon" value="icon.skill1059"/>
+		<set name="castRange" value="400"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6924" levels="3" name="Adventurer\'s Shield">
+		<set name="icon" value="icon.skill1040"/>
+		<set name="castRange" value="400"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6925" levels="2" name="Adventurer\'s Magic Barrier">
+		<set name="icon" value="icon.skill1036"/>
+		<set name="castRange" value="400"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6926" levels="6" name="Adventurer\'s Blessed Body">
+		<set name="icon" value="icon.skill1045"/>
+		<set name="castRange" value="400"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6927" levels="6" name="Adventurer\'s Blessed Soul">
+		<set name="icon" value="icon.skill1048"/>
+		<set name="castRange" value="400"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6928" levels="3" name="Adventurer\'s Focus">
+		<set name="icon" value="icon.skill1077"/>
+		<set name="castRange" value="400"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6929" levels="2" name="Adventurer\'s Wild Magic">
+		<set name="icon" value="icon.skill1303"/>
+		<set name="castRange" value="400"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6930" levels="2" name="Adventurer\'s Haste">
+		<set name="icon" value="icon.skill1086"/>
+		<set name="castRange" value="400"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6931" levels="3" name="Adventurer\'s Acumen">
+		<set name="icon" value="icon.skill1085"/>
+		<set name="castRange" value="400"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6932" levels="4" name="Adventurer\'s Vampiric Rage">
+		<set name="icon" value="icon.skill1268"/>
+		<set name="castRange" value="400"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6933" levels="2" name="Adventurer\'s Berserker Spirit">
+		<set name="icon" value="icon.skill1062"/>
+		<set name="castRange" value="400"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6934" levels="3" name="Adventurer\'s Death Whisper">
+		<set name="icon" value="icon.skill1242"/>
+		<set name="castRange" value="400"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6935" levels="2" name="Adventurer\'s Wind Walk">
+		<set name="icon" value="icon.skill1204"/>
+		<set name="castRange" value="400"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6936" levels="2" name="Set Effect - Salamander Skin Light Armor, 2-piece">
+		<set name="icon" value="icon.armor_t45_ul_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6937" levels="2" name="Set Effect - Mithril Robe Armor, 2-piece">
+		<table name="#wit">0 1</table>
+		<set name="icon" value="icon.armor_t51_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="runSpd" value="7"/>
+			<add stat="WIT" value="#wit"/>
+		</for>
+	</skill>
+	<skill id="6938" levels="2" name="Set Effect - Half Plate Heavy Armor, 2-piece">
+		<table name="#str">0 1</table>
+		<set name="icon" value="icon.armor_t46_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="regHp" value="1.0524"/>
+			<add stat="STR" value="#str"/>
+		</for>
+	</skill>
+	<skill id="6939" levels="1" name="Equip Shield">
+		<set name="icon" value="icon.skill0091"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6940" levels="1" name="Set Effect - Medium\'s Robe Armor">
+		<set name="icon" value="icon.armor_t58_u_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6941" levels="1" name="Set Effect - Warrior\'s Heavy Armor">
+		<set name="icon" value="icon.armor_t33_u_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6942" levels="1" name="Set Effect - Shining Heavy Armor">
+		<set name="icon" value="icon.armor_t62_ul_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6943" levels="1" name="Set Effect - Shining Light Armor">
+		<set name="icon" value="icon.armor_t45_ul_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6944" levels="1" name="Set Effect - Shining Robe Armor">
+		<set name="icon" value="icon.armor_t57_u_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6945" levels="1" name="Master\'s Blessing - GM\'s Protection">
+		<set name="icon" value="icon.skill5662"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6946" levels="1" name="Raid Shield">
+		<set name="icon" value="icon.skill0110"/>
+		<set name="hitTime" value="100"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6950" levels="1" name="Lucky Enchant Stone: Save Armor (D-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6951" levels="1" name="Lucky Enchant Stone: Save Armor (C-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6952" levels="1" name="Lucky Enchant Stone: Save Armor (B-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6953" levels="1" name="Lucky Enchant Stone: Save Armor (A-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6954" levels="1" name="Lucky Enchant Stone: Protect Armor (D-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6955" levels="1" name="Lucky Enchant Stone: Protect Armor (C-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6956" levels="1" name="Lucky Enchant Stone: Protect Armor (B-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6957" levels="1" name="Lucky Enchant Stone: Protect Armor (A-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6958" levels="1" name="Lucky Enchant Stone: Armor (D-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6959" levels="1" name="Lucky Enchant Stone: Armor (C-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6960" levels="1" name="Lucky Enchant Stone: Armor (B-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6961" levels="1" name="Lucky Enchant Stone: Armor (A-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6962" levels="1" name="Giant\'s Lucky Enchant Stone (A-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6963" levels="1" name="Blessed Lucky Enchant Stone (A-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6964" levels="1" name="Scroll: Enchant Hair Accessory">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+</list>

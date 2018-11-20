@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "residence.dtd">
+<list>
+	<residence id="43" name="The Silver Chamber" impl="clanhall.AuctionClanHall" grade="50" fee_item_id="57" rental_fee="1000000" min_bid="10000000" deposit="1000000">
+		<available_functions>
+			<function type="RESTORE_HP" level="4"/>
+			<function type="RESTORE_HP" level="6"/>
+			<function type="RESTORE_HP" level="9"/>
+			<function type="RESTORE_HP" level="12"/>
+			<function type="RESTORE_HP" level="15"/>
+			<function type="RESTORE_MP" level="1"/>
+			<function type="RESTORE_MP" level="3"/>
+			<function type="RESTORE_MP" level="6"/>
+			<function type="RESTORE_MP" level="8"/>
+			<function type="RESTORE_EXP" level="3"/>
+			<function type="RESTORE_EXP" level="5"/>
+			<function type="RESTORE_EXP" level="7"/>
+			<function type="RESTORE_EXP" level="10"/>
+			<function type="TELEPORT" level="1"/>
+			<function type="TELEPORT" level="2"/>
+			<function type="SUPPORT" level="3"/>
+			<function type="ITEM_CREATE" level="1"/>
+			<function type="ITEM_CREATE" level="2"/>
+			<function type="ITEM_CREATE" level="3"/>
+			<function type="CURTAIN" level="1"/>
+			<function type="CURTAIN" level="2"/>
+			<function type="PLATFORM" level="1"/>
+			<function type="PLATFORM" level="2"/>
+		</available_functions>
+		<banish_points>
+			<point x="83409" y="148578" z="-3300"/>
+		</banish_points>
+		<owner_restart_points>
+			<point x="82032" y="145328" z="-3520"/>
+		</owner_restart_points>
+		<other_restart_points>
+			<point x="83409" y="148578" z="-3300"/>
+		</other_restart_points>
+		<chaos_restart_points>
+		</chaos_restart_points>
+	</residence>
+</list>

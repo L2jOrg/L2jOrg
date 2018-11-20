@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "zone.dtd">
+<list>
+	<zone name="[spore_boss_swamp_zone]" type="swamp" >
+		<polygon>
+			<coords loc="43084 15944 -4468 -4118"/>
+			<coords loc="45140 15816 -4468 -4118"/>
+			<coords loc="45748 17200 -4468 -4118"/>
+			<coords loc="44504 18780 -4468 -4118"/>
+			<coords loc="43284 18952 -4468 -4118"/>
+			<coords loc="42476 18164 -4468 -4118"/>
+			<coords loc="42480 16448 -4468 -4118"/>
+		</polygon>
+	</zone>
+	<zone name="[aden_slow_8]" type="swamp" >
+		<set name="enabled" value="false"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event" value="2418008"/>
+		<polygon>
+			<coords loc="149084 7070 -560 -360"/>
+			<coords loc="149349 7069 -560 -360"/>
+			<coords loc="149349 7203 -560 -360"/>
+			<coords loc="149084 7204 -560 -360"/>
+		</polygon>
+	</zone>
+	<zone name="[aden_slow_7]" type="swamp" >
+		<set name="enabled" value="false"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event" value="2418007"/>
+		<polygon>
+			<coords loc="149084 6942 -528 -328"/>
+			<coords loc="149349 6941 -528 -328"/>
+			<coords loc="149349 7075 -528 -328"/>
+			<coords loc="149084 7076 -528 -328"/>
+		</polygon>
+	</zone>
+	<zone name="[aden_slow_6]" type="swamp" >
+		<set name="enabled" value="false"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event" value="2418006"/>
+		<polygon>
+			<coords loc="149084 6814 -528 -328"/>
+			<coords loc="149349 6813 -528 -328"/>
+			<coords loc="149349 6947 -528 -328"/>
+			<coords loc="149084 6948 -528 -328"/>
+		</polygon>
+	</zone>
+	<zone name="[aden_slow_5]" type="swamp" >
+		<set name="enabled" value="false"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event" value="2418005"/>
+		<polygon>
+			<coords loc="149084 6686 -528 -328"/>
+			<coords loc="149349 6685 -528 -328"/>
+			<coords loc="149349 6819 -528 -328"/>
+			<coords loc="149084 6820 -528 -328"/>
+		</polygon>
+	</zone>
+	<zone name="[aden_slow_4]" type="swamp" >
+		<set name="enabled" value="false"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event" value="2418004"/>
+		<polygon>
+			<coords loc="145548 7054 -528 -328"/>
+			<coords loc="145813 7053 -528 -328"/>
+			<coords loc="145813 7187 -528 -328"/>
+			<coords loc="145548 7188 -528 -328"/>
+		</polygon>
+	</zone>
+	<zone name="[aden_slow_3]" type="swamp" >
+		<set name="enabled" value="false"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event" value="2418003"/>
+		<polygon>
+			<coords loc="145548 6926 -496 -296"/>
+			<coords loc="145813 6925 -496 -296"/>
+			<coords loc="145813 7059 -496 -296"/>
+			<coords loc="145548 7060 -496 -296"/>
+		</polygon>
+	</zone>
+	<zone name="[aden_slow_2]" type="swamp" >
+		<set name="enabled" value="false"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event" value="2418002"/>
+		<polygon>
+			<coords loc="145548 6798 -496 -296"/>
+			<coords loc="145813 6797 -496 -296"/>
+			<coords loc="145813 6931 -496 -296"/>
+			<coords loc="145548 6932 -496 -296"/>
+		</polygon>
+	</zone>
+	<zone name="[aden_slow_1]" type="swamp" >
+		<set name="enabled" value="false"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event" value="2418001"/>
+		<polygon>
+			<coords loc="145548 6670 -496 -296"/>
+			<coords loc="145813 6669 -496 -296"/>
+			<coords loc="145813 6803 -496 -296"/>
+			<coords loc="145548 6804 -496 -296"/>
+		</polygon>
+	</zone>
+	<zone name="[gludio_slow_1]" type="swamp" >
+		<set name="enabled" value="false"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event" value="1921001"/>
+		<polygon>
+			<coords loc="-18255 110790 -2627 -2427"/>
+			<coords loc="-17971 110790 -2627 -2427"/>
+			<coords loc="-17972 111174 -2627 -2427"/>
+			<coords loc="-18256 111174 -2627 -2427"/>
+		</polygon>
+	</zone>
+	<zone name="[gludio_slow_2]" type="swamp" >
+		<set name="enabled" value="false"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event" value="1921002"/>
+		<polygon>
+			<coords loc="-19213 107137 -2595 -2395"/>
+			<coords loc="-18827 107137 -2595 -2395"/>
+			<coords loc="-18827 107404 -2595 -2395"/>
+			<coords loc="-19213 107404 -2595 -2395"/>
+		</polygon>
+	</zone>
+	<zone name="[dion_slow_1]" type="swamp" >
+		<set name="enabled" value="false"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event" value="2022001"/>
+		<polygon>
+			<coords loc="22215 158960 -2821 30341"/>
+			<coords loc="21931 158960 -2821 30341"/>
+			<coords loc="21932 158576 -2821 30341"/>
+			<coords loc="22216 158576 -2821 30341"/>
+		</polygon>
+	</zone>
+	<zone name="[dion_slow_2]" type="swamp" >
+		<set name="enabled" value="false"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event" value="2022002"/>
+		<polygon>
+			<coords loc="23173 162613 -2789 30373"/>
+			<coords loc="22787 162613 -2789 30373"/>
+			<coords loc="22787 162346 -2789 30373"/>
+			<coords loc="23173 162346 -2789 30373"/>
+		</polygon>
+	</zone>
+	<zone name="[giran_slow_1]" type="swamp" >
+		<set name="enabled" value="false"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event" value="2322001"/>
+		<polygon>
+			<coords loc="115132 144954 -2694 13957"/>
+			<coords loc="115132 145238 -2694 13957"/>
+			<coords loc="114748 145237 -2694 13957"/>
+			<coords loc="114748 144953 -2694 13957"/>
+		</polygon>
+	</zone>
+	<zone name="[giran_slow_2]" type="swamp" >
+		<set name="enabled" value="false"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event" value="2322002"/>
+		<polygon>
+			<coords loc="118785 143996 -2662 13989"/>
+			<coords loc="118785 144382 -2662 13989"/>
+			<coords loc="118518 144382 -2662 13989"/>
+			<coords loc="118518 143996 -2662 13989"/>
+		</polygon>
+	</zone>
+	<zone name="[oren_slow_1]" type="swamp" >
+		<set name="enabled" value="false"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event" value="2219001"/>
+		<polygon>
+			<coords loc="81208 37049 -2421 13957"/>
+			<coords loc="81208 37333 -2421 13957"/>
+			<coords loc="80824 37332 -2421 13957"/>
+			<coords loc="80824 37048 -2421 13957"/>
+		</polygon>
+	</zone>
+	<zone name="[oren_slow_2]" type="swamp" >
+		<set name="enabled" value="false"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event" value="2219002"/>
+		<polygon>
+			<coords loc="84861 36091 -2389 13989"/>
+			<coords loc="84861 36477 -2389 13989"/>
+			<coords loc="84594 36477 -2389 13989"/>
+			<coords loc="84594 36091 -2389 13989"/>
+		</polygon>
+	</zone>
+	<zone name="[innadrile_slow_1]" type="swamp" >
+		<set name="enabled" value="false"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event" value="2325001"/>
+		<polygon>
+			<coords loc="116166 247739 -917 30341"/>
+			<coords loc="115882 247739 -917 30341"/>
+			<coords loc="115883 247355 -917 30341"/>
+			<coords loc="116167 247355 -917 30341"/>
+		</polygon>
+	</zone>
+	<zone name="[innadrile_slow_2]" type="swamp" >
+		<set name="enabled" value="false"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event" value="2325002"/>
+		<polygon>
+			<coords loc="117124 251392 -885 30373"/>
+			<coords loc="116738 251392 -885 30373"/>
+			<coords loc="116738 251125 -885 30373"/>
+			<coords loc="117124 251125 -885 30373"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_slow_1]" type="swamp" >
+		<set name="enabled" value="false"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event" value="2416001"/>
+		<polygon>
+			<coords loc="149235 -47768 -1789 -1489"/>
+			<coords loc="149579 -47608 -1789 -1489"/>
+			<coords loc="149515 -47472 -1789 -1489"/>
+			<coords loc="149169 -47634 -1789 -1489"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_slow_2]" type="swamp" >
+		<set name="enabled" value="false"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event" value="2416002"/>
+		<polygon>
+			<coords loc="145352 -47607 -1789 -1439"/>
+			<coords loc="145696 -47768 -1789 -1439"/>
+			<coords loc="145760 -47633 -1789 -1439"/>
+			<coords loc="145415 -47471 -1789 -1439"/>
+		</polygon>
+	</zone>
+	<zone name="[devil_slow_8]" type="swamp" >
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="unit_tick" value="9"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="120"/>
+		<set name="off_time" value="5"/>
+		<set name="random_time" value="15"/>
+		<set name="move_bonus" value="-80"/>
+		<polygon>
+			<coords loc="55250 210873 -3964 -3364"/>
+			<coords loc="55762 211217 -3964 -3364"/>
+			<coords loc="55934 212274 -3964 -3364"/>
+			<coords loc="55686 212533 -3964 -3364"/>
+			<coords loc="54639 212740 -3964 -3364"/>
+			<coords loc="54276 212407 -3964 -3364"/>
+			<coords loc="54160 211696 -3964 -3364"/>
+			<coords loc="54332 211108 -3964 -3364"/>
+		</polygon>
+	</zone>
+</list>

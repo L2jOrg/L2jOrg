@@ -1,0 +1,94 @@
+<html><title>Settings</title><body>
+<!--TEMPLATE1
+<br>
+<center><font color="LEVEL">Localization</font></center>
+<table>
+<tr>
+<td width=2></td>
+<td width=160>Language:</td>
+<td width=100 align=center><?current_lang?></td>
+</tr>
+<?available_languages?>
+</table>
+TEMPLATE-->
+<!--TEMPLATE2
+<tr>
+<td width=2></td>
+<td width=160></td>
+<td width=100 align=center><button width=90 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" action="bypass -h user_cfg lang <?short_lang_name?>" value="<?lang_name?>"></td>
+</tr>
+TEMPLATE-->
+<?lang_block?>
+<!--TEMPLATE3
+<br>
+<center><font color="LEVEL">Auto-loot</font></center>
+<table>
+<?adena_autoloot?>
+<tr>
+<td width=2></td>
+<td width=160>Items:</td>
+<td width=100 align=center><button width=90 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" action="bypass -h user_cfg autoloot <?value_items?>" value="<?value_name_items?>"></td>
+</tr>
+<tr>
+<td width=2></td>
+<td width=160>Herbs:</td>
+<td width=100 align=center><button width=90 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" action="bypass -h user_cfg autolooth <?value_herbs?>" value="<?value_name_herbs?>"></td>
+</tr>
+</table>
+TEMPLATE-->
+<!--TEMPLATE4
+<tr>
+<td width=2></td>
+<td width=160>Adena:</td>
+<td width=100 align=center><button width=90 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" action="bypass -h user_cfg autolootonlyadena <?value_adena?>" value="<?value_name_adena?>"></td>
+</tr>
+TEMPLATE-->
+<?autoloot_block?>
+<br>
+<center><font color="LEVEL">Settings</font></center>
+<table>
+<tr>
+<td width=2></td>
+<td width=160>Translit:</td>
+<td width=100 align=center><button width=90 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" action="bypass -h user_cfg translit <?value_translit?>" value="<?value_name_translit?>"></td>
+</tr>
+<tr>
+<td width=2></td>
+<td width=160>Block experience:</td>
+<td width=100 align=center><button width=90 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" action="bypass -h user_cfg noe <?value_noe?>" value="<?value_name_noe?>"></td>
+</tr>
+<tr>
+<td width=2></td>
+<td width=160>Do not show traders:</td>
+<td width=100 align=center><button width=90 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" action="bypass -h user_cfg notraders <?value_notraders?>" value="<?value_name_notraders?>"></td>
+</tr>
+<tr>
+<td width=2></td>
+<td width=160>Disable Buffs Animation:</td>
+<td width=100 align=center><button width=90 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" action="bypass -h user_cfg notShowBuffAnim <?value_notShowBuffAnim?>" value="<?value_name_notShowBuffAnim?>"></td>
+</tr>
+<tr>
+<td width=2></td>
+<td width=160>Classic Shift:</td>
+<td width=100 align=center><button width=90 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" action="bypass -h user_cfg noShift <?value_noShift?>" value="<?value_name_noShift?>"></td>
+</tr>
+</table>
+<?no_carrier_block?>
+<!--TEMPLATE5
+<br>
+<center><font color="LEVEL">No Carrier</font></center>
+<table>
+<tr>
+<td width=2></td>
+<td width=160>Current value:</td>
+<td width=100 align=center><?no_carrier_time?></td>
+</tr>
+<tr>
+<td width=2></td>
+<td width=160><edit var="set" width=150 height=12></td>
+<td width=100 align=center><button width=90 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" action="bypass -h user_cfg noCarrier $set" value="Set"></td>
+</tr>
+</table>
+TEMPLATE-->
+<br>
+</body></html>

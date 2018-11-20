@@ -1,0 +1,388 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "events.dtd">
+<list>
+	<event id="3" name="Giran Castle" impl="CastleSiege">
+		<parameter name="day_of_week" value="1"/>  <!--SUNDAY-->
+		<parameter name="hour_of_day" value="20"/>
+		<parameter name="siege_interval_in_weeks" value="2"/>
+		<parameter name="validation_date" value="2;4;2003"/>
+		<on_init>
+			<if name="light_side">
+				<spawn name="castle_peace_light_npcs"/>
+			</if>
+			<if name="dark_side">
+				<spawn name="castle_peace_dark_npcs"/>
+			</if>
+			<spawn name="castle_peace_npcs"/>
+			<spawn name="artefact"/>
+			<init name="doors"/>
+			<init name="siege_zones"/>
+			<init name="flag_zones"/>
+			<init name="zone_1"/>
+			<init name="zone_2"/>
+			<spawn name="control_towers_peace"/>
+			<spawn name="mass_gatekeeper"/>
+		</on_init>
+		<on_start>
+			<ifnot name="owner">
+				<spawn name="guards"/>
+			</ifnot>
+			<despawn name="control_towers_peace"/>
+			<spawn name="control_towers"/>
+			<spawn name="flame_towers"/>
+			<refresh name="artefact"/>
+			<refresh name="doors"/>
+			<refresh name="mass_gatekeeper"/>
+			<active name="siege_zones"/>
+			<teleport_players id="from_residence_to_town"/>
+		</on_start>
+		<on_stop>
+			<despawn name="castle_peace_light_npcs"/>
+			<despawn name="castle_peace_dark_npcs"/>
+			<if name="light_side">
+				<spawn name="castle_peace_light_npcs"/>
+			</if>
+			<if name="dark_side">
+				<spawn name="castle_peace_dark_npcs"/>
+			</if>
+			<despawn name="control_towers"/>
+			<despawn name="flame_towers"/>
+			<spawn name="control_towers_peace"/>
+			<ifnot name="old_owner">
+				<despawn name="guards"/>
+			</ifnot>
+			<refresh name="artefact"/>
+			<refresh name="doors"/>
+			<refresh name="mass_gatekeeper"/>
+			<start name="registration"/>
+			<teleport_players id="from_residence_to_town"/>
+			<deactive name="siege_zones"/>
+		</on_stop>
+		<on_time>
+			<on time="-86400">
+				<stop name="registration"/>
+			</on>
+			<on time="0">
+				<start name="event"/>
+				<announce val="7200"/>
+				<play_sound type="SOUND" range="-1" sound="B01_F"/>
+			</on>
+			<on time="120">
+				<play_sound type="SOUND" range="-1" sound="B02_S01"/>
+			</on>
+			<on time="240">
+				<play_sound type="SOUND" range="-1" sound="B03_F"/>
+			</on>
+			<on time="300">
+				<give_item id="-300" count="1250"/>
+			</on>
+			<on time="360">
+				<play_sound type="SOUND" range="-1" sound="B04_F"/>
+			</on>
+			<on time="480">
+				<play_sound type="SOUND" range="-1" sound="B01_S01"/>
+			</on>
+			<on time="600">
+				<play_sound type="SOUND" range="-1" sound="B02_F"/>
+				<give_item id="-300" count="1250"/>
+			</on>
+			<on time="720">
+				<play_sound type="SOUND" range="-1" sound="B03_S02"/>
+			</on>
+			<on time="840">
+				<play_sound type="SOUND" range="-1" sound="B04_S01"/>
+			</on>
+			<on time="900">
+				<give_item id="-300" count="1250"/>
+			</on>
+			<on time="960">
+				<play_sound type="SOUND" range="-1" sound="B01_S02"/>
+			</on>
+			<on time="1080">
+				<play_sound type="SOUND" range="-1" sound="B02_S02"/>
+			</on>
+			<on time="1200">
+				<play_sound type="SOUND" range="-1" sound="B03_S01"/>
+				<give_item id="-300" count="1250"/>
+			</on>
+			<on time="1320">
+				<play_sound type="SOUND" range="-1" sound="B04_S02"/>
+			</on>
+			<on time="1440">
+				<play_sound type="SOUND" range="-1" sound="B01_F"/>
+			</on>
+			<on time="1500">
+				<give_item id="-300" count="1250"/>
+			</on>
+			<on time="1560">
+				<play_sound type="SOUND" range="-1" sound="B02_S01"/>
+			</on>
+			<on time="1680">
+				<play_sound type="SOUND" range="-1" sound="B03_F"/>
+			</on>
+			<on time="1800">
+				<announce val="3600"/>
+				<play_sound type="SOUND" range="-1" sound="B04_F"/>
+				<give_item id="-300" count="1250"/>
+			</on>
+			<on time="1920">
+				<play_sound type="SOUND" range="-1" sound="B01_S01"/>
+			</on>
+			<on time="2040">
+				<play_sound type="SOUND" range="-1" sound="B02_F"/>
+			</on>
+			<on time="2100">
+				<give_item id="-300" count="1250"/>
+			</on>
+			<on time="2160">
+				<play_sound type="SOUND" range="-1" sound="B03_S02"/>
+			</on>
+			<on time="2280">
+				<play_sound type="SOUND" range="-1" sound="B04_S01"/>
+			</on>
+			<on time="2400">
+				<play_sound type="SOUND" range="-1" sound="B01_S02"/>
+				<give_item id="-300" count="1250"/>
+			</on>
+			<on time="2520">
+				<play_sound type="SOUND" range="-1" sound="B02_S02"/>
+			</on>
+			<on time="2640">
+				<play_sound type="SOUND" range="-1" sound="B03_S01"/>
+			</on>
+			<on time="2700">
+				<give_item id="-300" count="1250"/>
+			</on>
+			<on time="2760">
+				<play_sound type="SOUND" range="-1" sound="B04_S02"/>
+			</on>
+			<on time="2880">
+				<play_sound type="SOUND" range="-1" sound="B01_F"/>
+			</on>
+			<on time="3000">
+				<play_sound type="SOUND" range="-1" sound="B02_S01"/>
+				<give_item id="-300" count="1250"/>
+			</on>
+			<on time="3120">
+				<play_sound type="SOUND" range="-1" sound="B03_F"/>
+			</on>
+			<on time="3240">
+				<play_sound type="SOUND" range="-1" sound="B04_F"/>
+			</on>
+			<on time="3300">
+				<give_item id="-300" count="1250"/>
+			</on>
+			<on time="3360">
+				<play_sound type="SOUND" range="-1" sound="B01_S01"/>
+			</on>
+			<on time="3480">
+				<play_sound type="SOUND" range="-1" sound="B02_F"/>
+			</on>
+			<on time="3600">
+				<play_sound type="SOUND" range="-1" sound="B03_S02"/>
+				<give_item id="-300" count="1250"/>
+			</on>
+			<on time="3720">
+				<play_sound type="SOUND" range="-1" sound="B04_S01"/>
+			</on>
+			<on time="3840">
+				<play_sound type="SOUND" range="-1" sound="B01_S02"/>
+			</on>
+			<on time="3900">
+				<give_item id="-300" count="1250"/>
+			</on>
+			<on time="3960">
+				<play_sound type="SOUND" range="-1" sound="B02_S02"/>
+			</on>
+			<on time="4080">
+				<play_sound type="SOUND" range="-1" sound="B03_S01"/>
+			</on>
+			<on time="4200">
+				<play_sound type="SOUND" range="-1" sound="B04_S02"/>
+				<give_item id="-300" count="1250"/>
+			</on>
+			<on time="4320">
+				<play_sound type="SOUND" range="-1" sound="B01_F"/>
+			</on>
+			<on time="4440">
+				<play_sound type="SOUND" range="-1" sound="B02_S01"/>
+			</on>
+			<on time="4500">
+				<give_item id="-300" count="1250"/>
+			</on>
+			<on time="4560">
+				<play_sound type="SOUND" range="-1" sound="B03_F"/>
+			</on>
+			<on time="4680">
+				<play_sound type="SOUND" range="-1" sound="B04_F"/>
+			</on>
+			<on time="4800">
+				<play_sound type="SOUND" range="-1" sound="B01_S01"/>
+				<give_item id="-300" count="1250"/>
+			</on>
+			<on time="4920">
+				<play_sound type="SOUND" range="-1" sound="B02_F"/>
+			</on>
+			<on time="5040">
+				<play_sound type="SOUND" range="-1" sound="B03_S02"/>
+			</on>
+			<on time="5100">
+				<give_item id="-300" count="1250"/>
+			</on>
+			<on time="5160">
+				<play_sound type="SOUND" range="-1" sound="B04_S01"/>
+			</on>
+			<on time="5280">
+				<play_sound type="SOUND" range="-1" sound="B01_S02"/>
+			</on>
+			<on time="5400">
+				<announce val="1800"/>
+				<play_sound type="SOUND" range="-1" sound="B02_S02"/>
+				<give_item id="-300" count="1250"/>
+			</on>
+			<on time="5520">
+				<play_sound type="SOUND" range="-1" sound="B03_S01"/>
+			</on>
+			<on time="5640">
+				<play_sound type="SOUND" range="-1" sound="B04_S02"/>
+			</on>
+			<on time="5700">
+				<give_item id="-300" count="1250"/>
+			</on>
+			<on time="5760">
+				<play_sound type="SOUND" range="-1" sound="B01_F"/>
+			</on>
+			<on time="5880">
+				<play_sound type="SOUND" range="-1" sound="B02_S01"/>
+			</on>
+			<on time="6000">
+				<play_sound type="SOUND" range="-1" sound="B03_F"/>
+				<give_item id="-300" count="1250"/>
+			</on>
+			<on time="6120">
+				<play_sound type="SOUND" range="-1" sound="B04_F"/>
+			</on>
+			<on time="6240">
+				<play_sound type="SOUND" range="-1" sound="B01_S01"/>
+			</on>
+			<on time="6300">
+				<give_item id="-300" count="1250"/>
+			</on>
+			<on time="6360">
+				<play_sound type="SOUND" range="-1" sound="B02_F"/>
+			</on>
+			<on time="6480">
+				<play_sound type="SOUND" range="-1" sound="B03_S02"/>
+			</on>
+			<on time="6600">
+				<announce val="600"/>
+				<play_sound type="SOUND" range="-1" sound="B04_S01"/>
+				<give_item id="-300" count="1250"/>
+			</on>
+			<on time="6720">
+				<play_sound type="SOUND" range="-1" sound="B01_S02"/>
+			</on>
+			<on time="6840">
+				<play_sound type="SOUND" range="-1" sound="B02_S02"/>
+			</on>
+			<on time="6900">
+				<give_item id="-300" count="1250"/>
+				<announce val="300"/>
+			</on>
+			<on time="6960">
+				<play_sound type="SOUND" range="-1" sound="B03_S01"/>
+			</on>
+			<on time="7080">
+				<play_sound type="SOUND" range="-1" sound="B04_S02"/>
+			</on>
+			<on time="7140">
+				<announce val="60"/>  <!--1 Minute to siege end-->
+			</on>
+			<on time="7170">
+				<announce val="30"/>  <!--30 Seconds to siege end-->
+			</on>
+			<on time="7190">
+				<announce val="10"/>  <!--10 Seconds to siege end-->
+			</on>
+			<on time="7195">
+				<announce val="5"/>  <!--5 Seconds to siege end-->
+			</on>
+			<on time="7196">
+				<announce val="4"/>  <!--4 Seconds to siege end-->
+			</on>
+			<on time="7197">
+				<announce val="3"/>  <!--3 Seconds to siege end-->
+			</on>
+			<on time="7198">
+				<announce val="2"/>  <!--2 Seconds to siege end-->
+			</on>
+			<on time="7199">
+				<announce val="1"/>  <!--1 Seconds to siege end-->
+			</on>
+			<on time="7200">
+				<stop name="event"/>
+			</on>
+		</on_time>
+		<objects name="castle_peace_npcs">
+			<spawn_ex name="giran_castle_3"/>
+		</objects>
+		<objects name="castle_peace_light_npcs">
+			<spawn_ex name="giran_castle_light_side"/>
+		</objects>
+		<objects name="castle_peace_dark_npcs">
+			<spawn_ex name="giran_castle_dark_side"/>
+		</objects>
+		<objects name="artefact">
+			<spawn_ex name="giran_castle_siege_artefact"/>
+		</objects>
+		<objects name="guards">
+			<spawn_ex name="giran_castle_siege"/>
+		</objects>
+		<objects name="doors">
+			<door id="23220001"/>
+			<door id="23220002"/>
+			<door id="23220003"/>
+			<door id="23220004"/>
+			<door id="23220005"/>
+			<door id="23220006"/>
+			<door id="23220007"/>
+			<door id="23220008"/>
+			<door id="23220009"/>
+		</objects>
+		<objects name="control_towers_peace">
+			<spawn_npc id="13003" x="113115" y="144829" z="-2446"/>
+			<spawn_npc id="13003" x="118828" y="145106" z="-2447"/>
+			<spawn_npc id="13003" x="117329" y="145041" z="-2412"/>
+			<spawn_npc id="13005" x="118331" y="145055" z="-2627"/>
+			<spawn_npc id="13005" x="117768" y="143880" z="-2451"/>
+		</objects>
+		<objects name="control_towers">
+			<siege_toggle_npc id="13002" fake_id="13003" x="113115" y="144829" z="-2446" hp="100000"/>
+			<siege_toggle_npc id="13002" fake_id="13003" x="118828" y="145106" z="-2447" hp="100000"/>
+			<siege_toggle_npc id="13002" fake_id="13003" x="117329" y="145041" z="-2412" hp="100000"/>
+		</objects>
+		<objects name="flame_towers">
+			<siege_toggle_npc id="13004" fake_id="13005" x="118331" y="145055" z="-2627" hp="100000">
+				<objects name="zone_1"/>
+			</siege_toggle_npc>
+			<siege_toggle_npc id="13004" fake_id="13005" x="117768" y="143880" z="-2451" hp="100000">
+				<objects name="zone_2"/>
+			</siege_toggle_npc>
+		</objects>
+		<objects name="zone_1">
+			<castle_zone name="[giran_damage_1]" price="3000000"/>
+		</objects>
+		<objects name="zone_2">
+			<castle_zone name="[giran_damage_2]" price="3000000"/>
+		</objects>
+		<objects name="siege_zones">
+			<zone name="[giran_castle_siege]"/>
+		</objects>
+		<objects name="mass_gatekeeper">
+			<spawn_ex name="giran_castle_mass_gatekeeper"/>
+		</objects>
+		<objects name="flag_zones">
+			<zone name="[giran_castle_hq]"/>
+		</objects>
+	</event>
+</list>

@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<territory name="aden10_2420_40">
+		<add x="156128" y="65648" zmin="-3820" zmax="-3320"/>
+		<add x="159360" y="65660" zmin="-3820" zmax="-3320"/>
+		<add x="159932" y="67744" zmin="-3820" zmax="-3320"/>
+		<add x="158760" y="68716" zmin="-3820" zmax="-3320"/>
+		<add x="156328" y="67776" zmin="-3820" zmax="-3320"/>
+	</territory>
+	<spawn name="aden10_2420_40" count="3" respawn="23">
+		<territory name="aden10_2420_40"/>
+		<npc id="20636"/><!--Призрак Леса Зеркал-->
+	</spawn>
+	<spawn name="aden10_2420_40" count="2" respawn="23">
+		<territory name="aden10_2420_40"/>
+		<npc id="20637"/><!--Призрак Леса Зеркал-->
+	</spawn>
+	<spawn name="aden10_2420_40" count="3" respawn="23">
+		<territory name="aden10_2420_40"/>
+		<npc id="20638"/><!--Призрак Леса Зеркал-->
+	</spawn>
+	<spawn name="aden10_2420_40" count="2" respawn="23">
+		<territory name="aden10_2420_40"/>
+		<npc id="20639"/><!--Зеркало-->
+	</spawn>
+	<territory name="aden10_2420_41">
+		<add x="151800" y="65696" zmin="-3760" zmax="-3260"/>
+		<add x="155944" y="65660" zmin="-3760" zmax="-3260"/>
+		<add x="156140" y="67836" zmin="-3760" zmax="-3260"/>
+		<add x="154896" y="70016" zmin="-3760" zmax="-3260"/>
+		<add x="151736" y="69652" zmin="-3760" zmax="-3260"/>
+	</territory>
+	<spawn name="aden10_2420_41" count="3" respawn="23">
+		<territory name="aden10_2420_41"/>
+		<npc id="20633"/><!--Шаман Орков Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_41" count="3" respawn="23">
+		<territory name="aden10_2420_41"/>
+		<npc id="20634"/><!--Главный Воин Орков Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_41" count="3" respawn="23">
+		<territory name="aden10_2420_41"/>
+		<npc id="20635"/><!--Каринкайн-->
+	</spawn>
+	<territory name="aden10_2420_43">
+		<add x="143244" y="65740" zmin="-3812" zmax="-3412"/>
+		<add x="145816" y="65728" zmin="-3812" zmax="-3412"/>
+		<add x="147496" y="70304" zmin="-3812" zmax="-3412"/>
+		<add x="142288" y="70272" zmin="-3812" zmax="-3412"/>
+		<add x="141124" y="69472" zmin="-3812" zmax="-3412"/>
+		<add x="141236" y="67504" zmin="-3812" zmax="-3412"/>
+	</territory>
+	<spawn name="aden10_2420_43" count="1" respawn="23">
+		<territory name="aden10_2420_43"/>
+		<npc id="20630"/><!--Орк Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_43" count="2" respawn="23">
+		<territory name="aden10_2420_43"/>
+		<npc id="20631"/><!--Стрелок Орков Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_43" count="1" respawn="23">
+		<territory name="aden10_2420_43"/>
+		<npc id="20632"/><!--Воин Орков Тайк-->
+	</spawn>
+	<territory name="aden10_2420_06">
+		<add x="142284" y="73384" zmin="-3376" zmax="-2776"/>
+		<add x="145200" y="72988" zmin="-3376" zmax="-2776"/>
+		<add x="146580" y="73440" zmin="-3376" zmax="-2776"/>
+		<add x="146800" y="75192" zmin="-3376" zmax="-2776"/>
+		<add x="145444" y="76620" zmin="-3376" zmax="-2776"/>
+		<add x="142876" y="75752" zmin="-3376" zmax="-2776"/>
+	</territory>
+	<spawn name="aden10_2420_06" count="3" respawn="23">
+		<territory name="aden10_2420_06"/>
+		<npc id="20633"/><!--Шаман Орков Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_06" count="3" respawn="23">
+		<territory name="aden10_2420_06"/>
+		<npc id="20634"/><!--Главный Воин Орков Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_06" count="3" respawn="23">
+		<territory name="aden10_2420_06"/>
+		<npc id="20635"/><!--Каринкайн-->
+	</spawn>
+	<territory name="aden10_2420_05">
+		<add x="138876" y="73236" zmin="-3732" zmax="-2832"/>
+		<add x="141140" y="73288" zmin="-3732" zmax="-2832"/>
+		<add x="141388" y="77764" zmin="-3732" zmax="-2832"/>
+		<add x="135748" y="75136" zmin="-3732" zmax="-2832"/>
+	</territory>
+	<spawn name="aden10_2420_05" count="3" respawn="23">
+		<territory name="aden10_2420_05"/>
+		<npc id="20630"/><!--Орк Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_05" count="3" respawn="23">
+		<territory name="aden10_2420_05"/>
+		<npc id="20631"/><!--Стрелок Орков Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_05" count="3" respawn="23">
+		<territory name="aden10_2420_05"/>
+		<npc id="20632"/><!--Воин Орков Тайк-->
+	</spawn>
+	<territory name="aden10_2420_08">
+		<add x="148856" y="72504" zmin="-3500" zmax="-2900"/>
+		<add x="151304" y="72768" zmin="-3500" zmax="-2900"/>
+		<add x="153356" y="74008" zmin="-3500" zmax="-2900"/>
+		<add x="152272" y="76072" zmin="-3500" zmax="-2900"/>
+		<add x="149644" y="77064" zmin="-3500" zmax="-2900"/>
+		<add x="147816" y="75940" zmin="-3500" zmax="-2900"/>
+		<add x="147696" y="73444" zmin="-3500" zmax="-2900"/>
+	</territory>
+	<spawn name="aden10_2420_08" count="4" respawn="23">
+		<territory name="aden10_2420_08"/>
+		<npc id="20633"/><!--Шаман Орков Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_08" count="4" respawn="23">
+		<territory name="aden10_2420_08"/>
+		<npc id="20634"/><!--Главный Воин Орков Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_08" count="4" respawn="23">
+		<territory name="aden10_2420_08"/>
+		<npc id="20635"/><!--Каринкайн-->
+	</spawn>
+	<territory name="aden10_2420_07">
+		<add x="146860" y="75300" zmin="-3368" zmax="-2768"/>
+		<add x="149624" y="77104" zmin="-3368" zmax="-2768"/>
+		<add x="148824" y="78660" zmin="-3368" zmax="-2768"/>
+		<add x="147968" y="78744" zmin="-3368" zmax="-2768"/>
+		<add x="146348" y="78224" zmin="-3368" zmax="-2768"/>
+		<add x="145388" y="76728" zmin="-3368" zmax="-2768"/>
+	</territory>
+	<spawn name="aden10_2420_07" count="3" respawn="23">
+		<territory name="aden10_2420_07"/>
+		<npc id="20633"/><!--Шаман Орков Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_07" count="2" respawn="23">
+		<territory name="aden10_2420_07"/>
+		<npc id="20634"/><!--Главный Воин Орков Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_07" count="2" respawn="23">
+		<territory name="aden10_2420_07"/>
+		<npc id="20635"/><!--Каринкайн-->
+	</spawn>
+	<spawn name="aden10_2420_09" count="1" respawn="23">
+		<territory>
+			<add x="148884" y="73132" zmin="-3476" zmax="-3076"/>
+			<add x="150632" y="73256" zmin="-3476" zmax="-3076"/>
+			<add x="149204" y="75808" zmin="-3476" zmax="-3076"/>
+			<add x="148352" y="74836" zmin="-3476" zmax="-3076"/>
+		</territory>
+		<npc id="20633"/><!--Шаман Орков Тайк-->
+	</spawn>
+	<territory name="aden10_2420_02">
+		<add x="131180" y="65640" zmin="-3792" zmax="-3392"/>
+		<add x="135812" y="65632" zmin="-3792" zmax="-3392"/>
+		<add x="136428" y="67028" zmin="-3792" zmax="-3392"/>
+		<add x="132616" y="68964" zmin="-3792" zmax="-3392"/>
+		<add x="131164" y="68040" zmin="-3792" zmax="-3392"/>
+	</territory>
+	<spawn name="aden10_2420_02" count="3" respawn="23">
+		<territory name="aden10_2420_02"/>
+		<npc id="20630"/><!--Орк Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_02" count="3" respawn="23">
+		<territory name="aden10_2420_02"/>
+		<npc id="20631"/><!--Стрелок Орков Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_02" count="3" respawn="23">
+		<territory name="aden10_2420_02"/>
+		<npc id="20632"/><!--Воин Орков Тайк-->
+	</spawn>
+	<territory name="aden10_2420_01">
+		<add x="136548" y="65624" zmin="-3780" zmax="-3380"/>
+		<add x="140412" y="65640" zmin="-3780" zmax="-3380"/>
+		<add x="139048" y="67440" zmin="-3780" zmax="-3380"/>
+		<add x="138004" y="67432" zmin="-3780" zmax="-3380"/>
+		<add x="136692" y="66268" zmin="-3780" zmax="-3380"/>
+	</territory>
+	<spawn name="aden10_2420_01" count="2" respawn="23">
+		<territory name="aden10_2420_01"/>
+		<npc id="20630"/><!--Орк Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_01" count="1" respawn="23">
+		<territory name="aden10_2420_01"/>
+		<npc id="20631"/><!--Стрелок Орков Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_01" count="1" respawn="23">
+		<territory name="aden10_2420_01"/>
+		<npc id="20632"/><!--Воин Орков Тайк-->
+	</spawn>
+	<territory name="aden10_2420_04">
+		<add x="134684" y="72980" zmin="-3728" zmax="-3028"/>
+		<add x="135976" y="71264" zmin="-3728" zmax="-3028"/>
+		<add x="137284" y="71652" zmin="-3728" zmax="-3028"/>
+		<add x="138824" y="73148" zmin="-3728" zmax="-3028"/>
+		<add x="135704" y="75096" zmin="-3728" zmax="-3028"/>
+		<add x="134800" y="74100" zmin="-3728" zmax="-3028"/>
+	</territory>
+	<spawn name="aden10_2420_04" count="3" respawn="23">
+		<territory name="aden10_2420_04"/>
+		<npc id="20630"/><!--Орк Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_04" count="2" respawn="23">
+		<territory name="aden10_2420_04"/>
+		<npc id="20631"/><!--Стрелок Орков Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_04" count="3" respawn="23">
+		<territory name="aden10_2420_04"/>
+		<npc id="20632"/><!--Воин Орков Тайк-->
+	</spawn>
+	<territory name="aden10_2420_03">
+		<add x="132524" y="69020" zmin="-3732" zmax="-3332"/>
+		<add x="136736" y="66912" zmin="-3732" zmax="-3332"/>
+		<add x="137608" y="67744" zmin="-3732" zmax="-3332"/>
+		<add x="137592" y="69460" zmin="-3732" zmax="-3332"/>
+		<add x="136916" y="70500" zmin="-3732" zmax="-3332"/>
+		<add x="134800" y="71124" zmin="-3732" zmax="-3332"/>
+	</territory>
+	<spawn name="aden10_2420_03" count="3" respawn="23">
+		<territory name="aden10_2420_03"/>
+		<npc id="20630"/><!--Орк Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_03" count="2" respawn="23">
+		<territory name="aden10_2420_03"/>
+		<npc id="20631"/><!--Стрелок Орков Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_03" count="2" respawn="23">
+		<territory name="aden10_2420_03"/>
+		<npc id="20632"/><!--Воин Орков Тайк-->
+	</spawn>
+	<territory name="aden10_2420_17">
+		<add x="139200" y="87224" zmin="-3604" zmax="-2804"/>
+		<add x="141048" y="87924" zmin="-3604" zmax="-2804"/>
+		<add x="140608" y="89056" zmin="-3604" zmax="-2804"/>
+		<add x="138908" y="90352" zmin="-3604" zmax="-2804"/>
+	</territory>
+	<spawn name="aden10_2420_17" count="1" respawn="23">
+		<territory name="aden10_2420_17"/>
+		<npc id="20636"/><!--Призрак Леса Зеркал-->
+	</spawn>
+	<spawn name="aden10_2420_17" count="1" respawn="23">
+		<territory name="aden10_2420_17"/>
+		<npc id="20637"/><!--Призрак Леса Зеркал-->
+	</spawn>
+	<spawn name="aden10_2420_17" count="1" respawn="23">
+		<territory name="aden10_2420_17"/>
+		<npc id="20638"/><!--Призрак Леса Зеркал-->
+	</spawn>
+	<spawn name="aden10_2420_17" count="1" respawn="23">
+		<territory name="aden10_2420_17"/>
+		<npc id="20639"/><!--Зеркало-->
+	</spawn>
+	<territory name="aden10_2420_16">
+		<add x="139988" y="83808" zmin="-3552" zmax="-3152"/>
+		<add x="141000" y="85340" zmin="-3552" zmax="-3152"/>
+		<add x="141120" y="87848" zmin="-3552" zmax="-3152"/>
+		<add x="139152" y="87048" zmin="-3552" zmax="-3152"/>
+		<add x="137972" y="85028" zmin="-3552" zmax="-3152"/>
+		<add x="138720" y="84040" zmin="-3552" zmax="-3152"/>
+	</territory>
+	<spawn name="aden10_2420_16" count="1" respawn="23">
+		<territory name="aden10_2420_16"/>
+		<npc id="20636"/><!--Призрак Леса Зеркал-->
+	</spawn>
+	<spawn name="aden10_2420_16" count="1" respawn="23">
+		<territory name="aden10_2420_16"/>
+		<npc id="20637"/><!--Призрак Леса Зеркал-->
+	</spawn>
+	<spawn name="aden10_2420_16" count="1" respawn="23">
+		<territory name="aden10_2420_16"/>
+		<npc id="20638"/><!--Призрак Леса Зеркал-->
+	</spawn>
+	<spawn name="aden10_2420_16" count="1" respawn="23">
+		<territory name="aden10_2420_16"/>
+		<npc id="20639"/><!--Зеркало-->
+	</spawn>
+	<territory name="aden10_2420_19">
+		<add x="143064" y="90636" zmin="-3796" zmax="-3296"/>
+		<add x="144572" y="91940" zmin="-3796" zmax="-3296"/>
+		<add x="142284" y="94788" zmin="-3796" zmax="-3296"/>
+		<add x="139168" y="93604" zmin="-3796" zmax="-3296"/>
+		<add x="139284" y="92716" zmin="-3796" zmax="-3296"/>
+		<add x="142228" y="90564" zmin="-3796" zmax="-3296"/>
+	</territory>
+	<spawn name="aden10_2420_19" count="3" respawn="23">
+		<territory name="aden10_2420_19"/>
+		<npc id="20640"/><!--Ящер Харит-->
+	</spawn>
+	<spawn name="aden10_2420_19" count="2" respawn="23">
+		<territory name="aden10_2420_19"/>
+		<npc id="20641"/><!--Воитель Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_19" count="3" respawn="23">
+		<territory name="aden10_2420_19"/>
+		<npc id="20642"/><!--Стрелок Ящеров Харит-->
+	</spawn>
+	<territory name="aden10_2420_18">
+		<add x="133416" y="94356" zmin="-3776" zmax="-3076"/>
+		<add x="138476" y="92484" zmin="-3776" zmax="-3076"/>
+		<add x="139632" y="94328" zmin="-3776" zmax="-3076"/>
+		<add x="139308" y="95060" zmin="-3776" zmax="-3076"/>
+		<add x="135808" y="95352" zmin="-3776" zmax="-3076"/>
+	</territory>
+	<spawn name="aden10_2420_18" count="2" respawn="23">
+		<territory name="aden10_2420_18"/>
+		<npc id="20640"/><!--Ящер Харит-->
+	</spawn>
+	<spawn name="aden10_2420_18" count="2" respawn="23">
+		<territory name="aden10_2420_18"/>
+		<npc id="20641"/><!--Воитель Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_18" count="2" respawn="23">
+		<territory name="aden10_2420_18"/>
+		<npc id="20642"/><!--Стрелок Ящеров Харит-->
+	</spawn>
+	<territory name="aden10_2420_11">
+		<add x="138016" y="76308" zmin="-3676" zmax="-2976"/>
+		<add x="141384" y="77904" zmin="-3676" zmax="-2976"/>
+		<add x="142176" y="78876" zmin="-3676" zmax="-2976"/>
+		<add x="141464" y="80872" zmin="-3676" zmax="-2976"/>
+		<add x="139012" y="82608" zmin="-3676" zmax="-2976"/>
+	</territory>
+	<spawn name="aden10_2420_11" count="3" respawn="23">
+		<territory name="aden10_2420_11"/>
+		<npc id="20633"/><!--Шаман Орков Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_11" count="3" respawn="23">
+		<territory name="aden10_2420_11"/>
+		<npc id="20634"/><!--Главный Воин Орков Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_11" count="4" respawn="23">
+		<territory name="aden10_2420_11"/>
+		<npc id="20635"/><!--Каринкайн-->
+	</spawn>
+	<territory name="aden10_2420_10">
+		<add x="143848" y="77292" zmin="-3688" zmax="-2488"/>
+		<add x="145268" y="77780" zmin="-3688" zmax="-2488"/>
+		<add x="147004" y="79848" zmin="-3688" zmax="-2488"/>
+		<add x="143720" y="82568" zmin="-3688" zmax="-2488"/>
+		<add x="142920" y="80272" zmin="-3688" zmax="-2488"/>
+	</territory>
+	<spawn name="aden10_2420_10" count="3" respawn="23">
+		<territory name="aden10_2420_10"/>
+		<npc id="20633"/><!--Шаман Орков Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_10" count="3" respawn="23">
+		<territory name="aden10_2420_10"/>
+		<npc id="20634"/><!--Главный Воин Орков Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_10" count="3" respawn="23">
+		<territory name="aden10_2420_10"/>
+		<npc id="20635"/><!--Каринкайн-->
+	</spawn>
+	<territory name="aden10_2420_13">
+		<add x="134928" y="81140" zmin="-3704" zmax="-3004"/>
+		<add x="138768" y="81292" zmin="-3704" zmax="-3004"/>
+		<add x="136904" y="84532" zmin="-3704" zmax="-3004"/>
+		<add x="134152" y="85084" zmin="-3704" zmax="-3004"/>
+	</territory>
+	<spawn name="aden10_2420_13" count="2" respawn="23">
+		<territory name="aden10_2420_13"/>
+		<npc id="20636"/><!--Призрак Леса Зеркал-->
+	</spawn>
+	<spawn name="aden10_2420_13" count="2" respawn="23">
+		<territory name="aden10_2420_13"/>
+		<npc id="20637"/><!--Призрак Леса Зеркал-->
+	</spawn>
+	<spawn name="aden10_2420_13" count="2" respawn="23">
+		<territory name="aden10_2420_13"/>
+		<npc id="20638"/><!--Призрак Леса Зеркал-->
+	</spawn>
+	<spawn name="aden10_2420_13" count="2" respawn="23">
+		<territory name="aden10_2420_13"/>
+		<npc id="20639"/><!--Зеркало-->
+	</spawn>
+	<territory name="aden10_2420_12">
+		<add x="135728" y="75256" zmin="-3772" zmax="-2872"/>
+		<add x="137864" y="76280" zmin="-3772" zmax="-2872"/>
+		<add x="138208" y="78196" zmin="-3772" zmax="-2872"/>
+		<add x="134868" y="78376" zmin="-3772" zmax="-2872"/>
+		<add x="134888" y="76540" zmin="-3772" zmax="-2872"/>
+	</territory>
+	<spawn name="aden10_2420_12" count="2" respawn="23">
+		<territory name="aden10_2420_12"/>
+		<npc id="20633"/><!--Шаман Орков Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_12" count="3" respawn="23">
+		<territory name="aden10_2420_12"/>
+		<npc id="20634"/><!--Главный Воин Орков Тайк-->
+	</spawn>
+	<spawn name="aden10_2420_12" count="2" respawn="23">
+		<territory name="aden10_2420_12"/>
+		<npc id="20635"/><!--Каринкайн-->
+	</spawn>
+	<territory name="aden10_2420_15">
+		<add x="134320" y="89772" zmin="-3776" zmax="-2976"/>
+		<add x="136936" y="89772" zmin="-3776" zmax="-2976"/>
+		<add x="136720" y="91100" zmin="-3776" zmax="-2976"/>
+		<add x="135868" y="92256" zmin="-3776" zmax="-2976"/>
+		<add x="134452" y="91688" zmin="-3776" zmax="-2976"/>
+	</territory>
+	<spawn name="aden10_2420_15" count="1" respawn="23">
+		<territory name="aden10_2420_15"/>
+		<npc id="20636"/><!--Призрак Леса Зеркал-->
+	</spawn>
+	<spawn name="aden10_2420_15" count="1" respawn="23">
+		<territory name="aden10_2420_15"/>
+		<npc id="20637"/><!--Призрак Леса Зеркал-->
+	</spawn>
+	<spawn name="aden10_2420_15" count="1" respawn="23">
+		<territory name="aden10_2420_15"/>
+		<npc id="20638"/><!--Призрак Леса Зеркал-->
+	</spawn>
+	<spawn name="aden10_2420_15" count="1" respawn="23">
+		<territory name="aden10_2420_15"/>
+		<npc id="20639"/><!--Зеркало-->
+	</spawn>
+	<territory name="aden10_2420_14">
+		<add x="134432" y="85124" zmin="-3736" zmax="-2736"/>
+		<add x="136600" y="84692" zmin="-3736" zmax="-2736"/>
+		<add x="137856" y="86760" zmin="-3736" zmax="-2736"/>
+		<add x="138068" y="88144" zmin="-3736" zmax="-2736"/>
+		<add x="137356" y="89640" zmin="-3736" zmax="-2736"/>
+		<add x="134300" y="89648" zmin="-3736" zmax="-2736"/>
+		<add x="133340" y="88188" zmin="-3736" zmax="-2736"/>
+		<add x="133500" y="85880" zmin="-3736" zmax="-2736"/>
+	</territory>
+	<spawn name="aden10_2420_14" count="3" respawn="23">
+		<territory name="aden10_2420_14"/>
+		<npc id="20636"/><!--Призрак Леса Зеркал-->
+	</spawn>
+	<spawn name="aden10_2420_14" count="2" respawn="23">
+		<territory name="aden10_2420_14"/>
+		<npc id="20637"/><!--Призрак Леса Зеркал-->
+	</spawn>
+	<spawn name="aden10_2420_14" count="3" respawn="23">
+		<territory name="aden10_2420_14"/>
+		<npc id="20638"/><!--Призрак Леса Зеркал-->
+	</spawn>
+	<spawn name="aden10_2420_14" count="3" respawn="23">
+		<territory name="aden10_2420_14"/>
+		<npc id="20639"/><!--Зеркало-->
+	</spawn>
+	<territory name="aden10_2420_28">
+		<add x="149880" y="85036" zmin="-3728" zmax="-2928"/>
+		<add x="153236" y="84384" zmin="-3728" zmax="-2928"/>
+		<add x="154168" y="86164" zmin="-3728" zmax="-2928"/>
+		<add x="150788" y="88648" zmin="-3728" zmax="-2928"/>
+		<add x="149688" y="86312" zmin="-3728" zmax="-2928"/>
+	</territory>
+	<spawn name="aden10_2420_28" count="3" respawn="23">
+		<territory name="aden10_2420_28"/>
+		<npc id="20640"/><!--Ящер Харит-->
+	</spawn>
+	<spawn name="aden10_2420_28" count="3" respawn="23">
+		<territory name="aden10_2420_28"/>
+		<npc id="20641"/><!--Воитель Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_28" count="2" respawn="23">
+		<territory name="aden10_2420_28"/>
+		<npc id="20642"/><!--Стрелок Ящеров Харит-->
+	</spawn>
+	<territory name="aden10_2420_27">
+		<add x="147960" y="81672" zmin="-3624" zmax="-3024"/>
+		<add x="152880" y="79876" zmin="-3624" zmax="-3024"/>
+		<add x="152372" y="84300" zmin="-3624" zmax="-3024"/>
+		<add x="149332" y="85080" zmin="-3624" zmax="-3024"/>
+	</territory>
+	<spawn name="aden10_2420_27" count="4" respawn="23">
+		<territory name="aden10_2420_27"/>
+		<npc id="20640"/><!--Ящер Харит-->
+	</spawn>
+	<spawn name="aden10_2420_27" count="4" respawn="23">
+		<territory name="aden10_2420_27"/>
+		<npc id="20641"/><!--Воитель Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_27" count="3" respawn="23">
+		<territory name="aden10_2420_27"/>
+		<npc id="20642"/><!--Стрелок Ящеров Харит-->
+	</spawn>
+	<territory name="aden10_2420_29">
+		<add x="153572" y="79544" zmin="-3248" zmax="-2848"/>
+		<add x="156420" y="76616" zmin="-3248" zmax="-2848"/>
+		<add x="159240" y="78748" zmin="-3248" zmax="-2848"/>
+		<add x="154012" y="83452" zmin="-3248" zmax="-2848"/>
+	</territory>
+	<spawn name="aden10_2420_29" count="4" respawn="23">
+		<territory name="aden10_2420_29"/>
+		<npc id="20643"/><!--Воин Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_29" count="5" respawn="23">
+		<territory name="aden10_2420_29"/>
+		<npc id="20644"/><!--Шаман Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_29" count="5" respawn="23">
+		<territory name="aden10_2420_29"/>
+		<npc id="20645"/><!--Вождь Ящеров Харит-->
+	</spawn>
+	<territory name="aden10_2420_20">
+		<add x="144588" y="91952" zmin="-3784" zmax="-3284"/>
+		<add x="147292" y="93016" zmin="-3784" zmax="-3284"/>
+		<add x="145564" y="94352" zmin="-3784" zmax="-3284"/>
+		<add x="142216" y="94888" zmin="-3784" zmax="-3284"/>
+	</territory>
+	<spawn name="aden10_2420_20" count="2" respawn="23">
+		<territory name="aden10_2420_20"/>
+		<npc id="20643"/><!--Воин Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_20" count="1" respawn="23">
+		<territory name="aden10_2420_20"/>
+		<npc id="20644"/><!--Шаман Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_20" count="2" respawn="23">
+		<territory name="aden10_2420_20"/>
+		<npc id="20645"/><!--Вождь Ящеров Харит-->
+	</spawn>
+	<territory name="aden10_2420_22">
+		<add x="154212" y="91064" zmin="-3780" zmax="-3080"/>
+		<add x="155000" y="89924" zmin="-3780" zmax="-3080"/>
+		<add x="156672" y="91268" zmin="-3780" zmax="-3080"/>
+		<add x="158168" y="92932" zmin="-3780" zmax="-3080"/>
+		<add x="158756" y="94952" zmin="-3780" zmax="-3080"/>
+		<add x="157716" y="95748" zmin="-3780" zmax="-3080"/>
+		<add x="154200" y="93072" zmin="-3780" zmax="-3080"/>
+	</territory>
+	<spawn name="aden10_2420_22" count="3" respawn="23">
+		<territory name="aden10_2420_22"/>
+		<npc id="20643"/><!--Воин Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_22" count="3" respawn="23">
+		<territory name="aden10_2420_22"/>
+		<npc id="20644"/><!--Шаман Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_22" count="3" respawn="23">
+		<territory name="aden10_2420_22"/>
+		<npc id="20645"/><!--Вождь Ящеров Харит-->
+	</spawn>
+	<territory name="aden10_2420_21">
+		<add x="151996" y="91236" zmin="-3764" zmax="-3264"/>
+		<add x="154152" y="91024" zmin="-3764" zmax="-3264"/>
+		<add x="154140" y="93108" zmin="-3764" zmax="-3264"/>
+		<add x="151532" y="94388" zmin="-3764" zmax="-3264"/>
+		<add x="148824" y="93192" zmin="-3764" zmax="-3264"/>
+	</territory>
+	<spawn name="aden10_2420_21" count="2" respawn="23">
+		<territory name="aden10_2420_21"/>
+		<npc id="20643"/><!--Воин Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_21" count="3" respawn="23">
+		<territory name="aden10_2420_21"/>
+		<npc id="20644"/><!--Шаман Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_21" count="2" respawn="23">
+		<territory name="aden10_2420_21"/>
+		<npc id="20645"/><!--Вождь Ящеров Харит-->
+	</spawn>
+	<territory name="aden10_2420_24">
+		<add x="158648" y="91700" zmin="-3560" zmax="-3060"/>
+		<add x="160608" y="90540" zmin="-3560" zmax="-3060"/>
+		<add x="162024" y="91880" zmin="-3560" zmax="-3060"/>
+		<add x="162124" y="93144" zmin="-3560" zmax="-3060"/>
+		<add x="160616" y="94452" zmin="-3560" zmax="-3060"/>
+		<add x="158752" y="94728" zmin="-3560" zmax="-3060"/>
+		<add x="158196" y="92840" zmin="-3560" zmax="-3060"/>
+	</territory>
+	<spawn name="aden10_2420_24" count="2" respawn="23">
+		<territory name="aden10_2420_24"/>
+		<npc id="20643"/><!--Воин Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_24" count="2" respawn="23">
+		<territory name="aden10_2420_24"/>
+		<npc id="20644"/><!--Шаман Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_24" count="2" respawn="23">
+		<territory name="aden10_2420_24"/>
+		<npc id="20645"/><!--Вождь Ящеров Харит-->
+	</spawn>
+	<territory name="aden10_2420_23">
+		<add x="156112" y="88676" zmin="-3716" zmax="-3216"/>
+		<add x="157148" y="87864" zmin="-3716" zmax="-3216"/>
+		<add x="158356" y="88160" zmin="-3716" zmax="-3216"/>
+		<add x="160688" y="90256" zmin="-3716" zmax="-3216"/>
+		<add x="158620" y="91604" zmin="-3716" zmax="-3216"/>
+	</territory>
+	<spawn name="aden10_2420_23" count="2" respawn="23">
+		<territory name="aden10_2420_23"/>
+		<npc id="20643"/><!--Воин Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_23" count="2" respawn="23">
+		<territory name="aden10_2420_23"/>
+		<npc id="20644"/><!--Шаман Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_23" count="1" respawn="23">
+		<territory name="aden10_2420_23"/>
+		<npc id="20645"/><!--Вождь Ящеров Харит-->
+	</spawn>
+	<territory name="aden10_2420_26">
+		<add x="145676" y="82904" zmin="-3744" zmax="-3344"/>
+		<add x="147412" y="81740" zmin="-3744" zmax="-3344"/>
+		<add x="147364" y="85724" zmin="-3744" zmax="-3344"/>
+		<add x="146408" y="87520" zmin="-3744" zmax="-3344"/>
+		<add x="144828" y="88860" zmin="-3744" zmax="-3344"/>
+		<add x="143980" y="87632" zmin="-3744" zmax="-3344"/>
+		<add x="143864" y="85048" zmin="-3744" zmax="-3344"/>
+	</territory>
+	<spawn name="aden10_2420_26" count="3" respawn="23">
+		<territory name="aden10_2420_26"/>
+		<npc id="20640"/><!--Ящер Харит-->
+	</spawn>
+	<spawn name="aden10_2420_26" count="3" respawn="23">
+		<territory name="aden10_2420_26"/>
+		<npc id="20641"/><!--Воитель Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_26" count="2" respawn="23">
+		<territory name="aden10_2420_26"/>
+		<npc id="20642"/><!--Стрелок Ящеров Харит-->
+	</spawn>
+	<territory name="aden10_2420_25">
+		<add x="147868" y="86372" zmin="-3692" zmax="-2892"/>
+		<add x="149664" y="86524" zmin="-3692" zmax="-2892"/>
+		<add x="150676" y="88644" zmin="-3692" zmax="-2892"/>
+		<add x="148640" y="90356" zmin="-3692" zmax="-2892"/>
+		<add x="146012" y="89740" zmin="-3692" zmax="-2892"/>
+		<add x="145024" y="88768" zmin="-3692" zmax="-2892"/>
+	</territory>
+	<spawn name="aden10_2420_25" count="3" respawn="23">
+		<territory name="aden10_2420_25"/>
+		<npc id="20640"/><!--Ящер Харит-->
+	</spawn>
+	<spawn name="aden10_2420_25" count="3" respawn="23">
+		<territory name="aden10_2420_25"/>
+		<npc id="20641"/><!--Воитель Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_25" count="2" respawn="23">
+		<territory name="aden10_2420_25"/>
+		<npc id="20642"/><!--Стрелок Ящеров Харит-->
+	</spawn>
+	<territory name="aden10_2420_39">
+		<add x="159464" y="65644" zmin="-3804" zmax="-3404"/>
+		<add x="163576" y="65636" zmin="-3804" zmax="-3404"/>
+		<add x="163544" y="66348" zmin="-3804" zmax="-3404"/>
+		<add x="161368" y="67532" zmin="-3804" zmax="-3404"/>
+		<add x="159976" y="67616" zmin="-3804" zmax="-3404"/>
+	</territory>
+	<spawn name="aden10_2420_39" count="2" respawn="23">
+		<territory name="aden10_2420_39"/>
+		<npc id="20640"/><!--Ящер Харит-->
+	</spawn>
+	<spawn name="aden10_2420_39" count="2" respawn="23">
+		<territory name="aden10_2420_39"/>
+		<npc id="20641"/><!--Воитель Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_39" count="1" respawn="23">
+		<territory name="aden10_2420_39"/>
+		<npc id="20642"/><!--Стрелок Ящеров Харит-->
+	</spawn>
+	<territory name="aden10_2420_38">
+		<add x="156312" y="67804" zmin="-3796" zmax="-3196"/>
+		<add x="159364" y="69144" zmin="-3796" zmax="-3196"/>
+		<add x="159708" y="71588" zmin="-3796" zmax="-3196"/>
+		<add x="156840" y="74448" zmin="-3796" zmax="-3196"/>
+		<add x="154988" y="70332" zmin="-3796" zmax="-3196"/>
+	</territory>
+	<spawn name="aden10_2420_38" count="2" respawn="23">
+		<territory name="aden10_2420_38"/>
+		<npc id="20636"/><!--Призрак Леса Зеркал-->
+	</spawn>
+	<spawn name="aden10_2420_38" count="1" respawn="23">
+		<territory name="aden10_2420_38"/>
+		<npc id="20637"/><!--Призрак Леса Зеркал-->
+	</spawn>
+	<spawn name="aden10_2420_38" count="2" respawn="23">
+		<territory name="aden10_2420_38"/>
+		<npc id="20638"/><!--Призрак Леса Зеркал-->
+	</spawn>
+	<spawn name="aden10_2420_38" count="1" respawn="23">
+		<territory name="aden10_2420_38"/>
+		<npc id="20639"/><!--Зеркало-->
+	</spawn>
+	<territory name="aden10_2420_31">
+		<add x="160456" y="83688" zmin="-2864" zmax="-2464"/>
+		<add x="161740" y="83536" zmin="-2864" zmax="-2464"/>
+		<add x="163504" y="86032" zmin="-2864" zmax="-2464"/>
+		<add x="163536" y="87452" zmin="-2864" zmax="-2464"/>
+		<add x="161856" y="85872" zmin="-2864" zmax="-2464"/>
+	</territory>
+	<spawn name="aden10_2420_31" count="1" respawn="23">
+		<territory name="aden10_2420_31"/>
+		<npc id="20643"/><!--Воин Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_31" count="1" respawn="23">
+		<territory name="aden10_2420_31"/>
+		<npc id="20644"/><!--Шаман Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_31" count="1" respawn="23">
+		<territory name="aden10_2420_31"/>
+		<npc id="20645"/><!--Вождь Ящеров Харит-->
+	</spawn>
+	<territory name="aden10_2420_30">
+		<add x="153992" y="84368" zmin="-3056" zmax="-2656"/>
+		<add x="156952" y="81048" zmin="-3056" zmax="-2656"/>
+		<add x="158028" y="82280" zmin="-3056" zmax="-2656"/>
+		<add x="155268" y="84292" zmin="-3056" zmax="-2656"/>
+	</territory>
+	<spawn name="aden10_2420_30" count="1" respawn="23">
+		<territory name="aden10_2420_30"/>
+		<npc id="20643"/><!--Воин Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_30" count="1" respawn="23">
+		<territory name="aden10_2420_30"/>
+		<npc id="20644"/><!--Шаман Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_30" count="1" respawn="23">
+		<territory name="aden10_2420_30"/>
+		<npc id="20645"/><!--Вождь Ящеров Харит-->
+	</spawn>
+	<territory name="aden10_2420_33">
+		<add x="161940" y="80396" zmin="-2772" zmax="-2372"/>
+		<add x="163616" y="79856" zmin="-2772" zmax="-2372"/>
+		<add x="163568" y="85336" zmin="-2772" zmax="-2372"/>
+		<add x="161760" y="82900" zmin="-2772" zmax="-2372"/>
+	</territory>
+	<spawn name="aden10_2420_33" count="1" respawn="23">
+		<territory name="aden10_2420_33"/>
+		<npc id="20643"/><!--Воин Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_33" count="1" respawn="23">
+		<territory name="aden10_2420_33"/>
+		<npc id="20644"/><!--Шаман Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_33" count="1" respawn="23">
+		<territory name="aden10_2420_33"/>
+		<npc id="20645"/><!--Вождь Ящеров Харит-->
+	</spawn>
+	<territory name="aden10_2420_32">
+		<add x="156952" y="80944" zmin="-3180" zmax="-2580"/>
+		<add x="159284" y="78828" zmin="-3180" zmax="-2580"/>
+		<add x="161872" y="80340" zmin="-3180" zmax="-2580"/>
+		<add x="161672" y="83184" zmin="-3180" zmax="-2580"/>
+		<add x="160116" y="83416" zmin="-3180" zmax="-2580"/>
+		<add x="158256" y="82588" zmin="-3180" zmax="-2580"/>
+	</territory>
+	<spawn name="aden10_2420_32" count="3" respawn="23">
+		<territory name="aden10_2420_32"/>
+		<npc id="20643"/><!--Воин Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_32" count="3" respawn="23">
+		<territory name="aden10_2420_32"/>
+		<npc id="20644"/><!--Шаман Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_32" count="3" respawn="23">
+		<territory name="aden10_2420_32"/>
+		<npc id="20645"/><!--Вождь Ящеров Харит-->
+	</spawn>
+	<territory name="aden10_2420_35">
+		<add x="156952" y="74628" zmin="-3760" zmax="-2960"/>
+		<add x="158556" y="75596" zmin="-3760" zmax="-2960"/>
+		<add x="158316" y="77996" zmin="-3760" zmax="-2960"/>
+		<add x="156360" y="76476" zmin="-3760" zmax="-2960"/>
+	</territory>
+	<spawn name="aden10_2420_35" count="3" respawn="23">
+		<territory name="aden10_2420_35"/>
+		<npc id="20640"/><!--Ящер Харит-->
+	</spawn>
+	<spawn name="aden10_2420_35" count="3" respawn="23">
+		<territory name="aden10_2420_35"/>
+		<npc id="20641"/><!--Воитель Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_35" count="3" respawn="23">
+		<territory name="aden10_2420_35"/>
+		<npc id="20642"/><!--Стрелок Ящеров Харит-->
+	</spawn>
+	<territory name="aden10_2420_34">
+		<add x="159564" y="75468" zmin="-3316" zmax="-2116"/>
+		<add x="163516" y="74276" zmin="-3316" zmax="-2116"/>
+		<add x="163508" y="79704" zmin="-3316" zmax="-2116"/>
+		<add x="161932" y="80260" zmin="-3316" zmax="-2116"/>
+		<add x="159444" y="78752" zmin="-3316" zmax="-2116"/>
+	</territory>
+	<spawn name="aden10_2420_34" count="4" respawn="23">
+		<territory name="aden10_2420_34"/>
+		<npc id="20643"/><!--Воин Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_34" count="4" respawn="23">
+		<territory name="aden10_2420_34"/>
+		<npc id="20644"/><!--Шаман Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_34" count="4" respawn="23">
+		<territory name="aden10_2420_34"/>
+		<npc id="20645"/><!--Вождь Ящеров Харит-->
+	</spawn>
+	<territory name="aden10_2420_37">
+		<add x="160252" y="68212" zmin="-3460" zmax="-3060"/>
+		<add x="163588" y="67688" zmin="-3460" zmax="-3060"/>
+		<add x="163568" y="69848" zmin="-3460" zmax="-3060"/>
+		<add x="162220" y="71404" zmin="-3460" zmax="-3060"/>
+		<add x="159760" y="71664" zmin="-3460" zmax="-3060"/>
+		<add x="159564" y="69136" zmin="-3460" zmax="-3060"/>
+	</territory>
+	<spawn name="aden10_2420_37" count="4" respawn="23">
+		<territory name="aden10_2420_37"/>
+		<npc id="20640"/><!--Ящер Харит-->
+	</spawn>
+	<spawn name="aden10_2420_37" count="4" respawn="23">
+		<territory name="aden10_2420_37"/>
+		<npc id="20641"/><!--Воитель Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_37" count="4" respawn="23">
+		<territory name="aden10_2420_37"/>
+		<npc id="20642"/><!--Стрелок Ящеров Харит-->
+	</spawn>
+	<territory name="aden10_2420_36">
+		<add x="159648" y="71724" zmin="-3740" zmax="-3140"/>
+		<add x="162304" y="71420" zmin="-3740" zmax="-3140"/>
+		<add x="162548" y="73944" zmin="-3740" zmax="-3140"/>
+		<add x="158904" y="74872" zmin="-3740" zmax="-3140"/>
+		<add x="157752" y="74288" zmin="-3740" zmax="-3140"/>
+	</territory>
+	<spawn name="aden10_2420_36" count="3" respawn="23">
+		<territory name="aden10_2420_36"/>
+		<npc id="20640"/><!--Ящер Харит-->
+	</spawn>
+	<spawn name="aden10_2420_36" count="3" respawn="23">
+		<territory name="aden10_2420_36"/>
+		<npc id="20641"/><!--Воитель Ящеров Харит-->
+	</spawn>
+	<spawn name="aden10_2420_36" count="3" respawn="23">
+		<territory name="aden10_2420_36"/>
+		<npc id="20642"/><!--Стрелок Ящеров Харит-->
+	</spawn>
+	<spawn name="aden01_mb2420_03" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="149520" y="67564" zmin="-3804" zmax="-3204"/>
+			<add x="150256" y="67156" zmin="-3804" zmax="-3204"/>
+			<add x="151688" y="67364" zmin="-3804" zmax="-3204"/>
+			<add x="150284" y="68580" zmin="-3804" zmax="-3204"/>
+		</territory>
+		<npc id="25460"/><!--Эрив Вестник-->
+	</spawn>
+	<spawn name="aden10_mb2420_02" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="133280" y="86816" zmin="-3696" zmax="-3096"/>
+			<add x="133928" y="86544" zmin="-3696" zmax="-3096"/>
+			<add x="134068" y="87340" zmin="-3696" zmax="-3096"/>
+			<add x="133236" y="87608" zmin="-3696" zmax="-3096"/>
+		</territory>
+		<npc id="25456"/><!--Зеркало Забвения-->
+	</spawn>
+	<spawn name="aden10_mb2420_01" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="135008" y="94460" zmin="-3844" zmax="-3244"/>
+			<add x="136044" y="93892" zmin="-3844" zmax="-3244"/>
+			<add x="136700" y="94548" zmin="-3844" zmax="-3244"/>
+			<add x="135628" y="95296" zmin="-3844" zmax="-3244"/>
+		</territory>
+		<npc id="25103"/><!--Шаман Исирр-->
+	</spawn>
+</list>

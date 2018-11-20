@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="21240001" name="Giran_Devil_island_S.devil_oj_opendoor" hp="187500" pdef="100000" mdef="10000">
+		<pos x="42001" y="208378" z="-3666"/>
+		<shape ax="41859" ay="208294" bx="41866" by="208284" cx="42009" cy="208376" dx="42003" dy="208386" minz="-3788" maxz="-3540"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="120"/>
+		<set name="random_time" value="30"/>
+		<set name="close_time" value="120"/>
+	</door>
+	<door id="21240002" name="Giran_Devil_island_S.devil_oj_opendoor" hp="187500" pdef="100000" mdef="10000">
+		<pos x="43745" y="212594" z="-3623"/>
+		<shape ax="43740" ay="212432" bx="43751" by="212433" cx="43751" cy="212601" dx="43740" dy="212600" minz="-3743" maxz="-3497"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="120"/>
+		<set name="random_time" value="30"/>
+		<set name="close_time" value="120"/>
+	</door>
+	<door id="21240003" name="Giran_Devil_island_S.devil_ob_door044" hp="187500" pdef="100000" mdef="518">
+		<pos x="42167" y="213285" z="-3643"/>
+		<shape ax="42247" ay="213287" bx="42247" by="213283" cx="42085" cy="213286" dx="42085" dy="213284" minz="-3762" maxz="-3515"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="120"/>
+	</door>
+	<door id="21240006" name="Giran_Devil_island_S.devil_ob_door055" hp="187500" pdef="100000" mdef="518">
+		<pos x="52423" y="219103" z="-3209"/>
+		<!--OFFLIKE. TODO: Исправить движек геодаты. Через 'тонкие' двери можно пройти.
+		<shape ax="52423" ay="219032" bx="52423" by="219032" cx="52423" cy="219174" dx="52423" dy="219174" minz="-3312" maxz="-3067"/>-->
+		<shape ax="52400" ay="219016" bx="52400" by="219192" cx="52432" cy="219016" dx="52432" dy="219192" minz="-3312" maxz="-3067"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="3600"/>
+	</door>
+</list>

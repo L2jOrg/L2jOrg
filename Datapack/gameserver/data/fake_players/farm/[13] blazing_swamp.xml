@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE farm SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<farm name="Blazing Swamp" min_level="69" max_level="79">
+	<zones>
+		<zone>
+			<polygon>
+				<coords loc="150440 -21944 -5000 -1500"/>
+				<coords loc="149048 -24200 -5000 -1500"/>
+				<coords loc="147752 -25112 -5000 -1500"/>
+				<coords loc="145992 -27512 -5000 -1500"/>
+				<coords loc="140840 -25128 -5000 -1500"/>
+				<coords loc="144888 -23848 -5000 -1500"/>
+				<coords loc="145080 -24936 -5000 -1500"/>
+				<coords loc="146360 -24904 -5000 -1500"/>
+				<coords loc="146664 -23928 -5000 -1500"/>
+				<coords loc="146024 -22952 -5000 -1500"/>
+				<coords loc="142456 -22904 -5000 -1500"/>
+				<coords loc="139656 -21064 -5000 -1500"/>
+				<coords loc="140360 -18312 -5000 -1500"/>
+				<coords loc="141480 -17800 -5000 -1500"/>
+				<coords loc="141208 -12424 -5000 -1500"/>
+				<coords loc="142824 -11048 -5000 -1500"/>
+				<coords loc="145016 -10360 -5000 -1500"/>
+				<coords loc="149880 -11352 -5000 -1500"/>
+				<coords loc="149000 -14424 -5000 -1500"/>
+			</polygon>
+		</zone>
+		<spawn_points>
+			<coords loc="148472 -23736 -3248"/>
+		</spawn_points>
+	</zones>
+	<on_obtain_max_level>
+		<action id="1"/>
+	</on_obtain_max_level>
+	<go_to_town min_farm_time="1800" max_farm_time="3600">
+		<action id="1"/>
+	</go_to_town>
+	<action id="1">
+		<wait min_delay="1000" max_delay="3000"/>
+		<use_item id="736"/>
+	</action>
+</farm>

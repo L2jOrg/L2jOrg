@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "fake_item.dtd">
+<list>
+	<category grade="NONE">
+		<weapons>
+			<item id="1"/><!-- Короткий Меч -->
+			<item id="4"/><!-- Дубина -->
+			<item id="11"/><!-- Костяной Кинжал -->
+			<item id="13"/><!-- Короткий Лук -->
+			<item id="3"/><!-- Широкий Меч -->
+			<item id="152"/><!-- Тяжелое Зубило -->
+			<item id="12"/><!-- Нож -->
+			<item id="215"/><!-- Кинжал Рока -->
+			<item id="14"/><!-- Лук -->
+			<item id="5"/><!-- Булава -->
+			<item id="153"/><!-- Серп -->
+			<item id="1333"/><!-- Тренировочный Двуручный Меч -->
+			<item id="66"/><!-- Гладиус -->
+			<item id="67"/><!-- Меч Орков -->
+			<item id="122"/><!-- Кованый Меч -->
+			<item id="154"/><!-- Булава Гномов -->
+			<item id="216"/><!-- Кортик -->
+			<item id="271"/><!-- Охотничий Лук -->
+			<item id="2"/><!-- Длинный Меч -->
+			<item id="218"/><!-- Метательный Нож -->
+			<item id="272"/><!-- Лесной Лук -->
+			<item id="15"/><!-- Короткое Копье -->
+			<item id="5284"/><!-- Цвайхандэр -->
+			<item id="7"/><!-- Жезл Новичка -->
+			<item id="308"/><!-- Рог Буйвола -->
+			<item id="8"/><!-- Ивовый Посох -->
+			<item id="99"/><!-- Книга Ученика -->
+			<item id="9"/><!-- Кедровый Посох -->
+			<item id="176"/><!-- Посох Наемника -->
+			<item id="310"/><!-- Реликвия Святых -->
+			<item id="244"/><!-- Кастет Светлого Воина -->
+			<item id="253"/><!-- Шипованные Перчатки -->
+		</weapons>
+		<armors>
+			<pack type="LIGHT">
+				<item id="23"/><!-- Деревянная Кираса -->
+				<item id="2386"/><!-- Деревянные Набедренники -->
+				<item id="43"/><!-- Деревянный Шлем -->
+			</pack>
+			<pack type="MAGIC">
+				<item id="1101"/><!-- Туника Преданности -->
+				<item id="1104"/><!-- Штаны Преданности -->
+				<item id="44"/><!-- Кожаный Шлем -->
+			</pack>
+		</armors>
+		<accessorys>
+			<pack>
+				<item id="115"/><!-- Серьга Мудрости -->
+				<item id="115"/><!-- Серьга Мудрости -->
+				<item id="877"/><!-- Кольцо Мудрости -->
+				<item id="877"/><!-- Кольцо Мудрости -->
+				<item id="908"/><!-- Ожерелье Мудрости -->
+			</pack>
+		</accessorys>
+	</category>
+	<category grade="D">
+		<weapons>
+			<item id="123"/><!-- Сабля -->
+			<item id="7880"/><!-- Стальной Меч -->
+			<item id="220"/><!-- Кованый Кинжал -->
+			<item id="221"/><!-- Нож Ассасина -->
+			<item id="274"/><!-- Усиленный Лук -->
+			<item id="156"/><!-- Тесак -->
+			<item id="166"/><!-- Тяжелая Булава -->
+			<item id="168"/><!-- Кузнечный Молот -->
+			<item id="291"/><!-- Трезубец -->
+			<item id="69"/><!-- Полуторный Меч -->
+			<item id="126"/><!-- Меч Ремесленника -->
+			<item id="222"/><!-- Трехгранный Кинжал -->
+			<item id="275"/><!-- Длинный Лук -->
+			<item id="276"/><!-- Эльфийский Лук -->
+			<item id="277"/><!-- Лук Темных Эльфов -->
+			<item id="86"/><!-- Томагавк -->
+			<item id="292"/><!-- Гизарма -->
+			<item id="295"/><!-- Трезубец Гномов -->
+			<item id="124"/><!-- Двуручный Меч -->
+			<item id="127"/><!-- Багровый Меч -->
+			<item id="130"/><!-- Меч Эльфов -->
+			<item id="223"/><!-- Кукри -->
+			<item id="278"/><!-- Гастрафет -->
+			<item id="157"/><!-- Шипованная Дубина -->
+			<item id="293"/><!-- Молот Войны -->
+			<item id="296"/><!-- Гизарма Гномов -->
+			<item id="129"/><!-- Меч Революции -->
+			<item id="224"/><!-- Дага -->
+			<item id="1660"/><!-- Проклятая Дага -->
+			<item id="279"/><!-- Усиленный Длинный Лук -->
+			<item id="158"/><!-- Тарбар -->
+			<item id="7881"/><!-- Меч Гигантов -->
+			<item id="7896"/><!-- Молот Гигантов -->
+			<item id="172"/><!-- Тяжелая Костяная Дубина -->
+			<item id="294"/><!-- Молот Смерти -->
+			<item id="88"/><!-- Моргенштерн -->
+			<item id="93"/><!-- Крылатое Копье -->
+			<item id="258"/><!-- Коготь Тигра -->
+			<item id="259"/><!-- Джамадхар -->
+			<item id="260"/><!-- Трехгранный Джамадхар -->
+			<item id="261"/><!-- Бичхва -->
+			<item id="70"/><!-- Клеймор -->
+			<item id="159"/><!-- Костолом -->
+			<item id="225"/><!-- Мифриловый Кинжал -->
+			<item id="262"/><!-- Шипованный Джамадхар -->
+			<item id="280"/><!-- Легкий Лук -->
+			<item id="297"/><!-- Глефа -->
+			<item id="2499"/><!-- Длинный Меч Эльфов -->
+			<item id="5285"/><!-- Тяжелый Меч -->
+			<item id="178"/><!-- Костяной Посох -->
+			<item id="101"/><!-- Свиток Мудрости -->
+			<item id="7885"/><!-- Меч Жреца -->
+			<item id="312"/><!-- Ветвь Жизни -->
+			<item id="314"/><!-- Доказательство Возмездия -->
+			<item id="179"/><!-- Булава Послушника -->
+			<item id="182"/><!-- Молот Рока -->
+			<item id="183"/><!-- Посох Мистика -->
+			<item id="185"/><!-- Посох Маны -->
+			<item id="315"/><!-- Божественный Жезл -->
+			<item id="83"/><!-- Меч Магии -->
+			<item id="143"/><!-- Меч Мистика -->
+			<item id="144"/><!-- Меч Оккультиста -->
+			<item id="238"/><!-- Кинжал Маны -->
+			<item id="239"/><!-- Нож Мистика -->
+			<item id="240"/><!-- Нож Заклинателя -->
+			<item id="241"/><!-- Нож Шилен -->
+			<item id="186"/><!-- Посох Магии -->
+			<item id="316"/><!-- Кровь Святых -->
+			<item id="317"/><!-- Книга Крови -->
+			<item id="90"/><!-- Рогатый Посох -->
+			<item id="7886"/><!-- Меч Магического Тумана -->
+			<item id="7890"/><!-- Булава Жреца -->
+			<item id="318"/><!-- Кровавое Распятие -->
+			<item id="321"/><!-- Клыки Демона -->
+			<item id="187"/><!-- Молот Атубы -->
+			<item id="188"/><!-- Посох Призрака -->
+			<item id="189"/><!-- Посох Жизни -->
+			<item id="190"/><!-- Булава Атубы -->
+		</weapons>
+		<armors>
+			<pack type="HEAVY">
+				<item id="58"/><!-- Мифриловая Кираса -->
+				<item id="59"/><!-- Мифриловые Набедренники -->
+				<item id="47"/><!-- Шлем -->
+				<item id="628"/><!-- Хоплон -->
+			</pack>
+			<pack type="HEAVY">
+				<item id="352"/><!-- Панцирная Туника -->
+				<item id="2378"/><!-- Панцирные Набедренники -->
+				<item id="2411"/><!-- Панцирный Шлем -->
+				<item id="2493"/><!-- Панцирный Щит -->
+			</pack>
+			<pack type="HEAVY">
+				<item id="7850"/><!-- Лунный Шлем -->
+				<item id="7851"/><!-- Лунный Доспех -->
+				<item id="7852"/><!-- Лунные Рукавицы -->
+				<item id="7853"/><!-- Лунные Сапоги -->
+			</pack>
+			<pack type="LIGHT">
+				<item id="394"/><!-- Укрепленная Кожаная Рубаха -->
+				<item id="416"/><!-- Укрепленные Кожаные Набедренники -->
+				<item id="2422"/><!-- Укрепленные Кожаные Сапоги -->
+			</pack>
+			<pack type="LIGHT">
+				<item id="395"/><!-- Рубаха из Шкуры Мантикоры -->
+				<item id="417"/><!-- Набедренники из Шкуры Мантикоры -->
+				<item id="2424"/><!-- Сапоги из Шкуры Мантикоры -->
+			</pack>
+			<pack type="LIGHT">
+				<item id="7850"/><!-- Лунный Шлем -->
+				<item id="7854"/><!-- Лунный Панцирь -->
+				<item id="7855"/><!-- Лунные Кожаные Перчатки -->
+				<item id="7856"/><!-- Лунные Ботинки -->
+			</pack>
+			<pack type="MAGIC">
+				<item id="436"/><!-- Туника Знаний -->
+				<item id="469"/><!-- Штаны Знаний -->
+				<item id="2447"/><!-- Перчатки Знаний -->
+			</pack>
+			<pack type="MAGIC">
+				<item id="437"/><!-- Мифриловая Туника -->
+				<item id="470"/><!-- Мифриловые Штаны -->
+				<item id="2450"/><!-- Мифриловые Перчатки Эльфов -->
+			</pack>
+			<pack type="MAGIC">
+				<item id="7850"/><!-- Лунный Шлем -->
+				<item id="7857"/><!-- Лунная Накидка -->
+				<item id="7858"/><!-- Лунные Шелковые Перчатки -->
+				<item id="7859"/><!-- Лунные Сандалии -->
+			</pack>
+		</armors>
+		<accessorys>
+			<pack>
+				<item id="850"/><!-- Серьга Эльфов -->
+				<item id="850"/><!-- Серьга Эльфов -->
+				<item id="881"/><!-- Кольцо Эльфов -->
+				<item id="881"/><!-- Кольцо Эльфов -->
+				<item id="913"/><!-- Ожерелье Эльфов -->
+			</pack>
+		</accessorys>
+	</category>
+	<category grade="C">
+		<weapons>
+			<item id="84"/><!-- Меч Гомункула -->
+			<item id="133"/><!-- Меч Налетчика -->
+			<item id="135"/><!-- Длинный Меч Самурая -->
+			<item id="298"/><!-- Глефа Орков -->
+			<item id="299"/><!-- Секира Орков -->
+			<item id="266"/><!-- Большая Пата -->
+			<item id="265"/><!-- Кастетные Клинки -->
+			<item id="2591"/><!-- Меч Духов*Меч Духов -->
+			<item id="2599"/><!-- Меч Налетчика*Меч Налетчика -->
+			<item id="2582"/><!-- Катана*Катана -->
+			<item id="2561"/><!-- Громовержец*Громовержец -->
+			<item id="228"/><!-- Кристальный Кинжал -->
+			<item id="233"/><!-- Кинжал Тьмы -->
+			<item id="286"/><!-- Лук Превосходства -->
+			<item id="282"/><!-- Лук Стихии -->
+			<item id="2503"/><!-- Булава Якса -->
+			<item id="7891"/><!-- Топор Затмения -->
+			<item id="89"/><!-- Большой Молот -->
+			<item id="5286"/><!-- Клинок Берсерка -->
+			<item id="7897"/><!-- Молот Гномов -->
+			<item id="205"/><!-- Посох Вурдалака -->
+		</weapons>
+		<armors>
+			<pack type="HEAVY">
+				<item id="60"/><!-- Композитный Доспех -->
+				<item id="517"/><!-- Композитный Шлем -->
+				<item id="64"/><!-- Композитные Сапоги -->
+				<item id="107"/><!-- Композитный Щит -->
+			</pack>
+			<pack type="HEAVY">
+				<item id="354"/><!-- Кольчужная Рубаха  -->
+				<item id="381"/><!-- Кольчужные Набедренники -->
+				<item id="2413"/><!-- Кольчужный Капюшон -->
+				<item id="2453"/><!-- Кольчужные Перчатки -->
+				<item id="2429"/><!-- Кольчужные Сапоги -->
+				<item id="2495"/><!-- Кольчужный Щит -->
+			</pack>
+			<pack type="HEAVY">
+				<item id="356"/><!-- Полный Латный Доспех -->
+				<item id="2414"/><!-- Полный Латный Шлем -->
+				<item id="2462"/><!-- Полные Латные Рукавицы -->
+				<item id="2438"/><!-- Полные Латные Сапоги -->
+				<item id="2497"/><!-- Полный Латный Щит -->
+			</pack>
+			<pack type="LIGHT">
+				<item id="397"/><!-- Укрепленная Мифриловая Рубаха -->
+				<item id="2387"/><!-- Укрепленные Мифриловые Набедренники -->
+				<item id="608"/><!-- Мифриловые Рукавицы -->
+				<item id="62"/><!-- Укрепленные Мифриловые Сапоги -->
+			</pack>
+			<pack type="LIGHT">
+				<item id="398"/><!-- Латный Кожаный Доспех -->
+				<item id="418"/><!-- Латные Кожаные Набедренники -->
+				<item id="2455"/><!-- Латные Кожаные Перчатки -->
+				<item id="2431"/><!-- Латные Кожаные Сапоги -->
+			</pack>
+			<pack type="LIGHT">
+				<item id="400"/><!-- Кожаный Доспех Тека -->
+				<item id="420"/><!-- Кожаные Набедренники Тека -->
+				<item id="2460"/><!-- Кожаные Перчатки Тека -->
+				<item id="2436"/><!-- Кожаные Сапоги Тека -->
+			</pack>
+			<pack type="LIGHT">
+				<item id="401"/><!-- Кожаный Доспех Дрейка -->
+				<item id="2461"/><!-- Кожаные Перчатки Дрейка -->
+				<item id="2437"/><!-- Кожаные Сапоги Дрейка -->
+			</pack>
+			<pack type="MAGIC">
+				<item id="439"/><!-- Туника Кармиана -->
+				<item id="471"/><!-- Штаны Кармиана -->
+				<item id="2454"/><!-- Перчатки Кармиана -->
+				<item id="2430"/><!-- Сапоги Кармиана -->
+			</pack>
+			<pack type="MAGIC">
+				<item id="441"/><!-- Туника Демона -->
+				<item id="472"/><!-- Штаны Демона -->
+				<item id="2459"/><!-- Перчатки Демона -->
+				<item id="2435"/><!-- Сапоги Демона -->
+			</pack>
+			<pack type="MAGIC">
+				<item id="442"/><!-- Туника Святости -->
+				<item id="473"/><!-- Штаны Святости -->
+				<item id="2463"/><!-- Перчатки Святости -->
+			</pack>
+		</armors>
+		<accessorys>
+			<pack>
+				<item id="853"/><!-- Серьга Защиты -->
+				<item id="853"/><!-- Серьга Защиты -->
+				<item id="884"/><!-- Кольцо Защиты -->
+				<item id="884"/><!-- Кольцо Защиты -->
+				<item id="916"/><!-- Ожерелье Защиты -->
+			</pack>
+		</accessorys>
+	</category>
+	<category grade="B">
+		<weapons>
+			<item id="79"/><!-- Дамаскус -->
+			<item id="142"/><!-- Кешанберк -->
+			<item id="148"/><!-- Меч Вальхаллы -->
+			<item id="97"/><!-- Пика -->
+			<item id="300"/><!-- Двуручный Топор -->
+			<item id="268"/><!-- Цестус Беллиона -->
+			<item id="267"/><!-- Коготь Артро -->
+			<item id="2626"/><!-- Длинный Меч Самурая*Длинный Меч Самурая -->
+			<item id="2620"/><!-- Меч Иллюзий*Длинный Меч Самурая -->
+			<item id="2624"/><!-- Цуруги*Цуруги -->
+			<item id="234"/><!-- Кинжал Демона -->
+			<item id="229"/><!-- Крис -->
+			<item id="287"/><!-- Лук Угрозы -->
+			<item id="284"/><!-- Длинный Лук Темных Эльфов -->
+			<item id="175"/><!-- Топор Искусства Войны -->
+			<item id="7892"/><!-- Рассеиватель Заклинаний -->
+			<item id="7883"/><!-- Меч Стража -->
+			<item id="7900"/><!-- Молот Ледяной Бури -->
+			<item id="92"/><!-- Посох Духа -->
+			<item id="210"/><!-- Посох Злых Духов -->
+		</weapons>
+		<armors>
+			<pack type="HEAVY">
+				<item id="357"/><!-- Кираса Зубея -->
+				<item id="383"/><!-- Набедренники Зубея -->
+				<item id="503"/><!-- Шлем Зубея -->
+				<item id="5710"/><!-- Рукавицы Зубея - (Тяжелый) -->
+				<item id="5726"/><!-- Сапоги Зубея - (Тяжелый) -->
+				<item id="633"/><!-- Щит Зубея -->
+			</pack>
+			<pack type="HEAVY">
+				<item id="358"/><!-- Кираса Синего Волка -->
+				<item id="2380"/><!-- Набедренники Синего Волка -->
+				<item id="2416"/><!-- Шлем Синего Волка -->
+				<item id="5718"/><!-- Перчатки Синего Волка - (Тяжелый) -->
+				<item id="5734"/><!-- Сапоги Синего Волка - (Тяжелый) -->
+			</pack>
+			<pack type="HEAVY">
+				<item id="2376"/><!-- Кираса Авадона -->
+				<item id="2379"/><!-- Набедренники Авадона -->
+				<item id="2415"/><!-- Диадема Авадона -->
+				<item id="5714"/><!-- Перчатки Авадона - (Тяжелый) -->
+				<item id="5730"/><!-- Сапоги Авадона - (Тяжелый) -->
+				<item id="673"/><!-- Щит Авадона -->
+			</pack>
+			<pack type="HEAVY">
+				<item id="2381"/><!-- Латный Доспех Рока -->
+				<item id="2417"/><!-- Шлем Рока -->
+				<item id="5722"/><!-- Перчатки Рока - (Тяжелый) -->
+				<item id="5738"/><!-- Сапоги Рока - (Тяжелый) -->
+			</pack>
+			<pack type="LIGHT">
+				<item id="2384"/><!-- Кожаная Рубаха Зубея -->
+				<item id="2388"/><!-- Кожаные Набедренники Зубея -->
+				<item id="5711"/><!-- Рукавицы Зубея - (Легкий) -->
+				<item id="5727"/><!-- Сапоги Зубея - (Легкий) -->
+			</pack>
+			<pack type="LIGHT">
+				<item id="2390"/><!-- Кожаный Доспех Авадона -->
+				<item id="5715"/><!-- Перчатки Авадона - (Легкий) -->
+				<item id="5731"/><!-- Сапоги Авадона - (Легкий) -->
+			</pack>
+			<pack type="LIGHT">
+				<item id="2391"/><!-- Кожаный Доспех Синего Волка -->
+				<item id="5719"/><!-- Перчатки Синего Волка - (Легкий) -->
+				<item id="5735"/><!-- Сапоги Синего Волка - (Легкий) -->
+			</pack>
+			<pack type="LIGHT">
+				<item id="2392"/><!-- Кожаный Доспех Рока -->
+				<item id="5723"/><!-- Перчатки Рока - (Легкий) -->
+				<item id="5739"/><!-- Сапоги Рока - (Легкий) -->
+			</pack>
+			<pack type="MAGIC">
+				<item id="2397"/><!-- Туника Зубея -->
+				<item id="2402"/><!-- Штаны Зубея -->
+				<item id="5712"/><!-- Рукавицы Зубея - (Магический) -->
+				<item id="5728"/><!-- Сапоги Зубея - (Магический) -->
+			</pack>
+			<pack type="MAGIC">
+				<item id="2398"/><!-- Туника Синего Волка -->
+				<item id="2403"/><!-- Штаны Синего Волка -->
+				<item id="5720"/><!-- Перчатки Синего Волка - (Магический) -->
+				<item id="5736"/><!-- Сапоги Синего Волка - (Магический) -->
+			</pack>
+			<pack type="MAGIC">
+				<item id="2399"/><!-- Туника Рока -->
+				<item id="2404"/><!-- Штаны Рока -->
+				<item id="5724"/><!-- Перчатки Рока - (Магический) -->
+				<item id="5740"/><!-- Сапоги Рока - (Магический) -->
+			</pack>
+			<pack type="MAGIC">
+				<item id="2406"/><!-- Мантия Авадона -->
+				<item id="5716"/><!-- Перчатки Авадона - (Магический) -->
+				<item id="5732"/><!-- Сапоги Авадона - (Магический) -->
+			</pack>
+		</armors>
+		<accessorys>
+			<pack>
+				<item id="895"/><!-- Черное Кольцо -->
+				<item id="895"/><!-- Черное Кольцо -->
+				<item id="864"/><!-- Черная Серьга -->
+				<item id="864"/><!-- Черная Серьга -->
+				<item id="926"/><!-- Черное Ожерелье -->
+			</pack>
+		</accessorys>
+	</category>
+	<category grade="A">
+		<weapons>
+			<item id="8794"/><!-- Топор Баракиэля - (Здоровье) -->
+			<item id="8795"/><!-- Топор Баракиэля - (Ускорение) -->
+			<item id="8796"/><!-- Топор Баракиэля - (Фокусировка) -->
+			<item id="8798"/><!-- Трезубец Чудовища - (Здоровье) -->
+			<item id="8797"/><!-- Трезубец Чудовища - (Фокусировка) -->
+			<item id="8799"/><!-- Трезубец Чудовища - (Злость) -->
+			<item id="8815"/><!-- Рука Кабрио - (Конверсия) -->
+			<item id="8816"/><!-- Рука Кабрио - (Добавление Маны) -->
+			<item id="8817"/><!-- Рука Кабрио - (Безмолвие) -->
+			<item id="8818"/><!-- Кристалл Дэймона - (Добавление Маны) -->
+			<item id="8819"/><!-- Кристалл Дэймона - (Проницательность) -->
+			<item id="8820"/><!-- Кристалл Дэймона - (Ментальный Щит) -->
+			<item id="5611"/><!-- Пронзатель Душ - (Экономия) -->
+			<item id="5613"/><!-- Пронзатель Душ - (Крит. Отравление) -->
+			<item id="5612"/><!-- Пронзатель Душ - (Быстрое Восстановление) -->
+			<item id="8806"/><!-- Лук Шиид - (Экономия) -->
+			<item id="8807"/><!-- Лук Шиид - (Фокусировка) -->
+			<item id="8808"/><!-- Лук Шиид - (Быстрое Восстановление) -->
+			<item id="5617"/><!-- Душегуб - (Наведение) -->
+			<item id="5618"/><!-- Душегуб - (Крит. Урон) -->
+			<item id="5619"/><!-- Душегуб - (Риск. Ускорение) -->
+			<item id="8800"/><!-- Буря Наги - (Фокусировка) -->
+			<item id="8801"/><!-- Буря Наги - (Крит. Урон) -->
+			<item id="8802"/><!-- Буря Наги - (Удар в Спину) -->
+			<item id="8938"/><!-- Клинок Таллума*Дамаскус -->
+			<item id="5623"/><!-- Погибель Дракона - (Риск. Уклонение) -->
+			<item id="5624"/><!-- Погибель Дракона - (Наведение) -->
+			<item id="5625"/><!-- Погибель Дракона - (Здоровье) -->
+			<item id="8809"/><!-- Ураган Собекка - (Риск. Ускорение) -->
+			<item id="8810"/><!-- Ураган Собекка - (Ускорение) -->
+			<item id="8811"/><!-- Ураган Собекка - (Крит. Поглощение HP) -->
+			<item id="5632"/><!-- Глефа Таллума - (Наведение) -->
+			<item id="5633"/><!-- Глефа Таллума - (Здоровье) -->
+			<item id="5634"/><!-- Глефа Таллума - (Угол Атаки) -->
+			<item id="8803"/><!-- Копье Тифона - (Крит. Оглушение) -->
+			<item id="8804"/><!-- Копье Тифона - (Радиус Удара) -->
+			<item id="8805"/><!-- Копье Тифона - (Угол Удара) -->
+			<item id="5641"/><!-- Легендарный Меч - (Маг. Сила) -->
+			<item id="5642"/><!-- Легендарный Меч - (Безмолвие) -->
+			<item id="5643"/><!-- Легендарный Меч - (Проницательность) -->
+			<item id="5647"/><!-- Темный Легион - (Крит. Урон) -->
+			<item id="5648"/><!-- Темный Легион - (Здоровье) -->
+			<item id="5649"/><!-- Темный Легион - (Риск. Фокусировка) -->
+			<item id="8791"/><!-- Меч Ипоса - (Фокусировка) -->
+			<item id="8792"/><!-- Меч Ипоса - (Ускорение) -->
+			<item id="8793"/><!-- Меч Ипоса - (Здоровье) -->
+			<item id="8812"/><!-- Язык Темиса - (Добавление Маны) -->
+			<item id="8814"/><!-- Язык Темиса - (Маг. Фокусировка) -->
+			<item id="8813"/><!-- Язык Темиса - (Ментальный Щит) -->
+		</weapons>
+		<armors>
+			<pack type="HEAVY">
+				<item id="365"/><!-- Кираса Кристалла Тьмы -->
+				<item id="388"/><!-- Набедренники Кристалла Тьмы -->
+				<item id="512"/><!-- Шлем Кристалла Тьмы -->
+				<item id="5765"/><!-- Перчатки Кристалла Тьмы - (Тяжелый) -->
+				<item id="5777"/><!-- Сапоги Кристалла Тьмы - (Тяжелый) -->
+				<item id="641"/><!-- Щит Кристалла Тьмы -->
+			</pack>
+			<pack type="HEAVY">
+				<item id="374"/><!-- Доспех Кошмаров -->
+				<item id="2418"/><!-- Шлем Кошмаров -->
+				<item id="5771"/><!-- Рукавицы Кошмаров - (Тяжелый) -->
+				<item id="5783"/><!-- Сапоги Кошмаров - (Тяжелый) -->
+				<item id="2498"/><!-- Щит Кошмаров -->
+			</pack>
+			<pack type="HEAVY">
+				<item id="2383"/><!-- Латный Доспех Величия -->
+				<item id="2419"/><!-- Диадема Величия -->
+				<item id="5774"/><!-- Рукавицы Величия - (Тяжелый) -->
+				<item id="5786"/><!-- Сапоги Величия - (Тяжелый) -->
+			</pack>
+			<pack type="LIGHT">
+				<item id="2385"/><!-- Кожаный Доспех Кристалла Тьмы -->
+				<item id="2389"/><!-- Поножи Кристалла Тьмы -->
+				<item id="5766"/><!-- Перчатки Кристалла Тьмы - (Легкий) -->
+				<item id="5778"/><!-- Сапоги Кристалла Тьмы - (Легкий) -->
+			</pack>
+			<pack type="LIGHT">
+				<item id="2393"/><!-- Кожаный Доспех Таллума -->
+				<item id="5769"/><!-- Перчатки Таллума - (Легкий) -->
+				<item id="5781"/><!-- Сапоги Таллума - (Легкий) -->
+			</pack>
+			<pack type="LIGHT">
+				<item id="2394"/><!-- Кожаный Доспех Кошмаров -->
+				<item id="5772"/><!-- Рукавицы Кошмаров - (Легкий) -->
+				<item id="5784"/><!-- Сапоги Кошмаров - (Легкий) -->
+			</pack>
+			<pack type="LIGHT">
+				<item id="2395"/><!-- Кожаный Доспех Величия -->
+				<item id="5775"/><!-- Рукавицы Величия - (Легкий) -->
+				<item id="5787"/><!-- Сапоги Величия - (Легкий) -->
+			</pack>
+			<pack type="MAGIC">
+				<item id="2400"/><!-- Туника Таллума -->
+				<item id="2405"/><!-- Штаны Таллума -->
+				<item id="5770"/><!-- Перчатки Таллума - (Магический) -->
+				<item id="5782"/><!-- Сапоги Таллума - (Магический) -->
+			</pack>
+			<pack type="MAGIC">
+				<item id="2407"/><!-- Мантия Кристалла Тьмы -->
+				<item id="5767"/><!-- Перчатки Кристалла Тьмы - (Магический) -->
+				<item id="5779"/><!-- Сапоги Кристалла Тьмы - (Магический) -->
+			</pack>
+			<pack type="MAGIC">
+				<item id="2408"/><!-- Мантия Кошмаров -->
+				<item id="5773"/><!-- Рукавицы Кошмаров - (Магический) -->
+				<item id="5785"/><!-- Сапоги Кошмаров - (Магический) -->
+			</pack>
+			<pack type="MAGIC">
+				<item id="2409"/><!-- Мантия Величия -->
+				<item id="5776"/><!-- Рукавицы Величия - (Магический) -->
+				<item id="5788"/><!-- Сапоги Величия - (Магический) -->
+			</pack>
+		</armors>
+		<accessorys>
+			<pack>
+				<item id="902"/><!-- Кольцо Феникса -->
+				<item id="902"/><!-- Кольцо Феникса -->
+				<item id="871"/><!-- Серьга Феникса -->
+				<item id="871"/><!-- Серьга Феникса -->
+				<item id="933"/><!-- Ожерелье Феникса -->
+			</pack>
+		</accessorys>
+	</category>
+	<classes>
+		<class id="0" weaponTypes="BLUNT;DAGGER;SWORD" armorTypes="LIGHT"/>
+		<class id="1" weaponTypes="BLUNT;SWORD" armorTypes="HEAVY"/>
+		<class id="2" weaponTypes="DUAL" armorTypes="HEAVY"/>
+		<class id="3" weaponTypes="POLE" armorTypes="HEAVY"/>
+		<class id="4" weaponTypes="SWORD;BLUNT" armorTypes="HEAVY"/>
+		<class id="5" weaponTypes="SWORD;BLUNT" armorTypes="HEAVY"/>
+		<class id="6" weaponTypes="SWORD;BLUNT" armorTypes="HEAVY"/>
+		<class id="7" weaponTypes="DAGGER;BOW" armorTypes="LIGHT"/>
+		<class id="8" weaponTypes="DAGGER" armorTypes="LIGHT"/>
+		<class id="9" weaponTypes="BOW" armorTypes="LIGHT"/>
+		<class id="10" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="11" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="12" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="13" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="14" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="15" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="16" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="17" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="18" weaponTypes="BLUNT;DAGGER;SWORD" armorTypes="LIGHT"/>
+		<class id="19" weaponTypes="BLUNT;SWORD" armorTypes="HEAVY"/>
+		<class id="20" weaponTypes="SWORD;BLUNT" armorTypes="HEAVY"/>
+		<class id="21" weaponTypes="SWORD;BLUNT" armorTypes="HEAVY"/>
+		<class id="22" weaponTypes="BOW;DAGGER" armorTypes="LIGHT"/>
+		<class id="23" weaponTypes="DAGGER" armorTypes="LIGHT"/>
+		<class id="24" weaponTypes="BOW" armorTypes="LIGHT"/>
+		<class id="25" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="26" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="27" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="28" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="29" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="30" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="31" weaponTypes="SWORD;DAGGER;BLUNT" armorTypes="LIGHT"/>
+		<class id="32" weaponTypes="SWORD;BLUNT" armorTypes="HEAVY"/>
+		<class id="33" weaponTypes="SWORD;BLUNT" armorTypes="HEAVY"/>
+		<class id="34" weaponTypes="DUAL" armorTypes="HEAVY"/>
+		<class id="35" weaponTypes="DAGGER;BOW" armorTypes="LIGHT"/>
+		<class id="36" weaponTypes="DAGGER" armorTypes="LIGHT"/>
+		<class id="37" weaponTypes="BOW" armorTypes="LIGHT"/>
+		<class id="38" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="39" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="40" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="41" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="42" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="43" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="44" weaponTypes="DUALFIST" armorTypes="LIGHT"/>
+		<class id="45" weaponTypes="BIGSWORD;BIGBLUNT" armorTypes="HEAVY"/>
+		<class id="46" weaponTypes="BIGSWORD;BIGBLUNT" armorTypes="HEAVY"/>
+		<class id="47" weaponTypes="DUALFIST" armorTypes="HEAVY"/>
+		<class id="48" weaponTypes="DUALFIST" armorTypes="HEAVY"/>
+		<class id="49" weaponTypes="DUALFIST" armorTypes="LIGHT;MAGIC"/>
+		<class id="50" weaponTypes="BLUNT" armorTypes="HEAVY;LIGHT;MAGIC"/>
+		<class id="51" weaponTypes="BLUNT" armorTypes="HEAVY;LIGHT;MAGIC"/>
+		<class id="52" weaponTypes="BLUNT" armorTypes="HEAVY;LIGHT;MAGIC"/>
+		<class id="53" weaponTypes="BLUNT" armorTypes="LIGHT"/>
+		<class id="54" weaponTypes="BLUNT" armorTypes="LIGHT;HEAVY"/>
+		<class id="55" weaponTypes="BLUNT" armorTypes="HEAVY;LIGHT"/>
+		<class id="56" weaponTypes="BLUNT" armorTypes="LIGHT;HEAVY"/>
+		<class id="57" weaponTypes="BLUNT" armorTypes="HEAVY;LIGHT"/>
+		<class id="88" weaponTypes="DUAL" armorTypes="HEAVY"/>
+		<class id="89" weaponTypes="POLE" armorTypes="HEAVY"/>
+		<class id="90" weaponTypes="SWORD;BLUNT" armorTypes="HEAVY"/>
+		<class id="91" weaponTypes="BLUNT;SWORD" armorTypes="HEAVY"/>
+		<class id="92" weaponTypes="BOW" armorTypes="LIGHT"/>
+		<class id="93" weaponTypes="DAGGER" armorTypes="LIGHT"/>
+		<class id="94" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="95" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="96" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="97" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="98" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="99" weaponTypes="BLUNT;SWORD" armorTypes="HEAVY"/>
+		<class id="100" weaponTypes="BLUNT;SWORD" armorTypes="HEAVY"/>
+		<class id="101" weaponTypes="DAGGER" armorTypes="LIGHT"/>
+		<class id="102" weaponTypes="BOW" armorTypes="LIGHT"/>
+		<class id="103" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="104" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="105" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="106" weaponTypes="BLUNT;SWORD" armorTypes="HEAVY"/>
+		<class id="107" weaponTypes="DUAL" armorTypes="HEAVY"/>
+		<class id="108" weaponTypes="DAGGER" armorTypes="LIGHT"/>
+		<class id="109" weaponTypes="BOW" armorTypes="LIGHT"/>
+		<class id="110" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="111" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="112" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="113" weaponTypes="BIGSWORD;BIGBLUNT" armorTypes="HEAVY"/>
+		<class id="114" weaponTypes="DUALFIST" armorTypes="HEAVY"/>
+		<class id="115" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="116" weaponTypes="MAGIC" armorTypes="MAGIC"/>
+		<class id="117" weaponTypes="BLUNT" armorTypes="HEAVY"/>
+		<class id="118" weaponTypes="BLUNT" armorTypes="HEAVY"/>
+	</classes>
+	<hair_accessories>
+	</hair_accessories>
+	<cloaks>
+	</cloaks>
+</list>

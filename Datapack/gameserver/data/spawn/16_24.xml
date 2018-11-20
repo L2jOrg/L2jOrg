@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<territory name="gludio31_1624_10s">
+		<add x="-105979" y="223357" zmin="-3783" zmax="-3283"/>
+		<add x="-103968" y="223997" zmin="-3783" zmax="-3283"/>
+		<add x="-104347" y="225843" zmin="-3783" zmax="-3283"/>
+		<add x="-106603" y="225203" zmin="-3783" zmax="-3283"/>
+	</territory>
+	<spawn name="gludio31_1624_10s" count="3" respawn="20">
+		<territory name="gludio31_1624_10s"/>
+		<npc id="20101"/><!--Разрушитель-->
+	</spawn>
+	<spawn name="gludio31_1624_10s" count="1" respawn="20">
+		<territory name="gludio31_1624_10s"/>
+		<npc id="20103"/><!--Гигантский Паук-->
+	</spawn>
+	<territory name="gludio31_1624_11s">
+		<add x="-104681" y="226275" zmin="-3814" zmax="-3314"/>
+		<add x="-102189" y="226251" zmin="-3814" zmax="-3314"/>
+		<add x="-102039" y="228239" zmin="-3814" zmax="-3314"/>
+		<add x="-105068" y="227850" zmin="-3814" zmax="-3314"/>
+	</territory>
+	<spawn name="gludio31_1624_11s" count="2" respawn="20">
+		<territory name="gludio31_1624_11s"/>
+		<npc id="20016"/><!--Каменный Голем-->
+	</spawn>
+	<spawn name="gludio31_1624_11s" count="2" respawn="20">
+		<territory name="gludio31_1624_11s"/>
+		<npc id="20101"/><!--Разрушитель-->
+	</spawn>
+	<spawn name="gludio31_npc1624_g03" count="1" respawn="60">
+		<territory>
+			<add x="-112901" y="216881" zmin="-3759" zmax="-2559"/>
+			<add x="-111945" y="218152" zmin="-3759" zmax="-2559"/>
+			<add x="-116821" y="228913" zmin="-3759" zmax="-2559"/>
+			<add x="-119904" y="228935" zmin="-3759" zmax="-2559"/>
+			<add x="-119713" y="226777" zmin="-3759" zmax="-2559"/>
+			<add x="-118724" y="225614" zmin="-3759" zmax="-2559"/>
+			<add x="-118447" y="220356" zmin="-3759" zmax="-2559"/>
+		</territory>
+		<npc id="31032"/><!--Страж-->
+	</spawn>
+	<spawn name="gludio31_npc1624_g03" count="1" respawn="60">
+		<point x="-116632" y="223055" z="-3064" h="0"/>
+		<npc id="31032"/><!--Страж-->
+	</spawn>
+	<spawn name="gludio31_npc1624_g02" count="1" respawn="60">
+		<territory>
+			<add x="-99573" y="214831" zmin="-3896" zmax="-2696"/>
+			<add x="-101236" y="217978" zmin="-3896" zmax="-2696"/>
+			<add x="-100704" y="220667" zmin="-3896" zmax="-2696"/>
+			<add x="-107008" y="217710" zmin="-3896" zmax="-2696"/>
+			<add x="-111276" y="218421" zmin="-3896" zmax="-2696"/>
+			<add x="-112640" y="216286" zmin="-3896" zmax="-2696"/>
+			<add x="-110321" y="213971" zmin="-3896" zmax="-2696"/>
+			<add x="-105353" y="214107" zmin="-3896" zmax="-2696"/>
+			<add x="-102280" y="212354" zmin="-3896" zmax="-2696"/>
+			<add x="-100537" y="213122" zmin="-3896" zmax="-2696"/>
+		</territory>
+		<npc id="31032"/><!--Страж-->
+	</spawn>
+	<spawn name="gludio31_npc1624_g02" count="1" respawn="60">
+		<point x="-104404" y="215705" z="-3340" h="0"/>
+		<npc id="31032"/><!--Страж-->
+	</spawn>
+	<spawn name="gludio31_npc1624_g01" count="1" respawn="60">
+		<territory>
+			<add x="-100347" y="221278" zmin="-3848" zmax="-2648"/>
+			<add x="-99226" y="224044" zmin="-3848" zmax="-2648"/>
+			<add x="-100612" y="228742" zmin="-3848" zmax="-2648"/>
+			<add x="-109039" y="228764" zmin="-3848" zmax="-2648"/>
+			<add x="-108940" y="223839" zmin="-3848" zmax="-2648"/>
+			<add x="-107283" y="222030" zmin="-3848" zmax="-2648"/>
+			<add x="-104066" y="219202" zmin="-3848" zmax="-2648"/>
+		</territory>
+		<npc id="31032"/><!--Страж-->
+	</spawn>
+	<spawn name="gludio31_npc1624_g01" count="1" respawn="60">
+		<point x="-103946" y="224053" z="-3608" h="0"/>
+		<npc id="31032"/><!--Страж-->
+	</spawn>
+	<territory name="gludio31_1624_09">
+		<add x="-118599" y="225847" zmin="-3036" zmax="-2336"/>
+		<add x="-115531" y="225992" zmin="-3036" zmax="-2336"/>
+		<add x="-116377" y="229099" zmin="-3036" zmax="-2336"/>
+		<add x="-119616" y="229082" zmin="-3036" zmax="-2336"/>
+	</territory>
+	<spawn name="gludio31_1624_09" count="2" respawn="20">
+		<territory name="gludio31_1624_09"/>
+		<npc id="20101"/><!--Разрушитель-->
+	</spawn>
+	<spawn name="gludio31_1624_09" count="3" respawn="20">
+		<territory name="gludio31_1624_09"/>
+		<npc id="20103"/><!--Гигантский Паук-->
+	</spawn>
+	<spawn name="gludio31_1624_09" count="3" respawn="20">
+		<territory name="gludio31_1624_09"/>
+		<npc id="20106"/><!--Когтистый Паук-->
+	</spawn>
+	<territory name="gludio31_1624_07">
+		<add x="-114359" y="217913" zmin="-3242" zmax="-2542"/>
+		<add x="-112863" y="219836" zmin="-3242" zmax="-2542"/>
+		<add x="-114072" y="221617" zmin="-3242" zmax="-2542"/>
+		<add x="-116931" y="221387" zmin="-3242" zmax="-2542"/>
+	</territory>
+	<spawn name="gludio31_1624_07" count="3" respawn="20">
+		<territory name="gludio31_1624_07"/>
+		<npc id="20101"/><!--Разрушитель-->
+	</spawn>
+	<spawn name="gludio31_1624_07" count="3" respawn="20">
+		<territory name="gludio31_1624_07"/>
+		<npc id="20103"/><!--Гигантский Паук-->
+	</spawn>
+	<territory name="gludio31_1624_08">
+		<add x="-117051" y="221485" zmin="-3242" zmax="-2542"/>
+		<add x="-115028" y="224544" zmin="-3242" zmax="-2542"/>
+		<add x="-115611" y="225856" zmin="-3242" zmax="-2542"/>
+		<add x="-118537" y="225708" zmin="-3242" zmax="-2542"/>
+	</territory>
+	<spawn name="gludio31_1624_08" count="4" respawn="20">
+		<territory name="gludio31_1624_08"/>
+		<npc id="20103"/><!--Гигантский Паук-->
+	</spawn>
+	<spawn name="gludio31_1624_08" count="3" respawn="20">
+		<territory name="gludio31_1624_08"/>
+		<npc id="20106"/><!--Когтистый Паук-->
+	</spawn>
+	<territory name="gludio31_1624_05">
+		<add x="-106991" y="215229" zmin="-3442" zmax="-2742"/>
+		<add x="-105618" y="217251" zmin="-3442" zmax="-2742"/>
+		<add x="-109305" y="217518" zmin="-3442" zmax="-2742"/>
+		<add x="-110197" y="216637" zmin="-3442" zmax="-2742"/>
+		<add x="-109339" y="215079" zmin="-3442" zmax="-2742"/>
+	</territory>
+	<spawn name="gludio31_1624_05" count="4" respawn="20">
+		<territory name="gludio31_1624_05"/>
+		<npc id="20101"/><!--Разрушитель-->
+	</spawn>
+	<spawn name="gludio31_1624_05" count="3" respawn="20">
+		<territory name="gludio31_1624_05"/>
+		<npc id="20103"/><!--Гигантский Паук-->
+	</spawn>
+	<territory name="gludio31_1624_06">
+		<add x="-111461" y="215904" zmin="-3299" zmax="-2599"/>
+		<add x="-109306" y="217637" zmin="-3299" zmax="-2599"/>
+		<add x="-112836" y="219633" zmin="-3299" zmax="-2599"/>
+		<add x="-114182" y="217830" zmin="-3299" zmax="-2599"/>
+	</territory>
+	<spawn name="gludio31_1624_06" count="4" respawn="20">
+		<territory name="gludio31_1624_06"/>
+		<npc id="20101"/><!--Разрушитель-->
+	</spawn>
+	<spawn name="gludio31_1624_06" count="4" respawn="20">
+		<territory name="gludio31_1624_06"/>
+		<npc id="20103"/><!--Гигантский Паук-->
+	</spawn>
+	<territory name="gludio31_1624_03">
+		<add x="-100147" y="212767" zmin="-3435" zmax="-2835"/>
+		<add x="-99236" y="214857" zmin="-3435" zmax="-2835"/>
+		<add x="-100642" y="217336" zmin="-3435" zmax="-2835"/>
+		<add x="-104630" y="213491" zmin="-3435" zmax="-2835"/>
+		<add x="-101820" y="212285" zmin="-3435" zmax="-2835"/>
+	</territory>
+	<spawn name="gludio31_1624_03" count="7" respawn="20">
+		<territory name="gludio31_1624_03"/>
+		<npc id="20016"/><!--Каменный Голем-->
+	</spawn>
+	<spawn name="gludio31_1624_03" count="5" respawn="20">
+		<territory name="gludio31_1624_03"/>
+		<npc id="20101"/><!--Разрушитель-->
+	</spawn>
+	<territory name="gludio31_1624_04">
+		<add x="-104578" y="215090" zmin="-3482" zmax="-2782"/>
+		<add x="-101716" y="217877" zmin="-3482" zmax="-2782"/>
+		<add x="-104925" y="218078" zmin="-3482" zmax="-2782"/>
+		<add x="-106813" y="215321" zmin="-3482" zmax="-2782"/>
+	</territory>
+	<spawn name="gludio31_1624_04" count="4" respawn="20">
+		<territory name="gludio31_1624_04"/>
+		<npc id="20016"/><!--Каменный Голем-->
+	</spawn>
+	<spawn name="gludio31_1624_04" count="3" respawn="20">
+		<territory name="gludio31_1624_04"/>
+		<npc id="20101"/><!--Разрушитель-->
+	</spawn>
+	<territory name="gludio31_1624_01">
+		<add x="-106442" y="222221" zmin="-3789" zmax="-3189"/>
+		<add x="-100607" y="225882" zmin="-3789" zmax="-3189"/>
+		<add x="-101548" y="229015" zmin="-3789" zmax="-3189"/>
+		<add x="-108902" y="228236" zmin="-3789" zmax="-3189"/>
+	</territory>
+	<spawn name="gludio31_1624_01" count="8" respawn="20">
+		<territory name="gludio31_1624_01"/>
+		<npc id="20098"/><!--Орк Главарь-->
+	</spawn>
+	<spawn name="gludio31_1624_01" count="8" respawn="20">
+		<territory name="gludio31_1624_01"/>
+		<npc id="20342"/><!--Вожак Оборотней-->
+	</spawn>
+	<spawn name="gludio31_1624_01" count="4" respawn="20">
+		<territory name="gludio31_1624_01"/>
+		<npc id="20016"/><!--Каменный Голем-->
+	</spawn>
+	<territory name="gludio31_1624_02">
+		<add x="-100997" y="220951" zmin="-3730" zmax="-3030"/>
+		<add x="-100118" y="224043" zmin="-3730" zmax="-3030"/>
+		<add x="-100529" y="225783" zmin="-3730" zmax="-3030"/>
+		<add x="-105570" y="222170" zmin="-3730" zmax="-3030"/>
+	</territory>
+	<spawn name="gludio31_1624_02" count="9" respawn="20">
+		<territory name="gludio31_1624_02"/>
+		<npc id="20342"/><!--Вожак Оборотней-->
+	</spawn>
+	<spawn name="gludio31_1624_02" count="2" respawn="20">
+		<territory name="gludio31_1624_02"/>
+		<npc id="20016"/><!--Каменный Голем-->
+	</spawn>
+	<spawn name="gludio32_npc1624_002" count="1" respawn="60">
+		<point x="-104240" y="222064" z="-3437" h="16384"/>
+		<npc id="30407"/><!--Меселла-->
+	</spawn>
+	<spawn name="gludio32_npc1624_001" count="1" respawn="60">
+		<point x="-115080" y="222168" z="-2930" h="42000"/>
+		<npc id="30405"/><!--Мариус-->
+	</spawn>
+	<spawn name="gludio32_npc1624_003" count="1" respawn="60">
+		<point x="-114685" y="222291" z="-2925" h="44000"/>
+		<npc id="30497"/><!--Эдмонд-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-106600" y="217112" z="-3248" h="50228" />
+		<npc id="31654" /><!--Камень Познания-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-106648" y="216984" z="-3248" h="50228" />
+		<npc id="31599" /><!--Вальдштейн-->
+	</spawn>
+</list>

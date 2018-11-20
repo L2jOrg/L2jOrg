@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<armor id="13894" name="Rag Belt">
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_belt_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="500"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="10"/>
+		</for>
+	</armor>
+	<armor id="13895" name="Leather Belt">
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_belt_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="480"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="11"/>
+		</for>
+	</armor>
+	<armor id="13896" name="Iron Belt">
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.armor_belt_i02"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="460"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="12"/>
+		</for>
+	</armor>
+	<armor id="13897" name="Mithril Belt">
+		<set name="crystal_type" value="S"/>
+		<set name="icon" value="icon.armor_belt_i03"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="440"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="14"/>
+		</for>
+	</armor>
+</list>

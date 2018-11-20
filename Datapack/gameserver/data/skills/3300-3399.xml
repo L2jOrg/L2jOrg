@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="3322" levels="1" name="Iron Bracelet">
+		<set name="icon" value="icon.etc_rbracelet_c_i00"/>
+		<set name="target" value="TARGET_NONE"/>		
+		<set name="operate_type" value="P"/>		
+		<for>
+			<add stat="talismansLimit" value="1"/>
+		</for>
+	</skill>
+	<skill id="3323" levels="1" name="Bronze Bracelet">
+		<set name="icon" value="icon.etc_rbracelet_b_i01"/>
+		<set name="target" value="TARGET_NONE"/>		
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="talismansLimit" value="2"/>
+		</for>
+	</skill>
+	<skill id="3324" levels="1" name="Steel Bracelet">
+		<set name="icon" value="icon.etc_rbracelet_a_i02"/>
+		<set name="target" value="TARGET_NONE"/>		
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="talismansLimit" value="3"/>
+		</for>
+	</skill>
+</list>

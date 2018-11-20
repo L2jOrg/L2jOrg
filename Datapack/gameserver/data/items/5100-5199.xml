@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="5126" name="Dual Weapon Crafting Stamp">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_letter_blue_i00"/>
+		<set name="price" value="10000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="20"/>
+	</etcitem>
+	<weapon id="5127" name="Dailaon Knife">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="743"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_monster_i00"/>
+		<set name="price" value="81800"/>
+		<set name="rnd_dam" value="5"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="DAGGER"/>
+		<set name="weight" value="300"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="5"/>
+			<add stat="mAtk" order="0x10" value="5"/>
+			<set stat="basePCritRate" order="0x08" value="120"/>
+			<set stat="basePAtkSpd" order="0x08" value="433"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="5128" name="Crokian Blade">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;300;120"/>
+		<set name="crystal_count" value="743"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_monster_i00"/>
+		<set name="price" value="81800"/>
+		<set name="rnd_dam" value="5"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="DAGGER"/>
+		<set name="weight" value="300"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="5"/>
+			<add stat="mAtk" order="0x10" value="5"/>
+			<set stat="basePCritRate" order="0x08" value="120"/>
+			<set stat="basePAtkSpd" order="0x08" value="433"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="5129" name="Doll Knife">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;44;120"/>
+		<set name="crystal_count" value="743"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_monster_i00"/>
+		<set name="price" value="81800"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="DUAL"/>
+		<set name="weight" value="300"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="200"/>
+			<add stat="mAtk" order="0x10" value="6"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+		</for>
+	</weapon>
+	<weapon id="5130" name="Nos Sword">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;300;120"/>
+		<set name="crystal_count" value="743"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_monster_i00"/>
+		<set name="price" value="81800"/>
+		<set name="rnd_dam" value="5"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="DAGGER"/>
+		<set name="weight" value="300"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="5"/>
+			<add stat="mAtk" order="0x10" value="5"/>
+			<set stat="basePCritRate" order="0x08" value="120"/>
+			<set stat="basePAtkSpd" order="0x08" value="433"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="5131" name="Monster Only (Parhit Staff)">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;300;120"/>
+		<set name="crystal_count" value="743"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_monster_i00"/>
+		<set name="price" value="81800"/>
+		<set name="rnd_dam" value="5"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="DAGGER"/>
+		<set name="weight" value="300"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="5"/>
+			<add stat="mAtk" order="0x10" value="5"/>
+			<set stat="basePCritRate" order="0x08" value="120"/>
+			<set stat="basePAtkSpd" order="0x08" value="433"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="5132" name="Monster Only (Lesser Giant)">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;300;120"/>
+		<set name="crystal_count" value="743"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_monster_i00"/>
+		<set name="price" value="81800"/>
+		<set name="rnd_dam" value="5"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="DAGGER"/>
+		<set name="weight" value="300"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="5"/>
+			<add stat="mAtk" order="0x10" value="5"/>
+			<set stat="basePCritRate" order="0x08" value="120"/>
+			<set stat="basePAtkSpd" order="0x08" value="433"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="5133" name="Chrono Unitus">
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.weapon_chrono_tambourine_i00"/>
+		<set name="rnd_dam" value="5"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="DUALFIST"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="1"/>
+			<add stat="mAtk" order="0x10" value="1"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<etcitem id="5134" name="Soulshot Compressed Package (No-grade)">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
+		<set name="price" value="2300"/>
+		<set name="weight" value="600"/>
+		<skills>
+			<skill id="2078" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="5135" name="Soulshot Compressed Package (D-grade)">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
+		<set name="price" value="3300"/>
+		<set name="weight" value="450"/>
+		<skills>
+			<skill id="2079" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="5136" name="Soulshot Compressed Package (C-grade)">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
+		<set name="price" value="4950"/>
+		<set name="weight" value="450"/>
+		<skills>
+			<skill id="2080" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="5137" name="Soulshot Compressed Package (B-grade)">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
+		<set name="price" value="16500"/>
+		<set name="weight" value="200"/>
+		<skills>
+			<skill id="2081" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="5138" name="Soulshot Compressed Package (A-grade)">
+		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
+		<set name="weight" value="200"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="5140" name="Spiritshot Compressed Package (No-grade)">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
+		<set name="price" value="4950"/>
+		<set name="weight" value="750"/>
+		<skills>
+			<skill id="2084" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="5141" name="Spiritshot Compressed Package (D-grade)">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
+		<set name="price" value="5940"/>
+		<set name="weight" value="750"/>
+		<skills>
+			<skill id="2085" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="5142" name="Spiritshot Compressed Package (C-grade)">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
+		<set name="price" value="11550"/>
+		<set name="weight" value="450"/>
+		<skills>
+			<skill id="2086" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="5143" name="Spiritshot Compressed Package (B-grade)">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
+		<set name="price" value="33000"/>
+		<set name="weight" value="450"/>
+		<skills>
+			<skill id="2087" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="5144" name="Spiritshot Compressed Package (A-grade)">
+		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
+		<set name="weight" value="200"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="5146" name="Blessed Spiritshot Compressed Package (No-grade)">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
+		<set name="price" value="11550"/>
+		<set name="weight" value="750"/>
+		<skills>
+			<skill id="2090" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="5147" name="Blessed Spiritshot Compressed Package (D-grade)">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
+		<set name="price" value="14850"/>
+		<set name="weight" value="750"/>
+		<skills>
+			<skill id="2091" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="5148" name="Blessed Spiritshot Compressed Package (C-grade)">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
+		<set name="price" value="29700"/>
+		<set name="weight" value="450"/>
+		<skills>
+			<skill id="2092" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="5149" name="Blessed Spiritshot Compressed Package (B-grade)">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
+		<set name="price" value="80850"/>
+		<set name="weight" value="450"/>
+		<skills>
+			<skill id="2093" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="5150" name="Blessed Spiritshot Compressed Package (A-grade)">
+		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
+		<set name="weight" value="200"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="5152" name="Magic Compressor">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_jewel_box_i00"/>
+		<set name="price" value="100"/>
+		<set name="weight" value="10"/>
+	</etcitem>
+	<etcitem id="5153" name="Recipe: Soulshot Compressed Package (D-grade)">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="price" value="5000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="5154" name="Recipe: Soulshot Compressed Package (C-grade)">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
+		<set name="price" value="60000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="5155" name="Recipe: Soulshot Compressed Package (B-grade)">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_red_i00"/>
+		<set name="price" value="100000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="5156" name="Recipe: Soulshot Compressed Package (A-grade)">
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="price" value="150000"/>
+	</etcitem>
+	<etcitem id="5158" name="Recipe: Spiritshot Compressed Package (D-grade)">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="price" value="5000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="5159" name="Recipe: Spiritshot Compressed Package (C-grade)">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
+		<set name="price" value="60000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="5160" name="Recipe: Spiritshot Compressed Package (B-grade)">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_red_i00"/>
+		<set name="price" value="100000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="5161" name="Recipe: Spiritshot Compressed Package (A-grade)">
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="price" value="150000"/>
+	</etcitem>
+	<etcitem id="5163" name="Recipe: Blessed Spiritshot Compressed Package (D-grade)">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="price" value="5000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="5164" name="Recipe: Blessed Spiritshot Compressed Package (C-grade)">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
+		<set name="price" value="60000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="5165" name="Recipe: Blessed Spiritshot Compressed Package (B-grade)">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_red_i00"/>
+		<set name="price" value="100000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="5166" name="Recipe: Blessed Spiritshot Compressed Package (A-grade)">
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="price" value="150000"/>
+	</etcitem>
+	<etcitem id="5192" name="Magic Rope (D-grade)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_braided_hemp_i00"/>
+		<set name="price" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="2"/>
+	</etcitem>
+	<etcitem id="5193" name="Magic Rope (C-grade)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_braided_hemp_i00"/>
+		<set name="price" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="2"/>
+	</etcitem>
+	<etcitem id="5194" name="Magic Rope (B-grade)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_braided_hemp_i00"/>
+		<set name="price" value="250"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="2"/>
+	</etcitem>
+	<etcitem id="5195" name="Magic Rope (A-grade)">
+		<set name="icon" value="icon.etc_braided_hemp_i00"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="5197" name="Chest Key - Grade 8">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_key_i00"/>
+		<set name="price" value="70"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="10"/>
+	</etcitem>
+	<etcitem id="5198" name="Chest Key - Grade 7">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_key_i00"/>
+		<set name="price" value="760"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="10"/>
+	</etcitem>
+	<etcitem id="5199" name="Chest Key - Grade 6">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_key_i00"/>
+		<set name="price" value="1200"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="10"/>
+	</etcitem>
+</list>

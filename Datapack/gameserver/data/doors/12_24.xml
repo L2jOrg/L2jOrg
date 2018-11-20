@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="12240001" name="EntranceofDestruction" hp="158250" pdef="644" mdef="518">
+		<pos x="-239255" y="219944" z="-10160"/>
+		<shape ax="-239240" ay="219844" bx="-239240" by="220034" cx="-239284" cy="220034" dx="-239283" dy="219844" minz="-10164" maxz="-10014"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240002" name="EntranceofDestruction" hp="158250" pdef="644" mdef="518">
+		<pos x="-239255" y="220024" z="-10160"/>
+		<shape ax="-239241" ay="219937" bx="-239241" by="220126" cx="-239283" cy="220127" dx="-239284" dy="219936" minz="-10164" maxz="-10014"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240003" name="Gate" hp="158250" pdef="644" mdef="518">
+		<pos x="-243960" y="217081" z="-12196"/>
+		<shape ax="-243938" ay="216940" bx="-243937" by="217127" cx="-243980" cy="217127" dx="-243980" dy="216940" minz="-12199" maxz="-12049"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240004" name="Gate" hp="158250" pdef="644" mdef="518">
+		<pos x="-243960" y="217081" z="-12196"/>
+		<shape ax="-243935" ay="217033" bx="-243937" by="217223" cx="-243981" cy="217223" dx="-243981" dy="217033" minz="-12199" maxz="-12049"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240005" name="IronWallGate" hp="158250" pdef="644" mdef="518">
+		<pos x="-241118" y="218106" z="-12402"/>
+		<shape ax="-241094" ay="217964" bx="-241094" by="218154" cx="-241138" cy="218154" dx="-241137" dy="217964" minz="-12405" maxz="-12255"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240006" name="IronWallGate" hp="158250" pdef="644" mdef="518">
+		<pos x="-241118" y="218105" z="-12402"/>
+		<shape ax="-241095" ay="218057" bx="-241095" by="218246" cx="-241137" cy="218247" dx="-241138" dy="218056" minz="-12405" maxz="-12255"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240007" name="IronWallGate" hp="158250" pdef="644" mdef="518">
+		<pos x="-238727" y="215839" z="-12659"/>
+		<shape ax="-238875" ay="215812" bx="-238679" by="215813" cx="-238679" cy="215861" dx="-238876" dy="215860" minz="-12661" maxz="-12511"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240008" name="IronWallGate" hp="158250" pdef="644" mdef="518">
+		<pos x="-238727" y="215839" z="-12659"/>
+		<shape ax="-238774" ay="215813" bx="-238583" by="215812" cx="-238582" cy="215861" dx="-238774" dy="215861" minz="-12661" maxz="-12511"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240009" name="IronWallGate" hp="158250" pdef="644" mdef="518">
+		<pos x="-238741" y="212232" z="-12788"/>
+		<shape ax="-238889" ay="212205" bx="-238693" by="212206" cx="-238693" cy="212254" dx="-238890" dy="212253" minz="-12790" maxz="-12640"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240010" name="IronWallGate" hp="158250" pdef="644" mdef="518">
+		<pos x="-238741" y="212232" z="-12788"/>
+		<shape ax="-238788" ay="212206" bx="-238597" by="212205" cx="-238596" cy="212254" dx="-238788" dy="212254" minz="-12790" maxz="-12640"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240011" name="Gate" hp="158250" pdef="644" mdef="518">
+		<pos x="-244508" y="215770" z="-12196"/>
+		<shape ax="-244601" ay="215647" bx="-244457" by="215782" cx="-244497" cy="215822" dx="-244631" dy="215677" minz="-12202" maxz="-12052"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240012" name="Gate" hp="158250" pdef="644" mdef="518">
+		<pos x="-244508" y="215770" z="-12196"/>
+		<shape ax="-244522" ay="215718" bx="-244386" by="215859" cx="-244419" cy="215892" dx="-244563" dy="215755" minz="-12202" maxz="-12052"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240013" name="IronWallGate" hp="158250" pdef="644" mdef="518">
+		<pos x="-242793" y="213119" z="-12530"/>
+		<shape ax="-242941" ay="213092" bx="-242745" by="213093" cx="-242745" cy="213141" dx="-242942" dy="213140" minz="-12532" maxz="-12382"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240014" name="IronWallGate" hp="158250" pdef="644" mdef="518">
+		<pos x="-242793" y="213119" z="-12530"/>
+		<shape ax="-242840" ay="213093" bx="-242649" by="213092" cx="-242648" cy="213141" dx="-242840" dy="213141" minz="-12532" maxz="-12382"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240015" name="IronWallGate" hp="158250" pdef="644" mdef="518">
+		<pos x="-242794" y="209513" z="-12662"/>
+		<shape ax="-242942" ay="209486" bx="-242746" by="209487" cx="-242746" cy="209535" dx="-242943" dy="209534" minz="-12664" maxz="-12514"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240016" name="IronWallGate" hp="158250" pdef="644" mdef="518">
+		<pos x="-242794" y="209513" z="-12662"/>
+		<shape ax="-242841" ay="209487" bx="-242650" by="209486" cx="-242649" cy="209535" dx="-242841" dy="209535" minz="-12664" maxz="-12514"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240017" name="IronWallGate" hp="158250" pdef="644" mdef="518">
+		<pos x="-239838" y="207825" z="-12914"/>
+		<shape ax="-239814" ay="207683" bx="-239814" by="207873" cx="-239858" cy="207873" dx="-239857" dy="207683" minz="-12917" maxz="-12767"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240018" name="IronWallGate" hp="158250" pdef="644" mdef="518">
+		<pos x="-239838" y="207824" z="-12914"/>
+		<shape ax="-239815" ay="207776" bx="-239815" by="207965" cx="-239857" cy="207966" dx="-239858" dy="207775" minz="-12917" maxz="-12767"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240019" name="Gate" hp="158250" pdef="644" mdef="518">
+		<pos x="-245826" y="215203" z="-12196"/>
+		<shape ax="-245974" ay="215176" bx="-245778" by="215177" cx="-245778" cy="215225" dx="-245975" dy="215224" minz="-12198" maxz="-12048"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240020" name="Gate" hp="158250" pdef="644" mdef="518">
+		<pos x="-245826" y="215203" z="-12196"/>
+		<shape ax="-245873" ay="215177" bx="-245682" by="215176" cx="-245681" cy="215225" dx="-245873" dy="215225" minz="-12198" maxz="-12048"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240021" name="IronWallGate" hp="158250" pdef="644" mdef="518">
+		<pos x="-245877" y="211739" z="-12405"/>
+		<shape ax="-246025" ay="211712" bx="-245829" by="211713" cx="-245829" cy="211761" dx="-246026" dy="211760" minz="-12407" maxz="-12257"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240022" name="IronWallGate" hp="158250" pdef="644" mdef="518">
+		<pos x="-245877" y="211739" z="-12405"/>
+		<shape ax="-245924" ay="211713" bx="-245733" by="211712" cx="-245732" cy="211761" dx="-245924" dy="211761" minz="-12407" maxz="-12257"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240023" name="IronWallGate" hp="158250" pdef="644" mdef="518">
+		<pos x="-245877" y="208133" z="-12531"/>
+		<shape ax="-246025" ay="208106" bx="-245829" by="208107" cx="-245829" cy="208155" dx="-246026" dy="208154" minz="-12533" maxz="-12383"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240024" name="IronWallGate" hp="158250" pdef="644" mdef="518">
+		<pos x="-245877" y="208133" z="-12531"/>
+		<shape ax="-245924" ay="208107" bx="-245733" by="208106" cx="-245732" cy="208155" dx="-245924" dy="208155" minz="-12533" maxz="-12383"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240025" name="IronWallGate" hp="158250" pdef="644" mdef="518">
+		<pos x="-242923" y="206445" z="-12783"/>
+		<shape ax="-242899" ay="206303" bx="-242899" by="206493" cx="-242943" cy="206493" dx="-242942" dy="206303" minz="-12786" maxz="-12636"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240026" name="IronWallGate" hp="158250" pdef="644" mdef="518">
+		<pos x="-242923" y="206444" z="-12783"/>
+		<shape ax="-242900" ay="206396" bx="-242900" by="206585" cx="-242942" cy="206586" dx="-242943" dy="206395" minz="-12786" maxz="-12636"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240027" name="Gate" hp="158250" pdef="644" mdef="518">
+		<pos x="-247152" y="218400" z="-12193"/>
+		<shape ax="-247216" ay="218298" bx="-247051" by="218465" cx="-247090" cy="218502" dx="-247257" dy="218333" minz="-12193" maxz="-12043"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="12240028" name="PassageGate" hp="158250" pdef="644" mdef="518">
+		<pos x="-249761" y="220073" z="-12464"/>
+		<shape ax="-249737" ay="219931" bx="-249737" by="220121" cx="-249781" cy="220121" dx="-249780" dy="219931" minz="-12467" maxz="-12317"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240029" name="PassageGate" hp="158250" pdef="644" mdef="518">
+		<pos x="-249761" y="220072" z="-12464"/>
+		<shape ax="-249738" ay="220024" bx="-249738" by="220213" cx="-249780" cy="220214" dx="-249781" dy="220023" minz="-12467" maxz="-12317"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240030" name="GrandFortressGate" hp="158250" pdef="644" mdef="518">
+		<pos x="-251436" y="214385" z="-12122"/>
+		<shape ax="-251627" ay="214372" bx="-251262" by="214370" cx="-251261" cy="214452" dx="-251628" dy="214455" minz="-12122" maxz="-11972"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="12240031" name="Gate" hp="158250" pdef="644" mdef="518">
+		<pos x="-251450" y="212260" z="-12021"/>
+		<shape ax="-251558" ay="212249" bx="-251342" by="212248" cx="-251343" cy="212272" dx="-251558" dy="212273" minz="-12163" maxz="-12013"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+</list>

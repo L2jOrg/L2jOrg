@@ -1,0 +1,39 @@
+plugins {
+    id "java"
+    id "idea"
+    id "eclipse"
+}
+
+version '0.1'
+
+ext.moduleName = 'org.l2j.commons'
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/org.l2j.commons']
+        }
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.8.0-beta2'
+    compile 'org.springframework.data:spring-data-jdbc:1.0.1.RELEASE'
+    compile 'com.zaxxer:HikariCP:3.2.0'
+    compile 'org.glassfish.jaxb:jaxb-runtime:2.4.0-b180725.0644'
+    compile 'org.glassfish.jaxb:jaxb-xjc:2.4.0-b180725.0644'
+    compile 'org.glassfish.jaxb:jaxb-jxc:2.4.0-b180725.0644'
+
+    compile fileTree(dir: '../lib', includes: ['*.jar'] )
+
+    runtime ('mysql:mysql-connector-java:8.0.11') {
+        transitive = false
+    }
+}
+
+jar {
+    baseName "commons"
+}

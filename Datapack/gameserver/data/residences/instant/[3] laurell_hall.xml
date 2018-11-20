@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "residence.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<instant_residence id="3" name="Laurell Hall" impl="clanhall.InstantClanHall" rental_fee="2000000" commission="10" rental_period="28" apply_period="45" first_lottery_date="2011/05/01" min_pledge_level="8" instant_zone="188" origin="{0;0;0}">
+		<functions>
+			<function type="RESTORE_HP" level="20"/>
+			<function type="RESTORE_MP" level="10"/>
+			<function type="RESTORE_EXP" level="10"/>
+		</functions>
+	</instant_residence>
+</list>

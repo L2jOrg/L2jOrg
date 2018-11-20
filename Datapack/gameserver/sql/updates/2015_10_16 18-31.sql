@@ -1,0 +1,1 @@
+UPDATE characters SET rec_have = 0, rec_left = 0;

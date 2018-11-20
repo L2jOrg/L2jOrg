@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="22130001" name="schutt_castle_outter_001" hp="949500" pdef="837" mdef="674">
+		<pos x="77733" y="-149635" z="-213"/>
+		<shape ax="77538" ay="-149648" bx="77753" by="-149647" cx="77753" cy="-149617" dx="77539" dy="-149616" minz="-384" maxz="-64"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="22130002" name="schutt_castle_outter_002" hp="949500" pdef="837" mdef="674">
+		<pos x="77381" y="-149635" z="-213"/>
+		<shape ax="77363" ay="-149648" bx="77570" by="-149647" cx="77570" cy="-149616" dx="77362" dy="-149617" minz="-384" maxz="-64"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="22130003" name="schutt_castle_inner_003" hp="759600" pdef="837" mdef="674">
+		<pos x="77555" y="-150264" z="-255"/>
+		<shape ax="77456" ay="-150281" bx="77652" by="-150281" cx="77652" cy="-150235" dx="77457" dy="-150235" minz="-380" maxz="-124"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="22130004" name="Schtgart_castle_S.sch_castle_brokenwall01A" hp="2036520" pdef="837" mdef="674" type="WALL">
+		<pos x="80197" y="-151587" z="-557"/>
+		<shape ax="79961" ay="-152021" bx="80726" by="-151867" cx="80424" cy="-151101" dx="79730" dy="-151407" minz="-840" maxz="-380"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="22130005" name="Schtgart_castle_S.sch_castle_brokenwall02A" hp="2036520" pdef="837" mdef="674" type="WALL">
+		<pos x="74915" y="-151587" z="-555"/>
+		<shape ax="74388" ay="-151862" bx="75149" by="-152015" cx="75376" cy="-151421" dx="74687" dy="-151079" minz="-839" maxz="-379"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="22130006" name="schutt_castle_side_door_001" hp="759600" pdef="837" mdef="674">
+		<pos x="79234" y="-152432" z="-491"/>
+		<shape ax="79249" ay="-152448" bx="79249" by="-152162" cx="79220" cy="-152162" dx="79220" dy="-152448" minz="-679" maxz="-423"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="22130007" name="schutt_castle_side_door_002" hp="759600" pdef="837" mdef="674">
+		<pos x="75883" y="-152432" z="-491"/>
+		<shape ax="75900" ay="-152448" bx="75901" by="-152162" cx="75869" cy="-152162" dx="75869" dy="-152448" minz="-678" maxz="-422"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="22130008" name="schutt_castle_side_door_003" hp="759600" pdef="837" mdef="674">
+		<pos x="79088" y="-151859" z="221"/>
+		<shape ax="79031" ay="-151779" bx="79112" by="-151953" cx="79146" cy="-151937" dx="79065" dy="-151762" minz="107" maxz="363"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="22130009" name="schutt_castle_side_door_004" hp="759600" pdef="837" mdef="674">
+		<pos x="76021" y="-151858" z="221"/>
+		<shape ax="76045" ay="-151762" bx="75964" by="-151937" cx="75997" cy="-151953" dx="76078" dy="-151778" minz="107" maxz="363"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="22130010" name="schutt_castle_ctr_001" hp="759600" pdef="837" mdef="674">
+		<pos x="80339" y="-152641" z="73"/>
+		<shape ax="80238" ay="-152664" bx="80453" by="-152664" cx="80453" cy="-152614" dx="80238" dy="-152613" minz="-43" maxz="213"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="22130011" name="schutt_castle_ctr_002" hp="759600" pdef="837" mdef="674">
+		<pos x="74773" y="-152641" z="73"/>
+		<shape ax="74672" ay="-152664" bx="74887" by="-152664" cx="74887" cy="-152614" dx="74672" dy="-152613" minz="-43" maxz="213"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="22130012" name="schutt_castle_inner_001" hp="759600" pdef="837" mdef="674">
+		<pos x="78842" y="-152667" z="-558"/>
+		<shape ax="78826" ay="-152598" bx="78826" by="-152744" cx="78853" cy="-152743" dx="78854" dy="-152592" minz="-683" maxz="-427"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="22130013" name="schutt_castle_inner_002" hp="759600" pdef="837" mdef="674">
+		<pos x="76271" y="-152667" z="-558"/>
+		<shape ax="76255" ay="-152592" bx="76255" by="-152744" cx="76282" cy="-152743" dx="76283" dy="-152592" minz="-682" maxz="-426"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="22130014" name="schutt_castle_station_001" hp="759600" pdef="837" mdef="674">
+		<pos x="78841" y="-153184" z="1144"/>
+		<shape ax="78740" ay="-153207" bx="78956" by="-153206" cx="78955" cy="-153156" dx="78741" dy="-153156" minz="1017" maxz="1273"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="22130015" name="schutt_castle_station_002" hp="759600" pdef="837" mdef="674">
+		<pos x="76271" y="-153185" z="1144"/>
+		<shape ax="76170" ay="-153208" bx="76386" by="-153207" cx="76385" cy="-153157" dx="76171" dy="-153157" minz="1017" maxz="1273"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="22130017" name="schutt_castle_agit_001_001" hp="158250" pdef="644" mdef="518">
+		<pos x="86104" y="-143237" z="-1352"/>
+		<shape ax="86103" ay="-143190" bx="86098" by="-143239" cx="86107" cy="-143240" dx="86113" dy="-143191" minz="-1362" maxz="-912"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="58"/>
+		</ai_params>
+	</door>
+	<door id="22130018" name="schutt_castle_agit_001_002" hp="158250" pdef="644" mdef="518">
+		<pos x="86115" y="-143148" z="-1352"/>
+		<shape ax="86114" ay="-143196" bx="86119" by="-143146" cx="86111" cy="-143145" dx="86104" dy="-143194" minz="-1364" maxz="-914"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="58"/>
+		</ai_params>
+	</door>
+	<door id="22130019" name="schutt_castle_agit_002_001" hp="158250" pdef="644" mdef="518">
+		<pos x="86730" y="-142226" z="-1352"/>
+		<shape ax="86768" ay="-142199" bx="86724" by="-142223" cx="86729" cy="-142231" dx="86774" dy="-142209" minz="-1362" maxz="-912"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="59"/>
+		</ai_params>
+	</door>
+	<door id="22130020" name="schutt_castle_agit_002_002" hp="158250" pdef="644" mdef="518">
+		<pos x="86809" y="-142184" z="-1352"/>
+		<shape ax="86770" ay="-142210" bx="86813" by="-142186" cx="86809" cy="-142177" dx="86765" dy="-142200" minz="-1362" maxz="-912"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="59"/>
+		</ai_params>
+	</door>
+	<door id="22130021" name="schutt_castle_agit_003_001" hp="158250" pdef="644" mdef="518">
+		<pos x="87920" y="-142192" z="-1352"/>
+		<shape ax="87963" ay="-142209" bx="87919" by="-142186" cx="87915" cy="-142194" dx="87959" dy="-142218" minz="-1364" maxz="-914"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="60"/>
+		</ai_params>
+	</door>
+	<door id="22130022" name="schutt_castle_agit_003_002" hp="158250" pdef="644" mdef="518">
+		<pos x="87999" y="-142234" z="-1352"/>
+		<shape ax="87955" ay="-142216" bx="87999" by="-142238" cx="88003" cy="-142230" dx="87960" dy="-142207" minz="-1362" maxz="-912"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="60"/>
+		</ai_params>
+	</door>
+	<door id="22130023" name="schutt_castle_agit_004_001" hp="158250" pdef="644" mdef="518">
+		<pos x="88621" y="-143156" z="-1352"/>
+		<shape ax="88632" ay="-143203" bx="88626" by="-143153" cx="88615" cy="-143154" dx="88621" dy="-143204" minz="-1362" maxz="-912"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="61"/>
+		</ai_params>
+	</door>
+	<door id="22130024" name="schutt_castle_agit_004_002" hp="158250" pdef="644" mdef="518">
+		<pos x="88633" y="-143246" z="-1352"/>
+		<shape ax="88620" ay="-143198" bx="88627" by="-143248" cx="88637" cy="-143247" dx="88632" dy="-143197" minz="-1366" maxz="-916"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="61"/>
+		</ai_params>
+	</door>
+</list>

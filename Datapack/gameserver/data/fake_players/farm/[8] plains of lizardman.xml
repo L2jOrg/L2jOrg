@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE farm SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<farm name="Plains of Lizardman" min_level="37" max_level="43">
+	<zones>
+		<zone>
+			<polygon>
+				<coords loc="96872 91272 -4000 -2800"/>
+				<coords loc="75912 89704 -4000 -2800"/>
+				<coords loc="77724 73128 -4000 -2800"/>
+				<coords loc="95906 74926 -4000 -2800"/>
+			</polygon>
+		</zone>
+		<spawn_points>
+			<coords loc="87308 85573 -3072"/>
+		</spawn_points>
+	</zones>
+	<on_obtain_max_level>
+		<action id="1"/>
+	</on_obtain_max_level>
+	<go_to_town min_farm_time="1800" max_farm_time="3600">
+		<action id="1"/>
+	</go_to_town>
+	<action id="1">
+		<wait min_delay="1000" max_delay="3000"/>
+		<use_item id="736"/>
+	</action>
+</farm>

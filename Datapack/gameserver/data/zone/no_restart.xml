@@ -1,0 +1,581 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "zone.dtd">
+<list>
+	<zone name="rainbow_spring_no_restart1" type="no_restart" >
+		<set name="restart_time" value="1800"/>
+		<set name="enabled" value="false"/>
+		<polygon>
+			<coords loc="150509 -127701 -2963 2037"/>
+			<coords loc="154067 -128880 -2963 2037"/>
+			<coords loc="156558 -127674 -2963 2037"/>
+			<coords loc="156442 -124858 -2963 2037"/>
+			<coords loc="150697 -123935 -2963 2037"/>
+		</polygon>
+	</zone>
+	<zone name="[zaken_no_restart]" type="no_restart" >
+		<set name="restart_time" value="600"/>
+		<set name="restart_allowed_time" value="10min"/>
+		<polygon>
+			<coords loc="50797 213515 -4815 -315"/>
+			<coords loc="57617 213510 -4815 -315"/>
+			<coords loc="57669 221683 -4815 -315"/>
+			<coords loc="50773 221632 -4815 -315"/>
+		</polygon>
+	</zone>
+	<zone name="[zaken_sunlight_room]" type="no_restart" >
+		<set name="restart_time" value="600"/>
+		<set name="restart_allowed_time" value="10min"/>
+		<polygon>
+			<coords loc="56026 219873 -2979 -2879"/>
+			<coords loc="56035 220380 -2976 -2876"/>
+			<coords loc="56533 220381 -2976 -2876"/>
+			<coords loc="56539 219881 -2976 -2876"/>
+		</polygon>
+	</zone>
+	<zone name="[antaras_no_restart]" type="no_restart" >
+		<set name="restart_time" value="600"/>
+		<set name="restart_allowed_time" value="10min"/>
+		<polygon>
+			<coords loc="173469 110431 -8380 -4880"/>
+			<coords loc="188081 110284 -8380 -4880"/>
+			<coords loc="188132 119249 -8380 -4880"/>
+			<coords loc="173386 119391 -8380 -4880"/>
+		</polygon>
+	</zone>
+	<zone name="[baium_no_restart]" type="no_restart" >
+		<set name="restart_time" value="600"/>
+		<set name="restart_allowed_time" value="10min"/>
+		<polygon>
+			<coords loc="111022 16177 10021 11061"/>
+			<coords loc="114510 12623 10021 11061"/>
+			<coords loc="118142 15790 10021 11061"/>
+			<coords loc="114773 19589 10021 11061"/>
+		</polygon>
+	</zone>
+	<zone name="[anakimNlilith]" type="no_restart" >
+		<set name="restart_time" value="600"/>
+		<set name="restart_allowed_time" value="10min"/>
+		<polygon>
+			<coords loc="183938 -13697 -5504 -5104"/>
+			<coords loc="186190 -13692 -5504 -5104"/>
+			<coords loc="186176 -8513 -5504 -5104"/>
+			<coords loc="183920 -8513 -5504 -5104"/>
+		</polygon>
+	</zone>
+	<zone name="[fire_no_restart1]" type="no_restart" >
+		<set name="restart_time" value="600"/>
+		<set name="restart_allowed_time" value="10min"/>
+		<polygon>
+			<coords loc="183373 -117179 -3326 -1326"/>
+			<coords loc="184098 -116718 -3326 -1326"/>
+			<coords loc="184137 -115290 -3326 -1326"/>
+			<coords loc="183970 -115002 -3326 -1326"/>
+			<coords loc="183673 -114982 -3326 -1326"/>
+			<coords loc="182400 -115593 -3326 -1326"/>
+			<coords loc="182338 -116737 -3326 -1326"/>
+		</polygon>
+	</zone>
+	<zone name="[fire_no_restart2]" type="no_restart" >
+		<set name="restart_time" value="600"/>
+		<set name="restart_allowed_time" value="10min"/>
+		<polygon>
+			<coords loc="183432 -117590 -2208 792"/>
+			<coords loc="196325 -119107 -2208 792"/>
+			<coords loc="196377 -103657 -2208 792"/>
+			<coords loc="187161 -103538 -2208 792"/>
+		</polygon>
+	</zone>
+	<zone name="[royal_rush_no_restart1]" type="no_restart" >
+		<set name="enabled" value="true"/>
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="181198 -86516 -7263 -7063"/>
+			<coords loc="192394 -86521 -7263 -7063"/>
+			<coords loc="192391 -84626 -7263 -7063"/>
+			<coords loc="181193 -84622 -7263 -7063"/>
+		</polygon>
+	</zone>
+	<zone name="[royal_rush_no_restart2]" type="no_restart" >
+		<set name="enabled" value="true"/>
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="179511 -89903 -7263 -7063"/>
+			<coords loc="190707 -89908 -7263 -7063"/>
+			<coords loc="190704 -88013 -7263 -7063"/>
+			<coords loc="179506 -88009 -7263 -7063"/>
+		</polygon>
+	</zone>
+	<zone name="[royal_rush_no_restart3]" type="no_restart" >
+		<set name="enabled" value="true"/>
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="174498 -82751 -7263 -7063"/>
+			<coords loc="176622 -82751 -7263 -7063"/>
+			<coords loc="176616 -71304 -7263 -7063"/>
+			<coords loc="174489 -71303 -7263 -7063"/>
+		</polygon>
+	</zone>
+	<zone name="[royal_rush_no_restart4]" type="no_restart" >
+		<set name="enabled" value="true"/>
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="172183 -86660 -7263 -7063"/>
+			<coords loc="174307 -86661 -7263 -7063"/>
+			<coords loc="174301 -75214 -7263 -7063"/>
+			<coords loc="172174 -75213 -7263 -7063"/>
+		</polygon>
+	</zone>
+	<zone name="[space_of_dimension_no_restart1]" type="no_restart" >
+		<set name="enabled" value="true"/>
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-120682 -182923 -6964 -6064"/>
+			<coords loc="-115515 -182923 -6964 -6064"/>
+			<coords loc="-115515 -180121 -6964 -6064"/>
+			<coords loc="-120682 -180121 -6964 -6064"/>
+		</polygon>
+	</zone>
+	<zone name="[space_of_dimension_no_restart2]" type="no_restart" >
+		<set name="enabled" value="true"/>
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-120677 -180093 -6964 -6064"/>
+			<coords loc="-115510 -180093 -6964 -6064"/>
+			<coords loc="-115510 -177291 -6964 -6064"/>
+			<coords loc="-120677 -177291 -6964 -6064"/>
+		</polygon>
+	</zone>
+	<zone name="[space_of_dimension_no_restart3]" type="no_restart" >
+		<set name="enabled" value="true"/>
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-114045 -182907 -6964 -6064"/>
+			<coords loc="-108878 -182907 -6964 -6064"/>
+			<coords loc="-108878 -180105 -6964 -6064"/>
+			<coords loc="-114045 -180105 -6964 -6064"/>
+		</polygon>
+	</zone>
+	<zone name="[space_of_dimension_no_restart4]" type="no_restart" >
+		<set name="enabled" value="true"/>
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-114040 -180077 -6964 -6064"/>
+			<coords loc="-108873 -180077 -6964 -6064"/>
+			<coords loc="-108873 -177275 -6964 -6064"/>
+			<coords loc="-114040 -177275 -6964 -6064"/>
+		</polygon>
+	</zone>
+	<zone name="[space_of_dimension_no_restart5]" type="no_restart" >
+		<set name="enabled" value="true"/>
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-116267 -177955 -6964 -6064"/>
+			<coords loc="-113344 -177955 -6964 -6064"/>
+			<coords loc="-113344 -172772 -6964 -6064"/>
+			<coords loc="-116267 -172773 -6964 -6064"/>
+		</polygon>
+	</zone>
+	<zone name="[space_of_dimension_no_restart6]" type="no_restart" >
+		<set name="enabled" value="true"/>
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-116217 -187430 -6964 -6064"/>
+			<coords loc="-113293 -187430 -6964 -6064"/>
+			<coords loc="-113293 -182247 -6964 -6064"/>
+			<coords loc="-116217 -182247 -6964 -6064"/>
+		</polygon>
+	</zone>
+	<zone name="[balakas_no_restart]" type="no_restart" >
+		<set name="restart_time" value="600"/>
+		<polygon>
+			<coords loc="196866 -130845 -2572 5428"/>
+			<coords loc="229289 -130860 -2572 5428"/>
+			<coords loc="229176 -98508 -2572 5428"/>
+			<coords loc="196880 -98498 -2572 5428"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1720_01]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-79735 85612 -5200 -5000"/>
+			<coords loc="-78957 85605 -5200 -5000"/>
+			<coords loc="-78957 85690 -5200 -5000"/>
+			<coords loc="-79735 85700 -5200 -5000"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1720_02]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-80952 85605 -5200 -5000"/>
+			<coords loc="-80139 85597 -5200 -5000"/>
+			<coords loc="-80139 85696 -5200 -5000"/>
+			<coords loc="-80952 85690 -5200 -5000"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1720_03]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-80962 83695 -5192 -4992"/>
+			<coords loc="-78946 83691 -5192 -4992"/>
+			<coords loc="-78959 85626 -5192 -4992"/>
+			<coords loc="-80947 85625 -5192 -4992"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1720_04]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-81199 87363 -5196 -4996"/>
+			<coords loc="-80386 87358 -5196 -4996"/>
+			<coords loc="-80386 87449 -5196 -4996"/>
+			<coords loc="-81203 87454 -5196 -4996"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1720_05]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-79990 87361 -5196 -4996"/>
+			<coords loc="-79212 87360 -5196 -4996"/>
+			<coords loc="-79212 87460 -5196 -4996"/>
+			<coords loc="-79989 87446 -5196 -4996"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1720_06]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-81205 87433 -5200 -5000"/>
+			<coords loc="-79212 87432 -5200 -5000"/>
+			<coords loc="-79208 89361 -5200 -5000"/>
+			<coords loc="-81207 89361 -5200 -5000"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1720_07]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-78197 87968 -5200 -5000"/>
+			<coords loc="-77373 87961 -5200 -5000"/>
+			<coords loc="-77365 88060 -5200 -5000"/>
+			<coords loc="-78197 88060 -5200 -5000"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1720_08]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-77025 87959 -5200 -5000"/>
+			<coords loc="-76209 87969 -5200 -5000"/>
+			<coords loc="-76202 88069 -5200 -5000"/>
+			<coords loc="-77026 88061 -5200 -5000"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1720_09]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-78196 88060 -5196 -4996"/>
+			<coords loc="-76200 88068 -5196 -4996"/>
+			<coords loc="-76192 89970 -5196 -4996"/>
+			<coords loc="-78196 89970 -5196 -4996"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1720_10]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-76797 86142 -5204 -5004"/>
+			<coords loc="-75947 86147 -5204 -5004"/>
+			<coords loc="-75945 86304 -5204 -5004"/>
+			<coords loc="-76794 86298 -5204 -5004"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1720_11]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-77944 86148 -5196 -4996"/>
+			<coords loc="-77189 86148 -5196 -4996"/>
+			<coords loc="-77194 86291 -5196 -4996"/>
+			<coords loc="-77942 86295 -5196 -4996"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1720_12]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-77949 84300 -5196 -4996"/>
+			<coords loc="-75940 84300 -5196 -4996"/>
+			<coords loc="-75943 86185 -5196 -4996"/>
+			<coords loc="-77939 86187 -5196 -4996"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1720_13]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-75870 87311 -5200 -5000"/>
+			<coords loc="-75738 87309 -5200 -5000"/>
+			<coords loc="-75738 88130 -5200 -5000"/>
+			<coords loc="-75870 88125 -5200 -5000"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1720_14]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-75865 86137 -5200 -5000"/>
+			<coords loc="-75747 86134 -5200 -5000"/>
+			<coords loc="-75740 86958 -5200 -5000"/>
+			<coords loc="-75865 86963 -5200 -5000"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1720_15]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-75758 86126 -5200 -5000"/>
+			<coords loc="-73857 86139 -5200 -5000"/>
+			<coords loc="-73855 88140 -5200 -5000"/>
+			<coords loc="-75769 88133 -5200 -5000"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1721_01]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-78713 110409 -4948 -4748"/>
+			<coords loc="-77923 110423 -4948 -4748"/>
+			<coords loc="-77923 110522 -4948 -4748"/>
+			<coords loc="-78708 110515 -4948 -4748"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1721_02]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-79923 110427 -4940 -4740"/>
+			<coords loc="-79109 110432 -4940 -4740"/>
+			<coords loc="-79105 110524 -4940 -4740"/>
+			<coords loc="-79923 110528 -4940 -4740"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1721_03]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-79931 108523 -4944 -4744"/>
+			<coords loc="-77928 108523 -4944 -4744"/>
+			<coords loc="-77932 110445 -4944 -4744"/>
+			<coords loc="-79925 110453 -4944 -4744"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1721_04]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-75761 111051 -4940 -4740"/>
+			<coords loc="-74921 111033 -4940 -4740"/>
+			<coords loc="-74921 111142 -4940 -4740"/>
+			<coords loc="-75757 111151 -4940 -4740"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1721_05]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-76920 111022 -4940 -4740"/>
+			<coords loc="-76089 111022 -4940 -4740"/>
+			<coords loc="-76085 111105 -4940 -4740"/>
+			<coords loc="-76920 111097 -4940 -4740"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1721_06]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-76920 109134 -4932 -4732"/>
+			<coords loc="-74928 109134 -4932 -4732"/>
+			<coords loc="-74920 111099 -4932 -4732"/>
+			<coords loc="-76920 111087 -4932 -4732"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1721_07]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-77176 112795 -4944 -4744"/>
+			<coords loc="-76350 112795 -4944 -4744"/>
+			<coords loc="-76344 112897 -4944 -4744"/>
+			<coords loc="-77176 112903 -4944 -4744"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1721_08]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-76002 112810 -4940 -4740"/>
+			<coords loc="-75182 112806 -4940 -4740"/>
+			<coords loc="-75176 112904 -4940 -4740"/>
+			<coords loc="-76002 112898 -4940 -4740"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1721_09]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-77174 112902 -4944 -4744"/>
+			<coords loc="-75172 112902 -4944 -4744"/>
+			<coords loc="-75167 114798 -4944 -4744"/>
+			<coords loc="-77173 114806 -4944 -4744"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1721_10]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-80178 112233 -4940 -4740"/>
+			<coords loc="-79362 112250 -4940 -4740"/>
+			<coords loc="-79356 112294 -4940 -4740"/>
+			<coords loc="-80190 112301 -4940 -4740"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1721_11]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-78861 112220 -4940 -4740"/>
+			<coords loc="-78196 112201 -4940 -4740"/>
+			<coords loc="-78178 112294 -4940 -4740"/>
+			<coords loc="-78994 112294 -4940 -4740"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1721_12]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-80184 112276 -4940 -4740"/>
+			<coords loc="-78188 112262 -4940 -4740"/>
+			<coords loc="-78176 114188 -4940 -4740"/>
+			<coords loc="-80190 114196 -4940 -4740"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1721_13]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-74840 112152 -4940 -4740"/>
+			<coords loc="-74704 112157 -4940 -4740"/>
+			<coords loc="-74707 112966 -4940 -4740"/>
+			<coords loc="-74840 112966 -4940 -4740"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1721_14]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-74840 110962 -4948 -4748"/>
+			<coords loc="-74737 110962 -4948 -4748"/>
+			<coords loc="-74741 111793 -4948 -4748"/>
+			<coords loc="-74840 111796 -4948 -4748"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_no_res_1721_15]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-74737 110969 -4936 -4736"/>
+			<coords loc="-72838 110964 -4936 -4736"/>
+			<coords loc="-72830 112974 -4936 -4736"/>
+			<coords loc="-74740 112965 -4936 -4736"/>
+		</polygon>
+	</zone>
+	<zone name="[sailren_no_restart]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="29177 -7187 -2560 440"/>
+			<coords loc="28958 -5798 -2560 440"/>
+			<coords loc="27844 -5035 -2560 440"/>
+			<coords loc="26589 -5393 -2560 440"/>
+			<coords loc="25949 -6294 -2560 440"/>
+			<coords loc="26028 -7399 -2560 440"/>
+			<coords loc="26846 -8117 -2560 440"/>
+			<coords loc="28231 -8163 -2560 440"/>
+		</polygon>
+	</zone>
+	<zone name="[citadel_no_restart]" type="no_restart" >
+		<set name="restart_time" value="600"/>
+		<set name="restart_allowed_time" value="10min"/>
+		<polygon>
+			<coords loc="-32768 294930 -20000 10000"/>
+			<coords loc="-32768 262144 -20000 10000"/>
+			<coords loc="32768 262144 -20000 10000"/>
+			<coords loc="32768 294930 -20000 10000"/>
+		</polygon>
+	</zone>
+	<zone name="[baylor_no_restart]" type="no_restart" >
+		<set name="restart_time" value="600"/>
+		<polygon>
+			<coords loc="154488 143672 -12900 -12600"/>
+			<coords loc="153576 143768 -12900 -12600"/>
+			<coords loc="152664 143688 -12900 -12600"/>
+			<coords loc="151736 142072 -12900 -12600"/>
+			<coords loc="151960 141176 -12900 -12600"/>
+			<coords loc="153576 140232 -12900 -12600"/>
+			<coords loc="154504 140488 -12900 -12600"/>
+			<coords loc="155208 141192 -12900 -12600"/>
+			<coords loc="155416 142056 -12900 -12600"/>
+		</polygon>
+	</zone>
+	<zone name="[FourSepulchers1_no_restart]" type="no_restart" >
+		<set name="restart_time" value="300"/>
+		<polygon>
+			<coords loc="181241 -86443 -7225 -6621"/>
+			<coords loc="181241 -84575 -7225 -6621"/>
+			<coords loc="192134 -84575 -7225 -6621"/>
+			<coords loc="192134 -86443 -7225 -6621"/>
+		</polygon>
+	</zone>
+	<zone name="[FourSepulchers2_no_restart]" type="no_restart" >
+		<set name="restart_time" value="300"/>
+		<polygon>
+			<coords loc="179551 -89844 -7225 -6621"/>
+			<coords loc="179551 -88042 -7225 -6621"/>
+			<coords loc="190342 -88042 -7225 -6621"/>
+			<coords loc="190342 -89844 -7225 -6621"/>
+		</polygon>
+	</zone>
+	<zone name="[FourSepulchers3_no_restart]" type="no_restart" >
+		<set name="restart_time" value="300"/>
+		<polygon>
+			<coords loc="172354 -86630 -7225 -6621"/>
+			<coords loc="172354 -75565 -7225 -6621"/>
+			<coords loc="174073 -75565 -7225 -6621"/>
+			<coords loc="174073 -86630 -7225 -6621"/>
+		</polygon>
+	</zone>
+	<zone name="[FourSepulchers4_no_restart]" type="no_restart" >
+		<set name="restart_time" value="300"/>
+		<polygon>
+			<coords loc="174697 -82707 -7225 -6621"/>
+			<coords loc="174697 -71885 -7225 -6621"/>
+			<coords loc="176500 -71885 -7225 -6621"/>
+			<coords loc="176500 -82707 -7225 -6621"/>
+		</polygon>
+	</zone>
+	<zone name="[Frintezza_no_restart]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<circle loc="-87784 -153288 2100 -9176 -2319"/>
+	</zone>
+	<zone name="[LastImperialTomb_no_restart]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="172176 -74106 -5300 -3600"/>
+			<coords loc="172176 -90033 -5300 -3600"/>
+			<coords loc="175984 -90033 -5300 -3600"/>
+			<coords loc="175984 -74106 -5300 -3600"/>
+		</polygon>
+	</zone>
+	<zone name="[Beleth_room_no_restart]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="11214 205578 -10412 -5112"/>
+			<coords loc="20607 205578 -10412 -5112"/>
+			<coords loc="20648 220271 -10412 -5112"/>
+			<coords loc="11172 220271 -10412 -5112"/>
+		</polygon>
+	</zone>
+	<zone name="[NaiaTower_no_restart]" type="no_restart" >
+		<set name="restart_time" value="0"/>
+		<polygon>
+			<coords loc="-53384 242040"/>
+			<coords loc="-53384 250488"/>
+			<coords loc="-43528 250488"/>
+			<coords loc="-43528 242040"/>
+		</polygon>
+	</zone>
+	<zone name="[AnomicFoundry_no_restart]" type="no_restart" >
+		<set name="restart_time" value="15"/>
+		<polygon>
+			<coords loc="30712 241112"/>
+			<coords loc="30712 249976"/>
+			<coords loc="24008 248696"/>
+			<coords loc="25176 245576"/>
+			<coords loc="26456 241112"/>
+		</polygon>
+	</zone>
+</list>

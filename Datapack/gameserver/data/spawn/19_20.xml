@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<territory name="oren13_1920_04">
+		<add x="-5712" y="80968" zmin="-3756" zmax="-3356"/>
+		<add x="-3940" y="82424" zmin="-3756" zmax="-3356"/>
+		<add x="-5236" y="86032" zmin="-3756" zmax="-3356"/>
+		<add x="-9280" y="86152" zmin="-3756" zmax="-3356"/>
+		<add x="-8956" y="81748" zmin="-3756" zmax="-3356"/>
+	</territory>
+	<spawn name="oren13_1920_04" count="3" respawn="20">
+		<territory name="oren13_1920_04"/>
+		<npc id="20039"/><!--Крысолюд Падальщик-->
+	</spawn>
+	<spawn name="oren13_1920_04" count="3" respawn="20">
+		<territory name="oren13_1920_04"/>
+		<npc id="20369"/><!--Зверь Лунного Камня-->
+	</spawn>
+	<spawn name="oren13_1920_04" count="3" respawn="20">
+		<territory name="oren13_1920_04"/>
+		<npc id="20043"/><!--Арахнид Охотник-->
+	</spawn>
+	<territory name="oren13_1920_05">
+		<add x="-19080" y="78044" zmin="-3808" zmax="-3408"/>
+		<add x="-9864" y="81600" zmin="-3808" zmax="-3408"/>
+		<add x="-10500" y="84652" zmin="-3808" zmax="-3408"/>
+		<add x="-16232" y="85492" zmin="-3808" zmax="-3408"/>
+		<add x="-20764" y="82224" zmin="-3808" zmax="-3408"/>
+	</territory>
+	<spawn name="oren13_1920_05" count="5" respawn="20">
+		<territory name="oren13_1920_05"/>
+		<npc id="20410"/><!--Паук Падальщик-->
+	</spawn>
+	<spawn name="oren13_1920_05" count="6" respawn="20">
+		<territory name="oren13_1920_05"/>
+		<npc id="20369"/><!--Зверь Лунного Камня-->
+	</spawn>
+	<spawn name="oren13_1920_05" count="5" respawn="20">
+		<territory name="oren13_1920_05"/>
+		<npc id="20043"/><!--Арахнид Охотник-->
+	</spawn>
+	<territory name="oren13_1920_06">
+		<add x="-14516" y="73296" zmin="-3700" zmax="-3400"/>
+		<add x="-11248" y="76408" zmin="-3700" zmax="-3400"/>
+		<add x="-9876" y="81556" zmin="-3700" zmax="-3400"/>
+		<add x="-19056" y="78000" zmin="-3700" zmax="-3400"/>
+		<add x="-17364" y="75004" zmin="-3700" zmax="-3400"/>
+	</territory>
+	<spawn name="oren13_1920_06" count="4" respawn="20">
+		<territory name="oren13_1920_06"/>
+		<npc id="20043"/><!--Арахнид Охотник-->
+	</spawn>
+	<spawn name="oren13_1920_06" count="6" respawn="20">
+		<territory name="oren13_1920_06"/>
+		<npc id="20369"/><!--Зверь Лунного Камня-->
+	</spawn>
+	<spawn name="oren13_1920_06" count="6" respawn="20">
+		<territory name="oren13_1920_06"/>
+		<npc id="20049"/><!--Ликантроп-->
+	</spawn>
+	<territory name="oren13_1920_01">
+		<add x="-3932" y="82476" zmin="-3820" zmax="-3520"/>
+		<add x="-188" y="82880" zmin="-3820" zmax="-3520"/>
+		<add x="-168" y="86340" zmin="-3820" zmax="-3520"/>
+		<add x="-5228" y="86076" zmin="-3820" zmax="-3520"/>
+	</territory>
+	<spawn name="oren13_1920_01" count="3" respawn="20">
+		<territory name="oren13_1920_01"/>
+		<npc id="20393"/><!--Красный Паук Падальщик-->
+	</spawn>
+	<spawn name="oren13_1920_01" count="3" respawn="20">
+		<territory name="oren13_1920_01"/>
+		<npc id="20369"/><!--Зверь Лунного Камня-->
+	</spawn>
+	<spawn name="oren13_1920_01" count="3" respawn="20">
+		<territory name="oren13_1920_01"/>
+		<npc id="20049"/><!--Ликантроп-->
+	</spawn>
+	<territory name="oren13_1920_02">
+		<add x="-2132" y="77796" zmin="-3752" zmax="-3352"/>
+		<add x="-272" y="79536" zmin="-3752" zmax="-3352"/>
+		<add x="-180" y="82816" zmin="-3752" zmax="-3352"/>
+		<add x="-3884" y="82456" zmin="-3752" zmax="-3352"/>
+		<add x="-5664" y="81000" zmin="-3752" zmax="-3352"/>
+		<add x="-5860" y="77764" zmin="-3752" zmax="-3352"/>
+	</territory>
+	<spawn name="oren13_1920_02" count="4" respawn="20">
+		<territory name="oren13_1920_02"/>
+		<npc id="20393"/><!--Красный Паук Падальщик-->
+	</spawn>
+	<spawn name="oren13_1920_02" count="3" respawn="20">
+		<territory name="oren13_1920_02"/>
+		<npc id="20369"/><!--Зверь Лунного Камня-->
+	</spawn>
+	<spawn name="oren13_1920_02" count="3" respawn="20">
+		<territory name="oren13_1920_02"/>
+		<npc id="20049"/><!--Ликантроп-->
+	</spawn>
+	<territory name="oren13_1920_03">
+		<add x="-10216" y="76172" zmin="-3672" zmax="-3372"/>
+		<add x="-5860" y="77764" zmin="-3672" zmax="-3372"/>
+		<add x="-5708" y="80972" zmin="-3672" zmax="-3372"/>
+		<add x="-8964" y="81736" zmin="-3672" zmax="-3372"/>
+	</territory>
+	<spawn name="oren13_1920_03" count="3" respawn="20">
+		<territory name="oren13_1920_03"/>
+		<npc id="20043"/><!--Арахнид Охотник-->
+	</spawn>
+	<spawn name="oren13_1920_03" count="3" respawn="20">
+		<territory name="oren13_1920_03"/>
+		<npc id="20369"/><!--Зверь Лунного Камня-->
+	</spawn>
+	<spawn name="oren13_1920_03" count="3" respawn="20">
+		<territory name="oren13_1920_03"/>
+		<npc id="20049"/><!--Ликантроп-->
+	</spawn>
+	<territory name="oren13_1920_051s">
+		<add x="-14968" y="81524" zmin="-3732" zmax="-3432"/>
+		<add x="-13348" y="82624" zmin="-3732" zmax="-3432"/>
+		<add x="-14144" y="84616" zmin="-3732" zmax="-3432"/>
+		<add x="-15684" y="83700" zmin="-3732" zmax="-3432"/>
+	</territory>
+	<spawn name="oren13_1920_051s" count="1" respawn="20">
+		<territory name="oren13_1920_051s"/>
+		<npc id="20410"/><!--Паук Падальщик-->
+	</spawn>
+	<spawn name="oren13_1920_051s" count="1" respawn="20">
+		<territory name="oren13_1920_051s"/>
+		<npc id="20369"/><!--Зверь Лунного Камня-->
+	</spawn>
+	<spawn name="oren13_1920_051s" count="2" respawn="20">
+		<territory name="oren13_1920_051s"/>
+		<npc id="20049"/><!--Ликантроп-->
+	</spawn>
+	<territory name="oren13_1920_052s">
+		<add x="-19324" y="80580" zmin="-3724" zmax="-3524"/>
+		<add x="-17528" y="80964" zmin="-3724" zmax="-3524"/>
+		<add x="-17864" y="82780" zmin="-3724" zmax="-3524"/>
+		<add x="-19720" y="82940" zmin="-3724" zmax="-3524"/>
+	</territory>
+	<spawn name="oren13_1920_052s" count="3" respawn="20">
+		<territory name="oren13_1920_052s"/>
+		<npc id="20039"/><!--Крысолюд Падальщик-->
+	</spawn>
+	<spawn name="oren13_1920_052s" count="3" respawn="20">
+		<territory name="oren13_1920_052s"/>
+		<npc id="20410"/><!--Паук Падальщик-->
+	</spawn>
+	<spawn name="oren13_1920_052s" count="3" respawn="20">
+		<territory name="oren13_1920_052s"/>
+		<npc id="20043"/><!--Арахнид Охотник-->
+	</spawn>
+	<spawn name="oren07_npc1920_gd01" count="1" respawn="60">
+		<territory>
+			<add x="-18624" y="68648" zmin="-3708" zmax="-3308"/>
+			<add x="-17428" y="69532" zmin="-3708" zmax="-3308"/>
+			<add x="-16296" y="71120" zmin="-3708" zmax="-3308"/>
+			<add x="-21424" y="76504" zmin="-3708" zmax="-3308"/>
+			<add x="-25612" y="70380" zmin="-3708" zmax="-3308"/>
+			<add x="-21892" y="68492" zmin="-3708" zmax="-3308"/>
+		</territory>
+		<npc id="31845"/><!--Кровавая Фея-->
+	</spawn>
+	<spawn name="oren07_npc1920_gd02" count="1" respawn="60">
+		<territory>
+			<add x="-32508" y="70548" zmin="-3732" zmax="-3232"/>
+			<add x="-25776" y="70408" zmin="-3732" zmax="-3232"/>
+			<add x="-21596" y="76712" zmin="-3732" zmax="-3232"/>
+			<add x="-23528" y="79416" zmin="-3732" zmax="-3232"/>
+			<add x="-32508" y="80860" zmin="-3732" zmax="-3232"/>
+		</territory>
+		<npc id="31850"/><!--Тлетворный Древень-->
+	</spawn>
+	<spawn name="gludio01_qm1920_01" count="2" respawn="180">
+		<territory>
+			<add x="-9276" y="72188" zmin="-3596" zmax="-3096"/>
+			<add x="-8520" y="72308" zmin="-3596" zmax="-3096"/>
+			<add x="-8312" y="72740" zmin="-3596" zmax="-3096"/>
+			<add x="-9140" y="72780" zmin="-3596" zmax="-3096"/>
+		</territory>
+		<npc id="27031"/><!--Часовой Гноллов-->
+	</spawn>
+	<territory name="oren13_1920_01s">
+		<add x="-3244" y="84004" zmin="-3756" zmax="-3556"/>
+		<add x="-1676" y="84380" zmin="-3756" zmax="-3556"/>
+		<add x="-1676" y="86036" zmin="-3756" zmax="-3556"/>
+		<add x="-3484" y="85428" zmin="-3756" zmax="-3556"/>
+	</territory>
+	<spawn name="oren13_1920_01s" count="1" respawn="20">
+		<territory name="oren13_1920_01s"/>
+		<npc id="20393"/><!--Красный Паук Падальщик-->
+	</spawn>
+	<spawn name="oren13_1920_01s" count="1" respawn="20">
+		<territory name="oren13_1920_01s"/>
+		<npc id="20049"/><!--Ликантроп-->
+	</spawn>
+	<territory name="oren13_1920_03s">
+		<add x="-8540" y="78020" zmin="-3524" zmax="-3324"/>
+		<add x="-6644" y="77944" zmin="-3524" zmax="-3324"/>
+		<add x="-6520" y="79412" zmin="-3524" zmax="-3324"/>
+		<add x="-7828" y="79704" zmin="-3524" zmax="-3324"/>
+	</territory>
+	<spawn name="oren13_1920_03s" count="1" respawn="20">
+		<territory name="oren13_1920_03s"/>
+		<npc id="20043"/><!--Арахнид Охотник-->
+	</spawn>
+	<spawn name="oren13_1920_03s" count="1" respawn="20">
+		<territory name="oren13_1920_03s"/>
+		<npc id="20369"/><!--Зверь Лунного Камня-->
+	</spawn>
+	<spawn name="oren13_1920_03s" count="1" respawn="20">
+		<territory name="oren13_1920_03s"/>
+		<npc id="20049"/><!--Ликантроп-->
+	</spawn>
+	<territory name="oren13_1920_02s">
+		<add x="-4440" y="78488" zmin="-3648" zmax="-3348"/>
+		<add x="-2956" y="78448" zmin="-3648" zmax="-3348"/>
+		<add x="-2268" y="80356" zmin="-3648" zmax="-3348"/>
+		<add x="-4376" y="80480" zmin="-3648" zmax="-3348"/>
+	</territory>
+	<spawn name="oren13_1920_02s" count="1" respawn="20">
+		<territory name="oren13_1920_02s"/>
+		<npc id="20393"/><!--Красный Паук Падальщик-->
+	</spawn>
+	<spawn name="oren13_1920_02s" count="1" respawn="20">
+		<territory name="oren13_1920_02s"/>
+		<npc id="20369"/><!--Зверь Лунного Камня-->
+	</spawn>
+	<spawn name="oren13_1920_02s" count="1" respawn="20">
+		<territory name="oren13_1920_02s"/>
+		<npc id="20049"/><!--Ликантроп-->
+	</spawn>
+	<territory name="oren13_1920_04s">
+		<add x="-7104" y="82560" zmin="-3668" zmax="-3468"/>
+		<add x="-5500" y="82988" zmin="-3668" zmax="-3468"/>
+		<add x="-5500" y="84556" zmin="-3668" zmax="-3468"/>
+		<add x="-7348" y="84228" zmin="-3668" zmax="-3468"/>
+	</territory>
+	<spawn name="oren13_1920_04s" count="2" respawn="20">
+		<territory name="oren13_1920_04s"/>
+		<npc id="20039"/><!--Крысолюд Падальщик-->
+	</spawn>
+	<spawn name="oren13_1920_04s" count="2" respawn="20">
+		<territory name="oren13_1920_04s"/>
+		<npc id="20369"/><!--Зверь Лунного Камня-->
+	</spawn>
+	<spawn name="oren13_1920_04s" count="2" respawn="20">
+		<territory name="oren13_1920_04s"/>
+		<npc id="20043"/><!--Арахнид Охотник-->
+	</spawn>
+	<territory name="oren13_1920_06s">
+		<add x="-16540" y="76232" zmin="-3572" zmax="-3272"/>
+		<add x="-13900" y="75392" zmin="-3572" zmax="-3272"/>
+		<add x="-12824" y="78128" zmin="-3572" zmax="-3272"/>
+		<add x="-14788" y="78228" zmin="-3572" zmax="-3272"/>
+	</territory>
+	<spawn name="oren13_1920_06s" count="3" respawn="20">
+		<territory name="oren13_1920_06s"/>
+		<npc id="20039"/><!--Крысолюд Падальщик-->
+	</spawn>
+	<spawn name="oren13_1920_06s" count="2" respawn="20">
+		<territory name="oren13_1920_06s"/>
+		<npc id="20369"/><!--Зверь Лунного Камня-->
+	</spawn>
+	<spawn name="oren13_1920_06s" count="2" respawn="20">
+		<territory name="oren13_1920_06s"/>
+		<npc id="20049"/><!--Ликантроп-->
+	</spawn>
+	<spawn name="oren13_npc1920_001" count="1" respawn="60">
+		<point x="-15404" y="71131" z="-3445" h="-25096"/>
+		<npc id="30432"/><!--Ирен-->
+	</spawn>
+	<spawn name="oren13_npc1920_001" count="1" respawn="60">
+		<point x="-15648" y="71405" z="-3451" h="-24928"/>
+		<npc id="30433"/><!--Катавей-->
+	</spawn>
+	<spawn name="oren13_npc1920_002" count="1" respawn="60">
+		<point x="-1152" y="76125" z="-3566" h="-8920"/>
+		<npc id="30430"/><!--Трионэль-->
+	</spawn>
+	<spawn name="oren13_npc1920_002" count="1" respawn="60">
+		<point x="-1301" y="75883" z="-3566" h="-4628"/>
+		<npc id="30431"/><!--Эриэль-->
+	</spawn>
+	<spawn name="oren13_npc1920_003" count="1" respawn="60">
+		<point x="-9076" y="72969" z="-3457" h="57344"/>
+		<npc id="30426"/><!--Приас-->
+	</spawn>
+	<spawn name="oren07_npc1920_g01" count="1" respawn="60">
+		<territory>
+			<add x="-32524" y="65806" zmin="-3776" zmax="-2976"/>
+			<add x="-12071" y="66277" zmin="-3776" zmax="-2976"/>
+			<add x="-21652" y="76722" zmin="-3776" zmax="-2976"/>
+			<add x="-32406" y="72843" zmin="-3776" zmax="-2976"/>
+		</territory>
+		<npc id="31034"/><!--Караульный-->
+	</spawn>
+	<spawn name="oren07_npc1920_g02" count="1" respawn="60">
+		<territory>
+			<add x="-32438" y="73241" zmin="-3776" zmax="-2976"/>
+			<add x="-23540" y="76777" zmin="-3776" zmax="-2976"/>
+			<add x="-23427" y="88652" zmin="-3776" zmax="-2976"/>
+			<add x="-32206" y="84591" zmin="-3776" zmax="-2976"/>
+		</territory>
+		<npc id="31034"/><!--Караульный-->
+	</spawn>
+	<spawn name="oren07_npc1920_g03" count="1" respawn="60">
+		<territory>
+			<add x="-9152" y="66809" zmin="-3776" zmax="-2976"/>
+			<add x="-526" y="65873" zmin="-3776" zmax="-2976"/>
+			<add x="-1276" y="72459" zmin="-3776" zmax="-2976"/>
+			<add x="-8148" y="70259" zmin="-3776" zmax="-2976"/>
+		</territory>
+		<npc id="31033"/><!--Часовой-->
+	</spawn>
+</list>

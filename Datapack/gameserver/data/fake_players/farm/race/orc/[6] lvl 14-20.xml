@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE farm SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<farm name="Orc (Lvl 14-20)" min_level="14" max_level="20" races="ORC">
+	<zones>
+		<zone>
+			<polygon>
+				<coords loc="-12966 -112278 -3200 0"/>
+				<coords loc="12189 -107882 -3200 0"/>
+				<coords loc="-1603 -79676 -3200 0"/>
+				<coords loc="-16420 -89929 -3200 0"/>
+			</polygon>
+		</zone>
+		<spawn_points>
+			<coords loc="-15256 -89368 -2704"/>
+			<coords loc="-10552 -91032 -2288"/>
+		</spawn_points>
+	</zones>
+	<on_obtain_max_level>
+		<action id="1"/>
+	</on_obtain_max_level>
+	<go_to_town min_farm_time="1800" max_farm_time="3600">
+		<action id="1"/>
+	</go_to_town>
+	<action id="1">
+		<wait min_delay="1000" max_delay="3000"/>
+		<random_action>
+			<ordinary_actions>
+				<move_to_point x="-13864" y="-92040" z="-2624" min_range="0" max_range="50"/>
+				<move_to_point x="-14856" y="-91560" z="-2704" min_range="50" max_range="150"/>
+				<move_to_point x="-15192" y="-90232" z="-2720" min_range="50" max_range="150"/>
+				<move_to_point x="-16872" y="-89160" z="-2688" min_range="50" max_range="150"/>
+				<move_to_point x="-18312" y="-90664" z="-2624" min_range="50" max_range="150"/>
+				<move_to_point x="-19400" y="-91992" z="-2688" min_range="50" max_range="150"/>
+				<move_to_point x="-19672" y="-93864" z="-2816" min_range="50" max_range="150"/>
+				<move_to_point x="-19912" y="-95656" z="-2928" min_range="50" max_range="150"/>
+				<move_to_point x="-20616" y="-96744" z="-3056" min_range="50" max_range="150"/>
+				<move_to_point x="-21512" y="-97464" z="-3024" min_range="0" max_range="50"/>
+				<move_to_point x="-22104" y="-98584" z="-2864" min_range="50" max_range="150"/>
+				<move_to_point x="-23336" y="-100248" z="-2992" min_range="50" max_range="150"/>
+				<move_to_point x="-24136" y="-101272" z="-3088" min_range="50" max_range="150"/>
+				<move_to_point x="-25928" y="-102760" z="-3120" min_range="50" max_range="150"/>
+				<move_to_point x="-26792" y="-103352" z="-3168" min_range="50" max_range="150"/>
+				<move_to_point x="-26616" y="-104792" z="-2960" min_range="50" max_range="150"/>
+				<move_to_point x="-26536" y="-105656" z="-2840" min_range="50" max_range="150"/>
+				<move_to_point x="-27288" y="-106984" z="-2552" min_range="50" max_range="150"/>
+				<move_to_point x="-27400" y="-108264" z="-2400" min_range="50" max_range="150"/>
+				<move_to_point x="-27592" y="-109384" z="-2400" min_range="50" max_range="150"/>
+				<move_to_point x="-28872" y="-110008" z="-2336" min_range="50" max_range="150"/>
+				<move_to_point x="-30312" y="-109144" z="-2128" min_range="50" max_range="150"/>
+				<move_to_point x="-31608" y="-108408" z="-2080" min_range="50" max_range="150"/>
+				<move_to_point x="-33256" y="-107304" z="-2064" min_range="50" max_range="150"/>
+				<move_to_point x="-35624" y="-107544" z="-2192" min_range="50" max_range="150"/>
+				<move_to_point x="-37320" y="-107032" z="-2264" min_range="50" max_range="150"/>
+				<move_to_point x="-38984" y="-107144" z="-2112" min_range="50" max_range="150"/>
+				<move_to_point x="-41304" y="-107336" z="-1808" min_range="50" max_range="150"/>
+				<move_to_point x="-42904" y="-106728" z="-1472" min_range="50" max_range="150"/>
+				<move_to_point x="-44728" y="-106088" z="-1136" min_range="50" max_range="150"/>
+				<move_to_point x="-45896" y="-105944" z="-904" min_range="0" max_range="50"/>
+				<move_to_point x="-46264" y="-106408" z="-704" min_range="0" max_range="50"/>
+				<move_to_point x="-45960" y="-107448" z="-592" min_range="50" max_range="150"/>
+				<move_to_point x="-46072" y="-108328" z="-416" min_range="50" max_range="150"/>
+				<move_to_point x="-46152" y="-109544" z="-288" min_range="50" max_range="150"/>
+				<move_to_point x="-45960" y="-110536" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-45592" y="-111592" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-44920" y="-112232" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-44472" y="-112888" z="-240" min_range="50" max_range="150"/>
+			</ordinary_actions>
+			<use_item id="736"/>
+		</random_action>
+	</action>
+</farm>

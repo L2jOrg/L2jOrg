@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE farm SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<farm name="Dwarven (Lvl 2-4)" min_level="2" max_level="4" races="DWARF">
+	<zones>
+		<zone>
+			<polygon>
+				<coords loc="113032 -173848 -1500 300"/>
+				<coords loc="114056 -176152 -1500 300"/>
+				<coords loc="115096 -176520 -1500 300"/>
+				<coords loc="117064 -177000 -1500 300"/>
+				<coords loc="117848 -175144 -1500 300"/>
+				<coords loc="118696 -171624 -1500 300"/>
+				<coords loc="115576 -170712 -1500 300"/>
+				<coords loc="113912 -171384 -1500 300"/>
+			</polygon>
+		</zone>
+		<spawn_points>
+			<coords loc="116024 -174504 -960"/>
+			<coords loc="115448 -175880 -1008"/>
+		</spawn_points>
+	</zones>
+	<on_obtain_max_level>
+		<action id="1"/>
+	</on_obtain_max_level>
+	<go_to_town min_farm_time="1800" max_farm_time="3600">
+		<action id="1"/>
+	</go_to_town>
+	<action id="1">
+		<wait min_delay="1000" max_delay="3000"/>
+		<random_action>
+			<ordinary_actions>
+				<move_to_point x="115912" y="-175416" z="-992" min_range="50" max_range="150"/>
+				<move_to_point x="115800" y="-176168" z="-912" min_range="50" max_range="150"/>
+				<move_to_point x="115464" y="-176440" z="-792" min_range="0" max_range="50"/>
+				<move_to_point x="115064" y="-176632" z="-784" min_range="0" max_range="50"/>
+				<move_to_point x="115224" y="-177288" z="-896" min_range="0" max_range="50"/>
+				<move_to_point x="115304" y="-177848" z="-912" min_range="50" max_range="150"/>
+				<move_to_point x="115416" y="-178600" z="-928" min_range="50" max_range="150"/>
+			</ordinary_actions>
+			<use_item id="736"/>
+		</random_action>
+	</action>
+</farm>

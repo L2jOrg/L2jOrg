@@ -1,0 +1,1 @@
+DELETE FROM castle WHERE id > 5;

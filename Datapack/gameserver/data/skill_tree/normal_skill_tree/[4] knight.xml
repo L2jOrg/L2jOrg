@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="4">	<!--Рыцарь-->
+			<skill id="110" level="1" name="Абсолютная Защита(Ultimate Defense)" cost="1000" min_level="20"/>
+			<skill id="82" level="1" name="Величие(Majesty)" cost="1000" min_level="20"/>
+			<skill id="217" level="1" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1000" min_level="20"/>
+			<skill id="232" level="1" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1000" min_level="20"/>
+			<skill id="232" level="2" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1000" min_level="20"/>
+			<skill id="232" level="3" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1000" min_level="20"/>
+			<skill id="153" level="1" name="Владение Щитом(Shield Mastery)" cost="1000" min_level="20"/>
+			<skill id="70" level="1" name="Кража Здоровья(Drain HP)" item_id="1097" cost="1000" min_level="20"/>
+			<skill id="147" level="1" name="Магическое Сопротивление(M. Def.)" cost="1000" min_level="20"/>
+			<skill id="147" level="2" name="Магическое Сопротивление(M. Def.)" cost="1000" min_level="20"/>
+			<skill id="92" level="1" name="Оглушение Щитом(Shield Stun)" cost="1000" min_level="20"/>
+			<skill id="92" level="2" name="Оглушение Щитом(Shield Stun)" cost="1000" min_level="20"/>
+			<skill id="92" level="3" name="Оглушение Щитом(Shield Stun)" cost="1000" min_level="20"/>
+			<skill id="28" level="1" name="Агрессия(Aggression)" cost="2800" min_level="22"/>
+			<skill id="232" level="4" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="2800" min_level="22"/>
+			<skill id="70" level="2" name="Кража Здоровья(Drain HP)" cost="2800" min_level="22"/>
+			<skill id="147" level="3" name="Магическое Сопротивление(M. Def.)" cost="2800" min_level="22"/>
+			<skill id="92" level="4" name="Оглушение Щитом(Shield Stun)" cost="2800" min_level="22"/>
+			<skill id="28" level="2" name="Агрессия(Aggression)" cost="2800" min_level="23"/>
+			<skill id="232" level="5" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="2800" min_level="23"/>
+			<skill id="70" level="3" name="Кража Здоровья(Drain HP)" cost="2800" min_level="23"/>
+			<skill id="147" level="4" name="Магическое Сопротивление(M. Def.)" cost="2800" min_level="23"/>
+			<skill id="92" level="5" name="Оглушение Щитом(Shield Stun)" cost="2800" min_level="23"/>
+			<skill id="28" level="3" name="Агрессия(Aggression)" cost="2800" min_level="24"/>
+			<skill id="217" level="2" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="2800" min_level="24"/>
+			<skill id="232" level="6" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="2800" min_level="24"/>
+			<skill id="70" level="4" name="Кража Здоровья(Drain HP)" cost="2800" min_level="24"/>
+			<skill id="147" level="5" name="Магическое Сопротивление(M. Def.)" cost="2800" min_level="24"/>
+			<skill id="92" level="6" name="Оглушение Щитом(Shield Stun)" cost="2800" min_level="24"/>
+			<skill id="112" level="1" name="Отклонить Стрелу(Deflect Arrow)" cost="2800" min_level="24"/>
+			<skill id="28" level="4" name="Агрессия(Aggression)" cost="5700" min_level="26"/>
+			<skill id="217" level="3" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="5700" min_level="26"/>
+			<skill id="232" level="7" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="5700" min_level="26"/>
+			<skill id="70" level="5" name="Кража Здоровья(Drain HP)" cost="5700" min_level="26"/>
+			<skill id="147" level="6" name="Магическое Сопротивление(M. Def.)" cost="5700" min_level="26"/>
+			<skill id="92" level="7" name="Оглушение Щитом(Shield Stun)" cost="5700" min_level="26"/>
+			<skill id="45" level="1" name="Святое Лечение(Divine Heal)" item_id="1378" cost="5700" min_level="26"/>
+			<skill id="28" level="5" name="Агрессия(Aggression)" cost="5700" min_level="27"/>
+			<skill id="232" level="8" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="5700" min_level="27"/>
+			<skill id="70" level="6" name="Кража Здоровья(Drain HP)" cost="5700" min_level="27"/>
+			<skill id="147" level="7" name="Магическое Сопротивление(M. Def.)" cost="5700" min_level="27"/>
+			<skill id="92" level="8" name="Оглушение Щитом(Shield Stun)" cost="5700" min_level="27"/>
+			<skill id="45" level="2" name="Святое Лечение(Divine Heal)" cost="5700" min_level="27"/>
+			<skill id="28" level="6" name="Агрессия(Aggression)" cost="5700" min_level="28"/>
+			<skill id="217" level="4" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="5700" min_level="28"/>
+			<skill id="232" level="9" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="5700" min_level="28"/>
+			<skill id="153" level="2" name="Владение Щитом(Shield Mastery)" cost="5700" min_level="28"/>
+			<skill id="70" level="7" name="Кража Здоровья(Drain HP)" cost="5700" min_level="28"/>
+			<skill id="147" level="8" name="Магическое Сопротивление(M. Def.)" cost="5700" min_level="28"/>
+			<skill id="92" level="9" name="Оглушение Щитом(Shield Stun)" cost="5700" min_level="28"/>
+			<skill id="45" level="3" name="Святое Лечение(Divine Heal)" cost="5700" min_level="28"/>
+			<skill id="28" level="7" name="Агрессия(Aggression)" cost="11000" min_level="30"/>
+			<skill id="217" level="5" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="11000" min_level="30"/>
+			<skill id="232" level="10" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="11000" min_level="30"/>
+			<skill id="70" level="8" name="Кража Здоровья(Drain HP)" cost="11000" min_level="30"/>
+			<skill id="147" level="9" name="Магическое Сопротивление(M. Def.)" cost="11000" min_level="30"/>
+			<skill id="92" level="10" name="Оглушение Щитом(Shield Stun)" cost="11000" min_level="30"/>
+			<skill id="45" level="4" name="Святое Лечение(Divine Heal)" cost="11000" min_level="30"/>
+			<skill id="28" level="8" name="Агрессия(Aggression)" cost="11000" min_level="31"/>
+			<skill id="232" level="11" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="11000" min_level="31"/>
+			<skill id="70" level="9" name="Кража Здоровья(Drain HP)" cost="11000" min_level="31"/>
+			<skill id="147" level="10" name="Магическое Сопротивление(M. Def.)" cost="11000" min_level="31"/>
+			<skill id="92" level="11" name="Оглушение Щитом(Shield Stun)" cost="11000" min_level="31"/>
+			<skill id="45" level="5" name="Святое Лечение(Divine Heal)" cost="11000" min_level="31"/>
+			<skill id="28" level="9" name="Агрессия(Aggression)" cost="11000" min_level="32"/>
+			<skill id="217" level="6" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="11000" min_level="32"/>
+			<skill id="232" level="12" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="11000" min_level="32"/>
+			<skill id="70" level="10" name="Кража Здоровья(Drain HP)" cost="11000" min_level="32"/>
+			<skill id="147" level="11" name="Магическое Сопротивление(M. Def.)" cost="11000" min_level="32"/>
+			<skill id="92" level="12" name="Оглушение Щитом(Shield Stun)" cost="11000" min_level="32"/>
+			<skill id="112" level="2" name="Отклонить Стрелу(Deflect Arrow)" cost="11000" min_level="32"/>
+			<skill id="45" level="6" name="Святое Лечение(Divine Heal)" cost="11000" min_level="32"/>
+			<skill id="28" level="10" name="Агрессия(Aggression)" cost="20000" min_level="34"/>
+			<skill id="217" level="7" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="20000" min_level="34"/>
+			<skill id="232" level="13" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="20000" min_level="34"/>
+			<skill id="70" level="11" name="Кража Здоровья(Drain HP)" cost="20000" min_level="34"/>
+			<skill id="147" level="12" name="Магическое Сопротивление(M. Def.)" cost="20000" min_level="34"/>
+			<skill id="92" level="13" name="Оглушение Щитом(Shield Stun)" cost="20000" min_level="34"/>
+			<skill id="45" level="7" name="Святое Лечение(Divine Heal)" cost="20000" min_level="34"/>
+			<skill id="28" level="11" name="Агрессия(Aggression)" cost="20000" min_level="35"/>
+			<skill id="232" level="14" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="20000" min_level="35"/>
+			<skill id="70" level="12" name="Кража Здоровья(Drain HP)" cost="20000" min_level="35"/>
+			<skill id="147" level="13" name="Магическое Сопротивление(M. Def.)" cost="20000" min_level="35"/>
+			<skill id="92" level="14" name="Оглушение Щитом(Shield Stun)" cost="20000" min_level="35"/>
+			<skill id="45" level="8" name="Святое Лечение(Divine Heal)" cost="20000" min_level="35"/>
+			<skill id="28" level="12" name="Агрессия(Aggression)" cost="20000" min_level="36"/>
+			<skill id="217" level="8" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="20000" min_level="36"/>
+			<skill id="232" level="15" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="20000" min_level="36"/>
+			<skill id="70" level="13" name="Кража Здоровья(Drain HP)" cost="20000" min_level="36"/>
+			<skill id="147" level="14" name="Магическое Сопротивление(M. Def.)" cost="20000" min_level="36"/>
+			<skill id="92" level="15" name="Оглушение Щитом(Shield Stun)" cost="20000" min_level="36"/>
+			<skill id="45" level="9" name="Святое Лечение(Divine Heal)" cost="20000" min_level="36"/>
+			<skill id="191" level="1" name="Фокусировка Разума(Focus Mind)" cost="20000" min_level="36"/>
+		</class>
+	</normal_skill_tree>
+</list>

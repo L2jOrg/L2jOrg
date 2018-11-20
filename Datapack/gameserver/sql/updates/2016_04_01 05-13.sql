@@ -1,0 +1,1 @@
+UPDATE castle SET side = 0 WHERE castle.id NOT IN (SELECT hasCastle FROM clan_data);

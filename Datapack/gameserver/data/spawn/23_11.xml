@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn name="schttgart08_2311_19" count="2" respawn="20">
+		<territory>
+			<add x="129872" y="-210576" zmin="-3692" zmax="-3392"/>
+			<add x="130804" y="-210292" zmin="-3692" zmax="-3392"/>
+			<add x="130832" y="-208076" zmin="-3692" zmax="-3392"/>
+			<add x="129800" y="-208252" zmin="-3692" zmax="-3392"/>
+			<add x="129164" y="-209692" zmin="-3692" zmax="-3392"/>
+		</territory>
+		<npc id="20528"/><!--Лорд Гоблинов-->
+	</spawn>
+	<territory name="schttgart08_2311_18">
+		<add x="127908" y="-198784" zmin="-3716" zmax="-3266"/>
+		<add x="130840" y="-199616" zmin="-3716" zmax="-3266"/>
+		<add x="130836" y="-196868" zmin="-3716" zmax="-3266"/>
+		<add x="127176" y="-196864" zmin="-3716" zmax="-3266"/>
+	</territory>
+	<spawn name="schttgart08_2311_18" count="2" respawn="20">
+		<territory name="schttgart08_2311_18"/>
+		<npc id="20521"/><!--Базальтовый Голем-->
+	</spawn>
+	<spawn name="schttgart08_2311_18" count="2" respawn="20">
+		<territory name="schttgart08_2311_18"/>
+		<npc id="20323"/><!--Предводитель Банды Гоблинов-->
+	</spawn>
+	<spawn name="schttgart08_2311_18" count="3" respawn="20">
+		<territory name="schttgart08_2311_18"/>
+		<npc id="20526"/><!--Обсидиановый Голем-->
+	</spawn>
+	<territory name="schttgart08_2311_17">
+		<add x="129148" y="-206880" zmin="-3772" zmax="-2972"/>
+		<add x="130780" y="-206992" zmin="-3772" zmax="-2972"/>
+		<add x="130788" y="-202644" zmin="-3772" zmax="-2972"/>
+		<add x="128960" y="-203816" zmin="-3772" zmax="-2972"/>
+	</territory>
+	<spawn name="schttgart08_2311_17" count="1" respawn="20">
+		<territory name="schttgart08_2311_17"/>
+		<npc id="20370"/><!--Шипастая Летучая Мышь-->
+	</spawn>
+	<spawn name="schttgart08_2311_17" count="2" respawn="20">
+		<territory name="schttgart08_2311_17"/>
+		<npc id="20528"/><!--Лорд Гоблинов-->
+	</spawn>
+	<territory name="schttgart08_2311_16">
+		<add x="125012" y="-201904" zmin="-3752" zmax="-3352"/>
+		<add x="127460" y="-203176" zmin="-3752" zmax="-3352"/>
+		<add x="128956" y="-202672" zmin="-3752" zmax="-3352"/>
+		<add x="129532" y="-201404" zmin="-3752" zmax="-3352"/>
+		<add x="129168" y="-200504" zmin="-3752" zmax="-3352"/>
+		<add x="126440" y="-199616" zmin="-3752" zmax="-3352"/>
+		<add x="124764" y="-199364" zmin="-3752" zmax="-3352"/>
+		<add x="124180" y="-200764" zmin="-3752" zmax="-3352"/>
+	</territory>
+	<spawn name="schttgart08_2311_16" count="3" respawn="20">
+		<territory name="schttgart08_2311_16"/>
+		<npc id="20510"/><!--Пума-->
+	</spawn>
+	<spawn name="schttgart08_2311_16" count="2" respawn="20">
+		<territory name="schttgart08_2311_16"/>
+		<npc id="20370"/><!--Шипастая Летучая Мышь-->
+	</spawn>
+	<spawn name="schttgart08_2311_16" count="3" respawn="20">
+		<territory name="schttgart08_2311_16"/>
+		<npc id="20528"/><!--Лорд Гоблинов-->
+	</spawn>
+	<spawn name="schttgart08_2311_20" count="2" respawn="20">
+		<territory>
+			<add x="127480" y="-212408" zmin="-3688" zmax="-3288"/>
+			<add x="128440" y="-212440" zmin="-3688" zmax="-3288"/>
+			<add x="129272" y="-211820" zmin="-3688" zmax="-3288"/>
+			<add x="129800" y="-210628" zmin="-3688" zmax="-3288"/>
+			<add x="129120" y="-209840" zmin="-3688" zmax="-3288"/>
+			<add x="126796" y="-211288" zmin="-3688" zmax="-3288"/>
+		</territory>
+		<npc id="20528"/><!--Лорд Гоблинов-->
+	</spawn>
+	<territory name="schttgart08_2311_09">
+		<add x="121568" y="-211880" zmin="-3788" zmax="-3538"/>
+		<add x="123220" y="-212536" zmin="-3788" zmax="-3538"/>
+		<add x="123960" y="-212236" zmin="-3788" zmax="-3538"/>
+		<add x="124196" y="-211920" zmin="-3788" zmax="-3538"/>
+		<add x="121012" y="-210040" zmin="-3788" zmax="-3538"/>
+		<add x="119908" y="-210456" zmin="-3788" zmax="-3538"/>
+	</territory>
+	<spawn name="schttgart08_2311_09" count="2" respawn="20">
+		<territory name="schttgart08_2311_09"/>
+		<npc id="20480"/><!--Опасная Летучая Мышь-->
+	</spawn>
+	<spawn name="schttgart08_2311_09" count="3" respawn="20">
+		<territory name="schttgart08_2311_09"/>
+		<npc id="20324"/><!--Помощник Предводителя Банды Гоблинов-->
+	</spawn>
+	<spawn name="schttgart08_2311_09" count="3" respawn="20">
+		<territory name="schttgart08_2311_09"/>
+		<npc id="20153"/><!--Магический Ткач-->
+	</spawn>
+	<territory name="schttgart08_2311_08">
+		<add x="119980" y="-210396" zmin="-3784" zmax="-3484"/>
+		<add x="121056" y="-209920" zmin="-3784" zmax="-3484"/>
+		<add x="120752" y="-206264" zmin="-3784" zmax="-3484"/>
+		<add x="119412" y="-206756" zmin="-3784" zmax="-3484"/>
+	</territory>
+	<spawn name="schttgart08_2311_08" count="1" respawn="20">
+		<territory name="schttgart08_2311_08"/>
+		<npc id="20324"/><!--Помощник Предводителя Банды Гоблинов-->
+	</spawn>
+	<spawn name="schttgart08_2311_08" count="2" respawn="20">
+		<territory name="schttgart08_2311_08"/>
+		<npc id="20153"/><!--Магический Ткач-->
+	</spawn>
+	<territory name="schttgart08_2311_07">
+		<add x="119064" y="-206596" zmin="-3792" zmax="-3492"/>
+		<add x="120784" y="-206056" zmin="-3792" zmax="-3492"/>
+		<add x="117960" y="-203528" zmin="-3792" zmax="-3492"/>
+		<add x="117096" y="-203336" zmin="-3792" zmax="-3492"/>
+		<add x="117280" y="-204820" zmin="-3792" zmax="-3492"/>
+	</territory>
+	<spawn name="schttgart08_2311_07" count="2" respawn="20">
+		<territory name="schttgart08_2311_07"/>
+		<npc id="20480"/><!--Опасная Летучая Мышь-->
+	</spawn>
+	<spawn name="schttgart08_2311_07" count="3" respawn="20">
+		<territory name="schttgart08_2311_07"/>
+		<npc id="20324"/><!--Помощник Предводителя Банды Гоблинов-->
+	</spawn>
+	<spawn name="schttgart08_2311_07" count="2" respawn="20">
+		<territory name="schttgart08_2311_07"/>
+		<npc id="20153"/><!--Магический Ткач-->
+	</spawn>
+	<spawn name="schttgart08_2311_06" count="2" respawn="20">
+		<territory>
+			<add x="117172" y="-201928" zmin="-3840" zmax="-3540"/>
+			<add x="118444" y="-202000" zmin="-3840" zmax="-3540"/>
+			<add x="119316" y="-200932" zmin="-3840" zmax="-3540"/>
+			<add x="117100" y="-201108" zmin="-3840" zmax="-3540"/>
+		</territory>
+		<npc id="20307"/><!--Оборотень Гарум-->
+	</spawn>
+	<territory name="schttgart08_2311_05">
+		<add x="119780" y="-203268" zmin="-3776" zmax="-3176"/>
+		<add x="120960" y="-202700" zmin="-3776" zmax="-3176"/>
+		<add x="120852" y="-201696" zmin="-3776" zmax="-3176"/>
+		<add x="119376" y="-200892" zmin="-3776" zmax="-3176"/>
+		<add x="118420" y="-202120" zmin="-3776" zmax="-3176"/>
+	</territory>
+	<spawn name="schttgart08_2311_05" count="2" respawn="20">
+		<territory name="schttgart08_2311_05"/>
+		<npc id="20322"/><!--Бандит Гоблинов-->
+	</spawn>
+	<spawn name="schttgart08_2311_05" count="2" respawn="20">
+		<territory name="schttgart08_2311_05"/>
+		<npc id="20447"/><!--Стрелок Орков Утуку-->
+	</spawn>
+	<spawn name="schttgart08_2311_05" count="3" respawn="20">
+		<territory name="schttgart08_2311_05"/>
+		<npc id="20307"/><!--Оборотень Гарум-->
+	</spawn>
+	<territory name="schttgart08_2311_15">
+		<add x="123484" y="-208632" zmin="-3808" zmax="-2808"/>
+		<add x="125984" y="-210224" zmin="-3808" zmax="-2808"/>
+		<add x="127916" y="-209260" zmin="-3808" zmax="-2808"/>
+		<add x="129044" y="-206980" zmin="-3808" zmax="-2808"/>
+		<add x="128756" y="-204184" zmin="-3808" zmax="-2808"/>
+		<add x="126228" y="-203480" zmin="-3808" zmax="-2808"/>
+		<add x="123676" y="-206980" zmin="-3808" zmax="-2808"/>
+	</territory>
+	<spawn name="schttgart08_2311_15" count="4" respawn="20">
+		<territory name="schttgart08_2311_15"/>
+		<npc id="20510"/><!--Пума-->
+	</spawn>
+	<spawn name="schttgart08_2311_15" count="4" respawn="20">
+		<territory name="schttgart08_2311_15"/>
+		<npc id="20370"/><!--Шипастая Летучая Мышь-->
+	</spawn>
+	<spawn name="schttgart08_2311_15" count="4" respawn="20">
+		<territory name="schttgart08_2311_15"/>
+		<npc id="20528"/><!--Лорд Гоблинов-->
+	</spawn>
+	<territory name="schttgart08_2311_14">
+		<add x="123884" y="-216020" zmin="-3784" zmax="-3384"/>
+		<add x="126328" y="-216140" zmin="-3784" zmax="-3384"/>
+		<add x="126844" y="-214844" zmin="-3784" zmax="-3384"/>
+		<add x="126380" y="-213884" zmin="-3784" zmax="-3384"/>
+		<add x="124056" y="-212712" zmin="-3784" zmax="-3384"/>
+		<add x="123332" y="-213036" zmin="-3784" zmax="-3384"/>
+		<add x="122960" y="-215244" zmin="-3784" zmax="-3384"/>
+	</territory>
+	<spawn name="schttgart08_2311_14" count="2" respawn="20">
+		<territory name="schttgart08_2311_14"/>
+		<npc id="20480"/><!--Опасная Летучая Мышь-->
+	</spawn>
+	<spawn name="schttgart08_2311_14" count="3" respawn="20">
+		<territory name="schttgart08_2311_14"/>
+		<npc id="20324"/><!--Помощник Предводителя Банды Гоблинов-->
+	</spawn>
+	<spawn name="schttgart08_2311_14" count="3" respawn="20">
+		<territory name="schttgart08_2311_14"/>
+		<npc id="20153"/><!--Магический Ткач-->
+	</spawn>
+	<territory name="schttgart08_2311_13">
+		<add x="121268" y="-214576" zmin="-3788" zmax="-3388"/>
+		<add x="122952" y="-214580" zmin="-3788" zmax="-3388"/>
+		<add x="123216" y="-213084" zmin="-3788" zmax="-3388"/>
+		<add x="120776" y="-212292" zmin="-3788" zmax="-3388"/>
+		<add x="120196" y="-212852" zmin="-3788" zmax="-3388"/>
+	</territory>
+	<spawn name="schttgart08_2311_13" count="2" respawn="20">
+		<territory name="schttgart08_2311_13"/>
+		<npc id="20324"/><!--Помощник Предводителя Банды Гоблинов-->
+	</spawn>
+	<spawn name="schttgart08_2311_13" count="1" respawn="20">
+		<territory name="schttgart08_2311_13"/>
+		<npc id="20153"/><!--Магический Ткач-->
+	</spawn>
+	<territory name="schttgart08_2311_12">
+		<add x="116584" y="-217008" zmin="-3788" zmax="-3188"/>
+		<add x="120192" y="-217740" zmin="-3788" zmax="-3188"/>
+		<add x="121436" y="-215180" zmin="-3788" zmax="-3188"/>
+		<add x="119976" y="-212576" zmin="-3788" zmax="-3188"/>
+		<add x="116920" y="-213480" zmin="-3788" zmax="-3188"/>
+	</territory>
+	<spawn name="schttgart08_2311_12" count="3" respawn="20">
+		<territory name="schttgart08_2311_12"/>
+		<npc id="20480"/><!--Опасная Летучая Мышь-->
+	</spawn>
+	<spawn name="schttgart08_2311_12" count="3" respawn="20">
+		<territory name="schttgart08_2311_12"/>
+		<npc id="20324"/><!--Помощник Предводителя Банды Гоблинов-->
+	</spawn>
+	<spawn name="schttgart08_2311_12" count="4" respawn="20">
+		<territory name="schttgart08_2311_12"/>
+		<npc id="20153"/><!--Магический Ткач-->
+	</spawn>
+	<territory name="schttgart08_2311_11">
+		<add x="116928" y="-212620" zmin="-3608" zmax="-3008"/>
+		<add x="120460" y="-212244" zmin="-3608" zmax="-3008"/>
+		<add x="118396" y="-210224" zmin="-3608" zmax="-3008"/>
+		<add x="115584" y="-209756" zmin="-3608" zmax="-3008"/>
+		<add x="115564" y="-211424" zmin="-3608" zmax="-3008"/>
+	</territory>
+	<spawn name="schttgart08_2311_11" count="2" respawn="20">
+		<territory name="schttgart08_2311_11"/>
+		<npc id="20480"/><!--Опасная Летучая Мышь-->
+	</spawn>
+	<spawn name="schttgart08_2311_11" count="3" respawn="20">
+		<territory name="schttgart08_2311_11"/>
+		<npc id="20324"/><!--Помощник Предводителя Банды Гоблинов-->
+	</spawn>
+	<spawn name="schttgart08_2311_11" count="3" respawn="20">
+		<territory name="schttgart08_2311_11"/>
+		<npc id="20153"/><!--Магический Ткач-->
+	</spawn>
+	<territory name="schttgart08_2311_10">
+		<add x="116232" y="-209660" zmin="-3804" zmax="-3404"/>
+		<add x="118052" y="-209796" zmin="-3804" zmax="-3404"/>
+		<add x="118520" y="-208676" zmin="-3804" zmax="-3404"/>
+		<add x="118400" y="-206920" zmin="-3804" zmax="-3404"/>
+		<add x="116724" y="-205496" zmin="-3804" zmax="-3404"/>
+		<add x="115712" y="-205840" zmin="-3804" zmax="-3404"/>
+	</territory>
+	<spawn name="schttgart08_2311_10" count="2" respawn="20">
+		<territory name="schttgart08_2311_10"/>
+		<npc id="20480"/><!--Опасная Летучая Мышь-->
+	</spawn>
+	<spawn name="schttgart08_2311_10" count="2" respawn="20">
+		<territory name="schttgart08_2311_10"/>
+		<npc id="20324"/><!--Помощник Предводителя Банды Гоблинов-->
+	</spawn>
+	<spawn name="schttgart08_2311_10" count="3" respawn="20">
+		<territory name="schttgart08_2311_10"/>
+		<npc id="20153"/><!--Магический Ткач-->
+	</spawn>
+	<spawn name="schttgart08_2311_04" count="2" respawn="20">
+		<territory>
+			<add x="119468" y="-200908" zmin="-3752" zmax="-3352"/>
+			<add x="120636" y="-201548" zmin="-3752" zmax="-3352"/>
+			<add x="120916" y="-200196" zmin="-3752" zmax="-3352"/>
+			<add x="120172" y="-199956" zmin="-3752" zmax="-3352"/>
+		</territory>
+		<npc id="20307"/><!--Оборотень Гарум-->
+	</spawn>
+	<territory name="schttgart08_2311_03">
+		<add x="120964" y="-200180" zmin="-3776" zmax="-3376"/>
+		<add x="122544" y="-199856" zmin="-3776" zmax="-3376"/>
+		<add x="123820" y="-198848" zmin="-3776" zmax="-3376"/>
+		<add x="123908" y="-197996" zmin="-3776" zmax="-3376"/>
+		<add x="123224" y="-196812" zmin="-3776" zmax="-3376"/>
+		<add x="120376" y="-196832" zmin="-3776" zmax="-3376"/>
+		<add x="119736" y="-197784" zmin="-3776" zmax="-3376"/>
+		<add x="120096" y="-199880" zmin="-3776" zmax="-3376"/>
+	</territory>
+	<spawn name="schttgart08_2311_03" count="3" respawn="20">
+		<territory name="schttgart08_2311_03"/>
+		<npc id="20322"/><!--Бандит Гоблинов-->
+	</spawn>
+	<spawn name="schttgart08_2311_03" count="3" respawn="20">
+		<territory name="schttgart08_2311_03"/>
+		<npc id="20447"/><!--Стрелок Орков Утуку-->
+	</spawn>
+	<spawn name="schttgart08_2311_03" count="3" respawn="20">
+		<territory name="schttgart08_2311_03"/>
+		<npc id="20307"/><!--Оборотень Гарум-->
+	</spawn>
+	<territory name="schttgart08_2311_02">
+		<add x="115700" y="-198396" zmin="-3708" zmax="-3008"/>
+		<add x="119204" y="-198332" zmin="-3708" zmax="-3008"/>
+		<add x="119372" y="-196852" zmin="-3708" zmax="-3008"/>
+		<add x="115556" y="-196800" zmin="-3708" zmax="-3008"/>
+	</territory>
+	<spawn name="schttgart08_2311_02" count="2" respawn="20">
+		<territory name="schttgart08_2311_02"/>
+		<npc id="20322"/><!--Бандит Гоблинов-->
+	</spawn>
+	<spawn name="schttgart08_2311_02" count="3" respawn="20">
+		<territory name="schttgart08_2311_02"/>
+		<npc id="20447"/><!--Стрелок Орков Утуку-->
+	</spawn>
+	<spawn name="schttgart08_2311_02" count="3" respawn="20">
+		<territory name="schttgart08_2311_02"/>
+		<npc id="20307"/><!--Оборотень Гарум-->
+	</spawn>
+	<territory name="schttgart08_2311_01">
+		<add x="115656" y="-199648" zmin="-3792" zmax="-2992"/>
+		<add x="116700" y="-200500" zmin="-3792" zmax="-2992"/>
+		<add x="118992" y="-200572" zmin="-3792" zmax="-2992"/>
+		<add x="119620" y="-199872" zmin="-3792" zmax="-2992"/>
+		<add x="119120" y="-198364" zmin="-3792" zmax="-2992"/>
+		<add x="115324" y="-198416" zmin="-3792" zmax="-2992"/>
+	</territory>
+	<spawn name="schttgart08_2311_01" count="3" respawn="20">
+		<territory name="schttgart08_2311_01"/>
+		<npc id="20322"/><!--Бандит Гоблинов-->
+	</spawn>
+	<spawn name="schttgart08_2311_01" count="2" respawn="20">
+		<territory name="schttgart08_2311_01"/>
+		<npc id="20447"/><!--Стрелок Орков Утуку-->
+	</spawn>
+	<spawn name="schttgart08_2311_01" count="2" respawn="20">
+		<territory name="schttgart08_2311_01"/>
+		<npc id="20307"/><!--Оборотень Гарум-->
+	</spawn>
+	<spawn name="schuttgart01_npc2311_004" count="1" respawn="60">
+		<territory>
+			<add x="120738" y="-209534" zmin="-3968" zmax="-3368"/>
+			<add x="121001" y="-206479" zmin="-3968" zmax="-3368"/>
+			<add x="116774" y="-202883" zmin="-3968" zmax="-3368"/>
+			<add x="115869" y="-203748" zmin="-3968" zmax="-3368"/>
+			<add x="116195" y="-207977" zmin="-3968" zmax="-3368"/>
+			<add x="115058" y="-209743" zmin="-3968" zmax="-3368"/>
+			<add x="117317" y="-212542" zmin="-3968" zmax="-3368"/>
+		</territory>
+		<npc id="31035"/><!--Защитник-->
+	</spawn>
+	<spawn name="schuttgart01_npc2311_003" count="1" respawn="60">
+		<territory>
+			<add x="127240" y="-214723" zmin="-3964" zmax="-3364"/>
+			<add x="125031" y="-213238" zmin="-3964" zmax="-3364"/>
+			<add x="120914" y="-209748" zmin="-3964" zmax="-3364"/>
+			<add x="116883" y="-213107" zmin="-3964" zmax="-3364"/>
+			<add x="116681" y="-217349" zmin="-3964" zmax="-3364"/>
+			<add x="119859" y="-217867" zmin="-3964" zmax="-3364"/>
+			<add x="122058" y="-214869" zmin="-3964" zmax="-3364"/>
+			<add x="123869" y="-216185" zmin="-3964" zmax="-3364"/>
+			<add x="126327" y="-216042" zmin="-3964" zmax="-3364"/>
+		</territory>
+		<npc id="31035"/><!--Защитник-->
+	</spawn>
+	<spawn name="schuttgart01_npc2311_002" count="1" respawn="60">
+		<territory>
+			<add x="128003" y="-212697" zmin="-3880" zmax="-3080"/>
+			<add x="130793" y="-209822" zmin="-3880" zmax="-3080"/>
+			<add x="130870" y="-196859" zmin="-3880" zmax="-3080"/>
+			<add x="125124" y="-196960" zmin="-3880" zmax="-3080"/>
+			<add x="125494" y="-198142" zmin="-3880" zmax="-3080"/>
+			<add x="124167" y="-200521" zmin="-3880" zmax="-3080"/>
+			<add x="125817" y="-203398" zmin="-3880" zmax="-3080"/>
+			<add x="123061" y="-207922" zmin="-3880" zmax="-3080"/>
+		</territory>
+		<npc id="31035"/><!--Защитник-->
+	</spawn>
+	<spawn name="schuttgart01_npc2311_001" count="1" respawn="60">
+		<territory>
+			<add x="120629" y="-200751" zmin="-3856" zmax="-3256"/>
+			<add x="123946" y="-198522" zmin="-3856" zmax="-3256"/>
+			<add x="123278" y="-196937" zmin="-3856" zmax="-3256"/>
+			<add x="113796" y="-196977" zmin="-3856" zmax="-3256"/>
+			<add x="116097" y="-201626" zmin="-3856" zmax="-3256"/>
+			<add x="117745" y="-201376" zmin="-3856" zmax="-3256"/>
+			<add x="120367" y="-203533" zmin="-3856" zmax="-3256"/>
+			<add x="121621" y="-203033" zmin="-3856" zmax="-3256"/>
+		</territory>
+		<npc id="31035"/><!--Защитник-->
+	</spawn>
+</list>

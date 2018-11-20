@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<armor id="600" name="Sealed Avadon Boots">
+		<set name="crystal_count" value="69"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t66_b_i02"/>
+		<set name="price" value="519000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1170"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="41"/>
+		</for>
+	</armor>
+	<armor id="601" name="Sealed Doom Boots">
+		<set name="crystal_count" value="107"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t71_b_i02"/>
+		<set name="price" value="804000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1130"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="44"/>
+		</for>
+	</armor>
+	<armor id="603" name="Divine Boots">
+		<set name="crystal_count" value="143"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_t67_b_i00"/>
+		<set name="price" value="358000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1200"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="39"/>
+		</for>
+	</armor>
+	<armor id="604" name="Quality Leather Gloves">
+		<set name="crystal_count" value="38"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t09_g_i00"/>
+		<set name="price" value="20900"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="650"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="19"/>
+		</for>
+	</armor>
+	<armor id="605" name="Leather Gauntlets">
+		<set name="crystal_count" value="60"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t18_g_i00"/>
+		<set name="price" value="33300"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="640"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="22"/>
+		</for>
+	</armor>
+	<armor id="606" name="Rip Gauntlets ">
+		<set name="crystal_count" value="135"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t40_g_i00"/>
+		<set name="price" value="74700"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="630"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="27"/>
+		</for>
+	</armor>
+	<armor id="607" name="Ogre Power Gauntlets">
+		<set name="crystal_count" value="177"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.armor_t45_g_i00"/>
+		<set name="price" value="97800"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="620"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="29"/>
+		</for>
+	</armor>
+	<armor id="608" name="Mithril Gauntlets">
+		<set name="crystal_count" value="98"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_t61_g_i00"/>
+		<set name="price" value="245000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="600"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="36"/>
+		</for>
+	</armor>
+	<armor id="609" name="Gauntlets of Ghost">
+		<set name="crystal_count" value="143"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_gauntlet_i00"/>
+		<set name="price" value="358000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1920"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="39"/>
+		</for>
+	</armor>
+	<armor id="612" name="Sealed Zubei\'s Gauntlets">
+		<set name="crystal_count" value="69"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t64_g_i02"/>
+		<set name="price" value="519000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="590"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="41"/>
+		</for>
+	</armor>
+	<weapon id="625" name="Bone Shield">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.shield_bone_shield_i00"/>
+		<set name="price" value="12900"/>
+		<set name="rnd_dam" value="0"/>
+		<set name="soulshots" value="0"/>
+		<set name="spiritshots" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1380"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="sDef" order="0x10" value="90"/>
+			<add stat="rShld" order="0x10" value="20"/>
+			<add stat="pEvasRate" order="0x10" value="-8"/>
+		</for>
+	</weapon>
+	<weapon id="626" name="Bronze Shield">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_count" value="39"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.shield_bronze_shield_i00"/>
+		<set name="price" value="21900"/>
+		<set name="rnd_dam" value="0"/>
+		<set name="soulshots" value="0"/>
+		<set name="spiritshots" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1370"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="sDef" order="0x10" value="101"/>
+			<add stat="rShld" order="0x10" value="20"/>
+			<add stat="pEvasRate" order="0x10" value="-8"/>
+		</for>
+	</weapon>
+	<weapon id="627" name="Aspis">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_count" value="63"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.shield_aspis_i00"/>
+		<set name="price" value="35000"/>
+		<set name="rnd_dam" value="0"/>
+		<set name="soulshots" value="0"/>
+		<set name="spiritshots" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1350"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="sDef" order="0x10" value="114"/>
+			<add stat="rShld" order="0x10" value="20"/>
+			<add stat="pEvasRate" order="0x10" value="-8"/>
+		</for>
+	</weapon>
+	<weapon id="628" name="Hoplon">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_count" value="96"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.shield_hoplon_i00"/>
+		<set name="price" value="53300"/>
+		<set name="rnd_dam" value="0"/>
+		<set name="soulshots" value="0"/>
+		<set name="spiritshots" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1340"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="sDef" order="0x10" value="128"/>
+			<add stat="rShld" order="0x10" value="20"/>
+			<add stat="pEvasRate" order="0x10" value="-8"/>
+		</for>
+	</weapon>
+	<weapon id="629" name="Kite Shield">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_count" value="142"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.shield_kite_shield_i00"/>
+		<set name="price" value="78400"/>
+		<set name="rnd_dam" value="0"/>
+		<set name="soulshots" value="0"/>
+		<set name="spiritshots" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1320"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="sDef" order="0x10" value="142"/>
+			<add stat="rShld" order="0x10" value="20"/>
+			<add stat="pEvasRate" order="0x10" value="-8"/>
+		</for>
+	</weapon>
+	<weapon id="630" name="Square Shield">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_count" value="187"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.shield_square_shield_i00"/>
+		<set name="price" value="103000"/>
+		<set name="rnd_dam" value="0"/>
+		<set name="soulshots" value="0"/>
+		<set name="spiritshots" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1310"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="sDef" order="0x10" value="154"/>
+			<add stat="rShld" order="0x10" value="20"/>
+			<add stat="pEvasRate" order="0x10" value="-8"/>
+		</for>
+	</weapon>
+	<weapon id="631" name="Eldarake">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_count" value="53"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.shield_eldarake_i00"/>
+		<set name="price" value="133000"/>
+		<set name="rnd_dam" value="0"/>
+		<set name="soulshots" value="0"/>
+		<set name="spiritshots" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1290"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="sDef" order="0x10" value="166"/>
+			<add stat="rShld" order="0x10" value="20"/>
+			<add stat="pEvasRate" order="0x10" value="-8"/>
+		</for>
+	</weapon>
+	<weapon id="632" name="Knight\'s Shield">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_count" value="67"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.shield_knight_shield_i00"/>
+		<set name="price" value="169000"/>
+		<set name="rnd_dam" value="0"/>
+		<set name="soulshots" value="0"/>
+		<set name="spiritshots" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1260"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="sDef" order="0x10" value="178"/>
+			<add stat="rShld" order="0x10" value="20"/>
+			<add stat="pEvasRate" order="0x10" value="-8"/>
+		</for>
+	</weapon>
+	<weapon id="633" name="Zubei\'s Shield">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_count" value="72"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.shield_shrnoens_shield_i00"/>
+		<set name="price" value="545000"/>
+		<set name="rnd_dam" value="0"/>
+		<set name="soulshots" value="0"/>
+		<set name="spiritshots" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1210"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="sDef" order="0x10" value="216"/>
+			<add stat="rShld" order="0x10" value="20"/>
+			<add stat="pEvasRate" order="0x10" value="-8"/>
+		</for>
+	</weapon>
+	<weapon id="641" name="Dark Crystal Shield">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="75"/>
+		<set name="icon" value="icon.shield_dark_crystal_shield_i00"/>
+		<set name="price" value="935000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1190"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pEvasRate" order="0x10" value="-8"/>
+			<add stat="sDef" order="0x10" value="243"/>
+			<add stat="rShld" order="0x10" value="20"/>
+		</for>
+	</weapon>
+	<weapon id="673" name="Avadon Shield">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_count" value="72"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.shield_avadon_shield_i00"/>
+		<set name="price" value="545000"/>
+		<set name="rnd_dam" value="0"/>
+		<set name="soulshots" value="0"/>
+		<set name="spiritshots" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1210"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="sDef" order="0x10" value="216"/>
+			<add stat="rShld" order="0x10" value="20"/>
+			<add stat="pEvasRate" order="0x10" value="-8"/>
+		</for>
+	</weapon>
+	<etcitem id="686" name="Chair">
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="90"/>
+		<set name="icon" value="icon.etc_branch_blue_i00"/>
+		<set name="price" value="1000"/>
+		<set name="weight" value="100"/>
+	</etcitem>
+	<etcitem id="687" name="Darin\'s Letter">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_scroll_gray_i00"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="688" name="Roxxy\'s Kerchief">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_piece_of_cloth_white_i00"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="689" name="Poetry Book">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_spell_books_red_i00"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="690" name="Lyrics Book">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.item_normal06"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="691" name="Romance Novel">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.item_normal07"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="692" name="Arujien\'s Letter">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.item_canuse37"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="693" name="Greenis\' Letter">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_letter_white_i00"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="694" name="Ingredient List">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.item_normal37"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="695" name="Onyx Beast\'s Blood">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.item_canuse48"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="696" name="Mana Seeker\'s Husk">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.item_normal30"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="697" name="Gargoyle\'s Horn">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.item_normal24"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="698" name="Gilbert\'s List">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.item_normal37"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="699" name="Orc\'s Nose">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.item_canuse05"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+</list>

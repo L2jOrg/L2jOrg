@@ -1,0 +1,679 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "zone.dtd">
+<list>
+	<zone name="residence_1" type="RESIDENCE" >
+		<set name="taxById" value="5"/>
+		<polygon>
+			<coords loc="-20300 106700 -4452 3547"/>
+			<coords loc="-15700 106700 -4452 3547"/>
+			<coords loc="-15700 113800 -4452 3547"/>
+			<coords loc="-20300 113800 -4452 3547"/>
+		</polygon>
+	</zone>
+	<zone name="residence_2" type="RESIDENCE" >
+		<set name="taxById" value="5"/>
+		<polygon>
+			<coords loc="24300 163100 -4646 4000"/>
+			<coords loc="19700 163100 -4646 4000"/>
+			<coords loc="19700 156100 -4646 4000"/>
+			<coords loc="24300 156100 -4646 4000"/>
+		</polygon>
+	</zone>
+	<zone name="residence_3" type="RESIDENCE" >
+		<set name="taxById" value="5"/>
+		<polygon>
+			<coords loc="119200 142800 -4519 19931"/>
+			<coords loc="119200 147500 -4519 19931"/>
+			<coords loc="112300 147500 -4519 19931"/>
+			<coords loc="112300 142800 -4519 19931"/>
+		</polygon>
+	</zone>
+	<zone name="residence_4" type="RESIDENCE" >
+		<set name="taxById" value="5"/>
+		<polygon>
+			<coords loc="85400 34900 -4246 19931"/>
+			<coords loc="85400 39700 -4246 19931"/>
+			<coords loc="78200 39700 -4246 19931"/>
+			<coords loc="78200 34900 -4246 19931"/>
+		</polygon>
+	</zone>
+	<zone name="residence_5" type="RESIDENCE" >
+		<set name="taxById" value="0"/>
+		<polygon>
+			<coords loc="144300 461 -4000 8800"/>
+			<coords loc="150500 475 -4000 8800"/>
+			<coords loc="150500 8700 -4000 8800"/>
+			<coords loc="144300 8700 -4000 8800"/>
+		</polygon>
+	</zone>
+	<zone name="residence_6" type="RESIDENCE" >
+		<set name="taxById" value="5"/>
+		<polygon>
+			<coords loc="118200 251900 -2742 4000"/>
+			<coords loc="113500 251900 -2742 4000"/>
+			<coords loc="113500 244700 -2742 4000"/>
+			<coords loc="118200 244700 -2742 4000"/>
+		</polygon>
+	</zone>
+	<zone name="residence_7" type="RESIDENCE" >
+		<set name="taxById" value="8"/>
+		<polygon>
+			<coords loc="144000 -52200 -3670 4830"/>
+			<coords loc="151000 -52200 -3670 4830"/>
+			<coords loc="151100 -48000 -3670 4830"/>
+			<coords loc="150000 -45000 -3670 4830"/>
+			<coords loc="147500 -44300 -3670 4830"/>
+			<coords loc="145000 -45000 -3670 4830"/>
+			<coords loc="144000 -48000 -3670 4830"/>
+			<coords loc="144000 -52200 0 4830"/>
+			<coords loc="151000 -52200 0 4830"/>
+			<coords loc="151000 -53200 0 4830"/>
+			<coords loc="144000 -53200 0 4830"/>
+		</polygon>
+	</zone>
+	<zone name="residence_8" type="RESIDENCE" >
+		<set name="taxById" value="0"/>
+		<polygon>
+			<coords loc="6005 -56306 -3200 10020"/>
+			<coords loc="15112 -52711 -3200 10020"/>
+			<coords loc="16831 -52270 -3200 10020"/>
+			<coords loc="17745 -51547 -3200 10020"/>
+			<coords loc="18326 -50543 -3200 10020"/>
+			<coords loc="18666 -49413 -3200 10020"/>
+			<coords loc="18680 -48882 -3200 10020"/>
+			<coords loc="18334 -47737 -3200 10020"/>
+			<coords loc="17756 -46741 -3200 10020"/>
+			<coords loc="16808 -46019 -3200 10020"/>
+			<coords loc="15114 -45624 -3200 10020"/>
+			<coords loc="6005 -41610 -3200 10020"/>
+		</polygon>
+	</zone>
+	<zone name="residence_9" type="RESIDENCE" >
+		<set name="taxById" value="8"/>
+		<polygon>
+			<coords loc="71700 -159600 -3670 8830"/>
+			<coords loc="83000 -159600 -3670 8830"/>
+			<coords loc="83000 -152500 -3670 8830"/>
+			<coords loc="81200 -150900 -3670 8830"/>
+			<coords loc="80000 -149200 -3670 8830"/>
+			<coords loc="77600 -148500 -3670 8830"/>
+			<coords loc="75200 -149200 -3670 8830"/>
+			<coords loc="74000 -150900 -3670 8830"/>
+			<coords loc="71700 -152500 -3670 8830"/>
+		</polygon>
+	</zone>
+	<zone name="residence_21" type="RESIDENCE" >
+		<set name="taxById" value="21"/>
+		<polygon>
+			<coords loc="43048 108832 -2104 -1104"/>
+			<coords loc="43692 108204 -2104 -1104"/>
+			<coords loc="44052 108604 -2104 -1104"/>
+			<coords loc="43976 109180 -2104 -1104"/>
+			<coords loc="43684 109496 -2104 -1104"/>
+		</polygon>
+	</zone>
+	<zone name="residence_22" type="RESIDENCE" >
+		<set name="taxById" value="1"/>
+		<polygon>
+			<coords loc="-16342 123496 -3598 -2098"/>
+			<coords loc="-15748 123315 -3598 -2098"/>
+			<coords loc="-15645 123655 -3598 -2098"/>
+			<coords loc="-16234 123831 -3598 -2098"/>
+		</polygon>
+	</zone>
+	<zone name="residence_23" type="RESIDENCE" >
+		<set name="taxById" value="1"/>
+		<polygon>
+			<coords loc="-15098 125352 -3777 -2277"/>
+			<coords loc="-14789 125352 -3777 -2277"/>
+			<coords loc="-14789 125816 -3777 -2277"/>
+			<coords loc="-15098 125816 -3777 -2277"/>
+		</polygon>
+	</zone>
+	<zone name="residence_24" type="RESIDENCE" >
+		<set name="taxById" value="1"/>
+		<polygon>
+			<coords loc="-14028 125062 -3745 -2245"/>
+			<coords loc="-13695 125070 -3745 -2245"/>
+			<coords loc="-13695 125693 -3745 -2245"/>
+			<coords loc="-14108 125693 -3745 -2245"/>
+			<coords loc="-14108 125588 -3745 -2245"/>
+			<coords loc="-14028 125588 -3745 -2245"/>
+		</polygon>
+	</zone>
+	<zone name="residence_25" type="RESIDENCE" >
+		<set name="taxById" value="1"/>
+		<polygon>
+			<coords loc="-12942 123872 -3809 -2309"/>
+			<coords loc="-12327 123872 -3809 -2309"/>
+			<coords loc="-12327 124231 -3809 -2309"/>
+			<coords loc="-12942 124231 -3809 -2309"/>
+		</polygon>
+	</zone>
+	<zone name="residence_26" type="RESIDENCE" >
+		<set name="taxById" value="1"/>
+		<polygon>
+			<coords loc="-84691 151557 -4076 -2576"/>
+			<coords loc="-84261 151557 -4076 -2576"/>
+			<coords loc="-84261 151962 -4076 -2576"/>
+			<coords loc="-84071 151962 -4076 -2576"/>
+			<coords loc="-84071 151850 -4076 -2576"/>
+			<coords loc="-83945 151850 -4076 -2576"/>
+			<coords loc="-83945 151962 -4076 -2576"/>
+			<coords loc="-83819 151962 -4076 -2576"/>
+			<coords loc="-83819 152328 -4076 -2576"/>
+			<coords loc="-84691 152328 -4076 -2576"/>
+		</polygon>
+	</zone>
+	<zone name="residence_27" type="RESIDENCE" >
+		<set name="taxById" value="1"/>
+		<polygon>
+			<coords loc="-84367 153086 -4012 -2512"/>
+			<coords loc="-83586 153085 -4012 -2512"/>
+			<coords loc="-83585 153564 -4012 -2512"/>
+			<coords loc="-83977 153564 -4012 -2512"/>
+			<coords loc="-83977 154046 -4012 -2512"/>
+			<coords loc="-84367 154054 -4012 -2512"/>
+		</polygon>
+	</zone>
+	<zone name="residence_28" type="RESIDENCE" >
+		<set name="taxById" value="1"/>
+		<polygon>
+			<coords loc="-84463 154941 -4044 -2544"/>
+			<coords loc="-83987 154941 -4044 -2544"/>
+			<coords loc="-83987 154317 -4044 -2544"/>
+			<coords loc="-83523 155317 -4044 -2544"/>
+			<coords loc="-83523 155686 -4044 -2544"/>
+			<coords loc="-84463 155685 -4044 -2544"/>
+		</polygon>
+	</zone>
+	<zone name="residence_29" type="RESIDENCE" >
+		<set name="taxById" value="1"/>
+		<polygon>
+			<coords loc="-80066 149420 -3948 -2448"/>
+			<coords loc="-79290 149424 -3948 -2448"/>
+			<coords loc="-79284 150296 -3948 -2448"/>
+			<coords loc="-79656 150298 -3948 -2448"/>
+			<coords loc="-79656 149857 -3948 -2448"/>
+			<coords loc="-80066 149857 -3948 -2448"/>
+		</polygon>
+	</zone>
+	<zone name="residence_30" type="RESIDENCE" >
+		<set name="taxById" value="1"/>
+		<polygon>
+			<coords loc="-79663 151367 -3980 -2480"/>
+			<coords loc="-79296 151372 -3980 -2480"/>
+			<coords loc="-79290 152244 -3980 -2480"/>
+			<coords loc="-80067 152245 -3980 -2480"/>
+			<coords loc="-80067 151809 -3980 -2480"/>
+			<coords loc="-79663 151809 -3980 -2480"/>
+		</polygon>
+	</zone>
+	<zone name="residence_31" type="RESIDENCE" >
+		<set name="taxById" value="2"/>
+		<polygon>
+			<coords loc="17597 144823 -3365 -1865"/>
+			<coords loc="17989 145089 -3365 -1865"/>
+			<coords loc="17828 145333 -3365 -1865"/>
+			<coords loc="17433 145067 -3365 -1865"/>
+		</polygon>
+	</zone>
+	<zone name="residence_32" type="RESIDENCE" >
+		<set name="taxById" value="2"/>
+		<polygon>
+			<coords loc="18849 143099 -3333 -1833"/>
+			<coords loc="18897 143562 -3333 -1833"/>
+			<coords loc="18615 143588 -3333 -1833"/>
+			<coords loc="18571 143128 -3333 -1833"/>
+		</polygon>
+	</zone>
+	<zone name="residence_33" type="RESIDENCE" >
+		<set name="taxById" value="2"/>
+		<polygon>
+			<coords loc="19942 145996 -3397 -1897"/>
+			<coords loc="20414 145996 -3397 -1897"/>
+			<coords loc="20414 146292 -3397 -1897"/>
+			<coords loc="19942 146292 -3397 -1897"/>
+		</polygon>
+	</zone>
+	<zone name="residence_34" type="RESIDENCE" >
+		<set name="taxById" value="34"/>
+		<polygon>
+			<coords loc="176793 -19176 -2514 486"/>
+			<coords loc="179892 -19176 -2514 486"/>
+			<coords loc="179892 -15276 -2514 486"/>
+			<coords loc="179417 -14511 -2514 486"/>
+			<coords loc="177270 -14511 -2514 486"/>
+			<coords loc="176793 -15276 -2514 486"/>
+		</polygon>
+	</zone>
+	<zone name="residence_35" type="RESIDENCE" >
+		<set name="taxById" value="5"/>
+		<polygon>
+			<coords loc="79028 -17588 -2920 80"/>
+			<coords loc="84640 -19528 -2920 80"/>
+			<coords loc="86952 -16888 -2920 80"/>
+			<coords loc="83636 -13448 -2920 80"/>
+			<coords loc="79196 -13584 -2920 80"/>
+		</polygon>
+	</zone>
+	<zone name="residence_36" type="RESIDENCE" >
+		<set name="taxById" value="5"/>
+		<polygon>
+			<coords loc="148844 22709 -2160 -1960"/>
+			<coords loc="149424 22709 -2160 -1960"/>
+			<coords loc="149424 23569 -2160 -1960"/>
+			<coords loc="148844 23569 -2160 -1960"/>
+		</polygon>
+	</zone>
+	<zone name="residence_37" type="RESIDENCE" >
+		<set name="taxById" value="5"/>
+		<polygon>
+			<coords loc="150343 23193 -2150 -1950"/>
+			<coords loc="150943 23193 -2150 -1950"/>
+			<coords loc="150943 24113 -2150 -1950"/>
+			<coords loc="150343 24113 -2150 -1950"/>
+			<coords loc="150343 23693 -2150 -1950"/>
+			<coords loc="150305 23693 -2150 -1950"/>
+			<coords loc="150305 23618 -2150 -1950"/>
+			<coords loc="150343 23618 -2150 -1950"/>
+		</polygon>
+	</zone>
+	<zone name="residence_38" type="RESIDENCE" >
+		<set name="taxById" value="5"/>
+		<polygon>
+			<coords loc="145362 24890 -2150 -1950"/>
+			<coords loc="145972 24890 -2150 -1950"/>
+			<coords loc="145972 25820 -2150 -1950"/>
+			<coords loc="145362 25820 -2150 -1950"/>
+		</polygon>
+	</zone>
+	<zone name="residence_39" type="RESIDENCE" >
+		<set name="taxById" value="5"/>
+		<polygon>
+			<coords loc="150460 26108 -2280 -2080"/>
+			<coords loc="151036 26108 -2280 -2080"/>
+			<coords loc="151036 26972 -2280 -2080"/>
+			<coords loc="150460 26972 -2280 -2080"/>
+			<coords loc="150460 26585 -2280 -2080"/>
+			<coords loc="150450 26585 -2280 -2080"/>
+			<coords loc="150450 26505 -2280 -2080"/>
+			<coords loc="150460 26505 -2280 -2080"/>
+		</polygon>
+	</zone>
+	<zone name="residence_40" type="RESIDENCE" >
+		<set name="taxById" value="5"/>
+		<polygon>
+			<coords loc="143701 26661 -2290 -2090"/>
+			<coords loc="144299 26661 -2290 -2090"/>
+			<coords loc="144299 27521 -2290 -2090"/>
+			<coords loc="143701 27521 -2290 -2090"/>
+		</polygon>
+	</zone>
+	<zone name="residence_41" type="RESIDENCE" >
+		<set name="taxById" value="5"/>
+		<polygon>
+			<coords loc="143704 27734 -2280 -2080"/>
+			<coords loc="144324 27734 -2280 -2080"/>
+			<coords loc="144324 28155 -2280 -2080"/>
+			<coords loc="144360 28155 -2280 -2080"/>
+			<coords loc="144360 28245 -2280 -2080"/>
+			<coords loc="144324 28245 -2280 -2080"/>
+			<coords loc="144324 28670 -2280 -2080"/>
+			<coords loc="143704 28670 -2280 -2080"/>
+		</polygon>
+	</zone>
+	<zone name="residence_42" type="RESIDENCE" >
+		<set name="taxById" value="3"/>
+		<polygon>
+			<coords loc="78059 147906 -3647 -3297"/>
+			<coords loc="79122 147906 -3647 -3297"/>
+			<coords loc="79122 148296 -3647 -3297"/>
+			<coords loc="78620 148296 -3647 -3297"/>
+			<coords loc="78620 148316 -3647 -3297"/>
+			<coords loc="78524 148316 -3647 -3297"/>
+			<coords loc="78524 148296 -3647 -3297"/>
+			<coords loc="78059 148296 -3647 -3297"/>
+		</polygon>
+	</zone>
+	<zone name="residence_43" type="RESIDENCE" >
+		<set name="taxById" value="3"/>
+		<polygon>
+			<coords loc="81859 144802 -3647 -3297"/>
+			<coords loc="82254 144802 -3647 -3297"/>
+			<coords loc="82254 145870 -3647 -3297"/>
+			<coords loc="81859 145870 -3647 -3297"/>
+			<coords loc="81859 145355 -3647 -3297"/>
+			<coords loc="81833 145355 -3647 -3297"/>
+			<coords loc="81833 145274 -3647 -3297"/>
+			<coords loc="81859 145274 -3647 -3297"/>
+		</polygon>
+	</zone>
+	<zone name="residence_44" type="RESIDENCE" >
+		<set name="taxById" value="3"/>
+		<polygon>
+			<coords loc="83195 144779 -3540 -3190"/>
+			<coords loc="83591 144779 -3540 -3190"/>
+			<coords loc="83591 145287 -3540 -3190"/>
+			<coords loc="83615 145287 -3540 -3190"/>
+			<coords loc="83615 145374 -3540 -3190"/>
+			<coords loc="83594 145374 -3540 -3190"/>
+			<coords loc="83591 145847 -3540 -3190"/>
+			<coords loc="83195 145847 -3540 -3190"/>
+		</polygon>
+	</zone>
+	<zone name="residence_45" type="RESIDENCE" >
+		<set name="taxById" value="3"/>
+		<polygon>
+			<coords loc="80773 151053 -3647 -3297"/>
+			<coords loc="81169 151053 -3647 -3297"/>
+			<coords loc="81169 151560 -3647 -3297"/>
+			<coords loc="81185 151560 -3647 -3297"/>
+			<coords loc="81185 151653 -3647 -3297"/>
+			<coords loc="81169 151653 -3647 -3297"/>
+			<coords loc="81169 152121 -3647 -3297"/>
+			<coords loc="80773 152121 -3647 -3297"/>
+		</polygon>
+	</zone>
+	<zone name="residence_46" type="RESIDENCE" >
+		<set name="taxById" value="3"/>
+		<polygon>
+			<coords loc="81903 151377 -3647 -3297"/>
+			<coords loc="82299 151377 -3647 -3297"/>
+			<coords loc="82299 152445 -3647 -3297"/>
+			<coords loc="81903 152445 -3647 -3297"/>
+			<coords loc="81903 151945 -3647 -3297"/>
+			<coords loc="81883 151945 -3647 -3297"/>
+			<coords loc="81883 151850 -3647 -3297"/>
+			<coords loc="81903 151850 -3647 -3297"/>
+		</polygon>
+	</zone>
+	<zone name="residence_47" type="RESIDENCE" >
+		<set name="taxById" value="7"/>
+		<polygon>
+			<coords loc="145660 -55829 -2828 -2528"/>
+			<coords loc="146459 -55730 -2828 -2528"/>
+			<coords loc="146402 -55280 -2828 -2528"/>
+			<coords loc="145605 -55378 -2828 -2528"/>
+		</polygon>
+	</zone>
+	<zone name="residence_48" type="RESIDENCE" >
+		<set name="taxById" value="7"/>
+		<polygon>
+			<coords loc="146936 -57320 -2828 -2528"/>
+			<coords loc="147308 -56607 -2828 -2528"/>
+			<coords loc="146906 -56397 -2828 -2528"/>
+			<coords loc="146535 -57111 -2828 -2528"/>
+		</polygon>
+	</zone>
+	<zone name="residence_49" type="RESIDENCE" >
+		<set name="taxById" value="7"/>
+		<polygon>
+			<coords loc="148487 -57327 -2828 -2528"/>
+			<coords loc="148887 -57113 -2828 -2528"/>
+			<coords loc="148508 -56405 -2828 -2528"/>
+			<coords loc="148108 -56618 -2828 -2528"/>
+		</polygon>
+	</zone>
+	<zone name="residence_50" type="RESIDENCE" >
+		<set name="taxById" value="7"/>
+		<polygon>
+			<coords loc="148962 -55739 -2828 -2528"/>
+			<coords loc="149759 -55838 -2828 -2528"/>
+			<coords loc="149815 -55388 -2828 -2528"/>
+			<coords loc="149018 -55289 -2828 -2528"/>
+		</polygon>
+	</zone>
+	<zone name="residence_51" type="RESIDENCE" >
+		<set name="taxById" value="8"/>
+		<polygon>
+			<coords loc="37433 -51016 850 1150"/>
+			<coords loc="38034 -51016 850 1150"/>
+			<coords loc="38034 -50565 850 1150"/>
+			<coords loc="37765 -50565 850 1150"/>
+			<coords loc="37765 -50445 850 1150"/>
+			<coords loc="37680 -50445 850 1150"/>
+			<coords loc="37680 -50565 850 1150"/>
+			<coords loc="37433 -50565 850 1150"/>
+		</polygon>
+	</zone>
+	<zone name="residence_52" type="RESIDENCE" >
+		<set name="taxById" value="8"/>
+		<polygon>
+			<coords loc="38569 -50790 850 1150"/>
+			<coords loc="39107 -50522 850 1150"/>
+			<coords loc="38908 -50119 850 1150"/>
+			<coords loc="38674 -50238 850 1150"/>
+			<coords loc="38612 -50125 850 1150"/>
+			<coords loc="38538 -50162 850 1150"/>
+			<coords loc="38592 -50271 850 1150"/>
+			<coords loc="38369 -50386 850 1150"/>
+		</polygon>
+	</zone>
+	<zone name="residence_53" type="RESIDENCE" >
+		<set name="taxById" value="8"/>
+		<polygon>
+			<coords loc="39123 -49827 850 1150"/>
+			<coords loc="39513 -50048 850 1150"/>
+			<coords loc="39808 -49526 850 1150"/>
+			<coords loc="39414 -49304 850 1150"/>
+			<coords loc="39286 -49533 850 1150"/>
+			<coords loc="39172 -49472 850 1150"/>
+			<coords loc="39136 -49546 850 1150"/>
+			<coords loc="39246 -49605 850 1150"/>
+		</polygon>
+	</zone>
+	<zone name="residence_54" type="RESIDENCE" >
+		<set name="taxById" value="8"/>
+		<polygon>
+			<coords loc="39394 -48636 850 1150"/>
+			<coords loc="39846 -48636 850 1150"/>
+			<coords loc="39845 -47837 850 1150"/>
+			<coords loc="39394 -47837 850 1150"/>
+			<coords loc="39394 -48198 850 1150"/>
+			<coords loc="39347 -48198 850 1150"/>
+			<coords loc="39348 -48290 850 1150"/>
+			<coords loc="39394 -48290 850 1150"/>
+		</polygon>
+	</zone>
+	<zone name="residence_55" type="RESIDENCE" >
+		<set name="taxById" value="8"/>
+		<polygon>
+			<coords loc="39123 -46646 850 1150"/>
+			<coords loc="39254 -46879 850 1150"/>
+			<coords loc="39146 -46939 850 1150"/>
+			<coords loc="39187 -47014 850 1150"/>
+			<coords loc="39296 -46958 850 1150"/>
+			<coords loc="39414 -47172 850 1150"/>
+			<coords loc="39808 -46954 850 1150"/>
+			<coords loc="39517 -46427 850 1150"/>
+		</polygon>
+	</zone>
+	<zone name="residence_56" type="RESIDENCE" >
+		<set name="taxById" value="8"/>
+		<polygon>
+			<coords loc="38371 -46086 850 1150"/>
+			<coords loc="38577 -45688 850 1150"/>
+			<coords loc="39111 -45960 850 1150"/>
+			<coords loc="38906 -46362 850 1150"/>
+			<coords loc="38688 -46252 850 1150"/>
+			<coords loc="38631 -46361 850 1150"/>
+			<coords loc="38554 -46324 850 1150"/>
+			<coords loc="38610 -46214 850 1150"/>
+		</polygon>
+	</zone>
+	<zone name="residence_57" type="RESIDENCE" >
+		<set name="taxById" value="8"/>
+		<polygon>
+			<coords loc="37432 -45908 850 1150"/>
+			<coords loc="37700 -45908 850 1150"/>
+			<coords loc="37700 -46030 850 1150"/>
+			<coords loc="37790 -46030 850 1150"/>
+			<coords loc="37790 -45908 850 1150"/>
+			<coords loc="38033 -45908 850 1150"/>
+			<coords loc="38033 -45457 850 1150"/>
+			<coords loc="37432 -45457 850 1150"/>
+		</polygon>
+	</zone>
+	<zone name="residence_58" type="RESIDENCE" >
+		<set name="taxById" value="9"/>
+		<polygon>
+			<coords loc="85259 -143315 -1380 -1130"/>
+			<coords loc="86057 -143416 -1380 -1130"/>
+			<coords loc="86108 -142966 -1380 -1130"/>
+			<coords loc="85311 -142865 -1380 -1130"/>
+		</polygon>
+	</zone>
+	<zone name="residence_59" type="RESIDENCE" >
+		<set name="taxById" value="9"/>
+		<polygon>
+			<coords loc="86184 -141594 -1380 -1130"/>
+			<coords loc="86582 -141377 -1380 -1130"/>
+			<coords loc="86964 -142085 -1380 -1130"/>
+			<coords loc="86563 -142300 -1380 -1130"/>
+		</polygon>
+	</zone>
+	<zone name="residence_60" type="RESIDENCE" >
+		<set name="taxById" value="9"/>
+		<polygon>
+			<coords loc="87767 -142096 -1380 -1130"/>
+			<coords loc="88135 -141383 -1380 -1130"/>
+			<coords loc="88537 -141591 -1380 -1130"/>
+			<coords loc="88167 -142307 -1380 -1130"/>
+		</polygon>
+	</zone>
+	<zone name="residence_61" type="RESIDENCE" >
+		<set name="taxById" value="9"/>
+		<polygon>
+			<coords loc="88668 -143423 -1380 -1130"/>
+			<coords loc="89462 -143324 -1380 -1130"/>
+			<coords loc="89409 -142877 -1380 -1130"/>
+			<coords loc="88613 -142975 -1380 -1130"/>
+		</polygon>
+	</zone>
+	<zone name="residence_62" type="RESIDENCE" >
+		<set name="taxById" value="62"/>
+		<polygon>
+			<coords loc="141073 -125043 -1930 -1680"/>
+			<coords loc="140574 -124709 -1930 -1680"/>
+			<coords loc="140933 -124171 -1930 -1680"/>
+			<coords loc="141432 -124505 -1930 -1680"/>
+		</polygon>
+	</zone>
+	<zone name="residence_63" type="RESIDENCE" >
+		<set name="taxById" value="8"/>
+		<polygon>
+			<coords loc="59997 -96111 -1407 -907"/>
+			<coords loc="61969 -92430 -1407 -907"/>
+			<coords loc="58303 -89937 -1407 -907"/>
+			<coords loc="55402 -91364 -1407 -907"/>
+			<coords loc="55254 -92999 -1407 -907"/>
+			<coords loc="55344 -93295 -1407 -907"/>
+			<coords loc="56049 -94619 -1407 -907"/>
+		</polygon>
+	</zone>
+	<zone name="residence_64" type="RESIDENCE" >
+		<set name="taxById" value="64"/>
+		<polygon>
+			<coords loc="58672 -30158 305 1685"/>
+			<coords loc="59478 -29345 305 1685"/>
+			<coords loc="59477 -25636 305 1685"/>
+			<coords loc="56445 -25638 305 1685"/>
+			<coords loc="56445 -29326 305 1685"/>
+			<coords loc="57277 -30154 305 1685"/>
+		</polygon>
+	</zone>
+	<zone name="residence_65" type="RESIDENCE" >
+		<set name="taxById" value="1"/>
+		<polygon>
+			<coords loc="-27144 122616 -3800 -2500"/>
+			<coords loc="-27144 121992 -3800 -2500"/>
+			<coords loc="-27480 121992 -3800 -2500"/>
+			<coords loc="-27480 122488 -3800 -2500"/>
+			<coords loc="-27576 122488 -3800 -2500"/>
+		</polygon>
+	</zone>
+	<zone name="residence_66" type="RESIDENCE" >
+		<set name="taxById" value="1"/>
+		<polygon>
+			<coords loc="-28360 121960 -3800 -2500"/>
+			<coords loc="-28648 121960 -3800 -2500"/>
+			<coords loc="-28648 121528 -3800 -2500"/>
+			<coords loc="-28360 121528 -3800 -2500"/>
+		</polygon>
+	</zone>
+	<zone name="residence_67" type="RESIDENCE" >
+		<set name="taxById" value="1"/>
+		<polygon>
+			<coords loc="-27752 121064 -3800 -2500"/>
+			<coords loc="-27880 121064 -3800 -2500"/>
+			<coords loc="-27880 120984 -3800 -2500"/>
+			<coords loc="-28376 120984 -3800 -2500"/>
+			<coords loc="-28376 120648 -3800 -2500"/>
+			<coords loc="-27752 120648 -3800 -2500"/>
+		</polygon>
+	</zone>
+	<zone name="residence_68" type="RESIDENCE" >
+		<set name="taxById" value="1"/>
+		<polygon>
+			<coords loc="-27608 121448 -3800 -2500"/>
+			<coords loc="-27320 121448 -3800 -2500"/>
+			<coords loc="-27320 121880 -3800 -2500"/>
+			<coords loc="-27608 121880 -3800 -2500"/>
+		</polygon>
+	</zone>
+	<zone name="residence_69" type="RESIDENCE" >
+		<set name="taxById" value="2"/>
+		<polygon>
+			<coords loc="15672 155960 -3700 -2400"/>
+			<coords loc="15672 156232 -3700 -2400"/>
+			<coords loc="15208 156232 -3700 -2400"/>
+			<coords loc="15208 155960 -3700 -2400"/>
+		</polygon>
+	</zone>
+	<zone name="residence_70" type="RESIDENCE" >
+		<set name="taxById" value="2"/>
+		<polygon>
+			<coords loc="14616 155672 -3600 -2500"/>
+			<coords loc="14344 155672 -3600 -2500"/>
+			<coords loc="14344 155208 -3600 -2500"/>
+			<coords loc="14616 155208 -3600 -2500"/>
+		</polygon>
+	</zone>
+	<zone name="residence_71" type="RESIDENCE" >
+		<set name="taxById" value="2"/>
+		<polygon>
+			<coords loc="15944 154936 -3700 -2400"/>
+			<coords loc="15672 154936 -3700 -2400"/>
+			<coords loc="15672 154472 -3700 -2400"/>
+			<coords loc="15944 154472 -3700 -2400"/>
+		</polygon>
+	</zone>
+	<zone name="residence_72" type="RESIDENCE" >
+		<set name="taxById" value="2"/>
+		<polygon>
+			<coords loc="16632 155784 -3700 -2400"/>
+			<coords loc="16632 156056 -3700 -2400"/>
+			<coords loc="16168 156056 -3700 -2400"/>
+			<coords loc="16168 155784 -3700 -2400"/>
+		</polygon>
+	</zone>
+	<zone name="residence_73" type="RESIDENCE" >
+		<set name="taxById" value="2"/>
+		<polygon>
+			<coords loc="16936 169784 -3500 -2200"/>
+			<coords loc="16936 169512 -3500 -2200"/>
+			<coords loc="17400 169512 -3500 -2200"/>
+			<coords loc="17400 169784 -3500 -2200"/>
+		</polygon>
+	</zone>
+	<zone name="residence_74" type="RESIDENCE" >
+		<set name="taxById" value="2"/>
+		<polygon>
+			<coords loc="18200 170600 -3500 -2200"/>
+			<coords loc="18200 170872 -3500 -2200"/>
+			<coords loc="17736 170872 -3500 -2200"/>
+			<coords loc="17736 170600 -3500 -2200"/>
+		</polygon>
+	</zone>
+</list>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="35741" name="Scroll: PK (Low-grade)">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_ev_draco_pk_count_down"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="PkDecrease"/>
+		<cond msgId="113">
+			<and>
+				<or>
+					<zone name="[floran_town_peace1]"/>
+					<zone name="[floran_town_peace2]"/>
+					<zone name="[floran_town_peace3]"/>
+				</or>
+			</and>
+		</cond>
+	</etcitem>
+	<etcitem id="35752" name="Scroll: PK (Mid-grade)">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_ev_draco_pk_count_down"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="PkDecrease"/>
+		<cond msgId="113">
+			<and>
+				<or>
+					<zone name="[floran_town_peace1]"/>
+					<zone name="[floran_town_peace2]"/>
+					<zone name="[floran_town_peace3]"/>
+				</or>
+			</and>
+		</cond>
+	</etcitem>
+	<etcitem id="35753" name="Scroll: PK (High-grade)">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_ev_draco_pk_count_down"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="PkDecrease"/>
+		<cond msgId="113">
+			<and>
+				<or>
+					<zone name="[floran_town_peace1]"/>
+					<zone name="[floran_town_peace2]"/>
+					<zone name="[floran_town_peace3]"/>
+				</or>
+			</and>
+		</cond>
+	</etcitem>
+	<etcitem id="35754" name="Scroll: PK (Top-grade)">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_ev_draco_pk_count_down"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="PkDecrease"/>
+		<cond msgId="113">
+			<and>
+				<or>
+					<zone name="[floran_town_peace1]"/>
+					<zone name="[floran_town_peace2]"/>
+					<zone name="[floran_town_peace3]"/>
+				</or>
+			</and>
+		</cond>
+	</etcitem>
+</list>

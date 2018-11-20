@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="103">	<!--Магистр Магии-->
+			<skill id="146" level="46" name="Антимагия(Anti Magic)" cost="6100000" min_level="76"/>
+			<skill id="1405" level="3" name="Божественное Вдохновение(Divine Inspiration)" item_id="8620" cost="6100000" min_level="76"/>
+			<skill id="1405" level="4" name="Божественное Вдохновение(Divine Inspiration)" item_id="8621" cost="6100000" min_level="76"/>
+			<skill id="234" level="42" name="Владение Магической Броней(Robe Mastery)" cost="6100000" min_level="76"/>
+			<skill id="249" level="43" name="Владение Оружием(Weapon Mastery)" cost="6100000" min_level="76"/>
+			<skill id="1235" level="29" name="Волна Воды(Hydro Blast)" cost="6100000" min_level="76"/>
+			<skill id="1295" level="10" name="Всплеск Воды(Aqua Splash)" cost="6100000" min_level="76"/>
+			<skill id="1236" level="20" name="Заряд Мороза(Frost Bolt)" cost="6100000" min_level="76"/>
+			<skill id="1340" level="1" name="Ледяной Вихрь(Ice Vortex)" cost="6100000" min_level="76"/>
+			<skill id="1237" level="18" name="Ледяной Кинжал(Ice Dagger)" cost="6100000" min_level="76"/>
+			<skill id="1834" level="1" name="Оседлать Пегаса(Mount Pegasus)" item_id="90039" min_level="76"/>
+			<skill id="1164" level="20" name="Проклятие Слабости(Curse Weakness)" cost="6100000" min_level="76"/>
+			<skill id="1231" level="29" name="Сияние Ауры(Aura Flare)" cost="6100000" min_level="76"/>
+			<skill id="1290" level="2" name="Снежная Буря(Blizzard)" cost="6100000" min_level="76"/>
+			<skill id="1174" level="23" name="Стена Мороза(Frost Wall)" cost="6100000" min_level="76"/>
+			<skill id="1072" level="6" name="Усыпляющее Облако(Sleeping Cloud)" cost="6100000" min_level="76"/>
+			<skill id="146" level="47" name="Антимагия(Anti Magic)" cost="6100000" min_level="77"/>
+			<skill id="234" level="43" name="Владение Магической Броней(Robe Mastery)" cost="6100000" min_level="77"/>
+			<skill id="249" level="44" name="Владение Оружием(Weapon Mastery)" cost="6100000" min_level="77"/>
+			<skill id="1235" level="30" name="Волна Воды(Hydro Blast)" cost="6100000" min_level="77"/>
+			<skill id="1231" level="30" name="Сияние Ауры(Aura Flare)" cost="6100000" min_level="77"/>
+			<skill id="1174" level="24" name="Стена Мороза(Frost Wall)" cost="6100000" min_level="77"/>
+			<skill id="337" level="1" name="Тайная Мощь(Arcane Power)" item_id="90081" cost="6100000" min_level="77"/>
+			<skill id="146" level="48" name="Антимагия(Anti Magic)" cost="13500000" min_level="78"/>
+			<skill id="234" level="44" name="Владение Магической Броней(Robe Mastery)" cost="13500000" min_level="78"/>
+			<skill id="249" level="45" name="Владение Оружием(Weapon Mastery)" cost="13500000" min_level="78"/>
+			<skill id="1235" level="31" name="Волна Воды(Hydro Blast)" cost="13500000" min_level="78"/>
+			<skill id="1295" level="11" name="Всплеск Воды(Aqua Splash)" cost="13500000" min_level="78"/>
+			<skill id="1236" level="21" name="Заряд Мороза(Frost Bolt)" cost="13500000" min_level="78"/>
+			<skill id="1237" level="19" name="Ледяной Кинжал(Ice Dagger)" cost="13500000" min_level="78"/>
+			<skill id="1453" level="1" name="Молот Ледяного Вихря(Ice Vortex Crusher)" item_id="90083" cost="13500000" min_level="78"/>
+			<skill id="1164" level="21" name="Проклятие Слабости(Curse Weakness)" cost="13500000" min_level="78"/>
+			<skill id="1231" level="31" name="Сияние Ауры(Aura Flare)" cost="13500000" min_level="78"/>
+			<skill id="1174" level="25" name="Стена Мороза(Frost Wall)" cost="13500000" min_level="78"/>
+			<skill id="1338" level="1" name="Тайный Хаос(Arcane Chaos)" item_id="90085" cost="13500000" min_level="79"/>
+			<skill id="1556" level="1" name="Мистический Щит(Arcane Shield)" item_id="90086" cost="13500000" min_level="80"/>
+		</class>
+	</normal_skill_tree>
+</list>

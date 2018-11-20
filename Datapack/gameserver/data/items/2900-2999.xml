@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="2900" name="Hermodt\'s Thigh Bone">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_piece_bone_red_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="2901" name="Hermodt\'s Remains">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_ashes_red_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="2902" name="Racoy\'s Totem">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_totem_red_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="2903" name="Vivyan\'s Letter">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_letter_white_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="2904" name="Insect Diagram Book">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_spellbook_gray_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="2905" name="Kiruna\'s Skull">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_skull_white_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="2906" name="Kiruna\'s Rib Bone">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_rib_white_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="2907" name="Kiruna\'s Spine">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_ginseng_yellow_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="2908" name="Kiruna\'s Arm Bone">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_piece_bone_white_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="2909" name="Kiruna\'s Thigh Bone">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_piece_bone_white_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="2910" name="Kiruna\'s Remains">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_ashes_white_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="2911" name="Braki\'s Remains">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_oil_pot_black_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="2912" name="Tonar\'s Remains">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_oil_pot_black_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="2913" name="Hermodt\'s Remains">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_oil_pot_white_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="2914" name="Kiruna\'s Remains">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_oil_pot_white_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="2916" name="Broken Teleport Device">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_plate_silver_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="2917" name="Ring of Seal Gemstone">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_bead_silver_i00"/>
+		<set name="price" value="3482"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2918" name="Mithril Scale Gaiter Material">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_plate_silver_i00"/>
+		<set name="price" value="3371"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2919" name="Brigandine Gaiter Material">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_plate_silver_i00"/>
+		<set name="price" value="3371"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2920" name="Mithril Tunic Pattern">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_piece_of_cloth_white_i00"/>
+		<set name="price" value="3921"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2921" name="Mithril Stocking Pattern">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_piece_of_cloth_white_i00"/>
+		<set name="price" value="2518"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2922" name="Brigandine Helmet Design">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_brown_i00"/>
+		<set name="price" value="5193"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2923" name="Manticore Skin Boot Lining">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="1480"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2924" name="Brigandine Boot Design">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_brown_i00"/>
+		<set name="price" value="1480"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2925" name="Elven Mithril Boot Design">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_brown_i00"/>
+		<set name="price" value="1480"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2926" name="Manticore Skin Glove Lining">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="1480"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2927" name="Brigandine Gauntlet Pattern">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_letter_red_i00"/>
+		<set name="price" value="1480"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2928" name="Elven Mithril Glove Design">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_brown_i00"/>
+		<set name="price" value="1480"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2929" name="Brigandine Shield Fragment">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_plate_silver_i00"/>
+		<set name="price" value="1389"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2930" name="Plate Helmet Design">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_brown_i00"/>
+		<set name="price" value="2481"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2931" name="Salamander Skin Boot Lining">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="1793"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2932" name="Plate Boot Design">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_brown_i00"/>
+		<set name="price" value="1793"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2933" name="Sage\'s Worn Glove Lining">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="1793"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2934" name="Plate Shield Fragment">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_plate_silver_i00"/>
+		<set name="price" value="1763"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2935" name="Reinforced Mithril Gaiter Fragment">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_plate_silver_i00"/>
+		<set name="price" value="3763"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2936" name="Chain Hood Pattern">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_letter_red_i00"/>
+		<set name="price" value="2725"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2937" name="Chain Boot Fragment">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_plate_silver_i00"/>
+		<set name="price" value="2225"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2938" name="Karmian Boot Fabric">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="2225"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2939" name="Plated Leather Boot Lining">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="2225"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2940" name="Dwarven Chain Boot Fragment">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_plate_silver_i00"/>
+		<set name="price" value="2225"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2941" name="Boots of Seal Pattern">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_letter_red_i00"/>
+		<set name="price" value="2225"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2942" name="Reinforced Mithril Glove Design">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_brown_i00"/>
+		<set name="price" value="2225"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2943" name="Chain Glove Design">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_brown_i00"/>
+		<set name="price" value="2225"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2944" name="Karmian Glove Fabric">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="2225"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2945" name="Chain Shield Fragment">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_plate_silver_i00"/>
+		<set name="price" value="2475"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2946" name="Plated Leather Glove Design">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_brown_i00"/>
+		<set name="price" value="3578"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2947" name="Dwarven Chain Shield Fragment">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_plate_silver_i00"/>
+		<set name="price" value="2800"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2948" name="Rind Leather Boot Lining">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="2378"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2949" name="Dwarven Chain Glove Design">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_brown_i00"/>
+		<set name="price" value="2378"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2950" name="Gloves of Seal Pattern">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_letter_red_i00"/>
+		<set name="price" value="2378"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2951" name="Rind Leather Glove Design">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_brown_i00"/>
+		<set name="price" value="2378"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2952" name="Demon\'s Boot Fabric">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_piece_of_cloth_red_i00"/>
+		<set name="price" value="3400"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2953" name="Demon\'s Glove Fabric">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_piece_of_cloth_red_i00"/>
+		<set name="price" value="3400"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2954" name="Theca Leather Boot Texture">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="3160"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2955" name="Theca Leather Glove Texture">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="3160"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2956" name="Compound Boot Fragment">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_plate_silver_i00"/>
+		<set name="price" value="3400"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2957" name="Compound Helmet Design">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_brown_i00"/>
+		<set name="price" value="4560"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2958" name="Divine Boot Fabric">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="3673"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2959" name="Full Plate Helmet Design">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_brown_i00"/>
+		<set name="price" value="5782"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2960" name="Drake Leather Boot Design">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_brown_i00"/>
+		<set name="price" value="3673"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2961" name="Full Plate Boot Fragment">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_plate_silver_i00"/>
+		<set name="price" value="3673"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2962" name="Drake Leather Glove Design">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_pouch_brown_i00"/>
+		<set name="price" value="3673"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2963" name="Full Plate Gauntlet Fragment">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_plate_silver_i00"/>
+		<set name="price" value="3673"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2964" name="Divine Glove Pattern">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_letter_red_i00"/>
+		<set name="price" value="3673"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2965" name="Blessed Glove Design">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_leather_gray_i00"/>
+		<set name="price" value="3673"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2966" name="Full Plate Shield Fragment">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_plate_silver_i00"/>
+		<set name="price" value="3655"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2967" name="Elven Long Sword Blade">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_sword_body_i00"/>
+		<set name="price" value="23063"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2968" name="Dwarven War Hammer Head">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_squares_gray_i00"/>
+		<set name="price" value="30067"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2969" name="Yaksa Mace Head">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_squares_gray_i00"/>
+		<set name="price" value="38364"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="2970" name="Recipe: Ring of Seal">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
+		<set name="price" value="5640"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2971" name="Recipe: Mithril Scale Gaiters">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="price" value="3740"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2972" name="Recipe: Brigandine Gaiters">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="price" value="3740"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2973" name="Recipe: Elven Mithril Tunic">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="price" value="4480"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2974" name="Recipe: Elven Mithril Stockings">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="price" value="2800"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2975" name="Recipe: Brigandine Helmet">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="price" value="2240"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2976" name="Recipe: Manticore Skin Boots">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="price" value="1494"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2977" name="Recipe: Brigandine Boots">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="price" value="1494"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2978" name="Recipe: Elven Mithril Boots">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="price" value="1494"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2979" name="Recipe: Manticore Skin Gloves">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="price" value="1494"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2980" name="Recipe: Brigandine Gauntlets">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="price" value="1494"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2981" name="Recipe: Elven Mithril Gloves">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="price" value="1494"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2982" name="Recipe: Brigandine Shield">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="price" value="1568"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2983" name="Recipe: Plate Helmet">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="price" value="2940"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2984" name="Recipe: Salamander Skin Boots">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="price" value="1956"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2985" name="Recipe: Plate Boots">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="price" value="1956"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2986" name="Recipe: Sage\'s Worn Gloves">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="price" value="1956"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2987" name="Recipe: Plate Shield">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="price" value="2060"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2988" name="Recipe: Reinforced Mithril Gaiters">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
+		<set name="price" value="4740"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2989" name="Recipe: Chain Hood">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
+		<set name="price" value="3780"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2990" name="Recipe: Chain Boots">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
+		<set name="price" value="2520"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2991" name="Recipe: Karmian Boots">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
+		<set name="price" value="2520"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2992" name="Recipe: Plated Leather Boots">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
+		<set name="price" value="2520"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2993" name="Recipe: Dwarven Chain Boots">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
+		<set name="price" value="2520"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2994" name="Recipe: Boots of Seal">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
+		<set name="price" value="2520"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2995" name="Recipe: Reinforced Mithril Gloves">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
+		<set name="price" value="2520"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2996" name="Recipe: Chain Gloves">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
+		<set name="price" value="2520"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2997" name="Recipe: Karmian Gloves">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
+		<set name="price" value="2520"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2998" name="Recipe: Chain Shield">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
+		<set name="price" value="2660"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="2999" name="Recipe: Plated Leather Gloves">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
+		<set name="price" value="2980"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+</list>

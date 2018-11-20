@@ -1,0 +1,59 @@
+<html><body><br>
+<table width=270 border=0>
+	<tr>
+		<td width=90>
+			Standard Auction Price:
+		</td>
+		<td width=180>
+			<font color="aaccff">%base_bid%</font> Adena
+		</td>
+	</tr>
+	<tr>
+		<td width=90>
+			Minimum bid:
+		</td>
+		<td width=180>
+			<font color="aaccff">%bid%</font> Adena
+		</td>
+	</tr>
+	<tr>
+		<td width=90>
+			Auction period:
+		</td>
+		<td width=180>
+			%day% days
+		</td>
+	</tr>
+	<tr>
+		<td width=90>
+			Closing date:
+		</td>
+		<td width=180>%hour% hour %date%
+		</td>
+	</tr>
+</table>
+<table width=270 border=0 bgcolor=333333>
+	<tr>
+		<td width=270>
+			%description%
+		</td>
+	</tr>
+</table>
+You may edit information by clicking "Back."<br>
+Do you wish to register this clan hall for auction?
+<img src="L2UI.SquareBlank" width=270 height=10>
+<img src="L2UI.SquareWhite" width=270 height=1>
+<img src="L2UI.SquareBlank" width=270 height=5>
+<table width=270 border=0>
+	<tr>
+		<td width=100></td>
+		<td width=80 align=center>
+			<button action="bypass -h npc_%objectId%_register_next" value="Back" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+		</td>
+		<td width=80 align=center>
+			<button action="bypass -h npc_%objectId%_register_confirm %day% %bid% %description%" value="Confirm" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+		</td>
+	</tr>
+</table>
+&nbsp;<br><br>
+</body></html>

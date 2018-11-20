@@ -1,0 +1,369 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "option_data.dtd">
+<list>
+	<option_data id="15200">
+		<skills>
+			<skill id="3234" level="4"/> <!--Item Skill: Poison-->
+		</skills>
+	</option_data>
+	<option_data id="15201">
+		<skills>
+			<skill id="3220" level="4"/> <!--Item Skill: Duel Weakness-->
+		</skills>
+	</option_data>
+	<option_data id="15202">
+		<skills>
+			<skill id="3217" level="4"/> <!--Item Skill: Duel Might-->
+		</skills>
+	</option_data>
+	<option_data id="15203">
+		<skills>
+			<skill id="3230" level="4"/> <!--Item Skill: Sleep-->
+		</skills>
+	</option_data>
+	<option_data id="15204">
+		<skills>
+			<skill id="3226" level="4"/> <!--Item Skill: Slow-->
+		</skills>
+	</option_data>
+	<option_data id="15205">
+		<triggers>
+			<trigger id="3097" level="4" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="2.0"/> <!--Item Skill: Winter-->
+		</triggers>
+	</option_data>
+	<option_data id="15206">
+		<triggers>
+			<trigger id="3105" level="4" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="2.0"/> <!--Item Skill: Bleed-->
+		</triggers>
+	</option_data>
+	<option_data id="15207">
+		<triggers>
+			<trigger id="3103" level="4" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="2.0"/> <!--Item Skill: Fear-->
+		</triggers>
+	</option_data>
+	<option_data id="15208">
+		<triggers>
+			<trigger id="3099" level="4" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="2.0"/> <!--Item Skill: Hold-->
+		</triggers>
+	</option_data>
+	<option_data id="15209">
+		<triggers>
+			<trigger id="3104" level="4" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="2.0"/> <!--Item Skill: Poison-->
+		</triggers>
+	</option_data>
+	<option_data id="15210">
+		<triggers>
+			<trigger id="3102" level="4" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="2.0"/> <!--Item Skill: Medusa-->
+		</triggers>
+	</option_data>
+	<option_data id="15211">
+		<skills>
+			<skill id="3246" level="4"/> <!--Item Skill: Heal Empower-->
+		</skills>
+	</option_data>
+	<option_data id="15212">
+		<skills>
+			<skill id="3238" level="4"/> <!--Item Skill: Prayer-->
+		</skills>
+	</option_data>
+	<option_data id="15213">
+		<skills>
+			<skill id="3241" level="4"/> <!--Item Skill: Empower-->
+		</skills>
+	</option_data>
+	<option_data id="15214">
+		<skills>
+			<skill id="3245" level="4"/> <!--Item Skill: Magic Barrier-->
+		</skills>
+	</option_data>
+	<option_data id="15215">
+		<skills>
+			<skill id="3240" level="4"/> <!--Item Skill: Might-->
+		</skills>
+	</option_data>
+	<option_data id="15216">
+		<skills>
+			<skill id="3244" level="4"/> <!--Item Skill: Shield-->
+		</skills>
+	</option_data>
+	<option_data id="15217">
+		<skills>
+			<skill id="3243" level="4"/> <!--Item Skill: Duel Might-->
+		</skills>
+	</option_data>
+	<option_data id="15218">
+		<skills>
+			<skill id="3251" level="4"/> <!--Item Skill: Weight Limit-->
+		</skills>
+	</option_data>
+	<option_data id="15219">
+		<skills>
+			<skill id="3202" level="1"/> <!--Item Skill: Refresh-->
+		</skills>
+	</option_data>
+	<option_data id="15220">
+		<skills>
+			<skill id="3164" level="1"/> <!--Item Skill: Clarity-->
+		</skills>
+	</option_data>
+	<option_data id="15221">
+		<skills>
+			<skill id="3141" level="4"/> <!--Item Skill: Focus-->
+		</skills>
+	</option_data>
+	<option_data id="15222">
+		<skills>
+			<skill id="3204" level="1"/> <!--Item Skill: Reflect Damage-->
+		</skills>
+	</option_data>
+	<option_data id="15223">
+		<skills>
+			<skill id="3198" level="4"/> <!--Item Skill: Doom-->
+		</skills>
+	</option_data>
+	<option_data id="15224">
+		<skills>
+			<skill id="3147" level="1"/> <!--Item Skill: Recall-->
+		</skills>
+	</option_data>
+	<option_data id="15225">
+		<skills>
+			<skill id="3158" level="1"/> <!--Item Skill: Lesser Celestial Shield-->
+		</skills>
+	</option_data>
+	<option_data id="15226">
+		<skills>
+			<skill id="3142" level="4"/> <!--Item Skill: Wild Magic-->
+		</skills>
+	</option_data>
+	<option_data id="15227">
+		<skills>
+			<skill id="3205" level="1"/> <!--Item Skill: Party Recall-->
+		</skills>
+	</option_data>
+	<option_data id="15228">
+		<skills>
+			<skill id="3197" level="4"/> <!--Item Skill: Silence-->
+		</skills>
+	</option_data>
+	<option_data id="15229">
+		<skills>
+			<skill id="3199" level="1"/> <!--Item Skill: Skill Refresh-->
+		</skills>
+	</option_data>
+	<option_data id="15230">
+		<skills>
+			<skill id="3161" level="1"/> <!--Item Skill: Skill Clarity-->
+		</skills>
+	</option_data>
+	<option_data id="15231">
+		<skills>
+			<skill id="3201" level="1"/> <!--Item Skill: Music Refresh-->
+		</skills>
+	</option_data>
+	<option_data id="15232">
+		<skills>
+			<skill id="3163" level="1"/> <!--Item Skill: Music Clarity-->
+		</skills>
+	</option_data>
+	<option_data id="15233">
+		<skills>
+			<skill id="3200" level="1"/> <!--Item Skill: Spell Refresh-->
+		</skills>
+	</option_data>
+	<option_data id="15234">
+		<skills>
+			<skill id="3162" level="1"/> <!--Item Skill: Spell Clarity-->
+		</skills>
+	</option_data>
+	<option_data id="15235">
+		<skills>
+			<skill id="3162" level="1"/> <!--Item Skill: Spell Clarity-->
+		</skills>
+	</option_data>
+	<option_data id="15236">
+		<skills>
+			<skill id="3148" level="4"/> <!--Item Skill: Vampiric Rage-->
+		</skills>
+	</option_data>
+	<option_data id="15237">
+		<triggers>
+			<trigger id="3094" level="4" type="ATTACK" chance="1.0"/> <!--Item Skill: Doom-->
+		</triggers>
+	</option_data>
+	<option_data id="15238">
+		<triggers>
+			<trigger id="3082" level="4" type="ATTACK" chance="1.0"/> <!--Item Skill: Mana Burn-->
+		</triggers>
+	</option_data>
+	<option_data id="15239">
+		<triggers>
+			<trigger id="3088" level="4" type="ATTACK" chance="1.0"/> <!--Item Skill: Paralyze-->
+		</triggers>
+	</option_data>
+	<option_data id="15240">
+		<triggers>
+			<trigger id="3093" level="4" type="ATTACK" chance="1.0"/> <!--Item Skill: Silence-->
+		</triggers>
+	</option_data>
+	<option_data id="15241">
+		<triggers>
+			<trigger id="3087" level="4" type="ATTACK" chance="1.0"/> <!--Item Skill: Sleep-->
+		</triggers>
+	</option_data>
+	<option_data id="15242">
+		<triggers>
+			<trigger id="3085" level="4" type="ATTACK" chance="1.0"/> <!--Item Skill: Stun-->
+		</triggers>
+	</option_data>
+	<option_data id="15243">
+		<triggers>
+			<trigger id="3122" level="4" type="CRIT" chance="5.0"/> <!--Item Skill: Doom-->
+		</triggers>
+	</option_data>
+	<option_data id="15244">
+		<triggers>
+			<trigger id="3110" level="4" type="CRIT" chance="5.0"/> <!--Item Skill: Mana Burn-->
+		</triggers>
+	</option_data>
+	<option_data id="15245">
+		<triggers>
+			<trigger id="3116" level="4" type="CRIT" chance="5.0"/> <!--Item Skill: Paralyze-->
+		</triggers>
+	</option_data>
+	<option_data id="15246">
+		<triggers>
+			<trigger id="3121" level="4" type="CRIT" chance="5.0"/> <!--Item Skill: Silence-->
+		</triggers>
+	</option_data>
+	<option_data id="15247">
+		<triggers>
+			<trigger id="3115" level="4" type="CRIT" chance="5.0"/> <!--Item Skill: Sleep-->
+		</triggers>
+	</option_data>
+	<option_data id="15248">
+		<triggers>
+			<trigger id="3113" level="4" type="CRIT" chance="5.0"/> <!--Item Skill: Stun-->
+		</triggers>
+	</option_data>
+	<option_data id="15249">
+		<skills>
+			<skill id="3237" level="4"/> <!--Item Skill: Doom-->
+		</skills>
+	</option_data>
+	<option_data id="15250">
+		<skills>
+			<skill id="3233" level="4"/> <!--Item Skill: Fear-->
+		</skills>
+	</option_data>
+	<option_data id="15251">
+		<skills>
+			<skill id="3212" level="4"/> <!--Item Skill: Mana Gain-->
+		</skills>
+	</option_data>
+	<option_data id="15252">
+		<skills>
+			<skill id="3210" level="4"/> <!--Item Skill: Recharge-->
+		</skills>
+	</option_data>
+	<option_data id="15253">
+		<skills>
+			<skill id="3231" level="4"/> <!--Item Skill: Paralyze-->
+		</skills>
+	</option_data>
+	<option_data id="15254">
+		<skills>
+			<skill id="3236" level="4"/> <!--Item Skill: Silence-->
+		</skills>
+	</option_data>
+	<option_data id="15255">
+		<skills>
+			<skill id="3228" level="4"/> <!--Item Skill: Stun-->
+		</skills>
+	</option_data>
+	<option_data id="15256">
+		<skills>
+			<skill id="3232" level="4"/> <!--Item Skill: Medusa-->
+		</skills>
+	</option_data>
+	<option_data id="15257">
+		<triggers>
+			<trigger id="3107" level="4" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="2.0"/> <!--Item Skill: Doom-->
+		</triggers>
+	</option_data>
+	<option_data id="15258">
+		<triggers>
+			<trigger id="3095" level="4" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="2.0"/> <!--Item Skill: Mana Burn-->
+		</triggers>
+	</option_data>
+	<option_data id="15259">
+		<triggers>
+			<trigger id="3101" level="4" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="2.0"/> <!--Item Skill: Paralyze-->
+		</triggers>
+	</option_data>
+	<option_data id="15260">
+		<triggers>
+			<trigger id="3106" level="4" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="2.0"/> <!--Item Skill: Silence-->
+		</triggers>
+	</option_data>
+	<option_data id="15261">
+		<triggers>
+			<trigger id="3100" level="4" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="2.0"/> <!--Item Skill: Sleep-->
+		</triggers>
+	</option_data>
+	<option_data id="15262">
+		<triggers>
+			<trigger id="3098" level="4" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="2.0"/> <!--Item Skill: Stun-->
+		</triggers>
+	</option_data>
+	<option_data id="15263">
+		<skills>
+			<skill id="3258" level="1"/> <!--Item Skill: Clarity-->
+		</skills>
+	</option_data>
+	<option_data id="15264">
+		<skills>
+			<skill id="3247" level="4"/> <!--Item Skill: Agility-->
+		</skills>
+	</option_data>
+	<option_data id="15265">
+		<skills>
+			<skill id="3249" level="4"/> <!--Item Skill: Focus-->
+		</skills>
+	</option_data>
+	<option_data id="15266">
+		<skills>
+			<skill id="3259" level="1"/> <!--Item Skill: Reflect Damage-->
+		</skills>
+	</option_data>
+	<option_data id="15267">
+		<skills>
+			<skill id="3248" level="4"/> <!--Item Skill: Guidance-->
+		</skills>
+	</option_data>
+	<option_data id="15268">
+		<skills>
+			<skill id="3250" level="4"/> <!--Item Skill: Wild Magic-->
+		</skills>
+	</option_data>
+	<option_data id="15269">
+		<skills>
+			<skill id="3239" level="4"/> <!--Item Skill: Mana Gain-->
+		</skills>
+	</option_data>
+	<option_data id="15270">
+		<skills>
+			<skill id="3255" level="1"/> <!--Item Skill: Skill Clarity-->
+		</skills>
+	</option_data>
+	<option_data id="15271">
+		<skills>
+			<skill id="3257" level="1"/> <!--Item Skill: Music Clarity-->
+		</skills>
+	</option_data>
+	<option_data id="15272">
+		<skills>
+			<skill id="3256" level="1"/> <!--Item Skill: Spell Clarity-->
+		</skills>
+	</option_data>
+</list>

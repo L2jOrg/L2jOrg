@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE farm SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<farm name="Dark Elf (Lvl 3-8)" min_level="3" max_level="8" races="DARKELF">
+	<zones>
+		<zone>
+			<polygon>
+				<coords loc="28248 13288 -3950 -3450"/>
+				<coords loc="30008 11944 -3950 -3450"/>
+				<coords loc="31480 11784 -3950 -3450"/>
+				<coords loc="38456 13624 -3950 -3450"/>
+				<coords loc="34520 17784 -3950 -3450"/>
+				<coords loc="33992 19160 -3950 -3450"/>
+				<coords loc="32616 19416 -3950 -3450"/>
+				<coords loc="30776 20344 -3950 -3450"/>
+				<coords loc="28792 22088 -3950 -3450"/>
+				<coords loc="28232 18968 -3950 -3450"/>
+				<coords loc="27848 16072 -3950 -3450"/>
+			</polygon>
+		</zone>
+		<spawn_points>
+			<coords loc="29496 14136 -3728"/>
+			<coords loc="30888 15624 -3712"/>
+			<coords loc="31144 17016 -3728"/>
+		</spawn_points>
+	</zones>
+	<on_obtain_max_level>
+		<action id="1"/>
+	</on_obtain_max_level>
+	<go_to_town min_farm_time="1800" max_farm_time="3600">
+		<action id="1"/>
+	</go_to_town>
+	<action id="1">
+		<wait min_delay="1000" max_delay="3000"/>
+		<random_action>
+			<ordinary_actions>
+				<move_to_point x="28200" y="15544" z="-3664" min_range="50" max_range="150"/>
+				<move_to_point x="27368" y="15784" z="-3648" min_range="50" max_range="150"/>
+				<move_to_point x="25816" y="16200" z="-3616" min_range="50" max_range="150"/>
+				<move_to_point x="24456" y="16328" z="-3616" min_range="50" max_range="150"/>
+				<move_to_point x="23448" y="15576" z="-3616" min_range="50" max_range="150"/>
+				<move_to_point x="22344" y="14392" z="-3648" min_range="50" max_range="150"/>
+				<move_to_point x="21480" y="13624" z="-3632" min_range="50" max_range="150"/>
+				<move_to_point x="19928" y="12856" z="-3728" min_range="50" max_range="150"/>
+				<move_to_point x="18952" y="12632" z="-3728" min_range="50" max_range="150"/>
+				<move_to_point x="17960" y="12920" z="-3728" min_range="50" max_range="150"/>
+				<move_to_point x="17032" y="13320" z="-3744" min_range="0" max_range="50"/>
+				<move_to_point x="16344" y="13672" z="-3704" min_range="0" max_range="0"/>
+				<move_to_point x="16024" y="14056" z="-3736" min_range="0" max_range="0"/>
+				<move_to_point x="15944" y="14424" z="-3800" min_range="0" max_range="0"/>
+				<move_to_point x="16200" y="14808" z="-3968" min_range="0" max_range="0"/>
+				<move_to_point x="16568" y="14920" z="-4040" min_range="0" max_range="0"/>
+				<move_to_point x="16840" y="15240" z="-4184" min_range="0" max_range="0"/>
+				<move_to_point x="16696" y="15624" z="-4264" min_range="0" max_range="0"/>
+				<move_to_point x="16216" y="15736" z="-4360" min_range="0" max_range="0"/>
+				<move_to_point x="15592" y="15832" z="-4384" min_range="0" max_range="50"/>
+				<move_to_point x="15048" y="15976" z="-4376" min_range="50" max_range="150"/>
+				<move_to_point x="14056" y="16200" z="-4584" min_range="50" max_range="150"/>
+				<move_to_point x="13208" y="16408" z="-4584" min_range="50" max_range="150"/>
+				<move_to_point x="12600" y="16536" z="-4584" min_range="50" max_range="150"/>
+				<move_to_point x="12184" y="16632" z="-4584" min_range="0" max_range="50"/>
+			</ordinary_actions>
+			<use_item id="736"/>
+		</random_action>
+	</action>
+</farm>

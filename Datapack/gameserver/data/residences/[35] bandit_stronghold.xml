@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "residence.dtd">
+<list>
+	<residence id="35" name="Bandit Stronghold" impl="clanhall.SiegeableClanHall">
+		<available_functions>
+			<function type="ITEM_CREATE" level="11"/>
+			<function type="ITEM_CREATE" level="12"/>
+			<function type="ITEM_CREATE" level="13"/>
+			<function type="RESTORE_HP" level="25"/>
+			<function type="RESTORE_MP" level="18"/>
+			<function type="RESTORE_EXP" level="19"/>
+			<function type="TELEPORT" level="11"/>
+			<function type="TELEPORT" level="12"/>
+			<function type="SUPPORT" level="15"/>
+		</available_functions>
+		<banish_points>
+			<point x="91826" y="-12575" z="-2408"/>
+			<point x="92188" y="-12927" z="-2404"/>
+			<point x="91737" y="-12075" z="-2450"/>
+			<point x="91288" y="-12467" z="-2409"/>
+			<point x="91456" y="-13048" z="-2378"/>
+			<point x="91359" y="-12094" z="-2436"/>
+		</banish_points>
+		<owner_restart_points>
+			<point x="80339" y="-15442" z="-1804"/>
+		</owner_restart_points>
+		<other_restart_points>
+			<point x="80304" y="56241" z="-1500"/>
+			<point x="80594" y="55837" z="-1500"/>
+			<point x="79933" y="55752" z="-1500"/>
+			<point x="80267" y="55497" z="-1500"/>
+			<point x="80334" y="54400" z="-1500"/>
+			<point x="82445" y="56012" z="-1480"/>
+			<point x="82323" y="55466" z="-1480"/>
+			<point x="82880" y="55390" z="-1480"/>
+			<point x="82638" y="53885" z="-1440"/>
+			<point x="82552" y="53447" z="-1440"/>
+			<point x="82213" y="53964" z="-1440"/>
+			<point x="80054" y="53209" z="-1500"/>
+			<point x="79706" y="52986" z="-1500"/>
+			<point x="82123" y="53535" z="-1440"/>
+		</other_restart_points>
+		<chaos_restart_points>
+			<point x="76576" y="50151" z="-3200"/>
+			<point x="77310" y="50317" z="-3160"/>
+			<point x="77250" y="51285" z="-3160"/>
+			<point x="78811" y="51106" z="-3160"/>
+			<point x="75755" y="51372" z="-3250"/>
+			<point x="75613" y="52504" z="-3200"/>
+			<point x="74459" y="52441" z="-3260"/>
+			<point x="74467" y="53354" z="-3200"/>
+			<point x="73600" y="53918" z="-3170"/>
+			<point x="71102" y="57875" z="-3330"/>
+			<point x="70052" y="59300" z="-3580"/>
+			<point x="70420" y="57480" z="-3480"/>
+			<point x="75474" y="60125" z="-2730"/>
+			<point x="74880" y="60818" z="-2820"/>
+			<point x="88011" y="56589" z="-3560"/>
+			<point x="91239" y="53120" z="-3430"/>
+			<point x="81785" y="46306" z="-3160"/>
+			<point x="80708" y="44609" z="-3120"/>
+			<point x="70139" y="55885" z="-3550"/>
+			<point x="80236" y="45675" z="-3150"/>
+		</chaos_restart_points>
+	</residence>
+</list>

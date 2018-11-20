@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="19009" levels="1" name="Clan Advent">
+		<set name="icon" value="icon.skill19009"/>
+		<set name="olympiad_use" value="false"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="clan_advent"/>
+		<set name="magicLevel" value="89"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSelfDispellable" value="false"/>
+		<set name="isPreservedOnDeath" value="true"/>
+		<set name="isSaveable" value="false"/>
+		<set name="cancelable" value="false"/>
+		<for>
+			<effect>
+				<mul stat="pAtk" value="1.02"/>
+				<mul stat="mAtk" value="1.02"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="19032" levels="1" name="Ability of Light">
+		<set name="icon" value="icon.skill19008"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<set name="min_pledge_rank" value="MARQUIS"/> <!-- Маркиз -->
+		<for>
+			<add stat="maxCp" value="2000">
+				<player is_chaotic="false"/>
+			</add>
+		</for>
+	</skill>
+	<skill id="19033" levels="1" name="Ability of Darkness">
+		<set name="icon" value="icon.skill19008"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<set name="min_pledge_rank" value="MARQUIS"/> <!-- Маркиз -->
+		<for>
+			<add stat="maxCp" value="1000"/>
+		</for>
+	</skill>
+	<skill id="19034" levels="1" name="Imprint of Light">
+		<set name="icon" value="icon.skill0246"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="castRange" value="85"/>
+		<set name="hitTime" value="120000"/>
+		<set name="mp_consume" value="50"/>
+		<set name="magicLevel" value="30"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_HOLY"/>
+		<set name="skillType" value="TAKECASTLE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSkillTimePermanent" value="true"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="castle_side" value="LIGHT"/>
+	</skill>
+	<skill id="19035" levels="1" name="Imprint of Darkness">
+		<set name="icon" value="icon.skill0246"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="castRange" value="85"/>
+		<set name="hitTime" value="120000"/>
+		<set name="mp_consume" value="50"/>
+		<set name="magicLevel" value="30"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_HOLY"/>
+		<set name="skillType" value="TAKECASTLE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSkillTimePermanent" value="true"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="castle_side" value="DARK"/>
+	</skill>
+	<skill id="19036" levels="1" name="Blessing of Light">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_type" value="gerold_buff"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="magicType" value="MAGIC"/>
+		<for>
+			<effect>
+				<add stat="exp_rate_multiplier" value="0.03"/>
+				<add stat="sp_rate_multiplier" value="0.03"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="19039" levels="1" name="Cloak of Light">
+		<set name="icon" value="icon.amor_goodness_cloak"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<!--TODO: Эффект недоступен в хаотическом состоянии.-->
+		<for>
+			<mul stat="maxHp" value="1.05"/>
+			<mul stat="maxMp" value="1.05"/>
+			<mul stat="maxCp" value="1.05"/>
+			<mul stat="pDef" value="1.03"/>
+			<mul stat="mDef" value="1.05"/>
+			<p_defence_trait name="sword" value="3"/>
+			<p_defence_trait name="dual" value="3"/>
+			<p_defence_trait name="blunt" value="3"/>
+			<p_defence_trait name="dagger" value="3"/>
+			<p_defence_trait name="pole" value="3"/>
+			<p_defence_trait name="fist" value="3"/>
+			<add stat="pCritRate" value="10"/>
+			<add stat="mCritRate" value="10"/>
+			<add stat="reflectDam" value="3"/>
+		</for>
+	</skill>
+	<skill id="19040" levels="1" name="Cloak of Darkness">
+		<set name="icon" value="icon.amor_evilness_cloak"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<mul stat="maxHp" value="1.05"/>
+			<mul stat="maxMp" value="1.05"/>
+			<mul stat="maxCp" value="1.05"/>
+			<mul stat="pDef" value="1.03"/>
+			<mul stat="mDef" value="1.05"/>
+			<p_defence_trait name="sword" value="3"/>
+			<p_defence_trait name="dual" value="3"/>
+			<p_defence_trait name="blunt" value="3"/>
+			<p_defence_trait name="dagger" value="3"/>
+			<p_defence_trait name="pole" value="3"/>
+			<p_defence_trait name="fist" value="3"/>
+			<add stat="pCritRate" value="10"/>
+			<add stat="mCritRate" value="10"/>
+			<add stat="reflectDam" value="3"/>
+		</for>
+	</skill>
+	<skill id="19041" levels="1" name="Escape: Castle">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="olympiad_use" value="false"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="castle" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="19042" levels="1" name="Blessed Scroll of Escape: Castle">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="200"/>
+		<set name="olympiad_use" value="false"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="castle" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+</list>

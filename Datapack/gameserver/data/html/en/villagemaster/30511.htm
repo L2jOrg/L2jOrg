@@ -1,0 +1,12 @@
+<html><head><body>
+Warehouse Chief Gesto:<br>
+I am Warehouse Chief Gesto of the Steel Door Guild here in Giran. Our motto is "We sell anything to anyone, anywhere." We travel to frozen wastes, deserts, even volcanic zones, to create prosperity for our Dwarven tribe. Who else can claim that?<br>
+But you're a new face, hmm? I don't think we've met before. What do you want?<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">"Can you tell me about the 2nd Class Transfer?"</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Clan</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Alliance</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Exchange Daily Coins</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Quest</Button>
+</body></html>

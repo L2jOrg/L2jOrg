@@ -1,0 +1,25 @@
+<!ELEMENT list (residence_function)*>
+
+	<!ELEMENT residence_function (funcs)*>
+	<!ATTLIST residence_function
+		id CDATA #REQUIRED
+		name CDATA #IMPLIED
+		type CDATA #REQUIRED
+		level CDATA #REQUIRED
+		depth CDATA #REQUIRED
+		period CDATA #REQUIRED
+		cost CDATA #REQUIRED>
+
+		<!ELEMENT funcs (hp_regen|mp_regen|exp_restore)*>
+
+			<!ELEMENT hp_regen (#PCDATA)>
+			<!ATTLIST hp_regen
+				value CDATA #REQUIRED>
+
+			<!ELEMENT mp_regen (#PCDATA)>
+			<!ATTLIST mp_regen
+				value CDATA #REQUIRED>
+
+			<!ELEMENT exp_restore (#PCDATA)>
+			<!ATTLIST exp_restore
+				value CDATA #REQUIRED>

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "zone.dtd">
+<list>
+	<zone name="[baium_epic]" type="epic" >
+		<polygon>
+			<coords loc="116616 17576 10032 10232"/>
+			<coords loc="117064 16552 10032 10232"/>
+			<coords loc="117032 15592 10032 10232"/>
+			<coords loc="116664 14632 10032 10232"/>
+			<coords loc="116024 14008 10032 10232"/>
+			<coords loc="115128 13640 10032 10232"/>
+			<coords loc="114136 13624 10032 10232"/>
+			<coords loc="113256 13992 10032 10232"/>
+			<coords loc="112568 14664 10032 10232"/>
+			<coords loc="112216 15592 10032 10232"/>
+			<coords loc="112216 16552 10032 10232"/>
+			<coords loc="112600 17432 10032 10232"/>
+			<coords loc="113288 18120 10032 10232"/>
+			<coords loc="114152 18472 10032 10232"/>
+			<coords loc="115144 18488 10032 10232"/>
+			<coords loc="116152 18024 10032 10232"/>
+		</polygon>
+	</zone>
+	<zone name="[queen_ant_epic]" type="epic" >
+		<set name="levelLimit" value="48"/>
+		<set name="tele" value="-25464 172424 -4203"/>
+		<polygon>
+			<coords loc="-23176 185080 -6000 -5500"/>
+			<coords loc="-20104 185080 -6000 -5500"/>
+			<coords loc="-20104 177928 -6000 -5500"/>
+			<coords loc="-23176 177928 -6000 -5500"/>
+		</polygon>
+	</zone>
+</list>

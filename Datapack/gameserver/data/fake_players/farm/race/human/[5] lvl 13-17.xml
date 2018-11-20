@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE farm SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<farm name="Human (Lvl 13-17)" min_level="13" max_level="17" races="HUMAN">
+	<zones>
+		<zone>
+			<polygon>
+				<coords loc="-100040 216952 -4000 -2300"/>
+				<coords loc="-99368 215304 -4000 -2300"/>
+				<coords loc="-99400 214120 -4000 -2300"/>
+				<coords loc="-100040 212632 -4000 -2300"/>
+				<coords loc="-102456 212280 -4000 -2300"/>
+				<coords loc="-104344 213272 -4000 -2300"/>
+				<coords loc="-105576 214088 -4000 -2300"/>
+				<coords loc="-106808 214184 -4000 -2300"/>
+				<coords loc="-108232 213896 -4000 -2300"/>
+				<coords loc="-110008 213768 -4000 -2300"/>
+				<coords loc="-111096 214808 -4000 -2300"/>
+				<coords loc="-111800 215704 -4000 -2300"/>
+				<coords loc="-113080 216952 -4000 -2300"/>
+				<coords loc="-114392 217720 -4000 -2300"/>
+				<coords loc="-116136 218936 -4000 -2300"/>
+				<coords loc="-116952 220520 -4000 -2300"/>
+				<coords loc="-117704 222024 -4000 -2300"/>
+				<coords loc="-118248 223480 -4000 -2300"/>
+				<coords loc="-118840 225784 -4000 -2300"/>
+				<coords loc="-119256 226360 -4000 -2300"/>
+				<coords loc="-115912 228920 -4000 -2300"/>
+				<coords loc="-115448 228216 -4000 -2300"/>
+				<coords loc="-115080 226216 -4000 -2300"/>
+				<coords loc="-115080 224536 -4000 -2300"/>
+				<coords loc="-114296 223384 -4000 -2300"/>
+				<coords loc="-113800 222024 -4000 -2300"/>
+				<coords loc="-112616 219624 -4000 -2300"/>
+				<coords loc="-110728 218264 -4000 -2300"/>
+				<coords loc="-109272 217864 -4000 -2300"/>
+				<coords loc="-107336 217384 -4000 -2300"/>
+				<coords loc="-105864 217848 -4000 -2300"/>
+			</polygon>
+		</zone>
+		<spawn_points>
+			<coords loc="-105688 214872 -3408"/>
+			<coords loc="-107080 214696 -3424"/>
+			<coords loc="-108040 214232 -3408"/>
+		</spawn_points>
+	</zones>
+	<on_obtain_max_level>
+		<action id="1"/>
+	</on_obtain_max_level>
+	<go_to_town min_farm_time="1800" max_farm_time="3600">
+		<action id="1"/>
+	</go_to_town>
+	<action id="1">
+		<wait min_delay="1000" max_delay="3000"/>
+		<random_action>
+			<ordinary_actions>
+				<move_to_point x="-105816" y="214728" z="-3408" min_range="50" max_range="150"/>
+				<move_to_point x="-103800" y="215192" z="-3440" min_range="50" max_range="150"/>
+				<move_to_point x="-102776" y="216040" z="-3424" min_range="50" max_range="150"/>
+				<move_to_point x="-101624" y="217288" z="-3392" min_range="50" max_range="150"/>
+				<move_to_point x="-101048" y="218792" z="-3312" min_range="50" max_range="150"/>
+				<move_to_point x="-100488" y="221016" z="-3376" min_range="50" max_range="150"/>
+				<move_to_point x="-99912" y="223480" z="-3424" min_range="50" max_range="150"/>
+				<move_to_point x="-99736" y="225384" z="-3584" min_range="50" max_range="150"/>
+				<move_to_point x="-100648" y="228280" z="-3712" min_range="50" max_range="150"/>
+				<move_to_point x="-99320" y="232344" z="-3456" min_range="50" max_range="150"/>
+				<move_to_point x="-98792" y="233816" z="-3328" min_range="50" max_range="150"/>
+				<move_to_point x="-98232" y="235784" z="-3376" min_range="50" max_range="150"/>
+				<move_to_point x="-96712" y="236232" z="-3488" min_range="50" max_range="150"/>
+				<move_to_point x="-95144" y="235944" z="-3504" min_range="50" max_range="150"/>
+				<move_to_point x="-93816" y="236600" z="-3616" min_range="50" max_range="150"/>
+				<move_to_point x="-91896" y="238120" z="-3680" min_range="50" max_range="150"/>
+				<move_to_point x="-90456" y="238760" z="-3728" min_range="50" max_range="150"/>
+				<move_to_point x="-89240" y="239000" z="-3712" min_range="50" max_range="150"/>
+				<move_to_point x="-87976" y="239336" z="-3648" min_range="50" max_range="150"/>
+				<move_to_point x="-86920" y="240264" z="-3680" min_range="50" max_range="150"/>
+				<move_to_point x="-86216" y="241000" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-85384" y="241848" z="-3728" min_range="50" max_range="150"/>
+				<move_to_point x="-84568" y="242440" z="-3728" min_range="50" max_range="150"/>
+			</ordinary_actions>
+			<use_item id="736"/>
+		</random_action>
+	</action>
+</farm>

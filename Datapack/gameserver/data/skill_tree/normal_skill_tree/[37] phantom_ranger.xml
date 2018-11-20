@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="37">	<!--Призрачный Рейнджер-->
+			<skill id="312" level="6" name="Боевая Стойка Коварства(Vicious Stance)" cost="72000" min_level="40"/>
+			<skill id="233" level="11" name="Владение Легкой Броней(Light Armor Mastery)" cost="72000" min_level="40"/>
+			<skill id="233" level="12" name="Владение Легкой Броней(Light Armor Mastery)" cost="72000" min_level="40"/>
+			<skill id="233" level="13" name="Владение Легкой Броней(Light Armor Mastery)" cost="72000" min_level="40"/>
+			<skill id="208" level="16" name="Владение Луком(Bow Mastery)" cost="72000" min_level="40"/>
+			<skill id="208" level="17" name="Владение Луком(Bow Mastery)" cost="72000" min_level="40"/>
+			<skill id="208" level="18" name="Владение Луком(Bow Mastery)" cost="72000" min_level="40"/>
+			<skill id="113" level="2" name="Дальнобойность(Long Shot)" cost="72000" min_level="40"/>
+			<skill id="19" level="1" name="Двойной Выстрел(Double Shot)" cost="72000" min_level="40"/>
+			<skill id="19" level="2" name="Двойной Выстрел(Double Shot)" cost="72000" min_level="40"/>
+			<skill id="19" level="3" name="Двойной Выстрел(Double Shot)" cost="72000" min_level="40"/>
+			<skill id="223" level="13" name="Жало(Sting)" cost="72000" min_level="40"/>
+			<skill id="223" level="14" name="Жало(Sting)" cost="72000" min_level="40"/>
+			<skill id="223" level="15" name="Жало(Sting)" cost="72000" min_level="40"/>
+			<skill id="2" level="5" name="Замешательство(Confusion)" cost="72000" min_level="40"/>
+			<skill id="105" level="3" name="Замораживающий Удар(Freezing Strike)" cost="72000" min_level="40"/>
+			<skill id="105" level="4" name="Замораживающий Удар(Freezing Strike)" cost="72000" min_level="40"/>
+			<skill id="70" level="17" name="Кража Здоровья(Drain HP)" cost="72000" min_level="40"/>
+			<skill id="70" level="18" name="Кража Здоровья(Drain HP)" cost="72000" min_level="40"/>
+			<skill id="70" level="19" name="Кража Здоровья(Drain HP)" cost="72000" min_level="40"/>
+			<skill id="101" level="4" name="Оглушающий Выстрел(Stun Shot)" cost="72000" min_level="40"/>
+			<skill id="101" level="5" name="Оглушающий Выстрел(Stun Shot)" cost="72000" min_level="40"/>
+			<skill id="101" level="6" name="Оглушающий Выстрел(Stun Shot)" cost="72000" min_level="40"/>
+			<skill id="122" level="1" name="Сглаз(Hex)" item_id="3050" cost="72000" min_level="40"/>
+			<skill id="115" level="3" name="Сокрушение Мощи(Power Break)" cost="72000" min_level="40"/>
+			<skill id="233" level="14" name="Владение Легкой Броней(Light Armor Mastery)" cost="85000" min_level="41"/>
+			<skill id="208" level="19" name="Владение Луком(Bow Mastery)" cost="85000" min_level="41"/>
+			<skill id="19" level="4" name="Двойной Выстрел(Double Shot)" cost="85000" min_level="41"/>
+			<skill id="223" level="16" name="Жало(Sting)" cost="85000" min_level="41"/>
+			<skill id="70" level="20" name="Кража Здоровья(Drain HP)" cost="85000" min_level="41"/>
+			<skill id="101" level="7" name="Оглушающий Выстрел(Stun Shot)" cost="85000" min_level="41"/>
+			<skill id="233" level="15" name="Владение Легкой Броней(Light Armor Mastery)" cost="85000" min_level="42"/>
+			<skill id="208" level="20" name="Владение Луком(Bow Mastery)" cost="85000" min_level="42"/>
+			<skill id="19" level="5" name="Двойной Выстрел(Double Shot)" cost="85000" min_level="42"/>
+			<skill id="223" level="17" name="Жало(Sting)" cost="85000" min_level="42"/>
+			<skill id="105" level="5" name="Замораживающий Удар(Freezing Strike)" cost="85000" min_level="42"/>
+			<skill id="70" level="21" name="Кража Здоровья(Drain HP)" cost="85000" min_level="42"/>
+			<skill id="101" level="8" name="Оглушающий Выстрел(Stun Shot)" cost="85000" min_level="42"/>
+			<skill id="225" level="2" name="Акробатическое Движение(Acrobatic Move)" cost="85000" min_level="43"/>
+			<skill id="312" level="7" name="Боевая Стойка Коварства(Vicious Stance)" cost="85000" min_level="43"/>
+			<skill id="171" level="2" name="Боевой Дух(Esprit)" cost="85000" min_level="43"/>
+			<skill id="169" level="2" name="Быстрый Шаг(Quick Step)" cost="85000" min_level="43"/>
+			<skill id="233" level="16" name="Владение Легкой Броней(Light Armor Mastery)" cost="85000" min_level="43"/>
+			<skill id="208" level="21" name="Владение Луком(Bow Mastery)" cost="85000" min_level="43"/>
+			<skill id="19" level="6" name="Двойной Выстрел(Double Shot)" cost="85000" min_level="43"/>
+			<skill id="223" level="18" name="Жало(Sting)" cost="85000" min_level="43"/>
+			<skill id="2" level="6" name="Замешательство(Confusion)" cost="85000" min_level="43"/>
+			<skill id="105" level="6" name="Замораживающий Удар(Freezing Strike)" cost="85000" min_level="43"/>
+			<skill id="70" level="22" name="Кража Здоровья(Drain HP)" cost="85000" min_level="43"/>
+			<skill id="101" level="9" name="Оглушающий Выстрел(Stun Shot)" cost="85000" min_level="43"/>
+			<skill id="122" level="2" name="Сглаз(Hex)" cost="85000" min_level="43"/>
+			<skill id="115" level="4" name="Сокрушение Мощи(Power Break)" cost="85000" min_level="43"/>
+			<skill id="233" level="17" name="Владение Легкой Броней(Light Armor Mastery)" cost="130000" min_level="44"/>
+			<skill id="208" level="22" name="Владение Луком(Bow Mastery)" cost="130000" min_level="44"/>
+			<skill id="19" level="7" name="Двойной Выстрел(Double Shot)" cost="130000" min_level="44"/>
+			<skill id="223" level="19" name="Жало(Sting)" cost="130000" min_level="44"/>
+			<skill id="70" level="23" name="Кража Здоровья(Drain HP)" cost="130000" min_level="44"/>
+			<skill id="101" level="10" name="Оглушающий Выстрел(Stun Shot)" cost="130000" min_level="44"/>
+			<skill id="233" level="18" name="Владение Легкой Броней(Light Armor Mastery)" cost="130000" min_level="45"/>
+			<skill id="208" level="23" name="Владение Луком(Bow Mastery)" cost="130000" min_level="45"/>
+			<skill id="19" level="8" name="Двойной Выстрел(Double Shot)" cost="130000" min_level="45"/>
+			<skill id="223" level="20" name="Жало(Sting)" cost="130000" min_level="45"/>
+			<skill id="105" level="7" name="Замораживающий Удар(Freezing Strike)" cost="130000" min_level="45"/>
+			<skill id="70" level="24" name="Кража Здоровья(Drain HP)" cost="130000" min_level="45"/>
+			<skill id="101" level="11" name="Оглушающий Выстрел(Stun Shot)" cost="130000" min_level="45"/>
+			<skill id="1800" level="1" name="Пират(Pirate)" min_level="45"/>
+			<skill id="312" level="8" name="Боевая Стойка Коварства(Vicious Stance)" cost="130000" min_level="46"/>
+			<skill id="171" level="3" name="Боевой Дух(Esprit)" cost="130000" min_level="46"/>
+			<skill id="233" level="19" name="Владение Легкой Броней(Light Armor Mastery)" cost="130000" min_level="46"/>
+			<skill id="208" level="24" name="Владение Луком(Bow Mastery)" cost="130000" min_level="46"/>
+			<skill id="19" level="9" name="Двойной Выстрел(Double Shot)" cost="130000" min_level="46"/>
+			<skill id="223" level="21" name="Жало(Sting)" cost="130000" min_level="46"/>
+			<skill id="2" level="7" name="Замешательство(Confusion)" cost="130000" min_level="46"/>
+			<skill id="105" level="8" name="Замораживающий Удар(Freezing Strike)" cost="130000" min_level="46"/>
+			<skill id="70" level="25" name="Кража Здоровья(Drain HP)" cost="130000" min_level="46"/>
+			<skill id="101" level="12" name="Оглушающий Выстрел(Stun Shot)" cost="130000" min_level="46"/>
+			<skill id="122" level="3" name="Сглаз(Hex)" cost="130000" min_level="46"/>
+			<skill id="115" level="5" name="Сокрушение Мощи(Power Break)" cost="130000" min_level="46"/>
+			<skill id="233" level="20" name="Владение Легкой Броней(Light Armor Mastery)" cost="170000" min_level="47"/>
+			<skill id="208" level="25" name="Владение Луком(Bow Mastery)" cost="170000" min_level="47"/>
+			<skill id="19" level="10" name="Двойной Выстрел(Double Shot)" cost="170000" min_level="47"/>
+			<skill id="223" level="22" name="Жало(Sting)" cost="170000" min_level="47"/>
+			<skill id="70" level="26" name="Кража Здоровья(Drain HP)" cost="170000" min_level="47"/>
+			<skill id="101" level="13" name="Оглушающий Выстрел(Stun Shot)" cost="170000" min_level="47"/>
+			<skill id="233" level="21" name="Владение Легкой Броней(Light Armor Mastery)" cost="170000" min_level="48"/>
+			<skill id="208" level="26" name="Владение Луком(Bow Mastery)" cost="170000" min_level="48"/>
+			<skill id="19" level="11" name="Двойной Выстрел(Double Shot)" cost="170000" min_level="48"/>
+			<skill id="223" level="23" name="Жало(Sting)" cost="170000" min_level="48"/>
+			<skill id="105" level="9" name="Замораживающий Удар(Freezing Strike)" cost="170000" min_level="48"/>
+			<skill id="70" level="27" name="Кража Здоровья(Drain HP)" cost="170000" min_level="48"/>
+			<skill id="101" level="14" name="Оглушающий Выстрел(Stun Shot)" cost="170000" min_level="48"/>
+			<skill id="312" level="9" name="Боевая Стойка Коварства(Vicious Stance)" cost="170000" min_level="49"/>
+			<skill id="171" level="4" name="Боевой Дух(Esprit)" cost="170000" min_level="49"/>
+			<skill id="233" level="22" name="Владение Легкой Броней(Light Armor Mastery)" cost="170000" min_level="49"/>
+			<skill id="208" level="27" name="Владение Луком(Bow Mastery)" cost="170000" min_level="49"/>
+			<skill id="19" level="12" name="Двойной Выстрел(Double Shot)" cost="170000" min_level="49"/>
+			<skill id="223" level="24" name="Жало(Sting)" cost="170000" min_level="49"/>
+			<skill id="2" level="8" name="Замешательство(Confusion)" cost="170000" min_level="49"/>
+			<skill id="105" level="10" name="Замораживающий Удар(Freezing Strike)" cost="170000" min_level="49"/>
+			<skill id="70" level="28" name="Кража Здоровья(Drain HP)" cost="170000" min_level="49"/>
+			<skill id="101" level="15" name="Оглушающий Выстрел(Stun Shot)" cost="170000" min_level="49"/>
+			<skill id="129" level="2" name="Отравление(Poison)" cost="170000" min_level="49"/>
+			<skill id="122" level="4" name="Сглаз(Hex)" cost="170000" min_level="49"/>
+			<skill id="115" level="6" name="Сокрушение Мощи(Power Break)" cost="170000" min_level="49"/>
+			<skill id="233" level="23" name="Владение Легкой Броней(Light Armor Mastery)" cost="250000" min_level="50"/>
+			<skill id="208" level="28" name="Владение Луком(Bow Mastery)" cost="250000" min_level="50"/>
+			<skill id="19" level="13" name="Двойной Выстрел(Double Shot)" cost="250000" min_level="50"/>
+			<skill id="223" level="25" name="Жало(Sting)" cost="250000" min_level="50"/>
+			<skill id="70" level="29" name="Кража Здоровья(Drain HP)" cost="250000" min_level="50"/>
+			<skill id="101" level="16" name="Оглушающий Выстрел(Stun Shot)" cost="250000" min_level="50"/>
+			<skill id="233" level="24" name="Владение Легкой Броней(Light Armor Mastery)" cost="250000" min_level="51"/>
+			<skill id="208" level="29" name="Владение Луком(Bow Mastery)" cost="250000" min_level="51"/>
+			<skill id="19" level="14" name="Двойной Выстрел(Double Shot)" cost="250000" min_level="51"/>
+			<skill id="223" level="26" name="Жало(Sting)" cost="250000" min_level="51"/>
+			<skill id="105" level="11" name="Замораживающий Удар(Freezing Strike)" cost="250000" min_level="51"/>
+			<skill id="70" level="30" name="Кража Здоровья(Drain HP)" cost="250000" min_level="51"/>
+			<skill id="101" level="17" name="Оглушающий Выстрел(Stun Shot)" cost="250000" min_level="51"/>
+			<skill id="312" level="10" name="Боевая Стойка Коварства(Vicious Stance)" cost="250000" min_level="52"/>
+			<skill id="171" level="5" name="Боевой Дух(Esprit)" cost="250000" min_level="52"/>
+			<skill id="1405" level="1" name="Божественное Вдохновение(Divine Inspiration)" item_id="8618" cost="250000" min_level="52"/>
+			<skill id="233" level="25" name="Владение Легкой Броней(Light Armor Mastery)" cost="250000" min_level="52"/>
+			<skill id="208" level="30" name="Владение Луком(Bow Mastery)" cost="250000" min_level="52"/>
+			<skill id="19" level="15" name="Двойной Выстрел(Double Shot)" cost="250000" min_level="52"/>
+			<skill id="223" level="27" name="Жало(Sting)" cost="250000" min_level="52"/>
+			<skill id="2" level="9" name="Замешательство(Confusion)" cost="250000" min_level="52"/>
+			<skill id="105" level="12" name="Замораживающий Удар(Freezing Strike)" cost="250000" min_level="52"/>
+			<skill id="70" level="31" name="Кража Здоровья(Drain HP)" cost="250000" min_level="52"/>
+			<skill id="101" level="18" name="Оглушающий Выстрел(Stun Shot)" cost="250000" min_level="52"/>
+			<skill id="122" level="5" name="Сглаз(Hex)" cost="250000" min_level="52"/>
+			<skill id="115" level="7" name="Сокрушение Мощи(Power Break)" cost="250000" min_level="52"/>
+			<skill id="233" level="26" name="Владение Легкой Броней(Light Armor Mastery)" cost="350000" min_level="53"/>
+			<skill id="208" level="31" name="Владение Луком(Bow Mastery)" cost="350000" min_level="53"/>
+			<skill id="19" level="16" name="Двойной Выстрел(Double Shot)" cost="350000" min_level="53"/>
+			<skill id="223" level="28" name="Жало(Sting)" cost="350000" min_level="53"/>
+			<skill id="70" level="32" name="Кража Здоровья(Drain HP)" cost="350000" min_level="53"/>
+			<skill id="101" level="19" name="Оглушающий Выстрел(Stun Shot)" cost="350000" min_level="53"/>
+			<skill id="233" level="27" name="Владение Легкой Броней(Light Armor Mastery)" cost="350000" min_level="54"/>
+			<skill id="208" level="32" name="Владение Луком(Bow Mastery)" cost="350000" min_level="54"/>
+			<skill id="19" level="17" name="Двойной Выстрел(Double Shot)" cost="350000" min_level="54"/>
+			<skill id="223" level="29" name="Жало(Sting)" cost="350000" min_level="54"/>
+			<skill id="105" level="13" name="Замораживающий Удар(Freezing Strike)" cost="350000" min_level="54"/>
+			<skill id="70" level="33" name="Кража Здоровья(Drain HP)" cost="350000" min_level="54"/>
+			<skill id="101" level="20" name="Оглушающий Выстрел(Stun Shot)" cost="350000" min_level="54"/>
+			<skill id="225" level="3" name="Акробатическое Движение(Acrobatic Move)" cost="350000" min_level="55"/>
+			<skill id="312" level="11" name="Боевая Стойка Коварства(Vicious Stance)" cost="350000" min_level="55"/>
+			<skill id="99" level="2" name="Быстрый Выстрел(Rapid Shot)" cost="350000" min_level="55"/>
+			<skill id="233" level="28" name="Владение Легкой Броней(Light Armor Mastery)" cost="350000" min_level="55"/>
+			<skill id="208" level="33" name="Владение Луком(Bow Mastery)" cost="350000" min_level="55"/>
+			<skill id="19" level="18" name="Двойной Выстрел(Double Shot)" cost="350000" min_level="55"/>
+			<skill id="223" level="30" name="Жало(Sting)" cost="350000" min_level="55"/>
+			<skill id="2" level="10" name="Замешательство(Confusion)" cost="350000" min_level="55"/>
+			<skill id="105" level="14" name="Замораживающий Удар(Freezing Strike)" cost="350000" min_level="55"/>
+			<skill id="70" level="34" name="Кража Здоровья(Drain HP)" cost="350000" min_level="55"/>
+			<skill id="101" level="21" name="Оглушающий Выстрел(Stun Shot)" cost="350000" min_level="55"/>
+			<skill id="122" level="6" name="Сглаз(Hex)" cost="350000" min_level="55"/>
+			<skill id="115" level="8" name="Сокрушение Мощи(Power Break)" cost="350000" min_level="55"/>
+			<skill id="233" level="29" name="Владение Легкой Броней(Light Armor Mastery)" cost="480000" min_level="56"/>
+			<skill id="208" level="34" name="Владение Луком(Bow Mastery)" cost="480000" min_level="56"/>
+			<skill id="19" level="19" name="Двойной Выстрел(Double Shot)" cost="480000" min_level="56"/>
+			<skill id="223" level="31" name="Жало(Sting)" cost="480000" min_level="56"/>
+			<skill id="70" level="35" name="Кража Здоровья(Drain HP)" cost="480000" min_level="56"/>
+			<skill id="101" level="22" name="Оглушающий Выстрел(Stun Shot)" cost="480000" min_level="56"/>
+			<skill id="233" level="30" name="Владение Легкой Броней(Light Armor Mastery)" cost="480000" min_level="57"/>
+			<skill id="208" level="35" name="Владение Луком(Bow Mastery)" cost="480000" min_level="57"/>
+			<skill id="19" level="20" name="Двойной Выстрел(Double Shot)" cost="480000" min_level="57"/>
+			<skill id="223" level="32" name="Жало(Sting)" cost="480000" min_level="57"/>
+			<skill id="105" level="15" name="Замораживающий Удар(Freezing Strike)" cost="480000" min_level="57"/>
+			<skill id="70" level="36" name="Кража Здоровья(Drain HP)" cost="480000" min_level="57"/>
+			<skill id="101" level="23" name="Оглушающий Выстрел(Stun Shot)" cost="480000" min_level="57"/>
+			<skill id="312" level="12" name="Боевая Стойка Коварства(Vicious Stance)" cost="480000" min_level="58"/>
+			<skill id="233" level="31" name="Владение Легкой Броней(Light Armor Mastery)" cost="480000" min_level="58"/>
+			<skill id="208" level="36" name="Владение Луком(Bow Mastery)" cost="480000" min_level="58"/>
+			<skill id="19" level="21" name="Двойной Выстрел(Double Shot)" cost="480000" min_level="58"/>
+			<skill id="223" level="33" name="Жало(Sting)" cost="480000" min_level="58"/>
+			<skill id="2" level="11" name="Замешательство(Confusion)" cost="480000" min_level="58"/>
+			<skill id="105" level="16" name="Замораживающий Удар(Freezing Strike)" cost="480000" min_level="58"/>
+			<skill id="70" level="37" name="Кража Здоровья(Drain HP)" cost="480000" min_level="58"/>
+			<skill id="101" level="24" name="Оглушающий Выстрел(Stun Shot)" cost="480000" min_level="58"/>
+			<skill id="129" level="3" name="Отравление(Poison)" cost="480000" min_level="58"/>
+			<skill id="122" level="7" name="Сглаз(Hex)" cost="480000" min_level="58"/>
+			<skill id="115" level="9" name="Сокрушение Мощи(Power Break)" cost="480000" min_level="58"/>
+			<skill id="233" level="32" name="Владение Легкой Броней(Light Armor Mastery)" cost="710000" min_level="59"/>
+			<skill id="208" level="37" name="Владение Луком(Bow Mastery)" cost="710000" min_level="59"/>
+			<skill id="19" level="22" name="Двойной Выстрел(Double Shot)" cost="710000" min_level="59"/>
+			<skill id="223" level="34" name="Жало(Sting)" cost="710000" min_level="59"/>
+			<skill id="70" level="38" name="Кража Здоровья(Drain HP)" cost="710000" min_level="59"/>
+			<skill id="314" level="1" name="Обратный Отсчет(Fatal Counter)" cost="710000" min_level="59"/>
+			<skill id="101" level="25" name="Оглушающий Выстрел(Stun Shot)" cost="710000" min_level="59"/>
+			<skill id="312" level="13" name="Боевая Стойка Коварства(Vicious Stance)" cost="710000" min_level="60"/>
+			<skill id="233" level="33" name="Владение Легкой Броней(Light Armor Mastery)" cost="710000" min_level="60"/>
+			<skill id="208" level="38" name="Владение Луком(Bow Mastery)" cost="710000" min_level="60"/>
+			<skill id="19" level="23" name="Двойной Выстрел(Double Shot)" cost="710000" min_level="60"/>
+			<skill id="223" level="35" name="Жало(Sting)" cost="710000" min_level="60"/>
+			<skill id="2" level="12" name="Замешательство(Confusion)" cost="710000" min_level="60"/>
+			<skill id="105" level="17" name="Замораживающий Удар(Freezing Strike)" cost="710000" min_level="60"/>
+			<skill id="70" level="39" name="Кража Здоровья(Drain HP)" cost="710000" min_level="60"/>
+			<skill id="414" level="1" name="Мертвый Глаз(Dead Eye)" cost="710000" min_level="60"/>
+			<skill id="314" level="2" name="Обратный Отсчет(Fatal Counter)" cost="710000" min_level="60"/>
+			<skill id="101" level="26" name="Оглушающий Выстрел(Stun Shot)" cost="710000" min_level="60"/>
+			<skill id="122" level="8" name="Сглаз(Hex)" cost="710000" min_level="60"/>
+			<skill id="115" level="10" name="Сокрушение Мощи(Power Break)" cost="710000" min_level="60"/>
+			<skill id="1801" level="1" name="Темный Ассасин(Dark Assassin)" min_level="60"/>
+			<skill id="1405" level="2" name="Божественное Вдохновение(Divine Inspiration)" item_id="8619" cost="710000" min_level="61"/>
+			<skill id="233" level="34" name="Владение Легкой Броней(Light Armor Mastery)" cost="710000" min_level="61"/>
+			<skill id="208" level="39" name="Владение Луком(Bow Mastery)" cost="710000" min_level="61"/>
+			<skill id="19" level="24" name="Двойной Выстрел(Double Shot)" cost="710000" min_level="61"/>
+			<skill id="223" level="36" name="Жало(Sting)" cost="710000" min_level="61"/>
+			<skill id="70" level="40" name="Кража Здоровья(Drain HP)" cost="710000" min_level="61"/>
+			<skill id="314" level="3" name="Обратный Отсчет(Fatal Counter)" cost="710000" min_level="61"/>
+			<skill id="101" level="27" name="Оглушающий Выстрел(Stun Shot)" cost="710000" min_level="61"/>
+			<skill id="312" level="14" name="Боевая Стойка Коварства(Vicious Stance)" cost="870000" min_level="62"/>
+			<skill id="171" level="6" name="Боевой Дух(Esprit)" cost="870000" min_level="62"/>
+			<skill id="233" level="35" name="Владение Легкой Броней(Light Armor Mastery)" cost="870000" min_level="62"/>
+			<skill id="208" level="40" name="Владение Луком(Bow Mastery)" cost="870000" min_level="62"/>
+			<skill id="19" level="25" name="Двойной Выстрел(Double Shot)" cost="870000" min_level="62"/>
+			<skill id="223" level="37" name="Жало(Sting)" cost="870000" min_level="62"/>
+			<skill id="2" level="13" name="Замешательство(Confusion)" cost="870000" min_level="62"/>
+			<skill id="105" level="18" name="Замораживающий Удар(Freezing Strike)" cost="870000" min_level="62"/>
+			<skill id="70" level="41" name="Кража Здоровья(Drain HP)" cost="870000" min_level="62"/>
+			<skill id="414" level="2" name="Мертвый Глаз(Dead Eye)" cost="870000" min_level="62"/>
+			<skill id="314" level="4" name="Обратный Отсчет(Fatal Counter)" cost="870000" min_level="62"/>
+			<skill id="101" level="28" name="Оглушающий Выстрел(Stun Shot)" cost="870000" min_level="62"/>
+			<skill id="122" level="9" name="Сглаз(Hex)" cost="870000" min_level="62"/>
+			<skill id="115" level="11" name="Сокрушение Мощи(Power Break)" cost="870000" min_level="62"/>
+			<skill id="233" level="36" name="Владение Легкой Броней(Light Armor Mastery)" cost="870000" min_level="63"/>
+			<skill id="208" level="41" name="Владение Луком(Bow Mastery)" cost="870000" min_level="63"/>
+			<skill id="19" level="26" name="Двойной Выстрел(Double Shot)" cost="870000" min_level="63"/>
+			<skill id="223" level="38" name="Жало(Sting)" cost="870000" min_level="63"/>
+			<skill id="70" level="42" name="Кража Здоровья(Drain HP)" cost="870000" min_level="63"/>
+			<skill id="314" level="5" name="Обратный Отсчет(Fatal Counter)" cost="870000" min_level="63"/>
+			<skill id="101" level="29" name="Оглушающий Выстрел(Stun Shot)" cost="870000" min_level="63"/>
+			<skill id="312" level="15" name="Боевая Стойка Коварства(Vicious Stance)" cost="1100000" min_level="64"/>
+			<skill id="233" level="37" name="Владение Легкой Броней(Light Armor Mastery)" cost="1100000" min_level="64"/>
+			<skill id="208" level="42" name="Владение Луком(Bow Mastery)" cost="1100000" min_level="64"/>
+			<skill id="19" level="27" name="Двойной Выстрел(Double Shot)" cost="1100000" min_level="64"/>
+			<skill id="223" level="39" name="Жало(Sting)" cost="1100000" min_level="64"/>
+			<skill id="2" level="14" name="Замешательство(Confusion)" cost="1100000" min_level="64"/>
+			<skill id="105" level="19" name="Замораживающий Удар(Freezing Strike)" cost="1100000" min_level="64"/>
+			<skill id="70" level="43" name="Кража Здоровья(Drain HP)" cost="1100000" min_level="64"/>
+			<skill id="414" level="3" name="Мертвый Глаз(Dead Eye)" cost="1100000" min_level="64"/>
+			<skill id="314" level="6" name="Обратный Отсчет(Fatal Counter)" cost="1100000" min_level="64"/>
+			<skill id="101" level="30" name="Оглушающий Выстрел(Stun Shot)" cost="1100000" min_level="64"/>
+			<skill id="122" level="10" name="Сглаз(Hex)" cost="1100000" min_level="64"/>
+			<skill id="115" level="12" name="Сокрушение Мощи(Power Break)" cost="1100000" min_level="64"/>
+			<skill id="233" level="38" name="Владение Легкой Броней(Light Armor Mastery)" cost="1100000" min_level="65"/>
+			<skill id="208" level="43" name="Владение Луком(Bow Mastery)" cost="1100000" min_level="65"/>
+			<skill id="19" level="28" name="Двойной Выстрел(Double Shot)" cost="1100000" min_level="65"/>
+			<skill id="223" level="40" name="Жало(Sting)" cost="1100000" min_level="65"/>
+			<skill id="70" level="44" name="Кража Здоровья(Drain HP)" cost="1100000" min_level="65"/>
+			<skill id="314" level="7" name="Обратный Отсчет(Fatal Counter)" cost="1100000" min_level="65"/>
+			<skill id="101" level="31" name="Оглушающий Выстрел(Stun Shot)" cost="1100000" min_level="65"/>
+			<skill id="312" level="16" name="Боевая Стойка Коварства(Vicious Stance)" cost="1200000" min_level="66"/>
+			<skill id="233" level="39" name="Владение Легкой Броней(Light Armor Mastery)" cost="1200000" min_level="66"/>
+			<skill id="208" level="44" name="Владение Луком(Bow Mastery)" cost="1200000" min_level="66"/>
+			<skill id="19" level="29" name="Двойной Выстрел(Double Shot)" cost="1200000" min_level="66"/>
+			<skill id="223" level="41" name="Жало(Sting)" cost="1200000" min_level="66"/>
+			<skill id="2" level="15" name="Замешательство(Confusion)" cost="1200000" min_level="66"/>
+			<skill id="105" level="20" name="Замораживающий Удар(Freezing Strike)" cost="1200000" min_level="66"/>
+			<skill id="70" level="45" name="Кража Здоровья(Drain HP)" cost="1200000" min_level="66"/>
+			<skill id="414" level="4" name="Мертвый Глаз(Dead Eye)" cost="1200000" min_level="66"/>
+			<skill id="314" level="8" name="Обратный Отсчет(Fatal Counter)" cost="1200000" min_level="66"/>
+			<skill id="101" level="32" name="Оглушающий Выстрел(Stun Shot)" cost="1200000" min_level="66"/>
+			<skill id="129" level="4" name="Отравление(Poison)" cost="1200000" min_level="66"/>
+			<skill id="122" level="11" name="Сглаз(Hex)" cost="1200000" min_level="66"/>
+			<skill id="115" level="13" name="Сокрушение Мощи(Power Break)" cost="1200000" min_level="66"/>
+			<skill id="233" level="40" name="Владение Легкой Броней(Light Armor Mastery)" cost="1200000" min_level="67"/>
+			<skill id="208" level="45" name="Владение Луком(Bow Mastery)" cost="1200000" min_level="67"/>
+			<skill id="19" level="30" name="Двойной Выстрел(Double Shot)" cost="1200000" min_level="67"/>
+			<skill id="223" level="42" name="Жало(Sting)" cost="1200000" min_level="67"/>
+			<skill id="70" level="46" name="Кража Здоровья(Drain HP)" cost="1200000" min_level="67"/>
+			<skill id="314" level="9" name="Обратный Отсчет(Fatal Counter)" cost="1200000" min_level="67"/>
+			<skill id="101" level="33" name="Оглушающий Выстрел(Stun Shot)" cost="1200000" min_level="67"/>
+			<skill id="312" level="17" name="Боевая Стойка Коварства(Vicious Stance)" cost="1700000" min_level="68"/>
+			<skill id="171" level="7" name="Боевой Дух(Esprit)" cost="1700000" min_level="68"/>
+			<skill id="233" level="41" name="Владение Легкой Броней(Light Armor Mastery)" cost="1700000" min_level="68"/>
+			<skill id="208" level="46" name="Владение Луком(Bow Mastery)" cost="1700000" min_level="68"/>
+			<skill id="19" level="31" name="Двойной Выстрел(Double Shot)" cost="1700000" min_level="68"/>
+			<skill id="223" level="43" name="Жало(Sting)" cost="1700000" min_level="68"/>
+			<skill id="2" level="16" name="Замешательство(Confusion)" cost="1700000" min_level="68"/>
+			<skill id="105" level="21" name="Замораживающий Удар(Freezing Strike)" cost="1700000" min_level="68"/>
+			<skill id="70" level="47" name="Кража Здоровья(Drain HP)" cost="1700000" min_level="68"/>
+			<skill id="414" level="5" name="Мертвый Глаз(Dead Eye)" cost="1700000" min_level="68"/>
+			<skill id="314" level="10" name="Обратный Отсчет(Fatal Counter)" cost="1700000" min_level="68"/>
+			<skill id="101" level="34" name="Оглушающий Выстрел(Stun Shot)" cost="1700000" min_level="68"/>
+			<skill id="122" level="12" name="Сглаз(Hex)" cost="1700000" min_level="68"/>
+			<skill id="115" level="14" name="Сокрушение Мощи(Power Break)" cost="1700000" min_level="68"/>
+			<skill id="233" level="42" name="Владение Легкой Броней(Light Armor Mastery)" cost="1700000" min_level="69"/>
+			<skill id="208" level="47" name="Владение Луком(Bow Mastery)" cost="1700000" min_level="69"/>
+			<skill id="19" level="32" name="Двойной Выстрел(Double Shot)" cost="1700000" min_level="69"/>
+			<skill id="223" level="44" name="Жало(Sting)" cost="1700000" min_level="69"/>
+			<skill id="70" level="48" name="Кража Здоровья(Drain HP)" cost="1700000" min_level="69"/>
+			<skill id="314" level="11" name="Обратный Отсчет(Fatal Counter)" cost="1700000" min_level="69"/>
+			<skill id="101" level="35" name="Оглушающий Выстрел(Stun Shot)" cost="1700000" min_level="69"/>
+			<skill id="312" level="18" name="Боевая Стойка Коварства(Vicious Stance)" cost="2100000" min_level="70"/>
+			<skill id="233" level="43" name="Владение Легкой Броней(Light Armor Mastery)" cost="2100000" min_level="70"/>
+			<skill id="208" level="48" name="Владение Луком(Bow Mastery)" cost="2100000" min_level="70"/>
+			<skill id="19" level="33" name="Двойной Выстрел(Double Shot)" cost="2100000" min_level="70"/>
+			<skill id="223" level="45" name="Жало(Sting)" cost="2100000" min_level="70"/>
+			<skill id="2" level="17" name="Замешательство(Confusion)" cost="2100000" min_level="70"/>
+			<skill id="105" level="22" name="Замораживающий Удар(Freezing Strike)" cost="2100000" min_level="70"/>
+			<skill id="70" level="49" name="Кража Здоровья(Drain HP)" cost="2100000" min_level="70"/>
+			<skill id="414" level="6" name="Мертвый Глаз(Dead Eye)" cost="2100000" min_level="70"/>
+			<skill id="314" level="12" name="Обратный Отсчет(Fatal Counter)" cost="2100000" min_level="70"/>
+			<skill id="101" level="36" name="Оглушающий Выстрел(Stun Shot)" cost="2100000" min_level="70"/>
+			<skill id="1802" level="1" name="Светлый Ассасин(White Assassin)" min_level="70"/>
+			<skill id="122" level="13" name="Сглаз(Hex)" cost="2100000" min_level="70"/>
+			<skill id="115" level="15" name="Сокрушение Мощи(Power Break)" cost="2100000" min_level="70"/>
+			<skill id="233" level="44" name="Владение Легкой Броней(Light Armor Mastery)" cost="2100000" min_level="71"/>
+			<skill id="208" level="49" name="Владение Луком(Bow Mastery)" cost="2100000" min_level="71"/>
+			<skill id="19" level="34" name="Двойной Выстрел(Double Shot)" cost="2100000" min_level="71"/>
+			<skill id="223" level="46" name="Жало(Sting)" cost="2100000" min_level="71"/>
+			<skill id="70" level="50" name="Кража Здоровья(Drain HP)" cost="2100000" min_level="71"/>
+			<skill id="314" level="13" name="Обратный Отсчет(Fatal Counter)" cost="2100000" min_level="71"/>
+			<skill id="101" level="37" name="Оглушающий Выстрел(Stun Shot)" cost="2100000" min_level="71"/>
+			<skill id="312" level="19" name="Боевая Стойка Коварства(Vicious Stance)" cost="2400000" min_level="72"/>
+			<skill id="233" level="45" name="Владение Легкой Броней(Light Armor Mastery)" cost="2400000" min_level="72"/>
+			<skill id="208" level="50" name="Владение Луком(Bow Mastery)" cost="2400000" min_level="72"/>
+			<skill id="19" level="35" name="Двойной Выстрел(Double Shot)" cost="2400000" min_level="72"/>
+			<skill id="223" level="47" name="Жало(Sting)" cost="2400000" min_level="72"/>
+			<skill id="2" level="18" name="Замешательство(Confusion)" cost="2400000" min_level="72"/>
+			<skill id="105" level="23" name="Замораживающий Удар(Freezing Strike)" cost="2400000" min_level="72"/>
+			<skill id="70" level="51" name="Кража Здоровья(Drain HP)" cost="2400000" min_level="72"/>
+			<skill id="414" level="7" name="Мертвый Глаз(Dead Eye)" cost="2400000" min_level="72"/>
+			<skill id="314" level="14" name="Обратный Отсчет(Fatal Counter)" cost="2400000" min_level="72"/>
+			<skill id="101" level="38" name="Оглушающий Выстрел(Stun Shot)" cost="2400000" min_level="72"/>
+			<skill id="122" level="14" name="Сглаз(Hex)" cost="2400000" min_level="72"/>
+			<skill id="115" level="16" name="Сокрушение Мощи(Power Break)" cost="2400000" min_level="72"/>
+			<skill id="233" level="46" name="Владение Легкой Броней(Light Armor Mastery)" cost="2400000" min_level="73"/>
+			<skill id="208" level="51" name="Владение Луком(Bow Mastery)" cost="2400000" min_level="73"/>
+			<skill id="19" level="36" name="Двойной Выстрел(Double Shot)" cost="2400000" min_level="73"/>
+			<skill id="223" level="48" name="Жало(Sting)" cost="2400000" min_level="73"/>
+			<skill id="70" level="52" name="Кража Здоровья(Drain HP)" cost="2400000" min_level="73"/>
+			<skill id="314" level="15" name="Обратный Отсчет(Fatal Counter)" cost="2400000" min_level="73"/>
+			<skill id="101" level="39" name="Оглушающий Выстрел(Stun Shot)" cost="2400000" min_level="73"/>
+			<skill id="312" level="20" name="Боевая Стойка Коварства(Vicious Stance)" cost="2400000" min_level="74"/>
+			<skill id="171" level="8" name="Боевой Дух(Esprit)" cost="2400000" min_level="74"/>
+			<skill id="233" level="47" name="Владение Легкой Броней(Light Armor Mastery)" cost="2400000" min_level="74"/>
+			<skill id="208" level="52" name="Владение Луком(Bow Mastery)" cost="2400000" min_level="74"/>
+			<skill id="19" level="37" name="Двойной Выстрел(Double Shot)" cost="2400000" min_level="74"/>
+			<skill id="223" level="49" name="Жало(Sting)" cost="2400000" min_level="74"/>
+			<skill id="2" level="19" name="Замешательство(Confusion)" cost="2400000" min_level="74"/>
+			<skill id="105" level="24" name="Замораживающий Удар(Freezing Strike)" cost="2400000" min_level="74"/>
+			<skill id="70" level="53" name="Кража Здоровья(Drain HP)" cost="2400000" min_level="74"/>
+			<skill id="414" level="8" name="Мертвый Глаз(Dead Eye)" cost="2400000" min_level="74"/>
+			<skill id="314" level="16" name="Обратный Отсчет(Fatal Counter)" cost="2400000" min_level="74"/>
+			<skill id="101" level="40" name="Оглушающий Выстрел(Stun Shot)" cost="2400000" min_level="74"/>
+			<skill id="129" level="5" name="Отравление(Poison)" cost="2400000" min_level="74"/>
+			<skill id="122" level="15" name="Сглаз(Hex)" cost="2400000" min_level="74"/>
+			<skill id="115" level="17" name="Сокрушение Мощи(Power Break)" cost="2400000" min_level="74"/>
+		</class>
+	</normal_skill_tree>
+</list>

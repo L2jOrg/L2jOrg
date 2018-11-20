@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="22150001" name="L2fortress_02_s.fort02_wall_door" hp="474750" pdef="644" mdef="518">
+		<pos x="72491" y="-96493" z="-1478"/>
+		<shape ax="72376" ay="-96499" bx="72567" by="-96583" cx="72608" cy="-96485" dx="72415" dy="-96407" minz="-1478" maxz="-1328"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+		<set name="close_time" value="60"/>
+	</door>
+	<door id="22150002" name="L2fortress_02_s.Fort02_indoor" hp="474750" pdef="644" mdef="518">
+		<pos x="71866" y="-95291" z="-1456"/>
+		<shape ax="71940" ay="-95330" bx="71861" by="-95298" cx="71866" cy="-95283" dx="71946" dy="-95317" minz="-1456" maxz="-1306"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="60"/>
+	</door>
+	<door id="22150003" name="L2fortress_02_s.Fort02_indoor" hp="474750" pdef="644" mdef="518">
+		<pos x="72010" y="-95351" z="-1456"/>
+		<shape ax="71929" ay="-95327" bx="72011" by="-95360" cx="72017" cy="-95345" dx="71934" dy="-95313" minz="-1456" maxz="-1306"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="60"/>
+	</door>
+	<door id="22150004" name="L2fortress_02_s.Fort02_indoor" hp="474750" pdef="644" mdef="518">
+		<pos x="70848" y="-94272" z="-1428"/>
+		<shape ax="70854" ay="-94279" bx="70888" by="-94199" cx="70870" cy="-94190" dx="70838" dy="-94272" minz="-1428" maxz="-1278"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+		<set name="close_time" value="60"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="121"/>
+		</ai_params>
+	</door>
+	<door id="22150005" name="L2fortress_02_s.Fort02_indoor" hp="474750" pdef="644" mdef="518">
+		<pos x="70907" y="-94128" z="-1428"/>
+		<shape ax="70866" ay="-94200" bx="70900" by="-94120" cx="70917" cy="-94128" dx="70885" dy="-94208" minz="-1428" maxz="-1278"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+		<set name="close_time" value="60"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="121"/>
+		</ai_params>
+	</door>
+	<door id="22150006" name="L2fortress_02_s.Fort02_indoor" hp="474750" pdef="644" mdef="518">
+		<pos x="71864" y="-95290" z="-1456"/>
+		<shape ax="72399" ay="-94221" bx="72320" by="-94187" cx="72325" cy="-94174" dx="72405" dy="-94206" minz="-1456" maxz="-1306"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="60"/>
+	</door>
+	<door id="22150007" name="L2fortress_02_s.Fort02_indoor" hp="474750" pdef="644" mdef="518">
+		<pos x="72010" y="-95351" z="-1456"/>
+		<shape ax="72388" ay="-94216" bx="72469" by="-94249" cx="72475" cy="-94236" dx="72393" dy="-94202" minz="-1456" maxz="-1306"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="60"/>
+	</door>
+	<door id="22150008" name="L2fortress_02_s.fort02_wall_door" hp="474750" pdef="644" mdef="518">
+		<pos x="71795" y="-92905" z="-1477"/>
+		<shape ax="71680" ay="-92911" bx="71871" by="-92995" cx="71912" cy="-92897" dx="71719" dy="-92819" minz="-1477" maxz="-1327"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+		<set name="close_time" value="60"/>
+	</door>
+</list>

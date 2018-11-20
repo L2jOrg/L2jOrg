@@ -1,0 +1,1210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn group="fortress_of_resistance_no_siege" name="partisan_agit_2121_03" count="1" respawn="60">
+		<point x="50343" y="111282" z="-1970" h="0"/>
+		<npc id="35382"/><!--Бракел-->
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44505" y="108867" z="-2020" h="0"/>
+		<npc id="35369"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44545" y="108867" z="-2020" h="0"/>
+		<npc id="35369"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44565" y="108867" z="-2020" h="0"/>
+		<npc id="35370"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44553" y="108895" z="-2020" h="0"/>
+		<npc id="35370"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44553" y="108839" z="-2020" h="0"/>
+		<npc id="35370"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44535" y="108895" z="-2020" h="0"/>
+		<npc id="35370"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44525" y="108827" z="-2020" h="0"/>
+		<npc id="35370"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44497" y="108895" z="-2020" h="0"/>
+		<npc id="35370"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44497" y="108839" z="-2020" h="0"/>
+		<npc id="35370"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44485" y="108867" z="-2020" h="0"/>
+		<npc id="35370"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44535" y="108884" z="-2020" h="0"/>
+		<npc id="35371"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44535" y="108850" z="-2020" h="0"/>
+		<npc id="35371"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44515" y="108884" z="-2020" h="0"/>
+		<npc id="35371"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44515" y="108850" z="-2020" h="0"/>
+		<npc id="35371"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="45238" y="109597" z="-2032" h="0"/>
+		<npc id="35372"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="45392" y="109451" z="-2032" h="0"/>
+		<npc id="35372"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="44202" y="109164" z="-2032" h="0"/>
+		<npc id="35372"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="44507" y="108554" z="-2032" h="0"/>
+		<npc id="35372"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="44777" y="108707" z="-2032" h="0"/>
+		<npc id="35372"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="44791" y="108364" z="-2032" h="0"/>
+		<npc id="35372"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="44242" y="108358" z="-2032" h="0"/>
+		<npc id="35372"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="44149" y="108849" z="-2032" h="0"/>
+		<npc id="35372"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="44455" y="109146" z="-2032" h="0"/>
+		<npc id="35372"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="45049" y="109413" z="-2032" h="0"/>
+		<npc id="35372"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="45159" y="109306" z="-2032" h="0"/>
+		<npc id="35372"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="44965" y="108959" z="-2032" h="0"/>
+		<npc id="35372"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="44836" y="109090" z="-2032" h="0"/>
+		<npc id="35372"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="44689" y="109229" z="-2032" h="0"/>
+		<npc id="35372"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="45144" y="108669" z="-2032" h="0"/>
+		<npc id="35372"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44788" y="109492" z="-1705" h="0"/>
+		<npc id="35373"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="45168" y="109020" z="-1705" h="0"/>
+		<npc id="35373"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44812" y="109492" z="-1705" h="0"/>
+		<npc id="35374"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_no_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="45236" y="108980" z="-1705" h="0"/>
+		<npc id="35374"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_nurka_no_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44525" y="108867" z="-2020" h="0"/>
+		<npc id="35368"/>  <!--Nurka-->
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44505" y="108867" z="-2020" h="0"/>
+		<npc id="35376"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44545" y="108867" z="-2020" h="0"/>
+		<npc id="35376"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44565" y="108867" z="-2020" h="0"/>
+		<npc id="35377"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44553" y="108895" z="-2020" h="0"/>
+		<npc id="35377"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44553" y="108839" z="-2020" h="0"/>
+		<npc id="35377"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44535" y="108895" z="-2020" h="0"/>
+		<npc id="35377"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44525" y="108827" z="-2020" h="0"/>
+		<npc id="35377"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44497" y="108895" z="-2020" h="0"/>
+		<npc id="35377"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44497" y="108839" z="-2020" h="0"/>
+		<npc id="35377"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44485" y="108867" z="-2020" h="0"/>
+		<npc id="35377"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44535" y="108884" z="-2020" h="0"/>
+		<npc id="35378"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44535" y="108850" z="-2020" h="0"/>
+		<npc id="35378"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44515" y="108884" z="-2020" h="0"/>
+		<npc id="35378"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44515" y="108850" z="-2020" h="0"/>
+		<npc id="35378"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="45238" y="109597" z="-2032" h="0"/>
+		<npc id="35379"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="45392" y="109451" z="-2032" h="0"/>
+		<npc id="35379"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="44202" y="109164" z="-2032" h="0"/>
+		<npc id="35379"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="44507" y="108554" z="-2032" h="0"/>
+		<npc id="35379"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="44777" y="108707" z="-2032" h="0"/>
+		<npc id="35379"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="44791" y="108364" z="-2032" h="0"/>
+		<npc id="35379"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="44242" y="108358" z="-2032" h="0"/>
+		<npc id="35379"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="44149" y="108849" z="-2032" h="0"/>
+		<npc id="35379"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="44455" y="109146" z="-2032" h="0"/>
+		<npc id="35379"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="45049" y="109413" z="-2032" h="0"/>
+		<npc id="35379"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="45159" y="109306" z="-2032" h="0"/>
+		<npc id="35379"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="44965" y="108959" z="-2032" h="0"/>
+		<npc id="35379"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="44836" y="109090" z="-2032" h="0"/>
+		<npc id="35379"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="44689" y="109229" z="-2032" h="0"/>
+		<npc id="35379"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="150" respawn_random="0" period_of_day="none">
+		<point x="45144" y="108669" z="-2032" h="0"/>
+		<npc id="35379"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44788" y="109492" z="-1705" h="0"/>
+		<npc id="35380"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="45168" y="109020" z="-1705" h="0"/>
+		<npc id="35380"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44812" y="109492" z="-1705" h="0"/>
+		<npc id="35381"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_guards_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="45236" y="108980" z="-1705" h="0"/>
+		<npc id="35381"/>
+	</spawn>
+	<spawn group="fortress_of_resistance_siege_nurka_owner" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="44525" y="108867" z="-2020" h="0"/>
+		<npc id="35375"/>  <!--Nurka-->
+	</spawn>
+	<spawn name="partisan_agit_2121_03" count="1" respawn="60" group="fortress_of_resistance_21">
+		<point x="43129" y="108841" z="-1980" h="0"/>
+		<npc id="35383"/><!--Тамутак-->
+	</spawn>
+	<spawn name="giran01_npc2121_01" count="1" respawn="60">
+		<point x="63413" y="126061" z="-1736" h="0"/>
+		<npc id="30752"/><!--Шамхай-->
+	</spawn>
+	<spawn name="dion03_2121_p301s" count="1" respawn="80">
+		<territory>
+			<add x="51151" y="102858" zmin="-1241" zmax="-641"/>
+			<add x="52004" y="103559" zmin="-1241" zmax="-641"/>
+			<add x="51969" y="104652" zmin="-1241" zmax="-641"/>
+			<add x="50704" y="104726" zmin="-1241" zmax="-641"/>
+			<add x="50034" y="103675" zmin="-1241" zmax="-641"/>
+		</territory>
+		<npc id="20755"/><!--Командир Гноллов Латников-->
+	</spawn>
+	<spawn name="dion03_2121_p302s" count="1" respawn="80">
+		<territory>
+			<add x="52187" y="105370" zmin="-1859" zmax="-1359"/>
+			<add x="53448" y="105683" zmin="-1859" zmax="-1359"/>
+			<add x="53878" y="106868" zmin="-1859" zmax="-1359"/>
+			<add x="52894" y="107234" zmin="-1859" zmax="-1359"/>
+			<add x="51321" y="105870" zmin="-1859" zmax="-1359"/>
+		</territory>
+		<npc id="20755"/><!--Командир Гноллов Латников-->
+	</spawn>
+	<spawn name="dion03_2121_p30" count="2" respawn="80">
+		<territory>
+			<add x="56114" y="106426" zmin="-1859" zmax="-659"/>
+			<add x="53325" y="107409" zmin="-1859" zmax="-659"/>
+			<add x="48375" y="104009" zmin="-1859" zmax="-659"/>
+			<add x="51094" y="102233" zmin="-1859" zmax="-659"/>
+		</territory>
+		<npc id="20755"/><!--Командир Гноллов Латников-->
+	</spawn>
+	<territory name="dion03_2121_p24">
+		<add x="43921" y="110652" zmin="-1755" zmax="-355"/>
+		<add x="42462" y="113068" zmin="-1755" zmax="-355"/>
+		<add x="37997" y="112188" zmin="-1755" zmax="-355"/>
+		<add x="37893" y="110743" zmin="-1755" zmax="-355"/>
+		<add x="38743" y="109392" zmin="-1755" zmax="-355"/>
+	</territory>
+	<spawn name="dion03_2121_p24" count="1" respawn="80">
+		<territory name="dion03_2121_p24"/>
+		<npc id="20755"/><!--Командир Гноллов Латников-->
+	</spawn>
+	<spawn name="dion03_2121_p24" count="2" respawn="80">
+		<territory name="dion03_2121_p24"/>
+		<npc id="20755"/><!--Командир Гноллов Латников-->
+	</spawn>
+	<territory name="dion03_2121_p25">
+		<add x="43613" y="107320" zmin="-1738" zmax="-38"/>
+		<add x="41378" y="110023" zmin="-1738" zmax="-38"/>
+		<add x="38832" y="109229" zmin="-1738" zmax="-38"/>
+		<add x="39849" y="107291" zmin="-1738" zmax="-38"/>
+		<add x="41538" y="106149" zmin="-1738" zmax="-38"/>
+	</territory>
+	<spawn name="dion03_2121_p25" count="1" respawn="80">
+		<territory name="dion03_2121_p25"/>
+		<npc id="20755"/><!--Командир Гноллов Латников-->
+	</spawn>
+	<spawn name="dion03_2121_p25" count="2" respawn="80">
+		<territory name="dion03_2121_p25"/>
+		<npc id="20755"/><!--Командир Гноллов Латников-->
+	</spawn>
+	<territory name="dion03_2121_p27">
+		<add x="47586" y="104562" zmin="-1738" zmax="-538"/>
+		<add x="47399" y="107731" zmin="-1738" zmax="-538"/>
+		<add x="45764" y="107906" zmin="-1738" zmax="-538"/>
+		<add x="43653" y="106117" zmin="-1738" zmax="-538"/>
+		<add x="44530" y="104342" zmin="-1738" zmax="-538"/>
+	</territory>
+	<spawn name="dion03_2121_p27" count="2" respawn="80">
+		<territory name="dion03_2121_p27"/>
+		<npc id="20755"/><!--Командир Гноллов Латников-->
+	</spawn>
+	<spawn name="dion03_2121_p27" count="2" respawn="80">
+		<territory name="dion03_2121_p27"/>
+		<npc id="20755"/><!--Командир Гноллов Латников-->
+	</spawn>
+	<territory name="dion03_2121_p28">
+		<add x="51050" y="106484" zmin="-1794" zmax="-794"/>
+		<add x="51061" y="109961" zmin="-1794" zmax="-794"/>
+		<add x="49047" y="109820" zmin="-1794" zmax="-794"/>
+		<add x="47913" y="107682" zmin="-1794" zmax="-794"/>
+		<add x="48076" y="104961" zmin="-1794" zmax="-794"/>
+	</territory>
+	<spawn name="dion03_2121_p28" count="2" respawn="80">
+		<territory name="dion03_2121_p28"/>
+		<npc id="20755"/><!--Командир Гноллов Латников-->
+	</spawn>
+	<spawn name="dion03_2121_p28" count="2" respawn="80">
+		<territory name="dion03_2121_p28"/>
+		<npc id="20755"/><!--Командир Гноллов Латников-->
+	</spawn>
+	<spawn name="dion03_2121_p29" count="1" respawn="80">
+		<territory>
+			<add x="46995" y="108393" zmin="-2157" zmax="-1857"/>
+			<add x="47919" y="108664" zmin="-2157" zmax="-1857"/>
+			<add x="48152" y="109535" zmin="-2157" zmax="-1857"/>
+			<add x="47725" y="110291" zmin="-2157" zmax="-1857"/>
+			<add x="46391" y="109380" zmin="-2157" zmax="-1857"/>
+		</territory>
+		<npc id="20755"/><!--Командир Гноллов Латников-->
+	</spawn>
+	<spawn name="dion03_2121_p21" count="1" respawn="80">
+		<territory>
+			<add x="45654" y="114804" zmin="-2050" zmax="-1250"/>
+			<add x="44627" y="115727" zmin="-2050" zmax="-1250"/>
+			<add x="41514" y="114707" zmin="-2050" zmax="-1250"/>
+			<add x="41039" y="113463" zmin="-2050" zmax="-1250"/>
+			<add x="45605" y="113969" zmin="-2050" zmax="-1250"/>
+		</territory>
+		<npc id="20755"/><!--Командир Гноллов Латников-->
+	</spawn>
+	<territory name="dion03_2121_07">
+		<add x="38544" y="122605" zmin="-2579" zmax="-1579"/>
+		<add x="41831" y="125587" zmin="-2579" zmax="-1579"/>
+		<add x="42145" y="127669" zmin="-2579" zmax="-1579"/>
+		<add x="38435" y="127184" zmin="-2579" zmax="-1579"/>
+		<add x="35719" y="123954" zmin="-2579" zmax="-1579"/>
+	</territory>
+	<spawn name="dion03_2121_07" count="15" respawn="60">
+		<territory name="dion03_2121_07"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_07" count="5" respawn="60">
+		<territory name="dion03_2121_07"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<spawn name="dion03_2121_07" count="10" respawn="60">
+		<territory name="dion03_2121_07"/>
+		<npc id="20207"/><!--Партизан Гноллов-->
+	</spawn>
+	<territory name="dion03_2121_08">
+		<add x="36493" y="118257" zmin="-2257" zmax="-1057"/>
+		<add x="39933" y="120206" zmin="-2257" zmax="-1057"/>
+		<add x="38547" y="122435" zmin="-2257" zmax="-1057"/>
+		<add x="37323" y="123025" zmin="-2257" zmax="-1057"/>
+		<add x="35111" y="119227" zmin="-2257" zmax="-1057"/>
+	</territory>
+	<spawn name="dion03_2121_08" count="7" respawn="60">
+		<territory name="dion03_2121_08"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_08" count="3" respawn="60">
+		<territory name="dion03_2121_08"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<spawn name="dion03_2121_08" count="4" respawn="60">
+		<territory name="dion03_2121_08"/>
+		<npc id="20207"/><!--Партизан Гноллов-->
+	</spawn>
+	<territory name="dion03_2121_09">
+		<add x="36091" y="113112" zmin="-2044" zmax="-844"/>
+		<add x="38310" y="114391" zmin="-2044" zmax="-844"/>
+		<add x="37578" y="117007" zmin="-2044" zmax="-844"/>
+		<add x="35433" y="118627" zmin="-2044" zmax="-844"/>
+		<add x="34794" y="114994" zmin="-2044" zmax="-844"/>
+	</territory>
+	<spawn name="dion03_2121_09" count="4" respawn="60">
+		<territory name="dion03_2121_09"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<spawn name="dion03_2121_09" count="8" respawn="60">
+		<territory name="dion03_2121_09"/>
+		<npc id="20207"/><!--Партизан Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_09" count="4" respawn="60">
+		<territory name="dion03_2121_09"/>
+		<npc id="20208"/><!--Бандит Гноллов-->
+	</spawn>
+	<territory name="dion03_2121_02">
+		<add x="52016" y="127249" zmin="-3768" zmax="-3568"/>
+		<add x="51524" y="127878" zmin="-3768" zmax="-3568"/>
+		<add x="50762" y="127899" zmin="-3768" zmax="-3568"/>
+		<add x="50317" y="127602" zmin="-3768" zmax="-3568"/>
+		<add x="51002" y="127146" zmin="-3768" zmax="-3568"/>
+	</territory>
+	<spawn name="dion03_2121_02" count="4" respawn="60">
+		<territory name="dion03_2121_02"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_02" count="1" respawn="60">
+		<territory name="dion03_2121_02"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<territory name="dion03_2121_03">
+		<add x="50378" y="129034" zmin="-3768" zmax="-2768"/>
+		<add x="54160" y="126197" zmin="-3768" zmax="-2768"/>
+		<add x="54357" y="128180" zmin="-3768" zmax="-2768"/>
+		<add x="50440" y="129494" zmin="-3768" zmax="-2768"/>
+	</territory>
+	<spawn name="dion03_2121_03" count="4" respawn="60">
+		<territory name="dion03_2121_03"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_03" count="2" respawn="60">
+		<territory name="dion03_2121_03"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<territory name="dion03_2121_04">
+		<add x="55877" y="123841" zmin="-3726" zmax="-2826"/>
+		<add x="55545" y="124840" zmin="-3726" zmax="-2826"/>
+		<add x="52952" y="125856" zmin="-3726" zmax="-2826"/>
+		<add x="55180" y="123194" zmin="-3726" zmax="-2826"/>
+	</territory>
+	<spawn name="dion03_2121_04" count="4" respawn="60">
+		<territory name="dion03_2121_04"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_04" count="1" respawn="60">
+		<territory name="dion03_2121_04"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<territory name="dion03_2121_05">
+		<add x="50270" y="118823" zmin="-3624" zmax="-2324"/>
+		<add x="54388" y="121233" zmin="-3624" zmax="-2324"/>
+		<add x="53606" y="123429" zmin="-3624" zmax="-2324"/>
+		<add x="51396" y="124170" zmin="-3624" zmax="-2324"/>
+		<add x="49641" y="121266" zmin="-3624" zmax="-2324"/>
+	</territory>
+	<spawn name="dion03_2121_05" count="18" respawn="60">
+		<territory name="dion03_2121_05"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_05" count="5" respawn="60">
+		<territory name="dion03_2121_05"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<spawn name="dion03_2121_05" count="8" respawn="60">
+		<territory name="dion03_2121_05"/>
+		<npc id="20207"/><!--Партизан Гноллов-->
+	</spawn>
+	<territory name="dion03_2121_06">
+		<add x="52120" y="124066" zmin="-3821" zmax="-2921"/>
+		<add x="51573" y="126308" zmin="-3821" zmax="-2921"/>
+		<add x="47433" y="125979" zmin="-3821" zmax="-2921"/>
+		<add x="48894" y="124782" zmin="-3821" zmax="-2921"/>
+	</territory>
+	<spawn name="dion03_2121_06" count="9" respawn="60">
+		<territory name="dion03_2121_06"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_06" count="3" respawn="60">
+		<territory name="dion03_2121_06"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<territory name="dion03_2121_18">
+		<add x="41982" y="118724" zmin="-2257" zmax="-1957"/>
+		<add x="41871" y="119345" zmin="-2257" zmax="-1957"/>
+		<add x="40694" y="119696" zmin="-2257" zmax="-1957"/>
+		<add x="40919" y="118877" zmin="-2257" zmax="-1957"/>
+		<add x="41335" y="118429" zmin="-2257" zmax="-1957"/>
+	</territory>
+	<spawn name="dion03_2121_18" count="1" respawn="60">
+		<territory name="dion03_2121_18"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<spawn name="dion03_2121_18" count="3" respawn="60">
+		<territory name="dion03_2121_18"/>
+		<npc id="20207"/><!--Партизан Гноллов-->
+	</spawn>
+	<territory name="dion03_2121_19">
+		<add x="40158" y="114878" zmin="-2251" zmax="-1451"/>
+		<add x="42564" y="116319" zmin="-2251" zmax="-1451"/>
+		<add x="41530" y="117890" zmin="-2251" zmax="-1451"/>
+		<add x="39272" y="117895" zmin="-2251" zmax="-1451"/>
+		<add x="39043" y="116519" zmin="-2251" zmax="-1451"/>
+	</territory>
+	<spawn name="dion03_2121_19" count="6" respawn="60">
+		<territory name="dion03_2121_19"/>
+		<npc id="20207"/><!--Партизан Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_19" count="6" respawn="60">
+		<territory name="dion03_2121_19"/>
+		<npc id="20208"/><!--Бандит Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_19" count="3" respawn="60">
+		<territory name="dion03_2121_19"/>
+		<npc id="20209"/><!--Снайпер Гноллов-->
+	</spawn>
+	<territory name="dion03_2121_10">
+		<add x="34733" y="113708" zmin="-2061" zmax="-1261"/>
+		<add x="35221" y="109796" zmin="-2061" zmax="-1261"/>
+		<add x="37088" y="109964" zmin="-2061" zmax="-1261"/>
+		<add x="36267" y="112411" zmin="-2061" zmax="-1261"/>
+	</territory>
+	<spawn name="dion03_2121_10" count="5" respawn="60">
+		<territory name="dion03_2121_10"/>
+		<npc id="20207"/><!--Партизан Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_10" count="5" respawn="60">
+		<territory name="dion03_2121_10"/>
+		<npc id="20208"/><!--Бандит Гноллов-->
+	</spawn>
+	<territory name="dion03_2121_11">
+		<add x="37116" y="106244" zmin="-1668" zmax="-868"/>
+		<add x="39617" y="106485" zmin="-1668" zmax="-868"/>
+		<add x="37194" y="109912" zmin="-1668" zmax="-868"/>
+		<add x="36745" y="108076" zmin="-1668" zmax="-868"/>
+	</territory>
+	<spawn name="dion03_2121_11" count="5" respawn="60">
+		<territory name="dion03_2121_11"/>
+		<npc id="20207"/><!--Партизан Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_11" count="5" respawn="60">
+		<territory name="dion03_2121_11"/>
+		<npc id="20208"/><!--Бандит Гноллов-->
+	</spawn>
+	<territory name="dion03_2121_12">
+		<add x="40412" y="104293" zmin="-2088" zmax="-1288"/>
+		<add x="41342" y="104023" zmin="-2088" zmax="-1288"/>
+		<add x="41385" y="105311" zmin="-2088" zmax="-1288"/>
+		<add x="39030" y="105478" zmin="-2088" zmax="-1288"/>
+	</territory>
+	<spawn name="dion03_2121_12" count="4" respawn="60">
+		<territory name="dion03_2121_12"/>
+		<npc id="20208"/><!--Бандит Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_12" count="2" respawn="60">
+		<territory name="dion03_2121_12"/>
+		<npc id="20209"/><!--Снайпер Гноллов-->
+	</spawn>
+	<territory name="dion03_2121_14">
+		<add x="43014" y="102582" zmin="-1596" zmax="-1096"/>
+		<add x="44471" y="102087" zmin="-1596" zmax="-1096"/>
+		<add x="44875" y="102751" zmin="-1596" zmax="-1096"/>
+		<add x="43017" y="103897" zmin="-1596" zmax="-1096"/>
+		<add x="42469" y="103384" zmin="-1596" zmax="-1096"/>
+	</territory>
+	<spawn name="dion03_2121_14" count="4" respawn="60">
+		<territory name="dion03_2121_14"/>
+		<npc id="20210"/><!--Гнолл Адъютант-->
+	</spawn>
+	<spawn name="dion03_2121_14" count="3" respawn="60">
+		<territory name="dion03_2121_14"/>
+		<npc id="20211"/><!--Гнолл Главарь-->
+	</spawn>
+	<territory name="dion03_2121_15">
+		<add x="41431" y="119745" zmin="-3284" zmax="-1384"/>
+		<add x="42260" y="119560" zmin="-3284" zmax="-1384"/>
+		<add x="44476" y="124060" zmin="-3284" zmax="-1384"/>
+		<add x="43980" y="125025" zmin="-3284" zmax="-1384"/>
+		<add x="40913" y="122702" zmin="-3284" zmax="-1384"/>
+	</territory>
+	<spawn name="dion03_2121_15" count="3" respawn="60">
+		<territory name="dion03_2121_15"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<spawn name="dion03_2121_15" count="6" respawn="60">
+		<territory name="dion03_2121_15"/>
+		<npc id="20207"/><!--Партизан Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_15" count="5" respawn="60">
+		<territory name="dion03_2121_15"/>
+		<npc id="20208"/><!--Бандит Гноллов-->
+	</spawn>
+	<territory name="dion03_2121_17">
+		<add x="42690" y="116410" zmin="-2443" zmax="-1443"/>
+		<add x="44885" y="117384" zmin="-2443" zmax="-1443"/>
+		<add x="45941" y="119298" zmin="-2443" zmax="-1443"/>
+		<add x="43155" y="120023" zmin="-2443" zmax="-1443"/>
+		<add x="41802" y="117708" zmin="-2443" zmax="-1443"/>
+	</territory>
+	<spawn name="dion03_2121_17" count="8" respawn="60">
+		<territory name="dion03_2121_17"/>
+		<npc id="20207"/><!--Партизан Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_17" count="8" respawn="60">
+		<territory name="dion03_2121_17"/>
+		<npc id="20208"/><!--Бандит Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_17" count="2" respawn="60">
+		<territory name="dion03_2121_17"/>
+		<npc id="20209"/><!--Снайпер Гноллов-->
+	</spawn>
+	<territory name="dion03_2121_29">
+		<add x="46995" y="108393" zmin="-2157" zmax="-1857"/>
+		<add x="47919" y="108664" zmin="-2157" zmax="-1857"/>
+		<add x="48152" y="109535" zmin="-2157" zmax="-1857"/>
+		<add x="47725" y="110291" zmin="-2157" zmax="-1857"/>
+		<add x="46391" y="109380" zmin="-2157" zmax="-1857"/>
+	</territory>
+	<spawn name="dion03_2121_29" count="2" respawn="60">
+		<territory name="dion03_2121_29"/>
+		<npc id="20210"/><!--Гнолл Адъютант-->
+	</spawn>
+	<spawn name="dion03_2121_29" count="1" respawn="60">
+		<territory name="dion03_2121_29"/>
+		<npc id="20211"/><!--Гнолл Главарь-->
+	</spawn>
+	<territory name="dion03_2121_20">
+		<add x="46263" y="115406" zmin="-2429" zmax="-1629"/>
+		<add x="46891" y="116091" zmin="-2429" zmax="-1629"/>
+		<add x="46790" y="116779" zmin="-2429" zmax="-1629"/>
+		<add x="45574" y="116748" zmin="-2429" zmax="-1629"/>
+		<add x="45064" y="116211" zmin="-2429" zmax="-1629"/>
+	</territory>
+	<spawn name="dion03_2121_20" count="4" respawn="60">
+		<territory name="dion03_2121_20"/>
+		<npc id="20208"/><!--Бандит Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_20" count="1" respawn="60">
+		<territory name="dion03_2121_20"/>
+		<npc id="20209"/><!--Снайпер Гноллов-->
+	</spawn>
+	<territory name="dion03_2121_21">
+		<add x="45654" y="114804" zmin="-2050" zmax="-1250"/>
+		<add x="44627" y="115727" zmin="-2050" zmax="-1250"/>
+		<add x="41514" y="114707" zmin="-2050" zmax="-1250"/>
+		<add x="41039" y="113463" zmin="-2050" zmax="-1250"/>
+		<add x="45605" y="113969" zmin="-2050" zmax="-1250"/>
+	</territory>
+	<spawn name="dion03_2121_21" count="2" respawn="60">
+		<territory name="dion03_2121_21"/>
+		<npc id="20209"/><!--Снайпер Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_21" count="5" respawn="60">
+		<territory name="dion03_2121_21"/>
+		<npc id="20210"/><!--Гнолл Адъютант-->
+	</spawn>
+	<spawn name="dion03_2121_21" count="3" respawn="60">
+		<territory name="dion03_2121_21"/>
+		<npc id="20211"/><!--Гнолл Главарь-->
+	</spawn>
+	<territory name="dion03_2121_22">
+		<add x="39458" y="113077" zmin="-2131" zmax="-1831"/>
+		<add x="40605" y="113485" zmin="-2131" zmax="-1831"/>
+		<add x="40610" y="114211" zmin="-2131" zmax="-1831"/>
+		<add x="39553" y="114355" zmin="-2131" zmax="-1831"/>
+		<add x="38907" y="113724" zmin="-2131" zmax="-1831"/>
+	</territory>
+	<spawn name="dion03_2121_22" count="5" respawn="60">
+		<territory name="dion03_2121_22"/>
+		<npc id="20208"/><!--Бандит Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_22" count="2" respawn="60">
+		<territory name="dion03_2121_22"/>
+		<npc id="20209"/><!--Снайпер Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_22" count="1" respawn="60">
+		<territory name="dion03_2121_22"/>
+		<npc id="20210"/><!--Гнолл Адъютант-->
+	</spawn>
+	<territory name="dion03_2121_23">
+		<add x="44295" y="111711" zmin="-1957" zmax="-1657"/>
+		<add x="45208" y="112687" zmin="-1957" zmax="-1657"/>
+		<add x="44768" y="113252" zmin="-1957" zmax="-1657"/>
+		<add x="43808" y="113160" zmin="-1957" zmax="-1657"/>
+		<add x="43569" y="112209" zmin="-1957" zmax="-1657"/>
+	</territory>
+	<spawn name="dion03_2121_23" count="3" respawn="60">
+		<territory name="dion03_2121_23"/>
+		<npc id="20210"/><!--Гнолл Адъютант-->
+	</spawn>
+	<spawn name="dion03_2121_23" count="2" respawn="60">
+		<territory name="dion03_2121_23"/>
+		<npc id="20211"/><!--Гнолл Главарь-->
+	</spawn>
+	<territory name="dion03_2121_24">
+		<add x="43921" y="110652" zmin="-1755" zmax="-355"/>
+		<add x="42462" y="113068" zmin="-1755" zmax="-355"/>
+		<add x="37997" y="112188" zmin="-1755" zmax="-355"/>
+		<add x="37893" y="110743" zmin="-1755" zmax="-355"/>
+		<add x="38743" y="109392" zmin="-1755" zmax="-355"/>
+	</territory>
+	<spawn name="dion03_2121_24" count="5" respawn="60">
+		<territory name="dion03_2121_24"/>
+		<npc id="20209"/><!--Снайпер Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_24" count="7" respawn="60">
+		<territory name="dion03_2121_24"/>
+		<npc id="20210"/><!--Гнолл Адъютант-->
+	</spawn>
+	<spawn name="dion03_2121_24" count="6" respawn="60">
+		<territory name="dion03_2121_24"/>
+		<npc id="20211"/><!--Гнолл Главарь-->
+	</spawn>
+	<spawn name="dion03_2121_24" count="1" respawn="60">
+		<point x="40951" y="111575" z="-814" h="0"/>
+		<npc id="20549"/><!--Лорд Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_24" count="2" respawn="60">
+		<territory name="dion03_2121_24"/>
+		<npc id="20549"/><!--Лорд Гноллов-->
+	</spawn>
+	<territory name="dion03_2121_25">
+		<add x="43328" y="107161" zmin="-1738" zmax="-38"/>
+		<add x="41378" y="110023" zmin="-1738" zmax="-38"/>
+		<add x="38832" y="109229" zmin="-1738" zmax="-38"/>
+		<add x="39849" y="107291" zmin="-1738" zmax="-38"/>
+		<add x="41538" y="106149" zmin="-1738" zmax="-38"/>
+	</territory>
+	<spawn name="dion03_2121_25" count="3" respawn="60">
+		<territory name="dion03_2121_25"/>
+		<npc id="20209"/><!--Снайпер Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_25" count="5" respawn="60">
+		<territory name="dion03_2121_25"/>
+		<npc id="20210"/><!--Гнолл Адъютант-->
+	</spawn>
+	<spawn name="dion03_2121_25" count="5" respawn="60">
+		<territory name="dion03_2121_25"/>
+		<npc id="20211"/><!--Гнолл Главарь-->
+	</spawn>
+	<territory name="dion03_2121_26">
+		<add x="42412" y="105188" zmin="-1708" zmax="-1308"/>
+		<add x="43497" y="104877" zmin="-1708" zmax="-1308"/>
+		<add x="43421" y="105940" zmin="-1708" zmax="-1308"/>
+		<add x="42599" y="106330" zmin="-1708" zmax="-1308"/>
+		<add x="41837" y="105940" zmin="-1708" zmax="-1308"/>
+	</territory>
+	<spawn name="dion03_2121_26" count="1" respawn="60">
+		<territory name="dion03_2121_26"/>
+		<npc id="20209"/><!--Снайпер Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_26" count="2" respawn="60">
+		<territory name="dion03_2121_26"/>
+		<npc id="20210"/><!--Гнолл Адъютант-->
+	</spawn>
+	<spawn name="dion03_2121_26" count="1" respawn="60">
+		<territory name="dion03_2121_26"/>
+		<npc id="20211"/><!--Гнолл Главарь-->
+	</spawn>
+	<territory name="dion03_2121_27">
+		<add x="47586" y="104562" zmin="-1738" zmax="-538"/>
+		<add x="47399" y="107731" zmin="-1738" zmax="-538"/>
+		<add x="45764" y="107906" zmin="-1738" zmax="-538"/>
+		<add x="43653" y="106117" zmin="-1738" zmax="-538"/>
+		<add x="44530" y="104342" zmin="-1738" zmax="-538"/>
+	</territory>
+	<spawn name="dion03_2121_27" count="8" respawn="60">
+		<territory name="dion03_2121_27"/>
+		<npc id="20210"/><!--Гнолл Адъютант-->
+	</spawn>
+	<spawn name="dion03_2121_27" count="6" respawn="60">
+		<territory name="dion03_2121_27"/>
+		<npc id="20211"/><!--Гнолл Главарь-->
+	</spawn>
+	<territory name="dion03_2121_28">
+		<add x="51050" y="106484" zmin="-1794" zmax="-794"/>
+		<add x="51061" y="109961" zmin="-1794" zmax="-794"/>
+		<add x="49047" y="109820" zmin="-1794" zmax="-794"/>
+		<add x="47913" y="107682" zmin="-1794" zmax="-794"/>
+		<add x="48076" y="104961" zmin="-1794" zmax="-794"/>
+	</territory>
+	<spawn name="dion03_2121_28" count="9" respawn="60">
+		<territory name="dion03_2121_28"/>
+		<npc id="20210"/><!--Гнолл Адъютант-->
+	</spawn>
+	<spawn name="dion03_2121_28" count="7" respawn="60">
+		<territory name="dion03_2121_28"/>
+		<npc id="20211"/><!--Гнолл Главарь-->
+	</spawn>
+	<territory name="dion03_2121_30">
+		<add x="56114" y="106426" zmin="-1859" zmax="-659"/>
+		<add x="53325" y="107409" zmin="-1859" zmax="-659"/>
+		<add x="48375" y="104009" zmin="-1859" zmax="-659"/>
+		<add x="51094" y="102233" zmin="-1859" zmax="-659"/>
+	</territory>
+	<spawn name="dion03_2121_30" count="8" respawn="60">
+		<territory name="dion03_2121_30"/>
+		<npc id="20209"/><!--Снайпер Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_30" count="12" respawn="60">
+		<territory name="dion03_2121_30"/>
+		<npc id="20210"/><!--Гнолл Адъютант-->
+	</spawn>
+	<territory name="dion03_2121_31">
+		<add x="56250" y="106502" zmin="-1946" zmax="-746"/>
+		<add x="57639" y="110391" zmin="-1946" zmax="-746"/>
+		<add x="52749" y="110701" zmin="-1946" zmax="-746"/>
+		<add x="53283" y="107701" zmin="-1946" zmax="-746"/>
+	</territory>
+	<spawn name="dion03_2121_31" count="7" respawn="60">
+		<territory name="dion03_2121_31"/>
+		<npc id="20208"/><!--Бандит Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_31" count="3" respawn="60">
+		<territory name="dion03_2121_31"/>
+		<npc id="20209"/><!--Снайпер Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_31" count="10" respawn="60">
+		<territory name="dion03_2121_31"/>
+		<npc id="20210"/><!--Гнолл Адъютант-->
+	</spawn>
+	<territory name="dion03_2121_32">
+		<add x="57465" y="110499" zmin="-2149" zmax="-949"/>
+		<add x="57895" y="113597" zmin="-2149" zmax="-949"/>
+		<add x="54884" y="113891" zmin="-2149" zmax="-949"/>
+		<add x="52564" y="110907" zmin="-2149" zmax="-949"/>
+	</territory>
+	<spawn name="dion03_2121_32" count="5" respawn="60">
+		<territory name="dion03_2121_32"/>
+		<npc id="20207"/><!--Партизан Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_32" count="9" respawn="60">
+		<territory name="dion03_2121_32"/>
+		<npc id="20208"/><!--Бандит Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_32" count="4" respawn="60">
+		<territory name="dion03_2121_32"/>
+		<npc id="20209"/><!--Снайпер Гноллов-->
+	</spawn>
+	<territory name="dion03_2121_33">
+		<add x="56548" y="104902" zmin="-1552" zmax="-1302"/>
+		<add x="57407" y="105289" zmin="-1552" zmax="-1302"/>
+		<add x="57710" y="105962" zmin="-1552" zmax="-1302"/>
+		<add x="57399" y="106509" zmin="-1552" zmax="-1302"/>
+		<add x="56145" y="105167" zmin="-1552" zmax="-1302"/>
+	</territory>
+	<spawn name="dion03_2121_33" count="3" respawn="60">
+		<territory name="dion03_2121_33"/>
+		<npc id="20210"/><!--Гнолл Адъютант-->
+	</spawn>
+	<spawn name="dion03_2121_33" count="2" respawn="60">
+		<territory name="dion03_2121_33"/>
+		<npc id="20211"/><!--Гнолл Главарь-->
+	</spawn>
+	<territory name="dion03_2121_34">
+		<add x="59696" y="110517" zmin="-1912" zmax="-1312"/>
+		<add x="59853" y="111128" zmin="-1912" zmax="-1312"/>
+		<add x="59100" y="112346" zmin="-1912" zmax="-1312"/>
+		<add x="58345" y="111335" zmin="-1912" zmax="-1312"/>
+		<add x="58740" y="110038" zmin="-1912" zmax="-1312"/>
+	</territory>
+	<spawn name="dion03_2121_34" count="3" respawn="60">
+		<territory name="dion03_2121_34"/>
+		<npc id="20208"/><!--Бандит Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_34" count="2" respawn="60">
+		<territory name="dion03_2121_34"/>
+		<npc id="20210"/><!--Гнолл Адъютант-->
+	</spawn>
+	<spawn name="dion03_2121_34" count="1" respawn="60">
+		<territory name="dion03_2121_34"/>
+		<npc id="20211"/><!--Гнолл Главарь-->
+	</spawn>
+	<territory name="dion03_2121_35">
+		<add x="48882" y="111848" zmin="-2112" zmax="-1812"/>
+		<add x="50326" y="111644" zmin="-2112" zmax="-1812"/>
+		<add x="50280" y="112248" zmin="-2112" zmax="-1812"/>
+		<add x="49709" y="112699" zmin="-2112" zmax="-1812"/>
+		<add x="48640" y="112433" zmin="-2112" zmax="-1812"/>
+	</territory>
+	<spawn name="dion03_2121_35" count="1" respawn="60">
+		<territory name="dion03_2121_35"/>
+		<npc id="20209"/><!--Снайпер Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_35" count="3" respawn="60">
+		<territory name="dion03_2121_35"/>
+		<npc id="20210"/><!--Гнолл Адъютант-->
+	</spawn>
+	<spawn name="dion03_2121_35" count="1" respawn="60">
+		<territory name="dion03_2121_35"/>
+		<npc id="20211"/><!--Гнолл Главарь-->
+	</spawn>
+	<territory name="dion03_2121_36">
+		<add x="51971" y="114764" zmin="-1898" zmax="-898"/>
+		<add x="50772" y="115816" zmin="-1898" zmax="-898"/>
+		<add x="48281" y="113674" zmin="-1898" zmax="-898"/>
+		<add x="51300" y="112677" zmin="-1898" zmax="-898"/>
+	</territory>
+	<spawn name="dion03_2121_36" count="6" respawn="60">
+		<territory name="dion03_2121_36"/>
+		<npc id="20207"/><!--Партизан Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_36" count="9" respawn="60">
+		<territory name="dion03_2121_36"/>
+		<npc id="20208"/><!--Бандит Гноллов-->
+	</spawn>
+	<territory name="dion03_2121_37">
+		<add x="52264" y="112861" zmin="-2115" zmax="-1815"/>
+		<add x="53648" y="114229" zmin="-2115" zmax="-1815"/>
+		<add x="53107" y="114456" zmin="-2115" zmax="-1815"/>
+		<add x="52362" y="114377" zmin="-2115" zmax="-1815"/>
+		<add x="51986" y="113819" zmin="-2115" zmax="-1815"/>
+	</territory>
+	<spawn name="dion03_2121_37" count="4" respawn="60">
+		<territory name="dion03_2121_37"/>
+		<npc id="20208"/><!--Бандит Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_37" count="1" respawn="60">
+		<territory name="dion03_2121_37"/>
+		<npc id="20210"/><!--Гнолл Адъютант-->
+	</spawn>
+	<territory name="dion03_2121_38">
+		<add x="54980" y="114996" zmin="-2239" zmax="-1239"/>
+		<add x="54424" y="117789" zmin="-2239" zmax="-1239"/>
+		<add x="51585" y="115902" zmin="-2239" zmax="-1239"/>
+		<add x="52275" y="115105" zmin="-2239" zmax="-1239"/>
+	</territory>
+	<spawn name="dion03_2121_38" count="6" respawn="60">
+		<territory name="dion03_2121_38"/>
+		<npc id="20207"/><!--Партизан Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_38" count="7" respawn="60">
+		<territory name="dion03_2121_38"/>
+		<npc id="20208"/><!--Бандит Гноллов-->
+	</spawn>
+	<territory name="dion03_2121_39">
+		<add x="56737" y="115971" zmin="-2783" zmax="-1383"/>
+		<add x="57639" y="117683" zmin="-2783" zmax="-1383"/>
+		<add x="54589" y="117675" zmin="-2783" zmax="-1383"/>
+		<add x="54991" y="115586" zmin="-2783" zmax="-1383"/>
+	</territory>
+	<spawn name="dion03_2121_39" count="3" respawn="60">
+		<territory name="dion03_2121_39"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<spawn name="dion03_2121_39" count="7" respawn="60">
+		<territory name="dion03_2121_39"/>
+		<npc id="20207"/><!--Партизан Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_39" count="3" respawn="60">
+		<territory name="dion03_2121_39"/>
+		<npc id="20208"/><!--Бандит Гноллов-->
+	</spawn>
+	<territory name="dion03_2121_40">
+		<add x="55777" y="117833" zmin="-3375" zmax="-1475"/>
+		<add x="57245" y="120487" zmin="-3375" zmax="-1475"/>
+		<add x="55298" y="121050" zmin="-3375" zmax="-1475"/>
+		<add x="54857" y="117825" zmin="-3375" zmax="-1475"/>
+	</territory>
+	<spawn name="dion03_2121_40" count="3" respawn="60">
+		<territory name="dion03_2121_40"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<spawn name="dion03_2121_40" count="7" respawn="60">
+		<territory name="dion03_2121_40"/>
+		<npc id="20207"/><!--Партизан Гноллов-->
+	</spawn>
+	<spawn name="giran06_npc2221_05" count="1" respawn="60">
+		<point x="62008" y="107589" z="-1893" h="0"/>
+		<npc id="30751"/><!--Сюзет-->
+	</spawn>
+	<territory name="dion03_2121_32s">
+		<add x="57359" y="111384" zmin="-1918" zmax="-1218"/>
+		<add x="57744" y="113119" zmin="-1918" zmax="-1218"/>
+		<add x="57215" y="113643" zmin="-1918" zmax="-1218"/>
+		<add x="55789" y="113022" zmin="-1918" zmax="-1218"/>
+		<add x="56257" y="111883" zmin="-1918" zmax="-1218"/>
+	</territory>
+	<spawn name="dion03_2121_32s" count="2" respawn="60">
+		<territory name="dion03_2121_32s"/>
+		<npc id="20207"/><!--Партизан Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_32s" count="2" respawn="60">
+		<territory name="dion03_2121_32s"/>
+		<npc id="20208"/><!--Бандит Гноллов-->
+	</spawn>
+	<territory name="dion03_2121_31s">
+		<add x="55055" y="108926" zmin="-1507" zmax="-757"/>
+		<add x="56245" y="109653" zmin="-1507" zmax="-757"/>
+		<add x="55291" y="111929" zmin="-1507" zmax="-757"/>
+		<add x="53352" y="111149" zmin="-1507" zmax="-757"/>
+		<add x="53555" y="109687" zmin="-1507" zmax="-757"/>
+	</territory>
+	<spawn name="dion03_2121_31s" count="2" respawn="60">
+		<territory name="dion03_2121_31s"/>
+		<npc id="20209"/><!--Снайпер Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_31s" count="6" respawn="60">
+		<territory name="dion03_2121_31s"/>
+		<npc id="20210"/><!--Гнолл Адъютант-->
+	</spawn>
+	<spawn name="dion03_mb2121_03" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="48485" y="127590" zmin="-3761" zmax="-3161"/>
+			<add x="49668" y="127446" zmin="-3761" zmax="-3161"/>
+			<add x="49883" y="128352" zmin="-3761" zmax="-3161"/>
+			<add x="48738" y="128608" zmin="-3761" zmax="-3161"/>
+		</territory>
+		<npc id="25272"/><!--Военачальник Партизан Талакин-->
+	</spawn>
+	<spawn name="dion03_mb2121_02" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="44694" y="120364" zmin="-2758" zmax="-2158"/>
+			<add x="46120" y="119953" zmin="-2758" zmax="-2158"/>
+			<add x="46184" y="121097" zmin="-2758" zmax="-2158"/>
+			<add x="45482" y="121425" zmin="-2758" zmax="-2158"/>
+		</territory>
+		<npc id="25391"/><!--Эмиссар Нурки-->
+	</spawn>
+	<spawn name="dion03_mb2121_01" count="1" respawn="129600" respawn_random="86400">
+		<point x="40129" y="102048" z="-1248" h="8192"/>
+		<npc id="25388"/><!--Красноглазый Главарь Тракиа-->
+	</spawn>
+	<spawn name="dion03_mb2121_05" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="42772" y="123908" zmin="-3312" zmax="-2512"/>
+			<add x="44524" y="123164" zmin="-3312" zmax="-2512"/>
+			<add x="44488" y="124732" zmin="-3312" zmax="-2512"/>
+			<add x="43364" y="124464" zmin="-3312" zmax="-2512"/>
+		</territory>
+		<npc id="25152"/><!--Повелитель Пламени Шадар-->
+	</spawn>
+	<spawn name="dion03_mb2121_04" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="53245" y="102524" zmin="-1129" zmax="-529"/>
+			<add x="53868" y="102087" zmin="-1129" zmax="-529"/>
+			<add x="54393" y="102832" zmin="-1129" zmax="-529"/>
+			<add x="53669" y="103198" zmin="-1129" zmax="-529"/>
+		</territory>
+		<npc id="25079"/><!--Бандит Кошачий Глаз-->
+	</spawn>
+	<spawn name="dion03_2121_p27s" count="1" respawn="80">
+		<territory>
+			<add x="45671" y="105287" zmin="-1207" zmax="-607"/>
+			<add x="47105" y="105600" zmin="-1207" zmax="-607"/>
+			<add x="47154" y="106830" zmin="-1207" zmax="-607"/>
+			<add x="46014" y="107213" zmin="-1207" zmax="-607"/>
+			<add x="45115" y="106206" zmin="-1207" zmax="-607"/>
+		</territory>
+		<npc id="20755"/><!--Командир Гноллов Латников-->
+	</spawn>
+	<spawn name="dion03_2121_p28s" count="1" respawn="80">
+		<territory>
+			<add x="49587" y="106250" zmin="-1503" zmax="-903"/>
+			<add x="50687" y="106790" zmin="-1503" zmax="-903"/>
+			<add x="50471" y="108723" zmin="-1503" zmax="-903"/>
+			<add x="49641" y="109162" zmin="-1503" zmax="-903"/>
+			<add x="49037" y="108025" zmin="-1503" zmax="-903"/>
+		</territory>
+		<npc id="20755"/><!--Командир Гноллов Латников-->
+	</spawn>
+	<spawn name="dion03_2121_p24s" count="1" respawn="80">
+		<territory>
+			<add x="40147" y="109887" zmin="-1650" zmax="-650"/>
+			<add x="40713" y="110858" zmin="-1650" zmax="-650"/>
+			<add x="40467" y="111955" zmin="-1650" zmax="-650"/>
+			<add x="38600" y="111318" zmin="-1650" zmax="-650"/>
+			<add x="38666" y="109945" zmin="-1650" zmax="-650"/>
+		</territory>
+		<npc id="20755"/><!--Командир Гноллов Латников-->
+	</spawn>
+	<spawn name="dion03_2121_p25s" count="1" respawn="80">
+		<territory>
+			<add x="41328" y="107611" zmin="-1131" zmax="-131"/>
+			<add x="42776" y="107512" zmin="-1131" zmax="-131"/>
+			<add x="43009" y="107851" zmin="-1131" zmax="-131"/>
+			<add x="41563" y="109605" zmin="-1131" zmax="-131"/>
+			<add x="40981" y="108682" zmin="-1131" zmax="-131"/>
+		</territory>
+		<npc id="20755"/><!--Командир Гноллов Латников-->
+	</spawn>
+	<territory name="dion03_2121_09s">
+		<add x="35089" y="115098" zmin="-1661" zmax="-961"/>
+		<add x="36498" y="113764" zmin="-1661" zmax="-961"/>
+		<add x="37763" y="115089" zmin="-1661" zmax="-961"/>
+		<add x="37163" y="116594" zmin="-1661" zmax="-961"/>
+	</territory>
+	<spawn name="dion03_2121_09s" count="1" respawn="60">
+		<territory name="dion03_2121_09s"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<spawn name="dion03_2121_09s" count="4" respawn="60">
+		<territory name="dion03_2121_09s"/>
+		<npc id="20207"/><!--Партизан Гноллов-->
+	</spawn>
+	<territory name="dion03_2121_05s">
+		<add x="51433" y="120726" zmin="-3001" zmax="-2301"/>
+		<add x="52003" y="121776" zmin="-3001" zmax="-2301"/>
+		<add x="50836" y="122470" zmin="-3001" zmax="-2301"/>
+		<add x="49771" y="121153" zmin="-3001" zmax="-2301"/>
+		<add x="50122" y="120280" zmin="-3001" zmax="-2301"/>
+	</territory>
+	<spawn name="dion03_2121_05s" count="3" respawn="60">
+		<territory name="dion03_2121_05s"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_05s" count="2" respawn="60">
+		<territory name="dion03_2121_05s"/>
+		<npc id="20207"/><!--Партизан Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_28s" count="1" respawn="60">
+		<point x="50016" y="108048" z="-1040" h="0"/>
+		<npc id="20549"/><!--Лорд Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_27s" count="1" respawn="60">
+		<point x="46288" y="106144" z="-832" h="0"/>
+		<npc id="20549"/><!--Лорд Гноллов-->
+	</spawn>
+	<spawn name="dion03_2121_27s" count="1" respawn="60">
+		<territory>
+			<add x="45671" y="105287" zmin="-1207" zmax="-607"/>
+			<add x="47105" y="105600" zmin="-1207" zmax="-607"/>
+			<add x="47154" y="106830" zmin="-1207" zmax="-607"/>
+			<add x="46014" y="107213" zmin="-1207" zmax="-607"/>
+			<add x="45115" y="106206" zmin="-1207" zmax="-607"/>
+		</territory>
+		<npc id="20549"/><!--Лорд Гноллов-->
+	</spawn>
+	<spawn name="dion03_npc2121_01" count="1" respawn="60" group="fortress_of_resistance_21">
+		<point x="43996" y="108998" z="-2035" h="61440"/>
+		<npc id="30596"/><!--Харкель-->
+	</spawn>
+	<spawn name="dion03_2121_25s" count="2" respawn="60">
+		<territory>
+			<add x="41328" y="107611" zmin="-1131" zmax="-131"/>
+			<add x="42325" y="107390" zmin="-1131" zmax="-131"/>
+			<add x="42915" y="107602" zmin="-1131" zmax="-131"/>
+			<add x="41563" y="109605" zmin="-1131" zmax="-131"/>
+			<add x="40981" y="108682" zmin="-1131" zmax="-131"/>
+		</territory>
+		<npc id="20210"/><!--Гнолл Адъютант-->
+	</spawn>
+	<spawn name="dion03_2121_25s" count="1" respawn="60">
+		<point x="41453" y="108173" z="-791" h="0"/>
+		<npc id="20549"/><!--Лорд Гноллов-->
+	</spawn>
+	<territory name="dion03_2121_24s">
+		<add x="40147" y="109887" zmin="-1650" zmax="-650"/>
+		<add x="40713" y="110858" zmin="-1650" zmax="-650"/>
+		<add x="40467" y="111955" zmin="-1650" zmax="-650"/>
+		<add x="38600" y="111318" zmin="-1650" zmax="-650"/>
+		<add x="38666" y="109945" zmin="-1650" zmax="-650"/>
+	</territory>
+	<spawn name="dion03_2121_24s" count="3" respawn="60">
+		<territory name="dion03_2121_24s"/>
+		<npc id="20210"/><!--Гнолл Адъютант-->
+	</spawn>
+	<spawn name="dion03_2121_24s" count="1" respawn="60">
+		<territory name="dion03_2121_24s"/>
+		<npc id="20211"/><!--Гнолл Главарь-->
+	</spawn>
+</list>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE farm SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<farm name="Bee Hive" min_level="23" max_level="29">
+	<zones>
+		<zone>
+			<polygon>
+				<coords loc="29448 177128 -4000 -2700"/>
+				<coords loc="30088 176824 -4000 -2700"/>
+				<coords loc="32648 177912 -4000 -2700"/>
+				<coords loc="35432 180152 -4000 -2700"/>
+				<coords loc="35432 180152 -4000 -2700"/>
+				<coords loc="37720 185128 -4000 -2700"/>
+				<coords loc="36584 187128 -4000 -2700"/>
+				<coords loc="36808 189096 -4000 -2700"/>
+				<coords loc="34488 190056 -4000 -2700"/>
+				<coords loc="32440 189304 -4000 -2700"/>
+				<coords loc="28904 187800 -4000 -2700"/>
+				<coords loc="27176 185704 -4000 -2700"/>
+				<coords loc="26947 183095 -4000 -2700"/>
+				<coords loc="27288 178632 -4000 -2700"/>
+				<coords loc="28584 177688 -4000 -2700"/>
+			</polygon>
+		</zone>
+		<spawn_points>
+			<coords loc="30152 180232 -3663"/>
+		</spawn_points>
+	</zones>
+	<on_obtain_max_level>
+		<action id="1"/>
+	</on_obtain_max_level>
+	<go_to_town min_farm_time="1800" max_farm_time="3600">
+		<action id="1"/>
+	</go_to_town>
+	<action id="1">
+		<wait min_delay="1000" max_delay="3000"/>
+		<use_item id="736"/>
+	</action>
+</farm>

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "zone.dtd">
+<list>
+	<zone name="[giran_harbor_offshore]" type="offshore" >
+		<set name="enabled" value="false"/>
+		<polygon>
+			<coords loc="49572 183368"/>
+			<coords loc="50701 185034"/>
+			<coords loc="53214 186206"/>
+			<coords loc="44192 194099"/>
+			<coords loc="41824 188576"/>
+		</polygon>
+		<restart_point>
+			<coords loc="49128 185000 -3480 -3380"/>
+			<coords loc="48568 185672 -3480 -3380"/>
+			<coords loc="48024 186072 -3480 -3380"/>
+			<coords loc="47560 186360 -3480 -3380"/>
+			<coords loc="46952 186680 -3480 -3380"/>
+			<coords loc="46360 186984 -3488 -3388"/>
+			<coords loc="47336 187720 -3552 -3452"/>
+			<coords loc="48328 187128 -3552 -3452"/>
+			<coords loc="49192 186424 -3552 -3452"/>
+			<coords loc="49912 185704 -3552 -3452"/>
+		</restart_point>
+		<PKrestart_point>
+			<coords loc="11892 181700 -3560 0"/>
+			<coords loc="14028 181695 -3560 0"/>
+			<coords loc="13111 181695 -3560 0"/>
+			<coords loc="12587 181702 -3560 0"/>
+			<coords loc="13588 181695 -3560 0"/>
+			<coords loc="14077 182490 -3560 0"/>
+			<coords loc="13631 182490 -3560 0"/>
+			<coords loc="13157 182490 -3560 0"/>
+			<coords loc="12675 182490 -3560 0"/>
+			<coords loc="11926 182503 -3560 0"/>
+			<coords loc="12288 182497 -3560 0"/>
+			<coords loc="12292 181707 -3560 0"/>
+			<coords loc="11825 181822 -3560 0"/>
+			<coords loc="11827 182334 -3560 0"/>
+			<coords loc="11814 181984 -3560 0"/>
+			<coords loc="11824 182172 -3560 0"/>
+		</PKrestart_point>
+	</zone>
+	<zone name="[parnassus_offshore]" type="offshore" >
+		<set name="enabled" value="false"/>
+		<polygon>
+			<coords loc="151016 173432 -952 -852"/>
+			<coords loc="151032 173000 -952 -852"/>
+			<coords loc="150888 172360 -952 -852"/>
+			<coords loc="150712 172136 -952 -852"/>
+			<coords loc="150168 171720 -952 -852"/>
+			<coords loc="149144 171688 -952 -852"/>
+			<coords loc="148472 171784 -952 -852"/>
+			<coords loc="147832 172328 -952 -852"/>
+			<coords loc="147784 174200 -952 -852"/>
+			<coords loc="148488 174840 -960 -860"/>
+			<coords loc="149384 174952 -952 -852"/>
+			<coords loc="150296 174744 -952 -852"/>
+			<coords loc="150888 174328 -952 -852"/>
+		</polygon>
+		<restart_point>
+			<coords loc="149384 171896 -952 -852"/>
+			<coords loc="148792 172088 -960 -860"/>
+			<coords loc="148360 172328 -960 -860"/>
+			<coords loc="148152 172808 -960 -860"/>
+			<coords loc="148328 173416 -952 -852"/>
+			<coords loc="150408 173336 -952 -852"/>
+			<coords loc="150312 172392 -952 -852"/>
+			<coords loc="149928 172069 -952 -852"/>
+			<coords loc="149656 172824 -952 -852"/>
+			<coords loc="149032 172808 -952 -852"/>
+			<coords loc="149368 173656 -920 -820"/>
+			<coords loc="149368 174200 -896 -796"/>
+		</restart_point>
+	</zone>
+</list>

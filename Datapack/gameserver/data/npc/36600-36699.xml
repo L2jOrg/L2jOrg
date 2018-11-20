@@ -1,0 +1,1657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "npc.dtd">
+<list>
+	<npc id="36609" name="Proclaimer" title="Gludio">
+		<set name="type" value="residences.castle.Gerold"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.5"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="96"/>
+		<set name="baseDEX" value="98"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="78"/>
+		<set name="baseWIT" value="128"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="castle_id" value="1"/>
+	</npc>
+	<npc id="36610" name="Proclaimer" title="Dion">
+		<set name="type" value="residences.castle.Gerold"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.5"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="96"/>
+		<set name="baseDEX" value="98"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="78"/>
+		<set name="baseWIT" value="128"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="castle_id" value="2"/>
+	</npc>
+	<npc id="36611" name="Proclaimer" title="Giran">
+		<set name="type" value="residences.castle.Gerold"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.5"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="96"/>
+		<set name="baseDEX" value="98"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="78"/>
+		<set name="baseWIT" value="128"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="castle_id" value="3"/>
+	</npc>
+	<npc id="36612" name="Proclaimer" title="Oren">
+		<set name="type" value="residences.castle.Gerold"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.5"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="96"/>
+		<set name="baseDEX" value="98"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="78"/>
+		<set name="baseWIT" value="128"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="castle_id" value="4"/>
+	</npc>
+	<npc id="36613" name="Proclaimer" title="Aden">
+		<set name="type" value="residences.castle.Gerold"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.5"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="96"/>
+		<set name="baseDEX" value="98"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="78"/>
+		<set name="baseWIT" value="128"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="castle_id" value="5"/>
+	</npc>
+	<npc id="36614" name="Proclaimer" title="Innadril">
+		<set name="type" value="residences.castle.Gerold"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.5"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="96"/>
+		<set name="baseDEX" value="98"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="78"/>
+		<set name="baseWIT" value="128"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="castle_id" value="6"/>
+	</npc>
+	<npc id="36615" name="Proclaimer" title="Goddard">
+		<set name="type" value="residences.castle.Gerold"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.5"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="96"/>
+		<set name="baseDEX" value="98"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="78"/>
+		<set name="baseWIT" value="128"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="castle_id" value="7"/>
+	</npc>
+	<npc id="36616" name="Proclaimer" title="Rune">
+		<set name="type" value="residences.castle.Gerold"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.5"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="96"/>
+		<set name="baseDEX" value="98"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="78"/>
+		<set name="baseWIT" value="128"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="castle_id" value="8"/>
+	</npc>
+	<npc id="36617" name="Proclaimer" title="Schuttgart">
+		<set name="type" value="residences.castle.Gerold"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.5"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="96"/>
+		<set name="baseDEX" value="98"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="78"/>
+		<set name="baseWIT" value="128"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="castle_id" value="9"/>
+	</npc>
+	<npc id="36653" name="Chamberlain of Darkness" title="">
+		<set name="type" value="residences.castle.Chamberlain"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="34"/>
+		<set name="collision_radius" value="9"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="89"/>
+		<set name="baseDEX" value="85"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="116"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="castle_id" value="1"/>
+		<teleportlist>
+			<sublist id="1">
+				<target loc="-15043 116596 -3208" price="0" name="1010689"/>	<!--Front of the Gludio Castle-->
+				<target loc="-14393 123671 -3144" price="0" name="1010663"/>	<!--Gludio Town Square-->
+				<target loc="-58761 154663 -2701" price="0" name="1010680"/>	<!--Front of the Shanty Fortress-->
+				<target loc="-29856 214275 -3680" price="0" name="1010667"/>	<!--Front of the Southern Fortress-->
+			</sublist>
+			<sublist id="2">
+				<target loc="-15043 116596 -3208" price="0" name="1010689"/>	<!--Front of the Gludio Castle-->
+				<target loc="-14393 123671 -3144" price="0" name="1010663"/>	<!--Gludio Town Square-->
+				<target loc="-58761 154663 -2701" price="0" name="1010680"/>	<!--Front of the Shanty Fortress-->
+				<target loc="-29856 214275 -3680" price="0" name="1010667"/>	<!--Front of the Southern Fortress-->
+				<target loc="-41248 122848 -2912" price="500" name="1010097"/>	<!--Ruins of Agony-->
+				<target loc="-19120 136816 -3762" price="500" name="1010101"/>	<!--Ruins of Despair-->
+				<target loc="-9959 176184 -4160" price="500" name="1010566"/>	<!--The Ant Nest-->
+				<target loc="-28327 155125 -3496" price="500" name="1010102"/>	<!--Windawood Manor-->
+			</sublist>
+		</teleportlist>
+	</npc>
+	<npc id="36654" name="Chamberlain of Darkness" title="">
+		<set name="type" value="residences.castle.Chamberlain"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="34"/>
+		<set name="collision_radius" value="9"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="89"/>
+		<set name="baseDEX" value="85"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="116"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="castle_id" value="2"/>
+		<teleportlist>
+			<sublist id="1">
+				<target loc="19888 153395 -3144" price="0" name="1010690"/>	<!--Front of the Dion Castle-->
+				<target loc="19025 145245 -3107" price="0" name="1010669"/>	<!--Dion Town Square-->
+				<target loc="20126 188254 -3392" price="0" name="1010687"/>	<!--Front of the Hive Fortress-->
+				<target loc="17430 170103 -3506" price="0" name="1010036"/>	<!--Entrance to Floran Village-->
+			</sublist>
+			<sublist id="2">
+				<target loc="19888 153395 -3144" price="0" name="1010690"/>	<!--Front of the Dion Castle-->
+				<target loc="19025 145245 -3107" price="0" name="1010669"/>	<!--Dion Town Square-->
+				<target loc="20126 188254 -3392" price="0" name="1010687"/>	<!--Front of the Hive Fortress-->
+				<target loc="17430 170103 -3506" price="0" name="1010036"/>	<!--Entrance to Floran Village-->
+				<target loc="5106 126916 -3664" price="500" name="1010614"/>	<!--Cruma Marshlands-->
+				<target loc="47382 111278 -2104" price="500" name="1010113"/>	<!--Fortress of Resistance-->
+				<target loc="630 179184 -3720" price="500" name="1010111"/>	<!--Plains of Dion-->
+				<target loc="60374 164301 -2856" price="500" name="1010115"/>	<!--Tanor Canyon-->
+			</sublist>
+		</teleportlist>
+	</npc>
+	<npc id="36655" name="Chamberlain of Darkness" title="">
+		<set name="type" value="residences.castle.Chamberlain"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="34"/>
+		<set name="collision_radius" value="9"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="89"/>
+		<set name="baseDEX" value="85"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="116"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="castle_id" value="3"/>
+		<teleportlist>
+			<sublist id="1">
+				<target loc="107954 145841 -3224" price="0" name="1010691"/>	<!--Front of the Giran Castle-->
+				<target loc="81749 149171 -3464" price="0" name="1010665"/>	<!--Giran Town Square-->
+				<target loc="125934 118277 -3080" price="0" name="1010660"/>	<!--Front of the Valley Fortress-->
+				<target loc="47938 186864 -3420" price="0" name="1010021"/>	<!--Giran Harbor-->
+			</sublist>
+			<sublist id="2">
+				<target loc="107954 145841 -3224" price="0" name="1010691"/>	<!--Front of the Giran Castle-->
+				<target loc="81749 149171 -3464" price="0" name="1010665"/>	<!--Giran Town Square-->
+				<target loc="125934 118277 -3080" price="0" name="1010660"/>	<!--Front of the Valley Fortress-->
+				<target loc="47938 186864 -3420" price="0" name="1010021"/>	<!--Giran Harbor-->
+				<target loc="85546 131328 -3672" price="500" name="1010118"/>	<!--Breka's Stronghold-->
+				<target loc="43408 206881 -3752" price="500" name="1010567"/>	<!--Devil's Isle-->
+				<target loc="73024 118485 -3720" price="500" name="1010067"/>	<!--Dragon Valley-->
+				<target loc="60374 164301 -2856" price="500" name="1010115"/>	<!--Tanor Canyon-->
+			</sublist>
+		</teleportlist>
+	</npc>
+	<npc id="36656" name="Chamberlain of Darkness" title="">
+		<set name="type" value="residences.castle.Chamberlain"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="34"/>
+		<set name="collision_radius" value="9"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="89"/>
+		<set name="baseDEX" value="85"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="116"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="castle_id" value="4"/>
+		<teleportlist>
+			<sublist id="1">
+				<target loc="75648 39380 -2952" price="0" name="1010692"/>	<!--Front of the Oren Castle-->
+				<target loc="82323 55466 -1480" price="0" name="1010681"/>	<!--Oren Town Square-->
+				<target loc="77023 1591 -3608" price="0" name="1010675"/>	<!--Front of the Ivory Fortress-->
+			</sublist>
+			<sublist id="2">
+				<target loc="75648 39380 -2952" price="0" name="1010692"/>	<!--Front of the Oren Castle-->
+				<target loc="82323 55466 -1480" price="0" name="1010681"/>	<!--Oren Town Square-->
+				<target loc="77023 1591 -3608" price="0" name="1010675"/>	<!--Front of the Ivory Fortress-->
+				<target loc="85391 16228 -3640" price="500" name="1010014"/>	<!--Ivory Tower-->
+				<target loc="109721 -7394 -2800" price="500" name="1010055"/>	<!--Near the frontier post-->
+				<target loc="64328 26803 -3768" price="500" name="1010121"/>	<!--Sea of Spores-->
+				<target loc="124904 61992 -3973" price="500" name="1010618"/>	<!--Enchanted Valley, Southern Region-->
+				<target loc="118509 -4779 -4000" price="500" name="1010127"/>	<!--Ancient Battleground-->
+			</sublist>
+		</teleportlist>
+	</npc>
+	<npc id="36657" name="Chamberlain of Darkness" title="">
+		<set name="type" value="residences.castle.Chamberlain"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="34"/>
+		<set name="collision_radius" value="9"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="89"/>
+		<set name="baseDEX" value="85"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="116"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="castle_id" value="5"/>
+		<teleportlist>
+			<sublist id="1">
+				<target loc="147428 20161 -2008" price="0" name="1010693"/>	<!--Front of the Aden Castle-->
+				<target loc="147450 28081 -2294" price="0" name="1010678"/>	<!--Aden Town Square-->
+				<target loc="160702 51661 -3512" price="0" name="1010688"/>	<!--Front of the Narsell Fortress-->
+				<target loc="189664 46042 -4264" price="0" name="1010674"/>	<!--Front of the Basin Fortress-->
+			</sublist>
+			<sublist id="2">
+				<target loc="147428 20161 -2008" price="0" name="1010693"/>	<!--Front of the Aden Castle-->
+				<target loc="147450 28081 -2294" price="0" name="1010678"/>	<!--Aden Town Square-->
+				<target loc="160702 51661 -3512" price="0" name="1010688"/>	<!--Front of the Narsell Fortress-->
+				<target loc="189664 46042 -4264" price="0" name="1010674"/>	<!--Front of the Basin Fortress-->
+				<target loc="104426 33746 -3825" price="500" name="1010619"/>	<!--Enchanted Valley, Northern Region-->
+				<target loc="155310 -16339 -3320" price="500" name="1010060"/>	<!--Blazing Swamp-->
+				<target loc="142065 81300 -3000" price="500" name="1010585"/>	<!--Forest of Mirrors-->
+				<target loc="166182 91560 -3168" price="500" name="1010607"/>	<!--Anghel Waterfall-->
+				<target loc="183985 61424 -3992" price="500" name="1010702"/>	<!--The Giant's Cave Upper Layer-->
+				<target loc="191754 56760 -7624" price="500" name="1010703"/>	<!--The Giant's Cave Lower Layer-->
+			</sublist>
+		</teleportlist>
+	</npc>
+	<npc id="36658" name="Chamberlain of Darkness" title="">
+		<set name="type" value="residences.castle.Chamberlain"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="34"/>
+		<set name="collision_radius" value="9"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="89"/>
+		<set name="baseDEX" value="85"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="116"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="castle_id" value="6"/>
+		<teleportlist>
+			<sublist id="1">
+				<target loc="117608 241660 -1408" price="0" name="1010694"/>	<!--Front of the Innadril Castle-->
+				<target loc="111455 219400 -3546" price="0" name="1010686"/>	<!--Heine Town Square-->
+				<target loc="124651 207877 -3184" price="0" name="1010673"/>	<!--Front of the White Sand Fortress-->
+			</sublist>
+			<sublist id="2">
+				<target loc="117608 241660 -1408" price="0" name="1010694"/>	<!--Front of the Innadril Castle-->
+				<target loc="111455 219400 -3546" price="0" name="1010686"/>	<!--Heine Town Square-->
+				<target loc="124651 207877 -3184" price="0" name="1010673"/>	<!--Front of the White Sand Fortress-->
+				<target loc="113708 178387 -3232" price="500" name="1010606"/>	<!--The Center of Alligator Island-->
+				<target loc="80987 182423 -3504" price="500" name="1010704"/>	<!--Field of Silence Center-->
+				<target loc="86147 218268 -3592" price="500" name="1010705"/>	<!--Field of Whispers Center-->
+				<target loc="82693 242220 -6712" price="500" name="1010526"/>	<!--Inside the Garden of Eva-->
+			</sublist>
+		</teleportlist>
+	</npc>
+	<npc id="36659" name="Chamberlain of Darkness" title="">
+		<set name="type" value="residences.castle.Chamberlain"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="34"/>
+		<set name="collision_radius" value="9"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="89"/>
+		<set name="baseDEX" value="85"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="116"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="castle_id" value="7"/>
+		<teleportlist>
+			<sublist id="1">
+				<target loc="153996 -50182 -2992" price="0" name="1010695"/>	<!--Front of the Goddard Castle-->
+				<target loc="147728 -56331 -2776" price="0" name="1010661"/>	<!--Goddard Town Square-->
+				<target loc="153460 -70055 -3312" price="0" name="1010685"/>	<!--Front of the Border Fortress-->
+			</sublist>
+			<sublist id="2">
+				<target loc="153996 -50182 -2992" price="0" name="1010695"/>	<!--Front of the Goddard Castle-->
+				<target loc="147728 -56331 -2776" price="0" name="1010661"/>	<!--Goddard Town Square-->
+				<target loc="153460 -70055 -3312" price="0" name="1010685"/>	<!--Front of the Border Fortress-->
+				<target loc="144880 -113468 -2560" price="500" name="1010609"/>	<!--Hot Springs-->
+				<target loc="125740 -40864 -3736" price="500" name="1010491"/>	<!--Varka Silenos Stronghold-->
+				<target loc="146990 -67128 -3640" price="500" name="1010492"/>	<!--Ketra Orc Outpost-->
+				<target loc="169018 -116303 -2432" price="500" name="1010530"/>	<!--Entrance to the Forge of the Gods-->
+				<target loc="165054 -47861 -3560" price="500" name="1010568"/>	<!--Wall of Argos-->
+			</sublist>
+		</teleportlist>
+	</npc>
+	<npc id="36660" name="Chamberlain of Darkness" title="">
+		<set name="type" value="residences.castle.Chamberlain"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="34"/>
+		<set name="collision_radius" value="9"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="89"/>
+		<set name="baseDEX" value="85"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="116"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="castle_id" value="8"/>
+		<teleportlist>
+			<sublist id="1">
+				<target loc="27400 -49180 -1320" price="0" name="1010696"/>	<!--Front of the Rune Castle-->
+				<target loc="43889 -49101 -792" price="0" name="1010671"/>	<!--Rune Town Square-->
+				<target loc="71814 -57054 -3088" price="0" name="1010668"/>	<!--Front of the Swamp Fortress-->
+			</sublist>
+			<sublist id="2">
+				<target loc="27400 -49180 -1320" price="0" name="1010696"/>	<!--Front of the Rune Castle-->
+				<target loc="43889 -49101 -792" price="0" name="1010671"/>	<!--Rune Town Square-->
+				<target loc="71814 -57054 -3088" price="0" name="1010668"/>	<!--Front of the Swamp Fortress-->
+				<target loc="52107 -54328 -3158" price="500" name="1010592"/>	<!--Forest of the Dead-->
+				<target loc="43805 -88010 -2780" price="500" name="1010537"/>	<!--Wild Beast Pastures-->
+				<target loc="69340 -50203 -3314" price="500" name="1010565"/>	<!--Swamp of Screams-->
+				<target loc="65307 -71445 -3696" price="500" name="1010600"/>	<!--Valley of Saints-->
+				<target loc="106414 -87799 -2949" price="500" name="1010575"/>	<!--Monastery of Silence-->
+				<target loc="76911 -55295 -5824" price="500" name="1010706"/>	<!--Shyeed's Cavern-->
+			</sublist>
+		</teleportlist>
+	</npc>
+	<npc id="36661" name="Chamberlain of Darkness" title="">
+		<set name="type" value="residences.castle.Chamberlain"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="34"/>
+		<set name="collision_radius" value="9"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="89"/>
+		<set name="baseDEX" value="85"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="116"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="castle_id" value="9"/>
+		<teleportlist>
+			<sublist id="1">
+				<target loc="76358 -145548 -1176" price="0" name="1010697"/>	<!--Front of the Schuttgart Castle-->
+				<target loc="87379 -142322 -1336" price="0" name="1010676"/>	<!--Schuttgart Town Square-->
+				<target loc="105007 -140874 -3360" price="0" name="1010683"/>	<!--Front of the Archaic Fortress-->
+			</sublist>
+			<sublist id="2">
+				<target loc="76358 -145548 -1176" price="0" name="1010697"/>	<!--Front of the Schuttgart Castle-->
+				<target loc="87379 -142322 -1336" price="0" name="1010676"/>	<!--Schuttgart Town Square-->
+				<target loc="105007 -140874 -3360" price="0" name="1010683"/>	<!--Front of the Archaic Fortress-->
+				<target loc="144706 -173223 -1520" price="500" name="1010597"/>	<!--The Center of the Abandoned Coal Mines-->
+				<target loc="111965 -154172 -1528" price="500" name="1010572"/>	<!--Plunderous Plains-->
+				<target loc="68693 -110438 -1946" price="500" name="1010569"/>	<!--Den of Evil-->
+				<target loc="113903 -108752 -860" price="500" name="1010570"/>	<!--Ice Merchant Cabin-->
+				<target loc="47692 -115745 -3744" price="500" name="1010571"/>	<!--Crypts of Disgrace-->
+			</sublist>
+		</teleportlist>
+	</npc>
+	<npc id="36664" name="Herald of Light" title="">
+		<set name="type" value="Npc"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.5"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2676"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1507"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="96"/>
+		<set name="baseDEX" value="98"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="78"/>
+		<set name="baseWIT" value="128"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+	</npc>
+	<npc id="36665" name="Herald of Light" title="">
+		<set name="type" value="Npc"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.5"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2676"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1507"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="96"/>
+		<set name="baseDEX" value="98"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="78"/>
+		<set name="baseWIT" value="128"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+	</npc>
+	<npc id="36666" name="Herald of Light" title="">
+		<set name="type" value="Npc"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.5"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2676"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1507"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="96"/>
+		<set name="baseDEX" value="98"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="78"/>
+		<set name="baseWIT" value="128"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+	</npc>
+	<npc id="36667" name="Herald of Light" title="">
+		<set name="type" value="Npc"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.5"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2676"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1507"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="96"/>
+		<set name="baseDEX" value="98"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="78"/>
+		<set name="baseWIT" value="128"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+	</npc>
+	<npc id="36668" name="Herald of Light" title="">
+		<set name="type" value="Npc"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.5"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2676"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1507"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="96"/>
+		<set name="baseDEX" value="98"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="78"/>
+		<set name="baseWIT" value="128"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+	</npc>
+	<npc id="36669" name="Herald of Light" title="">
+		<set name="type" value="Npc"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.5"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2676"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1507"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="96"/>
+		<set name="baseDEX" value="98"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="78"/>
+		<set name="baseWIT" value="128"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+	</npc>
+	<npc id="36670" name="Herald of Light" title="">
+		<set name="type" value="Npc"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.5"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2676"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1507"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="96"/>
+		<set name="baseDEX" value="98"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="78"/>
+		<set name="baseWIT" value="128"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+	</npc>
+	<npc id="36671" name="Herald of Light" title="">
+		<set name="type" value="Npc"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.5"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2676"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1507"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="96"/>
+		<set name="baseDEX" value="98"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="78"/>
+		<set name="baseWIT" value="128"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+	</npc>
+	<npc id="36672" name="Herald of Light" title="">
+		<set name="type" value="Npc"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.5"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2676"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1507"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="96"/>
+		<set name="baseDEX" value="98"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="78"/>
+		<set name="baseWIT" value="128"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+	</npc>
+	<npc id="36673" name="Herald of Darkness" title="">
+		<set name="type" value="Npc"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="34"/>
+		<set name="collision_radius" value="9"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2676"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1507"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="89"/>
+		<set name="baseDEX" value="85"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="116"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+	</npc>
+	<npc id="36674" name="Herald of Darkness" title="">
+		<set name="type" value="Npc"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="34"/>
+		<set name="collision_radius" value="9"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2676"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1507"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="89"/>
+		<set name="baseDEX" value="85"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="116"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+	</npc>
+	<npc id="36675" name="Herald of Darkness" title="">
+		<set name="type" value="Npc"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="34"/>
+		<set name="collision_radius" value="9"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2676"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1507"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="89"/>
+		<set name="baseDEX" value="85"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="116"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+	</npc>
+	<npc id="36676" name="Herald of Darkness" title="">
+		<set name="type" value="Npc"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="34"/>
+		<set name="collision_radius" value="9"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2676"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1507"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="89"/>
+		<set name="baseDEX" value="85"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="116"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+	</npc>
+	<npc id="36677" name="Herald of Darkness" title="">
+		<set name="type" value="Npc"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="34"/>
+		<set name="collision_radius" value="9"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2676"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1507"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="89"/>
+		<set name="baseDEX" value="85"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="116"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+	</npc>
+	<npc id="36678" name="Herald of Darkness" title="">
+		<set name="type" value="Npc"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="34"/>
+		<set name="collision_radius" value="9"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2676"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1507"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="89"/>
+		<set name="baseDEX" value="85"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="116"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+	</npc>
+	<npc id="36679" name="Herald of Darkness" title="">
+		<set name="type" value="Npc"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="34"/>
+		<set name="collision_radius" value="9"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2676"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1507"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="89"/>
+		<set name="baseDEX" value="85"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="116"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+	</npc>
+	<npc id="36680" name="Herald of Darkness" title="">
+		<set name="type" value="Npc"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="34"/>
+		<set name="collision_radius" value="9"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2676"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1507"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="89"/>
+		<set name="baseDEX" value="85"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="116"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+	</npc>
+	<npc id="36681" name="Herald of Darkness" title="">
+		<set name="type" value="Npc"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="34"/>
+		<set name="collision_radius" value="9"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="2676"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1507"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="89"/>
+		<set name="baseDEX" value="85"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="116"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="14"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+	</npc>
+</list>

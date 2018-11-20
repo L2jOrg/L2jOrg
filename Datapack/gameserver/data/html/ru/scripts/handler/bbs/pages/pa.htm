@@ -1,0 +1,182 @@
+<!--AUTHOR: Bonux-->
+<html><body><title>Сервисы</title><center>
+<br>
+<table width=750 background="L2UI_CT1.Tab_DF_bg" border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td align=center>
+	<table width=737 border=0 cellpadding=0 cellspacing=0>
+		<tr>
+			<td width=93 align=center><button value="Главная" action="bypass _bbspage:index" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Статистика" action="bypass _cbbsstatistic_pk" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Магазин" action="bypass _bbspage:shop" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Баффы" action="bypass _cbbsbuffer 0" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Телепорт" action="bypass _cbbsteleport" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Карьера" action="bypass _bbspage:career" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=92 align=center background="L2UI_CT1.Tab_DF_Tab_Selected"><font color=DDD3B6>Сервисы</font></td>
+			<td width=93 align=center><button value="Кабинет" action="bypass _cbbsservices_cabinet" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+		</tr>
+	</table>
+	<table width=750 border=0 cellpadding=0 cellspacing=0>
+		<tr>
+			<td align=center>&nbsp;</td>
+		</tr>
+		<tr>
+			<td align=center>
+				<table width=700 background="L2UI_CT1.Windows_DF_Drawer_Bg" border=0 cellpadding=0 cellspacing=0>
+					<tr>
+						<td height=40 width=25></td>
+						<td width=385>
+							<font color=DDD3B6><a action="bypass _bbspage:services">Сервисы</a>&nbsp;->&nbsp;Премиум Аккаунт</font>
+						</td>
+						<td align=right width=300><font color=DDD3B6>Текущий онлайн: <?total_online?></font></td>
+						<td height=40 width=25></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td align=center>
+				<table width=750 height=375 border=0 cellpadding=0 cellspacing=0>
+					<tr>
+						<td valign="top" align="center">
+							<!-- Grand Olympiad Emblem -->
+							<table border=0 cellpadding=0 cellspacing=0>
+								<tr><td width=256 height=185 background="L2UI_CT1.OlympiadWnd_DF_GrandTexture"></td></tr>
+							</table>
+							<?content?>
+							<!--TEMPLATE1
+							Премиум аккаунт недоступен на данном сервере.
+							TEMPLATE-->
+							<!--TEMPLATE2
+							Доступные схемы премиумных аккаунтов:<br1>
+							TEMPLATE-->
+							<!--TEMPLATE3
+							<table width=700 border=0 background="L2UI_CT1.editbox_df_bg">
+								<tr>
+									<td align=center><button value="<?scheme_name?> (<?delay_name?>)" action="bypass _cbbsservices_pa_info_<?scheme_id?>_<?scheme_delay?>" width=200 height=30 back="L2UI_ct1.button_df_down" fore="L2UI_ct1.button_df"></td>
+								</tr>
+							</table><br>
+							TEMPLATE-->
+							<!--TEMPLATE4
+							Сервер авторизации на данный момент недоступен, попробуйте позже!
+							TEMPLATE-->
+							<!--TEMPLATE5
+							Вы уже приобрели премиум аккаунт, нельзя купить другой тип аккаунта!<br1>
+							Можно продлить существующий аккаунт, или дождаться окончания текущего.<br1>
+							<font color="LEVEL">Ваш премиумный аккаунт закончится: <?date_expire?></font>
+							TEMPLATE-->
+							<!--TEMPLATE6
+							<table width=600 background="L2UI_CH3.refinewnd_back_Pattern">
+								<tr>
+									<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+								</tr>
+								<tr>
+									<td width=30>&nbsp;</td>
+									<td width=290>
+										<table width=290>
+											<tr>
+												<td width=60><font color="LEVEL">Схема:</font></td><td width=180><?scheme_name?></td><td width=40></td>
+											</tr>
+											<tr>
+												<td width=60><font color="LEVEL">Период:</font></td><td width=180><?period?></td><td width=40></td>
+											</tr>
+											<?fees?>
+											<tr>
+												<td width=60><font color="LEVEL">Рейты:</font></td><td width=180>EXP:</td><td width=40><font color=63CDFF>x<?exp_rate?></font></td>
+											</tr>
+											<tr>
+												<td width=60></td><td width=180>SP:</td><td width=40><font color=63CDFF>x<?sp_rate?></font></td>
+											</tr>
+											<tr>
+												<td width=60></td><td width=180>Дроп Адены:</td><td width=40><font color=63CDFF>x<?adena_drop_rate?></font></td>
+											</tr>
+											<tr>
+												<td width=60></td><td width=180>Дроп вещей:</td><td width=40><font color=63CDFF>x<?items_drop_rate?></font></td>
+											</tr>
+											<tr>
+												<td width=60></td><td width=180>Спойл:</td><td width=40><font color=63CDFF>x<?spoil_rate?></font></td>
+											</tr>
+											<tr>
+												<td width=60></td><td width=180>Дроп в квестах:</td><td width=40><font color=63CDFF>x<?quest_drop_rate?></font></td>
+											</tr>
+											<tr>
+												<td width=60></td><td width=180>Награда квестов:</td><td width=40><font color=63CDFF>x<?quest_reward_rate?></font></td>
+											</tr>
+											<tr>
+												<td width=60><font color="LEVEL">Бонусы:</font></td><td width=180>Шанс Заточки:</td><td width=40><font color=63CDFF>+<?enchant_chance?>%</font></td>
+											</tr>
+											<tr>
+												<td width=60></td><td width=180>Шанс Крафта:</td><td width=40><font color=63CDFF>+<?craft_chance?>%</font></td>
+											</tr>
+										</table>
+									</td>
+									<td width=300 align=center>
+										<br><button value="Купить" action="bypass _cbbsservices_pa_buy_<?scheme_id?>_<?scheme_delay?>" back="l2ui_ct1.Button_DF_Msn_down" width=200 height=35 fore="l2ui_ct1.Button_DF_Msn"/>
+									</td>
+								</tr>
+								<tr>
+									<td>&nbsp;</td><td>&nbsp;</td>
+								</tr>
+								<tr>
+									<td>&nbsp;</td><td>&nbsp;</td>
+								</tr>
+							</table><br>
+							<button value="Назад" action="bypass _cbbsservices_pa" width=100 height=30 back="L2UI_ct1.button_df_down" fore="L2UI_ct1.button_df">
+							TEMPLATE-->
+							<!--TEMPLATE7
+							У Вас не хватает предметов для оплаты.<br>
+							<button value="Назад" action="bypass _cbbsservices_pa" width=100 height=30 back="L2UI_ct1.button_df_down" fore="L2UI_ct1.button_df">
+							TEMPLATE-->
+							<!--TEMPLATE8
+							Вы уже приобрели премиум аккаунт, нельзя купить другой тип аккаунта!<br1>
+							Вы имеете <font color="LEVEL">безлимитный</font> премиум аккаунт.
+							TEMPLATE-->
+							<!--TEMPLATE9
+							<?hours?> ч.
+							TEMPLATE-->
+							<!--TEMPLATE10
+							<?days?> д.
+							TEMPLATE-->
+							<!--TEMPLATE11
+							<?days?> д. и <?hours?> ч.
+							TEMPLATE-->
+							<!--TEMPLATE12
+							бессрочный
+							TEMPLATE-->
+							<!--TEMPLATE13
+							<tr>
+								<td width=60><font color="LEVEL">Плата:</font></td><td width=180><?fee_count?> x <?fee_item_name?></td><td width=40></td>
+							</tr>
+							<?fee_items?>
+							TEMPLATE-->
+							<!--TEMPLATE14
+							<tr>
+								<td width=60></td><td width=180><?fee_count?> x <?fee_item_name?></td><td width=40></td>
+							</tr>
+							TEMPLATE-->
+							<!--TEMPLATE15
+							У Вас активен премиум аккаунт: <font color="LEVEL"><?scheme_name?></font>, который закончится: <font color="LEVEL"><?date_expire?></font><br1>
+							TEMPLATE-->
+							<!--TEMPLATE16
+							У Вас активен <font color="LEVEL">безлимитный</font> премиум аккаунт: <font color="LEVEL"><?scheme_name?></font><br1>
+							TEMPLATE-->
+							<br>
+							<button value="В меню" action="bypass _bbspage:services" width=100 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td align=center>
+				<img src="L2UI_CT1.Tab_DF_bg_line" width=700 height=32><br1>
+				<font color="655C4D"><?copyright?></font><br><br>
+			</td>
+		</tr>
+	</table>
+</td>
+</tr>
+</table>
+<br>
+</center>
+</body></html>

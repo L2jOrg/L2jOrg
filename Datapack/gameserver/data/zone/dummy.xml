@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "zone.dtd">
+<list>
+	<zone name="[giran_harbor_no_trade]" type="dummy" >
+		<set name="enabled" value="false"/>
+		<set name="blocked_actions" value="open_private_store;open_private_workshop"/>
+		<polygon>
+			<coords loc="48148 186514"/>
+			<coords loc="48304 186816"/>
+			<coords loc="47681 187144"/>
+			<coords loc="47506 186839"/>
+		</polygon>
+	</zone>
+	<zone name="[parnassus_no_trade]" type="dummy" >
+		<set name="enabled" value="false"/>
+		<set name="blocked_actions" value="open_private_store;open_private_workshop"/>
+		<polygon>
+			<coords loc="149192 173160 -944 -844"/>
+			<coords loc="149192 172408 -960 -860"/>
+			<coords loc="149544 172424 -960 -860"/>
+			<coords loc="149560 173160 -944 -844"/>
+		</polygon>
+	</zone>
+	<zone name="[giran_non_trade]" type="dummy" >
+		<set name="blocked_actions" value="open_private_store;open_private_workshop"/>
+		<polygon>
+			<coords loc="85792 147072"/>
+			<coords loc="83605 147080"/>
+			<coords loc="83560 147537"/>
+			<coords loc="83440 147472"/>
+			<coords loc="80780 147474"/>
+			<coords loc="80692 147543"/>
+			<coords loc="80691 149704"/>
+			<coords loc="80786 149774"/>
+			<coords loc="86445 149877"/>
+		</polygon>
+		<banned_polygon>
+			<coords loc="82725 147884"/>
+			<coords loc="82729 149334"/>
+			<coords loc="81134 149326"/>
+			<coords loc="81137 147887"/>
+			<coords loc="82694 147886"/>
+			<coords loc="82143 148383"/>
+			<coords loc="81692 148378"/>
+			<coords loc="81689 148839"/>
+			<coords loc="82149 148840"/>
+			<coords loc="82150 148396"/>
+			<coords loc="82723 147885"/>
+		</banned_polygon>
+	</zone>
+	<zone name="[dion_non_trade]" type="dummy" >
+		<set name="blocked_actions" value="open_private_store;open_private_workshop"/>
+		<polygon>
+			<coords loc="17454 141289"/>
+			<coords loc="14212 141173"/>
+			<coords loc="13653 141785"/>
+			<coords loc="13683 143126"/>
+			<coords loc="14384 144206"/>
+			<coords loc="15657 144696"/>
+			<coords loc="16331 144682"/>
+			<coords loc="17050 144403"/>
+			<coords loc="17036 144066"/>
+			<coords loc="17456 143264"/>
+			<coords loc="18320 142733"/>
+		</polygon>
+	</zone>
+	<zone name="[gludio_no_drop_merchant_guard]" type="dummy" >
+		<set name="blocked_actions" value="drop_merchant_guard"/>
+		<rectangle>
+			<coords loc="-17170 109512 -1800 -1700"/>
+			<coords loc="-16292 109209 -1800 -1700"/>
+		</rectangle>
+	</zone>
+	<zone name="[dion_no_drop_merchant_guard]" type="dummy" >
+		<set name="blocked_actions" value="drop_merchant_guard"/>
+		<rectangle>
+			<coords loc="20253 160539 -2000 -1900"/>
+			<coords loc="21130 160237 -2000 -1900"/>
+		</rectangle>
+	</zone>
+	<zone name="[giran_no_drop_merchant_guard]" type="dummy" >
+		<set name="blocked_actions" value="drop_merchant_guard"/>
+		<rectangle>
+			<coords loc="116712 146916 -1870 -1770"/>
+			<coords loc="116408 146039 -1870 -1770"/>
+		</rectangle>
+	</zone>
+	<zone name="[oren_no_drop_merchant_guard]" type="dummy" >
+		<set name="blocked_actions" value="drop_merchant_guard"/>
+		<rectangle>
+			<coords loc="82787 39010 -1600 -1500"/>
+			<coords loc="82484 38135 -1600 -1500"/>
+		</rectangle>
+	</zone>
+	<zone name="[aden_no_drop_merchant_guard]" type="dummy" >
+		<set name="blocked_actions" value="drop_merchant_guard"/>
+		<polygon>
+			<coords loc="142431 362 -3184 6816"/>
+			<coords loc="152319 344 -3184 6816"/>
+			<coords loc="152282 15197 -3184 6816"/>
+			<coords loc="142393 15215 -3184 6816"/>
+		</polygon>
+	</zone>
+	<zone name="[innadrile_no_drop_merchant_guard]" type="dummy" >
+		<set name="blocked_actions" value="drop_merchant_guard"/>
+		<rectangle>
+			<coords loc="115080 249015 -100 0"/>
+			<coords loc="114204 249318 -100 0"/>
+		</rectangle>
+	</zone>
+	<zone name="[goddard_no_drop_merchant_guard]" type="dummy" >
+		<set name="blocked_actions" value="drop_merchant_guard"/>
+		<rectangle>
+			<coords loc="147282 -47190 -1000 -500"/>
+			<coords loc="147667 -46187 -1000 -500"/>
+		</rectangle>
+	</zone>
+	<zone name="[rune_no_drop_merchant_guard]" type="dummy" >
+		<set name="blocked_actions" value="drop_merchant_guard"/>
+		<polygon>
+			<coords loc="9393 -48601 3850 4000"/>
+			<coords loc="11320 -48971 3850 4000"/>
+			<coords loc="11320 -49313 3850 4000"/>
+			<coords loc="9362 -49714 3850 4000"/>
+		</polygon>
+	</zone>
+	<zone name="[schuttgart_no_drop_merchant_guard]" type="dummy" >
+		<set name="blocked_actions" value="drop_merchant_guard"/>
+		<rectangle>
+			<coords loc="77385 -151240 700 850"/>
+			<coords loc="77742 -150358 700 850"/>
+		</rectangle>
+	</zone>
+</list>

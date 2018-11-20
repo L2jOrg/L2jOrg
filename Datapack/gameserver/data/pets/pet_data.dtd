@@ -1,0 +1,34 @@
+<!ELEMENT list (pet_data)*>
+<!ELEMENT pet_data (expiration_reward_items|skills|level_data)*>
+<!ATTLIST pet_data
+	npc_id CDATA #REQUIRED
+	control_item CDATA #IMPLIED
+	sync_level CDATA #IMPLIED
+	evolve CDATA #IMPLIED
+	type CDATA #IMPLIED
+	mount_type CDATA #IMPLIED>
+
+<!ELEMENT expiration_reward_items (item)*>
+<!ELEMENT item (#PCDATA)>
+<!ATTLIST item
+	id CDATA #REQUIRED
+	min_count CDATA #REQUIRED
+	max_count CDATA #REQUIRED
+	chance CDATA #IMPLIED>
+
+<!ELEMENT skills (skill)*>
+<!ELEMENT skill (#PCDATA)>
+<!ATTLIST skill
+	id CDATA #REQUIRED
+	level CDATA #REQUIRED
+	min_level CDATA #IMPLIED>
+
+<!ELEMENT level_data (stats)*>
+<!ELEMENT stats (set)*>
+<!ATTLIST stats
+	level CDATA #REQUIRED>
+
+<!ELEMENT set (#PCDATA)>
+<!ATTLIST set
+	name CDATA #REQUIRED
+	value CDATA #REQUIRED>

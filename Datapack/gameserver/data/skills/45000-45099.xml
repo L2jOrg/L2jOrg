@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="45000" levels="20" name="Item Skill: Stun">	
+		<set name="icon" value="icon.skill3080"/>
+		<set name="castRange" value="100"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>		
+		<set name="magicType" value="SPECIAL"/>				
+		<set name="activateRate" value="100"/>		
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="nextAction" value="attack"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Stun">
+			<using kind="Pole"/>
+			</effect>
+		</for>		
+	</skill>
+	<skill id="45001" levels="25" name="Tyrr Critical Stun">
+		<table name="#icon">BranchIcon.Icon.g_rune_tir_lv00 BranchIcon.Icon.g_rune_tir_lv00 BranchIcon.Icon.g_rune_tir_lv00 BranchIcon.Icon.g_rune_tir_lv00 BranchIcon.Icon.g_rune_tir_lv00 BranchIcon.Icon.g_rune_tir_lv00 BranchIcon.Icon.g_rune_tir_lv00 BranchIcon.Icon.g_rune_tir_lv01 BranchIcon.Icon.g_rune_tir_lv01 BranchIcon.Icon.g_rune_tir_lv01 BranchIcon.Icon.g_rune_tir_lv02 BranchIcon.Icon.g_rune_tir_lv02 BranchIcon.Icon.g_rune_tir_lv02 BranchIcon.Icon.g_rune_tir_lv01 BranchIcon.Icon.g_rune_tir_lv01 BranchIcon.Icon.g_rune_tir_lv02 BranchIcon.Icon.g_rune_tir_lv02 BranchIcon.Icon.g_rune_tir_lv02 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#val">0 0 0 0 0 0 0 13 15 17 19 21 23</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<triggers>
+			<trigger id="45000" level="10" type="CRIT" chance="#val"/>
+		</triggers>
+	</skill>
+	<skill id="45002" levels="25" name="Sigel\'s Protection">
+		<table name="#icon">BranchIcon.Icon.g_rune_sigel_lv00 BranchIcon.Icon.g_rune_sigel_lv00 BranchIcon.Icon.g_rune_sigel_lv00 BranchIcon.Icon.g_rune_sigel_lv00 BranchIcon.Icon.g_rune_sigel_lv00 BranchIcon.Icon.g_rune_sigel_lv00 BranchIcon.Icon.g_rune_sigel_lv00 BranchIcon.Icon.g_rune_sigel_lv01 BranchIcon.Icon.g_rune_sigel_lv01 BranchIcon.Icon.g_rune_sigel_lv01 BranchIcon.Icon.g_rune_sigel_lv02 BranchIcon.Icon.g_rune_sigel_lv02 BranchIcon.Icon.g_rune_sigel_lv02 BranchIcon.Icon.g_rune_sigel_lv01 BranchIcon.Icon.g_rune_sigel_lv01 BranchIcon.Icon.g_rune_sigel_lv02 BranchIcon.Icon.g_rune_sigel_lv02 BranchIcon.Icon.g_rune_sigel_lv02 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#pDef">0 0 0 0 0 0 0 80 92 104 116 128 140</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="pDef" value="#pDef"/>
+		</for>
+	</skill>
+	<skill id="45003" levels="25" name="Sigel Protection">
+		<table name="#icon">BranchIcon.Icon.g_rune_sigel_lv00 BranchIcon.Icon.g_rune_sigel_lv00 BranchIcon.Icon.g_rune_sigel_lv00 BranchIcon.Icon.g_rune_sigel_lv00 BranchIcon.Icon.g_rune_sigel_lv00 BranchIcon.Icon.g_rune_sigel_lv00 BranchIcon.Icon.g_rune_sigel_lv00 BranchIcon.Icon.g_rune_sigel_lv01 BranchIcon.Icon.g_rune_sigel_lv01 BranchIcon.Icon.g_rune_sigel_lv01 BranchIcon.Icon.g_rune_sigel_lv02 BranchIcon.Icon.g_rune_sigel_lv02 BranchIcon.Icon.g_rune_sigel_lv02 BranchIcon.Icon.g_rune_sigel_lv01 BranchIcon.Icon.g_rune_sigel_lv01 BranchIcon.Icon.g_rune_sigel_lv02 BranchIcon.Icon.g_rune_sigel_lv02 BranchIcon.Icon.g_rune_sigel_lv02 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#maxHp">0 0 0 0 0 0 0 1.06 1.07 1.08 1.09 1.10 1.12</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="maxHp" value="#maxHp"/>
+		</for>
+	</skill>
+	<skill id="45004" levels="25" name="Tyrr Haste">
+		<table name="#icon">BranchIcon.Icon.g_rune_tir_lv00 BranchIcon.Icon.g_rune_tir_lv00 BranchIcon.Icon.g_rune_tir_lv00 BranchIcon.Icon.g_rune_tir_lv00 BranchIcon.Icon.g_rune_tir_lv00 BranchIcon.Icon.g_rune_tir_lv00 BranchIcon.Icon.g_rune_tir_lv00 BranchIcon.Icon.g_rune_tir_lv01 BranchIcon.Icon.g_rune_tir_lv01 BranchIcon.Icon.g_rune_tir_lv01 BranchIcon.Icon.g_rune_tir_lv02 BranchIcon.Icon.g_rune_tir_lv02 BranchIcon.Icon.g_rune_tir_lv02 BranchIcon.Icon.g_rune_tir_lv01 BranchIcon.Icon.g_rune_tir_lv01 BranchIcon.Icon.g_rune_tir_lv02 BranchIcon.Icon.g_rune_tir_lv02 BranchIcon.Icon.g_rune_tir_lv02 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#pAtkSpd">0 0 0 0 0 0 0 1.05 1.06 1.065 1.07 1.075 1.08</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pAtkSpd" value="#pAtkSpd"/>
+		</for>
+	</skill>
+	<skill id="45005" levels="25" name="Othell\'s Focus">
+		<table name="#icon">BranchIcon.Icon.g_rune_othel_lv01 BranchIcon.Icon.g_rune_othel_lv01 BranchIcon.Icon.g_rune_othel_lv01 BranchIcon.Icon.g_rune_othel_lv01 BranchIcon.Icon.g_rune_othel_lv01 BranchIcon.Icon.g_rune_othel_lv01 BranchIcon.Icon.g_rune_othel_lv01 BranchIcon.Icon.g_rune_othel_lv02 BranchIcon.Icon.g_rune_othel_lv02 BranchIcon.Icon.g_rune_othel_lv02 BranchIcon.Icon.g_rune_othel_lv03 BranchIcon.Icon.g_rune_othel_lv03 BranchIcon.Icon.g_rune_othel_lv03 BranchIcon.Icon.g_rune_othel_lv02 BranchIcon.Icon.g_rune_othel_lv02 BranchIcon.Icon.g_rune_othel_lv03 BranchIcon.Icon.g_rune_othel_lv03 BranchIcon.Icon.g_rune_othel_lv03 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#basePCritRate">0 0 0 0 0 0 0 269 297 325 352 380 407</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="basePCritRate" value="#basePCritRate"/>
+		</for>
+	</skill>
+	<skill id="45006" levels="25" name="Othell\'s Mortal Strike">
+		<table name="#icon">BranchIcon.Icon.g_rune_othel_lv01 BranchIcon.Icon.g_rune_othel_lv01 BranchIcon.Icon.g_rune_othel_lv01 BranchIcon.Icon.g_rune_othel_lv01 BranchIcon.Icon.g_rune_othel_lv01 BranchIcon.Icon.g_rune_othel_lv01 BranchIcon.Icon.g_rune_othel_lv01 BranchIcon.Icon.g_rune_othel_lv02 BranchIcon.Icon.g_rune_othel_lv02 BranchIcon.Icon.g_rune_othel_lv02 BranchIcon.Icon.g_rune_othel_lv03 BranchIcon.Icon.g_rune_othel_lv03 BranchIcon.Icon.g_rune_othel_lv03 BranchIcon.Icon.g_rune_othel_lv02 BranchIcon.Icon.g_rune_othel_lv02 BranchIcon.Icon.g_rune_othel_lv03 BranchIcon.Icon.g_rune_othel_lv03 BranchIcon.Icon.g_rune_othel_lv03 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#blowRate">0 0 0 0 0 0 0 1.22  1.25  1.28  1.31  1.34  1.37</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="blowRate" value="#blowRate"/>
+		</for>
+	</skill>
+	<skill id="45007" levels="22" name="Yul\'s Critical Damage">
+		<table name="#icon">BranchIcon.Icon.g_rune_yr_lv01 BranchIcon.Icon.g_rune_yr_lv01 BranchIcon.Icon.g_rune_yr_lv01 BranchIcon.Icon.g_rune_yr_lv01 BranchIcon.Icon.g_rune_yr_lv01 BranchIcon.Icon.g_rune_yr_lv01 BranchIcon.Icon.g_rune_yr_lv01 BranchIcon.Icon.g_rune_yr_lv02 BranchIcon.Icon.g_rune_yr_lv02 BranchIcon.Icon.g_rune_yr_lv02 BranchIcon.Icon.g_rune_yr_lv03 BranchIcon.Icon.g_rune_yr_lv03 BranchIcon.Icon.g_rune_yr_lv03 BranchIcon.Icon.g_rune_yr_lv03 BranchIcon.Icon.g_rune_yr_lv03 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#p_critical_damage_diff">0 0 0 0 0 0 0 196 216 236 256 276 286</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="p_critical_damage_diff" value="#p_critical_damage_diff"/>
+		</for>
+	</skill>
+	<skill id="45008" levels="22" name="Yul Guidance">
+		<table name="#icon">BranchIcon.Icon.g_rune_yr_lv01 BranchIcon.Icon.g_rune_yr_lv01 BranchIcon.Icon.g_rune_yr_lv01 BranchIcon.Icon.g_rune_yr_lv01 BranchIcon.Icon.g_rune_yr_lv01 BranchIcon.Icon.g_rune_yr_lv01 BranchIcon.Icon.g_rune_yr_lv01 BranchIcon.Icon.g_rune_yr_lv02 BranchIcon.Icon.g_rune_yr_lv02 BranchIcon.Icon.g_rune_yr_lv02 BranchIcon.Icon.g_rune_yr_lv03 BranchIcon.Icon.g_rune_yr_lv03 BranchIcon.Icon.g_rune_yr_lv03 BranchIcon.Icon.g_rune_yr_lv03 BranchIcon.Icon.g_rune_yr_lv03 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#pAccCombat">0 0 0 0 0 0 0 4 4.4 4.8 5.2 5.6 6</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="pAccCombat" value="#pAccCombat"/>
+		</for>
+	</skill>
+	<skill id="45009" levels="20" name="Feoh Magic Focus">
+		<table name="#icon">BranchIcon.Icon.g_rune_feoh_lv01 BranchIcon.Icon.g_rune_feoh_lv01 BranchIcon.Icon.g_rune_feoh_lv01 BranchIcon.Icon.g_rune_feoh_lv01 BranchIcon.Icon.g_rune_feoh_lv01 BranchIcon.Icon.g_rune_feoh_lv02 BranchIcon.Icon.g_rune_feoh_lv02 BranchIcon.Icon.g_rune_feoh_lv02 BranchIcon.Icon.g_rune_feoh_lv02 BranchIcon.Icon.g_rune_feoh_lv02 BranchIcon.Icon.g_rune_feoh_lv03 BranchIcon.Icon.g_rune_feoh_lv03 BranchIcon.Icon.g_rune_feoh_lv03 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#baseMCritRate">0 0 0 0 0 0 0 10 11 12 13 14 15</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="mCritRate" value="#baseMCritRate"/>
+		</for>
+	</skill>
+	<skill id="45010" levels="20" name="Feoh\'s Empower">
+		<table name="#icon">BranchIcon.Icon.g_rune_feoh_lv01 BranchIcon.Icon.g_rune_feoh_lv01 BranchIcon.Icon.g_rune_feoh_lv01 BranchIcon.Icon.g_rune_feoh_lv01 BranchIcon.Icon.g_rune_feoh_lv01 BranchIcon.Icon.g_rune_feoh_lv02 BranchIcon.Icon.g_rune_feoh_lv02 BranchIcon.Icon.g_rune_feoh_lv02 BranchIcon.Icon.g_rune_feoh_lv02 BranchIcon.Icon.g_rune_feoh_lv02 BranchIcon.Icon.g_rune_feoh_lv03 BranchIcon.Icon.g_rune_feoh_lv03 BranchIcon.Icon.g_rune_feoh_lv03 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#mAtk">0 0 0 0 0 0 0 84 92 100 104 108 112</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="mAtk" value="#mAtk"/>
+		</for>
+	</skill>
+	<skill id="45011" levels="25" name="Iss Acumen">
+		<table name="#icon">BranchIcon.Icon.g_rune_is_lv01 BranchIcon.Icon.g_rune_is_lv01 BranchIcon.Icon.g_rune_is_lv01 BranchIcon.Icon.g_rune_is_lv01 BranchIcon.Icon.g_rune_is_lv01 BranchIcon.Icon.g_rune_is_lv01 BranchIcon.Icon.g_rune_is_lv01 BranchIcon.Icon.g_rune_is_lv02 BranchIcon.Icon.g_rune_is_lv02 BranchIcon.Icon.g_rune_is_lv02 BranchIcon.Icon.g_rune_is_lv03 BranchIcon.Icon.g_rune_is_lv03 BranchIcon.Icon.g_rune_is_lv03 BranchIcon.Icon.g_rune_is_lv02 BranchIcon.Icon.g_rune_is_lv02 BranchIcon.Icon.g_rune_is_lv03 BranchIcon.Icon.g_rune_is_lv03 BranchIcon.Icon.g_rune_is_lv03 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#TabmAtkSpd">0 0 0 0 0 0 0 1.05 1.06 1.07 1.08 1.09 1.10</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="mAtkSpd" value="#TabmAtkSpd"/>
+		</for>
+	</skill>
+	<skill id="45012" levels="25" name="Iss Wind Walk">
+		<table name="#icon">BranchIcon.Icon.g_rune_is_lv01 BranchIcon.Icon.g_rune_is_lv01 BranchIcon.Icon.g_rune_is_lv01 BranchIcon.Icon.g_rune_is_lv01 BranchIcon.Icon.g_rune_is_lv01 BranchIcon.Icon.g_rune_is_lv01 BranchIcon.Icon.g_rune_is_lv01 BranchIcon.Icon.g_rune_is_lv02 BranchIcon.Icon.g_rune_is_lv02 BranchIcon.Icon.g_rune_is_lv02 BranchIcon.Icon.g_rune_is_lv03 BranchIcon.Icon.g_rune_is_lv03 BranchIcon.Icon.g_rune_is_lv03 BranchIcon.Icon.g_rune_is_lv02 BranchIcon.Icon.g_rune_is_lv02 BranchIcon.Icon.g_rune_is_lv03 BranchIcon.Icon.g_rune_is_lv03 BranchIcon.Icon.g_rune_is_lv03 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#TabrunSpd">0 0 0 0 0 0 0 5 5.5 6 6.5 7 7.5</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="runSpd" value="#TabrunSpd"/>
+		</for>
+	</skill>
+	<skill id="45013" levels="20" name="Wynn Boost Mana">
+		<table name="#icon">BranchIcon.Icon.g_rune_wynn_lv01 BranchIcon.Icon.g_rune_wynn_lv01 BranchIcon.Icon.g_rune_wynn_lv01 BranchIcon.Icon.g_rune_wynn_lv01 BranchIcon.Icon.g_rune_wynn_lv01 BranchIcon.Icon.g_rune_wynn_lv02 BranchIcon.Icon.g_rune_wynn_lv02 BranchIcon.Icon.g_rune_wynn_lv02 BranchIcon.Icon.g_rune_wynn_lv02 BranchIcon.Icon.g_rune_wynn_lv02 BranchIcon.Icon.g_rune_wynn_lv03 BranchIcon.Icon.g_rune_wynn_lv03 BranchIcon.Icon.g_rune_wynn_lv03 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#maxMP">0 0 0 0 0 0 0 1.12 1.14 1.16 1.18 1.20 1.22</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="maxMp" value="#maxMP"/>
+		</for>
+	</skill>
+	<skill id="45014" levels="20" name="Wynn\'s Lightness">
+		<table name="#icon">BranchIcon.Icon.g_rune_wynn_lv01 BranchIcon.Icon.g_rune_wynn_lv01 BranchIcon.Icon.g_rune_wynn_lv01 BranchIcon.Icon.g_rune_wynn_lv01 BranchIcon.Icon.g_rune_wynn_lv01 BranchIcon.Icon.g_rune_wynn_lv02 BranchIcon.Icon.g_rune_wynn_lv02 BranchIcon.Icon.g_rune_wynn_lv02 BranchIcon.Icon.g_rune_wynn_lv02 BranchIcon.Icon.g_rune_wynn_lv02 BranchIcon.Icon.g_rune_wynn_lv03 BranchIcon.Icon.g_rune_wynn_lv03 BranchIcon.Icon.g_rune_wynn_lv03 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#maxLoad">0 0 0 0 0 0 0 4100 4500 4900 5500 5800 6400</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxLoad" value="#maxLoad"/>
+		</for>
+	</skill>
+	<skill id="45015" levels="25" name="Aeore Magic Regeneration">
+		<table name="#icon">BranchIcon.Icon.g_rune_eolh_lv01 BranchIcon.Icon.g_rune_eolh_lv01 BranchIcon.Icon.g_rune_eolh_lv01 BranchIcon.Icon.g_rune_eolh_lv01 BranchIcon.Icon.g_rune_eolh_lv01 BranchIcon.Icon.g_rune_eolh_lv01 BranchIcon.Icon.g_rune_eolh_lv01 BranchIcon.Icon.g_rune_eolh_lv02 BranchIcon.Icon.g_rune_eolh_lv02 BranchIcon.Icon.g_rune_eolh_lv02 BranchIcon.Icon.g_rune_eolh_lv03 BranchIcon.Icon.g_rune_eolh_lv03 BranchIcon.Icon.g_rune_eolh_lv03 BranchIcon.Icon.g_rune_eolh_lv02 BranchIcon.Icon.g_rune_eolh_lv02 BranchIcon.Icon.g_rune_eolh_lv03 BranchIcon.Icon.g_rune_eolh_lv03 BranchIcon.Icon.g_rune_eolh_lv03 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#regMp">0 0 0 0 0 0 0 1.095 1.11 1.125 1.14 1.155 1.17</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="regMp" value="#regMp"/>
+		</for>
+	</skill>
+	<skill id="45016" levels="25" name="Aeore\'s Heal">
+		<table name="#icon">BranchIcon.Icon.g_rune_eolh_lv01 BranchIcon.Icon.g_rune_eolh_lv01 BranchIcon.Icon.g_rune_eolh_lv01 BranchIcon.Icon.g_rune_eolh_lv01 BranchIcon.Icon.g_rune_eolh_lv01 BranchIcon.Icon.g_rune_eolh_lv01 BranchIcon.Icon.g_rune_eolh_lv01 BranchIcon.Icon.g_rune_eolh_lv02 BranchIcon.Icon.g_rune_eolh_lv02 BranchIcon.Icon.g_rune_eolh_lv02 BranchIcon.Icon.g_rune_eolh_lv03 BranchIcon.Icon.g_rune_eolh_lv03 BranchIcon.Icon.g_rune_eolh_lv03 BranchIcon.Icon.g_rune_eolh_lv02 BranchIcon.Icon.g_rune_eolh_lv02 BranchIcon.Icon.g_rune_eolh_lv03 BranchIcon.Icon.g_rune_eolh_lv03 BranchIcon.Icon.g_rune_eolh_lv03 icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p icon.ensoul_big_p</table>
+		<table name="#hpEff">0 0 0 0 0 0 0 46 54 62 70 78 86</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="hpEff" value="#hpEff"/>
+		</for>
+	</skill>
+	<skill id="45017" levels="3" name="Zaken\'s Earring">
+		<set name="icon" value="icon.accessory_earring_of_zaken_i00"/>
+		<table name="#trait_derangement">5 10 15</table>
+		<table name="#trait_shock">5 10 15</table>				
+		<table name="#hpEff">1.04 1.06 1.1</table>
+		<table name="#bleed">10 15 20</table>		
+		<table name="#hp">1.1 1.15 1.2</table>
+		<table name="#absorbdam">0 0 8</table>
+		<set name="icon" value="icon.accessory_earring_of_zaken_i00"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="hpEff" value="#hpEff"/>			
+			<p_defence_trait name="bleed" value="#bleed"/>
+			<p_attack_trait name="bleed" value="#bleed"/>
+			<p_defence_trait name="derangement" value="#trait_derangement"/>
+			<p_defence_trait name="shock" value="#trait_shock"/>
+			<p_attack_trait name="shock" value="#trait_shock"/>
+			<p_attack_trait name="derangement" value="#trait_derangement"/>
+			<mul stat="regHp" value="#hp"/>
+			<add stat="absorbDam" value="#absorbdam"/>
+			<add stat="absorbBowDam" value="#absorbdam"/>
+			<add stat="absorbPSkillDam" value="#absorbdam"/>
+			<add stat="absorbMSkillDam" value="#absorbdam"/>
+		</for>
+	</skill>
+	<skill id="45020" levels="1" name="Zaken\'s Cloak">
+		<set name="icon" value="BranchSys2.Icon.br_zaken_cloak_i00"/>		
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="maxHp" value="1.05"/>
+		</for>
+	</skill>
+	<skill id="45021" levels="1" name="White Uniform Hat &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="BranchSys2.icon.br_navy_cap_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="45022" levels="1" name="White Uniform Hat &lt;DEX +1 WIT +1&gt;">
+		<set name="icon" value="BranchSys2.icon.br_navy_cap_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="45023" levels="1" name="White Uniform Hat &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="BranchSys2.icon.br_navy_cap_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="45024" levels="1" name="Napoleon Hat &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="BranchSys.icon.br_napoleonic_cap_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="45025" levels="1" name="Napoleon Hat &lt;DEX +1 WIT +1&gt;">
+		<set name="icon" value="BranchSys.icon.br_napoleonic_cap_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="45026" levels="1" name="Napoleon Hat &lt;CON +1 MEN +1&gt;">
+		<set name="icon" value="BranchSys.icon.br_napoleonic_cap_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="45027" levels="1" name="Ninja Hair Accessory &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="BranchSys3.icon1.g_co_ninja_hair"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="45028" levels="1" name="Ninja Hair Accessory &lt;DEX +1 WIT +1&gt;">
+		<set name="icon" value="BranchSys3.icon1.g_co_ninja_hair"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="45029" levels="1" name="Ninja Hair Accessory &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="BranchSys3.icon1.g_co_ninja_hair"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="45030" levels="1" name="Warrior\'s Helmet &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="BranchSys2.icon.br_close_helmet_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="45031" levels="1" name="Warrior\'s Helmet &lt;DEX +1 WIT +1&gt;">
+		<set name="icon" value="BranchSys2.icon.br_close_helmet_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="45032" levels="1" name="Warrior\'s Helmet &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="BranchSys2.icon.br_close_helmet_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="45033" levels="1" name="First Mate Hat &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="icon.Accessary_middle_ages_i01"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="45034" levels="1" name="First Mate Hat &lt;DEX +1 WIT +1&gt;">
+		<set name="icon" value="icon.Accessary_middle_ages_i01"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="45035" levels="1" name="First Mate Hat &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="icon.Accessary_middle_ages_i01"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="45036" levels="1" name="Artisan\'s Goggles &lt;STR+1 INT+1&gt;">
+		<set name="icon" value="icon.accessory_dwarf_goggle_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="45037" levels="1" name="Artisan\'s Goggles &lt;DEX +1 WIT +1&gt;">
+		<set name="icon" value="icon.accessory_dwarf_goggle_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="45038" levels="1" name="Artisan\'s Goggles &lt;CON+1 MEN+1&gt;">
+		<set name="icon" value="icon.accessory_dwarf_goggle_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+</list>

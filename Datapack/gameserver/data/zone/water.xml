@@ -1,0 +1,1812 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "zone.dtd">
+<list>
+	<zone name="[15_18_water1]" type="water" >
+		<polygon>
+			<coords loc="-163840 0 -4810 -3810"/>
+			<coords loc="-131072 0 -4810 -3810"/>
+			<coords loc="-131072 32768 -4810 -3810"/>
+			<coords loc="-163840 32768 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[15_19_water1]" type="water" >
+		<polygon>
+			<coords loc="-163840 32768 -4810 -3810"/>
+			<coords loc="-131072 32768 -4810 -3810"/>
+			<coords loc="-131072 65536 -4810 -3810"/>
+			<coords loc="-163840 65536 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[15_20_water1]" type="water" >
+		<polygon>
+			<coords loc="-163840 65536 -4810 -3810"/>
+			<coords loc="-131072 65536 -4810 -3810"/>
+			<coords loc="-131072 98304 -4810 -3810"/>
+			<coords loc="-163840 98304 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[15_21_water1]" type="water" >
+		<polygon>
+			<coords loc="-163840 98304 -4810 -3810"/>
+			<coords loc="-131072 98304 -4810 -3810"/>
+			<coords loc="-131072 131072 -4810 -3810"/>
+			<coords loc="-163840 131072 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[15_22_water1]" type="water" >
+		<polygon>
+			<coords loc="-163840 131072 -4810 -3810"/>
+			<coords loc="-131072 131072 -4810 -3810"/>
+			<coords loc="-131072 163840 -4810 -3810"/>
+			<coords loc="-163840 163840 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[15_23_water1]" type="water" >
+		<polygon>
+			<coords loc="-163840 163840 -4810 -3810"/>
+			<coords loc="-131072 163840 -4810 -3810"/>
+			<coords loc="-131072 196608 -4810 -3810"/>
+			<coords loc="-163840 196608 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[15_24_water1]" type="water" >
+		<polygon>
+			<coords loc="-163840 196608 -4810 -3810"/>
+			<coords loc="-131072 196608 -4810 -3810"/>
+			<coords loc="-131072 229376 -4810 -3810"/>
+			<coords loc="-163840 229376 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[15_25_water1]" type="water" >
+		<polygon>
+			<coords loc="-163840 229376 -4810 -3810"/>
+			<coords loc="-131072 229376 -4810 -3810"/>
+			<coords loc="-131072 262144 -4810 -3810"/>
+			<coords loc="-163840 262144 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[16_11_water1]" type="water" >
+		<polygon>
+			<coords loc="-131072 -229376 -4810 -3810"/>
+			<coords loc="-98304 -229376 -4810 -3810"/>
+			<coords loc="-98304 -196608 -4810 -3810"/>
+			<coords loc="-131072 -196608 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[16_12_water1]" type="water" >
+		<polygon>
+			<coords loc="-131072 -196608 -4810 -3810"/>
+			<coords loc="-98304 -196608 -4810 -3810"/>
+			<coords loc="-98304 -163840 -4810 -3810"/>
+			<coords loc="-131072 -163840 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[16_14_water1]" type="water" >
+		<polygon>
+			<coords loc="-131072 -131072 -4810 -3810"/>
+			<coords loc="-98304 -131072 -4810 -3810"/>
+			<coords loc="-98304 -98304 -4810 -3810"/>
+			<coords loc="-131072 -98304 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[16_15_water1]" type="water" >
+		<polygon>
+			<coords loc="-131072 -98304 -4810 -3810"/>
+			<coords loc="-98304 -98304 -4810 -3810"/>
+			<coords loc="-98304 -65536 -4810 -3810"/>
+			<coords loc="-131072 -65536 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[16_16_water1]" type="water" >
+		<polygon>
+			<coords loc="-131072 -65536 -4810 -3810"/>
+			<coords loc="-98304 -65536 -4810 -3810"/>
+			<coords loc="-98304 -32768 -4810 -3810"/>
+			<coords loc="-131072 -32768 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[16_17_water1]" type="water" >
+		<polygon>
+			<coords loc="-131072 -32768 -4810 -3810"/>
+			<coords loc="-98304 -32768 -4810 -3810"/>
+			<coords loc="-98304 0 -4810 -3810"/>
+			<coords loc="-131072 0 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[16_18_water1]" type="water" >
+		<polygon>
+			<coords loc="-131072 0 -4810 -3810"/>
+			<coords loc="-98304 0 -4810 -3810"/>
+			<coords loc="-98304 32768 -4810 -3810"/>
+			<coords loc="-131072 32768 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[16_19_water1]" type="water" >
+		<polygon>
+			<coords loc="-131072 32768 -4810 -3810"/>
+			<coords loc="-98304 32768 -4810 -3810"/>
+			<coords loc="-98304 65536 -4810 -3810"/>
+			<coords loc="-131072 65536 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[16_20_water1]" type="water" >
+		<polygon>
+			<coords loc="-131072 65536 -4810 -3810"/>
+			<coords loc="-98304 65536 -4810 -3810"/>
+			<coords loc="-98304 98304 -4810 -3810"/>
+			<coords loc="-131072 98304 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[16_21_water1]" type="water" >
+		<polygon>
+			<coords loc="-131072 98304 -4810 -3810"/>
+			<coords loc="-98304 98304 -4810 -3810"/>
+			<coords loc="-98304 131072 -4810 -3810"/>
+			<coords loc="-131072 131072 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[16_22_water1]" type="water" >
+		<polygon>
+			<coords loc="-131072 131072 -4810 -3810"/>
+			<coords loc="-98304 131072 -4810 -3810"/>
+			<coords loc="-98304 163840 -4810 -3810"/>
+			<coords loc="-131072 163840 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[16_23_water1]" type="water" >
+		<polygon>
+			<coords loc="-131072 163840 -4810 -3810"/>
+			<coords loc="-98304 163840 -4810 -3810"/>
+			<coords loc="-98304 196608 -4810 -3810"/>
+			<coords loc="-131072 196608 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[16_24_water1]" type="water" >
+		<polygon>
+			<coords loc="-131072 196608 -4810 -3810"/>
+			<coords loc="-98304 196608 -4810 -3810"/>
+			<coords loc="-98304 229376 -4810 -3810"/>
+			<coords loc="-131072 229376 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[16_25_water1]" type="water" >
+		<polygon>
+			<coords loc="-131072 229376 -4810 -3810"/>
+			<coords loc="-98304 229376 -4810 -3810"/>
+			<coords loc="-98304 262144 -4810 -3810"/>
+			<coords loc="-131072 262144 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[17_11_water1]" type="water" >
+		<polygon>
+			<coords loc="-98304 -229376 -4810 -3810"/>
+			<coords loc="-65536 -229376 -4810 -3810"/>
+			<coords loc="-65536 -196608 -4810 -3810"/>
+			<coords loc="-98304 -196608 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[17_12_water1]" type="water" >
+		<polygon>
+			<coords loc="-98304 -196608 -4810 -3810"/>
+			<coords loc="-65536 -196608 -4810 -3810"/>
+			<coords loc="-65536 -163840 -4810 -3810"/>
+			<coords loc="-98304 -163840 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[17_14_water1]" type="water" >
+		<polygon>
+			<coords loc="-98304 -131072 -4810 -3810"/>
+			<coords loc="-65536 -131072 -4810 -3810"/>
+			<coords loc="-65536 -98304 -4810 -3810"/>
+			<coords loc="-98304 -98304 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[17_15_water1]" type="water" >
+		<polygon>
+			<coords loc="-98304 -98304 -4810 -3810"/>
+			<coords loc="-65536 -98304 -4810 -3810"/>
+			<coords loc="-65536 -65536 -4810 -3810"/>
+			<coords loc="-98304 -65536 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[17_16_water1]" type="water" >
+		<polygon>
+			<coords loc="-98304 -65536 -4810 -3810"/>
+			<coords loc="-65536 -65536 -4810 -3810"/>
+			<coords loc="-65536 -32768 -4810 -3810"/>
+			<coords loc="-98304 -32768 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[17_17_water1]" type="water" >
+		<polygon>
+			<coords loc="-98304 -32768 -4810 -3810"/>
+			<coords loc="-65536 -32768 -4810 -3810"/>
+			<coords loc="-65536 0 -4810 -3810"/>
+			<coords loc="-98304 0 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[17_18_water1]" type="water" >
+		<polygon>
+			<coords loc="-98304 0 -4810 -3810"/>
+			<coords loc="-65536 0 -4810 -3810"/>
+			<coords loc="-65536 32768 -4810 -3810"/>
+			<coords loc="-98304 32768 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<!--TODO: [Bonux] Сделать воду в этом квадрате по оффу.
+	<zone name="[17_19_water1]" type="water" >
+		<polygon>
+			<coords loc="-98304 32768 -4810 -3810"/>
+			<coords loc="-65536 32768 -4810 -3810"/>
+			<coords loc="-65536 65536 -4810 -3810"/>
+			<coords loc="-98304 65536 -4810 -3810"/>
+		</polygon>
+		<banned_polygon>
+			<coords loc="-77164 38835"/>
+			<coords loc="-82446 37780"/>
+			<coords loc="-86050 35482"/>
+			<coords loc="-88028 35748"/>
+			<coords loc="-89781 35560"/>
+			<coords loc="-91455 36756"/>
+			<coords loc="-95649 39104"/>
+			<coords loc="-97398 42827"/>
+			<coords loc="-95872 46588"/>
+			<coords loc="-91754 52711"/>
+			<coords loc="-83595 54024"/>
+			<coords loc="-78184 52202"/>
+			<coords loc="-73745 45135"/>
+			<coords loc="-77251 40138"/>
+		</banned_polygon>
+	</zone>
+	-->
+	<zone name="[17_20_water1]" type="water" >
+		<polygon>
+			<coords loc="-98304 98304 -4810 -3810"/>
+			<coords loc="-85504 98304 -4810 -3810"/>
+			<coords loc="-85504 65536 -4810 -3810"/>
+			<coords loc="-98304 65536 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[17_20_water2]" type="water" >
+		<polygon>
+			<coords loc="-85504 65536 -4810 -3810"/>
+			<coords loc="-65536 65536 -4810 -3810"/>
+			<coords loc="-65536 80384 -4810 -3810"/>
+			<coords loc="-85504 80384 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[17_20_water3]" type="water" >
+		<polygon>
+			<coords loc="-85056 86848 -5854 -3534"/>
+			<coords loc="-84416 86848 -5854 -3534"/>
+			<coords loc="-84416 86208 -5854 -3534"/>
+			<coords loc="-85056 86208 -5854 -3534"/>
+		</polygon>
+	</zone>
+	<zone name="[17_20_water4]" type="water" >
+		<polygon>
+			<coords loc="-84416 86208 -5854 -5278"/>
+			<coords loc="-82944 86208 -5854 -5278"/>
+			<coords loc="-82944 86848 -5854 -5278"/>
+			<coords loc="-84416 86848 -5854 -5278"/>
+		</polygon>
+	</zone>
+	<zone name="[17_21_water1]" type="water" >
+		<polygon>
+			<coords loc="-98304 131072 -4810 -3810"/>
+			<coords loc="-88304 131072 -4810 -3810"/>
+			<coords loc="-88304 121072 -4810 -3810"/>
+			<coords loc="-98304 121072 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[17_21_water2]" type="water" >
+		<polygon>
+			<coords loc="-98304 98304 -4810 -3810"/>
+			<coords loc="-96804 98304 -4810 -3810"/>
+			<coords loc="-96804 99804 -4810 -3810"/>
+			<coords loc="-98304 99804 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[17_21_water3]" type="water" >
+		<polygon>
+			<coords loc="-68536 131072 -4209 -3209"/>
+			<coords loc="-65536 131072 -4209 -3209"/>
+			<coords loc="-65536 128072 -4209 -3209"/>
+			<coords loc="-68536 128072 -4209 -3209"/>
+		</polygon>
+	</zone>
+	<zone name="[17_21_water4]" type="water" >
+		<polygon>
+			<coords loc="-84032 111040 -5598 -3278"/>
+			<coords loc="-83392 111040 -5598 -3278"/>
+			<coords loc="-83392 111680 -5598 -3278"/>
+			<coords loc="-84032 111680 -5598 -3278"/>
+		</polygon>
+	</zone>
+	<zone name="[17_21_water5]" type="water" >
+		<polygon>
+			<coords loc="-83392 111680 -5598 -5022"/>
+			<coords loc="-81920 111680 -5598 -5022"/>
+			<coords loc="-81920 111040 -5598 -5022"/>
+			<coords loc="-83392 111040 -5598 -5022"/>
+		</polygon>
+	</zone>
+	<zone name="[17_22_water1]" type="water" >
+		<polygon>
+			<coords loc="-98304 131072 -4810 -3810"/>
+			<coords loc="-78304 131072 -4810 -3810"/>
+			<coords loc="-78304 163840 -4810 -3810"/>
+			<coords loc="-98304 163840 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[17_22_water2]" type="water" >
+		<polygon>
+			<coords loc="-69836 140072 -4209 -3209"/>
+			<coords loc="-65536 140072 -4209 -3209"/>
+			<coords loc="-65536 131072 -4209 -3209"/>
+			<coords loc="-69836 131072 -4209 -3209"/>
+		</polygon>
+	</zone>
+	<zone name="[17_23_water1]" type="water" >
+		<polygon>
+			<coords loc="-98304 163840 -7810 -3810"/>
+			<coords loc="-65536 163840 -7810 -3810"/>
+			<coords loc="-65536 196608 -7810 -3810"/>
+			<coords loc="-98304 196608 -7810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[17_24_water1]" type="water" >
+		<polygon>
+			<coords loc="-98304 229376 -4810 -3810"/>
+			<coords loc="-65536 229376 -4810 -3810"/>
+			<coords loc="-65536 196608 -4810 -3810"/>
+			<coords loc="-98304 196608 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[17_25_water1]" type="water" >
+		<polygon>
+			<coords loc="-98304 229376 -4810 -3810"/>
+			<coords loc="-65536 229376 -4810 -3810"/>
+			<coords loc="-65536 262144 -4810 -3810"/>
+			<coords loc="-98304 262144 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[18_10_water1]" type="water" >
+		<polygon>
+			<coords loc="-65536 -262144 -4810 -3810"/>
+			<coords loc="-32768 -262144 -4810 -3810"/>
+			<coords loc="-32768 -229376 -4810 -3810"/>
+			<coords loc="-65536 -229376 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[18_10_water2]" type="water" >
+		<polygon>
+			<coords loc="-56776 -250440 -8480 -3810"/>
+			<coords loc="-56184 -250440 -8480 -3810"/>
+			<coords loc="-56184 -250104 -8480 -3810"/>
+			<coords loc="-56776 -250104 -8480 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[18_11_water1]" type="water" >
+		<polygon>
+			<coords loc="-65536 -229376 -4810 -3810"/>
+			<coords loc="-32768 -229376 -4810 -3810"/>
+			<coords loc="-32768 -196608 -4810 -3810"/>
+			<coords loc="-65536 -196608 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[18_12_water1]" type="water" >
+		<polygon>
+			<coords loc="-65536 -196608 -4810 -3810"/>
+			<coords loc="-32768 -196608 -4810 -3810"/>
+			<coords loc="-32768 -163840 -4810 -3810"/>
+			<coords loc="-65536 -163840 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[18_13_water1]" type="water" >
+		<polygon>
+			<coords loc="-65536 -163840 -4810 -3810"/>
+			<coords loc="-32768 -163840 -4810 -3810"/>
+			<coords loc="-32768 -131072 -4810 -3810"/>
+			<coords loc="-65536 -131072 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[18_14_water1]" type="water" >
+		<polygon>
+			<coords loc="-65536 -98304 -4810 -3810"/>
+			<coords loc="-32768 -98304 -4810 -3810"/>
+			<coords loc="-32768 -103304 -4810 -3810"/>
+			<coords loc="-65536 -103304 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[18_15_water1]" type="water" >
+		<polygon>
+			<coords loc="-65536 -98304 -4810 -3810"/>
+			<coords loc="-32768 -98304 -4810 -3810"/>
+			<coords loc="-32768 -65536 -4810 -3810"/>
+			<coords loc="-65536 -65536 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[18_16_water1]" type="water" >
+		<polygon>
+			<coords loc="-65536 -65536 -4810 -3810"/>
+			<coords loc="-32768 -65536 -4810 -3810"/>
+			<coords loc="-32768 -32768 -4810 -3810"/>
+			<coords loc="-65536 -32768 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[18_17_water1]" type="water" >
+		<polygon>
+			<coords loc="-65536 -32768 -4810 -3810"/>
+			<coords loc="-32768 -32768 -4810 -3810"/>
+			<coords loc="-32768 0 -4810 -3810"/>
+			<coords loc="-65536 0 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[18_18_water1]" type="water" >
+		<polygon>
+			<coords loc="-65536 0 -4810 -3810"/>
+			<coords loc="-32768 0 -4810 -3810"/>
+			<coords loc="-32768 32768 -4810 -3810"/>
+			<coords loc="-65536 32768 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[18_19_water1]" type="water" >
+		<polygon>
+			<coords loc="-65536 32768 -4810 -3810"/>
+			<coords loc="-52036 32768 -4810 -3810"/>
+			<coords loc="-52036 65536 -4810 -3810"/>
+			<coords loc="-65536 65536 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[18_19_water2]" type="water" >
+		<polygon>
+			<coords loc="-52036 40768 -4810 -3810"/>
+			<coords loc="-32768 40768 -4810 -3810"/>
+			<coords loc="-32768 32768 -4810 -3810"/>
+			<coords loc="-52036 32768 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[18_20_water1]" type="water" >
+		<polygon>
+			<coords loc="-65536 65536 -4810 -3810"/>
+			<coords loc="-55536 65536 -4810 -3810"/>
+			<coords loc="-55536 75536 -4810 -3810"/>
+			<coords loc="-65536 75536 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[18_20_water2]" type="water" >
+		<polygon>
+			<coords loc="-55900 79424 -5438 -4800"/>
+			<coords loc="-54100 79424 -5438 -4800"/>
+			<coords loc="-54100 78784 -5438 -4800"/>
+			<coords loc="-55900 78784 -5438 -4800"/>
+		</polygon>
+	</zone>
+	<zone name="[18_20_water3]" type="water" >
+		<polygon>
+			<coords loc="-55964 79388 -5438 -3050"/>
+			<coords loc="-55398 79386 -5438 -3050"/>
+			<coords loc="-55409 78812 -5438 -3050"/>
+			<coords loc="-55964 78824 -5438 -3050"/>
+		</polygon>
+	</zone>
+	<zone name="[18_21_water1]" type="water" >
+		<polygon>
+			<coords loc="-65536 131072 -4209 -3209"/>
+			<coords loc="-52480 131072 -4209 -3209"/>
+			<coords loc="-52480 122368 -4209 -3209"/>
+			<coords loc="-65536 122368 -4209 -3209"/>
+		</polygon>
+	</zone>
+	<zone name="[18_21_water1]" type="water" >
+		<polygon>
+			<coords loc="-65536 121856 -4689 -3689"/>
+			<coords loc="-57664 121856 -4689 -3689"/>
+			<coords loc="-57664 113088 -4689 -3689"/>
+			<coords loc="-65536 113088 -4689 -3689"/>
+		</polygon>
+	</zone>
+	<zone name="[18_22_water1]" type="water" >
+		<polygon>
+			<coords loc="-65536 141056 -4209 -3209"/>
+			<coords loc="-62464 141056 -4209 -3209"/>
+			<coords loc="-62464 131072 -4209 -3209"/>
+			<coords loc="-65536 131072 -4209 -3209"/>
+		</polygon>
+	</zone>
+	<zone name="[18_22_water2]" type="water" >
+		<polygon>
+			<coords loc="-61764 131072 -4209 -3209"/>
+			<coords loc="-55748 131072 -4209 -3209"/>
+			<coords loc="-55748 132608 -4209 -3209"/>
+			<coords loc="-61764 132608 -4209 -3209"/>
+		</polygon>
+	</zone>
+	<zone name="[18_23_water1]" type="water" >
+		<polygon>
+			<coords loc="-65536 196608 -4810 -3810"/>
+			<coords loc="-53536 196608 -4810 -3810"/>
+			<coords loc="-53536 191350 -4810 -3810"/>
+			<coords loc="-65536 191350 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[18_23_water2]" type="water" >
+		<polygon>
+			<coords loc="-65535 191446 -4810 -3810"/>
+			<coords loc="-62962 191446 -4810 -3810"/>
+			<coords loc="-62962 179446 -4810 -3810"/>
+			<coords loc="-65535 179446 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[18_23_water3]" type="water" >
+		<polygon>
+			<coords loc="-54681 180234 -4990 -4732"/>
+			<coords loc="-53049 180234 -4990 -4732"/>
+			<coords loc="-53049 183018 -4990 -4732"/>
+			<coords loc="-54681 183018 -4990 -4732"/>
+		</polygon>
+	</zone>
+	<zone name="[18_23_water4]" type="water" >
+		<polygon>
+			<coords loc="-53616 184394 -4990 -4732"/>
+			<coords loc="-52368 184394 -4990 -4732"/>
+			<coords loc="-52368 183018 -4990 -4732"/>
+			<coords loc="-53616 183018 -4990 -4732"/>
+		</polygon>
+	</zone>
+	<zone name="[18_24_water1]" type="water" >
+		<polygon>
+			<coords loc="-41888 206688 -6000 -5100"/>
+			<coords loc="-41380 206688 -6000 -5100"/>
+			<coords loc="-41380 207930 -6000 -5100"/>
+			<coords loc="-41888 207930 -6000 -5100"/>
+		</polygon>
+	</zone>
+	<zone name="[18_24_water2]" type="water" >
+		<polygon>
+			<coords loc="-65536 229376 -4810 -3810"/>
+			<coords loc="-53536 229376 -4810 -3810"/>
+			<coords loc="-53536 196608 -4810 -3810"/>
+			<coords loc="-65536 196608 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[18_24_water3]" type="water" >
+		<polygon>
+			<coords loc="-53536 220976 -4810 -3810"/>
+			<coords loc="-32768 220976 -4810 -3810"/>
+			<coords loc="-32768 229376 -4810 -3810"/>
+			<coords loc="-53536 229376 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[18_24_water4]" type="water" >
+		<polygon>
+			<coords loc="-41024 220976 -4810 -3810"/>
+			<coords loc="-32768 220976 -4810 -3810"/>
+			<coords loc="-32768 212576 -4810 -3810"/>
+			<coords loc="-41024 212576 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[18_24_water5]" type="water" >
+		<polygon>
+			<coords loc="-53536 212576 -4312 -3810"/>
+			<coords loc="-45280 212576 -4312 -3810"/>
+			<coords loc="-45280 220976 -4312 -3810"/>
+			<coords loc="-53536 220976 -4312 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[18_24_water6]" type="water" >
+		<polygon>
+			<coords loc="-53536 209584 -4312 -3810"/>
+			<coords loc="-47584 209584 -4312 -3810"/>
+			<coords loc="-47584 202208 -4312 -3810"/>
+			<coords loc="-53536 202208 -4312 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[18_24_water7]" type="water" >
+		<polygon>
+			<coords loc="-45280 212576 -4312 -3810"/>
+			<coords loc="-41024 212576 -4312 -3810"/>
+			<coords loc="-41024 220976 -4312 -3810"/>
+			<coords loc="-45280 220976 -4312 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[18_24_water8]" type="water" >
+		<polygon>
+			<coords loc="-41888 206688 -5784 -3350"/>
+			<coords loc="-41248 206688 -5784 -3350"/>
+			<coords loc="-41248 206048 -5784 -3350"/>
+			<coords loc="-41888 206048 -5784 -3350"/>
+		</polygon>
+	</zone>
+	<zone name="[18_25_water1]" type="water" >
+		<polygon>
+			<coords loc="-65536 229376 -4810 -3810"/>
+			<coords loc="-32768 229376 -4810 -3810"/>
+			<coords loc="-32768 262144 -4810 -3810"/>
+			<coords loc="-65536 262144 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[19_10_water1]" type="water" >
+		<polygon>
+			<coords loc="-32768 -262144 -4810 -3810"/>
+			<coords loc="0 -262144 -4810 -3810"/>
+			<coords loc="0 -229376 -4810 -3810"/>
+			<coords loc="-32768 -229376 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[19_10_water1]" type="water" >
+		<polygon>
+			<coords loc="-24152 -250968 -8736 -3810"/>
+			<coords loc="-23528 -250968 -8736 -3810"/>
+			<coords loc="-23528 -250600 -8736 -3810"/>
+			<coords loc="-24152 -250600 -8736 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[19_14_water1]" type="water" >
+		<polygon>
+			<coords loc="-32768 -98304 -4810 -3810"/>
+			<coords loc="-29768 -98304 -4810 -3810"/>
+			<coords loc="-29768 -101304 -4810 -3810"/>
+			<coords loc="-32768 -101304 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[19_15_water1]" type="water" >
+		<polygon>
+			<coords loc="-32768 -98304 -4810 -3810"/>
+			<coords loc="0 -98304 -4810 -3810"/>
+			<coords loc="0 -65536 -4810 -3810"/>
+			<coords loc="-32768 -65536 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[19_16_water1]" type="water" >
+		<polygon>
+			<coords loc="-32768 -65536 -4810 -3810"/>
+			<coords loc="0 -65536 -4810 -3810"/>
+			<coords loc="0 -32768 -4810 -3810"/>
+			<coords loc="-32768 -32768 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[19_17_water1]" type="water" >
+		<polygon>
+			<coords loc="-32768 -32768 -5110 -3810"/>
+			<coords loc="0 -32768 -5110 -3810"/>
+			<coords loc="0 0 -5110 -3810"/>
+			<coords loc="-32768 0 -5110 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[19_18_water1]" type="water" >
+		<polygon>
+			<coords loc="-32768 32768 -4810 -3810"/>
+			<coords loc="-23424 32768 -4810 -3810"/>
+			<coords loc="-23424 0 -4810 -3810"/>
+			<coords loc="-32768 0 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[19_18_water2]" type="water" >
+		<polygon>
+			<coords loc="-23125 13250 -5598 -3150"/>
+			<coords loc="-23125 13775 -5598 -3150"/>
+			<coords loc="-22550 13775 -5598 -3150"/>
+			<coords loc="-22550 13250 -5598 -3150"/>
+		</polygon>
+	</zone>
+	<zone name="[19_18_water3]" type="water" >
+		<polygon>
+			<coords loc="-23100 13184 -5598 -4900"/>
+			<coords loc="-21300 13184 -5598 -4900"/>
+			<coords loc="-21300 13824 -5598 -4900"/>
+			<coords loc="-23100 13824 -5598 -4900"/>
+		</polygon>
+	</zone>
+	<zone name="[19_18_water4]" type="water" >
+		<polygon>
+			<coords loc="-23424 12928 -4810 -3810"/>
+			<coords loc="0 12928 -4810 -3810"/>
+			<coords loc="0 0 -4810 -3810"/>
+			<coords loc="-23424 0 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[19_19_water1]" type="water" >
+		<polygon>
+			<coords loc="-12972 57536 -4814 -3814"/>
+			<coords loc="-5972 57536 -4814 -3814"/>
+			<coords loc="-5972 65536 -4814 -3814"/>
+			<coords loc="-12972 65536 -4814 -3814"/>
+		</polygon>
+	</zone>
+	<zone name="[19_19_water2]" type="water" >
+		<polygon>
+			<coords loc="-5840 62646 -4818 -3818"/>
+			<coords loc="-3840 62646 -4818 -3818"/>
+			<coords loc="-3840 60646 -4818 -3818"/>
+			<coords loc="-5840 60646 -4818 -3818"/>
+		</polygon>
+	</zone>
+	<zone name="[19_20_water1]" type="water" >
+		<polygon>
+			<coords loc="-24488 65536 -4298 -3810"/>
+			<coords loc="0 65536 -4298 -3810"/>
+			<coords loc="0 98304 -4298 -3810"/>
+			<coords loc="-24488 98304 -4298 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[19_20_water2]" type="water" >
+		<polygon>
+			<coords loc="-25426 77649 -5870 -3450"/>
+			<coords loc="-24876 77650 -5870 -3450"/>
+			<coords loc="-24885 77085 -5870 -3450"/>
+			<coords loc="-25438 77094 -5870 -3450"/>
+		</polygon>
+	</zone>
+	<zone name="[19_20_water3]" type="water" >
+		<polygon>
+			<coords loc="-25400 77696 -5870 -5293"/>
+			<coords loc="-23600 77696 -5870 -5293"/>
+			<coords loc="-23600 77056 -5870 -5293"/>
+			<coords loc="-25400 77056 -5870 -5293"/>
+		</polygon>
+	</zone>
+	<zone name="[19_21_water1]" type="water" >
+		<polygon>
+			<coords loc="-25816 98304 -10642 -3810"/>
+			<coords loc="0 98304 -10642 -3810"/>
+			<coords loc="0 131072 -10642 -3810"/>
+			<coords loc="-25816 131072 -10642 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[19_24_water1]" type="water" >
+		<polygon>
+			<coords loc="-32768 229376 -7810 -3810"/>
+			<coords loc="-10000 229376 -7810 -3810"/>
+			<coords loc="-10000 209376 -7810 -3810"/>
+			<coords loc="-32768 209376 -7810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[19_24_water2]" type="water" >
+		<polygon>
+			<coords loc="-10000 196608 -7810 -3810"/>
+			<coords loc="0 196608 -7810 -3810"/>
+			<coords loc="0 229376 -7810 -3810"/>
+			<coords loc="-10000 229376 -7810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[19_25_water1]" type="water" >
+		<polygon>
+			<coords loc="-32768 262144 -4810 -3810"/>
+			<coords loc="0 262144 -4810 -3810"/>
+			<coords loc="0 229376 -4810 -3810"/>
+			<coords loc="-32768 229376 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[20_10_water1]" type="water" >
+		<polygon>
+			<coords loc="0 -262144 -4810 -3810"/>
+			<coords loc="32768 -262144 -4810 -3810"/>
+			<coords loc="32768 -229376 -4810 -3810"/>
+			<coords loc="0 -229376 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[20_10_water2]" type="water" >
+		<polygon>
+			<coords loc="9000 -248648 -10152 -3810"/>
+			<coords loc="9624 -248648 -10152 -3810"/>
+			<coords loc="9624 -248296 -10152 -3810"/>
+			<coords loc="9000 -248296 -10152 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[20_15_water1]" type="water" >
+		<polygon>
+			<coords loc="0 -65536 -4810 -3810"/>
+			<coords loc="8000 -65536 -4810 -3810"/>
+			<coords loc="8000 -73536 -4810 -3810"/>
+			<coords loc="0 -73536 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[20_16_water1]" type="water" >
+		<polygon>
+			<coords loc="0 -65536 -4810 -3810"/>
+			<coords loc="32768 -65536 -4810 -3810"/>
+			<coords loc="32768 -32768 -4810 -3810"/>
+			<coords loc="0 -32768 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[20_17_water1]" type="water" >
+		<polygon>
+			<coords loc="0 -32768 -4810 -3810"/>
+			<coords loc="32768 -32768 -4810 -3810"/>
+			<coords loc="32768 0 -4810 -3810"/>
+			<coords loc="0 0 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[20_18_water1]" type="water" >
+		<polygon>
+			<coords loc="0 0 -4810 -3810"/>
+			<coords loc="32768 0 -4810 -3810"/>
+			<coords loc="32768 5500 -4810 -3810"/>
+			<coords loc="0 5500 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[20_19_water1]" type="water" >
+		<polygon>
+			<coords loc="0 32768 -4810 -3810"/>
+			<coords loc="32768 32768 -4810 -3810"/>
+			<coords loc="32768 65536 -4810 -3810"/>
+			<coords loc="0 65536 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[20_20_water1]" type="water" >
+		<polygon>
+			<coords loc="0 98304 -4810 -3810"/>
+			<coords loc="4000 98304 -4810 -3810"/>
+			<coords loc="4000 76174 -4810 -3810"/>
+			<coords loc="0 76174 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[20_20_water2]" type="water" >
+		<polygon>
+			<coords loc="32768 70344 -4824 -3824"/>
+			<coords loc="32768 65480 -4824 -3824"/>
+			<coords loc="4608 65480 -4824 -3824"/>
+			<coords loc="4608 70344 -4824 -3824"/>
+		</polygon>
+	</zone>
+	<zone name="[20_20_water3]" type="water" >
+		<polygon>
+			<coords loc="0 66792 -4824 -3824"/>
+			<coords loc="0 72936 -4824 -3824"/>
+			<coords loc="4624 72936 -4824 -3824"/>
+			<coords loc="4624 66792 -4824 -3824"/>
+		</polygon>
+	</zone>
+	<zone name="[20_21_water1]" type="water" >
+		<polygon>
+			<coords loc="0 131072 -4810 -3810"/>
+			<coords loc="4300 131072 -4810 -3810"/>
+			<coords loc="4300 98304 -4810 -3810"/>
+			<coords loc="0 98304 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[20_22_water1]" type="water" >
+		<polygon>
+			<coords loc="0 163840 -4818 -3818"/>
+			<coords loc="0 131072 -4818 -3818"/>
+			<coords loc="7168 131072 -4818 -3818"/>
+			<coords loc="7168 163840 -4818 -3818"/>
+		</polygon>
+	</zone>
+	<zone name="[20_23_water1]" type="water" >
+		<polygon>
+			<coords loc="0 196608 -7810 -3810"/>
+			<coords loc="32768 196608 -7810 -3810"/>
+			<coords loc="32768 163840 -7810 -3810"/>
+			<coords loc="0 163840 -7810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[20_24_water1]" type="water" >
+		<polygon>
+			<coords loc="0 196608 -4810 -3810"/>
+			<coords loc="32768 196608 -4810 -3810"/>
+			<coords loc="32768 229376 -4810 -3810"/>
+			<coords loc="0 229376 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[20_25_water1]" type="water" >
+		<polygon>
+			<coords loc="0 229376 -4810 -3810"/>
+			<coords loc="32768 229376 -4810 -3810"/>
+			<coords loc="32768 262144 -4810 -3810"/>
+			<coords loc="0 262144 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[21_13_water1]" type="water" >
+		<polygon>
+			<coords loc="32768 -163840 -4810 -3810"/>
+			<coords loc="65536 -163840 -4810 -3810"/>
+			<coords loc="65536 -131072 -4810 -3810"/>
+			<coords loc="32768 -131072 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[21_14_water1]" type="water" >
+		<polygon>
+			<coords loc="40072 -131064 -4810 -3810"/>
+			<coords loc="65528 -131064 -4810 -3810"/>
+			<coords loc="65528 -128904 -4810 -3810"/>
+			<coords loc="40072 -128904 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[21_14_water2]" type="water" >
+		<polygon>
+			<coords loc="56968 -125944 -4810 -3810"/>
+			<coords loc="65528 -125944 -4810 -3810"/>
+			<coords loc="65528 -114824 -4810 -3810"/>
+			<coords loc="56968 -114824 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[21_15_water1]" type="water" >
+		<polygon>
+			<coords loc="32768 -98304 -4810 -3810"/>
+			<coords loc="65536 -98304 -4810 -3810"/>
+			<coords loc="65536 -65536 -4810 -3810"/>
+			<coords loc="32768 -65536 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[21_16_water1]" type="water" >
+		<polygon>
+			<coords loc="65536 -65536 -4814 -3814"/>
+			<coords loc="32768 -65536 -4814 -3814"/>
+			<coords loc="32768 -32768 -4814 -3814"/>
+			<coords loc="65536 -32768 -4814 -3814"/>
+		</polygon>
+	</zone>
+	<zone name="[21_17_water1]" type="water" >
+		<polygon>
+			<coords loc="32768 -32768 -4810 -3810"/>
+			<coords loc="65536 -32768 -4810 -3810"/>
+			<coords loc="65536 0 -4810 -3810"/>
+			<coords loc="32768 0 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[21_18_water1]" type="water" >
+		<polygon>
+			<coords loc="32768 0 -4810 -3810"/>
+			<coords loc="65536 0 -4810 -3810"/>
+			<coords loc="65536 10000 -4810 -3810"/>
+			<coords loc="32768 10000 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[21_19_water1]" type="water" >
+		<polygon>
+			<coords loc="60672 32768 -4810 -3810"/>
+			<coords loc="60672 65536 -4810 -3810"/>
+			<coords loc="32768 65536 -4810 -3810"/>
+			<coords loc="32768 32768 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[21_20_water1]" type="water" >
+		<polygon>
+			<coords loc="63568 90536 -4810 -3810"/>
+			<coords loc="63568 65536 -4810 -3810"/>
+			<coords loc="32768 65536 -4810 -3810"/>
+			<coords loc="32768 90536 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[21_20_water2]" type="water" >
+		<polygon>
+			<coords loc="63236 75440 -4810 -3810"/>
+			<coords loc="65536 75440 -4810 -3810"/>
+			<coords loc="65536 73140 -4810 -3810"/>
+			<coords loc="63236 73140 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[21_21_water2]" type="water" >
+		<polygon>
+			<coords loc="48773 115910 -2407 -2257"/>
+			<coords loc="48773 116709 -2407 -2257"/>
+			<coords loc="50237 116709 -2407 -2257"/>
+			<coords loc="50237 115910 -2407 -2257"/>
+		</polygon>
+	</zone>
+	<zone name="[21_21_water3]" type="water" >
+		<polygon>
+			<coords loc="46597 115129 -2439 -2289"/>
+			<coords loc="49597 115129 -2439 -2289"/>
+			<coords loc="49597 111629 -2439 -2289"/>
+			<coords loc="46597 111629 -2439 -2289"/>
+		</polygon>
+	</zone>
+	<zone name="[21_21_water4]" type="water" >
+		<polygon>
+			<coords loc="50136 115129 -2439 -2289"/>
+			<coords loc="50136 116869 -2439 -2289"/>
+			<coords loc="49172 116869 -2439 -2289"/>
+			<coords loc="49172 115129 -2439 -2289"/>
+		</polygon>
+	</zone>
+	<zone name="[21_21_water5]" type="water" >
+		<polygon>
+			<coords loc="48000 115129 -2439 -2289"/>
+			<coords loc="49172 115129 -2439 -2289"/>
+			<coords loc="49172 116357 -2439 -2289"/>
+			<coords loc="48000 116357 -2439 -2289"/>
+		</polygon>
+	</zone>
+	<zone name="[21_21_water6]" type="water" >
+		<polygon>
+			<coords loc="45000 125750 -6110 -5400"/>
+			<coords loc="45500 125750 -6110 -5400"/>
+			<coords loc="45500 127500 -6110 -5400"/>
+			<coords loc="45000 127500 -6110 -5400"/>
+		</polygon>
+	</zone>
+	<zone name="[21_21_water7]" type="water" >
+		<polygon>
+			<coords loc="45515 127561 -6110 -3765"/>
+			<coords loc="45524 127027 -6110 -3765"/>
+			<coords loc="44973 127030 -6110 -3765"/>
+			<coords loc="44968 127574 -6110 -3765"/>
+		</polygon>
+	</zone>
+	<zone name="[21_22_water1]" type="water" >
+		<polygon>
+			<coords loc="51917 139480 -3979 -3779"/>
+			<coords loc="41917 139480 -3979 -3779"/>
+			<coords loc="41917 152770 -3979 -3779"/>
+			<coords loc="51917 152770 -3979 -3779"/>
+		</polygon>
+	</zone>
+	<zone name="[21_22_water2]" type="water" >
+		<polygon>
+			<coords loc="39333 143650 -6078 -3648"/>
+			<coords loc="39900 143650 -6078 -3648"/>
+			<coords loc="39900 144220 -6078 -3648"/>
+			<coords loc="39333 144220 -6078 -3648"/>
+		</polygon>
+	</zone>
+	<zone name="[21_22_water3]" type="water" >
+		<polygon>
+			<coords loc="39400 144256 -6078 -5400"/>
+			<coords loc="39400 143616 -6078 -5400"/>
+			<coords loc="41170 143616 -6078 -5400"/>
+			<coords loc="41170 144256 -6078 -5400"/>
+		</polygon>
+	</zone>
+	<zone name="[21_23_water1]" type="water" >
+		<polygon>
+			<coords loc="65536 181240 -4810 -3810"/>
+			<coords loc="65536 196608 -4810 -3810"/>
+			<coords loc="32768 196608 -4810 -3810"/>
+			<coords loc="32768 181240 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[21_23_water2]" type="water" >
+		<polygon>
+			<coords loc="44032 181240 -4810 -3810"/>
+			<coords loc="44032 175600 -4810 -3810"/>
+			<coords loc="32768 175600 -4810 -3810"/>
+			<coords loc="32768 181240 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[21_23_water3]" type="water" >
+		<polygon>
+			<coords loc="57472 181240 -4810 -3810"/>
+			<coords loc="57472 175600 -4810 -3810"/>
+			<coords loc="65536 175600 -4810 -3810"/>
+			<coords loc="65536 181240 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[21_23_water4]" type="water" >
+		<polygon>
+			<coords loc="43100 170000 -5678 -3248"/>
+			<coords loc="43100 170600 -5678 -3248"/>
+			<coords loc="42550 170600 -5678 -3248"/>
+			<coords loc="42550 170000 -5678 -3248"/>
+		</polygon>
+	</zone>
+	<zone name="[21_23_water5]" type="water" >
+		<polygon>
+			<coords loc="44350 170624 -5678 -5000"/>
+			<coords loc="44350 169984 -5678 -5000"/>
+			<coords loc="42600 169984 -5678 -5000"/>
+			<coords loc="42600 170624 -5678 -5000"/>
+		</polygon>
+	</zone>
+	<zone name="[21_24_water1]" type="water" >
+		<polygon>
+			<coords loc="32768 196608 -4779 -3779" />
+			<coords loc="65536 196608 -4779 -3779" />
+			<coords loc="65536 229376 -4779 -3779" />
+			<coords loc="32768 229376 -4779 -3779" />
+		</polygon>
+		<banned_polygon>
+			<coords loc="42504 213384 -4779 -3779" />
+			<coords loc="42504 221304 -4779 -3779" />
+			<coords loc="50808 221304 -4779 -3779" />
+			<coords loc="50808 213384 -4779 -3779" />
+		</banned_polygon>
+	</zone>
+	<zone name="[21_25_water1]" type="water" >
+		<polygon>
+			<coords loc="32768 229376 -4810 -3810"/>
+			<coords loc="65536 229376 -4810 -3810"/>
+			<coords loc="65536 262144 -4810 -3810"/>
+			<coords loc="32768 262144 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[22_11_water1]" type="water" >
+		<polygon>
+			<coords loc="65536 -229376 -4810 -3810"/>
+			<coords loc="98304 -229376 -4810 -3810"/>
+			<coords loc="98304 -196608 -4810 -3810"/>
+			<coords loc="65536 -196608 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[22_13_water1]" type="water" >
+		<polygon>
+			<coords loc="65536 -163840 -4810 -3810"/>
+			<coords loc="98304 -163840 -4810 -3810"/>
+			<coords loc="98304 -131072 -4810 -3810"/>
+			<coords loc="65536 -131072 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[22_14_water1]" type="water" >
+		<polygon>
+			<coords loc="65544 -131064 -4810 -3810"/>
+			<coords loc="71928 -131064 -4810 -3810"/>
+			<coords loc="71928 -124168 -4810 -3810"/>
+			<coords loc="65544 -124168 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[22_16_water1]" type="water" >
+		<polygon>
+			<coords loc="60186 -34808 -4810 -3810"/>
+			<coords loc="98296 -34808 -4810 -3810"/>
+			<coords loc="98296 -32768 -4810 -3810"/>
+			<coords loc="60186 -32768 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[22_17_water1]" type="water" >
+		<polygon>
+			<coords loc="65536 -32768 -4810 -3810"/>
+			<coords loc="76800 -32768 -4810 -3810"/>
+			<coords loc="76800 0 -4810 -3810"/>
+			<coords loc="65536 0 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[22_17_water2]" type="water" >
+		<polygon>
+			<coords loc="98304 -18432 -4810 -3810"/>
+			<coords loc="98304 -32768 -4810 -3810"/>
+			<coords loc="76800 -32768 -4810 -3810"/>
+			<coords loc="76800 -18432 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[22_18_water1]" type="water" >
+		<polygon>
+			<coords loc="65536 4768 -4810 -3810"/>
+			<coords loc="75536 4768 -4810 -3810"/>
+			<coords loc="75536 32768 -4810 -3810"/>
+			<coords loc="65536 32768 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[22_18_water2]" type="water" >
+		<polygon>
+			<coords loc="75536 32768 -4810 -3810"/>
+			<coords loc="75536 27768 -4810 -3810"/>
+			<coords loc="98304 27768 -4810 -3810"/>
+			<coords loc="98304 32768 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[22_19_water1]" type="water" >
+		<polygon>
+			<coords loc="84727 53768 -4810 -3810"/>
+			<coords loc="91727 53768 -4810 -3810"/>
+			<coords loc="91727 32768 -4810 -3810"/>
+			<coords loc="84727 32768 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[22_20_water1]" type="water" >
+		<polygon>
+			<coords loc="65536 98304 -4802 -3802"/>
+			<coords loc="98304 98304 -4802 -3802"/>
+			<coords loc="98304 91304 -4802 -3802"/>
+			<coords loc="65536 91304 -4802 -3802"/>
+		</polygon>
+	</zone>
+	<zone name="[22_20_water2]" type="water" >
+		<polygon>
+			<coords loc="65536 91304 -4802 -3802"/>
+			<coords loc="65536 71304 -4802 -3802"/>
+			<coords loc="70536 71304 -4802 -3802"/>
+			<coords loc="70536 91304 -4802 -3802"/>
+		</polygon>
+	</zone>
+	<zone name="[22_20_water3]" type="water" >
+		<polygon>
+			<coords loc="74600 78100 -5822 -3400"/>
+			<coords loc="74600 78700 -5822 -3400"/>
+			<coords loc="74050 78700 -5822 -3400"/>
+			<coords loc="74050 78100 -5822 -3400"/>
+		</polygon>
+	</zone>
+	<zone name="[22_20_water4]" type="water" >
+		<polygon>
+			<coords loc="75850 78080 -5822 -5150"/>
+			<coords loc="75850 78720 -5822 -5150"/>
+			<coords loc="74100 78720 -5822 -5150"/>
+			<coords loc="74100 78080 -5822 -5150"/>
+		</polygon>
+	</zone>
+	<zone name="[22_22_water1]" type="water" >
+		<polygon>
+			<coords loc="78304 163840 -8808 -3810"/>
+			<coords loc="98304 163840 -8808 -3810"/>
+			<coords loc="98304 139840 -8808 -3810"/>
+			<coords loc="78304 139840 -8808 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[22_23_water1]" type="water" >
+		<polygon>
+			<coords loc="65536 163840 -4810 -3810"/>
+			<coords loc="98304 163840 -4810 -3810"/>
+			<coords loc="98304 196608 -4810 -3810"/>
+			<coords loc="65536 196608 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[22_24_water1]" type="water" >
+		<polygon>
+			<coords loc="93696 224128 -4810 -3810"/>
+			<coords loc="98304 224128 -4810 -3810"/>
+			<coords loc="98304 229376 -4810 -3810"/>
+			<coords loc="93696 229376 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[22_24_water2]" type="water" >
+		<polygon>
+			<coords loc="98304 201216 -4810 -3810"/>
+			<coords loc="98304 196608 -4810 -3810"/>
+			<coords loc="93056 196608 -4810 -3810"/>
+			<coords loc="93056 201216 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[22_24_water3]" type="water" >
+		<polygon>
+			<coords loc="76032 196608 -4810 -3810"/>
+			<coords loc="65536 196608 -4810 -3810"/>
+			<coords loc="65536 200320 -4810 -3810"/>
+			<coords loc="76032 200320 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[22_24_water4]" type="water" >
+		<polygon>
+			<coords loc="70024 222217 -4810 -3810"/>
+			<coords loc="77862 222217 -4810 -3810"/>
+			<coords loc="77862 229376 -4810 -3810"/>
+			<coords loc="70024 229376 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[22_24_water5]" type="water" >
+		<polygon>
+			<coords loc="65536 200320 -4810 -3810"/>
+			<coords loc="70024 200320 -4810 -3810"/>
+			<coords loc="70024 229376 -4810 -3810"/>
+			<coords loc="65536 229376 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[22_24_water6]" type="water" >
+		<polygon>
+			<coords loc="70024 222217 -4298 -3810"/>
+			<coords loc="79174 222217 -4298 -3810"/>
+			<coords loc="79174 200320 -4298 -3810"/>
+			<coords loc="70024 200320 -4298 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[22_24_water7]" type="water" >
+		<polygon>
+			<coords loc="93696 224128 -4298 -3810"/>
+			<coords loc="93696 229376 -4298 -3810"/>
+			<coords loc="77862 229376 -4298 -3810"/>
+			<coords loc="77862 224128 -4298 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[22_24_water8]" type="water" >
+		<polygon>
+			<coords loc="98304 224128 -4298 -3810"/>
+			<coords loc="98304 201216 -4298 -3810"/>
+			<coords loc="80192 201216 -4298 -3810"/>
+			<coords loc="80192 224128 -4298 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[22_24_water9]" type="water" >
+		<polygon>
+			<coords loc="81856 201216 -4298 -3810"/>
+			<coords loc="81856 196608 -4298 -3810"/>
+			<coords loc="93056 196608 -4298 -3810"/>
+			<coords loc="93056 201216 -4298 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[22_24_water10]" type="water" >
+		<polygon>
+			<coords loc="80000 208950 -6136 -3700"/>
+			<coords loc="79400 208950 -6136 -3700"/>
+			<coords loc="79400 209500 -6136 -3700"/>
+			<coords loc="80000 209500 -6136 -3700"/>
+		</polygon>
+	</zone>
+	<zone name="[22_24_water11]" type="water" >
+		<polygon>
+			<coords loc="79400 209537 -6136 -5400"/>
+			<coords loc="79400 208897 -6136 -5400"/>
+			<coords loc="81250 208897 -6136 -5400"/>
+			<coords loc="81250 209537 -6136 -5400"/>
+		</polygon>
+	</zone>
+	<zone name="[22_24_water12]" type="water" >
+		<polygon>
+			<coords loc="80192 209727 -4298 -3810"/>
+			<coords loc="80192 224128 -4298 -3810"/>
+			<coords loc="79174 224128 -4298 -3810"/>
+			<coords loc="79174 209727 -4298 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[22_24_water13]" type="water" >
+		<polygon>
+			<coords loc="80192 201216 -4298 -3810"/>
+			<coords loc="79174 201216 -4298 -3810"/>
+			<coords loc="79174 208704 -4298 -3810"/>
+			<coords loc="80192 208704 -4298 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[22_25_water1]" type="water" >
+		<polygon>
+			<coords loc="79010 254711 -10932 -10916"/>
+			<coords loc="79010 246661 -10932 -10916"/>
+			<coords loc="86498 246661 -10932 -10916"/>
+			<coords loc="86498 254711 -10932 -10916"/>
+		</polygon>
+	</zone>
+	<zone name="[22_25_water2]" type="water" >
+		<polygon>
+			<coords loc="84195 239660 -7249 -4233"/>
+			<coords loc="86179 239660 -7249 -4233"/>
+			<coords loc="86179 242732 -7249 -4233"/>
+			<coords loc="84195 242732 -7249 -4233"/>
+		</polygon>
+	</zone>
+	<zone name="[22_25_water3]" type="water" >
+		<polygon>
+			<coords loc="82979 241920 -7249 -6793"/>
+			<coords loc="84195 241920 -7249 -6793"/>
+			<coords loc="84195 241472 -7249 -6793"/>
+			<coords loc="82979 241472 -7249 -6793"/>
+		</polygon>
+	</zone>
+	<zone name="[22_25_water4]" type="water" >
+		<polygon>
+			<coords loc="80356 245845 -9384 -8928"/>
+			<coords loc="80356 245013 -9384 -8928"/>
+			<coords loc="84644 245013 -9384 -8928"/>
+			<coords loc="84644 245845 -9384 -8928"/>
+		</polygon>
+	</zone>
+	<zone name="[22_25_water5]" type="water" >
+		<polygon>
+			<coords loc="84591 258989 -9384 -8928"/>
+			<coords loc="84591 258157 -9384 -8928"/>
+			<coords loc="80303 258157 -9384 -8928"/>
+			<coords loc="80303 258989 -9384 -8928"/>
+		</polygon>
+	</zone>
+	<zone name="[22_25_water6]" type="water" >
+		<polygon>
+			<coords loc="98304 229376 -4810 -3810"/>
+			<coords loc="65536 229376 -4810 -3810"/>
+			<coords loc="65536 262144 -4810 -3810"/>
+			<coords loc="98304 262144 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[22_25_water7]" type="water" >
+		<polygon>
+			<coords loc="78624 254711 -10932 -10916"/>
+			<coords loc="82336 254711 -10932 -10916"/>
+			<coords loc="82336 255593 -10932 -10916"/>
+			<coords loc="78624 255593 -10932 -10916"/>
+		</polygon>
+	</zone>
+	<zone name="[22_25_water8]" type="water" >
+		<polygon>
+			<coords loc="82785 254711 -10932 -10916"/>
+			<coords loc="82785 255593 -10932 -10916"/>
+			<coords loc="86497 255593 -10932 -10916"/>
+			<coords loc="86497 254711 -10932 -10916"/>
+		</polygon>
+	</zone>
+	<zone name="[22_25_water9]" type="water" >
+		<polygon>
+			<coords loc="82336 255593 -10932 -10916"/>
+			<coords loc="82336 255351 -10932 -10916"/>
+			<coords loc="82785 255351 -10932 -10916"/>
+			<coords loc="82785 255593 -10932 -10916"/>
+		</polygon>
+	</zone>
+	<zone name="[23_10_water1]" type="water" >
+		<polygon>
+			<coords loc="98304 -262144 -4810 -3810"/>
+			<coords loc="131072 -262144 -4810 -3810"/>
+			<coords loc="131072 -229376 -4810 -3810"/>
+			<coords loc="98304 -229376 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[23_11_water1]" type="water" >
+		<polygon>
+			<coords loc="98304 -229376 -4810 -3810"/>
+			<coords loc="131072 -229376 -4810 -3810"/>
+			<coords loc="131072 -196608 -4810 -3810"/>
+			<coords loc="98304 -196608 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[23_12_water1]" type="water" >
+		<polygon>
+			<coords loc="119040 -196608 -4810 -3810"/>
+			<coords loc="131072 -196608 -4810 -3810"/>
+			<coords loc="131072 -178624 -4810 -3810"/>
+			<coords loc="119040 -178624 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[23_13_water1]" type="water" >
+		<polygon>
+			<coords loc="98304 -163840 -4810 -3810"/>
+			<coords loc="131072 -163840 -4810 -3810"/>
+			<coords loc="131072 -131072 -4810 -3810"/>
+			<coords loc="98304 -131072 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[23_14_water1]" type="water" >
+		<polygon>
+			<coords loc="98304 -131072 -4810 -3810"/>
+			<coords loc="131072 -131072 -4810 -3810"/>
+			<coords loc="131072 -98304 -4810 -3810"/>
+			<coords loc="98304 -98304 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[23_15_water1]" type="water" >
+		<polygon>
+			<coords loc="108552 -98296 -4810 -3810"/>
+			<coords loc="129656 -98296 -4810 -3810"/>
+			<coords loc="129656 -91656 -4810 -3810"/>
+			<coords loc="108552 -91656 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[23_18_water1]" type="water" >
+		<polygon>
+			<coords loc="98305 27768 -4810 -3810"/>
+			<coords loc="120321 27768 -4810 -3810"/>
+			<coords loc="120321 32768 -4810 -3810"/>
+			<coords loc="98305 32768 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[23_19_water1]" type="water" >
+		<polygon>
+			<coords loc="107656 52104 -4900 -4686"/>
+			<coords loc="108792 52104 -4900 -4686"/>
+			<coords loc="108792 53752 -4900 -4686"/>
+			<coords loc="107656 53752 -4900 -4686"/>
+		</polygon>
+	</zone>
+	<zone name="[23_20_water1]" type="water" >
+		<polygon>
+			<coords loc="110800 84275 -7214 -4800"/>
+			<coords loc="110800 84825 -7214 -4800"/>
+			<coords loc="110250 84825 -7214 -4800"/>
+			<coords loc="110250 84275 -7214 -4800"/>
+		</polygon>
+	</zone>
+	<zone name="[23_20_water2]" type="water" >
+		<polygon>
+			<coords loc="110300 84864 -7238 -6500"/>
+			<coords loc="112075 84864 -7238 -6500"/>
+			<coords loc="112075 84224 -7238 -6500"/>
+			<coords loc="110300 84224 -7238 -6500"/>
+		</polygon>
+	</zone>
+	<zone name="[23_22_water1]" type="water" >
+		<polygon>
+			<coords loc="98304 163840 -4810 -3810"/>
+			<coords loc="131072 163840 -4810 -3810"/>
+			<coords loc="131072 138240 -4810 -3810"/>
+			<coords loc="98304 138240 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[23_22_water2]" type="water" >
+		<polygon>
+			<coords loc="112096 142624 -3206 -2922"/>
+			<coords loc="119232 142624 -3206 -2922"/>
+			<coords loc="119232 147604 -3206 -2922"/>
+			<coords loc="112096 147604 -3206 -2922"/>
+		</polygon>
+	</zone>
+	<zone name="[23_22_water3]" type="water" >
+		<polygon>
+			<coords loc="117509 138240 -4110 -3810"/>
+			<coords loc="122009 138240 -4110 -3810"/>
+			<coords loc="122009 136740 -4110 -3810"/>
+			<coords loc="117509 136740 -4110 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[23_22_water4]" type="water" >
+		<polygon>
+			<coords loc="117509 138240 -4110 -3810"/>
+			<coords loc="122009 138240 -4110 -3810"/>
+			<coords loc="122009 136740 -4110 -3810"/>
+			<coords loc="117509 136740 -4110 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[23_22_water5]" type="water" >
+		<polygon>
+			<coords loc="117509 136740 -4110 -3810"/>
+			<coords loc="122009 136740 -4110 -3810"/>
+			<coords loc="122009 138240 -4110 -3810"/>
+			<coords loc="117509 138240 -4110 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[23_22_water6]" type="water" >
+		<polygon>
+			<coords loc="115160 132520 -5534 -3100"/>
+			<coords loc="115160 133080 -5534 -3100"/>
+			<coords loc="114600 133080 -5534 -3100"/>
+			<coords loc="114600 132520 -5534 -3100"/>
+		</polygon>
+	</zone>
+	<zone name="[23_22_water7]" type="water" >
+		<polygon>
+			<coords loc="114600 132480 -5534 -4900"/>
+			<coords loc="116450 132480 -5534 -4900"/>
+			<coords loc="116450 133120 -5534 -4900"/>
+			<coords loc="114600 133120 -5534 -4900"/>
+		</polygon>
+	</zone>
+	<zone name="[23_23_water1]" type="water" >
+		<polygon>
+			<coords loc="98304 167840 -4810 -3810"/>
+			<coords loc="131072 167840 -4810 -3810"/>
+			<coords loc="131072 163840 -4810 -3810"/>
+			<coords loc="98304 163840 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[23_23_water2]" type="water" >
+		<polygon>
+			<coords loc="98304 167840 -4810 -3810"/>
+			<coords loc="102304 167840 -4810 -3810"/>
+			<coords loc="102304 196608 -4810 -3810"/>
+			<coords loc="98304 196608 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[23_23_water3]" type="water" >
+		<polygon>
+			<coords loc="124072 196608 -4810 -3810"/>
+			<coords loc="131072 196608 -4810 -3810"/>
+			<coords loc="131072 167840 -4810 -3810"/>
+			<coords loc="124072 167840 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[23_23_water4]" type="water" >
+		<polygon>
+			<coords loc="102304 191608 -4810 -3810"/>
+			<coords loc="124072 191608 -4810 -3810"/>
+			<coords loc="124072 196608 -4810 -3810"/>
+			<coords loc="102304 196608 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[23_23_water5]" type="water" >
+		<polygon>
+			<coords loc="121672 189151 -4810 -3810"/>
+			<coords loc="124072 189151 -4810 -3810"/>
+			<coords loc="124072 186199 -4810 -3810"/>
+			<coords loc="121672 186199 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[23_23_water6]" type="water" >
+		<polygon>
+			<coords loc="102304 187250 -4810 -3810"/>
+			<coords loc="105652 187250 -4810 -3810"/>
+			<coords loc="105652 184170 -4810 -3810"/>
+			<coords loc="102304 184170 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[23_23_water7]" type="water" >
+		<polygon>
+			<coords loc="102304 173567 -4810 -3810"/>
+			<coords loc="106804 173567 -4810 -3810"/>
+			<coords loc="106804 168567 -4810 -3810"/>
+			<coords loc="102304 168567 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[23_23_water8]" type="water" >
+		<polygon>
+			<coords loc="108100 174300 -6126 -3785"/>
+			<coords loc="108100 173730 -6126 -3785"/>
+			<coords loc="107550 173730 -6126 -3785"/>
+			<coords loc="107550 174300 -6126 -3785"/>
+		</polygon>
+	</zone>
+	<zone name="[23_23_water9]" type="water" >
+		<polygon>
+			<coords loc="107600 173696 -6136 -5450"/>
+			<coords loc="109500 173696 -6136 -5450"/>
+			<coords loc="109500 174336 -6136 -5450"/>
+			<coords loc="107600 174336 -6136 -5450"/>
+		</polygon>
+	</zone>
+	<zone name="[23_24_water1]" type="water" >
+		<polygon>
+			<coords loc="98304 229376 -4810 -3810"/>
+			<coords loc="131072 229376 -4810 -3810"/>
+			<coords loc="131072 196608 -4810 -3810"/>
+			<coords loc="98304 196608 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[23_25_water1]" type="water" >
+		<polygon>
+			<coords loc="98304 262144 -4810 -3810"/>
+			<coords loc="131072 262144 -4810 -3810"/>
+			<coords loc="131072 229376 -4810 -3810"/>
+			<coords loc="98304 229376 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[24_11_water1]" type="water" >
+		<polygon>
+			<coords loc="163840 -229376 -4810 -3810"/>
+			<coords loc="163840 -196608 -4810 -3810"/>
+			<coords loc="131072 -196608 -4810 -3810"/>
+			<coords loc="131072 -229376 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[24_12_water1]" type="water" >
+		<polygon>
+			<coords loc="131072 -178608 -4810 -3810"/>
+			<coords loc="163840 -178608 -4810 -3810"/>
+			<coords loc="163840 -196608 -4810 -3810"/>
+			<coords loc="131072 -196608 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[24_18_water1]" type="water" >
+		<polygon>
+			<coords loc="145081 29939 -2700 -2558"/>
+			<coords loc="145081 25139 -2700 -2558"/>
+			<coords loc="149881 25139 -2700 -2558"/>
+			<coords loc="149881 29939 -2700 -2558"/>
+		</polygon>
+	</zone>
+	<zone name="[24_19_water1]" type="water" >
+		<polygon>
+			<coords loc="131059 65536 -4806 -3806"/>
+			<coords loc="163827 65536 -4806 -3806"/>
+			<coords loc="163827 32768 -4806 -3806"/>
+			<coords loc="131059 32768 -4806 -3806"/>
+		</polygon>
+	</zone>
+	<zone name="[24_20_water1]" type="water" >
+		<polygon>
+			<coords loc="131072 65536 -4810 -3810"/>
+			<coords loc="163840 65536 -4810 -3810"/>
+			<coords loc="163840 98304 -4810 -3810"/>
+			<coords loc="131072 98304 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[24_20_water2]" type="water" >
+		<polygon>
+			<coords loc="137300 79400 -6100 -3600"/>
+			<coords loc="136750 79400 -6100 -3600"/>
+			<coords loc="136750 79950 -6100 -3600"/>
+			<coords loc="137300 79950 -6100 -3600"/>
+		</polygon>
+	</zone>
+	<zone name="[24_20_water3]" type="water" >
+		<polygon>
+			<coords loc="138600 79500 -6100 -5450"/>
+			<coords loc="136800 79500 -6100 -5450"/>
+			<coords loc="136800 79900 -6100 -5450"/>
+			<coords loc="138600 79900 -6100 -5450"/>
+		</polygon>
+	</zone>
+	<zone name="[24_21_water1]" type="water" >
+		<polygon>
+			<coords loc="131072 126072 -4810 -3810"/>
+			<coords loc="136072 126072 -4810 -3810"/>
+			<coords loc="136072 131072 -4810 -3810"/>
+			<coords loc="131072 131072 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[24_22_water1]" type="water" >
+		<polygon>
+			<coords loc="131072 131072 -5580 -3810"/>
+			<coords loc="163840 131072 -5580 -3810"/>
+			<coords loc="163840 163840 -5580 -3810"/>
+			<coords loc="131072 163840 -5580 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[24_23_water1]" type="water" >
+		<polygon>
+			<coords loc="131072 163840 -5580 -3810"/>
+			<coords loc="163840 163840 -5580 -3810"/>
+			<coords loc="163840 196608 -5580 -3810"/>
+			<coords loc="131072 196608 -5580 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[24_24_water1]" type="water" >
+		<polygon>
+			<coords loc="131072 196608 -4810 -3810"/>
+			<coords loc="163840 196608 -4810 -3810"/>
+			<coords loc="163840 229376 -4810 -3810"/>
+			<coords loc="131072 229376 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[24_25_water1]" type="water" >
+		<polygon>
+			<coords loc="131072 229376 -4810 -3810"/>
+			<coords loc="163840 229376 -4810 -3810"/>
+			<coords loc="163840 262144 -4810 -3810"/>
+			<coords loc="131072 262144 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[25_11_water1]" type="water" >
+		<polygon>
+			<coords loc="163840 -229376 -4810 -3810"/>
+			<coords loc="196608 -229376 -4810 -3810"/>
+			<coords loc="196608 -196608 -4810 -3810"/>
+			<coords loc="163840 -196608 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[25_12_water1]" type="water" >
+		<polygon>
+			<coords loc="163840 -196608 -4810 -3810"/>
+			<coords loc="168840 -196608 -4810 -3810"/>
+			<coords loc="168840 -186608 -4810 -3810"/>
+			<coords loc="163840 -186608 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[25_14_water1]" type="water" >
+		<polygon>
+			<coords loc="170908 -113953 -4673 -4063"/>
+			<coords loc="173748 -113953 -4673 -4063"/>
+			<coords loc="173748 -116846 -4673 -4063"/>
+			<coords loc="170908 -116846 -4673 -4063"/>
+		</polygon>
+	</zone>
+	<zone name="[25_14_water2]" type="water" >
+		<polygon>
+			<coords loc="170926 -113936 -6160 -5286"/>
+			<coords loc="173766 -113936 -6160 -5286"/>
+			<coords loc="173766 -111043 -6160 -5286"/>
+			<coords loc="170926 -111043 -6160 -5286"/>
+		</polygon>
+	</zone>
+	<zone name="[25_17_water1]" type="water" >
+		<polygon>
+			<coords loc="168620 -17888 -5598 -3200"/>
+			<coords loc="169200 -17888 -5598 -3200"/>
+			<coords loc="169200 -17320 -5598 -3200"/>
+			<coords loc="168620 -17320 -5598 -3200"/>
+		</polygon>
+	</zone>
+	<zone name="[25_17_water2]" type="water" >
+		<polygon>
+			<coords loc="170450 -17280 -5598 -5000"/>
+			<coords loc="170450 -17920 -5598 -5000"/>
+			<coords loc="168700 -17920 -5598 -5000"/>
+			<coords loc="168700 -17280 -5598 -5000"/>
+		</polygon>
+	</zone>
+	<zone name="[25_20_water1]" type="water" >
+		<polygon>
+			<coords loc="173840 65760 -4310 -3810"/>
+			<coords loc="163840 65760 -4310 -3810"/>
+			<coords loc="163840 95072 -4310 -3810"/>
+			<coords loc="173840 95072 -4310 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[25_22_water1]" type="water" >
+		<polygon>
+			<coords loc="163840 131072 -4810 -3810"/>
+			<coords loc="196608 131072 -4810 -3810"/>
+			<coords loc="196608 163840 -4810 -3810"/>
+			<coords loc="163840 163840 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[25_23_water1]" type="water" >
+		<polygon>
+			<coords loc="163840 163840 -4810 -3810"/>
+			<coords loc="196608 163840 -4810 -3810"/>
+			<coords loc="196608 196608 -4810 -3810"/>
+			<coords loc="163840 196608 -4810 -3810"/>
+		</polygon>
+	</zone>
+	<zone name="[25_24_water1]" type="water" >
+		<polygon>
+			<coords loc="163840 196608 -4810 -3810"/>
+			<coords loc="196608 196608 -4810 -3810"/>
+			<coords loc="196608 229376 -4810 -3810"/>
+			<coords loc="163840 229376 -4810 -3810"/>
+		</polygon>
+	</zone>
+</list>

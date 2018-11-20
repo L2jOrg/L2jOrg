@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="48">	<!--Отшельник-->
+			<skill id="210" level="9" name="Владение Кастетами(Fist Weapon Mastery)" cost="70000" min_level="40"/>
+			<skill id="210" level="10" name="Владение Кастетами(Fist Weapon Mastery)" cost="70000" min_level="40"/>
+			<skill id="210" level="11" name="Владение Кастетами(Fist Weapon Mastery)" cost="70000" min_level="40"/>
+			<skill id="233" level="11" name="Владение Легкой Броней(Light Armor Mastery)" cost="70000" min_level="40"/>
+			<skill id="233" level="12" name="Владение Легкой Броней(Light Armor Mastery)" cost="70000" min_level="40"/>
+			<skill id="233" level="13" name="Владение Легкой Броней(Light Armor Mastery)" cost="70000" min_level="40"/>
+			<skill id="993" level="3" name="Владение Силой(Force Mastery)" cost="70000" min_level="40"/>
+			<skill id="280" level="1" name="Горящий Кулак(Burning Fist)" cost="70000" min_level="40"/>
+			<skill id="280" level="2" name="Горящий Кулак(Burning Fist)" cost="70000" min_level="40"/>
+			<skill id="280" level="3" name="Горящий Кулак(Burning Fist)" cost="70000" min_level="40"/>
+			<skill id="54" level="13" name="Импульс Силы(Force Blaster)" cost="70000" min_level="40"/>
+			<skill id="54" level="14" name="Импульс Силы(Force Blaster)" cost="70000" min_level="40"/>
+			<skill id="54" level="15" name="Импульс Силы(Force Blaster)" cost="70000" min_level="40"/>
+			<skill id="281" level="1" name="Разрушитель Душ(Soul Breaker)" cost="70000" min_level="40"/>
+			<skill id="281" level="2" name="Разрушитель Душ(Soul Breaker)" cost="70000" min_level="40"/>
+			<skill id="281" level="3" name="Разрушитель Душ(Soul Breaker)" cost="70000" min_level="40"/>
+			<skill id="282" level="1" name="Тотемный Дух Пумы(Puma Spirit Totem)" cost="70000" min_level="40"/>
+			<skill id="284" level="4" name="Ураганное Нападение(Hurricane Assault)" cost="70000" min_level="40"/>
+			<skill id="284" level="5" name="Ураганное Нападение(Hurricane Assault)" cost="70000" min_level="40"/>
+			<skill id="284" level="6" name="Ураганное Нападение(Hurricane Assault)" cost="70000" min_level="40"/>
+			<skill id="50" level="3" name="Фокусировка Силы(Focus Force)" cost="70000" min_level="40"/>
+			<skill id="95" level="6" name="Хромота(Cripple)" cost="70000" min_level="40"/>
+			<skill id="17" level="1" name="Взрыв Силы(Force Burst)" cost="82000" min_level="41"/>
+			<skill id="210" level="12" name="Владение Кастетами(Fist Weapon Mastery)" cost="82000" min_level="41"/>
+			<skill id="233" level="14" name="Владение Легкой Броней(Light Armor Mastery)" cost="82000" min_level="41"/>
+			<skill id="280" level="4" name="Горящий Кулак(Burning Fist)" cost="82000" min_level="41"/>
+			<skill id="54" level="16" name="Импульс Силы(Force Blaster)" cost="82000" min_level="41"/>
+			<skill id="281" level="4" name="Разрушитель Душ(Soul Breaker)" cost="82000" min_level="41"/>
+			<skill id="284" level="7" name="Ураганное Нападение(Hurricane Assault)" cost="82000" min_level="41"/>
+			<skill id="17" level="2" name="Взрыв Силы(Force Burst)" cost="82000" min_level="42"/>
+			<skill id="210" level="13" name="Владение Кастетами(Fist Weapon Mastery)" cost="82000" min_level="42"/>
+			<skill id="233" level="15" name="Владение Легкой Броней(Light Armor Mastery)" cost="82000" min_level="42"/>
+			<skill id="280" level="5" name="Горящий Кулак(Burning Fist)" cost="82000" min_level="42"/>
+			<skill id="54" level="17" name="Импульс Силы(Force Blaster)" cost="82000" min_level="42"/>
+			<skill id="281" level="5" name="Разрушитель Душ(Soul Breaker)" cost="82000" min_level="42"/>
+			<skill id="284" level="8" name="Ураганное Нападение(Hurricane Assault)" cost="82000" min_level="42"/>
+			<skill id="17" level="3" name="Взрыв Силы(Force Burst)" cost="82000" min_level="43"/>
+			<skill id="210" level="14" name="Владение Кастетами(Fist Weapon Mastery)" cost="82000" min_level="43"/>
+			<skill id="233" level="16" name="Владение Легкой Броней(Light Armor Mastery)" cost="82000" min_level="43"/>
+			<skill id="280" level="6" name="Горящий Кулак(Burning Fist)" cost="82000" min_level="43"/>
+			<skill id="54" level="18" name="Импульс Силы(Force Blaster)" cost="82000" min_level="43"/>
+			<skill id="281" level="6" name="Разрушитель Душ(Soul Breaker)" cost="82000" min_level="43"/>
+			<skill id="284" level="9" name="Ураганное Нападение(Hurricane Assault)" cost="82000" min_level="43"/>
+			<skill id="95" level="7" name="Хромота(Cripple)" cost="82000" min_level="43"/>
+			<skill id="222" level="1" name="Ярость Орка(Fury Fists)" cost="82000" min_level="43"/>
+			<skill id="17" level="4" name="Взрыв Силы(Force Burst)" cost="120000" min_level="44"/>
+			<skill id="210" level="15" name="Владение Кастетами(Fist Weapon Mastery)" cost="120000" min_level="44"/>
+			<skill id="233" level="17" name="Владение Легкой Броней(Light Armor Mastery)" cost="120000" min_level="44"/>
+			<skill id="280" level="7" name="Горящий Кулак(Burning Fist)" cost="120000" min_level="44"/>
+			<skill id="54" level="19" name="Импульс Силы(Force Blaster)" cost="120000" min_level="44"/>
+			<skill id="281" level="7" name="Разрушитель Душ(Soul Breaker)" cost="120000" min_level="44"/>
+			<skill id="284" level="10" name="Ураганное Нападение(Hurricane Assault)" cost="120000" min_level="44"/>
+			<skill id="17" level="5" name="Взрыв Силы(Force Burst)" cost="120000" min_level="45"/>
+			<skill id="210" level="16" name="Владение Кастетами(Fist Weapon Mastery)" cost="120000" min_level="45"/>
+			<skill id="233" level="18" name="Владение Легкой Броней(Light Armor Mastery)" cost="120000" min_level="45"/>
+			<skill id="280" level="8" name="Горящий Кулак(Burning Fist)" cost="120000" min_level="45"/>
+			<skill id="54" level="20" name="Импульс Силы(Force Blaster)" cost="120000" min_level="45"/>
+			<skill id="1800" level="1" name="Пират(Pirate)" min_level="45"/>
+			<skill id="281" level="8" name="Разрушитель Душ(Soul Breaker)" cost="120000" min_level="45"/>
+			<skill id="284" level="11" name="Ураганное Нападение(Hurricane Assault)" cost="120000" min_level="45"/>
+			<skill id="17" level="6" name="Взрыв Силы(Force Burst)" cost="120000" min_level="46"/>
+			<skill id="210" level="17" name="Владение Кастетами(Fist Weapon Mastery)" cost="120000" min_level="46"/>
+			<skill id="233" level="19" name="Владение Легкой Броней(Light Armor Mastery)" cost="120000" min_level="46"/>
+			<skill id="280" level="9" name="Горящий Кулак(Burning Fist)" cost="120000" min_level="46"/>
+			<skill id="54" level="21" name="Импульс Силы(Force Blaster)" cost="120000" min_level="46"/>
+			<skill id="281" level="9" name="Разрушитель Душ(Soul Breaker)" cost="120000" min_level="46"/>
+			<skill id="109" level="1" name="Тотемный Дух Огра(Ogre Spirit Totem)" cost="120000" min_level="46"/>
+			<skill id="168" level="2" name="Увеличить Скорость Атаки(Boost Atk. Spd.)" cost="120000" min_level="46"/>
+			<skill id="284" level="12" name="Ураганное Нападение(Hurricane Assault)" cost="120000" min_level="46"/>
+			<skill id="95" level="8" name="Хромота(Cripple)" cost="120000" min_level="46"/>
+			<skill id="17" level="7" name="Взрыв Силы(Force Burst)" cost="170000" min_level="47"/>
+			<skill id="210" level="18" name="Владение Кастетами(Fist Weapon Mastery)" cost="170000" min_level="47"/>
+			<skill id="233" level="20" name="Владение Легкой Броней(Light Armor Mastery)" cost="170000" min_level="47"/>
+			<skill id="280" level="10" name="Горящий Кулак(Burning Fist)" cost="170000" min_level="47"/>
+			<skill id="54" level="22" name="Импульс Силы(Force Blaster)" cost="170000" min_level="47"/>
+			<skill id="281" level="10" name="Разрушитель Душ(Soul Breaker)" cost="170000" min_level="47"/>
+			<skill id="35" level="1" name="Силовой Шторм(Force Storm)" cost="170000" min_level="47"/>
+			<skill id="284" level="13" name="Ураганное Нападение(Hurricane Assault)" cost="170000" min_level="47"/>
+			<skill id="17" level="8" name="Взрыв Силы(Force Burst)" cost="170000" min_level="48"/>
+			<skill id="210" level="19" name="Владение Кастетами(Fist Weapon Mastery)" cost="170000" min_level="48"/>
+			<skill id="233" level="21" name="Владение Легкой Броней(Light Armor Mastery)" cost="170000" min_level="48"/>
+			<skill id="280" level="11" name="Горящий Кулак(Burning Fist)" cost="170000" min_level="48"/>
+			<skill id="54" level="23" name="Импульс Силы(Force Blaster)" cost="170000" min_level="48"/>
+			<skill id="281" level="11" name="Разрушитель Душ(Soul Breaker)" cost="170000" min_level="48"/>
+			<skill id="35" level="2" name="Силовой Шторм(Force Storm)" cost="170000" min_level="48"/>
+			<skill id="284" level="14" name="Ураганное Нападение(Hurricane Assault)" cost="170000" min_level="48"/>
+			<skill id="17" level="9" name="Взрыв Силы(Force Burst)" cost="170000" min_level="49"/>
+			<skill id="210" level="20" name="Владение Кастетами(Fist Weapon Mastery)" cost="170000" min_level="49"/>
+			<skill id="233" level="22" name="Владение Легкой Броней(Light Armor Mastery)" cost="170000" min_level="49"/>
+			<skill id="280" level="12" name="Горящий Кулак(Burning Fist)" cost="170000" min_level="49"/>
+			<skill id="54" level="24" name="Импульс Силы(Force Blaster)" cost="170000" min_level="49"/>
+			<skill id="281" level="12" name="Разрушитель Душ(Soul Breaker)" cost="170000" min_level="49"/>
+			<skill id="35" level="3" name="Силовой Шторм(Force Storm)" cost="170000" min_level="49"/>
+			<skill id="284" level="15" name="Ураганное Нападение(Hurricane Assault)" cost="170000" min_level="49"/>
+			<skill id="95" level="9" name="Хромота(Cripple)" cost="170000" min_level="49"/>
+			<skill id="17" level="10" name="Взрыв Силы(Force Burst)" cost="240000" min_level="50"/>
+			<skill id="210" level="21" name="Владение Кастетами(Fist Weapon Mastery)" cost="240000" min_level="50"/>
+			<skill id="233" level="23" name="Владение Легкой Броней(Light Armor Mastery)" cost="240000" min_level="50"/>
+			<skill id="280" level="13" name="Горящий Кулак(Burning Fist)" cost="240000" min_level="50"/>
+			<skill id="54" level="25" name="Импульс Силы(Force Blaster)" cost="240000" min_level="50"/>
+			<skill id="281" level="13" name="Разрушитель Душ(Soul Breaker)" cost="240000" min_level="50"/>
+			<skill id="35" level="4" name="Силовой Шторм(Force Storm)" cost="240000" min_level="50"/>
+			<skill id="284" level="16" name="Ураганное Нападение(Hurricane Assault)" cost="240000" min_level="50"/>
+			<skill id="17" level="11" name="Взрыв Силы(Force Burst)" cost="240000" min_level="51"/>
+			<skill id="210" level="22" name="Владение Кастетами(Fist Weapon Mastery)" cost="240000" min_level="51"/>
+			<skill id="233" level="24" name="Владение Легкой Броней(Light Armor Mastery)" cost="240000" min_level="51"/>
+			<skill id="280" level="14" name="Горящий Кулак(Burning Fist)" cost="240000" min_level="51"/>
+			<skill id="54" level="26" name="Импульс Силы(Force Blaster)" cost="240000" min_level="51"/>
+			<skill id="281" level="14" name="Разрушитель Душ(Soul Breaker)" cost="240000" min_level="51"/>
+			<skill id="35" level="5" name="Силовой Шторм(Force Storm)" cost="240000" min_level="51"/>
+			<skill id="284" level="17" name="Ураганное Нападение(Hurricane Assault)" cost="240000" min_level="51"/>
+			<skill id="1405" level="1" name="Божественное Вдохновение(Divine Inspiration)" item_id="8618" cost="240000" min_level="52"/>
+			<skill id="17" level="12" name="Взрыв Силы(Force Burst)" cost="240000" min_level="52"/>
+			<skill id="210" level="23" name="Владение Кастетами(Fist Weapon Mastery)" cost="240000" min_level="52"/>
+			<skill id="233" level="25" name="Владение Легкой Броней(Light Armor Mastery)" cost="240000" min_level="52"/>
+			<skill id="993" level="4" name="Владение Силой(Force Mastery)" cost="240000" min_level="52"/>
+			<skill id="280" level="15" name="Горящий Кулак(Burning Fist)" cost="240000" min_level="52"/>
+			<skill id="54" level="27" name="Импульс Силы(Force Blaster)" cost="240000" min_level="52"/>
+			<skill id="461" level="1" name="Прервать Заключение(Break Duress)" item_id="49426" cost="240000" min_level="52"/>
+			<skill id="281" level="15" name="Разрушитель Душ(Soul Breaker)" cost="240000" min_level="52"/>
+			<skill id="35" level="6" name="Силовой Шторм(Force Storm)" cost="240000" min_level="52"/>
+			<skill id="284" level="18" name="Ураганное Нападение(Hurricane Assault)" cost="240000" min_level="52"/>
+			<skill id="50" level="4" name="Фокусировка Силы(Focus Force)" cost="240000" min_level="52"/>
+			<skill id="95" level="10" name="Хромота(Cripple)" cost="240000" min_level="52"/>
+			<skill id="17" level="13" name="Взрыв Силы(Force Burst)" cost="340000" min_level="53"/>
+			<skill id="210" level="24" name="Владение Кастетами(Fist Weapon Mastery)" cost="340000" min_level="53"/>
+			<skill id="233" level="26" name="Владение Легкой Броней(Light Armor Mastery)" cost="340000" min_level="53"/>
+			<skill id="280" level="16" name="Горящий Кулак(Burning Fist)" cost="340000" min_level="53"/>
+			<skill id="54" level="28" name="Импульс Силы(Force Blaster)" cost="340000" min_level="53"/>
+			<skill id="281" level="16" name="Разрушитель Душ(Soul Breaker)" cost="340000" min_level="53"/>
+			<skill id="35" level="7" name="Силовой Шторм(Force Storm)" cost="340000" min_level="53"/>
+			<skill id="284" level="19" name="Ураганное Нападение(Hurricane Assault)" cost="340000" min_level="53"/>
+			<skill id="17" level="14" name="Взрыв Силы(Force Burst)" cost="340000" min_level="54"/>
+			<skill id="210" level="25" name="Владение Кастетами(Fist Weapon Mastery)" cost="340000" min_level="54"/>
+			<skill id="233" level="27" name="Владение Легкой Броней(Light Armor Mastery)" cost="340000" min_level="54"/>
+			<skill id="280" level="17" name="Горящий Кулак(Burning Fist)" cost="340000" min_level="54"/>
+			<skill id="54" level="29" name="Импульс Силы(Force Blaster)" cost="340000" min_level="54"/>
+			<skill id="281" level="17" name="Разрушитель Душ(Soul Breaker)" cost="340000" min_level="54"/>
+			<skill id="35" level="8" name="Силовой Шторм(Force Storm)" cost="340000" min_level="54"/>
+			<skill id="284" level="20" name="Ураганное Нападение(Hurricane Assault)" cost="340000" min_level="54"/>
+			<skill id="17" level="15" name="Взрыв Силы(Force Burst)" cost="340000" min_level="55"/>
+			<skill id="210" level="26" name="Владение Кастетами(Fist Weapon Mastery)" cost="340000" min_level="55"/>
+			<skill id="233" level="28" name="Владение Легкой Броней(Light Armor Mastery)" cost="340000" min_level="55"/>
+			<skill id="280" level="18" name="Горящий Кулак(Burning Fist)" cost="340000" min_level="55"/>
+			<skill id="54" level="30" name="Импульс Силы(Force Blaster)" cost="340000" min_level="55"/>
+			<skill id="281" level="18" name="Разрушитель Душ(Soul Breaker)" cost="340000" min_level="55"/>
+			<skill id="35" level="9" name="Силовой Шторм(Force Storm)" cost="340000" min_level="55"/>
+			<skill id="81" level="1" name="Удар Судьбы(Punch of Doom)" cost="340000" min_level="55"/>
+			<skill id="284" level="21" name="Ураганное Нападение(Hurricane Assault)" cost="340000" min_level="55"/>
+			<skill id="95" level="11" name="Хромота(Cripple)" cost="340000" min_level="55"/>
+			<skill id="17" level="16" name="Взрыв Силы(Force Burst)" cost="470000" min_level="56"/>
+			<skill id="210" level="27" name="Владение Кастетами(Fist Weapon Mastery)" cost="470000" min_level="56"/>
+			<skill id="233" level="29" name="Владение Легкой Броней(Light Armor Mastery)" cost="470000" min_level="56"/>
+			<skill id="280" level="19" name="Горящий Кулак(Burning Fist)" cost="470000" min_level="56"/>
+			<skill id="54" level="31" name="Импульс Силы(Force Blaster)" cost="470000" min_level="56"/>
+			<skill id="281" level="19" name="Разрушитель Душ(Soul Breaker)" cost="470000" min_level="56"/>
+			<skill id="35" level="10" name="Силовой Шторм(Force Storm)" cost="470000" min_level="56"/>
+			<skill id="284" level="22" name="Ураганное Нападение(Hurricane Assault)" cost="470000" min_level="56"/>
+			<skill id="17" level="17" name="Взрыв Силы(Force Burst)" cost="470000" min_level="57"/>
+			<skill id="210" level="28" name="Владение Кастетами(Fist Weapon Mastery)" cost="470000" min_level="57"/>
+			<skill id="233" level="30" name="Владение Легкой Броней(Light Armor Mastery)" cost="470000" min_level="57"/>
+			<skill id="280" level="20" name="Горящий Кулак(Burning Fist)" cost="470000" min_level="57"/>
+			<skill id="54" level="32" name="Импульс Силы(Force Blaster)" cost="470000" min_level="57"/>
+			<skill id="281" level="20" name="Разрушитель Душ(Soul Breaker)" cost="470000" min_level="57"/>
+			<skill id="35" level="11" name="Силовой Шторм(Force Storm)" cost="470000" min_level="57"/>
+			<skill id="284" level="23" name="Ураганное Нападение(Hurricane Assault)" cost="470000" min_level="57"/>
+			<skill id="17" level="18" name="Взрыв Силы(Force Burst)" cost="470000" min_level="58"/>
+			<skill id="210" level="29" name="Владение Кастетами(Fist Weapon Mastery)" cost="470000" min_level="58"/>
+			<skill id="233" level="31" name="Владение Легкой Броней(Light Armor Mastery)" cost="470000" min_level="58"/>
+			<skill id="280" level="21" name="Горящий Кулак(Burning Fist)" cost="470000" min_level="58"/>
+			<skill id="54" level="33" name="Импульс Силы(Force Blaster)" cost="470000" min_level="58"/>
+			<skill id="281" level="21" name="Разрушитель Душ(Soul Breaker)" cost="470000" min_level="58"/>
+			<skill id="35" level="12" name="Силовой Шторм(Force Storm)" cost="470000" min_level="58"/>
+			<skill id="168" level="3" name="Увеличить Скорость Атаки(Boost Atk. Spd.)" cost="470000" min_level="58"/>
+			<skill id="284" level="24" name="Ураганное Нападение(Hurricane Assault)" cost="470000" min_level="58"/>
+			<skill id="420" level="1" name="Фанатик(Zealot)" cost="470000" min_level="58"/>
+			<skill id="95" level="12" name="Хромота(Cripple)" cost="470000" min_level="58"/>
+			<skill id="17" level="19" name="Взрыв Силы(Force Burst)" cost="680000" min_level="59"/>
+			<skill id="210" level="30" name="Владение Кастетами(Fist Weapon Mastery)" cost="680000" min_level="59"/>
+			<skill id="233" level="32" name="Владение Легкой Броней(Light Armor Mastery)" cost="680000" min_level="59"/>
+			<skill id="280" level="22" name="Горящий Кулак(Burning Fist)" cost="680000" min_level="59"/>
+			<skill id="54" level="34" name="Импульс Силы(Force Blaster)" cost="680000" min_level="59"/>
+			<skill id="281" level="22" name="Разрушитель Душ(Soul Breaker)" cost="680000" min_level="59"/>
+			<skill id="35" level="13" name="Силовой Шторм(Force Storm)" cost="680000" min_level="59"/>
+			<skill id="284" level="25" name="Ураганное Нападение(Hurricane Assault)" cost="680000" min_level="59"/>
+			<skill id="17" level="20" name="Взрыв Силы(Force Burst)" cost="680000" min_level="60"/>
+			<skill id="210" level="31" name="Владение Кастетами(Fist Weapon Mastery)" cost="680000" min_level="60"/>
+			<skill id="233" level="33" name="Владение Легкой Броней(Light Armor Mastery)" cost="680000" min_level="60"/>
+			<skill id="993" level="5" name="Владение Силой(Force Mastery)" cost="680000" min_level="60"/>
+			<skill id="280" level="23" name="Горящий Кулак(Burning Fist)" cost="680000" min_level="60"/>
+			<skill id="54" level="35" name="Импульс Силы(Force Blaster)" cost="680000" min_level="60"/>
+			<skill id="461" level="2" name="Прервать Заключение(Break Duress)" cost="680000" min_level="60"/>
+			<skill id="281" level="23" name="Разрушитель Душ(Soul Breaker)" cost="680000" min_level="60"/>
+			<skill id="35" level="14" name="Силовой Шторм(Force Storm)" cost="680000" min_level="60"/>
+			<skill id="1801" level="1" name="Темный Ассасин(Dark Assassin)" min_level="60"/>
+			<skill id="284" level="26" name="Ураганное Нападение(Hurricane Assault)" cost="680000" min_level="60"/>
+			<skill id="50" level="5" name="Фокусировка Силы(Focus Force)" cost="680000" min_level="60"/>
+			<skill id="95" level="13" name="Хромота(Cripple)" cost="680000" min_level="60"/>
+			<skill id="1405" level="2" name="Божественное Вдохновение(Divine Inspiration)" item_id="8619" cost="680000" min_level="61"/>
+			<skill id="17" level="21" name="Взрыв Силы(Force Burst)" cost="680000" min_level="61"/>
+			<skill id="210" level="32" name="Владение Кастетами(Fist Weapon Mastery)" cost="680000" min_level="61"/>
+			<skill id="233" level="34" name="Владение Легкой Броней(Light Armor Mastery)" cost="680000" min_level="61"/>
+			<skill id="280" level="24" name="Горящий Кулак(Burning Fist)" cost="680000" min_level="61"/>
+			<skill id="54" level="36" name="Импульс Силы(Force Blaster)" cost="680000" min_level="61"/>
+			<skill id="281" level="24" name="Разрушитель Душ(Soul Breaker)" cost="680000" min_level="61"/>
+			<skill id="35" level="15" name="Силовой Шторм(Force Storm)" cost="680000" min_level="61"/>
+			<skill id="284" level="27" name="Ураганное Нападение(Hurricane Assault)" cost="680000" min_level="61"/>
+			<skill id="17" level="22" name="Взрыв Силы(Force Burst)" cost="840000" min_level="62"/>
+			<skill id="210" level="33" name="Владение Кастетами(Fist Weapon Mastery)" cost="840000" min_level="62"/>
+			<skill id="233" level="35" name="Владение Легкой Броней(Light Armor Mastery)" cost="840000" min_level="62"/>
+			<skill id="280" level="25" name="Горящий Кулак(Burning Fist)" cost="840000" min_level="62"/>
+			<skill id="54" level="37" name="Импульс Силы(Force Blaster)" cost="840000" min_level="62"/>
+			<skill id="281" level="25" name="Разрушитель Душ(Soul Breaker)" cost="840000" min_level="62"/>
+			<skill id="35" level="16" name="Силовой Шторм(Force Storm)" cost="840000" min_level="62"/>
+			<skill id="298" level="1" name="Тотемный Дух Кролика(Rabbit Spirit Totem)" cost="840000" min_level="62"/>
+			<skill id="284" level="28" name="Ураганное Нападение(Hurricane Assault)" cost="840000" min_level="62"/>
+			<skill id="95" level="14" name="Хромота(Cripple)" cost="840000" min_level="62"/>
+			<skill id="17" level="23" name="Взрыв Силы(Force Burst)" cost="840000" min_level="63"/>
+			<skill id="210" level="34" name="Владение Кастетами(Fist Weapon Mastery)" cost="840000" min_level="63"/>
+			<skill id="233" level="36" name="Владение Легкой Броней(Light Armor Mastery)" cost="840000" min_level="63"/>
+			<skill id="280" level="26" name="Горящий Кулак(Burning Fist)" cost="840000" min_level="63"/>
+			<skill id="54" level="38" name="Импульс Силы(Force Blaster)" cost="840000" min_level="63"/>
+			<skill id="281" level="26" name="Разрушитель Душ(Soul Breaker)" cost="840000" min_level="63"/>
+			<skill id="35" level="17" name="Силовой Шторм(Force Storm)" cost="840000" min_level="63"/>
+			<skill id="284" level="29" name="Ураганное Нападение(Hurricane Assault)" cost="840000" min_level="63"/>
+			<skill id="17" level="24" name="Взрыв Силы(Force Burst)" cost="1100000" min_level="64"/>
+			<skill id="210" level="35" name="Владение Кастетами(Fist Weapon Mastery)" cost="1100000" min_level="64"/>
+			<skill id="233" level="37" name="Владение Легкой Броней(Light Armor Mastery)" cost="1100000" min_level="64"/>
+			<skill id="280" level="27" name="Горящий Кулак(Burning Fist)" cost="1100000" min_level="64"/>
+			<skill id="54" level="39" name="Импульс Силы(Force Blaster)" cost="1100000" min_level="64"/>
+			<skill id="281" level="27" name="Разрушитель Душ(Soul Breaker)" cost="1100000" min_level="64"/>
+			<skill id="35" level="18" name="Силовой Шторм(Force Storm)" cost="1100000" min_level="64"/>
+			<skill id="81" level="2" name="Удар Судьбы(Punch of Doom)" cost="1100000" min_level="64"/>
+			<skill id="284" level="30" name="Ураганное Нападение(Hurricane Assault)" cost="1100000" min_level="64"/>
+			<skill id="95" level="15" name="Хромота(Cripple)" cost="1100000" min_level="64"/>
+			<skill id="17" level="25" name="Взрыв Силы(Force Burst)" cost="1100000" min_level="65"/>
+			<skill id="210" level="36" name="Владение Кастетами(Fist Weapon Mastery)" cost="1100000" min_level="65"/>
+			<skill id="233" level="38" name="Владение Легкой Броней(Light Armor Mastery)" cost="1100000" min_level="65"/>
+			<skill id="280" level="28" name="Горящий Кулак(Burning Fist)" cost="1100000" min_level="65"/>
+			<skill id="54" level="40" name="Импульс Силы(Force Blaster)" cost="1100000" min_level="65"/>
+			<skill id="281" level="28" name="Разрушитель Душ(Soul Breaker)" cost="1100000" min_level="65"/>
+			<skill id="35" level="19" name="Силовой Шторм(Force Storm)" cost="1100000" min_level="65"/>
+			<skill id="284" level="31" name="Ураганное Нападение(Hurricane Assault)" cost="1100000" min_level="65"/>
+			<skill id="17" level="26" name="Взрыв Силы(Force Burst)" cost="1200000" min_level="66"/>
+			<skill id="210" level="37" name="Владение Кастетами(Fist Weapon Mastery)" cost="1200000" min_level="66"/>
+			<skill id="233" level="39" name="Владение Легкой Броней(Light Armor Mastery)" cost="1200000" min_level="66"/>
+			<skill id="993" level="6" name="Владение Силой(Force Mastery)" cost="1200000" min_level="66"/>
+			<skill id="280" level="29" name="Горящий Кулак(Burning Fist)" cost="1200000" min_level="66"/>
+			<skill id="54" level="41" name="Импульс Силы(Force Blaster)" cost="1200000" min_level="66"/>
+			<skill id="461" level="3" name="Прервать Заключение(Break Duress)" cost="1200000" min_level="66"/>
+			<skill id="281" level="29" name="Разрушитель Душ(Soul Breaker)" cost="1200000" min_level="66"/>
+			<skill id="35" level="20" name="Силовой Шторм(Force Storm)" cost="1200000" min_level="66"/>
+			<skill id="284" level="32" name="Ураганное Нападение(Hurricane Assault)" cost="1200000" min_level="66"/>
+			<skill id="420" level="2" name="Фанатик(Zealot)" cost="1200000" min_level="66"/>
+			<skill id="50" level="6" name="Фокусировка Силы(Focus Force)" cost="1200000" min_level="66"/>
+			<skill id="95" level="16" name="Хромота(Cripple)" cost="1200000" min_level="66"/>
+			<skill id="17" level="27" name="Взрыв Силы(Force Burst)" cost="1200000" min_level="67"/>
+			<skill id="210" level="38" name="Владение Кастетами(Fist Weapon Mastery)" cost="1200000" min_level="67"/>
+			<skill id="233" level="40" name="Владение Легкой Броней(Light Armor Mastery)" cost="1200000" min_level="67"/>
+			<skill id="280" level="30" name="Горящий Кулак(Burning Fist)" cost="1200000" min_level="67"/>
+			<skill id="54" level="42" name="Импульс Силы(Force Blaster)" cost="1200000" min_level="67"/>
+			<skill id="281" level="30" name="Разрушитель Душ(Soul Breaker)" cost="1200000" min_level="67"/>
+			<skill id="35" level="21" name="Силовой Шторм(Force Storm)" cost="1200000" min_level="67"/>
+			<skill id="284" level="33" name="Ураганное Нападение(Hurricane Assault)" cost="1200000" min_level="67"/>
+			<skill id="17" level="28" name="Взрыв Силы(Force Burst)" cost="1600000" min_level="68"/>
+			<skill id="210" level="39" name="Владение Кастетами(Fist Weapon Mastery)" cost="1600000" min_level="68"/>
+			<skill id="233" level="41" name="Владение Легкой Броней(Light Armor Mastery)" cost="1600000" min_level="68"/>
+			<skill id="280" level="31" name="Горящий Кулак(Burning Fist)" cost="1600000" min_level="68"/>
+			<skill id="54" level="43" name="Импульс Силы(Force Blaster)" cost="1600000" min_level="68"/>
+			<skill id="281" level="31" name="Разрушитель Душ(Soul Breaker)" cost="1600000" min_level="68"/>
+			<skill id="35" level="22" name="Силовой Шторм(Force Storm)" cost="1600000" min_level="68"/>
+			<skill id="292" level="1" name="Тотемный Дух Бизона(Bison Spirit Totem)" cost="1600000" min_level="68"/>
+			<skill id="284" level="34" name="Ураганное Нападение(Hurricane Assault)" cost="1600000" min_level="68"/>
+			<skill id="95" level="17" name="Хромота(Cripple)" cost="1600000" min_level="68"/>
+			<skill id="17" level="29" name="Взрыв Силы(Force Burst)" cost="1600000" min_level="69"/>
+			<skill id="210" level="40" name="Владение Кастетами(Fist Weapon Mastery)" cost="1600000" min_level="69"/>
+			<skill id="233" level="42" name="Владение Легкой Броней(Light Armor Mastery)" cost="1600000" min_level="69"/>
+			<skill id="280" level="32" name="Горящий Кулак(Burning Fist)" cost="1600000" min_level="69"/>
+			<skill id="54" level="44" name="Импульс Силы(Force Blaster)" cost="1600000" min_level="69"/>
+			<skill id="281" level="32" name="Разрушитель Душ(Soul Breaker)" cost="1600000" min_level="69"/>
+			<skill id="35" level="23" name="Силовой Шторм(Force Storm)" cost="1600000" min_level="69"/>
+			<skill id="284" level="35" name="Ураганное Нападение(Hurricane Assault)" cost="1600000" min_level="69"/>
+			<skill id="17" level="30" name="Взрыв Силы(Force Burst)" cost="2000000" min_level="70"/>
+			<skill id="210" level="41" name="Владение Кастетами(Fist Weapon Mastery)" cost="2000000" min_level="70"/>
+			<skill id="233" level="43" name="Владение Легкой Броней(Light Armor Mastery)" cost="2000000" min_level="70"/>
+			<skill id="280" level="33" name="Горящий Кулак(Burning Fist)" cost="2000000" min_level="70"/>
+			<skill id="54" level="45" name="Импульс Силы(Force Blaster)" cost="2000000" min_level="70"/>
+			<skill id="281" level="33" name="Разрушитель Душ(Soul Breaker)" cost="2000000" min_level="70"/>
+			<skill id="1802" level="1" name="Светлый Ассасин(White Assassin)" min_level="70"/>
+			<skill id="35" level="24" name="Силовой Шторм(Force Storm)" cost="2000000" min_level="70"/>
+			<skill id="284" level="36" name="Ураганное Нападение(Hurricane Assault)" cost="2000000" min_level="70"/>
+			<skill id="95" level="18" name="Хромота(Cripple)" cost="2000000" min_level="70"/>
+			<skill id="17" level="31" name="Взрыв Силы(Force Burst)" cost="2000000" min_level="71"/>
+			<skill id="210" level="42" name="Владение Кастетами(Fist Weapon Mastery)" cost="2000000" min_level="71"/>
+			<skill id="233" level="44" name="Владение Легкой Броней(Light Armor Mastery)" cost="2000000" min_level="71"/>
+			<skill id="280" level="34" name="Горящий Кулак(Burning Fist)" cost="2000000" min_level="71"/>
+			<skill id="54" level="46" name="Импульс Силы(Force Blaster)" cost="2000000" min_level="71"/>
+			<skill id="281" level="34" name="Разрушитель Душ(Soul Breaker)" cost="2000000" min_level="71"/>
+			<skill id="35" level="25" name="Силовой Шторм(Force Storm)" cost="2000000" min_level="71"/>
+			<skill id="284" level="37" name="Ураганное Нападение(Hurricane Assault)" cost="2000000" min_level="71"/>
+			<skill id="17" level="32" name="Взрыв Силы(Force Burst)" cost="2300000" min_level="72"/>
+			<skill id="210" level="43" name="Владение Кастетами(Fist Weapon Mastery)" cost="2300000" min_level="72"/>
+			<skill id="233" level="45" name="Владение Легкой Броней(Light Armor Mastery)" cost="2300000" min_level="72"/>
+			<skill id="993" level="7" name="Владение Силой(Force Mastery)" cost="2300000" min_level="72"/>
+			<skill id="280" level="35" name="Горящий Кулак(Burning Fist)" cost="2300000" min_level="72"/>
+			<skill id="54" level="47" name="Импульс Силы(Force Blaster)" cost="2300000" min_level="72"/>
+			<skill id="281" level="35" name="Разрушитель Душ(Soul Breaker)" cost="2300000" min_level="72"/>
+			<skill id="35" level="26" name="Силовой Шторм(Force Storm)" cost="2300000" min_level="72"/>
+			<skill id="81" level="3" name="Удар Судьбы(Punch of Doom)" cost="2300000" min_level="72"/>
+			<skill id="284" level="38" name="Ураганное Нападение(Hurricane Assault)" cost="2300000" min_level="72"/>
+			<skill id="50" level="7" name="Фокусировка Силы(Focus Force)" cost="2300000" min_level="72"/>
+			<skill id="95" level="19" name="Хромота(Cripple)" cost="2300000" min_level="72"/>
+			<skill id="17" level="33" name="Взрыв Силы(Force Burst)" cost="2300000" min_level="73"/>
+			<skill id="210" level="44" name="Владение Кастетами(Fist Weapon Mastery)" cost="2300000" min_level="73"/>
+			<skill id="233" level="46" name="Владение Легкой Броней(Light Armor Mastery)" cost="2300000" min_level="73"/>
+			<skill id="280" level="36" name="Горящий Кулак(Burning Fist)" cost="2300000" min_level="73"/>
+			<skill id="54" level="48" name="Импульс Силы(Force Blaster)" cost="2300000" min_level="73"/>
+			<skill id="281" level="36" name="Разрушитель Душ(Soul Breaker)" cost="2300000" min_level="73"/>
+			<skill id="35" level="27" name="Силовой Шторм(Force Storm)" cost="2300000" min_level="73"/>
+			<skill id="284" level="39" name="Ураганное Нападение(Hurricane Assault)" cost="2300000" min_level="73"/>
+			<skill id="17" level="34" name="Взрыв Силы(Force Burst)" cost="2300000" min_level="74"/>
+			<skill id="210" level="45" name="Владение Кастетами(Fist Weapon Mastery)" cost="2300000" min_level="74"/>
+			<skill id="233" level="47" name="Владение Легкой Броней(Light Armor Mastery)" cost="2300000" min_level="74"/>
+			<skill id="280" level="37" name="Горящий Кулак(Burning Fist)" cost="2300000" min_level="74"/>
+			<skill id="54" level="49" name="Импульс Силы(Force Blaster)" cost="2300000" min_level="74"/>
+			<skill id="281" level="37" name="Разрушитель Душ(Soul Breaker)" cost="2300000" min_level="74"/>
+			<skill id="35" level="28" name="Силовой Шторм(Force Storm)" cost="2300000" min_level="74"/>
+			<skill id="284" level="40" name="Ураганное Нападение(Hurricane Assault)" cost="2300000" min_level="74"/>
+			<skill id="420" level="3" name="Фанатик(Zealot)" cost="2300000" min_level="74"/>
+			<skill id="95" level="20" name="Хромота(Cripple)" cost="2300000" min_level="74"/>
+		</class>
+	</normal_skill_tree>
+</list>

@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "events.dtd">
+<!--AUTHOR: Bonux-->
+<!--https://4gameforum.com/threads/518116/-->
+<list>
+	<!--формат даты HH:mm dd.MM.yyyy-->
+	<event id="1" name="In the pursuit of letters" impl="Fun">
+		<parameter name="start_time_pattern" value="06:30 14.07.2015" />
+		<parameter name="stop_time_pattern" value="06:30 04.08.2015" />
+		<on_start>
+			<spawn name="spawn_group"/>
+			<global_add_reward name="droplist"/>
+		</on_start>
+		<on_time>
+			<on time="1209600">	<!--2 Weeks-->
+				<global_remove_reward name="droplist"/>
+			</on>
+		</on_time>
+		<on_stop>
+			<despawn name="spawn_group"/>
+			<global_remove_reward name="droplist"/>
+			<global_remove_items name="event_items"/>
+		</on_stop>
+		<objects name="spawn_group">
+			<spawn_ex name="in_the_pursuit_of_letters_event"/>
+		</objects>
+		<objects name="droplist">
+			<rewardlist type="EVENT_GROUPED">
+				<group chance="100">
+					<reward item_id="3875" min="1" max="1" chance="5"/>	<!--Letter A-->
+					<reward item_id="3876" min="1" max="1" chance="5"/>	<!--Letter C-->
+					<reward item_id="3877" min="1" max="1" chance="5"/>	<!--Letter E-->
+					<reward item_id="3879" min="1" max="1" chance="5"/>	<!--Letter G-->
+					<reward item_id="3880" min="1" max="1" chance="1"/>	<!--Letter H-->
+					<reward item_id="3881" min="1" max="1" chance="5"/>	<!--Letter I-->
+					<reward item_id="3882" min="1" max="1" chance="5"/>	<!--Letter L-->
+					<reward item_id="34956" min="1" max="1" chance="5"/>	<!--Letter M-->
+					<reward item_id="3883" min="1" max="1" chance="5"/>	<!--Letter N-->
+					<reward item_id="3884" min="1" max="1" chance="5"/>	<!--Letter O-->
+					<reward item_id="3885" min="1" max="1" chance="5"/>	<!--Letter R-->
+					<reward item_id="3886" min="1" max="1" chance="1"/>	<!--Letter S-->
+					<reward item_id="3888" min="1" max="1" chance="1"/>	<!--Number II-->
+				</group>
+			</rewardlist>
+		</objects>
+		<objects name="event_items">
+			<item id="3875"/>	<!--Letter A-->
+			<item id="3876"/>	<!--Letter C-->
+			<item id="3877"/>	<!--Letter E-->
+			<item id="3879"/>	<!--Letter G-->
+			<item id="3880"/>	<!--Letter H-->
+			<item id="3881"/>	<!--Letter I-->
+			<item id="3882"/>	<!--Letter L-->
+			<item id="34956"/>	<!--Letter M-->
+			<item id="3883"/>	<!--Letter N-->
+			<item id="3884"/>	<!--Letter O-->
+			<item id="3885"/>	<!--Letter R-->
+			<item id="3886"/>	<!--Letter S-->
+			<item id="3888"/>	<!--Number II-->
+		</objects>
+	</event>
+</list>

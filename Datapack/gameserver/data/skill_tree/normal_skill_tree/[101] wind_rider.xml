@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="101">	<!--Странник Ветра-->
+			<skill id="1405" level="3" name="Божественное Вдохновение(Divine Inspiration)" item_id="8620" cost="7000000" min_level="76"/>
+			<skill id="1405" level="4" name="Божественное Вдохновение(Divine Inspiration)" item_id="8621" cost="7000000" min_level="76"/>
+			<skill id="10539" level="1" name="Бросок Кинжала(Throw Dagger)" cost="7000000" min_level="76"/>
+			<skill id="209" level="46" name="Владение Кинжалом(Dagger Mastery)" cost="7000000" min_level="76"/>
+			<skill id="233" level="48" name="Владение Легкой Броней(Light Armor Mastery)" cost="7000000" min_level="76"/>
+			<skill id="96" level="7" name="Кровопускание(Bleed)" cost="7000000" min_level="76"/>
+			<skill id="102" level="17" name="Опутать(Entangle)" cost="7000000" min_level="76"/>
+			<skill id="1834" level="1" name="Оседлать Пегаса(Mount Pegasus)" item_id="90039" min_level="76"/>
+			<skill id="15" level="53" name="Очарование(Charm)" cost="7000000" min_level="76"/>
+			<skill id="263" level="38" name="Смертельный Импульс(Deadly Blow)" cost="7000000" min_level="76"/>
+			<skill id="344" level="1" name="Смертоносный Удар(Lethal Blow)" cost="7000000" min_level="76"/>
+			<skill id="30" level="38" name="Удар в Спину(Backstab)" cost="7000000" min_level="76"/>
+			<skill id="209" level="47" name="Владение Кинжалом(Dagger Mastery)" cost="7000000" min_level="77"/>
+			<skill id="233" level="49" name="Владение Легкой Броней(Light Armor Mastery)" cost="7000000" min_level="77"/>
+			<skill id="531" level="1" name="Критическая Рана(Critical Wound)" item_id="90055" cost="7000000" min_level="77"/>
+			<skill id="1631" level="1" name="Сброс Движений(Clear Movements)" item_id="90054" cost="7000000" min_level="77"/>
+			<skill id="263" level="39" name="Смертельный Импульс(Deadly Blow)" cost="7000000" min_level="77"/>
+			<skill id="30" level="39" name="Удар в Спину(Backstab)" cost="7000000" min_level="77"/>
+			<skill id="209" level="48" name="Владение Кинжалом(Dagger Mastery)" cost="16400000" min_level="78"/>
+			<skill id="233" level="50" name="Владение Легкой Броней(Light Armor Mastery)" cost="16400000" min_level="78"/>
+			<skill id="102" level="18" name="Опутать(Entangle)" cost="16400000" min_level="78"/>
+			<skill id="15" level="54" name="Очарование(Charm)" cost="16400000" min_level="78"/>
+			<skill id="412" level="11" name="Песочная Бомба(Sand Bomb)" cost="16400000" min_level="78"/>
+			<skill id="263" level="40" name="Смертельный Импульс(Deadly Blow)" cost="16400000" min_level="78"/>
+			<skill id="30" level="40" name="Удар в Спину(Backstab)" cost="16400000" min_level="78"/>
+			<skill id="355" level="1" name="Фокусировка Смерти(Focus Death)" item_id="90058" cost="16400000" min_level="78"/>
+			<skill id="356" level="1" name="Фокусировка Шанса(Focus Chance)" item_id="90057" cost="16400000" min_level="78"/>
+			<skill id="821" level="8" name="Шаг из Тени(Shadow Step)" cost="16400000" min_level="78"/>
+			<skill id="446" level="1" name="Уклонение(Evasion)" item_id="90060" cost="16400000" min_level="79"/>
+			<skill id="769" level="1" name="Оседлать Ветер(Wind Riding)" item_id="90134" cost="16400000" min_level="80"/>
+		</class>
+	</normal_skill_tree>
+</list>

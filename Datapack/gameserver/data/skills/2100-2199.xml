@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="2100" levels="1" name="Escape (1-second)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="olympiad_use" value="false"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSkillTimePermanent" value="true"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="2103" levels="1" name="Mysterious Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="BIG_HEAD"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_type" value="big_head"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<set name="trait" value="ETC"/>
+		<for>
+			<effect/>
+		</for>
+	</skill>
+	<skill id="2104" levels="1" name="Greater Soulshot Compressed Package (No-grade) ">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="100.0">
+				<item id="1835" min_count="1000" max_count="1000"/>	<!--Soulshot: No Grade-->
+			</group>
+		</restoration>
+	</skill>
+	<skill id="2105" levels="1" name="Greater Soulshot Compressed Package (D-grade) ">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="100.0">
+				<item id="1463" min_count="1000" max_count="1000"/>	<!--Soulshot (D-Grade)-->
+			</group>
+		</restoration>
+	</skill>
+	<skill id="2106" levels="1" name="Greater Soulshot Compressed Package (C-grade) ">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="100.0">
+				<item id="1464" min_count="1000" max_count="1000"/>	<!--Soulshot (C-Grade)-->
+			</group>
+		</restoration>
+	</skill>
+	<skill id="2107" levels="1" name="Greater Soulshot Compressed Package (B-grade) ">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="100.0">
+				<item id="1465" min_count="1000" max_count="1000"/>	<!--Soulshot (B-Grade)-->
+			</group>
+		</restoration>
+	</skill>
+	<skill id="2108" levels="1" name="Greater Soulshot Compressed Package (A-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="2110" levels="1" name="Greater Spiritshot Compressed Package (No-grade) ">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="100.0">
+				<item id="2509" min_count="1000" max_count="1000"/>	<!--Spiritshot: No Grade-->
+			</group>
+		</restoration>
+	</skill>
+	<skill id="2111" levels="1" name="Greater Spiritshot Compressed Package (D-grade) ">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="100.0">
+				<item id="2510" min_count="1000" max_count="1000"/>	<!--Spiritshot (D-Grade)-->
+			</group>
+		</restoration>
+	</skill>
+	<skill id="2112" levels="1" name="Greater Spiritshot Compressed Package (C-grade) ">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="100.0">
+				<item id="2511" min_count="1000" max_count="1000"/>	<!--Spiritshot (C-Grade)-->
+			</group>
+		</restoration>
+	</skill>
+	<skill id="2113" levels="1" name="Greater Spiritshot Compressed Package (B-grade) ">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="100.0">
+				<item id="2512" min_count="1000" max_count="1000"/>	<!--Spiritshot (B-Grade)-->
+			</group>
+		</restoration>
+	</skill>
+	<skill id="2114" levels="1" name="Greater Spiritshot Compressed Package (A-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="2116" levels="1" name="Greater Blessed Spiritshot Compressed Package (No-grade) ">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="100.0">
+				<item id="3947" min_count="1000" max_count="1000"/>	<!--Blessed Spiritshot: No Grade-->
+			</group>
+		</restoration>
+	</skill>
+	<skill id="2117" levels="1" name="Greater Blessed Spiritshot Compressed Package (D-grade) ">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="100.0">
+				<item id="3948" min_count="1000" max_count="1000"/>	<!--Blessed Spiritshot (D-Grade)-->
+			</group>
+		</restoration>
+	</skill>
+	<skill id="2118" levels="1" name="Greater Blessed Spiritshot Compressed Package (C-grade) ">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="100.0">
+				<item id="3949" min_count="1000" max_count="1000"/>	<!--Blessed Spiritshot (C-Grade)-->
+			</group>
+		</restoration>
+	</skill>
+	<skill id="2119" levels="1" name="Greater Blessed Spiritshot Compressed Package (B-grade) ">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="100.0">
+				<item id="3950" min_count="1000" max_count="1000"/>	<!--Blessed Spiritshot (B-Grade)-->
+			</group>
+		</restoration>
+	</skill>
+	<skill id="2120" levels="1" name="Greater Blessed Spiritshot Compressed Package (A-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="2122" levels="1" name="Facelifting Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="5235"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+	</skill>
+	<skill id="2123" levels="1" name="Facelifting Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="5236"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+	</skill>
+	<skill id="2124" levels="1" name="Facelifting Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="5237"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+	</skill>
+	<skill id="2125" levels="1" name="Dye Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="5238"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+	</skill>
+	<skill id="2126" levels="1" name="Dye Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="5239"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+	</skill>
+	<skill id="2127" levels="1" name="Dye Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="5240"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+	</skill>
+	<skill id="2128" levels="1" name="Dye Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="5241"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+	</skill>
+	<skill id="2129" levels="1" name="Hair Style Change Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="5242"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+	</skill>
+	<skill id="2130" levels="1" name="Hair Style Change Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="5243"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+	</skill>
+	<skill id="2131" levels="1" name="Hair Style Change Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="5244"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+	</skill>
+	<skill id="2132" levels="1" name="Hair Style Change Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="5245"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+	</skill>
+	<skill id="2133" levels="1" name="Hair Style Change Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="5246"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+	</skill>
+	<skill id="2134" levels="1" name="Hair Style Change Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="5247"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+	</skill>
+	<skill id="2135" levels="1" name="Hair Style Change Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="5248"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+	</skill>
+	<skill id="2136" levels="1" name="Rice Cake">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+	</skill>
+	<skill id="2140" levels="1" name="Item - Carol Sound Crystal">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="2141" levels="1" name="Item - Carol Sound Crystal">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="2142" levels="1" name="Item - Carol Sound Crystal">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="2143" levels="1" name="Item - Carol Sound Crystal">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="2144" levels="1" name="Item - Carol Sound Crystal">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="2145" levels="1" name="Item - Carol Sound Crystal">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="2146" levels="1" name="Item - Carol Sound Crystal">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="2147" levels="1" name="Item - Carol Sound Crystal">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="2148" levels="1" name="Item - Carol Sound Crystal">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="2149" levels="1" name="Item - Carol Sound Crystal">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="2150" levels="1" name="Soulshot (D-grade) ">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_soul_shot">
+				<def name="power" value="100"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2151" levels="1" name="Soulshot (C-grade) ">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_soul_shot">
+				<def name="power" value="100"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2152" levels="1" name="Soulshot (B-grade) ">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_soul_shot">
+				<def name="power" value="100"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2153" levels="1" name="Soulshot (A-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_soul_shot">
+				<def name="power" value="100"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2155" levels="1" name="Spiritshot (D-grade) ">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_spirit_shot">
+				<def name="power" value="100"/>
+				<def name="unk_spiritshot_parameter_1" value="40"/>
+				<def name="unk_spiritshot_parameter_2" value="1.0"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2156" levels="1" name="Spiritshot (C-grade) ">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_spirit_shot">
+				<def name="power" value="100"/>
+				<def name="unk_spiritshot_parameter_1" value="40"/>
+				<def name="unk_spiritshot_parameter_2" value="1.0"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2157" levels="1" name="Spiritshot (B-grade) ">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_spirit_shot">
+				<def name="power" value="100"/>
+				<def name="unk_spiritshot_parameter_1" value="40"/>
+				<def name="unk_spiritshot_parameter_2" value="1.0"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2158" levels="1" name="Spiritshot (A-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_spirit_shot">
+				<def name="power" value="100"/>
+				<def name="unk_spiritshot_parameter_1" value="40"/>
+				<def name="unk_spiritshot_parameter_2" value="1.0"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2160" levels="1" name="Blessed Spiritshot (D-grade) ">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_spirit_shot">
+				<def name="power" value="300"/>
+				<def name="unk_spiritshot_parameter_1" value="40"/>
+				<def name="unk_spiritshot_parameter_2" value="2.4"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2161" levels="1" name="Blessed Spiritshot (C-grade) ">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_spirit_shot">
+				<def name="power" value="300"/>
+				<def name="unk_spiritshot_parameter_1" value="40"/>
+				<def name="unk_spiritshot_parameter_2" value="2.4"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2162" levels="1" name="Blessed Spiritshot (B-grade) ">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_spirit_shot">
+				<def name="power" value="300"/>
+				<def name="unk_spiritshot_parameter_1" value="40"/>
+				<def name="unk_spiritshot_parameter_2" value="2.4"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2163" levels="1" name="Blessed Spiritshot (A-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_spirit_shot">
+				<def name="power" value="300"/>
+				<def name="unk_spiritshot_parameter_1" value="40"/>
+				<def name="unk_spiritshot_parameter_2" value="2.4"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2165" levels="1" name="Momentum Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="CHARGE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="charges" value="2"/>
+		<set name="isHandler" value="true"/>
+	</skill>
+	<skill id="2166" levels="2" name="CP Potion">
+		<table name="#power">50 200</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect instant="true" name="RestoreCP" value="#power"/>
+		</for>
+	</skill>
+	<skill id="2167" levels="4" name="SP Scroll">
+		<table name="#power">50 500 100000 50000</table>
+		<table name="#itemConsumeId">5593 5594 5595 9898</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="hitTime" value="200"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="#itemConsumeId"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_sp" value="#power"/>
+		</for>
+	</skill>
+	<skill id="2168" levels="4" name="Lucky Charm">
+		<table name="#levelMin">1 20 40 52 61 76</table>
+		<table name="#levelMax">19 39 51 60 75 80</table>
+		<table name="#itemConsumeId">5703 5803 5804 5805 5806 5807</table>
+		<table name="#abnormal_level">1 2 3 4 5 6</table>
+		<set name="icon" value="icon.etc_orcish_talisman_i00"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="reduce_drop_penalty"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="#itemConsumeId"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<set name="cancelable" value="false"/>
+		<cond msgId="1902">
+			<and>
+				<player minLevel="#levelMin"/>
+				<player max_level="#levelMax"/>
+			</and>
+		</cond>
+		<for>
+			<effect/>
+		</for>
+	</skill>
+	<skill id="2169" levels="2" name="Magic Haste Potion">
+		<table name="#icon">icon.etc_potion_of_acumen2_i00 icon.etc_potion_of_acumen3_i00</table>
+		<table name="#TabmAtkSpd">1.23 1.3</table>
+		<table name="#magicLevel">35 48</table>
+		<table name="#abnormal_level">2 3</table>
+		<set name="icon" value="#icon"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="casting_time_down"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect>
+				<mul stat="mAtkSpd" value="#TabmAtkSpd"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2170" levels="1" name="Scroll: Cancel Sleep">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="400"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="6037"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="sleep"/>
+				<def name="max_abnormal_level" value="1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2171" levels="1" name="Spellbook Paper">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="10.0">
+				<item id="5917" min_count="1" max_count="1"/>	<!--Kranvel's Spellbook: Chapter of Fire-->
+			</group>
+			<group chance="10.0">
+				<item id="5918" min_count="1" max_count="1"/>	<!--Kranvel's Spellbook: Chapter of Water-->
+			</group>
+			<group chance="10.0">
+				<item id="5919" min_count="1" max_count="1"/>	<!--Kranvel's Spellbook: Chapter of Wind-->
+			</group>
+			<group chance="10.0">
+				<item id="5920" min_count="1" max_count="1"/>	<!--Kranvel's Spellbook: Chapter of Earth-->
+			</group>
+			<group chance="60.0">
+				<item id="5921" min_count="1" max_count="1"/>	<!--Кусок Ненужной Бумаг-->
+			</group>
+		</restoration>
+	</skill>
+	<skill id="2172" levels="1" name="Scroll of Giants">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="2.5">
+				<item id="5922" min_count="1" max_count="1"/>	<!--Blueprint: Giants Golem 1-->
+			</group>
+			<group chance="2.5">
+				<item id="5923" min_count="1" max_count="1"/>	<!--Blueprint: Giants Golem 2-->
+			</group>
+			<group chance="2.5">
+				<item id="5924" min_count="1" max_count="1"/>	<!--Blueprint: Giants Golem 3-->
+			</group>
+			<group chance="2.5">
+				<item id="5925" min_count="1" max_count="1"/>	<!--Blueprint: Giants Golem 4-->
+			</group>
+			<group chance="2.5">
+				<item id="5926" min_count="1" max_count="1"/>	<!--Blueprint: Giants Golem 5-->
+			</group>
+			<group chance="2.5">
+				<item id="5927" min_count="1" max_count="1"/>	<!--Book: Basics of Giants Magic, Chapter 1-->
+			</group>
+			<group chance="2.5">
+				<item id="5928" min_count="1" max_count="1"/>	<!--Book: Basics of Giants Magic, Chapter 2-->
+			</group>
+			<group chance="2.5">
+				<item id="5929" min_count="1" max_count="1"/>	<!--Book: Basics of Giants Magic, Chapter 3-->
+			</group>
+			<group chance="2.5">
+				<item id="5930" min_count="1" max_count="1"/>	<!--Book: Basics of Giants Magic, Chapter 4-->
+			</group>
+			<group chance="2.5">
+				<item id="5931" min_count="1" max_count="1"/>	<!--Book: Basics of Giants Magic, Chapter 5-->
+			</group>
+			<group chance="2.5">
+				<item id="5932" min_count="1" max_count="1"/>	<!--Handbook: Giants Architecture, Chapter 1-->
+			</group>
+			<group chance="2.5">
+				<item id="5933" min_count="1" max_count="1"/>	<!--Handbook: Giants Architecture, Chapter 2-->
+			</group>
+			<group chance="2.5">
+				<item id="5934" min_count="1" max_count="1"/>	<!--Handbook: Giants Architecture, Chapter 3-->
+			</group>
+			<group chance="2.5">
+				<item id="5935" min_count="1" max_count="1"/>	<!--Handbook: Giants Architecture, Chapter 4-->
+			</group>
+			<group chance="2.5">
+				<item id="5936" min_count="1" max_count="1"/>	<!--Handbook: Giants Architecture, Chapter 5-->
+			</group>
+			<group chance="2.5">
+				<item id="5937" min_count="1" max_count="1"/>	<!--Book: Giants Medical Science, Chapter 1-->
+			</group>
+			<group chance="2.5">
+				<item id="5938" min_count="1" max_count="1"/>	<!--Book: Giants Medical Science, Chapter 2-->
+			</group>
+			<group chance="2.5">
+				<item id="5939" min_count="1" max_count="1"/>	<!--Book: Giants Medical Science, Chapter 3-->
+			</group>
+			<group chance="2.5">
+				<item id="5940" min_count="1" max_count="1"/>	<!--Book: Giants Medical Science, Chapter 4-->
+			</group>
+			<group chance="2.5">
+				<item id="5941" min_count="1" max_count="1"/>	<!--Book: Giants Medical Science, Chapter 5-->
+			</group>
+			<group chance="25.0">
+				<item id="5942" min_count="1" max_count="1"/>	<!--Giant's Love Letter-->
+			</group>
+			<group chance="25.0">
+				<item id="5943" min_count="1" max_count="1"/>	<!--Giants' Doodle-->
+			</group>
+		</restoration>
+	</skill>
+	<skill id="2173" levels="1" name="Book of Giants">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="5.0">
+				<item id="5945" min_count="1" max_count="1"/>	<!--Book: Giants Science & Technology, Chapter 1-->
+			</group>
+			<group chance="5.0">
+				<item id="5946" min_count="1" max_count="1"/>	<!--Book: Giants Science & Technology, Chapter 2-->
+			</group>
+			<group chance="5.0">
+				<item id="5947" min_count="1" max_count="1"/>	<!--Book: Giants Science & Technology, Chapter 3-->
+			</group>
+			<group chance="5.0">
+				<item id="5948" min_count="1" max_count="1"/>	<!--Book: Giants Science & Technology, Chapter 4-->
+			</group>
+			<group chance="5.0">
+				<item id="5949" min_count="1" max_count="1"/>	<!--Book: Giants Science & Technology, Chapter 5-->
+			</group>
+			<group chance="5.0">
+				<item id="5950" min_count="1" max_count="1"/>	<!--Almanac: Titan Culture, Chapter 1-->
+			</group>
+			<group chance="5.0">
+				<item id="5951" min_count="1" max_count="1"/>	<!--Almanac: Titan Culture, Chapter 2-->
+			</group>
+			<group chance="5.0">
+				<item id="5952" min_count="1" max_count="1"/>	<!--Almanac: Titan Culture, Chapter 3-->
+			</group>
+			<group chance="5.0">
+				<item id="5953" min_count="1" max_count="1"/>	<!--Almanac: Titan Culture, Chapter 4-->
+			</group>
+			<group chance="5.0">
+				<item id="5954" min_count="1" max_count="1"/>	<!--Almanac: Titan Culture, Chapter 5-->
+			</group>
+			<group chance="25.0">
+				<item id="5942" min_count="1" max_count="1"/>	<!--Giant's Love Letter-->
+			</group>
+			<group chance="25.0">
+				<item id="5943" min_count="1" max_count="1"/>	<!--Giants' Doodle-->
+			</group>
+		</restoration>
+	</skill>
+	<skill id="2177" levels="1" name="Blessed Scroll of Escape: Clan Hall">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="200"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="5858"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="isHandler" value="true"/>
+		<set name="clanhall" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="2178" levels="1" name="Blessed Scroll of Escape: Castle">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="200"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="5859"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="isHandler" value="true"/>
+		<set name="castle" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="2180" levels="1" name="Wyvern Food">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="PET_FEED"/>
+		<set name="operate_type" value="A2"/>
+		<set name="feed_power" value="200;450;450"/>
+		<set name="isHandler" value="true"/>
+	</skill>
+</list>

@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE farm SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<farm name="Paagrio Temple" min_level="1" max_level="3" races="ORC">
+	<zones>
+		<zone>
+			<polygon>
+				<coords loc="-57432 -112248 -800 -500"/>
+				<coords loc="-57560 -113144 -800 -500"/>
+				<coords loc="-58440 -113272 -800 -500"/>
+				<coords loc="-58456 -113896 -800 -500"/>
+				<coords loc="-57560 -114072 -800 -500"/>
+				<coords loc="-57432 -114936 -800 -500"/>
+				<coords loc="-56776 -114968 -800 -500"/>
+				<coords loc="-56664 -114056 -800 -500"/>
+				<coords loc="-55608 -113928 -800 -500"/>
+				<coords loc="-55544 -113288 -800 -500"/>
+				<coords loc="-56632 -113144 -800 -500"/>
+				<coords loc="-56760 -112248 -800 -500"/>
+			</polygon>
+		</zone>
+		<spawn_points>
+			<coords loc="-56733 -113459 -690 0"/>
+			<coords loc="-56686 -113470 -690 0"/>
+			<coords loc="-56728 -113610 -690 0"/>
+			<coords loc="-56693 -113610 -690 0"/>
+			<coords loc="-56743 -113757 -690 0"/>
+			<coords loc="-56682 -113730 -690 0"/>
+		</spawn_points>
+	</zones>
+	<farm_monsters>
+		<npc id="18342"/>
+	</farm_monsters>
+	<on_obtain_max_level>
+		<wait min_delay="1000" max_delay="3000"/>
+		<move_to_point x="-56136" y="-113592" z="-672" min_range="50" max_range="150"/>
+		<move_to_point x="-55352" y="-113608" z="-672" min_range="0" max_range="50"/>
+		<move_to_point x="-54568" y="-113624" z="-480" min_range="0" max_range="50"/>
+		<move_to_point x="-53688" y="-113624" z="-192" min_range="0" max_range="50"/>
+		<move_to_point x="-53144" y="-113624" z="-80" min_range="0" max_range="50"/>
+		<move_to_point x="-52392" y="-113624" z="-80" min_range="0" max_range="50"/>
+		<move_to_point x="-51464" y="-113608" z="-160" min_range="0" max_range="50"/>
+		<move_to_point x="-50984" y="-113608" z="-176" min_range="50" max_range="150"/>
+		<random_action>
+			<ordinary_actions>
+				<random_action>
+					<ordinary_actions>
+						<move_to_point x="-50952" y="-112632" z="-192" min_range="50" max_range="150"/>
+					</ordinary_actions>
+					<ordinary_actions>
+						<move_to_point x="-50696" y="-114680" z="-176" min_range="50" max_range="150"/>
+					</ordinary_actions>
+				</random_action>
+				<farm/>
+			</ordinary_actions>
+			<ordinary_actions>
+				<move_to_point x="-50184" y="-113608" z="-176" min_range="0" max_range="50"/>
+				<move_to_point x="-49048" y="-113608" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-47864" y="-113608" z="-224" min_range="0" max_range="50"/>
+				<move_to_point x="-46920" y="-113608" z="-200" min_range="0" max_range="0"/>
+				<move_to_point x="-46376" y="-113608" z="-200" min_range="0" max_range="50"/>
+				<move_to_point x="-45512" y="-113608" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-45192" y="-113592" z="-224" min_range="0" max_range="50"/>
+			</ordinary_actions>
+		</random_action>
+	</on_obtain_max_level>
+</farm>

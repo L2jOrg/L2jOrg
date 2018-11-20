@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn name="oren31_mb2217_01" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="74424" y="-9228" zmin="-2904" zmax="-2304"/>
+			<add x="75212" y="-10092" zmin="-2904" zmax="-2304"/>
+			<add x="76132" y="-9688" zmin="-2904" zmax="-2304"/>
+			<add x="75932" y="-8232" zmin="-2904" zmax="-2304"/>
+		</territory>
+		<npc id="25131"/><!--Кровавый Монарх Гату-->
+	</spawn>
+	<spawn name="oren31_mb2217_02" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="86220" y="-8372" zmin="-3184" zmax="-2684"/>
+			<add x="86420" y="-8372" zmin="-3184" zmax="-2684"/>
+			<add x="86420" y="-8172" zmin="-3184" zmax="-2684"/>
+			<add x="86220" y="-8172" zmin="-3184" zmax="-2684"/>
+		</territory>
+		<npc id="25122"/><!--Отчаявшийся Беженец Лео-->
+	</spawn>
+	<spawn name="oren15_azit2217_01" count="1" respawn="60" group="bandit_stronghold_35">
+		<point x="86228" y="-19620" z="-1904" h="0"/>
+		<npc id="35437"/><!--Посланник-->
+	</spawn>
+	<spawn group="bandits_stronghold_mass_teleporters" name="oren15_azit2217_01" count="1" respawn="60">
+		<point x="83348" y="-18267" z="-1248" h="14536"/>
+		<npc id="35561"/><!--Хранитель Массового Портала-->
+	</spawn>
+	<spawn group="bandits_stronghold_mass_teleporters" name="oren15_azit2217_01" count="1" respawn="60">
+		<point x="81258" y="-17387" z="-1248" h="11144"/>
+		<npc id="35562"/><!--Хранитель Массового Портала-->
+	</spawn>
+	<spawn group="bandits_stronghold_mass_teleporters" name="oren15_azit2217_01" count="1" respawn="60">
+		<point x="81832" y="-14223" z="-1248" h="-17664"/>
+		<npc id="35563"/><!--Хранитель Массового Портала-->
+	</spawn>
+	<spawn group="bandits_stronghold_mass_teleporters" name="oren15_azit2217_01" count="1" respawn="60">
+		<point x="83687" y="-14532" z="-1248" h="-19008"/>
+		<npc id="35564"/><!--Хранитель Массового Портала-->
+	</spawn>
+	<spawn group="bandits_stronghold_mass_teleporters" name="oren15_azit2217_01" count="1" respawn="60">
+		<point x="85263" y="-15447" z="-1248" h="-21328"/>
+		<npc id="35565"/><!--Хранитель Массового Портала-->
+	</spawn>
+	<spawn name="oren15_azit2217_01" count="1" respawn="60">
+		<point x="79745" y="-15472" z="-1792" h="0"/>
+		<npc id="35560"/><!--Хранитель Массового Портала-->
+	</spawn>
+	<spawn name="oren15_npc2217_001" count="1" respawn="60" group="bandit_stronghold_35">
+		<point x="85104" y="-17552" z="-1815" h="32768"/>
+		<npc id="35436"/><!--Привратник Внешних Владений-->
+	</spawn>
+	<spawn name="oren15_npc2217_002" count="1" respawn="60" group="bandit_stronghold_35">
+		<point x="86528" y="-19392" z="-1904" h="49152"/>
+		<npc id="35435"/><!--Привратник Внешних Владений-->
+	</spawn>
+	<spawn name="oren15_npc2217_003" count="1" respawn="60" group="bandit_stronghold_35">
+		<point x="81322" y="-15508" z="-1830" h="0"/>
+		<npc id="35433"/><!--Привратник Внутренних Владений-->
+	</spawn>
+	<spawn name="oren15_npc2217_003" count="1" respawn="60" group="bandit_stronghold_35">
+		<point x="80757" y="-15321" z="-1804" h="35768"/>
+		<npc id="35434"/><!--Привратник Внутренних Владений-->
+	</spawn>
+	<spawn name="oren15_npc2217_003" count="1" respawn="60" group="bandit_stronghold_35">
+		<point x="80291" y="-15012" z="-1805" h="49152"/>
+		<npc id="35438"/><!--Камергер-->
+	</spawn>
+	<spawn name="oren01_mb2217_03" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="93628" y="-23452" zmin="-2352" zmax="-1752"/>
+			<add x="95260" y="-24156" zmin="-2352" zmax="-1752"/>
+			<add x="95932" y="-23160" zmin="-2352" zmax="-1752"/>
+			<add x="95304" y="-21636" zmin="-2352" zmax="-1752"/>
+		</territory>
+		<npc id="25067"/><!--Главарь Красного Флага Шака-->
+	</spawn>
+	<territory name="oren31_2217_09s">
+		<add x="96412" y="-11744" zmin="-3364" zmax="-3164"/>
+		<add x="97864" y="-11876" zmin="-3364" zmax="-3164"/>
+		<add x="97324" y="-7992" zmin="-3364" zmax="-3164"/>
+		<add x="95144" y="-10072" zmin="-3364" zmax="-3164"/>
+	</territory>
+	<spawn name="oren31_2217_09s" count="3" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_09s"/>
+		<npc id="20575"/><!--Воин Сфинксов-->
+	</spawn>
+	<spawn name="oren31_2217_09s" count="3" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_09s"/>
+		<npc id="20576"/><!--Шаман Сфинксов-->
+	</spawn>
+	<spawn name="oren31_2217_09s" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_09s"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>
+	<territory name="oren31_2217_16s">
+		<add x="79472" y="-5980" zmin="-3288" zmax="-2888"/>
+		<add x="81092" y="-6616" zmin="-3288" zmax="-2888"/>
+		<add x="82984" y="-4196" zmin="-3288" zmax="-2888"/>
+		<add x="80592" y="-3868" zmin="-3288" zmax="-2888"/>
+	</territory>
+	<spawn name="oren31_2217_16s" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_16s"/>
+		<npc id="20161"/><!--Сфинкс-->
+	</spawn>
+	<spawn name="oren31_2217_16s" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_16s"/>
+		<npc id="20573"/><!--Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_16s" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_16s"/>
+		<npc id="20574"/><!--Старший Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_16s" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_16s"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>
+	<territory name="oren31_2217_19s">
+		<add x="73664" y="-2792" zmin="-3768" zmax="-3568"/>
+		<add x="74348" y="-2504" zmin="-3768" zmax="-3568"/>
+		<add x="76248" y="-268" zmin="-3768" zmax="-3568"/>
+		<add x="73892" y="-260" zmin="-3768" zmax="-3568"/>
+	</territory>
+	<spawn name="oren31_2217_19s" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_19s"/>
+		<npc id="20573"/><!--Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_19s" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_19s"/>
+		<npc id="20574"/><!--Старший Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_19s" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_19s"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>
+	<territory name="oren31_2217_13s">
+		<add x="88404" y="-6876" zmin="-3256" zmax="-2956"/>
+		<add x="90192" y="-7876" zmin="-3256" zmax="-2956"/>
+		<add x="91136" y="-6148" zmin="-3256" zmax="-2956"/>
+		<add x="89612" y="-4740" zmin="-3256" zmax="-2956"/>
+	</territory>
+	<spawn name="oren31_2217_13s" count="3" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_13s"/>
+		<npc id="20574"/><!--Старший Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_13s" count="3" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_13s"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>
+	<territory name="oren31_2217_15s">
+		<add x="83184" y="-6364" zmin="-3340" zmax="-3040"/>
+		<add x="87016" y="-6072" zmin="-3340" zmax="-3040"/>
+		<add x="86360" y="-3672" zmin="-3340" zmax="-3040"/>
+		<add x="84972" y="-3596" zmin="-3340" zmax="-3040"/>
+	</territory>
+	<spawn name="oren31_2217_15s" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_15s"/>
+		<npc id="20161"/><!--Сфинкс-->
+	</spawn>
+	<spawn name="oren31_2217_15s" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_15s"/>
+		<npc id="20573"/><!--Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_15s" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_15s"/>
+		<npc id="20574"/><!--Старший Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_15s" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_15s"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>
+	<territory name="oren31_2217_10s">
+		<add x="94888" y="-2316" zmin="-3780" zmax="-3480"/>
+		<add x="97952" y="-3120" zmin="-3780" zmax="-3480"/>
+		<add x="97964" y="-296" zmin="-3780" zmax="-3480"/>
+		<add x="94796" y="-344" zmin="-3780" zmax="-3480"/>
+	</territory>
+	<spawn name="oren31_2217_10s" count="3" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_10s"/>
+		<npc id="20573"/><!--Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_10s" count="4" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_10s"/>
+		<npc id="20574"/><!--Старший Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_10s" count="3" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_10s"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>
+	<territory name="oren31_2217_09">
+		<add x="93964" y="-12092" zmin="-3568" zmax="-2968"/>
+		<add x="98096" y="-12536" zmin="-3568" zmax="-2968"/>
+		<add x="98072" y="-6692" zmin="-3568" zmax="-2968"/>
+		<add x="96400" y="-7184" zmin="-3568" zmax="-2968"/>
+		<add x="95248" y="-7928" zmin="-3568" zmax="-2968"/>
+		<add x="93428" y="-10528" zmin="-3568" zmax="-2968"/>
+	</territory>
+	<spawn name="oren31_2217_09" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_09"/>
+		<npc id="20161"/><!--Сфинкс-->
+	</spawn>
+	<spawn name="oren31_2217_09" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_09"/>
+		<npc id="20575"/><!--Воин Сфинксов-->
+	</spawn>
+	<spawn name="oren31_2217_09" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_09"/>
+		<npc id="20576"/><!--Шаман Сфинксов-->
+	</spawn>
+	<spawn name="oren31_2217_09" count="3" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_09"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>	
+	<territory name="oren31_2217_08">
+		<add x="98092" y="-15088" zmin="-3264" zmax="-2664"/>
+		<add x="98084" y="-12548" zmin="-3264" zmax="-2664"/>
+		<add x="94160" y="-12632" zmin="-3264" zmax="-2664"/>
+		<add x="96440" y="-15184" zmin="-3264" zmax="-2664"/>
+	</territory>
+	<spawn name="oren31_2217_08" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_08"/>
+		<npc id="20161"/><!--Сфинкс-->
+	</spawn>
+	<spawn name="oren31_2217_08" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_08"/>
+		<npc id="20575"/><!--Воин Сфинксов-->
+	</spawn>
+	<spawn name="oren31_2217_08" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_08"/>
+		<npc id="20576"/><!--Шаман Сфинксов-->
+	</spawn>
+	<spawn name="oren31_2217_08" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_08"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>	
+	<territory name="oren31_2217_07">
+		<add x="96096" y="-19444" zmin="-2852" zmax="-2552"/>
+		<add x="98020" y="-19408" zmin="-2852" zmax="-2552"/>
+		<add x="98104" y="-16756" zmin="-2852" zmax="-2552"/>
+		<add x="96536" y="-17508" zmin="-2852" zmax="-2552"/>
+	</territory>
+	<spawn name="oren31_2217_07" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_07"/>
+		<npc id="20161"/><!--Сфинкс-->
+	</spawn>
+	<spawn name="oren31_2217_07" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_07"/>
+		<npc id="20575"/><!--Воин Сфинксов-->
+	</spawn>
+	<spawn name="oren31_2217_07" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_07"/>
+		<npc id="20576"/><!--Шаман Сфинксов-->
+	</spawn>	
+	<territory name="oren31_2217_06">
+		<add x="95884" y="-20992" zmin="-2964" zmax="-2464"/>
+		<add x="96456" y="-21652" zmin="-2964" zmax="-2464"/>
+		<add x="98048" y="-22024" zmin="-2964" zmax="-2464"/>
+		<add x="98008" y="-19376" zmin="-2964" zmax="-2464"/>
+		<add x="95740" y="-19432" zmin="-2964" zmax="-2464"/>
+	</territory>
+	<spawn name="oren31_2217_06" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_06"/>
+		<npc id="20161"/><!--Сфинкс-->
+	</spawn>
+	<spawn name="oren31_2217_06" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_06"/>
+		<npc id="20576"/><!--Шаман Сфинксов-->
+	</spawn>
+	<spawn name="oren31_2217_06" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_06"/>
+		<npc id="20575"/><!--Воин Сфинксов-->
+	</spawn>	
+	<territory name="oren31_2217_05">
+		<add x="91260" y="-20516" zmin="-2184" zmax="-1484"/>
+		<add x="93140" y="-21468" zmin="-2184" zmax="-1484"/>
+		<add x="94292" y="-18660" zmin="-2184" zmax="-1484"/>
+		<add x="92736" y="-18116" zmin="-2184" zmax="-1484"/>
+		<add x="91720" y="-19060" zmin="-2184" zmax="-1484"/>
+	</territory>
+	<spawn name="oren31_2217_05" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_05"/>
+		<npc id="20161"/><!--Сфинкс-->
+	</spawn>
+	<spawn name="oren31_2217_05" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_05"/>
+		<npc id="20575"/><!--Воин Сфинксов-->
+	</spawn>
+	<spawn name="oren31_2217_05" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_05"/>
+		<npc id="20576"/><!--Шаман Сфинксов-->
+	</spawn>	
+	<territory name="oren31_2217_04">
+		<add x="92744" y="-18084" zmin="-2204" zmax="-1704"/>
+		<add x="94364" y="-18652" zmin="-2204" zmax="-1704"/>
+		<add x="95076" y="-16616" zmin="-2204" zmax="-1704"/>
+		<add x="93716" y="-16056" zmin="-2204" zmax="-1704"/>
+		<add x="92552" y="-17040" zmin="-2204" zmax="-1704"/>
+	</territory>
+	<spawn name="oren31_2217_04" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_04"/>
+		<npc id="20161"/><!--Сфинкс-->
+	</spawn>
+	<spawn name="oren31_2217_04" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_04"/>
+		<npc id="20575"/><!--Воин Сфинксов-->
+	</spawn>
+	<spawn name="oren31_2217_04" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_04"/>
+		<npc id="20576"/><!--Шаман Сфинксов-->
+	</spawn>	
+	<territory name="oren31_2217_03">
+		<add x="91772" y="-15004" zmin="-2252" zmax="-1952"/>
+		<add x="92244" y="-17300" zmin="-2252" zmax="-1952"/>
+		<add x="93716" y="-16044" zmin="-2252" zmax="-1952"/>
+		<add x="92852" y="-15112" zmin="-2252" zmax="-1952"/>
+	</territory>
+	<spawn name="oren31_2217_03" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_03"/>
+		<npc id="20161"/><!--Сфинкс-->
+	</spawn>
+	<spawn name="oren31_2217_03" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_03"/>
+		<npc id="20575"/><!--Воин Сфинксов-->
+	</spawn>
+	<spawn name="oren31_2217_03" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_03"/>
+		<npc id="20576"/><!--Шаман Сфинксов-->
+	</spawn>	
+	<territory name="oren31_2217_02">
+		<add x="90932" y="-18216" zmin="-2128" zmax="-1828"/>
+		<add x="91660" y="-18456" zmin="-2128" zmax="-1828"/>
+		<add x="92380" y="-17952" zmin="-2128" zmax="-1828"/>
+		<add x="92048" y="-16452" zmin="-2128" zmax="-1828"/>
+	</territory>
+	<spawn name="oren31_2217_02" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_02"/>
+		<npc id="20161"/><!--Сфинкс-->
+	</spawn>
+	<spawn name="oren31_2217_02" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_02"/>
+		<npc id="20576"/><!--Шаман Сфинксов-->
+	</spawn>
+	<territory name="oren31_2217_01">
+		<add x="89692" y="-19820" zmin="-2124" zmax="-1824"/>
+		<add x="90856" y="-20476" zmin="-2124" zmax="-1824"/>
+		<add x="91644" y="-18468" zmin="-2124" zmax="-1824"/>
+		<add x="90920" y="-18228" zmin="-2124" zmax="-1824"/>
+	</territory>
+	<spawn name="oren31_2217_01" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_01"/>
+		<npc id="20575"/><!--Воин Сфинксов-->
+	</spawn>
+	<spawn name="oren31_2217_01" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_01"/>
+		<npc id="20576"/><!--Шаман Сфинксов-->
+	</spawn>	
+	<territory name="oren31_2217_26">
+		<add x="95696" y="-17072" zmin="-2332" zmax="-1932"/>
+		<add x="98052" y="-16328" zmin="-2332" zmax="-1932"/>
+		<add x="98048" y="-15916" zmin="-2332" zmax="-1932"/>
+		<add x="95636" y="-16200" zmin="-2332" zmax="-1932"/>
+	</territory>
+	<spawn name="oren31_2217_26" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_26"/>
+		<npc id="20575"/><!--Воин Сфинксов-->
+	</spawn>
+	<spawn name="oren31_2217_26" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_26"/>
+		<npc id="20574"/><!--Старший Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_26" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_26"/>
+		<npc id="20576"/><!--Шаман Сфинксов-->
+	</spawn>
+	<territory name="oren31_2217_25">
+		<add x="93552" y="-15024" zmin="-2416" zmax="-1816"/>
+		<add x="95652" y="-16220" zmin="-2416" zmax="-1816"/>
+		<add x="96288" y="-16124" zmin="-2416" zmax="-1816"/>
+		<add x="93528" y="-12800" zmin="-2416" zmax="-1816"/>
+		<add x="92904" y="-13188" zmin="-2416" zmax="-1816"/>
+	</territory>
+	<spawn name="oren31_2217_25" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_25"/>
+		<npc id="20574"/><!--Старший Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_25" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_25"/>
+		<npc id="20161"/><!--Сфинкс-->
+	</spawn>
+	<spawn name="oren31_2217_25" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_25"/>
+		<npc id="20576"/><!--Шаман Сфинксов-->
+	</spawn>	
+	<territory name="oren31_2217_24">
+		<add x="92892" y="-13144" zmin="-2888" zmax="-2188"/>
+		<add x="93472" y="-12792" zmin="-2888" zmax="-2188"/>
+		<add x="92776" y="-9988" zmin="-2888" zmax="-2188"/>
+		<add x="91892" y="-9964" zmin="-2888" zmax="-2188"/>
+		<add x="92256" y="-12624" zmin="-2888" zmax="-2188"/>
+	</territory>
+	<spawn name="oren31_2217_24" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_24"/>
+		<npc id="20575"/><!--Воин Сфинксов-->
+	</spawn>
+	<spawn name="oren31_2217_24" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_24"/>
+		<npc id="20574"/><!--Старший Василиск Тарлк-->
+	</spawn>	
+	<territory name="oren31_2217_23">
+		<add x="91872" y="-9932" zmin="-3276" zmax="-2676"/>
+		<add x="93124" y="-9972" zmin="-3276" zmax="-2676"/>
+		<add x="94244" y="-7784" zmin="-3276" zmax="-2676"/>
+		<add x="93724" y="-7828" zmin="-3276" zmax="-2676"/>
+	</territory>
+	<spawn name="oren31_2217_23" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_23"/>
+		<npc id="20161"/><!--Сфинкс-->
+	</spawn>
+	<spawn name="oren31_2217_23" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_23"/>
+		<npc id="20574"/><!--Старший Василиск Тарлк-->
+	</spawn>
+	<territory name="oren31_2217_22">
+		<add x="93696" y="-7784" zmin="-3612" zmax="-3112"/>
+		<add x="94404" y="-7732" zmin="-3612" zmax="-3112"/>
+		<add x="95284" y="-6048" zmin="-3612" zmax="-3112"/>
+		<add x="92440" y="-4908" zmin="-3612" zmax="-3112"/>
+	</territory>
+	<spawn name="oren31_2217_22" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_22"/>
+		<npc id="20161"/><!--Сфинкс-->
+	</spawn>
+	<spawn name="oren31_2217_22" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_22"/>
+		<npc id="20575"/><!--Воин Сфинксов-->
+	</spawn>
+	<spawn name="oren31_2217_22" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_22"/>
+		<npc id="20574"/><!--Старший Василиск Тарлк-->
+	</spawn>	
+	<territory name="oren31_2217_21">
+		<add x="79816" y="-2284" zmin="-3832" zmax="-3432"/>
+		<add x="82932" y="-2792" zmin="-3832" zmax="-3432"/>
+		<add x="86124" y="-240" zmin="-3832" zmax="-3432"/>
+		<add x="80392" y="-224" zmin="-3832" zmax="-3432"/>
+	</territory>
+	<spawn name="oren31_2217_21" count="4" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_21"/>
+		<npc id="20573"/><!--Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_21" count="4" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_21"/>
+		<npc id="20574"/><!--Старший Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_21" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_21"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>
+	<territory name="oren31_2217_20">
+		<add x="74508" y="-2516" zmin="-3792" zmax="-3492"/>
+		<add x="76880" y="-3604" zmin="-3792" zmax="-3492"/>
+		<add x="79808" y="-2284" zmin="-3792" zmax="-3492"/>
+		<add x="80392" y="-224" zmin="-3792" zmax="-3492"/>
+		<add x="76432" y="-204" zmin="-3792" zmax="-3492"/>
+	</territory>
+	<spawn name="oren31_2217_20" count="4" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_20"/>
+		<npc id="20573"/><!--Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_20" count="4" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_20"/>
+		<npc id="20574"/><!--Старший Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_20" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_20"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>
+	<territory name="oren31_2217_19">
+		<add x="72932" y="-3336" zmin="-3788" zmax="-3488"/>
+		<add x="74448" y="-2552" zmin="-3788" zmax="-3488"/>
+		<add x="76420" y="-188" zmin="-3788" zmax="-3488"/>
+		<add x="73028" y="-196" zmin="-3788" zmax="-3488"/>
+		<add x="72528" y="-1432" zmin="-3788" zmax="-3488"/>
+	</territory>
+	<spawn name="oren31_2217_19" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_19"/>
+		<npc id="20573"/><!--Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_19" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_19"/>
+		<npc id="20574"/><!--Старший Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_19" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_19"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>
+	<territory name="oren31_2217_18">
+		<add x="73900" y="-7412" zmin="-3084" zmax="-2784"/>
+		<add x="75772" y="-7324" zmin="-3084" zmax="-2784"/>
+		<add x="75788" y="-5008" zmin="-3084" zmax="-2784"/>
+		<add x="74932" y="-4540" zmin="-3084" zmax="-2784"/>
+		<add x="73108" y="-4432" zmin="-3084" zmax="-2784"/>
+	</territory>
+	<spawn name="oren31_2217_18" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_18"/>
+		<npc id="20161"/><!--Сфинкс-->
+	</spawn>
+	<spawn name="oren31_2217_18" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_18"/>
+		<npc id="20573"/><!--Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_18" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_18"/>
+		<npc id="20574"/><!--Старший Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_18" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_18"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>
+	<territory name="oren31_2217_16">
+		<add x="79844" y="-8076" zmin="-3348" zmax="-2748"/>
+		<add x="81664" y="-8092" zmin="-3348" zmax="-2748"/>
+		<add x="84036" y="-4000" zmin="-3348" zmax="-2748"/>
+		<add x="79668" y="-3640" zmin="-3348" zmax="-2748"/>
+		<add x="78520" y="-6272" zmin="-3348" zmax="-2748"/>
+	</territory>
+	<spawn name="oren31_2217_16" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_16"/>
+		<npc id="20161"/><!--Сфинкс-->
+	</spawn>
+	<spawn name="oren31_2217_16" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_16"/>
+		<npc id="20573"/><!--Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_16" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_16"/>
+		<npc id="20574"/><!--Старший Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_16" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_16"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>	
+	<territory name="oren31_2217_15">
+		<add x="85596" y="-7840" zmin="-3572" zmax="-2772"/>
+		<add x="87040" y="-6392" zmin="-3572" zmax="-2772"/>
+		<add x="86220" y="-2732" zmin="-3572" zmax="-2772"/>
+		<add x="84700" y="-3000" zmin="-3572" zmax="-2772"/>
+		<add x="81696" y="-8144" zmin="-3572" zmax="-2772"/>
+	</territory>
+	<spawn name="oren31_2217_15" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_15"/>
+		<npc id="20161"/><!--Сфинкс-->
+	</spawn>
+	<spawn name="oren31_2217_15" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_15"/>
+		<npc id="20573"/><!--Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_15" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_15"/>
+		<npc id="20574"/><!--Старший Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_15" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_15"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>	
+	<territory name="oren31_2217_14">
+		<add x="87064" y="-6388" zmin="-3556" zmax="-3056"/>
+		<add x="88160" y="-7024" zmin="-3556" zmax="-3056"/>
+		<add x="90084" y="-3532" zmin="-3556" zmax="-3056"/>
+		<add x="86224" y="-2748" zmin="-3556" zmax="-3056"/>
+	</territory>
+	<spawn name="oren31_2217_14" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_14"/>
+		<npc id="20161"/><!--Сфинкс-->
+	</spawn>
+	<spawn name="oren31_2217_14" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_14"/>
+		<npc id="20573"/><!--Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_14" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_14"/>
+		<npc id="20574"/><!--Старший Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_14" count="3" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_14"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>
+	<territory name="oren31_2217_13">
+		<add x="88176" y="-7032" zmin="-3416" zmax="-2716"/>
+		<add x="90836" y="-8872" zmin="-3416" zmax="-2716"/>
+		<add x="92224" y="-7040" zmin="-3416" zmax="-2716"/>
+		<add x="90996" y="-4104" zmin="-3416" zmax="-2716"/>
+		<add x="90032" y="-3584" zmin="-3416" zmax="-2716"/>
+	</territory>
+	<spawn name="oren31_2217_13" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_13"/>
+		<npc id="20161"/><!--Сфинкс-->
+	</spawn>
+	<spawn name="oren31_2217_13" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_13"/>
+		<npc id="20573"/><!--Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_13" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_13"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>	
+	<territory name="oren31_2217_12">
+		<add x="88924" y="-10936" zmin="-3056" zmax="-2056"/>
+		<add x="90896" y="-11060" zmin="-3056" zmax="-2056"/>
+		<add x="87156" y="-7572" zmin="-3056" zmax="-2056"/>
+		<add x="86640" y="-7748" zmin="-3056" zmax="-2056"/>
+	</territory>
+	<spawn name="oren31_2217_12" count="1" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_12"/>
+		<npc id="20161"/><!--Сфинкс-->
+	</spawn>
+	<spawn name="oren31_2217_12" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_12"/>
+		<npc id="20574"/><!--Старший Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_12" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_12"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>	
+	<territory name="oren31_2217_11">
+		<add x="87088" y="-1720" zmin="-3784" zmax="-3184"/>
+		<add x="94156" y="-4692" zmin="-3784" zmax="-3184"/>
+		<add x="91232" y="-240" zmin="-3784" zmax="-3184"/>
+		<add x="87772" y="-240" zmin="-3784" zmax="-3184"/>
+	</territory>
+	<spawn name="oren31_2217_11" count="7" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_11"/>
+		<npc id="20573"/><!--Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_11" count="5" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_11"/>
+		<npc id="20574"/><!--Старший Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_11" count="6" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_11"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>
+	<territory name="oren31_2217_10">
+		<add x="94212" y="-4708" zmin="-3912" zmax="-3212"/>
+		<add x="98008" y="-4652" zmin="-3912" zmax="-3212"/>
+		<add x="98032" y="-172" zmin="-3912" zmax="-3212"/>
+		<add x="91276" y="-224" zmin="-3912" zmax="-3212"/>
+	</territory>
+	<spawn name="oren31_2217_10" count="6" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_10"/>
+		<npc id="20573"/><!--Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_10" count="4" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_10"/>
+		<npc id="20574"/><!--Старший Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2217_10" count="3" respawn="41" respawn_random="5">
+		<territory name="oren31_2217_10"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>
+	<spawn name="banditsagit_2217_02" count="1" respawn="1200">
+		<point x="82095" y="-15769" z="-1888" h="60392"/>
+		<npc id="35429"/><!--Ищейка Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_02" count="1" respawn="1200">
+		<point x="82095" y="-15769" z="-1888" h="60392"/>
+		<npc id="35428"/><!--Берсерк Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_02" count="1" respawn="1200">
+		<point x="82095" y="-15769" z="-1888" h="60392"/>
+		<npc id="35430"/><!--Владыка Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_02" count="1" respawn="1200">
+		<point x="82095" y="-15769" z="-1888" h="60392"/>
+		<npc id="35431"/><!--Клерик Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_02" count="1" respawn="1200">
+		<point x="82095" y="-15769" z="-1888" h="60392"/>
+		<npc id="35432"/><!--Вор Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_02" count="1" respawn="1200">
+		<point x="84244" y="-16982" z="-1852" h="27712"/>
+		<npc id="35429"/><!--Ищейка Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_02" count="1" respawn="1200">
+		<point x="84244" y="-16982" z="-1852" h="27712"/>
+		<npc id="35428"/><!--Берсерк Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_02" count="1" respawn="1200">
+		<point x="84244" y="-16982" z="-1852" h="27712"/>
+		<npc id="35430"/><!--Владыка Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_02" count="1" respawn="1200">
+		<point x="84244" y="-16982" z="-1852" h="27712"/>
+		<npc id="35431"/><!--Клерик Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_02" count="1" respawn="1200">
+		<point x="84244" y="-16982" z="-1852" h="27712"/>
+		<npc id="35432"/><!--Вор Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_01" count="1" respawn="1200">
+		<point x="83672" y="-17340" z="-1829" h="19048"/>
+		<npc id="35429"/><!--Ищейка Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_01" count="1" respawn="1200">
+		<point x="83672" y="-17340" z="-1829" h="19048"/>
+		<npc id="35428"/><!--Берсерк Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_01" count="1" respawn="1200">
+		<point x="83672" y="-17340" z="-1829" h="19048"/>
+		<npc id="35430"/><!--Владыка Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_01" count="1" respawn="1200">
+		<point x="83672" y="-17340" z="-1829" h="19048"/>
+		<npc id="35431"/><!--Клерик Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_01" count="1" respawn="1200">
+		<point x="83672" y="-17340" z="-1829" h="19048"/>
+		<npc id="35432"/><!--Вор Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_01" count="1" respawn="1200">
+		<point x="83503" y="-15368" z="-1829" h="44976"/>
+		<npc id="35429"/><!--Ищейка Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_01" count="1" respawn="1200">
+		<point x="83503" y="-15368" z="-1829" h="44976"/>
+		<npc id="35428"/><!--Берсерк Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_01" count="1" respawn="1200">
+		<point x="83503" y="-15368" z="-1829" h="44976"/>
+		<npc id="35430"/><!--Владыка Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_01" count="1" respawn="1200">
+		<point x="83503" y="-15368" z="-1829" h="44976"/>
+		<npc id="35431"/><!--Клерик Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_01" count="1" respawn="1200">
+		<point x="83503" y="-15368" z="-1829" h="44976"/>
+		<npc id="35432"/><!--Вор Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_01" count="1" respawn="1200">
+		<point x="82226" y="-15597" z="-1888" h="58792"/>
+		<npc id="35429"/><!--Ищейка Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_01" count="1" respawn="1200">
+		<point x="82226" y="-15597" z="-1888" h="58792"/>
+		<npc id="35428"/><!--Берсерк Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_01" count="1" respawn="1200">
+		<point x="82226" y="-15597" z="-1888" h="58792"/>
+		<npc id="35430"/><!--Владыка Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_01" count="1" respawn="1200">
+		<point x="82226" y="-15597" z="-1888" h="58792"/>
+		<npc id="35431"/><!--Клерик Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_01" count="1" respawn="1200">
+		<point x="82226" y="-15597" z="-1888" h="58792"/>
+		<npc id="35432"/><!--Вор Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_01" count="1" respawn="1200">
+		<point x="82149" y="-17007" z="-1839" h="5432"/>
+		<npc id="35429"/><!--Ищейка Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_01" count="1" respawn="1200">
+		<point x="82149" y="-17007" z="-1839" h="5432"/>
+		<npc id="35428"/><!--Берсерк Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_01" count="1" respawn="1200">
+		<point x="82149" y="-17007" z="-1839" h="5432"/>
+		<npc id="35430"/><!--Владыка Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_01" count="1" respawn="1200">
+		<point x="82149" y="-17007" z="-1839" h="5432"/>
+		<npc id="35431"/><!--Клерик Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_01" count="1" respawn="1200">
+		<point x="82149" y="-17007" z="-1839" h="5432"/>
+		<npc id="35432"/><!--Вор Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_01" count="1" respawn="1200">
+		<point x="84486" y="-16073" z="-1828" h="35816"/>
+		<npc id="35429"/><!--Ищейка Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_01" count="1" respawn="1200">
+		<point x="84486" y="-16073" z="-1828" h="35816"/>
+		<npc id="35428"/><!--Берсерк Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_01" count="1" respawn="1200">
+		<point x="84486" y="-16073" z="-1828" h="35816"/>
+		<npc id="35430"/><!--Владыка Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_01" count="1" respawn="1200">
+		<point x="84486" y="-16073" z="-1828" h="35816"/>
+		<npc id="35431"/><!--Клерик Сфинксов-->
+	</spawn>
+	<spawn name="banditsagit_2217_01" count="1" respawn="1200">
+		<point x="84486" y="-16073" z="-1828" h="35816"/>
+		<npc id="35432"/><!--Вор Сфинксов-->
+	</spawn>
+</list>

@@ -1,0 +1,12 @@
+<html><head><body>
+Pa'agrio Lord Kakai:<br>
+Hear me! I am Pa'agrio Lord Kakai, invested with the authority of Pa'agrio, the father of eternal flame, to lead the great Orc race. Young warrior, you are to my eyes like a flame of hope, hope that our race may yet achieve its former glory. What do you wish from me?<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">"Can you tell me about the 1st Class Transfer?"</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc?chat 1">"Tell me what's going on."</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Clan</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Alliance</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Exchange Daily Coins</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Quest</Button>
+</body></html>

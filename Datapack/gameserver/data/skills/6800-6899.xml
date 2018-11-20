@@ -1,0 +1,1584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="6800" levels="1" name="Presentation - Yellow Portal Ray">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6801" levels="1" name="Presentation - Yellow-Green Portal Ray">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6802" levels="1" name="Presentation - SSQ2 General Purpose 6">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill0922"/>
+		<set name="abnormal_effect" value="STEALTH"/>
+		<set name="abnormal_time" value="86400"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="hide"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6803" levels="1" name="Arena Haste">
+		<set name="icon" value="icon.skill1086"/>
+		<set name="castRange" value="400"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="attack_time_down"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pAtkSpd" value="1.15"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6804" levels="1" name="Arena Wind Walk">
+		<set name="icon" value="icon.skill1204"/>
+		<set name="castRange" value="400"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="speed_up"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add stat="runSpd" value="33"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6805" levels="1" name="Arena Empower">
+		<set name="icon" value="icon.skill1059"/>
+		<set name="castRange" value="400"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="ma_up"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="mAtk" value="1.75"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6806" levels="1" name="Arena Acumen">
+		<set name="icon" value="icon.skill1085"/>
+		<set name="castRange" value="400"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="casting_time_down"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="mAtkSpd" value="1.3"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6807" levels="1" name="Arena Concentration">
+		<set name="icon" value="icon.skill1078"/>
+		<set name="castRange" value="400"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="6"/>
+		<set name="abnormal_type" value="cancel_prob_down"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="concentration" value="0.82"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6808" levels="1" name="Arena Might">
+		<set name="icon" value="icon.skill1068"/>
+		<set name="castRange" value="400"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="pa_up"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pAtk" value="1.15"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6809" levels="1" name="Arena Guidance">
+		<set name="icon" value="icon.skill1240"/>
+		<set name="castRange" value="400"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="hit_up"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add stat="pAccCombat" value="4"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6810" levels="1" name="Arena Focus">
+		<set name="icon" value="icon.skill1077"/>
+		<set name="castRange" value="400"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="critical_prob_up"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add stat="pCritRate" value="30"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6811" levels="1" name="Arena Death Whisper">
+		<set name="icon" value="icon.skill1242"/>
+		<set name="castRange" value="400"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="critical_dmg_up"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add stat="p_critical_damage_per" value="35"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6812" levels="1" name="Arena Berserker Spirit">
+		<set name="icon" value="icon.skill1062"/>
+		<set name="castRange" value="400"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="berserker"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="mAtk" value="1.16"/>
+				<mul stat="pAtk" value="1.08"/>
+				<mul stat="pDef" value="0.92"/>
+				<mul stat="mDef" value="0.84"/>
+				<mul stat="mAtkSpd" value="1.08"/>
+				<mul stat="pAtkSpd" value="1.08"/>
+				<add stat="runSpd" value="8"/>
+				<sub stat="pEvasRate" value="4"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6813" levels="8" name="Sonic Focus">
+		<table name="#charges">1 2 3 4 5 6 7 8</table>
+		<table name="#magicLevel">40 43 49 55 60 66 70 79</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="effectPoint" value="200"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="CHARGE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="charges" value="#charges"/>
+		<!--TODO-->
+	</skill>
+	<skill id="6814" levels="8" name="Focus Force">
+		<table name="#charges">1 2 3 4 5 6 7 8</table>
+		<table name="#magicLevel">24 32 40 52 60 66 72 79</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="effectPoint" value="150"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="CHARGE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="charges" value="#charges"/>
+		<!--TODO-->
+	</skill>
+	<skill id="6815" levels="16" name="Deadly Poison">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<table name="#magicLevel">84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99</table>
+		<set name="icon" value="icon.skill6815"/>
+		<set name="abnormal_effect" value="DOT_POISON"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="10"/>
+		<set name="abnormal_type" value="poison"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="poison"/>
+		<set name="trait" value="POISON"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6816" levels="16" name="Deadly Bleed">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<table name="#magicLevel">84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99</table>
+		<set name="icon" value="icon.skill6816"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="10"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="bleeding"/>
+		<set name="trait" value="BLEED"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6817" levels="1" name="Arena HP Recovery">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="400"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6818" levels="1" name="Powerful Rage">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="60000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="75"/>
+		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="pa_up"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pAtk" value="1.5"/>
+				<mul stat="pAtkSpd" value="1.3"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6819" levels="1" name="Banshee\'s Curse">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill4038"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="75"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6820" levels="1" name="P. Def. Enhance">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="60000"/>
+		<set name="hitTime" value="1799"/>
+		<set name="mp_consume" value="30"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="pd_up"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pDef" value="1.2"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6821" levels="1" name="Decrease P. Def.">
+		<set name="icon" value="icon.skill0122"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="140"/>
+		<set name="hitTime" value="1500"/>
+		<set name="abnormal_time" value="4"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="pd_down"/>
+		<set name="magicLevel" value="84"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="4"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pDef" value="0.77"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6822" levels="1" name="Decrease P. Def.">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill0122"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="140"/>
+		<set name="hitTime" value="1500"/>
+		<set name="abnormal_time" value="4"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="pd_down"/>
+		<set name="magicLevel" value="84"/>
+		<set name="lv_bonus_rate" value="4"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6823" levels="1" name="Reflect Attack">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill0086"/>
+		<set name="reuseDelay" value="4000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="dmg_shield"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6824" levels="1" name="Piercing Storm">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="300"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="84"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="110"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MANADAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6825" levels="2" name="Bleed">
+		<set name="icon" value="icon.skill0096"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="300"/>
+		<set name="hitTime" value="3000"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="8"/>
+		<set name="abnormal_level" value="9"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="84"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="14654"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="bleeding"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="t_hp" interval="5" value="-100"/>
+		</for>
+	</skill>
+	<skill id="6826" levels="1" name="Critical Blow">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="magicLevel" value="84"/>
+		<set name="power" value="16654"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="criticalRate" value="50"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6827" levels="1" name="Petrify">
+		<set name="icon" value="icon.skill4111"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="castRange" value="300"/>
+		<set name="hitTime" value="2500"/>
+		<set name="abnormal_effect" value="FLESH_STONE"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="turn_stone"/>
+		<set name="magicLevel" value="84"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PARALYZE"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="Invulnerable"/>
+			<effect name="p_block_debuff"/>
+			<effect name="Petrification">
+				<set stat="regHp" value="0"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6828" levels="1" name="Dust Storm">
+		<set name="icon" value="icon.skill1386"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="3000"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="casting_time_up"/>
+		<set name="magicLevel" value="84"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="affect_range" value="300"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pAtkSpd" value="0.5"/>
+				<mul stat="mAtkSpd" value="0.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6829" levels="1" name="Vampiric Attack">
+		<set name="icon" value="icon.skill1234"/>
+		<set name="reuseDelay" value="1500"/>
+		<set name="castRange" value="800"/>
+		<set name="hitTime" value="1500"/>
+		<set name="magicLevel" value="84"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="342"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DRAIN"/>
+		<set name="operate_type" value="A2"/>
+		<set name="absorbPart" value="0.2"/>
+	</skill>
+	<skill id="6830" levels="1" name="Bleed">
+		<set name="icon" value="icon.skill0096"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="castRange" value="800"/>
+		<set name="hitTime" value="3000"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="9"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="84"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="bleeding"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="affect_range" value="400"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="t_hp" interval="5" value="-100">
+				<sub stat="hpEff" value="600"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6831" levels="1" name="Blood Burst">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="300"/>
+		<set name="hitTime" value="2500"/>
+		<set name="magicLevel" value="84"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="261"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6832" levels="1" name="Summon Parasitic Leech">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="84"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6833" levels="1" name="Power Strike">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="magicLevel" value="84"/>
+		<set name="power" value="26654"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="criticalRate" value="50"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6834" levels="1" name="Range Magic Attack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="84"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="335"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6835" levels="1" name="Summon Skeleton">
+		<!-- Unknown effect -->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="84"/>
+		<set name="power" value="34565"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6836" levels="1" name="Silence">
+		<set name="icon" value="icon.skill1064"/>
+		<set name="castRange" value="1000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="abnormal_effect" value="SILENCE"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="silence"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MUTE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect name="Mute"/>
+		</for>
+	</skill>
+	<skill id="6837" levels="1" name="Range Magic Attack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="335"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6838" levels="1" name="Self-destruction">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="4000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6839" levels="2" name="Power Attack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="2500"/>
+		<set name="magicLevel" value="85"/>
+		<set name="power" value="15452"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6840" levels="1" name="Paralysis">
+		<set name="icon" value="icon.skill1170"/>
+		<set name="castRange" value="150"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_effect" value="PARALYZE"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="paralyze"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PARALYZE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="PARALYZE"/>
+		<for>
+			<effect name="Paralyze"/>
+		</for>
+	</skill>
+	<skill id="6841" levels="1" name="Summon Subordinate">
+		<!-- Unknown effect -->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="5000"/>
+		<set name="magicLevel" value="84"/>
+		<set name="power" value="34565"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6842" levels="2" name="Enhance">
+		<table name="#abnormal_level">1 2</table>
+		<set name="icon" value="icon.skill1086"/>
+		<set name="hitTime" value="3000"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="casting_time_up"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pAtk" value="1.12"/>
+				<mul stat="pAtkSpd" value="1.15"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6843" levels="1" name="Enhance">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill1086"/>
+		<set name="hitTime" value="3000"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="casting_time_up"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6844" levels="1" name="Power Strike">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="300"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="power" value="10452"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_MULTIFACE"/>
+		<set name="affect_range" value="250"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6845" levels="1" name="Power Strike">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="2500"/>
+		<set name="mp_consume" value="80"/>
+		<set name="magicLevel" value="80"/>
+		<set name="power" value="4452"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6846" levels="1" name="Vampiric Claw">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="800"/>
+		<set name="hitTime" value="3000"/>
+		<set name="mp_consume" value="123"/>
+		<set name="magicLevel" value="81"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="212"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DRAIN"/>
+		<set name="operate_type" value="A2"/>
+		<set name="absorbPart" value="0.4"/>
+	</skill>
+	<skill id="6847" levels="1" name="Self Heal">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="80"/>
+		<set name="magicLevel" value="81"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6848" levels="1" name="Summoner Appearance">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="5000"/>
+		<set name="magicLevel" value="81"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6849" levels="1" name="Summoner Strike">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="mp_consume" value="100"/>
+		<set name="magicLevel" value="82"/>
+		<set name="power" value="12345"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6850" levels="1" name="Self-destruction">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="81"/>
+		<set name="power" value="120"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="affect_range" value="250"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSuicideAttack" value="true"/>
+	</skill>
+	<skill id="6851" levels="1" name="Power Strike">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="mp_consume" value="80"/>
+		<set name="magicLevel" value="81"/>
+		<set name="power" value="3452"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6852" levels="1" name="Magic Strike">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="80"/>
+		<set name="magicLevel" value="81"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="110"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6853" levels="1" name="Sleep">
+		<set name="icon" value="icon.skill1069"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="3000"/>
+		<set name="mp_consume" value="80"/>
+		<set name="abnormal_effect" value="SLEEP"/>
+		<set name="abnormal_time" value="6"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="sleep"/>
+		<set name="magicLevel" value="82"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="SLEEP"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SLEEP"/>
+		<for>
+			<effect name="Sleep">
+				<p_defence_trait name="sleep" value="100"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6854" levels="1" name="Hold">
+		<set name="icon" value="icon.skill4047"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="3000"/>
+		<set name="mp_consume" value="73"/>
+		<set name="abnormal_effect" value="ROOT"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="root_magically"/>
+		<set name="magicLevel" value="82"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="ROOT"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="HOLD"/>
+		<for>
+			<effect name="p_block_move"/>
+		</for>
+	</skill>
+	<skill id="6855" levels="1" name="Magic Strike">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="4000"/>
+		<set name="magicLevel" value="82"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="87"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6856" levels="1" name="Heal">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="2500"/>
+		<set name="magicLevel" value="82"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6857" levels="1" name="Power Strike">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="80"/>
+		<set name="hitTime" value="2500"/>
+		<set name="mp_consume" value="80"/>
+		<set name="magicLevel" value="83"/>
+		<set name="power" value="14565"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6858" levels="1" name="Summon">
+		<!-- Unknown effect -->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="magicLevel" value="81"/>
+		<set name="power" value="14565"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6859" levels="1" name="Power Strike">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="80"/>
+		<set name="hitTime" value="2500"/>
+		<set name="mp_consume" value="80"/>
+		<set name="magicLevel" value="83"/>
+		<set name="power" value="7465"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6860" levels="1" name="Power Strike">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="80"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="80"/>
+		<set name="magicLevel" value="83"/>
+		<set name="power" value="12645"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6861" levels="1" name="Enhance">
+		<set name="icon" value="icon.skill1086"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="75"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="casting_time_up"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pAtk" value="1.2"/>
+				<mul stat="pAtkSpd" value="1.3"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6862" levels="1" name="Poison">
+		<set name="icon" value="icon.skill0129"/>
+		<set name="castRange" value="100"/>
+		<set name="hitTime" value="2500"/>
+		<set name="mp_consume" value="80"/>
+		<set name="abnormal_effect" value="DOT_POISON"/>
+		<set name="abnormal_time" value="6"/>
+		<set name="abnormal_level" value="9"/>
+		<set name="abnormal_type" value="poison"/>
+		<set name="magicLevel" value="83"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="poison"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="t_hp" value="-100"/>
+		</for>
+	</skill>
+	<skill id="6863" levels="1" name="Poison">
+		<set name="icon" value="icon.skill0129"/>
+		<set name="castRange" value="150"/>
+		<set name="hitTime" value="3000"/>
+		<set name="mp_consume" value="80"/>
+		<set name="abnormal_effect" value="DOT_POISON"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="10"/>
+		<set name="abnormal_type" value="poison"/>
+		<set name="magicLevel" value="83"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="poison"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="t_hp" value="-120"/>
+		</for>
+	</skill>
+	<skill id="6864" levels="1" name="Summon">
+		<!-- Unknown effect -->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="magicLevel" value="81"/>
+		<set name="power" value="34565"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6865" levels="1" name="Poison">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill0129"/>
+		<set name="castRange" value="100"/>
+		<set name="hitTime" value="2500"/>
+		<set name="mp_consume" value="80"/>
+		<set name="abnormal_effect" value="DOT_POISON"/>
+		<set name="abnormal_time" value="8"/>
+		<set name="abnormal_level" value="9"/>
+		<set name="abnormal_type" value="poison"/>
+		<set name="magicLevel" value="83"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="poison"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6866" levels="1" name="Vampiric Claw">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="800"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="83"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="186"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DRAIN"/>
+		<set name="operate_type" value="A2"/>
+		<set name="absorbPart" value="0.5"/>
+	</skill>
+	<skill id="6867" levels="1" name="Magic Strike">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="83"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="190"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6868" levels="1" name="Summon">
+		<!-- Unknown effect -->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="magicLevel" value="83"/>
+		<set name="power" value="34565"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6869" levels="1" name="Detonate">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="83"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="160"/>
+		<set name="affect_range" value="300"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6870" levels="1" name="Vampiric Claw">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="800"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="123"/>
+		<set name="magicLevel" value="83"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="156"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DRAIN"/>
+		<set name="operate_type" value="A2"/>
+		<set name="absorbPart" value="0.5"/>
+	</skill>
+	<skill id="6871" levels="1" name="Range Magic Attack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="150"/>
+		<set name="hitTime" value="2500"/>
+		<set name="mp_consume" value="122"/>
+		<set name="magicLevel" value="83"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="160"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6872" levels="1" name="Self-destruction">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="80"/>
+		<set name="magicLevel" value="83"/>
+		<set name="power" value="120"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="affect_range" value="250"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSuicideAttack" value="true"/>
+	</skill>
+	<skill id="6873" levels="2" name="Hex">
+		<table name="#pdefdown">0.77 0.67</table>
+		<table name="#abnormal_level">3 4</table>
+		<set name="icon" value="icon.skill0122"/>
+		<set name="castRange" value="150"/>
+		<set name="hitTime" value="1500"/>
+		<set name="abnormal_time" value="4"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="pd_down"/>
+		<set name="magicLevel" value="83"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pDef" value="#pdefdown"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6874" levels="1" name="Range Magic Attack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="300"/>
+		<set name="hitTime" value="2500"/>
+		<set name="magicLevel" value="83"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="190"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6875" levels="2" name="Poison">
+		<table name="#dmg">-120 -140</table>
+		<set name="icon" value="icon.skill0129"/>
+		<set name="castRange" value="300"/>
+		<set name="hitTime" value="2500"/>
+		<set name="abnormal_effect" value="DOT_POISON"/>
+		<set name="abnormal_time" value="8"/>
+		<set name="abnormal_level" value="10"/>
+		<set name="abnormal_type" value="poison"/>
+		<set name="magicLevel" value="83"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="poison"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="t_hp" value="#dmg"/>
+		</for>
+	</skill>
+	<skill id="6876" levels="1" name="Power Strike">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="80"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="80"/>
+		<set name="magicLevel" value="83"/>
+		<set name="power" value="14231"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6877" levels="1" name="Power Strike">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="80"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="80"/>
+		<set name="magicLevel" value="83"/>
+		<set name="power" value="17654"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6878" levels="1" name="Paralysis">
+		<set name="icon" value="icon.skill1170"/>
+		<set name="castRange" value="80"/>
+		<set name="hitTime" value="6000"/>
+		<set name="mp_consume" value="78"/>
+		<set name="abnormal_effect" value="PARALYZE"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="paralyze"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PARALYZE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="PARALYZE"/>
+		<for>
+			<effect name="Paralyze"/>
+		</for>
+	</skill>
+	<skill id="6879" levels="1" name="Vampiric Claw">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="300"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="83"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="256"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DRAIN"/>
+		<set name="operate_type" value="A2"/>
+		<set name="absorbPart" value="0.5"/>
+	</skill>
+	<skill id="6880" levels="1" name="Silence">
+		<set name="icon" value="icon.skill1064"/>
+		<set name="castRange" value="300"/>
+		<set name="hitTime" value="3000"/>
+		<set name="abnormal_effect" value="SILENCE"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="silence"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MUTE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect name="Mute"/>
+		</for>
+	</skill>
+	<skill id="6881" levels="1" name="Critical Blow">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="hitTime" value="2500"/>
+		<set name="mp_consume" value="89"/>
+		<set name="magicLevel" value="84"/>
+		<set name="power" value="17654"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="criticalRate" value="50"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6882" levels="1" name="Petrify">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill4111"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="hitTime" value="2500"/>
+		<set name="mp_consume" value="80"/>
+		<set name="abnormal_effect" value="FLESH_STONE"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="turn_stone"/>
+		<set name="magicLevel" value="84"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6884" levels="1" name="Morale Boost">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="1600"/>
+		<set name="magicLevel" value="80"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6885" levels="3" name="Morale Boost">
+		<!--
+		6885	1	Morale Boost	The persistence of the brave who fight together in Dragon Valley receive resistance to Paralysis/Bleed/Poison/Stun +50, Critical Rate +10%, and Critical Damage +10%.	none	none
+		6885	2	Morale Boost	The persistence of the brave who fight together in Dragon Valley receive resistance to Paralysis/Bleed/Poison/Stun +80, Critical Rate +30%, critical damge +15%, P. Atk. +15%, and M. Atk. +15%.	none	none
+		6885	3	Morale Boost	The persistence of the brave who fight together in Dragon Valley receive resistance to Paralysis/Bleed/Poison/Stun +90, Critical Rate +50%, Critical Damage +15%, P. Atk. +15%, M. Atk. +15%, Atk. Spd. +15%, Casting Spd. +15%, and EXP bonus +20%.	none	none
+		-->
+		<table name="#p_defence_trait_bleed">50 80 90</table>
+		<table name="#p_attack_trait_paralyze">50 80 90</table>
+		<table name="#p_attack_trait_shock">50 80 90</table>
+		<table name="#p_attack_trait_poison">50 80 90</table>
+		<table name="#pCritRate">10 30 50</table>
+		<table name="#p_critical_damage_per">10 15 15</table>
+		<table name="#Atk">1 1.15 1.15</table>
+		<table name="#AtkSpd">1 1 1.15</table>
+		<table name="#exp">0 0 0.2</table>
+		<table name="#abnormal_level">1 2 3</table>
+		<table name="#abnormal_effect">NONE NONE VP_KEEP</table>
+		<set name="icon" value="icon.skill6885"/>
+		<set name="castRange" value="1600"/>
+		<set name="abnormal_effect" value="#abnormal_effect"/>
+		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="morale_up"/>
+		<set name="magicType" value="ITEM"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<p_defence_trait name="bleed" value="#p_defence_trait_bleed"/>
+				<p_attack_trait name="paralyze" value="#p_attack_trait_paralyze"/>
+				<p_attack_trait name="shock" value="#p_attack_trait_shock"/>
+				<p_attack_trait name="poison" value="#p_attack_trait_poison"/>
+				<add stat="pCritRate" value="#pCritRate"/>
+				<add stat="p_critical_damage_per" value="#p_critical_damage_per"/>
+				<mul stat="pAtk" value="#Atk"/>
+				<mul stat="mAtk" value="#Atk"/>
+				<mul stat="pAtkSpd" value="#AtkSpd"/>
+				<mul stat="mAtkSpd" value="#AtkSpd"/>
+				<add stat="exp_rate_multiplier" value="#exp"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6886" levels="1" name="Full Recovery">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6887" levels="1" name="Fatal Strike">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="100"/>
+		<set name="hitTime" value="3000"/>
+		<set name="mp_consume" value="80"/>
+		<set name="magicLevel" value="85"/>
+		<set name="power" value="53654"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6888" levels="1" name="Fatal Shot">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="2000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="mp_consume" value="80"/>
+		<set name="magicLevel" value="85"/>
+		<set name="power" value="37654"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6889" levels="1" name="Range Attack">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="80"/>
+		<set name="magicLevel" value="85"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6890" levels="1" name="Bleed">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill0096"/>
+		<set name="castRange" value="300"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="123"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="10"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="84"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="bleeding"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6891" levels="1" name="Power Attack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="200"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="80"/>
+		<set name="magicLevel" value="84"/>
+		<set name="power" value="27654"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6892" levels="1" name="Power Shot">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="2000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="mp_consume" value="80"/>
+		<set name="magicLevel" value="84"/>
+		<set name="power" value="16324"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6893" levels="1" name="Power Attack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="200"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="80"/>
+		<set name="magicLevel" value="84"/>
+		<set name="power" value="27654"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6894" levels="1" name="Power Shot">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="2000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="mp_consume" value="80"/>
+		<set name="magicLevel" value="84"/>
+		<set name="power" value="16324"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6895" levels="1" name="Power Attack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="200"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="80"/>
+		<set name="magicLevel" value="84"/>
+		<set name="power" value="27654"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6896" levels="1" name="Power Shot">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="2000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="mp_consume" value="80"/>
+		<set name="magicLevel" value="84"/>
+		<set name="power" value="16324"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6897" levels="12" name="Stun">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mp_consume">13 20 28 38 50 61 71 76 80 83 84 85</table>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="coolTime" value="800"/>
+		<set name="hitTime" value="1000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6898" levels="1" name="Raid Boss (Lv. 84)">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skillraid"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6899" levels="1" name="Raid Boss (Lv. 84)">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skillraid"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+</list>

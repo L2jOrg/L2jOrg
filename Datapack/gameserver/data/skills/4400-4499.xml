@@ -1,0 +1,1599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="4400" levels="3" name="Acumen">
+		<table name="#TabmAtkSpd">1.15 1.23 1.3</table>
+		<table name="#abnormal_level">2 3 4</table>
+		<set name="icon" value="icon.skill1085"/>
+		<set name="castRange" value="400"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="casting_time_down"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="mAtkSpd" value="#TabmAtkSpd"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4401" levels="3" name="Empower">
+		<table name="#TabmAtk">1.55 1.65 1.75</table>
+		<table name="#abnormal_level">2 3 4</table>
+		<set name="icon" value="icon.skill1059"/>
+		<set name="castRange" value="400"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="ma_up"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="mAtk" value="#TabmAtk"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4402" levels="2" name="Haste">
+		<table name="#TabpAtkSpd">1.15 1.33</table>
+		<table name="#abnormal_level">2 3</table>
+		<set name="icon" value="icon.skill1086"/>
+		<set name="castRange" value="400"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="attack_time_down"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pAtkSpd" value="#TabpAtkSpd"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4403" levels="3" name="Guidance">
+		<table name="#TabpAccCombat">2 3 4</table>
+		<table name="#abnormal_level">2 3 4</table>
+		<set name="icon" value="icon.skill1240"/>
+		<set name="castRange" value="400"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="hit_up"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add stat="pAccCombat" value="#TabpAccCombat"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4404" levels="3" name="Focus">
+		<table name="#pCritRate">20 25 30</table>
+		<table name="#abnormal_level">2 3 4</table>
+		<set name="icon" value="icon.skill1077"/>
+		<set name="castRange" value="400"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="critical_prob_up"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add stat="pCritRate" value="#pCritRate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4405" levels="3" name="Death Whisper">
+		<table name="#p_critical_damage_per">25 30 35</table>
+		<table name="#abnormal_level">2 3 4</table>
+		<set name="icon" value="icon.skill1242"/>
+		<set name="castRange" value="400"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="critical_dmg_up"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add stat="p_critical_damage_per" value="#p_critical_damage_per"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4406" levels="3" name="Agility">
+		<table name="#TabpEvasRate">2 3 4</table>
+		<table name="#abnormal_level">2 3 4</table>
+		<set name="icon" value="icon.skill1087"/>
+		<set name="castRange" value="400"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="avoid_up"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add stat="pEvasRate" value="#TabpEvasRate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4407" levels="2" name="Ordinary Monster">
+		<!-- это спецскилл для монстров-чемпионов -->
+		<table name="#icon">icon.skill0000 icon.skill4407</table>
+		<table name="#hp">10 50</table>
+		<table name="#TabmAtk">1.3 2</table>
+		<table name="#TabpAtk">1.15 1.5</table>
+		<table name="#eff">12.5 50</table>
+		<table name="#drop">10 25</table>
+		<set name="icon" value="#icon"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="maxHp" value="#hp"/>
+			<mul stat="maxMp" value="#hp"/>
+			<mul stat="mAtk" value="#TabmAtk"/>
+			<mul stat="pAtk" value="#TabpAtk"/>
+			<mul stat="exp_rate_multiplier" value="#eff"/>
+			<mul stat="sp_rate_multiplier" value="#eff"/>
+			<mul stat="adena_rate_multiplier" value="#drop"/>
+			<mul stat="drop_rate_multiplier" value="#drop"/>
+			<mul stat="spoil_rate_multiplier" value="#drop"/>
+		</for>
+	</skill>
+	<skill id="4408" levels="20" name="HP Increase (1x)">
+		<table name="#icon">icon.skill0000 icon.skill0000 icon.skill0000 icon.skill0000 icon.skill0000 icon.skill0000 icon.skill0000 icon.skill4381 icon.skill4311 icon.skill4303 icon.skill4304 icon.skill4305 icon.skill4306 icon.skill4307 icon.skill4308 icon.skill4309 icon.skill4310 icon.skill4408_x10 icon.skill4408_x11 icon.skill4408_x12</table>
+		<table name="#value">1 1.1 1.21 1.33 1.46 1.61 1.77 0.25 0.50 2 3 4 5 6 7 8 9 19 11 12</table>
+		<set name="icon" value="#icon"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="maxHp" value="#value"/>
+			<mul stat="regHp" value="#value"/>
+		</for>
+	</skill>
+	<skill id="4409" levels="20" name="MP Increase (1x)">
+		<table name="#icon">icon.skill0000 icon.skill0000 icon.skill0000 icon.skill0000 icon.skill0000 icon.skill0000 icon.skill0000 icon.skill4381 icon.skill4311 icon.skill4303 icon.skill4304 icon.skill4305 icon.skill4306 icon.skill4307 icon.skill4308 icon.skill4309 icon.skill4310 icon.skill4409_x10 icon.skill4409_x11 icon.skill4409_x12</table>
+		<table name="#value">1 1.1 1.21 1.33 1.46 1.61 1.77 0.25 0.50 2 3 4 5 6 7 8 9 19 11 12</table>
+		<set name="icon" value="#icon"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="maxMp" value="#value"/>
+			<mul stat="regMp" value="#value"/>
+		</for>
+	</skill>
+	<skill id="4410" levels="22" name="Extremely Weak P. Atk.">
+		<table name="#icon">icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0000 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill4410_max</table>
+		<table name="#patk">0.39 0.43 0.47 0.52 0.57 0.63 0.69 0.76 0.83 0.91 1 1.1 1.21 1.33 1.46 1.61 1.77 1.91 2.14 2.35 2.59 9</table>
+		<set name="icon" value="#icon"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pAtk" value="#patk"/>
+		</for>
+	</skill>
+	<skill id="4411" levels="22" name="Extremely Weak M. Atk.">
+		<table name="#icon">icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill0000 icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_max</table>
+		<table name="#matk">0.15 0.18 0.22 0.27 0.32 0.39 0.47 0.57 0.69 0.83 1 1.21 1.46 1.77 2.14 2.59 3.13 3.79 4.59 5.55 6.72 9.9</table>
+		<set name="icon" value="#icon"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="mAtk" value="#matk"/>
+		</for>
+	</skill>
+	<skill id="4412" levels="22" name="Extremely Weak P. Def.">
+		<table name="#icon">icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0000 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill4412_new</table>
+		<table name="#pdef">0.39 0.43 0.47 0.52 0.57 0.63 0.69 0.76 0.83 0.91 1 1.1 1.21 1.33 1.46 1.61 1.77 1.91 2.14 2.35 2.59 9</table>
+		<set name="icon" value="#icon"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pDef" value="#pdef"/>
+		</for>
+	</skill>
+	<skill id="4413" levels="22" name="Extremely Weak M. Def.">
+		<table name="#icon">icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill0000 icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_max</table>
+		<table name="#mdef">0.39 0.43 0.47 0.52 0.57 0.63 0.69 0.76 0.83 0.91 1 1.1 1.21 1.33 1.46 1.61 1.77 1.91 2.14 2.35 2.59 9</table>
+		<set name="icon" value="#icon"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="mDef" value="#mdef"/>
+		</for>
+	</skill>
+	<skill id="4414" levels="3" name="Heavy Armor Type">
+		<!--
+			Descriptions:
+			1 Heavy Armor Type: Strong P. Def. and weak Evasion.
+			2 Standard Type
+			3 Light Armor Type: Weak P. Def. and strong Evasion.
+		-->
+		<table name="#icon">icon.skill4312 icon.skill0000 icon.skill4313</table>
+		<table name="#pdef">1.15 1 0.85</table>
+		<table name="#TabpEvasRate">-10 0 10</table>
+		<set name="icon" value="#icon"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pDef" value="#pdef"/>
+			<add stat="pEvasRate" value="#TabpEvasRate"/>
+		</for>
+	</skill>
+	<skill id="4415" levels="26" name="Bare Hands">
+		<!--
+			4415	1	Bare Hands		none	none
+			4415	2	Bare Hands		none	none
+			4415	3	One-handed Sword		none	none
+			4415	4	One-handed Sword		none	none
+			4415	5	Blunt Weapons		none	none
+			4415	6	Blunt Weapons		none	none
+			4415	7	Daggers		none	none
+			4415	8	Daggers		none	none
+			4415	9	Bows		none	none
+			4415	10	Bows		none	none
+			4415	11	Spears		none	none
+			4415	12	Spears		none	none
+			4415	13	Two-handed Sword		none	none
+			4415	14	Two-handed Sword		none	none
+			4415	15	Two-handed Blunt Weapons		none	none
+			4415	16	Two-handed Blunt Weapons		none	none
+			4415	17	Hand-to-hand weapons		none	none
+			4415	18	Hand-to-hand weapons		none	none
+			4415	19	Dual-Sword Weapons		none	none
+			4415	20	Dual-Sword Weapons		none	none
+			4415	21	Ancient Sword		none	none
+			4415	22	Ancient Sword		none	none
+			4415	23	Rapier		none	none
+			4415	24	Rapier		none	none
+			4415	25	Crossbow		none	none
+			4415	26	Crossbow		none	none
+		-->
+		<table name="#pAtk">1 1.38 1 1.38 1 1.38 0.87 1.21 2.22 2.5 1 1.38 1.16 1.62 1.16 1.62 1.16 1.62 1.16 1.62 1.08 1.62 0.93 1.62 1.38 1.62 1.08 1.62</table>
+		<table name="#pAtkSpd">1 0.71 1 0.71 1 0.71 1.14 0.82 0.89 0.64 1 0.71 0.85 0.61 0.85 0.61 0.85 0.61 0.85 0.61 0.92 0.61 1.07 0.61 0.62 0.61 0.92 0.61</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pAtk" value="#pAtk"/>
+			<mul stat="pAtkSpd" value="#pAtkSpd"/>
+		</for>
+	</skill>
+	<skill id="4416" levels="26" name="Undead">
+		<table name="#icon">icon.skill4290 icon.skill4291 icon.skill4292 icon.skill4293 icon.skill4294 icon.skill4295 icon.skill4296 icon.skill4297 icon.skill4298 icon.skill4299 icon.skill4300 icon.skill4301 icon.skill4302 icon.skill4416_human icon.skill4416_elf icon.skill4416_darkelf icon.skill4416_orc icon.skill4416_dwarf icon.skill4416_etc icon.skill4416_none icon.skill4416_siegeweapon icon.skill4416_castleguard icon.skill4416_mercenary icon.skill4416_none icon.skill4416_kamael icon.skill_4416_ertheia</table>
+		<table name="#p_defence_trait_dragon_weakness">0 0 0 0 0 0 0 0 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</table>
+		<table name="#p_defence_trait_bug_weakness">0 0 0 0 0 0 0 0 0 0 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0</table>
+		<table name="#p_defence_trait_plant_weakness">0 0 0 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</table>
+		<table name="#p_defence_trait_bow">0 0 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</table>
+		<table name="#p_defence_trait_animal_weakness">0 0 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</table>
+		<table name="#p_defence_trait_shock">0 0 0 0 0 0 0 0 0 0 15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</table>
+		<table name="#p_defence_trait_blunt">0 0 0 0 0 0 0 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</table>
+		<table name="#p_defence_trait_dual">0 0 0 0 0 0 0 0 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</table>
+		<table name="#p_defence_trait_construct_weakness">0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</table>
+		<table name="#p_defence_trait_sword">0 0 0 0 0 0 0 0 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</table>
+		<table name="#p_defence_trait_giant_weakness">0 0 0 0 0 0 0 0 0 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</table>
+		<table name="#p_defence_trait_beast_weakness">0 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</table>
+		<!--
+			Descriptions: Скилл определяет расу:
+			1: Undead
+			2: Magic Creatures
+			3: Beasts
+			4: Animals
+			5: Plants
+			6: Humanoids
+			7: Spirits
+			8: Angels
+			9: Demons
+			10: Dragons
+			11: Giants
+			12: Bugs
+			13: Fairies
+			14: Humans
+			15: Elves
+			16: Dark Elves
+			17: Orcs
+			18: Dwarves
+			19: Others
+			20: Non-living Beings
+			21: Siege Weapons
+			22: Defending Army
+			23: Mercenaries
+			24: Unknown Creature
+			25: Kamael
+			!Старые скилы 4290 - 4302 для определения расы не используются.
+		-->
+		<set name="icon" value="#icon"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="dragon_weakness" value="#p_defence_trait_dragon_weakness"/>
+			<p_defence_trait name="bug_weakness" value="#p_defence_trait_bug_weakness"/>
+			<p_defence_trait name="plant_weakness" value="#p_defence_trait_plant_weakness"/>
+			<p_defence_trait name="bow" value="#p_defence_trait_bow"/>
+			<p_defence_trait name="animal_weakness" value="#p_defence_trait_animal_weakness"/>
+			<p_defence_trait name="shock" value="#p_defence_trait_shock"/>
+			<p_defence_trait name="blunt" value="#p_defence_trait_blunt"/>
+			<p_defence_trait name="dual" value="#p_defence_trait_dual"/>
+			<p_defence_trait name="construct_weakness" value="#p_defence_trait_construct_weakness"/>
+			<p_defence_trait name="sword" value="#p_defence_trait_sword"/>
+			<p_defence_trait name="giant_weakness" value="#p_defence_trait_giant_weakness"/>
+			<p_defence_trait name="beast_weakness" value="#p_defence_trait_beast_weakness"/>
+		</for>
+	</skill>
+	<skill id="4417" levels="38" name="Animals">
+		<table name="#icon">icon.skill4293 icon.skill4292 icon.skill4292 icon.skill4292 icon.skill4292 icon.skill4301 icon.skill4301 icon.skill4301 icon.skill4291 icon.skill4291 icon.skill4291 icon.skill4298 icon.skill4298 icon.skill4298 icon.skill4297 icon.skill4297 icon.skill4297 icon.skill4299 icon.skill4296 icon.skill4296 icon.skill4296 icon.skill4296 icon.skill4296 icon.skill4302 icon.skill4300 icon.skill4295 icon.skill4295 icon.skill4295 icon.skill4295 icon.skill4295 icon.skill4295 icon.skill4295 icon.skill4294 icon.skill4290 icon.skill4290 icon.skill4290 icon.skill4290 icon.skill4290</table>
+		<table name="#p_defence_trait_hold">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 0</table>
+		<table name="#p_defence_trait_bleed">0 0 0 0 0 0 0 0 0 15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 0 0 0</table>
+		<table name="#p_defence_trait_bow">0 0 -15 -15 -15 0 0 -15 0 15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 0 0</table>
+		<table name="#p_defence_trait_blunt">0 0 0 0 0 0 0 0 0 -15 0 0 0 0 0 0 15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -15 0 0</table>
+		<table name="#p_defence_trait_poison">0 0 0 0 0 0 15 15 0 15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 0 0 0</table>
+		<table name="#p_defence_trait_dualdagger">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 0 0</table>
+		<table name="#p_defence_trait_dagger">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 0 0</table>
+		<table name="#p_defence_trait_sleep">0 0 0 0 0 0 0 0 0 0 0 0 15 0 0 15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 15</table>
+		<set name="icon" value="#icon"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="hold" value="#p_defence_trait_hold"/>
+			<p_defence_trait name="bleed" value="#p_defence_trait_bleed"/>
+			<p_defence_trait name="bow" value="#p_defence_trait_bow"/>
+			<p_defence_trait name="blunt" value="#p_defence_trait_blunt"/>
+			<p_defence_trait name="poison" value="#p_defence_trait_poison"/>
+			<p_defence_trait name="dualdagger" value="#p_defence_trait_dualdagger"/>
+			<p_defence_trait name="dagger" value="#p_defence_trait_dagger"/>
+			<p_defence_trait name="sleep" value="#p_defence_trait_sleep"/>
+		</for>
+	</skill>
+	<skill id="4418" levels="5" name="Fire Attribute">
+		<!--
+			Modified by:	08.12.07
+			Description:
+			Unleashes an attack fortified with fire energy. Resistant to fire attacks.
+		-->
+		<table name="#Res">25 50 75 100 125</table>
+		<set name="icon" value="icon.etc_fire_crystal_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="defenceFire" value="#Res"/>
+			<set order="0x10" stat="attackFire" value="#Res"/>
+		</for>
+	</skill>
+	<skill id="4419" levels="5" name="Water Attribute">
+		<!--
+			Modified by:	08.12.07
+			Description:
+			Unleashes an attack fortified with water energy. Resistant to water attacks.
+		-->
+		<table name="#Res">25 50 75 100 125</table>
+		<set name="icon" value="icon.etc_water_crystal_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="defenceWater" value="#Res"/>
+			<set order="0x10" stat="attackWater" value="#Res"/>
+		</for>
+	</skill>
+	<skill id="4420" levels="5" name="Wind Attribute">
+		<!--
+			Modified by:	08.12.07
+			Description:
+			Unleashes an attack fortified with wind energy. Resistant to wind attacks.
+		-->
+		<table name="#Res">25 50 75 100 125</table>
+		<set name="icon" value="icon.etc_wind_crystal_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="defenceWind" value="#Res"/>
+			<set order="0x10" stat="attackWind" value="#Res"/>
+		</for>
+	</skill>
+	<skill id="4421" levels="5" name="Earth Attack">
+		<!--
+			Modified by:	08.12.07
+			Description:
+			Unleashes an attack fortified with earth energy. Resistant to earth attacks.
+		-->
+		<table name="#Res">25 50 75 100 125</table>
+		<set name="icon" value="icon.etc_earth_crystal_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="defenceEarth" value="#Res"/>
+			<set order="0x10" stat="attackEarth" value="#Res"/>
+		</for>
+	</skill>
+	<skill id="4422" levels="5" name="Darkness Protection">
+		<!--
+			Modified by:	08.12.07
+			Description:
+			Unleashes an attack fortified with dark energy. Resistant to dark attacks.
+		-->
+		<table name="#Res">25 50 75 100 125</table>
+		<set name="icon" value="icon.etc_unholy_crystal_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="defenceUnholy" value="#Res"/>
+			<set order="0x10" stat="attackUnholy" value="#Res"/>
+		</for>
+	</skill>
+	<skill id="4423" levels="5" name="Holy Attack">
+		<!--
+			Modified by:	08.12.07
+			Description:
+			Unleashes an attack fortified with holy energy. Resistant to holy attacks.
+		-->
+		<table name="#Res">25 50 75 100 125</table>
+		<set name="icon" value="icon.etc_holy_crystal_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="defenceHoly" value="#Res"/>
+			<set order="0x10" stat="attackHoly" value="#Res"/>
+		</for>
+	</skill>
+	<skill id="4424" levels="5" name="Fist Weapon Resistance">
+		<table name="#p_defence_trait_dualfist">10 20 30 40 50</table>
+		<set name="icon" value="icon.skill4424"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="dualfist" value="#p_defence_trait_dualfist"/>
+		</for>
+	</skill>
+	<skill id="4425" levels="5" name="Blunt Weapon Resistance">
+		<table name="#p_defence_trait_blunt">10 20 30 40 50</table>
+		<set name="icon" value="icon.skill4425"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="blunt" value="#p_defence_trait_blunt"/>
+		</for>
+	</skill>
+	<skill id="4426" levels="5" name="Dualsword Resistance">
+		<table name="#p_defence_trait_dual">10 20 30 40 50</table>
+		<set name="icon" value="icon.skill4426"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="dual" value="#p_defence_trait_dual"/>
+		</for>
+	</skill>
+	<skill id="4427" levels="5" name="Sword Resistance">
+		<table name="#p_defence_trait_sword">10 20 30 40 50</table>
+		<set name="icon" value="icon.skill4427"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="sword" value="#p_defence_trait_sword"/>
+		</for>
+	</skill>
+	<skill id="4428" levels="5" name="Two-handed Weapon Resistance">
+		<!--
+			Descriptions: Resistant to Two-Handed Weapons.
+		-->
+		<set name="icon" value="icon.skill4428"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="4429" levels="5" name="Greater Fire Resistance">
+		<table name="#Res">150 175 200 225 250</table>
+		<set name="icon" value="icon.skill4429"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="defenceFire" value="#Res"/>
+		</for>
+	</skill>
+	<skill id="4430" levels="5" name="Greater Water Resistance">
+		<table name="#Res">150 175 200 225 250</table>
+		<set name="icon" value="icon.skill4430"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="defenceWater" value="#Res"/>
+		</for>
+	</skill>
+	<skill id="4431" levels="5" name="Greater Wind Resistance">
+		<table name="#Res">150 175 200 225 250</table>
+		<set name="icon" value="icon.skill4431"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="defenceWind" value="#Res"/>
+		</for>
+	</skill>
+	<skill id="4432" levels="5" name="Greater Earth Resistance">
+		<table name="#Res">150 175 200 225 250</table>
+		<set name="icon" value="icon.skill4432"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="defenceEarth" value="#Res"/>
+		</for>
+	</skill>
+	<skill id="4433" levels="5" name="Greater Holy Attack Resistance">
+		<table name="#Res">150 175 200 225 250</table>
+		<set name="icon" value="icon.skill4433"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="defenceHoly" value="#Res"/>
+		</for>
+	</skill>
+	<skill id="4434" levels="5" name="Greater Dark Attack Resistance">
+		<table name="#Res">150 175 200 225 250</table>
+		<set name="icon" value="icon.skill4434"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="defenceUnholy" value="#Res"/>
+		</for>
+	</skill>
+	<skill id="4435" levels="5" name="Greater Stun Resistance">
+		<table name="#p_defence_trait_shock">60 70 80 90 100</table>
+		<set name="icon" value="icon.skill4435"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="shock" value="#p_defence_trait_shock"/>
+		</for>
+	</skill>
+	<skill id="4436" levels="5" name="Greater Poison Resistance">
+		<table name="#p_defence_trait_poison">60 70 80 90 100</table>
+		<set name="icon" value="icon.skill4436"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="poison" value="#p_defence_trait_poison"/>
+		</for>
+	</skill>
+	<skill id="4437" levels="5" name="Greater Bleed Resistance">
+		<table name="#p_defence_trait_bleed">60 70 80 90 100</table>
+		<set name="icon" value="icon.skill4437"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="bleed" value="#p_defence_trait_bleed"/>
+		</for>
+	</skill>
+	<skill id="4438" levels="5" name="Greater Sleep Resistance">
+		<table name="#p_defence_trait_sleep">60 70 80 90 100</table>
+		<set name="icon" value="icon.skill4286"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="sleep" value="#p_defence_trait_sleep"/>
+		</for>
+	</skill>
+	<skill id="4439" levels="5" name="Greater Hold Resistance">
+		<table name="#p_defence_trait_hold">60 70 80 90 100</table>
+		<set name="icon" value="icon.skill4288"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="hold" value="#p_defence_trait_hold"/>
+		</for>
+	</skill>
+	<skill id="4440" levels="5" name="Greater Paralysis Resistance">
+		<table name="#p_defence_trait_paralyze">60 70 80 90 100</table>
+		<set name="icon" value="icon.skill4440"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="paralyze" value="#p_defence_trait_paralyze"/>
+		</for>
+	</skill>
+	<skill id="4441" levels="5" name="Greater Mental Attack Resistance">
+		<table name="#p_defence_trait_derangement">60 70 80 90 100</table>
+		<set name="icon" value="icon.skill4441"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="derangement" value="#p_defence_trait_derangement"/>
+		</for>
+	</skill>
+	<skill id="4442" levels="5" name="Greater Fist Weapon Resistance">
+		<table name="#p_defence_trait_dualfist">60 70 80 90 100</table>
+		<set name="icon" value="icon.skill4442"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="dualfist" value="#p_defence_trait_dualfist"/>
+		</for>
+	</skill>
+	<skill id="4443" levels="5" name="Greater Blunt Weapon Resistance">
+		<table name="#p_defence_trait_blunt">60 70 80 90 100</table>
+		<set name="icon" value="icon.skill4443"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="blunt" value="#p_defence_trait_blunt"/>
+		</for>
+	</skill>
+	<skill id="4444" levels="5" name="Greater Bow/Crossbow Resistance">
+		<table name="#p_defence_trait_bow">60 70 80 90 100</table>
+		<table name="#p_defence_trait_crossbow">60 70 80 90 100</table>
+		<set name="icon" value="icon.skill4444"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="bow" value="#p_defence_trait_bow"/>
+			<p_defence_trait name="crossbow" value="#p_defence_trait_crossbow"/>
+		</for>
+	</skill>
+	<skill id="4445" levels="5" name="Greater Spear Resistance">
+		<table name="#p_defence_trait_pole">60 70 80 90 100</table>
+		<set name="icon" value="icon.skill4445"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="pole" value="#p_defence_trait_pole"/>
+		</for>
+	</skill>
+	<skill id="4446" levels="5" name="Greater Dualsword Resistance">
+		<table name="#p_defence_trait_dual">60 70 80 90 100</table>
+		<set name="icon" value="icon.skill4446"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="dual" value="#p_defence_trait_dual"/>
+		</for>
+	</skill>
+	<skill id="4447" levels="5" name="Greater Sword Resistance">
+		<table name="#p_defence_trait_sword">60 70 80 90 100</table>
+		<set name="icon" value="icon.skill4447"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="sword" value="#p_defence_trait_sword"/>
+		</for>
+	</skill>
+	<skill id="4448" levels="5" name="Greater Dagger/Rapier Resistance">
+		<table name="#p_defence_trait_rapier">60 70 80 90 100</table>
+		<table name="#p_defence_trait_dualdagger">60 70 80 90 100</table>
+		<table name="#p_defence_trait_dagger">60 70 80 90 100</table>
+		<set name="icon" value="icon.skill4448"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="rapier" value="#p_defence_trait_rapier"/>
+			<p_defence_trait name="dualdagger" value="#p_defence_trait_dualdagger"/>
+			<p_defence_trait name="dagger" value="#p_defence_trait_dagger"/>
+		</for>
+	</skill>
+	<skill id="4449" levels="5" name="Greater Two-handed Weapon Resistance">
+		<table name="#p_defence_trait_sword">50 60 70 80 90</table>
+		<table name="#p_defence_trait_blunt">50 60 70 80 90</table>
+		<set name="icon" value="icon.skill4449"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<for>
+			<!-- TODO: Fixme, должен быть резист только к 2х ручным оружиям. -->
+			<p_defence_trait name="sword" value="#p_defence_trait_sword"/>
+			<p_defence_trait name="blunt" value="#p_defence_trait_blunt"/>
+		</for>
+	</skill>
+	<skill id="4450" levels="5" name="Stun Vulnerability">
+		<table name="#p_defence_trait_shock">-11 -25 -43 -67 -100</table>
+		<set name="icon" value="icon.skill4450"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="shock" value="#p_defence_trait_shock"/>
+		</for>
+	</skill>
+	<skill id="4451" levels="5" name="Poison Vulnerability">
+		<!--
+			не используется
+		-->
+		<table name="#p_defence_trait_poison">-11 -25 -43 -67 -100</table>
+		<set name="icon" value="icon.skill4451"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="poison" value="#p_defence_trait_poison"/>
+		</for>
+	</skill>
+	<skill id="4452" levels="5" name="Bleed Vulnerability">
+		<!--
+			не используется
+		-->
+		<table name="#p_defence_trait_bleed">-11 -25 -43 -67 -100</table>
+		<set name="icon" value="icon.skill4452"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="bleed" value="#p_defence_trait_bleed"/>
+		</for>
+	</skill>
+	<skill id="4453" levels="5" name="Sleep Vulnerability">
+		<!--
+			не используется
+		-->
+		<table name="#p_defence_trait_sleep">-11 -25 -43 -67 -100</table>
+		<set name="icon" value="icon.skill4453"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="sleep" value="#p_defence_trait_sleep"/>
+		</for>
+	</skill>
+	<skill id="4454" levels="5" name="Hold Vulnerability">
+		<!--
+			не используется
+		-->
+		<table name="#p_defence_trait_hold">-11 -25 -43 -67 -100</table>
+		<set name="icon" value="icon.skill4454"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="hold" value="#p_defence_trait_hold"/>
+		</for>
+	</skill>
+	<skill id="4455" levels="5" name="Paralysis Vulnerability">
+		<!--
+			не используется
+		-->
+		<table name="#p_defence_trait_paralyze">-11 -25 -43 -67 -100</table>
+		<set name="icon" value="icon.skill4455"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="paralyze" value="#p_defence_trait_paralyze"/>
+		</for>
+	</skill>
+	<skill id="4456" levels="5" name="Mental Attack Vulnerability">
+		<!--
+			не используется
+		-->
+		<table name="#p_defence_trait_derangement">-11 -25 -43 -67 -100</table>
+		<set name="icon" value="icon.skill4456"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="derangement" value="#p_defence_trait_derangement"/>
+		</for>
+	</skill>
+	<skill id="4457" levels="5" name="Fist Weapon Vulnerability">
+		<!--
+			Descriptions: Vulnerable to hand-to-hand combat weapons.
+		-->
+		<table name="#p_defence_trait_dualfist">-11 -25 -43 -67 -100</table>
+		<set name="icon" value="icon.skill4457"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="dualfist" value="#p_defence_trait_dualfist"/>
+		</for>
+	</skill>
+	<skill id="4458" levels="5" name="Spear Vulnerability">
+		<table name="#p_defence_trait_pole">-11 -25 -43 -67 -100</table>
+		<set name="icon" value="icon.skill4458"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="pole" value="#p_defence_trait_pole"/>
+		</for>
+	</skill>
+	<skill id="4459" levels="5" name="Dualsword Vulnerability">
+		<table name="#p_defence_trait_dual">-11 -25 -43 -67 -100</table>
+		<set name="icon" value="icon.skill4459"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="dual" value="#p_defence_trait_dual"/>
+		</for>
+	</skill>
+	<skill id="4460" levels="5" name="Sword Vulnerability">
+		<table name="#p_defence_trait_sword">-11 -25 -43 -67 -100</table>
+		<set name="icon" value="icon.skill4460"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="sword" value="#p_defence_trait_sword"/>
+		</for>
+	</skill>
+	<skill id="4461" levels="5" name="Dagger/Rapier Vulnerability">
+		<table name="#p_defence_trait_rapier">-11 -25 -43 -67 -100</table>
+		<table name="#p_defence_trait_dualdagger">-11 -25 -43 -67 -100</table>
+		<table name="#p_defence_trait_dagger">-11 -25 -43 -67 -100</table>
+		<set name="icon" value="icon.skill4461"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="rapier" value="#p_defence_trait_rapier"/>
+			<p_defence_trait name="dualdagger" value="#p_defence_trait_dualdagger"/>
+			<p_defence_trait name="dagger" value="#p_defence_trait_dagger"/>
+		</for>
+	</skill>
+	<skill id="4462" levels="5" name="Two-handed Weapon Vulnerability">
+		<!--
+			Descriptions: Vulnerable to Two-Handed Weapons.
+			не используется
+		-->
+		<set name="icon" value="icon.skill4462"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="4463" levels="3" name="Surrender to Water">
+		<!--
+			Description:
+			Instantly decreases resistance to water attacks and increases resistance to fire attacks.
+		-->
+		<table name="#TabwaterRcpt">20 25 30</table>
+		<table name="#TabfireRcpt">10 12 15</table>
+		<table name="#magicLevel">20 40 70</table>
+		<table name="#abnormal_level">2 3 4</table>
+		<table name="#mp_consume">20 35 65</table>
+		<set name="icon" value="icon.skill4280_new"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="armor_water"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="1500"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<sub stat="defenceWater" value="#TabwaterRcpt"/>
+				<add stat="defenceFire" value="#TabfireRcpt"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4464" levels="3" name="Surrender to Wind">
+		<!--
+			Description:
+			Instantly decreases resistance to wind attacks and increases resistance to earth attacks.
+		-->
+		<table name="#TabwindRcpt">20 25 30</table>
+		<table name="#TabearthRcpt">10 12 15</table>
+		<table name="#magicLevel">20 40 70</table>
+		<table name="#abnormal_level">2 3 4</table>
+		<table name="#mp_consume">20 35 65</table>
+		<set name="icon" value="icon.skill4281_new"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="armor_wind"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="1500"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<sub stat="defenceWind" value="#TabwindRcpt"/>
+				<add stat="defenceEarth" value="#TabearthRcpt"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4465" levels="3" name="Surrender to Earth">
+		<!--
+			Description:
+			Instantly decreases resistance to earth attacks and increases resistance to wind attacks.
+		-->
+		<table name="#TabearthRcpt">20 25 30</table>
+		<table name="#TabwindRcpt">10 12 15</table>
+		<table name="#magicLevel">20 40 70</table>
+		<table name="#abnormal_level">2 3 4</table>
+		<table name="#mp_consume">20 35 65</table>
+		<set name="icon" value="icon.skill4282_new"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="armor_earth"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="1500"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<sub stat="defenceEarth" value="#TabearthRcpt"/>
+				<add stat="defenceWind" value="#TabwindRcpt"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4466" levels="3" name="Surrender to Dark">
+		<!--
+			Description:
+			Instantly decreases resistance to dark attacks and increases resistance to holy attacks.
+		-->
+		<table name="#TabunholyRcpt">15 25 30</table>
+		<table name="#TabholyRcpt">7 12 15</table>
+		<table name="#magicLevel">20 40 70</table>
+		<table name="#abnormal_level">2 3 4</table>
+		<table name="#mp_consume">20 35 65</table>
+		<set name="icon" value="icon.skill4336_new"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="armor_unholy"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="1500"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<sub stat="defenceUnholy" value="#TabunholyRcpt"/>
+				<add stat="defenceHoly" value="#TabholyRcpt"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4467" levels="3" name="Surrender to Holy">
+		<!--
+			Description:
+			Instantly decreases resistance to holy attacks and increases resistance to dark attacks.
+		-->
+		<table name="#TabholyRcpt">20 25 30</table>
+		<table name="#TabunholyRcpt">10 12 15</table>
+		<table name="#magicLevel">20 40 70</table>
+		<table name="#abnormal_level">2 3 4</table>
+		<table name="#mp_consume">20 35 65</table>
+		<set name="icon" value="icon.skill4275_new"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="armor_holy"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="1500"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<sub stat="defenceHoly" value="#TabholyRcpt"/>
+				<add stat="defenceUnholy" value="#TabunholyRcpt"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4468" levels="2" name="Wind Walk">
+		<table name="#abnormal_level">1 2</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="speed_up"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="4469" levels="1" name="Potion Drinking">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="35"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="4470" levels="1" name="Spoil">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="1799"/>
+		<set name="mp_consume" value="12"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="35"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4471" levels="12" name="Anger">
+		<!--
+			Descriptions: Increases NPC's P. Atk. and P. Def.
+		-->
+		<table name="#rate"> 1.05 1.1 1.15 1.2 1.25 1.3 1.35 1.4 1.45 1.5 1.55 1.6 </table>
+		<table name="#abnormal_level">1 2 3 4 5 6 7 8 9 10 11 12</table>
+		<table name="#mp_consume">13 20 27 35 45 55 65 69 73 75 77 78</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="1799"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="pa_pd_up"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pAtk" value="#rate"/>
+				<mul stat="pDef" value="#rate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4472" levels="12" name="Golem Punch">
+		<!--
+			Descriptions: For powerful Golems that are 1.5x stronger
+		-->
+		<table name="#power">69 157 328 625 1083 1704 2439 2814 3168 3480 3730 3925</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mp_consume">13 20 28 38 50 61 71 76 80 83 84 85</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="6000"/>
+		<set name="hitTime" value="2500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4473" levels="12" name="Stun">
+		<!--
+			Descriptions: Shocks and instantly immobilizes.
+		-->
+		<table name="#power">16 35 73 139 241 379 542 626 704 774 829 873</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mp_consume">25 40 56 76 99 121 142 151 159 165 168 170</table>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="reuseDelay" value="17000"/>
+		<set name="castRange" value="700"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="30"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="affect_range" value="200"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="4474" levels="5" name="Restore Life">
+		<table name="#magicLevel">10 20 30 40 50</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="4475" levels="1" name="Complete Bleed Resistance">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="castRange" value="700"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="50"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="10"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="bleeding"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect>
+				<p_defence_trait name="bleed" value="100"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4476" levels="5" name="Silent Move">
+		<!--
+			Descriptions: Blocks monsters' first strike.
+		-->
+		<table name="#abnormal_time">60 120 300 600 1200</table>
+		<table name="#mp_consume">13 20 27 35 45</table>
+		<set name="icon" value="icon.skill0221"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stealth"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="4477" levels="12" name="Frost Wall">
+		<table name="#power">48 50 53 55 56 57 59 60 61 62 63 65</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mp_consume">18 29 40 53 68 83 98 104 109 113 115 117</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_MULTIFACE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="affect_range" value="200"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4478" levels="1" name="Aqua Splash">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="700"/>
+		<set name="hitTime" value="3299"/>
+		<set name="mp_consume" value="23"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="64"/>
+		<set name="power" value="1000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="affect_range" value="200"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="element" value="water"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4479" levels="1" name="Ice Fairy\'s Blessing">
+		<!--
+			Descriptions: Increases resistance to cold attacks. Effect 4.
+		-->
+		<set name="icon" value="icon.skill1182"/>
+		<set name="reuseDelay" value="6000"/>
+		<set name="castRange" value="700"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="39"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="1800"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="armor_water"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="4480" levels="1" name="Curse Gloom">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="6000"/>
+		<set name="castRange" value="1000"/>
+		<set name="hitTime" value="1200"/>
+		<set name="mp_consume" value="117"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="1800"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="md_down"/>
+		<set name="magicLevel" value="64"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="mDef" value="0.77"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4481" levels="1" name="Hex">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="6000"/>
+		<set name="castRange" value="1000"/>
+		<set name="hitTime" value="1200"/>
+		<set name="mp_consume" value="117"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="1800"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="pd_down"/>
+		<set name="magicLevel" value="64"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="activateRate" value="80"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pDef" value="0.77"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4482" levels="1" name="Silence">
+		<set name="icon" value="icon.skill1064"/>
+		<set name="castRange" value="1000"/>
+		<set name="hitTime" value="100"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="SILENCE"/>
+		<set name="abnormal_time" value="600"/>
+		<set name="abnormal_level" value="99"/>
+		<set name="abnormal_type" value="silence_all"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="activateRate" value="80"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="Mute"/>
+		</for>
+	</skill>
+	<skill id="4483" levels="12" name="Hold">
+		<table name="#magicType">PHYSIC MAGIC MAGIC MAGIC MAGIC MAGIC MAGIC MAGIC MAGIC MAGIC MAGIC MAGIC</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#ride_state">NONE NONE;STRIDER;WYVERN;WOLF NONE;STRIDER;WYVERN;WOLF NONE;STRIDER;WYVERN;WOLF NONE;STRIDER;WYVERN;WOLF NONE;STRIDER;WYVERN;WOLF NONE;STRIDER;WYVERN;WOLF NONE;STRIDER;WYVERN;WOLF NONE;STRIDER;WYVERN;WOLF NONE;STRIDER;WYVERN;WOLF NONE;STRIDER;WYVERN;WOLF NONE;STRIDER;WYVERN;WOLF</table>
+		<table name="#mp_consume">24 39 53 70 90 110 130 138 145 150 153 155</table>
+		<set name="icon" value="icon.skill4047"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="3299"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="#ride_state"/>
+		<set name="abnormal_effect" value="ROOT"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="root_magically"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="#magicType"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="ROOT"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="HOLD"/>
+		<for>
+			<effect name="p_block_move"/>
+		</for>
+	</skill>
+	<skill id="4484" levels="1" name="Devour Subordinate">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="100"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="75"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4485" levels="1" name="Devour Subordinate">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="75"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4486" levels="12" name="Decrease P. Def.">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#abnormal_level">1 2 2 3 3 3 3 3 3 3 3 3</table>
+		<table name="#mp_consume">24 39 53 70 90 110 130 138 145 150 153 155</table>
+		<set name="icon" value="icon.skill0122"/>
+		<set name="reuseDelay" value="6000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="1200"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="pd_down"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="80"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pDef" value="0.77"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4487" levels="12" name="Decrease M. Def.">
+		<!--
+			Descriptions: Instantly reduces M. Def.
+		-->
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#abnormal_level">1 2 2 3 3 3 3 3 3 3 3 3</table>
+		<table name="#mp_consume">24 39 53 70 90 110 130 138 145 150 153 155</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="6000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="1200"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="md_down"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="activateRate" value="80"/>
+		<for>
+			<effect>
+				<mul stat="mDef" value="0.77"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4488" levels="12" name="Hold">
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mp_consume">19 30 42 57 74 91 106 114 119 124 126 128</table>
+		<set name="icon" value="icon.skill4047"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="ROOT"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="root_magically"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="activateRate" value="80"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="ROOT"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="p_block_move"/>
+		</for>
+	</skill>
+	<skill id="4489" levels="12" name="Death Bomb">
+		<table name="#power">18 26 38 52 68 85 102 119 136 153 170 187</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mp_consume">19 30 42 57 74 91 106 114 119 124 126 128</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4490" levels="12" name="Holy War">
+		<!-- Not used -->
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mp_consume">18 29 40 53 68 83 98 104 109 113 115 117</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="4491" levels="12" name="Holy Weapon">
+		<!--
+			Descriptions: Makes holy attacks.
+		-->
+		<table name="#mp_consume">37 60 84 114 148 182 212 227 238 247 252 255</table>
+		<set name="icon" value="icon.skill1043"/>
+		<set name="reuseDelay" value="25000"/>
+		<set name="coolTime" value="800"/>
+		<set name="castRange" value="500"/>
+		<set name="hitTime" value="3200"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="holy_attack"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add stat="attackHoly" value="70"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4492" levels="12" name="Enlarging Head Curse">
+		<!--
+			Descriptions: Temporarily enlarges the head.
+		-->
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mp_consume">13 20 28 38 50 61 71 76 80 83 84 85</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="6000"/>
+		<set name="coolTime" value="800"/>
+		<set name="hitTime" value="1000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="BIG_HEAD"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="big_head"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="activateRate" value="80"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pDef" value="0.77"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4493" levels="12" name="Mystic Immunity">
+		<!-- Not used -->
+		<table name="#mp_consume">13 20 27 35 45 55 65 69 73 75 77 78</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="debuff_shield"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="4494" levels="2" name="Raid Boss">
+		<!--
+			Descriptions: If the person who made the greatest contribution is 3 or more levels higher than the raid monster, then the item/adena rewards will decrease. If the difference is 9 or more levels, the monster will drop nothing at all.
+		-->
+		<set name="icon" value="icon.skillraid"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="4495" levels="12" name="Power Shot">
+		<table name="#power">352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="4496" levels="12" name="Stun">
+		<table name="#power">176 475 1304 3414 8592 16607 25504 29589 33944 38501 43180 47895</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<table name="#mp_consume">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="ActivateRate" value="80"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="nextAction" value="attack"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="4497" levels="1" name="Treasure Chest (Lv. 21)">
+		<set name="icon" value="icon.skill0042"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="4498" levels="1" name="Treasure Chest (Lv. 22)">
+		<set name="icon" value="icon.skill0042"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="4499" levels="1" name="Treasure Chest (Lv. 25)">
+		<set name="icon" value="icon.skill0042"/>
+		<set name="magicLevel" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+</list>

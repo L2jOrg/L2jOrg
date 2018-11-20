@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="35000" levels="1" name="Blessing of Fire Dragon">
+		<set name="icon" value="icon.bm_blessing_dragon"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="3000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35001" levels="1" name="Fire Dragon\'s Protection">
+		<set name="icon" value="icon.bm_salvation_dragon"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="3000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35002" levels="1" name="Land Dragon Breath">
+		<set name="icon" value="icon.bm_dragon_breath"/>
+		<set name="reuseDelay" value="60000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="1000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35003" levels="1" name="Land Dragon Defense">
+		<set name="icon" value="icon.bm_dragon_defence"/>
+		<set name="reuseDelay" value="600000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35004" levels="1" name="Land Dragon Pendant Basic Effect">
+		<set name="icon" value="icon.bm_pendant_pvp"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35005" levels="10" name="Land Dragon Pendant Enchant Effect">
+		<set name="icon" value="icon.bm_pendant_pvp"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35006" levels="1" name="Fire Dragon Pendant Basic Effect">
+		<set name="icon" value="icon.bm_pendant_pve"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35007" levels="10" name="Fire Dragon Pendant Enchant Effect">
+		<set name="icon" value="icon.bm_pendant_pve"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35008" levels="1" name="Fire Dragon Resistance">
+		<set name="icon" value="icon.bm_salvation_dragon"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35009" levels="1" name="Black Mask Power">
+		<set name="icon" value="icon.accessory_jjoro_masj_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35010" levels="1" name="Refined Romantic Chapeau">
+		<set name="icon" value="icon.accessory_archer_hat2_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35011" levels="1" name="Refined Romantic Chapeau: Teleport">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="7200000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35012" levels="1" name="Pirate King Hat">
+		<set name="icon" value="BranchSys2.icon.zaken_hair_accessary"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35013" levels="1" name="Pirate King Hat: Teleport">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="7200000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35014" levels="1" name="Demon\'s Circlet">
+		<set name="icon" value="icon.Accessary_demon_circlet_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35015" levels="1" name="Circlet of Devil: Teleport">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="7200000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35016" levels="1" name="Refined Ring of Core - Special Ability">
+		<set name="icon" value="icon.accessory_ring_of_core_i03"/>
+		<set name="reuseDelay" value="1800000"/>
+		<set name="hitTime" value="200"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="i_dispel_by_category">
+				<def name="abnormal_category" value="slot_debuff"/>
+				<def name="dispel_chance" value="100"/>
+				<def name="max_count" value="5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="35017" levels="7" name="Talisman of Insolence I">
+		<table name="#icon">icon.tallisman_oman_i02 icon.tallisman_oman_i02 icon.tallisman_oman_i02 icon.tallisman_oman_i02 icon.tallisman_oman_i02 icon.tallisman_oman_i01 icon.tallisman_baium</table>
+		<table name="#pAtk">14 27 41 68 170 200 284</table>
+		<table name="#mAtk">22 44 66 109 235 275 392</table>
+		<table name="#magicResist">1 1.02 1.04 1.06 1.07 1.08 1.1</table>
+		<table name="#WeaponRcp">0 0 1 2 2 3 5</table>
+		<table name="#pSkillPower">1 1 1.01 1.02 1.02 1.03 1.05</table>
+		<table name="#mSkillPower">1 1 1.01 1.02 1.02 1.03 1.05</table>
+		<table name="#CON">0 0 0 1 1 1 1</table>
+		<table name="#MEN">0 0 0 1 1 1 1</table>
+		<table name="#STR">0 0 0 0 1 1 1</table>
+		<table name="#INT">0 0 0 0 1 1 1</table>
+		<table name="#DEX">0 0 0 0 0 0 1</table>
+		<table name="#WIT">0 0 0 0 0 0 1</table>
+		<table name="#mpConsum">1 1 1 1 0.98 0.96 0.95</table>
+		<table name="#CritRate">0 0 0 0 0 10 20</table>
+		<table name="#mReuse">1 1 1 1 1 1 0.97</table>
+		<table name="#pReuse">1 1 1 1 1 1 0.97</table>
+		<table name="#musicReuse">1 1 1 1 1 1 0.97</table>
+		<table name="#triggerId">0 0 0 0 0 35018 35020</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x30" stat="pAtk" value="#pAtk"/>
+			<add order="0x30" stat="mAtk" value="#mAtk"/>
+			<mul stat="magicResist" value="#magicResist"/>
+			<p_defence_trait name="sword" value="#WeaponRcp"/>
+			<p_defence_trait name="dual" value="#WeaponRcp"/>
+			<p_defence_trait name="blunt" value="#WeaponRcp"/>
+			<p_defence_trait name="dagger" value="#WeaponRcp"/>
+			<p_defence_trait name="pole" value="#WeaponRcp"/>
+			<p_defence_trait name="fist" value="#WeaponRcp"/>
+			<p_defence_trait name="bow" value="#WeaponRcp"/>
+			<p_defence_trait name="crossbow" value="#WeaponRcp"/>
+			<mul stat="p_skill_power" value="#pSkillPower"/>
+			<mul stat="mSkillPower" value="#mSkillPower"/>
+			<mul stat="mpConsum" value="#mpConsum"/>
+			<mul stat="mpConsumePhysical" value="#mpConsum"/>
+			<add order="0x80" stat="baseMCritRate" value="#CritRate"/>
+			<add order="0x80" stat="basePCritRate" value="#CritRate"/>	
+			<add order="0x10" stat="CON" value="#CON"/>
+			<add order="0x10" stat="MEN" value="#MEN"/>
+			<add order="0x10" stat="INT" value="#INT"/>
+			<add order="0x10" stat="STR" value="#STR"/>
+			<mul stat="mReuse" value="#mReuse"/>
+			<mul stat="pReuse" value="#pReuse"/>
+			<mul stat="musicReuse" value="#musicReuse"/>
+		</for>
+		<triggers>
+			<trigger id="#triggerId" level="1" type="ADD" cancel_effects_on_remove="true"/>
+			<trigger id="#triggerId" level="1" type="IDLE"/>
+		</triggers>
+	</skill>
+	<skill id="35018" levels="1" name="Talisman of Insolence VI">
+		<set name="icon" value="icon.tallisman_oman_i01"/>
+		<set name="olympiad_use" value="false"/>
+		<set name="irreplaceable_buff" value="true"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="MUSIC"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="abnormal_time" value="-1"/>
+		<set name="abnormal_effect" value="D_TALI_DECO_E"/>
+		<set name="abnormal_type" value="seed_talisman"/>
+		<set name="abnormal_level" value="5"/>
+		<set name="isHideStartMessage" value="true"/>
+		<set name="isHideUseMessage" value="true"/>
+		<set name="apply_effects_on_summon" value="false"/>
+		<set name="apply_effects_on_pet" value="false"/>
+		<set name="isSelfDispellable" value="false"/>
+		<for>
+			<effect>
+				<triggers>
+					<trigger id="35019" level="1" type="ON_EXIT_EFFECT"/>
+				</triggers>
+			</effect>
+		</for>
+	</skill>
+	<skill id="35019" levels="1" name="Talisman of Insolence VI - removal">
+		<set name="icon" value="icon.tallisman_oman_i01"/>
+		<set name="olympiad_use" value="false"/>
+		<set name="trait" value="HOLD"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="35020" levels="1" name="Talisman of Baium">
+		<set name="icon" value="icon.tallisman_baium"/>
+		<set name="olympiad_use" value="false"/>
+		<set name="irreplaceable_buff" value="true"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="MUSIC"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="abnormal_time" value="-1"/>
+		<set name="abnormal_effect" value="D_TALI_DECO_D"/>
+		<set name="abnormal_type" value="seed_talisman"/>
+		<set name="abnormal_level" value="5"/>
+		<set name="isHideStartMessage" value="true"/>
+		<set name="isHideUseMessage" value="true"/>
+		<set name="apply_effects_on_summon" value="false"/>
+		<set name="apply_effects_on_pet" value="false"/>
+		<set name="isSelfDispellable" value="false"/>
+		<for>
+			<effect>
+				<triggers>
+					<trigger id="35021" level="1" type="ON_EXIT_EFFECT"/>
+				</triggers>
+			</effect>
+		</for>
+	</skill>
+	<skill id="35021" levels="1" name="Talisman of Baium - Removal">
+		<set name="icon" value="icon.tallisman_baium"/>
+		<set name="olympiad_use" value="false"/>
+		<set name="trait" value="HOLD"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="35022" levels="1" name="Chic Silver Chapeau">
+		<set name="icon" value="BranchSys2.icon2.pi_silverchaperon"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35023" levels="1" name="Chic Silver Chapeau Teleport">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="7200000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35024" levels="11" name="Talisman of Border">
+		<table name="#icon">icon.bm_magic_square_talisman icon.bm_magic_square_talisman icon.bm_magic_square_talisman icon.bm_magic_square_talisman icon.bm_magic_square_talisman icon.bm_magic_square_talisman icon.bm_magic_square_talisman icon.bm_magic_square_talisman icon.bm_magic_square_talisman icon.bm_magic_square_talisman icon.bm_blessed_magic_square_talisman</table>
+		<table name="#pDef">12 14 17 19 22 24 29 34 38 43 48</table>
+		<table name="#evas">0 1 1 1 1 2 2 2 2 2 2</table>
+		<table name="#hmc">0 0 80 80 120 160 160 200 240 280 320</table>
+		<table name="#TabrunSpd">0 0 3 3 5 5 7 7 8 8 8</table>
+		<table name="#powere">0 0 0.03 0.03 0.04 0.04 0.05 0.05 0.05 0.05 0.05</table>
+		<table name="#atkspd">0 0 0 7 10 15 15 15 15 20 30</table>
+		<table name="#refl">0 0 0 0 0 0 0 0 4 6 8</table>
+		<set name="icon" value="#icon"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="pDef" value="#pDef"/>
+			<add stat="mDef" value="#pDef"/>
+			<add stat="mEvasRate" value="#evas"/>
+			<add stat="pSkillEvasion" value="#evas"/>
+			<add stat="maxHp" value="#hmc"/>
+			<add stat="maxMp" value="#hmc"/>
+			<add stat="maxCp" value="#hmc"/>
+			<add stat="runSpd" value="#TabrunSpd"/>
+			<add stat="exp_rate_multiplier" value="#powere"/>
+			<add stat="sp_rate_multiplier" value="#powere"/>
+			<add stat="pAtkSpd" value="#atkspd"/>
+			<add stat="mAtkSpd" value="#atkspd"/>
+			<add stat="reflectDam" value="#refl"/>
+			<add stat="reflectBowDam" value="#refl"/>
+			<add stat="reflectPSkillDam" value="#refl"/>
+			<add stat="reflectMSkillDam" value="#refl"/>
+		</for>
+	</skill>
+	<skill id="35025" levels="1" name="Border Purification">
+		<set name="icon" value="icon.skill10036"/>
+		<set name="reuseDelay" value="60000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="3000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="566"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="poison"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="bleeding"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="paralyze"/>
+				<def name="max_abnormal_level" value="1"/>
+			</effect>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="turn_stone"/>
+				<def name="max_abnormal_level" value="1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="35026" levels="1" name="Blessing of Borders">
+		<set name="icon" value="icon.skill10034"/>
+		<set name="reuseDelay" value="1200000"/>
+		<set name="coolTime" value="200"/>
+		<set name="hitTime" value="3000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35027" levels="4" name="Border Power - Lv. 1">
+		<set name="icon" value="icon.skill10030"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35028" levels="1" name="Bracelet of Borders">
+		<set name="icon" value="icon.dimension_bracelet_i05"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35029" levels="5" name="Item Skill: Might in Duel - PvE">
+		<set name="icon" value="icon.skill3123"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35030" levels="5" name="Item Skill: Defense in Duel - PvP">
+		<set name="icon" value="icon.skill3123"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35031" levels="5" name="Item Skill: Defense in Duel - PvE">
+		<set name="icon" value="icon.skill3123"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35032" levels="5" name="Item Skill: Enhance">
+		<set name="icon" value="icon.skill3123"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35033" levels="3" name="Item Skill: Boost Atk. Spd.">
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="48"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35034" levels="3" name="Item Skill: Fast Spell Casting">
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="48"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35035" levels="1" name="Item Skill: Cleanse">
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="48"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35036" levels="1" name="Warrior�s Talisman - Attack">
+		<set name="icon" value="icon.r90_sp_talisman_dr_mp_active"/>
+		<set name="operate_type" value="P"/>
+		<set name="abnormal_type" value="talisman"/>
+		<for>
+			<mul stat="pvePhysDmgBonus" value="1.03"/>
+			<mul stat="pveMagicSkillDmgBonus" value="1.03"/>
+			<mul stat="pvePhysSkillDmgBonus" value="1.03"/>
+			<add stat="p_magic_critical_dmg_diff" value="20"/>
+			<add stat="p_critical_damage_diff" value="20"/>
+			<mul stat="p_skill_power" value="1.02"/>
+			<mul stat="mSkillPower" value="1.02"/>
+			<add stat="pAccCombat" value="1"/>
+			<add stat="mAccCombat" value="1"/>
+		</for>
+	</skill>
+	<skill id="35037" levels="1" name="Warrior�s Talisman - Defense">
+		<set name="icon" value="icon.r99_talisman_pd_up_passive"/>
+		<set name="operate_type" value="P"/>
+		<set name="abnormal_type" value="talisman"/>
+		<for>
+			<mul stat="pvePhysDefenceBonus" value="1.03"/>
+			<mul stat="pvePhysSkillDefenceBonus" value="1.03"/>
+			<mul stat="pveMagicSkillDefenceBonus" value="1.03"/>
+			<mul order="0x40" stat="magicResist" value="1.02"/>
+			<mul order="0x40" stat="pSkillEvasion" value="1.04"/>
+			<mul order="0x40" stat="mEvasRate" value="1.04"/>
+			<add stat="resist_abnormal_debuff" value="-3"/>
+			<p_defence_trait name="pull" value="10"/>
+		</for>
+	</skill>
+	<skill id="35038" levels="1" name="Hero�s Talisman - Attack">
+		<set name="icon" value="icon.r90_sp_talisman_dr_hp_active"/>
+		<set name="operate_type" value="P"/>
+		<set name="abnormal_type" value="talisman"/>
+		<for>
+			<mul stat="pvpPhysDmgBonus" value="1.03"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="1.03"/>
+			<mul stat="pvpMagicSkillDmgBonus" value="1.03"/>
+			<add stat="p_magic_critical_dmg_diff" value="20"/>
+			<add stat="p_critical_damage_diff" value="20"/>
+			<mul stat="p_skill_power" value="1.02"/>
+			<mul stat="mSkillPower" value="1.02"/>
+			<add stat="pAccCombat" value="1"/>
+			<add stat="mAccCombat" value="1"/>			
+		</for>
+	</skill>
+	<skill id="35039" levels="1" name="Hero�s Talisman - Defense">
+		<set name="icon" value="icon.r95_talisman_ca_down_active"/>
+		<set name="operate_type" value="P"/>
+		<set name="abnormal_type" value="talisman"/>
+		<for>
+			<mul stat="pvpPhysDefenceBonus" value="1.03"/>
+			<mul stat="pvpPhysSkillDefenceBonus" value="1.03"/>
+			<mul stat="pvpMagicSkillDefenceBonus" value="1.03"/>
+			<mul order="0x40" stat="magicResist" value="1.02"/>
+			<mul order="0x40" stat="pSkillEvasion" value="1.04"/>
+			<mul order="0x40" stat="mEvasRate" value="1.04"/>
+			<add stat="resist_abnormal_debuff" value="-3"/>
+		</for>
+	</skill>
+	<skill id="35040" levels="1" name="Belt">
+		<set name="icon" value="icon.belt_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35041" levels="1" name="Rag Belt">
+		<set name="icon" value="icon.belt_i01"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35042" levels="1" name="Leather Belt">
+		<set name="icon" value="icon.belt_i02"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35043" levels="1" name="Iron Belt">
+		<set name="icon" value="icon.belt_i03"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35044" levels="1" name="Mithril Belt">
+		<set name="icon" value="icon.belt_i04"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35045" levels="1" name="Talisman of Battle - Liberate">
+		<set name="icon" value="icon.etc_talisman_i03"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="operate_type" value="A2"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="isNotAffectedByMute" value="true"/>
+		<set name="canUseWhileAbnormal" value="true"/>
+		<for>			
+			<effect name="i_dispel_by_category">
+				<def name="abnormal_category" value="slot_debuff"/>
+				<def name="dispel_chance" value="100"/>
+				<def name="max_count" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="35046" levels="1" name="Land Dragon Belt">
+		<set name="icon" value="icon.bm_antaras_belt"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="35047" levels="1" name="Fire Dragon Belt">
+		<set name="icon" value="icon.bm_vallakas_belt"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+</list>

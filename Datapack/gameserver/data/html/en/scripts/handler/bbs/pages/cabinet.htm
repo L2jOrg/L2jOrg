@@ -1,0 +1,181 @@
+<!--AUTHOR: Bonux-->
+<html><body><title>Cabinet</title><center>
+<br>
+<table width=750 background="L2UI_CT1.Tab_DF_bg" border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td align=center>
+	<table width=737 border=0 cellpadding=0 cellspacing=0>
+		<tr>
+			<td width=93 align=center><button value="Home" action="bypass _bbspage:index" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Statistic" action="bypass _cbbsstatistic_pk" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Shop" action="bypass _bbspage:shop" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Buffs" action="bypass _cbbsbuffer 0" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Teleport" action="bypass _cbbsteleport" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Career" action="bypass _bbspage:career" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Services" action="bypass _bbspage:services" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=92 align=center background="L2UI_CT1.Tab_DF_Tab_Selected"><font color=DDD3B6>Cabinet</font></td>
+		</tr>
+	</table>
+	<table width=750 border=0 cellpadding=0 cellspacing=0>
+		<tr>
+			<td align=center>&nbsp;</td>
+		</tr>
+		<tr>
+			<td align=center>
+				<table width=700 background="L2UI_CT1.Windows_DF_Drawer_Bg" border=0 cellpadding=0 cellspacing=0>
+					<tr>
+						<td height=40 width=25></td>
+						<td width=385>
+							<font color=DDD3B6>Cabinet</font>
+						</td>
+						<td align=right width=300><font color=DDD3B6>Total online: <?total_online?></font></td>
+						<td height=40 width=25></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td align=center>
+				<table width=750 height=375 border=0 cellpadding=0 cellspacing=0>
+					<tr>
+						<td valign="top" align="center">
+							<br>
+							<table border=0 cellpadding=0 cellspacing=0>
+								<tr>
+									<td width=350 align=center valign="top">
+										<table border=0 cellpadding=0 cellspacing=-9>
+											<tr><td width=256 height=185 background="L2UI_CT1.OlympiadWnd_DF_GrandTexture"></td></tr>
+										</table>
+										<table>
+											<tr>
+												<td><button value="Autopotion" action="bypass _bbspage:autopotion" back="l2ui_ct1.Button_DF_Msn_down" width=200 height=30 fore="l2ui_ct1.Button_DF_Msn"></td>
+											</tr>
+											<tr>
+												<td><button value="Restore character" action="bypass _cbbsservices_cabinet_repair" back="l2ui_ct1.Button_DF_Msn_down" width=200 height=30 fore="l2ui_ct1.Button_DF_Msn"></td>
+											</tr>
+											<tr>
+												<td><button value="Character info" action="bypass _cbbsservices_cabinet_stats" back="l2ui_ct1.Button_DF_Msn_down" width=200 height=30 fore="l2ui_ct1.Button_DF_Msn"></td>
+											</tr>
+											<tr>
+												<td><button value="Settings" action="bypass _cbbsservices_cabinet_config" back="l2ui_ct1.Button_DF_Msn_down" width=200 height=30 fore="l2ui_ct1.Button_DF_Msn"></td>
+											</tr>
+											<tr>
+												<td><button value="Events" action="bypass _bbspage:events" back="l2ui_ct1.Button_DF_Msn_down" width=200 height=30 fore="l2ui_ct1.Button_DF_Msn"></td>
+											</tr>
+										</table>
+									</td>
+									<td width=350 align=center>
+										<table width=300 background="L2UI_CH3.refinewnd_back_Pattern">
+											<tr><td><br><br></td></tr>
+											<tr>
+												<td align=center><font color=DDD3B6>Information about account</font></td>
+											</tr>
+											<tr><td><br></td></tr>
+											<tr>
+												<td align=center>
+													<table width=290 bgcolor=000000>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;Account:</font></td><td width=110><font color=63CDFF><?account?></font></td>
+														</tr>
+													</table>
+													<table width=290>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;IP:</font></td><td width=110><font color=63CDFF><?ip?></font></td>
+														</tr>
+													</table>
+													<table width=290 bgcolor=000000>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;Type:</font></td><td width=110><font color=63CDFF><?type?></font></td>
+														</tr>
+													</table>
+													<table width=290>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;Character:</font></td><td width=110><font color=63CDFF><?char_name?></font></td>
+														</tr>
+													</table>
+													<table width=290 bgcolor=000000>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;Clan:</font></td><td width=110><font color=63CDFF><?clan_name?></font></td>
+														</tr>
+													</table>
+													<table width=290>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;Alliance:</font></td><td width=110><font color=63CDFF><?ally_name?></font></td>
+														</tr>
+													</table>
+													<table width=290 bgcolor=000000>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;Played time:</font></td><td width=110><font color=63CDFF><?played_day?>d. <?played_hour?>h. <?played_minute?>m.</font></td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr><td><br><br></td></tr>
+											<tr>
+												<td align=center><font color=DDD3B6>Information about personal raites <font color=LEVEL>*</font></font></td>
+											</tr>
+											<tr><td><br></td></tr>
+											<tr>
+												<td align=center>
+													<table width=290 bgcolor=000000>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;XP:</font></td><td width=110><font color=63CDFF>x<?rate_xp?></font></td>
+														</tr>
+													</table>
+													<table width=290>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;SP:</font></td><td width=110><font color=63CDFF>x<?rate_sp?></font></td>
+														</tr>
+													</table>
+													<table width=290 bgcolor=000000>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;Adena drop:</font></td><td width=110><font color=63CDFF>x<?rate_adena?></font></td>
+														</tr>
+													</table>
+													<table width=290>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;Items drop:</font></td><td width=110><font color=63CDFF>x<?rate_drop?></font></td>
+														</tr>
+													</table>
+													<table width=290 bgcolor=000000>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;Spoil:</font></td><td width=110><font color=63CDFF>x<?rate_spoil?></font></td>
+														</tr>
+													</table>
+													<table width=290>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;Quest items drop:</font></td><td width=110><font color=63CDFF>x<?rate_quest_drop?></font></td>
+														</tr>
+													</table>
+													<table width=290 bgcolor=000000>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;Quest reward:</font></td><td width=110><font color=63CDFF>x<?rate_quest_reward?></font></td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr><td><br><br><br><br><br></td></tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+							<br><br>
+							<font color=LEVEL>* Raites inclusive of all bonus characters (Vitality, Runes and other effects).</font>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td align=center>
+				<img src="L2UI_CT1.Tab_DF_bg_line" width=700 height=32><br1>
+				<font color="655C4D"><?copyright?></font><br><br>
+			</td>
+		</tr>
+	</table>
+</td>
+</tr>
+</table>
+<br>
+</center>
+</body></html>

@@ -1,0 +1,12 @@
+<!ELEMENT list (class_data)*>
+<!ELEMENT class_data (hp_mp_cp_data)*>
+<!ATTLIST class_data
+	class_id CDATA #REQUIRED>
+
+<!ELEMENT hp_mp_cp_data (hp_mp_cp)*>
+<!ELEMENT hp_mp_cp (#PCDATA)>
+<!ATTLIST hp_mp_cp
+	lvl CDATA #REQUIRED
+	hp CDATA #REQUIRED
+	mp CDATA #REQUIRED
+	cp CDATA #REQUIRED>

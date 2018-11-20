@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="1800" levels="1" name="Pirate">
+		<set name="icon" value="icon.skill1800"/>
+		<set name="reuseDelay" value="7200000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="PIRATE_SUIT"/>
+		<set name="abnormal_time" value="900"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="changebody"/>	<!--TODO: Check.-->
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="itemConsumeId" value="49543"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="buff_slot_type" value="-1"/>
+		<for>
+			<effect>
+				<mul stat="maxHp" value="1.03"/>
+				<mul stat="maxMp" value="1.03"/>
+				<add stat="runSpd" value="3"/>
+				<mul stat="pAtkSpd" value="1.02"/>
+				<add stat="pAccCombat" value="1"/>
+				<add stat="mAccCombat" value="1"/>
+				<add stat="baseMCritRate" value="10"/>
+				<mul stat="pAtk" value="1.02"/>
+				<mul stat="mAtk" value="1.02"/>
+				<mul stat="pDef" value="1.02"/>
+				<mul stat="mDef" value="1.02"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1801" levels="1" name="Dark Assassin">
+		<set name="icon" value="icon.skill1801"/>
+		<set name="reuseDelay" value="7200000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="DARK_ASSASSIN_SUIT"/>
+		<set name="abnormal_time" value="900"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="changebody"/>	<!--TODO: Check.-->
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="itemConsumeId" value="49543"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="buff_slot_type" value="-1"/>
+		<for>
+			<effect>
+				<mul stat="maxHp" value="1.05"/>
+				<mul stat="maxMp" value="1.05"/>
+				<add stat="runSpd" value="4"/>
+				<mul stat="pAtkSpd" value="1.03"/>
+				<add stat="pAccCombat" value="1"/>
+				<add stat="mAccCombat" value="1"/>
+				<add stat="baseMCritRate" value="10"/>
+				<mul stat="pAtk" value="1.02"/>
+				<mul stat="mAtk" value="1.02"/>
+				<mul stat="pDef" value="1.02"/>
+				<mul stat="mDef" value="1.02"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1802" levels="1" name="White Assassin">
+		<set name="icon" value="icon.skill1802"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="WHITE_ASSASSIN_SUIT"/>
+		<set name="abnormal_time" value="900"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="changebody"/>	<!--TODO: Check.-->
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="itemConsumeId" value="49543"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="buff_slot_type" value="-1"/>
+		<for>
+			<effect>
+				<mul stat="maxHp" value="1.07"/>
+				<mul stat="maxMp" value="1.07"/>
+				<add stat="runSpd" value="5"/>
+				<mul stat="pAtkSpd" value="1.05"/>
+				<add stat="pAccCombat" value="2"/>
+				<add stat="mAccCombat" value="2"/>
+				<add stat="baseMCritRate" value="20"/>
+				<mul stat="pAtk" value="1.03"/>
+				<mul stat="mAtk" value="1.03"/>
+				<mul stat="pDef" value="1.03"/>
+				<mul stat="mDef" value="1.03"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1810" levels="1" name="Cadmus - Might">
+		<set name="icon" value="icon.skill1068"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1811" levels="1" name="Cadmus - Shield">
+		<set name="icon" value="icon.skill1040"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1812" levels="1" name="Cadmus - Wind Walk">
+		<set name="icon" value="icon.skill1204"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1813" levels="1" name="Cadmus - Return">
+		<set name="icon" value="Icon.skill1050"/>
+		<set name="reuseDelay" value="75000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1814" levels="1" name="Cadmus - Focus">
+		<set name="icon" value="icon.skill1077"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1815" levels="1" name="Cadmus - Death Whisper">
+		<set name="icon" value="icon.skill1242"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1816" levels="1" name="Cadmus - Guidance">
+		<set name="icon" value="icon.skill1240"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1817" levels="1" name="Cadmus - Heal">
+		<set name="icon" value="icon.skill1011"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="52"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1818" levels="1" name="Cadmus - Haste">
+		<set name="icon" value="icon.skill1086"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1819" levels="1" name="Cadmus - Acumen">
+		<set name="icon" value="icon.skill1085"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1820" levels="1" name="Cadmus - Vampiric Rage">
+		<set name="icon" value="icon.skill1268"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1821" levels="1" name="Cadmus - Empower">
+		<set name="icon" value="icon.skill1059"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1822" levels="1" name="Cadmus - Clarity">
+		<set name="icon" value="icon.skill1397"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1823" levels="1" name="Cadmus - Agility">
+		<set name="icon" value="icon.skill1087"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1824" levels="1" name="Cadmus - Lightness">
+		<set name="icon" value="icon.skill1257"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1825" levels="1" name="Cadmus - Recharge">
+		<set name="icon" value="icon.skill1013"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="6000"/>
+		<set name="mp_consume" value="98"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1826" levels="1" name="Cadmus - Greater Heal">
+		<set name="icon" value="icon.skill1217"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="83"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1827" levels="1" name="Transformation Block">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1828" levels="2" name="Transformation Protection">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1829" levels="1" name="Spell Master">
+		<set name="icon" value="icon.skill1901"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="mAtkSpd" value="1.1"/>
+			<add stat="baseMCritRate" value="10"/>
+		</for>
+	</skill>
+	<skill id="1830" levels="1" name="Spell Master">
+		<set name="icon" value="icon.skill1908"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="mAtkSpd" value="1.13"/>
+			<add stat="baseMCritRate" value="10"/>
+		</for>
+	</skill>
+	<skill id="1831" levels="1" name="Spell Master">
+		<set name="icon" value="icon.skill1911"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="mAtkSpd" value="1.09"/>
+			<add stat="baseMCritRate" value="10"/>
+		</for>
+	</skill>
+	<skill id="1832" levels="1" name="Spell Master">
+		<set name="icon" value="icon.skill1916"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="mAtkSpd" value="1.05"/>
+			<add stat="baseMCritRate" value="10"/>
+		</for>
+	</skill>
+	<skill id="1833" levels="1" name="Mount - Gold Maned Lion">
+		<set name="icon" value="icon.skill1833"/>
+		<set name="hitTime" value="1000"/>
+		<set name="irreplaceable_buff" value="true"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="transform"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSkillTimePermanent" value="true"/>
+		<set name="hitCancelTime" value="500"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<cond>
+			<player can_transform="160"/>
+		</cond>
+		<for>
+			<effect name="Transformation" value="160"/>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="changebody"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="turn_stone"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="buff_special_multi"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1834" levels="1" name="Mount Pegasus">
+		<set name="icon" value="icon.skill1834"/>
+		<set name="hitTime" value="1000"/>
+		<set name="irreplaceable_buff" value="true"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="transform"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSkillTimePermanent" value="true"/>
+		<set name="hitCancelTime" value="500"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<cond>
+			<player can_transform="161"/>
+		</cond>
+		<for>
+			<effect name="Transformation" value="161"/>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="changebody"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="turn_stone"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="buff_special_multi"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1835" levels="1" name="Mount Saber Tooth Cougar">
+		<set name="icon" value="icon.skill1835"/>
+		<set name="hitTime" value="1000"/>
+		<set name="irreplaceable_buff" value="true"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="transform"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSkillTimePermanent" value="true"/>
+		<set name="hitCancelTime" value="500"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<cond>
+			<player can_transform="162"/>
+		</cond>
+		<for>
+			<effect name="Transformation" value="162"/>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="changebody"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="turn_stone"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="buff_special_multi"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1836" levels="1" name="Mount Kukuru">
+		<set name="icon" value="icon.skill1836"/>
+		<set name="hitTime" value="1000"/>
+		<set name="irreplaceable_buff" value="true"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="transform"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSkillTimePermanent" value="true"/>
+		<set name="hitCancelTime" value="500"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<cond>
+			<player can_transform="163"/>
+		</cond>
+		<for>
+			<effect name="Transformation" value="163"/>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="changebody"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="turn_stone"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="buff_special_multi"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1837" levels="1" name="Mount Black Bear">
+		<set name="icon" value="icon.skill1837"/>
+		<set name="hitTime" value="1000"/>
+		<set name="irreplaceable_buff" value="true"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="transform"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSkillTimePermanent" value="true"/>
+		<set name="hitCancelTime" value="500"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<cond>
+			<player can_transform="164"/>
+		</cond>
+		<for>
+			<effect name="Transformation" value="164"/>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="changebody"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="turn_stone"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="buff_special_multi"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1838" levels="1" name="PA Cadmus - Prophecy of Water">
+		<set name="icon" value="icon.skill1355"/>
+		<set name="reuseDelay" value="4000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="72"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1839" levels="1" name="PA Cadmus - Prophecy of Fire">
+		<set name="icon" value="icon.skill1356"/>
+		<set name="reuseDelay" value="4000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="72"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1840" levels="1" name="PA Cadmus - Prophecy of Wind">
+		<set name="icon" value="icon.skill1357"/>
+		<set name="reuseDelay" value="4000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="72"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1841" levels="1" name="PA Cadmus - Might">
+		<set name="icon" value="icon.skill1068"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1842" levels="1" name="PA Cadmus - Shield">
+		<set name="icon" value="icon.skill1040"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1843" levels="1" name="PA Cadmus - Wind Walk">
+		<set name="icon" value="icon.skill1204"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1844" levels="1" name="PA Cadmus - Return">
+		<set name="icon" value="Icon.skill1050"/>
+		<set name="reuseDelay" value="75000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1845" levels="1" name="PA Cadmus - Focus">
+		<set name="icon" value="icon.skill1077"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1846" levels="1" name="PA Cadmus - Death Whisper">
+		<set name="icon" value="icon.skill1242"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1847" levels="1" name="PA Cadmus - Guidance">
+		<set name="icon" value="icon.skill1240"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1848" levels="1" name="PA Cadmus - Heal">
+		<set name="icon" value="icon.skill1011"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="52"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1849" levels="1" name="PA Cadmus - Haste">
+		<set name="icon" value="icon.skill1086"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1850" levels="1" name="PA Cadmus - Acumen">
+		<set name="icon" value="icon.skill1085"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1851" levels="1" name="PA Cadmus - Vampiric Rage">
+		<set name="icon" value="icon.skill1268"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1852" levels="1" name="PA Cadmus - Empower">
+		<set name="icon" value="icon.skill1059"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1853" levels="1" name="PA Cadmus - Clarity">
+		<set name="icon" value="icon.skill1397"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1854" levels="1" name="PA Cadmus - Agility">
+		<set name="icon" value="icon.skill1087"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1855" levels="1" name="PA Cadmus - Lightness">
+		<set name="icon" value="icon.skill1257"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1856" levels="1" name="PA Cadmus - Recharge">
+		<set name="icon" value="icon.skill1013"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="6000"/>
+		<set name="mp_consume" value="98"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1857" levels="1" name="PA Cadmus - Greater Heal">
+		<set name="icon" value="icon.skill1217"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="5000"/>
+		<set name="mp_consume" value="83"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1858" levels="1" name="PA Cadmus - Blessed Body">
+		<set name="icon" value="icon.skill1045"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="52"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1859" levels="1" name="PA Cadmus - Blessed Soul">
+		<set name="icon" value="icon.skill1048"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="52"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1860" levels="1" name="PA Cadmus - Stun Resistance">
+		<set name="icon" value="icon.skill1259"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="35"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1861" levels="1" name="PA Cadmus - Advanced Block">
+		<set name="icon" value="icon.skill1304"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="49"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1862" levels="1" name="PA Cadmus - Wild Magic">
+		<set name="icon" value="icon.skill1303"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="58"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1863" levels="1" name="PA Cadmus - Stigma of Shilen">
+		<set name="icon" value="icon.skill1539"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="24"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1864" levels="1" name="PA Cadmus - Berserker Spirit">
+		<set name="icon" value="icon.skill1062"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="48"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="1865" levels="1" name="Transformation Attack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+</list>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="23140001" name="frozen_barrier_s.frozen_barrier_spear" hp="158250" pdef="644" mdef="518">
+		<pos x="113932" y="-126022" z="-3474"/>
+		<shape ax="113916" ay="-126161" bx="114017" by="-126134" cx="113965" cy="-125899" dx="113857" dy="-125928" minz="-3664" maxz="-2640"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="23140002" name="frozen_barrier_s.frozen_barrier_spear" hp="158250" pdef="644" mdef="518">
+		<pos x="115292" y="-125745" z="-3473"/>
+		<shape ax="115272" ay="-125869" bx="115376" by="-125838" cx="115318" cy="-125611" dx="115218" dy="-125637" minz="-3664" maxz="-2640"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="23140101" name="Freya_SBaseIceQueen_Door" hp="158250" pdef="644" mdef="518">
+		<pos x="114720" y="-113291" z="-11233"/>
+		<shape ax="114651" ay="-113301" bx="114784" by="-113301" cx="114785" cy="-113281" dx="114653" dy="-113277" minz="-11242" maxz="-11092"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+</list>

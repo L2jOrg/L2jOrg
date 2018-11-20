@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "multisell.dtd">
+<list>
+	<item>
+		<production id="49574" count="1"/>	<!--Усиленное Кольцо Королевы Муравьев-->
+		<ingredient id="6660" count="1"/>	<!--Кольцо Королевы Муравьев-->
+		<ingredient id="6660" count="1"/>	<!--Кольцо Королевы Муравьев-->
+		<ingredient id="57" count="1000000"/>	<!--Адена-->
+	</item>
+	<item>
+		<production id="49577" count="1"/>	<!--Улучшенное Кольцо Королевы Муравьев-->
+		<ingredient id="49574" count="1"/>	<!--Усиленное Кольцо Королевы Муравьев-->
+		<ingredient id="49574" count="1"/>	<!--Усиленное Кольцо Королевы Муравьев-->
+		<ingredient id="57" count="2000000"/>	<!--Адена-->
+	</item>
+	<item>
+		<production id="49576" count="1"/>	<!--Усиленное Кольцо Ядра-->
+		<ingredient id="6662" count="1"/>	<!--Кольцо Ядра-->
+		<ingredient id="6662" count="1"/>	<!--Кольцо Ядра-->
+		<ingredient id="57" count="1000000"/>	<!--Адена-->
+	</item>
+	<item>
+		<production id="49579" count="1"/>	<!--Улучшенное Кольцо Ядра-->
+		<ingredient id="49576" count="1"/>	<!--Усиленное Кольцо Ядра-->
+		<ingredient id="49576" count="1"/>	<!--Усиленное Кольцо Ядра-->
+		<ingredient id="57" count="2000000"/>	<!--Адена-->
+	</item>
+	<item>
+		<production id="49575" count="1"/>	<!--Усиленная Серьга Орфен-->
+		<ingredient id="6661" count="1"/>	<!--Серьга Орфен-->
+		<ingredient id="6661" count="1"/>	<!--Серьга Орфен-->
+		<ingredient id="57" count="1000000"/>	<!--Адена-->
+	</item>
+	<item>
+		<production id="49578" count="1"/>	<!--Улучшенная Серьга Орфен-->
+		<ingredient id="49575" count="1"/>	<!--Усиленная Серьга Орфен-->
+		<ingredient id="49575" count="1"/>	<!--Усиленная Серьга Орфен-->
+		<ingredient id="57" count="2000000"/>	<!--Адена-->
+	</item>
+	<item>
+		<production id="49581" count="1"/>	<!--null-->
+		<ingredient id="49580" count="1"/>	<!--null-->
+		<ingredient id="49580" count="1"/>	<!--null-->
+		<ingredient id="57" count="1000000"/>	<!--Адена-->
+	</item>
+	<item>
+		<production id="49582" count="1"/>	<!--null-->
+		<ingredient id="49581" count="1"/>	<!--null-->
+		<ingredient id="49581" count="1"/>	<!--null-->
+		<ingredient id="57" count="2000000"/>	<!--Адена-->
+	</item>
+	<item>
+		<production id="90765" count="1"/>	<!--Улучш Серьга Закена-->
+		<ingredient id="90764" count="1"/>	<!--null-->
+		<ingredient id="90764" count="1"/>	<!--null-->
+		<ingredient id="57" count="2000000"/>	<!--Адена-->
+	</item>
+	<item>
+		<production id="90764" count="1"/>	<!--Усиленная Серьга Закена-->
+		<ingredient id="90763" count="1"/>	<!--null-->
+		<ingredient id="90763" count="1"/>	<!--null-->
+		<ingredient id="57" count="1000000"/>	<!--Адена-->
+	</item>
+</list>

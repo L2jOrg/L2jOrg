@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+		<settings is_fast_buff = "true"/>
+        <buff_package id = "1" is_new_table = "true" is_table_finished = "false">
+                <description_package>Бафф Иса</description_package>
+				<buff skill_id = "11517" skill_level = "4" skill_name = "Поэма Рога" price = "15000"/>
+				<buff skill_id = "11518" skill_level = "4" skill_name = "Поэма Барабана" price = "15000"/>
+				<buff skill_id = "11519" skill_level = "4" skill_name = "Поэма Органа" price = "15000"/>
+				<buff skill_id = "11520" skill_level = "4" skill_name = "Поэма Гитары" price = "15000"/>
+				<buff skill_id = "11521" skill_level = "4" skill_name = "Поэма Арфы" price = "15000"/>
+				<buff skill_id = "11522" skill_level = "4" skill_name = "Поэма Лютни" price = "15000"/>
+				<buff skill_id = "11523" skill_level = "1" skill_name = "Гармония Стража" price = "15000"/>
+				<buff skill_id = "11524" skill_level = "1" skill_name = "Гармония Берсерка" price = "15000"/>
+				<buff skill_id = "11525" skill_level = "1" skill_name = "Гармония Мага" price = "15000"/>
+				<buff skill_id = "11529" skill_level = "1" skill_name = "Соната Битвы" price = "15000"/>
+				<buff skill_id = "11530" skill_level = "1" skill_name = "Соната Движения" price = "15000"/>
+				<buff skill_id = "11532" skill_level = "1" skill_name = "Соната Расслабления" price = "15000"/>
+				<buff skill_id = "11566" skill_level = "1" skill_name = "Сопротивление Божественному" price = "15000"/>
+				<buff skill_id = "11567" skill_level = "1" skill_name = "Сопротивление Психическим Атакам" price = "15000"/>
+				<buff skill_id = "11565" skill_level = "1" skill_name = "Сопротивление Стихиям" price = "15000"/>				
+        </buff_package>
+        <buff_package id = "2" is_new_table = "true" is_table_finished = "false">
+                <description_package>Бафф Альгиза</description_package>
+                <buff skill_id = "11820" skill_level = "1" skill_name = "Сила Сахи" price = "15000"/>
+				<buff skill_id = "11821" skill_level = "1" skill_name = "Крит. Удар Сахи" price = "15000"/>
+				<buff skill_id = "11822" skill_level = "1" skill_name = "Мощь Сахи" price = "15000"/>
+				<buff skill_id = "11823" skill_level = "1" skill_name = "Движение Сахи" price = "15000"/>
+				<buff skill_id = "11824" skill_level = "1" skill_name = "Сопротивление Сахи" price = "15000"/>
+				<buff skill_id = "11825" skill_level = "1" skill_name = "Разум Сахи" price = "15000"/>
+				<buff skill_id = "11830" skill_level = "1" skill_name = "Благословение Сахи" price = "15000"/>
+        </buff_package>        
+		<buff_package id = "3" is_new_table = "true" is_table_finished = "false">
+                <description_package>Танцы</description_package>
+                <buff skill_id = "1585" skill_level = "1" skill_name = "Темный Ритм Критического Удара" price = "500"/>
+                <buff skill_id = "1587" skill_level = "1" skill_name = "Темный Ритм Магии" price = "500"/>
+                <buff skill_id = "1598" skill_level = "1" skill_name = "Темный Ритм Мага" price = "500"/>
+                <buff skill_id = "1589" skill_level = "1" skill_name = "Темный Ритм Сражения" price = "500"/>
+                <buff skill_id = "1591" skill_level = "1" skill_name = "Темный Ритм Бойца" price = "500"/>
+				<buff skill_id = "1593" skill_level = "1" skill_name = "Темный Ритм Мести" price = "500"/>
+                <buff skill_id = "1595" skill_level = "1" skill_name = "Темный Ритм Старта" price = "500"/>				
+        </buff_package>	
+		<buff_package id = "4" is_new_table = "true" is_table_finished = "false">
+                <description_package>Прочие</description_package>				
+				<buff skill_id = "1542" skill_level = "1" skill_name = "Ответный Крит. Удар" price = "5000"/>				
+				<buff skill_id = "4699" skill_level = "3" skill_name = "Благословение Королевы" price = "5000"/>
+				<buff skill_id = "4700" skill_level = "3" skill_name = "Дар Королевы" price = "5000"/>
+				<buff skill_id = "4702" skill_level = "3" skill_name = "Благословение Серафима" price = "5000"/>
+				<buff skill_id = "4703" skill_level = "3" skill_name = "Дар Серафима" price = "5000"/>
+				<buff skill_id = "825" skill_level = "1" skill_name = "Осрое Лезвие" price = "5000"/>
+				<buff skill_id = "826" skill_level = "1" skill_name = "Шип" price = "5000"/>
+				<buff skill_id = "827" skill_level = "1" skill_name = "Перетяжка" price = "5000"/>
+				<buff skill_id = "828" skill_level = "1" skill_name = "Закалка" price = "5000"/>
+				<buff skill_id = "829" skill_level = "1" skill_name = "Тщательное Дубление" price = "5000"/>
+				<buff skill_id = "830" skill_level = "1" skill_name = "Вышивка" price = "5000"/>
+        </buff_package>
+</list>

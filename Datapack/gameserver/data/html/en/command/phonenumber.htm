@@ -1,0 +1,52 @@
+<!--AUTHOR: Bonux-->
+<html><head>
+<title>Phone Number</title>
+<body scroll="no">
+<table border=0 cellpadding=0 cellspacing=0 width=292>
+	<?message?>
+	<tr>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=292 height=170 background="L2UI_CH3.refinewnd_back_Pattern">
+				<tr>
+					<td align=center height=120>
+						<br><br><br>
+						<table width=240>
+							<tr><td fixwidth=100><font name="CreditText" color="DDD3B6">Current number:</font></td><td fixwidth=10></td><td fixwidth=120 align=right><font name="CreditTextNormal" color="FF6A00"><?current_number?></font></td></tr>
+							<tr><td fixwidth=100><font name="CreditText" color="DDD3B6">New number<font color="LEVEL">*</font>:</font></td><td fixwidth=10>+</td><td fixwidth=120 height=29 align=right><edit var="newnumber" width=115 height=15 /></td></tr>
+						</table>
+						<br><button value="Change" action="bypass -h user_phonenumber $newnumber" back="l2ui_ct1.Button_DF_Msn_down" width=200 height=30 fore="l2ui_ct1.Button_DF_Msn">
+					</td>
+				</tr>
+				<tr><td align=center height=50><font color="LEVEL">* The phone must be numbered<br1>without any symbols.</font></td></tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</body></html>
+<!--TEMPLATE1
+Not specified
+TEMPLATE-->
+<!--TEMPLATE2
+<tr>
+	<td>
+		<table width=292 border=0 background="L2UI_CT1.editbox_df_bg">
+			<tr><td align=center width=5></td><td align=center height=10></td><td align=center width=5></td></tr>
+			<tr><td align=center width=5></td><td align=center width=292><?message_text?></td><td align=center width=5></td></tr>
+			<tr><td align=center width=5></td><td align=center height=10></td><td align=center width=5></td></tr>
+		</table>
+		<br>
+	</td>
+</tr>
+TEMPLATE-->
+<!--TEMPLATE3
+<font color="FF0000">The phone is in the wrong format!<br1>Enter the phone number again.</font>
+TEMPLATE-->
+<!--TEMPLATE4
+<font color="FF0000">Communication with the authorization server is not installed!<br1>Please try again later.</font>
+TEMPLATE-->
+<!--TEMPLATE5
+<font color="FF0000">You specified the number corresponding to the current one!<br1>The number can not be changed.</font>
+TEMPLATE-->
+<!--TEMPLATE6
+<font color="B6FF00">You have successfully changed your phone number!</font>
+TEMPLATE-->

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="22120001" name="Giran_Devil_island_S" hp="150" pdef="1" mdef="1">
+		<pos x="77568" y="-182096" z="-9716"/>
+		<shape ax="77488" ay="-182427" bx="77639" by="-182426" cx="77645" cy="-181861" dx="77490" dy="-181861" minz="-9980" maxz="-9940"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+</list>

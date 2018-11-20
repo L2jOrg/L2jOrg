@@ -1,0 +1,61 @@
+<!ELEMENT list (residence|instant_residence)*>
+
+	<!ELEMENT residence (available_functions|skills|banish_points|owner_restart_points|other_restart_points|chaos_restart_points|merchant_guards)*>
+	<!ATTLIST residence
+		id CDATA #REQUIRED
+		name CDATA #REQUIRED
+		impl CDATA #REQUIRED
+		fee_item_id CDATA #IMPLIED
+		rental_fee CDATA #IMPLIED
+		min_bid CDATA #IMPLIED
+		deposit CDATA #IMPLIED
+		grade CDATA #IMPLIED>
+
+		<!ELEMENT available_functions (function)*>
+
+			<!ELEMENT function (funcs|buffs)*>
+			<!ATTLIST function
+				type CDATA #REQUIRED
+				level CDATA #IMPLIED>
+
+		<!ELEMENT skills (skill)*>
+
+			<!ELEMENT skill (#PCDATA)>
+			<!ATTLIST skill
+				id CDATA #REQUIRED
+				level CDATA #REQUIRED>
+
+		<!ELEMENT banish_points (point)*>
+		<!ELEMENT owner_restart_points (point)*>
+		<!ELEMENT other_restart_points (point)*>
+		<!ELEMENT chaos_restart_points (point)*>
+
+			<!ELEMENT point (#PCDATA)>
+			<!ATTLIST point
+				x CDATA #REQUIRED
+				y CDATA #REQUIRED
+				z CDATA #REQUIRED>
+
+		<!ELEMENT merchant_guards (merchant_guard)*>
+
+			<!ELEMENT merchant_guard (#PCDATA)>
+			<!ATTLIST merchant_guard
+				item_id CDATA #REQUIRED
+				npc_id CDATA #REQUIRED
+				max CDATA #REQUIRED>
+
+	<!ELEMENT instant_residence (functions)*>
+	<!ATTLIST instant_residence
+		id CDATA #REQUIRED
+		name CDATA #REQUIRED
+		impl CDATA #REQUIRED
+		rental_fee CDATA #IMPLIED
+		commission CDATA #IMPLIED
+		rental_period CDATA #IMPLIED
+		apply_period CDATA #IMPLIED
+		first_lottery_date CDATA #IMPLIED
+		min_pledge_level CDATA #IMPLIED
+		instant_zone CDATA #IMPLIED
+		origin CDATA #IMPLIED>
+
+		<!ELEMENT functions (function)*>

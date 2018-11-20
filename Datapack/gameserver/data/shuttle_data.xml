@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "shuttle_data.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<shuttle id="1" name="Ancient Town of Arcan 1">
+		<doors>
+			<door id="0">
+				<set name="unk_param_0" value="0"/>
+				<set name="unk_param_1" value="0"/>
+				<set name="unk_param_2" value="-50"/>
+				<set name="unk_param_3" value="0"/>
+				<set name="unk_param_4" value="0"/>
+				<set name="unk_param_5" value="0"/>
+				<set name="unk_param_6" value="0"/>
+				<set name="unk_param_7" value="200"/>
+				<set name="unk_param_8" value="45"/>
+			</door>
+			<door id="1">
+				<set name="unk_param_0" value="0"/>
+				<set name="unk_param_1" value="0"/>
+				<set name="unk_param_2" value="-50"/>
+				<set name="unk_param_3" value="0"/>
+				<set name="unk_param_4" value="0"/>
+				<set name="unk_param_5" value="0"/>
+				<set name="unk_param_6" value="0"/>
+				<set name="unk_param_7" value="-200"/>
+				<set name="unk_param_8" value="45"/>
+			</door>
+		</doors>
+	</shuttle>
+	<shuttle id="2" name="Ancient Town of Arcan 2">
+		<doors>
+			<door id="0">
+				<set name="unk_param_0" value="0"/>
+				<set name="unk_param_1" value="0"/>
+				<set name="unk_param_2" value="-50"/>
+				<set name="unk_param_3" value="0"/>
+				<set name="unk_param_4" value="0"/>
+				<set name="unk_param_5" value="0"/>
+				<set name="unk_param_6" value="0"/>
+				<set name="unk_param_7" value="200"/>
+				<set name="unk_param_8" value="45"/>
+			</door>
+			<door id="1">
+				<set name="unk_param_0" value="0"/>
+				<set name="unk_param_1" value="0"/>
+				<set name="unk_param_2" value="-50"/>
+				<set name="unk_param_3" value="0"/>
+				<set name="unk_param_4" value="0"/>
+				<set name="unk_param_5" value="0"/>
+				<set name="unk_param_6" value="0"/>
+				<set name="unk_param_7" value="-200"/>
+				<set name="unk_param_8" value="45"/>
+			</door>
+		</doors>
+	</shuttle>
+	<shuttle id="3" name="Cruma Tower Shuttle">
+		<doors>
+			<door id="0">
+				<set name="unk_param_0" value="0"/>
+				<set name="unk_param_1" value="0"/>
+				<set name="unk_param_2" value="-115"/>
+				<set name="unk_param_3" value="0"/>
+				<set name="unk_param_4" value="0"/>
+				<set name="unk_param_5" value="0"/>
+				<set name="unk_param_6" value="0"/>
+				<set name="unk_param_7" value="0"/>
+				<set name="unk_param_8" value="0"/>
+			</door>
+			<door id="1">
+				<set name="unk_param_0" value="0"/>
+				<set name="unk_param_1" value="0"/>
+				<set name="unk_param_2" value="-115"/>
+				<set name="unk_param_3" value="0"/>
+				<set name="unk_param_4" value="0"/>
+				<set name="unk_param_5" value="0"/>
+				<set name="unk_param_6" value="0"/>
+				<set name="unk_param_7" value="0"/>
+				<set name="unk_param_8" value="0"/>
+			</door>
+		</doors>
+	</shuttle>
+</list>

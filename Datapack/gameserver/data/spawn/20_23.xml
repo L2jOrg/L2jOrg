@@ -1,0 +1,1354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn name="dion10_npc2023_premium01" count="1" respawn="60" group="vitamin_manager">
+		<point x="17740" y="169800" z="-3496" h="20000"/>
+		<npc id="32478"/><!--Менеджер Витаминов-->
+	</spawn>
+	<territory name="dion17_2023_13s">
+		<add x="4193" y="169825" zmin="-3596" zmax="-2896"/>
+		<add x="4016" y="167461" zmin="-3596" zmax="-2896"/>
+		<add x="6003" y="167625" zmin="-3596" zmax="-2896"/>
+		<add x="6194" y="169655" zmin="-3596" zmax="-2896"/>
+	</territory>
+	<spawn name="dion17_2023_13s" count="2" respawn="29">
+		<territory name="dion17_2023_13s"/>
+		<npc id="20250"/><!--Стеклянный Ягуар-->
+	</spawn>
+	<spawn name="dion17_2023_13s" count="2" respawn="29">
+		<territory name="dion17_2023_13s"/>
+		<npc id="20251"/><!--Ящер Делу-->
+	</spawn>
+	<territory name="dion17_2023_15s">
+		<add x="6879" y="179306" zmin="-3749" zmax="-2749"/>
+		<add x="4246" y="176908" zmin="-3749" zmax="-2749"/>
+		<add x="6561" y="174994" zmin="-3749" zmax="-2749"/>
+		<add x="8955" y="176806" zmin="-3749" zmax="-2749"/>
+	</territory>
+	<spawn name="dion17_2023_15s" count="2" respawn="29">
+		<territory name="dion17_2023_15s"/>
+		<npc id="20206"/><!--Кадифский Оборотень-->
+	</spawn>
+	<spawn name="dion17_2023_15s" count="2" respawn="29">
+		<territory name="dion17_2023_15s"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<territory name="dion17_2023_14s">
+		<add x="3880" y="174991" zmin="-3661" zmax="-2661"/>
+		<add x="1859" y="173079" zmin="-3661" zmax="-2661"/>
+		<add x="4768" y="172506" zmin="-3661" zmax="-2661"/>
+		<add x="6769" y="173673" zmin="-3661" zmax="-2661"/>
+	</territory>
+	<spawn name="dion17_2023_14s" count="2" respawn="29">
+		<territory name="dion17_2023_14s"/>
+		<npc id="20206"/><!--Кадифский Оборотень-->
+	</spawn>
+	<spawn name="dion17_2023_14s" count="2" respawn="29">
+		<territory name="dion17_2023_14s"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<territory name="dion17_2023_17s">
+		<add x="578" y="187476" zmin="-3821" zmax="-3121"/>
+		<add x="545" y="184462" zmin="-3821" zmax="-3121"/>
+		<add x="3619" y="183704" zmin="-3821" zmax="-3121"/>
+		<add x="4141" y="185186" zmin="-3821" zmax="-3121"/>
+	</territory>
+	<spawn name="dion17_2023_17s" count="2" respawn="29">
+		<territory name="dion17_2023_17s"/>
+		<npc id="20250"/><!--Стеклянный Ягуар-->
+	</spawn>
+	<spawn name="dion17_2023_17s" count="2" respawn="29">
+		<territory name="dion17_2023_17s"/>
+		<npc id="20251"/><!--Ящер Делу-->
+	</spawn>
+	<territory name="dion17_2023_16s">
+		<add x="3591" y="182824" zmin="-3821" zmax="-3121"/>
+		<add x="1058" y="180151" zmin="-3821" zmax="-3121"/>
+		<add x="3031" y="178424" zmin="-3821" zmax="-3121"/>
+		<add x="5139" y="180225" zmin="-3821" zmax="-3121"/>
+	</territory>
+	<spawn name="dion17_2023_16s" count="2" respawn="29">
+		<territory name="dion17_2023_16s"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn name="dion17_2023_16s" count="2" respawn="29">
+		<territory name="dion17_2023_16s"/>
+		<npc id="20250"/><!--Стеклянный Ягуар-->
+	</spawn>
+	<spawn name="dion17_2023_19s" count="3" respawn="29">
+		<territory>
+			<add x="7845" y="185057" zmin="-2816" zmax="-2116"/>
+			<add x="7113" y="182874" zmin="-2816" zmax="-2116"/>
+			<add x="8618" y="182744" zmin="-2816" zmax="-2116"/>
+			<add x="9494" y="184378" zmin="-2816" zmax="-2116"/>
+		</territory>
+		<npc id="20251"/><!--Ящер Делу-->
+	</spawn>
+	<territory name="dion17_2023_18s">
+		<add x="913" y="190840" zmin="-3849" zmax="-3149"/>
+		<add x="880" y="188365" zmin="-3849" zmax="-3149"/>
+		<add x="3689" y="187123" zmin="-3849" zmax="-3149"/>
+		<add x="4949" y="189200" zmin="-3849" zmax="-3149"/>
+	</territory>
+	<spawn name="dion17_2023_18s" count="1" respawn="29">
+		<territory name="dion17_2023_18s"/>
+		<npc id="20250"/><!--Стеклянный Ягуар-->
+	</spawn>
+	<spawn name="dion17_2023_18s" count="3" respawn="29">
+		<territory name="dion17_2023_18s"/>
+		<npc id="20251"/><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="dion_castle_light_side">
+		<point x="15800" y="142834" z="-2696" h="15000"/>
+		<npc id="36610"/><!--Герольд-->
+	</spawn>
+	<spawn name="dion_chamberlain_etc" count="1" respawn="60" group="dion_castle_light_side">
+		<point x="22172" y="160923" z="-2666" h="49152"/>
+		<npc id="35142"/><!--Камергер Света-->
+	</spawn>
+	<spawn name="dion_chamberlain_etc" count="1" respawn="60" group="dion_castle_dark_side">
+		<point x="22172" y="160923" z="-2666" h="49152"/>
+		<npc id="36654"/><!--Камергер Тьмы-->
+	</spawn>
+	<spawn name="dion_chamberlain_etc" count="1" respawn="60" group="dion_castle_2">
+		<point x="19132" y="153027" z="-3120" h="49152"/>
+		<npc id="35146"/><!--Гибсон-->
+	</spawn>
+	<spawn name="dion_chamberlain_etc" count="1" respawn="10800" group="dion_castle_2">
+		<point x="22412" y="156489" z="-2944" h="49152"/>
+		<npc id="35138"/><!--Привратник Внешних Владений-->
+	</spawn>
+	<spawn name="dion_chamberlain_etc" count="1" respawn="10800" group="dion_castle_2">
+		<point x="22466" y="156837" z="-2944" h="0"/>
+		<npc id="35138"/><!--Привратник Внешних Владений-->
+	</spawn>
+	<spawn name="dion_chamberlain_etc" count="1" respawn="10800" group="dion_castle_2">
+		<point x="22239" y="159048" z="-2654" h="49152"/>
+		<npc id="35139"/><!--Привратник Внутренних Владений-->
+	</spawn>
+	<spawn name="dion_chamberlain_etc" count="1" respawn="10800" group="dion_castle_2">
+		<point x="22305" y="159403" z="-2694" h="0"/>
+		<npc id="35139"/><!--Привратник Внутренних Владений-->
+	</spawn>
+	<territory name="dion16_2023_09">
+		<add x="28228" y="172176" zmin="-3608" zmax="-2908"/>
+		<add x="26863" y="171700" zmin="-3608" zmax="-2908"/>
+		<add x="27990" y="167313" zmin="-3608" zmax="-2908"/>
+		<add x="30265" y="167379" zmin="-3608" zmax="-2908"/>
+	</territory>
+	<spawn name="dion16_2023_09" count="2" respawn="30">
+		<territory name="dion16_2023_09"/>
+		<npc id="21106"/><!--Проклятый Смотритель-->
+	</spawn>
+	<spawn name="dion16_2023_09" count="2" respawn="30">
+		<territory name="dion16_2023_09"/>
+		<npc id="21107"/><!--Командир Ящеров Делу-->
+	</spawn>
+	<spawn name="dion16_2023_09" count="2" respawn="30">
+		<territory name="dion16_2023_09"/>
+		<npc id="20781"/><!--Шаман Ящеров Делу-->
+	</spawn>
+	<territory name="dion16_2023_08">
+		<add x="21097" y="171279" zmin="-3657" zmax="-2857"/>
+		<add x="20685" y="169354" zmin="-3657" zmax="-2857"/>
+		<add x="23893" y="167140" zmin="-3657" zmax="-2857"/>
+		<add x="27901" y="167298" zmin="-3657" zmax="-2857"/>
+		<add x="26670" y="171735" zmin="-3657" zmax="-2857"/>
+		<add x="23214" y="172294" zmin="-3657" zmax="-2857"/>
+	</territory>
+	<spawn name="dion16_2023_08" count="4" respawn="30">
+		<territory name="dion16_2023_08"/>
+		<npc id="21106"/><!--Проклятый Смотритель-->
+	</spawn>
+	<spawn name="dion16_2023_08" count="6" respawn="30">
+		<territory name="dion16_2023_08"/>
+		<npc id="21107"/><!--Командир Ящеров Делу-->
+	</spawn>
+	<spawn name="dion16_2023_08" count="5" respawn="30">
+		<territory name="dion16_2023_08"/>
+		<npc id="20781"/><!--Шаман Ящеров Делу-->
+	</spawn>
+	<territory name="dion16_2023_07">
+		<add x="31701" y="167320" zmin="-3803" zmax="-3003"/>
+		<add x="24035" y="167062" zmin="-3803" zmax="-3003"/>
+		<add x="25216" y="163998" zmin="-3803" zmax="-3003"/>
+		<add x="31708" y="164014" zmin="-3803" zmax="-3003"/>
+	</territory>
+	<spawn name="dion16_2023_07" count="3" respawn="30">
+		<territory name="dion16_2023_07"/>
+		<npc id="21106"/><!--Проклятый Смотритель-->
+	</spawn>
+	<spawn name="dion16_2023_07" count="4" respawn="30">
+		<territory name="dion16_2023_07"/>
+		<npc id="21107"/><!--Командир Ящеров Делу-->
+	</spawn>
+	<spawn name="dion16_2023_07" count="2" respawn="30">
+		<territory name="dion16_2023_07"/>
+		<npc id="20781"/><!--Шаман Ящеров Делу-->
+	</spawn>
+	<territory name="dion16_2023_06">
+		<add x="23857" y="167021" zmin="-3657" zmax="-2857"/>
+		<add x="18914" y="165303" zmin="-3657" zmax="-2857"/>
+		<add x="17829" y="163971" zmin="-3657" zmax="-2857"/>
+		<add x="25095" y="163944" zmin="-3657" zmax="-2857"/>
+	</territory>
+	<spawn name="dion16_2023_06" count="3" respawn="30">
+		<territory name="dion16_2023_06"/>
+		<npc id="21106"/><!--Проклятый Смотритель-->
+	</spawn>
+	<spawn name="dion16_2023_06" count="3" respawn="30">
+		<territory name="dion16_2023_06"/>
+		<npc id="21107"/><!--Командир Ящеров Делу-->
+	</spawn>
+	<spawn name="dion16_2023_06" count="2" respawn="30">
+		<territory name="dion16_2023_06"/>
+		<npc id="20781"/><!--Шаман Ящеров Делу-->
+	</spawn>
+	<territory name="dion16_2023_01">
+		<add x="9544" y="168893" zmin="-3798" zmax="-3098"/>
+		<add x="7319" y="164010" zmin="-3798" zmax="-3098"/>
+		<add x="11818" y="163965" zmin="-3798" zmax="-3098"/>
+		<add x="11851" y="166728" zmin="-3798" zmax="-3098"/>
+	</territory>
+	<spawn name="dion16_2023_01" count="5" respawn="30">
+		<territory name="dion16_2023_01"/>
+		<npc id="21104"/><!--Снабженец Ящеров Делу-->
+	</spawn>
+	<spawn name="dion16_2023_01" count="5" respawn="30">
+		<territory name="dion16_2023_01"/>
+		<npc id="21106"/><!--Проклятый Смотритель-->
+	</spawn>
+	<spawn name="dion16_2023_01" count="4" respawn="30">
+		<territory name="dion16_2023_01"/>
+		<npc id="20781"/><!--Шаман Ящеров Делу-->
+	</spawn>
+	<territory name="dion16_2023_05">
+		<add x="20675" y="169153" zmin="-3608" zmax="-2908"/>
+		<add x="18046" y="167251" zmin="-3608" zmax="-2908"/>
+		<add x="19369" y="165587" zmin="-3608" zmax="-2908"/>
+		<add x="23757" y="167090" zmin="-3608" zmax="-2908"/>
+	</territory>
+	<spawn name="dion16_2023_05" count="2" respawn="30">
+		<territory name="dion16_2023_05"/>
+		<npc id="21103"/><!--Черный Голем-->
+	</spawn>
+	<spawn name="dion16_2023_05" count="5" respawn="30">
+		<territory name="dion16_2023_05"/>
+		<npc id="21105"/><!--Особый Воин Ящеров Делу-->
+	</spawn>
+	<spawn name="dion16_2023_05" count="3" respawn="30">
+		<territory name="dion16_2023_05"/>
+		<npc id="21106"/><!--Проклятый Смотритель-->
+	</spawn>
+	<territory name="dion16_2023_04">
+		<add x="22245" y="172862" zmin="-3744" zmax="-3044"/>
+		<add x="17339" y="175211" zmin="-3744" zmax="-3044"/>
+		<add x="16891" y="172486" zmin="-3744" zmax="-3044"/>
+		<add x="19029" y="171620" zmin="-3744" zmax="-3044"/>
+	</territory>
+	<spawn name="dion16_2023_04" count="4" respawn="30">
+		<territory name="dion16_2023_04"/>
+		<npc id="21106"/><!--Проклятый Смотритель-->
+	</spawn>
+	<spawn name="dion16_2023_04" count="5" respawn="30">
+		<territory name="dion16_2023_04"/>
+		<npc id="21107"/><!--Командир Ящеров Делу-->
+	</spawn>
+	<spawn name="dion16_2023_04" count="3" respawn="30">
+		<territory name="dion16_2023_04"/>
+		<npc id="20781"/><!--Шаман Ящеров Делу-->
+	</spawn>
+	<territory name="dion16_2023_03">
+		<add x="15684" y="175071" zmin="-3744" zmax="-3044"/>
+		<add x="10934" y="171767" zmin="-3744" zmax="-3044"/>
+		<add x="14108" y="170430" zmin="-3744" zmax="-3044"/>
+		<add x="16427" y="172226" zmin="-3744" zmax="-3044"/>
+	</territory>
+	<spawn name="dion16_2023_03" count="4" respawn="30">
+		<territory name="dion16_2023_03"/>
+		<npc id="21106"/><!--Проклятый Смотритель-->
+	</spawn>
+	<spawn name="dion16_2023_03" count="5" respawn="30">
+		<territory name="dion16_2023_03"/>
+		<npc id="21107"/><!--Командир Ящеров Делу-->
+	</spawn>
+	<spawn name="dion16_2023_03" count="3" respawn="30">
+		<territory name="dion16_2023_03"/>
+		<npc id="20781"/><!--Шаман Ящеров Делу-->
+	</spawn>
+	<territory name="dion16_2023_02">
+		<add x="13508" y="167617" zmin="-3777" zmax="-3077"/>
+		<add x="11902" y="163982" zmin="-3777" zmax="-3077"/>
+		<add x="16886" y="163996" zmin="-3777" zmax="-3077"/>
+		<add x="17974" y="165922" zmin="-3777" zmax="-3077"/>
+	</territory>
+	<spawn name="dion16_2023_02" count="5" respawn="30">
+		<territory name="dion16_2023_02"/>
+		<npc id="21106"/><!--Проклятый Смотритель-->
+	</spawn>
+	<spawn name="dion16_2023_02" count="5" respawn="30">
+		<territory name="dion16_2023_02"/>
+		<npc id="21105"/><!--Особый Воин Ящеров Делу-->
+	</spawn>
+	<spawn name="dion16_2023_02" count="4" respawn="30">
+		<territory name="dion16_2023_02"/>
+		<npc id="20781"/><!--Шаман Ящеров Делу-->
+	</spawn>
+	<spawn name="dion01_npc2023_06" count="1" respawn="60">
+		<point x="12805" y="189249" z="-3601" h="19000"/>
+		<npc id="30616"/><!--Кепра-->
+	</spawn>
+	<spawn name="dion01_npc2023_07" count="1" respawn="60">
+		<point x="23471" y="188092" z="-3604" h="16384"/>
+		<npc id="30636"/><!--Камониэль-->
+	</spawn>
+	<spawn name="dion12_npc2023_01" count="1" respawn="60">
+		<point x="12882" y="181053" z="-3560" h="49152"/>
+		<npc id="31210"/><!--Хранитель Портала Арены-->
+	</spawn>
+	<spawn name="dion12_npc2023_02" count="1" respawn="60">
+		<point x="13691" y="182627" z="-3561" h="49152"/>
+		<npc id="30995"/><!--Управляющий Арены-->
+	</spawn>
+	<spawn name="dion12_npc2023_02" count="1" respawn="60">
+		<point x="12962" y="181603" z="-3561" h="16384"/>
+		<npc id="30995"/><!--Управляющий Арены-->
+	</spawn>
+	<territory name="dion16_2023_13s">
+		<add x="21573" y="170959" zmin="-3628" zmax="-3028"/>
+		<add x="22951" y="168996" zmin="-3628" zmax="-3028"/>
+		<add x="25019" y="170127" zmin="-3628" zmax="-3028"/>
+		<add x="25094" y="171603" zmin="-3628" zmax="-3028"/>
+	</territory>
+	<spawn name="dion16_2023_13s" count="2" respawn="30">
+		<territory name="dion16_2023_13s"/>
+		<npc id="21105"/><!--Особый Воин Ящеров Делу-->
+	</spawn>
+	<spawn name="dion16_2023_13s" count="1" respawn="30">
+		<territory name="dion16_2023_13s"/>
+		<npc id="21106"/><!--Проклятый Смотритель-->
+	</spawn>
+	<territory name="dion16_2023_12s">
+		<add x="23176" y="168275" zmin="-3465" zmax="-2865"/>
+		<add x="25040" y="167376" zmin="-3465" zmax="-2865"/>
+		<add x="27121" y="168027" zmin="-3465" zmax="-2865"/>
+		<add x="26794" y="170413" zmin="-3465" zmax="-2865"/>
+	</territory>
+	<spawn name="dion16_2023_12s" count="2" respawn="30">
+		<territory name="dion16_2023_12s"/>
+		<npc id="21106"/><!--Проклятый Смотритель-->
+	</spawn>
+	<spawn name="dion16_2023_12s" count="1" respawn="30">
+		<territory name="dion16_2023_12s"/>
+		<npc id="21107"/><!--Командир Ящеров Делу-->
+	</spawn>
+	<spawn name="dion16_2023_11s" count="2" respawn="30">
+		<territory>
+			<add x="27474" y="166384" zmin="-3769" zmax="-3069"/>
+			<add x="28289" y="164623" zmin="-3769" zmax="-3069"/>
+			<add x="30523" y="164559" zmin="-3769" zmax="-3069"/>
+			<add x="30321" y="166771" zmin="-3769" zmax="-3069"/>
+		</territory>
+		<npc id="20781"/><!--Шаман Ящеров Делу-->
+	</spawn>
+	<territory name="dion16_2023_10s">
+		<add x="20871" y="165651" zmin="-3512" zmax="-2812"/>
+		<add x="21825" y="164191" zmin="-3512" zmax="-2812"/>
+		<add x="23547" y="164200" zmin="-3512" zmax="-2812"/>
+		<add x="23272" y="166075" zmin="-3512" zmax="-2812"/>
+	</territory>
+	<spawn name="dion16_2023_10s" count="1" respawn="30">
+		<territory name="dion16_2023_10s"/>
+		<npc id="21106"/><!--Проклятый Смотритель-->
+	</spawn>
+	<spawn name="dion16_2023_10s" count="1" respawn="30">
+		<territory name="dion16_2023_10s"/>
+		<npc id="20781"/><!--Шаман Ящеров Делу-->
+	</spawn>
+	<spawn name="dion22_npc2023_02" count="1" respawn="60">
+		<point x="11877" y="183574" z="-3712" h="49000"/>
+		<npc id="31225"/><!--Управляющий Арены-->
+	</spawn>
+	<spawn name="giran01_qm2222_01" count="1" respawn="60">
+		<point x="28448" y="174080" z="-3408" h="0"/>
+		<npc id="27093"/><!--Вождь Делу Калкис-->
+	</spawn>
+	<territory name="dion17_2023_12">
+		<add x="7397" y="189688" zmin="-3788" zmax="-3088"/>
+		<add x="6662" y="187882" zmin="-3788" zmax="-3088"/>
+		<add x="11486" y="187990" zmin="-3788" zmax="-3088"/>
+		<add x="11997" y="189567" zmin="-3788" zmax="-3088"/>
+	</territory>
+	<spawn name="dion17_2023_12" count="2" respawn="29">
+		<territory name="dion17_2023_12"/>
+		<npc id="20190"/><!--Скелет Меткий Стрелок-->
+	</spawn>
+	<spawn name="dion17_2023_12" count="4" respawn="29">
+		<territory name="dion17_2023_12"/>
+		<npc id="20252"/><!--Разведчик Ящеров Делу-->
+	</spawn>
+	<spawn name="dion17_2023_12" count="4" respawn="29">
+		<territory name="dion17_2023_12"/>
+		<npc id="20253"/><!--Воин Ящеров Делу-->
+	</spawn>
+	<territory name="dion17_2023_11">
+		<add x="8852" y="186629" zmin="-3793" zmax="-2593"/>
+		<add x="10288" y="184646" zmin="-3793" zmax="-2593"/>
+		<add x="13457" y="185224" zmin="-3793" zmax="-2593"/>
+		<add x="11704" y="187587" zmin="-3793" zmax="-2593"/>
+	</territory>
+	<spawn name="dion17_2023_11" count="4" respawn="29">
+		<territory name="dion17_2023_11"/>
+		<npc id="20252"/><!--Разведчик Ящеров Делу-->
+	</spawn>
+	<spawn name="dion17_2023_11" count="5" respawn="29">
+		<territory name="dion17_2023_11"/>
+		<npc id="20253"/><!--Воин Ящеров Делу-->
+	</spawn>
+	<territory name="dion17_2023_10">
+		<add x="5930" y="184576" zmin="-2994" zmax="-1994"/>
+		<add x="6674" y="182033" zmin="-2994" zmax="-1994"/>
+		<add x="9966" y="182723" zmin="-2994" zmax="-1994"/>
+		<add x="10072" y="184235" zmin="-2994" zmax="-1994"/>
+		<add x="7875" y="186586" zmin="-2994" zmax="-1994"/>
+	</territory>
+	<spawn name="dion17_2023_10" count="6" respawn="29">
+		<territory name="dion17_2023_10"/>
+		<npc id="20254"/><!--Скелет с Секирой-->
+	</spawn>
+	<spawn name="dion17_2023_10" count="3" respawn="29">
+		<territory name="dion17_2023_10"/>
+		<npc id="20190"/><!--Скелет Меткий Стрелок-->
+	</spawn>
+	<spawn name="dion17_2023_10" count="5" respawn="29">
+		<territory name="dion17_2023_10"/>
+		<npc id="20168"/><!--Фавн-->
+	</spawn>
+	<territory name="dion17_2023_09">
+		<add x="6668" y="181790" zmin="-3550" zmax="-2550"/>
+		<add x="9664" y="179975" zmin="-3550" zmax="-2550"/>
+		<add x="11012" y="181366" zmin="-3550" zmax="-2550"/>
+		<add x="9969" y="182608" zmin="-3550" zmax="-2550"/>
+	</territory>
+	<spawn name="dion17_2023_09" count="2" respawn="29">
+		<territory name="dion17_2023_09"/>
+		<npc id="20254"/><!--Скелет с Секирой-->
+	</spawn>
+	<spawn name="dion17_2023_09" count="1" respawn="29">
+		<territory name="dion17_2023_09"/>
+		<npc id="20190"/><!--Скелет Меткий Стрелок-->
+	</spawn>
+	<spawn name="dion17_2023_09" count="4" respawn="29">
+		<territory name="dion17_2023_09"/>
+		<npc id="20168"/><!--Фавн-->
+	</spawn>
+	<territory name="dion17_2023_08">
+		<add x="8593" y="178056" zmin="-3701" zmax="-2701"/>
+		<add x="10708" y="177570" zmin="-3701" zmax="-2701"/>
+		<add x="13101" y="180155" zmin="-3701" zmax="-2701"/>
+		<add x="11312" y="181322" zmin="-3701" zmax="-2701"/>
+	</territory>
+	<spawn name="dion17_2023_08" count="5" respawn="29">
+		<territory name="dion17_2023_08"/>
+		<npc id="20252"/><!--Разведчик Ящеров Делу-->
+	</spawn>
+	<spawn name="dion17_2023_08" count="6" respawn="29">
+		<territory name="dion17_2023_08"/>
+		<npc id="20168"/><!--Фавн-->
+	</spawn>
+	<territory name="dion17_2023_07">
+		<add x="253" y="183960" zmin="-3821" zmax="-2821"/>
+		<add x="4011" y="183353" zmin="-3821" zmax="-2821"/>
+		<add x="7287" y="189726" zmin="-3821" zmax="-2821"/>
+		<add x="180" y="193207" zmin="-3821" zmax="-2821"/>
+	</territory>
+	<spawn name="dion17_2023_07" count="8" respawn="29">
+		<territory name="dion17_2023_07"/>
+		<npc id="20206"/><!--Кадифский Оборотень-->
+	</spawn>
+	<spawn name="dion17_2023_07" count="8" respawn="29">
+		<territory name="dion17_2023_07"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn name="dion17_2023_07" count="9" respawn="29">
+		<territory name="dion17_2023_07"/>
+		<npc id="20250"/><!--Стеклянный Ягуар-->
+	</spawn>
+	<territory name="dion17_2023_06">
+		<add x="156" y="177874" zmin="-3821" zmax="-2821"/>
+		<add x="8775" y="177266" zmin="-3821" zmax="-2821"/>
+		<add x="4840" y="183002" zmin="-3821" zmax="-2821"/>
+		<add x="164" y="183726" zmin="-3821" zmax="-2821"/>
+	</territory>
+	<spawn name="dion17_2023_06" count="8" respawn="29">
+		<territory name="dion17_2023_06"/>
+		<npc id="20205"/><!--Жуткий Волк-->
+	</spawn>
+	<spawn name="dion17_2023_06" count="8" respawn="29">
+		<territory name="dion17_2023_06"/>
+		<npc id="20206"/><!--Кадифский Оборотень-->
+	</spawn>
+	<spawn name="dion17_2023_06" count="8" respawn="29">
+		<territory name="dion17_2023_06"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<territory name="dion17_2023_05">
+		<add x="129" y="173225" zmin="-3833" zmax="-2733"/>
+		<add x="5864" y="171994" zmin="-3833" zmax="-2733"/>
+		<add x="9993" y="176834" zmin="-3833" zmax="-2733"/>
+		<add x="191" y="177689" zmin="-3833" zmax="-2733"/>
+	</territory>
+	<spawn name="dion17_2023_05" count="8" respawn="29">
+		<territory name="dion17_2023_05"/>
+		<npc id="20204"/><!--Кровавая Пчела-->
+	</spawn>
+	<spawn name="dion17_2023_05" count="9" respawn="29">
+		<territory name="dion17_2023_05"/>
+		<npc id="20205"/><!--Жуткий Волк-->
+	</spawn>
+	<spawn name="dion17_2023_05" count="9" respawn="29">
+		<territory name="dion17_2023_05"/>
+		<npc id="20206"/><!--Кадифский Оборотень-->
+	</spawn>
+	<spawn name="dion17_2023_05" count="9" respawn="29">
+		<territory name="dion17_2023_05"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<territory name="dion17_2023_04">
+		<add x="4317" y="166544" zmin="-3824" zmax="-3024"/>
+		<add x="7702" y="167699" zmin="-3824" zmax="-3024"/>
+		<add x="8116" y="169491" zmin="-3824" zmax="-3024"/>
+		<add x="5803" y="171192" zmin="-3824" zmax="-3024"/>
+		<add x="4081" y="171111" zmin="-3824" zmax="-3024"/>
+		<add x="3249" y="167840" zmin="-3824" zmax="-3024"/>
+	</territory>
+	<spawn name="dion17_2023_04" count="6" respawn="29">
+		<territory name="dion17_2023_04"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn name="dion17_2023_04" count="6" respawn="29">
+		<territory name="dion17_2023_04"/>
+		<npc id="20251"/><!--Ящер Делу-->
+	</spawn>
+	<spawn name="dion17_2023_04" count="6" respawn="29">
+		<territory name="dion17_2023_04"/>
+		<npc id="20250"/><!--Стеклянный Ягуар-->
+	</spawn>
+	<territory name="dion17_2023_03">
+		<add x="52" y="167760" zmin="-3702" zmax="-2702"/>
+		<add x="2399" y="167885" zmin="-3702" zmax="-2702"/>
+		<add x="2638" y="171293" zmin="-3702" zmax="-2702"/>
+		<add x="103" y="172564" zmin="-3702" zmax="-2702"/>
+	</territory>
+	<spawn name="dion17_2023_03" count="6" respawn="29">
+		<territory name="dion17_2023_03"/>
+		<npc id="20205"/><!--Жуткий Волк-->
+	</spawn>
+	<spawn name="dion17_2023_03" count="6" respawn="29">
+		<territory name="dion17_2023_03"/>
+		<npc id="20206"/><!--Кадифский Оборотень-->
+	</spawn>
+	<territory name="dion17_2023_02">
+		<add x="3282" y="164268" zmin="-3824" zmax="-3224"/>
+		<add x="4442" y="163943" zmin="-3824" zmax="-3224"/>
+		<add x="6486" y="167119" zmin="-3824" zmax="-3224"/>
+		<add x="4342" y="166428" zmin="-3824" zmax="-3224"/>
+	</territory>
+	<spawn name="dion17_2023_02" count="3" respawn="29">
+		<territory name="dion17_2023_02"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn name="dion17_2023_02" count="3" respawn="29">
+		<territory name="dion17_2023_02"/>
+		<npc id="20251"/><!--Ящер Делу-->
+	</spawn>
+	<territory name="dion17_2023_01">
+		<add x="36" y="163888" zmin="-3818" zmax="-3018"/>
+		<add x="2656" y="163911" zmin="-3818" zmax="-3018"/>
+		<add x="3457" y="166490" zmin="-3818" zmax="-3018"/>
+		<add x="2192" y="167759" zmin="-3818" zmax="-3018"/>
+		<add x="40" y="167682" zmin="-3818" zmax="-3018"/>
+	</territory>
+	<spawn name="dion17_2023_01" count="5" respawn="29">
+		<territory name="dion17_2023_01"/>
+		<npc id="20205"/><!--Жуткий Волк-->
+	</spawn>
+	<spawn name="dion17_2023_01" count="4" respawn="29">
+		<territory name="dion17_2023_01"/>
+		<npc id="20206"/><!--Кадифский Оборотень-->
+	</spawn>
+	<spawn name="dion17_2023_01" count="2" respawn="29">
+		<territory name="dion17_2023_01"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn name="dion17_mb2023_03" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="6736" y="168972" zmin="-3772" zmax="-3172"/>
+			<add x="7996" y="168876" zmin="-3772" zmax="-3172"/>
+			<add x="8016" y="169912" zmin="-3772" zmax="-3172"/>
+			<add x="6660" y="169972" zmin="-3772" zmax="-3172"/>
+		</territory>
+		<npc id="25019"/><!--Пан Дриад-->
+	</spawn>
+	<spawn name="dion17_mb2023_04" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="3776" y="188380" zmin="-3792" zmax="-3192"/>
+			<add x="6428" y="188400" zmin="-3792" zmax="-3192"/>
+			<add x="5804" y="189932" zmin="-3792" zmax="-3192"/>
+			<add x="3600" y="189728" zmin="-3792" zmax="-3192"/>
+		</territory>
+		<npc id="25398"/><!--Глаз Белефа-->
+	</spawn>
+	<spawn name="dion10_npc2023_01" count="1" respawn="60">
+		<point x="17836" y="169853" z="-3494" h="20000"/>
+		<npc id="30079"/><!--Бардер-->
+	</spawn>
+	<spawn name="dion10_npc2023_01" count="1" respawn="60">
+		<point x="17788" y="169842" z="-3496" h="20000"/>
+		<npc id="31773"/><!--Сонин-->
+	</spawn>
+	<spawn name="dion10_npc2023_02" count="1" respawn="60">
+		<point x="16970" y="170391" z="-3496" h="61440"/>
+		<npc id="30078"/><!--Пано-->
+	</spawn>
+	<spawn name="dion10_npc2023_09" count="1" respawn="60">
+		<point x="17475" y="169556" z="-3493" h="57344"/>
+		<npc id="30609"/><!--Крета-->
+	</spawn>
+	<spawn name="dion10_npc2023_07" count="1" respawn="60">
+		<point x="20943" y="171358" z="-3548" h="12288"/>
+		<npc id="30291"/><!--Алекс -->
+	</spawn>
+	<spawn name="dion10_npc2023_08" count="1" respawn="60">
+		<point x="13258" y="169790" z="-3705" h="1000"/>
+		<npc id="30633"/><!--Эверт-->
+	</spawn>
+	<spawn name="dion14_mb2023_01" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="17320" y="178620" zmin="-3616" zmax="-3016"/>
+			<add x="18228" y="178816" zmin="-3616" zmax="-3016"/>
+			<add x="18404" y="179684" zmin="-3616" zmax="-3016"/>
+			<add x="17392" y="179488" zmin="-3616" zmax="-3016"/>
+			<add x="17012" y="179064" zmin="-3616" zmax="-3016"/>
+		</territory>
+		<npc id="25128"/><!--Великий Провидец Вуку Гармаш-->
+	</spawn>
+	<spawn name="dion01_qm2023_05" count="1" respawn="180">
+		<territory>
+			<add x="23354" y="187991" zmin="-3721" zmax="-3521"/>
+			<add x="23554" y="187991" zmin="-3721" zmax="-3521"/>
+			<add x="23554" y="188191" zmin="-3721" zmax="-3521"/>
+			<add x="23354" y="188191" zmin="-3721" zmax="-3521"/>
+		</territory>
+		<npc id="27103"/><!--Единорог-->
+	</spawn>
+	<spawn name="dion01_qm2023_01" count="1" respawn="180">
+		<territory>
+			<add x="6284" y="184089" zmin="-3212" zmax="-3012"/>
+			<add x="6834" y="184648" zmin="-3212" zmax="-3012"/>
+			<add x="6439" y="184871" zmin="-3212" zmax="-3012"/>
+			<add x="6157" y="184669" zmin="-3212" zmax="-3012"/>
+			<add x="6043" y="184444" zmin="-3212" zmax="-3012"/>
+		</territory>
+		<npc id="27112"/><!--Горр-->
+	</spawn>
+	<spawn name="dion16_npc2023_02" count="1" respawn="60">
+		<point x="10699" y="171474" z="-3572" h="0"/>
+		<npc id="30728"/><!--Лейрин-->
+	</spawn>
+	<spawn name="dion16_npc2023_08" count="1" respawn="60">
+		<point x="15520" y="174572" z="-3637" h="57344"/>
+		<npc id="30981"/><!--Черный Судья-->
+	</spawn>
+	<spawn name="dion16_npc2023_04" count="1" respawn="60">
+		<point x="15734" y="174805" z="-3636" h="0"/>
+		<npc id="30626"/><!--Хамиль-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="17328" y="170574" z="-3496" h="56099" />
+		<npc id="30767"><!--Управляющий Аукциона-->
+			<set name="town" value="floran"/>
+		</npc>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="green_barracks_74">
+		<point x="17883" y="170537" z="-3504" h="52191" />
+		<npc id="36740" /><!--Даниф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="green_barracks_74">
+		<point x="17870" y="170644" z="-3488" h="15086" />
+		<npc id="36739" /><!--Плон-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="black_barracks_73">
+		<point x="17278" y="169747" z="-3480" h="49153" />
+		<npc id="36737" /><!--Гайрин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="black_barracks_73">
+		<point x="17262" y="169863" z="-3496" h="16857" />
+		<npc id="36738" /><!--Лутина-->
+	</spawn>
+		<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="17810" y="180516" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="19643" y="177970" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="19517" y="177751" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="18790" y="179544" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="19143" y="180349" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="18826" y="179596" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="19419" y="178923" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="19571" y="178417" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="20317" y="178862" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="19477" y="180081" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="19105" y="180140" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="18951" y="181907" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="20541" y="182142" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="19246" y="181847" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="20492" y="177657" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="21644" y="178012" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="20810" y="177230" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="20468" y="178591" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="20746" y="181916" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="18962" y="183236" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="21361" y="184251" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="21703" y="182601" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="20973" y="184644" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="21519" y="185872" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="21392" y="186170" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="20904" y="184696" z="-3383" h="0"/>
+		<npc id="27113" /><!--Барахам-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="22533" y="186043" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="22301" y="184192" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="24034" y="184232" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="24134" y="183759" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="22964" y="185744" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="24040" y="185810" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="22552" y="185548" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="25739" y="183913" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="25662" y="184301" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="26163" y="186015" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="25898" y="184768" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="26353" y="186198" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="26513" y="184261" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="22299" y="187218" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="21268" y="187350" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="26380" y="188498" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="28453" y="184174" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="26598" y="182377" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="27056" y="183323" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="27514" y="182696" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="27587" y="186088" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="28148" y="185937" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="27587" y="184304" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="26907" y="186223" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="22471" y="188949" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="22451" y="189238" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="22976" y="189723" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="26986" y="190164" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="26558" y="190067" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="28273" y="189228" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="26356" y="191306" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="26785" y="191453" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="27060" y="191365" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="28412" y="191300" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="27580" y="192084" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="22089" y="188930" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="21747" y="189861" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="21936" y="189038" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="21849" y="189693" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="22350" y="190635" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="26112" y="190785" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="27597" y="191766" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="26315" y="191213" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="29821" y="187740" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="29319" y="186355" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="30712" y="186179" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="30816" y="192005" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="27127" y="190571" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="32346" y="187374" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="32124" y="190167" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="31872" y="189237" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="31010" y="191899" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="31134" y="191147" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="31295" y="191301" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="31115" y="192475" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="32133" y="191525" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="31271" y="190641" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="31824" y="192003" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="29602" y="186011" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="32315" y="186207" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="31799" y="184761" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="30711" y="184231" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="30631" y="184167" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="33547" y="186352" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="33480" y="184292" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="33115" y="186152" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="33736" y="184237" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="33964" y="184383" zmin="-2899" zmax="-3999"/>
+		<npc id="20066" /><!--Офицер Гноллов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="33082" y="185210" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="33907" y="185785" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="34188" y="187431" zmin="-2899" zmax="-3999"/>
+		<npc id="20250" /><!--Стеклянный Ягуар-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="33200" y="186984" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="34582" y="189580" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="33203" y="188640" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="34633" y="188947" zmin="-2899" zmax="-3999"/>
+		<npc id="20250" /><!--Стеклянный Ягуар-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="35201" y="185365" zmin="-2899" zmax="-3999"/>
+		<npc id="20066" /><!--Офицер Гноллов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="35514" y="186504" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="35164" y="185414" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="35871" y="185242" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="34852" y="187063" zmin="-2899" zmax="-3999"/>
+		<npc id="20066" /><!--Офицер Гноллов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="34761" y="187004" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="34962" y="186545" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="35846" y="186943" zmin="-2899" zmax="-3999"/>
+		<npc id="20250" /><!--Стеклянный Ягуар-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="36864" y="187245" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="36065" y="188493" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="36361" y="187586" zmin="-2899" zmax="-3999"/>
+		<npc id="20250" /><!--Стеклянный Ягуар-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="35688" y="189106" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="35188" y="189583" zmin="-2899" zmax="-3999"/>
+		<npc id="20250" /><!--Стеклянный Ягуар-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="35290" y="189748" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="30707" y="182495" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="32917" y="184054" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="33757" y="183732" zmin="-2899" zmax="-3999"/>
+		<npc id="20250" /><!--Стеклянный Ягуар-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="33955" y="183922" zmin="-2899" zmax="-3999"/>
+		<npc id="20066" /><!--Офицер Гноллов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="33938" y="182383" zmin="-2899" zmax="-3999"/>
+		<npc id="20250" /><!--Стеклянный Ягуар-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="33728" y="182484" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="34219" y="182852" zmin="-2899" zmax="-3999"/>
+		<npc id="20250" /><!--Стеклянный Ягуар-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="34009" y="183732" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="33922" y="182581" zmin="-2899" zmax="-3999"/>
+		<npc id="20066" /><!--Офицер Гноллов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="33449" y="183790" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="34018" y="182601" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="35236" y="183755" zmin="-2899" zmax="-3999"/>
+		<npc id="20250" /><!--Стеклянный Ягуар-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="33253" y="180813" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="34765" y="180396" zmin="-2899" zmax="-3999"/>
+		<npc id="20250" /><!--Стеклянный Ягуар-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="33811" y="181875" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="33911" y="181078" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="33572" y="180496" zmin="-2899" zmax="-3999"/>
+		<npc id="20250" /><!--Стеклянный Ягуар-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="34363" y="181292" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="36277" y="181430" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="37269" y="182962" zmin="-2899" zmax="-3999"/>
+		<npc id="20250" /><!--Стеклянный Ягуар-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="37630" y="185886" zmin="-2899" zmax="-3999"/>
+		<npc id="20066" /><!--Офицер Гноллов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="30479" y="179177" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="33614" y="179876" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="34330" y="179663" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="33506" y="179783" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="33830" y="179094" zmin="-2899" zmax="-3999"/>
+		<npc id="20250" /><!--Стеклянный Ягуар-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="33138" y="178880" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="32977" y="178663" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="33139" y="178870" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="29408" y="179669" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="30661" y="180557" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="29248" y="182311" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="29992" y="181145" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="29211" y="181168" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="29979" y="184175" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="29672" y="183016" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="28768" y="182196" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="29121" y="183515" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="28547" y="178451" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="27091" y="179740" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="27551" y="180993" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="27483" y="181718" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="27370" y="181483" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="28121" y="180348" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="25294" y="178476" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="30100" y="178168" zmin="-2899" zmax="-3999"/>
+		<npc id="20251" /><!--Ящер Делу-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="28889" y="177874" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="29438" y="177935" zmin="-2899" zmax="-3999"/>
+		<npc id="20204" /><!--Кровавая Пчела-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="29600" y="177745" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<circle radius="800" x="30116" y="177480" zmin="-2899" zmax="-3999"/>
+		<npc id="20068" /><!--Монстроглаз Разрушитель-->
+	</spawn>	
+	<spawn name="Lidia" count="1" respawn="129600" respawn_random="86400">
+		<point x="3608" y="180104" z="-3712" h="21344"/>
+		<npc id="25106"/><!--Лидия Призрак Родника-->
+	</spawn>
+</list>

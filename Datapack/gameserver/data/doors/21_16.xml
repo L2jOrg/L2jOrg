@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="21160001" name="rune_castle_agit_001_002" hp="158250" pdef="644" mdef="518">
+		<pos x="37708" y="-50424" z="910"/>
+		<shape ax="37679" ay="-50432" bx="37726" by="-50433" cx="37726" cy="-50423" dx="37678" dy="-50424" minz="872" maxz="1322"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="51"/>
+		</ai_params>
+	</door>
+	<door id="21160002" name="rune_castle_agit_001_001" hp="158250" pdef="644" mdef="518">
+		<pos x="37743" y="-50424" z="910"/>
+		<shape ax="37724" ay="-50432" bx="37771" by="-50432" cx="37771" cy="-50423" dx="37723" dy="-50424" minz="872" maxz="1322"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="51"/>
+		</ai_params>
+	</door>
+	<door id="21160003" name="rune_castle_agit_002_002" hp="158250" pdef="644" mdef="518">
+		<pos x="38550" y="-50140" z="910"/>
+		<shape ax="38527" ay="-50151" bx="38570" by="-50131" cx="38566" cy="-50122" dx="38524" dy="-50144" minz="872" maxz="1322"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="52"/>
+		</ai_params>
+	</door>
+	<door id="21160004" name="rune_castle_agit_002_001" hp="158250" pdef="644" mdef="518">
+		<pos x="38585" y="-50123" z="910"/>
+		<shape ax="38569" ay="-50132" bx="38610" by="-50111" cx="38606" cy="-50103" dx="38564" dy="-50124" minz="872" maxz="1322"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="52"/>
+		</ai_params>
+	</door>
+	<door id="21160005" name="rune_castle_agit_003_002" hp="158250" pdef="644" mdef="518">
+		<pos x="39130" y="-49515" z="910"/>
+		<shape ax="39122" ay="-49542" bx="39145" by="-49501" cx="39137" cy="-49498" dx="39115" dy="-49539" minz="872" maxz="1322"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="53"/>
+		</ai_params>
+	</door>
+	<door id="21160006" name="rune_castle_agit_003_001" hp="158250" pdef="644" mdef="518">
+		<pos x="39148" y="-49482" z="910"/>
+		<shape ax="39145" ay="-49503" bx="39167" by="-49462" cx="39160" cy="-49459" dx="39136" dy="-49498" minz="872" maxz="1322"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="53"/>
+		</ai_params>
+	</door>
+	<door id="21160007" name="rune_castle_agit_004_002" hp="158250" pdef="644" mdef="518">
+		<pos x="39338" y="-48266" z="908"/>
+		<shape ax="39341" ay="-48291" bx="39341" by="-48245" cx="39335" cy="-48245" dx="39334" dy="-48290" minz="870" maxz="1320"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="54"/>
+		</ai_params>
+	</door>
+	<door id="21160008" name="rune_castle_agit_004_001" hp="158250" pdef="644" mdef="518">
+		<pos x="39338" y="-48222" z="908"/>
+		<shape ax="39341" ay="-48246" bx="39342" by="-48199" cx="39334" cy="-48199" dx="39334" dy="-48246" minz="870" maxz="1320"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="54"/>
+		</ai_params>
+	</door>
+	<door id="21160009" name="rune_castle_agit_005_002" hp="158250" pdef="644" mdef="518">
+		<pos x="39161" y="-47001" z="910"/>
+		<shape ax="39176" ay="-47024" bx="39155" by="-46982" cx="39147" cy="-46986" dx="39169" dy="-47026" minz="872" maxz="1322"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="55"/>
+		</ai_params>
+	</door>
+	<door id="21160010" name="rune_castle_agit_005_001" hp="158250" pdef="644" mdef="518">
+		<pos x="39140" y="-46969" z="910"/>
+		<shape ax="39154" ay="-46982" bx="39133" by="-46942" cx="39127" cy="-46945" dx="39148" dy="-46986" minz="872" maxz="1322"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="55"/>
+		</ai_params>
+	</door>
+	<door id="21160011" name="rune_castle_agit_006_002" hp="158250" pdef="644" mdef="518">
+		<pos x="38601" y="-46360" z="910"/>
+		<shape ax="38626" ay="-46372" bx="38586" by="-46350" cx="38581" cy="-46358" dx="38623" dy="-46379" minz="872" maxz="1322"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="56"/>
+		</ai_params>
+	</door>
+	<door id="21160012" name="rune_castle_agit_006_001" hp="158250" pdef="644" mdef="518">
+		<pos x="38562" y="-46347" z="910"/>
+		<shape ax="38587" ay="-46350" bx="38545" by="-46330" cx="38542" cy="-46336" dx="38583" dy="-46358" minz="872" maxz="1322"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="56"/>
+		</ai_params>
+	</door>
+	<door id="21160013" name="rune_castle_agit_007_002" hp="158250" pdef="644" mdef="518">
+		<pos x="37762" y="-46049" z="910"/>
+		<shape ax="37787" ay="-46044" bx="37741" by="-46044" cx="37741" cy="-46051" dx="37787" dy="-46050" minz="873" maxz="1323"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="57"/>
+		</ai_params>
+	</door>
+	<door id="21160014" name="rune_castle_agit_007_001" hp="158250" pdef="644" mdef="518">
+		<pos x="37718" y="-46046" z="910"/>
+		<shape ax="37743" ay="-46043" bx="37697" by="-46045" cx="37697" cy="-46051" dx="37742" dy="-46051" minz="873" maxz="1323"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="57"/>
+		</ai_params>
+	</door>
+	<door id="21160502" name="rune_re_lib_gate01" hp="158250" pdef="644" mdef="518">
+		<pos x="37359" y="-48798" z="-1159"/>
+		<shape ax="37305" ay="-48786" bx="37306" by="-48810" cx="37413" cy="-48808" dx="37413" dy="-48787" minz="-1366" maxz="-966"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="21160501" name="rune_re_lib_gate01" hp="158250" pdef="644" mdef="518">
+		<pos x="37211" y="-50196" z="-792"/>
+		<shape ax="37142" ay="-50183" bx="37143" by="-50208" cx="37281" cy="-50206" dx="37281" dy="-50185" minz="-999" maxz="-599"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="21160101" name="rune_re_segate02" hp="158250" pdef="644" mdef="518">
+		<pos x="37357" y="-49955" z="-1074"/>
+		<shape ax="37283" ay="-49961" bx="37435" by="-49961" cx="37435" cy="-49946" dx="37283" dy="-49946" minz="-1366" maxz="-966"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+</list>

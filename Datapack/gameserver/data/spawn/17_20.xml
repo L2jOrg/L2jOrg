@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<territory name="gludio20_1720_03">
+		<add x="-84976" y="83589" zmin="-3628" zmax="-2928"/>
+		<add x="-81851" y="81857" zmin="-3628" zmax="-2928"/>
+		<add x="-81074" y="86217" zmin="-3628" zmax="-2928"/>
+		<add x="-83806" y="85813" zmin="-3628" zmax="-2928"/>
+	</territory>
+	<spawn name="gludio20_1720_03" count="9" respawn="26">
+		<territory name="gludio20_1720_03"/>
+		<npc id="21025"/><!--Смеющийся Ветер-->
+	</spawn>
+	<spawn name="gludio20_1720_03" count="9" respawn="26">
+		<territory name="gludio20_1720_03"/>
+		<npc id="21026"/><!--Поющий Ветер-->
+	</spawn>
+	<territory name="gludio20_1720_02">
+		<add x="-86565" y="80140" zmin="-3404" zmax="-2604"/>
+		<add x="-84055" y="80386" zmin="-3404" zmax="-2604"/>
+		<add x="-84969" y="83450" zmin="-3404" zmax="-2604"/>
+		<add x="-88451" y="82848" zmin="-3404" zmax="-2604"/>
+	</territory>
+	<spawn name="gludio20_1720_02" count="3" respawn="26">
+		<territory name="gludio20_1720_02"/>
+		<npc id="21025"/><!--Смеющийся Ветер-->
+	</spawn>
+	<spawn name="gludio20_1720_02" count="8" respawn="26">
+		<territory name="gludio20_1720_02"/>
+		<npc id="21026"/><!--Поющий Ветер-->
+	</spawn>
+	<spawn name="gludio20_1720_02" count="7" respawn="26">
+		<territory name="gludio20_1720_02"/>
+		<npc id="20078"/><!--Шепчущий Ветер-->
+	</spawn>
+	<territory name="gludio20_1720_01">
+		<add x="-85396" y="77059" zmin="-3468" zmax="-2768"/>
+		<add x="-82576" y="78607" zmin="-3468" zmax="-2768"/>
+		<add x="-83388" y="80324" zmin="-3468" zmax="-2768"/>
+		<add x="-86504" y="79992" zmin="-3468" zmax="-2768"/>
+	</territory>
+	<spawn name="gludio20_1720_01" count="6" respawn="26">
+		<territory name="gludio20_1720_01"/>
+		<npc id="21026"/><!--Поющий Ветер-->
+	</spawn>
+	<spawn name="gludio20_1720_01" count="8" respawn="26">
+		<territory name="gludio20_1720_01"/>
+		<npc id="20078"/><!--Шепчущий Ветер-->
+	</spawn>
+	<territory name="gludio20_1720_07">
+		<add x="-92087" y="87486" zmin="-3649" zmax="-2849"/>
+		<add x="-89632" y="87343" zmin="-3649" zmax="-2849"/>
+		<add x="-89042" y="91007" zmin="-3649" zmax="-2849"/>
+		<add x="-90577" y="92038" zmin="-3649" zmax="-2849"/>
+		<add x="-93832" y="90666" zmin="-3649" zmax="-2849"/>
+	</territory>
+	<spawn name="gludio20_1720_07" count="8" respawn="26">
+		<territory name="gludio20_1720_07"/>
+		<npc id="21024"/><!--Лепечущий Ветер-->
+	</spawn>
+	<spawn name="gludio20_1720_07" count="7" respawn="26">
+		<territory name="gludio20_1720_07"/>
+		<npc id="21025"/><!--Смеющийся Ветер-->
+	</spawn>
+	<territory name="gludio20_1720_06">
+		<add x="-89487" y="87115" zmin="-3649" zmax="-2849"/>
+		<add x="-84093" y="87998" zmin="-3649" zmax="-2849"/>
+		<add x="-85804" y="91641" zmin="-3649" zmax="-2849"/>
+		<add x="-88922" y="90976" zmin="-3649" zmax="-2849"/>
+	</territory>
+	<spawn name="gludio20_1720_06" count="9" respawn="26">
+		<territory name="gludio20_1720_06"/>
+		<npc id="21024"/><!--Лепечущий Ветер-->
+	</spawn>
+	<spawn name="gludio20_1720_06" count="9" respawn="26">
+		<territory name="gludio20_1720_06"/>
+		<npc id="21025"/><!--Смеющийся Ветер-->
+	</spawn>
+	<territory name="gludio20_1720_05">
+		<add x="-87819" y="83186" zmin="-3578" zmax="-2678"/>
+		<add x="-84760" y="84250" zmin="-3578" zmax="-2678"/>
+		<add x="-86230" y="87531" zmin="-3578" zmax="-2678"/>
+		<add x="-89355" y="87040" zmin="-3578" zmax="-2678"/>
+	</territory>
+	<spawn name="gludio20_1720_05" count="7" respawn="26">
+		<territory name="gludio20_1720_05"/>
+		<npc id="21025"/><!--Смеющийся Ветер-->
+	</spawn>
+	<spawn name="gludio20_1720_05" count="7" respawn="26">
+		<territory name="gludio20_1720_05"/>
+		<npc id="21026"/><!--Поющий Ветер-->
+	</spawn>
+	<territory name="gludio20_1720_04">
+		<add x="-83120" y="86429" zmin="-3807" zmax="-3107"/>
+		<add x="-80061" y="87494" zmin="-3807" zmax="-3107"/>
+		<add x="-81537" y="90996" zmin="-3807" zmax="-3107"/>
+		<add x="-84655" y="90284" zmin="-3807" zmax="-3107"/>
+	</territory>
+	<spawn name="gludio20_1720_04" count="6" respawn="26">
+		<territory name="gludio20_1720_04"/>
+		<npc id="21024"/><!--Лепечущий Ветер-->
+	</spawn>
+	<spawn name="gludio20_1720_04" count="6" respawn="26">
+		<territory name="gludio20_1720_04"/>
+		<npc id="21025"/><!--Смеющийся Ветер-->
+	</spawn>
+	<spawn name="gludio20_1720_04" count="3" respawn="26">
+		<territory name="gludio20_1720_04"/>
+		<npc id="21026"/><!--Поющий Ветер-->
+	</spawn>
+	<territory name="gludio20_1720_09">
+		<add x="-80102" y="88181" zmin="-3806" zmax="-3006"/>
+		<add x="-72603" y="93682" zmin="-3806" zmax="-3006"/>
+		<add x="-75304" y="96574" zmin="-3806" zmax="-3006"/>
+		<add x="-81886" y="92024" zmin="-3806" zmax="-3006"/>
+	</territory>
+	<spawn name="gludio20_1720_09" count="6" respawn="26">
+		<territory name="gludio20_1720_09"/>
+		<npc id="21023"/><!--Рыдающий Ветер-->
+	</spawn>
+	<spawn name="gludio20_1720_09" count="6" respawn="26">
+		<territory name="gludio20_1720_09"/>
+		<npc id="21024"/><!--Лепечущий Ветер-->
+	</spawn>
+	<spawn name="gludio20_1720_09" count="3" respawn="26">
+		<territory name="gludio20_1720_09"/>
+		<npc id="21025"/><!--Смеющийся Ветер-->
+	</spawn>
+	<territory name="gludio20_1720_08">
+		<add x="-93901" y="90791" zmin="-3664" zmax="-2864"/>
+		<add x="-90477" y="92238" zmin="-3664" zmax="-2864"/>
+		<add x="-90431" y="94766" zmin="-3664" zmax="-2864"/>
+		<add x="-95690" y="94435" zmin="-3664" zmax="-2864"/>
+	</territory>
+	<spawn name="gludio20_1720_08" count="8" respawn="26">
+		<territory name="gludio20_1720_08"/>
+		<npc id="21023"/><!--Рыдающий Ветер-->
+	</spawn>
+	<spawn name="gludio20_1720_08" count="6" respawn="26">
+		<territory name="gludio20_1720_08"/>
+		<npc id="21024"/><!--Лепечущий Ветер-->
+	</spawn>
+	<territory name="gludio20_1720_10">
+		<add x="-72256" y="93591" zmin="-3817" zmax="-3217"/>
+		<add x="-65929" y="97881" zmin="-3817" zmax="-3217"/>
+		<add x="-72692" y="97934" zmin="-3817" zmax="-3217"/>
+		<add x="-75142" y="96677" zmin="-3817" zmax="-3217"/>
+	</territory>
+	<spawn name="gludio20_1720_10" count="7" respawn="26">
+		<territory name="gludio20_1720_10"/>
+		<npc id="21023"/><!--Рыдающий Ветер-->
+	</spawn>
+	<spawn name="gludio20_1720_10" count="7" respawn="26">
+		<territory name="gludio20_1720_10"/>
+		<npc id="21024"/><!--Лепечущий Ветер-->
+	</spawn>
+	<spawn name="gludio01_qm1720_01" count="1" respawn="180">
+		<point x="-81247" y="75607" z="-3360" h="0"/>
+		<npc id="27165"/><!--I Алмаз Бездны-->
+	</spawn>
+	<spawn name="oren25_1720_11s" count="3" respawn="20">
+		<territory>
+			<add x="-68598" y="80398" zmin="-3507" zmax="-3007"/>
+			<add x="-66421" y="80001" zmin="-3507" zmax="-3007"/>
+			<add x="-66417" y="82666" zmin="-3507" zmax="-3007"/>
+			<add x="-68307" y="82106" zmin="-3507" zmax="-3007"/>
+		</territory>
+		<npc id="20776"/><!--Темный Суккуб-->
+	</spawn>
+	<spawn name="oren25_1720_10s" count="3" respawn="20">
+		<territory>
+			<add x="-68516" y="86126" zmin="-3730" zmax="-3030"/>
+			<add x="-66340" y="85729" zmin="-3730" zmax="-3030"/>
+			<add x="-66335" y="88393" zmin="-3730" zmax="-3030"/>
+			<add x="-68225" y="87833" zmin="-3730" zmax="-3030"/>
+		</territory>
+		<npc id="20043"/><!--Арахнид Охотник-->
+	</spawn>
+	<spawn name="oren25_1720_08s" count="3" respawn="20">
+		<territory>
+			<add x="-74214" y="78798" zmin="-3523" zmax="-3023"/>
+			<add x="-72582" y="79463" zmin="-3523" zmax="-3023"/>
+			<add x="-72675" y="81331" zmin="-3523" zmax="-3023"/>
+			<add x="-75271" y="80681" zmin="-3523" zmax="-3023"/>
+		</territory>
+		<npc id="20776"/><!--Темный Суккуб-->
+	</spawn>
+	<spawn name="oren25_1720_09s" count="2" respawn="20">
+		<territory>
+			<add x="-74849" y="81770" zmin="-3567" zmax="-3067"/>
+			<add x="-72818" y="82435" zmin="-3567" zmax="-3067"/>
+			<add x="-73051" y="84072" zmin="-3567" zmax="-3067"/>
+			<add x="-74753" y="83778" zmin="-3567" zmax="-3067"/>
+		</territory>
+		<npc id="20776"/><!--Темный Суккуб-->
+	</spawn>
+	<spawn name="oren25_1720_07s" count="3" respawn="20">
+		<territory>
+			<add x="-73349" y="73339" zmin="-3457" zmax="-2957"/>
+			<add x="-71068" y="73354" zmin="-3457" zmax="-2957"/>
+			<add x="-70826" y="74943" zmin="-3457" zmax="-2957"/>
+			<add x="-73233" y="75676" zmin="-3457" zmax="-2957"/>
+		</territory>
+		<npc id="20418"/><!--Кристальный Зверь-->
+	</spawn>
+	<territory name="oren25_1720_05">
+		<add x="-73697" y="77167" zmin="-3513" zmax="-2913"/>
+		<add x="-71857" y="79229" zmin="-3513" zmax="-2913"/>
+		<add x="-72692" y="85348" zmin="-3513" zmax="-2913"/>
+		<add x="-74863" y="85288" zmin="-3513" zmax="-2913"/>
+		<add x="-76517" y="80940" zmin="-3513" zmax="-2913"/>
+	</territory>
+	<spawn name="oren25_1720_05" count="5" respawn="20">
+		<territory name="oren25_1720_05"/>
+		<npc id="20418"/><!--Кристальный Зверь-->
+	</spawn>
+	<spawn name="oren25_1720_05" count="5" respawn="20">
+		<territory name="oren25_1720_05"/>
+		<npc id="20043"/><!--Арахнид Охотник-->
+	</spawn>
+	<territory name="oren25_1720_06">
+		<add x="-67433" y="78941" zmin="-3748" zmax="-3048"/>
+		<add x="-65769" y="78980" zmin="-3748" zmax="-3048"/>
+		<add x="-65913" y="89361" zmin="-3748" zmax="-3048"/>
+		<add x="-72360" y="85233" zmin="-3748" zmax="-3048"/>
+		<add x="-72167" y="83048" zmin="-3748" zmax="-3048"/>
+	</territory>
+	<spawn name="oren25_1720_06" count="8" respawn="20">
+		<territory name="oren25_1720_06"/>
+		<npc id="20043"/><!--Арахнид Охотник-->
+	</spawn>
+	<spawn name="oren25_1720_06" count="6" respawn="20">
+		<territory name="oren25_1720_06"/>
+		<npc id="20776"/><!--Темный Суккуб-->
+	</spawn>
+	<territory name="oren25_1720_01">
+		<add x="-72971" y="71980" zmin="-3449" zmax="-2749"/>
+		<add x="-69433" y="72769" zmin="-3449" zmax="-2749"/>
+		<add x="-70125" y="76142" zmin="-3449" zmax="-2749"/>
+		<add x="-73499" y="77040" zmin="-3449" zmax="-2749"/>
+		<add x="-74798" y="73431" zmin="-3449" zmax="-2749"/>
+	</territory>
+	<spawn name="oren25_1720_01" count="3" respawn="20">
+		<territory name="oren25_1720_01"/>
+		<npc id="20418"/><!--Кристальный Зверь-->
+	</spawn>
+	<spawn name="oren25_1720_01" count="5" respawn="20">
+		<territory name="oren25_1720_01"/>
+		<npc id="20043"/><!--Арахнид Охотник-->
+	</spawn>
+	<spawn name="oren25_1720_02" count="4" respawn="20">
+		<territory>
+			<add x="-67178" y="72322" zmin="-3457" zmax="-2957"/>
+			<add x="-65868" y="72079" zmin="-3457" zmax="-2957"/>
+			<add x="-65821" y="75414" zmin="-3457" zmax="-2957"/>
+			<add x="-67362" y="75092" zmin="-3457" zmax="-2957"/>
+		</territory>
+		<npc id="20038"/><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<spawn name="oren25_1720_03" count="4" respawn="20">
+		<territory>
+			<add x="-69696" y="74759" zmin="-3468" zmax="-2968"/>
+			<add x="-65783" y="75529" zmin="-3468" zmax="-2968"/>
+			<add x="-65768" y="77207" zmin="-3468" zmax="-2968"/>
+			<add x="-68804" y="76954" zmin="-3468" zmax="-2968"/>
+		</territory>
+		<npc id="20038"/><!--Гигантский Ядовитый Паук-->
+	</spawn>
+	<territory name="oren25_1720_04">
+		<add x="-69594" y="76157" zmin="-3513" zmax="-2913"/>
+		<add x="-67479" y="78773" zmin="-3513" zmax="-2913"/>
+		<add x="-69026" y="80106" zmin="-3513" zmax="-2913"/>
+		<add x="-71771" y="79065" zmin="-3513" zmax="-2913"/>
+		<add x="-73314" y="77222" zmin="-3513" zmax="-2913"/>
+	</territory>
+	<spawn name="oren25_1720_04" count="4" respawn="20">
+		<territory name="oren25_1720_04"/>
+		<npc id="20043"/><!--Арахнид Охотник-->
+	</spawn>
+	<spawn name="oren25_1720_04" count="4" respawn="20">
+		<territory name="oren25_1720_04"/>
+		<npc id="20776"/><!--Темный Суккуб-->
+	</spawn>
+	<spawn name="oren01_qm1720_01" count="10" respawn="35">
+		<territory>
+			<add x="-75020" y="81880" zmin="-3496" zmax="-3096"/>
+			<add x="-73764" y="81816" zmin="-3496" zmax="-3096"/>
+			<add x="-73744" y="84516" zmin="-3496" zmax="-3096"/>
+			<add x="-74916" y="84452" zmin="-3496" zmax="-3096"/>
+		</territory>
+		<npc id="27054"/><!--Орк Умбар-->
+	</spawn>
+	<territory name="gludio20_1720_11s">
+		<add x="-77642" y="90973" zmin="-3807" zmax="-3307"/>
+		<add x="-74177" y="93006" zmin="-3807" zmax="-3307"/>
+		<add x="-76129" y="95443" zmin="-3807" zmax="-3307"/>
+		<add x="-78664" y="93630" zmin="-3807" zmax="-3307"/>
+	</territory>
+	<spawn name="gludio20_1720_11s" count="4" respawn="26">
+		<territory name="gludio20_1720_11s"/>
+		<npc id="21023"/><!--Рыдающий Ветер-->
+	</spawn>
+	<spawn name="gludio20_1720_11s" count="2" respawn="26">
+		<territory name="gludio20_1720_11s"/>
+		<npc id="21025"/><!--Смеющийся Ветер-->
+	</spawn>
+	<spawn count="1" respawn="90" respawn_random="0" period_of_day="none">
+		<point x="-91546" y="96226" z="-3560" h="39225" />
+		<npc id="27202" /><!--Командир Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="90" respawn_random="0" period_of_day="none">
+		<point x="-92374" y="96806" z="-3576" h="58290" />
+		<npc id="27202" /><!--Командир Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="90" respawn_random="0" period_of_day="none">
+		<point x="-92605" y="95886" z="-3536" h="10889" />
+		<npc id="27202" /><!--Командир Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="90" respawn_random="0" period_of_day="none">
+		<point x="-92330" y="95406" z="-3496" h="58733" />
+		<npc id="27202" /><!--Командир Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="90" respawn_random="0" period_of_day="none">
+		<point x="-91818" y="95265" z="-3496" h="7987" />
+		<npc id="27202" /><!--Командир Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="90" respawn_random="0" period_of_day="none">
+		<point x="-91573" y="96123" z="-3552" h="25275" />
+		<npc id="27202" /><!--Командир Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="90" respawn_random="0" period_of_day="none">
+		<point x="-92076" y="95329" z="-3496" h="27689" />
+		<npc id="27202" /><!--Командир Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="90" respawn_random="0" period_of_day="none">
+		<point x="-91396" y="95617" z="-3528" h="6536" />
+		<npc id="27202" /><!--Командир Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="90" respawn_random="0" period_of_day="none">
+		<point x="-91371" y="95467" z="-3520" h="49037" />
+		<npc id="27202" /><!--Командир Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="90" respawn_random="0" period_of_day="none">
+		<point x="-91883" y="95401" z="-3504" h="9422" />
+		<npc id="27202" /><!--Командир Орков Турек-->
+	</spawn>
+</list>

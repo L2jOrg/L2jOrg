@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE farm SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<farm name="Dwarven (Lvl 14-20)" min_level="14" max_level="20" races="DWARF">
+	<zones>
+		<zone>
+			<polygon>
+				<coords loc="149633 -212626 -4200 -800"/>
+				<coords loc="152635 -216997 -4200 -800"/>
+				<coords loc="163476 -217593 -4200 -800"/>
+				<coords loc="166439 -213159 -4200 -800"/>
+				<coords loc="166424 -207365 -4200 -800"/>
+				<coords loc="154448 -209594 -4200 -800"/>
+				<coords loc="149008 -212412 -4200 -800"/>
+			</polygon>
+		</zone>
+		<spawn_points>
+			<coords loc="157838 -212400 -3440"/>
+			<coords loc="161617 -212019 -3408"/>
+		</spawn_points>
+	</zones>
+	<on_obtain_max_level>
+		<action id="1"/>
+	</on_obtain_max_level>
+	<go_to_town min_farm_time="1800" max_farm_time="3600">
+		<action id="1"/>
+	</go_to_town>
+	<action id="1">
+		<wait min_delay="1000" max_delay="3000"/>
+		<random_action>
+			<ordinary_actions>
+				<move_to_point x="158856" y="-213720" z="-3680" min_range="50" max_range="150"/>
+				<move_to_point x="157768" y="-214232" z="-3616" min_range="50" max_range="150"/>
+				<move_to_point x="156248" y="-214776" z="-3680" min_range="50" max_range="150"/>
+				<move_to_point x="155272" y="-214984" z="-3680" min_range="0" max_range="50"/>
+				<move_to_point x="153704" y="-215384" z="-3744" min_range="0" max_range="50"/>
+				<move_to_point x="152888" y="-215256" z="-3440" min_range="0" max_range="50"/>
+				<move_to_point x="152440" y="-214696" z="-3360" min_range="0" max_range="50"/>
+				<move_to_point x="151864" y="-213512" z="-3328" min_range="50" max_range="150"/>
+				<move_to_point x="151320" y="-212904" z="-3296" min_range="50" max_range="150"/>
+				<move_to_point x="150392" y="-212168" z="-3440" min_range="50" max_range="150"/>
+				<move_to_point x="148936" y="-211768" z="-3392" min_range="50" max_range="150"/>
+				<move_to_point x="147496" y="-211384" z="-3568" min_range="50" max_range="150"/>
+				<move_to_point x="145672" y="-210712" z="-3600" min_range="50" max_range="150"/>
+				<move_to_point x="144936" y="-209944" z="-3600" min_range="0" max_range="50"/>
+				<move_to_point x="144872" y="-209272" z="-3528" min_range="50" max_range="150"/>
+				<move_to_point x="144136" y="-207960" z="-3664" min_range="50" max_range="150"/>
+				<move_to_point x="143112" y="-207400" z="-3696" min_range="50" max_range="150"/>
+				<move_to_point x="143544" y="-206344" z="-3520" min_range="50" max_range="150"/>
+				<move_to_point x="143528" y="-205208" z="-3376" min_range="50" max_range="150"/>
+				<move_to_point x="142392" y="-204504" z="-3440" min_range="50" max_range="150"/>
+				<move_to_point x="140808" y="-203640" z="-3552" min_range="50" max_range="150"/>
+				<move_to_point x="139528" y="-204248" z="-3584" min_range="50" max_range="150"/>
+				<move_to_point x="137912" y="-203720" z="-3728" min_range="50" max_range="150"/>
+				<move_to_point x="137400" y="-202680" z="-3728" min_range="50" max_range="150"/>
+				<move_to_point x="137048" y="-201784" z="-3728" min_range="50" max_range="150"/>
+				<move_to_point x="136248" y="-200760" z="-3728" min_range="50" max_range="150"/>
+				<move_to_point x="135176" y="-200616" z="-3728" min_range="50" max_range="150"/>
+				<move_to_point x="133768" y="-200600" z="-3688" min_range="50" max_range="150"/>
+				<move_to_point x="132696" y="-200696" z="-3440" min_range="50" max_range="150"/>
+				<move_to_point x="131640" y="-200728" z="-3360" min_range="50" max_range="150"/>
+				<move_to_point x="130248" y="-200216" z="-3424" min_range="50" max_range="150"/>
+				<move_to_point x="129320" y="-199672" z="-3424" min_range="50" max_range="150"/>
+				<move_to_point x="127496" y="-199160" z="-3376" min_range="50" max_range="150"/>
+				<move_to_point x="126984" y="-198472" z="-3296" min_range="50" max_range="150"/>
+				<move_to_point x="126696" y="-196488" z="-3280" min_range="50" max_range="150"/>
+				<move_to_point x="126280" y="-194888" z="-3296" min_range="50" max_range="150"/>
+				<move_to_point x="124824" y="-194616" z="-3456" min_range="50" max_range="150"/>
+				<move_to_point x="123368" y="-194680" z="-3720" min_range="50" max_range="150"/>
+				<move_to_point x="122184" y="-194648" z="-3664" min_range="50" max_range="150"/>
+				<move_to_point x="120392" y="-194600" z="-3600" min_range="50" max_range="150"/>
+				<move_to_point x="120200" y="-195800" z="-3584" min_range="50" max_range="150"/>
+				<move_to_point x="119864" y="-197064" z="-3632" min_range="50" max_range="150"/>
+				<move_to_point x="119560" y="-198232" z="-3680" min_range="50" max_range="150"/>
+				<move_to_point x="119704" y="-200040" z="-3728" min_range="50" max_range="150"/>
+				<move_to_point x="119032" y="-200792" z="-3728" min_range="50" max_range="150"/>
+				<move_to_point x="117640" y="-200776" z="-3728" min_range="50" max_range="150"/>
+				<move_to_point x="116712" y="-200952" z="-3664" min_range="50" max_range="150"/>
+				<move_to_point x="115864" y="-200232" z="-3440" min_range="50" max_range="150"/>
+				<move_to_point x="115240" y="-199544" z="-3264" min_range="0" max_range="50"/>
+				<move_to_point x="115000" y="-198584" z="-3120" min_range="0" max_range="50"/>
+				<move_to_point x="114856" y="-197912" z="-2864" min_range="0" max_range="50"/>
+				<move_to_point x="114232" y="-196936" z="-2528" min_range="0" max_range="50"/>
+				<move_to_point x="114168" y="-195704" z="-2208" min_range="0" max_range="50"/>
+				<move_to_point x="114632" y="-194456" z="-2288" min_range="0" max_range="50"/>
+				<move_to_point x="114296" y="-193512" z="-2000" min_range="0" max_range="50"/>
+				<move_to_point x="114360" y="-192856" z="-1952" min_range="0" max_range="50"/>
+				<move_to_point x="114984" y="-192312" z="-1968" min_range="0" max_range="50"/>
+				<move_to_point x="116024" y="-192664" z="-2176" min_range="0" max_range="50"/>
+				<move_to_point x="116904" y="-192856" z="-2272" min_range="0" max_range="50"/>
+				<move_to_point x="117976" y="-192296" z="-2496" min_range="0" max_range="50"/>
+				<move_to_point x="118280" y="-191368" z="-2712" min_range="0" max_range="50"/>
+				<move_to_point x="119032" y="-190472" z="-2768" min_range="0" max_range="50"/>
+				<move_to_point x="118952" y="-189640" z="-2848" min_range="0" max_range="50"/>
+				<move_to_point x="118008" y="-189112" z="-2704" min_range="0" max_range="50"/>
+				<move_to_point x="117880" y="-188424" z="-2704" min_range="0" max_range="50"/>
+				<move_to_point x="118440" y="-187752" z="-2768" min_range="0" max_range="50"/>
+				<move_to_point x="118136" y="-187176" z="-2632" min_range="0" max_range="50"/>
+				<move_to_point x="117464" y="-186616" z="-2288" min_range="0" max_range="50"/>
+				<move_to_point x="117032" y="-185832" z="-2000" min_range="0" max_range="50"/>
+				<move_to_point x="116664" y="-185160" z="-1744" min_range="0" max_range="50"/>
+				<move_to_point x="116488" y="-184680" z="-1592" min_range="0" max_range="50"/>
+				<move_to_point x="116520" y="-183704" z="-1568" min_range="50" max_range="150"/>
+				<move_to_point x="116568" y="-182584" z="-1520" min_range="50" max_range="150"/>
+				<move_to_point x="116648" y="-181368" z="-1376" min_range="50" max_range="150"/>
+				<move_to_point x="116632" y="-180392" z="-1200" min_range="50" max_range="150"/>
+				<move_to_point x="116536" y="-179736" z="-1136" min_range="50" max_range="150"/>
+				<move_to_point x="115976" y="-179176" z="-1016" min_range="0" max_range="50"/>
+				<move_to_point x="115448" y="-178856" z="-928" min_range="50" max_range="150"/>
+				<move_to_point x="115336" y="-178136" z="-928" min_range="50" max_range="150"/>
+			</ordinary_actions>
+			<use_item id="736"/>
+		</random_action>
+	</action>
+</farm>

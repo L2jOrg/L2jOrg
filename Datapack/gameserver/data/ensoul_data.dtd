@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!ELEMENT list (ensoul_fee_data|ensoul_data)*>
+
+	<!ELEMENT ensoul_fee_data (ensoul_fee)*>
+
+		<!ELEMENT ensoul_fee (ensoul_fee_info)*>
+		<!ATTLIST ensoul_fee
+			grade CDATA #REQUIRED>
+
+			<!ELEMENT ensoul_fee_info (ensoul_fee_items)*>
+			<!ATTLIST ensoul_fee_info
+				type CDATA #REQUIRED>
+
+				<!ELEMENT ensoul_fee_items (insert|change|remove)*>
+				<!ATTLIST ensoul_fee_items
+					id CDATA #REQUIRED>
+
+					<!ELEMENT insert (item)*>
+					<!ELEMENT change (item)*>
+					<!ELEMENT remove (item)*>
+
+						<!ELEMENT item (#PCDATA)>
+						<!ATTLIST item
+							id CDATA #REQUIRED
+							count CDATA #REQUIRED>
+
+	<!ELEMENT ensoul_data (ensoul)*>
+
+		<!ELEMENT ensoul (skill)*>
+		<!ATTLIST ensoul
+			id CDATA #REQUIRED
+			item_id CDATA #IMPLIED>
+
+			<!ELEMENT skill (#PCDATA)>
+			<!ATTLIST skill
+				id CDATA #REQUIRED
+				level CDATA #REQUIRED>

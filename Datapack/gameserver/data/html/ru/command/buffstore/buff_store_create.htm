@@ -1,0 +1,20 @@
+<!-- HTML Buff Store en el Panel -->
+<html noscrollbar><head><title>Лавка Баффа</title><body scroll="no">
+<table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background=L2UI_CH3.refinewnd_back_Pattern>
+<tr><td valign="top" align="center">
+	<table border=0 cellpadding=0 cellspacing=0>
+		<tr><td height=20></td></tr>
+		<tr><td align=center><font color=91785a name=GameDefault>Лавка Баффа</font></td></tr>
+		<tr><td height=20></td></tr>
+		<tr><td fixwidth=260><font color=b5b5b5>Здесь Вы можете создать Приватную Лавку Баффа.<br></font></td></tr>
+		<tr><td fixwidth=260><font color=b5b5b5>Другие игроки смогут приобретать ваши баффы непосредственно из интерфейса при нажатии на вас.<br></font></td></tr>
+		<tr><td fixwidth=260><font color=b5b5b5>Установите заголовок своего магазина и цену, которую вы хотите взимать за каждый проданный бафф, и все готово.<br></font></td></tr>
+		<tr><td height=5></td></tr>
+		<tr><td align=center>Титул: <edit var="title" width=180 height=15></td></tr>
+		<tr><td height=15></td></tr>
+		<tr><td align=center>Цена: <edit type="number" var="price" width=180 height=15></td></tr>
+		<tr><td height=25></td></tr>
+		<tr><td align=center><button value="Создать Лавку" action="bypass -h buffstore?create_ $price _ $title" width=200 height=31 back=L2UI_CT1.OlympiadWnd_DF_Watch_Down fore=L2UI_CT1.OlympiadWnd_DF_Watch></td></tr>
+	</table>
+</td></tr></table>
+</body></html>

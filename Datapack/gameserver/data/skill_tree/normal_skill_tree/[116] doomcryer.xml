@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="116">	<!--Глас Судьбы-->
+			<skill id="146" level="46" name="Антимагия(Anti Magic)" cost="6700000" min_level="76"/>
+			<skill id="1405" level="3" name="Божественное Вдохновение(Divine Inspiration)" item_id="8620" cost="6700000" min_level="76"/>
+			<skill id="1405" level="4" name="Божественное Вдохновение(Divine Inspiration)" item_id="8621" cost="6700000" min_level="76"/>
+			<skill id="252" level="46" name="Владение Легкой Броней(Light Armor Mastery)" cost="6700000" min_level="76"/>
+			<skill id="251" level="46" name="Владение Магической Броней(Robe Mastery)" cost="6700000" min_level="76"/>
+			<skill id="250" level="43" name="Владение Оружием(Weapon Mastery)" cost="6700000" min_level="76"/>
+			<skill id="253" level="44" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="6700000" min_level="76"/>
+			<skill id="1244" level="5" name="Замораживающее Пламя(Freezing Flame)" cost="6700000" min_level="76"/>
+			<skill id="1245" level="15" name="Кража Сущности(Steal Essence)" cost="6700000" min_level="76"/>
+			<skill id="1229" level="19" name="Напев Жизни(Chant of Life)" cost="6700000" min_level="76"/>
+			<skill id="1363" level="1" name="Напев Победы(Chant of Victory)" item_id="90112" cost="6700000" min_level="76"/>
+			<skill id="1837" level="1" name="Оседлать Черного Медведя(Mount Black Bear)" item_id="90042" min_level="76"/>
+			<skill id="1097" level="21" name="Сонный Дух(Dreaming Spirit)" cost="6700000" min_level="76"/>
+			<skill id="1092" level="20" name="Страх(Fear)" cost="6700000" min_level="76"/>
+			<skill id="146" level="47" name="Антимагия(Anti Magic)" cost="6700000" min_level="77"/>
+			<skill id="252" level="47" name="Владение Легкой Броней(Light Armor Mastery)" cost="6700000" min_level="77"/>
+			<skill id="251" level="47" name="Владение Магической Броней(Robe Mastery)" cost="6700000" min_level="77"/>
+			<skill id="250" level="44" name="Владение Оружием(Weapon Mastery)" cost="6700000" min_level="77"/>
+			<skill id="253" level="45" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="6700000" min_level="77"/>
+			<skill id="1362" level="1" name="Напев Духа(Chant of Spirit)" item_id="90113" cost="6700000" min_level="77"/>
+			<skill id="146" level="48" name="Антимагия(Anti Magic)" cost="14800000" min_level="78"/>
+			<skill id="252" level="48" name="Владение Легкой Броней(Light Armor Mastery)" cost="14800000" min_level="78"/>
+			<skill id="251" level="48" name="Владение Магической Броней(Robe Mastery)" cost="14800000" min_level="78"/>
+			<skill id="250" level="45" name="Владение Оружием(Weapon Mastery)" cost="14800000" min_level="78"/>
+			<skill id="253" level="46" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="14800000" min_level="78"/>
+			<skill id="1245" level="16" name="Кража Сущности(Steal Essence)" cost="14800000" min_level="78"/>
+			<skill id="1001" level="11" name="Крик Души(Soul Cry)" cost="14800000" min_level="78"/>
+			<skill id="1429" level="1" name="Напев Врат(Chant of Gate)" item_id="90114" cost="14800000" min_level="78"/>
+			<skill id="1229" level="20" name="Напев Жизни(Chant of Life)" cost="14800000" min_level="78"/>
+			<skill id="1097" level="22" name="Сонный Дух(Dreaming Spirit)" cost="14800000" min_level="78"/>
+			<skill id="1092" level="21" name="Страх(Fear)" cost="14800000" min_level="78"/>
+			<skill id="1461" level="1" name="Напев Охраны(Chant of Protection)" item_id="90115" cost="14800000" min_level="79"/>
+			<skill id="1543" level="1" name="Неукротимая Ярость(Great Fury)" item_id="90116" cost="14800000" min_level="80"/>
+		</class>
+	</normal_skill_tree>
+</list>

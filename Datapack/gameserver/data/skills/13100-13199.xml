@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="13136" levels="1" name="Hero\'s Cloak">
+        <set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+        <set name="skillType" value="BUFF"/>
+        <set name="operate_type" value="A2"/>
+        <for>
+			<mul stat="maxHp" value="1.10"/>
+			<mul stat="maxMp" value="1.10"/>
+			<mul stat="maxCp" value="1.10"/>
+			<mul stat="pDef" value="1.05"/>
+			<mul stat="mDef" value="1.10"/>
+			<p_defence_trait name="sword" value="5"/>
+			<p_defence_trait name="dual" value="5"/>
+			<p_defence_trait name="blunt" value="5"/>
+			<p_defence_trait name="dagger" value="5"/>
+			<p_defence_trait name="pole" value="5"/>
+			<p_defence_trait name="fist" value="5"/>
+			<p_defence_trait name="bow" value="5"/>
+			<p_defence_trait name="crossbow" value="5"/>
+			<add stat="baseMCritRate" value="20"/>
+			<add stat="basePCritRate" value="20"/>
+			<mul stat="pvpPhysDefenceBonus" value="1.10"/>
+			<mul stat="pvpPhysSkillDefenceBonus" value="1.10"/>
+			<mul stat="pvpMagicSkillDefenceBonus" value="1.10"/>
+			<add stat="reflectDam" value="4"/>
+        </for>
+    </skill>
+</list>

@@ -1,0 +1,13 @@
+<!ELEMENT list (staticobject)*>
+<!ELEMENT staticobject (#PCDATA)>
+<!ATTLIST staticobject
+	id CDATA #REQUIRED
+	map_x CDATA #REQUIRED
+	map_y CDATA #REQUIRED
+	name CDATA #REQUIRED
+	path CDATA #REQUIRED
+	spawn CDATA #REQUIRED
+	stype CDATA #REQUIRED
+	x CDATA #REQUIRED
+	y CDATA #REQUIRED
+	z CDATA #REQUIRED>

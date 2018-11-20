@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="33806" name="Improved Scroll: Enchant Weapon (D-grade)">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_blessed_scrl_of_ench_wp_d_i01"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL_ENCHANT_WEAPON"/>
+	</etcitem>
+	<etcitem id="33807" name="Improved Scroll: Enchant Weapon (C-grade)">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_blessed_scrl_of_ench_wp_c_i02"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL_ENCHANT_WEAPON"/>
+	</etcitem>
+	<etcitem id="33808" name="Improved Scroll: Enchant Weapon (B-grade)">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_blessed_scrl_of_ench_wp_b_i03"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL_ENCHANT_WEAPON"/>
+	</etcitem>
+	<etcitem id="33809" name="Improved Scroll: Enchant Weapon (A-grade)">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_blessed_scrl_of_ench_wp_a_i04"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL_ENCHANT_WEAPON"/>
+	</etcitem>
+	<etcitem id="33812" name="Improved Scroll: Enchant Armor (D-grade)">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_blessed_scrl_of_ench_am_d_i01"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL_ENCHANT_ARMOR"/>
+	</etcitem>
+	<etcitem id="33813" name="Improved Scroll: Enchant Armor (C-grade)">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_blessed_scrl_of_ench_am_c_i02"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL_ENCHANT_ARMOR"/>
+	</etcitem>
+	<etcitem id="33814" name="Improved Scroll: Enchant Armor (B-grade)">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_blessed_scrl_of_ench_am_b_i03"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL_ENCHANT_ARMOR"/>
+	</etcitem>
+	<etcitem id="33815" name="Improved Scroll: Enchant Armor (A-grade)">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_blessed_scrl_of_ench_am_a_i04"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL_ENCHANT_ARMOR"/>
+	</etcitem>
+</list>

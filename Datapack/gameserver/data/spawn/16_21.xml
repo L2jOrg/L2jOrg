@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<territory name="gludio15_1621_01">
+		<add x="-99708" y="100418" zmin="-3692" zmax="-2992"/>
+		<add x="-98553" y="100158" zmin="-3692" zmax="-2992"/>
+		<add x="-98637" y="104050" zmin="-3692" zmax="-2992"/>
+		<add x="-101237" y="103989" zmin="-3692" zmax="-2992"/>
+	</territory>
+	<spawn name="gludio15_1621_01" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1621_01"/>
+		<npc id="20498"/><!--Снабженец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1621_01" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1621_01"/>
+		<npc id="20497"/><!--Бандит Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1621_01" count="1" respawn="60" respawn_random="20">
+		<territory name="gludio15_1621_01"/>
+		<npc id="20501"/><!--Провидец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1621_01" count="1" respawn="60" respawn_random="20">
+		<territory name="gludio15_1621_01"/>
+		<npc id="20495"/><!--Владыка Орков Турек-->
+	</spawn>
+	<territory name="gludio15_1621_02">
+		<add x="-100403" y="104743" zmin="-3715" zmax="-3015"/>
+		<add x="-98598" y="104208" zmin="-3715" zmax="-3015"/>
+		<add x="-98544" y="109423" zmin="-3715" zmax="-3015"/>
+		<add x="-100571" y="106885" zmin="-3715" zmax="-3015"/>
+	</territory>
+	<spawn name="gludio15_1621_02" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1621_02"/>
+		<npc id="20498"/><!--Снабженец Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1621_02" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1621_02"/>
+		<npc id="20497"/><!--Бандит Орков Турек-->
+	</spawn>
+	<spawn name="gludio15_1621_02" count="2" respawn="60" respawn_random="20">
+		<territory name="gludio15_1621_02"/>
+		<npc id="20501"/><!--Провидец Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-101173" y="108539" z="-3480" h="19574" />
+		<npc id="27203" /><!--Захватчик Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-101143" y="107942" z="-3488" h="6325" />
+		<npc id="27203" /><!--Захватчик Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-101100" y="108434" z="-3480" h="47498" />
+		<npc id="27203" /><!--Захватчик Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-101375" y="107494" z="-3512" h="42600" />
+		<npc id="27203" /><!--Захватчик Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-101238" y="108422" z="-3480" h="1526" />
+		<npc id="27203" /><!--Захватчик Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-100785" y="108315" z="-3480" h="47863" />
+		<npc id="27203" /><!--Захватчик Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-101034" y="107526" z="-3512" h="37651" />
+		<npc id="27203" /><!--Захватчик Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-100857" y="108725" z="-3480" h="45772" />
+		<npc id="27203" /><!--Захватчик Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-100517" y="109096" z="-3480" h="27423" />
+		<npc id="27203" /><!--Захватчик Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-101108" y="110660" z="-3224" h="46686" />
+		<npc id="27203" /><!--Захватчик Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-100959" y="110113" z="-3232" h="63125" />
+		<npc id="27203" /><!--Захватчик Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-101845" y="109222" z="-3256" h="6496" />
+		<npc id="27203" /><!--Захватчик Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-100925" y="110093" z="-3240" h="27051" />
+		<npc id="27203" /><!--Захватчик Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-101581" y="109184" z="-3264" h="45870" />
+		<npc id="27203" /><!--Захватчик Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-101297" y="109473" z="-3248" h="3209" />
+		<npc id="27203" /><!--Захватчик Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-101879" y="109444" z="-3232" h="14444" />
+		<npc id="27203" /><!--Захватчик Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-101907" y="109133" z="-3248" h="11026" />
+		<npc id="27203" /><!--Захватчик Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-101324" y="109496" z="-3248" h="49616" />
+		<npc id="27203" /><!--Захватчик Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-100519" y="109582" z="-3456" h="54395" />
+		<npc id="27203" /><!--Захватчик Орков Турек-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-101828" y="109260" z="-3256" h="47035" />
+		<npc id="27203" /><!--Захватчик Орков Турек-->
+	</spawn>
+</list>

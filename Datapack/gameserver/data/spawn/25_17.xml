@@ -1,0 +1,2014 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>	
+	<territory name="aden26_2517_09">
+		<add x="187212" y="-17564" zmin="-1488" zmax="-888"/>
+		<add x="189024" y="-16960" zmin="-1488" zmax="-888"/>
+		<add x="190196" y="-14860" zmin="-1488" zmax="-888"/>
+		<add x="189636" y="-12848" zmin="-1488" zmax="-888"/>
+		<add x="185708" y="-15252" zmin="-1488" zmax="-888"/>
+		<add x="185748" y="-16392" zmin="-1488" zmax="-888"/>
+	</territory>
+	<spawn name="aden26_2517_09" count="10" respawn="75">
+		<territory name="aden26_2517_09"/>
+		<npc id="21007"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_09" count="4" respawn="75">
+		<territory name="aden26_2517_09"/>
+		<npc id="21008"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_09" count="10" respawn="75">
+		<territory name="aden26_2517_09"/>
+		<npc id="21009"/><!--Солдат Судьбы-->
+	</spawn>
+	<territory name="aden26_2517_08">
+		<add x="180908" y="-18880" zmin="-2932" zmax="-2332"/>
+		<add x="181848" y="-20488" zmin="-2932" zmax="-2332"/>
+		<add x="184040" y="-17980" zmin="-2932" zmax="-2332"/>
+		<add x="183428" y="-16904" zmin="-2932" zmax="-2332"/>
+		<add x="181340" y="-17600" zmin="-2932" zmax="-2332"/>
+	</territory>
+	<spawn name="aden26_2517_08" count="5" respawn="75">
+		<territory name="aden26_2517_08"/>
+		<npc id="21004"/><!--Зловещий Дуб-->
+	</spawn>
+	<spawn name="aden26_2517_08" count="3" respawn="75">
+		<territory name="aden26_2517_08"/>
+		<npc id="21005"/><!--Могильный Хищник-->
+	</spawn>
+	<spawn name="aden26_2517_08" count="5" respawn="75">
+		<territory name="aden26_2517_08"/>
+		<npc id="21006"/><!--Слуга Судьбы-->
+	</spawn>
+	<territory name="aden26_2517_07">
+		<add x="183360" y="-21944" zmin="-2868" zmax="-1968"/>
+		<add x="185420" y="-22504" zmin="-2868" zmax="-1968"/>
+		<add x="186232" y="-18980" zmin="-2868" zmax="-1968"/>
+		<add x="184084" y="-18076" zmin="-2868" zmax="-1968"/>
+		<add x="182364" y="-20832" zmin="-2868" zmax="-1968"/>
+	</territory>
+	<spawn name="aden26_2517_07" count="7" respawn="75">
+		<territory name="aden26_2517_07"/>
+		<npc id="21004"/><!--Зловещий Дуб-->
+	</spawn>
+	<spawn name="aden26_2517_07" count="10" respawn="75">
+		<territory name="aden26_2517_07"/>
+		<npc id="21005"/><!--Могильный Хищник-->
+	</spawn>
+	<spawn name="aden26_2517_07" count="7" respawn="75">
+		<territory name="aden26_2517_07"/>
+		<npc id="21006"/><!--Слуга Судьбы-->
+	</spawn>
+	<territory name="aden26_2517_06">
+		<add x="186972" y="-21176" zmin="-1916" zmax="-1016"/>
+		<add x="189232" y="-23220" zmin="-1916" zmax="-1016"/>
+		<add x="189824" y="-20776" zmin="-1916" zmax="-1016"/>
+		<add x="189224" y="-18800" zmin="-1916" zmax="-1016"/>
+		<add x="187200" y="-19360" zmin="-1916" zmax="-1016"/>
+	</territory>
+	<spawn name="aden26_2517_06" count="7" respawn="75">
+		<territory name="aden26_2517_06"/>
+		<npc id="21007"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_06" count="4" respawn="75">
+		<territory name="aden26_2517_06"/>
+		<npc id="21008"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_06" count="6" respawn="75">
+		<territory name="aden26_2517_06"/>
+		<npc id="21009"/><!--Солдат Судьбы-->
+	</spawn>
+	<territory name="aden26_2517_05">
+		<add x="185752" y="-23052" zmin="-2384" zmax="-1284"/>
+		<add x="186992" y="-25240" zmin="-2384" zmax="-1284"/>
+		<add x="189148" y="-23424" zmin="-2384" zmax="-1284"/>
+		<add x="187032" y="-21480" zmin="-2384" zmax="-1284"/>
+	</territory>
+	<spawn name="aden26_2517_05" count="5" respawn="75">
+		<territory name="aden26_2517_05"/>
+		<npc id="21007"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_05" count="4" respawn="75">
+		<territory name="aden26_2517_05"/>
+		<npc id="21008"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_05" count="6" respawn="75">
+		<territory name="aden26_2517_05"/>
+		<npc id="21009"/><!--Солдат Судьбы-->
+	</spawn>
+	<territory name="aden26_2517_03">
+		<add x="179912" y="-23408" zmin="-3076" zmax="-2276"/>
+		<add x="182984" y="-25660" zmin="-3076" zmax="-2276"/>
+		<add x="185464" y="-23036" zmin="-3076" zmax="-2276"/>
+		<add x="183304" y="-22152" zmin="-3076" zmax="-2276"/>
+		<add x="180656" y="-22564" zmin="-3076" zmax="-2276"/>
+	</territory>
+	<spawn name="aden26_2517_03" count="7" respawn="75">
+		<territory name="aden26_2517_03"/>
+		<npc id="21009"/><!--Солдат Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_03" count="10" respawn="75">
+		<territory name="aden26_2517_03"/>
+		<npc id="21010"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_03" count="8" respawn="75">
+		<territory name="aden26_2517_03"/>
+		<npc id="20674"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<territory name="aden26_2517_02">
+		<add x="180408" y="-22436" zmin="-3260" zmax="-2160"/>
+		<add x="183144" y="-22036" zmin="-3260" zmax="-2160"/>
+		<add x="181252" y="-19936" zmin="-3260" zmax="-2160"/>
+		<add x="179116" y="-20680" zmin="-3260" zmax="-2160"/>
+	</territory>
+	<spawn name="aden26_2517_02" count="5" respawn="75">
+		<territory name="aden26_2517_02"/>
+		<npc id="21004"/><!--Зловещий Дуб-->
+	</spawn>
+	<spawn name="aden26_2517_02" count="3" respawn="75">
+		<territory name="aden26_2517_02"/>
+		<npc id="21005"/><!--Могильный Хищник-->
+	</spawn>
+	<spawn name="aden26_2517_02" count="4" respawn="75">
+		<territory name="aden26_2517_02"/>
+		<npc id="21006"/><!--Слуга Судьбы-->
+	</spawn>
+	<territory name="aden26_2517_01">
+		<add x="176140" y="-24540" zmin="-3756" zmax="-2756"/>
+		<add x="178952" y="-24176" zmin="-3756" zmax="-2756"/>
+		<add x="180216" y="-22556" zmin="-3756" zmax="-2756"/>
+		<add x="179172" y="-21132" zmin="-3756" zmax="-2756"/>
+		<add x="176132" y="-21396" zmin="-3756" zmax="-2756"/>
+		<add x="175116" y="-22760" zmin="-3756" zmax="-2756"/>
+	</territory>
+	<spawn name="aden26_2517_01" count="7" respawn="75">
+		<territory name="aden26_2517_01"/>
+		<npc id="21009"/><!--Солдат Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_01" count="10" respawn="75">
+		<territory name="aden26_2517_01"/>
+		<npc id="21010"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_01" count="10" respawn="75">
+		<territory name="aden26_2517_01"/>
+		<npc id="20674"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<territory name="aden26_2517_19">
+		<add x="164224" y="-11732" zmin="-3588" zmax="-2588"/>
+		<add x="166192" y="-12124" zmin="-3588" zmax="-2588"/>
+		<add x="167468" y="-11164" zmin="-3588" zmax="-2588"/>
+		<add x="164248" y="-10012" zmin="-3588" zmax="-2588"/>
+	</territory>
+	<spawn name="aden26_2517_19" count="3" respawn="75">
+		<territory name="aden26_2517_19"/>
+		<npc id="21001"/><!--Скверный Стрелок-->
+	</spawn>
+	<spawn name="aden26_2517_19" count="2" respawn="75">
+		<territory name="aden26_2517_19"/>
+		<npc id="21002"/><!--Разведчик Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_19" count="4" respawn="75">
+		<territory name="aden26_2517_19"/>
+		<npc id="21003"/><!--Могильный Лич-->
+	</spawn>
+	<territory name="aden26_2517_18">
+		<add x="166864" y="-10088" zmin="-3124" zmax="-2524"/>
+		<add x="170448" y="-9524" zmin="-3124" zmax="-2524"/>
+		<add x="170696" y="-7400" zmin="-3124" zmax="-2524"/>
+		<add x="167252" y="-7320" zmin="-3124" zmax="-2524"/>
+		<add x="165200" y="-8848" zmin="-3124" zmax="-2524"/>
+	</territory>
+	<spawn name="aden26_2517_18" count="6" respawn="75">
+		<territory name="aden26_2517_18"/>
+		<npc id="21001"/><!--Скверный Стрелок-->
+	</spawn>
+	<spawn name="aden26_2517_18" count="4" respawn="75">
+		<territory name="aden26_2517_18"/>
+		<npc id="21002"/><!--Разведчик Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_18" count="7" respawn="75">
+		<territory name="aden26_2517_18"/>
+		<npc id="21003"/><!--Могильный Лич-->
+	</spawn>
+	<territory name="aden26_2517_17">
+		<add x="164028" y="-9148" zmin="-3204" zmax="-2604"/>
+		<add x="167116" y="-7088" zmin="-3204" zmax="-2604"/>
+		<add x="166608" y="-4216" zmin="-3204" zmax="-2604"/>
+		<add x="165408" y="-4000" zmin="-3204" zmax="-2604"/>
+		<add x="164020" y="-5196" zmin="-3204" zmax="-2604"/>
+	</territory>
+	<spawn name="aden26_2517_17" count="6" respawn="75">
+		<territory name="aden26_2517_17"/>
+		<npc id="21001"/><!--Скверный Стрелок-->
+	</spawn>
+	<spawn name="aden26_2517_17" count="4" respawn="75">
+		<territory name="aden26_2517_17"/>
+		<npc id="21002"/><!--Разведчик Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_17" count="7" respawn="75">
+		<territory name="aden26_2517_17"/>
+		<npc id="21003"/><!--Могильный Лич-->
+	</spawn>
+	<territory name="aden26_2517_16">
+		<add x="167196" y="-7096" zmin="-3104" zmax="-2504"/>
+		<add x="170076" y="-7148" zmin="-3104" zmax="-2504"/>
+		<add x="170052" y="-5484" zmin="-3104" zmax="-2504"/>
+		<add x="166708" y="-4364" zmin="-3104" zmax="-2504"/>
+	</territory>
+	<spawn name="aden26_2517_16" count="5" respawn="75">
+		<territory name="aden26_2517_16"/>
+		<npc id="21001"/><!--Скверный Стрелок-->
+	</spawn>
+	<spawn name="aden26_2517_16" count="3" respawn="75">
+		<territory name="aden26_2517_16"/>
+		<npc id="21002"/><!--Разведчик Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_16" count="5" respawn="75">
+		<territory name="aden26_2517_16"/>
+		<npc id="21003"/><!--Могильный Лич-->
+	</spawn>
+	<territory name="aden26_2517_15">
+		<add x="170704" y="-9476" zmin="-3464" zmax="-2664"/>
+		<add x="173916" y="-11524" zmin="-3464" zmax="-2664"/>
+		<add x="176060" y="-9952" zmin="-3464" zmax="-2664"/>
+		<add x="175700" y="-8136" zmin="-3464" zmax="-2664"/>
+		<add x="173676" y="-6452" zmin="-3464" zmax="-2664"/>
+		<add x="171924" y="-7276" zmin="-3464" zmax="-2664"/>
+	</territory>
+	<spawn name="aden26_2517_15" count="9" respawn="75">
+		<territory name="aden26_2517_15"/>
+		<npc id="21004"/><!--Зловещий Дуб-->
+	</spawn>
+	<spawn name="aden26_2517_15" count="12" respawn="75">
+		<territory name="aden26_2517_15"/>
+		<npc id="21005"/><!--Могильный Хищник-->
+	</spawn>
+	<spawn name="aden26_2517_15" count="9" respawn="75">
+		<territory name="aden26_2517_15"/>
+		<npc id="21006"/><!--Слуга Судьбы-->
+	</spawn>
+	<territory name="aden26_2517_14">
+		<add x="177084" y="-11056" zmin="-3648" zmax="-3048"/>
+		<add x="180512" y="-11292" zmin="-3648" zmax="-3048"/>
+		<add x="180492" y="-8720" zmin="-3648" zmax="-3048"/>
+		<add x="179084" y="-8020" zmin="-3648" zmax="-3048"/>
+		<add x="177848" y="-8664" zmin="-3648" zmax="-3048"/>
+	</territory>
+	<spawn name="aden26_2517_14" count="5" respawn="75">
+		<territory name="aden26_2517_14"/>
+		<npc id="21001"/><!--Скверный Стрелок-->
+	</spawn>
+	<spawn name="aden26_2517_14" count="3" respawn="75">
+		<territory name="aden26_2517_14"/>
+		<npc id="21002"/><!--Разведчик Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_14" count="5" respawn="75">
+		<territory name="aden26_2517_14"/>
+		<npc id="21003"/><!--Могильный Лич-->
+	</spawn>
+	<territory name="aden26_2517_13">
+		<add x="181744" y="-12004" zmin="-3500" zmax="-3200"/>
+		<add x="182928" y="-11124" zmin="-3500" zmax="-3200"/>
+		<add x="181892" y="-8792" zmin="-3500" zmax="-3200"/>
+		<add x="180740" y="-8804" zmin="-3500" zmax="-3200"/>
+		<add x="180720" y="-10704" zmin="-3500" zmax="-3200"/>
+	</territory>
+	<spawn name="aden26_2517_13" count="3" respawn="75">
+		<territory name="aden26_2517_13"/>
+		<npc id="21001"/><!--Скверный Стрелок-->
+	</spawn>
+	<spawn name="aden26_2517_13" count="3" respawn="75">
+		<territory name="aden26_2517_13"/>
+		<npc id="21002"/><!--Разведчик Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_13" count="5" respawn="75">
+		<territory name="aden26_2517_13"/>
+		<npc id="21003"/><!--Могильный Лич-->
+	</spawn>
+	<territory name="aden26_2517_12">
+		<add x="182948" y="-14360" zmin="-3340" zmax="-2740"/>
+		<add x="184052" y="-13696" zmin="-3340" zmax="-2740"/>
+		<add x="184052" y="-12344" zmin="-3340" zmax="-2740"/>
+		<add x="182964" y="-11240" zmin="-3340" zmax="-2740"/>
+		<add x="181804" y="-12076" zmin="-3340" zmax="-2740"/>
+		<add x="182032" y="-13992" zmin="-3340" zmax="-2740"/>
+	</territory>
+	<spawn name="aden26_2517_12" count="3" respawn="75">
+		<territory name="aden26_2517_12"/>
+		<npc id="21001"/><!--Скверный Стрелок-->
+	</spawn>
+	<spawn name="aden26_2517_12" count="3" respawn="75">
+		<territory name="aden26_2517_12"/>
+		<npc id="21002"/><!--Разведчик Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_12" count="5" respawn="75">
+		<territory name="aden26_2517_12"/>
+		<npc id="21003"/><!--Могильный Лич-->
+	</spawn>
+	<territory name="aden26_2517_11">
+		<add x="183796" y="-8752" zmin="-3000" zmax="-2000"/>
+		<add x="185328" y="-9728" zmin="-3000" zmax="-2000"/>
+		<add x="186848" y="-8744" zmin="-3000" zmax="-2000"/>
+		<add x="185596" y="-6740" zmin="-3000" zmax="-2000"/>
+		<add x="183340" y="-5000" zmin="-3000" zmax="-2000"/>
+		<add x="183132" y="-5708" zmin="-3000" zmax="-2000"/>
+	</territory>
+	<spawn name="aden26_2517_11" count="7" respawn="75">
+		<territory name="aden26_2517_11"/>
+		<npc id="21009"/><!--Солдат Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_11" count="5" respawn="75">
+		<territory name="aden26_2517_11"/>
+		<npc id="21010"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_11" count="7" respawn="75">
+		<territory name="aden26_2517_11"/>
+		<npc id="20674"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<territory name="aden26_2517_10">
+		<add x="186688" y="-13504" zmin="-2160" zmax="-1560"/>
+		<add x="188636" y="-12524" zmin="-2160" zmax="-1560"/>
+		<add x="188544" y="-10264" zmin="-2160" zmax="-1560"/>
+		<add x="187364" y="-9284" zmin="-2160" zmax="-1560"/>
+		<add x="185960" y="-11000" zmin="-2160" zmax="-1560"/>
+		<add x="185940" y="-12556" zmin="-2160" zmax="-1560"/>
+	</territory>
+	<spawn name="aden26_2517_10" count="7" respawn="75">
+		<territory name="aden26_2517_10"/>
+		<npc id="21009"/><!--Солдат Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_10" count="5" respawn="75">
+		<territory name="aden26_2517_10"/>
+		<npc id="21010"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_10" count="7" respawn="75">
+		<territory name="aden26_2517_10"/>
+		<npc id="20674"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<territory name="aden26_2517_27">
+		<add x="168780" y="-22064" zmin="-3404" zmax="-2404"/>
+		<add x="172012" y="-23360" zmin="-3404" zmax="-2404"/>
+		<add x="172444" y="-21660" zmin="-3404" zmax="-2404"/>
+		<add x="171332" y="-20760" zmin="-3404" zmax="-2404"/>
+		<add x="170220" y="-20752" zmin="-3404" zmax="-2404"/>
+	</territory>
+	<spawn name="aden26_2517_27" count="5" respawn="75">
+		<territory name="aden26_2517_27"/>
+		<npc id="21009"/><!--Солдат Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_27" count="3" respawn="75">
+		<territory name="aden26_2517_27"/>
+		<npc id="21010"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_27" count="5" respawn="75">
+		<territory name="aden26_2517_27"/>
+		<npc id="20674"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<territory name="aden26_2517_26">
+		<add x="171896" y="-24488" zmin="-3744" zmax="-2744"/>
+		<add x="173676" y="-25624" zmin="-3744" zmax="-2744"/>
+		<add x="174996" y="-23084" zmin="-3744" zmax="-2744"/>
+		<add x="172540" y="-21956" zmin="-3744" zmax="-2744"/>
+	</territory>
+	<spawn name="aden26_2517_26" count="5" respawn="75">
+		<territory name="aden26_2517_26"/>
+		<npc id="21009"/><!--Солдат Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_26" count="3" respawn="75">
+		<territory name="aden26_2517_26"/>
+		<npc id="21010"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_26" count="5" respawn="75">
+		<territory name="aden26_2517_26"/>
+		<npc id="20674"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<territory name="aden26_2517_25">
+		<add x="171832" y="-20380" zmin="-3772" zmax="-2772"/>
+		<add x="174764" y="-21996" zmin="-3772" zmax="-2772"/>
+		<add x="175484" y="-21204" zmin="-3772" zmax="-2772"/>
+		<add x="174432" y="-20324" zmin="-3772" zmax="-2772"/>
+		<add x="173076" y="-19956" zmin="-3772" zmax="-2772"/>
+	</territory>
+	<spawn name="aden26_2517_25" count="3" respawn="75">
+		<territory name="aden26_2517_25"/>
+		<npc id="21004"/><!--Зловещий Дуб-->
+	</spawn>
+	<spawn name="aden26_2517_25" count="3" respawn="75">
+		<territory name="aden26_2517_25"/>
+		<npc id="21005"/><!--Могильный Хищник-->
+	</spawn>
+	<spawn name="aden26_2517_25" count="5" respawn="75">
+		<territory name="aden26_2517_25"/>
+		<npc id="21006"/><!--Слуга Судьбы-->
+	</spawn>
+	<territory name="aden26_2517_24">
+		<add x="172512" y="-19420" zmin="-3484" zmax="-2484"/>
+		<add x="174388" y="-19504" zmin="-3484" zmax="-2484"/>
+		<add x="174136" y="-17184" zmin="-3484" zmax="-2484"/>
+		<add x="171224" y="-15860" zmin="-3484" zmax="-2484"/>
+		<add x="170112" y="-15940" zmin="-3484" zmax="-2484"/>
+		<add x="170312" y="-18464" zmin="-3484" zmax="-2484"/>
+	</territory>
+	<spawn name="aden26_2517_24" count="5" respawn="75">
+		<territory name="aden26_2517_24"/>
+		<npc id="21004"/><!--Зловещий Дуб-->
+	</spawn>
+	<spawn name="aden26_2517_24" count="7" respawn="75">
+		<territory name="aden26_2517_24"/>
+		<npc id="21005"/><!--Могильный Хищник-->
+	</spawn>
+	<spawn name="aden26_2517_24" count="7" respawn="75">
+		<territory name="aden26_2517_24"/>
+		<npc id="21006"/><!--Слуга Судьбы-->
+	</spawn>
+	<territory name="aden26_2517_23">
+		<add x="167948" y="-15808" zmin="-3232" zmax="-2232"/>
+		<add x="171300" y="-15840" zmin="-3232" zmax="-2232"/>
+		<add x="171368" y="-13324" zmin="-3232" zmax="-2232"/>
+		<add x="167292" y="-12560" zmin="-3232" zmax="-2232"/>
+	</territory>
+	<spawn name="aden26_2517_23" count="5" respawn="75">
+		<territory name="aden26_2517_23"/>
+		<npc id="21004"/><!--Зловещий Дуб-->
+	</spawn>
+	<spawn name="aden26_2517_23" count="7" respawn="75">
+		<territory name="aden26_2517_23"/>
+		<npc id="21005"/><!--Могильный Хищник-->
+	</spawn>
+	<spawn name="aden26_2517_23" count="5" respawn="75">
+		<territory name="aden26_2517_23"/>
+		<npc id="21006"/><!--Слуга Судьбы-->
+	</spawn>
+	<territory name="aden26_2517_22">
+		<add x="187600" y="-19220" zmin="-1584" zmax="-984"/>
+		<add x="189240" y="-18760" zmin="-1584" zmax="-984"/>
+		<add x="189120" y="-17076" zmin="-1584" zmax="-984"/>
+		<add x="187124" y="-17788" zmin="-1584" zmax="-984"/>
+	</territory>
+	<spawn name="aden26_2517_22" count="6" respawn="75">
+		<territory name="aden26_2517_22"/>
+		<npc id="21007"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_22" count="3" respawn="75">
+		<territory name="aden26_2517_22"/>
+		<npc id="21008"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_22" count="6" respawn="75">
+		<territory name="aden26_2517_22"/>
+		<npc id="21009"/><!--Солдат Судьбы-->
+	</spawn>
+	<territory name="aden26_2517_21">
+		<add x="171400" y="-15744" zmin="-3528" zmax="-2528"/>
+		<add x="174172" y="-17104" zmin="-3528" zmax="-2528"/>
+		<add x="174528" y="-14016" zmin="-3528" zmax="-2528"/>
+		<add x="171424" y="-13380" zmin="-3528" zmax="-2528"/>
+	</territory>
+	<spawn name="aden26_2517_21" count="5" respawn="75">
+		<territory name="aden26_2517_21"/>
+		<npc id="21004"/><!--Зловещий Дуб-->
+	</spawn>
+	<spawn name="aden26_2517_21" count="5" respawn="75">
+		<territory name="aden26_2517_21"/>
+		<npc id="21005"/><!--Могильный Хищник-->
+	</spawn>
+	<spawn name="aden26_2517_21" count="5" respawn="75">
+		<territory name="aden26_2517_21"/>
+		<npc id="21006"/><!--Слуга Судьбы-->
+	</spawn>
+	<territory name="aden26_2517_20">
+		<add x="167336" y="-12540" zmin="-3300" zmax="-2500"/>
+		<add x="173980" y="-13676" zmin="-3300" zmax="-2500"/>
+		<add x="173980" y="-12100" zmin="-3300" zmax="-2500"/>
+		<add x="170128" y="-9824" zmin="-3300" zmax="-2500"/>
+		<add x="167692" y="-10548" zmin="-3300" zmax="-2500"/>
+	</territory>
+	<spawn name="aden26_2517_20" count="9" respawn="75">
+		<territory name="aden26_2517_20"/>
+		<npc id="21004"/><!--Зловещий Дуб-->
+	</spawn>
+	<spawn name="aden26_2517_20" count="10" respawn="75">
+		<territory name="aden26_2517_20"/>
+		<npc id="21005"/><!--Могильный Хищник-->
+	</spawn>
+	<spawn name="aden26_2517_20" count="9" respawn="75">
+		<territory name="aden26_2517_20"/>
+		<npc id="21006"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn name="aden05_npc2517_01" count="1" respawn="60" group="devastated_castle_owner">
+		<point x="178242" y="-14663" z="-2260" h="16264"/>
+		<npc id="35417"/><!--Привратник Ада-->
+	</spawn>
+	<spawn name="aden05_npc2517_01" count="1" respawn="60" group="devastated_castle_34">
+		<point x="179040" y="-13717" z="-2263" h="5456"/>
+		<npc id="35420"/><!--Локен-->
+	</spawn>
+	<spawn name="aden05_npc2517_01" count="1" respawn="60" group="devastated_castle_owner">
+		<point x="178120" y="-15336" z="-2263" h="0"/>
+		<npc id="35417"/><!--Привратник Ада-->
+	</spawn>
+	<spawn name="aden05_npc2517_02" count="1" respawn="60" group="devastated_castle_34">
+		<point x="177598" y="-18610" z="-2238" h="0"/>
+		<npc id="35421"/><!--Бигерстафф-->
+	</spawn>
+	<spawn name="aden05_npc2517_02" count="1" respawn="60" group="devastated_castle_owner">
+		<point x="178433" y="-18773" z="-2263" h="6840"/>
+		<npc id="35418"/><!--Привратник Ада-->
+	</spawn>
+	<spawn name="aden01_npc2517_03" count="1" respawn="60" group="devastated_castle_34">
+		<point x="177408" y="-17904" z="-2229" h="6000"/>
+		<npc id="35419"/><!--Хефайстон-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_09" count="1" respawn="7200">
+		<point x="178578" y="-18383" z="-2250" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_09" count="1" respawn="7200">
+		<point x="178577" y="-18422" z="-2250" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_09" count="1" respawn="7200">
+		<point x="178576" y="-18461" z="-2250" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_09" count="1" respawn="7200">
+		<point x="178575" y="-18500" z="-2250" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_09" count="1" respawn="7200">
+		<point x="178574" y="-18539" z="-2250" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_09" count="1" respawn="7200">
+		<point x="178573" y="-18577" z="-2250" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_09" count="1" respawn="7200">
+		<point x="178571" y="-18618" z="-2250" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_09" count="1" respawn="7200">
+		<point x="178571" y="-18657" z="-2250" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_09" count="1" respawn="7200">
+		<point x="178571" y="-18697" z="-2250" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_09" count="1" respawn="7200">
+		<point x="178570" y="-18736" z="-2250" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_09" count="1" respawn="7200">
+		<point x="178530" y="-18382" z="-2250" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_09" count="1" respawn="7200">
+		<point x="178530" y="-18421" z="-2250" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_09" count="1" respawn="7200">
+		<point x="178528" y="-18461" z="-2250" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_09" count="1" respawn="7200">
+		<point x="178528" y="-18499" z="-2250" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_09" count="1" respawn="7200">
+		<point x="178526" y="-18538" z="-2250" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_09" count="1" respawn="7200">
+		<point x="178526" y="-18576" z="-2250" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_09" count="1" respawn="7200">
+		<point x="178524" y="-18618" z="-2250" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_09" count="1" respawn="7200">
+		<point x="178523" y="-18656" z="-2250" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_09" count="1" respawn="7200">
+		<point x="178523" y="-18696" z="-2250" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_09" count="1" respawn="7200">
+		<point x="178523" y="-18735" z="-2250" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_07" count="1" respawn="7200">
+		<point x="179009" y="-15201" z="-2221" h="40000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_07" count="1" respawn="7200">
+		<point x="179052" y="-15226" z="-2221" h="40000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_07" count="1" respawn="7200">
+		<point x="179073" y="-15203" z="-2221" h="40000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_07" count="1" respawn="7200">
+		<point x="179101" y="-15253" z="-2221" h="40000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_07" count="1" respawn="7200">
+		<point x="179144" y="-15271" z="-2221" h="40000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_07" count="1" respawn="7200">
+		<point x="179164" y="-15247" z="-2221" h="40000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_07" count="1" respawn="7200">
+		<point x="179189" y="-15286" z="-2221" h="40000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_07" count="1" respawn="7200">
+		<point x="179226" y="-15309" z="-2221" h="40000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_07" count="1" respawn="7200">
+		<point x="179246" y="-15285" z="-2221" h="40000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_07" count="1" respawn="7200">
+		<point x="179260" y="-15341" z="-2221" h="40000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_07" count="1" respawn="7200">
+		<point x="179302" y="-15372" z="-2221" h="40000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_07" count="1" respawn="7200">
+		<point x="179322" y="-15349" z="-2221" h="40000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_07" count="1" respawn="7200">
+		<point x="179341" y="-15406" z="-2221" h="40000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_07" count="1" respawn="7200">
+		<point x="179391" y="-15439" z="-2221" h="40000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_07" count="1" respawn="7200">
+		<point x="179327" y="-16101" z="-2253" h="25000"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_07" count="1" respawn="7200">
+		<point x="179426" y="-16009" z="-2253" h="25000"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_07" count="1" respawn="7200">
+		<point x="179491" y="-15981" z="-2256" h="25000"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_07" count="1" respawn="7200">
+		<point x="179503" y="-15925" z="-2256" h="25000"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_07" count="1" respawn="7200">
+		<point x="179544" y="-15882" z="-2256" h="25000"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_07" count="1" respawn="7200">
+		<point x="179570" y="-15901" z="-2256" h="25000"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_07" count="1" respawn="7200">
+		<point x="179279" y="-16219" z="-2256" h="25000"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_07" count="1" respawn="7200">
+		<point x="179370" y="-16196" z="-2256" h="25000"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_07" count="1" respawn="7200">
+		<point x="179408" y="-16158" z="-2256" h="25000"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_07" count="1" respawn="7200">
+		<point x="179562" y="-15984" z="-2256" h="25000"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_07" count="1" respawn="7200">
+		<point x="179599" y="-15943" z="-2256" h="25000"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179433" y="-16991" z="-2246" h="16384"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179715" y="-17454" z="-2246" h="16384"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179438" y="-16875" z="-2246" h="16384"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179540" y="-16876" z="-2246" h="16384"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179593" y="-16876" z="-2246" h="16384"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179485" y="-17213" z="-2246" h="16384"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179537" y="-17214" z="-2246" h="16384"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179641" y="-17215" z="-2246" h="16384"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179542" y="-17453" z="-2246" h="16384"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179594" y="-17453" z="-2246" h="16384"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179444" y="-16937" z="-2256" h="16384"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179468" y="-17280" z="-2256" h="16384"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179514" y="-17281" z="-2256" h="16384"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179479" y="-17133" z="-2256" h="16384"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179525" y="-17135" z="-2256" h="16384"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179576" y="-17137" z="-2256" h="16384"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179633" y="-17137" z="-2256" h="16384"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179436" y="-17776" z="-2256" h="16384"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179636" y="-17780" z="-2256" h="16384"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179697" y="-17781" z="-2256" h="16384"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179446" y="-17391" z="-2252" h="16384"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179508" y="-17341" z="-2252" h="16384"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179432" y="-17719" z="-2252" h="16384"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179437" y="-17522" z="-2252" h="16384"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179557" y="-17524" z="-2252" h="16384"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179707" y="-17722" z="-2252" h="16384"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179604" y="-17525" z="-2252" h="16384"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179665" y="-17527" z="-2252" h="16384"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179534" y="-17892" z="-2252" h="16384"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179436" y="-17841" z="-2252" h="16384"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179482" y="-17841" z="-2252" h="16384"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179536" y="-17842" z="-2252" h="16384"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179694" y="-17897" z="-2252" h="16384"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_08" count="1" respawn="1200">
+		<point x="179696" y="-17844" z="-2252" h="16384"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_boss" name="aden05agit_2517_12" count="1" respawn="7200">
+		<point x="178298" y="-17624" z="-2194" h="32768"/>
+		<npc id="35410"/><!--Густав-->
+	</spawn>
+	<spawn group="devastated_castle_boss" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="178306" y="-17535" z="-2195" h="0"/>
+		<npc id="35408"/><!--Dietrich-->
+	</spawn>
+	<spawn group="devastated_castle_boss" count="1" respawn="300" respawn_random="0" period_of_day="none">
+		<point x="178304" y="-17712" z="-2194" h="0"/>
+		<npc id="35409"/><!--Mikhail-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178437" y="-16548" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178437" y="-16587" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178435" y="-16627" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178435" y="-16665" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178433" y="-16704" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178433" y="-16742" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178431" y="-16784" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178431" y="-16822" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178430" y="-16862" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178430" y="-16901" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178161" y="-16562" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178160" y="-16600" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178158" y="-16640" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178158" y="-16679" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178156" y="-16718" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178156" y="-16756" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178154" y="-16797" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178154" y="-16836" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178153" y="-16876" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178153" y="-16914" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="177876" y="-16558" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="177876" y="-16597" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="177874" y="-16637" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="177873" y="-16675" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="177872" y="-16714" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="177871" y="-16752" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="177870" y="-16794" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="177869" y="-16832" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="177869" y="-16873" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="177868" y="-16911" z="-2217" h="0"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178403" y="-16566" z="-2218" h="0"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178398" y="-16781" z="-2218" h="0"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178397" y="-16824" z="-2218" h="0"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178395" y="-16865" z="-2218" h="0"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178326" y="-16720" z="-2218" h="0"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178324" y="-16762" z="-2218" h="0"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178324" y="-16804" z="-2218" h="0"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178122" y="-16672" z="-2218" h="0"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178120" y="-16714" z="-2218" h="0"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178122" y="-16759" z="-2218" h="0"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178117" y="-16885" z="-2218" h="0"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178061" y="-16738" z="-2218" h="0"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178063" y="-16784" z="-2218" h="0"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178060" y="-16826" z="-2218" h="0"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178060" y="-16868" z="-2218" h="0"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178366" y="-16582" z="-2217" h="0"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178366" y="-16674" z="-2217" h="0"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178366" y="-16721" z="-2217" h="0"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178363" y="-16768" z="-2217" h="0"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178290" y="-16550" z="-2217" h="0"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178290" y="-16690" z="-2217" h="0"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178288" y="-16783" z="-2217" h="0"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178285" y="-16832" z="-2217" h="0"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178095" y="-16736" z="-2217" h="0"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178092" y="-16782" z="-2217" h="0"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178090" y="-16878" z="-2217" h="0"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178029" y="-16587" z="-2217" h="0"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178029" y="-16727" z="-2217" h="0"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178027" y="-16773" z="-2217" h="0"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_10" count="1" respawn="7200">
+		<point x="178027" y="-16820" z="-2217" h="0"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177466" y="-17397" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177440" y="-17380" z="-2215" h="32768"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177501" y="-17384" z="-2219" h="32768"/>
+		<npc id="35416"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177439" y="-17426" z="-2215" h="32768"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177438" y="-17472" z="-2215" h="32768"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177436" y="-17605" z="-2215" h="32768"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177432" y="-17791" z="-2215" h="32768"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177431" y="-17836" z="-2215" h="32768"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177559" y="-17708" z="-2215" h="32768"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177558" y="-17755" z="-2215" h="32768"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177564" y="-17425" z="-2215" h="32768"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177561" y="-17563" z="-2215" h="32768"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177466" y="-17445" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177466" y="-17537" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177466" y="-17627" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177466" y="-17716" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177467" y="-17809" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177603" y="-17446" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177603" y="-17539" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177604" y="-17628" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177604" y="-17718" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177601" y="-17811" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177693" y="-17447" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177693" y="-17539" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177693" y="-17629" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177693" y="-17718" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177694" y="-17811" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177396" y="-17452" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177396" y="-17545" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177397" y="-17634" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177397" y="-17723" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177398" y="-17817" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177749" y="-17446" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177749" y="-17538" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177750" y="-17628" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177750" y="-17717" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177751" y="-17810" z="-2207" h="32768"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177531" y="-17399" z="-2215" h="32768"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177527" y="-17537" z="-2215" h="32768"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177527" y="-17578" z="-2215" h="32768"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177524" y="-17763" z="-2215" h="32768"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177523" y="-17810" z="-2215" h="32768"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177636" y="-17516" z="-2215" h="32768"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177635" y="-17603" z="-2215" h="32768"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177633" y="-17740" z="-2215" h="32768"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177632" y="-17788" z="-2215" h="32768"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177631" y="-17835" z="-2215" h="32768"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177501" y="-17424" z="-2219" h="32768"/>
+		<npc id="35416"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177500" y="-17469" z="-2219" h="32768"/>
+		<npc id="35416"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177496" y="-17645" z="-2219" h="32768"/>
+		<npc id="35416"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177496" y="-17686" z="-2219" h="32768"/>
+		<npc id="35416"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177666" y="-17508" z="-2219" h="32768"/>
+		<npc id="35416"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177664" y="-17559" z="-2219" h="32768"/>
+		<npc id="35416"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177664" y="-17599" z="-2219" h="32768"/>
+		<npc id="35416"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177662" y="-17644" z="-2219" h="32768"/>
+		<npc id="35416"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177662" y="-17685" z="-2219" h="32768"/>
+		<npc id="35416"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177661" y="-17818" z="-2219" h="32768"/>
+		<npc id="35416"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177728" y="-17377" z="-2219" h="32768"/>
+		<npc id="35416"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177725" y="-17503" z="-2219" h="32768"/>
+		<npc id="35416"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177724" y="-17553" z="-2219" h="32768"/>
+		<npc id="35416"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177724" y="-17594" z="-2219" h="32768"/>
+		<npc id="35416"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177722" y="-17728" z="-2219" h="32768"/>
+		<npc id="35416"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177722" y="-17768" z="-2219" h="32768"/>
+		<npc id="35416"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177721" y="-17813" z="-2219" h="32768"/>
+		<npc id="35416"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177567" y="-17376" z="-2219" h="32768"/>
+		<npc id="35416"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05agit_2517_11" count="1" respawn="7200">
+		<point x="177560" y="-17849" z="-2219" h="32768"/>
+		<npc id="35416"/><!--Рыцарь Судьбы-->
+	</spawn>
+	<spawn name="aden26_2517_p07" count="2" respawn="110" respawn_random="50">
+		<territory>
+			<add x="183360" y="-21944" zmin="-2868" zmax="-1968"/>
+			<add x="185420" y="-22504" zmin="-2868" zmax="-1968"/>
+			<add x="186232" y="-18980" zmin="-2868" zmax="-1968"/>
+			<add x="184084" y="-18076" zmin="-2868" zmax="-1968"/>
+			<add x="182364" y="-20832" zmin="-2868" zmax="-1968"/>
+		</territory>
+		<npc id="20974"/><!--Глава Злобных Душ-->
+	</spawn>
+	<spawn name="aden26_2517_p09" count="2" respawn="110" respawn_random="50">
+		<territory>
+			<add x="187212" y="-17564" zmin="-1488" zmax="-888"/>
+			<add x="189024" y="-16960" zmin="-1488" zmax="-888"/>
+			<add x="190196" y="-14860" zmin="-1488" zmax="-888"/>
+			<add x="189636" y="-12848" zmin="-1488" zmax="-888"/>
+			<add x="185708" y="-15252" zmin="-1488" zmax="-888"/>
+			<add x="185748" y="-16392" zmin="-1488" zmax="-888"/>
+		</territory>
+		<npc id="20974"/><!--Глава Злобных Душ-->
+	</spawn>
+	<spawn name="aden26_2517_p01" count="2" respawn="110" respawn_random="50">
+		<territory>
+			<add x="176140" y="-24540" zmin="-3756" zmax="-2756"/>
+			<add x="178952" y="-24176" zmin="-3756" zmax="-2756"/>
+			<add x="180216" y="-22556" zmin="-3756" zmax="-2756"/>
+			<add x="179172" y="-21132" zmin="-3756" zmax="-2756"/>
+			<add x="176132" y="-21396" zmin="-3756" zmax="-2756"/>
+			<add x="175116" y="-22760" zmin="-3756" zmax="-2756"/>
+		</territory>
+		<npc id="20974"/><!--Глава Злобных Душ-->
+	</spawn>
+	<spawn name="aden26_2517_p04" count="1" respawn="110" respawn_random="50">
+		<territory>
+			<add x="183016" y="-25796" zmin="-2700" zmax="-2000"/>
+			<add x="185672" y="-27000" zmin="-2700" zmax="-2000"/>
+			<add x="186312" y="-26104" zmin="-2700" zmax="-2000"/>
+			<add x="185488" y="-23136" zmin="-2700" zmax="-2000"/>
+		</territory>
+		<npc id="20974"/><!--Глава Злобных Душ-->
+	</spawn>
+	<spawn name="aden26_2517_p03" count="2" respawn="110" respawn_random="50">
+		<territory>
+			<add x="179912" y="-23408" zmin="-3076" zmax="-2276"/>
+			<add x="182984" y="-25660" zmin="-3076" zmax="-2276"/>
+			<add x="185464" y="-23036" zmin="-3076" zmax="-2276"/>
+			<add x="183304" y="-22152" zmin="-3076" zmax="-2276"/>
+			<add x="180656" y="-22564" zmin="-3076" zmax="-2276"/>
+		</territory>
+		<npc id="20974"/><!--Глава Злобных Душ-->
+	</spawn>
+	<spawn name="aden26_2517_p11" count="1" respawn="110" respawn_random="50">
+		<territory>
+			<add x="183796" y="-8752" zmin="-3000" zmax="-2000"/>
+			<add x="185328" y="-9728" zmin="-3000" zmax="-2000"/>
+			<add x="186848" y="-8744" zmin="-3000" zmax="-2000"/>
+			<add x="185596" y="-6740" zmin="-3000" zmax="-2000"/>
+			<add x="183340" y="-5000" zmin="-3000" zmax="-2000"/>
+			<add x="183132" y="-5708" zmin="-3000" zmax="-2000"/>
+		</territory>
+		<npc id="20974"/><!--Глава Злобных Душ-->
+	</spawn>
+	<spawn name="aden26_2517_p10" count="1" respawn="110" respawn_random="50">
+		<territory>
+			<add x="186688" y="-13504" zmin="-2160" zmax="-1560"/>
+			<add x="188636" y="-12524" zmin="-2160" zmax="-1560"/>
+			<add x="188544" y="-10264" zmin="-2160" zmax="-1560"/>
+			<add x="187364" y="-9284" zmin="-2160" zmax="-1560"/>
+			<add x="185960" y="-11000" zmin="-2160" zmax="-1560"/>
+			<add x="185940" y="-12556" zmin="-2160" zmax="-1560"/>
+		</territory>
+		<npc id="20974"/><!--Глава Злобных Душ-->
+	</spawn>
+	<spawn name="aden26_2517_p15" count="2" respawn="110" respawn_random="50">
+		<territory>
+			<add x="170704" y="-9476" zmin="-3464" zmax="-2664"/>
+			<add x="173916" y="-11524" zmin="-3464" zmax="-2664"/>
+			<add x="176060" y="-9952" zmin="-3464" zmax="-2664"/>
+			<add x="175700" y="-8136" zmin="-3464" zmax="-2664"/>
+			<add x="173676" y="-6452" zmin="-3464" zmax="-2664"/>
+			<add x="171924" y="-7276" zmin="-3464" zmax="-2664"/>
+		</territory>
+		<npc id="20974"/><!--Глава Злобных Душ-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_04" count="1" respawn="7200">
+		<point x="178640" y="-18216" z="-2200" h="-16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_04" count="1" respawn="7200">
+		<point x="178661" y="-18218" z="-2200" h="-16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_04" count="1" respawn="7200">
+		<point x="178682" y="-18220" z="-2200" h="-16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_04" count="1" respawn="7200">
+		<point x="178703" y="-18222" z="-2200" h="-16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_04" count="1" respawn="7200">
+		<point x="178724" y="-18224" z="-2200" h="-16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_04" count="1" respawn="7200">
+		<point x="178745" y="-18226" z="-2200" h="-16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_04" count="1" respawn="7200">
+		<point x="178766" y="-18228" z="-2200" h="-16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_04" count="1" respawn="7200">
+		<point x="178788" y="-18229" z="-2200" h="-16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_04" count="1" respawn="7200">
+		<point x="178640" y="-18196" z="-2200" h="-16384"/>
+		<npc id="35414"/><!--Солдат Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_04" count="1" respawn="7200">
+		<point x="178661" y="-18198" z="-2200" h="-16384"/>
+		<npc id="35414"/><!--Солдат Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_04" count="1" respawn="7200">
+		<point x="178682" y="-18200" z="-2200" h="-16384"/>
+		<npc id="35414"/><!--Солдат Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_04" count="1" respawn="7200">
+		<point x="178703" y="-18202" z="-2200" h="-16384"/>
+		<npc id="35414"/><!--Солдат Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_04" count="1" respawn="7200">
+		<point x="178724" y="-18204" z="-2200" h="-16384"/>
+		<npc id="35414"/><!--Солдат Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_04" count="1" respawn="7200">
+		<point x="178745" y="-18206" z="-2200" h="-16384"/>
+		<npc id="35414"/><!--Солдат Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_04" count="1" respawn="7200">
+		<point x="178766" y="-18208" z="-2200" h="-16384"/>
+		<npc id="35414"/><!--Солдат Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_04" count="1" respawn="7200">
+		<point x="178788" y="-18209" z="-2200" h="-16384"/>
+		<npc id="35414"/><!--Солдат Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_04" count="1" respawn="7200">
+		<point x="178640" y="-18176" z="-2200" h="-16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_04" count="1" respawn="7200">
+		<point x="178661" y="-18178" z="-2200" h="-16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_04" count="1" respawn="7200">
+		<point x="178682" y="-18180" z="-2200" h="-16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_04" count="1" respawn="7200">
+		<point x="178703" y="-18182" z="-2200" h="-16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_04" count="1" respawn="7200">
+		<point x="178724" y="-18184" z="-2200" h="-16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_04" count="1" respawn="7200">
+		<point x="178745" y="-18186" z="-2200" h="-16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_04" count="1" respawn="7200">
+		<point x="178766" y="-18188" z="-2200" h="-16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_04" count="1" respawn="7200">
+		<point x="178788" y="-18189" z="-2200" h="-16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_03" count="1" respawn="7200">
+		<point x="177834" y="-15015" z="-2210" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_03" count="1" respawn="7200">
+		<point x="177803" y="-14971" z="-2210" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_03" count="1" respawn="7200">
+		<point x="177772" y="-14927" z="-2210" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_03" count="1" respawn="7200">
+		<point x="177741" y="-14883" z="-2210" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_03" count="1" respawn="7200">
+		<point x="177711" y="-14838" z="-2210" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_03" count="1" respawn="7200">
+		<point x="177680" y="-14794" z="-2210" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_03" count="1" respawn="7200">
+		<point x="177649" y="-14750" z="-2210" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_03" count="1" respawn="7200">
+		<point x="177619" y="-14705" z="-2210" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_02" count="1" respawn="7200">
+		<point x="178801" y="-14975" z="-2080" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_02" count="1" respawn="7200">
+		<point x="178822" y="-14936" z="-2080" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_02" count="1" respawn="7200">
+		<point x="178843" y="-14897" z="-2080" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_02" count="1" respawn="7200">
+		<point x="178865" y="-14857" z="-2080" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_02" count="1" respawn="7200">
+		<point x="178886" y="-14818" z="-2080" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_02" count="1" respawn="7200">
+		<point x="178908" y="-14778" z="-2080" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_02" count="1" respawn="7200">
+		<point x="178929" y="-14739" z="-2080" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_02" count="1" respawn="7200">
+		<point x="178951" y="-14699" z="-2080" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178222" y="-14944" z="-2200" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178255" y="-14944" z="-2200" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178288" y="-14944" z="-2200" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178321" y="-14944" z="-2200" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178354" y="-14944" z="-2200" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178387" y="-14944" z="-2200" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178420" y="-14944" z="-2200" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178454" y="-14944" z="-2200" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178222" y="-14924" z="-2200" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178255" y="-14924" z="-2200" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178288" y="-14924" z="-2200" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178321" y="-14924" z="-2200" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178354" y="-14924" z="-2200" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178387" y="-14924" z="-2200" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178420" y="-14924" z="-2200" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178454" y="-14924" z="-2200" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178222" y="-14904" z="-2200" h="16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178255" y="-14904" z="-2200" h="16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178288" y="-14904" z="-2200" h="16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178321" y="-14904" z="-2200" h="16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178354" y="-14904" z="-2200" h="16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178387" y="-14904" z="-2200" h="16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178420" y="-14904" z="-2200" h="16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178454" y="-14904" z="-2200" h="16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178222" y="-14884" z="-2200" h="16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178255" y="-14884" z="-2200" h="16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178288" y="-14884" z="-2200" h="16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178321" y="-14884" z="-2200" h="16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178354" y="-14884" z="-2200" h="16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178387" y="-14884" z="-2200" h="16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178420" y="-14884" z="-2200" h="16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_01" count="1" respawn="7200">
+		<point x="178454" y="-14884" z="-2200" h="16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177707" y="-15427" z="-2226" h="3000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177727" y="-15464" z="-2226" h="3000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177680" y="-15485" z="-2226" h="3000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177745" y="-15498" z="-2226" h="3000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177769" y="-15540" z="-2226" h="3000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177722" y="-15561" z="-2226" h="3000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177788" y="-15578" z="-2226" h="3000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177811" y="-15622" z="-2226" h="3000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177765" y="-15643" z="-2226" h="3000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177838" y="-15664" z="-2226" h="3000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177859" y="-15704" z="-2226" h="3000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177813" y="-15726" z="-2226" h="3000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177880" y="-15744" z="-2226" h="3000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177906" y="-15791" z="-2226" h="3000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177859" y="-15812" z="-2226" h="3000"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177470" y="-15856" z="-2250" h="10000"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177506" y="-15887" z="-2250" h="10000"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177627" y="-15953" z="-2250" h="10000"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177703" y="-15999" z="-2250" h="10000"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177400" y="-15854" z="-2250" h="10000"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177517" y="-15930" z="-2250" h="10000"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177564" y="-15963" z="-2250" h="10000"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177608" y="-15985" z="-2250" h="10000"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177709" y="-16043" z="-2253" h="10000"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177387" y="-15955" z="-2250" h="10000"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177661" y="-16014" z="-2253" h="10000"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177308" y="-15861" z="-2253" h="10000"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177606" y="-16035" z="-2253" h="10000"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177861" y="-16164" z="-2253" h="10000"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177810" y="-16145" z="-2253" h="10000"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177719" y="-15951" z="-2253" h="10000"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177667" y="-15921" z="-2253" h="10000"/>
+		<npc id="35411"/><!--Слуга Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177428" y="-15981" z="-2250" h="10000"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177473" y="-16011" z="-2250" h="10000"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177612" y="-16090" z="-2250" h="10000"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177657" y="-16113" z="-2250" h="10000"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177387" y="-15996" z="-2250" h="10000"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177433" y="-16026" z="-2250" h="10000"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177530" y="-16079" z="-2250" h="10000"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177571" y="-16105" z="-2250" h="10000"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_06" count="1" respawn="7200">
+		<point x="177663" y="-16154" z="-2250" h="10000"/>
+		<npc id="35415"/><!--Воин Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_05" count="1" respawn="7200">
+		<point x="177335" y="-17128" z="-2200" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_05" count="1" respawn="7200">
+		<point x="177305" y="-17128" z="-2200" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_05" count="1" respawn="7200">
+		<point x="177276" y="-17128" z="-2200" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_05" count="1" respawn="7200">
+		<point x="177246" y="-17128" z="-2200" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_05" count="1" respawn="7200">
+		<point x="177217" y="-17128" z="-2200" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_05" count="1" respawn="7200">
+		<point x="177187" y="-17128" z="-2200" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_05" count="1" respawn="7200">
+		<point x="177158" y="-17128" z="-2200" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_05" count="1" respawn="7200">
+		<point x="177129" y="-17128" z="-2200" h="16384"/>
+		<npc id="35413"/><!--Стрелок Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_05" count="1" respawn="7200">
+		<point x="177335" y="-17148" z="-2200" h="16384"/>
+		<npc id="35414"/><!--Солдат Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_05" count="1" respawn="7200">
+		<point x="177305" y="-17148" z="-2200" h="16384"/>
+		<npc id="35414"/><!--Солдат Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_05" count="1" respawn="7200">
+		<point x="177276" y="-17148" z="-2200" h="16384"/>
+		<npc id="35414"/><!--Солдат Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_05" count="1" respawn="7200">
+		<point x="177246" y="-17148" z="-2200" h="16384"/>
+		<npc id="35414"/><!--Солдат Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_05" count="1" respawn="7200">
+		<point x="177217" y="-17148" z="-2200" h="16384"/>
+		<npc id="35414"/><!--Солдат Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_05" count="1" respawn="7200">
+		<point x="177187" y="-17148" z="-2200" h="16384"/>
+		<npc id="35414"/><!--Солдат Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_05" count="1" respawn="7200">
+		<point x="177158" y="-17148" z="-2200" h="16384"/>
+		<npc id="35414"/><!--Солдат Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_05" count="1" respawn="7200">
+		<point x="177129" y="-17148" z="-2200" h="16384"/>
+		<npc id="35414"/><!--Солдат Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_05" count="1" respawn="7200">
+		<point x="177335" y="-17168" z="-2200" h="16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_05" count="1" respawn="7200">
+		<point x="177305" y="-17168" z="-2200" h="16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_05" count="1" respawn="7200">
+		<point x="177276" y="-17168" z="-2200" h="16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_05" count="1" respawn="7200">
+		<point x="177246" y="-17168" z="-2200" h="16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_05" count="1" respawn="7200">
+		<point x="177217" y="-17168" z="-2200" h="16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_05" count="1" respawn="7200">
+		<point x="177187" y="-17168" z="-2200" h="16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_05" count="1" respawn="7200">
+		<point x="177158" y="-17168" z="-2200" h="16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>
+	<spawn group="devastated_castle_guards" name="aden05_agit2517_05" count="1" respawn="7200">
+		<point x="177129" y="-17168" z="-2200" h="16384"/>
+		<npc id="35412"/><!--Страж Судьбы-->
+	</spawn>	
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183560" y="-16040" z="-2712" h="1856" />
+		<npc id="31641" /><!--Темный Паломник-->
+	</spawn>
+	<spawn name="Sufirzeum" count="1" respawn="86400" respawn_random="12000">
+		<point x="174136" y="-6264" z="-3328" h="21344"/>
+		<npc id="25748"/><!--Раэль Махум Суфирзеум-->
+	</spawn>
+	<spawn name="Radium" count="1" respawn="86400" respawn_random="12000">
+		<point x="180536" y="-7208" z="-3184" h="21344"/>
+		<npc id="25747"/><!--Раэль Махум Радиум-->
+	</spawn>
+	<spawn name="Magicus" count="1" respawn="86400" respawn_random="12000">
+		<point x="183672" y="-12216" z="-3056" h="21344"/>
+		<npc id="25746"/><!--Злой Магикус-->
+	</spawn>
+	<spawn name="Feron" count="1" respawn="86400" respawn_random="12000">
+		<point x="169408" y="-5480" z="-2688" h="21344"/>
+		<npc id="25749"/><!--Король Тай Ферон-->
+	</spawn>
+	<spawn name="Septon" count="1" respawn="86400" respawn_random="12000">
+		<point x="169624" y="-17432" z="-3152" h="21344"/>
+		<npc id="25751"/><!--Чемпион Тай Септон-->
+	</spawn>
+	<spawn name="Marga" count="1" respawn="86400" respawn_random="12000">
+		<point x="164520" y="-8264" z="-2752" h="21344"/>
+		<npc id="25750"/><!--Шаман Тай Марга-->
+	</spawn>
+</list>

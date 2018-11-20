@@ -1,0 +1,14 @@
+<html><head><body>
+Главный Кузнец Кусто:<br>
+Я председатель Гильдии Черной Наковальни в Глудине, Главный Кузнец Кусто. Наша Гильдия Черной Наковальни, в отличие от Железных Врат, не столь меркантильна. Иногда нужно делать и то, на чем нельзя заработать денег. Если мое мастерство сделает кого-то счастливыми, разве это не хорошо?<br>
+По какому делу Вы пожаловали ко мне? Я помогу, если смогу.<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">Узнать о 2-й смене профессии</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="link weapon_variation001.htm">Вставить руну в оружие</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Клан</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Альянс</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Обменять Ежедневные Монеты</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Квест</Button>
+</body>
+</head></html>

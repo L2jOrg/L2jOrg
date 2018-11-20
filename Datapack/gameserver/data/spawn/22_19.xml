@@ -1,0 +1,2334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="oren_castle_light_side">
+		<point x="83032" y="53232" z="-1488" h="28153"/>
+		<npc id="36612"/><!--Герольд-->
+	</spawn>
+	<spawn name="oren17_npc2219_037" count="1" respawn="60">
+		<point x="80913" y="53053" z="-1560" h="2950"/>
+		<npc id="30196"/><!--Моен-->
+	</spawn>
+	<territory name="oren28_2219_08">
+		<add x="75376" y="42856" zmin="-3268" zmax="-2668"/>
+		<add x="76448" y="44300" zmin="-3268" zmax="-2668"/>
+		<add x="75268" y="46072" zmin="-3268" zmax="-2668"/>
+		<add x="73932" y="45356" zmin="-3268" zmax="-2668"/>
+		<add x="74488" y="43468" zmin="-3268" zmax="-2668"/>
+	</territory>
+	<spawn name="oren28_2219_08" count="1" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_08"/>
+		<npc id="20587"/><!--Шаман Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_08" count="1" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_08"/>
+		<npc id="20588"/><!--Владыка Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_08" count="1" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_08"/>
+		<npc id="20586"/><!--Воин Орков Тимак-->
+	</spawn>
+	<territory name="oren28_2219_09">
+		<add x="74760" y="40128" zmin="-3220" zmax="-2620"/>
+		<add x="75376" y="40744" zmin="-3220" zmax="-2620"/>
+		<add x="75368" y="42848" zmin="-3220" zmax="-2620"/>
+		<add x="74476" y="43464" zmin="-3220" zmax="-2620"/>
+		<add x="73492" y="42404" zmin="-3220" zmax="-2620"/>
+		<add x="73588" y="41156" zmin="-3220" zmax="-2620"/>
+	</territory>
+	<spawn name="oren28_2219_09" count="1" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_09"/>
+		<npc id="20587"/><!--Шаман Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_09" count="1" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_09"/>
+		<npc id="20588"/><!--Владыка Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_09" count="1" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_09"/>
+		<npc id="20586"/><!--Воин Орков Тимак-->
+	</spawn>
+	<territory name="oren28_2219_06">
+		<add x="69624" y="48708" zmin="-3760" zmax="-3260"/>
+		<add x="74092" y="48860" zmin="-3760" zmax="-3260"/>
+		<add x="72052" y="53092" zmin="-3760" zmax="-3260"/>
+		<add x="69112" y="50864" zmin="-3760" zmax="-3260"/>
+	</territory>
+	<spawn name="oren28_2219_06" count="2" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_06"/>
+		<npc id="20587"/><!--Шаман Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_06" count="1" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_06"/>
+		<npc id="20588"/><!--Владыка Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_06" count="2" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_06"/>
+		<npc id="20586"/><!--Воин Орков Тимак-->
+	</spawn>
+	<territory name="oren28_2219_07">
+		<add x="71496" y="48744" zmin="-3720" zmax="-3020"/>
+		<add x="73892" y="45372" zmin="-3720" zmax="-3020"/>
+		<add x="75268" y="46100" zmin="-3720" zmax="-3020"/>
+		<add x="73908" y="48836" zmin="-3720" zmax="-3020"/>
+	</territory>
+	<spawn name="oren28_2219_07" count="1" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_07"/>
+		<npc id="20587"/><!--Шаман Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_07" count="1" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_07"/>
+		<npc id="20588"/><!--Владыка Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_07" count="1" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_07"/>
+		<npc id="20586"/><!--Воин Орков Тимак-->
+	</spawn>
+	<spawn name="oren17_npc2219_027" count="1" respawn="60">
+		<point x="83676" y="56144" z="-1520" h="48000"/>
+		<npc id="30683"/><!--Дант-->
+	</spawn>
+	<spawn name="oren17_npc2219_027" count="1" respawn="60">
+		<point x="83712" y="56000" z="-1464" h="32000"/>
+		<npc id="30682"/><!--Пекирон-->
+	</spawn>
+	<spawn name="oren17_npc2219_027" count="1" respawn="60">
+		<point x="83760" y="56096" z="-1523" h="36234"/>
+		<npc id="30681"/><!--Кария-->
+	</spawn>
+	<spawn name="oren17_npc2219_021" count="1" respawn="60">
+		<point x="80071" y="55068" z="-1544" h="40064"/>
+		<npc id="31052"/><!--Хейд-->
+	</spawn>
+	<spawn name="oren17_npc2219_022" count="1" respawn="60">
+		<point x="79111" y="53657" z="-1548" h="0"/>
+		<npc id="30178"/><!--Зенкин-->
+	</spawn>
+	<spawn name="oren17_npc2219_022" count="1" respawn="60">
+		<point x="79112" y="53602" z="-1548" h="0"/>
+		<npc id="30179"/><!--Раудия-->
+	</spawn>
+	<spawn name="oren17_npc2219_023" count="1" respawn="60">
+		<point x="79769" y="55048" z="-1544" h="48500"/>
+		<npc id="30929"/><!--Патрин-->
+	</spawn>
+	<territory name="oren28_2219_04">
+		<add x="65596" y="45772" zmin="-3996" zmax="-3296"/>
+		<add x="67508" y="45740" zmin="-3996" zmax="-3296"/>
+		<add x="69616" y="48732" zmin="-3996" zmax="-3296"/>
+		<add x="69100" y="50864" zmin="-3996" zmax="-3296"/>
+		<add x="65704" y="54152" zmin="-3996" zmax="-3296"/>
+	</territory>
+	<spawn name="oren28_2219_04" count="2" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_04"/>
+		<npc id="20587"/><!--Шаман Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_04" count="3" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_04"/>
+		<npc id="20588"/><!--Владыка Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_04" count="2" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_04"/>
+		<npc id="20586"/><!--Воин Орков Тимак-->
+	</spawn>
+	<territory name="oren28_2219_05">
+		<add x="65760" y="54168" zmin="-3764" zmax="-3264"/>
+		<add x="69128" y="50884" zmin="-3764" zmax="-3264"/>
+		<add x="72104" y="53112" zmin="-3764" zmax="-3264"/>
+		<add x="71412" y="56440" zmin="-3764" zmax="-3264"/>
+		<add x="65748" y="56868" zmin="-3764" zmax="-3264"/>
+	</territory>
+	<spawn name="oren28_2219_05" count="2" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_05"/>
+		<npc id="20587"/><!--Шаман Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_05" count="3" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_05"/>
+		<npc id="20588"/><!--Владыка Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_05" count="3" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_05"/>
+		<npc id="20586"/><!--Воин Орков Тимак-->
+	</spawn>
+	<territory name="oren28_2219_02">
+		<add x="65716" y="36564" zmin="-3868" zmax="-3268"/>
+		<add x="69412" y="36644" zmin="-3868" zmax="-3268"/>
+		<add x="70716" y="40920" zmin="-3868" zmax="-3268"/>
+		<add x="65700" y="41880" zmin="-3868" zmax="-3268"/>
+	</territory>
+	<spawn name="oren28_2219_02" count="1" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_02"/>
+		<npc id="20587"/><!--Шаман Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_02" count="2" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_02"/>
+		<npc id="20588"/><!--Владыка Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_02" count="1" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_02"/>
+		<npc id="20586"/><!--Воин Орков Тимак-->
+	</spawn>
+	<territory name="oren28_2219_03">
+		<add x="65704" y="41848" zmin="-3964" zmax="-3064"/>
+		<add x="68660" y="41284" zmin="-3964" zmax="-3064"/>
+		<add x="67840" y="45804" zmin="-3964" zmax="-3064"/>
+		<add x="65712" y="45876" zmin="-3964" zmax="-3064"/>
+	</territory>
+	<spawn name="oren28_2219_03" count="2" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_03"/>
+		<npc id="20587"/><!--Шаман Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_03" count="2" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_03"/>
+		<npc id="20588"/><!--Владыка Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_03" count="2" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_03"/>
+		<npc id="20586"/><!--Воин Орков Тимак-->
+	</spawn>
+	<territory name="oren28_2219_01">
+		<add x="69452" y="36716" zmin="-3664" zmax="-3064"/>
+		<add x="70752" y="36332" zmin="-3664" zmax="-3064"/>
+		<add x="73856" y="39204" zmin="-3664" zmax="-3064"/>
+		<add x="70760" y="40964" zmin="-3664" zmax="-3064"/>
+	</territory>
+	<spawn name="oren28_2219_01" count="2" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_01"/>
+		<npc id="20587"/><!--Шаман Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_01" count="2" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_01"/>
+		<npc id="20588"/><!--Владыка Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_01" count="2" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_01"/>
+		<npc id="20586"/><!--Воин Орков Тимак-->
+	</spawn>
+	<spawn name="oren17_npc2219_018" count="1" respawn="60">
+		<point x="81420" y="56240" z="-1520" h="14667"/>
+		<npc id="30201"/><!--Пинапс-->
+	</spawn>
+	<spawn name="oren17_npc2219_018" count="1" respawn="60">
+		<point x="81631" y="56240" z="-1520" h="20424"/>
+		<npc id="30200"/><!--Стэн-->
+	</spawn>
+	<spawn name="oren17_npc2219_019" count="1" respawn="60">
+		<point x="92743" y="55523" z="-3370" h="32768"/>
+		<npc id="31002"/><!--Реорин-->
+	</spawn>
+	<spawn name="oren17_npc2219_014" count="1" respawn="60">
+		<point x="83469" y="53215" z="-1456" h="0"/>
+		<npc id="30188"/><!--Вадин-->
+	</spawn>
+	<spawn name="oren17_npc2219_014" count="1" respawn="60">
+		<point x="83469" y="53398" z="-1456" h="0"/>
+		<npc id="30189"/><!--Ровия-->
+	</spawn>
+	<spawn name="oren17_npc2219_014" count="1" respawn="60">
+		<point x="83785" y="53215" z="-1456" h="32768"/>
+		<npc id="30680"/><!--Эгнос-->
+	</spawn>
+	<spawn name="oren17_npc2219_014" count="1" respawn="60">
+		<point x="83785" y="53398" z="-1456" h="32768"/>
+		<npc id="30190"/><!--Фановия-->
+	</spawn>
+	<spawn name="oren17_npc2219_015" count="1" respawn="60">
+		<point x="83201" y="55005" z="-1504" h="52055"/>
+		<npc id="30195"/><!--Брексон-->
+	</spawn>
+	<spawn name="oren17_npc2219_015" count="1" respawn="60">
+		<point x="83477" y="54912" z="-1504" h="32768"/>
+		<npc id="30192"/><!--Дарья-->
+	</spawn>
+	<spawn name="oren17_npc2219_015" count="1" respawn="60">
+		<point x="82930" y="54911" z="-1504" h="0"/>
+		<npc id="30194"/><!--Гидеон-->
+	</spawn>
+	<spawn name="oren17_npc2219_016" count="1" respawn="60">
+		<point x="81102" y="53053" z="-1560" h="47606"/>
+		<npc id="30197"/><!--Гектор-->
+	</spawn>
+	<spawn name="oren17_npc2219_017" count="1" respawn="60">
+		<point x="79671" y="54184" z="-1560" h="32768"/>
+		<npc id="30199"/><!--Ятис-->
+	</spawn>
+	<spawn name="oren17_npc2219_017" count="1" respawn="60">
+		<point x="79671" y="54384" z="-1560" h="32768"/>
+		<npc id="30198"/><!--Джерин-->
+	</spawn>
+	<spawn name="oren17_npc2219_010" count="1" respawn="60">
+		<point x="83741" y="55410" z="-1512" h="25170"/>
+		<npc id="30677"/><!--Флатер-->
+	</spawn>
+	<spawn name="oren17_npc2219_010" count="1" respawn="60">
+		<point x="83684" y="55631" z="-1512" h="45056"/>
+		<npc id="30678"/><!--Хельтон-->
+	</spawn>
+	<spawn name="oren17_npc2219_011" count="1" respawn="60">
+		<point x="82992" y="53171" z="-1488" h="31000"/>
+		<npc id="30177"/><!--Валентина-->
+	</spawn>
+	<spawn name="oren17_npc2219_012" count="1" respawn="60">
+		<point x="79183" y="56947" z="-1504" h="57346"/>
+		<npc id="30187"/><!--Клаус Блэкберд-->
+	</spawn>
+	<spawn name="oren17_npc2219_012" count="1" respawn="60">
+		<point x="79706" y="56914" z="-1512" h="32768"/>
+		<npc id="30185"/><!--Таниак Блэкберд-->
+	</spawn>
+	<spawn name="oren17_npc2219_012" count="1" respawn="60">
+		<point x="79448" y="57053" z="-1512" h="49152"/>
+		<npc id="30186"/><!--Бан-->
+	</spawn>
+	<spawn name="oren17_npc2219_012" count="1" respawn="60">
+		<point x="79213" y="56423" z="-1512" h="16384"/>
+		<npc id="30679"/><!--Ромерия-->
+	</spawn>
+	<spawn name="oren17_npc2219_012" count="1" respawn="60">
+		<point x="79077" y="56694" z="-1512" h="0"/>
+		<npc id="30184"/><!--Ригол-->
+	</spawn>
+	<spawn name="oren17_npc2219_013" count="1" respawn="60">
+		<point x="83634" y="52927" z="-1440" h="17112"/>
+		<npc id="30191"/><!--Холлинт-->
+	</spawn>
+	<territory name="oren28_2219_13">
+		<add x="76536" y="58652" zmin="-3188" zmax="-2688"/>
+		<add x="77064" y="59460" zmin="-3188" zmax="-2688"/>
+		<add x="75100" y="62072" zmin="-3188" zmax="-2688"/>
+		<add x="74236" y="62288" zmin="-3188" zmax="-2688"/>
+		<add x="72740" y="61092" zmin="-3188" zmax="-2688"/>
+		<add x="72744" y="59672" zmin="-3188" zmax="-2688"/>
+		<add x="74284" y="57804" zmin="-3188" zmax="-2688"/>
+		<add x="75388" y="58080" zmin="-3188" zmax="-2688"/>
+	</territory>
+	<spawn name="oren28_2219_13" count="2" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_13"/>
+		<npc id="20585"/><!--Воитель Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_13" count="3" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_13"/>
+		<npc id="20586"/><!--Воин Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_13" count="2" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_13"/>
+		<npc id="20587"/><!--Шаман Орков Тимак-->
+	</spawn>
+	<territory name="oren28_2219_11">
+		<add x="69048" y="58284" zmin="-3768" zmax="-3168"/>
+		<add x="71364" y="60128" zmin="-3768" zmax="-3168"/>
+		<add x="72388" y="62488" zmin="-3768" zmax="-3168"/>
+		<add x="68776" y="65288" zmin="-3768" zmax="-3168"/>
+	</territory>
+	<spawn name="oren28_2219_11" count="2" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_11"/>
+		<npc id="20587"/><!--Шаман Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_11" count="3" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_11"/>
+		<npc id="20585"/><!--Воитель Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_11" count="3" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_11"/>
+		<npc id="20586"/><!--Воин Орков Тимак-->
+	</spawn>
+	<territory name="oren28_2219_12">
+		<add x="72380" y="62548" zmin="-3764" zmax="-3264"/>
+		<add x="75444" y="63548" zmin="-3764" zmax="-3264"/>
+		<add x="74568" y="65284" zmin="-3764" zmax="-3264"/>
+		<add x="68816" y="65268" zmin="-3764" zmax="-3264"/>
+	</territory>
+	<spawn name="oren28_2219_12" count="2" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_12"/>
+		<npc id="20585"/><!--Воитель Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_12" count="2" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_12"/>
+		<npc id="20586"/><!--Воин Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_12" count="2" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_12"/>
+		<npc id="20587"/><!--Шаман Орков Тимак-->
+	</spawn>
+	<territory name="oren28_2219_10">
+		<add x="67164" y="56844" zmin="-3844" zmax="-2844"/>
+		<add x="71872" y="56452" zmin="-3844" zmax="-2844"/>
+		<add x="73020" y="57660" zmin="-3844" zmax="-2844"/>
+		<add x="71368" y="60184" zmin="-3844" zmax="-2844"/>
+	</territory>
+	<spawn name="oren28_2219_10" count="2" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_10"/>
+		<npc id="20587"/><!--Шаман Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_10" count="2" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_10"/>
+		<npc id="20588"/><!--Владыка Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_10" count="3" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_10"/>
+		<npc id="20586"/><!--Воин Орков Тимак-->
+	</spawn>
+	<spawn name="oren17_npc2219_007" count="1" respawn="60">
+		<point x="79610" y="56717" z="-1512" h="24576"/>
+		<npc id="30623"/><!--Каен-->
+	</spawn>
+	<spawn name="oren17_npc2219_008" count="1" respawn="60">
+		<point x="79451" y="54973" z="-1544" h="0"/>
+		<npc id="30180"/><!--Сара-->
+	</spawn>
+	<spawn name="oren17_npc2219_008" count="1" respawn="60">
+		<point x="79451" y="54877" z="-1544" h="0"/>
+		<npc id="30181"/><!--Галибредо-->
+	</spawn>
+	<spawn name="oren17_npc2219_009" count="1" respawn="60">
+		<point x="81655" y="54736" z="-1504" h="16384"/>
+		<npc id="30676"/><!--Круп-->
+	</spawn>
+	<spawn name="oren17_npc2219_009" count="1" respawn="60">
+		<point x="81315" y="54986" z="-1504" h="57343"/>
+		<npc id="30182"/><!--Клифф-->
+	</spawn>
+	<spawn name="oren17_npc2219_009" count="1" respawn="60">
+		<point x="81777" y="55123" z="-1504" h="32768"/>
+		<npc id="30183"/><!--Хаггер-->
+	</spawn>
+	<spawn name="oren17_npc2219_003" count="1" respawn="60">
+		<point x="80036" y="56568" z="-1552" h="57344"/>
+		<npc id="30760"/><!--Сэр Густав Атебальт-->
+	</spawn>
+	<spawn name="oren17_npc2219_005" count="1" respawn="60">
+		<point x="83183" y="53715" z="-1448" h="32768"/>
+		<npc id="30657"/><!--Сересин-->
+	</spawn>
+	<spawn name="oren17_npc2219_006" count="1" respawn="60">
+		<point x="83629" y="55957" z="-1520" h="16384"/>
+		<npc id="30641"/><!--Такуна-->
+	</spawn>
+	<spawn name="oren20_npc2219_001" count="1" respawn="60">
+		<point x="83056" y="37425" z="-2280" h="32768"/>
+		<npc id="35228"/><!--Моррисон-->
+	</spawn>
+	<spawn name="oren20_npc2219_101" count="1" respawn="60" group="oren_castle_4">
+		<point x="82560" y="37568" z="-2449" h="49152"/>
+		<npc id="35224"/><!--Кузнец-->
+	</spawn>
+	<spawn name="oren20_npc2219_103" count="1" respawn="60" group="oren_castle_4">
+		<point x="83856" y="37352" z="-1826" h="49000"/>
+		<npc id="35227"/><!--Финрод-->
+	</spawn>
+	<spawn name="oren20_npc2219_102" count="1" respawn="60" group="oren_castle_4">
+		<point x="81983" y="37214" z="-2458" h="0"/>
+		<npc id="35225"/><!--Рабочий Склада-->
+	</spawn>
+	<territory name="oren28_2219_02s">
+		<add x="66728" y="37900" zmin="-3832" zmax="-3432"/>
+		<add x="69348" y="37364" zmin="-3832" zmax="-3432"/>
+		<add x="70180" y="40600" zmin="-3832" zmax="-3432"/>
+		<add x="67944" y="40612" zmin="-3832" zmax="-3432"/>
+	</territory>
+	<spawn name="oren28_2219_02s" count="1" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_02s"/>
+		<npc id="20587"/><!--Шаман Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_02s" count="1" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_02s"/>
+		<npc id="20588"/><!--Владыка Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_02s" count="1" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_02s"/>
+		<npc id="20586"/><!--Воин Орков Тимак-->
+	</spawn>
+	<territory name="oren28_2219_05s">
+		<add x="67740" y="52892" zmin="-3728" zmax="-3428"/>
+		<add x="70276" y="52088" zmin="-3728" zmax="-3428"/>
+		<add x="70508" y="55632" zmin="-3728" zmax="-3428"/>
+		<add x="68900" y="56336" zmin="-3728" zmax="-3428"/>
+	</territory>
+	<spawn name="oren28_2219_05s" count="1" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_05s"/>
+		<npc id="20587"/><!--Шаман Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_05s" count="1" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_05s"/>
+		<npc id="20588"/><!--Владыка Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_05s" count="1" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_05s"/>
+		<npc id="20586"/><!--Воин Орков Тимак-->
+	</spawn>
+	<territory name="oren28_2219_04s">
+		<add x="66292" y="48160" zmin="-3936" zmax="-3536"/>
+		<add x="68816" y="48232" zmin="-3936" zmax="-3536"/>
+		<add x="68856" y="50288" zmin="-3936" zmax="-3536"/>
+		<add x="66308" y="51520" zmin="-3936" zmax="-3536"/>
+	</territory>
+	<spawn name="oren28_2219_04s" count="1" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_04s"/>
+		<npc id="20587"/><!--Шаман Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_04s" count="1" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_04s"/>
+		<npc id="20588"/><!--Владыка Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_04s" count="1" respawn="40" respawn_random="10">
+		<territory name="oren28_2219_04s"/>
+		<npc id="20586"/><!--Воин Орков Тимак-->
+	</spawn>
+	<spawn name="oren_dominion11" count="1" respawn="10800">
+		<point x="81438" y="37115" z="-2294" h="32768"/>
+		<npc id="35207"/><!--Маг Гвардии-->
+	</spawn>
+	<spawn name="oren_dominion08" count="1" respawn="10800">
+		<point x="78728" y="37265" z="-2168" h="24576"/>
+		<npc id="35207"/><!--Маг Гвардии-->
+	</spawn>
+	<spawn name="oren_dominion08" count="1" respawn="10800">
+		<point x="78741" y="36649" z="-2168" h="40960"/>
+		<npc id="35207"/><!--Маг Гвардии-->
+	</spawn>
+	<spawn name="oren28_2219_p13" count="4" respawn="40" respawn_random="10">
+		<territory>
+			<add x="76536" y="58652" zmin="-3188" zmax="-2688"/>
+			<add x="77064" y="59460" zmin="-3188" zmax="-2688"/>
+			<add x="75100" y="62072" zmin="-3188" zmax="-2688"/>
+			<add x="74236" y="62288" zmin="-3188" zmax="-2688"/>
+			<add x="72740" y="61092" zmin="-3188" zmax="-2688"/>
+			<add x="72744" y="59672" zmin="-3188" zmax="-2688"/>
+			<add x="74284" y="57804" zmin="-3188" zmax="-2688"/>
+			<add x="75388" y="58080" zmin="-3188" zmax="-2688"/>
+		</territory>
+		<npc id="20767"/><!--Главарь Банды Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_p11" count="3" respawn="40" respawn_random="10">
+		<territory>
+			<add x="69048" y="58284" zmin="-3768" zmax="-3168"/>
+			<add x="71364" y="60128" zmin="-3768" zmax="-3168"/>
+			<add x="72388" y="62488" zmin="-3768" zmax="-3168"/>
+			<add x="68776" y="65288" zmin="-3768" zmax="-3168"/>
+		</territory>
+		<npc id="20767"/><!--Главарь Банды Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_p12" count="4" respawn="40" respawn_random="10">
+		<territory>
+			<add x="72380" y="62548" zmin="-3764" zmax="-3264"/>
+			<add x="75444" y="63548" zmin="-3764" zmax="-3264"/>
+			<add x="74568" y="65284" zmin="-3764" zmax="-3264"/>
+			<add x="68816" y="65268" zmin="-3764" zmax="-3264"/>
+		</territory>
+		<npc id="20767"/><!--Главарь Банды Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_p10" count="3" respawn="40" respawn_random="10">
+		<territory>
+			<add x="67164" y="56844" zmin="-3844" zmax="-2844"/>
+			<add x="71872" y="56452" zmin="-3844" zmax="-2844"/>
+			<add x="73020" y="57660" zmin="-3844" zmax="-2844"/>
+			<add x="71368" y="60184" zmin="-3844" zmax="-2844"/>
+		</territory>
+		<npc id="20767"/><!--Главарь Банды Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_p08" count="3" respawn="40" respawn_random="10">
+		<territory>
+			<add x="75376" y="42856" zmin="-3268" zmax="-2668"/>
+			<add x="76448" y="44300" zmin="-3268" zmax="-2668"/>
+			<add x="75268" y="46072" zmin="-3268" zmax="-2668"/>
+			<add x="73932" y="45356" zmin="-3268" zmax="-2668"/>
+			<add x="74488" y="43468" zmin="-3268" zmax="-2668"/>
+		</territory>
+		<npc id="20767"/><!--Главарь Банды Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_p09" count="3" respawn="40" respawn_random="10">
+		<territory>
+			<add x="74760" y="40128" zmin="-3220" zmax="-2620"/>
+			<add x="75376" y="40744" zmin="-3220" zmax="-2620"/>
+			<add x="75368" y="42848" zmin="-3220" zmax="-2620"/>
+			<add x="74476" y="43464" zmin="-3220" zmax="-2620"/>
+			<add x="73492" y="42404" zmin="-3220" zmax="-2620"/>
+			<add x="73588" y="41156" zmin="-3220" zmax="-2620"/>
+		</territory>
+		<npc id="20767"/><!--Главарь Банды Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_p06" count="4" respawn="40" respawn_random="10">
+		<territory>
+			<add x="69624" y="48708" zmin="-3760" zmax="-3260"/>
+			<add x="74092" y="48860" zmin="-3760" zmax="-3260"/>
+			<add x="72052" y="53092" zmin="-3760" zmax="-3260"/>
+			<add x="69112" y="50864" zmin="-3760" zmax="-3260"/>
+		</territory>
+		<npc id="20767"/><!--Главарь Банды Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_p07" count="3" respawn="40" respawn_random="10">
+		<territory>
+			<add x="71496" y="48744" zmin="-3720" zmax="-3020"/>
+			<add x="73892" y="45372" zmin="-3720" zmax="-3020"/>
+			<add x="75268" y="46100" zmin="-3720" zmax="-3020"/>
+			<add x="73908" y="48836" zmin="-3720" zmax="-3020"/>
+		</territory>
+		<npc id="20767"/><!--Главарь Банды Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_p04" count="4" respawn="40" respawn_random="10">
+		<territory>
+			<add x="65596" y="45772" zmin="-3996" zmax="-3296"/>
+			<add x="67508" y="45740" zmin="-3996" zmax="-3296"/>
+			<add x="69616" y="48732" zmin="-3996" zmax="-3296"/>
+			<add x="69100" y="50864" zmin="-3996" zmax="-3296"/>
+			<add x="65704" y="54152" zmin="-3996" zmax="-3296"/>
+		</territory>
+		<npc id="20767"/><!--Главарь Банды Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_p05" count="3" respawn="40" respawn_random="10">
+		<territory>
+			<add x="65760" y="54168" zmin="-3764" zmax="-3264"/>
+			<add x="69128" y="50884" zmin="-3764" zmax="-3264"/>
+			<add x="72104" y="53112" zmin="-3764" zmax="-3264"/>
+			<add x="71412" y="56440" zmin="-3764" zmax="-3264"/>
+			<add x="65748" y="56868" zmin="-3764" zmax="-3264"/>
+		</territory>
+		<npc id="20767"/><!--Главарь Банды Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_p02" count="4" respawn="40" respawn_random="10">
+		<territory>
+			<add x="65716" y="36564" zmin="-3868" zmax="-3268"/>
+			<add x="69412" y="36644" zmin="-3868" zmax="-3268"/>
+			<add x="70716" y="40920" zmin="-3868" zmax="-3268"/>
+			<add x="65700" y="41880" zmin="-3868" zmax="-3268"/>
+		</territory>
+		<npc id="20767"/><!--Главарь Банды Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_p03" count="3" respawn="40" respawn_random="10">
+		<territory>
+			<add x="65704" y="41848" zmin="-3964" zmax="-3064"/>
+			<add x="68660" y="41284" zmin="-3964" zmax="-3064"/>
+			<add x="67840" y="45804" zmin="-3964" zmax="-3064"/>
+			<add x="65712" y="45876" zmin="-3964" zmax="-3064"/>
+		</territory>
+		<npc id="20767"/><!--Главарь Банды Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_2219_p01" count="3" respawn="40" respawn_random="10">
+		<territory>
+			<add x="69452" y="36716" zmin="-3664" zmax="-3064"/>
+			<add x="70752" y="36332" zmin="-3664" zmax="-3064"/>
+			<add x="73856" y="39204" zmin="-3664" zmax="-3064"/>
+			<add x="70760" y="40964" zmin="-3664" zmax="-3064"/>
+		</territory>
+		<npc id="20767"/><!--Главарь Банды Орков Тимак-->
+	</spawn>
+	<spawn name="oren28_mb2219_01" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="66384" y="64036" zmin="-3844" zmax="-3244"/>
+			<add x="67800" y="63212" zmin="-3844" zmax="-3244"/>
+			<add x="68244" y="64340" zmin="-3844" zmax="-3244"/>
+			<add x="67464" y="64848" zmin="-3844" zmax="-3244"/>
+			<add x="66500" y="64744" zmin="-3844" zmax="-3244"/>
+		</territory>
+		<npc id="25437"/><!--Орк Тимак Госмос-->
+	</spawn>
+	<spawn name="oren28_mb2219_02" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="66280" y="46420" zmin="-3948" zmax="-3348"/>
+			<add x="66756" y="46216" zmin="-3948" zmax="-3348"/>
+			<add x="67088" y="46772" zmin="-3948" zmax="-3348"/>
+			<add x="66792" y="47256" zmin="-3948" zmax="-3348"/>
+			<add x="66184" y="47032" zmin="-3948" zmax="-3348"/>
+		</territory>
+		<npc id="25230"/><!--Провидец Тимак Рагот-->
+	</spawn>
+	<spawn name="oren17_npc2219_premium01" count="1" respawn="60" group="vitamin_manager">
+		<point x="81788" y="55387" z="-1520" h="16500"/>
+		<npc id="32478"/><!--Менеджер Витаминов-->
+	</spawn>
+	<spawn name="oren28_npc2219_002" count="1" respawn="60">
+		<point x="71569" y="44058" z="-1436" h="0"/>
+		<npc id="30750"/><!--Калибран-->
+	</spawn>
+	<spawn group="oren_castle_siege_artefact" count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="84014" y="37184" z="-2277" h="32768"/>
+		<npc id="35189"/><!--Священный Артефакт Орена-->
+	</spawn>
+	<spawn group="oren_castle_mass_gatekeeper" count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="82611" y="38772" z="-1578" h="49152"/>
+		<npc id="35221"/><!--Хранитель Массового Портала-->
+	</spawn>
+	<spawn group="oren_castle_siege_artefact" count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="84014" y="37184" z="-2277" h="32768"/>
+		<npc id="35189"/><!--Священный Артефакт Орена-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78891" y="36844" z="-2553" h="31992"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78891" y="36872" z="-2553" h="31992"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78891" y="36900" z="-2553" h="31992"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78891" y="36928" z="-2553" h="31992"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78891" y="36956" z="-2553" h="31992"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78891" y="36984" z="-2553" h="31992"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78891" y="37012" z="-2553" h="31992"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78891" y="37040" z="-2553" h="31992"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78891" y="37068" z="-2553" h="31992"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78871" y="36844" z="-2553" h="31992"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78871" y="36872" z="-2553" h="31992"/>
+		<npc id="35208"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78871" y="36900" z="-2553" h="31992"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78871" y="36928" z="-2553" h="31992"/>
+		<npc id="35208"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78871" y="36956" z="-2553" h="31992"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78871" y="36984" z="-2553" h="31992"/>
+		<npc id="35208"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78871" y="37012" z="-2553" h="31992"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78871" y="37040" z="-2553" h="31992"/>
+		<npc id="35208"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78871" y="37068" z="-2553" h="31992"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78851" y="36844" z="-2553" h="31992"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78851" y="36872" z="-2553" h="31992"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78851" y="36900" z="-2553" h="31992"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78851" y="36928" z="-2553" h="31992"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78851" y="36956" z="-2553" h="31992"/>
+		<npc id="35205"/><!--Рыцарь Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78851" y="36984" z="-2553" h="31992"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78851" y="37012" z="-2553" h="31992"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78851" y="37040" z="-2553" h="31992"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege01" count="1" respawn="10800">
+		<point x="78851" y="37068" z="-2553" h="31992"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79269" y="36701" z="-2543" h="15696"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79300" y="36702" z="-2542" h="15696"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79330" y="36702" z="-2542" h="15696"/>
+		<npc id="35205"/><!--Рыцарь Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79360" y="36702" z="-2541" h="15696"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79391" y="36701" z="-2542" h="15696"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79420" y="36703" z="-2541" h="15696"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79450" y="36703" z="-2541" h="15696"/>
+		<npc id="35205"/><!--Рыцарь Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79480" y="36703" z="-2540" h="15696"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79511" y="36702" z="-2541" h="15696"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79287" y="36676" z="-2561" h="15696"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79317" y="36676" z="-2561" h="15696"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79348" y="36676" z="-2560" h="15696"/>
+		<npc id="35208"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79378" y="36675" z="-2561" h="15696"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79408" y="36677" z="-2560" h="15696"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79438" y="36677" z="-2560" h="15696"/>
+		<npc id="35208"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79467" y="36678" z="-2559" h="15696"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79499" y="36677" z="-2560" h="15696"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79271" y="36655" z="-2565" h="15696"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79301" y="36656" z="-2565" h="15696"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79331" y="36656" z="-2564" h="15696"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79362" y="36657" z="-2564" h="15696"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79392" y="36655" z="-2564" h="15696"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79422" y="36657" z="-2563" h="15696"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79452" y="36657" z="-2563" h="15696"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79481" y="36658" z="-2562" h="15696"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79513" y="36657" z="-2563" h="15696"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79289" y="36509" z="-2566" h="15696"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79319" y="36509" z="-2565" h="15696"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79350" y="36509" z="-2565" h="15696"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79380" y="36510" z="-2564" h="15696"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79410" y="36509" z="-2564" h="15696"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79440" y="36511" z="-2564" h="15696"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79470" y="36512" z="-2563" h="15696"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79500" y="36512" z="-2563" h="15696"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79620" y="36408" z="-2557" h="32284"/>
+		<npc id="35207"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="10800">
+		<point x="79621" y="36438" z="-2558" h="32284"/>
+		<npc id="35207"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="60">
+		<point x="79502" y="36646" z="-2541" h="15696"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="60">
+		<point x="79438" y="36645" z="-2541" h="15696"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="60">
+		<point x="79349" y="36645" z="-2541" h="15696"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege02" count="1" respawn="60">
+		<point x="79289" y="36648" z="-2541" h="15696"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79642" y="36894" z="-2292" h="32284"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79643" y="36924" z="-2293" h="32284"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79640" y="36954" z="-2292" h="32284"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79639" y="36984" z="-2292" h="32284"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79638" y="37013" z="-2291" h="32284"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79576" y="36664" z="-2290" h="32284"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79577" y="36694" z="-2291" h="32284"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79574" y="36723" z="-2290" h="32284"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79573" y="36753" z="-2290" h="32284"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79572" y="36783" z="-2289" h="32284"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79438" y="37197" z="-2291" h="48048"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79408" y="37200" z="-2292" h="48048"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79379" y="37198" z="-2291" h="48048"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79349" y="37199" z="-2291" h="48048"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79319" y="37200" z="-2290" h="48048"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79644" y="37464" z="-2394" h="16328"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79678" y="37465" z="-2394" h="16328"/>
+		<npc id="35205"/><!--Рыцарь Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79719" y="37469" z="-2393" h="16328"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79644" y="37443" z="-2383" h="16328"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79678" y="37444" z="-2384" h="16328"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79719" y="37448" z="-2383" h="16328"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79644" y="37425" z="-2369" h="16328"/>
+		<npc id="35208"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79678" y="37426" z="-2370" h="16328"/>
+		<npc id="35208"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79719" y="37430" z="-2369" h="16328"/>
+		<npc id="35208"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79685" y="37097" z="-2292" h="39060"/>
+		<npc id="35207"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79642" y="36894" z="-2292" h="32284"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79640" y="36954" z="-2292" h="32284"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79638" y="37013" z="-2291" h="32284"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79576" y="36664" z="-2290" h="32284"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79577" y="36694" z="-2291" h="32284"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79574" y="36723" z="-2290" h="32284"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79573" y="36753" z="-2290" h="32284"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79438" y="37197" z="-2291" h="48048"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79379" y="37198" z="-2291" h="48048"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege03" count="1" respawn="10800">
+		<point x="79319" y="37200" z="-2290" h="48048"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81663" y="37047" z="-2287" h="22704"/>
+		<npc id="35208"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81688" y="37064" z="-2288" h="22704"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81714" y="37088" z="-2287" h="22704"/>
+		<npc id="35208"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81737" y="37107" z="-2287" h="22704"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81755" y="37122" z="-2286" h="22704"/>
+		<npc id="35208"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81781" y="37144" z="-2288" h="22704"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81806" y="37161" z="-2288" h="22704"/>
+		<npc id="35208"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81827" y="37181" z="-2288" h="22704"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81838" y="37205" z="-2289" h="33460"/>
+		<npc id="35208"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81819" y="37230" z="-2288" h="41952"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81795" y="37248" z="-2288" h="41952"/>
+		<npc id="35208"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81775" y="37261" z="-2287" h="41952"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81748" y="37280" z="-2289" h="41952"/>
+		<npc id="35208"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81724" y="37299" z="-2290" h="41952"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81694" y="37318" z="-2289" h="41952"/>
+		<npc id="35208"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81669" y="37335" z="-2289" h="41952"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81650" y="37348" z="-2288" h="41952"/>
+		<npc id="35208"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81683" y="37032" z="-2289" h="22704"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81707" y="37050" z="-2290" h="22704"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81733" y="37074" z="-2289" h="22704"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81757" y="37093" z="-2289" h="22704"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81775" y="37108" z="-2288" h="22704"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81801" y="37129" z="-2290" h="22704"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81825" y="37147" z="-2290" h="22704"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81846" y="37166" z="-2290" h="22704"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81857" y="37191" z="-2291" h="33460"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81856" y="37219" z="-2288" h="33460"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81837" y="37244" z="-2287" h="41952"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81813" y="37262" z="-2287" h="41952"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81793" y="37275" z="-2286" h="41952"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81766" y="37294" z="-2288" h="41952"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81742" y="37313" z="-2289" h="41952"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81712" y="37332" z="-2288" h="41952"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81687" y="37349" z="-2288" h="41952"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81668" y="37362" z="-2287" h="41952"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81788" y="37004" z="-2287" h="22704"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81811" y="37023" z="-2287" h="22704"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81829" y="37038" z="-2286" h="22704"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81855" y="37060" z="-2288" h="22704"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81880" y="37077" z="-2289" h="22704"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81846" y="37305" z="-2283" h="41952"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81826" y="37318" z="-2282" h="41952"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81799" y="37338" z="-2284" h="41952"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81775" y="37356" z="-2285" h="41952"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81745" y="37375" z="-2284" h="41952"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81922" y="37336" z="-2285" h="32004"/>
+		<npc id="35207"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81922" y="37370" z="-2286" h="32004"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81925" y="37091" z="-2286" h="32004"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81924" y="37114" z="-2286" h="32004"/>
+		<npc id="35207"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="10800">
+		<point x="81650" y="37039" z="-2284" h="41952"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="60">
+		<point x="81704" y="37030" z="-2287" h="22704"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="60">
+		<point x="81795" y="37111" z="-2287" h="22704"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="60">
+		<point x="81786" y="37296" z="-2287" h="22704"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege04" count="1" respawn="60">
+		<point x="81683" y="37368" z="-2287" h="22704"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="300">
+		<point x="83808" y="37131" z="-2349" h="32728"/>
+		<npc id="35190"/><!--Балтус Ван Дейк - Герцог-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="180">
+		<point x="83811" y="37243" z="-2348" h="32728"/>
+		<npc id="35107"/><!--Ивано - Сэр-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83794" y="37345" z="-2354" h="32728"/>
+		<npc id="35198"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83795" y="37382" z="-2354" h="32728"/>
+		<npc id="35198"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83795" y="37415" z="-2354" h="32728"/>
+		<npc id="35198"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83796" y="37453" z="-2354" h="32728"/>
+		<npc id="35198"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83796" y="37490" z="-2353" h="32728"/>
+		<npc id="35198"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83797" y="37528" z="-2353" h="32728"/>
+		<npc id="35198"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83797" y="37560" z="-2353" h="32728"/>
+		<npc id="35198"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83798" y="37598" z="-2353" h="32728"/>
+		<npc id="35198"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83760" y="37345" z="-2355" h="32728"/>
+		<npc id="35195"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83761" y="37383" z="-2355" h="32728"/>
+		<npc id="35195"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83761" y="37416" z="-2355" h="32728"/>
+		<npc id="35195"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83762" y="37453" z="-2355" h="32728"/>
+		<npc id="35195"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83762" y="37491" z="-2354" h="32728"/>
+		<npc id="35195"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83763" y="37528" z="-2354" h="32728"/>
+		<npc id="35195"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83763" y="37561" z="-2354" h="32728"/>
+		<npc id="35195"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83764" y="37598" z="-2354" h="32728"/>
+		<npc id="35195"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83722" y="37347" z="-2356" h="32728"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83723" y="37385" z="-2356" h="32728"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83723" y="37417" z="-2356" h="32728"/>
+		<npc id="35192"/><!--Рыцарь Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83724" y="37455" z="-2356" h="32728"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83724" y="37492" z="-2355" h="32728"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83725" y="37530" z="-2355" h="32728"/>
+		<npc id="35192"/><!--Рыцарь Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83725" y="37562" z="-2355" h="32728"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83726" y="37600" z="-2355" h="32728"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83788" y="36785" z="-2350" h="32728"/>
+		<npc id="35198"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83788" y="36823" z="-2350" h="32728"/>
+		<npc id="35198"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83788" y="36855" z="-2350" h="32728"/>
+		<npc id="35198"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83789" y="36893" z="-2350" h="32728"/>
+		<npc id="35198"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83790" y="36930" z="-2349" h="32728"/>
+		<npc id="35198"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83790" y="36968" z="-2349" h="32728"/>
+		<npc id="35198"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83791" y="37001" z="-2349" h="32728"/>
+		<npc id="35198"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83791" y="37038" z="-2349" h="32728"/>
+		<npc id="35198"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83753" y="36786" z="-2351" h="32728"/>
+		<npc id="35195"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83754" y="36824" z="-2351" h="32728"/>
+		<npc id="35195"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83754" y="36856" z="-2351" h="32728"/>
+		<npc id="35195"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83755" y="36894" z="-2351" h="32728"/>
+		<npc id="35195"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83756" y="36931" z="-2350" h="32728"/>
+		<npc id="35195"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83756" y="36969" z="-2350" h="32728"/>
+		<npc id="35195"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83756" y="37001" z="-2350" h="32728"/>
+		<npc id="35195"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83757" y="37039" z="-2350" h="32728"/>
+		<npc id="35195"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83716" y="36787" z="-2352" h="32728"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83717" y="36825" z="-2352" h="32728"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83717" y="36858" z="-2352" h="32728"/>
+		<npc id="35192"/><!--Рыцарь Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83718" y="36895" z="-2352" h="32728"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83718" y="36933" z="-2351" h="32728"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83719" y="36970" z="-2351" h="32728"/>
+		<npc id="35192"/><!--Рыцарь Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83719" y="37003" z="-2351" h="32728"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83720" y="37040" z="-2351" h="32728"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83953" y="36865" z="-2349" h="32728"/>
+		<npc id="35194"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83953" y="36949" z="-2348" h="32728"/>
+		<npc id="35194"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83954" y="37028" z="-2348" h="32728"/>
+		<npc id="35194"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83954" y="37103" z="-2348" h="32728"/>
+		<npc id="35194"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83954" y="37280" z="-2345" h="32728"/>
+		<npc id="35194"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83954" y="37363" z="-2345" h="32728"/>
+		<npc id="35194"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83955" y="37443" z="-2345" h="32728"/>
+		<npc id="35194"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege05" count="1" respawn="120">
+		<point x="83955" y="37517" z="-2345" h="32728"/>
+		<npc id="35194"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege06" count="1" respawn="10800">
+		<point x="82828" y="37705" z="-2127" h="32472"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege06" count="1" respawn="10800">
+		<point x="82828" y="37679" z="-2127" h="32472"/>
+		<npc id="35205"/><!--Рыцарь Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege06" count="1" respawn="10800">
+		<point x="82828" y="37651" z="-2126" h="32472"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege06" count="1" respawn="10800">
+		<point x="82850" y="37705" z="-2131" h="32472"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege06" count="1" respawn="10800">
+		<point x="82850" y="37678" z="-2131" h="32472"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege06" count="1" respawn="10800">
+		<point x="82850" y="37651" z="-2130" h="32472"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege06" count="1" respawn="10800">
+		<point x="82875" y="37704" z="-2129" h="32472"/>
+		<npc id="35208"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege06" count="1" respawn="10800">
+		<point x="82875" y="37677" z="-2129" h="32472"/>
+		<npc id="35208"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege06" count="1" respawn="10800">
+		<point x="82874" y="37650" z="-2128" h="32472"/>
+		<npc id="35208"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege06" count="1" respawn="10800">
+		<point x="82952" y="37764" z="-2129" h="32472"/>
+		<npc id="35207"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege06" count="1" respawn="10800">
+		<point x="82952" y="37738" z="-2129" h="32472"/>
+		<npc id="35207"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege06" count="1" respawn="10800">
+		<point x="82952" y="37710" z="-2128" h="32472"/>
+		<npc id="35207"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege06" count="1" respawn="10800">
+		<point x="83525" y="37509" z="-2132" h="49076"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege06" count="1" respawn="10800">
+		<point x="83562" y="37510" z="-2132" h="49076"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege06" count="1" respawn="10800">
+		<point x="83599" y="37510" z="-2131" h="49076"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege06" count="1" respawn="10800">
+		<point x="83635" y="37511" z="-2131" h="49076"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege06" count="1" respawn="10800">
+		<point x="83671" y="37511" z="-2131" h="49076"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege06" count="1" respawn="10800">
+		<point x="83709" y="37512" z="-2131" h="49076"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege06" count="1" respawn="10800">
+		<point x="83740" y="37512" z="-2130" h="49076"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege06" count="1" respawn="10800">
+		<point x="83777" y="37513" z="-2130" h="49076"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege06" count="1" respawn="10800">
+		<point x="83812" y="37514" z="-2130" h="49076"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege06" count="1" respawn="10800">
+		<point x="83849" y="37514" z="-2130" h="49076"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege06" count="1" respawn="10800">
+		<point x="83886" y="37514" z="-2130" h="49076"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege07" count="1" respawn="10800">
+		<point x="82762" y="36730" z="-2127" h="32472"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege07" count="1" respawn="10800">
+		<point x="82762" y="36704" z="-2127" h="32472"/>
+		<npc id="35205"/><!--Рыцарь Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege07" count="1" respawn="10800">
+		<point x="82765" y="36661" z="-2126" h="32472"/>
+		<npc id="35210"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege07" count="1" respawn="10800">
+		<point x="82784" y="36730" z="-2131" h="32472"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege07" count="1" respawn="10800">
+		<point x="82784" y="36703" z="-2131" h="32472"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege07" count="1" respawn="10800">
+		<point x="82784" y="36676" z="-2130" h="32472"/>
+		<npc id="35209"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege07" count="1" respawn="10800">
+		<point x="82809" y="36729" z="-2129" h="32472"/>
+		<npc id="35208"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege07" count="1" respawn="10800">
+		<point x="82809" y="36702" z="-2129" h="32472"/>
+		<npc id="35208"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege07" count="1" respawn="10800">
+		<point x="82808" y="36675" z="-2128" h="32472"/>
+		<npc id="35208"/><!--Гвардеец - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege07" count="1" respawn="10800">
+		<point x="83050" y="36768" z="-2129" h="32472"/>
+		<npc id="35207"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege07" count="1" respawn="10800">
+		<point x="83050" y="36742" z="-2129" h="32472"/>
+		<npc id="35207"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege07" count="1" respawn="10800">
+		<point x="83050" y="36714" z="-2128" h="32472"/>
+		<npc id="35207"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege07" count="1" respawn="10800">
+		<point x="83880" y="36876" z="-2132" h="16000"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege07" count="1" respawn="10800">
+		<point x="83844" y="36877" z="-2132" h="16000"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege07" count="1" respawn="10800">
+		<point x="83807" y="36878" z="-2131" h="16000"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege07" count="1" respawn="10800">
+		<point x="83771" y="36878" z="-2131" h="16000"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege07" count="1" respawn="10800">
+		<point x="83735" y="36878" z="-2131" h="16000"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege07" count="1" respawn="10800">
+		<point x="83697" y="36879" z="-2131" h="16000"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege07" count="1" respawn="10800">
+		<point x="83666" y="36879" z="-2130" h="16000"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege07" count="1" respawn="10800">
+		<point x="83629" y="36880" z="-2130" h="16000"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege07" count="1" respawn="10800">
+		<point x="83594" y="36880" z="-2130" h="16000"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege07" count="1" respawn="10800">
+		<point x="83557" y="36881" z="-2130" h="16000"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege07" count="1" respawn="10800">
+		<point x="83520" y="36882" z="-2130" h="16000"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78822" y="37198" z="-2168" h="49152"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78759" y="37185" z="-2168" h="49152"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78697" y="37187" z="-2168" h="40960"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78657" y="37233" z="-2168" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78656" y="37278" z="-2168" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78657" y="37310" z="-2168" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78659" y="37348" z="-2168" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78820" y="36711" z="-2168" h="49152"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78755" y="36710" z="-2168" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78689" y="36718" z="-2168" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78660" y="36672" z="-2168" h="24576"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78656" y="36620" z="-2168" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78653" y="36580" z="-2168" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78655" y="36537" z="-2168" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78783" y="37187" z="-2168" h="16384"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78734" y="37184" z="-2168" h="24576"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78785" y="36711" z="-2168" h="40960"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78728" y="36709" z="-2168" h="49152"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78728" y="37265" z="-2168" h="24576"/>
+		<npc id="35207"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78741" y="36649" z="-2168" h="40960"/>
+		<npc id="35207"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78822" y="37198" z="-2168" h="49152"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78759" y="37185" z="-2168" h="49152"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78697" y="37187" z="-2168" h="40960"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78657" y="37233" z="-2168" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78820" y="36711" z="-2168" h="49152"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78755" y="36710" z="-2168" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78689" y="36718" z="-2168" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78660" y="36672" z="-2168" h="24576"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78783" y="37187" z="-2168" h="16384"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78734" y="37184" z="-2168" h="24576"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78785" y="36711" z="-2168" h="40960"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78728" y="36709" z="-2168" h="49152"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78728" y="37265" z="-2168" h="24576"/>
+		<npc id="35207"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege08" count="1" respawn="10800">
+		<point x="78741" y="36649" z="-2168" h="40960"/>
+		<npc id="35207"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80578" y="37128" z="-2294" h="32768"/>
+		<npc id="35198"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80578" y="37256" z="-2294" h="32768"/>
+		<npc id="35198"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80578" y="37319" z="-2294" h="32768"/>
+		<npc id="35198"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80578" y="37064" z="-2294" h="32768"/>
+		<npc id="35198"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80578" y="36933" z="-2294" h="32768"/>
+		<npc id="35198"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80578" y="36805" z="-2294" h="32768"/>
+		<npc id="35198"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80578" y="37447" z="-2294" h="32768"/>
+		<npc id="35198"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80578" y="37576" z="-2294" h="32768"/>
+		<npc id="35198"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80578" y="37000" z="-2294" h="32768"/>
+		<npc id="35193"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80578" y="37383" z="-2294" h="32768"/>
+		<npc id="35193"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80578" y="37640" z="-2294" h="32768"/>
+		<npc id="35193"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80578" y="36741" z="-2294" h="32768"/>
+		<npc id="35193"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80578" y="37192" z="-2294" h="32768"/>
+		<npc id="35194"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80578" y="37511" z="-2294" h="32768"/>
+		<npc id="35194"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80578" y="36869" z="-2294" h="32768"/>
+		<npc id="35194"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80428" y="36744" z="-2294" h="32768"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80428" y="36808" z="-2294" h="32768"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80428" y="37640" z="-2294" h="32768"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80428" y="37576" z="-2294" h="32768"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80428" y="37192" z="-2294" h="32768"/>
+		<npc id="35192"/><!--Рыцарь Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80428" y="36872" z="-2294" h="32768"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80428" y="36936" z="-2294" h="32768"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80428" y="37000" z="-2294" h="32768"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80428" y="37064" z="-2294" h="32768"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80428" y="37128" z="-2294" h="32768"/>
+		<npc id="35192"/><!--Рыцарь Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80428" y="37255" z="-2294" h="32768"/>
+		<npc id="35192"/><!--Рыцарь Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80428" y="37319" z="-2294" h="32768"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80428" y="37383" z="-2294" h="32768"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80428" y="37447" z="-2294" h="32768"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege09" count="1" respawn="10800">
+		<point x="80428" y="37511" z="-2294" h="32768"/>
+		<npc id="35197"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege10" count="1" respawn="10800">
+		<point x="81331" y="37424" z="-1985" h="49152"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege10" count="1" respawn="10800">
+		<point x="81209" y="37423" z="-1985" h="49152"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege10" count="1" respawn="10800">
+		<point x="81148" y="37478" z="-1985" h="40960"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege10" count="1" respawn="10800">
+		<point x="81129" y="37503" z="-1985" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege10" count="1" respawn="10800">
+		<point x="81128" y="37542" z="-1985" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege10" count="1" respawn="10800">
+		<point x="81128" y="37578" z="-1985" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege10" count="1" respawn="10800">
+		<point x="81288" y="37424" z="-1985" h="49152"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege10" count="1" respawn="10800">
+		<point x="81173" y="37452" z="-1985" h="40960"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege10" count="1" respawn="10800">
+		<point x="81249" y="37424" z="-1984" h="49152"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege10" count="1" respawn="10800">
+		<point x="81194" y="37526" z="-1986" h="40960"/>
+		<npc id="35207"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege10" count="1" respawn="10800">
+		<point x="81337" y="36971" z="-1987" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege10" count="1" respawn="10800">
+		<point x="81297" y="36971" z="-1985" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege10" count="1" respawn="10800">
+		<point x="81212" y="36971" z="-1986" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege10" count="1" respawn="10800">
+		<point x="81147" y="36913" z="-1985" h="24576"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege10" count="1" respawn="10800">
+		<point x="81127" y="36886" z="-1984" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege10" count="1" respawn="10800">
+		<point x="81128" y="36846" z="-1985" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege10" count="1" respawn="10800">
+		<point x="81127" y="36807" z="-1985" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege10" count="1" respawn="10800">
+		<point x="81253" y="36971" z="-1983" h="16384"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege10" count="1" respawn="10800">
+		<point x="81183" y="36949" z="-1986" h="24576"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege10" count="1" respawn="10800">
+		<point x="81201" y="36869" z="-1983" h="24576"/>
+		<npc id="35207"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege11" count="1" respawn="10800">
+		<point x="81458" y="37084" z="-2294" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege11" count="1" respawn="10800">
+		<point x="81458" y="37115" z="-2294" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege11" count="1" respawn="10800">
+		<point x="81458" y="37146" z="-2294" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege11" count="1" respawn="10800">
+		<point x="81458" y="37178" z="-2294" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege11" count="1" respawn="10800">
+		<point x="81458" y="37209" z="-2294" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege11" count="1" respawn="10800">
+		<point x="81458" y="37241" z="-2294" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege11" count="1" respawn="10800">
+		<point x="81458" y="37272" z="-2294" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege11" count="1" respawn="10800">
+		<point x="81458" y="37304" z="-2294" h="32768"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege11" count="1" respawn="10800">
+		<point x="81438" y="37084" z="-2294" h="32768"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege11" count="1" respawn="10800">
+		<point x="81438" y="37115" z="-2294" h="32768"/>
+		<npc id="35207"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege11" count="1" respawn="10800">
+		<point x="81438" y="37146" z="-2294" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege11" count="1" respawn="10800">
+		<point x="81438" y="37178" z="-2294" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege11" count="1" respawn="10800">
+		<point x="81438" y="37209" z="-2294" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege11" count="1" respawn="10800">
+		<point x="81438" y="37241" z="-2294" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege11" count="1" respawn="10800">
+		<point x="81438" y="37272" z="-2294" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege11" count="1" respawn="10800">
+		<point x="81438" y="37304" z="-2294" h="32768"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege12" count="1" respawn="10800">
+		<point x="80345" y="38756" z="-2170" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege12" count="1" respawn="10800">
+		<point x="80396" y="38756" z="-2170" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege12" count="1" respawn="10800">
+		<point x="80446" y="38756" z="-2170" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege12" count="1" respawn="10800">
+		<point x="80496" y="38756" z="-2170" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege12" count="1" respawn="10800">
+		<point x="80546" y="38756" z="-2170" h="16384"/>
+		<npc id="35207"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege12" count="1" respawn="10800">
+		<point x="80596" y="38756" z="-2170" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege12" count="1" respawn="10800">
+		<point x="80646" y="38756" z="-2170" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege12" count="1" respawn="10800">
+		<point x="80696" y="38756" z="-2170" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege12" count="1" respawn="10800">
+		<point x="80746" y="38756" z="-2170" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege12" count="1" respawn="10800">
+		<point x="80796" y="38756" z="-2170" h="16384"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege12" count="1" respawn="10800">
+		<point x="80846" y="38756" z="-2170" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege12" count="1" respawn="10800">
+		<point x="80896" y="38756" z="-2170" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege13" count="1" respawn="10800">
+		<point x="80345" y="35354" z="-2170" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege13" count="1" respawn="10800">
+		<point x="80396" y="35354" z="-2170" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege13" count="1" respawn="10800">
+		<point x="80446" y="35354" z="-2170" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege13" count="1" respawn="10800">
+		<point x="80496" y="35354" z="-2170" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege13" count="1" respawn="10800">
+		<point x="80546" y="35354" z="-2170" h="16384"/>
+		<npc id="35207"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege13" count="1" respawn="10800">
+		<point x="80596" y="35354" z="-2170" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege13" count="1" respawn="10800">
+		<point x="80646" y="35354" z="-2170" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege13" count="1" respawn="10800">
+		<point x="80696" y="35354" z="-2170" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege13" count="1" respawn="10800">
+		<point x="80746" y="35354" z="-2170" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege13" count="1" respawn="10800">
+		<point x="80796" y="35354" z="-2170" h="16384"/>
+		<npc id="35206"/><!--Маг Гвардии - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege13" count="1" respawn="10800">
+		<point x="80846" y="35354" z="-2170" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<spawn group="oren_castle_siege" name="oren_siege13" count="1" respawn="10800">
+		<point x="80896" y="35354" z="-2170" h="16384"/>
+		<npc id="35211"/><!--Охранник - Орен-->
+	</spawn>
+	<territory name="oren_h_22_19_23">
+		<add x="78004" y="61894" zmin="-3758" zmax="-2958"/>
+		<add x="80436" y="60730" zmin="-3758" zmax="-2958"/>
+		<add x="81876" y="65238" zmin="-3758" zmax="-2958"/>
+		<add x="76468" y="65246" zmin="-3758" zmax="-2958"/>
+	</territory>
+	<spawn name="oren_h_22_19_23" count="3" respawn="95">
+		<territory name="oren_h_22_19_23"/>
+		<npc id="20581"/><!--Шаман Ящеров Лито-->
+	</spawn>
+	<spawn name="oren_h_22_19_23" count="3" respawn="95">
+		<territory name="oren_h_22_19_23"/>
+		<npc id="20580"/><!--Воин Ящеров Лито-->
+	</spawn>
+	<territory name="oren_h_22_19_22">
+		<add x="82973" y="58750" zmin="-3794" zmax="-3094"/>
+		<add x="86253" y="65174" zmin="-3794" zmax="-3094"/>
+		<add x="82101" y="65322" zmin="-3794" zmax="-3094"/>
+		<add x="80545" y="60718" zmin="-3794" zmax="-3094"/>
+	</territory>
+	<spawn name="oren_h_22_19_22" count="1" respawn="95">
+		<territory name="oren_h_22_19_22"/>
+		<npc id="20581"/><!--Шаман Ящеров Лито-->
+	</spawn>
+	<spawn name="oren_h_22_19_22" count="1" respawn="95">
+		<territory name="oren_h_22_19_22"/>
+		<npc id="20580"/><!--Воин Ящеров Лито-->
+	</spawn>
+	<territory name="oren_h_22_19_21">
+		<add x="85267" y="56147" zmin="-3773" zmax="-3273"/>
+		<add x="89367" y="56151" zmin="-3773" zmax="-3273"/>
+		<add x="89495" y="58711" zmin="-3773" zmax="-3273"/>
+		<add x="85095" y="58515" zmin="-3773" zmax="-3273"/>
+	</territory>
+	<spawn name="oren_h_22_19_21" count="1" respawn="95">
+		<territory name="oren_h_22_19_21"/>
+		<npc id="20581"/><!--Шаман Ящеров Лито-->
+	</spawn>
+	<spawn name="oren_h_22_19_21" count="1" respawn="95">
+		<territory name="oren_h_22_19_21"/>
+		<npc id="20582"/><!--Вождь Ящеров Лито-->
+	</spawn>
+	<territory name="oren_h_22_19_20">
+		<add x="85132" y="53235" zmin="-3781" zmax="-3281"/>
+		<add x="89256" y="53147" zmin="-3781" zmax="-3281"/>
+		<add x="89384" y="56019" zmin="-3781" zmax="-3281"/>
+		<add x="85304" y="55999" zmin="-3781" zmax="-3281"/>
+	</territory>
+	<spawn name="oren_h_22_19_20" count="1" respawn="95">
+		<territory name="oren_h_22_19_20"/>
+		<npc id="20581"/><!--Шаман Ящеров Лито-->
+	</spawn>
+	<spawn name="oren_h_22_19_20" count="1" respawn="95">
+		<territory name="oren_h_22_19_20"/>
+		<npc id="20582"/><!--Вождь Ящеров Лито-->
+	</spawn>
+	<territory name="oren_h_22_19_27">
+		<add x="89903" y="61408" zmin="-3833" zmax="-2833"/>
+		<add x="98011" y="63012" zmin="-3833" zmax="-2833"/>
+		<add x="98023" y="63764" zmin="-3833" zmax="-2833"/>
+		<add x="93747" y="65108" zmin="-3833" zmax="-2833"/>
+		<add x="90155" y="65184" zmin="-3833" zmax="-2833"/>
+	</territory>
+	<spawn name="oren_h_22_19_27" count="1" respawn="95">
+		<territory name="oren_h_22_19_27"/>
+		<npc id="20581"/><!--Шаман Ящеров Лито-->
+	</spawn>
+	<spawn name="oren_h_22_19_27" count="1" respawn="95">
+		<territory name="oren_h_22_19_27"/>
+		<npc id="20582"/><!--Вождь Ящеров Лито-->
+	</spawn>
+	<spawn name="oren_h_22_19_26" count="3" respawn="95">
+		<territory>
+			<add x="80121" y="62333" zmin="-3811" zmax="-3411"/>
+			<add x="82137" y="62041" zmin="-3811" zmax="-3411"/>
+			<add x="82445" y="63829" zmin="-3811" zmax="-3411"/>
+			<add x="80489" y="63657" zmin="-3811" zmax="-3411"/>
+		</territory>
+		<npc id="20580"/><!--Воин Ящеров Лито-->
+	</spawn>
+	<spawn name="oren_h_22_19_25" count="3" respawn="95">
+		<territory>
+			<add x="85879" y="60823" zmin="-3707" zmax="-3307"/>
+			<add x="88139" y="60679" zmin="-3707" zmax="-3307"/>
+			<add x="88271" y="62427" zmin="-3707" zmax="-3307"/>
+			<add x="86883" y="62603" zmin="-3707" zmax="-3307"/>
+		</territory>
+		<npc id="20580"/><!--Воин Ящеров Лито-->
+	</spawn>
+	<territory name="oren_h_22_19_24">
+		<add x="83380" y="59187" zmin="-3783" zmax="-3283"/>
+		<add x="85076" y="58719" zmin="-3783" zmax="-3283"/>
+		<add x="89496" y="59047" zmin="-3783" zmax="-3283"/>
+		<add x="89872" y="65171" zmin="-3783" zmax="-3283"/>
+		<add x="86416" y="65131" zmin="-3783" zmax="-3283"/>
+	</territory>
+	<spawn name="oren_h_22_19_24" count="3" respawn="95">
+		<territory name="oren_h_22_19_24"/>
+		<npc id="20581"/><!--Шаман Ящеров Лито-->
+	</spawn>
+	<spawn name="oren_h_22_19_24" count="2" respawn="95">
+		<territory name="oren_h_22_19_24"/>
+		<npc id="20580"/><!--Воин Ящеров Лито-->
+	</spawn>
+	<territory name="oren_h_22_19_28">
+		<add x="89671" y="56977" zmin="-3868" zmax="-3018"/>
+		<add x="92499" y="56725" zmin="-3868" zmax="-3018"/>
+		<add x="94647" y="62137" zmin="-3868" zmax="-3018"/>
+		<add x="89759" y="61245" zmin="-3868" zmax="-3018"/>
+	</territory>
+	<spawn name="oren_h_22_19_28" count="2" respawn="95">
+		<territory name="oren_h_22_19_28"/>
+		<npc id="20581"/><!--Шаман Ящеров Лито-->
+	</spawn>
+	<spawn name="oren_h_22_19_28" count="1" respawn="95">
+		<territory name="oren_h_22_19_28"/>
+		<npc id="20582"/><!--Вождь Ящеров Лито-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="81402" y="54619" z="-1504" h="15583"/>
+		<npc id="31594"/><!--Монд-->
+	</spawn>
+	<spawn count="1" respawn="60" group="olympiad">
+		<point x="82752" y="53056" z="-1488" h="16500"/>
+		<npc id="31690"/><!--Памятник Героям-->
+	</spawn>
+	<spawn count="1" respawn="60" group="olympiad">
+		<point x="82688" y="53056" z="-1488" h="16500"/>
+		<npc id="31688"/><!--Управляющий Олимпиады-->
+	</spawn>
+	<spawn count="1" respawn="60" group="royal_love_event">
+		<point x="83070" y="53999" z="-1488" h="32767"/>
+		<npc id="9020"/><!--Фринтеза-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="79774" y="54746" z="-1544" h="16000"/>
+		<npc id="30012"/><!--Член Гильдии Рыболовов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="class_master">
+		<point x="82651" y="54338" z="-1551" h="10558"/>
+		<npc id="31860"/><!--Buzz the Cat-->
+	</spawn>
+</list>

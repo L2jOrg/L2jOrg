@@ -1,0 +1,1278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<weapon id="49400" name="Conjuror\'s Staff" add_name="Magic Regeneration">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_conjure_staff_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1030"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="50"/>
+			<add stat="mAtk" order="0x10" value="47"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="49401" name="Staff of Mana" add_name="Empower">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_staff_of_mana_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1040"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="50"/>
+			<add stat="mAtk" order="0x10" value="47"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="49402" name="Staff of Mana" add_name="Acumen">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_staff_of_mana_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1040"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="50"/>
+			<add stat="mAtk" order="0x10" value="47"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="49403" name="Staff of Mana" add_name="Magic Regeneration">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_staff_of_mana_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1040"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="50"/>
+			<add stat="mAtk" order="0x10" value="47"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="49404" name="Staff of Magic" add_name="Empower">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_staff_of_magicpower_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1020"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="62"/>
+			<add stat="mAtk" order="0x10" value="57"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="49405" name="Staff of Magic" add_name="Acumen">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_staff_of_magicpower_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1020"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="62"/>
+			<add stat="mAtk" order="0x10" value="57"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="49406" name="Staff of Magic" add_name="Magic Regeneration">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_staff_of_magicpower_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1020"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="62"/>
+			<add stat="mAtk" order="0x10" value="57"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="49407" name="Atuba Hammer" add_name="Empower">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_atuba_hammer_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1010"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="90"/>
+			<add stat="mAtk" order="0x10" value="79"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="49408" name="Atuba Hammer" add_name="Acumen">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_atuba_hammer_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1010"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="90"/>
+			<add stat="mAtk" order="0x10" value="79"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="49409" name="Atuba Hammer" add_name="Magic Regeneration">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_atuba_hammer_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1010"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="90"/>
+			<add stat="mAtk" order="0x10" value="79"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="49410" name="Ghost Staff" add_name="Empower">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_ghost_staff_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="90"/>
+			<add stat="mAtk" order="0x10" value="79"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="49411" name="Ghost Staff" add_name="Acumen">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_ghost_staff_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="90"/>
+			<add stat="mAtk" order="0x10" value="79"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="49412" name="Ghost Staff" add_name="Magic Regeneration">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_ghost_staff_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="90"/>
+			<add stat="mAtk" order="0x10" value="79"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="49413" name="Atuba Mace" add_name="Empower">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_atuba_mace_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1010"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="90"/>
+			<add stat="mAtk" order="0x10" value="79"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="49414" name="Atuba Mace" add_name="Acumen">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_atuba_mace_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1010"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="90"/>
+			<add stat="mAtk" order="0x10" value="79"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="49415" name="Atuba Mace" add_name="Magic Regeneration">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_atuba_mace_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1010"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="90"/>
+			<add stat="mAtk" order="0x10" value="79"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<etcitem id="49416" name="Blade Spirit">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_soul_of_blade"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49417" name="Spirit Energy">
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_power_of_soul"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49418" name="Cube of Sayha " add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.sa_cube"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49419" name="Cube of Sayha " add_name="90-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.sa_cube"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49420" name="Scroll: Summon Storm">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.scrl_of_storm"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49421" name="Package: Cube of Sayha (30-day)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.shirt_special_box_i03"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49422" name="Package: Cube of Sayha (90-day)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.shirt_special_box_i03"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49423" name="Spellbook: Dual Weapon Defense">
+		<set name="icon" value="icon.etc_spell_books_hfighter_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="price" value="50000"/>
+	</etcitem>
+	<etcitem id="49424" name="Spellbook: Broad Sweep">
+		<set name="icon" value="icon.etc_spell_books_hfighter_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="price" value="50000"/>
+	</etcitem>
+	<etcitem id="49425" name="Spellbook: Immortal Life">
+		<set name="icon" value="icon.etc_spell_books_hfighter_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="price" value="100000"/>
+	</etcitem>
+	<etcitem id="49426" name="Spellbook: Break Duress">
+		<set name="icon" value="icon.etc_spell_books_hfighter_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="price" value="50000"/>
+	</etcitem>
+	<etcitem id="49427" name="Spellbook: Shield Deflect Magic">
+		<set name="icon" value="icon.etc_spell_books_hfighter_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="price" value="50000"/>
+	</etcitem>
+	<etcitem id="49428" name="Spellbook: Aegis">
+		<set name="icon" value="icon.etc_spell_books_hfighter_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="price" value="100000"/>
+	</etcitem>
+	<etcitem id="49429" name="Spellbook: Hide">
+		<set name="icon" value="icon.etc_spell_books_defighter_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="price" value="100000"/>
+	</etcitem>
+	<etcitem id="49430" name="Spellbook: Mystic Immunity">
+		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="price" value="50000"/>
+	</etcitem>
+	<etcitem id="49431" name="Spellbook: Divine Power">
+		<set name="icon" value="icon.etc_spell_books_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="price" value="50000"/>
+	</etcitem>
+	<etcitem id="49432" name="Spellbook: Stigma of Shilen">
+		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="price" value="50000"/>
+	</etcitem>
+	<etcitem id="49433" name="Amulet: Chant of Movement">
+		<set name="icon" value="icon.etc_orcish_talisman_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="price" value="50000"/>
+	</etcitem>
+	<etcitem id="49434" name="Sayha\'s Treasure Chest">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_ev_kalie_treasure_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49435" name="Scroll: Berserker Spirit">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<weapon id="49436" name="Blue Mackerel: One-handed Sword" add_name="7-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.wp_fishing1"/>
+		<set name="price" value="0"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1450"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="79"/>
+			<add stat="mAtk" order="0x10" value="47"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<weapon id="49437" name="Trumpetfish: Dagger" add_name="7-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.wp_fishing2"/>
+		<set name="price" value="0"/>
+		<set name="type" value="DAGGER"/>
+		<set name="weight" value="1070"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="5"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="62"/>
+			<add stat="mAtk" order="0x10" value="42"/>
+			<set stat="basePAtkSpd" order="0x08" value="433"/>
+			<set stat="basePCritRate" order="0x08" value="120"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="49438" name="Shark: Two-handed Sword" add_name="7-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.wp_fishing3"/>
+		<set name="price" value="0"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="2020"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="96"/>
+			<add stat="mAtk" order="0x10" value="47"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<weapon id="49439" name="Squid: Spear" add_name="7-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.wp_fishing4"/>
+		<set name="price" value="0"/>
+		<set name="type" value="POLE"/>
+		<set name="weight" value="2060"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="79"/>
+			<add stat="mAtk" order="0x10" value="47"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="49440" name="Sea Horse: Two-handed Magic Blunt Weapon" add_name="7-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.wp_fishing5"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="77"/>
+			<add stat="mAtk" order="0x10" value="69"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="49441" name="Lobster: Fist Weapon" add_name="7-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.wp_fishing6"/>
+		<set name="price" value="0"/>
+		<set name="type" value="DUALFIST"/>
+		<set name="weight" value="1510"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="5"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="96"/>
+			<add stat="mAtk" order="0x10" value="47"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="49442" name="Giant Crab: Bow" add_name="7-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.wp_fishing7"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BOW"/>
+		<set name="weight" value="1820"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="5"/>
+		<set name="mp_consume" value="2"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="179"/>
+			<add stat="mAtk" order="0x10" value="51"/>
+			<set stat="basePAtkSpd" order="0x08" value="227"/>
+			<set stat="basePCritRate" order="0x08" value="120"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="49443" name="Turtle: Shield" add_name="7-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.wp_fishing10"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1320"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pEvasRate" order="0x10" value="-8"/>
+			<add stat="sDef" order="0x10" value="142"/>
+			<add stat="rShld" order="0x10" value="20"/>
+		</for>
+	</weapon>
+	<weapon id="49444" name="Blue Mackerel: Dualsword" add_name="7-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.wp_fishing11"/>
+		<set name="price" value="0"/>
+		<set name="type" value="DUAL"/>
+		<set name="weight" value="2530"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="96"/>
+			<add stat="mAtk" order="0x10" value="47"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<weapon id="49445" name="Blue Mackerel: One-handed Blunt Weapon" add_name="7-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.wp_fishing1"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1720"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="79"/>
+			<add stat="mAtk" order="0x10" value="47"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<etcitem id="49446" name="Blue Mackerel Chest: One-handed Sword">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_raid_d_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49447" name="Trumpetfish Chest: Dagger">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_raid_d_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49448" name="Shark Chest: Two-handed Sword">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_raid_d_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49449" name="Squid Chest: Spear">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_raid_d_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49450" name="Sea Horse Chest: Two-handed Magic Blunt Weapon">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_raid_d_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49451" name="Lobster Chest: Fist Weapon">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_raid_d_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49452" name="Giant Crab Chest: Bow">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_raid_d_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49453" name="Turtle Chest: Shield">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_raid_d_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49454" name="Blue Mackerel Chest: Dualsword">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_raid_d_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49455" name="Blue Mackerel Chest: One-handed Blunt Weapon">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_raid_d_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49456" name="Blade Spirit Chest (5 pcs.)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_equip_item_box_i02"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49457" name="Letter Collector\'s Gift">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.shield_bread_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<armor id="49458" name="Agathion - Pisces" add_name="15-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.agathion_magmeld_teleport"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="49459" name="Agathion - Cancer" add_name="15-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.agathion_magmeld_teleport"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<etcitem id="49460" name="Fish Stew: Might Lv. 1">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.fish_stew_buff"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="POTION"/>
+		<skills>
+			<skill id="39047" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="49461" name="Fish Stew: Shield Lv. 1">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.fish_stew_buff"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="POTION"/>
+		<skills>
+			<skill id="39048" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="49462" name="Fish Stew: Magic Barrier Lv. 1">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.fish_stew_buff"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="POTION"/>
+		<skills>
+			<skill id="39049" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="49463" name="Fish Stew: Vampiric Rage Lv. 1">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.fish_stew_buff"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="POTION"/>
+		<skills>
+			<skill id="39050" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="49464" name="Fish Stew: Empower Lv. 1">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.fish_stew_buff"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="POTION"/>
+		<skills>
+			<skill id="39051" level="1"/>
+		</skills>
+	</etcitem>
+	<weapon id="49465" name="Fishing Rod" add_name="For NPC">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_fishing_rod_i03"/>
+		<set name="price" value="0"/>
+		<set name="type" value="ROD"/>
+		<set name="weight" value="1000"/>
+		<set name="rnd_dam" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="1"/>
+			<add stat="mAtk" order="0x10" value="1"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<etcitem id="49466" name="Warrior Experience Amulet" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.skill19226"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="RUNE"/>
+		<set name="durability" value="43200"/>
+		<set name="temporal" value="true"/>
+		<skills>
+			<skill id="39057" level="1"/>
+		</skills>
+	</etcitem>
+	<armor id="49467" name="Fire Dragon Pendant">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bm_pendant_pve"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<armor id="49468" name="Land Dragon Pendant">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bm_pendant_pvp"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<etcitem id="49469" name="Pendant Polish">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.bm_pendant_varnish"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49470" name="Shining Pendant Polish">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.bm_pendant_varnish_premium"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49471" name="Fire Dragon Pendant Chest">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.bm_pendant_pve_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49472" name="Land Dragon Pendant Chest">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.bm_pendant_pvp_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49473" name="Mr. K\'s Hand of God Gift Basket">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.mrk_basket_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49474" name="Scroll Part: Enchant Weapon">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.weapon_enchant_piece"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49475" name="Scroll Part: Enchant Armor">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.armor_enchant_piece"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49476" name="Refined Scroll Part: Enchant Weapon">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.high_weapon_enchant_piece"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<armor id="49477" name="Queen Ant\'s Ring" add_name="15-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_ring_of_queen_ant_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="21600"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<skills>
+			<skill id="3562" level="1"/>
+		</skills>
+		<for>
+			<add stat="mDef" order="0x10" value="32"/>
+			<add stat="maxMp" order="0x60" value="9"/>
+		</for>
+	</armor>
+	<etcitem id="49478" name="Refined Scroll Part: Enchant Armor">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.high_armor_enchant_piece"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49479" name="Solid Scroll Part: Enchant Weapon">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.safe_weapon_enchant_piece"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49480" name="Solid Scroll Part: Enchant Armor">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.safe_armor_enchant_piece"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49481" name="Solid Scroll: Enchant Armor (D-grade)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.giant_scrl_of_ench_am_d"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49482" name="Solid Scroll: Enchant Weapon (D-grade)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.giant_scrl_of_ench_wp_d"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49483" name="Solid Scroll: Enchant Armor (C-grade)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.giant_scrl_of_ench_am_c"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL_ENCHANT_ARMOR"/>
+	</etcitem>
+	<etcitem id="49484" name="Solid Scroll: Enchant Weapon (C-grade)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.giant_scrl_of_ench_wp_c"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL_ENCHANT_WEAPON"/>
+	</etcitem>
+	<etcitem id="49485" name="Solid Scroll: Enchant Armor (B-grade)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.giant_scrl_of_ench_am_b"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL_ENCHANT_ARMOR"/>
+	</etcitem>
+	<etcitem id="49486" name="Solid Scroll: Enchant Weapon (B-grade)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.giant_scrl_of_ench_wp_b"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL_ENCHANT_WEAPON"/>
+	</etcitem>
+	<etcitem id="49487" name="Soulshot Ticket">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_exchange_ticket_i03"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49488" name="Major Warrior Healing Potion">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="POTION"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_reagent_white_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<skills>
+			<skill id="39069" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="49489" name="Parts of Enchantment Scrolls Chest">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i08"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="49475" min_count="1" max_count="1" chance="30.0"/>
+			<capsuled_item id="49474" min_count="1" max_count="1" chance="30.0"/>
+			<capsuled_item id="49480" min_count="1" max_count="1" chance="10.0"/>
+			<capsuled_item id="49479" min_count="1" max_count="1" chance="10.0"/>
+			<capsuled_item id="49478" min_count="1" max_count="1" chance="10.0"/>
+			<capsuled_item id="49476" min_count="1" max_count="1" chance="10.0"/>			
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="49490" name="Fishing kit">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_elite_marguene_collection_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49491" name="Weapon Supply Box (D-grade)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_raid_e_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>        
+        <skills>
+            <skill id="39072" level="1"/>
+        </skills>
+	</etcitem>
+	<etcitem id="49492" name="Weapon Supply Box (C-grade)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_raid_e_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="handler" value="SkillsReduce"/>        
+        <skills>
+            <skill id="55367" level="1"/>
+        </skills>
+	</etcitem>
+	<armor id="49493" name="Orfen\'s Earring" add_name="15-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_earring_of_orfen_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="21600"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<skills>
+			<skill id="3560" level="1"/>
+		</skills>
+		<for>
+			<add stat="mDef" order="0x10" value="51"/>
+			<add stat="maxMp" order="0x60" value="19"/>
+		</for>
+	</armor>
+	<etcitem id="49494" name="Buff Scrolls Chest">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.new_user_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<weapon id="49495" name="Hero\'s Dual Swords" add_name="15-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_r_dualsword_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="DUAL"/>
+		<set name="weight" value="2460"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="107"/>
+			<add stat="mAtk" order="0x10" value="51"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<etcitem id="49496" name="Luck Cube" add_name="7-day">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.special_cube_i00"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49497" name="Hero\'s Fishing kit">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_elite_marguene_collection_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49498" name="My Teleport Scroll Package">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="49499" name="Angel Cat\'s Energy" add_name="30 days">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.skilltransform4"/>
+		<set name="weight" value="5"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="POTION"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="43200"/>
+		<skills>
+			<skill id="9487" level="1"/>
+		</skills>
+	</etcitem>
+</list>

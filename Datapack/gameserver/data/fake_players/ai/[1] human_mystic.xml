@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE fake_player_ai SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<fake_player_ai race="HUMAN" type="MYSTIC">
+	<on_character_create>	<!--Создается персонаж-->
+		<wait min_delay="3000" max_delay="9000"/>
+		<move_to_npc id="30019"/>
+		<speak_with_npc id="30019"/>
+		<wait min_delay="1000" max_delay="3000"/>
+		<wait min_delay="500" max_delay="1500"/>
+		<farm/>
+	</on_character_create>
+	<farm name="Einhasad Magic School" min_level="1" max_level="3">
+		<zones>
+			<zone>
+				<polygon>
+					<coords loc="-91112 248264 -3650 -3450"/>
+					<coords loc="-90328 248904 -3650 -3450"/>
+					<coords loc="-89912 248344 -3650 -3450"/>
+					<coords loc="-90840 247832 -3650 -3450"/>
+					<coords loc="-91048 247848 -3650 -3450"/>
+					<coords loc="-91208 248072 -3650 -3450"/>
+				</polygon>
+			</zone>
+			<spawn_points>
+				<coords loc="-90875 248162 -3570 0"/>
+				<coords loc="-90954 248118 -3570 0"/>
+				<coords loc="-90918 248070 -3570 0"/>
+				<coords loc="-90890 248027 -3570 0"/>
+			</spawn_points>
+		</zones>
+		<farm_monsters>
+			<npc id="18342"/>
+		</farm_monsters>
+		<on_obtain_max_level>
+			<wait min_delay="1000" max_delay="3000"/>
+			<action id="1"/>
+			<action id="2" chance="60"/>
+			<farm/>
+		</on_obtain_max_level>
+	</farm>
+	<farm name="Human Mystic Farm 1" min_level="2" max_level="4">
+		<zones>
+			<zone>
+				<polygon>
+					<coords loc="-87896 250936 -3782 -3482"/>
+					<coords loc="-88104 251832 -3798 -3498"/>
+					<coords loc="-87784 253880 -3846 -3546"/>
+					<coords loc="-87384 255816 -3894 -3594"/>
+					<coords loc="-86344 256552 -3878 -3578"/>
+					<coords loc="-84312 255096 -3878 -3578"/>
+					<coords loc="-82984 253480 -3894 -3594"/>
+					<coords loc="-84152 251848 -3814 -3514"/>
+					<coords loc="-85080 250312 -3606 -3306"/>
+					<coords loc="-86392 250248 -3638 -3338"/>
+				</polygon>
+			</zone>
+			<spawn_points>
+				<coords loc="-86600 250904 -3600"/>
+			</spawn_points>
+		</zones>
+		<on_obtain_max_level>
+			<wait min_delay="1000" max_delay="3000"/>
+			<action id="2"/>
+			<action id="3"/>
+		</on_obtain_max_level>
+	</farm>
+	<farm name="Human Mystic Farm 2" min_level="2" max_level="4">
+		<zones>
+			<zone>
+				<polygon>
+					<coords loc="-79592 248088 -3850 -3450"/>
+					<coords loc="-80824 243640 -3850 -3450"/>
+					<coords loc="-84120 246584 -3850 -3450"/>
+					<coords loc="-80952 249576 -3850 -3450"/>
+				</polygon>
+			</zone>
+			<spawn_points>
+				<coords loc="-81064 247160 -3648"/>
+			</spawn_points>
+		</zones>
+		<on_obtain_max_level>
+			<wait min_delay="1000" max_delay="3000"/>
+			<action id="3"/>
+		</on_obtain_max_level>
+	</farm>
+	<action id="1">	<!--Выходим из Магической Школы-->
+		<move_to_point x="-90296" y="248504" z="-3568" min_range="0" max_range="50"/>
+		<move_to_point x="-89608" y="248968" z="-3568" min_range="50" max_range="150"/>
+		<random_action>
+			<ordinary_actions>
+				<move_to_point x="-89080" y="248760" z="-3568" min_range="50" max_range="150"/>
+				<move_to_point x="-88264" y="248936" z="-3568" min_range="50" max_range="150"/>
+				<move_to_point x="-88200" y="249512" z="-3584" min_range="50" max_range="150"/>
+			</ordinary_actions>
+			<ordinary_actions>
+				<move_to_point x="-89624" y="249464" z="-3568" min_range="50" max_range="150"/>
+				<move_to_point x="-89336" y="250200" z="-3568" min_range="0" max_range="50"/>
+				<move_to_point x="-88840" y="250136" z="-3568" min_range="50" max_range="150"/>
+			</ordinary_actions>
+		</random_action>
+		<move_to_point x="-88008" y="250072" z="-3600" min_range="0" max_range="50"/>
+		<move_to_point x="-87704" y="250216" z="-3616" min_range="50" max_range="150"/>
+		<move_to_point x="-87000" y="250840" z="-3616" min_range="50" max_range="150"/>
+		<move_to_point x="-86376" y="251608" z="-3600" min_range="50" max_range="150"/>
+	</action>
+	<action id="2">	<!--Идем под южную часть деревни-->
+		<move_to_point x="-86360" y="250824" z="-3584" min_range="50" max_range="150"/>
+		<move_to_point x="-85352" y="250600" z="-3456" min_range="50" max_range="150"/>
+		<move_to_point x="-84440" y="250120" z="-3440" min_range="50" max_range="150"/>
+		<move_to_point x="-83224" y="249176" z="-3576" min_range="0" max_range="50"/>
+		<move_to_point x="-81848" y="248200" z="-3696" min_range="50" max_range="150"/>
+		<move_to_point x="-81496" y="246936" z="-3664" min_range="50" max_range="150"/>
+	</action>
+	<action id="3">	<!--Идем в дервеню от южной части деревни-->
+		<move_to_point x="-81144" y="246792" z="-3664" min_range="50" max_range="150"/>
+		<move_to_point x="-81560" y="246200" z="-3696" min_range="50" max_range="150"/>
+		<move_to_point x="-82200" y="245256" z="-3712" min_range="50" max_range="150"/>
+		<move_to_point x="-82872" y="244504" z="-3728" min_range="50" max_range="150"/>
+		<move_to_point x="-83336" y="244056" z="-3728" min_range="50" max_range="150"/>
+		<move_to_point x="-83944" y="243384" z="-3728" min_range="0" max_range="50"/>
+	</action>
+</fake_player_ai>

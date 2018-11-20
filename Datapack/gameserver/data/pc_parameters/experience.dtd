@@ -1,0 +1,7 @@
+<!ELEMENT list (experience)*>
+
+	<!ELEMENT experience (#PCDATA)>
+	<!ATTLIST experience
+		level CDATA #REQUIRED
+		exp CDATA #REQUIRED
+		training_rate CDATA #REQUIRED>

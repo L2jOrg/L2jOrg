@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="8300" name="Recipe: Infernal Master (60%)">
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="8313" name="Recipe: Spiritual Eye (100%)">
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="8314" name="Recipe: Spiritual Eye (60%)">
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="8315" name="Recipe: Flaming Dragon Skull (100%)">
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="8316" name="Recipe: Flaming Dragon Skull (60%)">
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="8317" name="Recipe: Lesser Giant\'s Hammer">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_blue_i00"/>
+		<set name="price" value="5600"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="8320" name="Recipe: Destroyer Hammer (100%)">
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="8325" name="Recipe: Doom Crusher (100%)">
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="8326" name="Recipe: Doom Crusher (60%)">
+		<set name="icon" value="icon.etc_recipe_violet_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="8327" name="Steel Sword Blade">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_sword_body_i00"/>
+		<set name="price" value="2383"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="8331" name="Infernal Master Blade">
+		<set name="icon" value="icon.etc_sword_body_i00"/>
+		<set name="weight" value="60"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="8341" name="Spiritual Eye Piece">
+		<set name="icon" value="icon.etc_squares_gray_i00"/>
+		<set name="weight" value="60"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="8342" name="Flaming Dragon Skull Piece">
+		<set name="icon" value="icon.etc_squares_gray_i00"/>
+		<set name="weight" value="60"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="8343" name="Lesser Giant\'s Hammer Piece">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_squares_gray_i00"/>
+		<set name="price" value="3952"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="8346" name="Destroyer Hammer Piece">
+		<set name="icon" value="icon.etc_squares_gray_i00"/>
+		<set name="weight" value="60"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="8349" name="Doom Crusher Head">
+		<set name="icon" value="icon.etc_squares_gray_i00"/>
+		<set name="weight" value="60"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<weapon id="8350" name="Chrono Maracas">
+		<set name="damage_range" value="0;0;44;120"/>
+		<set name="dropable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_chrono_maracas_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="DUAL"/>
+		<set name="rnd_dam" value="5"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="1"/>
+			<add stat="mAtk" order="0x10" value="1"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<etcitem id="8388" name="Spellbook: Greater Might">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
+		<set name="price" value="6750"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="120"/>
+		<set name="type" value="SPELLBOOK"/>
+	</etcitem>
+	<etcitem id="8389" name="Spellbook: Greater Shield">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
+		<set name="price" value="6750"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="120"/>
+		<set name="type" value="SPELLBOOK"/>
+	</etcitem>
+	<etcitem id="8397" name="Spellbook: Clarity">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
+		<set name="price" value="6750"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="120"/>
+		<set name="type" value="SPELLBOOK"/>
+	</etcitem>
+</list>

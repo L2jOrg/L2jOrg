@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE town SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<town name="Town of Gludio">
+	<zones>
+		<zone name="[guldiocastle_town_peace1]"/>
+		<zone name="[guldiocastle_town_peace2]"/>
+	</zones>
+	<actions>
+		<wait min_delay="1000" max_delay="3000"/>
+		<random_action>
+			<ordinary_actions>
+				<move_to_point x="-14344" y="123688" z="-3120" min_range="50" max_range="150"/>
+				<move_to_point x="-14840" y="123992" z="-3120" min_range="50" max_range="150"/>
+				<move_to_point x="-14920" y="124120" z="-3112" min_range="50" max_range="150"/>
+				<move_to_point x="-14904" y="124280" z="-3112" min_range="50" max_range="150"/>
+				<move_to_point x="-14792" y="124456" z="-3112" min_range="50" max_range="150"/>
+				<random_action>
+					<ordinary_actions>
+						<move_to_npc id="30294"/>
+						<speak_with_npc id="30294"/>
+					</ordinary_actions>
+					<ordinary_actions>
+						<move_to_npc id="30254"/>
+						<speak_with_npc id="30254"/>
+					</ordinary_actions>
+				</random_action>
+				<wait min_delay="2000" max_delay="5000"/>
+				<move_to_point x="-14792" y="124456" z="-3112" min_range="50" max_range="150"/>
+				<move_to_point x="-14904" y="124280" z="-3112" min_range="50" max_range="150"/>
+				<move_to_point x="-14920" y="124120" z="-3112" min_range="50" max_range="150"/>
+				<move_to_point x="-14840" y="123992" z="-3120" min_range="50" max_range="150"/>
+				<move_to_point x="-14344" y="123688" z="-3120" min_range="50" max_range="150"/>
+			</ordinary_actions>
+			<ordinary_actions>
+				<move_to_point x="-14424" y="123656" z="-3120" min_range="50" max_range="150"/>
+				<move_to_point x="-14376" y="124376" z="-3120" min_range="50" max_range="150"/>
+				<move_to_point x="-14152" y="124840" z="-3120" min_range="50" max_range="150"/>
+				<move_to_point x="-13928" y="124952" z="-3128" min_range="50" max_range="150"/>
+				<move_to_point x="-13192" y="124840" z="-3112" min_range="50" max_range="150"/>
+				<random_action>
+					<ordinary_actions>
+						<move_to_npc id="30322"/>
+						<speak_with_npc id="30322"/>
+					</ordinary_actions>
+					<ordinary_actions>
+						<move_to_npc id="30255"/>
+						<speak_with_npc id="30255"/>
+					</ordinary_actions>
+				</random_action>
+				<wait min_delay="2000" max_delay="5000"/>
+				<move_to_point x="-13192" y="124840" z="-3112" min_range="50" max_range="150"/>
+				<move_to_point x="-13928" y="124952" z="-3128" min_range="50" max_range="150"/>
+				<move_to_point x="-14152" y="124840" z="-3120" min_range="50" max_range="150"/>
+				<move_to_point x="-14376" y="124376" z="-3120" min_range="50" max_range="150"/>
+				<move_to_point x="-14424" y="123656" z="-3120" min_range="50" max_range="150"/>
+			</ordinary_actions>
+			<ordinary_actions>
+				<move_to_point x="-14296" y="123544" z="-3120" min_range="50" max_range="150"/>
+				<move_to_point x="-14632" y="123448" z="-3120" min_range="50" max_range="150"/>
+				<move_to_point x="-14920" y="123432" z="-3104" min_range="50" max_range="150"/>
+				<move_to_point x="-15176" y="123432" z="-3104" min_range="50" max_range="150"/>
+				<random_action>
+					<ordinary_actions>
+						<move_to_npc id="30321"/>
+						<speak_with_npc id="30321"/>
+					</ordinary_actions>
+					<ordinary_actions>
+						<move_to_npc id="30253"/>
+						<speak_with_npc id="30253"/>
+					</ordinary_actions>
+				</random_action>
+				<wait min_delay="2000" max_delay="5000"/>
+				<move_to_point x="-15176" y="123432" z="-3104" min_range="50" max_range="150"/>
+				<move_to_point x="-14920" y="123432" z="-3104" min_range="50" max_range="150"/>
+				<move_to_point x="-14632" y="123448" z="-3120" min_range="50" max_range="150"/>
+				<move_to_point x="-14296" y="123544" z="-3120" min_range="50" max_range="150"/>
+			</ordinary_actions>
+		</random_action>
+		<ordinary_actions chance="30">
+			<move_to_point x="-14344" y="123592" z="-3120" min_range="50" max_range="150"/>
+			<move_to_point x="-13528" y="123656" z="-3120" min_range="50" max_range="150"/>
+			<move_to_point x="-12376" y="123480" z="-3104" min_range="50" max_range="150"/>
+			<move_to_point x="-12232" y="123224" z="-3088" min_range="50" max_range="150"/>
+			<move_to_point x="-12408" y="122776" z="-3104" min_range="50" max_range="150"/>
+			<move_to_point x="-12744" y="122776" z="-3120" min_range="50" max_range="150"/>
+			<move_to_npc id="30256"/>
+			<speak_with_npc id="30256"/>
+		</ordinary_actions>
+		<wait min_delay="2000" max_delay="5000"/>
+		<farm/>
+	</actions>
+</town>

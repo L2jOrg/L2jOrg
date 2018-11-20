@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn name="oren06_npc2120_001" count="1" respawn="60">
+		<point x="63906" y="74711" z="-3667" h="57344"/>
+		<npc id="30749"/><!--Зуов-->
+	</spawn>
+	<spawn name="oren06_npc2120_002" count="1" respawn="60">
+		<point x="51210" y="82474" z="-3283" h="6000"/>
+		<npc id="30371"/><!--Талия-->
+	</spawn>
+	<spawn name="oren02_npc2120_g01" count="1" respawn="60">
+		<territory>
+			<add x="46614" y="66924" zmin="-3774" zmax="-3274"/>
+			<add x="55797" y="70865" zmin="-3774" zmax="-3274"/>
+			<add x="59884" y="77881" zmin="-3774" zmax="-3274"/>
+			<add x="53970" y="79944" zmin="-3774" zmax="-3274"/>
+			<add x="54976" y="76813" zmin="-3774" zmax="-3274"/>
+			<add x="52388" y="75467" zmin="-3774" zmax="-3274"/>
+			<add x="52666" y="73195" zmin="-3774" zmax="-3274"/>
+			<add x="51258" y="71896" zmin="-3774" zmax="-3274"/>
+			<add x="40415" y="70784" zmin="-3774" zmax="-3274"/>
+			<add x="38837" y="68005" zmin="-3774" zmax="-3274"/>
+		</territory>
+		<npc id="31033"/><!--Часовой-->
+	</spawn>
+	<spawn name="oren02_npc2120_g02" count="1" respawn="60">
+		<territory>
+			<add x="55837" y="79760" zmin="-3786" zmax="-3286"/>
+			<add x="58934" y="78667" zmin="-3786" zmax="-3286"/>
+			<add x="59556" y="92906" zmin="-3786" zmax="-3286"/>
+			<add x="51673" y="92251" zmin="-3786" zmax="-3286"/>
+			<add x="50331" y="88839" zmin="-3786" zmax="-3286"/>
+			<add x="53576" y="87152" zmin="-3786" zmax="-3286"/>
+			<add x="54086" y="84629" zmin="-3786" zmax="-3286"/>
+			<add x="50655" y="82338" zmin="-3786" zmax="-3286"/>
+			<add x="55342" y="82962" zmin="-3786" zmax="-3286"/>
+		</territory>
+		<npc id="31033"/><!--Часовой-->
+	</spawn>
+	<spawn name="oren02_npc2120_g03" count="1" respawn="60">
+		<territory>
+			<add x="33123" y="82418" zmin="-3809" zmax="-3309"/>
+			<add x="42111" y="83502" zmin="-3809" zmax="-3309"/>
+			<add x="41518" y="86737" zmin="-3809" zmax="-3309"/>
+			<add x="43048" y="88230" zmin="-3809" zmax="-3309"/>
+			<add x="46137" y="86523" zmin="-3809" zmax="-3309"/>
+			<add x="49597" y="88445" zmin="-3809" zmax="-3309"/>
+			<add x="50968" y="92713" zmin="-3809" zmax="-3309"/>
+			<add x="45024" y="95088" zmin="-3809" zmax="-3309"/>
+			<add x="38900" y="93650" zmin="-3809" zmax="-3309"/>
+			<add x="33128" y="90000" zmin="-3809" zmax="-3309"/>
+		</territory>
+		<npc id="31033"/><!--Часовой-->
+	</spawn>
+	<spawn name="oren02_npc2120_g04" count="1" respawn="60">
+		<territory>
+			<add x="32976" y="67413" zmin="-3770" zmax="-3470"/>
+			<add x="36317" y="67531" zmin="-3770" zmax="-3470"/>
+			<add x="38068" y="72650" zmin="-3770" zmax="-3470"/>
+			<add x="40227" y="74436" zmin="-3770" zmax="-3470"/>
+			<add x="37197" y="80477" zmin="-3770" zmax="-3470"/>
+			<add x="38271" y="82673" zmin="-3770" zmax="-3470"/>
+			<add x="33131" y="82167" zmin="-3770" zmax="-3470"/>
+		</territory>
+		<npc id="31033"/><!--Часовой-->
+	</spawn>
+	<spawn name="oren01_qm2120_07" count="1" respawn="180">
+		<territory>
+			<add x="55560" y="89836" zmin="-3784" zmax="-3384"/>
+			<add x="57188" y="89220" zmin="-3784" zmax="-3384"/>
+			<add x="57756" y="90292" zmin="-3784" zmax="-3384"/>
+			<add x="57132" y="91152" zmin="-3784" zmax="-3384"/>
+			<add x="55936" y="91236" zmin="-3784" zmax="-3384"/>
+		</territory>
+		<npc id="27077"/><!--Единорог Евы-->
+	</spawn>
+	<spawn name="oren01_qm2120_08" count="1" respawn="180">
+		<territory>
+			<add x="49012" y="90172" zmin="-3748" zmax="-3348"/>
+			<add x="50100" y="90600" zmin="-3748" zmax="-3348"/>
+			<add x="50080" y="91664" zmin="-3748" zmax="-3348"/>
+			<add x="49068" y="92144" zmin="-3748" zmax="-3348"/>
+			<add x="48224" y="91148" zmin="-3748" zmax="-3348"/>
+		</territory>
+		<npc id="27077"/><!--Единорог Евы-->
+	</spawn>
+	<spawn name="oren01_qm2120_09" count="1" respawn="180">
+		<territory>
+			<add x="42452" y="92644" zmin="-3716" zmax="-3316"/>
+			<add x="43616" y="92100" zmin="-3716" zmax="-3316"/>
+			<add x="44404" y="93556" zmin="-3716" zmax="-3316"/>
+			<add x="43788" y="94300" zmin="-3716" zmax="-3316"/>
+		</territory>
+		<npc id="27077"/><!--Единорог Евы-->
+	</spawn>
+	<spawn name="oren01_qm2120_10" count="1" respawn="180">
+		<territory>
+			<add x="38128" y="90112" zmin="-3528" zmax="-3128"/>
+			<add x="39000" y="90512" zmin="-3528" zmax="-3128"/>
+			<add x="38036" y="91784" zmin="-3528" zmax="-3128"/>
+			<add x="37308" y="91120" zmin="-3528" zmax="-3128"/>
+		</territory>
+		<npc id="27077"/><!--Единорог Евы-->
+	</spawn>
+	<spawn name="oren01_qm2120_11" count="1" respawn="180">
+		<territory>
+			<add x="34424" y="89224" zmin="-3640" zmax="-3240"/>
+			<add x="35572" y="89364" zmin="-3640" zmax="-3240"/>
+			<add x="35276" y="90860" zmin="-3640" zmax="-3240"/>
+			<add x="34104" y="90288" zmin="-3640" zmax="-3240"/>
+		</territory>
+		<npc id="27077"/><!--Единорог Евы-->
+	</spawn>
+	<spawn name="oren01_qm2120_12" count="1" respawn="180">
+		<territory>
+			<add x="45656" y="89260" zmin="-3676" zmax="-3276"/>
+			<add x="46760" y="88600" zmin="-3676" zmax="-3276"/>
+			<add x="47960" y="89840" zmin="-3676" zmax="-3276"/>
+			<add x="46040" y="90272" zmin="-3676" zmax="-3276"/>
+		</territory>
+		<npc id="27077"/><!--Единорог Евы-->
+	</spawn>
+	<spawn name="oren01_qm2019_08" count="1" respawn="180">
+		<territory>
+			<add x="56804" y="77312" zmin="-3656" zmax="-3356"/>
+			<add x="58504" y="76840" zmin="-3656" zmax="-3356"/>
+			<add x="58780" y="80240" zmin="-3656" zmax="-3356"/>
+			<add x="56760" y="80072" zmin="-3656" zmax="-3356"/>
+			<add x="56016" y="78784" zmin="-3656" zmax="-3356"/>
+		</territory>
+		<npc id="27068"/><!--Муртика-->
+	</spawn>
+	<spawn name="oren01_qm2019_07" count="1" respawn="180">
+		<territory>
+			<add x="46508" y="89244" zmin="-3772" zmax="-3372"/>
+			<add x="48304" y="90876" zmin="-3772" zmax="-3372"/>
+			<add x="47488" y="92304" zmin="-3772" zmax="-3372"/>
+			<add x="45004" y="92160" zmin="-3772" zmax="-3372"/>
+		</territory>
+		<npc id="27067"/><!--Камут-->
+	</spawn>
+	<spawn name="oren01_qm2019_06" count="1" respawn="180">
+		<territory>
+			<add x="33004" y="78680" zmin="-3748" zmax="-3298"/>
+			<add x="37372" y="79728" zmin="-3748" zmax="-3298"/>
+			<add x="38244" y="83040" zmin="-3748" zmax="-3298"/>
+			<add x="33060" y="83048" zmin="-3748" zmax="-3298"/>
+		</territory>
+		<npc id="27065"/><!--Роко-->
+	</spawn>
+	<spawn name="oren01_qm2019_05" count="1" respawn="180">
+		<territory>
+			<add x="40444" y="68984" zmin="-3548" zmax="-3148"/>
+			<add x="43596" y="68888" zmin="-3548" zmax="-3148"/>
+			<add x="44672" y="69892" zmin="-3548" zmax="-3148"/>
+			<add x="44072" y="71904" zmin="-3548" zmax="-3148"/>
+			<add x="41112" y="70332" zmin="-3548" zmax="-3148"/>
+		</territory>
+		<npc id="27064"/><!--Турел-->
+	</spawn>
+	<territory name="oren06_2120_07">
+		<add x="54901" y="85087" zmin="-3812" zmax="-3312"/>
+		<add x="56548" y="84867" zmin="-3812" zmax="-3312"/>
+		<add x="56490" y="87879" zmin="-3812" zmax="-3312"/>
+		<add x="54520" y="87832" zmin="-3812" zmax="-3312"/>
+		<add x="55152" y="86055" zmin="-3812" zmax="-3312"/>
+	</territory>
+	<spawn name="oren06_2120_07" count="2" respawn="15">
+		<territory name="oren06_2120_07"/>
+		<npc id="20013"/><!--Дриада-->
+	</spawn>
+	<spawn name="oren06_2120_07" count="3" respawn="15">
+		<territory name="oren06_2120_07"/>
+		<npc id="20019"/><!--Старшая Дриада-->
+	</spawn>
+	<spawn name="oren06_2120_07" count="1" respawn="15">
+		<territory name="oren06_2120_07"/>
+		<npc id="20460"/><!--Багровый Паук-->
+	</spawn>
+	<territory name="oren06_2120_06">
+		<add x="56917" y="82638" zmin="-3760" zmax="-3260"/>
+		<add x="57718" y="83510" zmin="-3760" zmax="-3260"/>
+		<add x="56735" y="84849" zmin="-3760" zmax="-3260"/>
+		<add x="54852" y="85111" zmin="-3760" zmax="-3260"/>
+		<add x="55620" y="83715" zmin="-3760" zmax="-3260"/>
+	</territory>
+	<spawn name="oren06_2120_06" count="3" respawn="15">
+		<territory name="oren06_2120_06"/>
+		<npc id="20013"/><!--Дриада-->
+	</spawn>
+	<spawn name="oren06_2120_06" count="2" respawn="15">
+		<territory name="oren06_2120_06"/>
+		<npc id="20019"/><!--Старшая Дриада-->
+	</spawn>
+	<spawn name="oren06_2120_06" count="1" respawn="15">
+		<territory name="oren06_2120_06"/>
+		<npc id="20460"/><!--Багровый Паук-->
+	</spawn>
+	<territory name="oren06_2120_05">
+		<add x="55978" y="77971" zmin="-3748" zmax="-3248"/>
+		<add x="57532" y="77210" zmin="-3748" zmax="-3248"/>
+		<add x="59052" y="80286" zmin="-3748" zmax="-3248"/>
+		<add x="56261" y="79679" zmin="-3748" zmax="-3248"/>
+	</territory>
+	<spawn name="oren06_2120_05" count="2" respawn="15">
+		<territory name="oren06_2120_05"/>
+		<npc id="20472"/><!--Главарь Воинов Орков Кабу -->
+	</spawn>
+	<spawn name="oren06_2120_05" count="3" respawn="15">
+		<territory name="oren06_2120_05"/>
+		<npc id="20013"/><!--Дриада-->
+	</spawn>
+	<spawn name="oren06_2120_05" count="2" respawn="15">
+		<territory name="oren06_2120_05"/>
+		<npc id="20019"/><!--Старшая Дриада-->
+	</spawn>
+	<territory name="oren06_2120_04">
+		<add x="53316" y="74393" zmin="-3700" zmax="-3200"/>
+		<add x="54333" y="74550" zmin="-3700" zmax="-3200"/>
+		<add x="55121" y="75617" zmin="-3700" zmax="-3200"/>
+		<add x="53217" y="75174" zmin="-3700" zmax="-3200"/>
+	</territory>
+	<spawn name="oren06_2120_04" count="1" respawn="15">
+		<territory name="oren06_2120_04"/>
+		<npc id="20472"/><!--Главарь Воинов Орков Кабу -->
+	</spawn>
+	<spawn name="oren06_2120_04" count="1" respawn="15">
+		<territory name="oren06_2120_04"/>
+		<npc id="20473"/><!--Адъютант Воинов Орков Кабу-->
+	</spawn>
+	<spawn name="oren06_2120_04" count="2" respawn="15">
+		<territory name="oren06_2120_04"/>
+		<npc id="20013"/><!--Дриада-->
+	</spawn>
+	<territory name="oren06_2120_03">
+		<add x="53430" y="69940" zmin="-3740" zmax="-3240"/>
+		<add x="55710" y="70646" zmin="-3740" zmax="-3240"/>
+		<add x="55814" y="72154" zmin="-3740" zmax="-3240"/>
+		<add x="53378" y="71657" zmin="-3740" zmax="-3240"/>
+	</territory>
+	<spawn name="oren06_2120_03" count="2" respawn="15">
+		<territory name="oren06_2120_03"/>
+		<npc id="20471"/><!--Воин Орков Кабу-->
+	</spawn>
+	<spawn name="oren06_2120_03" count="1" respawn="15">
+		<territory name="oren06_2120_03"/>
+		<npc id="20472"/><!--Главарь Воинов Орков Кабу -->
+	</spawn>
+	<spawn name="oren06_2120_03" count="2" respawn="15">
+		<territory name="oren06_2120_03"/>
+		<npc id="20473"/><!--Адъютант Воинов Орков Кабу-->
+	</spawn>
+	<territory name="oren06_2120_02">
+		<add x="51102" y="68761" zmin="-3768" zmax="-3268"/>
+		<add x="52375" y="69377" zmin="-3768" zmax="-3268"/>
+		<add x="52002" y="72197" zmin="-3768" zmax="-3268"/>
+		<add x="50942" y="70663" zmin="-3768" zmax="-3268"/>
+	</territory>
+	<spawn name="oren06_2120_02" count="2" respawn="15">
+		<territory name="oren06_2120_02"/>
+		<npc id="20471"/><!--Воин Орков Кабу-->
+	</spawn>
+	<spawn name="oren06_2120_02" count="2" respawn="15">
+		<territory name="oren06_2120_02"/>
+		<npc id="20472"/><!--Главарь Воинов Орков Кабу -->
+	</spawn>
+	<spawn name="oren06_2120_02" count="1" respawn="15">
+		<territory name="oren06_2120_02"/>
+		<npc id="20473"/><!--Адъютант Воинов Орков Кабу-->
+	</spawn>
+	<territory name="oren06_2120_01">
+		<add x="54911" y="65737" zmin="-3792" zmax="-3392"/>
+		<add x="57048" y="65625" zmin="-3792" zmax="-3392"/>
+		<add x="55794" y="68613" zmin="-3792" zmax="-3392"/>
+		<add x="54004" y="67795" zmin="-3792" zmax="-3392"/>
+	</territory>
+	<spawn name="oren06_2120_01" count="2" respawn="15">
+		<territory name="oren06_2120_01"/>
+		<npc id="20471"/><!--Воин Орков Кабу-->
+	</spawn>
+	<spawn name="oren06_2120_01" count="2" respawn="15">
+		<territory name="oren06_2120_01"/>
+		<npc id="20472"/><!--Главарь Воинов Орков Кабу -->
+	</spawn>
+	<spawn name="oren06_2120_01" count="2" respawn="15">
+		<territory name="oren06_2120_01"/>
+		<npc id="20473"/><!--Адъютант Воинов Орков Кабу-->
+	</spawn>
+</list>

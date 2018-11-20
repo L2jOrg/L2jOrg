@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "product_data.dtd">
+<list>
+	<!--
+	category = Best 		2
+	category = Event		1
+	category = Enchant		1
+	category = Supplies		2
+	category = Decorating	3
+	category = Package		4
+	category = Others		5
+	points_type = POINTS
+	points_type = ADENA
+	points_type = FREE_COIN
+	points_item_id = -1 - Account points (ruofflike)
+	points_item_id > 0 - Ingame items (Adena, coints, etc)
+	Base Parameters: <product id="0" name="" category="5" price="0" is_event="false" is_best="false" is_new="false" is_top="false" is_recommended="false" is_popular="false" on_sale="false" sale_start_date="1980/01/01 08:00" sale_end_date="2037/06/01 08:00" discount="0" location_id="-1" points_type="POINTS">
+	-->
+	<config points_item_id="-1" recent_list_size="5" default_points_type="POINTS"/>
+</list>

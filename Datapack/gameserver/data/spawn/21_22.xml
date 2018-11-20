@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn name="dion02_npc2122_01" count="1" respawn="60">
+		<point x="44694" y="146500" z="-3682" h="12288"/>
+		<npc id="30631"/><!--Родерик-->
+	</spawn>
+	<spawn name="dion02_npc2122_02" count="1" respawn="60">
+		<point x="45411" y="149100" z="-3681" h="42000"/>
+		<npc id="30632"/><!--Эндриго-->
+	</spawn>
+	<spawn name="event_t21_22_tempest_03" count="1" respawn="86400" respawn_random="3600">
+			<point x="53320" y="144280" z="-3872" h="42000"/>
+		<npc id="25385"/><!--Беспокойный Злой Дух-->
+	</spawn>	
+	<spawn name="dion_t21_22_038" count="2" respawn="90">
+		<territory>
+			<add x="46132" y="153600" zmin="-2812" zmax="-2612"/>
+			<add x="48040" y="153868" zmin="-2812" zmax="-2612"/>
+			<add x="48828" y="154436" zmin="-2812" zmax="-2612"/>
+			<add x="47412" y="154844" zmin="-2812" zmax="-2612"/>
+			<add x="46112" y="154312" zmin="-2812" zmax="-2612"/>
+		</territory>
+		<npc id="20201"/><!--Вурдалак-->
+	</spawn>
+	<spawn name="dion_t21_22_037" count="2" respawn="90">
+		<territory>
+			<add x="43380" y="152868" zmin="-2928" zmax="-2628"/>
+			<add x="44816" y="152756" zmin="-2928" zmax="-2628"/>
+			<add x="45084" y="154160" zmin="-2928" zmax="-2628"/>
+			<add x="44268" y="154516" zmin="-2928" zmax="-2628"/>
+		</territory>
+		<npc id="20202"/><!--Поедатель Мертвечины-->
+	</spawn>
+	<spawn name="dion_t21_22_039" count="2" respawn="90">
+		<territory>
+			<add x="47252" y="151916" zmin="-2840" zmax="-2640"/>
+			<add x="48120" y="152108" zmin="-2840" zmax="-2640"/>
+			<add x="47868" y="153516" zmin="-2840" zmax="-2640"/>
+			<add x="46928" y="153372" zmin="-2840" zmax="-2640"/>
+		</territory>
+		<npc id="20202"/><!--Поедатель Мертвечины-->
+	</spawn>
+	<territory name="dion_t21_22_034">
+		<add x="45184" y="145564" zmin="-3784" zmax="-3584"/>
+		<add x="46608" y="144248" zmin="-3784" zmax="-3584"/>
+		<add x="47948" y="146084" zmin="-3784" zmax="-3584"/>
+		<add x="46756" y="146796" zmin="-3784" zmax="-3584"/>
+	</territory>
+	<spawn name="dion_t21_22_034" count="2" respawn="90">
+		<territory name="dion_t21_22_034"/>
+		<npc id="20201"/><!--Вурдалак-->
+	</spawn>
+	<spawn name="dion_t21_22_034" count="2" respawn="90">
+		<territory name="dion_t21_22_034"/>
+		<npc id="20144"/><!--Висельное Дерево-->
+	</spawn>
+	<spawn name="dion_t21_22_033" count="2" respawn="90">
+		<territory>
+			<add x="45104" y="147232" zmin="-3820" zmax="-3620"/>
+			<add x="46832" y="147652" zmin="-3820" zmax="-3620"/>
+			<add x="47928" y="149064" zmin="-3820" zmax="-3620"/>
+			<add x="46552" y="149568" zmin="-3820" zmax="-3620"/>
+		</territory>
+		<npc id="20200"/><!--Раб-->
+	</spawn>
+	<spawn name="dion_t21_22_036" count="2" respawn="90">
+		<territory>
+			<add x="49184" y="146256" zmin="-3664" zmax="-3364"/>
+			<add x="50404" y="145760" zmin="-3664" zmax="-3364"/>
+			<add x="50928" y="147156" zmin="-3664" zmax="-3364"/>
+			<add x="50132" y="147956" zmin="-3664" zmax="-3364"/>
+		</territory>
+		<npc id="20144"/><!--Висельное Дерево-->
+	</spawn>
+	<territory name="dion_t21_22_035">
+		<add x="47780" y="143400" zmin="-3816" zmax="-3516"/>
+		<add x="49020" y="143348" zmin="-3816" zmax="-3516"/>
+		<add x="49632" y="145112" zmin="-3816" zmax="-3516"/>
+		<add x="48732" y="145528" zmin="-3816" zmax="-3516"/>
+		<add x="46864" y="144172" zmin="-3816" zmax="-3516"/>
+	</territory>
+	<spawn name="dion_t21_22_035" count="2" respawn="90">
+		<territory name="dion_t21_22_035"/>
+		<npc id="20202"/><!--Поедатель Мертвечины-->
+	</spawn>
+	<spawn name="dion_t21_22_035" count="2" respawn="90">
+		<territory name="dion_t21_22_035"/>
+		<npc id="20144"/><!--Висельное Дерево-->
+	</spawn>
+	<territory name="dion_t21_22_030">
+		<add x="38464" y="148680" zmin="-3900" zmax="-3600"/>
+		<add x="40968" y="148700" zmin="-3900" zmax="-3600"/>
+		<add x="41452" y="149168" zmin="-3900" zmax="-3600"/>
+		<add x="40936" y="150724" zmin="-3900" zmax="-3600"/>
+		<add x="38552" y="150636" zmin="-3900" zmax="-3600"/>
+		<add x="37480" y="149728" zmin="-3900" zmax="-3600"/>
+		<add x="37580" y="149080" zmin="-3900" zmax="-3600"/>
+	</territory>
+	<spawn name="dion_t21_22_030" count="3" respawn="90">
+		<territory name="dion_t21_22_030"/>
+		<npc id="20155"/><!--Корень Мандрагоры-->
+	</spawn>
+	<spawn name="dion_t21_22_030" count="3" respawn="90">
+		<territory name="dion_t21_22_030"/>
+		<npc id="20156"/><!--Цветок Мандрагоры-->
+	</spawn>
+	<spawn name="dion_t21_22_032" count="2" respawn="90">
+		<territory>
+			<add x="42692" y="146588" zmin="-3792" zmax="-3592"/>
+			<add x="43780" y="146240" zmin="-3792" zmax="-3592"/>
+			<add x="44296" y="147772" zmin="-3792" zmax="-3592"/>
+			<add x="42756" y="147872" zmin="-3792" zmax="-3592"/>
+		</territory>
+		<npc id="20200"/><!--Раб-->
+	</spawn>
+	<spawn name="dion_t21_22_031" count="2" respawn="90">
+		<territory>
+			<add x="42948" y="149028" zmin="-3812" zmax="-3212"/>
+			<add x="44560" y="149060" zmin="-3812" zmax="-3212"/>
+			<add x="44944" y="150532" zmin="-3812" zmax="-3212"/>
+			<add x="43744" y="151108" zmin="-3812" zmax="-3212"/>
+			<add x="42684" y="150572" zmin="-3812" zmax="-3212"/>
+		</territory>
+		<npc id="20201"/><!--Вурдалак-->
+	</spawn>
+	<spawn name="dion_t21_22_049" count="2" respawn="90">
+		<territory>
+			<add x="42296" y="143348" zmin="-3340" zmax="-2940"/>
+			<add x="43156" y="142116" zmin="-3340" zmax="-2940"/>
+			<add x="44316" y="143884" zmin="-3340" zmax="-2940"/>
+			<add x="43396" y="144680" zmin="-3340" zmax="-2940"/>
+			<add x="42416" y="144480" zmin="-3340" zmax="-2940"/>
+		</territory>
+		<npc id="20144"/><!--Висельное Дерево-->
+	</spawn>
+	<spawn name="dion_t21_22_048" count="2" respawn="90">
+		<territory>
+			<add x="43484" y="141916" zmin="-3372" zmax="-3072"/>
+			<add x="44560" y="140816" zmin="-3372" zmax="-3072"/>
+			<add x="45804" y="142776" zmin="-3372" zmax="-3072"/>
+			<add x="44556" y="143468" zmin="-3372" zmax="-3072"/>
+		</territory>
+		<npc id="20202"/><!--Поедатель Мертвечины-->
+	</spawn>
+	<spawn name="dion_t21_22_045" count="2" respawn="90">
+		<territory>
+			<add x="54376" y="140868" zmin="-3044" zmax="-2644"/>
+			<add x="55748" y="140656" zmin="-3044" zmax="-2644"/>
+			<add x="55844" y="141804" zmin="-3044" zmax="-2644"/>
+			<add x="53736" y="141784" zmin="-3044" zmax="-2644"/>
+		</territory>
+		<npc id="20197"/><!--Печальная Дева-->
+	</spawn>
+	<spawn name="dion_t21_22_044" count="2" respawn="90">
+		<territory>
+			<add x="52876" y="145852" zmin="-3116" zmax="-2816"/>
+			<add x="56172" y="145664" zmin="-3116" zmax="-2816"/>
+			<add x="55476" y="147280" zmin="-3116" zmax="-2816"/>
+			<add x="52932" y="146756" zmin="-3116" zmax="-2816"/>
+		</territory>
+		<npc id="20160"/><!--Потрошитель-->
+	</spawn>
+	<spawn name="dion_t21_22_047" count="2" respawn="90">
+		<territory>
+			<add x="45152" y="140588" zmin="-3396" zmax="-2996"/>
+			<add x="47812" y="140728" zmin="-3396" zmax="-2996"/>
+			<add x="47024" y="142160" zmin="-3396" zmax="-2996"/>
+			<add x="46304" y="142392" zmin="-3396" zmax="-2996"/>
+		</territory>
+		<npc id="20200"/><!--Раб-->
+	</spawn>
+	<spawn name="dion_t21_22_046" count="2" respawn="90">
+		<territory>
+			<add x="51428" y="142408" zmin="-3132" zmax="-2732"/>
+			<add x="52132" y="141388" zmin="-3132" zmax="-2732"/>
+			<add x="53256" y="141404" zmin="-3132" zmax="-2732"/>
+			<add x="52108" y="142804" zmin="-3132" zmax="-2732"/>
+		</territory>
+		<npc id="20197"/><!--Печальная Дева-->
+	</spawn>
+	<spawn name="dion_t21_22_041" count="2" respawn="90">
+		<territory>
+			<add x="45608" y="151976" zmin="-2908" zmax="-2608"/>
+			<add x="46944" y="151268" zmin="-2908" zmax="-2608"/>
+			<add x="46516" y="153236" zmin="-2908" zmax="-2608"/>
+			<add x="45744" y="153312" zmin="-2908" zmax="-2608"/>
+		</territory>
+		<npc id="20144"/><!--Висельное Дерево-->
+	</spawn>
+	<spawn name="dion_t21_22_040" count="2" respawn="90">
+		<territory>
+			<add x="48448" y="153564" zmin="-2884" zmax="-2584"/>
+			<add x="48824" y="151864" zmin="-2884" zmax="-2584"/>
+			<add x="49816" y="153828" zmin="-2884" zmax="-2584"/>
+			<add x="49004" y="154236" zmin="-2884" zmax="-2584"/>
+		</territory>
+		<npc id="20198"/><!--Вурдалак Берсерк-->
+	</spawn>
+	<spawn name="dion_t21_22_043" count="2" respawn="90">
+		<territory>
+			<add x="52304" y="151744" zmin="-2544" zmax="-2144"/>
+			<add x="54676" y="150028" zmin="-2544" zmax="-2144"/>
+			<add x="55468" y="152292" zmin="-2544" zmax="-2144"/>
+			<add x="54024" y="153456" zmin="-2544" zmax="-2144"/>
+			<add x="52672" y="152956" zmin="-2544" zmax="-2144"/>
+		</territory>
+		<npc id="20198"/><!--Вурдалак Берсерк-->
+	</spawn>
+	<spawn name="dion_t21_22_042" count="2" respawn="90">
+		<territory>
+			<add x="50604" y="150080" zmin="-2560" zmax="-2260"/>
+			<add x="52056" y="148320" zmin="-2560" zmax="-2260"/>
+			<add x="54544" y="149616" zmin="-2560" zmax="-2260"/>
+			<add x="51764" y="151608" zmin="-2560" zmax="-2260"/>
+		</territory>
+		<npc id="20200"/><!--Раб-->
+	</spawn>
+	<territory name="dion_t21_22_052">
+		<add x="50700" y="140648" zmin="-3800" zmax="-3400"/>
+		<add x="51384" y="140368" zmin="-3800" zmax="-3400"/>
+		<add x="51176" y="141156" zmin="-3800" zmax="-3400"/>
+		<add x="50836" y="141552" zmin="-3800" zmax="-3400"/>
+		<add x="50276" y="141228" zmin="-3800" zmax="-3400"/>
+	</territory>
+	<spawn name="dion_t21_22_052" count="2" respawn="90">
+		<territory name="dion_t21_22_052"/>
+		<npc id="20200"/><!--Раб-->
+	</spawn>
+	<spawn name="dion_t21_22_052" count="2" respawn="90">
+		<territory name="dion_t21_22_052"/>
+		<npc id="20202"/><!--Поедатель Мертвечины-->
+	</spawn>
+	<territory name="dion_t21_22_054">
+		<add x="50660" y="152840" zmin="-3624" zmax="-3224"/>
+		<add x="51004" y="152496" zmin="-3624" zmax="-3224"/>
+		<add x="52124" y="154148" zmin="-3624" zmax="-3224"/>
+		<add x="51276" y="155188" zmin="-3624" zmax="-3224"/>
+	</territory>
+	<spawn name="dion_t21_22_054" count="2" respawn="90">
+		<territory name="dion_t21_22_054"/>
+		<npc id="20200"/><!--Раб-->
+	</spawn>
+	<spawn name="dion_t21_22_054" count="2" respawn="90">
+		<territory name="dion_t21_22_054"/>
+		<npc id="20202"/><!--Поедатель Мертвечины-->
+	</spawn>
+	<territory name="dion_t21_22_053">
+		<add x="48596" y="149956" zmin="-3648" zmax="-3248"/>
+		<add x="49228" y="149848" zmin="-3648" zmax="-3248"/>
+		<add x="50688" y="151924" zmin="-3648" zmax="-3248"/>
+		<add x="50272" y="152152" zmin="-3648" zmax="-3248"/>
+	</territory>
+	<spawn name="dion_t21_22_053" count="2" respawn="90">
+		<territory name="dion_t21_22_053"/>
+		<npc id="20200"/><!--Раб-->
+	</spawn>
+	<spawn name="dion_t21_22_053" count="2" respawn="90">
+		<territory name="dion_t21_22_053"/>
+		<npc id="20202"/><!--Поедатель Мертвечины-->
+	</spawn>
+	<territory name="dion_t21_22_050">
+		<add x="49896" y="141556" zmin="-3800" zmax="-3400"/>
+		<add x="50664" y="141976" zmin="-3800" zmax="-3400"/>
+		<add x="49624" y="143540" zmin="-3800" zmax="-3400"/>
+		<add x="49052" y="142676" zmin="-3800" zmax="-3400"/>
+	</territory>
+	<spawn name="dion_t21_22_050" count="2" respawn="90">
+		<territory name="dion_t21_22_050"/>
+		<npc id="20200"/><!--Раб-->
+	</spawn>
+	<spawn name="dion_t21_22_050" count="2" respawn="90">
+		<territory name="dion_t21_22_050"/>
+		<npc id="20202"/><!--Поедатель Мертвечины-->
+	</spawn>
+	<spawn name="quest_030919_21_22_001" count="8" respawn="600">
+		<territory>
+			<add x="53144" y="142832" zmin="-3924" zmax="-3524"/>
+			<add x="54148" y="142836" zmin="-3924" zmax="-3524"/>
+			<add x="53568" y="144576" zmin="-3924" zmax="-3524"/>
+			<add x="53204" y="144332" zmin="-3924" zmax="-3524"/>
+			<add x="52884" y="143680" zmin="-3924" zmax="-3524"/>
+		</territory>
+		<npc id="27099"/><!--Безымянный Призрак-->
+	</spawn>
+	<territory name="dion_t21_22_005">
+		<add x="45380" y="134132" zmin="-3436" zmax="-2336"/>
+		<add x="48064" y="134612" zmin="-3436" zmax="-2336"/>
+		<add x="50568" y="135704" zmin="-3436" zmax="-2336"/>
+		<add x="48664" y="136260" zmin="-3436" zmax="-2336"/>
+		<add x="44776" y="135472" zmin="-3436" zmax="-2336"/>
+	</territory>
+	<spawn name="dion_t21_22_005" count="2" respawn="75">
+		<territory name="dion_t21_22_005"/>
+		<npc id="20291"/><!--Герой Орков Энку-->
+	</spawn>
+	<spawn name="dion_t21_22_005" count="1" respawn="75">
+		<territory name="dion_t21_22_005"/>
+		<npc id="20224"/><!--Рейнджер Гноллов-->
+	</spawn>
+	<spawn name="dion_t21_22_005" count="2" respawn="75">
+		<territory name="dion_t21_22_005"/>
+		<npc id="20265"/><!--Монстроглаз Искатель-->
+	</spawn>
+	<spawn name="dion_t21_22_005" count="1" respawn="75">
+		<territory name="dion_t21_22_005"/>
+		<npc id="20062"/><!--Людоед Тумран-->
+	</spawn>
+	<territory name="dion_t21_22_004">
+		<add x="39944" y="133424" zmin="-3568" zmax="-2468"/>
+		<add x="42156" y="133108" zmin="-3568" zmax="-2468"/>
+		<add x="44800" y="134196" zmin="-3568" zmax="-2468"/>
+		<add x="44740" y="135536" zmin="-3568" zmax="-2468"/>
+		<add x="39368" y="135312" zmin="-3568" zmax="-2468"/>
+	</territory>
+	<spawn name="dion_t21_22_004" count="3" respawn="75">
+		<territory name="dion_t21_22_004"/>
+		<npc id="20291"/><!--Герой Орков Энку-->
+	</spawn>
+	<spawn name="dion_t21_22_004" count="2" respawn="75">
+		<territory name="dion_t21_22_004"/>
+		<npc id="20224"/><!--Рейнджер Гноллов-->
+	</spawn>
+	<spawn name="dion_t21_22_004" count="3" respawn="75">
+		<territory name="dion_t21_22_004"/>
+		<npc id="20265"/><!--Монстроглаз Искатель-->
+	</spawn>
+	<spawn name="dion_t21_22_004" count="2" respawn="75">
+		<territory name="dion_t21_22_004"/>
+		<npc id="20062"/><!--Людоед Тумран-->
+	</spawn>
+	<territory name="dion_t21_22_007">
+		<add x="62296" y="135124" zmin="-3800" zmax="-3200"/>
+		<add x="65252" y="135208" zmin="-3800" zmax="-3200"/>
+		<add x="65236" y="139868" zmin="-3800" zmax="-3200"/>
+		<add x="64088" y="139256" zmin="-3800" zmax="-3200"/>
+	</territory>
+	<spawn name="dion_t21_22_007" count="2" respawn="75">
+		<territory name="dion_t21_22_007"/>
+		<npc id="20062"/><!--Людоед Тумран-->
+	</spawn>
+	<spawn name="dion_t21_22_007" count="2" respawn="75">
+		<territory name="dion_t21_22_007"/>
+		<npc id="20205"/><!--Жуткий Волк-->
+	</spawn>
+	<spawn name="dion_t21_22_007" count="3" respawn="75">
+		<territory name="dion_t21_22_007"/>
+		<npc id="20266"/><!--Монстроглаз Надзиратель-->
+	</spawn>
+	<territory name="dion_t21_22_006">
+		<add x="50264" y="131236" zmin="-3552" zmax="-2152"/>
+		<add x="59148" y="131232" zmin="-3552" zmax="-2152"/>
+		<add x="59464" y="133088" zmin="-3552" zmax="-2152"/>
+		<add x="52496" y="132884" zmin="-3552" zmax="-2152"/>
+	</territory>
+	<spawn name="dion_t21_22_006" count="4" respawn="75">
+		<territory name="dion_t21_22_006"/>
+		<npc id="20062"/><!--Людоед Тумран-->
+	</spawn>
+	<spawn name="dion_t21_22_006" count="4" respawn="75">
+		<territory name="dion_t21_22_006"/>
+		<npc id="20205"/><!--Жуткий Волк-->
+	</spawn>
+	<spawn name="dion_t21_22_006" count="4" respawn="75">
+		<territory name="dion_t21_22_006"/>
+		<npc id="20266"/><!--Монстроглаз Надзиратель-->
+	</spawn>
+	<territory name="dion_t21_22_001">
+		<add x="33072" y="131220" zmin="-3448" zmax="-2848"/>
+		<add x="40004" y="131200" zmin="-3448" zmax="-2848"/>
+		<add x="39160" y="133148" zmin="-3448" zmax="-2848"/>
+		<add x="33072" y="133844" zmin="-3448" zmax="-2848"/>
+	</territory>
+	<spawn name="dion_t21_22_001" count="5" respawn="75">
+		<territory name="dion_t21_22_001"/>
+		<npc id="20062"/><!--Людоед Тумран-->
+	</spawn>
+	<spawn name="dion_t21_22_001" count="5" respawn="75">
+		<territory name="dion_t21_22_001"/>
+		<npc id="20205"/><!--Жуткий Волк-->
+	</spawn>
+	<spawn name="dion_t21_22_001" count="5" respawn="75">
+		<territory name="dion_t21_22_001"/>
+		<npc id="20266"/><!--Монстроглаз Надзиратель-->
+	</spawn>
+	<territory name="dion_t21_22_003">
+		<add x="33008" y="134944" zmin="-3336" zmax="-2336"/>
+		<add x="36224" y="134100" zmin="-3336" zmax="-2336"/>
+		<add x="39840" y="134220" zmin="-3336" zmax="-2336"/>
+		<add x="37920" y="138420" zmin="-3336" zmax="-2336"/>
+		<add x="33024" y="142484" zmin="-3336" zmax="-2336"/>
+	</territory>
+	<spawn name="dion_t21_22_003" count="6" respawn="75">
+		<territory name="dion_t21_22_003"/>
+		<npc id="20291"/><!--Герой Орков Энку-->
+	</spawn>
+	<spawn name="dion_t21_22_003" count="6" respawn="75">
+		<territory name="dion_t21_22_003"/>
+		<npc id="20224"/><!--Рейнджер Гноллов-->
+	</spawn>
+	<spawn name="dion_t21_22_003" count="6" respawn="75">
+		<territory name="dion_t21_22_003"/>
+		<npc id="20265"/><!--Монстроглаз Искатель-->
+	</spawn>
+	<spawn name="dion_t21_22_003" count="6" respawn="75">
+		<territory name="dion_t21_22_003"/>
+		<npc id="20062"/><!--Людоед Тумран-->
+	</spawn>
+	<territory name="dion_t21_22_002">
+		<add x="39952" y="131208" zmin="-3696" zmax="-2996"/>
+		<add x="45928" y="131164" zmin="-3696" zmax="-2996"/>
+		<add x="44040" y="132492" zmin="-3696" zmax="-2996"/>
+		<add x="39488" y="132496" zmin="-3696" zmax="-2996"/>
+	</territory>
+	<spawn name="dion_t21_22_002" count="2" respawn="75">
+		<territory name="dion_t21_22_002"/>
+		<npc id="20062"/><!--Людоед Тумран-->
+	</spawn>
+	<spawn name="dion_t21_22_002" count="2" respawn="75">
+		<territory name="dion_t21_22_002"/>
+		<npc id="20205"/><!--Жуткий Волк-->
+	</spawn>
+	<spawn name="dion_t21_22_002" count="2" respawn="75">
+		<territory name="dion_t21_22_002"/>
+		<npc id="20266"/><!--Монстроглаз Надзиратель-->
+	</spawn>
+	<territory name="dion_t21_22_016">
+		<add x="44928" y="146380" zmin="-3832" zmax="-3432"/>
+		<add x="47064" y="147308" zmin="-3832" zmax="-3432"/>
+		<add x="49020" y="149376" zmin="-3832" zmax="-3432"/>
+		<add x="46620" y="150268" zmin="-3832" zmax="-3432"/>
+		<add x="44824" y="147836" zmin="-3832" zmax="-3432"/>
+		<add x="44440" y="146768" zmin="-3832" zmax="-3432"/>
+	</territory>
+	<spawn name="dion_t21_22_016" count="2" respawn="90">
+		<territory name="dion_t21_22_016"/>
+		<npc id="20201"/><!--Вурдалак-->
+	</spawn>
+	<spawn name="dion_t21_22_016" count="2" respawn="90">
+		<territory name="dion_t21_22_016"/>
+		<npc id="20083"/><!--Гранитный Голем-->
+	</spawn>
+	<spawn name="dion_t21_22_016" count="2" respawn="90">
+		<territory name="dion_t21_22_016"/>
+		<npc id="20202"/><!--Поедатель Мертвечины-->
+	</spawn>
+	<territory name="dion_t21_22_015">
+		<add x="46664" y="143508" zmin="-3788" zmax="-3188"/>
+		<add x="48964" y="142572" zmin="-3788" zmax="-3188"/>
+		<add x="50512" y="145032" zmin="-3788" zmax="-3188"/>
+		<add x="47004" y="147268" zmin="-3788" zmax="-3188"/>
+		<add x="45100" y="146336" zmin="-3788" zmax="-3188"/>
+		<add x="44600" y="145172" zmin="-3788" zmax="-3188"/>
+	</territory>
+	<spawn name="dion_t21_22_015" count="4" respawn="90">
+		<territory name="dion_t21_22_015"/>
+		<npc id="20083"/><!--Гранитный Голем-->
+	</spawn>
+	<spawn name="dion_t21_22_015" count="4" respawn="90">
+		<territory name="dion_t21_22_015"/>
+		<npc id="20202"/><!--Поедатель Мертвечины-->
+	</spawn>
+	<spawn name="dion_t21_22_015" count="4" respawn="90">
+		<territory name="dion_t21_22_015"/>
+		<npc id="20144"/><!--Висельное Дерево-->
+	</spawn>
+	<territory name="dion_t21_22_018">
+		<add x="42528" y="152444" zmin="-3068" zmax="-2668"/>
+		<add x="45144" y="152192" zmin="-3068" zmax="-2668"/>
+		<add x="45620" y="154480" zmin="-3068" zmax="-2668"/>
+		<add x="44056" y="155268" zmin="-3068" zmax="-2668"/>
+	</territory>
+	<spawn name="dion_t21_22_018" count="3" respawn="90">
+		<territory name="dion_t21_22_018"/>
+		<npc id="20199"/><!--Янтарный Василиск-->
+	</spawn>
+	<spawn name="dion_t21_22_018" count="3" respawn="90">
+		<territory name="dion_t21_22_018"/>
+		<npc id="20200"/><!--Раб-->
+	</spawn>
+	<territory name="dion_t21_22_017">
+		<add x="47096" y="147260" zmin="-3820" zmax="-3220"/>
+		<add x="50452" y="145188" zmin="-3820" zmax="-3220"/>
+		<add x="51300" y="146364" zmin="-3820" zmax="-3220"/>
+		<add x="51104" y="147516" zmin="-3820" zmax="-3220"/>
+		<add x="49120" y="149308" zmin="-3820" zmax="-3220"/>
+	</territory>
+	<spawn name="dion_t21_22_017" count="3" respawn="90">
+		<territory name="dion_t21_22_017"/>
+		<npc id="20083"/><!--Гранитный Голем-->
+	</spawn>
+	<spawn name="dion_t21_22_017" count="3" respawn="90">
+		<territory name="dion_t21_22_017"/>
+		<npc id="20202"/><!--Поедатель Мертвечины-->
+	</spawn>
+	<spawn name="dion_t21_22_017" count="3" respawn="90">
+		<territory name="dion_t21_22_017"/>
+		<npc id="20144"/><!--Висельное Дерево-->
+	</spawn>
+	<territory name="dion_t21_22_012">
+		<add x="33076" y="151944" zmin="-3764" zmax="-2564"/>
+		<add x="38432" y="156636" zmin="-3764" zmax="-2564"/>
+		<add x="38500" y="157964" zmin="-3764" zmax="-2564"/>
+		<add x="33000" y="159320" zmin="-3764" zmax="-2564"/>
+	</territory>
+	<spawn name="dion_t21_22_012" count="5" respawn="75">
+		<territory name="dion_t21_22_012"/>
+		<npc id="20062"/><!--Людоед Тумран-->
+	</spawn>
+	<spawn name="dion_t21_22_012" count="5" respawn="75">
+		<territory name="dion_t21_22_012"/>
+		<npc id="20205"/><!--Жуткий Волк-->
+	</spawn>
+	<spawn name="dion_t21_22_012" count="5" respawn="75">
+		<territory name="dion_t21_22_012"/>
+		<npc id="20266"/><!--Монстроглаз Надзиратель-->
+	</spawn>
+	<territory name="dion_t21_22_011">
+		<add x="43028" y="160908" zmin="-3832" zmax="-2432"/>
+		<add x="54884" y="162900" zmin="-3832" zmax="-2432"/>
+		<add x="54156" y="163464" zmin="-3832" zmax="-2432"/>
+		<add x="33444" y="163340" zmin="-3832" zmax="-2432"/>
+		<add x="33420" y="162304" zmin="-3832" zmax="-2432"/>
+	</territory>
+	<spawn name="dion_t21_22_011" count="6" respawn="75">
+		<territory name="dion_t21_22_011"/>
+		<npc id="20062"/><!--Людоед Тумран-->
+	</spawn>
+	<spawn name="dion_t21_22_011" count="6" respawn="75">
+		<territory name="dion_t21_22_011"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn name="dion_t21_22_011" count="6" respawn="75">
+		<territory name="dion_t21_22_011"/>
+		<npc id="20250"/><!--Стеклянный Ягуар-->
+	</spawn>
+	<territory name="dion_t21_22_014">
+		<add x="42232" y="145840" zmin="-3812" zmax="-3212"/>
+		<add x="44048" y="145488" zmin="-3812" zmax="-3212"/>
+		<add x="45876" y="150632" zmin="-3812" zmax="-3212"/>
+		<add x="44468" y="151512" zmin="-3812" zmax="-3212"/>
+		<add x="41848" y="151596" zmin="-3812" zmax="-3212"/>
+	</territory>
+	<spawn name="dion_t21_22_014" count="4" respawn="90">
+		<territory name="dion_t21_22_014"/>
+		<npc id="20201"/><!--Вурдалак-->
+	</spawn>
+	<spawn name="dion_t21_22_014" count="4" respawn="90">
+		<territory name="dion_t21_22_014"/>
+		<npc id="20083"/><!--Гранитный Голем-->
+	</spawn>
+	<spawn name="dion_t21_22_014" count="4" respawn="90">
+		<territory name="dion_t21_22_014"/>
+		<npc id="20202"/><!--Поедатель Мертвечины-->
+	</spawn>
+	<territory name="dion_t21_22_013">
+		<add x="38192" y="144396" zmin="-3844" zmax="-3244"/>
+		<add x="39628" y="143848" zmin="-3844" zmax="-3244"/>
+		<add x="41860" y="145596" zmin="-3844" zmax="-3244"/>
+		<add x="41824" y="149464" zmin="-3844" zmax="-3244"/>
+		<add x="41200" y="151176" zmin="-3844" zmax="-3244"/>
+		<add x="40008" y="151744" zmin="-3844" zmax="-3244"/>
+		<add x="37992" y="151364" zmin="-3844" zmax="-3244"/>
+		<add x="36964" y="150648" zmin="-3844" zmax="-3244"/>
+		<add x="35648" y="148644" zmin="-3844" zmax="-3244"/>
+		<add x="36188" y="147260" zmin="-3844" zmax="-3244"/>
+	</territory>
+	<spawn name="dion_t21_22_013" count="7" respawn="90">
+		<territory name="dion_t21_22_013"/>
+		<npc id="20223"/><!--Росток Мандрагоры-->
+	</spawn>
+	<spawn name="dion_t21_22_013" count="7" respawn="90">
+		<territory name="dion_t21_22_013"/>
+		<npc id="20154"/><!--Росток Мандрагоры-->
+	</spawn>
+	<spawn name="dion_t21_22_013" count="3" respawn="90">
+		<territory name="dion_t21_22_013"/>
+		<npc id="20155"/><!--Корень Мандрагоры-->
+	</spawn>
+	<spawn name="dion_t21_22_013" count="3" respawn="90">
+		<territory name="dion_t21_22_013"/>
+		<npc id="20156"/><!--Цветок Мандрагоры-->
+	</spawn>
+	<territory name="dion_t21_22_010">
+		<add x="60324" y="159056" zmin="-3708" zmax="-2208"/>
+		<add x="65180" y="158012" zmin="-3708" zmax="-2208"/>
+		<add x="65140" y="163496" zmin="-3708" zmax="-2208"/>
+		<add x="54384" y="163368" zmin="-3708" zmax="-2208"/>
+	</territory>
+	<spawn name="dion_t21_22_010" count="7" respawn="75">
+		<territory name="dion_t21_22_010"/>
+		<npc id="20062"/><!--Людоед Тумран-->
+	</spawn>
+	<spawn name="dion_t21_22_010" count="8" respawn="75">
+		<territory name="dion_t21_22_010"/>
+		<npc id="20068"/><!--Монстроглаз Разрушитель-->
+	</spawn>
+	<spawn name="dion_t21_22_010" count="7" respawn="75">
+		<territory name="dion_t21_22_010"/>
+		<npc id="20250"/><!--Стеклянный Ягуар-->
+	</spawn>
+	<territory name="dion_t21_22_009">
+		<add x="62616" y="148796" zmin="-3768" zmax="-2768"/>
+		<add x="65244" y="147880" zmin="-3768" zmax="-2768"/>
+		<add x="65228" y="155148" zmin="-3768" zmax="-2768"/>
+		<add x="63516" y="153204" zmin="-3768" zmax="-2768"/>
+	</territory>
+	<spawn name="dion_t21_22_009" count="3" respawn="75">
+		<territory name="dion_t21_22_009"/>
+		<npc id="20062"/><!--Людоед Тумран-->
+	</spawn>
+	<spawn name="dion_t21_22_009" count="3" respawn="75">
+		<territory name="dion_t21_22_009"/>
+		<npc id="20205"/><!--Жуткий Волк-->
+	</spawn>
+	<spawn name="dion_t21_22_009" count="4" respawn="75">
+		<territory name="dion_t21_22_009"/>
+		<npc id="20266"/><!--Монстроглаз Надзиратель-->
+	</spawn>
+	<territory name="dion_t21_22_008">
+		<add x="63896" y="143024" zmin="-3740" zmax="-3140"/>
+		<add x="65276" y="142012" zmin="-3740" zmax="-3140"/>
+		<add x="65224" y="146248" zmin="-3740" zmax="-3140"/>
+		<add x="63724" y="144112" zmin="-3740" zmax="-3140"/>
+	</territory>
+	<spawn name="dion_t21_22_008" count="2" respawn="75">
+		<territory name="dion_t21_22_008"/>
+		<npc id="20062"/><!--Людоед Тумран-->
+	</spawn>
+	<spawn name="dion_t21_22_008" count="2" respawn="75">
+		<territory name="dion_t21_22_008"/>
+		<npc id="20205"/><!--Жуткий Волк-->
+	</spawn>
+	<spawn name="dion_t21_22_008" count="2" respawn="75">
+		<territory name="dion_t21_22_008"/>
+		<npc id="20266"/><!--Монстроглаз Надзиратель-->
+	</spawn>
+	<territory name="dion_t21_22_027">
+		<add x="44632" y="140140" zmin="-3400" zmax="-2900"/>
+		<add x="50056" y="140484" zmin="-3400" zmax="-2900"/>
+		<add x="48920" y="142036" zmin="-3400" zmax="-2900"/>
+		<add x="46568" y="143068" zmin="-3400" zmax="-2900"/>
+	</territory>
+	<spawn name="dion_t21_22_027" count="4" respawn="90">
+		<territory name="dion_t21_22_027"/>
+		<npc id="20160"/><!--Потрошитель-->
+	</spawn>
+	<spawn name="dion_t21_22_027" count="4" respawn="90">
+		<territory name="dion_t21_22_027"/>
+		<npc id="20198"/><!--Вурдалак Берсерк-->
+	</spawn>
+	<territory name="dion_t21_22_026">
+		<add x="55332" y="143588" zmin="-3304" zmax="-2704"/>
+		<add x="56604" y="143476" zmin="-3304" zmax="-2704"/>
+		<add x="57216" y="145132" zmin="-3304" zmax="-2704"/>
+		<add x="54708" y="145284" zmin="-3304" zmax="-2704"/>
+	</territory>
+	<spawn name="dion_t21_22_026" count="3" respawn="90">
+		<territory name="dion_t21_22_026"/>
+		<npc id="20171"/><!--Спектр-->
+	</spawn>
+	<spawn name="dion_t21_22_026" count="3" respawn="90">
+		<territory name="dion_t21_22_026"/>
+		<npc id="20197"/><!--Печальная Дева-->
+	</spawn>
+	<territory name="dion_t21_22_029">
+		<add x="38508" y="145708" zmin="-3964" zmax="-3664"/>
+		<add x="40016" y="144872" zmin="-3964" zmax="-3664"/>
+		<add x="41432" y="146328" zmin="-3964" zmax="-3664"/>
+		<add x="41184" y="147240" zmin="-3964" zmax="-3664"/>
+		<add x="38476" y="147456" zmin="-3964" zmax="-3664"/>
+		<add x="37936" y="147036" zmin="-3964" zmax="-3664"/>
+	</territory>
+	<spawn name="dion_t21_22_029" count="3" respawn="90">
+		<territory name="dion_t21_22_029"/>
+		<npc id="20155"/><!--Корень Мандрагоры-->
+	</spawn>
+	<spawn name="dion_t21_22_029" count="3" respawn="90">
+		<territory name="dion_t21_22_029"/>
+		<npc id="20156"/><!--Цветок Мандрагоры-->
+	</spawn>
+	<territory name="dion_t21_22_028">
+		<add x="42460" y="142060" zmin="-3376" zmax="-2776"/>
+		<add x="44596" y="140296" zmin="-3376" zmax="-2776"/>
+		<add x="46448" y="143056" zmin="-3376" zmax="-2776"/>
+		<add x="45032" y="144376" zmin="-3376" zmax="-2776"/>
+		<add x="43064" y="145300" zmin="-3376" zmax="-2776"/>
+		<add x="42160" y="145216" zmin="-3376" zmax="-2776"/>
+		<add x="41760" y="144832" zmin="-3376" zmax="-2776"/>
+		<add x="41824" y="143284" zmin="-3376" zmax="-2776"/>
+	</territory>
+	<spawn name="dion_t21_22_028" count="6" respawn="90">
+		<territory name="dion_t21_22_028"/>
+		<npc id="20199"/><!--Янтарный Василиск-->
+	</spawn>
+	<spawn name="dion_t21_22_028" count="6" respawn="90">
+		<territory name="dion_t21_22_028"/>
+		<npc id="20200"/><!--Раб-->
+	</spawn>
+	<territory name="dion_t21_22_023">
+		<add x="52004" y="140384" zmin="-3244" zmax="-2444"/>
+		<add x="54064" y="140504" zmin="-3244" zmax="-2444"/>
+		<add x="52044" y="143484" zmin="-3244" zmax="-2444"/>
+		<add x="51328" y="142308" zmin="-3244" zmax="-2444"/>
+	</territory>
+	<spawn name="dion_t21_22_023" count="2" respawn="90">
+		<territory name="dion_t21_22_023"/>
+		<npc id="20156"/><!--Цветок Мандрагоры-->
+	</spawn>
+	<spawn name="dion_t21_22_023" count="2" respawn="90">
+		<territory name="dion_t21_22_023"/>
+		<npc id="20171"/><!--Спектр-->
+	</spawn>
+	<territory name="dion_t21_22_022">
+		<add x="50864" y="142516" zmin="-3244" zmax="-2644"/>
+		<add x="51404" y="142336" zmin="-3244" zmax="-2644"/>
+		<add x="53116" y="145304" zmin="-3244" zmax="-2644"/>
+		<add x="51484" y="145412" zmin="-3244" zmax="-2644"/>
+		<add x="50468" y="144232" zmin="-3244" zmax="-2644"/>
+		<add x="50416" y="143208" zmin="-3244" zmax="-2644"/>
+	</territory>
+	<spawn name="dion_t21_22_022" count="2" respawn="90">
+		<territory name="dion_t21_22_022"/>
+		<npc id="20171"/><!--Спектр-->
+	</spawn>
+	<spawn name="dion_t21_22_022" count="2" respawn="90">
+		<territory name="dion_t21_22_022"/>
+		<npc id="20197"/><!--Печальная Дева-->
+	</spawn>
+	<territory name="dion_t21_22_025">
+		<add x="54000" y="142072" zmin="-3284" zmax="-2684"/>
+		<add x="55972" y="142140" zmin="-3284" zmax="-2684"/>
+		<add x="56556" y="143428" zmin="-3284" zmax="-2684"/>
+		<add x="55340" y="143552" zmin="-3284" zmax="-2684"/>
+	</territory>
+	<spawn name="dion_t21_22_025" count="3" respawn="90">
+		<territory name="dion_t21_22_025"/>
+		<npc id="20156"/><!--Цветок Мандрагоры-->
+	</spawn>
+	<spawn name="dion_t21_22_025" count="3" respawn="90">
+		<territory name="dion_t21_22_025"/>
+		<npc id="20171"/><!--Спектр-->
+	</spawn>
+	<territory name="dion_t21_22_024">
+		<add x="55112" y="140172" zmin="-3168" zmax="-2368"/>
+		<add x="56220" y="140500" zmin="-3168" zmax="-2368"/>
+		<add x="56448" y="140984" zmin="-3168" zmax="-2368"/>
+		<add x="55992" y="142120" zmin="-3168" zmax="-2368"/>
+		<add x="53016" y="142088" zmin="-3168" zmax="-2368"/>
+		<add x="54088" y="140508" zmin="-3168" zmax="-2368"/>
+	</territory>
+	<spawn name="dion_t21_22_024" count="3" respawn="90">
+		<territory name="dion_t21_22_024"/>
+		<npc id="20156"/><!--Цветок Мандрагоры-->
+	</spawn>
+	<spawn name="dion_t21_22_024" count="3" respawn="90">
+		<territory name="dion_t21_22_024"/>
+		<npc id="20171"/><!--Спектр-->
+	</spawn>
+	<territory name="dion_t21_22_021">
+		<add x="51816" y="145376" zmin="-3312" zmax="-2512"/>
+		<add x="56960" y="145136" zmin="-3312" zmax="-2512"/>
+		<add x="56548" y="146956" zmin="-3312" zmax="-2512"/>
+		<add x="55956" y="148228" zmin="-3312" zmax="-2512"/>
+		<add x="52092" y="147168" zmin="-3312" zmax="-2512"/>
+	</territory>
+	<spawn name="dion_t21_22_021" count="6" respawn="90">
+		<territory name="dion_t21_22_021"/>
+		<npc id="20171"/><!--Спектр-->
+	</spawn>
+	<spawn name="dion_t21_22_021" count="6" respawn="90">
+		<territory name="dion_t21_22_021"/>
+		<npc id="20197"/><!--Печальная Дева-->
+	</spawn>
+	<territory name="dion_t21_22_020">
+		<add x="53848" y="148252" zmin="-2588" zmax="-2188"/>
+		<add x="55476" y="149496" zmin="-2588" zmax="-2188"/>
+		<add x="56336" y="152828" zmin="-2588" zmax="-2188"/>
+		<add x="54400" y="154016" zmin="-2588" zmax="-2188"/>
+		<add x="52672" y="153856" zmin="-2588" zmax="-2188"/>
+		<add x="49888" y="149952" zmin="-2588" zmax="-2188"/>
+		<add x="51588" y="147672" zmin="-2588" zmax="-2188"/>
+	</territory>
+	<spawn name="dion_t21_22_020" count="5" respawn="90">
+		<territory name="dion_t21_22_020"/>
+		<npc id="20171"/><!--Спектр-->
+	</spawn>
+	<spawn name="dion_t21_22_020" count="5" respawn="90">
+		<territory name="dion_t21_22_020"/>
+		<npc id="20197"/><!--Печальная Дева-->
+	</spawn>
+	<spawn name="dion_t21_22_020" count="5" respawn="90">
+		<territory name="dion_t21_22_020"/>
+		<npc id="20160"/><!--Потрошитель-->
+	</spawn>
+	<territory name="dion_t21_22_019">
+		<add x="45524" y="151632" zmin="-2896" zmax="-2496"/>
+		<add x="47832" y="150480" zmin="-2896" zmax="-2496"/>
+		<add x="48800" y="151236" zmin="-2896" zmax="-2496"/>
+		<add x="50352" y="154060" zmin="-2896" zmax="-2496"/>
+		<add x="47488" y="155520" zmin="-2896" zmax="-2496"/>
+		<add x="45644" y="154456" zmin="-2896" zmax="-2496"/>
+		<add x="45156" y="152220" zmin="-2896" zmax="-2496"/>
+	</territory>
+	<spawn name="dion_t21_22_019" count="7" respawn="90">
+		<territory name="dion_t21_22_019"/>
+		<npc id="20160"/><!--Потрошитель-->
+	</spawn>
+	<spawn name="dion_t21_22_019" count="7" respawn="90">
+		<territory name="dion_t21_22_019"/>
+		<npc id="20198"/><!--Вурдалак Берсерк-->
+	</spawn>
+	<spawn name="Smotritel_kaznennih" count="1" respawn="86400" respawn_random="12000">
+		<point x="50520" y="147496" z="3600" h="21344"/>
+		<npc id="25118"/><!--Смотритель Земли Казненных Гильотин-->
+	</spawn>
+	<spawn name="Asheron" count="1" respawn="86400" respawn_random="12000">
+		<point x="42856" y="152296" z="-2832" h="21344"/>
+		<npc id="25223"/><!--Собиратель Душ Ашерон-->
+	</spawn>
+</list>

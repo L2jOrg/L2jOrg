@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="30">	<!--Мудрец Евы-->
+			<skill id="146" level="13" name="Антимагия(Anti Magic)" cost="83000" min_level="40"/>
+			<skill id="146" level="14" name="Антимагия(Anti Magic)" cost="83000" min_level="40"/>
+			<skill id="146" level="15" name="Антимагия(Anti Magic)" cost="83000" min_level="40"/>
+			<skill id="1243" level="1" name="Благословение Щита(Blessed Shield)" cost="83000" min_level="40"/>
+			<skill id="228" level="2" name="Быстрое Чтение Заклинаний(Fast Spell Casting)" cost="83000" min_level="40"/>
+			<skill id="236" level="9" name="Владение Легкой Броней(Light Armor Mastery)" cost="83000" min_level="40"/>
+			<skill id="236" level="10" name="Владение Легкой Броней(Light Armor Mastery)" cost="83000" min_level="40"/>
+			<skill id="236" level="11" name="Владение Легкой Броней(Light Armor Mastery)" cost="83000" min_level="40"/>
+			<skill id="235" level="9" name="Владение Магической Броней(Robe Mastery)" cost="83000" min_level="40"/>
+			<skill id="235" level="10" name="Владение Магической Броней(Robe Mastery)" cost="83000" min_level="40"/>
+			<skill id="235" level="11" name="Владение Магической Броней(Robe Mastery)" cost="83000" min_level="40"/>
+			<skill id="249" level="10" name="Владение Оружием(Weapon Mastery)" cost="83000" min_level="40"/>
+			<skill id="249" level="11" name="Владение Оружием(Weapon Mastery)" cost="83000" min_level="40"/>
+			<skill id="249" level="12" name="Владение Оружием(Weapon Mastery)" cost="83000" min_level="40"/>
+			<skill id="1016" level="3" name="Воскрешение(Resurrection)" cost="83000" min_level="40"/>
+			<skill id="1830" level="1" name="Мастер Заклинаний(Spell Master)" min_level="40"/>
+			<skill id="1035" level="2" name="Ментальный Щит(Mental Shield)" cost="83000" min_level="40"/>
+			<skill id="1068" level="3" name="Могущество(Might)" cost="83000" min_level="40"/>
+			<skill id="1206" level="6" name="Оковы Ветра(Wind Shackle)" cost="83000" min_level="40"/>
+			<skill id="1013" level="5" name="Подпитка(Recharge)" cost="83000" min_level="40"/>
+			<skill id="1013" level="6" name="Подпитка(Recharge)" cost="83000" min_level="40"/>
+			<skill id="1028" level="1" name="Сила Небес(Might of Heaven)" cost="83000" min_level="40"/>
+			<skill id="1028" level="2" name="Сила Небес(Might of Heaven)" cost="83000" min_level="40"/>
+			<skill id="1259" level="1" name="Сопротивление Оглушению(Stun Resistance)" cost="83000" min_level="40"/>
+			<skill id="1033" level="2" name="Сопротивление Яду(Poison Resistance)" cost="83000" min_level="40"/>
+			<skill id="213" level="3" name="Увеличение Маны(Boost Mana)" cost="83000" min_level="40"/>
+			<skill id="1069" level="10" name="Усыпление(Sleep)" cost="83000" min_level="40"/>
+			<skill id="1069" level="11" name="Усыпление(Sleep)" cost="83000" min_level="40"/>
+			<skill id="1069" level="12" name="Усыпление(Sleep)" cost="83000" min_level="40"/>
+			<skill id="146" level="16" name="Антимагия(Anti Magic)" cost="120000" min_level="42"/>
+			<skill id="236" level="12" name="Владение Легкой Броней(Light Armor Mastery)" cost="120000" min_level="42"/>
+			<skill id="235" level="12" name="Владение Магической Броней(Robe Mastery)" cost="120000" min_level="42"/>
+			<skill id="249" level="13" name="Владение Оружием(Weapon Mastery)" cost="120000" min_level="42"/>
+			<skill id="1013" level="7" name="Подпитка(Recharge)" cost="120000" min_level="42"/>
+			<skill id="1028" level="3" name="Сила Небес(Might of Heaven)" cost="120000" min_level="42"/>
+			<skill id="1304" level="1" name="Усиленная Блокировка(Advanced Block)" item_id="5816" cost="120000" min_level="42"/>
+			<skill id="1069" level="13" name="Усыпление(Sleep)" cost="120000" min_level="42"/>
+			<skill id="146" level="17" name="Антимагия(Anti Magic)" cost="120000" min_level="43"/>
+			<skill id="236" level="13" name="Владение Легкой Броней(Light Armor Mastery)" cost="120000" min_level="43"/>
+			<skill id="235" level="13" name="Владение Магической Броней(Robe Mastery)" cost="120000" min_level="43"/>
+			<skill id="249" level="14" name="Владение Оружием(Weapon Mastery)" cost="120000" min_level="43"/>
+			<skill id="1069" level="14" name="Усыпление(Sleep)" cost="120000" min_level="43"/>
+			<skill id="146" level="18" name="Антимагия(Anti Magic)" cost="120000" min_level="44"/>
+			<skill id="212" level="2" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="120000" min_level="44"/>
+			<skill id="229" level="3" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="120000" min_level="44"/>
+			<skill id="236" level="14" name="Владение Легкой Броней(Light Armor Mastery)" cost="120000" min_level="44"/>
+			<skill id="235" level="14" name="Владение Магической Броней(Robe Mastery)" cost="120000" min_level="44"/>
+			<skill id="249" level="15" name="Владение Оружием(Weapon Mastery)" cost="120000" min_level="44"/>
+			<skill id="1050" level="1" name="Возвращение(Return)" cost="120000" min_level="44"/>
+			<skill id="1078" level="3" name="Концентрация(Concentration)" cost="120000" min_level="44"/>
+			<skill id="1257" level="2" name="Легкость(Decrease Weight)" cost="120000" min_level="44"/>
+			<skill id="1206" level="7" name="Оковы Ветра(Wind Shackle)" cost="120000" min_level="44"/>
+			<skill id="1013" level="8" name="Подпитка(Recharge)" cost="120000" min_level="44"/>
+			<skill id="1087" level="2" name="Проворство(Agility)" cost="120000" min_level="44"/>
+			<skill id="1273" level="1" name="Серенада Евы(Eva's Serenade)" cost="120000" min_level="44"/>
+			<skill id="1028" level="4" name="Сила Небес(Might of Heaven)" cost="120000" min_level="44"/>
+			<skill id="1033" level="3" name="Сопротивление Яду(Poison Resistance)" cost="120000" min_level="44"/>
+			<skill id="1069" level="15" name="Усыпление(Sleep)" cost="120000" min_level="44"/>
+			<skill id="1040" level="3" name="Щит(Shield)" cost="120000" min_level="44"/>
+			<skill id="1800" level="1" name="Пират(Pirate)" min_level="45"/>
+			<skill id="146" level="19" name="Антимагия(Anti Magic)" cost="190000" min_level="46"/>
+			<skill id="236" level="15" name="Владение Легкой Броней(Light Armor Mastery)" cost="190000" min_level="46"/>
+			<skill id="235" level="15" name="Владение Магической Броней(Robe Mastery)" cost="190000" min_level="46"/>
+			<skill id="249" level="16" name="Владение Оружием(Weapon Mastery)" cost="190000" min_level="46"/>
+			<skill id="1020" level="1" name="Оживление(Vitalize)" cost="190000" min_level="46"/>
+			<skill id="1013" level="9" name="Подпитка(Recharge)" cost="190000" min_level="46"/>
+			<skill id="1028" level="5" name="Сила Небес(Might of Heaven)" cost="190000" min_level="46"/>
+			<skill id="1069" level="16" name="Усыпление(Sleep)" cost="190000" min_level="46"/>
+			<skill id="146" level="20" name="Антимагия(Anti Magic)" cost="190000" min_level="47"/>
+			<skill id="1217" level="1" name="Великое Лечение(Greater Heal)" cost="190000" min_level="47"/>
+			<skill id="1217" level="2" name="Великое Лечение(Greater Heal)" cost="190000" min_level="47"/>
+			<skill id="236" level="16" name="Владение Легкой Броней(Light Armor Mastery)" cost="190000" min_level="47"/>
+			<skill id="235" level="16" name="Владение Магической Броней(Robe Mastery)" cost="190000" min_level="47"/>
+			<skill id="249" level="17" name="Владение Оружием(Weapon Mastery)" cost="190000" min_level="47"/>
+			<skill id="1020" level="2" name="Оживление(Vitalize)" cost="190000" min_level="47"/>
+			<skill id="1069" level="17" name="Усыпление(Sleep)" cost="190000" min_level="47"/>
+			<skill id="146" level="21" name="Антимагия(Anti Magic)" cost="190000" min_level="48"/>
+			<skill id="1243" level="2" name="Благословение Щита(Blessed Shield)" cost="190000" min_level="48"/>
+			<skill id="164" level="3" name="Быстрый Повтор(Quick Recovery)" cost="190000" min_level="48"/>
+			<skill id="1217" level="3" name="Великое Лечение(Greater Heal)" cost="190000" min_level="48"/>
+			<skill id="1217" level="4" name="Великое Лечение(Greater Heal)" cost="190000" min_level="48"/>
+			<skill id="236" level="17" name="Владение Легкой Броней(Light Armor Mastery)" cost="190000" min_level="48"/>
+			<skill id="235" level="17" name="Владение Магической Броней(Robe Mastery)" cost="190000" min_level="48"/>
+			<skill id="249" level="18" name="Владение Оружием(Weapon Mastery)" cost="190000" min_level="48"/>
+			<skill id="1255" level="1" name="Возвращение Группы(Party Return)" item_id="3942" cost="190000" min_level="48"/>
+			<skill id="1016" level="4" name="Воскрешение(Resurrection)" cost="190000" min_level="48"/>
+			<skill id="1035" level="3" name="Ментальный Щит(Mental Shield)" cost="190000" min_level="48"/>
+			<skill id="1020" level="3" name="Оживление(Vitalize)" cost="190000" min_level="48"/>
+			<skill id="1206" level="8" name="Оковы Ветра(Wind Shackle)" cost="190000" min_level="48"/>
+			<skill id="1013" level="10" name="Подпитка(Recharge)" cost="190000" min_level="48"/>
+			<skill id="1044" level="2" name="Регенерация(Regeneration)" cost="190000" min_level="48"/>
+			<skill id="1273" level="2" name="Серенада Евы(Eva's Serenade)" cost="190000" min_level="48"/>
+			<skill id="1028" level="6" name="Сила Небес(Might of Heaven)" cost="190000" min_level="48"/>
+			<skill id="213" level="4" name="Увеличение Маны(Boost Mana)" cost="190000" min_level="48"/>
+			<skill id="1069" level="18" name="Усыпление(Sleep)" cost="190000" min_level="48"/>
+			<skill id="146" level="22" name="Антимагия(Anti Magic)" cost="300000" min_level="50"/>
+			<skill id="1217" level="5" name="Великое Лечение(Greater Heal)" cost="300000" min_level="50"/>
+			<skill id="1217" level="6" name="Великое Лечение(Greater Heal)" cost="300000" min_level="50"/>
+			<skill id="236" level="18" name="Владение Легкой Броней(Light Armor Mastery)" cost="300000" min_level="50"/>
+			<skill id="235" level="18" name="Владение Магической Броней(Robe Mastery)" cost="300000" min_level="50"/>
+			<skill id="249" level="19" name="Владение Оружием(Weapon Mastery)" cost="300000" min_level="50"/>
+			<skill id="1020" level="4" name="Оживление(Vitalize)" cost="300000" min_level="50"/>
+			<skill id="1013" level="11" name="Подпитка(Recharge)" cost="300000" min_level="50"/>
+			<skill id="1028" level="7" name="Сила Небес(Might of Heaven)" cost="300000" min_level="50"/>
+			<skill id="1304" level="2" name="Усиленная Блокировка(Advanced Block)" cost="300000" min_level="50"/>
+			<skill id="1069" level="19" name="Усыпление(Sleep)" cost="300000" min_level="50"/>
+			<skill id="146" level="23" name="Антимагия(Anti Magic)" cost="300000" min_level="51"/>
+			<skill id="236" level="19" name="Владение Легкой Броней(Light Armor Mastery)" cost="300000" min_level="51"/>
+			<skill id="235" level="19" name="Владение Магической Броней(Robe Mastery)" cost="300000" min_level="51"/>
+			<skill id="249" level="20" name="Владение Оружием(Weapon Mastery)" cost="300000" min_level="51"/>
+			<skill id="1020" level="5" name="Оживление(Vitalize)" cost="300000" min_level="51"/>
+			<skill id="1069" level="20" name="Усыпление(Sleep)" cost="300000" min_level="51"/>
+			<skill id="146" level="24" name="Антимагия(Anti Magic)" cost="300000" min_level="52"/>
+			<skill id="1405" level="1" name="Божественное Вдохновение(Divine Inspiration)" item_id="8618" cost="300000" min_level="52"/>
+			<skill id="212" level="3" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="300000" min_level="52"/>
+			<skill id="229" level="4" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="300000" min_level="52"/>
+			<skill id="1217" level="7" name="Великое Лечение(Greater Heal)" cost="300000" min_level="52"/>
+			<skill id="1217" level="8" name="Великое Лечение(Greater Heal)" cost="300000" min_level="52"/>
+			<skill id="236" level="20" name="Владение Легкой Броней(Light Armor Mastery)" cost="300000" min_level="52"/>
+			<skill id="235" level="20" name="Владение Магической Броней(Robe Mastery)" cost="300000" min_level="52"/>
+			<skill id="249" level="21" name="Владение Оружием(Weapon Mastery)" cost="300000" min_level="52"/>
+			<skill id="1078" level="4" name="Концентрация(Concentration)" cost="300000" min_level="52"/>
+			<skill id="1257" level="3" name="Легкость(Decrease Weight)" cost="300000" min_level="52"/>
+			<skill id="1020" level="6" name="Оживление(Vitalize)" cost="300000" min_level="52"/>
+			<skill id="1206" level="9" name="Оковы Ветра(Wind Shackle)" cost="300000" min_level="52"/>
+			<skill id="1013" level="12" name="Подпитка(Recharge)" cost="300000" min_level="52"/>
+			<skill id="1073" level="2" name="Поцелуй Евы(Eva's Kiss)" cost="300000" min_level="52"/>
+			<skill id="1087" level="3" name="Проворство(Agility)" cost="300000" min_level="52"/>
+			<skill id="1273" level="3" name="Серенада Евы(Eva's Serenade)" cost="300000" min_level="52"/>
+			<skill id="1028" level="8" name="Сила Небес(Might of Heaven)" cost="300000" min_level="52"/>
+			<skill id="1259" level="2" name="Сопротивление Оглушению(Stun Resistance)" cost="300000" min_level="52"/>
+			<skill id="1069" level="21" name="Усыпление(Sleep)" cost="300000" min_level="52"/>
+			<skill id="146" level="25" name="Антимагия(Anti Magic)" cost="470000" min_level="54"/>
+			<skill id="1217" level="9" name="Великое Лечение(Greater Heal)" cost="470000" min_level="54"/>
+			<skill id="236" level="21" name="Владение Легкой Броней(Light Armor Mastery)" cost="470000" min_level="54"/>
+			<skill id="235" level="21" name="Владение Магической Броней(Robe Mastery)" cost="470000" min_level="54"/>
+			<skill id="249" level="22" name="Владение Оружием(Weapon Mastery)" cost="470000" min_level="54"/>
+			<skill id="1020" level="7" name="Оживление(Vitalize)" cost="470000" min_level="54"/>
+			<skill id="1013" level="13" name="Подпитка(Recharge)" cost="470000" min_level="54"/>
+			<skill id="1028" level="9" name="Сила Небес(Might of Heaven)" cost="470000" min_level="54"/>
+			<skill id="1069" level="22" name="Усыпление(Sleep)" cost="470000" min_level="54"/>
+			<skill id="146" level="26" name="Антимагия(Anti Magic)" cost="470000" min_level="55"/>
+			<skill id="1217" level="10" name="Великое Лечение(Greater Heal)" cost="470000" min_level="55"/>
+			<skill id="236" level="22" name="Владение Легкой Броней(Light Armor Mastery)" cost="470000" min_level="55"/>
+			<skill id="235" level="22" name="Владение Магической Броней(Robe Mastery)" cost="470000" min_level="55"/>
+			<skill id="249" level="23" name="Владение Оружием(Weapon Mastery)" cost="470000" min_level="55"/>
+			<skill id="1020" level="8" name="Оживление(Vitalize)" cost="470000" min_level="55"/>
+			<skill id="1069" level="23" name="Усыпление(Sleep)" cost="470000" min_level="55"/>
+			<skill id="146" level="27" name="Антимагия(Anti Magic)" cost="470000" min_level="56"/>
+			<skill id="1243" level="3" name="Благословение Щита(Blessed Shield)" cost="470000" min_level="56"/>
+			<skill id="228" level="3" name="Быстрое Чтение Заклинаний(Fast Spell Casting)" cost="470000" min_level="56"/>
+			<skill id="1217" level="11" name="Великое Лечение(Greater Heal)" cost="470000" min_level="56"/>
+			<skill id="236" level="23" name="Владение Легкой Броней(Light Armor Mastery)" cost="470000" min_level="56"/>
+			<skill id="235" level="23" name="Владение Магической Броней(Robe Mastery)" cost="470000" min_level="56"/>
+			<skill id="249" level="24" name="Владение Оружием(Weapon Mastery)" cost="470000" min_level="56"/>
+			<skill id="1050" level="2" name="Возвращение(Return)" cost="470000" min_level="56"/>
+			<skill id="1255" level="2" name="Возвращение Группы(Party Return)" cost="470000" min_level="56"/>
+			<skill id="1016" level="5" name="Воскрешение(Resurrection)" cost="470000" min_level="56"/>
+			<skill id="1035" level="4" name="Ментальный Щит(Mental Shield)" cost="470000" min_level="56"/>
+			<skill id="1020" level="9" name="Оживление(Vitalize)" cost="470000" min_level="56"/>
+			<skill id="1206" level="10" name="Оковы Ветра(Wind Shackle)" cost="470000" min_level="56"/>
+			<skill id="1013" level="14" name="Подпитка(Recharge)" cost="470000" min_level="56"/>
+			<skill id="1044" level="3" name="Регенерация(Regeneration)" cost="470000" min_level="56"/>
+			<skill id="1273" level="4" name="Серенада Евы(Eva's Serenade)" cost="470000" min_level="56"/>
+			<skill id="1028" level="10" name="Сила Небес(Might of Heaven)" cost="470000" min_level="56"/>
+			<skill id="213" level="5" name="Увеличение Маны(Boost Mana)" cost="470000" min_level="56"/>
+			<skill id="1069" level="24" name="Усыпление(Sleep)" cost="470000" min_level="56"/>
+			<skill id="146" level="28" name="Антимагия(Anti Magic)" cost="480000" min_level="57"/>
+			<skill id="1217" level="12" name="Великое Лечение(Greater Heal)" cost="480000" min_level="57"/>
+			<skill id="236" level="24" name="Владение Легкой Броней(Light Armor Mastery)" cost="480000" min_level="57"/>
+			<skill id="235" level="24" name="Владение Магической Броней(Robe Mastery)" cost="480000" min_level="57"/>
+			<skill id="249" level="25" name="Владение Оружием(Weapon Mastery)" cost="480000" min_level="57"/>
+			<skill id="1020" level="10" name="Оживление(Vitalize)" cost="480000" min_level="57"/>
+			<skill id="1013" level="15" name="Подпитка(Recharge)" cost="480000" min_level="57"/>
+			<skill id="1069" level="25" name="Усыпление(Sleep)" cost="480000" min_level="57"/>
+			<skill id="146" level="29" name="Антимагия(Anti Magic)" cost="480000" min_level="58"/>
+			<skill id="212" level="4" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="480000" min_level="58"/>
+			<skill id="1217" level="13" name="Великое Лечение(Greater Heal)" cost="480000" min_level="58"/>
+			<skill id="236" level="25" name="Владение Легкой Броней(Light Armor Mastery)" cost="480000" min_level="58"/>
+			<skill id="235" level="25" name="Владение Магической Броней(Robe Mastery)" cost="480000" min_level="58"/>
+			<skill id="249" level="26" name="Владение Оружием(Weapon Mastery)" cost="480000" min_level="58"/>
+			<skill id="1012" level="3" name="Излечить Отравление(Cure Poison)" cost="480000" min_level="58"/>
+			<skill id="1020" level="11" name="Оживление(Vitalize)" cost="480000" min_level="58"/>
+			<skill id="1206" level="11" name="Оковы Ветра(Wind Shackle)" cost="480000" min_level="58"/>
+			<skill id="1013" level="16" name="Подпитка(Recharge)" cost="480000" min_level="58"/>
+			<skill id="1273" level="5" name="Серенада Евы(Eva's Serenade)" cost="480000" min_level="58"/>
+			<skill id="1028" level="11" name="Сила Небес(Might of Heaven)" cost="480000" min_level="58"/>
+			<skill id="1304" level="3" name="Усиленная Блокировка(Advanced Block)" cost="480000" min_level="58"/>
+			<skill id="1393" level="1" name="Устойчивость к Тьме(Dark Attack Resistance)" cost="480000" min_level="58"/>
+			<skill id="1069" level="26" name="Усыпление(Sleep)" cost="480000" min_level="58"/>
+			<skill id="1397" level="1" name="Чистота(Clarity)" item_id="8397" cost="480000" min_level="58"/>
+			<skill id="146" level="30" name="Антимагия(Anti Magic)" cost="580000" min_level="59"/>
+			<skill id="1217" level="14" name="Великое Лечение(Greater Heal)" cost="580000" min_level="59"/>
+			<skill id="236" level="26" name="Владение Легкой Броней(Light Armor Mastery)" cost="580000" min_level="59"/>
+			<skill id="235" level="26" name="Владение Магической Броней(Robe Mastery)" cost="580000" min_level="59"/>
+			<skill id="249" level="27" name="Владение Оружием(Weapon Mastery)" cost="580000" min_level="59"/>
+			<skill id="1020" level="12" name="Оживление(Vitalize)" cost="580000" min_level="59"/>
+			<skill id="1013" level="17" name="Подпитка(Recharge)" cost="580000" min_level="59"/>
+			<skill id="1069" level="27" name="Усыпление(Sleep)" cost="580000" min_level="59"/>
+			<skill id="146" level="31" name="Антимагия(Anti Magic)" cost="580000" min_level="60"/>
+			<skill id="229" level="5" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="580000" min_level="60"/>
+			<skill id="1217" level="15" name="Великое Лечение(Greater Heal)" cost="580000" min_level="60"/>
+			<skill id="236" level="27" name="Владение Легкой Броней(Light Armor Mastery)" cost="580000" min_level="60"/>
+			<skill id="235" level="27" name="Владение Магической Броней(Robe Mastery)" cost="580000" min_level="60"/>
+			<skill id="249" level="28" name="Владение Оружием(Weapon Mastery)" cost="580000" min_level="60"/>
+			<skill id="1078" level="5" name="Концентрация(Concentration)" cost="580000" min_level="60"/>
+			<skill id="1020" level="13" name="Оживление(Vitalize)" cost="580000" min_level="60"/>
+			<skill id="1206" level="12" name="Оковы Ветра(Wind Shackle)" cost="580000" min_level="60"/>
+			<skill id="1013" level="18" name="Подпитка(Recharge)" cost="580000" min_level="60"/>
+			<skill id="1273" level="6" name="Серенада Евы(Eva's Serenade)" cost="580000" min_level="60"/>
+			<skill id="1028" level="12" name="Сила Небес(Might of Heaven)" cost="580000" min_level="60"/>
+			<skill id="1801" level="1" name="Темный Ассасин(Dark Assassin)" min_level="60"/>
+			<skill id="213" level="6" name="Увеличение Маны(Boost Mana)" cost="580000" min_level="60"/>
+			<skill id="1069" level="28" name="Усыпление(Sleep)" cost="580000" min_level="60"/>
+			<skill id="146" level="32" name="Антимагия(Anti Magic)" cost="700000" min_level="61"/>
+			<skill id="1405" level="2" name="Божественное Вдохновение(Divine Inspiration)" item_id="8619" cost="700000" min_level="61"/>
+			<skill id="1217" level="16" name="Великое Лечение(Greater Heal)" cost="700000" min_level="61"/>
+			<skill id="236" level="28" name="Владение Легкой Броней(Light Armor Mastery)" cost="700000" min_level="61"/>
+			<skill id="235" level="28" name="Владение Магической Броней(Robe Mastery)" cost="700000" min_level="61"/>
+			<skill id="249" level="29" name="Владение Оружием(Weapon Mastery)" cost="700000" min_level="61"/>
+			<skill id="1020" level="14" name="Оживление(Vitalize)" cost="700000" min_level="61"/>
+			<skill id="1013" level="19" name="Подпитка(Recharge)" cost="700000" min_level="61"/>
+			<skill id="1069" level="29" name="Усыпление(Sleep)" cost="700000" min_level="61"/>
+			<skill id="146" level="33" name="Антимагия(Anti Magic)" cost="700000" min_level="62"/>
+			<skill id="1243" level="4" name="Благословение Щита(Blessed Shield)" cost="700000" min_level="62"/>
+			<skill id="1217" level="17" name="Великое Лечение(Greater Heal)" cost="700000" min_level="62"/>
+			<skill id="236" level="29" name="Владение Легкой Броней(Light Armor Mastery)" cost="700000" min_level="62"/>
+			<skill id="235" level="29" name="Владение Магической Броней(Robe Mastery)" cost="700000" min_level="62"/>
+			<skill id="249" level="30" name="Владение Оружием(Weapon Mastery)" cost="700000" min_level="62"/>
+			<skill id="1303" level="1" name="Дикая Магия(Wild Magic)" item_id="5815" cost="700000" min_level="62"/>
+			<skill id="1020" level="15" name="Оживление(Vitalize)" cost="700000" min_level="62"/>
+			<skill id="1206" level="13" name="Оковы Ветра(Wind Shackle)" cost="700000" min_level="62"/>
+			<skill id="1013" level="20" name="Подпитка(Recharge)" cost="700000" min_level="62"/>
+			<skill id="1273" level="7" name="Серенада Евы(Eva's Serenade)" cost="700000" min_level="62"/>
+			<skill id="1028" level="13" name="Сила Небес(Might of Heaven)" cost="700000" min_level="62"/>
+			<skill id="1069" level="30" name="Усыпление(Sleep)" cost="700000" min_level="62"/>
+			<skill id="146" level="34" name="Антимагия(Anti Magic)" cost="880000" min_level="63"/>
+			<skill id="1217" level="18" name="Великое Лечение(Greater Heal)" cost="880000" min_level="63"/>
+			<skill id="236" level="30" name="Владение Легкой Броней(Light Armor Mastery)" cost="880000" min_level="63"/>
+			<skill id="235" level="30" name="Владение Магической Броней(Robe Mastery)" cost="880000" min_level="63"/>
+			<skill id="249" level="31" name="Владение Оружием(Weapon Mastery)" cost="880000" min_level="63"/>
+			<skill id="1020" level="16" name="Оживление(Vitalize)" cost="880000" min_level="63"/>
+			<skill id="1013" level="21" name="Подпитка(Recharge)" cost="880000" min_level="63"/>
+			<skill id="1069" level="31" name="Усыпление(Sleep)" cost="880000" min_level="63"/>
+			<skill id="146" level="35" name="Антимагия(Anti Magic)" cost="880000" min_level="64"/>
+			<skill id="212" level="5" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="880000" min_level="64"/>
+			<skill id="1217" level="19" name="Великое Лечение(Greater Heal)" cost="880000" min_level="64"/>
+			<skill id="236" level="31" name="Владение Легкой Броней(Light Armor Mastery)" cost="880000" min_level="64"/>
+			<skill id="235" level="31" name="Владение Магической Броней(Robe Mastery)" cost="880000" min_level="64"/>
+			<skill id="249" level="32" name="Владение Оружием(Weapon Mastery)" cost="880000" min_level="64"/>
+			<skill id="1016" level="6" name="Воскрешение(Resurrection)" cost="880000" min_level="64"/>
+			<skill id="1020" level="17" name="Оживление(Vitalize)" cost="880000" min_level="64"/>
+			<skill id="1206" level="14" name="Оковы Ветра(Wind Shackle)" cost="880000" min_level="64"/>
+			<skill id="1013" level="22" name="Подпитка(Recharge)" cost="880000" min_level="64"/>
+			<skill id="1273" level="8" name="Серенада Евы(Eva's Serenade)" cost="880000" min_level="64"/>
+			<skill id="1028" level="14" name="Сила Небес(Might of Heaven)" cost="880000" min_level="64"/>
+			<skill id="1259" level="3" name="Сопротивление Оглушению(Stun Resistance)" cost="880000" min_level="64"/>
+			<skill id="1069" level="32" name="Усыпление(Sleep)" cost="880000" min_level="64"/>
+			<skill id="146" level="36" name="Антимагия(Anti Magic)" cost="1100000" min_level="65"/>
+			<skill id="1217" level="20" name="Великое Лечение(Greater Heal)" cost="1100000" min_level="65"/>
+			<skill id="236" level="32" name="Владение Легкой Броней(Light Armor Mastery)" cost="1100000" min_level="65"/>
+			<skill id="235" level="32" name="Владение Магической Броней(Robe Mastery)" cost="1100000" min_level="65"/>
+			<skill id="249" level="33" name="Владение Оружием(Weapon Mastery)" cost="1100000" min_level="65"/>
+			<skill id="1020" level="18" name="Оживление(Vitalize)" cost="1100000" min_level="65"/>
+			<skill id="1013" level="23" name="Подпитка(Recharge)" cost="1100000" min_level="65"/>
+			<skill id="1069" level="33" name="Усыпление(Sleep)" cost="1100000" min_level="65"/>
+			<skill id="146" level="37" name="Антимагия(Anti Magic)" cost="1100000" min_level="66"/>
+			<skill id="1243" level="5" name="Благословение Щита(Blessed Shield)" cost="1100000" min_level="66"/>
+			<skill id="1217" level="21" name="Великое Лечение(Greater Heal)" cost="1100000" min_level="66"/>
+			<skill id="236" level="33" name="Владение Легкой Броней(Light Armor Mastery)" cost="1100000" min_level="66"/>
+			<skill id="235" level="33" name="Владение Магической Броней(Robe Mastery)" cost="1100000" min_level="66"/>
+			<skill id="249" level="34" name="Владение Оружием(Weapon Mastery)" cost="1100000" min_level="66"/>
+			<skill id="1020" level="19" name="Оживление(Vitalize)" cost="1100000" min_level="66"/>
+			<skill id="1206" level="15" name="Оковы Ветра(Wind Shackle)" cost="1100000" min_level="66"/>
+			<skill id="1013" level="24" name="Подпитка(Recharge)" cost="1100000" min_level="66"/>
+			<skill id="1273" level="9" name="Серенада Евы(Eva's Serenade)" cost="1100000" min_level="66"/>
+			<skill id="1028" level="15" name="Сила Небес(Might of Heaven)" cost="1100000" min_level="66"/>
+			<skill id="213" level="7" name="Увеличение Маны(Boost Mana)" cost="1100000" min_level="66"/>
+			<skill id="1304" level="4" name="Усиленная Блокировка(Advanced Block)" cost="1100000" min_level="66"/>
+			<skill id="1393" level="2" name="Устойчивость к Тьме(Dark Attack Resistance)" cost="1100000" min_level="66"/>
+			<skill id="1069" level="34" name="Усыпление(Sleep)" cost="1100000" min_level="66"/>
+			<skill id="1397" level="2" name="Чистота(Clarity)" cost="1100000" min_level="66"/>
+			<skill id="146" level="38" name="Антимагия(Anti Magic)" cost="1400000" min_level="67"/>
+			<skill id="1217" level="22" name="Великое Лечение(Greater Heal)" cost="1400000" min_level="67"/>
+			<skill id="236" level="34" name="Владение Легкой Броней(Light Armor Mastery)" cost="1400000" min_level="67"/>
+			<skill id="235" level="34" name="Владение Магической Броней(Robe Mastery)" cost="1400000" min_level="67"/>
+			<skill id="249" level="35" name="Владение Оружием(Weapon Mastery)" cost="1400000" min_level="67"/>
+			<skill id="1020" level="20" name="Оживление(Vitalize)" cost="1400000" min_level="67"/>
+			<skill id="1013" level="25" name="Подпитка(Recharge)" cost="1400000" min_level="67"/>
+			<skill id="1069" level="35" name="Усыпление(Sleep)" cost="1400000" min_level="67"/>
+			<skill id="146" level="39" name="Антимагия(Anti Magic)" cost="1400000" min_level="68"/>
+			<skill id="229" level="6" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="1400000" min_level="68"/>
+			<skill id="1217" level="23" name="Великое Лечение(Greater Heal)" cost="1400000" min_level="68"/>
+			<skill id="236" level="35" name="Владение Легкой Броней(Light Armor Mastery)" cost="1400000" min_level="68"/>
+			<skill id="235" level="35" name="Владение Магической Броней(Robe Mastery)" cost="1400000" min_level="68"/>
+			<skill id="249" level="36" name="Владение Оружием(Weapon Mastery)" cost="1400000" min_level="68"/>
+			<skill id="1078" level="6" name="Концентрация(Concentration)" cost="1400000" min_level="68"/>
+			<skill id="1020" level="21" name="Оживление(Vitalize)" cost="1400000" min_level="68"/>
+			<skill id="1206" level="16" name="Оковы Ветра(Wind Shackle)" cost="1400000" min_level="68"/>
+			<skill id="1013" level="26" name="Подпитка(Recharge)" cost="1400000" min_level="68"/>
+			<skill id="1273" level="10" name="Серенада Евы(Eva's Serenade)" cost="1400000" min_level="68"/>
+			<skill id="1028" level="16" name="Сила Небес(Might of Heaven)" cost="1400000" min_level="68"/>
+			<skill id="1069" level="36" name="Усыпление(Sleep)" cost="1400000" min_level="68"/>
+			<skill id="146" level="40" name="Антимагия(Anti Magic)" cost="1700000" min_level="69"/>
+			<skill id="1217" level="24" name="Великое Лечение(Greater Heal)" cost="1700000" min_level="69"/>
+			<skill id="236" level="36" name="Владение Легкой Броней(Light Armor Mastery)" cost="1700000" min_level="69"/>
+			<skill id="235" level="36" name="Владение Магической Броней(Robe Mastery)" cost="1700000" min_level="69"/>
+			<skill id="249" level="37" name="Владение Оружием(Weapon Mastery)" cost="1700000" min_level="69"/>
+			<skill id="1020" level="22" name="Оживление(Vitalize)" cost="1700000" min_level="69"/>
+			<skill id="1013" level="27" name="Подпитка(Recharge)" cost="1700000" min_level="69"/>
+			<skill id="1069" level="37" name="Усыпление(Sleep)" cost="1700000" min_level="69"/>
+			<skill id="146" level="41" name="Антимагия(Anti Magic)" cost="1700000" min_level="70"/>
+			<skill id="1243" level="6" name="Благословение Щита(Blessed Shield)" cost="1700000" min_level="70"/>
+			<skill id="1217" level="25" name="Великое Лечение(Greater Heal)" cost="1700000" min_level="70"/>
+			<skill id="236" level="37" name="Владение Легкой Броней(Light Armor Mastery)" cost="1700000" min_level="70"/>
+			<skill id="235" level="37" name="Владение Магической Броней(Robe Mastery)" cost="1700000" min_level="70"/>
+			<skill id="249" level="38" name="Владение Оружием(Weapon Mastery)" cost="1700000" min_level="70"/>
+			<skill id="1303" level="2" name="Дикая Магия(Wild Magic)" cost="1700000" min_level="70"/>
+			<skill id="1020" level="23" name="Оживление(Vitalize)" cost="1700000" min_level="70"/>
+			<skill id="1206" level="17" name="Оковы Ветра(Wind Shackle)" cost="1700000" min_level="70"/>
+			<skill id="1013" level="28" name="Подпитка(Recharge)" cost="1700000" min_level="70"/>
+			<skill id="1802" level="1" name="Светлый Ассасин(White Assassin)" min_level="70"/>
+			<skill id="1273" level="11" name="Серенада Евы(Eva's Serenade)" cost="1700000" min_level="70"/>
+			<skill id="1028" level="17" name="Сила Небес(Might of Heaven)" cost="1700000" min_level="70"/>
+			<skill id="1069" level="38" name="Усыпление(Sleep)" cost="1700000" min_level="70"/>
+			<skill id="146" level="42" name="Антимагия(Anti Magic)" cost="2000000" min_level="71"/>
+			<skill id="1217" level="26" name="Великое Лечение(Greater Heal)" cost="2000000" min_level="71"/>
+			<skill id="236" level="38" name="Владение Легкой Броней(Light Armor Mastery)" cost="2000000" min_level="71"/>
+			<skill id="235" level="38" name="Владение Магической Броней(Robe Mastery)" cost="2000000" min_level="71"/>
+			<skill id="249" level="39" name="Владение Оружием(Weapon Mastery)" cost="2000000" min_level="71"/>
+			<skill id="1020" level="24" name="Оживление(Vitalize)" cost="2000000" min_level="71"/>
+			<skill id="1013" level="29" name="Подпитка(Recharge)" cost="2000000" min_level="71"/>
+			<skill id="1069" level="39" name="Усыпление(Sleep)" cost="2000000" min_level="71"/>
+			<skill id="146" level="43" name="Антимагия(Anti Magic)" cost="2000000" min_level="72"/>
+			<skill id="1217" level="27" name="Великое Лечение(Greater Heal)" cost="2000000" min_level="72"/>
+			<skill id="236" level="39" name="Владение Легкой Броней(Light Armor Mastery)" cost="2000000" min_level="72"/>
+			<skill id="235" level="39" name="Владение Магической Броней(Robe Mastery)" cost="2000000" min_level="72"/>
+			<skill id="249" level="40" name="Владение Оружием(Weapon Mastery)" cost="2000000" min_level="72"/>
+			<skill id="1020" level="25" name="Оживление(Vitalize)" cost="2000000" min_level="72"/>
+			<skill id="1206" level="18" name="Оковы Ветра(Wind Shackle)" cost="2000000" min_level="72"/>
+			<skill id="1013" level="30" name="Подпитка(Recharge)" cost="2000000" min_level="72"/>
+			<skill id="1273" level="12" name="Серенада Евы(Eva's Serenade)" cost="2000000" min_level="72"/>
+			<skill id="1028" level="18" name="Сила Небес(Might of Heaven)" cost="2000000" min_level="72"/>
+			<skill id="1259" level="4" name="Сопротивление Оглушению(Stun Resistance)" cost="2000000" min_level="72"/>
+			<skill id="213" level="8" name="Увеличение Маны(Boost Mana)" cost="2000000" min_level="72"/>
+			<skill id="1304" level="5" name="Усиленная Блокировка(Advanced Block)" cost="2000000" min_level="72"/>
+			<skill id="1069" level="40" name="Усыпление(Sleep)" cost="2000000" min_level="72"/>
+			<skill id="146" level="44" name="Антимагия(Anti Magic)" cost="2400000" min_level="73"/>
+			<skill id="1217" level="28" name="Великое Лечение(Greater Heal)" cost="2400000" min_level="73"/>
+			<skill id="236" level="40" name="Владение Легкой Броней(Light Armor Mastery)" cost="2400000" min_level="73"/>
+			<skill id="235" level="40" name="Владение Магической Броней(Robe Mastery)" cost="2400000" min_level="73"/>
+			<skill id="249" level="41" name="Владение Оружием(Weapon Mastery)" cost="2400000" min_level="73"/>
+			<skill id="1020" level="26" name="Оживление(Vitalize)" cost="2400000" min_level="73"/>
+			<skill id="1013" level="31" name="Подпитка(Recharge)" cost="2400000" min_level="73"/>
+			<skill id="1069" level="41" name="Усыпление(Sleep)" cost="2400000" min_level="73"/>
+			<skill id="146" level="45" name="Антимагия(Anti Magic)" cost="2400000" min_level="74"/>
+			<skill id="212" level="6" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="2400000" min_level="74"/>
+			<skill id="229" level="7" name="Быстрое Восстановление Маны(Fast Mana Recovery)" cost="2400000" min_level="74"/>
+			<skill id="1217" level="29" name="Великое Лечение(Greater Heal)" cost="2400000" min_level="74"/>
+			<skill id="236" level="41" name="Владение Легкой Броней(Light Armor Mastery)" cost="2400000" min_level="74"/>
+			<skill id="235" level="41" name="Владение Магической Броней(Robe Mastery)" cost="2400000" min_level="74"/>
+			<skill id="249" level="42" name="Владение Оружием(Weapon Mastery)" cost="2400000" min_level="74"/>
+			<skill id="1016" level="7" name="Воскрешение(Resurrection)" cost="2400000" min_level="74"/>
+			<skill id="1020" level="27" name="Оживление(Vitalize)" cost="2400000" min_level="74"/>
+			<skill id="1206" level="19" name="Оковы Ветра(Wind Shackle)" cost="2400000" min_level="74"/>
+			<skill id="1013" level="32" name="Подпитка(Recharge)" cost="2400000" min_level="74"/>
+			<skill id="1273" level="13" name="Серенада Евы(Eva's Serenade)" cost="2400000" min_level="74"/>
+			<skill id="1028" level="19" name="Сила Небес(Might of Heaven)" cost="2400000" min_level="74"/>
+			<skill id="1393" level="3" name="Устойчивость к Тьме(Dark Attack Resistance)" cost="2400000" min_level="74"/>
+			<skill id="1069" level="42" name="Усыпление(Sleep)" cost="2400000" min_level="74"/>
+			<skill id="1397" level="3" name="Чистота(Clarity)" cost="2400000" min_level="74"/>
+		</class>
+	</normal_skill_tree>
+</list>

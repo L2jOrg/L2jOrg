@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="29800" name="Grey Talisman Box - Bond" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i05"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29768" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29801" name="White Talisman Box - P. Crit." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29769" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29802" name="White Talisman Box - P. Atk." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29770" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29803" name="White Talisman Box - P. Def." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29771" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29804" name="White Talisman Box - P. Skills Evasion" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29772" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29805" name="White Talisman Box - M. Crit." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29773" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29806" name="White Talisman Box - M. Atk." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29774" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29807" name="White Talisman Box - M. Def." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29775" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29808" name="White Talisman Box - M. Skills Evasion" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29776" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29809" name="White Talisman Box - Max. HP" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29777" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29810" name="White Talisman Box - Max. MP" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29778" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29811" name="Yellow Talisman Box - Guard" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i02"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29779" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29812" name="Yellow Talisman Box - Denial" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i02"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29780" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29813" name="Yellow Talisman Box - Benefaction" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i02"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29781" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29814" name="Yellow Talisman Box - Blocking" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i02"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29782" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29815" name="Yellow Talisman Box - Gravity" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i02"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29783" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29816" name="Yellow Talisman Box - Bond" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i02"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29784" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29817" name="Special Pirate Fruit" add_name="Event">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_codran_i09"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="39085" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="29818" name="Sigelâs Rune - Stage 1">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29819" name="Sigelâs Rune - Stage 2">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29820" name="Sigelâs Rune - Stage 3">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29821" name="Sigelâs Rune - Stage 4">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29822" name="Sigelâs Rune - Stage 5">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29823" name="Sigelâs Rune - Stage 6">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29824" name="Sigelâs Rune - Stage 7">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29825" name="Sigelâs Rune - Stage 8">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29826" name="Sigelâs Rune - Stage 9">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29827" name="Sigelâs Rune - Stage 10">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29828" name="Sigelâs Rune - Stage 11">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29829" name="Sigelâs Rune - Stage 12">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29830" name="Sigelâs Rune - Stage 13">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29831" name="Sigelâs Rune - Stage 14" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29832" name="Sigelâs Rune - Stage 15" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29833" name="Sigelâs Rune - Stage 16" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29834" name="Sigelâs Rune - Stage 17" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29835" name="Sigelâs Rune - Stage 18" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29836" name="Sigelâs Rune - Stage 19" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29837" name="Sigelâs Rune - Stage 20" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29838" name="Tyrrâs Rune - Stage 1">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29839" name="Tyrrâs Rune - Stage 2">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29840" name="Tyrrâs Rune - Stage 3">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29841" name="Tyrrâs Rune - Stage 4">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29842" name="Tyrrâs Rune - Stage 5">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29843" name="Tyrrâs Rune - Stage 6">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29844" name="Tyrrâs Rune - Stage 7">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29845" name="Tyrrâs Rune - Stage 8">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29846" name="Tyrrâs Rune - Stage 9">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29847" name="Tyrrâs Rune - Stage 10">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29848" name="Tyrrâs Rune - Stage 11">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29849" name="Tyrrâs Rune - Stage 12">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29850" name="Tyrrâs Rune - Stage 13">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29851" name="Tyrrâs Rune - Stage 14" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29852" name="Tyrrâs Rune - Stage 15" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29853" name="Tyrrâs Rune - Stage 16" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29854" name="Tyrrâs Rune - Stage 17" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29855" name="Tyrrâs Rune - Stage 18" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29856" name="Tyrrâs Rune - Stage 19" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29857" name="Tyrrâs Rune - Stage 20" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29858" name="Othellâs Rune - Stage 1">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29859" name="Othellâs Rune - Stage 2">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29860" name="Othellâs Rune - Stage 3">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29861" name="Othellâs Rune - Stage 4">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29862" name="Othellâs Rune - Stage 5">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29863" name="Othellâs Rune - Stage 6">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29864" name="Othellâs Rune - Stage 7">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29865" name="Othellâs Rune - Stage 8">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29866" name="Othellâs Rune - Stage 9">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29867" name="Othellâs Rune - Stage 10">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29868" name="Othellâs Rune - Stage 11">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv03"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29869" name="Othellâs Rune - Stage 12">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv03"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29870" name="Othellâs Rune - Stage 13">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv03"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29871" name="Othellâs Rune - Stage 14" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29872" name="Othellâs Rune - Stage 15" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29873" name="Othellâs Rune - Stage 16" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29874" name="Othellâs Rune - Stage 17" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29875" name="Othellâs Rune - Stage 18" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29876" name="Othellâs Rune - Stage 19" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29877" name="Othellâs Rune - Stage 20" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29878" name="Yulâs Rune - Stage 1">
+		<set name="icon" value="BranchIcon.Icon.g_rune_yr_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29879" name="Yulâs Rune - Stage 2">
+		<set name="icon" value="BranchIcon.Icon.g_rune_yr_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29880" name="Yulâs Rune - Stage 3">
+		<set name="icon" value="BranchIcon.Icon.g_rune_yr_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29881" name="Yulâs Rune - Stage 4">
+		<set name="icon" value="BranchIcon.Icon.g_rune_yr_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29882" name="Yulâs Rune - Stage 5">
+		<set name="icon" value="BranchIcon.Icon.g_rune_yr_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29883" name="Yulâs Rune - Stage 6">
+		<set name="icon" value="BranchIcon.Icon.g_rune_yr_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29884" name="Yulâs Rune - Stage 7">
+		<set name="icon" value="BranchIcon.Icon.g_rune_yr_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29885" name="Yulâs Rune - Stage 8">
+		<set name="icon" value="BranchIcon.Icon.g_rune_yr_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29886" name="Yulâs Rune - Stage 9">
+		<set name="icon" value="BranchIcon.Icon.g_rune_yr_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29887" name="Yulâs Rune - Stage 10">
+		<set name="icon" value="BranchIcon.Icon.g_rune_yr_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29888" name="Yulâs Rune - Stage 11">
+		<set name="icon" value="BranchIcon.Icon.g_rune_yr_lv03"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29889" name="Yulâs Rune - Stage 12">
+		<set name="icon" value="BranchIcon.Icon.g_rune_yr_lv03"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29890" name="Yulâs Rune - Stage 13">
+		<set name="icon" value="BranchIcon.Icon.g_rune_yr_lv03"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29891" name="Yulâs Rune - Stage 14" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29892" name="Yulâs Rune - Stage 15" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29893" name="Yulâs Rune - Stage 16" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29894" name="Yulâs Rune - Stage 17" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29895" name="Yulâs Rune - Stage 18" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29896" name="Yulâs Rune - Stage 19" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29897" name="Yulâs Rune - Stage 20" add_name="Not in Use">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29898" name="Feohâs Rune - Stage 1">
+		<set name="icon" value="BranchIcon.Icon.g_rune_feoh_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29899" name="Feohâs Rune - Stage 2">
+		<set name="icon" value="BranchIcon.Icon.g_rune_feoh_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+</list>

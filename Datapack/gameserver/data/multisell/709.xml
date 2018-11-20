@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "multisell.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<config show_all="true" no_tax="true" keep_enchanted="false"/>
+	<item>
+		<production id="6389" count="1"/>	<!--Squash Seed-->
+		<ingredient id="6391" count="15"/>	<!--Nectar-->
+	</item>
+	<item>
+		<production id="6390" count="1"/>	<!--Large Squash Seed-->
+		<ingredient id="6391" count="60"/>	<!--Nectar-->
+	</item>
+	<item>
+		<production id="70574" count="1"/>	<!--Strawberry Juice-->
+		<ingredient id="6391" count="10"/>	<!--Nectar-->
+	</item>
+	<item>
+		<production id="70575" count="1"/>	<!--Mango Juice-->
+		<ingredient id="6391" count="10"/>	<!--Nectar-->
+	</item>
+	<item>
+		<production id="70576" count="1"/>	<!--Cherry Juice-->
+		<ingredient id="6391" count="10"/>	<!--Nectar-->
+	</item>
+	<item>
+		<production id="5133" count="1"/>	<!--Chrono Unitus-->
+		<ingredient id="6391" count="1"/>	<!--Nectar-->
+	</item>
+	<item>
+		<production id="5817" count="1"/>	<!--Chrono Campana-->
+		<ingredient id="6391" count="1"/>	<!--Nectar-->
+	</item>
+	<item>
+		<production id="7058" count="1"/>	<!--Chrono Darbuka-->
+		<ingredient id="6391" count="1"/>	<!--Nectar-->
+	</item>
+	<item>
+		<production id="8350" count="1"/>	<!--Chrono Maracas-->
+		<ingredient id="6391" count="1"/>	<!--Nectar-->
+	</item>
+	<item>
+		<production id="4202" count="1"/>	<!--Chrono Cithara-->
+		<ingredient id="6391" count="1"/>	<!--Nectar-->
+	</item>
+</list>

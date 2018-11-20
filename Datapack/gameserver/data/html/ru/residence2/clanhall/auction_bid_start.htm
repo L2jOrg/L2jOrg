@@ -1,0 +1,27 @@
+<html><body>
+<font color="LEVEL">Вы делаете ставку только на один клан холл во время.</font> Как только предложенная цена подтверждается, что сумма <font color="LEVEL">на хранение</font> в депозит с аукционным домом. В <font color="LEVEL">10% налог на транзакции</font> является
+также вычитаются из суммы тендерного предложения. Сделки налог не подлежит возмещению, даже если ставка отменяется.<br> Ваша<font color="LEVEL"> ставка</font> должна быть выше, чем минимальная ставка (или, при проведении повторных торгов, Предыдущее предложение). Клан, который подал
+самую высокую ставку в конце аукциона выигрывает.<br> Вы в данный момент должны <font color="aaccff">%clan_adena%</font> Адены в клановом складе. Минимальная ставка составляет <font color="aaccff">%min_bid%</font> Адены.<br> Сколько вы хотите сделать ставку?
+<table width=270 border=0>
+	<tr>
+		<td width=220 align=right>
+			<edit var=bidprice width=230 align=right type=number>
+		</td>
+		<td width=40 align=right>Аден</td>
+	</tr>
+</table>
+<img src="L2UI.SquareBlank" width=270 height=10> <img src="L2UI.SquareWhite" width=270 height=1> <img src="L2UI.SquareBlank" width=270 height=5>
+<table width=270 border=0>
+	<tr>
+		<td width=100></td>
+		<td width=80 align=center>
+			<button action="bypass -h npc_%objectId%_info %id%" value="Назад" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+		</td>
+		<td width=80 align=center>
+			<button action="bypass -h npc_%objectId%_bid_next %id% $bidprice" value="Принять" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+		</td>
+	</tr>
+</table>
+<br>
+</body>
+</html>

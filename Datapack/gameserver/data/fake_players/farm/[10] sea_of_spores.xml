@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE farm SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<farm name="Sea of Spores" min_level="40" max_level="52">
+	<zones>
+		<zone>
+			<polygon>
+				<coords loc="63768 19992 -6000 -3000"/>
+				<coords loc="63736 21688 -6000 -3000"/>
+				<coords loc="63720 23400 -6000 -3000"/>
+				<coords loc="63512 25592 -6000 -3000"/>
+				<coords loc="63704 26248 -6000 -3000"/>
+				<coords loc="63592 26536 -6000 -3000"/>
+				<coords loc="63144 26824 -6000 -3000"/>
+				<coords loc="62168 28904 -6000 -3000"/>
+				<coords loc="61592 29864 -6000 -3000"/>
+				<coords loc="59832 31128 -6000 -3000"/>
+				<coords loc="58184 31336 -6000 -3000"/>
+				<coords loc="56760 31208 -6000 -3000"/>
+				<coords loc="45955 24376 -6000 -3000"/>
+				<coords loc="48856 16152 -6000 -3000"/>
+			</polygon>
+		</zone>
+		<spawn_points>
+			<coords loc="63531 26317 -3752"/>
+		</spawn_points>
+	</zones>
+	<on_obtain_max_level>
+		<action id="1"/>
+	</on_obtain_max_level>
+	<go_to_town min_farm_time="1800" max_farm_time="3600">
+		<action id="1"/>
+	</go_to_town>
+	<action id="1">
+		<wait min_delay="1000" max_delay="3000"/>
+		<use_item id="736"/>
+	</action>
+</farm>

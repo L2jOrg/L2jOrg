@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn name="lyonn01_npc1814_g03" count="2" respawn="60">
+		<territory>
+			<add x="-41072" y="-112860" zmin="-2360" zmax="-1660"/>
+			<add x="-33240" y="-115356" zmin="-2360" zmax="-1660"/>
+			<add x="-33180" y="-106880" zmin="-2360" zmax="-1660"/>
+			<add x="-42692" y="-107472" zmin="-2360" zmax="-1660"/>
+		</territory>
+		<npc id="31036"/><!--Центурион-->
+	</spawn>
+	<spawn name="lyonn01_npc1814_g04" count="1" respawn="60">
+		<territory>
+			<add x="-50748" y="-105408" zmin="-2328" zmax="-1428"/>
+			<add x="-46680" y="-104584" zmin="-2328" zmax="-1428"/>
+			<add x="-45060" y="-102736" zmin="-2328" zmax="-1428"/>
+			<add x="-49928" y="-101964" zmin="-2328" zmax="-1428"/>
+		</territory>
+		<npc id="31036"/><!--Центурион-->
+	</spawn>
+	<spawn name="lyonn01_npc1814_g01" count="1" respawn="60">
+		<territory>
+			<add x="-41376" y="-123416" zmin="-544" zmax="-144"/>
+			<add x="-40392" y="-123028" zmin="-544" zmax="-144"/>
+			<add x="-45608" y="-118396" zmin="-544" zmax="-144"/>
+			<add x="-46764" y="-119052" zmin="-544" zmax="-144"/>
+		</territory>
+		<npc id="31036"/><!--Центурион-->
+	</spawn>
+	<spawn name="lyonn01_npc1814_g02" count="2" respawn="60">
+		<territory>
+			<add x="-42592" y="-118064" zmin="-2280" zmax="-1580"/>
+			<add x="-37932" y="-123044" zmin="-2280" zmax="-1580"/>
+			<add x="-36204" y="-122844" zmin="-2280" zmax="-1580"/>
+			<add x="-33420" y="-117588" zmin="-2280" zmax="-1580"/>
+			<add x="-33140" y="-115880" zmin="-2280" zmax="-1580"/>
+			<add x="-41236" y="-114936" zmin="-2280" zmax="-1580"/>
+		</territory>
+		<npc id="31036"/><!--Центурион-->
+	</spawn>
+	<spawn name="lyonn01_npc1814_g05" count="1" respawn="60">
+		<territory>
+			<add x="-40604" y="-105384" zmin="-3064" zmax="-2364"/>
+			<add x="-39172" y="-105684" zmin="-3064" zmax="-2364"/>
+			<add x="-40356" y="-100872" zmin="-3064" zmax="-2364"/>
+			<add x="-43408" y="-102968" zmin="-3064" zmax="-2364"/>
+		</territory>
+		<npc id="31036"/><!--Центурион-->
+	</spawn>
+	<spawn name="rhion07_qm1814_00" count="15" respawn="15">
+		<territory>
+			<add x="-56808" y="-113944" zmin="-716" zmax="-516"/>
+			<add x="-55732" y="-113948" zmin="-716" zmax="-516"/>
+			<add x="-55748" y="-113264" zmin="-716" zmax="-516"/>
+			<add x="-56804" y="-113268" zmin="-716" zmax="-516"/>
+		</territory>
+		<npc id="18342"/><!--Гремлин-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_005" count="1" respawn="60">
+		<point x="-45863" y="-112621" z="-200" h="32768"/>
+		<npc id="30571"/><!--Танапи-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_005" count="1" respawn="60">
+		<point x="-45864" y="-112540" z="-200" h="32768"/>
+		<npc id="30572"/><!--Ливина-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_004" count="1" respawn="60">
+		<point x="-43264" y="-112532" z="-216" h="32768"/>
+		<npc id="30564"/><!--Сумари-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_003" count="1" respawn="60">
+		<point x="-43109" y="-113770" z="-216" h="24576"/>
+		<npc id="30562"/><!--Грукин-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_003" count="1" respawn="60">
+		<point x="-43114" y="-113404" z="-216" h="38000"/>
+		<npc id="30563"/><!--Иманту-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_002" count="1" respawn="60">
+		<point x="-43910" y="-115518" z="-192" h="39000"/>
+		<npc id="30560"/><!--Аска-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_002" count="1" respawn="60">
+		<point x="-43950" y="-115457" z="-192" h="39000"/>
+		<npc id="30561"/><!--Папума-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_001" count="1" respawn="60">
+		<point x="-44416" y="-111486" z="-216" h="57600"/>
+		<npc id="30558"/><!--Джакал-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_001" count="1" respawn="60">
+		<point x="-43926" y="-111794" z="-216" h="28672"/>
+		<npc id="30559"/><!--Кунай-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_009" count="1" respawn="60">
+		<point x="-45032" y="-113598" z="-192" h="32768"/>
+		<npc id="30602"/><!--Гид Новичков-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_008" count="1" respawn="60">
+		<point x="-45264" y="-112512" z="-240" h="0"/>
+		<npc id="30576"/><!--Тамил-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_007" count="1" respawn="60">
+		<point x="-46768" y="-113610" z="-3" h="0"/>
+		<npc id="30565"/><!--Кекеи-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_006" count="1" respawn="60">
+		<point x="-45952" y="-114784" z="-200" h="32768"/>
+		<npc id="30569"/><!--Брукерс-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_006" count="1" respawn="60">
+		<point x="-45952" y="-114496" z="-200" h="32768"/>
+		<npc id="30570"/><!--Карукия-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_016" count="1" respawn="60">
+		<point x="-45731" y="-113844" z="-240" h="0"/>
+		<npc id="30583"/><!--Патукай-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_015" count="1" respawn="60">
+		<point x="-45728" y="-113360" z="-240" h="0"/>
+		<npc id="30584"/><!--Вапук-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_014" count="1" respawn="60">
+		<point x="-47360" y="-113791" z="-224" h="32768"/>
+		<npc id="30578"/><!--Накушин-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_014" count="1" respawn="60">
+		<point x="-47360" y="-113424" z="-224" h="32768"/>
+		<npc id="30579"/><!--Тамай-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_013" count="1" respawn="60">
+		<point x="-49542" y="-109564" z="-238" h="51000"/>
+		<npc id="30592"/><!--Тотемный Дух Хестуи-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_012" count="1" respawn="60">
+		<point x="-46808" y="-113184" z="-112" h="0"/>
+		<npc id="30568"/><!--Хатос-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_011" count="1" respawn="60">
+		<point x="-46802" y="-114011" z="-112" h="0"/>
+		<npc id="30566"/><!--Варкис-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_010" count="1" respawn="60">
+		<point x="-46247" y="-113866" z="-16" h="16384"/>
+		<npc id="30567"/><!--Тантус-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_019" count="1" respawn="60">
+		<point x="-45808" y="-110055" z="-256" h="16384"/>
+		<npc id="30582"/><!--Тику-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_018" count="1" respawn="60">
+		<point x="-45328" y="-114736" z="-240" h="0"/>
+		<npc id="30585"/><!--Татару Зу Хестуи-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_017" count="1" respawn="60">
+		<point x="-44624" y="-111873" z="-240" h="40960"/>
+		<npc id="30587"/><!--Гентаки Зу Уруту-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_022" count="1" respawn="60">
+		<point x="-45744" y="-117165" z="-240" h="49152"/>
+		<npc id="30580"/><!--Паругон-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_021" count="1" respawn="60">
+		<point x="-46576" y="-117311" z="-240" h="49152"/>
+		<npc id="30577"/><!--Рукайн-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_020" count="1" respawn="60">
+		<point x="-46528" y="-109968" z="-248" h="16384"/>
+		<npc id="30581"/><!--Оринак-->
+	</spawn>
+	<spawn name="lyonn03_npc1814_premium01" count="1" respawn="60" group="vitamin_manager">
+		<point x="-43728" y="-113472" z="-240" h="33000"/>
+		<npc id="32478"/><!--Менеджер Витаминов-->
+	</spawn>
+	<spawn name="lyonn07_18_14_23" count="2" respawn="20">
+		<territory>
+			<add x="-40328" y="-110508" zmin="-1968" zmax="-1668"/>
+			<add x="-38920" y="-109932" zmin="-1968" zmax="-1668"/>
+			<add x="-38592" y="-109020" zmin="-1968" zmax="-1668"/>
+			<add x="-39324" y="-108320" zmin="-1968" zmax="-1668"/>
+			<add x="-40388" y="-108492" zmin="-1968" zmax="-1668"/>
+			<add x="-40908" y="-109056" zmin="-1968" zmax="-1668"/>
+			<add x="-40964" y="-109680" zmin="-1968" zmax="-1668"/>
+		</territory>
+		<npc id="20312"/><!--Охотник Когтистых Бесов-->
+	</spawn>
+	<spawn name="lyonn07_18_14_22" count="2" respawn="20">
+		<territory>
+			<add x="-38328" y="-113608" zmin="-2080" zmax="-1680"/>
+			<add x="-36908" y="-113368" zmin="-2080" zmax="-1680"/>
+			<add x="-36168" y="-112104" zmin="-2080" zmax="-1680"/>
+			<add x="-37644" y="-111340" zmin="-2080" zmax="-1680"/>
+			<add x="-39344" y="-111476" zmin="-2080" zmax="-1680"/>
+			<add x="-40084" y="-112332" zmin="-2080" zmax="-1680"/>
+			<add x="-39684" y="-113380" zmin="-2080" zmax="-1680"/>
+		</territory>
+		<npc id="20312"/><!--Охотник Когтистых Бесов-->
+	</spawn>
+	<spawn name="lyonn07_18_14_21" count="2" respawn="20">
+		<territory>
+			<add x="-38344" y="-118740" zmin="-1896" zmax="-1496"/>
+			<add x="-37044" y="-119312" zmin="-1896" zmax="-1496"/>
+			<add x="-36420" y="-118028" zmin="-1896" zmax="-1496"/>
+			<add x="-37412" y="-116632" zmin="-1896" zmax="-1496"/>
+			<add x="-38244" y="-117544" zmin="-1896" zmax="-1496"/>
+		</territory>
+		<npc id="20312"/><!--Охотник Когтистых Бесов-->
+	</spawn>
+	<spawn name="lyonn07_18_14_20" count="3" respawn="20">
+		<territory>
+			<add x="-41724" y="-117844" zmin="-1996" zmax="-1696"/>
+			<add x="-40844" y="-119112" zmin="-1996" zmax="-1696"/>
+			<add x="-39680" y="-118880" zmin="-1996" zmax="-1696"/>
+			<add x="-39612" y="-116988" zmin="-1996" zmax="-1696"/>
+			<add x="-40944" y="-116636" zmin="-1996" zmax="-1696"/>
+		</territory>
+		<npc id="20312"/><!--Охотник Когтистых Бесов-->
+	</spawn>
+	<spawn name="lyonn07_18_14_19" count="2" respawn="20">
+		<territory>
+			<add x="-39400" y="-121576" zmin="-1852" zmax="-1552"/>
+			<add x="-38464" y="-121320" zmin="-1852" zmax="-1552"/>
+			<add x="-38208" y="-120188" zmin="-1852" zmax="-1552"/>
+			<add x="-39444" y="-120004" zmin="-1852" zmax="-1552"/>
+			<add x="-39936" y="-120524" zmin="-1852" zmax="-1552"/>
+			<add x="-39988" y="-121360" zmin="-1852" zmax="-1552"/>
+		</territory>
+		<npc id="20312"/><!--Охотник Когтистых Бесов-->
+	</spawn>
+	<spawn name="lyonn07_18_14_18" count="3" respawn="20">
+		<territory>
+			<add x="-42428" y="-102760" zmin="-2900" zmax="-2600"/>
+			<add x="-41088" y="-103868" zmin="-2900" zmax="-2600"/>
+			<add x="-40408" y="-102604" zmin="-2900" zmax="-2600"/>
+			<add x="-40740" y="-101636" zmin="-2900" zmax="-2600"/>
+			<add x="-42100" y="-101900" zmin="-2900" zmax="-2600"/>
+		</territory>
+		<npc id="20312"/><!--Охотник Когтистых Бесов-->
+	</spawn>
+	<spawn name="lyonn07_18_14_17" count="5" respawn="20">
+		<territory>
+			<add x="-50444" y="-112240" zmin="-360" zmax="-160"/>
+			<add x="-48956" y="-112352" zmin="-360" zmax="-160"/>
+			<add x="-48032" y="-111572" zmin="-360" zmax="-160"/>
+			<add x="-48080" y="-110392" zmin="-360" zmax="-160"/>
+			<add x="-48980" y="-109384" zmin="-360" zmax="-160"/>
+			<add x="-50064" y="-109380" zmin="-360" zmax="-160"/>
+			<add x="-50796" y="-109948" zmin="-360" zmax="-160"/>
+			<add x="-50996" y="-111008" zmin="-360" zmax="-160"/>
+		</territory>
+		<npc id="20535"/><!--Степной Шакал-->
+	</spawn>
+	<spawn name="lyonn07_18_14_16" count="5" respawn="20">
+		<territory>
+			<add x="-50396" y="-115956" zmin="-284" zmax="-84"/>
+			<add x="-48316" y="-116952" zmin="-284" zmax="-84"/>
+			<add x="-48076" y="-115460" zmin="-284" zmax="-84"/>
+			<add x="-49636" y="-115048" zmin="-284" zmax="-84"/>
+		</territory>
+		<npc id="20535"/><!--Степной Шакал-->
+	</spawn>
+	<territory name="lyonn07_18_14_15">
+		<add x="-43340" y="-109932" zmin="-1884" zmax="-1384"/>
+		<add x="-42080" y="-111408" zmin="-1884" zmax="-1384"/>
+		<add x="-40940" y="-108212" zmin="-1884" zmax="-1384"/>
+		<add x="-42904" y="-107148" zmin="-1884" zmax="-1384"/>
+		<add x="-43696" y="-108380" zmin="-1884" zmax="-1384"/>
+	</territory>
+	<spawn name="lyonn07_18_14_15" count="3" respawn="20">
+		<territory name="lyonn07_18_14_15"/>
+		<npc id="20475"/><!--Волк Кхаши-->
+	</spawn>
+	<spawn name="lyonn07_18_14_15" count="3" respawn="20">
+		<territory name="lyonn07_18_14_15"/>
+		<npc id="20319"/><!--Гоблин Грабитель Могил-->
+	</spawn>
+	<territory name="lyonn07_18_14_14">
+		<add x="-41360" y="-112740" zmin="-2140" zmax="-1540"/>
+		<add x="-36324" y="-109260" zmin="-2140" zmax="-1540"/>
+		<add x="-36520" y="-108044" zmin="-2140" zmax="-1540"/>
+		<add x="-39848" y="-107660" zmin="-2140" zmax="-1540"/>
+		<add x="-40924" y="-108052" zmin="-2140" zmax="-1540"/>
+		<add x="-42028" y="-111392" zmin="-2140" zmax="-1540"/>
+	</territory>
+	<spawn name="lyonn07_18_14_14" count="5" respawn="20">
+		<territory name="lyonn07_18_14_14"/>
+		<npc id="20475"/><!--Волк Кхаши-->
+	</spawn>
+	<spawn name="lyonn07_18_14_14" count="5" respawn="20">
+		<territory name="lyonn07_18_14_14"/>
+		<npc id="20319"/><!--Гоблин Грабитель Могил-->
+	</spawn>
+	<spawn name="lyonn07_18_14_14" count="5" respawn="20">
+		<territory name="lyonn07_18_14_14"/>
+		<npc id="20311"/><!--Когтистый Бес-->
+	</spawn>
+	<territory name="lyonn07_18_14_13">
+		<add x="-40296" y="-113976" zmin="-2208" zmax="-1608"/>
+		<add x="-35624" y="-114336" zmin="-2208" zmax="-1608"/>
+		<add x="-34580" y="-112472" zmin="-2208" zmax="-1608"/>
+		<add x="-35296" y="-110504" zmin="-2208" zmax="-1608"/>
+		<add x="-36268" y="-109328" zmin="-2208" zmax="-1608"/>
+		<add x="-41388" y="-112776" zmin="-2208" zmax="-1608"/>
+	</territory>
+	<spawn name="lyonn07_18_14_13" count="5" respawn="20">
+		<territory name="lyonn07_18_14_13"/>
+		<npc id="20319"/><!--Гоблин Грабитель Могил-->
+	</spawn>
+	<spawn name="lyonn07_18_14_13" count="5" respawn="20">
+		<territory name="lyonn07_18_14_13"/>
+		<npc id="20311"/><!--Когтистый Бес-->
+	</spawn>
+	<spawn name="lyonn07_18_14_13" count="5" respawn="20">
+		<territory name="lyonn07_18_14_13"/>
+		<npc id="20477"/><!--Древесный Волк Кхаши-->
+	</spawn>
+	<territory name="lyonn07_18_14_12">
+		<add x="-38972" y="-119336" zmin="-1988" zmax="-1588"/>
+		<add x="-36768" y="-119796" zmin="-1988" zmax="-1588"/>
+		<add x="-35688" y="-118092" zmin="-1988" zmax="-1588"/>
+		<add x="-36288" y="-116032" zmin="-1988" zmax="-1588"/>
+		<add x="-37724" y="-115116" zmin="-1988" zmax="-1588"/>
+		<add x="-38816" y="-116428" zmin="-1988" zmax="-1588"/>
+	</territory>
+	<spawn name="lyonn07_18_14_12" count="3" respawn="20">
+		<territory name="lyonn07_18_14_12"/>
+		<npc id="20319"/><!--Гоблин Грабитель Могил-->
+	</spawn>
+	<spawn name="lyonn07_18_14_12" count="4" respawn="20">
+		<territory name="lyonn07_18_14_12"/>
+		<npc id="20311"/><!--Когтистый Бес-->
+	</spawn>
+	<spawn name="lyonn07_18_14_12" count="4" respawn="20">
+		<territory name="lyonn07_18_14_12"/>
+		<npc id="20477"/><!--Древесный Волк Кхаши-->
+	</spawn>
+	<territory name="lyonn07_18_14_11">
+		<add x="-40516" y="-120840" zmin="-2024" zmax="-1424"/>
+		<add x="-39020" y="-119344" zmin="-2024" zmax="-1424"/>
+		<add x="-38852" y="-116552" zmin="-2024" zmax="-1424"/>
+		<add x="-40828" y="-114648" zmin="-2024" zmax="-1424"/>
+		<add x="-42840" y="-118556" zmin="-2024" zmax="-1424"/>
+	</territory>
+	<spawn name="lyonn07_18_14_11" count="3" respawn="20">
+		<territory name="lyonn07_18_14_11"/>
+		<npc id="20475"/><!--Волк Кхаши-->
+	</spawn>
+	<spawn name="lyonn07_18_14_11" count="4" respawn="20">
+		<territory name="lyonn07_18_14_11"/>
+		<npc id="20319"/><!--Гоблин Грабитель Могил-->
+	</spawn>
+	<spawn name="lyonn07_18_14_11" count="4" respawn="20">
+		<territory name="lyonn07_18_14_11"/>
+		<npc id="20311"/><!--Когтистый Бес-->
+	</spawn>
+	<territory name="lyonn07_18_14_10">
+		<add x="-38044" y="-122996" zmin="-1876" zmax="-1426"/>
+		<add x="-35900" y="-123416" zmin="-1876" zmax="-1426"/>
+		<add x="-36740" y="-119868" zmin="-1876" zmax="-1426"/>
+		<add x="-38972" y="-119444" zmin="-1876" zmax="-1426"/>
+		<add x="-40452" y="-120852" zmin="-1876" zmax="-1426"/>
+		<add x="-39252" y="-122448" zmin="-1876" zmax="-1426"/>
+	</territory>
+	<spawn name="lyonn07_18_14_10" count="3" respawn="20">
+		<territory name="lyonn07_18_14_10"/>
+		<npc id="20475"/><!--Волк Кхаши-->
+	</spawn>
+	<spawn name="lyonn07_18_14_10" count="4" respawn="20">
+		<territory name="lyonn07_18_14_10"/>
+		<npc id="20319"/><!--Гоблин Грабитель Могил-->
+	</spawn>
+	<spawn name="lyonn07_18_14_10" count="4" respawn="20">
+		<territory name="lyonn07_18_14_10"/>
+		<npc id="20311"/><!--Когтистый Бес-->
+	</spawn>
+	<spawn name="lyonn07_18_14_09" count="3" respawn="20">
+		<territory>
+			<add x="-37192" y="-103796" zmin="-3108" zmax="-2508"/>
+			<add x="-35076" y="-102292" zmin="-3108" zmax="-2508"/>
+			<add x="-35088" y="-101536" zmin="-3108" zmax="-2508"/>
+			<add x="-35972" y="-101532" zmin="-3108" zmax="-2508"/>
+			<add x="-36996" y="-101976" zmin="-3108" zmax="-2508"/>
+		</territory>
+		<npc id="20312"/><!--Охотник Когтистых Бесов-->
+	</spawn>
+	<spawn name="lyonn07_18_14_08" count="3" respawn="20">
+		<territory>
+			<add x="-38992" y="-103980" zmin="-3724" zmax="-2624"/>
+			<add x="-38064" y="-104896" zmin="-3724" zmax="-2624"/>
+			<add x="-37232" y="-103972" zmin="-3724" zmax="-2624"/>
+			<add x="-37692" y="-101816" zmin="-3724" zmax="-2624"/>
+			<add x="-38704" y="-101676" zmin="-3724" zmax="-2624"/>
+			<add x="-39144" y="-102924" zmin="-3724" zmax="-2624"/>
+		</territory>
+		<npc id="20312"/><!--Охотник Когтистых Бесов-->
+	</spawn>
+	<territory name="lyonn07_18_14_07">
+		<add x="-40628" y="-105884" zmin="-2860" zmax="-2460"/>
+		<add x="-37900" y="-105876" zmin="-2860" zmax="-2460"/>
+		<add x="-38308" y="-105216" zmin="-2860" zmax="-2460"/>
+		<add x="-39752" y="-104468" zmin="-2860" zmax="-2460"/>
+		<add x="-41100" y="-104904" zmin="-2860" zmax="-2460"/>
+	</territory>
+	<spawn name="lyonn07_18_14_07" count="1" respawn="20">
+		<territory name="lyonn07_18_14_07"/>
+		<npc id="20475"/><!--Волк Кхаши-->
+	</spawn>
+	<spawn name="lyonn07_18_14_07" count="2" respawn="20">
+		<territory name="lyonn07_18_14_07"/>
+		<npc id="20319"/><!--Гоблин Грабитель Могил-->
+	</spawn>
+	<territory name="lyonn07_18_14_06">
+		<add x="-41128" y="-104868" zmin="-2932" zmax="-2532"/>
+		<add x="-39720" y="-104368" zmin="-2932" zmax="-2532"/>
+		<add x="-39756" y="-100792" zmin="-2932" zmax="-2532"/>
+		<add x="-43728" y="-101936" zmin="-2932" zmax="-2532"/>
+		<add x="-43296" y="-103496" zmin="-2932" zmax="-2532"/>
+	</territory>
+	<spawn name="lyonn07_18_14_06" count="3" respawn="20">
+		<territory name="lyonn07_18_14_06"/>
+		<npc id="20311"/><!--Когтистый Бес-->
+	</spawn>
+	<spawn name="lyonn07_18_14_06" count="3" respawn="20">
+		<territory name="lyonn07_18_14_06"/>
+		<npc id="20477"/><!--Древесный Волк Кхаши-->
+	</spawn>
+	<spawn name="lyonn07_18_14_06" count="3" respawn="20">
+		<territory name="lyonn07_18_14_06"/>
+		<npc id="20312"/><!--Охотник Когтистых Бесов-->
+	</spawn>
+	<territory name="lyonn07_18_14_05">
+		<add x="-44724" y="-120768" zmin="-788" zmax="-38"/>
+		<add x="-41572" y="-123288" zmin="-788" zmax="-38"/>
+		<add x="-38420" y="-124536" zmin="-788" zmax="-38"/>
+		<add x="-38364" y="-124356" zmin="-788" zmax="-38"/>
+		<add x="-44104" y="-119924" zmin="-788" zmax="-38"/>
+	</territory>
+	<spawn name="lyonn07_18_14_05" count="3" respawn="20">
+		<territory name="lyonn07_18_14_05"/>
+		<npc id="20475"/><!--Волк Кхаши-->
+	</spawn>
+	<spawn name="lyonn07_18_14_05" count="3" respawn="20">
+		<territory name="lyonn07_18_14_05"/>
+		<npc id="20319"/><!--Гоблин Грабитель Могил-->
+	</spawn>
+	<territory name="lyonn07_18_14_04">
+		<add x="-44912" y="-120980" zmin="-340" zmax="-40"/>
+		<add x="-44152" y="-119864" zmin="-340" zmax="-40"/>
+		<add x="-45008" y="-117840" zmin="-340" zmax="-40"/>
+		<add x="-47560" y="-117400" zmin="-340" zmax="-40"/>
+		<add x="-49224" y="-117336" zmin="-340" zmax="-40"/>
+		<add x="-46804" y="-120552" zmin="-340" zmax="-40"/>
+	</territory>
+	<spawn name="lyonn07_18_14_04" count="4" respawn="20">
+		<territory name="lyonn07_18_14_04"/>
+		<npc id="20538"/><!--Матерый Степной Шакал-->
+	</spawn>
+	<spawn name="lyonn07_18_14_04" count="4" respawn="20">
+		<territory name="lyonn07_18_14_04"/>
+		<npc id="20475"/><!--Волк Кхаши-->
+	</spawn>
+	<territory name="lyonn07_18_14_03">
+		<add x="-49360" y="-117304" zmin="-356" zmax="-56"/>
+		<add x="-47552" y="-117340" zmin="-356" zmax="-56"/>
+		<add x="-47548" y="-113956" zmin="-356" zmax="-56"/>
+		<add x="-51276" y="-113952" zmin="-356" zmax="-56"/>
+		<add x="-51096" y="-116048" zmin="-356" zmax="-56"/>
+	</territory>
+	<spawn name="lyonn07_18_14_03" count="5" respawn="20">
+		<territory name="lyonn07_18_14_03"/>
+		<npc id="20531"/><!--Молодой Степной Шакал-->
+	</spawn>
+	<spawn name="lyonn07_18_14_03" count="5" respawn="20">
+		<territory name="lyonn07_18_14_03"/>
+		<npc id="20535"/><!--Степной Шакал-->
+	</spawn>
+	<spawn name="lyonn07_18_14_03" count="6" respawn="20">
+		<territory name="lyonn07_18_14_03"/>
+		<npc id="20538"/><!--Матерый Степной Шакал-->
+	</spawn>
+	<territory name="lyonn07_18_14_02">
+		<add x="-48060" y="-108820" zmin="-844" zmax="-144"/>
+		<add x="-45772" y="-109180" zmin="-844" zmax="-144"/>
+		<add x="-45080" y="-107524" zmin="-844" zmax="-144"/>
+		<add x="-46448" y="-106120" zmin="-844" zmax="-144"/>
+		<add x="-49292" y="-108036" zmin="-844" zmax="-144"/>
+	</territory>
+	<spawn name="lyonn07_18_14_02" count="3" respawn="20">
+		<territory name="lyonn07_18_14_02"/>
+		<npc id="20538"/><!--Матерый Степной Шакал-->
+	</spawn>
+	<spawn name="lyonn07_18_14_02" count="3" respawn="20">
+		<territory name="lyonn07_18_14_02"/>
+		<npc id="20475"/><!--Волк Кхаши-->
+	</spawn>
+	<territory name="lyonn07_18_14_01">
+		<add x="-51344" y="-113300" zmin="-388" zmax="-88"/>
+		<add x="-47452" y="-113280" zmin="-388" zmax="-88"/>
+		<add x="-47452" y="-109232" zmin="-388" zmax="-88"/>
+		<add x="-49824" y="-107692" zmin="-388" zmax="-88"/>
+		<add x="-52148" y="-109344" zmin="-388" zmax="-88"/>
+	</territory>
+	<spawn name="lyonn07_18_14_01" count="6" respawn="20">
+		<territory name="lyonn07_18_14_01"/>
+		<npc id="20531"/><!--Молодой Степной Шакал-->
+	</spawn>
+	<spawn name="lyonn07_18_14_01" count="6" respawn="20">
+		<territory name="lyonn07_18_14_01"/>
+		<npc id="20535"/><!--Степной Шакал-->
+	</spawn>
+	<spawn name="lyonn07_18_14_01" count="8" respawn="20">
+		<territory name="lyonn07_18_14_01"/>
+		<npc id="20538"/><!--Матерый Степной Шакал-->
+	</spawn>
+	<spawn name="lyonn02_npc1814_01" count="1" respawn="60">
+		<point x="-56736" y="-113536" z="-672" h="0"/>
+		<npc id="30573"/><!--Вулькус-->
+	</spawn>
+	<spawn name="lyonn02_npc1814_01" count="1" respawn="60">
+		<point x="-56736" y="-113680" z="-672" h="0"/>
+		<npc id="30575"/><!--Помощник Новичков-->
+	</spawn>
+	<spawn count="1" respawn="60" group="royal_love_event">
+		<point x="-44283" y="-113669" z="-240" h="57345"/>
+		<npc id="9020"/><!--Фринтеза-->
+	</spawn>
+</list>

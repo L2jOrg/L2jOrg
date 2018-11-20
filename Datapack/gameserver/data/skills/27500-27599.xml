@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="27598" levels="1" name="Excellent Hit">
+		<set name="icon" value="icon.homerun"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="coolTime" value="400"/>
+		<set name="hitTime" value="5500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="27599" levels="1" name="Excellent Serve">
+		<set name="icon" value="icon.strikeout"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="coolTime" value="400"/>
+		<set name="hitTime" value="5500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+</list>

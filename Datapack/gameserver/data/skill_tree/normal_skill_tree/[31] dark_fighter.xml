@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="31">	<!--Темный Воин-->
+			<skill id="194" level="1" name="Везение(Lucky)" min_level="1"/>
+			<skill id="56" level="1" name="Мощный Выстрел(Power Shot)" cost="5" min_level="3"/>
+			<skill id="3" level="1" name="Мощный Удар(Power Strike)" cost="5" min_level="3"/>
+			<skill id="16" level="1" name="Смертельный Удар(Mortal Blow)" cost="5" min_level="3"/>
+			<skill id="56" level="2" name="Мощный Выстрел(Power Shot)" cost="10" min_level="4"/>
+			<skill id="3" level="2" name="Мощный Удар(Power Strike)" cost="10" min_level="4"/>
+			<skill id="16" level="2" name="Смертельный Удар(Mortal Blow)" cost="10" min_level="4"/>
+			<skill id="91" level="1" name="Аура Защиты(Defense Aura)" cost="15" min_level="5"/>
+			<skill id="142" level="1" name="Владение Броней(Armor Mastery)" cost="15" min_level="5"/>
+			<skill id="141" level="1" name="Владение Оружием(Weapon Mastery)" cost="15" min_level="5"/>
+			<skill id="56" level="3" name="Мощный Выстрел(Power Shot)" cost="15" min_level="5"/>
+			<skill id="3" level="3" name="Мощный Удар(Power Strike)" cost="15" min_level="5"/>
+			<skill id="16" level="3" name="Смертельный Удар(Mortal Blow)" cost="15" min_level="5"/>
+			<skill id="142" level="2" name="Владение Броней(Armor Mastery)" cost="100" min_level="8"/>
+			<skill id="56" level="4" name="Мощный Выстрел(Power Shot)" cost="100" min_level="8"/>
+			<skill id="3" level="4" name="Мощный Удар(Power Strike)" cost="100" min_level="8"/>
+			<skill id="16" level="4" name="Смертельный Удар(Mortal Blow)" cost="100" min_level="8"/>
+			<skill id="56" level="5" name="Мощный Выстрел(Power Shot)" cost="100" min_level="9"/>
+			<skill id="3" level="5" name="Мощный Удар(Power Strike)" cost="100" min_level="9"/>
+			<skill id="16" level="5" name="Смертельный Удар(Mortal Blow)" cost="100" min_level="9"/>
+			<skill id="77" level="1" name="Аура Атаки(Attack Aura)" cost="100" min_level="10"/>
+			<skill id="142" level="3" name="Владение Броней(Armor Mastery)" cost="100" min_level="10"/>
+			<skill id="141" level="2" name="Владение Оружием(Weapon Mastery)" cost="100" min_level="10"/>
+			<skill id="56" level="6" name="Мощный Выстрел(Power Shot)" cost="100" min_level="10"/>
+			<skill id="3" level="6" name="Мощный Удар(Power Strike)" cost="100" min_level="10"/>
+			<skill id="16" level="6" name="Смертельный Удар(Mortal Blow)" cost="100" min_level="10"/>
+			<skill id="142" level="4" name="Владение Броней(Armor Mastery)" cost="400" min_level="13"/>
+			<skill id="70" level="1" name="Кража Здоровья(Drain HP)" cost="400" min_level="13"/>
+			<skill id="56" level="7" name="Мощный Выстрел(Power Shot)" cost="400" min_level="13"/>
+			<skill id="3" level="7" name="Мощный Удар(Power Strike)" cost="400" min_level="13"/>
+			<skill id="16" level="7" name="Смертельный Удар(Mortal Blow)" cost="400" min_level="13"/>
+			<skill id="56" level="8" name="Мощный Выстрел(Power Shot)" cost="400" min_level="14"/>
+			<skill id="3" level="8" name="Мощный Удар(Power Strike)" cost="400" min_level="14"/>
+			<skill id="16" level="8" name="Смертельный Удар(Mortal Blow)" cost="400" min_level="14"/>
+			<skill id="142" level="5" name="Владение Броней(Armor Mastery)" cost="400" min_level="15"/>
+			<skill id="141" level="3" name="Владение Оружием(Weapon Mastery)" cost="400" min_level="15"/>
+			<skill id="70" level="2" name="Кража Здоровья(Drain HP)" cost="400" min_level="15"/>
+			<skill id="56" level="9" name="Мощный Выстрел(Power Shot)" cost="400" min_level="15"/>
+			<skill id="3" level="9" name="Мощный Удар(Power Strike)" cost="400" min_level="15"/>
+			<skill id="294" level="1" name="Ночное Восприятие(Shadow Sense)" cost="400" min_level="15"/>
+			<skill id="16" level="9" name="Смертельный Удар(Mortal Blow)" cost="400" min_level="15"/>
+			<!--HARDCODED: <skill id="239" level="1" name="Квалификация D(Expertise D)" min_level="20"/>-->
+			<!--HARDCODED: <skill id="239" level="2" name="Квалификация C(Expertise C)" min_level="40"/>-->
+			<!--HARDCODED: <skill id="239" level="3" name="Квалификация B(Expertise B)" min_level="52"/>-->
+		</class>
+	</normal_skill_tree>
+</list>

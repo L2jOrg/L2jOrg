@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="15600" levels="1" name="Lindvior\'s Attack">
+		<set name="icon" value="icon.skill1275"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="coolTime" value="1000"/>
+		<set name="castRange" value="300"/>
+		<set name="hitTime" value="1500"/>
+		<set name="element" value="0"/>
+		<set name="elementPower" value="180"/>
+		<set name="magicLvl" value="99"/>
+		<set name="operate_type" value="A2"/>
+		<set name="power" value="1547"/>
+		<set name="affect_range" value="5000"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="target" value="TARGET_AREA"/>
+	</skill>
+	<skill id="15601" levels="1" name="Lindvior\'s Attack">
+		<set name="icon" value="icon.skill1275"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="coolTime" value="1000"/>
+		<set name="castRange" value="300"/>
+		<set name="hitTime" value="1500"/>
+		<set name="element" value="0"/>
+		<set name="elementPower" value="180"/>
+		<set name="magicLvl" value="99"/>
+		<set name="operate_type" value="A2"/>
+		<set name="power" value="1547"/>
+		<set name="affect_range" value="5000"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="target" value="TARGET_AREA"/>
+	</skill>
+	<skill id="15603" levels="1" name="Disrupt Recharge">
+		<set name="icon" value="icon.skill14444"/>
+		<set name="castRange" value="1800"/>
+		<set name="hitTime" value="3000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15604" levels="1" name="Disrupt Recharge">
+		<set name="icon" value="icon.skill1042"/>
+		<set name="castRange" value="1800"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15605" levels="1" name="Recharge Possible">
+		<set name="icon" value="icon.skill0005"/>
+		<set name="hitTime" value="25000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="isSkillTimePermanent" value="true"/>
+		<set name="abnormal_time" value="20"/>	<!--TODO: Check abnormal time and effects.-->
+		<for>
+			<effect>
+				<add stat="runSpd" value="1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="15606" levels="1" name="Recharge">
+		<set name="icon" value="icon.skill14444"/>
+		<set name="coolTime" value="200"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="10000"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSkillTimePermanent" value="true"/>
+		<set name="isSkillTimePermanent" value="true"/>
+	</skill>
+	<skill id="15607" levels="1" name="Depleted">
+		<set name="icon" value="icon.skill1064"/>
+		<set name="castRange" value="1800"/>
+		<set name="hitTime" value="500"/>
+		<set name="mp_consume" value="10"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15608" levels="7" name="Power Strike">
+		<set name="icon" value="icon.skill0003"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15609" levels="7" name="Decrease P. Def.">
+		<set name="icon" value="icon.skill1422"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="300"/>
+		<set name="hitTime" value="2000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15610" levels="7" name="Spinning Slasher">
+		<set name="icon" value="icon.skill0922"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="6000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15611" levels="7" name="Tornado Slasher">
+		<set name="icon" value="icon.skill0922"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="6000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15612" levels="7" name="Thunder Storm">
+		<set name="icon" value="icon.skill0100"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15613" levels="7" name="Ranged Magic">
+		<set name="icon" value="icon.skill1167"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="4000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15614" levels="7" name="Decrease M. Def.">
+		<set name="icon" value="icon.skill1422"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15615" levels="7" name="Increases P. Atk.">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15616" levels="7" name="Aggression">
+		<set name="icon" value="icon.skill10027"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="2000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15617" levels="7" name="Power Smash">
+		<set name="icon" value="icon.skill0003"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15618" levels="7" name="Power Strike">
+		<set name="icon" value="icon.skill0003"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15620" levels="7" name="Power Shot">
+		<set name="icon" value="icon.skill0056"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="2000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15621" levels="7" name="Stun Shot">
+		<set name="icon" value="icon.skill0056"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="3000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15622" levels="7" name="Ranged Magic">
+		<set name="icon" value="icon.skill1167"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="2000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15623" levels="7" name="Push Up">
+		<set name="icon" value="icon.skill1042"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="10"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15624" levels="7" name="Heal">
+		<set name="icon" value="icon.skill1401"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="15000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15626" levels="1" name="Raid Boss (Lv. 86)">
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15627" levels="1" name="Raid Boss (Lv. 93)">
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15628" levels="1" name="Raid Boss (Lv. 95)">
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15629" levels="1" name="Nerva\'s Mental Blow">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="castRange" value="70"/>
+		<set name="hitTime" value="1500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15630" levels="1" name="Stun Trap">
+		<set name="icon" value="icon.skill0100"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="castRange" value="800"/>
+		<set name="hitTime" value="2000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15632" levels="1" name="Replenish Energy">
+		<set name="icon" value="icon.skill14444"/>
+		<set name="coolTime" value="200"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="10000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15633" levels="1" name="Raid Boss (Lv. 99)">
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15634" levels="1" name="Raid Boss (Lv. 99)">
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15635" levels="1" name="Raid Boss (Lv. 99)">
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15636" levels="1" name="Dimensional Teleport">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="3299"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15637" levels="1" name="Dimensional Space">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15638" levels="1" name="Lindvior">
+		<set name="icon" value="icon.skillboss"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15639" levels="1" name="Mysterious Fear">
+		<set name="icon" value="icon.skill1169"/>
+		<set name="hitTime" value="1000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15640" levels="1" name="Antharas\' Explosive Rage">
+		<set name="icon" value="icon.skill5086"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15641" levels="1" name="Valakas\' Explosive Rage">
+		<set name="icon" value="icon.skill5086"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15654" levels="1" name="Master\'s Blessing - GM\'s Courage">
+		<set name="icon" value="icon.skill5661"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15655" levels="1" name="Master\'s Blessing - GM\'s Protection">
+		<set name="icon" value="icon.skill5662"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15656" levels="1" name="Power Strike">
+		<set name="icon" value="icon.skill0003"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15657" levels="1" name="Decrease P. Def.">
+		<set name="icon" value="icon.skill1422"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="300"/>
+		<set name="hitTime" value="2000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15658" levels="1" name="Spinning Slasher">
+		<set name="icon" value="icon.skill0922"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="6000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15659" levels="1" name="Tornado Slasher">
+		<set name="icon" value="icon.skill0922"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="6000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15660" levels="1" name="Thunder Storm">
+		<set name="icon" value="icon.skill0100"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15661" levels="1" name="Dark Buster">
+		<set name="icon" value="icon.skill1167"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="1200"/>
+		<set name="hitTime" value="3000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15662" levels="1" name="Decrease M. Def.">
+		<set name="icon" value="icon.skill1422"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15663" levels="1" name="Increases P. Atk.">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15664" levels="1" name="Push Up">
+		<set name="icon" value="icon.skill11050"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15665" levels="1" name="Presentation - Anakim / Lilith">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="15666" levels="5" name="HP Increase 1">
+		<set name="icon" value="icon.skill1045"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15667" levels="5" name="P. Atk. Increase 1">
+		<set name="icon" value="icon.skill1068"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15668" levels="5" name="M. Atk Increase 1">
+		<set name="icon" value="icon.skill1059"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15669" levels="5" name="P. Def. Increase 1">
+		<set name="icon" value="icon.skill1040"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15670" levels="5" name="P. Def. Increase 1">
+		<set name="icon" value="icon.skill1010"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15671" levels="5" name="Atk. Spd. Increase 1">
+		<set name="icon" value="icon.skill1086"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15672" levels="5" name="Physical Attack Resistance 1">
+		<set name="icon" value="icon.skill1086"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15673" levels="5" name="Terminal State">
+		<set name="icon" value="icon.skill1608"/>
+		<set name="hitTime" value="1000"/>
+		<set name="mp_consume" value="38"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15674" levels="1" name="Mass Shackling">
+		<set name="icon" value="icon.skill0404"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="470"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="40"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15675" levels="1" name="Tribunal">
+		<set name="icon" value="icon.skill0400"/>
+		<set name="reuseDelay" value="4000"/>
+		<set name="coolTime" value="699"/>
+		<set name="hitTime" value="1299"/>
+		<set name="mp_consume" value="52"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15676" levels="1" name="Shield Stun">
+		<set name="icon" value="icon.skill0092"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="1200"/>
+		<set name="mp_consume" value="10"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15677" levels="1" name="Bloody Attack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15678" levels="1" name="Sayha\'s Blessing">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="900"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15679" levels="1" name="Dandy\'s Precise Swing">
+		<set name="icon" value="icon.skill0003"/>
+		<set name="castRange" value="200"/>
+		<set name="hitTime" value="3000"/>
+		<set name="mp_consume" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15680" levels="1" name="Roa\'s Hi-tech Attack">
+		<set name="icon" value="icon.skill4107"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="3000"/>
+		<set name="mp_consume" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15681" levels="2" name="Arena Administrator\'s Location">
+		<set name="icon" value="icon.skill1045"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15682" levels="3" name="Orc Thunder">
+		<table name="#mp_consume">50 65 80</table>
+		<set name="icon" value="icon.skill10015"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15683" levels="3" name="Front Drain">
+		<table name="#mp_consume">25 40 56</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15684" levels="3" name="Arena Administrator\'s Recovery">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="1000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15685" levels="3" name="Heal">
+		<table name="#reuseDelay">2000 2500 3000</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="2000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15686" levels="3" name="Multi-healing">
+		<table name="#reuseDelay">2500 3500 4000</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="hitTime" value="3000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15687" levels="1" name="Promise of Vengeance">
+		<set name="icon" value="icon.skill1346"/>
+		<set name="mp_consume" value="10"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15688" levels="1" name="Chain Snake">
+		<set name="icon" value="icon.skill10015"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="1000"/>
+		<set name="mp_consume" value="10"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15689" levels="1" name="Mass Chain Snake">
+		<set name="icon" value="icon.skill10016"/>
+		<set name="reuseDelay" value="60000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="1000"/>
+		<set name="mp_consume" value="10"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15690" levels="2" name="Fearsome Defensive Strike">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="mp_consume" value="10"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15691" levels="1" name="Defense Break">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="40000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="10"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15692" levels="1" name="Smashing Attack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="40000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="10"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15693" levels="1" name="Giant Bombardier">
+		<set name="icon" value="icon.skill10262"/>
+		<set name="reuseDelay" value="60000"/>
+		<set name="coolTime" value="1000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="10"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15694" levels="1" name="Mighty Giant Bombardier">
+		<set name="icon" value="icon.skill10265"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="1000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="10"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15695" levels="15" name="(Hex)">
+		<set name="icon" value="icon.skill0122"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="1200"/>
+		<set name="mp_consume" value="35"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15696" levels="1" name="Thunder Stun">
+		<set name="icon" value="icon.skill0100"/>
+		<set name="reuseDelay" value="6000"/>
+		<set name="coolTime" value="800"/>
+		<set name="hitTime" value="1000"/>
+		<set name="mp_consume" value="26"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="15697" levels="1" name="Giant Bombardier">
+		<set name="icon" value="icon.skill10262"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="coolTime" value="1000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="10"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+</list>

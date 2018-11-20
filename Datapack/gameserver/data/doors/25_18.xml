@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="25180004" name="sylen_sealing_du_s.Syl_seal_Door" hp="1" pdef="644" mdef="518">
+		<pos x="182918" y="15544" z="-12870"/>	
+		<shape ax="182840" ay="15637" bx="182980" by="15440" cx="182997" cy="15452" dx="182857" dy="15648" minz="-13042" maxz="-12780"/>
+		<set name="opened" value="false"/>
+        <set name="unlockable" value="false"/>
+        <set name="key" value="0"/>
+        <set name="show_hp" value="false"/>
+	</door>
+	<door id="25180007"	name="sylen_sealing_du_s.Syl_seal_Door" hp="1" pdef="644" mdef="518">
+		<pos x="178148" y="16464" z="-13541"/>
+		<shape ax="178013" ay="16453" bx="178283" by="16454" cx="178283" cy="16474" dx="178014" dy="16474" minz="-13766" maxz="-13541"/>
+		<set name="opened" value="false"/>
+        <set name="unlockable" value="false"/>
+        <set name="key" value="0"/>
+        <set name="show_hp" value="false"/>
+	</door>
+	<door id="25180005"	name="sylen_sealing_du_s.Syl_seal_Door" hp="1" pdef="644" mdef="518">
+		<pos x="181677" y="18846" z="-13129"/>	
+		<shape ax="181769" ay="18922" bx="181573" by="18787" cx="181585" cy="18769" dx="181779" dy="18905" minz="-13304" maxz="13129"/>	        
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="25180003"	name="sylen_sealing_du_s.Syl_seal_Door" hp="1" pdef="644" mdef="518">
+	<pos x="179650" y="12952" z="-12647"/>	
+	<shape ax="179640" ay="12827" bx="179661" by="12828" cx="179660" cy="13073" dx="179640" dy="13073" minz="-12848" maxz="-12647"/>
+	<set name="opened" value="false"/><set name="opened" value="false"/>
+	<set name="unlockable" value="false"/>
+	<set name="key" value="0"/>
+	<set name="show_hp" value="false"/>
+	</door>
+	<door id="25180006"	name="sylen_sealing_du_s.Syl_seal_Door" hp="1" pdef="644" mdef="518">
+		<pos x="178363" y="17599" z="-13390"/>	
+		<shape ax="178282" ay="17692" bx="178424" by="17493" cx="178442" cy="17504" dx="178299" dy="17705" minz="-13580" maxz="-13390"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="25180002"	name="sylen_sealing_du_s.Syl_seal_Door" hp="1" pdef="644" mdef="518">
+		<pos x="179664" y="13722" z="-9704"/>	
+		<shape ax="179654" ay="13602" bx="179674" by="13602" cx="179674" cy="13839" dx="179654" dy="13839" minz="-9969" maxz="-9704"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="25180001"	name="sylen_sealing_du_s.Syl_seal_Door" hp="1" pdef="644" mdef="518">
+		<pos x="179664" y="13722" z="-7271"/>	
+		<shape ax="179654" ay="13605" bx="179674" by="13605" cx="179675" cy="13837" dx="179654" dy="13837" minz="-7475" maxz="-7271"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+</list>

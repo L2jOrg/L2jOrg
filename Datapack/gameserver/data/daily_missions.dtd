@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT list (mission)*>
+
+<!ELEMENT mission (rewards)*>
+<!ATTLIST mission
+	id CDATA #REQUIRED
+	handler CDATA #REQUIRED
+	value CDATA #IMPLIED
+	min_level CDATA #IMPLIED
+	max_level CDATA #IMPLIED>
+
+	<!ELEMENT rewards (reward)*>
+	<!ATTLIST rewards
+		classes CDATA #IMPLIED>
+
+		<!ELEMENT reward (#PCDATA)>
+		<!ATTLIST reward
+			id CDATA #REQUIRED
+			count CDATA #REQUIRED>

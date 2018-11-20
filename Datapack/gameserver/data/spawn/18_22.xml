@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<territory name="gludio35_1822_03">
+		<add x="-45264" y="131236" zmin="-3176" zmax="-2576"/>
+		<add x="-41200" y="131212" zmin="-3176" zmax="-2576"/>
+		<add x="-40616" y="132132" zmin="-3176" zmax="-2576"/>
+		<add x="-42260" y="133160" zmin="-3176" zmax="-2576"/>
+		<add x="-44572" y="133324" zmin="-3176" zmax="-2576"/>
+	</territory>
+	<spawn name="gludio35_1822_03" count="3" respawn="20">
+		<territory name="gludio35_1822_03"/>
+		<npc id="20050"/><!--Ядовитый Шипоног-->
+	</spawn>
+	<spawn name="gludio35_1822_03" count="3" respawn="20">
+		<territory name="gludio35_1822_03"/>
+		<npc id="20055"/><!--Монстроглаз Смотритель-->
+	</spawn>
+	<territory name="gludio35_1822_04">
+		<add x="-44596" y="133444" zmin="-3080" zmax="-2480"/>
+		<add x="-42240" y="133300" zmin="-3080" zmax="-2480"/>
+		<add x="-41340" y="135164" zmin="-3080" zmax="-2480"/>
+		<add x="-43664" y="136864" zmin="-3080" zmax="-2480"/>
+		<add x="-44484" y="136800" zmin="-3080" zmax="-2480"/>
+	</territory>
+	<spawn name="gludio35_1822_04" count="3" respawn="20">
+		<territory name="gludio35_1822_04"/>
+		<npc id="20055"/><!--Монстроглаз Смотритель-->
+	</spawn>
+	<spawn name="gludio35_1822_04" count="2" respawn="20">
+		<territory name="gludio35_1822_04"/>
+		<npc id="20059"/><!--Монстроглаз Дозорный-->
+	</spawn>
+	<territory name="gludio35_1822_01">
+		<add x="-46544" y="131092" zmin="-3292" zmax="-1892"/>
+		<add x="-45588" y="134716" zmin="-3292" zmax="-1892"/>
+		<add x="-48640" y="136204" zmin="-3292" zmax="-1892"/>
+		<add x="-50264" y="135236" zmin="-3292" zmax="-1892"/>
+		<add x="-51872" y="132912" zmin="-3292" zmax="-1892"/>
+		<add x="-51420" y="131332" zmin="-3292" zmax="-1892"/>
+	</territory>
+	<spawn name="gludio35_1822_01" count="8" respawn="20">
+		<territory name="gludio35_1822_01"/>
+		<npc id="20059"/><!--Монстроглаз Дозорный-->
+	</spawn>
+	<spawn name="gludio35_1822_01" count="4" respawn="20">
+		<territory name="gludio35_1822_01"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<territory name="gludio35_1822_02">
+		<add x="-48648" y="136348" zmin="-2652" zmax="-2152"/>
+		<add x="-45644" y="134908" zmin="-2652" zmax="-2152"/>
+		<add x="-45868" y="138208" zmin="-2652" zmax="-2152"/>
+		<add x="-48080" y="138256" zmin="-2652" zmax="-2152"/>
+	</territory>
+	<spawn name="gludio35_1822_02" count="3" respawn="20">
+		<territory name="gludio35_1822_02"/>
+		<npc id="20055"/><!--Монстроглаз Смотритель-->
+	</spawn>
+	<spawn name="gludio35_1822_02" count="3" respawn="20">
+		<territory name="gludio35_1822_02"/>
+		<npc id="20059"/><!--Монстроглаз Дозорный-->
+	</spawn>
+	<spawn name="gludio09_1822_31" count="2" respawn="27">
+		<territory>
+			<add x="-52032" y="135304" zmin="-3064" zmax="-2564"/>
+			<add x="-50748" y="135292" zmin="-3064" zmax="-2564"/>
+			<add x="-50728" y="136180" zmin="-3064" zmax="-2564"/>
+			<add x="-51932" y="136128" zmin="-3064" zmax="-2564"/>
+		</territory>
+		<npc id="20058"/><!--Гнолл Страж-->
+	</spawn>
+	<spawn name="gludio09_1822_30" count="2" respawn="27">
+		<territory>
+			<add x="-55572" y="137988" zmin="-3080" zmax="-2580"/>
+			<add x="-55172" y="137644" zmin="-3080" zmax="-2580"/>
+			<add x="-54392" y="138648" zmin="-3080" zmax="-2580"/>
+			<add x="-54908" y="138972" zmin="-3080" zmax="-2580"/>
+		</territory>
+		<npc id="20439"/><!--Сержант Гноллов-->
+	</spawn>
+	<territory name="gludio09_1822_28">
+		<add x="-55508" y="139860" zmin="-2764" zmax="-2264"/>
+		<add x="-55112" y="140220" zmin="-2764" zmax="-2264"/>
+		<add x="-55044" y="140816" zmin="-2764" zmax="-2264"/>
+		<add x="-55396" y="140964" zmin="-2764" zmax="-2264"/>
+		<add x="-56000" y="141052" zmin="-2764" zmax="-2264"/>
+		<add x="-56048" y="139972" zmin="-2764" zmax="-2264"/>
+	</territory>
+	<spawn name="gludio09_1822_28" count="1" respawn="27">
+		<territory name="gludio09_1822_28"/>
+		<npc id="20439"/><!--Сержант Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_28" count="1" respawn="27">
+		<territory name="gludio09_1822_28"/>
+		<npc id="20438"/><!--Генерал Гноллов-->
+	</spawn>
+	<territory name="gludio09_1822_29">
+		<add x="-55436" y="140976" zmin="-2776" zmax="-2276"/>
+		<add x="-55176" y="141376" zmin="-2776" zmax="-2276"/>
+		<add x="-55456" y="141912" zmin="-2776" zmax="-2276"/>
+		<add x="-56004" y="142076" zmin="-2776" zmax="-2276"/>
+		<add x="-57080" y="141468" zmin="-2776" zmax="-2276"/>
+		<add x="-56940" y="141176" zmin="-2776" zmax="-2276"/>
+	</territory>
+	<spawn name="gludio09_1822_29" count="1" respawn="27">
+		<territory name="gludio09_1822_29"/>
+		<npc id="20439"/><!--Сержант Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_29" count="1" respawn="27">
+		<territory name="gludio09_1822_29"/>
+		<npc id="20438"/><!--Генерал Гноллов-->
+	</spawn>
+	<territory name="gludio09_1822_26">
+		<add x="-58156" y="139736" zmin="-2808" zmax="-2108"/>
+		<add x="-56852" y="139152" zmin="-2808" zmax="-2108"/>
+		<add x="-56176" y="139876" zmin="-2808" zmax="-2108"/>
+		<add x="-56088" y="141000" zmin="-2808" zmax="-2108"/>
+		<add x="-57036" y="141104" zmin="-2808" zmax="-2108"/>
+	</territory>
+	<spawn name="gludio09_1822_26" count="1" respawn="27">
+		<territory name="gludio09_1822_26"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<spawn name="gludio09_1822_26" count="1" respawn="27">
+		<territory name="gludio09_1822_26"/>
+		<npc id="20439"/><!--Сержант Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_26" count="1" respawn="27">
+		<territory name="gludio09_1822_26"/>
+		<npc id="20438"/><!--Генерал Гноллов-->
+	</spawn>
+	<territory name="gludio09_1822_27">
+		<add x="-56440" y="138504" zmin="-2700" zmax="-2100"/>
+		<add x="-56052" y="138468" zmin="-2700" zmax="-2100"/>
+		<add x="-55596" y="138964" zmin="-2700" zmax="-2100"/>
+		<add x="-55620" y="139464" zmin="-2700" zmax="-2100"/>
+		<add x="-56076" y="139792" zmin="-2700" zmax="-2100"/>
+		<add x="-56808" y="139056" zmin="-2700" zmax="-2100"/>
+	</territory>
+	<spawn name="gludio09_1822_27" count="1" respawn="27">
+		<territory name="gludio09_1822_27"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_27" count="1" respawn="27">
+		<territory name="gludio09_1822_27"/>
+		<npc id="20438"/><!--Генерал Гноллов-->
+	</spawn>
+	<territory name="gludio09_1822_13">
+		<add x="-51440" y="139104" zmin="-3068" zmax="-2468"/>
+		<add x="-49456" y="138816" zmin="-3068" zmax="-2468"/>
+		<add x="-49288" y="141204" zmin="-3068" zmax="-2468"/>
+		<add x="-50152" y="142484" zmin="-3068" zmax="-2468"/>
+		<add x="-52452" y="141672" zmin="-3068" zmax="-2468"/>
+	</territory>
+	<spawn name="gludio09_1822_13" count="2" respawn="27">
+		<territory name="gludio09_1822_13"/>
+		<npc id="20058"/><!--Гнолл Страж-->
+	</spawn>
+	<spawn name="gludio09_1822_13" count="3" respawn="27">
+		<territory name="gludio09_1822_13"/>
+		<npc id="20436"/><!--Снабженец Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_13" count="2" respawn="27">
+		<territory name="gludio09_1822_13"/>
+		<npc id="20439"/><!--Сержант Гноллов-->
+	</spawn>
+	<territory name="gludio09_1822_14">
+		<add x="-51468" y="137044" zmin="-3032" zmax="-2532"/>
+		<add x="-49780" y="137148" zmin="-3032" zmax="-2532"/>
+		<add x="-49440" y="138788" zmin="-3032" zmax="-2532"/>
+		<add x="-51412" y="139012" zmin="-3032" zmax="-2532"/>
+	</territory>
+	<spawn name="gludio09_1822_14" count="1" respawn="27">
+		<territory name="gludio09_1822_14"/>
+		<npc id="20058"/><!--Гнолл Страж-->
+	</spawn>
+	<spawn name="gludio09_1822_14" count="2" respawn="27">
+		<territory name="gludio09_1822_14"/>
+		<npc id="20436"/><!--Снабженец Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_14" count="1" respawn="27">
+		<territory name="gludio09_1822_14"/>
+		<npc id="20439"/><!--Сержант Гноллов-->
+	</spawn>
+	<territory name="gludio09_1822_11">
+		<add x="-54200" y="142544" zmin="-3004" zmax="-2404"/>
+		<add x="-52852" y="142760" zmin="-3004" zmax="-2404"/>
+		<add x="-53452" y="145932" zmin="-3004" zmax="-2404"/>
+		<add x="-54440" y="145404" zmin="-3004" zmax="-2404"/>
+		<add x="-54644" y="143072" zmin="-3004" zmax="-2404"/>
+	</territory>
+	<spawn name="gludio09_1822_11" count="2" respawn="27">
+		<territory name="gludio09_1822_11"/>
+		<npc id="20058"/><!--Гнолл Страж-->
+	</spawn>
+	<spawn name="gludio09_1822_11" count="2" respawn="27">
+		<territory name="gludio09_1822_11"/>
+		<npc id="20061"/><!--Гнолл Одиночка-->
+	</spawn>
+	<spawn name="gludio09_1822_11" count="2" respawn="27">
+		<territory name="gludio09_1822_11"/>
+		<npc id="20439"/><!--Сержант Гноллов-->
+	</spawn>
+	<territory name="gludio09_1822_12">
+		<add x="-52488" y="141756" zmin="-2996" zmax="-2496"/>
+		<add x="-50204" y="142532" zmin="-2996" zmax="-2496"/>
+		<add x="-50156" y="143772" zmin="-2996" zmax="-2496"/>
+		<add x="-51216" y="145260" zmin="-2996" zmax="-2496"/>
+		<add x="-52372" y="146112" zmin="-2996" zmax="-2496"/>
+		<add x="-53312" y="146000" zmin="-2996" zmax="-2496"/>
+	</territory>
+	<spawn name="gludio09_1822_12" count="2" respawn="27">
+		<territory name="gludio09_1822_12"/>
+		<npc id="20058"/><!--Гнолл Страж-->
+	</spawn>
+	<spawn name="gludio09_1822_12" count="3" respawn="27">
+		<territory name="gludio09_1822_12"/>
+		<npc id="20436"/><!--Снабженец Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_12" count="2" respawn="27">
+		<territory name="gludio09_1822_12"/>
+		<npc id="20439"/><!--Сержант Гноллов-->
+	</spawn>
+	<territory name="gludio09_1822_08">
+		<add x="-50072" y="144244" zmin="-2640" zmax="-2040"/>
+		<add x="-49376" y="144572" zmin="-2640" zmax="-2040"/>
+		<add x="-49484" y="145820" zmin="-2640" zmax="-2040"/>
+		<add x="-49936" y="145704" zmin="-2640" zmax="-2040"/>
+		<add x="-50348" y="144524" zmin="-2640" zmax="-2040"/>
+	</territory>
+	<spawn name="gludio09_1822_08" count="1" respawn="27">
+		<territory name="gludio09_1822_08"/>
+		<npc id="20437"/><!--Рекрут Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_08" count="1" respawn="27">
+		<territory name="gludio09_1822_08"/>
+		<npc id="20058"/><!--Гнолл Страж-->
+	</spawn>
+	<territory name="gludio09_1822_09">
+		<add x="-51180" y="146392" zmin="-2536" zmax="-2036"/>
+		<add x="-51000" y="146832" zmin="-2536" zmax="-2036"/>
+		<add x="-52276" y="148084" zmin="-2536" zmax="-2036"/>
+		<add x="-52580" y="147724" zmin="-2536" zmax="-2036"/>
+	</territory>
+	<spawn name="gludio09_1822_09" count="1" respawn="27">
+		<territory name="gludio09_1822_09"/>
+		<npc id="20437"/><!--Рекрут Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_09" count="1" respawn="27">
+		<territory name="gludio09_1822_09"/>
+		<npc id="20058"/><!--Гнолл Страж-->
+	</spawn>
+	<territory name="gludio09_1822_06">
+		<add x="-49056" y="142000" zmin="-2792" zmax="-2192"/>
+		<add x="-48568" y="142268" zmin="-2792" zmax="-2192"/>
+		<add x="-48960" y="143360" zmin="-2792" zmax="-2192"/>
+		<add x="-49776" y="143436" zmin="-2792" zmax="-2192"/>
+		<add x="-49736" y="142480" zmin="-2792" zmax="-2192"/>
+	</territory>
+	<spawn name="gludio09_1822_06" count="1" respawn="27">
+		<territory name="gludio09_1822_06"/>
+		<npc id="20437"/><!--Рекрут Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_06" count="1" respawn="27">
+		<territory name="gludio09_1822_06"/>
+		<npc id="20058"/><!--Гнолл Страж-->
+	</spawn>
+	<territory name="gludio09_1822_07">
+		<add x="-49748" y="143508" zmin="-2644" zmax="-2144"/>
+		<add x="-48996" y="143420" zmin="-2644" zmax="-2144"/>
+		<add x="-49280" y="144520" zmin="-2644" zmax="-2144"/>
+		<add x="-49892" y="144252" zmin="-2644" zmax="-2144"/>
+	</territory>
+	<spawn name="gludio09_1822_07" count="1" respawn="27">
+		<territory name="gludio09_1822_07"/>
+		<npc id="20437"/><!--Рекрут Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_07" count="1" respawn="27">
+		<territory name="gludio09_1822_07"/>
+		<npc id="20058"/><!--Гнолл Страж-->
+	</spawn>
+	<territory name="gludio09_1822_05">
+		<add x="-48836" y="140400" zmin="-2808" zmax="-2208"/>
+		<add x="-47720" y="140892" zmin="-2808" zmax="-2208"/>
+		<add x="-47976" y="141632" zmin="-2808" zmax="-2208"/>
+		<add x="-48532" y="142216" zmin="-2808" zmax="-2208"/>
+		<add x="-49032" y="141980" zmin="-2808" zmax="-2208"/>
+	</territory>
+	<spawn name="gludio09_1822_05" count="2" respawn="27">
+		<territory name="gludio09_1822_05"/>
+		<npc id="20437"/><!--Рекрут Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_05" count="1" respawn="27">
+		<territory name="gludio09_1822_05"/>
+		<npc id="20058"/><!--Гнолл Страж-->
+	</spawn>
+	<territory name="gludio09_1822_24">
+		<add x="-57140" y="136368" zmin="-2904" zmax="-2304"/>
+		<add x="-55832" y="135728" zmin="-2904" zmax="-2304"/>
+		<add x="-55752" y="137188" zmin="-2904" zmax="-2304"/>
+		<add x="-56588" y="138204" zmin="-2904" zmax="-2304"/>
+	</territory>
+	<spawn name="gludio09_1822_24" count="2" respawn="27">
+		<territory name="gludio09_1822_24"/>
+		<npc id="20439"/><!--Сержант Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_24" count="1" respawn="27">
+		<territory name="gludio09_1822_24"/>
+		<npc id="20438"/><!--Генерал Гноллов-->
+	</spawn>
+	<territory name="gludio09_1822_25">
+		<add x="-56548" y="138512" zmin="-2872" zmax="-2272"/>
+		<add x="-56968" y="139132" zmin="-2872" zmax="-2272"/>
+		<add x="-58232" y="139600" zmin="-2872" zmax="-2272"/>
+		<add x="-58596" y="138960" zmin="-2872" zmax="-2272"/>
+		<add x="-58824" y="137032" zmin="-2872" zmax="-2272"/>
+		<add x="-57188" y="136372" zmin="-2872" zmax="-2272"/>
+	</territory>
+	<spawn name="gludio09_1822_25" count="1" respawn="27">
+		<territory name="gludio09_1822_25"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<spawn name="gludio09_1822_25" count="2" respawn="27">
+		<territory name="gludio09_1822_25"/>
+		<npc id="20439"/><!--Сержант Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_25" count="2" respawn="27">
+		<territory name="gludio09_1822_25"/>
+		<npc id="20438"/><!--Генерал Гноллов-->
+	</spawn>
+	<territory name="gludio09_1822_22">
+		<add x="-57812" y="135332" zmin="-2680" zmax="-2080"/>
+		<add x="-57180" y="134756" zmin="-2680" zmax="-2080"/>
+		<add x="-56288" y="134592" zmin="-2680" zmax="-2080"/>
+		<add x="-56084" y="135064" zmin="-2680" zmax="-2080"/>
+		<add x="-57172" y="135872" zmin="-2680" zmax="-2080"/>
+		<add x="-57740" y="135780" zmin="-2680" zmax="-2080"/>
+	</territory>
+	<spawn name="gludio09_1822_22" count="1" respawn="27">
+		<territory name="gludio09_1822_22"/>
+		<npc id="20439"/><!--Сержант Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_22" count="1" respawn="27">
+		<territory name="gludio09_1822_22"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<territory name="gludio09_1822_23">
+		<add x="-55828" y="135312" zmin="-2984" zmax="-2484"/>
+		<add x="-54284" y="135416" zmin="-2984" zmax="-2484"/>
+		<add x="-53560" y="136720" zmin="-2984" zmax="-2484"/>
+		<add x="-55056" y="137476" zmin="-2984" zmax="-2484"/>
+		<add x="-55728" y="137152" zmin="-2984" zmax="-2484"/>
+	</territory>
+	<spawn name="gludio09_1822_23" count="1" respawn="27">
+		<territory name="gludio09_1822_23"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<spawn name="gludio09_1822_23" count="1" respawn="27">
+		<territory name="gludio09_1822_23"/>
+		<npc id="20439"/><!--Сержант Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_23" count="1" respawn="27">
+		<territory name="gludio09_1822_23"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_23" count="1" respawn="27">
+		<territory name="gludio09_1822_23"/>
+		<npc id="20438"/><!--Генерал Гноллов-->
+	</spawn>
+	<territory name="gludio09_1822_20">
+		<add x="-60572" y="136312" zmin="-2580" zmax="-1980"/>
+		<add x="-59424" y="136752" zmin="-2580" zmax="-1980"/>
+		<add x="-59344" y="138428" zmin="-2580" zmax="-1980"/>
+		<add x="-60324" y="139180" zmin="-2580" zmax="-1980"/>
+		<add x="-60968" y="138252" zmin="-2580" zmax="-1980"/>
+	</territory>
+	<spawn name="gludio09_1822_20" count="1" respawn="27">
+		<territory name="gludio09_1822_20"/>
+		<npc id="20436"/><!--Снабженец Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_20" count="1" respawn="27">
+		<territory name="gludio09_1822_20"/>
+		<npc id="20061"/><!--Гнолл Одиночка-->
+	</spawn>
+	<spawn name="gludio09_1822_20" count="2" respawn="27">
+		<territory name="gludio09_1822_20"/>
+		<npc id="20439"/><!--Сержант Гноллов-->
+	</spawn>
+	<territory name="gludio09_1822_21">
+		<add x="-59428" y="135132" zmin="-2544" zmax="-2144"/>
+		<add x="-57872" y="135336" zmin="-2544" zmax="-2144"/>
+		<add x="-57824" y="135796" zmin="-2544" zmax="-2144"/>
+		<add x="-59356" y="136704" zmin="-2544" zmax="-2144"/>
+		<add x="-60372" y="136284" zmin="-2544" zmax="-2144"/>
+	</territory>
+	<spawn name="gludio09_1822_21" count="2" respawn="27">
+		<territory name="gludio09_1822_21"/>
+		<npc id="20439"/><!--Сержант Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_21" count="1" respawn="27">
+		<territory name="gludio09_1822_21"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<territory name="gludio09_1822_19">
+		<add x="-59300" y="138520" zmin="-2768" zmax="-2168"/>
+		<add x="-58708" y="138832" zmin="-2768" zmax="-2168"/>
+		<add x="-58256" y="139644" zmin="-2768" zmax="-2168"/>
+		<add x="-59364" y="140188" zmin="-2768" zmax="-2168"/>
+		<add x="-60348" y="139332" zmin="-2768" zmax="-2168"/>
+	</territory>
+	<spawn name="gludio09_1822_19" count="1" respawn="27">
+		<territory name="gludio09_1822_19"/>
+		<npc id="20061"/><!--Гнолл Одиночка-->
+	</spawn>
+	<spawn name="gludio09_1822_19" count="1" respawn="27">
+		<territory name="gludio09_1822_19"/>
+		<npc id="20439"/><!--Сержант Гноллов-->
+	</spawn>
+	<territory name="gludio09_1822_17">
+		<add x="-57268" y="142156" zmin="-2804" zmax="-2304"/>
+		<add x="-54992" y="143408" zmin="-2804" zmax="-2304"/>
+		<add x="-55136" y="144032" zmin="-2804" zmax="-2304"/>
+		<add x="-56516" y="143936" zmin="-2804" zmax="-2304"/>
+		<add x="-57528" y="143268" zmin="-2804" zmax="-2304"/>
+		<add x="-57884" y="142488" zmin="-2804" zmax="-2304"/>
+	</territory>
+	<spawn name="gludio09_1822_17" count="1" respawn="27">
+		<territory name="gludio09_1822_17"/>
+		<npc id="20058"/><!--Гнолл Страж-->
+	</spawn>
+	<spawn name="gludio09_1822_17" count="2" respawn="27">
+		<territory name="gludio09_1822_17"/>
+		<npc id="20061"/><!--Гнолл Одиночка-->
+	</spawn>
+	<territory name="gludio09_1822_18">
+		<add x="-57056" y="141256" zmin="-2736" zmax="-2236"/>
+		<add x="-57328" y="142104" zmin="-2736" zmax="-2236"/>
+		<add x="-57944" y="142420" zmin="-2736" zmax="-2236"/>
+		<add x="-59404" y="140324" zmin="-2736" zmax="-2236"/>
+		<add x="-58240" y="139772" zmin="-2736" zmax="-2236"/>
+	</territory>
+	<spawn name="gludio09_1822_18" count="1" respawn="27">
+		<territory name="gludio09_1822_18"/>
+		<npc id="20058"/><!--Гнолл Страж-->
+	</spawn>
+	<spawn name="gludio09_1822_18" count="2" respawn="27">
+		<territory name="gludio09_1822_18"/>
+		<npc id="20436"/><!--Снабженец Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_18" count="1" respawn="27">
+		<territory name="gludio09_1822_18"/>
+		<npc id="20439"/><!--Сержант Гноллов-->
+	</spawn>
+	<territory name="gludio09_1822_15">
+		<add x="-53524" y="136844" zmin="-3012" zmax="-2512"/>
+		<add x="-51496" y="137016" zmin="-3012" zmax="-2512"/>
+		<add x="-51452" y="139040" zmin="-3012" zmax="-2512"/>
+		<add x="-54040" y="139012" zmin="-3012" zmax="-2512"/>
+		<add x="-54684" y="137348" zmin="-3012" zmax="-2512"/>
+	</territory>
+	<spawn name="gludio09_1822_15" count="1" respawn="27">
+		<territory name="gludio09_1822_15"/>
+		<npc id="20058"/><!--Гнолл Страж-->
+	</spawn>
+	<spawn name="gludio09_1822_15" count="2" respawn="27">
+		<territory name="gludio09_1822_15"/>
+		<npc id="20436"/><!--Снабженец Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_15" count="2" respawn="27">
+		<territory name="gludio09_1822_15"/>
+		<npc id="20439"/><!--Сержант Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_15" count="1" respawn="27">
+		<territory name="gludio09_1822_15"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<territory name="gludio09_1822_16">
+		<add x="-54076" y="139084" zmin="-3140" zmax="-2440"/>
+		<add x="-51560" y="139144" zmin="-3140" zmax="-2440"/>
+		<add x="-52828" y="142632" zmin="-3140" zmax="-2440"/>
+		<add x="-54188" y="142452" zmin="-3140" zmax="-2440"/>
+		<add x="-54540" y="141668" zmin="-3140" zmax="-2440"/>
+	</territory>
+	<spawn name="gludio09_1822_16" count="2" respawn="27">
+		<territory name="gludio09_1822_16"/>
+		<npc id="20058"/><!--Гнолл Страж-->
+	</spawn>
+	<spawn name="gludio09_1822_16" count="2" respawn="27">
+		<territory name="gludio09_1822_16"/>
+		<npc id="20061"/><!--Гнолл Одиночка-->
+	</spawn>
+	<spawn name="gludio09_1822_16" count="2" respawn="27">
+		<territory name="gludio09_1822_16"/>
+		<npc id="20439"/><!--Сержант Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_16" count="1" respawn="27">
+		<territory name="gludio09_1822_16"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<territory name="gludio09_1822_02">
+		<add x="-44996" y="143292" zmin="-3144" zmax="-2644"/>
+		<add x="-44684" y="144956" zmin="-3144" zmax="-2644"/>
+		<add x="-46180" y="146456" zmin="-3144" zmax="-2644"/>
+		<add x="-48380" y="146036" zmin="-3144" zmax="-2644"/>
+		<add x="-46672" y="142076" zmin="-3144" zmax="-2644"/>
+	</territory>
+	<spawn name="gludio09_1822_02" count="5" respawn="27">
+		<territory name="gludio09_1822_02"/>
+		<npc id="20053"/><!--Дозорный Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_02" count="2" respawn="27">
+		<territory name="gludio09_1822_02"/>
+		<npc id="20437"/><!--Рекрут Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_02" count="2" respawn="27">
+		<territory name="gludio09_1822_02"/>
+		<npc id="20058"/><!--Гнолл Страж-->
+	</spawn>
+	<territory name="gludio09_1822_03">
+		<add x="-48420" y="146040" zmin="-3085" zmax="-2585"/>
+		<add x="-46304" y="146512" zmin="-3085" zmax="-2585"/>
+		<add x="-46515" y="148465" zmin="-3085" zmax="-2585"/>
+		<add x="-48240" y="148424" zmin="-3085" zmax="-2585"/>
+		<add x="-49768" y="147584" zmin="-3085" zmax="-2585"/>
+	</territory>
+	<spawn name="gludio09_1822_03" count="2" respawn="27">
+		<territory name="gludio09_1822_03"/>
+		<npc id="20053"/><!--Дозорный Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_03" count="2" respawn="27">
+		<territory name="gludio09_1822_03"/>
+		<npc id="20437"/><!--Рекрут Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_03" count="2" respawn="27">
+		<territory name="gludio09_1822_03"/>
+		<npc id="20058"/><!--Гнолл Страж-->
+	</spawn>
+	<territory name="gludio09_1822_01">
+		<add x="-44744" y="139244" zmin="-3108" zmax="-2608"/>
+		<add x="-43020" y="140712" zmin="-3108" zmax="-2608"/>
+		<add x="-43440" y="142784" zmin="-3108" zmax="-2608"/>
+		<add x="-45016" y="143172" zmin="-3108" zmax="-2608"/>
+		<add x="-46688" y="141940" zmin="-3108" zmax="-2608"/>
+	</territory>
+	<spawn name="gludio09_1822_01" count="4" respawn="27">
+		<territory name="gludio09_1822_01"/>
+		<npc id="20053"/><!--Дозорный Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_01" count="2" respawn="27">
+		<territory name="gludio09_1822_01"/>
+		<npc id="20437"/><!--Рекрут Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_01" count="2" respawn="27">
+		<territory name="gludio09_1822_01"/>
+		<npc id="20058"/><!--Гнолл Страж-->
+	</spawn>
+	<spawn name="gludio35_1822_05s" count="3" respawn="20">
+		<territory>
+			<add x="-48956" y="132216" zmin="-2892" zmax="-2392"/>
+			<add x="-48756" y="133072" zmin="-2892" zmax="-2392"/>
+			<add x="-49492" y="133340" zmin="-2892" zmax="-2392"/>
+			<add x="-50280" y="132708" zmin="-2892" zmax="-2392"/>
+			<add x="-49848" y="132024" zmin="-2892" zmax="-2392"/>
+		</territory>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<spawn name="gludio09_mb1822_01" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="-54440" y="145764" zmin="-3000" zmax="-2400"/>
+			<add x="-53532" y="146480" zmin="-3000" zmax="-2400"/>
+			<add x="-54220" y="147364" zmin="-3000" zmax="-2400"/>
+			<add x="-54988" y="147000" zmin="-3000" zmax="-2400"/>
+			<add x="-55140" y="146252" zmin="-3000" zmax="-2400"/>
+		</territory>
+		<npc id="25001"/><!--Кутус Серый Коготь-->
+	</spawn>
+	<spawn name="gludio34_1822_01" count="6" respawn="21">
+		<territory>
+			<add x="-65328" y="160116" zmin="-3920" zmax="-3320"/>
+			<add x="-63200" y="159928" zmin="-3920" zmax="-3320"/>
+			<add x="-62472" y="163448" zmin="-3920" zmax="-3320"/>
+			<add x="-65344" y="163448" zmin="-3920" zmax="-3320"/>
+		</territory>
+		<npc id="20310"/><!--Бурый Медведь-->
+	</spawn>
+	<territory name="gludio09_1822_38s">
+		<add x="-58192" y="137488" zmin="-2996" zmax="-2496"/>
+		<add x="-57716" y="137564" zmin="-2996" zmax="-2496"/>
+		<add x="-57688" y="138068" zmin="-2996" zmax="-2496"/>
+		<add x="-58232" y="138136" zmin="-2996" zmax="-2496"/>
+		<add x="-58444" y="137812" zmin="-2996" zmax="-2496"/>
+	</territory>
+	<spawn name="gludio09_1822_38s" count="1" respawn="27">
+		<territory name="gludio09_1822_38s"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_38s" count="1" respawn="27">
+		<territory name="gludio09_1822_38s"/>
+		<npc id="20076"/><!--Командир Гноллов-->
+	</spawn>
+	<territory name="gludio09_1822_37s">
+		<add x="-55024" y="136204" zmin="-2904" zmax="-2404"/>
+		<add x="-54604" y="135848" zmin="-2904" zmax="-2404"/>
+		<add x="-54220" y="136132" zmin="-2904" zmax="-2404"/>
+		<add x="-54368" y="136608" zmin="-2904" zmax="-2404"/>
+		<add x="-54804" y="136592" zmin="-2904" zmax="-2404"/>
+	</territory>
+	<spawn name="gludio09_1822_37s" count="1" respawn="27">
+		<territory name="gludio09_1822_37s"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_37s" count="1" respawn="27">
+		<territory name="gludio09_1822_37s"/>
+		<npc id="20076"/><!--Командир Гноллов-->
+	</spawn>
+	<territory name="gludio09_1822_36s">
+		<add x="-52780" y="137564" zmin="-3068" zmax="-2468"/>
+		<add x="-52300" y="138012" zmin="-3068" zmax="-2468"/>
+		<add x="-52536" y="138340" zmin="-3068" zmax="-2468"/>
+		<add x="-53088" y="137924" zmin="-3068" zmax="-2468"/>
+	</territory>
+	<spawn name="gludio09_1822_36s" count="1" respawn="27">
+		<territory name="gludio09_1822_36s"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_36s" count="1" respawn="27">
+		<territory name="gludio09_1822_36s"/>
+		<npc id="20076"/><!--Командир Гноллов-->
+	</spawn>
+	<territory name="gludio09_1822_35s">
+		<add x="-53728" y="140620" zmin="-2964" zmax="-2464"/>
+		<add x="-53220" y="140884" zmin="-2964" zmax="-2464"/>
+		<add x="-53540" y="141472" zmin="-2964" zmax="-2464"/>
+		<add x="-54004" y="141156" zmin="-2964" zmax="-2464"/>
+	</territory>
+	<spawn name="gludio09_1822_35s" count="1" respawn="27">
+		<territory name="gludio09_1822_35s"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_35s" count="1" respawn="27">
+		<territory name="gludio09_1822_35s"/>
+		<npc id="20076"/><!--Командир Гноллов-->
+	</spawn>
+	<territory name="gludio09_1822_34s">
+		<add x="-51040" y="140260" zmin="-3080" zmax="-2580"/>
+		<add x="-50608" y="140056" zmin="-3080" zmax="-2580"/>
+		<add x="-50156" y="140276" zmin="-3080" zmax="-2580"/>
+		<add x="-50516" y="140816" zmin="-3080" zmax="-2580"/>
+		<add x="-50800" y="140692" zmin="-3080" zmax="-2580"/>
+	</territory>
+	<spawn name="gludio09_1822_34s" count="1" respawn="27">
+		<territory name="gludio09_1822_34s"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_34s" count="1" respawn="27">
+		<territory name="gludio09_1822_34s"/>
+		<npc id="20076"/><!--Командир Гноллов-->
+	</spawn>
+	<territory name="gludio09_1822_33s">
+		<add x="-52164" y="143364" zmin="-3008" zmax="-2508"/>
+		<add x="-51636" y="143460" zmin="-3008" zmax="-2508"/>
+		<add x="-51656" y="143964" zmin="-3008" zmax="-2508"/>
+		<add x="-51984" y="143956" zmin="-3008" zmax="-2508"/>
+		<add x="-52268" y="143676" zmin="-3008" zmax="-2508"/>
+	</territory>
+	<spawn name="gludio09_1822_33s" count="1" respawn="27">
+		<territory name="gludio09_1822_33s"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<spawn name="gludio09_1822_33s" count="1" respawn="27">
+		<territory name="gludio09_1822_33s"/>
+		<npc id="20076"/><!--Командир Гноллов-->
+	</spawn>
+	<spawn name="gludio01_qm1822_02" count="10" respawn="45">
+		<territory>
+			<add x="-49168" y="151453" zmin="-3148" zmax="-2648"/>
+			<add x="-47679" y="151459" zmin="-3148" zmax="-2648"/>
+			<add x="-47968" y="153661" zmin="-3148" zmax="-2648"/>
+			<add x="-49577" y="152987" zmin="-3148" zmax="-2648"/>
+		</territory>
+		<npc id="20782"/><!--Новобранец Гноллов-->
+	</spawn>
+	<spawn name="gludio01_qm1822_01" count="10" respawn="180">
+		<territory>
+			<add x="-46966" y="142770" zmin="-3071" zmax="-2671"/>
+			<add x="-44626" y="144138" zmin="-3071" zmax="-2671"/>
+			<add x="-46306" y="147658" zmin="-3071" zmax="-2671"/>
+			<add x="-48814" y="146894" zmin="-3071" zmax="-2671"/>
+		</territory>
+		<npc id="27038"/><!--Вор Кошачий Глаз-->
+	</spawn>
+	<territory name="gludio39_1822_07">
+		<add x="-34696" y="142696" zmin="-3596" zmax="-2796"/>
+		<add x="-33628" y="143836" zmin="-3596" zmax="-2796"/>
+		<add x="-33860" y="146544" zmin="-3596" zmax="-2796"/>
+		<add x="-34964" y="148104" zmin="-3596" zmax="-2796"/>
+		<add x="-35736" y="148220" zmin="-3596" zmax="-2796"/>
+		<add x="-36804" y="143332" zmin="-3596" zmax="-2796"/>
+	</territory>
+	<spawn name="gludio39_1822_07" count="3" respawn="20">
+		<territory name="gludio39_1822_07"/>
+		<npc id="20059"/><!--Монстроглаз Дозорный-->
+	</spawn>
+	<spawn name="gludio39_1822_07" count="5" respawn="20">
+		<territory name="gludio39_1822_07"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<spawn name="gludio39_1822_08" count="3" respawn="20">
+		<territory>
+			<add x="-32984" y="146960" zmin="-4076" zmax="-3576"/>
+			<add x="-33028" y="148804" zmin="-4076" zmax="-3576"/>
+			<add x="-34824" y="150568" zmin="-4076" zmax="-3576"/>
+			<add x="-34908" y="148860" zmin="-4076" zmax="-3576"/>
+		</territory>
+		<npc id="20059"/><!--Монстроглаз Дозорный-->
+	</spawn>
+	<territory name="gludio39_1822_01">
+		<add x="-35408" y="131492" zmin="-3468" zmax="-2668"/>
+		<add x="-33080" y="131404" zmin="-3468" zmax="-2668"/>
+		<add x="-33040" y="132048" zmin="-3468" zmax="-2668"/>
+		<add x="-36248" y="135296" zmin="-3468" zmax="-2668"/>
+		<add x="-37132" y="135012" zmin="-3468" zmax="-2668"/>
+		<add x="-36648" y="132368" zmin="-3468" zmax="-2668"/>
+	</territory>
+	<spawn name="gludio39_1822_01" count="2" respawn="20">
+		<territory name="gludio39_1822_01"/>
+		<npc id="20359"/><!--Воин Крысолюдов-->
+	</spawn>
+	<spawn name="gludio39_1822_01" count="3" respawn="20">
+		<territory name="gludio39_1822_01"/>
+		<npc id="20055"/><!--Монстроглаз Смотритель-->
+	</spawn>
+	<territory name="gludio39_1822_02">
+		<add x="-37264" y="135156" zmin="-3536" zmax="-2836"/>
+		<add x="-36252" y="135468" zmin="-3536" zmax="-2836"/>
+		<add x="-35552" y="136748" zmin="-3536" zmax="-2836"/>
+		<add x="-36636" y="138828" zmin="-3536" zmax="-2836"/>
+		<add x="-37908" y="137704" zmin="-3536" zmax="-2836"/>
+	</territory>
+	<spawn name="gludio39_1822_02" count="2" respawn="20">
+		<territory name="gludio39_1822_02"/>
+		<npc id="20359"/><!--Воин Крысолюдов-->
+	</spawn>
+	<spawn name="gludio39_1822_02" count="3" respawn="20">
+		<territory name="gludio39_1822_02"/>
+		<npc id="20055"/><!--Монстроглаз Смотритель-->
+	</spawn>
+	<territory name="gludio39_1822_05">
+		<add x="-36708" y="138852" zmin="-3640" zmax="-2840"/>
+		<add x="-34552" y="139456" zmin="-3640" zmax="-2840"/>
+		<add x="-34724" y="142524" zmin="-3640" zmax="-2840"/>
+		<add x="-37092" y="143216" zmin="-3640" zmax="-2840"/>
+		<add x="-37660" y="141280" zmin="-3640" zmax="-2840"/>
+	</territory>
+	<spawn name="gludio39_1822_05" count="3" respawn="20">
+		<territory name="gludio39_1822_05"/>
+		<npc id="20050"/><!--Ядовитый Шипоног-->
+	</spawn>
+	<spawn name="gludio39_1822_05" count="4" respawn="20">
+		<territory name="gludio39_1822_05"/>
+		<npc id="20059"/><!--Монстроглаз Дозорный-->
+	</spawn>
+	<spawn name="gludio39_1822_06" count="4" respawn="20">
+		<territory>
+			<add x="-34064" y="140216" zmin="-4044" zmax="-3544"/>
+			<add x="-32976" y="139084" zmin="-4044" zmax="-3544"/>
+			<add x="-33024" y="143220" zmin="-4044" zmax="-3544"/>
+			<add x="-34272" y="142336" zmin="-4044" zmax="-3544"/>
+		</territory>
+		<npc id="20059"/><!--Монстроглаз Дозорный-->
+	</spawn>
+	<territory name="gludio39_1822_03">
+		<add x="-35392" y="135360" zmin="-3968" zmax="-3468"/>
+		<add x="-33044" y="133080" zmin="-3968" zmax="-3468"/>
+		<add x="-33076" y="136260" zmin="-3968" zmax="-3468"/>
+		<add x="-35108" y="136364" zmin="-3968" zmax="-3468"/>
+	</territory>
+	<spawn name="gludio39_1822_03" count="3" respawn="20">
+		<territory name="gludio39_1822_03"/>
+		<npc id="20359"/><!--Воин Крысолюдов-->
+	</spawn>
+	<spawn name="gludio39_1822_03" count="3" respawn="20">
+		<territory name="gludio39_1822_03"/>
+		<npc id="20055"/><!--Монстроглаз Смотритель-->
+	</spawn>
+	<territory name="gludio39_1822_04">
+		<add x="-35564" y="137000" zmin="-3604" zmax="-3204"/>
+		<add x="-32924" y="136932" zmin="-3604" zmax="-3204"/>
+		<add x="-33032" y="138336" zmin="-3604" zmax="-3204"/>
+		<add x="-34660" y="139348" zmin="-3604" zmax="-3204"/>
+		<add x="-36584" y="138812" zmin="-3604" zmax="-3204"/>
+	</territory>
+	<spawn name="gludio39_1822_04" count="3" respawn="20">
+		<territory name="gludio39_1822_04"/>
+		<npc id="20050"/><!--Ядовитый Шипоног-->
+	</spawn>
+	<spawn name="gludio39_1822_04" count="3" respawn="20">
+		<territory name="gludio39_1822_04"/>
+		<npc id="20059"/><!--Монстроглаз Дозорный-->
+	</spawn>
+	<spawn count="1" respawn="90" respawn_random="0" period_of_day="none">
+		<point x="-61109" y="141064" z="-2000" h="40122" />
+		<npc id="27201" /><!--Вор Гноллов-->
+	</spawn>
+	<spawn count="1" respawn="90" respawn_random="0" period_of_day="none">
+		<point x="-60907" y="140784" z="-1976" h="6428" />
+		<npc id="27201" /><!--Вор Гноллов-->
+	</spawn>
+	<spawn count="1" respawn="90" respawn_random="0" period_of_day="none">
+		<point x="-61221" y="141269" z="-2000" h="62532" />
+		<npc id="27201" /><!--Вор Гноллов-->
+	</spawn>
+	<spawn count="1" respawn="90" respawn_random="0" period_of_day="none">
+		<point x="-60825" y="140554" z="-1968" h="17324" />
+		<npc id="27201" /><!--Вор Гноллов-->
+	</spawn>
+	<spawn count="1" respawn="90" respawn_random="0" period_of_day="none">
+		<point x="-59671" y="142559" z="-2104" h="30390" />
+		<npc id="27201" /><!--Вор Гноллов-->
+	</spawn>
+	<spawn count="1" respawn="90" respawn_random="0" period_of_day="none">
+		<point x="-59950" y="142211" z="-2080" h="11150" />
+		<npc id="27201" /><!--Вор Гноллов-->
+	</spawn>
+	<spawn count="1" respawn="90" respawn_random="0" period_of_day="none">
+		<point x="-61486" y="142246" z="-2048" h="27430" />
+		<npc id="27201" /><!--Вор Гноллов-->
+	</spawn>
+	<spawn count="1" respawn="90" respawn_random="0" period_of_day="none">
+		<point x="-61572" y="140966" z="-2008" h="30555" />
+		<npc id="27201" /><!--Вор Гноллов-->
+	</spawn>
+	<spawn count="1" respawn="90" respawn_random="0" period_of_day="none">
+		<point x="-61265" y="140222" z="-1944" h="62005" />
+		<npc id="27201" /><!--Вор Гноллов-->
+	</spawn>
+	<spawn count="1" respawn="90" respawn_random="0" period_of_day="none">
+		<point x="-61992" y="141491" z="-1984" h="13913" />
+		<npc id="27201" /><!--Вор Гноллов-->
+	</spawn>
+	<spawn count="1" respawn="90" respawn_random="0" period_of_day="none">
+		<point x="-61466" y="141418" z="-2008" h="36983" />
+		<npc id="27201" /><!--Вор Гноллов-->
+	</spawn>
+	<spawn count="1" respawn="90" respawn_random="0" period_of_day="none">
+		<point x="-61764" y="142014" z="-1992" h="15684" />
+		<npc id="27201" /><!--Вор Гноллов-->
+	</spawn>
+	<spawn count="1" respawn="90" respawn_random="0" period_of_day="none">
+		<point x="-61658" y="141728" z="-2000" h="43645" />
+		<npc id="27201" /><!--Вор Гноллов-->
+	</spawn>
+	<spawn count="1" respawn="90" respawn_random="0" period_of_day="none">
+		<point x="-61784" y="141762" z="-1992" h="26265" />
+		<npc id="27201" /><!--Вор Гноллов-->
+	</spawn>
+	<spawn count="1" respawn="90" respawn_random="0" period_of_day="none">
+		<point x="-61516" y="142205" z="-2040" h="11920" />
+		<npc id="27201" /><!--Вор Гноллов-->
+	</spawn>
+	<spawn name="training_camp_scarecrow" count="1" respawn="60">
+		<point x="-56650" y="135938" z="-2672" h="0"/>
+		<npc id="18912"/><!--Scarecrow-->
+	</spawn>
+</list>

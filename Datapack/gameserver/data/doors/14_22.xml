@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="14220100" name="Annihilation_Dungeon_Boss_S.Annihilation_D_Door_01" hp="203652" pdef="644" mdef="518">
+		<pos x="-177120" y="145922" z="-11417"/>
+		<shape ax="-177313" ay="145834" bx="-176922" by="145837" cx="-176921" cy="145975" dx="-177312" dy="145974" minz="-11410" maxz="-10410"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="14220101" name="Annihilation_Dungeon_Boss_S.Annihilation_D_Door_01" hp="203652" pdef="644" mdef="518">
+		<pos x="-177120" y="145038" z="-11307"/>
+		<shape ax="-177313" ay="144950" bx="-176922" by="144953" cx="-176921" cy="145091" dx="-177312" dy="145090" minz="-11300" maxz="-10300"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>	
+</list>

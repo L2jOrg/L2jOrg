@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="4400" name="White Cloth">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_piece_of_cloth_white_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="4404" name="Green Dimensional Stone - Shard">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_broken_crystal_green_i00"/>
+		<set name="price" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="10"/>
+	</etcitem>
+	<etcitem id="4405" name="Blue Dimensional Stone - Shard">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_broken_crystal_blue_i00"/>
+		<set name="price" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="10"/>
+	</etcitem>
+	<etcitem id="4406" name="Red Dimensional Stone - Shard">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_broken_crystal_red_i00"/>
+		<set name="price" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="10"/>
+	</etcitem>
+	<etcitem id="4408" name="Musical Score - Theme of Love">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_musical_note_i01"/>
+		<set name="price" value="500"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="20"/>
+	</etcitem>
+	<etcitem id="4409" name="Musical Score - Theme of Battle">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_musical_note_i01"/>
+		<set name="price" value="500"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="20"/>
+	</etcitem>
+	<etcitem id="4410" name="Musical Score - Theme of Journey">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_musical_note_i01"/>
+		<set name="price" value="500"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="20"/>
+	</etcitem>
+	<etcitem id="4411" name="Echo Crystal - Theme of Journey">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="reuse_delay" value="20000"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_echo_crystal_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="10"/>
+		<skills>
+			<skill id="2069" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="4412" name="Echo Crystal - Theme of Battle">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="reuse_delay" value="24000"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_echo_crystal_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="10"/>
+		<skills>
+			<skill id="2068" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="4413" name="Echo Crystal - Theme of Love">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="reuse_delay" value="24000"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_echo_crystal_i02"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="10"/>
+		<skills>
+			<skill id="2070" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="4414" name="Echo Crystal - Theme of Solitude">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="reuse_delay" value="20000"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_echo_crystal_i03"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="10"/>
+		<skills>
+			<skill id="2072" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="4415" name="Echo Crystal - Theme of Festival">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="reuse_delay" value="3000"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_echo_crystal_i04"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="10"/>
+		<skills>
+			<skill id="2071" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="4416" name="Echo Crystal - Theme of Celebration">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="reuse_delay" value="3000"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_echo_crystal_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="10"/>
+		<skills>
+			<skill id="2073" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="4417" name="Echo Crystal - Theme of Comedy">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="reuse_delay" value="3000"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_echo_crystal_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="10"/>
+		<skills>
+			<skill id="2067" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="4418" name="Musical Score - Theme of Celebration">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_musical_note_i01"/>
+		<set name="price" value="500"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="20"/>
+	</etcitem>
+	<etcitem id="4419" name="Musical Score - Theme of Comedy">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_musical_note_i01"/>
+		<set name="price" value="500"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="20"/>
+	</etcitem>
+	<etcitem id="4420" name="Musical Score - Theme of Solitude">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_musical_note_i01"/>
+		<set name="price" value="500"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="20"/>
+	</etcitem>
+	<etcitem id="4421" name="Musical Score - Theme of Festival">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_musical_note_i02"/>
+		<set name="price" value="500"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="20"/>
+	</etcitem>
+	<etcitem id="4433" name="Elemental Stone Powder">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_powder_white_i00"/>
+		<set name="price" value="50"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="10"/>
+	</etcitem>
+	<etcitem id="4434" name="Collector of Jewels">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_broken_crystal_green_i00"/>
+		<set name="price" value="500"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="100"/>
+	</etcitem>
+	<etcitem id="4435" name="Elemental Stone Lump">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_crystal_green_i00"/>
+		<set name="price" value="5000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="1000"/>
+	</etcitem>
+	<etcitem id="4436" name="Bentley\'s Request">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_piece_of_paper_gray_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="4437" name="Carson\'s Request">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_piece_of_paper_black_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="4438" name="Knuckle Duster Edge">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_sword_body_i00"/>
+		<set name="price" value="5609"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4439" name="Avadon Shield Fragment">
+		<set name="type" value="MATERIAL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_plate_silver_i00"/>
+		<set name="price" value="580"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="60"/>
+	</etcitem>
+	<etcitem id="4440" name="Recipe: Knuckle Duster">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
+		<set name="price" value="11480"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="4441" name="Recipe: Avadon Shield">
+		<set name="type" value="RECIPE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_recipe_red_i00"/>
+		<set name="price" value="2180"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="30"/>
+	</etcitem>
+	<etcitem id="4445" name="Dye of STR &lt;STR + 1 CON - 3&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_str_hena_i00"/>
+		<set name="price" value="5100"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4446" name="Dye of STR &lt;STR + 1 DEX - 3&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_str_hena_i00"/>
+		<set name="price" value="5100"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4447" name="Dye of CON &lt;Con + 1 Str - 3&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_con_hena_i00"/>
+		<set name="price" value="5100"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4448" name="Dye of CON &lt;Con + 1 DEX - 3&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_con_hena_i00"/>
+		<set name="price" value="5100"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4449" name="Dye of DEX &lt;Dex + 1 Str - 3&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_dex_hena_i00"/>
+		<set name="price" value="5100"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4450" name="Dye of DEX &lt;Dex + 1 CON - 3&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_dex_hena_i00"/>
+		<set name="price" value="5100"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4451" name="Dye of INT &lt;Int + 1 Men - 3&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_int_hena_i00"/>
+		<set name="price" value="5100"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4452" name="Dye of INT &lt;Int + 1 Wit - 3&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_int_hena_i00"/>
+		<set name="price" value="5100"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4453" name="Dye of MEN &lt;Men + 1 Int - 3&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_men_hena_i00"/>
+		<set name="price" value="5100"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4454" name="Dye of MEN &lt;Men + 1 Wit - 3&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_men_hena_i00"/>
+		<set name="price" value="5100"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4455" name="Dye of WIT &lt;Wit + 1 Int - 3&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_wit_hena_i00"/>
+		<set name="price" value="5100"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4456" name="Dye of WIT &lt;Wit + 1 Men - 3&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_wit_hena_i00"/>
+		<set name="price" value="5100"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4457" name="Dye of STR &lt;STR + 1 CON - 2&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_str_hena_i00"/>
+		<set name="price" value="12000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4458" name="Dye of STR &lt;STR + 1 DEX - 2&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_str_hena_i00"/>
+		<set name="price" value="12000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4459" name="Dye of CON &lt;Con + 1 Str - 2&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_con_hena_i00"/>
+		<set name="price" value="12000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4460" name="Dye of CON &lt;Con + 1 DEX - 2&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_con_hena_i00"/>
+		<set name="price" value="12000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4461" name="Dye of DEX &lt;Dex + 1 Str - 2&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_dex_hena_i00"/>
+		<set name="price" value="12000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4462" name="Dye of DEX &lt;Dex + 1 CON - 2&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_dex_hena_i00"/>
+		<set name="price" value="12000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4463" name="Dye of INT &lt;Int + 1 Men - 2&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_int_hena_i00"/>
+		<set name="price" value="12000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4464" name="Dye of INT &lt;Int + 1 Wit - 2&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_int_hena_i00"/>
+		<set name="price" value="12000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4465" name="Dye of MEN &lt;Men + 1 Int - 2&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_men_hena_i00"/>
+		<set name="price" value="12000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4466" name="Dye of MEN &lt;Men + 1 Wit - 2&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_men_hena_i00"/>
+		<set name="price" value="12000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4467" name="Dye of WIT &lt;Wit + 1 Int - 2&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_wit_hena_i00"/>
+		<set name="price" value="12000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4468" name="Dye of WIT &lt;Wit + 1 Men - 2&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_wit_hena_i00"/>
+		<set name="price" value="12000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4469" name="Dye of STR &lt;STR + 1 CON - 1&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_str_hena_i00"/>
+		<set name="price" value="35000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4470" name="Dye of STR &lt;STR + 1 DEX - 1&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_str_hena_i00"/>
+		<set name="price" value="35000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4471" name="Dye of CON &lt;Con + 1 Str - 1&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_con_hena_i00"/>
+		<set name="price" value="35000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4472" name="Dye of CON &lt;Con + 1 DEX - 1&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_con_hena_i00"/>
+		<set name="price" value="35000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4473" name="Dye of DEX &lt;Dex + 1 Str - 1&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_dex_hena_i00"/>
+		<set name="price" value="35000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4474" name="Dye of DEX &lt;Dex + 1 CON - 1&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_dex_hena_i00"/>
+		<set name="price" value="35000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4475" name="Dye of INT &lt;Int + 1 Men - 1&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_int_hena_i00"/>
+		<set name="price" value="35000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4476" name="Dye of INT &lt;Int + 1 Wit - 1&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_int_hena_i00"/>
+		<set name="price" value="35000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4477" name="Dye of MEN &lt;Men + 1 Int - 1&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_men_hena_i00"/>
+		<set name="price" value="35000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4478" name="Dye of MEN &lt;Men + 1 Wit - 1&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_men_hena_i00"/>
+		<set name="price" value="35000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4479" name="Dye of WIT &lt;Wit + 1 Int - 1&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_wit_hena_i00"/>
+		<set name="price" value="35000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4480" name="Dye of WIT &lt;Wit + 1 Men - 1&gt;" add_name="1st Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_wit_hena_i00"/>
+		<set name="price" value="35000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4481" name="Greater Dye of STR &lt;STR + 1 CON - 3&gt;" add_name="2nd Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_str_hena_i01"/>
+		<set name="price" value="12000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4482" name="Greater Dye of STR &lt;STR + 1 DEX - 3&gt;" add_name="2nd Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_str_hena_i01"/>
+		<set name="price" value="12000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4483" name="Greater Dye of CON&lt;Con + 1 Str - 3&gt;" add_name="2nd Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_con_hena_i01"/>
+		<set name="price" value="12000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4484" name="Greater Dye of CON&lt;Con + 1 DEX - 3&gt;" add_name="2nd Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_con_hena_i01"/>
+		<set name="price" value="12000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4485" name="Greater Dye of DEX &lt;Dex + 1 Str - 3&gt;" add_name="2nd Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_dex_hena_i01"/>
+		<set name="price" value="12000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4486" name="Greater Dye of DEX &lt;Dex + 1 CON - 3&gt;" add_name="2nd Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_dex_hena_i01"/>
+		<set name="price" value="12000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4487" name="Greater Dye of INT &lt;Int + 1 Men - 3&gt;" add_name="2nd Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_int_hena_i01"/>
+		<set name="price" value="12000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4488" name="Greater Dye of INT &lt;Int + 1 Wit - 3&gt;" add_name="2nd Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_int_hena_i01"/>
+		<set name="price" value="12000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4489" name="Greater Dye of MEN &lt;Men + 1 Int - 3&gt;" add_name="2nd Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_men_hena_i01"/>
+		<set name="price" value="12000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4490" name="Greater Dye of MEN &lt;Men + 1 Wit - 3&gt;" add_name="2nd Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_men_hena_i01"/>
+		<set name="price" value="12000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4491" name="Greater Dye of WIT &lt;Wit + 1 Int - 3&gt;" add_name="2nd Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_wit_hena_i01"/>
+		<set name="price" value="12000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4492" name="Greater Dye of WIT &lt;Wit + 1 Men - 3&gt;" add_name="2nd Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_wit_hena_i01"/>
+		<set name="price" value="12000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4493" name="Greater Dye of STR &lt;STR + 1 CON - 2&gt;" add_name="2nd Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_str_hena_i01"/>
+		<set name="price" value="21000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4494" name="Greater Dye of STR &lt;STR + 1 DEX - 2&gt;" add_name="2nd Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_str_hena_i01"/>
+		<set name="price" value="21000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4495" name="Greater Dye of CON &lt;Con + 1 Str - 2&gt;" add_name="2nd Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_con_hena_i01"/>
+		<set name="price" value="21000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4496" name="Greater Dye of CON &lt;Con + 1 DEX - 2&gt;" add_name="2nd Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_con_hena_i01"/>
+		<set name="price" value="21000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4497" name="Greater Dye of DEX &lt;Dex + 1 Str - 2&gt;" add_name="2nd Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_dex_hena_i01"/>
+		<set name="price" value="21000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4498" name="Greater Dye of DEX &lt;Dex + 1 CON - 2&gt;" add_name="2nd Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_dex_hena_i01"/>
+		<set name="price" value="21000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+	<etcitem id="4499" name="Greater Dye of INT &lt;Int + 1 Men - 2&gt;" add_name="2nd Class Transfer">
+		<set name="type" value="DYE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_int_hena_i01"/>
+		<set name="price" value="21000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="150"/>
+	</etcitem>
+</list>

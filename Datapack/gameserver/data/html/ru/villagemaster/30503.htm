@@ -1,0 +1,11 @@
+<html><head><body>
+Начальник Склада Рикадио:<br>
+Меня зовут Рикадио. Я - Начальник Склада Гильдии Железных Врат в Глудио. Наша Гильдия продает любые товары, во всех доступных местах и абсолютно всем, у кого есть деньги! Благодаря тому, что мы путешествуем и торгуем по всему миру, наша раса процветает. Ха-ха-ха! Невероятно, да? Вы хотите вступить в нашу Гильдию? Ну что ж...<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">Узнать о 1-й смене профессии</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Клан</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Альянс</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Обменять Ежедневные Монеты</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Квест</Button>
+</body></html>

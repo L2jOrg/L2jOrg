@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE farm SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<farm name="Seal of Shilen" min_level="59" max_level="71">
+	<zones>
+		<zone>
+			<polygon>
+				<coords loc="185896 20904 -4000 -3000"/>
+				<coords loc="184552 25944 -4000 -3000"/>
+				<coords loc="192120 23496 -4000 -3000"/>
+				<coords loc="191736 22968 -4000 -3000"/>
+				<coords loc="188072 21560 -4000 -3000"/>
+				<coords loc="188376 20232 -4000 -3000"/>
+				<coords loc="189560 19720 -4000 -3000"/>
+				<coords loc="192872 21304 -4000 -3000"/>
+				<coords loc="192008 17144 -4000 -3000"/>
+				<coords loc="191144 16696 -4000 -3000"/>
+				<coords loc="188392 16840 -4000 -3000"/>
+				<coords loc="187538 16939 -4000 -3000"/>
+				<coords loc="185448 14872 -4000 -3000"/>
+				<coords loc="184344 15416 -4000 -3000"/>
+				<coords loc="185320 18840 -4000 -3000"/>
+				<coords loc="186104 19464 -4000 -3000"/>
+			</polygon>
+		</zone>
+		<spawn_points>
+			<coords loc="188088 20504 -3648"/>
+		</spawn_points>
+	</zones>
+	<on_obtain_max_level>
+		<action id="1"/>
+	</on_obtain_max_level>
+	<go_to_town min_farm_time="1800" max_farm_time="3600">
+		<action id="1"/>
+	</go_to_town>
+	<action id="1">
+		<wait min_delay="1000" max_delay="3000"/>
+		<use_item id="736"/>
+	</action>
+</farm>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "residence.dtd">
+<list>
+	<residence id="25" name="Ruby Hall" impl="clanhall.AuctionClanHall" grade="30" fee_item_id="57" rental_fee="500000" min_bid="5000000" deposit="500000">
+		<available_functions>
+			<function type="RESTORE_HP" level="4"/>
+			<function type="RESTORE_HP" level="7"/>
+			<function type="RESTORE_HP" level="10"/>
+			<function type="RESTORE_HP" level="13"/>
+			<function type="RESTORE_MP" level="1"/>
+			<function type="RESTORE_MP" level="3"/>
+			<function type="RESTORE_MP" level="6"/>
+			<function type="RESTORE_EXP" level="1"/>
+			<function type="RESTORE_EXP" level="3"/>
+			<function type="RESTORE_EXP" level="5"/>
+			<function type="RESTORE_EXP" level="8"/>
+			<function type="TELEPORT" level="1"/>
+			<function type="TELEPORT" level="2"/>
+			<function type="ITEM_CREATE" level="1"/>
+			<function type="ITEM_CREATE" level="2"/>
+			<function type="ITEM_CREATE" level="3"/>
+			<function type="CURTAIN" level="1"/>
+			<function type="CURTAIN" level="2"/>
+			<function type="PLATFORM" level="1"/>
+			<function type="PLATFORM" level="2"/>
+		</available_functions>
+		<banish_points>
+			<point x="-12688" y="123760" z="-3115"/>
+		</banish_points>
+		<owner_restart_points>
+			<point x="-12710" y="124029" z="-3096"/>
+		</owner_restart_points>
+		<other_restart_points>
+			<point x="-12688" y="123760" z="-3115"/>
+		</other_restart_points>
+		<chaos_restart_points>
+		</chaos_restart_points>
+	</residence>
+</list>

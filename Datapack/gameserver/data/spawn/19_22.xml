@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn name="gludio02_npc1821_001" count="1" respawn="60">
+		<point x="-20352" y="144736" z="-3840" h="0"/>
+		<npc id="30411"/><!--Огненная Саламандра-->
+	</spawn>
+	<territory name="gludio41_1922_02">
+		<add x="-13508" y="156240" zmin="-3032" zmax="-1932"/>
+		<add x="-13200" y="160148" zmin="-3032" zmax="-1932"/>
+		<add x="-14316" y="161700" zmin="-3032" zmax="-1932"/>
+		<add x="-16336" y="161664" zmin="-3032" zmax="-1932"/>
+		<add x="-17320" y="156780" zmin="-3032" zmax="-1932"/>
+	</territory>
+	<spawn name="gludio41_1922_02" count="3" respawn="20">
+		<territory name="gludio41_1922_02"/>
+		<npc id="20059"/><!--Монстроглаз Дозорный-->
+	</spawn>
+	<spawn name="gludio41_1922_02" count="2" respawn="20">
+		<territory name="gludio41_1922_02"/>
+		<npc id="20058"/><!--Гнолл Страж-->
+	</spawn>
+	<spawn name="gludio41_1922_02" count="3" respawn="20">
+		<territory name="gludio41_1922_02"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="gludio41_1922_02" count="2" respawn="20">
+		<territory name="gludio41_1922_02"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<territory name="gludio41_1922_01">
+		<add x="-20672" y="157064" zmin="-2820" zmax="-1420"/>
+		<add x="-17492" y="156980" zmin="-2820" zmax="-1420"/>
+		<add x="-16520" y="161712" zmin="-2820" zmax="-1420"/>
+		<add x="-19996" y="161372" zmin="-2820" zmax="-1420"/>
+	</territory>
+	<spawn name="gludio41_1922_01" count="4" respawn="20">
+		<territory name="gludio41_1922_01"/>
+		<npc id="20059"/><!--Монстроглаз Дозорный-->
+	</spawn>
+	<spawn name="gludio41_1922_01" count="4" respawn="20">
+		<territory name="gludio41_1922_01"/>
+		<npc id="20058"/><!--Гнолл Страж-->
+	</spawn>
+	<spawn name="gludio41_1922_01" count="3" respawn="20">
+		<territory name="gludio41_1922_01"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="gludio41_1922_01" count="2" respawn="20">
+		<territory name="gludio41_1922_01"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<territory name="gludio41_1922_04">
+		<add x="-12452" y="162116" zmin="-2828" zmax="-2128"/>
+		<add x="-11512" y="161224" zmin="-2828" zmax="-2128"/>
+		<add x="-10484" y="163516" zmin="-2828" zmax="-2128"/>
+		<add x="-12388" y="163628" zmin="-2828" zmax="-2128"/>
+	</territory>
+	<spawn name="gludio41_1922_04" count="2" respawn="20">
+		<territory name="gludio41_1922_04"/>
+		<npc id="20058"/><!--Гнолл Страж-->
+	</spawn>
+	<spawn name="gludio41_1922_04" count="1" respawn="20">
+		<territory name="gludio41_1922_04"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<territory name="gludio41_1922_03">
+		<add x="-20116" y="161788" zmin="-2884" zmax="-1684"/>
+		<add x="-12640" y="162444" zmin="-2884" zmax="-1684"/>
+		<add x="-12552" y="163580" zmin="-2884" zmax="-1684"/>
+		<add x="-21140" y="163668" zmin="-2884" zmax="-1684"/>
+	</territory>
+	<spawn name="gludio41_1922_03" count="3" respawn="20">
+		<territory name="gludio41_1922_03"/>
+		<npc id="20059"/><!--Монстроглаз Дозорный-->
+	</spawn>
+	<spawn name="gludio41_1922_03" count="3" respawn="20">
+		<territory name="gludio41_1922_03"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="gludio41_1922_03" count="2" respawn="20">
+		<territory name="gludio41_1922_03"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<spawn name="gludio41_1922_03" count="2" respawn="20">
+		<territory name="gludio41_1922_03"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<territory name="gludio40_1922_02">
+		<add x="-29568" y="157448" zmin="-3632" zmax="-2332"/>
+		<add x="-27876" y="159096" zmin="-3632" zmax="-2332"/>
+		<add x="-27748" y="163428" zmin="-3632" zmax="-2332"/>
+		<add x="-32580" y="163488" zmin="-3632" zmax="-2332"/>
+		<add x="-32634" y="159927" zmin="-3632" zmax="-2332"/>
+	</territory>
+	<spawn name="gludio40_1922_02" count="5" respawn="20">
+		<territory name="gludio40_1922_02"/>
+		<npc id="20059"/><!--Монстроглаз Дозорный-->
+	</spawn>
+	<spawn name="gludio40_1922_02" count="4" respawn="20">
+		<territory name="gludio40_1922_02"/>
+		<npc id="20058"/><!--Гнолл Страж-->
+	</spawn>
+	<spawn name="gludio40_1922_02" count="5" respawn="20">
+		<territory name="gludio40_1922_02"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="gludio40_1922_02" count="3" respawn="20">
+		<territory name="gludio40_1922_02"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<territory name="gludio40_1922_03">
+		<add x="-25674" y="159077" zmin="-2821" zmax="-2321"/>
+		<add x="-25026" y="160681" zmin="-2821" zmax="-2321"/>
+		<add x="-25715" y="161684" zmin="-2821" zmax="-2321"/>
+		<add x="-27012" y="161666" zmin="-2821" zmax="-2321"/>
+		<add x="-27843" y="160431" zmin="-2821" zmax="-2321"/>
+		<add x="-27284" y="159147" zmin="-2821" zmax="-2321"/>
+	</territory>
+	<spawn name="gludio40_1922_03" count="2" respawn="20">
+		<territory name="gludio40_1922_03"/>
+		<npc id="20058"/><!--Гнолл Страж-->
+	</spawn>
+	<spawn name="gludio40_1922_03" count="2" respawn="20">
+		<territory name="gludio40_1922_03"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="gludio40_1922_03" count="1" respawn="20">
+		<territory name="gludio40_1922_03"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<spawn name="gludio40_1922_03" count="1" respawn="20">
+		<territory name="gludio40_1922_03"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<territory name="gludio40_1922_04">
+		<add x="-25600" y="158948" zmin="-3468" zmax="-2168"/>
+		<add x="-23388" y="157756" zmin="-3468" zmax="-2168"/>
+		<add x="-23716" y="161552" zmin="-3468" zmax="-2168"/>
+		<add x="-24924" y="161412" zmin="-3468" zmax="-2168"/>
+	</territory>
+	<spawn name="gludio40_1922_04" count="2" respawn="20">
+		<territory name="gludio40_1922_04"/>
+		<npc id="20058"/><!--Гнолл Страж-->
+	</spawn>
+	<spawn name="gludio40_1922_04" count="2" respawn="20">
+		<territory name="gludio40_1922_04"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="gludio40_1922_04" count="2" respawn="20">
+		<territory name="gludio40_1922_04"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<territory name="gludio40_1922_05">
+		<add x="-27700" y="161612" zmin="-3328" zmax="-2128"/>
+		<add x="-23812" y="162048" zmin="-3328" zmax="-2128"/>
+		<add x="-23480" y="163628" zmin="-3328" zmax="-2128"/>
+		<add x="-27632" y="163488" zmin="-3328" zmax="-2128"/>
+	</territory>
+	<spawn name="gludio40_1922_05" count="2" respawn="20">
+		<territory name="gludio40_1922_05"/>
+		<npc id="20059"/><!--Монстроглаз Дозорный-->
+	</spawn>
+	<spawn name="gludio40_1922_05" count="1" respawn="20">
+		<territory name="gludio40_1922_05"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="gludio40_1922_05" count="2" respawn="20">
+		<territory name="gludio40_1922_05"/>
+		<npc id="20063"/><!--Гнолл Стрелец-->
+	</spawn>
+	<spawn name="gludio40_1922_05" count="2" respawn="20">
+		<territory name="gludio40_1922_05"/>
+		<npc id="20066"/><!--Офицер Гноллов-->
+	</spawn>
+	<territory name="gludio40_1922_01">
+		<add x="-24308" y="155436" zmin="-3676" zmax="-2376"/>
+		<add x="-23536" y="157640" zmin="-3676" zmax="-2376"/>
+		<add x="-25728" y="158832" zmin="-3676" zmax="-2376"/>
+		<add x="-27792" y="159040" zmin="-3676" zmax="-2376"/>
+		<add x="-29382" y="157478" zmin="-3676" zmax="-2376"/>
+		<add x="-26160" y="154880" zmin="-3676" zmax="-2376"/>
+	</territory>
+	<spawn name="gludio40_1922_01" count="3" respawn="20">
+		<territory name="gludio40_1922_01"/>
+		<npc id="20059"/><!--Монстроглаз Дозорный-->
+	</spawn>
+	<spawn name="gludio40_1922_01" count="4" respawn="20">
+		<territory name="gludio40_1922_01"/>
+		<npc id="20058"/><!--Гнолл Страж-->
+	</spawn>
+	<spawn name="gludio40_1922_01" count="3" respawn="20">
+		<territory name="gludio40_1922_01"/>
+		<npc id="20547"/><!--Резервист Гноллов-->
+	</spawn>
+	<spawn name="oren01_qm1918_01" count="8" respawn="180">
+		<territory>
+			<add x="-15080" y="150008" zmin="-3472" zmax="-2972"/>
+			<add x="-11520" y="147780" zmin="-3472" zmax="-2972"/>
+			<add x="-9940" y="149576" zmin="-3472" zmax="-2972"/>
+			<add x="-13964" y="151396" zmin="-3472" zmax="-2972"/>
+		</territory>
+		<npc id="27024"/><!--Жрец Нежити-->
+	</spawn>
+	<spawn name="gludio02_mb1922_01" count="1" respawn="907200" respawn_random="604800">
+		<territory>
+			<add x="-13166" y="138211" zmin="-3720" zmax="-3120"/>
+			<add x="-12594" y="137645" zmin="-3720" zmax="-3120"/>
+			<add x="-12128" y="138291" zmin="-3720" zmax="-3120"/>
+			<add x="-12722" y="138652" zmin="-3720" zmax="-3120"/>
+		</territory>
+		<npc id="25149"/><!--Лорд Зомби Кроул-->
+	</spawn>
+	<spawn name="gludio02_mb1922_02" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="-22036" y="152044" zmin="-3136" zmax="-2636"/>
+			<add x="-21642" y="151796" zmin="-3136" zmax="-2636"/>
+			<add x="-21536" y="152076" zmin="-3136" zmax="-2636"/>
+			<add x="-21896" y="152344" zmin="-3136" zmax="-2636"/>
+		</territory>
+		<npc id="25166"/><!--Икунтай-->
+	</spawn>
+	<territory name="gludio39_1922_05">
+		<add x="-32692" y="142105" zmin="-4104" zmax="-3304"/>
+		<add x="-31428" y="141249" zmin="-4104" zmax="-3304"/>
+		<add x="-29733" y="143502" zmin="-4104" zmax="-3304"/>
+		<add x="-30068" y="146738" zmin="-4104" zmax="-3304"/>
+		<add x="-31171" y="148371" zmin="-4104" zmax="-3304"/>
+		<add x="-32678" y="147970" zmin="-4104" zmax="-3304"/>
+	</territory>
+	<spawn name="gludio39_1922_05" count="2" respawn="20">
+		<territory name="gludio39_1922_05"/>
+		<npc id="20055"/><!--Монстроглаз Смотритель-->
+	</spawn>
+	<spawn name="gludio39_1922_05" count="3" respawn="20">
+		<territory name="gludio39_1922_05"/>
+		<npc id="20050"/><!--Ядовитый Шипоног-->
+	</spawn>
+	<spawn name="gludio39_1922_05" count="5" respawn="20">
+		<territory name="gludio39_1922_05"/>
+		<npc id="20059"/><!--Монстроглаз Дозорный-->
+	</spawn>
+	<territory name="gludio39_1922_04">
+		<add x="-32690" y="139240" zmin="-4012" zmax="-3212"/>
+		<add x="-30580" y="138935" zmin="-4012" zmax="-3212"/>
+		<add x="-31848" y="141432" zmin="-4012" zmax="-3212"/>
+		<add x="-32676" y="141812" zmin="-4012" zmax="-3212"/>
+	</territory>
+	<spawn name="gludio39_1922_04" count="2" respawn="20">
+		<territory name="gludio39_1922_04"/>
+		<npc id="20050"/><!--Ядовитый Шипоног-->
+	</spawn>
+	<spawn name="gludio39_1922_04" count="2" respawn="20">
+		<territory name="gludio39_1922_04"/>
+		<npc id="20059"/><!--Монстроглаз Дозорный-->
+	</spawn>
+	<territory name="gludio39_1922_03">
+		<add x="-32680" y="133072" zmin="-3976" zmax="-3276"/>
+		<add x="-31384" y="133044" zmin="-3976" zmax="-3276"/>
+		<add x="-29528" y="136576" zmin="-3976" zmax="-3276"/>
+		<add x="-30817" y="137487" zmin="-3976" zmax="-3276"/>
+		<add x="-32676" y="136292" zmin="-3976" zmax="-3276"/>
+	</territory>
+	<spawn name="gludio39_1922_03" count="3" respawn="20">
+		<territory name="gludio39_1922_03"/>
+		<npc id="20359"/><!--Воин Крысолюдов-->
+	</spawn>
+	<spawn name="gludio39_1922_03" count="2" respawn="20">
+		<territory name="gludio39_1922_03"/>
+		<npc id="20055"/><!--Монстроглаз Смотритель-->
+	</spawn>
+	<territory name="gludio39_1922_02">
+		<add x="-30936" y="132044" zmin="-3860" zmax="-2960"/>
+		<add x="-27276" y="134800" zmin="-3860" zmax="-2960"/>
+		<add x="-27872" y="136616" zmin="-3860" zmax="-2960"/>
+		<add x="-29476" y="136540" zmin="-3860" zmax="-2960"/>
+		<add x="-31344" y="132912" zmin="-3860" zmax="-2960"/>
+	</territory>
+	<spawn name="gludio39_1922_02" count="3" respawn="20">
+		<territory name="gludio39_1922_02"/>
+		<npc id="20359"/><!--Воин Крысолюдов-->
+	</spawn>
+	<spawn name="gludio39_1922_02" count="2" respawn="20">
+		<territory name="gludio39_1922_02"/>
+		<npc id="20055"/><!--Монстроглаз Смотритель-->
+	</spawn>
+	<spawn name="gludio39_1922_01" count="6" respawn="20">
+		<territory>
+			<add x="-25224" y="131264" zmin="-3804" zmax="-3204"/>
+			<add x="-25120" y="131996" zmin="-3804" zmax="-3204"/>
+			<add x="-27688" y="134428" zmin="-3804" zmax="-3204"/>
+			<add x="-30876" y="131952" zmin="-3804" zmax="-3204"/>
+			<add x="-30916" y="131128" zmin="-3804" zmax="-3204"/>
+		</territory>
+		<npc id="20359"/><!--Воин Крысолюдов-->
+	</spawn>
+	<territory name="gludio02_1922_20">
+		<add x="-11568" y="147823" zmin="-3420" zmax="-2720"/>
+		<add x="-10087" y="150167" zmin="-3420" zmax="-2720"/>
+		<add x="-14202" y="151954" zmin="-3420" zmax="-2720"/>
+		<add x="-14854" y="149562" zmin="-3420" zmax="-2720"/>
+	</territory>
+	<spawn name="gludio02_1922_20" count="5" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_20"/>
+		<npc id="20515"/><!--Скелет Пехотинец-->
+	</spawn>
+	<spawn name="gludio02_1922_20" count="5" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_20"/>
+		<npc id="20506"/><!--Бес Руин-->
+	</spawn>
+	<spawn name="gludio02_1922_20" count="5" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_20"/>
+		<npc id="20411"/><!--Летучая Мышь Падальщик-->
+	</spawn>
+	<territory name="gludio02_1922_10">
+		<add x="-21576" y="143120" zmin="-3960" zmax="-3560"/>
+		<add x="-18368" y="142672" zmin="-3960" zmax="-3560"/>
+		<add x="-17992" y="146236" zmin="-3960" zmax="-3560"/>
+		<add x="-20895" y="146692" zmin="-3960" zmax="-3560"/>
+		<add x="-21968" y="145248" zmin="-3960" zmax="-3560"/>
+	</territory>
+	<spawn name="gludio02_1922_10" count="6" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_10"/>
+		<npc id="20457"/><!--Воитель Зомби-->
+	</spawn>
+	<spawn name="gludio02_1922_10" count="4" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_10"/>
+		<npc id="20507"/><!--Старший Бес Руин-->
+	</spawn>
+	<spawn name="gludio02_1922_10" count="5" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_10"/>
+		<npc id="20458"/><!--Воин Зомби-->
+	</spawn>
+	<spawn name="gludio02_1922_10" count="3" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_10"/>
+		<npc id="20401"/><!--Людоед Вилан-->
+	</spawn>
+	<spawn name="gludio02_1922_10" count="2" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_10"/>
+		<npc id="20402"/><!--Воин Людоедов Вилан-->
+	</spawn>
+	<territory name="gludio02_1922_14">
+		<add x="-16282" y="142756" zmin="-3936" zmax="-3436"/>
+		<add x="-12610" y="142441" zmin="-3936" zmax="-3436"/>
+		<add x="-11886" y="145289" zmin="-3936" zmax="-3436"/>
+		<add x="-13538" y="146592" zmin="-3936" zmax="-3436"/>
+		<add x="-15769" y="145943" zmin="-3936" zmax="-3436"/>
+	</territory>
+	<spawn name="gludio02_1922_14" count="4" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_14"/>
+		<npc id="20507"/><!--Старший Бес Руин-->
+	</spawn>
+	<spawn name="gludio02_1922_14" count="7" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_14"/>
+		<npc id="20458"/><!--Воин Зомби-->
+	</spawn>
+	<spawn name="gludio02_1922_14" count="5" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_14"/>
+		<npc id="20401"/><!--Людоед Вилан-->
+	</spawn>
+	<spawn name="gludio02_1922_14" count="6" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_14"/>
+		<npc id="20402"/><!--Воин Людоедов Вилан-->
+	</spawn>
+	<territory name="gludio02_1922_13">
+		<add x="-16424" y="141892" zmin="-3976" zmax="-3376"/>
+		<add x="-12904" y="140924" zmin="-3976" zmax="-3376"/>
+		<add x="-12623" y="142369" zmin="-3976" zmax="-3376"/>
+		<add x="-16381" y="142664" zmin="-3976" zmax="-3376"/>
+	</territory>
+	<spawn name="gludio02_1922_13" count="2" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_13"/>
+		<npc id="20457"/><!--Воитель Зомби-->
+	</spawn>
+	<spawn name="gludio02_1922_13" count="2" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_13"/>
+		<npc id="20458"/><!--Воин Зомби-->
+	</spawn>
+	<spawn name="gludio02_1922_13" count="2" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_13"/>
+		<npc id="20401"/><!--Людоед Вилан-->
+	</spawn>
+	<territory name="gludio02_1922_12">
+		<add x="-18221" y="142763" zmin="-3972" zmax="-3572"/>
+		<add x="-16391" y="142013" zmin="-3972" zmax="-3572"/>
+		<add x="-15796" y="145964" zmin="-3972" zmax="-3572"/>
+		<add x="-17651" y="146239" zmin="-3972" zmax="-3572"/>
+	</territory>
+	<spawn name="gludio02_1922_12" count="5" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_12"/>
+		<npc id="20457"/><!--Воитель Зомби-->
+	</spawn>
+	<spawn name="gludio02_1922_12" count="4" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_12"/>
+		<npc id="20505"/><!--Летучая Мышь Руин-->
+	</spawn>
+	<spawn name="gludio02_1922_12" count="3" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_12"/>
+		<npc id="20401"/><!--Людоед Вилан-->
+	</spawn>
+	<territory name="gludio02_1922_11">
+		<add x="-19085" y="138632" zmin="-3988" zmax="-3638"/>
+		<add x="-15530" y="138474" zmin="-3988" zmax="-3638"/>
+		<add x="-12912" y="140851" zmin="-3988" zmax="-3638"/>
+		<add x="-17901" y="142301" zmin="-3988" zmax="-3638"/>
+	</territory>
+	<spawn name="gludio02_1922_11" count="5" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_11"/>
+		<npc id="20457"/><!--Воитель Зомби-->
+	</spawn>
+	<spawn name="gludio02_1922_11" count="3" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_11"/>
+		<npc id="20507"/><!--Старший Бес Руин-->
+	</spawn>
+	<spawn name="gludio02_1922_11" count="7" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_11"/>
+		<npc id="20458"/><!--Воин Зомби-->
+	</spawn>
+	<spawn name="gludio02_1922_11" count="3" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_11"/>
+		<npc id="20401"/><!--Людоед Вилан-->
+	</spawn>
+	<spawn name="gludio02_1922_11" count="4" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_11"/>
+		<npc id="20402"/><!--Воин Людоедов Вилан-->
+	</spawn>
+	<territory name="gludio02_1922_18">
+		<add x="-7057" y="142569" zmin="-3804" zmax="-3104"/>
+		<add x="-2843" y="143689" zmin="-3804" zmax="-3104"/>
+		<add x="-2461" y="145001" zmin="-3804" zmax="-3104"/>
+		<add x="-4177" y="146949" zmin="-3804" zmax="-3104"/>
+		<add x="-7528" y="146880" zmin="-3804" zmax="-3104"/>
+		<add x="-8436" y="144112" zmin="-3804" zmax="-3104"/>
+	</territory>
+	<spawn name="gludio02_1922_18" count="4" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_18"/>
+		<npc id="20457"/><!--Воитель Зомби-->
+	</spawn>
+	<spawn name="gludio02_1922_18" count="6" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_18"/>
+		<npc id="20505"/><!--Летучая Мышь Руин-->
+	</spawn>
+	<spawn name="gludio02_1922_18" count="7" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_18"/>
+		<npc id="20507"/><!--Старший Бес Руин-->
+	</spawn>
+	<spawn name="gludio02_1922_18" count="3" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_18"/>
+		<npc id="20401"/><!--Людоед Вилан-->
+	</spawn>
+	<territory name="gludio02_1922_17">
+		<add x="-9088" y="140372" zmin="-3768" zmax="-3168"/>
+		<add x="-7332" y="142732" zmin="-3768" zmax="-3168"/>
+		<add x="-8612" y="144088" zmin="-3768" zmax="-3168"/>
+		<add x="-10176" y="144492" zmin="-3768" zmax="-3168"/>
+		<add x="-10968" y="140440" zmin="-3768" zmax="-3168"/>
+	</territory>
+	<spawn name="gludio02_1922_17" count="3" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_17"/>
+		<npc id="20507"/><!--Старший Бес Руин-->
+	</spawn>
+	<spawn name="gludio02_1922_17" count="3" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_17"/>
+		<npc id="20401"/><!--Людоед Вилан-->
+	</spawn>
+	<spawn name="gludio02_1922_17" count="4" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_17"/>
+		<npc id="20402"/><!--Воин Людоедов Вилан-->
+	</spawn>
+	<territory name="gludio02_1922_16">
+		<add x="-12560" y="140508" zmin="-3940" zmax="-3340"/>
+		<add x="-11100" y="140444" zmin="-3940" zmax="-3340"/>
+		<add x="-10408" y="144728" zmin="-3940" zmax="-3340"/>
+		<add x="-11600" y="145056" zmin="-3940" zmax="-3340"/>
+	</territory>
+	<spawn name="gludio02_1922_16" count="2" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_16"/>
+		<npc id="20457"/><!--Воитель Зомби-->
+	</spawn>
+	<spawn name="gludio02_1922_16" count="4" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_16"/>
+		<npc id="20505"/><!--Летучая Мышь Руин-->
+	</spawn>
+	<spawn name="gludio02_1922_16" count="4" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_16"/>
+		<npc id="20507"/><!--Старший Бес Руин-->
+	</spawn>
+	<territory name="gludio02_1922_15">
+		<add x="-14748" y="138384" zmin="-3952" zmax="-3252"/>
+		<add x="-12852" y="137416" zmin="-3952" zmax="-3252"/>
+		<add x="-8792" y="140172" zmin="-3952" zmax="-3252"/>
+		<add x="-12636" y="140096" zmin="-3952" zmax="-3252"/>
+	</territory>
+	<spawn name="gludio02_1922_15" count="3" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_15"/>
+		<npc id="20401"/><!--Людоед Вилан-->
+	</spawn>
+	<spawn name="gludio02_1922_15" count="6" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_15"/>
+		<npc id="20402"/><!--Воин Людоедов Вилан-->
+	</spawn>
+	<territory name="gludio02_1922_19">
+		<add x="-11552" y="145372" zmin="-3880" zmax="-2980"/>
+		<add x="-8432" y="144552" zmin="-3880" zmax="-2980"/>
+		<add x="-7377" y="147625" zmin="-3880" zmax="-2980"/>
+		<add x="-8524" y="149669" zmin="-3880" zmax="-2980"/>
+		<add x="-10169" y="149833" zmin="-3880" zmax="-2980"/>
+		<add x="-12324" y="146492" zmin="-3880" zmax="-2980"/>
+	</territory>
+	<spawn name="gludio02_1922_19" count="2" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_19"/>
+		<npc id="20506"/><!--Бес Руин-->
+	</spawn>
+	<spawn name="gludio02_1922_19" count="5" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_19"/>
+		<npc id="20411"/><!--Летучая Мышь Падальщик-->
+	</spawn>
+	<spawn name="gludio02_1922_19" count="4" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_19"/>
+		<npc id="20457"/><!--Воитель Зомби-->
+	</spawn>
+	<spawn name="gludio02_1922_19" count="5" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_19"/>
+		<npc id="20505"/><!--Летучая Мышь Руин-->
+	</spawn>
+	<territory name="gludio02_1922_03">
+		<add x="-27012" y="146928" zmin="-3480" zmax="-2980"/>
+		<add x="-22128" y="147712" zmin="-3480" zmax="-2980"/>
+		<add x="-22132" y="148912" zmin="-3480" zmax="-2980"/>
+		<add x="-26312" y="148796" zmin="-3480" zmax="-2980"/>
+	</territory>
+	<spawn name="gludio02_1922_03" count="4" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_03"/>
+		<npc id="20514"/><!--Скелет Щитоносец-->
+	</spawn>
+	<spawn name="gludio02_1922_03" count="4" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_03"/>
+		<npc id="20515"/><!--Скелет Пехотинец-->
+	</spawn>
+	<spawn name="gludio02_1922_03" count="2" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_03"/>
+		<npc id="20411"/><!--Летучая Мышь Падальщик-->
+	</spawn>
+	<territory name="gludio02_1922_02">
+		<add x="-25076" y="143472" zmin="-4016" zmax="-3116"/>
+		<add x="-23176" y="143692" zmin="-4016" zmax="-3116"/>
+		<add x="-21176" y="147504" zmin="-4016" zmax="-3116"/>
+		<add x="-27156" y="146736" zmin="-4016" zmax="-3116"/>
+		<add x="-26894" y="144465" zmin="-4016" zmax="-3116"/>
+	</territory>
+	<spawn name="gludio02_1922_02" count="6" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_02"/>
+		<npc id="20514"/><!--Скелет Щитоносец-->
+	</spawn>
+	<spawn name="gludio02_1922_02" count="4" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_02"/>
+		<npc id="20515"/><!--Скелет Пехотинец-->
+	</spawn>
+	<spawn name="gludio02_1922_02" count="2" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_02"/>
+		<npc id="20506"/><!--Бес Руин-->
+	</spawn>
+	<territory name="gludio02_1922_01">
+		<add x="-24766" y="141264" zmin="-3992" zmax="-3392"/>
+		<add x="-22880" y="140908" zmin="-3992" zmax="-3392"/>
+		<add x="-23612" y="143484" zmin="-3992" zmax="-3392"/>
+		<add x="-25184" y="143320" zmin="-3992" zmax="-3392"/>
+	</territory>
+	<spawn name="gludio02_1922_01" count="2" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_01"/>
+		<npc id="20514"/><!--Скелет Щитоносец-->
+	</spawn>
+	<spawn name="gludio02_1922_01" count="2" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_01"/>
+		<npc id="20506"/><!--Бес Руин-->
+	</spawn>
+	<spawn name="gludio02_1922_01" count="1" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_01"/>
+		<npc id="20411"/><!--Летучая Мышь Падальщик-->
+	</spawn>
+	<territory name="gludio02_1922_07">
+		<add x="-16128" y="147088" zmin="-3752" zmax="-2652"/>
+		<add x="-15172" y="148528" zmin="-3752" zmax="-2652"/>
+		<add x="-14840" y="150364" zmin="-3752" zmax="-2652"/>
+		<add x="-17316" y="151444" zmin="-3752" zmax="-2652"/>
+		<add x="-18312" y="151336" zmin="-3752" zmax="-2652"/>
+		<add x="-18704" y="147428" zmin="-3752" zmax="-2652"/>
+	</territory>
+	<spawn name="gludio02_1922_07" count="4" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_07"/>
+		<npc id="20514"/><!--Скелет Щитоносец-->
+	</spawn>
+	<spawn name="gludio02_1922_07" count="4" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_07"/>
+		<npc id="20515"/><!--Скелет Пехотинец-->
+	</spawn>
+	<spawn name="gludio02_1922_07" count="4" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_07"/>
+		<npc id="20506"/><!--Бес Руин-->
+	</spawn>
+	<territory name="gludio02_1922_06">
+		<add x="-18736" y="149444" zmin="-3172" zmax="-2672"/>
+		<add x="-18684" y="150654" zmin="-3172" zmax="-2672"/>
+		<add x="-19959" y="151459" zmin="-3172" zmax="-2672"/>
+		<add x="-22300" y="151141" zmin="-3172" zmax="-2672"/>
+		<add x="-22797" y="149447" zmin="-3172" zmax="-2672"/>
+	</territory>
+	<spawn name="gludio02_1922_06" count="3" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_06"/>
+		<npc id="20514"/><!--Скелет Щитоносец-->
+	</spawn>
+	<spawn name="gludio02_1922_06" count="3" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_06"/>
+		<npc id="20515"/><!--Скелет Пехотинец-->
+	</spawn>
+	<spawn name="gludio02_1922_06" count="3" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_06"/>
+		<npc id="20411"/><!--Летучая Мышь Падальщик-->
+	</spawn>
+	<territory name="gludio02_1922_05">
+		<add x="-23774" y="149292" zmin="-3216" zmax="-2716"/>
+		<add x="-22798" y="150210" zmin="-3216" zmax="-2716"/>
+		<add x="-22794" y="151698" zmin="-3216" zmax="-2716"/>
+		<add x="-25897" y="150790" zmin="-3216" zmax="-2716"/>
+		<add x="-26365" y="149283" zmin="-3216" zmax="-2716"/>
+	</territory>
+	<spawn name="gludio02_1922_05" count="3" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_05"/>
+		<npc id="20515"/><!--Скелет Пехотинец-->
+	</spawn>
+	<spawn name="gludio02_1922_05" count="3" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_05"/>
+		<npc id="20506"/><!--Бес Руин-->
+	</spawn>
+	<spawn name="gludio02_1922_05" count="3" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_05"/>
+		<npc id="20411"/><!--Летучая Мышь Падальщик-->
+	</spawn>
+	<territory name="gludio02_1922_04">
+		<add x="-21912" y="147820" zmin="-3504" zmax="-2904"/>
+		<add x="-19144" y="147864" zmin="-3504" zmax="-2904"/>
+		<add x="-18884" y="148620" zmin="-3504" zmax="-2904"/>
+		<add x="-21964" y="148944" zmin="-3504" zmax="-2904"/>
+	</territory>
+	<spawn name="gludio02_1922_04" count="3" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_04"/>
+		<npc id="20506"/><!--Бес Руин-->
+	</spawn>
+	<spawn name="gludio02_1922_04" count="2" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_04"/>
+		<npc id="20411"/><!--Летучая Мышь Падальщик-->
+	</spawn>
+	<territory name="gludio02_1922_09">
+		<add x="-23120" y="142812" zmin="-4008" zmax="-3508"/>
+		<add x="-22508" y="141676" zmin="-4008" zmax="-3508"/>
+		<add x="-21604" y="142928" zmin="-4008" zmax="-3508"/>
+		<add x="-21976" y="144740" zmin="-4008" zmax="-3508"/>
+	</territory>
+	<spawn name="gludio02_1922_09" count="2" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_09"/>
+		<npc id="20515"/><!--Скелет Пехотинец-->
+	</spawn>
+	<spawn name="gludio02_1922_09" count="2" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_09"/>
+		<npc id="20457"/><!--Воитель Зомби-->
+	</spawn>
+	<territory name="gludio02_1922_08">
+		<add x="-21769" y="139426" zmin="-4052" zmax="-3652"/>
+		<add x="-19533" y="138484" zmin="-4052" zmax="-3652"/>
+		<add x="-18598" y="142361" zmin="-4052" zmax="-3652"/>
+		<add x="-21436" y="142836" zmin="-4052" zmax="-3652"/>
+		<add x="-22468" y="141628" zmin="-4052" zmax="-3652"/>
+	</territory>
+	<spawn name="gludio02_1922_08" count="6" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_08"/>
+		<npc id="20457"/><!--Воитель Зомби-->
+	</spawn>
+	<spawn name="gludio02_1922_08" count="4" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_08"/>
+		<npc id="20507"/><!--Старший Бес Руин-->
+	</spawn>
+	<spawn name="gludio02_1922_08" count="5" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_08"/>
+		<npc id="20458"/><!--Воин Зомби-->
+	</spawn>
+	<spawn name="gludio02_1922_08" count="3" respawn="30" respawn_random="10">
+		<territory name="gludio02_1922_08"/>
+		<npc id="20401"/><!--Людоед Вилан-->
+	</spawn>
+</list>

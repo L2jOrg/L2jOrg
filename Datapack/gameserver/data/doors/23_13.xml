@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="23130001" name="L2fortress_snow_S.fort_wall_door01_snow" hp="474750" pdef="644" mdef="518">
+		<pos x="107495" y="-140524" z="-3009"/>
+		<shape ax="107513" ay="-140616" bx="107565" by="-140465" cx="107477" cy="-140436" dx="107428" dy="-140591" minz="-3009" maxz="-2859"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+		<set name="close_time" value="60"/>
+	</door>
+	<door id="23130002" name="L2fortress_snow_S.fort_indoorsnw" hp="474750" pdef="644" mdef="518">
+		<pos x="108887" y="-141124" z="-2984"/>
+		<shape ax="108918" ay="-141051" bx="108894" by="-141126" cx="108879" cy="-141122" dx="108901" dy="-141046" minz="-2984" maxz="-2834"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="60"/>
+	</door>
+	<door id="23130003" name="L2fortress_snow_S.fort_indoorsnw" hp="474750" pdef="644" mdef="518">
+		<pos x="108932" y="-140975" z="-2984"/>
+		<shape ax="108917" ay="-141054" bx="108941" by="-140977" cx="108922" cy="-140971" dx="108900" dy="-141049" minz="-2984" maxz="-2834"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="60"/>
+	</door>
+	<door id="23130004" name="L2fortress_snow_S.fort_indoorsnw" hp="474750" pdef="644" mdef="518">
+		<pos x="110037" y="-141473" z="-2984"/>
+		<shape ax="110069" ay="-141399" bx="110045" by="-141477" cx="110028" cy="-141471" dx="110052" dy="-141394" minz="-2984" maxz="-2834"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="60"/>
+	</door>
+	<door id="23130005" name="L2fortress_snow_S.fort_indoorsnw" hp="474750" pdef="644" mdef="518">
+		<pos x="110082" y="-141324" z="-2984"/>
+		<shape ax="110069" ay="-141402" bx="110093" by="-141326" cx="110073" cy="-141319" dx="110051" dy="-141398" minz="-2984" maxz="-2834"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="60"/>
+	</door>
+	<door id="23130006" name="L2fortress_snow_S.fort_wall_door01_snow" hp="474750" pdef="644" mdef="518">
+		<pos x="111423" y="-141714" z="-3009"/>
+		<shape ax="111441" ay="-141806" bx="111493" by="-141655" cx="111405" cy="-141626" dx="111356" dy="-141781" minz="-3009" maxz="-2859"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+		<set name="close_time" value="60"/>
+	</door>
+	<door id="23130007" name="L2fortress_snow_S.fort_indoorsnw" hp="474750" pdef="644" mdef="518">
+		<pos x="110210" y="-140000" z="-2959"/>
+		<shape ax="110242" ay="-139926" bx="110218" by="-140004" cx="110201" cy="-139998" dx="110225" dy="-139921" minz="-2959" maxz="-2809"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+		<set name="close_time" value="60"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="111"/>
+		</ai_params>
+	</door>
+	<door id="23130008" name="L2fortress_snow_S.fort_indoorsnw" hp="474750" pdef="644" mdef="518">
+		<pos x="110255" y="-139851" z="-2959"/>
+		<shape ax="110242" ay="-139929" bx="110266" by="-139853" cx="110246" cy="-139846" dx="110224" dy="-139925" minz="-2959" maxz="-2809"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+		<set name="close_time" value="60"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="111"/>
+		</ai_params>
+	</door>
+</list>

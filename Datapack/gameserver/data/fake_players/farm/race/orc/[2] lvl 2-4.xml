@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE farm SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<farm name="Orc (Lvl 2-4)" min_level="2" max_level="4" races="ORC">
+	<zones>
+		<zone>
+			<polygon>
+				<coords loc="-52312 -109000 -700 100"/>
+				<coords loc="-47832 -106984 -700 100"/>
+				<coords loc="-45960 -106792 -700 100"/>
+				<coords loc="-44984 -107448 -700 100"/>
+				<coords loc="-45672 -109896 -700 100"/>
+				<coords loc="-47592 -109816 -700 100"/>
+				<coords loc="-47240 -117496 -700 100"/>
+				<coords loc="-45384 -117688 -700 100"/>
+				<coords loc="-44984 -119240 -700 100"/>
+				<coords loc="-46264 -119592 -700 100"/>
+				<coords loc="-47416 -119096 -700 100"/>
+				<coords loc="-49176 -117928 -700 100"/>
+				<coords loc="-49928 -116824 -700 100"/>
+				<coords loc="-51208 -116184 -700 100"/>
+				<coords loc="-52264 -114584 -700 100"/>
+			</polygon>
+		</zone>
+		<spawn_points>
+			<coords loc="-50840 -114360 -176"/>
+			<coords loc="-51080 -112664 -176"/>
+		</spawn_points>
+	</zones>
+	<on_obtain_max_level>
+		<action id="1"/>
+	</on_obtain_max_level>
+	<go_to_town min_farm_time="1800" max_farm_time="3600">
+		<action id="1"/>
+	</go_to_town>
+	<action id="1">
+		<wait min_delay="1000" max_delay="3000"/>
+		<random_action>
+			<ordinary_actions>
+				<move_to_point x="-50184" y="-113608" z="-176" min_range="0" max_range="50"/>
+				<move_to_point x="-49048" y="-113608" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-47864" y="-113608" z="-224" min_range="0" max_range="50"/>
+				<move_to_point x="-46920" y="-113608" z="-200" min_range="0" max_range="0"/>
+				<move_to_point x="-46376" y="-113608" z="-200" min_range="0" max_range="50"/>
+				<move_to_point x="-45512" y="-113608" z="-240" min_range="0" max_range="50"/>
+				<move_to_point x="-45192" y="-113592" z="-224" min_range="0" max_range="50"/>
+			</ordinary_actions>
+			<use_item id="736"/>
+		</random_action>
+	</action>
+</farm>

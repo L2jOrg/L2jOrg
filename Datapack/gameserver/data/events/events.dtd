@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!ELEMENT list (event)*>
+<!ELEMENT event (parameter|on_start|on_stop|on_init|on_time|objects)*>
+<!ATTLIST event
+	id CDATA #REQUIRED
+	name CDATA #REQUIRED
+	impl CDATA #REQUIRED>
+<!ELEMENT parameter (#PCDATA)>
+<!ATTLIST parameter
+	name CDATA #REQUIRED
+	value CDATA #REQUIRED>
+<!ELEMENT on_start  (if|ifnot|else|start|stop|spawn|despawn|respawn|npc_say|say|play_sound|open|close|refresh|init|announce|active|deactive|give_item|teleport_players|global_add_reward|global_remove_reward|global_remove_items)*>
+<!ELEMENT on_stop   (if|ifnot|else|start|stop|spawn|despawn|respawn|npc_say|say|play_sound|open|close|refresh|init|announce|active|deactive|give_item|teleport_players|global_add_reward|global_remove_reward|global_remove_items)*>
+<!ELEMENT on_init   (if|ifnot|else|start|stop|spawn|despawn|respawn|npc_say|say|play_sound|open|close|refresh|init|announce|active|deactive|give_item|teleport_players|global_add_reward|global_remove_reward|global_remove_items)*>
+<!ELEMENT on        (if|ifnot|else|start|stop|spawn|despawn|respawn|npc_say|say|play_sound|open|close|refresh|init|announce|active|deactive|give_item|teleport_players|global_add_reward|global_remove_reward|global_remove_items)*>
+<!ELEMENT if        (if|ifnot|else|start|stop|spawn|despawn|respawn|npc_say|say|play_sound|open|close|refresh|init|announce|active|deactive|give_item|teleport_players|global_add_reward|global_remove_reward|global_remove_items)*>
+<!ELEMENT ifnot     (if|ifnot|else|start|stop|spawn|despawn|respawn|npc_say|say|play_sound|open|close|refresh|init|announce|active|deactive|give_item|teleport_players|global_add_reward|global_remove_reward|global_remove_items)*>
+<!ELEMENT else      (if|ifnot|else|start|stop|spawn|despawn|respawn|npc_say|say|play_sound|open|close|refresh|init|announce|active|deactive|give_item|teleport_players|global_add_reward|global_remove_reward|global_remove_items)*>
+<!ATTLIST if
+	name CDATA #REQUIRED>
+<!ATTLIST ifnot
+	name CDATA #REQUIRED>
+<!ELEMENT on_time (on)*>
+<!ATTLIST on
+	time CDATA #REQUIRED>
+<!ELEMENT start (#PCDATA)>
+<!ATTLIST start
+	name CDATA #REQUIRED>
+<!ELEMENT stop (#PCDATA)>
+<!ATTLIST stop
+	name CDATA #REQUIRED>
+<!ELEMENT spawn (#PCDATA)>
+<!ATTLIST spawn
+	name CDATA #REQUIRED>
+<!ELEMENT open (#PCDATA)>
+<!ATTLIST open
+	name CDATA #REQUIRED>
+<!ELEMENT close (#PCDATA)>
+<!ATTLIST close
+	name CDATA #REQUIRED>
+<!ELEMENT active (#PCDATA)>
+<!ATTLIST active
+	name CDATA #REQUIRED>
+<!ELEMENT deactive (#PCDATA)>
+<!ATTLIST deactive
+	name CDATA #REQUIRED>
+<!ELEMENT refresh (#PCDATA)>
+<!ATTLIST refresh
+	name CDATA #REQUIRED>
+<!ELEMENT init (#PCDATA)>
+<!ATTLIST init
+	name CDATA #REQUIRED>
+<!ELEMENT announce (#PCDATA)>
+<!ATTLIST announce
+	msg_id CDATA #IMPLIED
+	val CDATA #IMPLIED>
+<!ELEMENT despawn (#PCDATA)>
+<!ATTLIST despawn
+	name CDATA #REQUIRED>
+<!ELEMENT respawn (#PCDATA)>
+<!ATTLIST respawn
+	name CDATA #REQUIRED>
+<!ELEMENT global_add_reward (#PCDATA)>
+<!ATTLIST global_add_reward
+	name CDATA #REQUIRED
+	min_level CDATA #IMPLIED
+	max_level CDATA #IMPLIED>
+<!ELEMENT global_remove_reward (#PCDATA)>
+<!ATTLIST global_remove_reward
+	name CDATA #REQUIRED
+	min_level CDATA #IMPLIED
+	max_level CDATA #IMPLIED>
+<!ELEMENT global_remove_items (#PCDATA)>
+<!ATTLIST global_remove_items
+	name CDATA #REQUIRED>
+<!ELEMENT objects (door|spawn|spawn_ex|spawn_npc|point|boat_point|static_object|siege_toggle_npc|castle_zone|ctb_team|cmg_arena|territory_ward|zone|reward|rewardlist|abnormal|item)*>
+<!ATTLIST objects
+	name CDATA #REQUIRED>
+<!ELEMENT door (#PCDATA)>
+<!ATTLIST door
+	id CDATA #REQUIRED>
+<!ELEMENT siege_toggle_npc (objects)*>
+<!ATTLIST siege_toggle_npc
+	id CDATA #REQUIRED
+	fake_id CDATA #REQUIRED
+	x CDATA #REQUIRED
+	y CDATA #REQUIRED
+	z CDATA #REQUIRED
+	hp CDATA #REQUIRED>
+<!ELEMENT castle_zone (#PCDATA)>
+<!ATTLIST castle_zone
+	name CDATA #REQUIRED
+	price CDATA #REQUIRED>
+<!ELEMENT zone (#PCDATA)>
+<!ATTLIST zone
+	name CDATA #REQUIRED>
+<!ELEMENT static_object (#PCDATA)>
+<!ATTLIST static_object
+	id CDATA #REQUIRED>
+<!ELEMENT spawn_ex (#PCDATA)>
+<!ATTLIST spawn_ex
+	name CDATA #REQUIRED>
+<!ELEMENT spawn_npc (#PCDATA)>
+<!ATTLIST spawn_npc
+	id CDATA #REQUIRED
+	x CDATA #REQUIRED
+	y CDATA #REQUIRED
+	z CDATA #REQUIRED>
+<!ELEMENT territory_ward (#PCDATA)>
+<!ATTLIST territory_ward
+	item_id CDATA #REQUIRED
+	npc_id CDATA #REQUIRED
+	x CDATA #REQUIRED
+	y CDATA #REQUIRED
+	z CDATA #REQUIRED>
+<!ELEMENT ctb_team (#PCDATA)>
+<!ATTLIST ctb_team
+	x CDATA #REQUIRED
+	y CDATA #REQUIRED
+	z CDATA #REQUIRED
+	h CDATA #REQUIRED
+	id CDATA #REQUIRED
+	mob_id CDATA #REQUIRED>
+<!ELEMENT cmg_arena (#PCDATA)>
+<!ELEMENT boat_point (#PCDATA)>
+<!ATTLIST boat_point
+	x CDATA #REQUIRED
+	y CDATA #REQUIRED
+	z CDATA #REQUIRED
+	speed1 CDATA #REQUIRED
+	speed2 CDATA #REQUIRED
+	fuel CDATA #IMPLIED
+	teleport CDATA #IMPLIED>
+<!ELEMENT point (#PCDATA)>
+<!ATTLIST point
+	x CDATA #REQUIRED
+	y CDATA #REQUIRED
+	z CDATA #REQUIRED
+	h CDATA #IMPLIED>
+<!ELEMENT npc_say (add)*>
+<!ATTLIST npc_say
+	npc CDATA #REQUIRED
+	chat CDATA #REQUIRED
+	range CDATA #REQUIRED
+	text CDATA #REQUIRED>
+<!ELEMENT add (#PCDATA)*>
+<!ATTLIST add
+	value CDATA #REQUIRED>
+<!ELEMENT teleport_players (#PCDATA)*>
+<!ATTLIST teleport_players
+	id CDATA #REQUIRED>
+<!ELEMENT say (#PCDATA)>
+<!ATTLIST say
+	how CDATA #REQUIRED
+	chat CDATA #REQUIRED
+	range CDATA #REQUIRED
+	text CDATA #REQUIRED>
+<!ELEMENT play_sound (#PCDATA)>
+<!ATTLIST play_sound
+	type CDATA #REQUIRED
+	sound CDATA #REQUIRED
+	range CDATA #REQUIRED>
+<!ELEMENT give_item (#PCDATA)>
+<!ATTLIST give_item
+	id CDATA #REQUIRED
+	count CDATA #REQUIRED>
+<!ELEMENT rewardlist (group|reward)*>
+<!ATTLIST rewardlist
+	type CDATA #REQUIRED>
+<!ELEMENT group (reward)*>
+<!ATTLIST group
+	chance CDATA #IMPLIED>
+<!ELEMENT reward (#PCDATA)>
+<!ATTLIST reward
+	chance CDATA #REQUIRED
+	item_id CDATA #REQUIRED
+	max CDATA #REQUIRED
+	min CDATA #REQUIRED>
+<!ELEMENT abnormal (#PCDATA)>
+<!ATTLIST abnormal
+		name CDATA #REQUIRED>
+<!ELEMENT item (#PCDATA)>
+<!ATTLIST item
+	id CDATA #REQUIRED
+	count CDATA #IMPLIED>

@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE town SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<town name="Talking Island Village">
+	<zones>
+		<zone name="[talking_island_town_peace_zone1]"/>
+		<zone name="[talking_island_town_peace_zone2]"/>
+		<zone name="[talking_island_town_peace_zone3]"/>
+		<zone name="[talking_island_town_peace_zone4]"/>
+	</zones>
+	<actions>
+		<wait min_delay="1000" max_delay="3000"/>
+		<random_action>
+			<ordinary_actions>
+				<move_to_point x="-84024" y="243352" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-84648" y="243288" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-85416" y="243128" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-86152" y="242888" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-86328" y="242984" z="-3720" min_range="0" max_range="50"/>
+				<random_action>
+					<ordinary_actions>
+						<move_to_npc id="30001"/>
+						<speak_with_npc id="30001"/>
+					</ordinary_actions>
+					<ordinary_actions>
+						<move_to_npc id="30002"/>
+						<speak_with_npc id="30002"/>
+					</ordinary_actions>
+				</random_action>
+				<wait min_delay="2000" max_delay="5000"/>
+				<move_to_point x="-86328" y="242984" z="-3720" min_range="0" max_range="50"/>
+				<move_to_point x="-86152" y="242888" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-85416" y="243128" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-84648" y="243288" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-84024" y="243352" z="-3728" min_range="0" max_range="50"/>
+			</ordinary_actions>
+			<ordinary_actions>
+				<move_to_point x="-84024" y="243352" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-83896" y="242920" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-84120" y="242488" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-84760" y="241784" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-84536" y="240904" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-84232" y="240584" z="-3720" min_range="0" max_range="50"/>
+				<random_action>
+					<ordinary_actions>
+						<move_to_npc id="30003"/>
+						<speak_with_npc id="30003"/>
+					</ordinary_actions>
+					<ordinary_actions>
+						<move_to_npc id="30004"/>
+						<speak_with_npc id="30004"/>
+					</ordinary_actions>
+				</random_action>
+				<wait min_delay="2000" max_delay="5000"/>
+				<move_to_point x="-84232" y="240584" z="-3720" min_range="0" max_range="50"/>
+				<move_to_point x="-84536" y="240904" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-84760" y="241784" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-84120" y="242488" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-83896" y="242920" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-84024" y="243352" z="-3728" min_range="0" max_range="50"/>
+			</ordinary_actions>
+			<ordinary_actions>
+				<move_to_point x="-83784" y="243736" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-83192" y="243848" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-82584" y="243624" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-82312" y="243544" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-82152" y="243608" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-81992" y="243736" z="-3712" min_range="0" max_range="50"/>
+				<move_to_point x="-81848" y="243720" z="-3712" min_range="0" max_range="50"/>
+				<random_action>
+					<ordinary_actions>
+						<move_to_npc id="30005"/>
+						<speak_with_npc id="30005"/>
+					</ordinary_actions>
+					<ordinary_actions>
+						<move_to_npc id="30054"/>
+						<speak_with_npc id="30054"/>
+					</ordinary_actions>
+				</random_action>
+				<wait min_delay="2000" max_delay="5000"/>
+				<move_to_point x="-81848" y="243720" z="-3712" min_range="0" max_range="50"/>
+				<move_to_point x="-81992" y="243736" z="-3712" min_range="0" max_range="50"/>
+				<move_to_point x="-82152" y="243608" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-82312" y="243544" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-82584" y="243624" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-83192" y="243848" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-83784" y="243736" z="-3728" min_range="0" max_range="50"/>
+			</ordinary_actions>
+		</random_action>
+		<ordinary_actions chance="30">
+			<move_to_point x="-84120" y="243432" z="-3728" min_range="0" max_range="50"/>
+			<move_to_point x="-84568" y="243368" z="-3728" min_range="0" max_range="50"/>
+			<move_to_point x="-85048" y="243656" z="-3728" min_range="0" max_range="50"/>
+			<move_to_point x="-85208" y="243848" z="-3728" min_range="0" max_range="50"/>
+			<move_to_point x="-84712" y="244376" z="-3728" min_range="0" max_range="50"/>
+			<move_to_point x="-84408" y="244456" z="-3728" min_range="0" max_range="50"/>
+			<move_to_npc id="30006"/>
+			<speak_with_npc id="30006"/>
+		</ordinary_actions>
+		<wait min_delay="2000" max_delay="5000"/>
+		<farm/>
+	</actions>
+</town>

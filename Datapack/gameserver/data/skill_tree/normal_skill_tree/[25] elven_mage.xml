@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="25">	<!--Светлый Мистик-->
+			<skill id="194" level="1" name="Везение(Lucky)" min_level="1"/>
+			<skill id="214" level="1" name="Восстановление Маны(Mana Recovery)" min_level="1"/>
+			<skill id="118" level="1" name="Движение Мага(Magician's Movement)" min_level="1"/>
+			<skill id="163" level="1" name="Искусное Колдовство(Spellcraft)" min_level="1"/>
+			<skill id="1216" level="1" name="Самолечение(Self Heal)" min_level="1"/>
+			<skill id="1177" level="1" name="Удар Ветра(Wind Strike)" min_level="1"/>
+			<skill id="1011" level="1" name="Лечение(Heal)" cost="10" min_level="3"/>
+			<skill id="146" level="1" name="Антимагия(Anti Magic)" cost="15" min_level="4"/>
+			<skill id="1184" level="1" name="Ледяной Шип(Ice Bolt)" cost="15" min_level="4"/>
+			<skill id="1177" level="2" name="Удар Ветра(Wind Strike)" cost="15" min_level="4"/>
+			<skill id="1011" level="2" name="Лечение(Heal)" cost="20" min_level="5"/>
+			<skill id="146" level="2" name="Антимагия(Anti Magic)" cost="25" min_level="7"/>
+			<skill id="244" level="1" name="Владение Броней(Armor Mastery)" cost="25" min_level="7"/>
+			<skill id="249" level="1" name="Владение Оружием(Weapon Mastery)" cost="25" min_level="7"/>
+			<skill id="1012" level="1" name="Излечить Отравление(Cure Poison)" cost="25" min_level="7"/>
+			<skill id="1184" level="2" name="Ледяной Шип(Ice Bolt)" cost="25" min_level="7"/>
+			<skill id="1011" level="3" name="Лечение(Heal)" cost="25" min_level="7"/>
+			<skill id="1068" level="1" name="Могущество(Might)" cost="25" min_level="7"/>
+			<skill id="1177" level="3" name="Удар Ветра(Wind Strike)" cost="25" min_level="7"/>
+			<skill id="1040" level="1" name="Щит(Shield)" cost="25" min_level="7"/>
+			<skill id="1015" level="1" name="Боевое Лечение(Battle Heal)" cost="160" min_level="10"/>
+			<skill id="1027" level="1" name="Групповое Лечение(Group Heal)" cost="160" min_level="10"/>
+			<skill id="1011" level="4" name="Лечение(Heal)" cost="160" min_level="10"/>
+			<skill id="146" level="3" name="Антимагия(Anti Magic)" cost="160" min_level="11"/>
+			<skill id="244" level="2" name="Владение Броней(Armor Mastery)" cost="160" min_level="11"/>
+			<skill id="1184" level="3" name="Ледяной Шип(Ice Bolt)" cost="160" min_level="11"/>
+			<skill id="1177" level="4" name="Удар Ветра(Wind Strike)" cost="160" min_level="11"/>
+			<skill id="1015" level="2" name="Боевое Лечение(Battle Heal)" cost="190" min_level="12"/>
+			<skill id="1027" level="2" name="Групповое Лечение(Group Heal)" cost="190" min_level="12"/>
+			<skill id="1011" level="5" name="Лечение(Heal)" cost="190" min_level="12"/>
+			<skill id="146" level="4" name="Антимагия(Anti Magic)" cost="190" min_level="14"/>
+			<skill id="1015" level="3" name="Боевое Лечение(Battle Heal)" cost="190" min_level="14"/>
+			<skill id="244" level="3" name="Владение Броней(Armor Mastery)" cost="190" min_level="14"/>
+			<skill id="249" level="2" name="Владение Оружием(Weapon Mastery)" cost="190" min_level="14"/>
+			<skill id="1027" level="3" name="Групповое Лечение(Group Heal)" cost="190" min_level="14"/>
+			<skill id="1184" level="4" name="Ледяной Шип(Ice Bolt)" cost="190" min_level="14"/>
+			<skill id="1011" level="6" name="Лечение(Heal)" cost="190" min_level="14"/>
+			<skill id="1206" level="1" name="Оковы Ветра(Wind Shackle)" cost="190" min_level="14"/>
+			<skill id="1164" level="1" name="Проклятие Слабости(Curse Weakness)" cost="190" min_level="14"/>
+			<skill id="1177" level="5" name="Удар Ветра(Wind Strike)" cost="190" min_level="14"/>
+			<!--HARDCODED: <skill id="239" level="1" name="Квалификация D(Expertise D)" min_level="20"/>-->
+			<!--HARDCODED: <skill id="239" level="2" name="Квалификация C(Expertise C)" min_level="40"/>-->
+			<!--HARDCODED: <skill id="239" level="3" name="Квалификация B(Expertise B)" min_level="52"/>-->
+		</class>
+	</normal_skill_tree>
+</list>

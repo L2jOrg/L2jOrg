@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "multisell.dtd">
+<list>
+	<config type="CHANCED"/>
+	<item>
+		<production id="49677" count="1"/>	<!--null-->
+		<production id="49677" count="1" chance="80"/>	<!--null-->
+		<production id="49676" count="1" chance="20"/>	<!--null-->
+		<ingredient id="49676" count="1"/>	<!--null-->
+		<ingredient id="49684" count="30"/>	<!--null-->
+		<ingredient id="49543" count="40"/>	<!--null-->
+		<ingredient id="49685" count="2"/>	<!--null-->
+	</item>
+	<item>
+		<production id="49678" count="1"/>	<!--null-->
+		<production id="49678" count="1" chance="60"/>	<!--null-->
+		<production id="49677" count="1" chance="40"/>	<!--null-->
+		<ingredient id="49677" count="1"/>	<!--null-->
+		<ingredient id="49684" count="45"/>	<!--null-->
+		<ingredient id="49543" count="100"/>	<!--null-->
+		<ingredient id="49685" count="3"/>	<!--null-->
+	</item>
+	<item>
+		<production id="49679" count="1"/>	<!--null-->
+		<production id="49679" count="1" chance="40"/>	<!--null-->
+		<production id="49678" count="1" chance="50"/>	<!--null-->
+		<production id="49677" count="1" chance="10"/>	<!--null-->
+		<ingredient id="49678" count="1"/>	<!--null-->
+		<ingredient id="49684" count="70"/>	<!--null-->
+		<ingredient id="49543" count="100"/>	<!--null-->
+		<ingredient id="49685" count="4"/>	<!--null-->
+	</item>
+	<item>
+		<production id="49680" count="1"/>	<!--null-->
+		<production id="49680" count="1" chance="10"/>	<!--null-->
+		<production id="49679" count="1" chance="50"/>	<!--null-->
+		<production id="49678" count="1" chance="40"/>	<!--null-->
+		<ingredient id="49679" count="1"/>	<!--null-->
+		<ingredient id="49684" count="100"/>	<!--null-->
+		<ingredient id="49543" count="200"/>	<!--null-->
+		<ingredient id="49685" count="5"/>	<!--null-->
+	</item>
+	<item>
+		<production id="49681" count="1" chance="100"/>	<!--null-->
+		<ingredient id="49680" count="1"/>	<!--null-->
+		<ingredient id="1460" count="5000"/>	<!--Кристалл: Ранг B-->
+	</item>
+</list>

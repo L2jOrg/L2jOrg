@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="9985" levels="7" name="Elixir of Life">
+		<set name="icon" value="icon.etc_super_hp_potion_i00"/>
+		<set name="reuseDelay" value="180000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="9986" levels="7" name="Elixir of Mind">
+		<set name="icon" value="icon.etc_super_mp_potion_i00"/>
+		<set name="reuseDelay" value="180000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+</list>

@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn name="gludio22_mb1824_01" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="-48400" y="219344" zmin="-2536" zmax="-1936"/>
+			<add x="-47528" y="218612" zmin="-2536" zmax="-1936"/>
+			<add x="-46876" y="219392" zmin="-2536" zmax="-1936"/>
+			<add x="-47732" y="219748" zmin="-2536" zmax="-1936"/>
+		</territory>
+		<npc id="25127"/><!--Вождь Лангк Рашкос-->
+	</spawn>
+	<spawn name="gludio22_npc1824_001" count="1" respawn="60">
+		<point x="-55217" y="200628" z="-3724" h="28672"/>
+		<npc id="30618"/><!--Харак-->
+	</spawn>
+	<territory name="gludio22_1824_16s">
+		<add x="-50753" y="200797" zmin="-3393" zmax="-2993"/>
+		<add x="-50038" y="200831" zmin="-3393" zmax="-2993"/>
+		<add x="-49509" y="201879" zmin="-3393" zmax="-2993"/>
+		<add x="-50354" y="201929" zmin="-3393" zmax="-2993"/>
+		<add x="-50993" y="201580" zmin="-3393" zmax="-2993"/>
+	</territory>
+	<spawn name="gludio22_1824_16s" count="1" respawn="20">
+		<territory name="gludio22_1824_16s"/>
+		<npc id="21100"/><!--Защитник Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_16s" count="2" respawn="20">
+		<territory name="gludio22_1824_16s"/>
+		<npc id="20357"/><!--Адъютант Ящеров Лангк-->
+	</spawn>
+	<territory name="gludio22_1824_17s">
+		<add x="-48182" y="202706" zmin="-3673" zmax="-3373"/>
+		<add x="-47432" y="202759" zmin="-3673" zmax="-3373"/>
+		<add x="-47536" y="203933" zmin="-3673" zmax="-3373"/>
+		<add x="-48331" y="204022" zmin="-3673" zmax="-3373"/>
+		<add x="-48648" y="203247" zmin="-3673" zmax="-3373"/>
+	</territory>
+	<spawn name="gludio22_1824_17s" count="2" respawn="20">
+		<territory name="gludio22_1824_17s"/>
+		<npc id="20357"/><!--Адъютант Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_17s" count="1" respawn="20">
+		<territory name="gludio22_1824_17s"/>
+		<npc id="21101"/><!--Шаман Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_15s" count="2" respawn="20">
+		<territory>
+			<add x="-52695" y="197040" zmin="-3776" zmax="-3376"/>
+			<add x="-51777" y="197105" zmin="-3776" zmax="-3376"/>
+			<add x="-51264" y="198043" zmin="-3776" zmax="-3376"/>
+			<add x="-51832" y="198803" zmin="-3776" zmax="-3376"/>
+			<add x="-52744" y="198823" zmin="-3776" zmax="-3376"/>
+		</territory>
+		<npc id="21100"/><!--Защитник Ящеров Лангк-->
+	</spawn>
+	<territory name="gludio36_1824_02">
+		<add x="-36228" y="199103" zmin="-3804" zmax="-2804"/>
+		<add x="-35403" y="196746" zmin="-3804" zmax="-2804"/>
+		<add x="-33027" y="196755" zmin="-3804" zmax="-2804"/>
+		<add x="-33072" y="200369" zmin="-3804" zmax="-2804"/>
+		<add x="-34138" y="201401" zmin="-3804" zmax="-2804"/>
+	</territory>
+	<spawn name="gludio36_1824_02" count="2" respawn="25">
+		<territory name="gludio36_1824_02"/>
+		<npc id="21014"/><!--Младший Воинственный Тиран-->
+	</spawn>
+	<spawn name="gludio36_1824_02" count="3" respawn="25">
+		<territory name="gludio36_1824_02"/>
+		<npc id="21015"/><!--Главарь Авангарда Гноллов-->
+	</spawn>
+	<spawn name="gludio36_1824_02" count="2" respawn="25">
+		<territory name="gludio36_1824_02"/>
+		<npc id="21016"/><!--Воинственный Тиран-->
+	</spawn>
+	<territory name="gludio36_1824_01">
+		<add x="-40141" y="197299" zmin="-3399" zmax="-2499"/>
+		<add x="-40237" y="196686" zmin="-3399" zmax="-2499"/>
+		<add x="-35519" y="196703" zmin="-3399" zmax="-2499"/>
+		<add x="-36189" y="198637" zmin="-3399" zmax="-2499"/>
+		<add x="-37049" y="199214" zmin="-3399" zmax="-2499"/>
+	</territory>
+	<spawn name="gludio36_1824_01" count="2" respawn="25">
+		<territory name="gludio36_1824_01"/>
+		<npc id="21013"/><!--Стрелец Авангарда Гноллов-->
+	</spawn>
+	<spawn name="gludio36_1824_01" count="3" respawn="25">
+		<territory name="gludio36_1824_01"/>
+		<npc id="21014"/><!--Младший Воинственный Тиран-->
+	</spawn>
+	<spawn name="gludio36_1824_01" count="3" respawn="25">
+		<territory name="gludio36_1824_01"/>
+		<npc id="21015"/><!--Главарь Авангарда Гноллов-->
+	</spawn>
+	<territory name="gludio22_1824_18s">
+		<add x="-46618" y="205483" zmin="-3670" zmax="-3370"/>
+		<add x="-45535" y="205545" zmin="-3670" zmax="-3370"/>
+		<add x="-45641" y="206744" zmin="-3670" zmax="-3370"/>
+		<add x="-46226" y="206773" zmin="-3670" zmax="-3370"/>
+		<add x="-46989" y="206042" zmin="-3670" zmax="-3370"/>
+	</territory>
+	<spawn name="gludio22_1824_18s" count="2" respawn="20">
+		<territory name="gludio22_1824_18s"/>
+		<npc id="21101"/><!--Шаман Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_18s" count="2" respawn="20">
+		<territory name="gludio22_1824_18s"/>
+		<npc id="20356"/><!--Главарь Ящеров Лангк-->
+	</spawn>
+	<territory name="gludio22_1824_19s">
+		<add x="-44356" y="209085" zmin="-3403" zmax="-3103"/>
+		<add x="-42891" y="208846" zmin="-3403" zmax="-3103"/>
+		<add x="-41863" y="209626" zmin="-3403" zmax="-3103"/>
+		<add x="-42715" y="210665" zmin="-3403" zmax="-3103"/>
+		<add x="-44351" y="210726" zmin="-3403" zmax="-3103"/>
+	</territory>
+	<spawn name="gludio22_1824_19s" count="1" respawn="20">
+		<territory name="gludio22_1824_19s"/>
+		<npc id="20357"/><!--Адъютант Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_19s" count="2" respawn="20">
+		<territory name="gludio22_1824_19s"/>
+		<npc id="21101"/><!--Шаман Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_19s" count="2" respawn="20">
+		<territory name="gludio22_1824_19s"/>
+		<npc id="20356"/><!--Главарь Ящеров Лангк-->
+	</spawn>
+	<territory name="gludio22_1824_20s">
+		<add x="-41917" y="211640" zmin="-3831" zmax="-3231"/>
+		<add x="-41174" y="210717" zmin="-3831" zmax="-3231"/>
+		<add x="-40274" y="210791" zmin="-3831" zmax="-3231"/>
+		<add x="-39725" y="212142" zmin="-3831" zmax="-3231"/>
+		<add x="-40971" y="212703" zmin="-3831" zmax="-3231"/>
+	</territory>
+	<spawn name="gludio22_1824_20s" count="1" respawn="20">
+		<territory name="gludio22_1824_20s"/>
+		<npc id="20357"/><!--Адъютант Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_20s" count="2" respawn="20">
+		<territory name="gludio22_1824_20s"/>
+		<npc id="21101"/><!--Шаман Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_20s" count="2" respawn="20">
+		<territory name="gludio22_1824_20s"/>
+		<npc id="20356"/><!--Главарь Ящеров Лангк-->
+	</spawn>
+	<territory name="gludio22_1824_21s">
+		<add x="-39340" y="209079" zmin="-3831" zmax="-3431"/>
+		<add x="-39025" y="208545" zmin="-3831" zmax="-3431"/>
+		<add x="-38132" y="208903" zmin="-3831" zmax="-3431"/>
+		<add x="-37757" y="210121" zmin="-3831" zmax="-3431"/>
+		<add x="-38152" y="210698" zmin="-3831" zmax="-3431"/>
+	</territory>
+	<spawn name="gludio22_1824_21s" count="1" respawn="20">
+		<territory name="gludio22_1824_21s"/>
+		<npc id="20357"/><!--Адъютант Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_21s" count="2" respawn="20">
+		<territory name="gludio22_1824_21s"/>
+		<npc id="21101"/><!--Шаман Ящеров Лангк-->
+	</spawn>
+	<territory name="gludio22_1824_01">
+		<add x="-52743" y="196655" zmin="-3793" zmax="-3393"/>
+		<add x="-51068" y="196662" zmin="-3793" zmax="-3393"/>
+		<add x="-50225" y="197915" zmin="-3793" zmax="-3393"/>
+		<add x="-52115" y="199513" zmin="-3793" zmax="-3393"/>
+		<add x="-52887" y="199291" zmin="-3793" zmax="-3393"/>
+	</territory>
+	<spawn name="gludio22_1824_01" count="2" respawn="20">
+		<territory name="gludio22_1824_01"/>
+		<npc id="20027"/><!--Разведчик Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_01" count="2" respawn="20">
+		<territory name="gludio22_1824_01"/>
+		<npc id="20024"/><!--Воин Ящеров Лангк-->
+	</spawn>
+	<territory name="gludio22_1824_02">
+		<add x="-52361" y="200044" zmin="-3792" zmax="-3292"/>
+		<add x="-50154" y="198235" zmin="-3792" zmax="-3292"/>
+		<add x="-47640" y="200456" zmin="-3792" zmax="-3292"/>
+		<add x="-50188" y="202516" zmin="-3792" zmax="-3292"/>
+		<add x="-53373" y="201788" zmin="-3792" zmax="-3292"/>
+	</territory>
+	<spawn name="gludio22_1824_02" count="2" respawn="20">
+		<territory name="gludio22_1824_02"/>
+		<npc id="20027"/><!--Разведчик Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_02" count="3" respawn="20">
+		<territory name="gludio22_1824_02"/>
+		<npc id="20024"/><!--Воин Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_02" count="5" respawn="20">
+		<territory name="gludio22_1824_02"/>
+		<npc id="21100"/><!--Защитник Ящеров Лангк-->
+	</spawn>
+	<territory name="gludio22_1824_05">
+		<add x="-52193" y="211285" zmin="-3600" zmax="-2800"/>
+		<add x="-47840" y="209854" zmin="-3600" zmax="-2800"/>
+		<add x="-46339" y="210881" zmin="-3600" zmax="-2800"/>
+		<add x="-47343" y="213652" zmin="-3600" zmax="-2800"/>
+		<add x="-52211" y="213239" zmin="-3600" zmax="-2800"/>
+	</territory>
+	<spawn name="gludio22_1824_05" count="4" respawn="20">
+		<territory name="gludio22_1824_05"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<spawn name="gludio22_1824_05" count="5" respawn="20">
+		<territory name="gludio22_1824_05"/>
+		<npc id="21101"/><!--Шаман Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_05" count="5" respawn="20">
+		<territory name="gludio22_1824_05"/>
+		<npc id="20356"/><!--Главарь Ящеров Лангк-->
+	</spawn>
+	<territory name="gludio22_1824_06">
+		<add x="-55006" y="212130" zmin="-3262" zmax="-2362"/>
+		<add x="-54782" y="210628" zmin="-3262" zmax="-2362"/>
+		<add x="-53352" y="209943" zmin="-3262" zmax="-2362"/>
+		<add x="-52370" y="213301" zmin="-3262" zmax="-2362"/>
+		<add x="-53426" y="213445" zmin="-3262" zmax="-2362"/>
+	</territory>
+	<spawn name="gludio22_1824_06" count="2" respawn="20">
+		<territory name="gludio22_1824_06"/>
+		<npc id="20357"/><!--Адъютант Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_06" count="3" respawn="20">
+		<territory name="gludio22_1824_06"/>
+		<npc id="21101"/><!--Шаман Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_06" count="2" respawn="20">
+		<territory name="gludio22_1824_06"/>
+		<npc id="20356"/><!--Главарь Ящеров Лангк-->
+	</spawn>
+	<territory name="gludio22_1824_03">
+		<add x="-50127" y="202655" zmin="-3808" zmax="-3208"/>
+		<add x="-47543" y="200557" zmin="-3808" zmax="-3208"/>
+		<add x="-44911" y="204064" zmin="-3808" zmax="-3208"/>
+		<add x="-47905" y="205550" zmin="-3808" zmax="-3208"/>
+	</territory>
+	<spawn name="gludio22_1824_03" count="3" respawn="20">
+		<territory name="gludio22_1824_03"/>
+		<npc id="21100"/><!--Защитник Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_03" count="3" respawn="20">
+		<territory name="gludio22_1824_03"/>
+		<npc id="20055"/><!--Монстроглаз Смотритель-->
+	</spawn>
+	<spawn name="gludio22_1824_03" count="4" respawn="20">
+		<territory name="gludio22_1824_03"/>
+		<npc id="20357"/><!--Адъютант Ящеров Лангк-->
+	</spawn>
+	<territory name="gludio22_1824_04">
+		<add x="-47895" y="205644" zmin="-3801" zmax="-3001"/>
+		<add x="-44703" y="204267" zmin="-3801" zmax="-3001"/>
+		<add x="-42464" y="206436" zmin="-3801" zmax="-3001"/>
+		<add x="-46271" y="210737" zmin="-3801" zmax="-3001"/>
+		<add x="-48335" y="209278" zmin="-3801" zmax="-3001"/>
+	</territory>
+	<spawn name="gludio22_1824_04" count="3" respawn="20">
+		<territory name="gludio22_1824_04"/>
+		<npc id="21100"/><!--Защитник Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_04" count="4" respawn="20">
+		<territory name="gludio22_1824_04"/>
+		<npc id="20055"/><!--Монстроглаз Смотритель-->
+	</spawn>
+	<spawn name="gludio22_1824_04" count="3" respawn="20">
+		<territory name="gludio22_1824_04"/>
+		<npc id="20357"/><!--Адъютант Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_04" count="4" respawn="20">
+		<territory name="gludio22_1824_04"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<territory name="gludio22_1824_09">
+		<add x="-41593" y="208381" zmin="-3782" zmax="-2882"/>
+		<add x="-39264" y="207692" zmin="-3782" zmax="-2882"/>
+		<add x="-37768" y="209118" zmin="-3782" zmax="-2882"/>
+		<add x="-37384" y="210812" zmin="-3782" zmax="-2882"/>
+		<add x="-41213" y="210570" zmin="-3782" zmax="-2882"/>
+	</territory>
+	<spawn name="gludio22_1824_09" count="2" respawn="20">
+		<territory name="gludio22_1824_09"/>
+		<npc id="20055"/><!--Монстроглаз Смотритель-->
+	</spawn>
+	<spawn name="gludio22_1824_09" count="4" respawn="20">
+		<territory name="gludio22_1824_09"/>
+		<npc id="20357"/><!--Адъютант Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_09" count="1" respawn="20">
+		<territory name="gludio22_1824_09"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<territory name="gludio22_1824_07">
+		<add x="-47222" y="213619" zmin="-3666" zmax="-2966"/>
+		<add x="-46277" y="210916" zmin="-3666" zmax="-2966"/>
+		<add x="-43506" y="213088" zmin="-3666" zmax="-2966"/>
+		<add x="-43961" y="214262" zmin="-3666" zmax="-2966"/>
+		<add x="-45810" y="214423" zmin="-3666" zmax="-2966"/>
+	</territory>
+	<spawn name="gludio22_1824_07" count="2" respawn="20">
+		<territory name="gludio22_1824_07"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<spawn name="gludio22_1824_07" count="3" respawn="20">
+		<territory name="gludio22_1824_07"/>
+		<npc id="21101"/><!--Шаман Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_07" count="2" respawn="20">
+		<territory name="gludio22_1824_07"/>
+		<npc id="20356"/><!--Главарь Ящеров Лангк-->
+	</spawn>
+	<territory name="gludio22_1824_08">
+		<add x="-46216" y="210815" zmin="-3756" zmax="-2856"/>
+		<add x="-43316" y="207634" zmin="-3756" zmax="-2856"/>
+		<add x="-41711" y="208389" zmin="-3756" zmax="-2856"/>
+		<add x="-41302" y="210586" zmin="-3756" zmax="-2856"/>
+		<add x="-43318" y="213030" zmin="-3756" zmax="-2856"/>
+	</territory>
+	<spawn name="gludio22_1824_08" count="2" respawn="20">
+		<territory name="gludio22_1824_08"/>
+		<npc id="21100"/><!--Защитник Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_08" count="4" respawn="20">
+		<territory name="gludio22_1824_08"/>
+		<npc id="20357"/><!--Адъютант Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_08" count="2" respawn="20">
+		<territory name="gludio22_1824_08"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<territory name="gludio22_1824_12">
+		<add x="-37566" y="205798" zmin="-3495" zmax="-2995"/>
+		<add x="-36857" y="205491" zmin="-3495" zmax="-2995"/>
+		<add x="-36444" y="206261" zmin="-3495" zmax="-2995"/>
+		<add x="-36718" y="206715" zmin="-3495" zmax="-2995"/>
+		<add x="-37354" y="206357" zmin="-3495" zmax="-2995"/>
+	</territory>
+	<spawn name="gludio22_1824_12" count="2" respawn="20">
+		<territory name="gludio22_1824_12"/>
+		<npc id="21100"/><!--Защитник Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_12" count="1" respawn="20">
+		<territory name="gludio22_1824_12"/>
+		<npc id="20357"/><!--Адъютант Ящеров Лангк-->
+	</spawn>
+	<territory name="gludio22_1824_13">
+		<add x="-40410" y="202587" zmin="-3311" zmax="-2711"/>
+		<add x="-39402" y="203023" zmin="-3311" zmax="-2711"/>
+		<add x="-38451" y="204267" zmin="-3311" zmax="-2711"/>
+		<add x="-38578" y="205272" zmin="-3311" zmax="-2711"/>
+		<add x="-40982" y="202877" zmin="-3311" zmax="-2711"/>
+	</territory>
+	<spawn name="gludio22_1824_13" count="2" respawn="20">
+		<territory name="gludio22_1824_13"/>
+		<npc id="20024"/><!--Воин Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_13" count="2" respawn="20">
+		<territory name="gludio22_1824_13"/>
+		<npc id="21100"/><!--Защитник Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_13" count="1" respawn="20">
+		<territory name="gludio22_1824_13"/>
+		<npc id="20357"/><!--Адъютант Ящеров Лангк-->
+	</spawn>
+	<territory name="gludio22_1824_10">
+		<add x="-43289" y="213124" zmin="-3884" zmax="-3084"/>
+		<add x="-41242" y="210640" zmin="-3884" zmax="-3084"/>
+		<add x="-38154" y="210868" zmin="-3884" zmax="-3084"/>
+		<add x="-37501" y="213637" zmin="-3884" zmax="-3084"/>
+		<add x="-42201" y="216120" zmin="-3884" zmax="-3084"/>
+	</territory>
+	<spawn name="gludio22_1824_10" count="3" respawn="20">
+		<territory name="gludio22_1824_10"/>
+		<npc id="20059"/><!--Монстроглаз Дозорный-->
+	</spawn>
+	<spawn name="gludio22_1824_10" count="5" respawn="20">
+		<territory name="gludio22_1824_10"/>
+		<npc id="20357"/><!--Адъютант Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_10" count="4" respawn="20">
+		<territory name="gludio22_1824_10"/>
+		<npc id="21101"/><!--Шаман Ящеров Лангк-->
+	</spawn>
+	<territory name="gludio22_1824_11">
+		<add x="-37646" y="212124" zmin="-3884" zmax="-3384"/>
+		<add x="-35391" y="211299" zmin="-3884" zmax="-3384"/>
+		<add x="-33112" y="212241" zmin="-3884" zmax="-3384"/>
+		<add x="-33008" y="214513" zmin="-3884" zmax="-3384"/>
+		<add x="-37377" y="213629" zmin="-3884" zmax="-3384"/>
+	</territory>
+	<spawn name="gludio22_1824_11" count="3" respawn="20">
+		<territory name="gludio22_1824_11"/>
+		<npc id="20059"/><!--Монстроглаз Дозорный-->
+	</spawn>
+	<spawn name="gludio22_1824_11" count="2" respawn="20">
+		<territory name="gludio22_1824_11"/>
+		<npc id="20548"/><!--Дезертир Гноллов-->
+	</spawn>
+	<spawn name="gludio22_1824_11" count="3" respawn="20">
+		<territory name="gludio22_1824_11"/>
+		<npc id="21101"/><!--Шаман Ящеров Лангк-->
+	</spawn>
+	<territory name="gludio22_1824_14">
+		<add x="-46821" y="198601" zmin="-3614" zmax="-3214"/>
+		<add x="-46071" y="198903" zmin="-3614" zmax="-3214"/>
+		<add x="-45459" y="199625" zmin="-3614" zmax="-3214"/>
+		<add x="-45499" y="200824" zmin="-3614" zmax="-3214"/>
+		<add x="-47312" y="198850" zmin="-3614" zmax="-3214"/>
+	</territory>
+	<spawn name="gludio22_1824_14" count="2" respawn="20">
+		<territory name="gludio22_1824_14"/>
+		<npc id="20024"/><!--Воин Ящеров Лангк-->
+	</spawn>
+	<spawn name="gludio22_1824_14" count="1" respawn="20">
+		<territory name="gludio22_1824_14"/>
+		<npc id="21100"/><!--Защитник Ящеров Лангк-->
+	</spawn>
+</list>

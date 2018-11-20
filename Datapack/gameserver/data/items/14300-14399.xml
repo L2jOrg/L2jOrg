@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<weapon id="14327" name="Sirra\'s Blade">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_sirr_blade_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1300"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="251"/>
+			<add stat="mAtk" order="0x10" value="121"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<weapon id="14328" name="Sword of Ipos">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;46;120"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_sword_of_ipos_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1820"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="305"/>
+			<add stat="mAtk" order="0x10" value="121"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<weapon id="14330" name="Behemoth\' Tuning Fork">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;44;120"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_tuning_fork_of_behemoth_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1890"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="305"/>
+			<add stat="mAtk" order="0x10" value="121"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="14331" name="Naga Storm">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_naga_storm_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="DAGGER"/>
+		<set name="weight" value="930"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="5"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="220"/>
+			<add stat="mAtk" order="0x10" value="121"/>
+			<set stat="basePAtkSpd" order="0x08" value="433"/>
+			<set stat="basePCritRate" order="0x08" value="120"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="14332" name="Tiphon\'s Spear">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;66;120"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_tiphon_spear_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="POLE"/>
+		<set name="weight" value="1820"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<skills>
+			<skill id="3599" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="251"/>
+			<add stat="mAtk" order="0x10" value="121"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="14333" name="Shyeed\'s Bow">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;10;0"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_shyid_bow_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BOW"/>
+		<set name="weight" value="1640"/>
+		<set name="soulshots" value="2"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="5"/>
+		<set name="mp_consume" value="5"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="570"/>
+			<add stat="mAtk" order="0x10" value="133"/>
+			<set stat="basePAtkSpd" order="0x08" value="227"/>
+			<set stat="basePCritRate" order="0x08" value="120"/>
+			<add stat="pAccCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="14334" name="Sobekk\'s Hurricane">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;32;120"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_sobekk_hurricane_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="DUALFIST"/>
+		<set name="weight" value="1330"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="5"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="305"/>
+			<add stat="mAtk" order="0x10" value="121"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="14335" name="Themis\' Tongue">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_tongue_of_themis_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="820"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="is_magic_weapon" value="true"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="202"/>
+			<add stat="mAtk" order="0x10" value="161"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<weapon id="14336" name="Cabrio\'s Hand">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_hand_of_cabrio_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1510"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="is_magic_weapon" value="true"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="202"/>
+			<add stat="mAtk" order="0x10" value="161"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="14338" name="Tallum Blade*Damascus">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;44;120"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_dual_sword_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="DUAL"/>
+		<set name="weight" value="1890"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="305"/>
+			<add stat="mAtk" order="0x10" value="121"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<weapon id="14339" name="Ãclair Bijou">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_greed_stinger_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="RAPIER"/>
+		<set name="weight" value="1300"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="40"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="228"/>
+			<add stat="mAtk" order="0x10" value="121"/>
+			<set stat="basePAtkSpd" order="0x08" value="406"/>
+			<set stat="basePCritRate" order="0x08" value="100"/>
+			<add stat="pAccCombat" order="0x10" value="-1.5"/>
+		</for>
+	</weapon>
+	<weapon id="14341" name="Screaming Vengeance">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_soul_shooter_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="CROSSBOW"/>
+		<set name="weight" value="1640"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="318"/>
+			<add stat="mAtk" order="0x10" value="121"/>
+			<set stat="basePAtkSpd" order="0x08" value="303"/>
+			<set stat="basePCritRate" order="0x08" value="100"/>
+			<add stat="pAccCombat" order="0x10" value="-1.5"/>
+		</for>
+	</weapon>
+	<armor id="14348" name="Majestic Earring">
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="63"/>
+			<add stat="maxMp" order="0x60" value="25"/>
+		</for>
+	</armor>
+	<armor id="14349" name="Majestic Ring">
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="42"/>
+			<add stat="maxMp" order="0x60" value="17"/>
+		</for>
+	</armor>
+	<armor id="14350" name="Majestic Necklace">
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="85"/>
+			<add stat="maxMp" order="0x60" value="33"/>
+		</for>
+	</armor>
+</list>

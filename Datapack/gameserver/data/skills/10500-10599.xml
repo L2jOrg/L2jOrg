@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="10539" levels="1" name="Throw Dagger">
+		<set name="icon" value="icon.skill10539"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="800"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="60"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="activateRate" value="80"/>
+		<set name="magicLevel" value="76"/>
+		<set name="power" value="396"/>
+		<set name="overHit" value="true"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<cond msgId="113">
+			<using kind="Dagger"/>
+		</cond>
+		<for>
+			<effect>
+				<sub order="0x50" stat="runSpd" value="60"/>
+			</effect>
+		</for>
+	</skill>
+</list>

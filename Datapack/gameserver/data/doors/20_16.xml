@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="20160001" name="rune_castle_out_001" hp="1018260" pdef="837" mdef="674">
+		<pos x="18492" y="-49243" z="-1215"/>
+		<shape ax="18458" ay="-49336" bx="18505" by="-49335" cx="18505" cy="-49136" dx="18457" dy="-49136" minz="-1251" maxz="-1101"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="20160002" name="rune_castle_out_002" hp="1018260" pdef="837" mdef="674">
+		<pos x="18491" y="-49069" z="-1214"/>
+		<shape ax="18458" ay="-49166" bx="18505" by="-49167" cx="18505" cy="-48968" dx="18459" dy="-48967" minz="-1251" maxz="-1101"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="20160003" name="rune_castle_inner_002" hp="759600" pdef="837" mdef="674">
+		<pos x="15775" y="-49202" z="-1059"/>
+		<shape ax="15752" ay="-49263" bx="15784" by="-49263" cx="15784" cy="-49137" dx="15752" dy="-49137" minz="-1088" maxz="-938"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="20160004" name="rune_castle_inner_003" hp="759600" pdef="837" mdef="674">
+		<pos x="15776" y="-49101" z="-1059"/>
+		<shape ax="15752" ay="-49167" bx="15784" by="-49167" cx="15784" cy="-49039" dx="15754" dy="-49039" minz="-1088" maxz="-938"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="20160005" name="rune_castle_clos_001" hp="759600" pdef="837" mdef="674">
+		<pos x="15352" y="-49149" z="-1057"/>
+		<shape ax="15320" ay="-49268" bx="15360" by="-49268" cx="15360" cy="-49028" dx="15320" dy="-49028" minz="-1093" maxz="-943"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="20160006" name="rune_castle_inner_001" hp="759600" pdef="837" mdef="674">
+		<pos x="12866" y="-51123" z="-1087"/>
+		<shape ax="12983" ay="-51137" bx="12982" by="-51097" cx="12746" cy="-51096" dx="12746" dy="-51139" minz="-1115" maxz="-965"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="20160007" name="rune_castle_wall_001" hp="759600" pdef="837" mdef="674" type="WALL">
+		<pos x="17162" y="-51449" z="-1085"/>
+		<shape ax="17170" ay="-51779" bx="17520" by="-51464" cx="17310" cy="-51277" dx="16995" dy="-51566" minz="-1120" maxz="-640"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="20160008" name="rune_castle_wall_002" hp="759600" pdef="837" mdef="674" type="WALL">
+		<pos x="17163" y="-46854" z="-1089"/>
+		<shape ax="17307" ay="-47005" bx="17520" by="-46817" cx="17170" cy="-46507" dx="16982" dy="-46707" minz="-1120" maxz="-640"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="20160009" name="Rune_Castle_S.runecastle_brokenwall03A" hp="759600" pdef="837" mdef="674" type="WALL">
+		<pos x="13841" y="-51703" z="-764"/>
+		<shape ax="13672" ay="-52034" bx="14215" by="-51821" cx="13982" cy="-51354" dx="13526" dy="-51526" minz="-1142" maxz="-374"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+</list>

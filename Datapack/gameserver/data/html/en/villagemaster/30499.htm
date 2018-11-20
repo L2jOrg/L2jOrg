@@ -1,0 +1,11 @@
+<html><head><body>
+Head Blacksmith Tapoy:<br>
+I'm Head Blacksmith Tapoy of the Black Anvil Guild located here in Gludin territory. I'm sure that you already know of our reputation for producing highly skilled Artisans and Warsmiths. As we say back home, a Dwarven tribe without our guild is like a "a bee without honey" or an "Elf without his pride." Ha ha! So, what has brought you here?<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">"Can you tell me about the 1st Class Transfer?"</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Clan</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Alliance</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Exchange Daily Coins</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Quest</Button>
+</body></html>

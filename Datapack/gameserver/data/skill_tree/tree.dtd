@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT list (general_skill_tree|sub_unit_skill_tree|pledge_skill_tree|normal_skill_tree|fishing_skill_tree|hero_skill_tree|gm_skill_tree|custom_skill_tree)*>
+<!ELEMENT general_skill_tree (skill|class)*>
+<!ELEMENT normal_skill_tree (class)*>
+<!ELEMENT sub_unit_skill_tree (skill)*>
+<!ELEMENT pledge_skill_tree (skill)*>
+<!ELEMENT fishing_skill_tree (skill)*>
+<!ELEMENT hero_skill_tree (skill)*>
+<!ELEMENT gm_skill_tree (skill)*>
+<!ELEMENT custom_skill_tree (skill)*>
+	<!ELEMENT skill (player|or|not|and)*>
+		<!ATTLIST skill
+			id CDATA #REQUIRED
+			item_count CDATA #IMPLIED
+			item_id CDATA #IMPLIED
+			level CDATA #REQUIRED
+			min_level CDATA #IMPLIED
+			name CDATA #IMPLIED
+			cost CDATA #IMPLIED
+			race CDATA #IMPLIED
+			auto_get CDATA #IMPLIED>
+
+			<!ELEMENT or (player|or|not|and)*>
+			<!ELEMENT not (player|or|not|and)*>
+			<!ELEMENT and (player|or|not|and)*>
+			<!ELEMENT player (#PCDATA)>
+			<!ATTLIST player
+				residence CDATA #IMPLIED
+				race CDATA #IMPLIED
+				is_clan_leader CDATA #IMPLIED
+				sex CDATA #IMPLIED
+				castle_type CDATA #IMPLIED
+				classId CDATA #IMPLIED
+				minLevel CDATA #IMPLIED
+				max_level CDATA #IMPLIED
+				avail_max_sp CDATA #IMPLIED
+				quest_state CDATA #IMPLIED
+				min_pledge_rank CDATA #IMPLIED
+				class_type CDATA #IMPLIED
+				min_clan_level CDATA #IMPLIED
+				isFlagged CDATA #IMPLIED>
+
+	<!ELEMENT class (skill)*>
+		<!ATTLIST class
+			id CDATA #IMPLIED
+			level CDATA #IMPLIED>

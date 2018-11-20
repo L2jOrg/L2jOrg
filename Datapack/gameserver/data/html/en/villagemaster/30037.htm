@@ -1,0 +1,11 @@
+<html><head><body>
+High Priestess Levian:<br>
+I perceive that you are wandering on a journey to seek and find your dream. Ah, my young friend...in this world, there are tens of thousands of dreams, and tens of thousands of disappointments as well. Perhaps you will one day realize the futility of chasing these dreams like a moth drawn to a flame. But what has brought you to me? In the name of Einhasad, if I am able to give you the light, I will do all that I can to assist you.<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">"Can you tell me about the 1st Class Transfer?"</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Clan</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Alliance</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Exchange Daily Coins</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Quest</Button>
+</body></html>

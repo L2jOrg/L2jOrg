@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="90500" name="Dragonâs Treasure Chest">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.bm_dragon_present"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90501" name="Dragon\\'s Shining Treasure Chest">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.bm_dragon_shinning_present"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90502" name="Lucky Enchant Stone: Armor (D-grade)" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.bless_ench_amr_stone_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90503" name="Lucky Enchant Stone: Armor (C-grade)" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.bless_ench_amr_stone_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90504" name="Lucky Enchant Stone: Armor (B-grade)" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.bless_ench_amr_stone_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90505" name="Lucky Enchant Stone: Armor (A-grade)" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.bless_ench_amr_stone_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90506" name="Valuable Mark of Balthus Knights">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.ev_balthus_token"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90507" name="Dragon\\'s Balthus Chest">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.bm_dragon_present"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90508" name="Special Dragon\\'s Fruit" add_name="Event">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.bm_dragon_fruit"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="39273" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="90509" name="Dragonâs Gold Key">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.bm_dragon_key"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90510" name="Talisman of Border Pack +5">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.bm_special_pendant_abradant_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90511" name="Talisman of Border Pack +6">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.bm_special_pendant_abradant_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90512" name="Talisman of Border Pack +7">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.bm_special_pendant_abradant_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90513" name="Talisman of Border Pack Lv. 8">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.bm_special_pendant_abradant_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90514" name="Talisman of Border Pack Lv. 9">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.bm_special_pendant_abradant_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90515" name="Talisman of Border Pack Lv. 10">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.bm_special_pendant_abradant_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90516" name="Lesser GM\\'s Blessing Chest">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_six_party_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90517" name="Greater GM\\'s Blessing Chest">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_six_party_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90518" name="Greatest GM\\'s Blessing Chest">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.event_six_party_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90519" name="Shining Scroll of Mood Melody">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.bm_magmeld"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90520" name="Fire Dragon\\'s Blessing Scroll">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.bm_blessing_dragon"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90521" name="Golden Fishing Rod Pouch">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.bm_gold_fishing_poket"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90522" name="Golden Treasure Chest">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.bm_gold_relic_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90523" name="Shining Fishing kit">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.bm_freya_gift_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90524" name="Lucky Enchant Stone Chest - A-grade">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i03"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90525" name="Lucky Enchant Stone Chest - B-grade">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i02"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90526" name="Talisman of Baium Box" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.npoint_tauti_30day_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<armor id="90527" name="Talisman of Baium" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.tallisman_baium"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="durability" value="43200"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="35017" level="7"/>
+		</skills>
+		<cond msgId="1902">
+			<player minLevel="60"/>
+		</cond>
+	</armor>
+	<etcitem id="90528" name="Shining Jewel Box" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_pi_box_wish_pack"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<armor id="90529" name="Lv. 5 Jade" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_bm_jewel_jade_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="5"/>
+		<set name="durability" value="43200"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+	</armor>
+	<armor id="90530" name="Lv. 5 Vital Stone" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_bm_jewel_vital"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="5"/>
+		<set name="durability" value="43200"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+	</armor>
+	<armor id="90531" name="Lv. 5 Garnet" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_bm_jewel_garnet"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="5"/>
+		<set name="durability" value="43200"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+	</armor>
+	<etcitem id="90532" name="Refined Rare Accessory Pack">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.npoint_earthworm_30day_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90533" name="Rare Accessory Box">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.npoint_valakas_30day_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90534" name="Sigelâs Rune - Stage 1">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv00"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90535" name="Sigelâs Rune - Stage 2">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv00"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90536" name="Sigelâs Rune - Stage 3">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv00"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90537" name="Sigelâs Rune - Stage 4">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv00"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90538" name="Sigelâs Rune - Stage 5">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv00"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90539" name="Sigelâs Rune - Stage 6">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90540" name="Sigelâs Rune - Stage 7">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90541" name="Sigelâs Rune - Stage 8" add_name="Super">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90542" name="Sigelâs Rune - Stage 9" add_name="Super">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90543" name="Sigelâs Rune - Stage 10" add_name="Super">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90544" name="Sigelâs Rune - Stage 11" add_name="Super">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90545" name="Sigelâs Rune - Stage 12" add_name="Super">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90546" name="Sigelâs Rune - Stage 13" add_name="Super">
+		<set name="icon" value="BranchIcon.Icon.g_rune_sigel_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90547" name="Sigelâs Rune - Stage 14">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90548" name="Sigelâs Rune - Stage 15">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90549" name="Sigelâs Rune - Stage 16">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90550" name="Sigelâs Rune - Stage 17">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90551" name="Sigelâs Rune - Stage 18">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90552" name="Sigelâs Rune - Stage 19">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90553" name="Sigelâs Rune - Stage 20">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90554" name="Tyrrâs Rune - Stage 1">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv00"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90555" name="Tyrrâs Rune - Stage 2">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv00"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90556" name="Tyrrâs Rune - Stage 3">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv00"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90557" name="Tyrrâs Rune - Stage 4">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv00"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90558" name="Tyrrâs Rune - Stage 5">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv00"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90559" name="Tyrrâs Rune - Stage 6">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90560" name="Tyrrâs Rune - Stage 7">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90561" name="Tyrrâs Rune - Stage 8" add_name="Super">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90562" name="Tyrrâs Rune - Stage 9" add_name="Super">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90563" name="Tyrrâs Rune - Stage 10" add_name="Super">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90564" name="Tyrrâs Rune - Stage 11" add_name="Super">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90565" name="Tyrrâs Rune - Stage 12" add_name="Super">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90566" name="Tyrrâs Rune - Stage 13" add_name="Super">
+		<set name="icon" value="BranchIcon.Icon.g_rune_tir_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90567" name="Tyrrâs Rune - Stage 14">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90568" name="Tyrrâs Rune - Stage 15">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90569" name="Tyrrâs Rune - Stage 16">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90570" name="Tyrrâs Rune - Stage 17">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90571" name="Tyrrâs Rune - Stage 18">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90572" name="Tyrrâs Rune - Stage 19">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90573" name="Tyrrâs Rune - Stage 20">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90574" name="Othellâs Rune - Stage 1">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90575" name="Othellâs Rune - Stage 2">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90576" name="Othellâs Rune - Stage 3">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90577" name="Othellâs Rune - Stage 4">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90578" name="Othellâs Rune - Stage 5">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90579" name="Othellâs Rune - Stage 6">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90580" name="Othellâs Rune - Stage 7">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90581" name="Othellâs Rune - Stage 8" add_name="Super">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90582" name="Othellâs Rune - Stage 9" add_name="Super">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90583" name="Othellâs Rune - Stage 10" add_name="Super">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90584" name="Othellâs Rune - Stage 11" add_name="Super">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv03"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90585" name="Othellâs Rune - Stage 12" add_name="Super">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv03"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90586" name="Othellâs Rune - Stage 13" add_name="Super">
+		<set name="icon" value="BranchIcon.Icon.g_rune_othel_lv03"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90587" name="Othellâs Rune - Stage 14">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90588" name="Othellâs Rune - Stage 15">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90589" name="Othellâs Rune - Stage 16">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90590" name="Othellâs Rune - Stage 17">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90591" name="Othellâs Rune - Stage 18">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90592" name="Othellâs Rune - Stage 19">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90593" name="Othellâs Rune - Stage 20">
+		<set name="icon" value="icon.ensoul_big_p"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90594" name="Yulâs Rune - Stage 1">
+		<set name="icon" value="BranchIcon.Icon.g_rune_yr_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90595" name="Yulâs Rune - Stage 2">
+		<set name="icon" value="BranchIcon.Icon.g_rune_yr_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90596" name="Yulâs Rune - Stage 3">
+		<set name="icon" value="BranchIcon.Icon.g_rune_yr_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90597" name="Yulâs Rune - Stage 4">
+		<set name="icon" value="BranchIcon.Icon.g_rune_yr_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90598" name="Yulâs Rune - Stage 5">
+		<set name="icon" value="BranchIcon.Icon.g_rune_yr_lv01"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90599" name="Yulâs Rune - Stage 6">
+		<set name="icon" value="BranchIcon.Icon.g_rune_yr_lv02"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+</list>

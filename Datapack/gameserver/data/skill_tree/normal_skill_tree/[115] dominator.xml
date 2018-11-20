@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="115">	<!--Деспот-->
+			<skill id="146" level="46" name="Антимагия(Anti Magic)" cost="4500000" min_level="76"/>
+			<skill id="1405" level="3" name="Божественное Вдохновение(Divine Inspiration)" item_id="8620" cost="4500000" min_level="76"/>
+			<skill id="1405" level="4" name="Божественное Вдохновение(Divine Inspiration)" item_id="8621" cost="4500000" min_level="76"/>
+			<skill id="252" level="46" name="Владение Легкой Броней(Light Armor Mastery)" cost="4500000" min_level="76"/>
+			<skill id="251" level="46" name="Владение Магической Броней(Robe Mastery)" cost="4500000" min_level="76"/>
+			<skill id="250" level="43" name="Владение Оружием(Weapon Mastery)" cost="4500000" min_level="76"/>
+			<skill id="253" level="44" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="4500000" min_level="76"/>
+			<skill id="1245" level="15" name="Кража Сущности(Steal Essence)" cost="4500000" min_level="76"/>
+			<skill id="1837" level="1" name="Оседлать Черного Медведя(Mount Black Bear)" item_id="90042" min_level="76"/>
+			<skill id="1246" level="13" name="Печать Безмолвия(Seal of Silence)" cost="4500000" min_level="76"/>
+			<skill id="1099" level="16" name="Печать Замедления(Seal of Slow)" cost="4500000" min_level="76"/>
+			<skill id="1104" level="15" name="Печать Зимы(Seal of Winter)" cost="4500000" min_level="76"/>
+			<skill id="1247" level="15" name="Печать Наказания(Seal of Scourge)" cost="4500000" min_level="76"/>
+			<skill id="1208" level="18" name="Печать Оков(Seal of Binding)" cost="4500000" min_level="76"/>
+			<skill id="1248" level="13" name="Печать Отставания(Seal of Suspension)" cost="4500000" min_level="76"/>
+			<skill id="1096" level="17" name="Печать Хаоса(Seal of Chaos)" cost="4500000" min_level="76"/>
+			<skill id="1414" level="1" name="Победа Паагрио(Victories of Pa'agrio)" item_id="90117" cost="4500000" min_level="76"/>
+			<skill id="1306" level="11" name="Ритуал Жизни(Ritual of Life)" cost="4500000" min_level="76"/>
+			<skill id="1256" level="14" name="Сердце Паагрио(Pa'agrio's Heart)" cost="4500000" min_level="76"/>
+			<skill id="1097" level="21" name="Сонный Дух(Dreaming Spirit)" cost="4500000" min_level="76"/>
+			<skill id="1092" level="20" name="Страх(Fear)" cost="4500000" min_level="76"/>
+			<skill id="1305" level="11" name="Честь Паагрио(Pa'agrio's Honor)" cost="4500000" min_level="76"/>
+			<skill id="146" level="47" name="Антимагия(Anti Magic)" cost="4500000" min_level="77"/>
+			<skill id="252" level="47" name="Владение Легкой Броней(Light Armor Mastery)" cost="4500000" min_level="77"/>
+			<skill id="251" level="47" name="Владение Магической Броней(Robe Mastery)" cost="4500000" min_level="77"/>
+			<skill id="250" level="44" name="Владение Оружием(Weapon Mastery)" cost="4500000" min_level="77"/>
+			<skill id="253" level="45" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="4500000" min_level="77"/>
+			<skill id="1367" level="1" name="Печать Болезни(Seal of Disease)" item_id="90118" cost="4500000" min_level="77"/>
+			<skill id="146" level="48" name="Антимагия(Anti Magic)" cost="9800000" min_level="78"/>
+			<skill id="252" level="48" name="Владение Легкой Броней(Light Armor Mastery)" cost="9800000" min_level="78"/>
+			<skill id="251" level="48" name="Владение Магической Броней(Robe Mastery)" cost="9800000" min_level="78"/>
+			<skill id="250" level="45" name="Владение Оружием(Weapon Mastery)" cost="9800000" min_level="78"/>
+			<skill id="253" level="46" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="9800000" min_level="78"/>
+			<skill id="1245" level="16" name="Кража Сущности(Steal Essence)" cost="9800000" min_level="78"/>
+			<skill id="1416" level="1" name="Кулак Паагрио(Pa'agrio's Fist)" item_id="90119" cost="9800000" min_level="78"/>
+			<skill id="1246" level="14" name="Печать Безмолвия(Seal of Silence)" cost="9800000" min_level="78"/>
+			<skill id="1099" level="17" name="Печать Замедления(Seal of Slow)" cost="9800000" min_level="78"/>
+			<skill id="1104" level="16" name="Печать Зимы(Seal of Winter)" cost="9800000" min_level="78"/>
+			<skill id="1247" level="16" name="Печать Наказания(Seal of Scourge)" cost="9800000" min_level="78"/>
+			<skill id="1208" level="19" name="Печать Оков(Seal of Binding)" cost="9800000" min_level="78"/>
+			<skill id="1248" level="14" name="Печать Отставания(Seal of Suspension)" cost="9800000" min_level="78"/>
+			<skill id="1096" level="18" name="Печать Хаоса(Seal of Chaos)" cost="9800000" min_level="78"/>
+			<skill id="1306" level="12" name="Ритуал Жизни(Ritual of Life)" cost="9800000" min_level="78"/>
+			<skill id="1256" level="15" name="Сердце Паагрио(Pa'agrio's Heart)" cost="9800000" min_level="78"/>
+			<skill id="1097" level="22" name="Сонный Дух(Dreaming Spirit)" cost="9800000" min_level="78"/>
+			<skill id="1092" level="21" name="Страх(Fear)" cost="9800000" min_level="78"/>
+			<skill id="1305" level="12" name="Честь Паагрио(Pa'agrio's Honor)" cost="9800000" min_level="78"/>
+			<skill id="1366" level="1" name="Печать Отчаяния(Seal of Despair)" item_id="90120" cost="9800000" min_level="79"/>
+			<skill id="1427" level="1" name="Пламя Непобедимости(Flames of Invincibility)" item_id="90121" cost="9800000" min_level="80"/>
+		</class>
+	</normal_skill_tree>
+</list>

@@ -1,0 +1,81 @@
+	<!ELEMENT list (instance)*>
+	<!ELEMENT instance (collapse|level|party|return|teleport|remove|give|quest|reuse|spawns|doors|zones|add_parameters)*>
+	<!ATTLIST instance
+			maxChannels CDATA #REQUIRED
+			collapseIfEmpty CDATA #REQUIRED
+			dispelBuffs CDATA #IMPLIED
+			id CDATA #REQUIRED
+			name CDATA #REQUIRED
+			resetReuse CDATA #IMPLIED
+			sharedReuseGroup CDATA #IMPLIED
+			timelimit CDATA #IMPLIED>
+	<!ELEMENT collapse (#PCDATA)>
+	<!ATTLIST collapse
+		on-party-dismiss CDATA #REQUIRED
+		timer CDATA #REQUIRED>
+	<!ELEMENT level (#PCDATA)>
+	<!ATTLIST level
+		max CDATA #IMPLIED
+		min CDATA #IMPLIED>
+	<!ELEMENT party (#PCDATA)>
+	<!ATTLIST party
+		max CDATA #REQUIRED
+		min CDATA #REQUIRED>
+	<!ELEMENT return (#PCDATA)>
+	<!ATTLIST return
+		loc CDATA #REQUIRED>
+	<!ELEMENT teleport (#PCDATA)>
+	<!ATTLIST teleport
+		loc CDATA #REQUIRED>
+		<!ELEMENT remove (#PCDATA)>
+	<!ATTLIST remove
+		count CDATA #REQUIRED
+		itemId CDATA #REQUIRED
+		necessary CDATA #REQUIRED>
+	<!ELEMENT give (#PCDATA)>
+		<!ATTLIST give
+		count CDATA #REQUIRED
+		itemId CDATA #REQUIRED>
+	<!ELEMENT quest (#PCDATA)>
+	<!ATTLIST quest
+		id CDATA #REQUIRED>
+	<!ELEMENT reuse (#PCDATA)>
+	<!ATTLIST reuse
+		resetReuse CDATA #REQUIRED
+		setUponEntry CDATA #REQUIRED
+		sharedReuseGroup CDATA #REQUIRED>
+	<!ELEMENT spawns (spawn|group)*>
+	<!ELEMENT spawn (coords)*>
+	<!ATTLIST spawn
+		count CDATA #IMPLIED
+		mobId CDATA #REQUIRED
+		respawn CDATA #IMPLIED
+		respawnRnd CDATA #IMPLIED
+		type CDATA #REQUIRED>
+	<!ELEMENT coords (#PCDATA)>
+	<!ATTLIST coords
+		loc CDATA #REQUIRED>
+
+<!ELEMENT group (#PCDATA)>
+<!ATTLIST group
+	name CDATA #REQUIRED
+	spawned CDATA #IMPLIED>
+
+<!ELEMENT doors (door)*>
+<!ELEMENT door (#PCDATA)>
+<!ATTLIST door
+	id CDATA #REQUIRED
+	opened CDATA #IMPLIED
+	invul CDATA #IMPLIED>
+
+<!ELEMENT zones (zone)*>
+<!ELEMENT zone (#PCDATA)>
+<!ATTLIST zone
+	name CDATA #REQUIRED
+	active CDATA #IMPLIED>
+
+<!ELEMENT add_parameters (param)*>
+<!ELEMENT param (#PCDATA)>
+<!ATTLIST param
+	name CDATA #REQUIRED
+	value CDATA #REQUIRED>

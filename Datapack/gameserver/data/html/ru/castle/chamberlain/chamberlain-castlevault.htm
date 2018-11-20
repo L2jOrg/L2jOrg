@@ -1,0 +1,16 @@
+<html><head>
+[Управляющий хранилищем замка]<br>
+На данный момент в хранилище замка имеется <font color="00ffff">%Treasure% Аден</font>.<br>
+Собрано налогов: <font color="CCFF00">%CollectedShops% Аден</font>.<br>
+Введите сумму, которую Вы желаете вложить или забрать.<br>
+<center><br>
+<table height=27 width=280 bgColor="cccccc"><tbody><tr>
+<td align=middle width=40>Сумма</td>
+<td align=left width=190><edit width="180" var="amount" type="number"></td>
+<td align=left width=40>Аден</td>
+</tr></tbody></table><br>
+<button value="Забрать" action="bypass -h npc_%objectId%_TakeTreasure $amount" width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br>
+<button value="Вложить" action="bypass -h npc_%objectId%_PutTreasure $amount" width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br>
+<button value="Отмена" action="bypass -h npc_%objectId%_default" width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br>
+</center>
+</body></html>

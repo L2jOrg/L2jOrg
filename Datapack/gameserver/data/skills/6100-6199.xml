@@ -1,0 +1,1537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="6100" levels="3" name="Turkey\'s Choice - Scissors">
+		<!--  Done by n0nam3
+		      Description: Turkey's Choice - Scissors.
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6103" levels="5" name="Showdown with the Turkey - 1st Win">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: 1st win.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<table name="#icon">icon.xmas_pcwin1_i00 icon.xmas_pcwin2_i00 icon.xmas_pcwin3_i00 icon.xmas_pcwin4_i00 icon.xmas_pcwin5_i00</table>
+		<table name="#abnormal_level">1 2 3 4 5</table>
+		<set name="icon" value="#icon"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="event_win"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6104" levels="1" name="Event Cancel">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Reset score.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="event_win"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6105" levels="1" name="Turkey\'s Mistake">
+		<!--
+			  Done by n0nam3
+		      Description: "The stupid turkey's mistake. For 1 hour, increases Max HP by 10%, Max MP by 10%, Max CP by 10%, moving speed by 15%, P. Atk. by 10%, M. Atk. by 15%, critical rate by 5, critical impact by 15%, and the rate of Prominent Damage occurring through damage magic by 2."
+		-->
+		<set name="icon" value="icon.turkey_buff_i00"/>
+		<set name="hitTime" value="4000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="event_santa_reward"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="maxHp" value="1.1"/>
+				<mul stat="maxMp" value="1.1"/>
+				<mul stat="maxCp" value="1.1"/>
+				<mul stat="runSpd" value="1.15"/>
+				<mul stat="pAtk" value="1.1"/>
+				<mul stat="mAtk" value="1.15"/>
+				<add stat="basePCritRate" value="5"/>
+				<add stat="p_critical_damage_per" value="15"/>
+				<add stat="baseMCritRate" value="20"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6106" levels="1" name="Winter Holiday Festival">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: "Christmas festival. For 1 hour, increases Max HP by 5%, Max MP by 5%, Max CP by 5%, moving speed by 10, P. Atk. by 8%, and M. Atk. by 10%."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.xmas_miracle_i00"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="event_santa_reward"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6107" levels="1" name="Winter Holiday Blessing - Gludio">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: "Christmas Blessing - Registered in Gludio territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.skill5762"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="604800"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="event_territory"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6108" levels="1" name="Winter Holiday Blessing - Dion">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: "Christmas Blessing - Registered in Dion territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.skill5762"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="604800"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="event_territory"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6109" levels="1" name="Winter Holiday Blessing - Giran">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: "Christmas Blessing - Registered in Giran territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.skill5762"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="604800"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="event_territory"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6110" levels="1" name="Winter Holiday Blessing - Oren">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: "Christmas Blessing - Registered in Oren territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.skill5762"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="604800"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="event_territory"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6111" levels="1" name="Winter Holiday Blessing - Aden">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: "Christmas Blessing - Registered in Aden territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.skill5762"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="604800"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="event_territory"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6112" levels="1" name="Winter Holiday Blessing - Innadril">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: "Christmas Blessing - Registered in Innadril territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.skill5762"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="604800"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="event_territory"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6113" levels="1" name="Winter Holiday Blessing - Goddard">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: "Christmas Blessing - Registered in Goddard territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.skill5762"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="604800"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="event_territory"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6114" levels="1" name="Winter Holiday Blessing - Rune">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: "Christmas Blessing - Registered in Rune territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.skill5762"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="604800"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="event_territory"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6115" levels="1" name="Winter Holiday Blessing - Schuttgart">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: "Christmas Blessing - Registered in Schuttgart territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.skill5762"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="604800"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="event_territory"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6116" levels="1" name="Attacks the Turkey">
+		<!--  Done by n0nam3
+		      Description: Attacks the Turkey
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6117" levels="3" name="Choice - Scissors">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: You have selected Scissors. You cannot move for 30 seconds.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<table name="#icon">icon.xmas_gawi_i00 icon.xmas_bawi_i00 icon.xmas_bo_i00</table>
+		<table name="#abnormal_level">1 2 3</table>
+		<set name="icon" value="#icon"/>
+		<set name="castRange" value="500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="event_gawi"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6118" levels="1" name="Christmas Blessing">
+		<set name="icon" value="icon.etc_x_mas_tree_i00"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="200"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6119" levels="1" name="Blessing of Plenty">
+		<set name="icon" value="icon.skill5662"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="200"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6120" levels="1" name="Santa\'s Reward">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: "Santa Claus' reward. For 1 hour, increases Max HP by 10%, Max MP by 10%, Max CP by 10%, moving speed by 15%, P. Atk. by 10%, M. Atk. by 15%, critical rate by 5, critical impact by 15%, and the rate of Prominent Damage occurring through damage magic by 2."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="event_santa_reward"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6124" levels="1" name="Agathion Cute Trick - Neolithica">
+		<!--
+		      Last modify: 19.01.2010
+		      Description: Able to see the summoned spirit perform cute tricks.
+		-->
+		<set name="icon" value="icon.skill_agathion_cute"/>
+		<set name="hitTime" value="3000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="55"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<cond msgId="2292">
+			<player agathion="16063"/>
+		</cond>
+	</skill>
+	<skill id="6125" levels="1" name="Paralysis">
+		<set name="icon" value="icon.skill1170"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="PARALYZE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="paralyze"/>
+		<set name="magicLevel" value="40"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="PARALYZE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="PARALYZE"/>
+		<for>
+			<effect name="Paralyze"/>
+		</for>
+	</skill>
+	<skill id="6126" levels="1" name="Paralysis">
+		<set name="icon" value="icon.skill1170"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="PARALYZE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="paralyze"/>
+		<set name="magicLevel" value="40"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="PARALYZE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="PARALYZE"/>
+		<for>
+			<effect name="Paralyze"/>
+		</for>
+	</skill>
+	<skill id="6127" levels="1" name="Anti-limit">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="magicLevel" value="80"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6128" levels="1" name="Presentation - Cow Rage">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="76"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6129" levels="1" name="Stun">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: A state of instant paralysis caused by the shock
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.skill0092"/>
+		<set name="reuseDelay" value="6000"/>
+		<set name="coolTime" value="800"/>
+		<set name="hitTime" value="1000"/>
+		<set name="mp_consume" value="85"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="95"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+	</skill>
+	<skill id="6130" levels="1" name="Mutant Curse">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Curse of the Mutant Animal: Temporarily in shock and unable to move.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.skill0092"/>
+		<set name="reuseDelay" value="6000"/>
+		<set name="coolTime" value="2000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="6000"/>
+		<set name="mp_consume" value="43"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="95"/>
+		<set name="affectLimit" value="10;10"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+	</skill>
+	<skill id="6131" levels="1" name="Decrease Speed">
+		<!--
+			Last modify:	06.01.2010
+			Description: Curse of the Mutant Animal: Moving speed is decreased momentarily. Effect 1.
+		-->
+		<set name="icon" value="icon.skill1160"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="12"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="magicLevel" value="95"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="1500"/>
+		<set name="activateRate" value="80"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul order="0x50" stat="runSpd" value="0.85"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6132" levels="1" name="Decrease Atk. Spd.">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Curse of the Mutant Animal: Atk. Spd. is decreased momentarily. Effect 1.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.skill4038"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="13"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="attack_time_up"/>
+		<set name="magicLevel" value="95"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6133" levels="1" name="Mysterious Effect">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Head is enlarged.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.skill2513"/>
+		<set name="castRange" value="900"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="BIG_HEAD"/>
+		<set name="abnormal_time" value="1800"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="big_head"/>
+		<set name="magicLevel" value="95"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="ETC"/>
+	</skill>
+	<skill id="6134" levels="1" name="Mutant Curse">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Curse of the Mutant Animal: Atk. Spd. and moving speed are decreased momentarily. Effect 1.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.skill4038"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="15"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="all_speed_down"/>
+		<set name="magicLevel" value="95"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6135" levels="1" name="Mutant Curse">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Curse of the Mutant Animal: Temporarily in shock and unable to move.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="icon" value="icon.skill0092"/>
+		<set name="reuseDelay" value="6000"/>
+		<set name="coolTime" value="2000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="6000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="2"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="95"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+	</skill>
+	<skill id="6136" levels="1" name="Agathion Cute Trick - Juju">
+		<!--
+		      Last modify: 19.01.2010
+		      Description: Able to see the summoned spirit perform cute tricks.
+		-->
+		<set name="icon" value="icon.skill_agathion_cute"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="55"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<cond msgId="2292">
+			<player agathion="16064"/>
+		</cond>
+	</skill>
+	<skill id="6137" levels="1" name="Agathion Juju - Mysterious Effect">
+		<!--
+		      Last modify: 19.01.2010
+		      Description: Makes the head enlarge.
+		-->
+		<set name="icon" value="icon.skill2513"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="BIG_HEAD"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_type" value="big_head"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="trait" value="ETC"/>
+		<cond msgId="2292">
+			<player agathion="16064"/>
+		</cond>
+		<for>
+			<effect/>
+		</for>
+	</skill>
+	<skill id="6138" levels="1" name="Agathion Juju - Large Firecracker">
+		<!--
+		      Last modify: 19.01.2010
+		      Description: Can set off large firecrackers.
+		-->
+		<set name="icon" value="icon.skill_agathion_cute"/>
+		<set name="reuseDelay" value="20000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="55"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HOT"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<cond msgId="2292">
+			<player agathion="16064"/>
+		</cond>
+	</skill>
+	<skill id="6139" levels="1" name="Fake Tears">
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: "For 10 minutes, weapon appearances change through the effect of the ""Fake Tears"" that were scattered by ""Pierre Baguette."" But, weapons don't change their abilities."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 30-6-2009  11:35
+		-->
+		<set name="icon" value="icon.etc_water_of_silen_i00"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="hitTime" value="100"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="CHANGE_WP"/>
+		<set name="abnormal_time" value="600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="wp_change_event"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6140" levels="3" name="Bog Stride">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<table name="#abnormal_level">1 2 3</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="mp_consume" value="75"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6141" levels="1" name="Source of Marsh">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="attack_time_up"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6142" levels="3" name="Tar Trap">
+  		<!--
+               Description: Covered in hot and sticky tar. Movement is impaired. Due to the burning tar, for 5 minbutes, moving speed is decreased 60% and P. Def. and evasion are decreased 20%.
+          -->
+		<table name="#runSpd">0.7 0.4 0.1</table>
+		<table name="#pDef">0.9 0.8 0.7</table>
+		<table name="#pEvasRate">0.9 0.8 0.7</table>
+		<table name="#abnormal_level">1 2 3</table>
+		<set name="icon" value="icon.skill0770"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="300"/>
+		<set name="hitTime" value="1000"/>
+		<set name="mp_consume" value="72"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul order="0x50" stat="runSpd" value="#runSpd"/>
+				<mul stat="pDef" value="#pDef"/>
+				<mul stat="pEvasRate" value="#pEvasRate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6143" levels="1" name="Ancient Beam">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="4000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="74"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="82"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6144" levels="1" name="Ancient Beam">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="4000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="74"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="82"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6145" levels="1" name="Earth Wyrm\'s Evil Aura">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="mp_consume" value="74"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="pd_up"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6146" levels="1" name="Forfeiture of Will">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="4000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="pd_down"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6147" levels="1" name="Kasha\'s Divine Protection">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="4000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="74"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="dmg_shield"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6148" levels="1" name="Altar\'s Curse">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill1064"/>
+		<set name="reuseDelay" value="4000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="74"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="silence"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6149" levels="1" name="Kasha\'s Brand">
+		<!--
+			Last modify:	12.12.2009
+			Description:
+			Kasha's Betrayal. For 15 minutes, decreases P. Atk./P. Def./moving speed by 50%.
+		-->
+		<set name="icon" value="icon.skill0122"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="900"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="multi_debuff"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="cancelable" value="false"/>
+		<for>
+			<effect>
+				<mul order="0x50" stat="pAtk" value="0.5"/>
+				<mul order="0x50" stat="pDef" value="0.5"/>
+				<mul order="0x50" stat="runSpd" value="0.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6150" levels="4" name="Kasha\'s Curse">
+		<table name="#icon">icon.skill6151_1 icon.skill6151_2 icon.skill6151_3 icon.skill6151_4</table>
+		<table name="#pAtkSpd">1.05 1.1 1.15 1.2</table>
+		<set name="icon" value="#icon"/>
+		<set name="hitTime" value="2000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="11"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="pd_down"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="cancelable" value="false"/>
+		<for>
+			<effect>
+				<mul stat="pAtkSpd" value="#pAtkSpd"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6151" levels="4" name="Kasha\'s Curse">
+		<table name="#icon">icon.skill6151_1 icon.skill6151_2 icon.skill6151_3 icon.skill6151_4</table>
+		<table name="#pAtkSpd">1.05 1.1 1.15 1.2</table>
+		<set name="icon" value="#icon"/>
+		<set name="hitTime" value="2000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="11"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="pd_down"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="cancelable" value="false"/>
+		<for>
+			<effect>
+				<mul stat="pAtkSpd" value="#pAtkSpd"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6152" levels="4" name="Kasha\'s Yearning">
+		<table name="#icon">icon.skill6152_1 icon.skill6152_2 icon.skill6152_3 icon.skill6152_4</table>
+		<table name="#pAtk">1.05 1.1 1.15 1.2</table>
+		<set name="icon" value="#icon"/>
+		<set name="hitTime" value="2000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="11"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="signal_a"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="cancelable" value="false"/>
+		<for>
+			<effect>
+				<mul stat="pAtk" value="#pAtk"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6153" levels="4" name="Kasha\'s Yearning">
+		<table name="#icon">icon.skill6152_1 icon.skill6152_2 icon.skill6152_3 icon.skill6152_4</table>
+		<table name="#pAtk">1.05 1.1 1.15 1.2</table>
+		<set name="icon" value="#icon"/>
+		<set name="hitTime" value="2000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="11"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="signal_a"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="cancelable" value="false"/>
+		<for>
+			<effect>
+				<mul stat="pAtk" value="#pAtk"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6154" levels="4" name="Kasha\'s Despair">
+		<table name="#icon">icon.skill6154_1 icon.skill6154_2 icon.skill6154_3 icon.skill6154_4</table>
+		<table name="#pCritRate">200 300 400 500</table>
+		<set name="icon" value="#icon"/>
+		<set name="hitTime" value="3000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="11"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="max_hp_down"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="cancelable" value="false"/>
+		<set name="trait" value="BLEED"/>
+		<for>
+			<effect>
+				<add stat="pCritRate" value="#pCritRate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6155" levels="4" name="Kasha\'s Despair">
+		<table name="#icon">icon.skill6154_1 icon.skill6154_2 icon.skill6154_3 icon.skill6154_4</table>
+		<table name="#pCritRate">200 300 400 500</table>
+		<set name="icon" value="#icon"/>
+		<set name="hitTime" value="3000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="11"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="max_hp_down"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="cancelable" value="false"/>
+		<set name="trait" value="BLEED"/>
+		<for>
+			<effect>
+				<add stat="pCritRate" value="#pCritRate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6156" levels="1" name="Mood Melody">
+		<set name="icon" value="icon.bm_magmeld"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="200"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="6166" levels="1" name="Hold">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="icon" value="icon.skill4047"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="1000"/>
+		<set name="mp_consume" value="73"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="ROOT"/>
+		<set name="abnormal_time" value="2"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="root_magically"/>
+		<set name="magicLevel" value="81"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="trait" value="HOLD"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6167" levels="12" name="Stun">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: A state of instant paralysis caused by the shock
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mp_consume">13 20 28 38 50 61 71 76 80 83 84 85</table>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="coolTime" value="800"/>
+		<set name="hitTime" value="1000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="1"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+	</skill>
+	<skill id="6168" levels="12" name="Stun">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: A state of instant paralysis caused by the shock
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mp_consume">13 20 28 38 50 61 71 76 80 83 84 85</table>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="coolTime" value="800"/>
+		<set name="hitTime" value="1000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="1"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+	</skill>
+	<skill id="6169" levels="1" name="Shyeed\'s Fury">
+		<!--
+              Description: Shyeed's cries continue to be heard. Nearby monsters seem to get stronger.
+              for PC
+        -->
+		<set name="icon" value="icon.skill6169"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="npc_fury"/>
+		<set name="magicLevel" value="83"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect/>
+		</for>
+	</skill>
+	<skill id="6170" levels="1" name="Shyeed\'s Fury">
+		<!--
+              Description: Shyeed's cries continue to be heard. Nearby monsters seem to get stronger.
+              for Monsters
+        -->
+		<set name="icon" value="icon.skill6169"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pAtk" value="1.05"/>
+				<mul stat="mAtk" value="1.05"/>
+				<add stat="p_magic_critical_dmg_per" value="5"/>
+				<add stat="p_critical_damage_per" value="5"/>
+				<mul stat="pAtkSpd" value="1.05"/>
+				<mul stat="mAtkSpd" value="1.05"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6171" levels="1" name="Full Authority">
+		<!--
+              author: n0nam3, pchayka
+              Description: It feels like something will escape the mouth. The predecessor's strength is full. Overall abilities are increased.
+        -->
+		<set name="icon" value="icon.skill6171"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="ultimate_buff"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="pAtk" value="1.05"/>
+				<mul stat="mAtk" value="1.05"/>
+				<add stat="p_magic_critical_dmg_per" value="5"/>
+				<add stat="p_critical_damage_per" value="5"/>
+				<mul stat="pAtkSpd" value="1.05"/>
+				<mul stat="mAtkSpd" value="1.05"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6172" levels="1" name="Presentation - Tyranno">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="2500"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="signal_a"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6173" levels="1" name="Presentation - Memorial Service for Repose">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="20000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6174" levels="1" name="Presentation - Incense for Relic">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6175" levels="1" name="Presentation - High Ranking Dawn Priest\'s Prayer">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="15000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6176" levels="1" name="Presentation - Dawn\'s Seal Stone">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6177" levels="1" name="Presentation - Anakim\'s Message">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="6000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6178" levels="1" name="Presentation - Ultimate Seal Motion1">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6179" levels="1" name="Presentation - Ultimate Seal Motion2">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6180" levels="1" name="Presentation - Lilith Presentation1">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="12000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6181" levels="1" name="Presentation - Lilith Presentation2">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6182" levels="1" name="Presentation - Lilith Presentation3">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6183" levels="1" name="Presentation - Lilith Presentation4">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6184" levels="1" name="Presentation - Anakim\'s Presentation1">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6185" levels="1" name="Presentation - Anakim\'s Presentation2">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6186" levels="1" name="Presentation - Anakim\'s Presentation3">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6187" levels="1" name="Presentation - Lilith Battle">
+		<!-- @pchayka
+			 Battle skill for lilith SSQ
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="700"/>
+		<set name="hitTime" value="2500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="power" value="1000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6188" levels="1" name="Presentation - Lilith\' Steward Battle1">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="700"/>
+		<set name="hitTime" value="2500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="80"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="power" value="1000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6189" levels="1" name="Presentation - Lilith\' Steward Battle2">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="700"/>
+		<set name="hitTime" value="2500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="79"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="power" value="1000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="POISON"/>
+	</skill>
+	<skill id="6190" levels="1" name="Presentation - Lilith\' Bodyguards Battle1">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="700"/>
+		<set name="hitTime" value="829"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="84"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="power" value="1000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="HOLD"/>
+	</skill>
+	<skill id="6191" levels="1" name="Presentation - Anakim Battle">
+		<!-- @pchayka
+			 Battle skill for anakim SSQ
+		-->
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="700"/>
+		<set name="hitTime" value="2000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="84"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="power" value="1000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6192" levels="1" name="Presentation - Anakim\'s Guardian Battle1">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="700"/>
+		<set name="hitTime" value="1500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="79"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="power" value="1000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6193" levels="1" name="Presentation - Anakim\'s Guardian Battle2">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="700"/>
+		<set name="hitTime" value="1500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="79"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="power" value="1000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6194" levels="1" name="Presentation - Anakim\'s Royal Guard Battle">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="700"/>
+		<set name="hitTime" value="1500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="79"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="power" value="1000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6195" levels="1" name="Presentation - Anakim\'s Executor Battle">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="700"/>
+		<set name="hitTime" value="1500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="79"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="power" value="1000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="6197" levels="1" name="Agathion Cute Trick - Oink Oink">
+		<!--
+		      Last modify: 30.12.2009
+		      Description: Able to see the summoned spirit perform cute tricks.
+		-->
+		<set name="icon" value="icon.skill_agathion_cute"/>
+		<set name="hitTime" value="3000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="55"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<cond msgId="2292">
+			<player agathion="16065"/>
+		</cond>
+	</skill>
+	<skill id="6198" levels="1" name="Agathion Cute Trick - Light of the Dawn">
+		<!--
+		      Last modify: 30.12.2009
+		      Description: Able to see the summoned spirit perform cute tricks.
+		-->
+		<set name="icon" value="icon.skill_agathion_cute"/>
+		<set name="hitTime" value="1500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="55"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<cond msgId="2292">
+			<player agathion="16066"/>
+		</cond>
+	</skill>
+	<skill id="6199" levels="7" name="Tail Strike">
+		<!--
+		      Last modify: 22.02.2010
+		      Description: Tail Strike
+		-->
+		<table name="#power">1832 2272 2751 3252 3752 4224 4640</table>
+		<table name="#magicLevel">55 60 65 70 75 80 85</table>
+		<table name="#mp_consume">109 121 131 142 151 159 165</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="6000"/>
+		<set name="castRange" value="150"/>
+		<set name="hitTime" value="2000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_MULTIFACE"/>
+		<set name="overHit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+</list>

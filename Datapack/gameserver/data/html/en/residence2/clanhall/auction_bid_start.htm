@@ -1,0 +1,26 @@
+<html><body><br>
+<font color="LEVEL">You may bid on only one clan hall at a time.</font> Once a bid is submitted, that amount is <font color="LEVEL">deposited</font> into escrow with the auction house. A <font color="LEVEL">10% transaction tax</font> is
+also deducted from the bid. The transaction tax is non-refundable, even if the bid is canceled.<br> Your<font color="LEVEL"> bid</font> must be higher than the minimum bid (or, when re-bidding, the previous bid). The clan that has submitted
+the highest bid at the end of the auction wins.<br> You currently have <font color="aaccff">%clan_adena%</font> Adena in the clan warehouse. The minimum bid is <font color="aaccff">%min_bid%</font> Adena.<br> How much do you wish to bid?
+<table width=270 border=0>
+	<tr>
+		<td width=220 align=right>
+			<edit var=bidprice width=230 align=right type=number>
+		</td>
+		<td width=40 align=right>Adena</td>
+	</tr>
+</table>
+<img src="L2UI.SquareBlank" width=270 height=10> <img src="L2UI.SquareWhite" width=270 height=1> <img src="L2UI.SquareBlank" width=270 height=5>
+<table width=270 border=0>
+	<tr>
+		<td width=100></td>
+		<td width=80 align=center>
+			<button action="bypass -h npc_%objectId%_info %id%" value="Back" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+		</td>
+		<td width=80 align=center>
+			<button action="bypass -h npc_%objectId%_bid_next %id% $bidprice" value="Confirm" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+		</td>
+	</tr>
+</table>
+<br><br>
+</body></html>

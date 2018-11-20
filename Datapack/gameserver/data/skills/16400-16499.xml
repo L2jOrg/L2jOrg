@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="16400" levels="1" name="Ferin\'s Recharge">
+		<set name="icon" value="icon.skill11760"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="1500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="16401" levels="1" name="Dimensional Death Skin">
+		<set name="icon" value="icon.skill0340"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="hitTime" value="2400"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="dmg_shield"/>
+		<set name="magicLevel" value="101"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add stat="reflectDam" value="50"/>
+				<add stat="reflectBowDam" value="50"/>
+				<add stat="reflectPSkillDam" value="50"/>
+				<add stat="reflectMSkillDam" value="50"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="16402" levels="1" name="Dimensional Horror">
+		<set name="icon" value="icon.skill1169"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="hitTime" value="2400"/>
+		<set name="abnormal_effect" value="TURN_FLEE"/>
+		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_type" value="turn_flee"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="affect_range" value="200"/>
+		<set name="magicLevel" value="101"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="dispelOnDamage" value="true"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect name="Fear"/>
+		</for>
+	</skill>
+	<skill id="16403" levels="1" name="Dimensional Judgment">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="power" value="150000"/>
+	</skill>
+	<skill id="16404" levels="1" name="Dimensional Wide Judgment">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="affectLimit" value="1;1"/>
+		<set name="target" value="TARGET_MULTIFACE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="power" value="150000"/>
+	</skill>
+	<skill id="16405" levels="1" name="Dimensional Mass Judgment">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="power" value="150000"/>
+		<set name="affect_range" value="250"/>
+	</skill>
+	<skill id="16406" levels="1" name="Dimensional Fear">
+		<set name="icon" value="icon.skill1169"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="2400"/>
+		<set name="abnormal_effect" value="TURN_FLEE"/>
+		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_type" value="turn_flee"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="magicLevel" value="101"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="dispelOnDamage" value="true"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect name="Fear"/>
+		</for>
+	</skill>
+	<skill id="16407" levels="1" name="Dimensional Resurrection Block">
+		<set name="icon" value="icon.skill_resurrection"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="1000"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="60"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="magicLevel" value="101"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect/><!--TODO  Персонаж не может воскреснуть в течение 60 сек. -->
+		</for>
+	</skill>
+	<skill id="16408" levels="3" name="Trap Fear">
+		<table name="#abnormal_time">5 6 7</table>
+		<set name="icon" value="icon.skill1381"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="abnormal_effect" value="TURN_FLEE"/>
+		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="turn_flee"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="magicLevel" value="101"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="dispelOnDamage" value="true"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect name="Fear"/>
+		</for>
+	</skill>
+	<skill id="16409" levels="3" name="Trap Hold">
+		<table name="#abnormal_time">5 6 7</table>
+		<set name="icon" value="icon.skill4047"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="abnormal_effect" value="ROOT"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="root_physically"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="ROOT"/>
+		<set name="operate_type" value="A2"/>
+		<set name="power" value="200"/>
+		<set name="trait" value="HOLD"/>
+		<set name="magicLevel" value="101"/>
+		<for>
+			<effect name="p_block_move"/>
+		</for>
+	</skill>
+	<skill id="16410" levels="3" name="Trap Aerial Yoke">
+		<table name="#abnormal_time">5 6 7</table>
+		<set name="icon" value="icon.skill11050"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="abnormal_effect" value="AIRBIND"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="airbind"/>
+		<set name="magicLevel" value="101"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="renewal" value="false"/>
+		<set name="trait" value="AIRBIND"/>
+		<for>
+			<effect name="FlyUp"/>
+		</for>
+	</skill>
+	<skill id="16411" levels="3" name="Trap Stun">
+		<table name="#abnormal_time">5 6 7</table>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="magicLevel" value="101"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="16412" levels="3" name="Trap Petrify">
+		<table name="#abnormal_time">5 6 7</table>
+		<set name="icon" value="icon.skill4111"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="abnormal_effect" value="FLESH_STONE"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="turn_stone"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PARALYZE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="magicLevel" value="101"/>
+		<for>
+			<effect name="Invulnerable"/>
+			<effect name="p_block_debuff"/>
+			<effect name="Petrification"/>
+			<effect name="i_dispel_by_slot">
+				<def name="abnormal_type" value="changebody"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="16413" levels="3" name="Trap Poison">
+		<table name="#power">-1000 -2000 -3000</table>
+		<set name="icon" value="icon.skill4035"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="abnormal_effect" value="DOT_POISON"/>
+		<set name="abnormal_level" value="10"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_type" value="poison"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="POISON"/>
+		<set name="operate_type" value="A2"/>
+		<set name="magicLevel" value="101"/>
+		<for>
+			<effect name="t_hp" interval="1" value="#power"/>
+		</for>
+	</skill>
+	<skill id="16414" levels="1" name="Peace Zone Cure">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="16415" levels="4" name="Dimensional Dark Forces">
+		<table name="#atk">0.9 0.85 0.8 0.75</table>
+		<table name="#crit">30 40 50 60</table>
+		<table name="#abnormal_level">1 2 3 4</table>
+		<set name="icon" value="icon.skill1298"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul order="0x40" stat="pAtk" value="#atk"/>
+				<mul order="0x40" stat="mAtk" value="#atk"/>
+				<sub stat="mCritRate" value="#crit"/>
+				<sub stat="pCritRate" value="#crit"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="16416" levels="10" name="Bluff Resistance">
+		<set name="icon" value="icon.skill0358"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="16417" levels="10" name="Wind Stun Resistance">
+		<set name="icon" value="icon.skill4011"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="16418" levels="10" name="Seduction Resistance">
+		<set name="icon" value="icon.skill5934"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="16425" levels="1" name="Appearance Stone: Santa Suit">
+		<set name="icon" value="BranchSys.icon.br_xmas_present_fun_i00"/>
+		<set name="hitTime" value="100"/>
+		<set name="abnormal_effect" value="SANTA_SUIT"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="1"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect/>
+		</for>
+	</skill>
+	<skill id="16426" levels="1" name="Greater Abelius Cloak (20-day)">
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="16427" levels="1" name="Greater Sapyros Cloak (20-day)">
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="16428" levels="1" name="Greater Ashagen Cloak (20-day)">
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="16429" levels="1" name="Greater Cranigg Cloak (20-day)">
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="16430" levels="1" name="Greater Soltkreig Cloak (20-day)">
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="16431" levels="1" name="Greater Naviarope Cloak (20-day)">
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="16432" levels="1" name="Greater Leister Cloak (20-day)">
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="16433" levels="1" name="Greater Lakcis Cloak (20-day)">
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="16434" levels="1" name="Greater Sayha Cloak (20-day)">
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="16435" levels="1" name="Greater Sayha Cloak (20-day)">
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="16437" levels="1" name="Master\'s Blessing - GM\'s Cheers">
+		<set name="icon" value="icon.skill0919"/>
+		<set name="castRange" value="1200"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+</list>

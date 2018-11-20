@@ -1,0 +1,2728 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="145958" y="22798" z="-2112" h="0"/>
+		<npc id="31630"/><!--Единорог Калейдос-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="147291" y="27373" z="-2200" h="47604"/>
+		<npc id="30942"/><!--Рувард -->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="146893" y="28982" z="-2248" h="32768"/>
+		<npc id="30840"/><!--Лоренцо-->
+	</spawn>
+	<spawn name="aden13_npc2418_10" count="1" respawn="60">
+		<point x="150608" y="28510" z="-2248" h="49152"/>
+		<npc id="30846"/><!--Вилберт-->
+	</spawn>
+	<spawn name="aden13_npc2418_11" count="1" respawn="60">
+		<point x="146737" y="25807" z="-2008" h="0"/>
+		<npc id="30848"/><!--Элиза-->
+	</spawn>
+	<spawn name="aden13_npc2418_12" count="1" respawn="60">
+		<point x="149216" y="24960" z="-2120" h="9137"/>
+		<npc id="30849"/><!--Седрик-->
+	</spawn>
+	<spawn name="aden13_npc2418_12" count="1" respawn="60">
+		<point x="148960" y="25120" z="-2120" h="0"/>
+		<npc id="30850"/><!--Айкен-->
+	</spawn>
+	<spawn name="aden13_npc2418_12" count="1" respawn="60">
+		<point x="148960" y="25408" z="-2120" h="0"/>
+		<npc id="30852"/><!--Синден-->
+	</spawn>
+	<spawn name="aden13_npc2418_12" count="1" respawn="60">
+		<point x="149216" y="25648" z="-2120" h="49152"/>
+		<npc id="30851"/><!--Кендра-->
+	</spawn>
+	<spawn name="aden13_npc2418_12" count="1" respawn="60">
+		<point x="149488" y="25504" z="-2120" h="32768"/>
+		<npc id="30853"/><!--Раен-->
+	</spawn>
+	<spawn name="aden13_npc2418_13" count="1" respawn="60">
+		<point x="145856" y="23168" z="-2112" h="35817"/>
+		<npc id="30854"/><!--Дрикиан-->
+	</spawn>
+	<spawn name="aden13_npc2418_13" count="1" respawn="60">
+		<point x="145648" y="22752" z="-2112" h="16384"/>
+		<npc id="30855"/><!--Десмонд-->
+	</spawn>
+	<spawn name="aden13_npc2418_13" count="1" respawn="60">
+		<point x="145646" y="23568" z="-2112" h="49152"/>
+		<npc id="30856"/><!--Винонин-->
+	</spawn>
+	<spawn name="aden13_npc2418_14" count="1" respawn="60">
+		<point x="147456" y="22576" z="-1984" h="16240"/>
+		<npc id="30857"/><!--Орвен-->
+	</spawn>
+	<spawn name="aden13_npc2418_14" count="1" respawn="60">
+		<point x="147216" y="22848" z="-1984" h="0"/>
+		<npc id="30858"/><!--Росс-->
+	</spawn>
+	<spawn name="aden13_npc2418_14" count="1" respawn="60">
+		<point x="147692" y="22848" z="-1984" h="32768"/>
+		<npc id="30860"/><!--Флавния-->
+	</spawn>
+	<spawn name="aden13_npc2418_14" count="1" respawn="60">
+		<point x="147214" y="23067" z="-1984" h="0"/>
+		<npc id="30861"/><!--Леонард-->
+	</spawn>
+	<spawn name="aden13_npc2418_14" count="1" respawn="60">
+		<point x="147693" y="23067" z="-1984" h="32768"/>
+		<npc id="30859"/><!--Вивиан-->
+	</spawn>
+	<spawn name="aden13_npc2418_15" count="1" respawn="60">
+		<point x="143968" y="24256" z="-2120" h="49152"/>
+		<npc id="30863"/><!--Гест-->
+	</spawn>
+	<spawn name="aden13_npc2418_15" count="1" respawn="60">
+		<point x="143776" y="23936" z="-2120" h="0"/>
+		<npc id="30862"/><!--Олтлин-->
+	</spawn>
+	<spawn name="aden13_npc2418_15" count="1" respawn="60">
+		<point x="144096" y="23584" z="-2120" h="16384"/>
+		<npc id="30864"/><!--Ханелин-->
+	</spawn>
+	<spawn name="aden13_npc2418_19" count="1" respawn="60">
+		<point x="147191" y="32128" z="-2472" h="8126"/>
+		<npc id="30872"/><!--Конрой-->
+	</spawn>
+	<spawn name="aden13_npc2418_19" count="1" respawn="60">
+		<point x="147727" y="32126" z="-2472" h="46430"/>
+		<npc id="30873"/><!--Колман-->
+	</spawn>
+	<spawn name="aden13_npc2418_02" count="1" respawn="60">
+		<point x="146787" y="26255" z="-2184" h="32768"/>
+		<npc id="30837"/><!--Вудро-->
+	</spawn>
+	<spawn name="aden13_npc2418_03" count="1" respawn="60">
+		<point x="146046" y="27293" z="-2184" h="49152"/>
+		<npc id="30838"/><!--Вудри-->
+	</spawn>
+	<spawn name="aden13_npc2418_05" count="1" respawn="60">
+		<point x="146054" y="27988" z="-2248" h="16384"/>
+		<npc id="30839"/><!--Холи-->
+	</spawn>
+	<spawn name="aden13_npc2418_06" count="1" respawn="60">
+		<point x="148860" y="27959" z="-2248" h="16384"/>
+		<npc id="30841"/><!--Карсон-->
+	</spawn>
+	<spawn name="aden13_npc2418_09" count="1" respawn="60">
+		<point x="150337" y="28398" z="-2240" h="48916"/>
+		<npc id="30847"/><!--Феррис-->
+	</spawn>
+	<spawn name="aden13_npc2418_60" count="1" respawn="60">
+		<point x="144512" y="25696" z="-2120" h="37187"/>
+		<npc id="30865" /><!--Ладанза-->
+	</spawn>
+	<spawn name="aden13_npc2418_60" count="1" respawn="60">
+		<point x="144496" y="25360" z="-2120" h="16384"/>
+		<npc id="30866" /><!--Марестелла-->
+	</spawn>
+	<spawn name="aden13_npc2418_60" count="1" respawn="60">
+		<point x="143856" y="25696" z="-2120" h="0"/>
+		<npc id="30867"/><!--Рева-->
+	</spawn>
+	<spawn name="aden13_npc2418_30" count="1" respawn="60" group="the_golden_chamber_36">
+		<point x="149494" y="23219" z="-2136" h="0"/>
+		<npc id="35440"/><!--Даниель-->
+	</spawn>
+	<spawn name="aden13_npc2418_31" count="1" respawn="60" group="the_silver_chamber_37">
+		<point x="150416" y="23605" z="-2112" h="0"/>
+		<npc id="35441"/><!--Диана-->
+	</spawn>
+	<spawn name="aden13_npc2418_32" count="1" respawn="60" group="the_silver_chamber_37">
+		<point x="150194" y="23758" z="-2136" h="33500"/>
+		<npc id="35442"/><!--Джейкус-->
+	</spawn>
+	<spawn name="aden13_npc2418_33" count="1" respawn="60" group="the_mithril_chamber_38">
+		<point x="145473" y="25295" z="-2112" h="0"/>
+		<npc id="35443"/><!--Крисси-->
+	</spawn>
+	<spawn name="aden13_npc2418_34" count="1" respawn="60" group="the_mithril_chamber_38">
+		<point x="145250" y="25244" z="-2120" h="32500"/>
+		<npc id="35444"/><!--Йоффе-->
+	</spawn>
+	<spawn name="aden13_npc2418_35" count="1" respawn="60" group="silver_manor_39">
+		<point x="150532" y="26500" z="-2248" h="0"/>
+		<npc id="35445"/><!--Альберт-->
+	</spawn>
+	<spawn name="aden13_npc2418_36" count="1" respawn="60" group="silver_manor_39">
+		<point x="150342" y="26471" z="-2264" h="32500"/>
+		<npc id="35446"/><!--Нейлс-->
+	</spawn>
+	<spawn name="aden13_npc2418_37" count="1" respawn="60" group="the_bronze_chamber_41">
+		<point x="144243" y="28252" z="-2240" h="33000"/>
+		<npc id="35449"/><!--ДиМаггио-->
+	</spawn>
+	<spawn name="aden13_npc2418_38" count="1" respawn="60" group="gold_manor_40">
+		<point x="144352" y="27165" z="-2264" h="0"/>
+		<npc id="35448"/><!--Руди-->
+	</spawn>
+	<spawn name="aden13_npc2418_39" count="1" respawn="60" group="gold_manor_40">
+		<point x="144237" y="27172" z="-2248" h="33000"/>
+		<npc id="35447"/><!--Корген-->
+	</spawn>
+	<spawn name="aden13_npc2418_20" count="1" respawn="60">
+		<point x="147274" y="19838" z="-1984" h="57708"/>
+		<npc id="30870"/><!--Кертис-->
+	</spawn>
+	<spawn name="aden13_npc2418_20" count="1" respawn="60">
+		<point x="147648" y="19840" z="-2000" h="42540"/>
+		<npc id="30871"/><!--Брет-->
+	</spawn>
+	<spawn name="aden13_npc2418_21" count="1" respawn="60">
+		<point x="142589" y="26137" z="-2392" h="35268"/>
+		<npc id="30874"/><!--Алдис-->
+	</spawn>
+	<spawn name="aden13_npc2418_21" count="1" respawn="60">
+		<point x="142592" y="26564" z="-2384" h="63187"/>
+		<npc id="30875"/><!--Карлтон-->
+	</spawn>
+	<spawn name="aden13_npc2418_22" count="1" respawn="60">
+		<point x="152004" y="25352" z="-2128" h="51600"/>
+		<npc id="30877"/><!--Грейсон-->
+	</spawn>
+	<spawn name="aden13_npc2418_22" count="1" respawn="60">
+		<point x="152007" y="24856" z="-2136" h="44407"/>
+		<npc id="30876"/><!--Истан-->
+	</spawn>
+	<spawn name="aden13_npc2418_23" count="1" respawn="60">
+		<point x="148142" y="28986" z="-2248" h="0"/>
+		<npc id="30842"/><!--Алексис-->
+	</spawn>
+	<spawn name="aden13_npc2418_24" count="1" respawn="60">
+		<point x="148960" y="26145" z="-2184" h="24576"/>
+		<npc id="30845"/><!--Кламп-->
+	</spawn>
+	<spawn name="aden13_npc2418_24" count="1" respawn="60">
+		<point x="148859" y="27258" z="-2184" h="49152"/>
+		<npc id="30843"/><!--Ромп-->
+	</spawn>
+	<spawn name="aden13_npc2418_24" count="1" respawn="60">
+		<point x="148155" y="26254" z="-2184" h="0"/>
+		<npc id="30844"/><!--Вальдерал-->
+	</spawn>
+	<spawn name="aden13_npc2418_26" count="1" respawn="60">
+		<point x="149044" y="29160" z="-2248" h="36864"/>
+		<npc id="31053"/><!--Киддер-->
+	</spawn>
+	<spawn name="aden13_npc2418_29" count="1" respawn="60" group="the_golden_chamber_36">
+		<point x="149358" y="23189" z="-2120" h="33500"/>
+		<npc id="35439"/><!--Кирей-->
+	</spawn>
+	<spawn name="aden13_npc2418_50" count="1" respawn="60">
+		<point x="144172" y="23664" z="-2120" h="33000"/>
+		<npc id="31613"/><!--Ноктисс-->
+	</spawn>
+	<spawn name="aden13_npc2418_51" count="1" respawn="60">
+		<point x="145928" y="22768" z="-2112" h="25000"/>
+		<npc id="31614"/><!--Радисс-->
+	</spawn>
+	<spawn name="aden13_npc2418_52" count="1" respawn="60" group="olympiad">
+		<point x="147688" y="28527" z="-2264" h="38406"/>
+		<npc id="31688"/><!--Управляющий Олимпиады-->
+	</spawn>
+	<spawn name="aden13_npc2418_52" count="1" respawn="60" group="olympiad">
+		<point x="147648" y="28599" z="-2264" h="40508"/>
+		<npc id="31690"/><!--Памятник Героям-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="145886" y="23541" z="-2112" h="0"/>
+		<npc id="31609"/><!--Единорог Аврора-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="145856" y="23511" z="-2112" h="38396"/>
+		<npc id="31608"/><!--Белинда-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="146949" y="26684" z="-2200" h="16161"/>
+		<npc id="31778"/><!--Торес-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="145891" y="28332" z="-2248" h="4835"/>
+		<npc id="30012"/><!--Член Гильдии Рыболовов-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="147890" y="23757" z="-1984" h="32665"/>
+		<npc id="31281"/><!--Керенас-->
+	</spawn>
+	<spawn count="1" respawn="60" group="royal_love_event">
+		<point x="147847" y="25914" z="-2008" h="45184"/>
+		<npc id="9020"/><!--Фринтеза-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="148465" y="27156" z="-2200" h="33000"/>
+		<npc id="33359"/><!--Кери-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="150868" y="27428" z="-2264" h="651"/>
+		<npc id="34266"/><!--Назеф-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="150862" y="28396" z="-2248" h="34152"/>
+		<npc id="34274"/><!--Наковальня Джероса-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="150842" y="28483" z="-2248" h="47600"/>
+		<npc id="34273"/><!--Джерос-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="149188" y="30493" z="-2456" h="32767"/>
+		<npc id="34271"/><!--Ру-ру-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="147674" y="29591" z="-2264" h="26634"/>
+		<npc id="34268"/><!--Рифкен-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="145920" y="28799" z="-2248" h="1352"/>
+		<npc id="34269"/><!--Тавоз-->
+	</spawn>
+	<spawn name="aden13_npc2418_59" count="1" respawn="60">
+		<point x="148009" y="28603" z="-2264" h="50450"/>
+		<npc id="30767"><!--Управляющий Аукциона-->
+			<set name="town" value="aden"/>
+		</npc>
+	</spawn>
+	<spawn name="aden13_npc2418_40" count="1" respawn="60" group="the_bronze_chamber_41">
+		<point x="144462" y="28125" z="-2264" h="0"/>
+		<npc id="35450"/><!--Галлера-->
+	</spawn>
+	<territory name="aden27_2418_31">
+		<add x="156436" y="25296" zmin="-3580" zmax="-2780"/>
+		<add x="158160" y="26136" zmin="-3580" zmax="-2780"/>
+		<add x="157956" y="32264" zmin="-3580" zmax="-2780"/>
+		<add x="153980" y="32240" zmin="-3580" zmax="-2780"/>
+		<add x="154596" y="26948" zmin="-3580" zmax="-2780"/>
+	</territory>
+	<spawn name="aden27_2418_31" count="6" respawn="23">
+		<territory name="aden27_2418_31"/>
+		<npc id="20659"/><!--Скиталец Могил-->
+	</spawn>
+	<spawn name="aden27_2418_31" count="5" respawn="23">
+		<territory name="aden27_2418_31"/>
+		<npc id="20660"/><!--Стрелок Алчности-->
+	</spawn>
+	<spawn name="aden27_2418_31" count="5" respawn="23">
+		<territory name="aden27_2418_31"/>
+		<npc id="20661"/><!--Вор Крысолюдов Хатар-->
+	</spawn>
+	<territory name="aden27_2418_30">
+		<add x="158352" y="26112" zmin="-3748" zmax="-3148"/>
+		<add x="160104" y="25644" zmin="-3748" zmax="-3148"/>
+		<add x="162660" y="28652" zmin="-3748" zmax="-3148"/>
+		<add x="161276" y="32088" zmin="-3748" zmax="-3148"/>
+		<add x="158088" y="32216" zmin="-3748" zmax="-3148"/>
+	</territory>
+	<spawn name="aden27_2418_30" count="6" respawn="23">
+		<territory name="aden27_2418_30"/>
+		<npc id="20659"/><!--Скиталец Могил-->
+	</spawn>
+	<spawn name="aden27_2418_30" count="5" respawn="23">
+		<territory name="aden27_2418_30"/>
+		<npc id="20660"/><!--Стрелок Алчности-->
+	</spawn>
+	<spawn name="aden27_2418_30" count="6" respawn="23">
+		<territory name="aden27_2418_30"/>
+		<npc id="20661"/><!--Вор Крысолюдов Хатар-->
+	</spawn>
+	<territory name="aden27_2418_29">
+		<add x="160540" y="20868" zmin="-3824" zmax="-3224"/>
+		<add x="163512" y="20408" zmin="-3824" zmax="-3224"/>
+		<add x="163540" y="26864" zmin="-3824" zmax="-3224"/>
+		<add x="161236" y="25712" zmin="-3824" zmax="-3224"/>
+	</territory>
+	<spawn name="aden27_2418_29" count="4" respawn="23">
+		<territory name="aden27_2418_29"/>
+		<npc id="20659"/><!--Скиталец Могил-->
+	</spawn>
+	<spawn name="aden27_2418_29" count="3" respawn="23">
+		<territory name="aden27_2418_29"/>
+		<npc id="20660"/><!--Стрелок Алчности-->
+	</spawn>
+	<spawn name="aden27_2418_29" count="4" respawn="23">
+		<territory name="aden27_2418_29"/>
+		<npc id="20661"/><!--Вор Крысолюдов Хатар-->
+	</spawn>
+	<territory name="aden27_2418_28">
+		<add x="153364" y="16112" zmin="-4120" zmax="-3520"/>
+		<add x="155368" y="13392" zmin="-4120" zmax="-3520"/>
+		<add x="156792" y="13864" zmin="-4120" zmax="-3520"/>
+		<add x="156172" y="18528" zmin="-4120" zmax="-3520"/>
+		<add x="154608" y="18480" zmin="-4120" zmax="-3520"/>
+	</territory>
+	<spawn name="aden27_2418_28" count="3" respawn="23">
+		<territory name="aden27_2418_28"/>
+		<npc id="20662"/><!--Предводитель Крысолюдов Хатар-->
+	</spawn>
+	<spawn name="aden27_2418_28" count="3" respawn="23">
+		<territory name="aden27_2418_28"/>
+		<npc id="20663"/><!--Горгона Хатар-->
+	</spawn>
+	<spawn name="aden27_2418_28" count="3" respawn="23">
+		<territory name="aden27_2418_28"/>
+		<npc id="20664"/><!--Око Ярости-->
+	</spawn>
+	<territory name="aden27_2418_27">
+		<add x="159132" y="15456" zmin="-3956" zmax="-3356"/>
+		<add x="163460" y="14364" zmin="-3956" zmax="-3356"/>
+		<add x="163512" y="18912" zmin="-3956" zmax="-3356"/>
+		<add x="160060" y="19836" zmin="-3956" zmax="-3356"/>
+	</territory>
+	<spawn name="aden27_2418_27" count="4" respawn="23">
+		<territory name="aden27_2418_27"/>
+		<npc id="20659"/><!--Скиталец Могил-->
+	</spawn>
+	<spawn name="aden27_2418_27" count="4" respawn="23">
+		<territory name="aden27_2418_27"/>
+		<npc id="20660"/><!--Стрелок Алчности-->
+	</spawn>
+	<spawn name="aden27_2418_27" count="4" respawn="23">
+		<territory name="aden27_2418_27"/>
+		<npc id="20661"/><!--Вор Крысолюдов Хатар-->
+	</spawn>
+	<territory name="aden27_2418_26">
+		<add x="159076" y="10056" zmin="-4148" zmax="-3548"/>
+		<add x="163404" y="10580" zmin="-4148" zmax="-3548"/>
+		<add x="163388" y="14108" zmin="-4148" zmax="-3548"/>
+		<add x="159860" y="14888" zmin="-4148" zmax="-3548"/>
+		<add x="156964" y="13820" zmin="-4148" zmax="-3548"/>
+	</territory>
+	<spawn name="aden27_2418_26" count="6" respawn="23">
+		<territory name="aden27_2418_26"/>
+		<npc id="20662"/><!--Предводитель Крысолюдов Хатар-->
+	</spawn>
+	<spawn name="aden27_2418_26" count="5" respawn="23">
+		<territory name="aden27_2418_26"/>
+		<npc id="20663"/><!--Горгона Хатар-->
+	</spawn>
+	<spawn name="aden27_2418_26" count="6" respawn="23">
+		<territory name="aden27_2418_26"/>
+		<npc id="20664"/><!--Око Ярости-->
+	</spawn>
+	<territory name="aden27_2418_25">
+		<add x="154140" y="9388" zmin="-4360" zmax="-3760"/>
+		<add x="156408" y="9324" zmin="-4360" zmax="-3760"/>
+		<add x="155884" y="11332" zmin="-4360" zmax="-3760"/>
+		<add x="153860" y="13928" zmin="-4360" zmax="-3760"/>
+	</territory>
+	<spawn name="aden27_2418_25" count="2" respawn="23">
+		<territory name="aden27_2418_25"/>
+		<npc id="20662"/><!--Предводитель Крысолюдов Хатар-->
+	</spawn>
+	<spawn name="aden27_2418_25" count="2" respawn="23">
+		<territory name="aden27_2418_25"/>
+		<npc id="20663"/><!--Горгона Хатар-->
+	</spawn>
+	<spawn name="aden27_2418_25" count="2" respawn="23">
+		<territory name="aden27_2418_25"/>
+		<npc id="20664"/><!--Око Ярости-->
+	</spawn>
+	<territory name="aden27_2418_24">
+		<add x="154440" y="3520" zmin="-4528" zmax="-3928"/>
+		<add x="156372" y="2980" zmin="-4528" zmax="-3928"/>
+		<add x="156532" y="9176" zmin="-4528" zmax="-3928"/>
+		<add x="154236" y="9216" zmin="-4528" zmax="-3928"/>
+	</territory>
+	<spawn name="aden27_2418_24" count="3" respawn="23">
+		<territory name="aden27_2418_24"/>
+		<npc id="20662"/><!--Предводитель Крысолюдов Хатар-->
+	</spawn>
+	<spawn name="aden27_2418_24" count="2" respawn="23">
+		<territory name="aden27_2418_24"/>
+		<npc id="20663"/><!--Горгона Хатар-->
+	</spawn>
+	<spawn name="aden27_2418_24" count="2" respawn="23">
+		<territory name="aden27_2418_24"/>
+		<npc id="20664"/><!--Око Ярости-->
+	</spawn>
+	<territory name="aden27_2418_23">
+		<add x="156936" y="3712" zmin="-4560" zmax="-3760"/>
+		<add x="158128" y="2412" zmin="-4560" zmax="-3760"/>
+		<add x="161092" y="4316" zmin="-4560" zmax="-3760"/>
+		<add x="158348" y="8416" zmin="-4560" zmax="-3760"/>
+		<add x="157116" y="8916" zmin="-4560" zmax="-3760"/>
+	</territory>
+	<spawn name="aden27_2418_23" count="5" respawn="23">
+		<territory name="aden27_2418_23"/>
+		<npc id="20662"/><!--Предводитель Крысолюдов Хатар-->
+	</spawn>
+	<spawn name="aden27_2418_23" count="4" respawn="23">
+		<territory name="aden27_2418_23"/>
+		<npc id="20663"/><!--Горгона Хатар-->
+	</spawn>
+	<spawn name="aden27_2418_23" count="5" respawn="23">
+		<territory name="aden27_2418_23"/>
+		<npc id="20664"/><!--Око Ярости-->
+	</spawn>
+	<territory name="aden27_2418_22">
+		<add x="162604" y="4276" zmin="-4164" zmax="-3464"/>
+		<add x="163496" y="4244" zmin="-4164" zmax="-3464"/>
+		<add x="163464" y="9096" zmin="-4164" zmax="-3464"/>
+		<add x="162592" y="10200" zmin="-4164" zmax="-3464"/>
+		<add x="159144" y="9868" zmin="-4164" zmax="-3464"/>
+	</territory>
+	<spawn name="aden27_2418_22" count="5" respawn="23">
+		<territory name="aden27_2418_22"/>
+		<npc id="20662"/><!--Предводитель Крысолюдов Хатар-->
+	</spawn>
+	<spawn name="aden27_2418_22" count="4" respawn="23">
+		<territory name="aden27_2418_22"/>
+		<npc id="20663"/><!--Горгона Хатар-->
+	</spawn>
+	<spawn name="aden27_2418_22" count="5" respawn="23">
+		<territory name="aden27_2418_22"/>
+		<npc id="20664"/><!--Око Ярости-->
+	</spawn>
+	<territory name="aden27_2418_21">
+		<add x="162044" y="2384" zmin="-3936" zmax="-3236"/>
+		<add x="163632" y="1476" zmin="-3936" zmax="-3236"/>
+		<add x="163600" y="4052" zmin="-3936" zmax="-3236"/>
+		<add x="161680" y="4108" zmin="-3936" zmax="-3236"/>
+	</territory>
+	<spawn name="aden27_2418_21" count="2" respawn="23">
+		<territory name="aden27_2418_21"/>
+		<npc id="20664"/><!--Око Ярости-->
+	</spawn>
+	<spawn name="aden27_2418_21" count="1" respawn="23">
+		<territory name="aden27_2418_21"/>
+		<npc id="20665"/><!--Старший Орк Тайк-->
+	</spawn>
+	<spawn name="aden27_2418_21" count="1" respawn="23">
+		<territory name="aden27_2418_21"/>
+		<npc id="20667"/><!--Гниющий Медведь Зомби-->
+	</spawn>
+	<territory name="aden27_2418_20">
+		<add x="160432" y="116" zmin="-3604" zmax="-3204"/>
+		<add x="161752" y="124" zmin="-3604" zmax="-3204"/>
+		<add x="163180" y="1424" zmin="-3604" zmax="-3204"/>
+		<add x="161960" y="2204" zmin="-3604" zmax="-3204"/>
+		<add x="160820" y="1380" zmin="-3604" zmax="-3204"/>
+	</territory>
+	<spawn name="aden27_2418_20" count="1" respawn="23">
+		<territory name="aden27_2418_20"/>
+		<npc id="20664"/><!--Око Ярости-->
+	</spawn>
+	<spawn name="aden27_2418_20" count="1" respawn="23">
+		<territory name="aden27_2418_20"/>
+		<npc id="20665"/><!--Старший Орк Тайк-->
+	</spawn>
+	<spawn name="aden27_2418_20" count="1" respawn="23">
+		<territory name="aden27_2418_20"/>
+		<npc id="20667"/><!--Гниющий Медведь Зомби-->
+	</spawn>
+	<territory name="aden27_2418_18">
+		<add x="158360" y="52" zmin="-4440" zmax="-3940"/>
+		<add x="159364" y="72" zmin="-4440" zmax="-3940"/>
+		<add x="159944" y="1352" zmin="-4440" zmax="-3940"/>
+		<add x="159172" y="2960" zmin="-4440" zmax="-3940"/>
+		<add x="158108" y="2056" zmin="-4440" zmax="-3940"/>
+	</territory>
+	<spawn name="aden27_2418_18" count="2" respawn="23">
+		<territory name="aden27_2418_18"/>
+		<npc id="20664"/><!--Око Ярости-->
+	</spawn>
+	<spawn name="aden27_2418_18" count="1" respawn="23">
+		<territory name="aden27_2418_18"/>
+		<npc id="20665"/><!--Старший Орк Тайк-->
+	</spawn>
+	<spawn name="aden27_2418_18" count="1" respawn="23">
+		<territory name="aden27_2418_18"/>
+		<npc id="20667"/><!--Гниющий Медведь Зомби-->
+	</spawn>
+	<territory name="aden27_2418_17">
+		<add x="152528" y="152" zmin="-4500" zmax="-3900"/>
+		<add x="157676" y="116" zmin="-4500" zmax="-3900"/>
+		<add x="157540" y="2684" zmin="-4500" zmax="-3900"/>
+		<add x="154476" y="3476" zmin="-4500" zmax="-3900"/>
+	</territory>
+	<spawn name="aden27_2418_17" count="5" respawn="23">
+		<territory name="aden27_2418_17"/>
+		<npc id="20664"/><!--Око Ярости-->
+	</spawn>
+	<spawn name="aden27_2418_17" count="4" respawn="23">
+		<territory name="aden27_2418_17"/>
+		<npc id="20665"/><!--Старший Орк Тайк-->
+	</spawn>
+	<spawn name="aden27_2418_17" count="5" respawn="23">
+		<territory name="aden27_2418_17"/>
+		<npc id="20667"/><!--Гниющий Медведь Зомби-->
+	</spawn>
+	<territory name="aden27_2418_19">
+		<add x="159760" y="1844" zmin="-4472" zmax="-3672"/>
+		<add x="161768" y="3236" zmin="-4472" zmax="-3672"/>
+		<add x="160912" y="3700" zmin="-4472" zmax="-3672"/>
+		<add x="159264" y="2916" zmin="-4472" zmax="-3672"/>
+	</territory>
+	<spawn name="aden27_2418_19" count="1" respawn="23">
+		<territory name="aden27_2418_19"/>
+		<npc id="20664"/><!--Око Ярости-->
+	</spawn>
+	<spawn name="aden27_2418_19" count="1" respawn="23">
+		<territory name="aden27_2418_19"/>
+		<npc id="20665"/><!--Старший Орк Тайк-->
+	</spawn>
+	<spawn name="aden27_2418_19" count="1" respawn="23">
+		<territory name="aden27_2418_19"/>
+		<npc id="20667"/><!--Гниющий Медведь Зомби-->
+	</spawn>
+	<territory name="aden25_2418_01">
+		<add x="134340" y="120" zmin="-4172" zmax="-3572"/>
+		<add x="136996" y="212" zmin="-4172" zmax="-3572"/>
+		<add x="135356" y="2096" zmin="-4172" zmax="-3572"/>
+		<add x="133880" y="1332" zmin="-4172" zmax="-3572"/>
+	</territory>
+	<spawn name="aden25_2418_01" count="2" respawn="30">
+		<territory name="aden25_2418_01"/>
+		<npc id="20684"/><!--Воин Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_01" count="2" respawn="30">
+		<territory name="aden25_2418_01"/>
+		<npc id="20685"/><!--Шаман Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_01" count="2" respawn="30">
+		<territory name="aden25_2418_01"/>
+		<npc id="20686"/><!--Вождь Фавнов Ванор-->
+	</spawn>
+	<territory name="aden25_2418_08">
+		<add x="135968" y="7452" zmin="-4412" zmax="-3712"/>
+		<add x="137812" y="7324" zmin="-4412" zmax="-3712"/>
+		<add x="138896" y="13324" zmin="-4412" zmax="-3712"/>
+		<add x="135232" y="14504" zmin="-4412" zmax="-3712"/>
+		<add x="134024" y="11940" zmin="-4412" zmax="-3712"/>
+	</territory>
+	<spawn name="aden25_2418_08" count="8" respawn="30">
+		<territory name="aden25_2418_08"/>
+		<npc id="20684"/><!--Воин Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_08" count="7" respawn="30">
+		<territory name="aden25_2418_08"/>
+		<npc id="20685"/><!--Шаман Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_08" count="8" respawn="30">
+		<territory name="aden25_2418_08"/>
+		<npc id="20686"/><!--Вождь Фавнов Ванор-->
+	</spawn>
+	<territory name="aden25_2418_09">
+		<add x="138212" y="7244" zmin="-4388" zmax="-3788"/>
+		<add x="140256" y="6776" zmin="-4388" zmax="-3788"/>
+		<add x="140888" y="10668" zmin="-4388" zmax="-3788"/>
+		<add x="138844" y="11252" zmin="-4388" zmax="-3788"/>
+	</territory>
+	<spawn name="aden25_2418_09" count="3" respawn="30">
+		<territory name="aden25_2418_09"/>
+		<npc id="20684"/><!--Воин Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_09" count="2" respawn="30">
+		<territory name="aden25_2418_09"/>
+		<npc id="20685"/><!--Шаман Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_09" count="3" respawn="30">
+		<territory name="aden25_2418_09"/>
+		<npc id="20686"/><!--Вождь Фавнов Ванор-->
+	</spawn>
+	<territory name="aden25_2418_06">
+		<add x="136740" y="3176" zmin="-4588" zmax="-4188"/>
+		<add x="137664" y="3016" zmin="-4588" zmax="-4188"/>
+		<add x="137848" y="7096" zmin="-4588" zmax="-4188"/>
+		<add x="136028" y="7220" zmin="-4588" zmax="-4188"/>
+		<add x="134516" y="5780" zmin="-4588" zmax="-4188"/>
+	</territory>
+	<spawn name="aden25_2418_06" count="3" respawn="30">
+		<territory name="aden25_2418_06"/>
+		<npc id="20684"/><!--Воин Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_06" count="4" respawn="30">
+		<territory name="aden25_2418_06"/>
+		<npc id="20685"/><!--Шаман Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_06" count="3" respawn="30">
+		<territory name="aden25_2418_06"/>
+		<npc id="20686"/><!--Вождь Фавнов Ванор-->
+	</spawn>
+	<territory name="aden25_2418_07">
+		<add x="131296" y="6064" zmin="-4512" zmax="-3712"/>
+		<add x="132436" y="5332" zmin="-4512" zmax="-3712"/>
+		<add x="134368" y="5948" zmin="-4512" zmax="-3712"/>
+		<add x="135812" y="7348" zmin="-4512" zmax="-3712"/>
+		<add x="133572" y="12036" zmin="-4512" zmax="-3712"/>
+		<add x="131268" y="12096" zmin="-4512" zmax="-3712"/>
+	</territory>
+	<spawn name="aden25_2418_07" count="8" respawn="30">
+		<territory name="aden25_2418_07"/>
+		<npc id="20684"/><!--Воин Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_07" count="7" respawn="30">
+		<territory name="aden25_2418_07"/>
+		<npc id="20685"/><!--Шаман Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_07" count="8" respawn="30">
+		<territory name="aden25_2418_07"/>
+		<npc id="20686"/><!--Вождь Фавнов Ванор-->
+	</spawn>
+	<territory name="aden25_2418_04">
+		<add x="138228" y="212" zmin="-4580" zmax="-3980"/>
+		<add x="141620" y="192" zmin="-4580" zmax="-3980"/>
+		<add x="140400" y="2708" zmin="-4580" zmax="-3980"/>
+		<add x="135688" y="2804" zmin="-4580" zmax="-3980"/>
+	</territory>
+	<spawn name="aden25_2418_04" count="4" respawn="30">
+		<territory name="aden25_2418_04"/>
+		<npc id="20684"/><!--Воин Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_04" count="5" respawn="30">
+		<territory name="aden25_2418_04"/>
+		<npc id="20685"/><!--Шаман Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_04" count="4" respawn="30">
+		<territory name="aden25_2418_04"/>
+		<npc id="20686"/><!--Вождь Фавнов Ванор-->
+	</spawn>
+	<territory name="aden25_2418_05">
+		<add x="138544" y="2960" zmin="-4576" zmax="-3976"/>
+		<add x="140364" y="2880" zmin="-4576" zmax="-3976"/>
+		<add x="141196" y="3628" zmin="-4576" zmax="-3976"/>
+		<add x="140456" y="6660" zmin="-4576" zmax="-3976"/>
+		<add x="138368" y="7108" zmin="-4576" zmax="-3976"/>
+	</territory>
+	<spawn name="aden25_2418_05" count="3" respawn="30">
+		<territory name="aden25_2418_05"/>
+		<npc id="20684"/><!--Воин Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_05" count="4" respawn="30">
+		<territory name="aden25_2418_05"/>
+		<npc id="20685"/><!--Шаман Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_05" count="3" respawn="30">
+		<territory name="aden25_2418_05"/>
+		<npc id="20686"/><!--Вождь Фавнов Ванор-->
+	</spawn>
+	<territory name="aden25_2418_02">
+		<add x="132992" y="1888" zmin="-3812" zmax="-3412"/>
+		<add x="133848" y="1312" zmin="-3812" zmax="-3412"/>
+		<add x="134644" y="1868" zmin="-3812" zmax="-3412"/>
+		<add x="134416" y="2672" zmin="-3812" zmax="-3412"/>
+		<add x="133552" y="3116" zmin="-3812" zmax="-3412"/>
+		<add x="132924" y="2656" zmin="-3812" zmax="-3412"/>
+	</territory>
+	<spawn name="aden25_2418_02" count="1" respawn="30">
+		<territory name="aden25_2418_02"/>
+		<npc id="20684"/><!--Воин Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_02" count="1" respawn="30">
+		<territory name="aden25_2418_02"/>
+		<npc id="20685"/><!--Шаман Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_02" count="1" respawn="30">
+		<territory name="aden25_2418_02"/>
+		<npc id="20686"/><!--Вождь Фавнов Ванор-->
+	</spawn>
+	<territory name="aden25_2418_03">
+		<add x="133104" y="4652" zmin="-4200" zmax="-3600"/>
+		<add x="135380" y="2860" zmin="-4200" zmax="-3600"/>
+		<add x="135520" y="3684" zmin="-4200" zmax="-3600"/>
+		<add x="134480" y="4656" zmin="-4200" zmax="-3600"/>
+	</territory>
+	<spawn name="aden25_2418_03" count="1" respawn="30">
+		<territory name="aden25_2418_03"/>
+		<npc id="20684"/><!--Воин Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_03" count="1" respawn="30">
+		<territory name="aden25_2418_03"/>
+		<npc id="20685"/><!--Шаман Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_03" count="1" respawn="30">
+		<territory name="aden25_2418_03"/>
+		<npc id="20686"/><!--Вождь Фавнов Ванор-->
+	</spawn>
+	<territory name="aden25_2418_11">
+		<add x="135412" y="14676" zmin="-4040" zmax="-3440"/>
+		<add x="139528" y="13264" zmin="-4040" zmax="-3440"/>
+		<add x="141372" y="15620" zmin="-4040" zmax="-3440"/>
+		<add x="139260" y="18148" zmin="-4040" zmax="-3440"/>
+	</territory>
+	<spawn name="aden25_2418_11" count="4" respawn="30">
+		<territory name="aden25_2418_11"/>
+		<npc id="20681"/><!--Фавн Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_11" count="7" respawn="30">
+		<territory name="aden25_2418_11"/>
+		<npc id="20682"/><!--Воитель Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_11" count="8" respawn="30">
+		<territory name="aden25_2418_11"/>
+		<npc id="20683"/><!--Разведчик Фавнов Ванор-->
+	</spawn>
+	<territory name="aden25_2418_12">
+		<add x="135568" y="21920" zmin="-3852" zmax="-3252"/>
+		<add x="137652" y="17888" zmin="-3852" zmax="-3252"/>
+		<add x="138420" y="19364" zmin="-3852" zmax="-3252"/>
+		<add x="138332" y="20596" zmin="-3852" zmax="-3252"/>
+		<add x="137364" y="22240" zmin="-3852" zmax="-3252"/>
+	</territory>
+	<spawn name="aden25_2418_12" count="2" respawn="30">
+		<territory name="aden25_2418_12"/>
+		<npc id="20681"/><!--Фавн Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_12" count="4" respawn="30">
+		<territory name="aden25_2418_12"/>
+		<npc id="20682"/><!--Воитель Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_12" count="3" respawn="30">
+		<territory name="aden25_2418_12"/>
+		<npc id="20683"/><!--Разведчик Фавнов Ванор-->
+	</spawn>
+	<territory name="aden25_2418_10">
+		<add x="138920" y="11768" zmin="-4272" zmax="-3572"/>
+		<add x="141044" y="10940" zmin="-4272" zmax="-3572"/>
+		<add x="141692" y="13988" zmin="-4272" zmax="-3572"/>
+		<add x="140980" y="14352" zmin="-4272" zmax="-3572"/>
+	</territory>
+	<spawn name="aden25_2418_10" count="1" respawn="30">
+		<territory name="aden25_2418_10"/>
+		<npc id="20681"/><!--Фавн Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_10" count="2" respawn="30">
+		<territory name="aden25_2418_10"/>
+		<npc id="20682"/><!--Воитель Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_10" count="2" respawn="30">
+		<territory name="aden25_2418_10"/>
+		<npc id="20683"/><!--Разведчик Фавнов Ванор-->
+	</spawn>
+	<territory name="aden25_2418_15">
+		<add x="131256" y="29288" zmin="-3924" zmax="-3524"/>
+		<add x="134540" y="30724" zmin="-3924" zmax="-3524"/>
+		<add x="134712" y="32472" zmin="-3924" zmax="-3524"/>
+		<add x="131288" y="32456" zmin="-3924" zmax="-3524"/>
+	</territory>
+	<spawn name="aden25_2418_15" count="2" respawn="30">
+		<territory name="aden25_2418_15"/>
+		<npc id="20681"/><!--Фавн Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_15" count="3" respawn="30">
+		<territory name="aden25_2418_15"/>
+		<npc id="20682"/><!--Воитель Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_15" count="2" respawn="30">
+		<territory name="aden25_2418_15"/>
+		<npc id="20683"/><!--Разведчик Фавнов Ванор-->
+	</spawn>
+	<territory name="aden25_2418_16">
+		<add x="134756" y="30792" zmin="-3924" zmax="-3124"/>
+		<add x="139312" y="31184" zmin="-3924" zmax="-3124"/>
+		<add x="139468" y="32476" zmin="-3924" zmax="-3124"/>
+		<add x="134856" y="32420" zmin="-3924" zmax="-3124"/>
+	</territory>
+	<spawn name="aden25_2418_16" count="2" respawn="30">
+		<territory name="aden25_2418_16"/>
+		<npc id="20681"/><!--Фавн Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_16" count="2" respawn="30">
+		<territory name="aden25_2418_16"/>
+		<npc id="20682"/><!--Воитель Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_16" count="2" respawn="30">
+		<territory name="aden25_2418_16"/>
+		<npc id="20683"/><!--Разведчик Фавнов Ванор-->
+	</spawn>
+	<territory name="aden25_2418_13">
+		<add x="134376" y="21940" zmin="-3884" zmax="-3084"/>
+		<add x="137168" y="22452" zmin="-3884" zmax="-3084"/>
+		<add x="137008" y="26988" zmin="-3884" zmax="-3084"/>
+		<add x="132480" y="27216" zmin="-3884" zmax="-3084"/>
+		<add x="132004" y="24500" zmin="-3884" zmax="-3084"/>
+	</territory>
+	<spawn name="aden25_2418_13" count="4" respawn="30">
+		<territory name="aden25_2418_13"/>
+		<npc id="20681"/><!--Фавн Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_13" count="8" respawn="30">
+		<territory name="aden25_2418_13"/>
+		<npc id="20682"/><!--Воитель Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_13" count="7" respawn="30">
+		<territory name="aden25_2418_13"/>
+		<npc id="20683"/><!--Разведчик Фавнов Ванор-->
+	</spawn>
+	<territory name="aden25_2418_14">
+		<add x="132220" y="27736" zmin="-3944" zmax="-2944"/>
+		<add x="137284" y="27732" zmin="-3944" zmax="-2944"/>
+		<add x="138004" y="28780" zmin="-3944" zmax="-2944"/>
+		<add x="137128" y="30060" zmin="-3944" zmax="-2944"/>
+		<add x="133608" y="29696" zmin="-3944" zmax="-2944"/>
+		<add x="132212" y="28952" zmin="-3944" zmax="-2944"/>
+	</territory>
+	<spawn name="aden25_2418_14" count="2" respawn="30">
+		<territory name="aden25_2418_14"/>
+		<npc id="20681"/><!--Фавн Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_14" count="4" respawn="30">
+		<territory name="aden25_2418_14"/>
+		<npc id="20682"/><!--Воитель Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden25_2418_14" count="3" respawn="30">
+		<territory name="aden25_2418_14"/>
+		<npc id="20683"/><!--Разведчик Фавнов Ванор-->
+	</spawn>
+	<spawn name="aden20_npc2418_04" count="1" respawn="60" group="aden_castle_5">
+		<point x="147449" y="1899" z="216" h="49000"/>
+		<npc id="35275"/><!--Крюгер-->
+	</spawn>
+	<spawn name="aden20_npc2418_05" count="1" respawn="60" group="aden_castle_5">
+		<point x="147408" y="2320" z="221" h="16000"/>
+		<npc id="35271"/><!--Привратник-->
+	</spawn>
+	<spawn name="aden20_npc2418_02" count="1" respawn="60">
+		<point x="145747" y="21312" z="-2136" h="0"/>
+		<npc id="31001"/><!--Клаудия Атебальт-->
+	</spawn>
+	<spawn name="aden20_npc2418_03" count="1" respawn="60" group="aden_castle_5">
+		<point x="147583" y="5839" z="-890" h="49152"/>
+		<npc id="35272"/><!--Кузнец-->
+	</spawn>
+	<spawn name="aden20_npc2418_03" count="1" respawn="60" group="aden_castle_5">
+		<point x="147454" y="5839" z="-891" h="49152"/>
+		<npc id="35273"/><!--Рабочий Склада-->
+	</spawn>
+	<spawn name="aden20_npc2418_01" count="1" respawn="60">
+		<point x="147952" y="3742" z="-307" h="32768"/>
+		<npc id="35276"/><!--Элдор-->
+	</spawn>
+	<spawn name="aden20_npc2418_06" count="1" respawn="60" group="aden_castle_5">
+		<point x="147552" y="2128" z="221" h="48000"/>
+		<npc id="35271"/><!--Привратник-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="aden_castle_light_side">
+		<point x="146737" y="25913" z="-2008" h="47220"/>
+		<npc id="36613"/><!--Герольд-->
+	</spawn>
+	<spawn name="aden_chamberlain_etc" count="1" respawn="60" respawn_random="0" period_of_day="none" group="aden_castle_light_side">
+		<point x="147412" y="3355" z="-46" h="16389"/>
+		<npc id="35274"/><!--Камергер Света-->
+	</spawn>
+	<spawn name="aden_chamberlain_etc" count="1" respawn="60" respawn_random="0" period_of_day="none" group="aden_castle_dark_side">
+		<point x="147412" y="3355" z="-46" h="16389"/>
+		<npc id="36657"/>  <!--Камергер Тьмы-->
+	</spawn>
+	<spawn name="aden_chamberlain_etc" count="1" respawn="60" group="aden_castle_5">
+		<point x="147551" y="19577" z="-1968" h="16389"/>
+		<npc id="35278"/><!--Руфорд-->
+	</spawn>
+	<spawn name="aden_chamberlain_etc" count="1" respawn="10800" group="aden_castle_5">
+		<point x="147292" y="8693" z="-480" h="16389"/>
+		<npc id="35267"/><!--Привратник Внешних Владений-->
+	</spawn>
+	<spawn name="aden_chamberlain_etc" count="1" respawn="10800" group="aden_castle_5">
+		<point x="147293" y="8158" z="-470" h="49152"/>
+		<npc id="35267"/><!--Привратник Внешних Владений-->
+	</spawn>
+	<spawn name="aden_chamberlain_etc" count="1" respawn="10800" group="aden_castle_5">
+		<point x="145725" y="4799" z="-425" h="32768"/>
+		<npc id="35268"/><!--Привратник Внутренних Владений-->
+	</spawn>
+	<spawn name="aden_chamberlain_etc" count="1" respawn="10800" group="aden_castle_5">
+		<point x="146275" y="4468" z="-400" h="0"/>
+		<npc id="35268"/><!--Привратник Внутренних Владений-->
+	</spawn>
+	<spawn name="aden_chamberlain_etc" count="1" respawn="10800" group="aden_castle_5">
+		<point x="149208" y="4339" z="-440" h="0"/>
+		<npc id="35270"/><!--Привратник Внутренних Владений-->
+	</spawn>
+	<spawn name="aden_chamberlain_etc" count="1" respawn="10800" group="aden_castle_5">
+		<point x="148636" y="4756" z="-400" h="32768"/>
+		<npc id="35270"/><!--Привратник Внутренних Владений-->
+	</spawn>
+	<spawn name="aden_chamberlain_etc" count="1" respawn="10800" group="aden_castle_5">
+		<point x="147702" y="6345" z="-400" h="16389"/>
+		<npc id="35269"/><!--Привратник Зала-->
+	</spawn>
+	<spawn name="aden_chamberlain_etc" count="1" respawn="10800" group="aden_castle_5">
+		<point x="147362" y="6111" z="-400" h="49152"/>
+		<npc id="35269"/><!--Привратник Зала-->
+	</spawn>
+	<spawn name="aden13_npc2418_premium01" count="1" respawn="60" group="vitamin_manager">
+		<point x="148465" y="26654" z="-2200" h="24198"/>
+		<npc id="32478"/><!--Менеджер Витаминов-->
+	</spawn>
+	<spawn group="aden_castle_mass_gatekeeper" count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="147457" y="4609" z="-2789" h="0"/>
+		<npc id="35266"/><!--Mass Gatekeeper-->
+	</spawn>
+	<spawn group="aden_castle_siege_artefact" count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="147463" y="1529" z="-373" h="16384"/>
+		<npc id="35233"/><!--Holy Artefact-->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege19" count="1" respawn="120">
+		<point x="144976" y="5136" z="-80" h="8192"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege19" count="1" respawn="120">
+		<point x="145015" y="5197" z="-80" h="8192"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege19" count="1" respawn="120">
+		<point x="145054" y="5258" z="-80" h="8192"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege19" count="1" respawn="120">
+		<point x="145093" y="5319" z="-80" h="8192"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege19" count="1" respawn="120">
+		<point x="145133" y="5380" z="-80" h="8192"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege19" count="1" respawn="120">
+		<point x="145172" y="5441" z="-80" h="8192"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege19" count="1" respawn="120">
+		<point x="145211" y="5502" z="-80" h="8192"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege19" count="1" respawn="120">
+		<point x="145250" y="5563" z="-80" h="8192"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege19" count="1" respawn="120">
+		<point x="145290" y="5624" z="-80" h="8192"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege19" count="1" respawn="120">
+		<point x="145329" y="5685" z="-80" h="8192"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege19" count="1" respawn="120">
+		<point x="145368" y="5746" z="-80" h="8192"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege19" count="1" respawn="120">
+		<point x="145408" y="5808" z="-80" h="8192"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege18" count="1" respawn="120">
+		<point x="149936" y="5168" z="-80" h="8192"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege18" count="1" respawn="120">
+		<point x="149893" y="5230" z="-80" h="8192"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege18" count="1" respawn="120">
+		<point x="149851" y="5293" z="-80" h="8192"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege18" count="1" respawn="120">
+		<point x="149809" y="5355" z="-80" h="8192"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege18" count="1" respawn="120">
+		<point x="149767" y="5418" z="-80" h="8192"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege18" count="1" respawn="120">
+		<point x="149725" y="5480" z="-80" h="8192"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege18" count="1" respawn="120">
+		<point x="149682" y="5543" z="-80" h="8192"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege18" count="1" respawn="120">
+		<point x="149640" y="5605" z="-80" h="8192"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege18" count="1" respawn="120">
+		<point x="149598" y="5668" z="-80" h="8192"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege18" count="1" respawn="120">
+		<point x="149556" y="5730" z="-80" h="8192"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege18" count="1" respawn="120">
+		<point x="149514" y="5793" z="-80" h="8192"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege18" count="1" respawn="120">
+		<point x="149472" y="5856" z="-80" h="8192"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege17" count="1" respawn="120">
+		<point x="146520" y="5289" z="-21" h="32768"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege17" count="1" respawn="120">
+		<point x="146520" y="5308" z="-21" h="32768"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege17" count="1" respawn="120">
+		<point x="146520" y="5328" z="-21" h="32768"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege17" count="1" respawn="120">
+		<point x="146520" y="5348" z="-21" h="32768"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege17" count="1" respawn="120">
+		<point x="146520" y="5368" z="-21" h="32768"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege17" count="1" respawn="120">
+		<point x="146500" y="5289" z="-21" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege17" count="1" respawn="120">
+		<point x="146500" y="5308" z="-21" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege17" count="1" respawn="120">
+		<point x="146500" y="5328" z="-21" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege17" count="1" respawn="120">
+		<point x="146500" y="5348" z="-21" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege17" count="1" respawn="120">
+		<point x="146500" y="5368" z="-21" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege17" count="1" respawn="120">
+		<point x="146480" y="5289" z="-21" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege17" count="1" respawn="120">
+		<point x="146480" y="5308" z="-21" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege17" count="1" respawn="120">
+		<point x="146480" y="5328" z="-21" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege17" count="1" respawn="120">
+		<point x="146480" y="5348" z="-21" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege17" count="1" respawn="120">
+		<point x="146480" y="5368" z="-21" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege17" count="1" respawn="120">
+		<point x="146460" y="5289" z="-21" h="32768"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege17" count="1" respawn="120">
+		<point x="146460" y="5308" z="-21" h="32768"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege17" count="1" respawn="120">
+		<point x="146460" y="5328" z="-21" h="32768"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege17" count="1" respawn="120">
+		<point x="146460" y="5348" z="-21" h="32768"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege17" count="1" respawn="120">
+		<point x="146460" y="5368" z="-21" h="32768"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege09" count="1" respawn="10800">
+		<point x="149056" y="4219" z="-20" h="0"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege09" count="1" respawn="10800">
+		<point x="149080" y="4252" z="-20" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege09" count="1" respawn="10800">
+		<point x="149080" y="4295" z="-20" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege09" count="1" respawn="10800">
+		<point x="149081" y="4335" z="-20" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege09" count="1" respawn="10800">
+		<point x="149082" y="4374" z="-20" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege09" count="1" respawn="10800">
+		<point x="149038" y="4416" z="-20" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege09" count="1" respawn="10800">
+		<point x="149011" y="4439" z="-20" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege09" count="1" respawn="10800">
+		<point x="148984" y="4449" z="-20" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege09" count="1" respawn="10800">
+		<point x="148955" y="4450" z="-20" h="0"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege09" count="1" respawn="10800">
+		<point x="148922" y="4451" z="-20" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege09" count="1" respawn="10800">
+		<point x="149006" y="4362" z="-20" h="0"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege08" count="1" respawn="10800">
+		<point x="149083" y="4965" z="-20" h="0"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege08" count="1" respawn="10800">
+		<point x="149082" y="4926" z="-20" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege08" count="1" respawn="10800">
+		<point x="149081" y="4886" z="-20" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege08" count="1" respawn="10800">
+		<point x="149081" y="4843" z="-20" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege08" count="1" respawn="10800">
+		<point x="149057" y="4810" z="-20" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege08" count="1" respawn="10800">
+		<point x="149034" y="4790" z="-20" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege08" count="1" respawn="10800">
+		<point x="149008" y="4773" z="-20" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege08" count="1" respawn="10800">
+		<point x="148980" y="4766" z="-20" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege08" count="1" respawn="10800">
+		<point x="148951" y="4766" z="-20" h="0"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege08" count="1" respawn="10800">
+		<point x="148921" y="4766" z="-20" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege08" count="1" respawn="10800">
+		<point x="149006" y="4835" z="-20" h="0"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege07" count="1" respawn="10800">
+		<point x="145762" y="7588" z="-470" h="16389"/>
+		<npc id="35239"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege07" count="1" respawn="10800">
+		<point x="146067" y="7588" z="-470" h="16389"/>
+		<npc id="35239"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege07" count="1" respawn="10800">
+		<point x="146372" y="7588" z="-470" h="16389"/>
+		<npc id="35239"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege07" count="1" respawn="10800">
+		<point x="146678" y="7588" z="-470" h="16389"/>
+		<npc id="35239"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege07" count="1" respawn="10800">
+		<point x="146983" y="7588" z="-470" h="16389"/>
+		<npc id="35239"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege07" count="1" respawn="10800">
+		<point x="147288" y="7588" z="-470" h="16389"/>
+		<npc id="35251"/><!--Гвардеец - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege07" count="1" respawn="10800">
+		<point x="147594" y="7588" z="-470" h="16389"/>
+		<npc id="35239"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege07" count="1" respawn="10800">
+		<point x="147899" y="7588" z="-470" h="16389"/>
+		<npc id="35239"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege07" count="1" respawn="10800">
+		<point x="148204" y="7588" z="-470" h="16389"/>
+		<npc id="35251"/><!--Гвардеец - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege07" count="1" respawn="10800">
+		<point x="148510" y="7588" z="-470" h="16389"/>
+		<npc id="35239"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege07" count="1" respawn="10800">
+		<point x="148815" y="7588" z="-470" h="16389"/>
+		<npc id="35239"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege07" count="1" respawn="10800">
+		<point x="149121" y="7588" z="-470" h="16389"/>
+		<npc id="35239"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege06" count="1" respawn="10800">
+		<point x="145569" y="6657" z="-470" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege06" count="1" respawn="10800">
+		<point x="145606" y="6657" z="-470" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege06" count="1" respawn="10800">
+		<point x="145644" y="6657" z="-470" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege06" count="1" respawn="10800">
+		<point x="145682" y="6657" z="-470" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege06" count="1" respawn="10800">
+		<point x="145719" y="6657" z="-470" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege06" count="1" respawn="10800">
+		<point x="145757" y="6657" z="-470" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege06" count="1" respawn="10800">
+		<point x="145795" y="6657" z="-470" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege06" count="1" respawn="10800">
+		<point x="145569" y="6637" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege06" count="1" respawn="10800">
+		<point x="145606" y="6637" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege06" count="1" respawn="10800">
+		<point x="145644" y="6637" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege06" count="1" respawn="10800">
+		<point x="145682" y="6637" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege06" count="1" respawn="10800">
+		<point x="145719" y="6637" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege06" count="1" respawn="10800">
+		<point x="145757" y="6637" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege06" count="1" respawn="10800">
+		<point x="145795" y="6637" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege06" count="1" respawn="10800">
+		<point x="145569" y="6617" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege06" count="1" respawn="10800">
+		<point x="145606" y="6617" z="-470" h="16389"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege06" count="1" respawn="10800">
+		<point x="145644" y="6617" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege06" count="1" respawn="10800">
+		<point x="145682" y="6617" z="-470" h="16389"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege06" count="1" respawn="10800">
+		<point x="145719" y="6617" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege06" count="1" respawn="10800">
+		<point x="145757" y="6617" z="-470" h="16389"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege06" count="1" respawn="10800">
+		<point x="145795" y="6617" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege16" count="1" respawn="120">
+		<point x="148404" y="5289" z="-21" h="0"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege16" count="1" respawn="120">
+		<point x="148404" y="5309" z="-21" h="0"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege16" count="1" respawn="120">
+		<point x="148404" y="5328" z="-21" h="0"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege16" count="1" respawn="120">
+		<point x="148404" y="5348" z="-21" h="0"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege16" count="1" respawn="120">
+		<point x="148404" y="5368" z="-21" h="0"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege16" count="1" respawn="120">
+		<point x="148424" y="5289" z="-21" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege16" count="1" respawn="120">
+		<point x="148424" y="5309" z="-21" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege16" count="1" respawn="120">
+		<point x="148424" y="5328" z="-21" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege16" count="1" respawn="120">
+		<point x="148424" y="5348" z="-21" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege16" count="1" respawn="120">
+		<point x="148424" y="5368" z="-21" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege16" count="1" respawn="120">
+		<point x="148444" y="5289" z="-21" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege16" count="1" respawn="120">
+		<point x="148444" y="5309" z="-21" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege16" count="1" respawn="120">
+		<point x="148444" y="5328" z="-21" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege16" count="1" respawn="120">
+		<point x="148444" y="5348" z="-21" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege16" count="1" respawn="120">
+		<point x="148444" y="5368" z="-21" h="0"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege16" count="1" respawn="120">
+		<point x="148464" y="5289" z="-21" h="0"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege16" count="1" respawn="120">
+		<point x="148464" y="5309" z="-21" h="0"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege16" count="1" respawn="120">
+		<point x="148464" y="5328" z="-21" h="0"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege16" count="1" respawn="120">
+		<point x="148464" y="5348" z="-21" h="0"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege16" count="1" respawn="120">
+		<point x="148464" y="5368" z="-21" h="0"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147468" y="1671" z="-338" h="16389"/>
+		<npc id="35234"/><!--Амадэо Кадмус - Король-->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147428" y="1671" z="-338" h="16389"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147508" y="1671" z="-338" h="16389"/>
+		<npc id="35251"/><!--Гвардеец - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147482" y="1933" z="-468" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147449" y="1933" z="-468" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147740" y="2020" z="-450" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147690" y="2020" z="-450" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147641" y="2020" z="-450" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147592" y="2020" z="-450" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147542" y="2020" z="-450" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147493" y="2020" z="-450" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147444" y="2020" z="-450" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147395" y="2020" z="-450" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147345" y="2020" z="-450" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147296" y="2020" z="-450" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147247" y="2020" z="-450" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147198" y="2020" z="-450" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147740" y="2040" z="-450" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147690" y="2040" z="-450" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147641" y="2040" z="-450" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147592" y="2040" z="-450" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147542" y="2040" z="-450" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147493" y="2040" z="-450" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147444" y="2040" z="-450" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147395" y="2040" z="-450" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147345" y="2040" z="-450" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147296" y="2040" z="-450" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147247" y="2040" z="-450" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147198" y="2040" z="-450" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147740" y="2060" z="-450" h="16389"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147690" y="2060" z="-450" h="16389"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147641" y="2060" z="-450" h="16389"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147592" y="2060" z="-450" h="16389"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147542" y="2060" z="-450" h="16389"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147493" y="2060" z="-450" h="16389"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147444" y="2060" z="-450" h="16389"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147395" y="2060" z="-450" h="16389"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147345" y="2060" z="-450" h="16389"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147296" y="2060" z="-450" h="16389"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147247" y="2060" z="-450" h="16389"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147198" y="2060" z="-450" h="16389"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147740" y="2080" z="-450" h="16389"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147690" y="2080" z="-450" h="16389"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147641" y="2080" z="-450" h="16389"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147592" y="2080" z="-450" h="16389"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147542" y="2080" z="-450" h="16389"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147493" y="2080" z="-450" h="16389"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147444" y="2080" z="-450" h="16389"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147395" y="2080" z="-450" h="16389"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147345" y="2080" z="-450" h="16389"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147296" y="2080" z="-450" h="16389"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147247" y="2080" z="-450" h="16389"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege15" count="1" respawn="200">
+		<point x="147198" y="2080" z="-450" h="16389"/>
+		<npc id="35240"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege14" count="1" respawn="10800">
+		<point x="146818" y="1300" z="-150" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege14" count="1" respawn="10800">
+		<point x="146861" y="1300" z="-150" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege14" count="1" respawn="10800">
+		<point x="146905" y="1300" z="-150" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege14" count="1" respawn="10800">
+		<point x="146949" y="1300" z="-150" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege14" count="1" respawn="10800">
+		<point x="146993" y="1300" z="-150" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege14" count="1" respawn="10800">
+		<point x="147037" y="1300" z="-150" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege14" count="1" respawn="10800">
+		<point x="147351" y="1300" z="-150" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege14" count="1" respawn="10800">
+		<point x="147393" y="1300" z="-150" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege14" count="1" respawn="10800">
+		<point x="147435" y="1300" z="-150" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege14" count="1" respawn="10800">
+		<point x="147477" y="1300" z="-150" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege14" count="1" respawn="10800">
+		<point x="147519" y="1300" z="-150" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege14" count="1" respawn="10800">
+		<point x="147561" y="1300" z="-150" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege14" count="1" respawn="10800">
+		<point x="147461" y="1245" z="-150" h="16391"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege14" count="1" respawn="10800">
+		<point x="146933" y="1245" z="-150" h="16392"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege14" count="1" respawn="10800">
+		<point x="147441" y="1245" z="-150" h="16391"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege14" count="1" respawn="10800">
+		<point x="146953" y="1245" z="-150" h="16392"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="148161" y="1600" z="-150" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="148199" y="1600" z="-150" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="148161" y="1620" z="-150" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="148199" y="1620" z="-150" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="148161" y="1640" z="-150" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="148199" y="1640" z="-150" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="148161" y="1660" z="-150" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="148199" y="1660" z="-150" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="148161" y="1680" z="-150" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="148199" y="1680" z="-150" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="148161" y="1700" z="-150" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="148199" y="1700" z="-150" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="148161" y="1720" z="-150" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="148199" y="1720" z="-150" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="146750" y="1600" z="-150" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="146707" y="1600" z="-150" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="146750" y="1620" z="-150" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="146707" y="1620" z="-150" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="146750" y="1640" z="-150" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="146707" y="1640" z="-150" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="146750" y="1660" z="-150" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="146707" y="1660" z="-150" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="146750" y="1680" z="-150" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="146707" y="1680" z="-150" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="146750" y="1700" z="-150" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="146707" y="1700" z="-150" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="146750" y="1720" z="-150" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege13" count="1" respawn="10800">
+		<point x="146707" y="1720" z="-150" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147146" y="5459" z="-340" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147196" y="5459" z="-340" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147247" y="5459" z="-340" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147298" y="5459" z="-340" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147349" y="5459" z="-340" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147400" y="5459" z="-340" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147451" y="5459" z="-340" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147501" y="5459" z="-340" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147552" y="5459" z="-340" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147603" y="5459" z="-340" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147654" y="5459" z="-340" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147705" y="5459" z="-340" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147756" y="5459" z="-340" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147554" y="5354" z="-340" h="16389"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147352" y="5354" z="-340" h="32768"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147560" y="5754" z="-340" h="32768"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147356" y="5754" z="-340" h="32768"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147457" y="5754" z="-340" h="32768"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147556" y="5857" z="-400" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147522" y="5857" z="-400" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147488" y="5857" z="-400" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147455" y="5857" z="-400" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147421" y="5857" z="-400" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147387" y="5857" z="-400" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147353" y="5857" z="-400" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147320" y="5857" z="-400" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147455" y="3221" z="-400" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147334" y="5827" z="-400" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147367" y="5827" z="-400" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147401" y="5827" z="-400" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147435" y="5827" z="-400" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147468" y="5827" z="-400" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147502" y="5827" z="-400" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147536" y="5827" z="-400" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147570" y="5827" z="-400" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege12" count="1" respawn="10800">
+		<point x="147590" y="5857" z="-400" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege11" count="1" respawn="10800">
+		<point x="145836" y="4968" z="-20" h="32768"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege11" count="1" respawn="10800">
+		<point x="145836" y="4929" z="-20" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege11" count="1" respawn="10800">
+		<point x="145835" y="4889" z="-20" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege11" count="1" respawn="10800">
+		<point x="145834" y="4846" z="-20" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege11" count="1" respawn="10800">
+		<point x="145853" y="4815" z="-20" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege11" count="1" respawn="10800">
+		<point x="145874" y="4797" z="-20" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege11" count="1" respawn="10800">
+		<point x="145901" y="4774" z="-20" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege11" count="1" respawn="10800">
+		<point x="145989" y="4766" z="-20" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege11" count="1" respawn="10800">
+		<point x="145958" y="4767" z="-20" h="32768"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege11" count="1" respawn="10800">
+		<point x="145928" y="4767" z="-20" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege11" count="1" respawn="10800">
+		<point x="145921" y="4829" z="-20" h="32768"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege10" count="1" respawn="10800">
+		<point x="145831" y="4252" z="-20" h="32768"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege10" count="1" respawn="10800">
+		<point x="145909" y="4440" z="-20" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege10" count="1" respawn="10800">
+		<point x="145883" y="4421" z="-20" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege10" count="1" respawn="10800">
+		<point x="145833" y="4374" z="-20" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege10" count="1" respawn="10800">
+		<point x="145833" y="4335" z="-20" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege10" count="1" respawn="10800">
+		<point x="145832" y="4295" z="-20" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege10" count="1" respawn="10800">
+		<point x="145852" y="4404" z="-20" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege10" count="1" respawn="10800">
+		<point x="145936" y="4450" z="-20" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege10" count="1" respawn="10800">
+		<point x="145966" y="4450" z="-20" h="32768"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege10" count="1" respawn="10800">
+		<point x="145995" y="4449" z="-20" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege10" count="1" respawn="10800">
+		<point x="145926" y="4377" z="-20" h="32768"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege05" count="1" respawn="10800">
+		<point x="149105" y="6657" z="-470" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege05" count="1" respawn="10800">
+		<point x="149142" y="6657" z="-470" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege05" count="1" respawn="10800">
+		<point x="149180" y="6657" z="-470" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege05" count="1" respawn="10800">
+		<point x="149217" y="6657" z="-470" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege05" count="1" respawn="10800">
+		<point x="149255" y="6657" z="-470" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege05" count="1" respawn="10800">
+		<point x="149292" y="6657" z="-470" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege05" count="1" respawn="10800">
+		<point x="149330" y="6657" z="-470" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege05" count="1" respawn="10800">
+		<point x="149105" y="6637" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege05" count="1" respawn="10800">
+		<point x="149142" y="6637" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege05" count="1" respawn="10800">
+		<point x="149180" y="6637" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege05" count="1" respawn="10800">
+		<point x="149217" y="6637" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege05" count="1" respawn="10800">
+		<point x="149255" y="6637" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege05" count="1" respawn="10800">
+		<point x="149292" y="6637" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege05" count="1" respawn="10800">
+		<point x="149330" y="6637" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege05" count="1" respawn="10800">
+		<point x="149105" y="6617" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege05" count="1" respawn="10800">
+		<point x="149142" y="6617" z="-470" h="16389"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege05" count="1" respawn="10800">
+		<point x="149180" y="6617" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege05" count="1" respawn="10800">
+		<point x="149217" y="6617" z="-470" h="16389"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege05" count="1" respawn="10800">
+		<point x="149255" y="6617" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege05" count="1" respawn="10800">
+		<point x="149292" y="6617" z="-470" h="16389"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege05" count="1" respawn="10800">
+		<point x="149330" y="6617" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege04" count="1" respawn="10800">
+		<point x="146885" y="8480" z="-212" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege04" count="1" respawn="10800">
+		<point x="147035" y="8480" z="-212" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege04" count="1" respawn="10800">
+		<point x="147007" y="8480" z="-212" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege04" count="1" respawn="10800">
+		<point x="146976" y="8480" z="-212" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege04" count="1" respawn="10800">
+		<point x="146945" y="8480" z="-212" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege04" count="1" respawn="10800">
+		<point x="146915" y="8480" z="-212" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege04" count="1" respawn="10800">
+		<point x="146885" y="8457" z="-212" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege04" count="1" respawn="10800">
+		<point x="147036" y="8457" z="-212" h="16389"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege04" count="1" respawn="10800">
+		<point x="147007" y="8457" z="-212" h="16389"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege04" count="1" respawn="10800">
+		<point x="146977" y="8457" z="-212" h="16389"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege04" count="1" respawn="10800">
+		<point x="146946" y="8457" z="-212" h="16389"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege04" count="1" respawn="10800">
+		<point x="146915" y="8457" z="-212" h="16389"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege03" count="1" respawn="10800">
+		<point x="147984" y="8480" z="-212" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege03" count="1" respawn="10800">
+		<point x="147955" y="8480" z="-212" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege03" count="1" respawn="10800">
+		<point x="147927" y="8480" z="-212" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege03" count="1" respawn="10800">
+		<point x="147896" y="8480" z="-212" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege03" count="1" respawn="10800">
+		<point x="147865" y="8480" z="-212" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege03" count="1" respawn="10800">
+		<point x="148014" y="8480" z="-212" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege03" count="1" respawn="10800">
+		<point x="147983" y="8460" z="-212" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege03" count="1" respawn="10800">
+		<point x="147954" y="8460" z="-212" h="16389"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege03" count="1" respawn="10800">
+		<point x="147925" y="8460" z="-212" h="16389"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege03" count="1" respawn="10800">
+		<point x="147895" y="8460" z="-212" h="16389"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege03" count="1" respawn="10800">
+		<point x="147864" y="8460" z="-212" h="16389"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege03" count="1" respawn="10800">
+		<point x="148014" y="8460" z="-212" h="16389"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148185" y="9340" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148185" y="8567" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148185" y="8608" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148185" y="8649" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148185" y="8689" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148185" y="8730" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148185" y="8771" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148185" y="8811" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148185" y="8852" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148185" y="8893" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148185" y="8933" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148185" y="8974" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148185" y="9015" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148185" y="9055" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148185" y="9096" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148185" y="9137" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148185" y="9177" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148185" y="9218" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148185" y="9259" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148185" y="9300" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148231" y="8724" z="-212" h="32768"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148231" y="8839" z="-212" h="32768"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148231" y="8954" z="-212" h="32768"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148231" y="9069" z="-212" h="32768"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148231" y="8954" z="-212" h="32768"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148231" y="9069" z="-212" h="32768"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148261" y="8621" z="-212" h="32768"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148261" y="8757" z="-212" h="32768"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148261" y="8894" z="-212" h="32768"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148261" y="9030" z="-212" h="32768"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege02" count="1" respawn="10800">
+		<point x="148261" y="9167" z="-212" h="32768"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147290" y="8527" z="-470" h="16389"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147356" y="8527" z="-470" h="16389"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147423" y="8527" z="-470" h="16389"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147490" y="8527" z="-470" h="16389"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147556" y="8527" z="-470" h="16389"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147290" y="8547" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147323" y="8547" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147356" y="8547" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147390" y="8547" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147423" y="8547" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147456" y="8547" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147490" y="8547" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147523" y="8547" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147556" y="8547" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147590" y="8547" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147290" y="8567" z="-470" h="16389"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147323" y="8567" z="-470" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147356" y="8567" z="-470" h="16389"/>
+		<npc id="35251"/><!--Гвардеец - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147390" y="8567" z="-470" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147423" y="8567" z="-470" h="16389"/>
+		<npc id="35251"/><!--Гвардеец - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147456" y="8567" z="-470" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147490" y="8567" z="-470" h="16389"/>
+		<npc id="35251"/><!--Гвардеец - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147523" y="8567" z="-470" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147556" y="8567" z="-470" h="16389"/>
+		<npc id="35251"/><!--Гвардеец - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147590" y="8567" z="-470" h="16389"/>
+		<npc id="35252"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147290" y="8587" z="-470" h="16389"/>
+		<npc id="35251"/><!--Гвардеец - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147323" y="8587" z="-470" h="16389"/>
+		<npc id="35253"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147356" y="8587" z="-470" h="16389"/>
+		<npc id="35253"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147390" y="8587" z="-470" h="16389"/>
+		<npc id="35253"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147423" y="8587" z="-470" h="16389"/>
+		<npc id="35253"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147456" y="8587" z="-470" h="16389"/>
+		<npc id="35248"/><!--Рыцарь Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147490" y="8587" z="-470" h="16389"/>
+		<npc id="35253"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147523" y="8587" z="-470" h="16389"/>
+		<npc id="35253"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147556" y="8587" z="-470" h="16389"/>
+		<npc id="35253"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege01" count="1" respawn="10800">
+		<point x="147590" y="8587" z="-470" h="16389"/>
+		<npc id="35253"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege092" count="1" respawn="10800">
+		<point x="148185" y="9340" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege092" count="1" respawn="10800">
+		<point x="148185" y="8567" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege092" count="1" respawn="10800">
+		<point x="148185" y="8649" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege092" count="1" respawn="10800">
+		<point x="148185" y="8689" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege092" count="1" respawn="10800">
+		<point x="148185" y="8771" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege092" count="1" respawn="10800">
+		<point x="148185" y="8811" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege092" count="1" respawn="10800">
+		<point x="148185" y="8893" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege092" count="1" respawn="10800">
+		<point x="148185" y="8933" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege092" count="1" respawn="10800">
+		<point x="148185" y="9015" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege092" count="1" respawn="10800">
+		<point x="148185" y="9055" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege092" count="1" respawn="10800">
+		<point x="148185" y="9137" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege092" count="1" respawn="10800">
+		<point x="148185" y="9177" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege092" count="1" respawn="10800">
+		<point x="148185" y="9259" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege092" count="1" respawn="10800">
+		<point x="148185" y="9300" z="-212" h="32768"/>
+		<npc id="35254"/><!--Охранник - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege092" count="1" respawn="10800">
+		<point x="148231" y="8724" z="-212" h="32768"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege092" count="1" respawn="10800">
+		<point x="148231" y="8839" z="-212" h="32768"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege092" count="1" respawn="10800">
+		<point x="148231" y="9069" z="-212" h="32768"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege092" count="1" respawn="10800">
+		<point x="148231" y="8954" z="-212" h="32768"/>
+		<npc id="35249"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege092" count="1" respawn="10800">
+		<point x="148261" y="8621" z="-212" h="32768"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege092" count="1" respawn="10800">
+		<point x="148261" y="8894" z="-212" h="32768"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn group="aden_castle_siege" name="aden_siege092" count="1" respawn="10800">
+		<point x="148261" y="9167" z="-212" h="32768"/>
+		<npc id="35250"/><!--Маг Гвардии - Аден -->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="140467" y="13013" z="-3928" h="62357" />
+		<npc id="27216" /><!--Блюститель Древнего Обета-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="140369" y="13082" z="-3936" h="14275" />
+		<npc id="27216" /><!--Блюститель Древнего Обета-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="140900" y="13359" z="-3896" h="16173" />
+		<npc id="27216" /><!--Блюститель Древнего Обета-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="140982" y="13282" z="-3888" h="36584" />
+		<npc id="27216" /><!--Блюститель Древнего Обета-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="140384" y="12448" z="-3944" h="63056" />
+		<npc id="31649" /><!--Камень Познания-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="138835" y="10697" z="-4240" h="62446" />
+		<npc id="27215" /><!--Смотритель Святого Закона-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="139024" y="10072" z="-4272" h="33809" />
+		<npc id="27215" /><!--Смотритель Святого Закона-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="139889" y="11975" z="-4016" h="36931" />
+		<npc id="27216" /><!--Блюститель Древнего Обета-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="140186" y="11785" z="-4040" h="3422" />
+		<npc id="27216" /><!--Блюститель Древнего Обета-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="139987" y="12048" z="-3992" h="17433" />
+		<npc id="27216" /><!--Блюститель Древнего Обета-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="139822" y="10216" z="-4280" h="32350" />
+		<npc id="27215" /><!--Смотритель Святого Закона-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="139219" y="10093" z="-4272" h="2318" />
+		<npc id="27215" /><!--Смотритель Святого Закона-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="141147" y="12174" z="-3960" h="23097" />
+		<npc id="27216" /><!--Блюститель Древнего Обета-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="139914" y="12114" z="-3992" h="59694" />
+		<npc id="27216" /><!--Блюститель Древнего Обета-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="139870" y="11958" z="-4016" h="40629" />
+		<npc id="27216" /><!--Блюститель Древнего Обета-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="138833" y="8745" z="-4288" h="62181" />
+		<npc id="27214" /><!--Хранитель Запретных Знаний-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="139138" y="8890" z="-4264" h="16736" />
+		<npc id="27214" /><!--Хранитель Запретных Знаний-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="140313" y="8364" z="-4072" h="48010" />
+		<npc id="27214" /><!--Хранитель Запретных Знаний-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="140471" y="10128" z="-4216" h="19082" />
+		<npc id="27215" /><!--Смотритель Святого Закона-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="140603" y="9690" z="-4168" h="9879" />
+		<npc id="27215" /><!--Смотритель Святого Закона-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="139627" y="8121" z="-4192" h="26996" />
+		<npc id="27214" /><!--Хранитель Запретных Знаний-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="140365" y="10467" z="-4240" h="41457" />
+		<npc id="27215" /><!--Смотритель Святого Закона-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="140368" y="9577" z="-4168" h="63928" />
+		<npc id="27215" /><!--Смотритель Святого Закона-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="140140" y="8018" z="-4056" h="21540" />
+		<npc id="27214" /><!--Хранитель Запретных Знаний-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="140522" y="8858" z="-4112" h="12298" />
+		<npc id="27214" /><!--Хранитель Запретных Знаний-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="139512" y="9721" z="-4280" h="32454" />
+		<npc id="27215" /><!--Смотритель Святого Закона-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="140224" y="9303" z="-4160" h="27214" />
+		<npc id="27215" /><!--Смотритель Святого Закона-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="139568" y="10176" z="-4280" h="0" />
+		<npc id="31648" /><!--Камень Познания-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="138997" y="8054" z="-4288" h="29593" />
+		<npc id="27214" /><!--Хранитель Запретных Знаний-->
+	</spawn>	
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="140238" y="7092" z="-4160" h="16873" />
+		<npc id="27214" /><!--Хранитель Запретных Знаний-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="140346" y="7458" z="-4096" h="56386" />
+		<npc id="27214" /><!--Хранитель Запретных Знаний-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="139357" y="7593" z="-4256" h="55581" />
+		<npc id="27214" /><!--Хранитель Запретных Знаний-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="139424" y="8160" z="-4216" h="50228" />
+		<npc id="31647" /><!--Камень Познания-->
+	</spawn>
+	<spawn name="Millinous" count="1" respawn="86400" respawn_random="12000">
+		<point x="140200" y="17000" z="-3856" h="21344"/>
+		<npc id="25770"/><!--Миллиноус-->
+	</spawn>
+	<spawn name="Minotavr" count="1" respawn="86400" respawn_random="12000">
+		<point x="135144" y="19016" z="-3392" h="21344"/>
+		<npc id="25766"/><!--Монстр Минотавр-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="class_master">
+		<point x="147448" y="27285" z="-2228" h="47604"/>
+		<npc id="31860"/><!--Buzz the Cat-->
+	</spawn>
+</list>

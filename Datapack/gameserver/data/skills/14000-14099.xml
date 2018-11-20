@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="14000" levels="1" name="Berserk">
+		<set name="icon" value="icon.skill1062"/>
+		<set name="reuseDelay" value="6000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="14001" levels="3" name="Cross Slash">
+		<table name="#magicLevel">95 96 97</table>
+		<table name="#mp_consume">85 86 86</table>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="reuseDelay" value="2500"/>
+		<set name="castRange" value="150"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="14002" levels="3" name="Transfixion Attack">
+		<table name="#magicLevel">95 96 97</table>
+		<set name="icon" value="icon.skill0484"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="100"/>
+		<set name="mp_consume" value="20"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="14055" levels="2" name="Power Shot">
+		<table name="#mp_consume">83 84</table>
+		<set name="icon" value="icon.skill0056"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="castRange" value="700"/>
+		<set name="hitTime" value="3000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+</list>

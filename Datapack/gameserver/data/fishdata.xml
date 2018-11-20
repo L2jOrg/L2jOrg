@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "fishdata.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<config only_premium_accounts="false" minimum_level="20" fish_drop_count_rate="1"/>
+	<!--TODO: Check chances.-->
+	<lure id="45495" fail_chance="20.2" fail_duration="105">	<!--Обычная Наживка-->
+		<fish id="45473" chance="50.5" duration="105" reward_type="1"/>	<!--Скумбрия-->
+		<fish id="45481" chance="20.3" duration="105" reward_type="2"/>	<!--Свежая Скумбрия-->
+		<fish id="45488" chance="9.0" duration="105" reward_type="0"/>	<!--Золотой Сундук с Сокровищами-->
+	</lure>
+	<lure id="49508" fail_chance="20.2" fail_duration="105">	<!--Обычная Наживка-->
+		<fish id="45473" chance="50.5" duration="105" reward_type="1"/>	<!--Скумбрия-->
+		<fish id="45481" chance="20.3" duration="105" reward_type="2"/>	<!--Свежая Скумбрия-->
+		<fish id="45488" chance="9.0" duration="105" reward_type="0"/>	<!--Золотой Сундук с Сокровищами-->
+	</lure>
+	<rewards type="0">
+		<reward min_level="1" exp="0" sp="0"/>
+	</rewards>
+	<rewards type="1">
+		<reward min_level="1" max_level="1" exp="1" sp="1"/>	<!--TODO: Check.-->
+		<reward min_level="2" max_level="2" exp="4" sp="1"/>	<!--TODO: Check.-->
+		<reward min_level="3" max_level="3" exp="9" sp="1"/>	<!--TODO: Check.-->
+		<reward min_level="4" max_level="4" exp="16" sp="1"/>	<!--TODO: Check.-->
+		<reward min_level="5" max_level="5" exp="25" sp="1"/>	<!--TODO: Check.-->
+		<reward min_level="6" max_level="6" exp="36" sp="1"/>	<!--TODO: Check.-->
+		<reward min_level="7" max_level="7" exp="49" sp="1"/>	<!--TODO: Check.-->
+		<reward min_level="8" max_level="8" exp="64" sp="2"/>	<!--TODO: Check.-->
+		<reward min_level="9" max_level="9" exp="81" sp="2"/>	<!--TODO: Check.-->
+		<reward min_level="10" max_level="10" exp="100" sp="3"/>	<!--TODO: Check.-->
+		<reward min_level="11" max_level="11" exp="121" sp="4"/>	<!--TODO: Check.-->
+		<reward min_level="12" max_level="12" exp="144" sp="5"/>	<!--TODO: Check.-->
+		<reward min_level="13" max_level="13" exp="169" sp="6"/>	<!--TODO: Check.-->
+		<reward min_level="14" max_level="14" exp="196" sp="7"/>	<!--TODO: Check.-->
+		<reward min_level="15" max_level="15" exp="225" sp="7"/>	<!--TODO: Check.-->
+		<reward min_level="16" max_level="16" exp="256" sp="9"/>	<!--TODO: Check.-->
+		<reward min_level="17" max_level="17" exp="289" sp="10"/>	<!--TODO: Check.-->
+		<reward min_level="18" max_level="18" exp="324" sp="11"/>	<!--TODO: Check.-->
+		<reward min_level="19" max_level="19" exp="361" sp="12"/>	<!--TODO: Check.-->
+		<reward min_level="20" max_level="20" exp="400" sp="13"/>
+		<reward min_level="21" max_level="21" exp="441" sp="15"/>	<!--TODO: Check.-->
+		<reward min_level="22" max_level="22" exp="484" sp="16"/>	<!--TODO: Check.-->
+		<reward min_level="23" max_level="23" exp="529" sp="18"/>	<!--TODO: Check.-->
+		<reward min_level="24" max_level="24" exp="576" sp="19"/>	<!--TODO: Check.-->
+		<reward min_level="25" max_level="25" exp="625" sp="21"/>	<!--TODO: Check.-->
+		<reward min_level="26" max_level="26" exp="676" sp="23"/>	<!--TODO: Check.-->
+		<reward min_level="27" max_level="27" exp="729" sp="24"/>	<!--TODO: Check.-->
+		<reward min_level="28" max_level="28" exp="784" sp="26"/>	<!--TODO: Check.-->
+		<reward min_level="29" max_level="29" exp="841" sp="28"/>	<!--TODO: Check.-->
+		<reward min_level="30" max_level="30" exp="900" sp="30"/>	<!--TODO: Check.-->
+		<reward min_level="31" max_level="31" exp="961" sp="32"/>	<!--TODO: Check.-->
+		<reward min_level="32" max_level="32" exp="1024" sp="34"/>	<!--TODO: Check.-->
+		<reward min_level="33" max_level="33" exp="1089" sp="36"/>	<!--TODO: Check.-->
+		<reward min_level="34" max_level="34" exp="1156" sp="39"/>	<!--TODO: Check.-->
+		<reward min_level="35" max_level="35" exp="1225" sp="41"/>	<!--TODO: Check.-->
+		<reward min_level="36" max_level="36" exp="1296" sp="43"/>	<!--TODO: Check.-->
+		<reward min_level="37" max_level="37" exp="1369" sp="46"/>	<!--TODO: Check.-->
+		<reward min_level="38" max_level="38" exp="1444" sp="48"/>	<!--TODO: Check.-->
+		<reward min_level="39" max_level="39" exp="1521" sp="51"/>	<!--TODO: Check.-->
+		<reward min_level="40" max_level="40" exp="1600" sp="53"/>	<!--TODO: Check.-->
+		<reward min_level="41" max_level="41" exp="1681" sp="56"/>	<!--TODO: Check.-->
+		<reward min_level="42" max_level="42" exp="1764" sp="58"/>
+		<reward min_level="43" max_level="43" exp="1849" sp="62"/>	<!--TODO: Check.-->
+		<reward min_level="44" max_level="44" exp="1936" sp="64"/>	<!--TODO: Check.-->
+		<reward min_level="45" max_level="45" exp="2025" sp="67"/>	<!--TODO: Check.-->
+		<reward min_level="46" max_level="46" exp="2116" sp="70"/>	<!--TODO: Check.-->
+		<reward min_level="47" max_level="47" exp="2209" sp="74"/>	<!--TODO: Check.-->
+		<reward min_level="48" max_level="48" exp="2304" sp="77"/>	<!--TODO: Check.-->
+		<reward min_level="49" max_level="49" exp="2401" sp="80"/>	<!--TODO: Check.-->
+		<reward min_level="50" max_level="50" exp="2500" sp="83"/>	<!--TODO: Check.-->
+		<reward min_level="51" max_level="51" exp="2601" sp="87"/>	<!--TODO: Check.-->
+		<reward min_level="52" max_level="52" exp="2704" sp="90"/>	<!--TODO: Check.-->
+		<reward min_level="53" max_level="53" exp="2809" sp="94"/>	<!--TODO: Check.-->
+		<reward min_level="54" max_level="54" exp="2916" sp="97"/>	<!--TODO: Check.-->
+		<reward min_level="55" max_level="55" exp="3025" sp="101"/>	<!--TODO: Check.-->
+		<reward min_level="56" max_level="56" exp="3136" sp="104"/>	<!--TODO: Check.-->
+		<reward min_level="57" max_level="57" exp="3249" sp="108"/>	<!--TODO: Check.-->
+		<reward min_level="58" max_level="58" exp="3364" sp="112"/>	<!--TODO: Check.-->
+		<reward min_level="59" max_level="59" exp="3481" sp="116"/>
+		<reward min_level="60" max_level="60" exp="3600" sp="120"/>	<!--TODO: Check.-->
+		<reward min_level="61" max_level="61" exp="3721" sp="124"/>	<!--TODO: Check.-->
+		<reward min_level="62" max_level="62" exp="3844" sp="128"/>	<!--TODO: Check.-->
+		<reward min_level="63" max_level="63" exp="3969" sp="132"/>	<!--TODO: Check.-->
+		<reward min_level="64" max_level="64" exp="4096" sp="136"/>	<!--TODO: Check.-->
+		<reward min_level="65" max_level="65" exp="4225" sp="141"/>	<!--TODO: Check.-->
+		<reward min_level="66" max_level="66" exp="4356" sp="145"/>	<!--TODO: Check.-->
+		<reward min_level="67" max_level="67" exp="4489" sp="150"/>	<!--TODO: Check.-->
+		<reward min_level="68" max_level="68" exp="4624" sp="154"/>	<!--TODO: Check.-->
+		<reward min_level="69" max_level="69" exp="4761" sp="159"/>	<!--TODO: Check.-->
+		<reward min_level="70" max_level="70" exp="4900" sp="163"/>	<!--TODO: Check.-->
+		<reward min_level="71" max_level="71" exp="5041" sp="168"/>	<!--TODO: Check.-->
+		<reward min_level="72" max_level="72" exp="5184" sp="173"/>	<!--TODO: Check.-->
+		<reward min_level="73" max_level="73" exp="5329" sp="177"/>	<!--TODO: Check.-->
+		<reward min_level="74" max_level="74" exp="5476" sp="182"/>	<!--TODO: Check.-->
+		<reward min_level="75" max_level="75" exp="5625" sp="187"/>	<!--TODO: Check.-->
+		<reward min_level="76" max_level="76" exp="5776" sp="192"/>	<!--TODO: Check.-->
+		<reward min_level="77" max_level="77" exp="5929" sp="197"/>	<!--TODO: Check.-->
+		<reward min_level="78" max_level="78" exp="6084" sp="203"/>	<!--TODO: Check.-->
+		<reward min_level="79" max_level="79" exp="6241" sp="208"/>	<!--TODO: Check.-->
+		<reward min_level="80" max_level="80" exp="6400" sp="213"/>	<!--TODO: Check.-->
+	</rewards>
+	<rewards type="2">
+		<reward min_level="1" max_level="1" exp="1" sp="1"/>	<!--TODO: Check.-->
+		<reward min_level="2" max_level="2" exp="4" sp="1"/>	<!--TODO: Check.-->
+		<reward min_level="3" max_level="3" exp="9" sp="1"/>	<!--TODO: Check.-->
+		<reward min_level="4" max_level="4" exp="16" sp="1"/>	<!--TODO: Check.-->
+		<reward min_level="5" max_level="5" exp="25" sp="1"/>	<!--TODO: Check.-->
+		<reward min_level="6" max_level="6" exp="36" sp="1"/>	<!--TODO: Check.-->
+		<reward min_level="7" max_level="7" exp="49" sp="1"/>	<!--TODO: Check.-->
+		<reward min_level="8" max_level="8" exp="64" sp="2"/>	<!--TODO: Check.-->
+		<reward min_level="9" max_level="9" exp="81" sp="2"/>	<!--TODO: Check.-->
+		<reward min_level="10" max_level="10" exp="100" sp="3"/>	<!--TODO: Check.-->
+		<reward min_level="11" max_level="11" exp="121" sp="4"/>	<!--TODO: Check.-->
+		<reward min_level="12" max_level="12" exp="144" sp="5"/>	<!--TODO: Check.-->
+		<reward min_level="13" max_level="13" exp="169" sp="6"/>	<!--TODO: Check.-->
+		<reward min_level="14" max_level="14" exp="196" sp="7"/>	<!--TODO: Check.-->
+		<reward min_level="15" max_level="15" exp="225" sp="7"/>	<!--TODO: Check.-->
+		<reward min_level="16" max_level="16" exp="256" sp="9"/>	<!--TODO: Check.-->
+		<reward min_level="17" max_level="17" exp="289" sp="10"/>	<!--TODO: Check.-->
+		<reward min_level="18" max_level="18" exp="324" sp="11"/>	<!--TODO: Check.-->
+		<reward min_level="19" max_level="19" exp="361" sp="12"/>	<!--TODO: Check.-->
+		<reward min_level="20" max_level="20" exp="400" sp="13"/>	<!--TODO: Check.-->
+		<reward min_level="21" max_level="21" exp="441" sp="15"/>	<!--TODO: Check.-->
+		<reward min_level="22" max_level="22" exp="484" sp="16"/>	<!--TODO: Check.-->
+		<reward min_level="23" max_level="23" exp="529" sp="18"/>	<!--TODO: Check.-->
+		<reward min_level="24" max_level="24" exp="576" sp="19"/>	<!--TODO: Check.-->
+		<reward min_level="25" max_level="25" exp="625" sp="21"/>	<!--TODO: Check.-->
+		<reward min_level="26" max_level="26" exp="676" sp="23"/>	<!--TODO: Check.-->
+		<reward min_level="27" max_level="27" exp="729" sp="24"/>	<!--TODO: Check.-->
+		<reward min_level="28" max_level="28" exp="784" sp="26"/>	<!--TODO: Check.-->
+		<reward min_level="29" max_level="29" exp="841" sp="28"/>	<!--TODO: Check.-->
+		<reward min_level="30" max_level="30" exp="900" sp="30"/>	<!--TODO: Check.-->
+		<reward min_level="31" max_level="31" exp="961" sp="32"/>	<!--TODO: Check.-->
+		<reward min_level="32" max_level="32" exp="1024" sp="34"/>	<!--TODO: Check.-->
+		<reward min_level="33" max_level="33" exp="1089" sp="36"/>	<!--TODO: Check.-->
+		<reward min_level="34" max_level="34" exp="1156" sp="39"/>	<!--TODO: Check.-->
+		<reward min_level="35" max_level="35" exp="1225" sp="41"/>	<!--TODO: Check.-->
+		<reward min_level="36" max_level="36" exp="1296" sp="43"/>	<!--TODO: Check.-->
+		<reward min_level="37" max_level="37" exp="1369" sp="46"/>	<!--TODO: Check.-->
+		<reward min_level="38" max_level="38" exp="1444" sp="48"/>	<!--TODO: Check.-->
+		<reward min_level="39" max_level="39" exp="1521" sp="51"/>	<!--TODO: Check.-->
+		<reward min_level="40" max_level="40" exp="1600" sp="53"/>	<!--TODO: Check.-->
+		<reward min_level="41" max_level="41" exp="1681" sp="56"/>	<!--TODO: Check.-->
+		<reward min_level="42" max_level="42" exp="1764" sp="58"/>	<!--TODO: Check.-->
+		<reward min_level="43" max_level="43" exp="1849" sp="62"/>	<!--TODO: Check.-->
+		<reward min_level="44" max_level="44" exp="1936" sp="64"/>	<!--TODO: Check.-->
+		<reward min_level="45" max_level="45" exp="2025" sp="67"/>	<!--TODO: Check.-->
+		<reward min_level="46" max_level="46" exp="2116" sp="70"/>	<!--TODO: Check.-->
+		<reward min_level="47" max_level="47" exp="2209" sp="74"/>	<!--TODO: Check.-->
+		<reward min_level="48" max_level="48" exp="2304" sp="77"/>	<!--TODO: Check.-->
+		<reward min_level="49" max_level="49" exp="2401" sp="80"/>	<!--TODO: Check.-->
+		<reward min_level="50" max_level="50" exp="2500" sp="83"/>	<!--TODO: Check.-->
+		<reward min_level="51" max_level="51" exp="2601" sp="87"/>	<!--TODO: Check.-->
+		<reward min_level="52" max_level="52" exp="2704" sp="90"/>	<!--TODO: Check.-->
+		<reward min_level="53" max_level="53" exp="2809" sp="94"/>	<!--TODO: Check.-->
+		<reward min_level="54" max_level="54" exp="2916" sp="97"/>	<!--TODO: Check.-->
+		<reward min_level="55" max_level="55" exp="3025" sp="101"/>	<!--TODO: Check.-->
+		<reward min_level="56" max_level="56" exp="3136" sp="104"/>	<!--TODO: Check.-->
+		<reward min_level="57" max_level="57" exp="3249" sp="108"/>	<!--TODO: Check.-->
+		<reward min_level="58" max_level="58" exp="3364" sp="112"/>	<!--TODO: Check.-->
+		<reward min_level="59" max_level="59" exp="3481" sp="116"/>	<!--TODO: Check.-->
+		<reward min_level="60" max_level="60" exp="3600" sp="120"/>	<!--TODO: Check.-->
+		<reward min_level="61" max_level="61" exp="3721" sp="124"/>	<!--TODO: Check.-->
+		<reward min_level="62" max_level="62" exp="3844" sp="128"/>	<!--TODO: Check.-->
+		<reward min_level="63" max_level="63" exp="3969" sp="132"/>	<!--TODO: Check.-->
+		<reward min_level="64" max_level="64" exp="4096" sp="136"/>	<!--TODO: Check.-->
+		<reward min_level="65" max_level="65" exp="4225" sp="141"/>	<!--TODO: Check.-->
+		<reward min_level="66" max_level="66" exp="4356" sp="145"/>	<!--TODO: Check.-->
+		<reward min_level="67" max_level="67" exp="4489" sp="150"/>	<!--TODO: Check.-->
+		<reward min_level="68" max_level="68" exp="4624" sp="154"/>	<!--TODO: Check.-->
+		<reward min_level="69" max_level="69" exp="4761" sp="159"/>	<!--TODO: Check.-->
+		<reward min_level="70" max_level="70" exp="4900" sp="163"/>	<!--TODO: Check.-->
+		<reward min_level="71" max_level="71" exp="5041" sp="168"/>	<!--TODO: Check.-->
+		<reward min_level="72" max_level="72" exp="5184" sp="173"/>	<!--TODO: Check.-->
+		<reward min_level="73" max_level="73" exp="5329" sp="177"/>	<!--TODO: Check.-->
+		<reward min_level="74" max_level="74" exp="5476" sp="182"/>	<!--TODO: Check.-->
+		<reward min_level="75" max_level="75" exp="5625" sp="187"/>	<!--TODO: Check.-->
+		<reward min_level="76" max_level="76" exp="5776" sp="192"/>	<!--TODO: Check.-->
+		<reward min_level="77" max_level="77" exp="5929" sp="197"/>	<!--TODO: Check.-->
+		<reward min_level="78" max_level="78" exp="6084" sp="203"/>	<!--TODO: Check.-->
+		<reward min_level="79" max_level="79" exp="6241" sp="208"/>	<!--TODO: Check.-->
+		<reward min_level="80" max_level="80" exp="6400" sp="213"/>	<!--TODO: Check.-->
+	</rewards>
+	<rod id="45492" duration_modifier="1" reward_modifier="1" shot_consume_count="1"/>	<!--Fishing Rod-->
+	<rod id="49506" duration_modifier="1" reward_modifier="1" shot_consume_count="1"/>	<!--Fishing Rod-->
+	<rod id="49586" duration_modifier="1" reward_modifier="1" shot_consume_count="1"/>	<!--Mermaid's Golden Fishing Rod-->
+	<rod id="49587" duration_modifier="1" reward_modifier="1" shot_consume_count="1"/>	<!--Mermaid's Golden Fishing Rod-->
+	<rod id="70116" duration_modifier="1" reward_modifier="1.5" shot_consume_count="1"/>	<!--Mermaid's Elite Golden Fishing Rod-->
+	<rod id="70117" duration_modifier="1" reward_modifier="1.5" shot_consume_count="1"/>	<!--Mermaid's Elite Golden Fishing Rod-->
+	<rod id="70118" duration_modifier="1" reward_modifier="1.5" shot_consume_count="1"/>	<!--Mermaid's Elite Golden Fishing Rod-->
+	<rod id="70119" duration_modifier="1" reward_modifier="1.5" shot_consume_count="1"/>	<!--Mermaid's Elite Golden Fishing Rod-->
+	<rod id="70120" duration_modifier="1" reward_modifier="1.5" shot_consume_count="1"/>	<!--Mermaid's Elite Golden Fishing Rod-->
+</list>

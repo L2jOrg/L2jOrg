@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!ELEMENT list (authserver|gameserver)*>
+
+	<!ELEMENT authserver (#PCDATA)>
+	<!ATTLIST authserver
+		ip CDATA #REQUIRED
+		port CDATA #REQUIRED>
+
+	<!ELEMENT gameserver (host)*>
+
+		<!ELEMENT host (#PCDATA)>
+		<!ATTLIST host
+			id CDATA #REQUIRED
+			ip CDATA #IMPLIED
+			inner_ip CDATA #IMPLIED
+			port CDATA #REQUIRED
+			key CDATA #IMPLIED>

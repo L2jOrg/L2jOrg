@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "enchant_items.dtd">
+<!--AUTHOR: VISTALL && Bonux-->
+<list>
+	<chance_variations>
+		<variation id="1"><!--weapon_scroll-->
+			<enchant level="1-3" base_chance="100.0" magic_weapon_chance="100.0"/>
+			<enchant level="4-6" base_chance="66.0" magic_weapon_chance="44.0"/>
+			<enchant level="7" base_chance="66.0" magic_weapon_chance="44.0" success_visual_effect="true"/>
+			<enchant level="8-14" base_chance="66.0" magic_weapon_chance="44.0"/>
+			<enchant level="15" base_chance="66.0" magic_weapon_chance="44.0" success_visual_effect="true"/>
+			<enchant level="16" base_chance="66.0" magic_weapon_chance="44.0"/>
+		</variation>
+		<variation id="2"><!--armor_scroll-->
+			<enchant level="1-3" base_chance="100.0"/>
+			<enchant level="4" base_chance="66.0" full_body_armor_chance="100.0"/>
+			<enchant level="5" base_chance="66.0"/>
+			<enchant level="6" base_chance="66.0" success_visual_effect="true"/>
+			<enchant level="7-14" base_chance="66.0"/>
+			<enchant level="15" base_chance="66.0" success_visual_effect="true"/>
+			<enchant level="16" base_chance="66.0"/>
+		</variation>
+	</chance_variations>
+
+	<!--Стандартные настройки для енчанта, -1 в макс , означает нелимитирова-->
+	<default max_enchant="20" show_fail_effect="false"/>
+
+	<!--Common Enchant Scrolls-->
+	<!--Scroll: Enchant Weapon (D-Grade)-->
+	<enchant_scroll id="955" on_fail="CRYSTALS" type="WEAPON" variation="1" grade="D"/>
+
+	<!--Scroll: Enchant Armor (D-Grade)-->
+	<enchant_scroll id="956" on_fail="CRYSTALS" type="ARMOR" variation="2" grade="D"/>
+
+	<!--Scroll: Enchant Weapon (C-Grade)-->
+	<enchant_scroll id="951" on_fail="CRYSTALS" type="WEAPON" variation="1" grade="C"/>
+
+	<!--Scroll: Enchant Armor (C-Grade)-->
+	<enchant_scroll id="952" on_fail="CRYSTALS" type="ARMOR" variation="2" grade="C"/>
+
+	<!--Scroll: Enchant Weapon (B-Grade)-->
+	<enchant_scroll id="947" on_fail="CRYSTALS" type="WEAPON" variation="1" grade="B"/>
+
+	<!--Scroll: Enchant Armor (B-Grade)-->
+	<enchant_scroll id="948" on_fail="CRYSTALS" type="ARMOR" variation="2" grade="B"/>
+
+	<!--Scroll: Enchant Weapon (A-Grade)-->
+	<enchant_scroll id="729" on_fail="CRYSTALS" type="WEAPON" variation="1" grade="A"/>
+
+	<!--Scroll: Enchant Armor (A-Grade)-->
+	<enchant_scroll id="730" on_fail="CRYSTALS" type="ARMOR" variation="2" grade="A"/>
+
+	<!--Blessed Enchant Scrolls-->
+	<!--Blessed Scroll: Enchant Weapon (D-Grade)-->
+	<enchant_scroll id="6575" on_fail="DROP_ENCHANT" type="WEAPON" variation="1" grade="D"/>
+
+	<!--Blessed Scroll: Enchant Armor (D-Grade)-->
+	<enchant_scroll id="6576" on_fail="DROP_ENCHANT" type="ARMOR" variation="2" grade="D"/>
+
+	<!--Blessed Scroll: Enchant Weapon (C-Grade)-->
+	<enchant_scroll id="6573" on_fail="DROP_ENCHANT" type="WEAPON" variation="1" grade="C"/>
+
+	<!--Blessed Scroll: Enchant Armor (C-Grade)-->
+	<enchant_scroll id="6574" on_fail="DROP_ENCHANT" type="ARMOR" variation="2" grade="C"/>
+
+	<!--Blessed Scroll: Enchant Weapon (B-Grade)-->
+	<enchant_scroll id="6571" on_fail="DROP_ENCHANT" type="WEAPON" variation="1" grade="B"/>
+
+	<!--Blessed Scroll: Enchant Armor (B-Grade)-->
+	<enchant_scroll id="6572" on_fail="DROP_ENCHANT" type="ARMOR" variation="2" grade="B"/>
+
+	<!--Blessed Scroll: Enchant Weapon (A-Grade)-->
+	<enchant_scroll id="6569" on_fail="DROP_ENCHANT" type="WEAPON" variation="1" grade="A"/>
+
+	<!--Blessed Scroll: Enchant Armor (A-Grade)-->
+	<enchant_scroll id="6570" on_fail="DROP_ENCHANT" type="ARMOR" variation="2" grade="A"/>
+
+	<!--Event Enchant Scrolls-->
+	<!--Scroll: Enchant Weapon (D-Grade)-->
+	<enchant_scroll id="34072" on_fail="CRYSTALS" type="WEAPON" variation="1" grade="D"/>
+
+	<!--Scroll: Enchant Weapon (C-Grade)-->
+	<enchant_scroll id="34070" on_fail="CRYSTALS" type="WEAPON" variation="1" grade="C"/>
+
+	<!--Improved Enchant Scrolls-->
+	<!--Improved Scroll: Enchant Weapon (D-grade)-->
+	<enchant_scroll id="33806" on_fail="CRYSTALS" type="WEAPON" variation="1" grade="D" max_enchant_step="3"/>
+
+	<!--Improved Scroll: Enchant Weapon (C-grade)-->
+	<enchant_scroll id="33807" on_fail="CRYSTALS" type="WEAPON" variation="1" grade="C" max_enchant_step="3"/>
+
+	<!--Improved Scroll: Enchant Weapon (B-grade)-->
+	<enchant_scroll id="33808" on_fail="CRYSTALS" type="WEAPON" variation="1" grade="B" max_enchant_step="3"/>
+
+	<!--Improved Scroll: Enchant Weapon (A-grade)-->
+	<enchant_scroll id="33809" on_fail="CRYSTALS" type="WEAPON" variation="1" grade="A" max_enchant_step="3"/>
+
+	<!--Improved Scroll: Enchant Armor (D-grade)-->
+	<enchant_scroll id="33812" on_fail="CRYSTALS" type="ARMOR" variation="2" grade="D" max_enchant_step="3"/>
+
+	<!--Improved Scroll: Enchant Armor (C-grade)-->
+	<enchant_scroll id="33813" on_fail="CRYSTALS" type="ARMOR" variation="2" grade="C" max_enchant_step="3"/>
+
+	<!--Improved Scroll: Enchant Armor (B-grade)-->
+	<enchant_scroll id="33814" on_fail="CRYSTALS" type="ARMOR" variation="2" grade="B" max_enchant_step="3"/>
+
+	<!--Improved Scroll: Enchant Armor (A-grade)-->
+	<enchant_scroll id="33815" on_fail="CRYSTALS" type="ARMOR" variation="2" grade="A" max_enchant_step="3"/>
+	
+	<!--Стабильный Свиток: Модифицировать Доспех (C)-->
+	<enchant_scroll id="49483" on_fail="NOTHING" type="ARMOR" variation="2" grade="C" max_enchant="6"/>
+	
+	<!--Стабильный Свиток: Модифицировать Оружие (C)-->
+	<enchant_scroll id="49484" on_fail="NOTHING" type="WEAPON" variation="2" grade="C" max_enchant="7"/>
+	
+	<!--Стабильный Свиток: Модифицировать Доспех (B)-->
+	<enchant_scroll id="49485" on_fail="NOTHING" type="ARMOR" variation="2" grade="B" max_enchant="6"/>
+	
+	<!--Стабильный Свиток: Модифицировать Оружие (B)-->
+	<enchant_scroll id="49486" on_fail="NOTHING" type="WEAPON" variation="2" grade="B" max_enchant="7"/>
+</list>

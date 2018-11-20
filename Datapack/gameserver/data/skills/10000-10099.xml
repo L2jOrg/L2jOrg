@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="10015" levels="1" name="Chain Strike">
+		<set name="icon" value="icon.skill10015"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="coolTime" value="1000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="1000"/>
+		<set name="mp_consume" value="69"/>
+		<set name="abnormal_time" value="1"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="76"/>
+		<set name="activateRate" value="60"/>	<!--TODO: Check.-->
+		<set name="nextAction" value="attack"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="trait" value="PULL"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<cond msgId="113">
+			<using kind="Shield"/>
+		</cond>
+		<for>
+			<effect name="ThrowHorizontal">
+				<def name="fly_speed" value="600"/>
+				<def name="fly_delay" value="600"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="10094" levels="1" name="Mass Lightning Strike">
+		<set name="icon" value="icon.skll10094"/>
+		<set name="reuseDelay" value="60000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="140"/>
+		<set name="abnormal_effect" value="PARALYZE"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="activateRate" value="60"/>
+		<set name="magicLevel" value="80"/>
+		<set name="operate_type" value="A2"/>
+		<set name="power" value="1997"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="affect_range" value="200"/>
+		<set name="trait" value="PARALYZE"/>
+		<set name="itemConsumeId" value="1785"/>
+		<set name="itemConsumeCount" value="1"/>
+		<for>
+			<effect name="Paralyze"/>
+		</for>
+	</skill>
+</list>

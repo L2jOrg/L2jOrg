@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="13339" levels="5" name="Heavy Armor Set +6">
+		<table name="#pDef">0 47 47 47 47</table>
+		<table name="#mDef">0 28 28 28 28</table>
+		<table name="#absorbDam">0 0 2 2 2</table>
+		<table name="#reuse">1 1 0.96 0.96 0.96</table>
+		<table name="#res">0 0 0 10 10</table>
+		<table name="#bowWpnVuln">0 0 0 0 10</table>
+		<table name="#pDefPer">1 1 1 1 1.06</table>
+		<set name="icon" value="icon.skill0231"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxHp" value="360"/>
+			<add stat="regHp" value="10"/>
+			<add stat="regMp" value="4"/>
+			<add stat="pDef" value="#pDef"/>
+			<add stat="mDef" value="#mDef"/>
+			<add stat="absorbDam" value="#absorbDam"/>
+			<mul stat="pReuse" value="#reuse"/>
+			<p_defence_trait name="shock" value="#res"/>
+			<p_defence_trait name="bow" value="#bowWpnVuln"/>
+			<mul stat="pDef" value="#pDefPer"/>
+		</for>
+	</skill>
+	<skill id="13340" levels="5" name="Light Armor Set +6">
+		<table name="#pDef">0 47 47 47 47</table>
+		<table name="#mDef">0 28 28 28 28</table>
+		<table name="#spd">0 0 4 4 4</table>
+		<table name="#atk">1 1 1.07 1.07 1.07</table>
+		<table name="#res">0 0 0 5 5</table>
+		<table name="#magicResist">1 1 1 1 1.15</table>
+		<table name="#mDefPer">1 1 1 1 1.07</table>
+		<set name="icon" value="icon.skill0233"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxHp" value="200"/>
+			<add stat="maxMp" value="80"/>
+			<add stat="regHp" value="10"/>
+			<add stat="regMp" value="4"/>
+			<add stat="pDef" value="#pDef"/>
+			<add stat="mDef" value="#mDef"/>
+			<add stat="runSpd" value="#spd"/>
+			<mul stat="pAtk" value="#atk"/>
+			<mul stat="mAtk" value="#atk"/>
+			<p_defence_trait name="derangement" value="#res"/>
+			<p_defence_trait name="shock" value="#res"/>
+			<p_defence_trait name="sleep" value="#res"/>
+			<p_defence_trait name="paralyze" value="#res"/>
+			<mul stat="magicResist" value="#magicResist"/>
+			<mul stat="mDef" value="#mDefPer"/>
+		</for>
+	</skill>
+	<skill id="13341" levels="5" name="Robe Armor Set +6">
+		<table name="#pDef">0 47 47 47 47</table>
+		<table name="#mDef">0 28 28 28 28</table>
+		<table name="#hpEff">0 0 52 52 52</table>
+		<table name="#mpConsum">1 1 0.96 0.96 0.96</table>
+		<table name="#paralyzeResist">0 0 0 10 10</table>
+		<table name="#stunResist">0 0 0 5 5</table>
+		<table name="#resist_abnormal_debuff">0 0 0 0 -7</table>
+		<table name="#pCritChanceRcpt">1 1 1 1 0.8</table>
+		<set name="icon" value="icon.skill0234"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxMp" value="140"/>
+			<add stat="regHp" value="4"/>
+			<add stat="regMp" value="6"/>
+			<add stat="pDef" value="#pDef"/>
+			<add stat="mDef" value="#mDef"/>
+			<add stat="hpEff" value="#hpEff"/>
+			<mul stat="mpConsum" value="#mpConsum"/>
+			<p_defence_trait name="paralyze" value="#paralyzeResist"/>
+			<p_defence_trait name="shock" value="#stunResist"/>
+			<add stat="resist_abnormal_debuff" value="#resist_abnormal_debuff"/>
+			<mul stat="pCritChanceRcpt" value="#pCritChanceRcpt"/>
+		</for>
+	</skill>
+</list>

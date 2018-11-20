@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="90000" name="Best Dye of DEX &lt;DEX + 4 CON - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_dex"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="90001" name="Best Dye of INT &lt;INT + 4 MEN - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_int"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="90002" name="Best Dye of INT &lt;INT + 4 WIT - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_int"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="90003" name="Best Dye of MEN &lt;MEN + 4 INT - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_men"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="90004" name="Best Dye of MEN &lt;MEN + 4 WIT - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_men"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="90005" name="Best Dye of WIT &lt;WIT + 4 INT - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_wit"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="90006" name="Best Dye of WIT &lt;WIT + 4 MEN - 2&gt;" add_name="3rd Class Transfer">
+		<set name="icon" value="icon.lv4_1_dye_wit"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="90007" name="Common Life Stone" add_name="Event">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_mineral_general_i00"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90008" name="Remnant Ashes">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_broken_crystal_silver_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90009" name="Image of Evil">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_broken_crystal_red_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90010" name="Key to the West Wing of the Dungeon of Abyss">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_dark_key_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90011" name="Key to the East Wing of the Dungeon of Abyss">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_dark_key_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90012" name="Common Life Stone">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_mineral_general_i00"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90013" name="Mid-grade Life Stone">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_mineral_special_i03"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90014" name="High-grade Life Stone">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_mineral_rare_i03"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90015" name="Top-grade Life Stone">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_mineral_unique_i03"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90016" name="Shining Life Stone">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.renewal_mineral_r"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90017" name="Weapons Ingredient Box (A-grade)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_box_of_adventure_1_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90018" name="Elite Symbol of Monster Arena">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_residence_token_royalguard"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90019" name="Symbol of Monster Arena">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_residence_token_giantchaser"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90020" name="Box of Best Dye" add_name="3rd Class Transfer">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_box_of_adventure_4_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<armor id="90021" name="Warriorâs Talisman - Attack" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.r90_sp_talisman_dr_mp_active"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="durability" value="43200"/>		
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="35036" level="1"/>
+		</skills>
+	</armor>
+	<armor id="90022" name="Warriorâs Talisman - Defense" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.r99_talisman_pd_up_passive"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="durability" value="43200"/>		
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="35037" level="1"/>
+		</skills>
+	</armor>
+	<armor id="90023" name="Belt">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.belt_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="500"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="10"/>
+		</for>
+	</armor>
+	<armor id="90024" name="Rag Belt">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.belt_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="500"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="10"/>
+		</for>
+	</armor>
+	<armor id="90025" name="Leather Belt">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.belt_i02"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="500"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="10"/>
+		</for>
+	</armor>
+	<armor id="90026" name="Iron Belt">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.belt_i03"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="500"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="10"/>
+		</for>
+	</armor>
+	<armor id="90027" name="Mithril Belt">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.belt_i04"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="500"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="10"/>
+		</for>
+	</armor>
+	<etcitem id="90028" name="Clasp">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.pin_i00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90029" name="Mid-grade Clasp">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.pin_i01"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90030" name="High-grade Clasp">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.pin_i02"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90031" name="Top-grade Clasp">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.pin_i03"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90032" name="Elixir of Life">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_super_hp_potion_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90033" name="Elixir of Mind">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_super_mp_potion_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90034" name="Spellbook Box - 3rd Class Transfer">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_readybox_silver"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90035" name="Life Stone Pack">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<armor id="90036" name="Heroâs Talisman - Attack" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.r90_sp_talisman_dr_hp_active"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="durability" value="43200"/>		
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="35038" level="1"/>
+		</skills>
+	</armor>
+	<armor id="90037" name="Heroâs Talisman - Defense" add_name="30 days">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.r95_talisman_ca_down_active"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="durability" value="43200"/>		
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="35039" level="1"/>
+		</skills>
+	</armor>
+	<etcitem id="90038" name="Spellbook: Mount Golden Lion ">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_spellbook_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90039" name="Spellbook: Mount Pegasus">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_spellbook_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90040" name="Spellbook: Mount Saber Tooth Cougar">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_spellbook_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90041" name="Spellbook: Mount Kukuru">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_spellbook_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90042" name="Spellbook: Mount Black Bear">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_spellbook_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90043" name="Dark Assassin Transformation Potion">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.empty_bottle"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="handler" value="SkillsReduce"/>
+		<skills>
+			<skill id="39205" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="90044" name="Dimensional Blessing">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_blessed_kalie_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<skills>
+			<skill id="39204" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="90045" name="Magical Tablet">
+		<set name="icon" value="icon.etc_hidden_1st_page_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90046" name="Scroll: Vengeance">
+		<set name="icon" value="icon.etc_magic_book_black_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90047" name="Scroll: Touch of Life ">
+		<set name="icon" value="icon.etc_magic_book_black_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90048" name="Scroll: Touch of Death">
+		<set name="icon" value="icon.etc_magic_book_black_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90049" name="Scroll: Shield of Faith">
+		<set name="icon" value="icon.etc_magic_book_black_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90050" name="Scroll: Shield of Sacrifice">
+		<set name="icon" value="icon.etc_magic_book_black_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90051" name="Scroll: Insane Crusher">
+		<set name="icon" value="icon.etc_magic_book_black_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90052" name="Scroll: Evaâs Protection">
+		<set name="icon" value="icon.etc_magic_book_black_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90053" name="Scroll: Mass Lightning Strike">
+		<set name="icon" value="icon.etc_magic_book_black_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90054" name="Scroll: Clear Movements">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90055" name="Scroll: Critical Wound">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90056" name="Scroll: Focus Power">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90057" name="Scroll: Focus Chance">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90058" name="Scroll: Focus Death">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90059" name="Scroll: Mirage">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90060" name="Scroll: Evasion">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90061" name="Scroll: Counterattack">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90062" name="Scroll: Real Target">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90063" name="Scroll: Death Sting">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90064" name="Scroll: Flame Hawk">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90065" name="Scroll: Arrow Rain">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90066" name="Scroll: Ghost Piercing">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90067" name="Scroll: Sonic Barrier">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90068" name="Scroll: Indestructible Sound">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90069" name="Scroll: Maximum Sonic Focus">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90070" name="Scroll: Force Barrier">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90071" name="Scroll: Rush">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90072" name="Scroll: Maximum Force Focus">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90073" name="Scroll: Destroyerâs Roar">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90074" name="Scroll: Over the Body">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90075" name="Scroll: Demolition Impact">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90076" name="Scroll: Stun Blast">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90077" name="Scroll: Spear Howl">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90078" name="Scroll: Armor Crush">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90079" name="Scroll: Spoil Crush">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90080" name="Scroll: Final Secret">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90081" name="Scroll: Arcane Power">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90082" name="Scroll: Fire Vortex Buster">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90083" name="Scroll: Ice Vortex Crusher">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90084" name="Scroll: Wind Vortex Slug">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90085" name="Scroll: Arcane Chaos">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90086" name="Scroll: Arcane Shield">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90087" name="Scroll: Curse of Doom">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90088" name="Scroll: Curse of Abyss">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90089" name="Scroll: Vampiric Mist">
+		<set name="icon" value="icon.etc_magic_book_red_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90090" name="Scroll: Song of Renewal">
+		<set name="icon" value="icon.etc_magic_book_blue_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90091" name="Scroll: Champion Song">
+		<set name="icon" value="icon.etc_magic_book_blue_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90092" name="Scroll: Song of Silence">
+		<set name="icon" value="icon.etc_magic_book_blue_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90093" name="Scroll: Song of Purification">
+		<set name="icon" value="icon.etc_magic_book_blue_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90094" name="Scroll: Dance of Shadows">
+		<set name="icon" value="icon.etc_magic_book_blue_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90095" name="Scroll: Dance of Siren">
+		<set name="icon" value="icon.etc_magic_book_blue_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90096" name="Scroll: Dance of Medusa">
+		<set name="icon" value="icon.etc_magic_book_blue_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90097" name="Scroll: Dance of Berserker">
+		<set name="icon" value="icon.etc_magic_book_blue_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90098" name="Scroll: Prophecy of Fire">
+		<set name="icon" value="icon.etc_magic_book_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="90099" name="Scroll: Block Shield">
+		<set name="icon" value="icon.etc_magic_book_white_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+</list>

@@ -1,0 +1,11 @@
+<html><head><body>
+High Prefect Ladanza:
+<br>Welcome to the Human city, adventurer. The Humans petitioned Pa'agrio Lord Kakai to aid them during this time of turmoil. Ancestors Martankus and Ungoat, of the Duda-Mara tribe, say that this is related to the "Eternal Winter," the only thing that can make an Orc cower in fear.<br>Hmm, it's somewhat amusing that Pa'agrio's children are here, in the castle that used to belong to our enemy.<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">"Can you tell me about the 2nd Class Transfer?"</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Clan</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Alliance</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Exchange Daily Coins</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Quest</Button>
+</body></html>

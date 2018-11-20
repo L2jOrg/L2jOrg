@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "multisell.dtd">
+<list>
+	<config show_all="true" no_tax="true" keep_enchanted="false" />
+	<!-- Wooden Helmet -->
+	<item>
+		<ingredient id="57" count="-1"/>
+		<production id="23" count="1"/>
+	</item>
+	<item>
+		<ingredient id="57" count="-1"/>
+		<production id="2386" count="1"/>
+	</item>
+	<item>
+		<ingredient id="57" count="-1"/>
+		<production id="43" count="1"/>
+	</item>
+	<!-- Leather Helmet -->
+	<item>
+		<ingredient id="57" count="-1"/>
+		<production id="1101" count="1"/>
+	</item>
+	<item>
+		<ingredient id="57" count="-1"/>
+		<production id="1104" count="1"/>
+	</item>
+	<item>
+		<ingredient id="57" count="-1"/>
+		<production id="44" count="1"/>
+	</item>
+</list>

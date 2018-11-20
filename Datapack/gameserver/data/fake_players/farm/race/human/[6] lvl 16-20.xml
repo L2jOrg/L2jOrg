@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE farm SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<farm name="Human (Lvl 13-17)" min_level="13" max_level="17" races="HUMAN">
+	<zones>
+		<zone>
+			<polygon>
+				<coords loc="-120552 233704 -4000 -2300"/>
+				<coords loc="-120328 235848 -4000 -2300"/>
+				<coords loc="-120104 237128 -4000 -2300"/>
+				<coords loc="-120408 240600 -4000 -2300"/>
+				<coords loc="-119032 241832 -4000 -2300"/>
+				<coords loc="-118632 242328 -4000 -2300"/>
+				<coords loc="-118888 243384 -4000 -2300"/>
+				<coords loc="-118264 244504 -4000 -2300"/>
+				<coords loc="-117416 245832 -4000 -2300"/>
+				<coords loc="-117928 247976 -4000 -2300"/>
+				<coords loc="-116840 249288 -4000 -2300"/>
+				<coords loc="-116568 250744 -4000 -2300"/>
+				<coords loc="-115208 253192 -4000 -2300"/>
+				<coords loc="-113384 253944 -4000 -2300"/>
+				<coords loc="-112504 254936 -4000 -2300"/>
+				<coords loc="-111640 255384 -4000 -2300"/>
+				<coords loc="-110936 255944 -4000 -2300"/>
+				<coords loc="-109832 256408 -4000 -2300"/>
+				<coords loc="-109096 255832 -4000 -2300"/>
+				<coords loc="-112568 249928 -4000 -2300"/>
+				<coords loc="-113128 247496 -4000 -2300"/>
+				<coords loc="-114232 244904 -4000 -2300"/>
+				<coords loc="-114776 243704 -4000 -2300"/>
+				<coords loc="-115848 241272 -4000 -2300"/>
+				<coords loc="-116376 240008 -4000 -2300"/>
+				<coords loc="-117112 237736 -4000 -2300"/>
+				<coords loc="-117320 235480 -4000 -2300"/>
+				<coords loc="-117784 234056 -4000 -2300"/>
+			</polygon>
+		</zone>
+		<spawn_points>
+			<coords loc="-119368 235096 -2896"/>
+			<coords loc="-119944 236536 -2800"/>
+			<coords loc="-120440 238584 -3072"/>
+		</spawn_points>
+	</zones>
+	<on_obtain_max_level>
+		<action id="1"/>
+	</on_obtain_max_level>
+	<go_to_town min_farm_time="1800" max_farm_time="3600">
+		<action id="1"/>
+	</go_to_town>
+	<action id="1">
+		<wait min_delay="1000" max_delay="3000"/>
+		<random_action>
+			<ordinary_actions>
+				<move_to_point x="-119352" y="236296" z="-2864" min_range="50" max_range="150"/>
+				<move_to_point x="-119368" y="235144" z="-2896" min_range="50" max_range="150"/>
+				<move_to_point x="-119240" y="232872" z="-2896" min_range="50" max_range="150"/>
+				<move_to_point x="-119032" y="231384" z="-2880" min_range="50" max_range="150"/>
+				<move_to_point x="-118936" y="230456" z="-2912" min_range="50" max_range="150"/>
+				<move_to_point x="-118616" y="229336" z="-2880" min_range="50" max_range="150"/>
+				<move_to_point x="-117432" y="227544" z="-2896" min_range="50" max_range="150"/>
+				<move_to_point x="-117000" y="226056" z="-2944" min_range="50" max_range="150"/>
+				<move_to_point x="-116968" y="224776" z="-3024" min_range="50" max_range="150"/>
+				<move_to_point x="-116952" y="223464" z="-3056" min_range="50" max_range="150"/>
+				<move_to_point x="-116776" y="222632" z="-3056" min_range="50" max_range="150"/>
+				<move_to_point x="-116264" y="221320" z="-3072" min_range="50" max_range="150"/>
+				<move_to_point x="-115384" y="220008" z="-3088" min_range="50" max_range="150"/>
+				<move_to_point x="-114136" y="219112" z="-3152" min_range="50" max_range="150"/>
+				<move_to_point x="-112984" y="218056" z="-3120" min_range="50" max_range="150"/>
+				<move_to_point x="-112360" y="217432" z="-3104" min_range="50" max_range="150"/>
+				<move_to_point x="-110824" y="215928" z="-3248" min_range="50" max_range="150"/>
+				<move_to_point x="-109576" y="215432" z="-3264" min_range="50" max_range="150"/>
+				<move_to_point x="-107928" y="214904" z="-3408" min_range="50" max_range="150"/>
+				<move_to_point x="-106888" y="214824" z="-3424" min_range="50" max_range="150"/>
+				<move_to_point x="-105864" y="214792" z="-3408" min_range="50" max_range="150"/>
+				<move_to_point x="-105816" y="214728" z="-3408" min_range="50" max_range="150"/>
+				<move_to_point x="-103800" y="215192" z="-3440" min_range="50" max_range="150"/>
+				<move_to_point x="-102776" y="216040" z="-3424" min_range="50" max_range="150"/>
+				<move_to_point x="-101624" y="217288" z="-3392" min_range="50" max_range="150"/>
+				<move_to_point x="-101048" y="218792" z="-3312" min_range="50" max_range="150"/>
+				<move_to_point x="-100488" y="221016" z="-3376" min_range="50" max_range="150"/>
+				<move_to_point x="-99912" y="223480" z="-3424" min_range="50" max_range="150"/>
+				<move_to_point x="-99736" y="225384" z="-3584" min_range="50" max_range="150"/>
+				<move_to_point x="-100648" y="228280" z="-3712" min_range="50" max_range="150"/>
+				<move_to_point x="-99320" y="232344" z="-3456" min_range="50" max_range="150"/>
+				<move_to_point x="-98792" y="233816" z="-3328" min_range="50" max_range="150"/>
+				<move_to_point x="-98232" y="235784" z="-3376" min_range="50" max_range="150"/>
+				<move_to_point x="-96712" y="236232" z="-3488" min_range="50" max_range="150"/>
+				<move_to_point x="-95144" y="235944" z="-3504" min_range="50" max_range="150"/>
+				<move_to_point x="-93816" y="236600" z="-3616" min_range="50" max_range="150"/>
+				<move_to_point x="-91896" y="238120" z="-3680" min_range="50" max_range="150"/>
+				<move_to_point x="-90456" y="238760" z="-3728" min_range="50" max_range="150"/>
+				<move_to_point x="-89240" y="239000" z="-3712" min_range="50" max_range="150"/>
+				<move_to_point x="-87976" y="239336" z="-3648" min_range="50" max_range="150"/>
+				<move_to_point x="-86920" y="240264" z="-3680" min_range="50" max_range="150"/>
+				<move_to_point x="-86216" y="241000" z="-3728" min_range="0" max_range="50"/>
+				<move_to_point x="-85384" y="241848" z="-3728" min_range="50" max_range="150"/>
+				<move_to_point x="-84568" y="242440" z="-3728" min_range="50" max_range="150"/>
+			</ordinary_actions>
+			<use_item id="736"/>
+		</random_action>
+	</action>
+</farm>

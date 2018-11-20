@@ -1,0 +1,1305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="29700" name="Minor Blessed Scroll of Resurrection" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_resurrection_i01"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29701" name="Rare Accessory Box" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.ev_10th_present2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29702" name="Chant of Vampire Chest">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29703" name="Body of Avatar Chest">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<armor id="29704" name="Fire Dragon Pendant" add_name="Lv. 1">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pve"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<armor id="29705" name="Fire Dragon Pendant" add_name="Lv. 2">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pve"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<armor id="29706" name="Fire Dragon Pendant" add_name="Lv. 3">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pve"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<armor id="29707" name="Fire Dragon Pendant" add_name="Lv. 4">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pve"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<armor id="29708" name="Fire Dragon Pendant" add_name="Lv. 5">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pve"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<armor id="29709" name="Water Dragon Pendant" add_name="Lv. 1">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pvp_blue"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<armor id="29710" name="Water Dragon Pendant" add_name="Lv. 2">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pvp_blue"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<armor id="29711" name="Water Dragon Pendant" add_name="Lv. 3">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pvp_blue"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<armor id="29712" name="Water Dragon Pendant" add_name="Lv. 4">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pvp_blue"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<armor id="29713" name="Water Dragon Pendant" add_name="Lv. 5">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pvp_blue"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<armor id="29714" name="Wind Dragon Pendant" add_name="Lv. 1">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pve_white"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<armor id="29715" name="Wind Dragon Pendant" add_name="Lv. 2">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pve_white"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<armor id="29716" name="Wind Dragon Pendant" add_name="Lv. 3">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pve_white"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<armor id="29717" name="Wind Dragon Pendant" add_name="Lv. 4">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pve_white"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<armor id="29718" name="Wind Dragon Pendant" add_name="Lv. 5">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pve_white"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<armor id="29719" name="Land Dragon Pendant" add_name="Lv. 1">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pvp"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<armor id="29720" name="Land Dragon Pendant" add_name="Lv. 2">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pvp"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<armor id="29721" name="Land Dragon Pendant" add_name="Lv. 3">
+		<set name="sellable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pvp"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<armor id="29722" name="Land Dragon Pendant" add_name="Lv. 4">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pvp"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<armor id="29723" name="Land Dragon Pendant" add_name="Lv. 5">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pvp"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="PENDANT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<etcitem id="29724" name="Fire Dragon Pendant Chest">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.bm_special_pendant_abradant_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29725" name="Water Dragon Pendant Chest">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.bm_special_pendant_abradant_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29726" name="Wind Dragon Pendant Chest">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.bm_special_pendant_abradant_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29727" name="Land Dragon Pendant Chest">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.bm_special_pendant_abradant_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29728" name="Special Fire Dragon Pendant Chest">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.bm_special_pendant_abradant_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29729" name="Special Water Dragon Pendant Chest">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.bm_special_pendant_abradant_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29730" name="Special Wind Dragon Pendant Chest">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.bm_special_pendant_abradant_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29731" name="Special Land Dragon Pendant Chest">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.bm_special_pendant_abradant_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29732" name="Package: Shiny Pendant Polish for Fire Dragon Pendant">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.bm_special_pendant_abradant_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29733" name="Package: Shiny Pendant Polish for Water Dragon Pendant">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.bm_special_pendant_abradant_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29734" name="Package: Shiny Pendant Polish for Wind Dragon Pendant">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.bm_special_pendant_abradant_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29735" name="Package: Shiny Pendant Polish for Land Dragon Pendant">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.bm_special_pendant_abradant_box"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29736" name="Diana\'s Earring" add_name="Quest">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.accessary_mage_earing_i00"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29737" name="Dianna\'s Ring" add_name="Quest">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.accessary_ring_of_binding_i00"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29738" name="Dianna\'s Necklace" add_name="Quest">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.item_normal142"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29739" name="Diana\'s Recommendation" add_name="Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_letter_envelope_i00"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29740" name="Scroll: Enchant Weapon (B-grade)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_scrl_of_ench_wp_b_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29741" name="Scroll: Enchant Armor (B-grade)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_scrl_of_ench_am_b_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29742" name="Blessed Scroll: Enchant Weapon (B-grade)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_blessed_scrl_of_ench_wp_b_i03"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29743" name="Blessed Scroll: Enchant Armor (B-grade)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_blessed_scrl_of_ench_am_b_i03"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29744" name="Shaft with Antharas treasures">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.g_bm_antaras_pocket_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29745" name="Premium Coin">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.g_bm_premium_coin_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29746" name="Mysterious Soulshot (B-grade)">
+		<set name="type" value="SOULSHOT"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.bm_spirit_bullet_red"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="B"/>
+		<skills>
+			<skill id="9296" level="1"/>	<!--Mysterious Soulshot (B-grade)-->
+		</skills>
+	</etcitem>
+	<etcitem id="29747" name="Mysterious Blessed Spiritshot (B-grade)">
+		<set name="type" value="BLESSED_SPIRITSHOT"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.bm_spell_shot_red"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="B"/>
+		<skills>
+			<skill id="8906" level="1"/>	<!--Mysterious Blessed Spiritshot (B-grade)-->
+		</skills>
+	</etcitem>
+	<etcitem id="29748" name="Package: Mysterious Soulshot (C-grade, 100 pcs.)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_pack_of_soulshot_b_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29749" name="Package: Mysterious Blessed Spiritshot (D-grade, 100 pcs)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_b_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29750" name="Sniper\'s Mysterious Package (B-grade)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29751" name="Mystic\'s Mysterious Package (B-grade)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<armor id="29752" name="Halloween Suit">
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.ev_wp_halloween"/>
+		<set name="price" value="0"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="1000"/>
+		<equip>
+			<slot id="FORMAL_WEAR"/>
+		</equip>
+	</armor>
+	<armor id="29753" name="Blue Talisman - P. Crit." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3271" level="1"/>	<!--Blue Talisman - P. Crit.-->
+		</skills>
+	</armor>
+	<armor id="29754" name="Blue Talisman - P. Atk." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3272" level="1"/>	<!--Blue Talisman - P. Atk.-->
+		</skills>
+	</armor>
+	<armor id="29755" name="Blue Talisman - P. Def." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3273" level="1"/>	<!--Blue Talisman - P. Def.-->
+		</skills>
+	</armor>
+	<armor id="29756" name="Blue Talisman - P. Skills Evasion" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3274" level="1"/>	<!--Blue Talisman - P. Skills Evasion-->
+		</skills>
+	</armor>
+	<armor id="29757" name="Blue Talisman - M. Crit." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3275" level="1"/>	<!--Blue Talisman - M. Crit.-->
+		</skills>
+	</armor>
+	<armor id="29758" name="Blue Talisman - M. Atk." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3276" level="1"/>	<!--Blue Talisman - M. Atk.-->
+		</skills>
+	</armor>
+	<armor id="29759" name="Blue Talisman - M. Def." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3277" level="1"/>	<!--Blue Talisman - M. Def.-->
+		</skills>
+	</armor>
+	<armor id="29760" name="Blue Talisman - M. Skills Evasion" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3278" level="1"/>	<!--Blue Talisman - M. Skills Evasion-->
+		</skills>
+	</armor>
+	<armor id="29761" name="Blue Talisman - Max. HP" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3279" level="1"/>	<!--Blue Talisman - Max. HP-->
+		</skills>
+	</armor>
+	<armor id="29762" name="Blue Talisman - Max. MP" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3280" level="1"/>	<!--Blue Talisman - Max. MP-->
+		</skills>
+	</armor>
+	<armor id="29763" name="Grey Talisman Box - Guard" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i07"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3281" level="1"/>	<!--Grey Talisman Box - Guard-->
+		</skills>
+	</armor>
+	<armor id="29764" name="Grey Talisman - Denial" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i07"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3282" level="1"/>	<!--Grey Talisman - Denial-->
+		</skills>
+	</armor>
+	<armor id="29765" name="Grey Talisman - Benefaction" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i07"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3283" level="1"/>	<!--Grey Talisman - Benefaction-->
+		</skills>
+	</armor>
+	<armor id="29766" name="Grey Talisman - Blocking" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i07"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3284" level="1"/>	<!--Grey Talisman - Blocking-->
+		</skills>
+	</armor>
+	<armor id="29767" name="Grey Talisman - Gravity" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i07"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3285" level="1"/>	<!--Grey Talisman - Gravity-->
+		</skills>
+	</armor>
+	<armor id="29768" name="Grey Talisman - Bond" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i07"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3286" level="1"/>	<!--Grey Talisman - Bond-->
+		</skills>
+	</armor>
+	<armor id="29769" name="White Talisman - P. Crit." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3271" level="2"/>	<!--White Talisman - P. Crit.-->
+		</skills>
+	</armor>
+	<armor id="29770" name="White Talisman - P. Atk." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3272" level="2"/>	<!--White Talisman - P. Atk.-->
+		</skills>
+	</armor>
+	<armor id="29771" name="White Talisman - P. Def" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3273" level="2"/>	<!--White Talisman - P. Def-->
+		</skills>
+	</armor>
+	<armor id="29772" name="White Talisman - P. Skills Evasion" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3274" level="2"/>	<!--White Talisman - P. Skills Evasion-->
+		</skills>
+	</armor>
+	<armor id="29773" name="White Talisman - M. Crit." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3275" level="2"/>	<!--White Talisman - M. Crit.-->
+		</skills>
+	</armor>
+	<armor id="29774" name="White Talisman - M. Atk." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3276" level="2"/>	<!--White Talisman - M. Atk.-->
+		</skills>
+	</armor>
+	<armor id="29775" name="White Talisman - M. Def." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3277" level="2"/>	<!--White Talisman - M. Def.-->
+		</skills>
+	</armor>
+	<armor id="29776" name="White Talisman - M. Skills Evasion" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3278" level="2"/>	<!--White Talisman - M. Skills Evasion-->
+		</skills>
+	</armor>
+	<armor id="29777" name="White Talisman - Max. HP" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3279" level="2"/>	<!--White Talisman - Max. HP-->
+		</skills>
+	</armor>
+	<armor id="29778" name="White Talisman - Max. MP" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3280" level="2"/>	<!--White Talisman - Max. MP-->
+		</skills>
+	</armor>
+	<armor id="29779" name="Yellow Talisman - Guard" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i02"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3287" level="1"/>	<!--Yellow Talisman - Guard-->
+		</skills>
+	</armor>
+	<armor id="29780" name="Yellow Talisman - Denial" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i02"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3288" level="1"/>	<!--Yellow Talisman - Denial-->
+		</skills>
+	</armor>
+	<armor id="29781" name="Yellow Talisman - Benefaction" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i02"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3289" level="1"/>	<!--Yellow Talisman - Benefaction-->
+		</skills>
+	</armor>
+	<armor id="29782" name="Yellow Talisman - Blocking" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i02"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3290" level="1"/>	<!--Yellow Talisman - Blocking-->
+		</skills>
+	</armor>
+	<armor id="29783" name="Yellow Talisman - Gravity" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i02"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3291" level="1"/>	<!--Yellow Talisman - Gravity-->
+		</skills>
+	</armor>
+	<armor id="29784" name="Yellow Talisman - Bond" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i02"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="60"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<skills>
+			<skill id="3292" level="1"/>	<!--Yellow Talisman - Bond-->
+		</skills>
+	</armor>
+	<etcitem id="29785" name="Blue Talisman Box - P. Crit." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29753" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29786" name="Blue Talisman Box - P. Atk." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29754" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29787" name="Blue Talisman Box - P. Def." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29755" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29788" name="Blue Talisman Box - P. Skills Evasion" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29756" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29789" name="Blue Talisman Box - M. Crit." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29757" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29790" name="Blue Talisman Box - M. Atk." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29758" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29791" name="Blue Talisman Box - M. Def." add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29759" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29792" name="Blue Talisman Box - M. Skills Evasion" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29760" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29793" name="Blue Talisman Box - Max. HP" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29761" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29794" name="Blue Talisman Box - Max. MP" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29762" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29795" name="Grey Talisman Box - Guard" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i05"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29763" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29796" name="Grey Talisman Box - Denial" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i05"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29764" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29797" name="Grey Talisman Box - Benefaction" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i05"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29765" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29798" name="Grey Talisman Box - Blocking" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i05"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29766" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="29799" name="Grey Talisman Box - Gravity" add_name="1 hour">
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_treasure_box_i05"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="29767" min_count="1" max_count="1" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+</list>

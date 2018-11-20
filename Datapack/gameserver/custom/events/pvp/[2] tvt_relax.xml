@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "events.dtd">
+<list>
+	<event id="2" name="TvT Relax" impl="PvP">
+		<parameter name="enabled" value="false"/>
+		<parameter name="start_time" value="00 * * * *"/>	<!--Время проведения ивента в формате cron.-->
+		<parameter name="min_level" value="40"/>
+		<parameter name="max_level" value="75"/>
+		<parameter name="min_players" value="10"/>
+		<parameter name="teams" value="2"/>
+		<parameter name="count_die_from_exit" value="-1"/>
+		<parameter name="min_kill_from_reward" value="1"/>
+		<parameter name="min_kill_team_from_reward" value="1"/>
+		<parameter name="hide_nick" value="true"/>
+		<parameter name="buffs" value="1040,3;1085,3;1204,2;1077,3;1044,3;1240,3;1242,3;1036,2;1045,6;1048,6;1086,2;1087,3"/>
+		<parameter name="add_hero_last_player" value="false"/>
+
+		<on_time>
+			<on time="0">
+				<start name="registration"/>
+			</on>
+			<on time="15">
+				<stop name="registration"/>
+			</on>
+			<on time="30">
+				<start name="sort"/>
+				<start name="teleport"/>
+			</on>
+			<on time="45">
+				<start name="battle"/>
+			</on>
+			<on time="120">
+				<stop name="battle"/>
+			</on>
+		</on_time>
+
+		<objects name="team0">
+			<point x="20728" y="254920" z="-2038"/>
+			<point x="21064" y="254184" z="-2046"/>
+			<point x="21160" y="253576" z="-2048"/>
+			<point x="21160" y="253032" z="-2049"/>
+		</objects>
+		<objects name="team1">
+			<point x="17400" y="251800" z="-2040"/>
+			<point x="17800" y="252264" z="-2046"/>
+			<point x="17848" y="252760" z="-2045"/>
+			<point x="17832" y="253320" z="-2044"/>
+		</objects>
+
+		<objects name="abnormal0">
+			<abnormal name="UNK_113"/>
+		</objects>
+		<objects name="abnormal1">
+			<abnormal name="STIGMA_STORM"/>
+		</objects>
+
+		<objects name="reward_for_win_team">
+			<reward item_id="4357" min="50" max="50" chance="100.0"/>
+			<reward item_id="4037" min="1" max="1" chance="25.0"/>
+		</objects>
+		<objects name="reward_for_lose_team">
+			<reward item_id="4357" min="25" max="25" chance="100.0"/>
+		</objects>
+	</event>
+</list>

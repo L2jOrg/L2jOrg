@@ -1,0 +1,8 @@
+<!ELEMENT list (lvl_bonus)*>
+
+<!ELEMENT lvl_bonus (bonus)*>
+
+<!ELEMENT bonus (#PCDATA)>
+<!ATTLIST bonus
+	lvl CDATA #REQUIRED
+	value CDATA #REQUIRED>

@@ -1,0 +1,45 @@
+<!ELEMENT list (chance_variations|enchant_scroll|default)*>
+
+	<!ELEMENT chance_variations (variation)*>
+
+			<!ELEMENT variation (enchant)*>
+			<!ATTLIST variation
+				id CDATA #REQUIRED>
+
+				<!ELEMENT enchant (#PCDATA)>
+				<!ATTLIST enchant
+					level CDATA #REQUIRED
+					base_chance CDATA #REQUIRED
+					magic_weapon_chance CDATA #IMPLIED
+					full_body_armor_chance CDATA #IMPLIED
+					success_visual_effect CDATA #IMPLIED>
+
+	<!ELEMENT default (#PCDATA)>
+	<!ATTLIST default
+		max_enchant CDATA #REQUIRED
+		show_fail_effect CDATA #REQUIRED>
+
+	<!ELEMENT enchant_scroll (item_list|grade_list)*>
+	<!ATTLIST enchant_scroll
+		id CDATA #REQUIRED
+		variation CDATA #IMPLIED
+		show_fail_effect CDATA #IMPLIED
+		on_fail CDATA #REQUIRED
+		enchant_drop_count CDATA #IMPLIED
+		max_enchant CDATA #IMPLIED
+		type CDATA #IMPLIED
+		grade CDATA #IMPLIED
+		min_enchant_step CDATA #IMPLIED
+		max_enchant_step CDATA #IMPLIED>
+
+		<!ELEMENT item_list (item)*>
+
+			<!ELEMENT item (#PCDATA)>
+			<!ATTLIST item
+				id CDATA #REQUIRED>
+
+		<!ELEMENT grade_list (grade)*>
+
+			<!ELEMENT grade (#PCDATA)>
+			<!ATTLIST grade
+				id CDATA #REQUIRED>

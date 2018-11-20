@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="14804" levels="10" name="Damage Reflect Attack Resistance">
+		<set name="icon" value="icon.skill0350"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="14826" levels="9" name="Intense Slash">
+		<table name="#effectPoint">52 54 57 64 67 70</table>
+		<table name="#power">1700 2000 3400 5000 9000 12000</table>
+		<table name="#itemConsumeId">70069 70070 70071 70072 70073 70074</table>
+		<set name="icon" value="icon.skill_transform_s_attack"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<set name="power" value="#power"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="itemConsumeId" value="#itemConsumeId"/>
+		<set name="itemConsumeCount" value="1"/>
+		<cond msgId="1902">
+			<player minLevel="20"/>
+		</cond>
+	</skill>
+	<skill id="14828" levels="9" name="Purity Blast">
+		<table name="#effectPoint">92 106 121 143 162 180</table>
+		<table name="#power">48 56 90 110 125 140</table>
+		<table name="#itemConsumeId">70075 70076 70077 70078 70079 70080</table>
+		<set name="icon" value="icon.skill_transform_s_attack"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="500"/>
+		<set name="hitTime" value="2500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="shieldignore" value="true"/>
+		<set name="isHandler" value="true"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="itemConsumeId" value="#itemConsumeId"/>
+		<set name="itemConsumeCount" value="1"/>
+		<cond msgId="1902">
+			<player minLevel="20"/>
+		</cond>			
+	</skill>
+	<skill id="14830" levels="9" name="Grey Explosion">
+		<table name="#effectPoint">52 54 57 64 67 70</table>
+		<table name="#power">1700 2000 3700 5500 9700 12000</table>
+		<table name="#itemConsumeId">70081 70082 70083 70084 70085 70086</table>
+		<set name="icon" value="icon.skill_transform_s_attack"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<set name="power" value="#power"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="itemConsumeId" value="#itemConsumeId"/>
+		<set name="itemConsumeCount" value="1"/>
+		<cond msgId="1902">
+			<player minLevel="20"/>
+		</cond>
+	</skill>
+	<skill id="14832" levels="9" name="Platonic Blizzard">
+		<table name="#effectPoint">92 106 121 143 162 180</table>
+		<table name="#power">30 40 50 65 75 85</table>
+		<table name="#itemConsumeId">70087 70088 70089 7009 70091 70092</table>
+		<set name="icon" value="icon.skill_transform_s_attack"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="500"/>
+		<set name="hitTime" value="2500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<set name="affect_range" value="200"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="power" value="#power"/>
+		<set name="itemConsumeId" value="#itemConsumeId"/>
+		<set name="itemConsumeCount" value="1"/>
+		<cond msgId="1902">
+			<player minLevel="20"/>	
+		</cond>			
+	</skill>
+</list>

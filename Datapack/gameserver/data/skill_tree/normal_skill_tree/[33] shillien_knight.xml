@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="33">	<!--Рыцарь Шилен-->
+			<skill id="28" level="13" name="Агрессия(Aggression)" cost="56000" min_level="40"/>
+			<skill id="28" level="14" name="Агрессия(Aggression)" cost="56000" min_level="40"/>
+			<skill id="28" level="15" name="Агрессия(Aggression)" cost="56000" min_level="40"/>
+			<skill id="18" level="1" name="Аура Ненависти(Aggression Aura)" cost="56000" min_level="40"/>
+			<skill id="18" level="2" name="Аура Ненависти(Aggression Aura)" cost="56000" min_level="40"/>
+			<skill id="18" level="3" name="Аура Ненависти(Aggression Aura)" cost="56000" min_level="40"/>
+			<skill id="217" level="9" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="56000" min_level="40"/>
+			<skill id="217" level="10" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="56000" min_level="40"/>
+			<skill id="217" level="11" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="56000" min_level="40"/>
+			<skill id="232" level="16" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="56000" min_level="40"/>
+			<skill id="232" level="17" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="56000" min_level="40"/>
+			<skill id="232" level="18" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="56000" min_level="40"/>
+			<skill id="153" level="3" name="Владение Щитом(Shield Mastery)" cost="56000" min_level="40"/>
+			<skill id="223" level="13" name="Жало(Sting)" cost="56000" min_level="40"/>
+			<skill id="223" level="14" name="Жало(Sting)" cost="56000" min_level="40"/>
+			<skill id="223" level="15" name="Жало(Sting)" cost="56000" min_level="40"/>
+			<skill id="2" level="5" name="Замешательство(Confusion)" cost="56000" min_level="40"/>
+			<skill id="105" level="3" name="Замораживающий Удар(Freezing Strike)" cost="56000" min_level="40"/>
+			<skill id="105" level="4" name="Замораживающий Удар(Freezing Strike)" cost="56000" min_level="40"/>
+			<skill id="70" level="17" name="Кража Здоровья(Drain HP)" cost="56000" min_level="40"/>
+			<skill id="70" level="18" name="Кража Здоровья(Drain HP)" cost="56000" min_level="40"/>
+			<skill id="70" level="19" name="Кража Здоровья(Drain HP)" cost="56000" min_level="40"/>
+			<skill id="289" level="1" name="Кровопийца(Life Leech)" cost="56000" min_level="40"/>
+			<skill id="147" level="15" name="Магическое Сопротивление(M. Def.)" cost="56000" min_level="40"/>
+			<skill id="147" level="16" name="Магическое Сопротивление(M. Def.)" cost="56000" min_level="40"/>
+			<skill id="147" level="17" name="Магическое Сопротивление(M. Def.)" cost="56000" min_level="40"/>
+			<skill id="401" level="1" name="Правосудие(Judgment)" cost="56000" min_level="40"/>
+			<skill id="33" level="1" name="Призвать Призрачный Кубик(Summon Phantom Cubic)" item_id="3041" cost="56000" min_level="40"/>
+			<skill id="122" level="1" name="Сглаз(Hex)" item_id="3050" cost="56000" min_level="40"/>
+			<skill id="115" level="3" name="Сокрушение Мощи(Power Break)" cost="56000" min_level="40"/>
+			<skill id="28" level="16" name="Агрессия(Aggression)" cost="66000" min_level="41"/>
+			<skill id="18" level="4" name="Аура Ненависти(Aggression Aura)" cost="66000" min_level="41"/>
+			<skill id="217" level="12" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="66000" min_level="41"/>
+			<skill id="232" level="19" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="66000" min_level="41"/>
+			<skill id="223" level="16" name="Жало(Sting)" cost="66000" min_level="41"/>
+			<skill id="70" level="20" name="Кража Здоровья(Drain HP)" cost="66000" min_level="41"/>
+			<skill id="147" level="18" name="Магическое Сопротивление(M. Def.)" cost="66000" min_level="41"/>
+			<skill id="28" level="17" name="Агрессия(Aggression)" cost="66000" min_level="42"/>
+			<skill id="18" level="5" name="Аура Ненависти(Aggression Aura)" cost="66000" min_level="42"/>
+			<skill id="217" level="13" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="66000" min_level="42"/>
+			<skill id="232" level="20" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="66000" min_level="42"/>
+			<skill id="223" level="17" name="Жало(Sting)" cost="66000" min_level="42"/>
+			<skill id="105" level="5" name="Замораживающий Удар(Freezing Strike)" cost="66000" min_level="42"/>
+			<skill id="70" level="21" name="Кража Здоровья(Drain HP)" cost="66000" min_level="42"/>
+			<skill id="147" level="19" name="Магическое Сопротивление(M. Def.)" cost="66000" min_level="42"/>
+			<skill id="28" level="18" name="Агрессия(Aggression)" cost="66000" min_level="43"/>
+			<skill id="18" level="6" name="Аура Ненависти(Aggression Aura)" cost="66000" min_level="43"/>
+			<skill id="143" level="1" name="Владение Кубами(Cubic Mastery)" cost="66000" min_level="43"/>
+			<skill id="217" level="14" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="66000" min_level="43"/>
+			<skill id="232" level="21" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="66000" min_level="43"/>
+			<skill id="223" level="18" name="Жало(Sting)" cost="66000" min_level="43"/>
+			<skill id="2" level="6" name="Замешательство(Confusion)" cost="66000" min_level="43"/>
+			<skill id="105" level="6" name="Замораживающий Удар(Freezing Strike)" cost="66000" min_level="43"/>
+			<skill id="70" level="22" name="Кража Здоровья(Drain HP)" cost="66000" min_level="43"/>
+			<skill id="289" level="2" name="Кровопийца(Life Leech)" cost="66000" min_level="43"/>
+			<skill id="147" level="20" name="Магическое Сопротивление(M. Def.)" cost="66000" min_level="43"/>
+			<skill id="112" level="3" name="Отклонить Стрелу(Deflect Arrow)" cost="66000" min_level="43"/>
+			<skill id="401" level="2" name="Правосудие(Judgment)" cost="66000" min_level="43"/>
+			<skill id="22" level="1" name="Призвать Вампирический Кубик(Summon Vampiric Cubic)" cost="66000" min_level="43"/>
+			<skill id="122" level="2" name="Сглаз(Hex)" cost="66000" min_level="43"/>
+			<skill id="115" level="4" name="Сокрушение Мощи(Power Break)" cost="66000" min_level="43"/>
+			<skill id="191" level="2" name="Фокусировка Разума(Focus Mind)" cost="66000" min_level="43"/>
+			<skill id="28" level="19" name="Агрессия(Aggression)" cost="100000" min_level="44"/>
+			<skill id="18" level="7" name="Аура Ненависти(Aggression Aura)" cost="100000" min_level="44"/>
+			<skill id="217" level="15" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="100000" min_level="44"/>
+			<skill id="232" level="22" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="100000" min_level="44"/>
+			<skill id="223" level="19" name="Жало(Sting)" cost="100000" min_level="44"/>
+			<skill id="70" level="23" name="Кража Здоровья(Drain HP)" cost="100000" min_level="44"/>
+			<skill id="147" level="21" name="Магическое Сопротивление(M. Def.)" cost="100000" min_level="44"/>
+			<skill id="28" level="20" name="Агрессия(Aggression)" cost="100000" min_level="45"/>
+			<skill id="18" level="8" name="Аура Ненависти(Aggression Aura)" cost="100000" min_level="45"/>
+			<skill id="217" level="16" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="100000" min_level="45"/>
+			<skill id="232" level="23" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="100000" min_level="45"/>
+			<skill id="223" level="20" name="Жало(Sting)" cost="100000" min_level="45"/>
+			<skill id="105" level="7" name="Замораживающий Удар(Freezing Strike)" cost="100000" min_level="45"/>
+			<skill id="70" level="24" name="Кража Здоровья(Drain HP)" cost="100000" min_level="45"/>
+			<skill id="147" level="22" name="Магическое Сопротивление(M. Def.)" cost="100000" min_level="45"/>
+			<skill id="1800" level="1" name="Пират(Pirate)" min_level="45"/>
+			<skill id="110" level="2" name="Абсолютная Защита(Ultimate Defense)" cost="100000" min_level="46"/>
+			<skill id="28" level="21" name="Агрессия(Aggression)" cost="100000" min_level="46"/>
+			<skill id="18" level="9" name="Аура Ненависти(Aggression Aura)" cost="100000" min_level="46"/>
+			<skill id="217" level="17" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="100000" min_level="46"/>
+			<skill id="232" level="24" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="100000" min_level="46"/>
+			<skill id="223" level="21" name="Жало(Sting)" cost="100000" min_level="46"/>
+			<skill id="2" level="7" name="Замешательство(Confusion)" cost="100000" min_level="46"/>
+			<skill id="105" level="8" name="Замораживающий Удар(Freezing Strike)" cost="100000" min_level="46"/>
+			<skill id="70" level="25" name="Кража Здоровья(Drain HP)" cost="100000" min_level="46"/>
+			<skill id="289" level="3" name="Кровопийца(Life Leech)" cost="100000" min_level="46"/>
+			<skill id="147" level="23" name="Магическое Сопротивление(M. Def.)" cost="100000" min_level="46"/>
+			<skill id="401" level="3" name="Правосудие(Judgment)" cost="100000" min_level="46"/>
+			<skill id="33" level="2" name="Призвать Призрачный Кубик(Summon Phantom Cubic)" cost="100000" min_level="46"/>
+			<skill id="122" level="3" name="Сглаз(Hex)" cost="100000" min_level="46"/>
+			<skill id="115" level="5" name="Сокрушение Мощи(Power Break)" cost="100000" min_level="46"/>
+			<skill id="103" level="1" name="Трупная Чума(Corpse Plague)" cost="100000" min_level="46"/>
+			<skill id="28" level="22" name="Агрессия(Aggression)" cost="130000" min_level="47"/>
+			<skill id="18" level="10" name="Аура Ненависти(Aggression Aura)" cost="130000" min_level="47"/>
+			<skill id="217" level="18" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="130000" min_level="47"/>
+			<skill id="232" level="25" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="130000" min_level="47"/>
+			<skill id="223" level="22" name="Жало(Sting)" cost="130000" min_level="47"/>
+			<skill id="70" level="26" name="Кража Здоровья(Drain HP)" cost="130000" min_level="47"/>
+			<skill id="147" level="24" name="Магическое Сопротивление(M. Def.)" cost="130000" min_level="47"/>
+			<skill id="28" level="23" name="Агрессия(Aggression)" cost="130000" min_level="48"/>
+			<skill id="18" level="11" name="Аура Ненависти(Aggression Aura)" cost="130000" min_level="48"/>
+			<skill id="217" level="19" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="130000" min_level="48"/>
+			<skill id="232" level="26" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="130000" min_level="48"/>
+			<skill id="223" level="23" name="Жало(Sting)" cost="130000" min_level="48"/>
+			<skill id="105" level="9" name="Замораживающий Удар(Freezing Strike)" cost="130000" min_level="48"/>
+			<skill id="70" level="27" name="Кража Здоровья(Drain HP)" cost="130000" min_level="48"/>
+			<skill id="147" level="25" name="Магическое Сопротивление(M. Def.)" cost="130000" min_level="48"/>
+			<skill id="28" level="24" name="Агрессия(Aggression)" cost="130000" min_level="49"/>
+			<skill id="18" level="12" name="Аура Ненависти(Aggression Aura)" cost="130000" min_level="49"/>
+			<skill id="217" level="20" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="130000" min_level="49"/>
+			<skill id="232" level="27" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="130000" min_level="49"/>
+			<skill id="223" level="24" name="Жало(Sting)" cost="130000" min_level="49"/>
+			<skill id="2" level="8" name="Замешательство(Confusion)" cost="130000" min_level="49"/>
+			<skill id="105" level="10" name="Замораживающий Удар(Freezing Strike)" cost="130000" min_level="49"/>
+			<skill id="70" level="28" name="Кража Здоровья(Drain HP)" cost="130000" min_level="49"/>
+			<skill id="289" level="4" name="Кровопийца(Life Leech)" cost="130000" min_level="49"/>
+			<skill id="147" level="26" name="Магическое Сопротивление(M. Def.)" cost="130000" min_level="49"/>
+			<skill id="112" level="4" name="Отклонить Стрелу(Deflect Arrow)" cost="130000" min_level="49"/>
+			<skill id="129" level="2" name="Отравление(Poison)" cost="130000" min_level="49"/>
+			<skill id="401" level="4" name="Правосудие(Judgment)" cost="130000" min_level="49"/>
+			<skill id="22" level="2" name="Призвать Вампирический Кубик(Summon Vampiric Cubic)" cost="130000" min_level="49"/>
+			<skill id="278" level="1" name="Призвать Змеиный Кубик(Summon Viper Cubic)" cost="130000" min_level="49"/>
+			<skill id="122" level="4" name="Сглаз(Hex)" cost="130000" min_level="49"/>
+			<skill id="115" level="6" name="Сокрушение Мощи(Power Break)" cost="130000" min_level="49"/>
+			<skill id="191" level="3" name="Фокусировка Разума(Focus Mind)" cost="130000" min_level="49"/>
+			<skill id="28" level="25" name="Агрессия(Aggression)" cost="200000" min_level="50"/>
+			<skill id="18" level="13" name="Аура Ненависти(Aggression Aura)" cost="200000" min_level="50"/>
+			<skill id="217" level="21" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="200000" min_level="50"/>
+			<skill id="232" level="28" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="200000" min_level="50"/>
+			<skill id="223" level="25" name="Жало(Sting)" cost="200000" min_level="50"/>
+			<skill id="70" level="29" name="Кража Здоровья(Drain HP)" cost="200000" min_level="50"/>
+			<skill id="147" level="27" name="Магическое Сопротивление(M. Def.)" cost="200000" min_level="50"/>
+			<skill id="28" level="26" name="Агрессия(Aggression)" cost="200000" min_level="51"/>
+			<skill id="18" level="14" name="Аура Ненависти(Aggression Aura)" cost="200000" min_level="51"/>
+			<skill id="217" level="22" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="200000" min_level="51"/>
+			<skill id="232" level="29" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="200000" min_level="51"/>
+			<skill id="223" level="26" name="Жало(Sting)" cost="200000" min_level="51"/>
+			<skill id="105" level="11" name="Замораживающий Удар(Freezing Strike)" cost="200000" min_level="51"/>
+			<skill id="70" level="30" name="Кража Здоровья(Drain HP)" cost="200000" min_level="51"/>
+			<skill id="147" level="28" name="Магическое Сопротивление(M. Def.)" cost="200000" min_level="51"/>
+			<skill id="28" level="27" name="Агрессия(Aggression)" cost="200000" min_level="52"/>
+			<skill id="18" level="15" name="Аура Ненависти(Aggression Aura)" cost="200000" min_level="52"/>
+			<skill id="1405" level="1" name="Божественное Вдохновение(Divine Inspiration)" item_id="8618" cost="200000" min_level="52"/>
+			<skill id="217" level="23" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="200000" min_level="52"/>
+			<skill id="232" level="30" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="200000" min_level="52"/>
+			<skill id="153" level="4" name="Владение Щитом(Shield Mastery)" cost="200000" min_level="52"/>
+			<skill id="223" level="27" name="Жало(Sting)" cost="200000" min_level="52"/>
+			<skill id="2" level="9" name="Замешательство(Confusion)" cost="200000" min_level="52"/>
+			<skill id="105" level="12" name="Замораживающий Удар(Freezing Strike)" cost="200000" min_level="52"/>
+			<skill id="70" level="31" name="Кража Здоровья(Drain HP)" cost="200000" min_level="52"/>
+			<skill id="289" level="5" name="Кровопийца(Life Leech)" cost="200000" min_level="52"/>
+			<skill id="147" level="29" name="Магическое Сопротивление(M. Def.)" cost="200000" min_level="52"/>
+			<skill id="291" level="1" name="Последний Рубеж(Final Fortress)" cost="200000" min_level="52"/>
+			<skill id="401" level="5" name="Правосудие(Judgment)" cost="200000" min_level="52"/>
+			<skill id="33" level="3" name="Призвать Призрачный Кубик(Summon Phantom Cubic)" cost="200000" min_level="52"/>
+			<skill id="122" level="5" name="Сглаз(Hex)" cost="200000" min_level="52"/>
+			<skill id="115" level="7" name="Сокрушение Мощи(Power Break)" cost="200000" min_level="52"/>
+			<skill id="316" level="1" name="Эгида(Aegis)" item_id="49428" cost="200000" min_level="52"/>
+			<skill id="28" level="28" name="Агрессия(Aggression)" cost="270000" min_level="53"/>
+			<skill id="18" level="16" name="Аура Ненависти(Aggression Aura)" cost="270000" min_level="53"/>
+			<skill id="217" level="24" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="270000" min_level="53"/>
+			<skill id="232" level="31" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="270000" min_level="53"/>
+			<skill id="223" level="28" name="Жало(Sting)" cost="270000" min_level="53"/>
+			<skill id="70" level="32" name="Кража Здоровья(Drain HP)" cost="270000" min_level="53"/>
+			<skill id="147" level="30" name="Магическое Сопротивление(M. Def.)" cost="270000" min_level="53"/>
+			<skill id="28" level="29" name="Агрессия(Aggression)" cost="270000" min_level="54"/>
+			<skill id="18" level="17" name="Аура Ненависти(Aggression Aura)" cost="270000" min_level="54"/>
+			<skill id="217" level="25" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="270000" min_level="54"/>
+			<skill id="232" level="32" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="270000" min_level="54"/>
+			<skill id="223" level="29" name="Жало(Sting)" cost="270000" min_level="54"/>
+			<skill id="105" level="13" name="Замораживающий Удар(Freezing Strike)" cost="270000" min_level="54"/>
+			<skill id="70" level="33" name="Кража Здоровья(Drain HP)" cost="270000" min_level="54"/>
+			<skill id="147" level="31" name="Магическое Сопротивление(M. Def.)" cost="270000" min_level="54"/>
+			<skill id="28" level="30" name="Агрессия(Aggression)" cost="270000" min_level="55"/>
+			<skill id="18" level="18" name="Аура Ненависти(Aggression Aura)" cost="270000" min_level="55"/>
+			<skill id="143" level="2" name="Владение Кубами(Cubic Mastery)" cost="270000" min_level="55"/>
+			<skill id="217" level="26" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="270000" min_level="55"/>
+			<skill id="232" level="33" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="270000" min_level="55"/>
+			<skill id="223" level="30" name="Жало(Sting)" cost="270000" min_level="55"/>
+			<skill id="2" level="10" name="Замешательство(Confusion)" cost="270000" min_level="55"/>
+			<skill id="105" level="14" name="Замораживающий Удар(Freezing Strike)" cost="270000" min_level="55"/>
+			<skill id="70" level="34" name="Кража Здоровья(Drain HP)" cost="270000" min_level="55"/>
+			<skill id="289" level="6" name="Кровопийца(Life Leech)" cost="270000" min_level="55"/>
+			<skill id="147" level="32" name="Магическое Сопротивление(M. Def.)" cost="270000" min_level="55"/>
+			<skill id="291" level="2" name="Последний Рубеж(Final Fortress)" cost="270000" min_level="55"/>
+			<skill id="401" level="6" name="Правосудие(Judgment)" cost="270000" min_level="55"/>
+			<skill id="22" level="3" name="Призвать Вампирический Кубик(Summon Vampiric Cubic)" cost="270000" min_level="55"/>
+			<skill id="278" level="2" name="Призвать Змеиный Кубик(Summon Viper Cubic)" cost="270000" min_level="55"/>
+			<skill id="122" level="6" name="Сглаз(Hex)" cost="270000" min_level="55"/>
+			<skill id="115" level="8" name="Сокрушение Мощи(Power Break)" cost="270000" min_level="55"/>
+			<skill id="191" level="4" name="Фокусировка Разума(Focus Mind)" cost="270000" min_level="55"/>
+			<skill id="28" level="31" name="Агрессия(Aggression)" cost="380000" min_level="56"/>
+			<skill id="18" level="19" name="Аура Ненависти(Aggression Aura)" cost="380000" min_level="56"/>
+			<skill id="217" level="27" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="380000" min_level="56"/>
+			<skill id="232" level="34" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="380000" min_level="56"/>
+			<skill id="223" level="31" name="Жало(Sting)" cost="380000" min_level="56"/>
+			<skill id="70" level="35" name="Кража Здоровья(Drain HP)" cost="380000" min_level="56"/>
+			<skill id="147" level="33" name="Магическое Сопротивление(M. Def.)" cost="380000" min_level="56"/>
+			<skill id="28" level="32" name="Агрессия(Aggression)" cost="380000" min_level="57"/>
+			<skill id="18" level="20" name="Аура Ненависти(Aggression Aura)" cost="380000" min_level="57"/>
+			<skill id="217" level="28" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="380000" min_level="57"/>
+			<skill id="232" level="35" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="380000" min_level="57"/>
+			<skill id="223" level="32" name="Жало(Sting)" cost="380000" min_level="57"/>
+			<skill id="105" level="15" name="Замораживающий Удар(Freezing Strike)" cost="380000" min_level="57"/>
+			<skill id="70" level="36" name="Кража Здоровья(Drain HP)" cost="380000" min_level="57"/>
+			<skill id="147" level="34" name="Магическое Сопротивление(M. Def.)" cost="380000" min_level="57"/>
+			<skill id="28" level="33" name="Агрессия(Aggression)" cost="380000" min_level="58"/>
+			<skill id="18" level="21" name="Аура Ненависти(Aggression Aura)" cost="380000" min_level="58"/>
+			<skill id="217" level="29" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="380000" min_level="58"/>
+			<skill id="232" level="36" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="380000" min_level="58"/>
+			<skill id="223" level="33" name="Жало(Sting)" cost="380000" min_level="58"/>
+			<skill id="2" level="11" name="Замешательство(Confusion)" cost="380000" min_level="58"/>
+			<skill id="105" level="16" name="Замораживающий Удар(Freezing Strike)" cost="380000" min_level="58"/>
+			<skill id="70" level="37" name="Кража Здоровья(Drain HP)" cost="380000" min_level="58"/>
+			<skill id="289" level="7" name="Кровопийца(Life Leech)" cost="380000" min_level="58"/>
+			<skill id="147" level="35" name="Магическое Сопротивление(M. Def.)" cost="380000" min_level="58"/>
+			<skill id="129" level="3" name="Отравление(Poison)" cost="380000" min_level="58"/>
+			<skill id="291" level="3" name="Последний Рубеж(Final Fortress)" cost="380000" min_level="58"/>
+			<skill id="401" level="7" name="Правосудие(Judgment)" cost="380000" min_level="58"/>
+			<skill id="33" level="4" name="Призвать Призрачный Кубик(Summon Phantom Cubic)" cost="380000" min_level="58"/>
+			<skill id="279" level="1" name="Световой Удар(Lightning Strike)" item_id="3055" cost="380000" min_level="58"/>
+			<skill id="122" level="7" name="Сглаз(Hex)" cost="380000" min_level="58"/>
+			<skill id="115" level="9" name="Сокрушение Мощи(Power Break)" cost="380000" min_level="58"/>
+			<skill id="103" level="2" name="Трупная Чума(Corpse Plague)" cost="380000" min_level="58"/>
+			<skill id="28" level="34" name="Агрессия(Aggression)" cost="550000" min_level="59"/>
+			<skill id="18" level="22" name="Аура Ненависти(Aggression Aura)" cost="550000" min_level="59"/>
+			<skill id="217" level="30" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="550000" min_level="59"/>
+			<skill id="232" level="37" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="550000" min_level="59"/>
+			<skill id="223" level="34" name="Жало(Sting)" cost="550000" min_level="59"/>
+			<skill id="70" level="38" name="Кража Здоровья(Drain HP)" cost="550000" min_level="59"/>
+			<skill id="147" level="36" name="Магическое Сопротивление(M. Def.)" cost="550000" min_level="59"/>
+			<skill id="28" level="35" name="Агрессия(Aggression)" cost="550000" min_level="60"/>
+			<skill id="18" level="23" name="Аура Ненависти(Aggression Aura)" cost="550000" min_level="60"/>
+			<skill id="217" level="31" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="550000" min_level="60"/>
+			<skill id="232" level="38" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="550000" min_level="60"/>
+			<skill id="223" level="35" name="Жало(Sting)" cost="550000" min_level="60"/>
+			<skill id="2" level="12" name="Замешательство(Confusion)" cost="550000" min_level="60"/>
+			<skill id="105" level="17" name="Замораживающий Удар(Freezing Strike)" cost="550000" min_level="60"/>
+			<skill id="70" level="39" name="Кража Здоровья(Drain HP)" cost="550000" min_level="60"/>
+			<skill id="289" level="8" name="Кровопийца(Life Leech)" cost="550000" min_level="60"/>
+			<skill id="147" level="37" name="Магическое Сопротивление(M. Def.)" cost="550000" min_level="60"/>
+			<skill id="291" level="4" name="Последний Рубеж(Final Fortress)" cost="550000" min_level="60"/>
+			<skill id="401" level="8" name="Правосудие(Judgment)" cost="550000" min_level="60"/>
+			<skill id="22" level="4" name="Призвать Вампирический Кубик(Summon Vampiric Cubic)" cost="550000" min_level="60"/>
+			<skill id="278" level="3" name="Призвать Змеиный Кубик(Summon Viper Cubic)" cost="550000" min_level="60"/>
+			<skill id="122" level="8" name="Сглаз(Hex)" cost="550000" min_level="60"/>
+			<skill id="115" level="10" name="Сокрушение Мощи(Power Break)" cost="550000" min_level="60"/>
+			<skill id="1801" level="1" name="Темный Ассасин(Dark Assassin)" min_level="60"/>
+			<skill id="916" level="1" name="Щит Отражения Магии(Shield Deflect Magic)" item_id="49427" cost="550000" min_level="60"/>
+			<skill id="28" level="36" name="Агрессия(Aggression)" cost="550000" min_level="61"/>
+			<skill id="18" level="24" name="Аура Ненависти(Aggression Aura)" cost="550000" min_level="61"/>
+			<skill id="1405" level="2" name="Божественное Вдохновение(Divine Inspiration)" item_id="8619" cost="550000" min_level="61"/>
+			<skill id="217" level="32" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="550000" min_level="61"/>
+			<skill id="232" level="39" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="550000" min_level="61"/>
+			<skill id="223" level="36" name="Жало(Sting)" cost="550000" min_level="61"/>
+			<skill id="70" level="40" name="Кража Здоровья(Drain HP)" cost="550000" min_level="61"/>
+			<skill id="147" level="38" name="Магическое Сопротивление(M. Def.)" cost="550000" min_level="61"/>
+			<skill id="28" level="37" name="Агрессия(Aggression)" cost="680000" min_level="62"/>
+			<skill id="18" level="25" name="Аура Ненависти(Aggression Aura)" cost="680000" min_level="62"/>
+			<skill id="217" level="33" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="680000" min_level="62"/>
+			<skill id="232" level="40" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="680000" min_level="62"/>
+			<skill id="223" level="37" name="Жало(Sting)" cost="680000" min_level="62"/>
+			<skill id="2" level="13" name="Замешательство(Confusion)" cost="680000" min_level="62"/>
+			<skill id="105" level="18" name="Замораживающий Удар(Freezing Strike)" cost="680000" min_level="62"/>
+			<skill id="70" level="41" name="Кража Здоровья(Drain HP)" cost="680000" min_level="62"/>
+			<skill id="289" level="9" name="Кровопийца(Life Leech)" cost="680000" min_level="62"/>
+			<skill id="147" level="39" name="Магическое Сопротивление(M. Def.)" cost="680000" min_level="62"/>
+			<skill id="291" level="5" name="Последний Рубеж(Final Fortress)" cost="680000" min_level="62"/>
+			<skill id="401" level="9" name="Правосудие(Judgment)" cost="680000" min_level="62"/>
+			<skill id="33" level="5" name="Призвать Призрачный Кубик(Summon Phantom Cubic)" cost="680000" min_level="62"/>
+			<skill id="279" level="2" name="Световой Удар(Lightning Strike)" cost="680000" min_level="62"/>
+			<skill id="122" level="9" name="Сглаз(Hex)" cost="680000" min_level="62"/>
+			<skill id="115" level="11" name="Сокрушение Мощи(Power Break)" cost="680000" min_level="62"/>
+			<skill id="103" level="3" name="Трупная Чума(Corpse Plague)" cost="680000" min_level="62"/>
+			<skill id="28" level="38" name="Агрессия(Aggression)" cost="680000" min_level="63"/>
+			<skill id="18" level="26" name="Аура Ненависти(Aggression Aura)" cost="680000" min_level="63"/>
+			<skill id="217" level="34" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="680000" min_level="63"/>
+			<skill id="232" level="41" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="680000" min_level="63"/>
+			<skill id="223" level="38" name="Жало(Sting)" cost="680000" min_level="63"/>
+			<skill id="70" level="42" name="Кража Здоровья(Drain HP)" cost="680000" min_level="63"/>
+			<skill id="147" level="40" name="Магическое Сопротивление(M. Def.)" cost="680000" min_level="63"/>
+			<skill id="28" level="39" name="Агрессия(Aggression)" cost="850000" min_level="64"/>
+			<skill id="18" level="27" name="Аура Ненависти(Aggression Aura)" cost="850000" min_level="64"/>
+			<skill id="217" level="35" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="850000" min_level="64"/>
+			<skill id="232" level="42" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="850000" min_level="64"/>
+			<skill id="223" level="39" name="Жало(Sting)" cost="850000" min_level="64"/>
+			<skill id="2" level="14" name="Замешательство(Confusion)" cost="850000" min_level="64"/>
+			<skill id="105" level="19" name="Замораживающий Удар(Freezing Strike)" cost="850000" min_level="64"/>
+			<skill id="70" level="43" name="Кража Здоровья(Drain HP)" cost="850000" min_level="64"/>
+			<skill id="322" level="1" name="Крепость Щитов(Shield Fortress)" cost="850000" min_level="64"/>
+			<skill id="289" level="10" name="Кровопийца(Life Leech)" cost="850000" min_level="64"/>
+			<skill id="147" level="41" name="Магическое Сопротивление(M. Def.)" cost="850000" min_level="64"/>
+			<skill id="291" level="6" name="Последний Рубеж(Final Fortress)" cost="850000" min_level="64"/>
+			<skill id="401" level="10" name="Правосудие(Judgment)" cost="850000" min_level="64"/>
+			<skill id="22" level="5" name="Призвать Вампирический Кубик(Summon Vampiric Cubic)" cost="850000" min_level="64"/>
+			<skill id="278" level="4" name="Призвать Змеиный Кубик(Summon Viper Cubic)" cost="850000" min_level="64"/>
+			<skill id="122" level="10" name="Сглаз(Hex)" cost="850000" min_level="64"/>
+			<skill id="115" level="12" name="Сокрушение Мощи(Power Break)" cost="850000" min_level="64"/>
+			<skill id="191" level="5" name="Фокусировка Разума(Focus Mind)" cost="850000" min_level="64"/>
+			<skill id="916" level="2" name="Щит Отражения Магии(Shield Deflect Magic)" cost="850000" min_level="64"/>
+			<skill id="28" level="40" name="Агрессия(Aggression)" cost="850000" min_level="65"/>
+			<skill id="18" level="28" name="Аура Ненависти(Aggression Aura)" cost="850000" min_level="65"/>
+			<skill id="217" level="36" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="850000" min_level="65"/>
+			<skill id="232" level="43" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="850000" min_level="65"/>
+			<skill id="223" level="40" name="Жало(Sting)" cost="850000" min_level="65"/>
+			<skill id="70" level="44" name="Кража Здоровья(Drain HP)" cost="850000" min_level="65"/>
+			<skill id="147" level="42" name="Магическое Сопротивление(M. Def.)" cost="850000" min_level="65"/>
+			<skill id="28" level="41" name="Агрессия(Aggression)" cost="1000000" min_level="66"/>
+			<skill id="18" level="29" name="Аура Ненависти(Aggression Aura)" cost="1000000" min_level="66"/>
+			<skill id="217" level="37" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1000000" min_level="66"/>
+			<skill id="232" level="44" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1000000" min_level="66"/>
+			<skill id="223" level="41" name="Жало(Sting)" cost="1000000" min_level="66"/>
+			<skill id="2" level="15" name="Замешательство(Confusion)" cost="1000000" min_level="66"/>
+			<skill id="105" level="20" name="Замораживающий Удар(Freezing Strike)" cost="1000000" min_level="66"/>
+			<skill id="70" level="45" name="Кража Здоровья(Drain HP)" cost="1000000" min_level="66"/>
+			<skill id="322" level="2" name="Крепость Щитов(Shield Fortress)" cost="1000000" min_level="66"/>
+			<skill id="289" level="11" name="Кровопийца(Life Leech)" cost="1000000" min_level="66"/>
+			<skill id="147" level="43" name="Магическое Сопротивление(M. Def.)" cost="1000000" min_level="66"/>
+			<skill id="129" level="4" name="Отравление(Poison)" cost="1000000" min_level="66"/>
+			<skill id="291" level="7" name="Последний Рубеж(Final Fortress)" cost="1000000" min_level="66"/>
+			<skill id="401" level="11" name="Правосудие(Judgment)" cost="1000000" min_level="66"/>
+			<skill id="33" level="6" name="Призвать Призрачный Кубик(Summon Phantom Cubic)" cost="1000000" min_level="66"/>
+			<skill id="279" level="3" name="Световой Удар(Lightning Strike)" cost="1000000" min_level="66"/>
+			<skill id="122" level="11" name="Сглаз(Hex)" cost="1000000" min_level="66"/>
+			<skill id="115" level="13" name="Сокрушение Мощи(Power Break)" cost="1000000" min_level="66"/>
+			<skill id="28" level="42" name="Агрессия(Aggression)" cost="1000000" min_level="67"/>
+			<skill id="18" level="30" name="Аура Ненависти(Aggression Aura)" cost="1000000" min_level="67"/>
+			<skill id="217" level="38" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1000000" min_level="67"/>
+			<skill id="232" level="45" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1000000" min_level="67"/>
+			<skill id="223" level="42" name="Жало(Sting)" cost="1000000" min_level="67"/>
+			<skill id="70" level="46" name="Кража Здоровья(Drain HP)" cost="1000000" min_level="67"/>
+			<skill id="147" level="44" name="Магическое Сопротивление(M. Def.)" cost="1000000" min_level="67"/>
+			<skill id="28" level="43" name="Агрессия(Aggression)" cost="1300000" min_level="68"/>
+			<skill id="18" level="31" name="Аура Ненависти(Aggression Aura)" cost="1300000" min_level="68"/>
+			<skill id="217" level="39" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1300000" min_level="68"/>
+			<skill id="232" level="46" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1300000" min_level="68"/>
+			<skill id="223" level="43" name="Жало(Sting)" cost="1300000" min_level="68"/>
+			<skill id="2" level="16" name="Замешательство(Confusion)" cost="1300000" min_level="68"/>
+			<skill id="105" level="21" name="Замораживающий Удар(Freezing Strike)" cost="1300000" min_level="68"/>
+			<skill id="70" level="47" name="Кража Здоровья(Drain HP)" cost="1300000" min_level="68"/>
+			<skill id="322" level="3" name="Крепость Щитов(Shield Fortress)" cost="1300000" min_level="68"/>
+			<skill id="289" level="12" name="Кровопийца(Life Leech)" cost="1300000" min_level="68"/>
+			<skill id="147" level="45" name="Магическое Сопротивление(M. Def.)" cost="1300000" min_level="68"/>
+			<skill id="291" level="8" name="Последний Рубеж(Final Fortress)" cost="1300000" min_level="68"/>
+			<skill id="401" level="12" name="Правосудие(Judgment)" cost="1300000" min_level="68"/>
+			<skill id="22" level="6" name="Призвать Вампирический Кубик(Summon Vampiric Cubic)" cost="1300000" min_level="68"/>
+			<skill id="278" level="5" name="Призвать Змеиный Кубик(Summon Viper Cubic)" cost="1300000" min_level="68"/>
+			<skill id="122" level="12" name="Сглаз(Hex)" cost="1300000" min_level="68"/>
+			<skill id="115" level="14" name="Сокрушение Мощи(Power Break)" cost="1300000" min_level="68"/>
+			<skill id="916" level="3" name="Щит Отражения Магии(Shield Deflect Magic)" cost="1300000" min_level="68"/>
+			<skill id="28" level="44" name="Агрессия(Aggression)" cost="1300000" min_level="69"/>
+			<skill id="18" level="32" name="Аура Ненависти(Aggression Aura)" cost="1300000" min_level="69"/>
+			<skill id="217" level="40" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1300000" min_level="69"/>
+			<skill id="232" level="47" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1300000" min_level="69"/>
+			<skill id="223" level="44" name="Жало(Sting)" cost="1300000" min_level="69"/>
+			<skill id="70" level="48" name="Кража Здоровья(Drain HP)" cost="1300000" min_level="69"/>
+			<skill id="147" level="46" name="Магическое Сопротивление(M. Def.)" cost="1300000" min_level="69"/>
+			<skill id="28" level="45" name="Агрессия(Aggression)" cost="1600000" min_level="70"/>
+			<skill id="18" level="33" name="Аура Ненависти(Aggression Aura)" cost="1600000" min_level="70"/>
+			<skill id="217" level="41" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1600000" min_level="70"/>
+			<skill id="232" level="48" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1600000" min_level="70"/>
+			<skill id="223" level="45" name="Жало(Sting)" cost="1600000" min_level="70"/>
+			<skill id="2" level="17" name="Замешательство(Confusion)" cost="1600000" min_level="70"/>
+			<skill id="105" level="22" name="Замораживающий Удар(Freezing Strike)" cost="1600000" min_level="70"/>
+			<skill id="70" level="49" name="Кража Здоровья(Drain HP)" cost="1600000" min_level="70"/>
+			<skill id="322" level="4" name="Крепость Щитов(Shield Fortress)" cost="1600000" min_level="70"/>
+			<skill id="289" level="13" name="Кровопийца(Life Leech)" cost="1600000" min_level="70"/>
+			<skill id="147" level="47" name="Магическое Сопротивление(M. Def.)" cost="1600000" min_level="70"/>
+			<skill id="291" level="9" name="Последний Рубеж(Final Fortress)" cost="1600000" min_level="70"/>
+			<skill id="401" level="13" name="Правосудие(Judgment)" cost="1600000" min_level="70"/>
+			<skill id="33" level="7" name="Призвать Призрачный Кубик(Summon Phantom Cubic)" cost="1600000" min_level="70"/>
+			<skill id="1802" level="1" name="Светлый Ассасин(White Assassin)" min_level="70"/>
+			<skill id="279" level="4" name="Световой Удар(Lightning Strike)" cost="1600000" min_level="70"/>
+			<skill id="122" level="13" name="Сглаз(Hex)" cost="1600000" min_level="70"/>
+			<skill id="115" level="15" name="Сокрушение Мощи(Power Break)" cost="1600000" min_level="70"/>
+			<skill id="103" level="4" name="Трупная Чума(Corpse Plague)" cost="1600000" min_level="70"/>
+			<skill id="28" level="46" name="Агрессия(Aggression)" cost="1600000" min_level="71"/>
+			<skill id="18" level="34" name="Аура Ненависти(Aggression Aura)" cost="1600000" min_level="71"/>
+			<skill id="217" level="42" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1600000" min_level="71"/>
+			<skill id="232" level="49" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1600000" min_level="71"/>
+			<skill id="223" level="46" name="Жало(Sting)" cost="1600000" min_level="71"/>
+			<skill id="70" level="50" name="Кража Здоровья(Drain HP)" cost="1600000" min_level="71"/>
+			<skill id="147" level="48" name="Магическое Сопротивление(M. Def.)" cost="1600000" min_level="71"/>
+			<skill id="28" level="47" name="Агрессия(Aggression)" cost="1800000" min_level="72"/>
+			<skill id="18" level="35" name="Аура Ненависти(Aggression Aura)" cost="1800000" min_level="72"/>
+			<skill id="217" level="43" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1800000" min_level="72"/>
+			<skill id="232" level="50" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1800000" min_level="72"/>
+			<skill id="223" level="47" name="Жало(Sting)" cost="1800000" min_level="72"/>
+			<skill id="2" level="18" name="Замешательство(Confusion)" cost="1800000" min_level="72"/>
+			<skill id="105" level="23" name="Замораживающий Удар(Freezing Strike)" cost="1800000" min_level="72"/>
+			<skill id="70" level="51" name="Кража Здоровья(Drain HP)" cost="1800000" min_level="72"/>
+			<skill id="322" level="5" name="Крепость Щитов(Shield Fortress)" cost="1800000" min_level="72"/>
+			<skill id="289" level="14" name="Кровопийца(Life Leech)" cost="1800000" min_level="72"/>
+			<skill id="147" level="49" name="Магическое Сопротивление(M. Def.)" cost="1800000" min_level="72"/>
+			<skill id="291" level="10" name="Последний Рубеж(Final Fortress)" cost="1800000" min_level="72"/>
+			<skill id="401" level="14" name="Правосудие(Judgment)" cost="1800000" min_level="72"/>
+			<skill id="22" level="7" name="Призвать Вампирический Кубик(Summon Vampiric Cubic)" cost="1800000" min_level="72"/>
+			<skill id="278" level="6" name="Призвать Змеиный Кубик(Summon Viper Cubic)" cost="1800000" min_level="72"/>
+			<skill id="122" level="14" name="Сглаз(Hex)" cost="1800000" min_level="72"/>
+			<skill id="115" level="16" name="Сокрушение Мощи(Power Break)" cost="1800000" min_level="72"/>
+			<skill id="191" level="6" name="Фокусировка Разума(Focus Mind)" cost="1800000" min_level="72"/>
+			<skill id="916" level="4" name="Щит Отражения Магии(Shield Deflect Magic)" cost="1800000" min_level="72"/>
+			<skill id="28" level="48" name="Агрессия(Aggression)" cost="1800000" min_level="73"/>
+			<skill id="18" level="36" name="Аура Ненависти(Aggression Aura)" cost="1800000" min_level="73"/>
+			<skill id="217" level="44" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1800000" min_level="73"/>
+			<skill id="232" level="51" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1800000" min_level="73"/>
+			<skill id="223" level="48" name="Жало(Sting)" cost="1800000" min_level="73"/>
+			<skill id="70" level="52" name="Кража Здоровья(Drain HP)" cost="1800000" min_level="73"/>
+			<skill id="147" level="50" name="Магическое Сопротивление(M. Def.)" cost="1800000" min_level="73"/>
+			<skill id="28" level="49" name="Агрессия(Aggression)" cost="1800000" min_level="74"/>
+			<skill id="18" level="37" name="Аура Ненависти(Aggression Aura)" cost="1800000" min_level="74"/>
+			<skill id="217" level="45" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1800000" min_level="74"/>
+			<skill id="232" level="52" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1800000" min_level="74"/>
+			<skill id="223" level="49" name="Жало(Sting)" cost="1800000" min_level="74"/>
+			<skill id="2" level="19" name="Замешательство(Confusion)" cost="1800000" min_level="74"/>
+			<skill id="105" level="24" name="Замораживающий Удар(Freezing Strike)" cost="1800000" min_level="74"/>
+			<skill id="70" level="53" name="Кража Здоровья(Drain HP)" cost="1800000" min_level="74"/>
+			<skill id="322" level="6" name="Крепость Щитов(Shield Fortress)" cost="1800000" min_level="74"/>
+			<skill id="289" level="15" name="Кровопийца(Life Leech)" cost="1800000" min_level="74"/>
+			<skill id="147" level="51" name="Магическое Сопротивление(M. Def.)" cost="1800000" min_level="74"/>
+			<skill id="129" level="5" name="Отравление(Poison)" cost="1800000" min_level="74"/>
+			<skill id="291" level="11" name="Последний Рубеж(Final Fortress)" cost="1800000" min_level="74"/>
+			<skill id="401" level="15" name="Правосудие(Judgment)" cost="1800000" min_level="74"/>
+			<skill id="33" level="8" name="Призвать Призрачный Кубик(Summon Phantom Cubic)" cost="1800000" min_level="74"/>
+			<skill id="279" level="5" name="Световой Удар(Lightning Strike)" cost="1800000" min_level="74"/>
+			<skill id="122" level="15" name="Сглаз(Hex)" cost="1800000" min_level="74"/>
+			<skill id="115" level="17" name="Сокрушение Мощи(Power Break)" cost="1800000" min_level="74"/>
+		</class>
+	</normal_skill_tree>
+</list>

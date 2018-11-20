@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "doors.dtd">
+<list>
+	<door id="15240001" name="[Hellfire_Du_Boss_S.Hellfire_Boss_door]" hp="150" pdef="1" mdef="1">
+		<pos x="-148306" y="209866" z="-10024"/>
+		<shape ax="-148322" ay="209722" bx="-148292" by="209722" cx="-148289" cy="210010" dx="-148322" dy="210011" minz="-10087" maxz="-9986"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="15240002" name="[Hellfire_Du_Boss_S.Hellfire_Boss_door]" hp="150" pdef="1" mdef="1">
+		<pos x="-147264" y="210978" z="-9857"/>
+		<shape ax="-147408" ay="210956" bx="-147122" by="210957" cx="-147122" cy="211000" dx="-147406" dy="211000" minz="-10087" maxz="-9987"/>
+		<set name="opened" value="true"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+</list>

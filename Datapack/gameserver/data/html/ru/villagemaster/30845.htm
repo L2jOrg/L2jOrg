@@ -1,0 +1,11 @@
+<html><head><body>
+Начальник Склада Кламп:<br>
+Здравствуйте. Меня зовут Кламп. Я - Начальник Склада Гильдии Железных Врат. Рад Вас приветствовать! Конечно же, признанным торговым центром является Гиран, но и через Аден проходит довольно много товаров. Разница заключается лишь в том, что здесь лучше продаются украшения и предметы искусства.<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">Узнать о 2-й смене профессии</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Клан</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Альянс</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Обменять Ежедневные Монеты</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Квест</Button>
+</body></html>

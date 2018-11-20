@@ -1,0 +1,182 @@
+<!--AUTHOR: Bonux-->
+<html><body><title>Services</title><center>
+<br>
+<table width=750 background="L2UI_CT1.Tab_DF_bg" border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td align=center>
+	<table width=737 border=0 cellpadding=0 cellspacing=0>
+		<tr>
+			<td width=93 align=center><button value="Home" action="bypass _bbspage:index" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Statistic" action="bypass _cbbsstatistic_pk" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Shop" action="bypass _bbspage:shop" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Buffs" action="bypass _cbbsbuffer 0" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Teleport" action="bypass _cbbsteleport" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Career" action="bypass _bbspage:career" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=92 align=center background="L2UI_CT1.Tab_DF_Tab_Selected"><font color=DDD3B6>Services</font></td>
+			<td width=93 align=center><button value="Cabinet" action="bypass _cbbsservices_cabinet" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+		</tr>
+	</table>
+	<table width=750 border=0 cellpadding=0 cellspacing=0>
+		<tr>
+			<td align=center>&nbsp;</td>
+		</tr>
+		<tr>
+			<td align=center>
+				<table width=700 background="L2UI_CT1.Windows_DF_Drawer_Bg" border=0 cellpadding=0 cellspacing=0>
+					<tr>
+						<td height=40 width=25></td>
+						<td width=385>
+							<font color=DDD3B6><a action="bypass _bbspage:services">Services</a>&nbsp;->&nbsp;Premium Account</font>
+						</td>
+						<td align=right width=300><font color=DDD3B6>Total online: <?total_online?></font></td>
+						<td height=40 width=25></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td align=center>
+				<table width=750 height=375 border=0 cellpadding=0 cellspacing=0>
+					<tr>
+						<td valign="top" align="center">
+							<!-- Grand Olympiad Emblem -->
+							<table border=0 cellpadding=0 cellspacing=0>
+								<tr><td width=256 height=185 background="L2UI_CT1.OlympiadWnd_DF_GrandTexture"></td></tr>
+							</table>
+							<?content?>
+							<!--TEMPLATE1
+							Premium account is not available on this server.
+							TEMPLATE-->
+							<!--TEMPLATE2
+							Available schemes of premium accounts:<br1>
+							TEMPLATE-->
+							<!--TEMPLATE3
+							<table width=700 border=0 background="L2UI_CT1.editbox_df_bg">
+								<tr>
+									<td align=center><button value="<?scheme_name?> (<?delay_name?>)" action="bypass _cbbsservices_pa_info_<?scheme_id?>_<?scheme_delay?>" width=200 height=30 back="L2UI_ct1.button_df_down" fore="L2UI_ct1.button_df"></td>
+								</tr>
+							</table><br>
+							TEMPLATE-->
+							<!--TEMPLATE4
+							The authorization server is currently unavailable, try again later!
+							TEMPLATE-->
+							<!--TEMPLATE5
+							You have already purchased a premium account, you can not buy another type of account!<br1>
+							You can extend your existing account, or wait until the end of the current.<br1>
+							<font color="LEVEL">Your account is a premium end: <?date_expire?></font>
+							TEMPLATE-->
+							<!--TEMPLATE6
+							<table width=600 background="L2UI_CH3.refinewnd_back_Pattern">
+								<tr>
+									<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+								</tr>
+								<tr>
+									<td width=30>&nbsp;</td>
+									<td width=290>
+										<table width=290>
+											<tr>
+												<td width=60><font color="LEVEL">Scheme:</font></td><td width=180><?scheme_name?></td><td width=40></td>
+											</tr>
+											<tr>
+												<td width=60><font color="LEVEL">Period:</font></td><td width=180><?period?></td><td width=40></td>
+											</tr>
+											<?fees?>
+											<tr>
+												<td width=60><font color="LEVEL">Rates:</font></td><td width=180>EXP:</td><td width=40><font color=63CDFF>x<?exp_rate?></font></td>
+											</tr>
+											<tr>
+												<td width=60></td><td width=180>SP:</td><td width=40><font color=63CDFF>x<?sp_rate?></font></td>
+											</tr>
+											<tr>
+												<td width=60></td><td width=180>Adena drop:</td><td width=40><font color=63CDFF>x<?adena_drop_rate?></font></td>
+											</tr>
+											<tr>
+												<td width=60></td><td width=180>Items drop:</td><td width=40><font color=63CDFF>x<?items_drop_rate?></font></td>
+											</tr>
+											<tr>
+												<td width=60></td><td width=180>Spoil:</td><td width=40><font color=63CDFF>x<?spoil_rate?></font></td>
+											</tr>
+											<tr>
+												<td width=60></td><td width=180>Drop in quests:</td><td width=40><font color=63CDFF>x<?quest_drop_rate?></font></td>
+											</tr>
+											<tr>
+												<td width=60></td><td width=180>Quests reward:</td><td width=40><font color=63CDFF>x<?quest_reward_rate?></font></td>
+											</tr>
+											<tr>
+												<td width=60><font color="LEVEL">Bonuses:</font></td><td width=180>Enchant Chance:</td><td width=40><font color=63CDFF>+<?enchant_chance?>%</font></td>
+											</tr>
+											<tr>
+												<td width=60></td><td width=180>Craft Chance:</td><td width=40><font color=63CDFF>+<?craft_chance?>%</font></td>
+											</tr>
+										</table>
+									</td>
+									<td width=300 align=center>
+										<br><button value="Buy" action="bypass _cbbsservices_pa_buy_<?scheme_id?>_<?scheme_delay?>" back="l2ui_ct1.Button_DF_Msn_down" width=200 height=35 fore="l2ui_ct1.Button_DF_Msn"/>
+									</td>
+								</tr>
+								<tr>
+									<td>&nbsp;</td><td>&nbsp;</td>
+								</tr>
+								<tr>
+									<td>&nbsp;</td><td>&nbsp;</td>
+								</tr>
+							</table><br>
+							<button value="Back" action="bypass _cbbsservices_pa" width=100 height=30 back="L2UI_ct1.button_df_down" fore="L2UI_ct1.button_df">
+							TEMPLATE-->
+							<!--TEMPLATE7
+							You do not have enough to pay for items.<br>
+							<button value="Back" action="bypass _cbbsservices_pa" width=100 height=30 back="L2UI_ct1.button_df_down" fore="L2UI_ct1.button_df">
+							TEMPLATE-->
+							<!--TEMPLATE8
+							You have already purchased a premium account, you can not buy another type of account!<br1>
+							You have <font color="LEVEL">unlimited</font> premium account.
+							TEMPLATE-->
+							<!--TEMPLATE9
+							<?hours?> h.
+							TEMPLATE-->
+							<!--TEMPLATE10
+							<?days?> d.
+							TEMPLATE-->
+							<!--TEMPLATE11
+							<?days?> d. and <?hours?> h.
+							TEMPLATE-->
+							<!--TEMPLATE12
+							unlimited
+							TEMPLATE-->
+							<!--TEMPLATE13
+							<tr>
+								<td width=60><font color="LEVEL">Fee:</font></td><td width=180><?fee_count?> x <?fee_item_name?></td><td width=40></td>
+							</tr>
+							<?fee_items?>
+							TEMPLATE-->
+							<!--TEMPLATE14
+							<tr>
+								<td width=60></td><td width=180><?fee_count?> x <?fee_item_name?></td><td width=40></td>
+							</tr>
+							TEMPLATE-->
+							<!--TEMPLATE15
+							You have active premium account: <font color="LEVEL"><?scheme_name?></font>, which will end: <font color="LEVEL"><?date_expire?></font><br1>
+							TEMPLATE-->
+							<!--TEMPLATE16
+							You have active <font color="LEVEL">unlimited</font> premium account: <font color="LEVEL"><?scheme_name?></font><br1>
+							TEMPLATE-->
+							<br>
+							<button value="To menu" action="bypass _bbspage:services" width=100 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td align=center>
+				<img src="L2UI_CT1.Tab_DF_bg_line" width=700 height=32><br1>
+				<font color="655C4D"><?copyright?></font><br><br>
+			</td>
+		</tr>
+	</table>
+</td>
+</tr>
+</table>
+<br>
+</center>
+</body></html>

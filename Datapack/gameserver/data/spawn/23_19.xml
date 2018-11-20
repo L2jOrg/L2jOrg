@@ -1,0 +1,1231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<territory name="aden08_2319_45">
+		<add x="121448" y="36852" zmin="-3848" zmax="-3548"/>
+		<add x="123172" y="36932" zmin="-3848" zmax="-3548"/>
+		<add x="124724" y="37680" zmin="-3848" zmax="-3548"/>
+		<add x="122744" y="38184" zmin="-3848" zmax="-3548"/>
+	</territory>
+	<spawn name="aden08_2319_45" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_45"/>
+		<npc id="20594"/><!--Хранительница Леса-->
+	</spawn>
+	<spawn name="aden08_2319_45" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_45"/>
+		<npc id="20595"/><!--Старшая Мара-->
+	</spawn>
+	<spawn name="aden08_2319_45" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_45"/>
+		<npc id="20596"/><!--Старшая Утопленница-->
+	</spawn>
+	<territory name="aden08_2319_46">
+		<add x="104780" y="44372" zmin="-3888" zmax="-3438"/>
+		<add x="107296" y="42500" zmin="-3888" zmax="-3438"/>
+		<add x="110100" y="43844" zmin="-3888" zmax="-3438"/>
+		<add x="110732" y="44760" zmin="-3888" zmax="-3438"/>
+		<add x="109064" y="47240" zmin="-3888" zmax="-3438"/>
+		<add x="106332" y="46892" zmin="-3888" zmax="-3438"/>
+		<add x="104692" y="45800" zmin="-3888" zmax="-3438"/>
+	</territory>
+	<spawn name="aden08_2319_46" count="7" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_46"/>
+		<npc id="20596"/><!--Старшая Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_46" count="6" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_46"/>
+		<npc id="20597"/><!--Мудрый Древень-->
+	</spawn>
+	<spawn name="aden08_2319_46" count="6" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_46"/>
+		<npc id="20598"/><!--Старший Сатир-->
+	</spawn>
+	<spawn name="aden08_2319_46" count="7" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_46"/>
+		<npc id="20599"/><!--Старший Единорог-->
+	</spawn>
+	<territory name="aden08_2319_48">
+		<add x="111636" y="43004" zmin="-4264" zmax="-3464"/>
+		<add x="113596" y="41528" zmin="-4264" zmax="-3464"/>
+		<add x="115016" y="41472" zmin="-4264" zmax="-3464"/>
+		<add x="115104" y="41724" zmin="-4264" zmax="-3464"/>
+		<add x="113728" y="43628" zmin="-4264" zmax="-3464"/>
+	</territory>
+	<spawn name="aden08_2319_48" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_48"/>
+		<npc id="20594"/><!--Хранительница Леса-->
+	</spawn>
+	<spawn name="aden08_2319_48" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_48"/>
+		<npc id="20595"/><!--Старшая Мара-->
+	</spawn>
+	<spawn name="aden08_2319_48" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_48"/>
+		<npc id="20596"/><!--Старшая Утопленница-->
+	</spawn>
+	<territory name="aden08_2319_41">
+		<add x="109848" y="38212" zmin="-3876" zmax="-3276"/>
+		<add x="113164" y="35616" zmin="-3876" zmax="-3276"/>
+		<add x="114432" y="37616" zmin="-3876" zmax="-3276"/>
+		<add x="114384" y="39200" zmin="-3876" zmax="-3276"/>
+		<add x="113080" y="40248" zmin="-3876" zmax="-3276"/>
+		<add x="112132" y="40240" zmin="-3876" zmax="-3276"/>
+	</territory>
+	<spawn name="aden08_2319_41" count="5" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_41"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<spawn name="aden08_2319_41" count="5" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_41"/>
+		<npc id="20593"/><!--Единорог-->
+	</spawn>
+	<spawn name="aden08_2319_41" count="5" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_41"/>
+		<npc id="20594"/><!--Хранительница Леса-->
+	</spawn>
+	<territory name="aden08_2319_42">
+		<add x="110516" y="39924" zmin="-3860" zmax="-3410"/>
+		<add x="111012" y="39304" zmin="-3860" zmax="-3410"/>
+		<add x="112224" y="40348" zmin="-3860" zmax="-3410"/>
+		<add x="111536" y="40840" zmin="-3860" zmax="-3410"/>
+		<add x="110660" y="40860" zmin="-3860" zmax="-3410"/>
+	</territory>
+	<spawn name="aden08_2319_42" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_42"/>
+		<npc id="20593"/><!--Единорог-->
+	</spawn>
+	<spawn name="aden08_2319_42" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_42"/>
+		<npc id="20594"/><!--Хранительница Леса-->
+	</spawn>
+	<territory name="aden08_2319_43">
+		<add x="113280" y="35764" zmin="-3808" zmax="-3358"/>
+		<add x="116844" y="35688" zmin="-3808" zmax="-3358"/>
+		<add x="115460" y="37176" zmin="-3808" zmax="-3358"/>
+		<add x="114420" y="37584" zmin="-3808" zmax="-3358"/>
+	</territory>
+	<spawn name="aden08_2319_43" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_43"/>
+		<npc id="20593"/><!--Единорог-->
+	</spawn>
+	<spawn name="aden08_2319_43" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_43"/>
+		<npc id="20594"/><!--Хранительница Леса-->
+	</spawn>
+	<spawn name="aden08_2319_43" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_43"/>
+		<npc id="20595"/><!--Старшая Мара-->
+	</spawn>
+	<territory name="aden08_2319_44">
+		<add x="118428" y="35980" zmin="-3820" zmax="-3520"/>
+		<add x="121284" y="36580" zmin="-3820" zmax="-3520"/>
+		<add x="119788" y="36820" zmin="-3820" zmax="-3520"/>
+	</territory>
+	<spawn name="aden08_2319_44" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_44"/>
+		<npc id="20594"/><!--Хранительница Леса-->
+	</spawn>
+	<spawn name="aden08_2319_44" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_44"/>
+		<npc id="20595"/><!--Старшая Мара-->
+	</spawn>
+	<territory name="aden08_2319_40">
+		<add x="106072" y="39332" zmin="-4012" zmax="-3212"/>
+		<add x="108612" y="39480" zmin="-4012" zmax="-3212"/>
+		<add x="109232" y="40168" zmin="-4012" zmax="-3212"/>
+		<add x="108604" y="40864" zmin="-4012" zmax="-3212"/>
+		<add x="106740" y="40564" zmin="-4012" zmax="-3212"/>
+		<add x="105804" y="39680" zmin="-4012" zmax="-3212"/>
+	</territory>
+	<spawn name="aden08_2319_40" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_40"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<spawn name="aden08_2319_40" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_40"/>
+		<npc id="20593"/><!--Единорог-->
+	</spawn>
+	<spawn name="aden08_2319_40" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_40"/>
+		<npc id="20594"/><!--Хранительница Леса-->
+	</spawn>
+	<territory name="aden08_2319_49">
+		<add x="118216" y="37356" zmin="-4024" zmax="-3424"/>
+		<add x="120648" y="38884" zmin="-4024" zmax="-3424"/>
+		<add x="121160" y="40108" zmin="-4024" zmax="-3424"/>
+		<add x="116460" y="38808" zmin="-4024" zmax="-3424"/>
+	</territory>
+	<spawn name="aden08_2319_49" count="4" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_49"/>
+		<npc id="20594"/><!--Хранительница Леса-->
+	</spawn>
+	<spawn name="aden08_2319_49" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_49"/>
+		<npc id="20595"/><!--Старшая Мара-->
+	</spawn>
+	<spawn name="aden08_2319_49" count="4" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_49"/>
+		<npc id="20596"/><!--Старшая Утопленница-->
+	</spawn>
+	<territory name="aden08_2319_34">
+		<add x="119380" y="40632" zmin="-4636" zmax="-4436"/>
+		<add x="120696" y="40408" zmin="-4636" zmax="-4436"/>
+		<add x="121216" y="40896" zmin="-4636" zmax="-4436"/>
+		<add x="121304" y="41588" zmin="-4636" zmax="-4436"/>
+		<add x="119244" y="41236" zmin="-4636" zmax="-4436"/>
+	</territory>
+	<spawn name="aden08_2319_34" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_34"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<spawn name="aden08_2319_34" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_34"/>
+		<npc id="20593"/><!--Единорог-->
+	</spawn>
+	<territory name="aden08_2319_35">
+		<add x="117332" y="40032" zmin="-4604" zmax="-4404"/>
+		<add x="118236" y="39944" zmin="-4604" zmax="-4404"/>
+		<add x="119288" y="40600" zmin="-4604" zmax="-4404"/>
+		<add x="117036" y="41296" zmin="-4604" zmax="-4404"/>
+		<add x="116840" y="40552" zmin="-4604" zmax="-4404"/>
+	</territory>
+	<spawn name="aden08_2319_35" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_35"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<spawn name="aden08_2319_35" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_35"/>
+		<npc id="20593"/><!--Единорог-->
+	</spawn>
+	<territory name="aden08_2319_36">
+		<add x="120048" y="37408" zmin="-4668" zmax="-4468"/>
+		<add x="121216" y="37360" zmin="-4668" zmax="-4468"/>
+		<add x="122520" y="38808" zmin="-4668" zmax="-4468"/>
+		<add x="121528" y="39184" zmin="-4668" zmax="-4468"/>
+	</territory>
+	<spawn name="aden08_2319_36" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_36"/>
+		<npc id="20591"/><!--Древень Долины-->
+	</spawn>
+	<spawn name="aden08_2319_36" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_36"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<territory name="aden08_2319_37">
+		<add x="115720" y="37568" zmin="-4612" zmax="-4412"/>
+		<add x="117344" y="36192" zmin="-4612" zmax="-4412"/>
+		<add x="117628" y="36916" zmin="-4612" zmax="-4412"/>
+		<add x="116656" y="37984" zmin="-4612" zmax="-4412"/>
+	</territory>
+	<spawn name="aden08_2319_37" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_37"/>
+		<npc id="20590"/><!--Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_37" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_37"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<territory name="aden08_2319_30">
+		<add x="126560" y="43268" zmin="-4704" zmax="-4404"/>
+		<add x="126960" y="43424" zmin="-4704" zmax="-4404"/>
+		<add x="126564" y="45160" zmin="-4704" zmax="-4404"/>
+		<add x="125840" y="44932" zmin="-4704" zmax="-4404"/>
+		<add x="125784" y="44020" zmin="-4704" zmax="-4404"/>
+	</territory>
+	<spawn name="aden08_2319_30" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_30"/>
+		<npc id="20590"/><!--Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_30" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_30"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<territory name="aden08_2319_31">
+		<add x="122676" y="38892" zmin="-4680" zmax="-4280"/>
+		<add x="124816" y="38192" zmin="-4680" zmax="-4280"/>
+		<add x="125768" y="38272" zmin="-4680" zmax="-4280"/>
+		<add x="126696" y="39668" zmin="-4680" zmax="-4280"/>
+		<add x="127036" y="41936" zmin="-4680" zmax="-4280"/>
+		<add x="123500" y="41640" zmin="-4680" zmax="-4280"/>
+		<add x="122512" y="40444" zmin="-4680" zmax="-4280"/>
+	</territory>
+	<spawn name="aden08_2319_31" count="4" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_31"/>
+		<npc id="20591"/><!--Древень Долины-->
+	</spawn>
+	<spawn name="aden08_2319_31" count="4" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_31"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<spawn name="aden08_2319_31" count="5" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_31"/>
+		<npc id="20593"/><!--Единорог-->
+	</spawn>
+	<territory name="aden08_2319_32">
+		<add x="123892" y="41724" zmin="-4644" zmax="-4294"/>
+		<add x="124936" y="41816" zmin="-4644" zmax="-4294"/>
+		<add x="123904" y="42852" zmin="-4644" zmax="-4294"/>
+		<add x="123088" y="42992" zmin="-4644" zmax="-4294"/>
+	</territory>
+	<spawn name="aden08_2319_32" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_32"/>
+		<npc id="20591"/><!--Древень Долины-->
+	</spawn>
+	<spawn name="aden08_2319_32" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_32"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<territory name="aden08_2319_33">
+		<add x="120580" y="42336" zmin="-4624" zmax="-4424"/>
+		<add x="121368" y="42100" zmin="-4624" zmax="-4424"/>
+		<add x="123264" y="43856" zmin="-4624" zmax="-4424"/>
+		<add x="122120" y="44044" zmin="-4624" zmax="-4424"/>
+	</territory>
+	<spawn name="aden08_2319_33" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_33"/>
+		<npc id="20591"/><!--Древень Долины-->
+	</spawn>
+	<spawn name="aden08_2319_33" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_33"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<territory name="aden08_2319_38">
+		<add x="114148" y="39944" zmin="-4660" zmax="-4360"/>
+		<add x="115660" y="39940" zmin="-4660" zmax="-4360"/>
+		<add x="115036" y="41044" zmin="-4660" zmax="-4360"/>
+		<add x="113632" y="41104" zmin="-4660" zmax="-4360"/>
+	</territory>
+	<spawn name="aden08_2319_38" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_38"/>
+		<npc id="20590"/><!--Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_38" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_38"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<territory name="aden08_2319_39">
+		<add x="110960" y="41836" zmin="-4716" zmax="-4416"/>
+		<add x="112448" y="40828" zmin="-4716" zmax="-4416"/>
+		<add x="113656" y="40952" zmin="-4716" zmax="-4416"/>
+		<add x="112416" y="41960" zmin="-4716" zmax="-4416"/>
+	</territory>
+	<spawn name="aden08_2319_39" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_39"/>
+		<npc id="20589"/><!--Мара-->
+	</spawn>
+	<spawn name="aden08_2319_39" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_39"/>
+		<npc id="20590"/><!--Утопленница-->
+	</spawn>
+	<territory name="aden08_2319_67">
+		<add x="121512" y="54900" zmin="-3940" zmax="-3340"/>
+		<add x="123228" y="53224" zmin="-3940" zmax="-3340"/>
+		<add x="124412" y="54396" zmin="-3940" zmax="-3340"/>
+		<add x="123712" y="56056" zmin="-3940" zmax="-3340"/>
+	</territory>
+	<spawn name="aden08_2319_67" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_67"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<spawn name="aden08_2319_67" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_67"/>
+		<npc id="20593"/><!--Единорог-->
+	</spawn>
+	<spawn name="aden08_2319_67" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_67"/>
+		<npc id="20594"/><!--Хранительница Леса-->
+	</spawn>
+	<territory name="aden08_2319_68">
+		<add x="124380" y="54688" zmin="-3812" zmax="-3012"/>
+		<add x="126412" y="54760" zmin="-3812" zmax="-3012"/>
+		<add x="125656" y="57292" zmin="-3812" zmax="-3012"/>
+		<add x="124016" y="57432" zmin="-3812" zmax="-3012"/>
+		<add x="123756" y="56056" zmin="-3812" zmax="-3012"/>
+	</territory>
+	<spawn name="aden08_2319_68" count="4" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_68"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<spawn name="aden08_2319_68" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_68"/>
+		<npc id="20593"/><!--Единорог-->
+	</spawn>
+	<spawn name="aden08_2319_68" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_68"/>
+		<npc id="20594"/><!--Хранительница Леса-->
+	</spawn>
+	<territory name="aden08_2319_63">
+		<add x="115456" y="54924" zmin="-3796" zmax="-3396"/>
+		<add x="116784" y="54828" zmin="-3796" zmax="-3396"/>
+		<add x="117264" y="58388" zmin="-3796" zmax="-3396"/>
+		<add x="115600" y="60160" zmin="-3796" zmax="-3396"/>
+		<add x="114560" y="58584" zmin="-3796" zmax="-3396"/>
+	</territory>
+	<spawn name="aden08_2319_63" count="4" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_63"/>
+		<npc id="20595"/><!--Старшая Мара-->
+	</spawn>
+	<spawn name="aden08_2319_63" count="4" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_63"/>
+		<npc id="20596"/><!--Старшая Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_63" count="4" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_63"/>
+		<npc id="20597"/><!--Мудрый Древень-->
+	</spawn>
+	<territory name="aden08_2319_64">
+		<add x="120032" y="49520" zmin="-3980" zmax="-3380"/>
+		<add x="121516" y="50504" zmin="-3980" zmax="-3380"/>
+		<add x="121996" y="51764" zmin="-3980" zmax="-3380"/>
+		<add x="121284" y="52504" zmin="-3980" zmax="-3380"/>
+		<add x="118688" y="50268" zmin="-3980" zmax="-3380"/>
+	</territory>
+	<spawn name="aden08_2319_64" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_64"/>
+		<npc id="20595"/><!--Старшая Мара-->
+	</spawn>
+	<spawn name="aden08_2319_64" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_64"/>
+		<npc id="20596"/><!--Старшая Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_64" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_64"/>
+		<npc id="20597"/><!--Мудрый Древень-->
+	</spawn>
+	<territory name="aden08_2319_65">
+		<add x="121768" y="50504" zmin="-3816" zmax="-3416"/>
+		<add x="124964" y="48536" zmin="-3816" zmax="-3416"/>
+		<add x="126224" y="50556" zmin="-3816" zmax="-3416"/>
+		<add x="124480" y="50736" zmin="-3816" zmax="-3416"/>
+	</territory>
+	<spawn name="aden08_2319_65" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_65"/>
+		<npc id="20595"/><!--Старшая Мара-->
+	</spawn>
+	<spawn name="aden08_2319_65" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_65"/>
+		<npc id="20596"/><!--Старшая Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_65" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_65"/>
+		<npc id="20597"/><!--Мудрый Древень-->
+	</spawn>
+	<territory name="aden08_2319_66">
+		<add x="118940" y="52720" zmin="-3900" zmax="-3500"/>
+		<add x="119872" y="54328" zmin="-3900" zmax="-3500"/>
+		<add x="118620" y="54388" zmin="-3900" zmax="-3500"/>
+		<add x="118508" y="52856" zmin="-3900" zmax="-3500"/>
+	</territory>
+	<spawn name="aden08_2319_66" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_66"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<spawn name="aden08_2319_66" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_66"/>
+		<npc id="20593"/><!--Единорог-->
+	</spawn>
+	<spawn name="aden08_2319_66" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_66"/>
+		<npc id="20594"/><!--Хранительница Леса-->
+	</spawn>
+	<territory name="aden08_2319_60">
+		<add x="110316" y="53048" zmin="-3784" zmax="-3384"/>
+		<add x="112716" y="52956" zmin="-3784" zmax="-3384"/>
+		<add x="113624" y="54012" zmin="-3784" zmax="-3384"/>
+		<add x="113276" y="55800" zmin="-3784" zmax="-3384"/>
+		<add x="111552" y="56388" zmin="-3784" zmax="-3384"/>
+		<add x="109792" y="55956" zmin="-3784" zmax="-3384"/>
+	</territory>
+	<spawn name="aden08_2319_60" count="4" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_60"/>
+		<npc id="20595"/><!--Старшая Мара-->
+	</spawn>
+	<spawn name="aden08_2319_60" count="4" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_60"/>
+		<npc id="20596"/><!--Старшая Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_60" count="4" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_60"/>
+		<npc id="20597"/><!--Мудрый Древень-->
+	</spawn>
+	<territory name="aden08_2319_62">
+		<add x="112460" y="58752" zmin="-3936" zmax="-3536"/>
+		<add x="114468" y="58568" zmin="-3936" zmax="-3536"/>
+		<add x="114968" y="60504" zmin="-3936" zmax="-3536"/>
+		<add x="113224" y="60524" zmin="-3936" zmax="-3536"/>
+	</territory>
+	<spawn name="aden08_2319_62" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_62"/>
+		<npc id="20595"/><!--Старшая Мара-->
+	</spawn>
+	<spawn name="aden08_2319_62" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_62"/>
+		<npc id="20596"/><!--Старшая Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_62" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_62"/>
+		<npc id="20597"/><!--Мудрый Древень-->
+	</spawn>
+	<territory name="aden08_2319_56">
+		<add x="102232" y="46368" zmin="-3996" zmax="-3396"/>
+		<add x="104196" y="47016" zmin="-3996" zmax="-3396"/>
+		<add x="104756" y="48868" zmin="-3996" zmax="-3396"/>
+		<add x="104492" y="51344" zmin="-3996" zmax="-3396"/>
+		<add x="103620" y="52580" zmin="-3996" zmax="-3396"/>
+		<add x="102064" y="47212" zmin="-3996" zmax="-3396"/>
+	</territory>
+	<spawn name="aden08_2319_56" count="5" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_56"/>
+		<npc id="20594"/><!--Хранительница Леса-->
+	</spawn>
+	<spawn name="aden08_2319_56" count="4" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_56"/>
+		<npc id="20595"/><!--Старшая Мара-->
+	</spawn>
+	<spawn name="aden08_2319_56" count="5" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_56"/>
+		<npc id="20596"/><!--Старшая Утопленница-->
+	</spawn>
+	<territory name="aden08_2319_57">
+		<add x="104172" y="55760" zmin="-3828" zmax="-3428"/>
+		<add x="105284" y="55764" zmin="-3828" zmax="-3428"/>
+		<add x="106196" y="58884" zmin="-3828" zmax="-3428"/>
+		<add x="103788" y="56628" zmin="-3828" zmax="-3428"/>
+	</territory>
+	<spawn name="aden08_2319_57" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_57"/>
+		<npc id="20595"/><!--Старшая Мара-->
+	</spawn>
+	<spawn name="aden08_2319_57" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_57"/>
+		<npc id="20596"/><!--Старшая Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_57" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_57"/>
+		<npc id="20597"/><!--Мудрый Древень-->
+	</spawn>
+	<territory name="aden08_2319_58">
+		<add x="106368" y="58684" zmin="-3820" zmax="-3220"/>
+		<add x="110424" y="58916" zmin="-3820" zmax="-3220"/>
+		<add x="111072" y="59756" zmin="-3820" zmax="-3220"/>
+		<add x="107720" y="60120" zmin="-3820" zmax="-3220"/>
+	</territory>
+	<spawn name="aden08_2319_58" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_58"/>
+		<npc id="20595"/><!--Старшая Мара-->
+	</spawn>
+	<spawn name="aden08_2319_58" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_58"/>
+		<npc id="20596"/><!--Старшая Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_58" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_58"/>
+		<npc id="20597"/><!--Мудрый Древень-->
+	</spawn>
+	<territory name="aden08_2319_59">
+		<add x="107800" y="54052" zmin="-4008" zmax="-3408"/>
+		<add x="109548" y="54380" zmin="-4008" zmax="-3408"/>
+		<add x="109740" y="56692" zmin="-4008" zmax="-3408"/>
+		<add x="108240" y="57196" zmin="-4008" zmax="-3408"/>
+		<add x="107656" y="56688" zmin="-4008" zmax="-3408"/>
+	</territory>
+	<spawn name="aden08_2319_59" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_59"/>
+		<npc id="20595"/><!--Старшая Мара-->
+	</spawn>
+	<spawn name="aden08_2319_59" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_59"/>
+		<npc id="20596"/><!--Старшая Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_59" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_59"/>
+		<npc id="20597"/><!--Мудрый Древень-->
+	</spawn>
+	<territory name="aden08_2319_52">
+		<add x="115588" y="45116" zmin="-3792" zmax="-3192"/>
+		<add x="116936" y="44280" zmin="-3792" zmax="-3192"/>
+		<add x="120044" y="45696" zmin="-3792" zmax="-3192"/>
+		<add x="117872" y="48224" zmin="-3792" zmax="-3192"/>
+	</territory>
+	<spawn name="aden08_2319_52" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_52"/>
+		<npc id="20596"/><!--Старшая Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_52" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_52"/>
+		<npc id="20597"/><!--Мудрый Древень-->
+	</spawn>
+	<spawn name="aden08_2319_52" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_52"/>
+		<npc id="20598"/><!--Старший Сатир-->
+	</spawn>
+	<spawn name="aden08_2319_52" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_52"/>
+		<npc id="20599"/><!--Старший Единорог-->
+	</spawn>
+	<territory name="aden08_2319_53">
+		<add x="120984" y="44512" zmin="-4184" zmax="-3384"/>
+		<add x="123132" y="44608" zmin="-4184" zmax="-3384"/>
+		<add x="121548" y="46120" zmin="-4184" zmax="-3384"/>
+		<add x="120080" y="45764" zmin="-4184" zmax="-3384"/>
+	</territory>
+	<spawn name="aden08_2319_53" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_53"/>
+		<npc id="20596"/><!--Старшая Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_53" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_53"/>
+		<npc id="20597"/><!--Мудрый Древень-->
+	</spawn>
+	<spawn name="aden08_2319_53" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_53"/>
+		<npc id="20598"/><!--Старший Сатир-->
+	</spawn>
+	<spawn name="aden08_2319_53" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_53"/>
+		<npc id="20599"/><!--Старший Единорог-->
+	</spawn>
+	<territory name="aden08_2319_54">
+		<add x="121744" y="45972" zmin="-3948" zmax="-3348"/>
+		<add x="124404" y="43500" zmin="-3948" zmax="-3348"/>
+		<add x="125660" y="45408" zmin="-3948" zmax="-3348"/>
+		<add x="125296" y="47056" zmin="-3948" zmax="-3348"/>
+		<add x="122340" y="47352" zmin="-3948" zmax="-3348"/>
+	</territory>
+	<spawn name="aden08_2319_54" count="4" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_54"/>
+		<npc id="20596"/><!--Старшая Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_54" count="4" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_54"/>
+		<npc id="20597"/><!--Мудрый Древень-->
+	</spawn>
+	<spawn name="aden08_2319_54" count="5" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_54"/>
+		<npc id="20598"/><!--Старший Сатир-->
+	</spawn>
+	<spawn name="aden08_2319_54" count="4" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_54"/>
+		<npc id="20599"/><!--Старший Единорог-->
+	</spawn>
+	<territory name="aden08_2319_55">
+		<add x="119660" y="47028" zmin="-3992" zmax="-3592"/>
+		<add x="121548" y="47544" zmin="-3992" zmax="-3592"/>
+		<add x="121912" y="48420" zmin="-3992" zmax="-3592"/>
+		<add x="119116" y="47556" zmin="-3992" zmax="-3592"/>
+	</territory>
+	<spawn name="aden08_2319_55" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_55"/>
+		<npc id="20595"/><!--Старшая Мара-->
+	</spawn>
+	<spawn name="aden08_2319_55" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_55"/>
+		<npc id="20596"/><!--Старшая Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_55" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_55"/>
+		<npc id="20597"/><!--Мудрый Древень-->
+	</spawn>
+	<territory name="aden08_2319_50">
+		<add x="121872" y="42036" zmin="-4132" zmax="-3732"/>
+		<add x="121496" y="40072" zmin="-4132" zmax="-3732"/>
+		<add x="122932" y="41604" zmin="-4132" zmax="-3732"/>
+		<add x="122516" y="42552" zmin="-4132" zmax="-3732"/>
+	</territory>
+	<spawn name="aden08_2319_50" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_50"/>
+		<npc id="20594"/><!--Хранительница Леса-->
+	</spawn>
+	<spawn name="aden08_2319_50" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_50"/>
+		<npc id="20595"/><!--Старшая Мара-->
+	</spawn>
+	<spawn name="aden08_2319_50" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_50"/>
+		<npc id="20596"/><!--Старшая Утопленница-->
+	</spawn>
+	<territory name="aden08_2319_51">
+		<add x="117148" y="43828" zmin="-4352" zmax="-3352"/>
+		<add x="118580" y="42368" zmin="-4352" zmax="-3352"/>
+		<add x="119720" y="42000" zmin="-4352" zmax="-3352"/>
+		<add x="121304" y="44064" zmin="-4352" zmax="-3352"/>
+		<add x="120060" y="45592" zmin="-4352" zmax="-3352"/>
+		<add x="117212" y="44704" zmin="-4352" zmax="-3352"/>
+	</territory>
+	<spawn name="aden08_2319_51" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_51"/>
+		<npc id="20596"/><!--Старшая Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_51" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_51"/>
+		<npc id="20597"/><!--Мудрый Древень-->
+	</spawn>
+	<spawn name="aden08_2319_51" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_51"/>
+		<npc id="20598"/><!--Старший Сатир-->
+	</spawn>
+	<spawn name="aden08_2319_51" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_51"/>
+		<npc id="20599"/><!--Старший Единорог-->
+	</spawn>
+	<territory name="aden08_2319_01">
+		<add x="106844" y="37864" zmin="-4624" zmax="-4424"/>
+		<add x="107436" y="37756" zmin="-4624" zmax="-4424"/>
+		<add x="108140" y="38532" zmin="-4624" zmax="-4424"/>
+		<add x="108264" y="39116" zmin="-4624" zmax="-4424"/>
+		<add x="107696" y="39204" zmin="-4624" zmax="-4424"/>
+		<add x="106696" y="38280" zmin="-4624" zmax="-4424"/>
+	</territory>
+	<spawn name="aden08_2319_01" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_01"/>
+		<npc id="20589"/><!--Мара-->
+	</spawn>
+	<spawn name="aden08_2319_01" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_01"/>
+		<npc id="20590"/><!--Утопленница-->
+	</spawn>
+	<territory name="aden08_2319_02">
+		<add x="109340" y="38528" zmin="-4688" zmax="-4438"/>
+		<add x="110416" y="39320" zmin="-4688" zmax="-4438"/>
+		<add x="110372" y="39560" zmin="-4688" zmax="-4438"/>
+		<add x="109448" y="39768" zmin="-4688" zmax="-4438"/>
+		<add x="108824" y="39096" zmin="-4688" zmax="-4438"/>
+	</territory>
+	<spawn name="aden08_2319_02" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_02"/>
+		<npc id="20589"/><!--Мара-->
+	</spawn>
+	<spawn name="aden08_2319_02" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_02"/>
+		<npc id="20590"/><!--Утопленница-->
+	</spawn>
+	<territory name="aden08_2319_03">
+		<add x="109240" y="40968" zmin="-4688" zmax="-4488"/>
+		<add x="110128" y="40976" zmin="-4688" zmax="-4488"/>
+		<add x="110240" y="41932" zmin="-4688" zmax="-4488"/>
+		<add x="109704" y="42400" zmin="-4688" zmax="-4488"/>
+		<add x="109148" y="42484" zmin="-4688" zmax="-4488"/>
+		<add x="109076" y="41252" zmin="-4688" zmax="-4488"/>
+	</territory>
+	<spawn name="aden08_2319_03" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_03"/>
+		<npc id="20589"/><!--Мара-->
+	</spawn>
+	<spawn name="aden08_2319_03" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_03"/>
+		<npc id="20590"/><!--Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_03" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_03"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<territory name="aden08_2319_04">
+		<add x="106724" y="41112" zmin="-4680" zmax="-4430"/>
+		<add x="108004" y="41396" zmin="-4680" zmax="-4430"/>
+		<add x="107892" y="41824" zmin="-4680" zmax="-4430"/>
+		<add x="106832" y="41940" zmin="-4680" zmax="-4430"/>
+	</territory>
+	<spawn name="aden08_2319_04" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_04"/>
+		<npc id="20589"/><!--Мара-->
+	</spawn>
+	<spawn name="aden08_2319_04" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_04"/>
+		<npc id="20590"/><!--Утопленница-->
+	</spawn>
+	<territory name="aden08_2319_09">
+		<add x="104880" y="52124" zmin="-4696" zmax="-4496"/>
+		<add x="105948" y="52004" zmin="-4696" zmax="-4496"/>
+		<add x="106232" y="53356" zmin="-4696" zmax="-4496"/>
+		<add x="105404" y="54656" zmin="-4696" zmax="-4496"/>
+		<add x="103940" y="54644" zmin="-4696" zmax="-4496"/>
+		<add x="104024" y="53648" zmin="-4696" zmax="-4496"/>
+	</territory>
+	<spawn name="aden08_2319_09" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_09"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<spawn name="aden08_2319_09" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_09"/>
+		<npc id="20591"/><!--Древень Долины-->
+	</spawn>
+	<spawn name="aden08_2319_09" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_09"/>
+		<npc id="20593"/><!--Единорог-->
+	</spawn>
+	<territory name="aden08_2319_05">
+		<add x="102868" y="42180" zmin="-4672" zmax="-4422"/>
+		<add x="105500" y="40368" zmin="-4672" zmax="-4422"/>
+		<add x="106664" y="41172" zmin="-4672" zmax="-4422"/>
+		<add x="106556" y="42384" zmin="-4672" zmax="-4422"/>
+		<add x="104992" y="43620" zmin="-4672" zmax="-4422"/>
+		<add x="104012" y="43836" zmin="-4672" zmax="-4422"/>
+	</territory>
+	<spawn name="aden08_2319_05" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_05"/>
+		<npc id="20589"/><!--Мара-->
+	</spawn>
+	<spawn name="aden08_2319_05" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_05"/>
+		<npc id="20590"/><!--Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_05" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_05"/>
+		<npc id="20591"/><!--Древень Долины-->
+	</spawn>
+	<spawn name="aden08_2319_05" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_05"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<territory name="aden08_2319_06">
+		<add x="103244" y="44320" zmin="-4636" zmax="-4436"/>
+		<add x="103876" y="44276" zmin="-4636" zmax="-4436"/>
+		<add x="104008" y="46332" zmin="-4636" zmax="-4436"/>
+		<add x="103468" y="46268" zmin="-4636" zmax="-4436"/>
+		<add x="102864" y="45656" zmin="-4636" zmax="-4436"/>
+		<add x="102828" y="44892" zmin="-4636" zmax="-4436"/>
+	</territory>
+	<spawn name="aden08_2319_06" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_06"/>
+		<npc id="20590"/><!--Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_06" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_06"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<territory name="aden08_2319_07">
+		<add x="105012" y="47188" zmin="-4644" zmax="-4444"/>
+		<add x="105268" y="46984" zmin="-4644" zmax="-4444"/>
+		<add x="105756" y="47204" zmin="-4644" zmax="-4444"/>
+		<add x="106456" y="47912" zmin="-4644" zmax="-4444"/>
+		<add x="106452" y="48464" zmin="-4644" zmax="-4444"/>
+		<add x="106104" y="48896" zmin="-4644" zmax="-4444"/>
+		<add x="105128" y="48172" zmin="-4644" zmax="-4444"/>
+	</territory>
+	<spawn name="aden08_2319_07" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_07"/>
+		<npc id="20590"/><!--Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_07" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_07"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<territory name="aden08_2319_08">
+		<add x="105128" y="49680" zmin="-4556" zmax="-4356"/>
+		<add x="105608" y="49312" zmin="-4556" zmax="-4356"/>
+		<add x="106432" y="50348" zmin="-4556" zmax="-4356"/>
+		<add x="106108" y="51488" zmin="-4556" zmax="-4356"/>
+		<add x="105160" y="50960" zmin="-4556" zmax="-4356"/>
+	</territory>
+	<spawn name="aden08_2319_08" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_08"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<spawn name="aden08_2319_08" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_08"/>
+		<npc id="20591"/><!--Древень Долины-->
+	</spawn>
+	<territory name="aden08_2319_23">
+		<add x="126976" y="50508" zmin="-4692" zmax="-4492"/>
+		<add x="127564" y="50196" zmin="-4692" zmax="-4492"/>
+		<add x="128480" y="51396" zmin="-4692" zmax="-4492"/>
+		<add x="128304" y="52492" zmin="-4692" zmax="-4492"/>
+		<add x="127560" y="53056" zmin="-4692" zmax="-4492"/>
+		<add x="126768" y="51276" zmin="-4692" zmax="-4492"/>
+	</territory>
+	<spawn name="aden08_2319_23" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_23"/>
+		<npc id="20589"/><!--Мара-->
+	</spawn>
+	<spawn name="aden08_2319_23" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_23"/>
+		<npc id="20590"/><!--Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_23" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_23"/>
+		<npc id="20591"/><!--Древень Долины-->
+	</spawn>
+	<spawn name="aden08_2319_23" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_23"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<territory name="aden08_2319_24">
+		<add x="124068" y="51552" zmin="-4700" zmax="-4500"/>
+		<add x="126692" y="51316" zmin="-4700" zmax="-4500"/>
+		<add x="127568" y="53240" zmin="-4700" zmax="-4500"/>
+		<add x="126660" y="54016" zmin="-4700" zmax="-4500"/>
+		<add x="125312" y="53928" zmin="-4700" zmax="-4500"/>
+		<add x="124440" y="52956" zmin="-4700" zmax="-4500"/>
+	</territory>
+	<spawn name="aden08_2319_24" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_24"/>
+		<npc id="20589"/><!--Мара-->
+	</spawn>
+	<spawn name="aden08_2319_24" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_24"/>
+		<npc id="20590"/><!--Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_24" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_24"/>
+		<npc id="20591"/><!--Древень Долины-->
+	</spawn>
+	<spawn name="aden08_2319_24" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_24"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<territory name="aden08_2319_25">
+		<add x="119504" y="52572" zmin="-4696" zmax="-4496"/>
+		<add x="120152" y="52216" zmin="-4696" zmax="-4496"/>
+		<add x="121696" y="53816" zmin="-4696" zmax="-4496"/>
+		<add x="120300" y="53740" zmin="-4696" zmax="-4496"/>
+		<add x="119560" y="53208" zmin="-4696" zmax="-4496"/>
+	</territory>
+	<spawn name="aden08_2319_25" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_25"/>
+		<npc id="20589"/><!--Мара-->
+	</spawn>
+	<spawn name="aden08_2319_25" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_25"/>
+		<npc id="20590"/><!--Утопленница-->
+	</spawn>
+	<territory name="aden08_2319_26">
+		<add x="117300" y="54968" zmin="-4704" zmax="-4504"/>
+		<add x="118036" y="54688" zmin="-4704" zmax="-4504"/>
+		<add x="118576" y="54996" zmin="-4704" zmax="-4504"/>
+		<add x="118124" y="55900" zmin="-4704" zmax="-4504"/>
+		<add x="117412" y="55528" zmin="-4704" zmax="-4504"/>
+	</territory>
+	<spawn name="aden08_2319_26" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_26"/>
+		<npc id="20589"/><!--Мара-->
+	</spawn>
+	<spawn name="aden08_2319_26" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_26"/>
+		<npc id="20590"/><!--Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_26" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_26"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<territory name="aden08_2319_20">
+		<add x="119776" y="48240" zmin="-4648" zmax="-4148"/>
+		<add x="121748" y="48968" zmin="-4648" zmax="-4148"/>
+		<add x="121576" y="49528" zmin="-4648" zmax="-4148"/>
+		<add x="118744" y="48688" zmin="-4648" zmax="-4148"/>
+	</territory>
+	<spawn name="aden08_2319_20" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_20"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<spawn name="aden08_2319_20" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_20"/>
+		<npc id="20593"/><!--Единорог-->
+	</spawn>
+	<territory name="aden08_2319_21">
+		<add x="123096" y="47668" zmin="-4692" zmax="-4242"/>
+		<add x="123984" y="47692" zmin="-4692" zmax="-4242"/>
+		<add x="124124" y="48356" zmin="-4692" zmax="-4242"/>
+		<add x="122300" y="49648" zmin="-4692" zmax="-4242"/>
+		<add x="121664" y="49512" zmin="-4692" zmax="-4242"/>
+		<add x="121728" y="49128" zmin="-4692" zmax="-4242"/>
+	</territory>
+	<spawn name="aden08_2319_21" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_21"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<spawn name="aden08_2319_21" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_21"/>
+		<npc id="20593"/><!--Единорог-->
+	</spawn>
+	<territory name="aden08_2319_22">
+		<add x="125616" y="47700" zmin="-4720" zmax="-4520"/>
+		<add x="126404" y="47576" zmin="-4720" zmax="-4520"/>
+		<add x="126940" y="48132" zmin="-4720" zmax="-4520"/>
+		<add x="126456" y="48756" zmin="-4720" zmax="-4520"/>
+		<add x="125940" y="48788" zmin="-4720" zmax="-4520"/>
+		<add x="125440" y="48284" zmin="-4720" zmax="-4520"/>
+	</territory>
+	<spawn name="aden08_2319_22" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_22"/>
+		<npc id="20590"/><!--Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_22" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_22"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<territory name="aden08_2319_27">
+		<add x="117856" y="58232" zmin="-4620" zmax="-4420"/>
+		<add x="118444" y="58268" zmin="-4620" zmax="-4420"/>
+		<add x="118488" y="60040" zmin="-4620" zmax="-4420"/>
+		<add x="117792" y="60148" zmin="-4620" zmax="-4420"/>
+	</territory>
+	<spawn name="aden08_2319_27" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_27"/>
+		<npc id="20589"/><!--Мара-->
+	</spawn>
+	<spawn name="aden08_2319_27" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_27"/>
+		<npc id="20590"/><!--Утопленница-->
+	</spawn>
+	<territory name="aden08_2319_28">
+		<add x="120064" y="54944" zmin="-4656" zmax="-4456"/>
+		<add x="121296" y="55108" zmin="-4656" zmax="-4456"/>
+		<add x="122236" y="55924" zmin="-4656" zmax="-4456"/>
+		<add x="122128" y="56144" zmin="-4656" zmax="-4456"/>
+		<add x="120928" y="56188" zmin="-4656" zmax="-4456"/>
+		<add x="119888" y="55220" zmin="-4656" zmax="-4456"/>
+	</territory>
+	<spawn name="aden08_2319_28" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_28"/>
+		<npc id="20589"/><!--Мара-->
+	</spawn>
+	<spawn name="aden08_2319_28" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_28"/>
+		<npc id="20590"/><!--Утопленница-->
+	</spawn>
+	<territory name="aden08_2319_29">
+		<add x="123040" y="58176" zmin="-4624" zmax="-4274"/>
+		<add x="124464" y="59356" zmin="-4624" zmax="-4274"/>
+		<add x="124016" y="59500" zmin="-4624" zmax="-4274"/>
+		<add x="123224" y="59172" zmin="-4624" zmax="-4274"/>
+	</territory>
+	<spawn name="aden08_2319_29" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_29"/>
+		<npc id="20589"/><!--Мара-->
+	</spawn>
+	<spawn name="aden08_2319_29" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_29"/>
+		<npc id="20590"/><!--Утопленница-->
+	</spawn>
+	<territory name="aden08_2319_12">
+		<add x="109464" y="60440" zmin="-4628" zmax="-4428"/>
+		<add x="110688" y="60440" zmin="-4628" zmax="-4428"/>
+		<add x="111852" y="61204" zmin="-4628" zmax="-4428"/>
+		<add x="108472" y="61168" zmin="-4628" zmax="-4428"/>
+	</territory>
+	<spawn name="aden08_2319_12" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_12"/>
+		<npc id="20590"/><!--Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_12" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_12"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<territory name="aden08_2319_13">
+		<add x="112824" y="62460" zmin="-4656" zmax="-4196"/>
+		<add x="117268" y="61748" zmin="-4656" zmax="-4196"/>
+		<add x="116568" y="62892" zmin="-4656" zmax="-4196"/>
+		<add x="115272" y="63376" zmin="-4656" zmax="-4196"/>
+		<add x="113304" y="63312" zmin="-4656" zmax="-4196"/>
+		<add x="112492" y="62808" zmin="-4656" zmax="-4196"/>
+	</territory>
+	<spawn name="aden08_2319_13" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_13"/>
+		<npc id="20589"/><!--Мара-->
+	</spawn>
+	<spawn name="aden08_2319_13" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_13"/>
+		<npc id="20590"/><!--Утопленница-->
+	</spawn>
+	<spawn name="aden08_2319_13" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_13"/>
+		<npc id="20591"/><!--Древень Долины-->
+	</spawn>
+	<spawn name="aden08_2319_13" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_13"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<territory name="aden08_2319_14">
+		<add x="106012" y="56144" zmin="-4628" zmax="-4428"/>
+		<add x="106476" y="56204" zmin="-4628" zmax="-4428"/>
+		<add x="107940" y="58292" zmin="-4628" zmax="-4428"/>
+		<add x="106844" y="58012" zmin="-4628" zmax="-4428"/>
+		<add x="105976" y="57144" zmin="-4628" zmax="-4428"/>
+	</territory>
+	<spawn name="aden08_2319_14" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_14"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<spawn name="aden08_2319_14" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_14"/>
+		<npc id="20593"/><!--Единорог-->
+	</spawn>
+	<territory name="aden08_2319_15">
+		<add x="109992" y="57248" zmin="-4616" zmax="-4116"/>
+		<add x="112444" y="57388" zmin="-4616" zmax="-4116"/>
+		<add x="112156" y="58296" zmin="-4616" zmax="-4116"/>
+		<add x="108864" y="58292" zmin="-4616" zmax="-4116"/>
+		<add x="109032" y="57696" zmin="-4616" zmax="-4116"/>
+	</territory>
+	<spawn name="aden08_2319_15" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_15"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<spawn name="aden08_2319_15" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_15"/>
+		<npc id="20593"/><!--Единорог-->
+	</spawn>
+	<territory name="aden08_2319_10">
+		<add x="106264" y="53452" zmin="-4688" zmax="-4488"/>
+		<add x="107204" y="54376" zmin="-4688" zmax="-4488"/>
+		<add x="107192" y="55684" zmin="-4688" zmax="-4488"/>
+		<add x="106804" y="55992" zmin="-4688" zmax="-4488"/>
+		<add x="105488" y="54680" zmin="-4688" zmax="-4488"/>
+	</territory>
+	<spawn name="aden08_2319_10" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_10"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<spawn name="aden08_2319_10" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_10"/>
+		<npc id="20591"/><!--Древень Долины-->
+	</spawn>
+	<spawn name="aden08_2319_10" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_10"/>
+		<npc id="20593"/><!--Единорог-->
+	</spawn>
+	<territory name="aden08_2319_11">
+		<add x="102752" y="57424" zmin="-4624" zmax="-4124"/>
+		<add x="103940" y="57520" zmin="-4624" zmax="-4124"/>
+		<add x="107208" y="60816" zmin="-4624" zmax="-4124"/>
+		<add x="107372" y="61732" zmin="-4624" zmax="-4124"/>
+		<add x="105112" y="61532" zmin="-4624" zmax="-4124"/>
+		<add x="102904" y="58852" zmin="-4624" zmax="-4124"/>
+	</territory>
+	<spawn name="aden08_2319_11" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_11"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<spawn name="aden08_2319_11" count="4" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_11"/>
+		<npc id="20591"/><!--Древень Долины-->
+	</spawn>
+	<spawn name="aden08_2319_11" count="3" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_11"/>
+		<npc id="20593"/><!--Единорог-->
+	</spawn>
+	<territory name="aden08_2319_16">
+		<add x="113160" y="56676" zmin="-4620" zmax="-4420"/>
+		<add x="114324" y="56732" zmin="-4620" zmax="-4420"/>
+		<add x="113944" y="58040" zmin="-4620" zmax="-4420"/>
+		<add x="112340" y="58064" zmin="-4620" zmax="-4420"/>
+	</territory>
+	<spawn name="aden08_2319_16" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_16"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<spawn name="aden08_2319_16" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_16"/>
+		<npc id="20593"/><!--Единорог-->
+	</spawn>
+	<territory name="aden08_2319_17">
+		<add x="108876" y="52376" zmin="-4804" zmax="-4504"/>
+		<add x="109880" y="52232" zmin="-4804" zmax="-4504"/>
+		<add x="109632" y="53852" zmin="-4804" zmax="-4504"/>
+		<add x="108052" y="53740" zmin="-4804" zmax="-4504"/>
+	</territory>
+	<spawn name="aden08_2319_17" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_17"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<spawn name="aden08_2319_17" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_17"/>
+		<npc id="20594"/><!--Хранительница Леса-->
+	</spawn>
+	<spawn name="aden08_2319_17" count="2" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_17"/>
+		<npc id="20595"/><!--Старшая Мара-->
+	</spawn>
+	<territory name="aden08_2319_18">
+		<add x="114652" y="53880" zmin="-4612" zmax="-4312"/>
+		<add x="115732" y="53756" zmin="-4612" zmax="-4312"/>
+		<add x="114768" y="55004" zmin="-4612" zmax="-4312"/>
+		<add x="114232" y="55016" zmin="-4612" zmax="-4312"/>
+	</territory>
+	<spawn name="aden08_2319_18" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_18"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<spawn name="aden08_2319_18" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_18"/>
+		<npc id="20594"/><!--Хранительница Леса-->
+	</spawn>
+	<territory name="aden08_2319_19">
+		<add x="114824" y="51168" zmin="-4696" zmax="-4296"/>
+		<add x="116784" y="50448" zmin="-4696" zmax="-4296"/>
+		<add x="116168" y="51956" zmin="-4696" zmax="-4296"/>
+		<add x="115580" y="51952" zmin="-4696" zmax="-4296"/>
+	</territory>
+	<spawn name="aden08_2319_19" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_19"/>
+		<npc id="20592"/><!--Сатир-->
+	</spawn>
+	<spawn name="aden08_2319_19" count="1" respawn="80" respawn_random="15">
+		<territory name="aden08_2319_19"/>
+		<npc id="20594"/><!--Хранительница Леса-->
+	</spawn>
+	<spawn name="aden08_mb2319_01" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="124592" y="43312" zmin="-3880" zmax="-3280"/>
+			<add x="125052" y="42796" zmin="-3880" zmax="-3280"/>
+			<add x="125584" y="43164" zmin="-3880" zmax="-3280"/>
+			<add x="125012" y="43732" zmin="-3880" zmax="-3280"/>
+		</territory>
+		<npc id="25159"/><!--Единорог Паниэль-->
+	</spawn>
+	<spawn name="aden08_mb2319_03" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="125517" y="50068" zmin="-3848" zmax="-3348"/>
+			<add x="125733" y="50068" zmin="-3848" zmax="-3348"/>
+			<add x="125741" y="50268" zmin="-3848" zmax="-3348"/>
+			<add x="125529" y="50268" zmin="-3848" zmax="-3348"/>
+		</territory>
+		<npc id="25070"/><!--Защитник Волшебной Долины Руэль-->
+	</spawn>
+	<spawn name="aden08_mb2319_02" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="121140" y="64192" zmin="-3792" zmax="-3192"/>
+			<add x="121956" y="63216" zmin="-3792" zmax="-3192"/>
+			<add x="122584" y="64068" zmin="-3792" zmax="-3192"/>
+			<add x="121624" y="64840" zmin="-3792" zmax="-3192"/>
+		</territory>
+		<npc id="25119"/><!--Вестник Королевы Фей Берун-->
+	</spawn>
+	<spawn name="aden08_mb2319_04" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="113048" y="52844" zmin="-3904" zmax="-3304"/>
+			<add x="113840" y="52164" zmin="-3904" zmax="-3304"/>
+			<add x="114636" y="52640" zmin="-3904" zmax="-3304"/>
+			<add x="114888" y="53264" zmin="-3904" zmax="-3304"/>
+			<add x="113956" y="53980" zmin="-3904" zmax="-3304"/>
+		</territory>
+		<npc id="25010"/><!--Яростный Тилес-->
+	</spawn>
+	<spawn name="aden08_npc2319_01" count="1" respawn="60">
+		<point x="110395" y="41625" z="-4619" h="0"/>
+		<npc id="30747"/><!--Мимю-->
+	</spawn>
+	<spawn name="aden01_mb2319_05" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="130076" y="58960" zmin="3496" zmax="4096"/>
+			<add x="130432" y="58772" zmin="3496" zmax="4096"/>
+			<add x="130844" y="58888" zmin="3496" zmax="4096"/>
+			<add x="130812" y="59528" zmin="3496" zmax="4096"/>
+			<add x="130176" y="59476" zmin="3496" zmax="4096"/>
+		</territory>
+		<npc id="25163"/><!--Ревущий Налетчик-->
+	</spawn>
+	<spawn name="aden08_mb2318_14" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="112376" y="46584" zmin="-4696" zmax="-4096"/>
+			<add x="112524" y="45992" zmin="-4696" zmax="-4096"/>
+			<add x="113028" y="45688" zmin="-4696" zmax="-4096"/>
+			<add x="114420" y="45888" zmin="-4696" zmax="-4096"/>
+			<add x="115296" y="48036" zmin="-4696" zmax="-4096"/>
+			<add x="114080" y="49052" zmin="-4696" zmax="-4096"/>
+			<add x="112672" y="48160" zmin="-4696" zmax="-4096"/>
+		</territory>
+		<npc id="25423"/><!--Королева Фей Тиминиэль-->
+	</spawn>
+</list>

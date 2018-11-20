@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<territory name="schttgart09_2511_24">
+		<add x="183536" y="-199532" zmin="-3184" zmax="-1784"/>
+		<add x="187368" y="-199252" zmin="-3184" zmax="-1784"/>
+		<add x="188244" y="-196932" zmin="-3184" zmax="-1784"/>
+		<add x="182576" y="-196992" zmin="-3184" zmax="-1784"/>
+	</territory>
+	<spawn name="schttgart09_2511_24" count="3" respawn="20">
+		<territory name="schttgart09_2511_24"/>
+		<npc id="21130"/><!--Главарь Северных Гоблинов-->
+	</spawn>
+	<spawn name="schttgart09_2511_24" count="3" respawn="20">
+		<territory name="schttgart09_2511_24"/>
+		<npc id="21131"/><!--Зачарованный Колючий Голем-->
+	</spawn>
+	<territory name="schttgart09_2511_21">
+		<add x="185476" y="-208128" zmin="-3648" zmax="-3148"/>
+		<add x="187264" y="-210456" zmin="-3648" zmax="-3148"/>
+		<add x="188856" y="-211344" zmin="-3648" zmax="-3148"/>
+		<add x="189064" y="-207868" zmin="-3648" zmax="-3148"/>
+		<add x="185780" y="-206416" zmin="-3648" zmax="-3148"/>
+	</territory>
+	<spawn name="schttgart09_2511_21" count="2" respawn="20">
+		<territory name="schttgart09_2511_21"/>
+		<npc id="21127"/><!--Северный Гоблин-->
+	</spawn>
+	<spawn name="schttgart09_2511_21" count="2" respawn="20">
+		<territory name="schttgart09_2511_21"/>
+		<npc id="21128"/><!--Голем Крушитель-->
+	</spawn>
+	<spawn name="schttgart09_2511_21" count="2" respawn="20">
+		<territory name="schttgart09_2511_21"/>
+		<npc id="21129"/><!--Вождь Оборотней Кероп-->
+	</spawn>
+	<territory name="schttgart09_2511_20">
+		<add x="181492" y="-207800" zmin="-3580" zmax="-2780"/>
+		<add x="185384" y="-208604" zmin="-3580" zmax="-2780"/>
+		<add x="186364" y="-202680" zmin="-3580" zmax="-2780"/>
+		<add x="183220" y="-203652" zmin="-3580" zmax="-2780"/>
+		<add x="181616" y="-205552" zmin="-3580" zmax="-2780"/>
+	</territory>
+	<spawn name="schttgart09_2511_20" count="4" respawn="20">
+		<territory name="schttgart09_2511_20"/>
+		<npc id="21127"/><!--Северный Гоблин-->
+	</spawn>
+	<spawn name="schttgart09_2511_20" count="4" respawn="20">
+		<territory name="schttgart09_2511_20"/>
+		<npc id="21128"/><!--Голем Крушитель-->
+	</spawn>
+	<spawn name="schttgart09_2511_20" count="4" respawn="20">
+		<territory name="schttgart09_2511_20"/>
+		<npc id="21129"/><!--Вождь Оборотней Кероп-->
+	</spawn>
+	<territory name="schttgart09_2511_23">
+		<add x="182972" y="-203656" zmin="-3424" zmax="-2424"/>
+		<add x="186212" y="-202620" zmin="-3424" zmax="-2424"/>
+		<add x="187352" y="-199336" zmin="-3424" zmax="-2424"/>
+		<add x="183568" y="-199568" zmin="-3424" zmax="-2424"/>
+		<add x="182632" y="-201308" zmin="-3424" zmax="-2424"/>
+	</territory>
+	<spawn name="schttgart09_2511_23" count="3" respawn="20">
+		<territory name="schttgart09_2511_23"/>
+		<npc id="21130"/><!--Главарь Северных Гоблинов-->
+	</spawn>
+	<spawn name="schttgart09_2511_23" count="3" respawn="20">
+		<territory name="schttgart09_2511_23"/>
+		<npc id="21131"/><!--Зачарованный Колючий Голем-->
+	</spawn>
+	<territory name="schttgart09_2511_22">
+		<add x="186108" y="-205020" zmin="-3216" zmax="-2216"/>
+		<add x="187204" y="-205144" zmin="-3216" zmax="-2216"/>
+		<add x="189028" y="-203344" zmin="-3216" zmax="-2216"/>
+		<add x="186332" y="-202924" zmin="-3216" zmax="-2216"/>
+	</territory>
+	<spawn name="schttgart09_2511_22" count="2" respawn="20">
+		<territory name="schttgart09_2511_22"/>
+		<npc id="21130"/><!--Главарь Северных Гоблинов-->
+	</spawn>
+	<spawn name="schttgart09_2511_22" count="2" respawn="20">
+		<territory name="schttgart09_2511_22"/>
+		<npc id="21131"/><!--Зачарованный Колючий Голем-->
+	</spawn>
+	<territory name="schttgart09_2511_18">
+		<add x="187420" y="-215944" zmin="-3792" zmax="-3392"/>
+		<add x="189012" y="-214584" zmin="-3792" zmax="-3392"/>
+		<add x="188324" y="-211964" zmin="-3792" zmax="-3392"/>
+		<add x="186960" y="-211276" zmin="-3792" zmax="-3392"/>
+		<add x="185692" y="-211920" zmin="-3792" zmax="-3392"/>
+	</territory>
+	<spawn name="schttgart09_2511_18" count="3" respawn="20">
+		<territory name="schttgart09_2511_18"/>
+		<npc id="21130"/><!--Главарь Северных Гоблинов-->
+	</spawn>
+	<spawn name="schttgart09_2511_18" count="2" respawn="20">
+		<territory name="schttgart09_2511_18"/>
+		<npc id="21131"/><!--Зачарованный Колючий Голем-->
+	</spawn>
+	<territory name="schttgart09_2511_17">
+		<add x="185644" y="-211904" zmin="-3760" zmax="-3360"/>
+		<add x="186892" y="-211220" zmin="-3760" zmax="-3360"/>
+		<add x="185872" y="-209184" zmin="-3760" zmax="-3360"/>
+		<add x="183796" y="-208756" zmin="-3760" zmax="-3360"/>
+		<add x="184988" y="-211404" zmin="-3760" zmax="-3360"/>
+	</territory>
+	<spawn name="schttgart09_2511_17" count="2" respawn="20">
+		<territory name="schttgart09_2511_17"/>
+		<npc id="21127"/><!--Северный Гоблин-->
+	</spawn>
+	<spawn name="schttgart09_2511_17" count="2" respawn="20">
+		<territory name="schttgart09_2511_17"/>
+		<npc id="21128"/><!--Голем Крушитель-->
+	</spawn>
+	<spawn name="schttgart09_2511_17" count="2" respawn="20">
+		<territory name="schttgart09_2511_17"/>
+		<npc id="21129"/><!--Вождь Оборотней Кероп-->
+	</spawn>
+	<territory name="schttgart09_2511_19">
+		<add x="188448" y="-219776" zmin="-3732" zmax="-3432"/>
+		<add x="190264" y="-219336" zmin="-3732" zmax="-3432"/>
+		<add x="189820" y="-216904" zmin="-3732" zmax="-3432"/>
+		<add x="188728" y="-214852" zmin="-3732" zmax="-3432"/>
+		<add x="187784" y="-215832" zmin="-3732" zmax="-3432"/>
+	</territory>
+	<spawn name="schttgart09_2511_19" count="3" respawn="20">
+		<territory name="schttgart09_2511_19"/>
+		<npc id="21130"/><!--Главарь Северных Гоблинов-->
+	</spawn>
+	<spawn name="schttgart09_2511_19" count="3" respawn="20">
+		<territory name="schttgart09_2511_19"/>
+		<npc id="21131"/><!--Зачарованный Колючий Голем-->
+	</spawn>
+	<territory name="schttgart09_2511_03">
+		<add x="163952" y="-212200" zmin="-3768" zmax="-3368"/>
+		<add x="166004" y="-211012" zmin="-3768" zmax="-3368"/>
+		<add x="165844" y="-209160" zmin="-3768" zmax="-3368"/>
+		<add x="163996" y="-207908" zmin="-3768" zmax="-3368"/>
+	</territory>
+	<spawn name="schttgart09_2511_03" count="2" respawn="20">
+		<territory name="schttgart09_2511_03"/>
+		<npc id="21124"/><!--Красноглазая Шипастая Мышь-->
+	</spawn>
+	<spawn name="schttgart09_2511_03" count="2" respawn="20">
+		<territory name="schttgart09_2511_03"/>
+		<npc id="21125"/><!--Северный Тримден-->
+	</spawn>
+	<spawn name="schttgart09_2511_03" count="2" respawn="20">
+		<territory name="schttgart09_2511_03"/>
+		<npc id="21126"/><!--Оборотень Кероп-->
+	</spawn>
+	<territory name="schttgart09_2511_02">
+		<add x="165400" y="-215236" zmin="-3792" zmax="-3392"/>
+		<add x="166308" y="-214348" zmin="-3792" zmax="-3392"/>
+		<add x="166528" y="-213032" zmin="-3792" zmax="-3392"/>
+		<add x="166128" y="-211504" zmin="-3792" zmax="-3392"/>
+		<add x="164980" y="-211920" zmin="-3792" zmax="-3392"/>
+		<add x="164656" y="-212420" zmin="-3792" zmax="-3392"/>
+		<add x="164276" y="-213652" zmin="-3792" zmax="-3392"/>
+	</territory>
+	<spawn name="schttgart09_2511_02" count="2" respawn="20">
+		<territory name="schttgart09_2511_02"/>
+		<npc id="21124"/><!--Красноглазая Шипастая Мышь-->
+	</spawn>
+	<spawn name="schttgart09_2511_02" count="2" respawn="20">
+		<territory name="schttgart09_2511_02"/>
+		<npc id="21125"/><!--Северный Тримден-->
+	</spawn>
+	<spawn name="schttgart09_2511_02" count="2" respawn="20">
+		<territory name="schttgart09_2511_02"/>
+		<npc id="21126"/><!--Оборотень Кероп-->
+	</spawn>
+	<territory name="schttgart09_2511_05">
+		<add x="163936" y="-205932" zmin="-3792" zmax="-3392"/>
+		<add x="166184" y="-206048" zmin="-3792" zmax="-3392"/>
+		<add x="168440" y="-202388" zmin="-3792" zmax="-3392"/>
+		<add x="163968" y="-199828" zmin="-3792" zmax="-3392"/>
+	</territory>
+	<spawn name="schttgart09_2511_05" count="3" respawn="20">
+		<territory name="schttgart09_2511_05"/>
+		<npc id="21124"/><!--Красноглазая Шипастая Мышь-->
+	</spawn>
+	<spawn name="schttgart09_2511_05" count="3" respawn="20">
+		<territory name="schttgart09_2511_05"/>
+		<npc id="21125"/><!--Северный Тримден-->
+	</spawn>
+	<spawn name="schttgart09_2511_05" count="3" respawn="20">
+		<territory name="schttgart09_2511_05"/>
+		<npc id="21126"/><!--Оборотень Кероп-->
+	</spawn>
+	<territory name="schttgart09_2511_04">
+		<add x="163968" y="-207848" zmin="-3764" zmax="-3364"/>
+		<add x="165852" y="-209060" zmin="-3764" zmax="-3364"/>
+		<add x="166676" y="-208108" zmin="-3764" zmax="-3364"/>
+		<add x="166584" y="-206796" zmin="-3764" zmax="-3364"/>
+		<add x="165896" y="-206320" zmin="-3764" zmax="-3364"/>
+		<add x="163932" y="-206324" zmin="-3764" zmax="-3364"/>
+	</territory>
+	<spawn name="schttgart09_2511_04" count="2" respawn="20">
+		<territory name="schttgart09_2511_04"/>
+		<npc id="21124"/><!--Красноглазая Шипастая Мышь-->
+	</spawn>
+	<spawn name="schttgart09_2511_04" count="2" respawn="20">
+		<territory name="schttgart09_2511_04"/>
+		<npc id="21125"/><!--Северный Тримден-->
+	</spawn>
+	<spawn name="schttgart09_2511_04" count="2" respawn="20">
+		<territory name="schttgart09_2511_04"/>
+		<npc id="21126"/><!--Оборотень Кероп-->
+	</spawn>
+	<territory name="schttgart09_2511_01">
+		<add x="163900" y="-217172" zmin="-3748" zmax="-3348"/>
+		<add x="165376" y="-215296" zmin="-3748" zmax="-3348"/>
+		<add x="164324" y="-213716" zmin="-3748" zmax="-3348"/>
+		<add x="163904" y="-214252" zmin="-3748" zmax="-3348"/>
+	</territory>
+	<spawn name="schttgart09_2511_01" count="2" respawn="20">
+		<territory name="schttgart09_2511_01"/>
+		<npc id="21124"/><!--Красноглазая Шипастая Мышь-->
+	</spawn>
+	<spawn name="schttgart09_2511_01" count="2" respawn="20">
+		<territory name="schttgart09_2511_01"/>
+		<npc id="21125"/><!--Северный Тримден-->
+	</spawn>
+	<spawn name="schttgart09_2511_01" count="2" respawn="20">
+		<territory name="schttgart09_2511_01"/>
+		<npc id="21126"/><!--Оборотень Кероп-->
+	</spawn>
+	<territory name="schttgart09_2511_14">
+		<add x="173776" y="-203012" zmin="-3744" zmax="-2644"/>
+		<add x="177584" y="-204700" zmin="-3744" zmax="-2644"/>
+		<add x="178356" y="-200956" zmin="-3744" zmax="-2644"/>
+		<add x="177184" y="-200400" zmin="-3744" zmax="-2644"/>
+	</territory>
+	<spawn name="schttgart09_2511_14" count="2" respawn="20">
+		<territory name="schttgart09_2511_14"/>
+		<npc id="21127"/><!--Северный Гоблин-->
+	</spawn>
+	<spawn name="schttgart09_2511_14" count="2" respawn="20">
+		<territory name="schttgart09_2511_14"/>
+		<npc id="21128"/><!--Голем Крушитель-->
+	</spawn>
+	<spawn name="schttgart09_2511_14" count="2" respawn="20">
+		<territory name="schttgart09_2511_14"/>
+		<npc id="21129"/><!--Вождь Оборотней Кероп-->
+	</spawn>
+	<territory name="schttgart09_2511_13">
+		<add x="178664" y="-209332" zmin="-3412" zmax="-3012"/>
+		<add x="179636" y="-208728" zmin="-3412" zmax="-3012"/>
+		<add x="177672" y="-205888" zmin="-3412" zmax="-3012"/>
+		<add x="173444" y="-207036" zmin="-3412" zmax="-3012"/>
+	</territory>
+	<spawn name="schttgart09_2511_13" count="2" respawn="20">
+		<territory name="schttgart09_2511_13"/>
+		<npc id="21127"/><!--Северный Гоблин-->
+	</spawn>
+	<spawn name="schttgart09_2511_13" count="2" respawn="20">
+		<territory name="schttgart09_2511_13"/>
+		<npc id="21128"/><!--Голем Крушитель-->
+	</spawn>
+	<spawn name="schttgart09_2511_13" count="2" respawn="20">
+		<territory name="schttgart09_2511_13"/>
+		<npc id="21129"/><!--Вождь Оборотней Кероп-->
+	</spawn>
+	<territory name="schttgart09_2511_16">
+		<add x="166916" y="-198228" zmin="-3680" zmax="-3280"/>
+		<add x="169364" y="-199852" zmin="-3680" zmax="-3280"/>
+		<add x="170208" y="-196856" zmin="-3680" zmax="-3280"/>
+		<add x="166948" y="-196844" zmin="-3680" zmax="-3280"/>
+	</territory>
+	<spawn name="schttgart09_2511_16" count="2" respawn="20">
+		<territory name="schttgart09_2511_16"/>
+		<npc id="21127"/><!--Северный Гоблин-->
+	</spawn>
+	<spawn name="schttgart09_2511_16" count="2" respawn="20">
+		<territory name="schttgart09_2511_16"/>
+		<npc id="21128"/><!--Голем Крушитель-->
+	</spawn>
+	<spawn name="schttgart09_2511_16" count="2" respawn="20">
+		<territory name="schttgart09_2511_16"/>
+		<npc id="21129"/><!--Вождь Оборотней Кероп-->
+	</spawn>
+	<territory name="schttgart09_2511_15">
+		<add x="170928" y="-201260" zmin="-3656" zmax="-3156"/>
+		<add x="174552" y="-200376" zmin="-3656" zmax="-3156"/>
+		<add x="175284" y="-199808" zmin="-3656" zmax="-3156"/>
+		<add x="175452" y="-199112" zmin="-3656" zmax="-3156"/>
+		<add x="174848" y="-196876" zmin="-3656" zmax="-3156"/>
+		<add x="170220" y="-196876" zmin="-3656" zmax="-3156"/>
+		<add x="169400" y="-199876" zmin="-3656" zmax="-3156"/>
+	</territory>
+	<spawn name="schttgart09_2511_15" count="3" respawn="20">
+		<territory name="schttgart09_2511_15"/>
+		<npc id="21127"/><!--Северный Гоблин-->
+	</spawn>
+	<spawn name="schttgart09_2511_15" count="3" respawn="20">
+		<territory name="schttgart09_2511_15"/>
+		<npc id="21128"/><!--Голем Крушитель-->
+	</spawn>
+	<spawn name="schttgart09_2511_15" count="3" respawn="20">
+		<territory name="schttgart09_2511_15"/>
+		<npc id="21129"/><!--Вождь Оборотней Кероп-->
+	</spawn>
+	<territory name="schttgart09_2511_10">
+		<add x="179496" y="-211912" zmin="-3772" zmax="-3372"/>
+		<add x="182216" y="-211220" zmin="-3772" zmax="-3372"/>
+		<add x="183760" y="-209388" zmin="-3772" zmax="-3372"/>
+		<add x="182124" y="-208644" zmin="-3772" zmax="-3372"/>
+		<add x="179588" y="-210588" zmin="-3772" zmax="-3372"/>
+	</territory>
+	<spawn name="schttgart09_2511_10" count="2" respawn="20">
+		<territory name="schttgart09_2511_10"/>
+		<npc id="21127"/><!--Северный Гоблин-->
+	</spawn>
+	<spawn name="schttgart09_2511_10" count="2" respawn="20">
+		<territory name="schttgart09_2511_10"/>
+		<npc id="21128"/><!--Голем Крушитель-->
+	</spawn>
+	<spawn name="schttgart09_2511_10" count="2" respawn="20">
+		<territory name="schttgart09_2511_10"/>
+		<npc id="21129"/><!--Вождь Оборотней Кероп-->
+	</spawn>
+	<territory name="schttgart09_2511_12">
+		<add x="173024" y="-207088" zmin="-3688" zmax="-3188"/>
+		<add x="175612" y="-206520" zmin="-3688" zmax="-3188"/>
+		<add x="177556" y="-204764" zmin="-3688" zmax="-3188"/>
+		<add x="172892" y="-202632" zmin="-3688" zmax="-3188"/>
+		<add x="171256" y="-203912" zmin="-3688" zmax="-3188"/>
+	</territory>
+	<spawn name="schttgart09_2511_12" count="2" respawn="20">
+		<territory name="schttgart09_2511_12"/>
+		<npc id="21127"/><!--Северный Гоблин-->
+	</spawn>
+	<spawn name="schttgart09_2511_12" count="3" respawn="20">
+		<territory name="schttgart09_2511_12"/>
+		<npc id="21128"/><!--Голем Крушитель-->
+	</spawn>
+	<spawn name="schttgart09_2511_12" count="3" respawn="20">
+		<territory name="schttgart09_2511_12"/>
+		<npc id="21129"/><!--Вождь Оборотней Кероп-->
+	</spawn>
+	<territory name="schttgart09_2511_11">
+		<add x="170916" y="-207664" zmin="-3704" zmax="-3304"/>
+		<add x="172872" y="-207284" zmin="-3704" zmax="-3304"/>
+		<add x="170952" y="-203776" zmin="-3704" zmax="-3304"/>
+		<add x="169348" y="-206292" zmin="-3704" zmax="-3304"/>
+	</territory>
+	<spawn name="schttgart09_2511_11" count="2" respawn="20">
+		<territory name="schttgart09_2511_11"/>
+		<npc id="21127"/><!--Северный Гоблин-->
+	</spawn>
+	<spawn name="schttgart09_2511_11" count="2" respawn="20">
+		<territory name="schttgart09_2511_11"/>
+		<npc id="21128"/><!--Голем Крушитель-->
+	</spawn>
+	<spawn name="schttgart09_2511_11" count="2" respawn="20">
+		<territory name="schttgart09_2511_11"/>
+		<npc id="21129"/><!--Вождь Оборотней Кероп-->
+	</spawn>
+	<territory name="schttgart09_2511_07">
+		<add x="169948" y="-212624" zmin="-3740" zmax="-3340"/>
+		<add x="172904" y="-211812" zmin="-3740" zmax="-3340"/>
+		<add x="173240" y="-208032" zmin="-3740" zmax="-3340"/>
+		<add x="172356" y="-207788" zmin="-3740" zmax="-3340"/>
+		<add x="171124" y="-208276" zmin="-3740" zmax="-3340"/>
+		<add x="167736" y="-211632" zmin="-3740" zmax="-3340"/>
+		<add x="168640" y="-212588" zmin="-3740" zmax="-3340"/>
+	</territory>
+	<spawn name="schttgart09_2511_07" count="3" respawn="20">
+		<territory name="schttgart09_2511_07"/>
+		<npc id="21124"/><!--Красноглазая Шипастая Мышь-->
+	</spawn>
+	<spawn name="schttgart09_2511_07" count="3" respawn="20">
+		<territory name="schttgart09_2511_07"/>
+		<npc id="21125"/><!--Северный Тримден-->
+	</spawn>
+	<spawn name="schttgart09_2511_07" count="3" respawn="20">
+		<territory name="schttgart09_2511_07"/>
+		<npc id="21126"/><!--Оборотень Кероп-->
+	</spawn>
+	<territory name="schttgart09_2511_06">
+		<add x="171932" y="-216184" zmin="-3700" zmax="-3300"/>
+		<add x="174296" y="-213924" zmin="-3700" zmax="-3300"/>
+		<add x="172932" y="-211876" zmin="-3700" zmax="-3300"/>
+		<add x="170020" y="-212684" zmin="-3700" zmax="-3300"/>
+		<add x="171180" y="-215596" zmin="-3700" zmax="-3300"/>
+	</territory>
+	<spawn name="schttgart09_2511_06" count="3" respawn="20">
+		<territory name="schttgart09_2511_06"/>
+		<npc id="21124"/><!--Красноглазая Шипастая Мышь-->
+	</spawn>
+	<spawn name="schttgart09_2511_06" count="3" respawn="20">
+		<territory name="schttgart09_2511_06"/>
+		<npc id="21125"/><!--Северный Тримден-->
+	</spawn>
+	<spawn name="schttgart09_2511_06" count="3" respawn="20">
+		<territory name="schttgart09_2511_06"/>
+		<npc id="21126"/><!--Оборотень Кероп-->
+	</spawn>
+	<territory name="schttgart09_2511_09">
+		<add x="177720" y="-213736" zmin="-3732" zmax="-3332"/>
+		<add x="178560" y="-213784" zmin="-3732" zmax="-3332"/>
+		<add x="179488" y="-212336" zmin="-3732" zmax="-3332"/>
+		<add x="179592" y="-210044" zmin="-3732" zmax="-3332"/>
+		<add x="177164" y="-210236" zmin="-3732" zmax="-3332"/>
+		<add x="176524" y="-212852" zmin="-3732" zmax="-3332"/>
+	</territory>
+	<spawn name="schttgart09_2511_09" count="2" respawn="20">
+		<territory name="schttgart09_2511_09"/>
+		<npc id="21127"/><!--Северный Гоблин-->
+	</spawn>
+	<spawn name="schttgart09_2511_09" count="2" respawn="20">
+		<territory name="schttgart09_2511_09"/>
+		<npc id="21128"/><!--Голем Крушитель-->
+	</spawn>
+	<spawn name="schttgart09_2511_09" count="2" respawn="20">
+		<territory name="schttgart09_2511_09"/>
+		<npc id="21129"/><!--Вождь Оборотней Кероп-->
+	</spawn>
+	<territory name="schttgart09_2511_08">
+		<add x="174336" y="-213784" zmin="-3772" zmax="-3372"/>
+		<add x="176552" y="-212848" zmin="-3772" zmax="-3372"/>
+		<add x="177148" y="-210220" zmin="-3772" zmax="-3372"/>
+		<add x="173280" y="-208232" zmin="-3772" zmax="-3372"/>
+		<add x="173012" y="-211896" zmin="-3772" zmax="-3372"/>
+	</territory>
+	<spawn name="schttgart09_2511_08" count="3" respawn="20">
+		<territory name="schttgart09_2511_08"/>
+		<npc id="21127"/><!--Северный Гоблин-->
+	</spawn>
+	<spawn name="schttgart09_2511_08" count="3" respawn="20">
+		<territory name="schttgart09_2511_08"/>
+		<npc id="21128"/><!--Голем Крушитель-->
+	</spawn>
+	<spawn name="schttgart09_2511_08" count="3" respawn="20">
+		<territory name="schttgart09_2511_08"/>
+		<npc id="21129"/><!--Вождь Оборотней Кероп-->
+	</spawn>
+</list>

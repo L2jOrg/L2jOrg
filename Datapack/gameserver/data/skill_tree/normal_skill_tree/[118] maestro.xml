@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="118">	<!--Мастер-->
+			<skill id="1405" level="3" name="Божественное Вдохновение(Divine Inspiration)" item_id="8620" cost="7900000" min_level="76"/>
+			<skill id="1405" level="4" name="Божественное Вдохновение(Divine Inspiration)" item_id="8621" cost="7900000" min_level="76"/>
+			<skill id="36" level="38" name="Вихрь(Spinning Slasher)" cost="7900000" min_level="76"/>
+			<skill id="216" level="46" name="Владение Древковым Оружием(Polearm Mastery)" cost="7900000" min_level="76"/>
+			<skill id="227" level="51" name="Владение Легкой Броней(Light Armor Mastery)" cost="7900000" min_level="76"/>
+			<skill id="205" level="46" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="7900000" min_level="76"/>
+			<skill id="231" level="51" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="7900000" min_level="76"/>
+			<skill id="347" level="1" name="Землетрясение(Earthquake)" cost="7900000" min_level="76"/>
+			<skill id="1836" level="1" name="Оседлать Кукуру(Mount Kukuru)" item_id="90041" min_level="76"/>
+			<skill id="25" level="10" name="Призвать Механического Голема(Summon Mechanic Golem)" cost="7900000" min_level="76"/>
+			<skill id="260" level="38" name="Сокрушение Молотом(Hammer Crush)" cost="7900000" min_level="76"/>
+			<skill id="36" level="39" name="Вихрь(Spinning Slasher)" cost="7900000" min_level="77"/>
+			<skill id="216" level="47" name="Владение Древковым Оружием(Polearm Mastery)" cost="7900000" min_level="77"/>
+			<skill id="227" level="52" name="Владение Легкой Броней(Light Armor Mastery)" cost="7900000" min_level="77"/>
+			<skill id="205" level="47" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="7900000" min_level="77"/>
+			<skill id="231" level="52" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="7900000" min_level="77"/>
+			<skill id="362" level="1" name="Пролом Брони(Armor Crush)" item_id="90078" cost="7900000" min_level="77"/>
+			<skill id="260" level="39" name="Сокрушение Молотом(Hammer Crush)" cost="7900000" min_level="77"/>
+			<skill id="36" level="40" name="Вихрь(Spinning Slasher)" cost="18400000" min_level="78"/>
+			<skill id="216" level="48" name="Владение Древковым Оружием(Polearm Mastery)" cost="18400000" min_level="78"/>
+			<skill id="227" level="53" name="Владение Легкой Броней(Light Armor Mastery)" cost="18400000" min_level="78"/>
+			<skill id="205" level="48" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="18400000" min_level="78"/>
+			<skill id="231" level="53" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="18400000" min_level="78"/>
+			<skill id="430" level="1" name="Мастер Схватки(Master of Combat)" cost="18400000" min_level="78"/>
+			<skill id="260" level="40" name="Сокрушение Молотом(Hammer Crush)" cost="18400000" min_level="78"/>
+			<skill id="440" level="1" name="Храброе Сердце(Braveheart)" cost="18400000" min_level="78"/>
+			<skill id="917" level="1" name="Озарение(Final Secret)" item_id="90080" cost="18400000" min_level="79"/>
+		</class>
+	</normal_skill_tree>
+</list>

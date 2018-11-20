@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE fake_player_ai SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<fake_player_ai race="DWARF" type="FIGHTER">
+	<on_character_create>	<!--Создается персонаж-->
+		<wait min_delay="3000" max_delay="9000"/>
+		<move_to_npc id="30530"/>
+		<speak_with_npc id="30530"/>
+		<wait min_delay="1000" max_delay="3000"/>
+		<wait min_delay="500" max_delay="1500"/>
+		<farm/>
+	</on_character_create>
+	<farm name="Rebirth Mine" min_level="1" max_level="3">
+		<zones>
+			<zone>
+				<polygon>
+					<coords loc="107928 -176168 -600 -300"/>
+					<coords loc="106600 -173480 -600 -300"/>
+					<coords loc="108984 -172472 -600 -300"/>
+					<coords loc="110136 -174200 -600 -300"/>
+					<coords loc="109000 -175752 -600 -300"/>
+				</polygon>
+			</zone>
+			<spawn_points>
+				<coords loc="108644 -173947 -400 0"/>
+				<coords loc="108678 -174002 -400 0"/>
+				<coords loc="108505 -173964 -400 0"/>
+				<coords loc="108512 -174026 -400 0"/>
+				<coords loc="108549 -174075 -400 0"/>
+				<coords loc="108576 -174122 -400 0"/>
+			</spawn_points>
+		</zones>
+		<farm_monsters>
+			<npc id="18342"/>
+		</farm_monsters>
+		<on_obtain_max_level>
+			<wait min_delay="1000" max_delay="3000"/>
+			<move_to_point x="109256" y="-173752" z="-544" min_range="50" max_range="150"/>
+			<move_to_point x="109688" y="-173720" z="-544" min_range="50" max_range="150"/>
+			<move_to_point x="110456" y="-173704" z="-544" min_range="0" max_range="50"/>
+			<move_to_point x="111480" y="-173544" z="-608" min_range="0" max_range="50"/>
+			<move_to_point x="112568" y="-173672" z="-608" min_range="0" max_range="50"/>
+			<move_to_point x="113240" y="-174328" z="-608" min_range="50" max_range="150"/>
+			<move_to_point x="113432" y="-175112" z="-608" min_range="0" max_range="50"/>
+			<move_to_point x="113656" y="-175768" z="-672" min_range="0" max_range="50"/>
+			<move_to_point x="114120" y="-176280" z="-736" min_range="0" max_range="50"/>
+			<move_to_point x="114664" y="-176424" z="-752" min_range="0" max_range="50"/>
+			<move_to_point x="115048" y="-176664" z="-784" min_range="0" max_range="50"/>
+			<move_to_point x="115272" y="-177416" z="-912" min_range="50" max_range="150"/>
+			<move_to_point x="115416" y="-178296" z="-928" min_range="50" max_range="150"/>
+		</on_obtain_max_level>
+	</farm>
+</fake_player_ai>

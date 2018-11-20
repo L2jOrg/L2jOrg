@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "residence.dtd">
+<list>
+	<residence id="21" name="Fortress of Resistance" impl="clanhall.SiegeableClanHall">
+		<available_functions>
+			<function type="ITEM_CREATE" level="11"/>
+			<function type="ITEM_CREATE" level="12"/>
+			<function type="ITEM_CREATE" level="13"/>
+			<function type="RESTORE_HP" level="25"/>
+			<function type="RESTORE_HP" level="30"/>
+			<function type="RESTORE_MP" level="18"/>
+			<function type="RESTORE_MP" level="20"/>
+			<function type="RESTORE_EXP" level="19"/>
+			<function type="RESTORE_EXP" level="20"/>
+			<function type="TELEPORT" level="11"/>
+			<function type="TELEPORT" level="12"/>
+		</available_functions>
+		<banish_points>
+			<point x="51952" y="111060" z="-1970"/>
+		</banish_points>
+		<owner_restart_points>
+			<point x="43370" y="108839" z="-1980"/>
+		</owner_restart_points>
+		<other_restart_points>
+			<point x="51952" y="111060" z="-1970"/>
+		</other_restart_points>
+		<chaos_restart_points>
+		</chaos_restart_points>
+	</residence>
+</list>

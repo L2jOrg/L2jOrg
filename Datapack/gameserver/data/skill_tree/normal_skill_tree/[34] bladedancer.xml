@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="34">	<!--Танцор Смерти-->
+			<skill id="144" level="1" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="87000" min_level="40"/>
+			<skill id="144" level="2" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="87000" min_level="40"/>
+			<skill id="144" level="3" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="87000" min_level="40"/>
+			<skill id="223" level="13" name="Жало(Sting)" cost="87000" min_level="40"/>
+			<skill id="223" level="14" name="Жало(Sting)" cost="87000" min_level="40"/>
+			<skill id="223" level="15" name="Жало(Sting)" cost="87000" min_level="40"/>
+			<skill id="2" level="5" name="Замешательство(Confusion)" cost="87000" min_level="40"/>
+			<skill id="105" level="3" name="Замораживающий Удар(Freezing Strike)" cost="87000" min_level="40"/>
+			<skill id="105" level="4" name="Замораживающий Удар(Freezing Strike)" cost="87000" min_level="40"/>
+			<skill id="70" level="17" name="Кража Здоровья(Drain HP)" cost="87000" min_level="40"/>
+			<skill id="70" level="18" name="Кража Здоровья(Drain HP)" cost="87000" min_level="40"/>
+			<skill id="70" level="19" name="Кража Здоровья(Drain HP)" cost="87000" min_level="40"/>
+			<skill id="147" level="15" name="Магическое Сопротивление(M. Def.)" cost="87000" min_level="40"/>
+			<skill id="147" level="16" name="Магическое Сопротивление(M. Def.)" cost="87000" min_level="40"/>
+			<skill id="147" level="17" name="Магическое Сопротивление(M. Def.)" cost="87000" min_level="40"/>
+			<skill id="122" level="1" name="Сглаз(Hex)" item_id="3050" cost="87000" min_level="40"/>
+			<skill id="115" level="3" name="Сокрушение Мощи(Power Break)" cost="87000" min_level="40"/>
+			<skill id="274" level="1" name="Танец Огня(Dance of Fire)" cost="87000" min_level="40"/>
+			<skill id="144" level="4" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="100000" min_level="41"/>
+			<skill id="223" level="16" name="Жало(Sting)" cost="100000" min_level="41"/>
+			<skill id="70" level="20" name="Кража Здоровья(Drain HP)" cost="100000" min_level="41"/>
+			<skill id="147" level="18" name="Магическое Сопротивление(M. Def.)" cost="100000" min_level="41"/>
+			<skill id="144" level="5" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="100000" min_level="42"/>
+			<skill id="223" level="17" name="Жало(Sting)" cost="100000" min_level="42"/>
+			<skill id="105" level="5" name="Замораживающий Удар(Freezing Strike)" cost="100000" min_level="42"/>
+			<skill id="70" level="21" name="Кража Здоровья(Drain HP)" cost="100000" min_level="42"/>
+			<skill id="147" level="19" name="Магическое Сопротивление(M. Def.)" cost="100000" min_level="42"/>
+			<skill id="144" level="6" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="100000" min_level="43"/>
+			<skill id="223" level="18" name="Жало(Sting)" cost="100000" min_level="43"/>
+			<skill id="2" level="6" name="Замешательство(Confusion)" cost="100000" min_level="43"/>
+			<skill id="105" level="6" name="Замораживающий Удар(Freezing Strike)" cost="100000" min_level="43"/>
+			<skill id="70" level="22" name="Кража Здоровья(Drain HP)" cost="100000" min_level="43"/>
+			<skill id="147" level="20" name="Магическое Сопротивление(M. Def.)" cost="100000" min_level="43"/>
+			<skill id="122" level="2" name="Сглаз(Hex)" cost="100000" min_level="43"/>
+			<skill id="115" level="4" name="Сокрушение Мощи(Power Break)" cost="100000" min_level="43"/>
+			<skill id="277" level="1" name="Танец Света(Dance of Light)" cost="100000" min_level="43"/>
+			<skill id="191" level="2" name="Фокусировка Разума(Focus Mind)" cost="100000" min_level="43"/>
+			<skill id="144" level="7" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="150000" min_level="44"/>
+			<skill id="223" level="19" name="Жало(Sting)" cost="150000" min_level="44"/>
+			<skill id="70" level="23" name="Кража Здоровья(Drain HP)" cost="150000" min_level="44"/>
+			<skill id="147" level="21" name="Магическое Сопротивление(M. Def.)" cost="150000" min_level="44"/>
+			<skill id="144" level="8" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="150000" min_level="45"/>
+			<skill id="223" level="20" name="Жало(Sting)" cost="150000" min_level="45"/>
+			<skill id="105" level="7" name="Замораживающий Удар(Freezing Strike)" cost="150000" min_level="45"/>
+			<skill id="70" level="24" name="Кража Здоровья(Drain HP)" cost="150000" min_level="45"/>
+			<skill id="147" level="22" name="Магическое Сопротивление(M. Def.)" cost="150000" min_level="45"/>
+			<skill id="1800" level="1" name="Пират(Pirate)" min_level="45"/>
+			<skill id="144" level="9" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="150000" min_level="46"/>
+			<skill id="223" level="21" name="Жало(Sting)" cost="150000" min_level="46"/>
+			<skill id="2" level="7" name="Замешательство(Confusion)" cost="150000" min_level="46"/>
+			<skill id="105" level="8" name="Замораживающий Удар(Freezing Strike)" cost="150000" min_level="46"/>
+			<skill id="70" level="25" name="Кража Здоровья(Drain HP)" cost="150000" min_level="46"/>
+			<skill id="147" level="23" name="Магическое Сопротивление(M. Def.)" cost="150000" min_level="46"/>
+			<skill id="122" level="3" name="Сглаз(Hex)" cost="150000" min_level="46"/>
+			<skill id="115" level="5" name="Сокрушение Мощи(Power Break)" cost="150000" min_level="46"/>
+			<skill id="272" level="1" name="Танец Вдохновения(Dance of Inspiration)" cost="150000" min_level="46"/>
+			<skill id="144" level="10" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="210000" min_level="47"/>
+			<skill id="223" level="22" name="Жало(Sting)" cost="210000" min_level="47"/>
+			<skill id="70" level="26" name="Кража Здоровья(Drain HP)" cost="210000" min_level="47"/>
+			<skill id="147" level="24" name="Магическое Сопротивление(M. Def.)" cost="210000" min_level="47"/>
+			<skill id="144" level="11" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="210000" min_level="48"/>
+			<skill id="223" level="23" name="Жало(Sting)" cost="210000" min_level="48"/>
+			<skill id="105" level="9" name="Замораживающий Удар(Freezing Strike)" cost="210000" min_level="48"/>
+			<skill id="70" level="27" name="Кража Здоровья(Drain HP)" cost="210000" min_level="48"/>
+			<skill id="147" level="25" name="Магическое Сопротивление(M. Def.)" cost="210000" min_level="48"/>
+			<skill id="144" level="12" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="210000" min_level="49"/>
+			<skill id="223" level="24" name="Жало(Sting)" cost="210000" min_level="49"/>
+			<skill id="2" level="8" name="Замешательство(Confusion)" cost="210000" min_level="49"/>
+			<skill id="105" level="10" name="Замораживающий Удар(Freezing Strike)" cost="210000" min_level="49"/>
+			<skill id="70" level="28" name="Кража Здоровья(Drain HP)" cost="210000" min_level="49"/>
+			<skill id="147" level="26" name="Магическое Сопротивление(M. Def.)" cost="210000" min_level="49"/>
+			<skill id="129" level="2" name="Отравление(Poison)" cost="210000" min_level="49"/>
+			<skill id="122" level="4" name="Сглаз(Hex)" cost="210000" min_level="49"/>
+			<skill id="115" level="6" name="Сокрушение Мощи(Power Break)" cost="210000" min_level="49"/>
+			<skill id="273" level="1" name="Танец Мистика(Dance of the Mystic)" cost="210000" min_level="49"/>
+			<skill id="191" level="3" name="Фокусировка Разума(Focus Mind)" cost="210000" min_level="49"/>
+			<skill id="144" level="13" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="300000" min_level="50"/>
+			<skill id="223" level="25" name="Жало(Sting)" cost="300000" min_level="50"/>
+			<skill id="70" level="29" name="Кража Здоровья(Drain HP)" cost="300000" min_level="50"/>
+			<skill id="147" level="27" name="Магическое Сопротивление(M. Def.)" cost="300000" min_level="50"/>
+			<skill id="144" level="14" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="300000" min_level="51"/>
+			<skill id="223" level="26" name="Жало(Sting)" cost="300000" min_level="51"/>
+			<skill id="105" level="11" name="Замораживающий Удар(Freezing Strike)" cost="300000" min_level="51"/>
+			<skill id="70" level="30" name="Кража Здоровья(Drain HP)" cost="300000" min_level="51"/>
+			<skill id="147" level="28" name="Магическое Сопротивление(M. Def.)" cost="300000" min_level="51"/>
+			<skill id="1405" level="1" name="Божественное Вдохновение(Divine Inspiration)" item_id="8618" cost="300000" min_level="52"/>
+			<skill id="144" level="15" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="300000" min_level="52"/>
+			<skill id="223" level="27" name="Жало(Sting)" cost="300000" min_level="52"/>
+			<skill id="2" level="9" name="Замешательство(Confusion)" cost="300000" min_level="52"/>
+			<skill id="105" level="12" name="Замораживающий Удар(Freezing Strike)" cost="300000" min_level="52"/>
+			<skill id="70" level="31" name="Кража Здоровья(Drain HP)" cost="300000" min_level="52"/>
+			<skill id="147" level="29" name="Магическое Сопротивление(M. Def.)" cost="300000" min_level="52"/>
+			<skill id="122" level="5" name="Сглаз(Hex)" cost="300000" min_level="52"/>
+			<skill id="115" level="7" name="Сокрушение Мощи(Power Break)" cost="300000" min_level="52"/>
+			<skill id="276" level="1" name="Танец Концентрации(Dance of Concentration)" cost="300000" min_level="52"/>
+			<skill id="144" level="16" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="420000" min_level="53"/>
+			<skill id="223" level="28" name="Жало(Sting)" cost="420000" min_level="53"/>
+			<skill id="70" level="32" name="Кража Здоровья(Drain HP)" cost="420000" min_level="53"/>
+			<skill id="147" level="30" name="Магическое Сопротивление(M. Def.)" cost="420000" min_level="53"/>
+			<skill id="144" level="17" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="420000" min_level="54"/>
+			<skill id="223" level="29" name="Жало(Sting)" cost="420000" min_level="54"/>
+			<skill id="105" level="13" name="Замораживающий Удар(Freezing Strike)" cost="420000" min_level="54"/>
+			<skill id="70" level="33" name="Кража Здоровья(Drain HP)" cost="420000" min_level="54"/>
+			<skill id="147" level="31" name="Магическое Сопротивление(M. Def.)" cost="420000" min_level="54"/>
+			<skill id="402" level="1" name="Арест(Arrest)" cost="420000" min_level="55"/>
+			<skill id="144" level="18" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="420000" min_level="55"/>
+			<skill id="223" level="30" name="Жало(Sting)" cost="420000" min_level="55"/>
+			<skill id="2" level="10" name="Замешательство(Confusion)" cost="420000" min_level="55"/>
+			<skill id="105" level="14" name="Замораживающий Удар(Freezing Strike)" cost="420000" min_level="55"/>
+			<skill id="70" level="34" name="Кража Здоровья(Drain HP)" cost="420000" min_level="55"/>
+			<skill id="147" level="32" name="Магическое Сопротивление(M. Def.)" cost="420000" min_level="55"/>
+			<skill id="122" level="6" name="Сглаз(Hex)" cost="420000" min_level="55"/>
+			<skill id="115" level="8" name="Сокрушение Мощи(Power Break)" cost="420000" min_level="55"/>
+			<skill id="271" level="1" name="Танец Воителя(Dance of the Warrior)" cost="420000" min_level="55"/>
+			<skill id="84" level="1" name="Танец Ядовитых Клинков(Poison Blade Dance)" cost="420000" min_level="55"/>
+			<skill id="191" level="4" name="Фокусировка Разума(Focus Mind)" cost="420000" min_level="55"/>
+			<skill id="144" level="19" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="580000" min_level="56"/>
+			<skill id="223" level="31" name="Жало(Sting)" cost="580000" min_level="56"/>
+			<skill id="70" level="35" name="Кража Здоровья(Drain HP)" cost="580000" min_level="56"/>
+			<skill id="147" level="33" name="Магическое Сопротивление(M. Def.)" cost="580000" min_level="56"/>
+			<skill id="144" level="20" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="580000" min_level="57"/>
+			<skill id="223" level="32" name="Жало(Sting)" cost="580000" min_level="57"/>
+			<skill id="105" level="15" name="Замораживающий Удар(Freezing Strike)" cost="580000" min_level="57"/>
+			<skill id="70" level="36" name="Кража Здоровья(Drain HP)" cost="580000" min_level="57"/>
+			<skill id="147" level="34" name="Магическое Сопротивление(M. Def.)" cost="580000" min_level="57"/>
+			<skill id="402" level="2" name="Арест(Arrest)" cost="580000" min_level="58"/>
+			<skill id="144" level="21" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="580000" min_level="58"/>
+			<skill id="223" level="33" name="Жало(Sting)" cost="580000" min_level="58"/>
+			<skill id="2" level="11" name="Замешательство(Confusion)" cost="580000" min_level="58"/>
+			<skill id="105" level="16" name="Замораживающий Удар(Freezing Strike)" cost="580000" min_level="58"/>
+			<skill id="70" level="37" name="Кража Здоровья(Drain HP)" cost="580000" min_level="58"/>
+			<skill id="147" level="35" name="Магическое Сопротивление(M. Def.)" cost="580000" min_level="58"/>
+			<skill id="129" level="3" name="Отравление(Poison)" cost="580000" min_level="58"/>
+			<skill id="122" level="7" name="Сглаз(Hex)" cost="580000" min_level="58"/>
+			<skill id="115" level="9" name="Сокрушение Мощи(Power Break)" cost="580000" min_level="58"/>
+			<skill id="275" level="1" name="Танец Ярости(Dance of Fury)" cost="580000" min_level="58"/>
+			<skill id="144" level="22" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="850000" min_level="59"/>
+			<skill id="223" level="34" name="Жало(Sting)" cost="850000" min_level="59"/>
+			<skill id="70" level="38" name="Кража Здоровья(Drain HP)" cost="850000" min_level="59"/>
+			<skill id="147" level="36" name="Магическое Сопротивление(M. Def.)" cost="850000" min_level="59"/>
+			<skill id="402" level="3" name="Арест(Arrest)" cost="850000" min_level="60"/>
+			<skill id="144" level="23" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="850000" min_level="60"/>
+			<skill id="223" level="35" name="Жало(Sting)" cost="850000" min_level="60"/>
+			<skill id="2" level="12" name="Замешательство(Confusion)" cost="850000" min_level="60"/>
+			<skill id="105" level="17" name="Замораживающий Удар(Freezing Strike)" cost="850000" min_level="60"/>
+			<skill id="70" level="39" name="Кража Здоровья(Drain HP)" cost="850000" min_level="60"/>
+			<skill id="147" level="37" name="Магическое Сопротивление(M. Def.)" cost="850000" min_level="60"/>
+			<skill id="122" level="8" name="Сглаз(Hex)" cost="850000" min_level="60"/>
+			<skill id="115" level="10" name="Сокрушение Мощи(Power Break)" cost="850000" min_level="60"/>
+			<skill id="84" level="2" name="Танец Ядовитых Клинков(Poison Blade Dance)" cost="850000" min_level="60"/>
+			<skill id="1801" level="1" name="Темный Ассасин(Dark Assassin)" min_level="60"/>
+			<skill id="1405" level="2" name="Божественное Вдохновение(Divine Inspiration)" item_id="8619" cost="850000" min_level="61"/>
+			<skill id="144" level="24" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="850000" min_level="61"/>
+			<skill id="223" level="36" name="Жало(Sting)" cost="850000" min_level="61"/>
+			<skill id="70" level="40" name="Кража Здоровья(Drain HP)" cost="850000" min_level="61"/>
+			<skill id="147" level="38" name="Магическое Сопротивление(M. Def.)" cost="850000" min_level="61"/>
+			<skill id="402" level="4" name="Арест(Arrest)" cost="1100000" min_level="62"/>
+			<skill id="144" level="25" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="1100000" min_level="62"/>
+			<skill id="223" level="37" name="Жало(Sting)" cost="1100000" min_level="62"/>
+			<skill id="2" level="13" name="Замешательство(Confusion)" cost="1100000" min_level="62"/>
+			<skill id="105" level="18" name="Замораживающий Удар(Freezing Strike)" cost="1100000" min_level="62"/>
+			<skill id="70" level="41" name="Кража Здоровья(Drain HP)" cost="1100000" min_level="62"/>
+			<skill id="147" level="39" name="Магическое Сопротивление(M. Def.)" cost="1100000" min_level="62"/>
+			<skill id="122" level="9" name="Сглаз(Hex)" cost="1100000" min_level="62"/>
+			<skill id="115" level="11" name="Сокрушение Мощи(Power Break)" cost="1100000" min_level="62"/>
+			<skill id="144" level="26" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="1100000" min_level="63"/>
+			<skill id="223" level="38" name="Жало(Sting)" cost="1100000" min_level="63"/>
+			<skill id="70" level="42" name="Кража Здоровья(Drain HP)" cost="1100000" min_level="63"/>
+			<skill id="147" level="40" name="Магическое Сопротивление(M. Def.)" cost="1100000" min_level="63"/>
+			<skill id="402" level="5" name="Арест(Arrest)" cost="1300000" min_level="64"/>
+			<skill id="144" level="27" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="1300000" min_level="64"/>
+			<skill id="223" level="39" name="Жало(Sting)" cost="1300000" min_level="64"/>
+			<skill id="2" level="14" name="Замешательство(Confusion)" cost="1300000" min_level="64"/>
+			<skill id="105" level="19" name="Замораживающий Удар(Freezing Strike)" cost="1300000" min_level="64"/>
+			<skill id="70" level="43" name="Кража Здоровья(Drain HP)" cost="1300000" min_level="64"/>
+			<skill id="147" level="41" name="Магическое Сопротивление(M. Def.)" cost="1300000" min_level="64"/>
+			<skill id="122" level="10" name="Сглаз(Hex)" cost="1300000" min_level="64"/>
+			<skill id="115" level="12" name="Сокрушение Мощи(Power Break)" cost="1300000" min_level="64"/>
+			<skill id="191" level="5" name="Фокусировка Разума(Focus Mind)" cost="1300000" min_level="64"/>
+			<skill id="144" level="28" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="1300000" min_level="65"/>
+			<skill id="223" level="40" name="Жало(Sting)" cost="1300000" min_level="65"/>
+			<skill id="70" level="44" name="Кража Здоровья(Drain HP)" cost="1300000" min_level="65"/>
+			<skill id="147" level="42" name="Магическое Сопротивление(M. Def.)" cost="1300000" min_level="65"/>
+			<skill id="402" level="6" name="Арест(Arrest)" cost="1500000" min_level="66"/>
+			<skill id="144" level="29" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="1500000" min_level="66"/>
+			<skill id="223" level="41" name="Жало(Sting)" cost="1500000" min_level="66"/>
+			<skill id="2" level="15" name="Замешательство(Confusion)" cost="1500000" min_level="66"/>
+			<skill id="105" level="20" name="Замораживающий Удар(Freezing Strike)" cost="1500000" min_level="66"/>
+			<skill id="70" level="45" name="Кража Здоровья(Drain HP)" cost="1500000" min_level="66"/>
+			<skill id="147" level="43" name="Магическое Сопротивление(M. Def.)" cost="1500000" min_level="66"/>
+			<skill id="129" level="4" name="Отравление(Poison)" cost="1500000" min_level="66"/>
+			<skill id="122" level="11" name="Сглаз(Hex)" cost="1500000" min_level="66"/>
+			<skill id="115" level="13" name="Сокрушение Мощи(Power Break)" cost="1500000" min_level="66"/>
+			<skill id="311" level="1" name="Танец Защиты(Dance of Protection)" cost="1500000" min_level="66"/>
+			<skill id="144" level="30" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="1500000" min_level="67"/>
+			<skill id="223" level="42" name="Жало(Sting)" cost="1500000" min_level="67"/>
+			<skill id="70" level="46" name="Кража Здоровья(Drain HP)" cost="1500000" min_level="67"/>
+			<skill id="147" level="44" name="Магическое Сопротивление(M. Def.)" cost="1500000" min_level="67"/>
+			<skill id="402" level="7" name="Арест(Arrest)" cost="2000000" min_level="68"/>
+			<skill id="144" level="31" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="2000000" min_level="68"/>
+			<skill id="223" level="43" name="Жало(Sting)" cost="2000000" min_level="68"/>
+			<skill id="2" level="16" name="Замешательство(Confusion)" cost="2000000" min_level="68"/>
+			<skill id="105" level="21" name="Замораживающий Удар(Freezing Strike)" cost="2000000" min_level="68"/>
+			<skill id="70" level="47" name="Кража Здоровья(Drain HP)" cost="2000000" min_level="68"/>
+			<skill id="147" level="45" name="Магическое Сопротивление(M. Def.)" cost="2000000" min_level="68"/>
+			<skill id="122" level="12" name="Сглаз(Hex)" cost="2000000" min_level="68"/>
+			<skill id="115" level="14" name="Сокрушение Мощи(Power Break)" cost="2000000" min_level="68"/>
+			<skill id="144" level="32" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="2000000" min_level="69"/>
+			<skill id="223" level="44" name="Жало(Sting)" cost="2000000" min_level="69"/>
+			<skill id="70" level="48" name="Кража Здоровья(Drain HP)" cost="2000000" min_level="69"/>
+			<skill id="147" level="46" name="Магическое Сопротивление(M. Def.)" cost="2000000" min_level="69"/>
+			<skill id="402" level="8" name="Арест(Arrest)" cost="2500000" min_level="70"/>
+			<skill id="144" level="33" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="2500000" min_level="70"/>
+			<skill id="223" level="45" name="Жало(Sting)" cost="2500000" min_level="70"/>
+			<skill id="2" level="17" name="Замешательство(Confusion)" cost="2500000" min_level="70"/>
+			<skill id="105" level="22" name="Замораживающий Удар(Freezing Strike)" cost="2500000" min_level="70"/>
+			<skill id="70" level="49" name="Кража Здоровья(Drain HP)" cost="2500000" min_level="70"/>
+			<skill id="147" level="47" name="Магическое Сопротивление(M. Def.)" cost="2500000" min_level="70"/>
+			<skill id="1802" level="1" name="Светлый Ассасин(White Assassin)" min_level="70"/>
+			<skill id="122" level="13" name="Сглаз(Hex)" cost="2500000" min_level="70"/>
+			<skill id="115" level="15" name="Сокрушение Мощи(Power Break)" cost="2500000" min_level="70"/>
+			<skill id="144" level="34" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="2500000" min_level="71"/>
+			<skill id="223" level="46" name="Жало(Sting)" cost="2500000" min_level="71"/>
+			<skill id="70" level="50" name="Кража Здоровья(Drain HP)" cost="2500000" min_level="71"/>
+			<skill id="147" level="48" name="Магическое Сопротивление(M. Def.)" cost="2500000" min_level="71"/>
+			<skill id="402" level="9" name="Арест(Arrest)" cost="2800000" min_level="72"/>
+			<skill id="144" level="35" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="2800000" min_level="72"/>
+			<skill id="223" level="47" name="Жало(Sting)" cost="2800000" min_level="72"/>
+			<skill id="2" level="18" name="Замешательство(Confusion)" cost="2800000" min_level="72"/>
+			<skill id="105" level="23" name="Замораживающий Удар(Freezing Strike)" cost="2800000" min_level="72"/>
+			<skill id="70" level="51" name="Кража Здоровья(Drain HP)" cost="2800000" min_level="72"/>
+			<skill id="147" level="49" name="Магическое Сопротивление(M. Def.)" cost="2800000" min_level="72"/>
+			<skill id="122" level="14" name="Сглаз(Hex)" cost="2800000" min_level="72"/>
+			<skill id="115" level="16" name="Сокрушение Мощи(Power Break)" cost="2800000" min_level="72"/>
+			<skill id="84" level="3" name="Танец Ядовитых Клинков(Poison Blade Dance)" cost="2800000" min_level="72"/>
+			<skill id="191" level="6" name="Фокусировка Разума(Focus Mind)" cost="2800000" min_level="72"/>
+			<skill id="144" level="36" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="2800000" min_level="73"/>
+			<skill id="223" level="48" name="Жало(Sting)" cost="2800000" min_level="73"/>
+			<skill id="70" level="52" name="Кража Здоровья(Drain HP)" cost="2800000" min_level="73"/>
+			<skill id="147" level="50" name="Магическое Сопротивление(M. Def.)" cost="2800000" min_level="73"/>
+			<skill id="402" level="10" name="Арест(Arrest)" cost="2800000" min_level="74"/>
+			<skill id="144" level="37" name="Владение Парным Оружием(Dual Weapon Mastery)" cost="2800000" min_level="74"/>
+			<skill id="223" level="49" name="Жало(Sting)" cost="2800000" min_level="74"/>
+			<skill id="2" level="19" name="Замешательство(Confusion)" cost="2800000" min_level="74"/>
+			<skill id="105" level="24" name="Замораживающий Удар(Freezing Strike)" cost="2800000" min_level="74"/>
+			<skill id="70" level="53" name="Кража Здоровья(Drain HP)" cost="2800000" min_level="74"/>
+			<skill id="147" level="51" name="Магическое Сопротивление(M. Def.)" cost="2800000" min_level="74"/>
+			<skill id="129" level="5" name="Отравление(Poison)" cost="2800000" min_level="74"/>
+			<skill id="122" level="15" name="Сглаз(Hex)" cost="2800000" min_level="74"/>
+			<skill id="115" level="17" name="Сокрушение Мощи(Power Break)" cost="2800000" min_level="74"/>
+			<skill id="310" level="1" name="Танец Вампира(Dance of the Vampire)" cost="2800000" min_level="74"/>
+		</class>
+	</normal_skill_tree>
+</list>

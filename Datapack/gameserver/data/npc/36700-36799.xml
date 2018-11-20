@@ -1,0 +1,1681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "npc.dtd">
+<list>
+	<npc id="36721" name="Leina" title="Clan Hall Manager">
+		<set name="type" value="residences.clanhall.AuctionedManager"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="20.5"/>
+		<set name="collision_radius" value="8"/>
+		<set name="level" value="70"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="688.863725587608"/>
+		<set name="basePDef" value="295.91597408024"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="470.404627426724"/>
+		<set name="baseMDef" value="216.538467292763"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="doors" value="19210117;19210118"/>
+		</ai_params>
+		<teleportlist>
+			<sublist id="1">
+				<target loc="-14393 123671 -3144" name="1010024" price="0"/><!--Village Square-->
+				<target loc="-11817 123652 -3079" name="1010026" price="0"/><!--East Gate Entrance-->
+				<target loc="-16796 124108 -3127" name="1010027" price="0"/><!--West Gate Entrance-->
+				<target loc="-14207 126547 -3151" name="1010028" price="0"/><!--South Gate Entrance-->
+				<target loc="-14591 121024 -2990" name="1010025" price="0"/><!--North Gate Entrance-->
+			</sublist>
+			<sublist id="2">
+				<target loc="-14393 123671 -3144" name="1010024" price="0"/><!--Village Square-->
+				<target loc="-11817 123652 -3079" name="1010026" price="0"/><!--East Gate Entrance-->
+				<target loc="-16796 124108 -3127" name="1010027" price="0"/><!--West Gate Entrance-->
+				<target loc="-14207 126547 -3151" name="1010028" price="0"/><!--South Gate Entrance-->
+				<target loc="-14591 121024 -2990" name="1010025" price="0"/><!--North Gate Entrance-->
+				<target loc="-41248 122848 -2912" name="1010097" price="500"/><!--Ruins of Agony-->
+				<target loc="-19120 136816 -3762" name="1010101" price="500"/><!--Ruins of Despair-->
+				<target loc="-9959 176184 -4160" name="1010566" price="500"/><!--The Ant Nest-->
+				<target loc="-28327 155125 -3496" name="1010102" price="500"/><!--Windawood Manor-->
+			</sublist>
+		</teleportlist>
+		<client_skills>
+			<skill id="4416" level="14"/>	<!--Humans-->
+		</client_skills>
+	</npc>
+	<npc id="36722" name="Bini" title="Clan Hall Gatekeeper">
+		<set name="type" value="residences.clanhall.AuctionedDoorman"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="22.25"/>
+		<set name="collision_radius" value="9"/>
+		<set name="level" value="70"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="688.863725587608"/>
+		<set name="basePDef" value="295.91597408024"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="470.404627426724"/>
+		<set name="baseMDef" value="216.538467292763"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="doors" value="19210117;19210118"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="14"/>	<!--Humans-->
+		</client_skills>
+	</npc>
+	<npc id="36723" name="Bubek" title="Clan Hall Manager">
+		<set name="type" value="residences.clanhall.AuctionedManager"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="22"/>
+		<set name="collision_radius" value="8"/>
+		<set name="level" value="70"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="688.863725587608"/>
+		<set name="basePDef" value="295.91597408024"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="470.404627426724"/>
+		<set name="baseMDef" value="216.538467292763"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="doors" value="19210111;19210112"/>
+		</ai_params>
+		<teleportlist>
+			<sublist id="1">
+				<target loc="-14393 123671 -3144" name="1010024" price="0"/><!--Village Square-->
+				<target loc="-11817 123652 -3079" name="1010026" price="0"/><!--East Gate Entrance-->
+				<target loc="-16796 124108 -3127" name="1010027" price="0"/><!--West Gate Entrance-->
+				<target loc="-14207 126547 -3151" name="1010028" price="0"/><!--South Gate Entrance-->
+				<target loc="-14591 121024 -2990" name="1010025" price="0"/><!--North Gate Entrance-->
+			</sublist>
+			<sublist id="2">
+				<target loc="-14393 123671 -3144" name="1010024" price="0"/><!--Village Square-->
+				<target loc="-11817 123652 -3079" name="1010026" price="0"/><!--East Gate Entrance-->
+				<target loc="-16796 124108 -3127" name="1010027" price="0"/><!--West Gate Entrance-->
+				<target loc="-14207 126547 -3151" name="1010028" price="0"/><!--South Gate Entrance-->
+				<target loc="-14591 121024 -2990" name="1010025" price="0"/><!--North Gate Entrance-->
+				<target loc="-41248 122848 -2912" name="1010097" price="500"/><!--Ruins of Agony-->
+				<target loc="-19120 136816 -3762" name="1010101" price="500"/><!--Ruins of Despair-->
+				<target loc="-9959 176184 -4160" name="1010566" price="500"/><!--The Ant Nest-->
+				<target loc="-28327 155125 -3496" name="1010102" price="500"/><!--Windawood Manor-->
+			</sublist>
+		</teleportlist>
+		<client_skills>
+			<skill id="4416" level="14"/>	<!--Humans-->
+		</client_skills>
+	</npc>
+	<npc id="36724" name="Varin" title="Clan Hall Gatekeeper">
+		<set name="type" value="residences.clanhall.AuctionedDoorman"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="23"/>
+		<set name="collision_radius" value="8"/>
+		<set name="level" value="70"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="688.863725587608"/>
+		<set name="basePDef" value="295.91597408024"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="470.404627426724"/>
+		<set name="baseMDef" value="216.538467292763"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="doors" value="19210111;19210112"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="14"/>	<!--Humans-->
+		</client_skills>
+	</npc>
+	<npc id="36725" name="Sarina" title="Clan Hall Manager">
+		<set name="type" value="residences.clanhall.AuctionedManager"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="20.5"/>
+		<set name="collision_radius" value="8"/>
+		<set name="level" value="70"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="688.863725587608"/>
+		<set name="basePDef" value="295.91597408024"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="470.404627426724"/>
+		<set name="baseMDef" value="216.538467292763"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="doors" value="19210113;19210114"/>
+		</ai_params>
+		<teleportlist>
+			<sublist id="1">
+				<target loc="-14393 123671 -3144" name="1010024" price="0"/><!--Village Square-->
+				<target loc="-11817 123652 -3079" name="1010026" price="0"/><!--East Gate Entrance-->
+				<target loc="-16796 124108 -3127" name="1010027" price="0"/><!--West Gate Entrance-->
+				<target loc="-14207 126547 -3151" name="1010028" price="0"/><!--South Gate Entrance-->
+				<target loc="-14591 121024 -2990" name="1010025" price="0"/><!--North Gate Entrance-->
+			</sublist>
+			<sublist id="2">
+				<target loc="-14393 123671 -3144" name="1010024" price="0"/><!--Village Square-->
+				<target loc="-11817 123652 -3079" name="1010026" price="0"/><!--East Gate Entrance-->
+				<target loc="-16796 124108 -3127" name="1010027" price="0"/><!--West Gate Entrance-->
+				<target loc="-14207 126547 -3151" name="1010028" price="0"/><!--South Gate Entrance-->
+				<target loc="-14591 121024 -2990" name="1010025" price="0"/><!--North Gate Entrance-->
+				<target loc="-41248 122848 -2912" name="1010097" price="500"/><!--Ruins of Agony-->
+				<target loc="-19120 136816 -3762" name="1010101" price="500"/><!--Ruins of Despair-->
+				<target loc="-9959 176184 -4160" name="1010566" price="500"/><!--The Ant Nest-->
+				<target loc="-28327 155125 -3496" name="1010102" price="500"/><!--Windawood Manor-->
+			</sublist>
+		</teleportlist>
+		<client_skills>
+			<skill id="4416" level="14"/>	<!--Humans-->
+		</client_skills>
+	</npc>
+	<npc id="36726" name="Loneiren" title="Clan Hall Gatekeeper">
+		<set name="type" value="residences.clanhall.AuctionedDoorman"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="22.25"/>
+		<set name="collision_radius" value="9"/>
+		<set name="level" value="70"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="688.863725587608"/>
+		<set name="basePDef" value="295.91597408024"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="470.404627426724"/>
+		<set name="baseMDef" value="216.538467292763"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="doors" value="19210113;19210114"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="14"/>	<!--Humans-->
+		</client_skills>
+	</npc>
+	<npc id="36727" name="Arinas" title="Clan Hall Manager">
+		<set name="type" value="residences.clanhall.AuctionedManager"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="20.5"/>
+		<set name="collision_radius" value="8"/>
+		<set name="level" value="70"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="688.863725587608"/>
+		<set name="basePDef" value="295.91597408024"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="470.404627426724"/>
+		<set name="baseMDef" value="216.538467292763"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="doors" value="19210115;19210116"/>
+		</ai_params>
+		<teleportlist>
+			<sublist id="1">
+				<target loc="-14393 123671 -3144" name="1010024" price="0"/><!--Village Square-->
+				<target loc="-11817 123652 -3079" name="1010026" price="0"/><!--East Gate Entrance-->
+				<target loc="-16796 124108 -3127" name="1010027" price="0"/><!--West Gate Entrance-->
+				<target loc="-14207 126547 -3151" name="1010028" price="0"/><!--South Gate Entrance-->
+				<target loc="-14591 121024 -2990" name="1010025" price="0"/><!--North Gate Entrance-->
+			</sublist>
+			<sublist id="2">
+				<target loc="-14393 123671 -3144" name="1010024" price="0"/><!--Village Square-->
+				<target loc="-11817 123652 -3079" name="1010026" price="0"/><!--East Gate Entrance-->
+				<target loc="-16796 124108 -3127" name="1010027" price="0"/><!--West Gate Entrance-->
+				<target loc="-14207 126547 -3151" name="1010028" price="0"/><!--South Gate Entrance-->
+				<target loc="-14591 121024 -2990" name="1010025" price="0"/><!--North Gate Entrance-->
+				<target loc="-41248 122848 -2912" name="1010097" price="500"/><!--Ruins of Agony-->
+				<target loc="-19120 136816 -3762" name="1010101" price="500"/><!--Ruins of Despair-->
+				<target loc="-9959 176184 -4160" name="1010566" price="500"/><!--The Ant Nest-->
+				<target loc="-28327 155125 -3496" name="1010102" price="500"/><!--Windawood Manor-->
+			</sublist>
+		</teleportlist>
+		<client_skills>
+			<skill id="4416" level="14"/>	<!--Humans-->
+		</client_skills>
+	</npc>
+	<npc id="36728" name="Cardiff" title="Clan Hall Gatekeeper">
+		<set name="type" value="residences.clanhall.AuctionedDoorman"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="22"/>
+		<set name="collision_radius" value="8"/>
+		<set name="level" value="70"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="688.863725587608"/>
+		<set name="basePDef" value="295.91597408024"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="470.404627426724"/>
+		<set name="baseMDef" value="216.538467292763"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="doors" value="19210115;19210116"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="14"/>	<!--Humans-->
+		</client_skills>
+	</npc>
+	<npc id="36729" name="Bremen" title="Clan Hall Manager">
+		<set name="type" value="residences.clanhall.AuctionedManager"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="23"/>
+		<set name="collision_radius" value="8"/>
+		<set name="level" value="70"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="688.863725587608"/>
+		<set name="basePDef" value="295.91597408024"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="470.404627426724"/>
+		<set name="baseMDef" value="216.538467292763"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="doors" value="20220119;20220120"/>
+		</ai_params>
+		<teleportlist>
+			<sublist id="1">
+				<target loc="19025 145245 -3107" name="1010024" price="0"/><!--Village Square-->
+				<target loc="21511 145866 -3153" name="1010026" price="0"/><!--East Gate Entrance-->
+				<target loc="18891 142365 -3051" name="1010025" price="0"/><!--North Gate Entrance-->
+				<target loc="17394 147593 -3129" name="1010028" price="0"/><!--South Gate Entrance-->
+				<target loc="16582 144130 -2960" name="1010027" price="0"/><!--West Gate Entrance-->
+			</sublist>
+			<sublist id="2">
+				<target loc="19025 145245 -3107" name="1010024" price="0"/><!--Village Square-->
+				<target loc="21511 145866 -3153" name="1010026" price="0"/><!--East Gate Entrance-->
+				<target loc="18891 142365 -3051" name="1010025" price="0"/><!--North Gate Entrance-->
+				<target loc="17394 147593 -3129" name="1010028" price="0"/><!--South Gate Entrance-->
+				<target loc="16582 144130 -2960" name="1010027" price="0"/><!--West Gate Entrance-->
+				<target loc="5106 126916 -3664" name="1010614" price="500"/><!--Cruma Marshlands-->
+				<target loc="47382 111278 -2104" name="1010113" price="500"/><!--Fortress of Resistance-->
+				<target loc="630 179184 -3720" name="1010111" price="500"/><!--Plains of Dion-->
+				<target loc="60374 164301 -2856" name="1010115" price="500"/><!--Tanor Canyon-->
+				<target loc="17430 170103 -3506" name="1010036" price="500"/><!--Entrance to Floran Village-->
+			</sublist>
+		</teleportlist>
+		<client_skills>
+			<skill id="4416" level="14"/>	<!--Humans-->
+		</client_skills>
+	</npc>
+	<npc id="36730" name="Faolin" title="Clan Hall Gatekeeper">
+		<set name="type" value="residences.clanhall.AuctionedDoorman"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="22.25"/>
+		<set name="collision_radius" value="9"/>
+		<set name="level" value="70"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="688.863725587608"/>
+		<set name="basePDef" value="295.91597408024"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="470.404627426724"/>
+		<set name="baseMDef" value="216.538467292763"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="doors" value="20220119;20220120"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="14"/>	<!--Humans-->
+		</client_skills>
+	</npc>
+	<npc id="36731" name="Kalein" title="Clan Hall Manager">
+		<set name="type" value="residences.clanhall.AuctionedManager"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="20.5"/>
+		<set name="collision_radius" value="8"/>
+		<set name="level" value="70"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="688.863725587608"/>
+		<set name="basePDef" value="295.91597408024"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="470.404627426724"/>
+		<set name="baseMDef" value="216.538467292763"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="doors" value="20220121;20220122"/>
+		</ai_params>
+		<teleportlist>
+			<sublist id="1">
+				<target loc="19025 145245 -3107" name="1010024" price="0"/><!--Village Square-->
+				<target loc="21511 145866 -3153" name="1010026" price="0"/><!--East Gate Entrance-->
+				<target loc="18891 142365 -3051" name="1010025" price="0"/><!--North Gate Entrance-->
+				<target loc="17394 147593 -3129" name="1010028" price="0"/><!--South Gate Entrance-->
+				<target loc="16582 144130 -2960" name="1010027" price="0"/><!--West Gate Entrance-->
+			</sublist>
+			<sublist id="2">
+				<target loc="19025 145245 -3107" name="1010024" price="0"/><!--Village Square-->
+				<target loc="21511 145866 -3153" name="1010026" price="0"/><!--East Gate Entrance-->
+				<target loc="18891 142365 -3051" name="1010025" price="0"/><!--North Gate Entrance-->
+				<target loc="17394 147593 -3129" name="1010028" price="0"/><!--South Gate Entrance-->
+				<target loc="16582 144130 -2960" name="1010027" price="0"/><!--West Gate Entrance-->
+				<target loc="5106 126916 -3664" name="1010614" price="500"/><!--Cruma Marshlands-->
+				<target loc="47382 111278 -2104" name="1010113" price="500"/><!--Fortress of Resistance-->
+				<target loc="630 179184 -3720" name="1010111" price="500"/><!--Plains of Dion-->
+				<target loc="60374 164301 -2856" name="1010115" price="500"/><!--Tanor Canyon-->
+				<target loc="17430 170103 -3506" name="1010036" price="500"/><!--Entrance to Floran Village-->
+			</sublist>
+		</teleportlist>
+		<client_skills>
+			<skill id="4416" level="14"/>	<!--Humans-->
+		</client_skills>
+	</npc>
+	<npc id="36732" name="Coren" title="Clan Hall Gatekeeper">
+		<set name="type" value="residences.clanhall.AuctionedDoorman"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="22"/>
+		<set name="collision_radius" value="8"/>
+		<set name="level" value="70"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="688.863725587608"/>
+		<set name="basePDef" value="295.91597408024"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="470.404627426724"/>
+		<set name="baseMDef" value="216.538467292763"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="doors" value="20220121;20220122"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="14"/>	<!--Humans-->
+		</client_skills>
+	</npc>
+	<npc id="36733" name="Winsnun" title="Clan Hall Manager">
+		<set name="type" value="residences.clanhall.AuctionedManager"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="23"/>
+		<set name="collision_radius" value="8"/>
+		<set name="level" value="70"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="688.863725587608"/>
+		<set name="basePDef" value="295.91597408024"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="470.404627426724"/>
+		<set name="baseMDef" value="216.538467292763"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="doors" value="20220123;20220124"/>
+		</ai_params>
+		<teleportlist>
+			<sublist id="1">
+				<target loc="19025 145245 -3107" name="1010024" price="0"/><!--Village Square-->
+				<target loc="21511 145866 -3153" name="1010026" price="0"/><!--East Gate Entrance-->
+				<target loc="18891 142365 -3051" name="1010025" price="0"/><!--North Gate Entrance-->
+				<target loc="17394 147593 -3129" name="1010028" price="0"/><!--South Gate Entrance-->
+				<target loc="16582 144130 -2960" name="1010027" price="0"/><!--West Gate Entrance-->
+			</sublist>
+			<sublist id="2">
+				<target loc="19025 145245 -3107" name="1010024" price="0"/><!--Village Square-->
+				<target loc="21511 145866 -3153" name="1010026" price="0"/><!--East Gate Entrance-->
+				<target loc="18891 142365 -3051" name="1010025" price="0"/><!--North Gate Entrance-->
+				<target loc="17394 147593 -3129" name="1010028" price="0"/><!--South Gate Entrance-->
+				<target loc="16582 144130 -2960" name="1010027" price="0"/><!--West Gate Entrance-->
+				<target loc="5106 126916 -3664" name="1010614" price="500"/><!--Cruma Marshlands-->
+				<target loc="47382 111278 -2104" name="1010113" price="500"/><!--Fortress of Resistance-->
+				<target loc="630 179184 -3720" name="1010111" price="500"/><!--Plains of Dion-->
+				<target loc="60374 164301 -2856" name="1010115" price="500"/><!--Tanor Canyon-->
+				<target loc="17430 170103 -3506" name="1010036" price="500"/><!--Entrance to Floran Village-->
+			</sublist>
+		</teleportlist>
+		<client_skills>
+			<skill id="4416" level="14"/>	<!--Humans-->
+		</client_skills>
+	</npc>
+	<npc id="36734" name="Muren" title="Clan Hall Gatekeeper">
+		<set name="type" value="residences.clanhall.AuctionedDoorman"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="22"/>
+		<set name="collision_radius" value="8"/>
+		<set name="level" value="70"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="688.863725587608"/>
+		<set name="basePDef" value="295.91597408024"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="470.404627426724"/>
+		<set name="baseMDef" value="216.538467292763"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="doors" value="20220123;20220124"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="14"/>	<!--Humans-->
+		</client_skills>
+	</npc>
+	<npc id="36735" name="Yuven" title="Clan Hall Manager">
+		<set name="type" value="residences.clanhall.AuctionedManager"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="23"/>
+		<set name="collision_radius" value="8"/>
+		<set name="level" value="70"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="688.863725587608"/>
+		<set name="basePDef" value="295.91597408024"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="470.404627426724"/>
+		<set name="baseMDef" value="216.538467292763"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="doors" value="20220125;20220126"/>
+		</ai_params>
+		<teleportlist>
+			<sublist id="1">
+				<target loc="19025 145245 -3107" name="1010024" price="0"/><!--Village Square-->
+				<target loc="21511 145866 -3153" name="1010026" price="0"/><!--East Gate Entrance-->
+				<target loc="18891 142365 -3051" name="1010025" price="0"/><!--North Gate Entrance-->
+				<target loc="17394 147593 -3129" name="1010028" price="0"/><!--South Gate Entrance-->
+				<target loc="16582 144130 -2960" name="1010027" price="0"/><!--West Gate Entrance-->
+			</sublist>
+			<sublist id="2">
+				<target loc="19025 145245 -3107" name="1010024" price="0"/><!--Village Square-->
+				<target loc="21511 145866 -3153" name="1010026" price="0"/><!--East Gate Entrance-->
+				<target loc="18891 142365 -3051" name="1010025" price="0"/><!--North Gate Entrance-->
+				<target loc="17394 147593 -3129" name="1010028" price="0"/><!--South Gate Entrance-->
+				<target loc="16582 144130 -2960" name="1010027" price="0"/><!--West Gate Entrance-->
+				<target loc="5106 126916 -3664" name="1010614" price="500"/><!--Cruma Marshlands-->
+				<target loc="47382 111278 -2104" name="1010113" price="500"/><!--Fortress of Resistance-->
+				<target loc="630 179184 -3720" name="1010111" price="500"/><!--Plains of Dion-->
+				<target loc="60374 164301 -2856" name="1010115" price="500"/><!--Tanor Canyon-->
+				<target loc="17430 170103 -3506" name="1010036" price="500"/><!--Entrance to Floran Village-->
+			</sublist>
+		</teleportlist>
+		<client_skills>
+			<skill id="4416" level="14"/>	<!--Humans-->
+		</client_skills>
+	</npc>
+	<npc id="36736" name="Lenning" title="Clan Hall Gatekeeper">
+		<set name="type" value="residences.clanhall.AuctionedDoorman"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="20.5"/>
+		<set name="collision_radius" value="8"/>
+		<set name="level" value="70"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="688.863725587608"/>
+		<set name="basePDef" value="295.91597408024"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="470.404627426724"/>
+		<set name="baseMDef" value="216.538467292763"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="doors" value="20220125;20220126"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="14"/>	<!--Humans-->
+		</client_skills>
+	</npc>
+	<npc id="36737" name="Gairin" title="Clan Hall Manager">
+		<set name="type" value="residences.clanhall.AuctionedManager"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="22.25"/>
+		<set name="collision_radius" value="9"/>
+		<set name="level" value="70"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="688.863725587608"/>
+		<set name="basePDef" value="295.91597408024"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="470.404627426724"/>
+		<set name="baseMDef" value="216.538467292763"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="doors" value="20230101;20230102"/>
+		</ai_params>
+		<teleportlist>
+			<sublist id="1">
+				<target loc="19025 145245 -3107" name="1010024" price="0"/><!--Village Square-->
+				<target loc="21511 145866 -3153" name="1010026" price="0"/><!--East Gate Entrance-->
+				<target loc="18891 142365 -3051" name="1010025" price="0"/><!--North Gate Entrance-->
+				<target loc="17394 147593 -3129" name="1010028" price="0"/><!--South Gate Entrance-->
+				<target loc="16582 144130 -2960" name="1010027" price="0"/><!--West Gate Entrance-->
+			</sublist>
+			<sublist id="2">
+				<target loc="19025 145245 -3107" name="1010024" price="0"/><!--Village Square-->
+				<target loc="21511 145866 -3153" name="1010026" price="0"/><!--East Gate Entrance-->
+				<target loc="18891 142365 -3051" name="1010025" price="0"/><!--North Gate Entrance-->
+				<target loc="17394 147593 -3129" name="1010028" price="0"/><!--South Gate Entrance-->
+				<target loc="16582 144130 -2960" name="1010027" price="0"/><!--West Gate Entrance-->
+				<target loc="5106 126916 -3664" name="1010614" price="500"/><!--Cruma Marshlands-->
+				<target loc="47382 111278 -2104" name="1010113" price="500"/><!--Fortress of Resistance-->
+				<target loc="630 179184 -3720" name="1010111" price="500"/><!--Plains of Dion-->
+				<target loc="60374 164301 -2856" name="1010115" price="500"/><!--Tanor Canyon-->
+				<target loc="17430 170103 -3506" name="1010036" price="500"/><!--Entrance to Floran Village-->
+			</sublist>
+		</teleportlist>
+		<client_skills>
+			<skill id="4416" level="14"/>	<!--Humans-->
+		</client_skills>
+	</npc>
+	<npc id="36738" name="Ludina" title="Clan Hall Gatekeeper">
+		<set name="type" value="residences.clanhall.AuctionedDoorman"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="20.5"/>
+		<set name="collision_radius" value="8"/>
+		<set name="level" value="70"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="688.863725587608"/>
+		<set name="basePDef" value="295.91597408024"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="470.404627426724"/>
+		<set name="baseMDef" value="216.538467292763"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="doors" value="20230101;20230102"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="14"/>	<!--Humans-->
+		</client_skills>
+	</npc>
+	<npc id="36739" name="Flon" title="Clan Hall Manager">
+		<set name="type" value="residences.clanhall.AuctionedManager"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="22.25"/>
+		<set name="collision_radius" value="9"/>
+		<set name="level" value="70"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="688.863725587608"/>
+		<set name="basePDef" value="295.91597408024"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="470.404627426724"/>
+		<set name="baseMDef" value="216.538467292763"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="doors" value="20230103;20230104"/>
+		</ai_params>
+		<teleportlist>
+			<sublist id="1">
+				<target loc="19025 145245 -3107" name="1010024" price="0"/><!--Village Square-->
+				<target loc="21511 145866 -3153" name="1010026" price="0"/><!--East Gate Entrance-->
+				<target loc="18891 142365 -3051" name="1010025" price="0"/><!--North Gate Entrance-->
+				<target loc="17394 147593 -3129" name="1010028" price="0"/><!--South Gate Entrance-->
+				<target loc="16582 144130 -2960" name="1010027" price="0"/><!--West Gate Entrance-->
+			</sublist>
+			<sublist id="2">
+				<target loc="19025 145245 -3107" name="1010024" price="0"/><!--Village Square-->
+				<target loc="21511 145866 -3153" name="1010026" price="0"/><!--East Gate Entrance-->
+				<target loc="18891 142365 -3051" name="1010025" price="0"/><!--North Gate Entrance-->
+				<target loc="17394 147593 -3129" name="1010028" price="0"/><!--South Gate Entrance-->
+				<target loc="16582 144130 -2960" name="1010027" price="0"/><!--West Gate Entrance-->
+				<target loc="5106 126916 -3664" name="1010614" price="500"/><!--Cruma Marshlands-->
+				<target loc="47382 111278 -2104" name="1010113" price="500"/><!--Fortress of Resistance-->
+				<target loc="630 179184 -3720" name="1010111" price="500"/><!--Plains of Dion-->
+				<target loc="60374 164301 -2856" name="1010115" price="500"/><!--Tanor Canyon-->
+				<target loc="17430 170103 -3506" name="1010036" price="500"/><!--Entrance to Floran Village-->
+			</sublist>
+		</teleportlist>
+		<client_skills>
+			<skill id="4416" level="14"/>	<!--Humans-->
+		</client_skills>
+	</npc>
+	<npc id="36740" name="Danif" title="Clan Hall Gatekeeper">
+		<set name="type" value="residences.clanhall.AuctionedDoorman"/>
+		<set name="ai_type" value="NpcAI"/>
+		<set name="collision_height" value="23"/>
+		<set name="collision_radius" value="8"/>
+		<set name="level" value="70"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="8446"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2355"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="688.863725587608"/>
+		<set name="basePDef" value="295.91597408024"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="470.404627426724"/>
+		<set name="baseMDef" value="216.538467292763"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="FIST"/>
+		<set name="basePHitModify" value="4.75"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<ai_params>
+			<set name="doors" value="20230103;20230104"/>
+		</ai_params>
+		<client_skills>
+			<skill id="4416" level="14"/>	<!--Humans-->
+		</client_skills>
+	</npc>
+	<npc id="36783" name="Human Knight" title="Royal Guard">
+		<set name="type" value="residences.SiegeGuard"/>
+		<set name="ai_type" value="residences.SiegeGuardFighter"/>
+		<set name="collision_height" value="23"/>
+		<set name="collision_radius" value="9"/>
+		<set name="level" value="62"/>
+		<set name="rewardExp" value="384"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="1828.012"/>
+		<set name="baseHpRate" value="8"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2932"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="856.44055895414"/>
+		<set name="basePDef" value="328.27073"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="584.837886935576"/>
+		<set name="baseMDef" value="240.21427"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="80"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="POLE"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<faction names="door_clan;gludio_siege_clan" range="1200"/>
+		<client_skills>
+			<skill id="4416" level="6"/>	<!--Humanoid-->
+		</client_skills>
+		<skills>
+			<skill id="4408" level="16"/>	<!--HP Increase (8x)-->
+			<skill id="4409" level="11"/>	<!--MP Increase (3x)-->
+			<skill id="4410" level="18"/>	<!--Extremely Strong P. Atk.-->
+			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
+			<skill id="4412" level="11"/>	<!--Average P. Def.-->
+			<skill id="4413" level="11"/>	<!--Average M. Def.-->
+			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4415" level="11"/>	<!--Spear-->
+			<skill id="4045" level="1"/>	<!--Full Magic Attack Resistance-->
+		</skills>
+		<database_rewardlist>
+			<reward item_id="49758" min="3" max="6" chance="100"/>	<!--Blood Crystal (Кристалл Крови)-->
+		</database_rewardlist>
+	</npc>
+	<npc id="36784" name="Human Knight" title="Royal Guard">
+		<set name="type" value="residences.SiegeGuard"/>
+		<set name="ai_type" value="residences.SiegeGuardFighter"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8"/>
+		<set name="level" value="62"/>
+		<set name="rewardExp" value="384"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="1828.012"/>
+		<set name="baseHpRate" value="8"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2932"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="856.44055895414"/>
+		<set name="basePDef" value="328.27073"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="584.837886935576"/>
+		<set name="baseMDef" value="240.21427"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="80"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="POLE"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<faction names="door_clan;gludio_siege_clan" range="1200"/>
+		<client_skills>
+			<skill id="4416" level="6"/>	<!--Humanoid-->
+		</client_skills>
+		<skills>
+			<skill id="4408" level="16"/>	<!--HP Increase (8x)-->
+			<skill id="4409" level="11"/>	<!--MP Increase (3x)-->
+			<skill id="4410" level="18"/>	<!--Extremely Strong P. Atk.-->
+			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
+			<skill id="4412" level="11"/>	<!--Average P. Def.-->
+			<skill id="4413" level="11"/>	<!--Average M. Def.-->
+			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4415" level="11"/>	<!--Spear-->
+			<skill id="4045" level="1"/>	<!--Full Magic Attack Resistance-->
+		</skills>
+		<database_rewardlist>
+			<reward item_id="49758" min="3" max="6" chance="100"/>	<!--Blood Crystal (Кристалл Крови)-->
+		</database_rewardlist>
+	</npc>
+	<npc id="36785" name="Human Knight" title="Royal Guard">
+		<set name="type" value="residences.SiegeGuard"/>
+		<set name="ai_type" value="residences.SiegeGuardFighter"/>
+		<set name="collision_height" value="24"/>
+		<set name="collision_radius" value="7.5"/>
+		<set name="level" value="62"/>
+		<set name="rewardExp" value="384"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="1828.012"/>
+		<set name="baseHpRate" value="8"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2932"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="856.44055895414"/>
+		<set name="basePDef" value="328.27073"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="584.837886935576"/>
+		<set name="baseMDef" value="240.21427"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="80"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="POLE"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<faction names="door_clan;gludio_siege_clan" range="1200"/>
+		<client_skills>
+			<skill id="4416" level="6"/>	<!--Humanoid-->
+		</client_skills>
+		<skills>
+			<skill id="4408" level="16"/>	<!--HP Increase (8x)-->
+			<skill id="4409" level="11"/>	<!--MP Increase (3x)-->
+			<skill id="4410" level="18"/>	<!--Extremely Strong P. Atk.-->
+			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
+			<skill id="4412" level="11"/>	<!--Average P. Def.-->
+			<skill id="4413" level="11"/>	<!--Average M. Def.-->
+			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4415" level="11"/>	<!--Spear-->
+			<skill id="4045" level="1"/>	<!--Full Magic Attack Resistance-->
+		</skills>
+		<database_rewardlist>
+			<reward item_id="49758" min="3" max="6" chance="100"/>	<!--Blood Crystal (Кристалл Крови)-->
+		</database_rewardlist>
+	</npc>
+	<npc id="36786" name="Human Knight" title="Royal Guard">
+		<set name="type" value="residences.SiegeGuard"/>
+		<set name="ai_type" value="residences.SiegeGuardFighter"/>
+		<set name="collision_height" value="23"/>
+		<set name="collision_radius" value="7.5"/>
+		<set name="level" value="62"/>
+		<set name="rewardExp" value="384"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="1828.012"/>
+		<set name="baseHpRate" value="8"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2932"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="856.44055895414"/>
+		<set name="basePDef" value="328.27073"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="584.837886935576"/>
+		<set name="baseMDef" value="240.21427"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="80"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="POLE"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<faction names="door_clan;gludio_siege_clan" range="1200"/>
+		<client_skills>
+			<skill id="4416" level="6"/>	<!--Humanoid-->
+		</client_skills>
+		<skills>
+			<skill id="4408" level="16"/>	<!--HP Increase (8x)-->
+			<skill id="4409" level="11"/>	<!--MP Increase (3x)-->
+			<skill id="4410" level="18"/>	<!--Extremely Strong P. Atk.-->
+			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
+			<skill id="4412" level="11"/>	<!--Average P. Def.-->
+			<skill id="4413" level="11"/>	<!--Average M. Def.-->
+			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4415" level="11"/>	<!--Spear-->
+			<skill id="4045" level="1"/>	<!--Full Magic Attack Resistance-->
+		</skills>
+		<database_rewardlist>
+			<reward item_id="49758" min="3" max="6" chance="100"/>	<!--Blood Crystal (Кристалл Крови)-->
+		</database_rewardlist>
+	</npc>
+	<npc id="36787" name="Shield" title="Gludio">
+		<set name="type" value="residences.SiegeGuard"/>
+		<set name="ai_type" value="residences.SiegeGuardFighter"/>
+		<set name="collision_height" value="24"/>
+		<set name="collision_radius" value="7"/>
+		<set name="level" value="58"/>
+		<set name="rewardExp" value="336"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="1828.799"/>
+		<set name="baseHpRate" value="8"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="1282.4"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="856.44055895414"/>
+		<set name="basePDef" value="328.27073"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="584.837886935576"/>
+		<set name="baseMDef" value="240.21427"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="80"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="POLE"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<faction names="door_clan;gludio_siege_clan" range="1200"/>
+		<equip>
+			<rhand item_id="94"/>	<!--Bec de Corbin-->
+		</equip>
+		<client_skills>
+			<skill id="4416" level="22"/>	<!--Defending Army-->
+		</client_skills>
+		<skills>
+			<skill id="4408" level="16"/>	<!--HP Increase (8x)-->
+			<skill id="4409" level="11"/>	<!--MP Increase (3x)-->
+			<skill id="4410" level="18"/>	<!--Extremely Strong P. Atk.-->
+			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
+			<skill id="4412" level="11"/>	<!--Average P. Def.-->
+			<skill id="4413" level="11"/>	<!--Average M. Def.-->
+			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4415" level="11"/>	<!--Spear-->
+			<skill id="4045" level="1"/>	<!--Full Magic Attack Resistance-->
+		</skills>
+	</npc>
+	<npc id="36788" name="Human Knight" title="Royal Guard">
+		<set name="type" value="residences.SiegeGuard"/>
+		<set name="ai_type" value="residences.SiegeGuardFighter"/>
+		<set name="collision_height" value="23"/>
+		<set name="collision_radius" value="9"/>
+		<set name="level" value="62"/>
+		<set name="rewardExp" value="384"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="1828.012"/>
+		<set name="baseHpRate" value="8"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2932"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="856.44055895414"/>
+		<set name="basePDef" value="328.27073"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="584.837886935576"/>
+		<set name="baseMDef" value="240.21427"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="80"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="POLE"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<faction names="door_clan;gludio_siege_clan" range="1200"/>
+		<client_skills>
+			<skill id="4416" level="6"/>	<!--Humanoid-->
+		</client_skills>
+		<skills>
+			<skill id="4408" level="16"/>	<!--HP Increase (8x)-->
+			<skill id="4409" level="11"/>	<!--MP Increase (3x)-->
+			<skill id="4410" level="18"/>	<!--Extremely Strong P. Atk.-->
+			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
+			<skill id="4412" level="11"/>	<!--Average P. Def.-->
+			<skill id="4413" level="11"/>	<!--Average M. Def.-->
+			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4415" level="11"/>	<!--Spear-->
+			<skill id="4045" level="1"/>	<!--Full Magic Attack Resistance-->
+		</skills>
+		<database_rewardlist>
+			<reward item_id="49758" min="3" max="6" chance="100"/>	<!--Blood Crystal (Кристалл Крови)-->
+		</database_rewardlist>
+	</npc>
+	<npc id="36789" name="Human Knight" title="Royal Guard">
+		<set name="type" value="residences.SiegeGuard"/>
+		<set name="ai_type" value="residences.SiegeGuardFighter"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8"/>
+		<set name="level" value="62"/>
+		<set name="rewardExp" value="384"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="1828.012"/>
+		<set name="baseHpRate" value="8"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2932"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="856.44055895414"/>
+		<set name="basePDef" value="328.27073"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="584.837886935576"/>
+		<set name="baseMDef" value="240.21427"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="80"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="POLE"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<faction names="door_clan;gludio_siege_clan" range="1200"/>
+		<client_skills>
+			<skill id="4416" level="6"/>	<!--Humanoid-->
+		</client_skills>
+		<skills>
+			<skill id="4408" level="16"/>	<!--HP Increase (8x)-->
+			<skill id="4409" level="11"/>	<!--MP Increase (3x)-->
+			<skill id="4410" level="18"/>	<!--Extremely Strong P. Atk.-->
+			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
+			<skill id="4412" level="11"/>	<!--Average P. Def.-->
+			<skill id="4413" level="11"/>	<!--Average M. Def.-->
+			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4415" level="11"/>	<!--Spear-->
+			<skill id="4045" level="1"/>	<!--Full Magic Attack Resistance-->
+		</skills>
+		<database_rewardlist>
+			<reward item_id="49758" min="3" max="6" chance="100"/>	<!--Blood Crystal (Кристалл Крови)-->
+		</database_rewardlist>
+	</npc>
+	<npc id="36790" name="Human Knight" title="Royal Guard">
+		<set name="type" value="residences.SiegeGuard"/>
+		<set name="ai_type" value="residences.SiegeGuardFighter"/>
+		<set name="collision_height" value="24"/>
+		<set name="collision_radius" value="7.5"/>
+		<set name="level" value="62"/>
+		<set name="rewardExp" value="384"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="1828.012"/>
+		<set name="baseHpRate" value="8"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2932"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="856.44055895414"/>
+		<set name="basePDef" value="328.27073"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="584.837886935576"/>
+		<set name="baseMDef" value="240.21427"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="80"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="POLE"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<faction names="door_clan;gludio_siege_clan" range="1200"/>
+		<client_skills>
+			<skill id="4416" level="6"/>	<!--Humanoid-->
+		</client_skills>
+		<skills>
+			<skill id="4408" level="16"/>	<!--HP Increase (8x)-->
+			<skill id="4409" level="11"/>	<!--MP Increase (3x)-->
+			<skill id="4410" level="18"/>	<!--Extremely Strong P. Atk.-->
+			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
+			<skill id="4412" level="11"/>	<!--Average P. Def.-->
+			<skill id="4413" level="11"/>	<!--Average M. Def.-->
+			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4415" level="11"/>	<!--Spear-->
+			<skill id="4045" level="1"/>	<!--Full Magic Attack Resistance-->
+		</skills>
+		<database_rewardlist>
+			<reward item_id="49758" min="3" max="6" chance="100"/>	<!--Blood Crystal (Кристалл Крови)-->
+		</database_rewardlist>
+	</npc>
+	<npc id="36791" name="Human Knight" title="Royal Guard">
+		<set name="type" value="residences.SiegeGuard"/>
+		<set name="ai_type" value="residences.SiegeGuardFighter"/>
+		<set name="collision_height" value="23"/>
+		<set name="collision_radius" value="7.5"/>
+		<set name="level" value="62"/>
+		<set name="rewardExp" value="384"/>
+		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="1828.012"/>
+		<set name="baseHpRate" value="8"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="2932"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseWIT" value="20"/>
+		<set name="basePCritRate" value="40"/>
+		<set name="baseMCritRate" value="50"/>
+		<set name="basePAtk" value="856.44055895414"/>
+		<set name="basePDef" value="328.27073"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtk" value="584.837886935576"/>
+		<set name="baseMDef" value="240.21427"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseAtkRange" value="80"/>
+		<set name="baseRandDam" value="30"/>
+		<set name="baseAttackType" value="POLE"/>
+		<set name="basePHitModify" value="0"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.6"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<faction names="door_clan;gludio_siege_clan" range="1200"/>
+		<client_skills>
+			<skill id="4416" level="6"/>	<!--Humanoid-->
+		</client_skills>
+		<skills>
+			<skill id="4408" level="16"/>	<!--HP Increase (8x)-->
+			<skill id="4409" level="11"/>	<!--MP Increase (3x)-->
+			<skill id="4410" level="18"/>	<!--Extremely Strong P. Atk.-->
+			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
+			<skill id="4412" level="11"/>	<!--Average P. Def.-->
+			<skill id="4413" level="11"/>	<!--Average M. Def.-->
+			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4415" level="11"/>	<!--Spear-->
+			<skill id="4045" level="1"/>	<!--Full Magic Attack Resistance-->
+		</skills>
+		<database_rewardlist>
+			<reward item_id="49758" min="3" max="6" chance="100"/>	<!--Blood Crystal (Кристалл Крови)-->
+		</database_rewardlist>
+	</npc>
+</list>

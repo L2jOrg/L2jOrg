@@ -1,0 +1,12 @@
+<html><head><body>
+Grand Magister Drikiyan:<br>
+Urrgh... my head. It must be true what they say about the Dreviant vintners putting spider venom in their wine. Penny-pinching sadists! Can't be that I drank too much, no. I would've, but that Sedrick must have drunk three bottles by himself...! That old Dwarvish geezer! And Desmo's no better! Deserves some kind of award for his champion drinking last night.<br>
+Ugh, well... I'm Grand Master Drikiyan of the Mystic Guild of the town of Aden. I am Grand Master Drikiyan. I suppose I need to help you with something?<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">"Can you tell me about the 2nd Class Transfer?"</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Clan</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Alliance</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Exchange Daily Coins</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Quest</Button>
+</body></html>

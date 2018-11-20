@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<territory name="schttgart09_2411_03">
+		<add x="136272" y="-195116" zmin="-3696" zmax="-2446"/>
+		<add x="138420" y="-192304" zmin="-3696" zmax="-2446"/>
+		<add x="137232" y="-189764" zmin="-3696" zmax="-2446"/>
+		<add x="135632" y="-188612" zmin="-3696" zmax="-2446"/>
+		<add x="134512" y="-188772" zmin="-3696" zmax="-2446"/>
+		<add x="133588" y="-191932" zmin="-3696" zmax="-2446"/>
+	</territory>
+	<spawn name="schttgart09_2411_03" count="3" respawn="20">
+		<territory name="schttgart09_2411_03"/>
+		<npc id="20521"/><!--Базальтовый Голем-->
+	</spawn>
+	<spawn name="schttgart09_2411_03" count="3" respawn="20">
+		<territory name="schttgart09_2411_03"/>
+		<npc id="20323"/><!--Предводитель Банды Гоблинов-->
+	</spawn>
+	<spawn name="schttgart09_2411_03" count="3" respawn="20">
+		<territory name="schttgart09_2411_03"/>
+		<npc id="20526"/><!--Обсидиановый Голем-->
+	</spawn>
+	<territory name="schttgart09_2411_04">
+		<add x="139684" y="-192352" zmin="-3068" zmax="-1418"/>
+		<add x="141332" y="-189636" zmin="-3068" zmax="-1418"/>
+		<add x="140472" y="-187800" zmin="-3068" zmax="-1418"/>
+		<add x="138136" y="-188316" zmin="-3068" zmax="-1418"/>
+		<add x="137640" y="-189356" zmin="-3068" zmax="-1418"/>
+		<add x="138448" y="-192132" zmin="-3068" zmax="-1418"/>
+	</territory>
+	<spawn name="schttgart09_2411_04" count="3" respawn="20">
+		<territory name="schttgart09_2411_04"/>
+		<npc id="20521"/><!--Базальтовый Голем-->
+	</spawn>
+	<spawn name="schttgart09_2411_04" count="3" respawn="20">
+		<territory name="schttgart09_2411_04"/>
+		<npc id="20323"/><!--Предводитель Банды Гоблинов-->
+	</spawn>
+	<spawn name="schttgart09_2411_04" count="2" respawn="20">
+		<territory name="schttgart09_2411_04"/>
+		<npc id="20526"/><!--Обсидиановый Голем-->
+	</spawn>
+	<spawn name="schuttgart01_npc2412_g01" count="1" respawn="60">
+		<point x="139264" y="-194720" z="-3177" h="0"/>
+		<npc id="31035"/><!--Защитник-->
+	</spawn>
+	<spawn name="schuttgart01_npc2412_g01" count="1" respawn="60">
+		<point x="135904" y="-191280" z="-3072" h="0"/>
+		<npc id="31035"/><!--Защитник-->
+	</spawn>
+	<spawn name="schuttgart01_npc2412_g02" count="1" respawn="60">
+		<point x="137008" y="-184720" z="-2128" h="0"/>
+		<npc id="31035"/><!--Защитник-->
+	</spawn>
+	<spawn name="schuttgart01_qm2512_01" count="1" respawn="180">
+		<point x="151438" y="-174794" z="-1776" h="0"/>
+		<npc id="27114"/><!--Королева Суккубов-->
+	</spawn>
+	<spawn name="schuttgart01_qm2512_01" count="1" respawn="180">
+		<point x="176600" y="-185176" z="-3720" h="0"/>
+		<npc id="27114"/><!--Королева Суккубов Мифриловый Рудник-->
+	</spawn>
+	<territory name="schttgart09_2412_07">
+		<add x="134584" y="-185140" zmin="-2984" zmax="-1484"/>
+		<add x="138376" y="-184440" zmin="-2984" zmax="-1484"/>
+		<add x="136544" y="-181584" zmin="-2984" zmax="-1484"/>
+		<add x="134400" y="-181080" zmin="-2984" zmax="-1484"/>
+	</territory>
+	<spawn name="schttgart09_2412_07" count="1" respawn="20">
+		<territory name="schttgart09_2412_07"/>
+		<npc id="20323"/><!--Предводитель Банды Гоблинов-->
+	</spawn>
+	<spawn name="schttgart09_2412_07" count="2" respawn="20">
+		<territory name="schttgart09_2412_07"/>
+		<npc id="20526"/><!--Обсидиановый Голем-->
+	</spawn>
+	<territory name="schttgart09_2412_06">
+		<add x="136468" y="-188148" zmin="-2688" zmax="-1488"/>
+		<add x="139464" y="-186372" zmin="-2688" zmax="-1488"/>
+		<add x="138836" y="-184752" zmin="-2688" zmax="-1488"/>
+		<add x="135812" y="-185376" zmin="-2688" zmax="-1488"/>
+	</territory>
+	<spawn name="schttgart09_2412_06" count="1" respawn="20">
+		<territory name="schttgart09_2412_06"/>
+		<npc id="20521"/><!--Базальтовый Голем-->
+	</spawn>
+	<spawn name="schttgart09_2412_06" count="2" respawn="20">
+		<territory name="schttgart09_2412_06"/>
+		<npc id="20323"/><!--Предводитель Банды Гоблинов-->
+	</spawn>
+	<territory name="schttgart09_2412_01">
+		<add x="131200" y="-196540" zmin="-3692" zmax="-3292"/>
+		<add x="134596" y="-196544" zmin="-3692" zmax="-3292"/>
+		<add x="134496" y="-195808" zmin="-3692" zmax="-3292"/>
+		<add x="133852" y="-195120" zmin="-3692" zmax="-3292"/>
+		<add x="131168" y="-193976" zmin="-3692" zmax="-3292"/>
+	</territory>
+	<spawn name="schttgart09_2412_01" count="3" respawn="20">
+		<territory name="schttgart09_2412_01"/>
+		<npc id="20521"/><!--Базальтовый Голем-->
+	</spawn>
+	<spawn name="schttgart09_2412_01" count="2" respawn="20">
+		<territory name="schttgart09_2412_01"/>
+		<npc id="20323"/><!--Предводитель Банды Гоблинов-->
+	</spawn>
+	<spawn name="schttgart09_2412_01" count="2" respawn="20">
+		<territory name="schttgart09_2412_01"/>
+		<npc id="20526"/><!--Обсидиановый Голем-->
+	</spawn>
+	<territory name="schttgart09_2412_02">
+		<add x="136280" y="-196344" zmin="-3660" zmax="-2810"/>
+		<add x="141644" y="-196444" zmin="-3660" zmax="-2810"/>
+		<add x="139620" y="-192356" zmin="-3660" zmax="-2810"/>
+		<add x="138340" y="-192320" zmin="-3660" zmax="-2810"/>
+	</territory>
+	<spawn name="schttgart09_2412_02" count="2" respawn="20">
+		<territory name="schttgart09_2412_02"/>
+		<npc id="20521"/><!--Базальтовый Голем-->
+	</spawn>
+	<spawn name="schttgart09_2412_02" count="3" respawn="20">
+		<territory name="schttgart09_2412_02"/>
+		<npc id="20323"/><!--Предводитель Банды Гоблинов-->
+	</spawn>
+	<spawn name="schttgart09_2412_02" count="3" respawn="20">
+		<territory name="schttgart09_2412_02"/>
+		<npc id="20526"/><!--Обсидиановый Голем-->
+	</spawn>
+	<spawn name="schttgart09_2412_05" count="2" respawn="20">
+		<territory>
+			<add x="134320" y="-188684" zmin="-3284" zmax="-2684"/>
+			<add x="135748" y="-188472" zmin="-3284" zmax="-2684"/>
+			<add x="134760" y="-186068" zmin="-3284" zmax="-2684"/>
+			<add x="133840" y="-186924" zmin="-3284" zmax="-2684"/>
+		</territory>
+		<npc id="20521"/><!--Базальтовый Голем-->
+	</spawn>
+	<territory name="schuttgart05_2412_03">
+		<add x="144242" y="-175991" zmin="-1572" zmax="-1372"/>
+		<add x="146205" y="-176301" zmin="-1572" zmax="-1372"/>
+		<add x="147194" y="-175884" zmin="-1572" zmax="-1372"/>
+		<add x="146747" y="-174369" zmin="-1572" zmax="-1372"/>
+		<add x="144466" y="-174191" zmin="-1572" zmax="-1372"/>
+		<add x="144033" y="-175335" zmin="-1572" zmax="-1372"/>
+	</territory>
+	<spawn name="schuttgart05_2412_03" count="1" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_03"/>
+		<npc id="20423"/><!--Костяной Стрелок Акаст-->
+	</spawn>
+	<spawn name="schuttgart05_2412_03" count="2" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_03"/>
+		<npc id="20449"/><!--Блуждающий Огонь-->
+	</spawn>
+	<spawn name="schuttgart05_2412_03" count="4" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_03"/>
+		<npc id="20435"/><!--Опаловый Зверь-->
+	</spawn>
+	<spawn name="schuttgart05_2412_03" count="3" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_03"/>
+		<npc id="20389"/><!--Крысолюд Бугл-->
+	</spawn>
+	<spawn name="schuttgart05_2412_03" count="4" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_03"/>
+		<npc id="20422"/><!--Костяной Владыка Акаст-->
+	</spawn>
+	<territory name="schuttgart05_2412_04">
+		<add x="148639" y="-171050" zmin="328" zmax="528"/>
+		<add x="150861" y="-171333" zmin="328" zmax="528"/>
+		<add x="151184" y="-169637" zmin="328" zmax="528"/>
+		<add x="149124" y="-169152" zmin="328" zmax="528"/>
+		<add x="148133" y="-169576" zmin="328" zmax="528"/>
+		<add x="148092" y="-170506" zmin="328" zmax="528"/>
+	</territory>
+	<spawn name="schuttgart05_2412_04" count="2" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_04"/>
+		<npc id="20423"/><!--Костяной Стрелок Акаст-->
+	</spawn>
+	<spawn name="schuttgart05_2412_04" count="2" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_04"/>
+		<npc id="20449"/><!--Блуждающий Огонь-->
+	</spawn>
+	<spawn name="schuttgart05_2412_04" count="3" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_04"/>
+		<npc id="20435"/><!--Опаловый Зверь-->
+	</spawn>
+	<spawn name="schuttgart05_2412_04" count="4" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_04"/>
+		<npc id="20389"/><!--Крысолюд Бугл-->
+	</spawn>
+	<spawn name="schuttgart05_2412_04" count="3" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_04"/>
+		<npc id="20422"/><!--Костяной Владыка Акаст-->
+	</spawn>
+	<territory name="schuttgart05_2412_01">
+		<add x="136277" y="-174803" zmin="-1820" zmax="-1620"/>
+		<add x="137590" y="-174370" zmin="-1820" zmax="-1620"/>
+		<add x="137405" y="-172006" zmin="-1820" zmax="-1620"/>
+		<add x="135782" y="-171635" zmin="-1820" zmax="-1620"/>
+		<add x="135573" y="-173713" zmin="-1820" zmax="-1620"/>
+	</territory>
+	<spawn name="schuttgart05_2412_01" count="3" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_01"/>
+		<npc id="20331"/><!--Монстроглаз Гонитель-->
+	</spawn>
+	<spawn name="schuttgart05_2412_01" count="3" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_01"/>
+		<npc id="20330"/><!--Шахтная Летучая Мышь-->
+	</spawn>
+	<spawn name="schuttgart05_2412_01" count="3" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_01"/>
+		<npc id="20425"/><!--Костяной Воин Акаст-->
+	</spawn>
+	<spawn name="schuttgart05_2412_01" count="2" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_01"/>
+		<npc id="20540"/><!--Самоцветный Зверь-->
+	</spawn>
+	<spawn name="schuttgart05_2412_01" count="2" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_01"/>
+		<npc id="20346"/><!--Голем из Темного Камня-->
+	</spawn>
+	<spawn name="schuttgart05_2412_01" count="1" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_01"/>
+		<npc id="20423"/><!--Костяной Стрелок Акаст-->
+	</spawn>
+	<territory name="schuttgart05_2412_02">
+		<add x="139743" y="-172257" zmin="-1828" zmax="-1628"/>
+		<add x="142942" y="-172968" zmin="-1828" zmax="-1628"/>
+		<add x="144921" y="-172057" zmin="-1828" zmax="-1628"/>
+		<add x="145247" y="-169459" zmin="-1828" zmax="-1628"/>
+		<add x="143089" y="-168694" zmin="-1828" zmax="-1628"/>
+		<add x="139936" y="-169157" zmin="-1828" zmax="-1628"/>
+	</territory>
+	<spawn name="schuttgart05_2412_02" count="5" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_02"/>
+		<npc id="20331"/><!--Монстроглаз Гонитель-->
+	</spawn>
+	<spawn name="schuttgart05_2412_02" count="6" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_02"/>
+		<npc id="20330"/><!--Шахтная Летучая Мышь-->
+	</spawn>
+	<spawn name="schuttgart05_2412_02" count="5" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_02"/>
+		<npc id="20425"/><!--Костяной Воин Акаст-->
+	</spawn>
+	<spawn name="schuttgart05_2412_02" count="5" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_02"/>
+		<npc id="20540"/><!--Самоцветный Зверь-->
+	</spawn>
+	<spawn name="schuttgart05_2412_02" count="3" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_02"/>
+		<npc id="20346"/><!--Голем из Темного Камня-->
+	</spawn>
+	<spawn name="schuttgart05_2412_02" count="2" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_02"/>
+		<npc id="20423"/><!--Костяной Стрелок Акаст-->
+	</spawn>
+	<territory name="schuttgart05_2412_12">
+		<add x="147232" y="-177888" zmin="68" zmax="268"/>
+		<add x="148354" y="-178000" zmin="68" zmax="268"/>
+		<add x="148704" y="-177386" zmin="68" zmax="268"/>
+		<add x="148695" y="-176766" zmin="68" zmax="268"/>
+		<add x="148270" y="-176373" zmin="68" zmax="268"/>
+		<add x="147475" y="-176484" zmin="68" zmax="268"/>
+	</territory>
+	<spawn name="schuttgart05_2412_12" count="2" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_12"/>
+		<npc id="20541"/><!--Рудная Летучая Мышь-->
+	</spawn>
+	<spawn name="schuttgart05_2412_12" count="3" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_12"/>
+		<npc id="20483"/><!--Лампа Мертвеца-->
+	</spawn>
+	<spawn name="schuttgart05_2412_12" count="2" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_12"/>
+		<npc id="20390"/><!--Главарь Крысолюдов Бугл-->
+	</spawn>
+	<spawn name="schuttgart05_2412_12" count="3" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_12"/>
+		<npc id="20511"/><!--Вулканический Голем-->
+	</spawn>
+	<territory name="schuttgart05_2412_13">
+		<add x="150799" y="-175582" zmin="-1836" zmax="-1636"/>
+		<add x="152049" y="-175439" zmin="-1836" zmax="-1636"/>
+		<add x="152271" y="-174619" zmin="-1836" zmax="-1636"/>
+		<add x="151912" y="-174030" zmin="-1836" zmax="-1636"/>
+		<add x="151297" y="-174019" zmin="-1836" zmax="-1636"/>
+		<add x="150915" y="-174226" zmin="-1836" zmax="-1636"/>
+	</territory>
+	<spawn name="schuttgart05_2412_13" count="2" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_13"/>
+		<npc id="20541"/><!--Рудная Летучая Мышь-->
+	</spawn>
+	<spawn name="schuttgart05_2412_13" count="3" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_13"/>
+		<npc id="20483"/><!--Лампа Мертвеца-->
+	</spawn>
+	<spawn name="schuttgart05_2412_13" count="2" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_13"/>
+		<npc id="20390"/><!--Главарь Крысолюдов Бугл-->
+	</spawn>
+	<spawn name="schuttgart05_2412_13" count="3" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_13"/>
+		<npc id="20511"/><!--Вулканический Голем-->
+	</spawn>
+	<territory name="schuttgart05_2412_10">
+		<add x="146795" y="-174558" zmin="2216" zmax="2416"/>
+		<add x="148316" y="-174496" zmin="2216" zmax="2416"/>
+		<add x="148623" y="-172945" zmin="2216" zmax="2416"/>
+		<add x="148454" y="-172084" zmin="2216" zmax="2416"/>
+		<add x="147755" y="-170525" zmin="2216" zmax="2416"/>
+		<add x="146403" y="-170556" zmin="2216" zmax="2416"/>
+	</territory>
+	<spawn name="schuttgart05_2412_10" count="5" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_10"/>
+		<npc id="20541"/><!--Рудная Летучая Мышь-->
+	</spawn>
+	<spawn name="schuttgart05_2412_10" count="6" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_10"/>
+		<npc id="20483"/><!--Лампа Мертвеца-->
+	</spawn>
+	<spawn name="schuttgart05_2412_10" count="5" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_10"/>
+		<npc id="20390"/><!--Главарь Крысолюдов Бугл-->
+	</spawn>
+	<spawn name="schuttgart05_2412_10" count="6" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_10"/>
+		<npc id="20511"/><!--Вулканический Голем-->
+	</spawn>
+	<territory name="schuttgart05_2412_11">
+		<add x="146808" y="-169052" zmin="1976" zmax="2376"/>
+		<add x="148176" y="-170219" zmin="1976" zmax="2376"/>
+		<add x="150080" y="-169559" zmin="1976" zmax="2376"/>
+		<add x="150249" y="-168237" zmin="1976" zmax="2376"/>
+		<add x="149089" y="-167907" zmin="1976" zmax="2376"/>
+		<add x="147338" y="-168215" zmin="1976" zmax="2376"/>
+	</territory>
+	<spawn name="schuttgart05_2412_11" count="3" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_11"/>
+		<npc id="20541"/><!--Рудная Летучая Мышь-->
+	</spawn>
+	<spawn name="schuttgart05_2412_11" count="4" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_11"/>
+		<npc id="20483"/><!--Лампа Мертвеца-->
+	</spawn>
+	<spawn name="schuttgart05_2412_11" count="3" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_11"/>
+		<npc id="20390"/><!--Главарь Крысолюдов Бугл-->
+	</spawn>
+	<spawn name="schuttgart05_2412_11" count="4" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_11"/>
+		<npc id="20511"/><!--Вулканический Голем-->
+	</spawn>
+	<territory name="schuttgart05_2412_09">
+		<add x="141569" y="-178235" zmin="324" zmax="524"/>
+		<add x="142691" y="-178543" zmin="324" zmax="524"/>
+		<add x="144411" y="-178558" zmin="324" zmax="524"/>
+		<add x="144519" y="-177267" zmin="324" zmax="524"/>
+		<add x="143574" y="-176661" zmin="324" zmax="524"/>
+		<add x="141884" y="-176599" zmin="324" zmax="524"/>
+	</territory>
+	<spawn name="schuttgart05_2412_09" count="4" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_09"/>
+		<npc id="20541"/><!--Рудная Летучая Мышь-->
+	</spawn>
+	<spawn name="schuttgart05_2412_09" count="3" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_09"/>
+		<npc id="20483"/><!--Лампа Мертвеца-->
+	</spawn>
+	<spawn name="schuttgart05_2412_09" count="4" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_09"/>
+		<npc id="20390"/><!--Главарь Крысолюдов Бугл-->
+	</spawn>
+	<spawn name="schuttgart05_2412_09" count="3" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_09"/>
+		<npc id="20511"/><!--Вулканический Голем-->
+	</spawn>
+	<territory name="schuttgart05_2412_07">
+		<add x="142234" y="-172875" zmin="336" zmax="536"/>
+		<add x="142434" y="-172875" zmin="336" zmax="536"/>
+		<add x="142434" y="-170371" zmin="336" zmax="536"/>
+		<add x="142234" y="-170371" zmin="336" zmax="536"/>
+	</territory>
+	<spawn name="schuttgart05_2412_07" count="2" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_07"/>
+		<npc id="20449"/><!--Блуждающий Огонь-->
+	</spawn>
+	<spawn name="schuttgart05_2412_07" count="2" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_07"/>
+		<npc id="20435"/><!--Опаловый Зверь-->
+	</spawn>
+	<spawn name="schuttgart05_2412_07" count="2" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_07"/>
+		<npc id="20389"/><!--Крысолюд Бугл-->
+	</spawn>
+	<spawn name="schuttgart05_2412_07" count="1" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_07"/>
+		<npc id="20422"/><!--Костяной Владыка Акаст-->
+	</spawn>
+	<territory name="schuttgart05_2412_08">
+		<add x="141930" y="-172883" zmin="328" zmax="528"/>
+		<add x="142130" y="-172883" zmin="328" zmax="528"/>
+		<add x="142100" y="-170379" zmin="328" zmax="528"/>
+		<add x="141900" y="-170379" zmin="328" zmax="528"/>
+	</territory>
+	<spawn name="schuttgart05_2412_08" count="1" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_08"/>
+		<npc id="20423"/><!--Костяной Стрелок Акаст-->
+	</spawn>
+	<spawn name="schuttgart05_2412_08" count="1" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_08"/>
+		<npc id="20449"/><!--Блуждающий Огонь-->
+	</spawn>
+	<spawn name="schuttgart05_2412_08" count="2" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_08"/>
+		<npc id="20435"/><!--Опаловый Зверь-->
+	</spawn>
+	<spawn name="schuttgart05_2412_08" count="1" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_08"/>
+		<npc id="20389"/><!--Крысолюд Бугл-->
+	</spawn>
+	<spawn name="schuttgart05_2412_08" count="2" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_08"/>
+		<npc id="20422"/><!--Костяной Владыка Акаст-->
+	</spawn>
+	<territory name="schuttgart05_2412_05">
+		<add x="142568" y="-169588" zmin="332" zmax="532"/>
+		<add x="145625" y="-169588" zmin="332" zmax="532"/>
+		<add x="145625" y="-169388" zmin="332" zmax="532"/>
+		<add x="142568" y="-169388" zmin="332" zmax="532"/>
+	</territory>
+	<spawn name="schuttgart05_2412_05" count="4" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_05"/>
+		<npc id="20389"/><!--Крысолюд Бугл-->
+	</spawn>
+	<spawn name="schuttgart05_2412_05" count="3" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_05"/>
+		<npc id="20422"/><!--Костяной Владыка Акаст-->
+	</spawn>
+	<territory name="schuttgart05_2412_06">
+		<add x="142685" y="-169924" zmin="328" zmax="528"/>
+		<add x="145527" y="-169924" zmin="328" zmax="528"/>
+		<add x="145527" y="-169724" zmin="328" zmax="528"/>
+		<add x="142685" y="-169724" zmin="328" zmax="528"/>
+	</territory>
+	<spawn name="schuttgart05_2412_06" count="3" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_06"/>
+		<npc id="20389"/><!--Крысолюд Бугл-->
+	</spawn>
+	<spawn name="schuttgart05_2412_06" count="4" respawn="34" respawn_random="15">
+		<territory name="schuttgart05_2412_06"/>
+		<npc id="20422"/><!--Костяной Владыка Акаст-->
+	</spawn>
+</list>

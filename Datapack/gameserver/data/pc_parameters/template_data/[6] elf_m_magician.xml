@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "template_data.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<template_data race="ELF" sex="MALE" type="MYSTIC">
+		<creation_data>
+			<start_equipments>
+				<equipment item_id="34604" count="9000"/>				<!--Mysterious Soulshot (D-grade)-->
+				<equipment item_id="34611" count="2000"/>				<!--Mysterious Blessed Spiritshot (D-grade)-->
+				<equipment item_id="34603" count="5000"/>				<!--Mysterious No-grade Soulshot-->
+				<equipment item_id="34610" count="1000"/>				<!--Mysterious Blessed No-grade Spiritshot-->
+				<equipment item_id="6" count="1" equiped="true"/>		<!--Apprentice's Wand-->
+				<equipment item_id="425" count="1" equiped="true"/>		<!--Apprentice's Tunic-->
+				<equipment item_id="461" count="1" equiped="true"/>		<!--Apprentice's Stockings-->
+			</start_equipments>
+			<start_points>
+				<point x="43648" y="40352" z="-3440"/>
+				<point x="43424" y="40224" z="-3440"/>
+				<point x="43584" y="40208" z="-3440"/>
+				<point x="43360" y="40368" z="-3440"/>
+				<point x="43392" y="40560" z="-3440"/>
+				<point x="43584" y="40560" z="-3440"/>
+				<point x="43504" y="40384" z="-3440"/>
+				<point x="48720" y="40000" z="-3440"/>
+				<point x="48912" y="39984" z="-3440"/>
+				<point x="48832" y="40144" z="-3440"/>
+				<point x="48656" y="40144" z="-3440"/>
+				<point x="49011" y="40128" z="-3440"/>
+				<point x="48752" y="40304" z="-3440"/>
+				<point x="48928" y="40288" z="-3440"/>
+			</start_points>
+		</creation_data>
+		<stats_data>
+			<min_attributes int="10" str="10" con="10" men="10" dex="10" wit="10"/>
+			<max_attributes int="70" str="70" con="70" men="70" dex="70" wit="70"/>
+			<base_attributes int="37" str="21" con="25" men="40" dex="24" wit="23"/>
+			<armor_defence chest="15" legs="8" helmet="12" boots="7" gloves="8" pendant="3" cloak="1"/>
+			<jewel_defence r_earring="9" l_earring="9" r_ring="5" l_ring="5" necklace="13"/>
+			<base_stats>
+				<!--collision box-->
+				<set name="collision_radius" value="7.5"/>
+				<set name="collision_height" value="24.0"/>
+				<!--other stats box-->
+				<set name="basePAtk" value="3"/>
+				<set name="baseMAtk" value="6"/>
+				<set name="baseAttackType" value="FIST"/>
+				<set name="basePCritRate" value="40"/>
+				<set name="baseMCritRate" value="50"/>
+				<set name="basePAtkSpd" value="300"/>
+				<set name="baseMAtkSpd" value="333"/>
+				<set name="baseAtkRange" value="20"/>
+				<set name="baseRandDam" value="10"/>
+				<set name="baseSafeFallHeight" value="300"/>
+				<set name="baseBreathBonus" value="150"/>
+				<!--<set name="jump" value="18"/>-->
+				<!--walk speed box-->
+				<set name="baseWalkSpd" value="85"/>
+				<set name="baseRunSpd" value="129"/>
+				<set name="baseWaterWalkSpd" value="50"/>
+				<set name="baseWaterRunSpd" value="50"/>
+				<set name="baseFlyWalkSpd" value="0"/>
+				<set name="baseFlyRunSpd" value="0"/>
+				<set name="baseRideWalkSpd" value="0"/>
+				<set name="baseRideRunSpd" value="0"/>
+				<set name="damage_range" value="0;0;26;120"/>
+				<set name="physical_abnormal_resist" value="10"/>
+				<set name="magic_abnormal_resist" value="15"/>
+				<regen_data>
+					<regen level="1" hp="2.0" mp="0.9" cp="2.0"/>
+					<regen level="2" hp="2.05" mp="0.9" cp="2.0"/>
+					<regen level="3" hp="2.1" mp="0.9" cp="2.0"/>
+					<regen level="4" hp="2.15" mp="0.9" cp="2.0"/>
+					<regen level="5" hp="2.2" mp="0.9" cp="2.0"/>
+					<regen level="6" hp="2.25" mp="0.9" cp="2.0"/>
+					<regen level="7" hp="2.3" mp="0.9" cp="2.0"/>
+					<regen level="8" hp="2.35" mp="0.9" cp="2.0"/>
+					<regen level="9" hp="2.4" mp="0.9" cp="2.0"/>
+					<regen level="10" hp="2.45" mp="0.9" cp="2.0"/>
+					<regen level="11" hp="2.5" mp="1.2" cp="2.5"/>
+					<regen level="12" hp="2.6" mp="1.2" cp="2.5"/>
+					<regen level="13" hp="2.7" mp="1.2" cp="2.5"/>
+					<regen level="14" hp="2.8" mp="1.2" cp="2.5"/>
+					<regen level="15" hp="2.9" mp="1.2" cp="2.5"/>
+					<regen level="16" hp="3.0" mp="1.2" cp="2.5"/>
+					<regen level="17" hp="3.1" mp="1.2" cp="2.5"/>
+					<regen level="18" hp="3.2" mp="1.2" cp="2.5"/>
+					<regen level="19" hp="3.3" mp="1.2" cp="2.5"/>
+					<regen level="20" hp="3.4" mp="1.2" cp="2.5"/>
+					<regen level="21" hp="3.5" mp="1.5" cp="3.5"/>
+					<regen level="22" hp="3.6" mp="1.5" cp="3.5"/>
+					<regen level="23" hp="3.7" mp="1.5" cp="3.5"/>
+					<regen level="24" hp="3.8" mp="1.5" cp="3.5"/>
+					<regen level="25" hp="3.9" mp="1.5" cp="3.5"/>
+					<regen level="26" hp="4.0" mp="1.5" cp="3.5"/>
+					<regen level="27" hp="4.1" mp="1.5" cp="3.5"/>
+					<regen level="28" hp="4.2" mp="1.5" cp="3.5"/>
+					<regen level="29" hp="4.3" mp="1.5" cp="3.5"/>
+					<regen level="30" hp="4.4" mp="1.5" cp="3.5"/>
+					<regen level="31" hp="4.5" mp="1.8" cp="4.5"/>
+					<regen level="32" hp="4.6" mp="1.8" cp="4.5"/>
+					<regen level="33" hp="4.7" mp="1.8" cp="4.5"/>
+					<regen level="34" hp="4.8" mp="1.8" cp="4.5"/>
+					<regen level="35" hp="4.9" mp="1.8" cp="4.5"/>
+					<regen level="36" hp="5.0" mp="1.8" cp="4.5"/>
+					<regen level="37" hp="5.1" mp="1.8" cp="4.5"/>
+					<regen level="38" hp="5.2" mp="1.8" cp="4.5"/>
+					<regen level="39" hp="5.3" mp="1.8" cp="4.5"/>
+					<regen level="40" hp="5.4" mp="1.8" cp="4.5"/>
+					<regen level="41" hp="5.5" mp="2.1" cp="5.5"/>
+					<regen level="42" hp="5.6" mp="2.1" cp="5.5"/>
+					<regen level="43" hp="5.7" mp="2.1" cp="5.5"/>
+					<regen level="44" hp="5.8" mp="2.1" cp="5.5"/>
+					<regen level="45" hp="5.9" mp="2.1" cp="5.5"/>
+					<regen level="46" hp="6.0" mp="2.1" cp="5.5"/>
+					<regen level="47" hp="6.1" mp="2.1" cp="5.5"/>
+					<regen level="48" hp="6.2" mp="2.1" cp="5.5"/>
+					<regen level="49" hp="6.3" mp="2.1" cp="5.5"/>
+					<regen level="50" hp="6.4" mp="2.1" cp="5.5"/>
+					<regen level="51" hp="6.5" mp="2.4" cp="6.5"/>
+					<regen level="52" hp="6.6" mp="2.4" cp="6.5"/>
+					<regen level="53" hp="6.7" mp="2.4" cp="6.5"/>
+					<regen level="54" hp="6.8" mp="2.4" cp="6.5"/>
+					<regen level="55" hp="6.9" mp="2.4" cp="6.5"/>
+					<regen level="56" hp="7.0" mp="2.4" cp="6.5"/>
+					<regen level="57" hp="7.1" mp="2.4" cp="6.5"/>
+					<regen level="58" hp="7.2" mp="2.4" cp="6.5"/>
+					<regen level="59" hp="7.3" mp="2.4" cp="6.5"/>
+					<regen level="60" hp="7.4" mp="2.4" cp="6.5"/>
+					<regen level="61" hp="7.5" mp="2.7" cp="7.5"/>
+					<regen level="62" hp="7.6" mp="2.7" cp="7.5"/>
+					<regen level="63" hp="7.7" mp="2.7" cp="7.5"/>
+					<regen level="64" hp="7.8" mp="2.7" cp="7.5"/>
+					<regen level="65" hp="7.9" mp="2.7" cp="7.5"/>
+					<regen level="66" hp="8.0" mp="2.7" cp="7.5"/>
+					<regen level="67" hp="8.1" mp="2.7" cp="7.5"/>
+					<regen level="68" hp="8.2" mp="2.7" cp="7.5"/>
+					<regen level="69" hp="8.3" mp="2.7" cp="7.5"/>
+					<regen level="70" hp="8.4" mp="2.7" cp="7.5"/>
+					<regen level="71" hp="8.5" mp="3.0" cp="8.5"/>
+					<regen level="72" hp="8.6" mp="3.0" cp="8.5"/>
+					<regen level="73" hp="8.7" mp="3.0" cp="8.5"/>
+					<regen level="74" hp="8.8" mp="3.0" cp="8.5"/>
+					<regen level="75" hp="8.9" mp="3.0" cp="8.5"/>
+					<regen level="76" hp="9.0" mp="3.0" cp="8.5"/>
+					<regen level="77" hp="9.1" mp="3.0" cp="8.5"/>
+					<regen level="78" hp="9.2" mp="3.0" cp="8.5"/>
+					<regen level="79" hp="9.3" mp="3.0" cp="8.5"/>
+					<regen level="80" hp="9.4" mp="3.0" cp="8.5"/>
+					<regen level="81" hp="9.5" mp="3.0" cp="8.5"/>
+					<regen level="82" hp="9.6" mp="3.0" cp="8.5"/>
+					<regen level="83" hp="9.7" mp="3.0" cp="8.5"/>
+					<regen level="84" hp="9.8" mp="3.0" cp="8.5"/>
+					<regen level="85" hp="9.9" mp="3.0" cp="8.5"/>
+					<regen level="86" hp="10.0" mp="3.0" cp="8.5"/>
+					<regen level="87" hp="10.1" mp="3.0" cp="8.5"/>
+					<regen level="88" hp="10.2" mp="3.0" cp="8.5"/>
+					<regen level="89" hp="10.3" mp="3.0" cp="8.5"/>
+					<regen level="90" hp="10.4" mp="3.0" cp="8.5"/>
+					<regen level="91" hp="10.5" mp="3.0" cp="8.5"/>
+					<regen level="92" hp="10.6" mp="3.0" cp="8.5"/>
+					<regen level="93" hp="10.7" mp="3.0" cp="8.5"/>
+					<regen level="94" hp="10.8" mp="3.0" cp="8.5"/>
+					<regen level="95" hp="10.9" mp="3.0" cp="8.5"/>
+					<regen level="96" hp="11.0" mp="3.0" cp="8.5"/>
+					<regen level="97" hp="11.1" mp="3.0" cp="8.5"/>
+					<regen level="98" hp="11.2" mp="3.0" cp="8.5"/>
+					<regen level="99" hp="11.3" mp="3.0" cp="8.5"/>
+				</regen_data>
+			</base_stats>
+		</stats_data>
+	</template_data>
+</list>

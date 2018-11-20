@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="19160001" name="Rune_Temple_Gate" hp="158250" pdef="644" mdef="518">
+		<pos x="-16363" y="-36798" z="-10647"/>
+		<shape ax="-16647" ay="-36862" bx="-16088" by="-36860" cx="-16081" cy="-36733" dx="-16649" dy="-36733" minz="-10793" maxz="-10537"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="10"/>
+	</door>
+	<door id="19160002" name="Rune_Anteroom_Door" hp="158250" pdef="644" mdef="518">
+		<pos x="-14870" y="-38964" z="-10577"/>
+		<shape ax="-14981" ay="-38990" bx="-14769" by="-38989" cx="-14765" cy="-38937" dx="-14981" dy="-38937" minz="-10771" maxz="-10515"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="8273"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="10"/>
+	</door>
+	<door id="19160003" name="Rune_Anteroom_Door" hp="158250" pdef="644" mdef="518">
+		<pos x="-14592" y="-39817" z="-10577"/>
+		<shape ax="-14566" ay="-39924" bx="-14563" by="-39710" cx="-14618" cy="-39715" dx="-14615" dy="-39924" minz="-10771" maxz="-10515"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="8273"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="10"/>
+	</door>
+	<door id="19160004" name="Rune_Anteroom_Door" hp="158250" pdef="644" mdef="518">
+		<pos x="-14592" y="-41682" z="-10576"/>
+		<shape ax="-14566" ay="-41788" bx="-14563" by="-41574" cx="-14618" cy="-41579" dx="-14615" dy="-41788" minz="-10771" maxz="-10515"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="8273"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="10"/>
+	</door>
+	<door id="19160005" name="Rune_Anteroom_Door" hp="158250" pdef="644" mdef="518">
+		<pos x="-14870" y="-42548" z="-10577"/>
+		<shape ax="-14981" ay="-42574" bx="-14769" by="-42573" cx="-14765" cy="-42521" dx="-14981" dy="-42521" minz="-10771" maxz="-10515"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="8273"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="10"/>
+	</door>
+	<door id="19160006" name="Rune_Anteroom_Door" hp="158250" pdef="644" mdef="518">
+		<pos x="-17862" y="-42548" z="-10577"/>
+		<shape ax="-17973" ay="-42574" bx="-17761" by="-42573" cx="-17757" cy="-42521" dx="-17973" dy="-42521" minz="-10771" maxz="-10515"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="8273"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="10"/>
+	</door>
+	<door id="19160007" name="Rune_Anteroom_Door" hp="158250" pdef="644" mdef="518">
+		<pos x="-18144" y="-41690" z="-10576"/>
+		<shape ax="-18118" ay="-41796" bx="-18115" by="-41582" cx="-18170" cy="-41587" dx="-18167" dy="-41796" minz="-10771" maxz="-10515"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="8273"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="10"/>
+	</door>
+	<door id="19160008" name="Rune_Anteroom_Door" hp="158250" pdef="644" mdef="518">
+		<pos x="-18144" y="-39824" z="-10577"/>
+		<shape ax="-18118" ay="-39932" bx="-18115" by="-39718" cx="-18170" cy="-39723" dx="-18167" dy="-39932" minz="-10771" maxz="-10515"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="8273"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="10"/>
+	</door>
+	<door id="19160009" name="Rune_Anteroom_Door" hp="158250" pdef="644" mdef="518">
+		<pos x="-17858" y="-38964" z="-10576"/>
+		<shape ax="-17969" ay="-38990" bx="-17757" by="-38989" cx="-17753" cy="-38937" dx="-17969" dy="-38937" minz="-10771" maxz="-10515"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="8273"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="10"/>
+	</door>
+	<door id="19160010" name="Rune_Chapel_Doorr_L" hp="158250" pdef="644" mdef="518">
+		<pos x="-16118" y="-44160" z="-10633"/>
+		<shape ax="-16652" ay="-44231" bx="-16080" by="-44235" cx="-16080" cy="-44081" dx="-16654" dy="-44082" minz="-10879" maxz="-10367"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="8274"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="10"/>
+	</door>
+	<door id="19160011" name="Rune_Chapel_Doorr_R" hp="158250" pdef="644" mdef="518">
+		<pos x="-16632" y="-44160" z="-10631"/>
+		<shape ax="-16652" ay="-44232" bx="-16079" by="-44235" cx="-16080" cy="-44082" dx="-16653" dy="-44083" minz="-10879" maxz="-10367"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="8274"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="10"/>
+	</door>
+	<door id="19160012" name="Rune_Door_of_Darkness" hp="158250" pdef="644" mdef="518">
+		<pos x="-14531" y="-52484" z="-10933"/>
+		<shape ax="-14547" ay="-52658" bx="-14516" by="-52658" cx="-14516" cy="-52306" dx="-14547" dy="-52306" minz="-11070" maxz="-10814"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="8275"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="10"/>
+	</door>
+	<door id="19160013" name="Rune_Door_of_Darkness" hp="158250" pdef="644" mdef="518">
+		<pos x="-18260" y="-52485" z="-10933"/>
+		<shape ax="-18276" ay="-52659" bx="-18245" by="-52659" cx="-18245" cy="-52307" dx="-18276" dy="-52307" minz="-11070" maxz="-10814"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="8275"/>
+		<set name="show_hp" value="false"/>
+		<set name="close_time" value="10"/>
+	</door>
+	<door id="19160014" name="Rune_Altar_Entrance_door" hp="158250" pdef="644" mdef="518">
+		<pos x="-14833" y="-54975" z="-10498"/>
+		<shape ax="-14965" ay="-54986" bx="-14699" by="-54986" cx="-14697" cy="-54963" dx="-14962" dy="-54963" minz="-10646" maxz="-10390"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="8275"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="19160015" name="Rune_Altar_Entrance_door" hp="158250" pdef="644" mdef="518">
+		<pos x="-17961" y="-54975" z="-10498"/>
+		<shape ax="-18093" ay="-54986" bx="-17827" by="-54986" cx="-17825" cy="-54963" dx="-18090" dy="-54963" minz="-10646" maxz="-10390"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="8275"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="19160016" name="Rune_Altar_Entrance_door" hp="158250" pdef="644" mdef="518">
+		<pos x="-15363" y="-54862" z="-10405"/>
+		<shape ax="-15388" ay="-55019" bx="-15339" by="-55018" cx="-15341" cy="-54696" dx="-15384" dy="-54695" minz="-10499" maxz="-10243"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="8275"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="19160017" name="Rune_Altar_Entrance_door" hp="158250" pdef="644" mdef="518">
+		<pos x="-17424" y="-54862" z="-10406"/>
+		<shape ax="-17448" ay="-55019" bx="-17399" by="-55018" cx="-17401" cy="-54696" dx="-17444" dy="-54695" minz="-10500" maxz="-10244"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="8275"/>
+		<set name="show_hp" value="false"/>
+	</door>
+</list>

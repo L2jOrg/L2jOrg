@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="50000" levels="1" name="Haste">
+		<set name="icon" value="icon.skill1086"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mp_consume" value="10"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="50001" levels="1" name="Transform: Pirate Costume">
+		<set name="icon" value="icon.skilltransform1"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="1000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="PIRATE_SUIT"/>
+		<set name="abnormal_time" value="1800"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="changebody"/>	<!--TODO: Check.-->
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>		
+		<set name="buff_slot_type" value="-1"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect>								
+			</effect>
+		</for>
+	</skill>
+	<skill id="50002" levels="1" name="Curse Zaken">
+		<set name="icon" value="icon.skill0096"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="50003" levels="2" name="Crescent Slash">
+		<set name="icon" value="icon.skill0223"/>
+		<set name="hitTime" value="1500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="50004" levels="2" name="Phantom Archer">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="50005" levels="2" name="Multiple Slash">
+		<set name="icon" value="icon.skill1630"/>
+		<set name="hitTime" value="1500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="50006" levels="2" name="Blood To Flesh">
+		<set name="icon" value="icon.skill0289"/>
+		<set name="hitTime" value="20000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="50007" levels="2" name="Typhoon Slash">
+		<set name="icon" value="icon.skill0096"/>
+		<set name="hitTime" value="10000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="50008" levels="2" name="Pirate King Fury">
+		<set name="icon" value="icon.skill0003"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="50009" levels="41" name="Raid Boss (Lv. 55)">
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="50010" levels="5" name="Greater Hold Resistance">
+		<set name="icon" value="icon.skill4288"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="50011" levels="5" name="Greater Paralysis Resistance">
+		<set name="icon" value="icon.skill4440"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="50012" levels="12" name="Paralysis">
+		<table name="#mp_consume">18 29 40 53 68 83 98 104 109 113 115 117</table>
+		<set name="icon" value="icon.skill1170"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="castRange" value="300"/>
+		<set name="hitTime" value="6000"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="50013" levels="1" name="Hold">
+		<set name="icon" value="icon.skill4047"/>
+		<set name="reuseDelay" value="6000"/>
+		<set name="hitTime" value="1799"/>
+		<set name="mp_consume" value="136"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+</list>

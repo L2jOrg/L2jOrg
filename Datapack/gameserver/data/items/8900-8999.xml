@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<weapon id="8938" name="Tallum Blade*Damascus">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;44;120"/>
+		<set name="crystal_count" value="2157"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_dual_sword_i00"/>
+		<set name="price" value="26968400"/>
+		<set name="type" value="DUAL"/>
+		<set name="weight" value="1890"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="305"/>
+			<add stat="mAtk" order="0x10" value="121"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+</list>

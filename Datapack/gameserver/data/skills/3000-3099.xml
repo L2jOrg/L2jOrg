@@ -1,0 +1,1692 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="3001" levels="1" name="int_1">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="PASSIVE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="3002" levels="1" name="int_2">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="PASSIVE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="3003" levels="1" name="str_2">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="PASSIVE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="3004" levels="1" name="maxmp_5">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="PASSIVE"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="3005" levels="1" name="Bleed">
+		<set name="icon" value="icon.skill0223"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="40"/>
+		<set name="activateRate" value="50"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="bleeding"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DOT"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="BLEED"/>
+		<for>
+			<effect name="t_hp" interval="1" value="-44"/>
+		</for>
+	</skill>
+	<skill id="3006" levels="1" name="Equip Set Items">
+		<set name="icon" value="icon.skill0042"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="3007" levels="6" name="Special Ability: Guidance">
+		<table name="#value">6.88 6.07 5.72 5.37 5.02 4.68</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="icon" value="icon.skill1240"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="pAccCombat" value="#value"/>
+		</for>
+	</skill>
+	<skill id="3008" levels="6" name="Special Ability: Guidance">
+		<table name="#value">5.42 5.12 4.82 4.53 4.24 3.95</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="icon" value="icon.skill1240"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="pAccCombat" value="#value"/>
+		</for>
+	</skill>
+	<skill id="3009" levels="8" name="Special Ability: Evasion">
+		<table name="#value">2.95 2.82 2.68 2.55 2.41 2.28 2.14 5.00</table>
+		<table name="#magicLevel">46 49 52 55 58 61 80 80</table>
+		<set name="icon" value="icon.skill0198"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="pEvasRate" value="#value"/>
+		</for>
+	</skill>
+	<skill id="3010" levels="9" name="Special Ability: Focus">
+		<!--
+			SA Focus for swords
+		-->
+		<table name="#value">86.7 82.2 77.8 73.3 68.9 64.5</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="icon" value="icon.skill1077"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="basePCritRate" value="#value"/>
+		</for>
+	</skill>
+	<skill id="3011" levels="7" name="Special Ability: Focus">
+		<!--
+			SA Focus for daggers
+		-->
+		<table name="#value">90.5 85.9 81.2 76.6 71.9 67.3</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="icon" value="icon.skill1077"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="basePCritRate" value="#value"/>
+		</for>
+	</skill>
+	<skill id="3012" levels="6" name="Special Ability: Anger">
+		<!--
+		    Description: Decreases Max HP and increases P. Atk.
+		-->
+		<table name="#pAtk">20.44 22.64 24.77 26.78 28.59 30.12</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="icon" value="icon.skill1062"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="pAtk" value="#pAtk"/>
+			<mul stat="maxHp" value="0.85"/>
+		</for>
+	</skill>
+	<skill id="3013" levels="2" name="Special Ability: Health">
+		<!--
+			1 Increases MaxHP.
+			2 Increases MaxHP. Allows simultaneous attacks on multiple targets.
+			3 Increases MaxHP. Inflicts additional damage during PvP.
+			4 Increases MaxHP. Allows simultaneous attacks on multiple targets. Inflicts additional damage during PvP.
+			5 Increases maximum HP. Increases damage inflicted during PvP.
+		-->
+		<table name="#pvpDam">1.00 1.00 1.05 1.05 1.05</table>
+		<table name="#Count">0 4 0 4 0</table>
+		<table name="#magicLevel">1 1 64 64 70</table>
+		<set name="icon" value="icon.skill0211"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="maxHp" value="1.25"/>
+			<mul stat="pvpMagicSkillDmgBonus" value="#pvpDam"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="#pvpDam"/>
+			<mul stat="pvpPhysDmgBonus" value="#pvpDam"/>
+			<add stat="poleTargetCount" value="#Count"/>
+		</for>
+	</skill>
+	<skill id="3014" levels="1" name="Special Ability: Mana Up">
+		<table name="#pvpDam">1 1.05 1.05</table>
+		<table name="#magicLevel">1 64 70</table>
+		<set name="icon" value="icon.skill0213"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="maxMp" value="1.3"/>
+			<mul stat="pvpMagicSkillDmgBonus" value="#pvpDam"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="#pvpDam"/>
+			<mul stat="pvpPhysDmgBonus" value="#pvpDam"/>
+		</for>
+	</skill>
+	<skill id="3016" levels="7" name="Special Ability: Critical Stun">
+		<table name="#activateRate">18 17 16 15 14 13</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="STUN"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="3017" levels="4" name="Special Ability: Magic Regeneration">
+		<set name="icon" value="icon.skill1044"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="3018" levels="6" name="Special Ability: Back Blow">
+		<table name="#rate">71 67 63 60 56 53</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="icon" value="icon.skill1077"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="basePCritRate" value="#rate">
+				<target direction="behind"/>
+			</add>
+		</for>
+	</skill>
+	<skill id="3019" levels="6" name="Special Ability: Back Blow">
+		<!--
+		    Description: Increases critical attack success rate when attacking a target from behind.
+		-->
+		<table name="#rate">109 97 86 42 40 37</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="icon" value="icon.skill1077"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="basePCritRate" value="#rate">
+				<target direction="behind"/>
+			</add>
+		</for>
+	</skill>
+	<skill id="3020" levels="6" name="Special Ability: Critical Bleed">
+		<!--
+		    Description:
+		    1. Causes target to bleed, instantly reducing HP. Effect 5.
+		    2. Causes target to bleed, instantly reducing HP. Effect 5.
+		    3. Causes target to bleed, instantly reducing HP. Effect 5.
+		    4. Causes target to bleed, instantly reducing HP. Effect 6.
+		    5. Causes target to bleed, instantly reducing HP. Effect 6.
+		    6. Causes target to bleed, instantly reducing HP. Effect 7.
+		-->
+		<table name="#activateRate">12 12 12 12 10 9</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<table name="#abnormal_level">5 5 6 6 6 7</table>
+		<table name="#dot">-128 -128 -190 -190 -190 -256</table>
+		<set name="icon" value="icon.skill0223"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="bleeding"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DOT"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="BLEED"/>
+		<for>
+			<effect name="t_hp" interval="5" value="#dot"/>
+		</for>
+	</skill>
+	<skill id="3021" levels="6" name="Special Ability: Critical Bleed">
+		<table name="#activateRate">51 51 42 42 41 35</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<table name="#dot">-43 -43 -64 -64 -65 -88</table>
+		<set name="icon" value="icon.skill0223"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="bleeding"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DOT"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="BLEED"/>
+		<for>
+			<effect name="t_hp" interval="5" value="#dot"/>
+		</for>
+	</skill>
+	<skill id="3022" levels="6" name="Special Ability: Critical Drain">
+		<table name="#hp">9.26 9.33 9.31 9.19 8.97 8.65</table>
+		<table name="#rate">21 23 25 28 31 35</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="icon" value="icon.skill0070"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="3000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DRAIN"/>
+		<set name="absorbAbs" value="#hp"/>
+		<set name="activateRate" value="#rate"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="3023" levels="9" name="Special Ability: Critical Damage">
+		<table name="#value">174 194 213 231 247 262</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="icon" value="icon.skill1242"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="p_critical_damage_diff" value="#value"/>
+		</for>
+	</skill>
+	<skill id="3024" levels="6" name="Special Ability: Critical Poison">
+		<table name="#activateRate">15 15 12 12 12 6</table>
+		<table name="#pvpDmg">1.05 1.00 1.00 1.00 1.00 1.05</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<table name="#abnormal_level">5 5 6 6 6 7</table>
+		<table name="#power">-191 -191 -291 -291 -291 -403</table>
+		<set name="icon" value="icon.skill1168"/>
+		<set name="reuseDelay" value="12000"/>
+		<set name="castRange" value="600"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="DOT_POISON"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="poison"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="poison"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="POISON"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="POISON"/>
+		<for>
+			<effect name="t_hp" interval="5" value="#power">
+				<mul stat="pvpMagicSkillDmgBonus" value="#pvpDmg"/>
+				<mul stat="pvpPhysSkillDmgBonus" value="#pvpDmg"/>
+				<mul stat="pvpPhysDmgBonus" value="#pvpDmg"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3025" levels="6" name="Special Ability: Critical Anger">
+		<table name="#dmg">-12 -13 -14 -15 -16 -17</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DOT"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect instant="true" name="t_hp" value="#dmg"/>
+		</for>
+	</skill>
+	<skill id="3026" levels="6" name="Special Ability: Critical Anger">
+		<table name="#crit">248.56 298.04 352.73 411.98 474.82 539.9</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="icon" value="icon.skill1062"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="p_critical_damage_diff" value="#crit"/>
+		</for>
+	</skill>
+	<skill id="3027" levels="7" name="Special Ability: Rsk. Focus">
+		<table name="#pvpBonus">1 1 1 1 1 1 1.05</table>
+		<table name="#basePCritRate">138.7 130.9 123.1 115.4 107.7 99.9 164</table>
+		<table name="#magicLevel">46 49 52 55 58 61 80</table>
+		<set name="icon" value="icon.skill1077"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="basePCritRate" value="#basePCritRate">
+				<player percentHP="60"/>
+			</add>
+			<mul stat="pvpMagicSkillDmgBonus" value="#pvpBonus"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="#pvpBonus"/>
+			<mul stat="pvpPhysDmgBonus" value="#pvpBonus"/>
+		</for>
+	</skill>
+	<skill id="3028" levels="6" name="Special Ability: Rsk. Evasion">
+		<table name="#value">7.63 7.29 6.95 6.6 6.24 5.87</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="icon" value="icon.skill0198"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="pEvasRate" value="#value">
+				<player percentHP="60"/>
+			</add>
+		</for>
+	</skill>
+	<skill id="3029" levels="6" name="Special Ability: Rsk. Evasion">
+		<table name="#value">4.44 4.24 4.04 3.84 3.63 3.41</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="icon" value="icon.skill0198"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="pEvasRate" value="#value">
+				<player percentHP="60"/>
+			</add>
+		</for>
+	</skill>
+	<skill id="3030" levels="6" name="Special Ability: Rsk. Evasion">
+		<table name="#value">7.63 7.29 6.95 6.6 6.24 5.87</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="icon" value="icon.skill0198"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="pEvasRate" value="#value">
+				<player percentHP="60"/>
+			</add>
+		</for>
+	</skill>
+	<skill id="3031" levels="6" name="Special Ability: Rsk. Evasion">
+		<table name="#value">7.63 7.29 6.95 6.6 6.24 5.87</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="icon" value="icon.skill0198"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="pEvasRate" value="#value">
+				<player percentHP="60"/>
+			</add>
+		</for>
+	</skill>
+	<skill id="3032" levels="6" name="Special Ability: Rsk. Haste">
+		<table name="#value">1.13 1.12 1.12 1.11 1.10 1.09</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="icon" value="icon.skill1086"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pAtkSpd" value="#value">
+				<player percentHP="60"/>
+			</mul>
+		</for>
+	</skill>
+	<skill id="3033" levels="6" name="Special Ability: Rsk. Haste">
+		<table name="#value">1.13 1.12 1.12 1.11 1.10 1.09</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="icon" value="icon.skill1086"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pAtkSpd" value="#value">
+				<player percentHP="60"/>
+			</mul>
+		</for>
+	</skill>
+	<skill id="3034" levels="6" name="Special Ability: Rsk. Haste">
+		<table name="#pvpBonus">1 1 1 1 1 1 1.05</table>
+		<table name="#pAtkSpd">1.13 1.12 1.12 1.11 1.1 1.09 1.09</table>
+		<table name="#magicLevel">46 49 52 55 58 61 80</table>
+		<set name="icon" value="icon.skill1086"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pAtkSpd" value="#pAtkSpd">
+				<player percentHP="60"/>
+			</mul>
+			<mul stat="pvpMagicSkillDmgBonus" value="#pvpBonus"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="#pvpBonus"/>
+			<mul stat="pvpPhysDmgBonus" value="#pvpBonus"/>
+		</for>
+	</skill>
+	<skill id="3035" levels="6" name="Special Ability: Mighty Mortal">
+		<table name="#icon">icon.skill0410 icon.skill0410 icon.skill0016 icon.skill0016 icon.skill0016 icon.skill0016</table>
+		<table name="#rate">1.5 1.48 1.46 1.44 1.42 1.4</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="icon" value="#icon"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="blowRate" value="#rate">
+				<using kind="Dagger"/>
+			</mul>
+		</for>
+	</skill>
+	<skill id="3036" levels="6" name="Special Ability: Haste">
+		<table name="#icon">icon.skill1241 icon.skill1241 icon.skill1086 icon.skill1086 icon.skill1086 icon.skill1086</table>
+		<table name="#value">1.08 1.07 1.07 1.07 1.06 1.06</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="icon" value="#icon"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pAtkSpd" value="#value"/>
+		</for>
+	</skill>
+	<skill id="3037" levels="6" name="Special Ability: Haste">
+		<table name="#value">1.08 1.07 1.07 1.07 1.06 1.06</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="icon" value="icon.skill1086"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pAtkSpd" value="#value"/>
+		</for>
+	</skill>
+	<skill id="3038" levels="6" name="Special Ability: Haste">
+		<table name="#icon">icon.skill1241 icon.skill1086 icon.skill1086 icon.skill1086 icon.skill1086 icon.skill1086</table>
+		<table name="#value">1.08 1.07 1.07 1.07 1.06 1.06</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="icon" value="#icon"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pAtkSpd" value="#value"/>
+		</for>
+	</skill>
+	<skill id="3039" levels="7" name="Special Ability: Critical Drain">
+		<table name="#hp">6.85 7.96 9.26 10.8 12.62 14.82 14.82</table>
+		<table name="#rate">33 31 30 28 26 24 24</table>
+		<table name="#magicLevel">46 49 52 55 58 61 70</table>
+		<table name="#mp_consume">0 0 0 12 0 0 0</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="mp_consume" value="#mp_consume"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DRAIN"/>
+		<set name="absorbAbs" value="#hp"/>
+		<set name="activateRate" value="#rate"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="3040" levels="6" name="Special Ability: Critical Poison">
+		<table name="#activateRate">8 8 7 12 14 6</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<table name="#abnormal_level">5 5 6 6 6 7</table>
+		<table name="#power">-168 -168 -249 -249 -249 -336</table>
+		<set name="icon" value="icon.skill1168"/>
+		<set name="castRange" value="600"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="DOT_POISON"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="poison"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="poison"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="POISON"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="POISON"/>
+		<for>
+			<effect name="t_hp" interval="5" value="#power"/>
+		</for>
+	</skill>
+	<skill id="3041" levels="6" name="Special Ability: Critical Poison">
+		<table name="#activateRate">4 4 3 6 7 6</table>
+		<table name="#pvpDmg">1.00 1.00 1.00 1.00 1.00 1.05</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<table name="#abnormal_level">5 5 6 6 6 7</table>
+		<table name="#power">-317 -317 -498 -498 -498 -671</table>
+		<set name="icon" value="icon.skill1168"/>
+		<set name="castRange" value="600"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="DOT_POISON"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="poison"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="poison"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="POISON"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="POISON"/>
+		<for>
+			<effect name="t_hp" interval="5" value="#power">
+				<mul stat="pvpMagicSkillDmgBonus" value="#pvpDmg"/>
+				<mul stat="pvpPhysSkillDmgBonus" value="#pvpDmg"/>
+				<mul stat="pvpPhysDmgBonus" value="#pvpDmg"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3042" levels="16" name="Special Ability: Critical Damage">
+		<!--
+			Duals +4 Special ability
+			1-16: Inflicts additional damage during a critical attack.
+			17-20: Increases critical attack damage inflicted during PvP.
+		-->
+		<table name="#icon">icon.skill0193 icon.skill0193 icon.skill0193 icon.skill1242 icon.skill1242 icon.skill1242 icon.skill1242 icon.skill1242 icon.skill1242 icon.skill1242 icon.skill1242 icon.skill1242 icon.skill1242 icon.skill0193 icon.skill0193 icon.skill0193</table>
+		<table name="#value">81.6 61.4 84.14 75.49 66.77 58.01 49.42 84.11 166.26 146.88 127 107.01 133.97 124.79 275.26 267.13 257.98 297.21 331.38 361.06</table>
+		<table name="#pvpDam">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05</table>
+		<table name="#magicLevel">48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67</table>
+		<set name="icon" value="#icon"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="p_critical_damage_diff" value="#value"/>
+			<mul stat="pvpMagicSkillDmgBonus" value="#pvpDam"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="#pvpDam"/>
+			<mul stat="pvpPhysDmgBonus" value="#pvpDam"/>
+		</for>
+	</skill>
+	<skill id="3043" levels="8" name="Special Ability: Critical Damage">
+		<!--
+			Description: Causes additional damage when launching a critical attack.
+		-->
+		<table name="#value">106.45 118.22 129.81 140.87 151.04 159.93</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="icon" value="icon.skill0193"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="p_critical_damage_diff" value="#value"/>
+		</for>
+	</skill>
+	<skill id="3044" levels="16" name="Special Ability: Focus">
+		<!--
+			1-16: Increases critical attack success rate.
+			17-20: Increases critical attack success rate and damage inflicted during PvP.
+		-->
+		<table name="#basePCritRate">53.6 38.5 50.4 43.2 36.5 30.4 24.8 40.4 76.6 65 54 43.7 52.6 47.2 98.7 92.4 86.2 96 103.5 109.2</table>
+		<table name="#pvpDam">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05</table>
+		<table name="#magicLevel">48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67</table>
+		<set name="icon" value="icon.skill1077"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="basePCritRate" value="#basePCritRate"/>
+			<mul stat="pvpMagicSkillDmgBonus" value="#pvpDam"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="#pvpDam"/>
+			<mul stat="pvpPhysDmgBonus" value="#pvpDam"/>
+		</for>
+	</skill>
+	<skill id="3045" levels="16" name="Special Ability: Haste">
+		<!--
+			Duals +4 Special ability
+			1-16: Increases Atk. Spd.
+			17-20: Increases Atk. Spd. and damage inflicted during PvP.
+		-->
+		<table name="#icon">icon.skill1086 icon.skill1086 icon.skill1086 icon.skill1241 icon.skill1086 icon.skill1086 icon.skill1086 icon.skill1086 icon.skill1086 icon.skill1241 icon.skill1086 icon.skill1086 icon.skill1086 icon.skill1086 icon.skill1086 icon.skill1086</table>
+		<table name="#value">1.05 1.04 1.05 1.04 1.03 1.03 1.02 1.04 1.07 1.06 1.05 1.04 1.05 1.04 1.09 1.08 1.08 1.09 1.09 1.1</table>
+		<table name="#pvpDam">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05</table>
+		<table name="#magicLevel">48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67</table>
+		<set name="icon" value="#icon"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pAtkSpd" value="#value"/>
+			<mul stat="pvpMagicSkillDmgBonus" value="#pvpDam"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="#pvpDam"/>
+			<mul stat="pvpPhysDmgBonus" value="#pvpDam"/>
+		</for>
+	</skill>
+	<skill id="3046" levels="16" name="Special Ability: Guidance">
+		<!--
+			Duals +4 Special ability
+			1-16: Increases Accuracy.
+			17-20: Increases Accuracy. Increases damage inflicted during PvP.
+		-->
+		<table name="#value">3.9 2.8 3.7 3.1 2.6 2.2 1.8 2.9 5.7 4.8 3.9 3.2 3.8 3.4 6.5 6.5 6.5 6.5 6.5 6.5</table>
+		<table name="#pvpDam">1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.05 1.05 1.05 1.05</table>
+		<table name="#magicLevel">48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67</table>
+		<set name="icon" value="icon.skill1240"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="pAccCombat" value="#value"/>
+			<mul stat="pvpMagicSkillDmgBonus" value="#pvpDam"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="#pvpDam"/>
+			<mul stat="pvpPhysDmgBonus" value="#pvpDam"/>
+		</for>
+	</skill>
+	<skill id="3047" levels="2" name="Special Ability: Acumen">
+		<table name="#pvpDam">1.00 1.05 1.10</table>
+		<table name="#magicLevel">64 64 70</table>
+		<set name="icon" value="icon.skill1085"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="mAtkSpd" value="1.15"/>
+			<mul stat="pvpMagicSkillDmgBonus" value="#pvpDam"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="#pvpDam"/>
+			<mul stat="pvpPhysDmgBonus" value="#pvpDam"/>
+		</for>
+	</skill>
+	<skill id="3048" levels="1" name="Special Ability: Conversion">
+		<table name="#pvpDam">1.00 1.05 1.10</table>
+		<table name="#magicLevel">64 64 70</table>
+		<set name="icon" value="icon.skill1048"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="maxHp" value="0.6"/>
+			<mul stat="maxMp" value="1.6"/>
+			<mul stat="pvpMagicSkillDmgBonus" value="#pvpDam"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="#pvpDam"/>
+			<mul stat="pvpPhysDmgBonus" value="#pvpDam"/>
+		</for>
+	</skill>
+	<skill id="3049" levels="2" name="Special Ability: Magic Damage">
+		<table name="#magicLevel">64 67</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="1000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="8"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="3052" levels="2" name="Special Ability: Critical Bleed">
+		<!--
+		    Description: Causes target to bleed, instantly reducing HP. Effect 7.
+		-->
+		<table name="#Rate">42 41</table>
+		<table name="#pvpDam">1.05 1.00</table>
+		<table name="#magicLevel">64 67</table>
+		<set name="icon" value="icon.skill0223"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="7"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="activateRate" value="#Rate"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="bleeding"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DOT"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="BLEED"/>
+		<for>
+			<effect name="t_hp" interval="5" value="-74">
+				<mul stat="pvpMagicSkillDmgBonus" value="#pvpDam"/>
+				<mul stat="pvpPhysSkillDmgBonus" value="#pvpDam"/>
+				<mul stat="pvpPhysDmgBonus" value="#pvpDam"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3053" levels="2" name="Special Ability: Critical Bleed">
+		<!--
+		    Description: Causes target to bleed, instantly reducing HP. Effect 7.
+		-->
+		<table name="#Rate">41 35</table>
+		<table name="#pvpDam">1.00 1.05</table>
+		<table name="#magicLevel">64 67</table>
+		<set name="icon" value="icon.skill0223"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="7"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="activateRate" value="#Rate"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="bleeding"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DOT"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="BLEED"/>
+		<for>
+			<effect name="t_hp" interval="3" value="-88">
+				<mul stat="pvpMagicSkillDmgBonus" value="#pvpDam"/>
+				<mul stat="pvpPhysSkillDmgBonus" value="#pvpDam"/>
+				<mul stat="pvpPhysDmgBonus" value="#pvpDam"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3054" levels="2" name="Special Ability: Critical Bleed">
+		<!--
+		    Description: Causes target to bleed, instantly reducing HP. Effect 7.
+		-->
+		<table name="#pvpDam">1.00 1.05</table>
+		<table name="#magicLevel">64 67</table>
+		<set name="icon" value="icon.skill0223"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="7"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="activateRate" value="12"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="bleeding"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DOT"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="BLEED"/>
+		<for>
+			<effect name="t_hp" interval="5" value="-256">
+				<mul stat="pvpMagicSkillDmgBonus" value="#pvpDam"/>
+				<mul stat="pvpPhysSkillDmgBonus" value="#pvpDam"/>
+				<mul stat="pvpPhysDmgBonus" value="#pvpDam"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3055" levels="2" name="Special Ability: Critical Bleed">
+		<!--
+		    Description: Causes target to bleed, instantly reducing HP. Effect 7.
+		-->
+		<table name="#pvpDam">1.00 1.05</table>
+		<table name="#magicLevel">64 67</table>
+		<set name="icon" value="icon.skill0223"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="7"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="activateRate" value="24"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="bleeding"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DOT"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="BLEED"/>
+		<for>
+			<effect name="t_hp" interval="5" value="-128">
+				<mul stat="pvpMagicSkillDmgBonus" value="#pvpDam"/>
+				<mul stat="pvpPhysSkillDmgBonus" value="#pvpDam"/>
+				<mul stat="pvpPhysDmgBonus" value="#pvpDam"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3056" levels="1" name="Special Ability: Rsk. Haste">
+		<table name="#pvpDam">1.00 1.05 1.10</table>
+		<table name="#magicLevel">64 64 70</table>
+		<set name="icon" value="icon.skill1086"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pAtkSpd" value="1.11">
+				<player percentHP="60"/>
+			</mul>
+			<mul stat="pvpMagicSkillDmgBonus" value="#pvpDam"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="#pvpDam"/>
+			<mul stat="pvpPhysDmgBonus" value="#pvpDam"/>
+		</for>
+	</skill>
+	<skill id="3059" levels="2" name="Special Ability: Critical Drain">
+		<table name="#hp">18 19</table>
+		<table name="#magicLevel">64 67</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DRAIN"/>
+		<set name="absorbAbs" value="#hp"/>
+		<set name="activateRate" value="35"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<mul stat="pvpMagicSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysDmgBonus" value="1.05"/>
+		</for>
+	</skill>
+	<skill id="3060" levels="2" name="Special Ability: Critical Drain">
+		<table name="#hp">10 11</table>
+		<table name="#pvpDmg">1.00 1.05</table>
+		<table name="#magicLevel">64 67</table>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DRAIN"/>
+		<set name="absorbAbs" value="#hp"/>
+		<set name="activateRate" value="35"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<mul stat="pvpMagicSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysDmgBonus" value="1.05"/>
+		</for>
+	</skill>
+	<skill id="3061" levels="3" name="Special Ability: Critical Poison">
+		<table name="#magicLevel">64 67 70</table>
+		<table name="#dot">-403 -403 -439</table>
+		<set name="icon" value="icon.skill1168"/>
+		<set name="castRange" value="600"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="DOT_POISON"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="7"/>
+		<set name="abnormal_type" value="poison"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="activateRate" value="10"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="poison"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="POISON"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="POISON"/>
+		<for>
+			<effect name="t_hp" interval="5" value="#dot">
+				<mul stat="pvpMagicSkillDmgBonus" value="1.05"/>
+				<mul stat="pvpPhysSkillDmgBonus" value="1.05"/>
+				<mul stat="pvpPhysDmgBonus" value="1.05"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3062" levels="2" name="Special Ability: Critical Poison">
+		<table name="#magicLevel">64 67</table>
+		<set name="icon" value="icon.skill1168"/>
+		<set name="castRange" value="600"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="DOT_POISON"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="7"/>
+		<set name="abnormal_type" value="poison"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="activateRate" value="18"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="poison"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="POISON"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="POISON"/>
+		<for>
+			<effect name="t_hp" interval="5" value="-224">
+				<mul stat="pvpMagicSkillDmgBonus" value="1.05"/>
+				<mul stat="pvpPhysSkillDmgBonus" value="1.05"/>
+				<mul stat="pvpPhysDmgBonus" value="1.05"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3068" levels="1" name="Special Ability: Haste">
+		<table name="#pAtkSpd">1.06 1.06 1.1</table>
+		<table name="#pvpDam">1.00 1.05 1.05</table>
+		<table name="#magicLevel">64 64 70</table>
+		<set name="icon" value="icon.skill1086"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pAtkSpd" value="#pAtkSpd"/>
+			<mul stat="pvpMagicSkillDmgBonus" value="#pvpDam"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="#pvpDam"/>
+			<mul stat="pvpPhysDmgBonus" value="#pvpDam"/>
+		</for>
+	</skill>
+	<skill id="3069" levels="1" name="Special Ability: Rsk. Evasion">
+		<set name="icon" value="icon.skill0198"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="pEvasRate" value="6.8">
+				<player percentHP="60"/>
+			</add>
+			<mul stat="pvpMagicSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysDmgBonus" value="1.05"/>
+		</for>
+	</skill>
+	<skill id="3070" levels="4" name="Special Ability: Critical Stun">
+		<table name="#activateRate">48 43 27 25</table>
+		<table name="#magicLevel">64 67 70 82</table>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="STUN"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+			<mul stat="pvpMagicSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysDmgBonus" value="1.05"/>
+		</for>
+	</skill>
+	<skill id="3071" levels="1" name="Special Ability: Rsk. Focus">
+		<table name="#value">130 164</table>
+		<set name="icon" value="icon.skill1077"/>
+		<set name="magicLevel" value="64"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="basePCritRate" value="#value">
+				<player percentHP="60"/>
+			</add>
+			<mul stat="pvpMagicSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysDmgBonus" value="1.05"/>
+		</for>
+	</skill>
+	<skill id="3074" levels="2" name="Special Ability: Magic Silence">
+		<table name="#pvpDmg">1.00 1.05</table>
+		<table name="#magicLevel">64 67</table>
+		<set name="icon" value="icon.skill1064"/>
+		<set name="castRange" value="1000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="SILENCE"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="silence"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="activateRate" value="80"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MUTE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect name="Mute">
+				<mul stat="pvpMagicSkillDmgBonus" value="#pvpDmg"/>
+				<mul stat="pvpPhysSkillDmgBonus" value="#pvpDmg"/>
+				<mul stat="pvpPhysDmgBonus" value="#pvpDmg"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3075" levels="2" name="Special Ability: Magic Paralyze">
+		<table name="#pvpDmg">1.00 1.05</table>
+		<table name="#magicLevel">64 67</table>
+		<set name="icon" value="icon.skill1170"/>
+		<set name="castRange" value="1000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="paralyze"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="activateRate" value="20"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PARALYZE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="PARALYZE"/>
+		<for>
+			<effect name="Paralyze">
+				<mul stat="pvpMagicSkillDmgBonus" value="#pvpDmg"/>
+				<mul stat="pvpPhysSkillDmgBonus" value="#pvpDmg"/>
+				<mul stat="pvpPhysDmgBonus" value="#pvpDmg"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3076" levels="9" name="Special Ability: Empower">
+		<table name="#mAtk">20.36 22.51 24.59 26.53 28.27 29.7</table>
+		<table name="#magicLevel">46 49 52 55 28 61</table>
+		<set name="icon" value="icon.skill1059"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="mAtk" value="#mAtk"/>
+		</for>
+	</skill>
+	<skill id="3077" levels="6" name="Special Ability: M. Atk.">
+		<table name="#value">75 99 112 139 153 167</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="icon" value="icon.skill1059"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" stat="mAtk" value="#value"/>
+			<mul stat="mpConsum" value="1.15"/>
+		</for>
+	</skill>
+	<skill id="3078" levels="6" name="Special Ability: Magic Silence">
+		<table name="#magicLevel">46 49 52 55 28 61</table>
+		<set name="icon" value="icon.skill1064"/>
+		<set name="castRange" value="1000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="SILENCE"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="silence"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="activateRate" value="80"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MUTE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect name="Mute"/>
+		</for>
+	</skill>
+	<skill id="3079" levels="6" name="Special Ability: Magic Paralyze">
+		<table name="#magicLevel">46 49 52 55 28 61</table>
+		<set name="icon" value="icon.skill1170"/>
+		<set name="castRange" value="1000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="paralyze"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="activateRate" value="20"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PARALYZE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="PARALYZE"/>
+		<for>
+			<effect name="Paralyze"/>
+		</for>
+	</skill>
+	<skill id="3080" levels="15" name="Item Skill: Aggression">
+		<!--
+			Description:
+			Lvl 1 - Chance: Provokes a target to attack during an ordinary physical attack. Power 438.
+			Lvl 2 - Provokes a target to attack during an ordinary physical attack. Power 467.
+			Lvl 3 - Chance: Provokes a target to attack during an ordinary physical attack. Power 495.
+			Lvl 4 - Chance: Provokes a target to attack during an ordinary physical attack. Power 523.
+			Lvl 5 - Chance: Provokes a target to attack during an ordinary physical attack. Power 549.
+			Lvl 6 - Chance: Provokes a target to attack during an ordinary physical attack. Power 574.
+			Lvl 7 - Chance: Provokes a target to attack during an ordinary physical attack. Power 597.
+			Lvl 8 - Chance: Provokes a target to attack during an ordinary physical attack. Power 617.
+			Lvl 9 - Chance: Provokes a target to attack during an ordinary physical attack. Power 635.
+			Lvl 10 - Chance: Provokes a target to attack during an ordinary physical attack. Power 659.
+		-->
+		<table name="#effectPoint">438 467 495 523 549 574 597 617 635 659</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="i_target_me" chance="40"/>
+		</for>
+	</skill>
+	<skill id="3081" levels="15" name="Item Skill: Charm (Attack Active)">
+		<!--
+			Description: Lvl 1 - Chance: Decreases a target's urge to attack during a general physical attack. Power 219. Lvl 2 - Chance: Decreases a target's urge to attack during a general physical attack. Power 234. Lvl 3 - Chance: Decreases a target's urge to attack during a general physical attack. Power 248. Lvl 4 - Chance: Decreases a target's urge to attack during a general physical attack. Power 262. Lvl 5 - Chance: Decreases a target's urge to attack during a general physical attack. Power 275. Lvl 6 - Chance: Decreases a target's urge to attack during a general physical attack. Power 287. Lvl 7 - Chance: Decreases a target's urge to attack during a general physical attack. Power 299. Lvl 8 - Chance: Decreases a target's urge to attack during a general physical attack. Power 309. Lvl 9 - Chance: Decreases a target's urge to attack during a general physical attack. Power 318. Lvl 10 - Chance: Decreases a target's urge to attack during a general physical attack. Power 330.
+		-->
+		<table name="#power">-219 -234 -248 -262 -275 -287 -299 -309 -318 -330</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="unaggroing" value="true"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect name="i_add_hate" value="#power"/>
+		</for>
+	</skill>
+	<skill id="3082" levels="10" name="Item Skill: Mana Burn">
+		<!--
+			Description:
+			Lvl 1 - Chance: Burns up a target's MP during an ordinary physical attack. Power 49.
+			Lvl 2 - Chance: Burns up a target's MP during an ordinary physical attack. Power 53.
+			Lvl 3 - Chance: Burns up a target's MP during an ordinary physical attack. Power 57.
+			Lvl 4 - Chance: Burns up a target's MP during an ordinary physical attack. Power 61.
+			Lvl 5 - Chance: Burns up a target's MP during an ordinary physical attack. Power 66.
+			Lvl 6 - Chance: Burns up a target's MP during an ordinary physical attack. Power 70.
+			Lvl 7 - Chance: Burns up a target's MP during an ordinary physical attack. Power 74.
+			Lvl 8 - Chance: Burns up a target's MP during an ordinary physical attack. Power 78.
+			Lvl 9 - Chance: Burns up a target's MP during an ordinary physical attack. Power 82.
+			Lvl 10 - Chance: Burns up a target's MP during an ordinary physical attack. Power 88.
+		-->
+		<table name="#power">49 53 57 61 66 70 74 78 82 88</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="power" value="#power"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MANADAM"/>
+		<set name="operate_type" value="A2"/>
+		<!-- skillgrp isMagic = false, need test -->
+	</skill>
+	<skill id="3083" levels="15" name="Item Skill: Slow (Attack Active)">
+		<!--
+			Last modify:	07.06.2009
+			Description:
+			Lvl 1-10 - Chance: Momentarily decreases a target's speed during an ordinary physical attack. Effect 3.
+		-->
+		<table name="#effectPoint">360 418 477 532 558 582 604 624 641 655</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="activateRate" value="40"/>
+		<for>
+			<effect>
+				<mul order="0x50" stat="runSpd" value="0.7"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3084" levels="10" name="Item Skill: Winter (Attack Active)">
+		<!--
+			Last modify:	07.06.2009
+			Description:
+			Lvl 1-10 - Chance: Momentarily decreases a target's Atk. Spd. during an ordinary physical attack. Effect 3.
+		-->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="attack_time_up"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="activateRate" value="40"/>
+		<for>
+			<effect>
+				<mul stat="pAtkSpd" value="0.77"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3085" levels="10" name="Item Skill: Stun">
+		<!--
+			Last modify:	07.06.2009
+			Description:
+			Lvl 1-10 - Chance: Momentarily throws the target into a state of shock during an ordinary physical attack.
+		-->
+		<table name="#effectPoint">96 104 115 128 136 150 154 164 169 173</table>
+		<table name="#power">30 35 44 55 64 79 84 96 102 109</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="power" value="#power"/>
+		<set name="activateRate" value="40"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="3086" levels="15" name="Item Skill: Hold">
+		<!--
+			Last modify:	07.06.2009
+			Description:
+			Lvl 1-10 - Chance: Momentarily throws the target into a state of hold during an ordinary physical attack. The target cannot be affected by any additional hold attacks while the effect lasts.
+		-->
+		<table name="#effectPoint">457 495 532 549 566 582 597 611 624 646 655</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="ROOT"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="root_magically"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="40"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="ROOT"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="HOLD"/>
+		<for>
+			<effect name="p_block_move">
+				<p_defence_trait name="hold" value="100"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3087" levels="10" name="Item Skill: Sleep">
+		<!--
+			Last modify:	07.06.2009
+			Description:
+			Lvl 1-10 - Chance: Momentarily throws the target into a state of sleep during a general physical attack. The target cannot be affected by any additional sleep attacks while the effect lasts.
+		-->
+		<table name="#effectPoint">227 285 369 438 495 549 590 624 650 655</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="SLEEP"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="sleep"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="40"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="SLEEP"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SLEEP"/>
+		<for>
+			<effect name="Sleep">
+				<p_defence_trait name="sleep" value="100"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3088" levels="10" name="Item Skill: Paralyze">
+		<!--
+			Last modify:	07.06.2009
+			Description:
+			Lvl 1-10 - Chance: Momentarily throws the target into a state of paralysis during an ordinary physical attack.
+		-->
+		<table name="#effectPoint">457 495 532 549 566 582 597 611 624 646 655</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="paralyze"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="40"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="PARALYZE"/>
+		<for>
+			<effect>
+				<triggers>
+					<trigger id="6126" level="1" type="ON_FINISH_EFFECT"/>
+				</triggers>
+				<mul stat="runSpd" value="0.5"/>
+				<mul stat="pAtkSpd" value="0.5"/>
+				<mul stat="mAtkSpd" value="0.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3089" levels="10" name="Item Skill: Medusa">
+		<!--
+			Last modify:	07.06.2009
+			Description:	Chance: Momentarily throws the target into a petrified state during a general physical attack.
+			Last modify:	29.01.2009
+		-->
+		<table name="#effectPoint">227 285 369 438 495 549 590 624 650 655</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="FLESH_STONE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="turn_stone"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="20"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PARALYZE"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="Invulnerable"/>
+			<effect name="p_block_debuff"/>
+			<effect name="Petrification">
+				<set stat="regHp" value="0"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3090" levels="10" name="Item Skill: Fear">
+		<!--
+			Last modify:	07.06.2009
+			Description:
+			Lvl 1-10 - Chance: Momentarily throws the target into a state of fear and causes him to flee during a general physical attack.
+		-->
+		<table name="#effectPoint">227 285 369 438 495 549 590 624 650 655</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="TURN_FLEE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="turn_flee"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="activateRate" value="30"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect name="Fear"/>
+		</for>
+	</skill>
+	<skill id="3091" levels="15" name="Item Skill: Poison (Attack Active)">
+		<!--
+			Last modify:	07.06.2009
+			Description: Lvl 1 - Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 5. Lvl 2 - Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 5. Lvl 3 - Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 6. Lvl 4 - Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 6. Lvl 5 - Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 6. Lvl 6 - Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 7. Lvl 7 - Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 7. Lvl 8 - Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 7. Lvl 9 - Chance: Momentarily throws the target into a poisoned state during a general
+			physical attack. Effect 8. Lvl 10 - Chance: Momentarily throws the target into a poisoned state during a general physical attack. Effect 8.
+		-->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#abnormal_level">5 5 6 6 6 7 7 7 8 8</table>
+		<table name="#power">-41 -41 -50 -50 -50 -58 -58 -58 -63 -63</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="DOT_POISON"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="poison"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="activateRate" value="70"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="poison"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="POISON"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="POISON"/>
+		<for>
+			<effect name="t_hp" interval="5" value="#power"/>
+		</for>
+	</skill>
+	<skill id="3092" levels="15" name="Item Skill: Bleed (Attack Active)">
+		<!--
+			Last modify:	07.06.2009
+			Description: Lvl 1 - Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 5. Lvl 2 - Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 5. Lvl 3 - Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 6. Lvl 4 - Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 6. Lvl 5 - Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 6. Lvl 6 - Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 7. Lvl 7 - Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 7. Lvl 8 - Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 7. Lvl 9 - Chance: Momentarily throws the target into a bleeding state during a general
+			physical attack. Effect 8. Lvl 10 - Chance: Momentarily throws the target into a bleeding state during a general physical attack. Effect 8.
+		-->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<table name="#abnormal_level">5 5 6 6 6 7 7 7 8 8</table>
+		<table name="#dot">-44 -44 -54 -54 -54 -62 -62 -62 -67 -67</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="activateRate" value="100"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="subordination_abnormal" value="bleeding"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DOT"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="BLEED"/>
+		<for>
+			<effect name="t_hp" interval="5" value="#dot"/>
+		</for>
+	</skill>
+	<skill id="3093" levels="10" name="Item Skill: Silence">
+		<!--
+			Last modify:	07.06.2009
+			Description:
+			Lvl 1-10 - Chance: Momentarily blocks the target's magic skill during a general physical attack.
+		-->
+		<table name="#effectPoint">457 495 532 549 566 582 597 611 624 646 655</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="SILENCE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="silence"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="40"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MUTE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect name="Mute"/>
+		</for>
+	</skill>
+	<skill id="3094" levels="10" name="Item Skill: Doom">
+		<!--
+			Last modify:	07.06.2009
+			Description:
+			Lvl 1-10 - Chance: Momentarily blocks all of the target's physical and magic skills during a general physical attack.
+		-->
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="SILENCE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="silence_all"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="activateRate" value="50"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MUTE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<for>
+			<effect name="MuteAll"/>
+		</for>
+	</skill>
+	<skill id="3095" levels="10" name="Item Skill: Mana Burn">
+		<!--
+			Last modify:	07.06.2009
+			Description:
+			Chance: Burns up a target's MP during magic use. Power 49-88.
+		-->
+		<table name="#power">49 53 57 61 66 70 74 78 82 88</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="1000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="power" value="#power"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MANADAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="3096" levels="15" name="Item Skill: Slow (Magic Active)">
+		<!--
+			Last modify:	07.06.2009
+			Description:
+			Lvl 1-10 - Chance: Momentarily decreases the target's speed during magic use. Effect 3.
+		-->
+		<table name="#effectPoint">360 418 477 532 558 582 604 624 641 655</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="1000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="activateRate" value="40"/>
+		<for>
+			<effect>
+				<mul order="0x50" stat="runSpd" value="0.7"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3097" levels="10" name="Item Skill: Winter (Magic Active)">
+		<!--
+			Last modify:	07.06.2009
+			Description:
+			Lvl 1-10 - Chance: Momentarily decreases the target's Atk. Spd. during magic use. Effect 3.
+		-->
+		<table name="#abnormal_time">5 8 11 16 21 26 31 36 41 46</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="1000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="attack_time_up"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="activateRate" value="40"/>
+		<for>
+			<effect>
+				<mul stat="pAtkSpd" value="0.77"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3098" levels="10" name="Item Skill: Stun">
+		<!--
+			Last modify:	07.06.2009
+			Description:
+			Chance: Momentarily throws the target into a state of shock during magic use.
+		-->
+		<table name="#effectPoint">96 104 115 128 136 150 154 164 169 173</table>
+		<table name="#power">30 35 44 55 64 79 84 96 102 109</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="1000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="power" value="#power"/>
+		<set name="activateRate" value="50"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="3099" levels="15" name="Item Skill: Hold">
+		<!--
+			Last modify:	07.06.2009
+			Description:
+			Lvl 1-10 - Chance: Momentarily throws the target into a state of hold during magic use. The target cannot be affected by any additional hold attacks while the effect lasts.
+		-->
+		<table name="#effectPoint">457 495 532 549 566 582 597 611 624 646 655</table>
+		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="castRange" value="1000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="ROOT"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="root_magically"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="40"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="ROOT"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="HOLD"/>
+		<for>
+			<effect name="p_block_move">
+				<p_defence_trait name="hold" value="100"/>
+			</effect>
+		</for>
+	</skill>
+</list>

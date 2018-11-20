@@ -1,0 +1,127 @@
+<!ELEMENT list (weapon|etcitem|armor)*>
+<!ELEMENT weapon  (set|equip|for|enchant4_skill|cond|skills|triggers|attributes|enchant_options|crystallization_info)*>
+<!ATTLIST weapon
+	id CDATA #REQUIRED
+	name CDATA #REQUIRED
+	add_name CDATA #IMPLIED>
+<!ELEMENT etcitem (set|equip|for|enchant4_skill|cond|skills|triggers|enchant_options|capsuled_items|crystallization_info)*>
+<!ATTLIST etcitem
+	id CDATA #REQUIRED
+	name CDATA #REQUIRED
+	add_name CDATA #IMPLIED>
+<!ELEMENT armor  (set|equip|for|enchant4_skill|cond|skills|triggers|attributes|enchant_options|crystallization_info)*>
+<!ATTLIST armor
+	id CDATA #REQUIRED
+	name CDATA #REQUIRED
+	add_name CDATA #IMPLIED>
+
+<!ELEMENT enchant_options (level)*>
+<!ELEMENT level (option)*>
+<!ATTLIST level
+	value CDATA #REQUIRED>
+<!ELEMENT option (#PCDATA)>
+<!ATTLIST option
+	id CDATA #REQUIRED>
+
+<!ELEMENT equip (slot)*>
+<!ELEMENT slot (#PCDATA)>
+<!ATTLIST slot
+	id CDATA #REQUIRED>
+
+<!ELEMENT cond (player|target|using|zone|or|not|and)*>
+<!ATTLIST cond
+	msgId CDATA #IMPLIED>
+<!ELEMENT or (player|target|using|zone|or|not|and)*>
+<!ELEMENT not (player|target|using|zone|or|not|and)*>
+<!ELEMENT and (player|target|using|zone|or|not|and)*>
+<!ELEMENT player (#PCDATA)>
+<!ATTLIST player
+	residence CDATA #IMPLIED
+	olympiad CDATA #IMPLIED
+	race CDATA #IMPLIED
+	instance_zone CDATA #IMPLIED
+	is_clan_leader CDATA #IMPLIED
+	sex CDATA #IMPLIED
+	castle_type CDATA #IMPLIED
+	classId CDATA #IMPLIED
+	minLevel CDATA #IMPLIED
+	max_level CDATA #IMPLIED
+	avail_max_sp CDATA #IMPLIED
+	quest_state CDATA #IMPLIED
+	min_pledge_rank CDATA #IMPLIED
+	class_type CDATA #IMPLIED
+	min_clan_level CDATA #IMPLIED
+	isFlagged CDATA #IMPLIED
+	is_hero CDATA #IMPLIED
+	is_chaotic CDATA #IMPLIED>
+<!ELEMENT target (#PCDATA)>
+<!ATTLIST target
+	is_pet_feed CDATA #IMPLIED
+	type CDATA #IMPLIED>
+<!ELEMENT using (#PCDATA)>
+<!ATTLIST using
+	slotitem CDATA #REQUIRED>
+<!ELEMENT zone (#PCDATA)>
+<!ATTLIST zone
+	type CDATA #IMPLIED
+	name CDATA #IMPLIED>
+
+<!ELEMENT for (add|set|mul|enchant)*>
+<!ELEMENT add (player|target|using|zone|or|not|and)*>
+<!ATTLIST add
+	order CDATA #REQUIRED
+	stat CDATA #REQUIRED
+	value CDATA #REQUIRED>
+
+<!ELEMENT attributes (attribute)*>
+<!ELEMENT attribute (#PCDATA)>
+<!ATTLIST attribute
+	element CDATA #REQUIRED
+	value CDATA #REQUIRED>
+
+<!ELEMENT capsuled_items (capsuled_item)*>
+<!ELEMENT capsuled_item (#PCDATA)>
+<!ATTLIST capsuled_item
+	id CDATA #REQUIRED
+	min_count CDATA #REQUIRED
+	max_count CDATA #REQUIRED
+	chance CDATA #REQUIRED
+	enchant_level CDATA #IMPLIED>
+
+<!ELEMENT mul (player|target|using|zone)*>
+<!ATTLIST mul
+	order CDATA #REQUIRED
+	stat CDATA #REQUIRED
+	value CDATA #REQUIRED>
+<!ELEMENT set (player|target|using|zone|or|not|and)*>
+<!ATTLIST set
+	name CDATA #IMPLIED
+	order CDATA #IMPLIED
+	stat CDATA #IMPLIED
+	value CDATA #REQUIRED>
+
+<!ELEMENT enchant (#PCDATA)>
+<!ATTLIST enchant
+	order CDATA #REQUIRED
+	stat CDATA #REQUIRED
+	value CDATA #REQUIRED>
+
+<!ELEMENT enchant4_skill (#PCDATA)>
+<!ATTLIST enchant4_skill
+	id CDATA #REQUIRED
+	level CDATA #REQUIRED>
+
+<!ELEMENT skills (skill)*>
+<!ELEMENT skill (#PCDATA)>
+<!ATTLIST skill
+	id CDATA #REQUIRED
+	level CDATA #REQUIRED>
+
+<!ELEMENT triggers (trigger)*>
+<!ELEMENT trigger (#PCDATA)>
+<!ATTLIST trigger
+	id CDATA #REQUIRED
+	level CDATA #REQUIRED
+	type CDATA #REQUIRED
+	chance CDATA #REQUIRED
+	cancel_effects_on_remove CDATA #IMPLIED>

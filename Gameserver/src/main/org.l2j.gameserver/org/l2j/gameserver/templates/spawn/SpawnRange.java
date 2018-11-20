@@ -1,0 +1,12 @@
+package org.l2j.gameserver.templates.spawn;
+
+import org.l2j.gameserver.utils.Location;
+
+/**
+ * @author VISTALL
+ * @date 4:08/19.05.2011
+ */
+public interface SpawnRange
+{
+	Location getRandomLoc(int geoIndex);
+}

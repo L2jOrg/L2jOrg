@@ -1,0 +1,1159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="29001" name="Daily Present - VIP 1">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.etc_vip_present_i00"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29002" name="Daily Present - VIP 2">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.etc_vip_present_i01"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29003" name="Daily Present - VIP 3">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.etc_vip_present_i02"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29004" name="Daily Present - VIP 4">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.etc_vip_present_i03"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29005" name="Daily Present - VIP 5">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.etc_vip_present_i04"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29006" name="Daily Present - VIP 6">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.etc_vip_present_i05"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29007" name="Daily Present - VIP 1">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.etc_vip_present_i06"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29008" name="XP/SP Scroll">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_recall_exp_scroll"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<skills>
+			<skill id="55000" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="29009" name="XP/SP Scroll - Normal">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_recall_exp_scroll"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<skills>
+			<skill id="55000" level="2"/>
+		</skills>
+	</etcitem>
+	<etcitem id="29010" name="XP/SP Scroll - High">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_recall_exp_scroll"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<skills>
+			<skill id="55000" level="4"/>
+		</skills>
+	</etcitem>
+	<etcitem id="29011" name="1st Class Buff Scroll">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.etc_g_bm_buff_scroll_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<skills>
+			<skill id="55003" level="1"/>	<!--Свиток Эффектов 1-й Профессии-->
+		</skills>
+	</etcitem>
+	<etcitem id="29012" name="2nd Class Buff Scroll">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.etc_g_bm_buff_scroll_i01"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<skills>
+			<skill id="55004" level="2"/>	<!--Свиток Эффектов 2-й Профессии-->
+		</skills>
+	</etcitem>
+	<etcitem id="29013" name="Scroll: Hunter\'s Song">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.etc_g_bm_song_scroll_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="SCROLL"/>
+		<skills>
+			<skill id="269" level="2"/>
+		</skills>
+	</etcitem>
+	<etcitem id="29014" name="Scroll: Dance of Fire">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.etc_g_bm_dance_scroll_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="SCROLL"/>
+		<skills>
+			<skill id="274" level="2"/>
+		</skills>
+	</etcitem>
+	<etcitem id="29015" name="Scroll: Enchant Weapon (D-grade)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_scrl_of_ench_wp_d_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29016" name="Scroll: Enchant Armor (D-grade)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_scrl_of_ench_am_d_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29017" name="Scroll: Enchant Weapon (C-grade)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_scrl_of_ench_wp_c_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29018" name="Scroll: Enchant Armor (C-grade)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_scrl_of_ench_am_c_i00"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29019" name="Blessed Scroll: Enchant Weapon (D-grade)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_blessed_scrl_of_ench_wp_d_i01"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29020" name="Blessed Scroll: Enchant Armor (D-grade)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_blessed_scrl_of_ench_am_d_i01"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29021" name="Blessed Scroll: Enchant Weapon (C-grade)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_blessed_scrl_of_ench_wp_c_i02"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29022" name="Blessed Scroll: Enchant Armor (C-grade)">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_blessed_scrl_of_ench_am_c_i02"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29023" name="Mysterious No-grade Soulshot">
+		<set name="type" value="SOULSHOT"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.g_etc_soulshot_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<skills>
+			<skill id="9293" level="1"/>	<!--Чудесный Заряд Души (Без ранга)-->
+		</skills>
+	</etcitem>
+	<etcitem id="29024" name="Mysterious Blessed No-grade Spiritshot">
+		<set name="type" value="BLESSED_SPIRITSHOT"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="BranchIcon.Icon.g_etc_spiritshot_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<skills>
+			<skill id="9300" level="1"/>	<!--Чудесный Благ. Заряд Духа (Без ранга)-->
+		</skills>
+	</etcitem>
+	<etcitem id="29025" name="Mysterious Soulshot (D-grade)">
+		<set name="type" value="SOULSHOT"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_soulshot_d_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="D"/>
+		<skills>
+			<skill id="9294" level="1"/>	<!--Чудесный Заряд Души - Ранг D-->
+		</skills>
+	</etcitem>
+	<etcitem id="29026" name="Mysterious Blessed Spiritshot (D-grade)">
+		<set name="type" value="BLESSED_SPIRITSHOT"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_spiritshot_d_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="D"/>
+		<skills>
+			<skill id="9301" level="1"/>	<!--Чудесный Благ. Заряд Духа - Ранг D-->
+		</skills>
+	</etcitem>
+	<etcitem id="29027" name="Mysterious Soulshot (C-grade)">
+		<set name="type" value="SOULSHOT"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_soulshot_c_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="C"/>
+		<skills>
+			<skill id="9295" level="1"/>	<!--Чудесный Заряд Души - Ранг C-->
+		</skills>
+	</etcitem>
+	<etcitem id="29028" name="Mysterious Blessed Spiritshot (C-grade)">
+		<set name="type" value="BLESSED_SPIRITSHOT"/>
+		<set name="sellable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_spiritshot_c_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="C"/>
+		<skills>
+			<skill id="9302" level="1"/>	<!--Чудесный Благ. Заряд Духа - Ранг C-->
+		</skills>
+	</etcitem>
+	<etcitem id="29029" name="Blessed Scroll of Escape">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i01"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="SCROLL"/>
+		<set name="price" value="150000"/>
+		<skills>
+			<skill id="2036" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="29030" name="Blessed Scroll of Resurrection">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_scroll_of_resurrection_i01"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="SCROLL"/>
+		<skills>
+			<skill id="2049" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="29031" name="Quick Healing Potion">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_potion_gold_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="29032" name="Major Quick Healing Potion">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.etc_potion_gold_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<armor id="29033" name="Adventurer Hat - Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_explorer_hat_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="29034" name="Adventurer Hat - Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_explorer_hat_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="29035" name="Adventurer Hat - Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_explorer_hat_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="29036" name="Refined Romantic Chapeau: Red">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bm_romantic_chaperon_red"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="29037" name="Refined Angel Ring">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_angel_ring_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="29038" name="Refined Wizard Hat">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_magician_cap2_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="29039" name="Laborer Hat">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys.icon.br_people_cap_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="FACE"/>
+		</equip>
+	</armor>
+	<armor id="29040" name="Top Hat">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_magicial_cap_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="29041" name="Vigilante Hat">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_archer_hat_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="29042" name="Adventurer Hat - Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_explorer_hat_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="29043" name="Adventurer Hat - Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_explorer_hat_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="29044" name="Adventurer Hat - Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_explorer_hat_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="29045" name="Adventurer Hat - Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_explorer_hat_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="29046" name="Adventurer Hat - Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_explorer_hat_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="29047" name="Adventurer Hat - Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_explorer_hat_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="29048" name="Refined Romantic Chapeau: Red">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bm_romantic_chaperon_red"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="29049" name="Refined Angel Ring">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_angel_ring_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="29050" name="Adventurer Hat - Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_explorer_hat_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="29051" name="Adventurer Hat - Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_explorer_hat_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="29052" name="Adventurer Hat - Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_explorer_hat_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="29053" name="Adventurer Hat - Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_explorer_hat_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="29054" name="Adventurer Hat - Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_explorer_hat_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="29055" name="Adventurer Hat - Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_explorer_hat_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="29056" name="Adventurer Hat - Event">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_explorer_hat_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="29057" name="Agathion - Virgo">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="29058" name="Agathion - Virgo">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="29059" name="Agathion - Capricorn">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.accessary_lbracelet_sign_agathion_dec_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="29060" name="Agathion - Capricorn">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.accessary_lbracelet_sign_agathion_dec_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="29061" name="Agathion - Libra">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.accessary_sign_agathion_april_sep_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="29062" name="Agathion - Libra">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.accessary_sign_agathion_april_sep_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="29063" name="Agathion - Aries">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.accessory_lbracelet_march_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+		<skills>
+			<skill id="17613" level="1"/>
+			<skill id="3267" level="1"/>
+			<skill id="17625" level="1"/>
+		
+		</skills>
+	</armor>
+	<armor id="29064" name="Agathion - Aries">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.accessory_lbracelet_march_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="43200"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+		<skills>
+			<skill id="17613" level="1"/>
+			<skill id="3267" level="1"/>
+			<skill id="17625" level="1"/>
+		
+		</skills>
+	</armor>
+	<armor id="29065" name="Agathion - Taurus">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.accessary_lbracelet_sign_agathion_april_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="29066" name="Agathion - Taurus">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.accessary_lbracelet_sign_agathion_april_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="29067" name="Agathion - Leo">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.accessary_lbracelet_sign_agathion_july_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="29068" name="Agathion - Leo">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.accessary_lbracelet_sign_agathion_july_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="29069" name="Agathion - Gemini">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.accessary_lbracelet_sign_agathion_may_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="29070" name="Agathion - Gemini">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.accessary_lbracelet_sign_agathion_may_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="29071" name="Agathion - Scorpio">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.accessary_lbracelet_sign_agathion_oct_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="29072" name="Agathion - Scorpio">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.accessary_lbracelet_sign_agathion_oct_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="29073" name="Agathion - Aquarius">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.accessary_lbracelet_sign_agathion_jan_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="29074" name="Agathion - Aquarius">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.accessary_lbracelet_sign_agathion_jan_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="29075" name="Agathion - Pisces">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.accessary_lbracelet_sign_agathion_feb_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="29076" name="Agathion - Pisces">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.accessary_lbracelet_sign_agathion_feb_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="29077" name="Agathion - Sagittarius">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.accessary_lbracelet_sign_agathion_nov_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="29078" name="Agathion - Sagittarius">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.accessary_lbracelet_sign_agathion_nov_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="29079" name="Agathion - Cancer">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.accessary_lbracelet_sign_agathion_june_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="29080" name="Agathion - Cancer">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchIcon.Icon.accessary_lbracelet_sign_agathion_june_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<etcitem id="29081" name="Premium Dye of STR &lt;STR + 1 CON - 1&gt;">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_str_hena_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="29082" name="Premium Dye of STR &lt;STR + 1 DEX - 1&gt;">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_str_hena_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="29083" name="Premium Dye of CON &lt;CON + 1 STR - 1&gt;">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_con_hena_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="29084" name="Premium Dye of CON &lt;CON + 1 DEX - 1&gt;">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_con_hena_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="29085" name="Premium Dye of DEX &lt;DEX + 1 STR - 1&gt;">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_dex_hena_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="29086" name="Premium Dye of DEX &lt;DEX + 1 CON - 1&gt;">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_dex_hena_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="29087" name="Premium Dye of INT &lt;INT + 1 MEN - 1&gt;">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_int_hena_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="29088" name="Premium Dye of INT &lt;INT + 1 WIT - 1&gt;">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_int_hena_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="29089" name="Premium Dye of MEN &lt;MEN + 1 INT - 1&gt;">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_men_hena_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="29090" name="Premium Dye of MEN &lt;MEN + 1 WIT - 1&gt;">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_men_hena_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="29091" name="Premium Dye of WIT &lt;WIT + 1 INT - 1&gt;">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_wit_hena_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="29092" name="Premium Dye of WIT &lt;WIT + 1 MEN - 1&gt;">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_wit_hena_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="29093" name="Premium Dye of STR &lt;STR + 2 CON - 2&gt;">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_str_hena_i02"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="29094" name="Premium Dye of STR &lt;STR + 2 DEX - 2&gt;">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_str_hena_i02"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="29095" name="Premium Dye of CON &lt;CON + 2 STR - 2&gt;">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_con_hena_i02"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="29096" name="Premium Dye of CON &lt;CON + 2 DEX - 2&gt;">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_con_hena_i02"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="29097" name="Premium Dye of DEX &lt;DEX + 2 STR - 2&gt;">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_dex_hena_i02"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="29098" name="Premium Dye of DEX &lt;DEX + 2 CON - 2&gt;">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_dex_hena_i02"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+	<etcitem id="29099" name="Premium Dye of INT &lt;INT + 2 MEN - 2&gt;">
+		<set name="sellable" value="false"/>
+		<set name="icon" value="icon.etc_int_hena_i02"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="DYE"/>
+	</etcitem>
+</list>

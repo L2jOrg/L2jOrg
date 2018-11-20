@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "zone.dtd">
+<list>
+	<zone name="[mother_tree_start_zone]" type="mother_tree" >
+		<set name="affect_race" value="elf"/>
+		<set name="entering_message_no" value="114"/>
+		<set name="leaving_message_no" value="115"/>
+		<polygon>
+			<coords loc="45889 41890"/>
+			<coords loc="45277 41672"/>
+			<coords loc="45028 41478"/>
+			<coords loc="44809 41230"/>
+			<coords loc="44522 40689"/>
+			<coords loc="44501 39970"/>
+			<coords loc="44725 39407"/>
+			<coords loc="44930 39145"/>
+			<coords loc="45447 38764"/>
+			<coords loc="46073 38618"/>
+			<coords loc="46710 38716"/>
+			<coords loc="47255 39049"/>
+			<coords loc="47743 39834"/>
+			<coords loc="47772 40568"/>
+			<coords loc="47545 41125"/>
+			<coords loc="47108 41599"/>
+			<coords loc="46531 41868"/>
+		</polygon>
+	</zone>
+	<zone name="[mother_tree_town]" type="mother_tree" >
+		<set name="affect_race" value="elf"/>
+		<set name="entering_message_no" value="114"/>
+		<set name="leaving_message_no" value="115"/>
+		<polygon>
+			<coords loc="45234 49892"/>
+			<coords loc="45117 49826"/>
+			<coords loc="45031 49722"/>
+			<coords loc="44986 49597"/>
+			<coords loc="44985 49462"/>
+			<coords loc="45032 49336"/>
+			<coords loc="45116 49233"/>
+			<coords loc="45233 49165"/>
+			<coords loc="45365 49143"/>
+			<coords loc="45498 49166"/>
+			<coords loc="45614 49235"/>
+			<coords loc="45700 49336"/>
+			<coords loc="45746 49462"/>
+			<coords loc="45747 49596"/>
+			<coords loc="45699 49723"/>
+			<coords loc="45614 49825"/>
+			<coords loc="45498 49893"/>
+			<coords loc="45366 49914"/>
+		</polygon>
+	</zone>
+	<zone name="[20_19_worldtree]" type="mother_tree" >
+		<set name="affect_race" value="elf"/>
+		<set name="entering_message_no" value="114"/>
+		<set name="leaving_message_no" value="115"/>
+		<polygon>
+			<coords loc="21101 50538"/>
+			<coords loc="21511 50683"/>
+			<coords loc="21642 51005"/>
+			<coords loc="21583 51349"/>
+			<coords loc="21255 51581"/>
+			<coords loc="20852 51473"/>
+			<coords loc="20627 51121"/>
+			<coords loc="20728 50743"/>
+		</polygon>
+	</zone>
+	<zone name="[20_20_worldtree]" type="mother_tree" >
+		<set name="affect_race" value="elf"/>
+		<set name="entering_message_no" value="114"/>
+		<set name="leaving_message_no" value="115"/>
+		<polygon>
+			<coords loc="25084 81616"/>
+			<coords loc="25073 81892"/>
+			<coords loc="24948 81895"/>
+			<coords loc="24826 81866"/>
+			<coords loc="24716 81788"/>
+			<coords loc="24637 81623"/>
+			<coords loc="24637 81428"/>
+			<coords loc="25076 81428"/>
+		</polygon>
+	</zone>
+	<zone name="[21_20_worldtree]" type="mother_tree" >
+		<set name="affect_race" value="elf"/>
+		<set name="entering_message_no" value="114"/>
+		<set name="leaving_message_no" value="115"/>
+		<polygon>
+			<coords loc="57755 85802"/>
+			<coords loc="57974 86079"/>
+			<coords loc="57953 86404"/>
+			<coords loc="57711 86683"/>
+			<coords loc="57324 86686"/>
+			<coords loc="57105 86436"/>
+			<coords loc="57088 86061"/>
+			<coords loc="57404 85785"/>
+		</polygon>
+	</zone>
+	<zone name="[devil_healing_zone]" type="mother_tree" >
+		<set name="affect_race" value="all"/>
+		<set name="hp_regen_bonus" value="2"/>
+		<set name="mp_regen_bonus" value="1"/>
+		<set name="entering_message_no" value="1054"/>
+		<set name="leaving_message_no" value="1055"/>
+		<polygon>
+			<coords loc="41520 205163"/>
+			<coords loc="44448 205623"/>
+			<coords loc="44352 208957"/>
+			<coords loc="42813 208983"/>
+			<coords loc="41473 207893"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_main_event_17_20_01]" type="mother_tree" >
+		<set name="affect_race" value="all"/>
+		<set name="hp_regen_bonus" value="0"/>
+		<set name="mp_regen_bonus" value="2"/>
+		<set name="entering_message_no" value="1054"/>
+		<set name="leaving_message_no" value="1055"/>
+		<polygon>
+			<coords loc="-79956 84556"/>
+			<coords loc="-79832 84620"/>
+			<coords loc="-79824 84772"/>
+			<coords loc="-79956 84844"/>
+			<coords loc="-80080 84772"/>
+			<coords loc="-80076 84620"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_main_event_17_20_04]" type="mother_tree" >
+		<set name="affect_race" value="all"/>
+		<set name="hp_regen_bonus" value="0"/>
+		<set name="mp_regen_bonus" value="2"/>
+		<set name="entering_message_no" value="1054"/>
+		<set name="leaving_message_no" value="1055"/>
+		<polygon>
+			<coords loc="-76936 85164"/>
+			<coords loc="-76820 85232"/>
+			<coords loc="-76816 85380"/>
+			<coords loc="-76948 85444"/>
+			<coords loc="-77068 85376"/>
+			<coords loc="-77068 85236"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_main_event_17_20_05]" type="mother_tree" >
+		<set name="affect_race" value="all"/>
+		<set name="hp_regen_bonus" value="0"/>
+		<set name="mp_regen_bonus" value="3"/>
+		<set name="entering_message_no" value="1054"/>
+		<set name="leaving_message_no" value="1055"/>
+		<polygon>
+			<coords loc="-74924 87012"/>
+			<coords loc="-74784 87008"/>
+			<coords loc="-74712 87132"/>
+			<coords loc="-74780 87256"/>
+			<coords loc="-74924 87260"/>
+			<coords loc="-75000 87140"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_main_event_17_20_03]" type="mother_tree" >
+		<set name="affect_race" value="all"/>
+		<set name="hp_regen_bonus" value="0"/>
+		<set name="mp_regen_bonus" value="3"/>
+		<set name="entering_message_no" value="1054"/>
+		<set name="leaving_message_no" value="1055"/>
+		<polygon>
+			<coords loc="-77200 88820"/>
+			<coords loc="-77076 88896"/>
+			<coords loc="-77076 89040"/>
+			<coords loc="-77204 89108"/>
+			<coords loc="-77328 89044"/>
+			<coords loc="-77328 88892"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_main_event_17_20_02]" type="mother_tree" >
+		<set name="affect_race" value="all"/>
+		<set name="hp_regen_bonus" value="0"/>
+		<set name="mp_regen_bonus" value="4"/>
+		<set name="entering_message_no" value="1054"/>
+		<set name="leaving_message_no" value="1055"/>
+		<polygon>
+			<coords loc="-80204 88220"/>
+			<coords loc="-80080 88288"/>
+			<coords loc="-80080 88428"/>
+			<coords loc="-80208 88504"/>
+			<coords loc="-80336 88428"/>
+			<coords loc="-80328 88292"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_main_event_17_21_01]" type="mother_tree" >
+		<set name="affect_race" value="all"/>
+		<set name="hp_regen_bonus" value="0"/>
+		<set name="mp_regen_bonus" value="2"/>
+		<set name="entering_message_no" value="1054"/>
+		<set name="leaving_message_no" value="1055"/>
+		<polygon>
+			<coords loc="-78796 109452"/>
+			<coords loc="-78804 109608"/>
+			<coords loc="-78924 109672"/>
+			<coords loc="-79056 109600"/>
+			<coords loc="-79056 109456"/>
+			<coords loc="-78932 109380"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_main_event_17_21_02]" type="mother_tree" >
+		<set name="affect_race" value="all"/>
+		<set name="hp_regen_bonus" value="0"/>
+		<set name="mp_regen_bonus" value="2"/>
+		<set name="entering_message_no" value="1054"/>
+		<set name="leaving_message_no" value="1055"/>
+		<polygon>
+			<coords loc="-75920 109992"/>
+			<coords loc="-75792 110068"/>
+			<coords loc="-75792 110220"/>
+			<coords loc="-75912 110288"/>
+			<coords loc="-76048 110212"/>
+			<coords loc="-76044 110068"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_main_event_17_21_05]" type="mother_tree" >
+		<set name="affect_race" value="all"/>
+		<set name="hp_regen_bonus" value="0"/>
+		<set name="mp_regen_bonus" value="3"/>
+		<set name="entering_message_no" value="1054"/>
+		<set name="leaving_message_no" value="1055"/>
+		<polygon>
+			<coords loc="-73900 111844"/>
+			<coords loc="-73752 111840"/>
+			<coords loc="-73688 111976"/>
+			<coords loc="-73760 112092"/>
+			<coords loc="-73904 112092"/>
+			<coords loc="-73976 111968"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_main_event_17_21_03]" type="mother_tree" >
+		<set name="affect_race" value="all"/>
+		<set name="hp_regen_bonus" value="0"/>
+		<set name="mp_regen_bonus" value="3"/>
+		<set name="entering_message_no" value="1054"/>
+		<set name="leaving_message_no" value="1055"/>
+		<polygon>
+			<coords loc="-76172 113656"/>
+			<coords loc="-76052 113728"/>
+			<coords loc="-76048 113872"/>
+			<coords loc="-76172 113944"/>
+			<coords loc="-76308 113876"/>
+			<coords loc="-76304 113728"/>
+		</polygon>
+	</zone>
+	<zone name="[ssq_main_event_17_21_04]" type="mother_tree" >
+		<set name="affect_race" value="all"/>
+		<set name="hp_regen_bonus" value="0"/>
+		<set name="mp_regen_bonus" value="4"/>
+		<set name="entering_message_no" value="1054"/>
+		<set name="leaving_message_no" value="1055"/>
+		<polygon>
+			<coords loc="-79184 113040"/>
+			<coords loc="-79060 113116"/>
+			<coords loc="-79052 113268"/>
+			<coords loc="-79184 113336"/>
+			<coords loc="-79304 113260"/>
+			<coords loc="-79304 113116"/>
+		</polygon>
+	</zone>
+</list>

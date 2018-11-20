@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="100">	<!--Виртуоз-->
+			<skill id="402" level="11" name="Арест(Arrest)" cost="10200000" min_level="76"/>
+			<skill id="1405" level="3" name="Божественное Вдохновение(Divine Inspiration)" item_id="8620" cost="10200000" min_level="76"/>
+			<skill id="1405" level="4" name="Божественное Вдохновение(Divine Inspiration)" item_id="8621" cost="10200000" min_level="76"/>
+			<skill id="217" level="46" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="10200000" min_level="76"/>
+			<skill id="147" level="52" name="Магическое Сопротивление(M. Def.)" cost="10200000" min_level="76"/>
+			<skill id="102" level="17" name="Опутать(Entangle)" cost="10200000" min_level="76"/>
+			<skill id="1834" level="1" name="Оседлать Пегаса(Mount Pegasus)" item_id="90039" min_level="76"/>
+			<skill id="15" level="53" name="Очарование(Charm)" cost="10200000" min_level="76"/>
+			<skill id="98" level="6" name="Симфония Меча(Sword Symphony)" cost="10200000" min_level="76"/>
+			<skill id="986" level="1" name="Смертельный Ритм(Deadly Strike)" cost="10200000" min_level="76"/>
+			<skill id="217" level="47" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="10200000" min_level="77"/>
+			<skill id="147" level="53" name="Магическое Сопротивление(M. Def.)" cost="10200000" min_level="77"/>
+			<skill id="349" level="1" name="Песня Возрождения(Song of Renewal)" item_id="90090" cost="10200000" min_level="77"/>
+			<skill id="986" level="2" name="Смертельный Ритм(Deadly Strike)" cost="10200000" min_level="77"/>
+			<skill id="402" level="12" name="Арест(Arrest)" cost="23800000" min_level="78"/>
+			<skill id="217" level="48" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="23800000" min_level="78"/>
+			<skill id="147" level="54" name="Магическое Сопротивление(M. Def.)" cost="23800000" min_level="78"/>
+			<skill id="102" level="18" name="Опутать(Entangle)" cost="23800000" min_level="78"/>
+			<skill id="15" level="54" name="Очарование(Charm)" cost="23800000" min_level="78"/>
+			<skill id="364" level="1" name="Песня Чемпиона(Champion Song)" item_id="90091" cost="23800000" min_level="78"/>
+			<skill id="986" level="3" name="Смертельный Ритм(Deadly Strike)" cost="23800000" min_level="78"/>
+			<skill id="437" level="1" name="Песня Тишины(Song of Silence)" item_id="90092" cost="23800000" min_level="79"/>
+			<skill id="914" level="1" name="Песня Очищения(Song of Purification)" item_id="90093" cost="23800000" min_level="80"/>
+		</class>
+	</normal_skill_tree>
+</list>

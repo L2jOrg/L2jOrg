@@ -1,0 +1,1937 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="55000" levels="4" name="XP/SP Scroll">
+		<table name="#abnormal_level">1 2 3 4</table>
+		<table name="#exp_rate_multiplier">0.3 0.3 0.4 1</table>
+		<table name="#sp_rate_multiplier">0.3 0.3 0.4 1</table>
+		<set name="icon" value="icon.etc_recall_exp_scroll"/>
+		<set name="reuseDelay" value="1200000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="vote"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSelfDispellable" value="false"/>
+		<set name="isPreservedOnDeath" value="true"/>
+		<set name="buff_slot_type" value="-1"/>
+		<for>
+			<effect>
+				<add stat="exp_rate_multiplier" value="#exp_rate_multiplier"/>
+				<add stat="sp_rate_multiplier" value="#exp_rate_multiplier"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55001" levels="1" name="Blessed Scroll of Escape">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="200"/>		
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="29517"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="55002" levels="1" name="Blessed Scroll of Resurrection">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="1000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55003" levels="1" name="1st Class Buff Scroll">
+		<set name="icon" value="BranchIcon.Icon.etc_g_bm_buff_scroll_i00"/>
+		<set name="hitTime" value="4000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1040"/>	<!--Щит 2 Ур.-->
+				<def name="effects_skill_level" value="5"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1068"/>	<!--Могущество 2 УР.-->
+				<def name="effects_skill_level" value="5"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1078"/>	<!--Концентрация 2 УР.-->
+				<def name="effects_skill_level" value="8"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1085"/>	<!--Проницательность 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1204"/>	<!--Легкая Походка 1 Ур.-->
+				<def name="effects_skill_level" value="3"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1077"/>	<!--Фокусировка 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1087"/>	<!--Проворство 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1059"/>	<!--Воодушевление 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55004" levels="2" name="2nd Class Buff Scroll">
+		<set name="icon" value="BranchIcon.Icon.etc_g_bm_buff_scroll_i01"/>
+		<set name="hitTime" value="4000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1040"/>	<!--Щит 3 Ур.-->
+				<def name="effects_skill_level" value="6"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1085"/>	<!--Проницательность 2 Ур.-->
+				<def name="effects_skill_level" value="5"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1204"/>	<!--Легкая Походка 2 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1077"/>	<!--Фокусировка 2 Ур.-->
+				<def name="effects_skill_level" value="5"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1044"/>	<!--Регенерация 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1240"/>	<!--Наведение 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1242"/>	<!--Шепот Смерти 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1036"/>	<!--Магический Барьер 1 Ур.-->
+				<def name="effects_skill_level" value="3"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1045"/>	<!--Благословение Тела 1 Ур.-->
+				<def name="effects_skill_level" value="7"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1048"/>	<!--Благословение Души 1 Ур.-->
+				<def name="effects_skill_level" value="7"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1086"/>	<!--Ускорение 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1087"/>	<!--Проворство 2 Ур.-->
+				<def name="effects_skill_level" value="5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55005" levels="1" name="Scroll: Enchant Weapon (D-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55006" levels="1" name="Scroll: Enchant Armor (D-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55007" levels="1" name="Scroll: Enchant Weapon (C-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55008" levels="1" name="Scroll: Enchant Armor (C-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55009" levels="1" name="Blessed Scroll: Enchant Weapon (D-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55010" levels="1" name="Blessed Scroll: Enchant Weapon (C-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55011" levels="1" name="Blessed Scroll: Enchant Armor (D-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55012" levels="1" name="Blessed Scroll: Enchant Armor (C-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55013" levels="1" name="Blessed Scroll of Escape">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="200"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55014" levels="1" name="Blessed Scroll of Resurrection">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="1000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55015" levels="1" name="Quick Healing Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect instant="true" name="RestoreHP" value="435"/>
+		</for>
+	</skill>
+	<skill id="55016" levels="1" name="Major Quick Healing Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect instant="true" name="RestoreHP" value="1000"/>
+		</for>
+	</skill>
+	<skill id="55017" levels="1" name="Scroll of Escape: Talking Island Village">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55018" levels="2" name="Scroll of Escape: Elven Village">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55019" levels="3" name="Scroll of Escape: Dark Elf Village">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55020" levels="4" name="Scroll of Escape: Orc Village">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55021" levels="5" name="Scroll of Escape: Dwarven Village">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55022" levels="6" name="Scroll of Escape: Gludin Village">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55023" levels="7" name="Scroll of Escape: Town of Gludio">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="20000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55024" levels="1" name="VIP Level 1">
+		<set name="icon" value="BranchIcon.Icon.g_skill_vip1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55025" levels="1" name="VIP Level 2">
+		<set name="icon" value="BranchIcon.Icon.g_skill_vip2"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55026" levels="1" name="VIP Level 3">
+		<set name="icon" value="BranchIcon.Icon.g_skill_vip3"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55027" levels="1" name="VIP Level 4">
+		<set name="icon" value="BranchIcon.Icon.g_skill_vip4"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55028" levels="1" name="VIP Level 5">
+		<set name="icon" value="BranchIcon.Icon.g_skill_vip5"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55029" levels="1" name="VIP Level 6">
+		<set name="icon" value="BranchIcon.Icon.g_skill_vip6"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55030" levels="1" name="VIP Level 7">
+		<set name="icon" value="BranchIcon.Icon.g_skill_vip7"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55031" levels="1" name="Report Status">
+		<set name="icon" value="icon.skill6038"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55032" levels="1" name="Life Hazard">
+		<set name="icon" value="icon.skill_agathion_special"/>
+		<set name="reuseDelay" value="43200000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="3000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55033" levels="1" name="Blessed Scroll of Escape">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="200"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55034" levels="1" name="Blessed Scroll of Resurrection">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="1000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55035" levels="1" name="1st Class Buff Scroll">
+		<set name="icon" value="BranchIcon.Icon.etc_g_bm_buff_scroll_i00"/>
+		<set name="hitTime" value="4000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1040"/>	<!--Щит 2 Ур.-->
+				<def name="effects_skill_level" value="5"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1068"/>	<!--Могущество 2 УР.-->
+				<def name="effects_skill_level" value="5"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1078"/>	<!--Концентрация 2 УР.-->
+				<def name="effects_skill_level" value="8"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1085"/>	<!--Проницательность 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1204"/>	<!--Легкая Походка 1 Ур.-->
+				<def name="effects_skill_level" value="3"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1077"/>	<!--Фокусировка 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1087"/>	<!--Проворство 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1059"/>	<!--Воодушевление 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55036" levels="2" name="2nd Class Buff Scroll">
+		<set name="icon" value="BranchIcon.Icon.etc_g_bm_buff_scroll_i01"/>
+		<set name="hitTime" value="4000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1040"/>	<!--Щит 3 Ур.-->
+				<def name="effects_skill_level" value="6"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1085"/>	<!--Проницательность 2 Ур.-->
+				<def name="effects_skill_level" value="5"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1204"/>	<!--Легкая Походка 2 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1077"/>	<!--Фокусировка 2 Ур.-->
+				<def name="effects_skill_level" value="5"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1044"/>	<!--Регенерация 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1240"/>	<!--Наведение 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1242"/>	<!--Шепот Смерти 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1036"/>	<!--Магический Барьер 1 Ур.-->
+				<def name="effects_skill_level" value="3"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1045"/>	<!--Благословение Тела 1 Ур.-->
+				<def name="effects_skill_level" value="7"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1048"/>	<!--Благословение Души 1 Ур.-->
+				<def name="effects_skill_level" value="7"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1086"/>	<!--Ускорение 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1087"/>	<!--Проворство 2 Ур.-->
+				<def name="effects_skill_level" value="5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55037" levels="1" name="Quick Healing Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect instant="true" name="RestoreHP" value="435"/>
+		</for>
+	</skill>
+	<skill id="55038" levels="1" name="Major Quick Healing Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect instant="true" name="RestoreHP" value="1000"/>
+		</for>
+	</skill>
+	<skill id="55039" levels="1" name="Chronicle Chest">
+		<set name="icon" value="icon.new_user_box"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55040" levels="1" name="Greater Scion Ring">
+		<set name="icon" value="icon.event_classic_ring"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="maxHp" value="1.1"/>
+			<mul stat="regHp" value="1.1"/>
+			<mul stat="pAtkSpd" value="1.05"/>	<!--TODO: Check value.-->
+			<mul stat="mAtkSpd" value="1.05"/>	<!--TODO: Check value.-->
+			<add stat="pAccCombat" value="1"/>
+			<add stat="mAccCombat" value="1"/>
+			<add stat="maxLoad" value="5000"/>
+		</for>
+	</skill>
+	<skill id="55041" levels="1" name="XP/SP Scroll">
+		<set name="icon" value="icon.etc_recall_exp_scroll"/>
+		<set name="reuseDelay" value="1800000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="vote"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSelfDispellable" value="false"/>
+		<set name="isPreservedOnDeath" value="true"/>
+		<set name="buff_slot_type" value="-1"/>
+		<for>
+			<effect>
+				<add stat="exp_rate_multiplier" value="0.2"/>
+				<add stat="sp_rate_multiplier" value="0.2"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55042" levels="1" name="Attendance XP Rune">
+		<set name="icon" value="br_cashtex.item.br_cash_rune_of_exp_i00"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="exp_rate_multiplier" value="0.1"/>
+			<add stat="sp_rate_multiplier" value="0.1"/>
+		</for>
+	</skill>
+	<skill id="55043" levels="1" name="Rare Accessory Box">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="29578"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="100">
+				<item id="49509" min_count="1" max_count="1"/> <!--Queen Ant's Ring--> 
+			</group>
+			<group chance="100">
+				<item id="49493" min_count="1" max_count="1"/> <!--Orfen's Earring--> 
+			</group>
+			<group chance="100">
+				<item id="49477" min_count="1" max_count="1"/> <!--Ring of Core"--> 
+			</group>
+		</restoration>
+	</skill>
+	<skill id="55044" levels="1"  name="Lineage II Chest">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="1.0">
+				<item id="951" min_count="1" max_count="1"/> <!--Свиток Модифицировать Оружие С-->
+			</group>
+			<group chance="1.0">
+				<item id="955" min_count="1" max_count="1"/> <!--Свиток Модифицировать Оружие D-->
+			</group>
+			<group chance="1.0">
+				<item id="2308" min_count="1" max_count="1"/> <!--Рецепт: Проклятый Кинжал 100%-->
+			</group>
+			<group chance="1.0">
+				<item id="2070" min_count="1" max_count="1"/> <!--Клинок Проклятого Кинжала-->
+			</group>
+			<group chance="1.0">
+				<item id="2298" min_count="1" max_count="1"/> <!--Рецепт: Громовержец 100%-->
+			</group>
+			<group chance="1.0">
+				<item id="2060" min_count="1" max_count="1"/> <!--Клинок Громовержца-->
+			</group>
+			<group chance="1.0">
+				<item id="2326" min_count="1" max_count="1"/> <!--Рецепт: Рог Славы-->
+			</group>
+			<group chance="1.0">
+				<item id="2088" min_count="1" max_count="1"/> <!--Часть Рога Славы-->
+			</group>
+			<group chance="1.0">
+				<item id="2297" min_count="1" max_count="1"/> <!--Рецепт: Фламберг-->
+			</group>
+			<group chance="1.0">
+				<item id="2059" min_count="1" max_count="1"/> <!--Клинок Фламберга-->
+			</group>
+			<group chance="1.0">
+				<item id="2301" min_count="1" max_count="1"/> <!--Рецепт: Боевой Топор-->
+			</group>
+			<group chance="1.0">
+				<item id="2063" min_count="1" max_count="1"/> <!--Навершие Боевого Топора-->
+			</group>
+			<group chance="1.0">
+				<item id="2306" min_count="1" max_count="1"/> <!--Рецепт: Жезл Веры-->
+			</group>
+			<group chance="1.0">
+				<item id="2068" min_count="1" max_count="1"/> <!--Древко Жезла Веры-->
+			</group>
+			<group chance="1.0">
+				<item id="2305" min_count="1" max_count="1"/> <!--Рецепт: Кристальный Посох-->
+			</group>
+			<group chance="1.0">
+				<item id="2067" min_count="1" max_count="1"/> <!--Навершие Кристального Посоха-->
+			</group>
+			<group chance="1.0">
+				<item id="2313" min_count="1" max_count="1"/> <!--Рецепт: Глефа Орков-->
+			</group>
+			<group chance="1.0">
+				<item id="2075" min_count="1" max_count="1"/> <!--Клинок Глефы Орков-->
+			</group>
+			<group chance="1.0">
+				<item id="2311" min_count="1" max_count="1"/> <!--Рецепт: Чакра-->
+			</group>
+			<group chance="1.0">
+				<item id="2073" min_count="1" max_count="1"/> <!--Лезвие Чакры-->
+			</group>
+			<group chance="1.0">
+				<item id="4440" min_count="1" max_count="1"/> <!--Рецепт: Кастет-->
+			</group>
+			<group chance="1.0">
+				<item id="4438" min_count="1" max_count="1"/> <!--Лезвие Кастета-->
+			</group>
+			<group chance="1.0">
+				<item id="2266" min_count="1" max_count="1"/> <!--Рецепт: Нож Шилен-->
+			</group>
+			<group chance="1.0">
+				<item id="2028" min_count="1" max_count="1"/> <!--Лезвие Ножа Шилен-->
+			</group>
+			<group chance="1.0">
+				<item id="2272" min_count="1" max_count="1"/> <!--Рецепт: Меч Революции-->
+			</group>
+			<group chance="1.0">
+				<item id="2034" min_count="1" max_count="1"/> <!--Клинок Меча Революции-->
+			</group>
+			<group chance="1.0">
+				<item id="2283" min_count="1" max_count="1"/> <!--Рецепт: Синий Кристальный Череп-->
+			</group>
+			<group chance="1.0">
+				<item id="2045" min_count="1" max_count="1"/> <!--Часть Синего Кристального Черепа-->
+			</group>
+			<group chance="1.0">
+				<item id="2285" min_count="1" max_count="1"/> <!--Рецепт: Клеймор-->
+			</group>
+			<group chance="1.0">
+				<item id="2047" min_count="1" max_count="1"/> <!--Клинок Клеймора-->
+			</group>
+			<group chance="1.0">
+				<item id="2274" min_count="1" max_count="1"/> <!--Рецепт: Череполом-->
+			</group>
+			<group chance="1.0">
+				<item id="2036" min_count="1" max_count="1"/> <!--Навершие Череполома-->
+			</group>
+			<group chance="1.0">
+				<item id="2289" min_count="1" max_count="1"/> <!--Рецепт: Посох Жизни-->
+			</group>
+			<group chance="1.0">
+				<item id="2051" min_count="1" max_count="1"/> <!--Навершие Посоха Жизни-->
+			</group>
+			<group chance="1.0">
+				<item id="2287" min_count="1" max_count="1"/> <!--Рецепт: Молото Атубы-->
+			</group>
+			<group chance="1.0">
+				<item id="2049" min_count="1" max_count="1"/> <!--Навершие Молота Атубы-->
+			</group>
+			<group chance="1.0">
+				<item id="2279" min_count="1" max_count="1"/> <!--Рецепт: Молото Смерти-->
+			</group>
+			<group chance="1.0">
+				<item id="2041" min_count="1" max_count="1"/> <!--Навершие Молота Смерти-->
+			</group>
+			<group chance="1.0">
+				<item id="2267" min_count="1" max_count="1"/> <!--Рецепт: Гастрафет-->
+			</group>
+			<group chance="1.0">
+				<item id="2029" min_count="1" max_count="1"/> <!--Древко Гастрафета-->
+			</group>
+			<group chance="1.0">
+				<item id="2277" min_count="1" max_count="1"/> <!--Рецепт: Бичхва-->
+			</group>
+			<group chance="1.0">
+				<item id="2039" min_count="1" max_count="1"/> <!--Лезвие Бичхвы-->
+			</group>
+			<group chance="1.0">
+				<item id="239" min_count="1" max_count="1"/> <!--Нож Мистика-->
+			</group>
+			<group chance="1.0">
+				<item id="128" min_count="1" max_count="1"/> <!--Меч Рыцаря-->
+			</group>
+			<group chance="1.0">
+				<item id="143" min_count="1" max_count="1"/> <!--Меч Мистика-->
+			</group>
+			<group chance="1.0">
+				<item id="2530" min_count="1" max_count="1"/> <!--Полуторный Меч* Меч Эльфов-->
+			</group>
+			<group chance="1.0">
+				<item id="124" min_count="1" max_count="1"/> <!--Двуручный Меч-->
+			</group>
+			<group chance="1.0">
+				<item id="157" min_count="1" max_count="1"/> <!--Шипованная Дубина-->
+			</group>
+			<group chance="1.0">
+				<item id="181" min_count="1" max_count="1"/> <!--Булава Мага-->
+			</group>
+			<group chance="1.0">
+				<item id="185" min_count="1" max_count="1"/> <!--Посох Маны-->
+			</group>
+			<group chance="1.0">
+				<item id="293" min_count="1" max_count="1"/> <!--Молот Войны-->
+			</group>
+			<group chance="1.0">
+				<item id="275" min_count="1" max_count="1"/> <!--Длинный Лук-->
+			</group>
+			<group chance="1.0">
+				<item id="260" min_count="1" max_count="1"/> <!--Трехгранный Джамадхар-->
+			</group>
+			<group chance="1.0">
+				<item id="222" min_count="1" max_count="1"/> <!--Трехгранный Кинжал-->
+			</group>
+			<group chance="1.0">
+				<item id="69" min_count="1" max_count="1"/> <!--Полуторный Меч-->
+			</group>
+			<group chance="1.0">
+				<item id="314" min_count="1" max_count="1"/> <!--Доказательство Возмездия-->
+			</group>
+			<group chance="1.0">
+				<item id="2517" min_count="1" max_count="1"/> <!--Сабля*Полуторный Меч-->
+			</group>
+			<group chance="1.0">
+				<item id="7880" min_count="1" max_count="1"/> <!--Стальной Меч-->
+			</group>
+			<group chance="1.0">
+				<item id="167" min_count="1" max_count="1"/> <!--Кирка-->
+			</group>
+			<group chance="1.0">
+				<item id="180" min_count="1" max_count="1"/> <!--Булава Правосудия-->
+			</group>
+			<group chance="1.0">
+				<item id="183" min_count="1" max_count="1"/> <!--Посох Мистика-->
+			</group>
+			<group chance="1.0">
+				<item id="292" min_count="1" max_count="1"/> <!--Гизарма-->
+			</group>
+			<group chance="1.0">
+				<item id="277" min_count="1" max_count="1"/> <!--Лук Темных Эльфов-->
+			</group>
+			<group chance="1.0">
+				<item id="259" min_count="1" max_count="1"/> <!--Джамадхар-->
+			</group>
+			<group chance="2.0">
+				<item id="1893" min_count="1" max_count="1"/> <!--Орихарукон-->
+			</group>
+			<group chance="2.0">
+				<item id="1887" min_count="1" max_count="1"/> <!--Очищенный Лак-->
+			</group>
+			<group chance="2.0">
+				<item id="1890" min_count="1" max_count="1"/> <!--Мифриловый Сплав-->
+			</group>
+			<group chance="2.0">
+				<item id="1891" min_count="1" max_count="1"/> <!--Заготовка Ремесленника-->
+			</group>
+			<group chance="2.0">
+				<item id="1875" min_count="1" max_count="1"/> <!--Камень Чистоты-->
+			</group>
+			<group chance="2.0">
+				<item id="1874" min_count="1" max_count="1"/> <!--Орихаруконовая Руда-->
+			</group>
+			<group chance="2.0">
+				<item id="1885" min_count="1" max_count="1"/> <!--Качественная Замша-->
+			</group>
+			<group chance="2.0">
+				<item id="1877" min_count="1" max_count="1"/> <!--Адамантитовый Слиток-->
+			</group>
+			<group chance="2.0">
+				<item id="1883" min_count="1" max_count="1"/> <!--Стальная Заготовка-->
+			</group>
+			<group chance="3.0">
+				<item id="1880" min_count="1" max_count="1"/> <!--Сталь-->
+			</group>
+			<group chance="2.0">
+				<item id="1889" min_count="1" max_count="1"/> <!--Прочный Шнурок-->
+			</group>
+			<group chance="2.0">
+				<item id="1879" min_count="1" max_count="1"/> <!--Кокс-->
+			</group>
+			<group chance="2.0">
+				<item id="1876" min_count="1" max_count="1"/> <!--Мифриловая Руда-->
+			</group>
+			<group chance="2.0">
+				<item id="1872" min_count="1" max_count="1"/> <!--Кость Животного-->
+			</group>
+			<group chance="1.0">
+				<item id="1865" min_count="1" max_count="1"/> <!--Лак-->
+			</group>
+			<group chance="1.0">
+				<item id="1868" min_count="1" max_count="1"/> <!--Нитки-->
+			</group>
+			<group chance="1.0">
+				<item id="1878" min_count="1" max_count="1"/> <!--Прочная Веревка-->
+			</group>
+			<group chance="1.0">
+				<item id="1871" min_count="1" max_count="1"/> <!--Древесный Уголь-->
+			</group>
+			<group chance="1.0">
+				<item id="1870" min_count="1" max_count="1"/> <!--Уголь-->
+			</group>
+			<group chance="1.0">
+				<item id="1869" min_count="1" max_count="1"/> <!--Железная Руда-->
+			</group>
+			
+		</restoration>
+	</skill>
+	<skill id="55045" levels="1"  name="Chronicle Chest">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="1.0">
+				<item id="952" min_count="1" max_count="1"/> <!--Свиток Модифицировать Доспех C-->
+			</group>
+			<group chance="1.0">
+				<item id="956" min_count="1" max_count="1"/> <!--Свиток Модифицировать Доспех D-->
+			</group>
+			<group chance="1.0">
+				<item id="2206" min_count="1" max_count="1"/> <!--Рецепт: Укрепленная Мифриловая Рубаха-->
+			</group>
+			<group chance="1.0">
+				<item id="1961" min_count="1" max_count="1"/> <!--Материал для Укрепленной Мифриловой Рубахи-->
+			</group>
+			<group chance="1.0">
+				<item id="2988" min_count="1" max_count="1"/> <!--Рецепт: Укрепленные Мифриловые Набедренники-->
+			</group>
+			<group chance="1.0">
+				<item id="2935" min_count="1" max_count="1"/> <!--Часть Укрепленный Мифриловых Набедренников-->
+			</group>
+			<group chance="1.0">
+				<item id="2995" min_count="1" max_count="1"/> <!--Рецепт: Укрепленные Мифриловые Перчатки-->
+			</group>
+			<group chance="1.0">
+				<item id="2942" min_count="1" max_count="1"/> <!--Модель Укрепленных Мифриловых Перчаток-->
+			</group>
+			<group chance="1.0">
+				<item id="2203" min_count="1" max_count="1"/> <!--Рецепт: Укрепленных Мифриловых Сапог-->
+			</group>
+			<group chance="1.0">
+				<item id="1958" min_count="1" max_count="1"/> <!--Модель Укрепленных Мифриловых Сапог-->
+			</group>
+			<group chance="1.0">
+				<item id="2211" min_count="1" max_count="1"/> <!--Рецепт: Латный Кожанный Доспех-->
+			</group>
+			<group chance="1.0">
+				<item id="1966" min_count="1" max_count="1"/> <!--Часть Латного Кожанного Доспеха-->
+			</group>
+			<group chance="1.0">
+				<item id="2212" min_count="1" max_count="1"/> <!--Рецепт: Латные Кожанные Набедренники-->
+			</group>
+			<group chance="1.0">
+				<item id="1967" min_count="1" max_count="1"/> <!--Материал Латные Кожанные Набедренники-->
+			</group>
+			<group chance="1.0">
+				<item id="2999" min_count="1" max_count="1"/> <!--Рецепт: Латные Кожанные Перчатки-->
+			</group>
+			<group chance="1.0">
+				<item id="2946" min_count="1" max_count="1"/> <!--Выкройка Латных Кожанных Перчаток-->
+			</group>
+			<group chance="1.0">
+				<item id="2992" min_count="1" max_count="1"/> <!--Рецепт: Латные Кожанные Сапоги-->
+			</group>
+			<group chance="1.0">
+				<item id="2939" min_count="1" max_count="1"/> <!--Подкладка Латных Кожанных Сапог-->
+			</group>
+			<group chance="1.0">
+				<item id="2210" min_count="1" max_count="1"/> <!--Рецепт: Стальной Шлем-->
+			</group>
+			<group chance="1.0">
+				<item id="1965" min_count="1" max_count="1"/> <!--Материал Стального Шлема-->
+			</group>
+			<group chance="1.0">
+				<item id="2187" min_count="1" max_count="1"/> <!--Рецепт: Рубаха из Шкуры Мантикоры-->
+			</group>
+			<group chance="1.0">
+				<item id="1942" min_count="1" max_count="1"/> <!--Материал Рубаха из Шкуры Мантикоры-->
+			</group>
+			<group chance="1.0">
+				<item id="2188" min_count="1" max_count="1"/> <!--Рецепт: Набедренники из Шкуры Мантикоры-->
+			</group>
+			<group chance="1.0">
+				<item id="1943" min_count="1" max_count="1"/> <!--Выкройка Набедренники из Шкуры Мантикоры-->
+			</group>
+			<group chance="1.0">
+				<item id="2976" min_count="1" max_count="1"/> <!--Рецепт: Сапоги из Шкуры Мантикоры-->
+			</group>
+			<group chance="1.0">
+				<item id="2923" min_count="1" max_count="1"/> <!--Подкладка Сапоги из Шкуры Мантикоры-->
+			</group>
+			<group chance="1.0">
+				<item id="2198" min_count="1" max_count="1"/> <!--Рецепт: Накидка Мудреца-->
+			</group>
+			<group chance="1.0">
+				<item id="1953" min_count="1" max_count="1"/> <!--Подкладка Накидки Мудреца-->
+			</group>
+			<group chance="1.0">
+				<item id="2192" min_count="1" max_count="1"/> <!--Рецепт: Треугольный Щит-->
+			</group>
+			<group chance="1.0">
+				<item id="1947" min_count="1" max_count="1"/> <!--Часть Треугольного Щита-->
+			</group>
+			<group chance="1.0">
+				<item id="393" min_count="1" max_count="1"/> <!--Усиленнаяы Мифрилом Броня-->
+			</group>
+			<group chance="1.0">
+				<item id="415" min_count="1" max_count="1"/> <!--Усиленные Мифрилом Набедренники-->
+			</group>
+			<group chance="1.0">
+				<item id="435" min_count="1" max_count="1"/> <!--Туника Мистика-->
+			</group>
+			<group chance="1.0">
+				<item id="468" min_count="1" max_count="1"/> <!--Штаны Мистика-->
+			</group>
+			<group chance="1.0">
+				<item id="606" min_count="1" max_count="1"/> <!--Рваные Рукавицы-->
+			</group>
+			<group chance="1.0">
+				<item id="1124" min_count="1" max_count="1"/> <!--Сапоги Силы-->
+			</group>
+			<group chance="1.0">
+				<item id="348" min_count="1" max_count="1"/> <!--Чешуйчатая Броня-->
+			</group>
+			<group chance="1.0">
+				<item id="377" min_count="1" max_count="1"/> <!--Чешуйчатые Набедренники-->
+			</group>
+			<group chance="1.0">
+				<item id="47" min_count="1" max_count="1"/> <!--Шлем-->
+			</group>
+			<group chance="1.0">
+				<item id="391" min_count="1" max_count="1"/> <!--Рубаха из Шкуры Пумы-->
+			</group>
+			<group chance="1.0">
+				<item id="413" min_count="1" max_count="1"/> <!--Набедренники из Шкуры Пумы-->
+			</group>
+			<group chance="1.0">
+				<item id="432" min_count="1" max_count="1"/> <!--Проклятая Туника-->
+			</group>
+			<group chance="1.0">
+				<item id="465" min_count="1" max_count="1"/> <!--Проклятые Штаны-->
+			</group>
+			<group chance="1.0">
+				<item id="433" min_count="1" max_count="1"/> <!--Туника Эльфов-->
+			</group>
+			<group chance="1.0">
+				<item id="466" min_count="1" max_count="1"/> <!--Штаны Эльфов-->
+			</group>
+			<group chance="1.0">
+				<item id="46" min_count="1" max_count="1"/> <!--Бронзовый Шлем-->
+			</group>
+			<group chance="1.0">
+				<item id="63" min_count="1" max_count="1"/> <!--Рукавицы-->
+			</group>
+			<group chance="1.0">
+				<item id="2446" min_count="1" max_count="1"/> <!--Укрепленные Кожанные Перчатки-->
+			</group>
+			<group chance="1.0">
+				<item id="553" min_count="1" max_count="1"/> <!--Железные Сапоги-->
+			</group>
+			<group chance="1.0">
+				<item id="627" min_count="1" max_count="1"/> <!--Аспис-->
+			</group>
+			<group chance="3.0">
+				<item id="1873" min_count="1" max_count="1"/> <!--Серебрянный Слиток-->
+			</group>
+			<group chance="3.0">
+				<item id="1894" min_count="1" max_count="1"/> <!--Выделаная Кожа-->
+			</group>
+			<group chance="3.0">
+				<item id="1869" min_count="1" max_count="1"/> <!--Железная Руда-->
+			</group>
+			<group chance="3.0">
+				<item id="1870" min_count="1" max_count="1"/> <!--Уголь-->
+			</group>
+			<group chance="3.0">
+				<item id="1867" min_count="1" max_count="1"/> <!--Шкура Животного-->
+			</group>
+			<group chance="3.0">
+				<item id="1878" min_count="1" max_count="1"/> <!--Прочная Веревка-->
+			</group>
+			<group chance="3.0">
+				<item id="1884" min_count="1" max_count="1"/> <!--Веревка-->
+			</group>
+			<group chance="3.0">
+				<item id="1895" min_count="1" max_count="1"/> <!--Металлическое Волокно-->
+			</group>
+			<group chance="3.0">
+				<item id="1865" min_count="1" max_count="1"/> <!--Лак-->
+			</group>
+			<group chance="3.0">
+				<item id="1872" min_count="1" max_count="1"/> <!--Кость Животного-->
+			</group>
+			<group chance="3.0">
+				<item id="1876" min_count="1" max_count="1"/> <!--Мифриловая Руда-->
+			</group>
+			<group chance="3.0">
+				<item id="1879" min_count="1" max_count="1"/> <!--Кокс-->
+			</group>
+			<group chance="3.0">
+				<item id="1882" min_count="1" max_count="1"/> <!--Кожа-->
+			</group>
+			<group chance="3.0">
+				<item id="1889" min_count="1" max_count="1"/> <!--Прочный Шнурок-->
+			</group>
+			<group chance="3.0">
+				<item id="1880" min_count="1" max_count="1"/> <!--Сталь-->
+			</group>
+			<group chance="1.0">
+				<item id="1877" min_count="1" max_count="1"/> <!--Адамантитовый Слиток-->
+			</group>
+			<group chance="1.0">
+				<item id="1874" min_count="1" max_count="1"/> <!--Орихаруконовая Руда-->
+			</group>
+			<group chance="1.0">
+				<item id="1885" min_count="1" max_count="1"/> <!--Качественная Замша-->
+			</group>
+			<group chance="2.0">
+				<item id="1881" min_count="1" max_count="1"/> <!--Грубый Костный Порошок-->
+			</group>			
+		</restoration>
+	</skill>
+	<skill id="55046" levels="1"  name="Memories Chest">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="1.0">
+				<item id="49080" min_count="1" max_count="1"/> <!--Рисовый Пирожок Боевого Духи-->
+			</group>
+			<group chance="1.0">
+				<item id="49081" min_count="1" max_count="1"/> <!--Рисовый Пирожок Пылающего Боевого Духи-->
+			</group>
+			<group chance="1.0">
+				<item id="29011" min_count="1" max_count="1"/> <!--Свиток Эфф 1 проф-->
+			</group>
+			<group chance="1.0">
+				<item id="29012" min_count="1" max_count="1"/> <!--Свиток Эфф 2 проф-->
+			</group>
+			<group chance="1.0">
+				<item id="3935" min_count="1" max_count="1"/> <!--Свиток Щита-->
+			</group>
+			<group chance="1.0">
+				<item id="3933" min_count="1" max_count="1"/> <!--Свиток Могущества-->
+			</group>
+			<group chance="1.0">
+				<item id="29686" min_count="1" max_count="1"/> <!--Свиток Концентрации-->
+			</group>
+			<group chance="1.0">
+				<item id="3929" min_count="1" max_count="1"/> <!--Свиток Пронецательности-->
+			</group>
+			<group chance="1.0">
+				<item id="3928" min_count="1" max_count="1"/> <!--Свиток Фокусировки-->
+			</group>
+			<group chance="1.0">
+				<item id="3931" min_count="1" max_count="1"/> <!--Свиток Проворства-->
+			</group>
+			<group chance="1.0">
+				<item id="3932" min_count="1" max_count="1"/> <!--Свиток Воодушевления-->
+			</group>
+			<group chance="1.0">
+				<item id="29688" min_count="1" max_count="1"/> <!--Свиток Регенерации-->
+			</group>
+			<group chance="1.0">
+				<item id="3926" min_count="1" max_count="1"/> <!--Свиток Наведения-->
+			</group>
+			<group chance="1.0">
+				<item id="3927" min_count="1" max_count="1"/> <!--Свиток Шепота Смерти-->
+			</group>
+			<group chance="1.0">
+				<item id="29689" min_count="1" max_count="1"/> <!--Свиток Маг Барьера-->
+			</group>
+			<group chance="1.0">
+				<item id="3930" min_count="1" max_count="1"/> <!--Свиток Ускорения-->
+			</group>
+			<group chance="1.0">
+				<item id="29690" min_count="1" max_count="1"/> <!--Свиток Благословения Тела-->
+			</group>
+			<group chance="1.0">
+				<item id="29691" min_count="1" max_count="1"/> <!--Свиток Благословения Духа-->
+			</group>
+			<group chance="1.0">
+				<item id="3958" min_count="1" max_count="1"/> <!--Свиток  Благ Тп-->
+			</group>
+			<group chance="1.0">
+				<item id="3959" min_count="1" max_count="1"/> <!--Свиток Благ Рес-->
+			</group>
+			<group chance="1.0">
+				<item id="1540" min_count="1" max_count="1"/> <!--Быстродействующее Зелье Исцеления-->
+			</group>
+			<group chance="1.0">
+				<item id="1869" min_count="1" max_count="1"/> <!--Железная Руда-->
+			</group>
+			<group chance="1.0">
+				<item id="1870" min_count="1" max_count="1"/> <!--Уголь-->
+			</group>
+			<group chance="1.0">
+				<item id="1867" min_count="1" max_count="1"/> <!--Шкура Жив-->
+			</group>
+			<group chance="1.0">
+				<item id="1878" min_count="1" max_count="1"/> <!--Прочная Веревка-->
+			</group>
+			<group chance="1.0">
+				<item id="1884" min_count="1" max_count="1"/> <!--Веревка-->
+			</group>
+			<group chance="1.0">
+				<item id="1895" min_count="1" max_count="1"/> <!--Металическое Волокно-->
+			</group>
+			<group chance="1.0">
+				<item id="1865" min_count="1" max_count="1"/> <!--Лак-->
+			</group>
+			<group chance="2.0">
+				<item id="1872" min_count="1" max_count="1"/> <!--Кость Животного-->
+			</group>
+			<group chance="3.0">
+				<item id="1876" min_count="1" max_count="1"/> <!--Мифриловая Руда-->
+			</group>
+			<group chance="3.0">
+				<item id="1879" min_count="1" max_count="1"/> <!--Кокс-->
+			</group>
+			<group chance="3.0">
+				<item id="1888" min_count="1" max_count="1"/> <!--Синт Кокс-->
+			</group>
+			<group chance="6.0">
+				<item id="1882" min_count="1" max_count="1"/> <!--Кожа-->
+			</group>
+			<group chance="4.0">
+				<item id="1894" min_count="1" max_count="1"/> <!--Выделанная Кожа-->
+			</group>
+			<group chance="6.0">
+				<item id="1889" min_count="1" max_count="1"/> <!--Прочный Шнурок-->
+			</group>
+			<group chance="6.0">
+				<item id="1880" min_count="1" max_count="1"/> <!--Сталь-->
+			</group>
+			<group chance="3.0">
+				<item id="1883" min_count="1" max_count="1"/> <!--Стальная Заготовка-->
+			</group>
+			<group chance="3.0">
+				<item id="1877" min_count="1" max_count="1"/> <!--Адамантитовый Слиток-->
+			</group>
+			<group chance="3.0">
+				<item id="1885" min_count="1" max_count="1"/> <!--Кач Замша-->
+			</group>
+			<group chance="3.0">
+				<item id="1874" min_count="1" max_count="1"/> <!--Орихаруконовая Руда-->
+			</group>
+			<group chance="3.0">
+				<item id="1893" min_count="1" max_count="1"/> <!--Орихарукон-->
+			</group>
+			<group chance="6.0">
+				<item id="1881" min_count="1" max_count="1"/> <!--Грубый Костный Порошок-->
+			</group>
+			<group chance="3.0">
+				<item id="1886" min_count="1" max_count="1"/> <!--Серебрянная Заготовка-->
+			</group>
+			<group chance="3.0">
+				<item id="1875" min_count="1" max_count="1"/> <!--Камень Чистоты-->
+			</group>
+			<group chance="3.0">
+				<item id="1887" min_count="1" max_count="1"/> <!--Очищенный Лак-->
+			</group>
+			<group chance="3.0">
+				<item id="1890" min_count="1" max_count="1"/> <!--Мифриловый Сплав-->
+			</group>
+			<group chance="3.0">
+				<item id="1891" min_count="1" max_count="1"/> <!--Заготовка Ремесленника-->
+			</group>
+			<group chance="3.0">
+				<item id="1892" min_count="1" max_count="1"/> <!--Заготовка Кузнеца-->
+			</group>			
+		</restoration>
+	</skill>
+	<skill id="55047" levels="1" name="Romantic Chapeau - Blessed Body">
+		<set name="icon" value="icon.accessory_archer_hat2_i00"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="max_hp_up"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="maxHp" value="1.1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55048" levels="1" name="Romantic Chapeau - Wind Walk">
+		<set name="icon" value="icon.accessory_archer_hat2_i00"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="speed_up"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add stat="runSpd" value="20"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55049" levels="1" name="Chronic Noble Successor Box">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55050" levels="1" name="Chronic Noble Successor Box">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55051" levels="1" name="XP/SP Scroll">
+		<set name="icon" value="icon.etc_recall_exp_scroll"/>
+		<set name="reuseDelay" value="1200000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="vote"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSelfDispellable" value="false"/>
+		<set name="isPreservedOnDeath" value="true"/>
+		<set name="buff_slot_type" value="-1"/>
+		<for>
+			<effect>
+				<add stat="exp_rate_multiplier" value="0.3"/>
+				<add stat="sp_rate_multiplier" value="0.3"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55052" levels="2" name="XP/SP Scroll - Normal">
+		<set name="icon" value="icon.etc_recall_exp_scroll"/>
+		<set name="reuseDelay" value="1200000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="vote"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSelfDispellable" value="false"/>
+		<set name="isPreservedOnDeath" value="true"/>
+		<set name="buff_slot_type" value="-1"/>
+		<for>
+			<effect>
+				<add stat="exp_rate_multiplier" value="0.3"/>
+				<add stat="sp_rate_multiplier" value="0.3"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55053" levels="3" name="XP/SP Scroll - Medium">
+		<set name="icon" value="icon.etc_recall_exp_scroll"/>
+		<set name="reuseDelay" value="1200000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="vote"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSelfDispellable" value="false"/>
+		<set name="isPreservedOnDeath" value="true"/>
+		<set name="buff_slot_type" value="-1"/>
+		<for>
+			<effect>
+				<add stat="exp_rate_multiplier" value="0.4"/>
+				<add stat="sp_rate_multiplier" value="0.4"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55054" levels="4" name="XP/SP Scroll - High">
+		<set name="icon" value="icon.etc_recall_exp_scroll"/>
+		<set name="reuseDelay" value="1200000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="vote"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSelfDispellable" value="false"/>
+		<set name="isPreservedOnDeath" value="true"/>
+		<set name="buff_slot_type" value="-1"/>
+		<for>
+			<effect>
+				<add stat="exp_rate_multiplier" value="1"/>
+				<add stat="sp_rate_multiplier" value="1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55055" levels="1" name="1st Class Buff Scroll">
+		<set name="icon" value="BranchIcon.Icon.etc_g_bm_buff_scroll_i00"/>
+		<set name="hitTime" value="4000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1040"/>	<!--Щит 2 Ур.-->
+				<def name="effects_skill_level" value="5"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1068"/>	<!--Могущество 2 УР.-->
+				<def name="effects_skill_level" value="5"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1078"/>	<!--Концентрация 2 УР.-->
+				<def name="effects_skill_level" value="8"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1085"/>	<!--Проницательность 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1204"/>	<!--Легкая Походка 1 Ур.-->
+				<def name="effects_skill_level" value="3"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1077"/>	<!--Фокусировка 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1087"/>	<!--Проворство 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1059"/>	<!--Воодушевление 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55056" levels="2" name="2nd Class Buff Scroll">
+		<set name="icon" value="BranchIcon.Icon.etc_g_bm_buff_scroll_i01"/>
+		<set name="hitTime" value="4000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1040"/>	<!--Щит 3 Ур.-->
+				<def name="effects_skill_level" value="6"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1068"/>	<!--Могущество 3 Ур.-->
+				<def name="effects_skill_level" value="6"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1059"/>	<!--Воодушевление 3 Ур.-->
+				<def name="effects_skill_level" value="6"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1085"/>	<!--Проницательность 2 Ур.-->
+				<def name="effects_skill_level" value="5"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1204"/>	<!--Легкая Походка 2 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1077"/>	<!--Фокусировка 2 Ур.-->
+				<def name="effects_skill_level" value="5"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1044"/>	<!--Регенерация 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1240"/>	<!--Наведение 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1242"/>	<!--Шепот Смерти 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1036"/>	<!--Магический Барьер 1 Ур.-->
+				<def name="effects_skill_level" value="3"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1045"/>	<!--Благословение Тела 1 Ур.-->
+				<def name="effects_skill_level" value="7"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1048"/>	<!--Благословение Души 1 Ур.-->
+				<def name="effects_skill_level" value="7"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1086"/>	<!--Ускорение 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1087"/>	<!--Проворство 2 Ур.-->
+				<def name="effects_skill_level" value="5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55057" levels="1" name="Wind Walk">
+		<set name="icon" value="icon.skill1204"/>
+		<set name="reuseDelay" value="1800000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55059" levels="1" name="Release Agathion\'s Seal - Griffin">
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="hitTime" value="3000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55060" levels="1" name="Griffin�s Benediction">
+		<set name="icon" value="icon.etc_rbracelet_aga_agit_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55061" levels="2" name="Castle XP/SP Scroll - Normal">
+		<set name="icon" value="icon.etc_recall_exp_scroll"/>
+		<set name="reuseDelay" value="1200000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="vote"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSelfDispellable" value="false"/>
+		<set name="isPreservedOnDeath" value="true"/>
+		<set name="buff_slot_type" value="-1"/>
+		<for>
+			<effect>
+				<add stat="exp_rate_multiplier" value="0.35"/>
+				<add stat="sp_rate_multiplier" value="0.35"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55062" levels="2" name="Castle XP/SP Scroll - Medium">
+		<set name="icon" value="icon.etc_recall_exp_scroll"/>
+		<set name="reuseDelay" value="1200000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="vote"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSelfDispellable" value="false"/>
+		<set name="isPreservedOnDeath" value="true"/>
+		<set name="buff_slot_type" value="-1"/>
+		<for>
+			<effect>
+				<add stat="exp_rate_multiplier" value="0.45"/>
+				<add stat="sp_rate_multiplier" value="0.45"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55063" levels="1" name="Quick Castle Healing Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55064" levels="1" name="Major Quick Castle Healing Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55065" levels="1" name="Scroll: Castle Berserker Spirit">
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="hitTime" value="4000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55066" levels="1" name="Scroll: Castle Death Whisper">
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="hitTime" value="4000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55067" levels="1" name="Blessed Castle Scroll of Escape">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="200"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55068" levels="1" name="Scroll: Castle Blessing">
+		<set name="icon" value="icon.skill1323"/>
+		<set name="reuseDelay" value="1200000"/>
+		<set name="hitTime" value="100"/>
+		<set name="target" value="TARGET_SELF"/>		
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="preserve_abnormal"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="itemConsumeId" value="29676"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="isHandler" value="true"/>
+		<set name="hitCancelTime" value="500"/>		
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="p_preserve_abnormal"/>
+		</for>		
+	</skill>
+	<skill id="55069" levels="1" name="Castle Ring">
+		<set name="icon" value="icon.ev_11th_rare_acc_ring"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxHp" value="20"/>
+			<add stat="pAtk" value="5"/>
+			<add stat="mAtk" value="3"/>
+		</for>
+	</skill>
+	<skill id="55070" levels="1" name="Castle Earring">
+		<set name="icon" value="icon.ev_11th_rare_acc_earing"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="regMp" value="0.2"/>
+			<mul stat="hpEff" value="1.02"/>
+		</for>
+	</skill>
+	<skill id="55071" levels="1" name="Castle Necklace">
+		<set name="icon" value="icon.ev_11th_rare_acc_necklace"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="pDef" value="1.05"/>
+			<add stat="mDef" value="1.03"/>
+			<add stat="maxMp" value="20"/>
+		</for>
+	</skill>
+	<skill id="55072" levels="1" name="Lineage II Chest">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55073" levels="1" name="Chronicle Chest">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55074" levels="1" name="Memories Chest">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55075" levels="5" name="Shield">
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="23"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55076" levels="5" name="Might">
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="20"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55077" levels="8" name="Concentration">
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="27"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55078" levels="4" name="Agility">
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="23"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55079" levels="4" name="Regeneration">
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="30"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55080" levels="3" name="Magic Barrier">
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="39"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55081" levels="7" name="Blessed Body">
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="39"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55082" levels="7" name="Blessed Soul">
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="4000"/>
+		<set name="mp_consume" value="39"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55083" levels="1" name="Quick Healing Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect instant="true" name="RestoreHP" value="435"/>
+		</for>
+	</skill>
+	<skill id="55084" levels="1" name="Major Quick Healing Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect instant="true" name="RestoreHP" value="1000"/>
+		</for>
+	</skill>
+	<skill id="55085" levels="1" name="1st Class Buff Scroll">
+		<set name="icon" value="BranchIcon.Icon.etc_g_bm_buff_scroll_i00"/>
+		<set name="hitTime" value="4000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1040"/>	<!--Щит 2 Ур.-->
+				<def name="effects_skill_level" value="8"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1068"/>	<!--Могущество 2 УР.-->
+				<def name="effects_skill_level" value="8"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1078"/>	<!--Концентрация 2 УР.-->
+				<def name="effects_skill_level" value="14"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1085"/>	<!--Проницательность 1 Ур.-->
+				<def name="effects_skill_level" value="7"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1204"/>	<!--Легкая Походка 1 Ур.-->
+				<def name="effects_skill_level" value="5"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1077"/>	<!--Фокусировка 1 Ур.-->
+				<def name="effects_skill_level" value="7"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1087"/>	<!--Проворство 1 Ур.-->
+				<def name="effects_skill_level" value="7"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1059"/>	<!--Воодушевление 1 Ур.-->
+				<def name="effects_skill_level" value="7"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55086" levels="2" name="2nd Class Buff Scroll">
+		<set name="icon" value="BranchIcon.Icon.etc_g_bm_buff_scroll_i01"/>
+		<set name="hitTime" value="4000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1040"/>	<!--Щит 3 Ур.-->
+				<def name="effects_skill_level" value="9"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1085"/>	<!--Проницательность 2 Ур.-->
+				<def name="effects_skill_level" value="8"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1204"/>	<!--Легкая Походка 2 Ур.-->
+				<def name="effects_skill_level" value="6"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1077"/>	<!--Фокусировка 2 Ур.-->
+				<def name="effects_skill_level" value="8"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1044"/>	<!--Регенерация 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1240"/>	<!--Наведение 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1242"/>	<!--Шепот Смерти 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1036"/>	<!--Магический Барьер 1 Ур.-->
+				<def name="effects_skill_level" value="3"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1045"/>	<!--Благословение Тела 1 Ур.-->
+				<def name="effects_skill_level" value="7"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1048"/>	<!--Благословение Души 1 Ур.-->
+				<def name="effects_skill_level" value="7"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1086"/>	<!--Ускорение 1 Ур.-->
+				<def name="effects_skill_level" value="4"/>
+			</effect>
+			<effect instant="true" name="GetEffects">
+				<def name="effects_skill_id" value="1087"/>	<!--Проворство 2 Ур.-->
+				<def name="effects_skill_level" value="8"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55087" levels="1" name="Minor Blessed Scroll of Escape">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55088" levels="1" name="Minor Blessed Scroll of Resurrection">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="1000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55089" levels="1" name="Rare Accessory Box">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="29578"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<restoration level="1">
+			<group chance="100">
+				<item id="29575" min_count="1" max_count="1"/> <!--Queen Ant's Ring--> 
+			</group>
+			<group chance="100">
+				<item id="29576" min_count="1" max_count="1"/> <!--Orfen's Earring--> 
+			</group>
+			<group chance="100">
+				<item id="29577" min_count="1" max_count="1"/> <!--Ring of Core--> 
+			</group>
+		</restoration>
+	</skill>
+	<skill id="55090" levels="1" name="Fire Dragon Pendant Basic Effect Lv. 1">
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pve"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55091" levels="10" name="Fire Dragon Pendant Enchant Effect Lvl 1">
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pve"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55092" levels="1" name="Fire Dragon Pendant Basic Effect Lv. 2">
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pve"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55093" levels="10" name="Fire Dragon Pendant Enchant Effect Lvl 2">
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pve"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55094" levels="1" name="Fire Dragon Pendant Basic Effect Lv. 3">
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pve"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55095" levels="10" name="Fire Dragon Pendant Enchant Effect Lvl 3">
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pve"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55096" levels="1" name="Fire Dragon Pendant Basic Effect Lv. 4">
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pve"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55097" levels="10" name="Fire Dragon Pendant Enchant Effect Lvl 4">
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pve"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55098" levels="1" name="Fire Dragon Pendant Basic Effect Lv. 5">
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pve"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55099" levels="10" name="Fire Dragon Pendant Enchant Effect Lvl 5">
+		<set name="icon" value="BranchIcon.Icon.bm_pendant_pve"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+</list>

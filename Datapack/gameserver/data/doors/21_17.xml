@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="21170001" name="Rune_bodeful_fortress_s.Rune_bf_azit_gate_door" hp="158250" pdef="644" mdef="518">
+		<pos x="57857" y="-29480" z="706"/>
+		<shape ax="57849" ay="-29464" bx="57849" by="-29496" cx="57969" cy="-29496" dx="57968" dy="-29464" minz="543" maxz="993"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="64"/>
+		</ai_params>
+	</door>
+	<door id="21170002" name="Rune_bodeful_fortress_s.Rune_bf_azit_gate_door" hp="158250" pdef="644" mdef="518">
+		<pos x="58061" y="-29479" z="706"/>
+		<shape ax="58069" ay="-29496" bx="58070" by="-29464" cx="57955" cy="-29496" dx="57954" dy="-29464" minz="544" maxz="994"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="64"/>
+		</ai_params>
+	</door>
+	<door id="21170003" name="Rune_bodeful_fortress_s.Rune_bf_azit_room_door" hp="158250" pdef="644" mdef="518">
+		<pos x="56977" y="-27193" z="639"/>
+		<shape ax="56972" ay="-27188" bx="56972" by="-27258" cx="56980" cy="-27258" dx="56981" dy="-27188" minz="550" maxz="1000"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="64"/>
+		</ai_params>
+	</door>
+	<door id="21170004" name="Rune_bodeful_fortress_s.Rune_bf_azit_room_door" hp="158250" pdef="644" mdef="518">
+		<pos x="56977" y="-27318" z="638"/>
+		<shape ax="56971" ay="-27244" bx="56972" by="-27315" cx="56980" cy="-27316" dx="56980" dy="-27245" minz="550" maxz="1000"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="64"/>
+		</ai_params>
+	</door>
+	<door id="21170005" name="Rune_bodeful_fortress_s.Rune_bf_azit_gate_door" hp="158250" pdef="644" mdef="518">
+		<pos x="57902" y="-26392" z="653"/>
+		<shape ax="57893" ay="-26382" bx="57893" by="-26400" cx="57974" cy="-26399" dx="57974" dy="-26384" minz="563" maxz="1013"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="64"/>
+		</ai_params>
+	</door>
+	<door id="21170006" name="Rune_bodeful_fortress_s.Rune_bf_azit_gate_door" hp="158250" pdef="644" mdef="518">
+		<pos x="58024" y="-26391" z="653"/>
+		<shape ax="58035" ay="-26399" bx="58035" by="-26383" cx="57952" cy="-26399" dx="57953" dy="-26383" minz="564" maxz="1014"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="64"/>
+		</ai_params>
+	</door>
+</list>

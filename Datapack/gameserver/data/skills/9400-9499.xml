@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="9487" levels="1" name="Angel Cat\'s Blessing">
+		<set name="icon" value="icon.skilltransform4"/>
+		<set name="olympiad_use" value="false"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="br_event_buf3"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isSelfDispellable" value="false"/>
+		<set name="isPreservedOnDeath" value="true"/>
+		<for>
+			<effect>
+				<mul stat="maxHp" value="1.05"/>
+				<mul stat="maxMp" value="1.05"/>
+				<add stat="exp_rate_multiplier" value="0.2"/>
+				<add stat="sp_rate_multiplier" value="0.2"/>
+			</effect>
+		</for>
+	</skill>
+</list>

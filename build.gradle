@@ -1,0 +1,51 @@
+plugins {
+    id "java"
+    id "distribution"
+    id "idea"
+    id "eclipse"
+}
+
+version '1.0'
+
+defaultTasks('clean', 'build')
+
+ext.moduleName = 'org.l2j'
+
+allprojects {
+    repositories {
+        mavenCentral()
+
+        maven {
+            url 'https://repo.spring.io/libs-milestone'
+        }
+
+        maven {
+            url 'http://maven.java.net/content/repositories/releases/'
+        }
+
+        maven {
+            url 'http://maven.java.net/content/repositories/staging/'
+        }
+
+        flatDir {
+            dirs 'lib'
+        }
+    }
+
+    sourceCompatibility = JavaVersion.VERSION_11
+}
+
+subprojects {
+    afterEvaluate {
+        compileJava {
+            inputs.property("moduleName", moduleName)
+            doFirst {
+                options.compilerArgs = [
+                    '--module-path', classpath.asPath,
+                ]
+                options.compilerArgs << "-Xlint:unchecked"
+                classpath = files()
+            }
+        }
+    }
+}

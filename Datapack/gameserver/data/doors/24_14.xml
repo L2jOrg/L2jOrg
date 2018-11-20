@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="24140001" name="spa_agit_002_001" hp="158250" pdef="644" mdef="518">
+		<pos x="140727" y="-124476" z="-1894"/>
+		<shape ax="140727" ay="-124488" bx="140763" by="-124437" cx="140749" cy="-124428" dx="140719" dy="-124480" minz="-1894" maxz="-1444"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<ai_params>
+			<set name="residence_id" value="62"/>
+		</ai_params>
+	</door>
+	<door id="24140002" name="spa_agit_002_002" hp="158250" pdef="644" mdef="518">
+		<pos x="140777" y="-124401" z="-1894"/>
+		<shape ax="140775" ay="-124393" bx="140742" by="-124440" cx="140757" cy="-124448" dx="140787" dy="-124401" minz="-1894" maxz="-1444"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="62"/>
+		</ai_params>
+	</door>
+	<door id="24140003" name="spa_agit_001_001" hp="158250" pdef="644" mdef="518">
+		<pos x="141148" y="-124309" z="-1894"/>
+		<shape ax="141143" ay="-124312" bx="141187" by="-124341" cx="141193" cy="-124332" dx="141148" dy="-124303" minz="-1894" maxz="-1444"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="62"/>
+		</ai_params>
+	</door>
+	<door id="24140004" name="spa_agit_001_002" hp="158250" pdef="644" mdef="518">
+		<pos x="141223" y="-124359" z="-1893"/>
+		<shape ax="141228" ay="-124356" bx="141184" by="-124327" cx="141180" cy="-124337" dx="141223" dy="-124365" minz="-1893" maxz="-1443"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="62"/>
+		</ai_params>
+	</door>
+	<door id="24140005" name="spa_agit_003_001" hp="158250" pdef="644" mdef="518">
+		<pos x="141280" y="-124737" z="-1894"/>
+		<shape ax="141278" ay="-124732" bx="141249" by="-124776" cx="141258" cy="-124781" dx="141286" dy="-124737" minz="-1894" maxz="-1444"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="62"/>
+		</ai_params>
+	</door>
+	<door id="24140006" name="spa_agit_003_002" hp="158250" pdef="644" mdef="518">
+		<pos x="141230" y="-124812" z="-1894"/>
+		<shape ax="141233" ay="-124817" bx="141263" by="-124772" cx="141255" cy="-124767" dx="141224" dy="-124812" minz="-1894" maxz="-1444"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="62"/>
+		</ai_params>
+	</door>
+	<door id="24140007" name="spa_agit_004_001" hp="158250" pdef="644" mdef="518">
+		<pos x="140702" y="-123836" z="-1932"/>
+		<shape ax="140721" ay="-123891" bx="140706" by="-123826" cx="140694" cy="-123829" dx="140707" dy="-123895" minz="-1930" maxz="-1480"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="24140008" name="spa_agit_004_002" hp="158250" pdef="644" mdef="518">
+		<pos x="140721" y="-123934" z="-1931"/>
+		<shape ax="140728" ay="-123942" bx="140718" by="-123874" cx="140703" cy="-123878" dx="140718" dy="-123944" minz="-1929" maxz="-1479"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="true"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+</list>

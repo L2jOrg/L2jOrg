@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="22190001" name="oren_castle_outter_001" hp="949500" pdef="644" mdef="518">
+		<pos x="78925" y="36824" z="-2267"/>
+		<shape ax="78918" ay="36816" bx="78931" by="36959" cx="78918" cy="36959" dx="78931" dy="36816" minz="-2591" maxz="-2271"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="22190002" name="oren_castle_outter_002" hp="949500" pdef="644" mdef="518">
+		<pos x="78925" y="37085" z="-2267"/>
+		<shape ax="78919" ay="37091" bx="78919" by="36950" cx="78931" cy="36950" dx="78931" dy="37091" minz="-2591" maxz="-2271"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="22190003" name="oren_castle_wall_001" hp="2036520" pdef="837" mdef="674" type="WALL">
+		<pos x="80616" y="35391" z="-2482"/>
+		<shape ax="80317" ay="35454" bx="80317" by="35328" cx="80923" cy="35327" dx="80923" dy="35455" minz="-2716" maxz="-2256"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="22190004" name="oren_castle_wall_002" hp="2036520" pdef="837" mdef="674" type="WALL">
+		<pos x="80616" y="38718" z="-2482"/>
+		<shape ax="80308" ay="38781" bx="80309" by="38654" cx="80924" cy="38655" dx="80923" dy="38782" minz="-2716" maxz="-2256"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="22190005" name="oren_castle_inner_001" hp="474750" pdef="644" mdef="518">
+		<pos x="81470" y="37060" z="-2076"/>
+		<shape ax="81476" ay="37060" bx="81476" by="37200" cx="81464" cy="37200" dx="81464" dy="37060" minz="-2335" maxz="-2080"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="22190006" name="oren_castle_inner_002" hp="474750" pdef="644" mdef="518">
+		<pos x="81470" y="37322" z="-2076"/>
+		<shape ax="81465" ay="37331" bx="81464" by="37182" cx="81476" cy="37182" dx="81476" dy="37331" minz="-2335" maxz="-2080"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="22190007" name="Castle_Kent_Door_S.Castle_Wall_Back_DoorTower_Door" hp="474750" pdef="644" mdef="518">
+		<pos x="83719" y="36069" z="-2083"/>
+		<shape ax="83719" ay="35964" bx="83719" by="35965" cx="83719" cy="36075" dx="83719" dy="36075" minz="-2202" maxz="-2074"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="22190008" name="oren_castle_station" hp="474750" pdef="644" mdef="518">
+		<pos x="83796" y="36337" z="-1604"/>
+		<shape ax="83785" ay="36331" bx="83949" by="36331" cx="83949" cy="36342" dx="83784" dy="36343" minz="-1856" maxz="-1606"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+	<door id="22190009" name="Castle_Kent_Door_S.Castle_Wall_Back_DoorTower_Door" hp="474750" pdef="644" mdef="518">
+		<pos x="84887" y="37365" z="-2083"/>
+		<shape ax="84992" ay="37365" bx="84992" by="37365" cx="84880" cy="37365" dx="84880" dy="37365" minz="-2202" maxz="-2074"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+	</door>
+</list>

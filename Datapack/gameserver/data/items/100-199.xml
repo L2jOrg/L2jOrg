@@ -1,0 +1,1849 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<weapon id="100" name="Voodoo Doll">
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_voodoo_doll_i00"/>
+		<set name="price" value="244000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="ETC"/>
+		<set name="weight" value="630"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="25"/>
+			<add stat="mAtk" order="0x10" value="28"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="101" name="Scroll of Wisdom">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="743"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_scroll_of_wisdom_i00"/>
+		<set name="price" value="409000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="ETC"/>
+		<set name="weight" value="610"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="32"/>
+			<add stat="mAtk" order="0x10" value="35"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="102" name="Round Shield">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.shield_round_shield_i00"/>
+		<set name="price" value="7110"/>
+		<set name="rnd_dam" value="0"/>
+		<set name="soulshots" value="0"/>
+		<set name="spiritshots" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1390"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="sDef" order="0x10" value="79"/>
+			<add stat="rShld" order="0x10" value="20"/>
+			<add stat="pEvasRate" order="0x10" value="-8"/>
+		</for>
+	</weapon>
+	<weapon id="103" name="Tower Shield">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_count" value="103"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.shield_tower_shield_i00"/>
+		<set name="price" value="258000"/>
+		<set name="rnd_dam" value="0"/>
+		<set name="soulshots" value="0"/>
+		<set name="spiritshots" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1240"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="sDef" order="0x10" value="190"/>
+			<add stat="rShld" order="0x10" value="20"/>
+			<add stat="pEvasRate" order="0x10" value="-8"/>
+		</for>
+	</weapon>
+	<weapon id="107" name="Compound Shield">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_count" value="103"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.shield_composite_shield_i00"/>
+		<set name="price" value="258000"/>
+		<set name="rnd_dam" value="0"/>
+		<set name="soulshots" value="0"/>
+		<set name="spiritshots" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1230"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="sDef" order="0x10" value="190"/>
+			<add stat="rShld" order="0x10" value="20"/>
+			<add stat="pEvasRate" order="0x10" value="-8"/>
+		</for>
+	</weapon>
+	<weapon id="108" name="Masterpiece Shield">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_count" value="112"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.shield_masterpiece_shield_i00"/>
+		<set name="price" value="845000"/>
+		<set name="rnd_dam" value="0"/>
+		<set name="soulshots" value="0"/>
+		<set name="spiritshots" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="5600"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="sDef" order="0x10" value="230"/>
+			<add stat="rShld" order="0x10" value="20"/>
+			<add stat="pEvasRate" order="0x10" value="-8"/>
+		</for>
+	</weapon>
+	<weapon id="110" name="Doom Shield">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_count" value="112"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.shield_doom_shield_i00"/>
+		<set name="price" value="845000"/>
+		<set name="rnd_dam" value="0"/>
+		<set name="soulshots" value="0"/>
+		<set name="spiritshots" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1200"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="sDef" order="0x10" value="230"/>
+			<add stat="rShld" order="0x10" value="20"/>
+			<add stat="pEvasRate" order="0x10" value="-8"/>
+		</for>
+	</weapon>
+	<armor id="112" name="Apprentice\'s Earring">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_apprentices_earing_i00"/>
+		<set name="price" value="49"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="11"/>
+		</for>
+	</armor>
+	<armor id="113" name="Mage Earring">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_mage_earing_i00"/>
+		<set name="price" value="811"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="13"/>
+		</for>
+	</armor>
+	<armor id="114" name="Earring of Strength">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_earing_of_strength_i00"/>
+		<set name="price" value="3510"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="16"/>
+		</for>
+	</armor>
+	<armor id="115" name="Earring of Wisdom">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_earing_of_wisdom_i00"/>
+		<set name="price" value="3510"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="16"/>
+		</for>
+	</armor>
+	<armor id="116" name="Magic Ring">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_magic_ring_i00"/>
+		<set name="price" value="33"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="7"/>
+		</for>
+	</armor>
+	<armor id="117" name="Ring of Mana">
+		<set name="crystal_count" value="53"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.accessary_ring_of_mana_i00"/>
+		<set name="price" value="404000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="34"/>
+		</for>
+	</armor>
+	<armor id="118" name="Magic Necklace">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessary_necklace_of_magic_i00"/>
+		<set name="price" value="66"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="15"/>
+		</for>
+	</armor>
+	<armor id="119" name="Necklace of Seal">
+		<set name="crystal_count" value="226"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.accessary_necklace_of_binding_i00"/>
+		<set name="price" value="565000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="64"/>
+		</for>
+	</armor>
+	<weapon id="120" name="Sword of Reflection">
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_sword_of_watershadow_i00"/>
+		<set name="price" value="136000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1550"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="24"/>
+			<add stat="mAtk" order="0x10" value="17"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="121" name="Sword of Watershadow">
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_sword_of_watershadow_i00"/>
+		<set name="price" value="136000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1540"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="24"/>
+			<add stat="mAtk" order="0x10" value="17"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="122" name="Handmade Sword">
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_handmade_sword_i00"/>
+		<set name="price" value="54100"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1570"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="17"/>
+			<add stat="mAtk" order="0x10" value="12"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="123" name="Saber">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="743"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_saber_i00"/>
+		<set name="kamael_convert" value="9209"/>
+		<set name="price" value="409000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1520"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="40"/>
+			<add stat="mAtk" order="0x10" value="26"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="124" name="Two-handed Sword">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;44;120"/>
+		<set name="crystal_count" value="1758"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_two_handed_sword_i00"/>
+		<set name="kamael_convert" value="9220"/>
+		<set name="price" value="967000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BIGSWORD"/>
+		<set name="weight" value="2180"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="78"/>
+			<add stat="mAtk" order="0x10" value="39"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+		</for>
+	</weapon>
+	<weapon id="125" name="Spinebone Sword">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="1170"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_spinebone_sword_i00"/>
+		<set name="kamael_convert" value="9214"/>
+		<set name="price" value="644000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1510"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="51"/>
+			<add stat="mAtk" order="0x10" value="32"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="126" name="Artisan\'s Sword">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="1170"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_artisans_sword_i00"/>
+		<set name="kamael_convert" value="9215"/>
+		<set name="price" value="644000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1500"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="51"/>
+			<add stat="mAtk" order="0x10" value="32"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="127" name="Crimson Sword">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="1758"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_crimson_sword_i00"/>
+		<set name="kamael_convert" value="9218"/>
+		<set name="price" value="967000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1490"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="64"/>
+			<add stat="mAtk" order="0x10" value="39"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="128" name="Knight\'s Sword">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="1170"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_knights_sword_i00"/>
+		<set name="kamael_convert" value="10003"/>
+		<set name="price" value="644000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1500"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="51"/>
+			<add stat="mAtk" order="0x10" value="32"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="129" name="Sword of Revolution">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="2545"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_sword_of_revolution_i00"/>
+		<set name="kamael_convert" value="9222"/>
+		<set name="price" value="1400000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1450"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="79"/>
+			<add stat="mAtk" order="0x10" value="47"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="130" name="Elven Sword">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="1758"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_elven_sword_i00"/>
+		<set name="kamael_convert" value="9219"/>
+		<set name="price" value="967000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1470"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="64"/>
+			<add stat="mAtk" order="0x10" value="39"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="131" name="Spirit Sword">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="1148"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_spirits_sword_i00"/>
+		<set name="kamael_convert" value="9248"/>
+		<set name="price" value="2870000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1420"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="122"/>
+			<add stat="mAtk" order="0x10" value="68"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="132" name="Ultimate Sword">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="1720"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_sword_of_limit_i00"/>
+		<set name="kamael_convert" value="9280"/>
+		<set name="price" value="4300000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1400"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="139"/>
+			<add stat="mAtk" order="0x10" value="76"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="133" name="Raid Sword">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="1148"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_raid_sword_i00"/>
+		<set name="kamael_convert" value="9252"/>
+		<set name="price" value="2870000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1420"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="122"/>
+			<add stat="mAtk" order="0x10" value="68"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="134" name="Sword of Nightmare">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="1720"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_sword_of_nightmare_i00"/>
+		<set name="kamael_convert" value="9276"/>
+		<set name="price" value="4300000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1400"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="139"/>
+			<add stat="mAtk" order="0x10" value="76"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="135" name="Samurai Long Sword">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="2452"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_samurai_old_longsword_i00"/>
+		<set name="kamael_convert" value="9292"/>
+		<set name="price" value="6130000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1380"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="156"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="142" name="Keshanberk">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="1157"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.weapon_kshanberk_i00"/>
+		<set name="kamael_convert" value="9304"/>
+		<set name="price" value="8680000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1370"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="175"/>
+			<add stat="mAtk" order="0x10" value="91"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="143" name="Sword of Mystic">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="1301"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_sword_of_mystic_i00"/>
+		<set name="price" value="716000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="980"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="43"/>
+			<add stat="mAtk" order="0x10" value="45"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="144" name="Sword of Occult">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="1301"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_sword_of_occult_i00"/>
+		<set name="price" value="716000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="970"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="43"/>
+			<add stat="mAtk" order="0x10" value="45"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="145" name="Sword of Whispering Death">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="1720"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_deathbreath_sword_i00"/>
+		<set name="price" value="4300000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="920"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="111"/>
+			<add stat="mAtk" order="0x10" value="101"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="146" name="Ghoulbane">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="1157"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.weapon_falchion_i00"/>
+		<set name="price" value="8680000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="910"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="140"/>
+			<add stat="mAtk" order="0x10" value="122"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="148" name="Sword of Valhalla">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="1157"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.weapon_sword_of_valhalla_i00"/>
+		<set name="price" value="8680000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="900"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="140"/>
+			<add stat="mAtk" order="0x10" value="122"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="150" name="Elemental Sword">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="1128"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_elemental_sword_i00"/>
+		<set name="price" value="14098000"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="830"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="is_magic_weapon" value="true"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="170"/>
+			<add stat="mAtk" order="0x10" value="143"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<weapon id="151" name="Sword of Miracles">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="1659"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_sword_of_miracle_i00"/>
+		<set name="price" value="20741000"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="840"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="is_magic_weapon" value="true"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="186"/>
+			<add stat="mAtk" order="0x10" value="152"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<weapon id="152" name="Heavy Chisel">
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_heavy_chisel_i00"/>
+		<set name="price" value="8070"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1890"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="10"/>
+			<add stat="mAtk" order="0x10" value="8"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="153" name="Sickle">
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_sickle_i00"/>
+		<set name="price" value="18500"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1850"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="12"/>
+			<add stat="mAtk" order="0x10" value="9"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="154" name="Dwarven Mace">
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_dwarven_mace_i00"/>
+		<set name="price" value="54100"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1860"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="17"/>
+			<add stat="mAtk" order="0x10" value="12"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="155" name="Flanged Mace">
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_buzdygan_i00"/>
+		<set name="price" value="244000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1800"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="31"/>
+			<add stat="mAtk" order="0x10" value="21"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="156" name="Hand Axe">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="743"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_hand_axe_i00"/>
+		<set name="price" value="409000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1820"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="40"/>
+			<add stat="mAtk" order="0x10" value="26"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="157" name="Spiked Club">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="1758"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_spike_club_i00"/>
+		<set name="price" value="967000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1750"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="64"/>
+			<add stat="mAtk" order="0x10" value="39"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="158" name="Tarbar">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="2545"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_tarbar_i00"/>
+		<set name="price" value="1400000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1730"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="79"/>
+			<add stat="mAtk" order="0x10" value="47"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="159" name="Bonebreaker">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="3272"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_bonebreaker_i00"/>
+		<set name="price" value="1800000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1720"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="92"/>
+			<add stat="mAtk" order="0x10" value="54"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="160" name="Battle Axe">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="916"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_battle_axe_i00"/>
+		<set name="price" value="2290000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1720"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="107"/>
+			<add stat="mAtk" order="0x10" value="61"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="161" name="Silver Axe">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="916"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_war_pick_i00"/>
+		<set name="price" value="2290000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1690"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="107"/>
+			<add stat="mAtk" order="0x10" value="61"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="162" name="War Axe">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="1720"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_war_axe_i00"/>
+		<set name="price" value="4300000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1660"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="139"/>
+			<add stat="mAtk" order="0x10" value="76"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="164" name="Elysian">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="1659"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_elysian_i00"/>
+		<set name="price" value="20741000"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1580"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="232"/>
+			<add stat="mAtk" order="0x10" value="114"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="166" name="Heavy Mace">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="743"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_heavy_mace_i00"/>
+		<set name="price" value="409000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1800"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="40"/>
+			<add stat="mAtk" order="0x10" value="26"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="167" name="Scalpel">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="743"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_scalpel_i00"/>
+		<set name="price" value="409000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1810"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="40"/>
+			<add stat="mAtk" order="0x10" value="26"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="168" name="Work Hammer">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="743"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_work_hammer_i00"/>
+		<set name="price" value="409000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1790"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="40"/>
+			<add stat="mAtk" order="0x10" value="26"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="169" name="Skull Breaker">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="2545"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_skull_breaker_i00"/>
+		<set name="price" value="1400000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1740"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="79"/>
+			<add stat="mAtk" order="0x10" value="47"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="171" name="Deadman\'s Glory">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="1746"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.weapon_deadmans_glory_i00"/>
+		<set name="price" value="13100000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1600"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="194"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="172" name="Heavy Bone Club">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="2545"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_heavy_bone_club_i00"/>
+		<set name="price" value="1400000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1730"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="79"/>
+			<add stat="mAtk" order="0x10" value="47"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="173" name="Skull Graver">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="916"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_skull_graver_i00"/>
+		<set name="price" value="2290000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1640"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="107"/>
+			<add stat="mAtk" order="0x10" value="61"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="174" name="Nirvana Axe">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="1720"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_nirvana_axe_i00"/>
+		<set name="price" value="4300000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1150"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="111"/>
+			<add stat="mAtk" order="0x10" value="101"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="175" name="Art of Battle Axe">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_count" value="1746"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.weapon_art_of_battle_axe_i00"/>
+		<set name="price" value="13100000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1570"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="194"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="176" name="Apprentice\'s Staff">
+		<set name="damage_range" value="0;0;46;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_apprentices_staff_i00"/>
+		<set name="price" value="136000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BIGBLUNT"/>
+		<set name="weight" value="1070"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="23"/>
+			<add stat="mAtk" order="0x10" value="24"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="177" name="Mage Staff">
+		<set name="damage_range" value="0;0;46;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_apprentices_staff_i00"/>
+		<set name="price" value="244000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BIGBLUNT"/>
+		<set name="weight" value="1050"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="30"/>
+			<add stat="mAtk" order="0x10" value="31"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="178" name="Bone Staff">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;46;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="743"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_apprentices_staff_i00"/>
+		<set name="price" value="409000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BIGBLUNT"/>
+		<set name="weight" value="1060"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="39"/>
+			<add stat="mAtk" order="0x10" value="39"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="179" name="Mace of Prayer">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="1170"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_mace_of_prayer_i00"/>
+		<set name="price" value="644000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1300"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="41"/>
+			<add stat="mAtk" order="0x10" value="43"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="180" name="Mace of Judgment">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="1170"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_mace_of_judgment_i00"/>
+		<set name="price" value="644000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1280"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="41"/>
+			<add stat="mAtk" order="0x10" value="43"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="181" name="Mace of Miracle">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="1170"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_mace_of_miracle_i00"/>
+		<set name="price" value="644000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1250"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="41"/>
+			<add stat="mAtk" order="0x10" value="43"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="182" name="Doom Hammer">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="1170"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_doom_hammer_i00"/>
+		<set name="price" value="644000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1200"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="41"/>
+			<add stat="mAtk" order="0x10" value="43"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="183" name="Mystic Staff">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;46;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="1170"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_mystic_staff_i00"/>
+		<set name="price" value="644000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BIGBLUNT"/>
+		<set name="weight" value="1040"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="50"/>
+			<add stat="mAtk" order="0x10" value="47"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="184" name="Conjuror\'s Staff">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;46;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="1170"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_conjure_staff_i00"/>
+		<set name="price" value="644000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BIGBLUNT"/>
+		<set name="weight" value="1030"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="50"/>
+			<add stat="mAtk" order="0x10" value="47"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="185" name="Staff of Mana">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;46;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="1170"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_staff_of_mana_i00"/>
+		<set name="price" value="644000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BIGBLUNT"/>
+		<set name="weight" value="1040"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="50"/>
+			<add stat="mAtk" order="0x10" value="47"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="186" name="Staff of Magic">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;46;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="1758"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_staff_of_magicpower_i00"/>
+		<set name="price" value="967000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BIGBLUNT"/>
+		<set name="weight" value="1020"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="62"/>
+			<add stat="mAtk" order="0x10" value="57"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="187" name="Atuba Hammer">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;46;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="3272"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_atuba_hammer_i00"/>
+		<set name="price" value="1800000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BIGBLUNT"/>
+		<set name="weight" value="1010"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="90"/>
+			<add stat="mAtk" order="0x10" value="79"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="188" name="Ghost Staff">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;46;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="3272"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_ghost_staff_i00"/>
+		<set name="price" value="1800000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BIGBLUNT"/>
+		<set name="weight" value="1000"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="90"/>
+			<add stat="mAtk" order="0x10" value="79"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="189" name="Staff of Life">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="3272"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_life_stick_i00"/>
+		<set name="price" value="1800000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1180"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="74"/>
+			<add stat="mAtk" order="0x10" value="72"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="190" name="Atuba Mace">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;46;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="3272"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_atuba_mace_i00"/>
+		<set name="price" value="1800000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BIGBLUNT"/>
+		<set name="weight" value="1010"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="90"/>
+			<add stat="mAtk" order="0x10" value="79"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="191" name="Heavy Doom Hammer">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;46;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="916"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_heavy_doom_hammer_i00"/>
+		<set name="price" value="2290000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BIGBLUNT"/>
+		<set name="weight" value="1020"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="103"/>
+			<add stat="mAtk" order="0x10" value="89"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="192" name="Crystal Staff">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;46;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="916"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_crystal_staff_i00"/>
+		<set name="price" value="2290000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BIGBLUNT"/>
+		<set name="weight" value="1020"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="103"/>
+			<add stat="mAtk" order="0x10" value="89"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="193" name="Stick of Faith">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="916"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_stick_of_faith_i00"/>
+		<set name="price" value="2290000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1160"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="85"/>
+			<add stat="mAtk" order="0x10" value="81"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="194" name="Heavy Doom Axe">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;56;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="916"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_heavy_doom_axe_i00"/>
+		<set name="price" value="2290000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BIGBLUNT"/>
+		<set name="weight" value="1010"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="103"/>
+			<add stat="mAtk" order="0x10" value="89"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="195" name="Cursed Staff">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;46;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="1148"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_cursed_staff_i00"/>
+		<set name="price" value="2870000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BIGBLUNT"/>
+		<set name="weight" value="1000"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="119"/>
+			<add stat="mAtk" order="0x10" value="100"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="196" name="Stick of Eternity">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="1720"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_stick_of_eternity_i00"/>
+		<set name="price" value="4300000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1130"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="111"/>
+			<add stat="mAtk" order="0x10" value="101"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="197" name="Paradia Staff">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;46;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="1720"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_paradia_staff_i00"/>
+		<set name="price" value="4300000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BIGBLUNT"/>
+		<set name="weight" value="1010"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="135"/>
+			<add stat="mAtk" order="0x10" value="111"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="198" name="Inferno Staff">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;46;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="1720"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_inferno_staff_i00"/>
+		<set name="price" value="4300000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BIGBLUNT"/>
+		<set name="weight" value="1000"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="135"/>
+			<add stat="mAtk" order="0x10" value="111"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="199" name="Pa\'agrio Hammer">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;46;120"/>
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_count" value="1720"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_paagrio_hammer_i00"/>
+		<set name="price" value="4300000"/>
+		<set name="rnd_dam" value="20"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BIGBLUNT"/>
+		<set name="weight" value="1010"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="135"/>
+			<add stat="mAtk" order="0x10" value="111"/>
+			<set stat="basePCritRate" order="0x08" value="60"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<add stat="pAccCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+</list>

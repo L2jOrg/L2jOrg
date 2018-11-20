@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<territory name="oren30_2218_20s">
+		<add x="87572" y="7484" zmin="-3484" zmax="-3084"/>
+		<add x="90528" y="7604" zmin="-3484" zmax="-3084"/>
+		<add x="91048" y="8604" zmin="-3484" zmax="-3084"/>
+		<add x="87888" y="8520" zmin="-3484" zmax="-3084"/>
+	</territory>
+	<spawn name="oren30_2218_20s" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_20s"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_20s" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_20s"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<spawn name="oren30_2218_20s" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_20s"/>
+		<npc id="20571"/><!--Воин Людоедов Тарлк-->
+	</spawn>
+	<territory name="oren29_2218_28">
+		<add x="87980" y="17520" zmin="-5368" zmax="-5068"/>
+		<add x="90184" y="18284" zmin="-5368" zmax="-5068"/>
+		<add x="89864" y="20844" zmin="-5368" zmax="-5068"/>
+		<add x="88228" y="21936" zmin="-5368" zmax="-5068"/>
+		<add x="87536" y="18752" zmin="-5368" zmax="-5068"/>
+	</territory>
+	<spawn name="oren29_2218_28" count="3" respawn="24" respawn_random="5">
+		<territory name="oren29_2218_28"/>
+		<npc id="20564"/><!--Зачарованный Монстроглаз-->
+	</spawn>
+	<spawn name="oren29_2218_28" count="3" respawn="24" respawn_random="5">
+		<territory name="oren29_2218_28"/>
+		<npc id="20565"/><!--Зачарованный Каменный Голем-->
+	</spawn>
+	<spawn name="oren29_2218_28" count="3" respawn="24" respawn_random="5">
+		<territory name="oren29_2218_28"/>
+		<npc id="20567"/><!--Зачарованная Горгулья-->
+	</spawn>
+	<territory name="oren29_2218_29">
+		<add x="91192" y="14192" zmin="-5436" zmax="-5236"/>
+		<add x="91420" y="16760" zmin="-5436" zmax="-5236"/>
+		<add x="90212" y="18308" zmin="-5436" zmax="-5236"/>
+		<add x="88008" y="17488" zmin="-5436" zmax="-5236"/>
+		<add x="87660" y="14836" zmin="-5436" zmax="-5236"/>
+		<add x="89680" y="13016" zmin="-5436" zmax="-5236"/>
+	</territory>
+	<spawn name="oren29_2218_29" count="4" respawn="24" respawn_random="5">
+		<territory name="oren29_2218_29"/>
+		<npc id="20564"/><!--Зачарованный Монстроглаз-->
+	</spawn>
+	<spawn name="oren29_2218_29" count="4" respawn="24" respawn_random="5">
+		<territory name="oren29_2218_29"/>
+		<npc id="20565"/><!--Зачарованный Каменный Голем-->
+	</spawn>
+	<spawn name="oren29_2218_29" count="5" respawn="24" respawn_random="5">
+		<territory name="oren29_2218_29"/>
+		<npc id="20566"/><!--Зачарованный Железный Голем-->
+	</spawn>
+	<territory name="oren29_2218_26">
+		<add x="79664" y="16248" zmin="-5356" zmax="-5156"/>
+		<add x="85768" y="19076" zmin="-5356" zmax="-5156"/>
+		<add x="81972" y="22128" zmin="-5356" zmax="-5156"/>
+		<add x="79012" y="18196" zmin="-5356" zmax="-5156"/>
+	</territory>
+	<spawn name="oren29_2218_26" count="3" respawn="24" respawn_random="5">
+		<territory name="oren29_2218_26"/>
+		<npc id="20567"/><!--Зачарованная Горгулья-->
+	</spawn>
+	<spawn name="oren29_2218_26" count="5" respawn="24" respawn_random="5">
+		<territory name="oren29_2218_26"/>
+		<npc id="20566"/><!--Зачарованный Железный Голем-->
+	</spawn>
+	<spawn name="oren29_2218_26" count="7" respawn="24" respawn_random="5">
+		<territory name="oren29_2218_26"/>
+		<npc id="20235"/><!--Каторжник-->
+	</spawn>
+	<territory name="oren29_2218_27">
+		<add x="87492" y="18724" zmin="-5360" zmax="-5160"/>
+		<add x="88196" y="21964" zmin="-5360" zmax="-5160"/>
+		<add x="85752" y="22296" zmin="-5360" zmax="-5160"/>
+		<add x="81996" y="22184" zmin="-5360" zmax="-5160"/>
+		<add x="85816" y="19128" zmin="-5360" zmax="-5160"/>
+	</territory>
+	<spawn name="oren29_2218_27" count="4" respawn="24" respawn_random="5">
+		<territory name="oren29_2218_27"/>
+		<npc id="20565"/><!--Зачарованный Каменный Голем-->
+	</spawn>
+	<spawn name="oren29_2218_27" count="4" respawn="24" respawn_random="5">
+		<territory name="oren29_2218_27"/>
+		<npc id="20567"/><!--Зачарованная Горгулья-->
+	</spawn>
+	<spawn name="oren29_2218_27" count="4" respawn="24" respawn_random="5">
+		<territory name="oren29_2218_27"/>
+		<npc id="20235"/><!--Каторжник-->
+	</spawn>
+	<territory name="oren29_2218_24">
+		<add x="82402" y="10252" zmin="-5343" zmax="-5143"/>
+		<add x="84925" y="10418" zmin="-5343" zmax="-5143"/>
+		<add x="84940" y="10855" zmin="-5343" zmax="-5143"/>
+		<add x="85801" y="10823" zmin="-5343" zmax="-5143"/>
+		<add x="85857" y="12677" zmin="-5343" zmax="-5143"/>
+		<add x="84859" y="12656" zmin="-5343" zmax="-5143"/>
+		<add x="84879" y="13557" zmin="-5343" zmax="-5143"/>
+		<add x="81376" y="14063" zmin="-5343" zmax="-5143"/>
+	</territory>
+	<spawn name="oren29_2218_24" count="5" respawn="24" respawn_random="5">
+		<territory name="oren29_2218_24"/>
+		<npc id="20563"/><!--Манашен Горгулья-->
+	</spawn>
+	<spawn name="oren29_2218_24" count="4" respawn="24" respawn_random="5">
+		<territory name="oren29_2218_24"/>
+		<npc id="20564"/><!--Зачарованный Монстроглаз-->
+	</spawn>
+	<spawn name="oren29_2218_24" count="4" respawn="24" respawn_random="5">
+		<territory name="oren29_2218_24"/>
+		<npc id="20565"/><!--Зачарованный Каменный Голем-->
+	</spawn>
+	<territory name="oren29_2218_25">
+		<add x="80608" y="14032" zmin="-5348" zmax="-5148"/>
+		<add x="82848" y="14204" zmin="-5348" zmax="-5148"/>
+		<add x="82836" y="17716" zmin="-5348" zmax="-5148"/>
+		<add x="79636" y="16232" zmin="-5348" zmax="-5148"/>
+	</territory>
+	<spawn name="oren29_2218_25" count="3" respawn="24" respawn_random="5">
+		<territory name="oren29_2218_25"/>
+		<npc id="20564"/><!--Зачарованный Монстроглаз-->
+	</spawn>
+	<spawn name="oren29_2218_25" count="3" respawn="24" respawn_random="5">
+		<territory name="oren29_2218_25"/>
+		<npc id="20565"/><!--Зачарованный Каменный Голем-->
+	</spawn>
+	<spawn name="oren29_2218_25" count="5" respawn="24" respawn_random="5">
+		<territory name="oren29_2218_25"/>
+		<npc id="20566"/><!--Зачарованный Железный Голем-->
+	</spawn>
+	<territory name="oren29_2218_23">
+		<add x="85980" y="10492" zmin="-5400" zmax="-5100"/>
+		<add x="89420" y="11424" zmin="-5400" zmax="-5100"/>
+		<add x="89652" y="13040" zmin="-5400" zmax="-5100"/>
+		<add x="87664" y="14836" zmin="-5400" zmax="-5100"/>
+		<add x="85692" y="13784" zmin="-5400" zmax="-5100"/>
+	</territory>
+	<spawn name="oren29_2218_23" count="4" respawn="24" respawn_random="5">
+		<territory name="oren29_2218_23"/>
+		<npc id="20563"/><!--Манашен Горгулья-->
+	</spawn>
+	<spawn name="oren29_2218_23" count="4" respawn="24" respawn_random="5">
+		<territory name="oren29_2218_23"/>
+		<npc id="20564"/><!--Зачарованный Монстроглаз-->
+	</spawn>
+	<spawn name="oren29_2218_23" count="3" respawn="24" respawn_random="5">
+		<territory name="oren29_2218_23"/>
+		<npc id="20565"/><!--Зачарованный Каменный Голем-->
+	</spawn>
+	<spawn name="oren30_npc2218_002" count="1" respawn="60">
+		<point x="95348" y="22298" z="-2882" h="0"/>
+		<npc id="30757"/><!--Статуя Подношения-->
+	</spawn>
+	<spawn name="oren30_npc2218_002" count="1" respawn="60">
+		<point x="95359" y="22208" z="-2879" h="4096"/>
+		<npc id="30759"/><!--Калис-->
+	</spawn>
+	<spawn name="oren29_npc2218_014" count="1" respawn="60">
+		<point x="82234" y="22257" z="-5257" h="54112"/>
+		<npc id="30935"/><!--Трампин-->
+	</spawn>
+	<spawn name="oren29_npc2218_013" count="1" respawn="60">
+		<point x="85881" y="14126" z="-5248" h="46752"/>
+		<npc id="30934"/><!--Марша-->
+	</spawn>
+	<spawn name="oren01_qm2218_02" count="4" respawn="180">
+		<territory>
+			<add x="88572" y="15016" zmin="-5396" zmax="-5096"/>
+			<add x="91048" y="15508" zmin="-5396" zmax="-5096"/>
+			<add x="89376" y="20648" zmin="-5396" zmax="-5096"/>
+			<add x="86664" y="22120" zmin="-5396" zmax="-5096"/>
+			<add x="86512" y="20164" zmin="-5396" zmax="-5096"/>
+		</territory>
+		<npc id="27098"/><!--Призрачный Огонь-->
+	</spawn>
+	<spawn name="oren01_qm2218_01" count="4" respawn="180">
+		<territory>
+			<add x="79892" y="15052" zmin="-5348" zmax="-5048"/>
+			<add x="82008" y="15024" zmin="-5348" zmax="-5048"/>
+			<add x="84252" y="20204" zmin="-5348" zmax="-5048"/>
+			<add x="82604" y="22312" zmin="-5348" zmax="-5048"/>
+			<add x="80436" y="20496" zmin="-5348" zmax="-5048"/>
+			<add x="79172" y="18188" zmin="-5348" zmax="-5048"/>
+		</territory>
+		<npc id="27098"/><!--Призрачный Огонь-->
+	</spawn>
+	<territory name="oren30_2218_16s">
+		<add x="74840" y="9208" zmin="-3728" zmax="-3528"/>
+		<add x="75988" y="10004" zmin="-3728" zmax="-3528"/>
+		<add x="76172" y="12848" zmin="-3728" zmax="-3528"/>
+		<add x="74808" y="12932" zmin="-3728" zmax="-3528"/>
+	</territory>
+	<spawn name="oren30_2218_16s" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_16s"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_16s" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_16s"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<spawn name="oren30_2218_16s" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_16s"/>
+		<npc id="20571"/><!--Воин Людоедов Тарлк-->
+	</spawn>
+	<territory name="oren30_2218_15s">
+		<add x="75268" y="16644" zmin="-4060" zmax="-3560"/>
+		<add x="77324" y="16176" zmin="-4060" zmax="-3560"/>
+		<add x="77516" y="19112" zmin="-4060" zmax="-3560"/>
+		<add x="74696" y="18908" zmin="-4060" zmax="-3560"/>
+	</territory>
+	<spawn name="oren30_2218_15s" count="4" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_15s"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_15s" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_15s"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<spawn name="oren30_2218_15s" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_15s"/>
+		<npc id="20571"/><!--Воин Людоедов Тарлк-->
+	</spawn>
+	<territory name="oren30_2218_14s">
+		<add x="76124" y="21648" zmin="-3784" zmax="-3384"/>
+		<add x="78024" y="21444" zmin="-3784" zmax="-3384"/>
+		<add x="78024" y="23672" zmin="-3784" zmax="-3384"/>
+		<add x="75892" y="25312" zmin="-3784" zmax="-3384"/>
+	</territory>
+	<spawn name="oren30_2218_14s" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_14s"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_14s" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_14s"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<spawn name="oren30_2218_14s" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_14s"/>
+		<npc id="20571"/><!--Воин Людоедов Тарлк-->
+	</spawn>
+	<territory name="oren30_2218_13s">
+		<add x="81212" y="23856" zmin="-3656" zmax="-3456"/>
+		<add x="84432" y="24668" zmin="-3656" zmax="-3456"/>
+		<add x="83220" y="26232" zmin="-3656" zmax="-3456"/>
+		<add x="81664" y="26016" zmin="-3656" zmax="-3456"/>
+	</territory>
+	<spawn name="oren30_2218_13s" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_13s"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_13s" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_13s"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<spawn name="oren30_2218_13s" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_13s"/>
+		<npc id="20571"/><!--Воин Людоедов Тарлк-->
+	</spawn>
+	<territory name="oren30_2218_18s">
+		<add x="81272" y="2980" zmin="-3052" zmax="-2852"/>
+		<add x="82572" y="2668" zmin="-3052" zmax="-2852"/>
+		<add x="83236" y="4192" zmin="-3052" zmax="-2852"/>
+		<add x="81148" y="5396" zmin="-3052" zmax="-2852"/>
+	</territory>
+	<spawn name="oren30_2218_18s" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_18s"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_18s" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_18s"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<spawn name="oren30_2218_18s" count="1" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_18s"/>
+		<npc id="20572"/><!--Главарь Людоедов Тарлк-->
+	</spawn>
+	<territory name="oren30_2218_17s">
+		<add x="76964" y="5248" zmin="-3564" zmax="-3064"/>
+		<add x="78868" y="6520" zmin="-3564" zmax="-3064"/>
+		<add x="78084" y="9956" zmin="-3564" zmax="-3064"/>
+		<add x="75384" y="7524" zmin="-3564" zmax="-3064"/>
+	</territory>
+	<spawn name="oren30_2218_17s" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_17s"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_17s" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_17s"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<spawn name="oren30_2218_17s" count="4" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_17s"/>
+		<npc id="20571"/><!--Воин Людоедов Тарлк-->
+	</spawn>
+	<spawn name="oren30_2218_17s" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_17s"/>
+		<npc id="20572"/><!--Главарь Людоедов Тарлк-->
+	</spawn>
+	<territory name="oren30_2218_10s">
+		<add x="87092" y="24592" zmin="-3684" zmax="-3484"/>
+		<add x="89076" y="24576" zmin="-3684" zmax="-3484"/>
+		<add x="90572" y="24784" zmin="-3684" zmax="-3484"/>
+		<add x="89820" y="25680" zmin="-3684" zmax="-3484"/>
+		<add x="86984" y="25836" zmin="-3684" zmax="-3484"/>
+	</territory>
+	<spawn name="oren30_2218_10s" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_10s"/>
+		<npc id="20568"/><!--Формор-->
+	</spawn>
+	<spawn name="oren30_2218_10s" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_10s"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_10s" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_10s"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<territory name="oren30_2218_07s">
+		<add x="93096" y="19640" zmin="-3684" zmax="-3284"/>
+		<add x="93488" y="22340" zmin="-3684" zmax="-3284"/>
+		<add x="92056" y="23380" zmin="-3684" zmax="-3284"/>
+		<add x="91340" y="21996" zmin="-3684" zmax="-3284"/>
+	</territory>
+	<spawn name="oren30_2218_07s" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_07s"/>
+		<npc id="20568"/><!--Формор-->
+	</spawn>
+	<spawn name="oren30_2218_07s" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_07s"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_07s" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_07s"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<territory name="oren30_2218_06s">
+		<add x="95548" y="11520" zmin="-3720" zmax="-3120"/>
+		<add x="97332" y="13276" zmin="-3720" zmax="-3120"/>
+		<add x="94972" y="16864" zmin="-3720" zmax="-3120"/>
+		<add x="93984" y="13832" zmin="-3720" zmax="-3120"/>
+	</territory>
+	<spawn name="oren30_2218_06s" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_06s"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_06s" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_06s"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<spawn name="oren30_2218_06s" count="4" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_06s"/>
+		<npc id="20571"/><!--Воин Людоедов Тарлк-->
+	</spawn>
+	<spawn name="oren_chamberlain_etc" count="1" respawn="60" respawn_random="0" period_of_day="none" group="oren_castle_light_side">
+		<point x="83171" y="37092" z="-2266" h="32768"/>
+		<npc id="35226"/><!--Камергер Света-->
+	</spawn>
+	<spawn name="oren_chamberlain_etc" count="1" respawn="60" respawn_random="0" period_of_day="none" group="oren_castle_dark_side">
+		<point x="83171" y="37092" z="-2266" h="32768"/>
+		<npc id="36656"/><!--Камергер Тьмы-->
+	</spawn>
+	<spawn name="oren_chamberlain_etc" count="1" respawn="60" group="oren_castle_4">
+		<point x="75275" y="40132" z="-3150" h="32768"/>
+		<npc id="35232"/><!--Шервуд-->
+	</spawn>
+	<spawn name="oren_chamberlain_etc" count="1" respawn="10800" group="oren_castle_4">
+		<point x="78737" y="36852" z="-2544" h="32768"/>
+		<npc id="35222"/><!--Привратник Внешних Владений-->
+	</spawn>
+	<spawn name="oren_chamberlain_etc" count="1" respawn="10800" group="oren_castle_4">
+		<point x="79085" y="36798" z="-2544" h="49152"/>
+		<npc id="35222"/><!--Привратник Внешних Владений-->
+	</spawn>
+	<spawn name="oren_chamberlain_etc" count="1" respawn="10800" group="oren_castle_4">
+		<point x="81296" y="37025" z="-2254" h="32768"/>
+		<npc id="35223"/><!--Привратник Внутренних Владений-->
+	</spawn>
+	<spawn name="oren_chamberlain_etc" count="1" respawn="10800" group="oren_castle_4">
+		<point x="81651" y="36959" z="-2294" h="49152"/>
+		<npc id="35223"/><!--Привратник Внутренних Владений-->
+	</spawn>
+	<territory name="oren30_2218_19">
+		<add x="86480" y="1944" zmin="-3048" zmax="-2548"/>
+		<add x="90504" y="2972" zmin="-3048" zmax="-2548"/>
+		<add x="87476" y="5728" zmin="-3048" zmax="-2548"/>
+		<add x="85944" y="6540" zmin="-3048" zmax="-2548"/>
+	</territory>
+	<spawn name="oren30_2218_19" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_19"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_19" count="4" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_19"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<spawn name="oren30_2218_19" count="4" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_19"/>
+		<npc id="20571"/><!--Воин Людоедов Тарлк-->
+	</spawn>
+	<territory name="oren30_2218_18">
+		<add x="78688" y="3120" zmin="-3156" zmax="-2656"/>
+		<add x="84184" y="2100" zmin="-3156" zmax="-2656"/>
+		<add x="84432" y="6744" zmin="-3156" zmax="-2656"/>
+		<add x="81416" y="5976" zmin="-3156" zmax="-2656"/>
+	</territory>
+	<spawn name="oren30_2218_18" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_18"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_18" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_18"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<spawn name="oren30_2218_18" count="1" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_18"/>
+		<npc id="20571"/><!--Воин Людоедов Тарлк-->
+	</spawn>
+	<spawn name="oren30_2218_18" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_18"/>
+		<npc id="20572"/><!--Главарь Людоедов Тарлк-->
+	</spawn>
+	<territory name="oren30_2218_17">
+		<add x="74760" y="7460" zmin="-3652" zmax="-3052"/>
+		<add x="77336" y="3776" zmin="-3652" zmax="-3052"/>
+		<add x="82516" y="8340" zmin="-3652" zmax="-3052"/>
+		<add x="78816" y="11160" zmin="-3652" zmax="-3052"/>
+	</territory>
+	<spawn name="oren30_2218_17" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_17"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_17" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_17"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<spawn name="oren30_2218_17" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_17"/>
+		<npc id="20571"/><!--Воин Людоедов Тарлк-->
+	</spawn>
+	<spawn name="oren30_2218_17" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_17"/>
+		<npc id="20572"/><!--Главарь Людоедов Тарлк-->
+	</spawn>
+	<territory name="oren30_2218_12">
+		<add x="77664" y="27740" zmin="-3776" zmax="-3376"/>
+		<add x="80084" y="27544" zmin="-3776" zmax="-3376"/>
+		<add x="82684" y="28776" zmin="-3776" zmax="-3376"/>
+		<add x="78952" y="29596" zmin="-3776" zmax="-3376"/>
+		<add x="77084" y="28936" zmin="-3776" zmax="-3376"/>
+	</territory>
+	<spawn name="oren30_2218_12" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_12"/>
+		<npc id="20568"/><!--Формор-->
+	</spawn>
+	<spawn name="oren30_2218_12" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_12"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_12" count="4" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_12"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<territory name="oren30_2218_11">
+		<add x="81420" y="28160" zmin="-3780" zmax="-3480"/>
+		<add x="86660" y="27900" zmin="-3780" zmax="-3480"/>
+		<add x="87040" y="29600" zmin="-3780" zmax="-3480"/>
+		<add x="85056" y="29872" zmin="-3780" zmax="-3480"/>
+	</territory>
+	<spawn name="oren30_2218_11" count="4" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_11"/>
+		<npc id="20568"/><!--Формор-->
+	</spawn>
+	<spawn name="oren30_2218_11" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_11"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_11" count="4" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_11"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<territory name="oren30_2218_10">
+		<add x="85748" y="24320" zmin="-3760" zmax="-3460"/>
+		<add x="91192" y="23184" zmin="-3760" zmax="-3460"/>
+		<add x="91656" y="25812" zmin="-3760" zmax="-3460"/>
+		<add x="85548" y="26744" zmin="-3760" zmax="-3460"/>
+	</territory>
+	<spawn name="oren30_2218_10" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_10"/>
+		<npc id="20568"/><!--Формор-->
+	</spawn>
+	<spawn name="oren30_2218_10" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_10"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_10" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_10"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<territory name="oren30_2218_16">
+		<add x="74588" y="7416" zmin="-4012" zmax="-3412"/>
+		<add x="79248" y="11704" zmin="-4012" zmax="-3412"/>
+		<add x="76844" y="15436" zmin="-4012" zmax="-3412"/>
+		<add x="74612" y="14840" zmin="-4012" zmax="-3412"/>
+	</territory>
+	<spawn name="oren30_2218_16" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_16"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_16" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_16"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<spawn name="oren30_2218_16" count="4" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_16"/>
+		<npc id="20571"/><!--Воин Людоедов Тарлк-->
+	</spawn>
+	<spawn name="oren30_2218_16" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_16"/>
+		<npc id="20572"/><!--Главарь Людоедов Тарлк-->
+	</spawn>
+	<territory name="oren30_2218_15">
+		<add x="73616" y="14628" zmin="-4136" zmax="-3536"/>
+		<add x="77552" y="15676" zmin="-4136" zmax="-3536"/>
+		<add x="78108" y="20588" zmin="-4136" zmax="-3536"/>
+		<add x="75168" y="20496" zmin="-4136" zmax="-3536"/>
+		<add x="73480" y="18608" zmin="-4136" zmax="-3536"/>
+	</territory>
+	<spawn name="oren30_2218_15" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_15"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_15" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_15"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<spawn name="oren30_2218_15" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_15"/>
+		<npc id="20571"/><!--Воин Людоедов Тарлк-->
+	</spawn>
+	<territory name="oren30_2218_14">
+		<add x="78116" y="20592" zmin="-3796" zmax="-3396"/>
+		<add x="79828" y="22864" zmin="-3796" zmax="-3396"/>
+		<add x="78720" y="26556" zmin="-3796" zmax="-3396"/>
+		<add x="75208" y="27024" zmin="-3796" zmax="-3396"/>
+		<add x="74408" y="24180" zmin="-3796" zmax="-3396"/>
+		<add x="75148" y="20488" zmin="-3796" zmax="-3396"/>
+	</territory>
+	<spawn name="oren30_2218_14" count="4" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_14"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_14" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_14"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<spawn name="oren30_2218_14" count="4" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_14"/>
+		<npc id="20571"/><!--Воин Людоедов Тарлк-->
+	</spawn>
+	<territory name="oren30_2218_13">
+		<add x="79824" y="22932" zmin="-3768" zmax="-3468"/>
+		<add x="84808" y="24488" zmin="-3768" zmax="-3468"/>
+		<add x="84668" y="26676" zmin="-3768" zmax="-3468"/>
+		<add x="81832" y="27084" zmin="-3768" zmax="-3468"/>
+		<add x="78752" y="26572" zmin="-3768" zmax="-3468"/>
+	</territory>
+	<spawn name="oren30_2218_13" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_13"/>
+		<npc id="20568"/><!--Формор-->
+	</spawn>
+	<spawn name="oren30_2218_13" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_13"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_13" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_13"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<spawn name="oren30_2218_13" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_13"/>
+		<npc id="20571"/><!--Воин Людоедов Тарлк-->
+	</spawn>
+	<territory name="oren30_2218_09">
+		<add x="86740" y="27880" zmin="-3740" zmax="-3440"/>
+		<add x="92640" y="26572" zmin="-3740" zmax="-3440"/>
+		<add x="94212" y="28916" zmin="-3740" zmax="-3440"/>
+		<add x="89740" y="30084" zmin="-3740" zmax="-3440"/>
+		<add x="87108" y="29572" zmin="-3740" zmax="-3440"/>
+	</territory>
+	<spawn name="oren30_2218_09" count="5" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_09"/>
+		<npc id="20568"/><!--Формор-->
+	</spawn>
+	<spawn name="oren30_2218_09" count="5" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_09"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_09" count="5" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_09"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<territory name="oren30_2218_08">
+		<add x="95148" y="25552" zmin="-3784" zmax="-3384"/>
+		<add x="98068" y="25752" zmin="-3784" zmax="-3384"/>
+		<add x="98080" y="29676" zmin="-3784" zmax="-3384"/>
+		<add x="94324" y="29120" zmin="-3784" zmax="-3384"/>
+		<add x="92608" y="26500" zmin="-3784" zmax="-3384"/>
+	</territory>
+	<spawn name="oren30_2218_08" count="5" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_08"/>
+		<npc id="20568"/><!--Формор-->
+	</spawn>
+	<spawn name="oren30_2218_08" count="5" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_08"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_08" count="4" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_08"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<territory name="oren30_2218_07">
+		<add x="92912" y="19272" zmin="-3748" zmax="-3148"/>
+		<add x="93728" y="19796" zmin="-3748" zmax="-3148"/>
+		<add x="94420" y="24088" zmin="-3748" zmax="-3148"/>
+		<add x="91652" y="25852" zmin="-3748" zmax="-3148"/>
+		<add x="90904" y="21688" zmin="-3748" zmax="-3148"/>
+	</territory>
+	<spawn name="oren30_2218_07" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_07"/>
+		<npc id="20568"/><!--Формор-->
+	</spawn>
+	<spawn name="oren30_2218_07" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_07"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_07" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_07"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<territory name="oren30_2218_06">
+		<add x="92196" y="8776" zmin="-4008" zmax="-2708"/>
+		<add x="96640" y="9676" zmin="-4008" zmax="-2708"/>
+		<add x="97980" y="10272" zmin="-4008" zmax="-2708"/>
+		<add x="98048" y="18088" zmin="-4008" zmax="-2708"/>
+		<add x="94764" y="16956" zmin="-4008" zmax="-2708"/>
+		<add x="91924" y="11044" zmin="-4008" zmax="-2708"/>
+	</territory>
+	<spawn name="oren30_2218_06" count="5" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_06"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_06" count="5" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_06"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<spawn name="oren30_2218_06" count="6" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_06"/>
+		<npc id="20571"/><!--Воин Людоедов Тарлк-->
+	</spawn>
+	<territory name="oren30_2218_05">
+		<add x="96652" y="6860" zmin="-3792" zmax="-3592"/>
+		<add x="98064" y="6516" zmin="-3792" zmax="-3592"/>
+		<add x="97996" y="10176" zmin="-3792" zmax="-3592"/>
+		<add x="96652" y="9572" zmin="-3792" zmax="-3592"/>
+	</territory>
+	<spawn name="oren30_2218_05" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_05"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_05" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_05"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<spawn name="oren30_2218_05" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_05"/>
+		<npc id="20571"/><!--Воин Людоедов Тарлк-->
+	</spawn>
+	<spawn name="oren16_npc2218_011" count="1" respawn="60">
+		<point x="85516" y="17458" z="-3512" h="16384"/>
+		<npc id="30726"/><!--Тебос-->
+	</spawn>
+	<spawn name="oren16_npc2218_011" count="1" respawn="60">
+		<point x="85149" y="17458" z="-3512" h="16384"/>
+		<npc id="30725"/><!--Енинг-->
+	</spawn>
+	<spawn name="oren16_npc2218_010" count="1" respawn="60">
+		<point x="85675" y="15994" z="-1776" h="27000"/>
+		<npc id="30175"/><!--Фэйрен-->
+	</spawn>
+	<spawn name="oren16_npc2218_010" count="1" respawn="60">
+		<point x="85332" y="16592" z="-1776" h="48500"/>
+		<npc id="30720"/><!--Каена-->
+	</spawn>
+	<spawn name="oren16_npc2218_010" count="1" respawn="60">
+		<point x="84985" y="15991" z="-1776" h="5300"/>
+		<npc id="30721"/><!--Ладд-->
+	</spawn>
+	<spawn name="oren16_npc2218_010" count="1" respawn="60">
+		<point x="85336" y="16194" z="-1768" h="59500"/>
+		<npc id="30722"/><!--Мериан-->
+	</spawn>
+	<spawn name="oren16_npc2218_012" count="1" respawn="60">
+		<point x="85518" y="14911" z="-3512" h="49152"/>
+		<npc id="30723"/><!--Рой-->
+	</spawn>
+	<spawn name="oren16_npc2218_012" count="1" respawn="60">
+		<point x="85143" y="14911" z="-3512" h="49152"/>
+		<npc id="30724"/><!--Тавилиан-->
+	</spawn>
+	<spawn name="oren16_npc2218_004" count="1" respawn="60">
+		<point x="85005" y="15638" z="-4272" h="11000"/>
+		<npc id="30169"/><!--Марти-->
+	</spawn>
+	<spawn name="oren16_npc2218_004" count="1" respawn="60">
+		<point x="84689" y="16198" z="-4272" h="0"/>
+		<npc id="30170"/><!--Радик-->
+	</spawn>
+	<spawn name="oren16_npc2218_004" count="1" respawn="60">
+		<point x="84814" y="15886" z="-4288" h="5200"/>
+		<npc id="30162"/><!--Карин-->
+	</spawn>
+	<spawn name="oren16_npc2218_008" count="1" respawn="60">
+		<point x="85336" y="16194" z="-2800" h="59500"/>
+		<npc id="30716"/><!--Сесиль-->
+	</spawn>
+	<spawn name="oren16_npc2218_008" count="1" respawn="60">
+		<point x="85332" y="16592" z="-2808" h="48500"/>
+		<npc id="30171"/><!--Гаюс-->
+	</spawn>
+	<spawn name="oren16_npc2218_008" count="1" respawn="60">
+		<point x="85675" y="15994" z="-2808" h="27000"/>
+		<npc id="30176"/><!--Валерия-->
+	</spawn>
+	<spawn name="oren16_npc2218_008" count="1" respawn="60">
+		<point x="84985" y="15991" z="-2808" h="5300"/>
+		<npc id="30715"/><!--Марина-->
+	</spawn>
+	<spawn name="oren16_npc2218_007" count="1" respawn="60">
+		<point x="85336" y="16194" z="-3672" h="49152"/>
+		<npc id="30727"/><!--Верона-->
+	</spawn>
+	<spawn name="oren16_npc2218_006" count="1" respawn="60">
+		<point x="85655" y="15638" z="-4272" h="22000"/>
+		<npc id="30164"/><!--Ян-->
+	</spawn>
+	<spawn name="oren16_npc2218_006" count="1" respawn="60">
+		<point x="85982" y="16193" z="-4272" h="32768"/>
+		<npc id="30163"/><!--Рекс-->
+	</spawn>
+	<spawn name="oren16_npc2218_005" count="1" respawn="60">
+		<point x="85655" y="16767" z="-4272" h="43500"/>
+		<npc id="30166"/><!--Уэсли-->
+	</spawn>
+	<spawn name="oren16_npc2218_005" count="1" respawn="60">
+		<point x="85004" y="16760" z="-4272" h="54000"/>
+		<npc id="30165"/><!--Рэлфорд-->
+	</spawn>
+	<spawn name="oren16_npc2218_009" count="1" respawn="60">
+		<point x="85332" y="16592" z="-2288" h="48500"/>
+		<npc id="30717"/><!--Гейн-->
+	</spawn>
+	<spawn name="oren16_npc2218_009" count="1" respawn="60">
+		<point x="85675" y="15994" z="-2288" h="26097"/>
+		<npc id="30174"/><!--Аркениас-->
+	</spawn>
+	<spawn name="oren16_npc2218_009" count="1" respawn="60">
+		<point x="84985" y="15991" z="-2288" h="5300"/>
+		<npc id="30718"/><!--Джоан-->
+	</spawn>
+	<spawn name="oren16_npc2218_009" count="1" respawn="60">
+		<point x="85336" y="16194" z="-2288" h="59500"/>
+		<npc id="30719"/><!--Мариэль-->
+	</spawn>
+	<spawn name="oren01_npc2218_003" count="1" respawn="60">
+		<point x="69836" y="18108" z="-3664" h="0"/>
+		<npc id="30738"/><!--Матильда-->
+	</spawn>
+	<spawn name="oren01_npc2218_001" count="1" respawn="60">
+		<point x="70525" y="30754" z="-1299" h="28672"/>
+		<npc id="30748"/><!--Эскарион-->
+	</spawn>
+	<spawn name="oren01_qm2120_21" count="3" respawn="180">
+		<territory>
+			<add x="69732" y="13420" zmin="-3692" zmax="-3492"/>
+			<add x="69580" y="10224" zmin="-3692" zmax="-3492"/>
+			<add x="70808" y="10964" zmin="-3692" zmax="-3492"/>
+			<add x="70736" y="13716" zmin="-3692" zmax="-3492"/>
+		</territory>
+		<npc id="27096"/><!--Поющий Цветок Кошмаров-->
+	</spawn>
+	<territory name="oren31_2218_03">
+		<add x="88732" y="64" zmin="-3792" zmax="-3292"/>
+		<add x="93464" y="100" zmin="-3792" zmax="-3292"/>
+		<add x="93260" y="3220" zmin="-3792" zmax="-3292"/>
+		<add x="88732" y="1164" zmin="-3792" zmax="-3292"/>
+	</territory>
+	<spawn name="oren31_2218_03" count="4" respawn="41" respawn_random="5">
+		<territory name="oren31_2218_03"/>
+		<npc id="20573"/><!--Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2218_03" count="4" respawn="41" respawn_random="5">
+		<territory name="oren31_2218_03"/>
+		<npc id="20574"/><!--Старший Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2218_03" count="2" respawn="41" respawn_random="5">
+		<territory name="oren31_2218_03"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>
+	<territory name="oren31_2218_04">
+		<add x="93504" y="120" zmin="-3780" zmax="-3480"/>
+		<add x="98056" y="44" zmin="-3780" zmax="-3480"/>
+		<add x="98116" y="4884" zmin="-3780" zmax="-3480"/>
+		<add x="96020" y="4616" zmin="-3780" zmax="-3480"/>
+		<add x="93264" y="3452" zmin="-3780" zmax="-3480"/>
+	</territory>
+	<spawn name="oren31_2218_04" count="5" respawn="41" respawn_random="5">
+		<territory name="oren31_2218_04"/>
+		<npc id="20573"/><!--Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2218_04" count="4" respawn="41" respawn_random="5">
+		<territory name="oren31_2218_04"/>
+		<npc id="20574"/><!--Старший Василиск Тарлк-->
+	</spawn>
+	<spawn name="oren31_2218_04" count="3" respawn="41" respawn_random="5">
+		<territory name="oren31_2218_04"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>
+	<spawn name="oren30_mb2218_04" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="92612" y="7436" zmin="-4048" zmax="-3448"/>
+			<add x="93264" y="7400" zmin="-4048" zmax="-3448"/>
+			<add x="93356" y="8520" zmin="-4048" zmax="-3448"/>
+			<add x="92312" y="8704" zmin="-4048" zmax="-3448"/>
+		</territory>
+		<npc id="25026"/><!--Кату Главарь Авангарда Атуи-->
+	</spawn>
+	<spawn name="oren30_mb2218_05" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="76668" y="5056" zmin="-3192" zmax="-2592"/>
+			<add x="77620" y="4960" zmin="-3192" zmax="-2592"/>
+			<add x="77644" y="5892" zmin="-3192" zmax="-2592"/>
+			<add x="76748" y="5952" zmin="-3192" zmax="-2592"/>
+		</territory>
+		<npc id="25158"/><!--Король Тарлк-->
+	</spawn>
+	<spawn name="oren29_mb2218_03" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="92548" y="18716" zmin="-3696" zmax="-3096"/>
+			<add x="94332" y="19420" zmin="-3696" zmax="-3096"/>
+			<add x="93336" y="20496" zmin="-3696" zmax="-3096"/>
+			<add x="92192" y="19424" zmin="-3696" zmax="-3096"/>
+		</territory>
+		<npc id="25260"/><!--Железный Гигантский Тотем-->
+	</spawn>
+	<spawn name="oren29_mb2218_01" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="90392" y="15708" zmin="-5400" zmax="-4800"/>
+			<add x="91236" y="15764" zmin="-5400" zmax="-4800"/>
+			<add x="91420" y="16676" zmin="-5400" zmax="-4800"/>
+			<add x="90816" y="17216" zmin="-5400" zmax="-4800"/>
+			<add x="90128" y="16772" zmin="-5400" zmax="-4800"/>
+		</territory>
+		<npc id="25088"/><!--Сумасшедший Механический Голем-->
+	</spawn>
+	<spawn name="oren29_mb2218_02" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="79224" y="17696" zmin="-5524" zmax="-4924"/>
+			<add x="80240" y="17764" zmin="-5524" zmax="-4924"/>
+			<add x="80504" y="18972" zmin="-5524" zmax="-4924"/>
+			<add x="79804" y="19384" zmin="-5524" zmax="-4924"/>
+			<add x="78896" y="18604" zmin="-5524" zmax="-4924"/>
+		</territory>
+		<npc id="25431"/><!--Раскаленный Голем-->
+	</spawn>
+	<territory name="oren30_2218_22">
+		<add x="92724" y="4372" zmin="-3260" zmax="-2860"/>
+		<add x="94848" y="5820" zmin="-3260" zmax="-2860"/>
+		<add x="95724" y="7476" zmin="-3260" zmax="-2860"/>
+		<add x="95068" y="8624" zmin="-3260" zmax="-2860"/>
+		<add x="92784" y="5780" zmin="-3260" zmax="-2860"/>
+	</territory>
+	<spawn name="oren30_2218_22" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_22"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<spawn name="oren30_2218_22" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_22"/>
+		<npc id="20571"/><!--Воин Людоедов Тарлк-->
+	</spawn>
+	<territory name="oren30_2218_21">
+		<add x="91580" y="3496" zmin="-3124" zmax="-2724"/>
+		<add x="92688" y="3848" zmin="-3124" zmax="-2724"/>
+		<add x="92752" y="5820" zmin="-3124" zmax="-2724"/>
+		<add x="88564" y="6468" zmin="-3124" zmax="-2724"/>
+	</territory>
+	<spawn name="oren30_2218_21" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_21"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<spawn name="oren30_2218_21" count="3" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_21"/>
+		<npc id="20571"/><!--Воин Людоедов Тарлк-->
+	</spawn>
+	<territory name="oren30_2218_20">
+		<add x="88504" y="6496" zmin="-3652" zmax="-2952"/>
+		<add x="91808" y="5960" zmin="-3652" zmax="-2952"/>
+		<add x="91436" y="8904" zmin="-3652" zmax="-2952"/>
+		<add x="85928" y="8792" zmin="-3652" zmax="-2952"/>
+		<add x="85788" y="8064" zmin="-3652" zmax="-2952"/>
+	</territory>
+	<spawn name="oren30_2218_20" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_20"/>
+		<npc id="20569"/><!--Старший Формор-->
+	</spawn>
+	<spawn name="oren30_2218_20" count="1" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_20"/>
+		<npc id="20570"/><!--Людоед Тарлк-->
+	</spawn>
+	<spawn name="oren30_2218_20" count="2" respawn="25" respawn_random="5">
+		<territory name="oren30_2218_20"/>
+		<npc id="20571"/><!--Воин Людоедов Тарлк-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="85650" y="16380" z="-2288" h="32767"/>
+		<npc id="31585"/><!--Кот Спарки-->
+	</spawn>
+	<spawn count="1" respawn="60">
+		<point x="85683" y="16395" z="-2808" h="38240"/>
+		<npc id="31605"/><!--Кинсли-->
+	</spawn>
+</list>

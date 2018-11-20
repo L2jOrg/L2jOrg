@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "residence.dtd">
+<list>
+	<residence id="34" name="Devastated Castle" impl="clanhall.SiegeableClanHall">
+		<available_functions>
+			<function type="ITEM_CREATE" level="11"/>
+			<function type="ITEM_CREATE" level="12"/>
+			<function type="ITEM_CREATE" level="13"/>
+			<function type="RESTORE_HP" level="25"/>
+			<function type="RESTORE_HP" level="30"/>
+			<function type="RESTORE_MP" level="18"/>
+			<function type="RESTORE_MP" level="20"/>
+			<function type="RESTORE_EXP" level="19"/>
+			<function type="RESTORE_EXP" level="20"/>
+			<function type="TELEPORT" level="11"/>
+			<function type="TELEPORT" level="12"/>
+			<function type="SUPPORT" level="15"/>
+			<function type="SUPPORT" level="18"/>
+		</available_functions>
+		<banish_points>
+			<point x="178497" y="-13129" z="-2200"/>
+		</banish_points>
+		<owner_restart_points>
+			<point x="177930" y="-18629" z="-2240"/>
+		</owner_restart_points>
+		<other_restart_points>
+			<point x="146494" y="30584" z="-2420"/>
+			<point x="146038" y="30519" z="-2420"/>
+			<point x="148112" y="30439" z="-2420"/>
+			<point x="148565" y="30463" z="-2420"/>
+			<point x="150227" y="29104" z="-2420"/>
+			<point x="144626" y="29145" z="-2420"/>
+			<point x="144635" y="26664" z="-2220"/>
+			<point x="144526" y="24661" z="-2100"/>
+			<point x="144559" y="22835" z="-2100"/>
+			<point x="145686" y="21114" z="-2100"/>
+			<point x="148946" y="21121" z="-2070"/>
+			<point x="148010" y="27996" z="-2256"/>
+			<point x="147970" y="27040" z="-2191"/>
+		</other_restart_points>
+		<chaos_restart_points>
+			<point x="136398" y="28901" z="-3582"/>
+			<point x="137292" y="28485" z="-3290"/>
+			<point x="155925" y="28554" z="-3164"/>
+			<point x="157608" y="23866" z="-3760"/>
+			<point x="157463" y="28770" z="-3371"/>
+			<point x="159348" y="28561" z="-3400"/>
+			<point x="160236" y="14119" z="-3892"/>
+			<point x="156764" y="13774" z="-3960"/>
+			<point x="161426" y="23055" z="-3670"/>
+			<point x="136380" y="21899" z="-3647"/>
+			<point x="137708" y="15640" z="-3800"/>
+		</chaos_restart_points>
+	</residence>
+</list>

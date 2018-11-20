@@ -1,0 +1,10 @@
+<!ELEMENT list (reward)*>
+
+	<!ELEMENT reward (item)*>
+	<!ATTLIST reward
+		level CDATA #REQUIRED>
+
+		<!ELEMENT item (#PCDATA)>
+		<!ATTLIST item
+			id CDATA #REQUIRED
+			count CDATA #REQUIRED>

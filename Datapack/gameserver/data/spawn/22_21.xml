@@ -1,0 +1,2049 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="73211" y="118492" z="-3696" h="40960" />
+		<npc id="30754" /><!--Гильмор-->
+	</spawn>
+	<!--<spawn name="event_22_21_031215_01" count="1" respawn="7200" respawn_random="3600">
+		<territory>
+			<add x="67320" y="114176" zmin="-3780" zmax="-3380"/>
+			<add x="71428" y="113864" zmin="-3780" zmax="-3380"/>
+			<add x="71948" y="120776" zmin="-3780" zmax="-3380"/>
+			<add x="67828" y="120704" zmin="-3780" zmax="-3380"/>
+		</territory>
+		<npc id="TODO: pch = [envoyofantaras_nakondas]"/>#???#
+	</spawn>-->
+	<spawn name="giran03_mb2221_02" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="81948" y="112572" zmin="-3224" zmax="-2624"/>
+			<add x="82456" y="112860" zmin="-3224" zmax="-2624"/>
+			<add x="82000" y="113660" zmin="-3224" zmax="-2624"/>
+			<add x="81556" y="113792" zmin="-3224" zmax="-2624"/>
+			<add x="81364" y="113296" zmin="-3224" zmax="-2624"/>
+		</territory>
+		<npc id="25412"/><!--Гвардеец Некростраж-->
+	</spawn>
+	<!--<spawn name="event_22_21_031215_04" count="1" respawn="10800" respawn_random="3600">
+		<territory>
+			<add x="75624" y="100512" zmin="-3656" zmax="-2556"/>
+			<add x="79728" y="99400" zmin="-3656" zmax="-2556"/>
+			<add x="80408" y="105396" zmin="-3656" zmax="-2556"/>
+			<add x="77516" y="108092" zmin="-3656" zmax="-2556"/>
+		</territory>
+		<npc id="TODO: pch = [rscavenger_leader_rinoket]"/>#???#
+	</spawn>-->
+	<!--<spawn name="event_22_21_031215_06" count="1" respawn="7200" respawn_random="3600">
+		<territory>
+			<add x="87696" y="120224" zmin="-3140" zmax="-2740"/>
+			<add x="90740" y="117876" zmin="-3140" zmax="-2740"/>
+			<add x="94420" y="118364" zmin="-3140" zmax="-2740"/>
+			<add x="91264" y="120812" zmin="-3140" zmax="-2740"/>
+		</territory>
+		<npc id="TODO: pch = [cave_servant_lord_ishka]"/>#???#
+	</spawn>-->
+	<territory name="gludio_t22_21_004">
+		<add x="70142" y="102378" zmin="-3800" zmax="-3350"/>
+		<add x="71430" y="102906" zmin="-3800" zmax="-3350"/>
+		<add x="71290" y="105682" zmin="-3800" zmax="-3350"/>
+		<add x="69978" y="105042" zmin="-3800" zmax="-3350"/>
+	</territory>
+	<spawn name="gludio_t22_21_004" count="1" respawn="95">
+		<territory name="gludio_t22_21_004"/>
+		<npc id="20550"/><!--Василиск Стражник-->
+	</spawn>
+	<spawn name="gludio_t22_21_004" count="2" respawn="95">
+		<territory name="gludio_t22_21_004"/>
+		<npc id="20551"/><!--Придорожный Падальщик-->
+	</spawn>
+	<spawn name="gludio_t22_21_004" count="1" respawn="95">
+		<territory name="gludio_t22_21_004"/>
+		<npc id="20552"/><!--Пленная Душа-->
+	</spawn>
+	<territory name="giran_t22_21_de_023">
+		<add x="84104" y="111632" zmin="-3204" zmax="-2904"/>
+		<add x="85364" y="111620" zmin="-3204" zmax="-2904"/>
+		<add x="85332" y="112380" zmin="-3204" zmax="-2904"/>
+		<add x="83384" y="113300" zmin="-3204" zmax="-2904"/>
+		<add x="82988" y="112460" zmin="-3204" zmax="-2904"/>
+	</territory>
+	<spawn name="giran_t22_21_de_023" count="1" respawn="115">
+		<point x="85088" y="111792" z="-3120" h="0"/>
+		<npc id="20274"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_023" count="1" respawn="115">
+		<point x="84496" y="112384" z="-3063" h="0"/>
+		<npc id="20275"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_023" count="1" respawn="115">
+		<point x="83536" y="112976" z="-3067" h="0"/>
+		<npc id="20280"/><!--Рыцарь без Головы-->
+	</spawn>
+	<spawn name="giran_t22_21_de_023" count="1" respawn="115">
+		<territory name="giran_t22_21_de_023"/>
+		<npc id="20238"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_023" count="1" respawn="115">
+		<territory name="giran_t22_21_de_023"/>
+		<npc id="20239"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_023" count="1" respawn="115">
+		<territory name="giran_t22_21_de_023"/>
+		<npc id="20146"/><!--Безглавый Рыцарь-->
+	</spawn>
+	<territory name="giran_t22_21_de_024">
+		<add x="81888" y="112472" zmin="-3192" zmax="-2892"/>
+		<add x="82940" y="112508" zmin="-3192" zmax="-2892"/>
+		<add x="83348" y="113348" zmin="-3192" zmax="-2892"/>
+		<add x="82268" y="113908" zmin="-3192" zmax="-2892"/>
+		<add x="81100" y="113500" zmin="-3192" zmax="-2892"/>
+	</territory>
+	<spawn name="giran_t22_21_de_024" count="1" respawn="115">
+		<point x="82848" y="112960" z="-3072" h="0"/>
+		<npc id="20272"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_024" count="1" respawn="115">
+		<point x="82400" y="113488" z="-3072" h="0"/>
+		<npc id="20274"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_024" count="1" respawn="115">
+		<point x="81584" y="113504" z="-3056" h="0"/>
+		<npc id="20275"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_024" count="1" respawn="115">
+		<territory name="giran_t22_21_de_024"/>
+		<npc id="20236"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_024" count="1" respawn="115">
+		<territory name="giran_t22_21_de_024"/>
+		<npc id="20237"/><!--Пещерный Слуга Стрелок-->
+	</spawn>
+	<spawn name="giran_t22_21_de_024" count="1" respawn="115">
+		<territory name="giran_t22_21_de_024"/>
+		<npc id="20238"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_024" count="1" respawn="115">
+		<territory name="giran_t22_21_de_024"/>
+		<npc id="20239"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<territory name="giran_t22_21_de_021">
+		<add x="93156" y="111384" zmin="-3316" zmax="-2916"/>
+		<add x="93856" y="112072" zmin="-3316" zmax="-2916"/>
+		<add x="94352" y="114476" zmin="-3316" zmax="-2916"/>
+		<add x="92460" y="115916" zmin="-3316" zmax="-2916"/>
+		<add x="89436" y="113284" zmin="-3316" zmax="-2916"/>
+		<add x="89880" y="112028" zmin="-3316" zmax="-2916"/>
+		<add x="91272" y="111400" zmin="-3316" zmax="-2916"/>
+	</territory>
+	<spawn name="giran_t22_21_de_021" count="1" respawn="115">
+		<point x="92416" y="115264" z="-3191" h="0"/>
+		<npc id="20275"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_021" count="1" respawn="115">
+		<point x="93264" y="114304" z="-3184" h="0"/>
+		<npc id="20280"/><!--Рыцарь без Головы-->
+	</spawn>
+	<spawn name="giran_t22_21_de_021" count="1" respawn="115">
+		<point x="93328" y="112832" z="-3072" h="0"/>
+		<npc id="20276"/><!--Королевский Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_021" count="1" respawn="115">
+		<point x="92268" y="111920" z="-3003" h="0"/>
+		<npc id="20286"/><!--Горгулья Охотник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_021" count="1" respawn="115">
+		<point x="90844" y="112312" z="-2944" h="0"/>
+		<npc id="20275"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_021" count="1" respawn="115">
+		<point x="90768" y="113572" z="-2970" h="0"/>
+		<npc id="20280"/><!--Рыцарь без Головы-->
+	</spawn>
+	<spawn name="giran_t22_21_de_021" count="1" respawn="115">
+		<point x="92096" y="114048" z="-3127" h="0"/>
+		<npc id="20276"/><!--Королевский Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_021" count="1" respawn="115">
+		<point x="91904" y="112976" z="-2944" h="0"/>
+		<npc id="20286"/><!--Горгулья Охотник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_021" count="3" respawn="115">
+		<territory name="giran_t22_21_de_021"/>
+		<npc id="20239"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_021" count="3" respawn="115">
+		<territory name="giran_t22_21_de_021"/>
+		<npc id="20146"/><!--Безглавый Рыцарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_021" count="3" respawn="115">
+		<territory name="giran_t22_21_de_021"/>
+		<npc id="20240"/><!--Королевский Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_021" count="3" respawn="115">
+		<territory name="giran_t22_21_de_021"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>
+	<territory name="giran_t22_21_de_022">
+		<add x="85468" y="111492" zmin="-3416" zmax="-3016"/>
+		<add x="89780" y="112216" zmin="-3416" zmax="-3016"/>
+		<add x="89532" y="112836" zmin="-3416" zmax="-3016"/>
+		<add x="85404" y="112412" zmin="-3416" zmax="-3016"/>
+	</territory>
+	<spawn name="giran_t22_21_de_022" count="1" respawn="115">
+		<point x="86256" y="112032" z="-3152" h="0"/>
+		<npc id="20274"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_022" count="1" respawn="115">
+		<point x="87312" y="112144" z="-3296" h="0"/>
+		<npc id="20275"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_022" count="1" respawn="115">
+		<point x="88576" y="112336" z="-3276" h="0"/>
+		<npc id="20280"/><!--Рыцарь без Головы-->
+	</spawn>
+	<spawn name="giran_t22_21_de_022" count="2" respawn="115">
+		<territory name="giran_t22_21_de_022"/>
+		<npc id="20238"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_022" count="1" respawn="115">
+		<territory name="giran_t22_21_de_022"/>
+		<npc id="20239"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_022" count="2" respawn="115">
+		<territory name="giran_t22_21_de_022"/>
+		<npc id="20146"/><!--Безглавый Рыцарь-->
+	</spawn>
+	<territory name="giran_t22_21_de_020">
+		<add x="93892" y="115132" zmin="-3240" zmax="-2940"/>
+		<add x="94576" y="114500" zmin="-3240" zmax="-2940"/>
+		<add x="95124" y="115604" zmin="-3240" zmax="-2940"/>
+		<add x="94648" y="115776" zmin="-3240" zmax="-2940"/>
+	</territory>
+	<spawn name="giran_t22_21_de_020" count="1" respawn="115">
+		<point x="94496" y="115216" z="-3147" h="0"/>
+		<npc id="20280"/><!--Рыцарь без Головы-->
+	</spawn>
+	<spawn name="giran_t22_21_de_020" count="1" respawn="115">
+		<territory name="giran_t22_21_de_020"/>
+		<npc id="20239"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_020" count="1" respawn="115">
+		<territory name="giran_t22_21_de_020"/>
+		<npc id="20146"/><!--Безглавый Рыцарь-->
+	</spawn>
+	<territory name="giran_t22_21_de_029">
+		<add x="91612" y="109116" zmin="-3884" zmax="-3584"/>
+		<add x="92312" y="109108" zmin="-3884" zmax="-3584"/>
+		<add x="92164" y="110152" zmin="-3884" zmax="-3584"/>
+		<add x="91064" y="111196" zmin="-3884" zmax="-3584"/>
+		<add x="90448" y="110816" zmin="-3884" zmax="-3584"/>
+	</territory>
+	<spawn name="giran_t22_21_de_029" count="1" respawn="115">
+		<point x="91088" y="110704" z="-3824" h="0"/>
+		<npc id="20280"/><!--Рыцарь без Головы-->
+	</spawn>
+	<spawn name="giran_t22_21_de_029" count="1" respawn="115">
+		<point x="91760" y="109872" z="-3787" h="0"/>
+		<npc id="20276"/><!--Королевский Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_029" count="1" respawn="115">
+		<territory name="giran_t22_21_de_029"/>
+		<npc id="20239"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_029" count="1" respawn="115">
+		<territory name="giran_t22_21_de_029"/>
+		<npc id="20146"/><!--Безглавый Рыцарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_029" count="1" respawn="115">
+		<territory name="giran_t22_21_de_029"/>
+		<npc id="20240"/><!--Королевский Пещерный Слуга-->
+	</spawn>
+	<territory name="giran_t22_21_de_027">
+		<add x="86064" y="109788" zmin="-3848" zmax="-3548"/>
+		<add x="88148" y="109972" zmin="-3848" zmax="-3548"/>
+		<add x="88816" y="111352" zmin="-3848" zmax="-3548"/>
+		<add x="86608" y="111288" zmin="-3848" zmax="-3548"/>
+		<add x="85136" y="110836" zmin="-3848" zmax="-3548"/>
+		<add x="85108" y="110016" zmin="-3848" zmax="-3548"/>
+	</territory>
+	<spawn name="giran_t22_21_de_027" count="1" respawn="115">
+		<point x="85536" y="110432" z="-3772" h="0"/>
+		<npc id="20280"/><!--Рыцарь без Головы-->
+	</spawn>
+	<spawn name="giran_t22_21_de_027" count="1" respawn="115">
+		<point x="86724" y="110160" z="-3755" h="0"/>
+		<npc id="20274"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_027" count="1" respawn="115">
+		<point x="86864" y="110972" z="-3728" h="0"/>
+		<npc id="20275"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_027" count="1" respawn="115">
+		<point x="87680" y="110624" z="-3792" h="0"/>
+		<npc id="20280"/><!--Рыцарь без Головы-->
+	</spawn>
+	<spawn name="giran_t22_21_de_027" count="2" respawn="115">
+		<territory name="giran_t22_21_de_027"/>
+		<npc id="20238"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_027" count="1" respawn="115">
+		<territory name="giran_t22_21_de_027"/>
+		<npc id="20239"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_027" count="2" respawn="115">
+		<territory name="giran_t22_21_de_027"/>
+		<npc id="20146"/><!--Безглавый Рыцарь-->
+	</spawn>
+	<territory name="giran_t22_21_de_028">
+		<add x="88848" y="111248" zmin="-3816" zmax="-3516"/>
+		<add x="89856" y="110820" zmin="-3816" zmax="-3516"/>
+		<add x="90844" y="111004" zmin="-3816" zmax="-3516"/>
+		<add x="90496" y="111540" zmin="-3816" zmax="-3516"/>
+		<add x="88648" y="111632" zmin="-3816" zmax="-3516"/>
+	</territory>
+	<spawn name="giran_t22_21_de_028" count="1" respawn="115">
+		<point x="89296" y="111344" z="-3648" h="0"/>
+		<npc id="20280"/><!--Рыцарь без Головы-->
+	</spawn>
+	<spawn name="giran_t22_21_de_028" count="1" respawn="115">
+		<point x="90304" y="111264" z="-3680" h="0"/>
+		<npc id="20276"/><!--Королевский Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_028" count="1" respawn="115">
+		<territory name="giran_t22_21_de_028"/>
+		<npc id="20239"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_028" count="1" respawn="115">
+		<territory name="giran_t22_21_de_028"/>
+		<npc id="20146"/><!--Безглавый Рыцарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_028" count="1" respawn="115">
+		<territory name="giran_t22_21_de_028"/>
+		<npc id="20240"/><!--Королевский Пещерный Слуга-->
+	</spawn>
+	<territory name="giran_t22_21_de_025">
+		<add x="80800" y="111972" zmin="-3780" zmax="-3480"/>
+		<add x="81312" y="111692" zmin="-3780" zmax="-3480"/>
+		<add x="81632" y="112116" zmin="-3780" zmax="-3480"/>
+		<add x="81448" y="112660" zmin="-3780" zmax="-3480"/>
+		<add x="81004" y="113160" zmin="-3780" zmax="-3480"/>
+		<add x="80348" y="113464" zmin="-3780" zmax="-3480"/>
+	</territory>
+	<spawn name="giran_t22_21_de_025" count="1" respawn="115">
+		<point x="80688" y="112944" z="-3680" h="0"/>
+		<npc id="20274"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_025" count="1" respawn="115">
+		<point x="81040" y="112336" z="-3672" h="0"/>
+		<npc id="20275"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_025" count="1" respawn="115">
+		<territory name="giran_t22_21_de_025"/>
+		<npc id="20236"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_025" count="1" respawn="115">
+		<territory name="giran_t22_21_de_025"/>
+		<npc id="20237"/><!--Пещерный Слуга Стрелок-->
+	</spawn>
+	<spawn name="giran_t22_21_de_025" count="1" respawn="115">
+		<territory name="giran_t22_21_de_025"/>
+		<npc id="20238"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_025" count="1" respawn="115">
+		<territory name="giran_t22_21_de_025"/>
+		<npc id="20239"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<territory name="giran_t22_21_de_026">
+		<add x="83104" y="109924" zmin="-3844" zmax="-3344"/>
+		<add x="83732" y="109904" zmin="-3844" zmax="-3344"/>
+		<add x="84668" y="110244" zmin="-3844" zmax="-3344"/>
+		<add x="84704" y="111032" zmin="-3844" zmax="-3344"/>
+		<add x="83260" y="112112" zmin="-3844" zmax="-3344"/>
+		<add x="82388" y="112368" zmin="-3844" zmax="-3344"/>
+		<add x="81668" y="112104" zmin="-3844" zmax="-3344"/>
+		<add x="81312" y="111640" zmin="-3844" zmax="-3344"/>
+		<add x="81536" y="110612" zmin="-3844" zmax="-3344"/>
+	</territory>
+	<spawn name="giran_t22_21_de_026" count="1" respawn="115">
+		<point x="82372" y="110672" z="-3674" h="0"/>
+		<npc id="20272"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_026" count="1" respawn="115">
+		<point x="82372" y="111772" z="-3525" h="0"/>
+		<npc id="20273"/><!--Пещерный Слуга Стрелок-->
+	</spawn>
+	<spawn name="giran_t22_21_de_026" count="1" respawn="115">
+		<point x="83452" y="111296" z="-3616" h="0"/>
+		<npc id="20274"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_026" count="1" respawn="115">
+		<point x="83724" y="110560" z="-3754" h="0"/>
+		<npc id="20275"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_026" count="2" respawn="115">
+		<territory name="giran_t22_21_de_026"/>
+		<npc id="20236"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_026" count="1" respawn="115">
+		<territory name="giran_t22_21_de_026"/>
+		<npc id="20237"/><!--Пещерный Слуга Стрелок-->
+	</spawn>
+	<spawn name="giran_t22_21_de_026" count="2" respawn="115">
+		<territory name="giran_t22_21_de_026"/>
+		<npc id="20238"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_026" count="1" respawn="115">
+		<territory name="giran_t22_21_de_026"/>
+		<npc id="20239"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<territory name="giran_t22_21_de_012">
+		<add x="88644" y="114808" zmin="-3108" zmax="-2808"/>
+		<add x="89160" y="114476" zmin="-3108" zmax="-2808"/>
+		<add x="89800" y="115204" zmin="-3108" zmax="-2808"/>
+		<add x="89280" y="115516" zmin="-3108" zmax="-2808"/>
+	</territory>
+	<spawn name="giran_t22_21_de_012" count="1" respawn="115">
+		<point x="89296" y="115056" z="-3068" h="0"/>
+		<npc id="20274"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_012" count="1" respawn="115">
+		<territory name="giran_t22_21_de_012"/>
+		<npc id="20235"/><!--Каторжник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_012" count="1" respawn="115">
+		<territory name="giran_t22_21_de_012"/>
+		<npc id="20236"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_012" count="1" respawn="115">
+		<territory name="giran_t22_21_de_012"/>
+		<npc id="20237"/><!--Пещерный Слуга Стрелок-->
+	</spawn>
+	<territory name="giran_t22_21_de_013">
+		<add x="89720" y="115968" zmin="-3188" zmax="-2888"/>
+		<add x="90036" y="115652" zmin="-3188" zmax="-2888"/>
+		<add x="91044" y="117500" zmin="-3188" zmax="-2888"/>
+		<add x="90284" y="117752" zmin="-3188" zmax="-2888"/>
+	</territory>
+	<spawn name="giran_t22_21_de_013" count="1" respawn="115">
+		<point x="90096" y="116352" z="-3072" h="0"/>
+		<npc id="20274"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_013" count="1" respawn="115">
+		<point x="90400" y="117216" z="-3165" h="0"/>
+		<npc id="20274"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_013" count="1" respawn="115">
+		<territory name="giran_t22_21_de_013"/>
+		<npc id="20235"/><!--Каторжник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_013" count="1" respawn="115">
+		<territory name="giran_t22_21_de_013"/>
+		<npc id="20236"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_013" count="1" respawn="115">
+		<territory name="giran_t22_21_de_013"/>
+		<npc id="20237"/><!--Пещерный Слуга Стрелок-->
+	</spawn>
+	<territory name="giran_t22_21_de_010">
+		<add x="87076" y="114248" zmin="-3092" zmax="-2792"/>
+		<add x="87400" y="114244" zmin="-3092" zmax="-2792"/>
+		<add x="87708" y="114800" zmin="-3092" zmax="-2792"/>
+		<add x="86832" y="115256" zmin="-3092" zmax="-2792"/>
+		<add x="86808" y="114488" zmin="-3092" zmax="-2792"/>
+	</territory>
+	<spawn name="giran_t22_21_de_010" count="1" respawn="115">
+		<point x="87152" y="114688" z="-3040" h="0"/>
+		<npc id="20274"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_010" count="1" respawn="115">
+		<territory name="giran_t22_21_de_010"/>
+		<npc id="20235"/><!--Каторжник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_010" count="1" respawn="115">
+		<territory name="giran_t22_21_de_010"/>
+		<npc id="20236"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_010" count="1" respawn="115">
+		<territory name="giran_t22_21_de_010"/>
+		<npc id="20237"/><!--Пещерный Слуга Стрелок-->
+	</spawn>
+	<territory name="giran_t22_21_de_011">
+		<add x="87528" y="114480" zmin="-3068" zmax="-2768"/>
+		<add x="88324" y="114492" zmin="-3068" zmax="-2768"/>
+		<add x="88744" y="114676" zmin="-3068" zmax="-2768"/>
+		<add x="88676" y="114884" zmin="-3068" zmax="-2768"/>
+		<add x="87664" y="114808" zmin="-3068" zmax="-2768"/>
+	</territory>
+	<spawn name="giran_t22_21_de_011" count="1" respawn="115">
+		<point x="88112" y="114656" z="-2992" h="0"/>
+		<npc id="20274"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_011" count="1" respawn="115">
+		<territory name="giran_t22_21_de_011"/>
+		<npc id="20235"/><!--Каторжник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_011" count="1" respawn="115">
+		<territory name="giran_t22_21_de_011"/>
+		<npc id="20236"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_011" count="1" respawn="115">
+		<territory name="giran_t22_21_de_011"/>
+		<npc id="20237"/><!--Пещерный Слуга Стрелок-->
+	</spawn>
+	<territory name="giran_t22_21_de_018">
+		<add x="94636" y="116696" zmin="-3120" zmax="-2820"/>
+		<add x="95340" y="116904" zmin="-3120" zmax="-2820"/>
+		<add x="94504" y="117812" zmin="-3120" zmax="-2820"/>
+		<add x="93936" y="117632" zmin="-3120" zmax="-2820"/>
+	</territory>
+	<spawn name="giran_t22_21_de_018" count="1" respawn="115">
+		<point x="94544" y="117296" z="-3040" h="0"/>
+		<npc id="20276"/><!--Королевский Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_018" count="1" respawn="115">
+		<territory name="giran_t22_21_de_018"/>
+		<npc id="20239"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_018" count="1" respawn="115">
+		<territory name="giran_t22_21_de_018"/>
+		<npc id="20146"/><!--Безглавый Рыцарь-->
+	</spawn>
+	<territory name="giran_t22_21_de_019">
+		<add x="94680" y="115812" zmin="-3116" zmax="-2816"/>
+		<add x="95196" y="115624" zmin="-3116" zmax="-2816"/>
+		<add x="95460" y="115916" zmin="-3116" zmax="-2816"/>
+		<add x="95348" y="116824" zmin="-3116" zmax="-2816"/>
+		<add x="94676" y="116668" zmin="-3116" zmax="-2816"/>
+	</territory>
+	<spawn name="giran_t22_21_de_019" count="1" respawn="115">
+		<point x="95008" y="116272" z="-3072" h="0"/>
+		<npc id="20280"/><!--Рыцарь без Головы-->
+	</spawn>
+	<spawn name="giran_t22_21_de_019" count="1" respawn="115">
+		<territory name="giran_t22_21_de_019"/>
+		<npc id="20239"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_019" count="1" respawn="115">
+		<territory name="giran_t22_21_de_019"/>
+		<npc id="20146"/><!--Безглавый Рыцарь-->
+	</spawn>
+	<territory name="giran_t22_21_de_016">
+		<add x="88900" y="118780" zmin="-3168" zmax="-2568"/>
+		<add x="91068" y="117632" zmin="-3168" zmax="-2568"/>
+		<add x="92688" y="117980" zmin="-3168" zmax="-2568"/>
+		<add x="92696" y="119836" zmin="-3168" zmax="-2568"/>
+		<add x="91580" y="121008" zmin="-3168" zmax="-2568"/>
+		<add x="90724" y="120984" zmin="-3168" zmax="-2568"/>
+		<add x="89388" y="120444" zmin="-3168" zmax="-2568"/>
+	</territory>
+	<spawn name="giran_t22_21_de_016" count="1" respawn="115">
+		<point x="89520" y="119584" z="-3072" h="0"/>
+		<npc id="20274"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_016" count="1" respawn="115">
+		<point x="90400" y="118552" z="-3024" h="0"/>
+		<npc id="20275"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_016" count="1" respawn="115">
+		<point x="90864" y="120500" z="-3008" h="0"/>
+		<npc id="20280"/><!--Рыцарь без Головы-->
+	</spawn>
+	<spawn name="giran_t22_21_de_016" count="1" respawn="115">
+		<point x="91272" y="119468" z="-2928" h="0"/>
+		<npc id="20275"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_016" count="1" respawn="115">
+		<point x="91904" y="118464" z="-3072" h="0"/>
+		<npc id="20280"/><!--Рыцарь без Головы-->
+	</spawn>
+	<spawn name="giran_t22_21_de_016" count="3" respawn="115">
+		<territory name="giran_t22_21_de_016"/>
+		<npc id="20238"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_016" count="3" respawn="115">
+		<territory name="giran_t22_21_de_016"/>
+		<npc id="20239"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_016" count="3" respawn="115">
+		<territory name="giran_t22_21_de_016"/>
+		<npc id="20146"/><!--Безглавый Рыцарь-->
+	</spawn>
+	<territory name="giran_t22_21_de_017">
+		<add x="92756" y="117988" zmin="-3132" zmax="-2832"/>
+		<add x="93952" y="117640" zmin="-3132" zmax="-2832"/>
+		<add x="94496" y="117824" zmin="-3132" zmax="-2832"/>
+		<add x="94328" y="118712" zmin="-3132" zmax="-2832"/>
+		<add x="92764" y="119816" zmin="-3132" zmax="-2832"/>
+	</territory>
+	<spawn name="giran_t22_21_de_017" count="1" respawn="115">
+		<point x="93240" y="118988" z="-2951" h="0"/>
+		<npc id="20275"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_017" count="1" respawn="115">
+		<point x="93968" y="118352" z="-2988" h="0"/>
+		<npc id="20280"/><!--Рыцарь без Головы-->
+	</spawn>
+	<spawn name="giran_t22_21_de_017" count="2" respawn="115">
+		<territory name="giran_t22_21_de_017"/>
+		<npc id="20238"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_017" count="1" respawn="115">
+		<territory name="giran_t22_21_de_017"/>
+		<npc id="20239"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_017" count="1" respawn="115">
+		<territory name="giran_t22_21_de_017"/>
+		<npc id="20146"/><!--Безглавый Рыцарь-->
+	</spawn>
+	<territory name="giran_t22_21_de_014">
+		<add x="82764" y="118352" zmin="-3152" zmax="-2852"/>
+		<add x="85440" y="118208" zmin="-3152" zmax="-2852"/>
+		<add x="86292" y="119140" zmin="-3152" zmax="-2852"/>
+		<add x="86064" y="121052" zmin="-3152" zmax="-2852"/>
+		<add x="84864" y="121532" zmin="-3152" zmax="-2852"/>
+		<add x="83820" y="121384" zmin="-3152" zmax="-2852"/>
+		<add x="82636" y="120140" zmin="-3152" zmax="-2852"/>
+	</territory>
+	<spawn name="giran_t22_21_de_014" count="1" respawn="115">
+		<point x="83504" y="118976" z="-3008" h="0"/>
+		<npc id="20275"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_014" count="1" respawn="115">
+		<point x="83632" y="120304" z="-3021" h="0"/>
+		<npc id="20272"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_014" count="1" respawn="115">
+		<point x="84856" y="118936" z="-2969" h="0"/>
+		<npc id="20273"/><!--Пещерный Слуга Стрелок-->
+	</spawn>
+	<spawn name="giran_t22_21_de_014" count="1" respawn="115">
+		<point x="85048" y="119976" z="-2952" h="0"/>
+		<npc id="20274"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_014" count="1" respawn="115">
+		<point x="84896" y="121024" z="-3040" h="0"/>
+		<npc id="20275"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_014" count="3" respawn="115">
+		<territory name="giran_t22_21_de_014"/>
+		<npc id="20236"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_014" count="2" respawn="115">
+		<territory name="giran_t22_21_de_014"/>
+		<npc id="20237"/><!--Пещерный Слуга Стрелок-->
+	</spawn>
+	<spawn name="giran_t22_21_de_014" count="3" respawn="115">
+		<territory name="giran_t22_21_de_014"/>
+		<npc id="20238"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_014" count="2" respawn="115">
+		<territory name="giran_t22_21_de_014"/>
+		<npc id="20239"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<territory name="giran_t22_21_de_015">
+		<add x="87944" y="118680" zmin="-3128" zmax="-2828"/>
+		<add x="88828" y="118836" zmin="-3128" zmax="-2828"/>
+		<add x="89412" y="120612" zmin="-3128" zmax="-2828"/>
+		<add x="88076" y="121528" zmin="-3128" zmax="-2828"/>
+		<add x="86684" y="121452" zmin="-3128" zmax="-2828"/>
+		<add x="86120" y="121048" zmin="-3128" zmax="-2828"/>
+		<add x="86268" y="119872" zmin="-3128" zmax="-2828"/>
+	</territory>
+	<spawn name="giran_t22_21_de_015" count="1" respawn="115">
+		<point x="87144" y="120992" z="-3072" h="0"/>
+		<npc id="20272"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_015" count="1" respawn="115">
+		<point x="88552" y="120644" z="-3072" h="0"/>
+		<npc id="20273"/><!--Пещерный Слуга Стрелок-->
+	</spawn>
+	<spawn name="giran_t22_21_de_015" count="1" respawn="115">
+		<point x="88192" y="119360" z="-3072" h="0"/>
+		<npc id="20274"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_015" count="1" respawn="115">
+		<point x="87136" y="120032" z="-3072" h="0"/>
+		<npc id="20275"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_015" count="2" respawn="115">
+		<territory name="giran_t22_21_de_015"/>
+		<npc id="20236"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_015" count="2" respawn="115">
+		<territory name="giran_t22_21_de_015"/>
+		<npc id="20237"/><!--Пещерный Слуга Стрелок-->
+	</spawn>
+	<spawn name="giran_t22_21_de_015" count="2" respawn="115">
+		<territory name="giran_t22_21_de_015"/>
+		<npc id="20238"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_015" count="2" respawn="115">
+		<territory name="giran_t22_21_de_015"/>
+		<npc id="20239"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<territory name="giran_t22_21_de_034">
+		<add x="93600" y="107272" zmin="-3272" zmax="-2872"/>
+		<add x="96048" y="107468" zmin="-3272" zmax="-2872"/>
+		<add x="96164" y="108200" zmin="-3272" zmax="-2872"/>
+		<add x="93752" y="107896" zmin="-3272" zmax="-2872"/>
+	</territory>
+	<spawn name="giran_t22_21_de_034" count="1" respawn="115">
+		<point x="95696" y="107728" z="-3120" h="0"/>
+		<npc id="20286"/><!--Горгулья Охотник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_034" count="1" respawn="115">
+		<point x="94880" y="107648" z="-3056" h="0"/>
+		<npc id="20276"/><!--Королевский Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_034" count="1" respawn="115">
+		<point x="93952" y="107616" z="-3040" h="0"/>
+		<npc id="20286"/><!--Горгулья Охотник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_034" count="2" respawn="115">
+		<territory name="giran_t22_21_de_034"/>
+		<npc id="20146"/><!--Безглавый Рыцарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_034" count="1" respawn="115">
+		<territory name="giran_t22_21_de_034"/>
+		<npc id="20240"/><!--Королевский Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_034" count="1" respawn="115">
+		<territory name="giran_t22_21_de_034"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>
+	<territory name="giran_t22_21_de_035">
+		<add x="91180" y="106680" zmin="-3136" zmax="-2836"/>
+		<add x="92096" y="107500" zmin="-3136" zmax="-2836"/>
+		<add x="92116" y="108576" zmin="-3136" zmax="-2836"/>
+		<add x="91248" y="108552" zmin="-3136" zmax="-2836"/>
+		<add x="90816" y="108272" zmin="-3136" zmax="-2836"/>
+	</territory>
+	<spawn name="giran_t22_21_de_035" count="1" respawn="115">
+		<point x="91296" y="107360" z="-3084" h="0"/>
+		<npc id="20286"/><!--Горгулья Охотник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_035" count="1" respawn="115">
+		<point x="91200" y="108064" z="-3072" h="0"/>
+		<npc id="20276"/><!--Королевский Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_035" count="1" respawn="115">
+		<point x="91904" y="108064" z="-3040" h="0"/>
+		<npc id="20286"/><!--Горгулья Охотник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_035" count="1" respawn="115">
+		<territory name="giran_t22_21_de_035"/>
+		<npc id="20239"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_035" count="1" respawn="115">
+		<territory name="giran_t22_21_de_035"/>
+		<npc id="20146"/><!--Безглавый Рыцарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_035" count="1" respawn="115">
+		<territory name="giran_t22_21_de_035"/>
+		<npc id="20240"/><!--Королевский Пещерный Слуга-->
+	</spawn>
+	<territory name="giran_t22_21_de_032">
+		<add x="95924" y="109720" zmin="-3804" zmax="-3204"/>
+		<add x="97188" y="109140" zmin="-3804" zmax="-3204"/>
+		<add x="97344" y="110084" zmin="-3804" zmax="-3204"/>
+		<add x="96968" y="110848" zmin="-3804" zmax="-3204"/>
+		<add x="96452" y="111080" zmin="-3804" zmax="-3204"/>
+	</territory>
+	<spawn name="giran_t22_21_de_032" count="1" respawn="115">
+		<point x="96384" y="110032" z="-3632" h="0"/>
+		<npc id="20276"/><!--Королевский Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_032" count="1" respawn="115">
+		<point x="96944" y="110416" z="-3728" h="0"/>
+		<npc id="20286"/><!--Горгулья Охотник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_032" count="1" respawn="115">
+		<territory name="giran_t22_21_de_032"/>
+		<npc id="20146"/><!--Безглавый Рыцарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_032" count="1" respawn="115">
+		<territory name="giran_t22_21_de_032"/>
+		<npc id="20240"/><!--Королевский Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_032" count="1" respawn="115">
+		<territory name="giran_t22_21_de_032"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>
+	<territory name="giran_t22_21_de_033">
+		<add x="93920" y="112036" zmin="-3592" zmax="-2792"/>
+		<add x="96352" y="111484" zmin="-3592" zmax="-2792"/>
+		<add x="96748" y="111820" zmin="-3592" zmax="-2792"/>
+		<add x="94236" y="113660" zmin="-3592" zmax="-2792"/>
+	</territory>
+	<spawn name="giran_t22_21_de_033" count="1" respawn="115">
+		<point x="94608" y="112608" z="-3024" h="0"/>
+		<npc id="20276"/><!--Королевский Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_033" count="1" respawn="115">
+		<point x="95888" y="112032" z="-3136" h="0"/>
+		<npc id="20286"/><!--Горгулья Охотник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_033" count="2" respawn="115">
+		<territory name="giran_t22_21_de_033"/>
+		<npc id="20146"/><!--Безглавый Рыцарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_033" count="1" respawn="115">
+		<territory name="giran_t22_21_de_033"/>
+		<npc id="20240"/><!--Королевский Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_033" count="2" respawn="115">
+		<territory name="giran_t22_21_de_033"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>
+	<territory name="giran_t22_21_de_030">
+		<add x="92388" y="109088" zmin="-3852" zmax="-3552"/>
+		<add x="94168" y="109136" zmin="-3852" zmax="-3552"/>
+		<add x="93960" y="110044" zmin="-3852" zmax="-3552"/>
+		<add x="92260" y="110124" zmin="-3852" zmax="-3552"/>
+	</territory>
+	<spawn name="giran_t22_21_de_030" count="1" respawn="115">
+		<point x="92656" y="109616" z="-3760" h="0"/>
+		<npc id="20276"/><!--Королевский Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_030" count="1" respawn="115">
+		<point x="93680" y="109632" z="-3691" h="0"/>
+		<npc id="20286"/><!--Горгулья Охотник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_030" count="1" respawn="115">
+		<territory name="giran_t22_21_de_030"/>
+		<npc id="20146"/><!--Безглавый Рыцарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_030" count="1" respawn="115">
+		<territory name="giran_t22_21_de_030"/>
+		<npc id="20240"/><!--Королевский Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_030" count="1" respawn="115">
+		<territory name="giran_t22_21_de_030"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>
+	<territory name="giran_t22_21_de_031">
+		<add x="94892" y="109128" zmin="-3776" zmax="-3326"/>
+		<add x="95868" y="109600" zmin="-3776" zmax="-3326"/>
+		<add x="95924" y="110536" zmin="-3776" zmax="-3326"/>
+		<add x="94364" y="110636" zmin="-3776" zmax="-3326"/>
+		<add x="94044" y="109976" zmin="-3776" zmax="-3326"/>
+		<add x="94276" y="109172" zmin="-3776" zmax="-3326"/>
+	</territory>
+	<spawn name="giran_t22_21_de_031" count="1" respawn="115">
+		<point x="94528" y="109872" z="-3712" h="0"/>
+		<npc id="20276"/><!--Королевский Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_031" count="1" respawn="115">
+		<point x="95360" y="110160" z="-3696" h="0"/>
+		<npc id="20286"/><!--Горгулья Охотник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_031" count="1" respawn="115">
+		<territory name="giran_t22_21_de_031"/>
+		<npc id="20146"/><!--Безглавый Рыцарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_031" count="1" respawn="115">
+		<territory name="giran_t22_21_de_031"/>
+		<npc id="20240"/><!--Королевский Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_031" count="1" respawn="115">
+		<territory name="giran_t22_21_de_031"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>
+	<territory name="giran_t22_21_de_038">
+		<add x="81592" y="108564" zmin="-3220" zmax="-2870"/>
+		<add x="83360" y="108400" zmin="-3220" zmax="-2870"/>
+		<add x="81212" y="110496" zmin="-3220" zmax="-2870"/>
+		<add x="80568" y="110488" zmin="-3220" zmax="-2870"/>
+		<add x="79952" y="110060" zmin="-3220" zmax="-2870"/>
+		<add x="80400" y="109020" zmin="-3220" zmax="-2870"/>
+	</territory>
+	<spawn name="giran_t22_21_de_038" count="1" respawn="115">
+		<point x="82160" y="108912" z="-3130" h="0"/>
+		<npc id="20280"/><!--Рыцарь без Головы-->
+	</spawn>
+	<spawn name="giran_t22_21_de_038" count="1" respawn="115">
+		<point x="80992" y="109184" z="-3056" h="0"/>
+		<npc id="20274"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_038" count="1" respawn="115">
+		<point x="81312" y="109968" z="-3072" h="0"/>
+		<npc id="20275"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_038" count="1" respawn="115">
+		<point x="80272" y="109968" z="-3056" h="0"/>
+		<npc id="20280"/><!--Рыцарь без Головы-->
+	</spawn>
+	<spawn name="giran_t22_21_de_038" count="1" respawn="115">
+		<territory name="giran_t22_21_de_038"/>
+		<npc id="20238"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_038" count="1" respawn="115">
+		<territory name="giran_t22_21_de_038"/>
+		<npc id="20239"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_038" count="2" respawn="115">
+		<territory name="giran_t22_21_de_038"/>
+		<npc id="20146"/><!--Безглавый Рыцарь-->
+	</spawn>
+	<territory name="giran_t22_21_de_039">
+		<add x="79048" y="111072" zmin="-3156" zmax="-2806"/>
+		<add x="79880" y="110132" zmin="-3156" zmax="-2806"/>
+		<add x="80436" y="110588" zmin="-3156" zmax="-2806"/>
+		<add x="79244" y="111932" zmin="-3156" zmax="-2806"/>
+		<add x="78864" y="111972" zmin="-3156" zmax="-2806"/>
+	</territory>
+	<spawn name="giran_t22_21_de_039" count="1" respawn="115">
+		<point x="79792" y="110720" z="-3003" h="0"/>
+		<npc id="20274"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_039" count="1" respawn="115">
+		<point x="79184" y="111472" z="-2992" h="0"/>
+		<npc id="20275"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_039" count="1" respawn="115">
+		<territory name="giran_t22_21_de_039"/>
+		<npc id="20236"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_039" count="1" respawn="115">
+		<territory name="giran_t22_21_de_039"/>
+		<npc id="20237"/><!--Пещерный Слуга Стрелок-->
+	</spawn>
+	<spawn name="giran_t22_21_de_039" count="1" respawn="115">
+		<territory name="giran_t22_21_de_039"/>
+		<npc id="20238"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_039" count="1" respawn="115">
+		<territory name="giran_t22_21_de_039"/>
+		<npc id="20239"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<territory name="giran_t22_21_de_036">
+		<add x="90696" y="105656" zmin="-3268" zmax="-2868"/>
+		<add x="91032" y="106644" zmin="-3268" zmax="-2868"/>
+		<add x="90616" y="108360" zmin="-3268" zmax="-2868"/>
+		<add x="90004" y="109284" zmin="-3268" zmax="-2868"/>
+		<add x="87028" y="109216" zmin="-3268" zmax="-2868"/>
+		<add x="86620" y="106688" zmin="-3268" zmax="-2868"/>
+		<add x="88452" y="104868" zmin="-3268" zmax="-2868"/>
+		<add x="89624" y="104724" zmin="-3268" zmax="-2868"/>
+	</territory>
+	<spawn name="giran_t22_21_de_036" count="1" respawn="115">
+		<point x="87208" y="107404" z="-3149" h="0"/>
+		<npc id="20275"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_036" count="1" respawn="115">
+		<point x="88112" y="106496" z="-3194" h="0"/>
+		<npc id="20280"/><!--Рыцарь без Головы-->
+	</spawn>
+	<spawn name="giran_t22_21_de_036" count="1" respawn="115">
+		<point x="88976" y="105584" z="-3162" h="0"/>
+		<npc id="20276"/><!--Королевский Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_036" count="1" respawn="115">
+		<point x="90064" y="106256" z="-3239" h="0"/>
+		<npc id="20286"/><!--Горгулья Охотник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_036" count="1" respawn="115">
+		<point x="88752" y="107600" z="-2978" h="0"/>
+		<npc id="20275"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_036" count="1" respawn="115">
+		<point x="90208" y="107600" z="-3095" h="0"/>
+		<npc id="20280"/><!--Рыцарь без Головы-->
+	</spawn>
+	<spawn name="giran_t22_21_de_036" count="1" respawn="115">
+		<point x="89648" y="108496" z="-3040" h="0"/>
+		<npc id="20276"/><!--Королевский Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_036" count="1" respawn="115">
+		<point x="87792" y="108768" z="-3072" h="0"/>
+		<npc id="20286"/><!--Горгулья Охотник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_036" count="3" respawn="115">
+		<territory name="giran_t22_21_de_036"/>
+		<npc id="20239"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_036" count="3" respawn="115">
+		<territory name="giran_t22_21_de_036"/>
+		<npc id="20146"/><!--Безглавый Рыцарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_036" count="3" respawn="115">
+		<territory name="giran_t22_21_de_036"/>
+		<npc id="20240"/><!--Королевский Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_036" count="3" respawn="115">
+		<territory name="giran_t22_21_de_036"/>
+		<npc id="20241"/><!--Горгулья Охотник-->
+	</spawn>
+	<territory name="giran_t22_21_de_037">
+		<add x="84936" y="106780" zmin="-3360" zmax="-2960"/>
+		<add x="86512" y="106736" zmin="-3360" zmax="-2960"/>
+		<add x="86916" y="109208" zmin="-3360" zmax="-2960"/>
+		<add x="84156" y="109688" zmin="-3360" zmax="-2960"/>
+		<add x="82572" y="109456" zmin="-3360" zmax="-2960"/>
+	</territory>
+	<spawn name="giran_t22_21_de_037" count="1" respawn="115">
+		<point x="86144" y="107328" z="-3180" h="0"/>
+		<npc id="20274"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_037" count="1" respawn="115">
+		<point x="86096" y="108432" z="-3211" h="0"/>
+		<npc id="20275"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_037" count="1" respawn="115">
+		<point x="84928" y="107696" z="-3232" h="0"/>
+		<npc id="20280"/><!--Рыцарь без Головы-->
+	</spawn>
+	<spawn name="giran_t22_21_de_037" count="1" respawn="115">
+		<point x="84960" y="108912" z="-3211" h="0"/>
+		<npc id="20275"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_037" count="1" respawn="115">
+		<point x="83936" y="108608" z="-3115" h="0"/>
+		<npc id="20280"/><!--Рыцарь без Головы-->
+	</spawn>
+	<spawn name="giran_t22_21_de_037" count="3" respawn="115">
+		<territory name="giran_t22_21_de_037"/>
+		<npc id="20238"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_037" count="3" respawn="115">
+		<territory name="giran_t22_21_de_037"/>
+		<npc id="20239"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_037" count="3" respawn="115">
+		<territory name="giran_t22_21_de_037"/>
+		<npc id="20146"/><!--Безглавый Рыцарь-->
+	</spawn>
+	<territory name="giran_t22_21_de_001">
+		<add x="74476" y="117112" zmin="-3784" zmax="-3484"/>
+		<add x="75392" y="117348" zmin="-3784" zmax="-3484"/>
+		<add x="75364" y="118052" zmin="-3784" zmax="-3484"/>
+		<add x="73512" y="118332" zmin="-3784" zmax="-3484"/>
+		<add x="73580" y="117032" zmin="-3784" zmax="-3484"/>
+	</territory>
+	<spawn name="giran_t22_21_de_001" count="1" respawn="115">
+		<point x="73808" y="117328" z="-3776" h="0"/>
+		<npc id="20279"/><!--Каторжник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_001" count="1" respawn="115">
+		<point x="74136" y="118004" z="-3724" h="0"/>
+		<npc id="20272"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_001" count="1" respawn="115">
+		<point x="74896" y="117584" z="-3770" h="0"/>
+		<npc id="20279"/><!--Каторжник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_001" count="2" respawn="115">
+		<territory name="giran_t22_21_de_001"/>
+		<npc id="20235"/><!--Каторжник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_001" count="1" respawn="115">
+		<territory name="giran_t22_21_de_001"/>
+		<npc id="20236"/><!--Пещерный Слуга-->
+	</spawn>
+	<territory name="giran_t22_21_de_002">
+		<add x="75396" y="117336" zmin="-3864" zmax="-3564"/>
+		<add x="77012" y="116376" zmin="-3864" zmax="-3564"/>
+		<add x="77436" y="116512" zmin="-3864" zmax="-3564"/>
+		<add x="77052" y="117680" zmin="-3864" zmax="-3564"/>
+		<add x="76296" y="118264" zmin="-3864" zmax="-3564"/>
+		<add x="75328" y="118116" zmin="-3864" zmax="-3564"/>
+	</territory>
+	<spawn name="giran_t22_21_de_002" count="1" respawn="115">
+		<point x="75824" y="117888" z="-3740" h="0"/>
+		<npc id="20272"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_002" count="1" respawn="115">
+		<point x="76208" y="117136" z="-3728" h="0"/>
+		<npc id="20279"/><!--Каторжник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_002" count="1" respawn="115">
+		<point x="76864" y="117472" z="-3734" h="0"/>
+		<npc id="20272"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_002" count="2" respawn="115">
+		<territory name="giran_t22_21_de_002"/>
+		<npc id="20235"/><!--Каторжник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_002" count="1" respawn="115">
+		<territory name="giran_t22_21_de_002"/>
+		<npc id="20236"/><!--Пещерный Слуга-->
+	</spawn>
+	<territory name="giran_t22_21_de_009">
+		<add x="85368" y="115800" zmin="-3132" zmax="-2832"/>
+		<add x="86272" y="115004" zmin="-3132" zmax="-2832"/>
+		<add x="86384" y="115252" zmin="-3132" zmax="-2832"/>
+		<add x="85940" y="115876" zmin="-3132" zmax="-2832"/>
+		<add x="85356" y="116240" zmin="-3132" zmax="-2832"/>
+	</territory>
+	<spawn name="giran_t22_21_de_009" count="1" respawn="115">
+		<point x="85792" y="115664" z="-3040" h="0"/>
+		<npc id="20274"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_009" count="1" respawn="115">
+		<territory name="giran_t22_21_de_009"/>
+		<npc id="20235"/><!--Каторжник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_009" count="1" respawn="115">
+		<territory name="giran_t22_21_de_009"/>
+		<npc id="20236"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_009" count="1" respawn="115">
+		<territory name="giran_t22_21_de_009"/>
+		<npc id="20237"/><!--Пещерный Слуга Стрелок-->
+	</spawn>
+	<territory name="giran_t22_21_de_007">
+		<add x="83584" y="116432" zmin="-3100" zmax="-2800"/>
+		<add x="84312" y="116396" zmin="-3100" zmax="-2800"/>
+		<add x="85412" y="117308" zmin="-3100" zmax="-2800"/>
+		<add x="85412" y="118168" zmin="-3100" zmax="-2800"/>
+		<add x="82644" y="118280" zmin="-3100" zmax="-2800"/>
+		<add x="82804" y="117108" zmin="-3100" zmax="-2800"/>
+	</territory>
+	<spawn name="giran_t22_21_de_007" count="1" respawn="115">
+		<point x="83276" y="117716" z="-3008" h="0"/>
+		<npc id="20272"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_007" count="1" respawn="115">
+		<point x="83472" y="117040" z="-3003" h="0"/>
+		<npc id="20273"/><!--Пещерный Слуга Стрелок-->
+	</spawn>
+	<spawn name="giran_t22_21_de_007" count="1" respawn="115">
+		<point x="84508" y="117824" z="-3008" h="0"/>
+		<npc id="20274"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_007" count="1" respawn="115">
+		<point x="84612" y="117108" z="-3020" h="0"/>
+		<npc id="20275"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_007" count="2" respawn="115">
+		<territory name="giran_t22_21_de_007"/>
+		<npc id="20235"/><!--Каторжник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_007" count="2" respawn="115">
+		<territory name="giran_t22_21_de_007"/>
+		<npc id="20236"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_007" count="1" respawn="115">
+		<territory name="giran_t22_21_de_007"/>
+		<npc id="20237"/><!--Пещерный Слуга Стрелок-->
+	</spawn>
+	<spawn name="giran_t22_21_de_007" count="2" respawn="115">
+		<territory name="giran_t22_21_de_007"/>
+		<npc id="20238"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<territory name="giran_t22_21_de_008">
+		<add x="84900" y="115528" zmin="-3132" zmax="-2832"/>
+		<add x="85304" y="115636" zmin="-3132" zmax="-2832"/>
+		<add x="85252" y="116308" zmin="-3132" zmax="-2832"/>
+		<add x="84964" y="116940" zmin="-3132" zmax="-2832"/>
+		<add x="84308" y="116356" zmin="-3132" zmax="-2832"/>
+	</territory>
+	<spawn name="giran_t22_21_de_008" count="1" respawn="115">
+		<point x="84800" y="116240" z="-3072" h="0"/>
+		<npc id="20274"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_008" count="1" respawn="115">
+		<territory name="giran_t22_21_de_008"/>
+		<npc id="20235"/><!--Каторжник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_008" count="1" respawn="115">
+		<territory name="giran_t22_21_de_008"/>
+		<npc id="20236"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_008" count="1" respawn="115">
+		<territory name="giran_t22_21_de_008"/>
+		<npc id="20237"/><!--Пещерный Слуга Стрелок-->
+	</spawn>
+	<territory name="giran_t22_21_de_005">
+		<add x="79228" y="114016" zmin="-3808" zmax="-3408"/>
+		<add x="80296" y="113480" zmin="-3808" zmax="-3408"/>
+		<add x="80744" y="114188" zmin="-3808" zmax="-3408"/>
+		<add x="80648" y="115712" zmin="-3808" zmax="-3408"/>
+		<add x="79064" y="115512" zmin="-3808" zmax="-3408"/>
+	</territory>
+	<spawn name="giran_t22_21_de_005" count="1" respawn="115">
+		<point x="79412" y="115200" z="-3735" h="0"/>
+		<npc id="20272"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_005" count="1" respawn="115">
+		<point x="79796" y="114076" z="-3680" h="0"/>
+		<npc id="20274"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_005" count="1" respawn="115">
+		<point x="80372" y="114772" z="-3735" h="0"/>
+		<npc id="20275"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_005" count="1" respawn="115">
+		<territory name="giran_t22_21_de_005"/>
+		<npc id="20235"/><!--Каторжник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_005" count="1" respawn="115">
+		<territory name="giran_t22_21_de_005"/>
+		<npc id="20236"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_005" count="1" respawn="115">
+		<territory name="giran_t22_21_de_005"/>
+		<npc id="20237"/><!--Пещерный Слуга Стрелок-->
+	</spawn>
+	<spawn name="giran_t22_21_de_005" count="1" respawn="115">
+		<territory name="giran_t22_21_de_005"/>
+		<npc id="20238"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<territory name="giran_t22_21_de_006">
+		<add x="81488" y="116576" zmin="-3340" zmax="-2940"/>
+		<add x="82412" y="116864" zmin="-3340" zmax="-2940"/>
+		<add x="82764" y="117084" zmin="-3340" zmax="-2940"/>
+		<add x="82580" y="118224" zmin="-3340" zmax="-2940"/>
+		<add x="81264" y="116812" zmin="-3340" zmax="-2940"/>
+	</territory>
+	<spawn name="giran_t22_21_de_006" count="1" respawn="115">
+		<point x="82168" y="117212" z="-3125" h="0"/>
+		<npc id="20275"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_006" count="1" respawn="115">
+		<territory name="giran_t22_21_de_006"/>
+		<npc id="20235"/><!--Каторжник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_006" count="1" respawn="115">
+		<territory name="giran_t22_21_de_006"/>
+		<npc id="20236"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_006" count="1" respawn="115">
+		<territory name="giran_t22_21_de_006"/>
+		<npc id="20237"/><!--Пещерный Слуга Стрелок-->
+	</spawn>
+	<territory name="giran_t22_21_de_003">
+		<add x="77468" y="116652" zmin="-3864" zmax="-3264"/>
+		<add x="78984" y="115596" zmin="-3864" zmax="-3264"/>
+		<add x="79948" y="116880" zmin="-3864" zmax="-3264"/>
+		<add x="77828" y="117636" zmin="-3864" zmax="-3264"/>
+		<add x="77148" y="117560" zmin="-3864" zmax="-3264"/>
+	</territory>
+	<spawn name="giran_t22_21_de_003" count="1" respawn="115">
+		<point x="77588" y="117024" z="-3792" h="0"/>
+		<npc id="20279"/><!--Каторжник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_003" count="1" respawn="115">
+		<point x="78432" y="117216" z="-3744" h="0"/>
+		<npc id="20272"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_003" count="1" respawn="115">
+		<point x="78688" y="116176" z="-3760" h="0"/>
+		<npc id="20279"/><!--Каторжник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_003" count="1" respawn="115">
+		<point x="79472" y="116736" z="-3676" h="0"/>
+		<npc id="20272"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_003" count="2" respawn="115">
+		<territory name="giran_t22_21_de_003"/>
+		<npc id="20235"/><!--Каторжник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_003" count="2" respawn="115">
+		<territory name="giran_t22_21_de_003"/>
+		<npc id="20236"/><!--Пещерный Слуга-->
+	</spawn>
+	<territory name="giran_t22_21_de_004">
+		<add x="79060" y="115532" zmin="-3776" zmax="-2976"/>
+		<add x="80940" y="115672" zmin="-3776" zmax="-2976"/>
+		<add x="81736" y="116356" zmin="-3776" zmax="-2976"/>
+		<add x="81168" y="117004" zmin="-3776" zmax="-2976"/>
+		<add x="80020" y="116780" zmin="-3776" zmax="-2976"/>
+	</territory>
+	<spawn name="giran_t22_21_de_004" count="1" respawn="115">
+		<point x="80288" y="116728" z="-3360" h="0"/>
+		<npc id="20272"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_004" count="1" respawn="115">
+		<point x="80024" y="115960" z="-3543" h="0"/>
+		<npc id="20274"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="giran_t22_21_de_004" count="1" respawn="115">
+		<point x="81252" y="116400" z="-3305" h="0"/>
+		<npc id="20275"/><!--Пещерный Слуга Главарь-->
+	</spawn>
+	<spawn name="giran_t22_21_de_004" count="1" respawn="115">
+		<territory name="giran_t22_21_de_004"/>
+		<npc id="20235"/><!--Каторжник-->
+	</spawn>
+	<spawn name="giran_t22_21_de_004" count="1" respawn="115">
+		<territory name="giran_t22_21_de_004"/>
+		<npc id="20236"/><!--Пещерный Слуга-->
+	</spawn>
+	<spawn name="giran_t22_21_de_004" count="1" respawn="115">
+		<territory name="giran_t22_21_de_004"/>
+		<npc id="20237"/><!--Пещерный Слуга Стрелок-->
+	</spawn>
+	<spawn name="giran_t22_21_de_004" count="1" respawn="115">
+		<territory name="giran_t22_21_de_004"/>
+		<npc id="20238"/><!--Пещерный Слуга Воин-->
+	</spawn>
+	<spawn name="party_t22_21_004" count="3" respawn="1500">
+		<territory>
+			<add x="87004" y="106784" zmin="-3312" zmax="-2912"/>
+			<add x="89464" y="105468" zmin="-3312" zmax="-2912"/>
+			<add x="92116" y="108044" zmin="-3312" zmax="-2912"/>
+			<add x="88652" y="108780" zmin="-3312" zmax="-2912"/>
+		</territory>
+		<npc id="20758"/><!--Костяной Кошмар Главарь-->
+	</spawn>
+	<spawn name="party_t22_21_005" count="2" respawn="1800">
+		<territory>
+			<add x="84532" y="107592" zmin="-3256" zmax="-2856"/>
+			<add x="86896" y="106780" zmin="-3256" zmax="-2856"/>
+			<add x="88316" y="108444" zmin="-3256" zmax="-2856"/>
+			<add x="84628" y="109220" zmin="-3256" zmax="-2856"/>
+		</territory>
+		<npc id="20758"/><!--Костяной Кошмар Главарь-->
+	</spawn>
+	<spawn name="party_t22_21_006" count="4" respawn="1200">
+		<territory>
+			<add x="92196" y="111400" zmin="-3224" zmax="-2824"/>
+			<add x="94672" y="112492" zmin="-3224" zmax="-2824"/>
+			<add x="93784" y="114876" zmin="-3224" zmax="-2824"/>
+			<add x="91768" y="114808" zmin="-3224" zmax="-2824"/>
+			<add x="89844" y="112728" zmin="-3224" zmax="-2824"/>
+		</territory>
+		<npc id="20758"/><!--Костяной Кошмар Главарь-->
+	</spawn>
+	<spawn name="party_t22_21_001" count="3" respawn="1800">
+		<territory>
+			<add x="82772" y="117288" zmin="-3216" zmax="-2816"/>
+			<add x="84520" y="116684" zmin="-3216" zmax="-2816"/>
+			<add x="86604" y="120160" zmin="-3216" zmax="-2816"/>
+			<add x="84308" y="121296" zmin="-3216" zmax="-2816"/>
+			<add x="82968" y="120048" zmin="-3216" zmax="-2816"/>
+		</territory>
+		<npc id="20758"/><!--Костяной Кошмар Главарь-->
+	</spawn>
+	<spawn name="party_t22_21_002" count="2" respawn="1500">
+		<territory>
+			<add x="91012" y="117764" zmin="-3128" zmax="-2728"/>
+			<add x="94232" y="118428" zmin="-3128" zmax="-2728"/>
+			<add x="91412" y="120812" zmin="-3128" zmax="-2728"/>
+			<add x="89572" y="120412" zmin="-3128" zmax="-2728"/>
+		</territory>
+		<npc id="20758"/><!--Костяной Кошмар Главарь-->
+	</spawn>
+	<spawn name="party_t22_21_003" count="3" respawn="1500">
+		<territory>
+			<add x="87852" y="118920" zmin="-3120" zmax="-2720"/>
+			<add x="90168" y="118948" zmin="-3120" zmax="-2720"/>
+			<add x="89592" y="120408" zmin="-3120" zmax="-2720"/>
+			<add x="87912" y="121356" zmin="-3120" zmax="-2720"/>
+			<add x="85920" y="120868" zmin="-3120" zmax="-2720"/>
+		</territory>
+		<npc id="20758"/><!--Костяной Кошмар Главарь-->
+	</spawn>
+	<territory name="giran_t22_21_002">
+		<add x="67972" y="98480" zmin="-3769" zmax="-3319"/>
+		<add x="72148" y="98480" zmin="-3769" zmax="-3319"/>
+		<add x="71984" y="103092" zmin="-3769" zmax="-3319"/>
+		<add x="69052" y="101912" zmin="-3769" zmax="-3319"/>
+		<add x="68044" y="99840" zmin="-3769" zmax="-3319"/>
+	</territory>
+	<spawn name="giran_t22_21_002" count="2" respawn="95">
+		<territory name="giran_t22_21_002"/>
+		<npc id="20550"/><!--Василиск Стражник-->
+	</spawn>
+	<spawn name="giran_t22_21_002" count="3" respawn="95">
+		<territory name="giran_t22_21_002"/>
+		<npc id="20551"/><!--Придорожный Падальщик-->
+	</spawn>
+	<spawn name="giran_t22_21_002" count="2" respawn="95">
+		<territory name="giran_t22_21_002"/>
+		<npc id="20552"/><!--Пленная Душа-->
+	</spawn>
+	<territory name="giran_t22_21_001">
+		<add x="65705" y="98441" zmin="-3801" zmax="-3351"/>
+		<add x="67297" y="98461" zmin="-3801" zmax="-3351"/>
+		<add x="68501" y="102329" zmin="-3801" zmax="-3351"/>
+		<add x="65633" y="103109" zmin="-3801" zmax="-3351"/>
+	</territory>
+	<spawn name="giran_t22_21_001" count="2" respawn="95">
+		<territory name="giran_t22_21_001"/>
+		<npc id="20550"/><!--Василиск Стражник-->
+	</spawn>
+	<spawn name="giran_t22_21_001" count="1" respawn="95">
+		<territory name="giran_t22_21_001"/>
+		<npc id="20551"/><!--Придорожный Падальщик-->
+	</spawn>
+	<spawn name="giran_t22_21_001" count="2" respawn="95">
+		<territory name="giran_t22_21_001"/>
+		<npc id="20552"/><!--Пленная Душа-->
+	</spawn>
+	<territory name="giran_t22_21_006">
+		<add x="69820" y="105041" zmin="-3783" zmax="-3333"/>
+		<add x="71216" y="105753" zmin="-3783" zmax="-3333"/>
+		<add x="70352" y="107693" zmin="-3783" zmax="-3333"/>
+		<add x="67904" y="106813" zmin="-3783" zmax="-3333"/>
+		<add x="68060" y="106085" zmin="-3783" zmax="-3333"/>
+	</territory>
+	<spawn name="giran_t22_21_006" count="1" respawn="95">
+		<territory name="giran_t22_21_006"/>
+		<npc id="20550"/><!--Василиск Стражник-->
+	</spawn>
+	<spawn name="giran_t22_21_006" count="2" respawn="95">
+		<territory name="giran_t22_21_006"/>
+		<npc id="20551"/><!--Придорожный Падальщик-->
+	</spawn>
+	<spawn name="giran_t22_21_006" count="1" respawn="95">
+		<territory name="giran_t22_21_006"/>
+		<npc id="20552"/><!--Пленная Душа-->
+	</spawn>
+	<territory name="giran_t22_21_005">
+		<add x="71274" y="105820" zmin="-3771" zmax="-3321"/>
+		<add x="71862" y="107572" zmin="-3771" zmax="-3321"/>
+		<add x="71714" y="111584" zmin="-3771" zmax="-3321"/>
+		<add x="70538" y="111400" zmin="-3771" zmax="-3321"/>
+		<add x="70138" y="109668" zmin="-3771" zmax="-3321"/>
+		<add x="70214" y="108284" zmin="-3771" zmax="-3321"/>
+	</territory>
+	<spawn name="giran_t22_21_005" count="1" respawn="95">
+		<territory name="giran_t22_21_005"/>
+		<npc id="20550"/><!--Василиск Стражник-->
+	</spawn>
+	<spawn name="giran_t22_21_005" count="2" respawn="95">
+		<territory name="giran_t22_21_005"/>
+		<npc id="20551"/><!--Придорожный Падальщик-->
+	</spawn>
+	<spawn name="giran_t22_21_005" count="2" respawn="95">
+		<territory name="giran_t22_21_005"/>
+		<npc id="20552"/><!--Пленная Душа-->
+	</spawn>
+	<territory name="giran_t22_21_003">
+		<add x="65656" y="103135" zmin="-3755" zmax="-3305"/>
+		<add x="67144" y="102679" zmin="-3755" zmax="-3305"/>
+		<add x="67676" y="105859" zmin="-3755" zmax="-3305"/>
+		<add x="67248" y="107055" zmin="-3755" zmax="-3305"/>
+		<add x="65660" y="106551" zmin="-3755" zmax="-3305"/>
+	</territory>
+	<spawn name="giran_t22_21_003" count="2" respawn="95">
+		<territory name="giran_t22_21_003"/>
+		<npc id="20550"/><!--Василиск Стражник-->
+	</spawn>
+	<spawn name="giran_t22_21_003" count="1" respawn="95">
+		<territory name="giran_t22_21_003"/>
+		<npc id="20551"/><!--Придорожный Падальщик-->
+	</spawn>
+	<spawn name="giran_t22_21_003" count="2" respawn="95">
+		<territory name="giran_t22_21_003"/>
+		<npc id="20552"/><!--Пленная Душа-->
+	</spawn>
+	<territory name="giran_t22_21_009">
+		<add x="70534" y="111635" zmin="-3779" zmax="-3329"/>
+		<add x="71530" y="111839" zmin="-3779" zmax="-3329"/>
+		<add x="71414" y="115727" zmin="-3779" zmax="-3329"/>
+		<add x="69874" y="116751" zmin="-3779" zmax="-3329"/>
+		<add x="68398" y="114699" zmin="-3779" zmax="-3329"/>
+		<add x="68734" y="113339" zmin="-3779" zmax="-3329"/>
+	</territory>
+	<spawn name="giran_t22_21_009" count="2" respawn="95">
+		<territory name="giran_t22_21_009"/>
+		<npc id="20176"/><!--Змей-->
+	</spawn>
+	<spawn name="giran_t22_21_009" count="1" respawn="95">
+		<territory name="giran_t22_21_009"/>
+		<npc id="20550"/><!--Василиск Стражник-->
+	</spawn>
+	<spawn name="giran_t22_21_009" count="3" respawn="95">
+		<territory name="giran_t22_21_009"/>
+		<npc id="20551"/><!--Придорожный Падальщик-->
+	</spawn>
+	<territory name="giran_t22_21_008">
+		<add x="65714" y="109155" zmin="-3797" zmax="-2997"/>
+		<add x="66162" y="108775" zmin="-3797" zmax="-2997"/>
+		<add x="67538" y="110619" zmin="-3797" zmax="-2997"/>
+		<add x="68306" y="112563" zmin="-3797" zmax="-2997"/>
+		<add x="65654" y="112675" zmin="-3797" zmax="-2997"/>
+	</territory>
+	<spawn name="giran_t22_21_008" count="2" respawn="95">
+		<territory name="giran_t22_21_008"/>
+		<npc id="20550"/><!--Василиск Стражник-->
+	</spawn>
+	<spawn name="giran_t22_21_008" count="1" respawn="95">
+		<territory name="giran_t22_21_008"/>
+		<npc id="20551"/><!--Придорожный Падальщик-->
+	</spawn>
+	<spawn name="giran_t22_21_008" count="2" respawn="95">
+		<territory name="giran_t22_21_008"/>
+		<npc id="20552"/><!--Пленная Душа-->
+	</spawn>
+	<territory name="giran_t22_21_007">
+		<add x="67857" y="106843" zmin="-3793" zmax="-3343"/>
+		<add x="68529" y="107087" zmin="-3793" zmax="-3343"/>
+		<add x="68605" y="112075" zmin="-3793" zmax="-3343"/>
+		<add x="67073" y="109203" zmin="-3793" zmax="-3343"/>
+	</territory>
+	<spawn name="giran_t22_21_007" count="1" respawn="95">
+		<territory name="giran_t22_21_007"/>
+		<npc id="20550"/><!--Василиск Стражник-->
+	</spawn>
+	<spawn name="giran_t22_21_007" count="2" respawn="95">
+		<territory name="giran_t22_21_007"/>
+		<npc id="20551"/><!--Придорожный Падальщик-->
+	</spawn>
+	<spawn name="giran_t22_21_007" count="1" respawn="95">
+		<territory name="giran_t22_21_007"/>
+		<npc id="20552"/><!--Пленная Душа-->
+	</spawn>
+	<territory name="giran_t22_21_013">
+		<add x="66988" y="118637" zmin="-3786" zmax="-3286"/>
+		<add x="70184" y="118301" zmin="-3786" zmax="-3286"/>
+		<add x="70340" y="119929" zmin="-3786" zmax="-3286"/>
+		<add x="69528" y="121993" zmin="-3786" zmax="-3286"/>
+		<add x="65700" y="122297" zmin="-3786" zmax="-3286"/>
+		<add x="65728" y="119693" zmin="-3786" zmax="-3286"/>
+	</territory>
+	<spawn name="giran_t22_21_013" count="2" respawn="95">
+		<territory name="giran_t22_21_013"/>
+		<npc id="20176"/><!--Змей-->
+	</spawn>
+	<spawn name="giran_t22_21_013" count="2" respawn="95">
+		<territory name="giran_t22_21_013"/>
+		<npc id="20550"/><!--Василиск Стражник-->
+	</spawn>
+	<spawn name="giran_t22_21_013" count="3" respawn="95">
+		<territory name="giran_t22_21_013"/>
+		<npc id="20551"/><!--Придорожный Падальщик-->
+	</spawn>
+	<territory name="giran_t22_21_012">
+		<add x="69914" y="116750" zmin="-3754" zmax="-3304"/>
+		<add x="71642" y="115550" zmin="-3754" zmax="-3304"/>
+		<add x="73122" y="116870" zmin="-3754" zmax="-3304"/>
+		<add x="70442" y="117694" zmin="-3754" zmax="-3304"/>
+	</territory>
+	<spawn name="giran_t22_21_012" count="2" respawn="95">
+		<territory name="giran_t22_21_012"/>
+		<npc id="20176"/><!--Змей-->
+	</spawn>
+	<spawn name="giran_t22_21_012" count="1" respawn="95">
+		<territory name="giran_t22_21_012"/>
+		<npc id="20550"/><!--Василиск Стражник-->
+	</spawn>
+	<spawn name="giran_t22_21_012" count="1" respawn="95">
+		<territory name="giran_t22_21_012"/>
+		<npc id="20551"/><!--Придорожный Падальщик-->
+	</spawn>
+	<territory name="giran_t22_21_011">
+		<add x="65682" y="114866" zmin="-3768" zmax="-3318"/>
+		<add x="67978" y="114842" zmin="-3768" zmax="-3318"/>
+		<add x="69602" y="116942" zmin="-3768" zmax="-3318"/>
+		<add x="70134" y="118222" zmin="-3768" zmax="-3318"/>
+		<add x="66946" y="118534" zmin="-3768" zmax="-3318"/>
+		<add x="65650" y="117478" zmin="-3768" zmax="-3318"/>
+	</territory>
+	<spawn name="giran_t22_21_011" count="2" respawn="95">
+		<territory name="giran_t22_21_011"/>
+		<npc id="20176"/><!--Змей-->
+	</spawn>
+	<spawn name="giran_t22_21_011" count="2" respawn="95">
+		<territory name="giran_t22_21_011"/>
+		<npc id="20550"/><!--Василиск Стражник-->
+	</spawn>
+	<spawn name="giran_t22_21_011" count="3" respawn="95">
+		<territory name="giran_t22_21_011"/>
+		<npc id="20551"/><!--Придорожный Падальщик-->
+	</spawn>
+	<territory name="giran_t22_21_010">
+		<add x="67090" y="112544" zmin="-3797" zmax="-3347"/>
+		<add x="68250" y="112520" zmin="-3797" zmax="-3347"/>
+		<add x="67970" y="114776" zmin="-3797" zmax="-3347"/>
+		<add x="65634" y="114776" zmin="-3797" zmax="-3347"/>
+	</territory>
+	<spawn name="giran_t22_21_010" count="2" respawn="95">
+		<territory name="giran_t22_21_010"/>
+		<npc id="20176"/><!--Змей-->
+	</spawn>
+	<spawn name="giran_t22_21_010" count="1" respawn="95">
+		<territory name="giran_t22_21_010"/>
+		<npc id="20550"/><!--Василиск Стражник-->
+	</spawn>
+	<spawn name="giran_t22_21_010" count="1" respawn="95">
+		<territory name="giran_t22_21_010"/>
+		<npc id="20551"/><!--Придорожный Падальщик-->
+	</spawn>
+	<territory name="giran_t22_21_017">
+		<add x="65660" y="130212" zmin="-3827" zmax="-3377"/>
+		<add x="67032" y="128996" zmin="-3827" zmax="-3377"/>
+		<add x="68904" y="130892" zmin="-3827" zmax="-3377"/>
+		<add x="65676" y="130840" zmin="-3827" zmax="-3377"/>
+	</territory>
+	<spawn name="giran_t22_21_017" count="1" respawn="95">
+		<territory name="giran_t22_21_017"/>
+		<npc id="20176"/><!--Змей-->
+	</spawn>
+	<spawn name="giran_t22_21_017" count="1" respawn="95">
+		<territory name="giran_t22_21_017"/>
+		<npc id="20550"/><!--Василиск Стражник-->
+	</spawn>
+	<spawn name="giran_t22_21_017" count="3" respawn="95">
+		<territory name="giran_t22_21_017"/>
+		<npc id="20551"/><!--Придорожный Падальщик-->
+	</spawn>
+	<territory name="giran_t22_21_016">
+		<add x="65802" y="122257" zmin="-3834" zmax="-3384"/>
+		<add x="66662" y="122197" zmin="-3834" zmax="-3384"/>
+		<add x="66886" y="128953" zmin="-3834" zmax="-3384"/>
+		<add x="65638" y="126785" zmin="-3834" zmax="-3384"/>
+	</territory>
+	<spawn name="giran_t22_21_016" count="2" respawn="95">
+		<territory name="giran_t22_21_016"/>
+		<npc id="20176"/><!--Змей-->
+	</spawn>
+	<spawn name="giran_t22_21_016" count="1" respawn="95">
+		<territory name="giran_t22_21_016"/>
+		<npc id="20550"/><!--Василиск Стражник-->
+	</spawn>
+	<spawn name="giran_t22_21_016" count="1" respawn="95">
+		<territory name="giran_t22_21_016"/>
+		<npc id="20551"/><!--Придорожный Падальщик-->
+	</spawn>
+	<territory name="giran_t22_21_015">
+		<add x="70898" y="124643" zmin="-3818" zmax="-3368"/>
+		<add x="71906" y="124539" zmin="-3818" zmax="-3368"/>
+		<add x="72658" y="125283" zmin="-3818" zmax="-3368"/>
+		<add x="71550" y="128179" zmin="-3818" zmax="-3368"/>
+		<add x="70810" y="128119" zmin="-3818" zmax="-3368"/>
+		<add x="70070" y="126215" zmin="-3818" zmax="-3368"/>
+	</territory>
+	<spawn name="giran_t22_21_015" count="1" respawn="95">
+		<territory name="giran_t22_21_015"/>
+		<npc id="20176"/><!--Змей-->
+	</spawn>
+	<spawn name="giran_t22_21_015" count="1" respawn="95">
+		<territory name="giran_t22_21_015"/>
+		<npc id="20550"/><!--Василиск Стражник-->
+	</spawn>
+	<spawn name="giran_t22_21_015" count="3" respawn="95">
+		<territory name="giran_t22_21_015"/>
+		<npc id="20551"/><!--Придорожный Падальщик-->
+	</spawn>
+	<territory name="giran_t22_21_014">
+		<add x="70832" y="118524" zmin="-3715" zmax="-3265"/>
+		<add x="72252" y="118344" zmin="-3715" zmax="-3265"/>
+		<add x="71904" y="122708" zmin="-3715" zmax="-3265"/>
+		<add x="70832" y="122628" zmin="-3715" zmax="-3265"/>
+		<add x="70480" y="121324" zmin="-3715" zmax="-3265"/>
+	</territory>
+	<spawn name="giran_t22_21_014" count="2" respawn="95">
+		<territory name="giran_t22_21_014"/>
+		<npc id="20176"/><!--Змей-->
+	</spawn>
+	<spawn name="giran_t22_21_014" count="1" respawn="95">
+		<territory name="giran_t22_21_014"/>
+		<npc id="20550"/><!--Василиск Стражник-->
+	</spawn>
+	<spawn name="giran_t22_21_014" count="1" respawn="95">
+		<territory name="giran_t22_21_014"/>
+		<npc id="20551"/><!--Придорожный Падальщик-->
+	</spawn>
+	<territory name="giran_t22_21_019">
+		<add x="72418" y="98496" zmin="-3723" zmax="-2623"/>
+		<add x="83374" y="98492" zmin="-3723" zmax="-2623"/>
+		<add x="83322" y="99936" zmin="-3723" zmax="-2623"/>
+		<add x="76586" y="103888" zmin="-3723" zmax="-2623"/>
+		<add x="72330" y="100660" zmin="-3723" zmax="-2623"/>
+	</territory>
+	<spawn name="giran_t22_21_019" count="5" respawn="95">
+		<territory name="giran_t22_21_019"/>
+		<npc id="20550"/><!--Василиск Стражник-->
+	</spawn>
+	<spawn name="giran_t22_21_019" count="6" respawn="95">
+		<territory name="giran_t22_21_019"/>
+		<npc id="20551"/><!--Придорожный Падальщик-->
+	</spawn>
+	<spawn name="giran_t22_21_019" count="7" respawn="95">
+		<territory name="giran_t22_21_019"/>
+		<npc id="20552"/><!--Пленная Душа-->
+	</spawn>
+	<territory name="giran_t22_21_018">
+		<add x="70830" y="129021" zmin="-3809" zmax="-3209"/>
+		<add x="72214" y="129373" zmin="-3809" zmax="-3209"/>
+		<add x="72162" y="130821" zmin="-3809" zmax="-3209"/>
+		<add x="70398" y="130801" zmin="-3809" zmax="-3209"/>
+	</territory>
+	<spawn name="giran_t22_21_018" count="1" respawn="95">
+		<territory name="giran_t22_21_018"/>
+		<npc id="20176"/><!--Змей-->
+	</spawn>
+	<spawn name="giran_t22_21_018" count="1" respawn="95">
+		<territory name="giran_t22_21_018"/>
+		<npc id="20550"/><!--Василиск Стражник-->
+	</spawn>
+	<spawn name="giran_t22_21_018" count="2" respawn="95">
+		<territory name="giran_t22_21_018"/>
+		<npc id="20551"/><!--Придорожный Падальщик-->
+	</spawn>
+	<territory name="giran_t22_21_020">
+		<add x="76528" y="106423" zmin="-3028" zmax="-1928"/>
+		<add x="78356" y="107943" zmin="-3028" zmax="-1928"/>
+		<add x="77128" y="111279" zmin="-3028" zmax="-1928"/>
+		<add x="75244" y="113587" zmin="-3028" zmax="-1928"/>
+		<add x="74128" y="110479" zmin="-3028" zmax="-1928"/>
+	</territory>
+	<spawn name="giran_t22_21_020" count="3" respawn="95">
+		<territory name="giran_t22_21_020"/>
+		<npc id="20552"/><!--Пленная Душа-->
+	</spawn>
+	<spawn name="giran_t22_21_020" count="4" respawn="95">
+		<territory name="giran_t22_21_020"/>
+		<npc id="20553"/><!--Вепрь-->
+	</spawn>
+	<territory name="giran_t22_21_024">
+		<add x="90882" y="98515" zmin="-3784" zmax="-2284"/>
+		<add x="97914" y="98555" zmin="-3784" zmax="-2284"/>
+		<add x="97966" y="105507" zmin="-3784" zmax="-2284"/>
+		<add x="93322" y="105467" zmin="-3784" zmax="-2284"/>
+		<add x="92170" y="104391" zmin="-3784" zmax="-2284"/>
+		<add x="90662" y="100743" zmin="-3784" zmax="-2284"/>
+	</territory>
+	<spawn name="giran_t22_21_024" count="5" respawn="95">
+		<territory name="giran_t22_21_024"/>
+		<npc id="20551"/><!--Придорожный Падальщик-->
+	</spawn>
+	<spawn name="giran_t22_21_024" count="9" respawn="95">
+		<territory name="giran_t22_21_024"/>
+		<npc id="20552"/><!--Пленная Душа-->
+	</spawn>
+	<spawn name="giran_t22_21_024" count="6" respawn="95">
+		<territory name="giran_t22_21_024"/>
+		<npc id="20553"/><!--Вепрь-->
+	</spawn>
+	<territory name="giran_t22_21_023">
+		<add x="83445" y="98536" zmin="-3683" zmax="-2983"/>
+		<add x="90721" y="98476" zmin="-3683" zmax="-2983"/>
+		<add x="90221" y="101376" zmin="-3683" zmax="-2983"/>
+		<add x="88553" y="101756" zmin="-3683" zmax="-2983"/>
+		<add x="83393" y="99900" zmin="-3683" zmax="-2983"/>
+	</territory>
+	<spawn name="giran_t22_21_023" count="2" respawn="95">
+		<territory name="giran_t22_21_023"/>
+		<npc id="20551"/><!--Придорожный Падальщик-->
+	</spawn>
+	<spawn name="giran_t22_21_023" count="4" respawn="95">
+		<territory name="giran_t22_21_023"/>
+		<npc id="20552"/><!--Пленная Душа-->
+	</spawn>
+	<spawn name="giran_t22_21_023" count="2" respawn="95">
+		<territory name="giran_t22_21_023"/>
+		<npc id="20553"/><!--Вепрь-->
+	</spawn>
+	<territory name="giran_t22_21_022">
+		<add x="79721" y="102334" zmin="-3701" zmax="-2201"/>
+		<add x="83565" y="99958" zmin="-3701" zmax="-2201"/>
+		<add x="88589" y="101742" zmin="-3701" zmax="-2201"/>
+		<add x="82093" y="106238" zmin="-3701" zmax="-2201"/>
+	</territory>
+	<spawn name="giran_t22_21_022" count="3" respawn="95">
+		<territory name="giran_t22_21_022"/>
+		<npc id="20551"/><!--Придорожный Падальщик-->
+	</spawn>
+	<spawn name="giran_t22_21_022" count="5" respawn="95">
+		<territory name="giran_t22_21_022"/>
+		<npc id="20552"/><!--Пленная Душа-->
+	</spawn>
+	<spawn name="giran_t22_21_022" count="2" respawn="95">
+		<territory name="giran_t22_21_022"/>
+		<npc id="20553"/><!--Вепрь-->
+	</spawn>
+	<territory name="giran_t22_21_021">
+		<add x="76619" y="103981" zmin="-3632" zmax="-2532"/>
+		<add x="79479" y="102317" zmin="-3632" zmax="-2532"/>
+		<add x="82167" y="106633" zmin="-3632" zmax="-2532"/>
+		<add x="78367" y="107569" zmin="-3632" zmax="-2532"/>
+		<add x="76467" y="106281" zmin="-3632" zmax="-2532"/>
+	</territory>
+	<spawn name="giran_t22_21_021" count="2" respawn="95">
+		<territory name="giran_t22_21_021"/>
+		<npc id="20551"/><!--Придорожный Падальщик-->
+	</spawn>
+	<spawn name="giran_t22_21_021" count="3" respawn="95">
+		<territory name="giran_t22_21_021"/>
+		<npc id="20552"/><!--Пленная Душа-->
+	</spawn>
+	<spawn name="giran_t22_21_021" count="3" respawn="95">
+		<territory name="giran_t22_21_021"/>
+		<npc id="20553"/><!--Вепрь-->
+	</spawn>
+	<territory name="giran_t22_21_028">
+		<add x="77932" y="120264" zmin="-2403" zmax="-2003"/>
+		<add x="80104" y="119800" zmin="-2403" zmax="-2003"/>
+		<add x="80792" y="122540" zmin="-2403" zmax="-2003"/>
+		<add x="79252" y="122776" zmin="-2403" zmax="-2003"/>
+		<add x="77168" y="121180" zmin="-2403" zmax="-2003"/>
+	</territory>
+	<spawn name="giran_t22_21_028" count="2" respawn="95">
+		<territory name="giran_t22_21_028"/>
+		<npc id="20269"/><!--Шаман Орков Брека-->
+	</spawn>
+	<spawn name="giran_t22_21_028" count="3" respawn="95">
+		<territory name="giran_t22_21_028"/>
+		<npc id="20270"/><!--Владыка Орков Брека-->
+	</spawn>
+	<territory name="giran_t22_21_027">
+		<add x="76101" y="121849" zmin="-2916" zmax="-2316"/>
+		<add x="78345" y="122737" zmin="-2916" zmax="-2316"/>
+		<add x="79049" y="125485" zmin="-2916" zmax="-2316"/>
+		<add x="75905" y="125625" zmin="-2916" zmax="-2316"/>
+		<add x="75181" y="123885" zmin="-2916" zmax="-2316"/>
+	</territory>
+	<spawn name="giran_t22_21_027" count="2" respawn="95">
+		<territory name="giran_t22_21_027"/>
+		<npc id="20249"/><!--Воин Людоедов Турак-->
+	</spawn>
+	<spawn name="giran_t22_21_027" count="1" respawn="95">
+		<territory name="giran_t22_21_027"/>
+		<npc id="20269"/><!--Шаман Орков Брека-->
+	</spawn>
+	<spawn name="giran_t22_21_027" count="3" respawn="95">
+		<territory name="giran_t22_21_027"/>
+		<npc id="20270"/><!--Владыка Орков Брека-->
+	</spawn>
+	<territory name="giran_t22_21_026">
+		<add x="85341" y="129445" zmin="-3880" zmax="-2430"/>
+		<add x="97953" y="128097" zmin="-3880" zmax="-2430"/>
+		<add x="97721" y="130709" zmin="-3880" zmax="-2430"/>
+		<add x="86209" y="130777" zmin="-3880" zmax="-2430"/>
+	</territory>
+	<spawn name="giran_t22_21_026" count="4" respawn="95">
+		<territory name="giran_t22_21_026"/>
+		<npc id="20267"/><!--Орк Брека-->
+	</spawn>
+	<spawn name="giran_t22_21_026" count="4" respawn="95">
+		<territory name="giran_t22_21_026"/>
+		<npc id="20268"/><!--Стрелок Орков Брека-->
+	</spawn>
+	<spawn name="giran_t22_21_026" count="5" respawn="95">
+		<territory name="giran_t22_21_026"/>
+		<npc id="20271"/><!--Воин Орков Брека-->
+	</spawn>
+	<territory name="giran_t22_21_025">
+		<add x="77314" y="126835" zmin="-3768" zmax="-2768"/>
+		<add x="84606" y="128571" zmin="-3768" zmax="-2768"/>
+		<add x="85722" y="130791" zmin="-3768" zmax="-2768"/>
+		<add x="75526" y="130695" zmin="-3768" zmax="-2768"/>
+	</territory>
+	<spawn name="giran_t22_21_025" count="4" respawn="95">
+		<territory name="giran_t22_21_025"/>
+		<npc id="20249"/><!--Воин Людоедов Турак-->
+	</spawn>
+	<spawn name="giran_t22_21_025" count="4" respawn="95">
+		<territory name="giran_t22_21_025"/>
+		<npc id="20269"/><!--Шаман Орков Брека-->
+	</spawn>
+	<spawn name="giran_t22_21_025" count="5" respawn="95">
+		<territory name="giran_t22_21_025"/>
+		<npc id="20270"/><!--Владыка Орков Брека-->
+	</spawn>
+	<territory name="giran_t22_21_029">
+		<add x="79164" y="122916" zmin="-2356" zmax="-1956"/>
+		<add x="80864" y="122668" zmin="-2356" zmax="-1956"/>
+		<add x="83788" y="123808" zmin="-2356" zmax="-1956"/>
+		<add x="81900" y="125160" zmin="-2356" zmax="-1956"/>
+		<add x="80088" y="124628" zmin="-2356" zmax="-1956"/>
+	</territory>
+	<spawn name="giran_t22_21_029" count="2" respawn="95">
+		<territory name="giran_t22_21_029"/>
+		<npc id="20269"/><!--Шаман Орков Брека-->
+	</spawn>
+	<spawn name="giran_t22_21_029" count="3" respawn="95">
+		<territory name="giran_t22_21_029"/>
+		<npc id="20270"/><!--Владыка Орков Брека-->
+	</spawn>
+	<territory name="giran_t22_21_031">
+		<add x="83873" y="124875" zmin="-2730" zmax="-2330"/>
+		<add x="85917" y="125487" zmin="-2730" zmax="-2330"/>
+		<add x="85373" y="126891" zmin="-2730" zmax="-2330"/>
+		<add x="82661" y="126067" zmin="-2730" zmax="-2330"/>
+	</territory>
+	<spawn name="giran_t22_21_031" count="2" respawn="95">
+		<territory name="giran_t22_21_031"/>
+		<npc id="20269"/><!--Шаман Орков Брека-->
+	</spawn>
+	<spawn name="giran_t22_21_031" count="3" respawn="95">
+		<territory name="giran_t22_21_031"/>
+		<npc id="20270"/><!--Владыка Орков Брека-->
+	</spawn>
+	<territory name="giran_t22_21_030">
+		<add x="79654" y="125828" zmin="-2885" zmax="-2485"/>
+		<add x="82674" y="126260" zmin="-2885" zmax="-2485"/>
+		<add x="81958" y="127020" zmin="-2885" zmax="-2485"/>
+		<add x="80530" y="127132" zmin="-2885" zmax="-2485"/>
+	</territory>
+	<spawn name="giran_t22_21_030" count="1" respawn="95">
+		<territory name="giran_t22_21_030"/>
+		<npc id="20269"/><!--Шаман Орков Брека-->
+	</spawn>
+	<spawn name="giran_t22_21_030" count="2" respawn="95">
+		<territory name="giran_t22_21_030"/>
+		<npc id="20270"/><!--Владыка Орков Брека-->
+	</spawn>
+	<territory name="giran_t22_21_035">
+		<add x="93950" y="122833" zmin="-2770" zmax="-2270"/>
+		<add x="94570" y="123417" zmin="-2770" zmax="-2270"/>
+		<add x="94466" y="125521" zmin="-2770" zmax="-2270"/>
+		<add x="93170" y="126373" zmin="-2770" zmax="-2270"/>
+		<add x="91574" y="125445" zmin="-2770" zmax="-2270"/>
+		<add x="91058" y="124177" zmin="-2770" zmax="-2270"/>
+		<add x="92742" y="122761" zmin="-2770" zmax="-2270"/>
+	</territory>
+	<spawn name="giran_t22_21_035" count="2" respawn="95">
+		<territory name="giran_t22_21_035"/>
+		<npc id="20267"/><!--Орк Брека-->
+	</spawn>
+	<spawn name="giran_t22_21_035" count="1" respawn="95">
+		<territory name="giran_t22_21_035"/>
+		<npc id="20268"/><!--Стрелок Орков Брека-->
+	</spawn>
+	<spawn name="giran_t22_21_035" count="3" respawn="95">
+		<territory name="giran_t22_21_035"/>
+		<npc id="20271"/><!--Воин Орков Брека-->
+	</spawn>
+	<territory name="giran_t22_21_034">
+		<add x="89835" y="125018" zmin="-2501" zmax="-1901"/>
+		<add x="91231" y="124898" zmin="-2501" zmax="-1901"/>
+		<add x="91527" y="125458" zmin="-2501" zmax="-1901"/>
+		<add x="90571" y="126430" zmin="-2501" zmax="-1901"/>
+		<add x="89907" y="125942" zmin="-2501" zmax="-1901"/>
+	</territory>
+	<spawn name="giran_t22_21_034" count="1" respawn="95">
+		<territory name="giran_t22_21_034"/>
+		<npc id="20269"/><!--Шаман Орков Брека-->
+	</spawn>
+	<spawn name="giran_t22_21_034" count="2" respawn="95">
+		<territory name="giran_t22_21_034"/>
+		<npc id="20270"/><!--Владыка Орков Брека-->
+	</spawn>
+	<territory name="giran_t22_21_033">
+		<add x="88309" y="123762" zmin="-2517" zmax="-1917"/>
+		<add x="89549" y="123994" zmin="-2517" zmax="-1917"/>
+		<add x="89437" y="126066" zmin="-2517" zmax="-1917"/>
+		<add x="87541" y="124978" zmin="-2517" zmax="-1917"/>
+	</territory>
+	<spawn name="giran_t22_21_033" count="1" respawn="95">
+		<territory name="giran_t22_21_033"/>
+		<npc id="20269"/><!--Шаман Орков Брека-->
+	</spawn>
+	<spawn name="giran_t22_21_033" count="2" respawn="95">
+		<territory name="giran_t22_21_033"/>
+		<npc id="20270"/><!--Владыка Орков Брека-->
+	</spawn>
+	<territory name="giran_t22_21_032">
+		<add x="85987" y="125556" zmin="-2654" zmax="-2254"/>
+		<add x="87359" y="125032" zmin="-2654" zmax="-2254"/>
+		<add x="90511" y="126864" zmin="-2654" zmax="-2254"/>
+		<add x="85883" y="127632" zmin="-2654" zmax="-2254"/>
+	</territory>
+	<spawn name="giran_t22_21_032" count="2" respawn="95">
+		<territory name="giran_t22_21_032"/>
+		<npc id="20269"/><!--Шаман Орков Брека-->
+	</spawn>
+	<spawn name="giran_t22_21_032" count="3" respawn="95">
+		<territory name="giran_t22_21_032"/>
+		<npc id="20270"/><!--Владыка Орков Брека-->
+	</spawn>
+	<territory name="giran_t22_21_038">
+		<add x="75232" y="98956" zmin="-3656" zmax="-2856"/>
+		<add x="78424" y="99120" zmin="-3656" zmax="-2856"/>
+		<add x="79880" y="101080" zmin="-3656" zmax="-2856"/>
+		<add x="77016" y="102888" zmin="-3656" zmax="-2856"/>
+		<add x="74580" y="100716" zmin="-3656" zmax="-2856"/>
+	</territory>
+	<spawn name="giran_t22_21_038" count="2" respawn="95">
+		<territory name="giran_t22_21_038"/>
+		<npc id="20551"/><!--Придорожный Падальщик-->
+	</spawn>
+	<spawn name="giran_t22_21_038" count="3" respawn="95">
+		<territory name="giran_t22_21_038"/>
+		<npc id="20552"/><!--Пленная Душа-->
+	</spawn>
+	<territory name="giran_t22_21_037">
+		<add x="93476" y="99768" zmin="-3612" zmax="-2812"/>
+		<add x="96388" y="100700" zmin="-3612" zmax="-2812"/>
+		<add x="96228" y="103236" zmin="-3612" zmax="-2812"/>
+		<add x="93680" y="103496" zmin="-3612" zmax="-2812"/>
+		<add x="92096" y="101172" zmin="-3612" zmax="-2812"/>
+	</territory>
+	<spawn name="giran_t22_21_037" count="2" respawn="95">
+		<territory name="giran_t22_21_037"/>
+		<npc id="20553"/><!--Вепрь-->
+	</spawn>
+	<spawn name="giran_t22_21_037" count="3" respawn="95">
+		<territory name="giran_t22_21_037"/>
+		<npc id="20554"/><!--Грандис-->
+	</spawn>
+	<territory name="giran_t22_21_036">
+		<add x="95855" y="120670" zmin="-1769" zmax="-1269"/>
+		<add x="98063" y="121786" zmin="-1769" zmax="-1269"/>
+		<add x="97999" y="125610" zmin="-1769" zmax="-1269"/>
+		<add x="95111" y="125178" zmin="-1769" zmax="-1269"/>
+		<add x="94955" y="121514" zmin="-1769" zmax="-1269"/>
+	</territory>
+	<spawn name="giran_t22_21_036" count="3" respawn="95">
+		<territory name="giran_t22_21_036"/>
+		<npc id="20267"/><!--Орк Брека-->
+	</spawn>
+	<spawn name="giran_t22_21_036" count="1" respawn="95">
+		<territory name="giran_t22_21_036"/>
+		<npc id="20268"/><!--Стрелок Орков Брека-->
+	</spawn>
+	<spawn name="giran_t22_21_036" count="3" respawn="95">
+		<territory name="giran_t22_21_036"/>
+		<npc id="20271"/><!--Воин Орков Брека-->
+	</spawn>
+	<spawn name="NPC_t22_21_030917_02" count="1" respawn="60">
+		<point x="69976" y="109692" z="-3702" h="0"/>
+		<npc id="30630"/><!--Орим-->
+	</spawn>
+	<!--<spawn name="22_21_NPC_031201_01" count="1" respawn="60">
+		<point x="73211" y="118492" z="-3693" h="40960"/>
+		<npc id="TODO: pch = [watcher_of_antaras_gilmore]"/>#???#
+	</spawn>-->
+	<spawn name="22_21_NPC_031130" count="1" respawn="60">
+		<point x="80100" y="119991" z="-2264" h="19000"/>
+		<npc id="30615"/><!--Волтар-->
+	</spawn>
+	<spawn name="22_21_NPC_101" count="1" respawn="60">
+		<point x="70932" y="124558" z="-3460" h="32768"/>
+		<npc id="30557"/><!--Торай-->
+	</spawn>
+	<!--<spawn name="event_22_21_031215_005" count="1" respawn="7200" respawn_random="3600">
+		<territory>
+			<add x="84556" y="107992" zmin="-3320" zmax="-2820"/>
+			<add x="89368" y="105260" zmin="-3320" zmax="-2820"/>
+			<add x="91908" y="107872" zmin="-3320" zmax="-2820"/>
+			<add x="89108" y="108812" zmin="-3320" zmax="-2820"/>
+		</territory>
+		<npc id="TODO: pch = [cave_servant_lord_ishka]"/>#???#
+	</spawn>-->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="72920" y="118792" z="-3648" h="40960" />
+		<npc id="31616" /><!--Отшельник-->
+	</spawn>
+	<spawn name="Clara" count="1" respawn="86400" respawn_random="12000">
+		<point x="89816" y="105336" z="-3256" h="21344"/>
+		<npc id="25217"/><!--Проклятая Клара-->
+	</spawn>
+	<spawn name="Lilia" count="1" respawn="86400" respawn_random="12000">
+		<point x="92296" y="115768" z="-3184" h="21344"/>
+		<npc id="25176"/><!--Черная Лилия-->
+	</spawn>
+	<spawn name="Pred_padal" count="1" respawn="86400" respawn_random="12000">
+		<point x="72312" y="125480" z="-3648" h="21344"/>
+		<npc id="25410"/><!--Предводитель Придорожных Падальщиков-->
+	</spawn>
+	<spawn name="Karuta" count="1" respawn="86400" respawn_random="12000">
+		<point x="75464" y="110936" z="-2480" h="21344"/>
+		<npc id="25173"/><!--Король Тигров Карута-->
+	</spawn>
+	<spawn name="Pastu" count="1" respawn="86400" respawn_random="12000">
+		<point x="90696" y="125656" z="-2096" h="21344"/>
+		<npc id="25020"/><!--Колдун Брека Пасту-->
+	</spawn>	
+	<spawn name="Kastor" count="1" respawn="129600" respawn_random="86400">
+		<point x="81192" y="129768" z="-3600" h="21344"/>
+		<npc id="25226"/><!--Ревущий Монарх Кастор-->
+	</spawn>
+</list>

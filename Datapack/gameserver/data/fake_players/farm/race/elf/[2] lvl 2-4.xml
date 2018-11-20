@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE farm SYSTEM "fake_player.dtd">
+<!--AUTHOR: Bonux-->
+<farm name="Elf (Lvl 2-4)" min_level="2" max_level="4" races="ELF">
+	<zones>
+		<zone>
+			<polygon>
+				<coords loc="40328 43608 -4000 -3000"/>
+				<coords loc="40856 42696 -4000 -3000"/>
+				<coords loc="41352 41944 -4000 -3000"/>
+				<coords loc="41592 41320 -4000 -3000"/>
+				<coords loc="42104 40792 -4000 -3000"/>
+				<coords loc="45720 42104 -4000 -3000"/>
+				<coords loc="46536 42152 -4000 -3000"/>
+				<coords loc="48488 41176 -4000 -3000"/>
+				<coords loc="50008 41144 -4000 -3000"/>
+				<coords loc="49480 43016 -4000 -3000"/>
+				<coords loc="48216 43784 -4000 -3000"/>
+				<coords loc="46392 44824 -4000 -3000"/>
+				<coords loc="45416 45080 -4000 -3000"/>
+				<coords loc="43912 45336 -4000 -3000"/>
+				<coords loc="42248 44408 -4000 -3000"/>
+			</polygon>
+		</zone>
+		<spawn_points>
+			<coords loc="44952 42360 -3488"/>
+			<coords loc="47288 42664 -3488"/>
+		</spawn_points>
+	</zones>
+	<on_obtain_max_level>
+		<action id="1"/>
+	</on_obtain_max_level>
+	<go_to_town min_farm_time="1800" max_farm_time="3600">
+		<action id="1"/>
+	</go_to_town>
+	<action id="1">
+		<wait min_delay="1000" max_delay="3000"/>
+		<random_action>
+			<ordinary_actions>
+				<move_to_point x="46920" y="42440" z="-3504" min_range="50" max_range="150"/>
+				<move_to_point x="46232" y="41832" z="-3504" min_range="50" max_range="150"/>
+				<move_to_point x="46040" y="42056" z="-3472" min_range="0" max_range="50"/>
+				<move_to_point x="46008" y="42552" z="-3376" min_range="0" max_range="50"/>
+				<move_to_point x="45912" y="43416" z="-3232" min_range="0" max_range="50"/>
+				<move_to_point x="45816" y="44520" z="-3104" min_range="0" max_range="50"/>
+				<move_to_point x="45768" y="45320" z="-3016" min_range="0" max_range="50"/>
+				<move_to_point x="45656" y="46296" z="-2992" min_range="0" max_range="50"/>
+				<move_to_point x="45576" y="47128" z="-2992" min_range="50" max_range="150"/>
+				<move_to_point x="45512" y="48104" z="-3056" min_range="50" max_range="150"/>
+			</ordinary_actions>
+			<use_item id="736"/>
+		</random_action>
+	</action>
+</farm>

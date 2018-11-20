@@ -1,0 +1,58 @@
+<html><head><table width=260><tr>
+<td width=40><button value="Main" action="bypass -h admin_admin" width=40 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=180><center>Siege Menu</center></td>
+<td width=40><button value="Back" action="bypass -h admin_residence_list" width=40 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr></table><br>
+Residence: %residence%<br>
+<table>
+	<tr>
+		<td width="60">Owner:</td>
+		<td width="100">%owner%</td>
+		<td><edit var="owner" width=100></td>
+		<td><button value="Set" action="bypass -h admin_set_owner %id% $owner" width=40 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+	</tr>
+</table><br>
+Cycle: %cycle%; Paid Cycle: %paid_cycle%<br>
+Reward Count: %reward_count%; Left time : %left_time%<br>
+Date:
+<table>
+<tr>
+	<td>Hour</td>
+	<td>Minute</td>
+	<td>Day</td>
+	<td>Month</td>
+	<td>Year</td>
+</tr>
+<tr>
+	<td>%hour%</td>
+	<td>%minute%</td>
+	<td>%day%</td>
+	<td>%month%</td>
+	<td>%year%</td>
+</tr>
+<tr>
+	<td><edit var="hour" width=40></td>
+	<td><edit var="minute" width=40></td>
+	<td><edit var="day" width=40></td>
+	<td><edit var="month" width=40></td>
+	<td><edit var="year" width=50></td>
+</tr>
+</table><br>
+<button value="Set Time" action="bypass -h admin_set_siege_time %id% $hour $minute $day $month $year" width=80 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br>
+<table>
+	<tr>
+		<td><edit var="q_sec" width=40></td>
+		<td width="30">sec</td>
+		<td><button value="Quick Start" action="bypass -h admin_quick_siege_start %id% $q_sec" width=80 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+		<td><button value="Quick Stop" action="bypass -h admin_quick_siege_stop %id% $q_sec" width=80 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+	</tr>
+</table><br>
+<table>
+	<tr>
+		<td width="100">Clan name</td>
+		<td width="100">Leader name</td>
+		<td width="100">Type</td>
+	</tr>
+	%clans%
+</table><br>
+</head></html>

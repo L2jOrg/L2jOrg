@@ -1,0 +1,41 @@
+<html><body><br>
+<table width=270 border=0>
+	<tr>
+		<td width=90>
+			Minimum bid price:
+		</td>
+		<td width=180>
+			<font color="aaccff">%min_bid%</font> Adena
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Bid price:
+		</td>
+		<td>
+			<font color="aaccff">%bid%</font> Adena
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Closing date:
+		</td>
+		<td>%hour% hour %date%
+		</td>
+	</tr>
+</table>
+<br>Raising a bid is only possible after a bid has been made. Canceled bids will be refunded, minus the transaction tax (<font color="LEVEL">10% of the bid price</font>). <br>You can raise or cancel a bid by selecting "My Sale Items" in the
+top menu.<br>Would you like to submit a bid?<br> <img src="L2UI.SquareBlank" width=270 height=10> <img src="L2UI.SquareWhite" width=270 height=1> <img src="L2UI.SquareBlank" width=270 height=5>
+<table width=270 border=0>
+	<tr>
+		<td width=100></td>
+		<td width=80 align=center>
+			<button action="bypass -h npc_%objectId%_bid_start %id%" value="Back" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+		</td>
+		<td width=80 align=center>
+			<button action="bypass -h npc_%objectId%_bid_confirm %id% %bid%" value="Confirm" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+		</td>
+	</tr>
+</table
+<br><br>
+</body></html>

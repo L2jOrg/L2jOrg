@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="5900" name="Coin Collecting Album">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_magic_book_black_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="5901" name="Blood Offering">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_dragon_blood_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="5902" name="Scroll of Ancient Magic">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_scroll_of_enchant_weapon_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="5903" name="Ancient Ash Urn">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_oil_pot_black_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="5916" name="Spellbook Page">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_piece_of_paper_white_i00"/>
+		<set name="price" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="2171" level="1"/>	<!--Spellbook Paper-->
+		</skills>
+	</etcitem>
+	<etcitem id="5917" name="Kranvel\'s Spellbook: Chapter of Fire">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_red_i00"/>
+		<set name="price" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="5918" name="Kranvel\'s Spellbook: Chapter of Water">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_blue_i00"/>
+		<set name="price" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="5919" name="Kranvel\'s Spellbook: Chapter of Wind">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_white_i00"/>
+		<set name="price" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="5920" name="Kranvel\'s Spellbook: Chapter of Earth">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_black_i00"/>
+		<set name="price" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="5921" name="Worthless Piece of Paper">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_piece_of_paper_black_i00"/>
+		<set name="price" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="5922" name="Blueprint: Giants Golem 1">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_black_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5923" name="Blueprint: Giants Golem 2">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_black_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5924" name="Blueprint: Giants Golem 3">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_black_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5925" name="Blueprint: Giants Golem 4">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_black_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5926" name="Blueprint: Giants Golem 5">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_black_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5927" name="Book: Basics of Giants Magic, Chapter 1">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_blue_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5928" name="Book: Basics of Giants Magic, Chapter 2">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_blue_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5929" name="Book: Basics of Giants Magic, Chapter 3">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_blue_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5930" name="Book: Basics of Giants Magic, Chapter 4">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_blue_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5931" name="Book: Basics of Giants Magic, Chapter 5">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_blue_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5932" name="Handbook: Giants Architecture, Chapter 1">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_red_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5933" name="Handbook: Giants Architecture, Chapter 2">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_red_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5934" name="Handbook: Giants Architecture, Chapter 3">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_red_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5935" name="Handbook: Giants Architecture, Chapter 4">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_red_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5936" name="Handbook: Giants Architecture, Chapter 5">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_red_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5937" name="Book: Giants Medical Science, Chapter 1">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_white_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5938" name="Book: Giants Medical Science, Chapter 2">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_white_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5939" name="Book: Giants Medical Science, Chapter 3">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_white_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5940" name="Book: Giants Medical Science, Chapter 4">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_white_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5941" name="Book: Giants Medical Science, Chapter 5">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_white_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5942" name="Giant\'s Love Letter">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_piece_of_report_i00"/>
+		<set name="price" value="200"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5943" name="Giants\' Doodle">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_painting_i00"/>
+		<set name="price" value="200"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5944" name="Ancient Parchment">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_roll_of_paper_black_i00"/>
+		<set name="stackable" value="true"/>
+		<skills>
+			<skill id="2172" level="1"/>	<!--Scroll of Giants-->
+		</skills>
+	</etcitem>
+	<etcitem id="5945" name="Book: Giants Science &amp; Technology, Chapter 1">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_spell_books_white_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5946" name="Book: Giants Science &amp; Technology, Chapter 2">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_spell_books_white_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5947" name="Book: Giants Science &amp; Technology, Chapter 3">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_spell_books_white_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5948" name="Book: Giants Science &amp; Technology, Chapter 4">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_spell_books_white_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5949" name="Book: Giants Science &amp; Technology, Chapter 5">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_spell_books_white_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5950" name="Almanac: Lesser Giant Culture, Chapter 1">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_spell_books_summon_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5951" name="Almanac: Lesser Giant Culture, Chapter 2">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_spell_books_summon_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5952" name="Almanac: Lesser Giant Culture, Chapter 3">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_spell_books_summon_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5953" name="Almanac: Lesser Giant Culture, Chapter 4">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_spell_books_summon_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5954" name="Almanac: Lesser Giant Culture, Chapter 5">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_spell_books_summon_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5955" name="Ancient Lesser Giant Book">
+		<set name="handler" value="SkillsReduce"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_spell_books_black_i00"/>
+		<set name="stackable" value="true"/>
+		<skills>
+			<skill id="2173" level="1"/>	<!--Book of Giants-->
+		</skills>
+	</etcitem>
+	<etcitem id="5956" name="15-year-old Wine">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_luxury_wine_a_i00"/>
+		<set name="price" value="5900"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="20"/>
+	</etcitem>
+	<etcitem id="5957" name="30-year-old Wine">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_luxury_wine_b_i00"/>
+		<set name="price" value="7900"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="20"/>
+	</etcitem>
+	<etcitem id="5958" name="60-year-old Wine">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_luxury_wine_c_i00"/>
+		<set name="price" value="30900"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="20"/>
+	</etcitem>
+	<etcitem id="5959" name="Ritron\'s Dessert Recipe">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_paper_white_i00"/>
+		<set name="price" value="40000"/>
+		<set name="weight" value="10"/>
+	</etcitem>
+	<etcitem id="5960" name="Ritron Jelly">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_cobol_i04"/>
+		<set name="price" value="920"/>
+		<set name="weight" value="10"/>
+	</etcitem>
+	<etcitem id="5961" name="Kail\'s Silver Basilisk">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_kyles_silver_basilisk_i00"/>
+		<set name="price" value="1000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5962" name="Kail\'s Gold Golem">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_kyles_gold_golem_i00"/>
+		<set name="price" value="1000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5963" name="Kail\'s Blood Dragon">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_kyles_blood_dragon_i00"/>
+		<set name="price" value="1000"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5964" name="Warehouse Keeper\'s Medal">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_irongate_medal_i00"/>
+		<set name="price" value="100"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5971" name="Joke Book of Ancient Times">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_piece_of_paper_black_i00"/>
+		<set name="price" value="400"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5972" name="Revelation of the Seals: Chapter of Avarice">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_piece_of_paper_white_i00"/>
+		<set name="price" value="400"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5973" name="Revelation of the Seals: Chapter of Gnosis">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_piece_of_paper_white_i00"/>
+		<set name="price" value="400"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5974" name="Revelation of the Seals: Chapter of Strife">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_piece_of_paper_white_i00"/>
+		<set name="price" value="400"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5975" name="Revelation of the Seals: Chapter of Punishment">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_piece_of_paper_white_i00"/>
+		<set name="price" value="400"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5976" name="Revelation of the Seals: Chapter of Awakening">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_piece_of_paper_white_i00"/>
+		<set name="price" value="400"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5977" name="Revelation of the Seals: Chapter of Calamity">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_piece_of_paper_white_i00"/>
+		<set name="price" value="400"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5978" name="Revelation of the Seals: Chapter of Descent">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_piece_of_paper_white_i00"/>
+		<set name="price" value="400"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5979" name="Ancient Epic, Chapter 1">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_piece_of_paper_gray_i00"/>
+		<set name="price" value="400"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5980" name="Ancient Epic, Chapter 2">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_piece_of_paper_gray_i00"/>
+		<set name="price" value="400"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5981" name="Ancient Epic, Chapter 3">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_piece_of_paper_gray_i00"/>
+		<set name="price" value="400"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5982" name="Ancient Epic, Chapter 4">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_piece_of_paper_gray_i00"/>
+		<set name="price" value="400"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5983" name="Ancient Epic, Chapter 5">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_piece_of_paper_gray_i00"/>
+		<set name="price" value="400"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5984" name="Imperial Genealogy 1">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_letter_red_i00"/>
+		<set name="price" value="400"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5985" name="Imperial Genealogy 2">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_letter_red_i00"/>
+		<set name="price" value="400"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5986" name="Imperial Genealogy 3">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_letter_red_i00"/>
+		<set name="price" value="400"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5987" name="Imperial Genealogy 4">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_letter_red_i00"/>
+		<set name="price" value="400"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="5988" name="Imperial Genealogy 5">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_letter_red_i00"/>
+		<set name="price" value="400"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+</list>

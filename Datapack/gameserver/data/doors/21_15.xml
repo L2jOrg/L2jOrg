@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="21150001" name="Beast_arena_azit_s.Defense_Tree.Beast_azit_door" hp="158250" pdef="644" mdef="518">
+		<pos x="59980" y="-94117" z="-1304"/>
+		<shape ax="59945" ay="-94173" bx="59954" by="-94177" cx="59985" cy="-94118" dx="59976" dy="-94114" minz="-1382" maxz="-932"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="21150002" name="Beast_arena_azit_s.Defense_Tree.Beast_azit_door" hp="158250" pdef="644" mdef="518">
+		<pos x="59922" y="-94227" z="-1304"/>
+		<shape ax="59917" ay="-94226" bx="59924" by="-94230" cx="59956" cy="-94170" dx="59949" dy="-94165" minz="-1382" maxz="-932"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="21150003" name="Beast_arena_azit_s.Defense_Tree.beast_arena_fence_door" hp="158250" pdef="644" mdef="518">
+		<pos x="55334" y="-93268" z="-1267"/>
+		<shape ax="55334" ay="-93274" bx="55338" by="-93272" cx="55300" cy="-93144" dx="55295" dy="-93146" minz="-1396" maxz="-946"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="21150004" name="Beast_arena_azit_s.Defense_Tree.beast_arena_fence_door" hp="158250" pdef="644" mdef="518">
+		<pos x="55263" y="-93038" z="-1267"/>
+		<shape ax="55299" ay="-93158" bx="55304" by="-93156" cx="55264" cy="-93032" dx="55258" dy="-93034" minz="-1396" maxz="-946"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="21150005" name="Beast_arena_azit_s.Defense_Tree.Beast_arena_farm_hedge" hp="158250" pdef="644" mdef="518">
+		<pos x="58500" y="-93965" z="-1380"/>
+		<shape ax="58323" ay="-94076" bx="58685" by="-93906" cx="58665" cy="-93847" dx="58305" dy="-94023" minz="-1391" maxz="-1046"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="21150006" name="Beast_arena_azit_s.Defense_Tree.Beast_arena_farm_hedge" hp="158250" pdef="644" mdef="518">
+		<pos x="56863" y="-93651" z="-1383"/>
+		<shape ax="57009" ay="-93779" bx="56731" by="-93497" cx="56698" cy="-93530" dx="56976" dy="-93814" minz="-1394" maxz="-1049"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="21150007" name="Beast_arena_azit_s.Defense_Tree.Beast_arena_farm_hedge" hp="158250" pdef="644" mdef="518">
+		<pos x="56629" y="-91998" z="-1380"/>
+		<shape ax="56555" ay="-92178" bx="56731" by="-91822" cx="56694" cy="-91808" dx="56517" dy="-92157" minz="-1391" maxz="-1046"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="21150008" name="Beast_arena_azit_s.Defense_Tree.Beast_arena_farm_hedge" hp="158250" pdef="644" mdef="518">
+		<pos x="58173" y="-91247" z="-1380"/>
+		<shape ax="58373" ay="-91271" bx="57987" by="-91199" cx="57980" cy="-91237" dx="58361" dy="-91315" minz="-1391" maxz="-1046"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+	<door id="21150009" name="Beast_arena_azit_s.Defense_Tree.Beast_arena_farm_hedge" hp="158250" pdef="644" mdef="518">
+		<pos x="59320" y="-92518" z="-1380"/>
+		<shape ax="59368" ay="-92713" bx="59313" by="-92322" cx="59265" cy="-92329" dx="59320" dy="-92717" minz="-1391" maxz="-1046"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+	</door>
+</list>

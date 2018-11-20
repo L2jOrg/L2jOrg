@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="3498" levels="1" name="Special Ability: Lightness">
+		<!--
+			Description: Weight Gauge is increased.
+		-->
+		<set name="icon" value="icon.skill0150"/>
+		<set name="magicLevel" value="46"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="maxLoad" value="1.2"/>
+		</for>
+	</skill>
+</list>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "events.dtd">
+<list>
+	<event id="0" name="OneVsOneDuel" impl="PlayerVsPlayerDuel">
+		<on_time>
+			<on time="-3">
+				<announce val="3"/>
+			</on>
+			<on time="-2">
+				<announce val="2"/>
+			</on>
+			<on time="-1">
+				<announce val="1"/>
+			</on>
+			<on time="0">
+				<start name="event"/>
+			</on>
+			<on time="120">
+				<stop name="event"/>
+			</on>
+		</on_time>
+	</event>
+</list>

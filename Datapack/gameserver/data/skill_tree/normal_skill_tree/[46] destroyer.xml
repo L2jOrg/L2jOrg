@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="46">	<!--Разрушитель-->
+			<skill id="312" level="6" name="Боевая Стойка Коварства(Vicious Stance)" cost="67000" min_level="40"/>
+			<skill id="121" level="2" name="Боевой Рев(Battle Roar)" cost="67000" min_level="40"/>
+			<skill id="212" level="3" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="67000" min_level="40"/>
+			<skill id="36" level="1" name="Вихрь(Spinning Slasher)" cost="67000" min_level="40"/>
+			<skill id="36" level="2" name="Вихрь(Spinning Slasher)" cost="67000" min_level="40"/>
+			<skill id="36" level="3" name="Вихрь(Spinning Slasher)" cost="67000" min_level="40"/>
+			<skill id="293" level="6" name="Владение Двуручным Оружием(Two-handed Weapon Mastery)" cost="67000" min_level="40"/>
+			<skill id="216" level="9" name="Владение Древковым Оружием(Polearm Mastery)" cost="67000" min_level="40"/>
+			<skill id="216" level="10" name="Владение Древковым Оружием(Polearm Mastery)" cost="67000" min_level="40"/>
+			<skill id="216" level="11" name="Владение Древковым Оружием(Polearm Mastery)" cost="67000" min_level="40"/>
+			<skill id="227" level="14" name="Владение Легкой Броней(Light Armor Mastery)" cost="67000" min_level="40"/>
+			<skill id="227" level="15" name="Владение Легкой Броней(Light Armor Mastery)" cost="67000" min_level="40"/>
+			<skill id="227" level="16" name="Владение Легкой Броней(Light Armor Mastery)" cost="67000" min_level="40"/>
+			<skill id="257" level="9" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="67000" min_level="40"/>
+			<skill id="257" level="10" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="67000" min_level="40"/>
+			<skill id="257" level="11" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="67000" min_level="40"/>
+			<skill id="231" level="14" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="67000" min_level="40"/>
+			<skill id="231" level="15" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="67000" min_level="40"/>
+			<skill id="231" level="16" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="67000" min_level="40"/>
+			<skill id="148" level="3" name="Жизненная Сила(Vital Force)" cost="67000" min_level="40"/>
+			<skill id="260" level="1" name="Сокрушение Молотом(Hammer Crush)" cost="67000" min_level="40"/>
+			<skill id="260" level="2" name="Сокрушение Молотом(Hammer Crush)" cost="67000" min_level="40"/>
+			<skill id="260" level="3" name="Сокрушение Молотом(Hammer Crush)" cost="67000" min_level="40"/>
+			<skill id="1607" level="1" name="Сотрясающий Удар(Excruciating Strike)" cost="67000" min_level="40"/>
+			<skill id="1607" level="2" name="Сотрясающий Удар(Excruciating Strike)" cost="67000" min_level="40"/>
+			<skill id="1607" level="3" name="Сотрясающий Удар(Excruciating Strike)" cost="67000" min_level="40"/>
+			<skill id="190" level="1" name="Фатальный Удар(Fatal Strike)" cost="67000" min_level="40"/>
+			<skill id="190" level="2" name="Фатальный Удар(Fatal Strike)" cost="67000" min_level="40"/>
+			<skill id="190" level="3" name="Фатальный Удар(Fatal Strike)" cost="67000" min_level="40"/>
+			<skill id="36" level="4" name="Вихрь(Spinning Slasher)" cost="80000" min_level="41"/>
+			<skill id="216" level="12" name="Владение Древковым Оружием(Polearm Mastery)" cost="80000" min_level="41"/>
+			<skill id="227" level="17" name="Владение Легкой Броней(Light Armor Mastery)" cost="80000" min_level="41"/>
+			<skill id="257" level="12" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="80000" min_level="41"/>
+			<skill id="231" level="17" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="80000" min_level="41"/>
+			<skill id="260" level="4" name="Сокрушение Молотом(Hammer Crush)" cost="80000" min_level="41"/>
+			<skill id="1607" level="4" name="Сотрясающий Удар(Excruciating Strike)" cost="80000" min_level="41"/>
+			<skill id="190" level="4" name="Фатальный Удар(Fatal Strike)" cost="80000" min_level="41"/>
+			<skill id="36" level="5" name="Вихрь(Spinning Slasher)" cost="80000" min_level="42"/>
+			<skill id="216" level="13" name="Владение Древковым Оружием(Polearm Mastery)" cost="80000" min_level="42"/>
+			<skill id="227" level="18" name="Владение Легкой Броней(Light Armor Mastery)" cost="80000" min_level="42"/>
+			<skill id="257" level="13" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="80000" min_level="42"/>
+			<skill id="231" level="18" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="80000" min_level="42"/>
+			<skill id="260" level="5" name="Сокрушение Молотом(Hammer Crush)" cost="80000" min_level="42"/>
+			<skill id="1607" level="5" name="Сотрясающий Удар(Excruciating Strike)" cost="80000" min_level="42"/>
+			<skill id="190" level="5" name="Фатальный Удар(Fatal Strike)" cost="80000" min_level="42"/>
+			<skill id="312" level="7" name="Боевая Стойка Коварства(Vicious Stance)" cost="80000" min_level="43"/>
+			<skill id="212" level="4" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="80000" min_level="43"/>
+			<skill id="36" level="6" name="Вихрь(Spinning Slasher)" cost="80000" min_level="43"/>
+			<skill id="293" level="7" name="Владение Двуручным Оружием(Two-handed Weapon Mastery)" cost="80000" min_level="43"/>
+			<skill id="216" level="14" name="Владение Древковым Оружием(Polearm Mastery)" cost="80000" min_level="43"/>
+			<skill id="227" level="19" name="Владение Легкой Броней(Light Armor Mastery)" cost="80000" min_level="43"/>
+			<skill id="257" level="14" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="80000" min_level="43"/>
+			<skill id="231" level="19" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="80000" min_level="43"/>
+			<skill id="139" level="2" name="Мужество(Guts)" cost="80000" min_level="43"/>
+			<skill id="260" level="6" name="Сокрушение Молотом(Hammer Crush)" cost="80000" min_level="43"/>
+			<skill id="1607" level="6" name="Сотрясающий Удар(Excruciating Strike)" cost="80000" min_level="43"/>
+			<skill id="211" level="4" name="Увеличение HP(Boost HP)" cost="80000" min_level="43"/>
+			<skill id="190" level="6" name="Фатальный Удар(Fatal Strike)" cost="80000" min_level="43"/>
+			<skill id="36" level="7" name="Вихрь(Spinning Slasher)" cost="120000" min_level="44"/>
+			<skill id="216" level="15" name="Владение Древковым Оружием(Polearm Mastery)" cost="120000" min_level="44"/>
+			<skill id="227" level="20" name="Владение Легкой Броней(Light Armor Mastery)" cost="120000" min_level="44"/>
+			<skill id="257" level="15" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="120000" min_level="44"/>
+			<skill id="231" level="20" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="120000" min_level="44"/>
+			<skill id="260" level="7" name="Сокрушение Молотом(Hammer Crush)" cost="120000" min_level="44"/>
+			<skill id="1607" level="7" name="Сотрясающий Удар(Excruciating Strike)" cost="120000" min_level="44"/>
+			<skill id="190" level="7" name="Фатальный Удар(Fatal Strike)" cost="120000" min_level="44"/>
+			<skill id="36" level="8" name="Вихрь(Spinning Slasher)" cost="120000" min_level="45"/>
+			<skill id="216" level="16" name="Владение Древковым Оружием(Polearm Mastery)" cost="120000" min_level="45"/>
+			<skill id="227" level="21" name="Владение Легкой Броней(Light Armor Mastery)" cost="120000" min_level="45"/>
+			<skill id="257" level="16" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="120000" min_level="45"/>
+			<skill id="231" level="21" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="120000" min_level="45"/>
+			<skill id="1800" level="1" name="Пират(Pirate)" min_level="45"/>
+			<skill id="260" level="8" name="Сокрушение Молотом(Hammer Crush)" cost="120000" min_level="45"/>
+			<skill id="1607" level="8" name="Сотрясающий Удар(Excruciating Strike)" cost="120000" min_level="45"/>
+			<skill id="190" level="8" name="Фатальный Удар(Fatal Strike)" cost="120000" min_level="45"/>
+			<skill id="176" level="2" name="Безумие(Frenzy)" cost="120000" min_level="46"/>
+			<skill id="312" level="8" name="Боевая Стойка Коварства(Vicious Stance)" cost="120000" min_level="46"/>
+			<skill id="36" level="9" name="Вихрь(Spinning Slasher)" cost="120000" min_level="46"/>
+			<skill id="293" level="8" name="Владение Двуручным Оружием(Two-handed Weapon Mastery)" cost="120000" min_level="46"/>
+			<skill id="216" level="17" name="Владение Древковым Оружием(Polearm Mastery)" cost="120000" min_level="46"/>
+			<skill id="227" level="22" name="Владение Легкой Броней(Light Armor Mastery)" cost="120000" min_level="46"/>
+			<skill id="257" level="17" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="120000" min_level="46"/>
+			<skill id="231" level="22" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="120000" min_level="46"/>
+			<skill id="148" level="4" name="Жизненная Сила(Vital Force)" cost="120000" min_level="46"/>
+			<skill id="34" level="2" name="Перевязка(Bandage)" cost="120000" min_level="46"/>
+			<skill id="260" level="9" name="Сокрушение Молотом(Hammer Crush)" cost="120000" min_level="46"/>
+			<skill id="1607" level="9" name="Сотрясающий Удар(Excruciating Strike)" cost="120000" min_level="46"/>
+			<skill id="190" level="9" name="Фатальный Удар(Fatal Strike)" cost="120000" min_level="46"/>
+			<skill id="1609" level="1" name="Эксперт Меча(Sword Expert)" cost="120000" min_level="46"/>
+			<skill id="36" level="10" name="Вихрь(Spinning Slasher)" cost="160000" min_level="47"/>
+			<skill id="216" level="18" name="Владение Древковым Оружием(Polearm Mastery)" cost="160000" min_level="47"/>
+			<skill id="227" level="23" name="Владение Легкой Броней(Light Armor Mastery)" cost="160000" min_level="47"/>
+			<skill id="257" level="18" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="160000" min_level="47"/>
+			<skill id="231" level="23" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="160000" min_level="47"/>
+			<skill id="260" level="10" name="Сокрушение Молотом(Hammer Crush)" cost="160000" min_level="47"/>
+			<skill id="1607" level="10" name="Сотрясающий Удар(Excruciating Strike)" cost="160000" min_level="47"/>
+			<skill id="190" level="10" name="Фатальный Удар(Fatal Strike)" cost="160000" min_level="47"/>
+			<skill id="36" level="11" name="Вихрь(Spinning Slasher)" cost="160000" min_level="48"/>
+			<skill id="216" level="19" name="Владение Древковым Оружием(Polearm Mastery)" cost="160000" min_level="48"/>
+			<skill id="227" level="24" name="Владение Легкой Броней(Light Armor Mastery)" cost="160000" min_level="48"/>
+			<skill id="257" level="19" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="160000" min_level="48"/>
+			<skill id="231" level="24" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="160000" min_level="48"/>
+			<skill id="260" level="11" name="Сокрушение Молотом(Hammer Crush)" cost="160000" min_level="48"/>
+			<skill id="1607" level="11" name="Сотрясающий Удар(Excruciating Strike)" cost="160000" min_level="48"/>
+			<skill id="190" level="11" name="Фатальный Удар(Fatal Strike)" cost="160000" min_level="48"/>
+			<skill id="312" level="9" name="Боевая Стойка Коварства(Vicious Stance)" cost="160000" min_level="49"/>
+			<skill id="121" level="3" name="Боевой Рев(Battle Roar)" cost="160000" min_level="49"/>
+			<skill id="36" level="12" name="Вихрь(Spinning Slasher)" cost="160000" min_level="49"/>
+			<skill id="293" level="9" name="Владение Двуручным Оружием(Two-handed Weapon Mastery)" cost="160000" min_level="49"/>
+			<skill id="216" level="20" name="Владение Древковым Оружием(Polearm Mastery)" cost="160000" min_level="49"/>
+			<skill id="227" level="25" name="Владение Легкой Броней(Light Armor Mastery)" cost="160000" min_level="49"/>
+			<skill id="257" level="20" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="160000" min_level="49"/>
+			<skill id="231" level="25" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="160000" min_level="49"/>
+			<skill id="287" level="2" name="Львиное Сердце(Lionheart)" cost="160000" min_level="49"/>
+			<skill id="260" level="12" name="Сокрушение Молотом(Hammer Crush)" cost="160000" min_level="49"/>
+			<skill id="1607" level="12" name="Сотрясающий Удар(Excruciating Strike)" cost="160000" min_level="49"/>
+			<skill id="211" level="5" name="Увеличение HP(Boost HP)" cost="160000" min_level="49"/>
+			<skill id="190" level="12" name="Фатальный Удар(Fatal Strike)" cost="160000" min_level="49"/>
+			<skill id="36" level="13" name="Вихрь(Spinning Slasher)" cost="240000" min_level="50"/>
+			<skill id="216" level="21" name="Владение Древковым Оружием(Polearm Mastery)" cost="240000" min_level="50"/>
+			<skill id="227" level="26" name="Владение Легкой Броней(Light Armor Mastery)" cost="240000" min_level="50"/>
+			<skill id="257" level="21" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="240000" min_level="50"/>
+			<skill id="231" level="26" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="240000" min_level="50"/>
+			<skill id="260" level="13" name="Сокрушение Молотом(Hammer Crush)" cost="240000" min_level="50"/>
+			<skill id="1607" level="13" name="Сотрясающий Удар(Excruciating Strike)" cost="240000" min_level="50"/>
+			<skill id="190" level="13" name="Фатальный Удар(Fatal Strike)" cost="240000" min_level="50"/>
+			<skill id="36" level="14" name="Вихрь(Spinning Slasher)" cost="240000" min_level="51"/>
+			<skill id="216" level="22" name="Владение Древковым Оружием(Polearm Mastery)" cost="240000" min_level="51"/>
+			<skill id="227" level="27" name="Владение Легкой Броней(Light Armor Mastery)" cost="240000" min_level="51"/>
+			<skill id="257" level="22" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="240000" min_level="51"/>
+			<skill id="231" level="27" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="240000" min_level="51"/>
+			<skill id="260" level="14" name="Сокрушение Молотом(Hammer Crush)" cost="240000" min_level="51"/>
+			<skill id="1607" level="14" name="Сотрясающий Удар(Excruciating Strike)" cost="240000" min_level="51"/>
+			<skill id="190" level="14" name="Фатальный Удар(Fatal Strike)" cost="240000" min_level="51"/>
+			<skill id="1608" level="1" name="Бессмертие(Immortal Life)" item_id="49425" cost="240000" min_level="52"/>
+			<skill id="312" level="10" name="Боевая Стойка Коварства(Vicious Stance)" cost="240000" min_level="52"/>
+			<skill id="1405" level="1" name="Божественное Вдохновение(Divine Inspiration)" item_id="8618" cost="240000" min_level="52"/>
+			<skill id="212" level="5" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="240000" min_level="52"/>
+			<skill id="36" level="15" name="Вихрь(Spinning Slasher)" cost="240000" min_level="52"/>
+			<skill id="293" level="10" name="Владение Двуручным Оружием(Two-handed Weapon Mastery)" cost="240000" min_level="52"/>
+			<skill id="216" level="23" name="Владение Древковым Оружием(Polearm Mastery)" cost="240000" min_level="52"/>
+			<skill id="227" level="28" name="Владение Легкой Броней(Light Armor Mastery)" cost="240000" min_level="52"/>
+			<skill id="257" level="23" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="240000" min_level="52"/>
+			<skill id="231" level="28" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="240000" min_level="52"/>
+			<skill id="148" level="5" name="Жизненная Сила(Vital Force)" cost="240000" min_level="52"/>
+			<skill id="139" level="3" name="Мужество(Guts)" cost="240000" min_level="52"/>
+			<skill id="260" level="15" name="Сокрушение Молотом(Hammer Crush)" cost="240000" min_level="52"/>
+			<skill id="1607" level="15" name="Сотрясающий Удар(Excruciating Strike)" cost="240000" min_level="52"/>
+			<skill id="190" level="15" name="Фатальный Удар(Fatal Strike)" cost="240000" min_level="52"/>
+			<skill id="36" level="16" name="Вихрь(Spinning Slasher)" cost="330000" min_level="53"/>
+			<skill id="216" level="24" name="Владение Древковым Оружием(Polearm Mastery)" cost="330000" min_level="53"/>
+			<skill id="227" level="29" name="Владение Легкой Броней(Light Armor Mastery)" cost="330000" min_level="53"/>
+			<skill id="257" level="24" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="330000" min_level="53"/>
+			<skill id="231" level="29" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="330000" min_level="53"/>
+			<skill id="260" level="16" name="Сокрушение Молотом(Hammer Crush)" cost="330000" min_level="53"/>
+			<skill id="1607" level="16" name="Сотрясающий Удар(Excruciating Strike)" cost="330000" min_level="53"/>
+			<skill id="190" level="16" name="Фатальный Удар(Fatal Strike)" cost="330000" min_level="53"/>
+			<skill id="36" level="17" name="Вихрь(Spinning Slasher)" cost="330000" min_level="54"/>
+			<skill id="216" level="25" name="Владение Древковым Оружием(Polearm Mastery)" cost="330000" min_level="54"/>
+			<skill id="227" level="30" name="Владение Легкой Броней(Light Armor Mastery)" cost="330000" min_level="54"/>
+			<skill id="257" level="25" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="330000" min_level="54"/>
+			<skill id="231" level="30" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="330000" min_level="54"/>
+			<skill id="260" level="17" name="Сокрушение Молотом(Hammer Crush)" cost="330000" min_level="54"/>
+			<skill id="1607" level="17" name="Сотрясающий Удар(Excruciating Strike)" cost="330000" min_level="54"/>
+			<skill id="190" level="17" name="Фатальный Удар(Fatal Strike)" cost="330000" min_level="54"/>
+			<skill id="176" level="3" name="Безумие(Frenzy)" cost="330000" min_level="55"/>
+			<skill id="312" level="11" name="Боевая Стойка Коварства(Vicious Stance)" cost="330000" min_level="55"/>
+			<skill id="36" level="18" name="Вихрь(Spinning Slasher)" cost="330000" min_level="55"/>
+			<skill id="293" level="11" name="Владение Двуручным Оружием(Two-handed Weapon Mastery)" cost="330000" min_level="55"/>
+			<skill id="216" level="26" name="Владение Древковым Оружием(Polearm Mastery)" cost="330000" min_level="55"/>
+			<skill id="227" level="31" name="Владение Легкой Броней(Light Armor Mastery)" cost="330000" min_level="55"/>
+			<skill id="257" level="26" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="330000" min_level="55"/>
+			<skill id="231" level="31" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="330000" min_level="55"/>
+			<skill id="94" level="2" name="Гнев(Rage)" cost="330000" min_level="55"/>
+			<skill id="260" level="18" name="Сокрушение Молотом(Hammer Crush)" cost="330000" min_level="55"/>
+			<skill id="1607" level="18" name="Сотрясающий Удар(Excruciating Strike)" cost="330000" min_level="55"/>
+			<skill id="211" level="6" name="Увеличение HP(Boost HP)" cost="330000" min_level="55"/>
+			<skill id="190" level="18" name="Фатальный Удар(Fatal Strike)" cost="330000" min_level="55"/>
+			<skill id="36" level="19" name="Вихрь(Spinning Slasher)" cost="450000" min_level="56"/>
+			<skill id="216" level="27" name="Владение Древковым Оружием(Polearm Mastery)" cost="450000" min_level="56"/>
+			<skill id="227" level="32" name="Владение Легкой Броней(Light Armor Mastery)" cost="450000" min_level="56"/>
+			<skill id="257" level="27" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="450000" min_level="56"/>
+			<skill id="231" level="32" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="450000" min_level="56"/>
+			<skill id="260" level="19" name="Сокрушение Молотом(Hammer Crush)" cost="450000" min_level="56"/>
+			<skill id="1607" level="19" name="Сотрясающий Удар(Excruciating Strike)" cost="450000" min_level="56"/>
+			<skill id="190" level="19" name="Фатальный Удар(Fatal Strike)" cost="450000" min_level="56"/>
+			<skill id="36" level="20" name="Вихрь(Spinning Slasher)" cost="450000" min_level="57"/>
+			<skill id="216" level="28" name="Владение Древковым Оружием(Polearm Mastery)" cost="450000" min_level="57"/>
+			<skill id="227" level="33" name="Владение Легкой Броней(Light Armor Mastery)" cost="450000" min_level="57"/>
+			<skill id="257" level="28" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="450000" min_level="57"/>
+			<skill id="231" level="33" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="450000" min_level="57"/>
+			<skill id="260" level="20" name="Сокрушение Молотом(Hammer Crush)" cost="450000" min_level="57"/>
+			<skill id="1607" level="20" name="Сотрясающий Удар(Excruciating Strike)" cost="450000" min_level="57"/>
+			<skill id="190" level="20" name="Фатальный Удар(Fatal Strike)" cost="450000" min_level="57"/>
+			<skill id="312" level="12" name="Боевая Стойка Коварства(Vicious Stance)" cost="450000" min_level="58"/>
+			<skill id="121" level="4" name="Боевой Рев(Battle Roar)" cost="450000" min_level="58"/>
+			<skill id="212" level="6" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="450000" min_level="58"/>
+			<skill id="36" level="21" name="Вихрь(Spinning Slasher)" cost="450000" min_level="58"/>
+			<skill id="293" level="12" name="Владение Двуручным Оружием(Two-handed Weapon Mastery)" cost="450000" min_level="58"/>
+			<skill id="216" level="29" name="Владение Древковым Оружием(Polearm Mastery)" cost="450000" min_level="58"/>
+			<skill id="227" level="34" name="Владение Легкой Броней(Light Armor Mastery)" cost="450000" min_level="58"/>
+			<skill id="257" level="29" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="450000" min_level="58"/>
+			<skill id="231" level="34" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="450000" min_level="58"/>
+			<skill id="148" level="6" name="Жизненная Сила(Vital Force)" cost="450000" min_level="58"/>
+			<skill id="260" level="21" name="Сокрушение Молотом(Hammer Crush)" cost="450000" min_level="58"/>
+			<skill id="1607" level="21" name="Сотрясающий Удар(Excruciating Strike)" cost="450000" min_level="58"/>
+			<skill id="420" level="1" name="Фанатик(Zealot)" cost="450000" min_level="58"/>
+			<skill id="190" level="21" name="Фатальный Удар(Fatal Strike)" cost="450000" min_level="58"/>
+			<skill id="1609" level="2" name="Эксперт Меча(Sword Expert)" cost="450000" min_level="58"/>
+			<skill id="36" level="22" name="Вихрь(Spinning Slasher)" cost="660000" min_level="59"/>
+			<skill id="216" level="30" name="Владение Древковым Оружием(Polearm Mastery)" cost="660000" min_level="59"/>
+			<skill id="227" level="35" name="Владение Легкой Броней(Light Armor Mastery)" cost="660000" min_level="59"/>
+			<skill id="257" level="30" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="660000" min_level="59"/>
+			<skill id="231" level="35" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="660000" min_level="59"/>
+			<skill id="260" level="22" name="Сокрушение Молотом(Hammer Crush)" cost="660000" min_level="59"/>
+			<skill id="1607" level="22" name="Сотрясающий Удар(Excruciating Strike)" cost="660000" min_level="59"/>
+			<skill id="190" level="22" name="Фатальный Удар(Fatal Strike)" cost="660000" min_level="59"/>
+			<skill id="312" level="13" name="Боевая Стойка Коварства(Vicious Stance)" cost="660000" min_level="60"/>
+			<skill id="36" level="23" name="Вихрь(Spinning Slasher)" cost="660000" min_level="60"/>
+			<skill id="293" level="13" name="Владение Двуручным Оружием(Two-handed Weapon Mastery)" cost="660000" min_level="60"/>
+			<skill id="216" level="31" name="Владение Древковым Оружием(Polearm Mastery)" cost="660000" min_level="60"/>
+			<skill id="227" level="36" name="Владение Легкой Броней(Light Armor Mastery)" cost="660000" min_level="60"/>
+			<skill id="257" level="31" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="660000" min_level="60"/>
+			<skill id="231" level="36" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="660000" min_level="60"/>
+			<skill id="260" level="23" name="Сокрушение Молотом(Hammer Crush)" cost="660000" min_level="60"/>
+			<skill id="1607" level="23" name="Сотрясающий Удар(Excruciating Strike)" cost="660000" min_level="60"/>
+			<skill id="1801" level="1" name="Темный Ассасин(Dark Assassin)" min_level="60"/>
+			<skill id="190" level="23" name="Фатальный Удар(Fatal Strike)" cost="660000" min_level="60"/>
+			<skill id="1405" level="2" name="Божественное Вдохновение(Divine Inspiration)" item_id="8619" cost="660000" min_level="61"/>
+			<skill id="36" level="24" name="Вихрь(Spinning Slasher)" cost="660000" min_level="61"/>
+			<skill id="216" level="32" name="Владение Древковым Оружием(Polearm Mastery)" cost="660000" min_level="61"/>
+			<skill id="227" level="37" name="Владение Легкой Броней(Light Armor Mastery)" cost="660000" min_level="61"/>
+			<skill id="257" level="32" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="660000" min_level="61"/>
+			<skill id="231" level="37" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="660000" min_level="61"/>
+			<skill id="260" level="24" name="Сокрушение Молотом(Hammer Crush)" cost="660000" min_level="61"/>
+			<skill id="1607" level="24" name="Сотрясающий Удар(Excruciating Strike)" cost="660000" min_level="61"/>
+			<skill id="190" level="24" name="Фатальный Удар(Fatal Strike)" cost="660000" min_level="61"/>
+			<skill id="312" level="14" name="Боевая Стойка Коварства(Vicious Stance)" cost="810000" min_level="62"/>
+			<skill id="36" level="25" name="Вихрь(Spinning Slasher)" cost="810000" min_level="62"/>
+			<skill id="293" level="14" name="Владение Двуручным Оружием(Two-handed Weapon Mastery)" cost="810000" min_level="62"/>
+			<skill id="216" level="33" name="Владение Древковым Оружием(Polearm Mastery)" cost="810000" min_level="62"/>
+			<skill id="227" level="38" name="Владение Легкой Броней(Light Armor Mastery)" cost="810000" min_level="62"/>
+			<skill id="257" level="33" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="810000" min_level="62"/>
+			<skill id="231" level="38" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="810000" min_level="62"/>
+			<skill id="287" level="3" name="Львиное Сердце(Lionheart)" cost="810000" min_level="62"/>
+			<skill id="34" level="3" name="Перевязка(Bandage)" cost="810000" min_level="62"/>
+			<skill id="260" level="25" name="Сокрушение Молотом(Hammer Crush)" cost="810000" min_level="62"/>
+			<skill id="1607" level="25" name="Сотрясающий Удар(Excruciating Strike)" cost="810000" min_level="62"/>
+			<skill id="211" level="7" name="Увеличение HP(Boost HP)" cost="810000" min_level="62"/>
+			<skill id="190" level="25" name="Фатальный Удар(Fatal Strike)" cost="810000" min_level="62"/>
+			<skill id="36" level="26" name="Вихрь(Spinning Slasher)" cost="810000" min_level="63"/>
+			<skill id="216" level="34" name="Владение Древковым Оружием(Polearm Mastery)" cost="810000" min_level="63"/>
+			<skill id="227" level="39" name="Владение Легкой Броней(Light Armor Mastery)" cost="810000" min_level="63"/>
+			<skill id="257" level="34" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="810000" min_level="63"/>
+			<skill id="231" level="39" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="810000" min_level="63"/>
+			<skill id="260" level="26" name="Сокрушение Молотом(Hammer Crush)" cost="810000" min_level="63"/>
+			<skill id="1607" level="26" name="Сотрясающий Удар(Excruciating Strike)" cost="810000" min_level="63"/>
+			<skill id="190" level="26" name="Фатальный Удар(Fatal Strike)" cost="810000" min_level="63"/>
+			<skill id="176" level="4" name="Безумие(Frenzy)" cost="1000000" min_level="64"/>
+			<skill id="312" level="15" name="Боевая Стойка Коварства(Vicious Stance)" cost="1000000" min_level="64"/>
+			<skill id="121" level="5" name="Боевой Рев(Battle Roar)" cost="1000000" min_level="64"/>
+			<skill id="36" level="27" name="Вихрь(Spinning Slasher)" cost="1000000" min_level="64"/>
+			<skill id="293" level="15" name="Владение Двуручным Оружием(Two-handed Weapon Mastery)" cost="1000000" min_level="64"/>
+			<skill id="216" level="35" name="Владение Древковым Оружием(Polearm Mastery)" cost="1000000" min_level="64"/>
+			<skill id="227" level="40" name="Владение Легкой Броней(Light Armor Mastery)" cost="1000000" min_level="64"/>
+			<skill id="257" level="35" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1000000" min_level="64"/>
+			<skill id="231" level="40" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1000000" min_level="64"/>
+			<skill id="148" level="7" name="Жизненная Сила(Vital Force)" cost="1000000" min_level="64"/>
+			<skill id="139" level="4" name="Мужество(Guts)" cost="1000000" min_level="64"/>
+			<skill id="260" level="27" name="Сокрушение Молотом(Hammer Crush)" cost="1000000" min_level="64"/>
+			<skill id="1607" level="27" name="Сотрясающий Удар(Excruciating Strike)" cost="1000000" min_level="64"/>
+			<skill id="190" level="27" name="Фатальный Удар(Fatal Strike)" cost="1000000" min_level="64"/>
+			<skill id="36" level="28" name="Вихрь(Spinning Slasher)" cost="1000000" min_level="65"/>
+			<skill id="216" level="36" name="Владение Древковым Оружием(Polearm Mastery)" cost="1000000" min_level="65"/>
+			<skill id="227" level="41" name="Владение Легкой Броней(Light Armor Mastery)" cost="1000000" min_level="65"/>
+			<skill id="257" level="36" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1000000" min_level="65"/>
+			<skill id="231" level="41" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1000000" min_level="65"/>
+			<skill id="260" level="28" name="Сокрушение Молотом(Hammer Crush)" cost="1000000" min_level="65"/>
+			<skill id="1607" level="28" name="Сотрясающий Удар(Excruciating Strike)" cost="1000000" min_level="65"/>
+			<skill id="190" level="28" name="Фатальный Удар(Fatal Strike)" cost="1000000" min_level="65"/>
+			<skill id="312" level="16" name="Боевая Стойка Коварства(Vicious Stance)" cost="1200000" min_level="66"/>
+			<skill id="36" level="29" name="Вихрь(Spinning Slasher)" cost="1200000" min_level="66"/>
+			<skill id="293" level="16" name="Владение Двуручным Оружием(Two-handed Weapon Mastery)" cost="1200000" min_level="66"/>
+			<skill id="216" level="37" name="Владение Древковым Оружием(Polearm Mastery)" cost="1200000" min_level="66"/>
+			<skill id="227" level="42" name="Владение Легкой Броней(Light Armor Mastery)" cost="1200000" min_level="66"/>
+			<skill id="257" level="37" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1200000" min_level="66"/>
+			<skill id="231" level="42" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1200000" min_level="66"/>
+			<skill id="260" level="29" name="Сокрушение Молотом(Hammer Crush)" cost="1200000" min_level="66"/>
+			<skill id="1607" level="29" name="Сотрясающий Удар(Excruciating Strike)" cost="1200000" min_level="66"/>
+			<skill id="211" level="8" name="Увеличение HP(Boost HP)" cost="1200000" min_level="66"/>
+			<skill id="420" level="2" name="Фанатик(Zealot)" cost="1200000" min_level="66"/>
+			<skill id="190" level="29" name="Фатальный Удар(Fatal Strike)" cost="1200000" min_level="66"/>
+			<skill id="36" level="30" name="Вихрь(Spinning Slasher)" cost="1200000" min_level="67"/>
+			<skill id="216" level="38" name="Владение Древковым Оружием(Polearm Mastery)" cost="1200000" min_level="67"/>
+			<skill id="227" level="43" name="Владение Легкой Броней(Light Armor Mastery)" cost="1200000" min_level="67"/>
+			<skill id="257" level="38" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1200000" min_level="67"/>
+			<skill id="231" level="43" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1200000" min_level="67"/>
+			<skill id="260" level="30" name="Сокрушение Молотом(Hammer Crush)" cost="1200000" min_level="67"/>
+			<skill id="1607" level="30" name="Сотрясающий Удар(Excruciating Strike)" cost="1200000" min_level="67"/>
+			<skill id="190" level="30" name="Фатальный Удар(Fatal Strike)" cost="1200000" min_level="67"/>
+			<skill id="312" level="17" name="Боевая Стойка Коварства(Vicious Stance)" cost="1600000" min_level="68"/>
+			<skill id="212" level="7" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="1600000" min_level="68"/>
+			<skill id="36" level="31" name="Вихрь(Spinning Slasher)" cost="1600000" min_level="68"/>
+			<skill id="293" level="17" name="Владение Двуручным Оружием(Two-handed Weapon Mastery)" cost="1600000" min_level="68"/>
+			<skill id="216" level="39" name="Владение Древковым Оружием(Polearm Mastery)" cost="1600000" min_level="68"/>
+			<skill id="227" level="44" name="Владение Легкой Броней(Light Armor Mastery)" cost="1600000" min_level="68"/>
+			<skill id="257" level="39" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1600000" min_level="68"/>
+			<skill id="231" level="44" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1600000" min_level="68"/>
+			<skill id="260" level="31" name="Сокрушение Молотом(Hammer Crush)" cost="1600000" min_level="68"/>
+			<skill id="1607" level="31" name="Сотрясающий Удар(Excruciating Strike)" cost="1600000" min_level="68"/>
+			<skill id="190" level="31" name="Фатальный Удар(Fatal Strike)" cost="1600000" min_level="68"/>
+			<skill id="36" level="32" name="Вихрь(Spinning Slasher)" cost="1600000" min_level="69"/>
+			<skill id="216" level="40" name="Владение Древковым Оружием(Polearm Mastery)" cost="1600000" min_level="69"/>
+			<skill id="227" level="45" name="Владение Легкой Броней(Light Armor Mastery)" cost="1600000" min_level="69"/>
+			<skill id="257" level="40" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1600000" min_level="69"/>
+			<skill id="231" level="45" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1600000" min_level="69"/>
+			<skill id="260" level="32" name="Сокрушение Молотом(Hammer Crush)" cost="1600000" min_level="69"/>
+			<skill id="1607" level="32" name="Сотрясающий Удар(Excruciating Strike)" cost="1600000" min_level="69"/>
+			<skill id="190" level="32" name="Фатальный Удар(Fatal Strike)" cost="1600000" min_level="69"/>
+			<skill id="312" level="18" name="Боевая Стойка Коварства(Vicious Stance)" cost="2000000" min_level="70"/>
+			<skill id="121" level="6" name="Боевой Рев(Battle Roar)" cost="2000000" min_level="70"/>
+			<skill id="36" level="33" name="Вихрь(Spinning Slasher)" cost="2000000" min_level="70"/>
+			<skill id="293" level="18" name="Владение Двуручным Оружием(Two-handed Weapon Mastery)" cost="2000000" min_level="70"/>
+			<skill id="216" level="41" name="Владение Древковым Оружием(Polearm Mastery)" cost="2000000" min_level="70"/>
+			<skill id="227" level="46" name="Владение Легкой Броней(Light Armor Mastery)" cost="2000000" min_level="70"/>
+			<skill id="257" level="41" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="2000000" min_level="70"/>
+			<skill id="231" level="46" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="2000000" min_level="70"/>
+			<skill id="1802" level="1" name="Светлый Ассасин(White Assassin)" min_level="70"/>
+			<skill id="260" level="33" name="Сокрушение Молотом(Hammer Crush)" cost="2000000" min_level="70"/>
+			<skill id="1607" level="33" name="Сотрясающий Удар(Excruciating Strike)" cost="2000000" min_level="70"/>
+			<skill id="211" level="9" name="Увеличение HP(Boost HP)" cost="2000000" min_level="70"/>
+			<skill id="190" level="33" name="Фатальный Удар(Fatal Strike)" cost="2000000" min_level="70"/>
+			<skill id="1609" level="3" name="Эксперт Меча(Sword Expert)" cost="2000000" min_level="70"/>
+			<skill id="36" level="34" name="Вихрь(Spinning Slasher)" cost="2000000" min_level="71"/>
+			<skill id="216" level="42" name="Владение Древковым Оружием(Polearm Mastery)" cost="2000000" min_level="71"/>
+			<skill id="227" level="47" name="Владение Легкой Броней(Light Armor Mastery)" cost="2000000" min_level="71"/>
+			<skill id="257" level="42" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="2000000" min_level="71"/>
+			<skill id="231" level="47" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="2000000" min_level="71"/>
+			<skill id="260" level="34" name="Сокрушение Молотом(Hammer Crush)" cost="2000000" min_level="71"/>
+			<skill id="1607" level="34" name="Сотрясающий Удар(Excruciating Strike)" cost="2000000" min_level="71"/>
+			<skill id="190" level="34" name="Фатальный Удар(Fatal Strike)" cost="2000000" min_level="71"/>
+			<skill id="312" level="19" name="Боевая Стойка Коварства(Vicious Stance)" cost="2200000" min_level="72"/>
+			<skill id="36" level="35" name="Вихрь(Spinning Slasher)" cost="2200000" min_level="72"/>
+			<skill id="293" level="19" name="Владение Двуручным Оружием(Two-handed Weapon Mastery)" cost="2200000" min_level="72"/>
+			<skill id="216" level="43" name="Владение Древковым Оружием(Polearm Mastery)" cost="2200000" min_level="72"/>
+			<skill id="227" level="48" name="Владение Легкой Броней(Light Armor Mastery)" cost="2200000" min_level="72"/>
+			<skill id="257" level="43" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="2200000" min_level="72"/>
+			<skill id="231" level="48" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="2200000" min_level="72"/>
+			<skill id="148" level="8" name="Жизненная Сила(Vital Force)" cost="2200000" min_level="72"/>
+			<skill id="260" level="35" name="Сокрушение Молотом(Hammer Crush)" cost="2200000" min_level="72"/>
+			<skill id="1607" level="35" name="Сотрясающий Удар(Excruciating Strike)" cost="2200000" min_level="72"/>
+			<skill id="190" level="35" name="Фатальный Удар(Fatal Strike)" cost="2200000" min_level="72"/>
+			<skill id="36" level="36" name="Вихрь(Spinning Slasher)" cost="2200000" min_level="73"/>
+			<skill id="216" level="44" name="Владение Древковым Оружием(Polearm Mastery)" cost="2200000" min_level="73"/>
+			<skill id="227" level="49" name="Владение Легкой Броней(Light Armor Mastery)" cost="2200000" min_level="73"/>
+			<skill id="257" level="44" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="2200000" min_level="73"/>
+			<skill id="231" level="49" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="2200000" min_level="73"/>
+			<skill id="260" level="36" name="Сокрушение Молотом(Hammer Crush)" cost="2200000" min_level="73"/>
+			<skill id="1607" level="36" name="Сотрясающий Удар(Excruciating Strike)" cost="2200000" min_level="73"/>
+			<skill id="190" level="36" name="Фатальный Удар(Fatal Strike)" cost="2200000" min_level="73"/>
+			<skill id="176" level="5" name="Безумие(Frenzy)" cost="2200000" min_level="74"/>
+			<skill id="312" level="20" name="Боевая Стойка Коварства(Vicious Stance)" cost="2200000" min_level="74"/>
+			<skill id="212" level="8" name="Быстрое Восстановление HP(Fast HP Recovery)" cost="2200000" min_level="74"/>
+			<skill id="36" level="37" name="Вихрь(Spinning Slasher)" cost="2200000" min_level="74"/>
+			<skill id="293" level="20" name="Владение Двуручным Оружием(Two-handed Weapon Mastery)" cost="2200000" min_level="74"/>
+			<skill id="216" level="45" name="Владение Древковым Оружием(Polearm Mastery)" cost="2200000" min_level="74"/>
+			<skill id="227" level="50" name="Владение Легкой Броней(Light Armor Mastery)" cost="2200000" min_level="74"/>
+			<skill id="257" level="45" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="2200000" min_level="74"/>
+			<skill id="231" level="50" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="2200000" min_level="74"/>
+			<skill id="139" level="5" name="Мужество(Guts)" cost="2200000" min_level="74"/>
+			<skill id="260" level="37" name="Сокрушение Молотом(Hammer Crush)" cost="2200000" min_level="74"/>
+			<skill id="1607" level="37" name="Сотрясающий Удар(Excruciating Strike)" cost="2200000" min_level="74"/>
+			<skill id="211" level="10" name="Увеличение HP(Boost HP)" cost="2200000" min_level="74"/>
+			<skill id="420" level="3" name="Фанатик(Zealot)" cost="2200000" min_level="74"/>
+			<skill id="190" level="37" name="Фатальный Удар(Fatal Strike)" cost="2200000" min_level="74"/>
+		</class>
+	</normal_skill_tree>
+</list>

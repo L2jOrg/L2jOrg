@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="5703" name="Lucky Charm (No-grade)">
+		<set name="is_olympiad_can_use" value="false"/>
+		<set name="type" value="SCROLL"/>
+		<set name="reuse_delay" value="10000"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_charm_of_luck_i00"/>
+		<set name="price" value="4000"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="10"/>
+		<skills>
+			<skill id="2168" level="1"/>
+		</skills>
+	</etcitem>
+	<weapon id="5705" name="Keshanberk*Damascus">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;44;120"/>
+		<set name="crystal_count" value="1485"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_dual_sword_i00"/>
+		<set name="price" value="18567400"/>
+		<set name="type" value="DUAL"/>
+		<set name="weight" value="2080"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="275"/>
+			<add stat="mAtk" order="0x10" value="112"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<weapon id="5706" name="Damascus*Damascus">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;44;120"/>
+		<set name="crystal_count" value="1659"/>
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.weapon_dual_sword_i00"/>
+		<set name="price" value="20741000"/>
+		<set name="type" value="DUAL"/>
+		<set name="weight" value="2080"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="282"/>
+			<add stat="mAtk" order="0x10" value="114"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<etcitem id="5707" name="Record of Seven Signs">
+		<set name="handler" value="Books"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ssq_scroll_i00"/>
+		<set name="price" value="500"/>
+	</etcitem>
+	<etcitem id="5708" name="Lord\'s Certificate of Approval">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_permit_card_i00"/>
+	</etcitem>
+	<armor id="5710" name="Zubei\'s Gauntlets" add_name="Heavy">
+		<set name="crystal_count" value="53"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t64_g_i00"/>
+		<set name="price" value="79820"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="590"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="41"/>
+		</for>
+	</armor>
+	<armor id="5711" name="Zubei\'s Gauntlets" add_name="Light">
+		<set name="crystal_count" value="53"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t65_g_i00"/>
+		<set name="price" value="79820"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="590"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="41"/>
+		</for>
+	</armor>
+	<armor id="5712" name="Zubei\'s Gauntlets" add_name="Robe">
+		<set name="crystal_count" value="53"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t56_g_i00"/>
+		<set name="price" value="79820"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="590"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="41"/>
+		</for>
+	</armor>
+	<armor id="5714" name="Avadon Gloves" add_name="Heavy">
+		<set name="crystal_count" value="53"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t66_g_i00"/>
+		<set name="price" value="79820"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="590"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="41"/>
+		</for>
+	</armor>
+	<armor id="5715" name="Avadon Gloves" add_name="Light">
+		<set name="crystal_count" value="53"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t67_g_i00"/>
+		<set name="price" value="79820"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="590"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="41"/>
+		</for>
+	</armor>
+	<armor id="5716" name="Avadon Gloves" add_name="Robe">
+		<set name="crystal_count" value="53"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t59_g_i00"/>
+		<set name="price" value="79820"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="590"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="41"/>
+		</for>
+	</armor>
+	<armor id="5718" name="Blue Wolf Gloves" add_name="Heavy">
+		<set name="crystal_count" value="83"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t68_g_i00"/>
+		<set name="price" value="123760"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="590"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="44"/>
+		</for>
+	</armor>
+	<armor id="5719" name="Blue Wolf Gloves" add_name="Light">
+		<set name="crystal_count" value="83"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t69_g_i00"/>
+		<set name="price" value="123760"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="590"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="44"/>
+		</for>
+	</armor>
+	<armor id="5720" name="Blue Wolf Gloves" add_name="Robe">
+		<set name="crystal_count" value="83"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t70_g_i00"/>
+		<set name="price" value="123760"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="590"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="44"/>
+		</for>
+	</armor>
+	<armor id="5722" name="Doom Gloves" add_name="Heavy">
+		<set name="crystal_count" value="83"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t71_g_i00"/>
+		<set name="price" value="123760"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="580"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="44"/>
+		</for>
+	</armor>
+	<armor id="5723" name="Doom Gloves" add_name="Light">
+		<set name="crystal_count" value="83"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t72_g_i00"/>
+		<set name="price" value="123760"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="580"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="44"/>
+		</for>
+	</armor>
+	<armor id="5724" name="Doom Gloves" add_name="Robe">
+		<set name="crystal_count" value="83"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t73_g_i00"/>
+		<set name="price" value="123760"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="580"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="44"/>
+		</for>
+	</armor>
+	<armor id="5726" name="Zubei\'s Boots" add_name="Heavy">
+		<set name="crystal_count" value="53"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t64_b_i00"/>
+		<set name="price" value="79820"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1180"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="41"/>
+		</for>
+	</armor>
+	<armor id="5727" name="Zubei\'s Boots" add_name="Light">
+		<set name="crystal_count" value="53"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t65_b_i00"/>
+		<set name="price" value="79820"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1180"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="41"/>
+		</for>
+	</armor>
+	<armor id="5728" name="Zubei\'s Boots" add_name="Robe">
+		<set name="crystal_count" value="53"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t56_b_i00"/>
+		<set name="price" value="79820"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1180"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="41"/>
+		</for>
+	</armor>
+	<armor id="5730" name="Avadon Boots" add_name="Heavy">
+		<set name="crystal_count" value="53"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t66_b_i00"/>
+		<set name="price" value="79820"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1180"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="41"/>
+		</for>
+	</armor>
+	<armor id="5731" name="Avadon Boots" add_name="Light">
+		<set name="crystal_count" value="53"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t67_b_i00"/>
+		<set name="price" value="79820"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1180"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="41"/>
+		</for>
+	</armor>
+	<armor id="5732" name="Avadon Boots" add_name="Robe">
+		<set name="crystal_count" value="53"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t59_b_i00"/>
+		<set name="price" value="79820"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1180"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="41"/>
+		</for>
+	</armor>
+	<armor id="5734" name="Blue Wolf Boots" add_name="Heavy">
+		<set name="crystal_count" value="83"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t68_b_i00"/>
+		<set name="price" value="123760"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1130"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="44"/>
+		</for>
+	</armor>
+	<armor id="5735" name="Blue Wolf Boots" add_name="Light">
+		<set name="crystal_count" value="83"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t69_b_i00"/>
+		<set name="price" value="123760"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1130"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="44"/>
+		</for>
+	</armor>
+	<armor id="5736" name="Blue Wolf Boots" add_name="Robe">
+		<set name="crystal_count" value="83"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t70_b_i00"/>
+		<set name="price" value="123760"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1130"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="44"/>
+		</for>
+	</armor>
+	<armor id="5738" name="Doom Boots" add_name="Heavy">
+		<set name="crystal_count" value="83"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t71_b_i00"/>
+		<set name="price" value="123760"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1130"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="44"/>
+		</for>
+	</armor>
+	<armor id="5739" name="Doom Boots" add_name="Light">
+		<set name="crystal_count" value="83"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t72_b_i00"/>
+		<set name="price" value="123760"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1130"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="44"/>
+		</for>
+	</armor>
+	<armor id="5740" name="Doom Boots" add_name="Robe">
+		<set name="crystal_count" value="83"/>
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.armor_t73_b_i00"/>
+		<set name="price" value="123760"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1130"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="44"/>
+		</for>
+	</armor>
+	<armor id="5765" name="Dark Crystal Gloves" add_name="Heavy">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="71"/>
+		<set name="icon" value="icon.armor_t74_g_i00"/>
+		<set name="price" value="890000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="580"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="46"/>
+		</for>
+	</armor>
+	<armor id="5766" name="Dark Crystal Gloves" add_name="Light">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="71"/>
+		<set name="icon" value="icon.armor_t75_g_i00"/>
+		<set name="price" value="890000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="580"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="46"/>
+		</for>
+	</armor>
+	<armor id="5767" name="Dark Crystal Gloves" add_name="Robe">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="71"/>
+		<set name="icon" value="icon.armor_t76_g_i00"/>
+		<set name="price" value="890000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="580"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="46"/>
+		</for>
+	</armor>
+	<armor id="5768" name="Tallum Gloves" add_name="Heavy">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="71"/>
+		<set name="icon" value="icon.armor_t77_g_i00"/>
+		<set name="price" value="890000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="580"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="46"/>
+		</for>
+	</armor>
+	<armor id="5769" name="Tallum Gloves" add_name="Light">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="71"/>
+		<set name="icon" value="icon.armor_t78_g_i00"/>
+		<set name="price" value="890000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="580"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="46"/>
+		</for>
+	</armor>
+	<armor id="5770" name="Tallum Gloves" add_name="Robe">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="71"/>
+		<set name="icon" value="icon.armor_t79_g_i00"/>
+		<set name="price" value="890000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="580"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="46"/>
+		</for>
+	</armor>
+	<armor id="5771" name="Gauntlets of Nightmare" add_name="Heavy">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="108"/>
+		<set name="icon" value="icon.armor_t80_g_i00"/>
+		<set name="price" value="1355000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="550"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="49"/>
+		</for>
+	</armor>
+	<armor id="5772" name="Gauntlets of Nightmare" add_name="Light">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="108"/>
+		<set name="icon" value="icon.armor_t81_g_i00"/>
+		<set name="price" value="1355000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="550"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="49"/>
+		</for>
+	</armor>
+	<armor id="5773" name="Gauntlets of Nightmare" add_name="Robe">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="108"/>
+		<set name="icon" value="icon.armor_t82_g_i00"/>
+		<set name="price" value="1355000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="550"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="49"/>
+		</for>
+	</armor>
+	<armor id="5774" name="Majestic Gauntlets" add_name="Heavy">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="108"/>
+		<set name="icon" value="icon.armor_t83_g_i00"/>
+		<set name="price" value="1355000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="540"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="49"/>
+		</for>
+	</armor>
+	<armor id="5775" name="Majestic Gauntlets" add_name="Light">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="108"/>
+		<set name="icon" value="icon.armor_t84_g_i00"/>
+		<set name="price" value="1355000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="540"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="49"/>
+		</for>
+	</armor>
+	<armor id="5776" name="Majestic Gauntlets" add_name="Robe">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="108"/>
+		<set name="icon" value="icon.armor_t85_g_i00"/>
+		<set name="price" value="1355000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="540"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="49"/>
+		</for>
+	</armor>
+	<armor id="5777" name="Dark Crystal Boots" add_name="Heavy">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="71"/>
+		<set name="icon" value="icon.armor_t74_b_i00"/>
+		<set name="price" value="890000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1110"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="46"/>
+		</for>
+	</armor>
+	<armor id="5778" name="Dark Crystal Boots" add_name="Light">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="71"/>
+		<set name="icon" value="icon.armor_t75_b_i00"/>
+		<set name="price" value="890000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1110"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="46"/>
+		</for>
+	</armor>
+	<armor id="5779" name="Dark Crystal Boots" add_name="Robe">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="71"/>
+		<set name="icon" value="icon.armor_t76_b_i00"/>
+		<set name="price" value="890000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1110"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="46"/>
+		</for>
+	</armor>
+	<armor id="5780" name="Tallum Boots" add_name="Heavy">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="71"/>
+		<set name="icon" value="icon.armor_t77_b_i00"/>
+		<set name="price" value="890000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1130"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="46"/>
+		</for>
+	</armor>
+	<armor id="5781" name="Tallum Boots" add_name="Light">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="71"/>
+		<set name="icon" value="icon.armor_t78_b_i00"/>
+		<set name="price" value="890000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1130"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="46"/>
+		</for>
+	</armor>
+	<armor id="5782" name="Tallum Boots" add_name="Robe">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="71"/>
+		<set name="icon" value="icon.armor_t79_b_i00"/>
+		<set name="price" value="890000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1130"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="46"/>
+		</for>
+	</armor>
+	<armor id="5783" name="Boots of Nightmare" add_name="Heavy">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="108"/>
+		<set name="icon" value="icon.armor_t80_b_i00"/>
+		<set name="price" value="1355000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1110"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="49"/>
+		</for>
+	</armor>
+	<armor id="5784" name="Boots of Nightmare" add_name="Light">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="108"/>
+		<set name="icon" value="icon.armor_t81_b_i00"/>
+		<set name="price" value="1355000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1110"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="49"/>
+		</for>
+	</armor>
+	<armor id="5785" name="Boots of Nightmare" add_name="Robe">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="108"/>
+		<set name="icon" value="icon.armor_t82_b_i00"/>
+		<set name="price" value="1355000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1110"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="49"/>
+		</for>
+	</armor>
+	<armor id="5786" name="Majestic Boots" add_name="Heavy">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="108"/>
+		<set name="icon" value="icon.armor_t83_b_i00"/>
+		<set name="price" value="1355000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1110"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="49"/>
+		</for>
+	</armor>
+	<armor id="5787" name="Majestic Boots" add_name="Light">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="108"/>
+		<set name="icon" value="icon.armor_t84_b_i00"/>
+		<set name="price" value="1355000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1110"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="49"/>
+		</for>
+	</armor>
+	<armor id="5788" name="Majestic Boots" add_name="Robe">
+		<set name="crystal_type" value="A"/>
+		<set name="crystal_count" value="108"/>
+		<set name="icon" value="icon.armor_t85_b_i00"/>
+		<set name="price" value="1355000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1110"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="49"/>
+		</for>
+	</armor>
+	<etcitem id="5789" name="Soulshot (No-grade) (Novice)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="type" value="SOULSHOT"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_soulshot_none_for_rookie_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="1"/>
+	</etcitem>
+	<etcitem id="5790" name="Spiritshot (No-grade) (Novice)">
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="type" value="SPIRITSHOT"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_spiritshot_none_for_rookie_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="1"/>
+	</etcitem>
+	<weapon id="5791" name="Tomb Guard A">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;44;120"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_monster_i00"/>
+		<set name="price" value="193400"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BIGSWORD"/>
+		<set name="weight" value="2180"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="78"/>
+			<add stat="mAtk" order="0x10" value="39"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+		</for>
+	</weapon>
+	<weapon id="5792" name="Tomb Guard B">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;44;120"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_monster_i00"/>
+		<set name="price" value="193400"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BIGSWORD"/>
+		<set name="weight" value="2180"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="78"/>
+			<add stat="mAtk" order="0x10" value="39"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+		</for>
+	</weapon>
+	<weapon id="5793" name="Tomb Savant A">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_monster_i00"/>
+		<set name="price" value="1226000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1380"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="156"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="5794" name="Tomb Savant B">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_monster_i00"/>
+		<set name="price" value="1226000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1380"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="156"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="5795" name="Tomb Guard A">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;44;120"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_monster_i00"/>
+		<set name="price" value="193400"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BIGSWORD"/>
+		<set name="weight" value="2180"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="78"/>
+			<add stat="mAtk" order="0x10" value="39"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+		</for>
+	</weapon>
+	<weapon id="5796" name="Tomb Guard B">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;44;120"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_monster_i00"/>
+		<set name="price" value="193400"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="BIGSWORD"/>
+		<set name="weight" value="2180"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="78"/>
+			<add stat="mAtk" order="0x10" value="39"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="325"/>
+		</for>
+	</weapon>
+	<weapon id="5797" name="Tomb Savant A">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_monster_i00"/>
+		<set name="price" value="1226000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1380"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="156"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="5798" name="Tomb Savant B">
+		<set name="variation_group_id" value="1"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.weapon_monster_i00"/>
+		<set name="price" value="1226000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="1380"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="156"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<set stat="basePCritRate" order="0x08" value="80"/>
+			<set stat="basePAtkSpd" order="0x08" value="379"/>
+		</for>
+	</weapon>
+	<weapon id="5799" name="Nephilim Lord">
+		<set name="variation_group_id" value="1"/>
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="icon.weapon_monster_i00"/>
+		<set name="price" value="15680"/>
+		<set name="rnd_dam" value="0"/>
+		<set name="soulshots" value="0"/>
+		<set name="spiritshots" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1320"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="sDef" order="0x10" value="142"/>
+			<add stat="rShld" order="0x10" value="20"/>
+			<add stat="pEvasRate" order="0x10" value="-8"/>
+		</for>
+	</weapon>
+</list>

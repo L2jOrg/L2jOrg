@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="17170001" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-85984" y="-20994" z="-8352"/>
+		<shape ax="-86046" ay="-21003" bx="-85922" by="-21003" cx="-85921" cy="-20981" dx="-86046" dy="-20981" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170002" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-83984" y="-20994" z="-8352"/>
+		<shape ax="-84046" ay="-21003" bx="-83922" by="-21003" cx="-83921" cy="-20981" dx="-84046" dy="-20981" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170003" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-81984" y="-20994" z="-8352"/>
+		<shape ax="-82046" ay="-21003" bx="-81922" by="-21003" cx="-81921" cy="-20981" dx="-82046" dy="-20981" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170004" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-79984" y="-20994" z="-8352"/>
+		<shape ax="-80046" ay="-21003" bx="-79922" by="-21003" cx="-79921" cy="-20981" dx="-80046" dy="-20981" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170005" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-77984" y="-20994" z="-8352"/>
+		<shape ax="-78046" ay="-21003" bx="-77922" by="-21003" cx="-77921" cy="-20981" dx="-78046" dy="-20981" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170006" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-86578" y="-20400" z="-8352"/>
+		<shape ax="-86588" ay="-20462" bx="-86567" by="-20461" cx="-86568" cy="-20339" dx="-86588" dy="-20338" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170007" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-85390" y="-20400" z="-8352"/>
+		<shape ax="-85400" ay="-20459" bx="-85381" by="-20459" cx="-85380" cy="-20339" dx="-85399" dy="-20339" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="20"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170008" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-84578" y="-20400" z="-8352"/>
+		<shape ax="-84588" ay="-20462" bx="-84567" by="-20461" cx="-84568" cy="-20339" dx="-84588" dy="-20338" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170007"/>
+	</door>
+	<door id="17170009" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-83390" y="-20400" z="-8352"/>
+		<shape ax="-83400" ay="-20459" bx="-83381" by="-20459" cx="-83380" cy="-20339" dx="-83399" dy="-20339" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="30"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170010" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-82578" y="-20400" z="-8352"/>
+		<shape ax="-82588" ay="-20462" bx="-82567" by="-20461" cx="-82568" cy="-20339" dx="-82588" dy="-20338" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170009"/>
+	</door>
+	<door id="17170011" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-81390" y="-20400" z="-8352"/>
+		<shape ax="-81400" ay="-20459" bx="-81381" by="-20459" cx="-81380" cy="-20339" dx="-81399" dy="-20339" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="20"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170012" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-80578" y="-20400" z="-8352"/>
+		<shape ax="-80588" ay="-20462" bx="-80567" by="-20461" cx="-80568" cy="-20339" dx="-80588" dy="-20338" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170011"/>
+	</door>
+	<door id="17170013" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-79390" y="-20400" z="-8352"/>
+		<shape ax="-79400" ay="-20459" bx="-79381" by="-20459" cx="-79380" cy="-20339" dx="-79399" dy="-20339" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="25"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170014" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-78578" y="-20400" z="-8352"/>
+		<shape ax="-78588" ay="-20462" bx="-78567" by="-20461" cx="-78568" cy="-20339" dx="-78588" dy="-20338" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170013"/>
+	</door>
+	<door id="17170015" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-77390" y="-20400" z="-8352"/>
+		<shape ax="-77400" ay="-20459" bx="-77381" by="-20459" cx="-77380" cy="-20339" dx="-77399" dy="-20339" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170016" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-85984" y="-19806" z="-8352"/>
+		<shape ax="-86045" ay="-19815" bx="-85922" by="-19815" cx="-85921" cy="-19796" dx="-86044" dy="-19796" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="30"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170017" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-83984" y="-19806" z="-8352"/>
+		<shape ax="-84045" ay="-19815" bx="-83922" by="-19815" cx="-83921" cy="-19796" dx="-84044" dy="-19796" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="15"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170018" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-81984" y="-19806" z="-8352"/>
+		<shape ax="-82045" ay="-19815" bx="-81922" by="-19815" cx="-81921" cy="-19796" dx="-82044" dy="-19796" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="15"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170019" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-79984" y="-19806" z="-8352"/>
+		<shape ax="-80045" ay="-19815" bx="-79922" by="-19815" cx="-79921" cy="-19796" dx="-80044" dy="-19796" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="20"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170020" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-77984" y="-19806" z="-8352"/>
+		<shape ax="-78045" ay="-19815" bx="-77922" by="-19815" cx="-77921" cy="-19796" dx="-78044" dy="-19796" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="10"/>
+		<set name="random_time" value="5"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170021" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-85984" y="-18994" z="-8352"/>
+		<shape ax="-86049" ay="-19005" bx="-85920" by="-19006" cx="-85920" cy="-18983" dx="-86048" dy="-18980" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170016"/>
+	</door>
+	<door id="17170022" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-83984" y="-18994" z="-8352"/>
+		<shape ax="-84049" ay="-19005" bx="-83920" by="-19006" cx="-83920" cy="-18983" dx="-84048" dy="-18980" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170017"/>
+	</door>
+	<door id="17170023" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-81984" y="-18994" z="-8352"/>
+		<shape ax="-82049" ay="-19005" bx="-81920" by="-19006" cx="-81920" cy="-18983" dx="-82048" dy="-18980" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170018"/>
+	</door>
+	<door id="17170024" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-79984" y="-18994" z="-8352"/>
+		<shape ax="-80049" ay="-19005" bx="-79920" by="-19006" cx="-79920" cy="-18983" dx="-80048" dy="-18980" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170019"/>
+	</door>
+	<door id="17170025" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-77984" y="-18994" z="-8352"/>
+		<shape ax="-78049" ay="-19005" bx="-77920" by="-19006" cx="-77920" cy="-18983" dx="-78048" dy="-18980" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170020"/>
+	</door>
+	<door id="17170026" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-86578" y="-18400" z="-8352"/>
+		<shape ax="-86596" ay="-18473" bx="-86567" by="-18473" cx="-86568" cy="-18321" dx="-86594" dy="-18321" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170027" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-85390" y="-18400" z="-8352"/>
+		<shape ax="-85401" ay="-18467" bx="-85380" by="-18467" cx="-85378" cy="-18328" dx="-85401" dy="-18329" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="20"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170028" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-84578" y="-18400" z="-8352"/>
+		<shape ax="-84596" ay="-18473" bx="-84567" by="-18473" cx="-84568" cy="-18321" dx="-84594" dy="-18321" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170027"/>
+	</door>
+	<door id="17170029" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-83390" y="-18400" z="-8352"/>
+		<shape ax="-83401" ay="-18467" bx="-83380" by="-18467" cx="-83378" cy="-18328" dx="-83401" dy="-18329" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="10"/>
+		<set name="random_time" value="5"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170030" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-82578" y="-18400" z="-8352"/>
+		<shape ax="-82596" ay="-18473" bx="-82567" by="-18473" cx="-82568" cy="-18321" dx="-82594" dy="-18321" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170029"/>
+	</door>
+	<door id="17170031" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-81390" y="-18400" z="-8352"/>
+		<shape ax="-81401" ay="-18467" bx="-81380" by="-18467" cx="-81378" cy="-18328" dx="-81401" dy="-18329" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="25"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170032" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-80578" y="-18400" z="-8352"/>
+		<shape ax="-80596" ay="-18473" bx="-80567" by="-18473" cx="-80568" cy="-18321" dx="-80594" dy="-18321" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170031"/>
+	</door>
+	<door id="17170033" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-79390" y="-18400" z="-8352"/>
+		<shape ax="-79401" ay="-18467" bx="-79380" by="-18467" cx="-79378" cy="-18328" dx="-79401" dy="-18329" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="15"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170034" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-78578" y="-18400" z="-8352"/>
+		<shape ax="-78596" ay="-18473" bx="-78567" by="-18473" cx="-78568" cy="-18321" dx="-78594" dy="-18321" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170033"/>
+	</door>
+	<door id="17170035" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-77390" y="-18400" z="-8352"/>
+		<shape ax="-77401" ay="-18467" bx="-77380" by="-18467" cx="-77378" cy="-18328" dx="-77401" dy="-18329" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170036" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-85984" y="-17806" z="-8352"/>
+		<shape ax="-86047" ay="-17819" bx="-85921" by="-17819" cx="-85920" cy="-17791" dx="-86047" dy="-17792" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="30"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170037" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-83984" y="-17806" z="-8352"/>
+		<shape ax="-84047" ay="-17819" bx="-83921" by="-17819" cx="-83920" cy="-17791" dx="-84047" dy="-17792" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="15"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170038" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-81984" y="-17806" z="-8352"/>
+		<shape ax="-82047" ay="-17819" bx="-81921" by="-17819" cx="-81920" cy="-17791" dx="-82047" dy="-17792" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="20"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170039" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-79984" y="-17806" z="-8352"/>
+		<shape ax="-80047" ay="-17819" bx="-79921" by="-17819" cx="-79920" cy="-17791" dx="-80047" dy="-17792" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="10"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170040" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-77984" y="-17806" z="-8352"/>
+		<shape ax="-78047" ay="-17819" bx="-77921" by="-17819" cx="-77920" cy="-17791" dx="-78047" dy="-17792" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="25"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170041" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-85984" y="-16994" z="-8352"/>
+		<shape ax="-86063" ay="-17006" bx="-85904" by="-17007" cx="-85904" cy="-16984" dx="-86063" dy="-16984" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170036"/>
+	</door>
+	<door id="17170042" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-83984" y="-16994" z="-8352"/>
+		<shape ax="-84063" ay="-17006" bx="-83904" by="-17007" cx="-83904" cy="-16984" dx="-84063" dy="-16984" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170037"/>
+	</door>
+	<door id="17170043" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-81984" y="-16994" z="-8352"/>
+		<shape ax="-82063" ay="-17006" bx="-81904" by="-17007" cx="-81904" cy="-16984" dx="-82063" dy="-16984" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170038"/>
+	</door>
+	<door id="17170044" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-79984" y="-16994" z="-8352"/>
+		<shape ax="-80063" ay="-17006" bx="-79904" by="-17007" cx="-79904" cy="-16984" dx="-80063" dy="-16984" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170039"/>
+	</door>
+	<door id="17170045" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-77984" y="-16994" z="-8352"/>
+		<shape ax="-78063" ay="-17006" bx="-77904" by="-17007" cx="-77904" cy="-16984" dx="-78063" dy="-16984" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170040"/>
+	</door>
+	<door id="17170046" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-86578" y="-16400" z="-8352"/>
+		<shape ax="-86588" ay="-16471" bx="-86567" by="-16471" cx="-86568" cy="-16338" dx="-86586" dy="-16336" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170047" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-85390" y="-16400" z="-8352"/>
+		<shape ax="-85404" ay="-16480" bx="-85378" by="-16480" cx="-85378" cy="-16320" dx="-85403" dy="-16320" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="14"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170048" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-84578" y="-16400" z="-8352"/>
+		<shape ax="-84588" ay="-16471" bx="-84567" by="-16471" cx="-84568" cy="-16338" dx="-84586" dy="-16336" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170047"/>
+	</door>
+	<door id="17170049" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-83390" y="-16400" z="-8352"/>
+		<shape ax="-83404" ay="-16480" bx="-83378" by="-16480" cx="-83378" cy="-16320" dx="-83403" dy="-16320" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="25"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170050" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-82578" y="-16400" z="-8352"/>
+		<shape ax="-82588" ay="-16471" bx="-82567" by="-16471" cx="-82568" cy="-16338" dx="-82586" dy="-16336" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170049"/>
+	</door>
+	<door id="17170051" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-81390" y="-16400" z="-8352"/>
+		<shape ax="-81404" ay="-16480" bx="-81378" by="-16480" cx="-81378" cy="-16320" dx="-81403" dy="-16320" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="23"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170052" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-80578" y="-16400" z="-8352"/>
+		<shape ax="-80588" ay="-16471" bx="-80567" by="-16471" cx="-80568" cy="-16338" dx="-80586" dy="-16336" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170051"/>
+	</door>
+	<door id="17170053" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-79390" y="-16400" z="-8352"/>
+		<shape ax="-79404" ay="-16480" bx="-79378" by="-16480" cx="-79378" cy="-16320" dx="-79403" dy="-16320" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="30"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170054" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-78578" y="-16400" z="-8352"/>
+		<shape ax="-78588" ay="-16471" bx="-78567" by="-16471" cx="-78568" cy="-16338" dx="-78586" dy="-16336" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170053"/>
+	</door>
+	<door id="17170055" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-77390" y="-16400" z="-8352"/>
+		<shape ax="-77404" ay="-16480" bx="-77378" by="-16480" cx="-77378" cy="-16320" dx="-77403" dy="-16320" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170056" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-85984" y="-15806" z="-8352"/>
+		<shape ax="-86044" ay="-15820" bx="-85921" by="-15821" cx="-85920" cy="-15792" dx="-86048" dy="-15792" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="25"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170057" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-83984" y="-15806" z="-8352"/>
+		<shape ax="-84044" ay="-15820" bx="-83921" by="-15821" cx="-83920" cy="-15792" dx="-84048" dy="-15792" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="30"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170058" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-81984" y="-15806" z="-8352"/>
+		<shape ax="-82044" ay="-15820" bx="-81921" by="-15821" cx="-81920" cy="-15792" dx="-82048" dy="-15792" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="18"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170059" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-79984" y="-15806" z="-8352"/>
+		<shape ax="-80044" ay="-15820" bx="-79921" by="-15821" cx="-79920" cy="-15792" dx="-80048" dy="-15792" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="10"/>
+		<set name="random_time" value="5"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170060" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-77984" y="-15806" z="-8352"/>
+		<shape ax="-78044" ay="-15820" bx="-77921" by="-15821" cx="-77920" cy="-15792" dx="-78048" dy="-15792" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="20"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170061" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-85984" y="-14994" z="-8352"/>
+		<shape ax="-86048" ay="-15005" bx="-85920" by="-15006" cx="-85921" cy="-14981" dx="-86047" dy="-14981" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170056"/>
+	</door>
+	<door id="17170062" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-83984" y="-14994" z="-8352"/>
+		<shape ax="-84048" ay="-15005" bx="-83920" by="-15006" cx="-83921" cy="-14981" dx="-84047" dy="-14981" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170057"/>
+	</door>
+	<door id="17170063" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-81984" y="-14994" z="-8352"/>
+		<shape ax="-82048" ay="-15005" bx="-81920" by="-15006" cx="-81921" cy="-14981" dx="-82047" dy="-14981" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170058"/>
+	</door>
+	<door id="17170064" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-79984" y="-14994" z="-8352"/>
+		<shape ax="-80048" ay="-15005" bx="-79920" by="-15006" cx="-79921" cy="-14981" dx="-80047" dy="-14981" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170059"/>
+	</door>
+	<door id="17170065" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-77984" y="-14994" z="-8352"/>
+		<shape ax="-78048" ay="-15005" bx="-77920" by="-15006" cx="-77921" cy="-14981" dx="-78047" dy="-14981" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170060"/>
+	</door>
+	<door id="17170066" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-86578" y="-14400" z="-8352"/>
+		<shape ax="-86588" ay="-14461" bx="-86569" by="-14461" cx="-86567" cy="-14337" dx="-86589" dy="-14336" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170067" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-85390" y="-14400" z="-8352"/>
+		<shape ax="-85399" ay="-14459" bx="-85381" by="-14460" cx="-85381" cy="-14340" dx="-85400" dy="-14339" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="26"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170068" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-84578" y="-14400" z="-8352"/>
+		<shape ax="-84588" ay="-14461" bx="-84569" by="-14461" cx="-84567" cy="-14337" dx="-84589" dy="-14336" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170067"/>
+	</door>
+	<door id="17170069" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-83390" y="-14400" z="-8352"/>
+		<shape ax="-83399" ay="-14459" bx="-83381" by="-14460" cx="-83381" cy="-14340" dx="-83400" dy="-14339" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="10"/>
+		<set name="random_time" value="5"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170070" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-82578" y="-14400" z="-8352"/>
+		<shape ax="-82588" ay="-14461" bx="-82569" by="-14461" cx="-82567" cy="-14337" dx="-82589" dy="-14336" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170069"/>
+	</door>
+	<door id="17170071" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-81390" y="-14400" z="-8352"/>
+		<shape ax="-81399" ay="-14459" bx="-81381" by="-14460" cx="-81381" cy="-14340" dx="-81400" dy="-14339" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="15"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170072" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-80578" y="-14400" z="-8352"/>
+		<shape ax="-80588" ay="-14461" bx="-80569" by="-14461" cx="-80567" cy="-14337" dx="-80589" dy="-14336" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170071"/>
+	</door>
+	<door id="17170073" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-79390" y="-14400" z="-8352"/>
+		<shape ax="-79399" ay="-14459" bx="-79381" by="-14460" cx="-79381" cy="-14340" dx="-79400" dy="-14339" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="30"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170074" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-78578" y="-14400" z="-8352"/>
+		<shape ax="-78588" ay="-14461" bx="-78569" by="-14461" cx="-78567" cy="-14337" dx="-78589" dy="-14336" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170073"/>
+	</door>
+	<door id="17170075" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-77390" y="-14400" z="-8352"/>
+		<shape ax="-77399" ay="-14459" bx="-77381" by="-14460" cx="-77381" cy="-14340" dx="-77400" dy="-14339" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170076" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-85984" y="-13806" z="-8352"/>
+		<shape ax="-86049" ay="-13815" bx="-85921" by="-13815" cx="-85921" cy="-13794" dx="-86049" dy="-13795" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="25"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170077" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-83984" y="-13806" z="-8352"/>
+		<shape ax="-84049" ay="-13815" bx="-83921" by="-13815" cx="-83921" cy="-13794" dx="-84049" dy="-13795" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="30"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170078" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-81984" y="-13806" z="-8352"/>
+		<shape ax="-82049" ay="-13815" bx="-81921" by="-13815" cx="-81921" cy="-13794" dx="-82049" dy="-13795" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="18"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170079" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-79984" y="-13806" z="-8352"/>
+		<shape ax="-80049" ay="-13815" bx="-79921" by="-13815" cx="-79921" cy="-13794" dx="-80049" dy="-13795" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="10"/>
+		<set name="random_time" value="5"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170080" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-77984" y="-13806" z="-8352"/>
+		<shape ax="-78049" ay="-13815" bx="-77921" by="-13815" cx="-77921" cy="-13794" dx="-78049" dy="-13795" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="20"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170081" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-85984" y="-12994" z="-8352"/>
+		<shape ax="-86047" ay="-13005" bx="-85921" by="-13004" cx="-85921" cy="-12983" dx="-86047" dy="-12982" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170076"/>
+	</door>
+	<door id="17170082" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-83984" y="-12994" z="-8352"/>
+		<shape ax="-84047" ay="-13005" bx="-83921" by="-13004" cx="-83921" cy="-12983" dx="-84047" dy="-12982" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170077"/>
+	</door>
+	<door id="17170083" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-81984" y="-12994" z="-8352"/>
+		<shape ax="-82047" ay="-13005" bx="-81921" by="-13004" cx="-81921" cy="-12983" dx="-82047" dy="-12982" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170078"/>
+	</door>
+	<door id="17170084" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-79984" y="-12994" z="-8352"/>
+		<shape ax="-80047" ay="-13005" bx="-79921" by="-13004" cx="-79921" cy="-12983" dx="-80047" dy="-12982" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170079"/>
+	</door>
+	<door id="17170085" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-77984" y="-12994" z="-8352"/>
+		<shape ax="-78047" ay="-13005" bx="-77921" by="-13004" cx="-77921" cy="-12983" dx="-78047" dy="-12982" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170080"/>
+	</door>
+	<door id="17170086" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-86578" y="-12400" z="-8352"/>
+		<shape ax="-86587" ay="-12460" bx="-86569" by="-12459" cx="-86569" cy="-12341" dx="-86586" dy="-12340" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170087" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-85390" y="-12400" z="-8352"/>
+		<shape ax="-85400" ay="-12460" bx="-85381" by="-12460" cx="-85381" cy="-12339" dx="-85399" dy="-12339" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="26"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170088" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-84578" y="-12400" z="-8352"/>
+		<shape ax="-84587" ay="-12460" bx="-84569" by="-12459" cx="-84569" cy="-12341" dx="-84586" dy="-12340" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170087"/>
+	</door>
+	<door id="17170089" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-83390" y="-12400" z="-8352"/>
+		<shape ax="-83400" ay="-12460" bx="-83381" by="-12460" cx="-83381" cy="-12339" dx="-83399" dy="-12339" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="10"/>
+		<set name="random_time" value="5"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170090" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-82578" y="-12400" z="-8352"/>
+		<shape ax="-82587" ay="-12460" bx="-82569" by="-12459" cx="-82569" cy="-12341" dx="-82586" dy="-12340" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170089"/>
+	</door>
+	<door id="17170091" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-81390" y="-12400" z="-8352"/>
+		<shape ax="-81400" ay="-12460" bx="-81381" by="-12460" cx="-81381" cy="-12339" dx="-81399" dy="-12339" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="15"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170092" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-80578" y="-12400" z="-8352"/>
+		<shape ax="-80587" ay="-12460" bx="-80569" by="-12459" cx="-80569" cy="-12341" dx="-80586" dy="-12340" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170091"/>
+	</door>
+	<door id="17170093" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-79390" y="-12400" z="-8352"/>
+		<shape ax="-79400" ay="-12460" bx="-79381" by="-12460" cx="-79381" cy="-12339" dx="-79399" dy="-12339" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="open_time" value="30"/>
+		<set name="random_time" value="10"/>
+		<set name="close_time" value="15"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170094" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-78578" y="-12400" z="-8352"/>
+		<shape ax="-78587" ay="-12460" bx="-78569" by="-12459" cx="-78569" cy="-12341" dx="-78586" dy="-12340" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+		<set name="master_door" value="17170093"/>
+	</door>
+	<door id="17170095" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-77390" y="-12400" z="-8352"/>
+		<shape ax="-77400" ay="-12460" bx="-77381" by="-12460" cx="-77381" cy="-12339" dx="-77399" dy="-12339" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170096" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-85984" y="-11806" z="-8352"/>
+		<shape ax="-86048" ay="-11819" bx="-85921" by="-11821" cx="-85921" cy="-11792" dx="-86047" dy="-11792" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170097" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-83984" y="-11806" z="-8352"/>
+		<shape ax="-84048" ay="-11819" bx="-83921" by="-11821" cx="-83921" cy="-11792" dx="-84047" dy="-11792" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170098" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-81984" y="-11806" z="-8352"/>
+		<shape ax="-82048" ay="-11819" bx="-81921" by="-11821" cx="-81921" cy="-11792" dx="-82047" dy="-11792" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170099" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-79984" y="-11806" z="-8352"/>
+		<shape ax="-80048" ay="-11819" bx="-79921" by="-11821" cx="-79921" cy="-11792" dx="-80047" dy="-11792" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170100" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-77984" y="-11806" z="-8352"/>
+		<shape ax="-78048" ay="-11819" bx="-77921" by="-11821" cx="-77921" cy="-11792" dx="-78047" dy="-11792" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170101" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-87116" y="-16990" z="-8352"/>
+		<shape ax="-87173" ay="-16997" bx="-87059" by="-16997" cx="-87059" cy="-16983" dx="-87173" dy="-16981" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170102" name="Themepark_Valos_S.Valos_dungeon_doors_v" hp="158250" pdef="644" mdef="518">
+		<pos x="-86625" y="-16400" z="-8352"/>
+		<shape ax="-86639" ay="-16469" bx="-86612" by="-16469" cx="-86613" cy="-16328" dx="-86637" dy="-16328" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+	</door>
+	<door id="17170103" name="Themepark_Valos_S.Valos_dungeon_doors" hp="158250" pdef="644" mdef="518">
+		<pos x="-87116" y="-15810" z="-8352"/>
+		<shape ax="-87175" ay="-15818" bx="-87056" by="-15818" cx="-87056" cy="-15800" dx="-87175" dy="-15801" minz="-8352" maxz="-8202"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="false"/>
+		<set name="targetable" value="false"/>
+	</door>
+</list>

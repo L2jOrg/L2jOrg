@@ -1,0 +1,1289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="3500" levels="1" name="Set Effect - Wooden Light Armor">
+		<set name="icon" value="icon.armor_t06_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pDef" value="1.02"/>
+			<add stat="maxHp" value="41"/>
+		</for>
+	</skill>
+	<skill id="3501" levels="1" name="Set Effect - Devotion Robe Armor">
+		<set name="icon" value="icon.armor_t55_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="mAtkSpd" value="1.15"/>
+		</for>
+	</skill>
+	<skill id="3502" levels="2" name="Set Effect - Mithril Heavy Armor, 2-piece">
+		<table name="#p_defence_trait_poison">0 20</table>
+		<set name="icon" value="icon.armor_t19_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxHp" value="126"/>
+			<p_defence_trait name="poison" value="#p_defence_trait_poison"/>
+		</for>
+	</skill>
+	<skill id="3503" levels="2" name="Set Effect - Reinforced Leather Light Armor, 2-piece">
+		<table name="#pCritRate">0 10</table>
+		<set name="icon" value="icon.armor_t13_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxMp" value="80"/>
+			<add stat="p_critical_damage_diff" value="#pCritRate"/>
+		</for>
+	</skill>
+	<skill id="3504" levels="2" name="Set Effect - Knowledge Robe Armor, 2-piece">
+		<table name="#mAtk">1 1.1</table>
+		<set name="icon" value="icon.armor_t41_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxMp" value="40"/>
+			<mul stat="mAtk" value="#mAtk"/>
+		</for>
+	</skill>
+	<skill id="3505" levels="2" name="Set Effect - Manticore Light Armor, 2-piece">
+		<table name="#pCritRate">0 15</table>
+		<set name="icon" value="icon.armor_t42_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxMp" value="92"/>
+			<add stat="p_critical_damage_diff" value="#pCritRate"/>
+		</for>
+	</skill>
+	<skill id="3506" levels="2" name="Set Effect - Brigandine Heavy Armor, 2-piece">
+		<table name="#pDef">1 1.05</table>
+		<set name="icon" value="icon.armor_t43_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pDef" value="#pDef"/>
+			<add stat="maxHp" value="153"/>
+		</for>
+	</skill>
+	<skill id="3507" levels="2" name="Set Effect - Elven Mithril Robe Armor, 2-piece">
+		<table name="#int">0 1</table>
+		<set name="icon" value="icon.armor_elven_tunic_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="regMp" value="1.0524"/>
+			<add stat="INT" value="#int"/>
+		</for>
+	</skill>
+	<skill id="3508" levels="2" name="Set Effect - Reinforced Mithril Light Armor, 2-piece">
+		<table name="#res">0 30</table>
+		<set name="icon" value="icon.armor_t47_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="pEvasRate" value="4"/>
+			<p_defence_trait name="poison" value="#res"/>
+			<p_defence_trait name="bleed" value="#res"/>
+		</for>
+	</skill>
+	<skill id="3509" levels="2" name="Set Effect - Chain Heavy Armor, 2-piece">
+		<table name="#pDef">1 1.05</table>
+		<set name="icon" value="icon.armor_t48_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxHp" value="198"/>
+			<p_defence_trait name="paralyze" value="20"/>
+			<p_defence_trait name="sleep" value="20"/>
+			<mul stat="pDef" value="#pDef"/>
+		</for>
+	</skill>
+	<skill id="3510" levels="2" name="Set Effect - Karmian Robe Armor, 2-piece">
+		<table name="#mAtkSpd">1 1.15</table>
+		<table name="#pDef">1 1.0526</table>
+		<set name="icon" value="icon.armor_t53_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="sleep" value="20"/>
+			<p_defence_trait name="hold" value="20"/>
+			<mul stat="mAtkSpd" value="#mAtkSpd"/>
+			<mul stat="pDef" value="#pDef"/>
+		</for>
+	</skill>
+	<skill id="3511" levels="2" name="Set Effect - Plate Light Armor, 2-piece">
+		<table name="#str">0 4</table>
+		<table name="#con">0 1</table>
+		<set name="icon" value="icon.armor_t47_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="sleep" value="20"/>
+			<p_defence_trait name="hold" value="20"/>
+			<add stat="STR" value="#str"/>
+			<sub stat="CON" value="#con"/>
+		</for>
+	</skill>
+	<skill id="3512" levels="1" name="Set Effect - Compound Heavy Armor, 2-piece">
+		<set name="icon" value="icon.armor_t61_ul_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxNoPenaltyLoad" value="5759"/>
+			<mul stat="mDef" value="1.05"/>
+			<p_defence_trait name="paralyze" value="10"/>
+		</for>
+	</skill>
+	<skill id="3513" levels="2" name="Set Effect - Demon Robe Armor, 2-piece">
+		<table name="#int">0 4</table>
+		<table name="#wit">0 1</table>
+		<table name="#maxHp">0 270</table>
+		<set name="icon" value="icon.armor_t54_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="shock" value="10"/>
+			<add stat="INT" value="#int"/>
+			<sub stat="WIT" value="#wit"/>
+			<sub stat="maxHp" value="#maxHp"/>
+		</for>
+	</skill>
+	<skill id="3514" levels="2" name="Set Effect - Theca Light Armor, 2-piece">
+		<table name="#pDef">1 1.0526</table>
+		<set name="icon" value="icon.armor_t63_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="paralyze" value="10"/>
+			<mul stat="pDef" value="#pDef"/>
+		</for>
+	</skill>
+	<skill id="3515" levels="1" name="Set Effect - Drake Light Armor, 2-piece">
+		<set name="icon" value="icon.armor_t45_ul_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="mDef" value="1.05"/>
+			<p_defence_trait name="shock" value="10"/>
+		</for>
+	</skill>
+	<skill id="3516" levels="1" name="Set Effect - Full Plate Heavy Armor, 2-piece">
+		<set name="icon" value="icon.armor_t62_ul_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxHp" value="270"/>
+			<mul stat="pDef" value="1.05"/>
+			<p_defence_trait name="shock" value="10"/>
+		</for>
+	</skill>
+	<skill id="3517" levels="2" name="Set Effect - Divine Robe Armor, 2-piece">
+		<table name="#wit">0 1</table>
+		<table name="#maxMp">0 171</table>
+		<table name="#pDef">1 1.0526</table>
+		<set name="icon" value="icon.armor_t57_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="paralyze" value="10"/>
+			<add stat="WIT" value="#wit"/>
+			<add stat="maxMp" value="#maxMp"/>
+			<mul stat="pDef" value="#pDef"/>
+		</for>
+	</skill>
+	<skill id="3518" levels="4" name="Set Effect - Zubei Heavy Armor, 2-piece">
+		<table name="#maxHp">0 294 294 294</table>
+		<table name="#paralyzeResist">0 0 30 30</table>
+		<table name="#pDef">1 1 1 1.0526</table>
+		<set name="icon" value="icon.armor_t64_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="regHp" value="1.0524"/>
+			<add stat="maxHp" value="#maxHp"/>
+			<p_defence_trait name="paralyze" value="#paralyzeResist"/>
+			<mul stat="pDef" value="#pDef"/>
+		</for>
+	</skill>
+	<skill id="3519" levels="4" name="Set Effect - Avadon Heavy Armor, 2-piece">
+		<table name="#pDef">1 1.05 1.05 1.05</table>
+		<table name="#res">0 0 60 60</table>
+		<table name="#con">0 0 0 1</table>
+		<set name="icon" value="icon.armor_t66_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxHp" value="294"/>
+			<mul stat="pDef" value="#pDef"/>
+			<p_defence_trait name="bleed" value="#res"/>
+			<p_defence_trait name="poison" value="#res"/>
+			<add stat="CON" value="#con"/>
+		</for>
+	</skill>
+	<skill id="3520" levels="4" name="Set Effect - Zubei Light Armor, 2-piece">
+		<table name="#pCritRate">0 10 10 10</table>
+		<table name="#res">0 0 30 30</table>
+		<table name="#dex">0 0 0 1</table>
+		<set name="icon" value="icon.armor_t65_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="pEvasRate" value="4"/>
+			<add stat="basePCritRate" value="#pCritRate"/>
+			<p_defence_trait name="paralyze" value="#res"/>
+			<add stat="DEX" value="#dex"/>
+		</for>
+	</skill>
+	<skill id="3521" levels="3" name="Set Effect - Avadon Light Armor, 2-piece">
+		<table name="#crit">0 30 30</table>
+		<table name="#res">0 0 60</table>
+		<table name="#mDef">1 1 1.0525</table>
+		<set name="icon" value="icon.armor_t67_ul_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxNoPenaltyLoad" value="5795"/>
+			<add stat="p_critical_damage_diff" value="#crit"/>
+			<p_defence_trait name="poison" value="#res"/>
+			<p_defence_trait name="bleed" value="#res"/>
+			<mul stat="mDef" value="#mDef"/>
+		</for>
+	</skill>
+	<skill id="3522" levels="4" name="Set Effect - Zubei Robe Armor, 2-piece">
+		<table name="#maxMp">0 102 102 102</table>
+		<table name="#res">0 0 30 30</table>
+		<table name="#mAtk">1 1 1 1.1</table>
+		<set name="icon" value="icon.armor_t56_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="regMp" value="1.0526"/>
+			<add stat="maxMp" value="#maxMp"/>
+			<p_defence_trait name="paralyze" value="#res"/>
+			<mul stat="mAtk" value="#mAtk"/>
+		</for>
+	</skill>
+	<skill id="3523" levels="3" name="Set Effect - Avadon Robe Armor, 2-piece">
+		<table name="#pDef">1 1.0526 1.0526</table>
+		<table name="#mAtkSpd">1 1 1.15</table>
+		<set name="icon" value="icon.armor_t59_ul_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="poison" value="60"/>
+			<p_defence_trait name="bleed" value="60"/>
+			<mul stat="pDef" value="#pDef"/>
+			<mul stat="mAtkSpd" value="#mAtkSpd"/>
+		</for>
+	</skill>
+	<skill id="3524" levels="4" name="Set Effect - Blue Wolf Heavy Armor, 2-piece">
+		<table name="#runSpd">0 7 7 7</table>
+		<table name="#stunResist">0 0 30 30</table>
+		<table name="#str">0 0 0 3</table>
+		<table name="#con">0 0 0 1</table>
+		<table name="#dex">0 0 0 2</table>
+		<set name="icon" value="icon.armor_t68_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="regHp" value="1.0524"/>
+			<add stat="runSpd" value="#runSpd"/>
+			<p_defence_trait name="shock" value="#stunResist"/>
+			<add stat="STR" value="#str"/>
+			<sub stat="CON" value="#con"/>
+			<sub stat="DEX" value="#dex"/>
+		</for>
+	</skill>
+	<skill id="3525" levels="3" name="Set Effect - Doom Heavy Armor, 2-piece">
+		<table name="#res">0 50 50</table>
+		<table name="#str">0 0 3</table>
+		<table name="#con">0 0 3</table>
+		<set name="icon" value="icon.armor_t71_ul_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxHp" value="320"/>
+			<p_defence_trait name="sleep" value="#res"/>
+			<p_defence_trait name="hold" value="#res"/>
+			<sub stat="STR" value="#str"/>
+			<add stat="CON" value="#con"/>
+		</for>
+	</skill>
+	<skill id="3526" levels="3" name="Set Effect - Blue Wolf Light Armor, 2-piece">
+		<table name="#men">0 3 3</table>
+		<table name="#wit">0 1 1</table>
+		<table name="#int">0 2 2</table>
+		<table name="#pDef">1 1.0526 1.0526</table>
+		<table name="#res">0 0 30</table>
+		<table name="#mAtkSpd">1 1 1.15</table>
+		<set name="icon" value="icon.armor_t69_ul_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="regMp" value="1.0526"/>
+			<add stat="MEN" value="#men"/>
+			<sub stat="WIT" value="#wit"/>
+			<sub stat="INT" value="#int"/>
+			<mul stat="pDef" value="#pDef"/>
+			<p_defence_trait name="shock" value="#res"/>
+			<mul stat="mAtkSpd" value="#mAtkSpd"/>
+		</for>
+	</skill>
+	<skill id="3527" levels="3" name="Set Effect - Doom Light Armor, 2-piece">
+		<!--
+		    Description: Increases lung capacity, P. Atk., MP recovery rate and resistance to poison attacks. STR-1, CON-2, DEX+3
+		 -->
+		<table name="#pAtkSpd">1 1.027 1.027</table>
+		<table name="#dex">0 0 3</table>
+		<table name="#res">0 0 50</table>
+		<set name="icon" value="icon.armor_t72_ul_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="regMp" value="1.0526"/>
+			<mul stat="pAtkSpd" value="#pAtkSpd"/>
+			<add stat="DEX" value="#dex"/>
+			<p_defence_trait name="sleep" value="#res"/>
+			<p_defence_trait name="hold" value="#res"/>
+		</for>
+	</skill>
+	<skill id="3528" levels="4" name="Set Effect - Blue Wolf Robe Armor, 2-piece">
+		<table name="#maxMp">0 206 206 206</table>
+		<table name="#res">0 0 30 30</table>
+		<table name="#int">0 0 0 2</table>
+		<table name="#men">0 0 0 1</table>
+		<table name="#wit">0 0 0 3</table>
+		<set name="icon" value="icon.armor_t70_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="regMp" value="1.0526"/>
+			<add stat="maxMp" value="#maxMp"/>
+			<p_defence_trait name="shock" value="#res"/>
+			<sub stat="INT" value="#int"/>
+			<sub stat="MEN" value="#men"/>
+			<add stat="WIT" value="#wit"/>
+		</for>
+	</skill>
+	<skill id="3529" levels="4" name="Set Effect - Doom Robe Armor, 2-piece">
+		<table name="#runSpd">0 7 7 7</table>
+		<table name="#res">0 0 50 50</table>
+		<table name="#int">0 0 0 2</table>
+		<table name="#men">0 0 0 1</table>
+		<table name="#wit">0 0 0 3</table>
+		<table name="#crit">0 0 0 30</table>
+		<set name="icon" value="icon.armor_t73_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="regMp" value="1.0526"/>
+			<add stat="runSpd" value="#runSpd"/>
+			<p_defence_trait name="sleep" value="#res"/>
+			<p_defence_trait name="hold" value="#res"/>
+			<add stat="INT" value="#int"/>
+			<add stat="MEN" value="#men"/>
+			<sub stat="WIT" value="#wit"/>
+			<mul stat="p_magic_critical_dmg_diff" value="#crit"/>
+		</for>
+	</skill>
+	<skill id="3530" levels="4" name="Set Effect - Dark Crystal Heavy Armor, 2-piece">
+		<table name="#hpEff">1 1.04 1.04 1.04</table>
+		<table name="#res">0 0 50 50</table>
+		<table name="#str">0 0 0 2</table>
+		<table name="#con">0 0 0 2</table>
+		<table name="#maxHp">0 0 0 238</table>
+		<set name="icon" value="icon.armor_t74_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="regHp" value="1.0524"/>
+			<mul stat="hpEff" value="#hpEff"/>
+			<p_defence_trait name="paralyze" value="#res"/>
+			<sub stat="STR" value="#str"/>
+			<add stat="CON" value="#con"/>
+			<add stat="maxHp" value="#maxHp"/>
+		</for>
+	</skill>
+	<skill id="3531" levels="3" name="Set Effect - Tallum Heavy Armor, 3-piece">
+		<table name="#res">0 80 80</table>
+		<table name="#runSpd">0 4 4</table>
+		<table name="#str">0 0 2</table>
+		<table name="#con">0 0 2</table>
+		<table name="#pAtkSpd">1 1 1.08</table>
+		<set name="icon" value="icon.armor_t77_ul_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxNoPenaltyLoad" value="5759"/>
+			<p_defence_trait name="poison" value="#res"/>
+			<p_defence_trait name="bleed" value="#res"/>
+			<add stat="runSpd" value="#runSpd"/>
+			<add stat="STR" value="#str"/>
+			<sub stat="CON" value="#con"/>
+			<mul stat="pAtkSpd" value="#pAtkSpd"/>
+		</for>
+	</skill>
+	<skill id="3532" levels="4" name="Set Effect - Dark Crystal Light Armor, 2-piece">
+		<table name="#crit">0 30 30 30</table>
+		<table name="#pAtkSpd">1 1 1.04 1.04</table>
+		<table name="#res">0 0 50 50</table>
+		<table name="#str">0 0 0 1</table>
+		<table name="#con">0 0 0 1</table>
+		<table name="#pAtk">1 1 1 1.04</table>
+		<set name="icon" value="icon.armor_t75_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="pEvasRate" value="4"/>
+			<add stat="p_critical_damage_diff"	 value="#crit"/>
+			<mul stat="pAtkSpd" value="#pAtkSpd"/>
+			<p_defence_trait name="paralyze" value="#res"/>
+			<add stat="STR" value="#str"/>
+			<sub stat="CON" value="#con"/>
+			<mul stat="pAtk" value="#pAtk"/>
+		</for>
+	</skill>
+	<skill id="3533" levels="3" name="Set Effect - Tallum Light Armor, 2-piece">
+		<table name="#maxMp">0 222 222</table>
+		<table name="#men">0 0 2</table>
+		<table name="#wit">0 0 2</table>
+		<table name="#res">0 0 80</table>
+		<set name="icon" value="icon.armor_t78_ul_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="regMp" value="1.08"/>
+			<add stat="maxMp" value="#maxMp"/>
+			<add stat="MEN" value="#men"/>
+			<sub stat="WIT" value="#wit"/>
+			<p_defence_trait name="poison" value="#res"/>
+			<p_defence_trait name="bleed" value="#res"/>
+
+		</for>
+	</skill>
+	<skill id="3534" levels="4" name="Set Effect - Tallum Robe Armor, 2-piece">
+		<table name="#res">0 80 80 80</table>
+		<table name="#mDef">1 1 1.08 1.08</table>
+		<table name="#int">0 0 0 2</table>
+		<table name="#wit">0 0 0 2</table>
+		<table name="#mAtkSpd">1 1 1 1.15</table>
+		<set name="icon" value="icon.armor_t79_u_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="regMp" value="1.0526"/>
+			<p_defence_trait name="poison" value="#res"/>
+			<p_defence_trait name="bleed" value="#res"/>
+			<mul stat="mDef" value="#mDef"/>	
+			<sub stat="INT" value="#int"/>
+			<add stat="WIT" value="#wit"/>
+			<mul stat="mAtkSpd" value="#mAtkSpd"/>
+		</for>
+	</skill>
+	<skill id="3535" levels="3" name="Set Effect - Dark Crystal Robe, 2-piece">
+		<table name="#res">0 50 50</table>
+		<table name="#pDef">1 1.08 1.08</table>
+		<table name="#wit">0 0 2</table>
+		<table name="#men">0 0 2</table>
+		<table name="#mAtkSpd">1 1 1.15</table>
+		<set name="icon" value="icon.armor_t76_ul_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="concentration" value="0.8"/>
+			<add stat="runSpd" value="7"/>
+			<p_defence_trait name="paralyze" value="#res"/>
+			<mul stat="pDef" value="#pDef"/>
+			<add stat="WIT" value="#wit"/>
+			<sub stat="MEN" value="#men"/>		
+			<mul stat="mAtkSpd" value="#mAtkSpd"/>
+		</for>
+	</skill>
+	<skill id="3536" levels="3" name="Set Effect - Nightmare Heavy Armor, 2-piece">
+		<table name="#pAtk">1 1.04 1.04</table>
+		<table name="#pReflect">0 5 5</table>
+		<table name="#con">0 0 2</table>
+		<table name="#dex">0 0 2</table>
+		<table name="#res">0 0 70</table>
+		<set name="icon" value="icon.armor_t80_ul_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="pAccCombat" value="3"/>
+			<mul stat="regHp" value="1.0524"/>
+			<mul stat="pAtk" value="#pAtk"/>
+			<add stat="reflectDam" value="#pReflect"/>
+			<add stat="reflectBowDam" value="#pReflect"/>
+			<add stat="reflectPSkillDam" value="#pReflect"/>
+			<p_defence_trait name="sleep" value="#res"/>
+			<p_defence_trait name="hold" value="#res"/>
+			<add stat="CON" value="#con"/>
+			<sub stat="DEX" value="#dex"/>
+		</for>
+	</skill>
+	<skill id="3537" levels="3" name="Set Effect - Majestic Heavy Armor, 2-piece">
+		<table name="#pAtk">1 1.04 1.04</table>
+		<table name="#runSpd">0 7 7</table>
+		<table name="#str">0 0 2</table>
+		<table name="#con">0 0 2</table>
+		<table name="#res">0 0 50</table>
+		<set name="icon" value="icon.armor_t83_ul_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="pAccCombat" value="3"/>
+			<mul stat="regHp" value="1.0524"/>
+			<mul stat="pAtk" value="#pAtk"/>
+			<add stat="runSpd" value="#runSpd"/>
+			<add stat="STR" value="#str"/>
+			<sub stat="CON" value="#con"/>
+			<p_defence_trait name="shock" value="#res"/>
+		</for>
+	</skill>
+	<skill id="3538" levels="3" name="Set Effect - Nightmare Light Armor, 2-piece">
+		<table name="#absorbDam">0 3 3</table>
+		<table name="#mDef">1 1.04 1.04</table>
+		<table name="#dex">0 0 1</table>
+		<table name="#con">0 0 1</table>
+		<table name="#res">0 0 70</table>
+		<set name="icon" value="icon.armor_t81_ul_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="regMp" value="1.0526"/>
+			<add stat="absorbDam" value="#absorbDam"/>
+			<mul stat="mDef" value="#mDef"/>
+			<add stat="DEX" value="#dex"/>
+			<sub stat="CON" value="#con"/>
+			<p_defence_trait name="sleep" value="#res"/>
+			<p_defence_trait name="hold" value="#res"/>
+		</for>
+	</skill>
+	<skill id="3539" levels="3" name="Set Effect - Majestic Light Armor, 2-piece">
+		<table name="#pAtk">1 1.08 1.08</table>
+		<table name="#maxMp">0 240 240</table>
+		<table name="#dex">0 0 1</table>
+		<table name="#con">0 0 1</table>
+		<table name="#res">0 0 50</table>
+		<set name="icon" value="icon.armor_t84_ul_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxNoPenaltyLoad" value="5759"/>
+			<add stat="pAccCombat" value="3"/>
+			<mul stat="pAtk" value="#pAtk">
+				<using kind="Bow, Crossbow"/>
+			</mul>
+			<add stat="maxMp" value="#maxMp"/>
+			<add stat="DEX" value="#dex"/>
+			<sub stat="CON" value="#con"/>
+			<p_defence_trait name="shock" value="#res"/>
+		</for>
+	</skill>
+	<skill id="3540" levels="3" name="Set Effect - Nightmare Robe Armor, 2-piece">
+		<table name="#res">0 70 70</table>
+		<table name="#crit">0 30 30</table>
+		<table name="#int">0 0 2</table>
+		<table name="#wit">0 0 2</table>
+		<table name="#mAtk">1 1 1.08</table>
+		<set name="icon" value="icon.armor_t82_ul_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="regMp" value="1.0526"/>
+			<p_defence_trait name="sleep" value="#res"/>
+			<p_defence_trait name="hold" value="#res"/>
+			<add stat="p_magic_critical_dmg_diff" value="#crit"/>
+			<add stat="INT" value="#int"/>
+			<sub stat="WIT" value="#wit"/>
+			<mul stat="mAtk" value="#mAtk"/>			
+		</for>
+	</skill>
+	<skill id="3541" levels="3" name="Set Effect - Majestic Robe Armor, 2-piece">
+		<table name="#men">0 1 1</table>
+		<table name="#int">0 1 1</table>
+		<table name="#maxMp">0 240 240</table>
+		<table name="#mAtkSpd">1 1 1.15</table>
+		<table name="#res">0 0 50</table>
+		<set name="icon" value="icon.armor_t85_ul_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="regMp" value="1.08"/>
+			<add stat="MEN" value="#men"/>
+			<sub stat="INT" value="#int"/>
+			<add stat="maxMp" value="#maxMp"/>		
+			<mul stat="mAtkSpd" value="#mAtkSpd"/>
+			<p_defence_trait name="shock" value="#res"/>
+		</for>
+	</skill>
+	<skill id="3542" levels="9" name="Special Ability: Critical Damage">
+		<table name="#value">203 226 248 269 289 306</table>
+		<table name="#magicLevel">46 49 52 55 58 61</table>
+		<set name="icon" value="icon.skill1242"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="p_critical_damage_diff" value="#value"/>
+		</for>
+	</skill>
+	<skill id="3543" levels="1" name="Equip Shield">
+		<set name="icon" value="icon.skill0091"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="rShld" value="1.0263"/>
+		</for>
+	</skill>
+	<skill id="3544" levels="1" name="Equip Shield">
+		<set name="icon" value="icon.skill0091"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxHp" value="20"/>
+		</for>
+	</skill>
+	<skill id="3545" levels="1" name="Equip Shield">
+		<set name="icon" value="icon.skill0091"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="maxHp" value="198"/>
+		</for>
+	</skill>
+	<skill id="3546" levels="1" name="Equip Shield">
+		<set name="icon" value="icon.skill0091"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="magicResist" value="1.03"/>
+		</for>
+	</skill>
+	<skill id="3547" levels="1" name="Equip Shield">
+		<set name="icon" value="icon.skill0091"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="rShld" value="1.0526"/>
+		</for>
+	</skill>
+	<skill id="3548" levels="1" name="Equip Shield">
+		<set name="icon" value="icon.skill0091"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="rShld" value="1.24"/>
+		</for>
+	</skill>
+	<skill id="3549" levels="1" name="Equip Shield">
+		<set name="icon" value="icon.skill0091"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="rShld" value="1.24"/>
+		</for>
+	</skill>
+	<skill id="3550" levels="1" name="Equip Shield">
+		<set name="icon" value="icon.skill0091"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="rShld" value="1.18"/>
+		</for>
+	</skill>
+	<skill id="3551" levels="1" name="Equip Shield">
+		<set name="icon" value="icon.skill0091"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="reflectDam" value="5"/>
+			<add stat="reflectBowDam" value="5"/>
+			<add stat="reflectPSkillDam" value="5"/>
+			<add stat="reflectMSkillDam" value="5"/>
+		</for>
+	</skill>
+	<skill id="3553" levels="1" name="Imperial Crusader Heavy Armor Set">
+		<set name="icon" value="icon.armor_t88_u_i00"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<sub order="0x10" stat="DEX" value="2"/>
+			<add stat="maxHp" value="445"/>
+			<mul stat="pDef" value="1.08"/>
+			<add order="0x10" stat="STR" value="2"/>
+			<p_defence_trait name="hold" value="70"/>
+			<p_defence_trait name="sleep" value="70"/>
+		</for>
+	</skill>
+	<skill id="3554" levels="1" name="Equip Shield">
+		<set name="icon" value="icon.skill0091"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="bleed" value="80"/>
+			<p_defence_trait name="poison" value="80"/>
+		</for>
+	</skill>
+	<skill id="3555" levels="1" name="Draconic Leather Armor Set">
+		<set name="icon" value="icon.armor_t89_ul_i00"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x10" stat="STR" value="1"/>
+			<add order="0x10" stat="DEX" value="1"/>
+			<sub order="0x10" stat="CON" value="2"/>
+			<add stat="maxMp" value="289"/>
+			<mul stat="pAtkSpd" value="1.04"/>
+			<mul stat="pAtk" value="1.04"/>
+			<add stat="maxNoPenaltyLoad" value="5759"/>
+		</for>
+	</skill>
+	<skill id="3556" levels="1" name="Major Arcana Robe Set">
+		<set name="icon" value="icon.armor_t90_ul_i00"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x10" stat="WIT" value="1"/>
+			<add order="0x10" stat="INT" value="1"/>
+			<sub order="0x10" stat="MEN" value="2"/>
+			<mul stat="mAtk" value="1.17"/>
+			<add stat="runSpd" value="7"/>
+			<add stat="maxNoPenaltyLoad" value="5759"/>
+			<mul stat="concentration" value="0.5"/>
+			<p_defence_trait name="shock" value="50"/>
+		</for>
+	</skill>
+	<skill id="3557" levels="1" name="Valakas\' Necklace">
+		<!--
+		    Description: increase resistance to sleep by 40%, HP +445, increase sleep attack chance by 40%, decrease in re-use delay, increase in P. Atk. and M. Atk. wild magic effect, damage shield effect and increase in resistance to flaming attack.
+		-->
+		<set name="icon" value="icon.accessory_necklace_of_valakas_i00"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add order="0x60" stat="maxHp" value="445"/>
+			<mul stat="pAtk" value="1.04"/>
+			<mul stat="mAtk" value="1.08"/>
+			<add stat="baseMCritRate" value="10"/>
+			<add stat="defenceFire" value="15"/>
+			<p_defence_trait name="sleep" value="40"/>
+			<p_attack_trait name="sleep" value="40"/>
+			<mul stat="mReuse" value="0.90"/>
+			<mul stat="pReuse" value="0.90"/>
+			<add stat="reflectDam" value="5"/>
+			<add stat="reflectBowDam" value="5"/>
+			<add stat="reflectPSkillDam" value="5"/>
+			<add stat="reflectMSkillDam" value="5"/>
+		</for>
+	</skill>
+	<skill id="3558" levels="1" name="Antharas\' Earring">
+		<!--
+		    Description: increase resist bleed by 50%, increase bleed attack chance by 40%, increase healing effects, vampiric rage, 30% increase in stun/abnormal mental state resistance, increase stun/abnormal mental state attack chance by 30%, decrease MP consumption, and increase resistance to earth attacks.
+		-->
+		<set name="icon" value="icon.accessory_earring_of_antaras_i00"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="hpEff" value="1.10"/>
+			<add stat="absorbDam" value="4"/>
+			<p_defence_trait name="bleed" value="40"/>
+			<p_defence_trait name="derangement" value="30"/>
+			<p_defence_trait name="shock" value="30"/>
+			<p_attack_trait name="bleed" value="40"/>
+			<p_attack_trait name="derangement" value="30"/>
+			<p_attack_trait name="shock" value="30"/>
+			<add stat="defenceEarth" value="15"/>
+			<mul stat="mpConsum" value="0.95"/>
+		</for>
+	</skill>
+	<skill id="3559" levels="2" name="Zaken\'s Earring">
+		<!--
+			3559	1	Серьга Закена	Увеличивает кровопускающие/шоковые/ментальные атаки и усиливает эффективность магии, восстанавливающей HP и восстанавливает жизни за счет урона, нанесенного врагу (исключая урон от умений и дальних атак).	none	none
+			3559	2	Серьга Бессмертного Закена	Увеличивает сопротивлетие атакам тьмой, кровотечению, шоку, ментальным атакам, увеличивает бонус атак, вызывающих кровотечение, шок, ментальных атак, увеличивает мощность получаемой исцеляющей магии и восстанавливает часть HP от нанесенного противнику урона. Не действует при использовании умений и дистанционных атаках.	none	none
+		-->
+		<table name="#p_defence_trait_derangement">20 30</table>
+		<table name="#p_defence_trait_shock">20 30</table>
+		<table name="#p_attack_trait_derangement">20 30</table>
+		<table name="#p_attack_trait_shock">20 30</table>
+		<table name="#hpEff">1.1 1.15</table>
+		<table name="#defenceUnholy">0 15</table>
+		<set name="icon" value="icon.accessory_earring_of_zaken_i00"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="hpEff" value="#hpEff"/>
+			<add stat="absorbDam" value="4"/>
+			<p_defence_trait name="bleed" value="30"/>
+			<p_defence_trait name="derangement" value="#p_defence_trait_derangement"/>
+			<p_defence_trait name="shock" value="#p_defence_trait_shock"/>
+			<p_attack_trait name="bleed" value="30"/>
+			<p_attack_trait name="derangement" value="#p_attack_trait_derangement"/>
+			<p_attack_trait name="shock" value="#p_attack_trait_shock"/>
+			<add stat="defenceUnholy" value="#defenceUnholy"/>
+		</for>
+	</skill>
+	<skill id="3560" levels="3" name="Orfen\'s Earring">
+		<table name="#icon">icon.accessory_earring_of_orfen_i00 icon.accessory_earring_of_orfen_i02 icon.accessory_earring_of_orfen_i03</table>
+		<table name="#p_defence_trait_hold">10 15 20</table>
+		<table name="#p_attack_trait_hold">10 15 20</table>
+		<table name="#p_defence_trait_derangement">5 10 15</table>
+		<table name="#p_attack_trait_derangement">5 10 15</table>
+		<table name="#hpEff">1.02 1.04 1.06</table>
+		<table name="#mpConsum">0.98 0.97 0.95</table>
+		<table name="#absorbDamMp">0 0 3</table>
+		<set name="icon" value="#icon"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="hold" value="#p_defence_trait_hold"/>
+			<p_attack_trait name="hold" value="#p_attack_trait_hold"/>
+			<p_defence_trait name="derangement" value="#p_defence_trait_derangement"/>
+			<p_attack_trait name="derangement" value="#p_attack_trait_derangement"/>
+			<mul stat="hpEff" value="#hpEff"/>
+			<mul stat="mpConsum" value="#mpConsum"/>
+			<mul stat="mpConsumePhysical" value="#mpConsum"/>
+			<mul stat="mpDanceConsume" value="#mpConsum"/>
+			<add stat="absorbDamMp" value="#absorbDamMp"/>
+		</for>
+	</skill>
+	<skill id="3561" levels="3" name="Baium\'s Ring">
+		<table name="#icon">icon.accessory_ring_of_baium_i00 icon.accessory_ring_of_baium_i02 icon.accessory_ring_of_baium_i03</table>
+		<table name="#p_defence_trait_bleed">5 10 15</table>
+		<table name="#p_attack_trait_bleed">5 10 15</table>
+		<table name="#p_defence_trait_shock">10 15 20</table>
+		<table name="#p_attack_trait_shock">10 15 20</table>
+		<table name="#pAtkSpd">1.02 1.03 1.04</table>
+		<table name="#mAtkSpd">1.02 1.03 1.04</table>
+		<table name="#p_critical_damage_per">0 0 15</table>
+		<table name="#p_magic_critical_dmg_per">0 0 10</table>
+		<table name="#pSkillPower">1.02 1.04 1.06 </table>
+		<table name="#mSkillPower">1.02 1.04 1.06 </table>
+		<set name="icon" value="#icon"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="bleed" value="#p_defence_trait_bleed"/>
+			<p_attack_trait name="bleed" value="#p_attack_trait_bleed"/>
+			<p_defence_trait name="shock" value="#p_defence_trait_shock"/>
+			<p_attack_trait name="shock" value="#p_attack_trait_shock"/>
+			<mul stat="pAtkSpd" value="#pAtkSpd"/>
+			<mul stat="mAtkSpd" value="#mAtkSpd"/>
+			<mul stat="p_skill_power" value="#pSkillPower"/>
+			<mul stat="mSkillPower" value="#mSkillPower"/>
+			<add stat="p_critical_damage_per" value="#p_critical_damage_per"/>
+			<add stat="p_magic_critical_dmg_per" value="#p_magic_critical_dmg_per"/>
+		</for>
+	</skill>
+	<skill id="3562" levels="3" name="Queen Ant\'s Ring">
+		<table name="#icon">icon.accessory_ring_of_queen_ant_i00 icon.accessory_ring_of_queen_ant_i02 icon.accessory_ring_of_queen_ant_i03</table>
+		<table name="#p_defence_trait_poison">10 15 20</table>
+		<table name="#p_attack_trait_poison">10 15 20</table>
+		<table name="#pAccCombat">1 2 3</table>
+		<table name="#mAccCombat">1 2 3</table>
+		<table name="#pAtk">1.04 1.06 1.07</table>
+		<table name="#mAtk">1.04 1.06 1.07</table>
+		<table name="#p_critical_damage_per">0 0 10</table>
+		<table name="#p_magic_critical_dmg_per">0 0 5</table>
+		<set name="icon" value="#icon"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="poison" value="#p_defence_trait_poison"/>
+			<p_attack_trait name="poison" value="#p_attack_trait_poison"/>
+			<add stat="pAccCombat" value="#pAccCombat"/>
+			<add stat="mAccCombat" value="#mAccCombat"/>
+			<mul stat="pAtk" value="#pAtk"/>
+			<mul stat="mAtk" value="#mAtk"/>
+			<add stat="p_critical_damage_per" value="#p_critical_damage_per"/>
+			<add stat="p_magic_critical_dmg_per" value="#p_magic_critical_dmg_per"/>
+		</for>
+	</skill>
+	<skill id="3563" levels="3" name="Ring of Core">
+		<table name="#icon">icon.accessory_ring_of_core_i00 icon.accessory_ring_of_core_i02 icon.accessory_ring_of_core_i03</table>
+		<table name="#p_defence_trait_derangement">10 15 20</table>
+		<table name="#p_attack_trait_derangement">10 15 20</table>
+		<table name="#pEvasRate">1 2 3</table>
+		<table name="#mEvasRate">1 2 3</table>
+		<table name="#receive_p_damage_power">0.98 0.96 0.94</table>
+		<table name="#receive_m_damage_power">0.98 0.96 0.94</table>
+		<set name="icon" value="#icon"/>
+		<set name="magicLevel" value="75"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="derangement" value="#p_defence_trait_derangement"/>
+			<p_attack_trait name="derangement" value="#p_attack_trait_derangement"/>
+			<add stat="pEvasRate" value="#pEvasRate"/>
+			<add stat="mEvasRate" value="#mEvasRate"/>
+			<mul stat="receive_p_damage_power" value="#receive_p_damage_power"/>
+			<mul stat="receive_m_damage_power" value="#receive_m_damage_power"/>
+		</for>
+	</skill>
+	<skill id="3571" levels="2" name="Special Ability: Critical Stun">
+		<table name="#activateRate">27 25</table>
+		<table name="#magicLevel">75 84</table>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="physical_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="STUN"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="3574" levels="3" name="Special Ability: Critical Slow">
+		<table name="#Rate">16 24 33</table>
+		<table name="#magicLevel">75 84 84</table>
+		<set name="icon" value="icon.skill1160"/>
+		<set name="castRange" value="1000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="activateRate" value="#Rate"/>
+		<set name="lv_bonus_rate" value="1"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul order="0x50" stat="runSpd" value="0.7"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3577" levels="3" name="Special Ability: Magic Hold">
+		<table name="#pvpDmg">1.00 1.05 1.1</table>
+		<table name="#magicLevel">75 84 85</table>
+		<set name="icon" value="icon.skill1201"/>
+		<set name="castRange" value="1000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="ROOT"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="root_magically"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="activateRate" value="80"/>
+		<set name="lv_bonus_rate" value="2"/>
+		<set name="basic_property" value="magic_abnormal_resist"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="ROOT"/>
+		<set name="operate_type" value="A2"/>
+		<set name="trait" value="HOLD"/>
+		<for>
+			<effect name="p_block_move"/>
+			<mul stat="pvpMagicSkillDmgBonus" value="#pvpDmg"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="#pvpDmg"/>
+			<mul stat="pvpPhysDmgBonus" value="#pvpDmg"/>
+		</for>
+	</skill>
+	<skill id="3578" levels="1" name="Special Ability: Infinity Sword">
+		<set name="icon" value="icon.weapon_the_sword_of_hero_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pvpMagicSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysDmgBonus" value="1.05"/>
+			<mul stat="maxHp" value="1.2"/>
+			<mul stat="maxMp" value="1.15"/>
+			<mul stat="maxCp" value="1.3"/>
+			<mul stat="pAtk" value="1.1"/>
+			<mul stat="pAtkSpd" value="1.05"/>
+		</for>
+	</skill>
+	<skill id="3579" levels="1" name="Infinity Power - Reflect">
+		<set name="icon" value="icon.skill0086"/>
+		<set name="reuseDelay" value="600000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add stat="reflectDam" value="8"/>
+				<add stat="reflectBowDam" value="8"/>
+				<add stat="reflectPSkillDam" value="8"/>
+				<add stat="reflectMSkillDam" value="8"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3580" levels="1" name="Special Ability: Infinity Axe">
+		<set name="icon" value="icon.weapon_the_axe_of_hero_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pvpMagicSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysDmgBonus" value="1.05"/>
+			<mul stat="maxHp" value="1.2"/>
+			<mul stat="maxMp" value="1.15"/>
+			<mul stat="maxCp" value="1.3"/>
+			<mul stat="pAtk" value="1.1"/>
+			<mul stat="pAtkSpd" value="1.05"/>
+		</for>
+	</skill>
+	<skill id="3581" levels="1" name="Infinity Power - Tenacity">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="600000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add stat="reflectDam" value="10"/>
+				<add stat="reflectBowDam" value="10"/>
+				<add stat="reflectPSkillDam" value="10"/>
+				<add stat="reflectMSkillDam" value="10"/>
+			</effect>
+			<effect name="RestoreHP" interval="1" value="460"/>
+		</for>
+	</skill>
+	<skill id="3582" levels="1" name="Special Ability: Infinity Slasher">
+		<set name="icon" value="icon.weapon_the_two_handed_sword_of_hero_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pvpMagicSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysDmgBonus" value="1.05"/>
+			<mul stat="maxHp" value="1.2"/>
+			<mul stat="maxMp" value="1.15"/>
+			<mul stat="maxCp" value="1.3"/>
+			<mul stat="pAtk" value="1.1"/>
+			<add stat="p_critical_damage_per" value="10"/>
+		</for>
+	</skill>
+	<skill id="3584" levels="1" name="Infinity Power - Protection">
+		<set name="icon" value="icon.skill0100"/>
+		<set name="reuseDelay" value="600000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect name="p_block_debuff">
+				<def name="max_disabled_debuffs" value="5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3585" levels="1" name="Special Ability: Infinity Dualsword">
+		<set name="icon" value="icon.weapon_the_dualsword_of_hero_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pvpMagicSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysDmgBonus" value="1.05"/>
+			<mul stat="maxHp" value="1.2"/>
+			<mul stat="maxMp" value="1.15"/>
+			<mul stat="maxCp" value="1.3"/>
+			<mul stat="pAtk" value="1.05"/>
+			<mul stat="pAtkSpd" value="1.05"/>
+			<add stat="p_critical_damage_per" value="5"/>
+		</for>
+	</skill>
+	<skill id="3586" levels="1" name="Infinity Power - Refresh">
+		<set name="icon" value="icon.skill3123"/>
+		<set name="reuseDelay" value="600000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="mpConsum" value="0.9"/>
+				<mul stat="mpConsumePhysical" value="0.9"/>
+				<mul stat="mpDanceConsume" value="0.9"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3587" levels="1" name="Special Ability: Infinity Fighter">
+		<set name="icon" value="icon.weapon_the_fist_of_hero_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pvpMagicSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysDmgBonus" value="1.05"/>
+			<mul stat="maxHp" value="1.2"/>
+			<mul stat="maxMp" value="1.15"/>
+			<mul stat="maxCp" value="1.3"/>
+			<add stat="pCritRate" value="20"/>
+			<mul stat="pAtkSpd" value="1.05"/>
+		</for>
+	</skill>
+	<skill id="3589" levels="1" name="Special Ability: Infinity Dagger">
+		<set name="icon" value="icon.weapon_the_dagger_of_hero_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pvpMagicSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysDmgBonus" value="1.05"/>
+			<mul stat="maxHp" value="1.15"/>
+			<mul stat="maxMp" value="1.2"/>
+			<mul stat="maxCp" value="1.3"/>
+			<add stat="pCritRate" value="20"/>
+			<add stat="p_critical_damage_per" value="20"/>
+		</for>
+	</skill>
+	<skill id="3590" levels="1" name="Infinity Power - Immortal">
+		<set name="icon" value="icon.skill0410"/>
+		<set name="reuseDelay" value="600000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="blowRate" value="1.2"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3591" levels="1" name="Special Ability: Infinity Spear">
+		<set name="icon" value="icon.weapon_the_pole_of_hero_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pvpMagicSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysDmgBonus" value="1.05"/>
+			<mul stat="maxHp" value="1.2"/>
+			<mul stat="maxMp" value="1.15"/>
+			<mul stat="maxCp" value="1.3"/>
+			<mul stat="pAtk" value="1.1"/>
+			<add stat="p_critical_damage_per" value="10"/>
+			<add stat="poleTargetCount" value="4"/>
+		</for>
+	</skill>
+	<skill id="3593" levels="1" name="Special Ability: Infinity Bow">
+		<set name="icon" value="icon.weapon_the_bow_of_hero_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="maxHp" value="1.15"/>
+			<mul stat="maxMp" value="1.2"/>
+			<mul stat="maxCp" value="1.3"/>
+			<mul stat="pAtkSpd" value="1.1"/>
+			<mul stat="mpConsumePhysical" value="0.95"/>
+			<mul stat="pvpMagicSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysDmgBonus" value="1.05"/>
+		</for>
+	</skill>
+	<skill id="3594" levels="1" name="Infinity Power - Archery">
+		<set name="icon" value="icon.skill0431"/>
+		<set name="reuseDelay" value="600000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add stat="pAtkSpd" value="15">
+					<using kind="Bow"/>
+				</add>
+				<add stat="pAtkRange" value="100">
+					<using kind="Bow"/>
+				</add>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3595" levels="1" name="Special Ability: Infinity Scepter">
+		<set name="icon" value="icon.weapon_the_staff_of_hero_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pvpMagicSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysDmgBonus" value="1.05"/>
+			<mul stat="maxHp" value="1.1"/>
+			<mul stat="maxMp" value="1.25"/>
+			<mul stat="maxCp" value="1.3"/>
+			<mul stat="mAtk" value="1.1"/>
+			<add stat="p_magic_critical_dmg_per" value="10"/>
+		</for>
+	</skill>
+	<skill id="3596" levels="1" name="Infinity Power - Vampiric Mana">
+		<set name="icon" value="icon.skill1268"/>
+		<set name="reuseDelay" value="600000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add stat="absorbDamMp" value="3"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3597" levels="1" name="Special Ability: Infinity Rod">
+		<set name="icon" value="icon.weapon_the_mace_of_hero_i00"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pvpMagicSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="1.05"/>
+			<mul stat="pvpPhysDmgBonus" value="1.05"/>
+			<mul stat="maxHp" value="1.1"/>
+			<mul stat="maxMp" value="1.25"/>
+			<mul stat="maxCp" value="1.3"/>
+			<mul stat="mAtkSpd" value="1.05"/>
+			<add stat="mCritRate" value="20"/>
+		</for>
+	</skill>
+	<skill id="3598" levels="1" name="Infinity Power - Mana Limit">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="600000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<mul stat="mpConsum" value="0"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3599" levels="1" name="Polearm Multi-attack">
+		<set name="icon" value="icon.skill0216"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="poleTargetCount" value="3">
+				<using kind="Pole"/>
+			</add>
+		</for>
+	</skill>
+</list>

@@ -1,0 +1,524 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "zone.dtd">
+<list>
+	<zone name="[cruma_boss_damage_zone]" type="damage" >
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<polygon>
+			<coords loc="17869 108566 -6519 -6319"/>
+			<coords loc="18071 108774 -6519 -6319"/>
+			<coords loc="18072 109060 -6519 -6319"/>
+			<coords loc="17865 109265 -6519 -6319"/>
+			<coords loc="17580 109264 -6519 -6319"/>
+			<coords loc="17379 109062 -6519 -6319"/>
+			<coords loc="17379 108774 -6519 -6319"/>
+			<coords loc="17584 108569 -6519 -6319"/>
+		</polygon>
+	</zone>
+	<zone name="[aden_damage_8]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event_trigger_id" value="2418008"/>
+		<polygon>
+			<coords loc="149084 7070 -560 -360"/>
+			<coords loc="149349 7069 -560 -360"/>
+			<coords loc="149349 7203 -560 -360"/>
+			<coords loc="149084 7204 -560 -360"/>
+		</polygon>
+	</zone>
+	<zone name="[aden_damage_7]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event_trigger_id" value="2418007"/>
+		<polygon>
+			<coords loc="149084 6942 -528 -328"/>
+			<coords loc="149349 6941 -528 -328"/>
+			<coords loc="149349 7075 -528 -328"/>
+			<coords loc="149084 7076 -528 -328"/>
+		</polygon>
+	</zone>
+	<zone name="[aden_damage_6]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event_trigger_id" value="2418006"/>
+		<polygon>
+			<coords loc="149084 6814 -528 -328"/>
+			<coords loc="149349 6813 -528 -328"/>
+			<coords loc="149349 6947 -528 -328"/>
+			<coords loc="149084 6948 -528 -328"/>
+		</polygon>
+	</zone>
+	<zone name="[aden_damage_5]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event_trigger_id" value="2418005"/>
+		<polygon>
+			<coords loc="149084 6686 -528 -328"/>
+			<coords loc="149349 6685 -528 -328"/>
+			<coords loc="149349 6819 -528 -328"/>
+			<coords loc="149084 6820 -528 -328"/>
+		</polygon>
+	</zone>
+	<zone name="[aden_damage_4]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event_trigger_id" value="2418004"/>
+		<polygon>
+			<coords loc="145548 7054 -528 -328"/>
+			<coords loc="145813 7053 -528 -328"/>
+			<coords loc="145813 7187 -528 -328"/>
+			<coords loc="145548 7188 -528 -328"/>
+		</polygon>
+	</zone>
+	<zone name="[aden_damage_3]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event_trigger_id" value="2418003"/>
+		<polygon>
+			<coords loc="145548 6926 -496 -296"/>
+			<coords loc="145813 6925 -496 -296"/>
+			<coords loc="145813 7059 -496 -296"/>
+			<coords loc="145548 7060 -496 -296"/>
+		</polygon>
+	</zone>
+	<zone name="[aden_damage_2]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event_trigger_id" value="2418002"/>
+		<polygon>
+			<coords loc="145548 6798 -496 -296"/>
+			<coords loc="145813 6797 -496 -296"/>
+			<coords loc="145813 6931 -496 -296"/>
+			<coords loc="145548 6932 -496 -296"/>
+		</polygon>
+	</zone>
+	<zone name="[aden_damage_1]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event_trigger_id" value="2418001"/>
+		<polygon>
+			<coords loc="145548 6670 -496 -296"/>
+			<coords loc="145813 6669 -496 -296"/>
+			<coords loc="145813 6803 -496 -296"/>
+			<coords loc="145548 6804 -496 -296"/>
+		</polygon>
+	</zone>
+	<zone name="[gludio_damage_1]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event_trigger_id" value="1921001"/>
+		<polygon>
+			<coords loc="-18255 110790 -2627 -2427"/>
+			<coords loc="-17971 110790 -2627 -2427"/>
+			<coords loc="-17972 111174 -2627 -2427"/>
+			<coords loc="-18256 111174 -2627 -2427"/>
+		</polygon>
+	</zone>
+	<zone name="[gludio_damage_2]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event_trigger_id" value="1921002"/>
+		<polygon>
+			<coords loc="-19213 107137 -2595 -2395"/>
+			<coords loc="-18827 107137 -2595 -2395"/>
+			<coords loc="-18827 107404 -2595 -2395"/>
+			<coords loc="-19213 107404 -2595 -2395"/>
+		</polygon>
+	</zone>
+	<zone name="[dion_damage_1]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event_trigger_id" value="2022001"/>
+		<polygon>
+			<coords loc="22215 158960 -2821 30341"/>
+			<coords loc="21931 158960 -2821 30341"/>
+			<coords loc="21932 158576 -2821 30341"/>
+			<coords loc="22216 158576 -2821 30341"/>
+		</polygon>
+	</zone>
+	<zone name="[dion_damage_2]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event_trigger_id" value="2022002"/>
+		<polygon>
+			<coords loc="23173 162613 -2789 30373"/>
+			<coords loc="22787 162613 -2789 30373"/>
+			<coords loc="22787 162346 -2789 30373"/>
+			<coords loc="23173 162346 -2789 30373"/>
+		</polygon>
+	</zone>
+	<zone name="[giran_damage_1]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event_trigger_id" value="2322001"/>
+		<polygon>
+			<coords loc="115132 144954 -2694 13957"/>
+			<coords loc="115132 145238 -2694 13957"/>
+			<coords loc="114748 145237 -2694 13957"/>
+			<coords loc="114748 144953 -2694 13957"/>
+		</polygon>
+	</zone>
+	<zone name="[giran_damage_2]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event_trigger_id" value="2322002"/>
+		<polygon>
+			<coords loc="118785 143996 -2662 13989"/>
+			<coords loc="118785 144382 -2662 13989"/>
+			<coords loc="118518 144382 -2662 13989"/>
+			<coords loc="118518 143996 -2662 13989"/>
+		</polygon>
+	</zone>
+	<zone name="[oren_damage_1]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event_trigger_id" value="2219001"/>
+		<polygon>
+			<coords loc="81208 37049 -2421 13957"/>
+			<coords loc="81208 37333 -2421 13957"/>
+			<coords loc="80824 37332 -2421 13957"/>
+			<coords loc="80824 37048 -2421 13957"/>
+		</polygon>
+	</zone>
+	<zone name="[oren_damage_2]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event_trigger_id" value="2219002"/>
+		<polygon>
+			<coords loc="84861 36091 -2389 13989"/>
+			<coords loc="84861 36477 -2389 13989"/>
+			<coords loc="84594 36477 -2389 13989"/>
+			<coords loc="84594 36091 -2389 13989"/>
+		</polygon>
+	</zone>
+	<zone name="[innadrile_damage_1]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event_trigger_id" value="2325001"/>
+		<polygon>
+			<coords loc="116166 247739 -917 30341"/>
+			<coords loc="115882 247739 -917 30341"/>
+			<coords loc="115883 247355 -917 30341"/>
+			<coords loc="116167 247355 -917 30341"/>
+		</polygon>
+	</zone>
+	<zone name="[innadrile_damage_2]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event_trigger_id" value="2325002"/>
+		<polygon>
+			<coords loc="117124 251392 -885 30373"/>
+			<coords loc="116738 251392 -885 30373"/>
+			<coords loc="116738 251125 -885 30373"/>
+			<coords loc="117124 251125 -885 30373"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_damage_1]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event_trigger_id" value="2416001"/>
+		<polygon>
+			<coords loc="149235 -47768 -1789 -1489"/>
+			<coords loc="149579 -47608 -1789 -1489"/>
+			<coords loc="149515 -47472 -1789 -1489"/>
+			<coords loc="149169 -47634 -1789 -1489"/>
+		</polygon>
+	</zone>
+	<zone name="[godad_damage_2]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event_trigger_id" value="2416002"/>
+		<polygon>
+			<coords loc="145352 -47607 -1789 -1439"/>
+			<coords loc="145696 -47768 -1789 -1439"/>
+			<coords loc="145760 -47633 -1789 -1439"/>
+			<coords loc="145415 -47471 -1789 -1439"/>
+		</polygon>
+	</zone>
+	<zone name="[rune_damage_1]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event_trigger_id" value="2016002"/>
+		<polygon>
+			<coords loc="13785 -47663 509 809"/>
+			<coords loc="14046 -47854 509 809"/>
+			<coords loc="14203 -47668 509 809"/>
+			<coords loc="13916 -47450 509 809"/>
+		</polygon>
+	</zone>
+	<zone name="[rune_damage_2]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event_trigger_id" value="2016001"/>
+		<polygon>
+			<coords loc="13917 -50851 518 818"/>
+			<coords loc="14209 -50630 518 818"/>
+			<coords loc="14052 -50447 518 818"/>
+			<coords loc="13788 -50647 518 818"/>
+		</polygon>
+	</zone>
+	<zone name="[schutt_damage_1]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event_trigger_id" value="2213002"/>
+		<polygon>
+			<coords loc="75440 -151667 -93 207"/>
+			<coords loc="75787 -151830 -93 207"/>
+			<coords loc="75849 -151697 -93 207"/>
+			<coords loc="75503 -151535 -93 207"/>
+		</polygon>
+	</zone>
+	<zone name="[schutt_damage_2]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<set name="move_bonus" value="-80"/>
+		<set name="event_trigger_id" value="2213001"/>
+		<polygon>
+			<coords loc="79322 -151831 -77 223"/>
+			<coords loc="79668 -151670 -77 223"/>
+			<coords loc="79606 -151535 -77 223"/>
+			<coords loc="79261 -151699 -77 223"/>
+		</polygon>
+	</zone>
+	<zone name="[devil_damage_001]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="600"/>
+		<set name="off_time" value="60"/>
+		<set name="random_time" value="20"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<polygon>
+			<coords loc="51296 205421 -4048 -3848"/>
+			<coords loc="51788 205266 -4048 -3848"/>
+			<coords loc="51496 205621 -4048 -3848"/>
+			<coords loc="51072 205896 -4048 -3848"/>
+		</polygon>
+	</zone>
+	<zone name="[devil_damage_002]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="600"/>
+		<set name="off_time" value="60"/>
+		<set name="random_time" value="20"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<polygon>
+			<coords loc="51820 205340 -4032 -3732"/>
+			<coords loc="52535 205305 -4032 -3732"/>
+			<coords loc="52535 205436 -4032 -3732"/>
+			<coords loc="51705 205528 -4032 -3732"/>
+		</polygon>
+	</zone>
+	<zone name="[devil_damage_003]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="600"/>
+		<set name="off_time" value="60"/>
+		<set name="random_time" value="20"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<polygon>
+			<coords loc="43439 213259 -3776 -3626"/>
+			<coords loc="43589 213249 -3776 -3626"/>
+			<coords loc="43750 213760 -3776 -3626"/>
+			<coords loc="43680 214092 -3776 -3626"/>
+		</polygon>
+	</zone>
+	<zone name="[devil_damage_004]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="600"/>
+		<set name="off_time" value="60"/>
+		<set name="random_time" value="20"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<polygon>
+			<coords loc="42805 214266 -3764 -3564"/>
+			<coords loc="43627 214195 -3764 -3564"/>
+			<coords loc="43386 214355 -3764 -3564"/>
+			<coords loc="42805 214405 -3764 -3564"/>
+		</polygon>
+	</zone>
+	<zone name="[devil_damage_005]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="600"/>
+		<set name="off_time" value="60"/>
+		<set name="random_time" value="20"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<polygon>
+			<coords loc="43511 218426 -3856 -3656"/>
+			<coords loc="43711 218426 -3856 -3656"/>
+			<coords loc="43711 218759 -3856 -3656"/>
+			<coords loc="43511 218759 -3856 -3656"/>
+		</polygon>
+	</zone>
+	<zone name="[devil_damage_006]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="600"/>
+		<set name="off_time" value="60"/>
+		<set name="random_time" value="20"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<polygon>
+			<coords loc="43012 218850 -3940 -3740"/>
+			<coords loc="43708 218850 -3940 -3740"/>
+			<coords loc="43719 219260 -3940 -3740"/>
+			<coords loc="43001 219260 -3940 -3740"/>
+		</polygon>
+	</zone>
+	<zone name="[devil_damage_007]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="600"/>
+		<set name="off_time" value="60"/>
+		<set name="random_time" value="20"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<polygon>
+			<coords loc="50630 211383 -3060 -2860"/>
+			<coords loc="51129 211383 -3060 -2860"/>
+			<coords loc="51129 211858 -3060 -2860"/>
+			<coords loc="50642 211858 -3060 -2860"/>
+		</polygon>
+	</zone>
+	<zone name="[devil_damage_008]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="600"/>
+		<set name="off_time" value="60"/>
+		<set name="random_time" value="20"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<polygon>
+			<coords loc="51820 206520 -4008 -3608"/>
+			<coords loc="52792 206500 -4008 -3608"/>
+			<coords loc="52812 207128 -4008 -3608"/>
+			<coords loc="51844 207060 -4008 -3608"/>
+		</polygon>
+	</zone>
+	<zone name="[devil_damage_009]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="600"/>
+		<set name="off_time" value="60"/>
+		<set name="random_time" value="20"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<polygon>
+			<coords loc="50673 210566 -3056 -2706"/>
+			<coords loc="51054 210572 -3056 -2706"/>
+			<coords loc="51054 211317 -3056 -2706"/>
+			<coords loc="50667 211311 -3056 -2706"/>
+		</polygon>
+	</zone>
+	<zone name="[devil_damage_010]" type="damage" >
+		<set name="enabled" value="false"/>
+		<set name="target" value="pc"/>
+		<set name="initial_delay" value="1"/>
+		<set name="on_time" value="600"/>
+		<set name="off_time" value="60"/>
+		<set name="random_time" value="20"/>
+		<set name="damage_on_hp" value="200"/>
+		<set name="damage_on_mp" value="0"/>
+		<set name="message_no" value="686"/>
+		<polygon>
+			<coords loc="50608 209718 -2736 -2536"/>
+			<coords loc="51145 209718 -2736 -2536"/>
+			<coords loc="51150 210201 -2736 -2536"/>
+			<coords loc="50614 210201 -2736 -2536"/>
+		</polygon>
+	</zone>
+</list>

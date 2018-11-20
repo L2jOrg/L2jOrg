@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "zone.dtd">
+<list>
+	<zone name="[SoD_trap_center]" type="dummy" >
+		<set name="reflectionId" value="401"/>
+		<set name="reuse" value="3600"/>
+		<set name="monsters" value="100:22546,22546,22544,22544,22538,22537,22537"/>
+		<polygon>
+			<coords loc="-251680 217752 -12304 -12204"/>
+			<coords loc="-251192 217752 -12304 -12204"/>
+			<coords loc="-251280 217185 -12296 -12196"/>
+			<coords loc="-251692 217185 -12296 -12196"/>
+		</polygon>
+	</zone>
+	<zone name="[SoD_trap_left]" type="dummy" >
+		<set name="reflectionId" value="401"/>
+		<set name="reuse" value="3600"/>
+		<set name="monsters" value="100:22544,22544,22544,22547,22542,22537,22537"/>
+		<polygon>
+			<coords loc="-252344 216856 -12256 -12156"/>
+			<coords loc="-252392 216344 -12248 -12148"/>
+			<coords loc="-251896 216328 -12248 -12148"/>
+			<coords loc="-251896 216840 -12248 -12148"/>
+		</polygon>
+	</zone>
+	<zone name="[SoD_trap_right]" type="dummy" >
+		<set name="reflectionId" value="401"/>
+		<set name="reuse" value="3600"/>
+		<set name="monsters" value="100:22544,22544,22544,22547,22542,22537,22537"/>
+		<polygon>
+			<coords loc="-250904 216856 -12256 -12156"/>
+			<coords loc="-250936 216264 -12248 -12148"/>
+			<coords loc="-250424 216248 -12248 -12148"/>
+			<coords loc="-250424 216840 -12256 -12156"/>
+		</polygon>
+	</zone>
+	<zone name="[SoD_trap_left_back]" type="dummy" >
+		<set name="reflectionId" value="401"/>
+		<set name="reuse" value="3600"/>
+		<set name="monsters" value="100:22547,22541,22537,22539,22539,22548,22548"/>
+		<polygon>
+			<coords loc="-249800 215944 -12216 -12116"/>
+			<coords loc="-249832 215576 -12208 -12108"/>
+			<coords loc="-250472 215544 -12200 -12100"/>
+			<coords loc="-250280 215944 -12200 -12100"/>
+		</polygon>
+	</zone>
+	<zone name="[SoD_trap_right_back]" type="dummy" >
+		<set name="reflectionId" value="401"/>
+		<set name="reuse" value="3600"/>
+		<set name="monsters" value="100:22547,22541,22537,22539,22539,22548,22548"/>
+		<polygon>
+			<coords loc="-252648 215992 -12216 -12116"/>
+			<coords loc="-253096 215992 -12224 -12124"/>
+			<coords loc="-253080 215544 -12208 -12108"/>
+			<coords loc="-252360 215576 -12200 -12100"/>
+		</polygon>
+	</zone>
+</list>

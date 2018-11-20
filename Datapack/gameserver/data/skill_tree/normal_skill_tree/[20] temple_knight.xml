@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<normal_skill_tree>
+		<class id="20">	<!--Рыцарь Евы-->
+			<skill id="28" level="13" name="Агрессия(Aggression)" cost="67000" min_level="40"/>
+			<skill id="28" level="14" name="Агрессия(Aggression)" cost="67000" min_level="40"/>
+			<skill id="28" level="15" name="Агрессия(Aggression)" cost="67000" min_level="40"/>
+			<skill id="18" level="1" name="Аура Ненависти(Aggression Aura)" cost="67000" min_level="40"/>
+			<skill id="18" level="2" name="Аура Ненависти(Aggression Aura)" cost="67000" min_level="40"/>
+			<skill id="18" level="3" name="Аура Ненависти(Aggression Aura)" cost="67000" min_level="40"/>
+			<skill id="217" level="9" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="67000" min_level="40"/>
+			<skill id="217" level="10" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="67000" min_level="40"/>
+			<skill id="217" level="11" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="67000" min_level="40"/>
+			<skill id="232" level="16" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="67000" min_level="40"/>
+			<skill id="232" level="17" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="67000" min_level="40"/>
+			<skill id="232" level="18" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="67000" min_level="40"/>
+			<skill id="153" level="3" name="Владение Щитом(Shield Mastery)" cost="67000" min_level="40"/>
+			<skill id="21" level="2" name="Вывести Яд(Poison Recovery)" cost="67000" min_level="40"/>
+			<skill id="147" level="15" name="Магическое Сопротивление(M. Def.)" cost="67000" min_level="40"/>
+			<skill id="147" level="16" name="Магическое Сопротивление(M. Def.)" cost="67000" min_level="40"/>
+			<skill id="147" level="17" name="Магическое Сопротивление(M. Def.)" cost="67000" min_level="40"/>
+			<skill id="102" level="2" name="Опутать(Entangle)" cost="67000" min_level="40"/>
+			<skill id="15" level="16" name="Очарование(Charm)" cost="67000" min_level="40"/>
+			<skill id="15" level="17" name="Очарование(Charm)" cost="67000" min_level="40"/>
+			<skill id="15" level="18" name="Очарование(Charm)" cost="67000" min_level="40"/>
+			<skill id="10" level="1" name="Призвать Штормовой Кубик(Summon Storm Cubic)" cost="67000" min_level="40"/>
+			<skill id="58" level="19" name="Природное Лечение(Elemental Heal)" cost="67000" min_level="40"/>
+			<skill id="58" level="20" name="Природное Лечение(Elemental Heal)" cost="67000" min_level="40"/>
+			<skill id="58" level="21" name="Природное Лечение(Elemental Heal)" cost="67000" min_level="40"/>
+			<skill id="197" level="1" name="Святая Броня(Holy Armor)" cost="67000" min_level="40"/>
+			<skill id="123" level="1" name="Стена Духа(Spirit Barrier)" item_id="3051" cost="67000" min_level="40"/>
+			<skill id="400" level="1" name="Трибунал(Tribunal)" cost="67000" min_level="40"/>
+			<skill id="28" level="16" name="Агрессия(Aggression)" cost="78000" min_level="41"/>
+			<skill id="18" level="4" name="Аура Ненависти(Aggression Aura)" cost="78000" min_level="41"/>
+			<skill id="217" level="12" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="78000" min_level="41"/>
+			<skill id="232" level="19" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="78000" min_level="41"/>
+			<skill id="147" level="18" name="Магическое Сопротивление(M. Def.)" cost="78000" min_level="41"/>
+			<skill id="15" level="19" name="Очарование(Charm)" cost="78000" min_level="41"/>
+			<skill id="58" level="22" name="Природное Лечение(Elemental Heal)" cost="78000" min_level="41"/>
+			<skill id="28" level="17" name="Агрессия(Aggression)" cost="78000" min_level="42"/>
+			<skill id="18" level="5" name="Аура Ненависти(Aggression Aura)" cost="78000" min_level="42"/>
+			<skill id="217" level="13" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="78000" min_level="42"/>
+			<skill id="232" level="20" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="78000" min_level="42"/>
+			<skill id="147" level="19" name="Магическое Сопротивление(M. Def.)" cost="78000" min_level="42"/>
+			<skill id="15" level="20" name="Очарование(Charm)" cost="78000" min_level="42"/>
+			<skill id="67" level="1" name="Призвать Оживляющий Кубик(Summon Life Cubic)" item_id="3045" cost="78000" min_level="42"/>
+			<skill id="58" level="23" name="Природное Лечение(Elemental Heal)" cost="78000" min_level="42"/>
+			<skill id="28" level="18" name="Агрессия(Aggression)" cost="78000" min_level="43"/>
+			<skill id="18" level="6" name="Аура Ненависти(Aggression Aura)" cost="78000" min_level="43"/>
+			<skill id="143" level="1" name="Владение Кубами(Cubic Mastery)" cost="78000" min_level="43"/>
+			<skill id="217" level="14" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="78000" min_level="43"/>
+			<skill id="232" level="21" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="78000" min_level="43"/>
+			<skill id="147" level="20" name="Магическое Сопротивление(M. Def.)" cost="78000" min_level="43"/>
+			<skill id="288" level="1" name="Оборонительная Боевая Стойка(Guard Stance)" cost="78000" min_level="43"/>
+			<skill id="102" level="3" name="Опутать(Entangle)" cost="78000" min_level="43"/>
+			<skill id="112" level="3" name="Отклонить Стрелу(Deflect Arrow)" cost="78000" min_level="43"/>
+			<skill id="15" level="21" name="Очарование(Charm)" cost="78000" min_level="43"/>
+			<skill id="58" level="24" name="Природное Лечение(Elemental Heal)" cost="78000" min_level="43"/>
+			<skill id="400" level="2" name="Трибунал(Tribunal)" cost="78000" min_level="43"/>
+			<skill id="191" level="2" name="Фокусировка Разума(Focus Mind)" cost="78000" min_level="43"/>
+			<skill id="28" level="19" name="Агрессия(Aggression)" cost="120000" min_level="44"/>
+			<skill id="18" level="7" name="Аура Ненависти(Aggression Aura)" cost="120000" min_level="44"/>
+			<skill id="217" level="15" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="120000" min_level="44"/>
+			<skill id="232" level="22" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="120000" min_level="44"/>
+			<skill id="147" level="21" name="Магическое Сопротивление(M. Def.)" cost="120000" min_level="44"/>
+			<skill id="15" level="22" name="Очарование(Charm)" cost="120000" min_level="44"/>
+			<skill id="58" level="25" name="Природное Лечение(Elemental Heal)" cost="120000" min_level="44"/>
+			<skill id="28" level="20" name="Агрессия(Aggression)" cost="120000" min_level="45"/>
+			<skill id="18" level="8" name="Аура Ненависти(Aggression Aura)" cost="120000" min_level="45"/>
+			<skill id="217" level="16" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="120000" min_level="45"/>
+			<skill id="232" level="23" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="120000" min_level="45"/>
+			<skill id="147" level="22" name="Магическое Сопротивление(M. Def.)" cost="120000" min_level="45"/>
+			<skill id="15" level="23" name="Очарование(Charm)" cost="120000" min_level="45"/>
+			<skill id="1800" level="1" name="Пират(Pirate)" min_level="45"/>
+			<skill id="58" level="26" name="Природное Лечение(Elemental Heal)" cost="120000" min_level="45"/>
+			<skill id="110" level="2" name="Абсолютная Защита(Ultimate Defense)" cost="120000" min_level="46"/>
+			<skill id="28" level="21" name="Агрессия(Aggression)" cost="120000" min_level="46"/>
+			<skill id="18" level="9" name="Аура Ненависти(Aggression Aura)" cost="120000" min_level="46"/>
+			<skill id="217" level="17" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="120000" min_level="46"/>
+			<skill id="232" level="24" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="120000" min_level="46"/>
+			<skill id="147" level="23" name="Магическое Сопротивление(M. Def.)" cost="120000" min_level="46"/>
+			<skill id="102" level="4" name="Опутать(Entangle)" cost="120000" min_level="46"/>
+			<skill id="61" level="2" name="Остановка Кровотечения(Cure Bleeding)" cost="120000" min_level="46"/>
+			<skill id="15" level="24" name="Очарование(Charm)" cost="120000" min_level="46"/>
+			<skill id="10" level="2" name="Призвать Штормовой Кубик(Summon Storm Cubic)" cost="120000" min_level="46"/>
+			<skill id="58" level="27" name="Природное Лечение(Elemental Heal)" cost="120000" min_level="46"/>
+			<skill id="197" level="2" name="Святая Броня(Holy Armor)" cost="120000" min_level="46"/>
+			<skill id="400" level="3" name="Трибунал(Tribunal)" cost="120000" min_level="46"/>
+			<skill id="28" level="22" name="Агрессия(Aggression)" cost="160000" min_level="47"/>
+			<skill id="18" level="10" name="Аура Ненависти(Aggression Aura)" cost="160000" min_level="47"/>
+			<skill id="217" level="18" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="160000" min_level="47"/>
+			<skill id="232" level="25" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="160000" min_level="47"/>
+			<skill id="147" level="24" name="Магическое Сопротивление(M. Def.)" cost="160000" min_level="47"/>
+			<skill id="15" level="25" name="Очарование(Charm)" cost="160000" min_level="47"/>
+			<skill id="58" level="28" name="Природное Лечение(Elemental Heal)" cost="160000" min_level="47"/>
+			<skill id="28" level="23" name="Агрессия(Aggression)" cost="160000" min_level="48"/>
+			<skill id="18" level="11" name="Аура Ненависти(Aggression Aura)" cost="160000" min_level="48"/>
+			<skill id="217" level="19" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="160000" min_level="48"/>
+			<skill id="232" level="26" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="160000" min_level="48"/>
+			<skill id="147" level="25" name="Магическое Сопротивление(M. Def.)" cost="160000" min_level="48"/>
+			<skill id="15" level="26" name="Очарование(Charm)" cost="160000" min_level="48"/>
+			<skill id="58" level="29" name="Природное Лечение(Elemental Heal)" cost="160000" min_level="48"/>
+			<skill id="28" level="24" name="Агрессия(Aggression)" cost="160000" min_level="49"/>
+			<skill id="18" level="12" name="Аура Ненависти(Aggression Aura)" cost="160000" min_level="49"/>
+			<skill id="217" level="20" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="160000" min_level="49"/>
+			<skill id="232" level="27" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="160000" min_level="49"/>
+			<skill id="147" level="26" name="Магическое Сопротивление(M. Def.)" cost="160000" min_level="49"/>
+			<skill id="102" level="5" name="Опутать(Entangle)" cost="160000" min_level="49"/>
+			<skill id="112" level="4" name="Отклонить Стрелу(Deflect Arrow)" cost="160000" min_level="49"/>
+			<skill id="15" level="27" name="Очарование(Charm)" cost="160000" min_level="49"/>
+			<skill id="67" level="2" name="Призвать Оживляющий Кубик(Summon Life Cubic)" cost="160000" min_level="49"/>
+			<skill id="58" level="30" name="Природное Лечение(Elemental Heal)" cost="160000" min_level="49"/>
+			<skill id="123" level="2" name="Стена Духа(Spirit Barrier)" cost="160000" min_level="49"/>
+			<skill id="400" level="4" name="Трибунал(Tribunal)" cost="160000" min_level="49"/>
+			<skill id="191" level="3" name="Фокусировка Разума(Focus Mind)" cost="160000" min_level="49"/>
+			<skill id="28" level="25" name="Агрессия(Aggression)" cost="230000" min_level="50"/>
+			<skill id="18" level="13" name="Аура Ненависти(Aggression Aura)" cost="230000" min_level="50"/>
+			<skill id="217" level="21" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="230000" min_level="50"/>
+			<skill id="232" level="28" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="230000" min_level="50"/>
+			<skill id="147" level="27" name="Магическое Сопротивление(M. Def.)" cost="230000" min_level="50"/>
+			<skill id="15" level="28" name="Очарование(Charm)" cost="230000" min_level="50"/>
+			<skill id="58" level="31" name="Природное Лечение(Elemental Heal)" cost="230000" min_level="50"/>
+			<skill id="28" level="26" name="Агрессия(Aggression)" cost="230000" min_level="51"/>
+			<skill id="18" level="14" name="Аура Ненависти(Aggression Aura)" cost="230000" min_level="51"/>
+			<skill id="217" level="22" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="230000" min_level="51"/>
+			<skill id="232" level="29" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="230000" min_level="51"/>
+			<skill id="147" level="28" name="Магическое Сопротивление(M. Def.)" cost="230000" min_level="51"/>
+			<skill id="15" level="29" name="Очарование(Charm)" cost="230000" min_level="51"/>
+			<skill id="58" level="32" name="Природное Лечение(Elemental Heal)" cost="230000" min_level="51"/>
+			<skill id="28" level="27" name="Агрессия(Aggression)" cost="230000" min_level="52"/>
+			<skill id="18" level="15" name="Аура Ненависти(Aggression Aura)" cost="230000" min_level="52"/>
+			<skill id="1405" level="1" name="Божественное Вдохновение(Divine Inspiration)" item_id="8618" cost="230000" min_level="52"/>
+			<skill id="217" level="23" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="230000" min_level="52"/>
+			<skill id="232" level="30" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="230000" min_level="52"/>
+			<skill id="153" level="4" name="Владение Щитом(Shield Mastery)" cost="230000" min_level="52"/>
+			<skill id="147" level="29" name="Магическое Сопротивление(M. Def.)" cost="230000" min_level="52"/>
+			<skill id="288" level="2" name="Оборонительная Боевая Стойка(Guard Stance)" cost="230000" min_level="52"/>
+			<skill id="102" level="6" name="Опутать(Entangle)" cost="230000" min_level="52"/>
+			<skill id="15" level="30" name="Очарование(Charm)" cost="230000" min_level="52"/>
+			<skill id="291" level="1" name="Последний Рубеж(Final Fortress)" cost="230000" min_level="52"/>
+			<skill id="10" level="3" name="Призвать Штормовой Кубик(Summon Storm Cubic)" cost="230000" min_level="52"/>
+			<skill id="58" level="33" name="Природное Лечение(Elemental Heal)" cost="230000" min_level="52"/>
+			<skill id="230" level="2" name="Спринт(Sprint)" cost="230000" min_level="52"/>
+			<skill id="400" level="5" name="Трибунал(Tribunal)" cost="230000" min_level="52"/>
+			<skill id="316" level="1" name="Эгида(Aegis)" item_id="49428" cost="230000" min_level="52"/>
+			<skill id="28" level="28" name="Агрессия(Aggression)" cost="320000" min_level="53"/>
+			<skill id="18" level="16" name="Аура Ненависти(Aggression Aura)" cost="320000" min_level="53"/>
+			<skill id="217" level="24" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="320000" min_level="53"/>
+			<skill id="232" level="31" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="320000" min_level="53"/>
+			<skill id="147" level="30" name="Магическое Сопротивление(M. Def.)" cost="320000" min_level="53"/>
+			<skill id="15" level="31" name="Очарование(Charm)" cost="320000" min_level="53"/>
+			<skill id="67" level="3" name="Призвать Оживляющий Кубик(Summon Life Cubic)" cost="320000" min_level="53"/>
+			<skill id="58" level="34" name="Природное Лечение(Elemental Heal)" cost="320000" min_level="53"/>
+			<skill id="28" level="29" name="Агрессия(Aggression)" cost="320000" min_level="54"/>
+			<skill id="18" level="17" name="Аура Ненависти(Aggression Aura)" cost="320000" min_level="54"/>
+			<skill id="217" level="25" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="320000" min_level="54"/>
+			<skill id="232" level="32" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="320000" min_level="54"/>
+			<skill id="147" level="31" name="Магическое Сопротивление(M. Def.)" cost="320000" min_level="54"/>
+			<skill id="15" level="32" name="Очарование(Charm)" cost="320000" min_level="54"/>
+			<skill id="58" level="35" name="Природное Лечение(Elemental Heal)" cost="320000" min_level="54"/>
+			<skill id="28" level="30" name="Агрессия(Aggression)" cost="320000" min_level="55"/>
+			<skill id="402" level="1" name="Арест(Arrest)" cost="320000" min_level="55"/>
+			<skill id="18" level="18" name="Аура Ненависти(Aggression Aura)" cost="320000" min_level="55"/>
+			<skill id="143" level="2" name="Владение Кубами(Cubic Mastery)" cost="320000" min_level="55"/>
+			<skill id="217" level="26" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="320000" min_level="55"/>
+			<skill id="232" level="33" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="320000" min_level="55"/>
+			<skill id="147" level="32" name="Магическое Сопротивление(M. Def.)" cost="320000" min_level="55"/>
+			<skill id="102" level="7" name="Опутать(Entangle)" cost="320000" min_level="55"/>
+			<skill id="15" level="33" name="Очарование(Charm)" cost="320000" min_level="55"/>
+			<skill id="291" level="2" name="Последний Рубеж(Final Fortress)" cost="320000" min_level="55"/>
+			<skill id="58" level="36" name="Природное Лечение(Elemental Heal)" cost="320000" min_level="55"/>
+			<skill id="400" level="6" name="Трибунал(Tribunal)" cost="320000" min_level="55"/>
+			<skill id="191" level="4" name="Фокусировка Разума(Focus Mind)" cost="320000" min_level="55"/>
+			<skill id="28" level="31" name="Агрессия(Aggression)" cost="450000" min_level="56"/>
+			<skill id="18" level="19" name="Аура Ненависти(Aggression Aura)" cost="450000" min_level="56"/>
+			<skill id="217" level="27" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="450000" min_level="56"/>
+			<skill id="232" level="34" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="450000" min_level="56"/>
+			<skill id="147" level="33" name="Магическое Сопротивление(M. Def.)" cost="450000" min_level="56"/>
+			<skill id="15" level="34" name="Очарование(Charm)" cost="450000" min_level="56"/>
+			<skill id="58" level="37" name="Природное Лечение(Elemental Heal)" cost="450000" min_level="56"/>
+			<skill id="28" level="32" name="Агрессия(Aggression)" cost="450000" min_level="57"/>
+			<skill id="18" level="20" name="Аура Ненависти(Aggression Aura)" cost="450000" min_level="57"/>
+			<skill id="217" level="28" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="450000" min_level="57"/>
+			<skill id="232" level="35" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="450000" min_level="57"/>
+			<skill id="147" level="34" name="Магическое Сопротивление(M. Def.)" cost="450000" min_level="57"/>
+			<skill id="15" level="35" name="Очарование(Charm)" cost="450000" min_level="57"/>
+			<skill id="58" level="38" name="Природное Лечение(Elemental Heal)" cost="450000" min_level="57"/>
+			<skill id="28" level="33" name="Агрессия(Aggression)" cost="450000" min_level="58"/>
+			<skill id="402" level="2" name="Арест(Arrest)" cost="450000" min_level="58"/>
+			<skill id="18" level="21" name="Аура Ненависти(Aggression Aura)" cost="450000" min_level="58"/>
+			<skill id="217" level="29" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="450000" min_level="58"/>
+			<skill id="232" level="36" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="450000" min_level="58"/>
+			<skill id="147" level="35" name="Магическое Сопротивление(M. Def.)" cost="450000" min_level="58"/>
+			<skill id="102" level="8" name="Опутать(Entangle)" cost="450000" min_level="58"/>
+			<skill id="15" level="36" name="Очарование(Charm)" cost="450000" min_level="58"/>
+			<skill id="291" level="3" name="Последний Рубеж(Final Fortress)" cost="450000" min_level="58"/>
+			<skill id="10" level="4" name="Призвать Штормовой Кубик(Summon Storm Cubic)" cost="450000" min_level="58"/>
+			<skill id="58" level="39" name="Природное Лечение(Elemental Heal)" cost="450000" min_level="58"/>
+			<skill id="107" level="1" name="Святая Аура(Holy Aura)" cost="450000" min_level="58"/>
+			<skill id="123" level="3" name="Стена Духа(Spirit Barrier)" cost="450000" min_level="58"/>
+			<skill id="400" level="7" name="Трибунал(Tribunal)" cost="450000" min_level="58"/>
+			<skill id="28" level="34" name="Агрессия(Aggression)" cost="650000" min_level="59"/>
+			<skill id="18" level="22" name="Аура Ненависти(Aggression Aura)" cost="650000" min_level="59"/>
+			<skill id="217" level="30" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="650000" min_level="59"/>
+			<skill id="232" level="37" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="650000" min_level="59"/>
+			<skill id="147" level="36" name="Магическое Сопротивление(M. Def.)" cost="650000" min_level="59"/>
+			<skill id="15" level="37" name="Очарование(Charm)" cost="650000" min_level="59"/>
+			<skill id="58" level="40" name="Природное Лечение(Elemental Heal)" cost="650000" min_level="59"/>
+			<skill id="28" level="35" name="Агрессия(Aggression)" cost="650000" min_level="60"/>
+			<skill id="402" level="3" name="Арест(Arrest)" cost="650000" min_level="60"/>
+			<skill id="18" level="23" name="Аура Ненависти(Aggression Aura)" cost="650000" min_level="60"/>
+			<skill id="217" level="31" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="650000" min_level="60"/>
+			<skill id="232" level="38" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="650000" min_level="60"/>
+			<skill id="21" level="3" name="Вывести Яд(Poison Recovery)" cost="650000" min_level="60"/>
+			<skill id="147" level="37" name="Магическое Сопротивление(M. Def.)" cost="650000" min_level="60"/>
+			<skill id="102" level="9" name="Опутать(Entangle)" cost="650000" min_level="60"/>
+			<skill id="15" level="38" name="Очарование(Charm)" cost="650000" min_level="60"/>
+			<skill id="291" level="4" name="Последний Рубеж(Final Fortress)" cost="650000" min_level="60"/>
+			<skill id="67" level="4" name="Призвать Оживляющий Кубик(Summon Life Cubic)" cost="650000" min_level="60"/>
+			<skill id="58" level="41" name="Природное Лечение(Elemental Heal)" cost="650000" min_level="60"/>
+			<skill id="107" level="2" name="Святая Аура(Holy Aura)" cost="650000" min_level="60"/>
+			<skill id="1801" level="1" name="Темный Ассасин(Dark Assassin)" min_level="60"/>
+			<skill id="400" level="8" name="Трибунал(Tribunal)" cost="650000" min_level="60"/>
+			<skill id="916" level="1" name="Щит Отражения Магии(Shield Deflect Magic)" item_id="49427" cost="650000" min_level="60"/>
+			<skill id="28" level="36" name="Агрессия(Aggression)" cost="650000" min_level="61"/>
+			<skill id="18" level="24" name="Аура Ненависти(Aggression Aura)" cost="650000" min_level="61"/>
+			<skill id="1405" level="2" name="Божественное Вдохновение(Divine Inspiration)" item_id="8619" cost="650000" min_level="61"/>
+			<skill id="217" level="32" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="650000" min_level="61"/>
+			<skill id="232" level="39" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="650000" min_level="61"/>
+			<skill id="147" level="38" name="Магическое Сопротивление(M. Def.)" cost="650000" min_level="61"/>
+			<skill id="15" level="39" name="Очарование(Charm)" cost="650000" min_level="61"/>
+			<skill id="58" level="42" name="Природное Лечение(Elemental Heal)" cost="650000" min_level="61"/>
+			<skill id="28" level="37" name="Агрессия(Aggression)" cost="810000" min_level="62"/>
+			<skill id="402" level="4" name="Арест(Arrest)" cost="810000" min_level="62"/>
+			<skill id="18" level="25" name="Аура Ненависти(Aggression Aura)" cost="810000" min_level="62"/>
+			<skill id="217" level="33" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="810000" min_level="62"/>
+			<skill id="232" level="40" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="810000" min_level="62"/>
+			<skill id="147" level="39" name="Магическое Сопротивление(M. Def.)" cost="810000" min_level="62"/>
+			<skill id="288" level="3" name="Оборонительная Боевая Стойка(Guard Stance)" cost="810000" min_level="62"/>
+			<skill id="102" level="10" name="Опутать(Entangle)" cost="810000" min_level="62"/>
+			<skill id="61" level="3" name="Остановка Кровотечения(Cure Bleeding)" cost="810000" min_level="62"/>
+			<skill id="15" level="40" name="Очарование(Charm)" cost="810000" min_level="62"/>
+			<skill id="291" level="5" name="Последний Рубеж(Final Fortress)" cost="810000" min_level="62"/>
+			<skill id="449" level="1" name="Призвать Заманивающий Кубик(Summon Attractive Cubic)" item_id="8890" cost="810000" min_level="62"/>
+			<skill id="10" level="5" name="Призвать Штормовой Кубик(Summon Storm Cubic)" cost="810000" min_level="62"/>
+			<skill id="58" level="43" name="Природное Лечение(Elemental Heal)" cost="810000" min_level="62"/>
+			<skill id="107" level="3" name="Святая Аура(Holy Aura)" cost="810000" min_level="62"/>
+			<skill id="400" level="9" name="Трибунал(Tribunal)" cost="810000" min_level="62"/>
+			<skill id="28" level="38" name="Агрессия(Aggression)" cost="810000" min_level="63"/>
+			<skill id="18" level="26" name="Аура Ненависти(Aggression Aura)" cost="810000" min_level="63"/>
+			<skill id="217" level="34" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="810000" min_level="63"/>
+			<skill id="232" level="41" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="810000" min_level="63"/>
+			<skill id="147" level="40" name="Магическое Сопротивление(M. Def.)" cost="810000" min_level="63"/>
+			<skill id="15" level="41" name="Очарование(Charm)" cost="810000" min_level="63"/>
+			<skill id="58" level="44" name="Природное Лечение(Elemental Heal)" cost="810000" min_level="63"/>
+			<skill id="28" level="39" name="Агрессия(Aggression)" cost="1000000" min_level="64"/>
+			<skill id="402" level="5" name="Арест(Arrest)" cost="1000000" min_level="64"/>
+			<skill id="18" level="27" name="Аура Ненависти(Aggression Aura)" cost="1000000" min_level="64"/>
+			<skill id="217" level="35" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1000000" min_level="64"/>
+			<skill id="232" level="42" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1000000" min_level="64"/>
+			<skill id="322" level="1" name="Крепость Щитов(Shield Fortress)" cost="1000000" min_level="64"/>
+			<skill id="147" level="41" name="Магическое Сопротивление(M. Def.)" cost="1000000" min_level="64"/>
+			<skill id="102" level="11" name="Опутать(Entangle)" cost="1000000" min_level="64"/>
+			<skill id="15" level="42" name="Очарование(Charm)" cost="1000000" min_level="64"/>
+			<skill id="291" level="6" name="Последний Рубеж(Final Fortress)" cost="1000000" min_level="64"/>
+			<skill id="67" level="5" name="Призвать Оживляющий Кубик(Summon Life Cubic)" cost="1000000" min_level="64"/>
+			<skill id="58" level="45" name="Природное Лечение(Elemental Heal)" cost="1000000" min_level="64"/>
+			<skill id="107" level="4" name="Святая Аура(Holy Aura)" cost="1000000" min_level="64"/>
+			<skill id="400" level="10" name="Трибунал(Tribunal)" cost="1000000" min_level="64"/>
+			<skill id="191" level="5" name="Фокусировка Разума(Focus Mind)" cost="1000000" min_level="64"/>
+			<skill id="916" level="2" name="Щит Отражения Магии(Shield Deflect Magic)" cost="1000000" min_level="64"/>
+			<skill id="28" level="40" name="Агрессия(Aggression)" cost="1000000" min_level="65"/>
+			<skill id="18" level="28" name="Аура Ненависти(Aggression Aura)" cost="1000000" min_level="65"/>
+			<skill id="217" level="36" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1000000" min_level="65"/>
+			<skill id="232" level="43" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1000000" min_level="65"/>
+			<skill id="147" level="42" name="Магическое Сопротивление(M. Def.)" cost="1000000" min_level="65"/>
+			<skill id="15" level="43" name="Очарование(Charm)" cost="1000000" min_level="65"/>
+			<skill id="58" level="46" name="Природное Лечение(Elemental Heal)" cost="1000000" min_level="65"/>
+			<skill id="28" level="41" name="Агрессия(Aggression)" cost="1100000" min_level="66"/>
+			<skill id="402" level="6" name="Арест(Arrest)" cost="1100000" min_level="66"/>
+			<skill id="18" level="29" name="Аура Ненависти(Aggression Aura)" cost="1100000" min_level="66"/>
+			<skill id="217" level="37" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1100000" min_level="66"/>
+			<skill id="232" level="44" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1100000" min_level="66"/>
+			<skill id="322" level="2" name="Крепость Щитов(Shield Fortress)" cost="1100000" min_level="66"/>
+			<skill id="147" level="43" name="Магическое Сопротивление(M. Def.)" cost="1100000" min_level="66"/>
+			<skill id="102" level="12" name="Опутать(Entangle)" cost="1100000" min_level="66"/>
+			<skill id="15" level="44" name="Очарование(Charm)" cost="1100000" min_level="66"/>
+			<skill id="291" level="7" name="Последний Рубеж(Final Fortress)" cost="1100000" min_level="66"/>
+			<skill id="449" level="2" name="Призвать Заманивающий Кубик(Summon Attractive Cubic)" cost="1100000" min_level="66"/>
+			<skill id="10" level="6" name="Призвать Штормовой Кубик(Summon Storm Cubic)" cost="1100000" min_level="66"/>
+			<skill id="58" level="47" name="Природное Лечение(Elemental Heal)" cost="1100000" min_level="66"/>
+			<skill id="107" level="5" name="Святая Аура(Holy Aura)" cost="1100000" min_level="66"/>
+			<skill id="400" level="11" name="Трибунал(Tribunal)" cost="1100000" min_level="66"/>
+			<skill id="28" level="42" name="Агрессия(Aggression)" cost="1100000" min_level="67"/>
+			<skill id="18" level="30" name="Аура Ненависти(Aggression Aura)" cost="1100000" min_level="67"/>
+			<skill id="217" level="38" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1100000" min_level="67"/>
+			<skill id="232" level="45" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1100000" min_level="67"/>
+			<skill id="147" level="44" name="Магическое Сопротивление(M. Def.)" cost="1100000" min_level="67"/>
+			<skill id="15" level="45" name="Очарование(Charm)" cost="1100000" min_level="67"/>
+			<skill id="58" level="48" name="Природное Лечение(Elemental Heal)" cost="1100000" min_level="67"/>
+			<skill id="28" level="43" name="Агрессия(Aggression)" cost="1600000" min_level="68"/>
+			<skill id="402" level="7" name="Арест(Arrest)" cost="1600000" min_level="68"/>
+			<skill id="18" level="31" name="Аура Ненависти(Aggression Aura)" cost="1600000" min_level="68"/>
+			<skill id="217" level="39" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1600000" min_level="68"/>
+			<skill id="232" level="46" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1600000" min_level="68"/>
+			<skill id="322" level="3" name="Крепость Щитов(Shield Fortress)" cost="1600000" min_level="68"/>
+			<skill id="147" level="45" name="Магическое Сопротивление(M. Def.)" cost="1600000" min_level="68"/>
+			<skill id="102" level="13" name="Опутать(Entangle)" cost="1600000" min_level="68"/>
+			<skill id="15" level="46" name="Очарование(Charm)" cost="1600000" min_level="68"/>
+			<skill id="291" level="8" name="Последний Рубеж(Final Fortress)" cost="1600000" min_level="68"/>
+			<skill id="67" level="6" name="Призвать Оживляющий Кубик(Summon Life Cubic)" cost="1600000" min_level="68"/>
+			<skill id="58" level="49" name="Природное Лечение(Elemental Heal)" cost="1600000" min_level="68"/>
+			<skill id="107" level="6" name="Святая Аура(Holy Aura)" cost="1600000" min_level="68"/>
+			<skill id="400" level="12" name="Трибунал(Tribunal)" cost="1600000" min_level="68"/>
+			<skill id="916" level="3" name="Щит Отражения Магии(Shield Deflect Magic)" cost="1600000" min_level="68"/>
+			<skill id="28" level="44" name="Агрессия(Aggression)" cost="1600000" min_level="69"/>
+			<skill id="18" level="32" name="Аура Ненависти(Aggression Aura)" cost="1600000" min_level="69"/>
+			<skill id="217" level="40" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1600000" min_level="69"/>
+			<skill id="232" level="47" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1600000" min_level="69"/>
+			<skill id="147" level="46" name="Магическое Сопротивление(M. Def.)" cost="1600000" min_level="69"/>
+			<skill id="15" level="47" name="Очарование(Charm)" cost="1600000" min_level="69"/>
+			<skill id="58" level="50" name="Природное Лечение(Elemental Heal)" cost="1600000" min_level="69"/>
+			<skill id="28" level="45" name="Агрессия(Aggression)" cost="1900000" min_level="70"/>
+			<skill id="402" level="8" name="Арест(Arrest)" cost="1900000" min_level="70"/>
+			<skill id="18" level="33" name="Аура Ненависти(Aggression Aura)" cost="1900000" min_level="70"/>
+			<skill id="217" level="41" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1900000" min_level="70"/>
+			<skill id="232" level="48" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1900000" min_level="70"/>
+			<skill id="322" level="4" name="Крепость Щитов(Shield Fortress)" cost="1900000" min_level="70"/>
+			<skill id="147" level="47" name="Магическое Сопротивление(M. Def.)" cost="1900000" min_level="70"/>
+			<skill id="288" level="4" name="Оборонительная Боевая Стойка(Guard Stance)" cost="1900000" min_level="70"/>
+			<skill id="102" level="14" name="Опутать(Entangle)" cost="1900000" min_level="70"/>
+			<skill id="15" level="48" name="Очарование(Charm)" cost="1900000" min_level="70"/>
+			<skill id="291" level="9" name="Последний Рубеж(Final Fortress)" cost="1900000" min_level="70"/>
+			<skill id="449" level="3" name="Призвать Заманивающий Кубик(Summon Attractive Cubic)" cost="1900000" min_level="70"/>
+			<skill id="10" level="7" name="Призвать Штормовой Кубик(Summon Storm Cubic)" cost="1900000" min_level="70"/>
+			<skill id="58" level="51" name="Природное Лечение(Elemental Heal)" cost="1900000" min_level="70"/>
+			<skill id="1802" level="1" name="Светлый Ассасин(White Assassin)" min_level="70"/>
+			<skill id="107" level="7" name="Святая Аура(Holy Aura)" cost="1900000" min_level="70"/>
+			<skill id="400" level="13" name="Трибунал(Tribunal)" cost="1900000" min_level="70"/>
+			<skill id="28" level="46" name="Агрессия(Aggression)" cost="1900000" min_level="71"/>
+			<skill id="18" level="34" name="Аура Ненависти(Aggression Aura)" cost="1900000" min_level="71"/>
+			<skill id="217" level="42" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="1900000" min_level="71"/>
+			<skill id="232" level="49" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="1900000" min_level="71"/>
+			<skill id="147" level="48" name="Магическое Сопротивление(M. Def.)" cost="1900000" min_level="71"/>
+			<skill id="15" level="49" name="Очарование(Charm)" cost="1900000" min_level="71"/>
+			<skill id="58" level="52" name="Природное Лечение(Elemental Heal)" cost="1900000" min_level="71"/>
+			<skill id="28" level="47" name="Агрессия(Aggression)" cost="2200000" min_level="72"/>
+			<skill id="402" level="9" name="Арест(Arrest)" cost="2200000" min_level="72"/>
+			<skill id="18" level="35" name="Аура Ненависти(Aggression Aura)" cost="2200000" min_level="72"/>
+			<skill id="217" level="43" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="2200000" min_level="72"/>
+			<skill id="232" level="50" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="2200000" min_level="72"/>
+			<skill id="322" level="5" name="Крепость Щитов(Shield Fortress)" cost="2200000" min_level="72"/>
+			<skill id="147" level="49" name="Магическое Сопротивление(M. Def.)" cost="2200000" min_level="72"/>
+			<skill id="102" level="15" name="Опутать(Entangle)" cost="2200000" min_level="72"/>
+			<skill id="15" level="50" name="Очарование(Charm)" cost="2200000" min_level="72"/>
+			<skill id="291" level="10" name="Последний Рубеж(Final Fortress)" cost="2200000" min_level="72"/>
+			<skill id="67" level="7" name="Призвать Оживляющий Кубик(Summon Life Cubic)" cost="2200000" min_level="72"/>
+			<skill id="58" level="53" name="Природное Лечение(Elemental Heal)" cost="2200000" min_level="72"/>
+			<skill id="107" level="8" name="Святая Аура(Holy Aura)" cost="2200000" min_level="72"/>
+			<skill id="400" level="14" name="Трибунал(Tribunal)" cost="2200000" min_level="72"/>
+			<skill id="191" level="6" name="Фокусировка Разума(Focus Mind)" cost="2200000" min_level="72"/>
+			<skill id="916" level="4" name="Щит Отражения Магии(Shield Deflect Magic)" cost="2200000" min_level="72"/>
+			<skill id="28" level="48" name="Агрессия(Aggression)" cost="2200000" min_level="73"/>
+			<skill id="18" level="36" name="Аура Ненависти(Aggression Aura)" cost="2200000" min_level="73"/>
+			<skill id="217" level="44" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="2200000" min_level="73"/>
+			<skill id="232" level="51" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="2200000" min_level="73"/>
+			<skill id="147" level="50" name="Магическое Сопротивление(M. Def.)" cost="2200000" min_level="73"/>
+			<skill id="15" level="51" name="Очарование(Charm)" cost="2200000" min_level="73"/>
+			<skill id="58" level="54" name="Природное Лечение(Elemental Heal)" cost="2200000" min_level="73"/>
+			<skill id="28" level="49" name="Агрессия(Aggression)" cost="2200000" min_level="74"/>
+			<skill id="402" level="10" name="Арест(Arrest)" cost="2200000" min_level="74"/>
+			<skill id="18" level="37" name="Аура Ненависти(Aggression Aura)" cost="2200000" min_level="74"/>
+			<skill id="217" level="45" name="Владение Мечом / Дробящим Оружием(Sword/Blunt Weapon Mastery)" cost="2200000" min_level="74"/>
+			<skill id="232" level="52" name="Владение Тяжелой Броней(Heavy Armor Mastery)" cost="2200000" min_level="74"/>
+			<skill id="322" level="6" name="Крепость Щитов(Shield Fortress)" cost="2200000" min_level="74"/>
+			<skill id="147" level="51" name="Магическое Сопротивление(M. Def.)" cost="2200000" min_level="74"/>
+			<skill id="102" level="16" name="Опутать(Entangle)" cost="2200000" min_level="74"/>
+			<skill id="15" level="52" name="Очарование(Charm)" cost="2200000" min_level="74"/>
+			<skill id="291" level="11" name="Последний Рубеж(Final Fortress)" cost="2200000" min_level="74"/>
+			<skill id="449" level="4" name="Призвать Заманивающий Кубик(Summon Attractive Cubic)" cost="2200000" min_level="74"/>
+			<skill id="10" level="8" name="Призвать Штормовой Кубик(Summon Storm Cubic)" cost="2200000" min_level="74"/>
+			<skill id="58" level="55" name="Природное Лечение(Elemental Heal)" cost="2200000" min_level="74"/>
+			<skill id="107" level="9" name="Святая Аура(Holy Aura)" cost="2200000" min_level="74"/>
+			<skill id="400" level="15" name="Трибунал(Tribunal)" cost="2200000" min_level="74"/>
+		</class>
+	</normal_skill_tree>
+</list>

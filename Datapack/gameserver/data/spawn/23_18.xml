@@ -1,0 +1,1906 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<territory name="aden41_2318_01">
+		<add x="113224" y="15134" zmin="4940" zmax="5290"/>
+		<add x="114182" y="16067" zmin="4940" zmax="5290"/>
+		<add x="113200" y="17042" zmin="4940" zmax="5290"/>
+		<add x="113047" y="16428" zmin="4940" zmax="5290"/>
+		<add x="113241" y="15939" zmin="4940" zmax="5290"/>
+	</territory>
+	<spawn name="aden41_2318_01" count="2" respawn="230" respawn_random="75">
+		<territory name="aden41_2318_01"/>
+		<npc id="20830"/><!--Ангел Хранитель-->
+	</spawn>
+	<spawn name="aden41_2318_01" count="2" respawn="230" respawn_random="75">
+		<territory name="aden41_2318_01"/>
+		<npc id="21066"/><!--Шаман Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden41_2318_01" count="2" respawn="230" respawn_random="75">
+		<territory name="aden41_2318_01"/>
+		<npc id="21069"/><!--Владыка Платиновых Хранителей-->
+	</spawn>
+	<territory name="aden41_2318_02">
+		<add x="113580" y="16847" zmin="4943" zmax="5293"/>
+		<add x="113835" y="17111" zmin="4943" zmax="5293"/>
+		<add x="113504" y="17468" zmin="4943" zmax="5293"/>
+		<add x="113226" y="17194" zmin="4943" zmax="5293"/>
+	</territory>
+	<spawn name="aden41_2318_02" count="1" respawn="230" respawn_random="75">
+		<territory name="aden41_2318_02"/>
+		<npc id="20830"/><!--Ангел Хранитель-->
+	</spawn>
+	<spawn name="aden41_2318_02" count="1" respawn="230" respawn_random="75">
+		<territory name="aden41_2318_02"/>
+		<npc id="21069"/><!--Владыка Платиновых Хранителей-->
+	</spawn>
+	<territory name="aden41_2318_05">
+		<add x="116067" y="15011" zmin="4938" zmax="5288"/>
+		<add x="116352" y="15796" zmin="4938" zmax="5288"/>
+		<add x="116355" y="16403" zmin="4938" zmax="5288"/>
+		<add x="116118" y="17012" zmin="4938" zmax="5288"/>
+		<add x="115014" y="16046" zmin="4938" zmax="5288"/>
+	</territory>
+	<spawn name="aden41_2318_05" count="2" respawn="230" respawn_random="75">
+		<territory name="aden41_2318_05"/>
+		<npc id="20830"/><!--Ангел Хранитель-->
+	</spawn>
+	<spawn name="aden41_2318_05" count="2" respawn="230" respawn_random="75">
+		<territory name="aden41_2318_05"/>
+		<npc id="21066"/><!--Шаман Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden41_2318_05" count="3" respawn="230" respawn_random="75">
+		<territory name="aden41_2318_05"/>
+		<npc id="21069"/><!--Владыка Платиновых Хранителей-->
+	</spawn>
+	<territory name="aden41_2318_06">
+		<add x="115112" y="14328" zmin="4944" zmax="5144"/>
+		<add x="115720" y="14628" zmin="4944" zmax="5144"/>
+		<add x="116048" y="14884" zmin="4944" zmax="5144"/>
+		<add x="115656" y="15276" zmin="4944" zmax="5144"/>
+		<add x="115088" y="14740" zmin="4944" zmax="5144"/>
+	</territory>
+	<spawn name="aden41_2318_06" count="1" respawn="230" respawn_random="75">
+		<territory name="aden41_2318_06"/>
+		<npc id="21066"/><!--Шаман Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden41_2318_06" count="1" respawn="230" respawn_random="75">
+		<territory name="aden41_2318_06"/>
+		<npc id="21069"/><!--Владыка Платиновых Хранителей-->
+	</spawn>
+	<territory name="aden41_2318_03">
+		<add x="114638" y="16375" zmin="4941" zmax="5291"/>
+		<add x="114851" y="16819" zmin="4941" zmax="5291"/>
+		<add x="114387" y="17230" zmin="4941" zmax="5291"/>
+		<add x="114288" y="17839" zmin="4941" zmax="5291"/>
+		<add x="113621" y="17548" zmin="4941" zmax="5291"/>
+	</territory>
+	<spawn name="aden41_2318_03" count="3" respawn="230" respawn_random="75">
+		<territory name="aden41_2318_03"/>
+		<npc id="20830"/><!--Ангел Хранитель-->
+	</spawn>
+	<spawn name="aden41_2318_03" count="2" respawn="230" respawn_random="75">
+		<territory name="aden41_2318_03"/>
+		<npc id="21066"/><!--Шаман Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden41_2318_03" count="2" respawn="230" respawn_random="75">
+		<territory name="aden41_2318_03"/>
+		<npc id="21069"/><!--Владыка Платиновых Хранителей-->
+	</spawn>
+	<territory name="aden41_2318_04">
+		<add x="115677" y="16833" zmin="4940" zmax="5290"/>
+		<add x="116066" y="17170" zmin="4940" zmax="5290"/>
+		<add x="115415" y="17670" zmin="4940" zmax="5290"/>
+		<add x="115180" y="17333" zmin="4940" zmax="5290"/>
+	</territory>
+	<spawn name="aden41_2318_04" count="1" respawn="230" respawn_random="75">
+		<territory name="aden41_2318_04"/>
+		<npc id="20830"/><!--Ангел Хранитель-->
+	</spawn>
+	<spawn name="aden41_2318_04" count="1" respawn="230" respawn_random="75">
+		<territory name="aden41_2318_04"/>
+		<npc id="21066"/><!--Шаман Платиновых Хранителей-->
+	</spawn>
+	<territory name="aden41_2318_07">
+		<add x="114693" y="14991" zmin="4934" zmax="5284"/>
+		<add x="115276" y="15069" zmin="4934" zmax="5284"/>
+		<add x="114672" y="15698" zmin="4934" zmax="5284"/>
+		<add x="114093" y="15107" zmin="4934" zmax="5284"/>
+	</territory>
+	<spawn name="aden41_2318_07" count="2" respawn="230" respawn_random="75">
+		<territory name="aden41_2318_07"/>
+		<npc id="20830"/><!--Ангел Хранитель-->
+	</spawn>
+	<spawn name="aden41_2318_07" count="1" respawn="230" respawn_random="75">
+		<territory name="aden41_2318_07"/>
+		<npc id="21066"/><!--Шаман Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden41_2318_07" count="2" respawn="230" respawn_random="75">
+		<territory name="aden41_2318_07"/>
+		<npc id="21069"/><!--Владыка Платиновых Хранителей-->
+	</spawn>
+	<territory name="aden41_2318_08">
+		<add x="113647" y="14631" zmin="4935" zmax="5285"/>
+		<add x="114116" y="14437" zmin="4935" zmax="5285"/>
+		<add x="114108" y="14805" zmin="4935" zmax="5285"/>
+		<add x="113616" y="15210" zmin="4935" zmax="5285"/>
+		<add x="113315" y="14937" zmin="4935" zmax="5285"/>
+	</territory>
+	<spawn name="aden41_2318_08" count="1" respawn="230" respawn_random="75">
+		<territory name="aden41_2318_08"/>
+		<npc id="20830"/><!--Ангел Хранитель-->
+	</spawn>
+	<spawn name="aden41_2318_08" count="1" respawn="230" respawn_random="75">
+		<territory name="aden41_2318_08"/>
+		<npc id="21069"/><!--Владыка Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden02_npc2318_03" count="1" respawn="60">
+		<point x="118644" y="16680" z="6000" h="42000"/>
+		<npc id="30951"/><!--Питгон-->
+	</spawn>
+	<spawn name="aden02_npc2318_03" count="1" respawn="60">
+		<point x="118600" y="16724" z="5984" h="42000"/>
+		<npc id="30954"/><!--Пространственный Водоворот-->
+	</spawn>
+	<spawn name="aden02_npc2318_04" count="1" respawn="60">
+		<point x="112624" y="14032" z="10080" h="0"/>
+		<npc id="31862"/><!--Ангельский Вихрь-->
+	</spawn>
+	<spawn name="aden02_npc2318_01" count="1" respawn="60">
+		<point x="114184" y="13304" z="-5104" h="6133"/>
+		<npc id="30952"/><!--Пространственный Водоворот-->
+	</spawn>
+	<spawn name="aden02_npc2318_02" count="1" respawn="60">
+		<point x="114112" y="20042" z="944" h="50148"/>
+		<npc id="30950"/><!--Окли-->
+	</spawn>
+	<spawn name="aden02_npc2318_02" count="1" respawn="60">
+		<point x="114048" y="20048" z="928" h="49444"/>
+		<npc id="30953"/><!--Пространственный Водоворот-->
+	</spawn>
+	<spawn name="aden41_2318_p05" count="1" respawn="300" respawn_random="80">
+		<territory>
+			<add x="116072" y="14900" zmin="4936" zmax="5136"/>
+			<add x="116456" y="15804" zmin="4936" zmax="5136"/>
+			<add x="116464" y="16420" zmin="4936" zmax="5136"/>
+			<add x="116144" y="17168" zmin="4936" zmax="5136"/>
+			<add x="114948" y="16048" zmin="4936" zmax="5136"/>
+		</territory>
+		<npc id="20983"/><!--Латник Псоглавов-->
+	</spawn>
+	<spawn name="aden41_2318_p01" count="1" respawn="300" respawn_random="80">
+		<territory>
+			<add x="113200" y="14904" zmin="4940" zmax="5140"/>
+			<add x="114336" y="16040" zmin="4940" zmax="5140"/>
+			<add x="113140" y="17208" zmin="4940" zmax="5140"/>
+			<add x="112844" y="16440" zmin="4940" zmax="5140"/>
+			<add x="112844" y="15724" zmin="4940" zmax="5140"/>
+		</territory>
+		<npc id="20983"/><!--Латник Псоглавов-->
+	</spawn>
+	<spawn name="aden41_2318_p03" count="1" respawn="300" respawn_random="80">
+		<territory>
+			<add x="114640" y="16340" zmin="4940" zmax="5140"/>
+			<add x="115820" y="17528" zmin="4940" zmax="5140"/>
+			<add x="114932" y="17908" zmin="4940" zmax="5140"/>
+			<add x="114272" y="17952" zmin="4940" zmax="5140"/>
+			<add x="113484" y="17588" zmin="4940" zmax="5140"/>
+		</territory>
+		<npc id="20983"/><!--Латник Псоглавов-->
+	</spawn>
+	<spawn name="oren32_p2318_022s" count="3" respawn="37" respawn_random="10">
+		<territory>
+			<add x="116080" y="848" zmin="-3800" zmax="-3500"/>
+			<add x="118276" y="812" zmin="-3800" zmax="-3500"/>
+			<add x="118224" y="3644" zmin="-3800" zmax="-3500"/>
+			<add x="115940" y="2776" zmin="-3800" zmax="-3500"/>
+		</territory>
+		<npc id="20956"/><!--Древний Рыцарь-->
+	</spawn>
+	<spawn name="oren32_p2318_021s" count="2" respawn="37" respawn_random="10">
+		<territory>
+			<add x="112596" y="620" zmin="-3800" zmax="-3600"/>
+			<add x="115076" y="384" zmin="-3800" zmax="-3600"/>
+			<add x="114132" y="2036" zmin="-3800" zmax="-3600"/>
+			<add x="112728" y="2212" zmin="-3800" zmax="-3600"/>
+		</territory>
+		<npc id="20956"/><!--Древний Рыцарь-->
+	</spawn>
+	<territory name="aden34_2318_01">
+		<add x="113844" y="16052" zmin="-3644" zmax="-3444"/>
+		<add x="114576" y="15244" zmin="-3644" zmax="-3444"/>
+		<add x="115488" y="16116" zmin="-3644" zmax="-3444"/>
+		<add x="114684" y="16904" zmin="-3644" zmax="-3444"/>
+	</territory>
+	<spawn name="aden34_2318_01" count="2" respawn="165" respawn_random="30">
+		<territory name="aden34_2318_01"/>
+		<npc id="20810"/><!--Смотритель Халлета-->
+	</spawn>
+	<spawn name="aden34_2318_01" count="2" respawn="165" respawn_random="30">
+		<territory name="aden34_2318_01"/>
+		<npc id="20812"/><!--Стрелок Отчаяния-->
+	</spawn>
+	<spawn name="aden34_2318_01" count="2" respawn="165" respawn_random="30">
+		<territory name="aden34_2318_01"/>
+		<npc id="20813"/><!--Лик Смерти-->
+	</spawn>
+	<spawn name="aden34_2318_01" count="2" respawn="165" respawn_random="30">
+		<territory name="aden34_2318_01"/>
+		<npc id="20815"/><!--Гончая Халлета-->
+	</spawn>
+	<territory name="aden34_2318_02">
+		<add x="113360" y="14132" zmin="-3664" zmax="-3464"/>
+		<add x="114088" y="13760" zmin="-3664" zmax="-3464"/>
+		<add x="114324" y="15004" zmin="-3664" zmax="-3464"/>
+		<add x="113584" y="15724" zmin="-3664" zmax="-3464"/>
+		<add x="112380" y="15556" zmin="-3664" zmax="-3464"/>
+		<add x="112720" y="14688" zmin="-3664" zmax="-3464"/>
+	</territory>
+	<spawn name="aden34_2318_02" count="3" respawn="165" respawn_random="30">
+		<territory name="aden34_2318_02"/>
+		<npc id="20810"/><!--Смотритель Халлета-->
+	</spawn>
+	<spawn name="aden34_2318_02" count="3" respawn="165" respawn_random="30">
+		<territory name="aden34_2318_02"/>
+		<npc id="20812"/><!--Стрелок Отчаяния-->
+	</spawn>
+	<spawn name="aden34_2318_02" count="3" respawn="165" respawn_random="30">
+		<territory name="aden34_2318_02"/>
+		<npc id="20813"/><!--Лик Смерти-->
+	</spawn>
+	<spawn name="aden34_2318_02" count="4" respawn="165" respawn_random="30">
+		<territory name="aden34_2318_02"/>
+		<npc id="20815"/><!--Гончая Халлета-->
+	</spawn>
+	<spawn name="aden34_2318_02" count="1" respawn="200" respawn_random="40">
+		<territory name="aden34_2318_02"/>
+		<npc id="21075"/><!--Батин-->
+	</spawn>
+	<territory name="aden34_2318_05">
+		<add x="115212" y="13852" zmin="-3648" zmax="-3448"/>
+		<add x="115964" y="14152" zmin="-3648" zmax="-3448"/>
+		<add x="116612" y="14784" zmin="-3648" zmax="-3448"/>
+		<add x="116880" y="15536" zmin="-3648" zmax="-3448"/>
+		<add x="115756" y="15752" zmin="-3648" zmax="-3448"/>
+		<add x="115012" y="15040" zmin="-3648" zmax="-3448"/>
+	</territory>
+	<spawn name="aden34_2318_05" count="4" respawn="165" respawn_random="30">
+		<territory name="aden34_2318_05"/>
+		<npc id="20810"/><!--Смотритель Халлета-->
+	</spawn>
+	<spawn name="aden34_2318_05" count="3" respawn="165" respawn_random="30">
+		<territory name="aden34_2318_05"/>
+		<npc id="20812"/><!--Стрелок Отчаяния-->
+	</spawn>
+	<spawn name="aden34_2318_05" count="3" respawn="165" respawn_random="30">
+		<territory name="aden34_2318_05"/>
+		<npc id="20813"/><!--Лик Смерти-->
+	</spawn>
+	<spawn name="aden34_2318_05" count="3" respawn="252" respawn_random="30">
+		<territory name="aden34_2318_05"/>
+		<npc id="20815"/><!--Гончая Халлета-->
+	</spawn>
+	<spawn name="aden34_2318_05" count="1" respawn="200" respawn_random="40">
+		<territory name="aden34_2318_05"/>
+		<npc id="21075"/><!--Батин-->
+	</spawn>
+	<territory name="aden34_2318_03">
+		<add x="112381" y="16669" zmin="-3644" zmax="-3444"/>
+		<add x="113600" y="16448" zmin="-3644" zmax="-3444"/>
+		<add x="114304" y="17152" zmin="-3644" zmax="-3444"/>
+		<add x="114072" y="18352" zmin="-3644" zmax="-3444"/>
+		<add x="113269" y="17990" zmin="-3644" zmax="-3444"/>
+		<add x="112729" y="17452" zmin="-3644" zmax="-3444"/>
+	</territory>
+	<spawn name="aden34_2318_03" count="4" respawn="165" respawn_random="30">
+		<territory name="aden34_2318_03"/>
+		<npc id="20810"/><!--Смотритель Халлета-->
+	</spawn>
+	<spawn name="aden34_2318_03" count="3" respawn="165" respawn_random="30">
+		<territory name="aden34_2318_03"/>
+		<npc id="20812"/><!--Стрелок Отчаяния-->
+	</spawn>
+	<spawn name="aden34_2318_03" count="3" respawn="165" respawn_random="30">
+		<territory name="aden34_2318_03"/>
+		<npc id="20813"/><!--Лик Смерти-->
+	</spawn>
+	<spawn name="aden34_2318_03" count="3" respawn="165" respawn_random="30">
+		<territory name="aden34_2318_03"/>
+		<npc id="20815"/><!--Гончая Халлета-->
+	</spawn>
+	<spawn name="aden34_2318_03" count="1" respawn="200" respawn_random="40">
+		<territory name="aden34_2318_03"/>
+		<npc id="21075"/><!--Батин-->
+	</spawn>
+	<territory name="aden34_2318_04">
+		<add x="115784" y="16456" zmin="-3648" zmax="-3448"/>
+		<add x="116960" y="16724" zmin="-3648" zmax="-3448"/>
+		<add x="116620" y="17392" zmin="-3648" zmax="-3448"/>
+		<add x="115972" y="18032" zmin="-3648" zmax="-3448"/>
+		<add x="115200" y="18348" zmin="-3648" zmax="-3448"/>
+		<add x="115048" y="17148" zmin="-3648" zmax="-3448"/>
+	</territory>
+	<spawn name="aden34_2318_04" count="3" respawn="165" respawn_random="30">
+		<territory name="aden34_2318_04"/>
+		<npc id="20810"/><!--Смотритель Халлета-->
+	</spawn>
+	<spawn name="aden34_2318_04" count="3" respawn="165" respawn_random="30">
+		<territory name="aden34_2318_04"/>
+		<npc id="20812"/><!--Стрелок Отчаяния-->
+	</spawn>
+	<spawn name="aden34_2318_04" count="3" respawn="165" respawn_random="30">
+		<territory name="aden34_2318_04"/>
+		<npc id="20813"/><!--Лик Смерти-->
+	</spawn>
+	<spawn name="aden34_2318_04" count="4" respawn="165" respawn_random="30">
+		<territory name="aden34_2318_04"/>
+		<npc id="20815"/><!--Гончая Халлета-->
+	</spawn>
+	<spawn name="aden34_2318_04" count="2" respawn="200" respawn_random="40">
+		<territory name="aden34_2318_04"/>
+		<npc id="21075"/><!--Батин-->
+	</spawn>
+	<territory name="aden38_2318_01">
+		<add x="112816" y="15535" zmin="1912" zmax="2112"/>
+		<add x="113915" y="15528" zmin="1912" zmax="2112"/>
+		<add x="113924" y="16612" zmin="1912" zmax="2112"/>
+		<add x="112820" y="16596" zmin="1912" zmax="2112"/>
+	</territory>
+	<spawn name="aden38_2318_01" count="2" respawn="210" respawn_random="70">
+		<territory name="aden38_2318_01"/>
+		<npc id="20823"/><!--Воитель Платинового Клана-->
+	</spawn>
+	<spawn name="aden38_2318_01" count="2" respawn="210" respawn_random="70">
+		<territory name="aden38_2318_01"/>
+		<npc id="20826"/><!--Стрелок Платинового Клана-->
+	</spawn>
+	<spawn name="aden38_2318_01" count="3" respawn="210" respawn_random="70">
+		<territory name="aden38_2318_01"/>
+		<npc id="20827"/><!--Воин Платинового Клана-->
+	</spawn>
+	<territory name="aden38_2318_02">
+		<add x="114093" y="14243" zmin="1904" zmax="2104"/>
+		<add x="115256" y="14256" zmin="1904" zmax="2104"/>
+		<add x="115240" y="15260" zmin="1904" zmax="2104"/>
+		<add x="114119" y="15214" zmin="1904" zmax="2104"/>
+	</territory>
+	<spawn name="aden38_2318_02" count="2" respawn="210" respawn_random="70">
+		<territory name="aden38_2318_02"/>
+		<npc id="20823"/><!--Воитель Платинового Клана-->
+	</spawn>
+	<spawn name="aden38_2318_02" count="2" respawn="210" respawn_random="70">
+		<territory name="aden38_2318_02"/>
+		<npc id="20826"/><!--Стрелок Платинового Клана-->
+	</spawn>
+	<spawn name="aden38_2318_02" count="2" respawn="210" respawn_random="70">
+		<territory name="aden38_2318_02"/>
+		<npc id="20827"/><!--Воин Платинового Клана-->
+	</spawn>
+	<territory name="aden38_2318_03">
+		<add x="115453" y="14443" zmin="1908" zmax="2108"/>
+		<add x="115999" y="14752" zmin="1908" zmax="2108"/>
+		<add x="116301" y="15327" zmin="1908" zmax="2108"/>
+		<add x="115460" y="15336" zmin="1908" zmax="2108"/>
+	</territory>
+	<spawn name="aden38_2318_03" count="2" respawn="210" respawn_random="70">
+		<territory name="aden38_2318_03"/>
+		<npc id="20823"/><!--Воитель Платинового Клана-->
+	</spawn>
+	<spawn name="aden38_2318_03" count="2" respawn="210" respawn_random="70">
+		<territory name="aden38_2318_03"/>
+		<npc id="20826"/><!--Стрелок Платинового Клана-->
+	</spawn>
+	<spawn name="aden38_2318_03" count="2" respawn="210" respawn_random="70">
+		<territory name="aden38_2318_03"/>
+		<npc id="20827"/><!--Воин Платинового Клана-->
+	</spawn>
+	<territory name="aden38_2318_04">
+		<add x="114056" y="15524" zmin="1912" zmax="2112"/>
+		<add x="115260" y="15524" zmin="1912" zmax="2112"/>
+		<add x="115260" y="16608" zmin="1912" zmax="2112"/>
+		<add x="114056" y="16608" zmin="1912" zmax="2112"/>
+	</territory>
+	<spawn name="aden38_2318_04" count="3" respawn="210" respawn_random="70">
+		<territory name="aden38_2318_04"/>
+		<npc id="20823"/><!--Воитель Платинового Клана-->
+	</spawn>
+	<spawn name="aden38_2318_04" count="2" respawn="210" respawn_random="70">
+		<territory name="aden38_2318_04"/>
+		<npc id="20826"/><!--Стрелок Платинового Клана-->
+	</spawn>
+	<spawn name="aden38_2318_04" count="3" respawn="210" respawn_random="70">
+		<territory name="aden38_2318_04"/>
+		<npc id="20827"/><!--Воин Платинового Клана-->
+	</spawn>
+	<territory name="aden38_2318_05">
+		<add x="114120" y="16884" zmin="1912" zmax="2112"/>
+		<add x="115196" y="16872" zmin="1912" zmax="2112"/>
+		<add x="115184" y="17868" zmin="1912" zmax="2112"/>
+		<add x="114132" y="17880" zmin="1912" zmax="2112"/>
+	</territory>
+	<spawn name="aden38_2318_05" count="2" respawn="210" respawn_random="70">
+		<territory name="aden38_2318_05"/>
+		<npc id="20823"/><!--Воитель Платинового Клана-->
+	</spawn>
+	<spawn name="aden38_2318_05" count="2" respawn="210" respawn_random="70">
+		<territory name="aden38_2318_05"/>
+		<npc id="20826"/><!--Стрелок Платинового Клана-->
+	</spawn>
+	<spawn name="aden38_2318_05" count="2" respawn="210" respawn_random="70">
+		<territory name="aden38_2318_05"/>
+		<npc id="20827"/><!--Воин Платинового Клана-->
+	</spawn>
+	<territory name="aden38_2318_06">
+		<add x="112971" y="16823" zmin="1912" zmax="2112"/>
+		<add x="113872" y="16824" zmin="1912" zmax="2112"/>
+		<add x="113866" y="17656" zmin="1912" zmax="2112"/>
+		<add x="113288" y="17378" zmin="1912" zmax="2112"/>
+	</territory>
+	<spawn name="aden38_2318_06" count="2" respawn="210" respawn_random="70">
+		<territory name="aden38_2318_06"/>
+		<npc id="20823"/><!--Воитель Платинового Клана-->
+	</spawn>
+	<spawn name="aden38_2318_06" count="2" respawn="210" respawn_random="70">
+		<territory name="aden38_2318_06"/>
+		<npc id="20826"/><!--Стрелок Платинового Клана-->
+	</spawn>
+	<spawn name="aden38_2318_06" count="3" respawn="210" respawn_random="70">
+		<territory name="aden38_2318_06"/>
+		<npc id="20827"/><!--Воин Платинового Клана-->
+	</spawn>
+	<territory name="aden35_2318_04">
+		<add x="115991" y="16420" zmin="-2160" zmax="-1960"/>
+		<add x="116975" y="16560" zmin="-2160" zmax="-1960"/>
+		<add x="116639" y="17348" zmin="-2160" zmax="-1960"/>
+		<add x="116019" y="18019" zmin="-2160" zmax="-1960"/>
+		<add x="115168" y="18367" zmin="-2160" zmax="-1960"/>
+		<add x="115056" y="17415" zmin="-2160" zmax="-1960"/>
+	</territory>
+	<spawn name="aden35_2318_04" count="4" respawn="180" respawn_random="40">
+		<territory name="aden35_2318_04"/>
+		<npc id="20816"/><!--Гвардеец Халлета-->
+	</spawn>
+	<spawn name="aden35_2318_04" count="3" respawn="180" respawn_random="40">
+		<territory name="aden35_2318_04"/>
+		<npc id="20817"/><!--Порочный Мудрец-->
+	</spawn>
+	<spawn name="aden35_2318_04" count="3" respawn="180" respawn_random="40">
+		<territory name="aden35_2318_04"/>
+		<npc id="20820"/><!--Рыцарь Халлета-->
+	</spawn>
+	<spawn name="aden35_2318_04" count="3" respawn="180" respawn_random="40">
+		<territory name="aden35_2318_04"/>
+		<npc id="20822"/><!--Служанка Халлета-->
+	</spawn>
+	<territory name="aden35_2318_03">
+		<add x="116615" y="14792" zmin="-2164" zmax="-1964"/>
+		<add x="116979" y="15548" zmin="-2164" zmax="-1964"/>
+		<add x="115949" y="15704" zmin="-2164" zmax="-1964"/>
+		<add x="115028" y="14724" zmin="-2164" zmax="-1964"/>
+		<add x="115189" y="13775" zmin="-2164" zmax="-1964"/>
+		<add x="115987" y="14105" zmin="-2164" zmax="-1964"/>
+	</territory>
+	<spawn name="aden35_2318_03" count="3" respawn="180" respawn_random="40">
+		<territory name="aden35_2318_03"/>
+		<npc id="20816"/><!--Гвардеец Халлета-->
+	</spawn>
+	<spawn name="aden35_2318_03" count="3" respawn="180" respawn_random="40">
+		<territory name="aden35_2318_03"/>
+		<npc id="20817"/><!--Порочный Мудрец-->
+	</spawn>
+	<spawn name="aden35_2318_03" count="4" respawn="180" respawn_random="40">
+		<territory name="aden35_2318_03"/>
+		<npc id="20820"/><!--Рыцарь Халлета-->
+	</spawn>
+	<spawn name="aden35_2318_03" count="3" respawn="180" respawn_random="40">
+		<territory name="aden35_2318_03"/>
+		<npc id="20822"/><!--Служанка Халлета-->
+	</spawn>
+	<territory name="aden35_2318_02">
+		<add x="113288" y="14124" zmin="-2156" zmax="-1956"/>
+		<add x="114140" y="13764" zmin="-2156" zmax="-1956"/>
+		<add x="114304" y="14672" zmin="-2156" zmax="-1956"/>
+		<add x="113308" y="15716" zmin="-2156" zmax="-1956"/>
+		<add x="112288" y="15496" zmin="-2156" zmax="-1956"/>
+		<add x="112744" y="14672" zmin="-2156" zmax="-1956"/>
+	</territory>
+	<spawn name="aden35_2318_02" count="4" respawn="180" respawn_random="40">
+		<territory name="aden35_2318_02"/>
+		<npc id="20816"/><!--Гвардеец Халлета-->
+	</spawn>
+	<spawn name="aden35_2318_02" count="3" respawn="180" respawn_random="40">
+		<territory name="aden35_2318_02"/>
+		<npc id="20817"/><!--Порочный Мудрец-->
+	</spawn>
+	<spawn name="aden35_2318_02" count="3" respawn="180" respawn_random="40">
+		<territory name="aden35_2318_02"/>
+		<npc id="20820"/><!--Рыцарь Халлета-->
+	</spawn>
+	<spawn name="aden35_2318_02" count="3" respawn="180" respawn_random="40">
+		<territory name="aden35_2318_02"/>
+		<npc id="20822"/><!--Служанка Халлета-->
+	</spawn>
+	<territory name="aden35_2318_01">
+		<add x="114324" y="14992" zmin="-2160" zmax="-1960"/>
+		<add x="114976" y="15004" zmin="-2160" zmax="-1960"/>
+		<add x="115280" y="15128" zmin="-2160" zmax="-1960"/>
+		<add x="115600" y="15432" zmin="-2160" zmax="-1960"/>
+		<add x="115724" y="15728" zmin="-2160" zmax="-1960"/>
+		<add x="115724" y="16388" zmin="-2160" zmax="-1960"/>
+		<add x="115560" y="16720" zmin="-2160" zmax="-1960"/>
+		<add x="115280" y="17008" zmin="-2160" zmax="-1960"/>
+		<add x="114980" y="17136" zmin="-2160" zmax="-1960"/>
+		<add x="114304" y="17144" zmin="-2160" zmax="-1960"/>
+		<add x="114032" y="17024" zmin="-2160" zmax="-1960"/>
+		<add x="113696" y="16700" zmin="-2160" zmax="-1960"/>
+		<add x="113596" y="16416" zmin="-2160" zmax="-1960"/>
+		<add x="113580" y="15720" zmin="-2160" zmax="-1960"/>
+		<add x="113692" y="15436" zmin="-2160" zmax="-1960"/>
+		<add x="114008" y="15108" zmin="-2160" zmax="-1960"/>
+	</territory>
+	<spawn name="aden35_2318_01" count="5" respawn="180" respawn_random="40">
+		<territory name="aden35_2318_01"/>
+		<npc id="20816"/><!--Гвардеец Халлета-->
+	</spawn>
+	<spawn name="aden35_2318_01" count="5" respawn="180" respawn_random="40">
+		<territory name="aden35_2318_01"/>
+		<npc id="20817"/><!--Порочный Мудрец-->
+	</spawn>
+	<spawn name="aden35_2318_01" count="6" respawn="180" respawn_random="40">
+		<territory name="aden35_2318_01"/>
+		<npc id="20820"/><!--Рыцарь Халлета-->
+	</spawn>
+	<spawn name="aden35_2318_01" count="5" respawn="180" respawn_random="40">
+		<territory name="aden35_2318_01"/>
+		<npc id="20822"/><!--Служанка Халлета-->
+	</spawn>
+	<territory name="aden37_2318_10">
+		<add x="115120" y="18072" zmin="892" zmax="1092"/>
+		<add x="115660" y="17856" zmin="892" zmax="1092"/>
+		<add x="116180" y="18500" zmin="892" zmax="1092"/>
+		<add x="115292" y="18872" zmin="892" zmax="1092"/>
+	</territory>
+	<spawn name="aden37_2318_10" count="1" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_10"/>
+		<npc id="20824"/><!--Командир Халлета-->
+	</spawn>
+	<spawn name="aden37_2318_10" count="1" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_10"/>
+		<npc id="20825"/><!--Инспектор Халлета-->
+	</spawn>
+	<spawn name="aden37_2318_10" count="1" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_10"/>
+		<npc id="21061"/><!--Стражник Халлета-->
+	</spawn>
+	<territory name="aden37_2318_11">
+		<add x="116288" y="17304" zmin="896" zmax="1096"/>
+		<add x="116984" y="17740" zmin="896" zmax="1096"/>
+		<add x="116312" y="18404" zmin="896" zmax="1096"/>
+		<add x="115864" y="17784" zmin="896" zmax="1096"/>
+	</territory>
+	<spawn name="aden37_2318_11" count="1" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_11"/>
+		<npc id="20824"/><!--Командир Халлета-->
+	</spawn>
+	<spawn name="aden37_2318_11" count="1" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_11"/>
+		<npc id="20825"/><!--Инспектор Халлета-->
+	</spawn>
+	<spawn name="aden37_2318_11" count="1" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_11"/>
+		<npc id="21061"/><!--Стражник Халлета-->
+	</spawn>
+	<territory name="aden37_2318_04">
+		<add x="116308" y="13744" zmin="888" zmax="1088"/>
+		<add x="116924" y="14372" zmin="888" zmax="1088"/>
+		<add x="116252" y="14872" zmin="888" zmax="1088"/>
+		<add x="115852" y="14504" zmin="888" zmax="1088"/>
+	</territory>
+	<spawn name="aden37_2318_04" count="1" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_04"/>
+		<npc id="20824"/><!--Командир Халлета-->
+	</spawn>
+	<spawn name="aden37_2318_04" count="1" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_04"/>
+		<npc id="20825"/><!--Инспектор Халлета-->
+	</spawn>
+	<spawn name="aden37_2318_04" count="2" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_04"/>
+		<npc id="21061"/><!--Стражник Халлета-->
+	</spawn>
+	<territory name="aden37_2318_05">
+		<add x="115292" y="13272" zmin="888" zmax="1088"/>
+		<add x="116168" y="13640" zmin="888" zmax="1088"/>
+		<add x="115680" y="14388" zmin="888" zmax="1088"/>
+		<add x="115132" y="14172" zmin="888" zmax="1088"/>
+	</territory>
+	<spawn name="aden37_2318_05" count="1" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_05"/>
+		<npc id="20824"/><!--Командир Халлета-->
+	</spawn>
+	<spawn name="aden37_2318_05" count="1" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_05"/>
+		<npc id="20825"/><!--Инспектор Халлета-->
+	</spawn>
+	<spawn name="aden37_2318_05" count="1" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_05"/>
+		<npc id="21061"/><!--Стражник Халлета-->
+	</spawn>
+	<territory name="aden37_2318_06">
+		<add x="113140" y="13640" zmin="896" zmax="1096"/>
+		<add x="114004" y="13280" zmin="896" zmax="1096"/>
+		<add x="114172" y="14184" zmin="896" zmax="1096"/>
+		<add x="113632" y="14408" zmin="896" zmax="1096"/>
+	</territory>
+	<spawn name="aden37_2318_06" count="1" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_06"/>
+		<npc id="20824"/><!--Командир Халлета-->
+	</spawn>
+	<spawn name="aden37_2318_06" count="1" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_06"/>
+		<npc id="20825"/><!--Инспектор Халлета-->
+	</spawn>
+	<spawn name="aden37_2318_06" count="1" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_06"/>
+		<npc id="21061"/><!--Стражник Халлета-->
+	</spawn>
+	<territory name="aden37_2318_07">
+		<add x="112320" y="14392" zmin="896" zmax="1096"/>
+		<add x="112992" y="13736" zmin="896" zmax="1096"/>
+		<add x="113456" y="14508" zmin="896" zmax="1096"/>
+		<add x="113024" y="14888" zmin="896" zmax="1096"/>
+	</territory>
+	<spawn name="aden37_2318_07" count="1" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_07"/>
+		<npc id="20824"/><!--Командир Халлета-->
+	</spawn>
+	<spawn name="aden37_2318_07" count="1" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_07"/>
+		<npc id="20825"/><!--Инспектор Халлета-->
+	</spawn>
+	<spawn name="aden37_2318_07" count="1" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_07"/>
+		<npc id="21061"/><!--Стражник Халлета-->
+	</spawn>
+	<territory name="aden37_2318_01">
+		<add x="112808" y="15872" zmin="888" zmax="1088"/>
+		<add x="114000" y="15936" zmin="888" zmax="1088"/>
+		<add x="113992" y="17812" zmin="888" zmax="1088"/>
+		<add x="113556" y="17640" zmin="888" zmax="1088"/>
+		<add x="113028" y="16992" zmin="888" zmax="1088"/>
+	</territory>
+	<spawn name="aden37_2318_01" count="3" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_01"/>
+		<npc id="20824"/><!--Командир Халлета-->
+	</spawn>
+	<spawn name="aden37_2318_01" count="3" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_01"/>
+		<npc id="20825"/><!--Инспектор Халлета-->
+	</spawn>
+	<spawn name="aden37_2318_01" count="3" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_01"/>
+		<npc id="21061"/><!--Стражник Халлета-->
+	</spawn>
+	<territory name="aden37_2318_02">
+		<add x="114440" y="15116" zmin="888" zmax="1088"/>
+		<add x="114888" y="15112" zmin="888" zmax="1088"/>
+		<add x="114900" y="17876" zmin="888" zmax="1088"/>
+		<add x="114432" y="17872" zmin="888" zmax="1088"/>
+	</territory>
+	<spawn name="aden37_2318_02" count="3" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_02"/>
+		<npc id="20824"/><!--Командир Халлета-->
+	</spawn>
+	<spawn name="aden37_2318_02" count="2" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_02"/>
+		<npc id="20825"/><!--Инспектор Халлета-->
+	</spawn>
+	<spawn name="aden37_2318_02" count="2" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_02"/>
+		<npc id="21061"/><!--Стражник Халлета-->
+	</spawn>
+	<territory name="aden37_2318_03">
+		<add x="115300" y="14424" zmin="888" zmax="1088"/>
+		<add x="116260" y="15200" zmin="888" zmax="1088"/>
+		<add x="116476" y="16280" zmin="888" zmax="1088"/>
+		<add x="116296" y="16916" zmin="888" zmax="1088"/>
+		<add x="115296" y="16512" zmin="888" zmax="1088"/>
+	</territory>
+	<spawn name="aden37_2318_03" count="3" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_03"/>
+		<npc id="20824"/><!--Командир Халлета-->
+	</spawn>
+	<spawn name="aden37_2318_03" count="3" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_03"/>
+		<npc id="20825"/><!--Инспектор Халлета-->
+	</spawn>
+	<spawn name="aden37_2318_03" count="3" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_03"/>
+		<npc id="21061"/><!--Стражник Халлета-->
+	</spawn>
+	<territory name="aden37_2318_08">
+		<add x="112324" y="17744" zmin="896" zmax="1096"/>
+		<add x="113000" y="17312" zmin="896" zmax="1096"/>
+		<add x="113404" y="17760" zmin="896" zmax="1096"/>
+		<add x="112972" y="18400" zmin="896" zmax="1096"/>
+	</territory>
+	<spawn name="aden37_2318_08" count="1" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_08"/>
+		<npc id="20824"/><!--Командир Халлета-->
+	</spawn>
+	<spawn name="aden37_2318_08" count="1" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_08"/>
+		<npc id="20825"/><!--Инспектор Халлета-->
+	</spawn>
+	<spawn name="aden37_2318_08" count="1" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_08"/>
+		<npc id="21061"/><!--Стражник Халлета-->
+	</spawn>
+	<territory name="aden37_2318_09">
+		<add x="113604" y="17852" zmin="896" zmax="1096"/>
+		<add x="114156" y="18080" zmin="896" zmax="1096"/>
+		<add x="114012" y="18872" zmin="896" zmax="1096"/>
+		<add x="113128" y="18504" zmin="896" zmax="1096"/>
+	</territory>
+	<spawn name="aden37_2318_09" count="1" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_09"/>
+		<npc id="20824"/><!--Командир Халлета-->
+	</spawn>
+	<spawn name="aden37_2318_09" count="1" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_09"/>
+		<npc id="20825"/><!--Инспектор Халлета-->
+	</spawn>
+	<spawn name="aden37_2318_09" count="1" respawn="190" respawn_random="60">
+		<territory name="aden37_2318_09"/>
+		<npc id="21061"/><!--Стражник Халлета-->
+	</spawn>
+	<spawn name="aden29_2318_p09" count="1" respawn="300" respawn_random="80">
+		<territory>
+			<add x="113468" y="14144" zmin="6948" zmax="7148"/>
+			<add x="114724" y="15352" zmin="6948" zmax="7148"/>
+			<add x="113972" y="16116" zmin="6948" zmax="7148"/>
+			<add x="112712" y="14844" zmin="6948" zmax="7148"/>
+		</territory>
+		<npc id="21081"/><!--Могущественный Ангел Амон-->
+	</spawn>
+	<spawn name="aden29_2318_p02" count="1" respawn="300" respawn_random="80">
+		<territory>
+			<add x="114453" y="17147" zmin="6965" zmax="7165"/>
+			<add x="115096" y="17795" zmin="6965" zmax="7165"/>
+			<add x="114505" y="18378" zmin="6965" zmax="7165"/>
+			<add x="113553" y="18097" zmin="6965" zmax="7165"/>
+		</territory>
+		<npc id="21081"/><!--Могущественный Ангел Амон-->
+	</spawn>
+	<territory name="aden29_2318_04">
+		<add x="114772" y="13805" zmin="6961" zmax="7161"/>
+		<add x="115710" y="14092" zmin="6961" zmax="7161"/>
+		<add x="114835" y="14859" zmin="6961" zmax="7161"/>
+		<add x="114204" y="14333" zmin="6961" zmax="7161"/>
+	</territory>
+	<spawn name="aden29_2318_04" count="1" respawn="250" respawn_random="80">
+		<territory name="aden29_2318_04"/>
+		<npc id="21066"/><!--Шаман Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden29_2318_04" count="2" respawn="250" respawn_random="80">
+		<territory name="aden29_2318_04"/>
+		<npc id="21067"/><!--Архангел Хранитель-->
+	</spawn>
+	<spawn name="aden29_2318_04" count="1" respawn="250" respawn_random="80">
+		<territory name="aden29_2318_04"/>
+		<npc id="21072"/><!--Вождь Платиновых Хранителей-->
+	</spawn>
+	<territory name="aden29_2318_02">
+		<add x="114453" y="17147" zmin="6965" zmax="7165"/>
+		<add x="115096" y="17795" zmin="6965" zmax="7165"/>
+		<add x="114505" y="18378" zmin="6965" zmax="7165"/>
+		<add x="113553" y="18097" zmin="6965" zmax="7165"/>
+	</territory>
+	<spawn name="aden29_2318_02" count="1" respawn="250" respawn_random="80">
+		<territory name="aden29_2318_02"/>
+		<npc id="21066"/><!--Шаман Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden29_2318_02" count="1" respawn="250" respawn_random="80">
+		<territory name="aden29_2318_02"/>
+		<npc id="21067"/><!--Архангел Хранитель-->
+	</spawn>
+	<spawn name="aden29_2318_02" count="1" respawn="250" respawn_random="80">
+		<territory name="aden29_2318_02"/>
+		<npc id="21072"/><!--Вождь Платиновых Хранителей-->
+	</spawn>
+	<territory name="aden29_2318_08">
+		<add x="113468" y="14144" zmin="6948" zmax="7148"/>
+		<add x="114724" y="15352" zmin="6948" zmax="7148"/>
+		<add x="113972" y="16116" zmin="6948" zmax="7148"/>
+		<add x="112712" y="14844" zmin="6948" zmax="7148"/>
+	</territory>
+	<spawn name="aden29_2318_08" count="2" respawn="250" respawn_random="80">
+		<territory name="aden29_2318_08"/>
+		<npc id="21066"/><!--Шаман Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden29_2318_08" count="3" respawn="250" respawn_random="80">
+		<territory name="aden29_2318_08"/>
+		<npc id="21067"/><!--Архангел Хранитель-->
+	</spawn>
+	<spawn name="aden29_2318_08" count="2" respawn="320" respawn_random="120">
+		<territory name="aden29_2318_08"/>
+		<npc id="21072"/><!--Вождь Платиновых Хранителей-->
+	</spawn>
+	<territory name="aden29_2318_07">
+		<add x="114568" y="16784" zmin="6956" zmax="7156"/>
+		<add x="115376" y="15948" zmin="6956" zmax="7156"/>
+		<add x="115828" y="16396" zmin="6956" zmax="7156"/>
+		<add x="115000" y="17220" zmin="6956" zmax="7156"/>
+	</territory>
+	<spawn name="aden29_2318_07" count="2" respawn="250" respawn_random="80">
+		<territory name="aden29_2318_07"/>
+		<npc id="21066"/><!--Шаман Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden29_2318_07" count="2" respawn="250" respawn_random="80">
+		<territory name="aden29_2318_07"/>
+		<npc id="21067"/><!--Архангел Хранитель-->
+	</spawn>
+	<spawn name="aden29_2318_07" count="2" respawn="250" respawn_random="80">
+		<territory name="aden29_2318_07"/>
+		<npc id="21072"/><!--Вождь Платиновых Хранителей-->
+	</spawn>
+	<territory name="aden29_2318_06">
+		<add x="115977" y="14164" zmin="6960" zmax="7160"/>
+		<add x="116525" y="14738" zmin="6960" zmax="7160"/>
+		<add x="115551" y="15709" zmin="6960" zmax="7160"/>
+		<add x="114967" y="15184" zmin="6960" zmax="7160"/>
+	</territory>
+	<spawn name="aden29_2318_06" count="1" respawn="250" respawn_random="80">
+		<territory name="aden29_2318_06"/>
+		<npc id="21066"/><!--Шаман Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden29_2318_06" count="2" respawn="250" respawn_random="80">
+		<territory name="aden29_2318_06"/>
+		<npc id="21067"/><!--Архангел Хранитель-->
+	</spawn>
+	<spawn name="aden29_2318_06" count="1" respawn="250" respawn_random="80">
+		<territory name="aden29_2318_06"/>
+		<npc id="21072"/><!--Вождь Платиновых Хранителей-->
+	</spawn>
+	<territory name="aden29_2318_05">
+		<add x="113728" y="16421" zmin="6964" zmax="7164"/>
+		<add x="114292" y="16961" zmin="6964" zmax="7164"/>
+		<add x="113297" y="17958" zmin="6964" zmax="7164"/>
+		<add x="112784" y="17388" zmin="6964" zmax="7164"/>
+	</territory>
+	<spawn name="aden29_2318_05" count="2" respawn="250" respawn_random="80">
+		<territory name="aden29_2318_05"/>
+		<npc id="21066"/><!--Шаман Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden29_2318_05" count="2" respawn="250" respawn_random="80">
+		<territory name="aden29_2318_05"/>
+		<npc id="21067"/><!--Архангел Хранитель-->
+	</spawn>
+	<spawn name="aden29_2318_05" count="2" respawn="250" respawn_random="80">
+		<territory name="aden29_2318_05"/>
+		<npc id="21072"/><!--Вождь Платиновых Хранителей-->
+	</spawn>	
+	<spawn name="aden02_mb2318_12" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="112688" y="17480" zmin="-1448" zmax="-848"/>
+			<add x="113216" y="17052" zmin="-1448" zmax="-848"/>
+			<add x="113684" y="17528" zmin="-1448" zmax="-848"/>
+			<add x="113256" y="18072" zmin="-1448" zmax="-848"/>
+		</territory>
+		<npc id="25447"/><!--Бессмертный Спаситель Мадрил-->
+	</spawn>			
+	<territory name="aden28_2318_14">
+		<add x="111869" y="15586" zmin="5944" zmax="6144"/>
+		<add x="112576" y="15699" zmin="5944" zmax="6144"/>
+		<add x="112576" y="16405" zmin="5944" zmax="6144"/>
+		<add x="111869" y="16555" zmin="5944" zmax="6144"/>
+	</territory>
+	<spawn name="aden28_2318_14" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_14"/>
+		<npc id="20831"/><!--Ангел Печати-->
+	</spawn>
+	<spawn name="aden28_2318_14" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_14"/>
+		<npc id="21069"/><!--Владыка Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden28_2318_14" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_14"/>
+		<npc id="21070"/><!--Архангел Печати-->
+	</spawn>
+	<territory name="aden28_2318_13">
+		<add x="111873" y="16667" zmin="5956" zmax="6156"/>
+		<add x="112618" y="16573" zmin="5956" zmax="6156"/>
+		<add x="112880" y="17186" zmin="5956" zmax="6156"/>
+		<add x="112268" y="17580" zmin="5956" zmax="6156"/>
+	</territory>
+	<spawn name="aden28_2318_13" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_13"/>
+		<npc id="20831"/><!--Ангел Печати-->
+	</spawn>
+	<spawn name="aden28_2318_13" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_13"/>
+		<npc id="21069"/><!--Владыка Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden28_2318_13" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_13"/>
+		<npc id="21070"/><!--Архангел Печати-->
+	</spawn>
+	<territory name="aden28_2318_12">
+		<add x="112324" y="17684" zmin="5948" zmax="6148"/>
+		<add x="112974" y="17290" zmin="5948" zmax="6148"/>
+		<add x="113424" y="17752" zmin="5948" zmax="6148"/>
+		<add x="112999" y="18372" zmin="5948" zmax="6148"/>
+	</territory>
+	<spawn name="aden28_2318_12" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_12"/>
+		<npc id="20831"/><!--Ангел Печати-->
+	</spawn>
+	<spawn name="aden28_2318_12" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_12"/>
+		<npc id="21070"/><!--Архангел Печати-->
+	</spawn>
+	<territory name="aden28_2318_11">
+		<add x="113542" y="17815" zmin="5956" zmax="6156"/>
+		<add x="114192" y="18096" zmin="5956" zmax="6156"/>
+		<add x="114023" y="18859" zmin="5956" zmax="6156"/>
+		<add x="113110" y="18465" zmin="5956" zmax="6156"/>
+	</territory>
+	<spawn name="aden28_2318_11" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_11"/>
+		<npc id="20831"/><!--Ангел Печати-->
+	</spawn>
+	<spawn name="aden28_2318_11" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_11"/>
+		<npc id="21069"/><!--Владыка Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden28_2318_11" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_11"/>
+		<npc id="21070"/><!--Архангел Печати-->
+	</spawn>
+	<territory name="aden28_2318_10">
+		<add x="114336" y="18117" zmin="5956" zmax="6156"/>
+		<add x="114967" y="18117" zmin="5956" zmax="6156"/>
+		<add x="115155" y="18880" zmin="5956" zmax="6156"/>
+		<add x="114148" y="18880" zmin="5956" zmax="6156"/>
+	</territory>
+	<spawn name="aden28_2318_10" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_10"/>
+		<npc id="20831"/><!--Ангел Печати-->
+	</spawn>
+	<spawn name="aden28_2318_10" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_10"/>
+		<npc id="21069"/><!--Владыка Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden28_2318_10" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_10"/>
+		<npc id="21070"/><!--Архангел Печати-->
+	</spawn>
+	<territory name="aden28_2318_09">
+		<add x="115871" y="17721" zmin="5956" zmax="6156"/>
+		<add x="116315" y="17252" zmin="5956" zmax="6156"/>
+		<add x="116990" y="17677" zmin="5956" zmax="6156"/>
+		<add x="116265" y="18409" zmin="5956" zmax="6156"/>
+	</territory>
+	<spawn name="aden28_2318_09" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_09"/>
+		<npc id="20831"/><!--Ангел Печати-->
+	</spawn>
+	<spawn name="aden28_2318_09" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_09"/>
+		<npc id="21069"/><!--Владыка Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden28_2318_09" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_09"/>
+		<npc id="21070"/><!--Архангел Печати-->
+	</spawn>
+	<territory name="aden28_2318_08">
+		<add x="114148" y="13253" zmin="5948" zmax="6148"/>
+		<add x="115136" y="13253" zmin="5948" zmax="6148"/>
+		<add x="114970" y="14039" zmin="5948" zmax="6148"/>
+		<add x="114339" y="14039" zmin="5948" zmax="6148"/>
+	</territory>
+	<spawn name="aden28_2318_08" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_08"/>
+		<npc id="20831"/><!--Ангел Печати-->
+	</spawn>
+	<spawn name="aden28_2318_08" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_08"/>
+		<npc id="21070"/><!--Архангел Печати-->
+	</spawn>
+	<territory name="aden28_2318_07">
+		<add x="116296" y="13720" zmin="5948" zmax="6148"/>
+		<add x="116996" y="14428" zmin="5948" zmax="6148"/>
+		<add x="116300" y="14876" zmin="5948" zmax="6148"/>
+		<add x="115864" y="14420" zmin="5948" zmax="6148"/>
+	</territory>
+	<spawn name="aden28_2318_07" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_07"/>
+		<npc id="20831"/><!--Ангел Печати-->
+	</spawn>
+	<spawn name="aden28_2318_07" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_07"/>
+		<npc id="21069"/><!--Владыка Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden28_2318_07" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_07"/>
+		<npc id="21070"/><!--Архангел Печати-->
+	</spawn>
+	<territory name="aden28_2318_06">
+		<add x="115280" y="13272" zmin="5944" zmax="6144"/>
+		<add x="116176" y="13652" zmin="5944" zmax="6144"/>
+		<add x="115696" y="14312" zmin="5944" zmax="6144"/>
+		<add x="115124" y="14076" zmin="5944" zmax="6144"/>
+	</territory>
+	<spawn name="aden28_2318_06" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_06"/>
+		<npc id="20831"/><!--Ангел Печати-->
+	</spawn>
+	<spawn name="aden28_2318_06" count="2" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_06"/>
+		<npc id="21069"/><!--Владыка Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden28_2318_06" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_06"/>
+		<npc id="21070"/><!--Архангел Печати-->
+	</spawn>
+	<spawn name="aden28_2318_02" count="0" respawn="250" respawn_random="80">
+		<territory>
+			<add x="115684" y="15368" zmin="5957" zmax="6157"/>
+			<add x="115874" y="15826" zmin="5957" zmax="6157"/>
+			<add x="115886" y="16271" zmin="5957" zmax="6157"/>
+			<add x="115736" y="16606" zmin="5957" zmax="6157"/>
+			<add x="115364" y="16460" zmin="5957" zmax="6157"/>
+			<add x="115350" y="15524" zmin="5957" zmax="6157"/>
+		</territory>
+		<npc id="21070"/><!--Архангел Печати-->
+	</spawn>
+	<territory name="aden28_2318_01">
+		<add x="114503" y="15495" zmin="5958" zmax="6158"/>
+		<add x="114955" y="15605" zmin="5958" zmax="6158"/>
+		<add x="115226" y="15918" zmin="5958" zmax="6158"/>
+		<add x="115226" y="16213" zmin="5958" zmax="6158"/>
+		<add x="114944" y="16539" zmin="5958" zmax="6158"/>
+		<add x="114475" y="16618" zmin="5958" zmax="6158"/>
+		<add x="114114" y="16342" zmin="5958" zmax="6158"/>
+		<add x="114059" y="15913" zmin="5958" zmax="6158"/>
+	</territory>
+	<spawn name="aden28_2318_01" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_01"/>
+		<npc id="20831"/><!--Ангел Печати-->
+	</spawn>
+	<spawn name="aden28_2318_01" count="2" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_01"/>
+		<npc id="21069"/><!--Владыка Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden28_2318_01" count="1" respawn="250" respawn_random="80">
+		<territory name="aden28_2318_01"/>
+		<npc id="21070"/><!--Архангел Печати-->
+	</spawn>
+	<spawn name="aden37_2318_p01" count="1" respawn="220" respawn_random="50">
+		<territory>
+			<add x="112808" y="15872" zmin="888" zmax="1088"/>
+			<add x="114000" y="15936" zmin="888" zmax="1088"/>
+			<add x="113992" y="17812" zmin="888" zmax="1088"/>
+			<add x="113556" y="17640" zmin="888" zmax="1088"/>
+			<add x="113028" y="16992" zmin="888" zmax="1088"/>
+		</territory>
+		<npc id="20980"/><!--Миньон Халлета Молох-->
+	</spawn>
+	<spawn name="aden37_2318_p03" count="1" respawn="220" respawn_random="50">
+		<territory>
+			<add x="115300" y="14424" zmin="888" zmax="1088"/>
+			<add x="116260" y="15200" zmin="888" zmax="1088"/>
+			<add x="116476" y="16280" zmin="888" zmax="1088"/>
+			<add x="116296" y="16916" zmin="888" zmax="1088"/>
+			<add x="115296" y="16512" zmin="888" zmax="1088"/>
+		</territory>
+		<npc id="20980"/><!--Миньон Халлета Молох-->
+	</spawn>
+	<spawn name="aden39_2318_p01" count="1" respawn="300" respawn_random="80">
+		<territory>
+			<add x="113672" y="16116" zmin="2956" zmax="3156"/>
+			<add x="113864" y="15608" zmin="2956" zmax="3156"/>
+			<add x="114312" y="15368" zmin="2956" zmax="3156"/>
+			<add x="114800" y="15560" zmin="2956" zmax="3156"/>
+			<add x="115032" y="16092" zmin="2956" zmax="3156"/>
+			<add x="114864" y="16564" zmin="2956" zmax="3156"/>
+			<add x="114408" y="16792" zmin="2956" zmax="3156"/>
+			<add x="113924" y="16660" zmin="2956" zmax="3156"/>
+		</territory>
+		<npc id="21078"/><!--Волшебник Валак-->
+	</spawn>
+	<spawn name="aden39_2318_p05" count="1" respawn="300" respawn_random="80">
+		<territory>
+			<add x="113916" y="17198" zmin="2924" zmax="3124"/>
+			<add x="115032" y="17075" zmin="2924" zmax="3124"/>
+			<add x="115492" y="17676" zmin="2924" zmax="3124"/>
+			<add x="114288" y="17856" zmin="2924" zmax="3124"/>
+			<add x="113688" y="17632" zmin="2924" zmax="3124"/>
+		</territory>
+		<npc id="21078"/><!--Волшебник Валак-->
+	</spawn>
+	<spawn name="aden39_2318_p06" count="1" respawn="300" respawn_random="80">
+		<territory>
+			<add x="115224" y="14440" zmin="2912" zmax="3112"/>
+			<add x="115764" y="14636" zmin="2912" zmax="3112"/>
+			<add x="116320" y="15492" zmin="2912" zmax="3112"/>
+			<add x="115376" y="15696" zmin="2912" zmax="3112"/>
+			<add x="115144" y="15276" zmin="2912" zmax="3112"/>
+		</territory>
+		<npc id="21078"/><!--Волшебник Валак-->
+	</spawn>
+	<territory name="aden33_2318_02">
+		<add x="115159" y="13688" zmin="-5103" zmax="-4903"/>
+		<add x="116005" y="14066" zmin="-5103" zmax="-4903"/>
+		<add x="116634" y="14726" zmin="-5103" zmax="-4903"/>
+		<add x="116953" y="15467" zmin="-5103" zmax="-4903"/>
+		<add x="115980" y="15715" zmin="-5103" zmax="-4903"/>
+		<add x="115077" y="14717" zmin="-5103" zmax="-4903"/>
+	</territory>
+	<spawn name="aden33_2318_02" count="3" respawn="148" respawn_random="20">
+		<territory name="aden33_2318_02"/>
+		<npc id="20809"/><!--Призрак Башни-->
+	</spawn>
+	<spawn name="aden33_2318_02" count="3" respawn="148" respawn_random="20">
+		<territory name="aden33_2318_02"/>
+		<npc id="20811"/><!--Жуткий Воин-->
+	</spawn>
+	<spawn name="aden33_2318_02" count="3" respawn="148" respawn_random="20">
+		<territory name="aden33_2318_02"/>
+		<npc id="20814"/><!--Клинок Отчаяния-->
+	</spawn>
+	<spawn name="aden33_2318_02" count="3" respawn="148" respawn_random="20">
+		<territory name="aden33_2318_02"/>
+		<npc id="20810"/><!--Смотритель Халлета-->
+	</spawn>
+	<territory name="aden33_2318_03">
+		<add x="116004" y="16464" zmin="-5136" zmax="-4936"/>
+		<add x="116932" y="16612" zmin="-5136" zmax="-4936"/>
+		<add x="116540" y="17564" zmin="-5136" zmax="-4936"/>
+		<add x="116052" y="18008" zmin="-5136" zmax="-4936"/>
+		<add x="115224" y="18440" zmin="-5136" zmax="-4936"/>
+		<add x="114996" y="17440" zmin="-5136" zmax="-4936"/>
+	</territory>
+	<spawn name="aden33_2318_03" count="3" respawn="148" respawn_random="20">
+		<territory name="aden33_2318_03"/>
+		<npc id="20809"/><!--Призрак Башни-->
+	</spawn>
+	<spawn name="aden33_2318_03" count="3" respawn="148" respawn_random="20">
+		<territory name="aden33_2318_03"/>
+		<npc id="20811"/><!--Жуткий Воин-->
+	</spawn>
+	<spawn name="aden33_2318_03" count="3" respawn="148" respawn_random="20">
+		<territory name="aden33_2318_03"/>
+		<npc id="20814"/><!--Клинок Отчаяния-->
+	</spawn>
+	<spawn name="aden33_2318_03" count="3" respawn="148" respawn_random="20">
+		<territory name="aden33_2318_03"/>
+		<npc id="20810"/><!--Смотритель Халлета-->
+	</spawn>
+	<territory name="aden33_2318_01">
+		<add x="113424" y="14015" zmin="-5104" zmax="-4904"/>
+		<add x="114040" y="13766" zmin="-5104" zmax="-4904"/>
+		<add x="114265" y="14706" zmin="-5104" zmax="-4904"/>
+		<add x="113316" y="15674" zmin="-5104" zmax="-4904"/>
+		<add x="112377" y="15513" zmin="-5104" zmax="-4904"/>
+		<add x="112636" y="14849" zmin="-5104" zmax="-4904"/>
+	</territory>
+	<spawn name="aden33_2318_01" count="3" respawn="148" respawn_random="20">
+		<territory name="aden33_2318_01"/>
+		<npc id="20809"/><!--Призрак Башни-->
+	</spawn>
+	<spawn name="aden33_2318_01" count="3" respawn="148" respawn_random="20">
+		<territory name="aden33_2318_01"/>
+		<npc id="20811"/><!--Жуткий Воин-->
+	</spawn>
+	<spawn name="aden33_2318_01" count="3" respawn="148" respawn_random="20">
+		<territory name="aden33_2318_01"/>
+		<npc id="20814"/><!--Клинок Отчаяния-->
+	</spawn>
+	<spawn name="aden33_2318_01" count="3" respawn="148" respawn_random="20">
+		<territory name="aden33_2318_01"/>
+		<npc id="20810"/><!--Смотритель Халлета-->
+	</spawn>
+	<territory name="aden33_2318_04">
+		<add x="112324" y="16666" zmin="-5144" zmax="-4944"/>
+		<add x="113236" y="16408" zmin="-5144" zmax="-4944"/>
+		<add x="114280" y="17364" zmin="-5144" zmax="-4944"/>
+		<add x="114156" y="18423" zmin="-5144" zmax="-4944"/>
+		<add x="113336" y="18063" zmin="-5144" zmax="-4944"/>
+		<add x="112658" y="17408" zmin="-5144" zmax="-4944"/>
+	</territory>
+	<spawn name="aden33_2318_04" count="3" respawn="148" respawn_random="20">
+		<territory name="aden33_2318_04"/>
+		<npc id="20809"/><!--Призрак Башни-->
+	</spawn>
+	<spawn name="aden33_2318_04" count="3" respawn="148" respawn_random="20">
+		<territory name="aden33_2318_04"/>
+		<npc id="20811"/><!--Жуткий Воин-->
+	</spawn>
+	<spawn name="aden33_2318_04" count="3" respawn="148" respawn_random="20">
+		<territory name="aden33_2318_04"/>
+		<npc id="20814"/><!--Клинок Отчаяния-->
+	</spawn>
+	<spawn name="aden33_2318_04" count="3" respawn="148" respawn_random="121">
+		<territory name="aden33_2318_04"/>
+		<npc id="20810"/><!--Смотритель Халлета-->
+	</spawn>
+	<territory name="aden39_2318_02">
+		<add x="114168" y="14322" zmin="2921" zmax="3271"/>
+		<add x="114719" y="14269" zmin="2921" zmax="3271"/>
+		<add x="114587" y="14937" zmin="2921" zmax="3271"/>
+		<add x="114032" y="15014" zmin="2921" zmax="3271"/>
+		<add x="113713" y="14527" zmin="2921" zmax="3271"/>
+	</territory>
+	<spawn name="aden39_2318_02" count="1" respawn="249" respawn_random="80">
+		<territory name="aden39_2318_02"/>
+		<npc id="20828"/><!--Шаман Платинового Клана-->
+	</spawn>
+	<spawn name="aden39_2318_02" count="1" respawn="249" respawn_random="80">
+		<territory name="aden39_2318_02"/>
+		<npc id="20830"/><!--Ангел Хранитель-->
+	</spawn>
+	<territory name="aden39_2318_03">
+		<add x="112993" y="15121" zmin="2920" zmax="3270"/>
+		<add x="113494" y="15355" zmin="2920" zmax="3270"/>
+		<add x="113304" y="15690" zmin="2920" zmax="3270"/>
+		<add x="112809" y="15508" zmin="2920" zmax="3270"/>
+	</territory>
+	<spawn name="aden39_2318_03" count="1" respawn="249" respawn_random="80">
+		<territory name="aden39_2318_03"/>
+		<npc id="20828"/><!--Шаман Платинового Клана-->
+	</spawn>
+	<spawn name="aden39_2318_03" count="1" respawn="249" respawn_random="80">
+		<territory name="aden39_2318_03"/>
+		<npc id="20829"/><!--Владыка Платинового Клана-->
+	</spawn>
+	<spawn name="aden39_2318_03" count="1" respawn="249" respawn_random="80">
+		<territory name="aden39_2318_03"/>
+		<npc id="20830"/><!--Ангел Хранитель-->
+	</spawn>
+	<territory name="aden39_2318_04">
+		<add x="112716" y="15928" zmin="2920" zmax="3120"/>
+		<add x="113156" y="15980" zmin="2920" zmax="3120"/>
+		<add x="113488" y="16772" zmin="2920" zmax="3120"/>
+		<add x="112980" y="17004" zmin="2920" zmax="3120"/>
+		<add x="112784" y="16584" zmin="2920" zmax="3120"/>
+	</territory>
+	<spawn name="aden39_2318_04" count="1" respawn="249" respawn_random="80">
+		<territory name="aden39_2318_04"/>
+		<npc id="20828"/><!--Шаман Платинового Клана-->
+	</spawn>
+	<spawn name="aden39_2318_04" count="1" respawn="249" respawn_random="80">
+		<territory name="aden39_2318_04"/>
+		<npc id="20829"/><!--Владыка Платинового Клана-->
+	</spawn>
+	<territory name="aden39_2318_05">
+		<add x="113932" y="17199" zmin="2919" zmax="3269"/>
+		<add x="115027" y="17082" zmin="2919" zmax="3269"/>
+		<add x="115431" y="17608" zmin="2919" zmax="3269"/>
+		<add x="114290" y="17847" zmin="2919" zmax="3269"/>
+		<add x="113710" y="17623" zmin="2919" zmax="3269"/>
+	</territory>
+	<spawn name="aden39_2318_05" count="1" respawn="249" respawn_random="80">
+		<territory name="aden39_2318_05"/>
+		<npc id="20828"/><!--Шаман Платинового Клана-->
+	</spawn>
+	<spawn name="aden39_2318_05" count="2" respawn="249" respawn_random="80">
+		<territory name="aden39_2318_05"/>
+		<npc id="20829"/><!--Владыка Платинового Клана-->
+	</spawn>
+	<spawn name="aden39_2318_05" count="1" respawn="249" respawn_random="80">
+		<territory name="aden39_2318_05"/>
+		<npc id="20830"/><!--Ангел Хранитель-->
+	</spawn>
+	<territory name="aden39_2318_01">
+		<add x="113672" y="16116" zmin="2956" zmax="3156"/>
+		<add x="113864" y="15608" zmin="2956" zmax="3156"/>
+		<add x="114312" y="15368" zmin="2956" zmax="3156"/>
+		<add x="114800" y="15560" zmin="2956" zmax="3156"/>
+		<add x="115032" y="16092" zmin="2956" zmax="3156"/>
+		<add x="114864" y="16564" zmin="2956" zmax="3156"/>
+		<add x="114408" y="16792" zmin="2956" zmax="3156"/>
+		<add x="113924" y="16660" zmin="2956" zmax="3156"/>
+	</territory>
+	<spawn name="aden39_2318_01" count="1" respawn="249" respawn_random="80">
+		<territory name="aden39_2318_01"/>
+		<npc id="20828"/><!--Шаман Платинового Клана-->
+	</spawn>
+	<spawn name="aden39_2318_01" count="2" respawn="249" respawn_random="80">
+		<territory name="aden39_2318_01"/>
+		<npc id="20829"/><!--Владыка Платинового Клана-->
+	</spawn>
+	<spawn name="aden39_2318_01" count="2" respawn="249" respawn_random="80">
+		<territory name="aden39_2318_01"/>
+		<npc id="20830"/><!--Ангел Хранитель-->
+	</spawn>
+	<territory name="aden39_2318_06">
+		<add x="115224" y="14440" zmin="2912" zmax="3112"/>
+		<add x="115764" y="14636" zmin="2912" zmax="3112"/>
+		<add x="116320" y="15492" zmin="2912" zmax="3112"/>
+		<add x="115376" y="15696" zmin="2912" zmax="3112"/>
+		<add x="115144" y="15276" zmin="2912" zmax="3112"/>
+	</territory>
+	<spawn name="aden39_2318_06" count="1" respawn="249" respawn_random="80">
+		<territory name="aden39_2318_06"/>
+		<npc id="20828"/><!--Шаман Платинового Клана-->
+	</spawn>
+	<spawn name="aden39_2318_06" count="2" respawn="249" respawn_random="80">
+		<territory name="aden39_2318_06"/>
+		<npc id="20829"/><!--Владыка Платинового Клана-->
+	</spawn>
+	<spawn name="aden39_2318_06" count="1" respawn="249" respawn_random="80">
+		<territory name="aden39_2318_06"/>
+		<npc id="20830"/><!--Ангел Хранитель-->
+	</spawn>
+	<territory name="aden39_2318_07">
+		<add x="113630" y="18089" zmin="2920" zmax="3270"/>
+		<add x="115557" y="18118" zmin="2920" zmax="3270"/>
+		<add x="115798" y="18610" zmin="2920" zmax="3270"/>
+		<add x="115196" y="18792" zmin="2920" zmax="3270"/>
+		<add x="114091" y="18791" zmin="2920" zmax="3270"/>
+		<add x="113473" y="18545" zmin="2920" zmax="3270"/>
+	</territory>
+	<spawn name="aden39_2318_07" count="2" respawn="249" respawn_random="80">
+		<territory name="aden39_2318_07"/>
+		<npc id="20828"/><!--Шаман Платинового Клана-->
+	</spawn>
+	<spawn name="aden39_2318_07" count="1" respawn="249" respawn_random="80">
+		<territory name="aden39_2318_07"/>
+		<npc id="20829"/><!--Владыка Платинового Клана-->
+	</spawn>
+	<spawn name="aden39_2318_07" count="2" respawn="249" respawn_random="80">
+		<territory name="aden39_2318_07"/>
+		<npc id="20830"/><!--Ангел Хранитель-->
+	</spawn>
+	<spawn name="aden36_2318_p10" count="1" respawn="200" respawn_random="40">
+		<territory>
+			<add x="112844" y="14432" zmin="-684" zmax="-484"/>
+			<add x="114072" y="13680" zmin="-684" zmax="-484"/>
+			<add x="114348" y="14880" zmin="-684" zmax="-484"/>
+			<add x="114044" y="15016" zmin="-684" zmax="-484"/>
+		</territory>
+		<npc id="20977"/><!--Леди Эльморедена-->
+	</spawn>
+	<spawn name="aden36_2318_p05" count="1" respawn="200" respawn_random="40">
+		<territory>
+			<add x="114972" y="17220" zmin="-676" zmax="-476"/>
+			<add x="115240" y="17088" zmin="-676" zmax="-476"/>
+			<add x="116504" y="17604" zmin="-676" zmax="-476"/>
+			<add x="115272" y="18452" zmin="-676" zmax="-476"/>
+		</territory>
+		<npc id="20977"/><!--Леди Эльморедена-->
+	</spawn>
+	<territory name="aden36_2318_12">
+		<add x="114312" y="16372" zmin="-676" zmax="-476"/>
+		<add x="114888" y="16368" zmin="-676" zmax="-476"/>
+		<add x="115040" y="16736" zmin="-676" zmax="-476"/>
+		<add x="114012" y="16508" zmin="-676" zmax="-476"/>
+	</territory>
+	<spawn name="aden36_2318_12" count="2" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_12"/>
+		<npc id="20818"/><!--Воин Халлета-->
+	</spawn>
+	<spawn name="aden36_2318_12" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_12"/>
+		<npc id="20821"/><!--Эйрин Эдэнс-->
+	</spawn>
+	<territory name="aden36_2318_11">
+		<add x="114256" y="15312" zmin="-680" zmax="-480"/>
+		<add x="115352" y="15500" zmin="-680" zmax="-480"/>
+		<add x="114868" y="15704" zmin="-680" zmax="-480"/>
+		<add x="114420" y="15688" zmin="-680" zmax="-480"/>
+	</territory>
+	<spawn name="aden36_2318_11" count="2" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_11"/>
+		<npc id="20818"/><!--Воин Халлета-->
+	</spawn>
+	<spawn name="aden36_2318_11" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_11"/>
+		<npc id="20821"/><!--Эйрин Эдэнс-->
+	</spawn>
+	<territory name="aden36_2318_10">
+		<add x="112844" y="14432" zmin="-684" zmax="-484"/>
+		<add x="114072" y="13680" zmin="-684" zmax="-484"/>
+		<add x="114348" y="14880" zmin="-684" zmax="-484"/>
+		<add x="114044" y="15016" zmin="-684" zmax="-484"/>
+	</territory>
+	<spawn name="aden36_2318_10" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_10"/>
+		<npc id="20815"/><!--Гончая Халлета-->
+	</spawn>
+	<spawn name="aden36_2318_10" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_10"/>
+		<npc id="20818"/><!--Воин Халлета-->
+	</spawn>
+	<spawn name="aden36_2318_10" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_10"/>
+		<npc id="20819"/><!--Стрелок Бездны-->
+	</spawn>
+	<spawn name="aden36_2318_10" count="2" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_10"/>
+		<npc id="20821"/><!--Эйрин Эдэнс-->
+	</spawn>
+	<territory name="aden36_2318_09">
+		<add x="115180" y="13808" zmin="-684" zmax="-484"/>
+		<add x="116020" y="14156" zmin="-684" zmax="-484"/>
+		<add x="115516" y="15224" zmin="-684" zmax="-484"/>
+		<add x="115004" y="14944" zmin="-684" zmax="-484"/>
+	</territory>
+	<spawn name="aden36_2318_09" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_09"/>
+		<npc id="20815"/><!--Гончая Халлета-->
+	</spawn>
+	<spawn name="aden36_2318_09" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_09"/>
+		<npc id="20818"/><!--Воин Халлета-->
+	</spawn>
+	<spawn name="aden36_2318_09" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_09"/>
+		<npc id="20819"/><!--Стрелок Бездны-->
+	</spawn>
+	<spawn name="aden36_2318_09" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_09"/>
+		<npc id="20821"/><!--Эйрин Эдэнс-->
+	</spawn>
+	<territory name="aden36_2318_08">
+		<add x="115660" y="15348" zmin="-680" zmax="-480"/>
+		<add x="116320" y="14336" zmin="-680" zmax="-480"/>
+		<add x="116924" y="15488" zmin="-680" zmax="-480"/>
+		<add x="115816" y="15728" zmin="-680" zmax="-480"/>
+	</territory>
+	<spawn name="aden36_2318_08" count="2" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_08"/>
+		<npc id="20815"/><!--Гончая Халлета-->
+	</spawn>
+	<spawn name="aden36_2318_08" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_08"/>
+		<npc id="20818"/><!--Воин Халлета-->
+	</spawn>
+	<spawn name="aden36_2318_08" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_08"/>
+		<npc id="20819"/><!--Стрелок Бездны-->
+	</spawn>
+	<spawn name="aden36_2318_08" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_08"/>
+		<npc id="20821"/><!--Эйрин Эдэнс-->
+	</spawn>
+	<territory name="aden36_2318_07">
+		<add x="115844" y="15896" zmin="-692" zmax="-492"/>
+		<add x="117436" y="15624" zmin="-692" zmax="-492"/>
+		<add x="117420" y="16456" zmin="-692" zmax="-492"/>
+		<add x="115824" y="16208" zmin="-692" zmax="-492"/>
+	</territory>
+	<spawn name="aden36_2318_07" count="2" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_07"/>
+		<npc id="20815"/><!--Гончая Халлета-->
+	</spawn>
+	<spawn name="aden36_2318_07" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_07"/>
+		<npc id="20818"/><!--Воин Халлета-->
+	</spawn>
+	<spawn name="aden36_2318_07" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_07"/>
+		<npc id="20819"/><!--Стрелок Бездны-->
+	</spawn>
+	<spawn name="aden36_2318_07" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_07"/>
+		<npc id="20821"/><!--Эйрин Эдэнс-->
+	</spawn>
+	<territory name="aden36_2318_06">
+		<add x="115788" y="16344" zmin="-684" zmax="-484"/>
+		<add x="117352" y="16724" zmin="-684" zmax="-484"/>
+		<add x="117052" y="17388" zmin="-684" zmax="-484"/>
+		<add x="115428" y="16992" zmin="-684" zmax="-484"/>
+	</territory>
+	<spawn name="aden36_2318_06" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_06"/>
+		<npc id="20815"/><!--Гончая Халлета-->
+	</spawn>
+	<spawn name="aden36_2318_06" count="2" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_06"/>
+		<npc id="20818"/><!--Воин Халлета-->
+	</spawn>
+	<spawn name="aden36_2318_06" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_06"/>
+		<npc id="20819"/><!--Стрелок Бездны-->
+	</spawn>
+	<spawn name="aden36_2318_06" count="2" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_06"/>
+		<npc id="20821"/><!--Эйрин Эдэнс-->
+	</spawn>
+	<territory name="aden36_2318_05">
+		<add x="114972" y="17220" zmin="-676" zmax="-476"/>
+		<add x="115240" y="17088" zmin="-676" zmax="-476"/>
+		<add x="116504" y="17604" zmin="-676" zmax="-476"/>
+		<add x="115272" y="18452" zmin="-676" zmax="-476"/>
+	</territory>
+	<spawn name="aden36_2318_05" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_05"/>
+		<npc id="20815"/><!--Гончая Халлета-->
+	</spawn>
+	<spawn name="aden36_2318_05" count="2" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_05"/>
+		<npc id="20818"/><!--Воин Халлета-->
+	</spawn>
+	<spawn name="aden36_2318_05" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_05"/>
+		<npc id="20819"/><!--Стрелок Бездны-->
+	</spawn>
+	<spawn name="aden36_2318_05" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_05"/>
+		<npc id="20821"/><!--Эйрин Эдэнс-->
+	</spawn>
+	<territory name="aden36_2318_04">
+		<add x="113732" y="16836" zmin="-688" zmax="-488"/>
+		<add x="114352" y="17188" zmin="-688" zmax="-488"/>
+		<add x="114100" y="18300" zmin="-688" zmax="-488"/>
+		<add x="113384" y="18032" zmin="-688" zmax="-488"/>
+	</territory>
+	<spawn name="aden36_2318_04" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_04"/>
+		<npc id="20815"/><!--Гончая Халлета-->
+	</spawn>
+	<spawn name="aden36_2318_04" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_04"/>
+		<npc id="20818"/><!--Воин Халлета-->
+	</spawn>
+	<spawn name="aden36_2318_04" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_04"/>
+		<npc id="20819"/><!--Стрелок Бездны-->
+	</spawn>
+	<spawn name="aden36_2318_04" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_04"/>
+		<npc id="20821"/><!--Эйрин Эдэнс-->
+	</spawn>
+	<territory name="aden36_2318_03">
+		<add x="112368" y="16640" zmin="-684" zmax="-484"/>
+		<add x="113472" y="16352" zmin="-684" zmax="-484"/>
+		<add x="113644" y="16700" zmin="-684" zmax="-484"/>
+		<add x="112960" y="17732" zmin="-684" zmax="-484"/>
+	</territory>
+	<spawn name="aden36_2318_03" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_03"/>
+		<npc id="20815"/><!--Гончая Халлета-->
+	</spawn>
+	<spawn name="aden36_2318_03" count="2" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_03"/>
+		<npc id="20818"/><!--Воин Халлета-->
+	</spawn>
+	<spawn name="aden36_2318_03" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_03"/>
+		<npc id="20819"/><!--Стрелок Бездны-->
+	</spawn>
+	<spawn name="aden36_2318_03" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_03"/>
+		<npc id="20821"/><!--Эйрин Эдэнс-->
+	</spawn>
+	<territory name="aden36_2318_02">
+		<add x="112228" y="14680" zmin="-676" zmax="-476"/>
+		<add x="113692" y="15068" zmin="-676" zmax="-476"/>
+		<add x="113492" y="15728" zmin="-676" zmax="-476"/>
+		<add x="111944" y="15352" zmin="-676" zmax="-476"/>
+	</territory>
+	<spawn name="aden36_2318_02" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_02"/>
+		<npc id="20815"/><!--Гончая Халлета-->
+	</spawn>
+	<spawn name="aden36_2318_02" count="2" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_02"/>
+		<npc id="20818"/><!--Воин Халлета-->
+	</spawn>
+	<spawn name="aden36_2318_02" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_02"/>
+		<npc id="20819"/><!--Стрелок Бездны-->
+	</spawn>
+	<spawn name="aden36_2318_02" count="2" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_02"/>
+		<npc id="20821"/><!--Эйрин Эдэнс-->
+	</spawn>
+	<territory name="aden36_2318_01">
+		<add x="111900" y="15636" zmin="-688" zmax="-488"/>
+		<add x="113436" y="15896" zmin="-688" zmax="-488"/>
+		<add x="113424" y="16200" zmin="-688" zmax="-488"/>
+		<add x="111856" y="16500" zmin="-688" zmax="-488"/>
+	</territory>
+	<spawn name="aden36_2318_01" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_01"/>
+		<npc id="20815"/><!--Гончая Халлета-->
+	</spawn>
+	<spawn name="aden36_2318_01" count="2" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_01"/>
+		<npc id="20818"/><!--Воин Халлета-->
+	</spawn>
+	<spawn name="aden36_2318_01" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_01"/>
+		<npc id="20819"/><!--Стрелок Бездны-->
+	</spawn>
+	<spawn name="aden36_2318_01" count="1" respawn="165" respawn_random="50">
+		<territory name="aden36_2318_01"/>
+		<npc id="20821"/><!--Эйрин Эдэнс-->
+	</spawn>
+	<territory name="aden30_2318_04">
+		<add x="113540" y="15472" zmin="7960" zmax="8160"/>
+		<add x="113916" y="15788" zmin="7960" zmax="8160"/>
+		<add x="113948" y="16504" zmin="7960" zmax="8160"/>
+		<add x="113588" y="16760" zmin="7960" zmax="8160"/>
+		<add x="113400" y="16300" zmin="7960" zmax="8160"/>
+		<add x="113400" y="15828" zmin="7960" zmax="8160"/>
+	</territory>
+	<spawn name="aden30_2318_04" count="2" respawn="300" respawn_random="90">
+		<territory name="aden30_2318_04"/>
+		<npc id="21067"/><!--Архангел Хранитель-->
+	</spawn>
+	<spawn name="aden30_2318_04" count="1" respawn="300" respawn_random="90">
+		<territory name="aden30_2318_04"/>
+		<npc id="21072"/><!--Вождь Платиновых Хранителей-->
+	</spawn>
+	<territory name="aden30_2318_03">
+		<add x="115340" y="15564" zmin="7956" zmax="8156"/>
+		<add x="115696" y="15368" zmin="7956" zmax="8156"/>
+		<add x="115872" y="15808" zmin="7956" zmax="8156"/>
+		<add x="115888" y="16304" zmin="7956" zmax="8156"/>
+		<add x="115612" y="16660" zmin="7956" zmax="8156"/>
+		<add x="115360" y="16444" zmin="7956" zmax="8156"/>
+	</territory>
+	<spawn name="aden30_2318_03" count="1" respawn="300" respawn_random="90">
+		<territory name="aden30_2318_03"/>
+		<npc id="21066"/><!--Шаман Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden30_2318_03" count="1" respawn="300" respawn_random="90">
+		<territory name="aden30_2318_03"/>
+		<npc id="21072"/><!--Вождь Платиновых Хранителей-->
+	</spawn>
+	<territory name="aden30_2318_05">
+		<add x="114896" y="14828" zmin="7960" zmax="8160"/>
+		<add x="115324" y="15012" zmin="7960" zmax="8160"/>
+		<add x="114988" y="15364" zmin="7960" zmax="8160"/>
+		<add x="114256" y="15356" zmin="7960" zmax="8160"/>
+		<add x="114024" y="14996" zmin="7960" zmax="8160"/>
+		<add x="114392" y="14828" zmin="7960" zmax="8160"/>
+	</territory>
+	<spawn name="aden30_2318_05" count="1" respawn="300" respawn_random="90">
+		<territory name="aden30_2318_05"/>
+		<npc id="21066"/><!--Шаман Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden30_2318_05" count="1" respawn="300" respawn_random="90">
+		<territory name="aden30_2318_05"/>
+		<npc id="21067"/><!--Архангел Хранитель-->
+	</spawn>
+	<territory name="aden30_2318_02">
+		<add x="114152" y="16772" zmin="7964" zmax="8164"/>
+		<add x="115120" y="16776" zmin="7964" zmax="8164"/>
+		<add x="115212" y="17160" zmin="7964" zmax="8164"/>
+		<add x="114856" y="17312" zmin="7964" zmax="8164"/>
+		<add x="114388" y="17304" zmin="7964" zmax="8164"/>
+		<add x="113944" y="17120" zmin="7964" zmax="8164"/>
+	</territory>
+	<spawn name="aden30_2318_02" count="1" respawn="300" respawn_random="90">
+		<territory name="aden30_2318_02"/>
+		<npc id="21066"/><!--Шаман Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden30_2318_02" count="2" respawn="300" respawn_random="90">
+		<territory name="aden30_2318_02"/>
+		<npc id="21067"/><!--Архангел Хранитель-->
+	</spawn>
+	<territory name="aden30_2318_01">
+		<add x="114524" y="15444" zmin="7952" zmax="8152"/>
+		<add x="115032" y="15640" zmin="7952" zmax="8152"/>
+		<add x="115236" y="16200" zmin="7952" zmax="8152"/>
+		<add x="114792" y="16680" zmin="7952" zmax="8152"/>
+		<add x="114232" y="16472" zmin="7952" zmax="8152"/>
+		<add x="114008" y="15936" zmin="7952" zmax="8152"/>
+	</territory>
+	<spawn name="aden30_2318_01" count="1" respawn="300" respawn_random="90">
+		<territory name="aden30_2318_01"/>
+		<npc id="21066"/><!--Шаман Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden30_2318_01" count="2" respawn="300" respawn_random="90">
+		<territory name="aden30_2318_01"/>
+		<npc id="21067"/><!--Архангел Хранитель-->
+	</spawn>
+	<spawn name="aden30_2318_01" count="2" respawn="300" respawn_random="90">
+		<territory name="aden30_2318_01"/>
+		<npc id="21072"/><!--Вождь Платиновых Хранителей-->
+	</spawn>
+	<spawn name="oren32_p2318_03" count="3" respawn="37" respawn_random="10">
+		<territory>
+			<add x="119268" y="220" zmin="-3784" zmax="-2984"/>
+			<add x="122796" y="208" zmin="-3784" zmax="-2984"/>
+			<add x="123080" y="1784" zmin="-3784" zmax="-2984"/>
+			<add x="120500" y="2868" zmin="-3784" zmax="-2984"/>
+		</territory>
+		<npc id="20956"/><!--Древний Рыцарь-->
+	</spawn>
+	<spawn name="oren32_p2318_01" count="5" respawn="37" respawn_random="10">
+		<territory>
+			<add x="105228" y="64" zmin="-3836" zmax="-3036"/>
+			<add x="111876" y="236" zmin="-3836" zmax="-3036"/>
+			<add x="111492" y="2936" zmin="-3836" zmax="-3036"/>
+			<add x="108460" y="5316" zmin="-3836" zmax="-3036"/>
+			<add x="104976" y="1808" zmin="-3836" zmax="-3036"/>
+		</territory>
+		<npc id="20956"/><!--Древний Рыцарь-->
+	</spawn>
+	<spawn name="oren32_p2318_02" count="5" respawn="37" respawn_random="10">
+		<territory>
+			<add x="111896" y="180" zmin="-3852" zmax="-3352"/>
+			<add x="118984" y="152" zmin="-3852" zmax="-3352"/>
+			<add x="120356" y="3108" zmin="-3852" zmax="-3352"/>
+			<add x="117740" y="4724" zmin="-3852" zmax="-3352"/>
+			<add x="111496" y="2908" zmin="-3852" zmax="-3352"/>
+		</territory>
+		<npc id="20956"/><!--Древний Рыцарь-->
+	</spawn>
+	<spawn name="23_18_baium_npc" count="1" respawn="604800" respawn_random="172800">
+		<point x="-105200" y="-253104" z="-15264" h="0"/>
+		<npc id="29025"/><!--Баюм-->
+	</spawn>
+	<territory name="aden40_2318_06">
+		<add x="114524" y="17013" zmin="3933" zmax="4283"/>
+		<add x="115433" y="16626" zmin="3933" zmax="4283"/>
+		<add x="115802" y="17479" zmin="3933" zmax="4283"/>
+		<add x="114863" y="17889" zmin="3933" zmax="4283"/>
+	</territory>
+	<spawn name="aden40_2318_06" count="2" respawn="230" respawn_random="75">
+		<territory name="aden40_2318_06"/>
+		<npc id="21062"/><!--Ангел Посланник-->
+	</spawn>
+	<spawn name="aden40_2318_06" count="1" respawn="230" respawn_random="75">
+		<territory name="aden40_2318_06"/>
+		<npc id="21064"/><!--Стрелок Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden40_2318_06" count="2" respawn="230" respawn_random="75">
+		<territory name="aden40_2318_06"/>
+		<npc id="21065"/><!--Воин Платиновых Хранителей-->
+	</spawn>
+	<territory name="aden40_2318_07">
+		<add x="115709" y="16496" zmin="3931" zmax="4281"/>
+		<add x="116467" y="16174" zmin="3931" zmax="4281"/>
+		<add x="116271" y="16790" zmin="3931" zmax="4281"/>
+		<add x="116010" y="17230" zmin="3931" zmax="4281"/>
+	</territory>
+	<spawn name="aden40_2318_07" count="1" respawn="230" respawn_random="75">
+		<territory name="aden40_2318_07"/>
+		<npc id="21062"/><!--Ангел Посланник-->
+	</spawn>
+	<spawn name="aden40_2318_07" count="1" respawn="230" respawn_random="75">
+		<territory name="aden40_2318_07"/>
+		<npc id="21064"/><!--Стрелок Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden40_2318_07" count="1" respawn="230" respawn_random="75">
+		<territory name="aden40_2318_07"/>
+		<npc id="21065"/><!--Воин Платиновых Хранителей-->
+	</spawn>
+	<territory name="aden40_2318_04">
+		<add x="115235" y="15268" zmin="3930" zmax="4280"/>
+		<add x="116040" y="14944" zmin="3930" zmax="4280"/>
+		<add x="116445" y="15878" zmin="3930" zmax="4280"/>
+		<add x="115613" y="16210" zmin="3930" zmax="4280"/>
+	</territory>
+	<spawn name="aden40_2318_04" count="2" respawn="230" respawn_random="75">
+		<territory name="aden40_2318_04"/>
+		<npc id="21062"/><!--Ангел Посланник-->
+	</spawn>
+	<spawn name="aden40_2318_04" count="2" respawn="230" respawn_random="75">
+		<territory name="aden40_2318_04"/>
+		<npc id="21064"/><!--Стрелок Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden40_2318_04" count="2" respawn="230" respawn_random="75">
+		<territory name="aden40_2318_04"/>
+		<npc id="21065"/><!--Воин Платиновых Хранителей-->
+	</spawn>
+	<territory name="aden40_2318_05">
+		<add x="113987" y="15776" zmin="3932" zmax="4282"/>
+		<add x="114959" y="15385" zmin="3932" zmax="4282"/>
+		<add x="115356" y="16327" zmin="3932" zmax="4282"/>
+		<add x="114380" y="16731" zmin="3932" zmax="4282"/>
+	</territory>
+	<spawn name="aden40_2318_05" count="2" respawn="230" respawn_random="75">
+		<territory name="aden40_2318_05"/>
+		<npc id="21062"/><!--Ангел Посланник-->
+	</spawn>
+	<spawn name="aden40_2318_05" count="1" respawn="230" respawn_random="75">
+		<territory name="aden40_2318_05"/>
+		<npc id="21064"/><!--Стрелок Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden40_2318_05" count="2" respawn="230" respawn_random="75">
+		<territory name="aden40_2318_05"/>
+		<npc id="21065"/><!--Воин Платиновых Хранителей-->
+	</spawn>
+	<territory name="aden40_2318_02">
+		<add x="113541" y="14650" zmin="3932" zmax="4282"/>
+		<add x="114501" y="14244" zmin="3932" zmax="4282"/>
+		<add x="114830" y="15099" zmin="3932" zmax="4282"/>
+		<add x="113866" y="15458" zmin="3932" zmax="4282"/>
+	</territory>
+	<spawn name="aden40_2318_02" count="2" respawn="230" respawn_random="75">
+		<territory name="aden40_2318_02"/>
+		<npc id="21062"/><!--Ангел Посланник-->
+	</spawn>
+	<spawn name="aden40_2318_02" count="1" respawn="230" respawn_random="75">
+		<territory name="aden40_2318_02"/>
+		<npc id="21064"/><!--Стрелок Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden40_2318_02" count="2" respawn="230" respawn_random="75">
+		<territory name="aden40_2318_02"/>
+		<npc id="21065"/><!--Воин Платиновых Хранителей-->
+	</spawn>
+	<territory name="aden40_2318_03">
+		<add x="114754" y="14241" zmin="3930" zmax="4280"/>
+		<add x="115354" y="14328" zmin="3930" zmax="4280"/>
+		<add x="115830" y="14698" zmin="3930" zmax="4280"/>
+		<add x="115109" y="14989" zmin="3930" zmax="4280"/>
+	</territory>
+	<spawn name="aden40_2318_03" count="1" respawn="230" respawn_random="75">
+		<territory name="aden40_2318_03"/>
+		<npc id="21062"/><!--Ангел Посланник-->
+	</spawn>
+	<spawn name="aden40_2318_03" count="1" respawn="230" respawn_random="75">
+		<territory name="aden40_2318_03"/>
+		<npc id="21064"/><!--Стрелок Платиновых Хранителей-->
+	</spawn>
+	<spawn name="aden40_2318_03" count="1" respawn="230" respawn_random="75">
+		<territory name="aden40_2318_03"/>
+		<npc id="21065"/><!--Воин Платиновых Хранителей-->
+	</spawn>
+	<spawn name="oren32_p2318_01s" count="3" respawn="37" respawn_random="10">
+		<territory>
+			<add x="108200" y="2256" zmin="-3768" zmax="-3168"/>
+			<add x="110548" y="3036" zmin="-3768" zmax="-3168"/>
+			<add x="108888" y="4376" zmin="-3768" zmax="-3168"/>
+			<add x="106784" y="2640" zmin="-3768" zmax="-3168"/>
+		</territory>
+		<npc id="20956"/><!--Древний Рыцарь-->
+	</spawn>
+	<spawn name="aden01_mb2318_07" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="106908" y="27048" zmin="-3572" zmax="-2972"/>
+			<add x="108588" y="27060" zmin="-3572" zmax="-2972"/>
+			<add x="108956" y="28076" zmin="-3572" zmax="-2972"/>
+			<add x="106920" y="28600" zmin="-3572" zmax="-2972"/>
+		</territory>
+		<npc id="25044"/><!--Барион-->
+	</spawn>
+	<spawn name="aden01_mb2318_08" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="115668" y="27272" zmin="-3376" zmax="-2776"/>
+			<add x="116488" y="26964" zmin="-3376" zmax="-2776"/>
+			<add x="117144" y="27608" zmin="-3376" zmax="-2776"/>
+			<add x="116736" y="28316" zmin="-3376" zmax="-2776"/>
+			<add x="115828" y="28072" zmin="-3376" zmax="-2776"/>
+		</territory>
+		<npc id="25047"/><!--Карте-->
+	</spawn>
+	<spawn name="aden01_mb2318_09" count="1" respawn="129600" respawn_random="86400">
+		<territory>
+			<add x="124924" y="26480" zmin="-3740" zmax="-3140"/>
+			<add x="125900" y="26388" zmin="-3740" zmax="-3140"/>
+			<add x="126252" y="27560" zmin="-3740" zmax="-3140"/>
+			<add x="125632" y="28080" zmin="-3740" zmax="-3140"/>
+			<add x="124516" y="27556" zmin="-3740" zmax="-3140"/>
+		</territory>
+		<npc id="25050"/><!--Верфа-->
+	</spawn>
+	<spawn name="aden01_npc2318_05" count="1" respawn="60">
+		<point x="121992" y="29400" z="-3648" h="49000"/>
+		<npc id="31646"/><!--Камень Познания-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="112634" y="13364" z="10966" h="8021" />
+		<npc id="30401" /><!--Arushinai-->
+	</spawn>
+	<spawn name="Booleros" count="1" respawn="86400" respawn_random="12000">
+		<point x="130360" y="11048" z="-3760" h="21344"/>
+		<npc id="25767"/><!--Монстр Буллерос-->
+	</spawn>
+	<spawn name="Dorkaus" count="1" respawn="86400" respawn_random="12000">
+		<point x="132824" y="4104" z="-3672" h="21344"/>
+		<npc id="25768"/><!--Доркаус-->
+	</spawn>
+	<spawn name="Kerpaus" count="1" respawn="86400" respawn_random="12000">
+		<point x="138936" y="1720" z="-4528" h="21344"/>
+		<npc id="25769"/><!--Керпаус-->
+	</spawn>
+</list>

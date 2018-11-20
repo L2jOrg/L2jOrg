@@ -1,0 +1,181 @@
+<!--AUTHOR: Bonux-->
+<html><body><title>Кабинет</title><center>
+<br>
+<table width=750 background="L2UI_CT1.Tab_DF_bg" border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td align=center>
+	<table width=737 border=0 cellpadding=0 cellspacing=0>
+		<tr>
+			<td width=93 align=center><button value="Главная" action="bypass _bbspage:index" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Статистика" action="bypass _cbbsstatistic_pk" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Магазин" action="bypass _bbspage:shop" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Баффы" action="bypass _cbbsbuffer 0" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Телепорт" action="bypass _cbbsteleport" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Карьера" action="bypass _bbspage:career" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Сервисы" action="bypass _bbspage:services" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=92 align=center background="L2UI_CT1.Tab_DF_Tab_Selected"><font color=DDD3B6>Кабинет</font></td>
+		</tr>
+	</table>
+	<table width=750 border=0 cellpadding=0 cellspacing=0>
+		<tr>
+			<td align=center>&nbsp;</td>
+		</tr>
+		<tr>
+			<td align=center>
+				<table width=700 background="L2UI_CT1.Windows_DF_Drawer_Bg" border=0 cellpadding=0 cellspacing=0>
+					<tr>
+						<td height=40 width=25></td>
+						<td width=385>
+							<font color=DDD3B6>Кабинет</font>
+						</td>
+						<td align=right width=300><font color=DDD3B6>Текущий онлайн: <?total_online?></font></td>
+						<td height=40 width=25></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td align=center>
+				<table width=750 height=375 border=0 cellpadding=0 cellspacing=0>
+					<tr>
+						<td valign="top" align="center">
+							<br>
+							<table border=0 cellpadding=0 cellspacing=0>
+								<tr>
+									<td width=350 align=center valign="top">
+										<table border=0 cellpadding=0 cellspacing=-9>
+											<tr><td width=256 height=185 background="L2UI_CT1.OlympiadWnd_DF_GrandTexture"></td></tr>
+										</table>
+										<table>
+											<tr>
+												<td><button value="Автозелья" action="bypass _bbspage:autopotion" back="l2ui_ct1.Button_DF_Msn_down" width=200 height=30 fore="l2ui_ct1.Button_DF_Msn"></td>
+											</tr>
+											<tr>
+												<td><button value="Восстановить персонажа" action="bypass _cbbsservices_cabinet_repair" back="l2ui_ct1.Button_DF_Msn_down" width=200 height=30 fore="l2ui_ct1.Button_DF_Msn"></td>
+											</tr>
+											<tr>
+												<td><button value="Характеристики персонажа" action="bypass _cbbsservices_cabinet_stats" back="l2ui_ct1.Button_DF_Msn_down" width=200 height=30 fore="l2ui_ct1.Button_DF_Msn"></td>
+											</tr>
+											<tr>
+												<td><button value="Настройки" action="bypass _cbbsservices_cabinet_config" back="l2ui_ct1.Button_DF_Msn_down" width=200 height=30 fore="l2ui_ct1.Button_DF_Msn"></td>
+											</tr>
+											<tr>
+												<td><button value="Ивенты" action="bypass _bbspage:events" back="l2ui_ct1.Button_DF_Msn_down" width=200 height=30 fore="l2ui_ct1.Button_DF_Msn"></td>
+											</tr>
+										</table>
+									</td>
+									<td width=350 align=center>
+										<table width=300 background="L2UI_CH3.refinewnd_back_Pattern">
+											<tr><td><br><br></td></tr>
+											<tr>
+												<td align=center><font color=DDD3B6>Информация о аккаунте</font></td>
+											</tr>
+											<tr><td><br></td></tr>
+											<tr>
+												<td align=center>
+													<table width=290 bgcolor=000000>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;Аккаунт:</font></td><td width=110><font color=63CDFF><?account?></font></td>
+														</tr>
+													</table>
+													<table width=290>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;IP:</font></td><td width=110><font color=63CDFF><?ip?></font></td>
+														</tr>
+													</table>
+													<table width=290 bgcolor=000000>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;Тип:</font></td><td width=110><font color=63CDFF><?type?></font></td>
+														</tr>
+													</table>
+													<table width=290>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;Персонаж:</font></td><td width=110><font color=63CDFF><?char_name?></font></td>
+														</tr>
+													</table>
+													<table width=290 bgcolor=000000>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;Клан:</font></td><td width=110><font color=63CDFF><?clan_name?></font></td>
+														</tr>
+													</table>
+													<table width=290>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;Альянс:</font></td><td width=110><font color=63CDFF><?ally_name?></font></td>
+														</tr>
+													</table>
+													<table width=290 bgcolor=000000>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;Наиграно времени:</font></td><td width=110><font color=63CDFF><?played_day?>д. <?played_hour?>ч. <?played_minute?>м.</font></td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr><td><br><br></td></tr>
+											<tr>
+												<td align=center><font color=DDD3B6>Информация о личных рейтах <font color=LEVEL>*</font></font></td>
+											</tr>
+											<tr><td><br></td></tr>
+											<tr>
+												<td align=center>
+													<table width=290 bgcolor=000000>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;XP:</font></td><td width=110><font color=63CDFF>x<?rate_xp?></font></td>
+														</tr>
+													</table>
+													<table width=290>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;SP:</font></td><td width=110><font color=63CDFF>x<?rate_sp?></font></td>
+														</tr>
+													</table>
+													<table width=290 bgcolor=000000>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;Дроп адены:</font></td><td width=110><font color=63CDFF>x<?rate_adena?></font></td>
+														</tr>
+													</table>
+													<table width=290>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;Дроп предметов:</font></td><td width=110><font color=63CDFF>x<?rate_drop?></font></td>
+														</tr>
+													</table>
+													<table width=290 bgcolor=000000>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;Спойл:</font></td><td width=110><font color=63CDFF>x<?rate_spoil?></font></td>
+														</tr>
+													</table>
+													<table width=290>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;Дроп квест. предметов:</font></td><td width=110><font color=63CDFF>x<?rate_quest_drop?></font></td>
+														</tr>
+													</table>
+													<table width=290 bgcolor=000000>
+														<tr>
+															<td width=160><font color=LEVEL>&nbsp;&nbsp;Награда квестов:</font></td><td width=110><font color=63CDFF>x<?rate_quest_reward?></font></td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr><td><br><br><br><br><br></td></tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+							<br><br>
+							<font color=LEVEL>* Рейты указаны с учетом всех бонусов персонажа (Энергия, Руны и прочие эффекты).</font>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td align=center>
+				<img src="L2UI_CT1.Tab_DF_bg_line" width=700 height=32><br1>
+				<font color="655C4D"><?copyright?></font><br><br>
+			</td>
+		</tr>
+	</table>
+</td>
+</tr>
+</table>
+<br>
+</center>
+</body></html>

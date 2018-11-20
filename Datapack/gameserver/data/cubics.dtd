@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT list (cubic)*>
+
+	<!ELEMENT cubic (skill|op_cond)*>
+	<!ATTLIST cubic
+		id CDATA #REQUIRED
+		level CDATA #REQUIRED
+		slot CDATA #IMPLIED
+		duration CDATA #REQUIRED
+		delay CDATA #REQUIRED
+		max_count CDATA #IMPLIED
+		use_up CDATA #IMPLIED
+		power CDATA #IMPLIED
+		target_type CDATA #IMPLIED>
+
+		<!ELEMENT skill (chance)*>
+		<!ATTLIST skill
+			chance CDATA #IMPLIED
+			id CDATA #REQUIRED
+			level CDATA #REQUIRED
+			action_type CDATA #REQUIRED
+			can_attack_door CDATA #REQUIRED
+			use_chance CDATA #IMPLIED>
+
+			<!ELEMENT chance (#PCDATA)>
+			<!ATTLIST chance
+				min_hp_percent CDATA #REQUIRED
+				max_hp_percent CDATA #REQUIRED
+				value CDATA #REQUIRED>
+
+		<!ELEMENT op_cond (#PCDATA)>
+		<!ATTLIST op_cond
+			type CDATA #REQUIRED
+			hp_percent CDATA #REQUIRED
+			hp CDATA #REQUIRED>

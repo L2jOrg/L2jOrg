@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT list (category|classes|hair_accessories|cloaks)*>
+<!ELEMENT category (weapons|armors|accessorys)*>
+<!ATTLIST category
+		grade CDATA #REQUIRED>
+<!ELEMENT hair_accessories (item)*>
+<!ELEMENT cloaks (item)*>
+<!ELEMENT weapons (item)*>
+<!ELEMENT item (#PCDATA)>
+<!ATTLIST item
+		id CDATA #REQUIRED>
+<!ELEMENT armors (pack)*>
+<!ELEMENT pack (item)*>
+<!ATTLIST pack
+		type CDATA #IMPLIED>
+<!ELEMENT accessorys (pack)*>
+<!ELEMENT classes (class)*>
+<!ELEMENT class (#PCDATA)>
+<!ATTLIST class
+		armorTypes CDATA #REQUIRED
+		id CDATA #REQUIRED
+		weaponTypes CDATA #REQUIRED>

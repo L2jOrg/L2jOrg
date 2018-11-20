@@ -1,0 +1,20 @@
+<!DOCTYPE list SYSTEM "instances.dtd">
+<list>
+	<instance id="150" name="Olympiad" maxChannels="40" collapseIfEmpty="1" timelimit="60" dispelBuffs="true">
+		<level min="1"/>
+		<party min="1" max="1"/>
+		<teleport loc="-76632 -239176 -8218 0"/>
+		<teleport loc="-74280 -239176 -8218 0"/>
+		<teleport loc="-75448 -238712 -8218 0"/>
+		<doors>
+			<door id="17100301"/>
+			<door id="17100302"/>
+		</doors>
+		<spawns>
+			<group name="olympiad_150_buffers" spawned="false"/>
+		</spawns>
+		<zones>
+			<zone name="[olympiad_arena_150]" active="true"/>
+		</zones>
+	</instance>
+</list>

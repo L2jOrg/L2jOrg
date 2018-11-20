@@ -1,0 +1,10 @@
+<html><head><body>
+Великий Магистр Фэйрен:<br>
+Я Великий Магистр Фэйрен. Здесь, в Башне Слоновой Кости, я занимаюсь подготовкой Темных Магов высокого уровня. Вы пришли ко мне, чтобы стать могущественным чародеем, свободно повелевающим стихиями?<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Клан</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Альянс</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Обменять Ежедневные Монеты</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Квест</Button>
+</body></html>

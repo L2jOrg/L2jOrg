@@ -1,0 +1,85 @@
+<!ELEMENT list (template_data)*>
+<!ELEMENT template_data (creation_data|stats_data)*>
+<!ATTLIST template_data
+	race CDATA #REQUIRED
+	sex CDATA #REQUIRED
+	type CDATA #REQUIRED>
+
+<!ELEMENT creation_data (start_equipments|start_points)*>
+
+<!ELEMENT start_equipments (equipment)*>
+<!ELEMENT equipment (#PCDATA)>
+<!ATTLIST equipment
+	item_id CDATA #REQUIRED
+	count CDATA #REQUIRED
+	equiped CDATA #IMPLIED
+	enchant_level CDATA #IMPLIED>
+
+<!ELEMENT start_points (point)*>
+<!ELEMENT point (#PCDATA)>
+<!ATTLIST point
+	x CDATA #REQUIRED
+	y CDATA #REQUIRED
+	z CDATA #REQUIRED>
+
+<!ELEMENT stats_data (min_attributes|max_attributes|base_attributes|armor_defence|jewel_defence|base_stats)*>
+
+<!ELEMENT min_attributes (#PCDATA)>
+<!ATTLIST min_attributes
+	int CDATA #REQUIRED
+	str CDATA #REQUIRED
+	con CDATA #REQUIRED
+	men CDATA #REQUIRED
+	dex CDATA #REQUIRED
+	wit CDATA #REQUIRED>
+
+<!ELEMENT max_attributes (#PCDATA)>
+<!ATTLIST max_attributes
+	int CDATA #REQUIRED
+	str CDATA #REQUIRED
+	con CDATA #REQUIRED
+	men CDATA #REQUIRED
+	dex CDATA #REQUIRED
+	wit CDATA #REQUIRED>
+
+<!ELEMENT base_attributes (#PCDATA)>
+<!ATTLIST base_attributes
+	int CDATA #REQUIRED
+	str CDATA #REQUIRED
+	con CDATA #REQUIRED
+	men CDATA #REQUIRED
+	dex CDATA #REQUIRED
+	wit CDATA #REQUIRED>
+
+<!ELEMENT armor_defence (#PCDATA)>
+<!ATTLIST armor_defence
+	chest CDATA #REQUIRED
+	legs CDATA #REQUIRED
+	helmet CDATA #REQUIRED
+	boots CDATA #REQUIRED
+	gloves CDATA #REQUIRED
+	pendant CDATA #REQUIRED
+	cloak CDATA #REQUIRED>
+
+<!ELEMENT jewel_defence (#PCDATA)>
+<!ATTLIST jewel_defence
+	r_earring CDATA #REQUIRED
+	l_earring CDATA #REQUIRED
+	r_ring CDATA #REQUIRED
+	l_ring CDATA #REQUIRED
+	necklace CDATA #REQUIRED>
+
+<!ELEMENT base_stats (set|regen_data)*>
+
+<!ELEMENT set (#PCDATA)>
+<!ATTLIST set
+	name CDATA #REQUIRED
+	value CDATA #REQUIRED>
+
+<!ELEMENT regen_data (regen)*>
+<!ELEMENT regen (#PCDATA)>
+<!ATTLIST regen
+	level CDATA #REQUIRED
+	hp CDATA #REQUIRED
+	mp CDATA #REQUIRED
+	cp CDATA #REQUIRED>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
+
+<list>
+	<door id="25170001" name="Devastated_castle_outter_001" hp="158250" pdef="644" mdef="518">
+		<pos x="178212" y="-15038" z="-2135"/>
+		<shape ax="178211" ay="-15038" bx="178342" by="-15038" cx="178341" cy="-15017" dx="178211" dy="-15017" minz="-2294" maxz="-1976"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="34"/>
+		</ai_params>
+	</door>
+	<door id="25170002" name="Devastated_castle_outter_002" hp="158250" pdef="644" mdef="518">
+		<pos x="178468" y="-15038" z="-2135"/>
+		<shape ax="178339" ay="-15038" bx="178469" by="-15038" cx="178469" cy="-15017" dx="178339" dy="-15017" minz="-2295" maxz="-1977"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="34"/>
+		</ai_params>
+	</door>
+	<door id="25170003" name="Devastated_castle_003" hp="79125" pdef="644" mdef="518">
+		<pos x="178120" y="-18225" z="-2286"/>
+		<shape ax="178120" ay="-18225" bx="178183" by="-18225" cx="178183" cy="-18211" dx="178120" dy="-18211" minz="-2262" maxz="-1812"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="34"/>
+		</ai_params>
+	</door>
+	<door id="25170004" name="Devastated_castle_004" hp="79125" pdef="644" mdef="518">
+		<pos x="178245" y="-18225" z="-2286"/>
+		<shape ax="178182" ay="-18225" bx="178245" by="-18225" cx="178245" cy="-18212" dx="178182" dy="-18211" minz="-2262" maxz="-1812"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="34"/>
+		</ai_params>
+	</door>
+	<door id="25170005" name="Devastated_castle_001" hp="79125" pdef="644" mdef="518">
+		<pos x="178302" y="-18573" z="-2287"/>
+		<shape ax="178302" ay="-18611" bx="178309" by="-18611" cx="178309" cy="-18573" dx="178302" dy="-18573" minz="-2272" maxz="-1822"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="34"/>
+		</ai_params>
+	</door>
+	<door id="25170006" name="Devastated_castle_002" hp="79125" pdef="644" mdef="518">
+		<pos x="178302" y="-18648" z="-2287"/>
+		<shape ax="178302" ay="-18648" bx="178309" by="-18648" cx="178309" cy="-18610" dx="178302" dy="-18610" minz="-2272" maxz="-1822"/>
+		<set name="opened" value="false"/>
+		<set name="unlockable" value="false"/>
+		<set name="key" value="0"/>
+		<set name="show_hp" value="true"/>
+		<set name="ai" value="ResidenceDoor"/>
+		<ai_params>
+			<set name="residence_id" value="34"/>
+		</ai_params>
+	</door>
+</list>

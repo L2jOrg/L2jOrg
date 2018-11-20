@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "multisell.dtd">
+<list>
+	<config show_all="true" no_tax="true" keep_enchanted="false" />
+	<!-- Party Mask - etc_party_mask_i00 -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="5808" count="1"/>
+	</item>
+	<!-- Red Party Mask - etc_party_mask_i01 -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="6394" count="1"/>
+	</item>
+</list>
