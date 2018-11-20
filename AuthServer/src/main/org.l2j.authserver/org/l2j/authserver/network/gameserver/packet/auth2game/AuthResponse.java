@@ -14,7 +14,7 @@ public class AuthResponse extends GameServerWritablePacket {
 
 	@Override
 	protected void writeImpl() {
-		writeByte(0x02);
+		writeByte(0x00);
 		writeByte(serverId);
 		writeString(serverName);
 	}

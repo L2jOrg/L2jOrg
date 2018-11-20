@@ -14,7 +14,7 @@ public abstract class GameServerWritablePacket extends WritablePacket<ServerClie
 	    try {
             writeImpl();
         } catch (Exception e) {
-	        logger.error("Writing {} : {}", getClass().getSimpleName(), e);
+	        logger.error(e.getLocalizedMessage(), e);
         }
 
 	}

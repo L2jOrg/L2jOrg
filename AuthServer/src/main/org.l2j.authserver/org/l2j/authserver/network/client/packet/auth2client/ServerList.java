@@ -63,8 +63,8 @@ public final class ServerList extends L2LoginServerPacket {
             }
 
             writeInt(server.getPort());
-            writeByte(0x00); // minimum age
-            writeByte(server.isPvp() ? 1 : 0);
+            writeByte(server.getAgeLimit()); // minimum age
+            writeByte(server.isPvp());
             writeShort(server.getOnlinePlayersCount());
             writeShort(server.getMaxPlayers());
 
@@ -75,7 +75,7 @@ public final class ServerList extends L2LoginServerPacket {
 
             writeByte(ServerStatus.STATUS_DOWN == status ? 0x00 : 0x01);
             writeInt(server.getServerType());
-            writeByte(server.isShowingBrackets() ? 0x01 : 0x00); // Region
+            writeByte(server.isShowingBrackets()); // Region
         }
 
         writeShort(0xa4);

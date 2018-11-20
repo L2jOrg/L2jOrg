@@ -10,7 +10,7 @@ public class KickPlayer extends GameServerWritablePacket {
 
 	@Override
 	protected void writeImpl() {
-		writeByte(0x04);
+		writeByte(0x03);
 		writeString(account);
 	}
 

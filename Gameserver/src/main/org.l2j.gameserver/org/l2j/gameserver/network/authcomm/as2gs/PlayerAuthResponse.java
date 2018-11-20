@@ -34,7 +34,7 @@ public class PlayerAuthResponse extends ReceivablePacket
 	{
 		account = readS();
 		authed = readC() == 1;
-		if(authed)
+		/*if(authed)
 		{
 			playOkId1 = readD();
 			playOkId2 = readD();
@@ -46,18 +46,18 @@ public class PlayerAuthResponse extends ReceivablePacket
 			hwid = readS();
 			if(getByteBuffer().hasRemaining())
 				phoneNumber = readQ();
-		}
+		}*/
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		SessionKey skey = new SessionKey(loginOkId1, loginOkId2, playOkId1, playOkId2);
+		/*SessionKey skey = new SessionKey(loginOkId1, loginOkId2, playOkId1, playOkId2);*/
 		GameClient client = AuthServerCommunication.getInstance().removeWaitingClient(account);
 		if(client == null)
 			return;
 
-		if(authed && client.getSessionKey().equals(skey))
+		if(authed /*&& client.getSessionKey().equals(skey)*/)
 		{
 			if(Config.MAX_ACTIVE_ACCOUNTS_ON_ONE_IP > 0 && AuthServerCommunication.getInstance().getAuthedClient(account) == null)
 			{

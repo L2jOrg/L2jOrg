@@ -1,5 +1,7 @@
 package org.l2j.authserver.network.gameserver.packet.auth2game;
 
+import org.l2j.authserver.controller.AuthController;
+
 public class PlayerAuthResponse extends GameServerWritablePacket {
 
 	private final String account;
@@ -12,7 +14,7 @@ public class PlayerAuthResponse extends GameServerWritablePacket {
 
 	@Override
 	protected void writeImpl()  {
-		writeByte(0x03);
+		writeByte(0x02);
 		writeString(account);
 		writeByte(response);
 	}

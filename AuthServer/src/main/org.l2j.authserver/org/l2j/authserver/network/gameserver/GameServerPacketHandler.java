@@ -33,22 +33,22 @@ public final class GameServerPacketHandler implements PacketHandler<ServerClient
     private ReadablePacket<ServerClient> handleAuthedPacket(ServerClient client, int opcode) {
         ReadablePacket<ServerClient> packet = null;
         switch (opcode) {
-            case 0x02:
+            case 0x03:
                 packet = new PlayerInGame();
                 break;
-            case 0x03:
+            case 0x04:
                 packet = new PlayerLogout();
                 break;
-            case 0x04:
+            case 0x11:
                 packet = new ChangeAccessLevel();
                 break;
-            case 0x05:
+            case 0x02:
                 packet = new PlayerAuthRequest();
                 break;
             case 0x06:
                 packet = new ServerStatus();
                 break;
-            case 0x07:
+            case 0x05:
                 packet = new AccountInfo();
                 break;
             default:
@@ -62,7 +62,7 @@ public final class GameServerPacketHandler implements PacketHandler<ServerClient
         ReadablePacket<ServerClient> packet = null;
         switch (opcode) {
             case 0x00:
-                packet = new GameServerAuth();
+                packet = new AuthRequest();
                 break;
             default:
                 handleUnkownOpcode(client, opcode);

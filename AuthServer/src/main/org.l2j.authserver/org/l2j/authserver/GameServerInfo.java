@@ -15,8 +15,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import static org.l2j.commons.util.Util.stringToHex;
-
 public class GameServerInfo {
 
     private static final Logger logger = LoggerFactory.getLogger(GameServerInfo.class);
@@ -33,13 +31,14 @@ public class GameServerInfo {
     private int _port;
 
     // config
-    private final boolean _isPvp = true;
+    private boolean isPvp;
     private boolean _isTestServer;
     private boolean _isShowingClock;
     private boolean _isShowingBrackets;
     private int _maxPlayers;
     private int serverType;
     private ServerClient client;
+    private byte ageLimit;
 
 
     public GameServerInfo(GameServer gameServer) {
@@ -184,7 +183,7 @@ public class GameServerInfo {
     }
 
     public boolean isPvp() {
-        return _isPvp;
+        return isPvp;
     }
 
     public void setTestServer(boolean val) {
@@ -222,5 +221,17 @@ public class GameServerInfo {
 
     public void addAccounts(List<String> accounts) {
         this.accounts.addAll(accounts);
+    }
+
+    public void setAgeLimit(byte ageLimit) {
+        this.ageLimit = ageLimit;
+    }
+
+    public void setIsPvp(boolean isPvp) {
+        this.isPvp = isPvp;
+    }
+
+    public byte getAgeLimit() {
+        return ageLimit;
     }
 }

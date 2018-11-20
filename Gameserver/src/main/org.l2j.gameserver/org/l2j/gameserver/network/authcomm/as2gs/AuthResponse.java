@@ -67,8 +67,6 @@ public class AuthResponse extends ReceivablePacket
 		for(ServerInfo info : _servers)
 			_log.info("Registered on authserver as " + info.getId() + " [" + info.getName() + "]");
 
-		sendPacket(new OnlineStatus(true));
-
 		String[] accounts = AuthServerCommunication.getInstance().getAccounts();
 		for(String account : accounts)
 			sendPacket(new PlayerInGame(account));

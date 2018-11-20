@@ -10,7 +10,7 @@ public class RequestAccountInfo extends GameServerWritablePacket {
 
     @Override
     protected void writeImpl() {
-        writeByte(0x05);
+        writeByte(0x04);
         writeString(account);
     }
 

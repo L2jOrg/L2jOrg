@@ -9,7 +9,7 @@ import static java.util.Objects.nonNull;
 import static org.l2j.authserver.network.gameserver.packet.auth2game.LoginGameServerFail.*;
 import static org.l2j.authserver.settings.AuthServerSettings.acceptNewGameServerEnabled;
 
-public class GameServerAuth extends GameserverReadablePacket {
+public class AuthRequest extends GameserverReadablePacket {
 
 	private  int desiredId;
     private  boolean acceptAlternativeId;
@@ -18,18 +18,26 @@ public class GameServerAuth extends GameserverReadablePacket {
 	private  String externalHost;
 	private  String internalHost;
 	private  int serverType;
+    private byte ageLimit;
+    private boolean gmOnly;
+    private boolean showBrackets;
+    private boolean isPvp;
 
-	@Override
+    @Override
 	protected void readImpl() {
+        var protocol = readInt();
 		desiredId = readByte();
-		serverType = readInt();
-		acceptAlternativeId = readByte() != 0;
-        readByte(); // hostReserved
-		externalHost = readString();
-		internalHost = readString();
-		port = readShort();
-		maxPlayers = readInt();
-	}
+        acceptAlternativeId = readByte() != 0x00;
+        serverType = readInt();
+        ageLimit = readByte();
+        gmOnly = readByte() == 0x01;
+        showBrackets = readByte() == 0x01;
+        isPvp = readByte() == 0x01;
+        externalHost = readString();
+        internalHost = readString();
+        port = readShort();
+        maxPlayers = readInt();
+    }
 
 	@Override
 	protected void runImpl()  {
@@ -79,5 +87,9 @@ public class GameServerAuth extends GameserverReadablePacket {
         gsi.setMaxPlayers(maxPlayers);
         gsi.setAuthed(true);
         gsi.setServerType(serverType);
+        gsi.setAgeLimit(ageLimit);
+        gsi.setShowingBrackets(showBrackets);
+        gsi.setIsPvp(isPvp);
+        gsi.setStatus(ServerStatus.STATUS_GOOD);
     }
 }
