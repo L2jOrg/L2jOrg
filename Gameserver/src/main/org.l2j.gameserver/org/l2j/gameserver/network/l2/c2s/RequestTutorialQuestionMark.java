@@ -12,8 +12,8 @@ public class RequestTutorialQuestionMark extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_quest = readC() > 0;
-		_tutorialId = readD();
+		_quest = readByte() > 0;
+		_tutorialId = readInt();
 	}
 
 	@Override

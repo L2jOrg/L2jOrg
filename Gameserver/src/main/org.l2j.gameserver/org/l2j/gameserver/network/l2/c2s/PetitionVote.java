@@ -15,8 +15,8 @@ public class PetitionVote extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_type = readD();
-		_unk1 = readD(); // possible always zero
+		_type = readInt();
+		_unk1 = readInt(); // possible always zero
 		_petitionText = readS(4096);
 		// not done
 	}

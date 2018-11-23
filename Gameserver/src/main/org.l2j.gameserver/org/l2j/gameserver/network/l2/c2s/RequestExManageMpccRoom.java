@@ -18,11 +18,11 @@ public class RequestExManageMpccRoom extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_id = readD(); // id
-		_memberSize = readD(); // member size
-		_minLevel = readD(); //min level
-		_maxLevel = readD(); //max level
-		readD(); //lootType
+		_id = readInt(); // id
+		_memberSize = readInt(); // member size
+		_minLevel = readInt(); //min level
+		_maxLevel = readInt(); //max level
+		readInt(); //lootType
 		_topic = readString(); //topic
 	}
 

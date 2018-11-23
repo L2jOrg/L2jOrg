@@ -23,8 +23,8 @@ public class SetPrivateStoreBuyList extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		int count = readD();
-		if(count * 40 > _buf.remaining() || count > Short.MAX_VALUE || count < 1)
+		int count = readInt();
+		if(count * 40 > availableData() || count > Short.MAX_VALUE || count < 1)
 			return;
 
 		_items = new ArrayList<BuyItemInfo>();
@@ -32,34 +32,34 @@ public class SetPrivateStoreBuyList extends L2GameClientPacket
 		for(int i = 0; i < count; i++)
 		{
 			BuyItemInfo item = new BuyItemInfo();
-			item.id = readD();
-			item.enchant_level = readD();
-			item.count = readQ();
-			item.price = readQ();
+			item.id = readInt();
+			item.enchant_level = readInt();
+			item.count = readLong();
+			item.price = readLong();
 
 			if(item.count < 1 || item.price < 1)
 				break;
 
-			readD();
-			readD();
+			readInt();
+			readInt();
 
-			readH();
-			readH();
-			readH();
-			readH();
-			readH();
-			readH();
-			readH();
-			readH();
-			readD();
+			readShort();
+			readShort();
+			readShort();
+			readShort();
+			readShort();
+			readShort();
+			readShort();
+			readShort();
+			readInt();
 
-			int saCount = readC();
+			int saCount = readByte();
 			for(int s = 0; s < saCount; s++)
-				readD();
+				readInt();
 
-			saCount = readC();
+			saCount = readByte();
 			for(int s = 0; s < saCount; s++)
-				readD();
+				readInt();
 
 			_items.add(item);
 		}

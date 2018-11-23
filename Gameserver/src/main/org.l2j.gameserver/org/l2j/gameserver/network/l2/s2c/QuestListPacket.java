@@ -75,6 +75,6 @@ public class QuestListPacket extends L2GameServerPacket
 			writeInt(iterator.key());
 			writeInt(iterator.value());
 		}
-		writeB(_completedQuestsMask);
+		writeBytes(_completedQuestsMask);
 	}
 }

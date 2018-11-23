@@ -32,10 +32,10 @@ public class RequestPrivateStoreBuySellList extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_buyerId = readD();
-		_count = readD();
+		_buyerId = readInt();
+		_count = readInt();
 
-		if(_count * 28 > _buf.remaining() || _count > Short.MAX_VALUE || _count < 1)
+		if(_count * 28 > availableData() || _count > Short.MAX_VALUE || _count < 1)
 		{
 			_count = 0;
 			return;
@@ -47,12 +47,12 @@ public class RequestPrivateStoreBuySellList extends L2GameClientPacket
 
 		for(int i = 0; i < _count; i++)
 		{
-			_items[i] = readD();
-			readD(); //itemId
-			readH();
-			readH();
-			_itemQ[i] = readQ();
-			_itemP[i] = readQ();
+			_items[i] = readInt();
+			readInt(); //itemId
+			readShort();
+			readShort();
+			_itemQ[i] = readLong();
+			_itemP[i] = readLong();
 
 			if(_itemQ[i] < 1 || _itemP[i] < 1 || ArrayUtils.indexOf(_items, _items[i]) < i)
 			{
@@ -60,17 +60,17 @@ public class RequestPrivateStoreBuySellList extends L2GameClientPacket
 				break;
 			}
 
-			readD();
-			readD();
-			readD();
+			readInt();
+			readInt();
+			readInt();
 
-			int saCount = readC();
+			int saCount = readByte();
 			for(int s = 0; s < saCount; s++)
-				readD();
+				readInt();
 
-			saCount = readC();
+			saCount = readByte();
 			for(int s = 0; s < saCount; s++)
-				readD();
+				readInt();
 		}
 	}
 

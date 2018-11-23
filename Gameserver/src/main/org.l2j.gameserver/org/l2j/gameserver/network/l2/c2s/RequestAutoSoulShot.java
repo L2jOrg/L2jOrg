@@ -16,9 +16,9 @@ public class RequestAutoSoulShot extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_itemId = readD();
-		_action = readD();
-		_type = SoulShotType.VALUES[readD()];
+		_itemId = readInt();
+		_action = readInt();
+		_type = SoulShotType.VALUES[readInt()];
 	}
 
 	@Override

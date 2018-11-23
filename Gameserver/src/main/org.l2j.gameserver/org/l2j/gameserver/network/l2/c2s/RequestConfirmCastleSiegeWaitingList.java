@@ -22,9 +22,9 @@ public class RequestConfirmCastleSiegeWaitingList extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_unitId = readD();
-		_clanId = readD();
-		_approved = readD() == 1;
+		_unitId = readInt();
+		_clanId = readInt();
+		_approved = readInt() == 1;
 	}
 
 	@Override

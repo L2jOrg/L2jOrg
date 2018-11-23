@@ -92,9 +92,9 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_listId = readD();
-		_entryId = readD();
-		_amount = readQ();
+		_listId = readInt();
+		_entryId = readInt();
+		_amount = readLong();
 	}
 
 	@Override

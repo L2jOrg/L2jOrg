@@ -8,8 +8,8 @@ public class RequestExTryToPutEnchantSupportItem extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		readD();
-		readD();
+		readInt();
+		readInt();
 	}
 
 	@Override

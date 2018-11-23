@@ -14,7 +14,7 @@ public class RequestExSetTutorial extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_event = readD();
+		_event = readInt();
 	}
 
 	@Override

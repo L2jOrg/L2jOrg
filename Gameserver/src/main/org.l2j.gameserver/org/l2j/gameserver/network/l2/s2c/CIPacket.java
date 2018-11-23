@@ -268,10 +268,10 @@ public class CIPacket extends L2GameServerPacket
 		writeShort(_flyRunSpd);
 		writeShort(_flyWalkSpd);
 
-		writeF(speed_move); // _cha.getProperMultiplier()
-		writeF(speed_atack); // _cha.getAttackSpeedMultiplier()
-		writeF(col_radius);
-		writeF(col_height);
+		writeDouble(speed_move); // _cha.getProperMultiplier()
+		writeDouble(speed_atack); // _cha.getAttackSpeedMultiplier()
+		writeDouble(col_radius);
+		writeDouble(col_height);
 		writeInt(hair_style);
 		writeInt(hair_color);
 		writeInt(face);

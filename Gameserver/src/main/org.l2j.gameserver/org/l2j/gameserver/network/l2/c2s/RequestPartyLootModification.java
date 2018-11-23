@@ -10,7 +10,7 @@ public class RequestPartyLootModification extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_mode = (byte) readD();
+		_mode = (byte) readInt();
 	}
 
 	@Override

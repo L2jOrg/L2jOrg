@@ -12,7 +12,7 @@ public class RequestCastleSiegeDefenderList extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_unitId = readD();
+		_unitId = readInt();
 	}
 
 	@Override

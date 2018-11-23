@@ -79,6 +79,7 @@ import org.l2j.gameserver.utils.velocity.VelocityUtils;
 import net.sf.ehcache.CacheManager;
 
 import org.l2j.mmocore.ConnectionBuilder;
+import org.l2j.mmocore.ConnectionHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -91,8 +92,13 @@ public class GameServer {
 	public static final int AUTH_SERVER_PROTOCOL = 2;
 
 	private static Logger _log;
+    private final ConnectionHandler<GameClient> connectionHandler;
 
-	public class GameServerListenerList extends ListenerList<GameServer>
+    public void shutdown() {
+        connectionHandler.shutdown();
+    }
+
+    public class GameServerListenerList extends ListenerList<GameServer>
 	{
 		public void onStart()
 		{
@@ -300,7 +306,7 @@ public class GameServer {
 
         var bindAddress =  getInetSocketAddress();
         final GamePacketHandler gph = new GamePacketHandler();
-        var connectionHandler = ConnectionBuilder.create(bindAddress, gph, gph, gph).build();
+        connectionHandler = ConnectionBuilder.create(bindAddress, gph, gph, gph).build();
         connectionHandler.start();
 
 		getListeners().onStart();
@@ -360,13 +366,7 @@ public class GameServer {
     }
 
     private InetSocketAddress getInetSocketAddress() {
-        InetSocketAddress bindAddress;
-        if (!org.l2j.commons.Config.GAMESERVER_HOSTNAME.equals("*")) {
-            bindAddress = new InetSocketAddress(org.l2j.commons.Config.GAMESERVER_HOSTNAME, org.l2j.commons.Config.PORT_GAME);
-        } else {
-            bindAddress = new InetSocketAddress(org.l2j.commons.Config.PORT_GAME);
-        }
-        return bindAddress;
+        return new InetSocketAddress(Config.PORT_GAME);
     }
 
 

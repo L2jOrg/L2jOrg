@@ -14,7 +14,7 @@ public class RequestExJoinMpccRoom extends L2GameClientPacket
 	@Override
 	protected void readImpl() throws Exception
 	{
-		_roomId = readD();
+		_roomId = readInt();
 	}
 
 	@Override

@@ -21,14 +21,14 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_targetLoc.x = readD();
-		_targetLoc.y = readD();
-		_targetLoc.z = readD();
-		_originLoc.x = readD();
-		_originLoc.y = readD();
-		_originLoc.z = readD();
-		if(_buf.hasRemaining())
-			_moveMovement = readD();
+		_targetLoc.x = readInt();
+		_targetLoc.y = readInt();
+		_targetLoc.z = readInt();
+		_originLoc.x = readInt();
+		_originLoc.y = readInt();
+		_originLoc.z = readInt();
+		if(availableData() >= 4)
+			_moveMovement = readInt();
 	}
 
 	@Override

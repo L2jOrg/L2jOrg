@@ -17,9 +17,9 @@ public class ChangeAccessLevel extends SendablePacket
 
 	protected void writeImpl()
 	{
-		writeByte(0x11);
-		writeString(account);
-		writeInt(level);
-		writeInt(banExpire);
+		writeC(0x11);
+		writeS(account);
+		writeD(level);
+		writeD(banExpire);
 	}
 }

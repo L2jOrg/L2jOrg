@@ -17,8 +17,8 @@ public class RequestPledgeSignInForOpenJoiningMethod extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_clanId = readD();
-		_unk = readD();
+		_clanId = readInt();
+		_unk = readInt();
 	}
 
 	@Override

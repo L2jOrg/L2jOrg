@@ -321,9 +321,9 @@ public class RequestActionUse extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_actionId = readD();
-		_ctrlPressed = readD() == 1;
-		_shiftPressed = readC() == 1;
+		_actionId = readInt();
+		_ctrlPressed = readInt() == 1;
+		_shiftPressed = readByte() == 1;
 	}
 
 	@Override

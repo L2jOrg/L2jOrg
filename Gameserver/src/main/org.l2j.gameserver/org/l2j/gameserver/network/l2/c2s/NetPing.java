@@ -17,8 +17,8 @@ public class NetPing extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		unk = readD();
-		unk2 = readD();
-		unk3 = readD();
+		unk = readInt();
+		unk2 = readInt();
+		unk3 = readInt();
 	}
 }

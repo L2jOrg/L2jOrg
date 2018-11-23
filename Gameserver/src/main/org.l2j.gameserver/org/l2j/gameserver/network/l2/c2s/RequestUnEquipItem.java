@@ -17,7 +17,7 @@ public class RequestUnEquipItem extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_slot = readD();
+		_slot = readInt();
 	}
 
 	@Override

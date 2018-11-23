@@ -24,8 +24,8 @@ public class RequestExRemoveItemAttribute extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_objectId = readD();
-		_attributeId = readD();
+		_objectId = readInt();
+		_attributeId = readInt();
 	}
 
 	@Override

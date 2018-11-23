@@ -25,9 +25,9 @@ public class RequestExRefundItem extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_listId = readD();
-		_count = readD();
-		if(_count * 4 > _buf.remaining() || _count > Short.MAX_VALUE || _count < 1)
+		_listId = readInt();
+		_count = readInt();
+		if(_count * 4 > availableData() || _count > Short.MAX_VALUE || _count < 1)
 		{
 			_count = 0;
 			return;
@@ -35,7 +35,7 @@ public class RequestExRefundItem extends L2GameClientPacket
 		_items = new int[_count];
 		for(int i = 0; i < _count; i++)
 		{
-			_items[i] = readD();
+			_items[i] = readInt();
 			if(ArrayUtils.indexOf(_items, _items[i]) < i)
 			{
 				_count = 0;

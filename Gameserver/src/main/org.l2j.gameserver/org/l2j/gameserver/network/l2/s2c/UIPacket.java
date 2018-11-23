@@ -275,7 +275,7 @@ public class UIPacket extends AbstractMaskPacket<UserInfoType>
 
 		writeInt(_initSize);
 		writeShort(23);
-		writeB(_masks);
+		writeBytes(_masks);
 
 		if(containsMask(UserInfoType.RELATION))
 			writeInt(_relation);
@@ -321,7 +321,7 @@ public class UIPacket extends AbstractMaskPacket<UserInfoType>
 			writeInt(curCp);
 			writeLong(_sp);
 			writeLong(_exp);
-			writeF(_expPercent);
+			writeDouble(_expPercent);
 		}
 
 		if(containsMask(UserInfoType.ENCHANTLEVEL))
@@ -404,15 +404,15 @@ public class UIPacket extends AbstractMaskPacket<UserInfoType>
 		if(containsMask(UserInfoType.MULTIPLIER))
 		{
 			writeShort(UserInfoType.MULTIPLIER.getBlockLength());
-			writeF(move_speed);
-			writeF(attack_speed);
+			writeDouble(move_speed);
+			writeDouble(attack_speed);
 		}
 
 		if(containsMask(UserInfoType.COL_RADIUS_HEIGHT))
 		{
 			writeShort(UserInfoType.COL_RADIUS_HEIGHT.getBlockLength());
-			writeF(col_radius);
-			writeF(col_height);
+			writeDouble(col_radius);
+			writeDouble(col_height);
 		}
 
 		if(containsMask(UserInfoType.ATK_ELEMENTAL))

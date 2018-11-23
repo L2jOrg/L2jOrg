@@ -10,12 +10,14 @@ public abstract class GameServerWritablePacket extends WritablePacket<ServerClie
     private static final Logger logger = LoggerFactory.getLogger(GameServerWritablePacket.class);
 
 	@Override
-	protected void write() {
+	protected boolean write() {
 	    try {
             writeImpl();
+            return  true;
         } catch (Exception e) {
 	        logger.error(e.getLocalizedMessage(), e);
         }
+        return false;
 
 	}
 

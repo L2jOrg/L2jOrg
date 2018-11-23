@@ -22,7 +22,7 @@ public class RequestExRejectPost extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		postId = readD();
+		postId = readInt();
 	}
 
 	@Override

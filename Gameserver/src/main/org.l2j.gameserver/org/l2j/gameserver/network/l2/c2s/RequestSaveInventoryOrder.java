@@ -10,10 +10,10 @@ public class RequestSaveInventoryOrder extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		int size = readD();
+		int size = readInt();
 		if(size > 125)
 			size = 125;
-		if(size * 8 > _buf.remaining() || size < 1)
+		if(size * 8 > availableData() || size < 1)
 		{
 			_items = null;
 			return;
@@ -21,8 +21,8 @@ public class RequestSaveInventoryOrder extends L2GameClientPacket
 		_items = new int[size][2];
 		for(int i = 0; i < size; i++)
 		{
-			_items[i][0] = readD(); // item id
-			_items[i][1] = readD(); // slot
+			_items[i][0] = readInt(); // item id
+			_items[i][1] = readInt(); // slot
 		}
 	}
 

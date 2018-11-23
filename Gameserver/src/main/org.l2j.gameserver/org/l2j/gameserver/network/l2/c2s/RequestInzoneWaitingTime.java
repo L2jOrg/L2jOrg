@@ -10,7 +10,7 @@ public class RequestInzoneWaitingTime extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_openWindow = readC() > 0;
+		_openWindow = readByte() > 0;
 	}
 
 	@Override

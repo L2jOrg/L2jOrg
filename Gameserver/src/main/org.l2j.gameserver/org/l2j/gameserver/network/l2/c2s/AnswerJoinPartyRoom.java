@@ -16,8 +16,8 @@ public class AnswerJoinPartyRoom extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		if(_buf.hasRemaining())
-			_response = readD();
+		if(availableData() >= 4)
+			_response = readInt();
 		else
 			_response = 0;
 	}

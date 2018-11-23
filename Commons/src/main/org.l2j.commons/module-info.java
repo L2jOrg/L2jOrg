@@ -48,7 +48,6 @@ module org.l2j.commons {
     exports org.l2j.commons.annotations;
     exports org.l2j.commons.map.hash;
     exports org.l2j.commons.data.xml;
-    exports org.l2j.commons.versioning;
     exports org.l2j.commons.net.nio;
     exports org.l2j.commons.text;
     exports org.l2j.commons.formats.dds;

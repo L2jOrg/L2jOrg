@@ -18,8 +18,8 @@ public class RequestPledgeWaitingUser extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_clanId = readD();
-		_charId = readD();
+		_clanId = readInt();
+		_charId = readInt();
 	}
 
 	@Override

@@ -20,6 +20,6 @@ public class RequestSendMsnChatLog extends L2GameClientPacket
 	{
 		unk = readString();
 		unk2 = readString();
-		unk3 = readD();
+		unk3 = readInt();
 	}
 }

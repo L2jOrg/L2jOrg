@@ -17,7 +17,7 @@ public class RequestExBR_LectureMark extends L2GameClientPacket
 	@Override
 	protected void readImpl() throws Exception
 	{
-		_mark = readC();
+		_mark = readByte();
 	}
 
 	@Override

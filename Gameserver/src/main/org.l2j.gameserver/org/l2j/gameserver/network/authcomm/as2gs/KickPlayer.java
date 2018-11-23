@@ -14,7 +14,7 @@ public class KickPlayer extends ReceivablePacket
 	@Override
 	public void readImpl()
 	{
-		account = readString();
+		account = readS();
 	}
 
 	@Override

@@ -70,7 +70,7 @@ public class NpcInfoPacket extends AbstractMaskPacket<NpcInfoType>
 	private int _npcObjId;
 	private Location _loc;
 	private int _pAtkSpd, _mAtkSpd;
-	private double _atkSpdMul, _runSpdMul;
+	private float _atkSpdMul, _runSpdMul;
 	private int _pvpFlag;
 	private boolean _alive, _running, _flying, _inWater;
 	private TeamType _team;
@@ -159,8 +159,8 @@ public class NpcInfoPacket extends AbstractMaskPacket<NpcInfoType>
 		_loc = _creature.getLoc();
 		_pAtkSpd = _creature.getPAtkSpd();
 		_mAtkSpd = _creature.getMAtkSpd();
-		_atkSpdMul = _creature.getAttackSpeedMultiplier();
-		_runSpdMul = _creature.getMovementSpeedMultiplier();
+		_atkSpdMul = (float) _creature.getAttackSpeedMultiplier();
+		_runSpdMul = (float) _creature.getMovementSpeedMultiplier();
 		_pvpFlag = _creature.getPvpFlag();
 		_alive = !_creature.isAlikeDead();
 		_running = _creature.isRunning();
@@ -317,7 +317,7 @@ public class NpcInfoPacket extends AbstractMaskPacket<NpcInfoType>
 		writeInt(_npcObjId);
 		writeByte(_showSpawnAnimation); // // 0=teleported 1=default 2=summoned
 		writeShort(37); // mask_bits_37
-		writeB(_masks);
+		writeBytes(_masks);
 
 		// Block 1
 		writeByte(_initSize);
@@ -358,8 +358,8 @@ public class NpcInfoPacket extends AbstractMaskPacket<NpcInfoType>
 
 		if(containsMask(NpcInfoType.SPEED_MULTIPLIER))
 		{
-			writeCutF(_runSpdMul);
-			writeCutF(_atkSpdMul);
+			writeFloat(_runSpdMul);
+			writeFloat(_atkSpdMul);
 		}
 
 		if(containsMask(NpcInfoType.EQUIPPED))

@@ -22,11 +22,11 @@ public class SetAccountInfo extends SendablePacket
 	@Override
 	protected void writeImpl()
 	{
-		writeByte(0x05);
-		writeString(_account);
-		writeByte(_size);
-		writeInt(_deleteChars.length);
+		writeC(0x05);
+		writeS(_account);
+		writeC(_size);
+		writeD(_deleteChars.length);
 		for(int i : _deleteChars)
-			writeInt(i);
+			writeD(i);
 	}
 }

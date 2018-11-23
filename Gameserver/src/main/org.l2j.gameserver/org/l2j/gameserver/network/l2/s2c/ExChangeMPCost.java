@@ -20,6 +20,6 @@ public class ExChangeMPCost extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeInt(_type);
-		writeF(_value);
+		writeDouble(_value);
 	}
 }

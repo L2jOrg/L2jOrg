@@ -18,7 +18,7 @@ public class RequestPledgeSetAcademyMaster extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_mode = readD();
+		_mode = readInt();
 		_sponsorName = readS(16);
 		_apprenticeName = readS(16);
 	}

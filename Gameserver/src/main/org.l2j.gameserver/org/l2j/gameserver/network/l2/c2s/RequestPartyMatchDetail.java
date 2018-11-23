@@ -16,10 +16,10 @@ public class RequestPartyMatchDetail extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_roomId = readD(); // room id, если 0 то autojoin
-		_locations = readD(); // location
-		_level = readD(); // 1 - all, 0 - my level (только при autojoin)
-		//readD();
+		_roomId = readInt(); // room id, если 0 то autojoin
+		_locations = readInt(); // location
+		_level = readInt(); // 1 - all, 0 - my level (только при autojoin)
+		//readInt();
 	}
 
 	@Override

@@ -13,8 +13,8 @@ public class RequestPledgeWarList extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_page = readD();
-		_type = readD();
+		_page = readInt();
+		_type = readInt();
 	}
 
 	@Override

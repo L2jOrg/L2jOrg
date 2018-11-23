@@ -17,7 +17,7 @@ public class RequestAddExpandQuestAlarm extends L2GameClientPacket
 	@Override
 	protected void readImpl() throws Exception
 	{
-		_questId = readD();
+		_questId = readInt();
 	}
 
 	@Override

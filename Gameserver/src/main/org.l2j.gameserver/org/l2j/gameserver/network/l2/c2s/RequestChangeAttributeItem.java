@@ -22,9 +22,9 @@ public class RequestChangeAttributeItem extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_consumeItemId = readD(); //Change Attribute Crystall ID
-		_itemObjId = readD(); //Item for Change ObjId
-		_newElementId = readD(); //Element
+		_consumeItemId = readInt(); //Change Attribute Crystall ID
+		_itemObjId = readInt(); //Item for Change ObjId
+		_newElementId = readInt(); //Element
 	}
 
 	@Override

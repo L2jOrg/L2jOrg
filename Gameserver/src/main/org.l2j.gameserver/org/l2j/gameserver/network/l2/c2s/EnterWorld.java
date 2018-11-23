@@ -66,7 +66,7 @@ public class EnterWorld extends L2GameClientPacket
 
 		if(activeChar == null)
 		{
-			client.closeNow(false);
+			client.closeNow();
 			return;
 		}
 

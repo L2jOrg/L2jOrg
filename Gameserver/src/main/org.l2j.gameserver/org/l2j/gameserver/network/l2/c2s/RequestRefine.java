@@ -18,10 +18,10 @@ public final class RequestRefine extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_targetItemObjId = readD();
-		_refinerItemObjId = readD();
-		_feeItemObjId = readD();
-		_feeItemCount = readQ();
+		_targetItemObjId = readInt();
+		_refinerItemObjId = readInt();
+		_feeItemObjId = readInt();
+		_feeItemCount = readLong();
 	}
 
 	@Override

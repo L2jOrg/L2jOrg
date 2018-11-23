@@ -27,10 +27,10 @@ public class SetPrivateStoreSellList extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_package = readD() == 1;
-		_count = readD();
+		_package = readInt() == 1;
+		_count = readInt();
 		// Иначе нехватит памяти при создании массива.
-		if(_count * 20 > _buf.remaining() || _count > Short.MAX_VALUE || _count < 1)
+		if(_count * 20 > availableData() || _count > Short.MAX_VALUE || _count < 1)
 		{
 			_count = 0;
 			return;
@@ -42,9 +42,9 @@ public class SetPrivateStoreSellList extends L2GameClientPacket
 
 		for(int i = 0; i < _count; i++)
 		{
-			_items[i] = readD();
-			_itemQ[i] = readQ();
-			_itemP[i] = readQ();
+			_items[i] = readInt();
+			_itemQ[i] = readLong();
+			_itemP[i] = readLong();
 			if(_itemQ[i] < 1 || _itemP[i] < 0 || ArrayUtils.indexOf(_items, _items[i]) < i)
 			{
 				_count = 0;

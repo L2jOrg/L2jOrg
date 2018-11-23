@@ -13,11 +13,11 @@ public class Action extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_objectId = readD();
-		readD(); //x
-		readD(); //y
-		readD(); //z
-		_actionId = readC();// 0 for simple click  1 for shift click
+		_objectId = readInt();
+		readInt(); //x
+		readInt(); //y
+		readInt(); //z
+		_actionId = readByte();// 0 for simple click  1 for shift click
 	}
 
 	@Override

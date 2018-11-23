@@ -21,7 +21,7 @@ public class RequestJoinParty extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_name = readS(Config.CNAME_MAXLEN);
-		_itemDistribution = readD();
+		_itemDistribution = readInt();
 	}
 
 	@Override

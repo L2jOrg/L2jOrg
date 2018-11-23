@@ -11,7 +11,7 @@ public class CharacterRestore extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_charSlot = readD();
+		_charSlot = readInt();
 	}
 
 	@Override

@@ -15,8 +15,8 @@ public class RequestGiveItemToPet extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_objectId = readD();
-		_amount = readQ();
+		_objectId = readInt();
+		_amount = readLong();
 	}
 
 	@Override

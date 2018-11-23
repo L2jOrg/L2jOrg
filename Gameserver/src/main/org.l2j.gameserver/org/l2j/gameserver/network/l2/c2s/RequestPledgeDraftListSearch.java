@@ -23,17 +23,17 @@ public class RequestPledgeDraftListSearch extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_minLevel = Math.max(0, Math.min(readD(), 99));
-		_maxLevel = Math.max(0, Math.min(readD(), 99));
-		_role = ClanSearchPlayerRoleType.valueOf(readD());
+		_minLevel = Math.max(0, Math.min(readInt(), 99));
+		_maxLevel = Math.max(0, Math.min(readInt(), 99));
+		_role = ClanSearchPlayerRoleType.valueOf(readInt());
 
-		_charName = readS().trim().toLowerCase();
+		_charName = readString().trim().toLowerCase();
 
 		if(_charName.length() > 255)
 			_charName = _charName.substring(0, 255);
 
-		_sortType = ClanSearchPlayerSortType.valueOf(readD());
-		_sortOrder = ClanSearchSortOrder.valueOf(readD());
+		_sortType = ClanSearchPlayerSortType.valueOf(readInt());
+		_sortOrder = ClanSearchSortOrder.valueOf(readInt());
 	}
 
 	@Override

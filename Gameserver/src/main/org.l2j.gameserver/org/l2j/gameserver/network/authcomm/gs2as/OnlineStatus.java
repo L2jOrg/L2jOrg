@@ -13,7 +13,7 @@ public class OnlineStatus extends SendablePacket
 
 	protected void writeImpl()
 	{
-		writeByte(0x01);
-		writeByte(_online ? 1 : 0);
+		writeC(0x01);
+		writeC(_online ? 1 : 0);
 	}
 }

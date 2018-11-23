@@ -5,9 +5,9 @@ public class RequestExJoinDominionWar extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		readD();
-		readD();
-		readD();
+		readInt();
+		readInt();
+		readInt();
 	}
 
 	@Override

@@ -20,9 +20,9 @@ public class RequestPledgeReorganizeMember extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_replace = readD();
+		_replace = readInt();
 		_subjectName = readS(16);
-		_targetUnit = readD();
+		_targetUnit = readInt();
 		if(_replace > 0)
 			_replaceName = readString();
 	}

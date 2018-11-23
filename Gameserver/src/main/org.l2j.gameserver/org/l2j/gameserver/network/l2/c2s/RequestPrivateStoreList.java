@@ -10,7 +10,7 @@ public class RequestPrivateStoreList extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		unk = readD();
+		unk = readInt();
 	}
 
 	@Override

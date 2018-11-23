@@ -7,8 +7,8 @@ public class RequestChangeBookMarkSlot extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		slot_old = readD();
-		slot_new = readD();
+		slot_old = readInt();
+		slot_new = readInt();
 	}
 
 	@Override

@@ -24,7 +24,7 @@ public final class RequestPetitionCancel extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		//_unknown = readD(); This is pretty much a trigger packet.
+		//_unknown = readInt(); This is pretty much a trigger packet.
 	}
 
 	@Override

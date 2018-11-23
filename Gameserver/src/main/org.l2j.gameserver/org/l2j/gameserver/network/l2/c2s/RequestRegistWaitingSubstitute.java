@@ -12,7 +12,7 @@ public final class RequestRegistWaitingSubstitute extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_enable = readD() == 1;
+		_enable = readInt() == 1;
 	}
 
 	@Override

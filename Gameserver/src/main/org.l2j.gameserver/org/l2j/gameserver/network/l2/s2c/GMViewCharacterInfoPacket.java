@@ -143,7 +143,7 @@ public class GMViewCharacterInfoPacket extends L2GameServerPacket
 		writeInt(class_id);
 		writeInt(level);
 		writeLong(_exp);
-		writeF(_expPercent);
+		writeDouble(_expPercent);
 		writeInt(_str);
 		writeInt(_dex);
 		writeInt(_con);
@@ -204,10 +204,10 @@ public class GMViewCharacterInfoPacket extends L2GameServerPacket
 		writeInt(_walkSpd);
 		writeInt(_runSpd);
 		writeInt(_walkSpd);
-		writeF(move_speed);
-		writeF(attack_speed);
-		writeF(col_radius);
-		writeF(col_height);
+		writeDouble(move_speed);
+		writeDouble(attack_speed);
+		writeDouble(col_radius);
+		writeDouble(col_height);
 		writeInt(hair_style);
 		writeInt(hair_color);
 		writeInt(face);

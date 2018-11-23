@@ -12,7 +12,7 @@ public class RequestVoteNew extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_targetObjectId = readD();
+		_targetObjectId = readInt();
 	}
 
 	@Override

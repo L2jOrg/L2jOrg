@@ -29,9 +29,9 @@ public class RequestPackageSend extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_objectId = readD();
-		_count = readD();
-		if(_count * 12 > _buf.remaining() || _count > Short.MAX_VALUE || _count < 1)
+		_objectId = readInt();
+		_count = readInt();
+		if(_count * 12 > availableData() || _count > Short.MAX_VALUE || _count < 1)
 		{
 			_count = 0;
 			return;
@@ -42,8 +42,8 @@ public class RequestPackageSend extends L2GameClientPacket
 
 		for(int i = 0; i < _count; i++)
 		{
-			_items[i] = readD();
-			_itemQ[i] = readQ();
+			_items[i] = readInt();
+			_itemQ[i] = readLong();
 			if(_itemQ[i] < 1 || ArrayUtils.indexOf(_items, _items[i]) < i)
 			{
 				_count = 0;

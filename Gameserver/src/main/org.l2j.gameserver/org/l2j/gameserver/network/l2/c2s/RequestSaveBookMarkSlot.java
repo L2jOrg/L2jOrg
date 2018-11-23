@@ -15,7 +15,7 @@ public class RequestSaveBookMarkSlot extends L2GameClientPacket
 	protected void readImpl()
 	{
 		name = readS(32);
-		icon = readD();
+		icon = readInt();
 		acronym = readS(4);
 	}
 

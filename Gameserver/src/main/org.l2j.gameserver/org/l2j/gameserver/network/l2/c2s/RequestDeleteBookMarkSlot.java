@@ -10,7 +10,7 @@ public class RequestDeleteBookMarkSlot extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		slot = readD();
+		slot = readInt();
 	}
 
 	@Override

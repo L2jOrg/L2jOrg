@@ -27,23 +27,23 @@ public class RequestHardWareInfo extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_mac = readString();
-		_windowsPlatformId = readD();
-		_windowsMajorVersion = readD();
-		_windowsMinorVersion = readD();
-		_windowsBuildNumber = readD();
-		_DXVersion = readD();
-		_DXRevision = readD();
+		_windowsPlatformId = readInt();
+		_windowsMajorVersion = readInt();
+		_windowsMinorVersion = readInt();
+		_windowsBuildNumber = readInt();
+		_DXVersion = readInt();
+		_DXRevision = readInt();
 		_cpu = readString();
-		_cpuSpeed = readD();
-		_cpuCoreCount = readD();
-		_unk8 = readD();
-		_unk9 = readD();
-		_PhysMemory1 = readD();
-		_PhysMemory2 = readD();
-		_unk12 = readD();
-		_videoMemory = readD();
-		_unk14 = readD();
-		_vgaVersion = readD();
+		_cpuSpeed = readInt();
+		_cpuCoreCount = readInt();
+		_unk8 = readInt();
+		_unk9 = readInt();
+		_PhysMemory1 = readInt();
+		_PhysMemory2 = readInt();
+		_unk12 = readInt();
+		_videoMemory = readInt();
+		_unk14 = readInt();
+		_vgaVersion = readInt();
 		_vgaName = readString();
 		_driverVersion = readString();
 	}

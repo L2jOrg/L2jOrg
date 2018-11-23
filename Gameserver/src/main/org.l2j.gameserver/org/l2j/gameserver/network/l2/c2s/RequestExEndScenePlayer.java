@@ -9,7 +9,7 @@ public class RequestExEndScenePlayer extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_movieId = readD();
+		_movieId = readInt();
 	}
 
 	@Override

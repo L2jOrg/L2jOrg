@@ -14,8 +14,8 @@ public class RequestDivideAdena extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		readD();
-		_count = readQ();
+		readInt();
+		_count = readLong();
 	}
 
 	@Override

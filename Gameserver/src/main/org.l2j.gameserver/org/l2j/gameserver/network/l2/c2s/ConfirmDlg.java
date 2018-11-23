@@ -12,9 +12,9 @@ public class ConfirmDlg extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		readD();
-		_answer = readD();
-		_requestId = readD();
+		readInt();
+		_answer = readInt();
+		_requestId = readInt();
 	}
 
 	@Override

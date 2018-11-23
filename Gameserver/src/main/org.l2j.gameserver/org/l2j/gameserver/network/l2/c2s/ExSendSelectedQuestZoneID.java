@@ -12,7 +12,7 @@ public class ExSendSelectedQuestZoneID extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_questZoneId = readD();
+		_questZoneId = readInt();
 	}
 
 	@Override

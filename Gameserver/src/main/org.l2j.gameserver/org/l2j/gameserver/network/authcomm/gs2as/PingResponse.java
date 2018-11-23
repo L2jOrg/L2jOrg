@@ -6,7 +6,7 @@ public class PingResponse extends SendablePacket
 {
 	protected void writeImpl()
 	{
-		writeByte(0xff);
-		writeLong(System.currentTimeMillis());
+		writeC(0xff);
+		writeQ(System.currentTimeMillis());
 	}
 }

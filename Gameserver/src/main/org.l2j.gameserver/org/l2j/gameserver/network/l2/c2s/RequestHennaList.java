@@ -8,7 +8,7 @@ public class RequestHennaList extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		//readD(); - unknown
+		//readInt(); - unknown
 	}
 
 	@Override

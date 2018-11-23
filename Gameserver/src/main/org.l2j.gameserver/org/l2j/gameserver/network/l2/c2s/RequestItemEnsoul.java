@@ -34,16 +34,16 @@ public class RequestItemEnsoul extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_itemObjectId = readD();
-		int changesCount = readC();
+		_itemObjectId = readInt();
+		int changesCount = readByte();
 		_ensoulsInfo = new ArrayList<EnsoulInfo>(changesCount);
 		for(int i = 0; i < changesCount; i++)
 		{
 			EnsoulInfo info = new EnsoulInfo();
-			info.type = readC();
-			info.id = readC();
-			info.itemObjectId = readD();
-			info.ensoulId = readD();
+			info.type = readByte();
+			info.id = readByte();
+			info.itemObjectId = readInt();
+			info.ensoulId = readInt();
 			_ensoulsInfo.add(info);
 		}
 	}

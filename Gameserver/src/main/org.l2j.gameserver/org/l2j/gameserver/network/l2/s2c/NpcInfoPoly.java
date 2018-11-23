@@ -74,10 +74,10 @@ public class NpcInfoPoly extends L2GameServerPacket
 		writeInt(_flWalkSpd);
 		writeInt(_flyRunSpd);
 		writeInt(_flyWalkSpd);
-		writeF(1/*_cha.getProperMultiplier()*/);
-		writeF(1/*_cha.getAttackSpeedMultiplier()*/);
-		writeF(colRadius);
-		writeF(colHeight);
+		writeDouble(1/*_cha.getProperMultiplier()*/);
+		writeDouble(1/*_cha.getAttackSpeedMultiplier()*/);
+		writeDouble(colRadius);
+		writeDouble(colHeight);
 		writeInt(_rhand); // right hand weapon
 		writeInt(0);
 		writeInt(_lhand); // left hand weapon
@@ -100,8 +100,8 @@ public class NpcInfoPoly extends L2GameServerPacket
 		writeInt(0000); // C2
 		writeByte(0000); // C2
 		writeByte(_team.ordinal());
-		writeF(colRadius); // тут что-то связанное с colRadius
-		writeF(colHeight); // тут что-то связанное с colHeight
+		writeDouble(colRadius); // тут что-то связанное с colRadius
+		writeDouble(colHeight); // тут что-то связанное с colHeight
 		writeInt(0x00); // C4
 		writeInt(0x00); // как-то связано с высотой
 		writeInt(0x00);

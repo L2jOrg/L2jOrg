@@ -23,12 +23,12 @@ public class RequestPledgeRecruitBoardAccess extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_pledgeAccess = readD();
-		_searchType = ClanSearchListType.getType(readD());
+		_pledgeAccess = readInt();
+		_searchType = ClanSearchListType.getType(readInt());
 		readString();
 		_desc = readString();
-		_application = readD();
-		_subUnit = readD();
+		_application = readInt();
+		_subUnit = readInt();
 	}
 
 	@Override

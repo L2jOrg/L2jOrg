@@ -17,8 +17,8 @@ public class RequestSetCastleSiegeTime extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_id = readD();
-		_time = readD();
+		_id = readInt();
+		_time = readInt();
 	}
 
 	@Override

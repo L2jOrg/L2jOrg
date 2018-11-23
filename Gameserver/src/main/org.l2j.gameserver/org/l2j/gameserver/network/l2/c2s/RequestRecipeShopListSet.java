@@ -18,8 +18,8 @@ public class RequestRecipeShopListSet extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_count = readD();
-		if(_count * 12 > _buf.remaining() || _count > Short.MAX_VALUE || _count < 1)
+		_count = readInt();
+		if(_count * 12 > availableData() || _count > Short.MAX_VALUE || _count < 1)
 		{
 			_count = 0;
 			return;
@@ -28,8 +28,8 @@ public class RequestRecipeShopListSet extends L2GameClientPacket
 		_prices = new long[_count];
 		for(int i = 0; i < _count; i++)
 		{
-			_recipes[i] = readD();
-			_prices[i] = readQ();
+			_recipes[i] = readInt();
+			_prices[i] = readLong();
 			if(_prices[i] < 0)
 			{
 				_count = 0;

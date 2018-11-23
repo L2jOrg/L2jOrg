@@ -17,7 +17,7 @@ import org.l2j.authserver.network.client.packet.L2LoginServerPacket;
 public final class Init extends L2LoginServerPacket {
 
     @Override
-    protected void write() {
+    protected void writeImpl() {
         writeByte(0x00);
 
         writeInt(client.getSessionId());

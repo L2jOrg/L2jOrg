@@ -15,8 +15,8 @@ public class FinishRotatingC extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_degree = readD();
-		_unknown = readD();
+		_degree = readInt();
+		_unknown = readInt();
 	}
 
 	@Override

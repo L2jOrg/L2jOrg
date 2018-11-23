@@ -19,6 +19,6 @@ public class AllianceCrestPacket extends L2GameServerPacket
 		writeInt(Config.REQUEST_ID);
 		writeInt(_crestId);
 		writeInt(_data.length);
-		writeB(_data);
+		writeBytes(_data);
 	}
 }

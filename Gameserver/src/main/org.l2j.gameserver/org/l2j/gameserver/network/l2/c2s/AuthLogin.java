@@ -27,12 +27,12 @@ public class AuthLogin extends L2GameClientPacket
     protected void readImpl()
     {
         _loginName = readS(32).toLowerCase();
-        _playKey2 = readD();
-        _playKey1 = readD();
-        _loginKey1 = readD();
-        _loginKey2 = readD();
-        _lang = readD();
-        readD();
+        _playKey2 = readInt();
+        _playKey1 = readInt();
+        _loginKey1 = readInt();
+        _loginKey2 = readInt();
+        _lang = readInt();
+        readInt();
     }
 
     @Override
@@ -46,7 +46,7 @@ public class AuthLogin extends L2GameClientPacket
         client.setLanguage(Language.getLanguage(_lang));
 
         if(Shutdown.getInstance().getMode() != Shutdown.NONE && Shutdown.getInstance().getSeconds() <= 15)
-            client.closeNow(false);
+            client.closeNow();
         else
         {
             if(AuthServerCommunication.getInstance().isShutdown())

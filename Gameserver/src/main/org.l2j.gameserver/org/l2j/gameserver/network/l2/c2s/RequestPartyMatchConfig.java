@@ -18,9 +18,9 @@ public class RequestPartyMatchConfig extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_page = readD();
-		_region = readD();
-		_allLevels = readD();
+		_page = readInt();
+		_region = readInt();
+		_allLevels = readInt();
 	}
 
 	@Override

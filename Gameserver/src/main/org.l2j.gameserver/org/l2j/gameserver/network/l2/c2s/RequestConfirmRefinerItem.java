@@ -18,8 +18,8 @@ public class RequestConfirmRefinerItem extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_targetItemObjId = readD();
-		_refinerItemObjId = readD();
+		_targetItemObjId = readInt();
+		_refinerItemObjId = readInt();
 	}
 
 	@Override

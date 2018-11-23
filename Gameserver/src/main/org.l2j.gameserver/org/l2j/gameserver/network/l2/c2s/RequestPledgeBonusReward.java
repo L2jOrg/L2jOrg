@@ -12,7 +12,7 @@ public class RequestPledgeBonusReward extends L2GameClientPacket
 	@Override
 	protected void readImpl() throws Exception
 	{
-		_type = readC();
+		_type = readByte();
 	}
 
 	@Override

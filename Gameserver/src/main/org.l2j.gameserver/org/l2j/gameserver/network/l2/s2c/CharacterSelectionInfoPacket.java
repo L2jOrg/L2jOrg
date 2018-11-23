@@ -86,13 +86,13 @@ public class CharacterSelectionInfoPacket extends L2GameServerPacket
 			writeInt(charInfoPackage.getY());
 			writeInt(charInfoPackage.getZ());
 
-			writeF(charInfoPackage.getCurrentHp());
-			writeF(charInfoPackage.getCurrentMp());
+			writeDouble(charInfoPackage.getCurrentHp());
+			writeDouble(charInfoPackage.getCurrentMp());
 
 			writeLong(charInfoPackage.getSp());
 			writeLong(charInfoPackage.getExp());
 			int lvl = Experience.getLevel(charInfoPackage.getExp());
-			writeF(Experience.getExpPercent(lvl, charInfoPackage.getExp()));
+			writeDouble(Experience.getExpPercent(lvl, charInfoPackage.getExp()));
 			writeInt(lvl);
 
 			writeInt(charInfoPackage.getKarma());
@@ -133,8 +133,8 @@ public class CharacterSelectionInfoPacket extends L2GameServerPacket
 			writeInt(charInfoPackage.getHairColor());
 			writeInt(charInfoPackage.getFace());
 
-			writeF(charInfoPackage.getMaxHp()); // hp max
-			writeF(charInfoPackage.getMaxMp()); // mp max
+			writeDouble(charInfoPackage.getMaxHp()); // hp max
+			writeDouble(charInfoPackage.getMaxMp()); // mp max
 
 			writeInt(charInfoPackage.getAccessLevel() > -100 ? charInfoPackage.getDeleteTimer() : -1);
 			writeInt(charInfoPackage.getClassId());
@@ -151,8 +151,8 @@ public class CharacterSelectionInfoPacket extends L2GameServerPacket
 			writeInt(0x00);
 			writeInt(0x00);
 			writeInt(0x00);
-			writeF(0x00);
-			writeF(0x00);
+			writeDouble(0x00);
+			writeDouble(0x00);
 
 			writeInt(0x00);
 			writeInt(0x00);

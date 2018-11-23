@@ -23,8 +23,8 @@ public class RequestExBR_BuyProduct extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_productId = readD();
-		_count = readD();
+		_productId = readInt();
+		_count = readInt();
 	}
 
 	@Override

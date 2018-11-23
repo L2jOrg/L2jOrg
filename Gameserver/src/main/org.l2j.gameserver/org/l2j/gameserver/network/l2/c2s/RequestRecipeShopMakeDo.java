@@ -24,9 +24,9 @@ public class RequestRecipeShopMakeDo extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_manufacturerId = readD();
-		_recipeId = readD();
-		_price = readQ();
+		_manufacturerId = readInt();
+		_recipeId = readInt();
+		_price = readLong();
 	}
 
 	@Override

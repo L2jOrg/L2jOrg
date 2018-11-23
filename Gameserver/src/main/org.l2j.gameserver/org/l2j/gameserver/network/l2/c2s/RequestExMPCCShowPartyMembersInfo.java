@@ -11,7 +11,7 @@ public class RequestExMPCCShowPartyMembersInfo extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_objectId = readD();
+		_objectId = readInt();
 	}
 
 	@Override

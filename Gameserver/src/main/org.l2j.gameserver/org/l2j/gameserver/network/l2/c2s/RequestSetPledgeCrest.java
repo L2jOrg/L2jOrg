@@ -13,11 +13,11 @@ public class RequestSetPledgeCrest extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_length = readD();
-		if(_length == CrestCache.CREST_SIZE && _length == _buf.remaining())
+		_length = readInt();
+		if(_length == CrestCache.CREST_SIZE && _length == availableData())
 		{
 			_data = new byte[_length];
-			readB(_data);
+			readBytes(_data);
 		}
 	}
 

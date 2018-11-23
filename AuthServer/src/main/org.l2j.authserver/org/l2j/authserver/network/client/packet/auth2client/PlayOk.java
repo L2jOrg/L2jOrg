@@ -10,7 +10,7 @@ public final class PlayOk extends L2LoginServerPacket {
     }
 
     @Override
-    protected void write() {
+    protected void writeImpl() {
         var sessionKey = client.getSessionKey();
         writeByte(0x07);
         writeInt(sessionKey.gameServerSessionId);

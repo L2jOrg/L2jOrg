@@ -15,36 +15,36 @@ public class ProtocolVersion extends L2GameClientPacket
 {
 	private static final Logger _log = LoggerFactory.getLogger(ProtocolVersion.class);
 
-	private int _version;
+	private int version;
 
 	@Override
 	protected void readImpl()
 	{
-		_version = readD();
+		version = readInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		if(_version == -2)
+		if(version == -2)
 		{
-			_client.closeNow(false);
+			client.closeNow();
 			return;
 		}
-		else if(_version == -3)
+		else if(version == -3)
 		{
 			_log.info("Status request from IP : " + getClient().getIpAddr());
 			getClient().close(new SendStatus());
 			return;
 		}
-		else if(!Config.AVAILABLE_PROTOCOL_REVISIONS.contains(_version))
+		else if(!Config.AVAILABLE_PROTOCOL_REVISIONS.contains(version))
 		{
-			_log.warn("Unknown protocol revision : " + _version + ", client : " + _client);
+			_log.warn("Unknown protocol revision : {}, client : {}", version, client);
 			getClient().close(new VersionCheckPacket(null));
 			return;
 		}
 
-		getClient().setRevision(_version);
-		sendPacket(new VersionCheckPacket(_client.enableCrypt()));
+		getClient().setRevision(version);
+		sendPacket(new VersionCheckPacket(client.enableCrypt()));
 	}
 }

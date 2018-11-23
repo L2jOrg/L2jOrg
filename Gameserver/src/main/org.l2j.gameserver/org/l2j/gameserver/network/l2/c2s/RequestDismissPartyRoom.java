@@ -13,7 +13,7 @@ public class RequestDismissPartyRoom extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_roomId = readD(); //room id
+		_roomId = readInt(); //room id
 	}
 
 	@Override

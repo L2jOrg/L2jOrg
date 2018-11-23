@@ -36,8 +36,8 @@ public class RequestEnchantItem extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_objectId = readD();
-		readD();
+		_objectId = readInt();
+		readInt();
 	}
 
 	@Override

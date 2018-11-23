@@ -24,15 +24,15 @@ public class RequestExDeleteReceivedPost extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_count = readD();
-		if(_count * 4 > _buf.remaining() || _count > Short.MAX_VALUE || _count < 1)
+		_count = readInt();
+		if(_count * 4 > availableData() || _count > Short.MAX_VALUE || _count < 1)
 		{
 			_count = 0;
 			return;
 		}
 		_list = new int[_count]; // количество элементов для удаления
 		for(int i = 0; i < _count; i++)
-			_list[i] = readD(); // уникальный номер письма
+			_list[i] = readInt(); // уникальный номер письма
 	}
 
 	@Override

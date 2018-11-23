@@ -20,13 +20,13 @@ public class RequestExSetPledgeCrestLargeFirstPart extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_crestPart = readD();
-		_crestLeght = readD();
-		_length = readD();
-		if(_length <= CrestCache.LARGE_CREST_PART_SIZE && _length == _buf.remaining())
+		_crestPart = readInt();
+		_crestLeght = readInt();
+		_length = readInt();
+		if(_length <= CrestCache.LARGE_CREST_PART_SIZE && _length == availableData())
 		{
 			_data = new byte[_length];
-			readB(_data);
+			readBytes(_data);
 		}
 	}
 

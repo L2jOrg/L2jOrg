@@ -151,7 +151,6 @@ public class TelnetPerfomance implements TelnetCommandHolder
 				StringBuilder sb = new StringBuilder();
 
 				SelectorStats sts = GameServer.getInstance().getSelectorStats();
-				sb.append("selectorThreadCount: .... ").append(GameServer.getInstance().getSelectorThreads().size()).append("\n");
 				sb.append("=================================================\n");
 				sb.append("getTotalConnections: .... ").append(sts.getTotalConnections()).append("\n");
 				sb.append("getCurrentConnections: .. ").append(sts.getCurrentConnections()).append("\n");

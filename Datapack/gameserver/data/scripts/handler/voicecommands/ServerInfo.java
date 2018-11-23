@@ -18,10 +18,8 @@ public class ServerInfo extends ScriptVoiceCommandHandler
 	{
 		if(command.equals("rev") || command.equals("ver"))
 		{
-			activeChar.sendMessage("Project Revision: " + GameServer.PROJECT_REVISION);
-			activeChar.sendMessage("Build Revision: " + GameServer.getInstance().getVersion().getRevisionNumber());
+			activeChar.sendMessage("Project Version: " + GameServer.getInstance().getVersion());
 			activeChar.sendMessage("Update: " + GameServer.UPDATE_NAME);
-			activeChar.sendMessage("Build date: " + GameServer.getInstance().getVersion().getBuildDate());
 		}
 		else if(command.equals("date") || command.equals("time"))
 		{

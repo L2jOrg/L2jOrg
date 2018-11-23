@@ -58,7 +58,7 @@ public class SecondaryPasswordAuth
 		if(passwordExist())
 		{
 			_log.warn("[SecondaryPasswordAuth]" + _activeClient.getLogin() + " forced savePassword");
-			_activeClient.closeNow(false);
+			_activeClient.closeNow();
 			return false;
 		}
 
@@ -89,7 +89,7 @@ public class SecondaryPasswordAuth
 		if(!passwordExist())
 		{
 			_log.warn("[SecondaryPasswordAuth]" + _activeClient.getLogin() + " forced changePassword");
-			_activeClient.closeNow(false);
+			_activeClient.closeNow();
 			return false;
 		}
 

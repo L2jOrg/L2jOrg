@@ -10,7 +10,7 @@ public class AnswerPartyLootModification extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_answer = readD();
+		_answer = readInt();
 	}
 
 	@Override

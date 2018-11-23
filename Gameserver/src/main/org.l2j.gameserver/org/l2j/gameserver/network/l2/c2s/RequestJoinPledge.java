@@ -19,8 +19,8 @@ public class RequestJoinPledge extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_objectId = readD();
-		_pledgeType = readD();
+		_objectId = readInt();
+		_pledgeType = readInt();
 	}
 
 	@Override

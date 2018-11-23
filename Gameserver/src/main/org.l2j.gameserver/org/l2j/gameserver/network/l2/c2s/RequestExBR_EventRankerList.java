@@ -13,9 +13,9 @@ public class RequestExBR_EventRankerList extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_eventId = readD();
-		_day = readD(); // 0 - current, 1 - previous
-		_ranking = readD();
+		_eventId = readInt();
+		_day = readInt(); // 0 - current, 1 - previous
+		_ranking = readInt();
 	}
 
 	@Override

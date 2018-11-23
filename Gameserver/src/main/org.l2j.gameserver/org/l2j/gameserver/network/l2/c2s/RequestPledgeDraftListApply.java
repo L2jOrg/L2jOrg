@@ -19,8 +19,8 @@ public class RequestPledgeDraftListApply extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_applyType = readD();
-		_searchType = ClanSearchListType.getType(readD());
+		_applyType = readInt();
+		_searchType = ClanSearchListType.getType(readInt());
 	}
 
 	@Override

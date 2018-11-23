@@ -1,9 +1,7 @@
 package org.l2j.gameserver.network.l2.c2s;
 
 import java.nio.BufferUnderflowException;
-import java.util.List;
 
-import org.l2j.commons.net.nio.impl.ReceivablePacket;
 import org.l2j.gameserver.GameServer;
 import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.network.l2.s2c.L2GameServerPacket;

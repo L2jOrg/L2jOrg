@@ -17,10 +17,10 @@ public class RequestGetOnVehicle extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_objectId = readD();
-		_loc.x = readD();
-		_loc.y = readD();
-		_loc.z = readD();
+		_objectId = readInt();
+		_loc.x = readInt();
+		_loc.y = readInt();
+		_loc.z = readInt();
 	}
 
 	@Override

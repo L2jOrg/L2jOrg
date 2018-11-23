@@ -21,6 +21,6 @@ public class PledgeCrestPacket extends L2GameServerPacket
 		writeInt(Config.REQUEST_ID);
 		writeInt(_crestId);
 		writeInt(_crestSize);
-		writeB(_data);
+		writeBytes(_data);
 	}
 }

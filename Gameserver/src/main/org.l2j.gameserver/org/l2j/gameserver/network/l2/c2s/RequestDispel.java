@@ -11,9 +11,9 @@ public class RequestDispel extends L2GameClientPacket
 	@Override
 	protected void readImpl() throws Exception
 	{
-		_objectId = readD();
-		_id = readD();
-		_level = readD();
+		_objectId = readInt();
+		_id = readInt();
+		_level = readInt();
 	}
 
 	@Override

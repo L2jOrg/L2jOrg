@@ -31,7 +31,7 @@ public class ExTrainingZone_Admission extends L2GameServerPacket
 	{
 		writeInt(_timeElapsed);
 		writeInt(_timeRemaining);
-		writeF(_maxExp);
-		writeF(_maxSp);
+		writeDouble(_maxExp);
+		writeDouble(_maxSp);
 	}
 }

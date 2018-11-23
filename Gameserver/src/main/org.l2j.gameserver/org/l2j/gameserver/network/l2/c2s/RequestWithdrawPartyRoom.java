@@ -13,7 +13,7 @@ public class RequestWithdrawPartyRoom extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_roomId = readD();
+		_roomId = readInt();
 	}
 
 	@Override

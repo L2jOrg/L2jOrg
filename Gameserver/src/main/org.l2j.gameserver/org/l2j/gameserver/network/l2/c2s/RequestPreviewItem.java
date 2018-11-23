@@ -39,17 +39,17 @@ public class RequestPreviewItem extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_unknow = readD();
-		_listId = readD();
-		_count = readD();
-		if(_count * 4 > _buf.remaining() || _count > Short.MAX_VALUE || _count < 1)
+		_unknow = readInt();
+		_listId = readInt();
+		_count = readInt();
+		if(_count * 4 > availableData() || _count > Short.MAX_VALUE || _count < 1)
 		{
 			_count = 0;
 			return;
 		}
 		_items = new int[_count];
 		for(int i = 0; i < _count; i++)
-			_items[i] = readD();
+			_items[i] = readInt();
 	}
 
 	@Override

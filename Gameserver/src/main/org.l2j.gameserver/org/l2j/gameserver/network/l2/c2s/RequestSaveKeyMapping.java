@@ -13,14 +13,14 @@ public class RequestSaveKeyMapping extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		int length = readD();
-		if(length > _buf.remaining() || length > Short.MAX_VALUE || length < 0)
+		int length = readInt();
+		if(length > availableData() || length > Short.MAX_VALUE || length < 0)
 		{
 			_data = null;
 			return;
 		}
 		_data = new byte[length];
-		readB(_data);
+		readBytes(_data);
 	}
 
 	@Override

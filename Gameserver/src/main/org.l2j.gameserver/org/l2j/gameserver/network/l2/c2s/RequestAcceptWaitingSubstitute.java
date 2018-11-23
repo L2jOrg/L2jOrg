@@ -13,9 +13,9 @@ public class RequestAcceptWaitingSubstitute extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_flag = readD();
-		_unk1 = readD();
-		_unk2 = readD();
+		_flag = readInt();
+		_unk1 = readInt();
+		_unk2 = readInt();
 	}
 
 	@Override

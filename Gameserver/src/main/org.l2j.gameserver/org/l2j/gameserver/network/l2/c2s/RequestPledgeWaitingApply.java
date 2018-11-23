@@ -21,8 +21,8 @@ public class RequestPledgeWaitingApply extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_searchType = ClanSearchListType.getType(readD());
-		_clanId = readD();
+		_searchType = ClanSearchListType.getType(readInt());
+		_clanId = readInt();
 		_desc = readString();
 	}
 

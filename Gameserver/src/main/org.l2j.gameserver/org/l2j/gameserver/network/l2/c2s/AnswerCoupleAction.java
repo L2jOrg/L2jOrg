@@ -18,9 +18,9 @@ public class AnswerCoupleAction extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_actionId = readD();
-		_answer = readD();
-		_charObjId = readD();
+		_actionId = readInt();
+		_answer = readInt();
+		_charObjId = readInt();
 	}
 
 	@Override

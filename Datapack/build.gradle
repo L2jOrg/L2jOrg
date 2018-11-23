@@ -10,3 +10,15 @@ version '1.0'
 dependencies {
     compile project(':Commons')
 }
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['gameserver/data/scripts']
+        }
+    }
+}
+
+dependencies {
+    compile project(":Gameserver")
+}

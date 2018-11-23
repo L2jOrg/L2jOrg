@@ -16,7 +16,7 @@ public class RequestExShowStepThree extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_subId = readC();
+		_subId = readByte();
 	}
 
 	@Override

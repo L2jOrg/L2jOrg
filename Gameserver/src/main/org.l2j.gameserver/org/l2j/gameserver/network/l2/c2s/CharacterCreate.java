@@ -30,18 +30,18 @@ public class CharacterCreate extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_name = readString();
-		readD(); // race
-		_sex = readD();
-		_classId = readD();
-		readD(); // int
-		readD(); // str
-		readD(); // con
-		readD(); // men
-		readD(); // dex
-		readD(); // wit
-		_hairStyle = readD();
-		_hairColor = readD();
-		_face = readD();
+		readInt(); // race
+		_sex = readInt();
+		_classId = readInt();
+		readInt(); // int
+		readInt(); // str
+		readInt(); // con
+		readInt(); // men
+		readInt(); // dex
+		readInt(); // wit
+		_hairStyle = readInt();
+		_hairColor = readInt();
+		_face = readInt();
 	}
 
 	@Override

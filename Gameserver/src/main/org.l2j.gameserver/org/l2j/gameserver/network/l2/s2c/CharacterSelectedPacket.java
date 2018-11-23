@@ -52,8 +52,8 @@ public class CharacterSelectedPacket extends L2GameServerPacket
 		writeInt(_loc.y);
 		writeInt(_loc.z);
 
-		writeF(curHp);
-		writeF(curMp);
+		writeDouble(curHp);
+		writeDouble(curMp);
 		writeLong(_sp);
 		writeLong(_exp);
 		writeInt(level);
@@ -69,7 +69,7 @@ public class CharacterSelectedPacket extends L2GameServerPacket
 		writeInt(0);
 		writeInt(0);
 
-		writeB(new byte[64]);
+		writeBytes(new byte[64]);
 		writeInt(0);
 	}
 }

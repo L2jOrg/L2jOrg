@@ -21,8 +21,8 @@ public class RequestExAddEnchantScrollItem extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_scrollObjectId = readD();
-		_itemObjectId = readD();
+		_scrollObjectId = readInt();
+		_itemObjectId = readInt();
 	}
 
 	@Override

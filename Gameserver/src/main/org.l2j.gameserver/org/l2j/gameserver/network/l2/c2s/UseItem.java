@@ -13,8 +13,8 @@ public class UseItem extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_objectId = readD();
-		_ctrlPressed = readD() == 1;
+		_objectId = readInt();
+		_ctrlPressed = readInt() == 1;
 	}
 
 	@Override

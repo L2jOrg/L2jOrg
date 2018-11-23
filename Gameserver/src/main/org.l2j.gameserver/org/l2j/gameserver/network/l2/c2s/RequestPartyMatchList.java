@@ -20,11 +20,11 @@ public class RequestPartyMatchList extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_roomId = readD();
-		_maxMembers = readD();
-		_minLevel = readD();
-		_maxLevel = readD();
-		_lootDist = readD();
+		_roomId = readInt();
+		_maxMembers = readInt();
+		_minLevel = readInt();
+		_maxLevel = readInt();
+		_lootDist = readInt();
 		_roomTitle = readS(64);
 	}
 

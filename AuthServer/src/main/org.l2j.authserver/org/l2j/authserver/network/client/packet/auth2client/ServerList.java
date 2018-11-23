@@ -36,7 +36,7 @@ public final class ServerList extends L2LoginServerPacket {
     }
 
     @Override
-    public void write() {
+    public void writeImpl() {
         var servers = GameServerManager.getInstance().getRegisteredGameServers();
         writeByte(0x04);
         writeByte(servers.size());

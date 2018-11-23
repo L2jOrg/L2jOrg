@@ -37,8 +37,8 @@ public class RequestBR_PresentBuyProduct extends L2GameClientPacket
 
 	protected void readImpl() throws Exception
 	{
-		_productId = readD();
-		_count = readD();
+		_productId = readInt();
+		_count = readInt();
 		_receiverName = readString();
 		_topic = readString();
 		_message = readString();

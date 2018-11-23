@@ -17,8 +17,8 @@ public class RequestTodoList extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_tab = readC(); // Daily Reward = 9, Event = 1, Instance Zone = 2
-		_showAllLevels = readC() > 0; // Disabled = 0, Enabled = 1
+		_tab = readByte(); // Daily Reward = 9, Event = 1, Instance Zone = 2
+		_showAllLevels = readByte() > 0; // Disabled = 0, Enabled = 1
 	}
 
 	@Override

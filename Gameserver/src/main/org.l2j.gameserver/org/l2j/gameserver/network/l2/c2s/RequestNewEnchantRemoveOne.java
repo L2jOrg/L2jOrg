@@ -15,7 +15,7 @@ public class RequestNewEnchantRemoveOne extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_item1ObjectId = readD();
+		_item1ObjectId = readInt();
 	}
 
 	@Override

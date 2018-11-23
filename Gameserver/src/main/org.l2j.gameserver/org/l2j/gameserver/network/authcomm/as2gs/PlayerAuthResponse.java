@@ -32,7 +32,7 @@ public class PlayerAuthResponse extends ReceivablePacket
 	@Override
 	public void readImpl()
 	{
-		account = readString();
+		account = readS();
 		authed = readC() == 1;
 		/*if(authed)
 		{
@@ -43,7 +43,7 @@ public class PlayerAuthResponse extends ReceivablePacket
 			bonus = readD();
 			bonusExpire = readD();
 			points = readD();
-			hwid = readString();
+			hwid = readS();
 			if(getByteBuffer().hasRemaining())
 				phoneNumber = readQ();
 		}*/
@@ -141,7 +141,6 @@ public class PlayerAuthResponse extends ReceivablePacket
 			if(Config.MAX_ACTIVE_ACCOUNTS_ON_ONE_IP > 0 || Config.MAX_ACTIVE_ACCOUNTS_ON_ONE_HWID > 0)
 				client.sendPacket(TutorialCloseHtmlPacket.STATIC);
 
-			client.setAuthed(true);
 			client.setState(GameClient.GameClientState.AUTHED);
 			client.sendPacket(LoginResultPacket.SUCCESS);
 
@@ -159,7 +158,7 @@ public class PlayerAuthResponse extends ReceivablePacket
 			GameClient oldClient = AuthServerCommunication.getInstance().addAuthedClient(client);
 			if(oldClient != null)
 			{
-				oldClient.setAuthed(false);
+				oldClient.setState(GameClient.GameClientState.DISCONNECTED);
 				Player activeChar = oldClient.getActiveChar();
 				if(activeChar != null)
 				{

@@ -27,7 +27,7 @@ public class RequestRecipeItemMakeSelf extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_recipeId = readD();
+		_recipeId = readInt();
 	}
 
 	@Override

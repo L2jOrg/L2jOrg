@@ -9,7 +9,7 @@ public class RequestTeleportBookMark extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		slot = readD();
+		slot = readInt();
 	}
 
 	@Override

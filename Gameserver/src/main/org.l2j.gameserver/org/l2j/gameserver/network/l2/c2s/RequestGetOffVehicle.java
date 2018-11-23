@@ -14,10 +14,10 @@ public class RequestGetOffVehicle extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_objectId = readD();
-		_location.x = readD();
-		_location.y = readD();
-		_location.z = readD();
+		_objectId = readInt();
+		_location.x = readInt();
+		_location.y = readInt();
+		_location.z = readInt();
 	}
 
 	@Override

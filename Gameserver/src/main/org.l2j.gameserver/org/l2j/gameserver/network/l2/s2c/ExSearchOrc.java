@@ -81,6 +81,6 @@ public class ExSearchOrc extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeB(_test);
+		writeBytes(_test);
 	}
 }

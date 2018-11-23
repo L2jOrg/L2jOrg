@@ -15,7 +15,7 @@ public class RequestHennaUnequipInfo extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_symbolId = readD();
+		_symbolId = readInt();
 	}
 
 	@Override

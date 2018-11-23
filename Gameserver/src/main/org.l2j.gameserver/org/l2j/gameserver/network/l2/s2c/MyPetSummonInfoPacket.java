@@ -140,10 +140,10 @@ public class MyPetSummonInfoPacket extends L2GameServerPacket
 		writeShort(_walkSpd/*_flWalkSpd*/);
 		writeShort(_runSpd/*_flyRunSpd*/);
 		writeShort(_walkSpd/*_flyWalkSpd*/);
-		writeF(_runSpdMul);
-		writeF(_atkSpdMul);
-		writeF(col_redius);
-		writeF(col_height);
+		writeDouble(_runSpdMul);
+		writeDouble(_atkSpdMul);
+		writeDouble(col_redius);
+		writeDouble(col_height);
 		writeInt(_rhand); // right hand weapon
 		writeInt(0);
 		writeInt(_lhand); // left hand weapon

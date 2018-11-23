@@ -10,8 +10,8 @@ public class RequestTimeCheck extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		unk = readD();
-		unk2 = readD();
+		unk = readInt();
+		unk2 = readInt();
 	}
 
 	@Override

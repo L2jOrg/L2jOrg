@@ -12,8 +12,8 @@ public class SendChangeAttributeTargetItem extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_crystalItemId = readD(); //Change Attribute Crystall ID
-		_itemObjId = readD();
+		_crystalItemId = readInt(); //Change Attribute Crystall ID
+		_itemObjId = readInt();
 	}
 
 	@Override

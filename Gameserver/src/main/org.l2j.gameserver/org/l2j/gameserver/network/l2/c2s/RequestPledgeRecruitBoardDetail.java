@@ -16,7 +16,7 @@ public class RequestPledgeRecruitBoardDetail extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_clanId = readD();
+		_clanId = readInt();
 	}
 
 	@Override

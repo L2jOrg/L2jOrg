@@ -24,7 +24,7 @@ public class ExGetCrystalizingEstimation extends L2GameServerPacket
 			writeInt(0x01);
 			writeInt(_crystalId);
 			writeLong(_crystalCount);
-			writeF(100.);
+			writeDouble(100.);
 		}
 		else
 			writeInt(0x00);

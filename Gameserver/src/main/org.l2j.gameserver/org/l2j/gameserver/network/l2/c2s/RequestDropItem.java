@@ -16,9 +16,9 @@ public class RequestDropItem extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_objectId = readD();
-		_count = readQ();
-		_loc = new Location(readD(), readD(), readD());
+		_objectId = readInt();
+		_count = readLong();
+		_loc = new Location(readInt(), readInt(), readInt());
 	}
 
 	@Override

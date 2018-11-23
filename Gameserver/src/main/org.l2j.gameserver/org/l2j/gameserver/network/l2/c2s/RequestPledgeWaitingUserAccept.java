@@ -21,9 +21,9 @@ public class RequestPledgeWaitingUserAccept extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_invite = readD() == 1;
-		_objectId = readD();
-		_pledgeType = readD();
+		_invite = readInt() == 1;
+		_objectId = readInt();
+		_pledgeType = readInt();
 	}
 
 	@Override

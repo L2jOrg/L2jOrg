@@ -31,7 +31,7 @@ public class RequestRestartPoint extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_restartType = ArrayUtils.valid(RestartType.VALUES, readD());
+		_restartType = ArrayUtils.valid(RestartType.VALUES, readInt());
 	}
 
 	@Override

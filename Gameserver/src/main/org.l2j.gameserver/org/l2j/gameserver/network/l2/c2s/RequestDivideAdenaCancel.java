@@ -14,7 +14,7 @@ public class RequestDivideAdenaCancel extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_cancel = readC();
+		_cancel = readByte();
 	}
 	
 	@Override

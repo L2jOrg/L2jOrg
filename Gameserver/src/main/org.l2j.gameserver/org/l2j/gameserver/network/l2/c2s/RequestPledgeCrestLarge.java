@@ -20,8 +20,8 @@ public class RequestPledgeCrestLarge extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_crestId = readD();
-		_pledgeId = readD();
+		_crestId = readInt();
+		_pledgeId = readInt();
 	}
 
 	@Override

@@ -21,9 +21,9 @@ public class RequestMagicSkillUse extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_magicId = readD();
-		_ctrlPressed = readD() != 0;
-		_shiftPressed = readC() != 0;
+		_magicId = readInt();
+		_ctrlPressed = readInt() != 0;
+		_shiftPressed = readByte() != 0;
 	}
 
 	@Override

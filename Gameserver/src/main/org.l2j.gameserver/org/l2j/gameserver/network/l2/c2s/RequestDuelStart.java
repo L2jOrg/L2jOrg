@@ -18,7 +18,7 @@ public class RequestDuelStart extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_name = readS(Config.CNAME_MAXLEN);
-		_duelType = readD();
+		_duelType = readInt();
 	}
 
 	@Override

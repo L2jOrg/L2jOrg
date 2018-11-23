@@ -15,7 +15,7 @@ public class RequestBR_MiniGameInsertScore extends L2GameClientPacket
 	@Override
 	protected void readImpl() throws Exception
 	{
-		_score = readD();
+		_score = readInt();
 	}
 
 	@Override

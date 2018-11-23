@@ -14,8 +14,8 @@ public class RequestFriendAddReply extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		readC();
-		_response = readD();
+		readByte();
+		_response = readInt();
 	}
 
 	@Override

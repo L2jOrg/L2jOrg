@@ -54,6 +54,8 @@ public class Compiler
 		if(compile.call())
 			return true;
 
+		_log.warn(writer.toString());
+
 		return false;
 	}
 

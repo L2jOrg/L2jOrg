@@ -10,7 +10,7 @@ public class RequestExBR_ProductInfo extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_productId = readD();
+		_productId = readInt();
 	}
 
 	@Override

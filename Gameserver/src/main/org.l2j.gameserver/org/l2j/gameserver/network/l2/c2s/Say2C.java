@@ -49,7 +49,7 @@ public class Say2C extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_text = readS(Config.CHAT_MESSAGE_MAX_LEN);
-		_type = org.l2j.commons.lang.ArrayUtils.valid(ChatType.VALUES, readD());
+		_type = org.l2j.commons.lang.ArrayUtils.valid(ChatType.VALUES, readInt());
 		_target = _type == ChatType.TELL ? readS(Config.CNAME_MAXLEN) : null;
 	}
 

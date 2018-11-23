@@ -13,15 +13,15 @@ public class RequestListPartyMatchingWaitingRoom extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_page = readD();
-		_minLevel = readD();
-		_maxLevel = readD();
-		int size = readD();
+		_page = readInt();
+		_minLevel = readInt();
+		_maxLevel = readInt();
+		int size = readInt();
 		if(size > Byte.MAX_VALUE || size < 0)
 			size = 0;
 		_classes = new int[size];
 		for(int i = 0; i < size; i++)
-			_classes[i] = readD();
+			_classes[i] = readInt();
 	}
 
 	@Override

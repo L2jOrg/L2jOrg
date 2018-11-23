@@ -16,7 +16,7 @@ public class RequestAnswerJoinAlly extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_response = _buf.remaining() >= 4 ? readD() : 0;
+		_response = availableData() >= 4 ? readInt() : 0;
 	}
 
 	@Override

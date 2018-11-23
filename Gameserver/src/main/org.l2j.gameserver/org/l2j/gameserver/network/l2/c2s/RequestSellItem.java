@@ -28,9 +28,9 @@ public class RequestSellItem extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_listId = readD();
-		_count = readD();
-		if(_count * 16 > _buf.remaining() || _count > Short.MAX_VALUE || _count < 1)
+		_listId = readInt();
+		_count = readInt();
+		if(_count * 16 >  availableData() || _count > Short.MAX_VALUE || _count < 1)
 		{
 			_count = 0;
 			return;
@@ -40,9 +40,9 @@ public class RequestSellItem extends L2GameClientPacket
 
 		for(int i = 0; i < _count; i++)
 		{
-			_items[i] = readD(); // object id
-			readD(); //item id
-			_itemQ[i] = readQ(); // count
+			_items[i] = readInt(); // object id
+			readInt(); //item id
+			_itemQ[i] = readLong(); // count
 			if(_itemQ[i] < 1 || ArrayUtils.indexOf(_items, _items[i]) < i)
 			{
 				_count = 0;

@@ -26,7 +26,7 @@ public class HostInfo
 		_ip = ip;
 		_innerIP = null;
 		_port = port;
-		_key = null;
+		_key = "";
 	}
 
 	public int getId()

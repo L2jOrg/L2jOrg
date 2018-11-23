@@ -19,7 +19,7 @@ public class RequestPledgeRecruitBoardSearch extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_params = new ClanSearchParams(readD(), ClanSearchListType.getType(readD()), ClanSearchTargetType.valueOf(readD()), readS(), ClanSearchClanSortType.valueOf(readD()), ClanSearchSortOrder.valueOf(readD()), readD(), readD());
+		_params = new ClanSearchParams(readInt(), ClanSearchListType.getType(readInt()), ClanSearchTargetType.valueOf(readInt()), readString(), ClanSearchClanSortType.valueOf(readInt()), ClanSearchSortOrder.valueOf(readInt()), readInt(), readInt());
 	}
 
 	@Override

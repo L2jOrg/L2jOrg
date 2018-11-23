@@ -37,6 +37,6 @@ public class ExRegenMaxPacket extends L2GameServerPacket
 		writeInt(1);
 		writeInt(_count);
 		writeInt(_time);
-		writeF(_max);
+		writeDouble(_max);
 	}
 }

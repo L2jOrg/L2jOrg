@@ -21,9 +21,9 @@ public class RequestGetItemFromPet extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_objectId = readD();
-		_amount = readQ();
-		_unknown = readD(); // = 0 for most trades
+		_objectId = readInt();
+		_amount = readLong();
+		_unknown = readInt(); // = 0 for most trades
 	}
 
 	@Override

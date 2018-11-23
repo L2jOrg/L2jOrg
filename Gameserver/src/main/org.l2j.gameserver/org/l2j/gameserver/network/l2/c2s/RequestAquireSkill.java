@@ -25,11 +25,11 @@ public class RequestAquireSkill extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_id = readD();
-		_level = readD();
-		_type = AcquireType.getById(readD());
+		_id = readInt();
+		_level = readInt();
+		_type = AcquireType.getById(readInt());
 		if(_type == AcquireType.SUB_UNIT)
-			_subUnit = readD();
+			_subUnit = readInt();
 	}
 
 	@Override

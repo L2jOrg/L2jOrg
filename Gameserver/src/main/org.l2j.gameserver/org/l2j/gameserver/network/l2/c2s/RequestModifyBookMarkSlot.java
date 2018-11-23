@@ -15,9 +15,9 @@ public class RequestModifyBookMarkSlot extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		slot = readD();
+		slot = readInt();
 		name = readS(32);
-		icon = readD();
+		icon = readInt();
 		acronym = readS(4);
 	}
 

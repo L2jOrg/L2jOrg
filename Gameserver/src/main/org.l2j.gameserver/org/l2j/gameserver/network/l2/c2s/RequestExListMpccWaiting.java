@@ -15,9 +15,9 @@ public class RequestExListMpccWaiting extends L2GameClientPacket
 	@Override
 	protected void readImpl() throws Exception
 	{
-		_listId = readD();
-		_locationId = readD();
-		_allLevels = readD() == 1;
+		_listId = readInt();
+		_locationId = readInt();
+		_allLevels = readInt() == 1;
 	}
 
 	@Override

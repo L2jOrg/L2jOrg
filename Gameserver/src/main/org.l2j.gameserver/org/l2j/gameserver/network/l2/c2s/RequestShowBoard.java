@@ -14,7 +14,7 @@ public class RequestShowBoard extends L2GameClientPacket
 	@Override
 	public void readImpl()
 	{
-		_unknown = readD();
+		_unknown = readInt();
 	}
 
 	@Override

@@ -15,7 +15,7 @@ public class RequestPledgeMemberPowerInfo extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_not_known = readD();
+		_not_known = readInt();
 		_target = readS(16);
 	}
 

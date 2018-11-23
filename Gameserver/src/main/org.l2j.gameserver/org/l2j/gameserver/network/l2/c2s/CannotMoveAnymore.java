@@ -25,10 +25,10 @@ public class CannotMoveAnymore extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_loc.x = readD();
-		_loc.y = readD();
-		_loc.z = readD();
-		_loc.h = readD();
+		_loc.x = readInt();
+		_loc.y = readInt();
+		_loc.z = readInt();
+		_loc.h = readInt();
 	}
 
 	@Override

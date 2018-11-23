@@ -21,9 +21,9 @@ public class RequestTryEnSoulExtraction extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_itemObjectId = readD();
-		_ensoulType = readC();
-		_ensoulId = readC();
+		_itemObjectId = readInt();
+		_ensoulType = readByte();
+		_ensoulId = readByte();
 	}
 
 	@Override

@@ -20,10 +20,10 @@ public class RequestConfirmGemStone extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_targetItemObjId = readD();
-		_refinerItemObjId = readD();
-		_feeItemObjectId = readD();
-		_feeItemCount = readQ();
+		_targetItemObjId = readInt();
+		_refinerItemObjId = readInt();
+		_feeItemObjectId = readInt();
+		_feeItemCount = readLong();
 	}
 
 	@Override

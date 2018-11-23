@@ -16,10 +16,10 @@ public class RequestGetOffShuttle extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_shuttleId = readD();
-		_location.x = readD();
-		_location.y = readD();
-		_location.z = readD();
+		_shuttleId = readInt();
+		_location.x = readInt();
+		_location.y = readInt();
+		_location.z = readInt();
 	}
 
 	@Override

@@ -44,7 +44,7 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot>
 	{
 		writeInt(_player.getObjectId());
 		writeShort(InventorySlot.VALUES.length);
-		writeB(_masks);
+		writeBytes(_masks);
 
 		PcInventory inventory = _player.getInventory();
 		for(InventorySlot slot : InventorySlot.VALUES)

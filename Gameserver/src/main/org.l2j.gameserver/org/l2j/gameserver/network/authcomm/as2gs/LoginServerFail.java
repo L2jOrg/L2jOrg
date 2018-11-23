@@ -31,7 +31,7 @@ public class LoginServerFail extends ReceivablePacket
 			_reason = "Authserver registration failed! Reason: " + REASONS[reasonId];
 		else
 		{
-			_reason = readString();
+			_reason = readS();
 			_restartConnection = readC() > 0;
 		}
 	}

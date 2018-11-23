@@ -14,7 +14,7 @@ public class PlayerLogout extends SendablePacket
 	@Override
 	protected void writeImpl()
 	{
-		writeByte(0x04);
-		writeString(account);
+		writeC(0x04);
+		writeS(account);
 	}
 }

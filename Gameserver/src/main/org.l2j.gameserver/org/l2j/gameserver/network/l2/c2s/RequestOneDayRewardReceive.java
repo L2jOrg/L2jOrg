@@ -10,7 +10,7 @@ public class RequestOneDayRewardReceive extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_missionId = readH();
+		_missionId = readShort();
 	}
 
 	@Override

@@ -1,5 +1,7 @@
 package org.l2j.mmocore;
 
+import java.nio.ByteBuffer;
+
 import static java.lang.Double.doubleToRawLongBits;
 import static java.lang.Math.max;
 import static java.lang.System.arraycopy;
@@ -101,6 +103,12 @@ public abstract class WritablePacket<T extends Client<Connection<T>>> extends Ab
 		writeInt(value ? 0x01 : 0x00);
 	}
 
+
+    protected final void writeFloat(final float value) {
+        var x  = Float.floatToRawIntBits(value);
+        writeInt(x);
+    }
+
     private void writeIntParts(byte b0, byte b1, byte b2, byte b3) {
 	    writeByte(pickByte(b0, b3));
         writeByte(pickByte(b1, b2));
@@ -156,7 +164,7 @@ public abstract class WritablePacket<T extends Client<Connection<T>>> extends Ab
 	 * Write <B>String</B> to the buffer.
 	 * @param text to be put on data
 	 */
-	protected final void writeString(final String text) {
+	protected final void writeString(final CharSequence text) {
 		if (nonNull(text)) {
 			final int len = text.length();
 			for (int i = 0; i < len; i++) {
@@ -166,7 +174,7 @@ public abstract class WritablePacket<T extends Client<Connection<T>>> extends Ab
 		writeChar('\000');
 	}
 
-	protected final void writeSizedString(final String text) {
+	protected final void writeSizedString(final CharSequence text) {
 	    if(nonNull(text)) {
 	        final int len = text.length();
 	        writeShort(len);

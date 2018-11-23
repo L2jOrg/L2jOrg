@@ -60,7 +60,7 @@ public class AdminForgePacket extends L2GameServerPacket
 		}
 		else if((b == 'F') || (b == 'f'))
 		{
-			writeF(Double.parseDouble(string));
+			writeDouble(Double.parseDouble(string));
 			return true;
 		}
 		else if((b == 'S') || (b == 's'))
@@ -70,7 +70,7 @@ public class AdminForgePacket extends L2GameServerPacket
 		}
 		else if((b == 'B') || (b == 'b') || (b == 'X') || (b == 'x'))
 		{
-			writeB(new BigInteger(string).toByteArray());
+			writeBytes(new BigInteger(string).toByteArray());
 			return true;
 		}
 		else if((b == 'Q') || (b == 'q'))

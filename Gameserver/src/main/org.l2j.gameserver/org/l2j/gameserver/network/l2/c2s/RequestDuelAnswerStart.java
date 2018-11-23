@@ -17,9 +17,9 @@ public class RequestDuelAnswerStart extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_duelType = readD();
-		readD(); // 1 посылается если ниже  -1(при включеной опции клиента Отменять дуели)
-		_response = readD();
+		_duelType = readInt();
+		readInt(); // 1 посылается если ниже  -1(при включеной опции клиента Отменять дуели)
+		_response = readInt();
 	}
 
 	@Override

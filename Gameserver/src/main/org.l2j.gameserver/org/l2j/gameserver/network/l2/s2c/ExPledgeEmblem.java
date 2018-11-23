@@ -25,6 +25,6 @@ public class ExPledgeEmblem extends L2GameServerPacket
 		writeInt(_crestPart);
 		writeInt(_totalSize);
 		writeInt(_data.length);
-		writeB(_data);
+		writeBytes(_data);
 	}
 }
