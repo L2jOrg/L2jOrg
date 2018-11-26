@@ -52,5 +52,4 @@ module org.l2j.commons {
     exports org.l2j.commons.text;
     exports org.l2j.commons.formats.dds;
     exports org.l2j.commons.dbcp;
-
 }
