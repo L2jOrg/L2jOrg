@@ -6,6 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 
+import gnu.trove.set.TIntSet;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
@@ -50,10 +51,6 @@ import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.PositionUtils;
 import org.l2j.gameserver.utils.TeleportUtils;
 
-import org.napile.primitive.sets.IntSet;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 public class FakeAI extends PlayerAI implements OnDeathListener, OnLevelChangeListener, OnTeleportListener, OnPlayerChatMessageReceive
 {
 	private class DistanceComparator implements Comparator<GameObject>
@@ -68,8 +65,6 @@ public class FakeAI extends PlayerAI implements OnDeathListener, OnLevelChangeLi
 		}
 	}
 
-	private static final Logger _log = LoggerFactory.getLogger(FakeAI.class);
-
 	private static final int MAX_ACTION_TRY_COUNT = 500;
 
 	private static final int GIVE_CONSUMABLE_ITEMS_DELAY = 600000;
@@ -83,7 +78,7 @@ public class FakeAI extends PlayerAI implements OnDeathListener, OnLevelChangeLi
 
 	private ScheduledFuture<?> _actionTask;
 
-	private final List<AbstractAction> _plannedActions = new ArrayList<AbstractAction>();
+	private final List<AbstractAction> _plannedActions = new ArrayList<>();
 	private AbstractAction _lastPerformedAction = null;
 	private int _lastActionTryCount = 0;
 
@@ -613,7 +608,7 @@ public class FakeAI extends PlayerAI implements OnDeathListener, OnLevelChangeLi
 			if (_currentFarmZone.isIgnoredMonster(n.getNpcId()))
 				continue;
 
-			IntSet farmMonsters = _currentFarmZone.getFarmMonsters();
+			TIntSet farmMonsters = _currentFarmZone.getFarmMonsters();
 			if (farmMonsters.isEmpty())
 			{
 				if (Math.abs(player.getLevel() - n.getLevel()) > 10)

@@ -3,12 +3,12 @@ package org.l2j.gameserver.data.xml.holder;
 import java.util.ArrayList;
 import java.util.List;
 
+import gnu.trove.map.TIntObjectMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.events.Event;
 import org.l2j.gameserver.model.entity.events.EventType;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.TreeIntObjectMap;
 
 /**
  * @author VISTALL
@@ -17,7 +17,7 @@ import org.napile.primitive.maps.impl.TreeIntObjectMap;
 public final class EventHolder extends AbstractHolder
 {
 	private static final EventHolder _instance = new EventHolder();
-	private final IntObjectMap<Event> _events = new TreeIntObjectMap<Event>();
+	private final TIntObjectMap<Event> _events = new TIntObjectHashMap<>();
 
 	public static EventHolder getInstance()
 	{
@@ -39,7 +39,7 @@ public final class EventHolder extends AbstractHolder
 	public <E extends Event> List<E> getEvents(EventType type)
 	{
 		List<E> events = new ArrayList<E>();
-		for(Event e : _events.values())
+		for(Event e : _events.valueCollection())
 		{
 			if(e.getType() == type)
 				events.add((E) e);
@@ -51,7 +51,7 @@ public final class EventHolder extends AbstractHolder
 	public <E extends Event> List<E> getEvents(Class<E> eventClass)
 	{
 		List<E> events = new ArrayList<E>();
-		for(Event e : _events.values())
+		for(Event e : _events.valueCollection())
 		{
 			if(e.getClass() == eventClass) // fast hack
 			{
@@ -69,13 +69,13 @@ public final class EventHolder extends AbstractHolder
 
 	public void findEvent(Player player)
 	{
-		for(Event event : _events.values())
+		for(Event event : _events.valueCollection())
 			event.findEvent(player);
 	}
 
 	public void callInit()
 	{
-		for(Event event : _events.values())
+		for(Event event : _events.valueCollection())
 			event.initEvent();
 	}
 

@@ -2,6 +2,8 @@ package org.l2j.gameserver.data.xml.holder;
 
 import java.util.*;
 
+import gnu.trove.map.TIntObjectMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.model.base.ClassType;
 import org.l2j.gameserver.model.base.Race;
@@ -9,17 +11,16 @@ import org.l2j.gameserver.templates.fakeplayer.FakePlayerAITemplate;
 import org.l2j.gameserver.templates.fakeplayer.FarmZoneTemplate;
 import org.l2j.gameserver.templates.fakeplayer.TownZoneTemplate;
 
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.HashIntObjectMap;
-
 /**
  * @author: Bonux
+ *
+ * TODO REmove
  */
 public final class FakePlayersHolder extends AbstractHolder
 {
 	private static final FakePlayersHolder _instance = new FakePlayersHolder();
 
-	private final IntObjectMap<FakePlayerAITemplate> _aiTemplates = new HashIntObjectMap<FakePlayerAITemplate>();
+	private final TIntObjectMap<FakePlayerAITemplate> _aiTemplates = new TIntObjectHashMap<>();
 	private final Set<FarmZoneTemplate> _farmZoneTemplates = new HashSet<FarmZoneTemplate>();
 	private final Set<TownZoneTemplate> _townZoneTemplates = new HashSet<TownZoneTemplate>();
 
@@ -35,7 +36,7 @@ public final class FakePlayersHolder extends AbstractHolder
 
 	public Collection<FakePlayerAITemplate> getAITemplates()
 	{
-		return _aiTemplates.values();
+		return _aiTemplates.valueCollection();
 	}
 
 	public FakePlayerAITemplate getAITemplate(Race race, ClassType type)
