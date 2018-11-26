@@ -20,7 +20,6 @@ module org.l2j.gameserver {
     requires ehcache.core;
     requires velocity;
     requires velocity.slf4j;
-    requires mesp;
 
     exports org.l2j.gameserver;
 }
