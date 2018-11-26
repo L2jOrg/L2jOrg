@@ -48,8 +48,6 @@ public class AuthServer {
         connectionHandler = ConnectionBuilder.create(bindAddress, AuthClient::new, lph, sh).threadPoolSize(4).build();
         connectionHandler.start();
         logger.info("Login Server ready on {}:{}", bindAddress.getHostString(), loginListenPort());
-
-
     }
 
     private void shutdown(boolean restart) {
@@ -64,10 +62,10 @@ public class AuthServer {
         Config.load();
         try {
             _instance = new AuthServer();
+            getRuntime().addShutdownHook(new Thread(() -> _instance.shutdown(false)));
         } catch (Exception e) {
             logger.error(e.getLocalizedMessage(), e);
         }
-        getRuntime().addShutdownHook(new Thread(() -> _instance.shutdown(false)));
     }
 
     private static void configureLogger() {
