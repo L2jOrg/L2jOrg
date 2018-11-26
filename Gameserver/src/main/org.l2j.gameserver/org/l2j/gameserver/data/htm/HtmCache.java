@@ -3,8 +3,6 @@ package org.l2j.gameserver.data.htm;
 import java.io.File;
 import java.io.IOException;
 
-import org.l2j.commons.map.hash.TIntStringHashMap;
-import org.l2j.commons.string.CharsetEncodingDetector;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.utils.ArabicConv;
@@ -310,8 +308,7 @@ public class HtmCache
 
 	private static String readContent(File file) throws IOException
 	{
-		String content = FileUtils.readFileToString(file, CharsetEncodingDetector.detectEncoding(file));
-		content = new String(content.getBytes("UTF-8"));
+		String content = FileUtils.readFileToString(file, "UTF-8");
 		if(Config.HTM_SHAPE_ARABIC)
 			content = ArabicConv.shapeArabic(content);
 		return content;
