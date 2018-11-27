@@ -4,11 +4,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.model.Player;
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.CHashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,9 +30,9 @@ public class CharacterPostFriendDAO
 		return _instance;
 	}
 
-	public TIntObjectMap<String> select(Player player)
+	public IntObjectMap<String> select(Player player)
 	{
-		TIntObjectMap<String> set = new TIntObjectHashMap<>();
+		IntObjectMap<String> set = new CHashIntObjectMap<String>();
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;

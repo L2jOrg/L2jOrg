@@ -12,6 +12,7 @@ import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
 import org.l2j.commons.annotations.Nullable;
+import org.l2j.commons.map.hash.TIntStringHashMap;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.data.htm.HtmTemplates;
 import org.l2j.gameserver.model.reward.RewardList;

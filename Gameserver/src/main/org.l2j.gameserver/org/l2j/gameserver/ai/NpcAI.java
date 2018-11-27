@@ -4,8 +4,6 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-import gnu.trove.set.TIntSet;
-import gnu.trove.set.hash.TIntHashSet;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Creature;
@@ -22,6 +20,9 @@ import org.l2j.gameserver.templates.npc.WalkerRoute;
 import org.l2j.gameserver.templates.npc.WalkerRoutePoint;
 import org.l2j.gameserver.utils.Functions;
 import org.l2j.gameserver.utils.Location;
+
+import org.napile.primitive.sets.IntSet;
+import org.napile.primitive.sets.impl.CArrayIntSet;
 
 /**
  * @author Bonux
@@ -52,7 +53,7 @@ public class NpcAI extends CharacterAI
 	private int _currentWalkerPoint;
 	private boolean _delete;
 
-	private TIntSet _neighbors = null;
+	private IntSet _neighbors = null;
 	private long _lastNeighborsClean = 0;
 
 	protected boolean _isGlobal;
@@ -497,7 +498,7 @@ public class NpcAI extends CharacterAI
 			return false;
 
 		if(_neighbors == null)
-			_neighbors = new TIntHashSet();
+			_neighbors = new CArrayIntSet();
 
 		for(Creature creature : actor.getAroundCharacters(range, range))
 		{

@@ -16,7 +16,6 @@ import org.dom4j.Element;
 import org.napile.primitive.lists.IntList;
 import org.napile.primitive.lists.impl.ArrayIntList;
 
-// TODO Remove
 public class FakeItemParser extends AbstractParser<FakeItemHolder>
 {
 	private static FakeItemParser ourInstance = new FakeItemParser();

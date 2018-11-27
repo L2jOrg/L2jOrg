@@ -17,7 +17,6 @@ module org.l2j.commons {
     requires dom4j;
     requires commons.dbcp;
     requires ecj;
-    requires trove;
 
     exports org.l2j.commons.util;
     exports org.l2j.commons.xml;
@@ -47,6 +46,7 @@ module org.l2j.commons {
     exports org.l2j.commons.logging;
     exports org.l2j.commons.compiler;
     exports org.l2j.commons.annotations;
+    exports org.l2j.commons.map.hash;
     exports org.l2j.commons.data.xml;
     exports org.l2j.commons.net.nio;
     exports org.l2j.commons.text;
