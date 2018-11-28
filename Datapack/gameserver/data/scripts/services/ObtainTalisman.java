@@ -1,8 +1,5 @@
 package services;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.handler.bypass.Bypass;
 import org.l2j.gameserver.model.Player;
@@ -10,6 +7,9 @@ import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.utils.Functions;
 import org.l2j.gameserver.utils.ItemFunctions;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Используется для выдачи талисманов в крепостях и замках за Knight's Epaulette.

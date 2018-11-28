@@ -1,20 +1,19 @@
 package org.l2j.gameserver.network.l2.s2c;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.l2j.gameserver.model.instances.NpcInstance;
 import org.apache.commons.lang3.StringUtils;
 import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.instances.DoorInstance;
+import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.network.l2.ServerPacketOpcodes;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.utils.Location;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
+import java.util.List;
 
 //@Deprecated
 public class SystemMessage extends L2GameServerPacket
@@ -3208,13 +3207,13 @@ public class SystemMessage extends L2GameServerPacket
 
 	public SystemMessage addDoorName(int id)
 	{
-		args.add(new Arg(TYPE_DOOR_NAME, new Integer(id)));
+		args.add(new Arg(TYPE_DOOR_NAME, id));
 		return this;
 	}
 
 	public SystemMessage addNpcName(int id)
 	{
-		args.add(new Arg(TYPE_NPC_NAME, new Integer(1000000 + id)));
+		args.add(new Arg(TYPE_NPC_NAME,1000000 + id));
 		return this;
 	}
 

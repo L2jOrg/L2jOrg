@@ -1,7 +1,5 @@
 package npc.model.residences.instantclanhall;
 
-import java.util.StringTokenizer;
-
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
@@ -12,9 +10,10 @@ import org.l2j.gameserver.model.entity.residence.clanhall.InstantClanHall;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.StringTokenizer;
 
 /**
  * @author Bonux

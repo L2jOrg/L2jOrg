@@ -1,17 +1,15 @@
 package services;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
-import org.l2j.gameserver.handler.bypass.Bypass;
 import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Servitor;
 import org.l2j.gameserver.model.base.Race;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.network.l2.s2c.MagicSkillUse;
-import org.l2j.gameserver.utils.Functions;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SupportMagic
 {

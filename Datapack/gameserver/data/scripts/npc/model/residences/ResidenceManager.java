@@ -1,9 +1,6 @@
 package npc.model.residences;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.StringTokenizer;
-
+import org.apache.commons.lang3.ArrayUtils;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
@@ -20,17 +17,16 @@ import org.l2j.gameserver.network.l2.components.CustomMessage;
 import org.l2j.gameserver.network.l2.components.HtmlMessage;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.L2GameServerPacket;
-import org.l2j.gameserver.templates.TeleportLocation;
-import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
 import org.l2j.gameserver.templates.residence.ResidenceFunctionTemplate;
-import org.l2j.gameserver.utils.HtmlUtils;
 import org.l2j.gameserver.utils.ReflectionUtils;
 import org.l2j.gameserver.utils.SkillUtils;
 import org.l2j.gameserver.utils.TimeUtils;
 import org.l2j.gameserver.utils.WarehouseFunctions;
 
-import org.apache.commons.lang3.ArrayUtils;
+import java.util.Collections;
+import java.util.List;
+import java.util.StringTokenizer;
 
 /**
  * some rework by VISTALL

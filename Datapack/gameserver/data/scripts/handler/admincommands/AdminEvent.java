@@ -1,7 +1,5 @@
 package handler.admincommands;
 
-import java.util.List;
-
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.htm.HtmTemplates;
 import org.l2j.gameserver.data.xml.holder.EventHolder;
@@ -10,11 +8,10 @@ import org.l2j.gameserver.model.GameObject;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.events.Event;
 import org.l2j.gameserver.model.entity.events.EventType;
-import org.l2j.gameserver.model.entity.events.impl.PvPEvent;
-import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.components.HtmlMessage;
+import org.l2j.gameserver.network.l2.components.SystemMsg;
 
-import events.FunEvent;
+import java.util.List;
 
 /**
  * @author VISTALL

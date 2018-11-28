@@ -1,7 +1,5 @@
 package handler.voicecommands;
 
-import java.util.Collection;
-
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.listener.actor.OnChangeCurrentCpListener;
 import org.l2j.gameserver.listener.actor.OnChangeCurrentHpListener;
@@ -10,8 +8,8 @@ import org.l2j.gameserver.listener.actor.player.OnPlayerEnterListener;
 import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Skill;
-import org.l2j.gameserver.model.actor.listener.CharListenerList;
 import org.l2j.gameserver.model.actor.instances.creature.Abnormal;
+import org.l2j.gameserver.model.actor.listener.CharListenerList;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.skills.EffectType;
 import org.l2j.gameserver.skills.EffectUseType;
@@ -19,6 +17,8 @@ import org.l2j.gameserver.skills.SkillEntry;
 import org.l2j.gameserver.skills.effects.Effect;
 import org.l2j.gameserver.templates.skill.EffectTemplate;
 import org.l2j.gameserver.utils.ItemFunctions;
+
+import java.util.Collection;
 
 /**
  * @author Bonux

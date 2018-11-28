@@ -1,5 +1,5 @@
-import org.l2j.gameserver.instancemanager.ReflectionManager;
 import org.l2j.gameserver.handler.bypass.Bypass;
+import org.l2j.gameserver.instancemanager.ReflectionManager;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.network.l2.components.SystemMsg;

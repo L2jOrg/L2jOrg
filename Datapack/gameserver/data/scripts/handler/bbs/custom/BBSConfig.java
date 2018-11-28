@@ -1,16 +1,15 @@
 package handler.bbs.custom;
 
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
-
+import org.apache.commons.lang3.ArrayUtils;
 import org.l2j.commons.configuration.ExProperties;
 import org.l2j.commons.string.StringArrayUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.listener.script.OnLoadScriptListener;
-
-import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author Bonux

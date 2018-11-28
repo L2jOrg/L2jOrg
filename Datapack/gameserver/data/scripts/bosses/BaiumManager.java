@@ -1,17 +1,8 @@
 package bosses;
 
-import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ScheduledFuture;
-
-import org.l2j.commons.time.cron.SchedulingPattern;
+import bosses.EpicBossState.State;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.holder.NpcHolder;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
@@ -29,16 +20,16 @@ import org.l2j.gameserver.network.l2.s2c.PlaySoundPacket;
 import org.l2j.gameserver.network.l2.s2c.SocialActionPacket;
 import org.l2j.gameserver.skills.SkillEntry;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
-import org.l2j.gameserver.utils.ItemFunctions;
-import org.l2j.gameserver.utils.Location;
-import org.l2j.gameserver.utils.Log;
-import org.l2j.gameserver.utils.ReflectionUtils;
-import org.l2j.gameserver.utils.TimeUtils;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import bosses.EpicBossState.State;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ScheduledFuture;
+
+import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 
 public class BaiumManager implements OnInitScriptListener
 {

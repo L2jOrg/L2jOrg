@@ -1,8 +1,5 @@
 package npc.model.residences.castle;
 
-import java.util.List;
-import java.util.concurrent.Future;
-
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.gameserver.ThreadPoolManager;
@@ -16,6 +13,9 @@ import org.l2j.gameserver.network.l2.components.NpcString;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
 import org.l2j.gameserver.utils.Functions;
 import org.l2j.gameserver.utils.Location;
+
+import java.util.List;
+import java.util.concurrent.Future;
 
 /**
  * @author VISTALL

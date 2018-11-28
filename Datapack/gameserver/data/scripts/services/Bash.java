@@ -1,17 +1,5 @@
 package services;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
-import java.net.Socket;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.xml.parsers.DocumentBuilderFactory;
-
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.htm.HtmCache;
@@ -23,11 +11,16 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.utils.Files;
 import org.l2j.gameserver.utils.Functions;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
+
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.*;
+import java.net.Socket;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Сервис трансляции цитат с сайта bash.org.ru в игру

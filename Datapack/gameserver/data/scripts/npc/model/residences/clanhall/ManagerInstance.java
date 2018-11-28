@@ -1,13 +1,13 @@
 package npc.model.residences.clanhall;
 
+import npc.model.residences.ResidenceManager;
 import org.l2j.commons.collections.MultiValueSet;
-import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.entity.residence.ClanHall;
 import org.l2j.gameserver.model.entity.residence.Residence;
+import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.network.l2.s2c.AgitDecoInfoPacket;
 import org.l2j.gameserver.network.l2.s2c.L2GameServerPacket;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
-import npc.model.residences.ResidenceManager;
 
 public class ManagerInstance extends ResidenceManager
 {

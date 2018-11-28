@@ -1,9 +1,9 @@
 package quests;
 
+import org.l2j.gameserver.model.base.Race;
+import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
-import org.l2j.gameserver.model.instances.NpcInstance;
-import org.l2j.gameserver.model.base.Race;
 
 public class _11012_FutureElves extends Quest
 {

@@ -162,7 +162,7 @@ public class GameServer {
             throw new Exception("Server online limit is zero!");
 
         // Initialize database
-        Class.forName(Config.DATABASE_DRIVER).newInstance();
+        Class.forName(Config.DATABASE_DRIVER).getDeclaredConstructor().newInstance();
         DatabaseFactory.getInstance().getConnection().close();
 
         // TODO remove this
@@ -319,15 +319,17 @@ public class GameServer {
 
     private void logVersionInfo() {
         try {
+
             var versionProperties = new Properties();
             versionProperties.load(ClassLoader.getSystemResourceAsStream("version.properties"));
             version = versionProperties.getProperty("version");
-            _log.info("=================================================");
-            _log.info("Build Revision: .......... {}", version);
+            _log.info("======================================================================");
+            _log.info("Build Version: ........... {}", version);
+            _log.info("Build Revision: .......... {}", versionProperties.getProperty("revision"));
             _log.info("Update: .................. {}", UPDATE_NAME);
             _log.info("Build date: .............. {}", versionProperties.getProperty("buildDate"));
             _log.info("Compiler JDK version: .... {}", versionProperties.getProperty("compilerVersion"));
-            _log.info("=================================================");
+            _log.info("======================================================================");
         } catch (IOException e) {
             _log.warn(e.getLocalizedMessage(), e);
         }

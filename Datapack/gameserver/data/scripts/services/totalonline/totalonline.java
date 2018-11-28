@@ -1,12 +1,5 @@
 package services.totalonline;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.TreeSet;
-
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
@@ -15,9 +8,11 @@ import org.l2j.gameserver.listener.script.OnInitScriptListener;
 import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.tables.FakePlayersTable;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 
 /**
  * Online -> real + fake

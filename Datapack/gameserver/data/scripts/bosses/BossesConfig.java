@@ -5,7 +5,6 @@ import org.l2j.commons.string.StringArrayUtils;
 import org.l2j.commons.time.cron.SchedulingPattern;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.listener.script.OnLoadScriptListener;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

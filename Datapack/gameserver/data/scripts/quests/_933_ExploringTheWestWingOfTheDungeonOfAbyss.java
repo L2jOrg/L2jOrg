@@ -1,6 +1,5 @@
 package quests;
 
-import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;

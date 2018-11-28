@@ -1,13 +1,6 @@
 package handler.onshiftaction;
 
 import handler.onshiftaction.commons.RewardListInfo;
-
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeSet;
-
 import org.apache.commons.lang3.text.StrBuilder;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.bypass.Bypass;
@@ -27,6 +20,11 @@ import org.l2j.gameserver.stats.Stats;
 import org.l2j.gameserver.utils.HtmlUtils;
 import org.l2j.gameserver.utils.PositionUtils;
 import org.l2j.gameserver.utils.Util;
+
+import java.util.Collection;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * @author VISTALL

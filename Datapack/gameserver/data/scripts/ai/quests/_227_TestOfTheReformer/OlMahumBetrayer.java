@@ -6,7 +6,6 @@ import org.l2j.gameserver.geodata.GeoEngine;
 import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.Skill;
 import org.l2j.gameserver.model.instances.NpcInstance;
-import org.l2j.gameserver.utils.PositionUtils;
 
 /**
  * @author Bonux

@@ -1,29 +1,26 @@
 package handler.onshiftaction.commons;
 
-import java.math.BigInteger;
-import java.text.NumberFormat;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-
+import org.apache.commons.lang3.StringUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.htm.HtmTemplates;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.base.Experience;
 import org.l2j.gameserver.model.instances.NpcInstance;
-import org.l2j.gameserver.model.instances.RaidBossInstance;
 import org.l2j.gameserver.model.reward.RewardData;
 import org.l2j.gameserver.model.reward.RewardGroup;
 import org.l2j.gameserver.model.reward.RewardList;
 import org.l2j.gameserver.model.reward.RewardType;
 import org.l2j.gameserver.stats.Stats;
 import org.l2j.gameserver.utils.HtmlUtils;
-
-import org.apache.commons.lang3.StringUtils;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CHashIntObjectMap;
+
+import java.math.BigInteger;
+import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
 /**
  * @reworked by Bonux

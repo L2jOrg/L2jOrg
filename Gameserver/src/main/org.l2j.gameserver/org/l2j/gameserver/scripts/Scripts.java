@@ -1,18 +1,9 @@
 package  org.l2j.gameserver.scripts;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
-import java.util.jar.JarEntry;
-import java.util.jar.JarInputStream;
-
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.io.filefilter.FileFilterUtils;
+import org.apache.commons.lang3.ClassUtils;
 import org.l2j.commons.compiler.Compiler;
 import org.l2j.commons.compiler.MemoryClassLoader;
 import org.l2j.commons.listener.Listener;
@@ -24,12 +15,16 @@ import org.l2j.gameserver.listener.script.OnInitScriptListener;
 import org.l2j.gameserver.listener.script.OnLoadScriptListener;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.instances.NpcInstance;
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.io.filefilter.FileFilterUtils;
-import org.apache.commons.lang3.ClassUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
+import java.util.*;
+import java.util.jar.JarEntry;
+import java.util.jar.JarInputStream;
 
 public class Scripts
 {
@@ -193,7 +188,7 @@ public class Scripts
 								}
 							}
 
-							_listeners.add((OnLoadScriptListener) clazz.newInstance());
+							_listeners.add((OnLoadScriptListener) clazz.getDeclaredConstructor().newInstance());
 						}
 					}
 					catch(Exception e)
@@ -223,7 +218,7 @@ public class Scripts
 		{
 			if(OnInitScriptListener.class.isAssignableFrom(clazz))
 			{
-				o = clazz.newInstance();
+				o = clazz.getDeclaredConstructor().newInstance();
 				_listeners.add((OnInitScriptListener)o);
 			}
 
@@ -232,7 +227,7 @@ public class Scripts
 				{
 					Bypass an = method.getAnnotation(Bypass.class);
 					if(o == null)
-						o = clazz.newInstance();
+						o = clazz.getDeclaredConstructor().newInstance();
 					Class<?>[] par = method.getParameterTypes();
 					if(par.length == 0 || par[0] != Player.class || par[1] != NpcInstance.class || par[2] != String[].class)
 					{

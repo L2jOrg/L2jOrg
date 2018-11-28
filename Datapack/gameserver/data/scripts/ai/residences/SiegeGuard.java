@@ -1,7 +1,5 @@
 package ai.residences;
 
-import java.util.List;
-
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
@@ -11,6 +9,8 @@ import org.l2j.gameserver.model.Playable;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.utils.Location;
+
+import java.util.List;
 
 
 public abstract class SiegeGuard extends DefaultAI

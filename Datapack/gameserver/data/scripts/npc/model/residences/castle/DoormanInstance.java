@@ -2,10 +2,10 @@ package npc.model.residences.castle;
 
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.residence.Castle;
 import org.l2j.gameserver.model.entity.residence.Residence;
+import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.network.l2.components.HtmlMessage;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
 import org.l2j.gameserver.utils.Location;

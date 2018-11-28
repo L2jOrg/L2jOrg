@@ -1,15 +1,14 @@
 package org.l2j.gameserver.handler.admincommands.impl;
 
-import java.io.File;
-import java.util.Iterator;
-import java.util.List;
-
+import org.apache.commons.lang3.ClassUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.handler.admincommands.IAdminCommandHandler;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.scripts.Scripts;
-import org.apache.commons.lang3.ClassUtils;
+
+import java.io.File;
+import java.util.List;
 
 public class AdminScripts implements IAdminCommandHandler
 {
@@ -59,7 +58,7 @@ public class AdminScripts implements IAdminCommandHandler
 			Runnable r;
 			try
 			{
-				r = (Runnable) clazz.newInstance();
+				r = (Runnable) clazz.getDeclaredConstructor().newInstance();
 			}
 			catch(Exception e)
 			{

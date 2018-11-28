@@ -1,9 +1,7 @@
 package events;
 
-import java.util.List;
-
 import npc.model.events.CustomObservationManagerInstance;
-
+import org.apache.commons.lang3.StringUtils;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.gameserver.data.xml.holder.EventHolder;
 import org.l2j.gameserver.data.xml.holder.InstantZoneHolder;
@@ -19,7 +17,7 @@ import org.l2j.gameserver.network.l2.s2c.ExReceiveOlympiadPacket.MatchList.Arena
 import org.l2j.gameserver.templates.InstantZone;
 import org.l2j.gameserver.utils.Location;
 
-import org.apache.commons.lang3.StringUtils;
+import java.util.List;
 
 public abstract class AbstractCustomObservableEvent extends SingleMatchEvent
 {

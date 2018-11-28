@@ -1,13 +1,13 @@
 package quests;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.base.Race;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public final class _233_TestOfWarspirit extends Quest

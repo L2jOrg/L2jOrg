@@ -4,8 +4,6 @@ plugins {
     id "eclipse"
 }
 
-version '0.1'
-
 ext.moduleName = 'org.l2j.commons'
 
 sourceSets {

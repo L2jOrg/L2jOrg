@@ -1,8 +1,8 @@
 package handler.voicecommands;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.base.Experience;
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.model.base.Experience;
 
 public class Delevel extends ScriptVoiceCommandHandler
 {

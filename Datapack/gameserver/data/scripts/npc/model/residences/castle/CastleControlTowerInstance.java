@@ -1,13 +1,13 @@
 package npc.model.residences.castle;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.Spawner;
 import org.l2j.gameserver.model.instances.residences.SiegeToggleNpcInstance;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class CastleControlTowerInstance extends SiegeToggleNpcInstance
 {

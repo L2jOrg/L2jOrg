@@ -1,13 +1,11 @@
 package events;
 
-import java.util.concurrent.atomic.AtomicBoolean;
-
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.gameserver.dao.SiegeClanDAO;
 import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.entity.events.impl.CastleSiegeEvent;
 import org.l2j.gameserver.model.entity.events.objects.SiegeClanObject;
+import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.network.l2.components.IBroadcastPacket;
 import org.l2j.gameserver.network.l2.components.NpcString;
@@ -15,6 +13,8 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ExShowScreenMessage;
 import org.l2j.gameserver.network.l2.s2c.ExShowScreenMessage.ScreenMessageAlign;
 import org.l2j.gameserver.utils.SiegeUtils;
+
+import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * @author Bonux

@@ -1,11 +1,5 @@
 package handler.bbs;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.StringTokenizer;
-
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.htm.HtmTemplates;
@@ -26,6 +20,8 @@ import org.l2j.gameserver.utils.HtmlUtils;
 import org.l2j.gameserver.utils.MapUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.*;
 
 public final class CommunityRegion extends ScriptsCommunityHandler
 {

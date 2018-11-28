@@ -1,12 +1,6 @@
 package npc.model.events;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
-
+import events.AbstractCustomObservableEvent;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.ObservePoint;
@@ -27,7 +21,12 @@ import org.l2j.gameserver.network.l2.s2c.ExReceiveOlympiadPacket.MatchList.Arena
 import org.l2j.gameserver.templates.npc.NpcTemplate;
 import org.l2j.gameserver.utils.ChatUtils;
 
-import events.AbstractCustomObservableEvent;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class CustomObservationManagerInstance extends NpcInstance
 {

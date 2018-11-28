@@ -1,8 +1,5 @@
 package handler.voicecommands;
 
-import java.text.NumberFormat;
-import java.util.Locale;
-
 import org.apache.commons.lang3.text.StrBuilder;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.model.Creature;
@@ -10,10 +7,12 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.base.Element;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.network.l2.components.HtmlMessage;
-import org.l2j.gameserver.stats.Formulas;
 import org.l2j.gameserver.stats.Stats;
 import org.l2j.gameserver.templates.item.WeaponTemplate.WeaponType;
 import org.l2j.gameserver.utils.HtmlUtils;
+
+import java.text.NumberFormat;
+import java.util.Locale;
 
 public class WhoAmI extends ScriptVoiceCommandHandler
 {

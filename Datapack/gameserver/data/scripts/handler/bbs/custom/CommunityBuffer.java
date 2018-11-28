@@ -2,21 +2,9 @@ package handler.bbs.custom;
 
 import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.StringTokenizer;
-import java.util.concurrent.CopyOnWriteArrayList;
-
+import handler.bbs.ScriptsCommunityHandler;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.lang.ArrayUtils;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.database.DatabaseFactory;
@@ -24,22 +12,21 @@ import org.l2j.gameserver.model.Playable;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Servitor;
 import org.l2j.gameserver.model.Skill;
-import org.l2j.gameserver.model.Skill.SkillType;
 import org.l2j.gameserver.model.actor.instances.creature.Abnormal;
-import org.l2j.gameserver.network.l2.s2c.ShowBoardPacket;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
+import org.l2j.gameserver.network.l2.s2c.ShowBoardPacket;
 import org.l2j.gameserver.skills.EffectType;
 import org.l2j.gameserver.skills.EffectUseType;
 import org.l2j.gameserver.utils.HtmlUtils;
 import org.l2j.gameserver.utils.ItemFunctions;
-import org.l2j.gameserver.utils.SkillUtils;
 import org.l2j.gameserver.utils.Strings;
 import org.l2j.gameserver.utils.Util;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import handler.bbs.ScriptsCommunityHandler;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class CommunityBuffer extends ScriptsCommunityHandler
 {

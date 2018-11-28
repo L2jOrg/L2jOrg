@@ -1,9 +1,9 @@
 package npc.model.residences.clanhall;
 
 import org.l2j.commons.collections.MultiValueSet;
-import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.residence.Residence;
+import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
 
 /**

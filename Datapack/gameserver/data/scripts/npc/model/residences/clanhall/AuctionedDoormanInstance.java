@@ -1,17 +1,12 @@
 package npc.model.residences.clanhall;
 
-import java.util.StringTokenizer;
-
 import org.apache.commons.lang3.ArrayUtils;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.model.Servitor;
 import org.l2j.gameserver.model.entity.residence.Castle;
 import org.l2j.gameserver.model.entity.residence.ClanHall;
 import org.l2j.gameserver.model.instances.NpcInstance;
-import org.l2j.gameserver.model.instances.PetInstance;
-import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.pledge.Privilege;
 import org.l2j.gameserver.network.l2.components.HtmlMessage;

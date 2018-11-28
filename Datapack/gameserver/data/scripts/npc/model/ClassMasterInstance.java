@@ -1,15 +1,15 @@
 package npc.model;
 
-import java.util.StringTokenizer;
-
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.instances.MerchantInstance;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
-import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.HtmlUtils;
+import org.l2j.gameserver.utils.ItemFunctions;
+
+import java.util.StringTokenizer;
 
 /**
  * @author Bonux

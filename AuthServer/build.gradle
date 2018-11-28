@@ -1,13 +1,12 @@
+import java.text.SimpleDateFormat
+
 plugins {
-    id "java"
     id "idea"
     id "eclipse"
     id "application"
 }
 ext.moduleName = 'org.l2j.authserver'
 mainClassName = "org.l2j.authserver.AuthServer"
-
-version '2.0'
 
 sourceSets {
     main {
@@ -49,20 +48,27 @@ jar {
     exclude('*.cfg')
 
     manifest {
-        from(generalManifest)
-        attributes('Main-Class': 'org.l2j.authserver.AuthServer')
+        attributes('Built-By'    : System.getProperty('user.name'),
+                'Build-Timestamp': new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ").format(new Date()),
+                'Build-Revision' : rootProject.ext.revision,
+                'Build-Version'  : rootProject.version,
+                'Build-Jdk'      : rootProject.ext.buildJDK,
+                'Main-Class': 'org.l2j.authserver.AuthServer')
     }
 }
 
-task zip(type: Zip, group: "Archive", description: "Zip Loginserver") {
-    into('lib') {
-        from([jar, configurations.runtime])
+
+task dist(type: Copy) {
+    from([configurations.runtime, jar]) {
+        include "*.jar"
     }
+    into ("$buildDir/authserver/lib")
 
-    from('bin')
-    from(sourceSets.main.resources)
+    copy {
+        into("$buildDir/authserver")
+        from([sourceSets.main.resources, 'bin'])
 
-    destinationDir project.buildDir
+    }
 }
 
-build.finalizedBy(zip)
+build.finalizedBy dist

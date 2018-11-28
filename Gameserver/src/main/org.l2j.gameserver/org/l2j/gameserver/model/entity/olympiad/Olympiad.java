@@ -1,12 +1,6 @@
 package org.l2j.gameserver.model.entity.olympiad;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.concurrent.ScheduledFuture;
-
+import org.apache.commons.lang3.StringUtils;
 import org.l2j.commons.configuration.ExProperties;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
@@ -27,7 +21,6 @@ import org.l2j.gameserver.network.l2.components.CustomMessage;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.utils.MultiValueIntegerMap;
-import org.apache.commons.lang3.StringUtils;
 import org.napile.pair.primitive.IntObjectPair;
 import org.napile.primitive.maps.IntIntMap;
 import org.napile.primitive.maps.IntObjectMap;
@@ -35,6 +28,13 @@ import org.napile.primitive.maps.impl.CHashIntIntMap;
 import org.napile.primitive.maps.impl.CHashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ScheduledFuture;
 
 public class Olympiad
 {
@@ -379,7 +379,7 @@ public class Olympiad
 	public static synchronized void logoutPlayer(Player player)
 	{
 		_classBasedRegisters.removeValue(player.getObjectId());
-		_nonClassBasedRegisters.remove(new Integer(player.getObjectId()));
+		_nonClassBasedRegisters.remove(player.getObjectId());
 		_playersHWID.remove(player.getObjectId()); //obj id? remove by key
 
 		OlympiadGame game = player.getOlympiadGame();
@@ -435,7 +435,7 @@ public class Olympiad
 			}
 		}
 		_classBasedRegisters.removeValue(player.getObjectId());
-		_nonClassBasedRegisters.remove(new Integer(player.getObjectId()));
+		_nonClassBasedRegisters.remove(player.getObjectId());
 		_playersHWID.remove(player.getObjectId()); //obj id? remove by key
 
 		player.sendPacket(SystemMsg.YOU_HAVE_BEEN_REMOVED_FROM_THE_GRAND_OLYMPIAD_WAITING_LIST);

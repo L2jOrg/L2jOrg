@@ -1,7 +1,6 @@
 package npc.model.heavenlyrift;
 
-import java.util.StringTokenizer;
-
+import manager.HeavenlyRift;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.instancemanager.ServerVariables;
@@ -12,7 +11,7 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
 
-import manager.HeavenlyRift;
+import java.util.StringTokenizer;
 
 /**
  * @reworked by Bonux

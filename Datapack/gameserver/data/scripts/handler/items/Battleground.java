@@ -2,7 +2,6 @@ package handler.items;
 
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.model.Zone.ZoneType;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.network.l2.s2c.MagicSkillUse;
 import org.l2j.gameserver.network.l2.s2c.SystemMessage;

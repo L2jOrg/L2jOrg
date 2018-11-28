@@ -1,7 +1,6 @@
 package npc.model.heavenlyrift;
 
-import java.util.StringTokenizer;
-
+import manager.HeavenlyRift.ClearZoneTask;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.instancemanager.ServerVariables;
@@ -13,7 +12,7 @@ import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
 import org.l2j.gameserver.utils.ItemFunctions;
 
-import manager.HeavenlyRift.ClearZoneTask;
+import java.util.StringTokenizer;
 
 /**
  * @reworked by Bonux

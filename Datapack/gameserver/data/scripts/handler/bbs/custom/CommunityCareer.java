@@ -1,9 +1,6 @@
 package handler.bbs.custom;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.StringTokenizer;
-
+import handler.bbs.ScriptsCommunityHandler;
 import org.l2j.gameserver.dao.CustomHeroDAO;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.htm.HtmTemplates;
@@ -17,7 +14,9 @@ import org.l2j.gameserver.network.l2.s2c.ShowBoardPacket;
 import org.l2j.gameserver.network.l2.s2c.SocialActionPacket;
 import org.l2j.gameserver.utils.*;
 
-import handler.bbs.ScriptsCommunityHandler;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringTokenizer;
 
 /**
  * @author Bonux

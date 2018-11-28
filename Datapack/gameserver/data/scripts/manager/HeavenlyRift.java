@@ -9,9 +9,9 @@ import org.l2j.gameserver.model.Zone;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.network.l2.components.NpcString;
 import org.l2j.gameserver.network.l2.s2c.ExShowScreenMessage;
-import org.l2j.gameserver.utils.ReflectionUtils;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.NpcUtils;
+import org.l2j.gameserver.utils.ReflectionUtils;
 
 /**
  * @reworked by Bonux

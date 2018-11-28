@@ -1,16 +1,16 @@
 package ai;
 
-import java.util.HashMap;
-import java.util.Map;
-
+import bosses.BaiumManager;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ai.DefaultAI;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.model.Creature;
-import org.l2j.gameserver.model.Skill;
 import org.l2j.gameserver.model.Servitor;
+import org.l2j.gameserver.model.Skill;
 import org.l2j.gameserver.model.instances.NpcInstance;
-import bosses.BaiumManager;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * AI боса Байума.<br>

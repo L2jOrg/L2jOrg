@@ -1,13 +1,12 @@
 package npc.model;
 
+import bosses.BaiumManager;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
 import org.l2j.gameserver.utils.Location;
-
-import bosses.BaiumManager;
 
 /**
  * @author Bonux

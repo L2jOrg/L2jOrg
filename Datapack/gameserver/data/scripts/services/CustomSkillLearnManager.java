@@ -1,7 +1,5 @@
 package services;
 
-import java.util.Collection;
-
 import org.l2j.gameserver.data.xml.holder.SkillAcquireHolder;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.handler.bypass.Bypass;
@@ -19,6 +17,8 @@ import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.skills.SkillEntry;
 import org.l2j.gameserver.templates.item.data.ItemData;
 import org.l2j.gameserver.utils.ItemFunctions;
+
+import java.util.Collection;
 
 /**
  * @author Bonux

@@ -1,7 +1,5 @@
 package npc.model;
 
-import java.util.StringTokenizer;
-
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Zone.ZoneType;
@@ -9,6 +7,8 @@ import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
+
+import java.util.StringTokenizer;
 
 /**
  * @author Evil_dnk

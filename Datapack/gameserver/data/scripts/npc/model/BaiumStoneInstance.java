@@ -1,12 +1,11 @@
 package npc.model;
 
+import bosses.BaiumManager;
+import bosses.EpicBossState.State;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
-
-import bosses.BaiumManager;
-import bosses.EpicBossState.State;
 
 /**
  * @author Bonux

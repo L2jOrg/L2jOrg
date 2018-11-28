@@ -1,15 +1,6 @@
 package npc.model;
 
 import gnu.trove.list.array.TIntArrayList;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
@@ -23,17 +14,20 @@ import org.l2j.gameserver.model.entity.olympiad.Olympiad;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.network.l2.components.HtmlMessage;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
-import org.l2j.gameserver.network.l2.s2c.MyTargetSelectedPacket;
-import org.l2j.gameserver.network.l2.s2c.PlaySoundPacket;
-import org.l2j.gameserver.network.l2.s2c.SetupGaugePacket;
-import org.l2j.gameserver.network.l2.s2c.SystemMessage;
-import org.l2j.gameserver.network.l2.s2c.ValidateLocationPacket;
+import org.l2j.gameserver.network.l2.s2c.*;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
 import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.Util;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class SchemeBufferInstance extends NpcInstance
 {

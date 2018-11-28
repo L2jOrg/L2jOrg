@@ -1,12 +1,5 @@
 package handler.voicecommands;
 
-import static org.l2j.gameserver.model.Zone.ZoneType.no_restart;
-import static org.l2j.gameserver.model.Zone.ZoneType.no_summon;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.lang.reference.HardReference;
 import org.l2j.commons.threading.RunnableImpl;
@@ -27,15 +20,21 @@ import org.l2j.gameserver.network.l2.components.CustomMessage;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ConfirmDlgPacket;
 import org.l2j.gameserver.network.l2.s2c.MagicSkillUse;
-//import org.l2j.gameserver.network.l2.s2c.SetupGaugePacket;
-import org.l2j.gameserver.network.l2.s2c.SystemMessage;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.skills.AbnormalEffect;
 import org.l2j.gameserver.utils.Location;
-
 import org.napile.pair.primitive.IntObjectPair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import static org.l2j.gameserver.model.Zone.ZoneType.no_restart;
+import static org.l2j.gameserver.model.Zone.ZoneType.no_summon;
+
+//import org.l2j.gameserver.network.l2.s2c.SetupGaugePacket;
 
 public class Wedding extends ScriptVoiceCommandHandler
 {

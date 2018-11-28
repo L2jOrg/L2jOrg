@@ -1,11 +1,11 @@
 package handler.voicecommands;
 
+import org.l2j.gameserver.GameServer;
+import org.l2j.gameserver.model.Player;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-import org.l2j.gameserver.GameServer;
-import org.l2j.gameserver.model.Player;
 
 public class ServerInfo extends ScriptVoiceCommandHandler
 {

@@ -1,5 +1,2 @@
-include 'Commons'
-include 'Datapack'
-include 'Gameserver'
-include 'AuthServer'
-include 'Mmocore'
+rootProject.name = 'L2jOrg'
+include 'Commons', 'Gameserver', 'AuthServer', 'Mmocore'

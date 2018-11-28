@@ -1,12 +1,12 @@
 package handler.voicecommands;
 
+import org.apache.commons.lang3.StringUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.instancemanager.AwayManager;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Zone.ZoneType;
 import org.l2j.gameserver.model.entity.events.impl.SiegeEvent;
 import org.l2j.gameserver.network.l2.components.CustomMessage;
-import org.apache.commons.lang3.StringUtils;
 
 /**
  * @author: Kolobrodik

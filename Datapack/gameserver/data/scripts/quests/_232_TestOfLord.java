@@ -1,14 +1,14 @@
 package quests;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.base.Race;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.quest.Drop;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public final class _232_TestOfLord extends Quest
 {

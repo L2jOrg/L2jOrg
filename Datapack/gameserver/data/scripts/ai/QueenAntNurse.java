@@ -1,5 +1,6 @@
 package ai;
 
+import npc.model.QueenAntInstance;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.ai.Priest;
@@ -8,7 +9,6 @@ import org.l2j.gameserver.model.Skill;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.network.l2.s2c.MagicSkillUse;
 import org.l2j.gameserver.utils.Location;
-import npc.model.QueenAntInstance;
 
 public class QueenAntNurse extends Priest
 {

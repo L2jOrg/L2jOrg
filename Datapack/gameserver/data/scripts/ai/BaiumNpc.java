@@ -1,12 +1,12 @@
 package ai;
 
-import java.util.List;
-
 import org.l2j.gameserver.ai.DefaultAI;
 import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.network.l2.s2c.EarthQuakePacket;
 import org.l2j.gameserver.network.l2.s2c.L2GameServerPacket;
+
+import java.util.List;
 
 /**
  * AI каменной статуи Байума.<br>

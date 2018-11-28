@@ -1,15 +1,15 @@
 package handler.voicecommands;
 
-import java.util.List;
-
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;
 import org.l2j.gameserver.database.mysql;
-import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.pledge.UnitMember;
 import org.l2j.gameserver.utils.Functions;
+
+import java.util.List;
 
 public class CWHPrivileges extends ScriptVoiceCommandHandler
 {

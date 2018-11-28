@@ -1,10 +1,5 @@
 package npc.model.residences;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
@@ -16,6 +11,11 @@ import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestEventType;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * @author VISTALL

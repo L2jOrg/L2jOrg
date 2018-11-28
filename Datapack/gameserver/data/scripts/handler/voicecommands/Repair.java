@@ -1,11 +1,5 @@
 package handler.voicecommands;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.Collection;
-import java.util.Map;
-
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.dao.CharacterVariablesDAO;
@@ -16,9 +10,14 @@ import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.model.items.ItemInstance.ItemLocation;
 import org.l2j.gameserver.network.l2.components.CustomMessage;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Collection;
+import java.util.Map;
 
 public class Repair extends ScriptVoiceCommandHandler
 {

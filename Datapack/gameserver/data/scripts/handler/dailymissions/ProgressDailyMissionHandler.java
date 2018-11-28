@@ -1,12 +1,12 @@
 package handler.dailymissions;
 
-import java.util.Collection;
-
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.actor.instances.player.DailyMission;
 import org.l2j.gameserver.templates.dailymissions.DailyMissionStatus;
 import org.l2j.gameserver.templates.dailymissions.DailyMissionTemplate;
+
+import java.util.Collection;
 
 /**
  * @author Bonux

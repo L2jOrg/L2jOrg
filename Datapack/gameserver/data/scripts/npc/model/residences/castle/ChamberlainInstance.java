@@ -1,16 +1,10 @@
 package npc.model.residences.castle;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.StringTokenizer;
-
 import npc.model.residences.ResidenceManager;
-
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.gameserver.dao.CastleDamageZoneDAO;
 import org.l2j.gameserver.dao.CastleDoorUpgradeDAO;
 import org.l2j.gameserver.data.xml.holder.MultiSellHolder;
-import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.events.impl.CastleSiegeEvent;
 import org.l2j.gameserver.model.entity.events.impl.SiegeEvent;
@@ -20,24 +14,21 @@ import org.l2j.gameserver.model.entity.residence.Castle;
 import org.l2j.gameserver.model.entity.residence.Residence;
 import org.l2j.gameserver.model.entity.residence.ResidenceSide;
 import org.l2j.gameserver.model.instances.DoorInstance;
-import org.l2j.gameserver.model.instances.MerchantInstance;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.pledge.Privilege;
-import org.l2j.gameserver.network.l2.c2s.L2GameClientPacket;
 import org.l2j.gameserver.network.l2.components.CustomMessage;
 import org.l2j.gameserver.network.l2.components.HtmlMessage;
-import org.l2j.gameserver.network.l2.components.NpcString;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.CastleSiegeInfoPacket;
 import org.l2j.gameserver.network.l2.s2c.L2GameServerPacket;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
-import org.l2j.gameserver.utils.HtmlUtils;
 import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.Log;
 import org.l2j.gameserver.utils.ReflectionUtils;
 
-import org.napile.primitive.maps.IntObjectMap;
+import java.util.List;
+import java.util.StringTokenizer;
 
 
 public class ChamberlainInstance extends ResidenceManager

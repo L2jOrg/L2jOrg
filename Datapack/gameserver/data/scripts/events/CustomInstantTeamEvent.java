@@ -1,8 +1,5 @@
 package events;
 
-import java.util.Iterator;
-import java.util.List;
-
 import org.l2j.commons.collections.JoinedIterator;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.time.cron.SchedulingPattern;
@@ -14,11 +11,6 @@ import org.l2j.gameserver.instancemanager.ReflectionManager;
 import org.l2j.gameserver.listener.PlayerListener;
 import org.l2j.gameserver.listener.actor.player.OnPlayerExitListener;
 import org.l2j.gameserver.listener.actor.player.OnTeleportListener;
-import org.l2j.gameserver.model.Creature;
-import org.l2j.gameserver.model.GameObject;
-import org.l2j.gameserver.model.GameObjectsStorage;
-import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.model.Skill;
 import org.l2j.gameserver.model.Zone.ZoneType;
 import org.l2j.gameserver.model.base.TeamType;
 import org.l2j.gameserver.model.entity.Reflection;
@@ -36,6 +28,9 @@ import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.templates.InstantZone;
 import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.Location;
+
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * @author VISTALL

@@ -1,14 +1,10 @@
 package quests;
 
-import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.model.base.ClassType;
 import org.l2j.gameserver.model.base.Race;
-import org.l2j.gameserver.model.base.ClassLevel;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
-import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.model.base.ClassType;
 
 public class _10998_LoserPriest23 extends Quest
 {

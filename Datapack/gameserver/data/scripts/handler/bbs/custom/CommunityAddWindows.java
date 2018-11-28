@@ -1,7 +1,6 @@
 package handler.bbs.custom;
 
-import java.util.StringTokenizer;
-
+import handler.bbs.ScriptsCommunityHandler;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.dao.HardwareLimitsDAO;
 import org.l2j.gameserver.data.htm.HtmCache;
@@ -13,7 +12,7 @@ import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.TimeUtils;
 import org.l2j.gameserver.utils.Util;
 
-import handler.bbs.ScriptsCommunityHandler;
+import java.util.StringTokenizer;
 
 /**
  * @author Bonux

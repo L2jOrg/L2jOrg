@@ -1,15 +1,6 @@
 package handler.bbs.custom;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.List;
-import java.util.StringTokenizer;
-import java.util.concurrent.CopyOnWriteArrayList;
-
+import handler.bbs.ScriptsCommunityHandler;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
@@ -27,13 +18,16 @@ import org.l2j.gameserver.model.entity.olympiad.Olympiad;
 import org.l2j.gameserver.network.l2.s2c.ShowBoardPacket;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.utils.Util;
-
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CHashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import handler.bbs.ScriptsCommunityHandler;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.*;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * @author Bonux

@@ -1,15 +1,5 @@
 package npc.model.residences.clanhall;
 
-import java.text.NumberFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.List;
-import java.util.Locale;
-import java.util.StringTokenizer;
-
 import org.apache.commons.lang3.StringUtils;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.dao.JdbcEntityState;
@@ -21,10 +11,9 @@ import org.l2j.gameserver.model.entity.events.impl.InstantClanHallAuctionEvent;
 import org.l2j.gameserver.model.entity.events.impl.SiegeEvent;
 import org.l2j.gameserver.model.entity.events.objects.AuctionSiegeClanObject;
 import org.l2j.gameserver.model.entity.events.objects.SiegeClanObject;
-import org.l2j.gameserver.model.entity.residence.ClanHall;
-import org.l2j.gameserver.model.entity.residence.clanhall.InstantClanHall;
 import org.l2j.gameserver.model.entity.residence.Residence;
 import org.l2j.gameserver.model.entity.residence.clanhall.AuctionClanHall;
+import org.l2j.gameserver.model.entity.residence.clanhall.InstantClanHall;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.pledge.Privilege;
@@ -34,6 +23,11 @@ import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
 import org.l2j.gameserver.utils.HtmlUtils;
+
+import java.text.NumberFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 /**
  * @author VISTALL

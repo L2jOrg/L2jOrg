@@ -19,7 +19,7 @@ public class PetitionSubGroup extends PetitionGroup
 
 		try
 		{
-			_handler = (IPetitionHandler) clazz.newInstance();
+			_handler = (IPetitionHandler) clazz.getDeclaredConstructor().newInstance();
 		}
 		catch(Exception e)
 		{

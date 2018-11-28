@@ -2,7 +2,6 @@ package npc.model.residences.castle;
 
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.network.l2.components.HtmlMessage;

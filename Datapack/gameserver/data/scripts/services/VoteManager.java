@@ -1,16 +1,5 @@
 package services;
 
-import java.io.File;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.TreeMap;
-
-import javax.xml.parsers.DocumentBuilderFactory;
-
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.util.Rnd;
@@ -23,9 +12,18 @@ import org.l2j.gameserver.listener.script.OnInitScriptListener;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.utils.Functions;
 import org.l2j.gameserver.utils.Util;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
+
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.File;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.TreeMap;
 
 public class VoteManager implements IVoicedCommandHandler, OnInitScriptListener
 {

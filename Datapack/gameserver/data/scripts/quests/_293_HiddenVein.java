@@ -5,7 +5,6 @@ import org.l2j.gameserver.model.base.Race;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
-import org.l2j.gameserver.skills.skillclasses.HideHairAccessories;
 
 public final class _293_HiddenVein extends Quest
 {

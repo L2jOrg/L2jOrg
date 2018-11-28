@@ -2,8 +2,8 @@ package services;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.handler.bypass.Bypass;
 import org.l2j.gameserver.data.htm.HtmCache;
+import org.l2j.gameserver.handler.bypass.Bypass;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.network.l2.components.CustomMessage;

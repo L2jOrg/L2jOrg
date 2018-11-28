@@ -1,18 +1,13 @@
 package quests;
 
-import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.base.Race;
-import org.l2j.gameserver.model.base.ClassLevel;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
-import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.network.l2.s2c.MagicSkillUse;
 
 //SanyaDC
 
-	public class _11001_TombsOfAncestors extends Quest
+public class _11001_TombsOfAncestors extends Quest
 {
 	public final int GID = 30598;
 	public final int ALT = 30283;

@@ -1,13 +1,12 @@
 package ai.locations.toi.heavenlyrift;
 
+import manager.HeavenlyRift;
 import org.l2j.gameserver.ai.Fighter;
+import org.l2j.gameserver.instancemanager.ServerVariables;
 import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.instances.NpcInstance;
-import org.l2j.gameserver.instancemanager.ServerVariables;
 import org.l2j.gameserver.network.l2.components.NpcString;
 import org.l2j.gameserver.utils.Functions;
-
-import manager.HeavenlyRift;
 
 /**
  * @reworked by Bonux

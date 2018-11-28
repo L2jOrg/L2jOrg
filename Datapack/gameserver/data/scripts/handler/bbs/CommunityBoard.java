@@ -1,11 +1,8 @@
 package handler.bbs;
 
-import java.lang.reflect.Method;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.StringTokenizer;
-
+import handler.bbs.custom.BBSConfig;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.tuple.Pair;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
@@ -17,15 +14,14 @@ import org.l2j.gameserver.handler.bypass.BypassHolder;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.HtmlMessage;
 import org.l2j.gameserver.network.l2.s2c.ShowBoardPacket;
-import org.l2j.gameserver.scripts.Scripts;
-import org.l2j.gameserver.tables.ClanTable;
-
-import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.tuple.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import handler.bbs.custom.BBSConfig;
+import java.lang.reflect.Method;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.StringTokenizer;
 
 public final class CommunityBoard extends ScriptsCommunityHandler
 {

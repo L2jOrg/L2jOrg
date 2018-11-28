@@ -88,7 +88,7 @@ public class AdminReload implements IAdminCommandHandler
 						if(!Config.EVERYBODY_HAS_ADMIN_RIGHTS)
 							player.setPlayerAccess(Config.gmlist.get(player.getObjectId()));
 						else
-							player.setPlayerAccess(Config.gmlist.get(new Integer(0)));
+							player.setPlayerAccess(Config.gmlist.get(0));
 				}
 				catch(Exception e)
 				{

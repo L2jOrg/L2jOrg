@@ -1,9 +1,5 @@
 package org.l2j.gameserver.skills.skillclasses;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.StringTokenizer;
-
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.Player;
@@ -13,6 +9,10 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.PlaySoundPacket;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.templates.StatsSet;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringTokenizer;
 
 public class ExtractStone extends Skill
 {
@@ -73,7 +73,7 @@ public class ExtractStone extends Skill
 			return false;
 		}
 
-		if(!_npcIds.isEmpty() && !_npcIds.contains(new Integer(target.getNpcId())))
+		if(!_npcIds.isEmpty() && !_npcIds.contains(target.getNpcId()))
 		{
 			activeChar.sendPacket(SystemMsg.INVALID_TARGET);
 			return false;

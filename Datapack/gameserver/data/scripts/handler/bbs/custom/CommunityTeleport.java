@@ -2,16 +2,7 @@ package handler.bbs.custom;
 
 import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
-
-import java.io.File;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.Arrays;
-import java.util.StringTokenizer;
-
-import javax.xml.parsers.DocumentBuilderFactory;
-
+import handler.bbs.ScriptsCommunityHandler;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
@@ -22,20 +13,21 @@ import org.l2j.gameserver.model.Zone.ZoneType;
 import org.l2j.gameserver.model.actor.instances.player.BookMarkList;
 import org.l2j.gameserver.model.base.TeamType;
 import org.l2j.gameserver.model.entity.residence.Castle;
-import org.l2j.gameserver.network.l2.s2c.ShowBoardPacket;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
-import org.l2j.gameserver.utils.HtmlUtils;
-import org.l2j.gameserver.utils.ItemFunctions;
-import org.l2j.gameserver.utils.Language;
-import org.l2j.gameserver.utils.Location;
-import org.l2j.gameserver.utils.Util;
-
+import org.l2j.gameserver.network.l2.s2c.ShowBoardPacket;
+import org.l2j.gameserver.utils.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
-import handler.bbs.ScriptsCommunityHandler;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.File;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Arrays;
+import java.util.StringTokenizer;
 
 public class CommunityTeleport extends ScriptsCommunityHandler
 {

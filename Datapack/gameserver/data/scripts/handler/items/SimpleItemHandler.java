@@ -3,7 +3,6 @@ package handler.items;
 import org.l2j.gameserver.model.Playable;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInstance;
-import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessage;
 
 import static org.l2j.gameserver.network.l2.s2c.SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS;

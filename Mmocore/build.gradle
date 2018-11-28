@@ -4,8 +4,6 @@ plugins {
     id "eclipse"
 }
 
-version '2.0'
-
 ext.moduleName = 'org.l2j.mmocore'
 
 sourceSets {

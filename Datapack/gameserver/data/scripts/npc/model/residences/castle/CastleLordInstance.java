@@ -1,11 +1,10 @@
 package npc.model.residences.castle;
 
+import npc.model.residences.SiegeGuardInstance;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.entity.events.impl.CastleSiegeEvent;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
-
-import npc.model.residences.SiegeGuardInstance;
 
 /**
  * @author Bonux

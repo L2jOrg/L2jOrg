@@ -1,11 +1,10 @@
 package handler.bbs.custom;
 
-import java.util.StringTokenizer;
-
-import org.l2j.gameserver.data.htm.HtmTemplates;
+import handler.bbs.ScriptsCommunityHandler;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.dao.CharacterDAO;
 import org.l2j.gameserver.data.htm.HtmCache;
+import org.l2j.gameserver.data.htm.HtmTemplates;
 import org.l2j.gameserver.data.xml.holder.PremiumAccountHolder;
 import org.l2j.gameserver.handler.bbs.BbsHandlerHolder;
 import org.l2j.gameserver.handler.bbs.IBbsHandler;
@@ -16,26 +15,15 @@ import org.l2j.gameserver.model.instances.PetInstance;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
-import org.l2j.gameserver.network.l2.s2c.ExBuySellListPacket;
-import org.l2j.gameserver.network.l2.s2c.ExShowVariationCancelWindow;
-import org.l2j.gameserver.network.l2.s2c.ExShowVariationMakeWindow;
-import org.l2j.gameserver.network.l2.s2c.ExStorageMaxCountPacket;
-import org.l2j.gameserver.network.l2.s2c.MagicSkillUse;
-import org.l2j.gameserver.network.l2.s2c.ShowBoardPacket;
+import org.l2j.gameserver.network.l2.s2c.*;
 import org.l2j.gameserver.tables.ClanTable;
 import org.l2j.gameserver.templates.item.data.ItemData;
 import org.l2j.gameserver.templates.premiumaccount.PremiumAccountTemplate;
-import org.l2j.gameserver.utils.HtmlUtils;
-import org.l2j.gameserver.utils.ItemFunctions;
-import org.l2j.gameserver.utils.Log;
-import org.l2j.gameserver.utils.TimeUtils;
-import org.l2j.gameserver.utils.WarehouseFunctions;
-import org.l2j.gameserver.utils.Util;
-
+import org.l2j.gameserver.utils.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import handler.bbs.ScriptsCommunityHandler;
+import java.util.StringTokenizer;
 
 /**
  * @author Bonux

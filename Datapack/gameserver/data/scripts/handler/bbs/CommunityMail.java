@@ -1,13 +1,5 @@
 package handler.bbs;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.StringTokenizer;
-
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
@@ -20,6 +12,14 @@ import org.l2j.gameserver.network.l2.s2c.ExMailArrivedPacket;
 import org.l2j.gameserver.network.l2.s2c.ShowBoardPacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.StringTokenizer;
 
 public final class CommunityMail extends ScriptsCommunityHandler
 {

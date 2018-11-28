@@ -1,21 +1,26 @@
-import java.text.SimpleDateFormat
-
 plugins {
-    id "java"
-    id "distribution"
     id "idea"
     id "eclipse"
+    id "distribution"
+    id "net.nemerosa.versioning" version "2.8.2"
+    id "com.dorongold.task-tree" version "1.3.1"
 }
 
-version '1.0'
+version '1.0.0'
+ext.revision = versioning.info.build
+ext.buildJDK = "${System.properties['java.version']} (${System.properties['java.vendor']} ${System.properties['java.vm.version']})".toString()
 
 defaultTasks('clean', 'build')
 
-ext.moduleName = 'org.l2j'
 
-allprojects {
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'eclipse'
+
     repositories {
         mavenCentral()
+        jcenter()
 
         maven {
             url 'https://repo.spring.io/libs-milestone'
@@ -28,16 +33,11 @@ allprojects {
         maven {
             url 'http://maven.java.net/content/repositories/staging/'
         }
-
-        flatDir {
-            dirs 'lib'
-        }
     }
 
     sourceCompatibility = JavaVersion.VERSION_11
-}
+    version = '1.0.0'
 
-subprojects {
     afterEvaluate {
         compileJava {
             inputs.property("moduleName", moduleName)
@@ -45,9 +45,32 @@ subprojects {
                 options.compilerArgs = [
                     '--module-path', classpath.asPath,
                 ]
-                options.compilerArgs << "-Xlint:unchecked"
+                options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
                 classpath = files()
             }
         }
     }
 }
+
+distZip {
+    subprojects.each { dependsOn("${it.name}:build") }
+}
+
+distTar {
+    subprojects.each { dependsOn("${it.name}:build") }
+}
+
+distributions {
+    main {
+        contents {
+            from(["Datapack/authserver", "${project(':AuthServer').buildDir}/authserver"])  {
+                into("authserver")
+            }
+
+            from(["Datapack/gameserver", "${project(':Gameserver').buildDir}/gameserver"]) {
+                into("gameserver")
+            }
+        }
+    }
+}
+

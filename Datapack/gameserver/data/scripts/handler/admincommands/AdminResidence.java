@@ -1,33 +1,24 @@
 package handler.admincommands;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
-import java.util.Map;
-
 import org.l2j.commons.dao.JdbcEntityState;
-import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.dao.SiegeClanDAO;
-import org.l2j.gameserver.data.xml.holder.EventHolder;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.handler.admincommands.AdminCommandHandler;
-import org.l2j.gameserver.model.pledge.Clan;
-import org.l2j.gameserver.model.GameObject;
-import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.model.entity.events.EventType;
 import org.l2j.gameserver.model.entity.events.impl.SiegeEvent;
 import org.l2j.gameserver.model.entity.events.objects.SiegeClanObject;
 import org.l2j.gameserver.model.entity.events.objects.SpawnExObject;
-import org.l2j.gameserver.model.entity.residence.Castle;
 import org.l2j.gameserver.model.entity.residence.Residence;
 import org.l2j.gameserver.model.entity.residence.ResidenceSide;
+import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.network.l2.components.HtmlMessage;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.tables.ClanTable;
 import org.l2j.gameserver.utils.HtmlUtils;
+
+import java.util.Calendar;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author VISTALL

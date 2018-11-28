@@ -1,7 +1,5 @@
 package npc.model;
 
-import java.util.concurrent.TimeUnit;
-
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.instancemanager.TrainingCampManager;
@@ -14,6 +12,8 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ExTrainingZone_Admission;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author Bonux

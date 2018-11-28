@@ -478,7 +478,7 @@ public class SchedulingPattern implements NextTime
 			int max = parser.getMaxValue();
 			List<Integer> values = new ArrayList<Integer>();
 			for (int i = min; i <= max; i++) {
-				values.add(new Integer(i));
+				values.add(i);
 			}
 			return values;
 		}
@@ -497,7 +497,7 @@ public class SchedulingPattern implements NextTime
 		}
 		if (size == 1) {
 			List<Integer> values = new ArrayList<Integer>();
-			values.add(new Integer(v1));
+			values.add(v1);
 			return values;
 		} else {
 			String v2Str = st.nextToken();
@@ -511,20 +511,20 @@ public class SchedulingPattern implements NextTime
 			List<Integer> values = new ArrayList<Integer>();
 			if (v1 < v2) {
 				for (int i = v1; i <= v2; i++) {
-					values.add(new Integer(i));
+					values.add(i);
 				}
 			} else if (v1 > v2) {
 				int min = parser.getMinValue();
 				int max = parser.getMaxValue();
 				for (int i = v1; i <= max; i++) {
-					values.add(new Integer(i));
+					values.add(i);
 				}
 				for (int i = min; i <= v2; i++) {
-					values.add(new Integer(i));
+					values.add(i);
 				}
 			} else {
 				// v1 == v2
-				values.add(new Integer(v1));
+				values.add(v1);
 			}
 			return values;
 		}

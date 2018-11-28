@@ -17,6 +17,8 @@ module org.l2j.commons {
     requires dom4j;
     requires commons.dbcp;
     requires ecj;
+    requires commons.lang3;
+    requires trove;
 
     exports org.l2j.commons.util;
     exports org.l2j.commons.xml;

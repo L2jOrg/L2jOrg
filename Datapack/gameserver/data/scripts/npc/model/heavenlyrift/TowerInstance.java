@@ -1,13 +1,13 @@
 package npc.model.heavenlyrift;
 
-import java.util.StringTokenizer;
-
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.gameserver.instancemanager.ServerVariables;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.instances.DefenderInstance;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
 import org.l2j.gameserver.utils.ItemFunctions;
+
+import java.util.StringTokenizer;
 
 /**
  * @reworked by Bonux
