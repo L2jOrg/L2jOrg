@@ -1,16 +1,7 @@
 package org.l2j.gameserver.network.l2;
 
-import java.nio.ByteBuffer;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.util.ArrayList;
-import java.util.List;
-
 import org.l2j.commons.dbutils.DbUtils;
-import org.l2j.commons.net.nio.impl.MMOClient;
-import org.l2j.commons.net.nio.impl.MMOConnection;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.dao.CharacterDAO;
 import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.model.CharSelectInfoPackage;
@@ -25,10 +16,14 @@ import org.l2j.gameserver.network.l2.s2c.ServerCloseSocketPacket;
 import org.l2j.gameserver.security.HWIDUtils;
 import org.l2j.gameserver.security.SecondaryPasswordAuth;
 import org.l2j.gameserver.utils.Language;
-
 import org.l2j.mmocore.Client;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Represents a client connected on Game Server
@@ -462,6 +457,6 @@ public final class GameClient extends Client<org.l2j.mmocore.Connection<GameClie
 	}
 
     public void closeNow() {
-        close(new ServerCloseSocketPacket());
+        close(ServerCloseSocketPacket.STATIC);
     }
 }

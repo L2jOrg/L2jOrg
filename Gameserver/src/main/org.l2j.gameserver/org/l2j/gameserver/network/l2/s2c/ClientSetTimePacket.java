@@ -2,9 +2,8 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.GameTimeController;
 
-public class ClientSetTimePacket extends L2GameServerPacket
-{
-	public static final L2GameServerPacket STATIC = new ClientSetTimePacket();
+
+public class ClientSetTimePacket extends L2GameServerPacket {
 
 	@Override
 	protected final void writeImpl()

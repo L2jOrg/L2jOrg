@@ -65,6 +65,11 @@ public abstract class L2GameServerPacket extends WritablePacket<GameClient> impl
 
     protected abstract void writeImpl();
 
+    @Override
+    protected int packetSize() {
+        return getOpcodes().getId() == 0xFE ? 3 : 1;
+    }
+
     /**
      * Отсылает число позиций + массив
      */

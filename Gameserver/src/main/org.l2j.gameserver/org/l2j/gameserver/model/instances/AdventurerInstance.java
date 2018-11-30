@@ -22,7 +22,7 @@ public class AdventurerInstance extends NpcInstance
 		StringTokenizer st = new StringTokenizer(command, "_");
 		String cmd = st.nextToken();
 		if(cmd.equals("questlist"))
-			player.sendPacket(new ExShowQuestInfoPacket());
+			player.sendPacket(ExShowQuestInfoPacket.STATIC);
 		else
 			super.onBypassFeedback(player, command);
 	}

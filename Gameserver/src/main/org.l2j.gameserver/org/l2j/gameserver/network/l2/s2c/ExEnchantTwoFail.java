@@ -1,20 +1,16 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.mmocore.StaticPacket;
+
 /**
  * @author Bonux
 **/
-public final class ExEnchantTwoFail extends L2GameServerPacket
-{
+@StaticPacket
+public final class ExEnchantTwoFail extends L2GameServerPacket {
 	public static final L2GameServerPacket STATIC = new ExEnchantTwoFail();
 
-	public ExEnchantTwoFail()
-	{
-		//
-	}
+	private ExEnchantTwoFail() { }
 
 	@Override
-	protected void writeImpl()
-	{
-		//
-	}
+	protected void writeImpl() {  }
 }

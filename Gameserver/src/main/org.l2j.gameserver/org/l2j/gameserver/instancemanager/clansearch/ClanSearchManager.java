@@ -2,16 +2,6 @@ package org.l2j.gameserver.instancemanager.clansearch;
 
 import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.GameServer;
 import org.l2j.gameserver.ThreadPoolManager;
@@ -29,9 +19,17 @@ import org.l2j.gameserver.model.clansearch.base.ClanSearchSortOrder;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.network.l2.s2c.ExPledgeWaitingListAlarm;
 import org.l2j.gameserver.tables.ClanTable;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * @author GodWorld
@@ -47,7 +45,7 @@ public class ClanSearchManager
 			Clan clan = player.getClan();
 			//TODO[Bonux]: Проверить условия.
 			if(clan == null || player.isClanLeader() && clan.getClanMembersLimit() > clan.getAllSize())
-				player.sendPacket(new ExPledgeWaitingListAlarm());
+				player.sendPacket(ExPledgeWaitingListAlarm.STATIC);
 		}
 	}
 

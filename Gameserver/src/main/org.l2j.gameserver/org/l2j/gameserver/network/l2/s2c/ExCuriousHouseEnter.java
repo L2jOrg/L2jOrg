@@ -1,17 +1,14 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.mmocore.StaticPacket;
+
 //пир отправке этого пакета на экране появляется иконка получения письма
-public class ExCuriousHouseEnter extends L2GameServerPacket
-{
+@StaticPacket
+public class ExCuriousHouseEnter extends L2GameServerPacket {
 	public static final L2GameServerPacket STATIC = new ExCuriousHouseEnter();
 
-	public void ExCuriousHouseEnter()
-	{
-		//TRIGGER
-	}
+	private ExCuriousHouseEnter() { }
 
 	@Override
-	protected void writeImpl()
-	{
-	}
+	protected void writeImpl() {  }
 }

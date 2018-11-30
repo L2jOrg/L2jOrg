@@ -32,9 +32,9 @@ public class AnvilInstance extends NpcInstance
 			{
 				int cmdChoice = Integer.parseInt(command.substring(8, 9).trim());
 				if(cmdChoice == 1)
-					player.sendPacket(SystemMsg.SELECT_THE_ITEM_TO_BE_AUGMENTED, new ExShowVariationMakeWindow());
+					player.sendPacket(SystemMsg.SELECT_THE_ITEM_TO_BE_AUGMENTED, ExShowVariationMakeWindow.STATIC);
 				else if(cmdChoice == 2)
-					player.sendPacket(SystemMsg.SELECT_THE_ITEM_FROM_WHICH_YOU_WISH_TO_REMOVE_AUGMENTATION, new ExShowVariationCancelWindow());
+					player.sendPacket(SystemMsg.SELECT_THE_ITEM_FROM_WHICH_YOU_WISH_TO_REMOVE_AUGMENTATION, ExShowVariationCancelWindow.STATIC);
 			}
 		}
 		else

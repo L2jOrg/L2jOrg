@@ -864,7 +864,7 @@ public class Clan implements Iterable<UnitMember>
 			{
 				if(updateList)
 				{
-					member.getPlayer().sendPacket(new PledgeShowMemberListDeleteAllPacket());
+					member.getPlayer().sendPacket(PledgeShowMemberListDeleteAllPacket.STATIC);
 					member.getPlayer().sendPacket(listAll);
 				}
 				member.getPlayer().sendPacket(update);
@@ -2026,7 +2026,7 @@ public class Clan implements Iterable<UnitMember>
 
 		updateClanAttendanceInfoInDB();
 
-		broadcastToOnlineMembers(new ExPledgeBonusMarkReset());
+		broadcastToOnlineMembers(ExPledgeBonusMarkReset.STATIC);
 		broadcastToOnlineMembers(new ExPledgeBonusUpdate(BonusType.ATTENDANCE, getAttendanceProgress()));
 		broadcastToOnlineMembers(new ExPledgeBonusUpdate(BonusType.HUNTING, getHuntingProgress()));
 	}

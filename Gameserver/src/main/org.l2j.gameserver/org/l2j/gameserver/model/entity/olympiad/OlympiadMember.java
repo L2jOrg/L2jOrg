@@ -210,7 +210,7 @@ public class OlympiadMember
 		// Обновляем скилл лист, после добавления скилов
 		player.sendSkillList();
 		player.sendPacket(new ExOlympiadModePacket(0));
-		player.sendPacket(new ExOlympiadMatchEndPacket());
+		player.sendPacket(ExOlympiadMatchEndPacket.STATIC);
 
 		player.setStablePoint(null);
 		player.teleToLocation(_returnLoc, ReflectionManager.MAIN);

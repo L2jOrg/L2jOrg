@@ -555,7 +555,7 @@ public final class _999_Tutorial extends Quest {
                             break;
                     }
                 }
-                st.getPlayer().sendPacket(new TutorialCloseHtmlPacket());
+                st.getPlayer().sendPacket(TutorialCloseHtmlPacket.STATIC);
             }
         }
         return html;

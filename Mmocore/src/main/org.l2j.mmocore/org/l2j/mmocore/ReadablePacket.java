@@ -5,6 +5,7 @@ import java.nio.charset.Charset;
 import static java.lang.Byte.toUnsignedInt;
 import static java.lang.Byte.toUnsignedLong;
 import static java.lang.Double.longBitsToDouble;
+import static java.lang.Float.intBitsToFloat;
 
 public abstract class ReadablePacket<T> extends AbstractPacket<T> implements Runnable {
 
@@ -70,6 +71,15 @@ public abstract class ReadablePacket<T> extends AbstractPacket<T> implements Run
 	protected final short readShort()  {
 		return convertEndian((short) (readUnsignedByte() << pickShift(8, 0) |
                                       readUnsignedByte() << pickShift(8, 8)));
+	}
+
+	/**
+	 * Reads <B>float</B> from the buffer. <BR>
+	 * 32bit precision float (00 00 00 00)
+	 * @return float read
+	 */
+	protected final float readFloat() {
+		return intBitsToFloat(readInt());
 	}
 	
 	/**

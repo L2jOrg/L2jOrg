@@ -1,12 +1,13 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.network.l2.c2s.RequestExSendPost;
+import org.l2j.mmocore.StaticPacket;
 
 /**
  * Запрос на отправку нового письма. Шлется в ответ на {@link RequestExSendPost}.
  */
-public class ExReplyWritePost extends L2GameServerPacket
-{
+@StaticPacket
+public class ExReplyWritePost extends L2GameServerPacket {
 	public static final L2GameServerPacket STATIC_TRUE = new ExReplyWritePost(1);
 	public static final L2GameServerPacket STATIC_FALSE = new ExReplyWritePost(0);
 
@@ -15,7 +16,7 @@ public class ExReplyWritePost extends L2GameServerPacket
 	/**
 	 * @param i если 1 окно создания письма закрывается
 	 */
-	public ExReplyWritePost(int i)
+	private ExReplyWritePost(int i)
 	{
 		_reply = i;
 	}
@@ -24,5 +25,10 @@ public class ExReplyWritePost extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeInt(_reply); // 1 - закрыть окно письма, иное - не закрывать
+	}
+
+	@Override
+	protected int packetSize() {
+		return super.packetSize() + 4;
 	}
 }

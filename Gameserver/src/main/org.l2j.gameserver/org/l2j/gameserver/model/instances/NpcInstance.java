@@ -1447,9 +1447,9 @@ public class NpcInstance extends Creature
 				}
 				String cmd2 = st.nextToken();
 				if(cmd2.equalsIgnoreCase("add"))
-					player.sendPacket(new ExShowEnsoulWindow());
+					player.sendPacket(ExShowEnsoulWindow.STATIC);
 				else if(cmd2.equalsIgnoreCase("remove"))
-					player.sendPacket(new ExEnSoulExtractionShow());
+					player.sendPacket(ExEnSoulExtractionShow.STATIC);
 			}
 			else
 			{
@@ -1931,7 +1931,7 @@ public class NpcInstance extends Creature
 
 		if(skills.size() == 0)
 		{
-			player.sendPacket(new AcquireSkillDonePacket());
+			player.sendPacket(AcquireSkillDonePacket.STATIC);
 			player.sendPacket(SystemMsg.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
 		}
 		else
@@ -1963,7 +1963,7 @@ public class NpcInstance extends Creature
 
 		if(learns.size() == 0)
 		{
-			player.sendPacket(new AcquireSkillDonePacket());
+			player.sendPacket(AcquireSkillDonePacket.STATIC);
 			player.sendPacket(SystemMsg.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
 		}
 		else

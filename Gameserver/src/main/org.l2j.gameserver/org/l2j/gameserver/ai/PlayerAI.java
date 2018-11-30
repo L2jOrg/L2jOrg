@@ -128,7 +128,7 @@ public class PlayerAI extends PlayableAI
 		if(actor.isFrozen())
 		{
 			setIntention(AI_INTENTION_ACTIVE);
-			actor.sendPacket(SystemMsg.YOU_CANNOT_MOVE_WHILE_FROZEN, new ActionFailPacket());
+			actor.sendPacket(SystemMsg.YOU_CANNOT_MOVE_WHILE_FROZEN, ActionFailPacket.STATIC);
 			return;
 		}
 
@@ -151,7 +151,7 @@ public class PlayerAI extends PlayableAI
 		if(actor.isFrozen())
 		{
 			setIntention(AI_INTENTION_ACTIVE);
-			actor.sendPacket(SystemMsg.YOU_CANNOT_MOVE_WHILE_FROZEN, new ActionFailPacket());
+			actor.sendPacket(SystemMsg.YOU_CANNOT_MOVE_WHILE_FROZEN, ActionFailPacket.STATIC);
 			return false;
 		}
 

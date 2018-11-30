@@ -1,15 +1,17 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.mmocore.StaticPacket;
+
 /**
  * @author Bonux
 **/
-public class ExShowAPListWnd extends L2GameServerPacket
-{
+@StaticPacket
+public class ExShowAPListWnd extends L2GameServerPacket {
+
 	public static final L2GameServerPacket STATIC = new ExShowAPListWnd();
 
+	private ExShowAPListWnd() { }
+
 	@Override
-	protected void writeImpl()
-	{
-		//
-	}
+	protected void writeImpl() { }
 }

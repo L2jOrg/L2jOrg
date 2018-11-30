@@ -1,14 +1,14 @@
 package org.l2j.mmocore;
 
-import java.nio.ByteBuffer;
-
 import static java.lang.Double.doubleToRawLongBits;
 import static java.lang.Math.max;
 import static java.lang.System.arraycopy;
+import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
 public abstract class WritablePacket<T extends Client<Connection<T>>> extends AbstractPacket<T> {
 
+	private byte[] staticData;
     protected WritablePacket() { }
 
 	/**
@@ -23,7 +23,7 @@ public abstract class WritablePacket<T extends Client<Connection<T>>> extends Ab
 	        byte[] tmp =  new byte[(int) (data.length * 1.2)];
 	        arraycopy(data, 0, tmp, 0, data.length);
 	        data = tmp;
-	        data[dataIndex] = value;
+	        data[dataIndex-1 ] = value;
         }
 	}
 
@@ -154,7 +154,7 @@ public abstract class WritablePacket<T extends Client<Connection<T>>> extends Ab
 		dataIndex += bytes.length;
 	}
 
-	protected  final void writeChar(final char value) {
+	protected final void writeChar(final char value) {
         short x =  (short) convertEndian(value);
         writeShortParts((byte) x,
                         (byte) (x >>> 8));
@@ -186,15 +186,33 @@ public abstract class WritablePacket<T extends Client<Connection<T>>> extends Ab
     }
 
     int writeData() {
-		data = new byte[max(2, packetSize())];
-		dataIndex += ReadHandler.HEADER_SIZE;
-        if(write()) {
-			return dataIndex;
+		if(getClass().isAnnotationPresent(StaticPacket.class)) {
+			return writedStaticData();
 		}
-		return 0;
+		return callPacketWrite() ? dataIndex : 0;
     }
 
-    private static byte pickByte(byte  le, byte  be) { return isBigEndian ? be : le; }
+	private int writedStaticData() {
+		if(isNull(staticData)) {
+			if(callPacketWrite()) {
+				staticData = new byte[dataIndex];
+				arraycopy(data, 0, staticData, 0, dataIndex);
+				return dataIndex;
+			}
+			return 0;
+		} else {
+			arraycopy(staticData, 0, data, 0, staticData.length);
+			return staticData.length;
+		}
+	}
+
+	private boolean callPacketWrite() {
+		data = new byte[max(2, packetSize())];
+		dataIndex += ReadHandler.HEADER_SIZE;
+		return write();
+	}
+
+	private static byte pickByte(byte  le, byte  be) { return isBigEndian ? be : le; }
 
     protected int packetSize() {
         return  ResourcePool.bufferSize;
