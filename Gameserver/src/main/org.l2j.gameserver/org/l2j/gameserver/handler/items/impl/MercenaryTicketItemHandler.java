@@ -33,7 +33,7 @@ public class MercenaryTicketItemHandler extends DefaultItemHandler
 	{
 		if(!player.hasPrivilege(Privilege.CS_FS_MERCENARIES) || player.getClan().getCastle() == 0)
 		{
-			player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_THE_AUTHORITY_TO_POSITION_MERCENARIES, ActionFailPacket.STATIC);
+			player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_THE_AUTHORITY_TO_POSITION_MERCENARIES, new ActionFailPacket());
 			return;
 		}
 
@@ -41,13 +41,13 @@ public class MercenaryTicketItemHandler extends DefaultItemHandler
 		MerchantGuard guard = castle.getMerchantGuard(item.getItemId());
 		if(guard == null || !castle.checkIfInZone(loc, ReflectionManager.MAIN) || player.isActionBlocked(Zone.BLOCKED_ACTION_DROP_MERCHANT_GUARD))
 		{
-			player.sendPacket(SystemMsg.YOU_CANNOT_POSITION_MERCENARIES_HERE, ActionFailPacket.STATIC);
+			player.sendPacket(SystemMsg.YOU_CANNOT_POSITION_MERCENARIES_HERE, new ActionFailPacket());
 			return;
 		}
 
 		if(castle.getSiegeEvent().isInProgress())
 		{
-			player.sendPacket(SystemMsg.A_MERCENARY_CAN_BE_ASSIGNED_TO_A_POSITION_FROM_THE_BEGINNING_OF_THE_SEAL_VALIDATION_PERIOD_UNTIL_THE_TIME_WHEN_A_SIEGE_STARTS, ActionFailPacket.STATIC);
+			player.sendPacket(SystemMsg.A_MERCENARY_CAN_BE_ASSIGNED_TO_A_POSITION_FROM_THE_BEGINNING_OF_THE_SEAL_VALIDATION_PERIOD_UNTIL_THE_TIME_WHEN_A_SIEGE_STARTS, new ActionFailPacket());
 			return;
 		}
 
@@ -56,7 +56,7 @@ public class MercenaryTicketItemHandler extends DefaultItemHandler
 		{
 			if(PositionUtils.getDistance($item.getLoc(), loc) < 200)
 			{
-				player.sendPacket(SystemMsg.POSITIONING_CANNOT_BE_DONE_HERE_BECAUSE_THE_DISTANCE_BETWEEN_MERCENARIES_IS_TOO_SHORT, ActionFailPacket.STATIC);
+				player.sendPacket(SystemMsg.POSITIONING_CANNOT_BE_DONE_HERE_BECAUSE_THE_DISTANCE_BETWEEN_MERCENARIES_IS_TOO_SHORT, new ActionFailPacket());
 				return;
 			}
 			if($item.getItemId() == guard.getItemId())
@@ -65,7 +65,7 @@ public class MercenaryTicketItemHandler extends DefaultItemHandler
 
 		if(countOfGuard >= guard.getMax())
 		{
-			player.sendPacket(SystemMsg.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE, ActionFailPacket.STATIC);
+			player.sendPacket(SystemMsg.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE, new ActionFailPacket());
 			return;
 		}
 
@@ -112,7 +112,7 @@ public class MercenaryTicketItemHandler extends DefaultItemHandler
 
 		if(castle.getSiegeEvent().isInProgress())
 		{
-			player.sendPacket(SystemMsg.A_MERCENARY_CAN_BE_ASSIGNED_TO_A_POSITION_FROM_THE_BEGINNING_OF_THE_SEAL_VALIDATION_PERIOD_UNTIL_THE_TIME_WHEN_A_SIEGE_STARTS, ActionFailPacket.STATIC);
+			player.sendPacket(SystemMsg.A_MERCENARY_CAN_BE_ASSIGNED_TO_A_POSITION_FROM_THE_BEGINNING_OF_THE_SEAL_VALIDATION_PERIOD_UNTIL_THE_TIME_WHEN_A_SIEGE_STARTS, new ActionFailPacket());
 			return false;
 		}
 		castle.getSpawnMerchantTickets().remove(item);

@@ -2,17 +2,7 @@ package org.l2j.gameserver.model.pledge;
 
 import gnu.trove.set.TIntSet;
 import gnu.trove.set.hash.TIntHashSet;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.List;
-
+import org.apache.commons.lang3.StringUtils;
 import org.l2j.commons.collections.JoinedIterator;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.dbutils.DbUtils;
@@ -45,11 +35,15 @@ import org.l2j.gameserver.utils.Log;
 import org.l2j.gameserver.utils.PlayerUtils;
 import org.l2j.gameserver.utils.PledgeBonusUtils;
 import org.l2j.gameserver.utils.SiegeUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CTreeIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.*;
 
 public class Clan implements Iterable<UnitMember>
 {
@@ -870,7 +864,7 @@ public class Clan implements Iterable<UnitMember>
 			{
 				if(updateList)
 				{
-					member.getPlayer().sendPacket(PledgeShowMemberListDeleteAllPacket.STATIC);
+					member.getPlayer().sendPacket(new PledgeShowMemberListDeleteAllPacket());
 					member.getPlayer().sendPacket(listAll);
 				}
 				member.getPlayer().sendPacket(update);
@@ -2032,7 +2026,7 @@ public class Clan implements Iterable<UnitMember>
 
 		updateClanAttendanceInfoInDB();
 
-		broadcastToOnlineMembers(ExPledgeBonusMarkReset.STATIC);
+		broadcastToOnlineMembers(new ExPledgeBonusMarkReset());
 		broadcastToOnlineMembers(new ExPledgeBonusUpdate(BonusType.ATTENDANCE, getAttendanceProgress()));
 		broadcastToOnlineMembers(new ExPledgeBonusUpdate(BonusType.HUNTING, getHuntingProgress()));
 	}

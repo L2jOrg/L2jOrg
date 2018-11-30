@@ -1,14 +1,5 @@
 package org.l2j.commons.dbcp;
 
-import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.SQLFeatureNotSupportedException;
-import java.util.Properties;
-import java.util.logging.Logger;
-
-import javax.sql.DataSource;
-
 import org.apache.commons.dbcp.ConnectionFactory;
 import org.apache.commons.dbcp.DriverManagerConnectionFactory;
 import org.apache.commons.dbcp.PoolableConnectionFactory;
@@ -17,6 +8,14 @@ import org.apache.commons.pool.ObjectPool;
 import org.apache.commons.pool.impl.GenericKeyedObjectPool;
 import org.apache.commons.pool.impl.GenericKeyedObjectPoolFactory;
 import org.apache.commons.pool.impl.GenericObjectPool;
+
+import javax.sql.DataSource;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.SQLFeatureNotSupportedException;
+import java.util.Properties;
+import java.util.logging.Logger;
 
 /**
  * Базовая реализация пула потоков с использованием DBCP
@@ -64,6 +63,7 @@ public class BasicDataSource implements DataSource
 		Properties connectionProperties = new Properties();
 		connectionProperties.put("user", uname);
 		connectionProperties.put("password", passwd);
+		connectionProperties.put("logger", "com.mysql.cj.log.Slf4JLogger");
 
 		ConnectionFactory connectionFactory = new DriverManagerConnectionFactory(connectURI, connectionProperties);
 

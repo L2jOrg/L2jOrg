@@ -1,16 +1,9 @@
 package org.l2j.gameserver.model.instances;
 
 import org.l2j.commons.collections.MultiValueSet;
-import org.l2j.gameserver.instancemanager.RaidBossSpawnManager;
 import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.model.Spawner;
-import org.l2j.gameserver.network.l2.components.CustomMessage;
 import org.l2j.gameserver.network.l2.s2c.ExShowQuestInfoPacket;
-import org.l2j.gameserver.network.l2.s2c.RadarControlPacket;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
-import org.l2j.gameserver.utils.Location;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
 
@@ -29,7 +22,7 @@ public class AdventurerInstance extends NpcInstance
 		StringTokenizer st = new StringTokenizer(command, "_");
 		String cmd = st.nextToken();
 		if(cmd.equals("questlist"))
-			player.sendPacket(ExShowQuestInfoPacket.STATIC);
+			player.sendPacket(new ExShowQuestInfoPacket());
 		else
 			super.onBypassFeedback(player, command);
 	}

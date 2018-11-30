@@ -4,18 +4,8 @@ import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
 import gnu.trove.set.TIntSet;
 import gnu.trove.set.hash.TIntHashSet;
-
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Set;
-import java.util.StringTokenizer;
-import java.util.TreeSet;
-import java.util.concurrent.Future;
-import java.util.concurrent.ScheduledFuture;
-
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.tuple.Pair;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.lang.reference.HardReference;
 import org.l2j.commons.lang.reference.HardReferences;
@@ -41,16 +31,7 @@ import org.l2j.gameserver.instancemanager.ReflectionManager;
 import org.l2j.gameserver.listener.NpcListener;
 import org.l2j.gameserver.listener.hooks.ListenerHook;
 import org.l2j.gameserver.listener.hooks.ListenerHookType;
-import org.l2j.gameserver.model.AggroList;
-import org.l2j.gameserver.model.Creature;
-import org.l2j.gameserver.model.GameObjectsStorage;
-import org.l2j.gameserver.model.MinionList;
-import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.model.Skill;
-import org.l2j.gameserver.model.SkillLearn;
-import org.l2j.gameserver.model.Spawner;
-import org.l2j.gameserver.model.Territory;
-import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.Zone.ZoneType;
 import org.l2j.gameserver.model.actor.instances.creature.Abnormal;
 import org.l2j.gameserver.model.actor.listener.NpcListenerList;
@@ -93,10 +74,13 @@ import org.l2j.gameserver.templates.npc.MinionData;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
 import org.l2j.gameserver.templates.spawn.SpawnRange;
 import org.l2j.gameserver.utils.*;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.tuple.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.lang.reflect.Method;
+import java.util.*;
+import java.util.concurrent.Future;
+import java.util.concurrent.ScheduledFuture;
 
 public class NpcInstance extends Creature
 {
@@ -1463,9 +1447,9 @@ public class NpcInstance extends Creature
 				}
 				String cmd2 = st.nextToken();
 				if(cmd2.equalsIgnoreCase("add"))
-					player.sendPacket(ExShowEnsoulWindow.STATIC);
+					player.sendPacket(new ExShowEnsoulWindow());
 				else if(cmd2.equalsIgnoreCase("remove"))
-					player.sendPacket(ExEnSoulExtractionShow.STATIC);
+					player.sendPacket(new ExEnSoulExtractionShow());
 			}
 			else
 			{
@@ -1947,7 +1931,7 @@ public class NpcInstance extends Creature
 
 		if(skills.size() == 0)
 		{
-			player.sendPacket(AcquireSkillDonePacket.STATIC);
+			player.sendPacket(new AcquireSkillDonePacket());
 			player.sendPacket(SystemMsg.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
 		}
 		else
@@ -1979,7 +1963,7 @@ public class NpcInstance extends Creature
 
 		if(learns.size() == 0)
 		{
-			player.sendPacket(AcquireSkillDonePacket.STATIC);
+			player.sendPacket(new AcquireSkillDonePacket());
 			player.sendPacket(SystemMsg.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
 		}
 		else

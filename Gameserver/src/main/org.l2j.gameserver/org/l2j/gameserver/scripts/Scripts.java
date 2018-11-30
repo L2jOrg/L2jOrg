@@ -147,7 +147,7 @@ public class Scripts
 		}
 		else if(target.isDirectory())
 		{
-			scriptFiles = FileUtils.listFiles(target, FileFilterUtils.suffixFileFilter(".java"), FileFilterUtils.directoryFileFilter());
+			scriptFiles = FileUtils.listFiles(target, FileFilterUtils.and(FileFilterUtils.suffixFileFilter(".java"), FileFilterUtils.notFileFilter(FileFilterUtils.nameFileFilter("module-info.java"))), FileFilterUtils.directoryFileFilter());
 		}
 
 		if(scriptFiles.isEmpty())

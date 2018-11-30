@@ -1,7 +1,5 @@
 package org.l2j.gameserver.ai;
 
-import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
-
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.geodata.GeoEngine;
@@ -15,6 +13,8 @@ import org.l2j.gameserver.network.l2.s2c.ExRotation;
 import org.l2j.gameserver.network.l2.s2c.SocialActionPacket;
 import org.l2j.gameserver.skills.EffectType;
 import org.l2j.gameserver.skills.EffectUseType;
+
+import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 
 public class PlayerAI extends PlayableAI
 {
@@ -128,7 +128,7 @@ public class PlayerAI extends PlayableAI
 		if(actor.isFrozen())
 		{
 			setIntention(AI_INTENTION_ACTIVE);
-			actor.sendPacket(SystemMsg.YOU_CANNOT_MOVE_WHILE_FROZEN, ActionFailPacket.STATIC);
+			actor.sendPacket(SystemMsg.YOU_CANNOT_MOVE_WHILE_FROZEN, new ActionFailPacket());
 			return;
 		}
 
@@ -151,7 +151,7 @@ public class PlayerAI extends PlayableAI
 		if(actor.isFrozen())
 		{
 			setIntention(AI_INTENTION_ACTIVE);
-			actor.sendPacket(SystemMsg.YOU_CANNOT_MOVE_WHILE_FROZEN, ActionFailPacket.STATIC);
+			actor.sendPacket(SystemMsg.YOU_CANNOT_MOVE_WHILE_FROZEN, new ActionFailPacket());
 			return false;
 		}
 
