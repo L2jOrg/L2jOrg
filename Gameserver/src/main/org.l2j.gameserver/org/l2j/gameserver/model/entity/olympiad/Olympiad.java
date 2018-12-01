@@ -379,7 +379,7 @@ public class Olympiad
 	public static synchronized void logoutPlayer(Player player)
 	{
 		_classBasedRegisters.removeValue(player.getObjectId());
-		_nonClassBasedRegisters.remove(player.getObjectId());
+		_nonClassBasedRegisters.remove((Integer) player.getObjectId());
 		_playersHWID.remove(player.getObjectId()); //obj id? remove by key
 
 		OlympiadGame game = player.getOlympiadGame();

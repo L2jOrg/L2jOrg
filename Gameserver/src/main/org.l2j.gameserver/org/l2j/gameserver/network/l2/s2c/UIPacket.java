@@ -273,7 +273,7 @@ public class UIPacket extends AbstractMaskPacket<UserInfoType>
 
 		writeInt(obj_id);
 		writeInt(_initSize);
-		writeShort(24);
+		writeShort(23);
 		writeBytes(_masks);
 
 		if(containsMask(UserInfoType.RELATION))
@@ -448,8 +448,6 @@ public class UIPacket extends AbstractMaskPacket<UserInfoType>
 			writeByte(_jewelsLimit);
 			writeByte(_team.ordinal());
 			writeInt(0x00); // Team mask ?
-			writeByte(0x00);
-			writeByte(0x00);
 		}
 
 		if(containsMask(UserInfoType.MOVEMENTS)) {
@@ -473,9 +471,8 @@ public class UIPacket extends AbstractMaskPacket<UserInfoType>
 
 		if(containsMask(UserInfoType.UNK_3)) {
 			writeShort(UserInfoType.UNK_3.getBlockLength());
-			writeByte(0x00);
 			writeInt(0x00);
-			writeByte(0x00);
+			writeShort(0x00);
 			writeByte(0x00);
 		}
 	}
