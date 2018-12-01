@@ -11,6 +11,6 @@ public class NewCharacter extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		sendPacket(new NewCharacterSuccessPacket());
+		sendPacket(NewCharacterSuccessPacket.STATIC);
 	}
 }

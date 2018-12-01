@@ -1,9 +1,12 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.mmocore.StaticPacket;
+
 /**
  *
  * @author monithly
  */
+@StaticPacket
 public class ExLightingCandleEvent extends L2GameServerPacket
 {
 	public static final L2GameServerPacket ENABLED = new ExLightingCandleEvent(1);
@@ -11,7 +14,7 @@ public class ExLightingCandleEvent extends L2GameServerPacket
 
 	private final int _value;
 
-	public ExLightingCandleEvent(int value)
+	private ExLightingCandleEvent(int value)
 	{
 		_value = value;
 	}
@@ -20,5 +23,10 @@ public class ExLightingCandleEvent extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeShort(_value);	// Available
+	}
+
+	@Override
+	protected int packetSize() {
+		return 7;
 	}
 }

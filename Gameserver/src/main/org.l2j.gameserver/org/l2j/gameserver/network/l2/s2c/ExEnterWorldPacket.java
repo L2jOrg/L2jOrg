@@ -14,4 +14,9 @@ public class ExEnterWorldPacket extends L2GameServerPacket
 	{
 		writeInt(_serverTime);
 	}
+
+	@Override
+	protected int packetSize() {
+		return 9;
+	}
 }

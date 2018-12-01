@@ -1,5 +1,8 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.mmocore.StaticPacket;
+
+@StaticPacket
 public class LoginResultPacket extends L2GameServerPacket
 {
     public static L2GameServerPacket SUCCESS = new LoginResultPacket(0xFFFFFFFF, 0);
@@ -17,7 +20,7 @@ public class LoginResultPacket extends L2GameServerPacket
     private final int _reason1;
     private final int _reason2;
 
-    public LoginResultPacket(int reason1, int reason2)
+    private LoginResultPacket(int reason1, int reason2)
     {
         _reason1 = reason1;
         _reason2 = reason2;

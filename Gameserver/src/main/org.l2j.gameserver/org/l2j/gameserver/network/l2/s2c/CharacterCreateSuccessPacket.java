@@ -17,6 +17,6 @@ public class CharacterCreateSuccessPacket extends L2GameServerPacket {
 
 	@Override
 	protected int packetSize() {
-		return super.packetSize() + 4;
+		return 9;
 	}
 }

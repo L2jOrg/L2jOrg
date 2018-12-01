@@ -401,12 +401,16 @@ public class GameServer {
         return true;
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         for (String arg : args)
             if (arg.equalsIgnoreCase("-dev"))
                 DEVELOP = true;
         configureLogger();
-        new GameServer();
+        try {
+            new GameServer();
+        } catch (Exception e) {
+            _log.error(e.getLocalizedMessage(), e);
+        }
     }
 
     private static void configureLogger() {

@@ -18,6 +18,8 @@ import org.l2j.mmocore.WritablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static java.util.Objects.nonNull;
+
 public abstract class L2GameServerPacket extends WritablePacket<GameClient> implements IBroadcastPacket {
     private static final int IS_AUGMENTED = 1 << 0;
     private static final int IS_ELEMENTED = 1 << 1;
@@ -65,10 +67,6 @@ public abstract class L2GameServerPacket extends WritablePacket<GameClient> impl
 
     protected abstract void writeImpl();
 
-    @Override
-    protected int packetSize() {
-        return getOpcodes().getId() == 0xFE ? 3 : 1;
-    }
 
     /**
      * Отсылает число позиций + массив

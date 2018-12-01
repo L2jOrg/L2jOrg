@@ -8,12 +8,16 @@ import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.base.ClassLevel;
 import org.l2j.gameserver.model.base.Sex;
 import org.l2j.gameserver.templates.player.PlayerTemplate;
+import org.l2j.mmocore.StaticPacket;
 
-public class NewCharacterSuccessPacket extends L2GameServerPacket
-{
+@StaticPacket
+public class NewCharacterSuccessPacket extends L2GameServerPacket {
+
+	public static final NewCharacterSuccessPacket STATIC = new NewCharacterSuccessPacket();
+
 	private List<ClassId> _chars = new ArrayList<ClassId>();
 
-	public NewCharacterSuccessPacket()
+	private NewCharacterSuccessPacket()
 	{
 		for(ClassId classId : ClassId.VALUES)
 		{

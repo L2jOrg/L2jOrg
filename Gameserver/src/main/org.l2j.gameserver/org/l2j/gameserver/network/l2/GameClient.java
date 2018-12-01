@@ -69,7 +69,6 @@ public final class GameClient extends Client<org.l2j.mmocore.Connection<GameClie
 		super(con);
 
 		_state = GameClientState.CONNECTED;
-		_ip = "";
 		_crypt = new GameCrypt();
 	}
 
@@ -326,7 +325,7 @@ public final class GameClient extends Client<org.l2j.mmocore.Connection<GameClie
 
 	public String getIpAddr()
 	{
-		return _ip;
+		return getHostAddress();
 	}
 
 	public byte[] enableCrypt()

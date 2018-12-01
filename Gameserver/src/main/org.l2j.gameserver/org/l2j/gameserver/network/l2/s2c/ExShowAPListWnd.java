@@ -14,4 +14,9 @@ public class ExShowAPListWnd extends L2GameServerPacket {
 
 	@Override
 	protected void writeImpl() { }
+
+	@Override
+	protected int packetSize() {
+		return 5;
+	}
 }

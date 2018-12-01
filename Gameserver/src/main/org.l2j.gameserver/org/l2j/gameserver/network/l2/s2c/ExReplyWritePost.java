@@ -29,6 +29,6 @@ public class ExReplyWritePost extends L2GameServerPacket {
 
 	@Override
 	protected int packetSize() {
-		return super.packetSize() + 4;
+		return 9;
 	}
 }

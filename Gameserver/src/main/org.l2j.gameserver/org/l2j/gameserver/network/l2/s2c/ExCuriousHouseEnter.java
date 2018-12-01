@@ -11,4 +11,9 @@ public class ExCuriousHouseEnter extends L2GameServerPacket {
 
 	@Override
 	protected void writeImpl() {  }
+
+	@Override
+	protected int packetSize() {
+		return 5;
+	}
 }

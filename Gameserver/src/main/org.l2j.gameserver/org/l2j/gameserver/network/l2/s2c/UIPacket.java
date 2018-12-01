@@ -272,18 +272,16 @@ public class UIPacket extends AbstractMaskPacket<UserInfoType>
 			return;
 
 		writeInt(obj_id);
-
 		writeInt(_initSize);
-		writeShort(23);
+		writeShort(24);
 		writeBytes(_masks);
 
 		if(containsMask(UserInfoType.RELATION))
 			writeInt(_relation);
 
-		if(containsMask(UserInfoType.BASIC_INFO))
-		{
+		if(containsMask(UserInfoType.BASIC_INFO)) {
 			writeShort(UserInfoType.BASIC_INFO.getBlockLength() + (_name.length() * 2));
-			writeString(_name);
+			writeSizedString(_name);
 			writeByte(gm_commands);
 			writeByte(_race);
 			writeByte(sex);
@@ -292,8 +290,7 @@ public class UIPacket extends AbstractMaskPacket<UserInfoType>
 			writeByte(level);
 		}
 
-		if(containsMask(UserInfoType.BASE_STATS))
-		{
+		if(containsMask(UserInfoType.BASE_STATS)) {
 			writeShort(UserInfoType.BASE_STATS.getBlockLength());
 			writeShort(_str);
 			writeShort(_dex);
@@ -305,16 +302,14 @@ public class UIPacket extends AbstractMaskPacket<UserInfoType>
 			writeShort(0x00);
 		}
 
-		if(containsMask(UserInfoType.MAX_HPCPMP))
-		{
+		if(containsMask(UserInfoType.MAX_HPCPMP)) {
 			writeShort(UserInfoType.MAX_HPCPMP.getBlockLength());
 			writeInt(maxHp);
 			writeInt(maxMp);
 			writeInt(maxCp);
 		}
 
-		if(containsMask(UserInfoType.CURRENT_HPMPCP_EXP_SP))
-		{
+		if(containsMask(UserInfoType.CURRENT_HPMPCP_EXP_SP)) {
 			writeShort(UserInfoType.CURRENT_HPMPCP_EXP_SP.getBlockLength());
 			writeInt(curHp);
 			writeInt(curMp);
@@ -324,15 +319,13 @@ public class UIPacket extends AbstractMaskPacket<UserInfoType>
 			writeDouble(_expPercent);
 		}
 
-		if(containsMask(UserInfoType.ENCHANTLEVEL))
-		{
+		if(containsMask(UserInfoType.ENCHANTLEVEL)) {
 			writeShort(UserInfoType.ENCHANTLEVEL.getBlockLength());
 			writeByte(_weaponEnchant);
 			writeByte(_armorSetEnchant);
 		}
 
-		if(containsMask(UserInfoType.APPAREANCE))
-		{
+		if(containsMask(UserInfoType.APPAREANCE)) {
 			writeShort(UserInfoType.APPAREANCE.getBlockLength());
 			writeInt(hair_style);
 			writeInt(hair_color);
@@ -340,8 +333,7 @@ public class UIPacket extends AbstractMaskPacket<UserInfoType>
 			writeByte(!_hideHeadAccessories);  //переключения прически/головного убора
 		}
 
-		if(containsMask(UserInfoType.STATUS))
-		{
+		if(containsMask(UserInfoType.STATUS)) {
 			writeShort(UserInfoType.STATUS.getBlockLength());
 			writeByte(mount_type);
 			writeByte(private_store);
@@ -349,8 +341,7 @@ public class UIPacket extends AbstractMaskPacket<UserInfoType>
 			writeByte(0x00);
 		}
 
-		if(containsMask(UserInfoType.STATS))
-		{
+		if(containsMask(UserInfoType.STATS)) {
 			writeShort(UserInfoType.STATS.getBlockLength());
 			writeShort(_weaponFlag);
 			writeInt(_patk);
@@ -368,8 +359,7 @@ public class UIPacket extends AbstractMaskPacket<UserInfoType>
 			writeInt(_mCrit);
 		}
 
-		if(containsMask(UserInfoType.ELEMENTALS))
-		{
+		if(containsMask(UserInfoType.ELEMENTALS)) {
 			writeShort(UserInfoType.ELEMENTALS.getBlockLength());
 			writeShort(defenceFire);
 			writeShort(defenceWater);
@@ -379,8 +369,7 @@ public class UIPacket extends AbstractMaskPacket<UserInfoType>
 			writeShort(defenceUnholy);
 		}
 
-		if(containsMask(UserInfoType.POSITION))
-		{
+		if(containsMask(UserInfoType.POSITION)) {
 			writeShort(UserInfoType.POSITION.getBlockLength());
 			writeInt(_loc.x);
 			writeInt(_loc.y);
@@ -388,8 +377,7 @@ public class UIPacket extends AbstractMaskPacket<UserInfoType>
 			writeInt(vehicle_obj_id);
 		}
 
-		if(containsMask(UserInfoType.SPEED))
-		{
+		if(containsMask(UserInfoType.SPEED)) {
 			writeShort(UserInfoType.SPEED.getBlockLength());
 			writeShort(_runSpd);
 			writeShort(_walkSpd);
@@ -401,31 +389,27 @@ public class UIPacket extends AbstractMaskPacket<UserInfoType>
 			writeShort(_flyWalkSpd);
 		}
 
-		if(containsMask(UserInfoType.MULTIPLIER))
-		{
+		if(containsMask(UserInfoType.MULTIPLIER)) {
 			writeShort(UserInfoType.MULTIPLIER.getBlockLength());
 			writeDouble(move_speed);
 			writeDouble(attack_speed);
 		}
 
-		if(containsMask(UserInfoType.COL_RADIUS_HEIGHT))
-		{
+		if(containsMask(UserInfoType.COL_RADIUS_HEIGHT)) {
 			writeShort(UserInfoType.COL_RADIUS_HEIGHT.getBlockLength());
 			writeDouble(col_radius);
 			writeDouble(col_height);
 		}
 
-		if(containsMask(UserInfoType.ATK_ELEMENTAL))
-		{
+		if(containsMask(UserInfoType.ATK_ELEMENTAL)) {
 			writeShort(UserInfoType.ATK_ELEMENTAL.getBlockLength());
 			writeByte(attackElement.getId());
 			writeShort(attackElementValue);
 		}
 
-		if(containsMask(UserInfoType.CLAN))
-		{
+		if(containsMask(UserInfoType.CLAN)) {
 			writeShort(UserInfoType.CLAN.getBlockLength() + (_title.length() * 2));
-			writeString(_title);
+			writeSizedString(_title);
 			writeShort(pledge_type);
 			writeInt(clan_id);
 			writeInt(large_clan_crest_id);
@@ -437,8 +421,7 @@ public class UIPacket extends AbstractMaskPacket<UserInfoType>
 			writeByte(partyRoom ? 0x01 : 0x00);
 		}
 
-		if(containsMask(UserInfoType.SOCIAL))
-		{
+		if(containsMask(UserInfoType.SOCIAL)) {
 			writeShort(UserInfoType.SOCIAL.getBlockLength());
 			writeByte(pvp_flag);
 			writeInt(karma);
@@ -451,8 +434,7 @@ public class UIPacket extends AbstractMaskPacket<UserInfoType>
 			writeShort(rec_have);
 		}
 
-		if(containsMask(UserInfoType.VITA_FAME))
-		{
+		if(containsMask(UserInfoType.VITA_FAME)) {
 			writeShort(UserInfoType.VITA_FAME.getBlockLength());
 			writeInt(0x00);
 			writeByte(0x00); // Vita Bonus
@@ -460,47 +442,46 @@ public class UIPacket extends AbstractMaskPacket<UserInfoType>
 			writeInt(0x00); // raid points
 		}
 
-		if(containsMask(UserInfoType.SLOTS))
-		{
+		if(containsMask(UserInfoType.SLOTS)) {
 			writeShort(UserInfoType.SLOTS.getBlockLength());
 			writeByte(talismans);
 			writeByte(_jewelsLimit);
 			writeByte(_team.ordinal());
-			writeByte(0x00);
-			writeByte(0x00);
+			writeInt(0x00); // Team mask ?
 			writeByte(0x00);
 			writeByte(0x00);
 		}
 
-		if(containsMask(UserInfoType.MOVEMENTS))
-		{
+		if(containsMask(UserInfoType.MOVEMENTS)) {
 			writeShort(UserInfoType.MOVEMENTS.getBlockLength());
 			writeByte(_moveType);
 			writeByte(running);
 		}
 
-		if(containsMask(UserInfoType.COLOR))
-		{
+		if(containsMask(UserInfoType.COLOR)) {
 			writeShort(UserInfoType.COLOR.getBlockLength());
 			writeInt(name_color);
 			writeInt(title_color);
 		}
 
-		if(containsMask(UserInfoType.INVENTORY_LIMIT))
-		{
+		if(containsMask(UserInfoType.INVENTORY_LIMIT)) {
 			writeShort(UserInfoType.INVENTORY_LIMIT.getBlockLength());
-			writeShort(0x00);
-			writeShort(0x00);
+			writeInt(0x00);
 			writeShort(InventoryLimit);
 			writeByte(0); // hide title - 1, 0 - no
 		}
 
-		if(containsMask(UserInfoType.UNK_3))
-		{
+		if(containsMask(UserInfoType.UNK_3)) {
 			writeShort(UserInfoType.UNK_3.getBlockLength());
+			writeByte(0x00);
 			writeInt(0x00);
-			writeShort(0x00);
+			writeByte(0x00);
 			writeByte(0x00);
 		}
+	}
+
+	@Override
+	protected int packetSize() {
+		return _initSize + 11;
 	}
 }

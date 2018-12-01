@@ -12,4 +12,9 @@ public class ExChangeAttributeOk extends L2GameServerPacket {
 	private ExChangeAttributeOk() { }
 
 	protected void writeImpl() {  }
+
+	@Override
+	protected int packetSize() {
+		return 5;
+	}
 }

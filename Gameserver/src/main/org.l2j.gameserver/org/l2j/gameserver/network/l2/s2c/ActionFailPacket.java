@@ -7,11 +7,13 @@ public class ActionFailPacket extends L2GameServerPacket {
 
 	public static final L2GameServerPacket STATIC = new ActionFailPacket();
 
-	private ActionFailPacket() {
-
-	}
+	private ActionFailPacket() { }
 
 	@Override
-	protected final void writeImpl() {
+	protected final void writeImpl() {  }
+
+	@Override
+	protected int packetSize() {
+		return 3;
 	}
 }

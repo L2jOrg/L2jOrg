@@ -1,5 +1,8 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.mmocore.StaticPacket;
+
+@StaticPacket
 public class ExIsCharNameCreatable extends L2GameServerPacket
 {
 	public static final L2GameServerPacket SUCCESS = new ExIsCharNameCreatable(-1); // Успешное создание чара.
@@ -12,9 +15,9 @@ public class ExIsCharNameCreatable extends L2GameServerPacket
 	public static final L2GameServerPacket DONT_CREATE_CHARS_ON_THIS_SERVER = new ExIsCharNameCreatable(0x06); // Нельзя создать персонажа на даном сервере. Действуют ограничения не позволяющие создавать песронажа.
 	public static final L2GameServerPacket DONT_USE_ENG_CHARS = new ExIsCharNameCreatable(0x07); // Нельзя использовать англ символы в имени персонажа.
 
-	public int _errorCode;
+	private int _errorCode;
 
-	public ExIsCharNameCreatable(int errorCode)
+	private ExIsCharNameCreatable(int errorCode)
 	{
 		_errorCode = errorCode;
 	}
@@ -23,5 +26,10 @@ public class ExIsCharNameCreatable extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeInt(_errorCode);
+	}
+
+	@Override
+	protected int packetSize() {
+		return 9;
 	}
 }

@@ -27,6 +27,6 @@ public class ExConnectedTimeAndGettableReward extends L2GameServerPacket {
 
 	@Override
 	protected int packetSize() {
-		return super.packetSize() + 44;
+		return 49;
 	}
 }

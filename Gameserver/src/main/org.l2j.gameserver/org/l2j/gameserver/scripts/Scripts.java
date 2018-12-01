@@ -147,6 +147,7 @@ public class Scripts
 		}
 		else if(target.isDirectory())
 		{
+			_log.debug("Loading Scripts from {} ", target.getAbsolutePath());
 			scriptFiles = FileUtils.listFiles(target, FileFilterUtils.and(FileFilterUtils.suffixFileFilter(".java"), FileFilterUtils.notFileFilter(FileFilterUtils.nameFileFilter("module-info.java"))), FileFilterUtils.directoryFileFilter());
 		}
 

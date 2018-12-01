@@ -29,13 +29,8 @@ public abstract class Client<T extends Connection<?>> {
 
     protected void writePacket(WritablePacket<? extends Client<T>> packet) {
         putClientOnPacket(packet);
-        if(packetsToWrite.isEmpty() && writing.compareAndSet(false, true) ) {
-            logger.debug("Sending packet {} immediately", packet);
-            write(packet);
-        } else {
-            logger.debug("Queueing packet {} to send", packet);
-            packetsToWrite.add(packet);
-        }
+        packetsToWrite.add(packet);
+        tryWriteNextPacket();
     }
 
     @SuppressWarnings("unchecked")
@@ -44,13 +39,14 @@ public abstract class Client<T extends Connection<?>> {
     }
 
     void tryWriteNextPacket() {
-        logger.debug("Trying to send next packet");
-        if(packetsToWrite.isEmpty()) {
-            writing.getAndSet(false);
-            logger.debug("no packet found");
-        } else {
-            WritablePacket<? extends Client<T>> packet = packetsToWrite.poll();
-            write(packet);
+        if(writing.compareAndSet(false, true)) {
+            if(packetsToWrite.isEmpty()) {
+                writing.getAndSet(false);
+                logger.debug("no packet found");
+            } else {
+                WritablePacket<? extends Client<T>> packet = packetsToWrite.poll();
+                write(packet);
+            }
         }
     }
 
@@ -59,6 +55,11 @@ public abstract class Client<T extends Connection<?>> {
         connection.write();
     }
 
+    void finishWriting() {
+        connection.releaseWritingBuffer();
+        writing.getAndSet(false);
+        tryWriteNextPacket();
+    }
 
     private void write(WritablePacket packet, boolean sync) {
         if(isNull(packet)) {

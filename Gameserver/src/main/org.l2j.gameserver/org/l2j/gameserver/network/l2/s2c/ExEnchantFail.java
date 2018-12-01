@@ -26,6 +26,6 @@ public final class ExEnchantFail extends L2GameServerPacket {
 
 	@Override
 	protected int packetSize() {
-		return super.packetSize() + 8;
+		return 13;
 	}
 }

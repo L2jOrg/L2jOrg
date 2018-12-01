@@ -20,10 +20,10 @@ public abstract class WritablePacket<T extends Client<Connection<T>>> extends Ab
 	    try {
             data[dataIndex++] = value;
         } catch (IndexOutOfBoundsException e) {
-	        byte[] tmp =  new byte[(int) (data.length * 1.2)];
+    	        byte[] tmp =  new byte[(int) ( (data.length + 1) * 1.2)];
 	        arraycopy(data, 0, tmp, 0, data.length);
 	        data = tmp;
-	        data[dataIndex-1 ] = value;
+	        data[dataIndex-1] = value;
         }
 	}
 
@@ -186,24 +186,22 @@ public abstract class WritablePacket<T extends Client<Connection<T>>> extends Ab
     }
 
     int writeData() {
-		if(getClass().isAnnotationPresent(StaticPacket.class)) {
+		if(hasWritedStaticData()) {
 			return writedStaticData();
 		}
-		return callPacketWrite() ? dataIndex : 0;
+		if(callPacketWrite()) {
+			if(getClass().isAnnotationPresent(StaticPacket.class)) {
+				staticData = new byte[dataIndex];
+				arraycopy(data, 0, staticData, 0, dataIndex);
+			}
+			return dataIndex;
+		}
+		return 0;
     }
 
 	private int writedStaticData() {
-		if(isNull(staticData)) {
-			if(callPacketWrite()) {
-				staticData = new byte[dataIndex];
-				arraycopy(data, 0, staticData, 0, dataIndex);
-				return dataIndex;
-			}
-			return 0;
-		} else {
-			arraycopy(staticData, 0, data, 0, staticData.length);
-			return staticData.length;
-		}
+        arraycopy(staticData, 0, data, 0, staticData.length);
+        return staticData.length;
 	}
 
 	private boolean callPacketWrite() {
@@ -225,5 +223,10 @@ public abstract class WritablePacket<T extends Client<Connection<T>>> extends Ab
         var tmp = (byte) (header >>> 8);
         data[0] = pickByte((byte) header, tmp);
         data[1] = pickByte(tmp, (byte) header);
+
+    }
+
+    private boolean hasWritedStaticData() {
+        return getClass().isAnnotationPresent(StaticPacket.class) && nonNull(staticData);
     }
 }

@@ -64,7 +64,7 @@ public abstract class L2GameClientPacket extends ReadablePacket<GameClient>
 
 	protected void sendPacket(L2GameServerPacket packet)
 	{
-		getClient().sendPacket(packet);
+		client.sendPacket(packet);
 	}
 
 	protected void sendPacket(L2GameServerPacket... packets)

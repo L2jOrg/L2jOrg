@@ -114,7 +114,7 @@ public final class GamePacketHandler implements PacketHandler<GameClient>, Clien
                         break;
                     default:
                         client.onUnknownPacket();
-                        _log.warn("Unknown client packet! State: AUTHE, packet ID: " + Integer.toHexString(id).toUpperCase());
+                        _log.warn("Unknown client packet! State: AUTHED, packet ID: " + Integer.toHexString(id).toUpperCase());
                         break;
                 }
                 break;

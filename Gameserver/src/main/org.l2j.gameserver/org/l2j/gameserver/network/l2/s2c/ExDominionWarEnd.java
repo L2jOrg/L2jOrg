@@ -15,4 +15,9 @@ public class ExDominionWarEnd extends L2GameServerPacket {
 
 	@Override
 	public void writeImpl() {  }
+
+	@Override
+	protected int packetSize() {
+		return 5;
+	}
 }

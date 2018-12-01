@@ -14,4 +14,8 @@ public class ExChangeAttributeFail extends L2GameServerPacket {
 
 	protected void writeImpl() {  }
 
+	@Override
+	protected int packetSize() {
+		return 5;
+	}
 }

@@ -1,6 +1,7 @@
 package org.l2j.gameserver.network.l2.c2s;
 
 import org.l2j.gameserver.network.l2.s2c.ExBR_NewIConCashBtnWnd;
+import org.l2j.gameserver.network.l2.s2c.ExLightingCandleEvent;
 
 /**
  * @author Bonux
@@ -16,6 +17,6 @@ public class RequestBR_NewIConCashBtnWnd extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		sendPacket(ExBR_NewIConCashBtnWnd.HAS_UPDATES);	// TODO: Посылать при наличии новинок в Итем-молле 1, если нет, то 0.
+		sendPacket(ExLightingCandleEvent.ENABLED);	// TODO: Посылать при наличии новинок в Итем-молле 1, если нет, то 0.
 	}
 }
