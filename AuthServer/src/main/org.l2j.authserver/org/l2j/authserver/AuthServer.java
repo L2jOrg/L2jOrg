@@ -50,10 +50,9 @@ public class AuthServer {
         logger.info("Login Server ready on {}:{}", bindAddress.getHostString(), loginListenPort());
     }
 
-    private void shutdown(boolean restart) {
+    private void shutdown() {
         serverConnectionHandler.shutdown();
         connectionHandler.shutdown();
-        getRuntime().exit(restart ? 2 : 0);
     }
 
     public static void main(String[] args) {
@@ -62,7 +61,7 @@ public class AuthServer {
         Config.load();
         try {
             _instance = new AuthServer();
-            getRuntime().addShutdownHook(new Thread(() -> _instance.shutdown(false)));
+            getRuntime().addShutdownHook(new Thread(() -> _instance.shutdown()));
         } catch (Exception e) {
             logger.error(e.getLocalizedMessage(), e);
         }
