@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.l2.s2c;
 
 /**
  * the HTML parser in the client knowns these standard and non-standard tags and attributes
- * VOLUMN
+ * COLUMN
  * UNKNOWN
  * UL
  * U

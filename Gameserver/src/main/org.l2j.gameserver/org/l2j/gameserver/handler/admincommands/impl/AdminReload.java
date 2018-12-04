@@ -22,7 +22,7 @@ import org.l2j.gameserver.utils.Strings;
 
 public class AdminReload implements IAdminCommandHandler
 {
-	private static enum Commands
+	private enum Commands
 	{
 		admin_reload,
 		admin_reload_config,
