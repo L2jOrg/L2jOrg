@@ -26,13 +26,12 @@ public class LoginServerFail extends ReceivablePacket
 	@Override
 	protected void readImpl()
 	{
-		int reasonId = readC();
-		if(!getByteBuffer().hasRemaining())
+		int reasonId = readByte();
+		if(availableData() <= 0) {
 			_reason = "Authserver registration failed! Reason: " + REASONS[reasonId];
-		else
-		{
-			_reason = readS();
-			_restartConnection = readC() > 0;
+		} else {
+			_reason = readString();
+			_restartConnection = readByte() > 0;
 		}
 	}
 

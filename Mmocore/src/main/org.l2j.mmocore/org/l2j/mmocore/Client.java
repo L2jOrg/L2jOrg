@@ -8,6 +8,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 
 public abstract class Client<T extends Connection<?>> {
 
@@ -18,6 +19,7 @@ public abstract class Client<T extends Connection<?>> {
     private int dataSentSize;
     private AtomicBoolean writing = new AtomicBoolean(false);
     private volatile boolean isClosing;
+    private ResourcePool resourcePool;
 
     public Client(T connection) {
         this.connection = connection;
@@ -38,7 +40,7 @@ public abstract class Client<T extends Connection<?>> {
         packet.client = this;
     }
 
-    void tryWriteNextPacket() {
+    private void tryWriteNextPacket() {
         if(writing.compareAndSet(false, true)) {
             if(packetsToWrite.isEmpty()) {
                 writing.getAndSet(false);
@@ -94,8 +96,10 @@ public abstract class Client<T extends Connection<?>> {
         isClosing = true;
         logger.debug("Closing client connection {} with packet {}", this, packet);
         packetsToWrite.clear();
-        putClientOnPacket(packet);
-        write(packet, true);
+        if(nonNull(packet)) {
+            putClientOnPacket(packet);
+            write(packet, true);
+        }
         disconnect();
     }
 
@@ -118,6 +122,15 @@ public abstract class Client<T extends Connection<?>> {
         return connection.isOpen() && !isClosing;
     }
 
+    void setResourcePool(ResourcePool resourcePool) {
+        this.resourcePool = resourcePool;
+    }
+
+    ResourcePool getResourcePool() {
+        return resourcePool;
+    }
+
+
     /**
      * @param data - the data to be encrypted
      * @param offset - the initial index to be encrypted
@@ -126,6 +139,8 @@ public abstract class Client<T extends Connection<?>> {
      */
     public abstract int encrypt(byte[] data, int offset, int size);
     public abstract boolean decrypt(byte[] data, int offset, int size);
+
     protected abstract void  onDisconnection();
+
     public abstract void onConnected();
 }

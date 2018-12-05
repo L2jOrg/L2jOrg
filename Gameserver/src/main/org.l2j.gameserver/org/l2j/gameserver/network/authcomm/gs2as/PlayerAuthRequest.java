@@ -19,11 +19,11 @@ public class PlayerAuthRequest extends SendablePacket
 
 	protected void writeImpl()
 	{
-		writeC(0x02);
-		writeS(account);
-		writeD(playOkID1);
-		writeD(playOkID2);
-		writeD(loginOkID1);
-		writeD(loginOkID2);
+		writeByte(0x02);
+		writeString(account);
+		writeInt(playOkID1);
+		writeInt(playOkID2);
+		writeInt(loginOkID1);
+		writeInt(loginOkID2);
 	}
 }

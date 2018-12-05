@@ -21,8 +21,8 @@ public class ChangePasswordResponse extends ReceivablePacket
 	@Override
 	protected void readImpl()
 	{
-		_account = readS();
-		_changed = readD() == 1;
+		_account = readString();
+		_changed = readInt() == 1;
 	}
 	
 	@Override

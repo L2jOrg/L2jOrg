@@ -23,7 +23,7 @@ class ReadHandler<T extends Client<Connection<T>>> implements CompletionHandler<
     }
 
     @Override
-    public void completed(Integer bytesRead, T client) {
+    public final void completed(Integer bytesRead, T client) {
         if(!client.isConnected()) {
             return;
         }
@@ -34,6 +34,10 @@ class ReadHandler<T extends Client<Connection<T>>> implements CompletionHandler<
             return;
         }
 
+        readData(client);
+    }
+
+    private void readData(T client) {
         Connection<T> connection = client.getConnection();
         var buffer = connection.getReadingBuffer();
         buffer.flip();
@@ -55,6 +59,10 @@ class ReadHandler<T extends Client<Connection<T>>> implements CompletionHandler<
             return;
         }
 
+        onCompleted(client, connection, buffer, dataSize);
+    }
+
+    private void onCompleted(T client, Connection<T> connection, ByteBuffer buffer, int dataSize) {
         try {
             if (dataSize > 0) {
                 parseAndExecutePacket(client, buffer, dataSize);
@@ -63,17 +71,24 @@ class ReadHandler<T extends Client<Connection<T>>> implements CompletionHandler<
             logger.error(e.getLocalizedMessage(), e);
             buffer.clear();
         } finally {
-            if(!buffer.hasRemaining()) {
-                buffer.clear();
-            } else {
-                logger.debug("Still data on packet. Trying to read");
-                int remaining = buffer.remaining();
-                buffer.compact();
-                if(remaining >= HEADER_SIZE) {
-                    completed(remaining, client);
-                    return;
-                }
+            finalizeRead(client, connection, buffer);
+        }
+    }
+
+    private void finalizeRead(T client, Connection<T> connection, ByteBuffer buffer) {
+        boolean continueReading = true;
+        if(!buffer.hasRemaining()) {
+            buffer.clear();
+        } else {
+            logger.debug("Still data on packet. Trying to read");
+            int remaining = buffer.remaining();
+            buffer.compact();
+            if(remaining >= HEADER_SIZE) {
+                completed(remaining, client);
+                continueReading = false;
             }
+        }
+        if(continueReading) {
             connection.read();
         }
     }

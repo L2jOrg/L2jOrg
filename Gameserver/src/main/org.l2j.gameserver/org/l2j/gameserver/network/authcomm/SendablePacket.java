@@ -1,35 +1,17 @@
 package org.l2j.gameserver.network.authcomm;
 
-import java.nio.ByteBuffer;
-
+import org.l2j.mmocore.WritablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public abstract class SendablePacket extends org.l2j.commons.net.nio.SendablePacket<AuthServerCommunication>
-{
-	private static final Logger _log = LoggerFactory.getLogger(SendablePacket.class);
+public abstract class SendablePacket extends WritablePacket<AuthServerClient> {
+	private static final Logger logger = LoggerFactory.getLogger(SendablePacket.class);
 
-	@Override
-	public AuthServerCommunication getClient()
-	{
-		return AuthServerCommunication.getInstance();
-	}
-
-	@Override
-	protected ByteBuffer getByteBuffer()
-	{
-		return getClient().getWriteBuffer();
-	}
-
-	public boolean write()
-	{
-		try
-		{
+	public boolean write() {
+		try {
 			writeImpl();
-		}
-		catch(Exception e)
-		{
-			_log.error("", e);
+		} catch(Exception e) {
+			logger.error("", e);
 		}
 		return true;
 	}

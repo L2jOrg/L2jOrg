@@ -32,18 +32,18 @@ public class PlayerAuthResponse extends ReceivablePacket
 	@Override
 	public void readImpl()
 	{
-		account = readS();
-		authed = readC() == 1;
+		account = readString();
+		authed = readByte() == 1;
 		/*if(authed)
 		{
-			playOkId1 = readD();
-			playOkId2 = readD();
-			loginOkId1 = readD();
-			loginOkId2 = readD();
-			bonus = readD();
-			bonusExpire = readD();
-			points = readD();
-			hwid = readS();
+			playOkId1 = readInt();
+			playOkId2 = readInt();
+			loginOkId1 = readInt();
+			loginOkId2 = readInt();
+			bonus = readInt();
+			bonusExpire = readInt();
+			points = readInt();
+			hwid = readString();
 			if(getByteBuffer().hasRemaining())
 				phoneNumber = readQ();
 		}*/

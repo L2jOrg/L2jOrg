@@ -1,24 +1,17 @@
 package org.l2j.gameserver.network.authcomm;
 
-import java.nio.ByteBuffer;
-
-import org.l2j.gameserver.network.authcomm.as2gs.AuthResponse;
-import org.l2j.gameserver.network.authcomm.as2gs.GetAccountInfo;
-import org.l2j.gameserver.network.authcomm.as2gs.KickPlayer;
-import org.l2j.gameserver.network.authcomm.as2gs.LoginServerFail;
-import org.l2j.gameserver.network.authcomm.as2gs.PingRequest;
-import org.l2j.gameserver.network.authcomm.as2gs.PlayerAuthResponse;
-import org.l2j.gameserver.network.authcomm.as2gs.ChangePasswordResponse;
+import org.l2j.gameserver.network.authcomm.as2gs.*;
+import org.l2j.mmocore.DataWrapper;
+import org.l2j.mmocore.ReadablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class PacketHandler
-{
+public class PacketHandler implements org.l2j.mmocore.PacketHandler<AuthServerClient> {
 	private static final Logger _log = LoggerFactory.getLogger(PacketHandler.class);
 
-	public static ReceivablePacket handlePacket(ByteBuffer buf)
+	public ReadablePacket<AuthServerClient> handlePacket(DataWrapper buf, AuthServerClient client)
 	{
-		ReceivablePacket packet = null;
+		ReadablePacket<AuthServerClient> packet = null;
 
 		int id = buf.get() & 0xff;
 

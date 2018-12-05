@@ -16,8 +16,8 @@ public class ChangeAllowedIp extends SendablePacket
 	@Override
 	protected void writeImpl()
 	{
-		writeC(0x07);
-		writeS(account);
-		writeS(ip);
+		writeByte(0x07);
+		writeString(account);
+		writeString(ip);
 	}
 }

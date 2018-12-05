@@ -18,7 +18,7 @@ public final class DataWrapper extends ReadablePacket<Object> {
         return new DataWrapper(data);
     }
 
-    public  byte get() {
+    public byte get() {
         return readByte();
     }
 

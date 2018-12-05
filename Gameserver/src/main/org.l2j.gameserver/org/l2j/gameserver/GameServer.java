@@ -69,60 +69,26 @@ import java.net.Socket;
 import java.util.Properties;
 
 public class GameServer {
-    public static boolean DEVELOP = false;
 
     private static final String LOG4J_CONFIGURATION_FILE = "log4j.configurationFile";
-    public static final String UPDATE_NAME = "Classic: Saviors (Zaken)";
+    private static final String UPDATE_NAME = "Classic: Saviors (Zaken)";
 
+    public static boolean DEVELOP = false;
     public static final int AUTH_SERVER_PROTOCOL = 2;
 
     private static Logger _log;
     private final ConnectionHandler<GameClient> connectionHandler;
 
-    public void shutdown() {
-        connectionHandler.shutdown();
-    }
-
-    public class GameServerListenerList extends ListenerList<GameServer> {
-        public void onStart() {
-            for (Listener<GameServer> listener : getListeners())
-                if (OnStartListener.class.isInstance(listener))
-                    ((OnStartListener) listener).onStart();
-        }
-
-        public void onShutdown() {
-            for (Listener<GameServer> listener : getListeners())
-                if (OnShutdownListener.class.isInstance(listener))
-                    ((OnShutdownListener) listener).onShutdown();
-        }
-    }
-
     public static GameServer _instance;
 
     private final SelectorStats _selectorStats = new SelectorStats();
     private String version;
-    ;
+
     private final GameServerListenerList _listeners;
 
     private long _serverStartTimeMillis;
     private final String _licenseHost;
     private final int _onlineLimit;
-
-    public SelectorStats getSelectorStats() {
-        return _selectorStats;
-    }
-
-    public long getServerStartTime() {
-        return _serverStartTimeMillis;
-    }
-
-    public String getLicenseHost() {
-        return _licenseHost;
-    }
-
-    public int getOnlineLimit() {
-        return _onlineLimit;
-    }
 
     @SuppressWarnings("unchecked")
     public GameServer() throws Exception {
@@ -307,10 +273,10 @@ public class GameServer {
         if (Config.ONLINE_GENERATOR_ENABLED)
             ThreadPoolManager.getInstance().scheduleAtFixedRate(new OnlineTxtGenerator(), 5000L, Config.ONLINE_GENERATOR_DELAY * 60 * 1000L);
 
-        AuthServerCommunication.getInstance().start();
+        ThreadPoolManager.getInstance().execute(AuthServerCommunication.getInstance());
 
         _log.info("=================================================");
-        String memUsage = new StringBuilder().append(StatsUtils.getMemUsage()).toString();
+        String memUsage = String.valueOf(StatsUtils.getMemUsage());
         for (String line : memUsage.split("\n"))
             _log.info(line);
 
@@ -413,6 +379,26 @@ public class GameServer {
         }
     }
 
+    public SelectorStats getSelectorStats() {
+        return _selectorStats;
+    }
+
+    public long getServerStartTime() {
+        return _serverStartTimeMillis;
+    }
+
+    public String getLicenseHost() {
+        return _licenseHost;
+    }
+
+    public int getOnlineLimit() {
+        return _onlineLimit;
+    }
+
+    public void shutdown() {
+        connectionHandler.shutdown();
+    }
+
     private static void configureLogger() {
         String logConfigurationFile = System.getProperty(LOG4J_CONFIGURATION_FILE);
         if (logConfigurationFile == null || logConfigurationFile.isEmpty()) {
@@ -423,5 +409,19 @@ public class GameServer {
 
     public String getVersion() {
         return version;
+    }
+
+    public class GameServerListenerList extends ListenerList<GameServer> {
+        public void onStart() {
+            for (Listener<GameServer> listener : getListeners())
+                if (OnStartListener.class.isInstance(listener))
+                    ((OnStartListener) listener).onStart();
+        }
+
+        public void onShutdown() {
+            for (Listener<GameServer> listener : getListeners())
+                if (OnShutdownListener.class.isInstance(listener))
+                    ((OnShutdownListener) listener).onShutdown();
+        }
     }
 }

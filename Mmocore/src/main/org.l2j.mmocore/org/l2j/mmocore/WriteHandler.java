@@ -8,7 +8,7 @@ import java.nio.channels.CompletionHandler;
 
 class WriteHandler<T extends Client<Connection<T>>> implements CompletionHandler<Integer, T> {
 
-    private  static final Logger logger = LoggerFactory.getLogger(WriteHandler.class);
+    private static final Logger logger = LoggerFactory.getLogger(WriteHandler.class);
 
     @Override
     public void completed(Integer result, T client) {
@@ -17,8 +17,6 @@ class WriteHandler<T extends Client<Connection<T>>> implements CompletionHandler
             client.disconnect();
             return;
         }
-
-        Connection connection = client.getConnection();
 
         if(result < client.getDataSentSize()) {
             logger.debug("Still data to send. Trying to send");

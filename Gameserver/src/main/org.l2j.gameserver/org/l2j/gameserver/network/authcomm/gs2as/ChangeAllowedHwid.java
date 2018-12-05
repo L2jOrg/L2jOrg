@@ -16,8 +16,8 @@ public class ChangeAllowedHwid extends SendablePacket
 	@Override
 	protected void writeImpl()
 	{
-		writeC(0x09);
-		writeS(account);
-		writeS(hwid);
+		writeByte(0x09);
+		writeString(account);
+		writeString(hwid);
 	}
 }

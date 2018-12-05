@@ -1,15 +1,13 @@
 package org.l2j.gameserver.network.authcomm.as2gs;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.ReceivablePacket;
-import org.l2j.gameserver.network.authcomm.gs2as.OnlineStatus;
 import org.l2j.gameserver.network.authcomm.gs2as.PlayerInGame;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @reworked by Bonux
@@ -45,19 +43,16 @@ public class AuthResponse extends ReceivablePacket
 	@Override
 	protected void readImpl()
 	{
-		int serverId = readC();
-		String serverName = readS();
-		if(!getByteBuffer().hasRemaining())
-		{
-			_servers = new ArrayList<ServerInfo>(1);
+		int serverId = readByte();
+		String serverName = readString();
+		if(availableData() <= 0) {
+			_servers = new ArrayList<>(1);
 			_servers.add(new ServerInfo(serverId, serverName));
-		}
-		else
-		{
-			int serversCount = readC();
-			_servers = new ArrayList<ServerInfo>(serversCount);
+		} else {
+			int serversCount = readByte();
+			_servers = new ArrayList<>(serversCount);
 			for(int i = 0; i < serversCount; i++)
-				_servers.add(new ServerInfo(readC(), readS()));
+				_servers.add(new ServerInfo(readByte(), readString()));
 		}
 	}
 

@@ -10,29 +10,29 @@ public class AuthRequest extends SendablePacket
 {
 	protected void writeImpl()
 	{
-		writeC(0x00);
-		writeD(GameServer.AUTH_SERVER_PROTOCOL);
-		writeC(Config.REQUEST_ID);
-		writeC(0x00); // ACCEPT_ALTERNATE_ID
-		writeD(Config.AUTH_SERVER_SERVER_TYPE);
-		writeC(Config.AUTH_SERVER_AGE_LIMIT);
-		writeC(Config.AUTH_SERVER_GM_ONLY ? 0x01 : 0x00);
-		writeC(Config.AUTH_SERVER_BRACKETS ? 0x01 : 0x00);
-		writeC(Config.AUTH_SERVER_IS_PVP ? 0x01 : 0x00);
-		writeS(Config.EXTERNAL_HOSTNAME);
-		writeS(Config.INTERNAL_HOSTNAME);
-		writeH(Config.PORT_GAME);
-		writeD(GameServer.getInstance().getOnlineLimit());
+		writeByte(0x00);
+		writeInt(GameServer.AUTH_SERVER_PROTOCOL);
+		writeByte(Config.REQUEST_ID);
+		writeByte(0x00); // ACCEPT_ALTERNATE_ID
+		writeInt(Config.AUTH_SERVER_SERVER_TYPE);
+		writeByte(Config.AUTH_SERVER_AGE_LIMIT);
+		writeByte(Config.AUTH_SERVER_GM_ONLY ? 0x01 : 0x00);
+		writeByte(Config.AUTH_SERVER_BRACKETS ? 0x01 : 0x00);
+		writeByte(Config.AUTH_SERVER_IS_PVP ? 0x01 : 0x00);
+		writeString(Config.EXTERNAL_HOSTNAME);
+		writeString(Config.INTERNAL_HOSTNAME);
+		writeShort(Config.PORT_GAME);
+		writeInt(GameServer.getInstance().getOnlineLimit());
 
 		HostInfo[] hosts = HostsConfigHolder.getInstance().getGameServerHosts();
-		writeC(hosts.length);
+		writeByte(hosts.length);
 		for(HostInfo host : hosts)
 		{
-			writeC(host.getId());
-			writeS(host.getIP());
-			writeS(host.getInnerIP());
-			writeH(host.getPort());
-			writeS(host.getKey());
+			writeByte(host.getId());
+			writeString(host.getIP());
+			writeString(host.getInnerIP());
+			writeShort(host.getPort());
+			writeString(host.getKey());
 		}
 	}
 }

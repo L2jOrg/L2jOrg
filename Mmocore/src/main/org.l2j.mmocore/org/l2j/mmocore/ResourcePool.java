@@ -6,30 +6,45 @@ import java.util.Map;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
+import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
 class ResourcePool {
 
-    private static final Map<Integer, Queue<ByteBuffer>> buffers = new HashMap<>();
+    static final int DEFAULT_BUFFER_SIZE = 4 * 1024;
 
-    static int bufferSize;
-    private static ConnectionConfig config;
+    private final Map<Integer, Queue<ByteBuffer>> buffers = new HashMap<>();
+    private final ConnectionConfig config;
 
-    static ByteBuffer getPooledBuffer() {
+    private ResourcePool(ConnectionConfig config) {
+        this.config = config;
+    }
+
+    ByteBuffer getPooledBuffer() {
         return getSizedBuffer(config.bufferDefaultSize);
     }
 
-    static ByteBuffer getPooledBuffer(int size) {
+    ByteBuffer getPooledBuffer(int size) {
         size = determineBufferSize(size);
         return getSizedBuffer(size);
     }
 
-    private static ByteBuffer getSizedBuffer(int size) {
-        ByteBuffer buffer = buffers.get(size).poll();
+    private ByteBuffer getSizedBuffer(int size) {
+        Queue<ByteBuffer> queue = queueFromSize(size);
+        ByteBuffer buffer = queue.poll();
         return nonNull(buffer) ? buffer : ByteBuffer.allocateDirect(size).order(config.byteOrder);
     }
 
-    private static int determineBufferSize(int size) {
+    private Queue<ByteBuffer> queueFromSize(int size) {
+        Queue<ByteBuffer> queue = buffers.get(size);
+        if(isNull(queue)) {
+            queue = new ConcurrentLinkedQueue<>();
+            buffers.put(size, queue);
+        }
+        return queue;
+    }
+
+    private int determineBufferSize(int size) {
         if(size <= config.bufferMinSize) {
             size = config.bufferMinSize;
         } else if( size <= config.bufferMediumSize) {
@@ -42,19 +57,19 @@ class ResourcePool {
         return size;
     }
 
-    static void recycleBuffer(ByteBuffer buffer) {
+    void recycleBuffer(ByteBuffer buffer) {
         if(nonNull(buffer)) {
             int size = buffer.capacity();
             int poolSize = determinePoolSize(size);
             Queue<ByteBuffer> queue = buffers.get(buffer.capacity());
-            if(queue.size() < poolSize) {
+            if(nonNull(queue) && queue.size() < poolSize) {
                 buffer.clear();
                 queue.add(buffer);
             }
         }
     }
 
-    private static int determinePoolSize(int size) {
+    private int determinePoolSize(int size) {
         int poolSize = config.bufferPoolSize;
         if(size == config.bufferMinSize) {
             poolSize = config.bufferMinPoolSize;
@@ -66,12 +81,8 @@ class ResourcePool {
         return poolSize;
     }
 
-    public static  void initialize(ConnectionConfig config) {
-        ResourcePool.config = config;
-        bufferSize = config.bufferDefaultSize;
-        buffers.put(config.bufferDefaultSize, new ConcurrentLinkedQueue<>());
-        buffers.put(config.bufferMinSize, new ConcurrentLinkedQueue<>());
-        buffers.put(config.bufferMediumSize, new ConcurrentLinkedQueue<>());
-        buffers.put(config.bufferLargeSize, new ConcurrentLinkedQueue<>());
+    static ResourcePool initialize(ConnectionConfig config) {
+        ResourcePool resourcePool = new ResourcePool(config);
+        return resourcePool;
     }
 }

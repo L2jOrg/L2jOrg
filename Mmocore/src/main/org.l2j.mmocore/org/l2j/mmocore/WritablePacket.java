@@ -3,7 +3,6 @@ package org.l2j.mmocore;
 import static java.lang.Double.doubleToRawLongBits;
 import static java.lang.Math.max;
 import static java.lang.System.arraycopy;
-import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
 public abstract class WritablePacket<T extends Client<Connection<T>>> extends AbstractPacket<T> {
@@ -213,7 +212,7 @@ public abstract class WritablePacket<T extends Client<Connection<T>>> extends Ab
 	private static byte pickByte(byte  le, byte  be) { return isBigEndian ? be : le; }
 
     protected int packetSize() {
-        return  ResourcePool.bufferSize;
+        return ResourcePool.DEFAULT_BUFFER_SIZE;
     }
 
 	protected abstract boolean write();

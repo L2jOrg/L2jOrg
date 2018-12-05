@@ -24,10 +24,11 @@ public final class ConnectionHandler<T extends Client<Connection<T>>> extends Th
     private final ConnectionConfig<T> config;
     private volatile boolean shutdown;
     private boolean cached;
+    private final ResourcePool resourcePool;
 
     ConnectionHandler(ConnectionConfig<T> config) throws IOException {
         this.config = config;
-        ResourcePool.initialize(config);
+        resourcePool = ResourcePool.initialize(config);
         group = createChannelGroup(config.threadPoolSize);
         listener = group.provider().openAsynchronousServerSocketChannel(group);
         listener.bind(config.address);
@@ -81,6 +82,7 @@ public final class ConnectionHandler<T extends Client<Connection<T>>> extends Th
                 channel.setOption(StandardSocketOptions.TCP_NODELAY, !config.useNagle);
                 Connection<T> connection = new Connection<>(channel, config.readHandler, config.writeHandler);
                 T client = config.clientFactory.create(connection);
+                client.setResourcePool(resourcePool);
                 connection.setClient(client);
                 client.onConnected();
                 connection.read();
