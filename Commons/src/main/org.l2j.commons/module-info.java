@@ -36,7 +36,6 @@ module org.l2j.commons {
     exports org.l2j.commons.lang;
     exports org.l2j.commons.listener;
     exports org.l2j.commons.threading;
-    exports org.l2j.commons.net.nio.impl;
     exports org.l2j.commons.dbutils;
     exports org.l2j.commons.lang.reference;
     exports org.l2j.commons.util.concurrent.atomic;
@@ -50,7 +49,6 @@ module org.l2j.commons {
     exports org.l2j.commons.annotations;
     exports org.l2j.commons.map.hash;
     exports org.l2j.commons.data.xml;
-    exports org.l2j.commons.net.nio;
     exports org.l2j.commons.text;
     exports org.l2j.commons.formats.dds;
     exports org.l2j.commons.dbcp;
