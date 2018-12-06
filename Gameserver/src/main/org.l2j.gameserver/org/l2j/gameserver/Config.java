@@ -1,48 +1,34 @@
 package org.l2j.gameserver;
 
-import gnu.trove.set.TIntSet;
-import gnu.trove.set.hash.TIntHashSet;
 import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.LineNumberReader;
-import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.StringTokenizer;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import javax.xml.parsers.DocumentBuilderFactory;
-
-import org.l2j.commons.time.cron.SchedulingPattern;
-import org.l2j.gameserver.model.base.AcquireType;
-import org.l2j.gameserver.utils.velocity.VelocityVariable;
-import org.l2j.commons.configuration.ExProperties;
-import org.l2j.commons.net.nio.impl.SelectorConfig;
-import org.l2j.commons.string.StringArrayUtils;
-import org.l2j.gameserver.data.htm.HtmCache;
-import org.l2j.gameserver.model.base.PlayerAccess;
-import org.l2j.gameserver.network.authcomm.ServerType;
-import org.l2j.gameserver.skills.AbnormalEffect;
-import org.l2j.gameserver.utils.Language;
-
+import gnu.trove.set.TIntSet;
+import gnu.trove.set.hash.TIntHashSet;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.apache.commons.lang3.reflect.FieldUtils;
+import org.l2j.commons.configuration.ExProperties;
+import org.l2j.commons.string.StringArrayUtils;
+import org.l2j.commons.time.cron.SchedulingPattern;
+import org.l2j.gameserver.data.htm.HtmCache;
+import org.l2j.gameserver.model.base.AcquireType;
+import org.l2j.gameserver.model.base.PlayerAccess;
+import org.l2j.gameserver.network.authcomm.ServerType;
+import org.l2j.gameserver.skills.AbnormalEffect;
+import org.l2j.gameserver.utils.Language;
+import org.l2j.gameserver.utils.velocity.VelocityVariable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
+
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.*;
+import java.lang.reflect.Field;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Config
 {
@@ -272,9 +258,6 @@ public class Config
 	public static int EXECUTOR_THREAD_POOL_SIZE;
 
 	public static boolean ENABLE_RUNNABLE_STATS;
-
-	/** Network settings */
-	public static SelectorConfig SELECTOR_CONFIG = new SelectorConfig();
 
 	public static boolean AUTO_LOOT;
 	public static boolean AUTO_LOOT_HERBS;
@@ -1520,13 +1503,6 @@ public class Config
 
 		ENABLE_RUNNABLE_STATS = serverSettings.getProperty("EnableRunnableStats", false);
 
-		SELECTOR_CONFIG.SLEEP_TIME = serverSettings.getProperty("SelectorSleepTime", 10L);
-		SELECTOR_CONFIG.INTEREST_DELAY = serverSettings.getProperty("InterestDelay", 30L);
-		SELECTOR_CONFIG.MAX_SEND_PER_PASS = serverSettings.getProperty("MaxSendPerPass", 32);
-		SELECTOR_CONFIG.READ_BUFFER_SIZE = serverSettings.getProperty("ReadBufferSize", 65536);
-		SELECTOR_CONFIG.WRITE_BUFFER_SIZE = serverSettings.getProperty("WriteBufferSize", 131072);
-		SELECTOR_CONFIG.HELPER_BUFFER_COUNT = serverSettings.getProperty("BufferPoolSize", 64);
-
 		CHAT_MESSAGE_MAX_LEN = serverSettings.getProperty("ChatMessageLimit", 1000);
 		ABUSEWORD_BANCHAT = serverSettings.getProperty("ABUSEWORD_BANCHAT", false);
 		int counter = 0;
@@ -1581,7 +1557,7 @@ public class Config
 
 		ALLOW_MONSTER_RACE = serverSettings.getProperty("AllowMonsterRace", false);
 
-		AVAILABLE_LANGUAGES = new HashSet<Language>();
+		AVAILABLE_LANGUAGES = new HashSet<>();
 		AVAILABLE_LANGUAGES.add(Language.ENGLISH);
 		AVAILABLE_LANGUAGES.add(Language.RUSSIAN);
 		AVAILABLE_LANGUAGES.add(DEFAULT_LANG);

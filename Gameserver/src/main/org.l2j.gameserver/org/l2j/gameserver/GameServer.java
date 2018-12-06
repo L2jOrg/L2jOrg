@@ -6,7 +6,6 @@ import net.sf.ehcache.CacheManager;
 import org.l2j.commons.lang.StatsUtils;
 import org.l2j.commons.listener.Listener;
 import org.l2j.commons.listener.ListenerList;
-import org.l2j.commons.net.nio.impl.SelectorStats;
 import org.l2j.gameserver.cache.CrestCache;
 import org.l2j.gameserver.cache.ImagesCache;
 import org.l2j.gameserver.config.templates.HostInfo;
@@ -71,8 +70,8 @@ import java.util.Properties;
 public class GameServer {
 
     private static final String LOG4J_CONFIGURATION_FILE = "log4j.configurationFile";
-    private static final String UPDATE_NAME = "Classic: Saviors (Zaken)";
 
+    public static final String UPDATE_NAME = "Classic: Saviors (Zaken)";
     public static boolean DEVELOP = false;
     public static final int AUTH_SERVER_PROTOCOL = 2;
 
@@ -81,7 +80,6 @@ public class GameServer {
 
     public static GameServer _instance;
 
-    private final SelectorStats _selectorStats = new SelectorStats();
     private String version;
 
     private final GameServerListenerList _listeners;
@@ -377,10 +375,6 @@ public class GameServer {
         } catch (Exception e) {
             _log.error(e.getLocalizedMessage(), e);
         }
-    }
-
-    public SelectorStats getSelectorStats() {
-        return _selectorStats;
     }
 
     public long getServerStartTime() {

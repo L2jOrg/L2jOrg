@@ -80,6 +80,9 @@ public class Connector<T extends Client<Connection<T>>>  {
         Connection<T> connection = new Connection<T>(channel, config.readHandler, new WriteHandler<>());
         T client = config.clientFactory.create(connection);
         client.setResourcePool(ResourcePool.initialize(config));
+        connection.setClient(client);
+        connection.read();
+        client.onConnected();
         return client;
     }
 

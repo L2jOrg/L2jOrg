@@ -1,6 +1,5 @@
 package org.l2j.gameserver.network.authcomm;
 
-import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.network.authcomm.gs2as.AuthRequest;
 import org.l2j.mmocore.Client;
 import org.l2j.mmocore.Connection;
@@ -17,12 +16,12 @@ class AuthServerClient extends Client<Connection<AuthServerClient>> {
 
     @Override
     public int encrypt(byte[] data, int offset, int size) {
-        return 0;
+        return size;
     }
 
     @Override
     public boolean decrypt(byte[] data, int offset, int size) {
-        return false;
+        return true;
     }
 
     @Override

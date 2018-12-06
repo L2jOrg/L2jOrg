@@ -37,7 +37,7 @@ public class AuthServer {
 
         var bindServerListen = gameServerListenHost().equals("*") ? new InetSocketAddress(gameServerListenPort()) : new InetSocketAddress(gameServerListenHost(), gameServerListenPort());
         var gameserverHandler = new GameServerPacketHandler();
-        serverConnectionHandler = ConnectionBuilder.create(bindServerListen, ServerClient::new, gameserverHandler, gameserverHandler).threadPoolSize(4).build();
+        serverConnectionHandler = ConnectionBuilder.create(bindServerListen, ServerClient::new, gameserverHandler, gameserverHandler).threadPoolSize(2).build();
         serverConnectionHandler.start();
         logger.info("Listening for GameServers on {} : {}", gameServerListenHost(), gameServerListenPort());
 
