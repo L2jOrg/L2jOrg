@@ -71,7 +71,7 @@ public final class CommunityBoard extends ScriptsCommunityHandler
 				ResultSet rset = null;
 				try
 				{
-					con = DatabaseFactory.getInstance().getConnection();
+					con = L2DatabaseFactory.getInstance().getConnection();
 					statement = con.prepareStatement("SELECT count(*) as cnt FROM `bbs_favorites` WHERE `object_id` = ?");
 					statement.setInt(1, player.getObjectId());
 					rset = statement.executeQuery();

@@ -1,19 +1,19 @@
 package org.l2j.gameserver.model.pledge;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.cache.CrestCache;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.s2c.L2GameServerPacket;
 import org.l2j.gameserver.tables.ClanTable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Alliance
 {
@@ -176,7 +176,7 @@ public class Alliance
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE ally_data SET leader_id=?,expelled_member=? WHERE ally_id=?");
 			statement.setInt(1, getLeaderId());
 			statement.setLong(2, getExpelledMemberTime() / 1000);
@@ -199,7 +199,7 @@ public class Alliance
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("INSERT INTO ally_data (ally_id,ally_name,leader_id) values (?,?,?)");
 			statement.setInt(1, getAllyId());
 			statement.setString(2, getAllyName());
@@ -228,7 +228,7 @@ public class Alliance
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE clan_data SET ally_id=? WHERE clan_id=?");
 			statement.setInt(1, getAllyId());
 			statement.setInt(2, member.getClanId());
@@ -250,7 +250,7 @@ public class Alliance
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE clan_data SET ally_id=0 WHERE clan_id=?");
 			statement.setInt(1, member.getClanId());
 			statement.execute();
@@ -277,7 +277,7 @@ public class Alliance
 		{
 			Clan member;
 
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT ally_name,leader_id FROM ally_data where ally_id=?");
 			statement.setInt(1, getAllyId());
 			rset = statement.executeQuery();

@@ -2,10 +2,10 @@ package org.l2j.gameserver.instancemanager.clansearch;
 
 import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.GameServer;
 import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.listener.actor.player.OnPlayerEnterListener;
 import org.l2j.gameserver.listener.game.OnShutdownListener;
 import org.l2j.gameserver.model.Player;
@@ -93,7 +93,7 @@ public class ClanSearchManager
 		ResultSet result = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(ClanSearchQueries.LOAD_CLANS);
 			result = statement.executeQuery();
 

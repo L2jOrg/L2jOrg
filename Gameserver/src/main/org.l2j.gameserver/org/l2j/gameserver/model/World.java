@@ -1,11 +1,5 @@
 package org.l2j.gameserver.model;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-
-import org.l2j.commons.collections.LazyArrayList;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.instancemanager.EventTriggersManager;
 import org.l2j.gameserver.model.Zone.ZoneType;
@@ -17,6 +11,11 @@ import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.MapUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Переработанный класс мира
@@ -324,7 +323,7 @@ public class World
 		int oid = object.getObjectId();
 		int rid = object.getReflectionId();
 
-		List<GameObject> result = new LazyArrayList<GameObject>(128);
+		List<GameObject> result = new ArrayList<>(128);
 
 		for(int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 			for(int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -355,7 +354,7 @@ public class World
 		int oz = object.getZ();
 		int sqrad = radius * radius;
 
-		List<GameObject> result = new LazyArrayList<GameObject>(128);
+		List<GameObject> result = new ArrayList<>(128);
 
 		for(int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 			for(int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -386,7 +385,7 @@ public class World
 		if(currentRegion == null)
 			return Collections.emptyList();
 
-		List<Creature> result = new LazyArrayList<Creature>(64);
+		List<Creature> result = new ArrayList<>(64);
 
 		for(int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 			for(int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -410,7 +409,7 @@ public class World
 		int oid = object.getObjectId();
 		int rid = object.getReflectionId();
 
-		List<Creature> result = new LazyArrayList<Creature>(64);
+		List<Creature> result = new ArrayList<>(64);
 
 		for(int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 			for(int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -446,7 +445,7 @@ public class World
 		int oz = loc.getZ();
 		int sqrad = radius * radius;
 
-		List<Creature> result = new LazyArrayList<Creature>(64);
+		List<Creature> result = new ArrayList<>(64);
 
 		for(int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 			for(int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -494,7 +493,7 @@ public class World
 		int oz = object.getZ();
 		int sqrad = radius * radius;
 
-		List<Creature> result = new LazyArrayList<Creature>(64);
+		List<Creature> result = new ArrayList<>(64);
 
 		for(int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 			for(int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -528,7 +527,7 @@ public class World
 		int oid = object.getObjectId();
 		int rid = object.getReflectionId();
 
-		List<NpcInstance> result = new LazyArrayList<NpcInstance>(64);
+		List<NpcInstance> result = new ArrayList<>(64);
 
 		for(int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 			for(int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -559,7 +558,7 @@ public class World
 		int oz = object.getZ();
 		int sqrad = radius * radius;
 
-		List<NpcInstance> result = new LazyArrayList<NpcInstance>(64);
+		List<NpcInstance> result = new ArrayList<>(64);
 
 		for(int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 			for(int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -599,7 +598,7 @@ public class World
 		int oz = loc.z;
 		int sqrad = radius * radius;
 
-		List<NpcInstance> result = new LazyArrayList<NpcInstance>(64);
+		List<NpcInstance> result = new ArrayList<>(64);
 
 		for(int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 			for(int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -633,7 +632,7 @@ public class World
 		int oid = object.getObjectId();
 		int rid = object.getReflectionId();
 
-		List<Playable> result = new LazyArrayList<Playable>(64);
+		List<Playable> result = new ArrayList<>(64);
 
 		for(int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 			for(int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -672,7 +671,7 @@ public class World
 		int oz = object.getZ();
 		int sqrad = radius * radius;
 
-		List<Playable> result = new LazyArrayList<Playable>(64);
+		List<Playable> result = new ArrayList<>(64);
 
 		for(int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 			for(int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -706,7 +705,7 @@ public class World
 		int oid = object.getObjectId();
 		int rid = object.getReflectionId();
 
-		List<Player> result = new LazyArrayList<Player>(64);
+		List<Player> result = new ArrayList<>(64);
 
 		for(int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 			for(int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -738,7 +737,7 @@ public class World
 		int oz = object.getZ();
 		int sqrad = radius * radius;
 
-		List<Player> result = new LazyArrayList<Player>(64);
+		List<Player> result = new ArrayList<>(64);
 
 		for(int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 			for(int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -775,7 +774,7 @@ public class World
 		if(currentRegion == null)
 			return Collections.emptyList();
 
-		final List<Player> result = new LazyArrayList<Player>(64);
+		final List<Player> result = new ArrayList<>(64);
 
 		final int x1 = validX(currentRegion.getX() + 1);
 		final int y0 = validY(currentRegion.getY() - 1);
@@ -813,7 +812,7 @@ public class World
 		final int oid = object.getObjectId();
 		final int rid = object.getReflectionId();
 
-		final List<Player> result = new LazyArrayList<Player>(64);
+		final List<Player> result = new ArrayList<>(64);
 
 		final int x1 = validX(currentRegion.getX() + 1);
 		final int y0 = validY(currentRegion.getY() - 1);

@@ -2,20 +2,18 @@ package org.l2j.gameserver.dao;
 
 import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
+import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.dbutils.DbUtils;
+import org.l2j.gameserver.data.xml.holder.ProductDataHolder;
+import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.model.actor.instances.player.ProductHistoryItem;
+import org.l2j.gameserver.templates.item.product.ProductItem;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
-import org.l2j.commons.dbutils.DbUtils;
-import org.l2j.gameserver.data.xml.holder.ProductDataHolder;
-import org.l2j.gameserver.database.DatabaseFactory;
-import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.model.actor.instances.player.ProductHistoryItem;
-import org.l2j.gameserver.templates.item.product.ProductItem;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * @author Bonux
@@ -40,7 +38,7 @@ public class CharacterProductHistoryDAO
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT product_id, last_purchase_time FROM character_product_history WHERE char_id = ?");
 			statement.setInt(1, owner.getObjectId());
 			rset = statement.executeQuery();
@@ -73,7 +71,7 @@ public class CharacterProductHistoryDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("REPLACE INTO character_product_history (char_id,product_id,last_purchase_time) VALUES(?,?,?)");
 			statement.setInt(1, owner.getObjectId());
 			statement.setInt(2, item.getProduct().getId());

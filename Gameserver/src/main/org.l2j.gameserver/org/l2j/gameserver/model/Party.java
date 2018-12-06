@@ -4,17 +4,7 @@ import gnu.trove.iterator.TIntObjectIterator;
 import gnu.trove.map.TIntIntMap;
 import gnu.trove.map.hash.TIntIntHashMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
-import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.concurrent.CopyOnWriteArraySet;
-import java.util.concurrent.Future;
-import java.util.concurrent.ScheduledFuture;
-
-import org.l2j.commons.collections.LazyArrayList;
+import org.l2j.commons.collections.CollectionUtils;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
@@ -31,30 +21,22 @@ import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.network.l2.components.CustomMessage;
 import org.l2j.gameserver.network.l2.components.IBroadcastPacket;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
-import org.l2j.gameserver.network.l2.s2c.ExAskModifyPartyLooting;
-import org.l2j.gameserver.network.l2.s2c.ExCloseMPCCPacket;
-import org.l2j.gameserver.network.l2.s2c.ExOpenMPCCPacket;
-import org.l2j.gameserver.network.l2.s2c.ExPartyPetWindowAdd;
-import org.l2j.gameserver.network.l2.s2c.ExPartyPetWindowDelete;
-import org.l2j.gameserver.network.l2.s2c.ExReplyHandOverPartyMaster;
-import org.l2j.gameserver.network.l2.s2c.ExSetPartyLooting;
-import org.l2j.gameserver.network.l2.s2c.ExTacticalSign;
-import org.l2j.gameserver.network.l2.s2c.GetItemPacket;
-import org.l2j.gameserver.network.l2.s2c.PartyMemberPositionPacket;
-import org.l2j.gameserver.network.l2.s2c.PartySmallWindowAddPacket;
-import org.l2j.gameserver.network.l2.s2c.PartySmallWindowAllPacket;
-import org.l2j.gameserver.network.l2.s2c.PartySmallWindowDeletePacket;
-import org.l2j.gameserver.network.l2.s2c.PartySmallWindowDeleteAllPacket;
-import org.l2j.gameserver.network.l2.s2c.PartySpelledPacket;
-import org.l2j.gameserver.network.l2.s2c.RelationChangedPacket;
-import org.l2j.gameserver.network.l2.s2c.SystemMessage;
-import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
+import org.l2j.gameserver.network.l2.s2c.*;
 import org.l2j.gameserver.network.l2.s2c.updatetype.NpcInfoType;
 import org.l2j.gameserver.taskmanager.LazyPrecisionTaskManager;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.Log;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.CopyOnWriteArraySet;
+import java.util.concurrent.Future;
+import java.util.concurrent.ScheduledFuture;
 
 public class Party implements PlayerGroup
 {
@@ -977,7 +959,7 @@ public class Party implements PlayerGroup
 		@Override
 		public void runImpl() throws Exception
 		{
-			LazyArrayList<Player> update = LazyArrayList.newInstance();
+			List<Player> update = CollectionUtils.pooledList();
 
 			for(Player member : _members)
 			{
@@ -1000,7 +982,7 @@ public class Party implements PlayerGroup
 						member.sendPacket(pmp);
 				}
 
-			LazyArrayList.recycle(update);
+			CollectionUtils.recycle(update);
 		}
 	}
 

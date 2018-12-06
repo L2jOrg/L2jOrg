@@ -2,14 +2,13 @@ package org.l2j.gameserver.idfactory;
 
 import gnu.trove.set.TIntSet;
 import gnu.trove.set.hash.TIntHashSet;
+import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.dbutils.DbUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.*;
 import java.util.Arrays;
-
-import org.l2j.commons.dbutils.DbUtils;
-import org.l2j.gameserver.database.DatabaseFactory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public abstract class IdFactory
 {
@@ -50,7 +49,7 @@ public abstract class IdFactory
 		Statement st = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			st = con.createStatement();
 			st.executeUpdate("UPDATE characters SET online = 0");
 			_log.info("IdFactory: Clear characters online status.");
@@ -75,7 +74,7 @@ public abstract class IdFactory
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT item_id FROM items_to_delete");
 			rset = statement.executeQuery();
 			while(rset.next())
@@ -104,7 +103,7 @@ public abstract class IdFactory
 		{
 			try
 			{
-				con = DatabaseFactory.getInstance().getConnection();
+				con = L2DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("DELETE FROM items WHERE item_id IN (?)");
 				statement.setString(1, itemsToDelete.toString());
 				statement.execute();
@@ -135,7 +134,7 @@ public abstract class IdFactory
 		{
 			long cleanupStart = System.currentTimeMillis();
 			int cleanCount = 0;
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			st = con.createStatement();
 
 			//
@@ -237,7 +236,7 @@ public abstract class IdFactory
 		ResultSet rs = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			st = con.createStatement();
 			for(String[] table : EXTRACT_OBJ_ID_TABLES)
 			{

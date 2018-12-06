@@ -1,20 +1,19 @@
 package org.l2j.gameserver.dao;
 
 import gnu.trove.map.TIntObjectMap;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.Collection;
-
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.data.xml.holder.DailyMissionsHolder;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.actor.instances.player.DailyMission;
 import org.l2j.gameserver.templates.dailymissions.DailyMissionTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Collection;
 
 public class CharacterDailyMissionsDAO
 {
@@ -38,7 +37,7 @@ public class CharacterDailyMissionsDAO
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_QUERY);
 			statement.setInt(1, owner.getObjectId());
 			rset = statement.executeQuery();
@@ -74,7 +73,7 @@ public class CharacterDailyMissionsDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(REPLACE_QUERY);
 			statement.setInt(1, owner.getObjectId());
 			for(DailyMission mission : missions)
@@ -104,7 +103,7 @@ public class CharacterDailyMissionsDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(REPLACE_QUERY);
 			statement.setInt(1, owner.getObjectId());
 			statement.setInt(2, mission.getId());
@@ -130,7 +129,7 @@ public class CharacterDailyMissionsDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(DELETE_QUERY);
 			statement.setInt(1, owner.getObjectId());
 			statement.setInt(2, missionId);

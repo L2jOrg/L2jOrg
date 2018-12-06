@@ -63,7 +63,7 @@ public class Repair extends ScriptVoiceCommandHandler
 			ResultSet rs = null;
 			try
 			{
-				con = DatabaseFactory.getInstance().getConnection();
+				con = L2DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("SELECT karma FROM characters WHERE obj_Id=?");
 				statement.setInt(1, objId);
 				statement.execute();

@@ -1,11 +1,9 @@
 package org.l2j.gameserver.model.instances;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.concurrent.Future;
-
+import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.l2j.commons.dao.JdbcEntityState;
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.commons.util.Rnd;
@@ -13,14 +11,9 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.holder.PetDataHolder;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.handler.items.IItemHandler;
 import org.l2j.gameserver.idfactory.IdFactory;
-import org.l2j.gameserver.model.Creature;
-import org.l2j.gameserver.model.GameObject;
-import org.l2j.gameserver.model.Party;
-import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.model.Servitor;
+import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.basestats.PetBaseStats;
 import org.l2j.gameserver.model.base.Experience;
 import org.l2j.gameserver.model.base.MountType;
@@ -30,11 +23,7 @@ import org.l2j.gameserver.model.items.PetInventory;
 import org.l2j.gameserver.model.items.attachment.FlagItemAttachment;
 import org.l2j.gameserver.network.l2.components.CustomMessage;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
-import org.l2j.gameserver.network.l2.s2c.ExChangeNPCState;
-import org.l2j.gameserver.network.l2.s2c.InventoryUpdatePacket;
-import org.l2j.gameserver.network.l2.s2c.SocialActionPacket;
-import org.l2j.gameserver.network.l2.s2c.SystemMessage;
-import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
+import org.l2j.gameserver.network.l2.s2c.*;
 import org.l2j.gameserver.skills.SkillEntry;
 import org.l2j.gameserver.skills.TimeStamp;
 import org.l2j.gameserver.stats.Stats;
@@ -45,10 +34,13 @@ import org.l2j.gameserver.templates.npc.NpcTemplate;
 import org.l2j.gameserver.templates.pet.PetData;
 import org.l2j.gameserver.templates.pet.PetSkillData;
 import org.l2j.gameserver.utils.ItemFunctions;
-import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.concurrent.Future;
 
 /**
  * @offlike completed by Bonux
@@ -118,7 +110,7 @@ public class PetInstance extends Servitor
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT objId, name, curHp, curMp, exp, sp, fed FROM pets WHERE item_obj_id=?");
 			statement.setInt(1, control.getObjectId());
 			rset = statement.executeQuery();
@@ -330,7 +322,7 @@ public class PetInstance extends Servitor
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("DELETE FROM pets WHERE item_obj_id=?");
 			statement.setInt(1, getControlItemObjId());
 			statement.execute();
@@ -656,7 +648,7 @@ public class PetInstance extends Servitor
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			String req;
 			if(!isRespawned())
 				req = "INSERT INTO pets (name,curHp,curMp,exp,sp,fed,objId,item_obj_id) VALUES (?,?,?,?,?,?,?,?)";

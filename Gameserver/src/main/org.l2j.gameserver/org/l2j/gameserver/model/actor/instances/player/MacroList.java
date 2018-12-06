@@ -1,22 +1,18 @@
 package org.l2j.gameserver.model.actor.instances.player;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.StringTokenizer;
-
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.actor.instances.player.Macro.L2MacroCmd;
 import org.l2j.gameserver.network.l2.s2c.MacroListPacket;
 import org.l2j.gameserver.utils.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.*;
 
 public class MacroList
 {
@@ -98,7 +94,7 @@ public class MacroList
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("REPLACE INTO character_macroses (char_obj_id,id,icon,name,descr,acronym,commands) values(?,?,?,?,?,?,?)");
 			statement.setInt(1, _owner.getObjectId());
 			statement.setInt(2, macro.id);
@@ -138,7 +134,7 @@ public class MacroList
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("DELETE FROM character_macroses WHERE char_obj_id=? AND id=?");
 			statement.setInt(1, _owner.getObjectId());
 			statement.setInt(2, macro.id);
@@ -162,7 +158,7 @@ public class MacroList
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT char_obj_id, id, icon, name, descr, acronym, commands FROM character_macroses WHERE char_obj_id=?");
 			statement.setInt(1, _owner.getObjectId());
 			rset = statement.executeQuery();

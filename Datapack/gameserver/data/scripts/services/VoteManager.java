@@ -175,7 +175,7 @@ public class VoteManager implements IVoicedCommandHandler, OnInitScriptListener
 		ResultSet rs = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			st = con.prepareStatement("SELECT * FROM vote");
 			rs = st.executeQuery();
 			while(rs.next())

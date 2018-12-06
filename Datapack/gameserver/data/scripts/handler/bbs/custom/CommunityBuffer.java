@@ -824,7 +824,7 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
         Connection con = null;
         PreparedStatement statement = null;
         try {
-            con = DatabaseFactory.getInstance().getConnection();
+            con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement("REPLACE INTO bbs_buffs (char_id,name,skills) VALUES (?,?,?)");
             statement.setInt(1, charId);
             statement.setString(2, setname);
@@ -841,7 +841,7 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
         Connection con = null;
         PreparedStatement statement = null;
         try {
-            con = DatabaseFactory.getInstance().getConnection();
+            con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement("DELETE FROM bbs_buffs WHERE char_id=? AND name=?");
             statement.setInt(1, charId);
             statement.setString(2, setname);
@@ -860,7 +860,7 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
         PreparedStatement statement = null;
         ResultSet rset = null;
         try {
-            con = DatabaseFactory.getInstance().getConnection();
+            con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement("SELECT name,skills FROM bbs_buffs WHERE char_id=? ORDER BY id");
             statement.setInt(1, charId);
             rset = statement.executeQuery();
@@ -892,7 +892,7 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
         Connection con = null;
         PreparedStatement statement = null;
         try {
-            con = DatabaseFactory.getInstance().getConnection();
+            con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement("DELETE FROM `bbs_buffs` WHERE char_id != 0 AND char_id NOT IN(SELECT obj_id FROM characters);");
             statement.executeUpdate();
         } catch (Exception e) {

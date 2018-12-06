@@ -2,17 +2,16 @@ package org.l2j.gameserver.dao;
 
 import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.actor.instances.player.Block;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 /**
  * @author Bonux
@@ -36,7 +35,7 @@ public class CharacterBlockListDAO
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT b.target_Id, b.memo, c.char_name FROM character_blocklist b LEFT JOIN characters c ON b.target_Id = c.obj_Id WHERE b.obj_Id = ?");
 			statement.setInt(1, owner.getObjectId());
 			rset = statement.executeQuery();
@@ -69,7 +68,7 @@ public class CharacterBlockListDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("REPLACE INTO character_blocklist (obj_Id,target_Id) VALUES(?,?)");
 			statement.setInt(1, owner.getObjectId());
 			statement.setInt(2, blockedObjectId);
@@ -91,7 +90,7 @@ public class CharacterBlockListDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("DELETE FROM character_blocklist WHERE obj_Id=? AND target_Id=?");
 			statement.setInt(1, owner.getObjectId());
 			statement.setInt(2, blockedObjectId);
@@ -113,7 +112,7 @@ public class CharacterBlockListDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE character_blocklist SET memo=? WHERE obj_Id=? AND target_Id=?");
 			statement.setString(1, memo);
 			statement.setInt(2, owner.getObjectId());

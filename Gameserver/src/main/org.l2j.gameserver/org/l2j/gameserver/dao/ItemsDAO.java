@@ -1,5 +1,18 @@
 package org.l2j.gameserver.dao;
 
+import net.sf.ehcache.Cache;
+import net.sf.ehcache.CacheManager;
+import net.sf.ehcache.Element;
+import org.l2j.commons.dao.JdbcDAO;
+import org.l2j.commons.dao.JdbcEntityState;
+import org.l2j.commons.dao.JdbcEntityStats;
+import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.dbutils.DbUtils;
+import org.l2j.gameserver.model.items.ItemInstance;
+import org.l2j.gameserver.model.items.ItemInstance.ItemLocation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -8,20 +21,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.concurrent.atomic.AtomicLong;
-
-import net.sf.ehcache.Cache;
-import net.sf.ehcache.CacheManager;
-import net.sf.ehcache.Element;
-
-import org.l2j.commons.dao.JdbcDAO;
-import org.l2j.commons.dao.JdbcEntityState;
-import org.l2j.commons.dao.JdbcEntityStats;
-import org.l2j.commons.dbutils.DbUtils;
-import org.l2j.gameserver.database.DatabaseFactory;
-import org.l2j.gameserver.model.items.ItemInstance;
-import org.l2j.gameserver.model.items.ItemInstance.ItemLocation;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 {
@@ -98,7 +97,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(RESTORE_ITEM);
 			statement.setInt(1, objectId);
 			rset = statement.executeQuery();
@@ -165,7 +164,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(STORE_ITEM);
 			save0(item, statement);
 			statement.execute();
@@ -189,7 +188,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(REMOVE_ITEM);
 			delete0(item, statement);
 			statement.execute();
@@ -226,7 +225,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(UPDATE_ITEM);
 			update0(item, statement);
 			statement.execute();
@@ -404,7 +403,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(RESTORE_OWNER_ITEMS);
 			statement.setInt(1, ownerId);
 			statement.setString(2, loc.name());
@@ -432,7 +431,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(INSERT_GLOBAL_REMOVE_ITEM);
 			statement.setInt(1, itemId);
 			statement.setString(2, description);

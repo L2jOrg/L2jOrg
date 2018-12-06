@@ -1,18 +1,17 @@
 package org.l2j.gameserver.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
-
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.model.pledge.ClanChangeLeaderRequest;
-
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 /**
  * @author VISTALL
@@ -41,7 +40,7 @@ public class ClanLeaderRequestDAO
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.createStatement();
 			rset = statement.executeQuery(SELECT_SQL);
 			while(rset.next())
@@ -69,7 +68,7 @@ public class ClanLeaderRequestDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(DELETE_SQL);
 			statement.setInt(1, changeLeaderRequest.getClanId());
 			statement.execute();
@@ -90,7 +89,7 @@ public class ClanLeaderRequestDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(INSERT_SQL);
 			statement.setInt(1, request.getClanId());
 			statement.setInt(2, request.getNewLeaderId());

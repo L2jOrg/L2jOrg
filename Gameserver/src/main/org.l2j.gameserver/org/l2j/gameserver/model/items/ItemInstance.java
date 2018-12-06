@@ -1,12 +1,6 @@
 package org.l2j.gameserver.model.items;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
-import java.util.concurrent.ScheduledFuture;
-
-import org.l2j.commons.collections.LazyArrayList;
+import org.l2j.commons.collections.CollectionUtils;
 import org.l2j.commons.dao.JdbcEntity;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.gameserver.Config;
@@ -18,11 +12,7 @@ import org.l2j.gameserver.data.xml.holder.ItemHolder;
 import org.l2j.gameserver.geodata.GeoEngine;
 import org.l2j.gameserver.handler.onshiftaction.OnShiftActionHolder;
 import org.l2j.gameserver.instancemanager.ReflectionManager;
-import org.l2j.gameserver.model.Creature;
-import org.l2j.gameserver.model.GameObject;
-import org.l2j.gameserver.model.GameObjectsStorage;
-import org.l2j.gameserver.model.Playable;
-import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.base.Element;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.items.attachment.ItemAttachment;
@@ -45,6 +35,12 @@ import org.l2j.gameserver.utils.Location;
 import org.napile.primitive.Containers;
 import org.napile.primitive.sets.IntSet;
 import org.napile.primitive.sets.impl.HashIntSet;
+
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.concurrent.ScheduledFuture;
 
 public final class ItemInstance extends GameObject implements JdbcEntity
 {
@@ -535,7 +531,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		Func[] result = Func.EMPTY_FUNC_ARRAY;
 
-		LazyArrayList<Func> funcs = LazyArrayList.newInstance();
+		List<Func> funcs = CollectionUtils.pooledList();
 
 		if(template.getAttachedFuncs().length > 0)
 			for(FuncTemplate t : template.getAttachedFuncs())
@@ -556,7 +552,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		if(!funcs.isEmpty())
 			result = funcs.toArray(new Func[funcs.size()]);
 
-		LazyArrayList.recycle(funcs);
+		CollectionUtils.recycle(funcs);
 
 		return result;
 	}

@@ -1,16 +1,10 @@
 package org.l2j.gameserver.instancemanager;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Announcements;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.NpcHolder;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.model.Spawner;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.instances.ReflectionBossInstance;
@@ -23,6 +17,8 @@ import org.napile.primitive.sets.IntSet;
 import org.napile.primitive.sets.impl.HashIntSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.*;
 
 public class RaidBossSpawnManager
 {
@@ -79,7 +75,7 @@ public class RaidBossSpawnManager
 
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			rset = con.createStatement().executeQuery("SELECT * FROM `raidboss_status`");
 			while(rset.next())
 			{
@@ -142,7 +138,7 @@ public class RaidBossSpawnManager
 
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("REPLACE INTO `raidboss_status` (id, current_hp, current_mp, death_time, respawn_delay) VALUES (?,?,?,?,?)");
 			statement.setInt(1, id);
 			statement.setDouble(2, info.getDouble("current_hp"));

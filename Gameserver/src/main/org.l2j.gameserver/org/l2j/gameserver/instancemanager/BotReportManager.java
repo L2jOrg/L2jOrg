@@ -1,10 +1,6 @@
 package org.l2j.gameserver.instancemanager;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.Collection;
-
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.commons.time.cron.SchedulingPattern;
@@ -12,7 +8,6 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.holder.BotReportPropertiesHolder;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.model.GameObject;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.pledge.Clan;
@@ -27,6 +22,11 @@ import org.napile.primitive.maps.impl.CHashIntObjectMap;
 import org.napile.primitive.maps.impl.HashIntLongMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Collection;
 
 public final class BotReportManager
 {
@@ -176,7 +176,7 @@ public final class BotReportManager
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SQL_LOAD_REPORTED_CHAR_DATA);
 			rset = statement.executeQuery();
 
@@ -226,7 +226,7 @@ public final class BotReportManager
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SQL_CLEAR_REPORTED_CHAR_DATA);
 			statement.execute();
 

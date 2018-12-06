@@ -1,9 +1,9 @@
 package org.l2j.gameserver.network.l2;
 
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.dao.CharacterDAO;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.model.CharSelectInfoPackage;
 import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
@@ -132,7 +132,7 @@ public final class GameClient extends Client<org.l2j.mmocore.Connection<GameClie
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE characters SET deletetime=0 WHERE obj_id=?");
 			statement.setInt(1, objid);
 			statement.execute();
@@ -161,7 +161,7 @@ public final class GameClient extends Client<org.l2j.mmocore.Connection<GameClie
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE characters SET deletetime=? WHERE obj_id=?");
 			statement.setLong(1, (int) (System.currentTimeMillis() / 1000L));
 			statement.setInt(2, objid);

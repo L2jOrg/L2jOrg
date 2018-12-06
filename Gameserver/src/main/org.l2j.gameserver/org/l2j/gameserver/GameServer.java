@@ -3,6 +3,7 @@ package org.l2j.gameserver;
 import gnu.trove.set.TIntSet;
 import gnu.trove.set.hash.TIntHashSet;
 import net.sf.ehcache.CacheManager;
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.lang.StatsUtils;
 import org.l2j.commons.listener.Listener;
 import org.l2j.commons.listener.ListenerList;
@@ -20,7 +21,6 @@ import org.l2j.gameserver.data.xml.Parsers;
 import org.l2j.gameserver.data.xml.holder.EventHolder;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.data.xml.holder.StaticObjectHolder;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.database.UpdatesInstaller;
 import org.l2j.gameserver.geodata.GeoEngine;
 import org.l2j.gameserver.handler.admincommands.AdminCommandHandler;
@@ -124,7 +124,7 @@ public class GameServer {
 
         // Initialize database
         Class.forName(Config.DATABASE_DRIVER).getDeclaredConstructor().newInstance();
-        DatabaseFactory.getInstance().getConnection().close();
+        L2DatabaseFactory.getInstance().getConnection().close();
 
         // TODO remove this
         UpdatesInstaller.checkAndInstall();

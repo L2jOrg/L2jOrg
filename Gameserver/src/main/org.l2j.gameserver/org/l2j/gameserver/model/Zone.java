@@ -1,14 +1,5 @@
 package org.l2j.gameserver.model;
 
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.Future;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReadWriteLock;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
-
-import org.l2j.commons.collections.LazyArrayList;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.listener.Listener;
 import org.l2j.commons.listener.ListenerList;
@@ -30,6 +21,15 @@ import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.PositionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.Future;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReadWriteLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class Zone extends EventOwner
 {
@@ -228,7 +228,7 @@ public class Zone extends EventOwner
 	private final Lock readLock = lock.readLock();
 	private final Lock writeLock = lock.writeLock();
 
-	private final List<Creature> _objects = new LazyArrayList<Creature>(32);
+	private final List<Creature> _objects = new ArrayList<>(32);
 	private final Map<Creature, ZoneTimer> _zoneTimers = new ConcurrentHashMap<Creature, ZoneTimer>();
 
 	/**
@@ -648,7 +648,7 @@ public class Zone extends EventOwner
 
 	public List<Player> getInsidePlayers()
 	{
-		List<Player> result = new LazyArrayList<Player>();
+		List<Player> result = new ArrayList<>();
 		readLock.lock();
 		try
 		{
@@ -666,7 +666,7 @@ public class Zone extends EventOwner
 
 	public List<Playable> getInsidePlayables()
 	{
-		List<Playable> result = new LazyArrayList<Playable>();
+		List<Playable> result = new ArrayList<>();
 		readLock.lock();
 		try
 		{
@@ -684,7 +684,7 @@ public class Zone extends EventOwner
 
 	public List<NpcInstance> getInsideNpcs()
 	{
-		List<NpcInstance> result = new LazyArrayList<NpcInstance>();
+		List<NpcInstance> result = new ArrayList<>();
 		readLock.lock();
 
 		try

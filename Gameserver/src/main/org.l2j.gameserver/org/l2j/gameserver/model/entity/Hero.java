@@ -1,29 +1,19 @@
 package org.l2j.gameserver.model.entity;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-
-import org.l2j.gameserver.dao.CustomHeroDAO;
-import org.l2j.gameserver.model.GameObjectsStorage;
-import org.l2j.gameserver.model.base.SubClassType;
-import org.l2j.gameserver.network.l2.components.HtmlMessage;
 import org.apache.commons.lang3.StringUtils;
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.dao.CustomHeroDAO;
 import org.l2j.gameserver.data.string.StringsHolder;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.database.mysql;
+import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.model.base.SubClassType;
 import org.l2j.gameserver.model.entity.olympiad.Olympiad;
 import org.l2j.gameserver.model.pledge.Alliance;
 import org.l2j.gameserver.model.pledge.Clan;
+import org.l2j.gameserver.network.l2.components.HtmlMessage;
 import org.l2j.gameserver.network.l2.s2c.SocialActionPacket;
 import org.l2j.gameserver.network.l2.s2c.SystemMessage;
 import org.l2j.gameserver.tables.ClanTable;
@@ -34,6 +24,16 @@ import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CHashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 public class Hero
 {
@@ -95,7 +95,7 @@ public class Hero
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(GET_HEROES);
 			statement.setInt(1, SubClassType.BASE_CLASS.ordinal());
 			rset = statement.executeQuery();
@@ -224,7 +224,7 @@ public class Hero
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("REPLACE INTO heroes (char_id, count, played, active) VALUES (?,?,?,?)");
 
 			for(int heroId : _heroes.keySet().toArray())
@@ -303,7 +303,7 @@ public class Hero
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT * FROM  heroes_diary WHERE charId=? ORDER BY time ASC");
 			statement.setInt(1, charId);
 			rset = statement.executeQuery();
@@ -418,7 +418,7 @@ public class Hero
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("INSERT INTO heroes_diary (charId, time, action, param) values(?,?,?,?)");
 			statement.setInt(1, charId);
 			statement.setLong(2, System.currentTimeMillis());
@@ -446,7 +446,7 @@ public class Hero
 		try
 		{
 			String message = null;
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT message FROM heroes WHERE char_id=?");
 			statement.setInt(1, charId);
 			rset = statement.executeQuery();
@@ -479,7 +479,7 @@ public class Hero
 
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE heroes SET message=? WHERE char_id=?;");
 			statement.setString(1, _heroMessage.get(charId));
 			statement.setInt(2, charId);

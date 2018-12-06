@@ -1,16 +1,15 @@
 package org.l2j.gameserver.dao;
 
+import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.dbutils.DbUtils;
+import org.l2j.gameserver.model.actor.instances.player.TrainingCamp;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Map;
-
-import org.l2j.commons.dbutils.DbUtils;
-import org.l2j.gameserver.database.DatabaseFactory;
-import org.l2j.gameserver.model.actor.instances.player.TrainingCamp;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * @author Bonux
@@ -33,7 +32,7 @@ public class CharacterTrainingCampDAO
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT * FROM character_training_camp");
 			rset = statement.executeQuery();
 			while(rset.next())
@@ -58,7 +57,7 @@ public class CharacterTrainingCampDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("REPLACE INTO character_training_camp (account_name,char_id,class_index,level,start_time,end_time) VALUES(?,?,?,?,?,?)");
 			statement.setString(1, account);
 			statement.setInt(2, trainingCamp.getObjectId());
@@ -86,7 +85,7 @@ public class CharacterTrainingCampDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("DELETE FROM character_training_camp WHERE account_name=?");
 			statement.setString(1, account);
 			statement.execute();

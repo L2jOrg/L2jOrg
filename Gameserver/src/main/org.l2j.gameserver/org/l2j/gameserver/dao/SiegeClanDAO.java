@@ -1,18 +1,18 @@
 package org.l2j.gameserver.dao;
 
+import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.dbutils.DbUtils;
+import org.l2j.gameserver.model.entity.events.objects.SiegeClanObject;
+import org.l2j.gameserver.model.entity.residence.Residence;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-import org.l2j.commons.dbutils.DbUtils;
-import org.l2j.gameserver.database.DatabaseFactory;
-import org.l2j.gameserver.model.entity.events.objects.SiegeClanObject;
-import org.l2j.gameserver.model.entity.residence.Residence;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * @author VISTALL
@@ -44,7 +44,7 @@ public class SiegeClanDAO
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_SQL_QUERY);
 			statement.setInt(1, residence.getId());
 			statement.setString(2, name);
@@ -79,7 +79,7 @@ public class SiegeClanDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(INSERT_SQL_QUERY);
 			statement.setInt(1, residence.getId());
 			statement.setInt(2, siegeClan.getObjectId());
@@ -104,7 +104,7 @@ public class SiegeClanDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(DELETE_SQL_QUERY);
 			statement.setInt(1, residence.getId());
 			statement.setInt(2, siegeClan.getObjectId());
@@ -127,7 +127,7 @@ public class SiegeClanDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(DELETE_SQL_QUERY2);
 			statement.setInt(1, residence.getId());
 			statement.execute();
@@ -148,7 +148,7 @@ public class SiegeClanDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(UPDATE_SQL_QUERY);
 			statement.setString(1, siegeClan.getType());
 			statement.setLong(2, siegeClan.getParam());

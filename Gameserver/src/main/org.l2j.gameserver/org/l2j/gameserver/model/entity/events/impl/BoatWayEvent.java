@@ -1,8 +1,5 @@
 package org.l2j.gameserver.model.entity.events.impl;
 
-import java.util.List;
-
-import org.l2j.commons.collections.LazyArrayList;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.BoatHolder;
@@ -16,6 +13,9 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.L2GameServerPacket;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.MapUtils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author VISTALL
@@ -147,7 +147,7 @@ public class BoatWayEvent extends Event
 	@Override
 	public List<Player> broadcastPlayers(int range)
 	{
-		List<Player> players = new LazyArrayList<Player>(64);
+		List<Player> players = new ArrayList<>(64);
 		if(range > 0)
 		{
 			for(Location loc : _broadcastPoints)

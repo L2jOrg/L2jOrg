@@ -1,21 +1,20 @@
 package org.l2j.gameserver.utils;
 
+import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.dbutils.DbUtils;
+import org.l2j.gameserver.dao.CharacterDAO;
+import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.network.l2.components.CustomMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-
-import org.l2j.commons.dbutils.DbUtils;
-import org.l2j.gameserver.dao.CharacterDAO;
-import org.l2j.gameserver.database.DatabaseFactory;
-import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.model.World;
-import org.l2j.gameserver.network.l2.components.CustomMessage;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public final class AutoBan
 {
@@ -30,7 +29,7 @@ public final class AutoBan
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT MAX(endban) AS endban FROM bans WHERE obj_Id=? AND endban IS NOT NULL");
 			statement.setInt(1, ObjectId);
 			rset = statement.executeQuery();
@@ -82,7 +81,7 @@ public final class AutoBan
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("INSERT INTO bans (account_name, obj_id, baned, unban, reason, GM, endban) VALUES(?,?,?,?,?,?,?)");
 			statement.setString(1, actor.getAccountName());
 			statement.setInt(2, actor.getObjectId());
@@ -116,7 +115,7 @@ public final class AutoBan
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE characters SET accesslevel=? WHERE obj_Id=?");
 			statement.setInt(1, acc_level);
 			statement.setInt(2, obj_id);
@@ -186,7 +185,7 @@ public final class AutoBan
 		{
 			String date = new SimpleDateFormat("yy.MM.dd H:mm:ss").format(new Date());
 			msg = "Add karma(" + karma + ") " + msg;
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("INSERT INTO bans (account_name, obj_id, baned, reason, GM) VALUES(?,?,?,?,?)");
 			statement.setString(1, actor.getAccountName());
 			statement.setInt(2, actor.getObjectId());
@@ -230,7 +229,7 @@ public final class AutoBan
 		else
 			try
 			{
-				con = DatabaseFactory.getInstance().getConnection();
+				con = L2DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("UPDATE characters SET nochannel = ? WHERE obj_Id=?");
 				statement.setLong(1, NoChannel > 0 ? NoChannel / 1000 : NoChannel);
 				statement.setInt(2, obj_id);
@@ -267,7 +266,7 @@ public final class AutoBan
 		else
 			try
 			{
-				con = DatabaseFactory.getInstance().getConnection();
+				con = L2DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("UPDATE characters SET nochannel = ? WHERE obj_Id=?");
 				statement.setLong(1, 0);
 				statement.setInt(2, obj_id);

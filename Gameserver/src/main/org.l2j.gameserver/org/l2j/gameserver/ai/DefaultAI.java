@@ -1,15 +1,6 @@
 package org.l2j.gameserver.ai;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
-import java.util.NavigableSet;
-import java.util.concurrent.ConcurrentSkipListSet;
-import java.util.concurrent.ScheduledFuture;
-
-import org.l2j.commons.collections.LazyArrayList;
+import org.l2j.commons.collections.CollectionUtils;
 import org.l2j.commons.lang.reference.HardReference;
 import org.l2j.commons.math.random.RndSelector;
 import org.l2j.commons.threading.RunnableImpl;
@@ -18,11 +9,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.geodata.GeoEngine;
 import org.l2j.gameserver.model.AggroList.AggroInfo;
-import org.l2j.gameserver.model.Creature;
-import org.l2j.gameserver.model.Playable;
-import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.model.Skill;
-import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.instances.DecoyInstance;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.quest.QuestEventType;
@@ -32,9 +19,12 @@ import org.l2j.gameserver.network.l2.s2c.StatusUpdatePacket;
 import org.l2j.gameserver.stats.Stats;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.NpcUtils;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.*;
+import java.util.concurrent.ConcurrentSkipListSet;
+import java.util.concurrent.ScheduledFuture;
 
 public class DefaultAI extends NpcAI
 {
@@ -1508,7 +1498,7 @@ public class DefaultAI extends NpcAI
 				target = null;
 				if(skill.isOffensive())
 				{
-					LazyArrayList<Creature> targets = LazyArrayList.newInstance();
+					List<Creature> targets = CollectionUtils.pooledList();
 					for(Creature cha : actor.getAggroList().getHateList(getMaxHateRange()))
 					{
 						if(!checkTarget(cha, skill.getAOECastRange() + 60) || !canUseSkill(skill, cha))
@@ -1517,7 +1507,7 @@ public class DefaultAI extends NpcAI
 					}
 					if(!targets.isEmpty())
 						target = targets.get(Rnd.get(targets.size()));
-					LazyArrayList.recycle(targets);
+					CollectionUtils.recycle(targets);
 				}
 			}
 
@@ -1536,7 +1526,7 @@ public class DefaultAI extends NpcAI
 		if(actor.isMovementDisabled() && distance > actor.getPhysicalAttackRange() + 40)
 		{
 			target = null;
-			LazyArrayList<Creature> targets = LazyArrayList.newInstance();
+			List<Creature> targets = CollectionUtils.pooledList();
 			for(Creature cha : actor.getAggroList().getHateList(getMaxHateRange()))
 			{
 				if(!checkTarget(cha, actor.getPhysicalAttackRange() + 40))
@@ -1545,7 +1535,7 @@ public class DefaultAI extends NpcAI
 			}
 			if(!targets.isEmpty())
 				target = targets.get(Rnd.get(targets.size()));
-			LazyArrayList.recycle(targets);
+			CollectionUtils.recycle(targets);
 		}
 
 		if(target == null)
@@ -1646,7 +1636,7 @@ public class DefaultAI extends NpcAI
 		if(actor.getFaction().isNone())
 			return Collections.emptyList();
 		final int range = actor.getFaction().getRange();
-		List<NpcInstance> npcFriends = new LazyArrayList<NpcInstance>();
+		List<NpcInstance> npcFriends = new ArrayList<>();
 		for(NpcInstance npc : World.getAroundNpc(actor))
 		{
 			if(!npc.isDead())

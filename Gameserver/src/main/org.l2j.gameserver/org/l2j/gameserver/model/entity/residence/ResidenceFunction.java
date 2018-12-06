@@ -1,15 +1,15 @@
 package org.l2j.gameserver.model.entity.residence;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.util.Calendar;
-
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.model.base.ResidenceFunctionType;
 import org.l2j.gameserver.templates.residence.ResidenceFunctionTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.Calendar;
 
 public class ResidenceFunction
 {
@@ -80,7 +80,7 @@ public class ResidenceFunction
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement("UPDATE residence_functions SET end_time=?, in_debt=? WHERE residence_id=? AND type=? AND level=?");
 			statement.setInt(1, (int) (getEndTimeInMillis() / 1000));
 			statement.setInt(2, inDebt ? 1 : 0);

@@ -1,19 +1,19 @@
 package org.l2j.gameserver.model.actor.instances.player;
 
+import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.dbutils.DbUtils;
+import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.components.SystemMsg;
+import org.l2j.gameserver.network.l2.s2c.ShortCutInitPacket;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
-import org.l2j.commons.dbutils.DbUtils;
-import org.l2j.gameserver.database.DatabaseFactory;
-import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.network.l2.components.SystemMsg;
-import org.l2j.gameserver.network.l2.s2c.ShortCutInitPacket;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class ShortCutList
 {
@@ -71,7 +71,7 @@ public class ShortCutList
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("REPLACE INTO character_shortcuts SET object_id=?,slot=?,page=?,type=?,shortcut_id=?,level=?,character_type=?,class_index=?");
 			statement.setInt(1, player.getObjectId());
 			statement.setInt(2, shortcut.getSlot());
@@ -102,7 +102,7 @@ public class ShortCutList
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("DELETE FROM character_shortcuts WHERE object_id=? AND slot=? AND page=? AND class_index=?");
 			statement.setInt(1, player.getObjectId());
 			statement.setInt(2, shortcut.getSlot());
@@ -170,7 +170,7 @@ public class ShortCutList
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT character_type, slot, page, type, shortcut_id, level FROM character_shortcuts WHERE object_id=? AND class_index=?");
 			statement.setInt(1, player.getObjectId());
 			statement.setInt(2, player.getActiveClassId());

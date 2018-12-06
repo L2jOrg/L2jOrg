@@ -1,19 +1,19 @@
 package org.l2j.gameserver.dao;
 
+import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.dbutils.DbUtils;
+import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.model.actor.instances.player.SubClass;
+import org.l2j.gameserver.model.base.SubClassType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.l2j.commons.dbutils.DbUtils;
-import org.l2j.gameserver.database.DatabaseFactory;
-import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.model.actor.instances.player.SubClass;
-import org.l2j.gameserver.model.base.SubClassType;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class CharacterSubclassDAO
 {
@@ -34,7 +34,7 @@ public class CharacterSubclassDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(INSERT_SQL_QUERY);
 			statement.setInt(1, objId);
 			statement.setInt(2, classId);
@@ -72,7 +72,7 @@ public class CharacterSubclassDAO
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_SQL_QUERY);
 			statement.setInt(1, player.getObjectId());
 			rset = statement.executeQuery();
@@ -108,7 +108,7 @@ public class CharacterSubclassDAO
 		Statement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.createStatement();
 
 			StringBuilder sb;

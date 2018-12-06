@@ -1,16 +1,16 @@
 package org.l2j.gameserver.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.data.xml.holder.EnsoulHolder;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.templates.item.support.Ensoul;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 /**
  * @author Bonux
@@ -38,7 +38,7 @@ public class ItemsEnsoulDAO
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(RESTORE_ITEM_ENSOUL);
 			statement.setInt(1, item.getObjectId());
 			rset = statement.executeQuery();
@@ -78,7 +78,7 @@ public class ItemsEnsoulDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(REMOVE_ITEM_ENSOUL);
 			statement.setInt(1, objectId);
 			statement.setInt(2, type);
@@ -101,7 +101,7 @@ public class ItemsEnsoulDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(DELETE_ITEM_ENSOUL);
 			statement.setInt(1, objectId);
 			statement.execute();
@@ -122,7 +122,7 @@ public class ItemsEnsoulDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(STORE_ITEM_ENSOUL);
 			statement.setInt(1, objectId);
 			statement.setInt(2, type);

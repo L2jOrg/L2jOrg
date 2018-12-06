@@ -1,14 +1,14 @@
 package org.l2j.gameserver.model.pledge;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-
 import org.l2j.commons.dao.JdbcEntity;
 import org.l2j.commons.dao.JdbcEntityState;
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 
 public class PledgeHuntingProgress implements JdbcEntity
 {
@@ -65,7 +65,7 @@ public class PledgeHuntingProgress implements JdbcEntity
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE clan_data SET hunting_progress=? WHERE clan_id=?");
 			statement.setInt(1, getValue());
 			statement.setInt(2, clanId);

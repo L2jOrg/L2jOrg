@@ -10,12 +10,10 @@ module org.l2j.commons {
     requires spring.jdbc;
     requires java.xml.bind;
     requires java.management;
-    requires commons.pool;
     requires java.compiler;
     requires commons.math3;
     requires commons.io;
     requires dom4j;
-    requires commons.dbcp;
     requires ecj;
     requires commons.lang3;
     requires trove;
@@ -51,5 +49,4 @@ module org.l2j.commons {
     exports org.l2j.commons.data.xml;
     exports org.l2j.commons.text;
     exports org.l2j.commons.formats.dds;
-    exports org.l2j.commons.dbcp;
 }

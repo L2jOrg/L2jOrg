@@ -1,13 +1,8 @@
 package org.l2j.gameserver.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.model.entity.Hero;
-
 import org.napile.pair.primitive.IntIntPair;
 import org.napile.primitive.maps.IntIntMap;
 import org.napile.primitive.maps.impl.HashIntIntMap;
@@ -15,6 +10,10 @@ import org.napile.primitive.sets.IntSet;
 import org.napile.primitive.sets.impl.HashIntSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 /**
  * @author Iqman
@@ -44,7 +43,7 @@ public class CustomHeroDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("DELETE FROM custom_heroes WHERE time > 0 AND time < ?");
 			statement.setInt(1, (int) (System.currentTimeMillis() / 1000L));
 			statement.execute();
@@ -66,7 +65,7 @@ public class CustomHeroDAO
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT * FROM custom_heroes");
 			rset = statement.executeQuery();
 			while(rset.next())
@@ -94,7 +93,7 @@ public class CustomHeroDAO
 		PreparedStatement statement = null;			
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("REPLACE INTO custom_heroes (hero_id, time) VALUES(?,?)");
 			statement.setInt(1, objectId);	
 			statement.setInt(2, time);		
@@ -120,7 +119,7 @@ public class CustomHeroDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("DELETE FROM custom_heroes WHERE hero_id =?");
 			statement.setInt(1, objectId);
 			statement.execute();

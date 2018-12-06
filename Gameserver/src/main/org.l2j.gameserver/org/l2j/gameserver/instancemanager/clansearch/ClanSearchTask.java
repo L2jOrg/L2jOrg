@@ -6,20 +6,18 @@ import gnu.trove.map.TIntLongMap;
 import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntLongHashMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
+import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.dbutils.DbUtils;
+import org.l2j.commons.threading.RunnableImpl;
+import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.gameserver.model.clansearch.ClanSearchClan;
+import org.l2j.gameserver.model.clansearch.ClanSearchPlayer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
-import org.l2j.commons.dbutils.DbUtils;
-import org.l2j.commons.threading.RunnableImpl;
-import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.database.DatabaseFactory;
-import org.l2j.gameserver.model.clansearch.ClanSearchClan;
-import org.l2j.gameserver.model.clansearch.ClanSearchPlayer;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * @author GodWorld
@@ -78,7 +76,7 @@ public class ClanSearchTask extends RunnableImpl
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			for(ClanSearchClan csClan : _newClans.valueCollection())
 			{
 				statement = con.prepareStatement(ClanSearchQueries.ADD_CLAN);

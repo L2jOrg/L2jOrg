@@ -411,7 +411,7 @@ public class CommunityStatistic extends ScriptsCommunityHandler
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT c.obj_Id, c.char_name, c.pkkills, c.pvpkills, c.onlinetime, cs.exp FROM characters AS c LEFT JOIN character_subclasses AS cs ON c.obj_Id=cs.char_obj_id AND cs.type=" + SubClassType.BASE_CLASS.ordinal());
 			rset = statement.executeQuery();
 			while(rset.next())

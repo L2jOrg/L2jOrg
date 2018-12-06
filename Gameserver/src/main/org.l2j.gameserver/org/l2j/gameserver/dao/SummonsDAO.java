@@ -1,20 +1,20 @@
 package org.l2j.gameserver.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
-
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.instances.SummonInstance;
 import org.l2j.gameserver.model.instances.SummonInstance.RestoredSummon;
 import org.l2j.gameserver.utils.SqlBatch;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Bonux
@@ -43,7 +43,7 @@ public class SummonsDAO
 		try
 		{
 			int objectId = player.getObjectId();
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT `skill_id`,`skill_level`,`curHp`,`curMp`,`time` FROM `character_summons_save` WHERE `owner_obj_id`=?");
 			statement.setInt(1, objectId);
 			rset = statement.executeQuery();
@@ -89,7 +89,7 @@ public class SummonsDAO
 		Statement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.createStatement();
 
 			SqlBatch b = new SqlBatch("INSERT IGNORE INTO `character_summons_save` (`owner_obj_id`,`skill_id`,`skill_level`,`curHp`,`curMp`,`time`) VALUES");

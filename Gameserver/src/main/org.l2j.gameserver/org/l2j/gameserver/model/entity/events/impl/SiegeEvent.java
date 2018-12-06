@@ -1,11 +1,5 @@
 package org.l2j.gameserver.model.entity.events.impl;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
-import java.util.Map;
-
-import org.l2j.commons.collections.LazyArrayList;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.lang.reference.HardReference;
@@ -40,6 +34,11 @@ import org.napile.primitive.maps.IntLongMap;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CHashIntLongMap;
 import org.napile.primitive.maps.impl.CHashIntObjectMap;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author VISTALL
@@ -294,7 +293,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	public List<Player> getPlayersInZone()
 	{
 		List<ZoneObject> zones = getObjects(SIEGE_ZONES);
-		List<Player> result = new LazyArrayList<Player>();
+		List<Player> result = new ArrayList<>();
 		for(ZoneObject zone : zones)
 			result.addAll(zone.getInsidePlayers());
 		return result;
@@ -610,7 +609,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	{
 		List<Player> playersInZone = getPlayersInZone();
 
-		List<Player> list = new LazyArrayList<Player>(playersInZone.size());
+		List<Player> list = new ArrayList<>(playersInZone.size());
 		for(Player player : getPlayersInZone())
 		{
 			if(player.containsEvent(this))

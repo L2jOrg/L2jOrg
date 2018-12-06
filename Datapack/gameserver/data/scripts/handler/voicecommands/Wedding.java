@@ -225,7 +225,7 @@ public class Wedding extends ScriptVoiceCommandHandler
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 
 			statement = con.prepareStatement("SELECT friend_id FROM character_friends WHERE char_id=?");
 			statement.setInt(1, ptarget.getObjectId());

@@ -1,14 +1,10 @@
 package org.l2j.gameserver.taskmanager;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInstance;
@@ -18,9 +14,12 @@ import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.Log;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class DelayedItemsManager extends RunnableImpl
 {
@@ -42,7 +41,7 @@ public class DelayedItemsManager extends RunnableImpl
 		Connection con = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			last_payment_id = get_last_payment_id(con);
 		}
 		catch(Exception e)
@@ -90,7 +89,7 @@ public class DelayedItemsManager extends RunnableImpl
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			int last_payment_id_temp = get_last_payment_id(con);
 			if(last_payment_id_temp != last_payment_id)
 				synchronized (_lock)
@@ -122,7 +121,7 @@ public class DelayedItemsManager extends RunnableImpl
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("INSERT INTO items_delayed (owner_id, item_id, count, enchant_level, description) VALUES (?, ?, ?, ?, ?)");
 			statement.setInt(1, objectId);
 			statement.setInt(2, itemId);
@@ -159,7 +158,7 @@ public class DelayedItemsManager extends RunnableImpl
 		{
 			try
 			{
-				con = DatabaseFactory.getInstance().getConnection();
+				con = L2DatabaseFactory.getInstance().getConnection();
 				st = con.prepareStatement("SELECT * FROM items_delayed WHERE owner_id=? AND payment_status=0");
 				st.setInt(1, player_id);
 				rset = st.executeQuery();

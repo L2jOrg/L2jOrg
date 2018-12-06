@@ -1,30 +1,11 @@
 package org.l2j.gameserver.model;
 
-import static org.l2j.gameserver.network.l2.s2c.ExSetCompassZoneCode.ZONE_ALTERED_FLAG;
-import static org.l2j.gameserver.network.l2.s2c.ExSetCompassZoneCode.ZONE_PEACE_FLAG;
-import static org.l2j.gameserver.network.l2.s2c.ExSetCompassZoneCode.ZONE_PVP_FLAG;
-import static org.l2j.gameserver.network.l2.s2c.ExSetCompassZoneCode.ZONE_SIEGE_FLAG;
-import static org.l2j.gameserver.network.l2.s2c.ExSetCompassZoneCode.ZONE_SSQ_FLAG;
-
-import java.awt.*;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.*;
-import java.util.List;
-import java.util.concurrent.*;
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
-
 import gnu.trove.iterator.TIntLongIterator;
 import gnu.trove.map.TIntLongMap;
-import gnu.trove.map.hash.TIntLongHashMap;
-
-import org.l2j.commons.collections.LazyArrayList;
+import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.math.NumberUtils;
+import org.l2j.commons.collections.CollectionUtils;
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.lang.reference.HardReference;
 import org.l2j.commons.lang.reference.HardReferences;
@@ -40,7 +21,6 @@ import org.l2j.gameserver.ai.PlayerAI;
 import org.l2j.gameserver.dao.*;
 import org.l2j.gameserver.data.QuestHolder;
 import org.l2j.gameserver.data.xml.holder.*;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.database.mysql;
 import org.l2j.gameserver.handler.items.IItemHandler;
 import org.l2j.gameserver.handler.onshiftaction.OnShiftActionHolder;
@@ -55,20 +35,14 @@ import org.l2j.gameserver.listener.actor.player.impl.ReviveAnswerListener;
 import org.l2j.gameserver.listener.actor.player.impl.SummonAnswerListener;
 import org.l2j.gameserver.listener.hooks.ListenerHook;
 import org.l2j.gameserver.listener.hooks.ListenerHookType;
-import org.l2j.gameserver.model.GameObjectTasks.EndSitDownTask;
-import org.l2j.gameserver.model.GameObjectTasks.EndStandUpTask;
-import org.l2j.gameserver.model.GameObjectTasks.HourlyTask;
-import org.l2j.gameserver.model.GameObjectTasks.KickTask;
-import org.l2j.gameserver.model.GameObjectTasks.PvPFlagTask;
-import org.l2j.gameserver.model.GameObjectTasks.UnJailTask;
-import org.l2j.gameserver.model.GameObjectTasks.WaterTask;
+import org.l2j.gameserver.model.GameObjectTasks.*;
 import org.l2j.gameserver.model.Request.L2RequestType;
 import org.l2j.gameserver.model.Zone.ZoneType;
 import org.l2j.gameserver.model.actor.basestats.PlayerBaseStats;
 import org.l2j.gameserver.model.actor.flags.PlayerFlags;
 import org.l2j.gameserver.model.actor.instances.creature.Abnormal;
-import org.l2j.gameserver.model.actor.instances.player.*;
 import org.l2j.gameserver.model.actor.instances.player.FriendList;
+import org.l2j.gameserver.model.actor.instances.player.*;
 import org.l2j.gameserver.model.actor.instances.player.tasks.EnableUserRelationTask;
 import org.l2j.gameserver.model.actor.listener.PlayerListenerList;
 import org.l2j.gameserver.model.actor.recorder.PlayerStatsChangeRecorder;
@@ -87,29 +61,13 @@ import org.l2j.gameserver.model.entity.residence.ResidenceSide;
 import org.l2j.gameserver.model.instances.*;
 import org.l2j.gameserver.model.instances.SummonInstance.RestoredSummon;
 import org.l2j.gameserver.model.instances.residences.SiegeToggleNpcInstance;
-import org.l2j.gameserver.model.items.Inventory;
-import org.l2j.gameserver.model.items.ItemContainer;
-import org.l2j.gameserver.model.items.ItemInstance;
-import org.l2j.gameserver.model.items.LockType;
-import org.l2j.gameserver.model.items.ManufactureItem;
-import org.l2j.gameserver.model.items.PcFreight;
-import org.l2j.gameserver.model.items.PcInventory;
-import org.l2j.gameserver.model.items.PcRefund;
-import org.l2j.gameserver.model.items.PcWarehouse;
-import org.l2j.gameserver.model.items.TradeItem;
-import org.l2j.gameserver.model.items.Warehouse;
+import org.l2j.gameserver.model.items.*;
 import org.l2j.gameserver.model.items.Warehouse.WarehouseType;
 import org.l2j.gameserver.model.items.attachment.FlagItemAttachment;
 import org.l2j.gameserver.model.items.attachment.PickableAttachment;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.model.petition.PetitionMainGroup;
-import org.l2j.gameserver.model.pledge.Alliance;
-import org.l2j.gameserver.model.pledge.Clan;
-import org.l2j.gameserver.model.pledge.ClanWar;
-import org.l2j.gameserver.model.pledge.Privilege;
-import org.l2j.gameserver.model.pledge.RankPrivs;
-import org.l2j.gameserver.model.pledge.SubUnit;
-import org.l2j.gameserver.model.pledge.UnitMember;
+import org.l2j.gameserver.model.pledge.*;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestEventType;
 import org.l2j.gameserver.model.quest.QuestState;
@@ -148,9 +106,6 @@ import org.l2j.gameserver.templates.player.PlayerTemplate;
 import org.l2j.gameserver.templates.player.transform.TransformTemplate;
 import org.l2j.gameserver.templates.premiumaccount.PremiumAccountTemplate;
 import org.l2j.gameserver.utils.*;
-
-import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.math.NumberUtils;
 import org.napile.pair.primitive.IntObjectPair;
 import org.napile.pair.primitive.impl.IntObjectPairImpl;
 import org.napile.primitive.Containers;
@@ -160,6 +115,18 @@ import org.napile.primitive.maps.impl.CTreeIntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.awt.*;
+import java.sql.*;
+import java.util.List;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+import static org.l2j.gameserver.network.l2.s2c.ExSetCompassZoneCode.*;
 
 public final class Player extends Playable implements PlayerGroup
 {
@@ -3435,8 +3402,8 @@ public final class Player extends Playable implements PlayerGroup
 					dropWeaponCount++;
 			}
 
-		List<ItemInstance> drop = new LazyArrayList<ItemInstance>(), // общий массив с результатами выбора
-			dropItem = new LazyArrayList<ItemInstance>(), dropEquip = new LazyArrayList<ItemInstance>(), dropWeapon = new LazyArrayList<ItemInstance>(); // временные
+		List<ItemInstance> drop = new ArrayList<>(), // общий массив с результатами выбора
+			dropItem = new ArrayList<>(), dropEquip = new ArrayList<>(), dropWeapon = new ArrayList<>(); // временные
 
 		getInventory().writeLock();
 		try
@@ -4456,7 +4423,7 @@ public final class Player extends Playable implements PlayerGroup
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE characters SET online=?, lastAccess=? WHERE obj_id=?");
 			statement.setInt(1, isOnline() && !isInOfflineMode() ? 1 : 0);
 			statement.setLong(2, System.currentTimeMillis() / 1000L);
@@ -4568,7 +4535,7 @@ public final class Player extends Playable implements PlayerGroup
 		try
 		{
 			// Retrieve the L2Player from the characters table of the database
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.createStatement();
 			statement2 = con.createStatement();
 			rset = statement.executeQuery("SELECT * FROM `characters` WHERE `obj_Id`=" + objectId + " LIMIT 1");
@@ -4822,7 +4789,7 @@ public final class Player extends Playable implements PlayerGroup
 
 				//if(!player.isGM())
 				{
-					LazyArrayList<Zone> zones = LazyArrayList.newInstance();
+					List<Zone> zones = CollectionUtils.pooledList();
 
 					World.getZones(zones, player.getLoc(), player.getReflection());
 
@@ -4848,7 +4815,7 @@ public final class Player extends Playable implements PlayerGroup
 								}
 							}
 
-					LazyArrayList.recycle(zones);
+					CollectionUtils.recycle(zones);
 				}
 
 				player.getMacroses().restore();
@@ -4895,7 +4862,7 @@ public final class Player extends Playable implements PlayerGroup
 			PreparedStatement statement = null;
 			try
 			{
-				con = DatabaseFactory.getInstance().getConnection();
+				con = L2DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement(//
 				"UPDATE characters SET face=?,beautyFace=?,hairStyle=?,beautyHairStyle=?,hairColor=?,beautyHairColor=?,sex=?,x=?,y=?,z=?" + //
 				",karma=?,pvpkills=?,pkkills=?,rec_have=?,rec_left=?,clanid=?,deletetime=?," + //
@@ -5030,7 +4997,7 @@ public final class Player extends Playable implements PlayerGroup
 			try
 			{
 				// Remove or update a L2Player skill from the character_skills table of the database
-				con = DatabaseFactory.getInstance().getConnection();
+				con = L2DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("DELETE FROM character_skills WHERE skill_id=? AND char_obj_id=? AND (class_index=? OR class_index=-1 OR class_index=-2)");
 				statement.setInt(1, oldSkillEntry.getId());
 				statement.setInt(2, getObjectId());
@@ -5065,7 +5032,7 @@ public final class Player extends Playable implements PlayerGroup
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 
 			statement = con.prepareStatement("REPLACE INTO character_skills (char_obj_id,skill_id,skill_level,class_index) values(?,?,?,?)");
 			statement.setInt(1, getObjectId());
@@ -5093,7 +5060,7 @@ public final class Player extends Playable implements PlayerGroup
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT skill_id,skill_level FROM character_skills WHERE char_obj_id=? AND (class_index=? OR class_index=-1 OR class_index=-2)");
 			statement.setInt(1, getObjectId());
 			statement.setInt(2, getActiveClassId());
@@ -5149,7 +5116,7 @@ public final class Player extends Playable implements PlayerGroup
 		Statement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.createStatement();
 			statement.executeUpdate("DELETE FROM character_skills_save WHERE char_obj_id = " + getObjectId() + " AND class_index=" + getActiveClassId() + " AND `end_time` < " + System.currentTimeMillis());
 
@@ -5197,7 +5164,7 @@ public final class Player extends Playable implements PlayerGroup
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.createStatement();
 			rset = statement.executeQuery("SELECT skill_id,skill_level,end_time,reuse_delay_org FROM character_skills_save WHERE char_obj_id=" + getObjectId() + " AND class_index=" + getActiveClassId());
 			while(rset.next())
@@ -6853,7 +6820,7 @@ public final class Player extends Playable implements PlayerGroup
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 
 			final String stmt = "UPDATE characters SET nochannel = ? WHERE obj_Id=?";
 			statement = con.prepareStatement(stmt);
@@ -6986,7 +6953,7 @@ public final class Player extends Playable implements PlayerGroup
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE character_subclasses SET class_id=? WHERE char_obj_id=? AND class_id=?");
 			statement.setInt(1, newclass);
 			statement.setInt(2, getObjectId());
@@ -7167,7 +7134,7 @@ public final class Player extends Playable implements PlayerGroup
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			// Remove all basic info stored about this sub-class.
 			statement = con.prepareStatement("DELETE FROM character_subclasses WHERE char_obj_id=? AND class_id=? AND type != " + SubClassType.BASE_CLASS.ordinal());
 			statement.setInt(1, getObjectId());
@@ -8801,7 +8768,7 @@ public final class Player extends Playable implements PlayerGroup
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT id FROM character_recipebook WHERE char_id=?");
 			statement.setInt(1, getObjectId());
 			rset = statement.executeQuery();
@@ -9096,7 +9063,7 @@ public final class Player extends Playable implements PlayerGroup
 		PreparedStatement st = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			st = con.prepareStatement("UPDATE characters SET char_name = ? WHERE obj_Id = ?");
 			st.setString(1, getName());
 			st.setInt(2, getObjectId());
@@ -9792,7 +9759,7 @@ public final class Player extends Playable implements PlayerGroup
 		ResultSet rs = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			offline = con.prepareStatement("SELECT * FROM character_instances WHERE obj_id = ?");
 			offline.setInt(1, getObjectId());
 			rs = offline.executeQuery();

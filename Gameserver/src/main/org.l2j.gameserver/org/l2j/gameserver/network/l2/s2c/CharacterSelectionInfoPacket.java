@@ -1,15 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.List;
-
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.dao.CharacterDAO;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.model.CharSelectInfoPackage;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.base.Experience;
@@ -18,9 +12,14 @@ import org.l2j.gameserver.model.base.SubClassType;
 import org.l2j.gameserver.model.items.Inventory;
 import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.utils.AutoBan;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CharacterSelectionInfoPacket extends L2GameServerPacket
 {
@@ -175,7 +174,7 @@ public class CharacterSelectionInfoPacket extends L2GameServerPacket
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT * FROM characters AS c LEFT JOIN character_subclasses AS cs ON (c.obj_Id=cs.char_obj_id AND cs.active=1) WHERE account_name=? LIMIT 7");
 			statement.setString(1, loginName);
 			rset = statement.executeQuery();
@@ -207,7 +206,7 @@ public class CharacterSelectionInfoPacket extends L2GameServerPacket
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT class_id FROM character_subclasses WHERE char_obj_id=? AND type=" + SubClassType.BASE_CLASS.ordinal());
 			statement.setInt(1, objId);
 			rset = statement.executeQuery();

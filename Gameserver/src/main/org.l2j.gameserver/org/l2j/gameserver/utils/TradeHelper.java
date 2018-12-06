@@ -1,14 +1,9 @@
 package org.l2j.gameserver.utils;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.List;
-
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.math.SafeMath;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.instancemanager.OfflineBufferManager;
 import org.l2j.gameserver.instancemanager.OfflineBufferManager.BufferData;
 import org.l2j.gameserver.instancemanager.ReflectionManager;
@@ -19,6 +14,11 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.skills.SkillEntry;
 import org.l2j.gameserver.templates.item.ItemTemplate;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.List;
 
 public final class TradeHelper
 {
@@ -254,7 +254,7 @@ public final class TradeHelper
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 
 			statement = con.prepareStatement("DELETE FROM character_variables WHERE name = 'offline' AND value < ?");
 			statement.setInt(1, (int)(System.currentTimeMillis() / 1000L));
@@ -341,7 +341,7 @@ public final class TradeHelper
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 
 			statement = con.prepareStatement("DELETE FROM character_variables WHERE name = 'offlinebuff' AND value < ?");
 			statement.setInt(1, (int) (System.currentTimeMillis() / 1000L));

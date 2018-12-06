@@ -1,13 +1,8 @@
 package org.l2j.gameserver.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
-
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.model.Playable;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Servitor;
@@ -15,9 +10,13 @@ import org.l2j.gameserver.model.Skill;
 import org.l2j.gameserver.model.actor.instances.creature.Abnormal;
 import org.l2j.gameserver.skills.EffectUseType;
 import org.l2j.gameserver.utils.SqlBatch;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 /**
  * @author VISTALL
@@ -65,7 +64,7 @@ public class EffectsDAO
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT `skill_id`,`skill_level`,`duration`,`left_time`,`is_self` FROM `character_effects_save` WHERE `object_id`=? AND `id`=?");
 			statement.setInt(1, objectId);
 			statement.setInt(2, id);
@@ -143,7 +142,7 @@ public class EffectsDAO
 		Statement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.createStatement();
 
 			SqlBatch b = new SqlBatch("INSERT IGNORE INTO `character_effects_save` (`object_id`,`skill_id`,`skill_level`,`duration`,`left_time`,`id`,`is_self`) VALUES");

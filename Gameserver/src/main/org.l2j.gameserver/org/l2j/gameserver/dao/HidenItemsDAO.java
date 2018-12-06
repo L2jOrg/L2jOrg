@@ -1,15 +1,15 @@
 package org.l2j.gameserver.dao;
 
+import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.dbutils.DbUtils;
+import org.l2j.gameserver.model.items.ItemInstance;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-
-import org.l2j.commons.dbutils.DbUtils;
-import org.l2j.gameserver.database.DatabaseFactory;
-import org.l2j.gameserver.model.items.ItemInstance;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * @author Iqman
@@ -29,7 +29,7 @@ public class HidenItemsDAO
 		try
 		{
 			int hidden_obj = 0;
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT * FROM hidden_items");
 			rset = statement.executeQuery();
 			while(rset.next())
@@ -58,7 +58,7 @@ public class HidenItemsDAO
 		PreparedStatement statement = null;			
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("INSERT INTO hidden_items (obj_id) VALUES(?)");
 			statement.setInt(1, item.getObjectId());		
 			statement.execute();

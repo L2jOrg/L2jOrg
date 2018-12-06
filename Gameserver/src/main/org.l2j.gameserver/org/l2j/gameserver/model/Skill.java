@@ -2,14 +2,7 @@ package org.l2j.gameserver.model;
 
 import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
-
-import java.lang.reflect.Constructor;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.StringTokenizer;
-
-import org.l2j.commons.collections.LazyArrayList;
+import org.apache.commons.lang3.math.NumberUtils;
 import org.l2j.commons.geometry.Polygon;
 import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.util.Rnd;
@@ -36,49 +29,7 @@ import org.l2j.gameserver.network.l2.s2c.SystemMessage;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.skills.*;
 import org.l2j.gameserver.skills.effects.Effect;
-import org.l2j.gameserver.skills.skillclasses.Balance;
-import org.l2j.gameserver.skills.skillclasses.BuffCharger;
-import org.l2j.gameserver.skills.skillclasses.CPDam;
-import org.l2j.gameserver.skills.skillclasses.Call;
-import org.l2j.gameserver.skills.skillclasses.ChainHeal;
-import org.l2j.gameserver.skills.skillclasses.Charge;
-import org.l2j.gameserver.skills.skillclasses.ChargeSoul;
-import org.l2j.gameserver.skills.skillclasses.ClanGate;
-import org.l2j.gameserver.skills.skillclasses.Continuous;
-import org.l2j.gameserver.skills.skillclasses.Craft;
-import org.l2j.gameserver.skills.skillclasses.DebuffRenewal;
-import org.l2j.gameserver.skills.skillclasses.Decoy;
-import org.l2j.gameserver.skills.skillclasses.Default;
-import org.l2j.gameserver.skills.skillclasses.DefuseTrap;
-import org.l2j.gameserver.skills.skillclasses.DestroySummon;
-import org.l2j.gameserver.skills.skillclasses.DetectTrap;
-import org.l2j.gameserver.skills.skillclasses.Disablers;
-import org.l2j.gameserver.skills.skillclasses.Drain;
-import org.l2j.gameserver.skills.skillclasses.DrainSoul;
-import org.l2j.gameserver.skills.skillclasses.EffectsFromSkills;
-import org.l2j.gameserver.skills.skillclasses.ExtractStone;
-import org.l2j.gameserver.skills.skillclasses.HideHairAccessories;
-import org.l2j.gameserver.skills.skillclasses.LethalShot;
-import org.l2j.gameserver.skills.skillclasses.MDam;
-import org.l2j.gameserver.skills.skillclasses.ManaDam;
-import org.l2j.gameserver.skills.skillclasses.PDam;
-import org.l2j.gameserver.skills.skillclasses.PcBangPointsAdd;
-import org.l2j.gameserver.skills.skillclasses.PetFeed;
-import org.l2j.gameserver.skills.skillclasses.PetSummon;
-import org.l2j.gameserver.skills.skillclasses.Recall;
-import org.l2j.gameserver.skills.skillclasses.Replace;
-import org.l2j.gameserver.skills.skillclasses.Restoration;
-import org.l2j.gameserver.skills.skillclasses.Resurrect;
-import org.l2j.gameserver.skills.skillclasses.Ride;
-import org.l2j.gameserver.skills.skillclasses.Sacrifice;
-import org.l2j.gameserver.skills.skillclasses.ShiftAggression;
-import org.l2j.gameserver.skills.skillclasses.StealBuff;
-import org.l2j.gameserver.skills.skillclasses.Summon;
-import org.l2j.gameserver.skills.skillclasses.SummonSiegeFlag;
-import org.l2j.gameserver.skills.skillclasses.Sweep;
-import org.l2j.gameserver.skills.skillclasses.TakeCastle;
-import org.l2j.gameserver.skills.skillclasses.TrapActivation;
-import org.l2j.gameserver.skills.skillclasses.Unlock;
+import org.l2j.gameserver.skills.skillclasses.*;
 import org.l2j.gameserver.stats.Env;
 import org.l2j.gameserver.stats.Formulas;
 import org.l2j.gameserver.stats.StatTemplate;
@@ -92,9 +43,14 @@ import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.PositionUtils;
 import org.l2j.gameserver.utils.SkillUtils;
-import org.apache.commons.lang3.math.NumberUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.lang.reflect.Constructor;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.StringTokenizer;
 
 public class Skill extends StatTemplate implements Cloneable
 {
@@ -1430,14 +1386,14 @@ public class Skill extends StatTemplate implements Cloneable
 		List<Creature> targets;
 		if(oneTarget() || (isAoE() && isOffensive() && activeChar.isInPeaceZone()))
 		{
-			targets = new LazyArrayList<Creature>(1);
+			targets = new ArrayList<>();
 			targets.add(aimingTarget);
 			if(_addSelfTarget)
 				targets.add(activeChar);
 			return targets;
 		}
 		else
-			targets = new LazyArrayList<Creature>();
+			targets = new ArrayList<>();
 
 		if(_addSelfTarget)
 			targets.add(activeChar);
@@ -1788,7 +1744,7 @@ public class Skill extends StatTemplate implements Cloneable
 		if(useType == EffectUseType.NORMAL)
 			reflected = effected.checkReflectDebuff(effector, this);
 
-		List<Creature> targets = new LazyArrayList<Creature>(1);
+		List<Creature> targets = new ArrayList<>();
 		if(useType == EffectUseType.SELF)
 			targets.add(effector);
 		else

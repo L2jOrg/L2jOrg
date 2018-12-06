@@ -1,12 +1,8 @@
 package org.l2j.gameserver.network.authcomm.as2gs;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.ReceivablePacket;
 import org.l2j.gameserver.network.authcomm.gs2as.SetAccountInfo;
@@ -15,6 +11,10 @@ import org.napile.primitive.lists.IntList;
 import org.napile.primitive.lists.impl.ArrayIntList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 /**
  * @author VISTALL
@@ -42,7 +42,7 @@ public class GetAccountInfo extends ReceivablePacket
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT deletetime FROM characters WHERE account_name=?");
 			statement.setString(1, _account);
 			rset = statement.executeQuery();

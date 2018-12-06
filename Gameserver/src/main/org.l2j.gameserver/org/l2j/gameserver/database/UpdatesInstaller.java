@@ -1,22 +1,22 @@
 package org.l2j.gameserver.database;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.io.BufferedReader;
-import java.io.FilenameFilter;
-import java.io.File;
-import java.io.FileReader;
-import java.sql.ResultSet;
-import java.sql.PreparedStatement;
-import java.sql.Connection;
-import java.util.List;
-
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.dbutils.ScriptRunner;
 import org.l2j.gameserver.Config;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FilenameFilter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class UpdatesInstaller
 {
@@ -36,7 +36,7 @@ public class UpdatesInstaller
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT file_name FROM installed_updates");
 			rset = statement.executeQuery();
 			while(rset.next())
@@ -68,7 +68,7 @@ public class UpdatesInstaller
 			{
 				try
 				{
-					con = DatabaseFactory.getInstance().getConnection();
+					con = L2DatabaseFactory.getInstance().getConnection();
 					ScriptRunner runner = new ScriptRunner(con, false, true);
 					runner.runScript(new BufferedReader(new FileReader(f)));
 				}

@@ -1,24 +1,22 @@
 package org.l2j.gameserver.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
-import org.l2j.commons.collections.MultiValueSet;
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.templates.spawn.PeriodOfDay;
 import org.l2j.gameserver.templates.spawn.SpawnNpcInfo;
 import org.l2j.gameserver.templates.spawn.SpawnTemplate;
 import org.l2j.gameserver.utils.Location;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * @author Bonux
@@ -47,7 +45,7 @@ public class SpawnsDAO
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_SQL_QUERY);
 			rset = statement.executeQuery();
 			while(rset.next())
@@ -84,7 +82,7 @@ public class SpawnsDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(INSERT_SQL_QUERY);
 			statement.setInt(1, npcId);
 			statement.setInt(2, x);
@@ -113,7 +111,7 @@ public class SpawnsDAO
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(REDUCE_COUNT_SQL_QUERY);
 			statement.setInt(1, npc.getNpcId());
 			statement.setInt(2, npc.getSpawnedLoc().x);

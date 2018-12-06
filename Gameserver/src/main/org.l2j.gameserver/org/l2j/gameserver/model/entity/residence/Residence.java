@@ -4,23 +4,15 @@ import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
 import gnu.trove.set.TIntSet;
 import gnu.trove.set.hash.TIntHashSet;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.*;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
-
 import org.l2j.commons.dao.JdbcEntity;
 import org.l2j.commons.dao.JdbcEntityState;
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.holder.EventHolder;
 import org.l2j.gameserver.data.xml.holder.ResidenceFunctionsHolder;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.instancemanager.ReflectionManager;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Skill;
@@ -39,6 +31,13 @@ import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.ReflectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.*;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @reworked VISTALL
@@ -262,7 +261,7 @@ public abstract class Residence implements JdbcEntity
 		ResultSet rs = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT * FROM residence_functions WHERE residence_id=?");
 			statement.setInt(1, getId());
 			rs = statement.executeQuery();
@@ -370,7 +369,7 @@ public abstract class Residence implements JdbcEntity
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("REPLACE residence_functions SET residence_id=?, type=?, level=?, end_time=?");
 			statement.setInt(1, getId());
 			statement.setInt(2, type.ordinal());
@@ -397,7 +396,7 @@ public abstract class Residence implements JdbcEntity
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("DELETE FROM residence_functions WHERE residence_id=? AND type=?");
 			statement.setInt(1, getId());
 			statement.setInt(2, type.ordinal());
@@ -421,7 +420,7 @@ public abstract class Residence implements JdbcEntity
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("DELETE FROM residence_functions WHERE residence_id=?");
 			statement.setInt(1, getId());
 			statement.execute();

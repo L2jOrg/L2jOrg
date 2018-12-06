@@ -1,19 +1,15 @@
 package org.l2j.gameserver.database;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.sql.Statement;
+import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.dbutils.DbUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import org.l2j.commons.dbutils.DbUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public abstract class mysql
 {
@@ -25,7 +21,7 @@ public abstract class mysql
 	 * @param query Строка SQL запроса
 	 * @return false в случае ошибки выполнения запроса либо true в случае успеха
 	 */
-	public static boolean setEx(DatabaseFactory db, String query, Object... vars)
+	public static boolean setEx(L2DatabaseFactory db, String query, Object... vars)
 	{
 		Connection con = null;
 		Statement statement = null;
@@ -33,7 +29,7 @@ public abstract class mysql
 		try
 		{
 			if(db == null)
-				db = DatabaseFactory.getInstance();
+				db = L2DatabaseFactory.getInstance();
 			con = db.getConnection();
 			if(vars.length == 0)
 			{
@@ -98,7 +94,7 @@ public abstract class mysql
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.createStatement();
 			rset = statement.executeQuery(query + " LIMIT 1");
 			ResultSetMetaData md = rset.getMetaData();
@@ -135,7 +131,7 @@ public abstract class mysql
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.createStatement();
 			rset = statement.executeQuery(query);
 			ResultSetMetaData md = rset.getMetaData();
@@ -160,7 +156,7 @@ public abstract class mysql
 		return ret;
 	}
 
-	public static List<Object> get_array(DatabaseFactory db, String query)
+	public static List<Object> get_array(L2DatabaseFactory db, String query)
 	{
 		List<Object> ret = new ArrayList<Object>();
 		Connection con = null;
@@ -169,7 +165,7 @@ public abstract class mysql
 		try
 		{
 			if(db == null)
-				db = DatabaseFactory.getInstance();
+				db = L2DatabaseFactory.getInstance();
 			con = db.getConnection();
 			statement = con.prepareStatement(query);
 			rset = statement.executeQuery();
@@ -214,7 +210,7 @@ public abstract class mysql
 
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(query);
 			rset = statement.executeQuery();
 
@@ -245,7 +241,7 @@ public abstract class mysql
 
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(query);
 			rset = statement.executeQuery();
 
@@ -265,7 +261,7 @@ public abstract class mysql
 		return res;
 	}
 	
-	public static Integer[][] simple_get_int_array(DatabaseFactory db, String[] ret_fields, String table, String where)
+	public static Integer[][] simple_get_int_array(L2DatabaseFactory db, String[] ret_fields, String table, String where)
 	{
 		String fields = null;
 		for(String field : ret_fields)
@@ -288,7 +284,7 @@ public abstract class mysql
 		try
 		{
 			if(db == null)
-				db = DatabaseFactory.getInstance();
+				db = L2DatabaseFactory.getInstance();
 			con = db.getConnection();
 			statement = con.prepareStatement(query);
 			rset = statement.executeQuery();

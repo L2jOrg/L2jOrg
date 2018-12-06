@@ -1,28 +1,10 @@
 package org.l2j.gameserver.model;
 
-import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
-
 import gnu.trove.set.TIntSet;
 import gnu.trove.set.hash.TIntHashSet;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArraySet;
-import java.util.concurrent.Future;
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReadWriteLock;
-import java.util.concurrent.locks.ReentrantLock;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
-
-import org.l2j.commons.collections.LazyArrayList;
+import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.l2j.commons.collections.CollectionUtils;
 import org.l2j.commons.lang.reference.HardReference;
 import org.l2j.commons.lang.reference.HardReferences;
 import org.l2j.commons.listener.Listener;
@@ -41,12 +23,7 @@ import org.l2j.gameserver.geodata.GeoEngine;
 import org.l2j.gameserver.geodata.GeoMove;
 import org.l2j.gameserver.listener.hooks.ListenerHook;
 import org.l2j.gameserver.listener.hooks.ListenerHookType;
-import org.l2j.gameserver.model.GameObjectTasks.CastEndTimeTask;
-import org.l2j.gameserver.model.GameObjectTasks.DeleteTask;
-import org.l2j.gameserver.model.GameObjectTasks.HitTask;
-import org.l2j.gameserver.model.GameObjectTasks.MagicLaunchedTask;
-import org.l2j.gameserver.model.GameObjectTasks.MagicUseTask;
-import org.l2j.gameserver.model.GameObjectTasks.NotifyAITask;
+import org.l2j.gameserver.model.GameObjectTasks.*;
 import org.l2j.gameserver.model.Skill.SkillTargetType;
 import org.l2j.gameserver.model.Skill.SkillType;
 import org.l2j.gameserver.model.Zone.ZoneType;
@@ -76,13 +53,8 @@ import org.l2j.gameserver.network.l2.s2c.FlyToLocationPacket.FlyType;
 import org.l2j.gameserver.network.l2.s2c.updatetype.IUpdateTypeComponent;
 import org.l2j.gameserver.skills.*;
 import org.l2j.gameserver.skills.effects.Effect;
-import org.l2j.gameserver.stats.Calculator;
-import org.l2j.gameserver.stats.Env;
-import org.l2j.gameserver.stats.Formulas;
+import org.l2j.gameserver.stats.*;
 import org.l2j.gameserver.stats.Formulas.AttackInfo;
-import org.l2j.gameserver.stats.StatFunctions;
-import org.l2j.gameserver.stats.StatTemplate;
-import org.l2j.gameserver.stats.Stats;
 import org.l2j.gameserver.stats.funcs.Func;
 import org.l2j.gameserver.stats.triggers.RunnableTrigger;
 import org.l2j.gameserver.stats.triggers.TriggerInfo;
@@ -95,14 +67,23 @@ import org.l2j.gameserver.templates.item.WeaponTemplate.WeaponType;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
 import org.l2j.gameserver.templates.player.transform.TransformTemplate;
 import org.l2j.gameserver.utils.*;
-
-import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CHashIntObjectMap;
 import org.napile.primitive.maps.impl.CTreeIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArraySet;
+import java.util.concurrent.Future;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReadWriteLock;
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
+
+import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 
 public abstract class Creature extends GameObject
 {
@@ -401,7 +382,7 @@ public abstract class Creature extends GameObject
 	private Future<?> _regenTask;
 	private Runnable _regenTaskRunnable;
 
-	private List<Zone> _zones = new LazyArrayList<Zone>();
+	private List<Zone> _zones = new ArrayList<>();
 	/** Блокировка для чтения/записи объектов из региона */
 	private final ReadWriteLock zonesLock = new ReentrantReadWriteLock();
 	private final Lock zonesRead = zonesLock.readLock();
@@ -2958,8 +2939,8 @@ public abstract class Creature extends GameObject
 	{
         Zone[] zones = isVisible() ? getCurrentRegion().getZones() : Zone.EMPTY_L2ZONE_ARRAY;
 
-		LazyArrayList<Zone> entering = null;
-		LazyArrayList<Zone> leaving = null;
+		List<Zone> entering = null;
+		List<Zone> leaving = null;
 
 		Zone zone;
 
@@ -2968,7 +2949,7 @@ public abstract class Creature extends GameObject
 		{
 			if(!_zones.isEmpty())
 			{
-				leaving = LazyArrayList.newInstance();
+				leaving = CollectionUtils.pooledList();
 				for(int i = 0; i < _zones.size(); i++)
 				{
 					zone = _zones.get(i);
@@ -2990,7 +2971,7 @@ public abstract class Creature extends GameObject
 
 			if(zones.length > 0)
 			{
-				entering = LazyArrayList.newInstance();
+				entering = CollectionUtils.pooledList();
 				for(int i = 0; i < zones.length; i++)
 				{
 					zone = zones[i];
@@ -3018,10 +2999,10 @@ public abstract class Creature extends GameObject
 		onUpdateZones(leaving, entering);
 
 		if(leaving != null)
-			LazyArrayList.recycle(leaving);
+			CollectionUtils.recycle(leaving);
 
 		if(entering != null)
-			LazyArrayList.recycle(entering);
+			CollectionUtils.recycle(entering);
 
 	}
 

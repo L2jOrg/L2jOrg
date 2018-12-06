@@ -1,11 +1,8 @@
 package org.l2j.gameserver;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.time.cron.SchedulingPattern;
 import org.l2j.commons.time.cron.SchedulingPattern.InvalidPatternException;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.instancemanager.BotReportManager;
 import org.l2j.gameserver.instancemanager.CoupleManager;
 import org.l2j.gameserver.model.GameObjectsStorage;
@@ -17,9 +14,11 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.tables.ClanTable;
 import org.l2j.gameserver.utils.Util;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * Класс отвечает за запланированное отключение сервера и связанные с этим мероприятия.
@@ -213,7 +212,7 @@ public class Shutdown extends Thread
 		try
 		{
 			System.out.println("Shutting down database communication...");
-			DatabaseFactory.getInstance().shutdown();
+			L2DatabaseFactory.getInstance().shutdown();
 		}
 		catch(Exception e)
 		{

@@ -41,7 +41,7 @@ public class totalonline implements OnInitScriptListener
 			PreparedStatement statement = null;
 			try
 			{
-				con = DatabaseFactory.getInstance().getConnection();
+				con = L2DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("update online set totalOnline =?, totalOffline = ? where 'index' =0");
 				statement.setInt(1, members);
 				statement.setInt(2, offMembers);

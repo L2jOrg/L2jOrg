@@ -22,13 +22,13 @@ import java.util.Optional;
 
 @Configuration
 @Import(JdbcConfiguration.class)
-@EnableJdbcRepositories({"org.l2j.commons.database", "org.l2j.gameserver.model.entity.database.repository"})
+@EnableJdbcRepositories({"org.l2j.commons.database"})
 public class DatabaseContextConfiguration {
 
     @Bean
     public HikariDataSource dataSource() {
         HikariConfig dataSourceConfig = new HikariConfig();
-        dataSourceConfig.addDataSourceProperty("driverClassName", Config.DATABASE_DRIVER);
+
         dataSourceConfig.setJdbcUrl(Config.DATABASE_URL);
         dataSourceConfig.setUsername(Config.DATABASE_LOGIN);
         dataSourceConfig.setPassword(Config.DATABASE_PASSWORD);

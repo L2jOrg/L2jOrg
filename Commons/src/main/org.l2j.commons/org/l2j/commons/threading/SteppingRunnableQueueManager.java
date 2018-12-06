@@ -1,20 +1,15 @@
 package org.l2j.commons.threading;
 
+import org.apache.commons.lang3.mutable.MutableLong;
+import org.l2j.commons.collections.CollectionUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
-import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.concurrent.Delayed;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.RunnableScheduledFuture;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
+import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;
-
-import org.apache.commons.lang3.mutable.MutableLong;
-import org.l2j.commons.collections.LazyArrayList;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Менеджер очереди задач с кратным запланированным временем выполнения.
@@ -194,7 +189,7 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 	 */
 	public void purge()
 	{
-		LazyArrayList<SteppingScheduledFuture<?>> purge = LazyArrayList.newInstance();
+		List<SteppingScheduledFuture<?>> purge = CollectionUtils.pooledList();
 
 		for(SteppingScheduledFuture<?> sr: queue)
 			if (sr.isDone())
@@ -202,7 +197,7 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 
 		queue.removeAll(purge);
 
-		LazyArrayList.recycle(purge);
+		CollectionUtils.recycle(purge);
 	}
 
 	public CharSequence getStats()

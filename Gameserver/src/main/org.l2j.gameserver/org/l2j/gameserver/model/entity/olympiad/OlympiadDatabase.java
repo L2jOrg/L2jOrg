@@ -1,15 +1,10 @@
 package org.l2j.gameserver.model.entity.olympiad;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.*;
-
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Announcements;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.dao.OlympiadParticipantsDAO;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.instancemanager.ServerVariables;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.base.ClassLevel;
@@ -17,11 +12,17 @@ import org.l2j.gameserver.model.base.SubClassType;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.network.l2.s2c.SystemMessage;
 import org.l2j.gameserver.templates.StatsSet;
-
 import org.napile.primitive.maps.IntIntMap;
 import org.napile.primitive.maps.impl.HashIntIntMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class OlympiadDatabase
 {
@@ -40,7 +41,7 @@ public class OlympiadDatabase
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(OlympiadParticipantsDAO.GET_ALL_CLASSIFIED_PARTICIPANTS);
 			rset = statement.executeQuery();
 			int place = 1;
@@ -98,7 +99,7 @@ public class OlympiadDatabase
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(OlympiadParticipantsDAO.OLYMPIAD_CALCULATE_LAST_PERIOD);
 			statement.setInt(1, Config.OLYMPIAD_BATTLES_FOR_REWARD);
 			statement.execute();
@@ -158,7 +159,7 @@ public class OlympiadDatabase
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			StatsSet hero;
 
 			for(ClassId id3 : ClassId.VALUES)

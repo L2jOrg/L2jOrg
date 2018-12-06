@@ -1,12 +1,27 @@
 package org.l2j.commons.collections;
 
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
-public final class CollectionUtils
-{
+import static java.util.Objects.nonNull;
+
+public final class CollectionUtils {
+	private static final int POOL_MAX_SIZE = 20;
+	private static final Queue<List> pooledListQueue = new ConcurrentLinkedQueue<>();
+
+	@SuppressWarnings("unchecked")
+	public static<E> List<E> pooledList() {
+		var list = pooledListQueue.poll();
+		return (List<E>) (nonNull(list) ?  list : new ArrayList());
+	}
+
+
+	public static void recycle(List list) {
+		if(pooledListQueue.size() < POOL_MAX_SIZE) {
+			list.clear();
+			pooledListQueue.add(list);
+		}
+	}
 	/**
 	 * copy from {@link java.util.AbstractList}
 	 * @param collection

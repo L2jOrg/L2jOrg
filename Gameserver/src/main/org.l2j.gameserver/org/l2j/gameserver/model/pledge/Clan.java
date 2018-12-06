@@ -5,6 +5,7 @@ import gnu.trove.set.hash.TIntHashSet;
 import org.apache.commons.lang3.StringUtils;
 import org.l2j.commons.collections.JoinedIterator;
 import org.l2j.commons.dao.JdbcEntityState;
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.time.cron.SchedulingPattern;
 import org.l2j.gameserver.Config;
@@ -12,7 +13,6 @@ import org.l2j.gameserver.cache.CrestCache;
 import org.l2j.gameserver.data.xml.holder.EventHolder;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.database.mysql;
 import org.l2j.gameserver.instancemanager.clansearch.ClanSearchManager;
 import org.l2j.gameserver.model.Player;
@@ -435,7 +435,7 @@ public class Clan implements Iterable<UnitMember>
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE clan_data SET hunting_progress=?,yesterday_hunting_reward=?,yesterday_attendance_reward=? WHERE clan_id=?");
 			statement.setInt(1, getHuntingProgress());
 			statement.setInt(2, getYesterdayHuntingReward());
@@ -469,7 +469,7 @@ public class Clan implements Iterable<UnitMember>
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE clan_data SET reputation_score=? WHERE clan_id=?");
 			statement.setInt(1, getReputationScore());
 			statement.setInt(2, getClanId());
@@ -505,7 +505,7 @@ public class Clan implements Iterable<UnitMember>
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE clan_data SET ally_id=?,reputation_score=?,expelled_member=?,leaved_ally=?,dissolved_ally=?,clan_level=?,warehouse=?,academy_graduates=?,castle_defend_count=?,disband_end=?,disband_penalty=? WHERE clan_id=?");
 			statement.setInt(1, getAllyId());
 			statement.setInt(2, getReputationScore());
@@ -538,7 +538,7 @@ public class Clan implements Iterable<UnitMember>
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("INSERT INTO clan_data (clan_id,clan_level,ally_id,expelled_member,leaved_ally,dissolved_ally,academy_graduates) values (?,?,?,?,?,?,?)");
 			statement.setInt(1, _clanId);
 			statement.setInt(2, _level);
@@ -588,7 +588,7 @@ public class Clan implements Iterable<UnitMember>
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT clan_level,ally_id,reputation_score,expelled_member,leaved_ally,dissolved_ally,warehouse,academy_graduates,castle_defend_count,disband_end,disband_penalty,hunting_progress,yesterday_hunting_reward,yesterday_attendance_reward FROM clan_data WHERE clan_id=?");
 			statement.setInt(1, clanId);
 			rset = statement.executeQuery();
@@ -1022,7 +1022,7 @@ public class Clan implements Iterable<UnitMember>
 		try
 		{
 			// Retrieve all skills of this L2Player from the database
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT skill_id,skill_level FROM clan_skills WHERE clan_id=?");
 			statement.setInt(1, getClanId());
 			rset = statement.executeQuery();
@@ -1083,7 +1083,7 @@ public class Clan implements Iterable<UnitMember>
 
 				try
 				{
-					con = DatabaseFactory.getInstance().getConnection();
+					con = L2DatabaseFactory.getInstance().getConnection();
 
 					if(oldSkillEntry != null)
 					{
@@ -1272,7 +1272,7 @@ public class Clan implements Iterable<UnitMember>
 			PreparedStatement statement = null;
 			try
 			{
-				con = DatabaseFactory.getInstance().getConnection();
+				con = L2DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("INSERT INTO `clan_subpledges` (clan_id,type,leader_id,name) VALUES (?,?,?,?)");
 				statement.setInt(1, getClanId());
 				statement.setInt(2, sp.getType());
@@ -1368,7 +1368,7 @@ public class Clan implements Iterable<UnitMember>
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT * FROM clan_subpledges WHERE clan_id=?");
 			statement.setInt(1, getClanId());
 			rset = statement.executeQuery();
@@ -1477,7 +1477,7 @@ public class Clan implements Iterable<UnitMember>
 		try
 		{
 			// Retrieve all skills of this L2Player from the database
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT privilleges,rank FROM clan_privs WHERE clan_id=?");
 			statement.setInt(1, getClanId());
 			rset = statement.executeQuery();
@@ -1570,7 +1570,7 @@ public class Clan implements Iterable<UnitMember>
 		{
 			//_log.warn("requested store clan privs in db for rank: " + rank + ", privs: " + privs);
 			// Retrieve all skills of this L2Player from the database
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("REPLACE INTO clan_privs (clan_id,rank,privilleges) VALUES (?,?,?)");
 			statement.setInt(1, getClanId());
 			statement.setInt(2, rank);

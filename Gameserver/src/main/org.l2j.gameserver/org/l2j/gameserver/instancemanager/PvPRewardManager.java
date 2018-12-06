@@ -1,17 +1,17 @@
 package org.l2j.gameserver.instancemanager;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.model.Zone.ZoneType;
 import org.l2j.gameserver.model.base.TeamType;
 import org.l2j.gameserver.model.items.ItemInstance;
-import org.l2j.gameserver.model.Zone.ZoneType;
 import org.l2j.gameserver.utils.ItemFunctions;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 
 /**
  * @author iqman
@@ -265,7 +265,7 @@ public class PvPRewardManager
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("INSERT INTO pvp_system_log (killer,victim) values (?,?)");
 			statement.setString(1, kill_name);
 			statement.setString(2, victim_name);

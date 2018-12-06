@@ -1,5 +1,22 @@
 package org.l2j.gameserver.tables;
 
+import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.dbutils.DbUtils;
+import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.Config;
+import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.gameserver.dao.CharacterDAO;
+import org.l2j.gameserver.data.xml.holder.FakePlayersHolder;
+import org.l2j.gameserver.model.GameObjectsStorage;
+import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.model.base.ClassId;
+import org.l2j.gameserver.model.base.ClassLevel;
+import org.l2j.gameserver.network.l2.c2s.CharacterCreate;
+import org.l2j.gameserver.network.l2.c2s.EnterWorld;
+import org.l2j.gameserver.utils.TradeHelper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -9,24 +26,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.l2j.commons.dbutils.DbUtils;
-import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Config;
-import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.dao.CharacterDAO;
-import org.l2j.gameserver.data.xml.holder.FakePlayersHolder;
-import org.l2j.gameserver.database.DatabaseFactory;
-import org.l2j.gameserver.model.GameObjectsStorage;
-import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.model.base.ClassLevel;
-import org.l2j.gameserver.network.l2.c2s.CharacterCreate;
-import org.l2j.gameserver.network.l2.c2s.EnterWorld;
-import org.l2j.gameserver.utils.TradeHelper;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class FakePlayersTable
 {
@@ -91,7 +90,7 @@ public class FakePlayersTable
                     int count = 0;
                     try
                     {
-                        connection = DatabaseFactory.getInstance().getConnection();
+                        connection = L2DatabaseFactory.getInstance().getConnection();
                         statement = connection.prepareStatement("SELECT obj_Id FROM characters WHERE account_name=?");
                         statement.setString(1, "#fake_account");
                         set = statement.executeQuery();

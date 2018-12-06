@@ -2,12 +2,8 @@ package org.l2j.gameserver.model.quest;
 
 import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.*;
-
+import org.apache.commons.lang3.ArrayUtils;
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.logging.LogUtils;
 import org.l2j.gameserver.Config;
@@ -15,7 +11,6 @@ import org.l2j.gameserver.data.QuestHolder;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;
 import org.l2j.gameserver.data.xml.holder.NpcHolder;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.instancemanager.ReflectionManager;
 import org.l2j.gameserver.listener.script.OnInitScriptListener;
 import org.l2j.gameserver.model.Creature;
@@ -37,13 +32,17 @@ import org.l2j.gameserver.utils.HtmlUtils;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.NpcUtils;
 import org.l2j.gameserver.utils.ReflectionUtils;
-import org.apache.commons.lang3.ArrayUtils;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CHashIntObjectMap;
 import org.napile.primitive.sets.IntSet;
 import org.napile.primitive.sets.impl.HashIntSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.*;
 
 public class Quest implements OnInitScriptListener
 {
@@ -218,7 +217,7 @@ public class Quest implements OnInitScriptListener
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement("REPLACE INTO character_quests (char_id,id,var,value) VALUES (?,?,?,?)");
 			statement.setInt(1, qs.getPlayer().getObjectId());
             statement.setInt(2, qs.getQuest().getId());
@@ -246,7 +245,7 @@ public class Quest implements OnInitScriptListener
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement("DELETE FROM character_quests WHERE char_id=? AND id=?");
 			statement.setInt(1, qs.getPlayer().getObjectId());
             statement.setInt(2, qs.getQuest().getId());
@@ -273,7 +272,7 @@ public class Quest implements OnInitScriptListener
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement("DELETE FROM character_quests WHERE char_id=? AND id=? AND var=?");
 			statement.setInt(1, qs.getPlayer().getObjectId());
             statement.setInt(2, qs.getQuest().getId());
@@ -305,7 +304,7 @@ public class Quest implements OnInitScriptListener
 		try
 		{
             questsToDelete = new HashIntSet();
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement("SELECT id,var,value FROM character_quests WHERE char_id=?");
 			statement.setInt(1, player.getObjectId());
 			rset = statement.executeQuery();

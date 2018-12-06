@@ -1,16 +1,12 @@
 package org.l2j.gameserver.model.actor.instances.player;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.util.concurrent.Future;
-
 import org.apache.commons.lang3.ArrayUtils;
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.holder.PetDataHolder;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Skill;
 import org.l2j.gameserver.model.base.MountType;
@@ -22,6 +18,10 @@ import org.l2j.gameserver.templates.pet.PetData;
 import org.l2j.gameserver.templates.pet.PetLevelData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.concurrent.Future;
 
 /**
  * @author Bonux
@@ -309,7 +309,7 @@ public class Mount
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			String req = "UPDATE pets SET fed=? WHERE item_obj_id = ?";
 			statement = con.prepareStatement(req);
 			statement.setInt(1, _currentFeed);

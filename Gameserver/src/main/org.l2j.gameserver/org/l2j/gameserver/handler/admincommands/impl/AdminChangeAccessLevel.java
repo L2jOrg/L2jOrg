@@ -1,17 +1,10 @@
 package org.l2j.gameserver.handler.admincommands.impl;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Announcements;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.dao.CharacterVariablesDAO;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.database.mysql;
 import org.l2j.gameserver.handler.admincommands.IAdminCommandHandler;
 import org.l2j.gameserver.model.GameObjectsStorage;
@@ -22,6 +15,13 @@ import org.l2j.gameserver.network.l2.components.HtmlMessage;
 import org.l2j.gameserver.utils.Files;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 /**
  * changelvl - Изменение уровня доступа
@@ -291,7 +291,7 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 		ResultSet rset = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT `char_name` FROM `characters` WHERE `obj_Id`=\"" + oid + "\" LIMIT 1");
 			rset = statement.executeQuery();
 			if(rset.next())

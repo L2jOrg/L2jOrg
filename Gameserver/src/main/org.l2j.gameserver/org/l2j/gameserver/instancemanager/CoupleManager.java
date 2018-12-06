@@ -1,21 +1,21 @@
 package org.l2j.gameserver.instancemanager;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
-
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.database.DatabaseFactory;
 import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.Couple;
 import org.l2j.gameserver.network.l2.components.CustomMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class CoupleManager
 {
@@ -48,7 +48,7 @@ public class CoupleManager
 		ResultSet rs = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT * FROM couples ORDER BY id");
 			rs = statement.executeQuery();
 			while(rs.next())
@@ -151,7 +151,7 @@ public class CoupleManager
 		PreparedStatement statement = null;
 		try
 		{
-			con = DatabaseFactory.getInstance().getConnection();
+			con = L2DatabaseFactory.getInstance().getConnection();
 
 			if(_deletedCouples != null && !_deletedCouples.isEmpty())
 			{
