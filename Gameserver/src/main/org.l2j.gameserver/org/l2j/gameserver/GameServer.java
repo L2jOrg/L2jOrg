@@ -55,7 +55,6 @@ import org.l2j.gameserver.taskmanager.ItemsAutoDestroy;
 import org.l2j.gameserver.utils.OnlineTxtGenerator;
 import org.l2j.gameserver.utils.Strings;
 import org.l2j.gameserver.utils.TradeHelper;
-import org.l2j.gameserver.utils.velocity.VelocityUtils;
 import org.l2j.mmocore.ConnectionBuilder;
 import org.l2j.mmocore.ConnectionHandler;
 import org.slf4j.Logger;
@@ -99,8 +98,6 @@ public class GameServer {
         // Initialize config
         ConfigParsers.parseAll();
         Config.load();
-        // TODO Remove this, replace with some lightweight Html Render
-        VelocityUtils.init();
 
         HostInfo[] hosts = HostsConfigHolder.getInstance().getGameServerHosts();
         if (hosts.length == 0)

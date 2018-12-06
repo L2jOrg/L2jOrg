@@ -1,11 +1,5 @@
 package org.l2j.gameserver.model.entity.events.impl;
 
-import java.util.Calendar;
-import java.util.List;
-import java.util.Map;
-import java.util.StringTokenizer;
-import java.util.concurrent.atomic.AtomicBoolean;
-
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.time.cron.SchedulingPattern;
 import org.l2j.commons.util.Rnd;
@@ -28,8 +22,14 @@ import org.l2j.gameserver.skills.AbnormalEffect;
 import org.l2j.gameserver.stats.conditions.Condition;
 import org.l2j.gameserver.stats.conditions.ConditionPlayerOlympiad;
 import org.l2j.gameserver.utils.Functions;
+import org.l2j.gameserver.utils.HtmlUtils;
 import org.l2j.gameserver.utils.Location;
-import org.l2j.gameserver.utils.velocity.VelocityUtils;
+
+import java.util.Calendar;
+import java.util.List;
+import java.util.Map;
+import java.util.StringTokenizer;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class PvPEvent extends SingleMatchEvent
 {
@@ -70,8 +70,8 @@ public class PvPEvent extends SingleMatchEvent
 		_minLevel = Math.max(1, set.getInteger("min_level", 1));
 		_maxLevel = Math.min(Config.ALT_MAX_LEVEL, set.getInteger("max_level", Config.ALT_MAX_LEVEL));
 
-		VelocityUtils.GLOBAL_VARIABLES.put("PVP_EVENT_" + getId() + "_MIN_LEVEL", _minLevel);
-		VelocityUtils.GLOBAL_VARIABLES.put("PVP_EVENT_" + getId() + "_MAX_LEVEL", _maxLevel);
+		HtmlUtils.registerGlobalHtmlVariable("PVP_EVENT_" + getId() + "_MIN_LEVEL", _minLevel);
+		HtmlUtils.registerGlobalHtmlVariable("PVP_EVENT_" + getId() + "_MAX_LEVEL", _maxLevel);
 
 		_name = new CustomMessage("org.l2j.gameserver.model.entity.events.impl.PvPEvent.eventname." + getId());
 		_minPlayers = set.getInteger("min_players", 1);

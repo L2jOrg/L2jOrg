@@ -1,0 +1,21 @@
+plugins {
+    id "java"
+    id "base"
+    id "idea"
+    id "eclipse"
+}
+
+ext.moduleName = 'org.l2j.scritps'
+
+dependencies {
+    compile project(':Commons')
+    compile project(":Gameserver")
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['gameserver/data/scripts']
+        }
+    }
+}

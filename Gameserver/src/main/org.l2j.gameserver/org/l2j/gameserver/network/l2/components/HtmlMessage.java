@@ -12,7 +12,6 @@ import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.network.l2.s2c.*;
 import org.l2j.gameserver.utils.BypassStorage.BypassType;
 import org.l2j.gameserver.utils.HtmlUtils;
-import org.l2j.gameserver.utils.velocity.VelocityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,7 +33,7 @@ public class HtmlMessage implements IBroadcastPacket {
 
     private String _filename;
 	private String _html;
-	private Map<String, Object> _variables;
+	private Map<String, String> _variables;
 	private Map<String, String> _replaces;
 	private NpcInstance _npc;
 	private int _npcObjId;
@@ -92,7 +91,7 @@ public class HtmlMessage implements IBroadcastPacket {
 			throw new IllegalArgumentException("Incorrect name: " + name);
 		if(_variables == null)
 			_variables = new HashMap<>(2);
-		_variables.put(name, value);
+		_variables.put(name, String.valueOf(value));
 		return this;
 	}
 
@@ -153,10 +152,6 @@ public class HtmlMessage implements IBroadcastPacket {
 			return new ExNpcQuestHtmlMessage(_npcObjId, content, _questId);
 	}
 
-	public Map<String, Object> getVariables() {
-		return _variables;
-	}
-
 	private CharSequence make(Player player, String content) {
 		if(content == null)
 			return StringUtils.EMPTY;
@@ -190,7 +185,7 @@ public class HtmlMessage implements IBroadcastPacket {
 				sb.replaceAll("%npcId%", String.valueOf(_npc.getNpcId()));
 		}
 
-		content = VelocityUtils.evaluate(sb.toString(), _variables);
+		content = HtmlUtils.evaluate(sb.toString(), _variables);
 
         sb.clear();
 
