@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteOrder;
 import java.nio.channels.AsynchronousSocketChannel;
+import java.util.concurrent.ExecutionException;
 
 import static java.lang.Math.max;
 import static java.lang.Math.min;
@@ -64,7 +65,7 @@ public class Connector<T extends Client<Connection<T>>>  {
         return this;
     }
 
-    public T connect(String host, int port) throws IOException {
+    public T connect(String host, int port) throws IOException, ExecutionException, InterruptedException {
         InetSocketAddress socketAddress;
         if(isNull(host) || host.isEmpty()) {
             socketAddress = new InetSocketAddress(port);
@@ -74,9 +75,9 @@ public class Connector<T extends Client<Connection<T>>>  {
         return connect(socketAddress);
     }
 
-    public T connect(InetSocketAddress socketAddress) throws IOException {
+    public T connect(InetSocketAddress socketAddress) throws IOException, ExecutionException, InterruptedException {
         AsynchronousSocketChannel channel = AsynchronousSocketChannel.open();
-        channel.connect(socketAddress);
+        channel.connect(socketAddress).get();
         Connection<T> connection = new Connection<T>(channel, config.readHandler, new WriteHandler<>());
         T client = config.clientFactory.create(connection);
         client.setResourcePool(ResourcePool.initialize(config));

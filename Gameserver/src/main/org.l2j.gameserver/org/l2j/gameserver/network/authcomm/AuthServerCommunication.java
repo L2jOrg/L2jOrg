@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
@@ -46,7 +47,7 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
 		return instance;
 	}
 
-	public void connect() throws IOException  {
+	public void connect() throws IOException, ExecutionException, InterruptedException {
 		HostInfo hostInfo = HostsConfigHolder.getInstance().getAuthServerHost();
 		logger.info("Connecting to authserver on {}:{}",hostInfo.getIP(), hostInfo.getPort());
 		InetSocketAddress address = isNullOrEmpty(hostInfo.getIP()) ? new InetSocketAddress(hostInfo.getPort()) : new InetSocketAddress(hostInfo.getIP(), hostInfo.getPort());
@@ -58,9 +59,9 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
 		while (!shutdown && (isNull(client) || !client.isConnected())) {
 			try {
 				connect();
-			} catch (IOException e) {
+			} catch (IOException | ExecutionException | InterruptedException e) {
 				try {
-					wait(2000);
+					Thread.sleep(5000);
 				} catch (InterruptedException e1) {
 					// do nothing
 				}
