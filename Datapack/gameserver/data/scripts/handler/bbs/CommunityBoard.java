@@ -7,7 +7,7 @@ import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.xml.holder.MultiSellHolder;
-import org.l2j.gameserver.database.DatabaseFactory;
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.gameserver.handler.bbs.BbsHandlerHolder;
 import org.l2j.gameserver.handler.bbs.IBbsHandler;
 import org.l2j.gameserver.handler.bypass.BypassHolder;

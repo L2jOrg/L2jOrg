@@ -7,7 +7,7 @@ import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
-import org.l2j.gameserver.database.DatabaseFactory;
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Zone.ZoneType;
 import org.l2j.gameserver.model.actor.instances.player.BookMarkList;

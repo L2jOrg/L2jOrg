@@ -4,7 +4,7 @@ import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.database.DatabaseFactory;
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.gameserver.database.mysql;
 import org.l2j.gameserver.handler.voicecommands.IVoicedCommandHandler;
 import org.l2j.gameserver.handler.voicecommands.VoicedCommandHandler;

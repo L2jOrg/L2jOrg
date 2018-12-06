@@ -69,25 +69,23 @@ import java.util.Properties;
 public class GameServer {
 
     private static final String LOG4J_CONFIGURATION_FILE = "log4j.configurationFile";
+    private static final String HIKARICP_CONFIGURATION_FILE = "hikaricp.configurationFile";
 
     public static final String UPDATE_NAME = "Classic: Saviors (Zaken)";
     public static boolean DEVELOP = false;
     public static final int AUTH_SERVER_PROTOCOL = 2;
 
-    private static Logger _log;
-    private final ConnectionHandler<GameClient> connectionHandler;
-
     public static GameServer _instance;
+    private static Logger _log;
+
+    private final ConnectionHandler<GameClient> connectionHandler;
+    private final GameServerListenerList _listeners;
+    private final int _onlineLimit;
+    private final String _licenseHost;
 
     private String version;
-
-    private final GameServerListenerList _listeners;
-
     private long _serverStartTimeMillis;
-    private final String _licenseHost;
-    private final int _onlineLimit;
 
-    @SuppressWarnings("unchecked")
     public GameServer() throws Exception {
         _instance = this;
         _serverStartTimeMillis = System.currentTimeMillis();
@@ -123,7 +121,6 @@ public class GameServer {
             throw new Exception("Server online limit is zero!");
 
         // Initialize database
-        Class.forName(Config.DATABASE_DRIVER).getDeclaredConstructor().newInstance();
         L2DatabaseFactory.getInstance().getConnection().close();
 
         // TODO remove this
@@ -362,24 +359,16 @@ public class GameServer {
         return true;
     }
 
-    public static void main(String[] args) {
-        for (String arg : args)
-            if (arg.equalsIgnoreCase("-dev"))
-                DEVELOP = true;
-        configureLogger();
-        try {
-            new GameServer();
-        } catch (Exception e) {
-            _log.error(e.getLocalizedMessage(), e);
-        }
-    }
-
     public long getServerStartTime() {
         return _serverStartTimeMillis;
     }
 
     public String getLicenseHost() {
         return _licenseHost;
+    }
+
+    public String getVersion() {
+        return version;
     }
 
     public int getOnlineLimit() {
@@ -390,16 +379,30 @@ public class GameServer {
         connectionHandler.shutdown();
     }
 
+
+    public static void main(String[] args) {
+        for (String arg : args)
+            if (arg.equalsIgnoreCase("-dev"))
+                DEVELOP = true;
+        configureLogger();
+        configureDatabase();
+        try {
+            new GameServer();
+        } catch (Exception e) {
+            _log.error(e.getLocalizedMessage(), e);
+        }
+    }
+
+    private static void configureDatabase() {
+        System.setProperty(HIKARICP_CONFIGURATION_FILE, "config/database.properties");
+    }
+
     private static void configureLogger() {
         String logConfigurationFile = System.getProperty(LOG4J_CONFIGURATION_FILE);
         if (logConfigurationFile == null || logConfigurationFile.isEmpty()) {
             System.setProperty(LOG4J_CONFIGURATION_FILE, "log4j.xml");
         }
         _log = LoggerFactory.getLogger(GameServer.class);
-    }
-
-    public String getVersion() {
-        return version;
     }
 
     public class GameServerListenerList extends ListenerList<GameServer> {

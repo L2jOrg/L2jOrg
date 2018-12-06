@@ -1,7 +1,7 @@
 package bosses;
 
 import org.l2j.commons.dbutils.DbUtils;
-import org.l2j.gameserver.database.DatabaseFactory;
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

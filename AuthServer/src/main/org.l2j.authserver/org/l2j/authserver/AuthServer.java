@@ -23,6 +23,8 @@ import static org.l2j.commons.util.Util.isNullOrEmpty;
 public class AuthServer {
 
     private static final String LOG4J_CONFIGURATION = "log4j.configurationFile";
+    private static final String HIKARICP_CONFIGURATION_FILE = "hikaricp.configurationFile";
+
     public static final int PROTOCOL_REV = 0x0102;
 
     private static AuthServer _instance;
@@ -57,6 +59,7 @@ public class AuthServer {
 
     public static void main(String[] args) {
         configureLogger();
+        configureDatabase();
         Server.serverMode = Server.MODE_LOGINSERVER;
         Config.load();
         try {
@@ -66,6 +69,11 @@ public class AuthServer {
             logger.error(e.getLocalizedMessage(), e);
         }
     }
+
+    private static void configureDatabase() {
+        System.setProperty(HIKARICP_CONFIGURATION_FILE, "config/database.properties");
+    }
+
 
     private static void configureLogger() {
         var logConfigurationFile = System.getProperty(LOG4J_CONFIGURATION);

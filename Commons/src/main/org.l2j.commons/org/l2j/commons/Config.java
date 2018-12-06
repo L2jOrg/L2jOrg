@@ -48,30 +48,6 @@ public final class Config {
      */
     public static String GAMESERVER_HOSTNAME;
 
-    // Access to database
-    /**
-     * Driver to access to database
-     */
-    public static String DATABASE_DRIVER;
-    /**
-     * Path to access to database
-     */
-    public static String DATABASE_URL;
-    /**
-     * Database login
-     */
-    public static String DATABASE_LOGIN;
-    /**
-     * Database password
-     */
-    public static String DATABASE_PASSWORD;
-    /**
-     * Maximum number of connections to the database
-     */
-    public static int DATABASE_MAX_CONNECTIONS;
-
-    public static int DATABASE_MAX_IDLE_TIME;
-
     /**
      * Maximum number of players allowed to play simultaneously on server
      */
@@ -1828,13 +1804,6 @@ public final class Config {
                 REQUEST_ID = Integer.parseInt(serverSettings.getProperty("RequestServerID", "0"));
                 ACCEPT_ALTERNATE_ID = Boolean.parseBoolean(serverSettings.getProperty("AcceptAlternateID", "True"));
 
-                DATABASE_DRIVER = serverSettings.getProperty("Driver", "com.mysql.jdbc.Driver");
-                DATABASE_URL = serverSettings.getProperty("URL", "jdbc:mysql://localhost/l2jdb");
-                DATABASE_LOGIN = serverSettings.getProperty("Login", "root");
-                DATABASE_PASSWORD = serverSettings.getProperty("Password", "");
-                DATABASE_MAX_CONNECTIONS = Integer.parseInt(serverSettings.getProperty("MaximumDbConnections", "10"));
-                DATABASE_MAX_IDLE_TIME = Integer.parseInt(serverSettings.getProperty("MaximumDbIdleTime", "0"));
-
                 DATAPACK_ROOT = new File(serverSettings.getProperty("DatapackRoot", ".")).getCanonicalFile();
 
                 CNAME_TEMPLATE = serverSettings.getProperty("CnameTemplate", ".*");
@@ -2653,13 +2622,6 @@ public final class Config {
 
                 INTERNAL_HOSTNAME = serverSettings.getProperty("InternalHostname", "localhost");
                 EXTERNAL_HOSTNAME = serverSettings.getProperty("ExternalHostname", "localhost");
-
-                DATABASE_DRIVER = serverSettings.getProperty("Driver", "com.mysql.jdbc.Driver");
-                DATABASE_URL = serverSettings.getProperty("URL", "jdbc:mysql://localhost/l2jdb");
-                DATABASE_LOGIN = serverSettings.getProperty("Login", "root");
-                DATABASE_PASSWORD = serverSettings.getProperty("Password", "");
-                DATABASE_MAX_CONNECTIONS = Integer.parseInt(serverSettings.getProperty("MaximumDbConnections", "10"));
-                DATABASE_MAX_IDLE_TIME = Integer.parseInt(serverSettings.getProperty("MaximumDbIdleTime", "0"));
 
                 IP_UPDATE_TIME = Integer.parseInt(serverSettings.getProperty("IpUpdateTime", "15"));
                 FORCE_GGAUTH = Boolean.parseBoolean(serverSettings.getProperty("ForceGGAuth", "false"));

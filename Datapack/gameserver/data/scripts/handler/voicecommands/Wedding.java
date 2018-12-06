@@ -7,7 +7,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
-import org.l2j.gameserver.database.DatabaseFactory;
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.gameserver.instancemanager.CoupleManager;
 import org.l2j.gameserver.listener.actor.player.OnAnswerListener;
 import org.l2j.gameserver.model.GameObjectsStorage;

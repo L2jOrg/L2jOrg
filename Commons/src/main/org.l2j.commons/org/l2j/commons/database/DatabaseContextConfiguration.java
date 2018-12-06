@@ -27,29 +27,7 @@ public class DatabaseContextConfiguration {
 
     @Bean
     public HikariDataSource dataSource() {
-        HikariConfig dataSourceConfig = new HikariConfig();
-
-        dataSourceConfig.setJdbcUrl(Config.DATABASE_URL);
-        dataSourceConfig.setUsername(Config.DATABASE_LOGIN);
-        dataSourceConfig.setPassword(Config.DATABASE_PASSWORD);
-        dataSourceConfig.addDataSourceProperty("maximumPoolSize", Config.DATABASE_MAX_CONNECTIONS);
-        dataSourceConfig.addDataSourceProperty("idleTimeout", Config.DATABASE_MAX_IDLE_TIME); // 0 = idle connections never expire
-        dataSourceConfig.addDataSourceProperty("cachePrepStmts", true);
-        dataSourceConfig.addDataSourceProperty("prepStmtCacheSize", 250);
-        dataSourceConfig.addDataSourceProperty("prepStmtCacheSqlLimit", 2048);
-        dataSourceConfig.addDataSourceProperty("useServerPrepStmts", true);
-        dataSourceConfig.addDataSourceProperty("useLocalSessionState", true);
-        dataSourceConfig.addDataSourceProperty("useLocalTransactionState", true);
-        dataSourceConfig.addDataSourceProperty("rewriteBatchedStatements", true);
-        dataSourceConfig.addDataSourceProperty("cacheServerConfiguration", true);
-        dataSourceConfig.addDataSourceProperty("cacheResultSetMetadata", true);
-        dataSourceConfig.addDataSourceProperty("maintainTimeStats", true);
-        dataSourceConfig.addDataSourceProperty("logger", "com.mysql.cj.log.Slf4JLogger");
-        dataSourceConfig.addDataSourceProperty("autoCommit", true);
-        dataSourceConfig.addDataSourceProperty("minimumIdle", 10);
-        dataSourceConfig.addDataSourceProperty("validationTimeout", 500); // 500 milliseconds wait before try to acquire connection again
-        dataSourceConfig.addDataSourceProperty("connectionTimeout", 0); // 0 = wait indefinitely for new connection if pool is exhausted
-        return new HikariDataSource(dataSourceConfig);
+        return new HikariDataSource(new HikariConfig());
     }
 
     @Bean

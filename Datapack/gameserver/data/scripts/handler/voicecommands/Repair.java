@@ -4,7 +4,7 @@ import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.dao.CharacterVariablesDAO;
 import org.l2j.gameserver.dao.ItemsDAO;
-import org.l2j.gameserver.database.DatabaseFactory;
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.items.ItemInstance;

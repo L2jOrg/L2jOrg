@@ -82,13 +82,6 @@ public class Config
     public static boolean HTM_SHAPE_ARABIC;
     public static int SHUTDOWN_ANN_TYPE;
 
-    public static String DATABASE_DRIVER;
-    public static int DATABASE_MAX_CONNECTIONS;
-    public static int DATABASE_MAX_IDLE_TIMEOUT;
-    public static int DATABASE_IDLE_TEST_PERIOD;
-    public static String DATABASE_URL;
-    public static String DATABASE_LOGIN;
-    public static String DATABASE_PASSWORD;
     public static boolean DATABASE_AUTOUPDATE;
 
     // Database additional options
@@ -1454,21 +1447,7 @@ public class Config
 
         MAXIMUM_ONLINE_USERS = serverSettings.getProperty("MaximumOnlineUsers", 3000);
 
-        DATABASE_DRIVER = serverSettings.getProperty("DATABASE_DRIVER", "com.mysql.cj.jdbc.Driver");
-
-        String databaseHost = serverSettings.getProperty("DATABASE_HOST", "localhost");
-        int databasePort = serverSettings.getProperty("DATABASE_PORT", 3306);
-        String databaseName = serverSettings.getProperty("DATABASE_NAME", "l2j");
-
-        DATABASE_URL = serverSettings.getProperty("DATABASE_URL", "jdbc:mysql://" + databaseHost + ":" + databasePort + "/" + databaseName + "?useUnicode=true&characterEncoding=utf-8");
-        DATABASE_LOGIN = serverSettings.getProperty("DATABASE_LOGIN", "root");
-        DATABASE_PASSWORD = serverSettings.getProperty("DATABASE_PASSWORD", "");
-
         DATABASE_AUTOUPDATE = serverSettings.getProperty("DATABASE_AUTOUPDATE", false);
-
-        DATABASE_MAX_CONNECTIONS = serverSettings.getProperty("MaximumDbConnections", 10);
-        DATABASE_MAX_IDLE_TIMEOUT = serverSettings.getProperty("MaxIdleConnectionTimeout", 600);
-        DATABASE_IDLE_TEST_PERIOD = serverSettings.getProperty("IdleConnectionTestPeriod", 60);
 
         USER_INFO_INTERVAL = serverSettings.getProperty("UserInfoInterval", 100L);
         //BROADCAST_STATS_INTERVAL = serverSettings.getProperty("BroadcastStatsInterval", true);
