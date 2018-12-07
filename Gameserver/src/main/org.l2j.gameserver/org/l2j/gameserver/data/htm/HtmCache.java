@@ -3,7 +3,6 @@ package org.l2j.gameserver.data.htm;
 import net.sf.ehcache.Cache;
 import net.sf.ehcache.CacheManager;
 import net.sf.ehcache.Element;
-import org.apache.commons.io.FileUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.utils.ArabicConv;
@@ -15,6 +14,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 
 /**
  * Кэширование html диалогов.
@@ -98,7 +98,6 @@ public class HtmCache
         }
         File[] files = f.listFiles();
 
-        //FIXME [VISTALL] может лучше использовать Apache FileUtils?
         for(File file : files)
         {
             if(file.isDirectory())
@@ -306,9 +305,8 @@ public class HtmCache
             _cache[i].removeAll();
     }
 
-    private static String readContent(File file) throws IOException
-    {
-        String content = FileUtils.readFileToString(file, "UTF-8");
+    private static String readContent(File file) throws IOException {
+        String content = Files.readString(file.toPath());
         if(Config.HTM_SHAPE_ARABIC)
             content = ArabicConv.shapeArabic(content);
         return content;

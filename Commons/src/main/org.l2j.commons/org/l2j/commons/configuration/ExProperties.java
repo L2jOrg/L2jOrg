@@ -6,8 +6,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-import org.apache.commons.io.IOUtils;
-
 /**
  * @author G1ta0
  */
@@ -22,16 +20,9 @@ public class ExProperties extends Properties
 		load(new File(fileName));
 	}
 
-	public void load(File file) throws IOException
-	{
-		InputStream is = null;
-		try
-		{
-			load(is = new FileInputStream(file));
-		}
-		finally
-		{
-			IOUtils.closeQuietly(is);
+	public void load(File file) throws IOException {
+		try(InputStream is = new FileInputStream(file)) {
+			load(is);
 		}
 	}
 	

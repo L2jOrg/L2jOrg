@@ -1,46 +1,33 @@
 package org.l2j.gameserver.utils;
 
-import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Path;
 
-import org.apache.commons.io.FileUtils;
+import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Files
-{
+public class Files {
+
 	private static final Logger _log = LoggerFactory.getLogger(Files.class);
 
-	/**
-	 * Сохраняет строку в файл в кодировке UTF-8.<br>
-	 * Если такой файл существует, то перезаписывает его.
-	 * @param path путь к файлу
-	 * @param string сохраняемая строка
-	 */
-	public static void writeFile(String path, String string)
-	{
-		try
-		{
-			FileUtils.writeStringToFile(new File(path), string, "UTF-8");
-		}
-		catch(IOException e)
-		{
-			_log.error("Error while saving file : " + path, e);
+	public static void writeFile(String path, String string) {
+		try {
+			java.nio.file.Files.writeString(Path.of(path), string, StandardCharsets.UTF_8);
+		} catch(IOException e) {
+			_log.error("Error while saving file {} : {}", path, e);
 		}
 	}
 
-	public static boolean copyFile(String srcFile, String destFile)
-	{
-		try
-		{
-			FileUtils.copyFile(new File(srcFile), new File(destFile), false);
+	public static boolean copyFile(String srcFile, String destFile) {
+		try {
+			java.nio.file.Files.copy(Path.of(srcFile), Path.of(destFile));
 			return true;
+		} catch(IOException e) {
+			_log.error("Error while copying file {} to {} : {}", srcFile, destFile, e);
 		}
-		catch(IOException e)
-		{
-			_log.error("Error while copying file : " + srcFile + " to " + destFile, e);
-		}
-
 		return false;
 	}
 }

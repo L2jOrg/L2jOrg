@@ -1,12 +1,13 @@
 package org.l2j.gameserver.utils;
 
-import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.List;
 import java.util.regex.Pattern;
 
 import org.l2j.gameserver.Config;
 
-import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -45,42 +46,33 @@ public class Strings
 	private static String[] trb;
 	private static String[] trcode;
 
-	public static void reload()
-	{
-		try
-		{
-			String[] pairs = FileUtils.readFileToString(new File(Config.DATAPACK_ROOT, "data/translit.txt")).split("\n");
-			tr = new String[pairs.length * 2];
-			for(int i = 0; i < pairs.length; i++)
-			{
-				String[] ss = pairs[i].split(" +");
-				tr[i * 2] = ss[0];
-				tr[i * 2 + 1] = ss[1];
-			}
+	public static void reload() {
+		try {
+			var pairs = Files.readAllLines(Path.of(Config.DATAPACK_ROOT + "/data/translit.txt"));
+			tr = new String[pairs.size() * 2];
+			parsePairs(pairs, tr);
 
-			pairs = FileUtils.readFileToString(new File(Config.DATAPACK_ROOT, "data/translit_back.txt")).split("\n");
-			trb = new String[pairs.length * 2];
-			for(int i = 0; i < pairs.length; i++)
-			{
-				String[] ss = pairs[i].split(" +");
-				trb[i * 2] = ss[0];
-				trb[i * 2 + 1] = ss[1];
-			}
+			pairs = Files.readAllLines(Path.of(Config.DATAPACK_ROOT + "/data/translit_back.txt"));
+			trb = new String[pairs.size() * 2];
+			parsePairs(pairs, trb);
 
-			pairs = FileUtils.readFileToString(new File(Config.DATAPACK_ROOT, "data/transcode.txt")).split("\n");
-			trcode = new String[pairs.length * 2];
-			for(int i = 0; i < pairs.length; i++)
-			{
-				String[] ss = pairs[i].split(" +");
-				trcode[i * 2] = ss[0];
-				trcode[i * 2 + 1] = ss[1];
-			}
+			pairs = Files.readAllLines(Path.of(Config.DATAPACK_ROOT + "/data/transcode.txt"));
+			trcode = new String[pairs.size() * 2];
+			parsePairs(pairs, trcode);
 		}
 		catch(IOException e)
 		{
 			_log.error("", e);
 		}
 		_log.info("Loaded " + (tr.length + tr.length + trcode.length) + " translit entries.");
+	}
+
+	private static void parsePairs(List<String> pairs, String[] holder) {
+		for (int i = 0; i < pairs.size(); i++) {
+			String[] ss = pairs.get(i).split(" +");
+			holder[i * 2] = ss[0];
+			holder[i * 2 + 1] = ss[1];
+		}
 	}
 
 	public static String translit(String s)

@@ -14,7 +14,6 @@ module org.l2j.gameserver {
     requires trove;
     requires commons.lang3;
     requires org.napile.primitive;
-    requires commons.io;
     requires java.management;
     requires dom4j;
     requires ehcache.core;

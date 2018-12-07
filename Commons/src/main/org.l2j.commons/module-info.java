@@ -12,7 +12,6 @@ module org.l2j.commons {
     requires java.management;
     requires java.compiler;
     requires commons.math3;
-    requires commons.io;
     requires dom4j;
     requires ecj;
     requires commons.lang3;

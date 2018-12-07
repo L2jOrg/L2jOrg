@@ -2,6 +2,7 @@ package org.l2j.commons.util;
 
 import java.lang.reflect.Field;
 import java.math.BigInteger;
+import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
