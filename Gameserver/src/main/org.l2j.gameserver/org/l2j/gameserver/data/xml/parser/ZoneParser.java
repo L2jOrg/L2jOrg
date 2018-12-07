@@ -1,10 +1,5 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
 import org.dom4j.Element;
 import org.l2j.commons.geometry.Circle;
 import org.l2j.commons.geometry.Polygon;
@@ -17,13 +12,22 @@ import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.templates.ZoneTemplate;
 import org.l2j.gameserver.utils.Location;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * @author G1ta0
  */
 public class ZoneParser extends StatParser<ZoneHolder>
 {
+	private static final Logger looger = LoggerFactory.getLogger(ZoneParser.class);
 	private static final ZoneParser _instance = new ZoneParser();
+
 
 	public static ZoneParser getInstance()
 	{
@@ -142,7 +146,7 @@ public class ZoneParser extends StatParser<ZoneHolder>
 				Polygon shape = parsePolygon(n);
 
 				if(!shape.validate())
-					getInstance().error("ZoneParser: invalid territory data : " + shape + ", zone: " + zoneDat.getString("name") + "!");
+					looger.error("ZoneParser: invalid territory data : " + shape + ", zone: " + zoneDat.getString("name") + "!");
 
 				if(territory == null)
 				{
@@ -174,7 +178,7 @@ public class ZoneParser extends StatParser<ZoneHolder>
 
 		if(territory == null || territory.getTerritories().isEmpty())
 		{
-			getInstance().error("Empty territory for zone: " + zoneDat.get("name"));
+			looger.error("Empty territory for zone: " + zoneDat.get("name"));
 			return null;
 		}
 

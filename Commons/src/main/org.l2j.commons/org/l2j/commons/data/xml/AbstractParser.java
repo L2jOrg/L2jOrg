@@ -5,7 +5,8 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 import org.l2j.commons.data.xml.helpers.ErrorHandlerImpl;
 import org.l2j.commons.data.xml.helpers.SimpleDTDEntityResolver;
-import org.l2j.commons.logging.LoggerObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -20,15 +21,15 @@ import static java.util.Objects.isNull;
  * Author: VISTALL
  * Date:  18:35/30.11.2010
  */
-public abstract class AbstractParser<H extends AbstractHolder> extends LoggerObject
-{
-    protected final H _holder;
+public abstract class AbstractParser<H extends AbstractHolder> {
 
+    private final H _holder;
+    private SAXReader _reader;
+
+    protected final Logger logger = LoggerFactory.getLogger(getClass());
     protected String _currentFile;
-    protected SAXReader _reader;
 
-    protected AbstractParser(H holder)
-    {
+    protected AbstractParser(H holder) {
         _holder = holder;
         _reader = new SAXReader();
         _reader.setValidation(true);
@@ -63,23 +64,17 @@ public abstract class AbstractParser<H extends AbstractHolder> extends LoggerObj
         readData(document.getRootElement());
     }
 
-    protected abstract void readData(Element rootElement) throws Exception;
-
-    protected void parse()
-    {
+    protected void parse() {
         File path = getXMLPath();
-        if(!path.exists())
-        {
-            warn("directory or file " + path.getAbsolutePath() + " not exists");
+        if(!path.exists()) {
+            logger.warn("directory or file {} not exists", path.getAbsolutePath());
             return;
         }
 
-        if(path.isDirectory())
-        {
+        if(path.isDirectory()) {
             File dtd = new File(path, getDTDFileName());
-            if(!dtd.exists())
-            {
-                error("DTD file: " + dtd.getName() + " not exists.");
+            if(!dtd.exists()) {
+                logger.warn("DTD file: {} not exists.", dtd.getName());
                 return;
             }
 
@@ -87,37 +82,27 @@ public abstract class AbstractParser<H extends AbstractHolder> extends LoggerObj
 
             parseDir(path);
             parseDir(getCustomXMLPath());
-        }
-        else
-        {
+        } else {
             File dtd = new File(path.getParent(), getDTDFileName());
-            if(!dtd.exists())
-            {
-                info("DTD file: " + dtd.getName() + " not exists.");
+            if(!dtd.exists()) {
+                logger.info("DTD file: {} not exists.", dtd.getName());
                 return;
             }
 
             initDTD(dtd);
 
-            try
-            {
+            try {
                 parseDocument(new FileInputStream(path), path.getName());
-            }
-            catch(Exception e)
-            {
-                warn("Exception: " + e, e);
+            } catch(Exception e) {
+                logger.warn(e.getLocalizedMessage(), e);
             }
 
             File customPath = getCustomXMLPath();
-            if(customPath != null && customPath.exists())
-            {
-                try
-                {
+            if(customPath != null && customPath.exists()) {
+                try {
                     parseDocument(new FileInputStream(customPath), customPath.getName());
-                }
-                catch(Exception e)
-                {
-                    warn("Exception: " + e, e);
+                } catch(Exception e) {
+                    logger.warn(e.getLocalizedMessage(), e);
                 }
             }
         }
@@ -137,16 +122,14 @@ public abstract class AbstractParser<H extends AbstractHolder> extends LoggerObj
         return _currentFile;
     }
 
-    public void load()
-    {
+    public void load() {
         parse();
         _holder.process();
         _holder.log();
     }
 
-    public void reload()
-    {
-        info("reload start...");
+    public void reload() {
+        logger.info("reload start...");
         _holder.clear();
         load();
     }
@@ -157,7 +140,7 @@ public abstract class AbstractParser<H extends AbstractHolder> extends LoggerObj
         }
 
         if(!dir.exists()) {
-            _log.warn("Dir {} not exists", dir.getAbsolutePath());
+            logger.warn("Dir {} not exists", dir.getAbsolutePath());
             return;
         }
 
@@ -168,12 +151,12 @@ public abstract class AbstractParser<H extends AbstractHolder> extends LoggerObj
                     parseDocument(new FileInputStream(file), file.getName());
                 }
                 catch(Exception e) {
-                    _log.error("Parsing Document file {}: {}", file.getName(), e.getStackTrace());
+                    logger.error("Parsing Document file {}: {}", file.getName(), e.getStackTrace());
                 }
 
             }
         } catch (IOException e) {
-            _log.error(e.getLocalizedMessage(), e);
+            logger.error(e.getLocalizedMessage(), e);
         }
     }
 
@@ -181,4 +164,6 @@ public abstract class AbstractParser<H extends AbstractHolder> extends LoggerObj
         var file = path.toFile();
         return file.getName().endsWith(".xml") && !file.isHidden() && !isIgnored(file);
     }
+
+    protected abstract void readData(Element rootElement) throws Exception;
 }

@@ -1,16 +1,15 @@
 package org.l2j.gameserver.data.xml.holder;
 
+import gnu.trove.iterator.TIntObjectIterator;
+import gnu.trove.map.hash.TIntObjectHashMap;
+import org.l2j.commons.data.xml.AbstractHolder;
+import org.l2j.commons.lang.ArrayUtils;
+import org.l2j.gameserver.templates.npc.NpcTemplate;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import gnu.trove.iterator.TIntObjectIterator;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
-import org.l2j.commons.data.xml.AbstractHolder;
-import org.l2j.commons.lang.ArrayUtils;
-import org.l2j.gameserver.templates.npc.NpcTemplate;
 
 public final class NpcHolder extends AbstractHolder
 {
@@ -41,7 +40,7 @@ public final class NpcHolder extends AbstractHolder
 		NpcTemplate npc = ArrayUtils.valid(_allTemplates, id);
 		if(npc == null)
 		{
-			warn("Not defined npc id : " + id + ", or out of range!", new Exception());
+			logger.warn("Not defined npc id : " + id + ", or out of range!", new Exception());
 			return null;
 		}
 		return _allTemplates[id];

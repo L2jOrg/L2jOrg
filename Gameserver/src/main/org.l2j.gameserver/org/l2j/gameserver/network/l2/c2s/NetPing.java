@@ -11,7 +11,7 @@ public class NetPing extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		//_log.info.println(getType() + " :: " + unk + " :: " + unk2 + " :: " + unk3);
+		//logger.info.println(getType() + " :: " + unk + " :: " + unk2 + " :: " + unk3);
 	}
 
 	@Override

@@ -1,8 +1,5 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.io.File;
-import java.util.Iterator;
-
 import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.commons.geometry.Polygon;
@@ -10,6 +7,9 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.instancemanager.MapRegionManager;
 import org.l2j.gameserver.model.Territory;
 import org.l2j.gameserver.templates.mapregion.DomainArea;
+
+import java.io.File;
+import java.util.Iterator;
 
 public class DomainParser extends AbstractParser<MapRegionManager>
 {
@@ -58,7 +58,7 @@ public class DomainParser extends AbstractParser<MapRegionManager>
 						Polygon shape = ZoneParser.parsePolygon(n);
 
 						if(!shape.validate())
-							error("DomainParser: invalid territory data : " + shape + "!");
+							logger.error("DomainParser: invalid territory data : " + shape + "!");
 
 						if(territory == null)
 							territory = new Territory();

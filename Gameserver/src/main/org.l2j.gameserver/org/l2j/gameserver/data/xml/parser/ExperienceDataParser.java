@@ -1,14 +1,14 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.io.File;
-import java.util.Iterator;
-
+import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.ExperienceDataHolder;
 import org.l2j.gameserver.model.base.Experience;
 import org.l2j.gameserver.templates.ExperienceData;
-import org.dom4j.Element;
+
+import java.io.File;
+import java.util.Iterator;
 
 public final class ExperienceDataParser extends AbstractParser<ExperienceDataHolder>
 {
@@ -58,7 +58,7 @@ public final class ExperienceDataParser extends AbstractParser<ExperienceDataHol
 		{
 			if(!getHolder().containsData(level))
 			{
-				error("Not found experience data for " + level + " level!");
+				logger.error("Not found experience data for " + level + " level!");
 				Runtime.getRuntime().exit(0);
 			}
 		}

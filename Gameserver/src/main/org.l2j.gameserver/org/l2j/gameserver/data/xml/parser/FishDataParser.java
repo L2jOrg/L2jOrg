@@ -1,17 +1,13 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.io.File;
-import java.util.Iterator;
-
 import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.FishDataHolder;
-import org.l2j.gameserver.templates.fish.FishRewardTemplate;
-import org.l2j.gameserver.templates.fish.FishRewardsTemplate;
-import org.l2j.gameserver.templates.fish.FishTemplate;
-import org.l2j.gameserver.templates.fish.LureTemplate;
-import org.l2j.gameserver.templates.fish.RodTemplate;
+import org.l2j.gameserver.templates.fish.*;
+
+import java.io.File;
+import java.util.Iterator;
 
 /**
  * @author Bonux
@@ -71,13 +67,13 @@ public class FishDataParser extends AbstractParser<FishDataHolder>
 
 					if(fish_chance <= 0)
 					{
-						warn("Fish ID[" + fish_id + "] in lure ID[" + id + "] have wrong chance (chance <= 0)!");
+						logger.warn("Fish ID[" + fish_id + "] in lure ID[" + id + "] have wrong chance (chance <= 0)!");
 						continue;
 					}
 
 					if(fish_duration <= 0)
 					{
-						warn("Fish ID[" + fish_id + "] in lure ID[" + id + "] have wrong duration (duration <= 0)!");
+						logger.warn("Fish ID[" + fish_id + "] in lure ID[" + id + "] have wrong duration (duration <= 0)!");
 						continue;
 					}
 

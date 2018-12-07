@@ -1,14 +1,5 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-
 import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.commons.geometry.Polygon;
@@ -29,6 +20,9 @@ import org.l2j.gameserver.utils.Location;
 import org.napile.primitive.Containers;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
+
+import java.io.File;
+import java.util.*;
 
 /**
  * @author VISTALL
@@ -179,7 +173,7 @@ public class InstantZoneParser extends AbstractParser<InstantZoneHolder>
 						ZoneTemplate template = ZoneHolder.getInstance().getTemplate(e.attributeValue("name"));
 						if(template == null)
 						{
-							error("Zone: " + e.attributeValue("name") + " not found; file: " + getCurrentFileName());
+							logger.error("Zone: " + e.attributeValue("name") + " not found; file: " + getCurrentFileName());
 							continue;
 						}
 						zones.put(template.getName(), new InstantZone.ZoneInfo(template, active));
@@ -201,7 +195,7 @@ public class InstantZoneParser extends AbstractParser<InstantZoneHolder>
 							boolean spawned = e.attributeValue("spawned") != null && Boolean.parseBoolean(e.attributeValue("spawned"));
 							List<SpawnTemplate> templates = SpawnHolder.getInstance().getSpawn(group);
 							if(templates == null)
-								info("not find spawn group: " + group + " in file: " + getCurrentFileName());
+								logger.info("not find spawn group: " + group + " in file: " + getCurrentFileName());
 							else
 							{
 								if(spawns2.isEmpty())
@@ -234,7 +228,7 @@ public class InstantZoneParser extends AbstractParser<InstantZoneHolder>
 							else if(spawnTypeNode.equalsIgnoreCase("loc"))
 								spawnType = 2;
 							else
-								error("Spawn type  '" + spawnTypeNode + "' is unknown!");
+								logger.error("Spawn type  '" + spawnTypeNode + "' is unknown!");
 
 							for(Element e2 : e.elements())
 								if("coords".equalsIgnoreCase(e2.getName()))
@@ -248,7 +242,7 @@ public class InstantZoneParser extends AbstractParser<InstantZoneHolder>
 									poly.add(loc.x, loc.y).setZmin(loc.z).setZmax(loc.z);
 
 								if(!poly.validate())
-									error("invalid spawn territory for instance id : " + instanceId + " - " + poly + "!");
+									logger.error("invalid spawn territory for instance id : " + instanceId + " - " + poly + "!");
 
 								territory = new Territory().add(poly);
 							}

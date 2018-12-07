@@ -18,6 +18,8 @@ import org.l2j.gameserver.templates.TeleportLocation;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.templates.npc.*;
 import org.l2j.gameserver.utils.Location;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -26,6 +28,7 @@ import java.util.List;
 
 public final class NpcParser extends AbstractParser<NpcHolder>
 {
+	private static final Logger logger = LoggerFactory.getLogger(NpcParser.class);
 	private static final NpcParser _instance = new NpcParser();
 
 	public static NpcParser getInstance()
@@ -353,7 +356,7 @@ public final class NpcParser extends AbstractParser<NpcHolder>
 					if(Config.DISABLE_DROP_EXCEPT_ITEM_IDS.isEmpty() || Config.DISABLE_DROP_EXCEPT_ITEM_IDS.contains(data.getItemId()))
 					{
 						if(notGroupType)
-							parser.warn("Can't load rewardlist from group: " + debugString + "; type: " + type);
+							logger.warn("Can't load rewardlist from group: " + debugString + "; type: " + type);
 						else
 							group.addData(data);
 					}
@@ -364,7 +367,7 @@ public final class NpcParser extends AbstractParser<NpcHolder>
 			else if(nextName.equalsIgnoreCase("reward"))
 			{
 				if(!notGroupType)
-					parser.warn("Reward can't be without group(and not grouped): " + debugString + "; type: " + type);
+					logger.warn("Reward can't be without group(and not grouped): " + debugString + "; type: " + type);
 				else
 				{
 					RewardData data = parseReward(nextElement);

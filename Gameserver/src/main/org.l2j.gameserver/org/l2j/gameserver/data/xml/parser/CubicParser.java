@@ -1,10 +1,6 @@
 package org.l2j.gameserver.data.xml.parser;
 
 import gnu.trove.map.hash.TIntIntHashMap;
-
-import java.io.File;
-import java.util.Iterator;
-
 import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.Config;
@@ -12,6 +8,9 @@ import org.l2j.gameserver.data.xml.holder.CubicHolder;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.model.Skill;
 import org.l2j.gameserver.templates.CubicTemplate;
+
+import java.io.File;
+import java.util.Iterator;
 
 /**
  * @author VISTALL
@@ -85,7 +84,7 @@ public final class CubicParser extends AbstractParser<CubicHolder>
 
 				if(use_chance2 == 0 && set.isEmpty())
 				{
-					warn("Wrong skill chance. Cubic: " + id + "/" + level);
+					logger.warn("Wrong skill chance. Cubic: " + id + "/" + level);
 				}
 
 				Skill skill = SkillHolder.getInstance().getSkill(id2, level2);

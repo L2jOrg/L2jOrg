@@ -1,12 +1,12 @@
 package org.l2j.gameserver.handler.dailymissions;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.handler.dailymissions.impl.DefaultDailyMissionHandler;
 import org.l2j.gameserver.listener.CharListener;
 import org.l2j.gameserver.model.actor.listener.CharListenerList;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author Bonux
@@ -45,7 +45,7 @@ public class DailyMissionHandlerHolder extends AbstractHolder
 
 		if(_handlers.isEmpty() || !_handlers.containsKey(handler))
 		{
-			warn(getClass().getSimpleName() + ": Cannot find handler [" + handler + "]!");
+			logger.warn(getClass().getSimpleName() + ": Cannot find handler [" + handler + "]!");
 			return DEFAULT_DAILY_MISSION_HANDLER;
 		}
 

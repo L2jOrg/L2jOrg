@@ -193,7 +193,7 @@ public abstract class CustomInstantTeamEvent extends SingleMatchEvent implements
                 if (player.isTeleporting()) {
                     //player.setXYZ(object.getLoc().x, object.getLoc().y, object.getLoc().z);  // возможен крит
                     player.setReflection(ReflectionManager.MAIN);
-                    _log.debug("TvT: player teleporting error:", player);
+                    logger.debug("TvT: player teleporting error:", player);
                 } else
                     object.teleportBack();
             }

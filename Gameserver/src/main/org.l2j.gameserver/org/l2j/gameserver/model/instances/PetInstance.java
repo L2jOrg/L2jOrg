@@ -754,7 +754,7 @@ public class PetInstance extends Servitor
 		IItemHandler handler = template.getHandler();
 		if(handler == null)
 		{
-			//_log.warn("Fail while use item. Not found handler for item ID[" + item.getItemId() + "]!");
+			//logger.warn("Fail while use item. Not found handler for item ID[" + item.getItemId() + "]!");
 			return false;
 		}
 

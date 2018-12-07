@@ -192,7 +192,7 @@ public class LairOfAntharasBloodNight implements OnInitScriptListener
 						spawn.init();
 						spawn.stopRespawn();
 						_list2.add(spawn);
-						//_log.info(" npcId "+npc2.getNpcId()+" spawned PvP-event at "+npc2.getSpawnedLoc().toXYZString());
+						//logger.info(" npcId "+npc2.getNpcId()+" spawned PvP-event at "+npc2.getSpawnedLoc().toXYZString());
 						count++;
 					}
 					else
@@ -200,7 +200,7 @@ public class LairOfAntharasBloodNight implements OnInitScriptListener
 						npc.init();
 						npc.stopRespawn();
 						//npc3.getSpawn().stopRespawn();
-						//_log.info(" npcId "+spawn.getNpcId()+" spawned PvP-event at "+spawn.getLastSpawn().getLocation().toXYZString());
+						//logger.info(" npcId "+spawn.getNpcId()+" spawned PvP-event at "+spawn.getLastSpawn().getLocation().toXYZString());
 						count++;
 					}
 				}
@@ -225,7 +225,7 @@ public class LairOfAntharasBloodNight implements OnInitScriptListener
 
 					npc.init();
 					npc.stopRespawn();
-					//_log.info(" npcId "+spawn.getNpcId()+" spawned at "+spawn.getLastSpawn().getLocation().toXYZString());
+					//logger.info(" npcId "+spawn.getNpcId()+" spawned at "+spawn.getLastSpawn().getLocation().toXYZString());
 					count++;
 				}
 			}

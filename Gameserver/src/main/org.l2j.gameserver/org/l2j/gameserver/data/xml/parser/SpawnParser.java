@@ -1,10 +1,6 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.io.File;
-import java.util.*;
-
 import org.dom4j.Element;
-import org.l2j.gameserver.templates.npc.MinionData;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.commons.geometry.Circle;
@@ -14,10 +10,14 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.SpawnHolder;
 import org.l2j.gameserver.model.Territory;
 import org.l2j.gameserver.templates.StatsSet;
+import org.l2j.gameserver.templates.npc.MinionData;
 import org.l2j.gameserver.templates.spawn.PeriodOfDay;
 import org.l2j.gameserver.templates.spawn.SpawnNpcInfo;
 import org.l2j.gameserver.templates.spawn.SpawnTemplate;
 import org.l2j.gameserver.utils.Location;
+
+import java.io.File;
+import java.util.*;
 
 /**
  * @author VISTALL
@@ -136,7 +136,7 @@ public final class SpawnParser extends AbstractParser<SpawnHolder>
 							Territory g = territories.get(terName);
 							if(g == null)
 							{
-								error("Invalid territory name: " + terName + "; " + getCurrentFileName());
+								logger.error("Invalid territory name: " + terName + "; " + getCurrentFileName());
 								continue;
 							}
 							template.addSpawnRange(g);
@@ -196,13 +196,13 @@ public final class SpawnParser extends AbstractParser<SpawnHolder>
 
 				if(template.getNpcList().size() == 0)
 				{
-					warn("Npc id is zero! File: " + getCurrentFileName());
+					logger.warn("Npc id is zero! File: " + getCurrentFileName());
 					continue;
 				}
 
 				if(template.getSpawnRangeList().size() == 0)
 				{
-					warn("No points to spawn! File: " + getCurrentFileName());
+					logger.warn("No points to spawn! File: " + getCurrentFileName());
 					continue;
 				}
 
@@ -236,7 +236,7 @@ public final class SpawnParser extends AbstractParser<SpawnHolder>
 		}
 
 		if(!temp.validate())
-			error("Invalid polygon: " + name + "{" + temp + "}. File: " + getCurrentFileName());
+			logger.error("Invalid polygon: " + name + "{" + temp + "}. File: " + getCurrentFileName());
 		return temp;
 	}
 }

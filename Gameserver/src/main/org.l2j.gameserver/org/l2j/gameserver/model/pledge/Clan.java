@@ -1568,7 +1568,7 @@ public class Clan implements Iterable<UnitMember>
 		PreparedStatement statement = null;
 		try
 		{
-			//_log.warn("requested store clan privs in db for rank: " + rank + ", privs: " + privs);
+			//logger.warn("requested store clan privs in db for rank: " + rank + ", privs: " + privs);
 			// Retrieve all skills of this L2Player from the database
 			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("REPLACE INTO clan_privs (clan_id,rank,privilleges) VALUES (?,?,?)");

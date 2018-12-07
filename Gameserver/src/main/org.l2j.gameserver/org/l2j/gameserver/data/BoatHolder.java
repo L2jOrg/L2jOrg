@@ -2,9 +2,6 @@ package org.l2j.gameserver.data;
 
 import gnu.trove.iterator.TIntObjectIterator;
 import gnu.trove.map.hash.TIntObjectHashMap;
-
-import java.lang.reflect.Constructor;
-
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.data.xml.holder.ShuttleTemplateHolder;
 import org.l2j.gameserver.idfactory.IdFactory;
@@ -12,6 +9,8 @@ import org.l2j.gameserver.model.entity.boat.Boat;
 import org.l2j.gameserver.model.entity.boat.Shuttle;
 import org.l2j.gameserver.templates.CreatureTemplate;
 import org.l2j.gameserver.templates.ShuttleTemplate;
+
+import java.lang.reflect.Constructor;
 
 /**
  * @author VISTALL
@@ -29,21 +28,17 @@ public final class BoatHolder extends AbstractHolder
 		return _instance;
 	}
 
-	public void spawnAll()
-	{
+	public void spawnAll() {
 		log();
-		for(TIntObjectIterator<Boat> iterator = _boats.iterator(); iterator.hasNext();)
-		{
+		for(TIntObjectIterator<Boat> iterator = _boats.iterator(); iterator.hasNext();) {
 			iterator.advance();
 			iterator.value().spawnMe();
-			info("Spawning: " + iterator.value().getName());
+			logger.info("Spawning: {}", iterator.value().getName());
 		}
 	}
 
-	public Boat initBoat(String name, String clazz)
-	{
-		try
-		{
+	public Boat initBoat(String name, String clazz) {
+		try {
 			Class<?> cl = Class.forName("org.l2j.gameserver.model.entity.boat." + clazz);
 			Constructor<?> constructor = cl.getConstructor(Integer.TYPE, CreatureTemplate.class);
 
@@ -51,10 +46,8 @@ public final class BoatHolder extends AbstractHolder
 			boat.setName(name);
 			addBoat(boat);
 			return boat;
-		}
-		catch(Exception e)
-		{
-			error("Fail to init boat: " + clazz, e);
+		} catch(Exception e) {
+			logger.error("Fail to init boat: " + clazz, e);
 		}
 
 		return null;
@@ -72,7 +65,7 @@ public final class BoatHolder extends AbstractHolder
 		}
 		catch(Exception e)
 		{
-			error("Fail to init shuttle id: " + shuttleId, e);
+			logger.error("Fail to init shuttle id: " + shuttleId, e);
 		}
 
 		return null;

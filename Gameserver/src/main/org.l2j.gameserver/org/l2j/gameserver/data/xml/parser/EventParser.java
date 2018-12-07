@@ -1,21 +1,12 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.io.File;
-import java.lang.reflect.Constructor;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
-
 import org.dom4j.Element;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.EventHolder;
-import org.l2j.gameserver.model.entity.events.EventAction;
 import org.l2j.gameserver.model.entity.events.Event;
+import org.l2j.gameserver.model.entity.events.EventAction;
 import org.l2j.gameserver.model.entity.events.actions.*;
 import org.l2j.gameserver.model.entity.events.objects.*;
 import org.l2j.gameserver.network.l2.components.ChatType;
@@ -27,6 +18,10 @@ import org.l2j.gameserver.scripts.Scripts;
 import org.l2j.gameserver.skills.AbnormalEffect;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.Util;
+
+import java.io.File;
+import java.lang.reflect.Constructor;
+import java.util.*;
 
 /**
  * @author VISTALL
@@ -86,7 +81,7 @@ public final class EventParser extends AbstractParser<EventHolder>
 
 			if(eventClass == null)
 			{
-				info("Not found impl class: " + impl + "; File: " + getCurrentFileName());
+				logger.info("Not found impl class: " + impl + "; File: " + getCurrentFileName());
 				continue;
 			}
 
@@ -352,7 +347,7 @@ public final class EventParser extends AbstractParser<EventHolder>
 				String val = actionElement.attributeValue("val");
 				if(val == null && time == Integer.MAX_VALUE)
 				{
-					info("Can't get announce time." + getCurrentFileName());
+					logger.info("Can't get announce time." + getCurrentFileName());
 					continue;
 				}
 
@@ -383,7 +378,7 @@ public final class EventParser extends AbstractParser<EventHolder>
 			else if(actionElement.getName().equalsIgnoreCase("else"))
 			{
 				if(lastIf == null)
-					info("Not find <if> for <else> tag");
+					logger.info("Not find <if> for <else> tag");
 				else
 					lastIf.setElseList(parseActions(actionElement, time));
 			}

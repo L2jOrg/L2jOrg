@@ -1,16 +1,17 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import java.util.*;
-
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.model.base.ClassType;
 import org.l2j.gameserver.model.base.Race;
 import org.l2j.gameserver.templates.fakeplayer.FakePlayerAITemplate;
 import org.l2j.gameserver.templates.fakeplayer.FarmZoneTemplate;
 import org.l2j.gameserver.templates.fakeplayer.TownZoneTemplate;
-
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
+
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author: Bonux
@@ -71,9 +72,9 @@ public final class FakePlayersHolder extends AbstractHolder
 	@Override
 	public void log()
 	{
-		info("loaded " + _aiTemplates.size() + " fake players ai(s) count.");
-		info("loaded " + _farmZoneTemplates.size() + " fake players farm zone(s) count.");
-		info("loaded " + _townZoneTemplates.size() + " fake players town zone(s) count.");
+		logger.info("loaded " + _aiTemplates.size() + " fake players ai(s) count.");
+		logger.info("loaded " + _farmZoneTemplates.size() + " fake players farm zone(s) count.");
+		logger.info("loaded " + _townZoneTemplates.size() + " fake players town zone(s) count.");
 	}
 
 	@Deprecated

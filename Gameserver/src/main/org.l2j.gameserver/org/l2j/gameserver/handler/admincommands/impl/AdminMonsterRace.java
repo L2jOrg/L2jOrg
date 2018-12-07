@@ -94,9 +94,9 @@ public class AdminMonsterRace implements IAdminCommandHandler
 			// int[][] speeds2 = MonsterRace.getInstance().getSpeeds();
 			/*
 			 * int[] speed = new int[8]; for(int i=0; i<8; i++) { for(int j=0; j<20;
-			 * j++) { //_log.info.println("Adding "+speeds1[i][j] +" and "+
+			 * j++) { //logger.info.println("Adding "+speeds1[i][j] +" and "+
 			 * speeds2[i][j]); speed[i] += (speeds1[i][j]*1);// + (speeds2[i][j]*1); }
-			 * _log.info.println("Total speed for "+(i+1)+" = "+speed[i]); }
+			 * logger.info.println("Total speed for "+(i+1)+" = "+speed[i]); }
 			 */
 
 			activeChar.broadcastPacket(new MonRaceInfoPacket(codes[2][0], codes[2][1], MonsterRace.getInstance().getMonsters(), MonsterRace.getInstance().getSpeeds()));

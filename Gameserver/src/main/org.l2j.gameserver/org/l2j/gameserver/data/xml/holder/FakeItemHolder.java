@@ -1,10 +1,5 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.Player;
@@ -13,10 +8,14 @@ import org.l2j.gameserver.templates.item.ItemGrade;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.templates.item.WeaponTemplate;
 import org.l2j.gameserver.templates.item.WeaponTemplate.WeaponType;
-
 import org.napile.primitive.Containers;
 import org.napile.primitive.lists.IntList;
 import org.napile.primitive.lists.impl.ArrayIntList;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 public class FakeItemHolder extends AbstractHolder
@@ -162,7 +161,7 @@ public class FakeItemHolder extends AbstractHolder
 	@Override
 	public void log()
 	{
-		info("loaded fake items.");
+		logger.info("loaded fake items.");
 	}
 
 	@Override

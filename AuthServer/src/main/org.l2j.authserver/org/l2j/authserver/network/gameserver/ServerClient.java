@@ -2,16 +2,14 @@ package org.l2j.authserver.network.gameserver;
 
 import org.l2j.authserver.GameServerInfo;
 import org.l2j.authserver.controller.GameServerManager;
-import org.l2j.authserver.network.gameserver.packet.auth2game.GameServerWritablePacket;
 import org.l2j.authserver.network.crypt.AuthServerCrypt;
-import org.l2j.authserver.network.gameserver.packet.auth2game.Protocol;
+import org.l2j.authserver.network.gameserver.packet.auth2game.GameServerWritablePacket;
 import org.l2j.authserver.network.gameserver.packet.auth2game.LoginGameServerFail;
 import org.l2j.mmocore.Client;
 import org.l2j.mmocore.Connection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
 import java.security.PrivateKey;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
@@ -77,7 +75,7 @@ public final class ServerClient extends Client<Connection<ServerClient>> {
             }
             return  decrypted;
         } catch (IOException e) {
-            _log.error(e.getLocalizedMessage(), e);
+            logger.error(e.getLocalizedMessage(), e);
             disconnect();
             return false;
         }*/
@@ -89,7 +87,7 @@ public final class ServerClient extends Client<Connection<ServerClient>> {
         /*try {
             return  crypt.encrypt(data, offset, size);
         } catch (IOException e) {
-            _log.error(e.getLocalizedMessage(), e);
+            logger.error(e.getLocalizedMessage(), e);
             return -1;
         }*/
         return size;

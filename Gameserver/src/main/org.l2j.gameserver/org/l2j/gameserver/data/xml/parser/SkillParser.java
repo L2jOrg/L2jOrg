@@ -1,12 +1,6 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map.Entry;
-import java.util.StringTokenizer;
-
+import org.dom4j.Element;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.model.Skill;
@@ -18,10 +12,15 @@ import org.l2j.gameserver.templates.skill.EffectTemplate;
 import org.l2j.gameserver.templates.skill.restoration.RestorationGroup;
 import org.l2j.gameserver.templates.skill.restoration.RestorationInfo;
 import org.l2j.gameserver.templates.skill.restoration.RestorationItem;
-
-import org.dom4j.Element;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.TreeIntObjectMap;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map.Entry;
+import java.util.StringTokenizer;
 
 /**
  * @author Bonux
@@ -77,7 +76,7 @@ public final class SkillParser extends StatParser<SkillHolder>
 			final int levels = Integer.parseInt(skillElement.attributeValue("levels"));
 			if(levels > 100)
 			{
-				warn("Error while parse skill[" + skillId + "] (Max level should be less than or equal to 100)!");
+				logger.warn("Error while parse skill[" + skillId + "] (Max level should be less than or equal to 100)!");
 				continue;
 			}
 
@@ -150,7 +149,7 @@ public final class SkillParser extends StatParser<SkillHolder>
 	{
 		if(arg.length < 3)
 		{
-			warn("Error while read table[" + name + "] value for skill (Bad arg's length)!", new Exception());
+			logger.warn("Error while read table[" + name + "] value for skill (Bad arg's length)!", new Exception());
 			return null;
 		}
 
@@ -163,7 +162,7 @@ public final class SkillParser extends StatParser<SkillHolder>
 		IntObjectMap<StatsSet> tables = _skillsTables.get(skillId);
 		if(tables == null)
 		{
-			warn("Error while read table[" + name + "] value for skill ID[" + skillId + "], LEVEL[" + skillLevel + "] (Cannot find tables)!");
+			logger.warn("Error while read table[" + name + "] value for skill ID[" + skillId + "], LEVEL[" + skillLevel + "] (Cannot find tables)!");
 			return null;
 		}
 
@@ -175,12 +174,12 @@ public final class SkillParser extends StatParser<SkillHolder>
 		{
 			String value = String.valueOf(result);
 			if(value.isEmpty())
-				warn("Error in table[" + name + "] value[" + value + "] for skill ID[" + skillId + "], LEVEL[" + skillLevel + "] (Empty value)!");
+				logger.warn("Error in table[" + name + "] value[" + value + "] for skill ID[" + skillId + "], LEVEL[" + skillLevel + "] (Empty value)!");
 
 			return result;
 		}
 
-		warn("Error while read table[" + name + "] value for skill ID[" + skillId + "], LEVEL[" + skillLevel + "] (Cannot find table set)!");
+		logger.warn("Error while read table[" + name + "] value for skill ID[" + skillId + "], LEVEL[" + skillLevel + "] (Cannot find table set)!");
 		return null;
 	}
 
@@ -299,19 +298,19 @@ public final class SkillParser extends StatParser<SkillHolder>
 		String name = element.attributeValue("name");
 		if(name.charAt(0) != '#')
 		{
-			warn("Error while parse table[" + name + "] value for skill ID[" + skillId + "] (Table name must start with #)!");
+			logger.warn("Error while parse table[" + name + "] value for skill ID[" + skillId + "] (Table name must start with #)!");
 			return;
 		}
 
 		if(name.lastIndexOf('#') != 0)
 		{
-			warn("Error while parse table[" + name + "] value for skill ID[" + skillId + "] (Table name should not contain # character, but only start with #)!");
+			logger.warn("Error while parse table[" + name + "] value for skill ID[" + skillId + "] (Table name should not contain # character, but only start with #)!");
 			return;
 		}
 
 		if(name.contains(";") || name.contains(":") || name.contains(" ") || name.contains("-"))
 		{
-			warn("Error while parse table[" + name + "] value for skill ID[" + skillId + "] (Table name should not contain characters: ';' ':' '-' or space)!");
+			logger.warn("Error while parse table[" + name + "] value for skill ID[" + skillId + "] (Table name should not contain characters: ';' ':' '-' or space)!");
 			return;
 		}
 
@@ -338,7 +337,7 @@ public final class SkillParser extends StatParser<SkillHolder>
 			}
 			else if(set.containsKey(name))
 			{
-				warn("Error while parse table[" + name + "] value for skill ID[" + skillId + "] (Skill have tables with the same name)!");
+				logger.warn("Error while parse table[" + name + "] value for skill ID[" + skillId + "] (Skill have tables with the same name)!");
 				return;
 			}
 

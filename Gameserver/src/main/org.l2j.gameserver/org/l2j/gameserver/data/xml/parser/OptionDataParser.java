@@ -1,14 +1,14 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.io.File;
-import java.util.Iterator;
-
 import org.dom4j.Element;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.OptionDataHolder;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.skills.SkillEntry;
 import org.l2j.gameserver.templates.OptionDataTemplate;
+
+import java.io.File;
+import java.util.Iterator;
 
 /**
  * @author VISTALL
@@ -68,7 +68,7 @@ public final class OptionDataParser extends StatParser<OptionDataHolder>
 						if(skillEntry != null)
 							template.addSkill(skillEntry);
 						else
-							warn("Skill not found(" + id + "," + level + ") for option data:" + template.getId() + "; file:" + getCurrentFileName());
+							logger.warn("Skill not found(" + id + "," + level + ") for option data:" + template.getId() + "; file:" + getCurrentFileName());
 					}
 				}
 			}

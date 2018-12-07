@@ -137,7 +137,7 @@ public class RaceManagerInstance extends NpcInstance
 				minutes--;
 				break;
 			case SystemMessage.TICKETS_SALES_ARE_CLOSED_FOR_THE_S1TH_MONSTER_RACE_ODDS_ARE_POSTED:
-				//_log.info.println("Sales closed");
+				//logger.info.println("Sales closed");
 				sm.addNumber(_raceNumber);
 				state = WAITING;
 				minutes = 2;
@@ -148,7 +148,7 @@ public class RaceManagerInstance extends NpcInstance
 				minutes = 5;
 				break;
 			case SystemMessage.FIRST_PRIZE_GOES_TO_THE_PLAYER_IN_LANE_S1_SECOND_PRIZE_GOES_TO_THE_PLAYER_IN_LANE_S2:
-				//_log.info.println("Placing");
+				//logger.info.println("Placing");
 				state = RACE_END;
 				sm.addNumber(MonsterRace.getInstance().getFirstPlace());
 				sm.addNumber(MonsterRace.getInstance().getSecondPlace());

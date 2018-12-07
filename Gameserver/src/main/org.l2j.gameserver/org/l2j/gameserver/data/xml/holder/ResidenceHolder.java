@@ -1,9 +1,5 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.model.GameObject;
 import org.l2j.gameserver.model.Zone;
@@ -12,6 +8,10 @@ import org.l2j.gameserver.model.entity.residence.Residence;
 import org.l2j.gameserver.model.entity.residence.ResidenceType;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.TreeIntObjectMap;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 /**
  * @author VISTALL
@@ -119,7 +119,7 @@ public final class ResidenceHolder extends AbstractHolder
 	@Override
 	public void log()
 	{
-		info("total size: " + _residences.size());
+		logger.info("total size: " + _residences.size());
 		for(ResidenceType type : ResidenceType.VALUES)
 		{
 			int count = 0;
@@ -128,7 +128,7 @@ public final class ResidenceHolder extends AbstractHolder
 				if(r.getType() == type)
 					count++;
 			}
-			info(" - load " + count + " " + String.valueOf(type).toLowerCase() + "(s).");
+			logger.info(" - load " + count + " " + String.valueOf(type).toLowerCase() + "(s).");
 		}
 	}
 

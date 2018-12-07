@@ -1,14 +1,14 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.io.File;
-import java.util.Iterator;
-
+import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.AttendanceRewardHolder;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;
 import org.l2j.gameserver.templates.item.data.AttendanceRewardData;
-import org.dom4j.Element;
+
+import java.io.File;
+import java.util.Iterator;
 
 public final class AttendanceRewardParser extends AbstractParser<AttendanceRewardHolder>
 {
@@ -75,7 +75,7 @@ public final class AttendanceRewardParser extends AbstractParser<AttendanceRewar
 		int id = Integer.parseInt(element.attributeValue("id"));
 		if(ItemHolder.getInstance().getTemplate(id) == null)
 		{
-			warn("Cannot find item template ID[" + id + "]!");
+			logger.warn("Cannot find item template ID[" + id + "]!");
 			return null;
 		}
 

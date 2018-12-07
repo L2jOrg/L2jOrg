@@ -76,11 +76,11 @@ public class FunEvent extends Event
 		final long startSiegeMillis = startTimeMillis();
 
 		if(startSiegeMillis == 0)
-			info(getName() + " time - undefined");
+			logger.info(getName() + " time - undefined");
 		else if(_stopPattern.getTimeInMillis() < System.currentTimeMillis())
-			info(getName() + " time - " + TimeUtils.toSimpleFormat(startSiegeMillis) + ", stop - undefined");
+			logger.info(getName() + " time - " + TimeUtils.toSimpleFormat(startSiegeMillis) + ", stop - undefined");
 		else
-			info(getName() + " time - " + TimeUtils.toSimpleFormat(startSiegeMillis) + ", stop - " + TimeUtils.toSimpleFormat(_stopPattern.getTimeInMillis()));
+			logger.info(getName() + " time - " + TimeUtils.toSimpleFormat(startSiegeMillis) + ", stop - " + TimeUtils.toSimpleFormat(_stopPattern.getTimeInMillis()));
 	}
 
 	@Override

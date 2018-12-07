@@ -1,20 +1,15 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.io.File;
-import java.util.Iterator;
-
 import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.OptionDataHolder;
 import org.l2j.gameserver.data.xml.holder.VariationDataHolder;
 import org.l2j.gameserver.templates.item.WeaponFightType;
-import org.l2j.gameserver.templates.item.support.variation.VariationCategory;
-import org.l2j.gameserver.templates.item.support.variation.VariationFee;
-import org.l2j.gameserver.templates.item.support.variation.VariationGroup;
-import org.l2j.gameserver.templates.item.support.variation.VariationInfo;
-import org.l2j.gameserver.templates.item.support.variation.VariationOption;
-import org.l2j.gameserver.templates.item.support.variation.VariationStone;
+import org.l2j.gameserver.templates.item.support.variation.*;
+
+import java.io.File;
+import java.util.Iterator;
 
 /**
  * @author Bonux
@@ -85,7 +80,7 @@ public final class VariationDataParser extends AbstractParser<VariationDataHolde
 							int optionId = Integer.parseInt(optionElement.attributeValue("id"));
 							if(OptionDataHolder.getInstance().getTemplate(optionId) == null)
 							{
-								warn("Cannot find option ID: " + optionId + " for variation ID: " + variationId);
+								logger.warn("Cannot find option ID: " + optionId + " for variation ID: " + variationId);
 								continue;
 							}
 

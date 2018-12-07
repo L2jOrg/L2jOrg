@@ -1,33 +1,33 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.StringTokenizer;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import org.dom4j.Attribute;
 import org.dom4j.Element;
-import org.l2j.gameserver.model.entity.residence.ResidenceSide;
-import org.l2j.gameserver.stats.conditions.*;
-import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.commons.data.xml.AbstractHolder;
+import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.model.base.PledgeRank;
 import org.l2j.gameserver.model.base.Sex;
 import org.l2j.gameserver.model.base.SubClassType;
+import org.l2j.gameserver.model.entity.residence.ResidenceSide;
 import org.l2j.gameserver.model.entity.residence.ResidenceType;
+import org.l2j.gameserver.skills.AbnormalType;
 import org.l2j.gameserver.stats.StatTemplate;
 import org.l2j.gameserver.stats.Stats;
+import org.l2j.gameserver.stats.conditions.*;
 import org.l2j.gameserver.stats.conditions.ConditionGameTime.CheckGameTime;
 import org.l2j.gameserver.stats.conditions.ConditionPlayerRiding.CheckPlayerRiding;
 import org.l2j.gameserver.stats.conditions.ConditionPlayerState.CheckPlayerState;
-import org.l2j.gameserver.skills.AbnormalType;
 import org.l2j.gameserver.stats.funcs.FuncTemplate;
 import org.l2j.gameserver.stats.triggers.TriggerInfo;
 import org.l2j.gameserver.stats.triggers.TriggerType;
 import org.l2j.gameserver.templates.item.ArmorTemplate.ArmorType;
 import org.l2j.gameserver.templates.item.WeaponTemplate.WeaponType;
 import org.l2j.gameserver.utils.PositionUtils.TargetDirection;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.StringTokenizer;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author VISTALL
@@ -85,7 +85,7 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractParse
 		}
 
 		if(cond._conditions == null || cond._conditions.length == 0)
-			error("Empty <and> condition in " + getCurrentFileName());
+			logger.error("Empty <and> condition in " + getCurrentFileName());
 		return cond;
 	}
 
@@ -99,7 +99,7 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractParse
 		}
 
 		if(cond._conditions == null || cond._conditions.length == 0)
-			error("Empty <or> condition in " + getCurrentFileName());
+			logger.error("Empty <or> condition in " + getCurrentFileName());
 		return cond;
 	}
 
@@ -107,7 +107,7 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractParse
 	{
 		for(Object element : n.elements())
 			return new ConditionLogicNot(parseCond((Element) element, arg));
-		error("Empty <not> condition in " + getCurrentFileName());
+		logger.error("Empty <not> condition in " + getCurrentFileName());
 		return null;
 	}
 
@@ -396,7 +396,7 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractParse
 						}
 					}
 
-					error("Invalid item kind: \"" + item + "\" in " + getCurrentFileName());
+					logger.error("Invalid item kind: \"" + item + "\" in " + getCurrentFileName());
 				}
 				if(mask != 0)
 					cond = joinAnd(cond, new ConditionUsingItemType(mask));
@@ -572,7 +572,7 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractParse
 		}
 		catch(NumberFormatException e)
 		{
-			warn("Error while parsing number: " + value, e);
+			logger.warn("Error while parsing number: " + value, e);
 			return null;
 		}
 	}

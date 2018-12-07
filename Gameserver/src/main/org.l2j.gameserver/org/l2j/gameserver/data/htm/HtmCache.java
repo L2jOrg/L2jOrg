@@ -72,7 +72,7 @@ public class HtmCache
                     root = new File(Config.DATAPACK_ROOT, "custom/html/" + lang.getShortName());
                     if(!root.exists())
                     {
-                        //_log.info("HtmCache: Not find html dir for lang: " + lang);
+                        //logger.info("HtmCache: Not find html dir for lang: " + lang);
                         continue;
                     }
                     load(lang, root, root.getAbsolutePath() + "/");

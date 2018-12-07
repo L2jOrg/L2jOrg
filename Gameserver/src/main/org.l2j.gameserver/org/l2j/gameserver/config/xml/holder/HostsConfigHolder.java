@@ -41,7 +41,7 @@ public final class HostsConfigHolder extends AbstractHolder
 	{
 		if(_gameServerHosts.containsKey(host.getId()))
 		{
-			warn("Error while loading gameserver host info! Host have dublicate id: " + host.getId());
+			logger.warn("Error while loading gameserver host info! Host have dublicate id: " + host.getId());
 			return;
 		}
 		if(_gameServerHosts.isEmpty())

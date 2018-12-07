@@ -2,6 +2,10 @@ package org.l2j.gameserver.data.string;
 
 import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
+import org.l2j.commons.data.xml.AbstractHolder;
+import org.l2j.gameserver.Config;
+import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.utils.Language;
 
 import java.io.File;
 import java.io.FileReader;
@@ -9,11 +13,6 @@ import java.io.LineNumberReader;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
-
-import org.l2j.commons.data.xml.AbstractHolder;
-import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.utils.Language;
 
 /**
  * @author: Bonux
@@ -74,7 +73,7 @@ public final class ItemNameHolder extends AbstractHolder
 			{
 				// Проверяем только английский и русский, потому что они являються базовыми.
 				if(lang == Language.ENGLISH || lang == Language.RUSSIAN)
-					warn("Not find file: " + file.getAbsolutePath());
+					logger.warn("Not find file: " + file.getAbsolutePath());
 			}
 			else
 			{
@@ -88,7 +87,7 @@ public final class ItemNameHolder extends AbstractHolder
 						StringTokenizer token = new StringTokenizer(line, "\t");
 						if(token.countTokens() < 2)
 						{
-							error("Error on line: " + line + "; file: " + file.getName());
+							logger.error("Error on line: " + line + "; file: " + file.getName());
 							continue;
 						}
 
@@ -100,7 +99,7 @@ public final class ItemNameHolder extends AbstractHolder
 				}
 				catch(Exception e)
 				{
-					error("Exception: " + e, e);
+					logger.error("Exception: " + e, e);
 				}
 				finally
 				{
@@ -132,7 +131,7 @@ public final class ItemNameHolder extends AbstractHolder
 		{
 			if(!Config.AVAILABLE_LANGUAGES.contains(entry.getKey()))
 				continue;
-			info("load item names: " + entry.getValue().size() + " for lang: " + entry.getKey());
+			logger.info("load item names: " + entry.getValue().size() + " for lang: " + entry.getKey());
 		}
 	}
 

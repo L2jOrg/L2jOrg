@@ -66,7 +66,7 @@ public final class BuyListParser extends AbstractParser<BuyListHolder>
 					final ItemTemplate template = ItemHolder.getInstance().getTemplate(itemId);
 					if(template == null)
 					{
-						_log.warn("Template not found for item ID: " + itemId + " for npc ID: " + npcId + " for buylist ID: " + buylistId);
+						logger.warn("Template not found for item ID: " + itemId + " for npc ID: " + npcId + " for buylist ID: " + buylistId);
 						continue;
 					}
 

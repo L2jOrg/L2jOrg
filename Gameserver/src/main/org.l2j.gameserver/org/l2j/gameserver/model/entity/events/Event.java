@@ -1,40 +1,23 @@
 package org.l2j.gameserver.model.entity.events;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.concurrent.Future;
-
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.listener.Listener;
 import org.l2j.commons.listener.ListenerList;
-import org.l2j.commons.logging.LoggerObject;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.dao.ItemsDAO;
 import org.l2j.gameserver.instancemanager.ReflectionManager;
 import org.l2j.gameserver.listener.event.OnStartStopListener;
-import org.l2j.gameserver.model.Creature;
-import org.l2j.gameserver.model.GameObject;
-import org.l2j.gameserver.model.GameObjectsStorage;
-import org.l2j.gameserver.model.Playable;
-import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.model.Skill;
+import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.base.RestartType;
 import org.l2j.gameserver.model.entity.Reflection;
 import org.l2j.gameserver.model.entity.events.objects.DoorObject;
 import org.l2j.gameserver.model.entity.events.objects.InitableObject;
 import org.l2j.gameserver.model.entity.events.objects.SpawnableObject;
 import org.l2j.gameserver.model.entity.events.objects.ZoneObject;
-import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.network.l2.components.IBroadcastPacket;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.L2GameServerPacket;
-import org.l2j.gameserver.network.l2.s2c.SystemMessage;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.stats.conditions.Condition;
 import org.l2j.gameserver.templates.item.ItemTemplate;
@@ -46,33 +29,25 @@ import org.napile.primitive.Containers;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CHashIntObjectMap;
 import org.napile.primitive.maps.impl.TreeIntObjectMap;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.*;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.Future;
+
+import static java.util.Objects.isNull;
 
 /**
  * @author VISTALL
  * @date 12:54/10.12.2010
  */
-public abstract class Event extends LoggerObject
-{
-	private class ListenerListImpl extends ListenerList<Event>
-	{
-		public void onStart()
-		{
-			for(Listener<Event> listener : getListeners())
-				if(OnStartStopListener.class.isInstance(listener))
-					((OnStartStopListener) listener).onStart(Event.this);
-		}
-
-		public void onStop()
-		{
-			for(Listener<Event> listener : getListeners())
-				if(OnStartStopListener.class.isInstance(listener))
-					((OnStartStopListener) listener).onStop(Event.this);
-		}
-	}
+public abstract class Event {
 
 	public static final String EVENT = "event";
 
-	// actions
+	protected final Logger logger = LoggerFactory.getLogger(getClass());
+
 	protected final IntObjectMap<List<EventAction>> _onTimeActions = new TreeIntObjectMap<List<EventAction>>();
 	protected final List<EventAction> _onStartActions = new ArrayList<EventAction>(0);
 	protected final List<EventAction> _onStopActions = new ArrayList<EventAction>(0);
@@ -116,40 +91,34 @@ public abstract class Event extends LoggerObject
 		_listenerList.onStart();
 	}
 
-	public void stopEvent(boolean force)
-	{
+	public void stopEvent(boolean force) {
 		callActions(_onStopActions);
 
 		_listenerList.onStop();
 	}
 
-	public void printInfo()
-	{
+	public void printInfo() {
 		final long startSiegeMillis = startTimeMillis();
 
-		if(startSiegeMillis == 0)
-			info(getName() + " time - undefined");
-		else
-			info(getName() + " time - " + TimeUtils.toSimpleFormat(startSiegeMillis));
+		if(startSiegeMillis == 0) {
+			logger.info("{} time - undefined", getName());
+		} else {
+			logger.info("{} time - {}", getName(), TimeUtils.toSimpleFormat(startSiegeMillis));
+		}
 	}
 
 	@Override
-	public String toString()
-	{
+	public String toString() {
 		return getClass().getSimpleName() + "[" + getId() + ";" + getName() + "]";
 	}
 
-	//===============================================================================================================
-	//												Actions
-	//===============================================================================================================
-	protected void callActions(List<EventAction> actions)
-	{
+
+	protected void callActions(List<EventAction> actions) {
 		for(EventAction action : actions)
 			action.call(this);
 	}
 
-	public void addOnStartActions(List<EventAction> start)
-	{
+	public void addOnStartActions(List<EventAction> start) {
 		_onStartActions.addAll(start);
 	}
 
@@ -186,34 +155,30 @@ public abstract class Event extends LoggerObject
 		}
 	}
 
-	public void timeActions(int time)
-	{
+	public void timeActions(int time) {
 		List<EventAction> actions = _onTimeActions.get(time);
-		if(actions == null)
-		{
-			info("Undefined time : " + time);
+		if(isNull(actions)) {
+			logger.info("Undefined time : {}", time);
 			return;
 		}
 
 		callActions(actions);
 	}
 
-	public int[] timeActions()
-	{
+	public int[] timeActions() {
 		return _onTimeActions.keySet().toArray();
 	}
 
-	//===============================================================================================================
-	//												Tasks
-	//===============================================================================================================
-	public synchronized void registerActions()
-	{
-		final long t = startTimeMillis();
-		if(t == 0)
-			return;
 
-		if(_tasks == null)
-			_tasks = new ArrayList<Future<?>>(_onTimeActions.size());
+	public synchronized void registerActions() {
+		final long t = startTimeMillis();
+		if(t == 0) {
+			return;
+		}
+
+		if(isNull(_tasks)) {
+			_tasks = new ArrayList<>(_onTimeActions.size());
+		}
 
 		final long c = System.currentTimeMillis();
 		for(int key : _onTimeActions.keySet().toArray())
@@ -310,71 +275,64 @@ public abstract class Event extends LoggerObject
 	}
 
 
-	public Map<Object, List<Object>> getObjects()
-	{
+	public Map<Object, List<Object>> getObjects() {
 		return _objects;
 	}
 
-	public void spawnAction(Object name, boolean spawn)
-	{
+	public void spawnAction(Object name, boolean spawn) {
 		List<Object> objects = getObjects(name);
-		if(objects.isEmpty())
-		{
-			info("Undefined objects: " + name);
+		if(objects.isEmpty()) {
+			logger.info("Undefined objects: {}", name);
 			return;
 		}
 
-		for(Object object : objects)
-			if(object instanceof SpawnableObject)
-			{
-				if(spawn)
+		for(Object object : objects) {
+			if (object instanceof SpawnableObject) {
+				if (spawn) {
 					((SpawnableObject) object).spawnObject(this);
-				else
+				} else {
 					((SpawnableObject) object).despawnObject(this);
+				}
 			}
+		}
 	}
 
-	public void respawnAction(Object name)
-	{
+	public void respawnAction(Object name) {
 		List<Object> objects = getObjects(name);
-		if(objects.isEmpty())
-		{
-			info("Undefined objects: " + name);
+		if(objects.isEmpty()) {
+			logger.info("Undefined objects: {}", name);
 			return;
 		}
 
-		for(Object object : objects)
-			if(object instanceof SpawnableObject)
+		for(Object object : objects) {
+			if (object instanceof SpawnableObject) {
 				((SpawnableObject) object).respawnObject(this);
-	}
-
-	public void doorAction(Object name, boolean open)
-	{
-		List<Object> objects = getObjects(name);
-		if(objects.isEmpty())
-		{
-			info("Undefined objects: " + name);
-			return;
-		}
-
-		for(Object object : objects)
-		{
-			if(object instanceof DoorObject)
-			{
-				if(open)
-					((DoorObject) object).open(this);
-				else
-					((DoorObject) object).close(this);
 			}
 		}
 	}
 
-	public void zoneAction(Object name, boolean active)
-	{
+	public void doorAction(Object name, boolean open) {
 		List<Object> objects = getObjects(name);
-		if(objects.isEmpty())
-		{
-			info("Undefined objects: " + name);
+		if(objects.isEmpty()) {
+			logger.info("Undefined objects: {}", name);
+			return;
+		}
+
+		for(Object object : objects) {
+			if(object instanceof DoorObject) {
+				if(open) {
+					((DoorObject) object).open(this);
+				} else {
+					((DoorObject) object).close(this);
+				}
+			}
+		}
+	}
+
+	public void zoneAction(Object name, boolean active) {
+		List<Object> objects = getObjects(name);
+		if(objects.isEmpty()) {
+			logger.info("Undefined objects: {}", name);
 			return;
 		}
 
@@ -383,53 +341,44 @@ public abstract class Event extends LoggerObject
 				((ZoneObject) object).setActive(active, this);
 	}
 
-	public void initAction(Object name)
-	{
+	public void initAction(Object name) {
 		List<Object> objects = getObjects(name);
-		if(objects.isEmpty())
-		{
-			info("Undefined objects: " + name);
+		if(objects.isEmpty()) {
+			logger.info("Undefined objects: " + name);
 			return;
 		}
 
-		for(Object object : objects)
-			if(object instanceof InitableObject)
+		for(Object object : objects) {
+			if (object instanceof InitableObject) {
 				((InitableObject) object).initObject(this);
-	}
-
-	public void action(String name, boolean start)
-	{
-		if(name.equalsIgnoreCase(EVENT))
-		{
-			if(start)
-				startEvent();
-			else
-				stopEvent(false);
+			}
 		}
 	}
 
-	public void refreshAction(Object name)
-	{
+	public void action(String name, boolean start) {
+		if(name.equalsIgnoreCase(EVENT)) {
+			if(start) {
+				startEvent();
+			} else {
+				stopEvent(false);
+			}
+		}
+	}
+
+	public void refreshAction(Object name) {
 		List<Object> objects = getObjects(name);
-		if(objects.isEmpty())
-		{
-			info("Undefined objects: " + name);
+		if(objects.isEmpty()) {
+			logger.info("Undefined objects: {}", name);
 			return;
 		}
 
-		for(Object object : objects)
-			if(object instanceof SpawnableObject)
+		for(Object object : objects) {
+			if (object instanceof SpawnableObject) {
 				((SpawnableObject) object).refreshObject(this);
+			}
+		}
 	}
 
-	//===============================================================================================================
-	//												Abstracts
-	//===============================================================================================================
-	public abstract void reCalcNextTime(boolean onInit);
-
-	public abstract EventType getType();
-
-	protected abstract long startTimeMillis();
 
 	//===============================================================================================================
 	//												Broadcast
@@ -689,8 +638,27 @@ public abstract class Event extends LoggerObject
 		return true;
 	}
 
-	public boolean isInZoneBattle(Creature creature)
-	{
+	public boolean isInZoneBattle(Creature creature) {
 		return false;
+	}
+
+	public abstract void reCalcNextTime(boolean onInit);
+
+	public abstract EventType getType();
+
+	protected abstract long startTimeMillis();
+
+	private class ListenerListImpl extends ListenerList<Event> {
+		public void onStart() {
+			for(Listener<Event> listener : getListeners())
+				if(listener instanceof OnStartStopListener)
+					((OnStartStopListener) listener).onStart(Event.this);
+		}
+
+		public void onStop() {
+			for(Listener<Event> listener : getListeners())
+				if(listener instanceof OnStartStopListener)
+					((OnStartStopListener) listener).onStop(Event.this);
+		}
 	}
 }

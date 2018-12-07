@@ -150,7 +150,7 @@ public class MultiSellParser extends AbstractParser<MultiSellHolder>
 
 		if(entry.getIngredients().isEmpty() || entry.getProduction().isEmpty())
 		{
-			_log.warn("MultiSell [" + multiSellId + "] is empty!");
+			logger.warn("MultiSell [" + multiSellId + "] is empty!");
 			return null;
 		}
 
@@ -171,7 +171,7 @@ public class MultiSellParser extends AbstractParser<MultiSellHolder>
 			}
 			else if(ingridient.getItemCount() <= 0)
 			{
-				_log.warn("MultiSell [" + multiSellId + "] ingridient ID[" + ingridient.getItemId() + "] has negative item count!");
+				logger.warn("MultiSell [" + multiSellId + "] ingridient ID[" + ingridient.getItemId() + "] has negative item count!");
 				return null;
 			}
 		}
@@ -181,12 +181,12 @@ public class MultiSellParser extends AbstractParser<MultiSellHolder>
 			ItemTemplate item = ItemHolder.getInstance().getTemplate(entry.getProduction().get(0).getItemId());
 			if(item == null)
 			{
-				_log.warn("MultiSell [" + multiSellId + "] Production [" + entry.getProduction().get(0).getItemId() + "] not found!");
+				logger.warn("MultiSell [" + multiSellId + "] Production [" + entry.getProduction().get(0).getItemId() + "] not found!");
 				return null;
 			}
 
 			//if(item.getReferencePrice() > entry.getIngredients().get(0).getItemCount()) fuck it it's spams all the time
-			//_log.warn("MultiSell [" + multiSellId + "] Production '" + item.getName() + "' [" + entry.getProduction().get(0).getItemId() + "] price is lower than referenced | " + item.getReferencePrice() + " > " + entry.getIngredients().get(0).getItemCount());
+			//logger.warn("MultiSell [" + multiSellId + "] Production '" + item.getName() + "' [" + entry.getProduction().get(0).getItemId() + "] price is lower than referenced | " + item.getReferencePrice() + " > " + entry.getIngredients().get(0).getItemCount());
 		}
 
 		return entry;

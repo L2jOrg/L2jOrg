@@ -1,14 +1,14 @@
 package org.l2j.gameserver.handler.admincommands;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.handler.admincommands.impl.*;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.CustomMessage;
 import org.l2j.gameserver.utils.Log;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 public class AdminCommandHandler extends AbstractHolder
 {
@@ -114,7 +114,7 @@ public class AdminCommandHandler extends AbstractHolder
 			}
 			catch(Exception e)
 			{
-				error("", e);
+				logger.error("", e);
 			}
 
 			activeChar.sendMessage("Cannot find handler for command: " + adminCommand);

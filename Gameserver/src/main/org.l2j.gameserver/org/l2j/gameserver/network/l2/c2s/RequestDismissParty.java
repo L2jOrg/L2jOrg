@@ -5,7 +5,7 @@ public class RequestDismissParty extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		//_log.info.println(getType());
+		//logger.info.println(getType());
 	}
 
 	@Override

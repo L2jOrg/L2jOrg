@@ -30,7 +30,7 @@ public class RequestPledgeInfo extends L2GameClientPacket
 		if(clan == null)
 		{
 			//Util.handleIllegalPlayerAction(activeChar, "RequestPledgeInfo[40]", "Clan data for clanId " + _clanId + " is missing", 1);
-			//_log.warn("Host " + getClient().getIpAddr() + " possibly sends fake packets. activeChar: " + activeChar);
+			//logger.warn("Host " + getClient().getIpAddr() + " possibly sends fake packets. activeChar: " + activeChar);
 			activeChar.sendActionFailed();
 			return;
 		}

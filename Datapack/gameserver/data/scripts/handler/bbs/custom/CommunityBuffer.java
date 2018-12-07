@@ -66,7 +66,7 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
             ALL_BUFFS_SET.add(skill);
         }
 
-        //_log.info("CommunityBuffer: Loaded " + AVAILABLE_BUFFS.size() + " AVAILABLE_BUFFS count.]");
+        //logger.info("CommunityBuffer: Loaded " + AVAILABLE_BUFFS.size() + " AVAILABLE_BUFFS count.]");
         super.onInit();
     }
 

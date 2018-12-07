@@ -142,7 +142,7 @@ public class Quest implements OnInitScriptListener
                 }
 
                 /*if(!i.isQuest())
-					_log.warn("Item " + i + " multiple is not quest type, but appears in quests - fix ");*/
+					logger.warn("Item " + i + " multiple is not quest type, but appears in quests - fix ");*/
 
 			    _questItems.add(id);
 			}

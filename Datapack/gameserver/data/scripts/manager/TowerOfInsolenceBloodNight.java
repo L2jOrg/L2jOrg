@@ -175,13 +175,13 @@ public class TowerOfInsolenceBloodNight implements OnInitScriptListener
 						idx = Rnd.get(4, 11);
 
 					floors[i] = idx;
-					//_log.info(qn+" floors "+floors[i]+" i "+i);
+					//logger.info(qn+" floors "+floors[i]+" i "+i);
 				}
 				//4 mobs by floor
 				for(int i = 0; i < floors.length; i++)
 				{
 					index[i] = Rnd.get((floors[i] - 4) * 4, (floors[i] - 4 + 3) * 4);
-					//_log.info(qn+" index "+index[i]+" from "+((floors[i] - 4) * 4)+" to "+((floors[i] - 4 + 3) * 4));
+					//logger.info(qn+" index "+index[i]+" from "+((floors[i] - 4) * 4)+" to "+((floors[i] - 4 + 3) * 4));
 				}
 			}
 			else
@@ -210,7 +210,7 @@ public class TowerOfInsolenceBloodNight implements OnInitScriptListener
 						spawn.init();
 						spawn.stopRespawn();
 						_list2.add(spawn);
-						//_log.info(" npcId "+npc2.getNpcId()+" spawned PvP-event at "+npc2.getSpawnedLoc().toXYZString());
+						//logger.info(" npcId "+npc2.getNpcId()+" spawned PvP-event at "+npc2.getSpawnedLoc().toXYZString());
 						count++;
 					}
 					else
@@ -218,7 +218,7 @@ public class TowerOfInsolenceBloodNight implements OnInitScriptListener
 						npc.init();
 						npc.stopRespawn();
 						//npc3.getSpawn().stopRespawn();
-						//_log.info(" npcId "+spawn.getNpcId()+" spawned PvP-event at "+spawn.getLastSpawn().getLocation().toXYZString());
+						//logger.info(" npcId "+spawn.getNpcId()+" spawned PvP-event at "+spawn.getLastSpawn().getLocation().toXYZString());
 						count++;
 					}
 				}
@@ -243,7 +243,7 @@ public class TowerOfInsolenceBloodNight implements OnInitScriptListener
 
 					npc.init();
 					npc.stopRespawn();
-					//_log.info(" npcId "+spawn.getNpcId()+" spawned at "+spawn.getLastSpawn().getLocation().toXYZString());
+					//logger.info(" npcId "+spawn.getNpcId()+" spawned at "+spawn.getLastSpawn().getLocation().toXYZString());
 					count++;
 				}
 			}

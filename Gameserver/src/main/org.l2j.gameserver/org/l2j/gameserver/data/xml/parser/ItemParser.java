@@ -1,25 +1,21 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.io.File;
-import java.util.Iterator;
-
 import org.apache.commons.lang3.StringUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;
 import org.l2j.gameserver.data.xml.holder.OptionDataHolder;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.handler.items.impl.SkillsItemHandler;
-import org.l2j.gameserver.skills.SkillEntry;
 import org.l2j.gameserver.model.base.Element;
+import org.l2j.gameserver.skills.SkillEntry;
 import org.l2j.gameserver.stats.conditions.Condition;
 import org.l2j.gameserver.templates.OptionDataTemplate;
 import org.l2j.gameserver.templates.StatsSet;
-import org.l2j.gameserver.templates.item.ArmorTemplate;
-import org.l2j.gameserver.templates.item.Bodypart;
-import org.l2j.gameserver.templates.item.EtcItemTemplate;
-import org.l2j.gameserver.templates.item.ItemTemplate;
-import org.l2j.gameserver.templates.item.WeaponTemplate;
+import org.l2j.gameserver.templates.item.*;
 import org.l2j.gameserver.templates.item.data.CapsuledItemData;
+
+import java.io.File;
+import java.util.Iterator;
 
 /**
  * @author VISTALL
@@ -110,7 +106,7 @@ public final class ItemParser extends StatParser<ItemHolder>
 				//{
 				//	info("set " + entry.getKey() + ":" + entry.getValue());
 				//}
-				warn("Fail create item: " + set.get("item_id"), e);
+				logger.warn("Fail create item: " + set.get("item_id"), e);
 				continue;
 			}
 
@@ -142,18 +138,18 @@ public final class ItemParser extends StatParser<ItemHolder>
 							if(!skillEntry.getTemplate().altUse() && (template.getHandler() instanceof SkillsItemHandler))
 							{
 								if(haveNoAltSkill)
-									warn("Item:" + set.getObject("item_id") + " already has a \"no-alt\" skill: ID[" + skillEntry.getId() + "] LEVEL[" + skillEntry.getLevel() + "] that can lead to malfunction of item!");
+									logger.warn("Item:" + set.getObject("item_id") + " already has a \"no-alt\" skill: ID[" + skillEntry.getId() + "] LEVEL[" + skillEntry.getLevel() + "] that can lead to malfunction of item!");
 								else
 									haveNoAltSkill = true;
 
 								if(!skillEntry.getTemplate().isHandler())
-									warn("Item:" + set.getObject("item_id") + " have \"no-handler\" skill: ID[" + skillEntry.getId() + "] LEVEL[" + skillEntry.getLevel() + "]!");
+									logger.warn("Item:" + set.getObject("item_id") + " have \"no-handler\" skill: ID[" + skillEntry.getId() + "] LEVEL[" + skillEntry.getLevel() + "]!");
 							}
 
 							template.attachSkill(skillEntry);
 						}
 						else
-							warn("Skill not found(" + id + "," + level + ") for item:" + set.getObject("item_id") + "; file:" + getCurrentFileName());
+							logger.warn("Skill not found(" + id + "," + level + ") for item:" + set.getObject("item_id") + "; file:" + getCurrentFileName());
 					}
 				}
 				else if(subName.equalsIgnoreCase("enchant4_skill"))
@@ -227,7 +223,7 @@ public final class ItemParser extends StatParser<ItemHolder>
 								OptionDataTemplate optionData = OptionDataHolder.getInstance().getTemplate(Integer.parseInt(optionElement.attributeValue("id")));
 								if(optionData == null)
 								{
-									error("Not found option_data for id: " + optionElement.attributeValue("id") + "; item_id: " + set.get("item_id"));
+									logger.error("Not found option_data for id: " + optionElement.attributeValue("id") + "; item_id: " + set.get("item_id"));
 									continue;
 								}
 								options[i++] = optionData.getId();

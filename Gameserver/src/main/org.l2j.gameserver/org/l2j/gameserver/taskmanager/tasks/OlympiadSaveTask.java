@@ -18,9 +18,9 @@ public class OlympiadSaveTask extends AutomaticTask
 	{
 		//long t = System.currentTimeMillis();
 
-		//_log.info("OlympiadSaveTask: data save started.");
+		//logger.info("OlympiadSaveTask: data save started.");
 		OlympiadDatabase.save();
-		//_log.info("OlympiadSaveTask: data save ended in time: " + (System.currentTimeMillis() - t) + " ms.");
+		//logger.info("OlympiadSaveTask: data save ended in time: " + (System.currentTimeMillis() - t) + " ms.");
 	}
 
 	@Override

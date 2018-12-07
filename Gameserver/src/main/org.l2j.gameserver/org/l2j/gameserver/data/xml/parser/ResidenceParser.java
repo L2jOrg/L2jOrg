@@ -1,25 +1,25 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.io.File;
-import java.lang.reflect.Constructor;
-import java.util.Iterator;
-
 import org.dom4j.Attribute;
 import org.dom4j.Element;
-import org.l2j.gameserver.data.xml.holder.ResidenceFunctionsHolder;
-import org.l2j.gameserver.model.base.ResidenceFunctionType;
-import org.l2j.gameserver.templates.residence.ResidenceFunctionTemplate;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.xml.holder.ResidenceFunctionsHolder;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.model.Skill;
+import org.l2j.gameserver.model.base.ResidenceFunctionType;
 import org.l2j.gameserver.model.entity.residence.Castle;
 import org.l2j.gameserver.model.entity.residence.Residence;
 import org.l2j.gameserver.model.entity.residence.ResidenceFunction;
 import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.templates.item.support.MerchantGuard;
+import org.l2j.gameserver.templates.residence.ResidenceFunctionTemplate;
 import org.l2j.gameserver.utils.Location;
+
+import java.io.File;
+import java.lang.reflect.Constructor;
+import java.util.Iterator;
 
 /**
  * @author VISTALL
@@ -78,7 +78,7 @@ public final class ResidenceParser extends AbstractParser<ResidenceHolder>
 			}
 			catch(Exception e)
 			{
-				error("fail to init: " + getCurrentFileName(), e);
+				logger.error("fail to init: " + getCurrentFileName(), e);
 				return;
 			}
 

@@ -1,12 +1,5 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 import org.dom4j.Attribute;
@@ -22,6 +15,9 @@ import org.l2j.gameserver.model.base.Race;
 import org.l2j.gameserver.templates.mapregion.RestartArea;
 import org.l2j.gameserver.templates.mapregion.RestartPoint;
 import org.l2j.gameserver.utils.Location;
+
+import java.io.File;
+import java.util.*;
 
 public class RestartPointParser extends AbstractParser<MapRegionManager>
 {
@@ -97,7 +93,7 @@ public class RestartPointParser extends AbstractParser<MapRegionManager>
 						Polygon shape = ZoneParser.parsePolygon(n);
 
 						if(!shape.validate())
-							error("RestartPointParser: invalid territory data : " + shape + "!");
+							logger.error("RestartPointParser: invalid territory data : " + shape + "!");
 
 						if(territory == null)
 							territory = new Territory();

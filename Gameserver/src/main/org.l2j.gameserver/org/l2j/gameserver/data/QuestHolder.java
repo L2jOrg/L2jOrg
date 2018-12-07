@@ -2,11 +2,10 @@ package org.l2j.gameserver.data;
 
 import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
-
-import java.util.Collection;
-
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.model.quest.Quest;
+
+import java.util.Collection;
 
 /**
  * @author Bonux
@@ -31,7 +30,7 @@ public final class QuestHolder extends AbstractHolder
 	{
 		if(_quests.containsKey(quest.getId()))
 		{
-			warn("Cannot added quest (ID[" + quest.getId() + "], CLASS[" + quest.getClass().getSimpleName() + ".java]). Quets with this ID already have!");
+			logger.warn("Cannot added quest (ID[" + quest.getId() + "], CLASS[" + quest.getClass().getSimpleName() + ".java]). Quets with this ID already have!");
 			return;
 		}
 		_quests.put(quest.getId(), quest);

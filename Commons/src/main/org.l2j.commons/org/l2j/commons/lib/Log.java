@@ -24,7 +24,7 @@ public class Log
 	public static final void add(String text, String cat)
 	{
 		/*
-		 * Logger _log = logs.get(cat); if(_log == null) { _log = LoggerFactory.getLogger(cat); logs.put(cat, _log); }
+		 * Logger logger = logs.get(cat); if(logger == null) { logger = LoggerFactory.getLogger(cat); logs.put(cat, logger); }
 		 */
 		
 		String date = (new SimpleDateFormat("yy.MM.dd H:mm:ss")).format(new Date());

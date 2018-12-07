@@ -32,7 +32,7 @@ public class MonRaceInfoPacket extends L2GameServerPacket
 
 		for(int i = 0; i < 8; i++)
 		{
-			//_log.info.println("MOnster "+(i+1)+" npcid "+_monsters[i].getNpcTemplate().getNpcId());
+			//logger.info.println("MOnster "+(i+1)+" npcid "+_monsters[i].getNpcTemplate().getNpcId());
 			writeInt(_monsters[i].getObjectId()); //npcObjectID
 			writeInt(_monsters[i].getNpcId() + 1000000); //npcID
 			writeInt(14107); //origin X

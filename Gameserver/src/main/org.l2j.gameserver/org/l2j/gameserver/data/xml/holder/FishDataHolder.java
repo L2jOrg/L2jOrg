@@ -57,9 +57,9 @@ public class FishDataHolder extends AbstractHolder
 	@Override
 	public void log()
 	{
-		info("load " + _lures.size() + " lure(s).");
-		info("load " + _rewards.size() + " lure reward(s).");
-		info("load " + _rods.size() + " rod(s).");
+		logger.info("load " + _lures.size() + " lure(s).");
+		logger.info("load " + _rewards.size() + " lure reward(s).");
+		logger.info("load " + _rods.size() + " rod(s).");
 	}
 
 	//@Deprecated

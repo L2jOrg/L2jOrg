@@ -58,7 +58,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 				skills = _normalSkillTree.get(player.getActiveClassId());
 				if(skills == null)
 				{
-					info("Skill tree for class " + player.getActiveClassId() + " is not defined !");
+					logger.info("Skill tree for class " + player.getActiveClassId() + " is not defined !");
 					return Collections.emptyList();
 				}
 				break;
@@ -66,7 +66,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 				skills = _fishingSkillTree;
 				if(skills == null)
 				{
-					info("Fishing skill tree is not defined !");
+					logger.info("Fishing skill tree is not defined !");
 					return Collections.emptyList();
 				}
 				break;
@@ -74,7 +74,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 				skills = _pledgeSkillTree;
 				if(skills == null)
 				{
-					info("Pledge skill tree is not defined !");
+					logger.info("Pledge skill tree is not defined !");
 					return Collections.emptyList();
 				}
 				return checkLearnsConditions(player, skills, player.getClan() != null ? player.getClan().getLevel() : 0);
@@ -82,7 +82,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 				skills = _subUnitSkillTree;
 				if(skills == null)
 				{
-					info("Sub-unit skill tree is not defined !");
+					logger.info("Sub-unit skill tree is not defined !");
 					return Collections.emptyList();
 				}
 				return checkLearnsConditions(player, skills, player.getClan() != null ? player.getClan().getLevel() : 0);
@@ -90,7 +90,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 				skills = _heroSkillTree;
 				if(skills == null)
 				{
-					info("Hero skill tree is not defined !");
+					logger.info("Hero skill tree is not defined !");
 					return Collections.emptyList();
 				}
 				break;
@@ -112,14 +112,14 @@ public final class SkillAcquireHolder extends AbstractHolder
 						TIntObjectMap<Set<SkillLearn>> map = _multiclassLearnSkillTree.get(player.getActiveClassId());
 						if(map == null)
 						{
-							info("Skill tree for learn multiclass " + player.getActiveClassId() + " is not defined !");
+							logger.info("Skill tree for learn multiclass " + player.getActiveClassId() + " is not defined !");
 							return Collections.emptyList();
 						}
 
 						skills = map.get(classId.getId());
 						if(skills == null)
 						{
-							info("Skill tree for learn multiclass " + player.getActiveClassId() + ":" + classId.getId() + " is not defined !");
+							logger.info("Skill tree for learn multiclass " + player.getActiveClassId() + ":" + classId.getId() + " is not defined !");
 							return Collections.emptyList();
 						}
 					}
@@ -128,7 +128,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 						skills = _multiclassCheckSkillTree.get(player.getActiveClassId());
 						if(skills == null)
 						{
-							info("Skill tree for check multiclass " + player.getActiveClassId() + " is not defined !");
+							logger.info("Skill tree for check multiclass " + player.getActiveClassId() + " is not defined !");
 							return Collections.emptyList();
 						}
 					}
@@ -572,7 +572,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 			Set<SkillLearn> skills = map.get(classId.getId());
 			if(skills == null)
 			{
-				info("Not found NORMAL skill learn for class " + classId.getId());
+				logger.info("Not found NORMAL skill learn for class " + classId.getId());
 				continue;
 			}
 
@@ -764,16 +764,16 @@ public final class SkillAcquireHolder extends AbstractHolder
 	@Override
 	public void log()
 	{
-		info("load " + sizeTroveMap(_normalSkillTree) + " normal learns for " + _normalSkillTree.size() + " classes.");
-		info("load " + sizeTroveMap(_generalSkillTree) + " general skills learns for " + _generalSkillTree.size() + " classes.");
+		logger.info("load " + sizeTroveMap(_normalSkillTree) + " normal learns for " + _normalSkillTree.size() + " classes.");
+		logger.info("load " + sizeTroveMap(_generalSkillTree) + " general skills learns for " + _generalSkillTree.size() + " classes.");
 
 		//
-		info("load " + _fishingSkillTree.size() + " fishing learns.");
-		info("load " + _pledgeSkillTree.size() + " pledge learns.");
-		info("load " + _subUnitSkillTree.size() + " sub unit learns.");
-		info("load " + _heroSkillTree.size() + " hero skills learns.");
-		info("load " + _gmSkillTree.size() + " GM skills learns.");
-		info("load " + _customSkillTree.size() + " custom skills learns.");
+		logger.info("load " + _fishingSkillTree.size() + " fishing learns.");
+		logger.info("load " + _pledgeSkillTree.size() + " pledge learns.");
+		logger.info("load " + _subUnitSkillTree.size() + " sub unit learns.");
+		logger.info("load " + _heroSkillTree.size() + " hero skills learns.");
+		logger.info("load " + _gmSkillTree.size() + " GM skills learns.");
+		logger.info("load " + _customSkillTree.size() + " custom skills learns.");
 	}
 
 	//@Deprecated

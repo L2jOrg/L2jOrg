@@ -1137,7 +1137,7 @@ public abstract class Creature extends GameObject
 			return;
 
 		/*if(skill.getTargetType() == SkillTargetType.TARGET_SELF && !skill.isTrigger())
-			_log.warn("Self trigger skill dont have trigger flag. SKILL ID[" + skill.getId() + "]");*/
+			logger.warn("Self trigger skill dont have trigger flag. SKILL ID[" + skill.getId() + "]");*/
 
 		Creature aimTarget = skill.getAimingTarget(this, target);
 		if(aimTarget != null && trigger.isIncreasing())

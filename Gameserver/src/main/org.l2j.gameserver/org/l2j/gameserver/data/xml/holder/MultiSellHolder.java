@@ -1,11 +1,6 @@
 package org.l2j.gameserver.data.xml.holder;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.MultiSellListContainer;
@@ -16,6 +11,10 @@ import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.network.l2.components.CustomMessage;
 import org.l2j.gameserver.network.l2.s2c.MultiSellListPacket;
 import org.l2j.gameserver.templates.item.ItemTemplate;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Multisell list manager
@@ -44,7 +43,7 @@ public class MultiSellHolder extends AbstractHolder
 	public void addMultiSellListContainer(int id, MultiSellListContainer list)
 	{
 		if(_entries.containsKey(id))
-			_log.warn("MultiSell redefined: " + id);
+			logger.warn("MultiSell redefined: " + id);
 
 		list.setListId(id);
 		_entries.put(id, list);
@@ -78,7 +77,7 @@ public class MultiSellHolder extends AbstractHolder
 		}
 		catch(Exception e)
 		{
-			error("", e);
+			logger.error(e.getLocalizedMessage(), e);
 			return null;
 		}
 	}
