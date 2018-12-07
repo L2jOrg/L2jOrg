@@ -17,9 +17,11 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.*;
 import java.util.jar.JarEntry;
 import java.util.jar.JarInputStream;
@@ -135,7 +137,11 @@ public class Scripts
         else if(target.isDirectory())
         {
             _log.debug("Loading Scripts from {} ", target.getAbsolutePath());
-            scriptFiles = target.listFiles();
+            try(var paths = Files.walk(target.toPath())) {
+                scriptFiles = paths.filter(this::acceptJavaFile).map(Path::toFile).toArray(File[]::new);
+            } catch (IOException e) {
+                _log.error(e.getLocalizedMessage(), e);
+            }
 
         }
 
@@ -198,8 +204,9 @@ public class Scripts
         return classes;
     }
 
-    private boolean acceptJavaFile(File dir, String name) {
-        return name.endsWith(".java") && !name.equalsIgnoreCase("module-info.java");
+    private boolean acceptJavaFile(Path p) {
+        var stringPath = p.toString();
+        return stringPath.endsWith(".java") && !stringPath.endsWith("module-info.java");
     }
 
     private Object init(Class<?> clazz)

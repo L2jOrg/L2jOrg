@@ -1,16 +1,20 @@
 package org.l2j.commons.data.xml;
 
-import org.l2j.commons.data.xml.helpers.ErrorHandlerImpl;
-import org.l2j.commons.data.xml.helpers.SimpleDTDEntityResolver;
-import org.l2j.commons.logging.LoggerObject;
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
+import org.l2j.commons.data.xml.helpers.ErrorHandlerImpl;
+import org.l2j.commons.data.xml.helpers.SimpleDTDEntityResolver;
+import org.l2j.commons.logging.LoggerObject;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 import static java.util.Objects.isNull;
-import static java.util.Objects.nonNull;
 
 /**
  * Author: VISTALL
@@ -157,21 +161,24 @@ public abstract class AbstractParser<H extends AbstractHolder> extends LoggerObj
             return;
         }
 
-        var files = dir.listFiles(this::acceptFile);
-        if(nonNull(files)) {
+        try(var paths = Files.walk(dir.toPath())) {
+            var files =  paths.filter(this::acceptFile).map(Path::toFile).toArray(File[]::new);
             for (File file : files) {
                 try {
                     parseDocument(new FileInputStream(file), file.getName());
                 }
                 catch(Exception e) {
-                   _log.error("Parsing Document file {}: {}", file.getName(), e.getStackTrace());
+                    _log.error("Parsing Document file {}: {}", file.getName(), e.getStackTrace());
                 }
 
             }
+        } catch (IOException e) {
+            _log.error(e.getLocalizedMessage(), e);
         }
     }
 
-    private boolean acceptFile(File file) {
+    private boolean acceptFile(Path path) {
+        var file = path.toFile();
         return file.getName().endsWith(".xml") && !file.isHidden() && !isIgnored(file);
     }
 }

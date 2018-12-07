@@ -7,14 +7,6 @@ import gnu.trove.map.hash.TIntIntHashMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
 import gnu.trove.set.TIntSet;
 import gnu.trove.set.hash.TIntHashSet;
-
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
-
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
@@ -27,6 +19,8 @@ import org.l2j.gameserver.model.pledge.SubUnit;
 import org.l2j.gameserver.skills.SkillEntry;
 import org.l2j.gameserver.utils.MulticlassUtils;
 import org.l2j.gameserver.utils.SkillUtils;
+
+import java.util.*;
 
 /**
  * @author: VISTALL
@@ -43,7 +37,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 	}
 
 	// классовые зависимости
-	private TIntObjectMap<Set<SkillLearn>> _normalSkillTree = new TIntObjectHashMap<Set<SkillLearn>>();
+	private TIntObjectMap<Set<SkillLearn>> _normalSkillTree = new TIntObjectHashMap<>();
 	private TIntObjectMap<Set<SkillLearn>> _generalSkillTree = new TIntObjectHashMap<Set<SkillLearn>>();
 	private TIntObjectMap<Set<SkillLearn>> _multiclassCheckSkillTree = new TIntObjectHashMap<Set<SkillLearn>>();
 	private TIntObjectMap<TIntObjectMap<Set<SkillLearn>>> _multiclassLearnSkillTree = new TIntObjectHashMap<TIntObjectMap<Set<SkillLearn>>>();
@@ -567,12 +561,11 @@ public final class SkillAcquireHolder extends AbstractHolder
 
 	public void initNormalSkillLearns()
 	{
-		TIntObjectMap<Set<SkillLearn>> map = new TIntObjectHashMap<Set<SkillLearn>>(_normalSkillTree);
+		TIntObjectMap<Set<SkillLearn>> map = new TIntObjectHashMap<>(_normalSkillTree);
 
 		_normalSkillTree.clear();
 		ClassId tempClassId;
-		for(ClassId classId : ClassId.VALUES)
-		{
+		for(ClassId classId : ClassId.VALUES) {
 			if(classId.isDummy())
 				continue;
 
