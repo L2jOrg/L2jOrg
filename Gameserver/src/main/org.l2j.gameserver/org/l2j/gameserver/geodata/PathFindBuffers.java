@@ -3,16 +3,15 @@ package org.l2j.gameserver.geodata;
 import gnu.trove.iterator.TIntIntIterator;
 import gnu.trove.map.hash.TIntIntHashMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
+import org.l2j.commons.text.StrTable;
+import org.l2j.gameserver.Config;
+import org.l2j.gameserver.utils.Location;
 
 import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-
-import org.l2j.commons.text.StrTable;
-import org.l2j.gameserver.Config;
-import org.l2j.gameserver.utils.Location;
 
 public class PathFindBuffers
 {
@@ -63,7 +62,8 @@ public class PathFindBuffers
 			else
 			{
 				buff = new PathFindBuffer[] { buffer = new PathFindBuffer(mapSize) };
-				sizes = org.apache.commons.lang3.ArrayUtils.add(sizes, mapSize);
+				sizes = Arrays.copyOf(sizes, sizes.length+1);
+				sizes[sizes.length-1] = mapSize;
 				Arrays.sort(sizes);
 			}
 			buffers.put(mapSize, buff);

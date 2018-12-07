@@ -1,8 +1,8 @@
 package npc.model.residences.clanhall;
 
-import org.apache.commons.lang3.StringUtils;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.dao.JdbcEntityState;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.dao.SiegeClanDAO;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.model.Player;
@@ -127,7 +127,7 @@ public class AuctioneerInstance extends NpcInstance
 				msg.replace("%next_bypass%", "-h npc_%objectId%_list_all " + (page + 1));
 			}
 			else
-				msg.replace("%next_button%", StringUtils.EMPTY);
+				msg.replace("%next_button%", Util.STRING_EMPTY);
 
 			if(page != 0)
 			{
@@ -135,7 +135,7 @@ public class AuctioneerInstance extends NpcInstance
 				msg.replace("%prev_bypass%", "-h npc_%objectId%_list_all " + (page - 1));
 			}
 			else
-				msg.replace("%prev_button%", StringUtils.EMPTY);
+				msg.replace("%prev_button%", Util.STRING_EMPTY);
 
 			player.sendPacket(msg);
 		}
@@ -200,9 +200,9 @@ public class AuctioneerInstance extends NpcInstance
 
 			Clan owner = clanHall.getOwner();
 
-			msg.replace("<?OWNER_PLEDGE_NAME?>", owner == null ? StringUtils.EMPTY : owner.getName());
-			msg.replace("<?AGIT_OWNER_PLEDGE_NAME?>", owner == null ? StringUtils.EMPTY : owner.getName());
-			msg.replace("<?OWNER_PLEDGE_MASTER?>", owner == null ? StringUtils.EMPTY : owner.getLeaderName());
+			msg.replace("<?OWNER_PLEDGE_NAME?>", owner == null ? Util.STRING_EMPTY : owner.getName());
+			msg.replace("<?AGIT_OWNER_PLEDGE_NAME?>", owner == null ? Util.STRING_EMPTY : owner.getName());
+			msg.replace("<?OWNER_PLEDGE_MASTER?>", owner == null ? Util.STRING_EMPTY : owner.getLeaderName());
 			msg.replace("<?AGIT_AUCTION_DESC?>", clanHall.getAuctionDescription());
 			msg.replace("<?AGIT_AUCTION_MINBID?>", String.valueOf(clanHall.getAuctionMinBid()));
 
@@ -275,7 +275,7 @@ public class AuctioneerInstance extends NpcInstance
 				msg.replace("%next_bypass%", "-h npc_%objectId%_bidder_list " + id + " " + (page + 1));
 			}
 			else
-				msg.replace("%next_button%", StringUtils.EMPTY);
+				msg.replace("%next_button%", Util.STRING_EMPTY);
 
 			if(page != 0)
 			{
@@ -283,7 +283,7 @@ public class AuctioneerInstance extends NpcInstance
 				msg.replace("%prev_bypass%", "-h npc_%objectId%_bidder_list " + id + " " + (page - 1));
 			}
 			else
-				msg.replace("%prev_button%", StringUtils.EMPTY);
+				msg.replace("%prev_button%", Util.STRING_EMPTY);
 
 			player.sendPacket(msg);
 		}
@@ -577,7 +577,7 @@ public class AuctioneerInstance extends NpcInstance
 
 			int day = Integer.parseInt(tokenizer.nextToken());
 			long bid = -1;
-			String comment = StringUtils.EMPTY;
+			String comment = Util.STRING_EMPTY;
 			if(tokenizer.hasMoreTokens())
 				try
 				{
@@ -640,7 +640,7 @@ public class AuctioneerInstance extends NpcInstance
 
 			int day = Integer.parseInt(tokenizer.nextToken());
 			long bid = Long.parseLong(tokenizer.nextToken());
-			String comment = StringUtils.EMPTY;
+			String comment = Util.STRING_EMPTY;
 
 			if(tokenizer.hasMoreTokens())
 			{
@@ -707,7 +707,7 @@ public class AuctioneerInstance extends NpcInstance
 
 			clanHall.getSiegeDate().setTimeInMillis(0);
 			clanHall.getLastSiegeDate().setTimeInMillis(System.currentTimeMillis());
-			clanHall.setAuctionDescription(StringUtils.EMPTY);
+			clanHall.setAuctionDescription(Util.STRING_EMPTY);
 			clanHall.setAuctionLength(0);
 			clanHall.setAuctionMinBid(0);
 			clanHall.setJdbcState(JdbcEntityState.UPDATED);

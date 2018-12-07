@@ -1,13 +1,12 @@
 package handler.bbs;
 
 import handler.bbs.custom.BBSConfig;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.Pair;
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.xml.holder.MultiSellHolder;
-import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.gameserver.handler.bbs.BbsHandlerHolder;
 import org.l2j.gameserver.handler.bbs.IBbsHandler;
 import org.l2j.gameserver.handler.bypass.BypassHolder;
@@ -22,6 +21,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.StringTokenizer;
+
+import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 public final class CommunityBoard extends ScriptsCommunityHandler
 {
@@ -153,7 +154,7 @@ public final class CommunityBoard extends ScriptsCommunityHandler
 			{
 				try
 				{
-					b.getValue().invoke(b.getKey(), player, null, StringUtils.isEmpty(args) ? new String[0] : args.split("\\s+"));
+					b.getValue().invoke(b.getKey(), player, null, isNullOrEmpty(args)? new String[0] : args.split("\\s+"));
 				}
 				catch(Exception e)
 				{

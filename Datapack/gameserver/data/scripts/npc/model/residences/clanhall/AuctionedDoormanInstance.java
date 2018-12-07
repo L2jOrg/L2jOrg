@@ -1,7 +1,7 @@
 package npc.model.residences.clanhall;
 
-import org.apache.commons.lang3.ArrayUtils;
 import org.l2j.commons.collections.MultiValueSet;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.residence.Castle;
@@ -20,7 +20,6 @@ import org.l2j.gameserver.utils.ReflectionUtils;
  */
 public class AuctionedDoormanInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 
 	private int[] _doors;
 	private boolean _elite;
@@ -29,7 +28,7 @@ public class AuctionedDoormanInstance extends NpcInstance
 	{
 		super(objectId, template, set);
 
-		_doors = template.getAIParams().getIntegerArray("doors", ArrayUtils.EMPTY_INT_ARRAY);
+		_doors = template.getAIParams().getIntegerArray("doors", Util.INT_ARRAY_EMPTY);
 		_elite = template.getAIParams().getBool("elite", false);
 	}
 

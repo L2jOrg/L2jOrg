@@ -1,9 +1,5 @@
 package org.l2j.gameserver.handler.admincommands.impl;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.StringTokenizer;
-
 import org.apache.commons.lang3.math.NumberUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.admincommands.IAdminCommandHandler;
@@ -19,6 +15,10 @@ import org.l2j.gameserver.network.l2.s2c.ExSendUIEventPacket;
 import org.l2j.gameserver.network.l2.s2c.PlaySoundPacket;
 import org.l2j.gameserver.stats.Stats;
 import org.l2j.gameserver.utils.Functions;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringTokenizer;
 
 public class AdminAdmin implements IAdminCommandHandler
 {
@@ -163,7 +163,7 @@ public class AdminAdmin implements IAdminCommandHandler
 						final String val = fullString.substring(15).trim();
 
 						String[] vals = val.split(" ");
-						int range = NumberUtils.toInt(vals[0], 0);
+						int range =  NumberUtils.toInt(vals[0], 0);
 						int astate = vals.length > 1 ? NumberUtils.toInt(vals[1], 0) : 0;
 
 						for(NpcInstance n : activeChar.getAroundNpc(range, 200))

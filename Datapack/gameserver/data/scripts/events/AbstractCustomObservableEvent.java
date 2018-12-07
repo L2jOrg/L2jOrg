@@ -1,8 +1,8 @@
 package events;
 
 import npc.model.events.CustomObservationManagerInstance;
-import org.apache.commons.lang3.StringUtils;
 import org.l2j.commons.collections.MultiValueSet;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.xml.holder.EventHolder;
 import org.l2j.gameserver.data.xml.holder.InstantZoneHolder;
 import org.l2j.gameserver.model.Creature;
@@ -39,7 +39,7 @@ public abstract class AbstractCustomObservableEvent extends SingleMatchEvent
 
 	protected AbstractCustomObservableEvent(int id, int status, int type, String player1, String player2)
 	{
-		super(id, StringUtils.EMPTY);
+		super(id, Util.STRING_EMPTY);
 		final AbstractCustomObservableEvent source = EventHolder.getInstance().getEvent(EventType.CUSTOM_PVP_EVENT, id);
 		source.cloneTo(this);
 

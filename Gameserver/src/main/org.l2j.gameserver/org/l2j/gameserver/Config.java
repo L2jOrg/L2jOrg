@@ -1926,7 +1926,7 @@ public class Config
         ALT_SHOP_UNALLOWED_ITEMS = altSettings.getProperty("ShopUnallowedItems", ArrayUtils.EMPTY_INT_ARRAY);
 
         ALT_ALLOWED_PET_POTIONS = altSettings.getProperty("AllowedPetPotions", new int[] { 735, 1060, 1061, 1062, 1374, 1375, 1539, 1540, 6035, 6036 });
-
+        Arrays.sort(ALT_ALLOWED_PET_POTIONS);
         //FESTIVAL_MIN_PARTY_SIZE = altSettings.getProperty("FestivalMinPartySize", 5);
         //FESTIVAL_RATE_PRICE = altSettings.getProperty("FestivalRatePrice", 1.0);
 

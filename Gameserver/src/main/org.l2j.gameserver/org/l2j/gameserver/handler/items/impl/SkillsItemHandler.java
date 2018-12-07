@@ -1,7 +1,5 @@
 package org.l2j.gameserver.handler.items.impl;
 
-import org.l2j.gameserver.skills.SkillEntry;
-import org.apache.commons.lang3.ArrayUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.Playable;
@@ -9,7 +7,10 @@ import org.l2j.gameserver.model.Skill;
 import org.l2j.gameserver.model.instances.PetInstance;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
+import org.l2j.gameserver.skills.SkillEntry;
 import org.l2j.gameserver.utils.ItemFunctions;
+
+import java.util.Arrays;
 
 /**
  * @author VISTALL
@@ -27,7 +28,7 @@ public class SkillsItemHandler extends DefaultItemHandler
 		if(playable.isPet())
 		{
 			PetInstance pet = (PetInstance) playable;
-			if(!pet.isMyFeed(item.getItemId()) && !ArrayUtils.contains(Config.ALT_ALLOWED_PET_POTIONS, item.getItemId()))
+			if(!pet.isMyFeed(item.getItemId()) && Arrays.binarySearch(Config.ALT_ALLOWED_PET_POTIONS, item.getItemId()) < 0)
 			{
 				//TODO: Вынести все в другое правильное место.
 				if(pet.getPlayer() != null)

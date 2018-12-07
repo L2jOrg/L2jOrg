@@ -1,8 +1,8 @@
 package org.l2j.gameserver.tables;
 
-import org.apache.commons.lang3.StringUtils;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.dao.ClanLeaderRequestDAO;
 import org.l2j.gameserver.idfactory.IdFactory;
@@ -87,7 +87,7 @@ public class ClanTable
 	public String getClanName(int clanId)
 	{
 		Clan c = getClan(clanId);
-		return c != null ? c.getName() : StringUtils.EMPTY;
+		return c != null ? c.getName() : Util.STRING_EMPTY;
 	}
 
 	public Clan getClanByCharId(int charId)
