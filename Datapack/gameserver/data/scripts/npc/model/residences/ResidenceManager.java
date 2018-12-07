@@ -1,7 +1,7 @@
 package npc.model.residences;
 
-import org.apache.commons.lang3.ArrayUtils;
 import org.l2j.commons.collections.MultiValueSet;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.model.Creature;
@@ -59,7 +59,7 @@ public abstract class ResidenceManager extends MerchantInstance
 
 		setDialogs();
 
-		_doors = template.getAIParams().getIntegerArray("doors", ArrayUtils.EMPTY_INT_ARRAY);
+		_doors = template.getAIParams().getIntegerArray("doors", Util.INT_ARRAY_EMPTY);
 	}
 
 	protected void setDialogs()

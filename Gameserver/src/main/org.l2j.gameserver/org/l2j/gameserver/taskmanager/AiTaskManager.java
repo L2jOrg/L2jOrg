@@ -34,9 +34,4 @@ public class AiTaskManager extends SteppingRunnableQueueManager
 		//Очистка каждую минуту
 		ThreadPoolManager.getInstance().scheduleAtFixedRate(() -> AiTaskManager.this.purge(), 60000L + 1000L * _randomizer++, 60000L);
 	}
-
-	public CharSequence getStats(int num)
-	{
-		return _instances[num].getStats();
-	}
 }

@@ -35,9 +35,4 @@ public class EffectTaskManager extends SteppingRunnableQueueManager
 		//Очистка каждые 30 секунд
 		ThreadPoolManager.getInstance().scheduleAtFixedRate(() -> EffectTaskManager.this.purge(), 30000L + 1000L * _randomizer++, 30000L);
 	}
-
-	public CharSequence getStats(int num)
-	{
-		return _instances[num].getStats();
-	}
 }

@@ -1,6 +1,5 @@
 package npc.model.residences.castle;
 
-import org.apache.commons.lang3.ArrayUtils;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.model.Player;
@@ -10,6 +9,7 @@ import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
 
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 /**
@@ -66,10 +66,11 @@ public class GeroldInstance extends NpcInstance
 			if(arg == null)
 				arg = new Object[0];
 
-			arg = ArrayUtils.add(arg, "<?clan_name?>");
-			arg = ArrayUtils.add(arg, clan.getName());
-			arg = ArrayUtils.add(arg, "<?leader_name?>");
-			arg = ArrayUtils.add(arg, clan.getLeaderName());
+			var args = Arrays.copyOf(arg,arg.length + 4);
+			args[args.length -4] = "<?clan_name?>";
+			args[args.length -3] = clan.getName();
+			args[args.length -2] = "<?leader_name?>";
+			args[args.length -1] = clan.getLeaderName();
 		}
 
 		super.showChatWindow(player, val, firstTalk, arg);

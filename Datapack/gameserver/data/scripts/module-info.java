@@ -5,4 +5,5 @@ module org.l2j.scripts {
     requires org.l2j.commons;
     requires commons.lang3;
     requires trove;
+    requires org.napile.primitive;
 }

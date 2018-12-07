@@ -1,13 +1,11 @@
+
 package org.l2j.commons.threading;
 
-import org.apache.commons.lang3.mutable.MutableLong;
 import org.l2j.commons.collections.CollectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -198,37 +196,5 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 		queue.removeAll(purge);
 
 		CollectionUtils.recycle(purge);
-	}
-
-	public CharSequence getStats()
-	{
-		StringBuilder list = new StringBuilder();
-
-		Map<String, MutableLong> stats = new TreeMap<String, MutableLong>();
-		int total = 0;
-		int done = 0;
-
-		for(SteppingScheduledFuture<?> sr: queue)
-		{
-			if (sr.isDone())
-			{
-				done++;
-				continue;
-			}
-			total++;
-			MutableLong count = stats.get(sr.r.getClass().getName());
-			if (count == null)
-				stats.put(sr.r.getClass().getName(), count = new MutableLong(1L));
-			else
-				count.increment();
-		}
-
-		for(Map.Entry<String, MutableLong> e : stats.entrySet())
-			list.append("\t").append(e.getKey()).append(" : ").append(e.getValue().longValue()).append("\n");
-
-		list.append("Scheduled: ....... ").append(total).append("\n");
-		list.append("Done/Cancelled: .. ").append(done).append("\n");
-
-		return list;
 	}
 }

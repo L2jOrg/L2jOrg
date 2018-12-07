@@ -1,6 +1,5 @@
 package handler.onshiftaction;
 
-import org.apache.commons.lang3.StringUtils;
 import org.l2j.gameserver.handler.bypass.Bypass;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Servitor;
@@ -9,6 +8,8 @@ import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.instances.PetInstance;
 import org.l2j.gameserver.network.l2.components.HtmlMessage;
 import org.l2j.gameserver.utils.HtmlUtils;
+
+import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 /**
  * @author VISTALL
@@ -32,9 +33,9 @@ public class OnShiftAction_PetInstance extends ScriptOnShiftActionHandler<PetIns
 		msg.setFile("scripts/actions/admin.L2PetInstance.onActionShift.htm");
 
 		msg.replace("<?npc_name?>", HtmlUtils.htmlNpcName(pet.getNpcId()));
-		msg.replace("%title%", String.valueOf(StringUtils.isEmpty(pet.getTitle()) ? "Empty" : pet.getTitle()));
+		msg.replace("%title%", isNullOrEmpty(pet.getTitle()) ? "Empty" : pet.getTitle());
 		msg.replace("%level%", String.valueOf(pet.getLevel()));
-		msg.replace("%class%", String.valueOf(pet.getClass().getSimpleName().replaceFirst("L2", "").replaceFirst("Instance", "")));
+		msg.replace("%class%", pet.getClass().getSimpleName().replaceFirst("L2", "").replaceFirst("Instance", ""));
 		msg.replace("%xyz%", pet.getLoc().x + " " + pet.getLoc().y + " " + pet.getLoc().z);
 		msg.replace("%heading%", String.valueOf(pet.getLoc().h));
 
