@@ -18,7 +18,7 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.tables.ClanTable;
 
-import org.apache.commons.lang3.StringUtils;
+import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 /**
  * @author VISTALL
@@ -140,7 +140,7 @@ public class ClanHallAuctionEvent extends SiegeEvent<AuctionClanHall, AuctionSie
 
 			getResidence().setAuctionLength(0);
 			getResidence().setAuctionMinBid(0);
-			getResidence().setAuctionDescription(StringUtils.EMPTY);
+			getResidence().setAuctionDescription(STRING_EMPTY);
 			getResidence().getSiegeDate().setTimeInMillis(0);
 			getResidence().getLastSiegeDate().setTimeInMillis(0);
 			getResidence().getOwnDate().setTimeInMillis(System.currentTimeMillis());

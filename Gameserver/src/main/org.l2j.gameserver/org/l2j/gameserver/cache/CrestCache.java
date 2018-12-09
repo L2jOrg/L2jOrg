@@ -6,7 +6,6 @@ import gnu.trove.map.TIntIntMap;
 import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntIntHashMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
-import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.slf4j.Logger;
@@ -16,6 +15,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Types;
+import java.util.Arrays;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
@@ -25,8 +25,11 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  * Переработано: G1ta0
  *
  */
-public class CrestCache
-{
+public class CrestCache {
+
+	private static final int INITIAL_HASH_CODE = 17;
+	private static final int CONSTANT_HASH_CODE = 37;
+
 	public static final int ALLY_CREST_SIZE = 192;
 	public static final int CREST_SIZE = 256;
 	public static final int LARGE_CREST_PART_SIZE = 14336;
@@ -34,6 +37,7 @@ public class CrestCache
 	private static final Logger _log = LoggerFactory.getLogger(CrestCache.class);
 
 	private final static CrestCache _instance = new CrestCache();
+
 
 	public final static CrestCache getInstance()
 	{
@@ -164,9 +168,8 @@ public class CrestCache
 	 * @param crest данные значка
 	 * @return ID значка в "кэше"
 	 */
-	private static int getCrestId(int pledgeId, byte[] crest)
-	{
-		return Math.abs(new HashCodeBuilder(15, 87).append(pledgeId).append(crest).toHashCode());
+	private static int getCrestId(int pledgeId, byte[] crest) {
+		return Math.abs( (INITIAL_HASH_CODE * CONSTANT_HASH_CODE  + pledgeId )  * CONSTANT_HASH_CODE + Arrays.hashCode(crest));
 	}
 
 	public byte[] getPledgeCrest(int crestId)

@@ -12,7 +12,6 @@ module org.l2j.gameserver {
     requires spring.context;
     requires java.xml.bind;
     requires trove;
-    requires commons.lang3;
     requires org.napile.primitive;
     requires java.management;
     requires dom4j;

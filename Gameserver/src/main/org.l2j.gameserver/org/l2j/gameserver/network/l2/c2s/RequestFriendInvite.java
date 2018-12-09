@@ -5,7 +5,7 @@ import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.network.l2.components.IBroadcastPacket;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 
-import org.apache.commons.lang3.StringUtils;
+import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 public class RequestFriendInvite extends L2GameClientPacket
 {
@@ -21,7 +21,7 @@ public class RequestFriendInvite extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
-		if(activeChar == null || StringUtils.isEmpty(_name))
+		if(activeChar == null || isNullOrEmpty(_name))
 			return;
 
 		if(activeChar.isOutOfControl())

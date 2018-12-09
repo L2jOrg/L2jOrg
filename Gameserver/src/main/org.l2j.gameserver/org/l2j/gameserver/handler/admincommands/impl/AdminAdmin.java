@@ -1,6 +1,6 @@
 package org.l2j.gameserver.handler.admincommands.impl;
 
-import org.apache.commons.lang3.math.NumberUtils;
+import org.l2j.commons.util.Converter;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.admincommands.IAdminCommandHandler;
 import org.l2j.gameserver.model.GameObject;
@@ -163,8 +163,8 @@ public class AdminAdmin implements IAdminCommandHandler
 						final String val = fullString.substring(15).trim();
 
 						String[] vals = val.split(" ");
-						int range =  NumberUtils.toInt(vals[0], 0);
-						int astate = vals.length > 1 ? NumberUtils.toInt(vals[1], 0) : 0;
+						int range =  Converter.stringToInt(vals[0], 0);
+						int astate = vals.length > 1 ? Converter.stringToInt(vals[1], 0) : 0;
 
 						for(NpcInstance n : activeChar.getAroundNpc(range, 200))
 							n.setNpcState(astate);

@@ -1,6 +1,5 @@
 package org.l2j.gameserver.network.authcomm;
 
-import org.apache.commons.lang3.StringUtils;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.config.templates.HostInfo;
 import org.l2j.gameserver.config.xml.holder.HostsConfigHolder;
@@ -131,14 +130,14 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
 
 	public List<GameClient> getAuthedClientsByHWID(String hwid) {
 		List<GameClient> clients = new ArrayList<>();
-		if(StringUtils.isEmpty(hwid))
+		if(isNullOrEmpty(hwid))
 			return clients;
 
 		readLock.lock();
 		try {
 			for(GameClient client : authedClients.values()) {
 				String h = client.getHWID();
-				if(!StringUtils.isEmpty(h) && h.equalsIgnoreCase(hwid))
+				if(!isNullOrEmpty(h) && h.equalsIgnoreCase(hwid))
 					clients.add(client);
 			}
 		}

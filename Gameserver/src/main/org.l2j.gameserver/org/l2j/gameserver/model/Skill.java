@@ -2,7 +2,6 @@ package org.l2j.gameserver.model;
 
 import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
-import org.apache.commons.lang3.math.NumberUtils;
 import org.l2j.commons.geometry.Polygon;
 import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.util.Rnd;
@@ -698,10 +697,7 @@ public class Skill extends StatTemplate implements Cloneable
 
 		String element = set.getString("element", "NONE");
 
-		if(NumberUtils.isCreatable(element))
-			_element = Element.getElementById(Integer.parseInt(element));
-		else
-			_element = Element.getElementByName(element.toUpperCase());
+		_element = Element.getElementByName(element.toUpperCase());
 
 		_elementPower = set.getInteger("elementPower", 0);
 

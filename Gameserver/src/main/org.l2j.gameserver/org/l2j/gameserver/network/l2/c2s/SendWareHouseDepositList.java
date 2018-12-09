@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.math.SafeMath;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
@@ -11,8 +12,6 @@ import org.l2j.gameserver.model.items.Warehouse.WarehouseType;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.utils.Log;
-
-import org.apache.commons.lang3.ArrayUtils;
 
 /**
  * Format: cdb, b - array of (dd)

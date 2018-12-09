@@ -1,6 +1,5 @@
 package org.l2j.gameserver.utils;
 
-import org.apache.commons.lang3.StringUtils;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.HtmlMessage;
 import org.l2j.gameserver.network.l2.components.NpcString;
@@ -90,12 +89,8 @@ public class HtmlUtils {
 		if(s == null)
 			return null;
 
-		s = StringUtils.replace(s, "\r", "");
-		s = StringUtils.replace(s, "\n", "");
-		s = StringUtils.replaceAll(s, "<!--((?!TEMPLATE).*?)-->", "");
-		s = StringUtils.replaceFirst(s, ".*<\\s*html\\s*>", "<html>");
-
-		return s;
+		s = s.replaceAll("(\r|\n|\"<!--((?!TEMPLATE).*?)-->\")", "");
+		return s.replaceFirst(".*<\\s*html\\s*>", "<html>");
 	}
 
 	public static void sendHtm(Player player, String htm)

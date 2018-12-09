@@ -5,7 +5,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.commons.lang3.StringUtils;
+import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 /**
  * Класс хранилища и валидации ссылок в html.
@@ -50,7 +50,7 @@ public class BypassStorage
 	{
 		clear(type);
 
-		if(StringUtils.isEmpty(html))
+		if(isNullOrEmpty(html))
 			return;
 
 		Matcher m = htmlBypass.matcher(html);

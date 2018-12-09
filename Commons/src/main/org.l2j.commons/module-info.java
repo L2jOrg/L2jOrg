@@ -14,14 +14,11 @@ module org.l2j.commons {
     requires commons.math3;
     requires dom4j;
     requires ecj;
-    requires commons.lang3;
     requires trove;
 
     exports org.l2j.commons.util;
     exports org.l2j.commons.xml;
     exports org.l2j.commons.crypt;
-    exports org.l2j.commons.status;
-    exports org.l2j.commons.lib;
     exports org.l2j.commons;
     exports org.l2j.commons.database;
     exports org.l2j.commons.database.model;
@@ -44,7 +41,6 @@ module org.l2j.commons {
     exports org.l2j.commons.logging;
     exports org.l2j.commons.compiler;
     exports org.l2j.commons.annotations;
-    exports org.l2j.commons.map.hash;
     exports org.l2j.commons.data.xml;
     exports org.l2j.commons.text;
     exports org.l2j.commons.formats.dds;

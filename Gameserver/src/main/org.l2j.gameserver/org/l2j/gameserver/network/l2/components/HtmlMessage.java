@@ -1,8 +1,6 @@
 package org.l2j.gameserver.network.l2.components;
 
-import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.text.StrBuilder;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.ImagesCache;
 import org.l2j.gameserver.data.htm.HtmCache;
@@ -19,6 +17,8 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
+
+import static org.l2j.commons.util.Util.*;
 
 /**
  * Класс обработки HTML диалогов перед отправкой клиенту.
@@ -109,7 +109,7 @@ public class HtmlMessage implements IBroadcastPacket {
 	}
 
 	public HtmlMessage replace(String name, NpcString npcString) {
-		return replace(name, HtmlUtils.htmlNpcString(npcString, ArrayUtils.EMPTY_OBJECT_ARRAY));
+		return replace(name, HtmlUtils.htmlNpcString(npcString, OBJECT_ARRAY_EMPTY));
 	}
 
 	public HtmlMessage replace(String name, NpcString npcString, Object... arg) {
@@ -122,9 +122,9 @@ public class HtmlMessage implements IBroadcastPacket {
 	public L2GameServerPacket packet(Player player) {
 		CharSequence content = null;
 
-		if(!StringUtils.isEmpty(_html)) {
+		if(!isNullOrEmpty(_html)) {
             content = make(player, _html);
-        } else if(!StringUtils.isEmpty(_filename)) {
+        } else if(!isNullOrEmpty(_filename)) {
 			if(player.isGM())
 				player.sendMessage("HTML: " + _filename);
 
@@ -144,7 +144,7 @@ public class HtmlMessage implements IBroadcastPacket {
             player.getBypassStorage().parseHtml(content, BypassType.ITEM);
         }
 
-		if(StringUtils.isEmpty(content))
+		if(isNullOrEmpty(content))
 			return ActionFailPacket.STATIC;
 		else if(_questId == 0)
             return new NpcHtmlMessagePacket(_npcObjId, _itemId, _playVoice, content);
@@ -154,14 +154,14 @@ public class HtmlMessage implements IBroadcastPacket {
 
 	private CharSequence make(Player player, String content) {
 		if(content == null)
-			return StringUtils.EMPTY;
+			return STRING_EMPTY;
 
-        StrBuilder sb = new StrBuilder(content);
+        StringBuilder sb = new StringBuilder(content);
 
 		if(_replaces != null)
 		{
 			for(Map.Entry<String, String> e : _replaces.entrySet())
-				sb.replaceAll(e.getKey(), e.getValue());
+				Util.replaceAll(sb, e.getKey(), e.getValue());
 		}
 
         Matcher m = ImagesCache.HTML_PATTERN.matcher(content);
@@ -170,32 +170,22 @@ public class HtmlMessage implements IBroadcastPacket {
             String imageName = m.group(1);
             int imageId = ImagesCache.getInstance().getImageId(imageName);
 
-            sb.replaceAll("%image:" + imageName + "%", "Crest.pledge_crest_" + Config.REQUEST_ID + "_" + imageId);
+            Util.replaceAll(sb, "%image:" + imageName + "%", "Crest.pledge_crest_" + Config.REQUEST_ID + "_" + imageId);
 
             byte[] image = ImagesCache.getInstance().getImage(imageId);
             if(image != null)
                 player.sendPacket(new PledgeCrestPacket(imageId, image));
         }
 
-        sb.replaceAll("%playername%", player.getName());
+        Util.replaceAll(sb,"%playername%", player.getName());
 		if(_npcObjId != 0)
 		{
-			sb.replaceAll("%objectId%", String.valueOf(_npcObjId));
+			Util.replaceAll(sb,"%objectId%", String.valueOf(_npcObjId));
 			if(_npc != null)
-				sb.replaceAll("%npcId%", String.valueOf(_npc.getNpcId()));
+				Util.replaceAll(sb,"%npcId%", String.valueOf(_npc.getNpcId()));
 		}
 
 		content = HtmlUtils.evaluate(sb.toString(), _variables);
-
-        sb.clear();
-
-		if(!content.startsWith("<html>"))
-		{
-			sb.append("<html><body>");
-			sb.append(content);
-			sb.append("</body></html>");
-			return sb;
-		}
 
 		if(content.length() > MAX_HTML_SIZE) {
 		    content = HTML_IS_TOO_LONG;

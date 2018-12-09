@@ -1,7 +1,10 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
-import org.apache.commons.lang3.StringUtils;
+
+import java.util.Objects;
+
+import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 public class RecipeShopMsgPacket extends L2GameServerPacket
 {
@@ -11,7 +14,7 @@ public class RecipeShopMsgPacket extends L2GameServerPacket
 	public RecipeShopMsgPacket(Player player, boolean showName)
 	{
 		_objectId = player.getObjectId();
-		_storeName = showName ? StringUtils.defaultString(player.getManufactureName()) : StringUtils.EMPTY;
+		_storeName = showName ? Objects.requireNonNullElse(player.getManufactureName(), STRING_EMPTY) : STRING_EMPTY;
 	}
 
 	@Override

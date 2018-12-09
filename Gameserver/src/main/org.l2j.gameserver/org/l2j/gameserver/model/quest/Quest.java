@@ -2,9 +2,9 @@ package org.l2j.gameserver.model.quest;
 
 import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
-import org.apache.commons.lang3.ArrayUtils;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
+import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.logging.LogUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.QuestHolder;
@@ -43,6 +43,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.*;
+
+import static org.l2j.commons.util.Util.OBJECT_ARRAY_EMPTY;
 
 public class Quest implements OnInitScriptListener
 {
@@ -1207,7 +1209,7 @@ public class Quest implements OnInitScriptListener
 
 	protected void showHtmlFile(Player player, NpcInstance npc, String fileName, boolean showQuestInfo)
 	{
-		showHtmlFile(player, npc, fileName, showQuestInfo, ArrayUtils.EMPTY_OBJECT_ARRAY);
+		showHtmlFile(player, npc, fileName, showQuestInfo, OBJECT_ARRAY_EMPTY);
 	}
 
 	protected void showHtmlFile(Player player, NpcInstance npc, String fileName, boolean showQuestInfo, Object... arg)

@@ -2,7 +2,6 @@ package org.l2j.gameserver.network.l2.c2s;
 
 import java.util.Set;
 
-import org.apache.commons.lang3.StringUtils;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.math.SafeMath;
 import org.l2j.gameserver.dao.MailDAO;
@@ -17,6 +16,8 @@ import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.taskmanager.DelayedItemsManager;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.utils.Log;
+
+import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 /**
  * Шлется клиентом при согласии принять письмо в {@link ExReplyReceivedPost}. Если письмо с оплатой то создателю письма шлется запрошенная сумма.
@@ -148,7 +149,7 @@ public class RequestExReceivePost extends L2GameClientPacket
 				}
 
 				mail.setJdbcState(JdbcEntityState.UPDATED);
-				if(StringUtils.isEmpty(mail.getBody()))
+				if(isNullOrEmpty(mail.getBody()))
 					mail.delete();
 				else
 					mail.update();

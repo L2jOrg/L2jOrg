@@ -1,6 +1,6 @@
 package org.l2j.gameserver.handler.admincommands.impl;
 
-import org.apache.commons.lang3.math.NumberUtils;
+import org.l2j.commons.util.Converter;
 import org.l2j.gameserver.handler.admincommands.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.PetitionManager;
 import org.l2j.gameserver.model.GameObject;
@@ -32,7 +32,7 @@ public class AdminPetition implements IAdminCommandHandler
 		if(!activeChar.getPlayerAccess().CanEditChar)
 			return false;
 
-		int petitionId = NumberUtils.toInt(wordList.length > 1 ? wordList[1] : "-1", -1);
+		int petitionId = Converter.stringToInt(wordList.length > 1 ? wordList[1] : "-1", -1);
 		Commands command = (Commands) comm;
 		switch(command)
 		{

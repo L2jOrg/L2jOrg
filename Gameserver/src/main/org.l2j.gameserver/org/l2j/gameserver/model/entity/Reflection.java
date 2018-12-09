@@ -38,12 +38,13 @@ import org.l2j.gameserver.templates.ZoneTemplate;
 import org.l2j.gameserver.templates.spawn.SpawnTemplate;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.NpcUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.napile.primitive.Containers;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 public class Reflection
 {
@@ -63,7 +64,7 @@ public class Reflection
 
 	private final int _id;
 
-	private String _name = StringUtils.EMPTY;
+	private String _name = STRING_EMPTY;
 	private InstantZone _instance;
 	private final int _geoIndex;
 

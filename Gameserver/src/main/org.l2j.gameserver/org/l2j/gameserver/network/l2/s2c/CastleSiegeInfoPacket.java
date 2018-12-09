@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.entity.residence.Residence;
 import org.l2j.gameserver.model.pledge.Alliance;
 import org.l2j.gameserver.model.pledge.Clan;
 
-import org.apache.commons.lang3.StringUtils;
+import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 /**
  * Shows the Siege Info<BR>
@@ -36,8 +36,8 @@ public class CastleSiegeInfoPacket extends L2GameServerPacket
 	private int _id, _ownerObjectId, _allyId;
 	private boolean _isLeader;
 	private String _ownerName = "NPC";
-	private String _leaderName = StringUtils.EMPTY;
-	private String _allyName = StringUtils.EMPTY;
+	private String _leaderName = STRING_EMPTY;
+	private String _allyName = STRING_EMPTY;
 
 	public CastleSiegeInfoPacket(Residence residence, Player player)
 	{

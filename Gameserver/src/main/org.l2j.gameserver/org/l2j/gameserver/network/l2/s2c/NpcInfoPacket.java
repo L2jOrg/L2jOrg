@@ -14,7 +14,7 @@ import org.l2j.gameserver.network.l2.s2c.updatetype.NpcInfoType;
 import org.l2j.gameserver.skills.AbnormalEffect;
 import org.l2j.gameserver.utils.Location;
 
-import org.apache.commons.lang3.StringUtils;
+import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 /**
  * @author UnAfraid
@@ -89,12 +89,12 @@ public class NpcInfoPacket extends AbstractMaskPacket<NpcInfoType>
 		if(!npc.getName().equals(npc.getTemplate().name))
 			_name = npc.getName();
 		else
-			_name = StringUtils.EMPTY;
+			_name = STRING_EMPTY;
 
 		if(!npc.getTitle().equals(npc.getTemplate().title))
 			_title = npc.getTitle();
 		else
-			_title = StringUtils.EMPTY;
+			_title = STRING_EMPTY;
 
 		_npcId = npc.getDisplayId() != 0 ? npc.getDisplayId() : npc.getNpcId();
 		_isAttackable = npc.isAutoAttackable(attacker);
@@ -126,7 +126,7 @@ public class NpcInfoPacket extends AbstractMaskPacket<NpcInfoType>
 		if(!servitor.getName().equals(servitor.getTemplate().name))
 			_name = servitor.getName();
 		else
-			_name = StringUtils.EMPTY;
+			_name = STRING_EMPTY;
 
 		String title = servitor.getTitle();
 		if(title.equals(Servitor.TITLE_BY_OWNER_NAME))
@@ -189,10 +189,10 @@ public class NpcInfoPacket extends AbstractMaskPacket<NpcInfoType>
 	{
 		addComponentType(NpcInfoType.ATTACKABLE, NpcInfoType.UNKNOWN1, NpcInfoType.ID, NpcInfoType.POSITION, NpcInfoType.ALIVE, NpcInfoType.RUNNING);
 
-		if(_name != StringUtils.EMPTY)
+		if(_name != STRING_EMPTY)
 			addComponentType(NpcInfoType.NAME);
 
-		if(_title != StringUtils.EMPTY)
+		if(_title != STRING_EMPTY)
 			addComponentType(NpcInfoType.TITLE);
 
 		if(_loc.h > 0)

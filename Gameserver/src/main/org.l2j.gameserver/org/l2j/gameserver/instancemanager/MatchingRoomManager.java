@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
 
-import org.apache.commons.lang3.ArrayUtils;
+import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.templates.mapregion.RestartArea;

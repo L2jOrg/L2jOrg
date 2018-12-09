@@ -498,7 +498,7 @@ public abstract class ItemTemplate extends StatTemplate
 
 	public final boolean isHeroWeapon()
 	{
-		return org.apache.commons.lang3.ArrayUtils.contains(HERO_WEAPON_IDS, _itemId);
+		return ArrayUtils.contains(HERO_WEAPON_IDS, _itemId);
 	}
 
 	public boolean isHeroItem()

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.l2.c2s;
 
-import org.apache.commons.lang3.StringUtils;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.dao.CharacterPostFriendDAO;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
@@ -30,7 +30,7 @@ public class RequestExDeletePostFriendForPostBox extends L2GameClientPacket
 		if(player == null)
 			return;
 
-		if(StringUtils.isEmpty(_name))
+		if(Util.isNullOrEmpty(_name))
 			return;
 
 		int key = 0;

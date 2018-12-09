@@ -1,6 +1,5 @@
 package org.l2j.gameserver.network.l2.c2s;
 
-import org.apache.commons.lang3.StringUtils;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.pledge.UnitMember;
@@ -8,6 +7,8 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.PledgeShowMemberListDeletePacket;
 import org.l2j.gameserver.network.l2.s2c.PledgeShowMemberListDeleteAllPacket;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
+
+import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 public class RequestWithdrawalPledge extends L2GameClientPacket
 {
@@ -63,7 +64,7 @@ public class RequestWithdrawalPledge extends L2GameClientPacket
 
 		activeChar.setClan(null);
 		activeChar.getListeners().onClanLeave();
-		activeChar.setTitle(StringUtils.EMPTY);
+		activeChar.setTitle(STRING_EMPTY);
 
 		activeChar.setLeaveClanCurTime();
 		activeChar.broadcastCharInfo();

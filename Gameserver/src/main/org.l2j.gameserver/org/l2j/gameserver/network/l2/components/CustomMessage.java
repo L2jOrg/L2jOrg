@@ -9,10 +9,10 @@ import org.l2j.gameserver.network.l2.s2c.L2GameServerPacket;
 import org.l2j.gameserver.network.l2.s2c.SystemMessage;
 import org.l2j.gameserver.utils.Language;
 
-import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.text.StrBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import static org.l2j.commons.util.Util.*;
 
 /**
  * Даный класс является обработчиком серверных интернациональных сообщений.
@@ -64,12 +64,12 @@ public class CustomMessage implements IBroadcastPacket
 	
 	public String toString(Language lang)
 	{
-		StrBuilder msg = null;
+		StringBuilder msg = null;
 
 		String text = StringsHolder.getInstance().getString(_address, lang);
 		if(text != null)
 		{
-			msg = new StrBuilder(text);
+			msg = new StringBuilder(text);
 
 			if(_args != null)
 			{
@@ -77,17 +77,16 @@ public class CustomMessage implements IBroadcastPacket
                 {
                     Object arg = _args.get(i);
                     if(arg instanceof CustomMessage)
-                        msg.replaceFirst(PARAMS[i], ((CustomMessage) arg).toString(lang));
+                    	replaceFirst(msg, PARAMS[i], ((CustomMessage) arg).toString(lang));
                     else
-                        msg.replaceFirst(PARAMS[i], String.valueOf(arg));
+                        replaceFirst(msg, PARAMS[i], String.valueOf(arg));
                 }
 			}
 		}
 
-		if(StringUtils.isEmpty(msg))
-		{
-			_log.warn("CustomMessage: string: " + _address + " not found for lang: " + lang + "!");
-			return StringUtils.EMPTY;
+		if(isNullOrEmpty(msg)) {
+			_log.warn("CustomMessage: string: {} not found for lang: {}", _address, lang);
+			return STRING_EMPTY;
 		}
 
 		return msg.toString();

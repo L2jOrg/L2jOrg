@@ -1150,7 +1150,7 @@
 		<set name="hitCancelTime" value="500"/>
 		<set name="target" value="TARGET_AREA"/>
 		<set name="affect_range" value="200"/>
-		<set name="element" value="2"/><!-- Fire -->
+		<set name="element" value="fire"/>
 		<set name="skillType" value="MDAM"/>
 		<set name="operate_type" value="A2"/>
 	</skill>

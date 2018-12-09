@@ -1,16 +1,20 @@
 package org.l2j.gameserver.model;
 
 import gnu.trove.iterator.TIntLongIterator;
+import gnu.trove.list.TIntList;
+import gnu.trove.list.array.TIntArrayList;
+import gnu.trove.list.linked.TIntLinkedList;
 import gnu.trove.map.TIntLongMap;
-import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.math.NumberUtils;
 import org.l2j.commons.collections.CollectionUtils;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
+import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.lang.reference.HardReference;
 import org.l2j.commons.lang.reference.HardReferences;
 import org.l2j.commons.threading.RunnableImpl;
+import org.l2j.commons.util.Converter;
 import org.l2j.commons.util.Rnd;
+import org.l2j.commons.util.Util;
 import org.l2j.commons.util.concurrent.atomic.AtomicState;
 import org.l2j.gameserver.*;
 import org.l2j.gameserver.ai.CtrlEvent;
@@ -378,7 +382,7 @@ public final class Player extends Playable implements PlayerGroup
 	private int _ketra = 0;
 	private int _ram = 0;
 
-	private byte[] _keyBindings = ArrayUtils.EMPTY_BYTE_ARRAY;
+	private byte[] _keyBindings = Util.BYTE_ARRAY_EMPTY;
 
 	private final Fishing _fishing = new Fishing(this);
 
@@ -3974,7 +3978,7 @@ public final class Player extends Playable implements PlayerGroup
 		long time = 0L;
 
 		if(Config.SERVICES_ENABLE_NO_CARRIER)
-			time = NumberUtils.toInt(getVar("noCarrier"), Config.SERVICES_NO_CARRIER_DEFAULT_TIME);
+			time = Converter.stringToInt(getVar("noCarrier"), Config.SERVICES_NO_CARRIER_DEFAULT_TIME);
 
 		scheduleDelete(time * 1000L);
 	}
@@ -8390,7 +8394,7 @@ public final class Player extends Playable implements PlayerGroup
 	public void setKeyBindings(byte[] keyBindings)
 	{
 		if(keyBindings == null)
-			keyBindings = ArrayUtils.EMPTY_BYTE_ARRAY;
+			keyBindings = Util.BYTE_ARRAY_EMPTY;
 		_keyBindings = keyBindings;
 	}
 
@@ -9985,16 +9989,16 @@ public final class Player extends Playable implements PlayerGroup
 				return null;
 
 			String[] products_str = value.split(";");
-			int[] result = new int[0];
+			TIntList result = new TIntLinkedList();
 			for(int i = 0; i < products_str.length; i++)
 			{
 				int productId = Integer.parseInt(products_str[i]);
 				if(ProductDataHolder.getInstance().getProduct(productId) == null)
 					continue;
 
-				result = ArrayUtils.add(result, productId);
+				result.add(productId);
 			}
-			_recentProductList = result;
+			_recentProductList = result.toArray();
 		}
 		return _recentProductList;
 	}
@@ -10008,21 +10012,21 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		else
 		{
-			int[] newProductList = new int[1];
-			newProductList[0] = productId;
-			for(int i = 0; i < _recentProductList.length; i++)
-			{
-				if(newProductList.length >= Config.IM_MAX_ITEMS_IN_RECENT_LIST)
+			TIntList newProductList = new TIntArrayList(_recentProductList.length);
+			newProductList.add(productId);
+			for(int i = 0; i < _recentProductList.length; i++) {
+				if(newProductList.size() >= Config.IM_MAX_ITEMS_IN_RECENT_LIST)
 					break;
 
 				int itemId = _recentProductList[i];
-				if(ArrayUtils.contains(newProductList, itemId))
+
+				if(newProductList.contains(itemId))
 					continue;
 
-				newProductList = ArrayUtils.add(newProductList, itemId);
+				newProductList.add(itemId);
 			}
 
-			_recentProductList = newProductList;
+			_recentProductList = newProductList.toArray();
 		}
 
 		String valueToUpdate = "";

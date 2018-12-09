@@ -5,7 +5,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 
 import java.util.Collection;
 
-import org.apache.commons.lang3.StringUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.dao.CharacterBlockListDAO;
 import org.l2j.gameserver.dao.CharacterDAO;
@@ -16,6 +15,8 @@ import org.l2j.gameserver.network.l2.s2c.ExBlockAddResult;
 import org.l2j.gameserver.network.l2.s2c.ExBlockDefailInfo;
 import org.l2j.gameserver.network.l2.s2c.ExBlockRemoveResult;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
+
+import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 /**
  * @author Bonux
@@ -44,7 +45,7 @@ public class BlockList
 
 	public Block get(String name)
 	{
-		if(StringUtils.isEmpty(name))
+		if(isNullOrEmpty(name))
 			return null;
 
 		for(Block b : values())
@@ -94,7 +95,7 @@ public class BlockList
 
 	public void add(String name)
 	{
-		if(StringUtils.isEmpty(name) || name.equalsIgnoreCase(_owner.getName()) || contains(name))
+		if(isNullOrEmpty(name) || name.equalsIgnoreCase(_owner.getName()) || contains(name))
 		{
 			_owner.sendPacket(SystemMsg.YOU_HAVE_FAILED_TO_REGISTER_THE_USER_TO_YOUR_IGNORE_LIST);
 			return;
@@ -137,7 +138,7 @@ public class BlockList
 
 	public void remove(String name)
 	{
-		if(StringUtils.isEmpty(name))
+		if(isNullOrEmpty(name))
 			return;
 
 		int blockedObjId = 0;

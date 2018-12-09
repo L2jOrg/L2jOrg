@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.instances.MonsterInstance;
 import org.l2j.gameserver.skills.SkillEntry;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
 
-import org.apache.commons.lang3.StringUtils;
+import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 /**
  * @author VISTALL
@@ -73,7 +73,7 @@ public abstract class CTBBossInstance extends MonsterInstance
 	public String getTitle()
 	{
 		CTBSiegeClanObject clan = _matchTeamObject.getSiegeClan();
-		return clan == null ? StringUtils.EMPTY : clan.getClan().getName();
+		return clan == null ? STRING_EMPTY : clan.getClan().getName();
 	}
 
 	public void setMatchTeamObject(CTBTeamObject matchTeamObject)

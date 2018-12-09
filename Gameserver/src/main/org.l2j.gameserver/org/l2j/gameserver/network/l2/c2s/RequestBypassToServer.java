@@ -3,6 +3,8 @@ package org.l2j.gameserver.network.l2.c2s;
 import java.lang.reflect.Method;
 import java.util.StringTokenizer;
 
+import org.l2j.commons.util.Pair;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.EventHolder;
 import org.l2j.gameserver.data.xml.holder.MultiSellHolder;
@@ -27,10 +29,10 @@ import org.l2j.gameserver.utils.MulticlassUtils;
 import org.l2j.gameserver.utils.NpcUtils;
 import org.l2j.gameserver.utils.WarehouseFunctions;
 
-import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.tuple.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import static org.l2j.commons.util.Util.STRING_ARRAY_EMPTY;
 
 public class RequestBypassToServer extends L2GameClientPacket
 {
@@ -96,7 +98,7 @@ public class RequestBypassToServer extends L2GameClientPacket
 				{
 					try
 					{
-						b.getValue().invoke(b.getKey(), activeChar, npc, StringUtils.isEmpty(args) ? new String[0] : args.split("\\s+"));
+						b.getValue().invoke(b.getKey(), activeChar, npc, Util.isNullOrEmpty(args) ? STRING_ARRAY_EMPTY : args.split("\\s+"));
 					}
 					catch (Exception e)
 					{
@@ -255,12 +257,6 @@ public class RequestBypassToServer extends L2GameClientPacket
 			}
 			else if(_bypass.startsWith("Quest "))
 			{
-				/*String p = _bypass.substring(6).trim();
-				int idx = p.indexOf(' ');
-				if(idx < 0)
-					activeChar.processQuestEvent(Integer.parseInt(p.split("_")[1]), StringUtils.EMPTY, npc);
-				else
-					activeChar.processQuestEvent(Integer.parseInt(p.substring(0, idx).split("_")[1]), p.substring(idx).trim(), npc); */
 				_log.warn("Trying to call Quest bypass: " + _bypass + ", player: " + activeChar);
 			}
 			else if (_bypass.startsWith("buffstore?"))

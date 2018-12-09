@@ -2,9 +2,8 @@ package org.l2j.gameserver.model;
 
 import gnu.trove.set.TIntSet;
 import gnu.trove.set.hash.TIntHashSet;
-import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.l2j.commons.collections.CollectionUtils;
+import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.lang.reference.HardReference;
 import org.l2j.commons.lang.reference.HardReferences;
 import org.l2j.commons.listener.Listener;
@@ -83,6 +82,8 @@ import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
+import static java.util.Objects.requireNonNullElse;
+import static org.l2j.commons.util.Util.STRING_EMPTY;
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 
 public abstract class Creature extends GameObject
@@ -2195,7 +2196,7 @@ public abstract class Creature extends GameObject
 	@Override
 	public String getName()
 	{
-		return StringUtils.defaultString(_name);
+		return requireNonNullElse(_name, STRING_EMPTY);
 	}
 
 	public int getPAtk(Creature target)
@@ -2293,7 +2294,7 @@ public abstract class Creature extends GameObject
 
 	public String getTitle()
 	{
-		return StringUtils.defaultString(_title);
+		return requireNonNullElse(_title, STRING_EMPTY);
 	}
 
 	public double headingToRadians(int heading)

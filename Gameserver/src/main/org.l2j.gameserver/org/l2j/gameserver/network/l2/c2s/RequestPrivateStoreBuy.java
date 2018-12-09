@@ -3,6 +3,7 @@ package org.l2j.gameserver.network.l2.c2s;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.math.SafeMath;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInstance;
@@ -11,8 +12,6 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ExPrivateStoreSellingResult;
 import org.l2j.gameserver.utils.Log;
 import org.l2j.gameserver.utils.TradeHelper;
-
-import org.apache.commons.lang3.ArrayUtils;
 
 public class RequestPrivateStoreBuy extends L2GameClientPacket
 {
@@ -110,7 +109,7 @@ public class RequestPrivateStoreBuy extends L2GameClientPacket
 			return;
 		}
 
-		List<TradeItem> buyList = new ArrayList<TradeItem>();
+		List<TradeItem> buyList = new ArrayList<>();
 
 		long totalCost = 0;
 		int slots = 0;

@@ -1,6 +1,6 @@
 package handler.voicecommands;
 
-import org.apache.commons.lang3.math.NumberUtils;
+import org.l2j.commons.util.Converter;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.htm.HtmTemplates;
@@ -69,7 +69,7 @@ public class Cfg extends ScriptVoiceCommandHandler
 
 					if(Config.SERVICES_ENABLE_NO_CARRIER && param[0].equalsIgnoreCase("noCarrier"))
 					{
-						int time = NumberUtils.toInt(param[1], Config.SERVICES_NO_CARRIER_DEFAULT_TIME);
+						int time = Converter.stringToInt(param[1], Config.SERVICES_NO_CARRIER_DEFAULT_TIME);
 
 						if(time > Config.SERVICES_NO_CARRIER_MAX_TIME)
 							time = Config.SERVICES_NO_CARRIER_MAX_TIME;

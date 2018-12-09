@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.entity.residence.clanhall.NormalClanHall;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.tables.ClanTable;
 
-import org.apache.commons.lang3.StringUtils;
+import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 public class ExShowAgitInfo extends L2GameServerPacket
 {
@@ -25,8 +25,8 @@ public class ExShowAgitInfo extends L2GameServerPacket
 			int getType = clanHall.getClanHallType().ordinal();
 
 			Clan clan = ClanTable.getInstance().getClan(clanHall.getOwnerId());
-			String clan_name = clanHall.getOwnerId() == 0 || clan == null ? StringUtils.EMPTY : clan.getName();
-			String leader_name = clanHall.getOwnerId() == 0 || clan == null ? StringUtils.EMPTY : clan.getLeaderName();
+			String clan_name = clanHall.getOwnerId() == 0 || clan == null ? STRING_EMPTY : clan.getName();
+			String leader_name = clanHall.getOwnerId() == 0 || clan == null ? STRING_EMPTY : clan.getLeaderName();
 			_infos.add(new AgitInfo(clan_name, leader_name, ch_id, getType));
 		});
 	}

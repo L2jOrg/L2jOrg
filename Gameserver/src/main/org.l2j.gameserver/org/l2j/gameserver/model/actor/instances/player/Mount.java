@@ -1,8 +1,8 @@
 package org.l2j.gameserver.model.actor.instances.player;
 
-import org.apache.commons.lang3.ArrayUtils;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
+import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.holder.PetDataHolder;

@@ -1,12 +1,11 @@
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.data.xml.AbstractHolder;
-import org.l2j.commons.util.Rnd;
+import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.gameserver.model.GameObject;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.templates.mapregion.RegionData;
 import org.l2j.gameserver.utils.Location;
-import org.apache.commons.lang3.ArrayUtils;
 
 /**
  * Менеджер специальных зон регионов.

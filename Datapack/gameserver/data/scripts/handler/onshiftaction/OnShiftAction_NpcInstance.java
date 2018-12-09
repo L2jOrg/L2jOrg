@@ -1,7 +1,6 @@
 package handler.onshiftaction;
 
 import handler.onshiftaction.commons.RewardListInfo;
-import org.apache.commons.lang3.text.StrBuilder;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.bypass.Bypass;
 import org.l2j.gameserver.model.AggroList;
@@ -112,7 +111,7 @@ public class OnShiftAction_NpcInstance extends ScriptOnShiftActionHandler<NpcIns
 			else
 				msg.replace("%AI%", "");
 
-			StrBuilder b = new StrBuilder("");
+			StringBuilder b = new StringBuilder();
 			for(Event e : npc.getEvents())
 				b.append(e.toString()).append(";");
 
@@ -189,7 +188,7 @@ public class OnShiftAction_NpcInstance extends ScriptOnShiftActionHandler<NpcIns
 		if(player == null || npc == null)
 			return;
 
-		StrBuilder dialog = new StrBuilder("<html><body><center><font color=\"LEVEL\">");
+		StringBuilder dialog = new StringBuilder("<html><body><center><font color=\"LEVEL\">");
 		dialog.append(nameNpc(npc)).append("<br></font></center><br>");
 
 		Map<QuestEventType, Set<Quest>> list = npc.getTemplate().getQuestEvents();
@@ -212,7 +211,7 @@ public class OnShiftAction_NpcInstance extends ScriptOnShiftActionHandler<NpcIns
 		if(player == null || npc == null)
 			return;
 
-		StrBuilder dialog = new StrBuilder("<html><body><center><font color=\"LEVEL\">");
+		StringBuilder dialog = new StringBuilder("<html><body><center><font color=\"LEVEL\">");
 		dialog.append(nameNpc(npc)).append("<br></font></center>");
 
 		Collection<SkillEntry> list = npc.getAllSkills();
@@ -246,7 +245,7 @@ public class OnShiftAction_NpcInstance extends ScriptOnShiftActionHandler<NpcIns
 		if(player == null || npc == null)
 			return;
 
-		StrBuilder dialog = new StrBuilder("<html><body><center><font color=\"LEVEL\">");
+		StringBuilder dialog = new StringBuilder("<html><body><center><font color=\"LEVEL\">");
 		dialog.append(nameNpc(npc)).append("<br></font></center><br>");
 
 		for(Abnormal e : npc.getAbnormalList())
@@ -267,7 +266,7 @@ public class OnShiftAction_NpcInstance extends ScriptOnShiftActionHandler<NpcIns
 		if(player == null || npc == null)
 			return;
 
-		StrBuilder dialog = new StrBuilder("<html><body><center><font color=\"LEVEL\">");
+		StringBuilder dialog = new StringBuilder("<html><body><center><font color=\"LEVEL\">");
 		dialog.append(nameNpc(npc)).append("<br></font></center><table width=\"80%\">");
 
 		boolean hasResist;
@@ -313,7 +312,7 @@ public class OnShiftAction_NpcInstance extends ScriptOnShiftActionHandler<NpcIns
 		if(player == null || npc == null)
 			return;
 
-		StrBuilder dialog = new StrBuilder("<html><body><table width=\"80%\"><tr><td>Attacker</td><td>Damage</td><td>Hate</td></tr>");
+		StringBuilder dialog = new StringBuilder("<html><body><table width=\"80%\"><tr><td>Attacker</td><td>Damage</td><td>Hate</td></tr>");
 
 		Set<AggroList.HateInfo> set = new TreeSet<AggroList.HateInfo>(AggroList.HateComparator.getInstance());
 		set.addAll(npc.getAggroList().getCharMap().values());
@@ -329,7 +328,7 @@ public class OnShiftAction_NpcInstance extends ScriptOnShiftActionHandler<NpcIns
 		player.sendPacket(msg);
 	}
 
-	private static boolean addResist(StrBuilder dialog, String name, double val)
+	private static boolean addResist(StringBuilder dialog, String name, double val)
 	{
 		if (val == 0)
 			return false;

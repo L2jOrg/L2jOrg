@@ -3,10 +3,11 @@ package org.l2j.gameserver.network.l2.s2c;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.lang3.StringUtils;
 import org.l2j.gameserver.instancemanager.MatchingRoomManager;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.matching.MatchingRoom;
+
+import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 /**
  * @author VISTALL
@@ -44,7 +45,7 @@ public class ExListMpccWaiting extends L2GameServerPacket
 		{
 			writeInt(room.getId());
 			Player leader = room.getLeader();
-			writeString(leader == null ? StringUtils.EMPTY : leader.getName());
+			writeString(leader == null ? STRING_EMPTY : leader.getName());
 			writeInt(room.getPlayers().size());
 			writeInt(room.getMinLevel());
 			writeInt(room.getMaxLevel());

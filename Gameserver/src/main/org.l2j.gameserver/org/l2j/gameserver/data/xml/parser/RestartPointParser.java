@@ -1,12 +1,11 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import org.apache.commons.lang3.tuple.ImmutablePair;
-import org.apache.commons.lang3.tuple.Pair;
 import org.dom4j.Attribute;
 import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.commons.geometry.Polygon;
 import org.l2j.commons.geometry.Rectangle;
+import org.l2j.commons.util.Pair;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.instancemanager.MapRegionManager;
 import org.l2j.gameserver.model.Territory;
@@ -114,7 +113,7 @@ public class RestartPointParser extends AbstractParser<MapRegionManager>
 				if(restarts.isEmpty())
 					throw new RuntimeException("RestartPointParser: restarts not defined!");
 
-				restartArea.add(new ImmutablePair<Territory, Map<Race, String>>(territory, restarts));
+				restartArea.add(new Pair<>(territory, restarts));
 			}
 			else if("restart_loc".equals(listElement.getName()))
 			{

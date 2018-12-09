@@ -1,6 +1,6 @@
 package org.l2j.gameserver.dao;
 
-import org.apache.commons.lang3.StringUtils;
+
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.model.Player;
@@ -12,6 +12,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 public class CharacterDAO
 {
@@ -127,7 +129,7 @@ public class CharacterDAO
 
 	public String getNameByObjectId(int objectId, boolean nullable)
 	{
-		String result = nullable ? null : StringUtils.EMPTY;
+		String result = nullable ? null : STRING_EMPTY;
 
 		Connection con = null;
 		PreparedStatement statement = null;

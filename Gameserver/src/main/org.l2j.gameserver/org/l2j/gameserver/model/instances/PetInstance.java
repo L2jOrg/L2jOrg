@@ -1,10 +1,9 @@
 package org.l2j.gameserver.model.instances;
 
-import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
+import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
@@ -42,13 +41,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.concurrent.Future;
 
+import static java.util.Objects.requireNonNull;
+import static org.l2j.commons.util.Util.STRING_EMPTY;
+import static org.l2j.commons.util.Util.isNullOrEmpty;
+
 /**
  * @offlike completed by Bonux
 **/
 public class PetInstance extends Servitor
 {
-	private static final long serialVersionUID = 1L;
-
 	private static final Logger _log = LoggerFactory.getLogger(PetInstance.class);
 
 	private class FeedTask extends RunnableImpl
@@ -132,7 +133,7 @@ public class PetInstance extends Servitor
 			pet.setRespawned(true);
 
 			String name = rset.getString("name");
-			pet.setName(name == null || name.isEmpty() ? StringUtils.EMPTY : name);
+			pet.setName(requireNonNull(name, STRING_EMPTY));
 			pet.setCurrentHpMp(rset.getDouble("curHp"), rset.getInt("curMp"), true);
 			pet.setCurrentCp(pet.getMaxCp());
 			pet.setSp(rset.getInt("sp"));
@@ -729,7 +730,7 @@ public class PetInstance extends Servitor
 
 	public boolean isDefaultName()
 	{
-		return StringUtils.isEmpty(_name) || getName().equalsIgnoreCase(getTemplate().name);
+		return isNullOrEmpty(_name) || getName().equalsIgnoreCase(getTemplate().name);
 	}
 
 	@Override

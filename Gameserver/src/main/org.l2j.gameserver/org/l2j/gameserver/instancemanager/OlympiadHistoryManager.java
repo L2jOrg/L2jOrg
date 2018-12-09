@@ -13,10 +13,11 @@ import org.l2j.gameserver.model.entity.olympiad.OlympiadHistory;
 import org.l2j.gameserver.network.l2.components.HtmlMessage;
 import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.utils.HtmlUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.napile.pair.primitive.IntObjectPair;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CHashIntObjectMap;
+
+import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 /**
  * @author VISTALL
@@ -156,7 +157,7 @@ public class OlympiadHistoryManager
 			html.replace("%prev_bypass%", "_match?class=" + targetClassId + "&page=" + (page - 1));
 		}
 		else
-			html.replace("%buttprev%", StringUtils.EMPTY);
+			html.replace("%buttprev%", STRING_EMPTY);
 
 		if(historyList.size() > max)
 		{
@@ -164,7 +165,7 @@ public class OlympiadHistoryManager
 			html.replace("%next_bypass%", "_match?class=" + targetClassId + "&page=" + (page + 1));
 		}
 		else
-			html.replace("%buttnext%", StringUtils.EMPTY);
+			html.replace("%buttnext%", STRING_EMPTY);
 
 		html.replace("%list%", b.toString());
 

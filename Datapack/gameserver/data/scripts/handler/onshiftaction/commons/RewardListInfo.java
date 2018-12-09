@@ -1,6 +1,5 @@
 package handler.onshiftaction.commons;
 
-import org.apache.commons.lang3.StringUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.htm.HtmTemplates;
@@ -21,6 +20,8 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+
+import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 /**
  * @reworked by Bonux
@@ -214,7 +215,7 @@ public abstract class RewardListInfo
 						double ipmod = d.notRate() ? Math.min(gpmod, 1.) : gpmod;
 						double irate = d.notRate() ? 1.0 : grate;
 						String icon = d.getItem().getIcon();
-						if(icon == null || icon.equals(StringUtils.EMPTY) || icon.equalsIgnoreCase("none"))
+						if(isNullOrEmpty(icon) || icon.equalsIgnoreCase("none"))
 							icon = "icon.etc_question_mark_i00";
 
 						long minCount = Math.round(d.getMinDrop() * (g.isAdena() ? irate : 1.));

@@ -1,22 +1,19 @@
 package handler.bbs.custom;
 
-import org.apache.commons.lang3.ArrayUtils;
+import org.l2j.commons.collections.CollectionUtils;
 import org.l2j.commons.configuration.ExProperties;
 import org.l2j.commons.string.StringArrayUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.listener.script.OnLoadScriptListener;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
  * @author Bonux
 **/
-public class BBSConfig implements OnLoadScriptListener
-{
-	private static final Logger _log = LoggerFactory.getLogger(BBSConfig.class);
+public class BBSConfig implements OnLoadScriptListener {
 
 	private static final String PROPERTIES_FILE = "config/bbs.properties";
 
@@ -243,12 +240,16 @@ public class BBSConfig implements OnLoadScriptListener
 
 		CLAN_REPUTATION_SERVICE_PRICES_LIST = new long[0][];
 
+		List<long[]> priceList = CollectionUtils.pooledList();
+
 		Pattern p = Pattern.compile("([0-9]+)-([0-9]+)\\[([0-9]+)\\];?", Pattern.DOTALL);
 		Matcher m = p.matcher(properties.getProperty("CLAN_REPUTATION_SERVICE_PRICES_LIST", ""));
-		while(m.find())
-		{
-			CLAN_REPUTATION_SERVICE_PRICES_LIST = ArrayUtils.add(CLAN_REPUTATION_SERVICE_PRICES_LIST, new long[]{ Long.parseLong(m.group(1)), Long.parseLong(m.group(2)), Long.parseLong(m.group(3)) });
+		while(m.find()) {
+			priceList.add(new long[]{ Long.parseLong(m.group(1)), Long.parseLong(m.group(2)), Long.parseLong(m.group(3)) });
 		}
+
+		CLAN_REPUTATION_SERVICE_PRICES_LIST = priceList.toArray(new long[0][]);
+		CollectionUtils.recycle(priceList);
 
 		// Expand warehouse service
 		KARMA_PK_SERVICE_COST_ITEM_ID = properties.getProperty("KARMA_PK_SERVICE_COST_ITEM_ID", 57);

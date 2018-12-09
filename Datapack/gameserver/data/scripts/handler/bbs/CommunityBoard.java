@@ -1,9 +1,9 @@
 package handler.bbs;
 
 import handler.bbs.custom.BBSConfig;
-import org.apache.commons.lang3.tuple.Pair;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
+import org.l2j.commons.util.Pair;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.xml.holder.MultiSellHolder;
@@ -148,6 +148,8 @@ public final class CommunityBoard extends ScriptsCommunityHandler
 
 			String word = command.split("\\s+")[0];
 			String args = command.substring(word.length()).trim();
+
+
 
 			Pair<Object, Method> b = BypassHolder.getInstance().getBypass(word);
 			if(b != null)

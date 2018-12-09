@@ -3,7 +3,6 @@ package org.l2j.gameserver.handler.admincommands.impl;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-import org.apache.commons.lang3.math.NumberUtils;
 import org.l2j.commons.lang.StatsUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.GameTimeController;
@@ -12,6 +11,8 @@ import org.l2j.gameserver.handler.admincommands.IAdminCommandHandler;
 import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.HtmlMessage;
+
+import static org.l2j.commons.util.Converter.stringToInt;
 
 public class AdminShutdown implements IAdminCommandHandler
 {
@@ -35,10 +36,10 @@ public class AdminShutdown implements IAdminCommandHandler
 			switch(command)
 			{
 				case admin_server_shutdown:
-					Shutdown.getInstance().schedule(NumberUtils.toInt(wordList[1], -1), Shutdown.SHUTDOWN);
+					Shutdown.getInstance().schedule(stringToInt(wordList[1], -1), Shutdown.SHUTDOWN);
 					break;
 				case admin_server_restart:
-					Shutdown.getInstance().schedule(NumberUtils.toInt(wordList[1], -1), Shutdown.RESTART);
+					Shutdown.getInstance().schedule(stringToInt(wordList[1], -1), Shutdown.RESTART);
 					break;
 				case admin_server_abort:
 					Shutdown.getInstance().cancel();

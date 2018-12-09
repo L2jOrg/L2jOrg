@@ -4,10 +4,6 @@ import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
 import gnu.trove.set.TIntSet;
 import gnu.trove.set.hash.TIntHashSet;
-import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.BooleanUtils;
-import org.apache.commons.lang3.math.NumberUtils;
-import org.apache.commons.lang3.reflect.FieldUtils;
 import org.l2j.commons.configuration.ExProperties;
 import org.l2j.commons.string.StringArrayUtils;
 import org.l2j.commons.time.cron.SchedulingPattern;
@@ -29,6 +25,9 @@ import java.lang.reflect.Field;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import static org.l2j.commons.util.Util.INT_ARRAY_EMPTY;
+import static org.l2j.commons.util.Util.STRING_ARRAY_EMPTY;
 
 public class Config
 {
@@ -1260,7 +1259,7 @@ public class Config
         AUTH_SERVER_GM_ONLY = serverSettings.getProperty("ServerGMOnly", false);
         AUTH_SERVER_BRACKETS = serverSettings.getProperty("ServerBrackets", false);
         AUTH_SERVER_IS_PVP = serverSettings.getProperty("PvPServer", false);
-        for(String a : serverSettings.getProperty("ServerType", ArrayUtils.EMPTY_STRING_ARRAY))
+        for(String a : serverSettings.getProperty("ServerType", STRING_ARRAY_EMPTY))
         {
             if(a.trim().isEmpty())
                 continue;
@@ -1898,7 +1897,7 @@ public class Config
         ALT_SOCIAL_ACTION_REUSE = altSettings.getProperty("AltSocialActionReuse", false);
 
         DISABLED_SPELLBOOKS_FOR_ACQUIRE_TYPES = new HashSet<AcquireType>();
-        for(String t : altSettings.getProperty("DISABLED_SPELLBOOKS_FOR_ACQUIRE_TYPES", ArrayUtils.EMPTY_STRING_ARRAY))
+        for(String t : altSettings.getProperty("DISABLED_SPELLBOOKS_FOR_ACQUIRE_TYPES", STRING_ARRAY_EMPTY))
         {
             if(t.trim().isEmpty())
                 continue;
@@ -1921,9 +1920,9 @@ public class Config
         CHAR_TITLE = altSettings.getProperty("CharTitle", false);
         ADD_CHAR_TITLE = altSettings.getProperty("CharAddTitle", "");
 
-        ALT_DISABLED_MULTISELL = altSettings.getProperty("DisabledMultisells", ArrayUtils.EMPTY_INT_ARRAY);
-        ALT_SHOP_PRICE_LIMITS = altSettings.getProperty("ShopPriceLimits", ArrayUtils.EMPTY_INT_ARRAY);
-        ALT_SHOP_UNALLOWED_ITEMS = altSettings.getProperty("ShopUnallowedItems", ArrayUtils.EMPTY_INT_ARRAY);
+        ALT_DISABLED_MULTISELL = altSettings.getProperty("DisabledMultisells", INT_ARRAY_EMPTY);
+        ALT_SHOP_PRICE_LIMITS = altSettings.getProperty("ShopPriceLimits", INT_ARRAY_EMPTY);
+        ALT_SHOP_UNALLOWED_ITEMS = altSettings.getProperty("ShopUnallowedItems", INT_ARRAY_EMPTY);
 
         ALT_ALLOWED_PET_POTIONS = altSettings.getProperty("AllowedPetPotions", new int[] { 735, 1060, 1061, 1062, 1374, 1375, 1539, 1540, 6035, 6036 });
         Arrays.sort(ALT_ALLOWED_PET_POTIONS);
@@ -2796,63 +2795,6 @@ public class Config
         {
             e.printStackTrace();
         }
-    }
-
-    public static String getField(String fieldName)
-    {
-        Field field = FieldUtils.getField(Config.class, fieldName);
-
-        if(field == null)
-            return null;
-
-        try
-        {
-            return String.valueOf(field.get(null));
-        }
-        catch(IllegalArgumentException e)
-        {
-
-        }
-        catch(IllegalAccessException e)
-        {
-
-        }
-
-        return null;
-    }
-
-    public static boolean setField(String fieldName, String value)
-    {
-        Field field = FieldUtils.getField(Config.class, fieldName);
-
-        if(field == null)
-            return false;
-
-        try
-        {
-            if(field.getType() == boolean.class)
-                field.setBoolean(null, BooleanUtils.toBoolean(value));
-            else if(field.getType() == int.class)
-                field.setInt(null, NumberUtils.toInt(value));
-            else if(field.getType() == long.class)
-                field.setLong(null, NumberUtils.toLong(value));
-            else if(field.getType() == double.class)
-                field.setDouble(null, NumberUtils.toDouble(value));
-            else if(field.getType() == String.class)
-                field.set(null, value);
-            else
-                return false;
-        }
-        catch(IllegalArgumentException e)
-        {
-            return false;
-        }
-        catch(IllegalAccessException e)
-        {
-            return false;
-        }
-
-        return true;
     }
 
     public static ExProperties load(String filename)

@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.l2.c2s;
 
 import java.util.Collection;
 
-import org.apache.commons.lang3.ArrayUtils;
+import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.gameserver.dao.MailDAO;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.mail.Mail;

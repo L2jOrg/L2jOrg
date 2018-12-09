@@ -1,7 +1,7 @@
 package org.l2j.gameserver.handler.admincommands.impl;
 
+import org.l2j.commons.util.Converter;
 import org.l2j.gameserver.instancemanager.RaidBossSpawnManager;
-import org.apache.commons.lang3.math.NumberUtils;
 import org.l2j.gameserver.dao.SpawnsDAO;
 import org.l2j.gameserver.handler.admincommands.IAdminCommandHandler;
 import org.l2j.gameserver.model.GameObject;
@@ -29,7 +29,7 @@ public class AdminDelete implements IAdminCommandHandler
 		switch(command)
 		{
 			case admin_delete:
-				GameObject obj = wordList.length == 1 ? activeChar.getTarget() : GameObjectsStorage.getNpc(NumberUtils.toInt(wordList[1]));
+				GameObject obj = wordList.length == 1 ? activeChar.getTarget() : GameObjectsStorage.getNpc(Converter.stringToInt(wordList[1], 0));
 				if(obj != null && obj.isNpc())
 				{
 					NpcInstance target = (NpcInstance) obj;

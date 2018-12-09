@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.Collections;
 
 import org.l2j.commons.dao.JdbcEntityState;
+import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.instances.PetInstance;
@@ -19,7 +20,7 @@ import org.l2j.gameserver.templates.item.EtcItemTemplate.EtcItemType;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.utils.ItemFunctions;
 
-import org.apache.commons.lang3.ArrayUtils;
+import static org.l2j.commons.util.Util.INT_ARRAY_EMPTY;
 
 public class PcInventory extends Inventory
 {
@@ -27,7 +28,7 @@ public class PcInventory extends Inventory
 
 	// locks
 	private LockType _lockType = LockType.NONE;
-	private int[] _lockItems = ArrayUtils.EMPTY_INT_ARRAY;
+	private int[] _lockItems = INT_ARRAY_EMPTY;
 
 	public PcInventory(Player owner)
 	{
@@ -270,7 +271,7 @@ public class PcInventory extends Inventory
 			return;
 
 		_lockType = LockType.NONE;
-		_lockItems = ArrayUtils.EMPTY_INT_ARRAY;
+		_lockItems = INT_ARRAY_EMPTY;
 
 		getActor().sendItemList(false);
 	}

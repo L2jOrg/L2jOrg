@@ -2,17 +2,18 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.model.entity.residence.ClanHall;
-import org.apache.commons.lang3.StringUtils;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.pledge.Alliance;
 import org.l2j.gameserver.model.pledge.Clan;
 
+import static org.l2j.commons.util.Util.STRING_EMPTY;
+
 public class PledgeShowInfoUpdatePacket extends L2GameServerPacket
 {
 	private int clan_id, clan_level, clan_rank, clan_rep, crest_id, ally_id, ally_crest;
 	private final boolean atwar;
-	private String ally_name = StringUtils.EMPTY;
+	private String ally_name = STRING_EMPTY;
 	private int _hasCastle, _hasClanHall, _hasInstantClanHall;
 	private boolean _isDisbanded;
 

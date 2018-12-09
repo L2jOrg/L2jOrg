@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.StringTokenizer;
 
+import org.l2j.commons.util.Converter;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.dao.CustomHeroDAO;
 import org.l2j.gameserver.database.mysql;
@@ -28,12 +29,11 @@ import org.l2j.gameserver.utils.Log;
 import org.l2j.gameserver.utils.PositionUtils;
 import org.l2j.gameserver.utils.Strings;
 import org.l2j.gameserver.utils.Util;
-import org.apache.commons.lang3.math.NumberUtils;
 
 @SuppressWarnings("unused")
 public class AdminEditChar implements IAdminCommandHandler
 {
-	private static enum Commands
+	private enum Commands
 	{
 		admin_edit_character,
 		admin_character_actions,
@@ -367,12 +367,12 @@ public class AdminEditChar implements IAdminCommandHandler
 					{
 						if(addExp)
 						{
-							exp = NumberUtils.toLong(value, 0L);
+							exp = Converter.stringToLong(value, 0L);
 							addExp = false;
 						}
 						else if(addSp || !addExp)
 						{
-							sp = NumberUtils.toInt(value, 0);
+							sp = Converter.stringToInt(value, 0);
 							addSp = false;
 						}
 					}

@@ -4,12 +4,11 @@ import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
 import gnu.trove.set.TIntSet;
 import gnu.trove.set.hash.TIntHashSet;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.tuple.Pair;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.lang.reference.HardReference;
 import org.l2j.commons.lang.reference.HardReferences;
 import org.l2j.commons.threading.RunnableImpl;
+import org.l2j.commons.util.Pair;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
@@ -81,6 +80,9 @@ import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
+
+import static org.l2j.commons.util.Util.STRING_ARRAY_EMPTY;
+import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 public class NpcInstance extends Creature
 {
@@ -1457,7 +1459,7 @@ public class NpcInstance extends Creature
 				String args = command.substring(word.length()).trim();
 				Pair<Object, Method> b = BypassHolder.getInstance().getBypass(word);
 				if(b != null)
-					b.getValue().invoke(b.getKey(), player, this, StringUtils.isEmpty(args) ? new String[0] : args.split("\\s+"));
+					b.getValue().invoke(b.getKey(), player, this, isNullOrEmpty(args) ? STRING_ARRAY_EMPTY : args.split("\\s+"));
 				else
 					_log.warn("Unknown command=[" + command + "] npcId:" + getTemplate().getId());
 			}

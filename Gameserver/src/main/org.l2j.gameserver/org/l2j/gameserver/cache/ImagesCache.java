@@ -10,6 +10,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.nio.ByteBuffer;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.locks.Lock;
@@ -21,7 +22,6 @@ import javax.imageio.ImageIO;
 import org.l2j.commons.formats.dds.DDSConverter;
 import org.l2j.gameserver.Config;
 
-import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,6 +37,8 @@ public class ImagesCache
 	public static final Pattern HTML_PATTERN = Pattern.compile("%image:(.*?)%", Pattern.DOTALL);
 
 	private final static ImagesCache _instance = new ImagesCache();
+	private static final int INITIAL_HASH_CODE = 17;
+	private static final int CONSTANT_HASH_CODE = 37;
 
 	public final static ImagesCache getInstance()
 	{
@@ -103,7 +105,7 @@ public class ImagesCache
 			{
 				ByteBuffer buffer = DDSConverter.convertToDxt1NoTransparency(image);
 				byte[] array = buffer.array();
-				int imageId = Math.abs(new HashCodeBuilder(15, 87).append((Object)fileName).append(array).toHashCode());
+				int imageId = Math.abs((INITIAL_HASH_CODE * CONSTANT_HASH_CODE + fileName.hashCode()) * CONSTANT_HASH_CODE + Arrays.hashCode(array));
 
 				_imagesId.put(fileName.toLowerCase(), imageId);
 				_images.put(imageId, array);

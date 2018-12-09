@@ -1,7 +1,6 @@
 package org.l2j.gameserver.network.l2.c2s;
 
-import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.StringUtils;
+import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.ItemInfoCache;
 import org.l2j.gameserver.dao.HidenItemsDAO;
@@ -29,6 +28,8 @@ import org.slf4j.LoggerFactory;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static org.l2j.commons.util.Util.STRING_EMPTY;
+
 public class Say2C extends L2GameClientPacket {
     private static final Logger _log = LoggerFactory.getLogger(Say2C.class);
 
@@ -45,7 +46,7 @@ public class Say2C extends L2GameClientPacket {
     @Override
     protected void readImpl() {
         _text = readS(Config.CHAT_MESSAGE_MAX_LEN);
-        _type = org.l2j.commons.lang.ArrayUtils.valid(ChatType.VALUES, readInt());
+        _type = ArrayUtils.valid(ChatType.VALUES, readInt());
         _target = _type == ChatType.TELL ? readS(Config.CNAME_MAXLEN) : null;
     }
 
@@ -68,7 +69,7 @@ public class Say2C extends L2GameClientPacket {
 
         if (text.contains("\n")) {
             String[] lines = text.split("\n");
-            text = StringUtils.EMPTY;
+            text = STRING_EMPTY;
             for (int i = 0; i < lines.length; i++) {
                 lines[i] = lines[i].trim();
                 if (lines[i].length() == 0)
@@ -117,7 +118,7 @@ public class Say2C extends L2GameClientPacket {
         if ((globalchat || ArrayUtils.contains(Config.BAN_CHANNEL_LIST, type.ordinal())) && activeChar.getNoChannel() != 0) {
             if (activeChar.getNoChannelRemained() > 0 || activeChar.getNoChannel() < 0) {
                 if (activeChar.getNoChannel() > 0) {
-                    int timeRemained = Math.round(activeChar.getNoChannelRemained() / 60000);
+                    int timeRemained = Math.round(activeChar.getNoChannelRemained() / 60000.0f);
                     activeChar.sendMessage(new CustomMessage("common.ChatBanned").addNumber(timeRemained));
                 } else
                     activeChar.sendMessage(new CustomMessage("common.ChatBannedPermanently"));
@@ -167,7 +168,7 @@ public class Say2C extends L2GameClientPacket {
             int end = 0;
             while (m.find()) {
                 sb.append(Strings.fromTranslit(text.substring(end, end = m.start()), translit.equals("tl") ? 1 : 2));
-                sb.append(text.substring(end, end = m.end()));
+                sb.append(text, end, end = m.end());
             }
 
             text = sb.append(Strings.fromTranslit(text.substring(end, text.length()), translit.equals("tl") ? 1 : 2)).toString();

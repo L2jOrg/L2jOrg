@@ -3,11 +3,11 @@ package org.l2j.gameserver.templates.item;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.util.Rnd;
 
 import org.l2j.gameserver.templates.item.data.ChancedItemData;
 import org.l2j.gameserver.templates.item.data.ItemData;
-import org.apache.commons.lang3.ArrayUtils;
 
 /**
 	@author Bonux

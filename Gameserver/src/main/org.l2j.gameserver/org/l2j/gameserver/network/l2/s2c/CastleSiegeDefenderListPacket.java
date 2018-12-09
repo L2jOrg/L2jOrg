@@ -4,13 +4,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import org.apache.commons.lang3.StringUtils;
 import org.l2j.gameserver.model.entity.events.impl.CastleSiegeEvent;
 import org.l2j.gameserver.model.entity.events.impl.SiegeEvent;
 import org.l2j.gameserver.model.entity.events.objects.SiegeClanObject;
 import org.l2j.gameserver.model.entity.residence.Castle;
 import org.l2j.gameserver.model.pledge.Alliance;
 import org.l2j.gameserver.model.pledge.Clan;
+
+import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 /**
  * Populates the Siege Defender List in the SiegeInfo Window<BR>
@@ -103,8 +104,8 @@ public class CastleSiegeDefenderListPacket extends L2GameServerPacket
 			}
 			else
 			{
-				writeString(StringUtils.EMPTY);
-				writeString(StringUtils.EMPTY);
+				writeString(STRING_EMPTY);
+				writeString(STRING_EMPTY);
 				writeInt(0x00);
 			}
 		}

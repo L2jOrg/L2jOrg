@@ -1,6 +1,5 @@
 package  org.l2j.gameserver.scripts;
 
-import org.apache.commons.lang3.ClassUtils;
 import org.l2j.commons.compiler.Compiler;
 import org.l2j.commons.compiler.MemoryClassLoader;
 import org.l2j.commons.listener.Listener;
@@ -48,6 +47,7 @@ public class Scripts
     }
 
     private static final Logger _log = LoggerFactory.getLogger(Scripts.class);
+    private static final String INNER_CLASS_SEPARATOR = "$";
 
     private static final Scripts _instance = new Scripts();
 
@@ -80,7 +80,7 @@ public class Scripts
                 JarEntry entry = null;
                 while((entry = stream.getNextJarEntry()) != null) {
                     //Вложенные класс
-                    if(entry.getName().contains(ClassUtils.INNER_CLASS_SEPARATOR) || !entry.getName().endsWith(".class"))
+                    if(entry.getName().contains(INNER_CLASS_SEPARATOR) || !entry.getName().endsWith(".class"))
                         continue;
 
                     String name = entry.getName().replace(".class", "").replace("/", ".");
@@ -158,7 +158,7 @@ public class Scripts
             for(String name : classLoader.getLoadedClasses())
             {
                 //Вложенные класс
-                if(name.contains(ClassUtils.INNER_CLASS_SEPARATOR))
+                if(name.contains(INNER_CLASS_SEPARATOR))
                     continue;
 
                 try

@@ -22,9 +22,11 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.*;
 import org.l2j.gameserver.templates.InstantZone;
 import org.l2j.gameserver.utils.*;
-import org.apache.commons.lang3.StringUtils;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 public class OlympiadGame extends ObservableArena
 {
@@ -250,7 +252,7 @@ public class OlympiadGame extends ObservableArena
 
 	public void tie()
 	{
-		ExReceiveOlympiadPacket.MatchResult packet = new ExReceiveOlympiadPacket.MatchResult(true, StringUtils.EMPTY);
+		ExReceiveOlympiadPacket.MatchResult packet = new ExReceiveOlympiadPacket.MatchResult(true, STRING_EMPTY);
 		try
 		{
 			if(_member1 != null)

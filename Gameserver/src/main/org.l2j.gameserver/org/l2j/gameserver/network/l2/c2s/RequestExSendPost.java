@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.l2j.commons.dao.JdbcEntityState;
+import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.dao.CharacterDAO;
 import org.l2j.gameserver.database.mysql;
@@ -25,8 +26,6 @@ import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.utils.Functions;
 import org.l2j.gameserver.utils.Log;
 import org.l2j.gameserver.utils.Util;
-
-import org.apache.commons.lang3.ArrayUtils;
 
 /**
  * Запрос на отсылку нового письма. В ответ шлется {@link ExReplyWritePost}.

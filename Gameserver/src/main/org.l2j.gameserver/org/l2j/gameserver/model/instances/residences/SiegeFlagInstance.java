@@ -1,6 +1,7 @@
 package org.l2j.gameserver.model.instances.residences;
 
 import org.l2j.commons.collections.MultiValueSet;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Skill;
@@ -10,11 +11,7 @@ import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
 
-import org.apache.commons.lang3.StringUtils;
-
-public class SiegeFlagInstance extends NpcInstance
-{
-	private static final long serialVersionUID = 1L;
+public class SiegeFlagInstance extends NpcInstance {
 
 	private SiegeClanObject _owner;
 	private long _lastAnnouncedAttackedTime = 0;
@@ -40,7 +37,7 @@ public class SiegeFlagInstance extends NpcInstance
 	@Override
 	public String getTitle()
 	{
-		return StringUtils.EMPTY;
+		return Util.STRING_EMPTY;
 	}
 
 	@Override

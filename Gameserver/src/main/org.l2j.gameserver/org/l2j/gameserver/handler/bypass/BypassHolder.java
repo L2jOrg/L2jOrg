@@ -1,8 +1,7 @@
 package org.l2j.gameserver.handler.bypass;
 
-import org.apache.commons.lang3.tuple.ImmutablePair;
-import org.apache.commons.lang3.tuple.Pair;
 import org.l2j.commons.data.xml.AbstractHolder;
+import org.l2j.commons.util.Pair;
 
 import java.lang.reflect.Method;
 import java.util.HashMap;
@@ -24,7 +23,7 @@ public class BypassHolder extends AbstractHolder
 
 	public void registerBypass(String bypass, Object o, Method method)
 	{
-		Pair<Object, Method> old = _bypasses.put(bypass, new ImmutablePair<Object, Method>(o, method));
+		Pair<Object, Method> old = _bypasses.put(bypass, new Pair<>(o, method));
 		if(old != null)
 			logger.warn("Duplicate bypass: " + bypass + " old: (" + old.getKey().getClass().getName() + ":" + old.getRight().getName() + "), new: (" + o.getClass().getName() + ":" + method.getName() + ")");
 	}

@@ -8,6 +8,7 @@ import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.l2j.commons.collections.MultiValueSet;
+import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.gameserver.ai.NpcAI;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.listener.hooks.ListenerHook;
@@ -26,7 +27,6 @@ import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.templates.TeleportLocation;
 import org.l2j.gameserver.templates.skill.EffectTemplate;
 
-import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

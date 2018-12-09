@@ -8,7 +8,8 @@ import org.l2j.gameserver.model.Skill.SkillMagicType;
 import org.l2j.gameserver.model.base.Element;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.network.l2.s2c.*;
-import org.apache.commons.lang3.StringUtils;
+
+import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 /**
  * @author G1ta0
@@ -52,7 +53,7 @@ public final class PlayerStatsChangeRecorder extends CharStatsChangeRecorder<Pla
 	private double _magicMPCost;
 	private double _musicMPCost;
 
-	private String _title = StringUtils.EMPTY;
+	private String _title = STRING_EMPTY;
 
 	private int _cubicsHash;
 

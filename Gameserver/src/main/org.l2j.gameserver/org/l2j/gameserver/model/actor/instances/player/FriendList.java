@@ -6,7 +6,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 import java.util.Collection;
 
 import org.l2j.gameserver.network.l2.s2c.*;
-import org.apache.commons.lang3.StringUtils;
 import org.l2j.gameserver.dao.CharacterFriendDAO;
 import org.l2j.gameserver.model.GameObject;
 import org.l2j.gameserver.model.GameObjectsStorage;
@@ -16,6 +15,8 @@ import org.l2j.gameserver.model.Request.L2RequestType;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.network.l2.components.IBroadcastPacket;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
+
+import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 public class FriendList
 {
@@ -48,7 +49,7 @@ public class FriendList
 
 	public Friend get(String name)
 	{
-		if(StringUtils.isEmpty(name))
+		if(isNullOrEmpty(name))
 			return null;
 
 		for(Friend friend : values())
@@ -92,7 +93,7 @@ public class FriendList
 
 	public void remove(String name)
 	{
-		if(StringUtils.isEmpty(name))
+		if(isNullOrEmpty(name))
 			return;
 
 		int objectId = remove0(name);
@@ -111,7 +112,7 @@ public class FriendList
 
 	private int remove0(String name)
 	{
-		if(StringUtils.isEmpty(name))
+		if(isNullOrEmpty(name))
 			return 0;
 
 		int objectId = 0;

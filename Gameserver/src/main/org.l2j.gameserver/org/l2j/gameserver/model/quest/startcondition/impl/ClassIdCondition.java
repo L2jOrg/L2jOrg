@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.quest.startcondition.impl;
 
-import org.apache.commons.lang3.ArrayUtils;
+import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.quest.startcondition.ICheckStartCondition;

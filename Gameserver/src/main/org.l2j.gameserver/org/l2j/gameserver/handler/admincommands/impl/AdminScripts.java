@@ -1,6 +1,5 @@
 package org.l2j.gameserver.handler.admincommands.impl;
 
-import org.apache.commons.lang3.ClassUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.handler.admincommands.IAdminCommandHandler;
@@ -52,7 +51,8 @@ public class AdminScripts implements IAdminCommandHandler
 		List<Class<?>> classes = Scripts.getInstance().load(file);
 		for(Class<?> clazz : classes)
 		{
-			if(!ClassUtils.isAssignable(clazz, Runnable.class))
+
+			if(!Runnable.class.isAssignableFrom(clazz))
 				return false;
 
 			Runnable r;

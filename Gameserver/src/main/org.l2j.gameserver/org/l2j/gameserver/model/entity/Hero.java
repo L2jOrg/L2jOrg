@@ -1,6 +1,5 @@
 package org.l2j.gameserver.model.entity;
 
-import org.apache.commons.lang3.StringUtils;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
@@ -34,6 +33,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+
+import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 public class Hero
 {
@@ -387,7 +388,7 @@ public class Hero
 				html.replace("%prev_bypass%", "_diary?class=" + heroclass + "&page=" + (page + 1));
 			}
 			else
-				html.replace("%buttprev%", StringUtils.EMPTY);
+				html.replace("%buttprev%", STRING_EMPTY);
 
 			if(page > 1)
 			{
@@ -395,7 +396,7 @@ public class Hero
 				html.replace("%next_bypass%", "_diary?class=" + heroclass + "&page=" + (page - 1));
 			}
 			else
-				html.replace("%buttnext%", StringUtils.EMPTY);
+				html.replace("%buttnext%", STRING_EMPTY);
 
 			html.replace("%list%", fList.toString());
 

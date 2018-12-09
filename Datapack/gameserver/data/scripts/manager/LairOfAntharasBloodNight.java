@@ -1,6 +1,6 @@
 package manager;
 
-import org.apache.commons.lang3.ArrayUtils;
+import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Announcements;
 import org.l2j.gameserver.ThreadPoolManager;

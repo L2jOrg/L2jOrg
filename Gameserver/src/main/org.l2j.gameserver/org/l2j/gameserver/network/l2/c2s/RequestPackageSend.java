@@ -1,9 +1,8 @@
 package org.l2j.gameserver.network.l2.c2s;
 
-import org.apache.commons.lang3.ArrayUtils;
+import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.math.SafeMath;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.items.ItemInstance;

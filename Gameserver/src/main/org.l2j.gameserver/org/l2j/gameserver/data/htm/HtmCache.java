@@ -163,13 +163,6 @@ public class HtmCache
         return getCache(fileName, lang);
     }
 
-    /**
-     * Получить шаблоны из html.
-     *
-     * @param fileName путь до html относительно data/html/LANG
-     * @param player
-     * @return TIntStringHashMap
-     */
     public HtmTemplates getTemplates(String fileName, Player player)
     {
         Language lang = player == null ? Config.DEFAULT_LANG : player.getLanguage();

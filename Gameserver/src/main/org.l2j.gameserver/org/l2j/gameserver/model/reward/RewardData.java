@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.reward;
 
-import org.apache.commons.lang3.ArrayUtils;
+import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;

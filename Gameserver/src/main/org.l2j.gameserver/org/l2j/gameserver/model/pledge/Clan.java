@@ -2,7 +2,6 @@ package org.l2j.gameserver.model.pledge;
 
 import gnu.trove.set.TIntSet;
 import gnu.trove.set.hash.TIntHashSet;
-import org.apache.commons.lang3.StringUtils;
 import org.l2j.commons.collections.JoinedIterator;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.database.L2DatabaseFactory;
@@ -44,6 +43,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.*;
+
+import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 public class Clan implements Iterable<UnitMember>
 {
@@ -227,7 +228,7 @@ public class Clan implements Iterable<UnitMember>
 	public String getUnitName(int unitType)
 	{
 		if(unitType == SUBUNIT_NONE || !_subUnits.containsKey(unitType))
-			return StringUtils.EMPTY;
+			return STRING_EMPTY;
 
 		return getSubUnit(unitType).getName();
 	}
@@ -235,7 +236,7 @@ public class Clan implements Iterable<UnitMember>
 	public String getLeaderName(int unitType)
 	{
 		if(unitType == SUBUNIT_NONE || !_subUnits.containsKey(unitType))
-			return StringUtils.EMPTY;
+			return STRING_EMPTY;
 
 		return getSubUnit(unitType).getLeaderName();
 	}

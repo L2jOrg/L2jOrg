@@ -11,7 +11,8 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.CustomMessage;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
-import org.apache.commons.lang3.StringUtils;
+
+import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 public class AntiFlood
 {
@@ -21,7 +22,7 @@ public class AntiFlood
 	private final Player _owner;
 
 	private long _lastSent = 0L;
-	private String _lastText = StringUtils.EMPTY;
+	private String _lastText = STRING_EMPTY;
 
 	private long _allChatUseTime;
 	private long _shoutChatUseTime;

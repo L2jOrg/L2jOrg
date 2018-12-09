@@ -103,25 +103,25 @@ package org.l2j.gameserver.network.l2.s2c;
  */
 public class NpcHtmlMessagePacket extends L2GameServerPacket
 {
-	private final int _npcObjId;
-	private final int _itemId;
-	private final CharSequence _html;
-	private final boolean _playVoice;
+    private final int _npcObjId;
+    private final int _itemId;
+    private final CharSequence _html;
+    private final boolean _playVoice;
 
-	public NpcHtmlMessagePacket(int npcObjId, int itemId, boolean playVoice, CharSequence html)
-	{
-		_npcObjId = npcObjId;
-		_itemId = itemId;
-		_playVoice = playVoice;
-		_html = html;
-	}
+    public NpcHtmlMessagePacket(int npcObjId, int itemId, boolean playVoice, CharSequence html)
+    {
+        _npcObjId = npcObjId;
+        _itemId = itemId;
+        _playVoice = playVoice;
+        _html = html;
+    }
 
-	@Override
-	protected void writeImpl()
-	{
-		writeInt(_npcObjId);
-		writeString(_html);
-		writeInt(_itemId);
-		writeInt(!_playVoice);
-	}
+    @Override
+    protected void writeImpl()
+    {
+        writeInt(_npcObjId);
+        writeString(_html);
+        writeInt(_itemId);
+        writeInt(!_playVoice);
+    }
 }

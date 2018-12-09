@@ -1,6 +1,8 @@
 package org.l2j.gameserver.model.quest;
 
-import org.apache.commons.lang3.ArrayUtils;
+import java.util.Arrays;
+
+import static org.l2j.commons.util.Util.INT_ARRAY_EMPTY;
 
 public class Drop
 {
@@ -8,7 +10,7 @@ public class Drop
 	public final int maxcount;
 	public final int chance;
 
-	public int[] itemList = ArrayUtils.EMPTY_INT_ARRAY;
+	public int[] itemList = INT_ARRAY_EMPTY;
 
 	public Drop(int condition, int maxcount, int chance)
 	{
@@ -17,9 +19,9 @@ public class Drop
 		this.chance = chance;
 	}
 
-	public Drop addItem(int item)
-	{
-		itemList = ArrayUtils.add(itemList, item);
+	public Drop addItem(int item) {
+		itemList = Arrays.copyOf(itemList, itemList.length + 1);
+		itemList[itemList.length -1] = item;
 		return this;
 	}
 }

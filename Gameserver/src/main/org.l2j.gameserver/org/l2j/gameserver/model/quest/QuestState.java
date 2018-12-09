@@ -25,9 +25,11 @@ import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.network.l2.s2c.*;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.utils.ItemFunctions;
-import org.apache.commons.lang3.StringUtils;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 public final class QuestState
 {
@@ -703,7 +705,7 @@ public final class QuestState
 	public String set(String var, String val, boolean store)
 	{
 		if(val == null)
-			val = StringUtils.EMPTY;
+			val = STRING_EMPTY;
 
 		_vars.put(var, val);
 

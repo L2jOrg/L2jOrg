@@ -17,16 +17,14 @@ import org.l2j.gameserver.skills.TimeStamp;
 import org.l2j.gameserver.templates.InstantZone;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.Log;
-import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 public class OlympiadMember
 {
-	private static final Logger _log = LoggerFactory.getLogger(OlympiadMember.class);
 
-	private String _name = StringUtils.EMPTY;
-	private String _clanName = StringUtils.EMPTY;
+	private String _name;
+	private String _clanName = STRING_EMPTY;
 	private int _classId;
 	private double _damage; // !!! ЭТО ПОЛУЧЕННЫЙ УРОН, А НЕ НАНЕСЕНННЫЙ!!! НЕ ПУТАТЬ!!!
 
@@ -61,7 +59,7 @@ public class OlympiadMember
 		if(_player == null)
 			return;
 
-		_clanName = player.getClan() == null ? StringUtils.EMPTY : player.getClan().getName();
+		_clanName = player.getClan() == null ? STRING_EMPTY : player.getClan().getName();
 		_classId = player.getActiveClassId();
 
 		player.setOlympiadSide(side);

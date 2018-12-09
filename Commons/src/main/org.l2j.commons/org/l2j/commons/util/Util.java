@@ -21,6 +21,9 @@ public class Util {
 
     public static final String STRING_EMPTY = "";
     public static final int[] INT_ARRAY_EMPTY = new int[0];
+    public static final String[] STRING_ARRAY_EMPTY = new String[0];
+    public static final byte[] BYTE_ARRAY_EMPTY = new byte[0];
+    public static final Object[] OBJECT_ARRAY_EMPTY = new Object[0];
 
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDateTime( FormatStyle.SHORT )
             .withLocale( Locale.getDefault() )
@@ -122,8 +125,8 @@ public class Util {
         return Optional.of(f);
     }
 
-    public static boolean isNullOrEmpty(String value) {
-        return isNull(value) || value.isEmpty();
+    public static boolean isNullOrEmpty(CharSequence value) {
+        return isNull(value) || value.length() == 0;
     }
 
     public static boolean isNotEmpty(String value) {
@@ -157,5 +160,25 @@ public class Util {
         MessageDigest md = MessageDigest.getInstance("SHA3-256");
         byte[] raw = value.getBytes(StandardCharsets.UTF_8);
         return Base64.getEncoder().encodeToString(md.digest(raw));
+    }
+
+    public static StringBuilder replaceFirst(StringBuilder stringBuilder, String seachString, String replacement) {
+        if(!isNullOrEmpty(seachString)) {
+            var index = stringBuilder.indexOf(seachString);
+            if(index >= 0) {
+                stringBuilder.replace(index, index + seachString.length(), replacement);
+            }
+        }
+        return stringBuilder;
+    }
+
+    public static void replaceAll(StringBuilder stringBuilder, String searchString, String replacement) {
+        if(!isNullOrEmpty(searchString)) {
+            var index =  stringBuilder.indexOf(searchString);
+            while(index >= 0) {
+                stringBuilder.replace(index, index + searchString.length(), replacement);
+                index = stringBuilder.indexOf(searchString, index);
+            }
+        }
     }
 }

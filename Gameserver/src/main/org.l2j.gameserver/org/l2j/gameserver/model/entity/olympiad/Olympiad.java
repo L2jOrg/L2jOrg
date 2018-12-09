@@ -1,6 +1,5 @@
 package org.l2j.gameserver.model.entity.olympiad;
 
-import org.apache.commons.lang3.StringUtils;
 import org.l2j.commons.configuration.ExProperties;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
@@ -35,6 +34,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
+
+import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 public class Olympiad
 {
@@ -720,7 +721,7 @@ public class Olympiad
 				return true;
 
 			String playerHWID = client.getHWID();
-			if(StringUtils.isEmpty(playerHWID) || !_playersHWID.containsValue(playerHWID))
+			if(isNullOrEmpty(playerHWID) || !_playersHWID.containsValue(playerHWID))
 				return false; //nothing if we don't have his HWID
 
 			int boxesCount = 0; //will count now

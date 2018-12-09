@@ -1,6 +1,6 @@
 package org.l2j.gameserver.handler.admincommands.impl;
 
-import org.apache.commons.lang3.math.NumberUtils;
+import org.l2j.commons.util.Converter;
 import org.l2j.gameserver.handler.admincommands.IAdminCommandHandler;
 import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.GameObject;
@@ -11,7 +11,7 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 
 public class AdminKill implements IAdminCommandHandler
 {
-	private static enum Commands
+	private enum Commands
 	{
 		admin_kill,
 		admin_damage,
@@ -34,7 +34,7 @@ public class AdminKill implements IAdminCommandHandler
 					handleKill(activeChar, wordList[1]);
 				break;
 			case admin_damage:
-				handleDamage(activeChar, NumberUtils.toInt(wordList[1], 1));
+				handleDamage(activeChar, Converter.stringToInt(wordList[1], 1));
 				break;
 		}
 

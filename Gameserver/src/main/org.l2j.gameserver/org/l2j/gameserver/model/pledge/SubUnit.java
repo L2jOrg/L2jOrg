@@ -1,6 +1,5 @@
 package org.l2j.gameserver.model.pledge;
 
-import org.apache.commons.lang3.StringUtils;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
@@ -19,6 +18,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Collection;
+
+import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 /**
 * @author VISTALL
@@ -221,7 +222,7 @@ public class SubUnit
 
 	public String getLeaderName()
 	{
-		return _leader == null ? StringUtils.EMPTY : _leader.getName();
+		return _leader == null ? STRING_EMPTY : _leader.getName();
 	}
 
 	public SkillEntry addSkill(SkillEntry newSkillEntry, boolean store)

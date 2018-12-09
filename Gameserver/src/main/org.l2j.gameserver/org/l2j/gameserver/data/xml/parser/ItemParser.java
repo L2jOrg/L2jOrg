@@ -1,6 +1,5 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import org.apache.commons.lang3.StringUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;
 import org.l2j.gameserver.data.xml.holder.OptionDataHolder;
@@ -16,6 +15,8 @@ import org.l2j.gameserver.templates.item.data.CapsuledItemData;
 
 import java.io.File;
 import java.util.Iterator;
+
+import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 /**
  * @author VISTALL
@@ -62,7 +63,7 @@ public final class ItemParser extends StatParser<ItemHolder>
 			StatsSet set = new StatsSet();
 			set.set("item_id", itemElement.attributeValue("id"));
 			set.set("name", itemElement.attributeValue("name"));
-			set.set("add_name", itemElement.attributeValue("add_name", StringUtils.EMPTY));
+			set.set("add_name", itemElement.attributeValue("add_name", STRING_EMPTY));
 
 			int slot = 0;
 			for(Iterator<org.dom4j.Element> subIterator = itemElement.elementIterator(); subIterator.hasNext();)
