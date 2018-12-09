@@ -11,7 +11,6 @@ module org.l2j.commons {
     requires java.xml.bind;
     requires java.management;
     requires java.compiler;
-    requires commons.math3;
     requires dom4j;
     requires ecj;
     requires trove;
