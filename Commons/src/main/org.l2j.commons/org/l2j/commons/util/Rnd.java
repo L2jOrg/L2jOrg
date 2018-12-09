@@ -1,31 +1,15 @@
 package org.l2j.commons.util;
 
 import java.util.List;
-import java.util.concurrent.atomic.AtomicLong;
-
-import org.apache.commons.math3.random.MersenneTwister;
-import org.apache.commons.math3.random.RandomGenerator;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Rnd
 {
 	private Rnd() {}
 
-	private static final ThreadLocal<RandomGenerator> rnd = new ThreadLocalGeneratorHolder();
-
-	private static AtomicLong seedUniquifier = new AtomicLong(8682522807148012L);
-
-	static final class ThreadLocalGeneratorHolder extends ThreadLocal<RandomGenerator>
-	{
-		@Override
-		public RandomGenerator initialValue()
-		{
-			return new MersenneTwister(seedUniquifier.getAndIncrement() + System.nanoTime());
-		}
-	}
-
-	private static RandomGenerator rnd()
-	{
-		return rnd.get();
+	private static Random rnd() {
+		return ThreadLocalRandom.current();
 	}
 
 	public static double get() // get random number from 0 to 1
