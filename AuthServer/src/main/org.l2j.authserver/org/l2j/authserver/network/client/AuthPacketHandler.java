@@ -4,9 +4,9 @@ import org.l2j.authserver.network.client.packet.client2auth.AuthGameGuard;
 import org.l2j.authserver.network.client.packet.client2auth.RequestAuthLogin;
 import org.l2j.authserver.network.client.packet.client2auth.RequestServerList;
 import org.l2j.authserver.network.client.packet.client2auth.RequestServerLogin;
-import org.l2j.mmocore.DataWrapper;
-import org.l2j.mmocore.PacketHandler;
-import org.l2j.mmocore.ReadablePacket;
+import io.github.joealisson.mmocore.DataWrapper;
+import io.github.joealisson.mmocore.PacketHandler;
+import io.github.joealisson.mmocore.ReadablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

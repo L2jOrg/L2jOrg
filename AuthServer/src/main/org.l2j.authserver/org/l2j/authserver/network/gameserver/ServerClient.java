@@ -5,8 +5,8 @@ import org.l2j.authserver.controller.GameServerManager;
 import org.l2j.authserver.network.crypt.AuthServerCrypt;
 import org.l2j.authserver.network.gameserver.packet.auth2game.GameServerWritablePacket;
 import org.l2j.authserver.network.gameserver.packet.auth2game.LoginGameServerFail;
-import org.l2j.mmocore.Client;
-import org.l2j.mmocore.Connection;
+import io.github.joealisson.mmocore.Client;
+import io.github.joealisson.mmocore.Connection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

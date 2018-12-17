@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.base.ClassLevel;
 import org.l2j.gameserver.model.base.Sex;
 import org.l2j.gameserver.templates.player.PlayerTemplate;
-import org.l2j.mmocore.StaticPacket;
+import io.github.joealisson.mmocore.StaticPacket;
 
 @StaticPacket
 public class NewCharacterSuccessPacket extends L2GameServerPacket {

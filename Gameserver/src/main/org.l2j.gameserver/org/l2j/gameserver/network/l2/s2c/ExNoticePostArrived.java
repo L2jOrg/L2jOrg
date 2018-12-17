@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.network.l2.c2s.RequestExRequestReceivedPostList;
-import org.l2j.mmocore.StaticPacket;
+import io.github.joealisson.mmocore.StaticPacket;
 
 /**
  * Уведомление о получении почты. При нажатии на него клиент отправляет {@link RequestExRequestReceivedPostList}.

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.authcomm;
 
-import org.l2j.mmocore.WritablePacket;
+import io.github.joealisson.mmocore.WritablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

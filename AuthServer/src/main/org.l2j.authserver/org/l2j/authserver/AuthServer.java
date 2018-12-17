@@ -9,8 +9,8 @@ import org.l2j.authserver.network.gameserver.GameServerPacketHandler;
 import org.l2j.authserver.network.gameserver.ServerClient;
 import org.l2j.commons.Config;
 import org.l2j.commons.Server;
-import org.l2j.mmocore.ConnectionBuilder;
-import org.l2j.mmocore.ConnectionHandler;
+import io.github.joealisson.mmocore.ConnectionBuilder;
+import io.github.joealisson.mmocore.ConnectionHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

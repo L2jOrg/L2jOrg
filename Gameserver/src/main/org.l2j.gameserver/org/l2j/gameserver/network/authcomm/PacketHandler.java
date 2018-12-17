@@ -1,12 +1,12 @@
 package org.l2j.gameserver.network.authcomm;
 
 import org.l2j.gameserver.network.authcomm.as2gs.*;
-import org.l2j.mmocore.DataWrapper;
-import org.l2j.mmocore.ReadablePacket;
+import io.github.joealisson.mmocore.DataWrapper;
+import io.github.joealisson.mmocore.ReadablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class PacketHandler implements org.l2j.mmocore.PacketHandler<AuthServerClient> {
+public class PacketHandler implements io.github.joealisson.mmocore.PacketHandler<AuthServerClient> {
 	private static final Logger _log = LoggerFactory.getLogger(PacketHandler.class);
 
 	public ReadablePacket<AuthServerClient> handlePacket(DataWrapper buf, AuthServerClient client)

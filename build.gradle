@@ -20,11 +20,7 @@ subprojects {
 
     repositories {
         mavenCentral()
-        jcenter()
 
-        maven {
-            url 'https://repo.spring.io/libs-milestone'
-        }
 
         maven {
             url 'http://maven.java.net/content/repositories/releases/'

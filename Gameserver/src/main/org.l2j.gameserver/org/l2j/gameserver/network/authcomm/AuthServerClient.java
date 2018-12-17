@@ -1,8 +1,8 @@
 package org.l2j.gameserver.network.authcomm;
 
 import org.l2j.gameserver.network.authcomm.gs2as.AuthRequest;
-import org.l2j.mmocore.Client;
-import org.l2j.mmocore.Connection;
+import io.github.joealisson.mmocore.Client;
+import io.github.joealisson.mmocore.Connection;
 
 class AuthServerClient extends Client<Connection<AuthServerClient>> {
 
@@ -32,5 +32,10 @@ class AuthServerClient extends Client<Connection<AuthServerClient>> {
     @Override
     public void onConnected() {
         writePacket(new AuthRequest());
+    }
+
+    @Override
+    public boolean isConnected() {
+        return super.isConnected();
     }
 }

@@ -2,10 +2,10 @@ package org.l2j.authserver.network.gameserver;
 
 import org.l2j.authserver.controller.ThreadPoolManager;
 import org.l2j.authserver.network.gameserver.packet.game2auth.*;
-import org.l2j.mmocore.DataWrapper;
-import org.l2j.mmocore.PacketExecutor;
-import org.l2j.mmocore.PacketHandler;
-import org.l2j.mmocore.ReadablePacket;
+import io.github.joealisson.mmocore.DataWrapper;
+import io.github.joealisson.mmocore.PacketExecutor;
+import io.github.joealisson.mmocore.PacketHandler;
+import io.github.joealisson.mmocore.ReadablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

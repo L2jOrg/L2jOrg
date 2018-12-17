@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.network.l2.c2s.RequestExSendPost;
-import org.l2j.mmocore.StaticPacket;
+import io.github.joealisson.mmocore.StaticPacket;
 
 /**
  * Запрос на отправку нового письма. Шлется в ответ на {@link RequestExSendPost}.

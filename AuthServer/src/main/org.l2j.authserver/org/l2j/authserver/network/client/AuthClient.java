@@ -12,8 +12,8 @@ import org.l2j.authserver.network.client.packet.auth2client.LoginFail;
 import org.l2j.authserver.network.client.packet.auth2client.LoginFail.LoginFailReason;
 import org.l2j.authserver.network.client.packet.auth2client.PlayFail;
 import org.l2j.authserver.network.client.packet.auth2client.PlayFail.PlayFailReason;
-import org.l2j.mmocore.Client;
-import org.l2j.mmocore.Connection;
+import io.github.joealisson.mmocore.Client;
+import io.github.joealisson.mmocore.Connection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -223,6 +223,11 @@ public final class AuthClient extends Client<Connection<AuthClient>> {
 
     public long getRequestdServersInfo() {
         return requestdServersInfo;
+    }
+
+    @Override
+    public boolean isConnected() {
+        return super.isConnected();
     }
 
     @Override

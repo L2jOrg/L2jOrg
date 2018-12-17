@@ -16,7 +16,7 @@ import org.l2j.gameserver.network.l2.s2c.ServerCloseSocketPacket;
 import org.l2j.gameserver.security.HWIDUtils;
 import org.l2j.gameserver.security.SecondaryPasswordAuth;
 import org.l2j.gameserver.utils.Language;
-import org.l2j.mmocore.Client;
+import io.github.joealisson.mmocore.Client;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,7 +28,7 @@ import java.util.List;
 /**
  * Represents a client connected on Game Server
  */
-public final class GameClient extends Client<org.l2j.mmocore.Connection<GameClient>>
+public final class GameClient extends Client<io.github.joealisson.mmocore.Connection<GameClient>>
 {
 	private static final Logger _log = LoggerFactory.getLogger(GameClient.class);
 	private static final String NO_IP = "?.?.?.?";
@@ -64,7 +64,7 @@ public final class GameClient extends Client<org.l2j.mmocore.Connection<GameClie
 	
 	private String _hwid = null;
 	
-	public GameClient(org.l2j.mmocore.Connection<GameClient> con)
+	public GameClient(io.github.joealisson.mmocore.Connection<GameClient> con)
 	{
 		super(con);
 
@@ -424,6 +424,11 @@ public final class GameClient extends Client<org.l2j.mmocore.Connection<GameClie
 			_log.warn("Too many client unknown packets, connection closed : " + this);
 			closeNow();
 		}
+	}
+
+	@Override
+	public boolean isConnected() {
+		return super.isConnected();
 	}
 
 	@Override

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.l2.s2c;
 
-import org.l2j.mmocore.StaticPacket;
+import io.github.joealisson.mmocore.StaticPacket;
 
 //пропадает почти весь интерфейс и пооявляется кнопка отказ
 //связан с пакетом RequestLeaveCuriousHouse

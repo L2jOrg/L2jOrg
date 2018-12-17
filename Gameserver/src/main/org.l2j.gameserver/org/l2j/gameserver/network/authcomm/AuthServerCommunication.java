@@ -4,9 +4,9 @@ import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.config.templates.HostInfo;
 import org.l2j.gameserver.config.xml.holder.HostsConfigHolder;
 import org.l2j.gameserver.network.l2.GameClient;
-import org.l2j.mmocore.Connector;
-import org.l2j.mmocore.PacketExecutor;
-import org.l2j.mmocore.ReadablePacket;
+import io.github.joealisson.mmocore.Connector;
+import io.github.joealisson.mmocore.PacketExecutor;
+import io.github.joealisson.mmocore.ReadablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

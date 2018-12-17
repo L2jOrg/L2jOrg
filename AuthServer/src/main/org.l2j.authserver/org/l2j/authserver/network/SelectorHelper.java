@@ -3,7 +3,7 @@ package org.l2j.authserver.network;
 import org.l2j.authserver.controller.AuthController;
 import org.l2j.authserver.controller.ThreadPoolManager;
 import org.l2j.authserver.network.client.AuthClient;
-import org.l2j.mmocore.*;
+import io.github.joealisson.mmocore.*;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

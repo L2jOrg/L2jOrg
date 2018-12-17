@@ -14,7 +14,7 @@ import org.l2j.gameserver.network.l2.components.IBroadcastPacket;
 import org.l2j.gameserver.network.l2.s2c.updatetype.IUpdateTypeComponent;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.templates.item.support.Ensoul;
-import org.l2j.mmocore.WritablePacket;
+import io.github.joealisson.mmocore.WritablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -6,7 +6,7 @@ import org.l2j.gameserver.GameServer;
 import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.network.l2.s2c.L2GameServerPacket;
 
-import org.l2j.mmocore.ReadablePacket;
+import io.github.joealisson.mmocore.ReadablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

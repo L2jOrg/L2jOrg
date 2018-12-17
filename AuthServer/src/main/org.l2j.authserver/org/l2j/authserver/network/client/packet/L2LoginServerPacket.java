@@ -1,7 +1,7 @@
 package org.l2j.authserver.network.client.packet;
 
 import org.l2j.authserver.network.client.AuthClient;
-import org.l2j.mmocore.WritablePacket;
+import io.github.joealisson.mmocore.WritablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

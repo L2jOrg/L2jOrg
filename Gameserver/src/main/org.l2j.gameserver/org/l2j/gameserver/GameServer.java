@@ -55,8 +55,8 @@ import org.l2j.gameserver.taskmanager.ItemsAutoDestroy;
 import org.l2j.gameserver.utils.OnlineTxtGenerator;
 import org.l2j.gameserver.utils.Strings;
 import org.l2j.gameserver.utils.TradeHelper;
-import org.l2j.mmocore.ConnectionBuilder;
-import org.l2j.mmocore.ConnectionHandler;
+import io.github.joealisson.mmocore.ConnectionBuilder;
+import io.github.joealisson.mmocore.ConnectionHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

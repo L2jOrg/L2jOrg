@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.l2;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.network.l2.c2s.*;
-import org.l2j.mmocore.*;
+import io.github.joealisson.mmocore.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
