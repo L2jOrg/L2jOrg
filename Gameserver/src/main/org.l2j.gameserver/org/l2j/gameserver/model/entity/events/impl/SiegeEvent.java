@@ -1,5 +1,7 @@
 package org.l2j.gameserver.model.entity.events.impl;
 
+import gnu.trove.map.TIntObjectMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.lang.reference.HardReference;
@@ -29,11 +31,8 @@ import org.l2j.gameserver.templates.DoorTemplate;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.TeleportUtils;
-import org.napile.pair.primitive.IntObjectPair;
 import org.napile.primitive.maps.IntLongMap;
-import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CHashIntLongMap;
-import org.napile.primitive.maps.impl.CHashIntObjectMap;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -126,7 +125,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 
 	protected OnKillListener _killListener;
 	protected OnDeathListener _doorDeathListener = new DoorDeathListener();
-	protected IntObjectMap<SiegeSummonInfo> _siegeSummons = new CHashIntObjectMap<SiegeSummonInfo>();
+	protected TIntObjectMap<SiegeSummonInfo> _siegeSummons = new TIntObjectHashMap<>();
 	protected IntLongMap _blockedFameOnKill = new CHashIntLongMap();
 
 	public SiegeEvent(MultiValueSet<String> set)
@@ -724,9 +723,8 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 
 	public void despawnSiegeSummons()
 	{
-		for(IntObjectPair<SiegeSummonInfo> entry : _siegeSummons.entrySet())
-		{
-			SiegeSummonInfo summonInfo = entry.getValue();
+		_siegeSummons.forEachEntry((key, value) -> {
+			SiegeSummonInfo summonInfo = value;
 
 			SummonInstance summon = summonInfo._summonRef.get();
 			if(summon != null)
@@ -739,7 +737,9 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 				SummonEffectDAO.getInstance().delete(entry.getKey(), summonInfo._skillId);
 				*/
 			}
-		}
+			return true;
+		});
+
 		_siegeSummons.clear();
 	}
 

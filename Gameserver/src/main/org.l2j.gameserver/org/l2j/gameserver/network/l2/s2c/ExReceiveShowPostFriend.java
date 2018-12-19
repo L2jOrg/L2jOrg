@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import gnu.trove.map.TIntObjectMap;
 import org.l2j.gameserver.model.Player;
-import org.napile.primitive.maps.IntObjectMap;
 
 /**
  * @author VISTALL
@@ -9,7 +9,7 @@ import org.napile.primitive.maps.IntObjectMap;
  */
 public class ExReceiveShowPostFriend extends L2GameServerPacket
 {
-	private IntObjectMap<String> _list;
+	private TIntObjectMap<String> _list;
 
 	public ExReceiveShowPostFriend(Player player)
 	{
@@ -20,7 +20,7 @@ public class ExReceiveShowPostFriend extends L2GameServerPacket
 	public void writeImpl()
 	{
 		writeInt(_list.size());
-		for(String t : _list.values())
+		for(String t : _list.valueCollection())
 			writeString(t);
 	}
 }

@@ -1,11 +1,11 @@
 package org.l2j.gameserver.instancemanager.games;
 
+import gnu.trove.map.TIntObjectMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CTreeIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,7 +21,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
 public class MiniGameScoreManager
 {
 	private static final Logger _log = LoggerFactory.getLogger(MiniGameScoreManager.class);
-	private final IntObjectMap<Set<String>> _scores = new CTreeIntObjectMap<>((o1, o2) -> o2 - o1);
+	private final TIntObjectMap<Set<String>> _scores = new TIntObjectHashMap<>();
 
 	private static MiniGameScoreManager _instance = new MiniGameScoreManager();
 
@@ -98,7 +98,7 @@ public class MiniGameScoreManager
 		return set.add(name);
 	}
 
-	public IntObjectMap<Set<String>> getScores()
+	public TIntObjectMap<Set<String>> getScores()
 	{
 		return _scores;
 	}

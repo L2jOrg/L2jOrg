@@ -1,13 +1,11 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import gnu.trove.iterator.TIntObjectIterator;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.dao.CharacterPostFriendDAO;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
-
-import org.napile.pair.primitive.IntObjectPair;
-import org.napile.primitive.maps.IntObjectMap;
 
 /**
  * @author VISTALL
@@ -34,11 +32,11 @@ public class RequestExDeletePostFriendForPostBox extends L2GameClientPacket
 			return;
 
 		int key = 0;
-		IntObjectMap<String> postFriends = player.getPostFriends();
-		for(IntObjectPair<String> entry : postFriends.entrySet())
-		{
-			if(entry.getValue().equalsIgnoreCase(_name))
-				key = entry.getKey();
+		TIntObjectIterator<String> postFriends = player.getPostFriends().iterator();
+		while (postFriends.hasNext()) {
+			postFriends.advance();
+			if(postFriends.value().equalsIgnoreCase(_name))
+				key = postFriends.key();
 		}
 
 		if(key == 0)

@@ -1,15 +1,15 @@
 package org.l2j.gameserver.model;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
+import gnu.trove.map.TIntObjectMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.instances.StaticObjectInstance;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CHashIntObjectMap;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 /**
  * Общее "супер" хранилище для всех объектов L2Object,
@@ -22,10 +22,10 @@ import org.napile.primitive.maps.impl.CHashIntObjectMap;
  */
 public class GameObjectsStorage
 {
-	private static IntObjectMap<GameObject> _objects = new CHashIntObjectMap<GameObject>(60000 * Config.RATE_MOB_SPAWN + Config.MAXIMUM_ONLINE_USERS + 1000);
-	private static IntObjectMap<StaticObjectInstance> _staticObjects = new CHashIntObjectMap<StaticObjectInstance>(1000);
-	private static IntObjectMap<NpcInstance> _npcs = new CHashIntObjectMap<NpcInstance>(60000 * Config.RATE_MOB_SPAWN);
-	private static IntObjectMap<Player> _players = new CHashIntObjectMap<Player>(Config.MAXIMUM_ONLINE_USERS);
+	private static TIntObjectMap<GameObject> _objects = new TIntObjectHashMap<>(60000 * Config.RATE_MOB_SPAWN + Config.MAXIMUM_ONLINE_USERS + 1000);
+	private static TIntObjectMap<StaticObjectInstance> _staticObjects = new TIntObjectHashMap<>(1000);
+	private static TIntObjectMap<NpcInstance> _npcs = new TIntObjectHashMap<>(60000 * Config.RATE_MOB_SPAWN);
+	private static TIntObjectMap<Player> _players = new TIntObjectHashMap<>(Config.MAXIMUM_ONLINE_USERS);
 
 	public static GameObject findObject(int objId)
 	{
@@ -34,17 +34,17 @@ public class GameObjectsStorage
 
 	public static Collection<GameObject> getObjects()
 	{
-		return _objects.values();
+		return _objects.valueCollection();
 	}
 
 	public static Collection<StaticObjectInstance> getStaticObjects()
 	{
-		return _staticObjects.values();
+		return _staticObjects.valueCollection();
 	}
 
 	public static StaticObjectInstance getStaticObject(int id)
 	{
-		for(StaticObjectInstance object : _staticObjects.values())
+		for(StaticObjectInstance object : _staticObjects.valueCollection())
 			if(object.getUId() == id)
 				return object;
 		return null;
@@ -52,7 +52,7 @@ public class GameObjectsStorage
 
 	public static Player getPlayer(String name)
 	{
-		for(Player player : _players.values())
+		for(Player player : _players.valueCollection())
 			if(player.getName().equalsIgnoreCase(name))
 				return player;
 		return null;
@@ -65,7 +65,7 @@ public class GameObjectsStorage
 
 	public static Collection<Player> getPlayers()
 	{
-		return _players.values();
+		return _players.valueCollection();
 	}
 
 	public static NpcInstance getNpc(String npcName)
@@ -88,7 +88,7 @@ public class GameObjectsStorage
 
 	public static Collection<NpcInstance> getNpcs()
 	{
-		return _npcs.values();
+		return _npcs.valueCollection();
 	}
 
 	public static NpcInstance getByNpcId(int npcId)
@@ -138,7 +138,7 @@ public class GameObjectsStorage
 	 */
 	public static <T extends GameObject> void put(T o)
 	{
-		IntObjectMap<T> map = getMapForObject(o);
+		TIntObjectMap<T> map = getMapForObject(o);
 		if(map != null)
 			map.put(o.getObjectId(), o);
 
@@ -147,7 +147,7 @@ public class GameObjectsStorage
 
 	public static <T extends GameObject> void remove(T o)
 	{
-		IntObjectMap<T> map = getMapForObject(o);
+		TIntObjectMap<T> map = getMapForObject(o);
 		if(map != null)
 			map.remove(o.getObjectId());
 
@@ -155,16 +155,16 @@ public class GameObjectsStorage
 	}
 
 	@SuppressWarnings("unchecked")
-	private static <T extends GameObject> IntObjectMap<T> getMapForObject(T o)
+	private static <T extends GameObject> TIntObjectMap<T> getMapForObject(T o)
 	{
 		if(o.isStaticObject())
-			return (IntObjectMap<T>) _staticObjects;
+			return (TIntObjectMap<T>) _staticObjects;
 
 		if(o.isNpc())
-			return (IntObjectMap<T>) _npcs;
+			return (TIntObjectMap<T>) _npcs;
 
 		if(o.isPlayer())
-			return (IntObjectMap<T>) _players;
+			return (TIntObjectMap<T>) _players;
 
 		return null;
 	}

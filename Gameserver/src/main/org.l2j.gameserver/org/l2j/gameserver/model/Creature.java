@@ -1,5 +1,7 @@
 package org.l2j.gameserver.model;
 
+import gnu.trove.map.TIntObjectMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 import gnu.trove.set.TIntSet;
 import gnu.trove.set.hash.TIntHashSet;
 import org.l2j.commons.collections.CollectionUtils;
@@ -66,9 +68,6 @@ import org.l2j.gameserver.templates.item.WeaponTemplate.WeaponType;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
 import org.l2j.gameserver.templates.player.transform.TransformTemplate;
 import org.l2j.gameserver.utils.*;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CHashIntObjectMap;
-import org.napile.primitive.maps.impl.CTreeIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -303,10 +302,10 @@ public abstract class Creature extends GameObject
 	private static final double[] POLE_VAMPIRIC_MOD = { 1, 0.9, 0, 7, 0.2, 0.01 };
 
 	/** HashMap(Integer, L2Skill) containing all skills of the L2Character */
-	protected final IntObjectMap<SkillEntry> _skills = new CTreeIntObjectMap<SkillEntry>();
+	protected final TIntObjectMap<SkillEntry> _skills = new TIntObjectHashMap<>();
 	protected Map<TriggerType, Set<TriggerInfo>> _triggers;
 
-	protected IntObjectMap<TimeStamp> _skillReuses = new CHashIntObjectMap<TimeStamp>();
+	protected TIntObjectMap<TimeStamp> _skillReuses = new TIntObjectHashMap<>();
 
 	protected volatile AbnormalList _effectList;
 
@@ -1941,21 +1940,15 @@ public abstract class Creature extends GameObject
 		return (int) calcStat(Stats.M_ACCURACY_COMBAT, 0, null, null);
 	}
 
-	/**
-	 * Возвращает коллекцию скиллов для быстрого перебора
-	 */
+
 	public Collection<SkillEntry> getAllSkills()
 	{
-		return _skills.values();
+		return _skills.valueCollection();
 	}
 
-	/**
-	 * Возвращает массив скиллов для безопасного перебора
-	 */
-	public final SkillEntry[] getAllSkillsArray()
-	{
-		Collection<SkillEntry> vals = _skills.values();
-		return vals.toArray(new SkillEntry[vals.size()]);
+
+	public final SkillEntry[] getAllSkillsArray() {
+		return _skills.values(new SkillEntry[_skills.size()]);
 	}
 
 	public final double getAttackSpeedMultiplier()
@@ -1978,17 +1971,11 @@ public abstract class Creature extends GameObject
         return _isCriticalBlowCastingSkill;
     }
 
-	/**
-	 * Возвращает шанс физического крита (1000 == 100%)
-	 */
 	public int getPCriticalHit(Creature target)
 	{
 		return (int) Math.round(calcStat(Stats.BASE_P_CRITICAL_RATE, getBaseStats().getPCritRate(), target, null));
 	}
 
-	/**
-	 * Возвращает шанс магического крита (1000 == 100%)
-	 */
 	public int getMCriticalHit(Creature target, Skill skill)
 	{
 		return (int) Math.round(calcStat(Stats.BASE_M_CRITICAL_RATE, getBaseStats().getMCritRate(), target, skill));
@@ -5473,7 +5460,7 @@ public abstract class Creature extends GameObject
 
 	public Collection<TimeStamp> getSkillReuses()
 	{
-		return _skillReuses.values();
+		return _skillReuses.valueCollection();
 	}
 
 	public TimeStamp getSkillReuse(Skill skill)

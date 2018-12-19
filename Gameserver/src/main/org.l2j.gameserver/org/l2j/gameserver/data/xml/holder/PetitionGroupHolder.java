@@ -1,11 +1,11 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import java.util.Collection;
-
+import gnu.trove.map.TIntObjectMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.model.petition.PetitionMainGroup;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.HashIntObjectMap;
+
+import java.util.Collection;
 
 /**
  * @author VISTALL
@@ -15,7 +15,7 @@ public class PetitionGroupHolder extends AbstractHolder
 {
 	private static PetitionGroupHolder _instance = new PetitionGroupHolder();
 
-	private IntObjectMap<PetitionMainGroup> _petitionGroups = new HashIntObjectMap<PetitionMainGroup>();
+	private TIntObjectMap<PetitionMainGroup> _petitionGroups = new TIntObjectHashMap<>();
 
 	public static PetitionGroupHolder getInstance()
 	{
@@ -37,7 +37,7 @@ public class PetitionGroupHolder extends AbstractHolder
 
 	public Collection<PetitionMainGroup> getPetitionGroups()
 	{
-		return _petitionGroups.values();
+		return _petitionGroups.valueCollection();
 	}
 
 	@Override

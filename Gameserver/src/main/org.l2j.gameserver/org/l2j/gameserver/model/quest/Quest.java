@@ -2,6 +2,8 @@ package org.l2j.gameserver.model.quest;
 
 import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
+import gnu.trove.set.TIntSet;
+import gnu.trove.set.hash.TIntHashSet;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.lang.ArrayUtils;
@@ -32,10 +34,6 @@ import org.l2j.gameserver.utils.HtmlUtils;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.NpcUtils;
 import org.l2j.gameserver.utils.ReflectionUtils;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CHashIntObjectMap;
-import org.napile.primitive.sets.IntSet;
-import org.napile.primitive.sets.impl.HashIntSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -113,10 +111,10 @@ public class Quest implements OnInitScriptListener
     public static final QuestRepeatType DAILY = QuestRepeatType.DAILY;
 
 	//карта с приостановленными квестовыми таймерами для каждого игрока
-    private IntObjectMap<Map<String, QuestTimer>> _pausedQuestTimers = new CHashIntObjectMap<Map<String, QuestTimer>>();
+    private TIntObjectMap<Map<String, QuestTimer>> _pausedQuestTimers = new TIntObjectHashMap<>();
 
-    private IntSet _startNpcs = new HashIntSet();
-    private IntSet _questItems = new HashIntSet();
+    private TIntSet _startNpcs = new TIntHashSet();
+    private TIntSet _questItems = new TIntHashSet();
     private TIntObjectMap<List<QuestNpcLogInfo>> _npcLogList = new TIntObjectHashMap<List<QuestNpcLogInfo>>(5);
     private TIntObjectMap<List<QuestNpcLogInfo>> _itemsLogList = new TIntObjectHashMap<List<QuestNpcLogInfo>>(5);
     private TIntObjectMap<List<QuestNpcLogInfo>> _customLogList = new TIntObjectHashMap<List<QuestNpcLogInfo>>(5);
@@ -299,13 +297,13 @@ public class Quest implements OnInitScriptListener
 	 */
 	public static void restoreQuestStates(Player player)
 	{
-        IntSet questsToDelete = null;
+        TIntSet questsToDelete = null;
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
 		try
 		{
-            questsToDelete = new HashIntSet();
+            questsToDelete = new TIntHashSet();
 			con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement("SELECT id,var,value FROM character_quests WHERE char_id=?");
 			statement.setInt(1, player.getObjectId());

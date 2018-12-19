@@ -1,5 +1,7 @@
 package org.l2j.gameserver.model.pledge;
 
+import gnu.trove.map.TIntObjectMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
@@ -8,9 +10,6 @@ import org.l2j.gameserver.model.Skill;
 import org.l2j.gameserver.model.base.SubClassType;
 import org.l2j.gameserver.network.l2.s2c.ExSubPledgetSkillAdd;
 import org.l2j.gameserver.skills.SkillEntry;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CHashIntObjectMap;
-import org.napile.primitive.maps.impl.CTreeIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,8 +28,8 @@ public class SubUnit
 {
 	private static final Logger _log = LoggerFactory.getLogger(SubUnit.class);
 
-	private IntObjectMap<SkillEntry> _skills = new CTreeIntObjectMap<SkillEntry>();
-	private IntObjectMap<UnitMember> _members = new CHashIntObjectMap<UnitMember>();
+	private TIntObjectMap<SkillEntry> _skills = new TIntObjectHashMap<>();
+	private TIntObjectMap<UnitMember> _members = new TIntObjectHashMap<>();
 
 	private int _type;
 
@@ -148,7 +147,7 @@ public class SubUnit
 
 	public Collection<UnitMember> getUnitMembers()
 	{
-		return _members.values();
+		return _members.valueCollection();
 	}
 
 	public void setLeader(UnitMember newLeader, boolean updateDB)
@@ -293,13 +292,13 @@ public class SubUnit
 	 */
 	public void addSkillsQuietly(Player player)
 	{
-		for(SkillEntry skillEntry : _skills.values())
+		for(SkillEntry skillEntry : _skills.valueCollection())
 			addSkill(player, skillEntry);
 	}
 
 	public void enableSkills(Player player)
 	{
-		for(SkillEntry skillEntry : _skills.values())
+		for(SkillEntry skillEntry : _skills.valueCollection())
 		{
 			Skill skill = skillEntry.getTemplate();
 			if(skill.getMinPledgeRank().ordinal() <= player.getPledgeRank().ordinal())
@@ -312,7 +311,7 @@ public class SubUnit
 
 	public void disableSkills(Player player)
 	{
-		for(SkillEntry skillEntry : _skills.values())
+		for(SkillEntry skillEntry : _skills.valueCollection())
 			player.addUnActiveSkill(skillEntry.getTemplate());
 	}
 
@@ -332,7 +331,7 @@ public class SubUnit
 
 	public Collection<SkillEntry> getSkills()
 	{
-		return _skills.values();
+		return _skills.valueCollection();
 	}
 
 	private static void removeMemberInDatabase(UnitMember member)

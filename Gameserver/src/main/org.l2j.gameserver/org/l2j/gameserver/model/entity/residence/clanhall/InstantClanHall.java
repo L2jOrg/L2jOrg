@@ -1,8 +1,7 @@
 package org.l2j.gameserver.model.entity.residence.clanhall;
 
-import java.util.Calendar;
-import java.util.Collection;
-
+import gnu.trove.map.TIntObjectMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.gameserver.dao.InstantClanHallDAO;
 import org.l2j.gameserver.data.xml.holder.InstantZoneHolder;
 import org.l2j.gameserver.listener.reflection.OnReflectionCollapseListener;
@@ -19,8 +18,9 @@ import org.l2j.gameserver.templates.InstantZone;
 import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.TimeUtils;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CHashIntObjectMap;
+
+import java.util.Calendar;
+import java.util.Collection;
 
 public class InstantClanHall extends ClanHall
 {
@@ -41,8 +41,8 @@ public class InstantClanHall extends ClanHall
 		}
 	}
 
-	private final IntObjectMap<Clan> _owners = new CHashIntObjectMap<Clan>();
-	private final IntObjectMap<Reflection> _reflections = new CHashIntObjectMap<Reflection>();
+	private final TIntObjectMap<Clan> _owners = new TIntObjectHashMap<>();
+	private final TIntObjectMap<Reflection> _reflections = new TIntObjectHashMap<>();
 	private final OnReflectionCollapseListener _reflectionListener = new ReflectionCollapseListener();
 
 	public InstantClanHall(StatsSet set)
@@ -250,7 +250,7 @@ public class InstantClanHall extends ClanHall
 
 	public Collection<Clan> getOwners()
 	{
-		return _owners.values();
+		return _owners.valueCollection();
 	}
 
 	public boolean addOwner(Clan owner, boolean store)

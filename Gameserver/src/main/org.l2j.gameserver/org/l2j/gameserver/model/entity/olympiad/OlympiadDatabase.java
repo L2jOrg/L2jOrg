@@ -118,7 +118,7 @@ public class OlympiadDatabase
 			DbUtils.closeQuietly(con, statement);
 		}
 
-		for(OlympiadParticipiantData participantsInfo : Olympiad.getParticipantsMap().values())
+		for(OlympiadParticipiantData participantsInfo : Olympiad.getParticipantsMap().valueCollection())
 		{
 			int points = participantsInfo.getPoints();
 			int compDone = participantsInfo.getCompDone();

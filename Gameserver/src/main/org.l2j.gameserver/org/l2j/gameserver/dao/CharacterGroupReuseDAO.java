@@ -1,18 +1,17 @@
 package org.l2j.gameserver.dao;
 
+import gnu.trove.iterator.TIntObjectIterator;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.skills.TimeStamp;
 import org.l2j.gameserver.utils.SqlBatch;
-import org.napile.pair.primitive.IntObjectPair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.Collection;
 
 /**
  * @author VISTALL
@@ -84,17 +83,15 @@ public class CharacterGroupReuseDAO
 			statement.setInt(1, player.getObjectId());
 			statement.execute();
 
-			Collection<IntObjectPair<TimeStamp>> reuses = player.getSharedGroupReuses();
-			if(reuses.isEmpty())
-				return;
-
+			TIntObjectIterator<TimeStamp> reuses = player.getSharedGroupReuses();
 			SqlBatch b = new SqlBatch(INSERT_SQL_QUERY);
 			synchronized (reuses)
 			{
-				for(IntObjectPair<TimeStamp> entry : reuses)
-				{
-					int group = entry.getKey();
-					TimeStamp timeStamp = entry.getValue();
+				while (reuses.hasNext()) {
+					reuses.advance();
+
+					int group = reuses.key();
+					TimeStamp timeStamp = reuses.value();
 					if(timeStamp.hasNotPassed())
 					{
 						StringBuilder sb = new StringBuilder("(");

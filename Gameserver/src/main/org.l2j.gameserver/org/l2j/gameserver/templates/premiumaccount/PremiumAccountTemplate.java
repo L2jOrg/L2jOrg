@@ -1,10 +1,7 @@
 package org.l2j.gameserver.templates.premiumaccount;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
+import gnu.trove.map.TIntObjectMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.gameserver.skills.SkillEntry;
 import org.l2j.gameserver.stats.StatTemplate;
@@ -12,8 +9,10 @@ import org.l2j.gameserver.stats.funcs.Func;
 import org.l2j.gameserver.templates.item.data.ItemData;
 import org.l2j.gameserver.utils.Language;
 
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.TreeIntObjectMap;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author Bonux
@@ -29,7 +28,7 @@ public class PremiumAccountTemplate extends StatTemplate
 	private final Map<Language, String> _names = new HashMap<Language, String>();
 	private final List<ItemData> _giveItemsOnStart = new ArrayList<ItemData>();
 	private final List<ItemData> _takeItemsOnEnd = new ArrayList<ItemData>();
-	private final IntObjectMap<List<ItemData>> _fees = new TreeIntObjectMap<List<ItemData>>();
+	private final TIntObjectMap<List<ItemData>> _fees = new TIntObjectHashMap<>();
 
 	private PremiumAccountProperties _properties = DEFAULT_PROPERTIES;
 	private PremiumAccountRates _rates = DEFAULT_RATES;

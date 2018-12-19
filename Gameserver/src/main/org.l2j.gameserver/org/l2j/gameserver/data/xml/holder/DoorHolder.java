@@ -1,15 +1,15 @@
 package org.l2j.gameserver.data.xml.holder;
 
+import gnu.trove.map.TIntObjectMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.templates.DoorTemplate;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.HashIntObjectMap;
 
 public final class DoorHolder extends AbstractHolder
 {
 	private static final DoorHolder _instance = new DoorHolder();
 
-	private IntObjectMap<DoorTemplate> _doors = new HashIntObjectMap<DoorTemplate>();
+	private TIntObjectMap<DoorTemplate> _doors = new TIntObjectHashMap<>();
 
 	public static DoorHolder getInstance()
 	{
@@ -26,7 +26,7 @@ public final class DoorHolder extends AbstractHolder
 		return _doors.get(doorId);
 	}
 
-	public IntObjectMap<DoorTemplate> getDoors()
+	public TIntObjectMap<DoorTemplate> getDoors()
 	{
 		return _doors;
 	}

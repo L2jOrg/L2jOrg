@@ -1,11 +1,10 @@
 package org.l2j.gameserver.instancemanager;
 
+import gnu.trove.map.TIntObjectMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.Reflection;
 import org.l2j.gameserver.network.l2.s2c.EventTriggerPacket;
-
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CHashIntObjectMap;
 import org.napile.primitive.sets.IntSet;
 import org.napile.primitive.sets.impl.CArrayIntSet;
 
@@ -20,8 +19,8 @@ public class EventTriggersManager
 
 	private static final int[] EMPTY_INT_ARRAY = new int[0];
 
-	private final IntObjectMap<IntSet> _activeTriggers = new CHashIntObjectMap<IntSet>();
-	private final IntObjectMap<IntSet> _activeTriggersByMap = new CHashIntObjectMap<IntSet>();
+	private final TIntObjectMap<IntSet> _activeTriggers = new TIntObjectHashMap<>();
+	private final TIntObjectMap<IntSet> _activeTriggersByMap = new TIntObjectHashMap<>();
 
 	private EventTriggersManager()
 	{}
@@ -90,7 +89,7 @@ public class EventTriggersManager
 			if(triggers != null)
 				allTriggers.addAll(triggers);
 
-			for(IntSet t : _activeTriggersByMap.values())
+			for(IntSet t : _activeTriggersByMap.valueCollection())
 				allTriggers.addAll(t);
 
 			return allTriggers.toArray();
@@ -123,7 +122,7 @@ public class EventTriggersManager
 
 		if(reflection.isMain())
 		{
-			for(IntSet t : _activeTriggersByMap.values())
+			for(IntSet t : _activeTriggersByMap.valueCollection())
 			{
 				for(int triggerId : t.toArray())
 					onRemoveTrigger(reflection, triggerId);

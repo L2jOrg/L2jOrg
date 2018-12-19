@@ -1,5 +1,7 @@
 package org.l2j.gameserver.data.xml.holder;
 
+import gnu.trove.map.TIntObjectMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.base.ClassType;
@@ -7,16 +9,13 @@ import org.l2j.gameserver.model.base.Race;
 import org.l2j.gameserver.model.base.Sex;
 import org.l2j.gameserver.templates.player.PlayerTemplate;
 
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.HashIntObjectMap;
-
 /**
  * @author Bonux
 **/
 public final class PlayerTemplateHolder extends AbstractHolder
 {
 	private static final PlayerTemplateHolder _instance = new PlayerTemplateHolder();
-	private final IntObjectMap<PlayerTemplate> _templates = new HashIntObjectMap<PlayerTemplate>();
+	private final TIntObjectMap<PlayerTemplate> _templates = new TIntObjectHashMap<>();
 
 	public static PlayerTemplateHolder getInstance()
 	{

@@ -1,5 +1,9 @@
 package org.l2j.gameserver.instancemanager;
 
+import gnu.trove.map.TIntLongMap;
+import gnu.trove.map.TIntObjectMap;
+import gnu.trove.map.hash.TIntLongHashMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.threading.RunnableImpl;
@@ -15,10 +19,7 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.skills.SkillEntry;
 import org.l2j.gameserver.templates.BotPunishment;
-import org.napile.pair.primitive.IntObjectPair;
 import org.napile.primitive.maps.IntLongMap;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CHashIntObjectMap;
 import org.napile.primitive.maps.impl.HashIntLongMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +27,7 @@ import org.slf4j.LoggerFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Collection;
 
 public final class BotReportManager
@@ -143,18 +145,18 @@ public final class BotReportManager
 	private static final String SQL_INSERT_REPORTED_CHAR_DATA = "INSERT INTO bot_reported_char_data VALUES (?,?,?)";
 	private static final String SQL_CLEAR_REPORTED_CHAR_DATA = "DELETE FROM bot_reported_char_data";
 
-	private final IntLongMap _ipRegistry;
+	private final TIntLongMap _ipRegistry;
 
-	private final IntObjectMap<ReporterCharData> _charRegistry;
-	private final IntObjectMap<ReportedCharData> _reports;
+	private final TIntObjectMap<ReporterCharData> _charRegistry;
+	private final TIntObjectMap<ReportedCharData> _reports;
 
 	private BotReportManager()
 	{
 		if(Config.BOTREPORT_ENABLED)
 		{
-			_ipRegistry = new HashIntLongMap();
-			_charRegistry = new CHashIntObjectMap<ReporterCharData>();
-			_reports = new CHashIntObjectMap<ReportedCharData>();
+			_ipRegistry = new TIntLongHashMap();
+			_charRegistry = new TIntObjectHashMap<>();
+			_reports = new TIntObjectHashMap<>();
 
 			loadReportedCharData();
 			scheduleResetPointTask();
@@ -220,38 +222,28 @@ public final class BotReportManager
 		}
 	}
 
-	public void saveReportedCharData()
-	{
-		Connection con = null;
-		PreparedStatement statement = null;
-		try
-		{
-			con = L2DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement(SQL_CLEAR_REPORTED_CHAR_DATA);
-			statement.execute();
+	public void saveReportedCharData() {
+		try(var con = L2DatabaseFactory.getInstance().getConnection();  var clearStatement = con.prepareStatement(SQL_CLEAR_REPORTED_CHAR_DATA);
+			var statement = con.prepareStatement(SQL_INSERT_REPORTED_CHAR_DATA)) {
 
-			DbUtils.closeQuietly(statement);
+			clearStatement.execute();
 
-			statement = con.prepareStatement(SQL_INSERT_REPORTED_CHAR_DATA);
-			for(IntObjectPair<ReportedCharData> entrySet : _reports.entrySet())
-			{
-				IntLongMap reportTable = entrySet.getValue().getReporters();
+			var reportsIterator = _reports.iterator();
+
+			while (reportsIterator.hasNext()) {
+				reportsIterator.advance();
+
+				IntLongMap reportTable = reportsIterator.value().getReporters();
 				for(int reporterId : reportTable.keySet().toArray())
 				{
-					statement.setInt(COLUMN_BOT_ID, entrySet.getKey());
+					statement.setInt(COLUMN_BOT_ID, reportsIterator.key());
 					statement.setInt(COLUMN_REPORTER_ID, reporterId);
 					statement.setLong(COLUMN_REPORT_TIME, reportTable.get(reporterId));
 					statement.execute();
 				}
 			}
-		}
-		catch(Exception e)
-		{
+		} catch (SQLException e) {
 			_log.error("BotReportManager: Could not update reported char data in database!", e);
-		}
-		finally
-		{
-			DbUtils.closeQuietly(con, statement);
 		}
 	}
 
@@ -404,7 +396,7 @@ public final class BotReportManager
 	{
 		synchronized(_charRegistry)
 		{
-			for(ReporterCharData rcd : _charRegistry.values())
+			for(ReporterCharData rcd : _charRegistry.valueCollection())
 				rcd.setPoints(7);
 		}
 		scheduleResetPointTask();
@@ -427,7 +419,7 @@ public final class BotReportManager
 		return rawIp[0] | rawIp[1] << 8 | rawIp[2] << 16 | rawIp[3] << 24;
 	}
 
-	private static boolean timeHasPassed(IntLongMap map, int objectId)
+	private static boolean timeHasPassed(TIntLongMap map, int objectId)
 	{
 		if(map.containsKey(objectId))
 			return System.currentTimeMillis() - map.get(objectId) > Config.BOTREPORT_REPORT_DELAY;

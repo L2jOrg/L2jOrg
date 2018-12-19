@@ -1,17 +1,17 @@
 package org.l2j.gameserver.instancemanager;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import java.util.concurrent.CopyOnWriteArraySet;
-
+import gnu.trove.map.TIntObjectMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.templates.mapregion.RestartArea;
 import org.l2j.gameserver.templates.mapregion.RestartPoint;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CTreeIntObjectMap;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.CopyOnWriteArraySet;
 
 /**
  * @author VISTALL
@@ -23,7 +23,7 @@ public class MatchingRoomManager
 	{
 		private int _id = 1;
 
-		private IntObjectMap<MatchingRoom> _rooms = new CTreeIntObjectMap<MatchingRoom>();
+		private TIntObjectMap<MatchingRoom> _rooms = new TIntObjectHashMap<>();
 
 		public int addRoom(MatchingRoom r)
 		{
@@ -73,7 +73,7 @@ public class MatchingRoomManager
 	public List<MatchingRoom> getMatchingRooms(int type, int region, boolean allLevels, Player activeChar)
 	{
 		List<MatchingRoom> res = new ArrayList<MatchingRoom>();
-		for(MatchingRoom room : _holder[type]._rooms.values())
+		for(MatchingRoom room : _holder[type]._rooms.valueCollection())
 		{
 			if(region > 0 && room.getLocationId() != region)
 				continue;

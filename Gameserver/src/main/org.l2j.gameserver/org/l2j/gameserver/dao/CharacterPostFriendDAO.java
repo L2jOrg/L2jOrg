@@ -1,10 +1,10 @@
 package org.l2j.gameserver.dao;
 
+import gnu.trove.map.TIntObjectMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.model.Player;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CHashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,9 +30,9 @@ public class CharacterPostFriendDAO
 		return _instance;
 	}
 
-	public IntObjectMap<String> select(Player player)
+	public TIntObjectMap<String> select(Player player)
 	{
-		IntObjectMap<String> set = new CHashIntObjectMap<String>();
+		TIntObjectMap<String> set = new TIntObjectHashMap<>();
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;

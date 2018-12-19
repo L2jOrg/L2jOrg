@@ -1,11 +1,8 @@
 package org.l2j.gameserver.model;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReadWriteLock;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
-
+import gnu.trove.iterator.TIntObjectIterator;
+import gnu.trove.map.TIntObjectMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.lang.reference.HardReference;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
@@ -42,9 +39,10 @@ import org.l2j.gameserver.templates.item.WeaponTemplate;
 import org.l2j.gameserver.templates.item.WeaponTemplate.WeaponType;
 import org.l2j.gameserver.utils.Location;
 
-import org.napile.pair.primitive.IntObjectPair;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CHashIntObjectMap;
+import java.util.List;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReadWriteLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public abstract class Playable extends Creature
 {
@@ -55,7 +53,7 @@ public abstract class Playable extends Creature
 	protected final Lock questRead = questLock.readLock();
 	protected final Lock questWrite = questLock.writeLock();
 
-	protected final IntObjectMap<TimeStamp> _sharedGroupReuses = new CHashIntObjectMap<TimeStamp>();
+	protected final TIntObjectMap<TimeStamp> _sharedGroupReuses = new TIntObjectHashMap<>();
 
 	public Playable(int objectId, CreatureTemplate template)
 	{
@@ -688,9 +686,9 @@ public abstract class Playable extends Creature
 		_sharedGroupReuses.put(group, stamp);
 	}
 
-	public Collection<IntObjectPair<TimeStamp>> getSharedGroupReuses()
+	public TIntObjectIterator<TimeStamp> getSharedGroupReuses()
 	{
-		return _sharedGroupReuses.entrySet();
+		return _sharedGroupReuses.iterator();
 	}
 
 	public boolean useItem(ItemInstance item, boolean ctrlPressed, boolean force)
