@@ -1,5 +1,7 @@
 package org.l2j.gameserver.model.entity.olympiad;
 
+import gnu.trove.map.TIntIntMap;
+import gnu.trove.map.hash.TIntIntHashMap;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Announcements;
@@ -12,8 +14,6 @@ import org.l2j.gameserver.model.base.SubClassType;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.network.l2.s2c.SystemMessage;
 import org.l2j.gameserver.templates.StatsSet;
-import org.napile.primitive.maps.IntIntMap;
-import org.napile.primitive.maps.impl.HashIntIntMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,7 +32,7 @@ public class OlympiadDatabase
 	{
 		Olympiad._participantRank.clear();
 
-		IntIntMap tmpPlace = new HashIntIntMap();
+		TIntIntMap tmpPlace = new TIntIntHashMap();
 		for(int heroId : Hero.getInstance().getHeroes().keySet().toArray())
 			Olympiad._participantRank.put(heroId, 1);
 

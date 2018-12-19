@@ -1,13 +1,11 @@
 package org.l2j.gameserver.network.l2.c2s;
 
-import java.util.Calendar;
-import java.util.List;
-
+import org.l2j.commons.util.IntObjectPair;
 import org.l2j.gameserver.Announcements;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.dao.MailDAO;
-import org.l2j.gameserver.data.string.StringsHolder;
 import org.l2j.gameserver.data.htm.HtmCache;
+import org.l2j.gameserver.data.string.StringsHolder;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.instancemanager.CoupleManager;
@@ -18,11 +16,7 @@ import org.l2j.gameserver.listener.actor.player.OnAnswerListener;
 import org.l2j.gameserver.listener.actor.player.impl.ReviveAnswerListener;
 import org.l2j.gameserver.listener.hooks.ListenerHook;
 import org.l2j.gameserver.listener.hooks.ListenerHookType;
-import org.l2j.gameserver.model.Creature;
-import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.model.Servitor;
-import org.l2j.gameserver.model.Skill;
-import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.actor.instances.creature.Abnormal;
 import org.l2j.gameserver.model.entity.residence.Castle;
 import org.l2j.gameserver.model.items.ItemInstance;
@@ -42,16 +36,11 @@ import org.l2j.gameserver.utils.HtmlUtils;
 import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.TradeHelper;
 
-import org.napile.pair.primitive.IntObjectPair;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.Calendar;
+import java.util.List;
 
 public class EnterWorld extends L2GameClientPacket
 {
-	private static final Object _lock = new Object();
-
-	private static final Logger _log = LoggerFactory.getLogger(EnterWorld.class);
-
 	@Override
 	protected void readImpl()
 	{

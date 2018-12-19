@@ -1,6 +1,7 @@
 package org.l2j.gameserver.network.l2.c2s;
 
 import org.l2j.commons.lang.ArrayUtils;
+import org.l2j.commons.util.IntObjectPair;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.listener.actor.player.OnAnswerListener;
 import org.l2j.gameserver.listener.actor.player.impl.ReviveAnswerListener;
@@ -21,8 +22,6 @@ import org.l2j.gameserver.skills.SkillEntry;
 import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.TeleportUtils;
-
-import org.napile.pair.primitive.IntObjectPair;
 
 public class RequestRestartPoint extends L2GameClientPacket
 {

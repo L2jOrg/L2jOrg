@@ -13,9 +13,7 @@ import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.lang.reference.HardReference;
 import org.l2j.commons.lang.reference.HardReferences;
 import org.l2j.commons.threading.RunnableImpl;
-import org.l2j.commons.util.Converter;
-import org.l2j.commons.util.Rnd;
-import org.l2j.commons.util.TroveUtils;
+import org.l2j.commons.util.*;
 import org.l2j.commons.util.Util;
 import org.l2j.commons.util.concurrent.atomic.AtomicState;
 import org.l2j.gameserver.*;
@@ -112,8 +110,6 @@ import org.l2j.gameserver.templates.player.PlayerTemplate;
 import org.l2j.gameserver.templates.player.transform.TransformTemplate;
 import org.l2j.gameserver.templates.premiumaccount.PremiumAccountTemplate;
 import org.l2j.gameserver.utils.*;
-import org.napile.pair.primitive.IntObjectPair;
-import org.napile.pair.primitive.impl.IntObjectPairImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -9652,7 +9648,7 @@ public final class Player extends Playable implements PlayerGroup
 		if(_askDialog != null)
 			return;
 		int rnd = Rnd.nextInt();
-		_askDialog = new IntObjectPairImpl<OnAnswerListener>(rnd, listener);
+		_askDialog = new IntObjectPair<>(rnd, listener);
 		dlg.setRequestId(rnd);
 		sendPacket(dlg);
 	}

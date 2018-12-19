@@ -1,20 +1,19 @@
 package org.l2j.gameserver.utils;
 
+import gnu.trove.map.TIntIntMap;
+import gnu.trove.map.hash.TIntIntHashMap;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.skills.SkillEntry;
 
-import org.napile.primitive.maps.IntIntMap;
-import org.napile.primitive.maps.impl.HashIntIntMap;
-
 public class PledgeBonusUtils
 {
 	public static final int MAX_ATTENDANCE_PROGRESS = 30;
 	public static final int MAX_HUNTING_PROGRESS = 1542857;
-	public static final IntIntMap ATTENDANCE_REWARDS = new HashIntIntMap(4);
-	public static IntIntMap HUNTING_REWARDS;
+	public static final TIntIntMap ATTENDANCE_REWARDS = new TIntIntHashMap(4);
+	public static TIntIntMap HUNTING_REWARDS;
 
 	private static final String ATTENDANCE_REWARD_RECEIVED_VAR = "attendance_reward_received";
 	private static final String HUNTING_REWARD_RECEIVED_VAR = "hunting_reward_received";
@@ -26,7 +25,7 @@ public class PledgeBonusUtils
 		ATTENDANCE_REWARDS.put(3, Config.CLAN_ATTENDANCE_REWARD_3);
 		ATTENDANCE_REWARDS.put(4, Config.CLAN_ATTENDANCE_REWARD_4);
 
-		HUNTING_REWARDS = new HashIntIntMap(4);
+		HUNTING_REWARDS = new TIntIntHashMap(4);
 
 		HUNTING_REWARDS.put(1, Config.CLAN_HUNTING_REWARD_1);
 		HUNTING_REWARDS.put(2, Config.CLAN_HUNTING_REWARD_2);

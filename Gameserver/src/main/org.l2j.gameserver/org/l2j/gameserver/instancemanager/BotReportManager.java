@@ -19,8 +19,6 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.skills.SkillEntry;
 import org.l2j.gameserver.templates.BotPunishment;
-import org.napile.primitive.maps.IntLongMap;
-import org.napile.primitive.maps.impl.HashIntLongMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -67,14 +65,14 @@ public final class BotReportManager
 
 	private final class ReportedCharData
 	{
-		private final IntLongMap _reporters;
+		private final TIntLongMap _reporters;
 
 		public ReportedCharData()
 		{
-			_reporters = new HashIntLongMap();
+			_reporters = new TIntLongHashMap();
 		}
 
-		public IntLongMap getReporters()
+		public TIntLongMap getReporters()
 		{
 			return _reporters;
 		}
@@ -233,7 +231,7 @@ public final class BotReportManager
 			while (reportsIterator.hasNext()) {
 				reportsIterator.advance();
 
-				IntLongMap reportTable = reportsIterator.value().getReporters();
+				TIntLongMap reportTable = reportsIterator.value().getReporters();
 				for(int reporterId : reportTable.keySet().toArray())
 				{
 					statement.setInt(COLUMN_BOT_ID, reportsIterator.key());
