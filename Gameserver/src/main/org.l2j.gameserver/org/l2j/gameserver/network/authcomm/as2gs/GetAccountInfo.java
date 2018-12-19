@@ -1,14 +1,14 @@
 package org.l2j.gameserver.network.authcomm.as2gs;
 
+import gnu.trove.list.TIntList;
+import gnu.trove.list.array.TIntArrayList;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
+import org.l2j.commons.util.TroveUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.ReceivablePacket;
 import org.l2j.gameserver.network.authcomm.gs2as.SetAccountInfo;
-import org.napile.primitive.Containers;
-import org.napile.primitive.lists.IntList;
-import org.napile.primitive.lists.impl.ArrayIntList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,7 +35,7 @@ public class GetAccountInfo extends ReceivablePacket
 	protected void runImpl()
 	{
 		int playerSize = 0;
-		IntList deleteChars = Containers.EMPTY_INT_LIST;
+		TIntList deleteChars = TroveUtils.EMPTY_INT_ARRAY_LIST;
 
 		Connection con = null;
 		PreparedStatement statement = null;
@@ -53,7 +53,7 @@ public class GetAccountInfo extends ReceivablePacket
 				if(d > 0)
 				{
 					if(deleteChars.isEmpty())
-						deleteChars = new ArrayIntList(3);
+						deleteChars = new TIntArrayList(3);
 
 					deleteChars.add(d + Config.CHARACTER_DELETE_AFTER_HOURS * 60 * 60);
 				}

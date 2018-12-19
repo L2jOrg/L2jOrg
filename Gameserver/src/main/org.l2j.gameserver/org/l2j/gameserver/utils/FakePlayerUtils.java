@@ -1,11 +1,7 @@
 package org.l2j.gameserver.utils;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.LineNumberReader;
-import java.util.ArrayList;
-import java.util.List;
-
+import gnu.trove.list.TIntList;
+import gnu.trove.list.array.TIntArrayList;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
@@ -26,15 +22,14 @@ import org.l2j.gameserver.templates.item.ItemGrade;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.templates.item.WeaponTemplate.WeaponType;
 
-import org.napile.primitive.lists.IntList;
-import org.napile.primitive.lists.impl.ArrayIntList;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.io.File;
+import java.io.FileReader;
+import java.io.LineNumberReader;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FakePlayerUtils
 {
-	private static final Logger _log = LoggerFactory.getLogger(FakePlayerUtils.class);
-
 	private static String[] PM_MESSAGES = new String[0];
 	private static String[] SHOUT_MESSAGES = new String[0];
 	private static String[] TRADE_MESSAGES = new String[0];
@@ -61,7 +56,7 @@ public class FakePlayerUtils
 			Inventory inventory = player.getInventory();
 			int equipedGrade = player.getVarInt("equiped_grade", 0);
 			int expertiseIndex = player.getExpertiseIndex();
-			IntList equip = new ArrayIntList();
+			TIntList equip = new TIntArrayList();
 			inventory.writeLock();
 			try
 			{
@@ -94,13 +89,13 @@ public class FakePlayerUtils
 					equip.addAll(FakeItemHolder.getInstance().getRandomItems(player, "Weapon", expertiseIndex));
 				if((checkHairs && Rnd.chance(25)) || Rnd.chance(5))
 				{
-					IntList hairs = FakeItemHolder.getInstance().getHairAccessories();
+					TIntList hairs = FakeItemHolder.getInstance().getHairAccessories();
 					if(!hairs.isEmpty())
 						equip.add(Rnd.get(hairs.toArray()));
 				}
 				if((checkCloak && Rnd.chance(25)) || Rnd.chance(5))
 				{
-					IntList cloaks = FakeItemHolder.getInstance().getCloaks();
+					TIntList cloaks = FakeItemHolder.getInstance().getCloaks();
 					if(!cloaks.isEmpty())
 						equip.add(Rnd.get(cloaks.toArray()));
 				}

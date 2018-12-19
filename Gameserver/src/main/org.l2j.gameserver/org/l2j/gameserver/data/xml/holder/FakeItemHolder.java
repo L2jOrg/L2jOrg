@@ -1,16 +1,16 @@
 package org.l2j.gameserver.data.xml.holder;
 
+import gnu.trove.list.TIntList;
+import gnu.trove.list.array.TIntArrayList;
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.commons.util.Rnd;
+import org.l2j.commons.util.TroveUtils;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.templates.item.ArmorTemplate.ArmorType;
 import org.l2j.gameserver.templates.item.ItemGrade;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.templates.item.WeaponTemplate;
 import org.l2j.gameserver.templates.item.WeaponTemplate.WeaponType;
-import org.napile.primitive.Containers;
-import org.napile.primitive.lists.IntList;
-import org.napile.primitive.lists.impl.ArrayIntList;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -54,16 +54,16 @@ public class FakeItemHolder extends AbstractHolder
 		return ourInstance;
 	}
 
-	private final Map<ItemGrade, Map<WeaponType, IntList>> weapons = new HashMap<ItemGrade, Map<WeaponType, IntList>>();
-	private final Map<ItemGrade, Map<ArmorType, IntList>> armors = new HashMap<ItemGrade, Map<ArmorType, IntList>>();
-	private final Map<ItemGrade, List<IntList>> accessorys = new HashMap<ItemGrade, List<IntList>>();
-	private final Map<Integer, ClassWeaponAndArmor> classWeaponAndArmors = new HashMap<Integer, ClassWeaponAndArmor>();
-	private final IntList _hairAccessories = new ArrayIntList();
-	private final IntList _cloaks = new ArrayIntList();
+	private final Map<ItemGrade, Map<WeaponType, TIntList>> weapons = new HashMap<>();
+	private final Map<ItemGrade, Map<ArmorType, TIntList>> armors = new HashMap<>();
+	private final Map<ItemGrade, List<TIntList>> accessorys = new HashMap<>();
+	private final Map<Integer, ClassWeaponAndArmor> classWeaponAndArmors = new HashMap<>();
+	private final TIntList _hairAccessories = new TIntArrayList();
+	private final TIntList _cloaks = new TIntArrayList();
 
-	public void addWeapons(ItemGrade grade, IntList list)
+	public void addWeapons(ItemGrade grade, TIntList list)
 	{
-		Map<WeaponType, IntList> map = new HashMap<WeaponType, IntList>();
+		Map<WeaponType, TIntList> map = new HashMap<>();
 		for(int itemId : list.toArray())
 		{
 			ItemTemplate template = ItemHolder.getInstance().getTemplate(itemId);
@@ -75,19 +75,19 @@ public class FakeItemHolder extends AbstractHolder
 				weaponType = WeaponTemplate.WeaponType.MAGIC;
 
 			if(map.get(weaponType) == null)
-				map.put(weaponType, new ArrayIntList());
+				map.put(weaponType, new TIntArrayList());
 
 			map.get(weaponType).add(itemId);
 		}
 		weapons.put(grade, map);
 	}
 
-	public void addArmors(ItemGrade grade, Map<ArmorType, IntList> map)
+	public void addArmors(ItemGrade grade, Map<ArmorType, TIntList> map)
 	{
 		armors.put(grade, map);
 	}
 
-	public void addAccessorys(ItemGrade grade, List<IntList> list)
+	public void addAccessorys(ItemGrade grade, List<TIntList> list)
 	{
 		accessorys.put(grade, list);
 	}
@@ -97,27 +97,27 @@ public class FakeItemHolder extends AbstractHolder
 		classWeaponAndArmors.put(classId, new ClassWeaponAndArmor(classId, weaponTypes, armorTypes));
 	}
 
-	public void addHairAccessories(IntList list)
+	public void addHairAccessories(TIntList list)
 	{
 		_hairAccessories.addAll(list);
 	}
 
-	public IntList getHairAccessories()
+	public TIntList getHairAccessories()
 	{
 		return _hairAccessories;
 	}
 
-	public void addCloaks(IntList list)
+	public void addCloaks(TIntList list)
 	{
 		_cloaks.addAll(list);
 	}
 
-	public IntList getCloaks()
+	public TIntList getCloaks()
 	{
 		return _cloaks;
 	}
 
-	public IntList getRandomItems(Player player, String type, int expertiseIndex)
+	public TIntList getRandomItems(Player player, String type, int expertiseIndex)
 	{
 		ItemGrade grade = ItemGrade.values()[expertiseIndex];
 
@@ -125,7 +125,7 @@ public class FakeItemHolder extends AbstractHolder
 		{
 			case "Accessory":
 			{
-				List<IntList> packs = accessorys.get(grade);
+				List<TIntList> packs = accessorys.get(grade);
 				return packs.get(Rnd.get(packs.size()));
 			}
 			case "Armor":
@@ -144,10 +144,10 @@ public class FakeItemHolder extends AbstractHolder
 			case "Weapon":
 			{
 				ClassWeaponAndArmor classWeaponAndArmor = classWeaponAndArmors.get(player.getClassId().getId());
-				IntList weaponIds = new ArrayIntList();
+				TIntList weaponIds = new TIntArrayList();
 				while(weaponIds.isEmpty())
 				{
-					IntList list = weapons.get(grade).get(classWeaponAndArmor.getRandomWeaponType());
+					TIntList list = weapons.get(grade).get(classWeaponAndArmor.getRandomWeaponType());
 					if(list != null)
 						weaponIds.add(list.get(list.size() - 1));
 				}
@@ -155,7 +155,7 @@ public class FakeItemHolder extends AbstractHolder
 			}
 		}
 
-		return Containers.EMPTY_INT_LIST;
+		return TroveUtils.EMPTY_INT_ARRAY_LIST;
 	}
 
 	@Override
