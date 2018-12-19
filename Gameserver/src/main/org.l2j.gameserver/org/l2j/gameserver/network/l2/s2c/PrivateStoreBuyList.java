@@ -1,14 +1,13 @@
 package org.l2j.gameserver.network.l2.s2c;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import gnu.trove.set.TIntSet;
+import gnu.trove.set.hash.TIntHashSet;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.model.items.TradeItem;
 
-import org.napile.primitive.sets.IntSet;
-import org.napile.primitive.sets.impl.HashIntSet;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PrivateStoreBuyList extends L2GameServerPacket
 {
@@ -28,7 +27,7 @@ public class PrivateStoreBuyList extends L2GameServerPacket
 		_sellList = new ArrayList<TradeItem>();
 
 		ItemInstance[] items = seller.getInventory().getItems();
-		IntSet addedItems = new HashIntSet();
+		TIntSet addedItems = new TIntHashSet();
 		for(TradeItem bi : buyer.getBuyList())
 		{
 			TradeItem si = null;

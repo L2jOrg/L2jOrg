@@ -2,6 +2,8 @@ package org.l2j.commons.util;
 
 import gnu.trove.list.array.TIntArrayList;
 import gnu.trove.map.hash.TIntObjectHashMap;
+import gnu.trove.set.TIntSet;
+import gnu.trove.set.hash.TIntHashSet;
 
 /**
  * Author: VISTALL
@@ -12,6 +14,7 @@ public class TroveUtils
 	@SuppressWarnings("rawtypes")
 	private static final TIntObjectHashMap EMPTY_INT_OBJECT_MAP = new TIntObjectHashMapEmpty();
 	public static final TIntArrayList EMPTY_INT_ARRAY_LIST = new TIntArrayListEmpty();
+	public static final TIntSet EMPTY_INT_SET = new TIntHashSet();
 	
 	@SuppressWarnings("unchecked")
 	public static <V> TIntObjectHashMap<V> emptyIntObjectMap()

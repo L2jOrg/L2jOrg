@@ -1,18 +1,13 @@
 package org.l2j.gameserver.data.htm;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Set;
-
+import gnu.trove.map.hash.TIntObjectHashMap;
+import gnu.trove.set.TIntSet;
+import org.l2j.commons.util.TroveUtils;
 import org.l2j.gameserver.utils.Language;
-import org.napile.pair.primitive.IntObjectPair;
-import org.napile.primitive.Containers;
-import org.napile.primitive.maps.impl.HashIntObjectMap;
-import org.napile.primitive.sets.IntSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class HtmTemplates extends HashIntObjectMap<String>
+public class HtmTemplates extends TIntObjectHashMap<String>
 {
 	private static class EmptyHtmTemplates extends HtmTemplates
 	{
@@ -52,21 +47,9 @@ public class HtmTemplates extends HashIntObjectMap<String>
 		}
 
 		@Override
-		public IntSet keySet()
+		public TIntSet keySet()
 		{
-			return Containers.EMPTY_INT_SET;
-		}
-
-		@Override
-		public Collection<String> values()
-		{
-			return Collections.emptySet();
-		}
-
-		@Override
-		public Set<IntObjectPair<String>> entrySet()
-		{
-			return Collections.emptySet();
+			return TroveUtils.EMPTY_INT_SET;
 		}
 
 		@Override

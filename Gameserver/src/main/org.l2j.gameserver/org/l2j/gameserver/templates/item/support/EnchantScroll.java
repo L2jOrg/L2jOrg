@@ -1,9 +1,9 @@
 package org.l2j.gameserver.templates.item.support;
 
+import gnu.trove.set.TIntSet;
+import gnu.trove.set.hash.TIntHashSet;
+import org.l2j.commons.util.TroveUtils;
 import org.l2j.gameserver.templates.item.ItemGrade;
-import org.napile.primitive.Containers;
-import org.napile.primitive.sets.IntSet;
-import org.napile.primitive.sets.impl.HashIntSet;
 
 import java.util.Set;
 
@@ -20,7 +20,7 @@ public class EnchantScroll
 	private final int _minEnchantStep;
 	private final int _maxEnchantStep;
 
-	private IntSet _items = Containers.EMPTY_INT_SET;
+	private TIntSet _items = TroveUtils.EMPTY_INT_SET;
 
 	public EnchantScroll(int itemId, int variation, int maxEnchant, EnchantType type, Set<ItemGrade> grades, FailResultType resultType, int enchantDropCount, boolean showFailEffect, int minEnchantStep, int maxEnchantStep)
 	{
@@ -39,7 +39,7 @@ public class EnchantScroll
 	public void addItemId(int id)
 	{
 		if(_items.isEmpty())
-			_items = new HashIntSet();
+			_items = new TIntHashSet();
 
 		_items.add(id);
 	}
@@ -59,7 +59,7 @@ public class EnchantScroll
 		return _grades.contains(grade);
 	}
 
-	public IntSet getItems()
+	public TIntSet getItems()
 	{
 		return _items;
 	}

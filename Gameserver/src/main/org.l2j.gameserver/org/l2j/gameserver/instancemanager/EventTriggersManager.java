@@ -2,11 +2,11 @@ package org.l2j.gameserver.instancemanager;
 
 import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
+import gnu.trove.set.TIntSet;
+import gnu.trove.set.hash.TIntHashSet;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.Reflection;
 import org.l2j.gameserver.network.l2.s2c.EventTriggerPacket;
-import org.napile.primitive.sets.IntSet;
-import org.napile.primitive.sets.impl.CArrayIntSet;
 
 public class EventTriggersManager
 {
@@ -19,18 +19,18 @@ public class EventTriggersManager
 
 	private static final int[] EMPTY_INT_ARRAY = new int[0];
 
-	private final TIntObjectMap<IntSet> _activeTriggers = new TIntObjectHashMap<>();
-	private final TIntObjectMap<IntSet> _activeTriggersByMap = new TIntObjectHashMap<>();
+	private final TIntObjectMap<TIntSet> _activeTriggers = new TIntObjectHashMap<>();
+	private final TIntObjectMap<TIntSet> _activeTriggersByMap = new TIntObjectHashMap<>();
 
 	private EventTriggersManager()
 	{}
 
 	public boolean addTrigger(Reflection reflection, int triggerId)
 	{
-		IntSet triggers = _activeTriggers.get(reflection.getId());
+		TIntSet triggers = _activeTriggers.get(reflection.getId());
 		if(triggers == null)
 		{
-			triggers = new CArrayIntSet();
+			triggers = new TIntHashSet();
 			_activeTriggers.put(reflection.getId(), triggers);
 		}
 		if(triggers.add(triggerId))
@@ -43,10 +43,10 @@ public class EventTriggersManager
 
 	public boolean addTrigger(int mapX, int mapY, int triggerId)
 	{
-		IntSet triggers = _activeTriggersByMap.get(getMapHash(mapX, mapY));
+		TIntSet triggers = _activeTriggersByMap.get(getMapHash(mapX, mapY));
 		if(triggers == null)
 		{
-			triggers = new CArrayIntSet();
+			triggers = new TIntHashSet();
 			_activeTriggersByMap.put(getMapHash(mapX, mapY), triggers);
 		}
 		if(triggers.add(triggerId))
@@ -59,7 +59,7 @@ public class EventTriggersManager
 
 	public boolean removeTrigger(Reflection reflection, int triggerId)
 	{
-		IntSet triggers = _activeTriggers.get(reflection.getId());
+		TIntSet triggers = _activeTriggers.get(reflection.getId());
 		if(triggers != null && triggers.remove(triggerId))
 		{
 			onRemoveTrigger(reflection, triggerId);
@@ -70,7 +70,7 @@ public class EventTriggersManager
 
 	public boolean removeTrigger(int mapX, int mapY, int triggerId)
 	{
-		IntSet triggers = _activeTriggersByMap.get(getMapHash(mapX, mapY));
+		TIntSet triggers = _activeTriggersByMap.get(getMapHash(mapX, mapY));
 		if(triggers != null && triggers.remove(triggerId))
 		{
 			onRemoveTrigger(ReflectionManager.MAIN, triggerId);
@@ -83,19 +83,19 @@ public class EventTriggersManager
 	{
 		if(all && reflection.isMain())
 		{
-			IntSet allTriggers = new CArrayIntSet();
+			TIntSet allTriggers = new TIntHashSet();
 
-			IntSet triggers = _activeTriggers.get(reflection.getId());
+			TIntSet triggers = _activeTriggers.get(reflection.getId());
 			if(triggers != null)
 				allTriggers.addAll(triggers);
 
-			for(IntSet t : _activeTriggersByMap.valueCollection())
+			for(TIntSet t : _activeTriggersByMap.valueCollection())
 				allTriggers.addAll(t);
 
 			return allTriggers.toArray();
 		}
 
-		IntSet triggers = _activeTriggers.get(reflection.getId());
+		TIntSet triggers = _activeTriggers.get(reflection.getId());
 		if(triggers == null)
 			return EMPTY_INT_ARRAY;
 
@@ -104,7 +104,7 @@ public class EventTriggersManager
 
 	public int[] getTriggers(int mapX, int mapY)
 	{
-		IntSet triggers = _activeTriggersByMap.get(getMapHash(mapX, mapY));
+		TIntSet triggers = _activeTriggersByMap.get(getMapHash(mapX, mapY));
 		if(triggers == null)
 			return EMPTY_INT_ARRAY;
 
@@ -113,7 +113,7 @@ public class EventTriggersManager
 
 	public void removeTriggers(Reflection reflection)
 	{
-		IntSet triggers = _activeTriggers.remove(reflection.getId());
+		TIntSet triggers = _activeTriggers.remove(reflection.getId());
 		if(triggers != null)
 		{
 			for(int triggerId : triggers.toArray())
@@ -122,7 +122,7 @@ public class EventTriggersManager
 
 		if(reflection.isMain())
 		{
-			for(IntSet t : _activeTriggersByMap.valueCollection())
+			for(TIntSet t : _activeTriggersByMap.valueCollection())
 			{
 				for(int triggerId : t.toArray())
 					onRemoveTrigger(reflection, triggerId);

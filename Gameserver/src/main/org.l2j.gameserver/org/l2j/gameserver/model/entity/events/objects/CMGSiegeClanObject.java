@@ -1,11 +1,11 @@
 package org.l2j.gameserver.model.entity.events.objects;
 
-import org.l2j.gameserver.model.pledge.Clan;
+import gnu.trove.set.TIntSet;
+import gnu.trove.set.hash.TIntHashSet;
 import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.events.impl.SiegeEvent;
-import org.napile.primitive.sets.IntSet;
-import org.napile.primitive.sets.impl.HashIntSet;
+import org.l2j.gameserver.model.pledge.Clan;
 
 /**
  * @author VISTALL
@@ -15,7 +15,7 @@ public class CMGSiegeClanObject extends SiegeClanObject
 {
 	private static final long serialVersionUID = 1L;
 
-	private IntSet _players = new HashIntSet();
+	private TIntSet _players = new TIntHashSet();
 	private long _param;
 
 	public CMGSiegeClanObject(String type, Clan clan, long param, long date)
@@ -69,7 +69,7 @@ public class CMGSiegeClanObject extends SiegeClanObject
 		_param = param;
 	}
 
-	public IntSet getPlayers()
+	public TIntSet getPlayers()
 	{
 		return _players;
 	}
