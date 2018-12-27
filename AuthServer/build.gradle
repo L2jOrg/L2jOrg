@@ -19,10 +19,10 @@ sourceSets {
     }
 }
 
-dependencies {
+dependencies {    compile 'io.github.joealisson:async-mmocore:2.1.0'
     compile project(':Commons')
 
-    compile 'io.github.joealisson:async-mmocore:2.1.0'
+    compile 'io.github.joealisson:async-mmocore:2.1.1-SNAPSHOT'
     compile 'org.slf4j:slf4j-api:1.8.0-beta2'
 
     runtime 'org.apache.logging.log4j:log4j-core:2.11.0'
