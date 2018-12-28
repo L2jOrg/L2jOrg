@@ -10,6 +10,7 @@ module org.l2j.gameserver {
     requires spring.data.jdbc;
     requires spring.context;
     requires java.xml.bind;
+    requires org.napile.primitive;
     requires java.management;
     requires dom4j;
     requires async.mmocore;

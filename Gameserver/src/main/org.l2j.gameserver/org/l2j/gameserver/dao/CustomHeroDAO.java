@@ -1,12 +1,13 @@
 package org.l2j.gameserver.dao;
 
-import gnu.trove.map.TIntIntMap;
-import gnu.trove.map.hash.TIntIntHashMap;
 import gnu.trove.set.TIntSet;
 import gnu.trove.set.hash.TIntHashSet;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.model.entity.Hero;
+import org.napile.pair.primitive.IntIntPair;
+import org.napile.primitive.maps.IntIntMap;
+import org.napile.primitive.maps.impl.HashIntIntMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,7 +24,7 @@ public class CustomHeroDAO
 	private static final Logger _log = LoggerFactory.getLogger(CustomHeroDAO.class);
 	private static final CustomHeroDAO _instance = new CustomHeroDAO();
 
-	private TIntIntMap _heroes = new TIntIntHashMap();
+	private IntIntMap _heroes = new HashIntIntMap();
 
 	public CustomHeroDAO()
 	{
@@ -150,11 +151,12 @@ public class CustomHeroDAO
 	public int[] getActiveHeroes()
 	{
 		TIntSet result = new TIntHashSet();
-		_heroes.forEachEntry((key, value) -> {
-			if(value == -1 || value > (System.currentTimeMillis() / 1000L))
-				result.add(key);
-			return true;
-		});
+		for(IntIntPair entry : _heroes.entrySet())
+		{
+			int time = entry.getValue();
+			if(time == -1 || time > (System.currentTimeMillis() / 1000L))
+				result.add(entry.getKey());
+		}
 		return result.toArray();
 	}
 }

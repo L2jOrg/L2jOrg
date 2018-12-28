@@ -3,7 +3,6 @@ package handler.voicecommands;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.lang.reference.HardReference;
 import org.l2j.commons.threading.RunnableImpl;
-import org.l2j.commons.util.IntObjectPair;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.ai.CtrlIntention;
@@ -24,6 +23,7 @@ import org.l2j.gameserver.network.l2.s2c.MagicSkillUse;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.skills.AbnormalEffect;
 import org.l2j.gameserver.utils.Location;
+import org.napile.pair.primitive.IntObjectPair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,6 +34,7 @@ import java.sql.ResultSet;
 import static org.l2j.gameserver.model.Zone.ZoneType.no_restart;
 import static org.l2j.gameserver.model.Zone.ZoneType.no_summon;
 
+//import org.l2j.gameserver.network.l2.s2c.SetupGaugePacket;
 
 public class Wedding extends ScriptVoiceCommandHandler
 {

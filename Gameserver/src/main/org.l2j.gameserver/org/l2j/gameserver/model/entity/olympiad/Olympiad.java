@@ -1,8 +1,6 @@
 package org.l2j.gameserver.model.entity.olympiad;
 
-import gnu.trove.map.TIntIntMap;
 import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntIntHashMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.configuration.ExProperties;
 import org.l2j.gameserver.Config;
@@ -24,6 +22,8 @@ import org.l2j.gameserver.network.l2.components.CustomMessage;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.utils.MultiValueIntegerMap;
+import org.napile.primitive.maps.IntIntMap;
+import org.napile.primitive.maps.impl.CHashIntIntMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -42,9 +42,9 @@ public class Olympiad
 
 	private static final TIntObjectMap<OlympiadParticipiantData> _participants = new TIntObjectHashMap<>();
 
-	public static final TIntIntMap _participantRank = new TIntIntHashMap();
+	public static final IntIntMap _participantRank = new CHashIntIntMap();
 
-	public static List<Integer> _nonClassBasedRegisters = new CopyOnWriteArrayList<>();
+	public static List<Integer> _nonClassBasedRegisters = new CopyOnWriteArrayList<Integer>();
 	public static MultiValueIntegerMap _classBasedRegisters = new MultiValueIntegerMap();
 	public static HashMap<Integer, String> _playersHWID = new HashMap<Integer, String>();
 

@@ -1,8 +1,6 @@
 package org.l2j.gameserver.model.entity.events.impl;
 
-import gnu.trove.map.TIntLongMap;
 import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntLongHashMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.dao.JdbcEntityState;
@@ -33,6 +31,8 @@ import org.l2j.gameserver.templates.DoorTemplate;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.TeleportUtils;
+import org.napile.primitive.maps.IntLongMap;
+import org.napile.primitive.maps.impl.CHashIntLongMap;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -126,7 +126,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	protected OnKillListener _killListener;
 	protected OnDeathListener _doorDeathListener = new DoorDeathListener();
 	protected TIntObjectMap<SiegeSummonInfo> _siegeSummons = new TIntObjectHashMap<>();
-	protected TIntLongMap _blockedFameOnKill = new TIntLongHashMap();
+	protected IntLongMap _blockedFameOnKill = new CHashIntLongMap();
 
 	public SiegeEvent(MultiValueSet<String> set)
 	{

@@ -1,6 +1,9 @@
 package org.l2j.gameserver.skills.skillclasses;
 
-import org.l2j.commons.util.IntObjectPair;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 import org.l2j.gameserver.listener.actor.player.OnAnswerListener;
 import org.l2j.gameserver.listener.actor.player.impl.ReviveAnswerListener;
 import org.l2j.gameserver.model.Creature;
@@ -14,9 +17,7 @@ import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.skills.AbnormalType;
 import org.l2j.gameserver.templates.StatsSet;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import org.napile.pair.primitive.IntObjectPair;
 
 public class Resurrect extends Skill
 {
