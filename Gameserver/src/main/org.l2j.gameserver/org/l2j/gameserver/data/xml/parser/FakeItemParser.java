@@ -1,16 +1,20 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import gnu.trove.list.TIntList;
-import gnu.trove.list.array.TIntArrayList;
-import org.dom4j.Element;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.FakeItemHolder;
 import org.l2j.gameserver.templates.item.ArmorTemplate.ArmorType;
 import org.l2j.gameserver.templates.item.ItemGrade;
-
-import java.io.File;
-import java.util.*;
+import org.dom4j.Element;
+import org.napile.primitive.lists.IntList;
+import org.napile.primitive.lists.impl.ArrayIntList;
 
 public class FakeItemParser extends AbstractParser<FakeItemHolder>
 {
@@ -79,9 +83,9 @@ public class FakeItemParser extends AbstractParser<FakeItemHolder>
 		}
 	}
 
-	private static TIntList parseItems(Element rootElement)
+	private static IntList parseItems(Element rootElement)
 	{
-		TIntList list = new TIntArrayList();
+		IntList list = new ArrayIntList();
 		for(Iterator<Element> iterator = rootElement.elementIterator(); iterator.hasNext();)
 		{
 			Element element = iterator.next();
@@ -94,9 +98,9 @@ public class FakeItemParser extends AbstractParser<FakeItemHolder>
 		return list;
 	}
 
-	private static Map<ArmorType, TIntList> parsePackArmors(Element rootElement)
+	private static Map<ArmorType, IntList> parsePackArmors(Element rootElement)
 	{
-		Map<ArmorType, TIntList> map = new HashMap<>();
+		Map<ArmorType, IntList> map = new HashMap<ArmorType, IntList>();
 		for(Iterator<Element> iterator = rootElement.elementIterator(); iterator.hasNext();)
 		{
 			Element element = iterator.next();
@@ -104,7 +108,7 @@ public class FakeItemParser extends AbstractParser<FakeItemHolder>
 			{
 				ArmorType type = ArmorType.valueOf(element.attributeValue("type"));
 				if(map.get(type) == null)
-					map.put(type, new TIntArrayList());
+					map.put(type, new ArrayIntList());
 
 				map.get(type).addAll(parseItems(element));
 			}
@@ -112,9 +116,9 @@ public class FakeItemParser extends AbstractParser<FakeItemHolder>
 		return map;
 	}
 
-	private static List<TIntList> parsePackAccessorys(Element rootElement)
+	private static List<IntList> parsePackAccessorys(Element rootElement)
 	{
-		List<TIntList> list = new ArrayList<>();
+		List<IntList> list = new ArrayList<IntList>();
 		for(Iterator<Element> iterator = rootElement.elementIterator(); iterator.hasNext();)
 		{
 			Element element = iterator.next();
