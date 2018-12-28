@@ -37,6 +37,7 @@ dependencies {
     runtimeOnly ('mysql:mysql-connector-java:8.0.11') {
         transitive = false
     }
+
 }
 
 task createVersionFile(dependsOn: processResources) {
