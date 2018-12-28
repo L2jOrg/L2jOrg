@@ -186,15 +186,6 @@ public class HtmlMessage implements IBroadcastPacket {
 		}
 
 		content = HtmlUtils.evaluate(sb.toString(), _variables);
-		sb.delete(0, sb.length());
-
-		if(!content.startsWith("<html>"))
-		{
-			sb.append("<html><body>");
-			sb.append(content);
-			sb.append("</body></html>");
-			return sb;
-		}
 
 		if(content.length() > MAX_HTML_SIZE) {
 		    content = HTML_IS_TOO_LONG;

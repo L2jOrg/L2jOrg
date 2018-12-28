@@ -1,6 +1,5 @@
 package org.l2j.gameserver.model;
 
-import gnu.trove.TCollections;
 import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.lang.ArrayUtils;
@@ -26,7 +25,7 @@ public class GameObjectsStorage
 	private static TIntObjectMap<GameObject> _objects = new TIntObjectHashMap<>(60000 * Config.RATE_MOB_SPAWN + Config.MAXIMUM_ONLINE_USERS + 1000);
 	private static TIntObjectMap<StaticObjectInstance> _staticObjects = new TIntObjectHashMap<>(1000);
 	private static TIntObjectMap<NpcInstance> _npcs = new TIntObjectHashMap<>(60000 * Config.RATE_MOB_SPAWN);
-	private static TIntObjectMap<Player> _players = TCollections.synchronizedMap(new TIntObjectHashMap<>(Config.MAXIMUM_ONLINE_USERS));
+	private static TIntObjectMap<Player> _players = new TIntObjectHashMap<>(Config.MAXIMUM_ONLINE_USERS);
 
 	public static GameObject findObject(int objId)
 	{
