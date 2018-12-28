@@ -1,8 +1,11 @@
 package org.l2j.gameserver.templates.fakeplayer;
 
-import gnu.trove.set.TIntSet;
-import gnu.trove.set.hash.TIntHashSet;
-import org.dom4j.Element;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.ZoneHolder;
 import org.l2j.gameserver.data.xml.parser.ZoneParser;
@@ -16,10 +19,12 @@ import org.l2j.gameserver.templates.ZoneTemplate;
 import org.l2j.gameserver.templates.fakeplayer.actions.GoToTownActions;
 import org.l2j.gameserver.templates.fakeplayer.actions.OrdinaryActions;
 import org.l2j.gameserver.utils.Location;
+
+import org.dom4j.Element;
+import org.napile.primitive.sets.IntSet;
+import org.napile.primitive.sets.impl.HashIntSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.*;
 
 public class FarmZoneTemplate
 {
@@ -33,10 +38,10 @@ public class FarmZoneTemplate
 	private final Set<ClassId> _availableClasses;
 	private final Set<ClassType> _availableTypes;
 	private final Set<Race> _availableRaces;
-	private final TIntSet _farmMonsters;
-	private final TIntSet _ignoredMonsters;
+	private final IntSet _farmMonsters;
+	private final IntSet _ignoredMonsters;
 
-	public FarmZoneTemplate(int minLevel, int maxLevel, List<ZoneTemplate> zoneTemplates, List<Location> spawnPoints, OrdinaryActions onObtainMaxLevelAction, GoToTownActions goToTownAction, Set<ClassId> availableClasses, Set<ClassType> availableTypes, Set<Race> availableRaces, TIntSet farmMonsters, TIntSet ignoredMonsters)
+	public FarmZoneTemplate(int minLevel, int maxLevel, List<ZoneTemplate> zoneTemplates, List<Location> spawnPoints, OrdinaryActions onObtainMaxLevelAction, GoToTownActions goToTownAction, Set<ClassId> availableClasses, Set<ClassType> availableTypes, Set<Race> availableRaces, IntSet farmMonsters, IntSet ignoredMonsters)
 	{
 		_minLevel = minLevel;
 		_maxLevel = maxLevel;
@@ -96,7 +101,7 @@ public class FarmZoneTemplate
 		return _goToTownAction;
 	}
 
-	public TIntSet getFarmMonsters()
+	public IntSet getFarmMonsters()
 	{
 		return _farmMonsters;
 	}
@@ -215,7 +220,7 @@ public class FarmZoneTemplate
 		if(tempElement != null)
 			goToTownAction = GoToTownActions.parse(actionsHolder, tempElement);
 
-		TIntSet farmMonsters = new TIntHashSet();
+		IntSet farmMonsters = new HashIntSet();
 		for(Iterator<Element> i1 = element.elementIterator("farm_monsters"); i1.hasNext();)
 		{
 			Element e1 = i1.next();
@@ -226,7 +231,7 @@ public class FarmZoneTemplate
 			}
 		}
 
-		TIntSet ignoredMonsters = new TIntHashSet();
+		IntSet ignoredMonsters = new HashIntSet();
 		for(Iterator<Element> i1 = element.elementIterator("ignored_monsters"); i1.hasNext();)
 		{
 			Element e1 = i1.next();

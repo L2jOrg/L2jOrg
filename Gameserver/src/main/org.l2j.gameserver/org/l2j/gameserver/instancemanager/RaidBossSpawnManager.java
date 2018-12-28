@@ -2,8 +2,6 @@ package org.l2j.gameserver.instancemanager;
 
 import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
-import gnu.trove.set.TIntSet;
-import gnu.trove.set.hash.TIntHashSet;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Announcements;
@@ -15,6 +13,8 @@ import org.l2j.gameserver.model.instances.ReflectionBossInstance;
 import org.l2j.gameserver.tables.GmListTable;
 import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
+import org.napile.primitive.sets.IntSet;
+import org.napile.primitive.sets.impl.HashIntSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,9 +29,9 @@ public class RaidBossSpawnManager
 	protected static final TIntObjectMap<Spawner> _spawntable = new TIntObjectHashMap<>();
 
 	protected static TIntObjectMap<StatsSet> _storedInfo;
-	private final TIntSet _aliveRaidBosses = new TIntHashSet();
+	private final IntSet _aliveRaidBosses = new HashIntSet();
 
-	public enum Status
+	public static enum Status
 	{
 		ALIVE,
 		DEAD,

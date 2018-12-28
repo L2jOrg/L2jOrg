@@ -1,7 +1,10 @@
 package org.l2j.gameserver.model.entity.events.impl;
 
-import gnu.trove.set.TIntSet;
-import gnu.trove.set.hash.TIntHashSet;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collections;
+import java.util.List;
+
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.gameserver.Config;
@@ -13,13 +16,14 @@ import org.l2j.gameserver.data.xml.holder.EventHolder;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.instancemanager.ReflectionManager;
 import org.l2j.gameserver.listener.actor.OnKillListener;
-import org.l2j.gameserver.model.Creature;
-import org.l2j.gameserver.model.GameObjectsStorage;
-import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.model.Spawner;
+import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.entity.HeroDiary;
-import org.l2j.gameserver.model.entity.events.objects.*;
+import org.l2j.gameserver.model.entity.events.objects.DoorObject;
+import org.l2j.gameserver.model.entity.events.objects.SiegeClanObject;
+import org.l2j.gameserver.model.entity.events.objects.SiegeToggleNpcObject;
+import org.l2j.gameserver.model.entity.events.objects.SpawnExObject;
+import org.l2j.gameserver.model.entity.events.objects.SpawnSimpleObject;
 import org.l2j.gameserver.model.entity.residence.Castle;
 import org.l2j.gameserver.model.entity.residence.ResidenceSide;
 import org.l2j.gameserver.model.instances.NpcInstance;
@@ -35,11 +39,8 @@ import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.templates.item.support.MerchantGuard;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.SiegeUtils;
-
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.List;
+import org.napile.primitive.sets.IntSet;
+import org.napile.primitive.sets.impl.HashIntSet;
 
 /**
  * @author VISTALL
@@ -100,7 +101,7 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 	private boolean _firstStep = false;
 
     private final Calendar _validationDate;
-    private final TIntSet _visitedParticipants = new TIntHashSet();
+    private final IntSet _visitedParticipants = new HashIntSet();
 
 	public CastleSiegeEvent(MultiValueSet<String> set)
 	{

@@ -1,13 +1,13 @@
 package org.l2j.gameserver.dao;
 
-import gnu.trove.set.TIntSet;
-import gnu.trove.set.hash.TIntHashSet;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.model.entity.Hero;
 import org.napile.pair.primitive.IntIntPair;
 import org.napile.primitive.maps.IntIntMap;
 import org.napile.primitive.maps.impl.HashIntIntMap;
+import org.napile.primitive.sets.IntSet;
+import org.napile.primitive.sets.impl.HashIntSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -150,7 +150,7 @@ public class CustomHeroDAO
 
 	public int[] getActiveHeroes()
 	{
-		TIntSet result = new TIntHashSet();
+		IntSet result = new HashIntSet();
 		for(IntIntPair entry : _heroes.entrySet())
 		{
 			int time = entry.getValue();

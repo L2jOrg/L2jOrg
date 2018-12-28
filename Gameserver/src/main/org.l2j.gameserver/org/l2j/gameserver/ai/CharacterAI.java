@@ -2,8 +2,6 @@ package org.l2j.gameserver.ai;
 
 import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
-import gnu.trove.set.TIntSet;
-import gnu.trove.set.hash.TIntHashSet;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.ai.PlayableAI.AINextAction;
@@ -11,6 +9,8 @@ import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.network.l2.s2c.DiePacket;
 import org.l2j.gameserver.utils.Location;
+import org.napile.primitive.sets.IntSet;
+import org.napile.primitive.sets.impl.CArrayIntSet;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.concurrent.ScheduledFuture;
 
 public class CharacterAI extends AbstractAI
 {
-	private final TIntSet _blockedTimers = new TIntHashSet();
+	private final IntSet _blockedTimers = new CArrayIntSet();
 	private final List<ScheduledFuture<?>> _timers = new ArrayList<ScheduledFuture<?>>();
 	private final TIntObjectMap<ScheduledFuture<?>> _tasks = new TIntObjectHashMap<>();
 

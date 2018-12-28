@@ -1,6 +1,11 @@
 package org.l2j.gameserver.ai;
 
-import gnu.trove.set.TIntSet;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.concurrent.ScheduledFuture;
+
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
@@ -11,7 +16,13 @@ import org.l2j.gameserver.listener.actor.OnDeathListener;
 import org.l2j.gameserver.listener.actor.player.OnLevelChangeListener;
 import org.l2j.gameserver.listener.actor.player.OnPlayerChatMessageReceive;
 import org.l2j.gameserver.listener.actor.player.OnTeleportListener;
-import org.l2j.gameserver.model.*;
+import org.l2j.gameserver.model.Creature;
+import org.l2j.gameserver.model.GameObject;
+import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.model.Skill;
+import org.l2j.gameserver.model.Territory;
+import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.model.Zone;
 import org.l2j.gameserver.model.actor.instances.creature.Abnormal;
 import org.l2j.gameserver.model.actor.instances.creature.AbnormalList;
 import org.l2j.gameserver.model.base.Race;
@@ -28,16 +39,20 @@ import org.l2j.gameserver.templates.ZoneTemplate;
 import org.l2j.gameserver.templates.fakeplayer.FakePlayerAITemplate;
 import org.l2j.gameserver.templates.fakeplayer.FarmZoneTemplate;
 import org.l2j.gameserver.templates.fakeplayer.TownZoneTemplate;
-import org.l2j.gameserver.templates.fakeplayer.actions.*;
-import org.l2j.gameserver.utils.*;
+import org.l2j.gameserver.templates.fakeplayer.actions.AbstractAction;
+import org.l2j.gameserver.templates.fakeplayer.actions.GoToTownActions;
+import org.l2j.gameserver.templates.fakeplayer.actions.OrdinaryActions;
+import org.l2j.gameserver.templates.fakeplayer.actions.ReviveAction;
+import org.l2j.gameserver.templates.fakeplayer.actions.TeleportToClosestTownAction;
+import org.l2j.gameserver.utils.FakePlayerUtils;
+import org.l2j.gameserver.utils.ItemFunctions;
+import org.l2j.gameserver.utils.Location;
+import org.l2j.gameserver.utils.PositionUtils;
+import org.l2j.gameserver.utils.TeleportUtils;
+
+import org.napile.primitive.sets.IntSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import java.util.concurrent.ScheduledFuture;
 
 public class FakeAI extends PlayerAI implements OnDeathListener, OnLevelChangeListener, OnTeleportListener, OnPlayerChatMessageReceive
 {
@@ -598,7 +613,7 @@ public class FakeAI extends PlayerAI implements OnDeathListener, OnLevelChangeLi
 			if (_currentFarmZone.isIgnoredMonster(n.getNpcId()))
 				continue;
 
-			TIntSet farmMonsters = _currentFarmZone.getFarmMonsters();
+			IntSet farmMonsters = _currentFarmZone.getFarmMonsters();
 			if (farmMonsters.isEmpty())
 			{
 				if (Math.abs(player.getLevel() - n.getLevel()) > 10)

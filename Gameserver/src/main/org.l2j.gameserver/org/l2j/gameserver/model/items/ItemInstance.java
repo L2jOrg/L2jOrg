@@ -1,11 +1,8 @@
 package org.l2j.gameserver.model.items;
 
-import gnu.trove.set.TIntSet;
-import gnu.trove.set.hash.TIntHashSet;
 import org.l2j.commons.collections.CollectionUtils;
 import org.l2j.commons.dao.JdbcEntity;
 import org.l2j.commons.dao.JdbcEntityState;
-import org.l2j.commons.util.TroveUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.dao.HidenItemsDAO;
@@ -35,6 +32,9 @@ import org.l2j.gameserver.templates.item.ItemType;
 import org.l2j.gameserver.templates.item.support.Ensoul;
 import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.Location;
+import org.napile.primitive.Containers;
+import org.napile.primitive.sets.IntSet;
+import org.napile.primitive.sets.impl.HashIntSet;
 
 import java.util.Collections;
 import java.util.List;
@@ -106,7 +106,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	/** Item drop time for autodestroy task */
 	private long _dropTime;
 
-	private TIntSet _dropPlayers = TroveUtils.EMPTY_INT_SET;
+	private IntSet _dropPlayers = Containers.EMPTY_INT_SET;
 	private long _dropTimeOwner;
 
 	// Charged shot's power.
@@ -874,7 +874,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		// activate non owner penalty
 		if(lastAttacker != null) // lastAttacker в данном случае top damager
 		{
-			_dropPlayers = new TIntHashSet(1, 2);
+			_dropPlayers = new HashIntSet(1, 2);
 			for(Player $member : lastAttacker.getPlayerGroup())
 				_dropPlayers.add($member.getObjectId());
 
@@ -1218,7 +1218,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		return _enchantOptions;
 	}
 
-	public TIntSet getDropPlayers()
+	public IntSet getDropPlayers()
 	{
 		return _dropPlayers;
 	}
