@@ -1,11 +1,12 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
+import java.util.Collection;
+
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.templates.premiumaccount.PremiumAccountTemplate;
 
-import java.util.Collection;
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.TreeIntObjectMap;
 
 public class PremiumAccountHolder extends AbstractHolder
 {
@@ -13,7 +14,7 @@ public class PremiumAccountHolder extends AbstractHolder
 
 	private static final PremiumAccountTemplate DEFAULT_ACCOUNT_TEMPLATE = new PremiumAccountTemplate(0);
 
-	private final TIntObjectMap<PremiumAccountTemplate> _premiumAccounts = new TIntObjectHashMap<>();
+	private final IntObjectMap<PremiumAccountTemplate> _premiumAccounts = new TreeIntObjectMap<PremiumAccountTemplate>();
 
 	public static PremiumAccountHolder getInstance()
 	{
@@ -34,7 +35,7 @@ public class PremiumAccountHolder extends AbstractHolder
 
 	public Collection<PremiumAccountTemplate> getPremiumAccounts()
 	{
-		return _premiumAccounts.valueCollection();
+		return _premiumAccounts.values();
 	}
 
 	@Override

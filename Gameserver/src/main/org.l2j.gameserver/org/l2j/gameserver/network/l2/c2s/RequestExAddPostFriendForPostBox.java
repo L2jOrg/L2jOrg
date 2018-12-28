@@ -1,6 +1,5 @@
 package org.l2j.gameserver.network.l2.c2s;
 
-import gnu.trove.map.TIntObjectMap;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.dao.CharacterDAO;
 import org.l2j.gameserver.dao.CharacterPostFriendDAO;
@@ -8,6 +7,7 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ExConfirmAddingPostFriend;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
+import org.napile.primitive.maps.IntObjectMap;
 
 /**
  * @author VISTALL
@@ -43,7 +43,7 @@ public class RequestExAddPostFriendForPostBox extends L2GameClientPacket
 			return;
 		}
 
-		TIntObjectMap<String> postFriend = player.getPostFriends();
+		IntObjectMap<String> postFriend = player.getPostFriends();
 		if(postFriend.size() >= Player.MAX_POST_FRIEND_SIZE)
 		{
 			player.sendPacket(new ExConfirmAddingPostFriend(_name, ExConfirmAddingPostFriend.LIST_IS_FULL));

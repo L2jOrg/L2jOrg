@@ -1,16 +1,16 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-import org.l2j.commons.data.xml.AbstractHolder;
-import org.l2j.commons.time.cron.SchedulingPattern;
-import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.templates.InstantZone;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map.Entry;
+
+import org.l2j.commons.data.xml.AbstractHolder;
+import org.l2j.commons.time.cron.SchedulingPattern;
+import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.templates.InstantZone;
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author VISTALL
@@ -19,7 +19,7 @@ import java.util.Map.Entry;
 public class InstantZoneHolder extends AbstractHolder
 {
 	private static final InstantZoneHolder _instance = new InstantZoneHolder();
-	private TIntObjectMap<InstantZone> _zones = new TIntObjectHashMap<>();
+	private IntObjectMap<InstantZone> _zones = new HashIntObjectMap<InstantZone>();
 
 	public static InstantZoneHolder getInstance()
 	{
@@ -94,7 +94,7 @@ public class InstantZoneHolder extends AbstractHolder
 		if(getInstantZone(id).getSharedReuseGroup() < 1)
 			return null;
 		List<Integer> sharedInstanceIds = new ArrayList<Integer>();
-		for(InstantZone iz : _zones.valueCollection())
+		for(InstantZone iz : _zones.values())
 			if(iz.getSharedReuseGroup() > 0 && getInstantZone(id).getSharedReuseGroup() > 0 && iz.getSharedReuseGroup() == getInstantZone(id).getSharedReuseGroup())
 				sharedInstanceIds.add(iz.getId());
 		return sharedInstanceIds;
@@ -105,7 +105,7 @@ public class InstantZoneHolder extends AbstractHolder
 		if(groupId < 1)
 			return null;
 		List<Integer> sharedInstanceIds = new ArrayList<Integer>();
-		for(InstantZone iz : _zones.valueCollection())
+		for(InstantZone iz : _zones.values())
 			if(iz.getSharedReuseGroup() > 0 && iz.getSharedReuseGroup() == groupId)
 				sharedInstanceIds.add(iz.getId());
 		return sharedInstanceIds;

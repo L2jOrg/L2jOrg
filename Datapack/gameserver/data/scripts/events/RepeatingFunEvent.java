@@ -1,13 +1,13 @@
 package events;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.time.cron.SchedulingPattern;
 import org.l2j.commons.util.Rnd;
-import org.l2j.commons.util.Util;
 import org.l2j.gameserver.model.entity.events.EventAction;
 import org.l2j.gameserver.model.entity.events.actions.StartStopAction;
+import org.napile.pair.primitive.IntObjectPair;
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.TreeIntObjectMap;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,11 +16,12 @@ public class RepeatingFunEvent extends FunEvent
 {
 	private final SchedulingPattern _repeatPattern;
 	private final int _random;
-	private TIntObjectMap<List<EventAction>> _storedOnTimeActions = null;
+	private IntObjectMap<List<EventAction>> _storedOnTimeActions = null;
 
 	public RepeatingFunEvent(MultiValueSet<String> set)
 	{
 		super(set);
+
 		final String repeat = set.getString("repeat_time_pattern", null);
 		_repeatPattern = repeat != null ? new SchedulingPattern(repeat) : null;
 		_random = set.getInteger("random", 0);
@@ -51,15 +52,17 @@ public class RepeatingFunEvent extends FunEvent
 		{
 			if (!_onTimeActions.isEmpty())
 			{
-				_storedOnTimeActions = new TIntObjectHashMap<>();
-				_onTimeActions.forEachEntry((key, value) -> {
-					if(!Util.isNullOrEmpty(value)) {
-						List<EventAction> newList = new ArrayList<>(value.size());
-						newList.addAll(value);
-						_storedOnTimeActions.put(key, newList);
+				_storedOnTimeActions = new TreeIntObjectMap<List<EventAction>>();
+				for (IntObjectPair<List<EventAction>> actionList : _onTimeActions.entrySet())
+				{
+					if (actionList.getValue() != null && !actionList.getValue().isEmpty())
+					{
+						List<EventAction> newList = new ArrayList<EventAction>(actionList.getValue().size());
+						for (EventAction action : actionList.getValue())
+							newList.add(action);
+						_storedOnTimeActions.put(actionList.getKey(), newList);
 					}
-					return true;
-				});
+				}					
 			}
 		}
 		else
@@ -67,14 +70,14 @@ public class RepeatingFunEvent extends FunEvent
 			clearActions();
 			_onTimeActions.clear();
 
-			if (_storedOnTimeActions != null) {
-				_storedOnTimeActions.forEachEntry((key, value) -> {
-					List<EventAction> newList = new ArrayList<EventAction>(value.size());
-					newList.addAll(value);
-					_onTimeActions.put(key, newList);
-					return true;
-				});
-			}
+			if (_storedOnTimeActions != null)
+				for (IntObjectPair<List<EventAction>> actionList : _storedOnTimeActions.entrySet())
+				{
+					List<EventAction> newList = new ArrayList<EventAction>(actionList.getValue().size());
+					for (EventAction action : actionList.getValue())
+						newList.add(action);
+					_onTimeActions.put(actionList.getKey(), newList);
+				}				
 		}
 
 		addOnTimeAction(0, new StartStopAction(StartStopAction.EVENT, true));

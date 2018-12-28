@@ -1,12 +1,8 @@
 package org.l2j.gameserver.model.entity.events;
 
-import gnu.trove.iterator.TIntObjectIterator;
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.listener.Listener;
 import org.l2j.commons.listener.ListenerList;
-import org.l2j.commons.util.TroveUtils;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.dao.ItemsDAO;
 import org.l2j.gameserver.instancemanager.ReflectionManager;
@@ -28,6 +24,11 @@ import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.TimeUtils;
+import org.napile.pair.primitive.IntObjectPair;
+import org.napile.primitive.Containers;
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.CHashIntObjectMap;
+import org.napile.primitive.maps.impl.TreeIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -47,7 +48,7 @@ public abstract class Event {
 
 	protected final Logger logger = LoggerFactory.getLogger(getClass());
 
-	protected final TIntObjectMap<List<EventAction>> _onTimeActions = new TIntObjectHashMap<>();
+	protected final IntObjectMap<List<EventAction>> _onTimeActions = new TreeIntObjectMap<List<EventAction>>();
 	protected final List<EventAction> _onStartActions = new ArrayList<EventAction>(0);
 	protected final List<EventAction> _onStopActions = new ArrayList<EventAction>(0);
 	protected final List<EventAction> _onInitActions = new ArrayList<EventAction>(0);
@@ -59,7 +60,7 @@ public abstract class Event {
 
 	protected final ListenerListImpl _listenerList = new ListenerListImpl();
 
-	protected TIntObjectMap<ItemInstance> _banishedItems = TroveUtils.emptyIntObjectMap();
+	protected IntObjectMap<ItemInstance> _banishedItems = Containers.emptyIntObjectMap();
 
 	private List<Future<?>> _tasks = null;
 
@@ -542,20 +543,21 @@ public abstract class Event {
 	//===============================================================================================================
 	public void addBanishItem(ItemInstance item)
 	{
-		if(_banishedItems == TroveUtils.<ItemInstance>emptyIntObjectMap())
-			_banishedItems = new TIntObjectHashMap<>();
+		if(_banishedItems == Containers.<ItemInstance>emptyIntObjectMap())
+			_banishedItems = new CHashIntObjectMap<ItemInstance>();
 
 		_banishedItems.put(item.getObjectId(), item);
 	}
 
 	public void removeBanishItems()
 	{
-		TIntObjectIterator<ItemInstance> iterator = _banishedItems.iterator();
+		Iterator<IntObjectPair<ItemInstance>> iterator = _banishedItems.entrySet().iterator();
 		while(iterator.hasNext())
 		{
-			iterator.advance();
+			IntObjectPair<ItemInstance> entry = iterator.next();
+			iterator.remove();
 
-			ItemInstance item = ItemsDAO.getInstance().load(iterator.key());
+			ItemInstance item = ItemsDAO.getInstance().load(entry.getKey());
 			if(item != null)
 			{
 				if(item.getOwnerId() > 0)
@@ -570,7 +572,7 @@ public abstract class Event {
 				item.delete();
 			}
 			else
-				item = iterator.value();
+				item = entry.getValue();
 
 			item.deleteMe();
 		}
@@ -589,6 +591,9 @@ public abstract class Event {
 		_listenerList.remove(l);
 	}
 
+	//===============================================================================================================
+	//											Object
+	//===============================================================================================================
 	public void cloneTo(Event e)
 	{
 		for(EventAction a : _onInitActions)
@@ -600,10 +605,8 @@ public abstract class Event {
 		for(EventAction a : _onStopActions)
 			e._onStopActions.add(a);
 
-		_onTimeActions.forEachEntry((key, value) -> {
-			e.addOnTimeActions(key, value);
-			return true;
-		});
+		for(IntObjectPair<List<EventAction>> entry : _onTimeActions.entrySet())
+			e.addOnTimeActions(entry.getKey(), entry.getValue());
 	}
 
 	public String getVisibleName(Player player, Player observer) {

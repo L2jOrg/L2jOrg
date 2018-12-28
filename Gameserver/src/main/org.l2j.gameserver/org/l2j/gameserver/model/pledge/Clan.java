@@ -1,7 +1,5 @@
 package org.l2j.gameserver.model.pledge;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import gnu.trove.set.TIntSet;
 import gnu.trove.set.hash.TIntHashSet;
 import org.l2j.commons.collections.JoinedIterator;
@@ -36,6 +34,8 @@ import org.l2j.gameserver.utils.Log;
 import org.l2j.gameserver.utils.PlayerUtils;
 import org.l2j.gameserver.utils.PledgeBonusUtils;
 import org.l2j.gameserver.utils.SiegeUtils;
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.CTreeIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -96,9 +96,9 @@ public class Clan implements Iterable<UnitMember>
 	private final TIntSet _atWarWith = new TIntHashSet();
 	private final TIntSet _atWarAttackers = new TIntHashSet();
 
-	protected TIntObjectMap<SkillEntry> _skills = new TIntObjectHashMap<>();
-	protected TIntObjectMap<RankPrivs> _privs = new TIntObjectHashMap<>();
-	protected TIntObjectMap<SubUnit> _subUnits = new TIntObjectHashMap<>();
+	protected IntObjectMap<SkillEntry> _skills = new CTreeIntObjectMap<SkillEntry>();
+	protected IntObjectMap<RankPrivs> _privs = new CTreeIntObjectMap<RankPrivs>();
+	protected IntObjectMap<SubUnit> _subUnits = new CTreeIntObjectMap<SubUnit>();
 
 	private int _reputation = 0;
 
@@ -1055,7 +1055,7 @@ public class Clan implements Iterable<UnitMember>
 
 	public Collection<SkillEntry> getSkills()
 	{
-		return _skills.valueCollection();
+		return _skills.values();
 	}
 
 	/** used to retrieve all skills */
@@ -1064,7 +1064,7 @@ public class Clan implements Iterable<UnitMember>
 		if(_reputation < 0)
 			return SkillEntry.EMPTY_ARRAY;
 
-		Collection<SkillEntry> values = _skills.valueCollection();
+		Collection<SkillEntry> values = _skills.values();
 		return values.toArray(new SkillEntry[values.size()]);
 	}
 
@@ -1136,7 +1136,7 @@ public class Clan implements Iterable<UnitMember>
 
 	public void addSkillsQuietly(Player player)
 	{
-		for(SkillEntry skillEntry : _skills.valueCollection())
+		for(SkillEntry skillEntry : _skills.values())
 			addSkill(player, skillEntry);
 
 		final SubUnit subUnit = getSubUnit(player.getPledgeType());
@@ -1155,7 +1155,7 @@ public class Clan implements Iterable<UnitMember>
 		if(player.isInOlympiadMode()) // не разрешаем кланскиллы на олимпе
 			return;
 
-		for(SkillEntry skillEntry : _skills.valueCollection())
+		for(SkillEntry skillEntry : _skills.values())
 		{
 			Skill skill = skillEntry.getTemplate();
 			if(skill.getMinPledgeRank().ordinal() <= player.getPledgeRank().ordinal())
@@ -1172,7 +1172,7 @@ public class Clan implements Iterable<UnitMember>
 
 	public void disableSkills(Player player)
 	{
-		for(SkillEntry skillEntry : _skills.valueCollection())
+		for(SkillEntry skillEntry : _skills.values())
 			player.addUnActiveSkill(skillEntry.getTemplate());
 
 		final SubUnit subUnit = getSubUnit(player.getPledgeType());
@@ -1594,7 +1594,7 @@ public class Clan implements Iterable<UnitMember>
 	{
 		if(_privs == null)
 			return new RankPrivs[0];
-		return _privs.values(new RankPrivs[_privs.size()]);
+		return _privs.values().toArray(new RankPrivs[_privs.values().size()]);
 	}
 
 	private static class ClanReputationComparator implements Comparator<Clan>
@@ -1622,7 +1622,7 @@ public class Clan implements Iterable<UnitMember>
 
 	public final Collection<SubUnit> getAllSubUnits()
 	{
-		return _subUnits.valueCollection();
+		return _subUnits.values();
 	}
 
 	public List<IBroadcastPacket> listAll()
@@ -1682,7 +1682,7 @@ public class Clan implements Iterable<UnitMember>
 	public Iterator<UnitMember> iterator()
 	{
 		List<Iterator<UnitMember>> iterators = new ArrayList<Iterator<UnitMember>>(_subUnits.size());
-		for(SubUnit subUnit : _subUnits.valueCollection())
+		for(SubUnit subUnit : _subUnits.values())
 			iterators.add(subUnit.getUnitMembers().iterator());
 		return new JoinedIterator<UnitMember>(iterators);
 	}

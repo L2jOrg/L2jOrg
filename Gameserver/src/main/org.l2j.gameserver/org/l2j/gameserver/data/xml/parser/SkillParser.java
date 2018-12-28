@@ -1,7 +1,5 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.dom4j.Element;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
@@ -14,6 +12,8 @@ import org.l2j.gameserver.templates.skill.EffectTemplate;
 import org.l2j.gameserver.templates.skill.restoration.RestorationGroup;
 import org.l2j.gameserver.templates.skill.restoration.RestorationInfo;
 import org.l2j.gameserver.templates.skill.restoration.RestorationItem;
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.TreeIntObjectMap;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -29,7 +29,7 @@ public final class SkillParser extends StatParser<SkillHolder>
 {
 	private static final SkillParser _instance = new SkillParser();
 
-	private final TIntObjectMap<TIntObjectMap<StatsSet>> _skillsTables = new TIntObjectHashMap<>();
+	private final IntObjectMap<IntObjectMap<StatsSet>> _skillsTables = new TreeIntObjectMap<IntObjectMap<StatsSet>>();
 
 	public static SkillParser getInstance()
 	{
@@ -88,7 +88,7 @@ public final class SkillParser extends StatParser<SkillHolder>
 			set.set("max_level", levels);
 			set.set("name", skillElement.attributeValue("name"));
 
-			final TIntObjectMap<RestorationInfo> restorations = new TIntObjectHashMap<>();
+			final IntObjectMap<RestorationInfo> restorations = new TreeIntObjectMap<RestorationInfo>();
 
 			for(Iterator<Element> subIterator = skillElement.elementIterator(); subIterator.hasNext();)
 			{
@@ -159,7 +159,7 @@ public final class SkillParser extends StatParser<SkillHolder>
 
 		Object result = null;
 
-		TIntObjectMap<StatsSet> tables = _skillsTables.get(skillId);
+		IntObjectMap<StatsSet> tables = _skillsTables.get(skillId);
 		if(tables == null)
 		{
 			logger.warn("Error while read table[" + name + "] value for skill ID[" + skillId + "], LEVEL[" + skillLevel + "] (Cannot find tables)!");
@@ -267,7 +267,7 @@ public final class SkillParser extends StatParser<SkillHolder>
 		skill.attachEffect(effectTemplate);
 	}
 
-	private void parseRestoration(Element element, TIntObjectMap<RestorationInfo> map)
+	private void parseRestoration(Element element, IntObjectMap<RestorationInfo> map)
 	{
 		int skillLevel = Integer.parseInt(element.attributeValue("level"));
 		int consumeItemId = element.attributeValue("consume_item_id") == null ? -1 : Integer.parseInt(element.attributeValue("consume_item_id"));
@@ -319,10 +319,10 @@ public final class SkillParser extends StatParser<SkillHolder>
 		while(data.hasMoreTokens())
 			values.add(data.nextToken());
 
-		TIntObjectMap<StatsSet> tables = _skillsTables.get(skillId);
+		IntObjectMap<StatsSet> tables = _skillsTables.get(skillId);
 		if(tables == null)
 		{
-			tables = new TIntObjectHashMap<>();
+			tables = new TreeIntObjectMap<StatsSet>();
 			_skillsTables.put(skillId, tables);
 		}
 

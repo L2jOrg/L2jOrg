@@ -1,13 +1,13 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.model.GameObject;
 import org.l2j.gameserver.model.Zone;
 import org.l2j.gameserver.model.entity.Reflection;
 import org.l2j.gameserver.model.entity.residence.Residence;
 import org.l2j.gameserver.model.entity.residence.ResidenceType;
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.TreeIntObjectMap;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -22,7 +22,7 @@ public final class ResidenceHolder extends AbstractHolder
 {
 	private static ResidenceHolder _instance = new ResidenceHolder();
 
-	private TIntObjectMap<Residence> _residences = new TIntObjectHashMap<>();
+	private IntObjectMap<Residence> _residences = new TreeIntObjectMap<Residence>();
 
 	public static ResidenceHolder getInstance()
 	{
@@ -56,7 +56,7 @@ public final class ResidenceHolder extends AbstractHolder
 	public <R extends Residence> List<R> getResidenceList(Class<R> t)
 	{
 		List<R> residences = new ArrayList<R>();
-		for(Residence r : _residences.valueCollection())
+		for(Residence r : _residences.values())
 		{
 			if(r.getClass() == t || t.isAssignableFrom(r.getClass()))
 				residences.add((R) r);
@@ -67,7 +67,7 @@ public final class ResidenceHolder extends AbstractHolder
 
 	public Collection<Residence> getResidences()
 	{
-		return _residences.valueCollection();
+		return _residences.values();
 	}
 
 	public <R extends Residence> R getResidenceByObject(Class<? extends Residence> type, GameObject object)

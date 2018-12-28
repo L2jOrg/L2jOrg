@@ -1,14 +1,15 @@
 package org.l2j.gameserver.instancemanager;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
-import org.l2j.gameserver.data.xml.holder.DoorHolder;
-import org.l2j.gameserver.data.xml.holder.ZoneHolder;
-import org.l2j.gameserver.model.entity.Reflection;
-import org.l2j.gameserver.utils.Location;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
+
+import org.l2j.gameserver.data.xml.holder.DoorHolder;
+import org.l2j.gameserver.data.xml.holder.ZoneHolder;
+import org.l2j.gameserver.model.entity.Reflection;
+import org.l2j.gameserver.utils.Location;
 
 public class ReflectionManager
 {
@@ -42,8 +43,7 @@ public class ReflectionManager
 		add(JAIL);
 
 		// создаем в рефлекте все зоны, и все двери
-		MAIN.init(DoorHolder.getInstance().
-				getDoors(), ZoneHolder.getInstance().getZones());
+		MAIN.init(DoorHolder.getInstance().getDoors(), ZoneHolder.getInstance().getZones());
 
 		JAIL.setCoreLoc(new Location(-114648, -249384, -2984));
 	}

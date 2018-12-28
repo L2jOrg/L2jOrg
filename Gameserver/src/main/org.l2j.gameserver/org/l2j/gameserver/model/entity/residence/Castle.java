@@ -1,7 +1,8 @@
 package org.l2j.gameserver.model.entity.residence;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
+import java.util.Set;
+import java.util.concurrent.CopyOnWriteArraySet;
+
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.math.SafeMath;
 import org.l2j.gameserver.Announcements;
@@ -21,11 +22,11 @@ import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.templates.item.support.MerchantGuard;
 import org.l2j.gameserver.utils.Log;
+
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.Set;
-import java.util.concurrent.CopyOnWriteArraySet;
 
 public class Castle extends Residence
 {
@@ -33,7 +34,7 @@ public class Castle extends Residence
 
 	private static final Logger _log = LoggerFactory.getLogger(Castle.class);
 
-	private final TIntObjectMap<MerchantGuard> _merchantGuards = new TIntObjectHashMap<>();
+	private final IntObjectMap<MerchantGuard> _merchantGuards = new HashIntObjectMap<MerchantGuard>();
 
 	private long _treasury;
 	private long _collectedShops;
@@ -269,7 +270,7 @@ public class Castle extends Residence
 		return _merchantGuards.get(itemId);
 	}
 
-	public TIntObjectMap<MerchantGuard> getMerchantGuards()
+	public IntObjectMap<MerchantGuard> getMerchantGuards()
 	{
 		return _merchantGuards;
 	}

@@ -1,10 +1,10 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.model.instances.StaticObjectInstance;
 import org.l2j.gameserver.templates.StaticObjectTemplate;
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author VISTALL
@@ -14,8 +14,8 @@ public final class StaticObjectHolder extends AbstractHolder
 {
 	private static final StaticObjectHolder _instance = new StaticObjectHolder();
 
-	private TIntObjectMap<StaticObjectTemplate> _templates = new TIntObjectHashMap<>();
-	private TIntObjectMap<StaticObjectInstance> _spawned = new TIntObjectHashMap<>();
+	private IntObjectMap<StaticObjectTemplate> _templates = new HashIntObjectMap<StaticObjectTemplate>();
+	private IntObjectMap<StaticObjectInstance> _spawned = new HashIntObjectMap<StaticObjectInstance>();
 
 	public static StaticObjectHolder getInstance()
 	{
@@ -34,7 +34,7 @@ public final class StaticObjectHolder extends AbstractHolder
 
 	public void spawnAll()
 	{
-		for(StaticObjectTemplate template : _templates.valueCollection())
+		for(StaticObjectTemplate template : _templates.values())
 			if(template.isSpawn())
 			{
 				StaticObjectInstance obj = template.newInstance();

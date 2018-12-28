@@ -22,7 +22,6 @@ dependencies {
     compile 'org.springframework.data:spring-data-jdbc:1.0.3.RELEASE'
     compile 'com.zaxxer:HikariCP:3.2.0'
     compile 'org.glassfish.jaxb:jaxb-runtime:2.4.0-b180830.0438'
-    compile 'net.sf.trove4j:trove4j:3.0.3'
 
     compile fileTree(dir: '../lib', includes: ['*.jar'] )
 

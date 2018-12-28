@@ -1,18 +1,18 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
+import java.util.Collection;
+
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.templates.item.data.AttendanceRewardData;
-
-import java.util.Collection;
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.TreeIntObjectMap;
 
 public final class AttendanceRewardHolder extends AbstractHolder
 {
 	private static final AttendanceRewardHolder _instance = new AttendanceRewardHolder();
 
-	private final TIntObjectMap<AttendanceRewardData> _normalRewards = new TIntObjectHashMap<>();
-	private final TIntObjectMap<AttendanceRewardData> _premiumRewards = new TIntObjectHashMap<>();
+	private final IntObjectMap<AttendanceRewardData> _normalRewards = new TreeIntObjectMap<AttendanceRewardData>();
+	private final IntObjectMap<AttendanceRewardData> _premiumRewards = new TreeIntObjectMap<AttendanceRewardData>();
 
 	public static AttendanceRewardHolder getInstance()
 	{
@@ -31,7 +31,7 @@ public final class AttendanceRewardHolder extends AbstractHolder
 
 	public Collection<AttendanceRewardData> getRewards(boolean premium)
 	{
-		return premium ? _premiumRewards.valueCollection() : _normalRewards.valueCollection();
+		return premium ? _premiumRewards.values() : _normalRewards.values();
 	}
 
 	public AttendanceRewardData getReward(int index, boolean premium)

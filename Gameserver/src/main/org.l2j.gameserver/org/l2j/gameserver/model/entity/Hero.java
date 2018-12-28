@@ -1,7 +1,5 @@
 package org.l2j.gameserver.model.entity;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
@@ -20,6 +18,9 @@ import org.l2j.gameserver.network.l2.s2c.SystemMessage;
 import org.l2j.gameserver.tables.ClanTable;
 import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.utils.HtmlUtils;
+import org.napile.pair.primitive.IntObjectPair;
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.CHashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,7 +34,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 public class Hero
@@ -44,11 +44,11 @@ public class Hero
 	private static final String GET_HEROES = "SELECT h.char_id AS char_id, h.count AS count, h.active AS active, c.char_name AS char_name, cs.class_id AS class_id FROM heroes AS h LEFT JOIN characters AS c ON c.obj_Id = h.char_id LEFT JOIN character_subclasses AS cs ON cs.char_obj_id = h.char_id AND cs.type=? WHERE char_name IS NOT NULL AND class_id IS NOT NULL AND played = 1";
 	private static final String GET_ALL_HEROES = "SELECT h.char_id AS char_id, h.count AS count, h.active AS active, h.played AS played, c.char_name AS char_name, cs.class_id AS class_id FROM heroes AS h LEFT JOIN characters AS c ON c.obj_Id = h.char_id LEFT JOIN character_subclasses AS cs ON cs.char_obj_id = h.char_id AND cs.type=? WHERE char_name IS NOT NULL AND class_id IS NOT NULL";
 
-	private static TIntObjectMap<StatsSet> _heroes;
-	private static TIntObjectMap<StatsSet> _completeHeroes;
+	private static IntObjectMap<StatsSet> _heroes;
+	private static IntObjectMap<StatsSet> _completeHeroes;
 
-	private static TIntObjectMap<List<HeroDiary>> _herodiary;
-	private static TIntObjectMap<String> _heroMessage;
+	private static IntObjectMap<List<HeroDiary>> _herodiary;
+	private static IntObjectMap<String> _heroMessage;
 
 	public static final String CHAR_ID = "char_id";
 	public static final String CLASS_ID = "class_id";
@@ -86,10 +86,10 @@ public class Hero
 
 	private void init()
 	{
-		_heroes = new TIntObjectHashMap<>();
-		_completeHeroes = new TIntObjectHashMap<>();
-		_herodiary = new TIntObjectHashMap<>();
-		_heroMessage = new TIntObjectHashMap<>();
+		_heroes = new CHashIntObjectMap<StatsSet>();
+		_completeHeroes = new CHashIntObjectMap<StatsSet>();
+		_herodiary = new CHashIntObjectMap<List<HeroDiary>>();
+		_heroMessage = new CHashIntObjectMap<String>();
 
 		Connection con = null;
 		PreparedStatement statement = null;
@@ -145,7 +145,7 @@ public class Hero
 		_log.info("Hero System: Loaded " + _completeHeroes.size() + " all time Heroes.");
 	}
 
-	public TIntObjectMap<StatsSet> getHeroes()
+	public IntObjectMap<StatsSet> getHeroes()
 	{
 		return _heroes;
 	}
@@ -154,21 +154,21 @@ public class Hero
 	{
 		mysql.set("UPDATE heroes SET played = 0, active = 0");
 
-		_heroes.forEachEntry( (key, value)-> {
-			if(value.getInteger(ACTIVE) == 0) {
-				return false;
-			}
+		for(IntObjectPair<StatsSet> entry : _heroes.entrySet())
+		{
+			if(entry.getValue().getInteger(ACTIVE) == 0)
+				continue;
 
-			Player player = GameObjectsStorage.getPlayer(key);
-			if(nonNull(player))
+			Player player = GameObjectsStorage.getPlayer(entry.getKey());
+
+			if(player != null)
 			{
 				player.setHero(CustomHeroDAO.getInstance().isCustomHero(player.getObjectId()));
 				player.checkAndDeleteOlympiadItems();
 				player.updatePledgeRank();
 				player.broadcastUserInfo(true);
 			}
-			return true;
-		});
+		}
 
 		_heroes.clear();
 		_herodiary.clear();
@@ -179,7 +179,7 @@ public class Hero
 		if(newHeroes.size() == 0)
 			return true;
 
-		TIntObjectMap<StatsSet> heroes = new TIntObjectHashMap<>();
+		IntObjectMap<StatsSet> heroes = new CHashIntObjectMap<StatsSet>();
 
 		for(StatsSet hero : newHeroes)
 		{
@@ -513,5 +513,15 @@ public class Hero
 					return heroId;
 			}
 		return 0;
+	}
+
+	public IntObjectPair<StatsSet> getHeroStats(int classId)
+	{
+		for(IntObjectPair<StatsSet> entry : _heroes.entrySet())
+		{
+			if(entry.getValue().getInteger(CLASS_ID) == classId)
+				return entry;
+		}
+		return null;
 	}
 }

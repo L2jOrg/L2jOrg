@@ -24,7 +24,7 @@ public class ExHeroListPacket extends L2GameServerPacket {
     private Collection<StatsSet> _heroList;
 
     public ExHeroListPacket() {
-        _heroList = Hero.getInstance().getHeroes().valueCollection();
+        _heroList = Hero.getInstance().getHeroes().values();
     }
 
     @Override

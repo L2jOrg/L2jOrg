@@ -5,17 +5,15 @@ import gnu.trove.list.TIntList;
 import gnu.trove.list.array.TIntArrayList;
 import gnu.trove.list.linked.TIntLinkedList;
 import gnu.trove.map.TIntLongMap;
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.collections.CollectionUtils;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
+import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.lang.reference.HardReference;
 import org.l2j.commons.lang.reference.HardReferences;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.commons.util.Converter;
 import org.l2j.commons.util.Rnd;
-import org.l2j.commons.util.TroveUtils;
 import org.l2j.commons.util.Util;
 import org.l2j.commons.util.concurrent.atomic.AtomicState;
 import org.l2j.gameserver.*;
@@ -114,6 +112,11 @@ import org.l2j.gameserver.templates.premiumaccount.PremiumAccountTemplate;
 import org.l2j.gameserver.utils.*;
 import org.napile.pair.primitive.IntObjectPair;
 import org.napile.pair.primitive.impl.IntObjectPairImpl;
+import org.napile.primitive.Containers;
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.CHashIntObjectMap;
+import org.napile.primitive.maps.impl.CTreeIntObjectMap;
+import org.napile.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -131,6 +134,7 @@ import static org.l2j.gameserver.network.l2.s2c.ExSetCompassZoneCode.*;
 
 public final class Player extends Playable implements PlayerGroup
 {
+	private static final long serialVersionUID = 1L;
 
 	public static final int DEFAULT_NAME_COLOR = 0xFFFFFF;
 	public static final int DEFAULT_TITLE_COLOR = 0xFFFF77;
@@ -220,7 +224,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * The table containing all Quests began by the L2Player
 	 */
-	private final TIntObjectMap<QuestState> _quests = new TIntObjectHashMap<>();
+	private final IntObjectMap<QuestState> _quests = new HashIntObjectMap<QuestState>();
 
 	/**
 	 * The list containing all shortCuts of this L2Player
@@ -291,7 +295,7 @@ public final class Player extends Playable implements PlayerGroup
 
 	private List<DecoyInstance> _decoys = new CopyOnWriteArrayList<DecoyInstance>();
 
-	private TIntObjectMap<Cubic> _cubics = null;
+	private IntObjectMap<Cubic> _cubics = null;
 	private int _agathionId = 0;
 
 	private Request _request;
@@ -322,7 +326,7 @@ public final class Player extends Playable implements PlayerGroup
 	 */
 	private MultiSellListContainer _multisell = null;
 
-	private TIntObjectMap<SoulShotType> _activeAutoShots = new TIntObjectHashMap<>();
+	private IntObjectMap<SoulShotType> _activeAutoShots = new CHashIntObjectMap<SoulShotType>();
 
 	private ObservePoint _observePoint;
 	private AtomicInteger _observerMode = new AtomicInteger(0);
@@ -409,7 +413,7 @@ public final class Player extends Playable implements PlayerGroup
 	private AtomicState _gmInvisible = new AtomicState();
 	private AtomicState _gmUndying = new AtomicState();
 
-	private TIntObjectMap<String> _postFriends = TroveUtils.emptyIntObjectMap();
+	private IntObjectMap<String> _postFriends = Containers.emptyIntObjectMap();
 
 	private List<String> _blockedActions = new ArrayList<String>();
 
@@ -445,7 +449,7 @@ public final class Player extends Playable implements PlayerGroup
 
 	private TransformTemplate _transform = null;
 
-	private final TIntObjectMap<SkillEntry> _transformSkills = new TIntObjectHashMap<>();
+	private final IntObjectMap<SkillEntry> _transformSkills = new CHashIntObjectMap<SkillEntry>();
 
 	private long _lastMultisellBuyTime = 0L;
 	private long _lastEnchantItemTime = 0L;
@@ -466,7 +470,7 @@ public final class Player extends Playable implements PlayerGroup
 
 	private List<TrapInstance> _traps = Collections.emptyList();
 	private boolean _isInJail = false;
-	private final TIntObjectMap<OptionDataTemplate> _options = new TIntObjectHashMap<>();
+	private final IntObjectMap<OptionDataTemplate> _options = new CTreeIntObjectMap<OptionDataTemplate>();
 	private long _receivedExp = 0L;
 	private Reflection _activeReflection = null;
 	private int _questZoneId = -1;
@@ -627,7 +631,7 @@ public final class Player extends Playable implements PlayerGroup
 				if(!_transformSkills.isEmpty())
 				{
 					// Удаляем скилы трансформации
-					for(SkillEntry skillEntry : _transformSkills.valueCollection())
+					for(SkillEntry skillEntry : _transformSkills.values())
 					{
 						if(!SkillAcquireHolder.getInstance().isSkillPossible(this, skillEntry.getTemplate()))
 							super.removeSkill(skillEntry);
@@ -686,7 +690,7 @@ public final class Player extends Playable implements PlayerGroup
 					_transformSkills.put(skillEntry.getId(), skillEntry);
 				}
 
-				for(SkillEntry skillEntry : _transformSkills.valueCollection())
+				for(SkillEntry skillEntry : _transformSkills.values())
 					addSkill(skillEntry, false);
 
 				if(transform.getItemCheckType() != LockType.NONE)
@@ -1243,7 +1247,7 @@ public final class Player extends Playable implements PlayerGroup
 		questRead.lock();
 		try
 		{
-			for(final QuestState qs : _quests.valueCollection())
+			for(final QuestState qs : _quests.values())
 				if(qs.isStarted())
 					quests.add(qs.getQuest());
 		}
@@ -1259,7 +1263,7 @@ public final class Player extends Playable implements PlayerGroup
 		questRead.lock();
 		try
 		{
-			return _quests.values(new QuestState[_quests.size()]);
+			return _quests.values().toArray(new QuestState[_quests.size()]);
 		}
 		finally
 		{
@@ -2021,7 +2025,7 @@ public final class Player extends Playable implements PlayerGroup
 		Collections.sort(skillLearns);
 		Collections.reverse(skillLearns);
 
-		TIntObjectMap<SkillLearn> skillsToLearnMap = new TIntObjectHashMap<>();
+		IntObjectMap<SkillLearn> skillsToLearnMap = new HashIntObjectMap<SkillLearn>();
 		for(SkillLearn sl : skillLearns)
 		{
 			if(!(sl.isAutoGet() && ((learnAllSkills && (!checkRequiredItems || !sl.haveRequiredItemsForLearn(AcquireType.NORMAL))) || sl.isFreeAutoGet(AcquireType.NORMAL))))
@@ -2038,7 +2042,7 @@ public final class Player extends Playable implements PlayerGroup
 		boolean update = false;
 		int addedSkillsCount = 0;
 
-		for(SkillLearn sl : skillsToLearnMap.valueCollection())
+		for(SkillLearn sl : skillsToLearnMap.values())
 		{
 			SkillEntry skillEntry = SkillHolder.getInstance().getSkillEntry(sl.getId(), sl.getLevel());
 			if(skillEntry == null)
@@ -2079,7 +2083,7 @@ public final class Player extends Playable implements PlayerGroup
 
 			if(added)
 			{
-				for(SkillEntry skillEntry : _transformSkills.valueCollection())
+				for(SkillEntry skillEntry : _transformSkills.values())
 				{
 					if(addSkill(skillEntry, false) == null)
 						addedSkillsCount++;
@@ -5127,7 +5131,7 @@ public final class Player extends Playable implements PlayerGroup
 			synchronized (_skillReuses)
 			{
 				StringBuilder sb;
-				for(TimeStamp timeStamp : _skillReuses.valueCollection())
+				for(TimeStamp timeStamp : _skillReuses.values())
 				{
 					if(timeStamp.hasNotPassed())
 					{
@@ -5373,7 +5377,7 @@ public final class Player extends Playable implements PlayerGroup
 
 	public Collection<Cubic> getCubics()
 	{
-		return _cubics == null ? Collections.<Cubic>emptyList() : _cubics.valueCollection();
+		return _cubics == null ? Collections.<Cubic>emptyList() : _cubics.values();
 	}
 
 	@Override
@@ -5386,7 +5390,7 @@ public final class Player extends Playable implements PlayerGroup
 	public void addCubic(Cubic cubic)
 	{
 		if(_cubics == null)
-			_cubics = new TIntObjectHashMap<>(3);
+			_cubics = new CHashIntObjectMap<Cubic>(3);
 		Cubic oldCubic = _cubics.get(cubic.getSlot());
 		if(oldCubic != null)
 			oldCubic.delete();
@@ -5488,17 +5492,18 @@ public final class Player extends Playable implements PlayerGroup
 
 	public void autoShot()
 	{
-		_activeAutoShots.forEachEntry((key, value) -> {
-			int shotId = key;
+		for(IntObjectPair<SoulShotType> entry : _activeAutoShots.entrySet())
+		{
+			int shotId = entry.getKey();
 
 			ItemInstance item = getInventory().getItemByItemId(shotId);
-			if(item == null) {
-				removeAutoShot(shotId, false, value);
-				return true;
+			if(item == null)
+			{
+				removeAutoShot(shotId, false, entry.getValue());
+				continue;
 			}
 			useItem(item, false, false);
-			return true;
-		});
+		}
 	}
 
 	@Override
@@ -5554,13 +5559,11 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		if(Config.EX_USE_AUTO_SOUL_SHOT)
 		{
-			_activeAutoShots.forEachEntry((key, value) -> {
-				if(value == type)
-					_activeAutoShots.remove(key);
-				return true;
-			});
-
-
+			for(IntObjectPair<SoulShotType> entry : _activeAutoShots.entrySet())
+			{
+				if(entry.getValue() == type)
+					_activeAutoShots.remove(entry.getKey());
+			}
 			if(type == SoulShotType.SOULSHOT || type == SoulShotType.SPIRITSHOT)
 			{
 				WeaponTemplate weaponTemplate = getActiveWeaponTemplate();
@@ -5612,10 +5615,8 @@ public final class Player extends Playable implements PlayerGroup
 		if(Config.EX_USE_AUTO_SOUL_SHOT)
 			return;
 
-		_activeAutoShots.forEachEntry((key, value) -> {
-			sendPacket(new ExAutoSoulShot(key, 1, value));
-			return true;
-		});
+		for(IntObjectPair<SoulShotType> entry : _activeAutoShots.entrySet())
+			sendPacket(new ExAutoSoulShot(entry.getKey(), 1, entry.getValue()));
 	}
 
 	public void initActiveAutoShots()
@@ -5663,11 +5664,8 @@ public final class Player extends Playable implements PlayerGroup
 		if(Config.EX_USE_AUTO_SOUL_SHOT)
 			return;
 
-		_activeAutoShots.forEachEntry((key, value) -> {
-			removeAutoShot(key, false, value);
-			return true;
-		});
-
+		for(IntObjectPair<SoulShotType> entry : _activeAutoShots.entrySet())
+			removeAutoShot(entry.getKey(), false, entry.getValue());
 
 		if(uncharge)
 		{
@@ -5717,15 +5715,14 @@ public final class Player extends Playable implements PlayerGroup
 		if(!Config.EX_USE_AUTO_SOUL_SHOT)
 			return;
 
-
-		_activeAutoShots.forEachEntry((key, value) -> {
-			if(value == type)
+		for(IntObjectPair<SoulShotType> entry : _activeAutoShots.entrySet())
+		{
+			if(entry.getValue() == type)
 			{
-				removeAutoShot(key, false, value);
-				sendPacket(new ExAutoSoulShot(key, 1, value));
+				removeAutoShot(entry.getKey(), false, entry.getValue());
+				sendPacket(new ExAutoSoulShot(entry.getKey(), 1, entry.getValue()));
 			}
-			return true;
-		});
+		}
 	}
 
 	public boolean isAutoShot(int itemId)
@@ -8412,7 +8409,7 @@ public final class Player extends Playable implements PlayerGroup
 			return super.getAllSkills();
 
 		// Трансформация активна
-		TIntObjectMap<SkillEntry> temp = new TIntObjectHashMap<>();
+		IntObjectMap<SkillEntry> temp = new HashIntObjectMap<SkillEntry>();
 		for(SkillEntry skillEntry : super.getAllSkills())
 		{
 			Skill skill = skillEntry.getTemplate();
@@ -8421,7 +8418,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 
 		temp.putAll(_transformSkills); // Добавляем к пассивкам скилы текущей трансформации
-		return temp.valueCollection();
+		return temp.values();
 	}
 
 	public final void addTransformSkill(SkillEntry skillEntry)
@@ -9618,12 +9615,12 @@ public final class Player extends Playable implements PlayerGroup
 			sendPacket(new SystemMessagePacket(SystemMsg.C1_HAS_RECEIVED_S3_DAMAGE_FROM_C2).addName(this).addName(attacker).addInteger(damage).addHpChange(getObjectId(), attacker.getObjectId(), -damage));
 	}
 
-	public TIntObjectMap<String> getPostFriends()
+	public IntObjectMap<String> getPostFriends()
 	{
 		return _postFriends;
 	}
 
-	public void setPostFriends(TIntObjectMap<String> val)
+	public void setPostFriends(IntObjectMap<String> val)
 	{
 		_postFriends = val;
 	}

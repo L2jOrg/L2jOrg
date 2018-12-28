@@ -1,9 +1,9 @@
 package org.l2j.gameserver.model.petition;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.Collection;
+
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author VISTALL
@@ -11,7 +11,7 @@ import java.util.Collection;
  */
 public class PetitionMainGroup extends PetitionGroup
 {
-	private final TIntObjectMap<PetitionSubGroup> _subGroups = new TIntObjectHashMap<>();
+	private final IntObjectMap<PetitionSubGroup> _subGroups = new HashIntObjectMap<PetitionSubGroup>();
 
 	public PetitionMainGroup(int id)
 	{
@@ -30,6 +30,6 @@ public class PetitionMainGroup extends PetitionGroup
 
 	public Collection<PetitionSubGroup> getSubGroups()
 	{
-		return _subGroups.valueCollection();
+		return _subGroups.values();
 	}
 }

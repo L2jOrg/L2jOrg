@@ -1,7 +1,5 @@
 package org.l2j.gameserver.model.entity.olympiad;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.configuration.ExProperties;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
@@ -22,8 +20,11 @@ import org.l2j.gameserver.network.l2.components.CustomMessage;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.utils.MultiValueIntegerMap;
+import org.napile.pair.primitive.IntObjectPair;
 import org.napile.primitive.maps.IntIntMap;
+import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CHashIntIntMap;
+import org.napile.primitive.maps.impl.CHashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -40,7 +41,7 @@ public class Olympiad
 {
 	private static final Logger _log = LoggerFactory.getLogger(Olympiad.class);
 
-	private static final TIntObjectMap<OlympiadParticipiantData> _participants = new TIntObjectHashMap<>();
+	private static final IntObjectMap<OlympiadParticipiantData> _participants = new CHashIntObjectMap<OlympiadParticipiantData>();
 
 	public static final IntIntMap _participantRank = new CHashIntIntMap();
 
@@ -572,18 +573,18 @@ public class Olympiad
 		if(isValidationPeriod())
 			return;
 
-		_participants.forEachEntry((key, value) -> {
-			OlympiadParticipiantData data = value;
+		for(IntObjectPair<OlympiadParticipiantData> entry : _participants.entrySet())
+		{
+			OlympiadParticipiantData data = entry.getValue();
 			data.setPoints(data.getPoints() + Config.OLYMPIAD_POINTS_WEEKLY);
 			data.setClassedGamesCount(0);
 			data.setNonClassedGamesCount(0);
 
-			Player player = GameObjectsStorage.getPlayer(key);
+			Player player = GameObjectsStorage.getPlayer(entry.getKey());
 
 			if(player != null)
 				player.sendPacket(new SystemMessagePacket(SystemMsg.C1_HAS_EARNED_S2_POINTS_IN_THE_GRAND_OLYMPIAD_GAMES).addName(player).addInteger(Config.OLYMPIAD_POINTS_WEEKLY));
-			return true;
-		});
+		}
 	}
 
 	public static int getCurrentCycle()
@@ -830,7 +831,7 @@ public class Olympiad
 		_npcs.add(npc);
 	}
 
-	public static TIntObjectMap<OlympiadParticipiantData> getParticipantsMap()
+	public static IntObjectMap<OlympiadParticipiantData> getParticipantsMap()
 	{
 		return _participants;
 	}

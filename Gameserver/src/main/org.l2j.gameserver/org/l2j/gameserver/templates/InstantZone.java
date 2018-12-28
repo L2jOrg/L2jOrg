@@ -1,6 +1,9 @@
 package org.l2j.gameserver.templates;
 
-import gnu.trove.map.TIntObjectMap;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 import org.l2j.commons.time.cron.SchedulingPattern;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.Party;
@@ -9,9 +12,7 @@ import org.l2j.gameserver.model.Territory;
 import org.l2j.gameserver.templates.spawn.SpawnTemplate;
 import org.l2j.gameserver.utils.Location;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import org.napile.primitive.maps.IntObjectMap;
 
 public class InstantZone
 {
@@ -171,7 +172,7 @@ public class InstantZone
 	private final List<Location> _teleportCoords;
 	private final Location _returnCoords;
 
-	private final TIntObjectMap<DoorInfo> _doors;
+	private final IntObjectMap<DoorInfo> _doors;
 	private final Map<String, ZoneInfo> _zones;
 	private final Map<String, SpawnInfo2> _spawns;
 
@@ -189,7 +190,7 @@ public class InstantZone
 
     private final List<InstantZoneEntryType> _entryTypes = new ArrayList<InstantZoneEntryType>();
 
-	public InstantZone(int id, String name, SchedulingPattern resetReuse, int sharedReuseGroup, int timelimit, boolean dispelBuffs, int minLevel, int maxLevel, int minParty, int maxParty, int timer, boolean onPartyDismiss, List<Location> tele, Location ret, TIntObjectMap<DoorInfo> doors, Map<String, ZoneInfo> zones, Map<String, SpawnInfo2> spawns, List<SpawnInfo> spawnsInfo, int collapseIfEmpty, int maxChannels, int removedItemId, int removedItemCount, boolean removedItemNecessity, int giveItemId, int givedItemCount, int requiredQuestId, boolean setReuseUponEntry, StatsSet params)
+	public InstantZone(int id, String name, SchedulingPattern resetReuse, int sharedReuseGroup, int timelimit, boolean dispelBuffs, int minLevel, int maxLevel, int minParty, int maxParty, int timer, boolean onPartyDismiss, List<Location> tele, Location ret, IntObjectMap<DoorInfo> doors, Map<String, ZoneInfo> zones, Map<String, SpawnInfo2> spawns, List<SpawnInfo> spawnsInfo, int collapseIfEmpty, int maxChannels, int removedItemId, int removedItemCount, boolean removedItemNecessity, int giveItemId, int givedItemCount, int requiredQuestId, boolean setReuseUponEntry, StatsSet params)
 	{
 		_id = id;
 		_name = name;
@@ -373,7 +374,7 @@ public class InstantZone
         return null;
     }
 
-	public TIntObjectMap<DoorInfo> getDoors()
+	public IntObjectMap<DoorInfo> getDoors()
 	{
 		return _doors;
 	}

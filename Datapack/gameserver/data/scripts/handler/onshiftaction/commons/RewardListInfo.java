@@ -1,7 +1,5 @@
 package handler.onshiftaction.commons;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.htm.HtmTemplates;
@@ -14,6 +12,8 @@ import org.l2j.gameserver.model.reward.RewardList;
 import org.l2j.gameserver.model.reward.RewardType;
 import org.l2j.gameserver.stats.Stats;
 import org.l2j.gameserver.utils.HtmlUtils;
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.CHashIntObjectMap;
 
 import java.math.BigInteger;
 import java.text.NumberFormat;
@@ -371,7 +371,7 @@ public abstract class RewardListInfo
 		return factorial(b).divide((factorial(b - a).multiply(factorial(a)))).doubleValue();
 	}
 
-	private static final TIntObjectMap<BigInteger> FACTORIAL_CACHE = new TIntObjectHashMap<>();
+	private static final IntObjectMap<BigInteger> FACTORIAL_CACHE = new CHashIntObjectMap<BigInteger>();
 
 	public static BigInteger factorial(int n)
 	{

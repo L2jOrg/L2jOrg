@@ -1,12 +1,9 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.commons.geometry.Polygon;
 import org.l2j.commons.time.cron.SchedulingPattern;
-import org.l2j.commons.util.TroveUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.DoorHolder;
 import org.l2j.gameserver.data.xml.holder.InstantZoneHolder;
@@ -20,6 +17,9 @@ import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.templates.ZoneTemplate;
 import org.l2j.gameserver.templates.spawn.SpawnTemplate;
 import org.l2j.gameserver.utils.Location;
+import org.napile.primitive.Containers;
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.HashIntObjectMap;
 
 import java.io.File;
 import java.util.*;
@@ -78,7 +78,7 @@ public class InstantZoneParser extends AbstractParser<InstantZoneHolder>
 			StatsSet params = new StatsSet();
 
 			List<InstantZone.SpawnInfo> spawns = new ArrayList<InstantZone.SpawnInfo>();
-			TIntObjectMap<InstantZone.DoorInfo> doors = TroveUtils.emptyIntObjectMap();
+			IntObjectMap<InstantZone.DoorInfo> doors = Containers.emptyIntObjectMap();
 			Map<String, InstantZone.ZoneInfo> zones = Collections.emptyMap();
 			Map<String, InstantZone.SpawnInfo2> spawns2 = Collections.emptyMap();
 			instanceId = Integer.parseInt(element.attributeValue("id"));
@@ -154,7 +154,7 @@ public class InstantZoneParser extends AbstractParser<InstantZoneHolder>
 					for(Element e : subElement.elements())
 					{
 						if(doors.isEmpty())
-							doors = new TIntObjectHashMap<>();
+							doors = new HashIntObjectMap<InstantZone.DoorInfo>();
 
 						boolean opened = e.attributeValue("opened") != null && Boolean.parseBoolean(e.attributeValue("opened"));
 						boolean invul = e.attributeValue("invul") == null || Boolean.parseBoolean(e.attributeValue("invul"));

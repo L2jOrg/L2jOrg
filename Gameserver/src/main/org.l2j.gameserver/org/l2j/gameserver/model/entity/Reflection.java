@@ -1,12 +1,18 @@
 package org.l2j.gameserver.model.entity;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import gnu.trove.set.hash.TIntHashSet;
+
+import java.util.*;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 import org.l2j.commons.listener.Listener;
 import org.l2j.commons.listener.ListenerList;
 import org.l2j.commons.util.Rnd;
-import org.l2j.commons.util.TroveUtils;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.holder.NpcHolder;
 import org.l2j.gameserver.data.xml.holder.SpawnHolder;
@@ -32,16 +38,11 @@ import org.l2j.gameserver.templates.ZoneTemplate;
 import org.l2j.gameserver.templates.spawn.SpawnTemplate;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.NpcUtils;
+import org.napile.primitive.Containers;
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.*;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 import static org.l2j.commons.util.Util.STRING_EMPTY;
 
@@ -75,7 +76,7 @@ public class Reflection
 	protected Set<GameObject> _objects = new HashSet<GameObject>();
 
 	// vars
-	protected TIntObjectMap<DoorInstance> _doors = TroveUtils.emptyIntObjectMap();
+	protected IntObjectMap<DoorInstance> _doors = Containers.emptyIntObjectMap();
 	protected Map<String, Zone> _zones = Collections.emptyMap();
 	protected Map<String, List<Spawner>> _spawners = Collections.emptyMap();
 
@@ -195,7 +196,7 @@ public class Reflection
 
 	public Collection<DoorInstance> getDoors()
 	{
-		return _doors.valueCollection();
+		return _doors.values();
 	}
 
 	public DoorInstance getDoor(int id)
@@ -335,7 +336,7 @@ public class Reflection
 				for(String group : _spawners.keySet())
 					despawnByGroup(group);
 
-				for(DoorInstance d : _doors.valueCollection())
+				for(DoorInstance d : _doors.values())
 					d.deleteMe();
 				_doors.clear();
 
@@ -683,12 +684,12 @@ public class Reflection
 	}
 
 	//FIXME [VISTALL] сдвинуть в один?
-	public void init(TIntObjectMap<DoorTemplate> doors, Map<String, ZoneTemplate> zones)
+	public void init(IntObjectMap<DoorTemplate> doors, Map<String, ZoneTemplate> zones)
 	{
 		if(!doors.isEmpty())
-			_doors = new TIntObjectHashMap<>(doors.size());
+			_doors = new HashIntObjectMap<DoorInstance>(doors.size());
 
-		for(DoorTemplate template : doors.valueCollection())
+		for(DoorTemplate template : doors.values())
 		{
 			DoorInstance door = new DoorInstance(IdFactory.getInstance().getNextId(), template);
 			door.setReflection(this);
@@ -703,7 +704,7 @@ public class Reflection
 		initDoors();
 
 		if(!zones.isEmpty())
-			_zones = new HashMap<>(zones.size());
+			_zones = new HashMap<String, Zone>(zones.size());
 
 		for(ZoneTemplate template : zones.values())
 		{
@@ -745,12 +746,12 @@ public class Reflection
 	}
 
 	//FIXME [VISTALL] сдвинуть в один?
-	private void init0(TIntObjectMap<InstantZone.DoorInfo> doors, Map<String, InstantZone.ZoneInfo> zones)
+	private void init0(IntObjectMap<InstantZone.DoorInfo> doors, Map<String, InstantZone.ZoneInfo> zones)
 	{
 		if(!doors.isEmpty())
-			_doors = new TIntObjectHashMap<>(doors.size());
+			_doors = new HashIntObjectMap<DoorInstance>(doors.size());
 
-		for(InstantZone.DoorInfo info : doors.valueCollection())
+		for(InstantZone.DoorInfo info : doors.values())
 		{
 			DoorInstance door = new DoorInstance(IdFactory.getInstance().getNextId(), info.getTemplate());
 			door.setReflection(this);
@@ -808,7 +809,7 @@ public class Reflection
 
 	private void initDoors()
 	{
-		for(DoorInstance door : _doors.valueCollection())
+		for(DoorInstance door : _doors.values())
 		{
 			if(door.getTemplate().getMasterDoor() > 0)
 			{

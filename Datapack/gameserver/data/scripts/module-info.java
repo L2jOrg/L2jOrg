@@ -3,6 +3,6 @@ module org.l2j.scripts {
     requires org.slf4j;
     requires java.sql;
     requires org.l2j.commons;
+    requires trove;
     requires org.napile.primitive;
-    requires trove4j;
 }

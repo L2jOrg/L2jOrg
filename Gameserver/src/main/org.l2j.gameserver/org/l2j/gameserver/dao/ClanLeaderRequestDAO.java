@@ -1,10 +1,10 @@
 package org.l2j.gameserver.dao;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.model.pledge.ClanChangeLeaderRequest;
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,9 +31,9 @@ public class ClanLeaderRequestDAO
 		return _instance;
 	}
 
-	public TIntObjectMap<ClanChangeLeaderRequest> select()
+	public IntObjectMap<ClanChangeLeaderRequest> select()
 	{
-		TIntObjectMap<ClanChangeLeaderRequest> requestList = new TIntObjectHashMap<>();
+		IntObjectMap<ClanChangeLeaderRequest> requestList = new HashIntObjectMap<ClanChangeLeaderRequest>();
 
 		Connection con = null;
 		Statement statement = null;

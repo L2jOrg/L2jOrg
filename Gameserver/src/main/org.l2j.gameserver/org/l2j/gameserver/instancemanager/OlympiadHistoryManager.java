@@ -1,19 +1,21 @@
 package org.l2j.gameserver.instancemanager;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.CopyOnWriteArrayList;
+
 import org.l2j.gameserver.dao.OlympiadHistoryDAO;
 import org.l2j.gameserver.data.string.StringsHolder;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.entity.olympiad.OlympiadHistory;
 import org.l2j.gameserver.network.l2.components.HtmlMessage;
+import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.utils.HtmlUtils;
-
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.CopyOnWriteArrayList;
+import org.napile.pair.primitive.IntObjectPair;
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.CHashIntObjectMap;
 
 import static org.l2j.commons.util.Util.STRING_EMPTY;
 
@@ -25,8 +27,8 @@ public class OlympiadHistoryManager
 {
 	private static final OlympiadHistoryManager _instance = new OlympiadHistoryManager();
 
-	private TIntObjectMap<List<OlympiadHistory>> _historyNew = new TIntObjectHashMap<>();
-	private TIntObjectMap<List<OlympiadHistory>> _historyOld = new TIntObjectHashMap<>();
+	private IntObjectMap<List<OlympiadHistory>> _historyNew = new CHashIntObjectMap<List<OlympiadHistory>>();
+	private IntObjectMap<List<OlympiadHistory>> _historyOld = new CHashIntObjectMap<List<OlympiadHistory>>();
 
 	public static OlympiadHistoryManager getInstance()
 	{
@@ -64,13 +66,13 @@ public class OlympiadHistoryManager
 
 	public void addHistory(boolean old, OlympiadHistory history)
 	{
-		TIntObjectMap<List<OlympiadHistory>> map = old ? _historyOld : _historyNew;
+		IntObjectMap<List<OlympiadHistory>> map = old ? _historyOld : _historyNew;
 
 		addHistory0(map, history.getObjectId1(), history);
 		addHistory0(map, history.getObjectId2(), history);
 	}
 
-	private void addHistory0(TIntObjectMap<List<OlympiadHistory>> map, int objectId, OlympiadHistory history)
+	private void addHistory0(IntObjectMap<List<OlympiadHistory>> map, int objectId, OlympiadHistory history)
 	{
 		List<OlympiadHistory> historySet = map.get(objectId);
 		if(historySet == null)
@@ -83,11 +85,11 @@ public class OlympiadHistoryManager
 	{
 		final int perpage = 15;
 
-		int hero = Hero.getInstance().getHeroByClass(targetClassId);
-		if(hero == 0)
+		IntObjectPair<StatsSet> entry = Hero.getInstance().getHeroStats(targetClassId);
+		if(entry == null)
 			return;
 
-		List<OlympiadHistory> historyList = _historyOld.get(hero);
+		List<OlympiadHistory> historyList = _historyOld.get(entry.getKey());
 		if(historyList == null)
 			historyList = Collections.emptyList();
 
@@ -104,7 +106,7 @@ public class OlympiadHistoryManager
 				allStatTie++;
 			else
 			{
-				int team = hero == h.getObjectId1() ? 1 : 2;
+				int team = entry.getKey() == h.getObjectId1() ? 1 : 2;
 				if(h.getGameStatus() == team)
 					allStatWinner++;
 				else
@@ -131,7 +133,7 @@ public class OlympiadHistoryManager
 				currentTie++;
 			else
 			{
-				int team = hero == history.getObjectId1() ? 1 : 2;
+				int team = entry.getKey() == history.getObjectId1() ? 1 : 2;
 				if(history.getGameStatus() == team)
 					currentWinner++;
 				else
@@ -145,7 +147,7 @@ public class OlympiadHistoryManager
 				break;
 
 			b.append("<tr><td>");
-			b.append(history.toString(player, hero, currentWinner, currentLoss, currentTie));
+			b.append(history.toString(player, entry.getKey(), currentWinner, currentLoss, currentTie));
 			b.append("</td></tr");
 		}
 

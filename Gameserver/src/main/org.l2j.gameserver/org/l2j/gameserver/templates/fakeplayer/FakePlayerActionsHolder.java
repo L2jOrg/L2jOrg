@@ -1,12 +1,13 @@
 package org.l2j.gameserver.templates.fakeplayer;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.gameserver.templates.fakeplayer.actions.OrdinaryActions;
+
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.HashIntObjectMap;
 
 public class FakePlayerActionsHolder
 {
-	private final TIntObjectMap<OrdinaryActions> _actionsMap = new TIntObjectHashMap<>();
+	private final IntObjectMap<OrdinaryActions> _actionsMap = new HashIntObjectMap<OrdinaryActions>();
 
 	public void addAction(int id, OrdinaryActions action)
 	{

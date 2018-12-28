@@ -1,13 +1,11 @@
 package handler.bbs.custom;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import handler.bbs.ScriptsCommunityHandler;
-import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.htm.HtmTemplates;
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.gameserver.listener.actor.player.OnPlayerEnterListener;
 import org.l2j.gameserver.listener.actor.player.OnPlayerExitListener;
 import org.l2j.gameserver.model.GameObjectsStorage;
@@ -20,6 +18,8 @@ import org.l2j.gameserver.model.entity.olympiad.Olympiad;
 import org.l2j.gameserver.network.l2.s2c.ShowBoardPacket;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.utils.Util;
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.CHashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -140,7 +140,7 @@ public class CommunityStatistic extends ScriptsCommunityHandler
 
 	private static final Logger _log = LoggerFactory.getLogger(CommunityStatistic.class);
 
-	private final TIntObjectMap<StatisticData> _statistic = new TIntObjectHashMap<>();
+	private final IntObjectMap<StatisticData> _statistic = new CHashIntObjectMap<StatisticData>();
 
 	private final PkComparator _pkComparator = new PkComparator();
 	private final PvpComparator _pvpComparator = new PvpComparator();
@@ -483,7 +483,7 @@ public class CommunityStatistic extends ScriptsCommunityHandler
 		for(Player player : GameObjectsStorage.getPlayers())
 			updateStatistic(player);
 
-		Collection<StatisticData> statistic = _statistic.valueCollection();
+		Collection<StatisticData> statistic = _statistic.values();
 		StatisticData[] array = statistic.toArray(new StatisticData[statistic.size()]);
 
 		if(BBSConfig.STATISTIC_TOP_PK_COUNT > 0)

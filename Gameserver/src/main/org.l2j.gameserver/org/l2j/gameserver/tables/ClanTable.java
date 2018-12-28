@@ -1,7 +1,5 @@
 package org.l2j.gameserver.tables;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.util.Util;
@@ -17,6 +15,8 @@ import org.l2j.gameserver.model.pledge.ClanWar.ClanWarPeriod;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.utils.Log;
 import org.l2j.gameserver.utils.TimeUtils;
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.CHashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -40,10 +40,10 @@ public class ClanTable
 
 	private static ClanTable _instance;
 
-	private final Map<Integer, Clan> _clans = new ConcurrentHashMap<>();
+	private final Map<Integer, Clan> _clans = new ConcurrentHashMap<Integer, Clan>();
 	private final Map<Integer, Alliance> _alliances = new ConcurrentHashMap<Integer, Alliance>();
 
-	private final TIntObjectMap<ClanChangeLeaderRequest> _changeRequests = new TIntObjectHashMap<>();
+	private final IntObjectMap<ClanChangeLeaderRequest> _changeRequests = new CHashIntObjectMap<ClanChangeLeaderRequest>();
 
 	private final List<ClanWar> _clanWarUpdateCache = new ArrayList<ClanWar>();
 
@@ -560,7 +560,7 @@ public class ClanTable
 				dissolveClan(clan);
 		}
 
-		for(ClanChangeLeaderRequest changeLeaderRequest : _changeRequests.valueCollection())
+		for(ClanChangeLeaderRequest changeLeaderRequest : _changeRequests.values())
 		{
 			if(changeLeaderRequest.getTime() < System.currentTimeMillis())
 			{

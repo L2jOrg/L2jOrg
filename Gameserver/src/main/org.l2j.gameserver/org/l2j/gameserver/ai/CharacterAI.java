@@ -1,26 +1,32 @@
 package org.l2j.gameserver.ai;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-import org.l2j.commons.threading.RunnableImpl;
-import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.ai.PlayableAI.AINextAction;
-import org.l2j.gameserver.model.*;
-import org.l2j.gameserver.model.instances.NpcInstance;
-import org.l2j.gameserver.network.l2.s2c.DiePacket;
-import org.l2j.gameserver.utils.Location;
-import org.napile.primitive.sets.IntSet;
-import org.napile.primitive.sets.impl.CArrayIntSet;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
+
+import org.l2j.commons.threading.RunnableImpl;
+import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.gameserver.ai.PlayableAI.AINextAction;
+import org.l2j.gameserver.model.Creature;
+import org.l2j.gameserver.model.GameObject;
+import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.model.Servitor;
+import org.l2j.gameserver.model.Skill;
+import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.model.instances.NpcInstance;
+import org.l2j.gameserver.network.l2.s2c.DiePacket;
+import org.l2j.gameserver.utils.Location;
+
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.CHashIntObjectMap;
+import org.napile.primitive.sets.IntSet;
+import org.napile.primitive.sets.impl.CArrayIntSet;
 
 public class CharacterAI extends AbstractAI
 {
 	private final IntSet _blockedTimers = new CArrayIntSet();
 	private final List<ScheduledFuture<?>> _timers = new ArrayList<ScheduledFuture<?>>();
-	private final TIntObjectMap<ScheduledFuture<?>> _tasks = new TIntObjectHashMap<>();
+	private final IntObjectMap<ScheduledFuture<?>> _tasks = new CHashIntObjectMap<ScheduledFuture<?>>();
 
 	public CharacterAI(Creature actor)
 	{
@@ -366,7 +372,7 @@ public class CharacterAI extends AbstractAI
 		for(ScheduledFuture<?> timer : _timers)
 			timer.cancel(false);
 
-		for(ScheduledFuture<?> task : _tasks.valueCollection())
+		for(ScheduledFuture<?> task : _tasks.values())
 			task.cancel(false);
 
 		_blockedTimers.clear();

@@ -1,7 +1,5 @@
 package org.l2j.gameserver.instancemanager;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Announcements;
@@ -13,6 +11,8 @@ import org.l2j.gameserver.model.instances.ReflectionBossInstance;
 import org.l2j.gameserver.tables.GmListTable;
 import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.CHashIntObjectMap;
 import org.napile.primitive.sets.IntSet;
 import org.napile.primitive.sets.impl.HashIntSet;
 import org.slf4j.Logger;
@@ -26,9 +26,9 @@ public class RaidBossSpawnManager
 
 	private static RaidBossSpawnManager _instance;
 
-	protected static final TIntObjectMap<Spawner> _spawntable = new TIntObjectHashMap<>();
+	protected static final IntObjectMap<Spawner> _spawntable = new CHashIntObjectMap<Spawner>();
 
-	protected static TIntObjectMap<StatsSet> _storedInfo;
+	protected static IntObjectMap<StatsSet> _storedInfo;
 	private final IntSet _aliveRaidBosses = new HashIntSet();
 
 	public static enum Status
@@ -67,7 +67,7 @@ public class RaidBossSpawnManager
 
 	private void loadStatus()
 	{
-		_storedInfo = new TIntObjectHashMap<>();
+		_storedInfo = new CHashIntObjectMap<StatsSet>();
 
 		Connection con = null;
 		Statement statement = null;
@@ -232,7 +232,7 @@ public class RaidBossSpawnManager
 		return _spawntable.containsKey(bossId);
 	}
 
-	public TIntObjectMap<Spawner> getSpawnTable()
+	public IntObjectMap<Spawner> getSpawnTable()
 	{
 		return _spawntable;
 	}

@@ -1,9 +1,9 @@
 package org.l2j.gameserver.templates.item;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.l2j.commons.lang.ArrayUtils;
-import org.l2j.commons.util.TroveUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.string.ItemNameHolder;
 import org.l2j.gameserver.handler.items.IItemHandler;
@@ -26,8 +26,9 @@ import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.templates.item.EtcItemTemplate.EtcItemType;
 import org.l2j.gameserver.templates.item.data.CapsuledItemData;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.napile.primitive.Containers;
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.HashIntObjectMap;
 
 public abstract class ItemTemplate extends StatTemplate
 {
@@ -141,7 +142,7 @@ public abstract class ItemTemplate extends StatTemplate
 	protected int _bodyPart;
 	private final int _crystalCount;
 	private int[] _baseAttributes = new int[6];
-	private TIntObjectMap<int[]> _enchantOptions = TroveUtils.emptyIntObjectMap();
+	private IntObjectMap<int[]> _enchantOptions = Containers.emptyIntObjectMap();
 	private final boolean _isPvP;
 	private final ItemQuality _quality;
 	private final int _baseEnchantLevel;
@@ -720,12 +721,12 @@ public abstract class ItemTemplate extends StatTemplate
 	public void addEnchantOptions(int level, int[] options)
 	{
 		if(_enchantOptions.isEmpty())
-			_enchantOptions = new TIntObjectHashMap<>();
+			_enchantOptions = new HashIntObjectMap<int[]>();
 
 		_enchantOptions.put(level, options);
 	}
 
-	public TIntObjectMap<int[]> getEnchantOptions()
+	public IntObjectMap<int[]> getEnchantOptions()
 	{
 		return _enchantOptions;
 	}

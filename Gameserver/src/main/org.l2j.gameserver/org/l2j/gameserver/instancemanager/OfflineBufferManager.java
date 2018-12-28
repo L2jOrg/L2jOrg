@@ -1,7 +1,12 @@
 package org.l2j.gameserver.instancemanager;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+import java.util.StringTokenizer;
+
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.htm.HtmTemplates;
@@ -23,7 +28,11 @@ import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.TradeHelper;
 import org.l2j.gameserver.utils.Util;
 
-import java.util.*;
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.CHashIntObjectMap;
+import org.napile.primitive.maps.impl.HashIntObjectMap;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class OfflineBufferManager
 {
@@ -32,7 +41,7 @@ public class OfflineBufferManager
 		private final Player _owner;
 		private final String _saleTitle;
 		private final long _buffPrice;
-		private final TIntObjectMap<SkillEntry> _buffs = new TIntObjectHashMap<>();
+		private final IntObjectMap<SkillEntry> _buffs = new HashIntObjectMap<SkillEntry>();
 
 		public BufferData(Player player, String title, long price, List<SkillEntry> buffs)
 		{
@@ -61,7 +70,7 @@ public class OfflineBufferManager
 			return _buffPrice;
 		}
 
-		public TIntObjectMap<SkillEntry> getBuffs()
+		public IntObjectMap<SkillEntry> getBuffs()
 		{
 			return _buffs;
 		}
@@ -73,6 +82,8 @@ public class OfflineBufferManager
 	{
 		return _instance;
 	}
+
+	private static final Logger _log = LoggerFactory.getLogger(OfflineBufferManager.class);
 
 	private static final Set<SkillTargetType> SUITABLE_TARGET_TYPES = new HashSet<SkillTargetType>();
 	private static final Set<SkillTargetType> IGNORE_TARGET_CONDITIONS_TARGET_TYPES;
@@ -100,9 +111,9 @@ public class OfflineBufferManager
 		IGNORE_TARGET_CONDITIONS_TARGET_TYPES.add(SkillTargetType.TARGET_CLAN);
 	}
 
-	private final TIntObjectMap<BufferData> _buffStores = new TIntObjectHashMap<>();
+	private final IntObjectMap<BufferData> _buffStores = new CHashIntObjectMap<BufferData>();
 
-	public TIntObjectMap<BufferData> getBuffStores()
+	public IntObjectMap<BufferData> getBuffStores()
 	{
 		return _buffStores;
 	}
@@ -382,7 +393,7 @@ public class OfflineBufferManager
 		int currentPage = Math.min(maxPage, page);
 
 		StringBuilder buffList = new StringBuilder();
-		Iterator<SkillEntry> it = buffer.getBuffs().valueCollection().iterator();
+		Iterator<SkillEntry> it = buffer.getBuffs().values().iterator();
 
 		int i = 0;
 		boolean changeColor = false;
@@ -450,7 +461,7 @@ public class OfflineBufferManager
 		if(buffer != null)
 		{
 			trader.setVar("offlinebuff_price", buffer.getBuffPrice());
-			trader.setVar("offlinebuff_skills", joinAllSkillsToString(buffer.getBuffs().valueCollection()));
+			trader.setVar("offlinebuff_skills", joinAllSkillsToString(buffer.getBuffs().values()));
 			trader.setVar("offlinebuff_title", buffer.getSaleTitle());
 		}
 	}
