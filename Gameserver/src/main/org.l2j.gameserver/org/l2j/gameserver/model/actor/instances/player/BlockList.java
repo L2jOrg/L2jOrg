@@ -1,8 +1,5 @@
 package org.l2j.gameserver.model.actor.instances.player;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.Collection;
 
 import org.l2j.gameserver.Config;
@@ -15,6 +12,8 @@ import org.l2j.gameserver.network.l2.s2c.ExBlockAddResult;
 import org.l2j.gameserver.network.l2.s2c.ExBlockDefailInfo;
 import org.l2j.gameserver.network.l2.s2c.ExBlockRemoveResult;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
@@ -25,7 +24,7 @@ public class BlockList
 {
 	public static final int MAX_BLOCK_LIST_SIZE = 128;
 
-	private TIntObjectMap<Block> _blockList = new TIntObjectHashMap<Block>(0);
+	private IntObjectMap<Block> _blockList = new HashIntObjectMap<Block>(0);
 	private final Player _owner;
 
 	public BlockList(Player owner)
@@ -80,12 +79,12 @@ public class BlockList
 
 	public Block[] values()
 	{
-		return _blockList.values(new Block[_blockList.size()]);
+		return _blockList.values().toArray(new Block[_blockList.size()]);
 	}
 
 	public Collection<Block> valueCollection()
 	{
-		return _blockList.valueCollection();
+		return _blockList.values();
 	}
 
 	public boolean isEmpty()

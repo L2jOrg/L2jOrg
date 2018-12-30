@@ -1,8 +1,7 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.TIntDoubleMap;
-import gnu.trove.map.hash.TIntDoubleHashMap;
-
+import io.github.joealisson.primitive.maps.IntDoubleMap;
+import io.github.joealisson.primitive.maps.impl.HashIntDoubleMap;
 import org.l2j.commons.data.xml.AbstractHolder;
 
 /**
@@ -12,7 +11,7 @@ public final class KarmaIncreaseDataHolder extends AbstractHolder
 {
 	private static final KarmaIncreaseDataHolder _instance = new KarmaIncreaseDataHolder();
 
-	private final TIntDoubleMap _bonusList = new TIntDoubleHashMap();
+	private final IntDoubleMap _bonusList = new HashIntDoubleMap();
 
 	public static KarmaIncreaseDataHolder getInstance()
 	{

@@ -1,16 +1,15 @@
 package org.l2j.gameserver.network.l2.s2c;
 
-import gnu.trove.iterator.TIntIntIterator;
-import gnu.trove.map.TIntIntMap;
-import gnu.trove.map.hash.TIntIntHashMap;
-
+import io.github.joealisson.primitive.maps.IntIntMap;
+import io.github.joealisson.primitive.maps.impl.HashIntIntMap;
+import io.github.joealisson.primitive.pair.IntIntPair;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.quest.QuestState;
 
 public class GMViewQuestInfoPacket extends L2GameServerPacket
 {
 	private final String _characterName;
-	private final TIntIntMap _quests = new TIntIntHashMap();
+	private final IntIntMap _quests = new HashIntIntMap();
 
 	public GMViewQuestInfoPacket(Player targetCharacter)
 	{
@@ -25,12 +24,9 @@ public class GMViewQuestInfoPacket extends L2GameServerPacket
 	{
 		writeString(_characterName);
 		writeShort(_quests.size());
-		for(TIntIntIterator iterator = _quests.iterator(); iterator.hasNext();)
-		{
-			iterator.advance();
-
-			writeInt(iterator.key());
-			writeInt(iterator.value());
+		for (IntIntPair pair : _quests.entrySet()) {
+			writeInt(pair.getKey());
+			writeInt(pair.getValue());
 		}
 		writeShort(0); //количество элементов типа: ddQd , как-то связано с предметами
 	}

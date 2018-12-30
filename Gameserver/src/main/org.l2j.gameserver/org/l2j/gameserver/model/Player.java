@@ -1,14 +1,19 @@
 package org.l2j.gameserver.model;
 
-import gnu.trove.iterator.TIntLongIterator;
-import gnu.trove.list.TIntList;
-import gnu.trove.list.array.TIntArrayList;
-import gnu.trove.list.linked.TIntLinkedList;
-import gnu.trove.map.TIntLongMap;
+import io.github.joealisson.primitive.Containers;
+import io.github.joealisson.primitive.lists.IntList;
+import io.github.joealisson.primitive.lists.impl.ArrayIntList;
+import io.github.joealisson.primitive.maps.IntLongMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
+import io.github.joealisson.primitive.maps.impl.CTreeIntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.pair.IntLongPair;
+import io.github.joealisson.primitive.pair.IntObjectPair;
+import io.github.joealisson.primitive.pair.impl.IntObjectPairImpl;
 import org.l2j.commons.collections.CollectionUtils;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
-import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.lang.reference.HardReference;
 import org.l2j.commons.lang.reference.HardReferences;
 import org.l2j.commons.threading.RunnableImpl;
@@ -110,13 +115,6 @@ import org.l2j.gameserver.templates.player.PlayerTemplate;
 import org.l2j.gameserver.templates.player.transform.TransformTemplate;
 import org.l2j.gameserver.templates.premiumaccount.PremiumAccountTemplate;
 import org.l2j.gameserver.utils.*;
-import org.napile.pair.primitive.IntObjectPair;
-import org.napile.pair.primitive.impl.IntObjectPairImpl;
-import org.napile.primitive.Containers;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CHashIntObjectMap;
-import org.napile.primitive.maps.impl.CTreeIntObjectMap;
-import org.napile.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -9989,7 +9987,7 @@ public final class Player extends Playable implements PlayerGroup
 				return null;
 
 			String[] products_str = value.split(";");
-			TIntList result = new TIntLinkedList();
+			IntList result = new ArrayIntList();
 			for(int i = 0; i < products_str.length; i++)
 			{
 				int productId = Integer.parseInt(products_str[i]);
@@ -10012,7 +10010,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		else
 		{
-			TIntList newProductList = new TIntArrayList(_recentProductList.length);
+			IntList newProductList = new ArrayIntList(_recentProductList.length);
 			newProductList.add(productId);
 			for(int i = 0; i < _recentProductList.length; i++) {
 				if(newProductList.size() >= Config.IM_MAX_ITEMS_IN_RECENT_LIST)
@@ -10693,13 +10691,11 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			for(int i = playerLvl; i > lastRewarded; i--)
 			{
-				TIntLongMap items = LevelUpRewardHolder.getInstance().getRewardData(i);
+				IntLongMap items = LevelUpRewardHolder.getInstance().getRewardData(i);
 				if(items != null)
 				{
-					for(TIntLongIterator iterator = items.iterator(); iterator.hasNext();)
-					{
-						iterator.advance();
-						getPremiumItemList().add(new PremiumItem(iterator.key(), iterator.value(), ""));
+					for (IntLongPair pair : items.entrySet()) {
+						getPremiumItemList().add(new PremiumItem(pair.getKey(), pair.getValue(), ""));
 						rewarded = true;
 					}
 				}

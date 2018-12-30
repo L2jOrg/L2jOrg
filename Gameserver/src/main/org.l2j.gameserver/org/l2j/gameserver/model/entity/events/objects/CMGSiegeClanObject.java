@@ -4,8 +4,8 @@ import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.events.impl.SiegeEvent;
-import org.napile.primitive.sets.IntSet;
-import org.napile.primitive.sets.impl.HashIntSet;
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.HashIntSet;
 
 /**
  * @author VISTALL

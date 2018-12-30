@@ -1,28 +1,26 @@
 package org.l2j.gameserver.tables;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
-import java.io.File;
-import java.util.StringTokenizer;
-
-import javax.xml.parsers.DocumentBuilderFactory;
-
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.templates.item.ItemGrade;
 import org.l2j.gameserver.templates.item.ItemTemplate;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.File;
+import java.util.StringTokenizer;
+
 public class EnchantHPBonusTable
 {
 	private static Logger _log = LoggerFactory.getLogger(EnchantHPBonusTable.class);
 
-	private final TIntObjectHashMap<Integer[]> _armorHPBonus = new TIntObjectHashMap<Integer[]>();
+	private final HashIntObjectMap<Integer[]> _armorHPBonus = new HashIntObjectMap<Integer[]>();
 
 	private int _onepieceFactor = 100;
 

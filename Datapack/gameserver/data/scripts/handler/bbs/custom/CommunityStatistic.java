@@ -18,8 +18,8 @@ import org.l2j.gameserver.model.entity.olympiad.Olympiad;
 import org.l2j.gameserver.network.l2.s2c.ShowBoardPacket;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.utils.Util;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CHashIntObjectMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

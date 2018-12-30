@@ -1,11 +1,11 @@
 package org.l2j.gameserver.dao;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.actor.instances.player.Block;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,9 +27,9 @@ public class CharacterBlockListDAO
 		return _instance;
 	}
 
-	public TIntObjectMap<Block> select(Player owner)
+	public IntObjectMap<Block> select(Player owner)
 	{
-		TIntObjectMap<Block> map = new TIntObjectHashMap<Block>();
+		IntObjectMap<Block> map = new HashIntObjectMap<Block>();
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;

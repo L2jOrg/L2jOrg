@@ -1,11 +1,8 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import gnu.trove.set.TIntSet;
-import gnu.trove.set.hash.TIntHashSet;
-
-import java.io.File;
-import java.util.Iterator;
-
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.HashIntSet;
+import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.commons.string.StringArrayUtils;
 import org.l2j.gameserver.Config;
@@ -13,7 +10,9 @@ import org.l2j.gameserver.data.xml.holder.DailyMissionsHolder;
 import org.l2j.gameserver.templates.dailymissions.DailyMissionTemplate;
 import org.l2j.gameserver.templates.dailymissions.DailyRewardTemplate;
 import org.l2j.gameserver.templates.item.data.ItemData;
-import org.dom4j.Element;
+
+import java.io.File;
+import java.util.Iterator;
 
 /**
  * @author Bonux
@@ -64,7 +63,11 @@ public final class DailyMissionsParser extends AbstractParser<DailyMissionsHolde
 				Element rewardsElement = rewardsIterator.next();
 
 				int[] classes = rewardsElement.attributeValue("classes") == null ? null : StringArrayUtils.stringToIntArray(rewardsElement.attributeValue("classes"), ",");
-				TIntSet classIds = classes == null ? null : new TIntHashSet(classes);
+				IntSet classIds = null;
+				if(classes != null) {
+					classIds = new HashIntSet();
+					classIds.addAll(classes);
+				}
 
 				DailyRewardTemplate reward = new DailyRewardTemplate(classIds);
 

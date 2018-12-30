@@ -1,7 +1,5 @@
 package org.l2j.gameserver.instancemanager.clansearch;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.GameServer;
@@ -19,6 +17,8 @@ import org.l2j.gameserver.model.clansearch.base.ClanSearchSortOrder;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.network.l2.s2c.ExPledgeWaitingListAlarm;
 import org.l2j.gameserver.tables.ClanTable;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -71,11 +71,11 @@ public class ClanSearchManager
 
 	private OnShutdownListener _shutdownListener = new ShutdownListener();
 
-	private final TIntObjectMap<ClanSearchClan> _registeredClans = new TIntObjectHashMap<ClanSearchClan>();
+	private final IntObjectMap<ClanSearchClan> _registeredClans = new HashIntObjectMap<ClanSearchClan>();
 	private final List<ClanSearchClan> _registeredClansList = new ArrayList<ClanSearchClan>();
 
-	private final TIntObjectMap<ClanSearchPlayer> _waitingPlayers = new TIntObjectHashMap<ClanSearchPlayer>();
-	private final TIntObjectMap<TIntObjectMap<ClanSearchPlayer>> _applicantPlayers = new TIntObjectHashMap<TIntObjectMap<ClanSearchPlayer>>();
+	private final IntObjectMap<ClanSearchPlayer> _waitingPlayers = new HashIntObjectMap<ClanSearchPlayer>();
+	private final IntObjectMap<IntObjectMap<ClanSearchPlayer>> _applicantPlayers = new HashIntObjectMap<>();
 
 	private final ClanSearchTask _scheduledTaskExecutor = new ClanSearchTask();
 
@@ -328,7 +328,7 @@ public class ClanSearchManager
 
 	public ClanSearchPlayer findAnyApplicant(int charId)
 	{
-		for(TIntObjectMap<ClanSearchPlayer> players : _applicantPlayers.valueCollection())
+		for(IntObjectMap<ClanSearchPlayer> players : _applicantPlayers.values())
 		{
 			if(players.containsKey(charId))
 				return players.get(charId);
@@ -338,7 +338,7 @@ public class ClanSearchManager
 
 	public ClanSearchPlayer getApplicant(int clanId, int charId)
 	{
-		TIntObjectMap<ClanSearchPlayer> players = _applicantPlayers.get(clanId);
+		IntObjectMap<ClanSearchPlayer> players = _applicantPlayers.get(clanId);
 		if(players == null)
 			return null;
 
@@ -347,7 +347,7 @@ public class ClanSearchManager
 
 	public boolean isApplicantRegistered(int clanId, int playerId)
 	{
-		TIntObjectMap<ClanSearchPlayer> players = _applicantPlayers.get(clanId);
+		IntObjectMap<ClanSearchPlayer> players = _applicantPlayers.get(clanId);
 		if(players == null)
 			return false;
 
@@ -368,10 +368,10 @@ public class ClanSearchManager
 
 			if(!isApplicantRegistered(player.getPrefferedClanId(), player.getCharId()))
 			{
-				TIntObjectMap<ClanSearchPlayer> players = _applicantPlayers.get(player.getPrefferedClanId());
+				IntObjectMap<ClanSearchPlayer> players = _applicantPlayers.get(player.getPrefferedClanId());
 				if(players == null)
 				{
-					players = new TIntObjectHashMap<ClanSearchPlayer>(1);
+					players = new HashIntObjectMap<ClanSearchPlayer>(1);
 					_applicantPlayers.put(player.getPrefferedClanId(), players);
 				}
 
@@ -396,7 +396,7 @@ public class ClanSearchManager
 
 	public void removeApplicant(int clanId, int charId)
 	{
-		TIntObjectMap<ClanSearchPlayer> players = _applicantPlayers.get(clanId);
+		IntObjectMap<ClanSearchPlayer> players = _applicantPlayers.get(clanId);
 		if(players == null)
 			return;
 
@@ -412,7 +412,7 @@ public class ClanSearchManager
 	{
 		List<ClanSearchPlayer> list = new ArrayList<ClanSearchPlayer>();
 
-		for(ClanSearchPlayer csPlayer : _waitingPlayers.valueCollection())
+		for(ClanSearchPlayer csPlayer : _waitingPlayers.values())
 		{
 			if(csPlayer.getLevel() < params.getMinLevel())
 				continue;
@@ -465,11 +465,11 @@ public class ClanSearchManager
 	public Collection<ClanSearchPlayer> applicantsCollection(int clanId)
 	{
 		//TODO: Переделать под List? Чтобы сохранялся хоть какой-то порядок....
-		TIntObjectMap<ClanSearchPlayer> players = _applicantPlayers.get(clanId);
+		IntObjectMap<ClanSearchPlayer> players = _applicantPlayers.get(clanId);
 		if(players == null)
 			return Collections.emptyList();
 
-		return players.valueCollection();
+		return players.values();
 	}
 
 	public boolean removeWaiter(int charId)

@@ -26,8 +26,8 @@ import org.l2j.gameserver.templates.item.ItemGrade;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.templates.item.WeaponTemplate.WeaponType;
 
-import org.napile.primitive.lists.IntList;
-import org.napile.primitive.lists.impl.ArrayIntList;
+import io.github.joealisson.primitive.lists.IntList;
+import io.github.joealisson.primitive.lists.impl.ArrayIntList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

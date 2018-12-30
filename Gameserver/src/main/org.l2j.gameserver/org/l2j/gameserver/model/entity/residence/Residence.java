@@ -1,9 +1,9 @@
 package org.l2j.gameserver.model.entity.residence;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-import gnu.trove.set.TIntSet;
-import gnu.trove.set.hash.TIntHashSet;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.l2j.commons.dao.JdbcEntity;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.database.L2DatabaseFactory;
@@ -64,7 +64,7 @@ public abstract class Residence implements JdbcEntity
 	protected Clan _owner;
 	protected Zone _zone;
 
-	private TIntObjectMap<Skill> _skills = new TIntObjectHashMap<Skill>();
+	private IntObjectMap<Skill> _skills = new HashIntObjectMap<Skill>();
 
 	protected SiegeEvent<?, ?> _siegeEvent;
 
@@ -87,7 +87,7 @@ public abstract class Residence implements JdbcEntity
 
 	private final Map<ResidenceFunctionType, ResidenceFunction> _activeFunctions = new HashMap<ResidenceFunctionType, ResidenceFunction>();
 
-	private final TIntSet _availableFunctions = new TIntHashSet();
+	private final IntSet _availableFunctions = new HashIntSet();
 
 	public Residence(StatsSet set)
 	{
@@ -537,7 +537,7 @@ public abstract class Residence implements JdbcEntity
 
 	public List<Skill> getSkills()
 	{
-		return new ArrayList<Skill>(_skills.valueCollection());
+		return new ArrayList<Skill>(_skills.values());
 	}
 
 	public void addBanishPoint(Location loc)

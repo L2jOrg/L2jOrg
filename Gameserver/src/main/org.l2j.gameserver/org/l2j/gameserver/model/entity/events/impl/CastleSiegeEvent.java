@@ -39,8 +39,8 @@ import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.templates.item.support.MerchantGuard;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.SiegeUtils;
-import org.napile.primitive.sets.IntSet;
-import org.napile.primitive.sets.impl.HashIntSet;
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.HashIntSet;
 
 /**
  * @author VISTALL

@@ -1,11 +1,11 @@
 package org.l2j.gameserver.cache;
 
-import gnu.trove.iterator.TIntIntIterator;
-import gnu.trove.iterator.TIntObjectIterator;
-import gnu.trove.map.TIntIntMap;
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntIntHashMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
+import io.github.joealisson.primitive.maps.IntIntMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntIntMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.pair.IntIntPair;
+import io.github.joealisson.primitive.pair.IntObjectPair;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.slf4j.Logger;
@@ -45,15 +45,15 @@ public class CrestCache {
 	}
 
 	/** Требуется для получения ID значка по ID клана */
-	private final TIntIntMap _pledgeCrestId = new TIntIntHashMap();
-	private final TIntIntMap _pledgeCrestLargeId = new TIntIntHashMap();
-	private final TIntIntMap _allyCrestId = new TIntIntHashMap();
+	private final IntIntMap _pledgeCrestId = new HashIntIntMap();
+	private final IntIntMap _pledgeCrestLargeId = new HashIntIntMap();
+	private final IntIntMap _allyCrestId = new HashIntIntMap();
 
 	/** Получение значка по ID */
-	private final TIntObjectMap<byte[]> _pledgeCrest = new TIntObjectHashMap<byte[]>();
-	private final TIntObjectMap<TIntObjectMap<byte[]>> _pledgeCrestLarge = new TIntObjectHashMap<TIntObjectMap<byte[]>>();
-	private final TIntObjectMap<TIntObjectMap<byte[]>> _pledgeCrestLargeTemp = new TIntObjectHashMap<TIntObjectMap<byte[]>>();
-	private final TIntObjectMap<byte[]> _allyCrest = new TIntObjectHashMap<byte[]>();
+	private final IntObjectMap<byte[]> _pledgeCrest = new HashIntObjectMap<byte[]>();
+	private final IntObjectMap<IntObjectMap<byte[]>> _pledgeCrestLarge = new HashIntObjectMap<>();
+	private final IntObjectMap<IntObjectMap<byte[]>> _pledgeCrestLargeTemp = new HashIntObjectMap<>();
+	private final IntObjectMap<byte[]> _allyCrest = new HashIntObjectMap<byte[]>();
 
 	/** Блокировка для чтения/записи объектов из "кэша" */
 	private final ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
@@ -126,9 +126,9 @@ public class CrestCache {
 
 				crestId = _pledgeCrestLargeId.get(pledgeId);
 
-				TIntObjectMap<byte[]> crestMap = _pledgeCrestLarge.get(crestId);
+				IntObjectMap<byte[]> crestMap = _pledgeCrestLarge.get(crestId);
 				if(crestMap == null)
-					crestMap = new TIntObjectHashMap<byte[]>();
+					crestMap = new HashIntObjectMap<byte[]>();
 
 				crestMap.put(crestPartId, crest);
 				_pledgeCrestLarge.put(crestId, crestMap);
@@ -189,9 +189,9 @@ public class CrestCache {
 		return crest;
 	}
 
-	public TIntObjectMap<byte[]> getPledgeCrestLarge(int crestId)
+	public IntObjectMap<byte[]> getPledgeCrestLarge(int crestId)
 	{
-		TIntObjectMap<byte[]> crest = null;
+		IntObjectMap<byte[]> crest = null;
 
 		readLock.lock();
 		try
@@ -266,12 +266,9 @@ public class CrestCache {
 		{
 			if(_pledgeCrestLargeId.containsValue(crestId))
 			{
-				for(TIntIntIterator iterator = _pledgeCrestLargeId.iterator(); iterator.hasNext();)
-				{
-					iterator.advance();
-					if(iterator.value() == crestId)
-					{
-						pledgeId = iterator.key();
+				for (IntIntPair pair : _pledgeCrestLargeId.entrySet()) {
+					if(pair.getValue() == crestId) {
+						pledgeId = pair.getKey();
 						break;
 					}
 				}
@@ -441,11 +438,11 @@ public class CrestCache {
 		writeLock.lock();
 		try
 		{
-			TIntObjectMap<byte[]> crest = _pledgeCrestLargeTemp.get(pledgeId);
+			IntObjectMap<byte[]> crest = _pledgeCrestLargeTemp.get(pledgeId);
 			if(crestPart == 0)
 			{
 				_pledgeCrestLargeTemp.remove(pledgeId);
-				crest = new TIntObjectHashMap<byte[]>();
+				crest = new HashIntObjectMap<byte[]>();
 			}
 
 			if(crest != null)
@@ -478,13 +475,12 @@ public class CrestCache {
 						statement.execute();
 						DbUtils.closeQuietly(statement);
 
-						for(TIntObjectIterator<byte[]> iterator = crest.iterator(); iterator.hasNext();)
-						{
-							iterator.advance();
+
+						for (IntObjectPair<byte[]> pair : crest.entrySet()) {
 							statement = con.prepareStatement("REPLACE INTO clan_largecrests(clan_id, crest_part, data) VALUES (?,?,?)");
 							statement.setInt(1, pledgeId);
-							statement.setInt(2, iterator.key());
-							statement.setBytes(3, iterator.value());
+							statement.setInt(2, pair.getKey());
+							statement.setBytes(3, pair.getValue());
 							statement.execute();
 							DbUtils.closeQuietly(statement);
 						}
@@ -548,12 +544,12 @@ public class CrestCache {
 		return crestId;
 	}
 
-	public static int getByteMapSize(TIntObjectMap<byte[]> map)
+	public static int getByteMapSize(IntObjectMap<byte[]> map)
 	{
 		int size = 0;
 		if(map != null && !map.isEmpty())
 		{
-			for(byte[] tempCrest : map.valueCollection())
+			for(byte[] tempCrest : map.values())
 				size += tempCrest.length;
 		}
 		return size;

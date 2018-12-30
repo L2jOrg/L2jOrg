@@ -1,8 +1,5 @@
 package org.l2j.gameserver.instancemanager;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import org.l2j.commons.lang.reference.HardReference;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
@@ -11,6 +8,8 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.CustomMessage;
 import org.l2j.gameserver.network.l2.s2c.SetupGaugePacket;
 import org.l2j.gameserver.network.l2.s2c.SocialActionPacket;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,7 +26,7 @@ public final class AwayManager
 		return _instance;
 	}
 
-	private TIntObjectMap<String> _awayTexts = new TIntObjectHashMap<String>();
+	private IntObjectMap<String> _awayTexts = new HashIntObjectMap<String>();
 
 	private AwayManager()
 	{

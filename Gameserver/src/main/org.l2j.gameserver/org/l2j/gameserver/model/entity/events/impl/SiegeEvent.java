@@ -29,11 +29,11 @@ import org.l2j.gameserver.templates.DoorTemplate;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.TeleportUtils;
-import org.napile.pair.primitive.IntObjectPair;
-import org.napile.primitive.maps.IntLongMap;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CHashIntLongMap;
-import org.napile.primitive.maps.impl.CHashIntObjectMap;
+import io.github.joealisson.primitive.pair.IntObjectPair;
+import io.github.joealisson.primitive.maps.IntLongMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.CHashIntLongMap;
+import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
 
 import java.util.ArrayList;
 import java.util.Calendar;

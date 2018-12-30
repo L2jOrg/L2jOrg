@@ -1,7 +1,5 @@
 package org.l2j.gameserver.model;
 
-import gnu.trove.iterator.TIntObjectIterator;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -136,12 +134,9 @@ public abstract class Servitor extends Playable
 		super(objectId, template);
 		_owner = owner;
 
-		if(template.getSkills().size() > 0)
-		{
-			for(TIntObjectIterator<Skill> iterator = template.getSkills().iterator(); iterator.hasNext();)
-			{
-				iterator.advance();
-				addSkill(iterator.value().getEntry());
+		if(template.getSkills().size() > 0) {
+			for (Skill skill : template.getSkills().values()) {
+				addSkill(skill.getEntry());
 			}
 		}
 

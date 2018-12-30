@@ -1,10 +1,9 @@
 package org.l2j.gameserver.templates.player;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import org.l2j.gameserver.templates.CreatureTemplate;
 import org.l2j.gameserver.templates.StatsSet;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author Bonux
@@ -28,7 +27,7 @@ public abstract class PCTemplate extends CreatureTemplate
 	private final double _baseRideRunSpd;
 	private final double _baseRideWalkSpd;
 
-	protected final TIntObjectMap<HpMpCpData> _regenData = new TIntObjectHashMap<HpMpCpData>();
+	protected final IntObjectMap<HpMpCpData> _regenData = new HashIntObjectMap<HpMpCpData>();
 
 	public PCTemplate(StatsSet set)
 	{

@@ -1,10 +1,9 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.templates.npc.BuyListTemplate;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -16,8 +15,8 @@ public final class BuyListHolder extends AbstractHolder
 {
 	private static final BuyListHolder _instance = new BuyListHolder();
 
-	private final TIntObjectMap<BuyListTemplate> _buyListsByListId = new TIntObjectHashMap<BuyListTemplate>();
-	private final TIntObjectMap<TIntObjectMap<BuyListTemplate>> _buyListsByNpcId = new TIntObjectHashMap<TIntObjectMap<BuyListTemplate>>();
+	private final IntObjectMap<BuyListTemplate> _buyListsByListId = new HashIntObjectMap<BuyListTemplate>();
+	private final IntObjectMap<IntObjectMap<BuyListTemplate>> _buyListsByNpcId = new HashIntObjectMap<>();
 
 	public static BuyListHolder getInstance()
 	{
@@ -28,10 +27,10 @@ public final class BuyListHolder extends AbstractHolder
 	{
 		_buyListsByListId.put(buyList.getListId(), buyList);
 
-		TIntObjectMap<BuyListTemplate> buyLists = _buyListsByNpcId.get(buyList.getNpcId());
+		IntObjectMap<BuyListTemplate> buyLists = _buyListsByNpcId.get(buyList.getNpcId());
 		if(buyLists == null)
 		{
-			buyLists = new TIntObjectHashMap<BuyListTemplate>();
+			buyLists = new HashIntObjectMap<BuyListTemplate>();
 			_buyListsByNpcId.put(buyList.getNpcId(), buyLists);
 		}
 
@@ -45,16 +44,16 @@ public final class BuyListHolder extends AbstractHolder
 
 	public Collection<BuyListTemplate> getBuyLists(int npcId)
 	{
-		TIntObjectMap<BuyListTemplate> buyLists = _buyListsByNpcId.get(npcId);
+		IntObjectMap<BuyListTemplate> buyLists = _buyListsByNpcId.get(npcId);
 		if(buyLists == null)
 			return Collections.emptyList();
 
-		return buyLists.valueCollection();
+		return buyLists.values();
 	}
 
 	public BuyListTemplate getBuyList(int npcId, int buyListId)
 	{
-		TIntObjectMap<BuyListTemplate> buyLists = _buyListsByNpcId.get(npcId);
+		IntObjectMap<BuyListTemplate> buyLists = _buyListsByNpcId.get(npcId);
 		if(buyLists == null)
 			return null;
 

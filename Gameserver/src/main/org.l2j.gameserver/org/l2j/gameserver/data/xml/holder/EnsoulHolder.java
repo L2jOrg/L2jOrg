@@ -1,12 +1,11 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.templates.item.ItemGrade;
 import org.l2j.gameserver.templates.item.support.Ensoul;
 import org.l2j.gameserver.templates.item.support.EnsoulFee;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author Bonux
@@ -15,8 +14,8 @@ public class EnsoulHolder extends AbstractHolder
 {
 	private static final EnsoulHolder _instance = new EnsoulHolder();
 
-	private TIntObjectMap<EnsoulFee> _ensoulsFee = new TIntObjectHashMap<EnsoulFee>();
-	private TIntObjectMap<Ensoul> _ensouls = new TIntObjectHashMap<Ensoul>();
+	private IntObjectMap<EnsoulFee> _ensoulsFee = new HashIntObjectMap<EnsoulFee>();
+	private IntObjectMap<Ensoul> _ensouls = new HashIntObjectMap<Ensoul>();
 
 	public static EnsoulHolder getInstance()
 	{

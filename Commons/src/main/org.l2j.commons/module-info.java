@@ -13,7 +13,6 @@ module org.l2j.commons {
     requires java.compiler;
     requires dom4j;
     requires ecj;
-    requires trove;
 
     exports org.l2j.commons.util;
     exports org.l2j.commons.xml;

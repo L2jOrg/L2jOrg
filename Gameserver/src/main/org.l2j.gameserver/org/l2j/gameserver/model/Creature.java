@@ -1,7 +1,10 @@
 package org.l2j.gameserver.model;
 
-import gnu.trove.set.TIntSet;
-import gnu.trove.set.hash.TIntHashSet;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
+import io.github.joealisson.primitive.maps.impl.CTreeIntObjectMap;
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.l2j.commons.collections.CollectionUtils;
 import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.lang.reference.HardReference;
@@ -66,9 +69,6 @@ import org.l2j.gameserver.templates.item.WeaponTemplate.WeaponType;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
 import org.l2j.gameserver.templates.player.transform.TransformTemplate;
 import org.l2j.gameserver.utils.*;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CHashIntObjectMap;
-import org.napile.primitive.maps.impl.CTreeIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -327,7 +327,7 @@ public abstract class Creature extends GameObject
 
 	private boolean _blocked;
 
-    private final Map<Effect, TIntSet> _ignoreSkillsEffects = new HashMap<Effect, TIntSet>();
+    private final Map<Effect, IntSet> _ignoreSkillsEffects = new HashMap<>();
 
 	private volatile HardReference<? extends Creature> _effectImmunityException = HardReferences.emptyRef();
 	private volatile HardReference<? extends Creature> _damageBlockedException = HardReferences.emptyRef();
@@ -1849,7 +1849,7 @@ public abstract class Creature extends GameObject
 
         if(isPlayable())
         {
-            final TIntSet effectsToRemove = new TIntHashSet();
+            final IntSet effectsToRemove = new HashIntSet();
 
             // Stop all active skills effects in progress on the L2Character
             if(isPreserveAbnormal() || isSalvation())
@@ -3703,7 +3703,7 @@ public abstract class Creature extends GameObject
 
 		if(attacker != this || (skill != null && skill.isOffensive()))
 		{
-			final TIntSet effectsToRemove = new TIntHashSet();
+			final IntSet effectsToRemove = new HashIntSet();
 			for(Abnormal effect : getAbnormalList())
 			{
 				if(effect.getSkill().isDispelOnDamage())
@@ -4564,7 +4564,7 @@ public abstract class Creature extends GameObject
         return stopInvisible(null, withServitors);
     }
 
-    public void addIgnoreSkillsEffect(Effect effect, TIntSet skills)
+    public void addIgnoreSkillsEffect(Effect effect, IntSet skills)
     {
         _ignoreSkillsEffects.put(effect, skills);
     }
@@ -4576,7 +4576,7 @@ public abstract class Creature extends GameObject
 
     public boolean isIgnoredSkill(Skill skill)
     {
-        for(TIntSet set : _ignoreSkillsEffects.values())
+        for(IntSet set : _ignoreSkillsEffects.values())
         {
             if(set.contains(skill.getId()))
                 return true;
@@ -5364,7 +5364,7 @@ public abstract class Creature extends GameObject
 	}
 
 	// Функция для дизактивации умений персонажа (если умение не активно, то он не дает статтов и имеет серую иконку).
-	private TIntSet _unActiveSkills = new TIntHashSet();
+	private IntSet _unActiveSkills = new HashIntSet();
 
 	public void addUnActiveSkill(Skill skill)
 	{

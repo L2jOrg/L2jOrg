@@ -2,8 +2,8 @@ package org.l2j.gameserver.model.petition;
 
 import java.util.Collection;
 
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author VISTALL

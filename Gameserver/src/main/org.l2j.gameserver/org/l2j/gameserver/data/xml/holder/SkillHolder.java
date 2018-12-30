@@ -1,8 +1,5 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +8,8 @@ import org.l2j.gameserver.model.Skill;
 import org.l2j.gameserver.skills.SkillEntry;
 import org.l2j.gameserver.skills.SkillEntryType;
 import org.l2j.gameserver.utils.SkillUtils;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author Bonux
@@ -19,9 +18,9 @@ public final class SkillHolder extends AbstractHolder
 {
 	private static final SkillHolder _instance = new SkillHolder();
 
-	private final TIntObjectMap<SkillEntry> _skills = new TIntObjectHashMap<SkillEntry>();
-	private final TIntObjectMap<SkillEntry> _skillsByIndex = new TIntObjectHashMap<SkillEntry>();
-	private final TIntObjectMap<List<SkillEntry>> _skillsById = new TIntObjectHashMap<List<SkillEntry>>();
+	private final IntObjectMap<SkillEntry> _skills = new HashIntObjectMap<SkillEntry>();
+	private final IntObjectMap<SkillEntry> _skillsByIndex = new HashIntObjectMap<SkillEntry>();
+	private final IntObjectMap<List<SkillEntry>> _skillsById = new HashIntObjectMap<List<SkillEntry>>();
 
 	public static SkillHolder getInstance()
 	{

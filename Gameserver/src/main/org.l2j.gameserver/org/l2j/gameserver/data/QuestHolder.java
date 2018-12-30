@@ -1,9 +1,9 @@
 package org.l2j.gameserver.data;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.model.quest.Quest;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 import java.util.Collection;
 
@@ -19,7 +19,7 @@ public final class QuestHolder extends AbstractHolder
 		return _instance;
 	}
 
-	private TIntObjectMap<Quest> _quests = new TIntObjectHashMap<Quest>();
+	private IntObjectMap<Quest> _quests = new HashIntObjectMap<Quest>();
 
 	public Quest getQuest(int id)
 	{
@@ -38,7 +38,7 @@ public final class QuestHolder extends AbstractHolder
 
 	public Collection<Quest> getQuests()
 	{
-		return _quests.valueCollection();
+		return _quests.values();
 	}
 
 	@Override

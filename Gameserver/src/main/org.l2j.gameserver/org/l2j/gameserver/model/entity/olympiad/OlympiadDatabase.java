@@ -12,8 +12,8 @@ import org.l2j.gameserver.model.base.SubClassType;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.network.l2.s2c.SystemMessage;
 import org.l2j.gameserver.templates.StatsSet;
-import org.napile.primitive.maps.IntIntMap;
-import org.napile.primitive.maps.impl.HashIntIntMap;
+import io.github.joealisson.primitive.maps.IntIntMap;
+import io.github.joealisson.primitive.maps.impl.HashIntIntMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

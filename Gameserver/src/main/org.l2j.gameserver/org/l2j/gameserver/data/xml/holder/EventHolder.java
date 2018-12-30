@@ -7,8 +7,8 @@ import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.events.Event;
 import org.l2j.gameserver.model.entity.events.EventType;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.TreeIntObjectMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.TreeIntObjectMap;
 
 /**
  * @author VISTALL

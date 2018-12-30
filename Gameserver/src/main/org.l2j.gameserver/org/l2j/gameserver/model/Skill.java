@@ -1,7 +1,5 @@
 package org.l2j.gameserver.model;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.geometry.Polygon;
 import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.util.Rnd;
@@ -42,6 +40,8 @@ import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.PositionUtils;
 import org.l2j.gameserver.utils.SkillUtils;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -380,7 +380,7 @@ public class Skill extends StatTemplate implements Cloneable
 	public static final int SKILL_SERVITOR_SHARE = 1557;
 	public static final int SKILL_CONFUSION = 1570;
 
-	private final TIntObjectMap<List<EffectTemplate>> _effectTemplates = new TIntObjectHashMap<List<EffectTemplate>>(EffectUseType.VALUES.length);
+	private final IntObjectMap<List<EffectTemplate>> _effectTemplates = new HashIntObjectMap<List<EffectTemplate>>(EffectUseType.VALUES.length);
 
 	private final AddedSkill[] _addedSkills;
 

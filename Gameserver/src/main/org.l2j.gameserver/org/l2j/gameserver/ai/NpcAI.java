@@ -21,8 +21,8 @@ import org.l2j.gameserver.templates.npc.WalkerRoutePoint;
 import org.l2j.gameserver.utils.Functions;
 import org.l2j.gameserver.utils.Location;
 
-import org.napile.primitive.sets.IntSet;
-import org.napile.primitive.sets.impl.CArrayIntSet;
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.CArrayIntSet;
 
 /**
  * @author Bonux

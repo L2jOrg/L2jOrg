@@ -6,8 +6,8 @@ import org.l2j.gameserver.model.Zone;
 import org.l2j.gameserver.model.entity.Reflection;
 import org.l2j.gameserver.model.entity.residence.Residence;
 import org.l2j.gameserver.model.entity.residence.ResidenceType;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.TreeIntObjectMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.TreeIntObjectMap;
 
 import java.util.ArrayList;
 import java.util.Collection;

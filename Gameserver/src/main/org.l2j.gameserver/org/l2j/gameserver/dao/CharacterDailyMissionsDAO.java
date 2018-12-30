@@ -1,12 +1,12 @@
 package org.l2j.gameserver.dao;
 
-import gnu.trove.map.TIntObjectMap;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.data.xml.holder.DailyMissionsHolder;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.actor.instances.player.DailyMission;
 import org.l2j.gameserver.templates.dailymissions.DailyMissionTemplate;
+import io.github.joealisson.primitive.maps.IntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,7 +30,7 @@ public class CharacterDailyMissionsDAO
 		return _instance;
 	}
 
-	public void restore(Player owner, TIntObjectMap<DailyMission> map)
+	public void restore(Player owner, IntObjectMap<DailyMission> map)
 	{
 		Connection con = null;
 		PreparedStatement statement = null;

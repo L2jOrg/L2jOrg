@@ -1,8 +1,7 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.TIntDoubleMap;
-import gnu.trove.map.hash.TIntDoubleHashMap;
-
+import io.github.joealisson.primitive.maps.IntDoubleMap;
+import io.github.joealisson.primitive.maps.impl.HashIntDoubleMap;
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.model.base.HitCondBonusType;
 
@@ -13,7 +12,7 @@ public final class HitCondBonusHolder extends AbstractHolder
 {
 	private static final HitCondBonusHolder _instance = new HitCondBonusHolder();
 
-	private final TIntDoubleMap _bonusList = new TIntDoubleHashMap();
+	private final IntDoubleMap _bonusList = new HashIntDoubleMap();
 
 	public static HitCondBonusHolder getInstance()
 	{

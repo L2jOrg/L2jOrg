@@ -1,9 +1,9 @@
 package org.l2j.gameserver;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-import gnu.trove.set.TIntSet;
-import gnu.trove.set.hash.TIntHashSet;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.l2j.commons.configuration.ExProperties;
 import org.l2j.commons.string.StringArrayUtils;
 import org.l2j.commons.time.cron.SchedulingPattern;
@@ -183,7 +183,7 @@ public class Config
 
     //public static List<Integer> ITEM_LIST = new ArrayList<Integer>();
 
-    public static TIntSet DROP_ONLY_THIS = new TIntHashSet();
+    public static IntSet DROP_ONLY_THIS = new HashIntSet();
     public static boolean INCLUDE_RAID_DROP;
 
     public static boolean SAVING_SPS;
@@ -238,7 +238,7 @@ public class Config
     public static int ALT_PCBANG_POINTS_BONUS;
     public static int ALT_PCBANG_POINTS_DELAY;
     public static int ALT_PCBANG_POINTS_MIN_LVL;
-    public static TIntSet ALT_ALLOWED_MULTISELLS_IN_PCBANG = new TIntHashSet();
+    public static IntSet ALT_ALLOWED_MULTISELLS_IN_PCBANG = new HashIntSet();
 
     public static boolean ALT_DEBUG_ENABLED;
     public static boolean ALT_DEBUG_PVP_ENABLED;
@@ -256,7 +256,7 @@ public class Config
     public static boolean AUTO_LOOT_ONLY_ADENA;
     public static boolean AUTO_LOOT_INDIVIDUAL;
     public static boolean AUTO_LOOT_FROM_RAIDS;
-    public static TIntSet AUTO_LOOT_ITEM_ID_LIST = new TIntHashSet();
+    public static IntSet AUTO_LOOT_ITEM_ID_LIST = new HashIntSet();
 
     /** Auto-loot for/from players with karma also? */
     public static boolean AUTO_LOOT_PK;
@@ -522,7 +522,7 @@ public class Config
 
     public static boolean EX_USE_QUEST_REWARD_PENALTY_PER;
     public static int EX_F2P_QUEST_REWARD_PENALTY_PER;
-    public static TIntSet EX_F2P_QUEST_REWARD_PENALTY_QUESTS;
+    public static IntSet EX_F2P_QUEST_REWARD_PENALTY_QUESTS;
 
     public static double RATE_QUESTS_DROP;
     public static double RATE_CLAN_REP_SCORE;
@@ -533,7 +533,7 @@ public class Config
     public static double DROP_CHANCE_MODIFIER_RAIDBOSS;
     public static double RATE_DROP_ITEMS_BOSS;
     public static double DROP_CHANCE_MODIFIER_BOSS;
-    public static TIntSet DISABLE_DROP_EXCEPT_ITEM_IDS;
+    public static IntSet DISABLE_DROP_EXCEPT_ITEM_IDS;
     public static int[] NO_RATE_ITEMS;
     public static boolean NO_RATE_EQUIPMENT;
     public static boolean NO_RATE_KEY_MATERIAL;
@@ -603,7 +603,7 @@ public class Config
     //public static int SWIMING_SPEED;
 
     /** protocol revision */
-    public static TIntSet AVAILABLE_PROTOCOL_REVISIONS;
+    public static IntSet AVAILABLE_PROTOCOL_REVISIONS;
 
     /** random animation interval */
     public static int MIN_NPC_ANIMATION;
@@ -638,7 +638,7 @@ public class Config
 
     public static boolean SPAWN_VITAMIN_MANAGER;
 
-    public static TIntObjectMap<int[]> ALLOW_CLASS_MASTERS_LIST = new TIntObjectHashMap<int[]>();
+    public static IntObjectMap<int[]> ALLOW_CLASS_MASTERS_LIST = new HashIntObjectMap<int[]>();
     public static boolean ALLOW_EVENT_GATEKEEPER;
 
     /** Inventory slots limits */
@@ -1242,8 +1242,8 @@ public class Config
     public static int BUFF_STORE_NAME_COLOR;
     public static int BUFF_STORE_TITLE_COLOR;
     public static int BUFF_STORE_OFFLINE_NAME_COLOR;
-    public static TIntSet BUFF_STORE_ALLOWED_CLASS_LIST = new TIntHashSet();
-    public static TIntSet BUFF_STORE_FORBIDDEN_SKILL_LIST = new TIntHashSet();
+    public static IntSet BUFF_STORE_ALLOWED_CLASS_LIST = new HashIntSet();
+    public static IntSet BUFF_STORE_FORBIDDEN_SKILL_LIST = new HashIntSet();
 
     public static boolean TRAINING_CAMP_ENABLE;
     public static boolean TRAINING_CAMP_PREMIUM_ONLY;
@@ -1364,7 +1364,7 @@ public class Config
         DROP_CHANCE_MODIFIER_RAIDBOSS = serverSettings.getProperty("DROP_CHANCE_MODIFIER_RAIDBOSS", 1.);
         RATE_DROP_ITEMS_BOSS = serverSettings.getProperty("RATE_DROP_ITEMS_BOSS", 1.);
         DROP_CHANCE_MODIFIER_BOSS = serverSettings.getProperty("DROP_CHANCE_MODIFIER_BOSS", 1.);
-        DISABLE_DROP_EXCEPT_ITEM_IDS = new TIntHashSet();
+        DISABLE_DROP_EXCEPT_ITEM_IDS = new HashIntSet();
         DISABLE_DROP_EXCEPT_ITEM_IDS.addAll(serverSettings.getProperty("DISABLE_DROP_EXCEPT_ITEM_IDS", new int[0]));
         NO_RATE_ITEMS = serverSettings.getProperty("NoRateItemIds", new int[] {
                 6660,
@@ -1436,7 +1436,7 @@ public class Config
         ALLOW_WATER = serverSettings.getProperty("AllowWater", true);
         ALLOW_ITEMS_REFUND = serverSettings.getProperty("ALLOW_ITEMS_REFUND", true);;
 
-        AVAILABLE_PROTOCOL_REVISIONS = new TIntHashSet();
+        AVAILABLE_PROTOCOL_REVISIONS = new HashIntSet();
         AVAILABLE_PROTOCOL_REVISIONS.addAll(serverSettings.getProperty("AvailableProtocolRevisions", new int[0]));
 
         MIN_NPC_ANIMATION = serverSettings.getProperty("MinNPCAnimation", 5);
@@ -1799,7 +1799,7 @@ public class Config
 
         EX_USE_QUEST_REWARD_PENALTY_PER = properties.getProperty("UseQuestRewardPenaltyPer", false);
         EX_F2P_QUEST_REWARD_PENALTY_PER = properties.getProperty("F2PQuestRewardPenaltyPer", 0);
-        EX_F2P_QUEST_REWARD_PENALTY_QUESTS = new TIntHashSet();
+        EX_F2P_QUEST_REWARD_PENALTY_QUESTS = new HashIntSet();
         EX_F2P_QUEST_REWARD_PENALTY_QUESTS.addAll(properties.getProperty("F2PQuestRewardPenaltyQuests", new int[0]));
 
         EX_USE_PREMIUM_HENNA_SLOT = properties.getProperty("UsePremiumHennaSlot", false);

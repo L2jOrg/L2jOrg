@@ -1,15 +1,14 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import gnu.trove.map.TIntLongMap;
-import gnu.trove.map.hash.TIntLongHashMap;
-
-import java.io.File;
-import java.util.Iterator;
-
+import io.github.joealisson.primitive.maps.IntLongMap;
+import io.github.joealisson.primitive.maps.impl.HashIntLongMap;
 import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.LevelUpRewardHolder;
+
+import java.io.File;
+import java.util.Iterator;
 
 /**
  * @author Bonux
@@ -49,7 +48,7 @@ public final class LevelUpRewardParser extends AbstractParser<LevelUpRewardHolde
 			if("reward".equalsIgnoreCase(element.getName()))
 			{
 				int level = Integer.parseInt(element.attributeValue("level"));
-				TIntLongMap items = new TIntLongHashMap();
+				IntLongMap items = new HashIntLongMap();
 
 				for(Element e : element.elements())
 				{

@@ -1,11 +1,10 @@
 package org.l2j.gameserver.model.actor.instances.player;
 
-import gnu.trove.iterator.TIntLongIterator;
-import gnu.trove.map.TIntLongMap;
-import gnu.trove.map.hash.TIntLongHashMap;
-import gnu.trove.set.TIntSet;
-import gnu.trove.set.hash.TIntHashSet;
-
+import io.github.joealisson.primitive.iterators.LongIterator;
+import io.github.joealisson.primitive.maps.IntLongMap;
+import io.github.joealisson.primitive.maps.impl.HashIntLongMap;
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.CustomMessage;
@@ -16,8 +15,8 @@ import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 public class AntiFlood
 {
-	private final TIntSet _interlocutors = new TIntHashSet();
-	private final TIntLongMap _recentReceivers = new TIntLongHashMap();
+	private final IntSet _interlocutors = new HashIntSet();
+	private final IntLongMap _recentReceivers = new HashIntLongMap();
 
 	private final Player _owner;
 
@@ -250,13 +249,12 @@ public class AntiFlood
 		long currentMillis = System.currentTimeMillis();
 		long lastSent;
 
-		TIntLongIterator itr = _recentReceivers.iterator();
+		LongIterator itr = _recentReceivers.values().iterator();
 
 		int recent = 0;
 		while(itr.hasNext())
 		{
-			itr.advance();
-			lastSent = itr.value();
+			lastSent = itr.next();
 			if(currentMillis - lastSent < (text.equalsIgnoreCase(_lastText) ? 600000L : 60000L))
 				recent++;
 			else

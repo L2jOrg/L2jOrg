@@ -1,14 +1,8 @@
 package org.l2j.gameserver.model.actor.instances.player;
 
-import gnu.trove.iterator.TIntIntIterator;
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.concurrent.Future;
-
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.pair.IntIntPair;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.dao.CharacterHennaDAO;
@@ -19,9 +13,13 @@ import org.l2j.gameserver.network.l2.s2c.HennaInfoPacket;
 import org.l2j.gameserver.skills.SkillEntry;
 import org.l2j.gameserver.templates.HennaTemplate;
 import org.l2j.gameserver.utils.ItemFunctions;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.concurrent.Future;
 
 /**
  * @author Bonux
@@ -40,7 +38,7 @@ public class HennaList
 	private Future<?> _removeTask;
 
 	private final Player _owner;
-	private final TIntObjectMap<SkillEntry> _skills = new TIntObjectHashMap<SkillEntry>();
+	private final IntObjectMap<SkillEntry> _skills = new HashIntObjectMap<SkillEntry>();
 
 	public HennaList(Player owner)
 	{
@@ -217,7 +215,7 @@ public class HennaList
 		_dex = 0;
 
 		boolean updateSkillList = false;
-		for(int skillId : _skills.keys())
+		for(int skillId : _skills.keySet().toArray())
 		{
 			if(_owner.removeSkill(skillId, false) != null)
 				updateSkillList = true;
@@ -239,11 +237,8 @@ public class HennaList
 			_wit += template.getStatWIT();
 			_dex += template.getStatDEX();
 
-			for(TIntIntIterator iterator = template.getSkills().iterator(); iterator.hasNext();)
-			{
-				iterator.advance();
-
-				SkillEntry skillEntry = SkillHolder.getInstance().getSkillEntry(iterator.key(), iterator.value());
+			for (IntIntPair pair : template.getSkills().entrySet()) {
+				SkillEntry skillEntry = SkillHolder.getInstance().getSkillEntry(pair.getKey(), pair.getValue());
 				if(skillEntry == null)
 					continue;
 
@@ -253,7 +248,7 @@ public class HennaList
 			}
 		}
 
-		for(SkillEntry skillEntry : _skills.valueCollection())
+		for(SkillEntry skillEntry : _skills.values())
 			_owner.addSkill(skillEntry, false);
 
 		if(!_skills.isEmpty())

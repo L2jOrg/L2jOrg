@@ -1,14 +1,12 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.iterator.TIntObjectIterator;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.templates.HennaTemplate;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author VISTALL
@@ -18,7 +16,7 @@ public final class HennaHolder extends AbstractHolder
 {
 	private static final HennaHolder _instance = new HennaHolder();
 
-	private TIntObjectHashMap<HennaTemplate> _hennas = new TIntObjectHashMap<HennaTemplate>();
+	private HashIntObjectMap<HennaTemplate> _hennas = new HashIntObjectMap<HennaTemplate>();
 
 	public static HennaHolder getInstance()
 	{
@@ -37,16 +35,7 @@ public final class HennaHolder extends AbstractHolder
 
 	public List<HennaTemplate> generateList(Player player)
 	{
-		List<HennaTemplate> list = new ArrayList<HennaTemplate>();
-		for(TIntObjectIterator<HennaTemplate> iterator = _hennas.iterator(); iterator.hasNext();)
-		{
-			iterator.advance();
-			HennaTemplate h = iterator.value();
-			//if(h.isForThisClass(player))
-				list.add(h);
-		}
-
-		return list;
+		return new ArrayList<>(_hennas.values());
 	}
 
 	@Override

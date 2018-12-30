@@ -1,6 +1,6 @@
 package org.l2j.gameserver.templates.player;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author Bonux
@@ -9,7 +9,7 @@ public class ClassData
 {
 	private final int _classId;
 
-	private final TIntObjectHashMap<HpMpCpData> _hpMpCpData = new TIntObjectHashMap<HpMpCpData>();
+	private final HashIntObjectMap<HpMpCpData> _hpMpCpData = new HashIntObjectMap<HpMpCpData>();
 
 	public ClassData(int classId)
 	{

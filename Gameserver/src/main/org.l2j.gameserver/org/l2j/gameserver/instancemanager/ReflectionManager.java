@@ -1,15 +1,14 @@
 package org.l2j.gameserver.instancemanager;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReadWriteLock;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
-
 import org.l2j.gameserver.data.xml.holder.DoorHolder;
 import org.l2j.gameserver.data.xml.holder.ZoneHolder;
 import org.l2j.gameserver.model.entity.Reflection;
 import org.l2j.gameserver.utils.Location;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReadWriteLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class ReflectionManager
 {
@@ -25,7 +24,7 @@ public class ReflectionManager
 		return _instance;
 	}
 
-	private final TIntObjectHashMap<Reflection> _reflections = new TIntObjectHashMap<Reflection>();
+	private final HashIntObjectMap<Reflection> _reflections = new HashIntObjectMap<Reflection>();
 
 	private final ReadWriteLock lock = new ReentrantReadWriteLock();
 	private final Lock readLock = lock.readLock();
@@ -92,7 +91,7 @@ public class ReflectionManager
 		readLock.lock();
 		try
 		{
-			return _reflections.values(new Reflection[_reflections.size()]);
+			return _reflections.values().toArray(new Reflection[_reflections.size()]);
 		}
 		finally
 		{

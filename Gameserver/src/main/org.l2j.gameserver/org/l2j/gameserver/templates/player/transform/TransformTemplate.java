@@ -1,16 +1,11 @@
 package org.l2j.gameserver.templates.player.transform;
 
-import gnu.trove.map.TIntDoubleMap;
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntDoubleHashMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-import gnu.trove.set.TIntSet;
-import gnu.trove.set.hash.TIntHashSet;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
+import io.github.joealisson.primitive.maps.IntDoubleMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntDoubleMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.base.BaseStats;
 import org.l2j.gameserver.model.base.TransformType;
@@ -19,6 +14,10 @@ import org.l2j.gameserver.templates.BaseStatsBonus;
 import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.templates.player.HpMpCpData;
 import org.l2j.gameserver.templates.player.PCTemplate;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author Bonux
@@ -31,15 +30,15 @@ public class TransformTemplate extends PCTemplate
 	private final int _spawnHeight;
 	private final boolean _normalAttackable;
 
-	private final TIntObjectMap<BaseStatsBonus> _baseStatsBonuses = new TIntObjectHashMap<BaseStatsBonus>();
-	private final TIntDoubleMap _levelBonusData = new TIntDoubleHashMap();
-	private final TIntObjectMap<HpMpCpData> _hpMpCpData = new TIntObjectHashMap<HpMpCpData>();
-	private final TIntSet _actions = new TIntHashSet();
+	private final IntObjectMap<BaseStatsBonus> _baseStatsBonuses = new HashIntObjectMap<BaseStatsBonus>();
+	private final IntDoubleMap _levelBonusData = new HashIntDoubleMap();
+	private final IntObjectMap<HpMpCpData> _hpMpCpData = new HashIntObjectMap<HpMpCpData>();
+	private final IntSet _actions = new HashIntSet();
 	private final List<SkillLearn> _skills = new ArrayList<SkillLearn>();
 	private final List<SkillLearn> _additionalSkills = new ArrayList<SkillLearn>();
 
 	private LockType _itemCheckType = LockType.NONE;
-	private final TIntSet _itemCheckIDs = new TIntHashSet();
+	private final IntSet _itemCheckIDs = new HashIntSet();
 
 	public TransformTemplate(StatsSet set)
 	{

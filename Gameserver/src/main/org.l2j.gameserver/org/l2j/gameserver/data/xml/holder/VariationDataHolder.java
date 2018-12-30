@@ -1,12 +1,11 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.templates.item.WeaponFightType;
 import org.l2j.gameserver.templates.item.support.variation.VariationGroup;
 import org.l2j.gameserver.templates.item.support.variation.VariationStone;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author Bonux
@@ -15,8 +14,8 @@ public final class VariationDataHolder extends AbstractHolder
 {
 	private static final VariationDataHolder _instance = new VariationDataHolder();
 
-	private TIntObjectMap<TIntObjectMap<VariationStone>> _stones = new TIntObjectHashMap<TIntObjectMap<VariationStone>>(WeaponFightType.VALUES.length);
-	private TIntObjectMap<VariationGroup> _groups = new TIntObjectHashMap<VariationGroup>();
+	private IntObjectMap<IntObjectMap<VariationStone>> _stones = new HashIntObjectMap<>(WeaponFightType.VALUES.length);
+	private IntObjectMap<VariationGroup> _groups = new HashIntObjectMap<VariationGroup>();
 
 	public static VariationDataHolder getInstance()
 	{
@@ -25,10 +24,10 @@ public final class VariationDataHolder extends AbstractHolder
 
 	public void addStone(WeaponFightType weaponType, VariationStone stone)
 	{
-		TIntObjectMap<VariationStone> stones = _stones.get(weaponType.ordinal());
+		IntObjectMap<VariationStone> stones = _stones.get(weaponType.ordinal());
 		if(stones == null)
 		{
-			stones = new TIntObjectHashMap<VariationStone>();
+			stones = new HashIntObjectMap<VariationStone>();
 			_stones.put(weaponType.ordinal(), stones);
 		}
 
@@ -37,7 +36,7 @@ public final class VariationDataHolder extends AbstractHolder
 
 	public VariationStone getStone(WeaponFightType weaponType, int id)
 	{
-		TIntObjectMap<VariationStone> stones = _stones.get(weaponType.ordinal());
+		IntObjectMap<VariationStone> stones = _stones.get(weaponType.ordinal());
 		if(stones == null)
 			return null;
 

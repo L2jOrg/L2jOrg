@@ -1,12 +1,11 @@
 package org.l2j.gameserver.config.xml.holder;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.config.templates.HostInfo;
 
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,7 +19,7 @@ public final class HostsConfigHolder extends AbstractHolder
 	private static final HostsConfigHolder _instance = new HostsConfigHolder();
 
 	private HostInfo _authServerHost;
-	private TIntObjectMap<HostInfo> _gameServerHosts = new TIntObjectHashMap<HostInfo>();
+	private IntObjectMap<HostInfo> _gameServerHosts = new HashIntObjectMap<HostInfo>();
 
 	public static HostsConfigHolder getInstance()
 	{
@@ -56,7 +55,7 @@ public final class HostsConfigHolder extends AbstractHolder
 
 	public HostInfo[] getGameServerHosts()
 	{
-		return _gameServerHosts.values(new HostInfo[_gameServerHosts.size()]);
+		return _gameServerHosts.values().toArray(new HostInfo[_gameServerHosts.size()]);
 	}
 
 	@Override

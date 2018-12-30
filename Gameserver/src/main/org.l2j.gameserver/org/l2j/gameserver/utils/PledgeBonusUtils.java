@@ -6,8 +6,8 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.skills.SkillEntry;
 
-import org.napile.primitive.maps.IntIntMap;
-import org.napile.primitive.maps.impl.HashIntIntMap;
+import io.github.joealisson.primitive.maps.IntIntMap;
+import io.github.joealisson.primitive.maps.impl.HashIntIntMap;
 
 public class PledgeBonusUtils
 {

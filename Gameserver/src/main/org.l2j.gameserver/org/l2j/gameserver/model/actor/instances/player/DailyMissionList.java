@@ -1,8 +1,5 @@
 package org.l2j.gameserver.model.actor.instances.player;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.Collection;
 import java.util.Collections;
 
@@ -16,6 +13,8 @@ import org.l2j.gameserver.templates.dailymissions.DailyMissionTemplate;
 import org.l2j.gameserver.templates.dailymissions.DailyRewardTemplate;
 import org.l2j.gameserver.templates.item.data.ItemData;
 import org.l2j.gameserver.utils.ItemFunctions;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,7 +26,7 @@ public class DailyMissionList
 	private static final Logger _log = LoggerFactory.getLogger(DailyMissionList.class);
 
 	private final Player _owner;
-	private final TIntObjectMap<DailyMission> _missions = new TIntObjectHashMap<DailyMission>();
+	private final IntObjectMap<DailyMission> _missions = new HashIntObjectMap<DailyMission>();
 
 	public DailyMissionList(Player owner)
 	{
@@ -46,7 +45,7 @@ public class DailyMissionList
 
 	public Collection<DailyMission> values()
 	{
-		return _missions.valueCollection();
+		return _missions.values();
 	}
 
 	public DailyMission get(DailyMissionTemplate missionTemplate)

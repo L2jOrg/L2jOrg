@@ -2,10 +2,6 @@ package org.l2j.commons.math;
 
 import java.util.Arrays;
 
-/*
- * Modified for Trove to use the java.util.Arrays sort/search algorithms instead
- * of those provided with colt.
- */
 
 /**
  * Used to keep hash table capacities prime numbers.
@@ -354,7 +350,7 @@ public final class PrimeFinder
 	 * @param desiredCapacity the capacity desired by the user.
 	 * @return the capacity which should be used for a hashtable.
 	 */
-	public static final int nextPrime(int desiredCapacity)
+	public static int nextPrime(int desiredCapacity)
 	{
 		int i = Arrays.binarySearch(primeCapacities, desiredCapacity);
 		if(i < 0)

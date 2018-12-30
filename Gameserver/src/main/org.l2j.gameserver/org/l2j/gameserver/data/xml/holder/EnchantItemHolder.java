@@ -1,11 +1,10 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.templates.item.support.EnchantScroll;
 import org.l2j.gameserver.templates.item.support.EnchantVariation;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author Bonux
@@ -14,8 +13,8 @@ public final class EnchantItemHolder extends AbstractHolder
 {
 	private static final EnchantItemHolder _instance = new EnchantItemHolder();
 
-	private TIntObjectMap<EnchantScroll> _enchantScrolls = new TIntObjectHashMap<EnchantScroll>();
-	private TIntObjectMap<EnchantVariation> _enchantVariations = new TIntObjectHashMap<EnchantVariation>();
+	private IntObjectMap<EnchantScroll> _enchantScrolls = new HashIntObjectMap<EnchantScroll>();
+	private IntObjectMap<EnchantVariation> _enchantVariations = new HashIntObjectMap<EnchantVariation>();
 
 	public static EnchantItemHolder getInstance()
 	{

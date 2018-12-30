@@ -9,8 +9,8 @@ import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.commons.time.cron.SchedulingPattern;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.templates.InstantZone;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author VISTALL

@@ -1,12 +1,11 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.templates.fish.FishRewardsTemplate;
 import org.l2j.gameserver.templates.fish.LureTemplate;
 import org.l2j.gameserver.templates.fish.RodTemplate;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author Bonux
@@ -15,9 +14,9 @@ public class FishDataHolder extends AbstractHolder
 {
 	private static final FishDataHolder _instance = new FishDataHolder();
 
-	private final TIntObjectMap<LureTemplate> _lures = new TIntObjectHashMap<LureTemplate>();
-	private final TIntObjectMap<FishRewardsTemplate> _rewards = new TIntObjectHashMap<FishRewardsTemplate>();
-	private final TIntObjectMap<RodTemplate> _rods = new TIntObjectHashMap<RodTemplate>();
+	private final IntObjectMap<LureTemplate> _lures = new HashIntObjectMap<LureTemplate>();
+	private final IntObjectMap<FishRewardsTemplate> _rewards = new HashIntObjectMap<FishRewardsTemplate>();
+	private final IntObjectMap<RodTemplate> _rods = new HashIntObjectMap<RodTemplate>();
 
 	public static FishDataHolder getInstance()
 	{

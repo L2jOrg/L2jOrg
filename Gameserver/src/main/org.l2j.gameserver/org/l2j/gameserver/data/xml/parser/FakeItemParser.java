@@ -13,8 +13,8 @@ import org.l2j.gameserver.data.xml.holder.FakeItemHolder;
 import org.l2j.gameserver.templates.item.ArmorTemplate.ArmorType;
 import org.l2j.gameserver.templates.item.ItemGrade;
 import org.dom4j.Element;
-import org.napile.primitive.lists.IntList;
-import org.napile.primitive.lists.impl.ArrayIntList;
+import io.github.joealisson.primitive.lists.IntList;
+import io.github.joealisson.primitive.lists.impl.ArrayIntList;
 
 public class FakeItemParser extends AbstractParser<FakeItemHolder>
 {

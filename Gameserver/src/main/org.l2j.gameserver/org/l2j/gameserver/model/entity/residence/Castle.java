@@ -23,8 +23,8 @@ import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.templates.item.support.MerchantGuard;
 import org.l2j.gameserver.utils.Log;
 
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

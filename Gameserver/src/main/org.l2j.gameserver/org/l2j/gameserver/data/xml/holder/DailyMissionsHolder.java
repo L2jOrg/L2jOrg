@@ -1,8 +1,5 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
@@ -12,6 +9,8 @@ import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.templates.dailymissions.DailyMissionTemplate;
 import org.l2j.gameserver.templates.dailymissions.DailyRewardTemplate;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author Bonux
@@ -20,8 +19,8 @@ public final class DailyMissionsHolder extends AbstractHolder
 {
 	private static final DailyMissionsHolder _instance = new DailyMissionsHolder();
 
-	private final TIntObjectMap<DailyMissionTemplate> _missions = new TIntObjectHashMap<DailyMissionTemplate>();
-	private final TIntObjectMap<Set<DailyMissionTemplate>> _missionsByClassId = new TIntObjectHashMap<Set<DailyMissionTemplate>>(ClassId.VALUES.length);
+	private final IntObjectMap<DailyMissionTemplate> _missions = new HashIntObjectMap<DailyMissionTemplate>();
+	private final IntObjectMap<Set<DailyMissionTemplate>> _missionsByClassId = new HashIntObjectMap<Set<DailyMissionTemplate>>(ClassId.VALUES.length);
 
 	public static DailyMissionsHolder getInstance()
 	{
@@ -57,7 +56,7 @@ public final class DailyMissionsHolder extends AbstractHolder
 
 	public Collection<DailyMissionTemplate> getMissions()
 	{
-		return _missions.valueCollection();
+		return _missions.values();
 	}
 
 	public Collection<DailyMissionTemplate> getMissions(int classId)

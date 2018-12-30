@@ -5,8 +5,8 @@ import java.util.Collection;
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.templates.premiumaccount.PremiumAccountTemplate;
 
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.TreeIntObjectMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.TreeIntObjectMap;
 
 public class PremiumAccountHolder extends AbstractHolder
 {

@@ -9,9 +9,9 @@ import java.util.Set;
 import org.l2j.gameserver.instancemanager.games.MiniGameScoreManager;
 import org.l2j.gameserver.model.Player;
 
-import org.napile.pair.primitive.IntObjectPair;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.TreeIntObjectMap;
+import io.github.joealisson.primitive.pair.IntObjectPair;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.TreeIntObjectMap;
 
 /**
  * @author VISTALL

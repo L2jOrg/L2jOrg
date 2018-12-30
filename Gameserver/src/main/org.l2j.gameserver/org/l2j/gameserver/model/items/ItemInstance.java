@@ -32,9 +32,9 @@ import org.l2j.gameserver.templates.item.ItemType;
 import org.l2j.gameserver.templates.item.support.Ensoul;
 import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.Location;
-import org.napile.primitive.Containers;
-import org.napile.primitive.sets.IntSet;
-import org.napile.primitive.sets.impl.HashIntSet;
+import io.github.joealisson.primitive.Containers;
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.HashIntSet;
 
 import java.util.Collections;
 import java.util.List;

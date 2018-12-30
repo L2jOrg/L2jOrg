@@ -1,8 +1,7 @@
 package org.l2j.gameserver.skills.skillclasses;
 
-import gnu.trove.set.TIntSet;
-import gnu.trove.set.hash.TIntHashSet;
-
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.Skill;
 import org.l2j.gameserver.model.actor.instances.creature.Abnormal;
@@ -24,7 +23,7 @@ public class DebuffRenewal extends Skill
 
 	private void renewEffects(Creature target)
 	{
-		TIntSet skillsToRefresh = new TIntHashSet();
+		IntSet skillsToRefresh = new HashIntSet();
 
 		for(Abnormal effect : target.getAbnormalList())
 		{

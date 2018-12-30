@@ -5,9 +5,9 @@ import org.l2j.commons.time.cron.SchedulingPattern;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.entity.events.EventAction;
 import org.l2j.gameserver.model.entity.events.actions.StartStopAction;
-import org.napile.pair.primitive.IntObjectPair;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.TreeIntObjectMap;
+import io.github.joealisson.primitive.pair.IntObjectPair;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.TreeIntObjectMap;
 
 import java.util.ArrayList;
 import java.util.List;

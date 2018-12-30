@@ -1,10 +1,9 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.templates.pet.PetData;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author Bonux
@@ -67,8 +66,8 @@ public final class PetDataHolder extends AbstractHolder
 
 	private static final PetDataHolder _instance = new PetDataHolder();
 
-	private static final TIntObjectMap<PetData> _templatesByNpcId = new TIntObjectHashMap<PetData>();
-	private static final TIntObjectMap<PetData> _templatesByItemId = new TIntObjectHashMap<PetData>();
+	private static final IntObjectMap<PetData> _templatesByNpcId = new HashIntObjectMap<PetData>();
+	private static final IntObjectMap<PetData> _templatesByItemId = new HashIntObjectMap<PetData>();
 
 	public static PetDataHolder getInstance()
 	{

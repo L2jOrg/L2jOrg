@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ExConfirmAddingPostFriend;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
-import org.napile.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
 
 /**
  * @author VISTALL

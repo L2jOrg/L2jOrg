@@ -1,7 +1,6 @@
 package org.l2j.gameserver.templates;
 
-import gnu.trove.map.hash.TIntIntHashMap;
-
+import io.github.joealisson.primitive.maps.IntIntMap;
 import org.l2j.commons.math.random.RndSelector;
 import org.l2j.gameserver.model.Skill;
 
@@ -17,9 +16,9 @@ public class CubicTemplate
 		private final int _chance;
 		private final ActionType _actionType;
 		private final boolean _canAttackDoor;
-		private final TIntIntHashMap _chanceList;
+		private final IntIntMap _chanceList;
 
-		public SkillInfo(Skill skill, int chance, ActionType actionType, boolean canAttackDoor, TIntIntHashMap set)
+		public SkillInfo(Skill skill, int chance, ActionType actionType, boolean canAttackDoor, IntIntMap set)
 		{
 			_skill = skill;
 			_chance = chance;
@@ -54,7 +53,7 @@ public class CubicTemplate
 		}
 	}
 
-	public static enum ActionType
+	public enum ActionType
 	{
 		ATTACK,
 		BUFF,

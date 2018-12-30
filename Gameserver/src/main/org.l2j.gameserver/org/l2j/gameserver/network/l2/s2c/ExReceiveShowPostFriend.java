@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
-import org.napile.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
 
 /**
  * @author VISTALL

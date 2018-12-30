@@ -1,12 +1,11 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.iterator.TIntObjectIterator;
-import gnu.trove.map.TIntIntMap;
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntIntHashMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-import gnu.trove.set.TIntSet;
-import gnu.trove.set.hash.TIntHashSet;
+import io.github.joealisson.primitive.maps.IntIntMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntIntMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
@@ -37,10 +36,10 @@ public final class SkillAcquireHolder extends AbstractHolder
 	}
 
 	// классовые зависимости
-	private TIntObjectMap<Set<SkillLearn>> _normalSkillTree = new TIntObjectHashMap<>();
-	private TIntObjectMap<Set<SkillLearn>> _generalSkillTree = new TIntObjectHashMap<Set<SkillLearn>>();
-	private TIntObjectMap<Set<SkillLearn>> _multiclassCheckSkillTree = new TIntObjectHashMap<Set<SkillLearn>>();
-	private TIntObjectMap<TIntObjectMap<Set<SkillLearn>>> _multiclassLearnSkillTree = new TIntObjectHashMap<TIntObjectMap<Set<SkillLearn>>>();
+	private IntObjectMap<Set<SkillLearn>> _normalSkillTree = new HashIntObjectMap<>();
+	private IntObjectMap<Set<SkillLearn>> _generalSkillTree = new HashIntObjectMap<Set<SkillLearn>>();
+	private IntObjectMap<Set<SkillLearn>> _multiclassCheckSkillTree = new HashIntObjectMap<Set<SkillLearn>>();
+	private IntObjectMap<IntObjectMap<Set<SkillLearn>>> _multiclassLearnSkillTree = new HashIntObjectMap<>();
 	// без зависимостей
 	private Set<SkillLearn> _fishingSkillTree = new HashSet<SkillLearn>();
 	private Set<SkillLearn> _pledgeSkillTree = new HashSet<SkillLearn>();
@@ -109,7 +108,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 				{
 					if(classId != null)
 					{
-						TIntObjectMap<Set<SkillLearn>> map = _multiclassLearnSkillTree.get(player.getActiveClassId());
+						IntObjectMap<Set<SkillLearn>> map = _multiclassLearnSkillTree.get(player.getActiveClassId());
 						if(map == null)
 						{
 							logger.info("Skill tree for learn multiclass " + player.getActiveClassId() + " is not defined !");
@@ -177,7 +176,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 
 	private Collection<SkillLearn> getAvaliableList(Collection<SkillLearn> skillLearns, SkillEntry[] skills)
 	{
-		TIntIntMap skillLvls = new TIntIntHashMap();
+		IntIntMap skillLvls = new HashIntIntMap();
 		for(SkillEntry skillEntry : skills)
 		{
 			if(skillEntry == null)
@@ -228,7 +227,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 
 	private Collection<SkillLearn> getAvailableNextLevelsList(Collection<SkillLearn> skillLearns, SkillEntry[] skills)
 	{
-		TIntIntMap skillLvls = new TIntIntHashMap();
+		IntIntMap skillLvls = new HashIntIntMap();
 		for(SkillEntry skillEntry : skills)
 		{
 			if(skillEntry == null)
@@ -306,7 +305,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 
 	private Collection<Skill> getLearnedList(Collection<SkillLearn> skillLearns, SkillEntry[] skills)
 	{
-		TIntSet skillLvls = new TIntHashSet();
+		IntSet skillLvls = new HashIntSet();
 		for(SkillLearn temp : skillLearns)
 			skillLvls.add(SkillUtils.generateSkillHashCode(temp.getId(), temp.getLevel()));
 
@@ -386,7 +385,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 				{
 					if(classId != null)
 					{
-						TIntObjectMap<Set<SkillLearn>> map = _multiclassLearnSkillTree.get(player.getActiveClassId());
+						IntObjectMap<Set<SkillLearn>> map = _multiclassLearnSkillTree.get(player.getActiveClassId());
 						if(map == null)
 							return null;
 
@@ -466,7 +465,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 		{
 			case NORMAL:
 				skills = new HashSet<SkillLearn>();
-				for(Set<SkillLearn> temp : _normalSkillTree.valueCollection())
+				for(Set<SkillLearn> temp : _normalSkillTree.values())
 					skills.addAll(temp);
 				break;
 			case FISHING:
@@ -480,7 +479,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 				break;
 			case GENERAL:
 				skills = new HashSet<SkillLearn>();
-				for(Set<SkillLearn> temp : _generalSkillTree.valueCollection())
+				for(Set<SkillLearn> temp : _generalSkillTree.values())
 					skills.addAll(temp);
 				break;
 			case HERO:
@@ -496,7 +495,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 				if(Config.MULTICLASS_SYSTEM_ENABLED)
 				{
 					skills = new HashSet<SkillLearn>();
-					for(Set<SkillLearn> temp : _multiclassCheckSkillTree.valueCollection())
+					for(Set<SkillLearn> temp : _multiclassCheckSkillTree.values())
 						skills.addAll(temp);
 				}
 				else
@@ -561,7 +560,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 
 	public void initNormalSkillLearns()
 	{
-		TIntObjectMap<Set<SkillLearn>> map = new TIntObjectHashMap<>(_normalSkillTree);
+		IntObjectMap<Set<SkillLearn>> map = new HashIntObjectMap<>(_normalSkillTree);
 
 		_normalSkillTree.clear();
 		ClassId tempClassId;
@@ -604,7 +603,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 				if(classId.isDummy())
 					continue;
 
-				TIntObjectMap<Set<SkillLearn>> multiMap = new TIntObjectHashMap<Set<SkillLearn>>();
+				IntObjectMap<Set<SkillLearn>> multiMap = new HashIntObjectMap<Set<SkillLearn>>();
 				Set<SkillLearn> multiSet = new HashSet<SkillLearn>();
 				for(ClassId sameLevelClassId : ClassId.VALUES)
 				{
@@ -690,7 +689,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 
 	public void initGeneralSkillLearns()
 	{
-		TIntObjectMap<Set<SkillLearn>> map = new TIntObjectHashMap<Set<SkillLearn>>(_generalSkillTree);
+		IntObjectMap<Set<SkillLearn>> map = new HashIntObjectMap<Set<SkillLearn>>(_generalSkillTree);
 		Set<SkillLearn> globalList = map.remove(-1); // Скиллы которые принадлежат любому классу.
 
 		_generalSkillTree.clear();
@@ -764,8 +763,8 @@ public final class SkillAcquireHolder extends AbstractHolder
 	@Override
 	public void log()
 	{
-		logger.info("load " + sizeTroveMap(_normalSkillTree) + " normal learns for " + _normalSkillTree.size() + " classes.");
-		logger.info("load " + sizeTroveMap(_generalSkillTree) + " general skills learns for " + _generalSkillTree.size() + " classes.");
+		logger.info("load " + sizeMap(_normalSkillTree) + " normal learns for " + _normalSkillTree.size() + " classes.");
+		logger.info("load " + sizeMap(_generalSkillTree) + " general skills learns for " + _generalSkillTree.size() + " classes.");
 
 		//
 		logger.info("load " + _fishingSkillTree.size() + " fishing learns.");
@@ -796,27 +795,11 @@ public final class SkillAcquireHolder extends AbstractHolder
 		_customSkillTree.clear();
 	}
 
-	private int sizeTroveMapMap(TIntObjectMap<TIntObjectMap<Set<SkillLearn>>> a)
-	{
+	private int sizeMap(IntObjectMap<Set<SkillLearn>> a) {
 		int i = 0;
-		for(TIntObjectIterator<TIntObjectMap<Set<SkillLearn>>> iterator = a.iterator(); iterator.hasNext();)
-		{
-			iterator.advance();
-			i += sizeTroveMap(iterator.value());
+		for (Set<SkillLearn> value : a.values()) {
+			i+= value.size();
 		}
-
-		return i;
-	}
-
-	private int sizeTroveMap(TIntObjectMap<Set<SkillLearn>> a)
-	{
-		int i = 0;
-		for(TIntObjectIterator<Set<SkillLearn>> iterator = a.iterator(); iterator.hasNext();)
-		{
-			iterator.advance();
-			i += iterator.value().size();
-		}
-
 		return i;
 	}
 }

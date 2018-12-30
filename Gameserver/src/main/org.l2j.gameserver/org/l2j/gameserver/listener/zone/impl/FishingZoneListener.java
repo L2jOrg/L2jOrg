@@ -1,8 +1,5 @@
 package org.l2j.gameserver.listener.zone.impl;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.concurrent.ScheduledFuture;
 
 import org.l2j.commons.lang.reference.HardReference;
@@ -13,6 +10,8 @@ import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Zone;
 import org.l2j.gameserver.network.l2.s2c.ExAutoFishAvailable;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 public class FishingZoneListener implements OnZoneEnterLeaveListener
 {
@@ -55,7 +54,7 @@ public class FishingZoneListener implements OnZoneEnterLeaveListener
 
 	public static final OnZoneEnterLeaveListener STATIC = new FishingZoneListener();
 
-	private final TIntObjectMap<ScheduledFuture<?>> _notifyTasks = new TIntObjectHashMap<ScheduledFuture<?>>();
+	private final IntObjectMap<ScheduledFuture<?>> _notifyTasks = new HashIntObjectMap<ScheduledFuture<?>>();
 
 	@Override
 	public void onZoneEnter(Zone zone, Creature actor)

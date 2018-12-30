@@ -18,9 +18,9 @@ import org.l2j.gameserver.network.l2.s2c.SystemMessage;
 import org.l2j.gameserver.tables.ClanTable;
 import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.utils.HtmlUtils;
-import org.napile.pair.primitive.IntObjectPair;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CHashIntObjectMap;
+import io.github.joealisson.primitive.pair.IntObjectPair;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

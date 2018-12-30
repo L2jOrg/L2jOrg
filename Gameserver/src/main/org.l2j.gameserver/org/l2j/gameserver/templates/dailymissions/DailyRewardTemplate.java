@@ -1,21 +1,20 @@
 package org.l2j.gameserver.templates.dailymissions;
 
-import gnu.trove.set.TIntSet;
+import io.github.joealisson.primitive.sets.IntSet;
+import org.l2j.gameserver.templates.item.data.ItemData;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import org.l2j.gameserver.templates.item.data.ItemData;
 
 /**
  * @author Bonux
  **/
 public class DailyRewardTemplate
 {
-	private final TIntSet _classIds;
+	private final IntSet _classIds;
 	private final List<ItemData> _rewardItems = new ArrayList<ItemData>();
 
-	public DailyRewardTemplate(TIntSet classIds)
+	public DailyRewardTemplate(IntSet classIds)
 	{
 		_classIds = classIds;
 	}

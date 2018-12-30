@@ -1,13 +1,13 @@
 package org.l2j.gameserver.dao;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.data.xml.holder.ProductDataHolder;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.actor.instances.player.ProductHistoryItem;
 import org.l2j.gameserver.templates.item.product.ProductItem;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,9 +29,9 @@ public class CharacterProductHistoryDAO
 		return _instance;
 	}
 
-	public TIntObjectMap<ProductHistoryItem> select(Player owner)
+	public IntObjectMap<ProductHistoryItem> select(Player owner)
 	{
-		TIntObjectMap<ProductHistoryItem> map = new TIntObjectHashMap<ProductHistoryItem>();
+		IntObjectMap<ProductHistoryItem> map = new HashIntObjectMap<ProductHistoryItem>();
 
 		Connection con = null;
 		PreparedStatement statement = null;

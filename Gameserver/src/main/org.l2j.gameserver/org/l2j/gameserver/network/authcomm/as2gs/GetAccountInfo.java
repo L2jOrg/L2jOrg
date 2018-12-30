@@ -6,9 +6,9 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.ReceivablePacket;
 import org.l2j.gameserver.network.authcomm.gs2as.SetAccountInfo;
-import org.napile.primitive.Containers;
-import org.napile.primitive.lists.IntList;
-import org.napile.primitive.lists.impl.ArrayIntList;
+import io.github.joealisson.primitive.Containers;
+import io.github.joealisson.primitive.lists.IntList;
+import io.github.joealisson.primitive.lists.impl.ArrayIntList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

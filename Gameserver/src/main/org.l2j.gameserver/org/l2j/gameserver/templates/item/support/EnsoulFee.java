@@ -3,8 +3,8 @@ package org.l2j.gameserver.templates.item.support;
 import java.util.Collections;
 import java.util.List;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author Bonux
@@ -70,17 +70,17 @@ public class EnsoulFee
 		}
 	}
 
-	private TIntObjectMap<TIntObjectMap<EnsoulFeeInfo>> _ensoulsFee = null;
+	private IntObjectMap<IntObjectMap<EnsoulFeeInfo>> _ensoulsFee = null;
 
 	public void addFeeInfo(int type, int id, EnsoulFeeInfo feeInfo)
 	{
 		if(_ensoulsFee == null)
-			_ensoulsFee = new TIntObjectHashMap<TIntObjectMap<EnsoulFeeInfo>>();
+			_ensoulsFee = new HashIntObjectMap<>();
 
-		TIntObjectMap<EnsoulFeeInfo> ensoulFeeInfos = _ensoulsFee.get(type);
+		IntObjectMap<EnsoulFeeInfo> ensoulFeeInfos = _ensoulsFee.get(type);
 		if(ensoulFeeInfos == null)
 		{
-			ensoulFeeInfos = new TIntObjectHashMap<EnsoulFeeInfo>();
+			ensoulFeeInfos = new HashIntObjectMap<EnsoulFeeInfo>();
 			_ensoulsFee.put(type, ensoulFeeInfos);
 		}
 		ensoulFeeInfos.put(id, feeInfo);
@@ -91,7 +91,7 @@ public class EnsoulFee
 		if(_ensoulsFee == null)
 			return null;
 
-		TIntObjectMap<EnsoulFeeInfo> ensoulFeeInfos = _ensoulsFee.get(type);
+		IntObjectMap<EnsoulFeeInfo> ensoulFeeInfos = _ensoulsFee.get(type);
 		if(ensoulFeeInfos == null)
 			return null;
 

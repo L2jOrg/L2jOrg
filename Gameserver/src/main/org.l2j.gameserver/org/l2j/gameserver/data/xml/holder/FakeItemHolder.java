@@ -8,9 +8,9 @@ import org.l2j.gameserver.templates.item.ItemGrade;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.templates.item.WeaponTemplate;
 import org.l2j.gameserver.templates.item.WeaponTemplate.WeaponType;
-import org.napile.primitive.Containers;
-import org.napile.primitive.lists.IntList;
-import org.napile.primitive.lists.impl.ArrayIntList;
+import io.github.joealisson.primitive.Containers;
+import io.github.joealisson.primitive.lists.IntList;
+import io.github.joealisson.primitive.lists.impl.ArrayIntList;
 
 import java.util.ArrayList;
 import java.util.HashMap;

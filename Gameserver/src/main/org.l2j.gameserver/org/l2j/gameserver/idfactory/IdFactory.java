@@ -1,7 +1,7 @@
 package org.l2j.gameserver.idfactory;
 
-import gnu.trove.set.TIntSet;
-import gnu.trove.set.hash.TIntHashSet;
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.slf4j.Logger;
@@ -229,7 +229,7 @@ public abstract class IdFactory
 
 	protected int[] extractUsedObjectIDTable() throws SQLException
 	{
-		TIntSet objectIds = new TIntHashSet();
+		IntSet objectIds = new HashIntSet();
 
 		Connection con = null;
 		Statement st = null;

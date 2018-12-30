@@ -5,10 +5,10 @@ import java.util.Collections;
 import java.util.Set;
 
 import org.l2j.gameserver.utils.Language;
-import org.napile.pair.primitive.IntObjectPair;
-import org.napile.primitive.Containers;
-import org.napile.primitive.maps.impl.HashIntObjectMap;
-import org.napile.primitive.sets.IntSet;
+import io.github.joealisson.primitive.pair.IntObjectPair;
+import io.github.joealisson.primitive.Containers;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.sets.IntSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

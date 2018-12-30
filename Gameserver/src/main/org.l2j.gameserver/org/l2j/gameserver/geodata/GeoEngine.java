@@ -13,9 +13,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import org.l2j.commons.geometry.Shape;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.geodata.GeoOptimizer.BlockLink;
@@ -23,6 +20,8 @@ import org.l2j.gameserver.model.GameObject;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.utils.Location;
 
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -52,7 +51,7 @@ public class GeoEngine
 	 * Даный массив содержит эталонную геодату. <BR>
 	 * Первые 2 [][] (byte[*][*][][]) являются x и y региона.<BR>
 	 */
-    private static final TIntObjectMap<List<GeoControl>> _activeGeoControls = new TIntObjectHashMap<List<GeoControl>>();
+    private static final IntObjectMap<List<GeoControl>> _activeGeoControls = new HashIntObjectMap<List<GeoControl>>();
 
 	/**
 	 * Даный массив содержит всю геодату на сервере. <BR>

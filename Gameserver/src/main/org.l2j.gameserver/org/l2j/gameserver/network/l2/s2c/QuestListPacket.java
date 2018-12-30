@@ -1,9 +1,8 @@
 package org.l2j.gameserver.network.l2.s2c;
 
-import gnu.trove.iterator.TIntIntIterator;
-import gnu.trove.map.TIntIntMap;
-import gnu.trove.map.hash.TIntIntHashMap;
-
+import io.github.joealisson.primitive.maps.IntIntMap;
+import io.github.joealisson.primitive.maps.impl.HashIntIntMap;
+import io.github.joealisson.primitive.pair.IntIntPair;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.quest.QuestRepeatType;
 import org.l2j.gameserver.model.quest.QuestState;
@@ -46,7 +45,7 @@ public class QuestListPacket extends L2GameServerPacket
 
 	private static byte[] _completedQuestsMask = new byte[128];
 
-	private final TIntIntMap _quests = new TIntIntHashMap();
+	private final IntIntMap _quests = new HashIntIntMap();
 
 	public QuestListPacket(Player player)
 	{
@@ -68,12 +67,9 @@ public class QuestListPacket extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeShort(_quests.size());
-		for(TIntIntIterator iterator = _quests.iterator(); iterator.hasNext();)
-		{
-			iterator.advance();
-
-			writeInt(iterator.key());
-			writeInt(iterator.value());
+		for (IntIntPair pair : _quests.entrySet()) {
+			writeInt(pair.getKey());
+			writeInt(pair.getValue());
 		}
 		writeBytes(_completedQuestsMask);
 	}

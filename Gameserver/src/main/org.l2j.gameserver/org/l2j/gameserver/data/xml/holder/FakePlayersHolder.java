@@ -6,8 +6,8 @@ import org.l2j.gameserver.model.base.Race;
 import org.l2j.gameserver.templates.fakeplayer.FakePlayerAITemplate;
 import org.l2j.gameserver.templates.fakeplayer.FarmZoneTemplate;
 import org.l2j.gameserver.templates.fakeplayer.TownZoneTemplate;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 import java.util.Collection;
 import java.util.HashSet;

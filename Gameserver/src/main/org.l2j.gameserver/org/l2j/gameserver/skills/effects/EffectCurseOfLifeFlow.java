@@ -1,8 +1,5 @@
 package org.l2j.gameserver.skills.effects;
 
-import gnu.trove.iterator.TObjectIntIterator;
-import gnu.trove.map.hash.TObjectIntHashMap;
-
 import org.l2j.commons.lang.reference.HardReference;
 import org.l2j.gameserver.listener.actor.OnCurrentHpDamageListener;
 import org.l2j.gameserver.model.Creature;
@@ -13,11 +10,14 @@ import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.stats.Env;
 import org.l2j.gameserver.templates.skill.EffectTemplate;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public final class EffectCurseOfLifeFlow extends Effect
 {
 	private CurseOfLifeFlowListener _listener;
 
-	private TObjectIntHashMap<HardReference<? extends Creature>> _damageList = new TObjectIntHashMap<HardReference<? extends Creature>>();
+	private Map<HardReference<? extends Creature>, Integer> _damageList = new HashMap<>();
 
 	public EffectCurseOfLifeFlow(Abnormal abnormal, Env env, EffectTemplate template)
 	{
@@ -44,14 +44,12 @@ public final class EffectCurseOfLifeFlow extends Effect
 		if(getEffected().isDead())
 			return false;
 
-		for(TObjectIntIterator<HardReference<? extends Creature>> iterator = _damageList.iterator(); iterator.hasNext();)
-		{
-			iterator.advance();
-			Creature damager = iterator.key().get();
+		for (Map.Entry<HardReference<? extends Creature>, Integer> entry : _damageList.entrySet()) {
+			Creature damager = entry.getKey().get();
 			if(damager == null || damager.isDead() || damager.isCurrentHpFull())
 				continue;
 
-			int damage = iterator.value();
+			int damage = entry.getValue();
 			if(damage <= 0)
 				continue;
 

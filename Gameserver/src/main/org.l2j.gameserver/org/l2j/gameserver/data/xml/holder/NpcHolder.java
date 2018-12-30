@@ -1,10 +1,10 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.iterator.TIntObjectIterator;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
+import io.github.joealisson.primitive.pair.IntObjectPair;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -15,8 +15,8 @@ public final class NpcHolder extends AbstractHolder
 {
 	private static final NpcHolder _instance = new NpcHolder();
 
-	private TIntObjectHashMap<NpcTemplate> _npcs = new TIntObjectHashMap<>(20000);
-	private TIntObjectHashMap<List<NpcTemplate>> _npcsByLevel;
+	private HashIntObjectMap<NpcTemplate> _npcs = new HashIntObjectMap<>(20000);
+	private HashIntObjectMap<List<NpcTemplate>> _npcsByLevel;
 	private NpcTemplate[] _allTemplates;
 	private Map<String, NpcTemplate> _npcsNames;
 
@@ -58,16 +58,16 @@ public final class NpcHolder extends AbstractHolder
 
 	public NpcTemplate[] getAll()
 	{
-		return _npcs.values(new NpcTemplate[_npcs.size()]);
+		return _npcs.values().toArray(new NpcTemplate[_npcs.size()]);
 	}
 
 	private void buildFastLookupTable()
 	{
-		_npcsByLevel = new TIntObjectHashMap<>();
+		_npcsByLevel = new HashIntObjectMap<>();
 		_npcsNames = new HashMap<>();
 
 		int highestId = 0;
-		for(int id : _npcs.keys())
+		for(int id : _npcs.keySet().toArray())
 		{
 			if(id > highestId)
 			{
@@ -76,11 +76,9 @@ public final class NpcHolder extends AbstractHolder
 		}
 
 		_allTemplates = new NpcTemplate[highestId + 1];
-		for(TIntObjectIterator<NpcTemplate> iterator = _npcs.iterator(); iterator.hasNext(); )
-		{
-			iterator.advance();
-			int npcId = iterator.key();
-			NpcTemplate npc = iterator.value();
+		for (IntObjectPair<NpcTemplate> pair : _npcs.entrySet()) {
+			int npcId = pair.getKey();
+			NpcTemplate npc = pair.getValue();
 
 			_allTemplates[npcId] = npc;
 

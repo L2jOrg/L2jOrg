@@ -1,7 +1,5 @@
 package org.l2j.gameserver;
 
-import gnu.trove.set.TIntSet;
-import gnu.trove.set.hash.TIntHashSet;
 import net.sf.ehcache.CacheManager;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.lang.StatsUtils;
@@ -57,6 +55,8 @@ import org.l2j.gameserver.utils.Strings;
 import org.l2j.gameserver.utils.TradeHelper;
 import io.github.joealisson.mmocore.ConnectionBuilder;
 import io.github.joealisson.mmocore.ConnectionHandler;
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -64,6 +64,7 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.HashSet;
 import java.util.Properties;
 
 public class GameServer {
@@ -102,7 +103,7 @@ public class GameServer {
             throw new Exception("Server hosts list is empty!");
 
         // TODO Remove this, there is no need to have a lot of hosts in a single Execution. We need a solution more scalable
-        final TIntSet ports = new TIntHashSet();
+        final IntSet ports = new HashIntSet();
         for (HostInfo host : hosts) {
             if (host.getIP() != null || host.getInnerIP() != null)
                 ports.add(host.getPort());

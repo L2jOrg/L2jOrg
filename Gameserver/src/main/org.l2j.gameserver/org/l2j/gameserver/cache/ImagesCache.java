@@ -1,9 +1,5 @@
 package org.l2j.gameserver.cache;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
-
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
@@ -22,6 +18,8 @@ import javax.imageio.ImageIO;
 import org.l2j.commons.formats.dds.DDSConverter;
 import org.l2j.gameserver.Config;
 
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -47,7 +45,7 @@ public class ImagesCache
 
 	private final Map<String, Integer> _imagesId = new HashMap<String, Integer>();
 	/** Получение изображения по ID */
-	private final TIntObjectMap<byte[]> _images = new TIntObjectHashMap<byte[]>();
+	private final IntObjectMap<byte[]> _images = new HashIntObjectMap<byte[]>();
 
 	/** Блокировка для чтения/записи объектов из "кэша" */
 	private final ReentrantReadWriteLock lock = new ReentrantReadWriteLock();

@@ -4,10 +4,10 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.Reflection;
 import org.l2j.gameserver.network.l2.s2c.EventTriggerPacket;
 
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CHashIntObjectMap;
-import org.napile.primitive.sets.IntSet;
-import org.napile.primitive.sets.impl.CArrayIntSet;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.CArrayIntSet;
 
 public class EventTriggersManager
 {

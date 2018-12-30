@@ -1,8 +1,7 @@
 package org.l2j.gameserver.handler.items.impl;
 
-import gnu.trove.map.TIntIntMap;
-import gnu.trove.map.hash.TIntIntHashMap;
-
+import io.github.joealisson.primitive.maps.IntIntMap;
+import io.github.joealisson.primitive.maps.impl.HashIntIntMap;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.model.Playable;
@@ -16,7 +15,7 @@ import org.l2j.gameserver.templates.item.WeaponTemplate;
 
 public class SpiritShotItemHandler extends DefaultItemHandler
 {
-	private static final TIntIntMap SHOT_SKILLS = new TIntIntHashMap();
+	private static final IntIntMap SHOT_SKILLS = new HashIntIntMap();
 
 	static
 	{

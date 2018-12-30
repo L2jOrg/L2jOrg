@@ -1,19 +1,18 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.ArrayList;
 import java.util.Collection;
 
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.templates.item.RecipeTemplate;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 public final class RecipeHolder extends AbstractHolder
 {
 	private static final RecipeHolder _instance = new RecipeHolder();
 
-	private final TIntObjectHashMap<RecipeTemplate> _listByRecipeId = new TIntObjectHashMap<RecipeTemplate>();
-	private final TIntObjectHashMap<RecipeTemplate> _listByRecipeItem = new TIntObjectHashMap<RecipeTemplate>();
+	private final HashIntObjectMap<RecipeTemplate> _listByRecipeId = new HashIntObjectMap<RecipeTemplate>();
+	private final HashIntObjectMap<RecipeTemplate> _listByRecipeItem = new HashIntObjectMap<RecipeTemplate>();
 
 	public static RecipeHolder getInstance()
 	{
@@ -39,7 +38,7 @@ public final class RecipeHolder extends AbstractHolder
 	public Collection<RecipeTemplate> getRecipes()
 	{
 		Collection<RecipeTemplate> result = new ArrayList<RecipeTemplate>(size());
-		for(int key : _listByRecipeId.keys())
+		for(int key : _listByRecipeId.keySet().toArray())
 		{
 			result.add(_listByRecipeId.get(key));
 		}

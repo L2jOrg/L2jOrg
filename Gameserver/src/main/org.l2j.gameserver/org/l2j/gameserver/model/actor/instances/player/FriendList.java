@@ -1,8 +1,5 @@
 package org.l2j.gameserver.model.actor.instances.player;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.Collection;
 
 import org.l2j.gameserver.network.l2.s2c.*;
@@ -15,6 +12,8 @@ import org.l2j.gameserver.model.Request.L2RequestType;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.network.l2.components.IBroadcastPacket;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
@@ -22,7 +21,7 @@ public class FriendList
 {
 	public static final int MAX_FRIEND_SIZE = 128;
 
-	private TIntObjectMap<Friend> _friendList = new TIntObjectHashMap<Friend>(0);
+	private IntObjectMap<Friend> _friendList = new HashIntObjectMap<Friend>(0);
 	private final Player _owner;
 
 	public FriendList(Player owner)
@@ -72,12 +71,12 @@ public class FriendList
 
 	public Friend[] values()
 	{
-		return _friendList.values(new Friend[_friendList.size()]);
+		return _friendList.values().toArray(new Friend[_friendList.size()]);
 	}
 
 	public Collection<Friend> valueCollection()
 	{
-		return _friendList.valueCollection();
+		return _friendList.values();
 	}
 
 	public boolean isEmpty()

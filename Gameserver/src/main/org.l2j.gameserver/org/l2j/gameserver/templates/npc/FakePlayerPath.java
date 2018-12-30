@@ -1,13 +1,11 @@
 package org.l2j.gameserver.templates.npc;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-import gnu.trove.set.TIntSet;
-
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.sets.IntSet;
 import org.l2j.commons.geometry.Circle;
 import org.l2j.gameserver.model.Territory;
 import org.l2j.gameserver.utils.Location;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -70,10 +68,10 @@ public final class FakePlayerPath
 
 	private final int _id;
 	private final Location _loc;
-	private final TIntSet _availNextPathes;
-	private final TIntObjectMap<Point> _points = new TIntObjectHashMap<Point>();
+	private final IntSet _availNextPathes;
+	private final IntObjectMap<Point> _points = new HashIntObjectMap<Point>();
 
-	public FakePlayerPath(int id, Location loc, TIntSet availNextPathes)
+	public FakePlayerPath(int id, Location loc, IntSet availNextPathes)
 	{
 		_id = id;
 		_loc = loc;
@@ -107,7 +105,7 @@ public final class FakePlayerPath
 
 	public Point[] getPoints()
 	{
-		return _points.values(new Point[_points.size()]);
+		return _points.values().toArray(new Point[_points.size()]);
 	}
 
 	public void addPoint(Point point)

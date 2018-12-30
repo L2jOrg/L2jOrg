@@ -1,8 +1,7 @@
 package org.l2j.gameserver.model.actor.instances.creature;
 
-import gnu.trove.set.TIntSet;
-import gnu.trove.set.hash.TIntHashSet;
-
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.Skill;
@@ -141,7 +140,7 @@ public final class AbnormalList implements Iterable<Abnormal>
 			return;
 
 		int size = 0;
-		TIntSet skillIds = new TIntHashSet();
+		IntSet skillIds = new HashIntSet();
 		for(Abnormal e : _abnormals)
 		{
 			if(e.getSkill().equals(newAbnormal.getSkill())) // мы уже имеем эффект от этого скилла
@@ -438,7 +437,7 @@ public final class AbnormalList implements Iterable<Abnormal>
 		return removed;
 	}
 
-	public int stop(TIntSet skillIds)
+	public int stop(IntSet skillIds)
 	{
 		if(_abnormals.isEmpty())
 			return 0;
@@ -491,7 +490,7 @@ public final class AbnormalList implements Iterable<Abnormal>
 		if(_abnormals.isEmpty())
 			return 0;
 
-		TIntSet skillIds = new TIntHashSet();
+		IntSet skillIds = new HashIntSet();
 		for(Abnormal abnormal : _abnormals)
 		{
 			for(Effect effect : abnormal.getEffects())

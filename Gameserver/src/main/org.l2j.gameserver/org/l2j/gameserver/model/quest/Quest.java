@@ -1,7 +1,5 @@
 package org.l2j.gameserver.model.quest;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.lang.ArrayUtils;
@@ -32,10 +30,11 @@ import org.l2j.gameserver.utils.HtmlUtils;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.NpcUtils;
 import org.l2j.gameserver.utils.ReflectionUtils;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CHashIntObjectMap;
-import org.napile.primitive.sets.IntSet;
-import org.napile.primitive.sets.impl.HashIntSet;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -117,9 +116,9 @@ public class Quest implements OnInitScriptListener
 
     private IntSet _startNpcs = new HashIntSet();
     private IntSet _questItems = new HashIntSet();
-    private TIntObjectMap<List<QuestNpcLogInfo>> _npcLogList = new TIntObjectHashMap<List<QuestNpcLogInfo>>(5);
-    private TIntObjectMap<List<QuestNpcLogInfo>> _itemsLogList = new TIntObjectHashMap<List<QuestNpcLogInfo>>(5);
-    private TIntObjectMap<List<QuestNpcLogInfo>> _customLogList = new TIntObjectHashMap<List<QuestNpcLogInfo>>(5);
+    private IntObjectMap<List<QuestNpcLogInfo>> _npcLogList = new HashIntObjectMap<List<QuestNpcLogInfo>>(5);
+    private IntObjectMap<List<QuestNpcLogInfo>> _itemsLogList = new HashIntObjectMap<List<QuestNpcLogInfo>>(5);
+    private IntObjectMap<List<QuestNpcLogInfo>> _customLogList = new HashIntObjectMap<List<QuestNpcLogInfo>>(5);
     private Map<ICheckStartCondition, ConditionMessage> _startConditions = new HashMap<ICheckStartCondition, ConditionMessage>();
 
 	private final double _rewardRate;

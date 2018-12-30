@@ -21,8 +21,8 @@ import org.l2j.gameserver.templates.fakeplayer.actions.OrdinaryActions;
 import org.l2j.gameserver.utils.Location;
 
 import org.dom4j.Element;
-import org.napile.primitive.sets.IntSet;
-import org.napile.primitive.sets.impl.HashIntSet;
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

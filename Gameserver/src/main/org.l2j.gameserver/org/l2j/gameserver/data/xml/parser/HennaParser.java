@@ -1,18 +1,17 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import gnu.trove.map.TIntIntMap;
-import gnu.trove.map.hash.TIntIntHashMap;
-import gnu.trove.set.TIntSet;
-import gnu.trove.set.hash.TIntHashSet;
-
-import java.io.File;
-import java.util.Iterator;
-
+import io.github.joealisson.primitive.maps.IntIntMap;
+import io.github.joealisson.primitive.maps.impl.HashIntIntMap;
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.HennaHolder;
 import org.l2j.gameserver.templates.HennaTemplate;
+
+import java.io.File;
+import java.util.Iterator;
 
 /**
  * @author: VISTALL
@@ -66,14 +65,14 @@ public final class HennaParser extends AbstractParser<HennaHolder>
 			int dex = hennaElement.attributeValue("dex") == null ? 0 : Integer.parseInt(hennaElement.attributeValue("dex"));
 			int men = hennaElement.attributeValue("men") == null ? 0 : Integer.parseInt(hennaElement.attributeValue("men"));
 
-			TIntSet list = new TIntHashSet();
+			IntSet list = new HashIntSet();
 			for(Iterator<Element> classIterator = hennaElement.elementIterator("class"); classIterator.hasNext();)
 			{
 				Element classElement = classIterator.next();
 				list.add(Integer.parseInt(classElement.attributeValue("id")));
 			}
 
-			TIntIntMap skills = new TIntIntHashMap();
+			IntIntMap skills = new HashIntIntMap();
 			for(Iterator<Element> skillsIterator = hennaElement.elementIterator("skills"); skillsIterator.hasNext();)
 			{
 				Element skillsElement = skillsIterator.next();

@@ -8,9 +8,9 @@ import org.l2j.gameserver.model.Skill;
 import org.l2j.gameserver.model.base.SubClassType;
 import org.l2j.gameserver.network.l2.s2c.ExSubPledgetSkillAdd;
 import org.l2j.gameserver.skills.SkillEntry;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CHashIntObjectMap;
-import org.napile.primitive.maps.impl.CTreeIntObjectMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
+import io.github.joealisson.primitive.maps.impl.CTreeIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

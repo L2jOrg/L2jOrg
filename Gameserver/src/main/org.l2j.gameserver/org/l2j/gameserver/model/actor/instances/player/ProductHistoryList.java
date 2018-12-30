@@ -1,8 +1,5 @@
 package org.l2j.gameserver.model.actor.instances.player;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -12,6 +9,8 @@ import java.util.List;
 import org.l2j.gameserver.dao.CharacterProductHistoryDAO;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.templates.item.product.ProductItem;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author Bonux
@@ -38,7 +37,7 @@ public class ProductHistoryList
 
 	public static final int MAX_ITEMS_SIZE = Byte.MAX_VALUE;
 
-	private TIntObjectMap<ProductHistoryItem> _productHistoryMap = new TIntObjectHashMap<ProductHistoryItem>();
+	private IntObjectMap<ProductHistoryItem> _productHistoryMap = new HashIntObjectMap<ProductHistoryItem>();
 	private final Player _owner;
 
 	public ProductHistoryList(Player owner)
@@ -82,7 +81,7 @@ public class ProductHistoryList
 
 	public Collection<ProductHistoryItem> values()
 	{
-		List<ProductHistoryItem> items = new ArrayList<ProductHistoryItem>(_productHistoryMap.valueCollection());
+		List<ProductHistoryItem> items = new ArrayList<ProductHistoryItem>(_productHistoryMap.values());
 		Collections.sort(items, ProductComparator.getInstance());
 		return items;
 	}

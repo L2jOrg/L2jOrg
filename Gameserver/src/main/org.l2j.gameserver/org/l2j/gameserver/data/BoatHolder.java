@@ -1,7 +1,5 @@
 package org.l2j.gameserver.data;
 
-import gnu.trove.iterator.TIntObjectIterator;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.data.xml.holder.ShuttleTemplateHolder;
 import org.l2j.gameserver.idfactory.IdFactory;
@@ -9,6 +7,7 @@ import org.l2j.gameserver.model.entity.boat.Boat;
 import org.l2j.gameserver.model.entity.boat.Shuttle;
 import org.l2j.gameserver.templates.CreatureTemplate;
 import org.l2j.gameserver.templates.ShuttleTemplate;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 import java.lang.reflect.Constructor;
 
@@ -21,7 +20,7 @@ public final class BoatHolder extends AbstractHolder
 	public static final CreatureTemplate TEMPLATE = new CreatureTemplate(CreatureTemplate.getEmptyStatsSet());
 
 	private static BoatHolder _instance = new BoatHolder();
-	private final TIntObjectHashMap<Boat> _boats = new TIntObjectHashMap<Boat>();
+	private final HashIntObjectMap<Boat> _boats = new HashIntObjectMap<Boat>();
 
 	public static BoatHolder getInstance()
 	{
@@ -30,10 +29,9 @@ public final class BoatHolder extends AbstractHolder
 
 	public void spawnAll() {
 		log();
-		for(TIntObjectIterator<Boat> iterator = _boats.iterator(); iterator.hasNext();) {
-			iterator.advance();
-			iterator.value().spawnMe();
-			logger.info("Spawning: {}", iterator.value().getName());
+		for (Boat boat : _boats.values()) {
+			boat.spawnMe();
+			logger.info("Spawning: {}", boat.getName());
 		}
 	}
 
@@ -71,15 +69,12 @@ public final class BoatHolder extends AbstractHolder
 		return null;
 	}
 
-	public Boat getBoat(String name)
-	{
-		for(TIntObjectIterator<Boat> iterator = _boats.iterator(); iterator.hasNext();)
-		{
-			iterator.advance();
-			if(iterator.value().getName().equals(name))
-				return iterator.value();
+	public Boat getBoat(String name) {
+		for (Boat boat : _boats.values()) {
+			if(boat.getName().equals(name)) {
+				return boat;
+			}
 		}
-
 		return null;
 	}
 

@@ -1,22 +1,14 @@
 package org.l2j.gameserver.model.entity.boat;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.model.Playable;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.events.impl.ShuttleWayEvent;
-import org.l2j.gameserver.network.l2.s2c.ExMTLInSuttlePacket;
-import org.l2j.gameserver.network.l2.s2c.ExSuttleGetOffPacket;
-import org.l2j.gameserver.network.l2.s2c.ExSuttleGetOnPacket;
-import org.l2j.gameserver.network.l2.s2c.ExShuttleInfoPacket;
-import org.l2j.gameserver.network.l2.s2c.ExSuttleMovePacket;
-import org.l2j.gameserver.network.l2.s2c.ExStopMoveInShuttlePacket;
-import org.l2j.gameserver.network.l2.s2c.ExValidateLocationInShuttlePacket;
-import org.l2j.gameserver.network.l2.s2c.L2GameServerPacket;
+import org.l2j.gameserver.network.l2.s2c.*;
 import org.l2j.gameserver.templates.ShuttleTemplate;
 import org.l2j.gameserver.utils.Location;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author Bonux
@@ -44,7 +36,7 @@ public class Shuttle extends Boat
 
 	private static final long serialVersionUID = 1L;
 
-	private final TIntObjectHashMap<ShuttleWayEvent> _floors = new TIntObjectHashMap<ShuttleWayEvent>();
+	private final HashIntObjectMap<ShuttleWayEvent> _floors = new HashIntObjectMap<ShuttleWayEvent>();
 
 	private boolean _moveBack;
 	public int _currentWay;

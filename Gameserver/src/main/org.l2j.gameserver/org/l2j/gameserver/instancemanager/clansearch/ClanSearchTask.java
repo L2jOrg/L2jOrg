@@ -1,11 +1,11 @@
 package org.l2j.gameserver.instancemanager.clansearch;
 
-import gnu.trove.list.TIntList;
-import gnu.trove.list.array.TIntArrayList;
-import gnu.trove.map.TIntLongMap;
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntLongHashMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
+import io.github.joealisson.primitive.lists.IntList;
+import io.github.joealisson.primitive.lists.impl.ArrayIntList;
+import io.github.joealisson.primitive.maps.IntLongMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntLongMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.threading.RunnableImpl;
@@ -27,17 +27,17 @@ public class ClanSearchTask extends RunnableImpl
 {
 	private static final Logger _log = LoggerFactory.getLogger(ClanSearchTask.class);
 
-	private final TIntObjectMap<ClanSearchClan> _newClans = new TIntObjectHashMap<ClanSearchClan>();
-	private final TIntObjectMap<ClanSearchPlayer> _newWaiters = new TIntObjectHashMap<ClanSearchPlayer>();
-	private final TIntObjectMap<ClanSearchPlayer> _newApplicants = new TIntObjectHashMap<ClanSearchPlayer>();
+	private final IntObjectMap<ClanSearchClan> _newClans = new HashIntObjectMap<ClanSearchClan>();
+	private final IntObjectMap<ClanSearchPlayer> _newWaiters = new HashIntObjectMap<ClanSearchPlayer>();
+	private final IntObjectMap<ClanSearchPlayer> _newApplicants = new HashIntObjectMap<ClanSearchPlayer>();
 
-	private final TIntList _removalClans = new TIntArrayList();
-	private final TIntList _removalWaiters = new TIntArrayList();
-	private final TIntList _removalApplicants = new TIntArrayList();
+	private final IntList _removalClans = new ArrayIntList();
+	private final IntList _removalWaiters = new ArrayIntList();
+	private final IntList _removalApplicants = new ArrayIntList();
 
-	private final TIntLongMap _clanLocks = new TIntLongHashMap();
-	private final TIntLongMap _applicantLocks = new TIntLongHashMap();
-	private final TIntLongMap _waiterLocks = new TIntLongHashMap();
+	private final IntLongMap _clanLocks = new HashIntLongMap();
+	private final IntLongMap _applicantLocks = new HashIntLongMap();
+	private final IntLongMap _waiterLocks = new HashIntLongMap();
 
 	public void scheduleClanForAddition(ClanSearchClan clan)
 	{
@@ -77,7 +77,7 @@ public class ClanSearchTask extends RunnableImpl
 		try
 		{
 			con = L2DatabaseFactory.getInstance().getConnection();
-			for(ClanSearchClan csClan : _newClans.valueCollection())
+			for(ClanSearchClan csClan : _newClans.values())
 			{
 				statement = con.prepareStatement(ClanSearchQueries.ADD_CLAN);
 				statement.setInt(1, csClan.getClanId());
@@ -105,7 +105,7 @@ public class ClanSearchTask extends RunnableImpl
 			try
 			{
 				statement = con.prepareStatement(ClanSearchQueries.getAddWaitingPlayerQuery(_newWaiters.size()));
-				for(ClanSearchPlayer csPlayer : _newWaiters.valueCollection())
+				for(ClanSearchPlayer csPlayer : _newWaiters.values())
 				{
 					statement.setInt(++offset, csPlayer.getCharId());
 					statement.setString(++offset, csPlayer.getName());
@@ -131,7 +131,7 @@ public class ClanSearchTask extends RunnableImpl
 			try
 			{
 				statement = con.prepareStatement(ClanSearchQueries.getAddApplicantPlayerQuery(_newApplicants.size()));
-				for(ClanSearchPlayer csPlayer : _newApplicants.valueCollection())
+				for(ClanSearchPlayer csPlayer : _newApplicants.values())
 				{
 					statement.setInt(++offset, csPlayer.getCharId());
 					statement.setInt(++offset, csPlayer.getPrefferedClanId());

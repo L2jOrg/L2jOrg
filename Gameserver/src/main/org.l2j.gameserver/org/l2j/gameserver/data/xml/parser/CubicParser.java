@@ -1,6 +1,7 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import gnu.trove.map.hash.TIntIntHashMap;
+import io.github.joealisson.primitive.maps.IntIntMap;
+import io.github.joealisson.primitive.maps.impl.HashIntIntMap;
 import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.Config;
@@ -71,7 +72,7 @@ public final class CubicParser extends AbstractParser<CubicHolder>
 				boolean canAttackDoor = Boolean.parseBoolean(skillElement.attributeValue("can_attack_door"));
 				CubicTemplate.ActionType type = CubicTemplate.ActionType.valueOf(skillElement.attributeValue("action_type"));
 
-				TIntIntHashMap set = new TIntIntHashMap();
+				IntIntMap set = new HashIntIntMap();
 				for(Iterator<Element> chanceIterator = skillElement.elementIterator(); chanceIterator.hasNext();)
 				{
 					Element chanceElement = chanceIterator.next();

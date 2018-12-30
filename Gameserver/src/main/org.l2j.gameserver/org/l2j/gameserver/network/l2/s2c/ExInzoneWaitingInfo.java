@@ -1,9 +1,8 @@
 package org.l2j.gameserver.network.l2.s2c;
 
-import gnu.trove.iterator.TIntIntIterator;
-import gnu.trove.map.TIntIntMap;
-import gnu.trove.map.hash.TIntIntHashMap;
-
+import io.github.joealisson.primitive.maps.IntIntMap;
+import io.github.joealisson.primitive.maps.impl.HashIntIntMap;
+import io.github.joealisson.primitive.pair.IntIntPair;
 import org.l2j.gameserver.data.xml.holder.InstantZoneHolder;
 import org.l2j.gameserver.model.Player;
 
@@ -14,12 +13,12 @@ public class ExInzoneWaitingInfo extends L2GameServerPacket
 {
 	private final boolean _openWindow;
 	private int _currentInzoneID = -1;
-	private TIntIntMap _instanceTimes;
+	private IntIntMap _instanceTimes;
 
 	public ExInzoneWaitingInfo(Player player, boolean openWindow)
 	{
 		_openWindow = openWindow;
-		_instanceTimes = new TIntIntHashMap();
+		_instanceTimes = new HashIntIntMap();
 
 		if(player.getActiveReflection() != null)
 			_currentInzoneID = player.getActiveReflection().getInstancedZoneId();
@@ -39,12 +38,9 @@ public class ExInzoneWaitingInfo extends L2GameServerPacket
 		writeInt(_currentInzoneID);
 		writeInt(_instanceTimes.size());
 
-		TIntIntIterator iterator = _instanceTimes.iterator();
-		while(iterator.hasNext())
-		{
-			iterator.advance();
-			writeInt(iterator.key());
-			writeInt(iterator.value());
+		for (IntIntPair pair : _instanceTimes.entrySet()) {
+			writeInt(pair.getKey());
+			writeInt(pair.getValue());
 		}
 	}
 }

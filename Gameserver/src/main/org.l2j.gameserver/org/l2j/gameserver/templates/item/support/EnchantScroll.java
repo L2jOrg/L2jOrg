@@ -1,9 +1,9 @@
 package org.l2j.gameserver.templates.item.support;
 
 import org.l2j.gameserver.templates.item.ItemGrade;
-import org.napile.primitive.Containers;
-import org.napile.primitive.sets.IntSet;
-import org.napile.primitive.sets.impl.HashIntSet;
+import io.github.joealisson.primitive.Containers;
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.HashIntSet;
 
 import java.util.Set;
 

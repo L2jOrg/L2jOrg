@@ -1,12 +1,12 @@
 package org.l2j.gameserver.model;
 
-import gnu.trove.iterator.TIntObjectIterator;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.collections.CollectionUtils;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.model.instances.NpcInstance;
+import io.github.joealisson.primitive.pair.IntObjectPair;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 import java.util.*;
 import java.util.concurrent.locks.Lock;
@@ -88,7 +88,7 @@ public class AggroList
     }
 
     private final NpcInstance _npc;
-    private final TIntObjectHashMap<AggroInfo> _hateList = new TIntObjectHashMap<AggroInfo>();
+    private final HashIntObjectMap<AggroInfo> _hateList = new HashIntObjectMap<AggroInfo>();
     private final Map<Party, PartyDamage> _partyDamageMap = new HashMap<Party, PartyDamage>();
     /** Блокировка для чтения/записи объектов списка */
     private final ReadWriteLock lock = new ReentrantReadWriteLock();
@@ -270,13 +270,12 @@ public class AggroList
             }
 
             AggroInfo ai;
-            for(TIntObjectIterator<AggroInfo> itr = _hateList.iterator(); itr.hasNext();)
-            {
-                itr.advance();
-                ai = itr.value();
+
+            for (IntObjectPair<AggroInfo> pair : _hateList.entrySet()) {
+                ai = pair.getValue();
                 ai.hate = 0;
                 if(ai.damage == 0)
-                    itr.remove();
+                    _hateList.remove(pair.getKey());
             }
         }
         finally
@@ -329,7 +328,7 @@ public class AggroList
         readLock.lock();
         try
         {
-            hated.addAll(_hateList.valueCollection());
+            hated.addAll(_hateList.values());
         }
         finally
         {
@@ -371,7 +370,7 @@ public class AggroList
         readLock.lock();
         try
         {
-            hated.addAll(_hateList.valueCollection());
+            hated.addAll(_hateList.values());
         }
         finally
         {
@@ -412,7 +411,7 @@ public class AggroList
         readLock.lock();
         try
         {
-            hated.addAll(_hateList.valueCollection());
+            hated.addAll(_hateList.values());
         }
         finally
         {
@@ -464,7 +463,7 @@ public class AggroList
         readLock.lock();
         try
         {
-            hated.addAll(_hateList.valueCollection());
+            hated.addAll(_hateList.values());
         }
         finally
         {
@@ -537,11 +536,7 @@ public class AggroList
         readLock.lock();
         try
         {
-            AggroInfo ai;
-            for(TIntObjectIterator<AggroInfo> itr = _hateList.iterator(); itr.hasNext();)
-            {
-                itr.advance();
-                ai = itr.value();
+            for (AggroInfo ai : _hateList.values()) {
                 if(ai.damage == 0 && ai.hate == 0)
                     continue;
                 for(Creature attacker : chars)
@@ -572,18 +567,14 @@ public class AggroList
         readLock.lock();
         try
         {
-            AggroInfo ai;
-            for(TIntObjectIterator<AggroInfo> itr = _hateList.iterator(); itr.hasNext();)
-            {
-                itr.advance();
-                ai = itr.value();
-                if(ai.damage == 0 && ai.hate == 0)
+            for (AggroInfo aggroInfo : _hateList.values()) {
+                if(aggroInfo.damage == 0 && aggroInfo.hate == 0)
                     continue;
                 for(Playable attacker : chars)
                 {
-                    if(attacker.getObjectId() == ai.attackerId)
+                    if(attacker.getObjectId() == aggroInfo.attackerId)
                     {
-                        aggroMap.put(attacker, new HateInfo(attacker, ai));
+                        aggroMap.put(attacker, new HateInfo(attacker, aggroInfo));
                         break;
                     }
                 }
@@ -603,7 +594,7 @@ public class AggroList
         readLock.lock();
         try
         {
-            infos = _hateList.valueCollection();
+            infos = _hateList.values();
         }
         finally
         {

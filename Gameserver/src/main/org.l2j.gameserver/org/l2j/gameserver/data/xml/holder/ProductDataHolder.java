@@ -1,8 +1,5 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -10,6 +7,8 @@ import java.util.List;
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.templates.item.product.ProductItem;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author Bonux
@@ -17,7 +16,7 @@ import org.l2j.gameserver.templates.item.product.ProductItem;
 public final class ProductDataHolder extends AbstractHolder
 {
 	private static final ProductDataHolder _instance = new ProductDataHolder();
-	private final TIntObjectMap<ProductItem> _products = new TIntObjectHashMap<ProductItem>();
+	private final IntObjectMap<ProductItem> _products = new HashIntObjectMap<ProductItem>();
 
 	public static ProductDataHolder getInstance()
 	{
@@ -31,7 +30,7 @@ public final class ProductDataHolder extends AbstractHolder
 
 	public Collection<ProductItem> getProducts()
 	{
-		return _products.valueCollection();
+		return _products.values();
 	}
 
 	public Collection<ProductItem> getProductsOnSale(Player player)

@@ -12,7 +12,6 @@ ext.buildJDK = "${System.properties['java.version']} (${System.properties['java.
 
 defaultTasks('clean', 'build')
 
-
 subprojects {
     apply plugin: 'java'
     apply plugin: 'idea'
@@ -21,6 +20,9 @@ subprojects {
     repositories {
         mavenCentral()
 
+        maven {
+            url 'https://oss.sonatype.org/content/repositories/snapshots/'
+        }
 
         maven {
             url 'http://maven.java.net/content/repositories/releases/'

@@ -1,17 +1,16 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
+import org.l2j.commons.data.xml.AbstractHolder;
+import org.l2j.gameserver.model.ArmorSet;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2j.commons.data.xml.AbstractHolder;
-import org.l2j.gameserver.model.ArmorSet;
-
 public final class ArmorSetsHolder extends AbstractHolder
 {
 	private static final ArmorSetsHolder _instance = new ArmorSetsHolder();
-	private final TIntObjectHashMap<List<ArmorSet>> _armorSets = new TIntObjectHashMap<List<ArmorSet>>();
+	private final HashIntObjectMap<List<ArmorSet>> _armorSets = new HashIntObjectMap<List<ArmorSet>>();
 
 	public static ArmorSetsHolder getInstance()
 	{

@@ -12,8 +12,8 @@ import org.l2j.gameserver.templates.skill.EffectTemplate;
 import org.l2j.gameserver.templates.skill.restoration.RestorationGroup;
 import org.l2j.gameserver.templates.skill.restoration.RestorationInfo;
 import org.l2j.gameserver.templates.skill.restoration.RestorationItem;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.TreeIntObjectMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.TreeIntObjectMap;
 
 import java.io.File;
 import java.util.ArrayList;

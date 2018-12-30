@@ -1,14 +1,13 @@
 package org.l2j.gameserver.templates.pet;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import org.l2j.gameserver.model.base.MountType;
 import org.l2j.gameserver.model.base.PetType;
 import org.l2j.gameserver.templates.item.data.RewardItemData;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author Bonux
@@ -20,7 +19,7 @@ public class PetData
 	private final int[] _syncLevels;
 	private final List<PetSkillData> _skills;
 	//TODO: [Bonux] public final int[] evolve;
-	private final TIntObjectMap<PetLevelData> _lvlData;
+	private final IntObjectMap<PetLevelData> _lvlData;
 
 	private final PetType _type;
 	private final MountType _mountType;
@@ -36,7 +35,7 @@ public class PetData
 		_controlItemId = controlItemId;
 		_syncLevels = syncLevels;
 		_skills = new ArrayList<PetSkillData>();
-		_lvlData = new TIntObjectHashMap<PetLevelData>();
+		_lvlData = new HashIntObjectMap<PetLevelData>();
 		_type = type;
 		_mountType = mountType;
 	}

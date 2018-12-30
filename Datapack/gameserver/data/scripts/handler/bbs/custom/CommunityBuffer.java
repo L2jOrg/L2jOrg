@@ -1,7 +1,5 @@
 package handler.bbs.custom;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import handler.bbs.ScriptsCommunityHandler;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.lang.ArrayUtils;
@@ -21,6 +19,8 @@ import org.l2j.gameserver.utils.HtmlUtils;
 import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.Strings;
 import org.l2j.gameserver.utils.Util;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,8 +32,8 @@ import java.util.*;
 public class CommunityBuffer extends ScriptsCommunityHandler {
     private static final Logger _log = LoggerFactory.getLogger(CommunityBuffer.class);
 
-    private static final TIntObjectMap<Map<String, List<Skill>>> PLAYER_BUFF_SETS = new TIntObjectHashMap<Map<String, List<Skill>>>();
-    private static final TIntObjectMap<Skill> AVAILABLE_BUFFS = new TIntObjectHashMap<Skill>();
+    private static final IntObjectMap<Map<String, List<Skill>>> PLAYER_BUFF_SETS = new HashIntObjectMap<>();
+    private static final IntObjectMap<Skill> AVAILABLE_BUFFS = new HashIntObjectMap<>();
     private static final List<Skill> ALL_BUFFS_SET = new ArrayList<Skill>();
 
     @Override

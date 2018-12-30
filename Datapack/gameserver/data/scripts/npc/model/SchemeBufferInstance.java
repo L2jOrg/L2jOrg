@@ -1,12 +1,11 @@
 package npc.model;
 
-import gnu.trove.list.array.TIntArrayList;
 import org.l2j.commons.collections.MultiValueSet;
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
-import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Servitor;
 import org.l2j.gameserver.model.actor.instances.player.Cubic;
@@ -18,6 +17,8 @@ import org.l2j.gameserver.network.l2.s2c.*;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
 import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.Util;
+import io.github.joealisson.primitive.lists.IntList;
+import io.github.joealisson.primitive.lists.impl.ArrayIntList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -1479,8 +1480,8 @@ public class SchemeBufferInstance extends NpcInstance
         {
 			if ((int)(System.currentTimeMillis()/1000) > player.getblockUntilTime())
 			{
-			    TIntArrayList buffs = new TIntArrayList();
-			    TIntArrayList levels = new TIntArrayList();
+			    IntList buffs = new ArrayIntList();
+			    IntList levels = new ArrayIntList();
 			    Connection con = null;
 			    PreparedStatement rss = null;
 			    ResultSet action = null;

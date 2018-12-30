@@ -1,8 +1,7 @@
 package org.l2j.gameserver.skills.effects;
 
-import gnu.trove.set.TIntSet;
-import gnu.trove.set.hash.TIntHashSet;
-
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.l2j.gameserver.model.actor.instances.creature.Abnormal;
 import org.l2j.gameserver.stats.Env;
 import org.l2j.gameserver.templates.skill.EffectTemplate;
@@ -12,7 +11,7 @@ import org.l2j.gameserver.templates.skill.EffectTemplate;
 **/
 public class EffectIgnoreSkill extends Effect
 {
-	private final TIntSet _ignoredSkill = new TIntHashSet();
+	private final IntSet _ignoredSkill = new HashIntSet();
 
 	public EffectIgnoreSkill(Abnormal abnormal, Env env, EffectTemplate template)
 	{

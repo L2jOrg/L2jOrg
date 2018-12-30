@@ -1,7 +1,9 @@
 package org.l2j.gameserver.model.pledge;
 
-import gnu.trove.set.TIntSet;
-import gnu.trove.set.hash.TIntHashSet;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.CTreeIntObjectMap;
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.l2j.commons.collections.JoinedIterator;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.database.L2DatabaseFactory;
@@ -34,8 +36,6 @@ import org.l2j.gameserver.utils.Log;
 import org.l2j.gameserver.utils.PlayerUtils;
 import org.l2j.gameserver.utils.PledgeBonusUtils;
 import org.l2j.gameserver.utils.SiegeUtils;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CTreeIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -93,8 +93,8 @@ public class Clan implements Iterable<UnitMember>
 	private String _notice = null;
 
 	private final List<ClanWar> _clanWars = new ArrayList<ClanWar>();
-	private final TIntSet _atWarWith = new TIntHashSet();
-	private final TIntSet _atWarAttackers = new TIntHashSet();
+	private final IntSet _atWarWith = new HashIntSet();
+	private final IntSet _atWarAttackers = new HashIntSet();
 
 	protected IntObjectMap<SkillEntry> _skills = new CTreeIntObjectMap<SkillEntry>();
 	protected IntObjectMap<RankPrivs> _privs = new CTreeIntObjectMap<RankPrivs>();
@@ -742,7 +742,7 @@ public class Clan implements Iterable<UnitMember>
 		return !_atWarWith.isEmpty();
 	}
 
-	public TIntSet getWarList()
+	public IntSet getWarList()
 	{
 		return _atWarWith;
 	}
@@ -765,7 +765,7 @@ public class Clan implements Iterable<UnitMember>
 		return !_atWarAttackers.isEmpty();
 	}
 
-	public TIntSet getAttackerList()
+	public IntSet getAttackerList()
 	{
 		return _atWarAttackers;
 	}

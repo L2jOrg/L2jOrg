@@ -17,7 +17,7 @@ import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.skills.AbnormalType;
 import org.l2j.gameserver.templates.StatsSet;
 
-import org.napile.pair.primitive.IntObjectPair;
+import io.github.joealisson.primitive.pair.IntObjectPair;
 
 public class Resurrect extends Skill
 {

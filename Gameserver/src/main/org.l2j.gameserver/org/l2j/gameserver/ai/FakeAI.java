@@ -50,7 +50,7 @@ import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.PositionUtils;
 import org.l2j.gameserver.utils.TeleportUtils;
 
-import org.napile.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.IntSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

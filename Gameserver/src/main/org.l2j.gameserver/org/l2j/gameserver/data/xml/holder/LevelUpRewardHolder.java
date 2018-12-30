@@ -1,9 +1,8 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.TIntLongMap;
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
+import io.github.joealisson.primitive.maps.IntLongMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.l2j.commons.data.xml.AbstractHolder;
 
 /**
@@ -13,19 +12,19 @@ public final class LevelUpRewardHolder extends AbstractHolder
 {
 	private static final LevelUpRewardHolder _instance = new LevelUpRewardHolder();
 
-	private final TIntObjectMap<TIntLongMap> _rewardData = new TIntObjectHashMap<TIntLongMap>();
+	private final IntObjectMap<IntLongMap> _rewardData = new HashIntObjectMap<>();
 
 	public static LevelUpRewardHolder getInstance()
 	{
 		return _instance;
 	}
 
-	public void addRewardData(int level, TIntLongMap items)
+	public void addRewardData(int level, IntLongMap items)
 	{
 		_rewardData.put(level, items);
 	}
 
-	public TIntLongMap getRewardData(int level)
+	public IntLongMap getRewardData(int level)
 	{
 		return _rewardData.get(level);
 	}

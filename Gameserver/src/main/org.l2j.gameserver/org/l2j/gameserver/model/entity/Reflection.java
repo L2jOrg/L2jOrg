@@ -1,15 +1,10 @@
 package org.l2j.gameserver.model.entity;
 
-import gnu.trove.set.hash.TIntHashSet;
-
-import java.util.*;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
-
+import io.github.joealisson.primitive.Containers;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.l2j.commons.listener.Listener;
 import org.l2j.commons.listener.ListenerList;
 import org.l2j.commons.util.Rnd;
@@ -38,11 +33,16 @@ import org.l2j.gameserver.templates.ZoneTemplate;
 import org.l2j.gameserver.templates.spawn.SpawnTemplate;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.NpcUtils;
-import org.napile.primitive.Containers;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.*;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 import static org.l2j.commons.util.Util.STRING_EMPTY;
 
@@ -80,7 +80,7 @@ public class Reflection
 	protected Map<String, Zone> _zones = Collections.emptyMap();
 	protected Map<String, List<Spawner>> _spawners = Collections.emptyMap();
 
-	protected TIntHashSet _visitors = new TIntHashSet();
+	protected IntSet _visitors = new HashIntSet();
 
 	protected final Lock lock = new ReentrantLock();
 	protected int _playerCount;

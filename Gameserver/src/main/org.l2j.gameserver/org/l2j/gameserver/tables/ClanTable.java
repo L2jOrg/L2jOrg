@@ -15,8 +15,8 @@ import org.l2j.gameserver.model.pledge.ClanWar.ClanWarPeriod;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.utils.Log;
 import org.l2j.gameserver.utils.TimeUtils;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CHashIntObjectMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

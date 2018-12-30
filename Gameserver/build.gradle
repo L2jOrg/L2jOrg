@@ -10,6 +10,10 @@ plugins {
 ext.moduleName = 'org.l2j.gameserver'
 mainClassName = "org.l2j.gameserver.GameServer"
 
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
 sourceSets {
     main {
         java {
@@ -24,10 +28,12 @@ sourceSets {
 dependencies {
     compile project(':Commons')
 
-    compile 'io.github.joealisson:async-mmocore:2.1.0'
+    compile 'io.github.joealisson:async-mmocore:2.1.1-SNAPSHOT'
+    compile 'io.github.joealisson:primitive:1.0.0-SNAPSHOT'
     compile 'org.slf4j:slf4j-api:1.8.0-beta2'
     compile 'org.python:jython-standalone:2.7.1'
     compile 'net.sf.ehcache:ehcache:2.10.6'
+    
 
     runtime 'org.apache.logging.log4j:log4j-core:2.11.0'
     runtime 'org.apache.logging.log4j:log4j-api:2.11.0'

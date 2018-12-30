@@ -12,8 +12,8 @@ import org.l2j.gameserver.model.reward.RewardList;
 import org.l2j.gameserver.model.reward.RewardType;
 import org.l2j.gameserver.stats.Stats;
 import org.l2j.gameserver.utils.HtmlUtils;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CHashIntObjectMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
 
 import java.math.BigInteger;
 import java.text.NumberFormat;

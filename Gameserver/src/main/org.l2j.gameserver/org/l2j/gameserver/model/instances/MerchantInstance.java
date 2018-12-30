@@ -1,8 +1,5 @@
 package org.l2j.gameserver.model.instances;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.Collection;
 import java.util.StringTokenizer;
 
@@ -23,16 +20,16 @@ import org.l2j.gameserver.templates.mapregion.DomainArea;
 import org.l2j.gameserver.templates.npc.BuyListTemplate;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
 import org.l2j.gameserver.utils.Location;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class MerchantInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
-
 	private static final Logger _log = LoggerFactory.getLogger(MerchantInstance.class);
 
-	private final TIntObjectMap<BuyListTemplate> _buyLists;
+	private final IntObjectMap<BuyListTemplate> _buyLists;
 
 	public MerchantInstance(int objectId, NpcTemplate template, MultiValueSet<String> set)
 	{
@@ -40,7 +37,7 @@ public class MerchantInstance extends NpcInstance
 
 		Collection<BuyListTemplate> buyLists = BuyListHolder.getInstance().getBuyLists(getNpcId());
 
-		_buyLists = new TIntObjectHashMap<BuyListTemplate>(buyLists.size());
+		_buyLists = new HashIntObjectMap<BuyListTemplate>(buyLists.size());
 		for(BuyListTemplate b : buyLists)
 		{
 			BuyListTemplate buyList = b.clone();
@@ -171,7 +168,7 @@ public class MerchantInstance extends NpcInstance
 	@Override
 	protected void onSpawn()
 	{
-		for(BuyListTemplate buyList : _buyLists.valueCollection())
+		for(BuyListTemplate buyList : _buyLists.values())
 			buyList.refresh();
 
 		super.onSpawn();

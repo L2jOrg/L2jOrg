@@ -1,10 +1,9 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.templates.BaseStatsBonus;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author Bonux
@@ -13,7 +12,7 @@ public final class BaseStatsBonusHolder extends AbstractHolder
 {
 	private static final BaseStatsBonusHolder _instance = new BaseStatsBonusHolder();
 
-	private final TIntObjectMap<BaseStatsBonus> _bonuses = new TIntObjectHashMap<BaseStatsBonus>();
+	private final IntObjectMap<BaseStatsBonus> _bonuses = new HashIntObjectMap<BaseStatsBonus>();
 
 	public static BaseStatsBonusHolder getInstance()
 	{

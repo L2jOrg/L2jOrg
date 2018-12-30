@@ -1,11 +1,10 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.model.base.Sex;
 import org.l2j.gameserver.templates.player.transform.TransformTemplate;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author Bonux
@@ -14,12 +13,12 @@ public final class TransformTemplateHolder extends AbstractHolder
 {
 	private static final TransformTemplateHolder _instance = new TransformTemplateHolder();
 
-	private TIntObjectMap<TIntObjectMap<TransformTemplate>> _templates = new TIntObjectHashMap<TIntObjectMap<TransformTemplate>>();
+	private IntObjectMap<IntObjectMap<TransformTemplate>> _templates = new HashIntObjectMap<>();
 
 	public TransformTemplateHolder()
 	{
 		for(Sex sex : Sex.VALUES)
-			_templates.put(sex.ordinal(), new TIntObjectHashMap<TransformTemplate>());
+			_templates.put(sex.ordinal(), new HashIntObjectMap<TransformTemplate>());
 	}
 
 	public static TransformTemplateHolder getInstance()

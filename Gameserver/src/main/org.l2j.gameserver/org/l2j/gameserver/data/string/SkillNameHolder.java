@@ -1,13 +1,13 @@
 package org.l2j.gameserver.data.string;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Skill;
 import org.l2j.gameserver.utils.Language;
 import org.l2j.gameserver.utils.SkillUtils;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 import java.io.File;
 import java.io.FileReader;
@@ -24,7 +24,7 @@ public final class SkillNameHolder extends AbstractHolder
 {
 	private static final SkillNameHolder _instance = new SkillNameHolder();
 
-	private final Map<Language, TIntObjectMap<String>> _skillNames = new HashMap<Language, TIntObjectMap<String>>();
+	private final Map<Language, IntObjectMap<String>> _skillNames = new HashMap<>();
 
 	public static SkillNameHolder getInstance()
 	{
@@ -38,7 +38,7 @@ public final class SkillNameHolder extends AbstractHolder
 
 	public String getSkillName(Language lang, int hashCode)
 	{
-		TIntObjectMap<String> skillNames = _skillNames.get(lang);
+		IntObjectMap<String> skillNames = _skillNames.get(lang);
 		String name = skillNames.get(hashCode);
 		if(name == null)
 		{
@@ -86,7 +86,7 @@ public final class SkillNameHolder extends AbstractHolder
 	{
 		for(Language lang : Language.VALUES)
 		{
-			_skillNames.put(lang, new TIntObjectHashMap<String>());
+			_skillNames.put(lang, new HashIntObjectMap<String>());
 
 			if(!Config.AVAILABLE_LANGUAGES.contains(lang))
 				continue;
@@ -152,7 +152,7 @@ public final class SkillNameHolder extends AbstractHolder
 	@Override
 	public void log()
 	{
-		for(Map.Entry<Language, TIntObjectMap<String>> entry : _skillNames.entrySet())
+		for(Map.Entry<Language, IntObjectMap<String>> entry : _skillNames.entrySet())
 		{
 			if(!Config.AVAILABLE_LANGUAGES.contains(entry.getKey()))
 				continue;

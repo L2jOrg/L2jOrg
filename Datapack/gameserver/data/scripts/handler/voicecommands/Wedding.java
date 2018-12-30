@@ -23,7 +23,7 @@ import org.l2j.gameserver.network.l2.s2c.MagicSkillUse;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.skills.AbnormalEffect;
 import org.l2j.gameserver.utils.Location;
-import org.napile.pair.primitive.IntObjectPair;
+import io.github.joealisson.primitive.pair.IntObjectPair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -1,9 +1,8 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.templates.CubicTemplate;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author VISTALL
@@ -12,7 +11,7 @@ import org.l2j.gameserver.templates.CubicTemplate;
 public final class CubicHolder extends AbstractHolder
 {
 	private static CubicHolder _instance = new CubicHolder();
-	private final TIntObjectHashMap<CubicTemplate> _cubics = new TIntObjectHashMap<CubicTemplate>(10);
+	private final HashIntObjectMap<CubicTemplate> _cubics = new HashIntObjectMap<CubicTemplate>(10);
 
 	public static CubicHolder getInstance()
 	{

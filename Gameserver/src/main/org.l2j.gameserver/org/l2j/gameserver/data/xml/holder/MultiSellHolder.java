@@ -1,6 +1,5 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.MultiSellListContainer;
@@ -11,6 +10,7 @@ import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.network.l2.components.CustomMessage;
 import org.l2j.gameserver.network.l2.s2c.MultiSellListPacket;
 import org.l2j.gameserver.templates.item.ItemTemplate;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -28,7 +28,7 @@ public class MultiSellHolder extends AbstractHolder
 		return _instance;
 	}
 
-	private TIntObjectHashMap<MultiSellListContainer> _entries = new TIntObjectHashMap<MultiSellListContainer>();
+	private HashIntObjectMap<MultiSellListContainer> _entries = new HashIntObjectMap<MultiSellListContainer>();
 
 	public MultiSellListContainer getList(int id)
 	{

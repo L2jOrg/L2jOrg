@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.Territory;
 import org.l2j.gameserver.templates.spawn.SpawnTemplate;
 import org.l2j.gameserver.utils.Location;
 
-import org.napile.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
 
 public class InstantZone
 {

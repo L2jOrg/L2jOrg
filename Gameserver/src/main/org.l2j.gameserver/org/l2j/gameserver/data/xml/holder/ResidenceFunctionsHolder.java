@@ -1,8 +1,5 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
@@ -11,13 +8,15 @@ import java.util.Map;
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.model.base.ResidenceFunctionType;
 import org.l2j.gameserver.templates.residence.ResidenceFunctionTemplate;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 public final class ResidenceFunctionsHolder extends AbstractHolder
 {
 	private static final ResidenceFunctionsHolder _instance = new ResidenceFunctionsHolder();
 
-	private final TIntObjectMap<ResidenceFunctionTemplate> _templates = new TIntObjectHashMap<ResidenceFunctionTemplate>();
-	private final Map<ResidenceFunctionType, TIntObjectMap<ResidenceFunctionTemplate>> _templatesByTypeAndLevel = new HashMap<ResidenceFunctionType, TIntObjectMap<ResidenceFunctionTemplate>>(ResidenceFunctionType.VALUES.length);
+	private final IntObjectMap<ResidenceFunctionTemplate> _templates = new HashIntObjectMap<ResidenceFunctionTemplate>();
+	private final Map<ResidenceFunctionType, IntObjectMap<ResidenceFunctionTemplate>> _templatesByTypeAndLevel = new HashMap<ResidenceFunctionType, IntObjectMap<ResidenceFunctionTemplate>>(ResidenceFunctionType.VALUES.length);
 
 	public static ResidenceFunctionsHolder getInstance()
 	{
@@ -28,10 +27,10 @@ public final class ResidenceFunctionsHolder extends AbstractHolder
 	{
 		_templates.put(template.getId(), template);
 
-		TIntObjectMap<ResidenceFunctionTemplate> templates = _templatesByTypeAndLevel.get(template.getType());
+		IntObjectMap<ResidenceFunctionTemplate> templates = _templatesByTypeAndLevel.get(template.getType());
 		if(templates == null)
 		{
-			templates = new TIntObjectHashMap<ResidenceFunctionTemplate>();
+			templates = new HashIntObjectMap<ResidenceFunctionTemplate>();
 			_templatesByTypeAndLevel.put(template.getType(), templates);
 		}
 		templates.put(template.getLevel(), template);
@@ -44,12 +43,12 @@ public final class ResidenceFunctionsHolder extends AbstractHolder
 
 	public Collection<ResidenceFunctionTemplate> getTemplates()
 	{
-		return _templates.valueCollection();
+		return _templates.values();
 	}
 
 	public ResidenceFunctionTemplate getTemplate(ResidenceFunctionType type, int level)
 	{
-		TIntObjectMap<ResidenceFunctionTemplate> templates = _templatesByTypeAndLevel.get(type);
+		IntObjectMap<ResidenceFunctionTemplate> templates = _templatesByTypeAndLevel.get(type);
 		if(templates == null)
 			return null;
 
@@ -58,11 +57,11 @@ public final class ResidenceFunctionsHolder extends AbstractHolder
 
 	public Collection<ResidenceFunctionTemplate> getTemplates(ResidenceFunctionType type)
 	{
-		TIntObjectMap<ResidenceFunctionTemplate> templates = _templatesByTypeAndLevel.get(type);
+		IntObjectMap<ResidenceFunctionTemplate> templates = _templatesByTypeAndLevel.get(type);
 		if(templates == null)
 			return Collections.emptyList();
 
-		return templates.valueCollection();
+		return templates.values();
 	}
 
 	@Override

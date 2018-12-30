@@ -1,7 +1,7 @@
 package org.l2j.gameserver.templates.item.support.variation;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author Bonux
@@ -9,7 +9,7 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 public class VariationGroup
 {
 	private final int _id;
-	private final TIntObjectMap<VariationFee> _fees = new TIntObjectHashMap<VariationFee>();
+	private final IntObjectMap<VariationFee> _fees = new HashIntObjectMap<VariationFee>();
 
 	public VariationGroup(int id)
 	{
@@ -33,6 +33,6 @@ public class VariationGroup
 
 	public VariationFee[] getFees()
 	{
-		return _fees.values(new VariationFee[_fees.size()]);
+		return _fees.values().toArray(new VariationFee[_fees.size()]);
 	}
 }

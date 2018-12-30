@@ -1,8 +1,5 @@
 package org.l2j.gameserver.model.instances;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -23,6 +20,8 @@ import org.l2j.gameserver.model.actor.instances.creature.AbnormalList;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.stats.Formulas;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,7 +34,7 @@ public final class PetBabyInstance extends PetInstance
 	private Future<?> _actionTask;
 	private boolean _buffEnabled = true;
 
-	private final TIntObjectMap<List<Skill>> _buffSkills = new TIntObjectHashMap<List<Skill>>();
+	private final IntObjectMap<List<Skill>> _buffSkills = new HashIntObjectMap<List<Skill>>();
 
 	public PetBabyInstance(int objectId, NpcTemplate template, Player owner, ItemInstance control, long exp)
 	{

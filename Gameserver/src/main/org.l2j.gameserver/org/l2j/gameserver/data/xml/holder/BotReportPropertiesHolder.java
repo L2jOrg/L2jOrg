@@ -1,18 +1,17 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.Collection;
 
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.templates.BotPunishment;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 public final class BotReportPropertiesHolder extends AbstractHolder
 {
 	private static final BotReportPropertiesHolder _instance = new BotReportPropertiesHolder();
 
-	private final TIntObjectMap<BotPunishment> _punishments = new TIntObjectHashMap<BotPunishment>();
+	private final IntObjectMap<BotPunishment> _punishments = new HashIntObjectMap<BotPunishment>();
 
 	public static BotReportPropertiesHolder getInstance()
 	{
@@ -31,7 +30,7 @@ public final class BotReportPropertiesHolder extends AbstractHolder
 
 	public Collection<BotPunishment> getBotPunishments()
 	{
-		return _punishments.valueCollection();
+		return _punishments.values();
 	}
 
 	@Override

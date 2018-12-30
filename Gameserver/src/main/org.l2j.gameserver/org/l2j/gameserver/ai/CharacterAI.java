@@ -17,10 +17,10 @@ import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.network.l2.s2c.DiePacket;
 import org.l2j.gameserver.utils.Location;
 
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CHashIntObjectMap;
-import org.napile.primitive.sets.IntSet;
-import org.napile.primitive.sets.impl.CArrayIntSet;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.CArrayIntSet;
 
 public class CharacterAI extends AbstractAI
 {

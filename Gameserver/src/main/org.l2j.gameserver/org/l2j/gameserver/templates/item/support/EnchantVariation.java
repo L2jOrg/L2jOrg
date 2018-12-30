@@ -1,7 +1,7 @@
 package org.l2j.gameserver.templates.item.support;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author Bonux
@@ -52,7 +52,7 @@ public class EnchantVariation
 	}
 
 	private final int _id;
-	private final TIntObjectMap<EnchantLevel> _levels = new TIntObjectHashMap<EnchantLevel>();
+	private final IntObjectMap<EnchantLevel> _levels = new HashIntObjectMap<EnchantLevel>();
 
 	private int _maxLvl;
 

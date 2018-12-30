@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.l2.c2s;
 import org.l2j.gameserver.listener.actor.player.OnAnswerListener;
 import org.l2j.gameserver.model.Player;
 
-import org.napile.pair.primitive.IntObjectPair;
+import io.github.joealisson.primitive.pair.IntObjectPair;
 
 public class ConfirmDlg extends L2GameClientPacket
 {

@@ -1,11 +1,11 @@
 package org.l2j.gameserver.data.string;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.utils.Language;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 import java.io.File;
 import java.io.FileReader;
@@ -21,7 +21,7 @@ public final class ItemNameHolder extends AbstractHolder
 {
 	private static final ItemNameHolder _instance = new ItemNameHolder();
 
-	private final Map<Language, TIntObjectMap<String>> _itemNames = new HashMap<Language, TIntObjectMap<String>>();
+	private final Map<Language, IntObjectMap<String>> _itemNames = new HashMap<>();
 
 	public static ItemNameHolder getInstance()
 	{
@@ -35,7 +35,7 @@ public final class ItemNameHolder extends AbstractHolder
 
 	public String getItemName(Language lang, int itemId)
 	{
-		TIntObjectMap<String> itemNames = _itemNames.get(lang);
+		IntObjectMap<String> itemNames = _itemNames.get(lang);
 		String name = itemNames.get(itemId);
 		if(name == null)
 		{
@@ -63,7 +63,7 @@ public final class ItemNameHolder extends AbstractHolder
 	{
 		for(Language lang : Language.VALUES)
 		{
-			_itemNames.put(lang, new TIntObjectHashMap<String>());
+			_itemNames.put(lang, new HashIntObjectMap<String>());
 
 			if(!Config.AVAILABLE_LANGUAGES.contains(lang))
 				continue;
@@ -127,7 +127,7 @@ public final class ItemNameHolder extends AbstractHolder
 	@Override
 	public void log()
 	{
-		for(Map.Entry<Language, TIntObjectMap<String>> entry : _itemNames.entrySet())
+		for(Map.Entry<Language, IntObjectMap<String>> entry : _itemNames.entrySet())
 		{
 			if(!Config.AVAILABLE_LANGUAGES.contains(entry.getKey()))
 				continue;

@@ -1,9 +1,8 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.templates.SoulCrystal;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author: VISTALL
@@ -18,7 +17,7 @@ public final class SoulCrystalHolder extends AbstractHolder
 		return _instance;
 	}
 
-	private final TIntObjectHashMap<SoulCrystal> _crystals = new TIntObjectHashMap<SoulCrystal>();
+	private final HashIntObjectMap<SoulCrystal> _crystals = new HashIntObjectMap<SoulCrystal>();
 
 	public void addCrystal(SoulCrystal crystal)
 	{
@@ -32,7 +31,7 @@ public final class SoulCrystalHolder extends AbstractHolder
 
 	public SoulCrystal[] getCrystals()
 	{
-		return _crystals.values(new SoulCrystal[_crystals.size()]);
+		return _crystals.values().toArray(new SoulCrystal[_crystals.size()]);
 	}
 
 	@Override

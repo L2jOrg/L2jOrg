@@ -8,8 +8,8 @@ import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.instances.StaticObjectInstance;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CHashIntObjectMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
 
 /**
  * Общее "супер" хранилище для всех объектов L2Object,

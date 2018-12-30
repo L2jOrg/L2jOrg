@@ -1,9 +1,8 @@
 package org.l2j.gameserver.templates.npc;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.network.l2.components.NpcString;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author Bonux
@@ -46,12 +45,12 @@ public class RandomActions
 		}
 	}
 
-	private final TIntObjectHashMap<Action> _actions;
+	private final HashIntObjectMap<Action> _actions;
 	private final boolean _randomOrder;
 
 	public RandomActions(boolean randomOrder)
 	{
-		_actions = new TIntObjectHashMap<Action>();
+		_actions = new HashIntObjectMap<Action>();
 		_randomOrder = randomOrder;
 	}
 
@@ -64,7 +63,7 @@ public class RandomActions
 	{
 		if(_randomOrder)
 		{
-			Action[] actionsArr = _actions.values(new Action[_actions.size()]);
+			Action[] actionsArr = _actions.values().toArray(new Action[_actions.size()]);
 			return actionsArr[Rnd.get(actionsArr.length)];
 		}
 		return _actions.get(id);

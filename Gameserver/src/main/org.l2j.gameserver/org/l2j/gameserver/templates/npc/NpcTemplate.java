@@ -1,8 +1,5 @@
 package org.l2j.gameserver.templates.npc;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.lang.reflect.Constructor;
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -27,6 +24,8 @@ import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.templates.TeleportLocation;
 import org.l2j.gameserver.templates.skill.EffectTemplate;
 
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -69,10 +68,10 @@ public class NpcTemplate extends CreatureTemplate
 	private int race = 0;
 	private final int _castleId;
 	private List<RewardList> _rewardList = Collections.emptyList();
-	private TIntObjectMap<List<TeleportLocation>> _teleportList = new TIntObjectHashMap<List<TeleportLocation>>(1);
+	private IntObjectMap<List<TeleportLocation>> _teleportList = new HashIntObjectMap<List<TeleportLocation>>(1);
 	private List<MinionData> _minions = Collections.emptyList();
 	private Map<QuestEventType, Set<Quest>> _questEvents = Collections.emptyMap();
-	private TIntObjectMap<Skill> _skills = new TIntObjectHashMap<Skill>();
+	private IntObjectMap<Skill> _skills = new HashIntObjectMap<Skill>();
 	private Skill[] _damageSkills = Skill.EMPTY_ARRAY;
 	private Skill[] _dotSkills = Skill.EMPTY_ARRAY;
 	private Skill[] _debuffSkills = Skill.EMPTY_ARRAY;
@@ -82,7 +81,7 @@ public class NpcTemplate extends CreatureTemplate
 	private Class<NpcInstance> _classType = NpcInstance.class;
 	private Constructor<NpcInstance> _constructorType = DEFAULT_TYPE_CONSTRUCTOR;
 	private final String _htmRoot;
-	private TIntObjectMap<WalkerRoute> _walkerRoute = new TIntObjectHashMap<WalkerRoute>();
+	private IntObjectMap<WalkerRoute> _walkerRoute = new HashIntObjectMap<WalkerRoute>();
 	private RandomActions _randomActions = null;
 
 	public final int _enchantEffect;
@@ -276,7 +275,7 @@ public class NpcTemplate extends CreatureTemplate
 		return _teleportList.get(id);
 	}
 
-	public TIntObjectMap<List<TeleportLocation>> getTeleportList()
+	public IntObjectMap<List<TeleportLocation>> getTeleportList()
 	{
 		return _teleportList;
 	}
@@ -433,7 +432,7 @@ public class NpcTemplate extends CreatureTemplate
 		return _minions;
 	}
 
-	public TIntObjectMap<Skill> getSkills()
+	public IntObjectMap<Skill> getSkills()
 	{
 		return _skills;
 	}

@@ -1,9 +1,8 @@
 package org.l2j.gameserver.data.xml.holder;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.templates.player.ClassData;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author Bonux
@@ -12,7 +11,7 @@ public final class ClassDataHolder extends AbstractHolder
 {
 	private static final ClassDataHolder _instance = new ClassDataHolder();
 
-	private final TIntObjectHashMap<ClassData> _classDataList = new TIntObjectHashMap<ClassData>();
+	private final HashIntObjectMap<ClassData> _classDataList = new HashIntObjectMap<ClassData>();
 
 	public static ClassDataHolder getInstance()
 	{

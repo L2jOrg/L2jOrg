@@ -10,8 +10,8 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.templates.mapregion.RestartArea;
 import org.l2j.gameserver.templates.mapregion.RestartPoint;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CTreeIntObjectMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.CTreeIntObjectMap;
 
 /**
  * @author VISTALL

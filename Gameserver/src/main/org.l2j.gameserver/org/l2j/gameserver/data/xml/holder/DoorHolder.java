@@ -2,8 +2,8 @@ package org.l2j.gameserver.data.xml.holder;
 
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.templates.DoorTemplate;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 public final class DoorHolder extends AbstractHolder
 {

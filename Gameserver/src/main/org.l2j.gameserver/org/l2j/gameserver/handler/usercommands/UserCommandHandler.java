@@ -1,7 +1,5 @@
 package org.l2j.gameserver.handler.usercommands;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.handler.usercommands.impl.ClanPenalty;
 import org.l2j.gameserver.handler.usercommands.impl.ClanWarsList;
@@ -13,6 +11,7 @@ import org.l2j.gameserver.handler.usercommands.impl.MyBirthday;
 import org.l2j.gameserver.handler.usercommands.impl.OlympiadStat;
 import org.l2j.gameserver.handler.usercommands.impl.PartyInfo;
 import org.l2j.gameserver.handler.usercommands.impl.Time;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 public class UserCommandHandler extends AbstractHolder
 {
@@ -23,7 +22,7 @@ public class UserCommandHandler extends AbstractHolder
 		return _instance;
 	}
 
-	private TIntObjectHashMap<IUserCommandHandler> _datatable = new TIntObjectHashMap<IUserCommandHandler>();
+	private HashIntObjectMap<IUserCommandHandler> _datatable = new HashIntObjectMap<IUserCommandHandler>();
 
 	private UserCommandHandler()
 	{

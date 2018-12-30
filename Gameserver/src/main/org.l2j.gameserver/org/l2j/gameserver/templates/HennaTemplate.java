@@ -1,8 +1,7 @@
 package org.l2j.gameserver.templates;
 
-import gnu.trove.map.TIntIntMap;
-import gnu.trove.set.TIntSet;
-
+import io.github.joealisson.primitive.maps.IntIntMap;
+import io.github.joealisson.primitive.sets.IntSet;
 import org.l2j.gameserver.model.Player;
 
 /**
@@ -23,11 +22,11 @@ public class HennaTemplate
 	private final int _statMEN;
 	private final int _statDEX;
 	private final int _statWIT;
-	private final TIntSet _classes;
-	private final TIntIntMap _skills;
+	private final IntSet _classes;
+	private final IntIntMap _skills;
 	private final int _period;
 
-	public HennaTemplate(int symbolId, int dyeId, int dyeLvl, long drawPrice, long drawCount, long removePrice, long removeCount, int wit, int intA, int con, int str, int dex, int men, TIntSet classes, TIntIntMap skills, int period)
+	public HennaTemplate(int symbolId, int dyeId, int dyeLvl, long drawPrice, long drawCount, long removePrice, long removeCount, int wit, int intA, int con, int str, int dex, int men, IntSet classes, IntIntMap skills, int period)
 	{
 		_symbolId = symbolId;
 		_dyeId = dyeId;
@@ -117,7 +116,7 @@ public class HennaTemplate
 		return _classes.contains(player.getActiveClassId());
 	}
 
-	public TIntIntMap getSkills()
+	public IntIntMap getSkills()
 	{
 		return _skills;
 	}

@@ -4,8 +4,8 @@ import java.util.Collection;
 
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.templates.item.data.AttendanceRewardData;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.TreeIntObjectMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.TreeIntObjectMap;
 
 public final class AttendanceRewardHolder extends AbstractHolder
 {

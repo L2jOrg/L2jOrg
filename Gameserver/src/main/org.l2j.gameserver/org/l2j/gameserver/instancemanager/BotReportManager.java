@@ -15,11 +15,11 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.skills.SkillEntry;
 import org.l2j.gameserver.templates.BotPunishment;
-import org.napile.pair.primitive.IntObjectPair;
-import org.napile.primitive.maps.IntLongMap;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CHashIntObjectMap;
-import org.napile.primitive.maps.impl.HashIntLongMap;
+import io.github.joealisson.primitive.pair.IntObjectPair;
+import io.github.joealisson.primitive.maps.IntLongMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntLongMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -12,8 +12,8 @@ import org.l2j.gameserver.stats.funcs.Func;
 import org.l2j.gameserver.templates.item.data.ItemData;
 import org.l2j.gameserver.utils.Language;
 
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.TreeIntObjectMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.TreeIntObjectMap;
 
 /**
  * @author Bonux

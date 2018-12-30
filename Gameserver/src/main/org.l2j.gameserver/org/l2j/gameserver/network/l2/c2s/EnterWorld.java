@@ -42,7 +42,7 @@ import org.l2j.gameserver.utils.HtmlUtils;
 import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.TradeHelper;
 
-import org.napile.pair.primitive.IntObjectPair;
+import io.github.joealisson.primitive.pair.IntObjectPair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

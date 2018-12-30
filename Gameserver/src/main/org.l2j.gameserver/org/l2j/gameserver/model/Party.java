@@ -1,9 +1,9 @@
 package org.l2j.gameserver.model;
 
-import gnu.trove.iterator.TIntObjectIterator;
-import gnu.trove.map.TIntIntMap;
-import gnu.trove.map.hash.TIntIntHashMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
+import io.github.joealisson.primitive.maps.IntIntMap;
+import io.github.joealisson.primitive.maps.impl.HashIntIntMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.pair.IntObjectPair;
 import org.l2j.commons.collections.CollectionUtils;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.commons.util.Rnd;
@@ -75,7 +75,7 @@ public class Party implements PlayerGroup
 	private static final int[] TACTICAL_SYSSTRINGS = { 0, 2664, 2665, 2666, 2667 };
 	private Future<?> _checkTask = null;
 
-	private TIntObjectHashMap<Creature> _tacticalTargets = new TIntObjectHashMap<Creature>(4);
+	private HashIntObjectMap<Creature> _tacticalTargets = new HashIntObjectMap<Creature>(4);
 
 	/**
 	 * constructor ensures party has always one member - leader
@@ -719,7 +719,7 @@ public class Party implements PlayerGroup
 		if(mtr.isEmpty())
 			return;
 
-		TIntIntMap clansInParty = new TIntIntHashMap();
+		IntIntMap clansInParty = new HashIntIntMap();
 		for(Player member : mtr)
 		{
 			Clan clan = member.getClan();
@@ -1112,34 +1112,28 @@ public class Party implements PlayerGroup
 
 	private void clearTacticalTargets(Player player)
 	{
-		for(Creature target : _tacticalTargets.valueCollection())
+		for(Creature target : _tacticalTargets.values())
 			player.sendPacket(new ExTacticalSign(target.getObjectId(), 0));
 	}
 
 	private void sendTacticalSign(Player member)
 	{
-		for(TIntObjectIterator<Creature> iterator = _tacticalTargets.iterator(); iterator.hasNext();)
-		{
-			iterator.advance();
-
-			Creature target = iterator.value();
+		for (IntObjectPair<Creature> pair : _tacticalTargets.entrySet()) {
+			Creature target = pair.getValue();
 			if(target == null)
 				continue;
 
-			member.sendPacket(new ExTacticalSign(target.getObjectId(), iterator.key()));
+			member.sendPacket(new ExTacticalSign(target.getObjectId(), pair.getKey()));
 		}
 	}
 
 	public void removeTacticalSign(Creature target)
 	{
-		for(TIntObjectIterator<Creature> iterator = _tacticalTargets.iterator(); iterator.hasNext();)
-		{
-			iterator.advance();
-
-			if(iterator.value() == target)
+		for (IntObjectPair<Creature> pair : _tacticalTargets.entrySet()) {
+			if(pair.getValue() == target)
 			{
 				broadCast(new ExTacticalSign(target.getObjectId(), 0));
-				_tacticalTargets.remove(iterator.key());
+				_tacticalTargets.remove(pair.getKey());
 				break;
 			}
 		}

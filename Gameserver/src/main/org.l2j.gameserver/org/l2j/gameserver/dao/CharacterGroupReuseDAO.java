@@ -5,7 +5,7 @@ import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.skills.TimeStamp;
 import org.l2j.gameserver.utils.SqlBatch;
-import org.napile.pair.primitive.IntObjectPair;
+import io.github.joealisson.primitive.pair.IntObjectPair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

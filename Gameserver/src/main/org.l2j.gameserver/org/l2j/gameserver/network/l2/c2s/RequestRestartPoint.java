@@ -22,7 +22,7 @@ import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.TeleportUtils;
 
-import org.napile.pair.primitive.IntObjectPair;
+import io.github.joealisson.primitive.pair.IntObjectPair;
 
 public class RequestRestartPoint extends L2GameClientPacket
 {

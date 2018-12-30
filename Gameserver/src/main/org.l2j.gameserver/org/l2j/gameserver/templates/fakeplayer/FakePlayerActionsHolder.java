@@ -2,8 +2,8 @@ package org.l2j.gameserver.templates.fakeplayer;
 
 import org.l2j.gameserver.templates.fakeplayer.actions.OrdinaryActions;
 
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 public class FakePlayerActionsHolder
 {

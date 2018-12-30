@@ -1,10 +1,10 @@
 package org.l2j.gameserver.templates.npc;
 
+import io.github.joealisson.primitive.lists.IntList;
+import io.github.joealisson.primitive.lists.impl.ArrayIntList;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import gnu.trove.list.TIntList;
-import gnu.trove.list.array.TIntArrayList;
 
 public class Faction
 {
@@ -12,9 +12,9 @@ public class Faction
 	public final static Faction NONE = new Faction(none, 0);
 
 	private final String _namesStr;
-	private List<String> _names = new ArrayList<String>();
+	private List<String> _names = new ArrayList<>();
 	private final int _range;
-	private TIntList _ignoreNpcIds = new TIntArrayList();
+	private IntList _ignoreNpcIds = new ArrayIntList();
 
 	public Faction(String names, int range)
 	{

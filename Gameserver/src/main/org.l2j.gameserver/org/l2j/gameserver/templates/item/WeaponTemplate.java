@@ -1,8 +1,7 @@
 package org.l2j.gameserver.templates.item;
 
-import gnu.trove.set.TIntSet;
-import gnu.trove.set.hash.TIntHashSet;
-
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.l2j.gameserver.handler.items.IItemHandler;
 import org.l2j.gameserver.handler.items.ItemHandler;
 import org.l2j.gameserver.skills.SkillTrait;
@@ -26,7 +25,7 @@ public final class WeaponTemplate extends ItemTemplate
 	private final int[] _reducedSoulshot;
 	private final int[] _reducedSpiritshot;
 	private final int[] _reducedMPConsume;
-	private TIntSet _availableEnsouls = null;
+	private IntSet _availableEnsouls = null;
 
 	public enum WeaponType implements ItemType
 	{
@@ -135,8 +134,10 @@ public final class WeaponTemplate extends ItemTemplate
 		_reducedMPConsume = set.getIntegerArray("reduced_mp_consume", new int[] { 0, _mpConsume });
 
 		int[] availableEnsouls = set.getIntegerArray("available_ensouls", new int[0]);
-		if (availableEnsouls.length > 0)
-			_availableEnsouls = new TIntHashSet(availableEnsouls);
+		if (availableEnsouls.length > 0) {
+			_availableEnsouls = new HashIntSet();
+			_availableEnsouls.addAll(availableEnsouls);
+		}
 
 		if(_type == WeaponType.NONE)
 		{

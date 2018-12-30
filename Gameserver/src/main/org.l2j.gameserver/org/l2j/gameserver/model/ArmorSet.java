@@ -1,26 +1,26 @@
 package org.l2j.gameserver.model;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-import gnu.trove.set.hash.TIntHashSet;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.StringTokenizer;
-
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.model.items.Inventory;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.skills.SkillEntry;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringTokenizer;
+
 public final class ArmorSet
 {
-	private final TIntHashSet _chests = new TIntHashSet();
-	private final TIntHashSet _legs = new TIntHashSet();
-	private final TIntHashSet _head = new TIntHashSet();
-	private final TIntHashSet _gloves = new TIntHashSet();
-	private final TIntHashSet _feet = new TIntHashSet();
-	private final TIntHashSet _shield = new TIntHashSet();
-	private final TIntObjectHashMap<List<SkillEntry>> _skills = new TIntObjectHashMap<List<SkillEntry>>();
+	private final IntSet _chests = new HashIntSet();
+	private final IntSet _legs = new HashIntSet();
+	private final IntSet _head = new HashIntSet();
+	private final IntSet _gloves = new HashIntSet();
+	private final IntSet _feet = new HashIntSet();
+	private final IntSet _shield = new HashIntSet();
+	private final HashIntObjectMap<List<SkillEntry>> _skills = new HashIntObjectMap<List<SkillEntry>>();
 	private final List<SkillEntry> _shieldSkills = new ArrayList<SkillEntry>();
 	private final List<SkillEntry> _enchant6skills = new ArrayList<SkillEntry>();
 	private final List<SkillEntry> _enchant7skills = new ArrayList<SkillEntry>();
@@ -124,7 +124,7 @@ public final class ArmorSet
 
 	private static int[] parseItemIDs(String[] items)
 	{
-		TIntHashSet result = new TIntHashSet();
+		IntSet result = new HashIntSet();
 		if(items != null)
 		{
 			for(String s_id : items)
@@ -282,13 +282,10 @@ public final class ArmorSet
 	public List<SkillEntry> getSkillsToRemove()
 	{
 		List<SkillEntry> result = new ArrayList<SkillEntry>();
-		for(int i : _skills.keys())
-		{
-			List<SkillEntry> skills = _skills.get(i);
+		for (List<SkillEntry> skills : _skills.values()) {
 			if(skills != null)
 			{
-				for(SkillEntry skill : skills)
-					result.add(skill);
+				result.addAll(skills);
 			}
 		}
 		return result;

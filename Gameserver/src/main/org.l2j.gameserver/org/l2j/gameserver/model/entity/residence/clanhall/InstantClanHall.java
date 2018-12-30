@@ -19,8 +19,8 @@ import org.l2j.gameserver.templates.InstantZone;
 import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.TimeUtils;
-import org.napile.primitive.maps.IntObjectMap;
-import org.napile.primitive.maps.impl.CHashIntObjectMap;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
 
 public class InstantClanHall extends ClanHall
 {
