@@ -75,7 +75,7 @@ public class EnterWorld extends L2GameClientPacket
 		onEnterWorld(activeChar);
 	}
 
-	public static void onEnterWorld(Player activeChar)
+	private void onEnterWorld(Player activeChar)
 	{
 		boolean first = activeChar.entering;
 

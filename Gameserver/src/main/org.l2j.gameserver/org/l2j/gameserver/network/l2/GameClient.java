@@ -223,7 +223,7 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
 			}
 
 		if(character == null)
-			character = Player.restore(objectId, false);
+			character = Player.restore(objectId);
 
 		if(character != null)
 			setActiveChar(character);

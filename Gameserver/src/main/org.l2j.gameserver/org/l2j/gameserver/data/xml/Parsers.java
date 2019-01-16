@@ -79,9 +79,5 @@ public abstract class Parsers
 	    BotReportPropertiesParser.getInstance().load();
 
 	    DailyMissionsParser.getInstance().load();
-
-		// fake
-	    FakeItemParser.getInstance().load();
-	    FakePlayersParser.getInstance().load();
     }
 }

@@ -1,17 +1,15 @@
 package org.l2j.gameserver.network.l2.s2c;
 
-import java.util.List;
-import java.util.regex.Matcher;
-
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.ImagesCache;
 import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.tables.FakePlayersTable;
 import org.l2j.gameserver.utils.BypassStorage.BypassType;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.List;
+import java.util.regex.Matcher;
 
 public class ShowBoardPacket extends L2GameServerPacket
 {
@@ -44,7 +42,7 @@ public class ShowBoardPacket extends L2GameServerPacket
 		player.getBypassStorage().parseHtml(html, BypassType.BBS);
 
 		html = html.replace("<?copyright?>", Config.BBS_COPYRIGHT);
-		html = html.replace("<?total_online?>", String.valueOf(GameObjectsStorage.getPlayers().size() + FakePlayersTable.getActiveFakePlayersCount()));
+		html = html.replace("<?total_online?>", String.valueOf(GameObjectsStorage.getPlayers().size()));
 
 		Matcher m = ImagesCache.HTML_PATTERN.matcher(html);
 		while(m.find())

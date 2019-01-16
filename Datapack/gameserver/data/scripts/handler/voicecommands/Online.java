@@ -3,7 +3,6 @@ package handler.voicecommands;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.tables.FakePlayersTable;
 
 public class Online extends ScriptVoiceCommandHandler
 {
@@ -25,7 +24,7 @@ public class Online extends ScriptVoiceCommandHandler
 				if(player.isInOfflineMode())
 					j++;
 			}
-			i = i + FakePlayersTable.getActiveFakePlayersCount();	
+
 			if(activeChar.isLangRus())
 			{
 				activeChar.sendMessage("На сервере играют "+i+" игроков.");

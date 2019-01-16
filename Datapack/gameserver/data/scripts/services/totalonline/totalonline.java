@@ -1,13 +1,12 @@
 package services.totalonline;
 
+import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.gameserver.listener.script.OnInitScriptListener;
 import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.tables.FakePlayersTable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -60,16 +59,8 @@ public class totalonline implements OnInitScriptListener
 		}
 	}
 	//for future possibility of parsing names of players method is taking also name to array for init
-	private int getOnlineMembers()
-	{
-		int i = 0;
-		for(Player player : GameObjectsStorage.getPlayers())
-		{
-			i++;
-		}
-		i = i + FakePlayersTable.getActiveFakePlayersCount();
-		
-		return i;	
+	private int getOnlineMembers() {
+		return GameObjectsStorage.getPlayers().size();
 	}
 	private int getOfflineMembers()
 	{

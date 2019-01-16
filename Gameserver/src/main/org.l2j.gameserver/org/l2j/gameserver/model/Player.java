@@ -24,7 +24,6 @@ import org.l2j.commons.util.concurrent.atomic.AtomicState;
 import org.l2j.gameserver.*;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.ai.FakeAI;
 import org.l2j.gameserver.ai.PlayableAI.AINextAction;
 import org.l2j.gameserver.ai.PlayerAI;
 import org.l2j.gameserver.dao.*;
@@ -101,7 +100,6 @@ import org.l2j.gameserver.taskmanager.LazyPrecisionTaskManager;
 import org.l2j.gameserver.templates.CreatureTemplate;
 import org.l2j.gameserver.templates.InstantZone;
 import org.l2j.gameserver.templates.OptionDataTemplate;
-import org.l2j.gameserver.templates.fakeplayer.FakePlayerAITemplate;
 import org.l2j.gameserver.templates.item.ArmorTemplate.ArmorType;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.templates.item.ItemType;
@@ -483,12 +481,6 @@ public final class Player extends Playable implements PlayerGroup
 
 		_baseTemplate = template;
 		_login = accountName;
-	}
-
-	private Player(final FakePlayerAITemplate fakeAiTemplate, final int objectId, final PlayerTemplate template)
-	{
-		this(objectId, template, null);
-		_ai = new FakeAI(this, fakeAiTemplate);
 	}
 
 	/**
@@ -4524,7 +4516,7 @@ public final class Player extends Playable implements PlayerGroup
 		return player;
 	}
 
-	public static Player restore(final int objectId, boolean fake)
+	public static Player restore(final int objectId)
 	{
 		Player player = null;
 		Connection con = null;
@@ -4548,16 +4540,7 @@ public final class Player extends Playable implements PlayerGroup
 				final ClassId classId = ClassId.VALUES[rset2.getInt("class_id")];
 				final PlayerTemplate template = PlayerTemplateHolder.getInstance().getPlayerTemplate(classId.getRace(), classId, Sex.VALUES[rset.getInt("sex")]);;
 
-				if(fake)
-				{
-					FakePlayerAITemplate fakeAiTemplate = FakePlayersHolder.getInstance().getAITemplate(classId.getRace(), classId.getType());
-					if(fakeAiTemplate == null)
-						return null;
-
-					player = new Player(fakeAiTemplate, objectId, template);
-				}
-				else
-					player = new Player(objectId, template);
+				player = new Player(objectId, template);
 
 				player.getSubClassList().restore();
 

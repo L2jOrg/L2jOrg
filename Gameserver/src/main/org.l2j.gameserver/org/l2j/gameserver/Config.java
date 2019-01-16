@@ -51,10 +51,10 @@ public class Config
     public static final String SERVICES_FILE = "config/services.properties";
     public static final String BUFF_STORE_CONFIG_FILE = "config/offline_buffer.properties";
     public static final String OLYMPIAD = "config/olympiad.properties";
-    //public static final String DEVELOP_FILE = "config/develop.properties";
+
     public static final String EXT_FILE = "config/ext.properties";
     public static final String BBS_FILE = "config/bbs.properties";
-    public static final String FAKE_PLAYERS_LIST = "config/fake_players.list";
+
     public static final String PVP_MANAGER_FILE = "config/pvp_manager.properties";
 
     public static final String TRAINING_CAMP_CONFIG_FILE = "config/training_camp.properties";
@@ -959,17 +959,9 @@ public class Config
     public static boolean DEBUG;
 
     public static int WEAR_DELAY;
-    public static boolean ALLOW_FAKE_PLAYERS;
-    public static int FAKE_PLAYERS_PERCENT;
 
     public static boolean DISABLE_CRYSTALIZATION_ITEMS;
 
-    //public static int[] SERVICES_ENCHANT_VALUE;
-    //public static int[] SERVICES_ENCHANT_COAST;
-    //public static int[] SERVICES_ENCHANT_RAID_VALUE;
-    //public static int[] SERVICES_ENCHANT_RAID_COAST;
-
-    //public static boolean GOODS_INVENTORY_ENABLED = false;
     public static boolean EX_NEW_PETITION_SYSTEM;
     public static boolean EX_JAPAN_MINIGAME;
     public static boolean EX_LECTURE_MARK;
@@ -1193,8 +1185,6 @@ public class Config
 
     public static boolean FISHING_ONLY_PREMIUM_ACCOUNTS;
     public static int FISHING_MINIMUM_LEVEL;
-
-    public static int FAKE_PLAYERS_COUNT;
 
     public static boolean BOTREPORT_ENABLED;
     public static int BOTREPORT_REPORT_DELAY;
@@ -1525,8 +1515,6 @@ public class Config
         MAX_ACTIVE_ACCOUNTS_ON_ONE_IP = serverSettings.getProperty("MAX_ACTIVE_ACCOUNTS_ON_ONE_IP", -1);
         MAX_ACTIVE_ACCOUNTS_IGNORED_IP = serverSettings.getProperty("MAX_ACTIVE_ACCOUNTS_IGNORED_IP", new String[0], ";");
         MAX_ACTIVE_ACCOUNTS_ON_ONE_HWID = serverSettings.getProperty("MAX_ACTIVE_ACCOUNTS_ON_ONE_HWID", -1);
-
-        FAKE_PLAYERS_COUNT = serverSettings.getProperty("FAKE_PLAYERS_COUNT", 0);
     }
 
     public static void loadTelnetConfig()
@@ -2004,29 +1992,13 @@ public class Config
 
         FOLLOW_RANGE = altSettings.getProperty("FollowRange", 100);
 
-        //ALT_ITEM_AUCTION_ENABLED = altSettings.getProperty("AltItemAuctionEnabled", true);
-        //ALT_CUSTOM_ITEM_AUCTION_ENABLED = ALT_ITEM_AUCTION_ENABLED && altSettings.getProperty("AltCustomItemAuctionEnabled", false);
-        //ALT_ITEM_AUCTION_CAN_REBID = altSettings.getProperty("AltItemAuctionCanRebid", false);
-        //ALT_ITEM_AUCTION_START_ANNOUNCE = altSettings.getProperty("AltItemAuctionAnnounce", true);
-        //ALT_ITEM_AUCTION_MAX_BID = altSettings.getProperty("AltItemAuctionMaxBid", 1000000L);
-        //ALT_ITEM_AUCTION_MAX_CANCEL_TIME_IN_MILLIS = altSettings.getProperty("AltItemAuctionMaxCancelTimeInMillis", 604800000);
-
-        //ALT_ENABLE_BLOCK_CHECKER_EVENT = altSettings.getProperty("EnableBlockCheckerEvent", true);
-        //ALT_MIN_BLOCK_CHECKER_TEAM_MEMBERS = Math.min(Math.max(altSettings.getProperty("BlockCheckerMinOlympiadMembers", 1), 1), 6);
-        //ALT_RATE_COINS_REWARD_BLOCK_CHECKER = altSettings.getProperty("BlockCheckerRateCoinReward", 1.);
-
-        //ALT_HBCE_FAIR_PLAY = altSettings.getProperty("HBCEFairPlay", false);
-
         ALT_PET_INVENTORY_LIMIT = altSettings.getProperty("AltPetInventoryLimit", 12);
-
-        ALLOW_FAKE_PLAYERS = altSettings.getProperty("AllowFake", false);
-        FAKE_PLAYERS_PERCENT = altSettings.getProperty("FakePercent", 0);
 
         DISABLE_CRYSTALIZATION_ITEMS = altSettings.getProperty("DisableCrystalizationItems", false);
 
         SUB_START_LEVEL = altSettings.getProperty("SubClassStartLevel", 40);
         START_CLAN_LEVEL = altSettings.getProperty("ClanStartLevel", 0);
-        //NEW_CHAR_IS_NOBLE = altSettings.getProperty("IsNewCharNoble", false);
+
         ENABLE_L2_TOP_OVERONLINE = altSettings.getProperty("EnableL2TOPFakeOnline", false);
         L2TOP_MAX_ONLINE = altSettings.getProperty("L2TOPMaxOnline", 3000);
         MIN_ONLINE_0_5_AM = altSettings.getProperty("MinOnlineFrom00to05", 500);

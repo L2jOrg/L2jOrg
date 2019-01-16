@@ -50,7 +50,6 @@ import org.l2j.gameserver.scripts.Scripts;
 import org.l2j.gameserver.security.HWIDBan;
 import org.l2j.gameserver.tables.ClanTable;
 import org.l2j.gameserver.tables.EnchantHPBonusTable;
-import org.l2j.gameserver.tables.FakePlayersTable;
 import org.l2j.gameserver.taskmanager.AutomaticTasks;
 import org.l2j.gameserver.taskmanager.ItemsAutoDestroy;
 import org.l2j.gameserver.utils.OnlineTxtGenerator;
@@ -255,8 +254,6 @@ public class GameServer {
             logger.info("Restored " + count + " offline traders.");
         }
 
-        // TODO remove this
-        FakePlayersTable.getInstance();
 
         // TODO remove this
         if (Config.ONLINE_GENERATOR_ENABLED)

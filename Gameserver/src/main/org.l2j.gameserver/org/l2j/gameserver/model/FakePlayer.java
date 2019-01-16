@@ -37,8 +37,6 @@ import org.l2j.gameserver.templates.player.PlayerTemplate;
  */
 public class FakePlayer extends Playable
 {
-	private static final long serialVersionUID = -7275714049223105460L;
-
 	private final Player _owner;
 
 	private OwnerAttakListener _listener;

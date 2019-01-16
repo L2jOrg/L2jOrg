@@ -280,7 +280,7 @@ public final class TradeHelper
 				objectId = rset.getInt("obj_id");
 				expireTimeSecs = rset.getInt("value");
 
-				p = Player.restore(objectId, false);
+				p = Player.restore(objectId);
 				if(p == null)
 					continue;
 
@@ -365,7 +365,7 @@ public final class TradeHelper
 				int[] skills = org.l2j.commons.string.StringArrayUtils.stringToIntArray(rset.getString("skills"), ",");
 				String title = rset.getString("title");
 
-				Player p = Player.restore(objectId, false);
+				Player p = Player.restore(objectId);
 				if(p == null)
 					continue;
 

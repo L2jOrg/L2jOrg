@@ -1,34 +1,20 @@
 package org.l2j.gameserver.ai;
 
-import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
-import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
-import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_CAST;
-import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_FOLLOW;
-import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_INTERACT;
-import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_PICK_UP;
-
-import java.util.concurrent.ScheduledFuture;
-
 import org.l2j.commons.threading.RunnableImpl;
-import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.geodata.GeoEngine;
-import org.l2j.gameserver.model.Creature;
-import org.l2j.gameserver.model.GameObject;
-import org.l2j.gameserver.model.Playable;
-import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.model.Servitor;
-import org.l2j.gameserver.model.Skill;
+import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.Skill.NextAction;
 import org.l2j.gameserver.model.Skill.SkillTargetType;
 import org.l2j.gameserver.model.Skill.SkillType;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
-import org.l2j.gameserver.network.l2.s2c.FlyToLocationPacket.FlyType;
-import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.PositionUtils;
-import org.l2j.gameserver.model.FakePlayer;
+
+import java.util.concurrent.ScheduledFuture;
+
+import static org.l2j.gameserver.ai.CtrlIntention.*;
 
 public class PlayableAI extends CharacterAI
 {
