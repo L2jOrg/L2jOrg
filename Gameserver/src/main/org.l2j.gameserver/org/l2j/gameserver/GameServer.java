@@ -52,7 +52,6 @@ import org.l2j.gameserver.tables.ClanTable;
 import org.l2j.gameserver.tables.EnchantHPBonusTable;
 import org.l2j.gameserver.taskmanager.AutomaticTasks;
 import org.l2j.gameserver.taskmanager.ItemsAutoDestroy;
-import org.l2j.gameserver.utils.OnlineTxtGenerator;
 import org.l2j.gameserver.utils.Strings;
 import org.l2j.gameserver.utils.TradeHelper;
 import org.slf4j.Logger;
@@ -253,11 +252,6 @@ public class GameServer {
             int count = TradeHelper.restoreOfflineTraders();
             logger.info("Restored " + count + " offline traders.");
         }
-
-
-        // TODO remove this
-        if (Config.ONLINE_GENERATOR_ENABLED)
-            ThreadPoolManager.getInstance().scheduleAtFixedRate(new OnlineTxtGenerator(), 5000L, Config.ONLINE_GENERATOR_DELAY * 60 * 1000L);
 
         ThreadPoolManager.getInstance().execute(AuthServerCommunication.getInstance());
 

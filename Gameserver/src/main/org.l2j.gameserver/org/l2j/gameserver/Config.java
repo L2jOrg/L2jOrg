@@ -37,7 +37,6 @@ public class Config
 
     /** Configuration files */
     public static final String ANTIFLOOD_CONFIG_FILE = "config/antiflood.properties";
-    public static final String CUSTOM_CONFIG_FILE = "config/custom.properties";
     public static final String OTHER_CONFIG_FILE = "config/other.properties";
     public static final String RESIDENCE_CONFIG_FILE = "config/residence.properties";
     public static final String SPOIL_CONFIG_FILE = "config/spoil.properties";
@@ -972,13 +971,8 @@ public class Config
     public static int AUTH_SERVER_AGE_LIMIT;
     public static int AUTH_SERVER_SERVER_TYPE;
 
-    /** Custom properties **/
-    public static boolean ONLINE_GENERATOR_ENABLED;
-    public static int ONLINE_GENERATOR_DELAY;
-
     public static boolean ALLOW_MONSTER_RACE;
     public static boolean ONLY_ONE_SIEGE_PER_CLAN;
-    //public static double SPECIAL_CLASS_BOW_CROSS_BOW_PENALTY;
 
     public static boolean ALLOW_USE_DOORMANS_IN_SIEGE_BY_OWNERS;
 
@@ -987,7 +981,6 @@ public class Config
     public static boolean NPC_RANDOM_ENCHANT;
 
     public static boolean ENABLE_PARTY_SEARCH;
-    //public static boolean MENTOR_ONLY_PA;
 
     //pvp manager
     public static boolean ALLOW_PVP_REWARD;
@@ -1577,14 +1570,6 @@ public class Config
         MAIL_USE_MIN_LEVEL = properties.getProperty("MAIL_USE_MIN_LEVEL", 1);
         MAIL_USE_MIN_LEVEL_WITHOUT_PA = properties.getProperty("MAIL_USE_MIN_LEVEL_WITHOUT_PA", 1);
         MAIL_USE_DELAY = properties.getProperty("MAIL_USE_DELAY", 0);
-    }
-
-    public static void loadCustomConfig()
-    {
-        ExProperties customSettings = load(CUSTOM_CONFIG_FILE);
-
-        ONLINE_GENERATOR_ENABLED = customSettings.getProperty("OnlineGeneratorEnabled", false);
-        ONLINE_GENERATOR_DELAY = customSettings.getProperty("OnlineGeneratorDelay", 1);
     }
 
     public static void loadOtherConfig()
@@ -2544,7 +2529,6 @@ public class Config
         loadTelnetConfig();
         loadResidenceConfig();
         loadAntiFloodConfig();
-        loadCustomConfig();
         loadOtherConfig();
         loadSpoilConfig();
         loadFormulasConfig();
@@ -2554,7 +2538,6 @@ public class Config
         loadAISettings();
         loadGeodataSettings();
         loadOlympiadSettings();
-        //loadDevelopSettings();
         loadExtSettings();
         loadBBSSettings();
         loadSchemeBuffer();
