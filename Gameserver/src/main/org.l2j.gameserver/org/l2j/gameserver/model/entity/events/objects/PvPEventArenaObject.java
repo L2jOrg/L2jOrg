@@ -165,8 +165,6 @@ public class PvPEventArenaObject extends Reflection
 			if(_teamsList.get(0).size() == 1)
 			{
 				PvPEventPlayerObject object = _teamsList.get(0).iterator().next();
-				if(_pvpEvent.isAddHeroLastPlayer() && !object.getPlayer().isHero())
-					object.getPlayer().setCustomHero(1);
 
 				List<RewardObject> rewards = _pvpEvent.getObjects("reward_for_last_player");
 				for(RewardObject reward : rewards)

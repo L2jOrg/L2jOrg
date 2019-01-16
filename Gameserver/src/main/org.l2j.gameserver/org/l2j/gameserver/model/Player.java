@@ -4661,9 +4661,6 @@ public final class Player extends Playable implements PlayerGroup
 				if(Config.ENABLE_OLYMPIAD)
 					player.setHero(Hero.getInstance().isHero(player.getObjectId()));
 
-				if(!player.isHero())
-					player.setHero(CustomHeroDAO.getInstance().isCustomHero(player.getObjectId()));
-
 				player.updatePledgeRank();
 
 				player.setXYZ(rset.getInt("x"), rset.getInt("y"), rset.getInt("z"));
@@ -11179,16 +11176,6 @@ public final class Player extends Playable implements PlayerGroup
 			}
 			forceUseSkill(skill, this);
 		}
-	}
-
-	public void setCustomHero(int hours)
-	{
-		setHero(true);
-		updatePledgeRank();
-		broadcastPacket(new SocialActionPacket(getObjectId(), 20016));
-		checkHeroSkills();
-		int time = hours == -1 ? -1 : (int) (System.currentTimeMillis() / 1000) + hours * 60 * 60;
-		CustomHeroDAO.getInstance().addCustomHero(getObjectId(), time);
 	}
 
 	public void setSelectedMultiClassId(ClassId classId)

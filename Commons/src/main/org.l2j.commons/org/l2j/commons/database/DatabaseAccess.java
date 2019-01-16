@@ -32,7 +32,6 @@ public class DatabaseAccess {
         return repository;
     }
 
-
     public static void shutdown() {
         try {
             L2DatabaseFactory.getInstance().shutdown();

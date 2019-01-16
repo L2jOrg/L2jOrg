@@ -1,1 +1,0 @@
-ALTER TABLE character_hennas ADD COLUMN `draw_time` INT UNSIGNED NOT NULL DEFAULT '0' AFTER `class_index`;

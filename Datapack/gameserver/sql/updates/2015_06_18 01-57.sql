@@ -1,1 +1,0 @@
-ALTER TABLE `character_quests` CHANGE `var` `var` varchar(40) AFTER id;

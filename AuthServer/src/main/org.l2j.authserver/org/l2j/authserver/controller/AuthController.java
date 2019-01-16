@@ -196,7 +196,7 @@ public class AuthController {
         client.setAccount(account);
         assignSessionKeyToClient(client);
         client.setState(AUTHED_LOGIN);
-        account.setLastActive(currentTimeMillis());
+        account.setLastAccess(currentTimeMillis());
         account.setLastIP(client.getHostAddress());
     }
 

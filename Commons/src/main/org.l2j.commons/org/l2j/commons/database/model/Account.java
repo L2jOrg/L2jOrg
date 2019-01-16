@@ -11,19 +11,21 @@ public class Account extends Entity<String> {
     @Id
     private String login;
     private String password;
-    private Long lastActive;
+    @Column("last_access")
+    private Long lastAccess;
     @Column("access_level")
     private Integer accessLevel;
+    @Column("last_server")
     private Integer lastServer;
+    @Column("last_ip")
     private String lastIP;
-    private Integer newbieCharacterId;
 
     public Account() { }
 
-    public Account(String login, String password, long lastActive, String lastIP) {
+    public Account(String login, String password, long lastAccess, String lastIP) {
         this.login = login;
         this.password = password;
-        this.lastActive = lastActive;
+        this.lastAccess = lastAccess;
         this.lastIP = lastIP;
         this.accessLevel = 0;
         this.lastServer = 1;
@@ -50,8 +52,8 @@ public class Account extends Entity<String> {
         return accessLevel < 0;
     }
 
-    public void setLastActive(long lastActive) {
-        this.lastActive = lastActive;
+    public void setLastAccess(long lastAccess) {
+        this.lastAccess= lastAccess;
     }
 
     public void setLastIP(String lastIP) {
@@ -64,13 +66,5 @@ public class Account extends Entity<String> {
 
     public boolean isGM() {
         return accessLevel >= Config.GM_MIN;
-    }
-
-    public int getNewbieCharacterId() {
-        return newbieCharacterId;
-    }
-
-    public void setNewbieCharacterId(int newbieCharacterId) {
-        this.newbieCharacterId = newbieCharacterId;
     }
 }

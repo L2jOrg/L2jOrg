@@ -1,18 +1,17 @@
 package handler.bbs.custom;
 
 import handler.bbs.ScriptsCommunityHandler;
-import org.l2j.gameserver.dao.CustomHeroDAO;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.htm.HtmTemplates;
 import org.l2j.gameserver.handler.bbs.BbsHandlerHolder;
 import org.l2j.gameserver.handler.bbs.IBbsHandler;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ShowBoardPacket;
-import org.l2j.gameserver.network.l2.s2c.SocialActionPacket;
-import org.l2j.gameserver.utils.*;
+import org.l2j.gameserver.utils.HtmlUtils;
+import org.l2j.gameserver.utils.ItemFunctions;
+import org.l2j.gameserver.utils.MulticlassUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -163,151 +162,7 @@ public class CommunityCareer extends ScriptsCommunityHandler
 				}
 
 				html = html.replace("<?content?>", content.toString());
-			}
-			else if("hero".equals(cmd2))
-			{
-				if(BBSConfig.HERO_SERVICE_COST_ITEM_ID_PER_1_DAY <= 0 && BBSConfig.HERO_SERVICE_COST_ITEM_ID_PER_FOREVER <= 0)
-				{
-					player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
-					player.sendPacket(ShowBoardPacket.CLOSE);
-					return;
-				}
-
-				HtmTemplates tpls = HtmCache.getInstance().getTemplates("scripts/handler/bbs/pages/hero.htm", player);
-				html = tpls.get(0);
-
-				StringBuilder content = new StringBuilder();
-
-				if(Hero.getInstance().isHero(player.getObjectId()))
-					content.append(tpls.get(1));
-				else if(Hero.getInstance().isInactiveHero(player.getObjectId()))
-					content.append(tpls.get(2));
-				else
-				{
-					int expiryTime = CustomHeroDAO.getInstance().getExpiryTime(player.getObjectId());
-					if(expiryTime != -1 && expiryTime < (System.currentTimeMillis() / 1000))
-						expiryTime = (int) (System.currentTimeMillis() / 1000);
-
-					if(!st.hasMoreTokens())
-					{
-						if(expiryTime == -1)
-							content.append(tpls.get(3));
-						else
-						{
-							if(expiryTime > (System.currentTimeMillis() / 1000))
-							{
-								String activeHero = tpls.get(4);
-								activeHero = activeHero.replace("<?expire_time?>", String.valueOf(TimeUtils.toSimpleFormat(expiryTime * 1000L)));
-								content.append(activeHero);
-							}
-
-							if(BBSConfig.HERO_SERVICE_COST_ITEM_ID_PER_1_DAY > 0)
-							{
-								for(int period : BBSConfig.HERO_SERVICE_PERIOD_VARIATIONS)
-								{
-									String tempBlock = tpls.get(5);
-									tempBlock = tempBlock.replace("<?period?>", String.valueOf(period));
-
-									long price = BBSConfig.HERO_SERVICE_COST_ITEM_COUNT_PER_1_DAY * period;
-									if(price > 0)
-									{
-										String tempFeeBlock = tpls.get(10);
-										tempFeeBlock = tempFeeBlock.replace("<?fee_item_name?>", HtmlUtils.htmlItemName(BBSConfig.HERO_SERVICE_COST_ITEM_ID_PER_1_DAY));
-										tempFeeBlock = tempFeeBlock.replace("<?fee_item_count?>", Util.formatAdena(price));
-										tempBlock = tempBlock.replace("<?fee_block?>", tempFeeBlock);
-									}
-									else
-										tempBlock = tempBlock.replace("<?fee_block?>", tpls.get(11));
-
-									content.append(tempBlock);
-								}
-							}
-
-							if(BBSConfig.HERO_SERVICE_COST_ITEM_ID_PER_FOREVER > 0)
-							{
-								String tempBlock = tpls.get(6);
-
-								long price = BBSConfig.HERO_SERVICE_COST_ITEM_COUNT_PER_FOREVER;
-								if(price > 0)
-								{
-									String tempFeeBlock = tpls.get(10);
-									tempFeeBlock = tempFeeBlock.replace("<?fee_item_name?>", HtmlUtils.htmlItemName(BBSConfig.HERO_SERVICE_COST_ITEM_ID_PER_FOREVER));
-									tempFeeBlock = tempFeeBlock.replace("<?fee_item_count?>", Util.formatAdena(price));
-									tempBlock = tempBlock.replace("<?fee_block?>", tempFeeBlock);
-								}
-								else
-									tempBlock = tempBlock.replace("<?fee_block?>", tpls.get(11));
-
-								content.append(tempBlock);
-							}
-						}
-					}
-					else
-					{
-						String cmd3 = st.nextToken();
-						if("buy".equals(cmd3))
-						{
-							if(!st.hasMoreTokens())
-								return;
-
-							if(expiryTime == -1)
-								return;
-
-							String cmd4 = st.nextToken();
-							if("unlim".equals(cmd4))
-							{
-								long price = BBSConfig.HERO_SERVICE_COST_ITEM_COUNT_PER_FOREVER;
-								if(price <= 0 || ItemFunctions.deleteItem(player, BBSConfig.HERO_SERVICE_COST_ITEM_ID_PER_1_DAY, price, true))
-								{
-									CustomHeroDAO.getInstance().addCustomHero(player.getObjectId(), -1);
-									if(!player.isHero())
-									{
-										player.setHero(true);
-										player.updatePledgeRank();
-										player.broadcastPacket(new SocialActionPacket(player.getObjectId(), SocialActionPacket.GIVE_HERO));
-										player.checkHeroSkills();
-									}
-									content.append(tpls.get(9));
-								}
-								else
-								{
-									String feeInfo = tpls.get(7);
-									feeInfo = feeInfo.replace("<?fee_item_name?>", HtmlUtils.htmlItemName(BBSConfig.HERO_SERVICE_COST_ITEM_ID_PER_1_DAY));
-									feeInfo = feeInfo.replace("<?fee_item_count?>", Util.formatAdena(price));
-									content.append(feeInfo);
-								}
-							}
-							else
-							{
-								int days = Integer.parseInt(cmd4);
-								long price = BBSConfig.HERO_SERVICE_COST_ITEM_COUNT_PER_1_DAY * days;
-								if(price <= 0 || ItemFunctions.deleteItem(player, BBSConfig.HERO_SERVICE_COST_ITEM_ID_PER_1_DAY, price, true))
-								{
-									CustomHeroDAO.getInstance().addCustomHero(player.getObjectId(), expiryTime + (days * 24 * 60 * 60));
-									if(!player.isHero())
-									{
-										player.setHero(true);
-										player.updatePledgeRank();
-										player.broadcastPacket(new SocialActionPacket(player.getObjectId(), SocialActionPacket.GIVE_HERO));
-										player.checkHeroSkills();
-									}
-									content.append(tpls.get(8));
-								}
-								else
-								{
-									String feeInfo = tpls.get(7);
-									feeInfo = feeInfo.replace("<?fee_item_name?>", HtmlUtils.htmlItemName(BBSConfig.HERO_SERVICE_COST_ITEM_ID_PER_1_DAY));
-									feeInfo = feeInfo.replace("<?fee_item_count?>", Util.formatAdena(price));
-									content.append(feeInfo);
-								}
-							}
-						}
-					}
-				}
-				html = html.replace("<?content?>", content.toString());
-			}
-			else if("multiclass".equals(cmd2))
-			{
+			} else if("multiclass".equals(cmd2))  {
 				MulticlassUtils.showMulticlassList(player);
 				player.sendPacket(ShowBoardPacket.CLOSE);
 			}

@@ -5,7 +5,6 @@ module org.l2j.gameserver {
     requires java.desktop;
     requires org.slf4j;
     requires java.scripting;
-    requires jython.standalone;
     requires spring.data.commons;
     requires spring.data.jdbc;
     requires spring.context;

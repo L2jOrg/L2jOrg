@@ -1,9 +1,11 @@
 package org.l2j.gameserver.model.entity;
 
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
+import io.github.joealisson.primitive.pair.IntObjectPair;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.dao.CustomHeroDAO;
 import org.l2j.gameserver.data.string.StringsHolder;
 import org.l2j.gameserver.database.mysql;
 import org.l2j.gameserver.model.GameObjectsStorage;
@@ -18,9 +20,6 @@ import org.l2j.gameserver.network.l2.s2c.SystemMessage;
 import org.l2j.gameserver.tables.ClanTable;
 import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.utils.HtmlUtils;
-import io.github.joealisson.primitive.pair.IntObjectPair;
-import io.github.joealisson.primitive.maps.IntObjectMap;
-import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -163,7 +162,7 @@ public class Hero
 
 			if(player != null)
 			{
-				player.setHero(CustomHeroDAO.getInstance().isCustomHero(player.getObjectId()));
+				player.setHero(false);
 				player.checkAndDeleteOlympiadItems();
 				player.updatePledgeRank();
 				player.broadcastUserInfo(true);

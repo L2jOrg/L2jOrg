@@ -1,1 +1,0 @@
-ALTER TABLE accounts ADD COLUMN `phone_nubmer` bigint(15) NOT NULL DEFAULT '0' AFTER `points`;

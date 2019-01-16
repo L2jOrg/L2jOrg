@@ -1,5 +1,9 @@
 package org.l2j.gameserver;
 
+import io.github.joealisson.mmocore.ConnectionBuilder;
+import io.github.joealisson.mmocore.ConnectionHandler;
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import net.sf.ehcache.CacheManager;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.lang.StatsUtils;
@@ -11,7 +15,6 @@ import org.l2j.gameserver.config.templates.HostInfo;
 import org.l2j.gameserver.config.xml.ConfigParsers;
 import org.l2j.gameserver.config.xml.holder.HostsConfigHolder;
 import org.l2j.gameserver.dao.CharacterDAO;
-import org.l2j.gameserver.dao.CustomHeroDAO;
 import org.l2j.gameserver.dao.HidenItemsDAO;
 import org.l2j.gameserver.dao.ItemsDAO;
 import org.l2j.gameserver.data.BoatHolder;
@@ -53,10 +56,6 @@ import org.l2j.gameserver.taskmanager.ItemsAutoDestroy;
 import org.l2j.gameserver.utils.OnlineTxtGenerator;
 import org.l2j.gameserver.utils.Strings;
 import org.l2j.gameserver.utils.TradeHelper;
-import io.github.joealisson.mmocore.ConnectionBuilder;
-import io.github.joealisson.mmocore.ConnectionHandler;
-import io.github.joealisson.primitive.sets.IntSet;
-import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -64,8 +63,10 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.HashSet;
 import java.util.Properties;
+
+import static java.util.Objects.nonNull;
+import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 public class GameServer {
 
@@ -73,24 +74,22 @@ public class GameServer {
     private static final String HIKARICP_CONFIGURATION_FILE = "hikaricp.configurationFile";
 
     public static final String UPDATE_NAME = "Classic: Saviors (Zaken)";
-    public static boolean DEVELOP = false;
     public static final int AUTH_SERVER_PROTOCOL = 2;
 
-    public static GameServer _instance;
-    private static Logger _log;
+    private static Logger logger;
+
+    public static GameServer instance;
 
     private final ConnectionHandler<GameClient> connectionHandler;
-    private final GameServerListenerList _listeners;
-    private final int _onlineLimit;
-    private final String _licenseHost;
+    private final GameServerListenerList listeners;
+    private final int onlineLimit;
+    private final String licenseHost;
 
     private String version;
-    private long _serverStartTimeMillis;
 
     public GameServer() throws Exception {
-        _instance = this;
-        _serverStartTimeMillis = System.currentTimeMillis();
-        _listeners = new GameServerListenerList();
+        instance = this;
+        listeners = new GameServerListenerList();
 
         logVersionInfo();
 
@@ -116,9 +115,9 @@ public class GameServer {
 
         // Check binding address
         checkFreePorts(portsArray);
-        _licenseHost = Config.EXTERNAL_HOSTNAME;
-        _onlineLimit = Config.MAXIMUM_ONLINE_USERS;
-        if (_onlineLimit == 0)
+        licenseHost = Config.EXTERNAL_HOSTNAME;
+        onlineLimit = Config.MAXIMUM_ONLINE_USERS;
+        if (onlineLimit == 0)
             throw new Exception("Server online limit is zero!");
 
         // Initialize database
@@ -129,7 +128,7 @@ public class GameServer {
 
         IdFactory _idFactory = IdFactory.getInstance();
         if (!_idFactory.isInitialized()) {
-            _log.error("Could not read object IDs from DB. Please Check Your Data.");
+            logger.error("Could not read object IDs from DB. Please Check Your Data.");
             throw new Exception("Could not initialize the ID factory");
         }
 
@@ -140,9 +139,6 @@ public class GameServer {
         BotCheckManager.loadBotQuestions();
 
         HidenItemsDAO.LoadAllHiddenItems();
-
-        // TODO Remove This
-        CustomHeroDAO.getInstance();
 
         HWIDBan.getInstance().load();
 
@@ -214,16 +210,16 @@ public class GameServer {
 
         ClanTable.getInstance().checkClans();
 
-        _log.info("=[Events]=========================================");
+        logger.info("=[Events]=========================================");
         ResidenceHolder.getInstance().callInit();
         EventHolder.getInstance().callInit();
-        _log.info("==================================================");
+        logger.info("==================================================");
 
         BoatHolder.getInstance().spawnAll();
 
         Runtime.getRuntime().addShutdownHook(Shutdown.getInstance());
 
-        _log.info("IdFactory: Free ObjectID's remaining: " + IdFactory.getInstance().size());
+        logger.info("IdFactory: Free ObjectID's remaining: " + IdFactory.getInstance().size());
 
         MiniGameScoreManager.getInstance();
 
@@ -235,8 +231,8 @@ public class GameServer {
 
         Shutdown.getInstance().schedule(Config.RESTART_AT_TIME, Shutdown.RESTART);
 
-        _log.info("GameServer Started");
-        _log.info("Maximum Numbers of Connected Players: " + getOnlineLimit());
+        logger.info("GameServer Started");
+        logger.info("Maximum Numbers of Connected Players: " + getOnlineLimit());
 
         var bindAddress = getInetSocketAddress();
         final GamePacketHandler gph = new GamePacketHandler();
@@ -247,16 +243,16 @@ public class GameServer {
 
         // TODO remove this
         if (Config.BUFF_STORE_ENABLED) {
-            _log.info("Restoring offline buffers...");
+            logger.info("Restoring offline buffers...");
             int count = TradeHelper.restoreOfflineBuffers();
-            _log.info("Restored " + count + " offline buffers.");
+            logger.info("Restored " + count + " offline buffers.");
         }
 
         // TODO remove This
         if (Config.SERVICES_OFFLINE_TRADE_RESTORE_AFTER_RESTART) {
-            _log.info("Restoring offline traders...");
+            logger.info("Restoring offline traders...");
             int count = TradeHelper.restoreOfflineTraders();
-            _log.info("Restored " + count + " offline traders.");
+            logger.info("Restored " + count + " offline traders.");
         }
 
         // TODO remove this
@@ -268,29 +264,31 @@ public class GameServer {
 
         ThreadPoolManager.getInstance().execute(AuthServerCommunication.getInstance());
 
-        _log.info("=================================================");
+        logger.info("=================================================");
         String memUsage = String.valueOf(StatsUtils.getMemUsage());
         for (String line : memUsage.split("\n"))
-            _log.info(line);
+            logger.info(line);
 
-        _log.info("=================================================");
+        logger.info("=================================================");
     }
 
     private void logVersionInfo() {
         try {
-
             var versionProperties = new Properties();
-            versionProperties.load(ClassLoader.getSystemResourceAsStream("version.properties"));
-            version = versionProperties.getProperty("version");
-            _log.info("======================================================================");
-            _log.info("Build Version: ........... {}", version);
-            _log.info("Build Revision: .......... {}", versionProperties.getProperty("revision"));
-            _log.info("Update: .................. {}", UPDATE_NAME);
-            _log.info("Build date: .............. {}", versionProperties.getProperty("buildDate"));
-            _log.info("Compiler JDK version: .... {}", versionProperties.getProperty("compilerVersion"));
-            _log.info("======================================================================");
+            var versionFile = ClassLoader.getSystemResourceAsStream("version.properties");
+            if(nonNull(versionFile)) {
+                versionProperties.load(versionFile);
+                version = versionProperties.getProperty("version");
+                logger.info("======================================================================");
+                logger.info("Build Version: ........... {}", version);
+                logger.info("Build Revision: .......... {}", versionProperties.getProperty("revision"));
+                logger.info("Update: .................. {}", UPDATE_NAME);
+                logger.info("Build date: .............. {}", versionProperties.getProperty("buildDate"));
+                logger.info("Compiler JDK version: .... {}", versionProperties.getProperty("compilerVersion"));
+                logger.info("======================================================================");
+            }
         } catch (IOException e) {
-            _log.warn(e.getLocalizedMessage(), e);
+            logger.warn(e.getLocalizedMessage(), e);
         }
     }
 
@@ -300,25 +298,25 @@ public class GameServer {
 
 
     public GameServerListenerList getListeners() {
-        return _listeners;
+        return listeners;
     }
 
     public static GameServer getInstance() {
-        return _instance;
+        return instance;
     }
 
     public <T extends GameListener> boolean addListener(T listener) {
-        return _listeners.add(listener);
+        return listeners.add(listener);
     }
 
     public <T extends GameListener> boolean removeListener(T listener) {
-        return _listeners.remove(listener);
+        return listeners.remove(listener);
     }
 
     private void checkFreePorts(int[] ports) {
         for (int port : ports) {
             while (!checkFreePort(port)) {
-                _log.warn("Port " + port + " is allready binded. Please free it and restart server.");
+                logger.warn("Port " + port + " is allready binded. Please free it and restart server.");
                 try {
                     Thread.sleep(1000L);
                 } catch (InterruptedException ie) {
@@ -360,12 +358,8 @@ public class GameServer {
         return true;
     }
 
-    public long getServerStartTime() {
-        return _serverStartTimeMillis;
-    }
-
     public String getLicenseHost() {
-        return _licenseHost;
+        return licenseHost;
     }
 
     public String getVersion() {
@@ -373,7 +367,7 @@ public class GameServer {
     }
 
     public int getOnlineLimit() {
-        return _onlineLimit;
+        return onlineLimit;
     }
 
     public void shutdown() {
@@ -382,15 +376,12 @@ public class GameServer {
 
 
     public static void main(String[] args) {
-        for (String arg : args)
-            if (arg.equalsIgnoreCase("-dev"))
-                DEVELOP = true;
         configureLogger();
         configureDatabase();
         try {
             new GameServer();
         } catch (Exception e) {
-            _log.error(e.getLocalizedMessage(), e);
+            logger.error(e.getLocalizedMessage(), e);
         }
     }
 
@@ -399,23 +390,23 @@ public class GameServer {
     }
 
     private static void configureLogger() {
-        String logConfigurationFile = System.getProperty(LOG4J_CONFIGURATION_FILE);
-        if (logConfigurationFile == null || logConfigurationFile.isEmpty()) {
+        var logConfigurationFile = System.getProperty(LOG4J_CONFIGURATION_FILE);
+        if (isNullOrEmpty(logConfigurationFile)) {
             System.setProperty(LOG4J_CONFIGURATION_FILE, "log4j.xml");
         }
-        _log = LoggerFactory.getLogger(GameServer.class);
+        logger = LoggerFactory.getLogger(GameServer.class);
     }
 
     public class GameServerListenerList extends ListenerList<GameServer> {
         public void onStart() {
             for (Listener<GameServer> listener : getListeners())
-                if (OnStartListener.class.isInstance(listener))
+                if (listener instanceof OnStartListener)
                     ((OnStartListener) listener).onStart();
         }
 
         public void onShutdown() {
             for (Listener<GameServer> listener : getListeners())
-                if (OnShutdownListener.class.isInstance(listener))
+                if (listener instanceof OnShutdownListener)
                     ((OnShutdownListener) listener).onShutdown();
         }
     }

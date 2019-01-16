@@ -1,1 +1,0 @@
-ALTER TABLE items_delayed CHANGE `count` `count` bigint(20) NOT NULL DEFAULT '1';

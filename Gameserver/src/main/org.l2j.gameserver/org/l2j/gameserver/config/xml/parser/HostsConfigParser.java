@@ -63,8 +63,8 @@ public final class HostsConfigParser extends AbstractParser<HostsConfigHolder>
 					Element subElement = subIterator.next();
 
 					final int id = Integer.parseInt(subElement.attributeValue("id"));
-					final String ip = GameServer.DEVELOP ? "127.0.0.1" : subElement.attributeValue("ip");
-					final String inner_ip = GameServer.DEVELOP ? "127.0.0.1" : subElement.attributeValue("inner_ip");
+					final String ip = subElement.attributeValue("ip");
+					final String inner_ip = subElement.attributeValue("inner_ip");
 					final int port = Integer.parseInt(subElement.attributeValue("port"));
 					final String key = subElement.attributeValue("key");
 					getHolder().addGameServerHost(new HostInfo(id, ip, inner_ip, port, key));

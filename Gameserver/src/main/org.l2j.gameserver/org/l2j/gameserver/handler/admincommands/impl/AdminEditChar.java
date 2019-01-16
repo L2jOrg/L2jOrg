@@ -1,16 +1,7 @@
 package org.l2j.gameserver.handler.admincommands.impl;
 
-import java.text.NumberFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.StringTokenizer;
-
 import org.l2j.commons.util.Converter;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.dao.CustomHeroDAO;
 import org.l2j.gameserver.database.mysql;
 import org.l2j.gameserver.handler.admincommands.IAdminCommandHandler;
 import org.l2j.gameserver.model.GameObject;
@@ -19,16 +10,18 @@ import org.l2j.gameserver.model.Playable;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.instances.NpcInstance;
-import org.l2j.gameserver.network.l2.components.CustomMessage;
 import org.l2j.gameserver.network.l2.components.HtmlMessage;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ExPCCafePointInfoPacket;
-import org.l2j.gameserver.utils.HtmlUtils;
-import org.l2j.gameserver.utils.ItemFunctions;
-import org.l2j.gameserver.utils.Log;
-import org.l2j.gameserver.utils.PositionUtils;
-import org.l2j.gameserver.utils.Strings;
-import org.l2j.gameserver.utils.Util;
+import org.l2j.gameserver.utils.*;
+
+import java.text.NumberFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.StringTokenizer;
 
 @SuppressWarnings("unused")
 public class AdminEditChar implements IAdminCommandHandler
@@ -53,7 +46,6 @@ public class AdminEditChar implements IAdminCommandHandler
 		admin_add_exp_sp_to_character,
 		admin_add_exp_sp,
 		admin_sethero,
-		admin_setcustomhero,
 		admin_transform,
 		admin_setfame,
 		admin_setbday,
@@ -277,48 +269,7 @@ public class AdminEditChar implements IAdminCommandHandler
 
 			player.sendMessage("Admin has changed your hero status.");
 			player.broadcastUserInfo(true);
-		}
-		else if(fullString.startsWith("admin_setcustomhero"))
-		{
-			GameObject target = activeChar.getTarget();
-			Player player;
-			int time = -1;
-			if(wordList.length > 1 && wordList[1] != null)
-				time = Integer.parseInt(wordList[1]);
-
-			if(wordList.length > 2 && wordList[2] != null)
-			{
-				player = GameObjectsStorage.getPlayer(wordList[2]);
-				if(player == null)
-				{
-					activeChar.sendMessage(new CustomMessage("common.Admin.Disconect.ErrorName404").addString(wordList[1]));
-					return false;
-				}
-			}
-			else if(target != null && target.isPlayer())
-				player = (Player) target;
-			else
-			{
-				activeChar.sendMessage(new CustomMessage("common.Admin.Disconect.ErrorName"));
-				return false;
-			}
-
-			if(CustomHeroDAO.getInstance().isCustomHero(player.getObjectId()))
-			{
-				player.setHero(false);
-				player.updatePledgeRank();
-				player.checkHeroSkills();
-				CustomHeroDAO.getInstance().removeCustomHero(player.getObjectId());
-			}
-			else
-				player.setCustomHero(time * 24);
-
-			player.sendSkillList();
-			player.sendMessage(new CustomMessage("common.Admin.EditChar.SuccessHero"));
-			player.broadcastUserInfo(true);
-		}
-		else if(fullString.startsWith("admin_setsex"))
-		{
+		} else if(fullString.startsWith("admin_setsex")) {
 			GameObject target = activeChar.getTarget();
 			Player player = null;
 			if(target != null && target.isPlayer())

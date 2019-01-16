@@ -1,14 +1,13 @@
 package org.l2j.gameserver.model;
 
-import java.util.Collection;
-
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.dao.CustomHeroDAO;
 import org.l2j.gameserver.dao.ItemsDAO;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.items.Inventory;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.model.items.ItemInstance.ItemLocation;
+
+import java.util.Collection;
 
 /**
  * Used to Store data sent to Client for Character
@@ -380,11 +379,7 @@ public class CharSelectInfoPackage
 		return getAccessLevel() > -100;
 	}
 
-	public boolean isHero()
-	{
-		if(Config.ENABLE_OLYMPIAD && Hero.getInstance().isHero(getObjectId()))
-			return true;
-
-		return CustomHeroDAO.getInstance().isCustomHero(getObjectId());
+	public boolean isHero() {
+		return Config.ENABLE_OLYMPIAD && Hero.getInstance().isHero(getObjectId());
 	}
 }
