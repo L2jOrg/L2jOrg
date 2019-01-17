@@ -1940,12 +1940,6 @@ public class Config
         SPECIAL_ITEM_COUNT = altSettings.getProperty("ChampionSpecialItemCount", 1);
         SPECIAL_ITEM_DROP_CHANCE = altSettings.getProperty("ChampionSpecialItemDropChance", 100.);
 
-        //ALT_VITALITY_RATE = altSettings.getProperty("ALT_VITALITY_RATE", 200) / 100;
-        //ALT_VITALITY_PA_RATE = altSettings.getProperty("ALT_VITALITY_PA_RATE", 300) / 100;
-        //ALT_VITALITY_CONSUME_RATE = altSettings.getProperty("ALT_VITALITY_CONSUME_RATE", 1.);
-        //ALT_VITALITY_POTIONS_LIMIT = altSettings.getProperty("ALT_VITALITY_POTIONS_LIMIT", 5);
-        //ALT_VITALITY_POTIONS_PA_LIMIT = altSettings.getProperty("ALT_VITALITY_POTIONS_PA_LIMIT", 10);
-
         ALT_PCBANG_POINTS_ENABLED = altSettings.getProperty("AltPcBangPointsEnabled", false);
         PC_BANG_POINTS_BY_ACCOUNT = altSettings.getProperty("PC_BANG_POINTS_BY_ACCOUNT", false);
         ALT_PCBANG_POINTS_ONLY_PREMIUM = altSettings.getProperty("AltPcBangPointsOnlyPA", false);
