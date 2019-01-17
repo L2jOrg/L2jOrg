@@ -20,6 +20,8 @@ public class HtmlUtils {
 
 	private static final Map<String, String> HTML_GLOBAL_VARIABLES = new HashMap<>();
 	private static final Pattern variablePattern = Pattern.compile("\\$\\{.+?}", Pattern.CASE_INSENSITIVE);
+	private static final String HTML_START_TAG = "<html>";
+	private static final String HTML_END_TAG = "</html>";
 
 	public static final String PREV_BUTTON = "<button value=\"&$1037;\" action=\"bypass %prev_bypass%\" width=60 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">";
 	public static final String NEXT_BUTTON = "<button value=\"&$1038;\" action=\"bypass %next_bypass%\" width=60 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">";
@@ -64,7 +66,7 @@ public class HtmlUtils {
 		String replace = "<fstring";
 		if(params.length > 0)
 			for(int i = 0; i < params.length; i++)
-				replace += " p" + (i + 1) + "=\"" + String.valueOf(params[i]) + "\"";
+				replace += " p" + (i + 1) + "=\"" + params[i] + "\"";
 		replace += ">" + id + "</fstring>";
 		return replace;
 	}
@@ -90,7 +92,7 @@ public class HtmlUtils {
 			return null;
 
 		s = s.replaceAll("(\r|\n|\"<!--((?!TEMPLATE).*?)-->\")", "");
-		return s.replaceFirst(".*<\\s*html\\s*>", "<html>");
+		return s.replaceFirst(".*<\\s*html\\s*>", HTML_START_TAG);
 	}
 
 	public static void sendHtm(Player player, String htm)
@@ -114,12 +116,19 @@ public class HtmlUtils {
 
 	private static String parse(String text, Map<String, String> variables) {
 		StringBuilder builder = new StringBuilder();
+		var containsHtmlHeader = text.startsWith(HTML_START_TAG);
+		if(!containsHtmlHeader) {
+			builder.append(HTML_START_TAG);
+		}
 		var matcher = variablePattern.matcher(text);
 		while (matcher.find()) {
 			var key = text.substring(matcher.start(), matcher.end());
 			matcher.appendReplacement(builder, variables.getOrDefault(key, STRING_EMPTY));
 		}
 		matcher.appendTail(builder);
+		if(!containsHtmlHeader) {
+			builder.append(HTML_END_TAG);
+		}
 		return builder.toString();
 	}
 }

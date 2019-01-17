@@ -185,6 +185,7 @@ public class HtmCache
             switch(Config.HTM_CACHE_MODE)
             {
                 case ENABLED:
+                    cache = get(lang, fileLower);
                     if(lang == Language.ENGLISH)
                         cache = get(Language.RUSSIAN, fileLower);
                     else
