@@ -43,6 +43,8 @@ public class Say2C extends L2GameClientPacket {
     private ChatType _type;
     private String _target;
 
+
+
     @Override
     protected void readImpl() {
         _text = readS(Config.CHAT_MESSAGE_MAX_LEN);
@@ -158,20 +160,6 @@ public class Say2C extends L2GameClientPacket {
                 return;
             }
             ItemInfoCache.getInstance().put(item);
-        }
-
-        String translit = activeChar.getVar("translit");
-        if (translit != null) {
-            //Исключаем из транслитерации ссылки на предметы
-            m = SKIP_ITEM_LINK_PATTERN.matcher(text);
-            StringBuilder sb = new StringBuilder();
-            int end = 0;
-            while (m.find()) {
-                sb.append(Strings.fromTranslit(text.substring(end, end = m.start()), translit.equals("tl") ? 1 : 2));
-                sb.append(text, end, end = m.end());
-            }
-
-            text = sb.append(Strings.fromTranslit(text.substring(end, text.length()), translit.equals("tl") ? 1 : 2)).toString();
         }
 
         Log.LogChat(type.name(), activeChar.getName(), target, text);

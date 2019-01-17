@@ -148,9 +148,6 @@ public class GameServer {
 
         GeoEngine.load();
 
-        // TODO Remove This
-        Strings.reload();
-
         GameTimeController.getInstance();
 
         World.init();
