@@ -350,67 +350,28 @@ public class Config
     public static boolean ALT_GAME_DELEVEL;
     public static boolean ALLOW_DELEVEL_COMMAND;
 
-    /** Разрешать ли на арене бои за опыт */
-    //public static boolean ALT_ARENA_EXP;
-
-    //public static boolean ALT_GAME_SUBCLASS_WITHOUT_QUESTS;
-    //public static boolean ALT_GAME_ERTHEIA_DUALCLASS_WITHOUT_QUESTS;
-    //public static int ALT_GAME_LEVEL_TO_GET_SUBCLASS;
     public static int ALT_MAX_LEVEL;
     public static int ALT_MAX_SUB_LEVEL;
-    //public static boolean ALT_ALLOW_AWAKE_ON_SUB_CLASS;
+
     public static boolean ALT_NO_LASTHIT;
-    //public static boolean ALT_KAMALOKA_NIGHTMARES_PREMIUM_ONLY;
+
     public static boolean ALT_PET_HEAL_BATTLE_ONLY;
 
     public static int ALT_BUFF_LIMIT;
 
     public static int MULTISELL_SIZE;
 
-    //public static boolean SERVICES_CHANGE_NICK_ENABLED;
-    //public static int SERVICES_CHANGE_NICK_PRICE;
-    //public static int SERVICES_CHANGE_NICK_ITEM;
-
     public static boolean ALLOW_CHANGE_PASSWORD_COMMAND;
     public static boolean ALLOW_CHANGE_PHONE_NUMBER_COMMAND;
 
     public static boolean FORCIBLY_SPECIFY_PHONE_NUMBER;
 
-    //public static boolean SERVICES_CHANGE_CLAN_NAME_ENABLED;
-    //public static int SERVICES_CHANGE_CLAN_NAME_PRICE;
-    //public static int SERVICES_CHANGE_CLAN_NAME_ITEM;
-    //@GlobalVariable
-    //public static boolean SERVICES_CHANGE_PET_NAME_ENABLED;
-    //public static int SERVICES_CHANGE_PET_NAME_PRICE;
-    //public static int SERVICES_CHANGE_PET_NAME_ITEM;
-    //@GlobalVariable
-    //public static boolean SERVICES_EXCHANGE_BABY_PET_ENABLED;
-    //public static int SERVICES_EXCHANGE_BABY_PET_PRICE;
-    //public static int SERVICES_EXCHANGE_BABY_PET_ITEM;
-
-    //public static boolean SERVICES_CHANGE_SEX_ENABLED;
-    //public static int SERVICES_CHANGE_SEX_PRICE;
-    //public static int SERVICES_CHANGE_SEX_ITEM;
-
-    //public static boolean SERVICES_CHANGE_BASE_ENABLED;
-    //public static int SERVICES_CHANGE_BASE_PRICE;
-    //public static int SERVICES_CHANGE_BASE_ITEM;
-
-    //public static boolean SERVICES_SEPARATE_SUB_ENABLED;
-    //public static int SERVICES_SEPARATE_SUB_PRICE;
-    //public static int SERVICES_SEPARATE_SUB_ITEM;
-
-    //public static boolean SERVICES_CHANGE_NICK_COLOR_ENABLED;
     public static int SERVICES_CHANGE_NICK_COLOR_PRICE;
     public static int SERVICES_CHANGE_NICK_COLOR_ITEM;
     public static String[] SERVICES_CHANGE_NICK_COLOR_LIST;
     public static boolean SERVICES_BASH_ENABLED;
     public static boolean SERVICES_BASH_SKIP_DOWNLOAD;
     public static int SERVICES_BASH_RELOAD_TIME;
-
-    //public static boolean SERVICES_NOBLESS_SELL_ENABLED;
-    //public static int SERVICES_NOBLESS_SELL_PRICE;
-    //public static int SERVICES_NOBLESS_SELL_ITEM;
 
     public static boolean SERVICES_EXPAND_INVENTORY_ENABLED;
     public static int SERVICES_EXPAND_INVENTORY_PRICE;
@@ -1215,8 +1176,6 @@ public class Config
     public static long MULTICLASS_SYSTEM_3RD_CLASS_COST_ITEM_COUNT;
 
     public static int BATTLE_ZONE_AROUND_RAID_BOSSES_RANGE;
-    //@GlobalVariable
-    //public static boolean ENABLE_DAILY_COIN_EXCHANGE;
 
     public static boolean BUFF_STORE_ENABLED;
     public static boolean BUFF_STORE_MP_ENABLED;
@@ -2142,8 +2101,6 @@ public class Config
         MULTICLASS_SYSTEM_3RD_CLASS_COST_ITEM_COUNT = altSettings.getProperty("MULTICLASS_SYSTEM_3RD_CLASS_COST_ITEM_COUNT", 0L);
 
         BATTLE_ZONE_AROUND_RAID_BOSSES_RANGE = altSettings.getProperty("BATTLE_ZONE_AROUND_RAID_BOSSES_RANGE", 0);
-
-        //ENABLE_DAILY_COIN_EXCHANGE = altSettings.getProperty("ENABLE_DAILY_COIN_EXCHANGE", false);
     }
 
     public static void loadServicesSettings()
