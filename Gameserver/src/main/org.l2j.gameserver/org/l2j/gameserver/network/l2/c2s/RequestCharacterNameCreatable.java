@@ -1,9 +1,11 @@
 package org.l2j.gameserver.network.l2.c2s;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.dao.CharacterDAO;
 import org.l2j.gameserver.network.l2.s2c.ExIsCharNameCreatable;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.utils.Util;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class RequestCharacterNameCreatable extends L2GameClientPacket
 {
@@ -29,7 +31,7 @@ public class RequestCharacterNameCreatable extends L2GameClientPacket
             sendPacket(ExIsCharNameCreatable.ENTER_CHAR_NAME__MAX_16_CHARS);
             return;
         }
-        else if(!Util.isMatchingRegexp(_charname, Config.CNAME_TEMPLATE))
+        else if(!Util.isMatchingRegexp(_charname, getSettings(ServerSettings.class).charNameTemaplate()))
         {
             sendPacket(ExIsCharNameCreatable.WRONG_NAME);
             return;

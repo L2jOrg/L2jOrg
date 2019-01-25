@@ -11,10 +11,13 @@ import org.l2j.gameserver.model.base.ClassLevel;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.network.l2.s2c.CharacterCreateSuccessPacket;
 import org.l2j.gameserver.network.l2.s2c.CharacterSelectionInfoPacket;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.item.StartItem;
 import org.l2j.gameserver.templates.player.PlayerTemplate;
 import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.Util;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class CharacterCreate extends L2GameClientPacket
 {
@@ -54,7 +57,7 @@ public class CharacterCreate extends L2GameClientPacket
         if(CharacterDAO.getInstance().accountCharNumber(getClient().getLogin()) >= 8)
             return;
 
-        if(!Util.isMatchingRegexp(_name, Config.CNAME_TEMPLATE))
+        if(!Util.isMatchingRegexp(_name, getSettings(ServerSettings.class).charNameTemaplate()))
             return;
         else if(CharacterDAO.getInstance().getObjectIdByName(_name) > 0)
             return;

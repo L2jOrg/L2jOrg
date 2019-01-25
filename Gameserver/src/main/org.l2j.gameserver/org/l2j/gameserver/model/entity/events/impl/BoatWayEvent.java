@@ -11,11 +11,14 @@ import org.l2j.gameserver.model.entity.events.EventType;
 import org.l2j.gameserver.model.entity.events.objects.BoatPoint;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.L2GameServerPacket;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.MapUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author VISTALL
@@ -168,6 +171,7 @@ public class BoatWayEvent extends Event
 			{
 				int rx = MapUtils.regionX(loc.getX());
 				int ry = MapUtils.regionY(loc.getY());
+				int shoutSquareOffset = getSettings(ServerSettings.class).shoutSquareOffset();
 				for(Player player : GameObjectsStorage.getPlayers())
 				{
 					if(!player.getReflection().isMain())
@@ -175,7 +179,7 @@ public class BoatWayEvent extends Event
 
 					int tx = MapUtils.regionX(player) - rx;
 					int ty = MapUtils.regionY(player) - ry;
-					if(tx * tx + ty * ty <= Config.SHOUT_SQUARE_OFFSET && !players.contains(player))
+					if(tx * tx + ty * ty <= shoutSquareOffset && !players.contains(player))
 						players.add(player);
 				}
 

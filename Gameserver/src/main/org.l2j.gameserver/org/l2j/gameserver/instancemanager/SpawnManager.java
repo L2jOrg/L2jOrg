@@ -16,11 +16,14 @@ import org.l2j.gameserver.model.HardSpawner;
 import org.l2j.gameserver.model.Spawner;
 import org.l2j.gameserver.model.instances.MonsterInstance;
 import org.l2j.gameserver.model.instances.SaveableMonsterInstance;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
 import org.l2j.gameserver.templates.spawn.PeriodOfDay;
 import org.l2j.gameserver.templates.spawn.SpawnTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class SpawnManager
 {
@@ -79,10 +82,11 @@ public class SpawnManager
 
 			NpcTemplate npcTemplate = NpcHolder.getInstance().getTemplate(spawner.getMainNpcId());
 
+			var serverSettings = getSettings(ServerSettings.class);
             boolean saveable = npcTemplate.isRaid || npcTemplate.isInstanceOf(SaveableMonsterInstance.class);
 
-            if(Config.RATE_MOB_SPAWN > 1 && npcTemplate.isInstanceOf(MonsterInstance.class) && !saveable && npcTemplate.level >= Config.RATE_MOB_SPAWN_MIN_LEVEL && npcTemplate.level <= Config.RATE_MOB_SPAWN_MAX_LEVEL)
-				spawner.setAmount(template.getCount() * Config.RATE_MOB_SPAWN);
+            if(serverSettings.rateMobSpawn() > 1 && npcTemplate.isInstanceOf(MonsterInstance.class) && !saveable && npcTemplate.level >= serverSettings.rateMobSpawnMinLevel() && npcTemplate.level <= serverSettings.rateMobSpawnMaxLevel())
+				spawner.setAmount((int) (template.getCount() * serverSettings.rateMobSpawn()));
 			else
 				spawner.setAmount(template.getCount());
 

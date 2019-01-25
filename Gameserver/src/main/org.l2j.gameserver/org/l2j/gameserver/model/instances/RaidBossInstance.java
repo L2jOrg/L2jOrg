@@ -16,10 +16,13 @@ import org.l2j.gameserver.model.entity.HeroDiary;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
 import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.NpcUtils;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class RaidBossInstance extends MonsterInstance
 {
@@ -39,15 +42,14 @@ public class RaidBossInstance extends MonsterInstance
 	}
 
 	@Override
-	public double getRewardRate(Player player)
-	{
-		return Config.RATE_DROP_ITEMS_RAIDBOSS;
+	public double getRewardRate(Player player) {
+		return getSettings(ServerSettings.class).rateDropItemsRaidboss();
 	}
 
 	@Override
 	public double getDropChanceMod(Player player)
 	{
-		return Config.DROP_CHANCE_MODIFIER_RAIDBOSS;
+		return getSettings(ServerSettings.class).dropChanceRaidbossModifier();
 	}
 
 	@Override

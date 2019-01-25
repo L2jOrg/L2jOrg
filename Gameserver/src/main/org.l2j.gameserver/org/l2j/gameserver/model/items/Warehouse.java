@@ -6,6 +6,8 @@ import java.util.Comparator;
 import java.util.List;
 
 import org.l2j.commons.dao.JdbcEntityState;
+import org.l2j.gameserver.Contants;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.model.items.ItemInstance.ItemLocation;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 
@@ -79,7 +81,7 @@ public abstract class Warehouse extends ItemContainer
 
 	public long getCountOfAdena()
 	{
-		return getCountOf(ItemTemplate.ITEM_ID_ADENA);
+		return getCountOf(Items.ADENA);
 	}
 
 	@Override

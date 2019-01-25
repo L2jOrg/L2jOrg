@@ -1,33 +1,35 @@
 package org.l2j.gameserver.tables;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.L2GameServerPacket;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
+import org.l2j.gameserver.settings.ServerSettings;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.gameserver.model.GameObjectsStorage.getPlayers;
 
 public class GmListTable
 {
 	public static List<Player> getAllGMs()
 	{
 		List<Player> gmList = new ArrayList<Player>();
-		for(Player player : GameObjectsStorage.getPlayers())
+		for(Player player : getPlayers())
 			if(player.isGM())
 				gmList.add(player);
 
 		return gmList;
 	}
 
-	public static List<Player> getAllVisibleGMs()
-	{
-		List<Player> gmList = new ArrayList<Player>();
-		for(Player player : GameObjectsStorage.getPlayers())
-			if(player.isGM() && !player.isGMInvisible() && !Config.HIDE_GM_STATUS)
-				gmList.add(player);
+	public static List<Player> getAllVisibleGMs() {
+		List<Player> gmList = new ArrayList<>();
+		if(!getSettings(ServerSettings.class).isHideGMStatus()) {
+			gmList.addAll(getPlayers().stream().filter(p -> p.isGM() && !p.isGMInvisible()).collect(Collectors.toList()));
+		}
 
 		return gmList;
 	}

@@ -3,6 +3,8 @@ package org.l2j.gameserver.network.l2.c2s;
 import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.math.SafeMath;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.Contants;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.items.ItemInstance;
@@ -132,7 +134,7 @@ public class SendWareHouseDepositList extends L2GameClientPacket
 					slotsleft--; // если слот есть то его уже нет
 				}
 
-				if(item.getItemId() == ItemTemplate.ITEM_ID_ADENA)
+				if(item.getItemId() == Items.ADENA)
 					adenaDeposit = _itemQ[i];
 
 				items++;

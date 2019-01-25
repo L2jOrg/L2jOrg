@@ -18,7 +18,10 @@ import org.l2j.gameserver.model.entity.olympiad.OlympiadDatabase;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.l2.components.HtmlMessage;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.utils.Strings;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class AdminReload implements IAdminCommandHandler
 {
@@ -84,7 +87,7 @@ public class AdminReload implements IAdminCommandHandler
                 {
                     Config.loadGMAccess();
                     for(Player player : GameObjectsStorage.getPlayers())
-                        if(!Config.EVERYBODY_HAS_ADMIN_RIGHTS)
+                        if(!getSettings(ServerSettings.class).isEveryBodyIsAdmin())
                             player.setPlayerAccess(Config.gmlist.get(player.getObjectId()));
                         else
                             player.setPlayerAccess(Config.gmlist.get(0));

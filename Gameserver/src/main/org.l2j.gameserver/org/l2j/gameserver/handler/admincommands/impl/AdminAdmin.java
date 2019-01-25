@@ -13,12 +13,15 @@ import org.l2j.gameserver.network.l2.s2c.EventTriggerPacket;
 import org.l2j.gameserver.network.l2.s2c.ExChangeClientEffectInfo;
 import org.l2j.gameserver.network.l2.s2c.ExSendUIEventPacket;
 import org.l2j.gameserver.network.l2.s2c.PlaySoundPacket;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.stats.Stats;
 import org.l2j.gameserver.utils.Functions;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class AdminAdmin implements IAdminCommandHandler
 {
@@ -90,8 +93,9 @@ public class AdminAdmin implements IAdminCommandHandler
 					}
 					else
 					{
-						if(Config.SAVE_GM_EFFECTS)
+						if(getSettings(ServerSettings.class).saveGMEffects()) {
 							activeChar.setVar("gm_silence", "true", -1);
+						}
 						activeChar.setMessageRefusal(true);
 						activeChar.sendPacket(SystemMsg.MESSAGE_REFUSAL_MODE);
 						activeChar.sendEtcStatusUpdate();

@@ -1,6 +1,8 @@
 package services;
 
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.Contants;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.xml.holder.PremiumAccountHolder;
 import org.l2j.gameserver.handler.bypass.Bypass;
@@ -153,7 +155,7 @@ public class RateBonus
 			}
 			else
 			{
-				if(feeItems.length == 1 && feeItems[0].getId() == ItemTemplate.ITEM_ID_ADENA)
+				if(feeItems.length == 1 && feeItems[0].getId() == Items.ADENA)
 					player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 				else
 					player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);

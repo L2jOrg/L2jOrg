@@ -53,6 +53,7 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.*;
 import org.l2j.gameserver.network.l2.s2c.FlyToLocationPacket.FlyType;
 import org.l2j.gameserver.network.l2.s2c.updatetype.IUpdateTypeComponent;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.skills.*;
 import org.l2j.gameserver.skills.effects.Effect;
 import org.l2j.gameserver.stats.*;
@@ -83,6 +84,7 @@ import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 import static java.util.Objects.requireNonNullElse;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.STRING_EMPTY;
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 
@@ -4421,8 +4423,9 @@ public abstract class Creature extends GameObject
 
                 if(isRaid())
 				{
-					addHp *= Config.RATE_RAID_REGEN;
-					addMp *= Config.RATE_RAID_REGEN;
+					var rateRaidRegen = getSettings(ServerSettings.class).rateRaidRegen();
+					addHp *= rateRaidRegen;
+					addMp *= rateRaidRegen;
 				}
 
 				_currentHp += Math.max(0, Math.min(addHp, calcStat(Stats.HP_LIMIT, null, null) * maxHp / 100. - _currentHp));

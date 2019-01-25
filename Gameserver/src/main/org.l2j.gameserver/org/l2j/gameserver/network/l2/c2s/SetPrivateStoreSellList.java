@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.l2j.commons.lang.ArrayUtils;
+import org.l2j.gameserver.Contants;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.model.items.TradeItem;
@@ -78,7 +80,7 @@ public class SetPrivateStoreSellList extends L2GameClientPacket
 				long price = _itemP[i];
 				ItemInstance item = seller.getInventory().getItemByObjectId(objectId);
 
-				if(item == null || item.getCount() < count || !item.canBePrivateStore(seller) || item.getItemId() == ItemTemplate.ITEM_ID_ADENA)
+				if(item == null || item.getCount() < count || !item.canBePrivateStore(seller) || item.getItemId() == Items.ADENA)
 					continue;
 				if(item.getPriceLimitForItem() != 0 && price > item.getPriceLimitForItem())
 					price = item.getPriceLimitForItem();

@@ -3,6 +3,8 @@ package npc.model.residences.clanhall;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.util.Util;
+import org.l2j.gameserver.Contants;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.dao.SiegeClanDAO;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.model.Player;
@@ -916,7 +918,7 @@ public class AuctioneerInstance extends NpcInstance
 			return;
 		}
 
-		if(!player.hasPrivilege(Privilege.CH_AUCTION) || clan.getWarehouse().getCountOf(ItemTemplate.ITEM_ID_ADENA) < clanHall.getRentalFee())
+		if(!player.hasPrivilege(Privilege.CH_AUCTION) || clan.getWarehouse().getCountOf(Items.ADENA) < clanHall.getRentalFee())
 		{
 			// Для внесения ставки за наградной холл необходимо соответствовать условиям участия в аукционе холлов.
 			player.sendPacket(SystemMsg.YOU_MUST_HAVE_RIGHTS_TO_A_CLAN_HALL_AUCTION_IN_ORDER_TO_MAKE_A_BID_FOR_PROVISIONAL_CLAN_HALL);
@@ -925,7 +927,7 @@ public class AuctioneerInstance extends NpcInstance
 
 		SiegeClanObject siegeClan = new SiegeClanObject(SiegeEvent.ATTACKERS, clan, clanHall.getRentalFee());
 		clanHall.getSiegeEvent().addObject(SiegeEvent.ATTACKERS, siegeClan);
-		clan.getWarehouse().destroyItemByItemId(ItemTemplate.ITEM_ID_ADENA, clanHall.getRentalFee());
+		clan.getWarehouse().destroyItemByItemId(Items.ADENA, clanHall.getRentalFee());
 		player.sendPacket(new SystemMessagePacket(SystemMsg.YOU_MADE_A_BID_AT_S1).addString(clan.getName()));
 	}
 }

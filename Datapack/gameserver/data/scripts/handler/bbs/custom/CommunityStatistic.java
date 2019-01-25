@@ -3,6 +3,8 @@ package handler.bbs.custom;
 import handler.bbs.ScriptsCommunityHandler;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.Contants;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.htm.HtmTemplates;
 import org.l2j.commons.database.L2DatabaseFactory;
@@ -432,7 +434,7 @@ public class CommunityStatistic extends ScriptsCommunityHandler
 
 			DbUtils.closeQuietly(statement, rset);
 
-			statement = con.prepareStatement("SELECT owner_id, count FROM items WHERE item_id=" + ItemTemplate.ITEM_ID_ADENA + " AND (loc='INVENTORY' OR loc='PAPERDOLL' OR loc='WAREHOUSE')");
+			statement = con.prepareStatement("SELECT owner_id, count FROM items WHERE item_id=" + Items.ADENA + " AND (loc='INVENTORY' OR loc='PAPERDOLL' OR loc='WAREHOUSE')");
 			rset = statement.executeQuery();
 			while(rset.next())
 			{
@@ -559,8 +561,8 @@ public class CommunityStatistic extends ScriptsCommunityHandler
 		stat.pvp = player.getPvpKills();
 		stat.lvl = player.getBaseSubClass() != null ? player.getBaseSubClass().getLevel() : player.getLevel();
 		stat.online = player.getOnlineTime();
-		stat.adena = player.getInventory().getCountOf(ItemTemplate.ITEM_ID_ADENA);
-		stat.adena += player.getWarehouse().getCountOf(ItemTemplate.ITEM_ID_ADENA);
+		stat.adena = player.getInventory().getCountOf(Items.ADENA);
+		stat.adena += player.getWarehouse().getCountOf(Items.ADENA);
 		stat.item = player.getInventory().getCountOf(BBSConfig.STATISTIC_BY_ITEM_ID);
 		stat.item += player.getWarehouse().getCountOf(BBSConfig.STATISTIC_BY_ITEM_ID);
 		stat.olympiad = Olympiad.getParticipantPoints(player.getObjectId());

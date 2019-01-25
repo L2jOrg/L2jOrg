@@ -16,6 +16,7 @@ import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.*;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.tables.ClanTable;
 import org.l2j.gameserver.templates.item.data.ItemData;
 import org.l2j.gameserver.templates.premiumaccount.PremiumAccountTemplate;
@@ -24,6 +25,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Bonux
@@ -557,7 +560,7 @@ public class CommunityServices extends ScriptsCommunityHandler
 
 						if(player.getName().equals(newPlayerName))
 							content.append(tpls.get(7));
-						if(!Util.isMatchingRegexp(newPlayerName, Config.CNAME_TEMPLATE))
+						if(!Util.isMatchingRegexp(newPlayerName, getSettings(ServerSettings.class).charNameTemaplate()))
 							content.append(tpls.get(5));
 						else if(CharacterDAO.getInstance().getObjectIdByName(newPlayerName) > 0)
 							content.append(tpls.get(6));
@@ -703,7 +706,7 @@ public class CommunityServices extends ScriptsCommunityHandler
 							content.append(tpls.get(9));
 						else if(clan.getSubUnit(Clan.SUBUNIT_MAIN_CLAN).getName().equals(newClanName))
 							content.append(tpls.get(6));
-						else if(!Util.isMatchingRegexp(newClanName, Config.CLAN_NAME_TEMPLATE))
+						else if(!Util.isMatchingRegexp(newClanName, getSettings(ServerSettings.class).clanNameTemplate()))
 							content.append(tpls.get(5));
 						else if(ClanTable.getInstance().getClanByName(newClanName) != null)
 							content.append(tpls.get(7));

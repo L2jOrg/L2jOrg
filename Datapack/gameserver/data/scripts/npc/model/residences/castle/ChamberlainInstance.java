@@ -2,6 +2,8 @@ package npc.model.residences.castle;
 
 import npc.model.residences.ResidenceManager;
 import org.l2j.commons.collections.MultiValueSet;
+import org.l2j.gameserver.Contants;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.dao.CastleDamageZoneDAO;
 import org.l2j.gameserver.dao.CastleDoorUpgradeDAO;
 import org.l2j.gameserver.data.xml.holder.MultiSellHolder;
@@ -222,7 +224,7 @@ public class ChamberlainInstance extends ResidenceManager
 				return;
 			}
 
-			player.getClan().getWarehouse().destroyItemByItemId(ItemTemplate.ITEM_ID_ADENA, price);
+			player.getClan().getWarehouse().destroyItemByItemId(Items.ADENA, price);
 			castle.getSiegeEvent().addObject(CastleSiegeEvent.BOUGHT_ZONES, val);
 			CastleDamageZoneDAO.getInstance().insert(castle, val);
 
@@ -313,7 +315,7 @@ public class ChamberlainInstance extends ResidenceManager
 				return;
 			}
 
-			player.getClan().getWarehouse().destroyItemByItemId(ItemTemplate.ITEM_ID_ADENA, price);
+			player.getClan().getWarehouse().destroyItemByItemId(Items.ADENA, price);
 
 			targetDoorObject.setUpgradeValue(castle.<SiegeEvent>getSiegeEvent(), upgradeHp);
 			CastleDoorUpgradeDAO.getInstance().insert(door.getDoorId(), upgradeHp);

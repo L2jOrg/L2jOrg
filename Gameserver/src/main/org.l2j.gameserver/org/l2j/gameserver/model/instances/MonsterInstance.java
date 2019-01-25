@@ -602,13 +602,7 @@ public class MonsterInstance extends NpcInstance
 				_sweepItems = rewardItems;
 				break;
 			default:
-				for(RewardItem drop : rewardItems)
-				{
-					if(!Config.DROP_ONLY_THIS.isEmpty() && !Config.DROP_ONLY_THIS.contains(drop.itemId))
-					{
-						if(!Config.INCLUDE_RAID_DROP || !isRaid())
-							return;
-					}
+				for(RewardItem drop : rewardItems) {
 					dropItem(activePlayer, drop.itemId, drop.count);
 				}
 				if(getChampion() > 0 && Config.SPECIAL_ITEM_ID > 0 && Math.abs(getLevel() - activePlayer.getLevel()) < 9 && Rnd.chance(Config.SPECIAL_ITEM_DROP_CHANCE))

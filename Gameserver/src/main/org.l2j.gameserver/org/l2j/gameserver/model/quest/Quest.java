@@ -5,6 +5,8 @@ import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.logging.LogUtils;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.Contants;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.data.QuestHolder;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;
@@ -100,7 +102,7 @@ public class Quest implements OnInitScriptListener
 
     public static final String ACCEPT_QUEST_EVENT = "quest_accept";
 
-	public static final int ADENA_ID = ItemTemplate.ITEM_ID_ADENA;
+	public static final int ADENA_ID = Items.ADENA;
 
     public static final QuestPartyType PARTY_NONE = QuestPartyType.PARTY_NONE;
     public static final QuestPartyType PARTY_ONE = QuestPartyType.PARTY_ONE;

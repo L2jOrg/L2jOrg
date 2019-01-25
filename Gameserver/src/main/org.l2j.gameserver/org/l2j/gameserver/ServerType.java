@@ -1,4 +1,4 @@
-package org.l2j.gameserver.network.authcomm;
+package org.l2j.gameserver;
 
 /**
  * @author VISTALL

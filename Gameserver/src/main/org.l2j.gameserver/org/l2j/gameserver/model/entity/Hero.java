@@ -17,6 +17,7 @@ import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.network.l2.components.HtmlMessage;
 import org.l2j.gameserver.network.l2.s2c.SocialActionPacket;
 import org.l2j.gameserver.network.l2.s2c.SystemMessage;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.tables.ClanTable;
 import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.utils.HtmlUtils;
@@ -33,6 +34,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 public class Hero
@@ -288,7 +290,9 @@ public class Hero
 		if(player.getClan() != null && player.getClan().getLevel() >= 5)
 		{
 			player.getClan().incReputation(5000, true, "Hero:activateHero:" + player);
-			player.getClan().broadcastToOtherOnlineMembers(new SystemMessage(SystemMessage.CLAN_MEMBER_S1_WAS_NAMED_A_HERO_2S_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_REPUTATION_SCORE).addString(player.getName()).addNumber(Math.round(5000 * Config.RATE_CLAN_REP_SCORE)), player);
+			player.getClan().broadcastToOtherOnlineMembers(new SystemMessage(
+					SystemMessage.CLAN_MEMBER_S1_WAS_NAMED_A_HERO_2S_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_REPUTATION_SCORE)
+					.addString(player.getName()).addNumber(Math.round(5000 * getSettings(ServerSettings.class).rateClanReputationScore())), player);
 		}
 		player.broadcastUserInfo(true);
 		updateHeroes(player.getObjectId());

@@ -10,6 +10,9 @@ import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.instances.StaticObjectInstance;
 import io.github.joealisson.primitive.maps.IntObjectMap;
 import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
+import org.l2j.gameserver.settings.ServerSettings;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * Общее "супер" хранилище для всех объектов L2Object,
@@ -22,9 +25,9 @@ import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
  */
 public class GameObjectsStorage
 {
-	private static IntObjectMap<GameObject> _objects = new CHashIntObjectMap<GameObject>(60000 * Config.RATE_MOB_SPAWN + Config.MAXIMUM_ONLINE_USERS + 1000);
+	private static IntObjectMap<GameObject> _objects = new CHashIntObjectMap<>((int) (60000 *  getSettings(ServerSettings.class).rateMobSpawn() + Config.MAXIMUM_ONLINE_USERS + 1000));
 	private static IntObjectMap<StaticObjectInstance> _staticObjects = new CHashIntObjectMap<StaticObjectInstance>(1000);
-	private static IntObjectMap<NpcInstance> _npcs = new CHashIntObjectMap<NpcInstance>(60000 * Config.RATE_MOB_SPAWN);
+	private static IntObjectMap<NpcInstance> _npcs = new CHashIntObjectMap<>((int) (60000 * getSettings(ServerSettings.class).rateMobSpawn()));
 	private static IntObjectMap<Player> _players = new CHashIntObjectMap<Player>(Config.MAXIMUM_ONLINE_USERS);
 
 	public static GameObject findObject(int objId)

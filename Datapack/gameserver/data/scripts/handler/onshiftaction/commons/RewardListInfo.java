@@ -10,6 +10,7 @@ import org.l2j.gameserver.model.reward.RewardData;
 import org.l2j.gameserver.model.reward.RewardGroup;
 import org.l2j.gameserver.model.reward.RewardList;
 import org.l2j.gameserver.model.reward.RewardType;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.stats.Stats;
 import org.l2j.gameserver.utils.HtmlUtils;
 import io.github.joealisson.primitive.maps.IntObjectMap;
@@ -21,6 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 /**
@@ -137,6 +139,7 @@ public abstract class RewardListInfo
 					double grate = 1.0;
 					double gpmod = penaltyMod;
 
+					var serverSettings = getSettings(ServerSettings.class);
 					if(type == RewardType.RATED_GROUPED)
 					{
 						if(g.isAdena())
@@ -164,8 +167,8 @@ public abstract class RewardListInfo
 					}
 					else if(type == RewardType.EVENT_GROUPED)
 					{
-						grate = player.getRateItems() / Config.RATE_DROP_ITEMS_BY_LVL[player.getLevel()];
-						gpmod *= player.getDropChanceMod() / Config.DROP_CHANCE_MODIFIER;
+						grate = player.getRateItems() / serverSettings.rateItems();
+						gpmod *= player.getDropChanceMod() / serverSettings.dropChanceModifier();
 					}
 
 					if(g.notRate())
@@ -188,8 +191,9 @@ public abstract class RewardListInfo
 
 					double groupChanceModifier = (RewardList.MAX_CHANCE - groupChance) / RewardList.MAX_CHANCE;
 
+
 					// Дальше идут изжопы с шансами, для того, чтобы отображать реальный шанс выпадения предмета.
-					double itemMaxChance = (double) RewardList.MAX_CHANCE / g.getItems().size() * Math.min(g.getItems().size(), Config.MAX_DROP_ITEMS_FROM_ONE_GROUP) / RewardList.MAX_CHANCE;
+					double itemMaxChance = (double) RewardList.MAX_CHANCE / g.getItems().size() * Math.min(g.getItems().size(), serverSettings.maxDropItemsFromGroup()) / RewardList.MAX_CHANCE;
 
 					int normalChancesCount = 0;
 					double normalChancesSum = 0.;
@@ -231,7 +235,7 @@ public abstract class RewardListInfo
 							chance = getMinEventsChance(irate, chance, 1);
 
 						// Ставим реальный максимальный шанс учитывая количество предметов в группе и лимит дропа с группы.
-						if(g.getItems().size() > Config.MAX_DROP_ITEMS_FROM_ONE_GROUP)
+						if(g.getItems().size() > serverSettings.maxDropItemsFromGroup())
 							chance = Math.min(itemMaxChance, chance);
 
 						infos.add(new DropInfo(HtmlUtils.htmlItemName(d.getItemId()), icon, minCount, maxCount, chance));

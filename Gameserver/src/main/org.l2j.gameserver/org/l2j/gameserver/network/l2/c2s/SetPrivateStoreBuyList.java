@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.l2j.commons.math.SafeMath;
+import org.l2j.gameserver.Contants;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.data.string.ItemNameHolder;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;
 import org.l2j.gameserver.model.Player;
@@ -86,7 +88,7 @@ public class SetPrivateStoreBuyList extends L2GameClientPacket
 			{
 				ItemTemplate item = ItemHolder.getInstance().getTemplate(i.id);
 
-				if(item == null || i.id == ItemTemplate.ITEM_ID_ADENA)
+				if(item == null || i.id == Items.ADENA)
 					continue;
 
 				if(item.getReferencePrice() / 2 > i.price)

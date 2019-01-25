@@ -1,10 +1,12 @@
 package org.l2j.gameserver.templates.item;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import io.github.joealisson.primitive.Containers;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.Contants;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.data.string.ItemNameHolder;
 import org.l2j.gameserver.handler.items.IItemHandler;
 import org.l2j.gameserver.handler.items.impl.EquipableItemHandler;
@@ -26,16 +28,14 @@ import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.templates.item.EtcItemTemplate.EtcItemType;
 import org.l2j.gameserver.templates.item.data.CapsuledItemData;
 
-import io.github.joealisson.primitive.Containers;
-import io.github.joealisson.primitive.maps.IntObjectMap;
-import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class ItemTemplate extends StatTemplate
 {
 	public static final int ITEM_ID_PC_BANG_POINTS = -100;
 	public static final int ITEM_ID_CLAN_REPUTATION_SCORE = -200;
 	public static final int ITEM_ID_FAME = -300;
-	public static final int ITEM_ID_ADENA = 57;
 
 	public static final int ITEM_ID_FORMAL_WEAR = 6408;
 	public static final int ITEM_ID_HERO_WING = 6842;
@@ -403,7 +403,7 @@ public abstract class ItemTemplate extends StatTemplate
 
 	public final boolean isAdena()
 	{
-		return _itemId == ITEM_ID_ADENA;
+		return _itemId == Items.ADENA;
 	}
 
 	public final boolean isEquipment()

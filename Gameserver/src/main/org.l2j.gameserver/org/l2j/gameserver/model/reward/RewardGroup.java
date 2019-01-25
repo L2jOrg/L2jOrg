@@ -4,11 +4,14 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.instances.NpcInstance;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.stats.Stats;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @reworked by Bonux
@@ -94,7 +97,7 @@ public class RewardGroup implements Cloneable
 				return rollItems(penaltyMod, 1.0);
 			case EVENT_GROUPED:
 				if(npc != null && npc.getReflection().isDefault() && !npc.isRaid() && (npc.getLeader() == null || !npc.getLeader().isRaid()))
-					return rollItems(penaltyMod * player.getDropChanceMod() / Config.DROP_CHANCE_MODIFIER, player.getRateItems() / Config.RATE_DROP_ITEMS_BY_LVL[player.getLevel()]);
+					return rollItems(penaltyMod * player.getDropChanceMod() / getSettings(ServerSettings.class).dropChanceModifier(), player.getRateItems() / getSettings(ServerSettings.class).rateItems());
 				return Collections.emptyList();
 			case SWEEP:
 				return rollItems(penaltyMod * player.getSpoilChanceMod(), player.getRateSpoil() * (npc != null ? npc.calcStat(Stats.SPOIL_RATE_MULTIPLIER, 1.0, player, null) : 1.0));
@@ -131,7 +134,7 @@ public class RewardGroup implements Cloneable
 					return Collections.emptyList();
 				}
 				List<RewardItem> result = new ArrayList<RewardItem>();
-				for(int i = 0; i < Config.MAX_DROP_ITEMS_FROM_ONE_GROUP; i++)
+				for(int i = 0; i < getSettings(ServerSettings.class).maxDropItemsFromGroup(); i++)
 				{
 					RewardItem rolledItem = Rnd.get(rolledItems);
 					if(rolledItems.remove(rolledItem))
@@ -200,7 +203,7 @@ public class RewardGroup implements Cloneable
 						return Collections.emptyList();
 
 					List<RewardItem> result = new ArrayList<RewardItem>();
-					for(int i = 0; i < Config.MAX_DROP_ITEMS_FROM_ONE_GROUP; i++)
+					for(int i = 0; i < getSettings(ServerSettings.class).maxDropItemsFromGroup(); i++)
 					{
 						RewardItem rolledItem = Rnd.get(rolledItems);
 						if(rolledItems.remove(rolledItem))

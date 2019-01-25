@@ -3,6 +3,8 @@ package org.l2j.gameserver.network.l2.s2c;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2j.gameserver.Contants;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.model.items.TradeItem;
@@ -42,7 +44,7 @@ public class PrivateStoreManageList extends L2GameServerPacket
 				//вещь недоступна, пробуем найти такую же по itemId
 				item = seller.getInventory().getItemByItemId(si.getItemId());
 
-			if(item == null || !item.canBePrivateStore(seller) || item.getItemId() == ItemTemplate.ITEM_ID_ADENA)
+			if(item == null || !item.canBePrivateStore(seller) || item.getItemId() == Items.ADENA)
 			{
 				_sellList0.remove(si);
 				continue;
@@ -55,7 +57,7 @@ public class PrivateStoreManageList extends L2GameServerPacket
 		ItemInstance[] items = seller.getInventory().getItems();
 		// Проверяем список вещей в инвентаре, если вещь остутствует в списке продажи, добавляем в список доступных для продажи
 		loop: for(ItemInstance item : items)
-			if(item.canBePrivateStore(seller) && item.getItemId() != ItemTemplate.ITEM_ID_ADENA)
+			if(item.canBePrivateStore(seller) && item.getItemId() != Items.ADENA)
 			{
 				for(TradeItem si : _sellList0)
 					if(si.getObjectId() == item.getObjectId())

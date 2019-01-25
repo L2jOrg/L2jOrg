@@ -8,6 +8,8 @@ import java.util.Map;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.Contants;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.dao.CharacterDAO;
 import org.l2j.gameserver.database.mysql;
 import org.l2j.gameserver.model.GameObjectsStorage;
@@ -259,7 +261,7 @@ public class RequestExSendPost extends L2GameClientPacket
 				for(int i = 0; i < _count; i++)
 				{
 					ItemInstance item = activeChar.getInventory().getItemByObjectId(_items[i]);
-					if(item == null || item.getCount() < _itemQ[i] || (item.getItemId() == ItemTemplate.ITEM_ID_ADENA && item.getCount() < _itemQ[i] + serviceCost) || !item.canBeTraded(activeChar))
+					if(item == null || item.getCount() < _itemQ[i] || (item.getItemId() == Items.ADENA && item.getCount() < _itemQ[i] + serviceCost) || !item.canBeTraded(activeChar))
 					{
 						activeChar.sendPacket(SystemMsg.THE_ITEM_THAT_YOURE_TRYING_TO_SEND_CANNOT_BE_FORWARDED_BECAUSE_IT_ISNT_PROPER);
 						return;

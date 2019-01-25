@@ -85,4 +85,5 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.model.actor.flags;
     exports org.l2j.gameserver.templates.player;
     exports org.l2j.gameserver.model.actor.flags.flag;
+    exports org.l2j.gameserver.settings to org.l2j.scripts;
 }

@@ -4,6 +4,8 @@ import java.util.Set;
 
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.math.SafeMath;
+import org.l2j.gameserver.Contants;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.dao.MailDAO;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.World;
@@ -141,7 +143,7 @@ public class RequestExReceivePost extends L2GameClientPacket
 						}
 						else
 						{
-							DelayedItemsManager.addDelayed(mail.getSenderId(), ItemTemplate.ITEM_ID_ADENA, mail.getPrice(), 0, "receive mail payment: message_id[" + mail.getMessageId() + "], receiver_id[" + mail.getReceiverId() + "]");
+							DelayedItemsManager.addDelayed(mail.getSenderId(), Items.ADENA, mail.getPrice(), 0, "receive mail payment: message_id[" + mail.getMessageId() + "], receiver_id[" + mail.getReceiverId() + "]");
 						}
 					}
 

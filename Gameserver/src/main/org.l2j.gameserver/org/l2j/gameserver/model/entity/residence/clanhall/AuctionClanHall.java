@@ -1,5 +1,7 @@
 package org.l2j.gameserver.model.entity.residence.clanhall;
 
+import org.l2j.gameserver.Contants;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.instancemanager.PlayerMessageStack;
 import org.l2j.gameserver.model.entity.events.impl.ClanHallAuctionEvent;
 import org.l2j.gameserver.model.entity.residence.ClanHallType;
@@ -113,9 +115,9 @@ public class AuctionClanHall extends NormalClanHall
 
 		if(getPaidCycle() >= REWARD_CYCLE)
 		{
-			if(_owner.getWarehouse().getCountOf(ItemTemplate.ITEM_ID_ADENA) > _rentalFee)
+			if(_owner.getWarehouse().getCountOf(Items.ADENA) > _rentalFee)
 			{
-				_owner.getWarehouse().destroyItemByItemId(ItemTemplate.ITEM_ID_ADENA, _rentalFee);
+				_owner.getWarehouse().destroyItemByItemId(Items.ADENA, _rentalFee);
 				setPaidCycle(0);
 			}
 			else

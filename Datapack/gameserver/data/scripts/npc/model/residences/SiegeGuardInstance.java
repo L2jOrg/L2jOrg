@@ -10,9 +10,12 @@ import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.reward.RewardItem;
 import org.l2j.gameserver.model.reward.RewardList;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
 
 import java.util.List;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class SiegeGuardInstance extends NpcInstance
 {
@@ -37,9 +40,8 @@ public class SiegeGuardInstance extends NpcInstance
 	}
 
 	@Override
-	public double getRewardRate(Player player)
-	{
-		return Config.RATE_DROP_SIEGE_GUARD; // ПА не действует на эполеты
+	public double getRewardRate(Player player) {
+		return getSettings(ServerSettings.class).rateSiegeGuard(); // ПА не действует на эполеты
 	}
 
 	@Override

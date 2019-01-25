@@ -12,6 +12,8 @@ import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.commons.util.Pair;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.Contants;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
@@ -1522,7 +1524,7 @@ public class NpcInstance extends Creature
         {
             if(ItemFunctions.getItemCount(player, itemId) < itemCount)
             {
-                if(itemId == ItemTemplate.ITEM_ID_ADENA)
+                if(itemId == Items.ADENA)
                     player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
                 else
                     player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
@@ -1590,7 +1592,7 @@ public class NpcInstance extends Creature
 
     private long calcTeleportPrice(Player player, TeleportLocation loc)
     {
-        if(loc.getItemId() != ItemTemplate.ITEM_ID_ADENA)
+        if(loc.getItemId() != Items.ADENA)
             return loc.getPrice();
 
         double pricemod = (loc.isPrimeHours() && player.getLevel() <= Config.GATEKEEPER_FREE) ? 0. : Config.GATEKEEPER_MODIFIER;
@@ -1616,12 +1618,12 @@ public class NpcInstance extends Creature
             {
                 if(tl.getQuestZoneId() > 0 && tl.getQuestZoneId() == player.getQuestZoneId())
                 {
-                    if(tl.getItemId() == ItemTemplate.ITEM_ID_ADENA)
+                    if(tl.getItemId() == Items.ADENA)
                     {
                         long price = calcTeleportPrice(player, tl);
                         sb.append("<Button ALIGN=LEFT ICON=\"QUEST\" action=\"bypass -h npc_%objectId%_teleport_id_").append(listId).append("_").append(tl.getName()).append("_").append(price).append("\" msg=\"811;F;").append(tl.getName()).append("\">").append(HtmlUtils.htmlNpcString(tl.getName()));
                         if(price > 0)
-                            sb.append(" - ").append(price).append(" ").append(HtmlUtils.htmlItemName(ItemTemplate.ITEM_ID_ADENA));
+                            sb.append(" - ").append(price).append(" ").append(HtmlUtils.htmlItemName(Items.ADENA));
 
                         sb.append("</button>");
                     }
@@ -1640,12 +1642,12 @@ public class NpcInstance extends Creature
             {
                 if(tl.getQuestZoneId() <= 0 || tl.getQuestZoneId() != player.getQuestZoneId())
                 {
-                    if(tl.getItemId() == ItemTemplate.ITEM_ID_ADENA)
+                    if(tl.getItemId() == Items.ADENA)
                     {
                         long price = calcTeleportPrice(player, tl);
                         sb.append("<Button ALIGN=LEFT ICON=\"TELEPORT\" action=\"bypass -h npc_%objectId%_teleport_id_").append(listId).append("_").append(tl.getName()).append("_").append(price).append("\" msg=\"811;F;").append(tl.getName()).append("\">").append(HtmlUtils.htmlNpcString(tl.getName()));
                         if(price > 0)
-                            sb.append(" - ").append(price).append(" ").append(HtmlUtils.htmlItemName(ItemTemplate.ITEM_ID_ADENA));
+                            sb.append(" - ").append(price).append(" ").append(HtmlUtils.htmlItemName(Items.ADENA));
 
                         sb.append("</button>");
                     }

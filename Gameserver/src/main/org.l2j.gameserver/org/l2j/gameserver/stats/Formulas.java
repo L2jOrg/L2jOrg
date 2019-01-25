@@ -16,10 +16,13 @@ import org.l2j.gameserver.model.instances.ReflectionBossInstance;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ExMagicAttackInfo;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.skills.*;
 import org.l2j.gameserver.templates.item.WeaponTemplate;
 import org.l2j.gameserver.templates.item.WeaponTemplate.WeaponType;
 import org.l2j.gameserver.utils.PositionUtils;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class Formulas
 {
@@ -837,19 +840,18 @@ public class Formulas
         return result;
     }
 
-    public static double calcDamageResists(Skill skill, Creature attacker, Creature defender, double value)
-    {
+    public static double calcDamageResists(Skill skill, Creature attacker, Creature defender, double value) {
         if(attacker == defender) // это дамаг от местности вроде ожога в лаве, наносится от своего имени
             return value; // TODO: по хорошему надо учитывать защиту, но поскольку эти скиллы немагические то надо делать отдельный механизм
         if(attacker.isBoss())
-            value *= Config.RATE_EPIC_ATTACK;
+            value *= getSettings(ServerSettings.class).rateEpicAttack();
         else if(attacker.isRaid() || attacker instanceof ReflectionBossInstance)
-            value *= Config.RATE_RAID_ATTACK;
+            value *= getSettings(ServerSettings.class).rateRaidAttack();
 
         if(defender.isBoss())
-            value /= Config.RATE_EPIC_DEFENSE;
+            value /= getSettings(ServerSettings.class).rateEpicDefense();
         else if(defender.isRaid() || defender instanceof ReflectionBossInstance)
-            value /= Config.RATE_RAID_DEFENSE;
+            value /= getSettings(ServerSettings.class).rateRaidDefense();
 
         Player pAttacker = attacker.getPlayer();
 
@@ -921,7 +923,7 @@ public class Formulas
 
         double karmaLooseMul = KarmaIncreaseDataHolder.getInstance().getData(player.getLevel());
         if(exp > 0) // Received exp
-            exp /= Config.KARMA_RATE_KARMA_LOST == -1 ? Config.RATE_XP_BY_LVL[player.getLevel()] : Config.KARMA_RATE_KARMA_LOST;
+            exp /= Config.KARMA_RATE_KARMA_LOST == -1 ? getSettings(ServerSettings.class).rateXP() : Config.KARMA_RATE_KARMA_LOST;
         return (int) ((Math.abs(exp) / karmaLooseMul) / 15);
     }
 

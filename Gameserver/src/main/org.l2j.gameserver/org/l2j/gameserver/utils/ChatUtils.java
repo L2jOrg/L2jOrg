@@ -11,6 +11,9 @@ import org.l2j.gameserver.network.l2.components.CustomMessage;
 import org.l2j.gameserver.network.l2.components.NpcString;
 import org.l2j.gameserver.network.l2.s2c.NSPacket;
 import org.l2j.gameserver.network.l2.s2c.SayPacket2;
+import org.l2j.gameserver.settings.ServerSettings;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class ChatUtils
 {
@@ -41,7 +44,7 @@ public class ChatUtils
 		if (activeObject == null)
 			activeObject = activeChar;
 
-		say(activeChar, activeObject, World.getAroundObservers(activeObject), Config.CHAT_RANGE, cs);
+		say(activeChar, activeObject, World.getAroundObservers(activeObject), getSettings(ServerSettings.class).chatRange(), cs);
 	}
 
 	public static void say(Player activeChar, Iterable<Player> players, SayPacket2 cs)
@@ -50,7 +53,7 @@ public class ChatUtils
 		if (activeObject == null)
 			activeObject = activeChar;
 
-		say(activeChar, activeObject, players, Config.CHAT_RANGE, cs);
+		say(activeChar, activeObject, players, getSettings(ServerSettings.class).chatRange(), cs);
 	}
 
 	public static void say(Player activeChar, int range, SayPacket2 cs)
@@ -71,6 +74,7 @@ public class ChatUtils
 		int rx = MapUtils.regionX(activeObject);
 		int ry = MapUtils.regionY(activeObject);
 
+		ServerSettings serverSettings = getSettings(ServerSettings.class);
 		for(Player player : GameObjectsStorage.getPlayers())
 		{
 			if(player == activeChar || player.isBlockAll())
@@ -92,7 +96,7 @@ public class ChatUtils
 			int tx = MapUtils.regionX(obj) - rx;
 			int ty = MapUtils.regionY(obj) - ry;
 
-			if (tx*tx + ty*ty <= Config.SHOUT_SQUARE_OFFSET || activeObject.isInRangeZ(obj, Config.CHAT_RANGE))
+			if (tx*tx + ty*ty <= serverSettings.shoutSquareOffset() || activeObject.isInRangeZ(obj, serverSettings.chatRange()))
 				if (!player.getBlockList().contains(activeChar) && activeChar.canTalkWith(player))
 					player.sendPacket(cs);
 		}
@@ -145,12 +149,12 @@ public class ChatUtils
 
 	public static void say(NpcInstance activeChar, NSPacket cs)
 	{
-		say(activeChar, World.getAroundObservers(activeChar), Config.CHAT_RANGE, cs);
+		say(activeChar, World.getAroundObservers(activeChar), getSettings(ServerSettings.class).chatRange(), cs);
 	}
 
 	public static void say(NpcInstance activeChar, Iterable<Player> players, NSPacket cs)
 	{
-		say(activeChar, players, Config.CHAT_RANGE, cs);
+		say(activeChar, players, getSettings(ServerSettings.class).chatRange(), cs);
 	}
 
 	public static void say(NpcInstance activeChar, int range, NSPacket cs)
@@ -165,13 +169,14 @@ public class ChatUtils
 
 	public static void say(NpcInstance npc, NpcString npcString, String... params)
 	{
-		say(npc, Config.CHAT_RANGE, npcString, params);
+		say(npc, getSettings(ServerSettings.class).chatRange(), npcString, params);
 	}
 
 	public static void shout(NpcInstance activeChar, NSPacket cs)
 	{
 		int rx = MapUtils.regionX(activeChar);
 		int ry = MapUtils.regionY(activeChar);
+		ServerSettings serverSettings = getSettings(ServerSettings.class);
 
 		for(Player player : GameObjectsStorage.getPlayers())
 		{
@@ -185,7 +190,7 @@ public class ChatUtils
 			int tx = MapUtils.regionX(obj) - rx;
 			int ty = MapUtils.regionY(obj) - ry;
 
-			if (tx*tx + ty*ty <= Config.SHOUT_SQUARE_OFFSET || activeChar.isInRangeZ(obj, Config.CHAT_RANGE))
+			if (tx*tx + ty*ty <= serverSettings.shoutSquareOffset() || activeChar.isInRangeZ(obj, serverSettings.chatRange()))
 				player.sendPacket(cs);
 		}
 	}
@@ -211,12 +216,12 @@ public class ChatUtils
 
 	public static void say(NpcInstance activeChar, CustomMessage cm)
 	{
-		say(activeChar, World.getAroundObservers(activeChar), Config.CHAT_RANGE, cm);
+		say(activeChar, World.getAroundObservers(activeChar), getSettings(ServerSettings.class).chatRange(), cm);
 	}
 
 	public static void say(NpcInstance activeChar, Iterable<Player> players, CustomMessage cm)
 	{
-		say(activeChar, players, Config.CHAT_RANGE, cm);
+		say(activeChar, players, getSettings(ServerSettings.class).chatRange(), cm);
 	}
 
 	public static void say(NpcInstance activeChar, int range, CustomMessage cm)
@@ -228,7 +233,7 @@ public class ChatUtils
 	{
 		int rx = MapUtils.regionX(activeChar);
 		int ry = MapUtils.regionY(activeChar);
-
+		ServerSettings serverSettings = getSettings(ServerSettings.class);
 		for(Player player : GameObjectsStorage.getPlayers())
 		{
 			GameObject obj = player.getObservePoint();
@@ -241,7 +246,7 @@ public class ChatUtils
 			int tx = MapUtils.regionX(obj) - rx;
 			int ty = MapUtils.regionY(obj) - ry;
 
-			if (tx*tx + ty*ty <= Config.SHOUT_SQUARE_OFFSET || activeChar.isInRangeZ(obj, Config.CHAT_RANGE))
+			if (tx*tx + ty*ty <= serverSettings.shoutSquareOffset() || activeChar.isInRangeZ(obj, serverSettings.chatRange()))
 				player.sendPacket(new NSPacket(activeChar, ChatType.NPC_SHOUT, cm.toString(player)));
 		}
 	}

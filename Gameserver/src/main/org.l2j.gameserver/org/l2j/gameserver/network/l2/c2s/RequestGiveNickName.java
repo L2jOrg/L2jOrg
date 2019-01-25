@@ -6,7 +6,10 @@ import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.pledge.UnitMember;
 import org.l2j.gameserver.network.l2.components.CustomMessage;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.utils.Util;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class RequestGiveNickName extends L2GameClientPacket
 {
@@ -27,7 +30,7 @@ public class RequestGiveNickName extends L2GameClientPacket
 		if(activeChar == null)
 			return;
 
-		if(!_title.isEmpty() && !Util.isMatchingRegexp(_title, Config.CLAN_TITLE_TEMPLATE))
+		if(!_title.isEmpty() && !Util.isMatchingRegexp(_title, getSettings(ServerSettings.class).clanTitleTemplate()))
 		{
 			activeChar.sendMessage("Incorrect title.");
 			return;

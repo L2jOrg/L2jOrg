@@ -30,6 +30,7 @@ import org.l2j.gameserver.network.l2.components.IBroadcastPacket;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.*;
 import org.l2j.gameserver.network.l2.s2c.ExPledgeBonusUpdate.BonusType;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.skills.SkillEntry;
 import org.l2j.gameserver.tables.ClanTable;
 import org.l2j.gameserver.utils.Log;
@@ -44,6 +45,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.*;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 public class Clan implements Iterable<UnitMember>
@@ -1004,8 +1006,9 @@ public class Clan implements Iterable<UnitMember>
 		if(_level < 3)
 			return 0;
 
-		if(rate && Math.abs(inc) <= Config.RATE_CLAN_REP_SCORE_MAX_AFFECTED)
-			inc = (int) Math.round(inc * Config.RATE_CLAN_REP_SCORE);
+		var serverSettings = getSettings(ServerSettings.class);
+		if(rate && Math.abs(inc) <= serverSettings.rateClanReputationScoreMaxAffected())
+			inc = Math.round(inc * serverSettings.rateClanReputationScore());
 
 		setReputationScore(_reputation + inc);
 		Log.add(getName() + "|" + inc + "|" + _reputation + "|" + source, "clan_reputation");

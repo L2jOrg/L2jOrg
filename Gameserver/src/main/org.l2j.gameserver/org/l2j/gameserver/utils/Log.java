@@ -73,8 +73,6 @@ public class Log
 
 	public static void add(String text, String cat, Player player)
 	{
-		if(!Config.TURN_LOG_SYSTEM)
-			return;
 			
 		StringBuilder output = new StringBuilder();
 
@@ -107,9 +105,6 @@ public class Log
 
 	public static void LogChat(String type, String player, String target, String text)
 	{
-		if(!Config.LOG_CHAT)
-			return;
-
 		StringBuilder output = new StringBuilder();
 		output.append(type);
 		output.append(' ');
@@ -164,8 +159,6 @@ public class Log
 
 	public static void LogItem(String className, int objId, String process, ItemInstance item, long count)
 	{
-		if(!Config.TURN_LOG_SYSTEM)
-			return;
 
 		StringBuilder output = new StringBuilder();
 		output.append(process);
@@ -199,8 +192,6 @@ public class Log
 
 	public static void LogItem(Creature activeChar, String process, ItemInstance item, long count, String desc)
 	{
-		if(!Config.TURN_LOG_SYSTEM)
-			return;
 
 		StringBuilder output = new StringBuilder();
 		output.append(process);
@@ -218,8 +209,6 @@ public class Log
 
 	public static void LogItem(Creature activeChar, String process, int item, long count)
 	{
-		if(!Config.TURN_LOG_SYSTEM)
-			return;
 
 		StringBuilder output = new StringBuilder();
 		output.append(process);

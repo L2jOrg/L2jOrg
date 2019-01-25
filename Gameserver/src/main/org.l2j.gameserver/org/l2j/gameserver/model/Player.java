@@ -22,6 +22,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.commons.util.Util;
 import org.l2j.commons.util.concurrent.atomic.AtomicState;
 import org.l2j.gameserver.*;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.PlayableAI.AINextAction;
@@ -86,6 +87,7 @@ import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.network.l2.components.*;
 import org.l2j.gameserver.network.l2.s2c.*;
 import org.l2j.gameserver.network.l2.s2c.updatetype.IUpdateTypeComponent;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.skills.AbnormalType;
 import org.l2j.gameserver.skills.EffectType;
 import org.l2j.gameserver.skills.SkillEntry;
@@ -126,12 +128,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.network.l2.s2c.ExSetCompassZoneCode.*;
 
 public final class Player extends Playable implements PlayerGroup
 {
-	private static final long serialVersionUID = 1L;
-
 	public static final int DEFAULT_NAME_COLOR = 0xFFFFFF;
 	public static final int DEFAULT_TITLE_COLOR = 0xFFFF77;
 	public static final int MAX_POST_FRIEND_SIZE = 100;
@@ -509,7 +510,7 @@ public final class Player extends Playable implements PlayerGroup
 
 		_ai = new PlayerAI(this);
 
-		if(!Config.EVERYBODY_HAS_ADMIN_RIGHTS)
+		if(!getSettings(ServerSettings.class).isEveryBodyIsAdmin())
 			setPlayerAccess(Config.gmlist.get(objectId));
 		else
 			setPlayerAccess(Config.gmlist.get(0));
@@ -1747,7 +1748,7 @@ public final class Player extends Playable implements PlayerGroup
 		ClassId classId = ClassId.VALUES[id];
 		if(classId.isDummy())
 			return;
-		if(!noban && !(classId.equalsOrChildOf(getClassId()) || getPlayerAccess().CanChangeClass || Config.EVERYBODY_HAS_ADMIN_RIGHTS))
+		if(!noban && !(classId.equalsOrChildOf(getClassId()) || getPlayerAccess().CanChangeClass || getSettings(ServerSettings.class).isEveryBodyIsAdmin()))
 		{
 			Thread.dumpStack();
 			return;
@@ -1861,6 +1862,7 @@ public final class Player extends Playable implements PlayerGroup
 			ThreadPoolManager.getInstance().schedule(new GameObjectTasks.SoulConsumeTask(this), 1000);
 		}
 
+		var serverSettings = getSettings(ServerSettings.class);
 		if(noRateExp > 0)
 		{
 			if(!(getVarBoolean("NoExp") && getExp() == Experience.getExpForLevel(getLevel() + 1) - 1))
@@ -1868,17 +1870,18 @@ public final class Player extends Playable implements PlayerGroup
 				Clan clan = getClan();
 				if(clan != null)
 				{
-					int huntingPoints = Math.max((int)(noRateExp * (getRateExp() / Config.RATE_XP_BY_LVL[getLevel()]) / Math.pow(getLevel(), 2.0) * Config.CLAN_HUNTING_PROGRESS_RATE), 1);
+					int huntingPoints = Math.max((int)(noRateExp * (getRateExp() / serverSettings.rateXP()) / Math.pow(getLevel(), 2.0) * Config.CLAN_HUNTING_PROGRESS_RATE), 1);
 					clan.addHuntingProgress(huntingPoints);
 				}
 			}	
 		}
 
-		long normalExp = (long) (noRateExp * getRateExp() * (mob.isRaid() ? Config.RATE_XP_RAIDBOSS_MODIFIER : 1.0));
+		long normalExp = (long) (noRateExp * getRateExp() * (mob.isRaid() ? serverSettings.rateXpRaidbossModifier() : 1.0));
 		long normalSp = (long) (noRateSp * getRateSp());
 
-		long expWithoutBonus = (long) (noRateExp * Config.RATE_XP_BY_LVL[getLevel()]);
-		long spWithoutBonus = (long) (noRateSp * Config.RATE_SP_BY_LVL[getLevel()]);
+
+		long expWithoutBonus = (long) (noRateExp * serverSettings.rateXP());
+		long spWithoutBonus = (long) (noRateSp * serverSettings.rateSP());
 
 		addExpAndSp(normalExp, normalSp, normalExp - expWithoutBonus, normalSp - spWithoutBonus, false, true, false, true, true);
 	}
@@ -2407,7 +2410,7 @@ public final class Player extends Playable implements PlayerGroup
 			return true;
 		boolean result = getInventory().reduceAdena(adena);
 		if(notify && result)
-			sendPacket(SystemMessagePacket.removeItems(ItemTemplate.ITEM_ID_ADENA, adena));
+			sendPacket(SystemMessagePacket.removeItems(Items.ADENA, adena));
 		return result;
 	}
 
@@ -2429,7 +2432,7 @@ public final class Player extends Playable implements PlayerGroup
 			return null;
 		ItemInstance item = getInventory().addAdena(adena);
 		if(item != null && notify)
-			sendPacket(SystemMessagePacket.obtainItems(ItemTemplate.ITEM_ID_ADENA, adena, 0));
+			sendPacket(SystemMessagePacket.obtainItems(Items.ADENA, adena, 0));
 		return item;
 	}
 
@@ -6844,7 +6847,7 @@ public final class Player extends Playable implements PlayerGroup
 
 	public void restartDailyCounters(boolean onRestore)
 	{
-		if(Config.ALLOW_WORLD_CHAT)
+		if(getSettings(ServerSettings.class).isWorldChatAllowed())
 		{
 			setUsedWorldChatPoints(0);
 			if(!onRestore)
@@ -7661,7 +7664,7 @@ public final class Player extends Playable implements PlayerGroup
 
 	public double getRateAdena()
 	{
-		double rate = Config.RATE_DROP_ADENA_BY_LVL[getLevel()];
+		double rate = getSettings(ServerSettings.class).rateAdena();
 		rate *= isInParty() ? _party._rateAdena : getPremiumAccount().getRates().getAdena();
 		rate *= 1. + calcStat(Stats.ADENA_RATE_MULTIPLIER, 0, null, null);
 		return rate;
@@ -7669,7 +7672,7 @@ public final class Player extends Playable implements PlayerGroup
 
 	public double getRateItems()
 	{
-		double rate = Config.RATE_DROP_ITEMS_BY_LVL[getLevel()];
+		double rate = getSettings(ServerSettings.class).rateItems();
 		rate *= isInParty() ? _party._rateDrop : getPremiumAccount().getRates().getDrop();
 		rate *= 1. + calcStat(Stats.DROP_RATE_MULTIPLIER, 0, null, null);
 		return rate;
@@ -7677,7 +7680,7 @@ public final class Player extends Playable implements PlayerGroup
 
 	public double getRateExp()
 	{
-		final double baseRate = Config.RATE_XP_BY_LVL[getLevel()] * (isInParty() ? _party._rateExp : getPremiumAccount().getRates().getExp());
+		final double baseRate = getSettings(ServerSettings.class).rateXP() * (isInParty() ? _party._rateExp : getPremiumAccount().getRates().getExp());
 		double rate = baseRate;
 		rate += baseRate * calcStat(Stats.EXP_RATE_MULTIPLIER, 0, null, null);
 		return rate;
@@ -7685,7 +7688,7 @@ public final class Player extends Playable implements PlayerGroup
 
 	public double getRateSp()
 	{
-		final double baseRate = Config.RATE_SP_BY_LVL[getLevel()] * (isInParty() ? _party._rateSp : getPremiumAccount().getRates().getSp());
+		final double baseRate = getSettings(ServerSettings.class).rateSP() * (isInParty() ? _party._rateSp : getPremiumAccount().getRates().getSp());
 		double rate = baseRate;
 		rate += baseRate * calcStat(Stats.SP_RATE_MULTIPLIER, 0, null, null);
 		return rate;
@@ -7693,7 +7696,7 @@ public final class Player extends Playable implements PlayerGroup
 
 	public double getRateSpoil()
 	{
-		double rate = Config.RATE_DROP_SPOIL_BY_LVL[getLevel()];
+		double rate = getSettings(ServerSettings.class).rateSpoil();
 		rate *= isInParty() ? _party._rateSpoil : getPremiumAccount().getRates().getSpoil();
 		rate *= 1. + calcStat(Stats.SPOIL_RATE_MULTIPLIER, 0, null, null);
 		return rate;
@@ -7701,21 +7704,21 @@ public final class Player extends Playable implements PlayerGroup
 
 	public double getRateQuestsDrop()
 	{
-		double rate = Config.RATE_QUESTS_DROP;
+		double rate = getSettings(ServerSettings.class).rateQuestDrop();
 		rate *= getPremiumAccount().getRates().getQuestDrop();
 		return rate;
 	}
 
 	public double getRateQuestsReward()
 	{
-		double rate = Config.RATE_QUESTS_REWARD;
+		double rate = getSettings(ServerSettings.class).rateQuestReward();
 		rate *= getPremiumAccount().getRates().getQuestReward();
 		return rate;
 	}
 
 	public double getDropChanceMod()
 	{
-		double mod = Config.DROP_CHANCE_MODIFIER;
+		double mod = getSettings(ServerSettings.class).dropChanceModifier();
 		mod *= isInParty() ? _party._dropChanceMod : getPremiumAccount().getModifiers().getDropChance();
 		mod *= 1. + calcStat(Stats.DROP_CHANCE_MODIFIER, 0, null, null);
 		return mod;
@@ -7723,7 +7726,7 @@ public final class Player extends Playable implements PlayerGroup
 
 	public double getSpoilChanceMod()
 	{
-		double mod = Config.SPOIL_CHANCE_MODIFIER;
+		double mod = getSettings(ServerSettings.class).spoilChanceModifier();
 		mod *= isInParty() ? _party._spoilChanceMod : getPremiumAccount().getModifiers().getSpoilChance();
 		mod *= 1. + calcStat(Stats.SPOIL_CHANCE_MODIFIER, 0, null, null);
 		return mod;
@@ -10939,12 +10942,12 @@ public final class Player extends Playable implements PlayerGroup
 		return _blockUntilTime;
 	}
 
-	public int getWorldChatPoints()
-	{
+	public int getWorldChatPoints() {
+		var serverSettings  = getSettings(ServerSettings.class);
 		if(hasPremiumAccount())
-			return Math.max(0, Config.WORLD_CHAT_POINTS_PER_DAY_PA - _usedWorldChatPoints);
+			return Math.max(0, serverSettings.premiumWorldChatPointsPerDay() - _usedWorldChatPoints);
 
-		return Math.max(0, Config.WORLD_CHAT_POINTS_PER_DAY - _usedWorldChatPoints);
+		return Math.max(0, serverSettings.worldChatPointsPerDay() - _usedWorldChatPoints);
 	}
 
 	public int getUsedWorldChatPoints()

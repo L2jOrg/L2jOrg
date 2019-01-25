@@ -10,6 +10,8 @@ import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.Contants;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.holder.EventHolder;
 import org.l2j.gameserver.data.xml.holder.ResidenceFunctionsHolder;
@@ -340,7 +342,7 @@ public abstract class Residence implements JdbcEntity
 		if (activeFunction == null)
 		{
 			if(clanAdenaCount >= lease)
-				clan.getWarehouse().destroyItemByItemId(ItemTemplate.ITEM_ID_ADENA, lease);
+				clan.getWarehouse().destroyItemByItemId(Items.ADENA, lease);
 			else
 				return false;
 		}
@@ -350,7 +352,7 @@ public abstract class Residence implements JdbcEntity
 			if(clanAdenaCount >= lease - activeFunctionLease)
 			{
 				if(lease > activeFunctionLease)
-					clan.getWarehouse().destroyItemByItemId(ItemTemplate.ITEM_ID_ADENA, lease - activeFunctionLease);
+					clan.getWarehouse().destroyItemByItemId(Items.ADENA, lease - activeFunctionLease);
 			}
 			else
 				return false;
@@ -446,7 +448,7 @@ public abstract class Residence implements JdbcEntity
 			ThreadPoolManager.getInstance().schedule(new AutoTaskForFunctions(function), function.getEndTimeInMillis() - System.currentTimeMillis());
 		else if(function.isInDebt() && clan.getAdenaCount() >= function.getTemplate().getCost()) // if player didn't pay before add extra fee
 		{
-			clan.getWarehouse().destroyItemByItemId(ItemTemplate.ITEM_ID_ADENA, function.getTemplate().getCost());
+			clan.getWarehouse().destroyItemByItemId(Items.ADENA, function.getTemplate().getCost());
 			function.updateRentTime(false);
 			ThreadPoolManager.getInstance().schedule(new AutoTaskForFunctions(function), function.getEndTimeInMillis() - System.currentTimeMillis());
 		}

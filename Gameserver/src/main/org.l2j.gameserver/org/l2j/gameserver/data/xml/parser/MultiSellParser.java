@@ -6,6 +6,7 @@ import java.util.Iterator;
 import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.Contants;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;
 import org.l2j.gameserver.data.xml.holder.MultiSellHolder;
 import org.l2j.gameserver.model.items.ItemInstance;
@@ -14,6 +15,8 @@ import org.l2j.gameserver.model.MultiSellListContainer.MultisellType;
 import org.l2j.gameserver.model.base.MultiSellEntry;
 import org.l2j.gameserver.model.base.MultiSellIngredient;
 import org.l2j.gameserver.templates.item.ItemTemplate;
+
+import static org.l2j.gameserver.Contants.*;
 
 /**
  * @author VISTALL
@@ -156,7 +159,7 @@ public class MultiSellParser extends AbstractParser<MultiSellHolder>
 
 		for(MultiSellIngredient ingridient : entry.getIngredients())
 		{
-			if(ingridient.getItemId() == ItemTemplate.ITEM_ID_ADENA && ingridient.getItemCount() == -1)
+			if(ingridient.getItemId() == Items.ADENA && ingridient.getItemCount() == -1)
 			{
 				long price = 0;
 				for(MultiSellIngredient product : entry.getProduction())

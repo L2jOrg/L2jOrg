@@ -22,6 +22,7 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ExAutoFishAvailable;
 import org.l2j.gameserver.network.l2.s2c.ExFishingEndPacket;
 import org.l2j.gameserver.network.l2.s2c.ExUserInfoFishing;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.fish.FishRewardTemplate;
 import org.l2j.gameserver.templates.fish.FishRewardsTemplate;
 import org.l2j.gameserver.templates.fish.FishTemplate;
@@ -31,6 +32,8 @@ import org.l2j.gameserver.templates.item.WeaponTemplate;
 import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.PositionUtils;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class Fishing
 {
@@ -71,9 +74,10 @@ public class Fishing
 						}
 					}
 
+					var serverSettings = getSettings(ServerSettings.class);
 					// TODO: Проверить, влияет ли виталити и прочие бонусы на оффе.
-					exp = (long) (exp * _rod.getRewardModifier() * Config.RATE_XP_BY_LVL[_owner.getLevel()]);
-					sp = (long) (sp * _rod.getRewardModifier() * Config.RATE_SP_BY_LVL[_owner.getLevel()]);
+					exp = (long) (exp * _rod.getRewardModifier() * serverSettings.rateXP());
+					sp = (long) (sp * _rod.getRewardModifier() * serverSettings.rateSP());
 
 					_owner.addExpAndSp(exp, sp, 0, 0, false, false, false, false, true);
 				}

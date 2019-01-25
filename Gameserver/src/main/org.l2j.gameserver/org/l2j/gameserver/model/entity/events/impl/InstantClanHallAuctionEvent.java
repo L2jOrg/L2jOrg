@@ -8,6 +8,8 @@ import java.util.List;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.Contants;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.dao.SiegeClanDAO;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.events.actions.StartStopAction;
@@ -134,7 +136,7 @@ public class InstantClanHallAuctionEvent extends SiegeEvent<InstantClanHall, Sie
 				for(SiegeClanObject siegeClan : siegeClanObjects)
 				{
 					siegeClan.getClan().broadcastToOnlineMembers(SystemMsg.YOUR_BID_FOR_THE_PROVISIONAL_CLAN_HALL_LOST);
-					siegeClan.getClan().getWarehouse().addItem(ItemTemplate.ITEM_ID_ADENA, getResidence().getRentalFee() * (100 - getResidence().getCommissionPercent()) / 100L);
+					siegeClan.getClan().getWarehouse().addItem(Items.ADENA, getResidence().getRentalFee() * (100 - getResidence().getCommissionPercent()) / 100L);
 				}
 			}
 

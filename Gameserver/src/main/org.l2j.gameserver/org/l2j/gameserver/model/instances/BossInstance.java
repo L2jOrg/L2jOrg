@@ -6,7 +6,10 @@ import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.entity.HeroDiary;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class BossInstance extends RaidBossInstance
 {
@@ -38,15 +41,14 @@ public class BossInstance extends RaidBossInstance
 	}
 
 	@Override
-    public double getRewardRate(Player player)
-    {
-        return Config.RATE_DROP_ITEMS_BOSS;
+    public double getRewardRate(Player player) {
+        return getSettings(ServerSettings.class).rateDropItemsBoss();
     }
 
     @Override
     public double getDropChanceMod(Player player)
     {
-        return Config.DROP_CHANCE_MODIFIER_BOSS;
+        return getSettings(ServerSettings.class).dropChanceBossModifier();
     }
 
 	@Override

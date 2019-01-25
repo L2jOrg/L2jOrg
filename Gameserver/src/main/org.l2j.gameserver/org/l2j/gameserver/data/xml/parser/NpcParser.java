@@ -353,13 +353,12 @@ public final class NpcParser extends AbstractParser<NpcHolder>
 				{
 					org.dom4j.Element rewardElement = rewardIterator.next();
 					RewardData data = parseReward(rewardElement);
-					if(Config.DISABLE_DROP_EXCEPT_ITEM_IDS.isEmpty() || Config.DISABLE_DROP_EXCEPT_ITEM_IDS.contains(data.getItemId()))
-					{
-						if(notGroupType)
-							logger.warn("Can't load rewardlist from group: " + debugString + "; type: " + type);
-						else
-							group.addData(data);
-					}
+
+					if(notGroupType)
+						logger.warn("Can't load rewardlist from group: " + debugString + "; type: " + type);
+					else
+						group.addData(data);
+
 				}
 				if(group != null && !group.getItems().isEmpty())
 					list.add(group);
@@ -371,12 +370,9 @@ public final class NpcParser extends AbstractParser<NpcHolder>
 				else
 				{
 					RewardData data = parseReward(nextElement);
-					if(Config.DISABLE_DROP_EXCEPT_ITEM_IDS.isEmpty() || Config.DISABLE_DROP_EXCEPT_ITEM_IDS.contains(data.getItemId()))
-					{
-						RewardGroup g = new RewardGroup(RewardList.MAX_CHANCE);
-						g.addData(data);
-						list.add(g);
-					}
+					RewardGroup g = new RewardGroup(RewardList.MAX_CHANCE);
+					g.addData(data);
+					list.add(g);
 				}
 			}
 		}

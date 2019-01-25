@@ -4,6 +4,8 @@ import org.l2j.commons.collections.CollectionUtils;
 import org.l2j.commons.dao.JdbcEntity;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.Contants;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.dao.HidenItemsDAO;
 import org.l2j.gameserver.dao.ItemsDAO;
@@ -659,7 +661,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 
 	public boolean canBePrivateStore(Player player)
 	{
-		if(getItemId() == ItemTemplate.ITEM_ID_ADENA)
+		if(getItemId() == Items.ADENA)
 			return false;
 
 		if(!canBeTraded(player))
@@ -679,7 +681,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		if((customFlags & FLAG_NO_TRADE) == FLAG_NO_TRADE)
 			return false;
 
-		if(getItemId() == ItemTemplate.ITEM_ID_ADENA)
+		if(getItemId() == Items.ADENA)
 			return false;
 
 		if(HidenItemsDAO.isHidden(this))

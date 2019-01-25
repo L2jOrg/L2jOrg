@@ -22,6 +22,7 @@ import org.l2j.gameserver.model.entity.olympiad.Olympiad;
 import org.l2j.gameserver.model.entity.residence.ClanHall;
 import org.l2j.gameserver.network.l2.components.CustomMessage;
 import org.l2j.gameserver.network.l2.components.HtmlMessage;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.skills.SkillEntry;
 import org.l2j.gameserver.utils.Functions;
 import org.l2j.gameserver.utils.ItemFunctions;
@@ -33,6 +34,8 @@ import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
 import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class OfflineBufferManager
 {
@@ -167,7 +170,7 @@ public class OfflineBufferManager
 				title += "_" + st.nextToken();
 			title = title.trim();
 
-			if(title.isEmpty() && !Util.isMatchingRegexp(title, Config.CLAN_TITLE_TEMPLATE))
+			if(title.isEmpty() && !Util.isMatchingRegexp(title, getSettings(ServerSettings.class).clanTitleTemplate()))
 			{
 				player.sendMessage(new CustomMessage("org.l2j.gameserver.instancemanager.OfflineBufferManager.create.4"));
 				return;

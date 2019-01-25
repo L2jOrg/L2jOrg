@@ -11,7 +11,9 @@ import org.l2j.gameserver.handler.admincommands.IAdminCommandHandler;
 import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.HtmlMessage;
+import org.l2j.gameserver.settings.ServerSettings;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Converter.stringToInt;
 
 public class AdminShutdown implements IAdminCommandHandler
@@ -72,6 +74,7 @@ public class AdminShutdown implements IAdminCommandHandler
 		cal.set(Calendar.HOUR_OF_DAY, h);
 		cal.set(Calendar.MINUTE, m);
 
+		var serverSettings = getSettings(ServerSettings.class);
 		StringBuilder replyMSG = new StringBuilder("<html><body>");
 		replyMSG.append("<table width=260><tr>");
 		replyMSG.append("<td width=40><button value=\"Main\" action=\"bypass -h admin_admin\" width=40 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
@@ -84,29 +87,24 @@ public class AdminShutdown implements IAdminCommandHandler
 		replyMSG.append("<tr><td width=100>Used Memory:</td><td width=200>" + StatsUtils.getMemUsedMb() + "</td></tr>");
 		replyMSG.append("<tr><td width=100>Server Rates:</td><td width=200></td></tr>");
 
-		replyMSG.append("<tr><td width=100>&nbsp;&nbsp;&nbsp;XP:</td><td width=200>x" + Config.RATE_XP_BY_LVL[1]);
-		if(Config.RATE_XP_BY_LVL[1] != Config.RATE_XP_BY_LVL[Config.ALT_MAX_LEVEL])
-			replyMSG.append(" - " + Config.RATE_XP_BY_LVL[Config.ALT_MAX_LEVEL]);
+		replyMSG.append("<tr><td width=100>&nbsp;&nbsp;&nbsp;XP:</td><td width=200>x");
+		replyMSG.append(serverSettings.rateXP());
 		replyMSG.append("</td></tr>");
 
-		replyMSG.append("<tr><td width=100>&nbsp;&nbsp;&nbsp;SP:</td><td width=200>x" + Config.RATE_SP_BY_LVL[1]);
-		if(Config.RATE_SP_BY_LVL[1] != Config.RATE_SP_BY_LVL[Config.ALT_MAX_LEVEL])
-			replyMSG.append(" - " + Config.RATE_SP_BY_LVL[Config.ALT_MAX_LEVEL]);
+		replyMSG.append("<tr><td width=100>&nbsp;&nbsp;&nbsp;SP:</td><td width=200>x");
+		replyMSG.append(serverSettings.rateSP());
 		replyMSG.append("</td></tr>");
 
-		replyMSG.append("<tr><td width=100>&nbsp;&nbsp;&nbsp;Adena:</td><td width=200>x" + Config.RATE_DROP_ADENA_BY_LVL[1]);
-		if(Config.RATE_DROP_ADENA_BY_LVL[1] != Config.RATE_DROP_ADENA_BY_LVL[Config.ALT_MAX_LEVEL])
-			replyMSG.append(" - " + Config.RATE_DROP_ADENA_BY_LVL[Config.ALT_MAX_LEVEL]);
+		replyMSG.append("<tr><td width=100>&nbsp;&nbsp;&nbsp;Adena:</td><td width=200>x");
+		replyMSG.append(serverSettings.rateAdena());
 		replyMSG.append("</td></tr>");
 
-		replyMSG.append("<tr><td width=100>&nbsp;&nbsp;&nbsp;Drop:</td><td width=200>x" + Config.RATE_DROP_ITEMS_BY_LVL[1]);
-		if(Config.RATE_DROP_ITEMS_BY_LVL[1] != Config.RATE_DROP_ITEMS_BY_LVL[Config.ALT_MAX_LEVEL])
-			replyMSG.append(" - " + Config.RATE_DROP_ITEMS_BY_LVL[Config.ALT_MAX_LEVEL]);
+		replyMSG.append("<tr><td width=100>&nbsp;&nbsp;&nbsp;Drop:</td><td width=200>x");
+		replyMSG.append(serverSettings.rateItems());
 		replyMSG.append("</td></tr>");
 
-		replyMSG.append("<tr><td width=100>&nbsp;&nbsp;&nbsp;Spoil:</td><td width=200>x" + Config.RATE_DROP_SPOIL_BY_LVL[1]);
-		if(Config.RATE_DROP_SPOIL_BY_LVL[1] != Config.RATE_DROP_SPOIL_BY_LVL[Config.ALT_MAX_LEVEL])
-			replyMSG.append(" - " + Config.RATE_DROP_SPOIL_BY_LVL[Config.ALT_MAX_LEVEL]);
+		replyMSG.append("<tr><td width=100>&nbsp;&nbsp;&nbsp;Spoil:</td><td width=200>x");
+		replyMSG.append(serverSettings.rateSpoil());
 		replyMSG.append("</td></tr>");
 
 		replyMSG.append("<tr><td width=100>Game Time:</td><td width=200>" + format.format(cal.getTime()) + "</td></tr>");

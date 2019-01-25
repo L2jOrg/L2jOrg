@@ -18,8 +18,11 @@ import org.l2j.gameserver.network.l2.s2c.EarthQuakePacket;
 import org.l2j.gameserver.network.l2.s2c.ExShowUsmPacket;
 import org.l2j.gameserver.network.l2.s2c.SocialActionPacket;
 import org.l2j.gameserver.network.l2.s2c.TutorialShowHtmlPacket;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.skills.AbnormalEffect;
 import org.l2j.gameserver.utils.Util;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class AdminEffects implements IAdminCommandHandler
 {
@@ -122,8 +125,10 @@ public class AdminEffects implements IAdminCommandHandler
 				}
 				else if(val >= 1 && val <= 4)
 				{
-					if(Config.SAVE_GM_EFFECTS)
+					if(getSettings(ServerSettings.class).saveGMEffects()) {
 						activeChar.setVar("gm_gmspeed", String.valueOf(val), -1);
+					}
+
 					if(val != sh_level)
 					{
 						if(sh_level != 0)
@@ -138,7 +143,7 @@ public class AdminEffects implements IAdminCommandHandler
 				handleInvul(activeChar, activeChar);
 				if(activeChar.isGM() && activeChar.isInvulnerable())
 				{
-					if(Config.SAVE_GM_EFFECTS)
+					if(getSettings(ServerSettings.class).saveGMEffects())
 						activeChar.setVar("gm_invul", "true", -1);
 				}
 				else

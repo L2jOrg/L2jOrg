@@ -1,6 +1,8 @@
 package npc.model.residences.instantclanhall;
 
 import org.l2j.commons.collections.MultiValueSet;
+import org.l2j.gameserver.Contants;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Skill;
@@ -133,7 +135,7 @@ public class InstantClanHallManagerInstance extends MerchantInstance
 		{
 			if(reply == 1)
 			{
-				if(ItemFunctions.haveItem(player, ItemTemplate.ITEM_ID_ADENA, 2000))
+				if(ItemFunctions.haveItem(player, Items.ADENA, 2000))
 				{
 					Skill skill = SkillHolder.getInstance().getSkill(TELEPORT_SKILL_ID, 1);
 					if(skill != null)
@@ -147,7 +149,7 @@ public class InstantClanHallManagerInstance extends MerchantInstance
 			}
 			else if(reply == 2)
 			{
-				if(ItemFunctions.haveItem(player, ItemTemplate.ITEM_ID_ADENA, 2000))
+				if(ItemFunctions.haveItem(player, Items.ADENA, 2000))
 				{
 					Skill skill = SkillHolder.getInstance().getSkill(TELEPORT_SKILL_ID, 1);
 					if(skill != null)

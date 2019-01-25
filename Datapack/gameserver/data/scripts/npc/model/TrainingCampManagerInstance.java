@@ -11,9 +11,12 @@ import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ExTrainingZone_Admission;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
 
 import java.util.concurrent.TimeUnit;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Bonux
@@ -132,9 +135,10 @@ public class TrainingCampManagerInstance extends NpcInstance
 						final long trainingTime = trainingCamp.getTrainingTime(TimeUnit.MINUTES);
 						if(trainingTime >= 1)
 						{
+							var serverSettings = getSettings(ServerSettings.class);
 							final double experience = (trainingTime * (Experience.getExpForLevel(trainingCamp.getLevel()) * Experience.getTrainingRate(trainingCamp.getLevel()))) / TrainingCamp.TRAINING_DIVIDER;
-							final long expGained = (long) (experience * Config.RATE_XP_BY_LVL[trainingCamp.getLevel()]);
-							final long spGained = (long) ((experience * Config.RATE_SP_BY_LVL[trainingCamp.getLevel()]) / 250d);
+							final long expGained = (long) (experience * serverSettings.rateXP());
+							final long spGained = (long) ((experience * serverSettings.rateSP()) / 250d);
 							showChatWindow(player, "default/g_training_officer005.htm", false, "<?training_level?>", trainingCamp.getLevel(), "<?training_time?>", trainingTime, "<?training_exp?>", expGained, "<?training_sp?>", spGained);
 						}
 						else
@@ -161,9 +165,10 @@ public class TrainingCampManagerInstance extends NpcInstance
 
 							player.sendPacket(SystemMsg.CALCULATING_XP_AND_SP_OBTAINED_FROM_TRAINING);
 
+							var serverSetttings = getSettings(ServerSettings.class);
 							final double experience = (trainingTime * (Experience.getExpForLevel(trainingCamp.getLevel()) * Experience.getTrainingRate(trainingCamp.getLevel()))) / TrainingCamp.TRAINING_DIVIDER;
-							final long expGained = (long) (experience * Config.RATE_XP_BY_LVL[trainingCamp.getLevel()]);
-							final long spGained = (long) ((experience * Config.RATE_SP_BY_LVL[trainingCamp.getLevel()]) / 250d);
+							final long expGained = (long) (experience * serverSetttings.rateXP());
+							final long spGained = (long) ((experience * serverSetttings.rateSP() / 250d));
 							player.addExpAndSp(expGained, spGained, -1, -1, false, false, false, false, false);
 
 							final SystemMessagePacket sysMsg = new SystemMessagePacket(SystemMsg.YOU_HAVE_COMPLETED_TRAINING_IN_THE_ROYAL_TRAINING_CAMP_AND_OBTAINED_S1_XP_AND_S2_SP);

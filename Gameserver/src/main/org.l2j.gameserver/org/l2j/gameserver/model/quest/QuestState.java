@@ -10,6 +10,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;
 import org.l2j.gameserver.listener.actor.OnDeathListener;
 import org.l2j.gameserver.listener.actor.OnKillListener;
@@ -23,12 +24,14 @@ import org.l2j.gameserver.model.base.Element;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.network.l2.s2c.*;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.utils.ItemFunctions;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 public final class QuestState
@@ -410,12 +413,12 @@ public final class QuestState
 	 */
 	public void giveItems(int itemId, long count)
 	{
-		giveItems(itemId, count, -1, itemId == ItemTemplate.ITEM_ID_ADENA);
+		giveItems(itemId, count, -1, itemId == Items.ADENA);
 	}
 
 	public void giveItems(int itemId, long count, long limit)
 	{
-		giveItems(itemId, count, limit, itemId == ItemTemplate.ITEM_ID_ADENA);
+		giveItems(itemId, count, limit, itemId == Items.ADENA);
 	}
 
 	public void giveItems(int itemId, long count, boolean rate)
@@ -441,11 +444,12 @@ public final class QuestState
 
 		if(rate)
 		{
-			if(!Config.RATE_QUEST_REWARD_EXP_SP_ADENA_ONLY || itemId == ItemTemplate.ITEM_ID_ADENA)
+			var serverSettings = getSettings(ServerSettings.class);
+			if(!serverSettings.isRateQuestAffectsXpSpAdenaOnly() || itemId == Items.ADENA)
 				count = (long) (count * getRateQuestsReward());
 
 			if(limit > 0)
-				count = (long) Math.min(limit * Config.QUESTS_REWARD_LIMIT_MODIFIER, count);
+				count = (long) Math.min(limit * serverSettings.questRewardLimitModifier(), count);
 		}
 
 		ItemFunctions.addItem(player, itemId, count, true);
@@ -551,7 +555,7 @@ public final class QuestState
 		double rate = _quest.getRewardRate();
 		Player player = getPlayer();
 		if(player == null)
-			return rate * Config.RATE_QUESTS_REWARD;
+			return rate * getSettings(ServerSettings.class).rateQuestReward();
 		return rate * player.getRateQuestsReward();
 	}
 

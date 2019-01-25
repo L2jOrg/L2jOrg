@@ -11,8 +11,11 @@ import org.l2j.gameserver.model.pledge.SubUnit;
 import org.l2j.gameserver.model.pledge.UnitMember;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.PledgeShowInfoUpdatePacket;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.tables.ClanTable;
 import org.l2j.gameserver.utils.Util;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * Pledge Manipulation //pledge <create|setlevel|resetcreate|resetwait|addrep|setleader>
@@ -61,7 +64,7 @@ public class AdminPledge implements IAdminCommandHandler
 						activeChar.sendPacket(SystemMsg.CLAN_NAMES_LENGTH_IS_INCORRECT);
 						return false;
 					}
-					if(!Util.isMatchingRegexp(pledgeName, Config.CLAN_NAME_TEMPLATE))
+					if(!Util.isMatchingRegexp(pledgeName, getSettings(ServerSettings.class).clanNameTemplate()))
 					{
 						// clan name is not matching template
 						activeChar.sendPacket(SystemMsg.CLAN_NAME_IS_INVALID);

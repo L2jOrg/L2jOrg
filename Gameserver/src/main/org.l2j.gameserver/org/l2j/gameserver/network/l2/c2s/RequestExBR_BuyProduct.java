@@ -2,6 +2,8 @@ package org.l2j.gameserver.network.l2.c2s;
 
 import java.util.List;
 
+import org.l2j.gameserver.Contants;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;
 import org.l2j.gameserver.data.xml.holder.ProductDataHolder;
 import org.l2j.gameserver.model.Player;
@@ -71,7 +73,7 @@ public class RequestExBR_BuyProduct extends L2GameClientPacket
 			}
 			else if(product.getPointsType() == ProductPointsType.ADENA)
 			{
-				if(!ItemFunctions.haveItem(activeChar, ItemTemplate.ITEM_ID_ADENA, pointsRequired))
+				if(!ItemFunctions.haveItem(activeChar, Items.ADENA, pointsRequired))
 				{
 					activeChar.sendPacket(ExBR_BuyProductPacket.RESULT_NOT_ENOUGH_POINTS);
 					return;
@@ -126,7 +128,7 @@ public class RequestExBR_BuyProduct extends L2GameClientPacket
 			}
 			else if(product.getPointsType() == ProductPointsType.ADENA)
 			{
-				if(!ItemFunctions.deleteItem(activeChar, ItemTemplate.ITEM_ID_ADENA, pointsRequired, false))
+				if(!ItemFunctions.deleteItem(activeChar, Items.ADENA, pointsRequired, false))
 				{
 					activeChar.sendPacket(ExBR_BuyProductPacket.RESULT_NOT_ENOUGH_POINTS);
 					return;

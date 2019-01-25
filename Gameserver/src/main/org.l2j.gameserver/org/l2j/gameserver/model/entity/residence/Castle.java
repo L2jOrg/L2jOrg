@@ -7,6 +7,8 @@ import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.math.SafeMath;
 import org.l2j.gameserver.Announcements;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.Contants;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.dao.CastleDAO;
 import org.l2j.gameserver.dao.CastleHiredGuardDAO;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
@@ -94,7 +96,7 @@ public class Castle extends Residence
 					Warehouse warehouse = oldOwner.getWarehouse();
 					if(warehouse != null)
 					{
-						warehouse.addItem(ItemTemplate.ITEM_ID_ADENA, amount);
+						warehouse.addItem(Items.ADENA, amount);
 						addToTreasuryNoTax(-amount, false);
 						Log.add(getName() + "|" + -amount + "|Castle:changeOwner", "treasury");
 					}

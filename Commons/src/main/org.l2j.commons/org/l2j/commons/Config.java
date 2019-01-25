@@ -1820,16 +1820,6 @@ public final class Config {
                 }
 
                 LANGUAGE = serverSettings.getProperty("Language", "en_US");
-
-                String serverTypes = serverSettings.getProperty("ServerType", "Classic");
-                for (String type : serverTypes.split(",")) {
-                    try {
-                        ServerType serverType = ServerType.valueOf(type.trim().toUpperCase());
-                        SERVER_TYPE |= serverType.getId();
-                    } catch(Exception e) {
-                        _log.warn(e.getLocalizedMessage(), e);
-                    }
-                }
             } catch (Exception e) {
                 e.printStackTrace();
                 throw new Error("Failed to Load " + CONFIGURATION_FILE + " File.");

@@ -19,15 +19,16 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ActionFailPacket;
 import org.l2j.gameserver.network.l2.s2c.SayPacket2;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.utils.ChatUtils;
 import org.l2j.gameserver.utils.Log;
-import org.l2j.gameserver.utils.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 public class Say2C extends L2GameClientPacket {
@@ -204,7 +205,7 @@ public class Say2C extends L2GameClientPacket {
                 if (!activeChar.getAntiFlood().canShout(text))
                     return;
 
-                if (Config.GLOBAL_SHOUT)
+                if (getSettings(ServerSettings.class).isShoutGlobal())
                     ChatUtils.announce(activeChar, cs);
                 else
                     ChatUtils.shout(activeChar, cs);
@@ -220,7 +221,7 @@ public class Say2C extends L2GameClientPacket {
                 if (!activeChar.getAntiFlood().canTrade(text))
                     return;
 
-                if (Config.GLOBAL_TRADE_CHAT)
+                if (getSettings(ServerSettings.class).isTradeChatGlobal())
                     ChatUtils.announce(activeChar, cs);
                 else
                     ChatUtils.shout(activeChar, cs);
@@ -346,7 +347,8 @@ public class Say2C extends L2GameClientPacket {
                     return;
                 }
 
-                if (!Config.ALLOW_WORLD_CHAT)
+                var serverSettings = getSettings(ServerSettings.class);
+                if (!serverSettings.isWorldChatAllowed())
                     return;
 
                 if (activeChar.isInObserverMode()) {
@@ -363,12 +365,12 @@ public class Say2C extends L2GameClientPacket {
                 }
 
                 if (activeChar.hasPremiumAccount()) {
-                    if (activeChar.getLevel() < Config.WORLD_CHAT_USE_MIN_LEVEL_PA) {
-                        activeChar.sendPacket(new SystemMessagePacket(SystemMsg.YOU_CAN_USE_THE_WORLD_CHAT_WITH_S1_LEVEL).addInteger(Config.WORLD_CHAT_USE_MIN_LEVEL_PA));
+                    if (activeChar.getLevel() < serverSettings.premiumUseWorldChatMinLevel()) {
+                        activeChar.sendPacket(new SystemMessagePacket(SystemMsg.YOU_CAN_USE_THE_WORLD_CHAT_WITH_S1_LEVEL).addInteger(serverSettings.premiumUseWorldChatMinLevel()));
                         return;
                     }
-                } else if (activeChar.getLevel() < Config.WORLD_CHAT_USE_MIN_LEVEL) {
-                    activeChar.sendPacket(new SystemMessagePacket(SystemMsg.YOU_CAN_USE_THE_WORLD_CHAT_WITH_S1_LEVEL).addInteger(Config.WORLD_CHAT_USE_MIN_LEVEL));
+                } else if (activeChar.getLevel() < serverSettings.useWorldChatMinLevel()) {
+                    activeChar.sendPacket(new SystemMessagePacket(SystemMsg.YOU_CAN_USE_THE_WORLD_CHAT_WITH_S1_LEVEL).addInteger(serverSettings.useWorldChatMinLevel()));
                     return;
                 }
 
@@ -378,7 +380,7 @@ public class Say2C extends L2GameClientPacket {
                 activeChar.setUsedWorldChatPoints(activeChar.getUsedWorldChatPoints() + 1);
                 break;
             default:
-                _log.warn("Character " + activeChar.getName() + " used unknown chat type: " + type.ordinal() + ".");
+                _log.warn("Character {} used unknown chat type: {}. ", activeChar.getName(), type.ordinal());
         }
     }
 }

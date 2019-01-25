@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.l2j.gameserver.Contants;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.model.items.TradeItem;
@@ -32,7 +34,7 @@ public class PrivateStoreBuyManageList extends L2GameServerPacket
 		Arrays.sort(items, ItemClassComparator.getInstance());
 		TradeItem bi;
 		for(ItemInstance item : items)
-			if(item.canBePrivateStore(buyer) && item.getItemId() != ItemTemplate.ITEM_ID_ADENA)
+			if(item.canBePrivateStore(buyer) && item.getItemId() != Items.ADENA)
 			{
 				_buyList.add(bi = new TradeItem(item, item.getTemplate().isBlocked(buyer, item)));
 				bi.setObjectId(0);

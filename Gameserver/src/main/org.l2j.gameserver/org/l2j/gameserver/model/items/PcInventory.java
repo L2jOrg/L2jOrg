@@ -6,6 +6,8 @@ import java.util.Collections;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.threading.RunnableImpl;
+import org.l2j.gameserver.Contants;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.instances.PetInstance;
 import org.l2j.gameserver.model.items.ItemInstance.ItemLocation;
@@ -69,12 +71,12 @@ public class PcInventory extends Inventory
 	 */
 	public ItemInstance addAdena(long amount)
 	{
-		return addItem(ItemTemplate.ITEM_ID_ADENA, amount);
+		return addItem(Items.ADENA, amount);
 	}
 
 	public boolean reduceAdena(long adena)
 	{
-		return destroyItemByItemId(ItemTemplate.ITEM_ID_ADENA, adena);
+		return destroyItemByItemId(Items.ADENA, adena);
 	}
 
 	public int getPaperdollVariation1Id(int slot)
@@ -463,7 +465,7 @@ public class PcInventory extends Inventory
 		Player actor = getActor();
 
 		actor.sendPacket(new InventoryUpdatePacket().addNewItem(actor, item));
-		if(item.getItemId() == ItemTemplate.ITEM_ID_ADENA)
+		if(item.getItemId() == Items.ADENA)
 			actor.sendPacket(new ExAdenaInvenCount(actor));
 	}
 
@@ -480,7 +482,7 @@ public class PcInventory extends Inventory
 
 		for(ItemInstance item : items)
 		{
-			if(item.getItemId() == ItemTemplate.ITEM_ID_ADENA)
+			if(item.getItemId() == Items.ADENA)
 				actor.sendPacket(new ExAdenaInvenCount(actor));
 		}
 	}
@@ -490,7 +492,7 @@ public class PcInventory extends Inventory
 	{
 		Player actor = getActor();
 		actor.sendPacket(new InventoryUpdatePacket().addRemovedItem(actor, item));
-		if(item.getItemId() == ItemTemplate.ITEM_ID_ADENA)
+		if(item.getItemId() == Items.ADENA)
 			actor.sendPacket(new ExAdenaInvenCount(actor));
 	}
 

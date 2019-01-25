@@ -29,6 +29,7 @@ import org.l2j.gameserver.network.l2.components.HtmlMessage;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.*;
 import org.l2j.gameserver.network.l2.s2c.updatetype.NpcInfoType;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.skills.AbnormalEffect;
 import org.l2j.gameserver.stats.triggers.TriggerType;
 import org.l2j.gameserver.utils.GameStats;
@@ -38,6 +39,8 @@ import org.l2j.gameserver.utils.TradeHelper;
 
 import java.util.Calendar;
 import java.util.List;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class EnterWorld extends L2GameClientPacket {
 
@@ -120,7 +123,7 @@ public class EnterWorld extends L2GameClientPacket {
 		if(first)
 		{
 			activeChar.setOnlineStatus(true);
-			if(activeChar.getPlayerAccess().GodMode && !Config.SHOW_GM_LOGIN)
+			if(activeChar.getPlayerAccess().GodMode && !getSettings(ServerSettings.class).showGMLogin())
 			{
 				activeChar.setGMInvisible(true);
 				activeChar.startAbnormalEffect(AbnormalEffect.STEALTH);
@@ -155,7 +158,7 @@ public class EnterWorld extends L2GameClientPacket {
 		activeChar.getAttendanceRewards().onEnterWorld();
 		activeChar.sendPacket(new ExReceiveShowPostFriend(activeChar));
 
-		if(Config.ALLOW_WORLD_CHAT)
+		if(getSettings(ServerSettings.class).isWorldChatAllowed())
 			activeChar.sendPacket(new ExWorldChatCnt(activeChar));
 
 		checkNewMail(activeChar);
@@ -284,7 +287,7 @@ public class EnterWorld extends L2GameClientPacket {
 		// на всякий случай
 		activeChar.sendActionFailed();
 
-		if(first && activeChar.isGM() && Config.SAVE_GM_EFFECTS && activeChar.getPlayerAccess().CanUseGMCommand)
+		if(first && activeChar.isGM() && getSettings(ServerSettings.class).saveGMEffects() && activeChar.getPlayerAccess().CanUseGMCommand)
 		{
 			//silence
 			if(activeChar.getVarBoolean("gm_silence"))

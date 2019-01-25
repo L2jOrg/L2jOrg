@@ -10,19 +10,21 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static java.nio.file.Files.newBufferedReader;
+import static org.l2j.commons.util.Util.*;
 
 public final class SettingsFile extends Properties {
 
     private static final long serialVersionUID = -4599023842346938325L;
-    private static final Logger _log = LoggerFactory.getLogger(SettingsFile.class);
+    private static final Logger logger = LoggerFactory.getLogger(SettingsFile.class);
+    private static final String DEFAULT_DELIMITER = ",";
+
 
     SettingsFile(String filePath) {
         try (var reader = newBufferedReader(Paths.get(filePath))) {
             load(reader);
         } catch (IOException e) {
-            _log.error(e.getLocalizedMessage(), e);
+            logger.error(e.getLocalizedMessage(), e);
         }
     }
 
@@ -41,7 +43,7 @@ public final class SettingsFile extends Properties {
         try {
             return Integer.parseInt(getProperty(key), radix);
         } catch (Exception e) {
-            _log.warn("Error getting property {} : {}", key, e.getLocalizedMessage());
+            logger.warn("Error getting property {} : {}", key, e.getLocalizedMessage());
         }
         return defaultValue;
     }
@@ -59,6 +61,14 @@ public final class SettingsFile extends Properties {
         return Stream.of(values).filter(Util::isNotEmpty).collect(Collectors.toList());
     }
 
+    public String[] getStringArray(String key) {
+        String value = getProperty(key);
+        if(isNullOrEmpty(value)) {
+            return STRING_ARRAY_EMPTY;
+        }
+        return value.split(DEFAULT_DELIMITER);
+    }
+
     public Map<Integer, Integer> getIntegerMap(String key, String entryDelimiter, String valueDelimiter) {
         String[] values = getProperty(key, "").split(entryDelimiter);
         Map<Integer, Integer> map = new HashMap<>();
@@ -74,7 +84,7 @@ public final class SettingsFile extends Properties {
             int mapValue = Integer.parseInt(value[1].trim());
             map.put(mapKey, mapValue);
         } catch (Exception e) {
-            _log.warn("Error getting property {} on entry {}: {}", key, entry, e.getLocalizedMessage());
+            logger.warn("Error getting property {} on entry {}: {}", key, entry, e.getLocalizedMessage());
         }
     }
 
@@ -86,7 +96,7 @@ public final class SettingsFile extends Properties {
                 int value = Integer.parseInt(v.trim());
                 list.add(value);
             } catch (Exception e) {
-                _log.warn("Error getting property {} on value {} : {}", key, v, e.getLocalizedMessage());
+                logger.warn("Error getting property {} on value {} : {}", key, v, e.getLocalizedMessage());
             }
         });
         return list;
@@ -96,7 +106,7 @@ public final class SettingsFile extends Properties {
         try {
             return Double.parseDouble(getProperty(key));
         } catch (Exception e) {
-            _log.warn("Error getting property {} : {}", key, e.getLocalizedMessage());
+            logger.warn("Error getting property {} : {}", key, e.getLocalizedMessage());
         }
         return defaultValue;
     }
@@ -105,13 +115,17 @@ public final class SettingsFile extends Properties {
         try {
             return Float.parseFloat(getProperty(key));
         } catch (Exception e) {
-            _log.warn("Error getting property {} : {}", key, e.getLocalizedMessage());
+            logger.warn("Error getting property {} : {}", key, e.getLocalizedMessage());
         }
         return defaultValue;
     }
 
     public int[] getIntegerArray(String key, String delimiter) {
-        String[] values = getProperty(key).split(",");
+        var property = getProperty(key);
+        if(isNullOrEmpty(property)) {
+            return  INT_ARRAY_EMPTY;
+        }
+        var values = property.split(delimiter);
         int[] array = new int[values.length];
         int index = 0;
         for (String v : values) {
@@ -124,7 +138,7 @@ public final class SettingsFile extends Properties {
                 int value = Integer.parseInt(v);
                 array[index++] = value;
             } catch (Exception e) {
-                _log.warn("Error getting property {} : {}", key, e.getLocalizedMessage());
+                logger.warn("Error getting property {} : {}", key, e.getLocalizedMessage());
             }
         }
         return array;
@@ -134,9 +148,17 @@ public final class SettingsFile extends Properties {
         try {
             return Long.parseLong(getProperty(key));
         } catch (Exception e) {
-            _log.warn("Error getting property {} : {}", key, e.getLocalizedMessage());
+            logger.warn("Error getting property {} : {}", key, e.getLocalizedMessage());
         }
         return defaultValue;
     }
 
+    public byte getByte(String key, byte defaultValue) {
+        try {
+            return Byte.parseByte(getProperty(key));
+        } catch (Exception e) {
+            logger.warn("Error getting property {} : {}", key, e.getLocalizedMessage());
+        }
+        return defaultValue;
+    }
 }

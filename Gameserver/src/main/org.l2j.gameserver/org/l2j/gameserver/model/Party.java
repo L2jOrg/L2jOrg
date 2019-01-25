@@ -8,6 +8,8 @@ import org.l2j.commons.collections.CollectionUtils;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.Contants;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.instancemanager.MatchingRoomManager;
 import org.l2j.gameserver.instancemanager.ReflectionManager;
@@ -23,6 +25,7 @@ import org.l2j.gameserver.network.l2.components.IBroadcastPacket;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.*;
 import org.l2j.gameserver.network.l2.s2c.updatetype.NpcInfoType;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.taskmanager.LazyPrecisionTaskManager;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.utils.ItemFunctions;
@@ -37,6 +40,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class Party implements PlayerGroup
 {
@@ -575,7 +580,7 @@ public class Party implements PlayerGroup
 	{
 		switch(item.getItemId())
 		{
-			case ItemTemplate.ITEM_ID_ADENA:
+			case Items.ADENA:
 				distributeAdena(player, item, fromNpc);
 				break;
 			default:
@@ -678,7 +683,7 @@ public class Party implements PlayerGroup
 		{
 			long count = member.equals(player) ? amount + ost : amount;
 			member.getInventory().addAdena(count);
-			member.sendPacket(SystemMessagePacket.obtainItems(ItemTemplate.ITEM_ID_ADENA, count, 0));
+			member.sendPacket(SystemMessagePacket.obtainItems(Items.ADENA, count, 0));
 		}
 
 		if(fromNpc == null)
@@ -800,13 +805,14 @@ public class Party implements PlayerGroup
 			minSpoilChanceMod = Math.min(minSpoilChanceMod, member.getPremiumAccount().getModifiers().getSpoilChance());
 		}
 
-		_rateExp = Config.RATE_PARTY_MIN ? minRateExp : rateExp / count;
-		_rateSp = Config.RATE_PARTY_MIN ? minRateSp : rateSp / count;
-		_rateDrop = Config.RATE_PARTY_MIN ? minRateDrop : rateDrop / count;
-		_rateAdena = Config.RATE_PARTY_MIN ? minRateAdena : rateAdena / count;
-		_rateSpoil = Config.RATE_PARTY_MIN ? minRateSpoil : rateSpoil / count;
-		_dropChanceMod = Config.RATE_PARTY_MIN ? minDropChanceMod : dropChanceMod / count;
-		_spoilChanceMod = Config.RATE_PARTY_MIN ? minSpoilChanceMod : spoilChanceMod / count;
+		var rateBasedOnMinLevel = getSettings(ServerSettings.class).isRatePartyBasedOnMinLevel();
+		_rateExp = rateBasedOnMinLevel ? minRateExp : rateExp / count;
+		_rateSp = rateBasedOnMinLevel ? minRateSp : rateSp / count;
+		_rateDrop = rateBasedOnMinLevel ? minRateDrop : rateDrop / count;
+		_rateAdena = rateBasedOnMinLevel ? minRateAdena : rateAdena / count;
+		_rateSpoil = rateBasedOnMinLevel ? minRateSpoil : rateSpoil / count;
+		_dropChanceMod = rateBasedOnMinLevel ? minDropChanceMod : dropChanceMod / count;
+		_spoilChanceMod = rateBasedOnMinLevel ? minSpoilChanceMod : spoilChanceMod / count;
 	}
 
 	public int getLevel()

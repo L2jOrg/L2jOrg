@@ -15,9 +15,12 @@ import org.l2j.gameserver.model.pledge.SubUnit;
 import org.l2j.gameserver.model.pledge.UnitMember;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.PledgeShowInfoUpdatePacket;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.tables.ClanTable;
 import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.Util;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author VISTALL
@@ -45,7 +48,7 @@ public class VillageMasterPledgeBypasses
 			return;
 		}
 
-		if(!Util.isMatchingRegexp(clanName, Config.CLAN_NAME_TEMPLATE))
+		if(!Util.isMatchingRegexp(clanName, getSettings(ServerSettings.class).clanNameTemplate()))
 		{
 			player.sendPacket(SystemMsg.CLAN_NAME_IS_INVALID);
 			return;
@@ -290,7 +293,7 @@ public class VillageMasterPledgeBypasses
 			player.sendPacket(SystemMsg.INCORRECT_LENGTH_FOR_AN_ALLIANCE_NAME);
 			return false;
 		}
-		if(!Util.isMatchingRegexp(allyName, Config.ALLY_NAME_TEMPLATE))
+		if(!Util.isMatchingRegexp(allyName, getSettings(ServerSettings.class).allyNameTemplate()))
 		{
 			player.sendPacket(SystemMsg.INCORRECT_ALLIANCE_NAME__PLEASE_TRY_AGAIN);
 			return false;

@@ -1,6 +1,8 @@
 package ai.residences.instantclanhall;
 
 import org.l2j.commons.util.Rnd;
+import org.l2j.gameserver.Contants;
+import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.ai.NpcAI;
 import org.l2j.gameserver.instancemanager.ReflectionManager;
 import org.l2j.gameserver.model.Creature;
@@ -175,7 +177,7 @@ public class InstantClanHallManagerAI extends NpcAI
 			if(arg1 != null && (arg1 instanceof Player))
 			{
 				Player player = (Player) arg1;
-				ItemFunctions.deleteItem(player, ItemTemplate.ITEM_ID_ADENA, 2000);
+				ItemFunctions.deleteItem(player, Items.ADENA, 2000);
 				switch(Rnd.get(3))
 				{
 					case 0:
@@ -202,7 +204,7 @@ public class InstantClanHallManagerAI extends NpcAI
 			if(arg1 != null && (arg1 instanceof Player))
 			{
 				Player player = (Player) arg1;
-				ItemFunctions.deleteItem(player, ItemTemplate.ITEM_ID_ADENA, 2000);
+				ItemFunctions.deleteItem(player, Items.ADENA, 2000);
 				switch(Rnd.get(3))
 				{
 					case 0:
@@ -229,7 +231,7 @@ public class InstantClanHallManagerAI extends NpcAI
 			if(arg1 != null && (arg1 instanceof Player))
 			{
 				Player player = (Player) arg1;
-				ItemFunctions.deleteItem(player, ItemTemplate.ITEM_ID_ADENA, 2000);
+				ItemFunctions.deleteItem(player, Items.ADENA, 2000);
 				switch(Rnd.get(3))
 				{
 					case 0:
