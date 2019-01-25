@@ -70,7 +70,7 @@ public class EnterWorld extends L2GameClientPacket {
 	{
 		boolean first = activeChar.entering;
 
-		activeChar.sendPacket(ExLightingCandleEvent.DISABLED);
+		activeChar.sendPacket(ExLightingCandleEvent.ENABLED);
 		//TODO: activeChar.sendPacket(new ExChannlChatEnterWorld(activeChar));
 		//TODO: activeChar.sendPacket(new ExChannlChatPlegeInfo(activeChar));
 		activeChar.sendPacket(new ExEnterWorldPacket());
