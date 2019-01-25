@@ -2,6 +2,9 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.pledge.Clan;
+import org.l2j.gameserver.settings.ServerSettings;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * sample
@@ -30,7 +33,7 @@ public class PledgeStatusChangedPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeInt(Config.REQUEST_ID);
+		writeInt(getSettings(ServerSettings.class).serverId());
 		writeInt(leader_id);
 		writeInt(clan_id);
 		writeInt(crestId);

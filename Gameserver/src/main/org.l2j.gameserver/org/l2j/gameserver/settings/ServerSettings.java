@@ -63,14 +63,30 @@ public class ServerSettings implements Settings {
     private float rateRaidAttack;
     private float rateEpicDefense;
     private float rateEpicAttack;
+    private int serverId;
+    private String internalAddress;
+    private String externalAddress;
+    private int port;
+    private String authServerAddress;
+    private int authServerPort;
+    private int maximumOnlineUsers;
 
     @Override
     public void load(SettingsFile settingsFile) {
+        serverId = settingsFile.getInteger("ServerId", 1);
+        internalAddress = settingsFile.getString("InternalAddress", "127.0.0.1");
+        externalAddress = settingsFile.getString("ExternalAddress", "127.0.0.1");
+        port = settingsFile.getInteger("Port", 7777);
+        authServerAddress = settingsFile.getString("AuthServerAddress", "127.0.0.1");
+        authServerPort = settingsFile.getInteger("AuthServerPort", 9014);
+
         ageLimit = settingsFile.getByte("AgeLimit", (byte) 0);
         gmOnly = settingsFile.getBoolean("GMOnly", false);
         showBrackets = settingsFile.getBoolean("ShowBrackets", false);
         isPvP = settingsFile.getBoolean("PvPServer", false);
         parseServerType(settingsFile);
+
+        maximumOnlineUsers = settingsFile.getInteger("MaximumOnlineUsers", 10);
 
         everyBodyIsAdmin = settingsFile.getBoolean("EverybodyHasAdminRights", false);
         hideGMStatus = settingsFile.getBoolean("HideGMStatus", true);
@@ -147,6 +163,30 @@ public class ServerSettings implements Settings {
         }
     }
 
+    public int serverId() {
+        return serverId;
+    }
+
+    public String internalAddress() {
+        return internalAddress;
+    }
+
+    public String externalAddress() {
+        return externalAddress;
+    }
+
+    public int port() {
+        return port;
+    }
+
+    public String authServerAddress() {
+        return authServerAddress;
+    }
+
+    public int authServerPort() {
+        return authServerPort;
+    }
+
     public byte ageLimit() {
         return ageLimit;
     }
@@ -165,6 +205,10 @@ public class ServerSettings implements Settings {
 
     public int type() {
         return type;
+    }
+
+    public int maximumOnlineUsers() {
+        return maximumOnlineUsers;
     }
 
     public boolean isEveryBodyIsAdmin() {

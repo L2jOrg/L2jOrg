@@ -4,12 +4,15 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.ImagesCache;
 import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.utils.BypassStorage.BypassType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.regex.Matcher;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class ShowBoardPacket extends L2GameServerPacket
 {
@@ -49,7 +52,7 @@ public class ShowBoardPacket extends L2GameServerPacket
 		{
 			String imageName = m.group(1);
 			int imageId = ImagesCache.getInstance().getImageId(imageName);
-			html = html.replaceAll("%image:" + imageName + "%", "Crest.pledge_crest_" + Config.REQUEST_ID + "_" + imageId);
+			html = html.replaceAll("%image:" + imageName + "%", "Crest.pledge_crest_" + getSettings(ServerSettings.class).serverId() + "_" + imageId);
 			byte[] image = ImagesCache.getInstance().getImage(imageId);
 			if(image != null)
 				player.sendPacket(new PledgeCrestPacket(imageId, image));
@@ -92,7 +95,7 @@ public class ShowBoardPacket extends L2GameServerPacket
 		{
 			String imageName = m.group(1);
 			int imageId = ImagesCache.getInstance().getImageId(imageName);
-			html = html.replaceAll("%image:" + imageName + "%", "Crest.crest_" + Config.REQUEST_ID + "_" + imageId);
+			html = html.replaceAll("%image:" + imageName + "%", "Crest.crest_" + getSettings(ServerSettings.class).serverId() + "_" + imageId);
 			byte[] image = ImagesCache.getInstance().getImage(imageId);
 			if(image != null)
 				player.sendPacket(new PledgeCrestPacket(imageId, image));

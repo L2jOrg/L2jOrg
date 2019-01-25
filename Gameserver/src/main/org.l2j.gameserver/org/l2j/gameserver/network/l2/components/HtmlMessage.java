@@ -8,6 +8,7 @@ import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.network.l2.s2c.*;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.utils.BypassStorage.BypassType;
 import org.l2j.gameserver.utils.HtmlUtils;
 import org.slf4j.Logger;
@@ -18,6 +19,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.*;
 
 /**
@@ -170,7 +172,7 @@ public class HtmlMessage implements IBroadcastPacket {
             String imageName = m.group(1);
             int imageId = ImagesCache.getInstance().getImageId(imageName);
 
-            Util.replaceAll(sb, "%image:" + imageName + "%", "Crest.pledge_crest_" + Config.REQUEST_ID + "_" + imageId);
+            Util.replaceAll(sb, "%image:" + imageName + "%", "Crest.pledge_crest_" + getSettings(ServerSettings.class).serverId() + "_" + imageId);
 
             byte[] image = ImagesCache.getInstance().getImage(imageId);
             if(image != null)

@@ -6,7 +6,9 @@ import org.l2j.gameserver.model.entity.residence.ClanHall;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.pledge.Alliance;
 import org.l2j.gameserver.model.pledge.Clan;
+import org.l2j.gameserver.settings.ServerSettings;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 public class PledgeShowInfoUpdatePacket extends L2GameServerPacket
@@ -55,7 +57,7 @@ public class PledgeShowInfoUpdatePacket extends L2GameServerPacket
 	{
 		//sending empty data so client will ask all the info in response ;)
 		writeInt(clan_id);
-		writeInt(Config.REQUEST_ID);
+		writeInt(getSettings(ServerSettings.class).serverId());
 		writeInt(crest_id);
 		writeInt(clan_level);
 		writeInt(_hasCastle);

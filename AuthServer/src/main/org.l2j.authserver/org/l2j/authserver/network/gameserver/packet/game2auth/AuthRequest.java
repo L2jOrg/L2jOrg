@@ -25,17 +25,16 @@ public class AuthRequest extends GameserverReadablePacket {
 
     @Override
 	protected void readImpl() {
-        var protocol = readInt();
 		desiredId = readByte();
-        acceptAlternativeId = readByte() != 0x00;
+        acceptAlternativeId = readByte() == 0x01;
+        internalHost = readString();
+        externalHost = readString();
+        port = readShort();
         serverType = readInt();
         ageLimit = readByte();
         gmOnly = readByte() == 0x01;
         showBrackets = readByte() == 0x01;
         isPvp = readByte() == 0x01;
-        externalHost = readString();
-        internalHost = readString();
-        port = readShort();
         maxPlayers = readInt();
     }
 
@@ -90,6 +89,6 @@ public class AuthRequest extends GameserverReadablePacket {
         gsi.setAgeLimit(ageLimit);
         gsi.setShowingBrackets(showBrackets);
         gsi.setIsPvp(isPvp);
-        gsi.setStatus(ServerStatus.STATUS_GOOD);
+        gsi.setStatus(gmOnly ? ServerStatus.STATUS_GM_ONLY : ServerStatus.STATUS_AUTO);
     }
 }

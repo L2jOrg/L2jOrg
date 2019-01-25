@@ -1,6 +1,8 @@
 package org.l2j.gameserver.network.l2.s2c;
 
-import org.l2j.gameserver.Config;
+import org.l2j.gameserver.settings.ServerSettings;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class VersionCheckPacket extends L2GameServerPacket
 {
@@ -23,7 +25,7 @@ public class VersionCheckPacket extends L2GameServerPacket
 		for(int i = 0; i < 8; i++)
 			writeByte(_key[i]);
 		writeInt(0x01);
-		writeInt(Config.REQUEST_ID);	// Server ID
+		writeInt(getSettings(ServerSettings.class).serverId());	// Server ID
 		writeByte(0x01);
 		writeInt(0x00); // Seed (obfuscation key)
 		writeByte(0x01);	// Classic?

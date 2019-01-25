@@ -480,11 +480,6 @@ public class Config
 
     public static boolean RETAIL_MULTISELL_ENCHANT_TRANSFER;
 
-    public static int REQUEST_ID;
-    public static String INTERNAL_HOSTNAME;
-    public static String EXTERNAL_HOSTNAME;
-    public static int PORT_GAME;
-
     // Security
     public static boolean EX_SECOND_AUTH_ENABLED;
     public static int EX_SECOND_AUTH_MAX_ATTEMPTS;

@@ -11,6 +11,7 @@ import org.l2j.gameserver.model.base.Race;
 import org.l2j.gameserver.model.base.SubClassType;
 import org.l2j.gameserver.model.items.Inventory;
 import org.l2j.gameserver.network.l2.GameClient;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.utils.AutoBan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,6 +21,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class CharacterSelectionInfoPacket extends L2GameServerPacket
 {
@@ -79,7 +82,7 @@ public class CharacterSelectionInfoPacket extends L2GameServerPacket
 			writeInt(charInfoPackage.getRace());
 			writeInt(charInfoPackage.getBaseClassId());
 
-			writeInt(Config.REQUEST_ID); // active ??
+			writeInt(getSettings(ServerSettings.class).serverId()); // active ??
 
 			writeInt(charInfoPackage.getX());
 			writeInt(charInfoPackage.getY());

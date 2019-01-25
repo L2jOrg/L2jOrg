@@ -1,6 +1,8 @@
 package org.l2j.gameserver.network.l2.s2c;
 
-import org.l2j.gameserver.Config;
+import org.l2j.gameserver.settings.ServerSettings;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class ExPledgeEmblem extends L2GameServerPacket
 {
@@ -19,7 +21,7 @@ public class ExPledgeEmblem extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeInt(Config.REQUEST_ID);
+		writeInt(getSettings(ServerSettings.class).serverId());
 		writeInt(_clanId);
 		writeInt(_crestId);
 		writeInt(_crestPart);

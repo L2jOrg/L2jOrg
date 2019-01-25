@@ -1,12 +1,11 @@
 package org.l2j.gameserver.network.authcomm;
 
-import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.config.templates.HostInfo;
-import org.l2j.gameserver.config.xml.holder.HostsConfigHolder;
-import org.l2j.gameserver.network.l2.GameClient;
 import io.github.joealisson.mmocore.Connector;
 import io.github.joealisson.mmocore.PacketExecutor;
 import io.github.joealisson.mmocore.ReadablePacket;
+import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.gameserver.network.l2.GameClient;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,6 +22,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 public class AuthServerCommunication implements Runnable, PacketExecutor<AuthServerClient> {
@@ -47,9 +47,9 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
 	}
 
 	public void connect() throws IOException, ExecutionException, InterruptedException {
-		HostInfo hostInfo = HostsConfigHolder.getInstance().getAuthServerHost();
-		logger.info("Connecting to authserver on {}:{}",hostInfo.getIP(), hostInfo.getPort());
-		InetSocketAddress address = isNullOrEmpty(hostInfo.getIP()) ? new InetSocketAddress(hostInfo.getPort()) : new InetSocketAddress(hostInfo.getIP(), hostInfo.getPort());
+		var serverSettings = getSettings(ServerSettings.class);
+		logger.info("Connecting to authserver on {}:{}",serverSettings.authServerAddress(), serverSettings.authServerPort());
+		InetSocketAddress address = isNullOrEmpty(serverSettings.authServerAddress()) ? new InetSocketAddress(serverSettings.port()) : new InetSocketAddress(serverSettings.authServerAddress(), serverSettings.authServerPort());
 		client = Connector.create(AuthServerClient::new, new PacketHandler(), this).connect(address);
 	}
 

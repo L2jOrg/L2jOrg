@@ -2,8 +2,6 @@ package org.l2j.gameserver;
 
 import io.github.joealisson.mmocore.ConnectionBuilder;
 import io.github.joealisson.mmocore.ConnectionHandler;
-import io.github.joealisson.primitive.sets.IntSet;
-import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import net.sf.ehcache.CacheManager;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.lang.StatsUtils;
@@ -11,9 +9,6 @@ import org.l2j.commons.listener.Listener;
 import org.l2j.commons.listener.ListenerList;
 import org.l2j.gameserver.cache.CrestCache;
 import org.l2j.gameserver.cache.ImagesCache;
-import org.l2j.gameserver.config.templates.HostInfo;
-import org.l2j.gameserver.config.xml.ConfigParsers;
-import org.l2j.gameserver.config.xml.holder.HostsConfigHolder;
 import org.l2j.gameserver.dao.CharacterDAO;
 import org.l2j.gameserver.dao.HidenItemsDAO;
 import org.l2j.gameserver.dao.ItemsDAO;
@@ -48,35 +43,31 @@ import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.network.l2.GamePacketHandler;
 import org.l2j.gameserver.scripts.Scripts;
 import org.l2j.gameserver.security.HWIDBan;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.tables.ClanTable;
 import org.l2j.gameserver.tables.EnchantHPBonusTable;
 import org.l2j.gameserver.taskmanager.AutomaticTasks;
 import org.l2j.gameserver.taskmanager.ItemsAutoDestroy;
-import org.l2j.gameserver.utils.Strings;
 import org.l2j.gameserver.utils.TradeHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.net.ServerSocket;
-import java.net.Socket;
 import java.util.Properties;
 
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 public class GameServer {
 
     private static final String LOG4J_CONFIGURATION_FILE = "log4j.configurationFile";
-    private static final String HIKARICP_CONFIGURATION_FILE = "hikaricp.configurationFile";
 
     public static final String UPDATE_NAME = "Classic: Saviors (Zaken)";
-    public static final int AUTH_SERVER_PROTOCOL = 2;
 
     private static Logger logger;
-
-    public static GameServer instance;
+    private static GameServer instance;
 
     private final ConnectionHandler<GameClient> connectionHandler;
     private final GameServerListenerList listeners;
@@ -92,28 +83,9 @@ public class GameServer {
         logVersionInfo();
 
         // Initialize config
-        ConfigParsers.parseAll();
         Config.load();
 
-        HostInfo[] hosts = HostsConfigHolder.getInstance().getGameServerHosts();
-        if (hosts.length == 0)
-            throw new Exception("Server hosts list is empty!");
-
-        // TODO Remove this, there is no need to have a lot of hosts in a single Execution. We need a solution more scalable
-        final IntSet ports = new HashIntSet();
-        for (HostInfo host : hosts) {
-            if (host.getIP() != null || host.getInnerIP() != null)
-                ports.add(host.getPort());
-        }
-
-        int[] portsArray = ports.toArray();
-
-        if (portsArray.length == 0)
-            throw new Exception("Server ports list is empty!");
-
-        // Check binding address
-        checkFreePorts(portsArray);
-        licenseHost = Config.EXTERNAL_HOSTNAME;
+        licenseHost = getSettings(ServerSettings.class).externalAddress();
         onlineLimit = Config.MAXIMUM_ONLINE_USERS;
         if (onlineLimit == 0)
             throw new Exception("Server online limit is zero!");
@@ -229,9 +201,8 @@ public class GameServer {
         logger.info("GameServer Started");
         logger.info("Maximum Numbers of Connected Players: " + getOnlineLimit());
 
-        var bindAddress = getInetSocketAddress();
         final GamePacketHandler gph = new GamePacketHandler();
-        connectionHandler = ConnectionBuilder.create(bindAddress, gph, gph, gph).build();
+        connectionHandler = ConnectionBuilder.create(new InetSocketAddress(getSettings(ServerSettings.class).port()), gph, gph, gph).build();
         connectionHandler.start();
 
         getListeners().onStart();
@@ -280,11 +251,6 @@ public class GameServer {
         }
     }
 
-    private InetSocketAddress getInetSocketAddress() {
-        return new InetSocketAddress(Config.PORT_GAME);
-    }
-
-
     public GameServerListenerList getListeners() {
         return listeners;
     }
@@ -299,51 +265,6 @@ public class GameServer {
 
     public <T extends GameListener> boolean removeListener(T listener) {
         return listeners.remove(listener);
-    }
-
-    private void checkFreePorts(int[] ports) {
-        for (int port : ports) {
-            while (!checkFreePort(port)) {
-                logger.warn("Port " + port + " is allready binded. Please free it and restart server.");
-                try {
-                    Thread.sleep(1000L);
-                } catch (InterruptedException ie) {
-                }
-            }
-        }
-    }
-
-    private static boolean checkFreePort(int port) {
-        ServerSocket ss = null;
-        try {
-            ss = new ServerSocket(port);
-        } catch (Exception e) {
-            return false;
-        } finally {
-            try {
-                ss.close();
-            } catch (Exception e) {
-            }
-        }
-
-        return true;
-    }
-
-    private static boolean checkOpenPort(String ip, int port) {
-        Socket socket = null;
-        try {
-            socket = new Socket();
-            socket.connect(new InetSocketAddress(ip, port), 100);
-        } catch (Exception e) {
-            return false;
-        } finally {
-            try {
-                socket.close();
-            } catch (Exception e) {
-            }
-        }
-
-        return true;
     }
 
     public String getLicenseHost() {
@@ -374,7 +295,7 @@ public class GameServer {
     }
 
     private static void configureDatabase() {
-        System.setProperty(HIKARICP_CONFIGURATION_FILE, "config/database.properties");
+        System.setProperty("hikaricp.configurationFile", "config/database.properties");
     }
 
     private static void configureLogger() {
