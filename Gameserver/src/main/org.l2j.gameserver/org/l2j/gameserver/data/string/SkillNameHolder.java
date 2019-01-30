@@ -92,10 +92,8 @@ public final class SkillNameHolder extends AbstractHolder
 				continue;
 
 			File file = new File(Config.DATAPACK_ROOT, "data/string/skillname/" + lang.getShortName() + ".txt");
-			if(!file.exists())
-			{
-				// Проверяем только английский и русский, потому что они являються базовыми.
-				if(lang == Language.ENGLISH || lang == Language.RUSSIAN)
+			if(!file.exists()) {
+				if(lang == Language.ENGLISH)
 					logger.warn("Not find file: " + file.getAbsolutePath());
 			}
 			else

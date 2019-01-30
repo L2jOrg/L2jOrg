@@ -63,16 +63,14 @@ public final class ItemNameHolder extends AbstractHolder
 	{
 		for(Language lang : Language.VALUES)
 		{
-			_itemNames.put(lang, new HashIntObjectMap<String>());
+			_itemNames.put(lang, new HashIntObjectMap<>());
 
 			if(!Config.AVAILABLE_LANGUAGES.contains(lang))
 				continue;
 
 			File file = new File(Config.DATAPACK_ROOT, "data/string/itemname/" + lang.getShortName() + ".txt");
-			if(!file.exists())
-			{
-				// Проверяем только английский и русский, потому что они являються базовыми.
-				if(lang == Language.ENGLISH || lang == Language.RUSSIAN)
+			if(!file.exists()) {
+				if(lang == Language.ENGLISH)
 					logger.warn("Not find file: " + file.getAbsolutePath());
 			}
 			else

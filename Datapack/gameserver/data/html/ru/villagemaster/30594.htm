@@ -1,0 +1,12 @@
+<html><head><body>
+Начальник Склада Ранспо:<br>
+Меня зовут Ранспо. Я - Начальник Склада Гильдии Железных Врат в Дионе. Наша Гильдия продает любые товары, во всех доступных местах и абсолютно всем, у кого есть деньги! Благодаря тому, что мы путешествуем и торгуем по всему миру, наша раса процветает. Здорово, не правда ли?<br>
+Ну да ладно, это я отвлекся. Мы с Вами еще не встречались? Или встречались? Так по какому Вы делу?<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">Узнать о 1-й смене профессии</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Клан</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Альянс</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Обменять Ежедневные Монеты</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Квест</Button>
+</body></html>

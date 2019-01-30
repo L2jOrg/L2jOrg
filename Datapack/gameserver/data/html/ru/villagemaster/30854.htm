@@ -1,0 +1,12 @@
+<html><head><body>
+Великий Магистр Дрикиан:<br>
+Ох-х! Как же болит голова. Значит, верно мне говорили, что в Вино Древиант добавляют яд паука. Проклятье... С таким трудом доставил его в Деревню Темных Эльфов, а господин Седрик в одиночку выпил три бутылки! Этот старикашка будет похуже Гномов! Десмо! И ты тоже не лучше! Хочешь мир покорить тем, что много пьешь?<br>
+Хм! О-о! А Вы удачно зашли в нашу Гильдию Магов Адена. Я Великий Магистр Дрикиан. А Вы кем будете?<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">Узнать о 2-й смене профессии</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Клан</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Альянс</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Обменять Ежедневные Монеты</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Квест</Button>
+</body></html>

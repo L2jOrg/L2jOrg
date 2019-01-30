@@ -1090,9 +1090,9 @@ public class Config
 
         ALLOW_MONSTER_RACE = serverSettings.getProperty("AllowMonsterRace", false);
 
+
         AVAILABLE_LANGUAGES = new HashSet<>();
         AVAILABLE_LANGUAGES.add(Language.ENGLISH);
-        AVAILABLE_LANGUAGES.add(Language.RUSSIAN);
         AVAILABLE_LANGUAGES.add(DEFAULT_LANG);
 
         String[] availableLanguages = serverSettings.getProperty("AVAILABLE_LANGUAGES", new String[0], ";");

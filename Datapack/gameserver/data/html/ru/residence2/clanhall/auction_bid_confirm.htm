@@ -1,0 +1,42 @@
+<html><body>
+<table width=270 border=0>
+	<tr>
+		<td width=90>
+			Минимальная ставка:
+		</td>
+		<td width=180>
+			<font color="aaccff">%min_bid%</font> аден
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Ставка:
+		</td>
+		<td>
+			<font color="aaccff">%bid%</font> аден
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Дата закрытия:
+		</td>
+		<td>%hour% hour %date%
+		</td>
+	</tr>
+</table>
+<br>Повышение ставки возможно только после того, как предложение было сделано. Отменены ставки будет возвращена, за вычетом налога (<font color="LEVEL">10% от ставки</font>). <br>Вы можете поднять ставку или отменить опции "мои пункты продажи" в
+верхнем меню.<br>Вы хотите подать заявку?<br> <img src="L2UI.SquareBlank" width=270 height=10> <img src="L2UI.SquareWhite" width=270 height=1> <img src="L2UI.SquareBlank" width=270 height=5>
+<table width=270 border=0>
+	<tr>
+		<td width=100></td>
+		<td width=80 align=center>
+			<button action="bypass -h npc_%objectId%_bid_start %id%" value="Назад" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+		</td>
+		<td width=80 align=center>
+			<button action="bypass -h npc_%objectId%_bid_confirm %id% %bid%" value="Принять" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+		</td>
+	</tr>
+</table
+<br>
+</body>
+</html>

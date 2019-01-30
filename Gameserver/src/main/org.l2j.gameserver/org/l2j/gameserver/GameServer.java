@@ -17,7 +17,6 @@ import org.l2j.gameserver.data.xml.Parsers;
 import org.l2j.gameserver.data.xml.holder.EventHolder;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.data.xml.holder.StaticObjectHolder;
-import org.l2j.gameserver.database.UpdatesInstaller;
 import org.l2j.gameserver.geodata.GeoEngine;
 import org.l2j.gameserver.handler.admincommands.AdminCommandHandler;
 import org.l2j.gameserver.handler.bbs.BbsHandlerHolder;
@@ -54,6 +53,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.nio.channels.AsynchronousSocketChannel;
 import java.util.Properties;
 
 import static java.util.Objects.nonNull;
@@ -71,30 +71,25 @@ public class GameServer {
 
     private final ConnectionHandler<GameClient> connectionHandler;
     private final GameServerListenerList listeners;
-    private final int onlineLimit;
+
     private final String licenseHost;
 
     private String version;
+    private int onlineLimit;
 
     public GameServer() throws Exception {
         instance = this;
         listeners = new GameServerListenerList();
 
         logVersionInfo();
-
-        // Initialize config
         Config.load();
 
-        licenseHost = getSettings(ServerSettings.class).externalAddress();
-        onlineLimit = Config.MAXIMUM_ONLINE_USERS;
-        if (onlineLimit == 0)
-            throw new Exception("Server online limit is zero!");
+        var serverSettings = getSettings(ServerSettings.class);
 
-        // Initialize database
-        L2DatabaseFactory.getInstance().getConnection().close();
+        licenseHost = serverSettings.externalAddress();
+        onlineLimit = serverSettings.maximumOnlineUsers();
 
-        // TODO remove this
-        UpdatesInstaller.checkAndInstall();
+        L2DatabaseFactory.getInstance();
 
         IdFactory _idFactory = IdFactory.getInstance();
         if (!_idFactory.isInitialized()) {
@@ -202,8 +197,10 @@ public class GameServer {
         logger.info("Maximum Numbers of Connected Players: " + getOnlineLimit());
 
         final GamePacketHandler gph = new GamePacketHandler();
-        connectionHandler = ConnectionBuilder.create(new InetSocketAddress(getSettings(ServerSettings.class).port()), gph, gph, gph).build();
+        connectionHandler = ConnectionBuilder.create(new InetSocketAddress(serverSettings.port()), gph, gph, gph).build();
         connectionHandler.start();
+
+        AsynchronousSocketChannel c;
 
         getListeners().onStart();
 

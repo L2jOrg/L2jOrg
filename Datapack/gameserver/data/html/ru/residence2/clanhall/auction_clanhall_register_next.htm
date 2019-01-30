@@ -1,0 +1,44 @@
+<html>
+<body>
+Минимальная ставка за этот холл клана <font color="aaccff">%min_bid%</font> Аден, и последняя ставка была <font color="aaccff">%last_bid%</font> Аден.<br>
+Все заявки безвозвратны, <font color=LEVEL>10% налог за транзакцию</font>, который будет автоматически вычтен из ставки.
+<br>Вы хотели бы установить минимальную ставку?
+<table width=270 border=0>
+	<tr>
+		<td width=220 align=right>
+			<edit var=minbid width=230 align=right type=number>
+		</td>
+		<td width=40 align=right>Аден</td>
+	</tr>
+</table>
+<br>
+<table width=270 border=0>
+	<tr>
+		<td width=220>Как долго ты хочешь участвовать в аукционе?</td>
+		<td width=40 align=right>
+			<combobox width=40 var=day list="7;3;1">
+		</td>
+		<td width=50 align=right>
+			день(я)
+		</td>
+	</tr>
+</table><br>
+Описания холла клана:
+<multiedit var="comment" width=270>
+<img src="L2UI.SquareBlank" width=270 height=10>
+<img src="L2UI.SquareWhite" width=270 height=1>
+<img src="L2UI.SquareBlank" width=270 height=5>
+<table width=270 border=0>
+	<tr>
+		<td width=100></td>
+		<td width=80 align=center>
+			<button action="bypass -h npc_%objectId%_register_start" value="Назад" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+		</td>
+		<td width=80 align=center>
+			<button action="bypass -h npc_%objectId%_register_next2 $day $minbid $comment" value="Далее" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+		</td>
+	</tr>
+</table>
+<br>
+</body>
+</html>

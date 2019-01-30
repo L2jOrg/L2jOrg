@@ -86,7 +86,7 @@ public class ServerSettings implements Settings {
         isPvP = settingsFile.getBoolean("PvPServer", false);
         parseServerType(settingsFile);
 
-        maximumOnlineUsers = settingsFile.getInteger("MaximumOnlineUsers", 10);
+        maximumOnlineUsers = Math.max(1, settingsFile.getInteger("MaximumOnlineUsers", 10));
 
         everyBodyIsAdmin = settingsFile.getBoolean("EverybodyHasAdminRights", false);
         hideGMStatus = settingsFile.getBoolean("HideGMStatus", true);

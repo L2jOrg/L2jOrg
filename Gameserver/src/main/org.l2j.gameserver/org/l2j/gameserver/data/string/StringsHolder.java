@@ -68,16 +68,14 @@ public final class StringsHolder extends AbstractHolder
 	{
 		for(Language lang : Language.VALUES)
 		{
-			_strings.put(lang, new HashMap<String, String>());
+			_strings.put(lang, new HashMap<>());
 
 			if(!Config.AVAILABLE_LANGUAGES.contains(lang))
 				continue;
 
 			File file = new File(Config.DATAPACK_ROOT, "data/string/strings/" + lang.getShortName() + ".properties");
-			if(!file.exists())
-			{
-				// Проверяем только английский и русский, потому что они являються базовыми.
-				if(lang == Language.ENGLISH || lang == Language.RUSSIAN)
+			if(!file.exists()) {
+				if(lang == Language.ENGLISH)
 					logger.warn("Not find file: " + file.getAbsolutePath());
 			}
 			else

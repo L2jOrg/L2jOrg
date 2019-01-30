@@ -25,7 +25,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  */
 public class GameObjectsStorage
 {
-	private static IntObjectMap<GameObject> _objects = new CHashIntObjectMap<>((int) (60000 *  getSettings(ServerSettings.class).rateMobSpawn() + Config.MAXIMUM_ONLINE_USERS + 1000));
+	private static IntObjectMap<GameObject> _objects = new CHashIntObjectMap<>((int) (60000 *  getSettings(ServerSettings.class).rateMobSpawn() + getSettings(ServerSettings.class).maximumOnlineUsers() + 1000));
 	private static IntObjectMap<StaticObjectInstance> _staticObjects = new CHashIntObjectMap<StaticObjectInstance>(1000);
 	private static IntObjectMap<NpcInstance> _npcs = new CHashIntObjectMap<>((int) (60000 * getSettings(ServerSettings.class).rateMobSpawn()));
 	private static IntObjectMap<Player> _players = new CHashIntObjectMap<Player>(Config.MAXIMUM_ONLINE_USERS);

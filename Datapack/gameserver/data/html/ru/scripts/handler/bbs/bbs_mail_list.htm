@@ -1,0 +1,52 @@
+<html><body>
+<br><br>
+<table border=0 width=755><tr><td width=10></td><td width=600 align=left>
+<a action="bypass _maillist_0_1_0_">&$905;</a>&nbsp;&gt;%TREE%
+</td></tr>
+</table>
+<center>
+<img src="L2UI.squareblank" width="1" height="10">
+<table border=0 cellspacing=0 cellpadding=0 width=755 bgcolor=A7A19A>
+<tr><td WIDTH=5></td><td height=10 WIDTH=750></td></tr>
+<tr><td></td>
+<td height=20>
+%inbox_link%(%incomming_mail_no%)&nbsp;%sentbox_link%(%sent_mail_no%)&nbsp;%archive_link%(%archived_mail_no%)&nbsp;%temp_archive_link%(%temp_mail_no%)</td>
+</tr>
+<tr><td></td><td height=10></td></tr>
+</table>
+<br>
+<table border=0 cellspacing=0 cellpadding=2 bgcolor=A7A19A width=755>
+<tr>
+<td FIXWIDTH=5 align=center></td>
+<td FIXWIDTH=150 align=center>%writer_header%</td>
+<td FIXWIDTH=440>&$413;</td>
+<td FIXWIDTH=150 align=center>&$910;</td>
+<td FIXWIDTH=5 align=center></td>
+</tr>
+</table>
+%MAIL_LIST%
+<br>
+<table width=755 cellspace=0 cellpadding=0>
+<tr>
+<td width=50>
+</td>
+<td width=510 align=center>
+<table cellspacing=2 cellpadding=0 border=0><tr>
+<td><table><tr><td></td></tr><tr><td><button action="%ACTION_GO_LEFT%" back="L2UI_CT1.Button_DF_Left_Down" fore="L2UI_CT1.Button_DF_Left" width=15 height=15 ></td></tr></table> </td>
+ %GO_LIST%
+<td>%NPAGE%</td>
+ %GO_LIST2%
+<td><table><tr><td></td></tr><tr><td><button action="%ACTION_GO_RIGHT%" back="L2UI_CT1.Button_DF_Right_Down" fore="L2UI_CT1.Button_DF_Right" width=15 height=15 ></td></tr></table> </td>
+</tr></table> </td> 
+<td align=right>
+</td></tr>
+<tr><td width=5 height=10></td></tr>
+<tr> 
+<td></td> 
+<td align=center><table border=0><tr><td><combobox width=65 var=SearchTarget list="Writer;Title"></td><td><edit var = "Keyword" width=130 height=15 length="16"></td>
+<td><button value="&$420;" action="Write _mailsearch_%mailbox_type%_ 0 0 SearchTarget SearchTarget Keyword" back="l2ui_ct1.button.button_df_small_down" width=70 height=25 fore="l2ui_ct1.button.button_df_small"> </td> </tr></table> </td>
+</tr>
+</table> 
+<br> <br> <br>
+</center><br>
+</body></html>

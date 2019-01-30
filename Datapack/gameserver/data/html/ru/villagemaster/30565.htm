@@ -1,0 +1,12 @@
+<html><head><body>
+Монарх Пламени Кекеи:<br>
+Я Монарх Пламени Кекеи, вождь Орков, благословленный самим Отцом Вечного Пламени Паагрио! Юный воин, наши надежды на то, что Вы сможете вернуть Оркам былую славу, подобны тлеющим уголькам. Чем я могу помочь?<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">Узнать о 1-й смене профессии</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc?chat 1">Узнать текущую обстановку</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Клан</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Альянс</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Обменять Ежедневные Монеты</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Квест</Button>
+</body></html>

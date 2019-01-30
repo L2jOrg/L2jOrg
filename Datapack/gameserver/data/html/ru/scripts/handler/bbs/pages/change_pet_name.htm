@@ -1,0 +1,104 @@
+<!--AUTHOR: Bonux-->
+<html><body><title>Сервисы</title><center>
+<br>
+<table width=750 background="L2UI_CT1.Tab_DF_bg" border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td align=center>
+	<table width=737 border=0 cellpadding=0 cellspacing=0>
+		<tr>
+			<td width=93 align=center><button value="Главная" action="bypass _bbspage:index" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Статистика" action="bypass _cbbsstatistic_pk" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Магазин" action="bypass _bbspage:shop" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Баффы" action="bypass _cbbsbuffer 0" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Телепорт" action="bypass _cbbsteleport" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=93 align=center><button value="Карьера" action="bypass _bbspage:career" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=92 align=center background="L2UI_CT1.Tab_DF_Tab_Selected"><font color=DDD3B6>Сервисы</font></td>
+			<td width=93 align=center><button value="Кабинет" action="bypass _cbbsservices_cabinet" width=93 height=23 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+		</tr>
+	</table>
+	<table width=750 border=0 cellpadding=0 cellspacing=0>
+		<tr>
+			<td align=center>&nbsp;</td>
+		</tr>
+		<tr>
+			<td align=center>
+				<table width=700 background="L2UI_CT1.Windows_DF_Drawer_Bg" border=0 cellpadding=0 cellspacing=0>
+					<tr>
+						<td height=40 width=25></td>
+						<td width=385>
+							<font color=DDD3B6><a action="bypass _bbspage:services">Сервисы</a>&nbsp;->&nbsp;<a action="bypass _bbspage:change_name_list">Изменить Имя</a>&nbsp;->&nbsp;Питомца</font>
+						</td>
+						<td align=right width=300><font color=DDD3B6>Текущий онлайн: <?total_online?></font></td>
+						<td height=40 width=25></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td align=center>
+				<table width=750 height=375 border=0 cellpadding=0 cellspacing=0>
+					<tr>
+						<td valign="top" align="center">
+							<!-- Grand Olympiad Emblem -->
+							<table border=0 cellpadding=0 cellspacing=0>
+								<tr><td width=256 height=185 background="L2UI_CT1.OlympiadWnd_DF_GrandTexture"></td></tr>
+							</table>
+							<?content?>
+							<!--TEMPLATE1
+							Стоимость изменения имени питомца: <font color="LEVEL"><?fee_item_count?> <?fee_item_name?></font><br1>
+							TEMPLATE-->
+							<!--TEMPLATE2
+							Изменение имени питомца производится <font color="LEVEL">бесплатно</font>!<br1>
+							TEMPLATE-->
+							<!--TEMPLATE3
+							<font color="7F3300">Максимальная длина имени 8 символов.</font><br>
+							<edit var = "name" width=195 height=20 length="8"><br>
+							<table width=700 border=0>
+								<tr>
+									<td align=center><button value="Изменить Имя Питомца" action="bypass _cbbsservices_changename_pet_ $name" width=200 height=30 back="L2UI_CT1.Button_DF_Msn_down" fore="L2UI_CT1.Button_DF_Msn"></td>
+								</tr>
+							</table>
+							TEMPLATE-->
+							<!--TEMPLATE4
+							У Вас не хватает предметов для оплаты. Необходимо: <font color="LEVEL"><?fee_item_count?> <?fee_item_name?></font><br>
+							<button value="Назад" action="bypass _cbbsservices_changename_pet" width=100 height=30 back="L2UI_ct1.button_df_down" fore="L2UI_ct1.button_df">
+							TEMPLATE-->
+							<!--TEMPLATE5
+							Вы указали неправильное новое имя питомца! Попробуйте еще раз.<br>
+							<button value="Назад" action="bypass _cbbsservices_changename_pet" width=100 height=30 back="L2UI_ct1.button_df_down" fore="L2UI_ct1.button_df">
+							TEMPLATE-->
+							<!--TEMPLATE6
+							Вы уже используете такое имя! Придумайте питомцу другое имя.<br>
+							<button value="Назад" action="bypass _cbbsservices_changename_pet" width=100 height=30 back="L2UI_ct1.button_df_down" fore="L2UI_ct1.button_df">
+							TEMPLATE-->
+							<!--TEMPLATE7
+							У питомца еше нету имени. Вы можете его изменить бесплатно в окне управления питомцем.<br>
+							<button value="Назад" action="bypass _cbbsservices_changename_pet" width=100 height=30 back="L2UI_ct1.button_df_down" fore="L2UI_ct1.button_df">
+							TEMPLATE-->
+							<!--TEMPLATE8
+							У Вас нету питомца! Для изменения имени питомца, его нужно призвать.<br>
+							<button value="Назад" action="bypass _cbbsservices_changename_pet" width=100 height=30 back="L2UI_ct1.button_df_down" fore="L2UI_ct1.button_df">
+							TEMPLATE-->
+							<!--TEMPLATE9
+							Поздравляем! Вы успешно изменили имя питомца на <font color="LEVEL"><?pet_name?></font>.
+							TEMPLATE-->
+							<br>
+							<button value="В меню" action="bypass _bbspage:change_name_list" width=100 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td align=center>
+				<img src="L2UI_CT1.Tab_DF_bg_line" width=700 height=32><br1>
+				<font color="655C4D"><?copyright?></font><br><br>
+			</td>
+		</tr>
+	</table>
+</td>
+</tr>
+</table>
+<br>
+</center>
+</body></html>

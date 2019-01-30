@@ -1,0 +1,11 @@
+<html><head><body>
+Главный Кузнец Тапой:<br>
+Я глава Гильдии Черной Наковальни в Глудине, Главный Кузнец Тапой. Наша гильдия гордится тем, что выпускает лучших Ремесленников и Кузнецов. Наша гильдия - это неотъемлемая часть расы Гномов. Без нее Гномы как соты без меда. Или как Эльф без самолюбия. Так по какому делу Вы пришли ко мне?<br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_changeclass">Узнать о 1-й смене профессии</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_clan">Клан</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_manage_alliance">Альянс</Button>
+#if ($ENABLE_DAILY_COIN_EXCHANGE)
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 9999">Обменять Ежедневные Монеты</Button>
+#end
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h talk_select">Квест</Button>
+</body></html>

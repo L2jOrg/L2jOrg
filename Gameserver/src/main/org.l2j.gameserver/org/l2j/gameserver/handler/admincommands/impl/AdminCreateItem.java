@@ -17,7 +17,7 @@ import org.l2j.gameserver.utils.Log;
 
 public class AdminCreateItem implements IAdminCommandHandler
 {
-	private static enum Commands
+	private enum Commands
 	{
 		admin_itemcreate,
 		admin_create_item,
