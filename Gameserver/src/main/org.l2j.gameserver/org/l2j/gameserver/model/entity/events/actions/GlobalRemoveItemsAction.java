@@ -20,7 +20,7 @@ public class GlobalRemoveItemsAction implements EventAction
 		for(Object o : event.getObjects(_name))
 		{
 			if(o instanceof ItemObject)
-				ItemsDAO.getInstance().glovalRemoveItem(((ItemObject) o).getItemId(), "Remove items by event: " + event.getName());
+				ItemsDAO.getInstance().globalRemoveItem(((ItemObject) o).getItemId(), "Remove items by event: " + event.getName());
 		}
 	}
 }

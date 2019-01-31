@@ -3,18 +3,22 @@ package org.l2j.gameserver.idfactory;
 import io.github.joealisson.primitive.sets.IntSet;
 import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.l2j.commons.database.L2DatabaseFactory;
-import org.l2j.commons.dbutils.DbUtils;
+import org.l2j.gameserver.dao.CharacterDAO;
+import org.l2j.gameserver.dao.ItemsDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.*;
+import java.sql.SQLException;
 import java.util.Arrays;
+
+import static java.util.Objects.isNull;
 
 public abstract class IdFactory
 {
-	private static final Logger _log = LoggerFactory.getLogger(IdFactory.class);
+	private static final Logger logger = LoggerFactory.getLogger(IdFactory.class);
+	private static IdFactory instance;
 
-	public static final String[][] EXTRACT_OBJ_ID_TABLES = {
+	private static final String[][] EXTRACT_OBJ_ID_TABLES = {
 			{ "characters", "obj_id" },
 			{ "items", "object_id" },
 			{ "clan_data", "clan_id" },
@@ -22,120 +26,35 @@ public abstract class IdFactory
 			{ "pets", "objId" },
 			{ "couples", "id" } };
 
-	public static final int FIRST_OID = 0x10000000;
-	public static final int LAST_OID = 0x7FFFFFFF;
-	public static final int FREE_OBJECT_ID_SIZE = LAST_OID - FIRST_OID;
-
-	protected static final IdFactory _instance = new BitSetIDFactory();
-
-	public static final IdFactory getInstance()
-	{
-		return _instance;
-	}
+	protected static final int FIRST_OID = 0x10000000;
+	protected static final int LAST_OID = 0x7FFFFFFF;
+	protected static final int FREE_OBJECT_ID_SIZE = LAST_OID - FIRST_OID;
 
 	protected boolean initialized;
 	protected long releasedCount = 0;
 
-	protected IdFactory()
-	{
+	protected IdFactory() {
 		resetOnlineStatus();
 		globalRemoveItems();
 		cleanUpDB();
 	}
 
-	private void resetOnlineStatus()
-	{
-		Connection con = null;
-		Statement st = null;
-		try
-		{
-			con = L2DatabaseFactory.getInstance().getConnection();
-			st = con.createStatement();
-			st.executeUpdate("UPDATE characters SET online = 0");
-			_log.info("IdFactory: Clear characters online status.");
-		}
-		catch(SQLException e)
-		{
-			_log.error("", e);
-		}
-		finally
-		{
-			DbUtils.closeQuietly(con, st);
-		}
+	private void resetOnlineStatus() {
+		logger.info("Clearing characters online status.");
+		CharacterDAO.getInstance().updateCharactersOfflineStatus();
 	}
 
-	private void globalRemoveItems()
-	{
-		int itemToDeleteCount = 0;
-		StringBuilder itemsToDelete = new StringBuilder();
-
-		Connection con = null;
-		PreparedStatement statement = null;
-		ResultSet rset = null;
-		try
-		{
-			con = L2DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement("SELECT item_id FROM items_to_delete");
-			rset = statement.executeQuery();
-			while(rset.next())
-			{
-				if(itemsToDelete.length() > 0)
-					itemsToDelete.append(",");
-				itemsToDelete.append(rset.getInt("item_id"));
-				itemToDeleteCount++;
-			}
-
-			DbUtils.closeQuietly(statement, rset);
-
-			statement = con.prepareStatement("DELETE FROM items_to_delete");
-			statement.execute();
-		}
-		catch(SQLException e)
-		{
-			_log.error("Error while select items for global remove:", e);
-		}
-		finally
-		{
-			DbUtils.closeQuietly(con, statement);
-		}
-
-		if(itemsToDelete.length() > 0)
-		{
-			try
-			{
-				con = L2DatabaseFactory.getInstance().getConnection();
-				statement = con.prepareStatement("DELETE FROM items WHERE item_id IN (?)");
-				statement.setString(1, itemsToDelete.toString());
-				statement.execute();
-
-				DbUtils.closeQuietly(statement);
-
-				statement = con.prepareStatement("DELETE FROM items_delayed WHERE item_id IN (?)");
-				statement.setString(1, itemsToDelete.toString());
-				statement.execute();
-			}
-			catch(SQLException e)
-			{
-				_log.error("Error while global remove items:", e);
-			}
-			finally
-			{
-				DbUtils.closeQuietly(con, statement);
-			}
-			_log.info("IdFactory: Global removed " + itemToDeleteCount + " items.");
-		}
+	private void globalRemoveItems() {
+		var itemsRemoved = ItemsDAO.getInstance().deleteGlobalItemsToRemove();
+		logger.info("Global removed {} items.", itemsRemoved);
 	}
 
-	private void cleanUpDB()
-	{
-		Connection con = null;
-		Statement st = null;
-		try
-		{
+	private void cleanUpDB() {
+		try(var con = L2DatabaseFactory.getInstance().getConnection();
+			var st = con.createStatement()) {
+
 			long cleanupStart = System.currentTimeMillis();
 			int cleanCount = 0;
-			con = L2DatabaseFactory.getInstance().getConnection();
-			st = con.createStatement();
 
 			//
 			//Начинаем чистить таблицы последствия после удаления персонажа.
@@ -215,59 +134,42 @@ public abstract class IdFactory
 			st.executeUpdate("UPDATE characters SET clanid = '0', title = '', pledge_type = '0', pledge_rank = '0', lvl_joined_academy = '0', apprentice = '0' WHERE characters.clanid > 0 AND characters.clanid NOT IN (SELECT clan_id FROM clan_data);");
 			st.executeUpdate("UPDATE items SET loc = 'WAREHOUSE' WHERE loc = 'MAIL' AND items.object_id NOT IN (SELECT item_id FROM mail_attachments);");
 
-			_log.info("IdFactory: Cleaned " + cleanCount + " elements from database in " + ((System.currentTimeMillis() - cleanupStart) / 1000) + "sec.");
-		}
-		catch(SQLException e)
-		{
-			_log.error("", e);
-		}
-		finally
-		{
-			DbUtils.closeQuietly(con, st);
+			logger.info("IdFactory: Cleaned {}  elements from database in {} sec.", cleanCount, (System.currentTimeMillis() - cleanupStart) / 1000);
+		} catch(SQLException e) {
+			logger.error(e.getLocalizedMessage(), e);
 		}
 	}
 
-	protected int[] extractUsedObjectIDTable() throws SQLException
-	{
+	protected int[] extractUsedObjectIDTable() throws SQLException {
 		IntSet objectIds = new HashIntSet();
 
-		Connection con = null;
-		Statement st = null;
-		ResultSet rs = null;
-		try
-		{
-			con = L2DatabaseFactory.getInstance().getConnection();
-			st = con.createStatement();
-			for(String[] table : EXTRACT_OBJ_ID_TABLES)
-			{
-				rs = st.executeQuery("SELECT " + table[1] + " FROM " + table[0]);
-				int size = objectIds.size();
-				while(rs.next())
-					objectIds.add(rs.getInt(1));
+		try(var con = L2DatabaseFactory.getInstance().getConnection();
+			var st = con.createStatement()) {
 
-				DbUtils.close(rs);
-
-				size = objectIds.size() - size;
-				if(size > 0)
-					_log.info("IdFactory: Extracted " + size + " used id's from " + table[0]);
+			for(String[] table : EXTRACT_OBJ_ID_TABLES) {
+				try(var rs = st.executeQuery(String.format("SELECT %s FROM %s", table[1], table[0]))) {
+					int size = objectIds.size();
+					while(rs.next()) {
+						objectIds.add(rs.getInt(1));
+					}
+					size = objectIds.size() - size;
+					if(size > 0) {
+						logger.info("Extracted {} used id's from {}", size, table[0]);
+					}
+				}
 			}
-		}
-		finally
-		{
-			DbUtils.closeQuietly(con, st, rs);
 		}
 
 		int[] extracted = objectIds.toArray();
 
 		Arrays.sort(extracted);
 
-		_log.info("IdFactory: Extracted total " + extracted.length + " used id's.");
+		logger.info("IdFactory: Extracted total {} used id's.", extracted.length);
 
 		return extracted;
 	}
 
-	public boolean isInitialized()
-	{
+	public boolean isInitialized() {
 		return initialized;
 	}
 
@@ -282,10 +184,12 @@ public abstract class IdFactory
 		releasedCount++;
 	}
 
-	public long getReleasedCount()
-	{
-		return releasedCount;
-	}
-
 	public abstract int size();
+
+	public static IdFactory getInstance() {
+		if(isNull(instance)){
+			instance = new BitSetIDFactory();
+		}
+		return instance;
+	}
 }

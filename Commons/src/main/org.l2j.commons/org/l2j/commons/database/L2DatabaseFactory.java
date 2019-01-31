@@ -27,11 +27,13 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import static java.util.Objects.isNull;
+
 
 public class L2DatabaseFactory {
     private static Logger _log = LoggerFactory.getLogger(L2DatabaseFactory.class);
 
-    private static L2DatabaseFactory _instance;
+    private static L2DatabaseFactory instance;
     private final HikariDataSource _dataSource;
     private final ApplicationContext context;
 
@@ -81,10 +83,10 @@ public class L2DatabaseFactory {
 
     // TODO remove access from external modules
     public static L2DatabaseFactory getInstance() throws SQLException {
-        if (_instance == null) {
-            _instance = new L2DatabaseFactory();
+        if (isNull(instance)) {
+            instance = new L2DatabaseFactory();
         }
-        return _instance;
+        return instance;
     }
 
     public Connection getConnection() //throws SQLException

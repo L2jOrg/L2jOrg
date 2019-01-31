@@ -91,8 +91,7 @@ public class GameServer {
 
         L2DatabaseFactory.getInstance();
 
-        IdFactory _idFactory = IdFactory.getInstance();
-        if (!_idFactory.isInitialized()) {
+        if (!IdFactory.getInstance().isInitialized()) {
             logger.error("Could not read object IDs from DB. Please Check Your Data.");
             throw new Exception("Could not initialize the ID factory");
         }
