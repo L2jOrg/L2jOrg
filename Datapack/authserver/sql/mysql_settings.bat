@@ -1,10 +1,10 @@
 @echo off
 
-set PATH=%PATH%;%ProgramFiles%\MySQL\MySQL Server 5.7\bin
+set PATH=%PATH%;%ProgramFiles%\MySQL\MySQL Server 8.0\bin
 
 set USER=root
-set PASS=
-set DBNAME=l2auth
+set PASS=root
+set DBNAME=auth
 set DBHOST=localhost
 
 mysql -h %DBHOST% -u %USER% --password=%PASS% -Bse "use %DBNAME%" > nul 2>&1

@@ -2,7 +2,6 @@ package org.l2j.commons.database;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
-import org.l2j.commons.Config;
 import org.l2j.commons.database.model.Entity;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Bean;

@@ -1,5 +1,7 @@
 package org.l2j.authserver;
 
+import io.github.joealisson.mmocore.ConnectionBuilder;
+import io.github.joealisson.mmocore.ConnectionHandler;
 import org.l2j.authserver.controller.AuthController;
 import org.l2j.authserver.controller.GameServerManager;
 import org.l2j.authserver.network.SelectorHelper;
@@ -7,10 +9,6 @@ import org.l2j.authserver.network.client.AuthClient;
 import org.l2j.authserver.network.client.AuthPacketHandler;
 import org.l2j.authserver.network.gameserver.GameServerPacketHandler;
 import org.l2j.authserver.network.gameserver.ServerClient;
-import org.l2j.commons.Config;
-import org.l2j.commons.Server;
-import io.github.joealisson.mmocore.ConnectionBuilder;
-import io.github.joealisson.mmocore.ConnectionHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -44,12 +42,12 @@ public class AuthServer {
         logger.info("Listening for GameServers on {} : {}", gameServerListenHost(), gameServerListenPort());
 
 
-        var bindAddress = loginListenHost().equals("*") ? new InetSocketAddress(loginListenPort()) : new InetSocketAddress(loginListenHost(), loginListenPort()) ;
+        var bindAddress = listenHost().equals("*") ? new InetSocketAddress(listenPort()) : new InetSocketAddress(listenHost(), listenPort()) ;
         final AuthPacketHandler lph = new AuthPacketHandler();
         final SelectorHelper sh = new SelectorHelper();
         connectionHandler = ConnectionBuilder.create(bindAddress, AuthClient::new, lph, sh).threadPoolSize(4).build();
         connectionHandler.start();
-        logger.info("Login Server ready on {}:{}", bindAddress.getHostString(), loginListenPort());
+        logger.info("Login Server ready on {}:{}", bindAddress.getHostString(), listenPort());
     }
 
     private void shutdown() {
@@ -60,8 +58,6 @@ public class AuthServer {
     public static void main(String[] args) {
         configureLogger();
         configureDatabase();
-        Server.serverMode = Server.MODE_LOGINSERVER;
-        Config.load();
         try {
             _instance = new AuthServer();
             getRuntime().addShutdownHook(new Thread(() -> _instance.shutdown()));

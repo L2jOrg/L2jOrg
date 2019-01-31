@@ -33,28 +33,28 @@ import java.util.Objects;
  * @author -Wooden-
  */
 public class SessionKey  {
-	public int gameServerSessionId;
-	public int gameServerAccountId;
-	public int authAccountId;
-	public int authKey;
-	
-	public SessionKey(int authAccountId, int authKey, int gameServerSession, int gameServerAccountId)
-	{
-		gameServerSessionId = gameServerSession;
-		this.gameServerAccountId = gameServerAccountId;
-		this.authAccountId = authAccountId;
-		this.authKey = authKey;
-	}
-	
-	@Override
-	public String toString()
-	{
-		return "PlayOk: " + gameServerSessionId + " " + gameServerAccountId + " LoginOk:" + authAccountId + " " + authKey;
-	}
-	
-	public boolean checkLoginPair(int accountId, int authKey) {
-		return this.authAccountId == accountId && this.authKey == authKey;
-	}
+    public int gameServerSessionId;
+    public int gameServerAccountId;
+    public int authAccountId;
+    public int authKey;
+
+    public SessionKey(int authAccountId, int authKey, int gameServerSession, int gameServerAccountId)
+    {
+        gameServerSessionId = gameServerSession;
+        this.gameServerAccountId = gameServerAccountId;
+        this.authAccountId = authAccountId;
+        this.authKey = authKey;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "PlayOk: " + gameServerSessionId + " " + gameServerAccountId + " LoginOk:" + authAccountId + " " + authKey;
+    }
+
+    public boolean checkLoginPair(int accountId, int authKey) {
+        return this.authAccountId == accountId && this.authKey == authKey;
+    }
 
     @Override
     public boolean equals(Object o) {

@@ -1,6 +1,5 @@
 package org.l2j.commons.xml;
 
-import org.l2j.commons.Config;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
@@ -26,7 +25,7 @@ public abstract class XMLReader<T> implements ValidationEventHandler {
     private void loadSchema()  {
         try {
             SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-            schema = factory.newSchema(new File(Config.DATAPACK_ROOT, getSchemaFilePath()));
+            schema = factory.newSchema(new File(getSchemaFilePath()));
         } catch (SAXException e) {
             logger.warn(e.getLocalizedMessage(), e);
         }
@@ -46,7 +45,7 @@ public abstract class XMLReader<T> implements ValidationEventHandler {
     }
 
     private File[] getDirectoryFiles(String directory) {
-        File fileDir = new File(Config.DATAPACK_ROOT, directory);
+        File fileDir = new File(directory);
         return fileDir.listFiles((dir, name) -> name.endsWith(".xml"));
     }
 

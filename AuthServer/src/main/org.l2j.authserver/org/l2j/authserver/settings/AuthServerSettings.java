@@ -16,51 +16,31 @@ public class AuthServerSettings implements Settings {
     }
 
     public static String gameServerListenHost() {
-        return getInstance().settings.getString("LoginHostname", "*");
+        return getInstance().settings.getString("GameServerListenHostname", "*");
     }
 
     public static int gameServerListenPort() {
-        return  getInstance().settings.getInteger("LoginPort", 9013);
+        return  getInstance().settings.getInteger("GameServerListenPort", 9013);
     }
 
-    public static String loginListenHost() {
-        return getInstance().settings.getString("LoginserverHostname", "*");
+    public static String listenHost() {
+        return getInstance().settings.getString("Hostname", "*");
     }
 
-    public static int loginListenPort() {
-        return getInstance().settings.getInteger("LoginserverPort", 2106);
+    public static int listenPort() {
+        return getInstance().settings.getInteger("Port", 2106);
     }
 
     public static boolean isAutoCreateAccount(){
         return getInstance().settings.getBoolean("AutoCreateAccounts", false);
     }
 
-    public static int loginTryBeforeBan(){
-        return getInstance().settings.getInteger("LoginTryBeforeBan", 10);
+    public static int authTriesBeforeBan(){
+        return getInstance().settings.getInteger("AuthTriesBeforeBan", 10);
     }
 
     public static int loginBlockAfterBan() {
-        return getInstance().settings.getInteger("LoginBlockAfterBan", 600);
-    }
-
-    public static boolean isFloodProtectionEnabled() {
-        return getInstance().settings.getBoolean("EnableFloodProtection", true);
-    }
-
-    public static int floodFastConnectionLimit() {
-        return getInstance().settings.getInteger("FastConnectionLimit", 15);
-    }
-
-    public static int floodNormalConnectionTime() {
-        return getInstance().settings.getInteger("NormalConnectionTime", 700);
-    }
-
-    public static int floodFastConnectionTime() {
-        return getInstance().settings.getInteger("FastConnectionTime", 350);
-    }
-
-    public static int maxConnectionPerIP() {
-        return getInstance().settings.getInteger("MaxConnectionPerIP", 50);
+        return getInstance().settings.getInteger("AuthBlockAfterBan", 600);
     }
 
     public static boolean acceptNewGameServerEnabled() {
@@ -71,7 +51,13 @@ public class AuthServerSettings implements Settings {
         return getInstance().settings.getString("UsernameTemplate", "[A-Za-z0-9_]{5,32}");
     }
 
+    public int gmMinimumLevel() {
+        return getInstance().settings.getInteger("GMMinLevel", 100);
+    }
+
     private static AuthServerSettings getInstance() {
         return getSettings(AuthServerSettings.class);
     }
+
+
 }

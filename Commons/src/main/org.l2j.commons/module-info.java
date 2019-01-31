@@ -17,7 +17,6 @@ module org.l2j.commons {
     exports org.l2j.commons.util;
     exports org.l2j.commons.xml;
     exports org.l2j.commons.crypt;
-    exports org.l2j.commons;
     exports org.l2j.commons.database;
     exports org.l2j.commons.database.model;
     exports org.l2j.commons.database.annotation;

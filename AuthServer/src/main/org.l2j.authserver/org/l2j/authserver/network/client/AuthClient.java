@@ -1,7 +1,7 @@
 package org.l2j.authserver.network.client;
 
 import org.l2j.authserver.network.SessionKey;
-import org.l2j.commons.database.model.Account;
+import org.l2j.authserver.Account;
 import org.l2j.authserver.controller.AuthController;
 import org.l2j.authserver.network.crypt.AuthCrypt;
 import org.l2j.authserver.network.crypt.ScrambledKeyPair;

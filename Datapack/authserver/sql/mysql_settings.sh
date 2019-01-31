@@ -1,4 +1,4 @@
 USER=root
-PASS=
-DBNAME=ertheia
+PASS=root
+DBNAME=auth
 DBHOST=localhost

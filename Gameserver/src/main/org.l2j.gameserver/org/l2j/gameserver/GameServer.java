@@ -219,6 +219,10 @@ public class GameServer {
 
         ThreadPoolManager.getInstance().execute(AuthServerCommunication.getInstance());
 
+        logMemoryUsage();
+    }
+
+    private void logMemoryUsage() {
         logger.info("=================================================");
         String memUsage = String.valueOf(StatsUtils.getMemUsage());
         for (String line : memUsage.split("\n"))

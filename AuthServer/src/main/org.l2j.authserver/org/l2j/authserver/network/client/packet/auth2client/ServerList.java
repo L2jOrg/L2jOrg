@@ -1,12 +1,14 @@
 package org.l2j.authserver.network.client.packet.auth2client;
 
-import org.l2j.authserver.network.client.packet.L2LoginServerPacket;
-import org.l2j.commons.Config;
 import org.l2j.authserver.controller.GameServerManager;
+import org.l2j.authserver.network.client.packet.L2LoginServerPacket;
 import org.l2j.authserver.network.gameserver.packet.game2auth.ServerStatus;
+import org.l2j.authserver.settings.AuthServerSettings;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  *
@@ -69,7 +71,7 @@ public final class ServerList extends L2LoginServerPacket {
             writeShort(server.getMaxPlayers());
 
             var status = server.getStatus();
-            if(ServerStatus.STATUS_GM_ONLY == status && client.getAccessLevel() < Config.GM_MIN) {
+            if(ServerStatus.STATUS_GM_ONLY == status && client.getAccessLevel() < getSettings(AuthServerSettings.class).gmMinimumLevel()) {
                 status = ServerStatus.STATUS_DOWN;
             }
 
