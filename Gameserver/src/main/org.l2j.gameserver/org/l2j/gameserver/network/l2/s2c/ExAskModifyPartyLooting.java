@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ExAskModifyPartyLooting extends L2GameServerPacket
 {
 	private String _requestor;
@@ -12,9 +16,9 @@ public class ExAskModifyPartyLooting extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeString(_requestor);
-		writeInt(_mode);
+		writeString(_requestor, buffer);
+		buffer.putInt(_mode);
 	}
 }

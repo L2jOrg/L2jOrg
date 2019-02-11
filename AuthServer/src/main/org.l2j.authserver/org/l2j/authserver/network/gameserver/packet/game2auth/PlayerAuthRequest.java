@@ -4,6 +4,7 @@ import org.l2j.authserver.controller.AuthController;
 import org.l2j.authserver.network.SessionKey;
 import org.l2j.authserver.network.gameserver.packet.auth2game.PlayerAuthResponse;
 
+import java.nio.ByteBuffer;
 import java.util.Objects;
 
 public class PlayerAuthRequest extends GameserverReadablePacket {
@@ -15,12 +16,12 @@ public class PlayerAuthRequest extends GameserverReadablePacket {
 	private int authKey;
 
 	@Override
-	protected void readImpl() {
-		account = readString();
-		sessionId = readInt();
-		serverAccountId = readInt();
-		authAccountId = readInt();
-		authKey = readInt();
+	protected void readImpl(ByteBuffer buffer) {
+		account = readString(buffer);
+		sessionId = buffer.getInt();
+		serverAccountId = buffer.getInt();
+		authAccountId = buffer.getInt();
+		authKey = buffer.getInt();
 	}
 
 	@Override

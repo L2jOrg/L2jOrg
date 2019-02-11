@@ -2,14 +2,16 @@ package org.l2j.gameserver.network.l2.c2s;
 
 import org.l2j.gameserver.Config;
 
+import java.nio.ByteBuffer;
+
 public class RequestEx2ndPasswordVerify extends L2GameClientPacket
 {
 	private String _password;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_password = readString();
+		_password = readString(buffer);
 	}
 
 	@Override
@@ -18,6 +20,6 @@ public class RequestEx2ndPasswordVerify extends L2GameClientPacket
 		if(!Config.EX_SECOND_AUTH_ENABLED)
 			return;
 
-		getClient().getSecondaryAuth().checkPassword(_password, false);
+		client.getSecondaryAuth().checkPassword(_password, false);
 	}
 }

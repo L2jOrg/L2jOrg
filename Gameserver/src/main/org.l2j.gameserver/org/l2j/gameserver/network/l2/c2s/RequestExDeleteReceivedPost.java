@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
 import java.util.List;
 
 import org.l2j.commons.lang.ArrayUtils;
@@ -20,25 +21,26 @@ public class RequestExDeleteReceivedPost extends L2GameClientPacket
 
 	/**
 	 * format: dx[d]
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_count = readInt();
-		if(_count * 4 > availableData() || _count > Short.MAX_VALUE || _count < 1)
+		_count = buffer.getInt();
+		if(_count * 4 > buffer.remaining() || _count > Short.MAX_VALUE || _count < 1)
 		{
 			_count = 0;
 			return;
 		}
 		_list = new int[_count]; // количество элементов для удаления
 		for(int i = 0; i < _count; i++)
-			_list[i] = readInt(); // уникальный номер письма
+			_list[i] = buffer.getInt(); // уникальный номер письма
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null || _count == 0)
 			return;
 

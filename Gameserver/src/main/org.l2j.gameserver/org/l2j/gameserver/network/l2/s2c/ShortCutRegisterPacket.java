@@ -2,6 +2,9 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.actor.instances.player.ShortCut;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class ShortCutRegisterPacket extends ShortCutPacket
 {
@@ -13,8 +16,8 @@ public class ShortCutRegisterPacket extends ShortCutPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		_shortcutInfo.write(this);
+		_shortcutInfo.write(buffer,this);
 	}
 }

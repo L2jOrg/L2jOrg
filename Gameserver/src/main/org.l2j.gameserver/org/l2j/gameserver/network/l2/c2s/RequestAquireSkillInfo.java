@@ -10,6 +10,8 @@ import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.network.l2.s2c.AcquireSkillInfoPacket;
 import org.l2j.gameserver.network.l2.s2c.ExAcquireSkillInfo;
 
+import java.nio.ByteBuffer;
+
 /**
  * Reworked: VISTALL
  */
@@ -20,17 +22,17 @@ public class RequestAquireSkillInfo extends L2GameClientPacket
 	private AcquireType _type;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_id = readInt();
-		_level = readInt();
-		_type = AcquireType.getById(readInt());
+		_id = buffer.getInt();
+		_level = buffer.getInt();
+		_type = AcquireType.getById(buffer.getInt());
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null || player.isTransformed() || SkillHolder.getInstance().getSkill(_id, _level) == null || _type == null)
 			return;
 

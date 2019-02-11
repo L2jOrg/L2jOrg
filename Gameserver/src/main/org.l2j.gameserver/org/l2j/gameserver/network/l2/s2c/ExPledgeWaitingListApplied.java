@@ -6,7 +6,10 @@ import org.l2j.gameserver.model.clansearch.ClanSearchClan;
 import org.l2j.gameserver.model.clansearch.ClanSearchPlayer;
 import org.l2j.gameserver.model.clansearch.base.ClanSearchListType;
 import org.l2j.gameserver.model.pledge.Clan;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.tables.ClanTable;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author GodWorld
@@ -50,15 +53,15 @@ public class ExPledgeWaitingListApplied extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_clanId);
-		writeString(_clanName);
-		writeString(_leaderName);
-		writeInt(_clanLevel);
-		writeInt(_memberCount);
-		writeInt(_searchType.ordinal());
-		writeString("");
-		writeString(_desc);
+		buffer.putInt(_clanId);
+		writeString(_clanName, buffer);
+		writeString(_leaderName, buffer);
+		buffer.putInt(_clanLevel);
+		buffer.putInt(_memberCount);
+		buffer.putInt(_searchType.ordinal());
+		writeString("", buffer);
+		writeString(_desc, buffer);
 	}
 }

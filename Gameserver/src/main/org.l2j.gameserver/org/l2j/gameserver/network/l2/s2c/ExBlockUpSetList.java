@@ -1,8 +1,10 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.List;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.network.l2.ServerPacketOpcodes;
 
 /**
@@ -42,24 +44,24 @@ public abstract class ExBlockUpSetList extends L2GameServerPacket
 		}
 
 		@Override
-		protected void writeImpl()
+		protected void writeImpl(GameClient client, ByteBuffer buffer)
 		{
-			writeInt(0x00);	// type
+			buffer.putInt(0x00);	// type
 
-			writeInt(_roomNumber);
-			writeInt(0xffffffff);
+			buffer.putInt(_roomNumber);
+			buffer.putInt(0xffffffff);
 
-			writeInt(_bluePlayers.size());
+			buffer.putInt(_bluePlayers.size());
 			for(Player player : _bluePlayers)
 			{
-				writeInt(player.getObjectId());
-				writeString(player.getName());
+				buffer.putInt(player.getObjectId());
+				writeString(player.getName(), buffer);
 			}
-			writeInt(_redPlayers.size());
+			buffer.putInt(_redPlayers.size());
 			for(Player player : _redPlayers)
 			{
-				writeInt(player.getObjectId());
-				writeString(player.getName());
+				buffer.putInt(player.getObjectId());
+				writeString(player.getName(), buffer);
 			}
 		}
 	}
@@ -78,15 +80,15 @@ public abstract class ExBlockUpSetList extends L2GameServerPacket
 		}
 
 		@Override
-		protected void writeImpl()
+		protected void writeImpl(GameClient client, ByteBuffer buffer)
 		{
-			writeInt(0x01);	// type
+			buffer.putInt(0x01);	// type
 
-			writeInt(0xffffffff);
+			buffer.putInt(0xffffffff);
 
-			writeInt(_isRedTeam ? 0x01 : 0x00);
-			writeInt(_objectId);
-			writeString(_name);
+			buffer.putInt(_isRedTeam ? 0x01 : 0x00);
+			buffer.putInt(_objectId);
+			writeString(_name, buffer);
 		}
 	}
 
@@ -102,14 +104,14 @@ public abstract class ExBlockUpSetList extends L2GameServerPacket
 		}
 
 		@Override
-		protected void writeImpl()
+		protected void writeImpl(GameClient client, ByteBuffer buffer)
 		{
-			writeInt(0x02);	// type
+			buffer.putInt(0x02);	// type
 
-			writeInt(0xffffffff);
+			buffer.putInt(0xffffffff);
 
-			writeInt(_isRedTeam ? 0x01 : 0x00);
-			writeInt(_objectId);
+			buffer.putInt(_isRedTeam ? 0x01 : 0x00);
+			buffer.putInt(_objectId);
 		}
 	}
 
@@ -123,10 +125,10 @@ public abstract class ExBlockUpSetList extends L2GameServerPacket
 		}
 
 		@Override
-		protected void writeImpl()
+		protected void writeImpl(GameClient client, ByteBuffer buffer)
 		{
-			writeInt(0x03);
-			writeInt(_seconds);
+			buffer.putInt(0x03);
+			buffer.putInt(_seconds);
 		}
 	}
 
@@ -140,9 +142,9 @@ public abstract class ExBlockUpSetList extends L2GameServerPacket
 		}
 
 		@Override
-		protected void writeImpl()
+		protected void writeImpl(GameClient client, ByteBuffer buffer)
 		{
-			writeInt(0x04);
+			buffer.putInt(0x04);
 		}
 	}
 
@@ -158,13 +160,13 @@ public abstract class ExBlockUpSetList extends L2GameServerPacket
 		}
 
 		@Override
-		protected void writeImpl()
+		protected void writeImpl(GameClient client, ByteBuffer buffer)
 		{
-			writeInt(0x05);
+			buffer.putInt(0x05);
 
-			writeInt(_objectId);
-			writeInt(_fromRedTeam ? 1 : 0);
-			writeInt(_fromRedTeam ? 0 : 1);
+			buffer.putInt(_objectId);
+			buffer.putInt(_fromRedTeam ? 1 : 0);
+			buffer.putInt(_fromRedTeam ? 0 : 1);
 		}
 	}
 
@@ -178,9 +180,9 @@ public abstract class ExBlockUpSetList extends L2GameServerPacket
 		}
 
 		@Override
-		protected void writeImpl()
+		protected void writeImpl(GameClient client, ByteBuffer buffer)
 		{
-			writeInt(0xffffffff);
+			buffer.putInt(0xffffffff);
 		}
 	}
 }

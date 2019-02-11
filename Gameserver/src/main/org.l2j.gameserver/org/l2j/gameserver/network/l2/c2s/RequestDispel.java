@@ -4,22 +4,24 @@ import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.actor.instances.creature.Abnormal;
 
+import java.nio.ByteBuffer;
+
 public class RequestDispel extends L2GameClientPacket
 {
 	private int _objectId, _id, _level;
 
 	@Override
-	protected void readImpl() throws Exception
+	protected void readImpl(ByteBuffer buffer) throws Exception
 	{
-		_objectId = readInt();
-		_id = readInt();
-		_level = readInt();
+		_objectId = buffer.getInt();
+		_id = buffer.getInt();
+		_level = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl() throws Exception
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

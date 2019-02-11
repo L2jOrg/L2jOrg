@@ -3,6 +3,9 @@ package org.l2j.gameserver.network.l2.s2c;
 import org.l2j.gameserver.instancemanager.MatchingRoomManager;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.matching.MatchingRoom;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author VISTALL
@@ -23,15 +26,15 @@ public class ExManageMpccRoomMember extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_type);
-		writeInt(_memberInfo.objectId);
-		writeString(_memberInfo.name);
-		writeInt(_memberInfo.classId);
-		writeInt(_memberInfo.level);
-		writeInt(_memberInfo.location);
-		writeInt(_memberInfo.memberType);
+		buffer.putInt(_type);
+		buffer.putInt(_memberInfo.objectId);
+		writeString(_memberInfo.name, buffer);
+		buffer.putInt(_memberInfo.classId);
+		buffer.putInt(_memberInfo.level);
+		buffer.putInt(_memberInfo.location);
+		buffer.putInt(_memberInfo.memberType);
 	}
 
 	static class MpccRoomMemberInfo

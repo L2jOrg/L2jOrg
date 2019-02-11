@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Creature;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class StartRotatingPacket extends L2GameServerPacket
 {
@@ -15,11 +18,11 @@ public class StartRotatingPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_charId);
-		writeInt(_degree);
-		writeInt(_side);
-		writeInt(_speed);
+		buffer.putInt(_charId);
+		buffer.putInt(_degree);
+		buffer.putInt(_side);
+		buffer.putInt(_speed);
 	}
 }

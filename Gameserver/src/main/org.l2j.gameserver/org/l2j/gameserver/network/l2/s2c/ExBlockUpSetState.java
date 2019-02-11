@@ -1,7 +1,10 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.network.l2.ServerPacketOpcodes;
+
+import java.nio.ByteBuffer;
 
 public class ExBlockUpSetState extends L2GameServerPacket
 {
@@ -31,17 +34,17 @@ public class ExBlockUpSetState extends L2GameServerPacket
 		}
 
 		@Override
-		protected void writeImpl()
+		protected void writeImpl(GameClient client, ByteBuffer buffer)
 		{
-			writeInt(0x00);
+			buffer.putInt(0x00);
 
-			writeInt(_timeLeft);
-			writeInt(_bluePoints);
-			writeInt(_redPoints);
+			buffer.putInt(_timeLeft);
+			buffer.putInt(_bluePoints);
+			buffer.putInt(_redPoints);
 
-			writeInt(_isRedTeam ? 0x01 : 0x00);
-			writeInt(_objectId);
-			writeInt(_playerPoints);
+			buffer.putInt(_isRedTeam ? 0x01 : 0x00);
+			buffer.putInt(_objectId);
+			buffer.putInt(_playerPoints);
 		}
 	}
 
@@ -55,11 +58,11 @@ public class ExBlockUpSetState extends L2GameServerPacket
 		}
 
 		@Override
-		protected void writeImpl()
+		protected void writeImpl(GameClient client, ByteBuffer buffer)
 		{
-			writeInt(0x01);
+			buffer.putInt(0x01);
 
-			writeInt(_isRedTeamWin ? 0x01 : 0x00);
+			buffer.putInt(_isRedTeamWin ? 0x01 : 0x00);
 		}
 	}
 
@@ -77,20 +80,20 @@ public class ExBlockUpSetState extends L2GameServerPacket
 		}
 
 		@Override
-		protected void writeImpl()
+		protected void writeImpl(GameClient client, ByteBuffer buffer)
 		{
-			writeInt(0x02);
+			buffer.putInt(0x02);
 
-			writeInt(_timeLeft);
-			writeInt(_bluePoints);
-			writeInt(_redPoints);
+			buffer.putInt(_timeLeft);
+			buffer.putInt(_bluePoints);
+			buffer.putInt(_redPoints);
 		}
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		/*writeInt(BlockUpStateType);
+		/*buffer.putInt(BlockUpStateType);
 		switch(BlockUpStateType)
 		{
 			case 0:

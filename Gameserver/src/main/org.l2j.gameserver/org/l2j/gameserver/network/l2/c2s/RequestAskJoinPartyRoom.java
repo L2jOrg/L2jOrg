@@ -9,6 +9,8 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ExAskJoinPartyRoom;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 
+import java.nio.ByteBuffer;
+
 /**
  * format: (ch)S
  */
@@ -17,15 +19,15 @@ public class RequestAskJoinPartyRoom extends L2GameClientPacket
 	private String _name; // not tested, just guessed
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_name = readS(16);
+		_name = readString(buffer, 16);
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

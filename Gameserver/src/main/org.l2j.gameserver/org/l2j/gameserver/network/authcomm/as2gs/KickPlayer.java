@@ -7,14 +7,16 @@ import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ServerCloseSocketPacket;
 
+import java.nio.ByteBuffer;
+
 public class KickPlayer extends ReceivablePacket
 {
-    String account;
+    private String account;
 
     @Override
-    public void readImpl()
+    public void readImpl(ByteBuffer buffer)
     {
-        account = readString();
+        account = readString(buffer);
     }
 
     @Override

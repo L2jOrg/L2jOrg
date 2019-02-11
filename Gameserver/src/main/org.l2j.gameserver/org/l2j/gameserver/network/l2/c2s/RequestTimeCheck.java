@@ -1,17 +1,20 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
+
 public class RequestTimeCheck extends L2GameClientPacket
 {
 	private int unk, unk2;
 
 	/**
 	 * format: dd
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		unk = readInt();
-		unk2 = readInt();
+		unk = buffer.getInt();
+		unk2 = buffer.getInt();
 	}
 
 	@Override

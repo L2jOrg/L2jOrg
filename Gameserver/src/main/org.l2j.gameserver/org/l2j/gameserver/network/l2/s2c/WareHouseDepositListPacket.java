@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -9,6 +10,7 @@ import org.l2j.gameserver.model.items.ItemInfo;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.model.items.Warehouse.ItemClassComparator;
 import org.l2j.gameserver.model.items.Warehouse.WarehouseType;
+import org.l2j.gameserver.network.l2.GameClient;
 
 public class WareHouseDepositListPacket extends L2GameServerPacket
 {
@@ -48,17 +50,17 @@ public class WareHouseDepositListPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeShort(_whtype);
-		writeLong(_adena);
-		writeShort(_depositedItemsCount); //Количество вещей которые уже есть в банке.
-		writeInt(0);//TODO [Bonux]
-		writeShort(_itemList.size());
+		buffer.putShort((short) _whtype);
+		buffer.putLong(_adena);
+		buffer.putShort((short) _depositedItemsCount); //Количество вещей которые уже есть в банке.
+		buffer.putInt(0);//TODO [Bonux]
+		buffer.putShort((short) _itemList.size());
 		for(ItemInfo item : _itemList)
 		{
-			writeItemInfo(item);
-			writeInt(item.getObjectId());
+			writeItemInfo(buffer, item);
+			buffer.putInt(item.getObjectId());
 		}
 	}
 }

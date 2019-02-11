@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -10,6 +11,7 @@ import org.l2j.gameserver.model.items.ItemInfo;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.model.items.Warehouse.ItemClassComparator;
 import org.l2j.gameserver.model.items.Warehouse.WarehouseType;
+import org.l2j.gameserver.network.l2.GameClient;
 
 public class WareHouseWithdrawListPacket extends L2GameServerPacket
 {
@@ -50,28 +52,28 @@ public class WareHouseWithdrawListPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeShort(_type);
-		writeLong(_adena);
-		writeShort(_itemList.size());
+		buffer.putShort((short) _type);
+		buffer.putLong(_adena);
+		buffer.putShort((short) _itemList.size());
 		if(_type == 1 || _type == 2)
 		{
 			if(_itemList.size() > 0)
 			{
-				writeShort(0x01);
-				writeInt(0x1063); // TODO: writeInt(_itemList.get(0).getItemId()); первый предмет в списке.
+				buffer.putShort((short) 0x01);
+				buffer.putInt(0x1063); // TODO: buffer.putInt(_itemList.get(0).getItemId()); первый предмет в списке.
 			}
 			else
-				writeShort(0x00);
+				buffer.putShort((short) 0x00);
 		}
-		writeInt(_inventoryUsedSlots); //Количество занятых ячеек в инвентаре.
+		buffer.putInt(_inventoryUsedSlots); //Количество занятых ячеек в инвентаре.
 		for(ItemInfo item : _itemList)
 		{
-			writeItemInfo(item);
-			writeInt(item.getObjectId());
-			writeInt(0);
-			writeInt(0);
+			writeItemInfo(buffer, item);
+			buffer.putInt(item.getObjectId());
+			buffer.putInt(0);
+			buffer.putInt(0);
 		}
 	}
 }

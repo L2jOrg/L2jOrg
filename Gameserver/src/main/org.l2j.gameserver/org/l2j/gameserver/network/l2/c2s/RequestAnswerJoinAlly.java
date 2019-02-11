@@ -6,6 +6,8 @@ import org.l2j.gameserver.model.Request.L2RequestType;
 import org.l2j.gameserver.model.pledge.Alliance;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 
+import java.nio.ByteBuffer;
+
 /**
  *  format  c(d)
  */
@@ -14,15 +16,15 @@ public class RequestAnswerJoinAlly extends L2GameClientPacket
 	private int _response;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_response = availableData() >= 4 ? readInt() : 0;
+		_response = buffer.remaining() >= 4 ? buffer.getInt() : 0;
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 		

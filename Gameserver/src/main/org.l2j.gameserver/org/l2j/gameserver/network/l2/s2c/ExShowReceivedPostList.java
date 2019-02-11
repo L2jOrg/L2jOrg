@@ -1,11 +1,13 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.Collections;
 import java.util.List;
 
 import org.l2j.gameserver.dao.MailDAO;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.mail.Mail;
+import org.l2j.gameserver.network.l2.GameClient;
 
 /**
  * Появляется при нажатии на кнопку "почта" или "received mail", входящие письма
@@ -28,29 +30,29 @@ public class ExShowReceivedPostList extends L2GameServerPacket
 
 	// d dx[dSSddddddd]
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt((int) (System.currentTimeMillis() / 1000L));
-		writeInt(_mails.length); // количество писем
+		buffer.putInt((int) (System.currentTimeMillis() / 1000L));
+		buffer.putInt(_mails.length); // количество писем
 		for(Mail mail : _mails)
 		{
-			writeInt(mail.getType().ordinal()); // тип письма
+			buffer.putInt(mail.getType().ordinal()); // тип письма
 
 			if(mail.getType() == Mail.SenderType.SYSTEM)
-				writeInt(mail.getSystemTopic());
+				buffer.putInt(mail.getSystemTopic());
 
-			writeInt(mail.getMessageId()); // уникальный id письма
-			writeString(mail.getTopic()); // топик
-			writeString(mail.getSenderName()); // отправитель
-			writeInt(mail.isPayOnDelivery() ? 1 : 0); // если тут 1 то письмо требует оплаты
-			writeInt(mail.getExpireTime()); // время действительности письма
-			writeInt(mail.isUnread() ? 1 : 0); // письмо не прочитано - его нельзя удалить и оно выделяется ярким цветом
-			writeInt(mail.isReturnable()); // returnable
-			writeInt(mail.getAttachments().isEmpty() ? 0 : 1); // 1 - письмо с приложением, 0 - просто письмо
-			writeInt(mail.isReturned() ? 1 : 0);
-			writeInt(mail.getReceiverId());
+			buffer.putInt(mail.getMessageId()); // уникальный id письма
+			writeString(mail.getTopic(), buffer); // топик
+			writeString(mail.getSenderName(), buffer); // отправитель
+			buffer.putInt(mail.isPayOnDelivery() ? 1 : 0); // если тут 1 то письмо требует оплаты
+			buffer.putInt(mail.getExpireTime()); // время действительности письма
+			buffer.putInt(mail.isUnread() ? 1 : 0); // письмо не прочитано - его нельзя удалить и оно выделяется ярким цветом
+			buffer.putInt(mail.isReturnable() ? 1 : 0); // returnable
+			buffer.putInt(mail.getAttachments().isEmpty() ? 0 : 1); // 1 - письмо с приложением, 0 - просто письмо
+			buffer.putInt(mail.isReturned() ? 1 : 0);
+			buffer.putInt(mail.getReceiverId());
 		}
-		writeInt(100);
-		writeInt(1000);
+		buffer.putInt(100);
+		buffer.putInt(1000);
 	}
 }

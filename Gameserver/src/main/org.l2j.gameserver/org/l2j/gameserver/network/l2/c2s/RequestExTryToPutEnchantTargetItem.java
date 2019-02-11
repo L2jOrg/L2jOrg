@@ -10,20 +10,22 @@ import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.templates.item.support.EnchantScroll;
 import org.l2j.gameserver.utils.Log;
 
+import java.nio.ByteBuffer;
+
 public class RequestExTryToPutEnchantTargetItem extends L2GameClientPacket
 {
 	private int _objectId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_objectId = readInt();
+		_objectId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		final Player player = getClient().getActiveChar();
+		final Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

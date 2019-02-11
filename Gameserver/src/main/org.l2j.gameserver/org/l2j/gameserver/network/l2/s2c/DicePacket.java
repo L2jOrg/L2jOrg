@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class DicePacket extends L2GameServerPacket
 {
 	private int _playerId;
@@ -24,13 +28,13 @@ public class DicePacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_playerId); // object id of player
-		writeInt(_itemId); //	item id of dice (spade)  4625,4626,4627,4628
-		writeInt(_number); // number rolled
-		writeInt(_x); // x
-		writeInt(_y); // y
-		writeInt(_z); // z
+		buffer.putInt(_playerId); // object id of player
+		buffer.putInt(_itemId); //	item id of dice (spade)  4625,4626,4627,4628
+		buffer.putInt(_number); // number rolled
+		buffer.putInt(_x); // x
+		buffer.putInt(_y); // y
+		buffer.putInt(_z); // z
 	}
 }

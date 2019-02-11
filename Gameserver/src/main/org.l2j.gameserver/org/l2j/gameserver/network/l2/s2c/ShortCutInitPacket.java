@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -7,6 +8,7 @@ import java.util.List;
 
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.actor.instances.player.ShortCut;
+import org.l2j.gameserver.network.l2.GameClient;
 
 public class ShortCutInitPacket extends ShortCutPacket
 {
@@ -21,11 +23,11 @@ public class ShortCutInitPacket extends ShortCutPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_shortCuts.size());
+		buffer.putInt(_shortCuts.size());
 
 		for(final ShortcutInfo sc : _shortCuts)
-			sc.write(this);
+			sc.write(buffer,this);
 	}
 }

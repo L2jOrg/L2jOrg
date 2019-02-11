@@ -1,19 +1,23 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import io.github.joealisson.mmocore.StaticPacket;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.ImagesCache;
 import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.utils.BypassStorage.BypassType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.nio.ByteBuffer;
 import java.util.List;
 import java.util.regex.Matcher;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
+@StaticPacket
 public class ShowBoardPacket extends L2GameServerPacket
 {
 	private static final Logger _log = LoggerFactory.getLogger(ShowBoardPacket.class);
@@ -133,15 +137,20 @@ public class ShowBoardPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeByte(_show); //c4 1 to show community 00 to hide
+		buffer.put((byte) (_show ? 0x01 : 0x00)); //c4 1 to show community 00 to hide
 		if(_show)
 		{
 			for(String bbsBypass : DIRECT_BYPASS)
-				writeString(bbsBypass);
-			writeString(_fav);
-			writeString(_html);
+				writeString(bbsBypass, buffer);
+			writeString(_fav, buffer);
+			writeString(_html, buffer);
 		}
 	}
+
+    @Override
+    protected int size(GameClient client) {
+        return _fav.length() * 2 + _html.length() * 2 + 14 * 23;
+    }
 }

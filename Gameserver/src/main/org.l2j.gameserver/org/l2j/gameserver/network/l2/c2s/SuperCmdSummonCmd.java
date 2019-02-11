@@ -1,5 +1,7 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
+
 /**
  * Format chS
  * c: (id) 0x39
@@ -13,13 +15,14 @@ class SuperCmdSummonCmd extends L2GameClientPacket
 	private String _summonName;
 
 	/**
-	 * @param buf
-	 * @param client
-	 */
+     * @param buf
+     * @param client
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_summonName = readString();
+		_summonName = readString(buffer);
 	}
 
 	@Override

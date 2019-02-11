@@ -4,21 +4,23 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.network.l2.s2c.ExResponseCommissionInfo;
 
+import java.nio.ByteBuffer;
+
 public class RequestCommissionInfo extends L2GameClientPacket
 {
 	public int _itemObjId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_itemObjId = readInt();
+		_itemObjId = buffer.getInt();
 
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

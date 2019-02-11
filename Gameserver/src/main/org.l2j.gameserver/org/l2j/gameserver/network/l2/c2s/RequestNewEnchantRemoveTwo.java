@@ -5,6 +5,8 @@ import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.network.l2.s2c.ExEnchantTwoRemoveFail;
 import org.l2j.gameserver.network.l2.s2c.ExEnchantTwoRemoveOK;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author Bonux
 **/
@@ -13,15 +15,15 @@ public class RequestNewEnchantRemoveTwo extends L2GameClientPacket
 	private int _item2ObjectId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_item2ObjectId = readInt();
+		_item2ObjectId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		final Player activeChar = getClient().getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

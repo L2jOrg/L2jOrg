@@ -6,6 +6,8 @@ import org.l2j.gameserver.model.clansearch.ClanSearchPlayer;
 import org.l2j.gameserver.network.l2.s2c.ExPledgeWaitingList;
 import org.l2j.gameserver.network.l2.s2c.ExPledgeWaitingUser;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author GodWorld
  * @reworked by Bonux
@@ -16,16 +18,16 @@ public class RequestPledgeWaitingUser extends L2GameClientPacket
 	private int _charId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_clanId = readInt();
-		_charId = readInt();
+		_clanId = buffer.getInt();
+		_charId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

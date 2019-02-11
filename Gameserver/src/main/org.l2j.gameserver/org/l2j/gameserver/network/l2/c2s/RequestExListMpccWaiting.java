@@ -3,6 +3,8 @@ package org.l2j.gameserver.network.l2.c2s;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.s2c.ExListMpccWaiting;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author VISTALL
  */
@@ -13,17 +15,17 @@ public class RequestExListMpccWaiting extends L2GameClientPacket
 	private boolean _allLevels;
 
 	@Override
-	protected void readImpl() throws Exception
+	protected void readImpl(ByteBuffer buffer) throws Exception
 	{
-		_listId = readInt();
-		_locationId = readInt();
-		_allLevels = readInt() == 1;
+		_listId = buffer.getInt();
+		_locationId = buffer.getInt();
+		_allLevels = buffer.getInt() == 1;
 	}
 
 	@Override
 	protected void runImpl() throws Exception
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

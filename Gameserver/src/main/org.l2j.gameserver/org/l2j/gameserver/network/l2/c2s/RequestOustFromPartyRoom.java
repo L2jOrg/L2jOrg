@@ -5,6 +5,8 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 
+import java.nio.ByteBuffer;
+
 /**
  * format (ch) d
  */
@@ -13,15 +15,15 @@ public class RequestOustFromPartyRoom extends L2GameClientPacket
 	private int _objectId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_objectId = readInt();
+		_objectId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		final Player player = getClient().getActiveChar();
+		final Player player = client.getActiveChar();
 
 		final MatchingRoom room = player.getMatchingRoom();
 		if(room == null || room.getType() != MatchingRoom.PARTY_MATCHING)

@@ -3,6 +3,8 @@ package org.l2j.gameserver.network.l2.c2s;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.s2c.RecipeShopSellListPacket;
 
+import java.nio.ByteBuffer;
+
 /**
  * Возврат к списку из информации о рецепте
  */
@@ -11,15 +13,15 @@ public class RequestRecipeShopSellList extends L2GameClientPacket
 	int _manufacturerId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_manufacturerId = readInt();
+		_manufacturerId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 /**
  * @author Bonux
 **/
@@ -26,15 +30,15 @@ public class ExTryMixCube extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeByte(_result);
-		writeInt(0x01); // UNK
+		buffer.put((byte)_result);
+		buffer.putInt(0x01); // UNK
 		//for(int i = 0; i < count; i++)
 		//{
-			writeByte(0x00);
-			writeInt(_itemId);
-			writeLong(_itemCount);
+			buffer.put((byte)0x00);
+			buffer.putInt(_itemId);
+			buffer.putLong(_itemCount);
 		//}
 	}
 }

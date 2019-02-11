@@ -4,6 +4,8 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.network.l2.s2c.PledgeReceiveWarList;
 
+import java.nio.ByteBuffer;
+
 public class RequestPledgeWarList extends L2GameClientPacket
 {
 	// format: (ch)dd
@@ -11,16 +13,16 @@ public class RequestPledgeWarList extends L2GameClientPacket
 	private int _page;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_page = readInt();
-		_type = readInt();
+		_page = buffer.getInt();
+		_type = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

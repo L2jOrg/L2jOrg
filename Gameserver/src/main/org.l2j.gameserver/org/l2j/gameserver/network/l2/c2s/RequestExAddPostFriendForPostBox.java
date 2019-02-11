@@ -9,6 +9,8 @@ import org.l2j.gameserver.network.l2.s2c.ExConfirmAddingPostFriend;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import io.github.joealisson.primitive.maps.IntObjectMap;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author VISTALL
  * @date 21:06/22.03.2011
@@ -18,15 +20,15 @@ public class RequestExAddPostFriendForPostBox extends L2GameClientPacket
 	private String _name;
 
 	@Override
-	protected void readImpl() throws Exception
+	protected void readImpl(ByteBuffer buffer) throws Exception
 	{
-		_name = readS(Config.CNAME_MAXLEN);
+		_name = readString(buffer, Config.CNAME_MAXLEN);
 	}
 
 	@Override
 	protected void runImpl() throws Exception
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

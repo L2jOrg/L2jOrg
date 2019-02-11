@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.items.ItemInfo;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class TradeOwnAddPacket extends L2GameServerPacket
 {
@@ -14,9 +17,9 @@ public class TradeOwnAddPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeShort(1); // item count
-		writeItemInfo(_item, _amount);
+		buffer.putShort((short) 1); // item count
+		writeItemInfo(buffer, _item, _amount);
 	}
 }

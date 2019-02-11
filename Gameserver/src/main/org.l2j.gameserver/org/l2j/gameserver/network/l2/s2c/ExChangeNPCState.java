@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ExChangeNPCState extends L2GameServerPacket
 {
 	private int _objId;
@@ -12,9 +16,9 @@ public class ExChangeNPCState extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_objId);
-		writeInt(_state);
+		buffer.putInt(_objId);
+		buffer.putInt(_state);
 	}
 }

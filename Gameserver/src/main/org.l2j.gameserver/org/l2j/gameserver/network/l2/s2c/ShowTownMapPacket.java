@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ShowTownMapPacket extends L2GameServerPacket
 {
 	/**
@@ -18,10 +22,10 @@ public class ShowTownMapPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeString(_texture);
-		writeInt(_x);
-		writeInt(_y);
+		writeString(_texture, buffer);
+		buffer.putInt(_x);
+		buffer.putInt(_y);
 	}
 }

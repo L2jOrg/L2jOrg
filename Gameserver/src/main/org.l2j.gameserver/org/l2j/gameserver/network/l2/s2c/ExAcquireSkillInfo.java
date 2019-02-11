@@ -5,8 +5,10 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Skill;
 import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.base.AcquireType;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.templates.item.data.ItemData;
 
+import java.nio.ByteBuffer;
 import java.util.List;
 
 public class ExAcquireSkillInfo extends L2GameServerPacket
@@ -23,21 +25,21 @@ public class ExAcquireSkillInfo extends L2GameServerPacket
 	}
 
 	@Override
-	public void writeImpl()
+	public void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_learn.getId());
-		writeInt(_learn.getLevel());
-		writeLong(_learn.getCost());
-		writeShort(_learn.getMinLevel());
-		writeShort(0x00); // Dual-class min level.
+		buffer.putInt(_learn.getId());
+		buffer.putInt(_learn.getLevel());
+		buffer.putLong(_learn.getCost());
+		buffer.putShort((short) _learn.getMinLevel());
+		buffer.putShort((short) 0x00); // Dual-class min level.
 
-		writeInt(_requiredItems.size());
+		buffer.putInt(_requiredItems.size());
 		for(ItemData item : _requiredItems)
 		{
-			writeInt(item.getId());
-			writeLong(item.getCount());
+			buffer.putInt(item.getId());
+			buffer.putLong(item.getCount());
 		}
 
-		writeInt(0x00);
+		buffer.putInt(0x00);
 	}
 }

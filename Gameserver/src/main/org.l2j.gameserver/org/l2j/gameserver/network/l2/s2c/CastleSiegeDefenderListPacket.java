@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -10,6 +11,7 @@ import org.l2j.gameserver.model.entity.events.objects.SiegeClanObject;
 import org.l2j.gameserver.model.entity.residence.Castle;
 import org.l2j.gameserver.model.pledge.Alliance;
 import org.l2j.gameserver.model.pledge.Clan;
+import org.l2j.gameserver.network.l2.GameClient;
 
 import static org.l2j.commons.util.Util.STRING_EMPTY;
 
@@ -75,38 +77,38 @@ public class CastleSiegeDefenderListPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_id);
-		writeInt(0x00);
-		writeInt(_registrationValid);
-		writeInt(0x00);
+		buffer.putInt(_id);
+		buffer.putInt(0x00);
+		buffer.putInt(_registrationValid);
+		buffer.putInt(0x00);
 
-		writeInt(_defenderClans.size());
-		writeInt(_defenderClans.size());
+		buffer.putInt(_defenderClans.size());
+		buffer.putInt(_defenderClans.size());
 		for(DefenderClan defenderClan : _defenderClans)
 		{
 			Clan clan = defenderClan._clan;
 
-			writeInt(clan.getClanId());
-			writeString(clan.getName());
-			writeString(clan.getLeaderName());
-			writeInt(clan.getCrestId());
-			writeInt(defenderClan._time);
-			writeInt(defenderClan._type);
-			writeInt(clan.getAllyId());
+			buffer.putInt(clan.getClanId());
+			writeString(clan.getName(), buffer);
+			writeString(clan.getLeaderName(), buffer);
+			buffer.putInt(clan.getCrestId());
+			buffer.putInt(defenderClan._time);
+			buffer.putInt(defenderClan._type);
+			buffer.putInt(clan.getAllyId());
 			Alliance alliance = clan.getAlliance();
 			if(alliance != null)
 			{
-				writeString(alliance.getAllyName());
-				writeString(alliance.getAllyLeaderName());
-				writeInt(alliance.getAllyCrestId());
+				writeString(alliance.getAllyName(), buffer);
+				writeString(alliance.getAllyLeaderName(), buffer);
+				buffer.putInt(alliance.getAllyCrestId());
 			}
 			else
 			{
-				writeString(STRING_EMPTY);
-				writeString(STRING_EMPTY);
-				writeInt(0x00);
+				writeString(STRING_EMPTY, buffer);
+				writeString(STRING_EMPTY, buffer);
+				buffer.putInt(0x00);
 			}
 		}
 	}

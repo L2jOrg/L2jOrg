@@ -1,11 +1,13 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.Collections;
 import java.util.List;
 
 import org.l2j.gameserver.dao.MailDAO;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.mail.Mail;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.network.l2.c2s.RequestExDeleteSentPost;
 import org.l2j.gameserver.network.l2.c2s.RequestExRequestSentPost;
 import org.l2j.gameserver.network.l2.c2s.RequestExRequestSentPostList;
@@ -29,21 +31,21 @@ public class ExShowSentPostList extends L2GameServerPacket
 
 	// d dx[dSSddddd]
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt((int) (System.currentTimeMillis() / 1000L));
-		writeInt(mails.size()); // количество писем
+		buffer.putInt((int) (System.currentTimeMillis() / 1000L));
+		buffer.putInt(mails.size()); // количество писем
 		for(Mail mail : mails)
 		{
-			writeInt(mail.getMessageId()); // уникальный id письма
-			writeString(mail.getTopic()); // топик
-			writeString(mail.getReceiverName()); // получатель
-			writeInt(mail.isPayOnDelivery() ? 1 : 0); // если тут 1 то письмо требует оплаты
-			writeInt(mail.getExpireTime()); // время действительности письма
-			writeInt(mail.isUnread() ? 1 : 0); // ?
-			writeInt(mail.isReturnable()); // returnable
-			writeInt(mail.getAttachments().isEmpty() ? 0 : 1); // 1 - письмо с приложением, 0 - просто письмо
-			writeInt(0x00); // ???
+			buffer.putInt(mail.getMessageId()); // уникальный id письма
+			writeString(mail.getTopic(), buffer); // топик
+			writeString(mail.getReceiverName(), buffer); // получатель
+			buffer.putInt(mail.isPayOnDelivery() ? 1 : 0); // если тут 1 то письмо требует оплаты
+			buffer.putInt(mail.getExpireTime()); // время действительности письма
+			buffer.putInt(mail.isUnread() ? 1 : 0); // ?
+			buffer.putInt(mail.isReturnable() ? 1 : 0); // returnable
+			buffer.putInt(mail.getAttachments().isEmpty() ? 0 : 1); // 1 - письмо с приложением, 0 - просто письмо
+			buffer.putInt(0x00); // ???
 		}
 	}
 }

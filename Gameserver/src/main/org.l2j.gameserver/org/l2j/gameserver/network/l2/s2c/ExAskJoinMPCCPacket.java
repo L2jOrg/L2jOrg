@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 /**
  * Asks the player to join a Command Channel
  */
@@ -16,9 +20,9 @@ public class ExAskJoinMPCCPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeString(_requestorName); // лидер CC
-		writeInt(0x00);
+		writeString(_requestorName, buffer); // лидер CC
+		buffer.putInt(0x00);
 	}
 }

@@ -2,7 +2,10 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.actor.instances.player.TrainingCamp;
 import org.l2j.gameserver.model.base.Experience;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.settings.ServerSettings;
+
+import java.nio.ByteBuffer;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
@@ -30,11 +33,11 @@ public class ExTrainingZone_Admission extends L2GameServerPacket
 	}
 
 	@Override
-	public void writeImpl()
+	public void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_timeElapsed);
-		writeInt(_timeRemaining);
-		writeDouble(_maxExp);
-		writeDouble(_maxSp);
+		buffer.putInt(_timeElapsed);
+		buffer.putInt(_timeRemaining);
+		buffer.putDouble(_maxExp);
+		buffer.putDouble(_maxSp);
 	}
 }

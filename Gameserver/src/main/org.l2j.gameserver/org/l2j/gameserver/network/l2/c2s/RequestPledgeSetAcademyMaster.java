@@ -9,6 +9,8 @@ import org.l2j.gameserver.network.l2.s2c.PledgeReceiveMemberInfo;
 import org.l2j.gameserver.network.l2.s2c.PledgeShowMemberListUpdatePacket;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 
+import java.nio.ByteBuffer;
+
 public class RequestPledgeSetAcademyMaster extends L2GameClientPacket
 {
 	private int _mode; // 1=set, 0=unset
@@ -16,17 +18,17 @@ public class RequestPledgeSetAcademyMaster extends L2GameClientPacket
 	private String _apprenticeName;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_mode = readInt();
-		_sponsorName = readS(16);
-		_apprenticeName = readS(16);
+		_mode = buffer.getInt();
+		_sponsorName = readString(buffer, 16);
+		_apprenticeName = readString(buffer, 16);
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

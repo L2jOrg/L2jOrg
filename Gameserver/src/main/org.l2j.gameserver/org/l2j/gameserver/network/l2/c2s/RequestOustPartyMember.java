@@ -5,21 +5,23 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.Reflection;
 import org.l2j.gameserver.network.l2.components.CustomMessage;
 
+import java.nio.ByteBuffer;
+
 public class RequestOustPartyMember extends L2GameClientPacket
 {
 	//Format: cS
 	private String _name;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_name = readS(16);
+		_name = readString(buffer, 16);
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

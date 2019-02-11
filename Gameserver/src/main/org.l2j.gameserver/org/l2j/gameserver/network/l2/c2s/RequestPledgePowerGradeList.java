@@ -5,16 +5,18 @@ import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.pledge.RankPrivs;
 import org.l2j.gameserver.network.l2.s2c.PledgePowerGradeList;
 
+import java.nio.ByteBuffer;
+
 public class RequestPledgePowerGradeList extends L2GameClientPacket
 {
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 		Clan clan = activeChar.getClan();

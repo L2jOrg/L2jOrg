@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Servitor;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class ExPartyPetWindowUpdate extends L2GameServerPacket
 {
@@ -23,17 +26,17 @@ public class ExPartyPetWindowUpdate extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(obj_id);
-		writeInt(npc_id);
-		writeInt(_type);
-		writeInt(owner_obj_id);
-		writeString(_name);
-		writeInt(curHp);
-		writeInt(maxHp);
-		writeInt(curMp);
-		writeInt(maxMp);
-		writeInt(level);
+		buffer.putInt(obj_id);
+		buffer.putInt(npc_id);
+		buffer.putInt(_type);
+		buffer.putInt(owner_obj_id);
+		writeString(_name, buffer);
+		buffer.putInt(curHp);
+		buffer.putInt(maxHp);
+		buffer.putInt(curMp);
+		buffer.putInt(maxMp);
+		buffer.putInt(level);
 	}
 }

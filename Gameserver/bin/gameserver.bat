@@ -1,11 +1,11 @@
 @echo off
-title L2-Scripts Classic: Saviors (Zaken) (Game Server)
+title L2 Classic: Saviors (Zaken) (Game Server)
 
 :start
 echo Starting GameServer.
 echo.
 
-java -server -Dfile.encoding=UTF-8 -XX:+UseConcMarkSweepGC -Xms2g -Xmx5g -cp config;./lib/* org.l2j.gameserver.GameServer
+java -Dfile.encoding=UTF-8 -Xms512m -Xmx5g -cp config;./lib/* org.l2j.gameserver.GameServer
 
 if ERRORLEVEL 2 goto restart
 if ERRORLEVEL 1 goto error

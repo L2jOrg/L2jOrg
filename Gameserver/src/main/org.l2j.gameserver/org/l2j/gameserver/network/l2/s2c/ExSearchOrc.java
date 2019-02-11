@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 /**
  * Пример пакета Kamael 828 протокол:
  * 0000: fe 45 00 d9 9f 5e 8d 8b da 38 41 7a a0 3b 73 d1    .E...^...8Az.;s.
@@ -79,8 +83,8 @@ public class ExSearchOrc extends L2GameServerPacket
 
 	//bchb
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeBytes(_test);
+		buffer.put(_test);
 	}
 }

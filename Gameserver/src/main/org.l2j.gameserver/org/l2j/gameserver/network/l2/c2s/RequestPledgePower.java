@@ -4,6 +4,8 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.network.l2.s2c.ManagePledgePowerPacket;
 
+import java.nio.ByteBuffer;
+
 public class RequestPledgePower extends L2GameClientPacket
 {
 	private int _rank;
@@ -11,18 +13,18 @@ public class RequestPledgePower extends L2GameClientPacket
 	private int _privs;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_rank = readInt();
-		_action = readInt();
+		_rank = buffer.getInt();
+		_action = buffer.getInt();
 		if(_action == 2)
-			_privs = readInt();
+			_privs = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 		if(_action == 2)

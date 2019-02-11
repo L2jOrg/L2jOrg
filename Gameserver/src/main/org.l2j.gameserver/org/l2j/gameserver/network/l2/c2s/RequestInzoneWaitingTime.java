@@ -3,20 +3,22 @@ package org.l2j.gameserver.network.l2.c2s;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.s2c.ExInzoneWaitingInfo;
 
+import java.nio.ByteBuffer;
+
 public class RequestInzoneWaitingTime extends L2GameClientPacket
 {
 	private boolean _openWindow;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_openWindow = readByte() > 0;
+		_openWindow = buffer.get() > 0;
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

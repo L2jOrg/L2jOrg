@@ -9,6 +9,8 @@ import org.l2j.gameserver.network.l2.s2c.SystemMessage;
 import org.l2j.gameserver.templates.item.support.variation.VariationFee;
 import org.l2j.gameserver.utils.VariationUtils;
 
+import java.nio.ByteBuffer;
+
 public class RequestConfirmRefinerItem extends L2GameClientPacket
 {
 	// format: (ch)dd
@@ -16,16 +18,16 @@ public class RequestConfirmRefinerItem extends L2GameClientPacket
 	private int _refinerItemObjId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_targetItemObjId = readInt();
-		_refinerItemObjId = readInt();
+		_targetItemObjId = buffer.getInt();
+		_refinerItemObjId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

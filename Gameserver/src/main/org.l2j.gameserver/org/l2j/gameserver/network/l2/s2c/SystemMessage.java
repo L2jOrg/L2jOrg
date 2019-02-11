@@ -5,12 +5,14 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.instances.DoorInstance;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.items.ItemInstance;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.network.l2.ServerPacketOpcodes;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.utils.Location;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -3298,24 +3300,24 @@ public class SystemMessage extends L2GameServerPacket
     }
 
     @Override
-    protected final void writeImpl()
+    protected final void writeImpl(GameClient client, ByteBuffer buffer)
     {
-        Player activeChar = getClient().getActiveChar();
+        Player activeChar = client.getActiveChar();
         if(activeChar == null)
             return;
 
-        writeShort(_messageId);
-        writeByte(args.size());
+        buffer.putShort((short) _messageId);
+        buffer.put((byte)args.size());
         for(Arg e : args)
         {
-            writeByte(e.type);
+            buffer.put((byte)e.type);
 
             switch(e.type)
             {
                 case TYPE_TEXT:
                 case TYPE_PLAYER_NAME:
                 {
-                    writeString((String) e.obj);
+                    writeString((String) e.obj, buffer);
                     break;
                 }
                 case TYPE_NUMBER:
@@ -3328,39 +3330,39 @@ public class SystemMessage extends L2GameServerPacket
                 case TYPE_DOOR_NAME:
                 case TYPE_CLASS_NAME:
                 {
-                    writeInt(((Number) e.obj).intValue());
+                    buffer.putInt(((Number) e.obj).intValue());
                     break;
                 }
                 case TYPE_SKILL_NAME:
                 {
                     int[] skill = (int[]) e.obj;
-                    writeInt(skill[0]); // id
-                    writeShort(skill[1]); // level
+                    buffer.putInt(skill[0]); // id
+                    buffer.putShort((short) skill[1]); // level
                     break;
                 }
                 case TYPE_LONG:
                 {
-                    writeLong((Long) e.obj);
+                    buffer.putLong((Long) e.obj);
                     break;
                 }
                 case TYPE_ZONE_NAME:
                 {
                     Location coord = (Location) e.obj;
-                    writeInt(coord.x);
-                    writeInt(coord.y);
-                    writeInt(coord.z);
+                    buffer.putInt(coord.x);
+                    buffer.putInt(coord.y);
+                    buffer.putInt(coord.z);
                     break;
                 }
                 case TYPE_UNKNOWN_8:
                 {
-                    writeInt(0x00); //?
-                    writeShort(0x00); //?
-                    writeShort(0x00); //?
+                    buffer.putInt(0x00); //?
+                    buffer.putShort((short) 0x00); //?
+                    buffer.putShort((short) 0x00); //?
                     break;
                 }
                 case TYPE_BYTE:
                 {
-                    writeByte(((Number) e.obj).byteValue());
+                    buffer.put((byte)((Number) e.obj).byteValue());
                     break;
                 }
             }

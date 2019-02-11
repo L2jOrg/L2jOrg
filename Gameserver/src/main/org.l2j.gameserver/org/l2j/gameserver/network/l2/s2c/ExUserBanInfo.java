@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ExUserBanInfo extends L2GameServerPacket
 {
 	private final int _points;
@@ -10,8 +14,8 @@ public class ExUserBanInfo extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_points);
+		buffer.putInt(_points);
 	}
 }

@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * dddddQ
@@ -22,13 +25,13 @@ public class RecipeShopItemInfoPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_shopId);
-		writeInt(_recipeId);
-		writeInt(_curMp);
-		writeInt(_maxMp);
-		writeInt(_success);
-		writeLong(_price);
+		buffer.putInt(_shopId);
+		buffer.putInt(_recipeId);
+		buffer.putInt(_curMp);
+		buffer.putInt(_maxMp);
+		buffer.putInt(_success);
+		buffer.putLong(_price);
 	}
 }

@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
 import java.util.Set;
 
 import org.l2j.commons.math.SafeMath;
@@ -10,7 +11,6 @@ import org.l2j.gameserver.model.mail.Mail;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ExReplySentPost;
 import org.l2j.gameserver.network.l2.s2c.ExShowSentPostList;
-import org.l2j.gameserver.network.l2.s2c.SystemMessage;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.utils.Log;
 
@@ -23,17 +23,18 @@ public class RequestExCancelSentPost extends L2GameClientPacket
 
 	/**
 	 * format: d
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		postId = readInt();
+		postId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

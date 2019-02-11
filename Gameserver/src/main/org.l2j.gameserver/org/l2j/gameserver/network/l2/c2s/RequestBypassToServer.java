@@ -1,6 +1,7 @@
 package org.l2j.gameserver.network.l2.c2s;
 
 import java.lang.reflect.Method;
+import java.nio.ByteBuffer;
 import java.util.StringTokenizer;
 
 import org.l2j.commons.util.Pair;
@@ -41,22 +42,22 @@ public class RequestBypassToServer extends L2GameClientPacket
 	private String _bypass = null;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_bypass = readString();
+		_bypass = readString(buffer);
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null || _bypass.isEmpty())
 			return;
 
 		ValidBypass bp = activeChar.getBypassStorage().validate(_bypass);
 		if(bp == null)
 		{
-			_log.debug("RequestBypassToServer: Unexpected bypass : " + _bypass + " client : " + getClient() + "!");
+			_log.debug("RequestBypassToServer: Unexpected bypass : " + _bypass + " client : " + client + "!");
 			return;
 		}
 

@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class ExUISettingPacket extends L2GameServerPacket
 {
@@ -12,9 +15,9 @@ public class ExUISettingPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(data.length);
-		writeBytes(data);
+		buffer.putInt(data.length);
+		buffer.put(data);
 	}
 }

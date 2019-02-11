@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -10,6 +11,7 @@ import org.l2j.gameserver.model.entity.olympiad.Olympiad;
 import org.l2j.gameserver.model.entity.olympiad.OlympiadGame;
 import org.l2j.gameserver.model.entity.olympiad.OlympiadManager;
 import org.l2j.gameserver.model.entity.olympiad.OlympiadMember;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.network.l2.ServerPacketOpcodes;
 
 /**
@@ -45,18 +47,18 @@ public abstract class ExReceiveOlympiadPacket extends L2GameServerPacket
 		}
 
 		@Override
-		protected void writeImpl()
+		protected void writeImpl(GameClient client, ByteBuffer buffer)
 		{
-			super.writeImpl();
-			writeInt(_arenaList.size());
-			writeInt(0x00); //unknown
+			super.writeImpl(client, buffer);
+			buffer.putInt(_arenaList.size());
+			buffer.putInt(0x00); //unknown
 			for(ArenaInfo arena : _arenaList)
 			{
-				writeInt(arena._id);
-				writeInt(arena._matchType);
-				writeInt(arena._status);
-				writeString(arena._name1);
-				writeString(arena._name2);
+				buffer.putInt(arena._id);
+				buffer.putInt(arena._matchType);
+				buffer.putInt(arena._status);
+				writeString(arena._name1, buffer);
+				writeString(arena._name2, buffer);
 			}
 		}
 
@@ -111,36 +113,36 @@ public abstract class ExReceiveOlympiadPacket extends L2GameServerPacket
 		}
 
 		@Override
-		protected void writeImpl()
+		protected void writeImpl(GameClient client, ByteBuffer buffer)
 		{
-			super.writeImpl();
-			writeInt(_tie);
-			writeString(_name);
-			writeInt(0x01);
-			writeInt(_teamOne.size());
+			super.writeImpl(client, buffer);
+			buffer.putInt(_tie? 1 : 0);
+			writeString(_name, buffer);
+			buffer.putInt(0x01);
+			buffer.putInt(_teamOne.size());
 			for (PlayerInfo playerInfo : _teamOne)
 			{
-				writeString(playerInfo._name);
-				writeString(playerInfo._clanName);
-				writeInt(0x00);
-				writeInt(playerInfo._classId);
-				writeInt(playerInfo._damage);
-				writeInt(playerInfo._currentPoints);
-				writeInt(playerInfo._gamePoints);
-				writeInt(0x00);
+				writeString(playerInfo._name, buffer);
+				writeString(playerInfo._clanName, buffer);
+				buffer.putInt(0x00);
+				buffer.putInt(playerInfo._classId);
+				buffer.putInt(playerInfo._damage);
+				buffer.putInt(playerInfo._currentPoints);
+				buffer.putInt(playerInfo._gamePoints);
+				buffer.putInt(0x00);
 			}
-			writeInt(0x02);
-			writeInt(_teamTwo.size());
+			buffer.putInt(0x02);
+			buffer.putInt(_teamTwo.size());
 			for(PlayerInfo playerInfo : _teamTwo)
 			{
-				writeString(playerInfo._name);
-				writeString(playerInfo._clanName);
-				writeInt(0x00);
-				writeInt(playerInfo._classId);
-				writeInt(playerInfo._damage);
-				writeInt(playerInfo._currentPoints);
-				writeInt(playerInfo._gamePoints);
-				writeInt(0x00);
+				writeString(playerInfo._name, buffer);
+				writeString(playerInfo._clanName, buffer);
+				buffer.putInt(0x00);
+				buffer.putInt(playerInfo._classId);
+				buffer.putInt(playerInfo._damage);
+				buffer.putInt(playerInfo._currentPoints);
+				buffer.putInt(playerInfo._gamePoints);
+				buffer.putInt(0x00);
 			}
 		}
 
@@ -175,8 +177,8 @@ public abstract class ExReceiveOlympiadPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_type);
+		buffer.putInt(_type);
 	}
 }

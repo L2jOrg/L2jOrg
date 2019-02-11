@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class StartPledgeWar extends L2GameServerPacket
 {
 	private String _pledgeName;
@@ -12,9 +16,9 @@ public class StartPledgeWar extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeString(_char);
-		writeString(_pledgeName);
+		writeString(_char, buffer);
+		writeString(_pledgeName, buffer);
 	}
 }

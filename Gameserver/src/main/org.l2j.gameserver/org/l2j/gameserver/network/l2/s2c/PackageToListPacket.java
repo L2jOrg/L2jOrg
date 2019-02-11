@@ -1,9 +1,11 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.Collections;
 import java.util.Map;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
 
 /**
  * @author VISTALL
@@ -19,13 +21,13 @@ public class PackageToListPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_characters.size());
+		buffer.putInt(_characters.size());
 		for(Map.Entry<Integer, String> entry : _characters.entrySet())
 		{
-			writeInt(entry.getKey());
-			writeString(entry.getValue());
+			buffer.putInt(entry.getKey());
+			writeString(entry.getValue(), buffer);
 		}
 	}
 }

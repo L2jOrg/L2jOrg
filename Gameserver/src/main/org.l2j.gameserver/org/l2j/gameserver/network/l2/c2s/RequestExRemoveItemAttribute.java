@@ -12,6 +12,8 @@ import org.l2j.gameserver.network.l2.s2c.ExBaseAttributeCancelResult;
 import org.l2j.gameserver.network.l2.s2c.ExShowBaseAttributeCancelWindow;
 import org.l2j.gameserver.network.l2.s2c.InventoryUpdatePacket;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author SYS
  */
@@ -22,16 +24,16 @@ public class RequestExRemoveItemAttribute extends L2GameClientPacket
 	private int _attributeId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_objectId = readInt();
-		_attributeId = readInt();
+		_objectId = buffer.getInt();
+		_attributeId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

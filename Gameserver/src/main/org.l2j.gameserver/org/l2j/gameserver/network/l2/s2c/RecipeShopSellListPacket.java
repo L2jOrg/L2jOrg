@@ -1,9 +1,11 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.List;
 
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ManufactureItem;
+import org.l2j.gameserver.network.l2.GameClient;
 
 public class RecipeShopSellListPacket extends L2GameServerPacket
 {
@@ -21,18 +23,18 @@ public class RecipeShopSellListPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(objId);
-		writeInt(curMp);//Creator's MP
-		writeInt(maxMp);//Creator's MP
-		writeLong(adena);
-		writeInt(createList.size());
+		buffer.putInt(objId);
+		buffer.putInt(curMp);//Creator's MP
+		buffer.putInt(maxMp);//Creator's MP
+		buffer.putLong(adena);
+		buffer.putInt(createList.size());
 		for(ManufactureItem mi : createList)
 		{
-			writeInt(mi.getRecipeId());
-			writeInt(0x00); //unknown
-			writeLong(mi.getCost());
+			buffer.putInt(mi.getRecipeId());
+			buffer.putInt(0x00); //unknown
+			buffer.putLong(mi.getCost());
 		}
 	}
 }

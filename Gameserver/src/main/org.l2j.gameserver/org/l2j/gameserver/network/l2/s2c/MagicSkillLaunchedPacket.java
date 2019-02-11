@@ -1,10 +1,12 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.Collection;
 import java.util.Collections;
 
 import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
 
 public class MagicSkillLaunchedPacket extends L2GameServerPacket
 {
@@ -30,17 +32,17 @@ public class MagicSkillLaunchedPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(0x00);//unk
-		writeInt(_casterId);
-		writeInt(_skillId);
-		writeInt(_skillLevel);
-		writeInt(_targets.size());
+		buffer.putInt(0x00);//unk
+		buffer.putInt(_casterId);
+		buffer.putInt(_skillId);
+		buffer.putInt(_skillLevel);
+		buffer.putInt(_targets.size());
 		for(Creature target : _targets)
 		{
 			if(target != null)
-				writeInt(target.getObjectId());
+				buffer.putInt(target.getObjectId());
 		}
 	}
 

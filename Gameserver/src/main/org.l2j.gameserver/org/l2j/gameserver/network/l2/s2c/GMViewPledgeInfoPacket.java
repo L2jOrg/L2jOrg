@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +10,7 @@ import org.l2j.gameserver.model.entity.residence.ClanHall;
 import org.l2j.gameserver.model.pledge.Alliance;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.pledge.UnitMember;
+import org.l2j.gameserver.network.l2.GameClient;
 
 public class GMViewPledgeInfoPacket extends L2GameServerPacket
 {
@@ -65,55 +67,55 @@ public class GMViewPledgeInfoPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(0x00);
-		writeString(_charName);
-		writeInt(_clanObjectId);
-		writeInt(0x00);
-		writeString(_unitName);
-		writeString(_leaderName);
+		buffer.putInt(0x00);
+		writeString(_charName, buffer);
+		buffer.putInt(_clanObjectId);
+		buffer.putInt(0x00);
+		writeString(_unitName, buffer);
+		writeString(_leaderName, buffer);
 
-		writeInt(_clanCrestId);
-		writeInt(_level);
-		writeInt(_hasCastle);
+		buffer.putInt(_clanCrestId);
+		buffer.putInt(_level);
+		buffer.putInt(_hasCastle);
 		if(_hasInstantClanHall > 0)
 		{
-			writeInt(0x01);
-			writeInt(_hasInstantClanHall);
+			buffer.putInt(0x01);
+			buffer.putInt(_hasInstantClanHall);
 		}
 		else if(_hasClanHall != 0)
 		{
-			writeInt(0x00);
-			writeInt(_hasClanHall);
+			buffer.putInt(0x00);
+			buffer.putInt(_hasClanHall);
 		}
 		else
 		{
-			writeInt(0x00);
-			writeInt(0x00);
+			buffer.putInt(0x00);
+			buffer.putInt(0x00);
 		}
-		writeInt(0x00);
-		writeInt(_rank);
-		writeInt(_reputation);
-		writeInt(_isDisbanded ? 3 : 0);
-		writeInt(0x00);
-		writeInt(_allianceObjectId);
-		writeString(_allianceName);
-		writeInt(_allianceCrestId);
-		writeInt(_atClanWar);
-		writeInt(0); // Territory castle ID
+		buffer.putInt(0x00);
+		buffer.putInt(_rank);
+		buffer.putInt(_reputation);
+		buffer.putInt(_isDisbanded ? 3 : 0);
+		buffer.putInt(0x00);
+		buffer.putInt(_allianceObjectId);
+		writeString(_allianceName, buffer);
+		buffer.putInt(_allianceCrestId);
+		buffer.putInt(_atClanWar ?  1 : 0);
+		buffer.putInt(0); // Territory castle ID
 
-		writeInt(_members.size());
+		buffer.putInt(_members.size());
 		for(PledgePacketMember m : _members)
 		{
-			writeString(m._name);
-			writeInt(m._level);
-			writeInt(m._classId);
-			writeInt(m._sex);
-			writeInt(m._race);
-			writeInt(m._online);
-			writeInt(m._hasSponsor ? 1 : 0);
-			writeByte(0x00);
+			writeString(m._name, buffer);
+			buffer.putInt(m._level);
+			buffer.putInt(m._classId);
+			buffer.putInt(m._sex);
+			buffer.putInt(m._race);
+			buffer.putInt(m._online);
+			buffer.putInt(m._hasSponsor ? 1 : 0);
+			buffer.put((byte)0x00);
 		}
 	}
 

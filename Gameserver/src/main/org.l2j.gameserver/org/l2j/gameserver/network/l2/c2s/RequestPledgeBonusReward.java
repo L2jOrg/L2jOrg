@@ -5,14 +5,16 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.s2c.ExPledgeBonusOpen;
 import org.l2j.gameserver.utils.PledgeBonusUtils;
 
+import java.nio.ByteBuffer;
+
 public class RequestPledgeBonusReward extends L2GameClientPacket
 {
 	private int _type;
 
 	@Override
-	protected void readImpl() throws Exception
+	protected void readImpl(ByteBuffer buffer) throws Exception
 	{
-		_type = readByte();
+		_type = buffer.get();
 	}
 
 	@Override
@@ -21,7 +23,7 @@ public class RequestPledgeBonusReward extends L2GameClientPacket
 		if(!Config.EX_USE_PLEDGE_BONUS)
 			return;
 
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

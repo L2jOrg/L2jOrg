@@ -2,8 +2,11 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Creature;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.Log;
+
+import java.nio.ByteBuffer;
 
 public class MTLPacket extends L2GameServerPacket
 {
@@ -36,16 +39,16 @@ public class MTLPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_objectId);
+		buffer.putInt(_objectId);
 
-		writeInt(_destination.x);
-		writeInt(_destination.y);
-		writeInt(_destination.z + _client_z_shift);
+		buffer.putInt(_destination.x);
+		buffer.putInt(_destination.y);
+		buffer.putInt(_destination.z + _client_z_shift);
 
-		writeInt(_current.x);
-		writeInt(_current.y);
-		writeInt(_current.z + _client_z_shift);
+		buffer.putInt(_current.x);
+		buffer.putInt(_current.y);
+		buffer.putInt(_current.z + _client_z_shift);
 	}
 }

@@ -4,12 +4,14 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.SceneMovie;
 import org.l2j.gameserver.network.l2.s2c.ExStopScenePlayerPacket;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author Bonux
 **/
 public final class RequestExEscapeScene extends L2GameClientPacket
 {
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
 		//
 	}
@@ -17,7 +19,7 @@ public final class RequestExEscapeScene extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

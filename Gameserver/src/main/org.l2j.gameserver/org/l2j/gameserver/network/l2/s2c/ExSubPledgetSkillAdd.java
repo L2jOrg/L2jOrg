@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 /**
  * Author: VISTALL
  */
@@ -15,10 +19,10 @@ public class ExSubPledgetSkillAdd extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_type);
-		writeInt(_id);
-		writeInt(_level);
+		buffer.putInt(_type);
+		buffer.putInt(_id);
+		buffer.putInt(_level);
 	}
 }

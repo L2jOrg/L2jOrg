@@ -1,11 +1,13 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.model.entity.residence.Castle;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.tables.ClanTable;
 
 public class ExShowCastleInfo extends L2GameServerPacket
@@ -41,17 +43,17 @@ public class ExShowCastleInfo extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_infos.size());
+		buffer.putInt(_infos.size());
 		for(CastleInfo info : _infos)
 		{
-			writeInt(info._id);
-			writeString(info._ownerName);
-			writeInt(info._tax);
-			writeInt(info._nextSiege);
-			writeByte(info._inSiege);
-			writeByte(info._side);
+			buffer.putInt(info._id);
+			writeString(info._ownerName, buffer);
+			buffer.putInt(info._tax);
+			buffer.putInt(info._nextSiege);
+			buffer.put((byte) (info._inSiege ? 1 : 0));
+			buffer.put((byte)info._side);
 		}
 		_infos.clear();
 	}

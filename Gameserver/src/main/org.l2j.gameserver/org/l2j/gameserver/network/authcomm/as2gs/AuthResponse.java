@@ -6,6 +6,7 @@ import org.l2j.gameserver.network.authcomm.gs2as.PlayerInGame;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,18 +42,18 @@ public class AuthResponse extends ReceivablePacket
 	private List<ServerInfo> _servers;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		int serverId = readByte();
-		String serverName = readString();
-		if(availableData() <= 0) {
+		int serverId = buffer.get();
+		String serverName = readString(buffer);
+		if(buffer.remaining() <= 0) {
 			_servers = new ArrayList<>(1);
 			_servers.add(new ServerInfo(serverId, serverName));
 		} else {
-			int serversCount = readByte();
+			int serversCount = buffer.get();
 			_servers = new ArrayList<>(serversCount);
 			for(int i = 0; i < serversCount; i++)
-				_servers.add(new ServerInfo(readByte(), readString()));
+				_servers.add(new ServerInfo(buffer.get(), readString(buffer)));
 		}
 	}
 

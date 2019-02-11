@@ -1,11 +1,13 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.model.entity.residence.clanhall.NormalClanHall;
 import org.l2j.gameserver.model.pledge.Clan;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.tables.ClanTable;
 
 import static org.l2j.commons.util.Util.STRING_EMPTY;
@@ -32,15 +34,15 @@ public class ExShowAgitInfo extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_infos.size());
+		buffer.putInt(_infos.size());
 		_infos.forEach(info ->
 		{
-			writeInt(info.ch_id);
-			writeString(info.clan_name);
-			writeString(info.leader_name);
-			writeInt(info.getType);
+			buffer.putInt(info.ch_id);
+			writeString(info.clan_name, buffer);
+			writeString(info.leader_name, buffer);
+			buffer.putInt(info.getType);
 		});
 	}
 

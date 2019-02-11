@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class ExBR_GamePointPacket extends L2GameServerPacket
 {
@@ -14,10 +17,10 @@ public class ExBR_GamePointPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_objectId);
-		writeLong(_points);
-		writeInt(0x00); //??
+		buffer.putInt(_objectId);
+		buffer.putLong(_points);
+		buffer.putInt(0x00); //??
 	}
 }

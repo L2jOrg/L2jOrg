@@ -9,23 +9,25 @@ import org.l2j.gameserver.model.entity.events.impl.AbstractDuelEvent;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 
+import java.nio.ByteBuffer;
+
 public class RequestDuelAnswerStart extends L2GameClientPacket
 {
 	private int _response;
 	private int _duelType;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_duelType = readInt();
-		readInt(); // 1 посылается если ниже  -1(при включеной опции клиента Отменять дуели)
-		_response = readInt();
+		_duelType = buffer.getInt();
+		buffer.getInt(); // 1 посылается если ниже  -1(при включеной опции клиента Отменять дуели)
+		_response = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

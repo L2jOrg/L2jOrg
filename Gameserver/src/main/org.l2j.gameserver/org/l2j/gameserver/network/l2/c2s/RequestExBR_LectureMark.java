@@ -3,6 +3,8 @@ package org.l2j.gameserver.network.l2.c2s;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author VISTALL
  */
@@ -15,15 +17,15 @@ public class RequestExBR_LectureMark extends L2GameClientPacket
 	private int _mark;
 
 	@Override
-	protected void readImpl() throws Exception
+	protected void readImpl(ByteBuffer buffer) throws Exception
 	{
-		_mark = readByte();
+		_mark = buffer.get();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null || !Config.EX_LECTURE_MARK)
 			return;
 

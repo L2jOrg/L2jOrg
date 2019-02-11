@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ExRegenMaxPacket extends L2GameServerPacket
 {
 	private double _max;
@@ -30,13 +34,15 @@ public class ExRegenMaxPacket extends L2GameServerPacket
 	 * 0F 00 00 00 - count?
 	 * 03 00 00 00 - время?
 	 * 00 00 00 00 00 00 38 40 - максимум?
-	 */
+     * @param client
+     * @param buffer
+     */
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(1);
-		writeInt(_count);
-		writeInt(_time);
-		writeDouble(_max);
+		buffer.putInt(1);
+		buffer.putInt(_count);
+		buffer.putInt(_time);
+		buffer.putDouble(_max);
 	}
 }

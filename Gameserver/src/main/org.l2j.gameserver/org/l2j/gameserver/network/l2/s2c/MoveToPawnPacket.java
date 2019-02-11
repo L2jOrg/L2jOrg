@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Creature;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class MoveToPawnPacket extends L2GameServerPacket
 {
@@ -21,18 +24,18 @@ public class MoveToPawnPacket extends L2GameServerPacket
     }
 
     @Override
-    protected final void writeImpl()
+    protected final void writeImpl(GameClient client, ByteBuffer buffer)
     {
-        writeInt(_chaId);
-        writeInt(_targetId);
-        writeInt(_distance);
+        buffer.putInt(_chaId);
+        buffer.putInt(_targetId);
+        buffer.putInt(_distance);
 
-        writeInt(_x);
-        writeInt(_y);
-        writeInt(_z);
+        buffer.putInt(_x);
+        buffer.putInt(_y);
+        buffer.putInt(_z);
 
-        writeInt(_tx);
-        writeInt(_ty);
-        writeInt(_tz);
+        buffer.putInt(_tx);
+        buffer.putInt(_ty);
+        buffer.putInt(_tz);
     }
 }

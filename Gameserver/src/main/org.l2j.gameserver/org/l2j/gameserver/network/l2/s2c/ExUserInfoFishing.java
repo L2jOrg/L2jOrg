@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class ExUserInfoFishing extends L2GameServerPacket
 {
@@ -12,18 +15,18 @@ public class ExUserInfoFishing extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_activeChar.getObjectId());
+		buffer.putInt(_activeChar.getObjectId());
 
 		if(_activeChar.getFishing().isInProcess())
 		{
-			writeByte(0x01);
-			writeInt(_activeChar.getFishing().getHookLocation().getX());
-			writeInt(_activeChar.getFishing().getHookLocation().getY());
-			writeInt(_activeChar.getFishing().getHookLocation().getZ());
+			buffer.put((byte)0x01);
+			buffer.putInt(_activeChar.getFishing().getHookLocation().getX());
+			buffer.putInt(_activeChar.getFishing().getHookLocation().getY());
+			buffer.putInt(_activeChar.getFishing().getHookLocation().getZ());
 		}
 		else
-			writeByte(0x00);
+			buffer.put((byte)0x00);
 	}
 }

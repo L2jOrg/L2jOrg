@@ -5,6 +5,8 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.boat.Boat;
 import org.l2j.gameserver.utils.Location;
 
+import java.nio.ByteBuffer;
+
 public class RequestGetOnVehicle extends L2GameClientPacket
 {
 	private int _objectId;
@@ -13,20 +15,21 @@ public class RequestGetOnVehicle extends L2GameClientPacket
 	/**
 	 * packet type id 0x53
 	 * format:      cdddd
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_objectId = readInt();
-		_loc.x = readInt();
-		_loc.y = readInt();
-		_loc.z = readInt();
+		_objectId = buffer.getInt();
+		_loc.x = buffer.getInt();
+		_loc.y = buffer.getInt();
+		_loc.z = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

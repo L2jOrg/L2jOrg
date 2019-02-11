@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author Bonux
@@ -17,9 +20,9 @@ public class ExAdenaInvenCount extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeLong(_adena);
-		writeShort(_useInventorySlots);
+		buffer.putLong(_adena);
+		buffer.putShort((short) _useInventorySlots);
 	}
 }

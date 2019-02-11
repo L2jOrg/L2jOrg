@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 /**
  * sample
  * <p>
@@ -25,11 +29,11 @@ public class AskJoinAlliancePacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_requestorId);
-		writeString(_requestorName);
-		writeString("");
-		writeString(_requestorAllyName);
+		buffer.putInt(_requestorId);
+		writeString(_requestorName, buffer);
+		writeString("", buffer);
+		writeString(_requestorAllyName, buffer);
 	}
 }

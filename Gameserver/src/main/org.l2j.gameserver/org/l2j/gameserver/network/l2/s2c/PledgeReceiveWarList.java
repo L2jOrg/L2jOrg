@@ -1,9 +1,11 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.List;
 
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.pledge.ClanWar;
+import org.l2j.gameserver.network.l2.GameClient;
 
 /**
  * @author GodWorld
@@ -23,13 +25,13 @@ public class PledgeReceiveWarList extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_page);
+		buffer.putInt(_page);
 
 		List<ClanWar> wars = _clan.getClanWars();
 
-		writeInt(wars.size());
+		buffer.putInt(wars.size());
 		for(ClanWar war : wars)
 		{
 			Clan opposingClan = war.getAttackerClan();
@@ -46,13 +48,13 @@ public class PledgeReceiveWarList extends L2GameServerPacket
 			else if(war.getClanWarState(_clan).ordinal() <= 1)
 				duration += 345600;
 
-			writeString(opposingClan.getName());
-			writeInt(war.getClanWarState(_clan).ordinal());
-			writeInt(duration);
+			writeString(opposingClan.getName(), buffer);
+			buffer.putInt(war.getClanWarState(_clan).ordinal());
+			buffer.putInt(duration);
 
-			writeInt(pointDiff);
-			writeInt(war.calculateWarProgress(pointDiff).ordinal());
-			writeInt(opposingClan.getAllSize());
+			buffer.putInt(pointDiff);
+			buffer.putInt(war.calculateWarProgress(pointDiff).ordinal());
+			buffer.putInt(opposingClan.getAllSize());
 		}
 	}
 }

@@ -2,6 +2,9 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.actor.instances.player.Cubic;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class ExUserInfoCubic extends L2GameServerPacket
 {
@@ -16,12 +19,12 @@ public class ExUserInfoCubic extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_objectId);
-		writeShort(_cubics.length);
+		buffer.putInt(_objectId);
+		buffer.putShort((short) _cubics.length);
 		for(Cubic cubic : _cubics)
-			writeShort(cubic == null ? 0 : cubic.getId());
-		writeInt(_agationId);
+			buffer.putShort((short) (cubic == null ? 0 : cubic.getId()));
+		buffer.putInt(_agationId);
 	}
 }

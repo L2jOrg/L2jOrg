@@ -1,8 +1,10 @@
 package org.l2j.gameserver.network.l2.s2c;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.pledge.Clan;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.settings.ServerSettings;
+
+import java.nio.ByteBuffer;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
@@ -31,15 +33,15 @@ public class PledgeStatusChangedPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(getSettings(ServerSettings.class).serverId());
-		writeInt(leader_id);
-		writeInt(clan_id);
-		writeInt(crestId);
-		writeInt(allyId);
-		writeInt(0);
-		writeInt(0);
-		writeInt(0);
+		buffer.putInt(getSettings(ServerSettings.class).serverId());
+		buffer.putInt(leader_id);
+		buffer.putInt(clan_id);
+		buffer.putInt(crestId);
+		buffer.putInt(allyId);
+		buffer.putInt(0);
+		buffer.putInt(0);
+		buffer.putInt(0);
 	}
 }

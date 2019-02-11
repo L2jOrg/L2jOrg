@@ -1,7 +1,10 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Creature;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.utils.Location;
+
+import java.nio.ByteBuffer;
 
 /**
  * format   dddddd		(player id, target id, distance, startx, starty, startz)<p>
@@ -18,12 +21,12 @@ public class ValidateLocationPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_chaObjId);
-		writeInt(_loc.x);
-		writeInt(_loc.y);
-		writeInt(_loc.z);
-		writeInt(_loc.h);
+		buffer.putInt(_chaObjId);
+		buffer.putInt(_loc.x);
+		buffer.putInt(_loc.y);
+		buffer.putInt(_loc.z);
+		buffer.putInt(_loc.h);
 	}
 }

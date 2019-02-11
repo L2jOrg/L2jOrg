@@ -4,6 +4,8 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.network.l2.s2c.Ex2NDPasswordAckPacket;
 import org.l2j.gameserver.security.SecondaryPasswordAuth;
 
+import java.nio.ByteBuffer;
+
 /**
  * (ch)cS{S}
  * c: change pass?
@@ -16,12 +18,12 @@ public class RequestEx2ndPasswordReq extends L2GameClientPacket
 	private String _password, _newPassword;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_changePass = readByte();
-		_password = readString();
+		_changePass = buffer.get();
+		_password = readString(buffer);
 		if(_changePass == 2)
-			_newPassword = readString();
+			_newPassword = readString(buffer);
 	}
 
 	@Override
@@ -30,7 +32,7 @@ public class RequestEx2ndPasswordReq extends L2GameClientPacket
 		if(!Config.EX_SECOND_AUTH_ENABLED)
 			return;
 
-		SecondaryPasswordAuth spa = getClient().getSecondaryAuth();
+		SecondaryPasswordAuth spa = client.getSecondaryAuth();
 		boolean exVal = false;
 
 		if(_changePass == 0 && !spa.passwordExist())
@@ -39,6 +41,6 @@ public class RequestEx2ndPasswordReq extends L2GameClientPacket
 			exVal = spa.changePassword(_password, _newPassword);
 
 		if(exVal)
-			getClient().sendPacket(new Ex2NDPasswordAckPacket(Ex2NDPasswordAckPacket.SUCCESS));
+			client.sendPacket(new Ex2NDPasswordAckPacket(Ex2NDPasswordAckPacket.SUCCESS));
 	}
 }

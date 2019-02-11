@@ -1,24 +1,27 @@
 package org.l2j.gameserver.network.authcomm.gs2as;
 
 import org.l2j.commons.configuration.Configurator;
+import org.l2j.gameserver.network.authcomm.AuthServerClient;
 import org.l2j.gameserver.network.authcomm.SendablePacket;
 import org.l2j.gameserver.settings.ServerSettings;
 
+import java.nio.ByteBuffer;
+
 public class AuthRequest extends SendablePacket {
 
-	protected void writeImpl() {
+	protected void writeImpl(AuthServerClient client, ByteBuffer buffer) {
 		var serverSettings = Configurator.getSettings(ServerSettings.class);
-		writeByte(0x00);
-		writeByte(serverSettings.serverId());
-		writeByte(0x00); // ACCEPT ALTERNATE ID
-		writeString(serverSettings.internalAddress());
-		writeString(serverSettings.externalAddress());
-		writeShort(serverSettings.port());
-		writeInt(serverSettings.type());
-		writeByte(serverSettings.ageLimit());
-		writeByte(serverSettings.isGMOnly());
-		writeByte(serverSettings.isShowingBrackets());
-		writeByte(serverSettings.isPvP());
-		writeInt(serverSettings.maximumOnlineUsers());
+		buffer.put((byte) 0x00);
+		buffer.put((byte) serverSettings.serverId());
+		buffer.put((byte) 0x00); // ACCEPT ALTERNATE ID
+		writeString(serverSettings.internalAddress(), buffer);
+		writeString(serverSettings.externalAddress(), buffer);
+		buffer.putShort(serverSettings.port());
+		buffer.putInt(serverSettings.type());
+		buffer.put(serverSettings.ageLimit());
+		buffer.put((byte) (serverSettings.isGMOnly() ? 0x01 : 0x00));
+		buffer.put((byte) (serverSettings.isShowingBrackets() ? 0x01 : 0x00));
+		buffer.put((byte) (serverSettings.isPvP() ? 0x01 : 0x00));
+		buffer.putInt(serverSettings.maximumOnlineUsers());
 	}
 }

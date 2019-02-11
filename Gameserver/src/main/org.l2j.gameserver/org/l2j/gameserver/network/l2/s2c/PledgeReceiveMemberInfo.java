@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.pledge.UnitMember;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class PledgeReceiveMemberInfo extends L2GameServerPacket
 {
@@ -12,13 +15,13 @@ public class PledgeReceiveMemberInfo extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_member.getPledgeType());
-		writeString(_member.getName());
-		writeString(_member.getTitle());
-		writeInt(_member.getPowerGrade());
-		writeString(_member.getSubUnit().getName());
-		writeString(_member.getRelatedName()); // apprentice/sponsor name if any
+		buffer.putInt(_member.getPledgeType());
+		writeString(_member.getName(), buffer);
+		writeString(_member.getTitle(), buffer);
+		buffer.putInt(_member.getPowerGrade());
+		writeString(_member.getSubUnit().getName(), buffer);
+		writeString(_member.getRelatedName(), buffer); // apprentice/sponsor name if any
 	}
 }

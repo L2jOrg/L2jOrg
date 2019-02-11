@@ -1,14 +1,17 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.GameTimeController;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 
 public class ClientSetTimePacket extends L2GameServerPacket {
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(GameTimeController.getInstance().getGameTime()); // time in client minutes
-		writeInt(6); //constant to match the server time( this determines the speed of the client clock)
+		buffer.putInt(GameTimeController.getInstance().getGameTime()); // time in client minutes
+		buffer.putInt(6); //constant to match the server time( this determines the speed of the client clock)
 	}
 }

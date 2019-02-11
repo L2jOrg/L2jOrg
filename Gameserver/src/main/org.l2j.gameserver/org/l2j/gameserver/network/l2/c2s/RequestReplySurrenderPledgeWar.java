@@ -9,6 +9,8 @@ import org.l2j.gameserver.model.pledge.ClanWar.ClanWarPeriod;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author GodWorld & reworked by Bonux
 **/
@@ -20,16 +22,16 @@ public final class RequestReplySurrenderPledgeWar extends L2GameClientPacket
 	private int _answer;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_reqName = readString();
-		_answer = readInt();
+		_reqName = readString(buffer);
+		_answer = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

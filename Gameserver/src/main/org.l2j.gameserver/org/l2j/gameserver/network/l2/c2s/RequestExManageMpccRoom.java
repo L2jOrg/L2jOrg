@@ -4,6 +4,8 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author VISTALL
  */
@@ -16,20 +18,20 @@ public class RequestExManageMpccRoom extends L2GameClientPacket
 	private String _topic;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_id = readInt(); // id
-		_memberSize = readInt(); // member size
-		_minLevel = readInt(); //min level
-		_maxLevel = readInt(); //max level
-		readInt(); //lootType
-		_topic = readString(); //topic
+		_id = buffer.getInt(); // id
+		_memberSize = buffer.getInt(); // member size
+		_minLevel = buffer.getInt(); //min level
+		_maxLevel = buffer.getInt(); //max level
+		buffer.getInt(); //lootType
+		_topic = readString(buffer); //topic
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

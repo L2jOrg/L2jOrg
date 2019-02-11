@@ -3,6 +3,8 @@ package org.l2j.gameserver.network.l2.c2s;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.quest.QuestState;
 
+import java.nio.ByteBuffer;
+
 public class RequestTutorialLinkHtml extends L2GameClientPacket
 {
 	// format: cdS
@@ -10,16 +12,16 @@ public class RequestTutorialLinkHtml extends L2GameClientPacket
 	private String _bypass;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_unk = readInt(); //maybe itemId?
-		_bypass = readString();
+		_unk = buffer.getInt(); //maybe itemId?
+		_bypass = readString(buffer);
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

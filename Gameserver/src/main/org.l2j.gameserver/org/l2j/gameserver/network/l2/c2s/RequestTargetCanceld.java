@@ -3,6 +3,8 @@ package org.l2j.gameserver.network.l2.c2s;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Skill;
 
+import java.nio.ByteBuffer;
+
 public class RequestTargetCanceld extends L2GameClientPacket
 {
 	private int _unselect;
@@ -10,17 +12,18 @@ public class RequestTargetCanceld extends L2GameClientPacket
 	/**
 	 * packet type id 0x48
 	 * format:		ch
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_unselect = readShort();
+		_unselect = buffer.getShort();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

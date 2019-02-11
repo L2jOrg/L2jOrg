@@ -4,10 +4,12 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.utils.MulticlassUtils;
 
+import java.nio.ByteBuffer;
+
 public final class RequestSkillList extends L2GameClientPacket
 {
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
 		// this is just a trigger packet. it has no content
 	}
@@ -15,7 +17,7 @@ public final class RequestSkillList extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		Player cha = getClient().getActiveChar();
+		Player cha = client.getActiveChar();
 		if(cha != null)
 		{
 			cha.sendSkillList();

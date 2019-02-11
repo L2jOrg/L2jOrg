@@ -3,8 +3,11 @@ package org.l2j.gameserver.network.l2.s2c;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Servitor;
 import org.l2j.gameserver.model.base.TeamType;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.skills.AbnormalEffect;
 import org.l2j.gameserver.utils.Location;
+
+import java.nio.ByteBuffer;
 
 public class MyPetSummonInfoPacket extends L2GameServerPacket
 {
@@ -121,78 +124,78 @@ public class MyPetSummonInfoPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeByte(_type);
-		writeInt(obj_id);
-		writeInt(npc_id + 1000000);
-		writeInt(_loc.x);
-		writeInt(_loc.y);
-		writeInt(_loc.z);
-		writeInt(_loc.h);
-		writeInt(MAtkSpd);
-		writeInt(PAtkSpd);
-		writeShort(_runSpd);
-		writeShort(_walkSpd);
-		writeShort(_runSpd/*_swimRunSpd*/);
-		writeShort(_walkSpd/*_swimWalkSpd*/);
-		writeShort(_runSpd/*_flRunSpd*/);
-		writeShort(_walkSpd/*_flWalkSpd*/);
-		writeShort(_runSpd/*_flyRunSpd*/);
-		writeShort(_walkSpd/*_flyWalkSpd*/);
-		writeDouble(_runSpdMul);
-		writeDouble(_atkSpdMul);
-		writeDouble(col_redius);
-		writeDouble(col_height);
-		writeInt(_rhand); // right hand weapon
-		writeInt(0);
-		writeInt(_lhand); // left hand weapon
-		writeByte(_showSpawnAnimation); // invisible ?? 0=false  1=true   2=summoned (only works if model has a summon animation)
-		writeInt(-1);
-		writeString(_name);
-		writeInt(-1);
-		writeString(title);
-		writeByte(pvp_flag); //0=white, 1=purple, 2=purpleblink, if its greater then karma = purple
-		writeInt(karma); // hmm karma ??
-		writeInt(curFed); // how fed it is
-		writeInt(maxFed); //max fed it can be
-		writeInt(curHp); //current hp
-		writeInt(maxHp); // max hp
-		writeInt(curMp); //current mp
-		writeInt(maxMp); //max mp
-		writeLong(_sp); //sp
-		writeByte(level);// lvl
-		writeLong(exp);
-		writeLong(exp_this_lvl); // 0%  absolute value
-		writeLong(exp_next_lvl); // 100% absoulte value
-		writeInt(curLoad); //weight
-		writeInt(maxLoad); //max weight it can carry
-		writeInt(PAtk);//patk
-		writeInt(PDef);//pdef
-		writeInt(_pAccuracy); // P. Accuracy
-		writeInt(_pEvasion); // P. Evasion
-		writeInt(_pCrit); // P. Critical
-		writeInt(MAtk);//matk
-		writeInt(MDef);//mdef
-		writeInt(_mAccuracy); // M. Accuracy
-		writeInt(_mEvasion); // M. Evasion
-		writeInt(_mCrit); // M. Critical
-		writeInt(_runSpd);//speed
-		writeInt(PAtkSpd);//atkspeed
-		writeInt(MAtkSpd);//casting speed
-		writeByte(0x00);//unk
-		writeByte(_team.ordinal()); // team aura (1 = blue, 2 = red)
-		writeByte(ss);
-		writeByte(sps);
-		writeInt(type);
-		writeInt(_transformId); // transform id
-		writeByte(0x00); // sum points
-		writeByte(0x00); // max sum points
+		buffer.put((byte)_type);
+		buffer.putInt(obj_id);
+		buffer.putInt(npc_id + 1000000);
+		buffer.putInt(_loc.x);
+		buffer.putInt(_loc.y);
+		buffer.putInt(_loc.z);
+		buffer.putInt(_loc.h);
+		buffer.putInt(MAtkSpd);
+		buffer.putInt(PAtkSpd);
+		buffer.putShort((short) _runSpd);
+		buffer.putShort((short) _walkSpd);
+		buffer.putShort((short) _runSpd/*_swimRunSpd*/);
+		buffer.putShort((short) _walkSpd/*_swimWalkSpd*/);
+		buffer.putShort((short) _runSpd/*_flRunSpd*/);
+		buffer.putShort((short) _walkSpd/*_flWalkSpd*/);
+		buffer.putShort((short) _runSpd/*_flyRunSpd*/);
+		buffer.putShort((short) _walkSpd/*_flyWalkSpd*/);
+		buffer.putDouble(_runSpdMul);
+		buffer.putDouble(_atkSpdMul);
+		buffer.putDouble(col_redius);
+		buffer.putDouble(col_height);
+		buffer.putInt(_rhand); // right hand weapon
+		buffer.putInt(0);
+		buffer.putInt(_lhand); // left hand weapon
+		buffer.put((byte)_showSpawnAnimation); // invisible ?? 0=false  1=true   2=summoned (only works if model has a summon animation)
+		buffer.putInt(-1);
+		writeString(_name, buffer);
+		buffer.putInt(-1);
+		writeString(title, buffer);
+		buffer.put((byte)pvp_flag); //0=white, 1=purple, 2=purpleblink, if its greater then karma = purple
+		buffer.putInt(karma); // hmm karma ??
+		buffer.putInt(curFed); // how fed it is
+		buffer.putInt(maxFed); //max fed it can be
+		buffer.putInt(curHp); //current hp
+		buffer.putInt(maxHp); // max hp
+		buffer.putInt(curMp); //current mp
+		buffer.putInt(maxMp); //max mp
+		buffer.putLong(_sp); //sp
+		buffer.put((byte)level);// lvl
+		buffer.putLong(exp);
+		buffer.putLong(exp_this_lvl); // 0%  absolute value
+		buffer.putLong(exp_next_lvl); // 100% absoulte value
+		buffer.putInt(curLoad); //weight
+		buffer.putInt(maxLoad); //max weight it can carry
+		buffer.putInt(PAtk);//patk
+		buffer.putInt(PDef);//pdef
+		buffer.putInt(_pAccuracy); // P. Accuracy
+		buffer.putInt(_pEvasion); // P. Evasion
+		buffer.putInt(_pCrit); // P. Critical
+		buffer.putInt(MAtk);//matk
+		buffer.putInt(MDef);//mdef
+		buffer.putInt(_mAccuracy); // M. Accuracy
+		buffer.putInt(_mEvasion); // M. Evasion
+		buffer.putInt(_mCrit); // M. Critical
+		buffer.putInt(_runSpd);//speed
+		buffer.putInt(PAtkSpd);//atkspeed
+		buffer.putInt(MAtkSpd);//casting speed
+		buffer.put((byte)0x00);//unk
+		buffer.put((byte)_team.ordinal()); // team aura (1 = blue, 2 = red)
+		buffer.put((byte)ss);
+		buffer.put((byte)sps);
+		buffer.putInt(type);
+		buffer.putInt(_transformId); // transform id
+		buffer.put((byte)0x00); // sum points
+		buffer.put((byte)0x00); // max sum points
 
-		writeShort(_abnormalEffects.length);
+		buffer.putShort((short) _abnormalEffects.length);
 		for(AbnormalEffect abnormal : _abnormalEffects)
-			writeShort(abnormal.getId());
+			buffer.putShort((short) abnormal.getId());
 
-		writeByte(_flags);
+		buffer.put((byte)_flags);
 	}
 }

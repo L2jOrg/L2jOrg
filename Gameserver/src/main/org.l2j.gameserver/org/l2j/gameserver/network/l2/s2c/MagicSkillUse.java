@@ -2,7 +2,10 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.utils.Location;
+
+import java.nio.ByteBuffer;
 
 /**
  * Format:   dddddddddh [h] h [ddd]
@@ -85,44 +88,44 @@ public class MagicSkillUse extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(0);
-		writeInt(_chaId);
-		writeInt(_targetId);
-		writeInt(_skillId);
-		writeInt(_skillLevel);
-		writeInt(_hitTime);
-		writeInt(_reuseSkillId);
-		writeInt(_reuseDelay);
-		writeInt(_x);
-		writeInt(_y);
-		writeInt(_z);
+		buffer.putInt(0);
+		buffer.putInt(_chaId);
+		buffer.putInt(_targetId);
+		buffer.putInt(_skillId);
+		buffer.putInt(_skillLevel);
+		buffer.putInt(_hitTime);
+		buffer.putInt(_reuseSkillId);
+		buffer.putInt(_reuseDelay);
+		buffer.putInt(_x);
+		buffer.putInt(_y);
+		buffer.putInt(_z);
 
 		if(_criticalBlow)
 		{
-			writeShort(0x02);
+			buffer.putShort((short) 0x02);
 			for(int i = 0; i < 2; i++)
-				writeShort(0x00);
+				buffer.putShort((short) 0x00);
 		}
 		else
-			writeShort(0x00);
+			buffer.putShort((short) 0x00);
 
 		if(_groundLoc != null)
 		{
-			writeShort(0x01);
-			writeInt(_groundLoc.x);
-			writeInt(_groundLoc.y);
-			writeInt(_groundLoc.z);
+			buffer.putShort((short) 0x01);
+			buffer.putInt(_groundLoc.x);
+			buffer.putInt(_groundLoc.y);
+			buffer.putInt(_groundLoc.z);
 		}
 		else
-			writeShort(0x00);
+			buffer.putShort((short) 0x00);
 
-		writeInt(_tx);
-		writeInt(_ty);
-		writeInt(_tz);
-		writeInt(_isServitorSkill ? 0x01 : 0x00); // is Pet Skill
-		writeInt(_actionId); // Social Action ID
+		buffer.putInt(_tx);
+		buffer.putInt(_ty);
+		buffer.putInt(_tz);
+		buffer.putInt(_isServitorSkill ? 0x01 : 0x00); // is Pet Skill
+		buffer.putInt(_actionId); // Social Action ID
 	}
 
 	@Override

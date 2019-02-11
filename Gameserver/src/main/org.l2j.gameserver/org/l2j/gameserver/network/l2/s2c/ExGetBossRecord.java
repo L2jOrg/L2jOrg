@@ -1,5 +1,8 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 import java.util.List;
 
 /**
@@ -19,17 +22,17 @@ public class ExGetBossRecord extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_ranking); // char ranking
-		writeInt(_totalPoints); // char total points
+		buffer.putInt(_ranking); // char ranking
+		buffer.putInt(_totalPoints); // char total points
 
-		writeInt(_bossRecordInfo.size()); // list size
+		buffer.putInt(_bossRecordInfo.size()); // list size
 		for(BossRecordInfo w : _bossRecordInfo)
 		{
-			writeInt(w._bossId);
-			writeInt(w._points);
-			writeInt(w._unk1);// don`t know
+			buffer.putInt(w._bossId);
+			buffer.putInt(w._points);
+			buffer.putInt(w._unk1);// don`t know
 		}
 	}
 

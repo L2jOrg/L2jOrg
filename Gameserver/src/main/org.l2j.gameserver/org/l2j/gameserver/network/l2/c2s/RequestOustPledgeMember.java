@@ -8,20 +8,22 @@ import org.l2j.gameserver.network.l2.s2c.PledgeShowMemberListDeletePacket;
 import org.l2j.gameserver.network.l2.s2c.PledgeShowMemberListDeleteAllPacket;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 
+import java.nio.ByteBuffer;
+
 public class RequestOustPledgeMember extends L2GameClientPacket
 {
 	private String _target;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_target = readS(16);
+		_target = readString(buffer, 16);
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 
 		if(activeChar == null || !((activeChar.getClanPrivileges() & Clan.CP_CL_DISMISS) == Clan.CP_CL_DISMISS))
 			return;

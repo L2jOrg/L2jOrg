@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -16,10 +17,10 @@ public class RequestRecipeShopListSet extends L2GameClientPacket
 	private int _count;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_count = readInt();
-		if(_count * 12 > availableData() || _count > Short.MAX_VALUE || _count < 1)
+		_count = buffer.getInt();
+		if(_count * 12 > buffer.remaining() || _count > Short.MAX_VALUE || _count < 1)
 		{
 			_count = 0;
 			return;
@@ -28,8 +29,8 @@ public class RequestRecipeShopListSet extends L2GameClientPacket
 		_prices = new long[_count];
 		for(int i = 0; i < _count; i++)
 		{
-			_recipes[i] = readInt();
-			_prices[i] = readLong();
+			_recipes[i] = buffer.getInt();
+			_prices[i] = buffer.getLong();
 			if(_prices[i] < 0)
 			{
 				_count = 0;
@@ -41,7 +42,7 @@ public class RequestRecipeShopListSet extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		Player manufacturer = getClient().getActiveChar();
+		Player manufacturer = client.getActiveChar();
 		if(manufacturer == null || _count == 0)
 			return;
 

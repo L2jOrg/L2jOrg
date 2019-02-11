@@ -4,37 +4,32 @@ import io.github.joealisson.mmocore.ReadablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.nio.ByteBuffer;
+
 public abstract class ReceivablePacket extends ReadablePacket<AuthServerClient> {
-	private static final Logger _log = LoggerFactory.getLogger(ReceivablePacket.class);
+	private static final Logger logger = LoggerFactory.getLogger(ReceivablePacket.class);
 
 	@Override
-	public final boolean read()
-	{
-		try
-		{
-			readImpl();
-		}
-		catch(Exception e)
-		{
-			_log.error("", e);
+	public final boolean read(ByteBuffer buffer) {
+		try {
+			readImpl(buffer);
+		} catch(Exception e) {
+			logger.error(e.getLocalizedMessage(), e);
+			return false;
 		}
 		return true;
 	}
 
 	@Override
-	public final void run()
-	{
-		try
-		{
+	public final void run() {
+		try {
 			runImpl();
-		}
-		catch(Exception e)
-		{
-			_log.error("", e);
+		} catch(Exception e) {
+			logger.error(e.getLocalizedMessage(), e);
 		}
 	}
 
-	protected abstract void readImpl();
+	protected abstract void readImpl(ByteBuffer buffer);
 
 	protected abstract void runImpl();
 

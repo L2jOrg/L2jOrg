@@ -13,6 +13,8 @@ import org.l2j.gameserver.network.l2.s2c.ExBuySellListPacket;
 import org.l2j.gameserver.utils.Log;
 import org.l2j.gameserver.utils.NpcUtils;
 
+import java.nio.ByteBuffer;
+
 /**
  * packet type id 0x37
  * format:		cddb, b - array if(ddd)
@@ -25,11 +27,11 @@ public class RequestSellItem extends L2GameClientPacket
 	private long[] _itemQ; // count
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_listId = readInt();
-		_count = readInt();
-		if(_count * 16 >  availableData() || _count > Short.MAX_VALUE || _count < 1)
+		_listId = buffer.getInt();
+		_count = buffer.getInt();
+		if(_count * 16 >  buffer.remaining() || _count > Short.MAX_VALUE || _count < 1)
 		{
 			_count = 0;
 			return;
@@ -39,9 +41,9 @@ public class RequestSellItem extends L2GameClientPacket
 
 		for(int i = 0; i < _count; i++)
 		{
-			_items[i] = readInt(); // object id
-			readInt(); //item id
-			_itemQ[i] = readLong(); // count
+			_items[i] = buffer.getInt(); // object id
+			buffer.getInt(); //item id
+			_itemQ[i] = buffer.getLong(); // count
 			if(_itemQ[i] < 1 || ArrayUtils.indexOf(_items, _items[i]) < i)
 			{
 				_count = 0;
@@ -53,7 +55,7 @@ public class RequestSellItem extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null || _count == 0)
 			return;
 

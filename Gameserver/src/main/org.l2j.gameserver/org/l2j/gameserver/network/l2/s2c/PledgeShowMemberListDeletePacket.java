@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class PledgeShowMemberListDeletePacket extends L2GameServerPacket
 {
 	private String _player;
@@ -10,8 +14,8 @@ public class PledgeShowMemberListDeletePacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeString(_player);
+		writeString(_player, buffer);
 	}
 }

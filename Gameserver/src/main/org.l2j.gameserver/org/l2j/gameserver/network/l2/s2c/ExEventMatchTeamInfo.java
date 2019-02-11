@@ -1,10 +1,12 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Servitor;
+import org.l2j.gameserver.network.l2.GameClient;
 
 public class ExEventMatchTeamInfo extends L2GameServerPacket
 {
@@ -23,7 +25,7 @@ public class ExEventMatchTeamInfo extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
 		// TODO dcd[dSdddddddddd]
 	}

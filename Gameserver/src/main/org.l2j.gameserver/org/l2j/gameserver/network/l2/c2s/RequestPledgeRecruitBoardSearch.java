@@ -8,6 +8,8 @@ import org.l2j.gameserver.model.clansearch.base.ClanSearchSortOrder;
 import org.l2j.gameserver.model.clansearch.base.ClanSearchTargetType;
 import org.l2j.gameserver.network.l2.s2c.ExPledgeRecruitBoardSearch;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author GodWorld
  * @reworked by Bonux
@@ -17,19 +19,19 @@ public class RequestPledgeRecruitBoardSearch extends L2GameClientPacket
 	private ClanSearchParams _params;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_params = new ClanSearchParams(readInt(), ClanSearchListType.getType(readInt()), ClanSearchTargetType.valueOf(readInt()), readString(), ClanSearchClanSortType.valueOf(readInt()), ClanSearchSortOrder.valueOf(readInt()), readInt(), readInt());
+		_params = new ClanSearchParams(buffer.getInt(), ClanSearchListType.getType(buffer.getInt()), ClanSearchTargetType.valueOf(buffer.getInt()), readString(buffer), ClanSearchClanSortType.valueOf(buffer.getInt()), ClanSearchSortOrder.valueOf(buffer.getInt()), buffer.getInt(), buffer.getInt());
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 
-		//if(!((L2GameClient)getClient()).getFloodProtectors().getClanSearch().tryPerformAction(FloodAction.CLAN_BOARD_SEARCH))
+		//if(!((L2GameClient)client).getFloodProtectors().getClanSearch().tryPerformAction(FloodAction.CLAN_BOARD_SEARCH))
 			//return;
 
 		activeChar.sendPacket(new ExPledgeRecruitBoardSearch(_params));

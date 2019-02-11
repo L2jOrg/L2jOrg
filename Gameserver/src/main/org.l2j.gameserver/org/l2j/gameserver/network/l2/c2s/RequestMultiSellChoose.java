@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -90,17 +91,17 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 	}
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_listId = readInt();
-		_entryId = readInt();
-		_amount = readLong();
+		_listId = buffer.getInt();
+		_entryId = buffer.getInt();
+		_amount = buffer.getLong();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null || _amount < 1)
 			return;
 

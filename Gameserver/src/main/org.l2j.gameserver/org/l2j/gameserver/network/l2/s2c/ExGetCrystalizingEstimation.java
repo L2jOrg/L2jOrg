@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.items.ItemInstance;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author Bonux
@@ -17,16 +20,16 @@ public class ExGetCrystalizingEstimation extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
 		if(_crystalId > 0 && _crystalCount > 0)
 		{
-			writeInt(0x01);
-			writeInt(_crystalId);
-			writeLong(_crystalCount);
-			writeDouble(100.);
+			buffer.putInt(0x01);
+			buffer.putInt(_crystalId);
+			buffer.putLong(_crystalCount);
+			buffer.putDouble(100.);
 		}
 		else
-			writeInt(0x00);
+			buffer.putInt(0x00);
 	}
 }

@@ -5,6 +5,8 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.model.matching.PartyMatchingRoom;
 
+import java.nio.ByteBuffer;
+
 public class RequestPartyMatchList extends L2GameClientPacket
 {
 	private int _lootDist;
@@ -16,22 +18,23 @@ public class RequestPartyMatchList extends L2GameClientPacket
 
 	/**
 	 * Format:(ch) dddddS
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_roomId = readInt();
-		_maxMembers = readInt();
-		_minLevel = readInt();
-		_maxLevel = readInt();
-		_lootDist = readInt();
-		_roomTitle = readS(64);
+		_roomId = buffer.getInt();
+		_maxMembers = buffer.getInt();
+		_minLevel = buffer.getInt();
+		_maxLevel = buffer.getInt();
+		_lootDist = buffer.getInt();
+		_roomTitle = readString(buffer, 64);
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

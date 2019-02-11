@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ExShowQuestMarkPacket extends L2GameServerPacket
 {
 	private final int _questId, _cond;
@@ -11,9 +15,9 @@ public class ExShowQuestMarkPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_questId);
-		writeInt(_cond);
+		buffer.putInt(_questId);
+		buffer.putInt(_cond);
 	}
 }

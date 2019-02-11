@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,16 +9,12 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.holder.BuyListHolder;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;
-import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.model.base.Race;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.model.items.Inventory;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ShopPreviewInfoPacket;
 import org.l2j.gameserver.network.l2.s2c.ShopPreviewListPacket;
-import org.l2j.gameserver.templates.item.ArmorTemplate.ArmorType;
-import org.l2j.gameserver.templates.item.ItemGrade;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.templates.item.WeaponTemplate.WeaponType;
 import org.l2j.gameserver.templates.npc.BuyListTemplate;
@@ -37,25 +34,25 @@ public class RequestPreviewItem extends L2GameClientPacket
 	private int[] _items;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_unknow = readInt();
-		_listId = readInt();
-		_count = readInt();
-		if(_count * 4 > availableData() || _count > Short.MAX_VALUE || _count < 1)
+		_unknow = buffer.getInt();
+		_listId = buffer.getInt();
+		_count = buffer.getInt();
+		if(_count * 4 > buffer.remaining() || _count > Short.MAX_VALUE || _count < 1)
 		{
 			_count = 0;
 			return;
 		}
 		_items = new int[_count];
 		for(int i = 0; i < _count; i++)
-			_items[i] = readInt();
+			_items[i] = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null || _count == 0)
 			return;
 

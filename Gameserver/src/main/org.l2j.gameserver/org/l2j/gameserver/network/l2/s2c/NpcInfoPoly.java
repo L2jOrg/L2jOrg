@@ -4,7 +4,10 @@ import org.l2j.gameserver.data.xml.holder.NpcHolder;
 import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.base.TeamType;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
+
+import java.nio.ByteBuffer;
 
 public class NpcInfoPoly extends L2GameServerPacket
 {
@@ -54,61 +57,61 @@ public class NpcInfoPoly extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_obj.getObjectId());
-		writeInt(_npcId + 1000000); // npctype id
-		writeInt(0x00);
-		writeInt(_x);
-		writeInt(_y);
-		writeInt(_z);
-		writeInt(_heading);
-		writeInt(0x00);
-		writeInt(_mAtkSpd);
-		writeInt(_pAtkSpd);
-		writeInt(_runSpd);
-		writeInt(_walkSpd);
-		writeInt(_swimRunSpd/*0x32*/); // swimspeed
-		writeInt(_swimWalkSpd/*0x32*/); // swimspeed
-		writeInt(_flRunSpd);
-		writeInt(_flWalkSpd);
-		writeInt(_flyRunSpd);
-		writeInt(_flyWalkSpd);
-		writeDouble(1/*_cha.getProperMultiplier()*/);
-		writeDouble(1/*_cha.getAttackSpeedMultiplier()*/);
-		writeDouble(colRadius);
-		writeDouble(colHeight);
-		writeInt(_rhand); // right hand weapon
-		writeInt(0);
-		writeInt(_lhand); // left hand weapon
-		writeByte(1); // name above char 1=true ... ??
-		writeByte(_isRunning ? 1 : 0);
-		writeByte(_isInCombat ? 1 : 0);
-		writeByte(_isAlikeDead ? 1 : 0);
-		writeByte(_isSummoned ? 2 : 0); // invisible ?? 0=false  1=true   2=summoned (only works if model has a summon animation)
-		writeString(_name);
-		writeString(_title);
-		writeInt(0);
-		writeInt(0);
-		writeInt(0000); // hmm karma ??
+		buffer.putInt(_obj.getObjectId());
+		buffer.putInt(_npcId + 1000000); // npctype id
+		buffer.putInt(0x00);
+		buffer.putInt(_x);
+		buffer.putInt(_y);
+		buffer.putInt(_z);
+		buffer.putInt(_heading);
+		buffer.putInt(0x00);
+		buffer.putInt(_mAtkSpd);
+		buffer.putInt(_pAtkSpd);
+		buffer.putInt(_runSpd);
+		buffer.putInt(_walkSpd);
+		buffer.putInt(_swimRunSpd/*0x32*/); // swimspeed
+		buffer.putInt(_swimWalkSpd/*0x32*/); // swimspeed
+		buffer.putInt(_flRunSpd);
+		buffer.putInt(_flWalkSpd);
+		buffer.putInt(_flyRunSpd);
+		buffer.putInt(_flyWalkSpd);
+		buffer.putDouble(1/*_cha.getProperMultiplier()*/);
+		buffer.putDouble(1/*_cha.getAttackSpeedMultiplier()*/);
+		buffer.putDouble(colRadius);
+		buffer.putDouble(colHeight);
+		buffer.putInt(_rhand); // right hand weapon
+		buffer.putInt(0);
+		buffer.putInt(_lhand); // left hand weapon
+		buffer.put((byte)1); // name above char 1=true ... ??
+		buffer.put((byte)(_isRunning ? 1 : 0));
+		buffer.put((byte)(_isInCombat ? 1 : 0));
+		buffer.put((byte)(_isAlikeDead ? 1 : 0));
+		buffer.put((byte)(_isSummoned ? 2 : 0)); // invisible ?? 0=false  1=true   2=summoned (only works if model has a summon animation)
+		writeString(_name, buffer);
+		writeString(_title, buffer);
+		buffer.putInt(0);
+		buffer.putInt(0);
+		buffer.putInt(0000); // hmm karma ??
 
-		writeInt(_abnormalEffect);
+		buffer.putInt(_abnormalEffect);
 
-		writeInt(0000); // C2
-		writeInt(0000); // C2
-		writeInt(0000); // C2
-		writeInt(0000); // C2
-		writeByte(0000); // C2
-		writeByte(_team.ordinal());
-		writeDouble(colRadius); // тут что-то связанное с colRadius
-		writeDouble(colHeight); // тут что-то связанное с colHeight
-		writeInt(0x00); // C4
-		writeInt(0x00); // как-то связано с высотой
-		writeInt(0x00);
-		writeInt(0x00); // maybe show great wolf type ?
+		buffer.putInt(0000); // C2
+		buffer.putInt(0000); // C2
+		buffer.putInt(0000); // C2
+		buffer.putInt(0000); // C2
+		buffer.put((byte)0000); // C2
+		buffer.put((byte)_team.ordinal());
+		buffer.putDouble(colRadius); // тут что-то связанное с colRadius
+		buffer.putDouble(colHeight); // тут что-то связанное с colHeight
+		buffer.putInt(0x00); // C4
+		buffer.putInt(0x00); // как-то связано с высотой
+		buffer.putInt(0x00);
+		buffer.putInt(0x00); // maybe show great wolf type ?
 
-		writeByte(0x00); //?GraciaFinal
-		writeByte(0x00); //?GraciaFinal
-		writeInt(_abnormalEffect2);
+		buffer.put((byte)0x00); //?GraciaFinal
+		buffer.put((byte)0x00); //?GraciaFinal
+		buffer.putInt(_abnormalEffect2);
 	}
 }

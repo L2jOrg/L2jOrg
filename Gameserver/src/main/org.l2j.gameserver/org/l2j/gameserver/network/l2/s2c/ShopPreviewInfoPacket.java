@@ -1,8 +1,10 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.Map;
 
 import org.l2j.gameserver.model.items.Inventory;
+import org.l2j.gameserver.network.l2.GameClient;
 
 public class ShopPreviewInfoPacket extends L2GameServerPacket
 {
@@ -14,13 +16,13 @@ public class ShopPreviewInfoPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(Inventory.PAPERDOLL_MAX);
+		buffer.putInt(Inventory.PAPERDOLL_MAX);
 
 		// Slots
 		for(int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
-			writeInt(getFromList(PAPERDOLL_ID));
+			buffer.putInt(getFromList(PAPERDOLL_ID));
 	}
 
 	private int getFromList(int key)

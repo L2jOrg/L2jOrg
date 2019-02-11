@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ExBR_LoadEventTopRankers extends L2GameServerPacket
 {
 	private int _eventId;
@@ -17,12 +21,12 @@ public class ExBR_LoadEventTopRankers extends L2GameServerPacket
 		_myScore = myScore;
 	}
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_eventId);
-		writeInt(_day);
-		writeInt(_count);
-		writeInt(_bestScore);
-		writeInt(_myScore);
+		buffer.putInt(_eventId);
+		buffer.putInt(_day);
+		buffer.putInt(_count);
+		buffer.putInt(_bestScore);
+		buffer.putInt(_myScore);
 	}
 }

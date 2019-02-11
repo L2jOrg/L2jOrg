@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -7,6 +8,7 @@ import java.util.List;
 
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.pledge.SubUnit;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.skills.SkillEntry;
 
 /**
@@ -33,22 +35,22 @@ public class PledgeSkillListPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_allSkills.size());
-		writeInt(_unitSkills.size());
+		buffer.putInt(_allSkills.size());
+		buffer.putInt(_unitSkills.size());
 
 		for(SkillInfo info : _allSkills)
 		{
-			writeInt(info._id);
-			writeInt(info._level);
+			buffer.putInt(info._id);
+			buffer.putInt(info._level);
 		}
 
 		for(UnitSkillInfo info : _unitSkills)
 		{
-			writeInt(info._type);
-			writeInt(info._id);
-			writeInt(info._level);
+			buffer.putInt(info._type);
+			buffer.putInt(info._id);
+			buffer.putInt(info._level);
 		}
 	}
 

@@ -5,6 +5,8 @@ import org.l2j.authserver.controller.GameServerManager;
 import org.l2j.authserver.network.gameserver.ServerClientState;
 import org.l2j.authserver.network.gameserver.packet.auth2game.AuthResponse;
 
+import java.nio.ByteBuffer;
+
 import static java.util.Objects.nonNull;
 import static org.l2j.authserver.network.gameserver.packet.auth2game.LoginGameServerFail.*;
 import static org.l2j.authserver.settings.AuthServerSettings.acceptNewGameServerEnabled;
@@ -24,18 +26,18 @@ public class AuthRequest extends GameserverReadablePacket {
     private boolean isPvp;
 
     @Override
-	protected void readImpl() {
-		desiredId = readByte();
-        acceptAlternativeId = readByte() == 0x01;
-        internalHost = readString();
-        externalHost = readString();
-        port = readShort();
-        serverType = readInt();
-        ageLimit = readByte();
-        gmOnly = readByte() == 0x01;
-        showBrackets = readByte() == 0x01;
-        isPvp = readByte() == 0x01;
-        maxPlayers = readInt();
+	protected void readImpl(ByteBuffer buffer) {
+		desiredId = buffer.get();
+        acceptAlternativeId = buffer.get() == 0x01;
+        internalHost = readString(buffer);
+        externalHost = readString(buffer);
+        port = buffer.getShort();
+        serverType = buffer.getInt();
+        ageLimit = buffer.get();
+        gmOnly = buffer.get() == 0x01;
+        showBrackets = buffer.get() == 0x01;
+        isPvp = buffer.get() == 0x01;
+        maxPlayers = buffer.getInt();
     }
 
 	@Override

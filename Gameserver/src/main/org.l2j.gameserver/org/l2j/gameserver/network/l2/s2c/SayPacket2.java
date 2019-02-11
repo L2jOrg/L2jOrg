@@ -1,10 +1,13 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.network.l2.components.ChatType;
 import org.l2j.gameserver.network.l2.components.NpcString;
 import org.l2j.gameserver.network.l2.components.SysString;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
+
+import java.nio.ByteBuffer;
 
 public class SayPacket2 extends NpcStringContainer
 {
@@ -72,32 +75,32 @@ public class SayPacket2 extends NpcStringContainer
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_objectId);
-		writeInt(_type.ordinal());
+		buffer.putInt(_objectId);
+		buffer.putInt(_type.ordinal());
 		switch(_type)
 		{
 			case SYSTEM_MESSAGE:
-				writeInt(_sysString.getId());
-				writeInt(_systemMsg.getId());
+				buffer.putInt(_sysString.getId());
+				buffer.putInt(_systemMsg.getId());
 				break;
 			case TELL:
-				writeString(_charName);
-				writeElements();
-				writeByte(_mask);
+				writeString(_charName, buffer);
+				writeElements(buffer);
+				buffer.put((byte)_mask);
 				if((_mask & IS_GM) == 0)
-					writeByte(_charLevel);
+					buffer.put((byte)_charLevel);
 				break;
 			default:
-				writeString(_charName);
-				writeElements();
+				writeString(_charName, buffer);
+				writeElements(buffer);
 				break;
 		}
 
 		if(_text != null)
 		{
-			Player player = getClient().getActiveChar();
+			Player player = client.getActiveChar();
 			if(player != null)
 				player.getListeners().onChatMessageReceive(_type, _charName, _text);
 		}

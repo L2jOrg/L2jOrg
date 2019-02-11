@@ -15,6 +15,8 @@ import org.l2j.gameserver.templates.item.data.ItemData;
 import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.TradeHelper;
 
+import java.nio.ByteBuffer;
+
 public class RequestRecipeShopMakeDo extends L2GameClientPacket
 {
 	private int _manufacturerId;
@@ -22,17 +24,17 @@ public class RequestRecipeShopMakeDo extends L2GameClientPacket
 	private long _price;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_manufacturerId = readInt();
-		_recipeId = readInt();
-		_price = readLong();
+		_manufacturerId = buffer.getInt();
+		_recipeId = buffer.getInt();
+		_price = buffer.getLong();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player buyer = getClient().getActiveChar();
+		Player buyer = client.getActiveChar();
 		if(buyer == null)
 			return;
 

@@ -2,8 +2,11 @@ package org.l2j.gameserver.network.l2.s2c;
  
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.utils.ItemFunctions;
- 
+
+import java.nio.ByteBuffer;
+
 public class ExResponseResetListPacket extends L2GameServerPacket
 {
 	private int _hairStyle;
@@ -23,12 +26,12 @@ public class ExResponseResetListPacket extends L2GameServerPacket
 	}
  
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeLong(_adena);
-		writeLong(_coins);
-		writeInt(_hairStyle);
-		writeInt(_face);
-		writeInt(_hairColor);
+		buffer.putLong(_adena);
+		buffer.putLong(_coins);
+		buffer.putInt(_hairStyle);
+		buffer.putInt(_face);
+		buffer.putInt(_hairColor);
 	}
 }

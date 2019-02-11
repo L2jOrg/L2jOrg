@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import io.github.joealisson.mmocore.StaticPacket;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 @StaticPacket
 public class LoginResultPacket extends L2GameServerPacket
@@ -27,9 +30,9 @@ public class LoginResultPacket extends L2GameServerPacket
     }
 
     @Override
-    protected final void writeImpl()
+    protected final void writeImpl(GameClient client, ByteBuffer buffer)
     {
-        writeInt(_reason1);
-        writeInt(_reason2);
+        buffer.putInt(_reason1);
+        buffer.putInt(_reason2);
     }
 }

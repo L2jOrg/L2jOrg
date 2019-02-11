@@ -6,7 +6,10 @@ import org.l2j.gameserver.model.base.Experience;
 import org.l2j.gameserver.model.items.Inventory;
 import org.l2j.gameserver.model.pledge.Alliance;
 import org.l2j.gameserver.model.pledge.Clan;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.utils.Location;
+
+import java.nio.ByteBuffer;
 
 public class GMViewCharacterInfoPacket extends L2GameServerPacket
 {
@@ -130,131 +133,131 @@ public class GMViewCharacterInfoPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_loc.x);
-		writeInt(_loc.y);
-		writeInt(_loc.z);
-		writeInt(_loc.h);
-		writeInt(obj_id);
-		writeString(_name);
-		writeInt(_race);
-		writeInt(_sex);
-		writeInt(class_id);
-		writeInt(level);
-		writeLong(_exp);
-		writeDouble(_expPercent);
-		writeInt(_str);
-		writeInt(_dex);
-		writeInt(_con);
-		writeInt(_int);
-		writeInt(_wit);
-		writeInt(_men);
-		writeInt(0);
-		writeInt(0);
-		writeInt(maxHp);
-		writeInt(curHp);
-		writeInt(maxMp);
-		writeInt(curMp);
-		writeLong(_sp);
-		writeInt(curLoad);
-		writeInt(maxLoad);
-		writeInt(pk_kills);
+		buffer.putInt(_loc.x);
+		buffer.putInt(_loc.y);
+		buffer.putInt(_loc.z);
+		buffer.putInt(_loc.h);
+		buffer.putInt(obj_id);
+		writeString(_name, buffer);
+		buffer.putInt(_race);
+		buffer.putInt(_sex);
+		buffer.putInt(class_id);
+		buffer.putInt(level);
+		buffer.putLong(_exp);
+		buffer.putDouble(_expPercent);
+		buffer.putInt(_str);
+		buffer.putInt(_dex);
+		buffer.putInt(_con);
+		buffer.putInt(_int);
+		buffer.putInt(_wit);
+		buffer.putInt(_men);
+		buffer.putInt(0);
+		buffer.putInt(0);
+		buffer.putInt(maxHp);
+		buffer.putInt(curHp);
+		buffer.putInt(maxMp);
+		buffer.putInt(curMp);
+		buffer.putLong(_sp);
+		buffer.putInt(curLoad);
+		buffer.putInt(maxLoad);
+		buffer.putInt(pk_kills);
 
 		for(int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
-			writeInt(_inv[PAPERDOLL_ID][0]);
+			buffer.putInt(_inv[PAPERDOLL_ID][0]);
 
 		for(int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
-			writeInt(_inv[PAPERDOLL_ID][1]);
+			buffer.putInt(_inv[PAPERDOLL_ID][1]);
 
 		for(int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
 		{
-			writeInt(_inv[PAPERDOLL_ID][2]);
-			writeInt(_inv[PAPERDOLL_ID][3]);
+			buffer.putInt(_inv[PAPERDOLL_ID][2]);
+			buffer.putInt(_inv[PAPERDOLL_ID][3]);
 		}
 
-		writeByte(talismans);
-		writeByte(_jewelsLimit);
-		writeInt(0x00);
-		writeShort(0x00);
-		writeInt(_patk);
-		writeInt(_patkspd);
-		writeInt(_pdef);
-		writeInt(evasion);
-		writeInt(accuracy);
-		writeInt(crit);
-		writeInt(_matk);
+		buffer.put((byte)talismans);
+		buffer.put((byte)_jewelsLimit);
+		buffer.putInt(0x00);
+		buffer.putShort((short) 0x00);
+		buffer.putInt(_patk);
+		buffer.putInt(_patkspd);
+		buffer.putInt(_pdef);
+		buffer.putInt(evasion);
+		buffer.putInt(accuracy);
+		buffer.putInt(crit);
+		buffer.putInt(_matk);
 
-		writeInt(_matkspd);
-		writeInt(_patkspd);
+		buffer.putInt(_matkspd);
+		buffer.putInt(_patkspd);
 
-		writeInt(_mdef);
-		writeInt(_mEvasion);
-		writeInt(_mAccuracy);
-		writeInt(_mCrit);
+		buffer.putInt(_mdef);
+		buffer.putInt(_mEvasion);
+		buffer.putInt(_mAccuracy);
+		buffer.putInt(_mCrit);
 
-		writeInt(pvp_flag);
-		writeInt(karma);
+		buffer.putInt(pvp_flag);
+		buffer.putInt(karma);
 
-		writeInt(_runSpd);
-		writeInt(_walkSpd);
-		writeInt(_swimRunSpd); // swimspeed
-		writeInt(_swimWalkSpd); // swimspeed
-		writeInt(_runSpd);
-		writeInt(_walkSpd);
-		writeInt(_runSpd);
-		writeInt(_walkSpd);
-		writeDouble(move_speed);
-		writeDouble(attack_speed);
-		writeDouble(col_radius);
-		writeDouble(col_height);
-		writeInt(hair_style);
-		writeInt(hair_color);
-		writeInt(face);
-		writeInt(gm_commands);
+		buffer.putInt(_runSpd);
+		buffer.putInt(_walkSpd);
+		buffer.putInt(_swimRunSpd); // swimspeed
+		buffer.putInt(_swimWalkSpd); // swimspeed
+		buffer.putInt(_runSpd);
+		buffer.putInt(_walkSpd);
+		buffer.putInt(_runSpd);
+		buffer.putInt(_walkSpd);
+		buffer.putDouble(move_speed);
+		buffer.putDouble(attack_speed);
+		buffer.putDouble(col_radius);
+		buffer.putDouble(col_height);
+		buffer.putInt(hair_style);
+		buffer.putInt(hair_color);
+		buffer.putInt(face);
+		buffer.putInt(gm_commands);
 
-		writeString(title);
-		writeInt(clan_id);
-		writeInt(clan_crest_id);
-		writeInt(ally_id);
-		writeByte(mount_type);
-		writeByte(private_store);
-		writeByte(DwarvenCraftLevel); //_cha.getDwarvenCraftLevel() > 0 ? 1 : 0
-		writeInt(pk_kills);
-		writeInt(pvp_kills);
+		writeString(title, buffer);
+		buffer.putInt(clan_id);
+		buffer.putInt(clan_crest_id);
+		buffer.putInt(ally_id);
+		buffer.put((byte)mount_type);
+		buffer.put((byte)private_store);
+		buffer.put((byte)DwarvenCraftLevel); //_cha.getDwarvenCraftLevel() > 0 ? 1 : 0
+		buffer.putInt(pk_kills);
+		buffer.putInt(pvp_kills);
 
-		writeShort(rec_left);
-		writeShort(rec_have); //Blue value for name (0 = white, 255 = pure blue)
-		writeInt(class_id);
-		writeInt(0x00); // special effects? circles around player...
-		writeInt(maxCp);
-		writeInt(curCp);
+		buffer.putShort((short) rec_left);
+		buffer.putShort((short) rec_have); //Blue value for name (0 = white, 255 = pure blue)
+		buffer.putInt(class_id);
+		buffer.putInt(0x00); // special effects? circles around player...
+		buffer.putInt(maxCp);
+		buffer.putInt(curCp);
 
-		writeByte(running); //changes the Speed display on Status Window
+		buffer.put((byte)running); //changes the Speed display on Status Window
 
-		writeByte(321);
+		buffer.put((byte)321);
 
-		writeInt(pledge_class); //changes the text above CP on Status Window
+		buffer.putInt(pledge_class); //changes the text above CP on Status Window
 
-		writeByte(0);
-		writeByte(hero);
+		buffer.put((byte)0);
+		buffer.put((byte)hero);
 
-		writeInt(name_color);
-		writeInt(title_color);
+		buffer.putInt(name_color);
+		buffer.putInt(title_color);
 
-		writeShort(attackElement.getId());
-		writeShort(attackElementValue);
-		writeShort(defenceFire);
-		writeShort(defenceWater);
-		writeShort(defenceWind);
-		writeShort(defenceEarth);
-		writeShort(defenceHoly);
-		writeShort(defenceUnholy);
+		buffer.putShort((short) attackElement.getId());
+		buffer.putShort((short) attackElementValue);
+		buffer.putShort((short) defenceFire);
+		buffer.putShort((short) defenceWater);
+		buffer.putShort((short) defenceWind);
+		buffer.putShort((short) defenceEarth);
+		buffer.putShort((short) defenceHoly);
+		buffer.putShort((short) defenceUnholy);
 
-		writeInt(fame);
-		writeInt(0);
+		buffer.putInt(fame);
+		buffer.putInt(0);
 
-		writeInt(0);
-		writeInt(0);
+		buffer.putInt(0);
+		buffer.putInt(0);
 	}
 }

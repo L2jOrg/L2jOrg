@@ -5,6 +5,9 @@ import io.github.joealisson.primitive.maps.impl.HashIntIntMap;
 import io.github.joealisson.primitive.pair.IntIntPair;
 import org.l2j.gameserver.data.xml.holder.InstantZoneHolder;
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author Bonux
@@ -32,15 +35,15 @@ public class ExInzoneWaitingInfo extends L2GameServerPacket
 		}
 	}
 
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeByte(_openWindow);
-		writeInt(_currentInzoneID);
-		writeInt(_instanceTimes.size());
+		buffer.put((byte) (_openWindow ? 1 : 0));
+		buffer.putInt(_currentInzoneID);
+		buffer.putInt(_instanceTimes.size());
 
 		for (IntIntPair pair : _instanceTimes.entrySet()) {
-			writeInt(pair.getKey());
-			writeInt(pair.getValue());
+			buffer.putInt(pair.getKey());
+			buffer.putInt(pair.getValue());
 		}
 	}
 }

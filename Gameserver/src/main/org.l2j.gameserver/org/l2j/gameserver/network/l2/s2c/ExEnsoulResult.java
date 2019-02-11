@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.templates.item.support.Ensoul;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author Bonux
@@ -28,18 +31,18 @@ public class ExEnsoulResult extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeByte(_success);
+		buffer.put((byte) (_success ? 1 : 0));
 		if(_success)
 		{
-			writeByte(_normalEnsouls.length);
+			buffer.put((byte)_normalEnsouls.length);
 			for(Ensoul ensoul : _normalEnsouls)
-				writeInt(ensoul.getId());
+				buffer.putInt(ensoul.getId());
 
-			writeByte(_specialEnsouls.length);
+			buffer.put((byte)_specialEnsouls.length);
 			for(Ensoul ensoul : _specialEnsouls)
-				writeInt(ensoul.getId());
+				buffer.putInt(ensoul.getId());
 		}
 	}
 }

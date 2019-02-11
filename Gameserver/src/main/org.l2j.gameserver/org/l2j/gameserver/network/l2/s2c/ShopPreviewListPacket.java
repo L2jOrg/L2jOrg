@@ -1,11 +1,13 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInfo;
 import org.l2j.gameserver.model.items.TradeItem;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.templates.npc.BuyListTemplate;
 
@@ -29,20 +31,20 @@ public class ShopPreviewListPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(0x13c0); //?
-		writeLong(_money);
-		writeInt(_listId);
-		writeShort(_itemList.size());
+		buffer.putInt(0x13c0); //?
+		buffer.putLong(_money);
+		buffer.putInt(_listId);
+		buffer.putShort((short) _itemList.size());
 
 		for(ItemInfo item : _itemList)
 			if(item.getItem().isEquipable())
 			{
-				writeInt(item.getItemId());
-				writeShort(item.getItem().getType2()); // item type2
-				writeShort(item.getItem().isEquipable() ? item.getItem().getBodyPart() : 0x00);
-				writeLong(getWearPrice(item.getItem()));
+				buffer.putInt(item.getItemId());
+				buffer.putShort((short) item.getItem().getType2()); // item type2
+				buffer.putShort((short) (item.getItem().isEquipable() ? item.getItem().getBodyPart() : 0x00));
+				buffer.putLong(getWearPrice(item.getItem()));
 			}
 	}
 

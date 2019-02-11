@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.entity.events.impl.DuelEvent;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class ExDuelEnd extends L2GameServerPacket
 {
@@ -12,8 +15,8 @@ public class ExDuelEnd extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_duelType);
+		buffer.putInt(_duelType);
 	}
 }

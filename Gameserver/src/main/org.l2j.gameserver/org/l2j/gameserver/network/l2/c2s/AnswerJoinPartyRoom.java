@@ -6,6 +6,8 @@ import org.l2j.gameserver.model.Request.L2RequestType;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 
+import java.nio.ByteBuffer;
+
 /**
  * format: (ch)d
  */
@@ -14,10 +16,9 @@ public class AnswerJoinPartyRoom extends L2GameClientPacket
 	private int _response;
 
 	@Override
-	protected void readImpl()
-	{
-		if(availableData() >= 4)
-			_response = readInt();
+	protected void readImpl(ByteBuffer buffer) {
+		if(buffer.remaining() >= 4)
+			_response = buffer.getInt();
 		else
 			_response = 0;
 	}
@@ -25,7 +26,7 @@ public class AnswerJoinPartyRoom extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

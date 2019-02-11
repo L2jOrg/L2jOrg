@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.authcomm.gs2as;
 
+import org.l2j.gameserver.network.authcomm.AuthServerClient;
 import org.l2j.gameserver.network.authcomm.SendablePacket;
+
+import java.nio.ByteBuffer;
 
 public class ReduceAccountPoints extends SendablePacket
 {
@@ -13,10 +16,9 @@ public class ReduceAccountPoints extends SendablePacket
 		this.count = count;
 	}
 
-	protected void writeImpl()
-	{
-		writeByte(0x12);
-		writeString(account);
-		writeInt(count);
+	protected void writeImpl(AuthServerClient client, ByteBuffer buffer) {
+		buffer.put((byte)0x12);
+		writeString(account, buffer);
+		buffer.putInt(count);
 	}
 }

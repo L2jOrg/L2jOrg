@@ -5,6 +5,8 @@ import org.l2j.gameserver.model.actor.instances.player.Macro;
 import org.l2j.gameserver.model.actor.instances.player.Macro.L2MacroCmd;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 
+import java.nio.ByteBuffer;
+
 /**
  * packet type id 0xcd
  *
@@ -31,24 +33,24 @@ public class RequestMakeMacro extends L2GameClientPacket
 	private Macro _macro;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		int _id = readInt();
-		String _name = readS(32);
-		String _desc = readS(64);
-		String _acronym = readS(4);
-		int _icon = readInt();
-		int _count = readByte();
+		int _id = buffer.getInt();
+		String _name = readString(buffer, 32);
+		String _desc = readString(buffer, 64);
+		String _acronym = readString(buffer, 4);
+		int _icon = buffer.getInt();
+		int _count = buffer.get();
 		if(_count > 12)
 			_count = 12;
 		L2MacroCmd[] commands = new L2MacroCmd[_count];
 		for(int i = 0; i < _count; i++)
 		{
-			int entry = readByte();
-			int type = readByte(); // 1 = skill, 3 = action, 4 = shortcut
-			int d1 = readInt(); // skill or page number for shortcuts
-			int d2 = readByte();
-			String command = readString().replace(";", "").replace(",", "");
+			int entry = buffer.get();
+			int type = buffer.get(); // 1 = skill, 3 = action, 4 = shortcut
+			int d1 = buffer.getInt(); // skill or page number for shortcuts
+			int d2 = buffer.get();
+			String command = readString(buffer).replace(";", "").replace(",", "");
 			commands[i] = new L2MacroCmd(entry, type, d1, d2, command);
 		}
 		_macro = new Macro(_id, _icon, _name, _desc, _acronym, commands);
@@ -57,7 +59,7 @@ public class RequestMakeMacro extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

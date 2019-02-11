@@ -5,6 +5,9 @@ import io.github.joealisson.primitive.maps.impl.HashIntIntMap;
 import io.github.joealisson.primitive.pair.IntIntPair;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.quest.QuestState;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class GMViewQuestInfoPacket extends L2GameServerPacket
 {
@@ -20,14 +23,14 @@ public class GMViewQuestInfoPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeString(_characterName);
-		writeShort(_quests.size());
+		writeString(_characterName, buffer);
+		buffer.putShort((short) _quests.size());
 		for (IntIntPair pair : _quests.entrySet()) {
-			writeInt(pair.getKey());
-			writeInt(pair.getValue());
+			buffer.putInt(pair.getKey());
+			buffer.putInt(pair.getValue());
 		}
-		writeShort(0); //количество элементов типа: ddQd , как-то связано с предметами
+		buffer.putShort((short) 0); //количество элементов типа: ddQd , как-то связано с предметами
 	}
 }

@@ -1,10 +1,12 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.pledge.SubUnit;
+import org.l2j.gameserver.network.l2.GameClient;
 
 /**
  * @author GodWorld
@@ -34,17 +36,17 @@ public class ExPledgeRecruitInfo extends L2GameServerPacket
 		}
 	}
 
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeString(_clanName);
-		writeString(_leaderName);
-		writeInt(_clanLevel);
-		writeInt(_clanMemberCount);
-		writeInt(_subUnits.size());
+		writeString(_clanName, buffer);
+		writeString(_leaderName, buffer);
+		buffer.putInt(_clanLevel);
+		buffer.putInt(_clanMemberCount);
+		buffer.putInt(_subUnits.size());
 		for(SubUnit su : _subUnits)
 		{
-			writeInt(su.getType());
-			writeString(su.getName());
+			buffer.putInt(su.getType());
+			writeString(su.getName(), buffer);
 		}
 	}
 }

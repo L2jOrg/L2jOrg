@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class ExCuriousHouseMemberUpdate extends L2GameServerPacket
 {
@@ -12,13 +15,13 @@ public class ExCuriousHouseMemberUpdate extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_player.getObjectId());
-		writeInt(_player.getMaxHp());
-		writeInt(_player.getMaxCp());
-		writeInt((int)_player.getCurrentHp());
-		writeInt((int)_player.getCurrentCp());
+		buffer.putInt(_player.getObjectId());
+		buffer.putInt(_player.getMaxHp());
+		buffer.putInt(_player.getMaxCp());
+		buffer.putInt((int)_player.getCurrentHp());
+		buffer.putInt((int)_player.getCurrentCp());
 	}
 }
 

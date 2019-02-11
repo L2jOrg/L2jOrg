@@ -4,6 +4,8 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ExDivideAdenaCancel;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author Erlandys
  */
@@ -12,15 +14,15 @@ public class RequestDivideAdenaCancel extends L2GameClientPacket
 	private int _cancel;
 	
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_cancel = readByte();
+		_cancel = buffer.get();
 	}
 	
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

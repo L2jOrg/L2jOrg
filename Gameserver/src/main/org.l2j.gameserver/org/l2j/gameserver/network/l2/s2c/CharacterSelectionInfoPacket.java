@@ -16,6 +16,7 @@ import org.l2j.gameserver.utils.AutoBan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.nio.ByteBuffer;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -47,16 +48,16 @@ public class CharacterSelectionInfoPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
 		int size = _characterPackages != null ? _characterPackages.length : 0;
 
-		writeInt(size);
-		writeInt(0x07); // Максимальное количество персонажей на сервере
-		writeByte(0x00); // 0x00 - Разрешить, 0x01 - запретить. Разрешает или запрещает создание игроков
-		writeByte(0x00);
-		writeInt(0x02); // 0x01 - Выводит окно, что нужно купить игру, что создавать более 2х чаров. 0х02 - обычное лобби.
-		writeByte(0x00); // 0x01 - Предлогает купить ПА.
+		buffer.putInt(size);
+		buffer.putInt(0x07); // Максимальное количество персонажей на сервере
+		buffer.put((byte)0x00); // 0x00 - Разрешить, 0x01 - запретить. Разрешает или запрещает создание игроков
+		buffer.put((byte)0x00);
+		buffer.putInt(0x02); // 0x01 - Выводит окно, что нужно купить игру, что создавать более 2х чаров. 0х02 - обычное лобби.
+		buffer.put((byte)0x00); // 0x01 - Предлогает купить ПА.
 
 		long lastAccess = -1L;
 		int lastUsed = -1;
@@ -71,99 +72,99 @@ public class CharacterSelectionInfoPacket extends L2GameServerPacket
 		{
 			CharSelectInfoPackage charInfoPackage = _characterPackages[i];
 
-			writeString(charInfoPackage.getName());
-			writeInt(charInfoPackage.getCharId()); // ?
-			writeString(_loginName);
-			writeInt(_sessionId);
-			writeInt(charInfoPackage.getClanId());
-			writeInt(0x00); // ??
+			writeString(charInfoPackage.getName(), buffer);
+			buffer.putInt(charInfoPackage.getCharId()); // ?
+			writeString(_loginName, buffer);
+			buffer.putInt(_sessionId);
+			buffer.putInt(charInfoPackage.getClanId());
+			buffer.putInt(0x00); // ??
 
-			writeInt(charInfoPackage.getSex());
-			writeInt(charInfoPackage.getRace());
-			writeInt(charInfoPackage.getBaseClassId());
+			buffer.putInt(charInfoPackage.getSex());
+			buffer.putInt(charInfoPackage.getRace());
+			buffer.putInt(charInfoPackage.getBaseClassId());
 
-			writeInt(getSettings(ServerSettings.class).serverId()); // active ??
+			buffer.putInt(getSettings(ServerSettings.class).serverId()); // active ??
 
-			writeInt(charInfoPackage.getX());
-			writeInt(charInfoPackage.getY());
-			writeInt(charInfoPackage.getZ());
+			buffer.putInt(charInfoPackage.getX());
+			buffer.putInt(charInfoPackage.getY());
+			buffer.putInt(charInfoPackage.getZ());
 
-			writeDouble(charInfoPackage.getCurrentHp());
-			writeDouble(charInfoPackage.getCurrentMp());
+			buffer.putDouble(charInfoPackage.getCurrentHp());
+			buffer.putDouble(charInfoPackage.getCurrentMp());
 
-			writeLong(charInfoPackage.getSp());
-			writeLong(charInfoPackage.getExp());
+			buffer.putLong(charInfoPackage.getSp());
+			buffer.putLong(charInfoPackage.getExp());
 			int lvl = Experience.getLevel(charInfoPackage.getExp());
-			writeDouble(Experience.getExpPercent(lvl, charInfoPackage.getExp()));
-			writeInt(lvl);
+			buffer.putDouble(Experience.getExpPercent(lvl, charInfoPackage.getExp()));
+			buffer.putInt(lvl);
 
-			writeInt(charInfoPackage.getKarma());
-			writeInt(charInfoPackage.getPk());
-			writeInt(charInfoPackage.getPvP());
+			buffer.putInt(charInfoPackage.getKarma());
+			buffer.putInt(charInfoPackage.getPk());
+			buffer.putInt(charInfoPackage.getPvP());
 
-			writeInt(0x00);
-			writeInt(0x00);
-			writeInt(0x00);
-			writeInt(0x00);
-			writeInt(0x00);
-			writeInt(0x00);
-			writeInt(0x00);
+			buffer.putInt(0x00);
+			buffer.putInt(0x00);
+			buffer.putInt(0x00);
+			buffer.putInt(0x00);
+			buffer.putInt(0x00);
+			buffer.putInt(0x00);
+			buffer.putInt(0x00);
 
-			writeInt(0x00); // unk Ertheia
-			writeInt(0x00); // unk Ertheia
+			buffer.putInt(0x00); // unk Ertheia
+			buffer.putInt(0x00); // unk Ertheia
 
 			for(int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
-				writeInt(charInfoPackage.getPaperdollItemId(PAPERDOLL_ID));
+				buffer.putInt(charInfoPackage.getPaperdollItemId(PAPERDOLL_ID));
 
-			writeInt(charInfoPackage.getPaperdollVisualId(Inventory.PAPERDOLL_RHAND)); //Внешний вид оружия (ИД Итема).
-			writeInt(charInfoPackage.getPaperdollVisualId(Inventory.PAPERDOLL_LHAND)); //Внешний вид щита (ИД Итема).
-			writeInt(charInfoPackage.getPaperdollVisualId(Inventory.PAPERDOLL_GLOVES)); //Внешний вид перчаток (ИД Итема).
-			writeInt(charInfoPackage.getPaperdollVisualId(Inventory.PAPERDOLL_CHEST)); //Внешний вид верха (ИД Итема).
-			writeInt(charInfoPackage.getPaperdollVisualId(Inventory.PAPERDOLL_LEGS)); //Внешний вид низа (ИД Итема).
-			writeInt(charInfoPackage.getPaperdollVisualId(Inventory.PAPERDOLL_FEET)); //Внешний вид ботинок (ИД Итема).
-			writeInt(charInfoPackage.getPaperdollVisualId(Inventory.PAPERDOLL_LRHAND));
-			writeInt(charInfoPackage.getPaperdollVisualId(Inventory.PAPERDOLL_HAIR)); //Внешний вид шляпы (ИД итема).
-			writeInt(charInfoPackage.getPaperdollVisualId(Inventory.PAPERDOLL_DHAIR)); //Внешний вид маски (ИД итема).
+			buffer.putInt(charInfoPackage.getPaperdollVisualId(Inventory.PAPERDOLL_RHAND)); //Внешний вид оружия (ИД Итема).
+			buffer.putInt(charInfoPackage.getPaperdollVisualId(Inventory.PAPERDOLL_LHAND)); //Внешний вид щита (ИД Итема).
+			buffer.putInt(charInfoPackage.getPaperdollVisualId(Inventory.PAPERDOLL_GLOVES)); //Внешний вид перчаток (ИД Итема).
+			buffer.putInt(charInfoPackage.getPaperdollVisualId(Inventory.PAPERDOLL_CHEST)); //Внешний вид верха (ИД Итема).
+			buffer.putInt(charInfoPackage.getPaperdollVisualId(Inventory.PAPERDOLL_LEGS)); //Внешний вид низа (ИД Итема).
+			buffer.putInt(charInfoPackage.getPaperdollVisualId(Inventory.PAPERDOLL_FEET)); //Внешний вид ботинок (ИД Итема).
+			buffer.putInt(charInfoPackage.getPaperdollVisualId(Inventory.PAPERDOLL_LRHAND));
+			buffer.putInt(charInfoPackage.getPaperdollVisualId(Inventory.PAPERDOLL_HAIR)); //Внешний вид шляпы (ИД итема).
+			buffer.putInt(charInfoPackage.getPaperdollVisualId(Inventory.PAPERDOLL_DHAIR)); //Внешний вид маски (ИД итема).
 
-			writeShort(charInfoPackage.getPaperdollEnchantEffect(Inventory.PAPERDOLL_CHEST)); // unk Episodion
-			writeShort(charInfoPackage.getPaperdollEnchantEffect(Inventory.PAPERDOLL_LEGS)); // unk Episodion
-			writeShort(charInfoPackage.getPaperdollEnchantEffect(Inventory.PAPERDOLL_HEAD)); // unk Episodion
-			writeShort(charInfoPackage.getPaperdollEnchantEffect(Inventory.PAPERDOLL_GLOVES)); // unk Episodion
-			writeShort(charInfoPackage.getPaperdollEnchantEffect(Inventory.PAPERDOLL_FEET)); // unk Episodion
+			buffer.putShort((short) charInfoPackage.getPaperdollEnchantEffect(Inventory.PAPERDOLL_CHEST)); // unk Episodion
+			buffer.putShort((short) charInfoPackage.getPaperdollEnchantEffect(Inventory.PAPERDOLL_LEGS)); // unk Episodion
+			buffer.putShort((short) charInfoPackage.getPaperdollEnchantEffect(Inventory.PAPERDOLL_HEAD)); // unk Episodion
+			buffer.putShort((short) charInfoPackage.getPaperdollEnchantEffect(Inventory.PAPERDOLL_GLOVES)); // unk Episodion
+			buffer.putShort((short) charInfoPackage.getPaperdollEnchantEffect(Inventory.PAPERDOLL_FEET)); // unk Episodion
 
-			writeInt(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_HAIR) > 0 ? charInfoPackage.getSex() : charInfoPackage.getHairStyle());
-			writeInt(charInfoPackage.getHairColor());
-			writeInt(charInfoPackage.getFace());
+			buffer.putInt(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_HAIR) > 0 ? charInfoPackage.getSex() : charInfoPackage.getHairStyle());
+			buffer.putInt(charInfoPackage.getHairColor());
+			buffer.putInt(charInfoPackage.getFace());
 
-			writeDouble(charInfoPackage.getMaxHp()); // hp max
-			writeDouble(charInfoPackage.getMaxMp()); // mp max
+			buffer.putDouble(charInfoPackage.getMaxHp()); // hp max
+			buffer.putDouble(charInfoPackage.getMaxMp()); // mp max
 
-			writeInt(charInfoPackage.getAccessLevel() > -100 ? charInfoPackage.getDeleteTimer() : -1);
-			writeInt(charInfoPackage.getClassId());
-			writeInt(i == lastUsed ? 1 : 0);
+			buffer.putInt(charInfoPackage.getAccessLevel() > -100 ? charInfoPackage.getDeleteTimer() : -1);
+			buffer.putInt(charInfoPackage.getClassId());
+			buffer.putInt(i == lastUsed ? 1 : 0);
 
-			writeByte(Math.min(charInfoPackage.getPaperdollEnchantEffect(Inventory.PAPERDOLL_RHAND), 127));
-			writeInt(charInfoPackage.getPaperdollVariation1Id(Inventory.PAPERDOLL_RHAND));
-			writeInt(charInfoPackage.getPaperdollVariation2Id(Inventory.PAPERDOLL_RHAND));
+			buffer.put((byte)Math.min(charInfoPackage.getPaperdollEnchantEffect(Inventory.PAPERDOLL_RHAND), 127));
+			buffer.putInt(charInfoPackage.getPaperdollVariation1Id(Inventory.PAPERDOLL_RHAND));
+			buffer.putInt(charInfoPackage.getPaperdollVariation2Id(Inventory.PAPERDOLL_RHAND));
 
-			writeInt(0x00);
+			buffer.putInt(0x00);
 
 			//TODO: Pet info?
-			writeInt(0x00);
-			writeInt(0x00);
-			writeInt(0x00);
-			writeInt(0x00);
-			writeDouble(0x00);
-			writeDouble(0x00);
+			buffer.putInt(0x00);
+			buffer.putInt(0x00);
+			buffer.putInt(0x00);
+			buffer.putInt(0x00);
+			buffer.putDouble(0x00);
+			buffer.putDouble(0x00);
 
-			writeInt(0x00);
-			writeInt(0x00);
-			writeInt(0x00);
+			buffer.putInt(0x00);
+			buffer.putInt(0x00);
+			buffer.putInt(0x00);
 
-			writeInt(charInfoPackage.isAvailable());
-			writeByte(0x00); // UNK
-			writeByte(charInfoPackage.isHero()); // hero glow
-			writeByte(charInfoPackage.isHairAccessoryEnabled() ? 0x01 : 0x00); // show hair accessory if enabled
+			buffer.putInt(charInfoPackage.isAvailable() ? 0x01 : 0);
+			buffer.put((byte)0x00); // UNK
+			buffer.put((byte) (charInfoPackage.isHero() ? 1 : 0)); // hero glow
+			buffer.put((byte) (charInfoPackage.isHairAccessoryEnabled() ? 0x01 : 0x00)); // show hair accessory if enabled
 		}
 	}
 

@@ -32,7 +32,7 @@
         <Root level="info">
             <AppenderRef ref="console"/>
         </Root>
-        <Logger name="com.it.br" level="info">
+        <Logger name="org.l2j.gameserver" level="info">
             <AppenderRef ref="game"/>
             <AppenderRef ref="debug"/>
         </Logger>

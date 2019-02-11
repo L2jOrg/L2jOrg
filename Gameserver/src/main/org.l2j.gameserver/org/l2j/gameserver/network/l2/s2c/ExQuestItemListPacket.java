@@ -2,6 +2,9 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.model.items.LockType;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author VISTALL
@@ -24,24 +27,24 @@ public class ExQuestItemListPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeShort(_size);
+		buffer.putShort((short) _size);
 
 		for(ItemInstance temp : _items)
 		{
 			if(!temp.getTemplate().isQuest())
 				continue;
 
-			writeItemInfo(temp);
+			writeItemInfo(buffer, temp);
 		}
 
-		writeShort(_lockItems.length);
+		buffer.putShort((short) _lockItems.length);
 		if(_lockItems.length > 0)
 		{
-			writeByte(_lockType.ordinal());
+			buffer.put((byte)_lockType.ordinal());
 			for(int i : _lockItems)
-				writeInt(i);
+				buffer.putInt(i);
 		}
 	}
 }

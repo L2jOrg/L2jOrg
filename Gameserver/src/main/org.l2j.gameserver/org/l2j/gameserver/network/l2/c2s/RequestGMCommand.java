@@ -12,23 +12,25 @@ import org.l2j.gameserver.network.l2.s2c.GMViewQuestInfoPacket;
 import org.l2j.gameserver.network.l2.s2c.GMViewSkillInfoPacket;
 import org.l2j.gameserver.network.l2.s2c.GMViewWarehouseWithdrawListPacket;
 
+import java.nio.ByteBuffer;
+
 public class RequestGMCommand extends L2GameClientPacket
 {
 	private String _targetName;
 	private int _command;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_targetName = readString();
-		_command = readInt();
-		// readInt();
+		_targetName = readString(buffer);
+		_command = buffer.getInt();
+		// buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		Player target = World.getPlayer(_targetName);
 		if(player == null || target == null)
 			return;

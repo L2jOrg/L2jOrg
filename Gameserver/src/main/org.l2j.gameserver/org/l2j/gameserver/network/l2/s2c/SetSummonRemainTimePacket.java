@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Servitor;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class SetSummonRemainTimePacket extends L2GameServerPacket
 {
@@ -14,9 +17,9 @@ public class SetSummonRemainTimePacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_maxFed);
-		writeInt(_curFed);
+		buffer.putInt(_maxFed);
+		buffer.putInt(_curFed);
 	}
 }

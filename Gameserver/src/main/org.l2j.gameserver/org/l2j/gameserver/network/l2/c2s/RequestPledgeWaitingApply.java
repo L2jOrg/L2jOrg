@@ -8,6 +8,8 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ExPledgeRecruitApplyInfo;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author GodWorld
  * @reworked by Bonux
@@ -19,17 +21,17 @@ public class RequestPledgeWaitingApply extends L2GameClientPacket
 	private String _desc;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_searchType = ClanSearchListType.getType(readInt());
-		_clanId = readInt();
-		_desc = readString();
+		_searchType = ClanSearchListType.getType(buffer.getInt());
+		_clanId = buffer.getInt();
+		_desc = readString(buffer);
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

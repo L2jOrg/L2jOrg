@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import io.github.joealisson.mmocore.StaticPacket;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author Bonux
@@ -19,13 +22,13 @@ public final class ExEnchantFail extends L2GameServerPacket {
 	}
 
 	@Override
-	protected void writeImpl() {
-		writeInt(_itemOne);
-		writeInt(_itemTwo);
+	protected void writeImpl(GameClient client, ByteBuffer buffer) {
+		buffer.putInt(_itemOne);
+		buffer.putInt(_itemTwo);
 	}
 
 	@Override
-	protected int packetSize() {
+	protected int size(GameClient client) {
 		return 13;
 	}
 }

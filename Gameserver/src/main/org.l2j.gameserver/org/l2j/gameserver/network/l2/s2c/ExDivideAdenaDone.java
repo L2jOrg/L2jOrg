@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 /**
  * @author Erlandys
  */
@@ -18,13 +22,13 @@ public class ExDivideAdenaDone extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeByte(0x01); // Always 1
-		writeByte(0x00); // Always 0
-		writeInt(_friendsCount); // Friends count
-		writeLong(_dividedCount); // Divided count
-		writeLong(_count); // Whole count
-		writeString(_name); // Giver name
+		buffer.put((byte)0x01); // Always 1
+		buffer.put((byte)0x00); // Always 0
+		buffer.putInt(_friendsCount); // Friends count
+		buffer.putLong(_dividedCount); // Divided count
+		buffer.putLong(_count); // Whole count
+		writeString(_name, buffer); // Giver name
 	}
 }

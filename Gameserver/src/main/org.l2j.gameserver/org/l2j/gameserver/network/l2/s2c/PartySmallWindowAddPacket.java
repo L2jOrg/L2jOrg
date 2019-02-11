@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class PartySmallWindowAddPacket extends L2GameServerPacket
 {
@@ -15,22 +18,22 @@ public class PartySmallWindowAddPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_leaderObjectId);
-		writeInt(_loot);
-		writeInt(_member.objId);
-		writeString(_member.name);
-		writeInt(_member.curCp);
-		writeInt(_member.maxCp);
-		writeInt(_member.curHp);
-		writeInt(_member.maxHp);
-		writeInt(_member.curMp);
-		writeInt(_member.maxMp);
-		writeInt(0x00);
-		writeByte(_member.level);
-		writeShort(_member.classId);
-		writeByte(_member.sex);
-		writeShort(_member.raceId);
+		buffer.putInt(_leaderObjectId);
+		buffer.putInt(_loot);
+		buffer.putInt(_member.objId);
+		writeString(_member.name, buffer);
+		buffer.putInt(_member.curCp);
+		buffer.putInt(_member.maxCp);
+		buffer.putInt(_member.curHp);
+		buffer.putInt(_member.maxHp);
+		buffer.putInt(_member.curMp);
+		buffer.putInt(_member.maxMp);
+		buffer.putInt(0x00);
+		buffer.put((byte)_member.level);
+		buffer.putShort((short) _member.classId);
+		buffer.put((byte)_member.sex);
+		buffer.putShort((short) _member.raceId);
 	}
 }

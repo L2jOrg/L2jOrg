@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ExEnterWorldPacket extends L2GameServerPacket
 {
 	private final int _serverTime;
@@ -10,13 +14,13 @@ public class ExEnterWorldPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_serverTime);
+		buffer.putInt(_serverTime);
 	}
 
 	@Override
-	protected int packetSize() {
+	protected int size(GameClient client) {
 		return 9;
 	}
 }

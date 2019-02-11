@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 import static java.util.Objects.requireNonNullElse;
 import static org.l2j.commons.util.Util.STRING_EMPTY;
@@ -17,9 +20,9 @@ public class PrivateStoreBuyMsg extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_objId);
-		writeString(_name);
+		buffer.putInt(_objId);
+		writeString(_name, buffer);
 	}
 }

@@ -4,6 +4,8 @@ import org.l2j.gameserver.handler.items.impl.NameColorItemHandler;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInstance;
 
+import java.nio.ByteBuffer;
+
 public class RequestChangeNicknameColor extends L2GameClientPacket
 {
 	private static final int COLORS[] = { 0x9393FF, // Pink
@@ -22,17 +24,17 @@ public class RequestChangeNicknameColor extends L2GameClientPacket
 	private String _title;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_colorNum = readInt();
-		_title = readString();
-		_itemObjectId = readInt();
+		_colorNum = buffer.getInt();
+		_title = readString(buffer);
+		_itemObjectId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 /**
  * @author VISTALL
  * @date 23:13/21.03.2011
@@ -24,9 +28,9 @@ public class ExConfirmAddingPostFriend extends L2GameServerPacket
 	}
 
 	@Override
-	public void writeImpl()
+	public void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeString(_name);
-		writeInt(_result);
+		writeString(_name, buffer);
+		buffer.putInt(_result);
 	}
 }

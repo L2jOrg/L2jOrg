@@ -1,9 +1,11 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.l2j.gameserver.model.GameObject;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.utils.Location;
 
 public class ExShowTracePacket extends L2GameServerPacket
@@ -64,15 +66,15 @@ public class ExShowTracePacket extends L2GameServerPacket
     }
 
     @Override
-    protected final void writeImpl()
+    protected final void writeImpl(GameClient client, ByteBuffer buffer)
     {
-        writeShort(_traces.size());
+        buffer.putShort((short) _traces.size());
         for(Trace t : _traces)
         {
-            writeInt(t._x);
-            writeInt(t._y);
-            writeInt(t._z);
-            writeShort(t._time);
+            buffer.putInt(t._x);
+            buffer.putInt(t._y);
+            buffer.putInt(t._z);
+            buffer.putShort((short) t._time);
         }
     }
 }

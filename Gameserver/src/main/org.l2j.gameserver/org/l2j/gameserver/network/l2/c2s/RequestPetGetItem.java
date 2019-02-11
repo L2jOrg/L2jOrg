@@ -8,21 +8,23 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.utils.ItemFunctions;
 
+import java.nio.ByteBuffer;
+
 public class RequestPetGetItem extends L2GameClientPacket
 {
 	// format: cd
 	private int _objectId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_objectId = readInt();
+		_objectId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

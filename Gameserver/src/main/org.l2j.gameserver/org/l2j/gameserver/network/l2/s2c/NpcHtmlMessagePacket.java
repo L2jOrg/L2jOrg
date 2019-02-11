@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 /**
  * the HTML parser in the client knowns these standard and non-standard tags and attributes
  * COLUMN
@@ -117,11 +121,11 @@ public class NpcHtmlMessagePacket extends L2GameServerPacket
     }
 
     @Override
-    protected void writeImpl()
+    protected void writeImpl(GameClient client, ByteBuffer buffer)
     {
-        writeInt(_npcObjId);
-        writeString(_html);
-        writeInt(_itemId);
-        writeInt(!_playVoice);
+        buffer.putInt(_npcObjId);
+        writeString(_html, buffer);
+        buffer.putInt(_itemId);
+        buffer.putInt(!_playVoice ? 0x01 : 0x00);
     }
 }

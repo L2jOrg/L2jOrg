@@ -1,8 +1,10 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.Collection;
 
 import org.l2j.gameserver.model.entity.boat.Shuttle;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.templates.ShuttleTemplate.ShuttleDoor;
 
 /**
@@ -20,31 +22,31 @@ public class ExShuttleInfoPacket extends L2GameServerPacket
     }
 
     @Override
-    protected final void writeImpl()
+    protected final void writeImpl(GameClient client, ByteBuffer buffer)
     {
-        writeInt(_shuttle.getBoatId()); // Shuttle ID (Arkan: 1,2; Cruma: 3)
-        writeInt(_shuttle.getX()); // X
-        writeInt(_shuttle.getY()); // Y
-        writeInt(_shuttle.getZ()); // Z
-        writeInt(0/*_shuttle.getHeading()*/); // Maybe H
-        writeInt(_shuttle.getBoatId()); // unk??
-        writeInt(_doors.size()); // doors_count
+        buffer.putInt(_shuttle.getBoatId()); // Shuttle ID (Arkan: 1,2; Cruma: 3)
+        buffer.putInt(_shuttle.getX()); // X
+        buffer.putInt(_shuttle.getY()); // Y
+        buffer.putInt(_shuttle.getZ()); // Z
+        buffer.putInt(0/*_shuttle.getHeading()*/); // Maybe H
+        buffer.putInt(_shuttle.getBoatId()); // unk??
+        buffer.putInt(_doors.size()); // doors_count
         for(ShuttleDoor door : _doors)
         {
             int doorId = door.getId();
-            writeInt(doorId); // Door ID
-            writeInt(door.unkParam[0]); // unk0
-            writeInt(door.unkParam[1]); // unk1
-            writeInt(door.unkParam[2]); // unk2
-            writeInt(door.unkParam[3]); // unk3
-            writeInt(door.unkParam[4]); // unk4
-            writeInt(door.unkParam[5]); // unk5
-            writeInt(door.unkParam[6]); // unk6
-            writeInt(door.unkParam[7]); // unk7
-            writeInt(door.unkParam[8]); // unk8
+            buffer.putInt(doorId); // Door ID
+            buffer.putInt(door.unkParam[0]); // unk0
+            buffer.putInt(door.unkParam[1]); // unk1
+            buffer.putInt(door.unkParam[2]); // unk2
+            buffer.putInt(door.unkParam[3]); // unk3
+            buffer.putInt(door.unkParam[4]); // unk4
+            buffer.putInt(door.unkParam[5]); // unk5
+            buffer.putInt(door.unkParam[6]); // unk6
+            buffer.putInt(door.unkParam[7]); // unk7
+            buffer.putInt(door.unkParam[8]); // unk8
             boolean thisFloorDoor = _shuttle.getCurrentFloor().isThisFloorDoor(doorId);
-            writeInt(thisFloorDoor && _shuttle.isDocked());
-            writeInt(thisFloorDoor);
+            buffer.putInt(thisFloorDoor && _shuttle.isDocked() ? 0x01 : 0x00);
+            buffer.putInt(thisFloorDoor ? 0x01 : 0x00);
         }
     }
 }

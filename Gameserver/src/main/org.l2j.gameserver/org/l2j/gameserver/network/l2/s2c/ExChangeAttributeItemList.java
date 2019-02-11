@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.items.ItemInfo;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author Bonux
@@ -16,13 +19,13 @@ public class ExChangeAttributeItemList extends L2GameServerPacket
 		_itemsList = itemsList;
 	}
 
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_itemId);
-		writeInt(_itemsList.length); //size
+		buffer.putInt(_itemId);
+		buffer.putInt(_itemsList.length); //size
 		for(ItemInfo item : _itemsList)
 		{
-			writeItemInfo(item);
+			writeItemInfo(buffer, item);
 		}
 	}
 }

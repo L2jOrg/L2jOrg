@@ -1,8 +1,11 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.instances.NpcInstance;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.network.l2.components.ChatType;
 import org.l2j.gameserver.network.l2.components.NpcString;
+
+import java.nio.ByteBuffer;
 
 public class NSPacket extends NpcStringContainer
 {
@@ -24,11 +27,11 @@ public class NSPacket extends NpcStringContainer
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_objId);
-		writeInt(_type);
-		writeInt(1000000 + _id);
-		writeElements();
+		buffer.putInt(_objId);
+		buffer.putInt(_type);
+		buffer.putInt(1000000 + _id);
+		writeElements(buffer);
 	}
 }

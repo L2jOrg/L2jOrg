@@ -11,6 +11,8 @@ import org.l2j.gameserver.tables.ClanTable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author GodWorld & reworked by Bonux
 **/
@@ -21,15 +23,15 @@ public final class RequestSurrenderPledgeWar extends L2GameClientPacket
 	private String _pledgeName;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_pledgeName = readString();
+		_pledgeName = readString(buffer);
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

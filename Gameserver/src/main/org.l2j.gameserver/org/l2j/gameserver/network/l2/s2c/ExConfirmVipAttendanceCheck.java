@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ExConfirmVipAttendanceCheck extends L2GameServerPacket
 {
 	private final boolean _success;
@@ -12,11 +16,11 @@ public class ExConfirmVipAttendanceCheck extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeByte(_success);
-		writeByte(_receivedIndex);
-		writeInt(0x00);
-		writeInt(0x00);
+		buffer.put((byte) (_success ? 0x01 : 0x00));
+		buffer.put((byte)_receivedIndex);
+		buffer.putInt(0x00);
+		buffer.putInt(0x00);
 	}
 }

@@ -1,12 +1,12 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.l2j.commons.math.SafeMath;
-import org.l2j.gameserver.Contants;
 import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.data.string.ItemNameHolder;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;
@@ -23,10 +23,10 @@ public class SetPrivateStoreBuyList extends L2GameClientPacket
 	private List<BuyItemInfo> _items = Collections.emptyList();
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		int count = readInt();
-		if(count * 40 > availableData() || count > Short.MAX_VALUE || count < 1)
+		int count = buffer.getInt();
+		if(count * 40 > buffer.remaining() || count > Short.MAX_VALUE || count < 1)
 			return;
 
 		_items = new ArrayList<BuyItemInfo>();
@@ -34,34 +34,34 @@ public class SetPrivateStoreBuyList extends L2GameClientPacket
 		for(int i = 0; i < count; i++)
 		{
 			BuyItemInfo item = new BuyItemInfo();
-			item.id = readInt();
-			item.enchant_level = readInt();
-			item.count = readLong();
-			item.price = readLong();
+			item.id = buffer.getInt();
+			item.enchant_level = buffer.getInt();
+			item.count = buffer.getLong();
+			item.price = buffer.getLong();
 
 			if(item.count < 1 || item.price < 1)
 				break;
 
-			readInt();
-			readInt();
+			buffer.getInt();
+			buffer.getInt();
 
-			readShort();
-			readShort();
-			readShort();
-			readShort();
-			readShort();
-			readShort();
-			readShort();
-			readShort();
-			readInt();
+			buffer.getShort();
+			buffer.getShort();
+			buffer.getShort();
+			buffer.getShort();
+			buffer.getShort();
+			buffer.getShort();
+			buffer.getShort();
+			buffer.getShort();
+			buffer.getInt();
 
-			int saCount = readByte();
+			int saCount = buffer.get();
 			for(int s = 0; s < saCount; s++)
-				readInt();
+				buffer.getInt();
 
-			saCount = readByte();
+			saCount = buffer.get();
 			for(int s = 0; s < saCount; s++)
-				readInt();
+				buffer.getInt();
 
 			_items.add(item);
 		}
@@ -70,7 +70,7 @@ public class SetPrivateStoreBuyList extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		Player buyer = getClient().getActiveChar();
+		Player buyer = client.getActiveChar();
 		if(buyer == null || _items.isEmpty())
 			return;
 

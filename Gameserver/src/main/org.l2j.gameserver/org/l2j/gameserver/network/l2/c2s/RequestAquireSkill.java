@@ -17,25 +17,27 @@ import org.l2j.gameserver.templates.item.data.ItemData;
 import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.MulticlassUtils;
 
+import java.nio.ByteBuffer;
+
 public class RequestAquireSkill extends L2GameClientPacket
 {
 	private AcquireType _type;
 	private int _id, _level, _subUnit;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_id = readInt();
-		_level = readInt();
-		_type = AcquireType.getById(readInt());
+		_id = buffer.getInt();
+		_level = buffer.getInt();
+		_type = AcquireType.getById(buffer.getInt());
 		if(_type == AcquireType.SUB_UNIT)
-			_subUnit = readInt();
+			_subUnit = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null || player.isTransformed() || _type == null)
 			return;
 

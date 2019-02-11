@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,18 +33,18 @@ public class RequestItemEnsoul extends L2GameClientPacket
 	private List<EnsoulInfo> _ensoulsInfo;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_itemObjectId = readInt();
-		int changesCount = readByte();
+		_itemObjectId = buffer.getInt();
+		int changesCount = buffer.get();
 		_ensoulsInfo = new ArrayList<EnsoulInfo>(changesCount);
 		for(int i = 0; i < changesCount; i++)
 		{
 			EnsoulInfo info = new EnsoulInfo();
-			info.type = readByte();
-			info.id = readByte();
-			info.itemObjectId = readInt();
-			info.ensoulId = readInt();
+			info.type = buffer.get();
+			info.id = buffer.get();
+			info.itemObjectId = buffer.getInt();
+			info.ensoulId = buffer.getInt();
 			_ensoulsInfo.add(info);
 		}
 	}
@@ -51,7 +52,7 @@ public class RequestItemEnsoul extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

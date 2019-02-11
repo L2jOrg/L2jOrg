@@ -1,24 +1,24 @@
 package org.l2j.gameserver.network.l2.c2s;
 
-import org.l2j.gameserver.instancemanager.MatchingRoomManager;
 import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.model.base.TeamType;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
+
+import java.nio.ByteBuffer;
 
 public final class RequestRegistWaitingSubstitute extends L2GameClientPacket
 {
 	private boolean _enable;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_enable = readInt() == 1;
+		_enable = buffer.getInt() == 1;
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		final Player activeChar = getClient().getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

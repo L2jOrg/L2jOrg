@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import io.github.joealisson.mmocore.StaticPacket;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 @StaticPacket
 public class ExShowQuestInfoPacket extends L2GameServerPacket  {
@@ -9,10 +12,10 @@ public class ExShowQuestInfoPacket extends L2GameServerPacket  {
 	private ExShowQuestInfoPacket() { }
 
 	@Override
-	protected final void writeImpl() {  }
+	protected final void writeImpl(GameClient client, ByteBuffer buffer) {  }
 
 	@Override
-	protected int packetSize() {
+	protected int size(GameClient client) {
 		return 5;
 	}
 

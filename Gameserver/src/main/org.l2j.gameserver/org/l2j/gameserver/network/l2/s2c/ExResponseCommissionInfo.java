@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.items.ItemInstance;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class ExResponseCommissionInfo extends L2GameServerPacket
 {
@@ -11,12 +14,12 @@ public class ExResponseCommissionInfo extends L2GameServerPacket
 		_item = item;
 	}
 
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_item.getItemId()); //ItemId
-		writeInt(_item.getObjectId());
-		writeLong(_item.getCount()); //TODO
-		writeLong(0/*_item.getCount()*/); //TODO
-		writeInt(0); //TODO
+		buffer.putInt(_item.getItemId()); //ItemId
+		buffer.putInt(_item.getObjectId());
+		buffer.putLong(_item.getCount()); //TODO
+		buffer.putLong(0/*_item.getCount()*/); //TODO
+		buffer.putInt(0); //TODO
 	}
 }

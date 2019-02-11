@@ -10,6 +10,8 @@ import org.l2j.gameserver.utils.BypassStorage.ValidBypass;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.nio.ByteBuffer;
+
 /**
  * Format SSSSSS
  */
@@ -25,27 +27,27 @@ public class RequestBBSwrite extends L2GameClientPacket
 	private String _arg5;
 
 	@Override
-	public void readImpl()
+	public void readImpl(ByteBuffer buffer)
 	{
-		_url = readString();
-		_arg1 = readString();
-		_arg2 = readString();
-		_arg3 = readString();
-		_arg4 = readString();
-		_arg5 = readString();
+		_url = readString(buffer);
+		_arg1 = readString(buffer);
+		_arg2 = readString(buffer);
+		_arg3 = readString(buffer);
+		_arg4 = readString(buffer);
+		_arg5 = readString(buffer);
 	}
 
 	@Override
 	public void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 
 		ValidBypass bp = activeChar.getBypassStorage().validate(_url);
 		if(bp == null)
 		{
-			_log.warn("RequestBBSwrite: Unexpected bypass : " + _url + " client : " + getClient() + "!");
+			_log.warn("RequestBBSwrite: Unexpected bypass : " + _url + " client : " + client + "!");
 			return;
 		}
 

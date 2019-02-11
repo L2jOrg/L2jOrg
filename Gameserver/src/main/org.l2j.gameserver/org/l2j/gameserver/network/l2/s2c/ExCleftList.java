@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ExCleftList extends L2GameServerPacket
 {
 	public static final int CleftType_Close = -1;
@@ -11,9 +15,9 @@ public class ExCleftList extends L2GameServerPacket
 	private int CleftType = 0; //TODO
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(CleftType);
+		buffer.putInt(CleftType);
 		switch(CleftType)
 		{
 			case CleftType_Total:

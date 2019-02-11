@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +13,7 @@ import org.l2j.gameserver.model.Player;
 import io.github.joealisson.primitive.pair.IntObjectPair;
 import io.github.joealisson.primitive.maps.IntObjectMap;
 import io.github.joealisson.primitive.maps.impl.TreeIntObjectMap;
+import org.l2j.gameserver.network.l2.GameClient;
 
 /**
  * @author VISTALL
@@ -58,18 +60,18 @@ public class ExBR_MiniGameLoadScores extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_place); // place of last big score of player
-		writeInt(_score); // last big score of player
-		writeInt(0x00); //?
-		writeInt(_lastScore); //last score of list
+		buffer.putInt(_place); // place of last big score of player
+		buffer.putInt(_score); // last big score of player
+		buffer.putInt(0x00); //?
+		buffer.putInt(_lastScore); //last score of list
 		for(IntObjectPair<List<Map.Entry<String, Integer>>> entry : _entries.entrySet())
 			for(Map.Entry<String, Integer> scoreEntry : entry.getValue())
 			{
-				writeInt(entry.getKey());
-				writeString(scoreEntry.getKey());
-				writeInt(scoreEntry.getValue());
+				buffer.putInt(entry.getKey());
+				writeString(scoreEntry.getKey(), buffer);
+				buffer.putInt(scoreEntry.getValue());
 			}
 	}
 }

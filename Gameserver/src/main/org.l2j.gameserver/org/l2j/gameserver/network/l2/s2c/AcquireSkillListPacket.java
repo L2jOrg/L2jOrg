@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.Collection;
 import java.util.List;
 
@@ -9,6 +10,7 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Skill;
 import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.base.AcquireType;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.templates.item.data.ItemData;
 
 /**
@@ -27,30 +29,30 @@ public class AcquireSkillListPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeShort(_skills.size());
+		buffer.putShort((short) _skills.size());
 		for(SkillLearn sk : _skills)
 		{
 			Skill skill = SkillHolder.getInstance().getSkill(sk.getId(), sk.getLevel());
 			if(skill == null)
 				continue;
 
-			writeInt(sk.getId());
-			writeShort(sk.getLevel());
-			writeLong(sk.getCost());
-			writeByte(sk.getMinLevel());
-			writeByte(0x00);
+			buffer.putInt(sk.getId());
+			buffer.putShort((short) sk.getLevel());
+			buffer.putLong(sk.getCost());
+			buffer.put((byte)sk.getMinLevel());
+			buffer.put((byte)0x00);
 
 			List<ItemData> requiredItems = sk.getRequiredItemsForLearn(AcquireType.NORMAL);
-			writeByte(requiredItems.size());
+			buffer.put((byte)requiredItems.size());
 			for(ItemData item : requiredItems)
 			{
-				writeInt(item.getId());
-				writeLong(item.getCount());
+				buffer.putInt(item.getId());
+				buffer.putLong(item.getCount());
 			}
 
-			writeByte(0x00);
+			buffer.put((byte)0x00);
 		}
 	}
 }

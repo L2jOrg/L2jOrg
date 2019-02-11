@@ -1,7 +1,10 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Creature;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.utils.Location;
+
+import java.nio.ByteBuffer;
 
 public class FlyToLocationPacket extends L2GameServerPacket
 {
@@ -39,18 +42,18 @@ public class FlyToLocationPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_chaObjId);
-		writeInt(_destLoc.x);
-		writeInt(_destLoc.y);
-		writeInt(_destLoc.z);
-		writeInt(_loc.x);
-		writeInt(_loc.y);
-		writeInt(_loc.z);
-		writeInt(_type.ordinal());
-		writeInt(_flySpeed);
-		writeInt(_flyDelay);
-		writeInt(_animationSpeed);
+		buffer.putInt(_chaObjId);
+		buffer.putInt(_destLoc.x);
+		buffer.putInt(_destLoc.y);
+		buffer.putInt(_destLoc.z);
+		buffer.putInt(_loc.x);
+		buffer.putInt(_loc.y);
+		buffer.putInt(_loc.z);
+		buffer.putInt(_type.ordinal());
+		buffer.putInt(_flySpeed);
+		buffer.putInt(_flyDelay);
+		buffer.putInt(_animationSpeed);
 	}
 }

@@ -5,26 +5,28 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 
+import java.nio.ByteBuffer;
+
 public class RequestSetPledgeCrest extends L2GameClientPacket
 {
 	private int _length;
 	private byte[] _data;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_length = readInt();
-		if(_length == CrestCache.CREST_SIZE && _length == availableData())
+		_length = buffer.getInt();
+		if(_length == CrestCache.CREST_SIZE && _length == buffer.remaining())
 		{
 			_data = new byte[_length];
-			readBytes(_data);
+			buffer.get(_data);
 		}
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

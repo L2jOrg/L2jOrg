@@ -2,6 +2,8 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.network.l2.components.NpcString;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author VISTALL
  * @date 16:43/25.03.2011
@@ -17,10 +19,10 @@ public abstract class NpcStringContainer extends L2GameServerPacket
 		_parameters = arg;
 	}
 
-	protected void writeElements()
+	protected void writeElements(ByteBuffer buffer)
 	{
-		writeInt(_npcString.getId());
+		buffer.putInt(_npcString.getId());
 		for(String st : _parameters)
-			writeString(st);
+			writeString(st, buffer);
 	}
 }

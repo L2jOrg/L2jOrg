@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.mail.Mail;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class ExChangePostState extends L2GameServerPacket
 {
@@ -16,14 +19,14 @@ public class ExChangePostState extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_receivedBoard ? 1 : 0);
-		writeInt(_mails.length);
+		buffer.putInt(_receivedBoard ? 1 : 0);
+		buffer.putInt(_mails.length);
 		for(Mail mail : _mails)
 		{
-			writeInt(mail.getMessageId()); // postId
-			writeInt(_changeId); // state
+			buffer.putInt(mail.getMessageId()); // postId
+			buffer.putInt(_changeId); // state
 		}
 	}
 }

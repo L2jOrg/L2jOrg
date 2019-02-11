@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 /**
  *
  * sample
@@ -30,9 +34,9 @@ public class AskJoinPartyPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeString(_requestorName);
-		writeInt(_itemDistribution);
+		writeString(_requestorName, buffer);
+		buffer.putInt(_itemDistribution);
 	}
 }

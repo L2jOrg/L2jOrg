@@ -2,6 +2,9 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.items.ItemInfo;
 import org.l2j.gameserver.model.items.ItemInstance;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * 5e
@@ -40,10 +43,10 @@ public class EquipUpdate extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_item.getLastChange());
-		writeInt(_item.getObjectId());
-		writeInt(_item.getEquipSlot());
+		buffer.putInt(_item.getLastChange());
+		buffer.putInt(_item.getObjectId());
+		buffer.putInt(_item.getEquipSlot());
 	}
 }

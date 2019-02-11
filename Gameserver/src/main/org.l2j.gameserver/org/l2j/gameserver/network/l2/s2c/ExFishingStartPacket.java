@@ -1,7 +1,10 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Creature;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.utils.Location;
+
+import java.nio.ByteBuffer;
 
 /**
  * Format (ch)ddddd
@@ -22,14 +25,14 @@ public class ExFishingStartPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_charObjId);
-		writeInt(_fishType); // fish type
-		writeInt(_loc.x); // x poisson
-		writeInt(_loc.y); // y poisson
-		writeInt(_loc.z); // z poisson
-		writeByte(_isNightLure ? 0x01 : 0x00); // 0 = day lure  1 = night lure
-		writeByte(0x01); // result Button
+		buffer.putInt(_charObjId);
+		buffer.putInt(_fishType); // fish type
+		buffer.putInt(_loc.x); // x poisson
+		buffer.putInt(_loc.y); // y poisson
+		buffer.putInt(_loc.z); // z poisson
+		buffer.put((byte) (_isNightLure ? 0x01 : 0x00)); // 0 = day lure  1 = night lure
+		buffer.put((byte)0x01); // result Button
 	}
 }

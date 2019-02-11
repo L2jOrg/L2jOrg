@@ -1,7 +1,10 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.items.ItemInstance;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.utils.VariationUtils;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author VISTALL
@@ -24,13 +27,13 @@ public class ExPutItemResultForVariationCancel extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_itemObjectId);
-		writeInt(_itemId);
-		writeInt(_aug1);
-		writeInt(_aug2);
-		writeLong(_price);
-		writeInt(0x01);
+		buffer.putInt(_itemObjectId);
+		buffer.putInt(_itemId);
+		buffer.putInt(_aug1);
+		buffer.putInt(_aug2);
+		buffer.putLong(_price);
+		buffer.putInt(0x01);
 	}
 }

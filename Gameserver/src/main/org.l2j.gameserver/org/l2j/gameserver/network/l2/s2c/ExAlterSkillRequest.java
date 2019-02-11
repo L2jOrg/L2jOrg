@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 /**
  * @autor Monithly
  */
@@ -15,10 +19,10 @@ public class ExAlterSkillRequest extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_requestId);
-		writeInt(_activeId);
-		writeInt(_duration);
+		buffer.putInt(_requestId);
+		buffer.putInt(_activeId);
+		buffer.putInt(_duration);
 	}
 }

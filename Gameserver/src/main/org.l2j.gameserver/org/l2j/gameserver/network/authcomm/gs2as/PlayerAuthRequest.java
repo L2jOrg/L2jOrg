@@ -1,7 +1,10 @@
 package org.l2j.gameserver.network.authcomm.gs2as;
 
+import org.l2j.gameserver.network.authcomm.AuthServerClient;
 import org.l2j.gameserver.network.authcomm.SendablePacket;
 import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class PlayerAuthRequest extends SendablePacket
 {
@@ -17,13 +20,12 @@ public class PlayerAuthRequest extends SendablePacket
 		loginOkID2 = client.getSessionKey().loginOkID2;
 	}
 
-	protected void writeImpl()
-	{
-		writeByte(0x02);
-		writeString(account);
-		writeInt(playOkID1);
-		writeInt(playOkID2);
-		writeInt(loginOkID1);
-		writeInt(loginOkID2);
+	protected void writeImpl(AuthServerClient client, ByteBuffer buffer) {
+		buffer.put((byte)0x02);
+		writeString(account, buffer);
+		buffer.putInt(playOkID1);
+		buffer.putInt(playOkID2);
+		buffer.putInt(loginOkID1);
+		buffer.putInt(loginOkID2);
 	}
 }

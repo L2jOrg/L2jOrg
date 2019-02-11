@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * Format: (ch) dc
@@ -23,9 +26,9 @@ public class ExFishingEndPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_charId);
-		writeByte(_type);
+		buffer.putInt(_charId);
+		buffer.put((byte)_type);
 	}
 }

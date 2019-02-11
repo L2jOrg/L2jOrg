@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.network.l2.components.NpcString;
+
+import java.nio.ByteBuffer;
 
 public class ExShowScreenMessage extends NpcStringContainer
 {
@@ -76,18 +79,18 @@ public class ExShowScreenMessage extends NpcStringContainer
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_type); // 0 - system messages, 1 - your defined text
-		writeInt(_sysMessageId); // system message id (_type must be 0 otherwise no effect)
-		writeInt(_text_align.ordinal() + 1); // размещение текста
-		writeInt(0x00); // ?
-		writeInt(_big_font ? 0 : 1); // размер текста
-		writeInt(0x00); // ?
-		writeInt(_unk); // ?
-		writeInt(_effect ? 1 : 0); // upper effect (0 - disabled, 1 enabled) - _position must be 2 (center) otherwise no effect
-		writeInt(_time); // время отображения сообщения в милисекундах
-		writeInt(0x01); // ?
-		writeElements();
+		buffer.putInt(_type); // 0 - system messages, 1 - your defined text
+		buffer.putInt(_sysMessageId); // system message id (_type must be 0 otherwise no effect)
+		buffer.putInt(_text_align.ordinal() + 1); // размещение текста
+		buffer.putInt(0x00); // ?
+		buffer.putInt(_big_font ? 0 : 1); // размер текста
+		buffer.putInt(0x00); // ?
+		buffer.putInt(_unk); // ?
+		buffer.putInt(_effect ? 1 : 0); // upper effect (0 - disabled, 1 enabled) - _position must be 2 (center) otherwise no effect
+		buffer.putInt(_time); // время отображения сообщения в милисекундах
+		buffer.putInt(0x01); // ?
+		writeElements(buffer);
 	}
 }

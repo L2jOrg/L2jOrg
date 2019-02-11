@@ -4,6 +4,8 @@ import org.l2j.authserver.network.client.packet.L2LoginClientPacket;
 import org.l2j.authserver.network.client.packet.auth2client.LoginFail;
 import org.l2j.authserver.network.client.packet.auth2client.ServerList;
 
+import java.nio.ByteBuffer;
+
 /**
  * Format: ddc d: fist part of session id d: second part of session id c: list Type
  *
@@ -26,10 +28,10 @@ public class RequestServerList extends L2LoginClientPacket
     private byte listType;
 
 	@Override
-	public boolean readImpl() {
-        accountId = readInt();
-        authId = readInt();
-        listType = readByte();
+	public boolean readImpl(ByteBuffer buffer) {
+        accountId = buffer.getInt();
+        authId = buffer.getInt();
+        listType = buffer.get();
 		return true;
 	}
 	

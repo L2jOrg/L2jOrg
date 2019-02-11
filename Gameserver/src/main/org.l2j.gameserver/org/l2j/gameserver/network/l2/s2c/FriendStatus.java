@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.actor.instances.player.Friend;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author Bonux
@@ -17,11 +20,11 @@ public class FriendStatus extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_login);
-		writeString(_friend.getName());
+		buffer.putInt(_login ? 1 : 0);
+		writeString(_friend.getName(), buffer);
 		if(!_login)
-			writeInt(_friend.getObjectId());
+			buffer.putInt(_friend.getObjectId());
 	}
 }

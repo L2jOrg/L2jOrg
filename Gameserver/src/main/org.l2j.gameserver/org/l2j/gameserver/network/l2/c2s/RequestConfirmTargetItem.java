@@ -6,21 +6,23 @@ import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ExPutItemResultForVariationMake;
 
+import java.nio.ByteBuffer;
+
 public class RequestConfirmTargetItem extends L2GameClientPacket
 {
 	// format: (ch)d
 	private int _itemObjId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_itemObjId = readInt(); // object_id шмотки
+		_itemObjId = buffer.getInt(); // object_id шмотки
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

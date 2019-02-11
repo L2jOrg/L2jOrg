@@ -3,6 +3,8 @@ package org.l2j.gameserver.network.l2.c2s;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.Hero;
 
+import java.nio.ByteBuffer;
+
 /**
  * Format chS
  * c (id) 0xD0
@@ -15,15 +17,15 @@ public class RequestWriteHeroWords extends L2GameClientPacket
 	private String _heroWords;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_heroWords = readString();
+		_heroWords = readString(buffer);
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		final Player player = getClient().getActiveChar();
+		final Player player = client.getActiveChar();
 		if(player == null || !player.isHero())
 			return;
 

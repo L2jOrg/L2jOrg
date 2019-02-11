@@ -9,22 +9,24 @@ import org.l2j.gameserver.network.l2.s2c.ExPledgeRecruitBoardDetail;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.tables.ClanTable;
 
+import java.nio.ByteBuffer;
+
 public class RequestPledgeSignInForOpenJoiningMethod extends L2GameClientPacket
 {
 	private int _clanId;
 	private int _unk;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_clanId = readInt();
-		_unk = readInt();
+		_clanId = buffer.getInt();
+		_unk = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

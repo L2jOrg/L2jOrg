@@ -161,4 +161,13 @@ public final class SettingsFile extends Properties {
         }
         return defaultValue;
     }
+
+    public short getShort(String key, short defaultValue) {
+        try {
+            return Short.parseShort(getProperty(key));
+        } catch (Exception e) {
+            logger.warn("Error getting property {} : {}", key, e.getLocalizedMessage());
+        }
+        return defaultValue;
+    }
 }

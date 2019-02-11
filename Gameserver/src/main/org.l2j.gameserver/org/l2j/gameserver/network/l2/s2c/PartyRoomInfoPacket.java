@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.matching.MatchingRoom;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class PartyRoomInfoPacket extends L2GameServerPacket
 {
@@ -24,14 +27,14 @@ public class PartyRoomInfoPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_id); // room id
-		writeInt(_maxMembers); //max members
-		writeInt(_minLevel); //min level
-		writeInt(_maxLevel); //max level
-		writeInt(_lootDist); //loot distribution 1-Random 2-Random includ. etc
-		writeInt(_location); //location
-		writeString(_title); // room name
+		buffer.putInt(_id); // room id
+		buffer.putInt(_maxMembers); //max members
+		buffer.putInt(_minLevel); //min level
+		buffer.putInt(_maxLevel); //max level
+		buffer.putInt(_lootDist); //loot distribution 1-Random 2-Random includ. etc
+		buffer.putInt(_location); //location
+		writeString(_title, buffer); // room name
 	}
 }

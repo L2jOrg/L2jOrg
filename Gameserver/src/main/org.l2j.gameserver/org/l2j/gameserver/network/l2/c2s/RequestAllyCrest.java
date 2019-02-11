@@ -3,6 +3,8 @@ package org.l2j.gameserver.network.l2.c2s;
 import org.l2j.gameserver.cache.CrestCache;
 import org.l2j.gameserver.network.l2.s2c.AllianceCrestPacket;
 
+import java.nio.ByteBuffer;
+
 public class RequestAllyCrest extends L2GameClientPacket
 {
 	// format: cd
@@ -10,9 +12,9 @@ public class RequestAllyCrest extends L2GameClientPacket
 	private int _crestId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_crestId = readInt();
+		_crestId = buffer.getInt();
 	}
 
 	@Override

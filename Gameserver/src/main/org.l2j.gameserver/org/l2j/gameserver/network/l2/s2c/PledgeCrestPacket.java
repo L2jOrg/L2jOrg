@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.settings.ServerSettings;
+
+import java.nio.ByteBuffer;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
@@ -18,11 +21,11 @@ public class PledgeCrestPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(getSettings(ServerSettings.class).serverId());
-		writeInt(_crestId);
-		writeInt(_crestSize);
-		writeBytes(_data);
+		buffer.putInt(getSettings(ServerSettings.class).serverId());
+		buffer.putInt(_crestId);
+		buffer.putInt(_crestSize);
+		buffer.put(_data);
 	}
 }

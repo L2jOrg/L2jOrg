@@ -3,6 +3,9 @@ package org.l2j.gameserver.network.l2.s2c;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInstance;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author VISTALL
@@ -25,13 +28,13 @@ public class ExGMViewQuestItemListPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeString(_name);
-		writeInt(_limit);
-		writeShort(_size);
+		writeString(_name, buffer);
+		buffer.putInt(_limit);
+		buffer.putShort((short) _size);
 		for(ItemInstance temp : _items)
 			if(temp.getTemplate().isQuest())
-				writeItemInfo(temp);
+				writeItemInfo(buffer, temp);
 	}
 }

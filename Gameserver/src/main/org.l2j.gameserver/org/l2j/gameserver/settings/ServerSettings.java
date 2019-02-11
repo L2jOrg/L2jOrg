@@ -66,7 +66,7 @@ public class ServerSettings implements Settings {
     private int serverId;
     private String internalAddress;
     private String externalAddress;
-    private int port;
+    private short port;
     private String authServerAddress;
     private int authServerPort;
     private int maximumOnlineUsers;
@@ -76,7 +76,7 @@ public class ServerSettings implements Settings {
         serverId = settingsFile.getInteger("ServerId", 1);
         internalAddress = settingsFile.getString("InternalAddress", "127.0.0.1");
         externalAddress = settingsFile.getString("ExternalAddress", "127.0.0.1");
-        port = settingsFile.getInteger("Port", 7777);
+        port = settingsFile.getShort("Port", (short) 7777);
         authServerAddress = settingsFile.getString("AuthServerAddress", "127.0.0.1");
         authServerPort = settingsFile.getInteger("AuthServerPort", 9014);
 
@@ -175,7 +175,7 @@ public class ServerSettings implements Settings {
         return externalAddress;
     }
 
-    public int port() {
+    public short port() {
         return port;
     }
 

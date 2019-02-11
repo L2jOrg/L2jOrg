@@ -2,8 +2,11 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.model.mail.Mail;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.network.l2.c2s.RequestExCancelSentPost;
 import org.l2j.gameserver.network.l2.c2s.RequestExRequestSentPost;
+
+import java.nio.ByteBuffer;
 
 /**
  * Просмотр собственного отправленного письма. Шлется в ответ на {@link RequestExRequestSentPost}.
@@ -21,43 +24,43 @@ public class ExReplySentPost extends L2GameServerPacket
 
 	// ddSSS dx[hddQdddhhhhhhhhhh] Qd
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(mail.getType().ordinal());
+		buffer.putInt(mail.getType().ordinal());
 		if(mail.getType() == Mail.SenderType.SYSTEM)
 		{
-			writeInt(mail.getSystemParams()[0]);
-			writeInt(mail.getSystemParams()[1]);
-			writeInt(mail.getSystemParams()[2]);
-			writeInt(mail.getSystemParams()[3]);
-			writeInt(mail.getSystemParams()[4]);
-			writeInt(mail.getSystemParams()[5]);
-			writeInt(mail.getSystemParams()[6]);
-			writeInt(mail.getSystemParams()[7]);
-			writeInt(mail.getSystemTopic());
-			writeInt(mail.getSystemBody());
+			buffer.putInt(mail.getSystemParams()[0]);
+			buffer.putInt(mail.getSystemParams()[1]);
+			buffer.putInt(mail.getSystemParams()[2]);
+			buffer.putInt(mail.getSystemParams()[3]);
+			buffer.putInt(mail.getSystemParams()[4]);
+			buffer.putInt(mail.getSystemParams()[5]);
+			buffer.putInt(mail.getSystemParams()[6]);
+			buffer.putInt(mail.getSystemParams()[7]);
+			buffer.putInt(mail.getSystemTopic());
+			buffer.putInt(mail.getSystemBody());
 		}
 		else if(mail.getType() == Mail.SenderType.UNKNOWN)
 		{
-			writeInt(3492);
-			writeInt(3493);
+			buffer.putInt(3492);
+			buffer.putInt(3493);
 		}
 
-		writeInt(mail.getMessageId()); // id письма
-		writeInt(mail.isPayOnDelivery() ? 1 : 0); // 1 - письмо с запросом оплаты, 0 - просто письмо
+		buffer.putInt(mail.getMessageId()); // id письма
+		buffer.putInt(mail.isPayOnDelivery() ? 1 : 0); // 1 - письмо с запросом оплаты, 0 - просто письмо
 
-		writeString(mail.getReceiverName()); // кому
-		writeString(mail.getTopic()); // топик
-		writeString(mail.getBody()); // тело
+		writeString(mail.getReceiverName(), buffer); // кому
+		writeString(mail.getTopic(), buffer); // топик
+		writeString(mail.getBody(), buffer); // тело
 
-		writeInt(mail.getAttachments().size()); // количество приложенных вещей
+		buffer.putInt(mail.getAttachments().size()); // количество приложенных вещей
 		for(ItemInstance item : mail.getAttachments())
 		{
-			writeItemInfo(item);
-			writeInt(item.getObjectId());
+			writeItemInfo(buffer, item);
+			buffer.putInt(item.getObjectId());
 		}
 
-		writeLong(mail.getPrice()); // для писем с оплатой - цена
-		writeInt(mail.getReceiverId()); // Не известно. В сниффе оффа значение 24225 (не равняется MessageId)
+		buffer.putLong(mail.getPrice()); // для писем с оплатой - цена
+		buffer.putInt(mail.getReceiverId()); // Не известно. В сниффе оффа значение 24225 (не равняется MessageId)
 	}
 }

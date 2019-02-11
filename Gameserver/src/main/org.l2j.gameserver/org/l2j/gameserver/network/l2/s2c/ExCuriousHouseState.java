@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ExCuriousHouseState extends L2GameServerPacket
 {
 	public static final L2GameServerPacket IDLE = new ExCuriousHouseState(0x00);
@@ -14,8 +18,8 @@ public class ExCuriousHouseState extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_state);
+		buffer.putInt(_state);
 	}
 }

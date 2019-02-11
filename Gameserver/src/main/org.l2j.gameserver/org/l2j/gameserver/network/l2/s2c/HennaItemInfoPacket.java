@@ -1,7 +1,10 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.templates.HennaTemplate;
+
+import java.nio.ByteBuffer;
 
 public class HennaItemInfoPacket extends L2GameServerPacket
 {
@@ -24,30 +27,30 @@ public class HennaItemInfoPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_hennaTemplate.getSymbolId()); //symbol Id
-		writeInt(_hennaTemplate.getDyeId()); //item id of dye
-		writeLong(_hennaTemplate.getDrawCount());
-		writeLong(_hennaTemplate.getDrawPrice());
-		writeInt(_available); //able to draw or not 0 is false and 1 is true
-		writeLong(_adena);
-		writeInt(_int); //current INT
-		writeShort(_int + _hennaTemplate.getStatINT()); //equip INT
-		writeInt(_str); //current STR
-		writeShort(_str + _hennaTemplate.getStatSTR()); //equip STR
-		writeInt(_con); //current CON
-		writeShort(_con + _hennaTemplate.getStatCON()); //equip CON
-		writeInt(_men); //current MEM
-		writeShort(_men + _hennaTemplate.getStatMEN()); //equip MEM
-		writeInt(_dex); //current DEX
-		writeShort(_dex + _hennaTemplate.getStatDEX()); //equip DEX
-		writeInt(_wit); //current WIT
-		writeShort(_wit + _hennaTemplate.getStatWIT()); //equip WIT
-		writeInt(0x00); //current LUC
-		writeShort(0x00); //equip LUC
-		writeInt(0x00); //current CHA
-		writeShort(0x00); //equip CHA
-		writeInt(_hennaTemplate.getPeriod());
+		buffer.putInt(_hennaTemplate.getSymbolId()); //symbol Id
+		buffer.putInt(_hennaTemplate.getDyeId()); //item id of dye
+		buffer.putLong(_hennaTemplate.getDrawCount());
+		buffer.putLong(_hennaTemplate.getDrawPrice());
+		buffer.putInt(_available ? 0x01 : 0x00); //able to draw or not 0 is false and 1 is true
+		buffer.putLong(_adena);
+		buffer.putInt(_int); //current INT
+		buffer.putShort((short) (_int + _hennaTemplate.getStatINT())); //equip INT
+		buffer.putInt(_str); //current STR
+		buffer.putShort((short) (_str + _hennaTemplate.getStatSTR())); //equip STR
+		buffer.putInt(_con); //current CON
+		buffer.putShort((short) (_con + _hennaTemplate.getStatCON())); //equip CON
+		buffer.putInt(_men); //current MEM
+		buffer.putShort((short) (_men + _hennaTemplate.getStatMEN())); //equip MEM
+		buffer.putInt(_dex); //current DEX
+		buffer.putShort((short) (_dex + _hennaTemplate.getStatDEX())); //equip DEX
+		buffer.putInt(_wit); //current WIT
+		buffer.putShort((short) (_wit + _hennaTemplate.getStatWIT())); //equip WIT
+		buffer.putInt(0x00); //current LUC
+		buffer.putShort((short) 0x00); //equip LUC
+		buffer.putInt(0x00); //current CHA
+		buffer.putShort((short) 0x00); //equip CHA
+		buffer.putInt(_hennaTemplate.getPeriod());
 	}
 }

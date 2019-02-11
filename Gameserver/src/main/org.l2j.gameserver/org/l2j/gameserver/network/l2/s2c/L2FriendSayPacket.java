@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 /**
  * Send Private (Friend) Message
  *
@@ -22,11 +26,11 @@ public class L2FriendSayPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(0);
-		writeString(_receiver);
-		writeString(_sender);
-		writeString(_message);
+		buffer.putInt(0);
+		writeString(_receiver, buffer);
+		writeString(_sender, buffer);
+		writeString(_message, buffer);
 	}
 }

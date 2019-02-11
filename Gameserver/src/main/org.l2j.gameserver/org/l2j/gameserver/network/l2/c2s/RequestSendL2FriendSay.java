@@ -6,6 +6,8 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.L2FriendSayPacket;
 import org.l2j.gameserver.utils.Log;
 
+import java.nio.ByteBuffer;
+
 /**
  * Recieve Private (Friend) Message
  * Format: c SS
@@ -18,16 +20,16 @@ public class RequestSendL2FriendSay extends L2GameClientPacket
 	private String _reciever;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_message = readS(2048);
-		_reciever = readS(16);
+		_message = readString(buffer, 2048);
+		_reciever = readString(buffer, 16);
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

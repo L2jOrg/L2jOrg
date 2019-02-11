@@ -42,7 +42,7 @@ subprojects {
                 options.compilerArgs = [
                     '--module-path', classpath.asPath,
                 ]
-                options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation" << "-Xlint:rawtypes"
+                options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
                 classpath = files()
             }
         }

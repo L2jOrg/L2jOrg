@@ -3,6 +3,8 @@ package org.l2j.gameserver.network.l2.c2s;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 
+import java.nio.ByteBuffer;
+
 /**
  * Format (ch) dd
  */
@@ -11,15 +13,15 @@ public class RequestWithdrawPartyRoom extends L2GameClientPacket
 	private int _roomId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_roomId = readInt();
+		_roomId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		final Player player = getClient().getActiveChar();
+		final Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

@@ -8,6 +8,8 @@ import org.l2j.gameserver.model.clansearch.base.ClanSearchListType;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author GodWorld
  * @reworked by Bonux
@@ -21,20 +23,20 @@ public class RequestPledgeRecruitBoardAccess extends L2GameClientPacket
 	private String _desc;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_pledgeAccess = readInt();
-		_searchType = ClanSearchListType.getType(readInt());
-		readString();
-		_desc = readString();
-		_application = readInt();
-		_subUnit = readInt();
+		_pledgeAccess = buffer.getInt();
+		_searchType = ClanSearchListType.getType(buffer.getInt());
+		readString(buffer);
+		_desc = readString(buffer);
+		_application = buffer.getInt();
+		_subUnit = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

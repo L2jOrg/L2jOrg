@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ShowTutorialMarkPacket extends L2GameServerPacket
 {
 	private boolean _quest;
@@ -12,9 +16,9 @@ public class ShowTutorialMarkPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeByte(_quest);
-		writeInt(_tutorialId);
+		buffer.put((byte) (_quest? 0x01 : 0x00));
+		buffer.putInt(_tutorialId);
 	}
 }

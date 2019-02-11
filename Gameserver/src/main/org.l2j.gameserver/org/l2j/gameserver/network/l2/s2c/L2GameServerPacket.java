@@ -18,7 +18,7 @@ import io.github.joealisson.mmocore.WritablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static java.util.Objects.nonNull;
+import java.nio.ByteBuffer;
 
 public abstract class L2GameServerPacket extends WritablePacket<GameClient> implements IBroadcastPacket {
     private static final int IS_AUGMENTED = 1 << 0;
@@ -29,14 +29,15 @@ public abstract class L2GameServerPacket extends WritablePacket<GameClient> impl
     private static final Logger _log = LoggerFactory.getLogger(L2GameServerPacket.class);
 
     @Override
-    public final boolean write() {
+    public final boolean write(GameClient client, ByteBuffer buffer) {
         try {
-            if (writeOpcodes()) {
-                writeImpl();
+            if (writeOpcodes(buffer)) {
+                writeImpl(client, buffer);
                 return true;
             }
         } catch (Exception e) {
-            _log.error("Client: " + getClient() + " - Failed writing: " + getType() + " - Server Version: " + GameServer.getInstance().getVersion(), e);
+            _log.error("Client: {} - Failed writing: {} - Server Version {}", client, toString(),  GameServer.getInstance().getVersion());
+            _log.error(e.getLocalizedMessage(), e);
         }
         return false;
     }
@@ -50,53 +51,53 @@ public abstract class L2GameServerPacket extends WritablePacket<GameClient> impl
         return null;
     }
 
-    protected boolean writeOpcodes() {
+    protected boolean writeOpcodes(ByteBuffer buffer) {
         ServerPacketOpcodes opcodes = getOpcodes();
         if (opcodes == null) {
             return false;
         }
 
         int opcode = opcodes.getId();
-        writeByte(opcode);
+        buffer.put((byte)opcode);
         if (opcode == 0xFE) {
-            writeShort(opcodes.getExId());
+            buffer.putShort((short) opcodes.getExId());
         }
 
         return true;
     }
 
-    protected abstract void writeImpl();
+    protected abstract void writeImpl(GameClient client, ByteBuffer buffer);
 
 
     /**
      * Отсылает число позиций + массив
      */
-    protected void writeDD(int[] values, boolean sendCount) {
+    protected void writeIntList(ByteBuffer buffer, int[] values, boolean sendCount) {
         if (sendCount) {
-            writeInt(values.length);
+            buffer.putInt(values.length);
         }
         for (int value : values) {
-            writeInt(value);
+            buffer.putInt(value);
         }
     }
 
-    protected void writeDD(int[] values) {
-        writeDD(values, false);
+    protected void writeIntList(ByteBuffer buffer, int[] values) {
+        writeIntList(buffer, values, false);
     }
 
-    protected void writeItemInfo(ItemInstance item) {
-        writeItemInfo(null, item, item.getCount());
+    protected void writeItemInfo(ByteBuffer buffer, ItemInstance item) {
+        writeItemInfo(buffer, null, item, item.getCount());
     }
 
-    protected void writeItemInfo(Player player, ItemInstance item) {
-        writeItemInfo(player, item, item.getCount());
+    protected void writeItemInfo(ByteBuffer buffer, Player player, ItemInstance item) {
+        writeItemInfo(buffer, player, item, item.getCount());
     }
 
-    protected void writeItemInfo(ItemInstance item, long count) {
-        writeItemInfo(null, item, count);
+    protected void writeItemInfo(ByteBuffer buffer, ItemInstance item, long count) {
+        writeItemInfo(buffer,null, item, count);
     }
 
-    protected void writeItemInfo(Player player, ItemInstance item, long count) {
+    protected void writeItemInfo(ByteBuffer buffer, Player player, ItemInstance item, long count) {
         int flags = 0;
 
         if (item.isAugmented())
@@ -124,63 +125,63 @@ public abstract class L2GameServerPacket extends WritablePacket<GameClient> impl
         if (normalEnsouls.length > 0 || specialEnsouls.length > 0)
             flags |= HAVE_ENSOUL;
 
-        writeByte(flags);
-        writeInt(item.getObjectId());
-        writeInt(item.getItemId());
-        writeByte(item.isEquipped() ? -1 : item.getEquipSlot());
-        writeLong(count);
-        writeByte(item.getTemplate().getType2());
-        writeByte(item.getCustomType1());
-        writeShort(item.isEquipped() ? 1 : 0);
-        writeLong(item.getBodyPart());
-        writeByte(item.getFixedEnchantLevel(player));
-        writeByte(item.getCustomType2());
-        writeInt(item.getShadowLifeTime());
-        writeInt(item.getTemporalLifeTime());
+        buffer.put((byte)flags);
+        buffer.putInt(item.getObjectId());
+        buffer.putInt(item.getItemId());
+        buffer.put((byte) (item.isEquipped() ? -1 : item.getEquipSlot()));
+        buffer.putLong(count);
+        buffer.put((byte)item.getTemplate().getType2());
+        buffer.put((byte)item.getCustomType1());
+        buffer.putShort((short) (item.isEquipped() ? 1 : 0));
+        buffer.putLong(item.getBodyPart());
+        buffer.put((byte)item.getFixedEnchantLevel(player));
+        buffer.put((byte)item.getCustomType2());
+        buffer.putInt(item.getShadowLifeTime());
+        buffer.putInt(item.getTemporalLifeTime());
 
         if (player != null)
-            writeByte(!item.getTemplate().isBlocked(player, item));
+            buffer.put((byte) (!item.getTemplate().isBlocked(player, item)  ? 0x01 :  0x00));
         else
-            writeByte(0x01);
+            buffer.put((byte)0x01);
 
         if ((flags & IS_AUGMENTED) == IS_AUGMENTED) {
-            writeInt(item.getVariation1Id());
-            writeInt(item.getVariation2Id());
+            buffer.putInt(item.getVariation1Id());
+            buffer.putInt(item.getVariation2Id());
         }
 
         if ((flags & IS_ELEMENTED) == IS_ELEMENTED) {
-            writeShort(item.getAttackElement().getId());
-            writeShort(attackElementValue);
-            writeShort(defenceFire);
-            writeShort(defenceWater);
-            writeShort(defenceWind);
-            writeShort(defenceEarth);
-            writeShort(defenceHoly);
-            writeShort(defenceUnholy);
+            buffer.putShort((short) item.getAttackElement().getId());
+            buffer.putShort((short) attackElementValue);
+            buffer.putShort((short) defenceFire);
+            buffer.putShort((short) defenceWater);
+            buffer.putShort((short) defenceWind);
+            buffer.putShort((short) defenceEarth);
+            buffer.putShort((short) defenceHoly);
+            buffer.putShort((short) defenceUnholy);
         }
 
         if ((flags & HAVE_ENCHANT_OPTIONS) == HAVE_ENCHANT_OPTIONS) {
-            writeInt(item.getEnchantOptions()[0]);
-            writeInt(item.getEnchantOptions()[1]);
-            writeInt(item.getEnchantOptions()[2]);
+            buffer.putInt(item.getEnchantOptions()[0]);
+            buffer.putInt(item.getEnchantOptions()[1]);
+            buffer.putInt(item.getEnchantOptions()[2]);
         }
 
         if ((flags & HAVE_ENSOUL) == HAVE_ENSOUL) {
-            writeByte(normalEnsouls.length);
+            buffer.put((byte)normalEnsouls.length);
             for (Ensoul ensoul : normalEnsouls)
-                writeInt(ensoul.getId());
+                buffer.putInt(ensoul.getId());
 
-            writeByte(specialEnsouls.length);
+            buffer.put((byte)specialEnsouls.length);
             for (Ensoul ensoul : specialEnsouls)
-                writeInt(ensoul.getId());
+                buffer.putInt(ensoul.getId());
         }
     }
 
-    protected void writeItemInfo(ItemInfo item) {
-        writeItemInfo(item, item.getCount());
+    protected void writeItemInfo(ByteBuffer buffer, ItemInfo item) {
+        writeItemInfo(buffer, item, item.getCount());
     }
 
-    protected void writeItemInfo(ItemInfo item, long count) {
+    protected void writeItemInfo(ByteBuffer buffer, ItemInfo item, long count) {
         int flags = 0;
 
         if (item.getVariation1Id() > 0 || item.getVariation2Id() > 0)
@@ -208,78 +209,78 @@ public abstract class L2GameServerPacket extends WritablePacket<GameClient> impl
         if (normalEnsouls.length > 0 || specialEnsouls.length > 0)
             flags |= HAVE_ENSOUL;
 
-        writeByte(flags);
-        writeInt(item.getObjectId());
-        writeInt(item.getItemId());
-        writeByte(item.isEquipped() ? -1 : item.getEquipSlot());
-        writeLong(count);
-        writeByte(item.getItem().getType2());
-        writeByte(item.getCustomType1());
-        writeShort(item.isEquipped() ? 1 : 0);
-        writeLong(item.getItem().getBodyPart());
-        writeByte(item.getEnchantLevel());
-        writeByte(item.getCustomType2());
-        writeInt(item.getShadowLifeTime());
-        writeInt(item.getTemporalLifeTime());
-        writeByte(!item.isBlocked());
+        buffer.put((byte)flags);
+        buffer.putInt(item.getObjectId());
+        buffer.putInt(item.getItemId());
+        buffer.put((byte) (item.isEquipped() ? -1 : item.getEquipSlot()));
+        buffer.putLong(count);
+        buffer.put((byte)item.getItem().getType2());
+        buffer.put((byte)item.getCustomType1());
+        buffer.putShort( (short) (item.isEquipped() ? 1 : 0));
+        buffer.putLong(item.getItem().getBodyPart());
+        buffer.put((byte)item.getEnchantLevel());
+        buffer.put((byte)item.getCustomType2());
+        buffer.putInt(item.getShadowLifeTime());
+        buffer.putInt(item.getTemporalLifeTime());
+        buffer.put((byte) (!item.isBlocked() ? 0x01 : 0x00));
 
         if ((flags & IS_AUGMENTED) == IS_AUGMENTED) {
-            writeInt(item.getVariation1Id());
-            writeInt(item.getVariation2Id());
+            buffer.putInt(item.getVariation1Id());
+            buffer.putInt(item.getVariation2Id());
         }
 
         if ((flags & IS_ELEMENTED) == IS_ELEMENTED) {
-            writeShort(item.getAttackElement());
-            writeShort(attackElementValue);
-            writeShort(defenceFire);
-            writeShort(defenceWater);
-            writeShort(defenceWind);
-            writeShort(defenceEarth);
-            writeShort(defenceHoly);
-            writeShort(defenceUnholy);
+            buffer.putShort((short) item.getAttackElement());
+            buffer.putShort((short) attackElementValue);
+            buffer.putShort((short) defenceFire);
+            buffer.putShort((short) defenceWater);
+            buffer.putShort((short) defenceWind);
+            buffer.putShort((short) defenceEarth);
+            buffer.putShort((short) defenceHoly);
+            buffer.putShort((short) defenceUnholy);
         }
 
         if ((flags & HAVE_ENCHANT_OPTIONS) == HAVE_ENCHANT_OPTIONS) {
-            writeInt(item.getEnchantOptions()[0]);
-            writeInt(item.getEnchantOptions()[1]);
-            writeInt(item.getEnchantOptions()[2]);
+            buffer.putInt(item.getEnchantOptions()[0]);
+            buffer.putInt(item.getEnchantOptions()[1]);
+            buffer.putInt(item.getEnchantOptions()[2]);
         }
 
         if ((flags & HAVE_ENSOUL) == HAVE_ENSOUL) {
-            writeByte(normalEnsouls.length);
+            buffer.put((byte)normalEnsouls.length);
             for (Ensoul ensoul : normalEnsouls)
-                writeInt(ensoul.getId());
+                buffer.putInt(ensoul.getId());
 
-            writeByte(specialEnsouls.length);
+            buffer.put((byte)specialEnsouls.length);
             for (Ensoul ensoul : specialEnsouls)
-                writeInt(ensoul.getId());
+                buffer.putInt(ensoul.getId());
         }
     }
 
-    protected void writeCommissionItem(CommissionItem item) {
-        writeInt(item.getItemId());
-        writeByte(item.getEquipSlot());
-        writeLong(item.getCount());
-        writeShort(item.getItem().getType2()); //??item.getCustomType1()??
-        writeLong(item.getItem().getBodyPart());
-        writeShort(item.getEnchantLevel());
-        writeShort(item.getCustomType2());
-        writeShort(item.getAttackElement());
-        writeShort(item.getAttackElementValue());
-        writeShort(item.getDefenceFire());
-        writeShort(item.getDefenceWater());
-        writeShort(item.getDefenceWind());
-        writeShort(item.getDefenceEarth());
-        writeShort(item.getDefenceHoly());
-        writeShort(item.getDefenceUnholy());
-        writeInt(item.getEnchantOptions()[0]);
-        writeInt(item.getEnchantOptions()[1]);
-        writeInt(item.getEnchantOptions()[2]);
+    protected void writeCommissionItem(ByteBuffer buffer, CommissionItem item) {
+        buffer.putInt(item.getItemId());
+        buffer.put((byte)item.getEquipSlot());
+        buffer.putLong(item.getCount());
+        buffer.putShort((short) item.getItem().getType2()); //??item.getCustomType1()??
+        buffer.putLong(item.getItem().getBodyPart());
+        buffer.putShort((short) item.getEnchantLevel());
+        buffer.putShort((short) item.getCustomType2());
+        buffer.putShort((short) item.getAttackElement());
+        buffer.putShort((short) item.getAttackElementValue());
+        buffer.putShort((short) item.getDefenceFire());
+        buffer.putShort((short) item.getDefenceWater());
+        buffer.putShort((short) item.getDefenceWind());
+        buffer.putShort((short) item.getDefenceEarth());
+        buffer.putShort((short) item.getDefenceHoly());
+        buffer.putShort((short) item.getDefenceUnholy());
+        buffer.putInt(item.getEnchantOptions()[0]);
+        buffer.putInt(item.getEnchantOptions()[1]);
+        buffer.putInt(item.getEnchantOptions()[2]);
     }
 
-    protected void writeItemElements(MultiSellIngredient item) {
+    protected void writeItemElements(ByteBuffer buffer, MultiSellIngredient item) {
         if (item.getItemId() <= 0) {
-            writeItemElements();
+            writeItemElements(buffer);
             return;
         }
 
@@ -287,34 +288,34 @@ public abstract class L2GameServerPacket extends WritablePacket<GameClient> impl
         if (item.getItemAttributes().getValue() > 0) {
             if (i.isWeapon()) {
                 Element e = item.getItemAttributes().getElement();
-                writeShort(e.getId()); // attack element (-1 - none)
-                writeShort(item.getItemAttributes().getValue(e) + i.getBaseAttributeValue(e)); // attack element value
-                writeShort(0); // водная стихия (fire pdef)
-                writeShort(0); // огненная стихия (water pdef)
-                writeShort(0); // земляная стихия (wind pdef)
-                writeShort(0); // воздушная стихия (earth pdef)
-                writeShort(0); // темная стихия (holy pdef)
-                writeShort(0); // светлая стихия (dark pdef)
+                buffer.putShort((short) e.getId()); // attack element (-1 - none)
+                buffer.putShort((short) (item.getItemAttributes().getValue(e) + i.getBaseAttributeValue(e))); // attack element value
+                buffer.putShort((short) 0); // водная стихия (fire pdef)
+                buffer.putShort((short) 0); // огненная стихия (water pdef)
+                buffer.putShort((short) 0); // земляная стихия (wind pdef)
+                buffer.putShort((short) 0); // воздушная стихия (earth pdef)
+                buffer.putShort((short) 0); // темная стихия (holy pdef)
+                buffer.putShort((short) 0); // светлая стихия (dark pdef)
             } else if (i.isArmor()) {
-                writeShort(-1); // attack element (-1 - none)
-                writeShort(0); // attack element value
+                buffer.putShort((short) -1); // attack element (-1 - none)
+                buffer.putShort((short) 0); // attack element value
                 for (Element e : Element.VALUES)
-                    writeShort(item.getItemAttributes().getValue(e) + i.getBaseAttributeValue(e));
+                    buffer.putShort((short) (item.getItemAttributes().getValue(e) + i.getBaseAttributeValue(e)));
             } else
-                writeItemElements();
+                writeItemElements(buffer);
         } else
-            writeItemElements();
+            writeItemElements(buffer);
     }
 
-    protected void writeItemElements() {
-        writeShort(-1); // attack element (-1 - none)
-        writeShort(0x00); // attack element value
-        writeShort(0x00); // водная стихия (fire pdef)
-        writeShort(0x00); // огненная стихия (water pdef)
-        writeShort(0x00); // земляная стихия (wind pdef)
-        writeShort(0x00); // воздушная стихия (earth pdef)
-        writeShort(0x00); // темная стихия (holy pdef)
-        writeShort(0x00); // светлая стихия (dark pdef)
+    protected void writeItemElements(ByteBuffer buffer) {
+        buffer.putShort((short) -1); // attack element (-1 - none)
+        buffer.putShort((short) 0x00); // attack element value
+        buffer.putShort((short) 0x00); // водная стихия (fire pdef)
+        buffer.putShort((short) 0x00); // огненная стихия (water pdef)
+        buffer.putShort((short) 0x00); // земляная стихия (wind pdef)
+        buffer.putShort((short) 0x00); // воздушная стихия (earth pdef)
+        buffer.putShort((short) 0x00); // темная стихия (holy pdef)
+        buffer.putShort((short) 0x00); // светлая стихия (dark pdef)
     }
 
     public String getType() {

@@ -2,7 +2,10 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.items.ItemInstance;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.utils.Location;
+
+import java.nio.ByteBuffer;
 
 public class DropItemPacket extends L2GameServerPacket
 {
@@ -29,19 +32,19 @@ public class DropItemPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_playerId);
-		writeInt(item_obj_id);
-		writeInt(item_id);
-		writeInt(_loc.x);
-		writeInt(_loc.y);
-		writeInt(_loc.z + Config.CLIENT_Z_SHIFT);
-		writeByte(_stackable);
-		writeLong(_count);
-		writeByte(1); // unknown
-		writeByte(_enchantLevel);
-		writeByte(0);
-		writeByte(_ensoulCount);
+		buffer.putInt(_playerId);
+		buffer.putInt(item_obj_id);
+		buffer.putInt(item_id);
+		buffer.putInt(_loc.x);
+		buffer.putInt(_loc.y);
+		buffer.putInt(_loc.z + Config.CLIENT_Z_SHIFT);
+		buffer.put((byte)_stackable);
+		buffer.putLong(_count);
+		buffer.put((byte)1); // unknown
+		buffer.put((byte)_enchantLevel);
+		buffer.put((byte)0);
+		buffer.put((byte)_ensoulCount);
 	}
 }

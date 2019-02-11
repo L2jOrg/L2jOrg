@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import io.github.joealisson.mmocore.StaticPacket;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 @StaticPacket
 public class ExIsCharNameCreatable extends L2GameServerPacket
@@ -23,13 +26,13 @@ public class ExIsCharNameCreatable extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_errorCode);
+		buffer.putInt(_errorCode);
 	}
 
 	@Override
-	protected int packetSize() {
+	protected int size(GameClient client) {
 		return 9;
 	}
 }

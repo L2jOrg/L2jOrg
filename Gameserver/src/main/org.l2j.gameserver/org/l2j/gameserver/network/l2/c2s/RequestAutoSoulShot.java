@@ -7,6 +7,8 @@ import org.l2j.gameserver.model.base.SoulShotType;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.network.l2.s2c.ExAutoSoulShot;
 
+import java.nio.ByteBuffer;
+
 public class RequestAutoSoulShot extends L2GameClientPacket
 {
 	private int _itemId;
@@ -14,17 +16,17 @@ public class RequestAutoSoulShot extends L2GameClientPacket
 	private SoulShotType _type;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_itemId = readInt();
-		_action = readInt();
-		_type = SoulShotType.VALUES[readInt()];
+		_itemId = buffer.getInt();
+		_action = buffer.getInt();
+		_type = SoulShotType.VALUES[buffer.getInt()];
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

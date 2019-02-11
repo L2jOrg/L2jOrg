@@ -1,11 +1,13 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 import org.l2j.gameserver.model.quest.QuestNpcLogInfo;
 import org.l2j.gameserver.model.quest.QuestState;
+import org.l2j.gameserver.network.l2.GameClient;
 
 /**
  * @author VISTALL
@@ -91,16 +93,16 @@ public class ExQuestNpcLogList extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_questId);
-		writeByte(_logList.size());
+		buffer.putInt(_questId);
+		buffer.put((byte)_logList.size());
 		for(int i = 0; i < _logList.size(); i++)
 		{
 			int[] values = _logList.get(i);
-			writeInt(values[0]);
-			writeByte(values[1]);
-			writeInt(values[2]);
+			buffer.putInt(values[0]);
+			buffer.put((byte)values[1]);
+			buffer.putInt(values[2]);
 		}
 	}
 }

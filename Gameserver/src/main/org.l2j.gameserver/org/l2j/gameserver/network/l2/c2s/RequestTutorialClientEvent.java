@@ -3,6 +3,8 @@ package org.l2j.gameserver.network.l2.c2s;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.quest.QuestState;
 
+import java.nio.ByteBuffer;
+
 public class RequestTutorialClientEvent extends L2GameClientPacket
 {
 	// format: cd
@@ -10,17 +12,18 @@ public class RequestTutorialClientEvent extends L2GameClientPacket
 
 	/**
 	 * Пакет от клиента, если вы в туториале подергали мышкой как надо - клиент пришлет его со значением 1 ну или нужным ивентом
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_event = readInt();
+		_event = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

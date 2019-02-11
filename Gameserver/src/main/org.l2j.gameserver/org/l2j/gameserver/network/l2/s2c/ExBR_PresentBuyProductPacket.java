@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ExBR_PresentBuyProductPacket extends L2GameServerPacket
 {
 	public static final L2GameServerPacket RESULT_OK = new ExBR_PresentBuyProductPacket(1); // ok
@@ -21,9 +25,9 @@ public class ExBR_PresentBuyProductPacket extends L2GameServerPacket
 		_result = result;
 	}
 
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_result);
-		writeByte(0);
+		buffer.putInt(_result);
+		buffer.put((byte)0);
 	}
 }

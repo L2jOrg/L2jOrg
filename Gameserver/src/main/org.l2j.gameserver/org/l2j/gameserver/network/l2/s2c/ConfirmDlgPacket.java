@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
+
+import java.nio.ByteBuffer;
 
 /**
 * @author VISTALL
@@ -18,11 +21,11 @@ public class ConfirmDlgPacket extends SysMsgContainer<ConfirmDlgPacket>
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeElements();
-		writeInt(_time);
-		writeInt(_requestId);
+		writeElements(buffer);
+		buffer.putInt(_time);
+		buffer.putInt(_requestId);
 	}
 
 	public void setRequestId(int requestId)

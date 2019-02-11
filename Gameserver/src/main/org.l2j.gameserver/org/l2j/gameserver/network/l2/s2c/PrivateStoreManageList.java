@@ -1,14 +1,14 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2j.gameserver.Contants;
 import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.model.items.TradeItem;
-import org.l2j.gameserver.templates.item.ItemTemplate;
+import org.l2j.gameserver.network.l2.GameClient;
 
 public class PrivateStoreManageList extends L2GameServerPacket
 {
@@ -75,28 +75,28 @@ public class PrivateStoreManageList extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
 		//section 1
-		writeInt(_sellerId);
-		writeInt(_package ? 1 : 0);
-		writeLong(_adena);
+		buffer.putInt(_sellerId);
+		buffer.putInt(_package ? 1 : 0);
+		buffer.putLong(_adena);
 
 		//Список имеющихся вещей
-		writeInt(_sellList.size());
+		buffer.putInt(_sellList.size());
 		for(TradeItem si : _sellList)
 		{
-			writeItemInfo(si);
-			writeLong(si.getStorePrice());
+			writeItemInfo(buffer, si);
+			buffer.putLong(si.getStorePrice());
 		}
 
 		//Список вещей уже поставленых на продажу
-		writeInt(_sellList0.size());
+		buffer.putInt(_sellList0.size());
 		for(TradeItem si : _sellList0)
 		{
-			writeItemInfo(si);
-			writeLong(si.getOwnersPrice());
-			writeLong(si.getStorePrice());
+			writeItemInfo(buffer, si);
+			buffer.putLong(si.getOwnersPrice());
+			buffer.putLong(si.getStorePrice());
 		}
 	}
 }

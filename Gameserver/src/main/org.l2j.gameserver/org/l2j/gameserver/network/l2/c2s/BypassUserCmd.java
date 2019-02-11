@@ -5,6 +5,8 @@ import org.l2j.gameserver.handler.usercommands.UserCommandHandler;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.CustomMessage;
 
+import java.nio.ByteBuffer;
+
 /**
  * format:  cd
  * Пример пакета по команде /loc:
@@ -15,15 +17,15 @@ public class BypassUserCmd extends L2GameClientPacket
 	private int _command;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_command = readInt();
+		_command = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

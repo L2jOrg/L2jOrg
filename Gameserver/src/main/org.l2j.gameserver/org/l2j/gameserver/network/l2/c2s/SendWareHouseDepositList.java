@@ -3,7 +3,6 @@ package org.l2j.gameserver.network.l2.c2s;
 import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.math.SafeMath;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.Contants;
 import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.instances.NpcInstance;
@@ -12,8 +11,9 @@ import org.l2j.gameserver.model.items.PcInventory;
 import org.l2j.gameserver.model.items.Warehouse;
 import org.l2j.gameserver.model.items.Warehouse.WarehouseType;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
-import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.utils.Log;
+
+import java.nio.ByteBuffer;
 
 /**
  * Format: cdb, b - array of (dd)
@@ -27,10 +27,10 @@ public class SendWareHouseDepositList extends L2GameClientPacket
 	private long[] _itemQ;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_count = readInt();
-		if(_count * 12 > availableData() || _count > Short.MAX_VALUE || _count < 1)
+		_count = buffer.getInt();
+		if(_count * 12 > buffer.remaining() || _count > Short.MAX_VALUE || _count < 1)
 		{
 			_count = 0;
 			return;
@@ -41,8 +41,8 @@ public class SendWareHouseDepositList extends L2GameClientPacket
 
 		for(int i = 0; i < _count; i++)
 		{
-			_items[i] = readInt();
-			_itemQ[i] = readLong();
+			_items[i] = buffer.getInt();
+			_itemQ[i] = buffer.getLong();
 			if(_itemQ[i] < 1 || ArrayUtils.indexOf(_items, _items[i]) < i)
 			{
 				_count = 0;
@@ -54,7 +54,7 @@ public class SendWareHouseDepositList extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null || _count == 0)
 			return;
 

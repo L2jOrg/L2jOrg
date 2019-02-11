@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -8,7 +9,6 @@ import java.util.Map;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.Contants;
 import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.dao.CharacterDAO;
 import org.l2j.gameserver.database.mysql;
@@ -24,7 +24,6 @@ import org.l2j.gameserver.network.l2.s2c.ExNoticePostArrived;
 import org.l2j.gameserver.network.l2.s2c.ExReplyWritePost;
 import org.l2j.gameserver.network.l2.s2c.ExUnReadMailCount;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
-import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.utils.Functions;
 import org.l2j.gameserver.utils.Log;
 import org.l2j.gameserver.utils.Util;
@@ -46,17 +45,18 @@ public class RequestExSendPost extends L2GameClientPacket
 
 	/**
 	 * format: SdSS dx[dQ] Q
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_recieverName = readS(35); // имя адресата
-		_messageType = readInt(); // тип письма, 0 простое 1 с запросом оплаты
-		_topic = readS(Byte.MAX_VALUE); // topic
-		_body = readS(Short.MAX_VALUE); // body
+		_recieverName = readString(buffer, 35); // имя адресата
+		_messageType = buffer.getInt(); // тип письма, 0 простое 1 с запросом оплаты
+		_topic = readString(buffer, Byte.MAX_VALUE); // topic
+		_body = readString(buffer, Short.MAX_VALUE); // body
 
-		_count = readInt(); // число прикрепленных вещей
-		if(_count * 12 + 4 > availableData() || _count > Short.MAX_VALUE || _count < 1) //TODO [G1ta0] audit
+		_count = buffer.getInt(); // число прикрепленных вещей
+		if(_count * 12 + 4 > buffer.remaining() || _count > Short.MAX_VALUE || _count < 1) //TODO [G1ta0] audit
 		{
 			_count = 0;
 			return;
@@ -67,8 +67,8 @@ public class RequestExSendPost extends L2GameClientPacket
 
 		for(int i = 0; i < _count; i++)
 		{
-			_items[i] = readInt(); // objectId
-			_itemQ[i] = readLong(); // количество
+			_items[i] = buffer.getInt(); // objectId
+			_itemQ[i] = buffer.getLong(); // количество
 			if(_itemQ[i] < 1 || ArrayUtils.indexOf(_items, _items[i]) < i)
 			{
 				_count = 0;
@@ -76,7 +76,7 @@ public class RequestExSendPost extends L2GameClientPacket
 			}
 		}
 
-		_price = readLong(); // цена для писем с запросом оплаты
+		_price = buffer.getLong(); // цена для писем с запросом оплаты
 
 		if(_price < 0)
 		{
@@ -88,7 +88,7 @@ public class RequestExSendPost extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

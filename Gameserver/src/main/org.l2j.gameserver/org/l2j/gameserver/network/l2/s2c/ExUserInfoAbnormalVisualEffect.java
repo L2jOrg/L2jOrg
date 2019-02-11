@@ -1,8 +1,10 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.Set;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.skills.AbnormalEffect;
 
 /**
@@ -22,12 +24,12 @@ public class ExUserInfoAbnormalVisualEffect extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_objectId);
-		writeInt(_transformId);
-		writeInt(_abnormalEffects.size());
+		buffer.putInt(_objectId);
+		buffer.putInt(_transformId);
+		buffer.putInt(_abnormalEffects.size());
 		for(AbnormalEffect abnormal : _abnormalEffects)
-			writeShort(abnormal.getId());
+			buffer.putShort((short) abnormal.getId());
 	}
 }

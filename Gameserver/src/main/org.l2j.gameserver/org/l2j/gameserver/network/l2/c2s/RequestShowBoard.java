@@ -7,20 +7,22 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 
+import java.nio.ByteBuffer;
+
 public class RequestShowBoard extends L2GameClientPacket
 {
 	private int _unknown;
 
 	@Override
-	public void readImpl()
+	public void readImpl(ByteBuffer buffer)
 	{
-		_unknown = readInt();
+		_unknown = buffer.getInt();
 	}
 
 	@Override
 	public void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

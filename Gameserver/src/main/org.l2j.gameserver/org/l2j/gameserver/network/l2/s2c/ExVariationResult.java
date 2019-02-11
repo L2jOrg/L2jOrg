@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ExVariationResult extends L2GameServerPacket
 {
 	private int _stat12;
@@ -14,10 +18,10 @@ public class ExVariationResult extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_stat12);
-		writeInt(_stat34);
-		writeInt(_unk3);
+		buffer.putInt(_stat12);
+		buffer.putInt(_stat34);
+		buffer.putInt(_unk3);
 	}
 }

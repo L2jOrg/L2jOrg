@@ -1,9 +1,11 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.List;
 
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.TradeItem;
+import org.l2j.gameserver.network.l2.GameClient;
 
 public class PrivateStoreList extends L2GameServerPacket
 {
@@ -26,18 +28,18 @@ public class PrivateStoreList extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_sellerId);
-		writeInt(_package ? 1 : 0);
-		writeLong(_adena);
-		writeInt(0x00); //TODO: [Bonux] Количество свободных ячеек в инвентаре.
-		writeInt(_sellList.size());
+		buffer.putInt(_sellerId);
+		buffer.putInt(_package ? 1 : 0);
+		buffer.putLong(_adena);
+		buffer.putInt(0x00); //TODO: [Bonux] Количество свободных ячеек в инвентаре.
+		buffer.putInt(_sellList.size());
 		for(TradeItem si : _sellList)
 		{
-			writeItemInfo(si);
-			writeLong(si.getOwnersPrice());
-			writeLong(si.getStorePrice());
+			writeItemInfo(buffer, si);
+			buffer.putLong(si.getOwnersPrice());
+			buffer.putLong(si.getStorePrice());
 		}
 	}
 }

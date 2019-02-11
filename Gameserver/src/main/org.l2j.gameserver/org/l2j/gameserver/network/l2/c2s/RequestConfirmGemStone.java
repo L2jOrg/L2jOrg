@@ -5,9 +5,10 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ExPutCommissionResultForVariationMake;
-import org.l2j.gameserver.templates.item.ItemGrade;
 import org.l2j.gameserver.templates.item.support.variation.VariationFee;
 import org.l2j.gameserver.utils.VariationUtils;
+
+import java.nio.ByteBuffer;
 
 public class RequestConfirmGemStone extends L2GameClientPacket
 {
@@ -18,12 +19,12 @@ public class RequestConfirmGemStone extends L2GameClientPacket
 	private long _feeItemCount;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_targetItemObjId = readInt();
-		_refinerItemObjId = readInt();
-		_feeItemObjectId = readInt();
-		_feeItemCount = readLong();
+		_targetItemObjId = buffer.getInt();
+		_refinerItemObjId = buffer.getInt();
+		_feeItemObjectId = buffer.getInt();
+		_feeItemCount = buffer.getLong();
 	}
 
 	@Override
@@ -32,7 +33,7 @@ public class RequestConfirmGemStone extends L2GameClientPacket
 		if(_feeItemCount <= 0)
 			return;
 
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

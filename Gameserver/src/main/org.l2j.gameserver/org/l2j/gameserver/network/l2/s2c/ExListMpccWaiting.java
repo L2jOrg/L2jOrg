@@ -1,11 +1,13 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.l2j.gameserver.instancemanager.MatchingRoomManager;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.matching.MatchingRoom;
+import org.l2j.gameserver.network.l2.GameClient;
 
 import static org.l2j.commons.util.Util.STRING_EMPTY;
 
@@ -37,24 +39,24 @@ public class ExListMpccWaiting extends L2GameServerPacket
 	}
 
 	@Override
-	public void writeImpl()
+	public void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_page);
-		writeInt(_list.size());
+		buffer.putInt(_page);
+		buffer.putInt(_list.size());
 		for(MatchingRoom room : _list)
 		{
-			writeInt(room.getId());
+			buffer.putInt(room.getId());
 			Player leader = room.getLeader();
-			writeString(leader == null ? STRING_EMPTY : leader.getName());
-			writeInt(room.getPlayers().size());
-			writeInt(room.getMinLevel());
-			writeInt(room.getMaxLevel());
-			writeInt(1);  //min group
-			writeInt(room.getMaxMembersSize());   //max group
-			writeString(room.getTopic());
+			writeString(leader == null ? STRING_EMPTY : leader.getName(), buffer);
+			buffer.putInt(room.getPlayers().size());
+			buffer.putInt(room.getMinLevel());
+			buffer.putInt(room.getMaxLevel());
+			buffer.putInt(1);  //min group
+			buffer.putInt(room.getMaxMembersSize());   //max group
+			writeString(room.getTopic(), buffer);
 		}
 
-		writeInt(0);
-		writeInt(0);
+		buffer.putInt(0);
+		buffer.putInt(0);
 	}
 }

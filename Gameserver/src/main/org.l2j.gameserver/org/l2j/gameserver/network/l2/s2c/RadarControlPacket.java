@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.utils.Location;
+
+import java.nio.ByteBuffer;
 
 /**
  * Примеры пакетов:
@@ -29,12 +32,12 @@ public class RadarControlPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_showRadar);
-		writeInt(_type); //maybe type
-		writeInt(_x); //x
-		writeInt(_y); //y
-		writeInt(_z); //z
+		buffer.putInt(_showRadar);
+		buffer.putInt(_type); //maybe type
+		buffer.putInt(_x); //x
+		buffer.putInt(_y); //y
+		buffer.putInt(_z); //z
 	}
 }

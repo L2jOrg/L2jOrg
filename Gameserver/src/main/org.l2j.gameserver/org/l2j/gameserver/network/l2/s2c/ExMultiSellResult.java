@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ExMultiSellResult extends L2GameServerPacket
 {
 	public static final L2GameServerPacket SUCCESS = new ExMultiSellResult();
@@ -23,10 +27,10 @@ public class ExMultiSellResult extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeByte(_success);
-		writeInt(_unk1);
-		writeInt(_unk2);
+		buffer.put((byte) (_success ? 0x01 : 0x00));
+		buffer.putInt(_unk1);
+		buffer.putInt(_unk2);
 	}
 }

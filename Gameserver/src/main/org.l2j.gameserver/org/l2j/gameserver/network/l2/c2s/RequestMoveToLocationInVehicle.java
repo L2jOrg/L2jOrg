@@ -5,6 +5,8 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.boat.Boat;
 import org.l2j.gameserver.utils.Location;
 
+import java.nio.ByteBuffer;
+
 public class RequestMoveToLocationInVehicle extends L2GameClientPacket
 {
 	private Location _pos = new Location();
@@ -12,21 +14,21 @@ public class RequestMoveToLocationInVehicle extends L2GameClientPacket
 	private int _boatObjectId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_boatObjectId = readInt();
-		_pos.x = readInt();
-		_pos.y = readInt();
-		_pos.z = readInt();
-		_originPos.x = readInt();
-		_originPos.y = readInt();
-		_originPos.z = readInt();
+		_boatObjectId = buffer.getInt();
+		_pos.x = buffer.getInt();
+		_pos.y = buffer.getInt();
+		_pos.z = buffer.getInt();
+		_originPos.x = buffer.getInt();
+		_originPos.y = buffer.getInt();
+		_originPos.z = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 		

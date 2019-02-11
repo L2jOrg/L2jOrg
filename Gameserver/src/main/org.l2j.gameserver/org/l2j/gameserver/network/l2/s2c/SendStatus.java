@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -7,6 +8,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
 
 public final class SendStatus extends L2GameServerPacket
 {
@@ -56,31 +58,31 @@ public final class SendStatus extends L2GameServerPacket
 	}
 
 	@Override
-	protected final boolean writeOpcodes()
+	protected final boolean writeOpcodes(ByteBuffer buffer)
 	{
-		writeByte(0x00);
+		buffer.put((byte)0x00);
 		return true;
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(0x01); // World ID
-		writeInt(max_online_players); // Max Online
-		writeInt(online_players); // Current Online
-		writeInt(online_players); // Current Online
-		writeInt(online_priv_store); // Priv.Store Chars
+		buffer.putInt(0x01); // World ID
+		buffer.putInt(max_online_players); // Max Online
+		buffer.putInt(online_players); // Current Online
+		buffer.putInt(online_players); // Current Online
+		buffer.putInt(online_priv_store); // Priv.Store Chars
 
 		// SEND TRASH
-		writeInt(0x002C0030);
+		buffer.putInt(0x002C0030);
 		for(int x = 0; x < 10; x++)
-			writeShort(41 + Rnd.get(17));
-		writeInt(43 + Rnd.get(17));
+			buffer.putShort((short) (41 + Rnd.get(17)));
+		buffer.putInt(43 + Rnd.get(17));
 		int z = 36219 + Rnd.get(1987);
-		writeInt(z);
-		writeInt(z);
-		writeInt(37211 + Rnd.get(2397));
-		writeInt(0x00);
-		writeInt(0x02);
+		buffer.putInt(z);
+		buffer.putInt(z);
+		buffer.putInt(37211 + Rnd.get(2397));
+		buffer.putInt(0x00);
+		buffer.putInt(0x02);
 	}
 }

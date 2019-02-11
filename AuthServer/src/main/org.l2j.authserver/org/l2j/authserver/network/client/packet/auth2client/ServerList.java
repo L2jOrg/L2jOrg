@@ -1,12 +1,14 @@
 package org.l2j.authserver.network.client.packet.auth2client;
 
 import org.l2j.authserver.controller.GameServerManager;
+import org.l2j.authserver.network.client.AuthClient;
 import org.l2j.authserver.network.client.packet.L2LoginServerPacket;
 import org.l2j.authserver.network.gameserver.packet.game2auth.ServerStatus;
 import org.l2j.authserver.settings.AuthServerSettings;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.nio.ByteBuffer;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
@@ -38,58 +40,58 @@ public final class ServerList extends L2LoginServerPacket {
     }
 
     @Override
-    public void writeImpl() {
+    public void writeImpl(AuthClient client, ByteBuffer buffer) {
         var servers = GameServerManager.getInstance().getRegisteredGameServers();
-        writeByte(0x04);
-        writeByte(servers.size());
-        writeByte(client.getLastServer());
+        buffer.put((byte)0x04);
+        buffer.put((byte)servers.size());
+        buffer.put((byte)client.getLastServer());
 
         for (var server : servers.values()) {
-            writeByte(server.getId());
+            buffer.put((byte)server.getId());
 
             var host = client.usesInternalIP() ? server.getInternalHost() : server.getExternalHost();
 
             try {
                 var ip = InetAddress.getByName(host);
                 var address = ip.getAddress();
-                writeByte(Byte.toUnsignedInt(address[0]));
-                writeByte(Byte.toUnsignedInt(address[1]));
-                writeByte(Byte.toUnsignedInt(address[2]));
-                writeByte(Byte.toUnsignedInt(address[3]));
+                buffer.put((byte)Byte.toUnsignedInt(address[0]));
+                buffer.put((byte)Byte.toUnsignedInt(address[1]));
+                buffer.put((byte)Byte.toUnsignedInt(address[2]));
+                buffer.put((byte)Byte.toUnsignedInt(address[3]));
             } catch (UnknownHostException e) {
                 e.printStackTrace();
-                writeByte(127);
-                writeByte(0);
-                writeByte(0);
-                writeByte(1);
+                buffer.put((byte)127);
+                buffer.put((byte)0);
+                buffer.put((byte)0);
+                buffer.put((byte)1);
             }
 
-            writeInt(server.getPort());
-            writeByte(server.getAgeLimit()); // minimum age
-            writeByte(server.isPvp());
-            writeShort(server.getOnlinePlayersCount());
-            writeShort(server.getMaxPlayers());
+            buffer.putInt(server.getPort());
+            buffer.put(server.getAgeLimit()); // minimum age
+            buffer.put((byte) (server.isPvp() ? 0x01 : 0x00)) ;
+            buffer.putShort((short) server.getOnlinePlayersCount());
+            buffer.putShort((short) server.getMaxPlayers());
 
             var status = server.getStatus();
             if(ServerStatus.STATUS_GM_ONLY == status && client.getAccessLevel() < getSettings(AuthServerSettings.class).gmMinimumLevel()) {
                 status = ServerStatus.STATUS_DOWN;
             }
 
-            writeByte(ServerStatus.STATUS_DOWN == status ? 0x00 : 0x01);
-            writeInt(server.getServerType());
-            writeByte(server.isShowingBrackets()); // Region
+            buffer.put((byte) (ServerStatus.STATUS_DOWN == status ? 0x00 : 0x01));
+            buffer.putInt(server.getServerType());
+            buffer.put((byte) (server.isShowingBrackets() ? 0x01 : 0x00)); // Region
         }
 
-        writeShort(0xa4);
+        buffer.putShort((short)0xa4);
         for (var server : servers.values()) {
-            writeByte(server.getId());
-            writeByte(client.getPlayersOnServer(server.getId()));
+            buffer.put((byte)server.getId());
+            buffer.put((byte)client.getPlayersOnServer(server.getId()));
         }
     }
 
     @Override
-    protected int packetSize() {
+    protected int size(AuthClient client) {
         var serverSize = GameServerManager.getInstance().getRegisteredGameServers().size();
-        return super.packetSize() + 5 + serverSize * 24;
+        return super.size(client) + 5 + serverSize * 24;
     }
 }

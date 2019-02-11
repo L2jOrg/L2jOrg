@@ -5,22 +5,24 @@ import org.l2j.gameserver.model.Player;
 
 import io.github.joealisson.primitive.pair.IntObjectPair;
 
+import java.nio.ByteBuffer;
+
 public class ConfirmDlg extends L2GameClientPacket
 {
 	private int _answer, _requestId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		readInt();
-		_answer = readInt();
-		_requestId = readInt();
+		buffer.getInt();
+		_answer = buffer.getInt();
+		_requestId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

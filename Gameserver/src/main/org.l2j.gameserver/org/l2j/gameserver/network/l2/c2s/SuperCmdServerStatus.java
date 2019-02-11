@@ -1,5 +1,7 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
+
 /**
  * Format ch
  * c: (id) 0x39
@@ -8,7 +10,7 @@ package org.l2j.gameserver.network.l2.c2s;
 class SuperCmdServerStatus extends L2GameClientPacket
 {
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{}
 
 	@Override

@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,23 +68,23 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		_arguments = new ArrayList<IArgument>(_message.size());
 	}
 
-	protected void writeElements()
+	protected void writeElements(ByteBuffer buffer)
 	{
 		if(_message.size() > _arguments.size())
 			throw new IllegalArgumentException("Wrong count of arguments: " + _message);
 
 		if(this instanceof ConfirmDlgPacket)
 		{
-			writeInt(_message.getId());
-			writeInt(_arguments.size());
+			buffer.putInt(_message.getId());
+			buffer.putInt(_arguments.size());
 		}
 		else
 		{
-			writeShort(_message.getId());
-			writeByte(_arguments.size());
+			buffer.putShort((short) _message.getId());
+			buffer.put((byte)_arguments.size());
 		}
 		for(IArgument argument : _arguments)
-			argument.write(this);
+			argument.write(buffer, this);
 	}
 
 	//==================================================================================================
@@ -232,19 +233,19 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 
 	public static abstract class IArgument
 	{
-		void write(SysMsgContainer<?> m)
+		void write(ByteBuffer buffer, SysMsgContainer<?> m)
 		{
 			if(m instanceof ConfirmDlgPacket)
-				m.writeInt(getType().ordinal());
+				buffer.putInt(getType().ordinal());
 			else
-				m.writeByte(getType().ordinal());
+				buffer.put((byte)getType().ordinal());
 
-			writeData(m);
+			writeData(buffer, m);
 		}
 
 		abstract Types getType();
 
-		abstract void writeData(SysMsgContainer<?> message);
+		abstract void writeData(ByteBuffer buffer, SysMsgContainer<?> message);
 	}
 
 	public static class IntegerArgument extends IArgument
@@ -257,9 +258,9 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 
 		@Override
-		public void writeData(SysMsgContainer<?> message)
+		public void writeData(ByteBuffer buffer, SysMsgContainer<?> message)
 		{
-			message.writeInt(_data);
+			buffer.putInt(_data);
 		}
 
 		@Override
@@ -315,10 +316,10 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 
 		@Override
-		void writeData(SysMsgContainer<?> message)
+		void writeData(ByteBuffer buffer, SysMsgContainer<?> message)
 		{
-			message.writeInt(_itemId);
-			message.writeByte(_augmented);
+			buffer.putInt(_itemId);
+			buffer.put((byte)(_augmented ? 0x01 : 0x00));
 		}
 	}
 
@@ -388,9 +389,9 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 
 		@Override
-		void writeData(SysMsgContainer<?> message)
+		void writeData(ByteBuffer buffer, SysMsgContainer<?> message)
 		{
-			message.writeLong(_data);
+			buffer.putLong(_data);
 		}
 
 		@Override
@@ -410,9 +411,9 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 
 		@Override
-		void writeData(SysMsgContainer<?> message)
+		void writeData(ByteBuffer buffer, SysMsgContainer<?> message)
 		{
-			message.writeByte(_data);
+			buffer.put(_data);
 		}
 
 		@Override
@@ -432,9 +433,9 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 
 		@Override
-		void writeData(SysMsgContainer<?> message)
+		void writeData(ByteBuffer buffer, SysMsgContainer<?> message)
 		{
-			message.writeString(_data);
+			message.writeString(_data, buffer);
 		}
 
 		@Override
@@ -456,10 +457,10 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 
 		@Override
-		void writeData(SysMsgContainer<?> message)
+		void writeData(ByteBuffer buffer, SysMsgContainer<?> message)
 		{
-			message.writeInt(_skillId);
-			message.writeInt(_skillLevel);
+			buffer.putInt(_skillId);
+			buffer.putInt(_skillLevel);
 		}
 
 		@Override
@@ -483,11 +484,11 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 
 		@Override
-		void writeData(SysMsgContainer<?> message)
+		void writeData(ByteBuffer buffer, SysMsgContainer<?> message)
 		{
-			message.writeInt(_x);
-			message.writeInt(_y);
-			message.writeInt(_z);
+			buffer.putInt(_x);
+			buffer.putInt(_y);
+			buffer.putInt(_z);
 		}
 
 		@Override
@@ -521,9 +522,9 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 
 		@Override
-		void writeData(SysMsgContainer<?> message)
+		void writeData(ByteBuffer buffer, SysMsgContainer<?> message)
 		{
-			message.writeString(_player.getVisibleName(message.getClient().getActiveChar()));
+			message.writeString(_player.getName(), buffer);
 		}
 
 		@Override
@@ -561,11 +562,11 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 
 		@Override
-		void writeData(SysMsgContainer<?> message)
+		void writeData(ByteBuffer buffer, SysMsgContainer<?> message)
 		{
-			message.writeInt(_targetId);
-			message.writeInt(_attackerId);
-			message.writeInt(_hp);
+			buffer.putInt(_targetId);
+			buffer.putInt(_attackerId);
+			buffer.putInt(_hp);
 		}
 
 		@Override

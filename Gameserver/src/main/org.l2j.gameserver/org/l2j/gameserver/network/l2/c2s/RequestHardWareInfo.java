@@ -1,5 +1,7 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
+
 public class RequestHardWareInfo extends L2GameClientPacket
 {
 	private String _mac;
@@ -24,28 +26,28 @@ public class RequestHardWareInfo extends L2GameClientPacket
 	private int _vgaVersion;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_mac = readString();
-		_windowsPlatformId = readInt();
-		_windowsMajorVersion = readInt();
-		_windowsMinorVersion = readInt();
-		_windowsBuildNumber = readInt();
-		_DXVersion = readInt();
-		_DXRevision = readInt();
-		_cpu = readString();
-		_cpuSpeed = readInt();
-		_cpuCoreCount = readInt();
-		_unk8 = readInt();
-		_unk9 = readInt();
-		_PhysMemory1 = readInt();
-		_PhysMemory2 = readInt();
-		_unk12 = readInt();
-		_videoMemory = readInt();
-		_unk14 = readInt();
-		_vgaVersion = readInt();
-		_vgaName = readString();
-		_driverVersion = readString();
+		_mac = readString(buffer);
+		_windowsPlatformId = buffer.getInt();
+		_windowsMajorVersion = buffer.getInt();
+		_windowsMinorVersion = buffer.getInt();
+		_windowsBuildNumber = buffer.getInt();
+		_DXVersion = buffer.getInt();
+		_DXRevision = buffer.getInt();
+		_cpu = readString(buffer);
+		_cpuSpeed = buffer.getInt();
+		_cpuCoreCount = buffer.getInt();
+		_unk8 = buffer.getInt();
+		_unk9 = buffer.getInt();
+		_PhysMemory1 = buffer.getInt();
+		_PhysMemory2 = buffer.getInt();
+		_unk12 = buffer.getInt();
+		_videoMemory = buffer.getInt();
+		_unk14 = buffer.getInt();
+		_vgaVersion = buffer.getInt();
+		_vgaName = readString(buffer);
+		_driverVersion = readString(buffer);
 	}
 
 	@Override

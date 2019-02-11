@@ -4,21 +4,23 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.actor.instances.player.ShortCut;
 import org.l2j.gameserver.network.l2.s2c.ShortCutRegisterPacket;
 
+import java.nio.ByteBuffer;
+
 public class RequestShortCutReg extends L2GameClientPacket
 {
 	private int _type, _id, _slot, _page, _lvl, _characterType;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_type = readInt();
-		int slot = readInt();
-		_id = readInt();
-		_lvl = readInt();
-		_characterType = readInt();
+		_type = buffer.getInt();
+		int slot = buffer.getInt();
+		_id = buffer.getInt();
+		_lvl = buffer.getInt();
+		_characterType = buffer.getInt();
 
-		readInt();
-		readInt();
+		buffer.getInt();
+		buffer.getInt();
 
 		_slot = slot % 12;
 		_page = slot / 12;
@@ -27,7 +29,7 @@ public class RequestShortCutReg extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

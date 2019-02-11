@@ -5,6 +5,8 @@ import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.pledge.UnitMember;
 import org.l2j.gameserver.network.l2.components.CustomMessage;
 
+import java.nio.ByteBuffer;
+
 public class RequestPledgeSetMemberPowerGrade extends L2GameClientPacket
 {
 	// format: (ch)Sd
@@ -12,16 +14,16 @@ public class RequestPledgeSetMemberPowerGrade extends L2GameClientPacket
 	private String _name;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_name = readS(16);
-		_powerGrade = readInt();
+		_name = readString(buffer, 16);
+		_powerGrade = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

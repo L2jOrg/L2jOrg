@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ExPledgeBonusUpdate extends L2GameServerPacket
 {
 	private final BonusType _type;
@@ -18,9 +22,9 @@ public class ExPledgeBonusUpdate extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeByte(_type.ordinal());
-		writeInt(_value);
+		buffer.put((byte)_type.ordinal());
+		buffer.putInt(_value);
 	}
 }

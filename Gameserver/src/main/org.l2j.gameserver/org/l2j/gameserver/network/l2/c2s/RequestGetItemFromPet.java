@@ -9,6 +9,8 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.nio.ByteBuffer;
+
 public class RequestGetItemFromPet extends L2GameClientPacket
 {
 	private static final Logger _log = LoggerFactory.getLogger(RequestGetItemFromPet.class);
@@ -19,17 +21,17 @@ public class RequestGetItemFromPet extends L2GameClientPacket
 	private int _unknown;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_objectId = readInt();
-		_amount = readLong();
-		_unknown = readInt(); // = 0 for most trades
+		_objectId = buffer.getInt();
+		_amount = buffer.getLong();
+		_unknown = buffer.getInt(); // = 0 for most trades
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null || _amount < 1)
 			return;
 

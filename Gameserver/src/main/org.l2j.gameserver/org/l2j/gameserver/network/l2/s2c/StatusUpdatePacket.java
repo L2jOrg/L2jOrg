@@ -1,7 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Creature;
+import org.l2j.gameserver.network.l2.GameClient;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -94,17 +96,17 @@ public class StatusUpdatePacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_objectId);
-		writeInt(_visible ? _casterId : 0x00);
-		writeByte(_visible ? 0x01 : 0x00); // при 1 идет рег хп
-		writeByte(_attributes.size());
+		buffer.putInt(_objectId);
+		buffer.putInt(_visible ? _casterId : 0x00);
+		buffer.put((byte) (_visible ? 0x01 : 0x00)); // при 1 идет рег хп
+		buffer.put((byte)_attributes.size());
 
 		for(Attribute temp : _attributes)
 		{
-			writeByte(temp.id);
-			writeInt(temp.value);
+			buffer.put((byte)temp.id);
+			buffer.putInt(temp.value);
 		}
 	}
 

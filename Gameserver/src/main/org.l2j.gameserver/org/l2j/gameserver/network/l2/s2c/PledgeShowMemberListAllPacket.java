@@ -1,15 +1,16 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.model.entity.residence.ClanHall;
 import org.l2j.gameserver.model.pledge.Alliance;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.pledge.SubUnit;
 import org.l2j.gameserver.model.pledge.UnitMember;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.settings.ServerSettings;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -66,55 +67,55 @@ public class PledgeShowMemberListAllPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_pledgeType == Clan.SUBUNIT_MAIN_CLAN ? 0 : 1);
-		writeInt(_clanObjectId);
-		writeInt(getSettings(ServerSettings.class).serverId());
-		writeInt(_pledgeType);
-		writeString(_unitName);
-		writeString(_leaderName);
+		buffer.putInt(_pledgeType == Clan.SUBUNIT_MAIN_CLAN ? 0 : 1);
+		buffer.putInt(_clanObjectId);
+		buffer.putInt(getSettings(ServerSettings.class).serverId());
+		buffer.putInt(_pledgeType);
+		writeString(_unitName, buffer);
+		writeString(_leaderName, buffer);
 
-		writeInt(_clanCrestId); // crest id .. is used again
-		writeInt(_level);
-		writeInt(_hasCastle);
+		buffer.putInt(_clanCrestId); // crest id .. is used again
+		buffer.putInt(_level);
+		buffer.putInt(_hasCastle);
 		if(_hasInstantClanHall > 0)
 		{
-			writeInt(0x01);
-			writeInt(_hasInstantClanHall);
+			buffer.putInt(0x01);
+			buffer.putInt(_hasInstantClanHall);
 		}
 		else if(_hasClanHall != 0)
 		{
-			writeInt(0x00);
-			writeInt(_hasClanHall);
+			buffer.putInt(0x00);
+			buffer.putInt(_hasClanHall);
 		}
 		else
 		{
-			writeInt(0x00);
-			writeInt(0x00);
+			buffer.putInt(0x00);
+			buffer.putInt(0x00);
 		}
-		writeInt(0);
-		writeInt(_rank);
-		writeInt(_reputation);
-		writeInt(_isDisbanded ? 3 : 0);
-		writeInt(0x00);
-		writeInt(_allianceObjectId);
-		writeString(_allianceName);
-		writeInt(_allianceCrestId);
-		writeInt(_atClanWar);
-		writeInt(0x00);//territory Id
+		buffer.putInt(0);
+		buffer.putInt(_rank);
+		buffer.putInt(_reputation);
+		buffer.putInt(_isDisbanded ? 3 : 0);
+		buffer.putInt(0x00);
+		buffer.putInt(_allianceObjectId);
+		writeString(_allianceName, buffer);
+		buffer.putInt(_allianceCrestId);
+		buffer.putInt(_atClanWar ? 0x01 : 0x00);
+		buffer.putInt(0x00);//territory Id
 
-		writeInt(_members.size());
+		buffer.putInt(_members.size());
 		for(PledgePacketMember m : _members)
 		{
-			writeString(m._name);
-			writeInt(m._level);
-			writeInt(m._classId);
-			writeInt(m._sex);
-			writeInt(m._race);
-			writeInt(m._online);
-			writeInt(m._hasSponsor ? 1 : 0);
-			writeByte(m._attendance);
+			writeString(m._name, buffer);
+			buffer.putInt(m._level);
+			buffer.putInt(m._classId);
+			buffer.putInt(m._sex);
+			buffer.putInt(m._race);
+			buffer.putInt(m._online);
+			buffer.putInt(m._hasSponsor ? 1 : 0);
+			buffer.put((byte)m._attendance);
 		}
 	}
 

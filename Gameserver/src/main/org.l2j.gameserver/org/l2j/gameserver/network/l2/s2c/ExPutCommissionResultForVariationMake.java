@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ExPutCommissionResultForVariationMake extends L2GameServerPacket
 {
 	private int _gemstoneObjId, _unk1, _unk3;
@@ -15,12 +19,12 @@ public class ExPutCommissionResultForVariationMake extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_gemstoneObjId);
-		writeInt(_unk1);
-		writeLong(_gemstoneCount);
-		writeLong(_unk2);
-		writeInt(_unk3);
+		buffer.putInt(_gemstoneObjId);
+		buffer.putInt(_unk1);
+		buffer.putLong(_gemstoneCount);
+		buffer.putLong(_unk2);
+		buffer.putInt(_unk3);
 	}
 }

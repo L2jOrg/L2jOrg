@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 /**
  * Format: ch S
  */
@@ -15,9 +19,9 @@ public class ExAskJoinPartyRoom extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeString(_charName);
-		writeString(_roomName);
+		writeString(_charName, buffer);
+		writeString(_roomName, buffer);
 	}
 }

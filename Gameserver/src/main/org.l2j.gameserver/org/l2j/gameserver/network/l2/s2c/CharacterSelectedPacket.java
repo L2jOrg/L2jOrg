@@ -2,7 +2,10 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.GameTimeController;
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.utils.Location;
+
+import java.nio.ByteBuffer;
 
 public class CharacterSelectedPacket extends L2GameServerPacket
 {
@@ -36,40 +39,40 @@ public class CharacterSelectedPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeString(_name);
-		writeInt(char_id);
-		writeString(_title);
-		writeInt(_sessionId);
-		writeInt(clan_id);
-		writeInt(0x00); //??
-		writeInt(sex);
-		writeInt(race);
-		writeInt(class_id);
-		writeInt(0x01); // active ??
-		writeInt(_loc.x);
-		writeInt(_loc.y);
-		writeInt(_loc.z);
+		writeString(_name, buffer);
+		buffer.putInt(char_id);
+		writeString(_title, buffer);
+		buffer.putInt(_sessionId);
+		buffer.putInt(clan_id);
+		buffer.putInt(0x00); //??
+		buffer.putInt(sex);
+		buffer.putInt(race);
+		buffer.putInt(class_id);
+		buffer.putInt(0x01); // active ??
+		buffer.putInt(_loc.x);
+		buffer.putInt(_loc.y);
+		buffer.putInt(_loc.z);
 
-		writeDouble(curHp);
-		writeDouble(curMp);
-		writeLong(_sp);
-		writeLong(_exp);
-		writeInt(level);
-		writeInt(karma); //?
-		writeInt(_pk);
+		buffer.putDouble(curHp);
+		buffer.putDouble(curMp);
+		buffer.putLong(_sp);
+		buffer.putLong(_exp);
+		buffer.putInt(level);
+		buffer.putInt(karma); //?
+		buffer.putInt(_pk);
 		// extra info
-		writeInt(GameTimeController.getInstance().getGameTime()); // in-game time
-		writeInt(0x00); //
-		writeInt(0x00); // Default classId
+		buffer.putInt(GameTimeController.getInstance().getGameTime()); // in-game time
+		buffer.putInt(0x00); //
+		buffer.putInt(0x00); // Default classId
 
-		writeInt(0);
-		writeInt(0);
-		writeInt(0);
-		writeInt(0);
+		buffer.putInt(0);
+		buffer.putInt(0);
+		buffer.putInt(0);
+		buffer.putInt(0);
 
-		writeBytes(new byte[64]);
-		writeInt(0);
+		buffer.put(new byte[64]);
+		buffer.putInt(0);
 	}
 }

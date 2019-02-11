@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.skills.TimeStamp;
+
+import java.nio.ByteBuffer;
 
 public class ExUseSharedGroupItem extends L2GameServerPacket
 {
@@ -15,11 +18,11 @@ public class ExUseSharedGroupItem extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_itemId);
-		writeInt(_grpId);
-		writeInt(_remainedTime);
-		writeInt(_totalTime);
+		buffer.putInt(_itemId);
+		buffer.putInt(_grpId);
+		buffer.putInt(_remainedTime);
+		buffer.putInt(_totalTime);
 	}
 }

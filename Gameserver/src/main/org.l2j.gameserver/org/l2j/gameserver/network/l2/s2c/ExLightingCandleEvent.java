@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import io.github.joealisson.mmocore.StaticPacket;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  *
@@ -20,13 +23,13 @@ public class ExLightingCandleEvent extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeShort(_value);	// Available
+		buffer.putShort((short) _value);	// Available
 	}
 
 	@Override
-	protected int packetSize() {
+	protected int size(GameClient client) {
 		return 7;
 	}
 }

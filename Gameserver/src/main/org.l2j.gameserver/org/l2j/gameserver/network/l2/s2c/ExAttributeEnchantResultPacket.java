@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.base.Element;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author Bonux
@@ -25,15 +28,15 @@ public class ExAttributeEnchantResultPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeShort(0x00); // TODO
-		writeShort(0x00); // TODO
-		writeByte(_isWeapon ? 0x01 : 0x00); // Armor - 0x00 / Weapon - 0x01
-		writeShort(_element.getId()); // Element
-		writeShort(_oldValue);
-		writeShort(_newValue);
-		writeShort(_usedStones);
-		writeShort(_failedStones);
+		buffer.putShort((short) 0x00); // TODO
+		buffer.putShort((short) 0x00); // TODO
+		buffer.put((byte) (_isWeapon ? 0x01 : 0x00)); // Armor - 0x00 / Weapon - 0x01
+		buffer.putShort((short) _element.getId()); // Element
+		buffer.putShort((short) _oldValue);
+		buffer.putShort((short) _newValue);
+		buffer.putShort((short) _usedStones);
+		buffer.putShort((short) _failedStones);
 	}
 }

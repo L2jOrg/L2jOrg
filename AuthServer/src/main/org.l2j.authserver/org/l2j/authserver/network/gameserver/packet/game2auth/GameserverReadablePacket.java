@@ -5,14 +5,16 @@ import io.github.joealisson.mmocore.ReadablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.nio.ByteBuffer;
+
 public abstract class GameserverReadablePacket extends ReadablePacket<ServerClient> {
 
     private static final Logger logger = LoggerFactory.getLogger(GameserverReadablePacket.class);
 
     @Override
-    protected boolean read() {
+    protected boolean read(ByteBuffer buffer) {
         try {
-            readImpl();
+            readImpl(buffer);
         } catch (Exception e) {
             logger.error("Reading {} : {} ", getClass().getSimpleName(), e);
             return false;
@@ -29,6 +31,6 @@ public abstract class GameserverReadablePacket extends ReadablePacket<ServerClie
         }
     }
 
-    protected abstract void readImpl() throws  Exception;
+    protected abstract void readImpl(ByteBuffer buffer) throws  Exception;
     protected abstract void runImpl() throws Exception;
 }

@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.settings.ServerSettings;
+
+import java.nio.ByteBuffer;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
@@ -19,14 +22,14 @@ public class ExPledgeEmblem extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(getSettings(ServerSettings.class).serverId());
-		writeInt(_clanId);
-		writeInt(_crestId);
-		writeInt(_crestPart);
-		writeInt(_totalSize);
-		writeInt(_data.length);
-		writeBytes(_data);
+		buffer.putInt(getSettings(ServerSettings.class).serverId());
+		buffer.putInt(_clanId);
+		buffer.putInt(_crestId);
+		buffer.putInt(_crestPart);
+		buffer.putInt(_totalSize);
+		buffer.putInt(_data.length);
+		buffer.put(_data);
 	}
 }

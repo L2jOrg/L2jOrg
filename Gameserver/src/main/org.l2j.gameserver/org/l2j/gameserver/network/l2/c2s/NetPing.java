@@ -1,5 +1,7 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
+
 /**
  * format: ddd
  */
@@ -15,10 +17,10 @@ public class NetPing extends L2GameClientPacket
 	}
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		unk = readInt();
-		unk2 = readInt();
-		unk3 = readInt();
+		unk = buffer.getInt();
+		unk2 = buffer.getInt();
+		unk3 = buffer.getInt();
 	}
 }

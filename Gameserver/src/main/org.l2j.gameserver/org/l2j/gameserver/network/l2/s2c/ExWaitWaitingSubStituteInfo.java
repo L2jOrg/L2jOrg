@@ -1,5 +1,11 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import io.github.joealisson.mmocore.StaticPacket;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
+@StaticPacket
 public class ExWaitWaitingSubStituteInfo extends L2GameServerPacket
 {
 	public static final L2GameServerPacket OPEN = new ExWaitWaitingSubStituteInfo(true);
@@ -12,8 +18,8 @@ public class ExWaitWaitingSubStituteInfo extends L2GameServerPacket
 		_open = open;
 	}
 
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_open);
+		buffer.putInt(_open ? 0x01 : 0x00);
 	}
 }

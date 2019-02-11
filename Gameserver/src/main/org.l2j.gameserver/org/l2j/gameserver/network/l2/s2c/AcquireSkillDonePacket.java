@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import io.github.joealisson.mmocore.StaticPacket;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * Reworked: VISTALL
@@ -12,10 +15,10 @@ public class AcquireSkillDonePacket extends L2GameServerPacket {
 	private AcquireSkillDonePacket() { }
 
 	@Override
-	protected void writeImpl() {  }
+	protected void writeImpl(GameClient client, ByteBuffer buffer) {  }
 
 	@Override
-	protected int packetSize() {
+	protected int size(GameClient client) {
 		return 5;
 	}
 }

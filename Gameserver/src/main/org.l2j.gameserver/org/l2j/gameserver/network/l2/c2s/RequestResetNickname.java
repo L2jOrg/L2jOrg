@@ -2,6 +2,8 @@ package org.l2j.gameserver.network.l2.c2s;
 
 import org.l2j.gameserver.model.Player;
 
+import java.nio.ByteBuffer;
+
 /**
  * 
  * @author n0nam3
@@ -11,7 +13,7 @@ import org.l2j.gameserver.model.Player;
 public class RequestResetNickname extends L2GameClientPacket
 {
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
 		// nothing (trigger)
 	}
@@ -19,7 +21,7 @@ public class RequestResetNickname extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final Player activeChar = getClient().getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

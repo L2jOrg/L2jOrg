@@ -12,16 +12,18 @@ import org.l2j.gameserver.templates.fish.LureTemplate;
 import org.l2j.gameserver.templates.fish.RodTemplate;
 import org.l2j.gameserver.templates.item.WeaponTemplate;
 
+import java.nio.ByteBuffer;
+
 public class RequestExAutoFish extends L2GameClientPacket
 {
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

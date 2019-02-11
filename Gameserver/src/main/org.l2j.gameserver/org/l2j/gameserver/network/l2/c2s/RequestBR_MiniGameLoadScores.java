@@ -4,6 +4,8 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.s2c.ExBR_MiniGameLoadScores;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author VISTALL
  * @date  19:57:41/25.05.2010
@@ -11,7 +13,7 @@ import org.l2j.gameserver.network.l2.s2c.ExBR_MiniGameLoadScores;
 public class RequestBR_MiniGameLoadScores extends L2GameClientPacket
 {
 	@Override
-	protected void readImpl() throws Exception
+	protected void readImpl(ByteBuffer buffer) throws Exception
 	{
 		//
 	}
@@ -19,7 +21,7 @@ public class RequestBR_MiniGameLoadScores extends L2GameClientPacket
 	@Override
 	protected void runImpl() throws Exception
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null || !Config.EX_JAPAN_MINIGAME)
 			return;
 

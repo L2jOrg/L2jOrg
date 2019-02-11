@@ -7,22 +7,24 @@ import org.l2j.gameserver.model.items.PcInventory;
 import org.l2j.gameserver.model.items.PetInventory;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 
+import java.nio.ByteBuffer;
+
 public class RequestGiveItemToPet extends L2GameClientPacket
 {
 	private int _objectId;
 	private long _amount;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_objectId = readInt();
-		_amount = readLong();
+		_objectId = buffer.getInt();
+		_amount = buffer.getLong();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null || _amount < 1)
 			return;
 

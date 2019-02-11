@@ -5,6 +5,8 @@ import org.l2j.gameserver.network.l2.s2c.ExIsCharNameCreatable;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.utils.Util;
 
+import java.nio.ByteBuffer;
+
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class RequestCharacterNameCreatable extends L2GameClientPacket
@@ -12,15 +14,15 @@ public class RequestCharacterNameCreatable extends L2GameClientPacket
     private String _charname;
 
     @Override
-    protected void readImpl()
+    protected void readImpl(ByteBuffer buffer)
     {
-        _charname = readString();
+        _charname = readString(buffer);
     }
 
     @Override
     protected void runImpl()
     {
-        if(CharacterDAO.getInstance().accountCharNumber(getClient().getLogin()) >= 8)
+        if(CharacterDAO.getInstance().accountCharNumber(client.getLogin()) >= 8)
         {
             sendPacket(ExIsCharNameCreatable.TOO_MANY_CHARACTERS);
             return;

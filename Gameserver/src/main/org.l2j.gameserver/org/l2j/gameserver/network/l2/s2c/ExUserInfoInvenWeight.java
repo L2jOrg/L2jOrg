@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * @reworked by Bonux
@@ -19,10 +22,10 @@ public class ExUserInfoInvenWeight extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_objectId);
-		writeInt(_currentLoad);
-		writeInt(_maxLoad);
+		buffer.putInt(_objectId);
+		buffer.putInt(_currentLoad);
+		buffer.putInt(_maxLoad);
 	}
 }

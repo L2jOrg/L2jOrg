@@ -5,6 +5,8 @@ import org.l2j.gameserver.model.actor.instances.player.ShortCut;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.skills.TimeStamp;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author VISTALL
  * @date 7:48/29.03.2011
@@ -70,16 +72,16 @@ public abstract class ShortCutPacket extends L2GameServerPacket
 		}
 
 		@Override
-		protected void write0(ShortCutPacket p)
+		protected void write0(ByteBuffer buffer, ShortCutPacket p)
 		{
-			p.writeInt(_id);
-			p.writeInt(_characterType);
-			p.writeInt(_reuseGroup);
-			p.writeInt(_currentReuse);
-			p.writeInt(_basicReuse);
-			p.writeInt(_variation1Id);
-			p.writeInt(_variation2Id);
-			p.writeInt(0x00); //TODO: [Bonux] ??HARMONY??
+			buffer.putInt(_id);
+			buffer.putInt(_characterType);
+			buffer.putInt(_reuseGroup);
+			buffer.putInt(_currentReuse);
+			buffer.putInt(_basicReuse);
+			buffer.putInt(_variation1Id);
+			buffer.putInt(_variation2Id);
+			buffer.putInt(0x00); //TODO: [Bonux] ??HARMONY??
 		}
 	}
 
@@ -99,13 +101,13 @@ public abstract class ShortCutPacket extends L2GameServerPacket
 		}
 
 		@Override
-		protected void write0(ShortCutPacket p)
+		protected void write0(ByteBuffer buffer, ShortCutPacket p)
 		{
-			p.writeInt(_id);
-			p.writeInt(_level);
-			p.writeInt(_id); //TODO [VISTALL] skill reuse group
-			p.writeByte(0x00);
-			p.writeInt(_characterType);
+			buffer.putInt(_id);
+			buffer.putInt(_level);
+			buffer.putInt(_id); //TODO [VISTALL] skill reuse group
+			buffer.put((byte)0x00);
+			buffer.putInt(_characterType);
 		}
 	}
 
@@ -124,17 +126,17 @@ public abstract class ShortCutPacket extends L2GameServerPacket
 			_characterType = characterType;
 		}
 
-		protected void write(ShortCutPacket p)
+		protected void write(ByteBuffer buffer, ShortCutPacket p)
 		{
-			p.writeInt(_type);
-			p.writeInt(_page);
-			write0(p);
+			buffer.putInt(_type);
+			buffer.putInt(_page);
+			write0(buffer, p);
 		}
 
-		protected void write0(ShortCutPacket p)
+		protected void write0(ByteBuffer buffer, ShortCutPacket p)
 		{
-			p.writeInt(_id);
-			p.writeInt(_characterType);
+			buffer.putInt(_id);
+			buffer.putInt(_characterType);
 		}
 	}
 }

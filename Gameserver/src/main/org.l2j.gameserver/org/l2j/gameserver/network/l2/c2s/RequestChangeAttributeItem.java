@@ -10,6 +10,8 @@ import org.l2j.gameserver.network.l2.s2c.ExChangeAttributeOk;
 import org.l2j.gameserver.network.l2.s2c.InventoryUpdatePacket;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author Bonux
  */
@@ -20,17 +22,17 @@ public class RequestChangeAttributeItem extends L2GameClientPacket
 	public int _newElementId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_consumeItemId = readInt(); //Change Attribute Crystall ID
-		_itemObjId = readInt(); //Item for Change ObjId
-		_newElementId = readInt(); //Element
+		_consumeItemId = buffer.getInt(); //Change Attribute Crystall ID
+		_itemObjId = buffer.getInt(); //Item for Change ObjId
+		_newElementId = buffer.getInt(); //Element
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

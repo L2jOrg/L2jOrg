@@ -22,6 +22,8 @@ import org.l2j.gameserver.utils.Log;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.nio.ByteBuffer;
+
 public class RequestEnchantItem extends L2GameClientPacket
 {
 	private static final int ENCHANT_DELAY = 1500;
@@ -34,16 +36,16 @@ public class RequestEnchantItem extends L2GameClientPacket
 	private int _objectId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_objectId = readInt();
-		readInt();
+		_objectId = buffer.getInt();
+		buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		final Player player = getClient().getActiveChar();
+		final Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

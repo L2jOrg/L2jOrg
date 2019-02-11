@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.items.ItemInfo;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class TradeUpdatePacket extends L2GameServerPacket
 {
@@ -14,10 +17,10 @@ public class TradeUpdatePacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeShort(1);
-		writeShort(_amount > 0 && _item.getItem().isStackable() ? 3 : 2);
-		writeItemInfo(_item, _amount);
+		buffer.putShort((short) 1);
+		buffer.putShort((short) (_amount > 0 && _item.getItem().isStackable() ? 3 : 2));
+		writeItemInfo(buffer, _item, _amount);
 	}
 }

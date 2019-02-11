@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,7 +14,7 @@ import org.l2j.gameserver.network.l2.s2c.ExMpccPartymasterList;
 public class RequestExMpccPartymasterList extends L2GameClientPacket
 {
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
 		//
 	}
@@ -21,7 +22,7 @@ public class RequestExMpccPartymasterList extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class ExOlympiadUserInfoPacket extends L2GameServerPacket
 {
@@ -22,15 +25,15 @@ public class ExOlympiadUserInfoPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeByte(_side);
-		writeInt(obj_id);
-		writeString(_name);
-		writeInt(class_id);
-		writeInt(curHp);
-		writeInt(maxHp);
-		writeInt(curCp);
-		writeInt(maxCp);
+		buffer.put((byte)_side);
+		buffer.putInt(obj_id);
+		writeString(_name, buffer);
+		buffer.putInt(class_id);
+		buffer.putInt(curHp);
+		buffer.putInt(maxHp);
+		buffer.putInt(curCp);
+		buffer.putInt(maxCp);
 	}
 }

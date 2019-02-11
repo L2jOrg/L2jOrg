@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Creature;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * Format (ch)dddcccd
@@ -30,16 +33,16 @@ public class ExFishingHpRegenPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(char_obj_id);
-		writeInt(_time);
-		writeInt(_fishHP);
-		writeByte(_HPmode); // 0 = HP stop, 1 = HP raise
-		writeByte(_GoodUse); // 0 = none, 1 = success, 2 = failed
-		writeByte(_Anim); // Anim: 0 = none, 1 = reeling, 2 = pumping
-		writeInt(_Penalty); // Penalty
-		writeByte(_hpBarColor); // 0 = normal hp bar, 1 = purple hp bar
+		buffer.putInt(char_obj_id);
+		buffer.putInt(_time);
+		buffer.putInt(_fishHP);
+		buffer.put((byte)_HPmode); // 0 = HP stop, 1 = HP raise
+		buffer.put((byte)_GoodUse); // 0 = none, 1 = success, 2 = failed
+		buffer.put((byte)_Anim); // Anim: 0 = none, 1 = reeling, 2 = pumping
+		buffer.putInt(_Penalty); // Penalty
+		buffer.put((byte)_hpBarColor); // 0 = normal hp bar, 1 = purple hp bar
 
 	}
 }

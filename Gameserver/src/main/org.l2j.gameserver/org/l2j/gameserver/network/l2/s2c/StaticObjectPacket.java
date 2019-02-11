@@ -3,6 +3,9 @@ package org.l2j.gameserver.network.l2.s2c;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.instances.DoorInstance;
 import org.l2j.gameserver.model.instances.StaticObjectInstance;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class StaticObjectPacket extends L2GameServerPacket
 {
@@ -49,18 +52,18 @@ public class StaticObjectPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_staticObjectId);
-		writeInt(_objectId);
-		writeInt(_type);
-		writeInt(_isTargetable);
-		writeInt(_meshIndex);
-		writeInt(_isClosed);
-		writeInt(_isEnemy);
-		writeInt(_currentHp);
-		writeInt(_maxHp);
-		writeInt(_showHp);
-		writeInt(_damageGrade);
+		buffer.putInt(_staticObjectId);
+		buffer.putInt(_objectId);
+		buffer.putInt(_type);
+		buffer.putInt(_isTargetable);
+		buffer.putInt(_meshIndex);
+		buffer.putInt(_isClosed);
+		buffer.putInt(_isEnemy);
+		buffer.putInt(_currentHp);
+		buffer.putInt(_maxHp);
+		buffer.putInt(_showHp);
+		buffer.putInt(_damageGrade);
 	}
 }

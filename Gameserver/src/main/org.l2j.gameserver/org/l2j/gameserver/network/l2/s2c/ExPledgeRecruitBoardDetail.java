@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.clansearch.ClanSearchClan;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author GodWorld
@@ -15,13 +18,13 @@ public class ExPledgeRecruitBoardDetail extends L2GameServerPacket
 		_clan = clan;
 	}
 
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_clan.getClanId());
-		writeInt(_clan.getSearchType().ordinal());
-		writeString("");
-		writeString(_clan.getDesc());
-		writeInt(_clan.getApplication());
-		writeInt(_clan.getSubUnit());
+		buffer.putInt(_clan.getClanId());
+		buffer.putInt(_clan.getSearchType().ordinal());
+		writeString("", buffer);
+		writeString(_clan.getDesc(), buffer);
+		buffer.putInt(_clan.getApplication());
+		buffer.putInt(_clan.getSubUnit());
 	}
 }

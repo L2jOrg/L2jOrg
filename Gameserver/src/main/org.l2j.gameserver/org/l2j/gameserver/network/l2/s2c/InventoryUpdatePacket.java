@@ -1,11 +1,13 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInfo;
 import org.l2j.gameserver.model.items.ItemInstance;
+import org.l2j.gameserver.network.l2.GameClient;
 
 public class InventoryUpdatePacket extends L2GameServerPacket
 {
@@ -42,13 +44,13 @@ public class InventoryUpdatePacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeShort(_items.size());
+		buffer.putShort((short) _items.size());
 		for(ItemInfo temp : _items)
 		{
-			writeShort(temp.getLastChange());
-			writeItemInfo(temp);
+			buffer.putShort((short) temp.getLastChange());
+			writeItemInfo(buffer, temp);
 		}
 	}
 }

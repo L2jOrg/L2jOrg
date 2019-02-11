@@ -8,6 +8,8 @@ import org.l2j.gameserver.network.l2.s2c.ExEnchantTwoFail;
 import org.l2j.gameserver.network.l2.s2c.ExEnchantTwoOK;
 import org.l2j.gameserver.templates.item.support.SynthesisData;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author Bonux
 **/
@@ -16,15 +18,15 @@ public class RequestNewEnchantPushTwo extends L2GameClientPacket
 	private int _item2ObjectId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_item2ObjectId = readInt();
+		_item2ObjectId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		final Player activeChar = getClient().getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

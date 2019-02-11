@@ -37,6 +37,7 @@ import org.l2j.gameserver.utils.HtmlUtils;
 import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.TradeHelper;
 
+import java.nio.ByteBuffer;
 import java.util.Calendar;
 import java.util.List;
 
@@ -45,14 +46,14 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 public class EnterWorld extends L2GameClientPacket {
 
 	@Override
-	protected void readImpl() {
-		//readString(); - клиент всегда отправляет строку "narcasse"
+	protected void readImpl(ByteBuffer buffer) {
+		//readString(buffer); - клиент всегда отправляет строку "narcasse"
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		GameClient client = getClient();
+
 		Player activeChar = client.getActiveChar();
 
 		if(activeChar == null)

@@ -5,22 +5,24 @@ import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.utils.HtmlUtils;
 import org.l2j.gameserver.utils.ItemFunctions;
 
+import java.nio.ByteBuffer;
+
 public class UseItem extends L2GameClientPacket
 {
 	private int _objectId;
 	private boolean _ctrlPressed;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_objectId = readInt();
-		_ctrlPressed = readInt() == 1;
+		_objectId = buffer.getInt();
+		_ctrlPressed = buffer.getInt() == 1;
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

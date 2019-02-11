@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
 import java.math.BigInteger;
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,56 +29,56 @@ public class AdminForgePacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected boolean writeOpcodes()
+	protected boolean writeOpcodes(ByteBuffer buffer)
 	{
 		return true;
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
 		for(Part p : _parts)
 		{
-			generate(p.b, p.str);
+			generate(buffer, p.b, p.str);
 		}
 
 	}
 
-	public boolean generate(byte b, String string)
+	public boolean generate(ByteBuffer buffer, byte b, String string)
 	{
 		if((b == 'C') || (b == 'c'))
 		{
-			writeByte(Integer.decode(string));
+			buffer.put(Byte.decode(string));
 			return true;
 		}
 		else if((b == 'D') || (b == 'd'))
 		{
-			writeInt(Integer.decode(string));
+			buffer.putInt(Integer.decode(string));
 			return true;
 		}
 		else if((b == 'H') || (b == 'h'))
 		{
-			writeShort(Integer.decode(string));
+			buffer.putShort(Short.decode(string));
 			return true;
 		}
 		else if((b == 'F') || (b == 'f'))
 		{
-			writeDouble(Double.parseDouble(string));
+			buffer.putDouble(Double.parseDouble(string));
 			return true;
 		}
 		else if((b == 'S') || (b == 's'))
 		{
-			writeString(string);
+			writeString(string, buffer);
 			return true;
 		}
 		else if((b == 'B') || (b == 'b') || (b == 'X') || (b == 'x'))
 		{
-			writeBytes(new BigInteger(string).toByteArray());
+			buffer.put(new BigInteger(string).toByteArray());
 			return true;
 		}
 		else if((b == 'Q') || (b == 'q'))
 		{
-			writeLong(Long.decode(string));
+			buffer.putLong(Long.decode(string));
 			return true;
 		}
 		return false;

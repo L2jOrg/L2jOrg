@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * Format: ch ddcdc
@@ -21,13 +24,13 @@ public class ExPCCafePointInfoPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_pcBangPoints);
-		writeInt(_mAddPoint);
-		writeByte(_mPeriodType);
-		writeInt(_remainTime);
-		writeByte(_pointType);
-		writeInt(0); // TODO: online time
+		buffer.putInt(_pcBangPoints);
+		buffer.putInt(_mAddPoint);
+		buffer.put((byte)_mPeriodType);
+		buffer.putInt(_remainTime);
+		buffer.put((byte)_pointType);
+		buffer.putInt(0); // TODO: online time
 	}
 }

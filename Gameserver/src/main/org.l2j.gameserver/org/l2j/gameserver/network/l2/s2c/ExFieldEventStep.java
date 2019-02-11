@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ExFieldEventStep extends L2GameServerPacket
 {
 	private final int _own;
@@ -14,10 +18,10 @@ public class ExFieldEventStep extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_own);
-		writeInt(_cumulative);
-		writeInt(_max);
+		buffer.putInt(_own);
+		buffer.putInt(_cumulative);
+		buffer.putInt(_max);
 	}
 }

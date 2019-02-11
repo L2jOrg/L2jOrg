@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class Ex2NDPasswordVerifyPacket extends L2GameServerPacket
 {
 	public static final int PASSWORD_OK = 0x00;
@@ -15,9 +19,9 @@ public class Ex2NDPasswordVerifyPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_mode);
-		writeInt(_wrongTentatives);
+		buffer.putInt(_mode);
+		buffer.putInt(_wrongTentatives);
 	}
 }

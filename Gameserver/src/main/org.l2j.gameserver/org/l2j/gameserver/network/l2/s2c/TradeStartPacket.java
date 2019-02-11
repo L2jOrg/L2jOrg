@@ -1,11 +1,13 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInfo;
 import org.l2j.gameserver.model.items.ItemInstance;
+import org.l2j.gameserver.network.l2.GameClient;
 
 /**
  * @reworked to Ertheia by Bonux
@@ -43,13 +45,13 @@ public class TradeStartPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_targetId);
-		writeByte(_flags); // UNK
-		writeByte(_targetLevel);
-		writeShort(_tradelist.size());
+		buffer.putInt(_targetId);
+		buffer.put((byte)_flags); // UNK
+		buffer.put((byte)_targetLevel);
+		buffer.putShort((short) _tradelist.size());
 		for(ItemInfo item : _tradelist)
-			writeItemInfo(item);
+			writeItemInfo(buffer, item);
 	}
 }

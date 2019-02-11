@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ExRegistPartySubstitute extends L2GameServerPacket
 {
 	private final int _object;
@@ -10,9 +14,9 @@ public class ExRegistPartySubstitute extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_object);
-		writeInt(0x01);
+		buffer.putInt(_object);
+		buffer.putInt(0x01);
 	}
 }

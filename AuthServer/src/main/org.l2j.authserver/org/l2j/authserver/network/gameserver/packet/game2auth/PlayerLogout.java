@@ -1,5 +1,7 @@
 package org.l2j.authserver.network.gameserver.packet.game2auth;
 
+import java.nio.ByteBuffer;
+
 public class PlayerLogout extends GameserverReadablePacket {
 	
 	private String account;
@@ -10,8 +12,8 @@ public class PlayerLogout extends GameserverReadablePacket {
 	}
 
 	@Override
-	protected void readImpl() {
-		account = readString();
+	protected void readImpl(ByteBuffer buffer) {
+		account = readString(buffer);
 	}
 
 	@Override

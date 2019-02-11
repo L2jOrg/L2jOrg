@@ -3,6 +3,9 @@ package org.l2j.gameserver.network.l2.s2c;
 import org.l2j.gameserver.model.GameObject;
 import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * Пример:
@@ -22,14 +25,14 @@ public class DeleteObjectPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null || activeChar.getObjectId() == _objectId)
 			return;
 
-		writeInt(_objectId);
-		writeInt(0x01); // Что-то странное. Если объект сидит верхом то при 0 он сперва будет ссажен, при 1 просто пропадет.
+		buffer.putInt(_objectId);
+		buffer.putInt(0x01); // Что-то странное. Если объект сидит верхом то при 0 он сперва будет ссажен, при 1 просто пропадет.
 	}
 
 	@Override

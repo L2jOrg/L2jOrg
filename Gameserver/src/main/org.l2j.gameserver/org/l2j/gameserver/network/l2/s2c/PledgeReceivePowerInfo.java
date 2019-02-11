@@ -3,6 +3,9 @@ package org.l2j.gameserver.network.l2.s2c;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.pledge.RankPrivs;
 import org.l2j.gameserver.model.pledge.UnitMember;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class PledgeReceivePowerInfo extends L2GameServerPacket
 {
@@ -26,10 +29,10 @@ public class PledgeReceivePowerInfo extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(PowerGrade);
-		writeString(member_name);
-		writeInt(privs);
+		buffer.putInt(PowerGrade);
+		writeString(member_name, buffer);
+		buffer.putInt(privs);
 	}
 }

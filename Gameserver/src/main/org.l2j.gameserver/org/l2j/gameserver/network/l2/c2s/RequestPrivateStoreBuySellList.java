@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,12 +31,12 @@ public class RequestPrivateStoreBuySellList extends L2GameClientPacket
 	private long[] _itemP; // price
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_buyerId = readInt();
-		_count = readInt();
+		_buyerId = buffer.getInt();
+		_count = buffer.getInt();
 
-		if(_count * 28 > availableData() || _count > Short.MAX_VALUE || _count < 1)
+		if(_count * 28 > buffer.remaining() || _count > Short.MAX_VALUE || _count < 1)
 		{
 			_count = 0;
 			return;
@@ -47,12 +48,12 @@ public class RequestPrivateStoreBuySellList extends L2GameClientPacket
 
 		for(int i = 0; i < _count; i++)
 		{
-			_items[i] = readInt();
-			readInt(); //itemId
-			readShort();
-			readShort();
-			_itemQ[i] = readLong();
-			_itemP[i] = readLong();
+			_items[i] = buffer.getInt();
+			buffer.getInt(); //itemId
+			buffer.getShort();
+			buffer.getShort();
+			_itemQ[i] = buffer.getLong();
+			_itemP[i] = buffer.getLong();
 
 			if(_itemQ[i] < 1 || _itemP[i] < 1 || ArrayUtils.indexOf(_items, _items[i]) < i)
 			{
@@ -60,24 +61,24 @@ public class RequestPrivateStoreBuySellList extends L2GameClientPacket
 				break;
 			}
 
-			readInt();
-			readInt();
-			readInt();
+			buffer.getInt();
+			buffer.getInt();
+			buffer.getInt();
 
-			int saCount = readByte();
+			int saCount = buffer.get();
 			for(int s = 0; s < saCount; s++)
-				readInt();
+				buffer.getInt();
 
-			saCount = readByte();
+			saCount = buffer.get();
 			for(int s = 0; s < saCount; s++)
-				readInt();
+				buffer.getInt();
 		}
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player seller = getClient().getActiveChar();
+		Player seller = client.getActiveChar();
 		if(seller == null || _count == 0)
 			return;
 

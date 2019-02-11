@@ -5,6 +5,8 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.s2c.RecipeItemMakeInfoPacket;
 import org.l2j.gameserver.templates.item.RecipeTemplate;
 
+import java.nio.ByteBuffer;
+
 public class RequestRecipeItemMakeInfo extends L2GameClientPacket
 {
 	private int _id;
@@ -12,17 +14,18 @@ public class RequestRecipeItemMakeInfo extends L2GameClientPacket
 	/**
 	 * packet type id 0xB7
 	 * format:		cd
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_id = readInt();
+		_id = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

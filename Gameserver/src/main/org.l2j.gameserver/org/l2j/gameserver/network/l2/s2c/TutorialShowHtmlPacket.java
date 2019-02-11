@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class TutorialShowHtmlPacket extends L2GameServerPacket
 {
 	public static int NORMAL_WINDOW = 0x01;
@@ -15,9 +19,9 @@ public class TutorialShowHtmlPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_windowType);
-		writeString(_html);
+		buffer.putInt(_windowType);
+		writeString(_html, buffer);
 	}
 }

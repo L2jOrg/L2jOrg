@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * chsddddddddd
@@ -37,17 +40,17 @@ public class ExDuelUpdateUserInfo extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeString(_name);
-		writeInt(obj_id);
-		writeInt(class_id);
-		writeInt(level);
-		writeInt(curHp);
-		writeInt(maxHp);
-		writeInt(curMp);
-		writeInt(maxMp);
-		writeInt(curCp);
-		writeInt(maxCp);
+		writeString(_name, buffer);
+		buffer.putInt(obj_id);
+		buffer.putInt(class_id);
+		buffer.putInt(level);
+		buffer.putInt(curHp);
+		buffer.putInt(maxHp);
+		buffer.putInt(curMp);
+		buffer.putInt(maxMp);
+		buffer.putInt(curCp);
+		buffer.putInt(maxCp);
 	}
 }

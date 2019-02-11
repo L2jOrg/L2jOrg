@@ -1,5 +1,7 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
+
 public class ReplyGameGuardQuery extends L2GameClientPacket
 {
 	// Format: cdddd
@@ -8,10 +10,10 @@ public class ReplyGameGuardQuery extends L2GameClientPacket
 	** CCP Guard END*/
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
 		/* CCP Guard START
-		ccpGuard.Protection.doReadReplyGameGuard(getClient(), _buf, _data);
+		ccpGuard.Protection.doReadReplyGameGuard(client, _buf, _data);
 		** CCP Guard END*/
 	}
 
@@ -19,7 +21,7 @@ public class ReplyGameGuardQuery extends L2GameClientPacket
 	protected void runImpl()
 	{
 		/* CCP Guard START
-		ccpGuard.Protection.doReplyGameGuard(getClient(), _data);
+		ccpGuard.Protection.doReplyGameGuard(client, _data);
 		** CCP Guard END*/
 	}
 }

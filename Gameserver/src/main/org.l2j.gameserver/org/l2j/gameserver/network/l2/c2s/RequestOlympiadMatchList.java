@@ -4,6 +4,8 @@ import org.l2j.gameserver.model.ObservableArena;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.utils.NpcUtils;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author VISTALL
  * @date 0:20/09.04.2011
@@ -11,7 +13,7 @@ import org.l2j.gameserver.utils.NpcUtils;
 public class RequestOlympiadMatchList extends L2GameClientPacket
 {
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
 		// trigger
 	}
@@ -19,7 +21,7 @@ public class RequestOlympiadMatchList extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

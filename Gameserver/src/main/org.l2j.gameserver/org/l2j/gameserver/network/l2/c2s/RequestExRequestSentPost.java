@@ -6,6 +6,8 @@ import org.l2j.gameserver.model.mail.Mail;
 import org.l2j.gameserver.network.l2.s2c.ExReplySentPost;
 import org.l2j.gameserver.network.l2.s2c.ExShowSentPostList;
 
+import java.nio.ByteBuffer;
+
 /**
  * Запрос информации об отправленном письме. Появляется при нажатии на письмо из списка {@link ExShowSentPostList}.
  * В ответ шлется {@link ExReplySentPost}.
@@ -17,17 +19,18 @@ public class RequestExRequestSentPost extends L2GameClientPacket
 
 	/**
 	 * format: d
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		postId = readInt(); // id письма
+		postId = buffer.getInt(); // id письма
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

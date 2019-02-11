@@ -3,10 +3,11 @@ package org.l2j.gameserver.network.l2.c2s;
 import org.l2j.gameserver.instancemanager.clansearch.ClanSearchManager;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.World;
-import org.l2j.gameserver.model.base.ClassLevel;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author GodWorld
@@ -19,17 +20,17 @@ public class RequestPledgeWaitingUserAccept extends L2GameClientPacket
 	private int _pledgeType;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_invite = readInt() == 1;
-		_objectId = readInt();
-		_pledgeType = readInt();
+		_invite = buffer.getInt() == 1;
+		_objectId = buffer.getInt();
+		_pledgeType = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

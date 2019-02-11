@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.authcomm.as2gs;
 
+import java.nio.ByteBuffer;
 import java.util.List;
 
 import org.l2j.gameserver.Config;
@@ -9,7 +10,6 @@ import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.ReceivablePacket;
-import org.l2j.gameserver.network.authcomm.SessionKey;
 import org.l2j.gameserver.network.authcomm.gs2as.PlayerInGame;
 import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
@@ -30,20 +30,19 @@ public class PlayerAuthResponse extends ReceivablePacket
 	private long phoneNumber;
 
 	@Override
-	public void readImpl()
-	{
-		account = readString();
-		authed = readByte() == 1;
+	public void readImpl(ByteBuffer buffer) {
+		account = readString(buffer);
+		authed = buffer.get() == 1;
 		/*if(authed)
 		{
-			playOkId1 = readInt();
-			playOkId2 = readInt();
-			loginOkId1 = readInt();
-			loginOkId2 = readInt();
-			bonus = readInt();
-			bonusExpire = readInt();
-			points = readInt();
-			hwid = readString();
+			playOkId1 = buffer.getInt();
+			playOkId2 = buffer.getInt();
+			loginOkId1 = buffer.getInt();
+			loginOkId2 = buffer.getInt();
+			bonus = buffer.getInt();
+			bonusExpire = buffer.getInt();
+			points = buffer.getInt();
+			hwid = readString(buffer);
 			if(getByteBuffer().hasRemaining())
 				phoneNumber = readQ();
 		}*/

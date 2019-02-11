@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 /**
  * @author : Ragnarok & Bonux
  * @date : 22.04.12  12:09
@@ -25,14 +29,14 @@ public class ExResponseCommissionBuyItem extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_code);
+		buffer.putInt(_code);
 		if(_code == 0)
 			return;
 
-		writeInt(0x00); //unk, maybe item object Id
-		writeInt(_itemId);
-		writeLong(_count);
+		buffer.putInt(0x00); //unk, maybe item object Id
+		buffer.putInt(_itemId);
+		buffer.putLong(_count);
 	}
 }

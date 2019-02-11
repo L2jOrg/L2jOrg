@@ -1,11 +1,13 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.l2j.gameserver.model.CommandChannel;
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
 
 public class ExMultiPartyCommandChannelInfoPacket extends L2GameServerPacket
 {
@@ -28,18 +30,18 @@ public class ExMultiPartyCommandChannelInfoPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeString(ChannelLeaderName); // имя лидера CC
-		writeInt(0); // Looting type?
-		writeInt(MemberCount); // общее число человек в СС
-		writeInt(parties.size()); // общее число партий в СС
+		writeString(ChannelLeaderName, buffer); // имя лидера CC
+		buffer.putInt(0); // Looting type?
+		buffer.putInt(MemberCount); // общее число человек в СС
+		buffer.putInt(parties.size()); // общее число партий в СС
 
 		for(ChannelPartyInfo party : parties)
 		{
-			writeString(party.Leader_name); // имя лидера партии
-			writeInt(party.Leader_obj_id); // ObjId пати лидера
-			writeInt(party.MemberCount); // количество мемберов в пати
+			writeString(party.Leader_name, buffer); // имя лидера партии
+			buffer.putInt(party.Leader_obj_id); // ObjId пати лидера
+			buffer.putInt(party.MemberCount); // количество мемберов в пати
 		}
 	}
 

@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ExTacticalSign extends L2GameServerPacket
 {
 	public static final int STAR = 1;
@@ -17,9 +21,9 @@ public class ExTacticalSign extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_targetId);
-		writeInt(_signId);
+		buffer.putInt(_targetId);
+		buffer.putInt(_signId);
 	}
 }

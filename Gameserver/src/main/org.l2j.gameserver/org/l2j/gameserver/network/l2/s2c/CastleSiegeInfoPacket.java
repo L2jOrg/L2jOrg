@@ -1,11 +1,13 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.Calendar;
 
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.residence.Residence;
 import org.l2j.gameserver.model.pledge.Alliance;
 import org.l2j.gameserver.model.pledge.Clan;
+import org.l2j.gameserver.network.l2.GameClient;
 
 import static org.l2j.commons.util.Util.STRING_EMPTY;
 
@@ -60,18 +62,18 @@ public class CastleSiegeInfoPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_id);
-		writeInt(_isLeader ? 0x01 : 0x00);
-		writeInt(_ownerObjectId);
-		writeString(_ownerName); // Clan Name
-		writeString(_leaderName); // Clan Leader Name
-		writeInt(_allyId); // Ally ID
-		writeString(_allyName); // Ally Name
-		writeInt((int) (Calendar.getInstance().getTimeInMillis() / 1000));
-		writeInt(_startTime);
+		buffer.putInt(_id);
+		buffer.putInt(_isLeader ? 0x01 : 0x00);
+		buffer.putInt(_ownerObjectId);
+		writeString(_ownerName, buffer); // Clan Name
+		writeString(_leaderName, buffer); // Clan Leader Name
+		buffer.putInt(_allyId); // Ally ID
+		writeString(_allyName, buffer); // Ally Name
+		buffer.putInt((int) (Calendar.getInstance().getTimeInMillis() / 1000));
+		buffer.putInt(_startTime);
 		/*if(_startTime == 0) //если ноль то идет цыкл
-			writeDD(_nextTimeMillis, true);*/
+			writeIntList(_nextTimeMillis, true);*/
 	}
 }

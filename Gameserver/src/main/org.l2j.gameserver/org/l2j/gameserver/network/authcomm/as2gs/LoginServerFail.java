@@ -6,9 +6,11 @@ import org.l2j.gameserver.network.authcomm.ReceivablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.nio.ByteBuffer;
+
 public class LoginServerFail extends ReceivablePacket
 {
-	private static final Logger _log = LoggerFactory.getLogger(LoginServerFail.class);
+	private static final Logger logger = LoggerFactory.getLogger(LoginServerFail.class);
 
 	private static final String[] REASONS = {
 			"none",
@@ -24,20 +26,19 @@ public class LoginServerFail extends ReceivablePacket
 	private boolean _restartConnection = true;
 
 	@Override
-	protected void readImpl()
-	{
-		int reasonId = readByte();
-		if(availableData() <= 0) {
+	protected void readImpl(ByteBuffer buffer) {
+		int reasonId = buffer.get();
+		if(buffer.remaining() <= 0) {
 			_reason = "Authserver registration failed! Reason: " + REASONS[reasonId];
 		} else {
-			_reason = readString();
-			_restartConnection = readByte() > 0;
+			_reason = readString(buffer);
+			_restartConnection = buffer.get() > 0;
 		}
 	}
 
 	protected void runImpl()
 	{
-		_log.warn(_reason);
+		logger.warn(_reason);
 		if(_restartConnection)
 			AuthServerCommunication.getInstance().restart();
 	}

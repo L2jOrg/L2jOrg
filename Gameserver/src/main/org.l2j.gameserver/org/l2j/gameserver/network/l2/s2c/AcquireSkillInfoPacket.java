@@ -1,11 +1,13 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.base.AcquireType;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.templates.item.data.ItemData;
 
 /**
@@ -27,21 +29,21 @@ public class AcquireSkillInfoPacket extends L2GameServerPacket
 	}
 
 	@Override
-	public void writeImpl()
+	public void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_learn.getId());
-		writeInt(_learn.getLevel());
-		writeLong(_learn.getCost()); // sp/rep
-		writeInt(_type.getId());
+		buffer.putInt(_learn.getId());
+		buffer.putInt(_learn.getLevel());
+		buffer.putLong(_learn.getCost()); // sp/rep
+		buffer.putInt(_type.getId());
 
-		writeInt(_reqs.size()); //requires size
+		buffer.putInt(_reqs.size()); //requires size
 
 		for(Require temp : _reqs)
 		{
-			writeInt(temp.type);
-			writeInt(temp.itemId);
-			writeLong(temp.count);
-			writeInt(temp.unk);
+			buffer.putInt(temp.type);
+			buffer.putInt(temp.itemId);
+			buffer.putLong(temp.count);
+			buffer.putInt(temp.unk);
 		}
 	}
 

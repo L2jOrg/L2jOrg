@@ -1,11 +1,13 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Servitor;
+import org.l2j.gameserver.network.l2.GameClient;
 
 public class PartySmallWindowAllPacket extends L2GameServerPacket
 {
@@ -23,38 +25,38 @@ public class PartySmallWindowAllPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(leaderId); // c3 party leader id
-		writeByte(loot); //c3 party loot type (0,1,2,....)
-		writeByte(members.size());
+		buffer.putInt(leaderId); // c3 party leader id
+		buffer.put((byte)loot); //c3 party loot type (0,1,2,....)
+		buffer.put((byte)members.size());
 		for(PartySmallWindowMemberInfo mi : members)
 		{
-			writeInt(mi.member.objId);
-			writeString(mi.member.name);
-			writeInt(mi.member.curCp);
-			writeInt(mi.member.maxCp);
-			writeInt(mi.member.curHp);
-			writeInt(mi.member.maxHp);
-			writeInt(mi.member.curMp);
-			writeInt(mi.member.maxMp);
-			writeInt(0x00);
-			writeByte(mi.member.level);
-			writeShort(mi.member.classId);
-			writeByte(mi.member.sex);
-			writeShort(mi.member.raceId);
-			writeInt(mi.m_servitors.size()); // Pet Count
+			buffer.putInt(mi.member.objId);
+			writeString(mi.member.name, buffer);
+			buffer.putInt(mi.member.curCp);
+			buffer.putInt(mi.member.maxCp);
+			buffer.putInt(mi.member.curHp);
+			buffer.putInt(mi.member.maxHp);
+			buffer.putInt(mi.member.curMp);
+			buffer.putInt(mi.member.maxMp);
+			buffer.putInt(0x00);
+			buffer.put((byte)mi.member.level);
+			buffer.putShort((short) mi.member.classId);
+			buffer.put((byte)mi.member.sex);
+			buffer.putShort((short) mi.member.raceId);
+			buffer.putInt(mi.m_servitors.size()); // Pet Count
 			for(PartyMember servitor : mi.m_servitors)
 			{
-				writeInt(servitor.objId);
-				writeInt(servitor.npcId);
-				writeByte(servitor.type);
-				writeString(servitor.name);
-				writeInt(servitor.curHp);
-				writeInt(servitor.maxHp);
-				writeInt(servitor.curMp);
-				writeInt(servitor.maxMp);
-				writeByte(servitor.level);
+				buffer.putInt(servitor.objId);
+				buffer.putInt(servitor.npcId);
+				buffer.put((byte)servitor.type);
+				writeString(servitor.name, buffer);
+				buffer.putInt(servitor.curHp);
+				buffer.putInt(servitor.maxHp);
+				buffer.putInt(servitor.curMp);
+				buffer.putInt(servitor.maxMp);
+				buffer.put((byte)servitor.level);
 			}
 		}
 	}

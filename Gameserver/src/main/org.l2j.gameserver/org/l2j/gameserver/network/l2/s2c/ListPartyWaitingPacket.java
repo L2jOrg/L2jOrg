@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -7,6 +8,7 @@ import java.util.List;
 import org.l2j.gameserver.instancemanager.MatchingRoomManager;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.matching.MatchingRoom;
+import org.l2j.gameserver.network.l2.GameClient;
 
 public class ListPartyWaitingPacket extends L2GameServerPacket
 {
@@ -26,30 +28,30 @@ public class ListPartyWaitingPacket extends L2GameServerPacket
     }
 
     @Override
-    protected final void writeImpl()
+    protected final void writeImpl(GameClient client, ByteBuffer buffer)
     {
-        writeInt(_page);
-        writeInt(_rooms.size());
+        buffer.putInt(_page);
+        buffer.putInt(_rooms.size());
 
         for(MatchingRoom room : _rooms)
         {
-            writeInt(room.getId()); //room id
-            writeString(room.getTopic()); // room name
-            writeInt(room.getLocationId());
-            writeInt(room.getMinLevel()); //min level
-            writeInt(room.getMaxLevel()); //max level
-            writeInt(room.getMaxMembersSize()); //max members coun
-            writeString(room.getLeader() == null ? "None" : room.getLeader().getName());
+            buffer.putInt(room.getId()); //room id
+            writeString(room.getTopic(), buffer); // room name
+            buffer.putInt(room.getLocationId());
+            buffer.putInt(room.getMinLevel()); //min level
+            buffer.putInt(room.getMaxLevel()); //max level
+            buffer.putInt(room.getMaxMembersSize()); //max members coun
+            writeString(room.getLeader() == null ? "None" : room.getLeader().getName(), buffer);
 
             Collection<Player> players = room.getPlayers();
-            writeInt(players.size()); //members count
+            buffer.putInt(players.size()); //members count
             for(Player player : players)
             {
-                writeInt(player.getClassId().getId());
-                writeString(player.getName());
+                buffer.putInt(player.getClassId().getId());
+                writeString(player.getName(), buffer);
             }
         }
-        writeInt(0x00);
-        writeInt(0x00);
+        buffer.putInt(0x00);
+        buffer.putInt(0x00);
     }
 }

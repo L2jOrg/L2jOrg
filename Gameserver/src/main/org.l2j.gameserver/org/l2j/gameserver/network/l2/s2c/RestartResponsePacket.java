@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import io.github.joealisson.mmocore.StaticPacket;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 @StaticPacket
 public class RestartResponsePacket extends L2GameServerPacket  {
@@ -14,13 +17,13 @@ public class RestartResponsePacket extends L2GameServerPacket  {
 	}
 
 	@Override
-	protected final void writeImpl() {
-		writeInt(_param); //01-ok
-		writeString(_message);
+	protected final void writeImpl(GameClient client, ByteBuffer buffer) {
+		buffer.putInt(_param); //01-ok
+		writeString(_message, buffer);
 	}
 
 	@Override
-	protected int packetSize() {
+	protected int size(GameClient client) {
 		return 7 + _message.length() * 2;
 	}
 }

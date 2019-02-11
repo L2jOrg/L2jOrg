@@ -3,10 +3,12 @@ package org.l2j.gameserver.network.l2.s2c;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.model.entity.residence.ClanHall;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.pledge.Alliance;
 import org.l2j.gameserver.model.pledge.Clan;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.settings.ServerSettings;
+
+import java.nio.ByteBuffer;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.STRING_EMPTY;
@@ -53,40 +55,40 @@ public class PledgeShowInfoUpdatePacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
 		//sending empty data so client will ask all the info in response ;)
-		writeInt(clan_id);
-		writeInt(getSettings(ServerSettings.class).serverId());
-		writeInt(crest_id);
-		writeInt(clan_level);
-		writeInt(_hasCastle);
+		buffer.putInt(clan_id);
+		buffer.putInt(getSettings(ServerSettings.class).serverId());
+		buffer.putInt(crest_id);
+		buffer.putInt(clan_level);
+		buffer.putInt(_hasCastle);
 		if(_hasInstantClanHall > 0)
 		{
-			writeInt(0x01);
-			writeInt(_hasInstantClanHall);
+			buffer.putInt(0x01);
+			buffer.putInt(_hasInstantClanHall);
 		}
 		else if(_hasClanHall != 0)
 		{
-			writeInt(0x00);
-			writeInt(_hasClanHall);
+			buffer.putInt(0x00);
+			buffer.putInt(_hasClanHall);
 		}
 		else
 		{
-			writeInt(0x00);
-			writeInt(0x00);
+			buffer.putInt(0x00);
+			buffer.putInt(0x00);
 		}
-		writeInt(0x00);
-		writeInt(clan_rank);// displayed in the "tree" view (with the clan skills)
-		writeInt(clan_rep);
-		writeInt(_isDisbanded ? 3 : 0);
-		writeInt(0);
-		writeInt(ally_id); //c5
-		writeString(ally_name); //c5
-		writeInt(ally_crest); //c5
-		writeInt(atwar); //c5
+		buffer.putInt(0x00);
+		buffer.putInt(clan_rank);// displayed in the "tree" view (with the clan skills)
+		buffer.putInt(clan_rep);
+		buffer.putInt(_isDisbanded ? 3 : 0);
+		buffer.putInt(0);
+		buffer.putInt(ally_id); //c5
+		writeString(ally_name, buffer); //c5
+		buffer.putInt(ally_crest); //c5
+		buffer.putInt(atwar ? 0x01 : 0x00); //c5
 
-		writeInt(0x00);
-		writeInt(0x00);
+		buffer.putInt(0x00);
+		buffer.putInt(0x00);
 	}
 }

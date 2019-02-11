@@ -9,6 +9,8 @@ import org.l2j.gameserver.network.l2.s2c.SayPacket2;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.tables.GmListTable;
 
+import java.nio.ByteBuffer;
+
 /**
  * <p>Format: (c) d
  * <ul>
@@ -22,15 +24,15 @@ public final class RequestPetitionCancel extends L2GameClientPacket
 	//private int _unknown;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		//_unknown = readInt(); This is pretty much a trigger packet.
+		//_unknown = buffer.getInt(); This is pretty much a trigger packet.
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public final class ExPeriodicItemList extends L2GameServerPacket
 {
     private final int _result;
@@ -14,10 +18,10 @@ public final class ExPeriodicItemList extends L2GameServerPacket
     }
 
     @Override
-    protected void writeImpl()
+    protected void writeImpl(GameClient client, ByteBuffer buffer)
     {
-        writeInt(_result);
-        writeInt(_objectID);
-        writeInt(_period);
+        buffer.putInt(_result);
+        buffer.putInt(_objectID);
+        buffer.putInt(_period);
     }
 }

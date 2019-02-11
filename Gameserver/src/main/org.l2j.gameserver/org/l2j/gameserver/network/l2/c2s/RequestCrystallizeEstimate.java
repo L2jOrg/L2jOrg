@@ -7,22 +7,24 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ExGetCrystalizingEstimation;
 import org.l2j.gameserver.utils.ItemFunctions;
 
+import java.nio.ByteBuffer;
+
 public class RequestCrystallizeEstimate extends L2GameClientPacket
 {
 	private int _objectId;
 	private long _count;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_objectId = readInt();
-		_count = readLong();
+		_objectId = buffer.getInt();
+		_count = buffer.getLong();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 
 		if(activeChar == null)
 			return;

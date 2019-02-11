@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.actor.instances.creature.Abnormal;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class ShortBuffStatusUpdatePacket extends L2GameServerPacket
 {
@@ -47,10 +50,10 @@ public class ShortBuffStatusUpdatePacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_skillId); // skill id??? CD 04 00 00 = skill 1229, hex 4CD
-		writeInt(_skillLevel); //Skill Level??? 07 00 00 00 = casted by heal 7 lvl.
-		writeInt(_skillDuration); //DURATION???? 0F 00 00 00 = 15 sec = overlord's heal
+		buffer.putInt(_skillId); // skill id??? CD 04 00 00 = skill 1229, hex 4CD
+		buffer.putInt(_skillLevel); //Skill Level??? 07 00 00 00 = casted by heal 7 lvl.
+		buffer.putInt(_skillDuration); //DURATION???? 0F 00 00 00 = 15 sec = overlord's heal
 	}
 }

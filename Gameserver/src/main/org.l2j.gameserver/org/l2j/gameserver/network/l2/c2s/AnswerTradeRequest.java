@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.l2j.gameserver.model.Player;
@@ -16,15 +17,15 @@ public class AnswerTradeRequest extends L2GameClientPacket
 	private int _response;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_response = readInt();
+		_response = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

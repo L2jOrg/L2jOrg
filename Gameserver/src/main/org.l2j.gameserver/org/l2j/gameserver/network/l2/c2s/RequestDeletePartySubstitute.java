@@ -2,23 +2,23 @@ package org.l2j.gameserver.network.l2.c2s;
 
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.model.World;
-import org.l2j.gameserver.network.l2.s2c.ExDeletePartySubstitute;
+
+import java.nio.ByteBuffer;
 
 public class RequestDeletePartySubstitute extends L2GameClientPacket
 {
 	private int _objectId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		//_objectId = readInt();
+		//_objectId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		final Player activeChar = getClient().getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

@@ -1,8 +1,8 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
 import java.util.List;
 
-import org.l2j.gameserver.Contants;
 import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;
 import org.l2j.gameserver.data.xml.holder.ProductDataHolder;
@@ -23,16 +23,16 @@ public class RequestExBR_BuyProduct extends L2GameClientPacket
 	private int _count;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_productId = readInt();
-		_count = readInt();
+		_productId = buffer.getInt();
+		_count = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 
 		if(activeChar == null)
 			return;

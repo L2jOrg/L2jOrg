@@ -13,21 +13,23 @@ import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.utils.NpcUtils;
 import org.l2j.gameserver.utils.VariationUtils;
 
+import java.nio.ByteBuffer;
+
 public final class RequestRefineCancel extends L2GameClientPacket
 {
 	//format: (ch)d
 	private int _targetItemObjId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_targetItemObjId = readInt();
+		_targetItemObjId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

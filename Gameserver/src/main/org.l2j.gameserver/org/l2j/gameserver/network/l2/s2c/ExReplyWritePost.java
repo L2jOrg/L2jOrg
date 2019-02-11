@@ -1,7 +1,10 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.network.l2.c2s.RequestExSendPost;
 import io.github.joealisson.mmocore.StaticPacket;
+
+import java.nio.ByteBuffer;
 
 /**
  * Запрос на отправку нового письма. Шлется в ответ на {@link RequestExSendPost}.
@@ -22,13 +25,13 @@ public class ExReplyWritePost extends L2GameServerPacket {
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_reply); // 1 - закрыть окно письма, иное - не закрывать
+		buffer.putInt(_reply); // 1 - закрыть окно письма, иное - не закрывать
 	}
 
 	@Override
-	protected int packetSize() {
+	protected int size(GameClient client) {
 		return 9;
 	}
 }

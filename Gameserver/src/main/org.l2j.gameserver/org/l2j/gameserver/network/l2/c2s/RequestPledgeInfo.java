@@ -5,20 +5,22 @@ import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.network.l2.s2c.PledgeInfoPacket;
 import org.l2j.gameserver.tables.ClanTable;
 
+import java.nio.ByteBuffer;
+
 public class RequestPledgeInfo extends L2GameClientPacket
 {
 	private int _clanId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_clanId = readInt();
+		_clanId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 		if(_clanId < 10000000)
@@ -30,7 +32,7 @@ public class RequestPledgeInfo extends L2GameClientPacket
 		if(clan == null)
 		{
 			//Util.handleIllegalPlayerAction(activeChar, "RequestPledgeInfo[40]", "Clan data for clanId " + _clanId + " is missing", 1);
-			//logger.warn("Host " + getClient().getIpAddr() + " possibly sends fake packets. activeChar: " + activeChar);
+			//logger.warn("Host " + client.getIpAddr() + " possibly sends fake packets. activeChar: " + activeChar);
 			activeChar.sendActionFailed();
 			return;
 		}

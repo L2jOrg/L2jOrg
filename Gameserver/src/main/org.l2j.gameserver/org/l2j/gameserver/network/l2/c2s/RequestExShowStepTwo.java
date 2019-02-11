@@ -6,6 +6,8 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.petition.PetitionMainGroup;
 import org.l2j.gameserver.network.l2.s2c.ExResponseShowStepTwo;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author VISTALL
  */
@@ -14,15 +16,15 @@ public class RequestExShowStepTwo extends L2GameClientPacket
 	private int _petitionGroupId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_petitionGroupId = readByte();
+		_petitionGroupId = buffer.get();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null || !Config.EX_NEW_PETITION_SYSTEM)
 			return;
 

@@ -1,10 +1,12 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.Collection;
 import java.util.List;
 
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ManufactureItem;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.templates.item.RecipeTemplate;
 
 public class RecipeShopManageListPacket extends L2GameServerPacket
@@ -33,24 +35,24 @@ public class RecipeShopManageListPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(sellerId);
-		writeInt((int) Math.min(adena, Integer.MAX_VALUE)); //FIXME не менять на writeQ, в текущем клиенте там все еще D (видимо баг NCSoft)
-		writeInt(isDwarven ? 0x00 : 0x01);
-		writeInt(recipes.size());
+		buffer.putInt(sellerId);
+		buffer.putInt((int) Math.min(adena, Integer.MAX_VALUE)); //FIXME не менять на writeQ, в текущем клиенте там все еще D (видимо баг NCSoft)
+		buffer.putInt(isDwarven ? 0x00 : 0x01);
+		buffer.putInt(recipes.size());
 		int i = 1;
 		for(RecipeTemplate recipe : recipes)
 		{
-			writeInt(recipe.getId());
-			writeInt(i++);
+			buffer.putInt(recipe.getId());
+			buffer.putInt(i++);
 		}
-		writeInt(createList.size());
+		buffer.putInt(createList.size());
 		for(ManufactureItem mi : createList)
 		{
-			writeInt(mi.getRecipeId());
-			writeInt(0x00); //??
-			writeLong(mi.getCost());
+			buffer.putInt(mi.getRecipeId());
+			buffer.putInt(0x00); //??
+			buffer.putLong(mi.getCost());
 		}
 	}
 }

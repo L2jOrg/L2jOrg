@@ -1,11 +1,13 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInfo;
 import org.l2j.gameserver.model.items.ItemInstance;
+import org.l2j.gameserver.network.l2.GameClient;
 
 /**
  * Ответ на запрос создания нового письма.
@@ -25,10 +27,10 @@ public class ExReplyPostItemList extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_itemsList.size());
+		buffer.putInt(_itemsList.size());
 		for(ItemInfo item : _itemsList)
-			writeItemInfo(item);
+			writeItemInfo(buffer, item);
 	}
 }

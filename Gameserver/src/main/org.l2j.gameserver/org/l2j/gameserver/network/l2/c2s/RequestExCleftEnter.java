@@ -1,16 +1,19 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
+
 public class RequestExCleftEnter extends L2GameClientPacket
 {
 	private int unk;
 
 	/**
 	 * format: d
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		unk = readInt();
+		unk = buffer.getInt();
 	}
 
 	@Override

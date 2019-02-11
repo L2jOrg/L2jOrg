@@ -1,5 +1,7 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
+
 @SuppressWarnings("unused")
 public class RequestSendMsnChatLog extends L2GameClientPacket
 {
@@ -14,12 +16,13 @@ public class RequestSendMsnChatLog extends L2GameClientPacket
 
 	/**
 	 * format: SSd
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		unk = readString();
-		unk2 = readString();
-		unk3 = readInt();
+		unk = readString(buffer);
+		unk2 = readString(buffer);
+		unk3 = buffer.getInt();
 	}
 }

@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
 import java.util.List;
 
 import org.l2j.commons.math.SafeMath;
@@ -22,15 +23,15 @@ public class TradeDone extends L2GameClientPacket
 	private int _response;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_response = readInt();
+		_response = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player parthner1 = getClient().getActiveChar();
+		Player parthner1 = client.getActiveChar();
 		if(parthner1 == null)
 			return;
 

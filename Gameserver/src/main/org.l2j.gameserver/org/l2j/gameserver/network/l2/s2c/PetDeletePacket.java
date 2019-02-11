@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class PetDeletePacket extends L2GameServerPacket
 {
 	private int _petId;
@@ -12,9 +16,9 @@ public class PetDeletePacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_petnum);
-		writeInt(_petId);
+		buffer.putInt(_petnum);
+		buffer.putInt(_petId);
 	}
 }

@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 /**
  * @author GodWorld
  * @reworked by Bonux
@@ -20,8 +24,8 @@ public class ExPledgeRecruitApplyInfo extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_state);
+		buffer.putInt(_state);
 	}
 }

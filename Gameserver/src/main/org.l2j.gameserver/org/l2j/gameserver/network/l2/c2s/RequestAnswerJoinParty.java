@@ -9,15 +9,17 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ActionFailPacket;
 import org.l2j.gameserver.network.l2.s2c.JoinPartyPacket;
 
+import java.nio.ByteBuffer;
+
 public class RequestAnswerJoinParty extends L2GameClientPacket
 {
 	private int _response;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		if(availableData() >= 4)
-			_response = readInt();
+		if(buffer.remaining() >= 4)
+			_response = buffer.getInt();
 		else
 			_response = 0;
 	}
@@ -25,7 +27,7 @@ public class RequestAnswerJoinParty extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

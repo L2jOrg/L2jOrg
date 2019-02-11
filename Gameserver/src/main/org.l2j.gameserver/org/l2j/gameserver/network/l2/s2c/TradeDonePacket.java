@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class TradeDonePacket extends L2GameServerPacket
 {
 	public static final L2GameServerPacket SUCCESS = new TradeDonePacket(1);
@@ -13,8 +17,8 @@ public class TradeDonePacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_response);
+		buffer.putInt(_response);
 	}
 }

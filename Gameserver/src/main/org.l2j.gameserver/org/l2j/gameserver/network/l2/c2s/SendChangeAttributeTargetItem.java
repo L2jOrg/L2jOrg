@@ -4,22 +4,24 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.network.l2.s2c.ExChangeAttributeInfo;
 
+import java.nio.ByteBuffer;
+
 public class SendChangeAttributeTargetItem extends L2GameClientPacket
 {
 	public int _crystalItemId;
 	public int _itemObjId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_crystalItemId = readInt(); //Change Attribute Crystall ID
-		_itemObjId = readInt();
+		_crystalItemId = buffer.getInt(); //Change Attribute Crystall ID
+		_itemObjId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

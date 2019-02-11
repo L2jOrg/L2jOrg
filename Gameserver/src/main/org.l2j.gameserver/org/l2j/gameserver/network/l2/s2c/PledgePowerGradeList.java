@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.pledge.RankPrivs;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class PledgePowerGradeList extends L2GameServerPacket
 {
@@ -12,13 +15,13 @@ public class PledgePowerGradeList extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_privs.length);
+		buffer.putInt(_privs.length);
 		for(RankPrivs element : _privs)
 		{
-			writeInt(element.getRank());
-			writeInt(element.getParty());
+			buffer.putInt(element.getRank());
+			buffer.putInt(element.getParty());
 		}
 	}
 }

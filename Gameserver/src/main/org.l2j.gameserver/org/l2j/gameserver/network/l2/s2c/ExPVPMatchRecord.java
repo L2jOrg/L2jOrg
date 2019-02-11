@@ -1,8 +1,10 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.List;
 
 import org.l2j.gameserver.model.base.TeamType;
+import org.l2j.gameserver.network.l2.GameClient;
 
 public class ExPVPMatchRecord extends L2GameServerPacket
 {
@@ -42,26 +44,26 @@ public class ExPVPMatchRecord extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_type);
-		writeInt(_winnerTeam.ordinal());
-		writeInt(_winnerTeam.revert().ordinal());
-		writeInt(_blueKills);
-		writeInt(_redKills);
-		writeInt(_blueList.size());
+		buffer.putInt(_type);
+		buffer.putInt(_winnerTeam.ordinal());
+		buffer.putInt(_winnerTeam.revert().ordinal());
+		buffer.putInt(_blueKills);
+		buffer.putInt(_redKills);
+		buffer.putInt(_blueList.size());
 		for(Member member : _blueList)
 		{
-			writeString(member.name);
-			writeInt(member.kills);
-			writeInt(member.deaths);
+			writeString(member.name, buffer);
+			buffer.putInt(member.kills);
+			buffer.putInt(member.deaths);
 		}
-		writeInt(_redList.size());
+		buffer.putInt(_redList.size());
 		for(Member member : _redList)
 		{
-			writeString(member.name);
-			writeInt(member.kills);
-			writeInt(member.deaths);
+			writeString(member.name, buffer);
+			buffer.putInt(member.kills);
+			buffer.putInt(member.deaths);
 		}
 	}
 }

@@ -12,13 +12,13 @@ import org.l2j.gameserver.model.entity.residence.Castle;
 import org.l2j.gameserver.model.entity.residence.ClanHall;
 import org.l2j.gameserver.model.entity.residence.Residence;
 import org.l2j.gameserver.model.entity.residence.ResidenceType;
-import org.l2j.gameserver.model.pledge.Alliance;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.pledge.Privilege;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.CastleSiegeAttackerListPacket;
 import org.l2j.gameserver.network.l2.s2c.CastleSiegeDefenderListPacket;
-import org.l2j.gameserver.utils.SiegeUtils;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author VISTALL
@@ -30,17 +30,17 @@ public class RequestJoinCastleSiege extends L2GameClientPacket
 	private boolean _isJoining;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_id = readInt();
-		_isAttacker = readInt() == 1;
-		_isJoining = readInt() == 1;
+		_id = buffer.getInt();
+		_isAttacker = buffer.getInt() == 1;
+		_isJoining = buffer.getInt() == 1;
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

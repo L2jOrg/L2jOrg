@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.authcomm.gs2as;
 
+import org.l2j.gameserver.network.authcomm.AuthServerClient;
 import org.l2j.gameserver.network.authcomm.SendablePacket;
+
+import java.nio.ByteBuffer;
 
 public class ChangePhoneNumber extends SendablePacket
 {
@@ -14,10 +17,9 @@ public class ChangePhoneNumber extends SendablePacket
 	}
 
 	@Override
-	protected void writeImpl()
-	{
-		writeByte(0x0c);
-		writeString(_account);
-		writeLong(_phoneNumber);
+	protected void writeImpl(AuthServerClient client, ByteBuffer buffer) {
+		buffer.put((byte)0x0c);
+		writeString(_account, buffer);
+		buffer.putLong(_phoneNumber);
 	}
 }

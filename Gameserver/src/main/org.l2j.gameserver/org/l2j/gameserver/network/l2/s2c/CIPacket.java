@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.Set;
 
 import org.l2j.gameserver.Config;
@@ -13,6 +14,7 @@ import org.l2j.gameserver.model.items.PcInventory;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.model.pledge.Alliance;
 import org.l2j.gameserver.model.pledge.Clan;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.skills.AbnormalEffect;
 import org.l2j.gameserver.utils.Location;
 
@@ -216,127 +218,127 @@ public class CIPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeByte(0x00);
-		writeInt(_loc.x);
-		writeInt(_loc.y);
-		writeInt(_loc.z + Config.CLIENT_Z_SHIFT);
-		writeInt(0x00);
-		writeInt(_objId);
-		writeString(_name);
-		writeShort(_race);
-		writeByte(_sex);
-		writeInt(base_class);
+		buffer.put((byte)0x00);
+		buffer.putInt(_loc.x);
+		buffer.putInt(_loc.y);
+		buffer.putInt(_loc.z + Config.CLIENT_Z_SHIFT);
+		buffer.putInt(0x00);
+		buffer.putInt(_objId);
+		writeString(_name, buffer);
+		buffer.putShort((short) _race);
+		buffer.put((byte)_sex);
+		buffer.putInt(base_class);
 
 		for(int PAPERDOLL_ID : PAPERDOLL_ORDER)
-			writeInt(_inv[PAPERDOLL_ID][0]);
+			buffer.putInt(_inv[PAPERDOLL_ID][0]);
 
-		writeInt(_inv[Inventory.PAPERDOLL_RHAND][1]);
-		writeInt(_inv[Inventory.PAPERDOLL_RHAND][2]);
+		buffer.putInt(_inv[Inventory.PAPERDOLL_RHAND][1]);
+		buffer.putInt(_inv[Inventory.PAPERDOLL_RHAND][2]);
 
-		writeInt(_inv[Inventory.PAPERDOLL_LHAND][1]);
-		writeInt(_inv[Inventory.PAPERDOLL_LHAND][2]);
+		buffer.putInt(_inv[Inventory.PAPERDOLL_LHAND][1]);
+		buffer.putInt(_inv[Inventory.PAPERDOLL_LHAND][2]);
 
-		writeInt(_inv[Inventory.PAPERDOLL_LRHAND][1]);
-		writeInt(_inv[Inventory.PAPERDOLL_LRHAND][2]);
+		buffer.putInt(_inv[Inventory.PAPERDOLL_LRHAND][1]);
+		buffer.putInt(_inv[Inventory.PAPERDOLL_LRHAND][2]);
 
-		writeByte(_armorSetEnchant);	// Armor Enchant Effect
+		buffer.put((byte)_armorSetEnchant);	// Armor Enchant Effect
 
-		writeInt(_inv[Inventory.PAPERDOLL_RHAND][3]);
-		writeInt(_inv[Inventory.PAPERDOLL_LHAND][3]);
-		writeInt(_inv[Inventory.PAPERDOLL_LRHAND][3]);
-		writeInt(_inv[Inventory.PAPERDOLL_GLOVES][3]);
-		writeInt(_inv[Inventory.PAPERDOLL_CHEST][3]);
-		writeInt(_inv[Inventory.PAPERDOLL_LEGS][3]);
-		writeInt(_inv[Inventory.PAPERDOLL_FEET][3]);
-		writeInt(_inv[Inventory.PAPERDOLL_HAIR][3]);
-		writeInt(_inv[Inventory.PAPERDOLL_DHAIR][3]);
+		buffer.putInt(_inv[Inventory.PAPERDOLL_RHAND][3]);
+		buffer.putInt(_inv[Inventory.PAPERDOLL_LHAND][3]);
+		buffer.putInt(_inv[Inventory.PAPERDOLL_LRHAND][3]);
+		buffer.putInt(_inv[Inventory.PAPERDOLL_GLOVES][3]);
+		buffer.putInt(_inv[Inventory.PAPERDOLL_CHEST][3]);
+		buffer.putInt(_inv[Inventory.PAPERDOLL_LEGS][3]);
+		buffer.putInt(_inv[Inventory.PAPERDOLL_FEET][3]);
+		buffer.putInt(_inv[Inventory.PAPERDOLL_HAIR][3]);
+		buffer.putInt(_inv[Inventory.PAPERDOLL_DHAIR][3]);
 
-		writeByte(pvp_flag);
-		writeInt(karma);
+		buffer.put((byte)pvp_flag);
+		buffer.putInt(karma);
 
-		writeInt(_mAtkSpd);
-		writeInt(_pAtkSpd);
+		buffer.putInt(_mAtkSpd);
+		buffer.putInt(_pAtkSpd);
 
-		writeShort(_runSpd);
-		writeShort(_walkSpd);
-		writeShort(_swimRunSpd);
-		writeShort(_swimWalkSpd);
-		writeShort(_flRunSpd);
-		writeShort(_flWalkSpd);
-		writeShort(_flyRunSpd);
-		writeShort(_flyWalkSpd);
+		buffer.putShort((short) _runSpd);
+		buffer.putShort((short) _walkSpd);
+		buffer.putShort((short) _swimRunSpd);
+		buffer.putShort((short) _swimWalkSpd);
+		buffer.putShort((short) _flRunSpd);
+		buffer.putShort((short) _flWalkSpd);
+		buffer.putShort((short) _flyRunSpd);
+		buffer.putShort((short) _flyWalkSpd);
 
-		writeDouble(speed_move); // _cha.getProperMultiplier()
-		writeDouble(speed_atack); // _cha.getAttackSpeedMultiplier()
-		writeDouble(col_radius);
-		writeDouble(col_height);
-		writeInt(hair_style);
-		writeInt(hair_color);
-		writeInt(face);
-		writeString(_title);
-		writeInt(clan_id);
-		writeInt(clan_crest_id);
-		writeInt(ally_id);
-		writeInt(ally_crest_id);
+		buffer.putDouble(speed_move); // _cha.getProperMultiplier()
+		buffer.putDouble(speed_atack); // _cha.getAttackSpeedMultiplier()
+		buffer.putDouble(col_radius);
+		buffer.putDouble(col_height);
+		buffer.putInt(hair_style);
+		buffer.putInt(hair_color);
+		buffer.putInt(face);
+		writeString(_title, buffer);
+		buffer.putInt(clan_id);
+		buffer.putInt(clan_crest_id);
+		buffer.putInt(ally_id);
+		buffer.putInt(ally_crest_id);
 
-		writeByte(_sit);
-		writeByte(_run);
-		writeByte(_combat);
-		writeByte(_dead);
-		writeByte(0x00);
-		writeByte(mount_type); // 1-on Strider, 2-on Wyvern, 3-on Great Wolf, 0-no mount
-		writeByte(private_store);
-		writeShort(cubics.length);
+		buffer.put((byte)_sit);
+		buffer.put((byte)_run);
+		buffer.put((byte)_combat);
+		buffer.put((byte)_dead);
+		buffer.put((byte)0x00);
+		buffer.put((byte)mount_type); // 1-on Strider, 2-on Wyvern, 3-on Great Wolf, 0-no mount
+		buffer.put((byte)private_store);
+		buffer.putShort((short) cubics.length);
 		for(Cubic cubic : cubics)
-			writeShort(cubic == null ? 0 : cubic.getId());
-		writeByte(_isPartyRoomLeader ? 0x01 : 0x00); // find party members
-		writeByte(_isFlying ? 0x02 : 0x00);
-		writeShort(rec_have);
-		writeInt(mount_id);
-		writeInt(class_id);
-		writeInt(0x00);
-		writeByte(_enchant);
+			buffer.putShort((short) (cubic == null ? 0 : cubic.getId()));
+		buffer.put((byte) (_isPartyRoomLeader ? 0x01 : 0x00)); // find party members
+		buffer.put((byte) (_isFlying ? 0x02 : 0x00));
+		buffer.putShort((short) rec_have);
+		buffer.putInt(mount_id);
+		buffer.putInt(class_id);
+		buffer.putInt(0x00);
+		buffer.put((byte)_enchant);
 
-		writeByte(_team.ordinal()); // team circle around feet 1 = Blue, 2 = red
+		buffer.put((byte)_team.ordinal()); // team circle around feet 1 = Blue, 2 = red
 
-		writeInt(large_clan_crest_id);
-		writeByte(0x00);
-		writeByte(_hero);
+		buffer.putInt(large_clan_crest_id);
+		buffer.put((byte)0x00);
+		buffer.put((byte)_hero);
 
-		writeByte(_fishing);
-		writeInt(_fishLoc.x);
-		writeInt(_fishLoc.y);
-		writeInt(_fishLoc.z);
+		buffer.put((byte)_fishing);
+		buffer.putInt(_fishLoc.x);
+		buffer.putInt(_fishLoc.y);
+		buffer.putInt(_fishLoc.z);
 
-		writeInt(_nameColor);
-		writeInt(_loc.h);
-		writeByte(plg_class);
-		writeShort(pledge_type);
-		writeInt(_title_color);
-		writeByte(0x00);
-		writeInt(clan_rep_score);
-		writeInt(_transform);
-		writeInt(_agathion);
+		buffer.putInt(_nameColor);
+		buffer.putInt(_loc.h);
+		buffer.put((byte)plg_class);
+		buffer.putShort((short) pledge_type);
+		buffer.putInt(_title_color);
+		buffer.put((byte)0x00);
+		buffer.putInt(clan_rep_score);
+		buffer.putInt(_transform);
+		buffer.putInt(_agathion);
 
-		writeByte(0x01);	// UNK
+		buffer.put((byte)0x01);	// UNK
 
-		writeInt(_curCp);
-		writeInt(_curHp);
-		writeInt(_maxHp);
-		writeInt(_curMp);
-		writeInt(_maxMp);
+		buffer.putInt(_curCp);
+		buffer.putInt(_curHp);
+		buffer.putInt(_maxHp);
+		buffer.putInt(_curMp);
+		buffer.putInt(_maxMp);
 
-		writeByte(0x00);	// UNK
+		buffer.put((byte)0x00);	// UNK
 
-		writeInt(_abnormalEffects.size());
+		buffer.putInt(_abnormalEffects.size());
 		for(AbnormalEffect abnormal : _abnormalEffects)
-			writeShort(abnormal.getId());
+			buffer.putShort((short) abnormal.getId());
 
-		writeByte(0x00);	// UNK
-		writeByte(_showHeadAccessories);
-		writeByte(0x00);
+		buffer.put((byte)0x00);	// UNK
+		buffer.put((byte) (_showHeadAccessories ? 1 : 0));
+		buffer.put((byte)0x00);
 	}
 
 	public static final int[] PAPERDOLL_ORDER =

@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Servitor;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class ExPartyPetWindowDelete extends L2GameServerPacket
 {
@@ -18,11 +21,11 @@ public class ExPartyPetWindowDelete extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_summonObjectId);
-		writeInt(_type);
-		writeInt(_ownerObjectId);
-		writeString(_summonName);
+		buffer.putInt(_summonObjectId);
+		buffer.putInt(_type);
+		buffer.putInt(_ownerObjectId);
+		writeString(_summonName, buffer);
 	}
 }

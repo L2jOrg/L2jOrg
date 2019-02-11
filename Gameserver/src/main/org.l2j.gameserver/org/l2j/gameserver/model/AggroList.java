@@ -1,5 +1,7 @@
 package org.l2j.gameserver.model;
 
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.CHashIntObjectMap;
 import org.l2j.commons.collections.CollectionUtils;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ThreadPoolManager;
@@ -88,7 +90,7 @@ public class AggroList
     }
 
     private final NpcInstance _npc;
-    private final HashIntObjectMap<AggroInfo> _hateList = new HashIntObjectMap<AggroInfo>();
+    private final IntObjectMap<AggroInfo> _hateList = new CHashIntObjectMap<>();
     private final Map<Party, PartyDamage> _partyDamageMap = new HashMap<Party, PartyDamage>();
     /** Блокировка для чтения/записи объектов списка */
     private final ReadWriteLock lock = new ReentrantReadWriteLock();

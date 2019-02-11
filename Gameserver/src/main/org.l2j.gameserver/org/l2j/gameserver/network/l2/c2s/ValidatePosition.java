@@ -6,6 +6,8 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.boat.Boat;
 import org.l2j.gameserver.utils.Location;
 
+import java.nio.ByteBuffer;
+
 public class ValidatePosition extends L2GameClientPacket
 {
 	private final Location _loc = new Location();
@@ -17,21 +19,22 @@ public class ValidatePosition extends L2GameClientPacket
 	/**
 	 * packet type id 0x48
 	 * format:		cddddd
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_loc.x = readInt();
-		_loc.y = readInt();
-		_loc.z = readInt();
-		_loc.h = readInt();
-		_boatId = readInt();
+		_loc.x = buffer.getInt();
+		_loc.y = buffer.getInt();
+		_loc.z = buffer.getInt();
+		_loc.h = buffer.getInt();
+		_boatId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

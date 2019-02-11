@@ -24,20 +24,22 @@ import org.l2j.gameserver.utils.TeleportUtils;
 
 import io.github.joealisson.primitive.pair.IntObjectPair;
 
+import java.nio.ByteBuffer;
+
 public class RequestRestartPoint extends L2GameClientPacket
 {
 	private RestartType _restartType;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_restartType = ArrayUtils.valid(RestartType.VALUES, readInt());
+		_restartType = ArrayUtils.valid(RestartType.VALUES, buffer.getInt());
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 
 		if(_restartType == null || activeChar == null)
 			return;

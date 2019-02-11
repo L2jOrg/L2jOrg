@@ -5,6 +5,8 @@ import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.pledge.UnitMember;
 import org.l2j.gameserver.network.l2.s2c.PledgeReceivePowerInfo;
 
+import java.nio.ByteBuffer;
+
 public class RequestPledgeMemberPowerInfo extends L2GameClientPacket
 {
 	// format: chdS
@@ -13,16 +15,16 @@ public class RequestPledgeMemberPowerInfo extends L2GameClientPacket
 	private String _target;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_not_known = readInt();
-		_target = readS(16);
+		_not_known = buffer.getInt();
+		_target = readString(buffer, 16);
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 		Clan clan = activeChar.getClan();

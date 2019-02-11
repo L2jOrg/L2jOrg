@@ -4,8 +4,9 @@ import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Skill;
-import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.utils.Location;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author SYS
@@ -31,22 +32,23 @@ public class RequestExMagicSkillUseGround extends L2GameClientPacket
 
 	/**
 	 * packet type id 0xd0
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_loc.x = readInt();
-		_loc.y = readInt();
-		_loc.z = readInt();
-		_skillId = readInt();
-		_ctrlPressed = readInt() != 0;
-		_shiftPressed = readByte() != 0;
+		_loc.x = buffer.getInt();
+		_loc.y = buffer.getInt();
+		_loc.z = buffer.getInt();
+		_skillId = buffer.getInt();
+		_ctrlPressed = buffer.getInt() != 0;
+		_shiftPressed = buffer.get() != 0;
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

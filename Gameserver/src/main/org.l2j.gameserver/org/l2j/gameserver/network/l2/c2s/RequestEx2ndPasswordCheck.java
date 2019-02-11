@@ -5,13 +5,15 @@ import org.l2j.gameserver.network.l2.s2c.ActionFailPacket;
 import org.l2j.gameserver.network.l2.s2c.Ex2NDPasswordCheckPacket;
 import org.l2j.gameserver.security.SecondaryPasswordAuth;
 
+import java.nio.ByteBuffer;
+
 /**
  * Format: (ch)
  */
 public class RequestEx2ndPasswordCheck extends L2GameClientPacket
 {
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
 		//
 	}
@@ -19,7 +21,7 @@ public class RequestEx2ndPasswordCheck extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		SecondaryPasswordAuth spa = getClient().getSecondaryAuth();
+		SecondaryPasswordAuth spa = client.getSecondaryAuth();
 		if(Config.EX_SECOND_AUTH_ENABLED && spa == null)
 		{
 			sendPacket(ActionFailPacket.STATIC);

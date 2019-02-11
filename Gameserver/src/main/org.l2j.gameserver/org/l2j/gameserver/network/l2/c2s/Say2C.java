@@ -25,6 +25,7 @@ import org.l2j.gameserver.utils.Log;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.nio.ByteBuffer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -47,15 +48,15 @@ public class Say2C extends L2GameClientPacket {
 
 
     @Override
-    protected void readImpl() {
-        _text = readS(Config.CHAT_MESSAGE_MAX_LEN);
-        _type = ArrayUtils.valid(ChatType.VALUES, readInt());
-        _target = _type == ChatType.TELL ? readS(Config.CNAME_MAXLEN) : null;
+    protected void readImpl(ByteBuffer buffer) {
+        _text = readString(buffer, Config.CHAT_MESSAGE_MAX_LEN);
+        _type = ArrayUtils.valid(ChatType.VALUES, buffer.getInt());
+        _target = _type == ChatType.TELL ? readString(buffer, Config.CNAME_MAXLEN) : null;
     }
 
     @Override
     protected void runImpl() {
-        Player activeChar = getClient().getActiveChar();
+        Player activeChar = client.getActiveChar();
         if (activeChar == null)
             return;
 

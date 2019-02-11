@@ -4,6 +4,8 @@ import org.l2j.gameserver.instancemanager.clansearch.ClanSearchManager;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.s2c.ExPledgeRecruitApplyInfo;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author GodWorld
  * @reworked by Bonux
@@ -11,7 +13,7 @@ import org.l2j.gameserver.network.l2.s2c.ExPledgeRecruitApplyInfo;
 public class RequestPledgeRecruitApplyInfo extends L2GameClientPacket
 {
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
 		//
 	}
@@ -19,7 +21,7 @@ public class RequestPledgeRecruitApplyInfo extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

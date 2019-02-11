@@ -1,9 +1,11 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.Collection;
 
 import org.l2j.gameserver.instancemanager.clansearch.ClanSearchManager;
 import org.l2j.gameserver.model.clansearch.ClanSearchPlayer;
+import org.l2j.gameserver.network.l2.GameClient;
 
 /**
  * @author GodWorld
@@ -19,15 +21,15 @@ public class ExPledgeWaitingList extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_applicants.size());
+		buffer.putInt(_applicants.size());
 		for(ClanSearchPlayer applicant : _applicants)
 		{
-			writeInt(applicant.getCharId());
-			writeString(applicant.getName());
-			writeInt(applicant.getClassId());
-			writeInt(applicant.getLevel());
+			buffer.putInt(applicant.getCharId());
+			writeString(applicant.getName(), buffer);
+			buffer.putInt(applicant.getClassId());
+			buffer.putInt(applicant.getLevel());
 		}
 	}
 }

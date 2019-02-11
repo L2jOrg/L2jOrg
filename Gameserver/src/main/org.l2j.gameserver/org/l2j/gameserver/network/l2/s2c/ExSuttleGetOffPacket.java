@@ -2,7 +2,10 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Playable;
 import org.l2j.gameserver.model.entity.boat.Shuttle;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.utils.Location;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author Bonux
@@ -20,12 +23,12 @@ public class ExSuttleGetOffPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_playerObjectId); // Player ObjID
-		writeInt(_shuttleId); // Shuttle ID (Arkan: 1,2; Cruma: 3)
-		writeInt(_loc.x); // X in shuttle
-		writeInt(_loc.y); // Y in shuttle
-		writeInt(_loc.z); // Z in shuttle
+		buffer.putInt(_playerObjectId); // Player ObjID
+		buffer.putInt(_shuttleId); // Shuttle ID (Arkan: 1,2; Cruma: 3)
+		buffer.putInt(_loc.x); // X in shuttle
+		buffer.putInt(_loc.y); // Y in shuttle
+		buffer.putInt(_loc.z); // Z in shuttle
 	}
 }

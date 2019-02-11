@@ -1,10 +1,10 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.l2j.commons.dao.JdbcEntityState;
-import org.l2j.gameserver.Contants;
 import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.dao.CharacterDAO;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;
@@ -37,19 +37,19 @@ public class RequestBR_PresentBuyProduct extends L2GameClientPacket
     private String _topic;
     private String _message;
 
-    protected void readImpl() throws Exception
+    protected void readImpl(ByteBuffer buffer) throws Exception
     {
-        _productId = readInt();
-        _count = readInt();
-        _receiverName = readString();
-        _topic = readString();
-        _message = readString();
+        _productId = buffer.getInt();
+        _count = buffer.getInt();
+        _receiverName = readString(buffer);
+        _topic = readString(buffer);
+        _message = readString(buffer);
     }
 
     @Override
     protected void runImpl() throws Exception
     {
-        Player activeChar = getClient().getActiveChar();
+        Player activeChar = client.getActiveChar();
         if(activeChar == null)
             return;
 

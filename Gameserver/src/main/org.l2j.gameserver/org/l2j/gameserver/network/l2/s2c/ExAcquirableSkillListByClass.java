@@ -1,9 +1,11 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.model.base.AcquireType;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.l2j.gameserver.model.base.AcquireType;
 
 /**
  * Reworked: VISTALL
@@ -50,21 +52,21 @@ public class ExAcquirableSkillListByClass extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeShort(_type.getId());
-		writeShort(_skills.size());
+		buffer.putShort((short) _type.getId());
+		buffer.putShort((short) _skills.size());
 
 		for(Skill temp : _skills)
 		{
-			writeInt(temp.id);
-			writeShort(temp.nextLevel);
-			writeShort(temp.maxLevel);
-			writeByte(temp.requirements);
-			writeLong(temp.cost);
-			writeByte(0x01); // UNK
+			buffer.putInt(temp.id);
+			buffer.putShort((short) temp.nextLevel);
+			buffer.putShort((short) temp.maxLevel);
+			buffer.put((byte)temp.requirements);
+			buffer.putLong(temp.cost);
+			buffer.put((byte)0x01); // UNK
 			if(_type == AcquireType.SUB_UNIT)
-				writeShort(temp.subUnit);
+				buffer.putShort((short) temp.subUnit);
 		}
 	}
 }

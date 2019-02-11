@@ -1,5 +1,7 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
+
 /**
  * format: ddS
  */
@@ -13,11 +15,11 @@ public class PetitionVote extends L2GameClientPacket
 	{}
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_type = readInt();
-		_unk1 = readInt(); // possible always zero
-		_petitionText = readS(4096);
+		_type = buffer.getInt();
+		_unk1 = buffer.getInt(); // possible always zero
+		_petitionText = readString(buffer, 4096);
 		// not done
 	}
 }

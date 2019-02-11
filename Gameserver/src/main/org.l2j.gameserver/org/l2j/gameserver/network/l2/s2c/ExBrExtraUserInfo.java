@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 //@Deprecated
 public class ExBrExtraUserInfo extends L2GameServerPacket
@@ -17,10 +20,10 @@ public class ExBrExtraUserInfo extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_objectId); //object id of player
-		writeInt(_effect3); // event effect id
-		writeByte(_lectureMark);
+		buffer.putInt(_objectId); //object id of player
+		buffer.putInt(_effect3); // event effect id
+		buffer.put((byte)_lectureMark);
 	}
 }

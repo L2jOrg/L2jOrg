@@ -1,11 +1,13 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.l2j.gameserver.data.xml.holder.InstantZoneHolder;
 import org.l2j.gameserver.instancemanager.MatchingRoomManager;
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
 
 
 public class ExListPartyMatchingWaitingRoom extends L2GameServerPacket
@@ -26,19 +28,19 @@ public class ExListPartyMatchingWaitingRoom extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_fullSize);
-		writeInt(_waitingList.size());
+		buffer.putInt(_fullSize);
+		buffer.putInt(_waitingList.size());
 		for(PartyMatchingWaitingInfo waitingInfo : _waitingList)
 		{
-			writeString(waitingInfo.name);
-			writeInt(waitingInfo.classId);
-			writeInt(waitingInfo.level);
-			writeInt(waitingInfo.locationId);
-			writeInt(waitingInfo.instanceReuses.size());
+			writeString(waitingInfo.name, buffer);
+			buffer.putInt(waitingInfo.classId);
+			buffer.putInt(waitingInfo.level);
+			buffer.putInt(waitingInfo.locationId);
+			buffer.putInt(waitingInfo.instanceReuses.size());
 			for(int i : waitingInfo.instanceReuses)
-				writeInt(i);
+				buffer.putInt(i);
 		}
 	}
 

@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 /**
  * @author Bonux
 **/
@@ -18,9 +22,9 @@ public class ExPut_Shape_Shifting_Target_Item_Result extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_resultId);
-		writeLong(_price);
+		buffer.putInt(_resultId);
+		buffer.putLong(_price);
 	}
 }

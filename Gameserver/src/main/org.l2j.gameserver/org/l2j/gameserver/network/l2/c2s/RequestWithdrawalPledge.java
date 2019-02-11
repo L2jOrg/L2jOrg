@@ -8,18 +8,20 @@ import org.l2j.gameserver.network.l2.s2c.PledgeShowMemberListDeletePacket;
 import org.l2j.gameserver.network.l2.s2c.PledgeShowMemberListDeleteAllPacket;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 
+import java.nio.ByteBuffer;
+
 import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 public class RequestWithdrawalPledge extends L2GameClientPacket
 {
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

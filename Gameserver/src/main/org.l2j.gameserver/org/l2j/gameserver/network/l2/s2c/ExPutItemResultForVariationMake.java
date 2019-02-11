@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ExPutItemResultForVariationMake extends L2GameServerPacket
 {
 	private int _itemObjId;
@@ -14,10 +18,10 @@ public class ExPutItemResultForVariationMake extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_itemObjId);
-		writeInt(_unk1);
-		writeInt(_unk2);
+		buffer.putInt(_itemObjId);
+		buffer.putInt(_unk1);
+		buffer.putInt(_unk2);
 	}
 }

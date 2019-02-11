@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
 import java.util.Arrays;
 
 import org.l2j.gameserver.cache.CrestCache;
@@ -17,16 +18,16 @@ public class RequestPledgeCrestLarge extends L2GameClientPacket
 	private int _pledgeId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_crestId = readInt();
-		_pledgeId = readInt();
+		_crestId = buffer.getInt();
+		_pledgeId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

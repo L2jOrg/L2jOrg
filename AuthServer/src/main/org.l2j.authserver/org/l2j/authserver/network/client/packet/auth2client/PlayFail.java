@@ -18,7 +18,10 @@
  */
 package org.l2j.authserver.network.client.packet.auth2client;
 
+import org.l2j.authserver.network.client.AuthClient;
 import org.l2j.authserver.network.client.packet.L2LoginServerPacket;
+
+import java.nio.ByteBuffer;
 
 public final class PlayFail extends L2LoginServerPacket {
 
@@ -30,14 +33,14 @@ public final class PlayFail extends L2LoginServerPacket {
 	}
 	
 	@Override
-	protected void writeImpl() {
-		writeByte(0x06);
-		writeByte(_reason.getCode());
+	protected void writeImpl(AuthClient client, ByteBuffer buffer) {
+		buffer.put((byte)0x06);
+		buffer.put((byte)_reason.getCode());
 	}
 
     @Override
-    protected int packetSize() {
-        return super.packetSize() + 2;
+    protected int size(AuthClient client) {
+        return super.size(client) + 2;
     }
 
     public enum PlayFailReason

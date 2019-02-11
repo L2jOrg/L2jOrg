@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 /**
  * format: cS
  */
@@ -13,9 +17,9 @@ public class FriendAddRequest extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeByte(0); // 0
-		writeString(_requestorName);
+		buffer.put((byte)0); // 0
+		writeString(_requestorName, buffer);
 	}
 }

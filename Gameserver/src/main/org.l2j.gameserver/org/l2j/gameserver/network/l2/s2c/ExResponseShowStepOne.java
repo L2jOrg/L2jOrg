@@ -1,10 +1,12 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.Collection;
 
 import org.l2j.gameserver.data.xml.holder.PetitionGroupHolder;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.petition.PetitionMainGroup;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.utils.Language;
 
 /**
@@ -20,14 +22,14 @@ public class ExResponseShowStepOne extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
 		Collection<PetitionMainGroup> petitionGroups = PetitionGroupHolder.getInstance().getPetitionGroups();
-		writeInt(petitionGroups.size());
+		buffer.putInt(petitionGroups.size());
 		for(PetitionMainGroup group : petitionGroups)
 		{
-			writeByte(group.getId());
-			writeString(group.getName(_language));
+			buffer.put((byte)group.getId());
+			writeString(group.getName(_language), buffer);
 		}
 	}
 }

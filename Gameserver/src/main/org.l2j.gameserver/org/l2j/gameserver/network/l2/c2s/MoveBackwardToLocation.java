@@ -7,6 +7,8 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ActionFailPacket;
 import org.l2j.gameserver.utils.Location;
 
+import java.nio.ByteBuffer;
+
 // cdddddd(d)
 public class MoveBackwardToLocation extends L2GameClientPacket
 {
@@ -17,18 +19,19 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 
 	/**
 	 * packet type id 0x0f
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_targetLoc.x = readInt();
-		_targetLoc.y = readInt();
-		_targetLoc.z = readInt();
-		_originLoc.x = readInt();
-		_originLoc.y = readInt();
-		_originLoc.z = readInt();
-		if(availableData() >= 4)
-			_moveMovement = readInt();
+		_targetLoc.x = buffer.getInt();
+		_targetLoc.y = buffer.getInt();
+		_targetLoc.z = buffer.getInt();
+		_originLoc.x = buffer.getInt();
+		_originLoc.y = buffer.getInt();
+		_originLoc.z = buffer.getInt();
+		if(buffer.remaining() >= 4)
+			_moveMovement = buffer.getInt();
 	}
 
 	@Override

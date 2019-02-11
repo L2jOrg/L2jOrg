@@ -1,5 +1,8 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,15 +38,15 @@ public class ExCuriousHouseObserveList extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_arenas.size());
+		buffer.putInt(_arenas.size());
 		for (ArenaInfo arena : _arenas)
 		{
-			writeInt(arena.id);
-			writeString(arena.unk);
-			writeShort(arena.status);
-			writeInt(arena.participants);
+			buffer.putInt(arena.id);
+			writeString(arena.unk, buffer);
+			buffer.putShort((short) arena.status);
+			buffer.putInt(arena.participants);
 		}
 	}
 }

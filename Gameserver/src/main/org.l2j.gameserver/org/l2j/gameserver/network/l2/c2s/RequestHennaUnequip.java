@@ -4,23 +4,26 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.actor.instances.player.Henna;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 
+import java.nio.ByteBuffer;
+
 public class RequestHennaUnequip extends L2GameClientPacket
 {
 	private int _symbolId;
 
 	/**
 	 * format: d
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_symbolId = readInt();
+		_symbolId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Creature;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * 0000: 3e 2a 89 00 4c 01 00 00 00                         .|...
@@ -22,10 +25,10 @@ public class ChangeMoveTypePacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_chaId);
-		writeInt(_running ? 1 : 0);
-		writeInt(0); //c2
+		buffer.putInt(_chaId);
+		buffer.putInt(_running ? 1 : 0);
+		buffer.putInt(0); //c2
 	}
 }

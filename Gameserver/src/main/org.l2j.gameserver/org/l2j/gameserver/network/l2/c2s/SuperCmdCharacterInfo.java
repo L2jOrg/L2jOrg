@@ -1,5 +1,7 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
+
 /**
  * Format chS
  * c: (id) 0x39
@@ -12,9 +14,9 @@ class SuperCmdCharacterInfo extends L2GameClientPacket
 	private String _characterName;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_characterName = readString();
+		_characterName = readString(buffer);
 	}
 
 	@Override

@@ -1,6 +1,9 @@
 package org.l2j.authserver.network.client.packet.auth2client;
 
+import org.l2j.authserver.network.client.AuthClient;
 import org.l2j.authserver.network.client.packet.L2LoginServerPacket;
+
+import java.nio.ByteBuffer;
 
 public final class PlayOk extends L2LoginServerPacket {
     private final int serverId;
@@ -10,16 +13,16 @@ public final class PlayOk extends L2LoginServerPacket {
     }
 
     @Override
-    protected void writeImpl() {
+    protected void writeImpl(AuthClient client, ByteBuffer buffer) {
         var sessionKey = client.getSessionKey();
-        writeByte(0x07);
-        writeInt(sessionKey.gameServerSessionId);
-        writeInt(sessionKey.gameServerAccountId);
-        writeByte(serverId);
+        buffer.put((byte)0x07);
+        buffer.putInt(sessionKey.gameServerSessionId);
+        buffer.putInt(sessionKey.gameServerAccountId);
+        buffer.put((byte)serverId);
     }
 
     @Override
-    protected int packetSize() {
-        return super.packetSize() + 10;
+    protected int size(AuthClient client) {
+        return super.size(client) + 10;
     }
 }

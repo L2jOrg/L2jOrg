@@ -3,7 +3,6 @@ package org.l2j.gameserver.network.l2.c2s;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Request;
 import org.l2j.gameserver.model.Request.L2RequestType;
-import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.pledge.ClanWar;
 import org.l2j.gameserver.model.pledge.ClanWar.ClanWarPeriod;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
@@ -11,6 +10,8 @@ import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author GodWorld & reworked by Bonux
@@ -22,16 +23,16 @@ public final class RequestReplyStartPledgeWar extends L2GameClientPacket
 	private int _answer;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		/*String _reqName = */readString();
-		_answer = readInt();
+		/*String _reqName = */readString(buffer);
+		_answer = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

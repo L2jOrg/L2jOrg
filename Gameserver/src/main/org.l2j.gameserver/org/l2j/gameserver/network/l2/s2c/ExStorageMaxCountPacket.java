@@ -2,6 +2,9 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class ExStorageMaxCountPacket extends L2GameServerPacket
 {
@@ -28,18 +31,18 @@ public class ExStorageMaxCountPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_inventory);
-		writeInt(_warehouse);
-		writeInt(_clan);
-		writeInt(_privateSell);
-		writeInt(_privateBuy);
-		writeInt(_recipeDwarven);
-		writeInt(_recipeCommon);
-		writeInt(_inventoryExtraSlots); // belt inventory slots increase count
-		writeInt(_questItemsLimit); //  quests list  by off 100 maximum
-		writeInt(40); // ??? 40 slots
-		writeInt(40); // ??? 40 slots
+		buffer.putInt(_inventory);
+		buffer.putInt(_warehouse);
+		buffer.putInt(_clan);
+		buffer.putInt(_privateSell);
+		buffer.putInt(_privateBuy);
+		buffer.putInt(_recipeDwarven);
+		buffer.putInt(_recipeCommon);
+		buffer.putInt(_inventoryExtraSlots); // belt inventory slots increase count
+		buffer.putInt(_questItemsLimit); //  quests list  by off 100 maximum
+		buffer.putInt(40); // ??? 40 slots
+		buffer.putInt(40); // ??? 40 slots
 	}
 }

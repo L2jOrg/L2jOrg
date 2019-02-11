@@ -17,6 +17,8 @@ import org.l2j.gameserver.templates.player.PlayerTemplate;
 import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.Util;
 
+import java.nio.ByteBuffer;
+
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class CharacterCreate extends L2GameClientPacket
@@ -30,21 +32,20 @@ public class CharacterCreate extends L2GameClientPacket
     private int _face;
 
     @Override
-    protected void readImpl()
-    {
-        _name = readString();
-        readInt(); // race
-        _sex = readInt();
-        _classId = readInt();
-        readInt(); // int
-        readInt(); // str
-        readInt(); // con
-        readInt(); // men
-        readInt(); // dex
-        readInt(); // wit
-        _hairStyle = readInt();
-        _hairColor = readInt();
-        _face = readInt();
+    protected void readImpl(ByteBuffer buffer) {
+        _name = readString(buffer);
+        buffer.getInt(); // race
+        _sex = buffer.getInt();
+        _classId = buffer.getInt();
+        buffer.getInt(); // int
+        buffer.getInt(); // str
+        buffer.getInt(); // con
+        buffer.getInt(); // men
+        buffer.getInt(); // dex
+        buffer.getInt(); // wit
+        _hairStyle = buffer.getInt();
+        _hairColor = buffer.getInt();
+        _face = buffer.getInt();
     }
 
     @Override
@@ -54,7 +55,7 @@ public class CharacterCreate extends L2GameClientPacket
         if(cid == null || !cid.isOfLevel(ClassLevel.NONE))
             return;
 
-        if(CharacterDAO.getInstance().accountCharNumber(getClient().getLogin()) >= 8)
+        if(CharacterDAO.getInstance().accountCharNumber(client.getLogin()) >= 8)
             return;
 
         if(!Util.isMatchingRegexp(_name, getSettings(ServerSettings.class).charNameTemaplate()))
@@ -62,12 +63,12 @@ public class CharacterCreate extends L2GameClientPacket
         else if(CharacterDAO.getInstance().getObjectIdByName(_name) > 0)
             return;
 
-        Player newChar = Player.create(_classId, _sex, getClient().getLogin(), _name, _hairStyle, _hairColor, _face);
+        Player newChar = Player.create(_classId, _sex, client.getLogin(), _name, _hairStyle, _hairColor, _face);
         if(newChar == null)
             return;
 
         initNewChar(newChar);
-        getClient().setCharSelection(CharacterSelectionInfoPacket.loadCharacterSelectInfo(getClient().getLogin()));
+        client.setCharSelection(CharacterSelectionInfoPacket.loadCharacterSelectInfo(client.getLogin()));
         sendPacket(CharacterCreateSuccessPacket.STATIC);
 
     }

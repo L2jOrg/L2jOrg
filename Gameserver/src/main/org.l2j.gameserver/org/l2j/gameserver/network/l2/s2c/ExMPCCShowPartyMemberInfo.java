@@ -1,10 +1,12 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
 
 /**
  * Format: ch d[Sdd]
@@ -22,15 +24,15 @@ public class ExMPCCShowPartyMemberInfo extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(members.size()); // Количество членов в пати
+		buffer.putInt(members.size()); // Количество членов в пати
 
 		for(PartyMemberInfo member : members)
 		{
-			writeString(member.name); // Имя члена пати
-			writeInt(member.object_id); // object Id члена пати
-			writeInt(member.class_id); // id класса члена пати
+			writeString(member.name, buffer); // Имя члена пати
+			buffer.putInt(member.object_id); // object Id члена пати
+			buffer.putInt(member.class_id); // id класса члена пати
 		}
 
 		members.clear();

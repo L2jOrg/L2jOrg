@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.utils.Location;
+
+import java.nio.ByteBuffer;
 
 /**
  * format   dddddd
@@ -19,13 +22,13 @@ public class EarthQuakePacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_loc.x);
-		writeInt(_loc.y);
-		writeInt(_loc.z);
-		writeInt(_intensity);
-		writeInt(_duration);
-		writeInt(0x00); // Unknown
+		buffer.putInt(_loc.x);
+		buffer.putInt(_loc.y);
+		buffer.putInt(_loc.z);
+		buffer.putInt(_intensity);
+		buffer.putInt(_duration);
+		buffer.putInt(0x00); // Unknown
 	}
 }

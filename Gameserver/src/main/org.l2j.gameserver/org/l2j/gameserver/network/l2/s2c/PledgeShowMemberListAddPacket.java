@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.pledge.UnitMember;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class PledgeShowMemberListAddPacket extends L2GameServerPacket
 {
@@ -12,16 +15,16 @@ public class PledgeShowMemberListAddPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeString(_member._name);
-		writeInt(_member._level);
-		writeInt(_member._classId);
-		writeInt(_member._sex);
-		writeInt(_member._race);
-		writeInt(_member._online);
-		writeInt(_member._pledgeType);
-		writeByte(_member._attendance);
+		writeString(_member._name, buffer);
+		buffer.putInt(_member._level);
+		buffer.putInt(_member._classId);
+		buffer.putInt(_member._sex);
+		buffer.putInt(_member._race);
+		buffer.putInt(_member._online);
+		buffer.putInt(_member._pledgeType);
+		buffer.put((byte)_member._attendance);
 	}
 
 	private class PledgePacketMember

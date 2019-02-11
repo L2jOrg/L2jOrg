@@ -1,11 +1,12 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.List;
 
 import org.l2j.gameserver.instancemanager.clansearch.ClanSearchManager;
 import org.l2j.gameserver.model.clansearch.ClanSearchPlayer;
 import org.l2j.gameserver.model.clansearch.ClanSearchWaiterParams;
-import org.l2j.gameserver.model.clansearch.base.ClanSearchListType;
+import org.l2j.gameserver.network.l2.GameClient;
 
 /**
  * @author GodWorld
@@ -21,16 +22,16 @@ public class ExPledgeDraftListSearch extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_waiters.size());
+		buffer.putInt(_waiters.size());
 		for(ClanSearchPlayer waiter : _waiters)
 		{
-			writeInt(waiter.getCharId());
-			writeString(waiter.getName());
-			writeInt(waiter.getSearchType().ordinal());
-			writeInt(waiter.getClassId());
-			writeInt(waiter.getLevel());
+			buffer.putInt(waiter.getCharId());
+			writeString(waiter.getName(), buffer);
+			buffer.putInt(waiter.getSearchType().ordinal());
+			buffer.putInt(waiter.getClassId());
+			buffer.putInt(waiter.getLevel());
 		}
 	}
 }

@@ -10,6 +10,8 @@ import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.templates.item.support.EnchantScroll;
 import org.l2j.gameserver.utils.Log;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author Bonux
 **/
@@ -19,16 +21,16 @@ public class RequestExAddEnchantScrollItem extends L2GameClientPacket
 	private int _itemObjectId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_scrollObjectId = readInt();
-		_itemObjectId = readInt();
+		_scrollObjectId = buffer.getInt();
+		_itemObjectId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

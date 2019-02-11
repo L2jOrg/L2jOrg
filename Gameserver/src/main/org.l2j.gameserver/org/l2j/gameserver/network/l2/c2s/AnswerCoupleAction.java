@@ -9,6 +9,8 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.utils.Location;
 
+import java.nio.ByteBuffer;
+
 public class AnswerCoupleAction extends L2GameClientPacket
 {
 	private int _charObjId;
@@ -16,17 +18,16 @@ public class AnswerCoupleAction extends L2GameClientPacket
 	private int _answer;
 
 	@Override
-	protected void readImpl()
-	{
-		_actionId = readInt();
-		_answer = readInt();
-		_charObjId = readInt();
+	protected void readImpl(ByteBuffer buffer) {
+		_actionId = buffer.getInt();
+		_answer = buffer.getInt();
+		_charObjId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

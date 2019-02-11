@@ -6,6 +6,9 @@ import io.github.joealisson.primitive.pair.IntIntPair;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.quest.QuestRepeatType;
 import org.l2j.gameserver.model.quest.QuestState;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * format: h[dd]b
@@ -64,13 +67,13 @@ public class QuestListPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeShort(_quests.size());
+		buffer.putShort((short) _quests.size());
 		for (IntIntPair pair : _quests.entrySet()) {
-			writeInt(pair.getKey());
-			writeInt(pair.getValue());
+			buffer.putInt(pair.getKey());
+			buffer.putInt(pair.getValue());
 		}
-		writeBytes(_completedQuestsMask);
+		buffer.put(_completedQuestsMask);
 	}
 }

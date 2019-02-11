@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ExCleftState extends L2GameServerPacket
 {
 	public static final int CleftState_Total = 0;
@@ -11,9 +15,9 @@ public class ExCleftState extends L2GameServerPacket
 	private int CleftState = 0; //TODO
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(CleftState);
+		buffer.putInt(CleftState);
 		switch(CleftState)
 		{
 			case CleftState_Total:

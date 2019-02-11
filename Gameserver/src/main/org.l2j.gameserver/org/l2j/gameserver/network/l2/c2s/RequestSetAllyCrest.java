@@ -4,26 +4,28 @@ import org.l2j.gameserver.cache.CrestCache;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.pledge.Alliance;
 
+import java.nio.ByteBuffer;
+
 public class RequestSetAllyCrest extends L2GameClientPacket
 {
 	private int _length;
 	private byte[] _data;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_length = readInt();
-		if(_length == CrestCache.ALLY_CREST_SIZE && _length == availableData())
+		_length = buffer.getInt();
+		if(_length == CrestCache.ALLY_CREST_SIZE && _length == buffer.remaining())
 		{
 			_data = new byte[_length];
-			readBytes(_data);
+			buffer.get(_data);
 		}
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

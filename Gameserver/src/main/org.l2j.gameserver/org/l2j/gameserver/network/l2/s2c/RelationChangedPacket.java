@@ -2,7 +2,9 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Playable;
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -69,28 +71,28 @@ public class RelationChangedPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeByte(_mask);
+		buffer.put((byte)_mask);
 		if((_mask & SEND_MULTI) == SEND_MULTI)
 		{
-			writeByte(_datas.size());
+			buffer.put((byte)_datas.size());
 			for(RelationChangedData data : _datas)
-				writeRelation(data);
+				writeRelation(buffer, data);
 		}
 		else if((_mask & SEND_ONE) == SEND_ONE)
-			writeRelation(_datas.get(0));
+			writeRelation(buffer, _datas.get(0));
 		else if((_mask & SEND_DEFAULT) == SEND_DEFAULT)
-			writeInt(_datas.get(0).objectId);
+			buffer.putInt(_datas.get(0).objectId);
 	}
 
-	private void writeRelation(RelationChangedData data)
+	private void writeRelation(ByteBuffer buffer, RelationChangedData data)
 	{
-		writeInt(data.objectId);
-		writeInt(data.relation);
-		writeByte(data.isAutoAttackable);
-		writeInt(data.karma);
-		writeByte(data.pvpFlag);
+		buffer.putInt(data.objectId);
+		buffer.putInt(data.relation);
+		buffer.put((byte) (data.isAutoAttackable ? 0x01 : 0x00));
+		buffer.putInt(data.karma);
+		buffer.put((byte)data.pvpFlag);
 	}
 
 	private static class RelationChangedData

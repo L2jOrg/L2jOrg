@@ -1,13 +1,14 @@
 package org.l2j.authserver.network.gameserver;
 
-import org.l2j.authserver.controller.ThreadPoolManager;
-import org.l2j.authserver.network.gameserver.packet.game2auth.*;
-import io.github.joealisson.mmocore.DataWrapper;
 import io.github.joealisson.mmocore.PacketExecutor;
 import io.github.joealisson.mmocore.PacketHandler;
 import io.github.joealisson.mmocore.ReadablePacket;
+import org.l2j.authserver.controller.ThreadPoolManager;
+import org.l2j.authserver.network.gameserver.packet.game2auth.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.nio.ByteBuffer;
 
 import static java.lang.Byte.toUnsignedInt;
 import static org.l2j.authserver.network.gameserver.packet.auth2game.LoginGameServerFail.NOT_AUTHED;
@@ -17,8 +18,8 @@ public final class GameServerPacketHandler implements PacketHandler<ServerClient
     private static final Logger logger = LoggerFactory.getLogger(GameServerPacketHandler.class);
 
     @Override
-    public ReadablePacket<ServerClient> handlePacket(DataWrapper data, ServerClient client) {
-        var opcode = toUnsignedInt(data.get());
+    public ReadablePacket<ServerClient> handlePacket(ByteBuffer buffer, ServerClient client) {
+        var opcode = toUnsignedInt(buffer.get());
         switch (client.getState()) {
             case CONNECTED:
                 return handlePacketInConnected(client, opcode);

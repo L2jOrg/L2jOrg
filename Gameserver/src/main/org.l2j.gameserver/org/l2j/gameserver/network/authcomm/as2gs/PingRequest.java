@@ -4,11 +4,12 @@ import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.ReceivablePacket;
 import org.l2j.gameserver.network.authcomm.gs2as.PingResponse;
 
-public class PingRequest extends ReceivablePacket
-{
+import java.nio.ByteBuffer;
+
+public class PingRequest extends ReceivablePacket {
+
 	@Override
-	public void readImpl()
-	{
+	public void readImpl(ByteBuffer buffer) {
 
 	}
 

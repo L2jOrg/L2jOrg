@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class SocialActionPacket extends L2GameServerPacket
 {
 	private int _playerId;
@@ -46,10 +50,10 @@ public class SocialActionPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_playerId);
-		writeInt(_actionId);
-		writeInt(0); // ??? 0
+		buffer.putInt(_playerId);
+		buffer.putInt(_actionId);
+		buffer.putInt(0); // ??? 0
 	}
 }

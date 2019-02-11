@@ -5,25 +5,27 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ActionFailPacket;
 
+import java.nio.ByteBuffer;
+
 public class Action extends L2GameClientPacket
 {
 	private int _objectId;
 	private int _actionId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_objectId = readInt();
-		readInt(); //x
-		readInt(); //y
-		readInt(); //z
-		_actionId = readByte();// 0 for simple click  1 for shift click
+		_objectId = buffer.getInt();
+		buffer.getInt(); //x
+		buffer.getInt(); //y
+		buffer.getInt(); //z
+		_actionId = buffer.get();// 0 for simple click  1 for shift click
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

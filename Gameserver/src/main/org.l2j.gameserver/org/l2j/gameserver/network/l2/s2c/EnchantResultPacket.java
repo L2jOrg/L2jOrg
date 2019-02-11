@@ -1,5 +1,11 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import io.github.joealisson.mmocore.StaticPacket;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
+@StaticPacket
 public class EnchantResultPacket extends L2GameServerPacket
 {
 	private final int _resultId, _crystalId;
@@ -22,14 +28,14 @@ public class EnchantResultPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_resultId);
-		writeInt(_crystalId); // item id кристаллов
-		writeLong(_count); // количество кристаллов
-		writeInt(_enchantLevel); // уровень заточки
-		writeShort(0x00); // uNK
-		writeShort(0x00); // uNK
-		writeShort(0x00); // uNK
+		buffer.putInt(_resultId);
+		buffer.putInt(_crystalId); // item id кристаллов
+		buffer.putLong(_count); // количество кристаллов
+		buffer.putInt(_enchantLevel); // уровень заточки
+		buffer.putShort((short) 0x00); // uNK
+		buffer.putShort((short) 0x00); // uNK
+		buffer.putShort((short) 0x00); // uNK
 	}
 }

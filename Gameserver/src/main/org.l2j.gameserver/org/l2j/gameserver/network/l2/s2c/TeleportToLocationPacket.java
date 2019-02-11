@@ -2,7 +2,10 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.GameObject;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.utils.Location;
+
+import java.nio.ByteBuffer;
 
 /**
  * format  dddd
@@ -29,14 +32,14 @@ public class TeleportToLocationPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_targetId);
-		writeInt(_loc.x);
-		writeInt(_loc.y);
-		writeInt(_loc.z + Config.CLIENT_Z_SHIFT);
-		writeInt(0x00); //IsValidation
-		writeInt(_loc.h);
-		writeInt(0); // ??? 0
+		buffer.putInt(_targetId);
+		buffer.putInt(_loc.x);
+		buffer.putInt(_loc.y);
+		buffer.putInt(_loc.z + Config.CLIENT_Z_SHIFT);
+		buffer.putInt(0x00); //IsValidation
+		buffer.putInt(_loc.h);
+		buffer.putInt(0); // ??? 0
 	}
 }

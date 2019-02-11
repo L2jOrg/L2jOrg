@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.matching.MatchingRoom;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class ExMpccRoomInfo extends L2GameServerPacket
 {
@@ -24,14 +27,14 @@ public class ExMpccRoomInfo extends L2GameServerPacket
 	}
 
 	@Override
-	public void writeImpl()
+	public void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_index); //index
-		writeInt(_memberSize); // member size 1-50
-		writeInt(_minLevel); //min level
-		writeInt(_maxLevel); //max level
-		writeInt(_lootType); //loot type
-		writeInt(_locationId); //location id as party room
-		writeString(_topic); //topic
+		buffer.putInt(_index); //index
+		buffer.putInt(_memberSize); // member size 1-50
+		buffer.putInt(_minLevel); //min level
+		buffer.putInt(_maxLevel); //max level
+		buffer.putInt(_lootType); //loot type
+		buffer.putInt(_locationId); //location id as party room
+		writeString(_topic, buffer); //topic
 	}
 }

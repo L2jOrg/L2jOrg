@@ -2,7 +2,10 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.items.ItemInstance;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author VISTALL
@@ -60,8 +63,8 @@ public class SystemMessagePacket extends SysMsgContainer<SystemMessagePacket>
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeElements();
+		writeElements(buffer);
 	}
 }

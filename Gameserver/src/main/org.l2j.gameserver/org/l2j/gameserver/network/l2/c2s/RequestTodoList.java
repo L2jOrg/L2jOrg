@@ -5,6 +5,8 @@ import org.l2j.gameserver.network.l2.s2c.ExConnectedTimeAndGettableReward;
 import org.l2j.gameserver.network.l2.s2c.ExOneDayReceiveRewardList;
 import org.l2j.gameserver.network.l2.s2c.ExTodoListInzone;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author Bonux
  **/
@@ -15,10 +17,10 @@ public class RequestTodoList extends L2GameClientPacket
 	private boolean _showAllLevels;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_tab = readByte(); // Daily Reward = 9, Event = 1, Instance Zone = 2
-		_showAllLevels = readByte() > 0; // Disabled = 0, Enabled = 1
+		_tab = buffer.get(); // Daily Reward = 9, Event = 1, Instance Zone = 2
+		_showAllLevels = buffer.get() > 0; // Disabled = 0, Enabled = 1
 	}
 
 	@Override
@@ -34,7 +36,7 @@ public class RequestTodoList extends L2GameClientPacket
 			}
 			case 9:
 			{
-				Player activeChar = getClient().getActiveChar();
+				Player activeChar = client.getActiveChar();
 				if(activeChar == null)
 					sendPacket(new ExOneDayReceiveRewardList());
 				else

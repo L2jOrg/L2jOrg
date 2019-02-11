@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.instances.NpcInstance;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class MonRaceInfoPacket extends L2GameServerPacket
 {
@@ -24,30 +27,30 @@ public class MonRaceInfoPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_unknown1);
-		writeInt(_unknown2);
-		writeInt(8);
+		buffer.putInt(_unknown1);
+		buffer.putInt(_unknown2);
+		buffer.putInt(8);
 
 		for(int i = 0; i < 8; i++)
 		{
 			//logger.info.println("MOnster "+(i+1)+" npcid "+_monsters[i].getNpcTemplate().getNpcId());
-			writeInt(_monsters[i].getObjectId()); //npcObjectID
-			writeInt(_monsters[i].getNpcId() + 1000000); //npcID
-			writeInt(14107); //origin X
-			writeInt(181875 + 58 * (7 - i)); //origin Y
-			writeInt(-3566); //origin Z
-			writeInt(12080); //end X
-			writeInt(181875 + 58 * (7 - i)); //end Y
-			writeInt(-3566); //end Z
-			writeDouble(_monsters[i].getCollisionHeight()); //coll. height
-			writeDouble(_monsters[i].getCollisionRadius()); //coll. radius
-			writeInt(120); // ?? unknown
+			buffer.putInt(_monsters[i].getObjectId()); //npcObjectID
+			buffer.putInt(_monsters[i].getNpcId() + 1000000); //npcID
+			buffer.putInt(14107); //origin X
+			buffer.putInt(181875 + 58 * (7 - i)); //origin Y
+			buffer.putInt(-3566); //origin Z
+			buffer.putInt(12080); //end X
+			buffer.putInt(181875 + 58 * (7 - i)); //end Y
+			buffer.putInt(-3566); //end Z
+			buffer.putDouble(_monsters[i].getCollisionHeight()); //coll. height
+			buffer.putDouble(_monsters[i].getCollisionRadius()); //coll. radius
+			buffer.putInt(120); // ?? unknown
 			for(int j = 0; j < 20; j++)
-				writeByte(_unknown1 == 0 ? _speeds[i][j] : 0);
-			writeInt(0);
-			writeInt(0x00); // ? GraciaFinal
+				buffer.put((byte) (_unknown1 == 0 ? _speeds[i][j] : 0));
+			buffer.putInt(0);
+			buffer.putInt(0x00); // ? GraciaFinal
 		}
 	}
 }

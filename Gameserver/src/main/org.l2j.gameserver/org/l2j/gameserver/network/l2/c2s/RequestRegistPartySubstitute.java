@@ -5,22 +5,23 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ExRegistPartySubstitute;
-import org.l2j.gameserver.network.l2.s2c.ExRegistWaitingSubstituteOk;
+
+import java.nio.ByteBuffer;
 
 public class RequestRegistPartySubstitute extends L2GameClientPacket
 {
 	private int _objectId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_objectId = readInt();
+		_objectId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		final Player activeChar = getClient().getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

@@ -10,13 +10,15 @@ import org.l2j.gameserver.network.l2.s2c.ExEnchantSucess;
 import org.l2j.gameserver.templates.item.support.SynthesisData;
 import org.l2j.gameserver.utils.ItemFunctions;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author Bonux
 **/
 public class RequestNewEnchantTry extends L2GameClientPacket
 {
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
 		//
 	}
@@ -24,7 +26,7 @@ public class RequestNewEnchantTry extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final Player activeChar = getClient().getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

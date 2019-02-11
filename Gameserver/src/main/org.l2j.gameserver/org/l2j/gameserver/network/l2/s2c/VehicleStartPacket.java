@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.entity.boat.Boat;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class VehicleStartPacket extends L2GameServerPacket
 {
@@ -13,9 +16,9 @@ public class VehicleStartPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_objectId);
-		writeInt(_state);
+		buffer.putInt(_objectId);
+		buffer.putInt(_state);
 	}
 }

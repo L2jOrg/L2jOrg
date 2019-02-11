@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class SnoopPacket extends L2GameServerPacket
 {
     private int _convoID;
@@ -30,16 +34,16 @@ public class SnoopPacket extends L2GameServerPacket
     }
 
     @Override
-    protected final void writeImpl()
+    protected final void writeImpl(GameClient client, ByteBuffer buffer)
     {
-        writeInt(_convoID);
-        writeString(_name);
-        writeInt(0x00); // ??
-        writeInt(_type);
-        writeString(_speaker);
-        //writeInt(_fStringId);
+        buffer.putInt(_convoID);
+        writeString(_name, buffer);
+        buffer.putInt(0x00); // ??
+        buffer.putInt(_type);
+        writeString(_speaker, buffer);
+        //buffer.putInt(_fStringId);
 		/*for(String param : _params)
-			writeString(param);*/
-        writeString(_msg);
+			writeString(param, buffer);*/
+        writeString(_msg, buffer);
     }
 }

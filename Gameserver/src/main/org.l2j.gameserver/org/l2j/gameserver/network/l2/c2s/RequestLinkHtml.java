@@ -9,6 +9,8 @@ import org.l2j.gameserver.utils.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.nio.ByteBuffer;
+
 /**
  *
  * @author n0nam3
@@ -23,15 +25,15 @@ public class RequestLinkHtml extends L2GameClientPacket
 	private String _link;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_link = readString();
+		_link = readString(buffer);
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

@@ -1,13 +1,13 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import org.l2j.gameserver.model.Playable;
-import org.l2j.gameserver.model.actor.instances.creature.Abnormal;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.utils.AbnormalsComparator;
-import org.l2j.gameserver.utils.SkillUtils;
 
 public class PartySpelledPacket extends L2GameServerPacket
 {
@@ -34,17 +34,17 @@ public class PartySpelledPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_type);
-		writeInt(_objId);
-		writeInt(_effects.size());
+		buffer.putInt(_type);
+		buffer.putInt(_objId);
+		buffer.putInt(_effects.size());
 		for(Abnormal temp : _effects)
 		{
-			writeInt(temp._skillId);
-			writeShort(temp._level);
-			writeInt(0x00); // UNK Ertheia
-			writeShort(temp._duration);
+			buffer.putInt(temp._skillId);
+			buffer.putShort((short) temp._level);
+			buffer.putInt(0x00); // UNK Ertheia
+			buffer.putShort((short) temp._duration);
 		}
 	}
 

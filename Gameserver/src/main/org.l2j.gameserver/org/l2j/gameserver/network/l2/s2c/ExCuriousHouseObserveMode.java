@@ -1,5 +1,11 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import io.github.joealisson.mmocore.StaticPacket;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
+@StaticPacket
 public class ExCuriousHouseObserveMode extends L2GameServerPacket
 {
 	public static final L2GameServerPacket ENTER = new ExCuriousHouseObserveMode(false);
@@ -13,8 +19,8 @@ public class ExCuriousHouseObserveMode extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeByte(_leave);
+		buffer.put((byte) (_leave ? 1 : 0));
 	}
 }

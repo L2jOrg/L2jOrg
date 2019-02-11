@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class EtcStatusUpdatePacket extends L2GameServerPacket
 {
@@ -55,15 +58,15 @@ public class EtcStatusUpdatePacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
 		// cdccccc
-		writeByte(_increasedForce); // skill id 4271, 7 lvl
-		writeInt(_weightPenalty); // skill id 4270, 4 lvl
-		writeByte(_weaponPenalty); // weapon grade penalty, skill 6209 in epilogue
-		writeByte(_armorPenalty); // armor grade penalty, skill 6213 in epilogue
-		writeByte(0x00); //Death Penalty max lvl 15, "Combat ability is decreased due to death."
-		writeByte(_consumedSouls);
-		writeByte(_flags);
+		buffer.put((byte)_increasedForce); // skill id 4271, 7 lvl
+		buffer.putInt(_weightPenalty); // skill id 4270, 4 lvl
+		buffer.put((byte)_weaponPenalty); // weapon grade penalty, skill 6209 in epilogue
+		buffer.put((byte)_armorPenalty); // armor grade penalty, skill 6213 in epilogue
+		buffer.put((byte)0x00); //Death Penalty max lvl 15, "Combat ability is decreased due to death."
+		buffer.put((byte)_consumedSouls);
+		buffer.put((byte)_flags);
 	}
 }

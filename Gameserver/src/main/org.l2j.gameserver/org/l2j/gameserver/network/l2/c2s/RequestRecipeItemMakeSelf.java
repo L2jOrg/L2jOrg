@@ -16,6 +16,8 @@ import org.l2j.gameserver.templates.item.data.ChancedItemData;
 import org.l2j.gameserver.templates.item.data.ItemData;
 import org.l2j.gameserver.utils.ItemFunctions;
 
+import java.nio.ByteBuffer;
+
 public class RequestRecipeItemMakeSelf extends L2GameClientPacket
 {
 	private int _recipeId;
@@ -23,17 +25,18 @@ public class RequestRecipeItemMakeSelf extends L2GameClientPacket
 	/**
 	 * packet type id 0xB8
 	 * format:		cd
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_recipeId = readInt();
+		_recipeId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

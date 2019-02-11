@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Skill.SkillMagicType;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author : Bonux
@@ -17,9 +20,9 @@ public class ExChangeMPCost extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_type);
-		writeDouble(_value);
+		buffer.putInt(_type);
+		buffer.putDouble(_value);
 	}
 }

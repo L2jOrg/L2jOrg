@@ -2,6 +2,8 @@ package org.l2j.gameserver.network.l2.c2s;
 
 import org.l2j.gameserver.network.l2.s2c.ExBR_LoadEventTopRankers;
 
+import java.nio.ByteBuffer;
+
 public class RequestExBR_EventRankerList extends L2GameClientPacket
 {
 	private static final String _C__D0_7B_BREVENTRANKERLIST = "[C] D0:7B BrEventRankerList";
@@ -11,11 +13,11 @@ public class RequestExBR_EventRankerList extends L2GameClientPacket
 	@SuppressWarnings("unused")
 	private int _ranking;
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_eventId = readInt();
-		_day = readInt(); // 0 - current, 1 - previous
-		_ranking = readInt();
+		_eventId = buffer.getInt();
+		_day = buffer.getInt(); // 0 - current, 1 - previous
+		_ranking = buffer.getInt();
 	}
 
 	@Override
@@ -25,7 +27,7 @@ public class RequestExBR_EventRankerList extends L2GameClientPacket
 		int count = 0;
 		int bestScore = 0;
 		int myScore = 0;
-		getClient().sendPacket(new ExBR_LoadEventTopRankers(_eventId, _day, count, bestScore, myScore));
+		client.sendPacket(new ExBR_LoadEventTopRankers(_eventId, _day, count, bestScore, myScore));
 	}
 
 	@Override

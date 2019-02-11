@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public final class ExAutoFishAvailable extends L2GameServerPacket
 {
 	public static final L2GameServerPacket REMOVE = new ExAutoFishAvailable(0);
@@ -14,8 +18,8 @@ public final class ExAutoFishAvailable extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeByte(_type);
+		buffer.put((byte)_type);
 	}
 }

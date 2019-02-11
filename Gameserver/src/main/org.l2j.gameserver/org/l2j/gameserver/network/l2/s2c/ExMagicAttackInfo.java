@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 /**
  * @author monithly
  */
@@ -23,10 +27,10 @@ public class ExMagicAttackInfo extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_attackerId);
-		writeInt(_targetId);
-		writeInt(_info);
+		buffer.putInt(_attackerId);
+		buffer.putInt(_targetId);
+		buffer.putInt(_info);
 	}
 }

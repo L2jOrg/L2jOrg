@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ExDuelAskStart extends L2GameServerPacket
 {
 	String _requestor;
@@ -12,9 +16,9 @@ public class ExDuelAskStart extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeString(_requestor);
-		writeInt(_isPartyDuel);
+		writeString(_requestor, buffer);
+		buffer.putInt(_isPartyDuel);
 	}
 }

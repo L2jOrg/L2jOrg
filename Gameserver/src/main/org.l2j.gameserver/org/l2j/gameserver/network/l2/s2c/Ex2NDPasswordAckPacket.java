@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class Ex2NDPasswordAckPacket extends L2GameServerPacket
 {
 	public static final int SUCCESS = 0x00;
@@ -13,10 +17,10 @@ public class Ex2NDPasswordAckPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeByte(0x00);
-		writeInt(_response == WRONG_PATTERN ? 0x01 : 0x00);
-		writeInt(0x00);
+		buffer.put((byte)0x00);
+		buffer.putInt(_response == WRONG_PATTERN ? 0x01 : 0x00);
+		buffer.putInt(0x00);
 	}
 }

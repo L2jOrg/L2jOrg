@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,6 +11,7 @@ import org.l2j.gameserver.model.base.RestartType;
 import org.l2j.gameserver.model.entity.events.Event;
 import org.l2j.gameserver.model.instances.MonsterInstance;
 import org.l2j.gameserver.model.pledge.Clan;
+import org.l2j.gameserver.network.l2.GameClient;
 
 public class DiePacket extends L2GameServerPacket
 {
@@ -65,25 +67,25 @@ public class DiePacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_objectId);
-		writeInt(get(RestartType.TO_VILLAGE)); // to nearest village
-		writeInt(get(RestartType.TO_CLANHALL)); // to hide away
-		writeInt(get(RestartType.TO_CASTLE)); // to castle
-		writeInt(get(RestartType.TO_FLAG));// to siege HQ
-		writeInt(_sweepable ? 0x01 : 0x00); // sweepable  (blue glow)
-		writeInt(get(RestartType.FIXED));// FIXED
-		writeInt(0x00); //unk
-		writeInt(_blessingFeatherDelay);
-		writeInt(get(RestartType.ADVENTURES_SONG));
-		writeByte(_hideDieAnimation ? 0x01 : 0x00);
-		writeInt(get(RestartType.AGATHION));//agathion ress button
+		buffer.putInt(_objectId);
+		buffer.putInt(get(RestartType.TO_VILLAGE) ? 1 : 0); // to nearest village
+		buffer.putInt(get(RestartType.TO_CLANHALL) ? 1 : 0); // to hide away
+		buffer.putInt(get(RestartType.TO_CASTLE) ? 1 : 0); // to castle
+		buffer.putInt(get(RestartType.TO_FLAG) ? 1 : 0);// to siege HQ
+		buffer.putInt(_sweepable ? 0x01 : 0x00); // sweepable  (blue glow)
+		buffer.putInt(get(RestartType.FIXED) ? 1 : 0);// FIXED
+		buffer.putInt(0x00); //unk
+		buffer.putInt(_blessingFeatherDelay);
+		buffer.putInt(get(RestartType.ADVENTURES_SONG) ? 1 : 0);
+		buffer.put((byte) (_hideDieAnimation ? 0x01 : 0x00));
+		buffer.putInt(get(RestartType.AGATHION) ? 1 : 0);//agathion ress button
 
 		int itemsCount = 0;
-		writeInt(itemsCount);
+		buffer.putInt(itemsCount);
 		for(int i = 0; i < itemsCount; i++)
-			writeInt(0x00); //additional free space
+			buffer.putInt(0x00); //additional free space
 	}
 
 	private void put(RestartType t, boolean b)

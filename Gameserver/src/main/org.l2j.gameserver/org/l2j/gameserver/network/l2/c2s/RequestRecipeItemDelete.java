@@ -5,20 +5,22 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.s2c.RecipeBookItemListPacket;
 import org.l2j.gameserver.templates.item.RecipeTemplate;
 
+import java.nio.ByteBuffer;
+
 public class RequestRecipeItemDelete extends L2GameClientPacket
 {
 	private int _recipeId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_recipeId = readInt();
+		_recipeId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

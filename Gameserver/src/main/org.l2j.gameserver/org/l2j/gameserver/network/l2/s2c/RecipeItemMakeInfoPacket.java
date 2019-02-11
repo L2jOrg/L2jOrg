@@ -1,7 +1,10 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.templates.item.RecipeTemplate;
+
+import java.nio.ByteBuffer;
 
 /**
  * format ddddd
@@ -24,12 +27,12 @@ public class RecipeItemMakeInfoPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_id); //ID рецепта
-		writeInt(_isCommon ? 0x01 : 0x00);
-		writeInt(_curMP);
-		writeInt(_maxMP);
-		writeInt(_status); //итог крафта; 0xFFFFFFFF нет статуса, 0 удача, 1 провал
+		buffer.putInt(_id); //ID рецепта
+		buffer.putInt(_isCommon ? 0x01 : 0x00);
+		buffer.putInt(_curMP);
+		buffer.putInt(_maxMP);
+		buffer.putInt(_status); //итог крафта; 0xFFFFFFFF нет статуса, 0 удача, 1 провал
 	}
 }

@@ -1,8 +1,10 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.Collection;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.templates.item.RecipeTemplate;
 
 public class RecipeBookItemListPacket extends L2GameServerPacket
@@ -22,17 +24,17 @@ public class RecipeBookItemListPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_isDwarvenCraft ? 0x00 : 0x01);
-		writeInt(_currentMp);
+		buffer.putInt(_isDwarvenCraft ? 0x00 : 0x01);
+		buffer.putInt(_currentMp);
 
-		writeInt(_recipes.size());
+		buffer.putInt(_recipes.size());
 
 		for(RecipeTemplate recipe : _recipes)
 		{
-			writeInt(recipe.getId());
-			writeInt(1); //??
+			buffer.putInt(recipe.getId());
+			buffer.putInt(1); //??
 		}
 	}
 }

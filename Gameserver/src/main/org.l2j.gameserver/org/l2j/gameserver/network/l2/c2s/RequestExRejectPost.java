@@ -9,6 +9,8 @@ import org.l2j.gameserver.network.l2.s2c.ExNoticePostArrived;
 import org.l2j.gameserver.network.l2.s2c.ExReplyReceivedPost;
 import org.l2j.gameserver.network.l2.s2c.ExShowReceivedPostList;
 
+import java.nio.ByteBuffer;
+
 /**
  * Шлется клиентом как запрос на отказ принять письмо из {@link ExReplyReceivedPost}. Если к письму приложены вещи то их надо вернуть отправителю.
  */
@@ -18,17 +20,18 @@ public class RequestExRejectPost extends L2GameClientPacket
 
 	/**
 	 * format: d
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		postId = readInt();
+		postId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

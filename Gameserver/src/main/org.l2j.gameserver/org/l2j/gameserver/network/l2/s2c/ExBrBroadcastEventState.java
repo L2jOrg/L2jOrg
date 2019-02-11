@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ExBrBroadcastEventState extends L2GameServerPacket
 {
 	private int _eventId;
@@ -39,16 +43,16 @@ public class ExBrBroadcastEventState extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_eventId);
-		writeInt(_eventState);
-		writeInt(_param0);
-		writeInt(_param1);
-		writeInt(_param2);
-		writeInt(_param3);
-		writeInt(_param4);
-		writeString(_param5);
-		writeString(_param6);
+		buffer.putInt(_eventId);
+		buffer.putInt(_eventState);
+		buffer.putInt(_param0);
+		buffer.putInt(_param1);
+		buffer.putInt(_param2);
+		buffer.putInt(_param3);
+		buffer.putInt(_param4);
+		writeString(_param5, buffer);
+		writeString(_param6, buffer);
 	}
 }

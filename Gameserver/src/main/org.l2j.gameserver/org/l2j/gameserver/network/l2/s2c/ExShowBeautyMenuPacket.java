@@ -1,7 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.network.l2.s2c.L2GameServerPacket;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author Bonux
@@ -25,11 +27,11 @@ public class ExShowBeautyMenuPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_type);  // 0x00 - изменение стиля, 0x01 отмена стиля
-		writeInt(_hairStyle);
-		writeInt(_hairColor);
-		writeInt(_face);
+		buffer.putInt(_type);  // 0x00 - изменение стиля, 0x01 отмена стиля
+		buffer.putInt(_hairStyle);
+		buffer.putInt(_hairColor);
+		buffer.putInt(_face);
 	}
 }

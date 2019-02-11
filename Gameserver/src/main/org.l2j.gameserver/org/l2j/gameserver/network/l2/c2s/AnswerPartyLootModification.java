@@ -3,20 +3,22 @@ package org.l2j.gameserver.network.l2.c2s;
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.Player;
 
+import java.nio.ByteBuffer;
+
 public class AnswerPartyLootModification extends L2GameClientPacket
 {
 	public int _answer;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_answer = readInt();
+		_answer = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

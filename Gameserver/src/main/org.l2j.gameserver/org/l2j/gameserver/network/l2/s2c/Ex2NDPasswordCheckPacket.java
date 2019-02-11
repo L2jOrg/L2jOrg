@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 /**
  * Format (ch)dd
  * d: window type
@@ -19,9 +23,9 @@ public class Ex2NDPasswordCheckPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_windowType);
-		writeInt(0x00);
+		buffer.putInt(_windowType);
+		buffer.putInt(0x00);
 	}
 }

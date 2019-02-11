@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class ShowMinimapPacket extends L2GameServerPacket
 {
@@ -12,9 +15,9 @@ public class ShowMinimapPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_mapId);
-		writeByte(0x00);
+		buffer.putInt(_mapId);
+		buffer.put((byte)0x00);
 	}
 }

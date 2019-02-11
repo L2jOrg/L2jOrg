@@ -4,6 +4,8 @@ import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.GameObject;
 import org.l2j.gameserver.model.Player;
 
+import java.nio.ByteBuffer;
+
 public class AttackRequest extends L2GameClientPacket
 {
 	// cddddc
@@ -14,19 +16,19 @@ public class AttackRequest extends L2GameClientPacket
 	private int _attackId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_objectId = readInt();
-		_originX = readInt();
-		_originY = readInt();
-		_originZ = readInt();
-		_attackId = readByte(); // 0 for simple click   1 for shift-click
+		_objectId = buffer.getInt();
+		_originX = buffer.getInt();
+		_originY = buffer.getInt();
+		_originZ = buffer.getInt();
+		_attackId = buffer.get(); // 0 for simple click   1 for shift-click
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

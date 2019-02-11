@@ -7,6 +7,8 @@ import org.l2j.gameserver.network.l2.s2c.SendStatus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.nio.ByteBuffer;
+
 /**
  * packet type id 0x0E
  * format:	cdbd
@@ -18,9 +20,9 @@ public class ProtocolVersion extends L2GameClientPacket
 	private int version;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		version = readInt();
+		version = buffer.getInt();
 	}
 
 	@Override
@@ -33,18 +35,18 @@ public class ProtocolVersion extends L2GameClientPacket
 		}
 		else if(version == -3)
 		{
-			_log.info("Status request from IP : " + getClient().getIpAddr());
-			getClient().close(new SendStatus());
+			_log.info("Status request from IP : " + client.getIpAddr());
+			client.close(new SendStatus());
 			return;
 		}
 		else if(!Config.AVAILABLE_PROTOCOL_REVISIONS.contains(version))
 		{
 			_log.warn("Unknown protocol revision : {}, client : {}", version, client);
-			getClient().close(new VersionCheckPacket(null));
+			client.close(new VersionCheckPacket(null));
 			return;
 		}
 
-		getClient().setRevision(version);
+		client.setRevision(version);
 		sendPacket(new VersionCheckPacket(client.enableCrypt()));
 	}
 }

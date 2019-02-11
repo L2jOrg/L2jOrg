@@ -7,24 +7,25 @@ import org.l2j.gameserver.network.l2.s2c.ActionFailPacket;
 import org.l2j.gameserver.network.l2.s2c.CharacterSelectedPacket;
 import org.l2j.gameserver.utils.AutoBan;
 
+import java.nio.ByteBuffer;
+
 public class CharacterSelected extends L2GameClientPacket
 {
 	private int _charSlot;
 
 	/**
 	 * Format: cdhddd
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_charSlot = readInt();
+		_charSlot = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		GameClient client = getClient();
-
 		if(client.getActiveChar() != null)
 			return;
 

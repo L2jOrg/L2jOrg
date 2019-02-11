@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.base.SoulShotType;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class ExAutoSoulShot extends L2GameServerPacket
 {
@@ -17,10 +20,10 @@ public class ExAutoSoulShot extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_itemId);
-		writeInt(_slotId);
-		writeInt(_type);
+		buffer.putInt(_itemId);
+		buffer.putInt(_slotId);
+		buffer.putInt(_type);
 	}
 }

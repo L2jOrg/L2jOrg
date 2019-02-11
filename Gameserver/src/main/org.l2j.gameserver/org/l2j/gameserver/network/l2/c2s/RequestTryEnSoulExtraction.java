@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
 import java.util.List;
 
 import org.l2j.gameserver.data.xml.holder.EnsoulHolder;
@@ -19,17 +20,17 @@ public class RequestTryEnSoulExtraction extends L2GameClientPacket
 	private int _itemObjectId, _ensoulType, _ensoulId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_itemObjectId = readInt();
-		_ensoulType = readByte();
-		_ensoulId = readByte();
+		_itemObjectId = buffer.getInt();
+		_ensoulType = buffer.get();
+		_ensoulId = buffer.get();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

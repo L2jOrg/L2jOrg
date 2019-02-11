@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 /**
  * @author GodWorld
  * @reworked by Bonux
@@ -15,9 +19,9 @@ public class ExPledgeWaitingUser extends L2GameServerPacket
 		_desc = desc;
 	}
 
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_charId);
-		writeString(_desc);
+		buffer.putInt(_charId);
+		writeString(_desc, buffer);
 	}
 }

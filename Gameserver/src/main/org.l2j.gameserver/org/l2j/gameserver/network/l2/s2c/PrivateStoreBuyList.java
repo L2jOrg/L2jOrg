@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +10,7 @@ import org.l2j.gameserver.model.items.TradeItem;
 
 import io.github.joealisson.primitive.sets.IntSet;
 import io.github.joealisson.primitive.sets.impl.HashIntSet;
+import org.l2j.gameserver.network.l2.GameClient;
 
 public class PrivateStoreBuyList extends L2GameServerPacket
 {
@@ -59,19 +61,19 @@ public class PrivateStoreBuyList extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_buyerId);
-		writeLong(_adena);
-		writeInt(70);
-		writeInt(_sellList.size());
+		buffer.putInt(_buyerId);
+		buffer.putLong(_adena);
+		buffer.putInt(70);
+		buffer.putInt(_sellList.size());
 		for(TradeItem si : _sellList)
 		{
-			writeItemInfo(si, si.getCurrentValue());
-			writeInt(si.getObjectId());
-			writeLong(si.getOwnersPrice());
-			writeLong(si.getStorePrice());
-			writeLong(si.getCount()); // maximum possible tradecount
+			writeItemInfo(buffer, si, si.getCurrentValue());
+			buffer.putInt(si.getObjectId());
+			buffer.putLong(si.getOwnersPrice());
+			buffer.putLong(si.getStorePrice());
+			buffer.putLong(si.getCount()); // maximum possible tradecount
 		}
 	}
 }

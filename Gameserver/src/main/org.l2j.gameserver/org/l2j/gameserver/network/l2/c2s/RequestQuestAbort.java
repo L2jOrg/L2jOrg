@@ -6,20 +6,22 @@ import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 
+import java.nio.ByteBuffer;
+
 public class RequestQuestAbort extends L2GameClientPacket
 {
 	private int _questID;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_questID = readInt();
+		_questID = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		Quest quest = QuestHolder.getInstance().getQuest(_questID);
 		if(activeChar == null || quest == null)
 			return;

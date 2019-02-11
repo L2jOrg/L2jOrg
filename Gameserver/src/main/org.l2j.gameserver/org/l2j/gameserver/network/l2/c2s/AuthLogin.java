@@ -9,6 +9,8 @@ import org.l2j.gameserver.network.l2.s2c.LoginResultPacket;
 import org.l2j.gameserver.network.l2.s2c.ServerCloseSocketPacket;
 import org.l2j.gameserver.utils.Language;
 
+import java.nio.ByteBuffer;
+
 /**
  * cSddddd
  * cSdddddQ
@@ -24,21 +26,20 @@ public class AuthLogin extends L2GameClientPacket
     private int _lang;
 
     @Override
-    protected void readImpl()
-    {
-        _loginName = readS(32).toLowerCase();
-        _playKey2 = readInt();
-        _playKey1 = readInt();
-        _loginKey1 = readInt();
-        _loginKey2 = readInt();
-        _lang = readInt();
-        readInt();
+    protected void readImpl(ByteBuffer buffer) {
+        _loginName = readString(buffer, 32).toLowerCase();
+        _playKey2 = buffer.getInt();
+        _playKey1 = buffer.getInt();
+        _loginKey1 = buffer.getInt();
+        _loginKey2 = buffer.getInt();
+        _lang = buffer.getInt();
+        buffer.getInt();
     }
 
     @Override
     protected void runImpl()
     {
-        GameClient client = getClient();
+
 
         SessionKey key = new SessionKey(_loginKey1, _loginKey2, _playKey1, _playKey2);
         client.setSessionId(key);

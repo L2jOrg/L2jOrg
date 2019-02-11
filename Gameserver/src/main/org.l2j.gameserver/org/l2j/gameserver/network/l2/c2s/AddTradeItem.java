@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
 import java.util.List;
 
 import org.l2j.commons.math.SafeMath;
@@ -22,17 +23,16 @@ public class AddTradeItem extends L2GameClientPacket
 	private long _amount;
 
 	@Override
-	protected void readImpl()
-	{
-		_tradeId = readInt(); // 1 ?
-		_objectId = readInt();
-		_amount = readLong();
+	protected void readImpl(ByteBuffer buffer) {
+		_tradeId = buffer.getInt(); // 1 ?
+		_objectId = buffer.getInt();
+		_amount = buffer.getLong();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player parthner1 = getClient().getActiveChar();
+		Player parthner1 = client.getActiveChar();
 		if(parthner1 == null || _amount < 1)
 			return;
 		

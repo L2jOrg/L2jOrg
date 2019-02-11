@@ -9,6 +9,8 @@ import org.l2j.gameserver.network.l2.s2c.ExReplyReceivedPost;
 import org.l2j.gameserver.network.l2.s2c.ExShowReceivedPostList;
 import org.l2j.gameserver.network.l2.s2c.ExUnReadMailCount;
 
+import java.nio.ByteBuffer;
+
 /**
  * Запрос информации об полученном письме. Появляется при нажатии на письмо из списка {@link ExShowReceivedPostList}.
  * @see RequestExRequestSentPost
@@ -19,17 +21,18 @@ public class RequestExRequestReceivedPost extends L2GameClientPacket
 
 	/**
 	 * format: d
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		postId = readInt(); // id письма
+		postId = buffer.getInt(); // id письма
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

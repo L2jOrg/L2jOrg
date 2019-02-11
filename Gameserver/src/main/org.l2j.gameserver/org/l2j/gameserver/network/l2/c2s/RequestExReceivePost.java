@@ -1,10 +1,10 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
 import java.util.Set;
 
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.math.SafeMath;
-import org.l2j.gameserver.Contants;
 import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.dao.MailDAO;
 import org.l2j.gameserver.model.Player;
@@ -16,7 +16,6 @@ import org.l2j.gameserver.network.l2.s2c.ExReplyReceivedPost;
 import org.l2j.gameserver.network.l2.s2c.ExShowReceivedPostList;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.taskmanager.DelayedItemsManager;
-import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.utils.Log;
 
 import static org.l2j.commons.util.Util.isNullOrEmpty;
@@ -30,17 +29,18 @@ public class RequestExReceivePost extends L2GameClientPacket
 
 	/**
 	 * format: d
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		postId = readInt();
+		postId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

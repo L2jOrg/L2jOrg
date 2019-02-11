@@ -7,6 +7,8 @@ import org.l2j.gameserver.network.l2.components.CustomMessage;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.utils.Location;
 
+import java.nio.ByteBuffer;
+
 public class RequestDropItem extends L2GameClientPacket
 {
 	private int _objectId;
@@ -14,17 +16,17 @@ public class RequestDropItem extends L2GameClientPacket
 	private Location _loc;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_objectId = readInt();
-		_count = readLong();
-		_loc = new Location(readInt(), readInt(), readInt());
+		_objectId = buffer.getInt();
+		_count = buffer.getLong();
+		_loc = new Location(buffer.getInt(), buffer.getInt(), buffer.getInt());
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

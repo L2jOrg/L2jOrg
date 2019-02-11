@@ -1,7 +1,10 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.network.l2.c2s.RequestExRequestReceivedPostList;
 import io.github.joealisson.mmocore.StaticPacket;
+
+import java.nio.ByteBuffer;
 
 /**
  * Уведомление о получении почты. При нажатии на него клиент отправляет {@link RequestExRequestReceivedPostList}.
@@ -18,12 +21,12 @@ public class ExNoticePostArrived extends L2GameServerPacket {
 	}
 
 	@Override
-	protected void writeImpl() {
-		writeInt(_anim); // 0 - просто показать уведомление, 1 - с красивой анимацией
+	protected void writeImpl(GameClient client, ByteBuffer buffer) {
+		buffer.putInt(_anim); // 0 - просто показать уведомление, 1 - с красивой анимацией
 	}
 
 	@Override
-	protected int packetSize() {
+	protected int size(GameClient client) {
 		return 9;
 	}
 }

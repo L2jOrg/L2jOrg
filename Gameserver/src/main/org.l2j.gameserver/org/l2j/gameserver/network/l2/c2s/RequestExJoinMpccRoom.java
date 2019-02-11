@@ -4,6 +4,8 @@ import org.l2j.gameserver.instancemanager.MatchingRoomManager;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author VISTALL
  */
@@ -12,15 +14,15 @@ public class RequestExJoinMpccRoom extends L2GameClientPacket
 	private int _roomId;
 
 	@Override
-	protected void readImpl() throws Exception
+	protected void readImpl(ByteBuffer buffer) throws Exception
 	{
-		_roomId = readInt();
+		_roomId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl() throws Exception
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

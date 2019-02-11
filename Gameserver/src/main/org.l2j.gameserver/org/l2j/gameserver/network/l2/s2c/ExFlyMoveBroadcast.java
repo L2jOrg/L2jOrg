@@ -1,7 +1,10 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.utils.Location;
+
+import java.nio.ByteBuffer;
 
 public class ExFlyMoveBroadcast extends L2GameServerPacket
 {
@@ -17,21 +20,21 @@ public class ExFlyMoveBroadcast extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_objId);
+		buffer.putInt(_objId);
 
-		writeInt(0x01); //TODO: [Bonux] Maybe TYPE
-		writeInt(0x00); //TODO: [Bonux]
+		buffer.putInt(0x01); //TODO: [Bonux] Maybe TYPE
+		buffer.putInt(0x00); //TODO: [Bonux]
 
-		writeInt(_loc.getX());
-		writeInt(_loc.getY());
-		writeInt(_loc.getZ());
+		buffer.putInt(_loc.getX());
+		buffer.putInt(_loc.getY());
+		buffer.putInt(_loc.getZ());
 
-		writeInt(0x00); //TODO: [Bonux]
+		buffer.putInt(0x00); //TODO: [Bonux]
 
-		writeInt(_destLoc.getX());
-		writeInt(_destLoc.getY());
-		writeInt(_destLoc.getZ());
+		buffer.putInt(_destLoc.getX());
+		buffer.putInt(_destLoc.getY());
+		buffer.putInt(_destLoc.getZ());
 	}
 }

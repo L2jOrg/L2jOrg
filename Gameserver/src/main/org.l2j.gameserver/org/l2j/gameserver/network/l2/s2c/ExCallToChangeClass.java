@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 /**
  * @author : Ragnarok
  * @date : 28.03.12  16:23
@@ -16,9 +20,9 @@ public class ExCallToChangeClass extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_classId); // New Class Id
-		writeInt(_showMsg); // Show Message
+		buffer.putInt(_classId); // New Class Id
+		buffer.putInt(_showMsg ? 1 : 0); // Show Message
 	}
 }

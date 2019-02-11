@@ -5,14 +5,16 @@ import org.l2j.gameserver.model.items.ItemInfo;
 import org.l2j.gameserver.network.l2.s2c.ActionFailPacket;
 import org.l2j.gameserver.network.l2.s2c.ExRpItemLink;
 
+import java.nio.ByteBuffer;
+
 public class RequestExRqItemLink extends L2GameClientPacket
 {
 	private int _objectId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_objectId = readInt();
+		_objectId = buffer.getInt();
 	}
 
 	@Override

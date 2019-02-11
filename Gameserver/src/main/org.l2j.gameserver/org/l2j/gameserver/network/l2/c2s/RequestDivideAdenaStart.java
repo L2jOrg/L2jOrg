@@ -4,13 +4,15 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ExDivideAdenaStart;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author Erlandys
  */
 public class RequestDivideAdenaStart extends L2GameClientPacket
 {
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
 		//
 	}
@@ -18,7 +20,7 @@ public class RequestDivideAdenaStart extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -8,6 +9,7 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInfo;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.model.items.Warehouse;
+import org.l2j.gameserver.network.l2.GameClient;
 
 /**
  * @author VISTALL
@@ -33,15 +35,15 @@ public class PackageSendableListPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_targetObjectId);
-		writeLong(_adena);
-		writeInt(_itemList.size());
+		buffer.putInt(_targetObjectId);
+		buffer.putLong(_adena);
+		buffer.putInt(_itemList.size());
 		for(ItemInfo item : _itemList)
 		{
-			writeItemInfo(item);
-			writeInt(item.getObjectId());
+			writeItemInfo(buffer, item);
+			buffer.putInt(item.getObjectId());
 		}
 	}
 }

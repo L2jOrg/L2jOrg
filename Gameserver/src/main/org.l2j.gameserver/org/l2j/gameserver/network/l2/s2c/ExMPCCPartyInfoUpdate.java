@@ -2,6 +2,9 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * ch Sddd
@@ -25,11 +28,11 @@ public class ExMPCCPartyInfoUpdate extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeString(_leader.getName());
-		writeInt(_leader.getObjectId());
-		writeInt(_count);
-		writeInt(_mode); // mode 0 = Remove Party, 1 = AddParty, maybe more...
+		writeString(_leader.getName(), buffer);
+		buffer.putInt(_leader.getObjectId());
+		buffer.putInt(_count);
+		buffer.putInt(_mode); // mode 0 = Remove Party, 1 = AddParty, maybe more...
 	}
 }

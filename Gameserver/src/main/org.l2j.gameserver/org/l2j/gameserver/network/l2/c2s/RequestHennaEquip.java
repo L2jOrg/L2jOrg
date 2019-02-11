@@ -6,6 +6,8 @@ import org.l2j.gameserver.model.actor.instances.player.Henna;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.templates.HennaTemplate;
 
+import java.nio.ByteBuffer;
+
 public class RequestHennaEquip extends L2GameClientPacket
 {
 	private int _symbolId;
@@ -13,17 +15,18 @@ public class RequestHennaEquip extends L2GameClientPacket
 	/**
 	 * packet type id 0x6F
 	 * format:		cd
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_symbolId = readInt();
+		_symbolId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

@@ -1,5 +1,6 @@
 package org.l2j.authserver.network.gameserver.packet.game2auth;
 
+import java.nio.ByteBuffer;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,11 +25,11 @@ public class ServerStatus extends GameserverReadablePacket {
     Map<Integer, Integer> status;
 
 	@Override
-	protected void readImpl()  {
-        int size = readInt();
+	protected void readImpl(ByteBuffer buffer)  {
+        int size = buffer.getInt();
 		status = new HashMap<>(size);
         for (int i = 0; i < size; i++) {
-            status.put(readInt(), readInt());
+            status.put(buffer.getInt(), buffer.getInt());
         }
 	}
 

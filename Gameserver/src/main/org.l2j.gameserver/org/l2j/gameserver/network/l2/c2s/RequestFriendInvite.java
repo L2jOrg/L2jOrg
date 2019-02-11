@@ -5,6 +5,8 @@ import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.network.l2.components.IBroadcastPacket;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 
+import java.nio.ByteBuffer;
+
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 public class RequestFriendInvite extends L2GameClientPacket
@@ -12,15 +14,15 @@ public class RequestFriendInvite extends L2GameClientPacket
 	private String _name;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_name = readS(16);
+		_name = readString(buffer, 16);
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null || isNullOrEmpty(_name))
 			return;
 

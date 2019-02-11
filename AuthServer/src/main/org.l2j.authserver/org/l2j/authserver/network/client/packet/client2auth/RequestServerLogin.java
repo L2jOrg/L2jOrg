@@ -5,6 +5,8 @@ import org.l2j.authserver.network.SessionKey;
 import org.l2j.authserver.network.client.packet.L2LoginClientPacket;
 import org.l2j.authserver.network.client.packet.auth2client.PlayOk;
 
+import java.nio.ByteBuffer;
+
 import static org.l2j.authserver.network.client.packet.auth2client.LoginFail.LoginFailReason.REASON_ACCESS_FAILED;
 import static org.l2j.authserver.network.client.packet.auth2client.PlayFail.PlayFailReason.REASON_TOO_MANY_PLAYERS;
 
@@ -18,11 +20,11 @@ public class RequestServerLogin extends L2LoginClientPacket {
 	private int _serverId;
 
 	@Override
-	public boolean readImpl() {
-		if (availableData() >= 9) {
-			accountId = readInt();
-			authKey = readInt();
-			_serverId = readUnsignedByte();
+	public boolean readImpl(ByteBuffer buffer) {
+		if (buffer.remaining() >= 9) {
+			accountId = buffer.getInt();
+			authKey = buffer.getInt();
+			_serverId = Byte.toUnsignedInt(buffer.get());
 			return true;
 		}
 		return false;

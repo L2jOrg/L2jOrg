@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Creature;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class NickNameChangedPacket extends L2GameServerPacket
 {
@@ -14,9 +17,9 @@ public class NickNameChangedPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(objectId);
-		writeString(title);
+		buffer.putInt(objectId);
+		writeString(title, buffer);
 	}
 }

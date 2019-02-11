@@ -8,6 +8,8 @@ import org.l2j.gameserver.network.l2.s2c.ExEnchantOneFail;
 import org.l2j.gameserver.network.l2.s2c.ExEnchantOneOK;
 import org.l2j.gameserver.templates.item.support.SynthesisData;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author Bonux
 **/
@@ -16,15 +18,15 @@ public class RequestNewEnchantPushOne extends L2GameClientPacket
 	private int _item1ObjectId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_item1ObjectId = readInt();
+		_item1ObjectId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		final Player activeChar = getClient().getActiveChar();
+		final Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

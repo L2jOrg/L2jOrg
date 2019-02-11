@@ -9,6 +9,8 @@ import org.l2j.gameserver.templates.item.support.variation.VariationFee;
 import org.l2j.gameserver.utils.NpcUtils;
 import org.l2j.gameserver.utils.VariationUtils;
 
+import java.nio.ByteBuffer;
+
 public final class RequestRefine extends L2GameClientPacket
 {
 	// format: (ch)dddd
@@ -16,18 +18,18 @@ public final class RequestRefine extends L2GameClientPacket
 	private long _feeItemCount;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_targetItemObjId = readInt();
-		_refinerItemObjId = readInt();
-		_feeItemObjId = readInt();
-		_feeItemCount = readLong();
+		_targetItemObjId = buffer.getInt();
+		_refinerItemObjId = buffer.getInt();
+		_feeItemObjId = buffer.getInt();
+		_feeItemCount = buffer.getLong();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null || _feeItemCount < 1)
 			return;
 

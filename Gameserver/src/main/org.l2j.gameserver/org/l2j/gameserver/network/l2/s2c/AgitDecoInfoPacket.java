@@ -3,6 +3,9 @@ package org.l2j.gameserver.network.l2.s2c;
 import org.l2j.gameserver.model.base.ResidenceFunctionType;
 import org.l2j.gameserver.model.entity.residence.ClanHall;
 import org.l2j.gameserver.model.entity.residence.ResidenceFunction;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class AgitDecoInfoPacket extends L2GameServerPacket
 {
@@ -14,22 +17,22 @@ public class AgitDecoInfoPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_clanHall.getId());
+		buffer.putInt(_clanHall.getId());
 
 		for(ResidenceFunctionType type : ResidenceFunctionType.VALUES)
 		{
 			ResidenceFunction function = _clanHall.getActiveFunction(type);
 			if(function != null)
-				writeByte(function.getTemplate().getDepth());
+				buffer.put((byte)function.getTemplate().getDepth());
 			else
-				writeByte(0x00);
+				buffer.put((byte)0x00);
 		}
-		writeInt(0);
-		writeInt(0);
-		writeInt(0);
-		writeInt(0);
-		writeInt(0);
+		buffer.putInt(0);
+		buffer.putInt(0);
+		buffer.putInt(0);
+		buffer.putInt(0);
+		buffer.putInt(0);
 	}
 }

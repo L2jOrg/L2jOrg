@@ -2,6 +2,9 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
 import io.github.joealisson.primitive.maps.IntObjectMap;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author VISTALL
@@ -17,10 +20,10 @@ public class ExReceiveShowPostFriend extends L2GameServerPacket
 	}
 
 	@Override
-	public void writeImpl()
+	public void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_list.size());
+		buffer.putInt(_list.size());
 		for(String t : _list.values())
-			writeString(t);
+			writeString(t, buffer);
 	}
 }

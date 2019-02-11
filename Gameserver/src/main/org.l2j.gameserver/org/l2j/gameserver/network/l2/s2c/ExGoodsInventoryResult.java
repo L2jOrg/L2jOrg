@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 /**
  * @author VISTALL
  * @date 11:19/03.07.2011
@@ -31,8 +35,8 @@ public class ExGoodsInventoryResult extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_result);
+		buffer.putInt(_result);
 	}
 }

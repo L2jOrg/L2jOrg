@@ -12,13 +12,14 @@ import io.github.joealisson.primitive.lists.impl.ArrayIntList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.nio.ByteBuffer;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 /**
  * @author VISTALL
- * @date 21:05/25.03.2011
+ * 21:05/25.03.2011
  */
 public class GetAccountInfo extends ReceivablePacket
 {
@@ -26,9 +27,9 @@ public class GetAccountInfo extends ReceivablePacket
 	private String _account;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_account = readString();
+		_account = readString(buffer);
 	}
 
 	@Override

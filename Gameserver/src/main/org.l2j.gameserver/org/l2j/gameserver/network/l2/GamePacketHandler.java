@@ -1,17 +1,19 @@
 package org.l2j.gameserver.network.l2;
 
+import io.github.joealisson.mmocore.*;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.network.l2.c2s.*;
-import io.github.joealisson.mmocore.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.nio.ByteBuffer;
 
 public final class GamePacketHandler implements PacketHandler<GameClient>, ClientFactory<GameClient>, PacketExecutor<GameClient> {
     private static final Logger _log = LoggerFactory.getLogger(GamePacketHandler.class);
 
     @Override
-    public ReadablePacket<GameClient> handlePacket(DataWrapper buf, GameClient client) {
+    public ReadablePacket<GameClient> handlePacket(ByteBuffer buf, GameClient client) {
 
         ReadablePacket<GameClient> msg = null;
         int id = buf.get() & 0xFF;
@@ -1695,7 +1697,7 @@ public final class GamePacketHandler implements PacketHandler<GameClient>, Clien
 
                                 break;
                             case 0x10E:
-
+                                // Request Prime Shop
                                 break;
                             case 0x10F:
 

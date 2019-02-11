@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.authcomm.gs2as;
 
+import org.l2j.gameserver.network.authcomm.AuthServerClient;
 import org.l2j.gameserver.network.authcomm.SendablePacket;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author VISTALL
@@ -20,13 +23,12 @@ public class SetAccountInfo extends SendablePacket
 	}
 
 	@Override
-	protected void writeImpl()
-	{
-		writeByte(0x05);
-		writeString(_account);
-		writeByte(_size);
-		writeInt(_deleteChars.length);
+	protected void writeImpl(AuthServerClient client, ByteBuffer buffer) {
+		buffer.put((byte)0x05);
+		writeString(_account, buffer);
+		buffer.put((byte)_size);
+		buffer.putInt(_deleteChars.length);
 		for(int i : _deleteChars)
-			writeInt(i);
+			buffer.putInt(i);
 	}
 }

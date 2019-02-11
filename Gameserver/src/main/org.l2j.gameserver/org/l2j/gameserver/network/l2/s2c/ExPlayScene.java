@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 /**
  * Format: ch
  * Протокол 828: при отправке пакета клиенту ничего не происходит.
@@ -7,8 +11,8 @@ package org.l2j.gameserver.network.l2.s2c;
 public class ExPlayScene extends L2GameServerPacket
 {
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(0x00); //Kamael
+		buffer.putInt(0x00); //Kamael
 	}
 }

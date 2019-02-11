@@ -8,21 +8,24 @@ import org.l2j.gameserver.network.l2.s2c.ActionFailPacket;
 import org.l2j.gameserver.network.l2.s2c.CharacterSelectionInfoPacket;
 import org.l2j.gameserver.network.l2.s2c.RestartResponsePacket;
 
+import java.nio.ByteBuffer;
+
 public class RequestRestart extends L2GameClientPacket
 {
 	/**
 	 * packet type id 0x57
 	 * format:      c
-	 */
+     * @param buffer
+     */
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 
 		if(activeChar == null)
 			return;
@@ -52,13 +55,13 @@ public class RequestRestart extends L2GameClientPacket
 			return;
 		}
 		
-		if(getClient() != null)
-			getClient().setState(GameClientState.AUTHED);
+		if(client != null)
+			client.setState(GameClientState.AUTHED);
 
 		activeChar.restart();
 		// send char list
-		CharacterSelectionInfoPacket cl = new CharacterSelectionInfoPacket(getClient());
+		CharacterSelectionInfoPacket cl = new CharacterSelectionInfoPacket(client);
 		sendPacket(RestartResponsePacket.OK, cl);
-		getClient().setCharSelection(cl.getCharInfo());
+		client.setCharSelection(cl.getCharInfo());
 	}
 }

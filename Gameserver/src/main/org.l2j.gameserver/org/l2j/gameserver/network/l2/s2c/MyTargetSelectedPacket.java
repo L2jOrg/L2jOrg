@@ -3,6 +3,9 @@ package org.l2j.gameserver.network.l2.s2c;
 import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.GameObject;
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class MyTargetSelectedPacket extends L2GameServerPacket
 {
@@ -45,14 +48,14 @@ public class MyTargetSelectedPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_success ? 0x01 : 0x00);
+		buffer.putInt(_success ? 0x01 : 0x00);
 		if(_success)
 		{
-			writeInt(_objectId);
-			writeShort(_color);
-			writeInt(_actionMenu ? 0x03 : 0x00);
+			buffer.putInt(_objectId);
+			buffer.putShort((short) _color);
+			buffer.putInt(_actionMenu ? 0x03 : 0x00);
 		}
 	}
 }

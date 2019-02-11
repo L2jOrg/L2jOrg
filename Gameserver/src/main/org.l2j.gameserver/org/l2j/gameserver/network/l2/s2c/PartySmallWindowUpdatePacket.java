@@ -1,7 +1,10 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.network.l2.s2c.updatetype.PartySmallWindowUpdateType;
+
+import java.nio.ByteBuffer;
 
 public class PartySmallWindowUpdatePacket extends L2GameServerPacket
 {
@@ -41,35 +44,35 @@ public class PartySmallWindowUpdatePacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(obj_id);
-		writeShort(_flags);
+		buffer.putInt(obj_id);
+		buffer.putShort((short) _flags);
 		if(containsMask(_flags, PartySmallWindowUpdateType.CURRENT_CP))
-			writeInt(curCp); // c4
+			buffer.putInt(curCp); // c4
 
 		if(containsMask(_flags, PartySmallWindowUpdateType.MAX_CP))
-			writeInt(maxCp); // c4
+			buffer.putInt(maxCp); // c4
 
 		if(containsMask(_flags, PartySmallWindowUpdateType.CURRENT_HP))
-			writeInt(curHp);
+			buffer.putInt(curHp);
 
 		if(containsMask(_flags, PartySmallWindowUpdateType.MAX_HP))
-			writeInt(maxHp);
+			buffer.putInt(maxHp);
 
 		if(containsMask(_flags, PartySmallWindowUpdateType.CURRENT_MP))
-			writeInt(curMp);
+			buffer.putInt(curMp);
 
 		if(containsMask(_flags, PartySmallWindowUpdateType.MAX_MP))
-			writeInt(maxMp);
+			buffer.putInt(maxMp);
 
 		if(containsMask(_flags, PartySmallWindowUpdateType.LEVEL))
-			writeByte(level);
+			buffer.put((byte)level);
 
 		if(containsMask(_flags, PartySmallWindowUpdateType.CLASS_ID))
-			writeShort(class_id);
+			buffer.putShort((short) class_id);
 
 		if(containsMask(_flags, PartySmallWindowUpdateType.VITALITY_POINTS))
-			writeInt(0x00);
+			buffer.putInt(0x00);
 	}
 }

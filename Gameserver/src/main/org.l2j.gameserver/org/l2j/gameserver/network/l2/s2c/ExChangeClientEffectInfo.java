@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ExChangeClientEffectInfo extends L2GameServerPacket
 {
 	private int _unk1;
@@ -21,10 +25,10 @@ public class ExChangeClientEffectInfo extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_unk1);
-		writeInt(_unk2);
-		writeInt(_state);
+		buffer.putInt(_unk1);
+		buffer.putInt(_unk2);
+		buffer.putInt(_state);
 	}
 }

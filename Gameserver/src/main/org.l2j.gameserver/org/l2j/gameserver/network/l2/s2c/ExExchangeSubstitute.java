@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  *
@@ -15,10 +18,10 @@ public class ExExchangeSubstitute extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(0x00);
-		writeLong(3000000L);
-		writeInt(0x00);
+		buffer.putInt(0x00);
+		buffer.putLong(3000000L);
+		buffer.putInt(0x00);
 	}
 }

@@ -6,9 +6,10 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.events.impl.CastleSiegeEvent;
 import org.l2j.gameserver.model.entity.events.objects.SiegeClanObject;
 import org.l2j.gameserver.model.entity.residence.Castle;
-import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.CastleSiegeDefenderListPacket;
+
+import java.nio.ByteBuffer;
 
 /**
  * @reworked VISTALL
@@ -20,17 +21,17 @@ public class RequestConfirmCastleSiegeWaitingList extends L2GameClientPacket
 	private int _clanId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_unitId = readInt();
-		_clanId = readInt();
-		_approved = readInt() == 1;
+		_unitId = buffer.getInt();
+		_clanId = buffer.getInt();
+		_approved = buffer.getInt() == 1;
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

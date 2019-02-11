@@ -3,16 +3,17 @@ package org.l2j.authserver.network.gameserver.packet.game2auth;
 import org.l2j.authserver.network.gameserver.packet.auth2game.RequestServerIdentity;
 
 import javax.crypto.Cipher;
+import java.nio.ByteBuffer;
 
 public class BlowFishKey extends GameserverReadablePacket {
 
     private byte[] receivedKey;
 
     @Override
-    protected void readImpl() {
-        var size = readInt();
+    protected void readImpl(ByteBuffer buffer) {
+        var size = buffer.getInt();
         receivedKey = new byte[size];
-        readBytes(receivedKey);
+        buffer.get(receivedKey);
     }
 
     @Override

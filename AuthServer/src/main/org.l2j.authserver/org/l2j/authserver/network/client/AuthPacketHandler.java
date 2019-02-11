@@ -1,14 +1,15 @@
 package org.l2j.authserver.network.client;
 
+import io.github.joealisson.mmocore.PacketHandler;
+import io.github.joealisson.mmocore.ReadablePacket;
 import org.l2j.authserver.network.client.packet.client2auth.AuthGameGuard;
 import org.l2j.authserver.network.client.packet.client2auth.RequestAuthLogin;
 import org.l2j.authserver.network.client.packet.client2auth.RequestServerList;
 import org.l2j.authserver.network.client.packet.client2auth.RequestServerLogin;
-import io.github.joealisson.mmocore.DataWrapper;
-import io.github.joealisson.mmocore.PacketHandler;
-import io.github.joealisson.mmocore.ReadablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.nio.ByteBuffer;
 
 import static java.lang.Byte.toUnsignedInt;
 
@@ -22,8 +23,8 @@ public final class AuthPacketHandler implements PacketHandler<AuthClient> {
     private static final Logger logger = LoggerFactory.getLogger(AuthPacketHandler.class);
 
     @Override
-    public ReadablePacket<AuthClient> handlePacket(DataWrapper data, AuthClient client) {
-        var opcode = toUnsignedInt(data.get());
+    public ReadablePacket<AuthClient> handlePacket(ByteBuffer buffer, AuthClient client) {
+        var opcode = toUnsignedInt(buffer.get());
 
         ReadablePacket<AuthClient> packet = null;
         var state = client.getState();
@@ -33,14 +34,14 @@ public final class AuthPacketHandler implements PacketHandler<AuthClient> {
                 if (opcode == 0x07) {
                     packet = new AuthGameGuard();
                 } else {
-                    debugOpcode(opcode, data, state);
+                    debugOpcode(opcode, buffer, state);
                 }
                 break;
             case AUTHED_GG:
                 if (opcode == 0x00) {
                     packet = new RequestAuthLogin();
                 } else {
-                    debugOpcode(opcode, data, state);
+                    debugOpcode(opcode, buffer, state);
                 }
                 break;
             case AUTHED_LOGIN:
@@ -49,14 +50,14 @@ public final class AuthPacketHandler implements PacketHandler<AuthClient> {
                 } else if (opcode == 0x02) {
                     packet = new RequestServerLogin();
                 } else {
-                    debugOpcode(opcode, data, state);
+                    debugOpcode(opcode, buffer, state);
                 }
                 break;
         }
         return packet;
     }
 
-    private void debugOpcode(int opcode, DataWrapper data, AuthClientState state) {
-        logger.warn("Unknown Opcode: {} for state {}\n {}", Integer.toHexString(opcode), state, data.expose());
+    private void debugOpcode(int opcode, ByteBuffer data, AuthClientState state) {
+        logger.warn("Unknown Opcode: {} for state {}\n {}", Integer.toHexString(opcode), state, data.array());
     }
 }

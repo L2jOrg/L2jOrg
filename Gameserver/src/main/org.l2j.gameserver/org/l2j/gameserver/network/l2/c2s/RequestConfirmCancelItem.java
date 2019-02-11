@@ -6,21 +6,23 @@ import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ExPutItemResultForVariationCancel;
 
+import java.nio.ByteBuffer;
+
 public class RequestConfirmCancelItem extends L2GameClientPacket
 {
 	// format: (ch)d
 	int _itemId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_itemId = readInt();
+		_itemId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(!Config.ALLOW_AUGMENTATION)
 		{
 			activeChar.sendActionFailed();

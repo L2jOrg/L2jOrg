@@ -2,6 +2,9 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.base.Element;
 import org.l2j.gameserver.model.items.ItemInstance;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author Bonux
@@ -24,10 +27,10 @@ public class ExChangeAttributeInfo extends L2GameServerPacket
 		}
 	}
 
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_crystalItemId);//unk??
-		writeInt(_attributes);
-		writeInt(_itemObjId);//unk??
+		buffer.putInt(_crystalItemId);//unk??
+		buffer.putInt(_attributes);
+		buffer.putInt(_itemObjId);//unk??
 	}
 }

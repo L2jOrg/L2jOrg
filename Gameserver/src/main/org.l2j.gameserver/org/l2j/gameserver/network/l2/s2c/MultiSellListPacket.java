@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,6 +9,7 @@ import org.l2j.gameserver.data.xml.holder.ItemHolder;
 import org.l2j.gameserver.model.MultiSellListContainer;
 import org.l2j.gameserver.model.base.MultiSellEntry;
 import org.l2j.gameserver.model.base.MultiSellIngredient;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 
 public class MultiSellListPacket extends L2GameServerPacket
@@ -28,83 +30,83 @@ public class MultiSellListPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeByte(0x00);
-		writeInt(_listId); // list id
-		writeByte(0x00); // UNK
-		writeInt(_page); // page
-		writeInt(_finished); // finished
-		writeInt(Config.MULTISELL_SIZE); // size of pages
-		writeInt(_list.size()); //list length
-		writeByte(0x00);
-		writeByte(_type);  //Type (0x00 - Нормальный, 0xD0 - с шансом)
-		writeInt(0x00);
+		buffer.put((byte)0x00);
+		buffer.putInt(_listId); // list id
+		buffer.put((byte)0x00); // UNK
+		buffer.putInt(_page); // page
+		buffer.putInt(_finished); // finished
+		buffer.putInt(Config.MULTISELL_SIZE); // size of pages
+		buffer.putInt(_list.size()); //list length
+		buffer.put((byte)0x00);
+		buffer.put((byte)_type);  //Type (0x00 - Нормальный, 0xD0 - с шансом)
+		buffer.putInt(0x00);
 
 		List<MultiSellIngredient> ingredients;
 		for(MultiSellEntry ent : _list)
 		{
 			ingredients = fixIngredients(ent.getIngredients());
 
-			writeInt(ent.getEntryId());
-			writeByte(!ent.getProduction().isEmpty() && ent.getProduction().get(0).isStackable() ? 1 : 0); // stackable?
-			writeShort(0x00); // unknown
-			writeInt(0x00); // инкрустация
-			writeInt(0x00); // инкрустация
+			buffer.putInt(ent.getEntryId());
+			buffer.put((byte) (!ent.getProduction().isEmpty() && ent.getProduction().get(0).isStackable() ? 1 : 0)); // stackable?
+			buffer.putShort((short) 0x00); // unknown
+			buffer.putInt(0x00); // инкрустация
+			buffer.putInt(0x00); // инкрустация
 
-			writeItemElements();
+			writeItemElements(buffer);
 			int saCount = 0;
-			writeByte(0x00);
+			buffer.put((byte)0x00);
 			for(int i = 0; i < saCount; i++)
-				writeInt(0x00);
+				buffer.putInt(0x00);
 
-			writeByte(0);
+			buffer.put((byte)0);
 			for (int i = 0; i < saCount; i++)
-				writeInt(0x00);
+				buffer.putInt(0x00);
 
-			writeShort(ent.getProduction().size());
-			writeShort(ingredients.size());
+			buffer.putShort((short) ent.getProduction().size());
+			buffer.putShort((short) ingredients.size());
 
 			for(MultiSellIngredient prod : ent.getProduction())
 			{
 				int itemId = prod.getItemId();
 				ItemTemplate template = itemId > 0 ? ItemHolder.getInstance().getTemplate(prod.getItemId()) : null;
-				writeInt(itemId);
-				writeLong(itemId > 0 ? template.getBodyPart() : 0);
-				writeShort(itemId > 0 ? template.getType2() : 0);
-				writeLong(prod.getItemCount());
-				writeShort(prod.getItemEnchant());
-				writeInt(prod.getChance());
-				writeInt(0x00); // augment id
-				writeInt(0x00); // mana
-				writeItemElements(prod);
-				writeByte(0x00);
+				buffer.putInt(itemId);
+				buffer.putLong(itemId > 0 ? template.getBodyPart() : 0);
+				buffer.putShort((short) (itemId > 0 ? template.getType2() : 0));
+				buffer.putLong(prod.getItemCount());
+				buffer.putShort((short) prod.getItemEnchant());
+				buffer.putInt(prod.getChance());
+				buffer.putInt(0x00); // augment id
+				buffer.putInt(0x00); // mana
+				writeItemElements(buffer, prod);
+				buffer.put((byte)0x00);
 				for(int i = 0; i < saCount; i++)
-					writeInt(0x00);
+					buffer.putInt(0x00);
 
-				writeByte(0);
+				buffer.put((byte)0);
 				for(int i = 0; i < saCount; i++)
-					writeInt(0x00);
+					buffer.putInt(0x00);
 			}
 
 			for(MultiSellIngredient i : ingredients)
 			{
 				int itemId = i.getItemId();
 				final ItemTemplate item = itemId > 0 ? ItemHolder.getInstance().getTemplate(i.getItemId()) : null;
-				writeInt(itemId); //ID
-				writeShort(itemId > 0 ? item.getType2() : 0xFFFF);
-				writeLong(i.getItemCount()); //Count
-				writeShort(i.getItemEnchant()); //Enchant Level
-				writeInt(0x00); // инкрустация
-				writeInt(0x00); // инкрустация
-				writeItemElements(i);
-				writeByte(0x00);
+				buffer.putInt(itemId); //ID
+				buffer.putShort((short) (itemId > 0 ? item.getType2() : 0xFFFF));
+				buffer.putLong(i.getItemCount()); //Count
+				buffer.putShort((short) i.getItemEnchant()); //Enchant Level
+				buffer.putInt(0x00); // инкрустация
+				buffer.putInt(0x00); // инкрустация
+				writeItemElements(buffer, i);
+				buffer.put((byte)0x00);
 				for(int s = 0; s < saCount; s++)
-					writeInt(0x00);
+					buffer.putInt(0x00);
 
-				writeByte(0x00);
+				buffer.put((byte)0x00);
 				for(int s = 0; s < saCount; s++)
-					writeInt(0x00);
+					buffer.putInt(0x00);
 			}
 		}
 	}

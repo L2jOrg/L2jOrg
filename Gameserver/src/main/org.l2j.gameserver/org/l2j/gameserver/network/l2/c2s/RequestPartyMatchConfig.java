@@ -9,6 +9,8 @@ import org.l2j.gameserver.model.matching.MatchingRoom;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ListPartyWaitingPacket;
 
+import java.nio.ByteBuffer;
+
 public class RequestPartyMatchConfig extends L2GameClientPacket
 {
 	private int _page;
@@ -16,17 +18,17 @@ public class RequestPartyMatchConfig extends L2GameClientPacket
 	private int _allLevels;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_page = readInt();
-		_region = readInt();
-		_allLevels = readInt();
+		_page = buffer.getInt();
+		_region = buffer.getInt();
+		_allLevels = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

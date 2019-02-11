@@ -6,6 +6,8 @@ import org.l2j.gameserver.network.l2.s2c.BlockListPacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.nio.ByteBuffer;
+
 public class RequestBlock extends L2GameClientPacket
 {
 	// format: cd(S)
@@ -21,18 +23,18 @@ public class RequestBlock extends L2GameClientPacket
 	private String targetName = null;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_type = readInt(); //0x00 - block, 0x01 - unblock, 0x03 - allblock, 0x04 - allunblock
+		_type = buffer.getInt(); //0x00 - block, 0x01 - unblock, 0x03 - allblock, 0x04 - allunblock
 
 		if(_type == BLOCK || _type == UNBLOCK)
-			targetName = readS(16);
+			targetName = readString(buffer, 16);
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

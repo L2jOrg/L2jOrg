@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class L2Friend extends L2GameServerPacket
 {
@@ -25,12 +28,12 @@ public class L2Friend extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_add ? 1 : 3); // 1 - добавить друга в спикок, 3 удалить друга со списка
-		writeInt(0); //и снова тут идет ID персонажа в списке оффа, не object id
-		writeString(_name);
-		writeInt(_online ? 1 : 0); // онлайн или оффлайн
-		writeInt(_object_id); //object_id if online
+		buffer.putInt(_add ? 1 : 3); // 1 - добавить друга в спикок, 3 удалить друга со списка
+		buffer.putInt(0); //и снова тут идет ID персонажа в списке оффа, не object id
+		writeString(_name, buffer);
+		buffer.putInt(_online ? 1 : 0); // онлайн или оффлайн
+		buffer.putInt(_object_id); //object_id if online
 	}
 }

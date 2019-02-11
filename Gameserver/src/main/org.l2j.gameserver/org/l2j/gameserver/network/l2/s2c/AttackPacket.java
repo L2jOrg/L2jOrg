@@ -2,6 +2,9 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.GameObject;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class AttackPacket extends L2GameServerPacket
 {
@@ -98,27 +101,27 @@ public class AttackPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_attackerId);
-		writeInt(hits[0]._targetId);
-		writeInt(_soulshot ? _addShotEffect : 0x00);
-		writeInt(hits[0]._damage);
-		writeInt(hits[0]._flags);
-		writeInt(_soulshot ? _grade : 0x00);
-		writeInt(_x);
-		writeInt(_y);
-		writeInt(_z);
-		writeShort(hits.length - 1);
+		buffer.putInt(_attackerId);
+		buffer.putInt(hits[0]._targetId);
+		buffer.putInt(_soulshot ? _addShotEffect : 0x00);
+		buffer.putInt(hits[0]._damage);
+		buffer.putInt(hits[0]._flags);
+		buffer.putInt(_soulshot ? _grade : 0x00);
+		buffer.putInt(_x);
+		buffer.putInt(_y);
+		buffer.putInt(_z);
+		buffer.putShort((short) (hits.length - 1));
 		for(int i = 1; i < hits.length; i++)
 		{
-			writeInt(hits[i]._targetId);
-			writeInt(hits[i]._damage);
-			writeInt(hits[i]._flags);
-			writeInt(_soulshot ? _grade : 0x00);
+			buffer.putInt(hits[i]._targetId);
+			buffer.putInt(hits[i]._damage);
+			buffer.putInt(hits[i]._flags);
+			buffer.putInt(_soulshot ? _grade : 0x00);
 		}
-		writeInt(_tx);
-		writeInt(_ty);
-		writeInt(_tz);
+		buffer.putInt(_tx);
+		buffer.putInt(_ty);
+		buffer.putInt(_tz);
 	}
 }

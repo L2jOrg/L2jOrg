@@ -9,22 +9,24 @@ import org.l2j.gameserver.model.entity.events.impl.DuelEvent;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 
+import java.nio.ByteBuffer;
+
 public class RequestDuelStart extends L2GameClientPacket
 {
 	private String _name;
 	private int _duelType;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_name = readS(Config.CNAME_MAXLEN);
-		_duelType = readInt();
+		_name = readString(buffer, Config.CNAME_MAXLEN);
+		_duelType = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

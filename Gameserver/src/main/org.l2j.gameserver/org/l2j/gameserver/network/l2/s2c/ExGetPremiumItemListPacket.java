@@ -2,6 +2,9 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.actor.instances.player.PremiumItem;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author Gnacik
@@ -19,17 +22,17 @@ public class ExGetPremiumItemListPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_list.length);
+		buffer.putInt(_list.length);
 		for(int i = 0; i < _list.length; i++)
 		{
-			writeInt(i);
-			writeInt(_objectId);
-			writeInt(_list[i].getItemId());
-			writeLong(_list[i].getItemCount());
-			writeInt(0);
-			writeString(_list[i].getSender());
+			buffer.putInt(i);
+			buffer.putInt(_objectId);
+			buffer.putInt(_list[i].getItemId());
+			buffer.putLong(_list[i].getItemCount());
+			buffer.putInt(0);
+			writeString(_list[i].getSender(), buffer);
 		}
 	}
 }

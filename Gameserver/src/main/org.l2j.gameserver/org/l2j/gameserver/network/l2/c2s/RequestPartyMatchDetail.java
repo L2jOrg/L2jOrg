@@ -4,6 +4,8 @@ import org.l2j.gameserver.instancemanager.MatchingRoomManager;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.matching.MatchingRoom;
 
+import java.nio.ByteBuffer;
+
 public class RequestPartyMatchDetail extends L2GameClientPacket
 {
 	private int _roomId;
@@ -12,20 +14,21 @@ public class RequestPartyMatchDetail extends L2GameClientPacket
 
 	/**
 	 * Format: dddd
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_roomId = readInt(); // room id, если 0 то autojoin
-		_locations = readInt(); // location
-		_level = readInt(); // 1 - all, 0 - my level (только при autojoin)
-		//readInt();
+		_roomId = buffer.getInt(); // room id, если 0 то autojoin
+		_locations = buffer.getInt(); // location
+		_level = buffer.getInt(); // 1 - all, 0 - my level (только при autojoin)
+		//buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

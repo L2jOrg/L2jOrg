@@ -21,7 +21,7 @@ import java.util.Optional;
 
 @Configuration
 @Import(JdbcConfiguration.class)
-@EnableJdbcRepositories({"org.l2j.commons.database"})
+@EnableJdbcRepositories({"org.l2j.commons.database", "org.l2j.authserver"})
 public class DatabaseContextConfiguration {
 
     @Bean

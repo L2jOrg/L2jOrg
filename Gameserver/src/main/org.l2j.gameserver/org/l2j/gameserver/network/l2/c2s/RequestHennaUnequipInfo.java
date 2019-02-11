@@ -5,23 +5,26 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.s2c.HennaUnequipInfoPacket;
 import org.l2j.gameserver.templates.HennaTemplate;
 
+import java.nio.ByteBuffer;
+
 public class RequestHennaUnequipInfo extends L2GameClientPacket
 {
 	private int _symbolId;
 
 	/**
 	 * format: d
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_symbolId = readInt();
+		_symbolId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

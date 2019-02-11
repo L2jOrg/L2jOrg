@@ -1,5 +1,8 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 import java.util.Collections;
 import java.util.Set;
 
@@ -17,10 +20,10 @@ public class ExMpccPartymasterList extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_members.size());
+		buffer.putInt(_members.size());
 		for(String t : _members)
-			writeString(t);
+			writeString(t, buffer);
 	}
 }

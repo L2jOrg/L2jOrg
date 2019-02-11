@@ -2,6 +2,9 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.items.ItemInstance;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * 15
@@ -39,19 +42,19 @@ public class SpawnItemPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_objectId);
-		writeInt(_itemId);
+		buffer.putInt(_objectId);
+		buffer.putInt(_itemId);
 
-		writeInt(_x);
-		writeInt(_y);
-		writeInt(_z + Config.CLIENT_Z_SHIFT);
-		writeInt(_stackable);
-		writeLong(_count);
-		writeInt(0x00); //c2
-		writeByte(_enchantLevel);
-		writeByte(0x00);
-		writeByte(_ensoulCount);
+		buffer.putInt(_x);
+		buffer.putInt(_y);
+		buffer.putInt(_z + Config.CLIENT_Z_SHIFT);
+		buffer.putInt(_stackable);
+		buffer.putLong(_count);
+		buffer.putInt(0x00); //c2
+		buffer.put((byte)_enchantLevel);
+		buffer.put((byte)0x00);
+		buffer.put((byte)_ensoulCount);
 	}
 }

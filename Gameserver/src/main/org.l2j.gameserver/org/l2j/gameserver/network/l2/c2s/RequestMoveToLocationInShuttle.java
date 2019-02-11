@@ -5,6 +5,8 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.boat.Boat;
 import org.l2j.gameserver.utils.Location;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author Bonux
  */
@@ -15,21 +17,21 @@ public class RequestMoveToLocationInShuttle extends L2GameClientPacket
 	private int _shuttleId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_shuttleId = readInt();
-		_pos.x = readInt();
-		_pos.y = readInt();
-		_pos.z = readInt();
-		_originPos.x = readInt();
-		_originPos.y = readInt();
-		_originPos.z = readInt();
+		_shuttleId = buffer.getInt();
+		_pos.x = buffer.getInt();
+		_pos.y = buffer.getInt();
+		_pos.z = buffer.getInt();
+		_originPos.x = buffer.getInt();
+		_originPos.y = buffer.getInt();
+		_originPos.z = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

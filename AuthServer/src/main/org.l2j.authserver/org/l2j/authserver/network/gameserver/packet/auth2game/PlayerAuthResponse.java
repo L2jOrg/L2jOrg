@@ -1,6 +1,8 @@
 package org.l2j.authserver.network.gameserver.packet.auth2game;
 
-import org.l2j.authserver.controller.AuthController;
+import org.l2j.authserver.network.gameserver.ServerClient;
+
+import java.nio.ByteBuffer;
 
 public class PlayerAuthResponse extends GameServerWritablePacket {
 
@@ -13,14 +15,14 @@ public class PlayerAuthResponse extends GameServerWritablePacket {
 	}
 
 	@Override
-	protected void writeImpl()  {
-		writeByte(0x02);
-		writeString(account);
-		writeByte(response);
+	protected void writeImpl(ServerClient client, ByteBuffer buffer)  {
+		buffer.put((byte)0x02);
+		writeString(account, buffer);
+		buffer.put((byte)response);
 	}
 
 	@Override
-	protected int packetSize() {
-		return super.packetSize() + 4 + 2 * account.length();
+	protected int size(ServerClient client) {
+		return super.size(client) + 4 + 2 * account.length();
 	}
 }

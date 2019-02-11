@@ -2,6 +2,8 @@ package org.l2j.gameserver.network.l2.c2s;
 
 import org.l2j.gameserver.model.Player;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author Bonux
 **/
@@ -11,16 +13,16 @@ public class RequestUpdateFriendMemo extends L2GameClientPacket
 	private String _memo;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_name = readString();
-		_memo = readString();
+		_name = readString(buffer);
+		_memo = readString(buffer);
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

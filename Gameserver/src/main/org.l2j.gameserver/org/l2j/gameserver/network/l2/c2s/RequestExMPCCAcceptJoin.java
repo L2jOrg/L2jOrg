@@ -7,6 +7,8 @@ import org.l2j.gameserver.model.Request.L2RequestType;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 
+import java.nio.ByteBuffer;
+
 public class RequestExMPCCAcceptJoin extends L2GameClientPacket
 {
 	@SuppressWarnings("unused")
@@ -16,16 +18,16 @@ public class RequestExMPCCAcceptJoin extends L2GameClientPacket
 	 * format: chdd
 	 */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_response = availableData() >= 4 ? readInt() : 0;
-		_unk = availableData() >= 4 ? readInt() : 0;
+		_response = buffer.remaining() >= 4 ? buffer.getInt() : 0;
+		_unk = buffer.remaining() >= 4 ? buffer.getInt() : 0;
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

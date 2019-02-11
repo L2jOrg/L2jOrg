@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.items.ItemInfo;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * ddQhdhhhhhdhhhhhhhh - Gracia Final
@@ -15,8 +18,8 @@ public class ExRpItemLink extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeItemInfo(_item);
+		writeItemInfo(buffer, _item);
 	}
 }

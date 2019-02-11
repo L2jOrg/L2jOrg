@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 /**
  * @author Bonux
 **/
@@ -22,11 +26,11 @@ public class ExShape_Shifting_Result extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_result); //Result
-		writeInt(_targetItemId);
-		writeInt(_extractItemId);
-		writeInt(_period);
+		buffer.putInt(_result); //Result
+		buffer.putInt(_targetItemId);
+		buffer.putInt(_extractItemId);
+		buffer.putInt(_period);
 	}
 }

@@ -5,6 +5,8 @@ import org.l2j.gameserver.model.ObservePoint;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.utils.Location;
 
+import java.nio.ByteBuffer;
+
 public class CannotMoveAnymore extends L2GameClientPacket
 {
 	private Location _loc = new Location();
@@ -21,20 +23,20 @@ public class CannotMoveAnymore extends L2GameClientPacket
 	 * 98 90 00 00 // heading?
 	 *
 	 * format:		cdddd
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
-	{
-		_loc.x = readInt();
-		_loc.y = readInt();
-		_loc.z = readInt();
-		_loc.h = readInt();
+	protected void readImpl(ByteBuffer buffer) {
+		_loc.x = buffer.getInt();
+		_loc.y = buffer.getInt();
+		_loc.z = buffer.getInt();
+		_loc.h = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

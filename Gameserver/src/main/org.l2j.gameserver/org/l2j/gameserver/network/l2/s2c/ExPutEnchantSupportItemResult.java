@@ -1,5 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
+
 public class ExPutEnchantSupportItemResult extends L2GameServerPacket
 {
 	public static final L2GameServerPacket FAIL = new ExPutEnchantSupportItemResult(0x01);
@@ -13,8 +17,8 @@ public class ExPutEnchantSupportItemResult extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_result);
+		buffer.putInt(_result);
 	}
 }

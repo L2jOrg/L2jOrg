@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.instances.DoorInstance;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * 60
@@ -26,10 +29,10 @@ public class DoorInfo extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(obj_id);
-		writeInt(door_id);
-		writeInt(view_hp); // отображать ли хп у двери или стены
+		buffer.putInt(obj_id);
+		buffer.putInt(door_id);
+		buffer.putInt(view_hp); // отображать ли хп у двери или стены
 	}
 }

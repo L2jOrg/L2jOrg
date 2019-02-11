@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -8,6 +9,7 @@ import org.l2j.gameserver.data.xml.holder.InstantZoneHolder;
 import org.l2j.gameserver.instancemanager.MatchingRoomManager;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.matching.MatchingRoom;
+import org.l2j.gameserver.network.l2.GameClient;
 
 /**
  * Format:(ch) d d [dsdddd]
@@ -26,21 +28,21 @@ public class ExPartyRoomMemberPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_type);
-		writeInt(_members.size());
+		buffer.putInt(_type);
+		buffer.putInt(_members.size());
 		for(PartyRoomMemberInfo member_info : _members)
 		{
-			writeInt(member_info.objectId);
-			writeString(member_info.name);
-			writeInt(member_info.classId);
-			writeInt(member_info.level);
-			writeInt(member_info.location);
-			writeInt(member_info.memberType);
-			writeInt(member_info.instanceReuses.size());
+			buffer.putInt(member_info.objectId);
+			writeString(member_info.name, buffer);
+			buffer.putInt(member_info.classId);
+			buffer.putInt(member_info.level);
+			buffer.putInt(member_info.location);
+			buffer.putInt(member_info.memberType);
+			buffer.putInt(member_info.instanceReuses.size());
 			for(int i : member_info.instanceReuses)
-				writeInt(i);
+				buffer.putInt(i);
 		}
 	}
 

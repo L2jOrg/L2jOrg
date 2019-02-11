@@ -1,5 +1,8 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,17 +42,17 @@ public class ExAbnormalStatusUpdateFromTargetPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_objectId);
-		writeShort(_effects.size());
+		buffer.putInt(_objectId);
+		buffer.putShort((short) _effects.size());
 		for(Abnormal temp : _effects)
 		{
-			writeInt(temp.skillId);
-			writeShort(temp.dat);
-			writeShort(temp.comboId); // combo type ???
-			writeShort(temp.duration);
-			writeInt(temp.effectorObjectId); // Buffer OID
+			buffer.putInt(temp.skillId);
+			buffer.putShort((short) temp.dat);
+			buffer.putShort((short) temp.comboId); // combo type ???
+			buffer.putShort((short) temp.duration);
+			buffer.putInt(temp.effectorObjectId); // Buffer OID
 		}
 	}
 }

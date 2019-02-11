@@ -5,6 +5,8 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.CustomMessage;
 import org.l2j.gameserver.network.l2.s2c.ExReplyPostItemList;
 
+import java.nio.ByteBuffer;
+
 /**
  *  Нажатие на кнопку "send mail" в списке из {@link ExShowReceivedPostList}, запрос создания нового письма
  *  В ответ шлется {@link ExReplyPostItemList}
@@ -12,7 +14,7 @@ import org.l2j.gameserver.network.l2.s2c.ExReplyPostItemList;
 public class RequestExPostItemList extends L2GameClientPacket
 {
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
 		//just a trigger
 	}
@@ -20,7 +22,7 @@ public class RequestExPostItemList extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

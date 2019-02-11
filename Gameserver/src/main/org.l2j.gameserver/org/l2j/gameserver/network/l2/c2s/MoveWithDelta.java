@@ -1,5 +1,7 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import java.nio.ByteBuffer;
+
 /**
  * Format: (c) ddd
  * d: dx
@@ -12,11 +14,11 @@ public class MoveWithDelta extends L2GameClientPacket
 	private int _dx, _dy, _dz;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_dx = readInt();
-		_dy = readInt();
-		_dz = readInt();
+		_dx = buffer.getInt();
+		_dy = buffer.getInt();
+		_dz = buffer.getInt();
 	}
 
 	@Override

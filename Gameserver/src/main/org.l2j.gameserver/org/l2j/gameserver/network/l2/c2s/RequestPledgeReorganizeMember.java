@@ -9,6 +9,8 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.PledgeShowMemberListUpdatePacket;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 
+import java.nio.ByteBuffer;
+
 public class RequestPledgeReorganizeMember extends L2GameClientPacket
 {
 	// format: (ch)dSdS
@@ -18,21 +20,21 @@ public class RequestPledgeReorganizeMember extends L2GameClientPacket
 	String _replaceName;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_replace = readInt();
-		_subjectName = readS(16);
-		_targetUnit = readInt();
+		_replace = buffer.getInt();
+		_subjectName = readString(buffer, 16);
+		_targetUnit = buffer.getInt();
 		if(_replace > 0)
-			_replaceName = readString();
+			_replaceName = readString(buffer);
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		//logger.warn("Received RequestPledgeReorganizeMember("+_arg1+","+_arg2+","+_arg3+","+_arg4+") from player "+getClient().getActiveChar().getName());
+		//logger.warn("Received RequestPledgeReorganizeMember("+_arg1+","+_arg2+","+_arg3+","+_arg4+") from player "+client.getActiveChar().getName());
 
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

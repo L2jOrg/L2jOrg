@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Creature;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * format   ddddd
@@ -23,12 +26,12 @@ public class StopMovePacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_objectId);
-		writeInt(_x);
-		writeInt(_y);
-		writeInt(_z);
-		writeInt(_heading);
+		buffer.putInt(_objectId);
+		buffer.putInt(_x);
+		buffer.putInt(_y);
+		buffer.putInt(_z);
+		buffer.putInt(_heading);
 	}
 }

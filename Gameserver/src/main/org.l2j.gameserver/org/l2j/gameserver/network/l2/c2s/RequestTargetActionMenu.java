@@ -7,20 +7,22 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.s2c.MyTargetSelectedPacket;
 import org.l2j.gameserver.network.l2.s2c.StatusUpdatePacket;
 
+import java.nio.ByteBuffer;
+
 public class RequestTargetActionMenu extends L2GameClientPacket
 {
 	private int _targetObjectId;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_targetObjectId = readInt();
+		_targetObjectId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

@@ -4,6 +4,8 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.boat.Boat;
 import org.l2j.gameserver.utils.Location;
 
+import java.nio.ByteBuffer;
+
 // format: cddddd
 public class CannotMoveAnymoreInVehicle extends L2GameClientPacket
 {
@@ -11,19 +13,18 @@ public class CannotMoveAnymoreInVehicle extends L2GameClientPacket
 	private int _boatid;
 
 	@Override
-	protected void readImpl()
-	{
-		_boatid = readInt();
-		_loc.x = readInt();
-		_loc.y = readInt();
-		_loc.z = readInt();
-		_loc.h = readInt();
+	protected void readImpl(ByteBuffer buffer) {
+		_boatid = buffer.getInt();
+		_loc.x = buffer.getInt();
+		_loc.y = buffer.getInt();
+		_loc.z = buffer.getInt();
+		_loc.h = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

@@ -6,6 +6,8 @@ import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.ExSetPledgeEmblemAck;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author Bonux
 **/
@@ -16,24 +18,25 @@ public class RequestExSetPledgeCrestLargeFirstPart extends L2GameClientPacket
 
 	/**
 	 * format: chd(b)
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_crestPart = readInt();
-		_crestLeght = readInt();
-		_length = readInt();
-		if(_length <= CrestCache.LARGE_CREST_PART_SIZE && _length == availableData())
+		_crestPart = buffer.getInt();
+		_crestLeght = buffer.getInt();
+		_length = buffer.getInt();
+		if(_length <= CrestCache.LARGE_CREST_PART_SIZE && _length == buffer.remaining())
 		{
 			_data = new byte[_length];
-			readBytes(_data);
+			buffer.get(_data);
 		}
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

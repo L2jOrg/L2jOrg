@@ -1,10 +1,12 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.Collection;
 import java.util.Collections;
 
 import org.l2j.gameserver.data.xml.holder.AttendanceRewardHolder;
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.templates.item.data.AttendanceRewardData;
 
 public class ExVipAttendanceItemList extends L2GameServerPacket
@@ -23,24 +25,24 @@ public class ExVipAttendanceItemList extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeByte(_indexToReceive);
-		writeByte(_lastReceivedIndex);
-		writeInt(0x00);
-		writeInt(0x00);
-		writeByte(0x01);
-		writeByte(!_received);
-		writeByte(250);
-		writeByte(_rewards.size());
+		buffer.put((byte)_indexToReceive);
+		buffer.put((byte)_lastReceivedIndex);
+		buffer.putInt(0x00);
+		buffer.putInt(0x00);
+		buffer.put((byte)0x01);
+		buffer.put((byte) (!_received ? 0x01 : 0x00));
+		buffer.put((byte)250);
+		buffer.put((byte)_rewards.size());
 		_rewards.forEach(reward ->
 		{
-			writeInt(reward.getId());
-			writeLong(reward.getCount());
-			writeByte(reward.isUnknown());
-			writeByte(reward.isBest());
+			buffer.putInt(reward.getId());
+			buffer.putLong(reward.getCount());
+			buffer.put((byte) (reward.isUnknown() ? 0x01 : 0x00));
+			buffer.put((byte) (reward.isBest() ? 0x01 : 0x00));
 		});
-		writeByte(0x00);
-		writeInt(0x00);
+		buffer.put((byte)0x00);
+		buffer.putInt(0x00);
 	}
 }

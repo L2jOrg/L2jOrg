@@ -36,6 +36,8 @@ import org.l2j.gameserver.utils.TradeHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.nio.ByteBuffer;
+
 /**
  * packet type id 0x56
  * format:		cddc
@@ -319,17 +321,17 @@ public class RequestActionUse extends L2GameClientPacket
 	}
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_actionId = readInt();
-		_ctrlPressed = readInt() == 1;
-		_shiftPressed = readByte() == 1;
+		_actionId = buffer.getInt();
+		_ctrlPressed = buffer.getInt() == 1;
+		_shiftPressed = buffer.get() == 1;
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 

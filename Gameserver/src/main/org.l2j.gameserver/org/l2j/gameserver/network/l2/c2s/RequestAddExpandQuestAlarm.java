@@ -6,6 +6,8 @@ import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.l2.s2c.ExQuestNpcLogList;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author VISTALL
  * @date 14:47/26.02.2011
@@ -15,15 +17,15 @@ public class RequestAddExpandQuestAlarm extends L2GameClientPacket
 	private int _questId;
 
 	@Override
-	protected void readImpl() throws Exception
+	protected void readImpl(ByteBuffer buffer) throws Exception
 	{
-		_questId = readInt();
+		_questId = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl() throws Exception
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

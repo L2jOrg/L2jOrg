@@ -1,7 +1,10 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.entity.boat.Boat;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.utils.Location;
+
+import java.nio.ByteBuffer;
 
 public class VehicleDeparturePacket extends L2GameServerPacket
 {
@@ -18,13 +21,13 @@ public class VehicleDeparturePacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_boatObjId);
-		writeInt(_moveSpeed);
-		writeInt(_rotationSpeed);
-		writeInt(_loc.x);
-		writeInt(_loc.y);
-		writeInt(_loc.z);
+		buffer.putInt(_boatObjId);
+		buffer.putInt(_moveSpeed);
+		buffer.putInt(_rotationSpeed);
+		buffer.putInt(_loc.x);
+		buffer.putInt(_loc.y);
+		buffer.putInt(_loc.z);
 	}
 }

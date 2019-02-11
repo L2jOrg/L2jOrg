@@ -7,6 +7,8 @@ import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.CastleSiegeInfoPacket;
 
+import java.nio.ByteBuffer;
+
 /**
  * @author VISTALL
  */
@@ -15,16 +17,16 @@ public class RequestSetCastleSiegeTime extends L2GameClientPacket
 	private int _id, _time;
 
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_id = readInt();
-		_time = readInt();
+		_id = buffer.getInt();
+		_time = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player player = getClient().getActiveChar();
+		Player player = client.getActiveChar();
 		if(player == null)
 			return;
 

@@ -1,6 +1,9 @@
 package org.l2j.gameserver.network.l2.s2c;
 
 import io.github.joealisson.mmocore.StaticPacket;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author Erlandys
@@ -13,10 +16,10 @@ public class ExDivideAdenaCancel extends L2GameServerPacket {
 	private ExDivideAdenaCancel() { }
 
 	@Override
-	protected final void writeImpl() {  }
+	protected final void writeImpl(GameClient client, ByteBuffer buffer) {  }
 
 	@Override
-	protected int packetSize() {
+	protected int size(GameClient client) {
 		return 5;
 	}
 }

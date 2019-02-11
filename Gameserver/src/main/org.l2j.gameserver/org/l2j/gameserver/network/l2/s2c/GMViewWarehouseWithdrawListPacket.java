@@ -2,6 +2,9 @@ package org.l2j.gameserver.network.l2.s2c;
 
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInstance;
+import org.l2j.gameserver.network.l2.GameClient;
+
+import java.nio.ByteBuffer;
 
 public class GMViewWarehouseWithdrawListPacket extends L2GameServerPacket
 {
@@ -17,15 +20,15 @@ public class GMViewWarehouseWithdrawListPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl()
+	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeString(_charName);
-		writeLong(_charAdena);
-		writeShort(_items.length);
+		writeString(_charName, buffer);
+		buffer.putLong(_charAdena);
+		buffer.putShort((short) _items.length);
 		for(ItemInstance temp : _items)
 		{
-			writeItemInfo(temp);
-			writeInt(temp.getObjectId());
+			writeItemInfo(buffer, temp);
+			buffer.putInt(temp.getObjectId());
 		}
 	}
 }

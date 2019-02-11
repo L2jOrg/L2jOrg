@@ -1,11 +1,13 @@
 package org.l2j.gameserver.network.l2.s2c;
 
+import java.nio.ByteBuffer;
 import java.util.List;
 
 import org.l2j.gameserver.instancemanager.clansearch.ClanSearchManager;
 import org.l2j.gameserver.model.clansearch.ClanSearchClan;
 import org.l2j.gameserver.model.clansearch.ClanSearchParams;
 import org.l2j.gameserver.model.pledge.Clan;
+import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.tables.ClanTable;
 
 /**
@@ -26,37 +28,37 @@ public class ExPledgeRecruitBoardSearch extends L2GameServerPacket
 	}
 
 	@Override
-	protected void writeImpl()
+	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeInt(_params.getCurrentPage());
-		writeInt(ClanSearchManager.getInstance().getPageCount(PAGINATION_LIMIT));
+		buffer.putInt(_params.getCurrentPage());
+		buffer.putInt(ClanSearchManager.getInstance().getPageCount(PAGINATION_LIMIT));
 
-		writeInt(_clans.size());
+		buffer.putInt(_clans.size());
 
 		for(ClanSearchClan clanHolder : _clans)
 		{
-			writeInt(clanHolder.getClanId());
-			writeInt(0);
+			buffer.putInt(clanHolder.getClanId());
+			buffer.putInt(0);
 		}
 
 		for(ClanSearchClan clanHolder : _clans)
 		{
 			Clan clan = ClanTable.getInstance().getClan(clanHolder.getClanId());
 
-			writeInt(clan.getCrestId());
-			writeInt(clan.getAlliance() == null ? 0 : clan.getAlliance().getAllyCrestId());
+			buffer.putInt(clan.getCrestId());
+			buffer.putInt(clan.getAlliance() == null ? 0 : clan.getAlliance().getAllyCrestId());
 
-			writeString(clan.getName());
-			writeString(clan.getLeaderName());
+			writeString(clan.getName(), buffer);
+			writeString(clan.getLeaderName(), buffer);
 
-			writeInt(clan.getLevel());
-			writeInt(clan.getAllSize());
-			writeInt(clanHolder.getSearchType().ordinal());
+			buffer.putInt(clan.getLevel());
+			buffer.putInt(clan.getAllSize());
+			buffer.putInt(clanHolder.getSearchType().ordinal());
 
-			writeString("");
+			writeString("", buffer);
 
-			writeInt(clanHolder.getApplication());
-			writeInt(clanHolder.getSubUnit());
+			buffer.putInt(clanHolder.getApplication());
+			buffer.putInt(clanHolder.getSubUnit());
 		}
 	}
 }

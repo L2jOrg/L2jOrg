@@ -5,6 +5,8 @@ import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 
+import java.nio.ByteBuffer;
+
 //@Deprecated
 public class RequestUnEquipItem extends L2GameClientPacket
 {
@@ -13,17 +15,18 @@ public class RequestUnEquipItem extends L2GameClientPacket
 	/**
 	 * packet type id 0x16
 	 * format:		cd
-	 */
+     * @param buffer
+     */
 	@Override
-	protected void readImpl()
+	protected void readImpl(ByteBuffer buffer)
 	{
-		_slot = readInt();
+		_slot = buffer.getInt();
 	}
 
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = client.getActiveChar();
 		if(activeChar == null)
 			return;
 
