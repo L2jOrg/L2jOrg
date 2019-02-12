@@ -1,9 +1,5 @@
 package org.l2j.gameserver.handler.admincommands.impl;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.handler.admincommands.IAdminCommandHandler;
 import org.l2j.gameserver.model.Creature;
@@ -21,6 +17,10 @@ import org.l2j.gameserver.stats.Env;
 import org.l2j.gameserver.stats.funcs.Func;
 import org.l2j.gameserver.utils.HtmlUtils;
 import org.l2j.gameserver.utils.Log;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 public class AdminSkill implements IAdminCommandHandler
 {
@@ -317,7 +317,7 @@ public class AdminSkill implements IAdminCommandHandler
 		replyMSG.append("<center>Editing character: " + player.getName() + "</center>");
 
 		replyMSG.append("<br><center><button value=\"");
-		replyMSG.append(player.isLangRus() ? "Обновить" : "Refresh");
+		replyMSG.append("Refresh");
 		replyMSG.append("\" action=\"bypass -h admin_show_effects\" width=100 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\" /></center>");
 		replyMSG.append("<br>");
 

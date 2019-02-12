@@ -96,7 +96,7 @@ public class OnShiftAction_PetInstance extends ScriptOnShiftActionHandler<PetIns
 			dialog.append(e.getSkill().getName()).append("<br1>");
 
 		dialog.append("<br><center><button value=\"");
-		dialog.append(player.isLangRus() ? "Обновить" : "Refresh");
+		dialog.append("Refresh");
 		dialog.append("\" action=\"bypass -h htmbypass_actions.OnActionShift:servitorEffects " + servitor.getObjectId() + "\" width=100 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\" /></center></body></html>");
 
 		HtmlMessage msg = new HtmlMessage(5);

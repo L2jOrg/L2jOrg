@@ -32,10 +32,7 @@ public class PvPRewardManager
 		{
 			if(!no_msg)
 			{
-				if(killer.isLangRus())
-					killer.sendMessage("Система PvP: Вы убили игрока но уровень противника не подходит. Минимальный уровень: " + Config.PVP_REWARD_MIN_PL_LEVEL);
-				else
-					killer.sendMessage("PvP System: You killed a player, but his level is too low. Suggested level: " + Config.PVP_REWARD_MIN_PL_LEVEL);
+				killer.sendMessage("PvP System: You killed a player, but his level is too low. Suggested level: " + Config.PVP_REWARD_MIN_PL_LEVEL);
 			}		
 			return false;
 		}
@@ -44,10 +41,7 @@ public class PvPRewardManager
 		{
 			if(!no_msg)
 			{
-				if(killer.isLangRus())
-					killer.sendMessage("Система PvP: Вы убили игрока но его профессия слишком низкая. Минимальный уровень профессии: " + (Config.PVP_REWARD_MIN_PL_PROFF - 1));
-				else
-					killer.sendMessage("PvP System: You killed a player, but his job level is too low. Suggested job level: " + (Config.PVP_REWARD_MIN_PL_PROFF - 1));
+				killer.sendMessage("PvP System: You killed a player, but his job level is too low. Suggested job level: " + (Config.PVP_REWARD_MIN_PL_PROFF - 1));
 			}		
 			return false;
 		}
@@ -56,10 +50,7 @@ public class PvPRewardManager
 		{
 			if(!no_msg)
 			{
-				if(killer.isLangRus())
-					killer.sendMessage("Система PvP: Вы убили игрока но вы не достаточно провели время в игре, минимальное время в игре: " + Config.PVP_REWARD_MIN_PL_UPTIME_MINUTE + " мин.");
-				else
-					killer.sendMessage("PvP System: You killed a player, but you spent a little time ingame. Suggested minimal ingame time: " + Config.PVP_REWARD_MIN_PL_UPTIME_MINUTE + " min.");
+				killer.sendMessage("PvP System: You killed a player, but you spent a little time ingame. Suggested minimal ingame time: " + Config.PVP_REWARD_MIN_PL_UPTIME_MINUTE + " min.");
 			}			
 			return false;
 		}
@@ -68,10 +59,7 @@ public class PvPRewardManager
 		{
 			if(!no_msg)
 			{
-				if(killer.isLangRus())
-					killer.sendMessage("Система PvP: Вы убили игрока но он не достаточно время в игре, минимальное время в игре: " + Config.PVP_REWARD_MIN_PL_UPTIME_MINUTE + " мин.");
-				else
-					killer.sendMessage("PvP System: You killed a player, but he has spent a little time ingame. Suggested minimal ingame time: " + Config.PVP_REWARD_MIN_PL_UPTIME_MINUTE + " min.");
+				killer.sendMessage("PvP System: You killed a player, but he has spent a little time ingame. Suggested minimal ingame time: " + Config.PVP_REWARD_MIN_PL_UPTIME_MINUTE + " min.");
 			}		
 			return false;
 		}
@@ -80,10 +68,7 @@ public class PvPRewardManager
 		{
 			if(!no_msg)
 			{
-				if(killer.isLangRus())
-					killer.sendMessage("Система PvP: Вы убили игрока но ПК убийства запрещены.");
-				else
-					killer.sendMessage("PvP System: You killed a player, but PK kills are disallowed");
+				killer.sendMessage("PvP System: You killed a player, but PK kills are disallowed");
 			}			
 			return false;
 		}
@@ -92,10 +77,7 @@ public class PvPRewardManager
 		{
 			if(!no_msg)
 			{
-				if(killer.isLangRus())
-					killer.sendMessage("Система PvP: Вы убили игрока но убийства на турнирах не засчитываться.");	
-				else
-					killer.sendMessage("PvP System: You killed a player, but event kills won't count");
+				killer.sendMessage("PvP System: You killed a player, but event kills won't count");
 			}		
 			return false;
 		}
@@ -104,10 +86,7 @@ public class PvPRewardManager
 		{
 			if(!no_msg)
 			{
-				if(killer.isLangRus())
-					killer.sendMessage("Система PvP: Вы убили игрока но разрешено убивать игроков только на боевых площадках.");
-				else
-					killer.sendMessage("PvP System: You killed a player, it's allowed to kill players only on battle fields.");
+				killer.sendMessage("PvP System: You killed a player, it's allowed to kill players only on battle fields.");
 			}			
 			return false;
 		}
@@ -118,10 +97,7 @@ public class PvPRewardManager
 			{
 				if(!no_msg)
 				{
-					if(killer.isLangRus())
-						killer.sendMessage("Система PvP: Вы убили игрока но вы находитесь в одной партии, что запрещено.");	
-					else
-						killer.sendMessage("PvP System: You killed a player, but you both are in the same party, it's not allowed");
+					killer.sendMessage("PvP System: You killed a player, but you both are in the same party, it's not allowed");
 				}				
 				return false;
 			}
@@ -131,10 +107,7 @@ public class PvPRewardManager
 		{
 			if(!no_msg)
 			{
-				if(killer.isLangRus())
-					killer.sendMessage("Система PvP: Вы убили игрока но вы находитесь в одной клане , что запрещено.");	
-				else
-					killer.sendMessage("PvP System: You killed a player, but you both are in the same clan, it's not allowed");
+				killer.sendMessage("PvP System: You killed a player, but you both are in the same clan, it's not allowed");
 			}
 			return false;
 		}
@@ -143,10 +116,7 @@ public class PvPRewardManager
 		{
 			if(!no_msg)
 			{
-				if(killer.isLangRus())
-					killer.sendMessage("Система PvP: Вы убили игрока но вы находитесь в одном альянсе, что запрещено.");
-				else
-					killer.sendMessage("PvP System: You killed a player, but you both are in the same alliance, it's not allowed");
+				killer.sendMessage("PvP System: You killed a player, but you both are in the same alliance, it's not allowed");
 			}		
 			return false;
 		}
@@ -157,10 +127,7 @@ public class PvPRewardManager
 			{
 				if(!no_msg)
 				{
-					if(killer.isLangRus())
-						killer.sendMessage("Система PvP: Вы убили игрока но система определила что это ваше другое окно, это запрещено!");	
-					else
-						killer.sendMessage("PvP System: You killed a player, but it seems you both playing from the same PC, it's not allowed");
+					killer.sendMessage("PvP System: You killed a player, but it seems you both playing from the same PC, it's not allowed");
 				}		
 				return false;
 			}
@@ -170,10 +137,7 @@ public class PvPRewardManager
 		{
 			if(!no_msg)
 			{
-				if(killer.isLangRus())
-					killer.sendMessage("Система PvP: Вы убили игрока но ваши ИП совпадают, что запрещено.");
-				else
-					killer.sendMessage("PvP System: You killed a player, but your IP are the same, it's not allowed!");
+				killer.sendMessage("PvP System: You killed a player, but your IP are the same, it's not allowed!");
 			}
 			return false;
 		}
@@ -182,10 +146,7 @@ public class PvPRewardManager
 		{
 			if(!no_msg)
 			{
-				if(killer.isLangRus())
-					killer.sendMessage("Система PvP: Вы убили игрока но чар был создан недавно, что не разрешено системой. Чар должен быть создан не менее: "+Config.PVP_REWARD_HR_NEW_CHAR_BEFORE_GET_ITEM+" часов назад.");	
-				else
-					killer.sendMessage("PvP System: You killed a player, but char has been created really short time ago, suggested char creation, not less than "+Config.PVP_REWARD_HR_NEW_CHAR_BEFORE_GET_ITEM+" hours!");
+				killer.sendMessage("PvP System: You killed a player, but char has been created really short time ago, suggested char creation, not less than "+Config.PVP_REWARD_HR_NEW_CHAR_BEFORE_GET_ITEM+" hours!");
 			}		
 			return false;
 		}
@@ -194,10 +155,7 @@ public class PvPRewardManager
 		{
 			if(!no_msg)
 			{
-				if(killer.isLangRus())
-					killer.sendMessage("Система PvP: Вы убили игрока но его экипировка слишком плоха.");	
-				else
-					killer.sendMessage("PvP System: You killed a player, but his equip is very low.");
+				killer.sendMessage("PvP System: You killed a player, but his equip is very low.");
 			}			
 			return false;	
 		}
@@ -226,10 +184,7 @@ public class PvPRewardManager
 
 		if(!isNoDelayActive(victim, player))
 		{
-            if(player.isLangRus())
-			    player.sendMessage("Система PvP: Вы убили игрока этого игрока совсем недавно! Еще не прошло время до возможности повторного убийства.");
-			else
-			    player.sendMessage("PvP System: You killed the player that player recently! Yet as time passed up the possibility of re-killing.");
+		    player.sendMessage("PvP System: You killed the player that player recently! Yet as time passed up the possibility of re-killing.");
 			return;
 		}
 
@@ -245,15 +200,8 @@ public class PvPRewardManager
 
 		if(Config.PVP_REWARD_SEND_SUCC_NOTIF)
 		{
-            if(victim.isLangRus())
-                victim.sendMessage("Система PvP: Вас убили!");
-            else
-                victim.sendMessage("PvP System: You killed!");
-
-            if(player.isLangRus())
-                player.sendMessage("Система PvP: Вы убили игрока!");
-            else
-                player.sendMessage("PvP System: You killed player!");
+            victim.sendMessage("PvP System: You killed!");
+            player.sendMessage("PvP System: You killed player!");
         }
 	}
 

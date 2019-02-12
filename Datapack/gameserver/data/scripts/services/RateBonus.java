@@ -1,7 +1,6 @@
 package services;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.Contants;
 import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.xml.holder.PremiumAccountHolder;
@@ -10,7 +9,6 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.instances.NpcInstance;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
-import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.templates.item.data.ItemData;
 import org.l2j.gameserver.templates.premiumaccount.PremiumAccountTemplate;
 import org.l2j.gameserver.utils.*;
@@ -57,28 +55,19 @@ public class RateBonus
 					int hours = delay % 24;
 					if(days > 0)
 					{
-						if(player.isLangRus())
-							add.append(days).append("д.");
-						else
-							add.append(days).append("d.");
+						add.append(days).append("d.");
 					}
 					if(days > 0 && hours > 0)
 					{
-						if(player.isLangRus())
-							add.append(" и ");
-						else
-							add.append(" and ");
+						add.append(" and ");
 					}
 					if(hours > 0)
 					{
-						if(player.isLangRus())
-							add.append(hours).append("ч.");
-						else
-							add.append(hours).append("h.");
+						add.append(hours).append("h.");
 					}
 				}
 				else
-					add.append(player.isLangRus() ? "бессрочный" : "unlimited");
+					add.append("unlimited");
 				add.append(")").append("</button><br>");
 			}
 		}

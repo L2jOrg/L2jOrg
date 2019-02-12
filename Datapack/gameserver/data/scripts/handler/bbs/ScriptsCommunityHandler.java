@@ -108,7 +108,7 @@ public abstract class ScriptsCommunityHandler implements IBbsHandler, OnInitScri
     }
 
     protected void onWrongCondition(Player player) {
-        player.sendMessage(player.isLangRus() ? "Не соблюдены условия для использование данной функции." : "You are not allowed to use this action in you current stance.");
+        player.sendMessage("You are not allowed to use this action in you current stance.");
         player.sendPacket(ShowBoardPacket.CLOSE);
     }
 

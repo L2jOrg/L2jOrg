@@ -17,15 +17,7 @@ public class Online extends ScriptVoiceCommandHandler
 		if(command.equals("online"))
 		{
 			int i = GameObjectsStorage.getPlayers().size();
-
-			if(activeChar.isLangRus())
-			{
-				activeChar.sendMessage("На сервере играют "+i+" игроков.");
-			}	
-			else
-			{
-				activeChar.sendMessage("Right now there are "+i+" players online.");
-			}
+			activeChar.sendMessage("Right now there are "+i+" players online.");
 			return true;
 		}
 		return false;

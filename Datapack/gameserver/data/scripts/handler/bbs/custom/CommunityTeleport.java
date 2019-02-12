@@ -60,7 +60,7 @@ public class CommunityTeleport extends ScriptsCommunityHandler
     {
         if(BBSConfig.TELEPORT_SERVICE_COST_ITEM_ID == 0)
         {
-            player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+            player.sendMessage("This service disallowed.");
             player.sendPacket(ShowBoardPacket.CLOSE);
             return;
         }
@@ -176,14 +176,14 @@ public class CommunityTeleport extends ScriptsCommunityHandler
             String bmName = st.nextToken();
             if(bmName.equals(" ") || bmName.isEmpty())
             {
-                player.sendMessage(player.isLangRus() ? "Вы не ввели название телепорта." : "You have not entered the name of the teleport.");
+                player.sendMessage("You have not entered the name of the teleport.");
                 onBypassCommand(player, "_cbbsteleport");
                 return;
             }
 
             if(tpNameExist(player, bmName))
             {
-                player.sendMessage(player.isLangRus() ? "Такое название для телепорта уже существует." : "You cannot use the same teleport name twice.");
+                player.sendMessage("You cannot use the same teleport name twice.");
                 onBypassCommand(player, "_cbbsteleport");
                 return;
             }
@@ -223,7 +223,7 @@ public class CommunityTeleport extends ScriptsCommunityHandler
             }
             finally
             {
-                player.sendMessage(player.isLangRus() ? "You have successfully saved a teleport point." : "Вы успешно сохранили точку телепорта.");
+                player.sendMessage("You have successfully saved a teleport point.");
                 DbUtils.closeQuietly(con, statement);
             }
             onBypassCommand(player, "_cbbsteleport");
@@ -265,19 +265,19 @@ public class CommunityTeleport extends ScriptsCommunityHandler
         {
             if(!player.getReflection().isMain() || player.isInSiegeZone() || player.isInZone(ZoneType.RESIDENCE) || player.isInZone(ZoneType.HEADQUARTER) || player.isInZone(ZoneType.battle_zone) ||player.isInZone(ZoneType.ssq_zone) || player.isInZone(ZoneType.no_restart) || player.isInZone(ZoneType.offshore) || player.isInZone(ZoneType.epic) || player.isInOlympiadMode() || player.isInSiegeZone())
             {
-                player.sendMessage(player.isLangRus() ? "Вы не можете совершить телепорт с локации в которой находитесь в данный момент." : "You can not make a teleport to the location in which are at the moment.");
+                player.sendMessage("You can not make a teleport to the location in which are at the moment.");
                 return false;
             }
 
             if(ItemFunctions.getItemCount(player, BBSConfig.TELEPORT_SERVICE_BM_SAVE_COST_ITEM_ID) < BBSConfig.TELEPORT_SERVICE_BM_SAVE_COST_ITEM_COUNT)
             {
-                player.sendMessage(player.isLangRus() ? "У вас не хватает нужных вещей для выполнение опрации." : "You have not enough item to procced the operation.");
+                player.sendMessage("You have not enough item to procced the operation.");
                 return false;
             }
 
             if(getCountTP(player) >= BBSConfig.TELEPORT_SERVICE_BM_SAVE_LIMIT)
             {
-                player.sendMessage(player.isLangRus() ? "Вы достигли лимит сохраняемых точек телепорта." : "You have reached the limit of maximum savings of the teleport bookmarks.");
+                player.sendMessage("You have reached the limit of maximum savings of the teleport bookmarks.");
                 return false;
             }
         }
@@ -285,7 +285,7 @@ public class CommunityTeleport extends ScriptsCommunityHandler
         {
             if(ItemFunctions.getItemCount(player, BBSConfig.TELEPORT_SERVICE_BM_COST_ITEM_ID) < BBSConfig.TELEPORT_SERVICE_BM_COST_ITEM_COUNT)
             {
-                player.sendMessage(player.isLangRus() ? "У вас не хватает нужных предметов для совершения телепорта." : "You do not have the necessary items to carry teleport.");
+                player.sendMessage("You do not have the necessary items to carry teleport.");
                 return false;
             }
         }
@@ -473,7 +473,7 @@ public class CommunityTeleport extends ScriptsCommunityHandler
         if(list == null || list.getPointsIds().length == 0)
         {
             result.append("<tr><td align=center>");
-            result.append(player.isLangRus() ? "Ошибка! Недоступный список телепортов." : "Error! A disabled list teleports.");
+            result.append("Error! A disabled list teleports.");
             result.append("</td></tr>");
         }
         else
@@ -495,7 +495,7 @@ public class CommunityTeleport extends ScriptsCommunityHandler
         {
             result.append("<tr><td align=center>&nbsp;</td></tr>");
             result.append("<tr><td align=center><button value=\"");
-            result.append(player.isLangRus() ? "Назад" : "Back");
+            result.append("Back");
             result.append("\" action=\"bypass _cbbsteleport_" + parrentId + "\" width=100 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>");
         }
         result.append("</table>");
@@ -533,7 +533,7 @@ public class CommunityTeleport extends ScriptsCommunityHandler
                 teleports.append("<tr>");
                 teleports.append("<td width=185 align=center><button value=\"" + tp.TpName + "\" action=\"bypass _cbbsteleportpoint_" + tp.xC + "_" + tp.yC + "_" + tp.zC + "\" width=180 height=25 back=\"L2UI_ct1.button_df_down\" fore=\"L2UI_ct1.button_df\"></td>");
                 teleports.append("<td width=70 align=center><button value=\"");
-                teleports.append(player.isLangRus() ? "Удалить" : "Delete");
+                teleports.append("Delete");
                 teleports.append("\" action=\"bypass _cbbsteleportdelete_" + tp.TpName + "\" width=65 height=25 back=\"L2UI_ct1.button_df_down\" fore=\"L2UI_ct1.button_df\"></td>");
                 teleports.append("</tr></table>");
                 i++;

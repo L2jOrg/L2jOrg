@@ -299,7 +299,7 @@ public final class CommunityRegion extends ScriptsCommunityHandler
 						if(item.getGrade() != ItemGrade.NONE)
 						{
 							desc = _grade[item.getGrade().ordinal() - 1];
-							desc += item.getCrystalCount() > 0 ? (player.isLangRus() ? " Кристаллов: " : " Crystals: ") + item.getCrystalCount() + ";&nbsp;" : ";&nbsp;";
+							desc += item.getCrystalCount() > 0 ? (" Crystals: ") + item.getCrystalCount() + ";&nbsp;" : ";&nbsp;";
 						}
 
 						if(item.isEquipment())
@@ -322,11 +322,11 @@ public final class CommunityRegion extends ScriptsCommunityHandler
 									desc += " &$1627; +" + ti.getDefenceUnholy() + ";&nbsp;";
 							}
 						if(item.isStackable())
-							desc += player.isLangRus() ? "Стыкуемый;&nbsp;" : "Stackable;&nbsp;";
+							desc += "Stackable;&nbsp;";
 						if(item.isShadowItem())
-							desc += player.isLangRus() ? "Теневой предмет;&nbsp;" : "Shadow item;&nbsp;";
+							desc += "Shadow item;&nbsp;";
 						if(item.isTemporal())
-							desc += player.isLangRus() ? "Временный;&nbsp;" : "Temporal;&nbsp;";
+							desc += "Temporal;&nbsp;";
 
 						stpl = stpl.replace("%item_desc%", desc);
 						sb.append(stpl);
@@ -363,10 +363,10 @@ public final class CommunityRegion extends ScriptsCommunityHandler
 
 					String desc = "";
 					if(item.getGrade() != ItemGrade.NONE)
-						desc = _grade[item.getGrade().ordinal() - 1] + (item.getCrystalCount() > 0 ? (player.isLangRus() ? " Кристаллов: " : " Crystals: ") + item.getCrystalCount() + ";&nbsp;" : ";&nbsp;");
+						desc = _grade[item.getGrade().ordinal() - 1] + (item.getCrystalCount() > 0 ? " Crystals: " + item.getCrystalCount() + ";&nbsp;" : ";&nbsp;");
 
 					if(item.isStackable())
-						desc = player.isLangRus() ? "Стыкуемый;&nbsp;" : "Stackable;&nbsp;";
+						desc = "Stackable;&nbsp;";
 
 					stpl = stpl.replace("%item_desc%", desc);
 					sb.append(stpl);

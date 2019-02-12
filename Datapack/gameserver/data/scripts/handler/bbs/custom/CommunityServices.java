@@ -1221,14 +1221,14 @@ public class CommunityServices extends ScriptsCommunityHandler
 				Clan clan = player.getClan();
 				if(clan == null)
 				{
-					player.sendMessage(player.isLangRus() ? "Вы не состоите в клане! Для использования данной функции, вступите в клан." : "You are not a member of the clan! To use this function, to join the clan.");
+					player.sendMessage("You are not a member of the clan! To use this function, to join the clan.");
 					player.sendPacket(ShowBoardPacket.CLOSE);
 					return;
 				}
 
 				if(clan.getLevel() < 5)
 				{
-					player.sendMessage(player.isLangRus() ? "Не соответствующий уровень клана! Для использования данной функции, поднимите 5 уровень клана." : "Does not match the level of the clan! To use this function, raise the level 5 clan.");
+					player.sendMessage("Does not match the level of the clan! To use this function, raise the level 5 clan.");
 					player.sendPacket(ShowBoardPacket.CLOSE);
 					return;
 				}
@@ -1301,14 +1301,14 @@ public class CommunityServices extends ScriptsCommunityHandler
 				final long feeItemCount = BBSConfig.KARMA_PK_SERVICE_COST_ITEM_COUNT;
 				if(feeItemId == 0)
 				{
-					player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+					player.sendMessage("This service disallowed.");
 					player.sendPacket(ShowBoardPacket.CLOSE);
 					return;
 				}
 
 				if(player.getKarma() >= 0 && player.getPkKills() == 0)
 				{
-					player.sendMessage(player.isLangRus() ? "Ваша карма чиста! Данный сервис Вам недоступен." : "Your karma is clean! This service is not available for you.");
+					player.sendMessage("Your karma is clean! This service is not available for you.");
 					player.sendPacket(ShowBoardPacket.CLOSE);
 					return;
 				}

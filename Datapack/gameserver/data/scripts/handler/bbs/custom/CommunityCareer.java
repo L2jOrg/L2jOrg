@@ -45,7 +45,7 @@ public class CommunityCareer extends ScriptsCommunityHandler
 			{
 				if(BBSConfig.OCCUPATION_SERVICE_COST_ITEM_ID_1 == 0 && BBSConfig.OCCUPATION_SERVICE_COST_ITEM_ID_2 == 0)
 				{
-					player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+					player.sendMessage("This service disallowed.");
 					player.sendPacket(ShowBoardPacket.CLOSE);
 					return;
 				}

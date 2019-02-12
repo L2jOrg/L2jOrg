@@ -357,28 +357,19 @@ public class AutoHpCpMp extends ScriptVoiceCommandHandler
 			if(percent > 0)
 			{
 				player.addListener(CHANGE_CURRENT_CP_LISTENER);
-				if(player.isLangRus())
-					player.sendMessage("Вы используете систему автоматического восстановления CP. Ваше CP будет автоматически восстанавливаться при значении " + percent + "% и меньше.");
-				else
-					player.sendMessage("You are using an automatic CP recovery. Your CP will automatically recover at a value of " + percent + "% or less.");
+				player.sendMessage("You are using an automatic CP recovery. Your CP will automatically recover at a value of " + percent + "% or less.");
 			}
 			percent = player.getVarInt("autohp", 0);
 			if(percent > 0)
 			{
 				player.addListener(CHANGE_CURRENT_HP_LISTENER);
-				if(player.isLangRus())
-					player.sendMessage("Вы используете систему автоматического восстановления HP. Ваше HP будет автоматически восстанавливаться при значении " + percent + "% и меньше.");
-				else
-					player.sendMessage("You are using an automatic HP recovery. Your HP will automatically recover at a value of " + percent + "% or less.");
+				player.sendMessage("You are using an automatic HP recovery. Your HP will automatically recover at a value of " + percent + "% or less.");
 			}
 			percent = player.getVarInt("automp", 0);
 			if(percent > 0)
 			{
 				player.addListener(CHANGE_CURRENT_MP_LISTENER);
-				if(player.isLangRus())
-					player.sendMessage("Вы используете систему автоматического восстановления MP. Ваше MP будет автоматически восстанавливаться при значении " + percent + "% и меньше.");
-				else
-					player.sendMessage("You are using an automatic MP recovery. Your MP will automatically recover at a value of " + percent + "% or less.");
+				player.sendMessage("You are using an automatic MP recovery. Your MP will automatically recover at a value of " + percent + "% or less.");
 			}
 		}
 	}
@@ -402,10 +393,7 @@ public class AutoHpCpMp extends ScriptVoiceCommandHandler
 			{
 				activeChar.removeListener(CHANGE_CURRENT_CP_LISTENER);
 				activeChar.unsetVar("autocp");
-				if(activeChar.isLangRus())
-					activeChar.sendMessage("Система автоматического восстановления CP отключена.");
-				else
-					activeChar.sendMessage("CP automatic recovery system disabled.");
+				activeChar.sendMessage("CP automatic recovery system disabled.");
 			}
 			else
 			{
@@ -416,26 +404,17 @@ public class AutoHpCpMp extends ScriptVoiceCommandHandler
 				}
 				catch(NumberFormatException e)
 				{
-					if(activeChar.isLangRus())
-						activeChar.sendMessage("Неверное использование комманды! Используйте: .autocp [ПРОЦЕНТ_CP_ДЛЯ_НАЧАЛА_ВОССТАНОВЛЕНИЯ]");
-					else
-						activeChar.sendMessage("Incorrect use commands! Use: .autocp [CP_PERCENT_FOR EARLY_RECOVERY]");
+					activeChar.sendMessage("Incorrect use commands! Use: .autocp [CP_PERCENT_FOR EARLY_RECOVERY]");
 					return false;
 				}
 				if(percent <= 0)
 				{
-					if(activeChar.isLangRus())
-						activeChar.sendMessage("Нельзя указать нулевое или отрицательное значение!");
-					else
-						activeChar.sendMessage("You can not specify zero or negative value!");
+					activeChar.sendMessage("You can not specify zero or negative value!");
 					return false;
 				}
 				activeChar.addListener(CHANGE_CURRENT_CP_LISTENER);
 				activeChar.setVar("autocp", percent, -1);
-				if(activeChar.isLangRus())
-					activeChar.sendMessage("Вы включили систему автоматического восстановления CP. Ваше CP будет автоматически восстанавливаться при значении " + percent + "% и меньше.");
-				else
-					activeChar.sendMessage("You have enabled an automatic CP recovery. Your CP will automatically recover at a value of " + percent + "% or less.");
+				activeChar.sendMessage("You have enabled an automatic CP recovery. Your CP will automatically recover at a value of " + percent + "% or less.");
 			}
 			return true;
 		}
@@ -445,10 +424,7 @@ public class AutoHpCpMp extends ScriptVoiceCommandHandler
 			{
 				activeChar.removeListener(CHANGE_CURRENT_HP_LISTENER);
 				activeChar.unsetVar("autohp");
-				if(activeChar.isLangRus())
-					activeChar.sendMessage("Система автоматического восстановления HP отключена.");
-				else
-					activeChar.sendMessage("HP automatic recovery system disabled.");
+				activeChar.sendMessage("HP automatic recovery system disabled.");
 			}
 			else
 			{
@@ -459,26 +435,17 @@ public class AutoHpCpMp extends ScriptVoiceCommandHandler
 				}
 				catch(NumberFormatException e)
 				{
-					if(activeChar.isLangRus())
-						activeChar.sendMessage("Неверное использование комманды! Используйте: .autohp [ПРОЦЕНТ_HP_ДЛЯ_НАЧАЛА_ВОССТАНОВЛЕНИЯ]");
-					else
-						activeChar.sendMessage("Incorrect use commands! Use: .autohp [HP_PERCENT_FOR EARLY_RECOVERY]");
+					activeChar.sendMessage("Incorrect use commands! Use: .autohp [HP_PERCENT_FOR EARLY_RECOVERY]");
 					return false;
 				}
 				if(percent <= 0)
 				{
-					if(activeChar.isLangRus())
-						activeChar.sendMessage("Нельзя указать нулевое или отрицательное значение!");
-					else
-						activeChar.sendMessage("You can not specify zero or negative value!");
+					activeChar.sendMessage("You can not specify zero or negative value!");
 					return false;
 				}
 				activeChar.addListener(CHANGE_CURRENT_HP_LISTENER);
 				activeChar.setVar("autohp", percent, -1);
-				if(activeChar.isLangRus())
-					activeChar.sendMessage("Вы включили систему автоматического восстановления HP. Ваше HP будет автоматически восстанавливаться при значении " + percent + "% и меньше.");
-				else
-					activeChar.sendMessage("You have enabled an automatic HP recovery. Your HP will automatically recover at a value of " + percent + "% or less.");
+				activeChar.sendMessage("You have enabled an automatic HP recovery. Your HP will automatically recover at a value of " + percent + "% or less.");
 			}
 			return true;
 		}
@@ -488,10 +455,7 @@ public class AutoHpCpMp extends ScriptVoiceCommandHandler
 			{
 				activeChar.removeListener(CHANGE_CURRENT_MP_LISTENER);
 				activeChar.unsetVar("automp");
-				if(activeChar.isLangRus())
-					activeChar.sendMessage("Система автоматического восстановления MP отключена.");
-				else
-					activeChar.sendMessage("MP automatic recovery system disabled.");
+				activeChar.sendMessage("MP automatic recovery system disabled.");
 			}
 			else
 			{
@@ -502,26 +466,17 @@ public class AutoHpCpMp extends ScriptVoiceCommandHandler
 				}
 				catch(NumberFormatException e)
 				{
-					if(activeChar.isLangRus())
-						activeChar.sendMessage("Неверное использование комманды! Используйте: .automp [ПРОЦЕНТ_MP_ДЛЯ_НАЧАЛА_ВОССТАНОВЛЕНИЯ]");
-					else
-						activeChar.sendMessage("Incorrect use commands! Use: .automp [MP_PERCENT_FOR EARLY_RECOVERY]");
+					activeChar.sendMessage("Incorrect use commands! Use: .automp [MP_PERCENT_FOR EARLY_RECOVERY]");
 					return false;
 				}
 				if(percent <= 0)
 				{
-					if(activeChar.isLangRus())
-						activeChar.sendMessage("Нельзя указать нулевое или отрицательное значение!");
-					else
-						activeChar.sendMessage("You can not specify zero or negative value!");
+					activeChar.sendMessage("You can not specify zero or negative value!");
 					return false;
 				}
 				activeChar.addListener(CHANGE_CURRENT_MP_LISTENER);
 				activeChar.setVar("automp", percent, -1);
-				if(activeChar.isLangRus())
-					activeChar.sendMessage("Вы включили систему автоматического восстановления MP. Ваше MP будет автоматически восстанавливаться при значении " + percent + "% и меньше.");
-				else
-					activeChar.sendMessage("You have enabled an automatic MP recovery. Your MP will automatically recover at a value of " + percent + "% or less.");
+				activeChar.sendMessage("You have enabled an automatic MP recovery. Your MP will automatically recover at a value of " + percent + "% or less.");
 			}
 			return true;
 		}

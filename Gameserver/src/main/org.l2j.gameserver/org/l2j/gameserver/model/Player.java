@@ -6513,12 +6513,6 @@ public final class Player extends Playable implements PlayerGroup
         return -1;
     }
 
-    // TODO remove this
-    public boolean isLangRus()
-    {
-        return getLanguage() == Language.RUSSIAN;
-    }
-
     public int isAtWarWith(int id)
     {
         return _clan == null || !_clan.isAtWarWith(id) ? 0 : 1;
@@ -6604,7 +6598,7 @@ public final class Player extends Playable implements PlayerGroup
     {
         BotCheckQuestion question = BotCheckManager.generateRandomQuestion();
         int qId = question.getId();
-        String qDescr = question.getDescr(isLangRus());
+        String qDescr = question.getDescr();
 
         ConfirmDlgPacket pkt = new ConfirmDlgPacket(SystemMsg.S1, 60000).addString(qDescr);
         //ConfirmDlgPacket pkt = new ConfirmDlgPacket(qDescr, 60000);
@@ -10363,9 +10357,9 @@ public final class Player extends Playable implements PlayerGroup
             String awayText = AwayManager.getInstance().getAwayText(this);
             // TODO: Вынести в ДП сообщение.
             if(awayText == null || awayText.length() <= 1)
-                return isLangRus() ? "<Отошел>" : "<Away>";
+                return "<Away>";
             else
-                return (isLangRus() ? "<Отошел>" : "<Away>") + " - " + awayText + "*";
+                return "<Away>" + " - " + awayText + "*";
         }
 
         String title;

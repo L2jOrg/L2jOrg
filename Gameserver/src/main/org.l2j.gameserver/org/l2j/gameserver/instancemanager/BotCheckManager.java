@@ -1,9 +1,5 @@
 package org.l2j.gameserver.instancemanager;
 
-import java.io.File;
-import java.util.concurrent.CopyOnWriteArrayList;
-import javax.xml.parsers.DocumentBuilderFactory;
-
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
@@ -16,6 +12,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
+
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.File;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class BotCheckManager
 {
@@ -102,11 +102,7 @@ public class BotCheckManager
 			return _id;
 		}
 
-		public String getDescr(boolean rus)
-		{
-			if(rus)
-				return _questionRus;
-			else
+		public String getDescr() {
 				return _questionEn;
 		}
 

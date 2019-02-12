@@ -252,7 +252,7 @@ public class OnShiftAction_NpcInstance extends ScriptOnShiftActionHandler<NpcIns
 			dialog.append(e.getSkill().getName(player)).append("<br1>");
 
 		dialog.append("<br><center><button value=\"");
-		dialog.append(player.isLangRus() ? "Обновить" : "Refresh");
+		dialog.append("Refresh");
 		dialog.append("\" action=\"bypass -h htmbypass_actions.OnActionShift:effects\" width=100 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\" /></center></body></html>");
 
 		HtmlMessage msg = new HtmlMessage(npc);
@@ -320,7 +320,7 @@ public class OnShiftAction_NpcInstance extends ScriptOnShiftActionHandler<NpcIns
 			dialog.append("<tr><td>").append(aggroInfo.attacker.getName()).append("</td><td>").append(aggroInfo.damage).append("</td><td>").append(aggroInfo.hate).append("</td></tr>");
 
 		dialog.append("</table><br><center><button value=\"");
-		dialog.append(player.isLangRus() ? "Обновить" : "Refresh");
+		dialog.append("Refresh");
 		dialog.append("\" action=\"bypass -h htmbypass_actions.OnActionShift:aggro\" width=100 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\" /></center></body></html>");
 
 		HtmlMessage msg = new HtmlMessage(npc);

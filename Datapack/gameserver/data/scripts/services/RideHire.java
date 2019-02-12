@@ -22,10 +22,9 @@ public class RideHire
 		if(player == null || npc == null)
 			return;
 
-		boolean ru = player.isLangRus();
 		if(param.length != 3)
 		{
-			Functions.show(ru ? "Некорректные данные" : "Incorrect input", player, npc);
+			Functions.show("Incorrect input", player, npc);
 			return;
 		}
 
@@ -40,7 +39,7 @@ public class RideHire
 
 		if(player.isTransformed())
 		{
-			Functions.show(ru ? "Вы не можете взять пета в прокат, пока находитесь в режиме трансформации." : "Can't ride while in transformation mode.", player, npc);
+			Functions.show("Can't ride while in transformation mode.", player, npc);
 			return;
 		}
 
@@ -67,13 +66,13 @@ public class RideHire
 				npc_id = PetDataHolder.WFENRIR_WOLF_ID;
 				break;
 			default:
-				Functions.show(ru ? "У меня нет таких питомцев!" : "Unknown pet.", player, npc);
+				Functions.show("Unknown pet.", player, npc);
 				return;
 		}
 
 		if((npc_id == PetDataHolder.WYVERN_ID || npc_id == PetDataHolder.STRIDER_WIND_ID) && !SiegeUtils.getCanRide())
 		{
-			Functions.show(ru ? "Прокат виверн/страйдеров не работает во время осады." : "Can't ride wyvern/strider while Siege in progress.", player, npc);
+			Functions.show("Can't ride wyvern/strider while Siege in progress.", player, npc);
 			return;
 		}
 
@@ -82,7 +81,7 @@ public class RideHire
 
 		if(time > 1800)
 		{
-			Functions.show(ru ? "Слишком большое время." : "Too long time to ride.", player, npc);
+			Functions.show("Too long time to ride.", player, npc);
 			return;
 		}
 
@@ -109,6 +108,6 @@ public class RideHire
 	public static void rideOver(Player player)
 	{
 		Functions.unRide(player);
-		Functions.show(player.isLangRus() ? "Время проката закончилось. Приходите еще!" : "Ride time is over. Welcome back again!", player);
+		Functions.show("Ride time is over. Welcome back again!", player);
 	}
 }
