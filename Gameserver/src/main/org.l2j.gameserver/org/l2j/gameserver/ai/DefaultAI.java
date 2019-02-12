@@ -275,8 +275,6 @@ public class DefaultAI extends NpcAI
 				Player player = target.getPlayer();
 				if(player.isGMInvisible())
 					return false;
-				if(player.isInAwayingMode() && !Config.AWAY_PLAYER_TAKE_AGGRO)
-					return false;
 				if(!player.isActive())
 					return false;
 				if(actor.isMonster() || actor instanceof DecoyInstance)

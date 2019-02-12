@@ -34,7 +34,7 @@ public class Logout extends L2GameClientPacket
 			return;
 		}
 
-		if(activeChar.isBlocked() && !activeChar.isFlying() && !activeChar.isInAwayingMode()) // Разрешаем выходить из игры если используется сервис HireWyvern. Вернет в начальную точку.
+		if(activeChar.isBlocked() && !activeChar.isFlying()) // Разрешаем выходить из игры если используется сервис HireWyvern. Вернет в начальную точку.
 		{
 			activeChar.sendMessage(new CustomMessage("org.l2j.gameserver.network.l2.c2s.Logout.OutOfControl"));
 			activeChar.sendActionFailed();

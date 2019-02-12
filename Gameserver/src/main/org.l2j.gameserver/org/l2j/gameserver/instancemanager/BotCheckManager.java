@@ -170,9 +170,6 @@ public class BotCheckManager
 				if(player.isInSiegeZone())
 					continue;
 
-				if(player.isInAwayingMode())
-					continue;
-
 				if(player.getBotRating() > Rnd.get(Config.MINIMUM_BOT_POINTS_TO_STOP_ASKING, Config.MAXIMUM_BOT_POINTS_TO_STOP_ASKING))
 					continue;
 

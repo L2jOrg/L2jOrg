@@ -392,9 +392,6 @@ public final class Player extends Playable implements PlayerGroup
 
     private int _zoneMask;
 
-    private boolean _offline = false;
-    private boolean _awaying = false;
-
     private boolean _registeredInEvent = false;
 
     private int _pcBangPoints;
@@ -10352,16 +10349,6 @@ public final class Player extends Playable implements PlayerGroup
                 return "";
         }
 
-        if(isInAwayingMode())
-        {
-            String awayText = AwayManager.getInstance().getAwayText(this);
-            // TODO: Вынести в ДП сообщение.
-            if(awayText == null || awayText.length() <= 1)
-                return "<Away>";
-            else
-                return "<Away>" + " - " + awayText + "*";
-        }
-
         String title;
         for(Event event : getEvents())
         {
@@ -10391,9 +10378,6 @@ public final class Player extends Playable implements PlayerGroup
 
     public final int getVisibleTitleColor(Player receiver)
     {
-
-        if(isInAwayingMode())
-            return Config.AWAY_TITLE_COLOR;
 
         Integer color;
         for(Event event : getEvents())
@@ -10847,18 +10831,6 @@ public final class Player extends Playable implements PlayerGroup
     public String getHWID()
     {
         return getNetConnection().getHWID();
-    }
-
-    // TODO remove
-    public boolean isInAwayingMode()
-    {
-
-        return _awaying;
-    }
-
-    public void setAwayingMode(boolean awaying)
-    {
-        _awaying = awaying;
     }
 
     public double getMPCostDiff(Skill.SkillMagicType type)

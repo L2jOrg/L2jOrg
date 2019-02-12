@@ -10,7 +10,6 @@ import org.l2j.commons.time.cron.SchedulingPattern;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.model.base.AcquireType;
 import org.l2j.gameserver.model.base.PlayerAccess;
-import org.l2j.gameserver.skills.AbnormalEffect;
 import org.l2j.gameserver.utils.HtmlUtils;
 import org.l2j.gameserver.utils.Language;
 import org.slf4j.Logger;
@@ -905,13 +904,6 @@ public class Config
 
     public static int ELEMENT_ATTACK_LIMIT;
 
-    public static boolean AWAY_ONLY_FOR_PREMIUM;
-    public static int AWAY_TIMER;
-    public static int BACK_TIMER;
-    public static int AWAY_TITLE_COLOR;
-    public static boolean AWAY_PLAYER_TAKE_AGGRO;
-    public static boolean AWAY_PEACE_ZONE;
-
     public static double[] PERCENT_LOST_ON_DEATH;
     public static double PERCENT_LOST_ON_DEATH_MOD_IN_PEACE_ZONE;
     public static double PERCENT_LOST_ON_DEATH_MOD_IN_PVP;
@@ -1743,13 +1735,6 @@ public class Config
 
         SERVICES_RIDE_HIRE_ENABLED = servicesSettings.getProperty("SERVICES_RIDE_HIRE_ENABLED", false);
 
-
-        AWAY_ONLY_FOR_PREMIUM = servicesSettings.getProperty("AwayOnlyForPremium", true);
-        AWAY_PLAYER_TAKE_AGGRO = servicesSettings.getProperty("AwayPlayerTakeAggro", false);
-        AWAY_TITLE_COLOR = Integer.decode("0x" + servicesSettings.getProperty("AwayTitleColor", "0000FF"));
-        AWAY_TIMER = servicesSettings.getProperty("AwayTimer", 30);
-        BACK_TIMER = servicesSettings.getProperty("BackTimer", 30);
-        AWAY_PEACE_ZONE = servicesSettings.getProperty("AwayOnlyInPeaceZone", false);
     }
 
     public static void loadPvPSettings()
