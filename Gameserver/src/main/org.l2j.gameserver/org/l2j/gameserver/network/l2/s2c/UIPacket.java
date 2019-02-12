@@ -191,7 +191,7 @@ public class UIPacket extends AbstractMaskPacket<UserInfoType>
 		// builder level активирует в клиенте админские команды
 		clan_id = player.getClanId();
 		ally_id = player.getAllyId();
-		private_store = player.isInBuffStore() ? Player.STORE_PRIVATE_NONE : player.getPrivateStoreType();
+		private_store =  player.getPrivateStoreType();
 		can_crystalize = player.getSkillLevel(Skill.SKILL_CRYSTALLIZE) > 0 ? 1 : 0;
 		pk_kills = player.getPkKills();
 		pvp_kills = player.getPvpKills();

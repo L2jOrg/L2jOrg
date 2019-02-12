@@ -318,8 +318,6 @@ public abstract class CustomInstantTeamEvent extends SingleMatchEvent implements
 
     //region Registration
     private boolean checkPlayer(Player player, boolean second) {
-        if (player.isInOfflineMode())
-            return false;
 
         if (player.getLevel() > _maxLevel || player.getLevel() < _minLevel)
             return false;

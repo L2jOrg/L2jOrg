@@ -6,6 +6,8 @@ import org.l2j.commons.lang.reference.HardReference;
 import org.l2j.commons.lang.reference.HardReferences;
 import org.l2j.gameserver.model.Player;
 
+import static java.util.Objects.nonNull;
+
 /**
  * @author VISTALL
  * @date 22:16/22.03.2011
@@ -100,16 +102,12 @@ public class Friend
 		return player == null ? _level : player.getLevel();
 	}
 
-	public boolean isOnline()
-	{
-		Player player = _playerRef.get();
-		return player != null && !player.isInOfflineMode();
+	public boolean isOnline() {
+		return nonNull(_playerRef.get());
 	}
 
-	public Player getPlayer()
-	{
-		Player player = _playerRef.get();
-		return player != null && !player.isInOfflineMode() ? player : null;
+	public Player getPlayer() {
+		return  _playerRef.get();
 	}
 
 	public int getClanId()

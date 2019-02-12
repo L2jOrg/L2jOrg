@@ -1099,7 +1099,7 @@ public class World
 	 * [10] количество объектов<br>
 	 * [11] количество персонажей<br>
 	 * [12] количество игроков<br>
-	 * [13] количество игроков в оффлайн-режиме<br>
+	 * [13] None
 	 * [14] количество NPC<br>
 	 * [15] количество активных NPC<br>
 	 * [16] количество монстров<br>
@@ -1139,10 +1139,6 @@ public class World
 								if(obj.isPlayer())
 								{
 									ret[12]++;
-									Player p = (Player) obj;
-
-									if(p.isInOfflineMode())
-										ret[13]++;
 								}
 								else if(obj.isNpc())
 								{

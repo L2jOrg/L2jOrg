@@ -47,7 +47,6 @@ public class Config
     public static final String AI_CONFIG_FILE = "config/ai.properties";
     public static final String GEODATA_CONFIG_FILE = "config/geodata.properties";
     public static final String SERVICES_FILE = "config/services.properties";
-    public static final String BUFF_STORE_CONFIG_FILE = "config/offline_buffer.properties";
     public static final String OLYMPIAD = "config/olympiad.properties";
 
     public static final String EXT_FILE = "config/ext.properties";
@@ -329,16 +328,6 @@ public class Config
     public static boolean SERVICES_EXPAND_CWH_ENABLED;
     public static int SERVICES_EXPAND_CWH_PRICE;
     public static int SERVICES_EXPAND_CWH_ITEM;
-
-    public static boolean SERVICES_OFFLINE_TRADE_ALLOW;
-    public static int SERVICES_OFFLINE_TRADE_ALLOW_ZONE;
-    public static int SERVICES_OFFLINE_TRADE_MIN_LEVEL;
-    public static int SERVICES_OFFLINE_TRADE_NAME_COLOR;
-    public static AbnormalEffect SERVICES_OFFLINE_TRADE_ABNORMAL_EFFECT;
-    public static int SERVICES_OFFLINE_TRADE_PRICE;
-    public static int SERVICES_OFFLINE_TRADE_PRICE_ITEM;
-    public static int SERVICES_OFFLINE_TRADE_SECONDS_TO_KICK;
-    public static boolean SERVICES_OFFLINE_TRADE_RESTORE_AFTER_RESTART;
 
     public static boolean SERVICES_PARNASSUS_NOTAX;
 
@@ -683,11 +672,9 @@ public class Config
     public static double REFLECT_PSKILL_DAMAGE_PERCENT_CAP;
     public static double REFLECT_MSKILL_DAMAGE_PERCENT_CAP;
 
-    public static boolean SERVICES_NO_TRADE_ONLY_OFFLINE;
     public static double SERVICES_TRADE_TAX;
     public static double SERVICES_OFFSHORE_TRADE_TAX;
     public static boolean SERVICES_OFFSHORE_NO_CASTLE_TAX;
-    public static boolean SERVICES_TRADE_TAX_ONLY_OFFLINE;
     public static boolean SERVICES_TRADE_ONLY_FAR;
     public static int SERVICES_TRADE_RADIUS;
     public static int SERVICES_TRADE_MIN_LEVEL;
@@ -971,15 +958,6 @@ public class Config
 
     public static int BATTLE_ZONE_AROUND_RAID_BOSSES_RANGE;
 
-    public static boolean BUFF_STORE_ENABLED;
-    public static boolean BUFF_STORE_MP_ENABLED;
-    public static double BUFF_STORE_MP_CONSUME_MULTIPLIER;
-    public static boolean BUFF_STORE_ITEM_CONSUME_ENABLED;
-    public static int BUFF_STORE_NAME_COLOR;
-    public static int BUFF_STORE_TITLE_COLOR;
-    public static int BUFF_STORE_OFFLINE_NAME_COLOR;
-    public static IntSet BUFF_STORE_ALLOWED_CLASS_LIST = new HashIntSet();
-    public static IntSet BUFF_STORE_FORBIDDEN_SKILL_LIST = new HashIntSet();
 
     public static boolean TRAINING_CAMP_ENABLE;
     public static boolean TRAINING_CAMP_PREMIUM_ONLY;
@@ -1739,20 +1717,9 @@ public class Config
         SERVICES_EXPAND_CWH_PRICE = servicesSettings.getProperty("ExpandCWHPrice", 1000);
         SERVICES_EXPAND_CWH_ITEM = servicesSettings.getProperty("ExpandCWHItem", 4037);
 
-        SERVICES_OFFLINE_TRADE_ALLOW = servicesSettings.getProperty("AllowOfflineTrade", false);
-        SERVICES_OFFLINE_TRADE_ALLOW_ZONE = servicesSettings.getProperty("AllowOfflineTradeZone", 0);
-        SERVICES_OFFLINE_TRADE_MIN_LEVEL = servicesSettings.getProperty("OfflineMinLevel", 0);
-        SERVICES_OFFLINE_TRADE_NAME_COLOR = Integer.decode("0x" + servicesSettings.getProperty("OfflineTradeNameColor", "B0FFFF"));
-        SERVICES_OFFLINE_TRADE_ABNORMAL_EFFECT = AbnormalEffect.valueOf(servicesSettings.getProperty("OfflineTradeAbnormalEffect", "NONE").toUpperCase());
-        SERVICES_OFFLINE_TRADE_PRICE_ITEM = servicesSettings.getProperty("OfflineTradePriceItem", 0);
-        SERVICES_OFFLINE_TRADE_PRICE = servicesSettings.getProperty("OfflineTradePrice", 0);
-        SERVICES_OFFLINE_TRADE_SECONDS_TO_KICK = servicesSettings.getProperty("OfflineTradeDaysToKick", 14) * 86400;
-        SERVICES_OFFLINE_TRADE_RESTORE_AFTER_RESTART = servicesSettings.getProperty("OfflineRestoreAfterRestart", true);
-
-        SERVICES_NO_TRADE_ONLY_OFFLINE = servicesSettings.getProperty("NoTradeOnlyOffline", false);
         SERVICES_TRADE_TAX = servicesSettings.getProperty("TradeTax", 0.0);
         SERVICES_OFFSHORE_TRADE_TAX = servicesSettings.getProperty("OffshoreTradeTax", 0.0);
-        SERVICES_TRADE_TAX_ONLY_OFFLINE = servicesSettings.getProperty("TradeTaxOnlyOffline", false);
+
         SERVICES_OFFSHORE_NO_CASTLE_TAX = servicesSettings.getProperty("NoCastleTaxInOffshore", false);
         SERVICES_TRADE_ONLY_FAR = servicesSettings.getProperty("TradeOnlyFar", false);
         SERVICES_TRADE_MIN_LEVEL = servicesSettings.getProperty("MinLevelForTrade", 0);
@@ -2020,7 +1987,6 @@ public class Config
         loadExtSettings();
         loadBBSSettings();
         loadSchemeBuffer();
-        loadBuffStoreConfig();
         loadTrainingCampConfig();
 
         abuseLoad();
@@ -2136,23 +2102,6 @@ public class Config
         NpcBuffer_PriceScheme = npcbuffer.getProperty("SchemePrice", 100000);
         NpcBuffer_MaxScheme = npcbuffer.getProperty("MaxScheme", 4);
 
-    }
-
-    public static void loadBuffStoreConfig()
-    {
-        ExProperties buffStoreConfig = load(BUFF_STORE_CONFIG_FILE);
-
-        BUFF_STORE_ENABLED = buffStoreConfig.getProperty("BuffStoreEnabled", false);
-        BUFF_STORE_MP_ENABLED = buffStoreConfig.getProperty("BuffStoreMpEnabled", true);
-        BUFF_STORE_MP_CONSUME_MULTIPLIER = buffStoreConfig.getProperty("BuffStoreMpConsumeMultiplier", 1.0);
-        BUFF_STORE_ITEM_CONSUME_ENABLED = buffStoreConfig.getProperty("BuffStoreItemConsumeEnabled", true);
-
-        BUFF_STORE_NAME_COLOR = Integer.decode("0x" + buffStoreConfig.getProperty("BuffStoreNameColor", "808080"));
-        BUFF_STORE_TITLE_COLOR = Integer.decode("0x" + buffStoreConfig.getProperty("BuffStoreTitleColor", "808080"));
-        BUFF_STORE_OFFLINE_NAME_COLOR = Integer.decode("0x" + buffStoreConfig.getProperty("BuffStoreOfflineNameColor", "808080"));
-
-        BUFF_STORE_ALLOWED_CLASS_LIST.addAll(StringArrayUtils.stringToIntArray(buffStoreConfig.getProperty("BuffStoreAllowedClassList", ""), ","));
-        BUFF_STORE_FORBIDDEN_SKILL_LIST.addAll(StringArrayUtils.stringToIntArray(buffStoreConfig.getProperty("BuffStoreForbiddenSkillList", ""), ","));
     }
 
     public static void loadTrainingCampConfig()

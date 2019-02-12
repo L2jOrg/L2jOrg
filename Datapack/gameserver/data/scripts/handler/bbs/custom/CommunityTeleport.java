@@ -255,7 +255,7 @@ public class CommunityTeleport extends ScriptsCommunityHandler
         if(player.isInBoat())
             return false;
 
-        if(player.isInStoreMode() || player.isInTrade() || player.isInOfflineMode())
+        if(player.isInStoreMode() || player.isInTrade())
             return false;
 
         if(player.isInDuel())

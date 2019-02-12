@@ -202,7 +202,7 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
 		Player oldPlayer = GameObjectsStorage.getPlayer(objectId);
 
 		if(oldPlayer != null)
-			if(oldPlayer.isInOfflineMode() || oldPlayer.isLogoutStarted())
+			if(oldPlayer.isLogoutStarted())
 			{
 				// оффтрейдового чара проще выбить чем восстанавливать
 				oldPlayer.kick();

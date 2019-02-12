@@ -15,7 +15,6 @@ import org.l2j.gameserver.handler.bbs.IBbsHandler;
 import org.l2j.gameserver.handler.bypass.BypassHolder;
 import org.l2j.gameserver.handler.voicecommands.IVoicedCommandHandler;
 import org.l2j.gameserver.handler.voicecommands.VoicedCommandHandler;
-import org.l2j.gameserver.instancemanager.OfflineBufferManager;
 import org.l2j.gameserver.instancemanager.OlympiadHistoryManager;
 import org.l2j.gameserver.model.GameObject;
 import org.l2j.gameserver.model.Player;
@@ -259,13 +258,7 @@ public class RequestBypassToServer extends L2GameClientPacket
 			else if(_bypass.startsWith("Quest "))
 			{
 				_log.warn("Trying to call Quest bypass: " + _bypass + ", player: " + activeChar);
-			}
-			else if (_bypass.startsWith("buffstore?"))
-			{
-				OfflineBufferManager.getInstance().processBypass(activeChar, _bypass.substring(10).trim());
-			}
-			else if(bp.bypass.startsWith("pvpevent_"))
-			{
+			} else if(bp.bypass.startsWith("pvpevent_")) {
 				String[] temp = bp.bypass.split(";");
 
 				for(String bypass : temp)

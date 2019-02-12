@@ -26,12 +26,10 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class AdminEffects implements IAdminCommandHandler
 {
-	private static enum Commands
+	private enum Commands
 	{
 		admin_invis,
 		admin_vis,
-		admin_offline_vis,
-		admin_offline_invis,
 		admin_earthquake,
 		admin_block,
 		admin_unblock,
@@ -156,23 +154,6 @@ public class AdminEffects implements IAdminCommandHandler
 
 		switch(command)
 		{
-			case admin_offline_vis:
-				for(Player player : GameObjectsStorage.getPlayers())
-					if(player != null && player.isInOfflineMode())
-					{
-                        player.getFlags().getInvisible().stop();
-						player.decayMe();
-						player.spawnMe();
-					}
-				break;
-			case admin_offline_invis:
-				for(Player player : GameObjectsStorage.getPlayers())
-					if(player != null && player.isInOfflineMode())
-					{
-                        player.getFlags().getInvisible().start();
-						player.decayMe();
-					}
-				break;
 			case admin_earthquake:
 				try
 				{

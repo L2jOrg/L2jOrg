@@ -170,9 +170,7 @@ public class Say2C extends L2GameClientPacket {
         switch (type) {
             case TELL:
                 Player receiver = World.getPlayer(target);
-                if (receiver != null && receiver.isInOfflineMode())
-                    activeChar.sendPacket(new SystemMessagePacket(SystemMsg.S1_IS_NOT_CURRENTLY_LOGGED_IN).addString(target), ActionFailPacket.STATIC);
-                else if (receiver != null && !receiver.getBlockList().contains(activeChar) && !receiver.isBlockAll()) {
+                if (receiver != null && !receiver.getBlockList().contains(activeChar) && !receiver.isBlockAll()) {
                     if (!receiver.getMessageRefusal()) {
                         if (!activeChar.getAntiFlood().canTell(receiver.getObjectId(), text))
                             return;
@@ -335,19 +333,6 @@ public class Say2C extends L2GameClientPacket {
                         roomMember.sendPacket(cs);
                 break;
             case WORLD:
-                if (text.equals("servershowyourrealonline")) {
-                    int online = 0;
-                    int offtrade = 0;
-                    for (Player p : GameObjectsStorage.getPlayers()) {
-                        if (p.isInOfflineMode())
-                            offtrade++;
-                        else
-                            online++;
-                    }
-                    activeChar.sendMessage("Online: " + online + ", offtrade: " + offtrade);
-                    return;
-                }
-
                 var serverSettings = getSettings(ServerSettings.class);
                 if (!serverSettings.isWorldChatAllowed())
                     return;

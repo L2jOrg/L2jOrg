@@ -77,7 +77,7 @@ public abstract class ScriptsCommunityHandler implements IBbsHandler, OnInitScri
                 return false;
 
         if (!BBSConfig.CAN_USE_FUNCTIONS_WHEN_IN_TRADE)    // В состоянии торговли
-            if (player.isInStoreMode() || player.isInTrade() || player.isInOfflineMode())
+            if (player.isInStoreMode() || player.isInTrade())
                 return false;
 
         if (!BBSConfig.CAN_USE_FUNCTIONS_IF_TELEPORTING)    // Во время телепортации

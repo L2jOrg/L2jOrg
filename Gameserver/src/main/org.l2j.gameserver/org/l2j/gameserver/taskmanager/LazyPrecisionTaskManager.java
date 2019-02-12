@@ -37,7 +37,7 @@ public class LazyPrecisionTaskManager extends SteppingRunnableQueueManager
 
 		return scheduleAtFixedRate(() ->
 		{
-			if(player.isInOfflineMode() || player.getLevel() < Config.ALT_PCBANG_POINTS_MIN_LVL)
+			if(player.getLevel() < Config.ALT_PCBANG_POINTS_MIN_LVL)
 				return;
 
 			if(Config.ALT_PCBANG_POINTS_ONLY_PREMIUM && !player.hasPremiumAccount())

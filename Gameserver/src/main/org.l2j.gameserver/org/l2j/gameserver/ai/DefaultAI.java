@@ -281,7 +281,7 @@ public class DefaultAI extends NpcAI
 					return false;
 				if(actor.isMonster() || actor instanceof DecoyInstance)
 				{
-					if(player.isInStoreMode() || player.isInOfflineMode())
+					if(player.isInStoreMode())
 						return false;
 				}
 			}

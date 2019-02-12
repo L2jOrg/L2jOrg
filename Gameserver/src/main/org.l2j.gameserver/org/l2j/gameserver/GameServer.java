@@ -204,20 +204,6 @@ public class GameServer {
 
         getListeners().onStart();
 
-        // TODO remove this
-        if (Config.BUFF_STORE_ENABLED) {
-            logger.info("Restoring offline buffers...");
-            int count = TradeHelper.restoreOfflineBuffers();
-            logger.info("Restored " + count + " offline buffers.");
-        }
-
-        // TODO remove This
-        if (Config.SERVICES_OFFLINE_TRADE_RESTORE_AFTER_RESTART) {
-            logger.info("Restoring offline traders...");
-            int count = TradeHelper.restoreOfflineTraders();
-            logger.info("Restored " + count + " offline traders.");
-        }
-
         ThreadPoolManager.getInstance().execute(AuthServerCommunication.getInstance());
 
         logMemoryUsage();

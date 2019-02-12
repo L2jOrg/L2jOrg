@@ -129,27 +129,6 @@ public class GameObjectTasks
 		}
 	}
 
-	/** KickTask */
-	public static class KickTask extends RunnableImpl
-	{
-		private final HardReference<Player> _playerRef;
-
-		public KickTask(Player player)
-		{
-			_playerRef = player.getRef();
-		}
-
-		@Override
-		public void runImpl()
-		{
-			Player player = _playerRef.get();
-			if(player == null)
-				return;
-			player.setOfflineMode(false);
-			player.kick();
-		}
-	}
-
 	/** UnJailTask */
 	public static class UnJailTask extends RunnableImpl
 	{

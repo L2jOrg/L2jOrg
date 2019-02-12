@@ -63,7 +63,6 @@ public class Zone extends EventOwner
 		dummy,
 		offshore,
 		epic,
-		buff_store
 	}
 
 	public enum ZoneTarget

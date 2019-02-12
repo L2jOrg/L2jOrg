@@ -9,7 +9,6 @@ import org.l2j.gameserver.data.string.StringsHolder;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.instancemanager.CoupleManager;
-import org.l2j.gameserver.instancemanager.OfflineBufferManager;
 import org.l2j.gameserver.instancemanager.PetitionManager;
 import org.l2j.gameserver.instancemanager.PlayerMessageStack;
 import org.l2j.gameserver.listener.actor.player.OnAnswerListener;
@@ -133,9 +132,7 @@ public class EnterWorld extends L2GameClientPacket {
 			activeChar.setNonAggroTime(Long.MAX_VALUE);
 			activeChar.setNonPvpTime(System.currentTimeMillis() + Config.NONPVP_TIME_ONTELEPORT);
 
-			if(activeChar.isInBuffStore())
-				activeChar.setPrivateStoreType(Player.STORE_PRIVATE_NONE);
-			else if(activeChar.isInStoreMode())
+			if(activeChar.isInStoreMode())
 			{
 				if(!TradeHelper.validateStore(activeChar))
 				{
@@ -276,14 +273,6 @@ public class EnterWorld extends L2GameClientPacket {
 
 		if(activeChar.isInStoreMode())
 			activeChar.sendPacket(activeChar.getPrivateStoreMsgPacket(activeChar));
-
-		activeChar.unsetVar("offline");
-		activeChar.unsetVar("offlinebuff");
-		activeChar.unsetVar("offlinebuff_price");
-		activeChar.unsetVar("offlinebuff_skills");
-		activeChar.unsetVar("offlinebuff_title");
-
-		OfflineBufferManager.getInstance().getBuffStores().remove(activeChar.getObjectId());
 
 		// на всякий случай
 		activeChar.sendActionFailed();

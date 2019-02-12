@@ -226,8 +226,6 @@ public class AdminBan implements IAdminCommandHandler
 					Player banned = activeChar.getTarget().getPlayer();
 					String banaccount = banned.getAccountName();
 					AuthServerCommunication.getInstance().sendPacket(new ChangeAccessLevel(banaccount, -100, 0));
-					if(banned.isInOfflineMode())
-						banned.setOfflineMode(false);
 					banned.kick();
 					Functions.sendDebugMessage(activeChar, "Player account " + banaccount + " is banned, player " + banned.getName() + " kicked.");
 					break;
@@ -254,12 +252,8 @@ public class AdminBan implements IAdminCommandHandler
 
 		Log.add(targ.getName() + ":" + days + tradeToString(targ, targ.getPrivateStoreType()), "tradeBan", activeChar);
 
-		if(targ.isInOfflineMode())
-		{
-			targ.setOfflineMode(false);
-			targ.kick();
-		}
-		else if(targ.isInStoreMode())
+
+		if(targ.isInStoreMode())
 		{
 			targ.setPrivateStoreType(Player.STORE_PRIVATE_NONE);
 			targ.storePrivateStore();

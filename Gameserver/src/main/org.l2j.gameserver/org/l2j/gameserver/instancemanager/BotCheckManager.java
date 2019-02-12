@@ -165,9 +165,6 @@ public class BotCheckManager
 				if(player.isInOlympiadMode())
 					continue;
 
-				if(player.isInOfflineMode())
-					continue;
-
 				if(player.isInStoreMode())
 					continue;
 

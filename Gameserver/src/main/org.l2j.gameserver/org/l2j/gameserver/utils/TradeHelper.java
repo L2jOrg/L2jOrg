@@ -1,23 +1,18 @@
 package org.l2j.gameserver.utils;
 
-import org.l2j.commons.database.L2DatabaseFactory;
-import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.math.SafeMath;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.instancemanager.OfflineBufferManager;
-import org.l2j.gameserver.instancemanager.OfflineBufferManager.BufferData;
 import org.l2j.gameserver.instancemanager.ReflectionManager;
-import org.l2j.gameserver.model.*;
+import org.l2j.gameserver.model.Creature;
+import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.model.Zone;
 import org.l2j.gameserver.model.items.TradeItem;
 import org.l2j.gameserver.network.l2.components.CustomMessage;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
-import org.l2j.gameserver.skills.SkillEntry;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.util.List;
 
 public final class TradeHelper
@@ -37,18 +32,13 @@ public final class TradeHelper
 			return false;
 		}
 
-		if(storeType != Player.STORE_PRIVATE_BUFF)
+		String BLOCK_ZONE = storeType == Player.STORE_PRIVATE_MANUFACTURE ? Zone.BLOCKED_ACTION_PRIVATE_WORKSHOP : Zone.BLOCKED_ACTION_PRIVATE_STORE;
+		if(player.isActionBlocked(BLOCK_ZONE))
 		{
-			String BLOCK_ZONE = storeType == Player.STORE_PRIVATE_MANUFACTURE ? Zone.BLOCKED_ACTION_PRIVATE_WORKSHOP : Zone.BLOCKED_ACTION_PRIVATE_STORE;
-			if(player.isActionBlocked(BLOCK_ZONE))
-			{
-				if(!Config.SERVICES_NO_TRADE_ONLY_OFFLINE || Config.SERVICES_NO_TRADE_ONLY_OFFLINE && player.isInOfflineMode())
-				{
-					player.sendPacket(storeType == Player.STORE_PRIVATE_MANUFACTURE ? SystemMsg.YOU_CANNOT_OPEN_A_PRIVATE_WORKSHOP_HERE : SystemMsg.YOU_CANNOT_OPEN_A_PRIVATE_STORE_HERE);
-					return false;
-				}
-			}
+			player.sendPacket(storeType == Player.STORE_PRIVATE_MANUFACTURE ? SystemMsg.YOU_CANNOT_OPEN_A_PRIVATE_WORKSHOP_HERE : SystemMsg.YOU_CANNOT_OPEN_A_PRIVATE_STORE_HERE);
+			return false;
 		}
+
 
 		if(player.isCastingNow())
 		{
@@ -120,8 +110,7 @@ public final class TradeHelper
 
 		String BLOCK_ZONE = player.getPrivateStoreType() == Player.STORE_PRIVATE_MANUFACTURE ? Zone.BLOCKED_ACTION_PRIVATE_WORKSHOP : Zone.BLOCKED_ACTION_PRIVATE_STORE;
 		if(player.isActionBlocked(BLOCK_ZONE))
-			if(!Config.SERVICES_NO_TRADE_ONLY_OFFLINE || Config.SERVICES_NO_TRADE_ONLY_OFFLINE && player.isInOfflineMode())
-				return false;
+			return false;
 
 		switch (player.getPrivateStoreType())
 		{
@@ -221,8 +210,6 @@ public final class TradeHelper
 		long tax = (long) (price * Config.SERVICES_TRADE_TAX / 100);
 		if(seller.isInZone(Zone.ZoneType.offshore))
 			tax = (long) (price * Config.SERVICES_OFFSHORE_TRADE_TAX / 100);
-		if(Config.SERVICES_TRADE_TAX_ONLY_OFFLINE && !seller.isInOfflineMode())
-			tax = 0;
 		if(Config.SERVICES_PARNASSUS_NOTAX && seller.getReflection() == ReflectionManager.PARNASSUS)
 			tax = 0;
 
@@ -236,173 +223,6 @@ public final class TradeHelper
 	{
 		activeChar.setPrivateStoreType(Player.STORE_PRIVATE_NONE);
 		activeChar.storePrivateStore();
-		if(activeChar.isInOfflineMode())
-		{
-			activeChar.setOfflineMode(false);
-			activeChar.kick();
-		}
-		else
-			activeChar.broadcastCharInfo();
-	}
-
-	public static int restoreOfflineTraders() throws Exception
-	{
-		int count = 0;
-
-		Connection con = null;
-		PreparedStatement statement = null;
-		ResultSet rset = null;
-		try
-		{
-			con = L2DatabaseFactory.getInstance().getConnection();
-
-			statement = con.prepareStatement("DELETE FROM character_variables WHERE name = 'offline' AND value < ?");
-			statement.setInt(1, (int)(System.currentTimeMillis() / 1000L));
-			statement.executeUpdate();
-
-			DbUtils.close(statement);
-
-			//Убираем забаненных
-			statement = con.prepareStatement("DELETE FROM character_variables WHERE name = 'offline' AND obj_id IN (SELECT obj_id FROM characters WHERE accessLevel < 0)");
-			statement.executeUpdate();
-
-			DbUtils.close(statement);
-
-			statement = con.prepareStatement("SELECT obj_id, value FROM character_variables WHERE name = 'offline'");
-			rset = statement.executeQuery();
-
-			int objectId;
-			int expireTimeSecs;
-			Player p;
-
-			while(rset.next())
-			{
-				objectId = rset.getInt("obj_id");
-				expireTimeSecs = rset.getInt("value");
-
-				p = Player.restore(objectId);
-				if(p == null)
-					continue;
-
-				//радиус не проверяется, т.к. торговец еще не заспавнен в мир
-				if(!validateStore(p))
-				{
-					p.setPrivateStoreType(Player.STORE_PRIVATE_NONE);
-					p.storePrivateStore();
-					p.setOfflineMode(false);
-					p.kick();
-					continue;
-				}
-
-				p.startAbnormalEffect(Config.SERVICES_OFFLINE_TRADE_ABNORMAL_EFFECT);
-				p.setOfflineMode(true);
-				p.setOnlineStatus(true);
-				p.entering = false;
-
-				p.spawnMe();
-
-				if(p.getClan() != null && p.getClan().getAnyMember(p.getObjectId()) != null)
-					p.getClan().getAnyMember(p.getObjectId()).setPlayerInstance(p, false);
-
-				if(expireTimeSecs != Integer.MAX_VALUE)
-					p.startKickTask(expireTimeSecs * 1000L - System.currentTimeMillis());
-
-				count++;
-			}
-		}
-		finally
-		{
-			DbUtils.closeQuietly(con, statement, rset);
-		}
-
-		return count;
-	}
-
-	public static int getOfflineTradersCount()
-	{
-		if(!Config.SERVICES_OFFLINE_TRADE_ALLOW)
-			return 0;
-
-		int count = 0;
-		for(Player player : GameObjectsStorage.getPlayers())
-		{
-			if(player.isInOfflineMode())
-				count++;
-		}
-		return count;
-	}
-
-	public static int restoreOfflineBuffers() throws Exception
-	{
-		int count = 0;
-
-		Connection con = null;
-		PreparedStatement statement = null;
-		ResultSet rset = null;
-		try
-		{
-			con = L2DatabaseFactory.getInstance().getConnection();
-
-			statement = con.prepareStatement("DELETE FROM character_variables WHERE name = 'offlinebuff' AND value < ?");
-			statement.setInt(1, (int) (System.currentTimeMillis() / 1000L));
-			statement.executeUpdate();
-
-			DbUtils.close(statement);
-
-			statement = con.prepareStatement("DELETE FROM character_variables WHERE name = 'offlinebuff' AND obj_id IN (SELECT obj_id FROM characters WHERE accessLevel < 0)");
-			statement.executeUpdate();
-
-			DbUtils.close(statement);
-
-			statement = con.prepareStatement("SELECT c1.obj_id obj_id, c1.value expire_time, c2.value price, c3.value skills, c4.value title FROM character_variables AS c1 INNER JOIN character_variables AS c2 ON c1.obj_id = c2.obj_id AND c2.name = 'offlinebuff_price' INNER JOIN character_variables AS c3 ON c1.obj_id = c3.obj_id AND c3.name = 'offlinebuff_skills' LEFT JOIN character_variables AS c4 ON c1.obj_id = c4.obj_id AND c4.name = 'offlinebuff_title' WHERE c1.name = 'offlinebuff'");
-			rset = statement.executeQuery();
-
-			while(rset.next())
-			{
-				int objectId = rset.getInt("obj_id");
-				int expireTimeSecs = rset.getInt("expire_time");
-				long price = rset.getLong("price");
-				int[] skills = org.l2j.commons.string.StringArrayUtils.stringToIntArray(rset.getString("skills"), ",");
-				String title = rset.getString("title");
-
-				Player p = Player.restore(objectId);
-				if(p == null)
-					continue;
-
-				p.startAbnormalEffect(Config.SERVICES_OFFLINE_TRADE_ABNORMAL_EFFECT);
-				p.setOfflineMode(true);
-				p.setOnlineStatus(true);
-				p.setPrivateStoreType(20);
-				p.setSitting(true);
-				p.entering = false;
-
-				p.spawnMe();
-
-				if(p.getClan() != null && p.getClan().getAnyMember(p.getObjectId()) != null)
-					p.getClan().getAnyMember(p.getObjectId()).setPlayerInstance(p, false);
-
-				if(expireTimeSecs != Integer.MAX_VALUE)
-					p.startKickTask(expireTimeSecs * 1000L - System.currentTimeMillis());
-
-				BufferData buffer = new BufferData(p, title, price, null);
-
-				for(int skillId : skills)
-				{
-					SkillEntry skill = p.getKnownSkill(skillId);
-					if(skill != null)
-						buffer.getBuffs().put(skill.getId(), skill);
-				}
-
-				OfflineBufferManager.getInstance().getBuffStores().put(p.getObjectId(), buffer);
-
-				count++;
-			}
-		}
-		finally
-		{
-			DbUtils.closeQuietly(con, statement, rset);
-		}
-
-		return count;
+		activeChar.broadcastCharInfo();
 	}
 }

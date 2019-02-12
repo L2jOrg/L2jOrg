@@ -204,7 +204,7 @@ public final class PetBabyInstance extends PetInstance
 					}
 				}
 
-				if(owner.isInOfflineMode() || owner.getAbnormalList().contains(5771))
+				if(owner.getAbnormalList().contains(5771))
 					return null;
 
 				outer: for(Skill buff : getBuffs())

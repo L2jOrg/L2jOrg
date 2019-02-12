@@ -19,6 +19,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.concurrent.ScheduledFuture;
 
+import static java.util.Objects.nonNull;
+
 public class UnitMember
 {
 	private static final Logger _log = LoggerFactory.getLogger(UnitMember.class);
@@ -126,10 +128,8 @@ public class UnitMember
 		return _player;
 	}
 
-	public boolean isOnline()
-	{
-		Player player = getPlayer();
-		return player != null && !player.isInOfflineMode();
+	public boolean isOnline() {
+		return nonNull(getPlayer());
 	}
 
 	public Clan getClan()

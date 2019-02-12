@@ -103,7 +103,7 @@ public class CIPacket extends L2GameServerPacket
 		_name = player.getVisibleName(_receiver);
 		_nameColor = player.getVisibleNameColor(_receiver);
 
-		if(player.isConnected() || player.isInOfflineMode() || player.isFakePlayer())
+		if(player.isConnected()  || player.isFakePlayer())
 		{
 			_title = player.getVisibleTitle(_receiver);
 			_title_color = player.getVisibleTitleColor(_receiver);
@@ -191,7 +191,7 @@ public class CIPacket extends L2GameServerPacket
 		_run = player.isRunning() ? 1 : 0; // running = 1 walking = 0
 		_combat = player.isInCombat() ? 1 : 0;
 		_dead = player.isAlikeDead() ? 1 : 0;
-		private_store = player.isInObserverMode() ? Player.STORE_OBSERVING_GAMES : (player.isInBuffStore() ? Player.STORE_PRIVATE_NONE : player.getPrivateStoreType());
+		private_store = player.isInObserverMode() ? Player.STORE_OBSERVING_GAMES :  player.getPrivateStoreType();
 		cubics = player.getCubics().toArray(new Cubic[player.getCubics().size()]);
 		_abnormalEffects = player.getAbnormalEffects();
 		rec_have = player.isGM() ? 0 : player.getRecomHave();

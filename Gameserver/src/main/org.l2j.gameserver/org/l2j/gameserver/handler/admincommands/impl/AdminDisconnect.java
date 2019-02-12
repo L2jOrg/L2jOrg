@@ -64,13 +64,6 @@ public class AdminDisconnect implements IAdminCommandHandler
 
 				activeChar.sendMessage("Character " + player.getName() + " disconnected from server.");
 
-				if(player.isInOfflineMode())
-				{
-					player.setOfflineMode(false);
-					player.kick();
-					return true;
-				}
-
 				player.sendMessage(new CustomMessage("admincommandhandlers.AdminDisconnect.YoureKickedByGM"));
 				player.sendPacket(SystemMsg.YOU_HAVE_BEEN_DISCONNECTED_FROM_THE_SERVER_);
 				ThreadPoolManager.getInstance().schedule(() ->

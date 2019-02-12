@@ -16,6 +16,8 @@ import java.sql.PreparedStatement;
 /**
  * Online -> real + fake
  * by l2scripts
+ *
+ * TODO remove
  */
 public class totalonline implements OnInitScriptListener
 {
@@ -35,7 +37,6 @@ public class totalonline implements OnInitScriptListener
 		public void run()
 		{
 			int members = getOnlineMembers();
-			int offMembers = getOfflineMembers();
 			Connection con = null;
 			PreparedStatement statement = null;
 			try
@@ -43,7 +44,7 @@ public class totalonline implements OnInitScriptListener
 				con = L2DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("update online set totalOnline =?, totalOffline = ? where 'index' =0");
 				statement.setInt(1, members);
-				statement.setInt(2, offMembers);
+				statement.setInt(2, 0);
 				statement.execute();
 				DbUtils.closeQuietly(statement);		
 		}
@@ -61,16 +62,5 @@ public class totalonline implements OnInitScriptListener
 	//for future possibility of parsing names of players method is taking also name to array for init
 	private int getOnlineMembers() {
 		return GameObjectsStorage.getPlayers().size();
-	}
-	private int getOfflineMembers()
-	{
-		int i = 0;
-		for(Player player : GameObjectsStorage.getPlayers())
-		{
-			if(player.isInOfflineMode())
-				i++;
-		}
-		
-		return i;	
 	}
 }

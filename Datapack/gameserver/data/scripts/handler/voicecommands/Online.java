@@ -16,24 +16,15 @@ public class Online extends ScriptVoiceCommandHandler
 
 		if(command.equals("online"))
 		{
-			int i = 0;
-			int j = 0;
-			for(Player player : GameObjectsStorage.getPlayers())
-			{
-				i++;
-				if(player.isInOfflineMode())
-					j++;
-			}
+			int i = GameObjectsStorage.getPlayers().size();
 
 			if(activeChar.isLangRus())
 			{
 				activeChar.sendMessage("На сервере играют "+i+" игроков.");
-				activeChar.sendMessage("Из них "+j+" находятся в оффлайн торге.");
 			}	
 			else
 			{
 				activeChar.sendMessage("Right now there are "+i+" players online.");
-				activeChar.sendMessage("From them "+j+" are in offline trade mode.");			
 			}
 			return true;
 		}
