@@ -39,7 +39,7 @@ public class CommunityAddWindows extends ScriptsCommunityHandler
 		{
 			if(BBSConfig.ADD_WINDOW_SERVICE_COST_ITEM_ID_PER_1_DAY <= 0 && BBSConfig.ADD_WINDOW_SERVICE_COST_ITEM_ID_PER_FOREVER <= 0)
 			{
-				player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+				player.sendMessage("This service disallowed.");
 				player.sendPacket(ShowBoardPacket.CLOSE);
 				return;
 			}
@@ -53,7 +53,7 @@ public class CommunityAddWindows extends ScriptsCommunityHandler
 				hardware = player.getHWID();
 				if(Config.MAX_ACTIVE_ACCOUNTS_ON_ONE_HWID <= 0)
 				{
-					player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+					player.sendMessage("This service disallowed.");
 					player.sendPacket(ShowBoardPacket.CLOSE);
 					return;
 				}
@@ -63,7 +63,7 @@ public class CommunityAddWindows extends ScriptsCommunityHandler
 				hardware = player.getAccountName();
 				if(Config.MAX_ACTIVE_ACCOUNTS_ON_ONE_HWID <= 0)
 				{
-					player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+					player.sendMessage("This service disallowed.");
 					player.sendPacket(ShowBoardPacket.CLOSE);
 					return;
 				}
@@ -73,7 +73,7 @@ public class CommunityAddWindows extends ScriptsCommunityHandler
 				hardware = player.getIP();
 				if(Config.MAX_ACTIVE_ACCOUNTS_ON_ONE_IP <= 0)
 				{
-					player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+					player.sendMessage("This service disallowed.");
 					player.sendPacket(ShowBoardPacket.CLOSE);
 					return;
 				}

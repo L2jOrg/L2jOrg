@@ -198,7 +198,7 @@ public class CommunityStatistic extends ScriptsCommunityHandler
 
 			if(BBSConfig.STATISTIC_TOP_PK_COUNT <= 0 && BBSConfig.STATISTIC_TOP_PVP_COUNT <= 0 && BBSConfig.STATISTIC_TOP_LVL_COUNT <= 0 && BBSConfig.STATISTIC_TOP_ADENA_COUNT <= 0 && BBSConfig.STATISTIC_TOP_ONLINE_COUNT <= 0 && BBSConfig.STATISTIC_TOP_ITEM_COUNT <= 0 && BBSConfig.STATISTIC_TOP_OLYMPIAD_COUNT <= 0)
 			{
-				player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+				player.sendMessage("This service disallowed.");
 				player.sendPacket(ShowBoardPacket.CLOSE);
 				return;
 			}
@@ -236,7 +236,7 @@ public class CommunityStatistic extends ScriptsCommunityHandler
 			{
 				if(BBSConfig.STATISTIC_TOP_PK_COUNT <= 0)
 				{
-					player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+					player.sendMessage("This service disallowed.");
 					player.sendPacket(ShowBoardPacket.CLOSE);
 					return;
 				}
@@ -258,7 +258,7 @@ public class CommunityStatistic extends ScriptsCommunityHandler
 			{
 				if(BBSConfig.STATISTIC_TOP_PVP_COUNT <= 0)
 				{
-					player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+					player.sendMessage("This service disallowed.");
 					player.sendPacket(ShowBoardPacket.CLOSE);
 					return;
 				}
@@ -280,7 +280,7 @@ public class CommunityStatistic extends ScriptsCommunityHandler
 			{
 				if(BBSConfig.STATISTIC_TOP_LVL_COUNT <= 0)
 				{
-					player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+					player.sendMessage("This service disallowed.");
 					player.sendPacket(ShowBoardPacket.CLOSE);
 					return;
 				}
@@ -302,7 +302,7 @@ public class CommunityStatistic extends ScriptsCommunityHandler
 			{
 				if(BBSConfig.STATISTIC_TOP_ADENA_COUNT <= 0)
 				{
-					player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+					player.sendMessage("This service disallowed.");
 					player.sendPacket(ShowBoardPacket.CLOSE);
 					return;
 				}
@@ -324,7 +324,7 @@ public class CommunityStatistic extends ScriptsCommunityHandler
 			{
 				if(BBSConfig.STATISTIC_TOP_ONLINE_COUNT <= 0)
 				{
-					player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+					player.sendMessage("This service disallowed.");
 					player.sendPacket(ShowBoardPacket.CLOSE);
 					return;
 				}
@@ -346,7 +346,7 @@ public class CommunityStatistic extends ScriptsCommunityHandler
 			{
 				if(BBSConfig.STATISTIC_TOP_ITEM_COUNT <= 0)
 				{
-					player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+					player.sendMessage("This service disallowed.");
 					player.sendPacket(ShowBoardPacket.CLOSE);
 					return;
 				}
@@ -368,7 +368,7 @@ public class CommunityStatistic extends ScriptsCommunityHandler
 			{
 				if(BBSConfig.STATISTIC_TOP_OLYMPIAD_COUNT <= 0)
 				{
-					player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+					player.sendMessage("This service disallowed.");
 					player.sendPacket(ShowBoardPacket.CLOSE);
 					return;
 				}

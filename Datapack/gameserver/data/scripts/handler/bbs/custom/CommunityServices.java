@@ -55,7 +55,7 @@ public class CommunityServices extends ScriptsCommunityHandler
 		{
 			if(!st.hasMoreTokens())
 			{
-				player.sendMessage(player.isLangRus() ? "Данная функция еще не реализована." : "This feature is not yet implemented.");
+				player.sendMessage("This feature is not yet implemented.");
 				player.sendPacket(ShowBoardPacket.CLOSE);
 				return;
 			}
@@ -65,7 +65,7 @@ public class CommunityServices extends ScriptsCommunityHandler
 			{
 				if(!Config.BBS_SELL_ITEMS_ENABLED)
 				{
-					player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+					player.sendMessage("This service disallowed.");
 					player.sendPacket(ShowBoardPacket.CLOSE);
 					return;
 				}
@@ -115,7 +115,7 @@ public class CommunityServices extends ScriptsCommunityHandler
 
 				if(!Config.BBS_WAREHOUSE_ENABLED)
 				{
-					player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+					player.sendMessage("This service disallowed.");
 					player.sendPacket(ShowBoardPacket.CLOSE);
 					return;
 				}
@@ -164,7 +164,7 @@ public class CommunityServices extends ScriptsCommunityHandler
 					String cmd3 = st.nextToken();
 					if("repair".equals(cmd3))
 					{
-						player.sendMessage(player.isLangRus() ? "Для восстановления персонажа используйте команду .repair [имя персонажа]" : "To restore the character, use the command .repair [character name]");
+						player.sendMessage("To restore the character, use the command .repair [character name]");
 						return;
 					}
 					else if("config".equals(cmd3))
@@ -235,10 +235,10 @@ public class CommunityServices extends ScriptsCommunityHandler
 					html = HtmCache.getInstance().getHtml("scripts/handler/bbs/pages/cabinet.htm", player);
 					html = html.replace("<?account?>", player.getAccountName());
 					html = html.replace("<?ip?>", player.getIP());
-					html = html.replace("<?type?>", player.hasPremiumAccount() ? (player.isLangRus() ? "премиум" : "premium") : (player.isLangRus() ? "обычный" : "common"));
+					html = html.replace("<?type?>", player.hasPremiumAccount() ? "premium" : "common");
 					html = html.replace("<?char_name?>", player.getName());
-					html = html.replace("<?clan_name?>", player.getClan() != null ? player.getClan().getName() : (player.isLangRus() ? "нету" : "none"));
-					html = html.replace("<?ally_name?>", player.getAlliance() != null ? player.getAlliance().getAllyName() : (player.isLangRus() ? "нету" : "none"));
+					html = html.replace("<?clan_name?>", player.getClan() != null ? player.getClan().getName() : "none");
+					html = html.replace("<?ally_name?>", player.getAlliance() != null ? player.getAlliance().getAllyName() : "none");
 
 					int playedTime = (int) player.getOnlineTime() / 60;
 					int minutes = playedTime % 60;
@@ -522,7 +522,7 @@ public class CommunityServices extends ScriptsCommunityHandler
 					final long feeItemCount = BBSConfig.CHANGE_PLAYER_NAME_SERVICE_COST_ITEM_COUNT;
 					if(feeItemId == 0)
 					{
-						player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+						player.sendMessage("This service disallowed.");
 						player.sendPacket(ShowBoardPacket.CLOSE);
 						return;
 					}
@@ -590,7 +590,7 @@ public class CommunityServices extends ScriptsCommunityHandler
 					final long feeItemCount = BBSConfig.CHANGE_PET_NAME_SERVICE_COST_ITEM_COUNT;
 					if(feeItemId == 0)
 					{
-						player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+						player.sendMessage("This service disallowed.");
 						player.sendPacket(ShowBoardPacket.CLOSE);
 						return;
 					}
@@ -663,7 +663,7 @@ public class CommunityServices extends ScriptsCommunityHandler
 					final long feeItemCount = BBSConfig.CHANGE_CLAN_NAME_SERVICE_COST_ITEM_COUNT;
 					if(feeItemId == 0)
 					{
-						player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+						player.sendMessage("This service disallowed.");
 						player.sendPacket(ShowBoardPacket.CLOSE);
 						return;
 					}
@@ -747,7 +747,7 @@ public class CommunityServices extends ScriptsCommunityHandler
 					final String[] availableColors = BBSConfig.COLOR_NAME_SERVICE_COLORS;
 					if(feeItemId == 0 || availableColors.length == 0)
 					{
-						player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+						player.sendMessage("This service disallowed.");
 						player.sendPacket(ShowBoardPacket.CLOSE);
 						return;
 					}
@@ -844,7 +844,7 @@ public class CommunityServices extends ScriptsCommunityHandler
 					final String[] availableColors = BBSConfig.COLOR_TITLE_SERVICE_COLORS;
 					if(feeItemId == 0 || availableColors.length == 0)
 					{
-						player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+						player.sendMessage("This service disallowed.");
 						player.sendPacket(ShowBoardPacket.CLOSE);
 						return;
 					}
@@ -941,7 +941,7 @@ public class CommunityServices extends ScriptsCommunityHandler
 				final long feeItemCount = BBSConfig.CHANGE_SEX_SERVICE_COST_ITEM_COUNT;
 				if(feeItemId == 0)
 				{
-					player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+					player.sendMessage("This service disallowed.");
 					player.sendPacket(ShowBoardPacket.CLOSE);
 					return;
 				}
@@ -1009,7 +1009,7 @@ public class CommunityServices extends ScriptsCommunityHandler
 					final long feeItemCount = BBSConfig.EXPAND_INVENTORY_SERVICE_COST_ITEM_COUNT;
 					if(feeItemId == 0)
 					{
-						player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+						player.sendMessage("This service disallowed.");
 						player.sendPacket(ShowBoardPacket.CLOSE);
 						return;
 					}
@@ -1017,7 +1017,7 @@ public class CommunityServices extends ScriptsCommunityHandler
 					// TODO: Вынести конфиг в конфиги коммунити.
 					if(Config.SERVICES_EXPAND_INVENTORY_MAX >= player.getExpandInventory())
 					{
-						player.sendMessage(player.isLangRus() ? "Вы уже увеличили инвентарь до максимума! Сервис Вам больше не доступен." : "You have increased the inventory to the maximum! Service is no longer available to you.");
+						player.sendMessage("You have increased the inventory to the maximum! Service is no longer available to you.");
 						player.sendPacket(ShowBoardPacket.CLOSE);
 						return;
 					}
@@ -1080,7 +1080,7 @@ public class CommunityServices extends ScriptsCommunityHandler
 					final long feeItemCount = BBSConfig.EXPAND_WAREHOUSE_SERVICE_COST_ITEM_COUNT;
 					if(feeItemId == 0)
 					{
-						player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+						player.sendMessage("This service disallowed.");
 						player.sendPacket(ShowBoardPacket.CLOSE);
 						return;
 					}
@@ -1143,7 +1143,7 @@ public class CommunityServices extends ScriptsCommunityHandler
 					final long feeItemCount = BBSConfig.EXPAND_CLANWAREHOUSE_SERVICE_COST_ITEM_COUNT;
 					if(feeItemId == 0)
 					{
-						player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+						player.sendMessage("This service disallowed.");
 						player.sendPacket(ShowBoardPacket.CLOSE);
 						return;
 					}
@@ -1151,7 +1151,7 @@ public class CommunityServices extends ScriptsCommunityHandler
 					Clan clan = player.getClan();
 					if(clan == null)
 					{
-						player.sendMessage(player.isLangRus() ? "Вы не состоите в клане! Для использования данной функции, вступите в клан." : "You are not a member of the clan! To use this function, to join the clan.");
+						player.sendMessage("You are not a member of the clan! To use this function, to join the clan.");
 						player.sendPacket(ShowBoardPacket.CLOSE);
 						return;
 					}
@@ -1213,7 +1213,7 @@ public class CommunityServices extends ScriptsCommunityHandler
 				final long[][] pricesList = BBSConfig.CLAN_REPUTATION_SERVICE_PRICES_LIST;
 				if(pricesList.length == 0)
 				{
-					player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+					player.sendMessage("This service disallowed.");
 					player.sendPacket(ShowBoardPacket.CLOSE);
 					return;
 				}

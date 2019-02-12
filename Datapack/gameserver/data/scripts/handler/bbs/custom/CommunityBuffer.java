@@ -78,7 +78,7 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
     @Override
     protected void doBypassCommand(Player player, String bypass) {
         if (BBSConfig.BUFF_SERVICE_COST_ITEM_ID == 0 && !BBSConfig.BUFF_SERVICE_ALLOW_RESTORE && !BBSConfig.BUFF_SERVICE_ALLOW_CANCEL_BUFFS) {
-            player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+            player.sendMessage("This service disallowed.");
             player.sendPacket(ShowBoardPacket.CLOSE);
             return;
         }
@@ -88,7 +88,7 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
 
         if (bypass.startsWith("_bbsrestore")) {
             if (!BBSConfig.BUFF_SERVICE_ALLOW_RESTORE) {
-                player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+                player.sendMessage("This service disallowed.");
                 player.sendPacket(ShowBoardPacket.CLOSE);
                 return;
             }
@@ -105,7 +105,7 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
         }
         if (bypass.startsWith("_bbscancel")) {
             if (!BBSConfig.BUFF_SERVICE_ALLOW_CANCEL_BUFFS) {
-                player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+                player.sendMessage("This service disallowed.");
                 player.sendPacket(ShowBoardPacket.CLOSE);
                 return;
             }
@@ -126,19 +126,19 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
 
         if (bypass.startsWith("_cbbsbuffer")) {
             if (BBSConfig.BUFF_SERVICE_COST_ITEM_ID == 0) {
-                player.sendMessage(player.isLangRus() ? "Данный сервис отключен." : "This service disallowed.");
+                player.sendMessage("This service disallowed.");
                 player.sendPacket(ShowBoardPacket.CLOSE);
                 return;
             }
 
             if (player.isInOlympiadMode()) {
-                player.sendMessage(player.isLangRus() ? "Эта функция недоступна на олимпиаде." : "This feature is not available at the Olympiad Game.");
+                player.sendMessage("This feature is not available at the Olympiad Game.");
                 player.sendPacket(ShowBoardPacket.CLOSE);
                 return;
             }
 
             if (player.isInCombat()) {
-                player.sendMessage(player.isLangRus() ? "Эта функция недоступна во время боя." : "This feature is not available during the battle.");
+                player.sendMessage("This feature is not available during the battle.");
                 player.sendPacket(ShowBoardPacket.CLOSE);
                 return;
             }
@@ -163,7 +163,7 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
                 price = BBSConfig.BUFF_SERVICE_COST_ITEM_COUNT;
         }
         html = html.replace("<?price?>", price > 0 ? Util.formatAdena(price) : "");
-        html = html.replace("<?fee_item?>", price > 0 ? HtmlUtils.htmlItemName(BBSConfig.BUFF_SERVICE_COST_ITEM_ID) : (player.isLangRus() ? "Бесплатно" : "Free"));
+        html = html.replace("<?fee_item?>", price > 0 ? HtmlUtils.htmlItemName(BBSConfig.BUFF_SERVICE_COST_ITEM_ID) : "Free");
 
         ShowBoardPacket.separateAndSend(html, player);
     }
@@ -276,13 +276,10 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
             if (listid == 0) {
                 String[] langs = name.split(";");
                 if (langs.length == 2)
-                    localized_name = langs[player.isLangRus() ? 1 : 0];
+                    localized_name = langs[0];
             }
             if (!sets.containsKey(name)) {
-                if (player.isLangRus())
-                    return "<table><tr><td align=center><font color=FF3355>Набор '" + localized_name + "' не найден</font></td></tr></table>";
-                else
-                    return "<table><tr><td align=center><font color=FF3355>'" + localized_name + "' set not found</font></td></tr></table>";
+                return "<table><tr><td align=center><font color=FF3355>'" + localized_name + "' set not found</font></td></tr></table>";
             }
             buffs_to_buff.addAll(sets.get(name));
         } else
@@ -303,9 +300,7 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
         int pageIdx = Integer.parseInt(a[1]);
         boolean _all = a[0].equalsIgnoreCase("0");
         int listid = a[0].equalsIgnoreCase("2") ? player.getObjectId() : 0;
-        String name = "Все баффы";
-        if (!player.isLangRus())
-            name = "All buffs";
+        String name = "All buffs";
         String param1 = Strings.joinStrings(" ", var, 1);
         List<Skill> set = ALL_BUFFS_SET;
 
@@ -317,14 +312,11 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
             if (listid == 0) {
                 String[] langs = name.split(";");
                 if (langs.length == 2)
-                    localized_name = langs[player.isLangRus() ? 1 : 0];
+                    localized_name = langs[0];
             }
 
             if (!sets.containsKey(name)) {
-                if (player.isLangRus())
-                    return "<tr><td align=center><font color=FF3355>Набор '" + localized_name + "' не найден</font></td></tr>";
-                else
-                    return "<tr><td align=center><font color=FF3355>'" + localized_name + "' set not found</font></td></tr>";
+                return "<tr><td align=center><font color=FF3355>'" + localized_name + "' set not found</font></td></tr>";
             }
 
             set = sets.get(name);
@@ -345,10 +337,7 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
             String buff_str = "<td FIXWIDTH=5>&nbsp;</td>";
             buff_str = "<td FIXWIDTH=35 valign=top><img src=\"" + _buff.getIcon() + "\" width=32 height=32><br></td>";
             buff_str += "<td FIXWIDTH=30>" + htmlButton("$", 25, 32, "get", 1, _buff.getId(), param1) + "</td>";
-            if (player.isLangRus())
-                buff_str += "<td FIXWIDTH=125><font color=3399FF>" + _buff.getName(player) + "</font><br1><font color=LEVEL> Уровень " + _buff.getLevel() + "</font></td>";
-            else
-                buff_str += "<td FIXWIDTH=125><font color=3399FF>" + _buff.getName(player) + "</font><br1><font color=LEVEL> Level " + _buff.getLevel() + "</font></td>";
+            buff_str += "<td FIXWIDTH=125><font color=3399FF>" + _buff.getName(player) + "</font><br1><font color=LEVEL> Level " + _buff.getLevel() + "</font></td>";
             tds.add(buff_str);
         }
 
@@ -359,10 +348,6 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
             cost = set.size() * BBSConfig.BUFF_SERVICE_COST_ITEM_COUNT;
 
         result.append("<table width=650><tr>");
-        String all = "All";
-        if (player.isLangRus())
-            all = "Все";
-
         result.append("<td width=600 align=center><font color=DDD3B6>");
         result.append(localized_name);
         result.append("</font></td>");
@@ -370,19 +355,13 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
         if (!_all/* && pageNext.isEmpty() && pagePrev.isEmpty()*/) {
             result.append("<tr><td width=600 align=center>");
             if (cost > 0) {
-                if (player.isLangRus())
-                    result.append("Цена за набор: ");
-                else
-                    result.append("Set price: ");
+                result.append("Set price: ");
                 result.append("<font color=LEVEL>");
                 result.append(Util.formatAdena(cost) + " " + HtmlUtils.htmlItemName(BBSConfig.BUFF_SERVICE_COST_ITEM_ID));
                 result.append("</font>");
             } else {
                 result.append("<font color=LEVEL>");
-                if (player.isLangRus())
-                    result.append("Бесплатно");
-                else
-                    result.append("Free");
+                result.append("Free");
                 result.append("</font>");
             }
             result.append("</td></tr>");
@@ -390,33 +369,21 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
         result.append("</table>");
         if (!_all && /*pageNext.isEmpty() && pagePrev.isEmpty() && */tds.size() > 0) {
             result.append("<table width=300><tr><td align=center>");
-            if (player.isLangRus()) {
-                result.append(htmlButton("Себе", 100, 25, "get", 0, param1) + "</td>");
-                if (player.hasServitor())
-                    result.append("<td align=center>" + htmlButton("Питомцам", 100, 25, "get", 2, param1) + "</td>");
-            } else {
-                result.append(htmlButton("For Me", 100, 25, "get", 0, param1) + "</td>");
-                if (player.hasServitor())
-                    result.append("<td align=center>" + htmlButton("For Servitors", 100, 25, "get", 2, param1) + "</td>");
-            }
+            result.append(htmlButton("For Me", 100, 25, "get", 0, param1) + "</td>");
+            if (player.hasServitor())
+                result.append("<td align=center>" + htmlButton("For Servitors", 100, 25, "get", 2, param1) + "</td>");
             result.append("</tr></table>");
         }
 
         if (listid != 0) {
-            if (player.isLangRus())
-                result.append("<table><tr><td align=center>" + htmlButton("Редактировать", 125, 25, "editset", "edit", name) + "</td></tr></table>");
-            else
-                result.append("<table><tr><td align=center>" + htmlButton("Edit", 125, 25, "editset", "edit", name) + "</td></tr></table>");
+            result.append("<table><tr><td align=center>" + htmlButton("Edit", 125, 25, "editset", "edit", name) + "</td></tr></table>");
         }
 
         if (!pagePrev.isEmpty() || !pageNext.isEmpty()) {
             result.append("<table><tr>");
             result.append("<td width=90 align=center>" + pagePrev + "</td>");
             result.append("<td width=80 align=center>");
-            if (player.isLangRus())
-                result.append("Страница: ");
-            else
-                result.append("Page: ");
+            result.append("Page: ");
             result.append(pageIdx + 1);
             result.append("</td>");
             result.append("<td width=90 align=center>" + pageNext + "</td>");
@@ -427,7 +394,7 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
             result.append("<table width=605 background=\"L2UI_CH3.refinewnd_back_Pattern\">" + formatTable(tds, pageCols, false) + "</table>");
         }
 
-        result.append("<br><table><tr><td align=center>" + htmlButton((player.isLangRus() ? "Назад" : "Back"), 125, 25, "0") + "</td></tr></table>");
+        result.append("<br><table><tr><td align=center>" + htmlButton("Back", 125, 25, "0") + "</td></tr></table>");
 
         return result.toString();
     }
@@ -451,18 +418,11 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
         if (var[1].equalsIgnoreCase("delconf")) {
             result += "<table><tr>";
             name = Strings.joinStrings(" ", var, 2);
-            if (player.isLangRus())
-                result += "<td width=400 align=center><font color=FF3355>Вы действительно желаете удалить набор: " + name + "?</font></td>";
-            else
-                result += "<td width=400 align=center><font color=FF3355>Are you sure you want to delete a set: " + name + "?</font></td>";
+            result += "<td width=400 align=center><font color=FF3355>Are you sure you want to delete a set: " + name + "?</font></td>";
             result += "</tr></table><table><tr>";
-            if (player.isLangRus()) {
-                result += "<td>" + htmlButton("ДА", 80, 25, "editset", "del", name) + "</td>";
-                result += "<td>" + htmlButton("НЕТ", 80, 25, "editset", "edit", name) + "</td>";
-            } else {
-                result += "<td>" + htmlButton("YES", 80, 25, "editset", "del", name) + "</td>";
-                result += "<td>" + htmlButton("NO", 80, 25, "editset", "edit", name) + "</td>";
-            }
+            result += "<td>" + htmlButton("YES", 80, 25, "editset", "del", name) + "</td>";
+            result += "<td>" + htmlButton("NO", 80, 25, "editset", "edit", name) + "</td>";
+
             result += "</tr></table>";
 
             return result;
@@ -472,16 +432,13 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
 
         if (var[1].equalsIgnoreCase("new")) {
             if (sets.size() >= BBSConfig.BUFF_SERVICE_MAX_BUFF_SETS_PER_CHAR)
-                return player.isLangRus() ? "<table><tr><td><font color=FF3355>Вы достигли лимита наборов!</font></td></tr></table>" : "<table><tr><td><center><font color=FF3355>You have reached the limit set!</font></td></tr></table>";
+                return "<table><tr><td><center><font color=FF3355>You have reached the limit set!</font></td></tr></table>";
 
             name = trimHtml(Strings.joinStrings(" ", var, 2));
             if (name.length() > 16)
                 name = name.substring(0, 15);
             if (name.isEmpty() || name.equalsIgnoreCase(" ")) {
-                if (player.isLangRus())
-                    return "<table><tr><td><font color=FF3355>Необходимо указать имя набора!</font></td></tr></table>";
-                else
-                    return "<table><tr><td><font color=FF3355>You must specify the name of the set!</font></td></tr></table>";
+                return "<table><tr><td><font color=FF3355>You must specify the name of the set!</font></td></tr></table>";
             }
 
             set = new ArrayList<Skill>();
@@ -495,19 +452,13 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
         } else if (var[1].equalsIgnoreCase("edit")) {
             name = Strings.joinStrings(" ", var, 2);
             if (!sets.containsKey(name)) {
-                if (player.isLangRus())
-                    return "<table><tr><td><font color=FF3355>Набор '" + name + "' не найден.</font></td></tr></table>";
-                else
-                    return "<table><tr><td><font color=FF3355>'" + name + "' set not found.</font></td></tr></table>";
+                return "<table><tr><td><font color=FF3355>'" + name + "' set not found.</font></td></tr></table>";
             }
             set = sets.get(name);
         } else if (var[1].equalsIgnoreCase("rem")) {
             name = Strings.joinStrings(" ", var, 3);
             if (!sets.containsKey(name)) {
-                if (player.isLangRus())
-                    return "<table><tr><td><font color=FF3355>Набор '" + name + "' не найден</font></td></tr></table>";
-                else
-                    return "<table><tr><td><font color=FF3355>'" + name + "' set not found</font></td></tr></table>";
+                return "<table><tr><td><font color=FF3355>'" + name + "' set not found</font></td></tr></table>";
             }
             set = sets.get(name);
             int skill_to_remove = Integer.valueOf(var[2]);
@@ -518,10 +469,7 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
         } else if (var[1].equalsIgnoreCase("add")) {
             name = Strings.joinStrings(" ", var, 4);
             if (!sets.containsKey(name)) {
-                if (player.isLangRus())
-                    return "<table><tr><td><font color=FF3355>Набор '" + name + "' не найден</font></td></tr></table>";
-                else
-                    return "<table><tr><td><font color=FF3355>'" + name + "' set not found</font></td></tr></table>";
+                return "<table><tr><td><font color=FF3355>'" + name + "' set not found</font></td></tr></table>";
             }
 
             set = sets.get(name);
@@ -567,10 +515,7 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
                     String buff_str = "<td FIXWIDTH=5>&nbsp;</td>";
                     buff_str = "<td FIXWIDTH=35 valign=top><img src=\"" + _buff.getIcon() + "\" width=32 height=32><br></td>";
                     buff_str += "<td FIXWIDTH=40>" + htmlButton("+", 25, 32, "editset", "add", pageIdx, _buff.getId(), name) + "</td>";
-                    if (player.isLangRus())
-                        buff_str += "<td fixwidth=125><font color=3399FF>" + _buff.getName(player) + "</font><br1><font color=LEVEL> Уровень " + _buff.getLevel() + "</font></td>";
-                    else
-                        buff_str += "<td fixwidth=125><font color=3399FF>" + _buff.getName(player) + "</font><br1><font color=LEVEL> Level " + _buff.getLevel() + "</font></td>";
+                    buff_str += "<td fixwidth=125><font color=3399FF>" + _buff.getName(player) + "</font><br1><font color=LEVEL> Level " + _buff.getLevel() + "</font></td>";
                     tds.add(buff_str);
                 }
 
@@ -578,19 +523,13 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
                     pageNext = htmlButton("&$544;", 80, 25, "editset", "add", pageIdx + 1, 0, name);
 
                 result += "<table><tr>";
-                if (player.isLangRus())
-                    result += "<td width=300 align=center><font color=DDD3B6>Редактирование набора: " + name + "</font></td>";
-                else
-                    result += "<td width=300 align=center><font color=DDD3B6>Set editing: " + name + "</font></td>";
+                result += "<td width=300 align=center><font color=DDD3B6>Set editing: " + name + "</font></td>";
                 result += "</tr></table>";
                 if (!pagePrev.isEmpty() || !pageNext.isEmpty()) {
                     result += "<table><tr>";
                     result += "<td width=90 align=center>" + pagePrev + "</td>";
                     result += "<td width=80 align=center>";
-                    if (player.isLangRus())
-                        result += "Страница: ";
-                    else
-                        result += "Page: ";
+                    result += "Page: ";
                     result += String.valueOf(pageIdx + 1);
                     result += "</td>";
                     result += "<td width=90 align=center>" + pageNext + "</td>";
@@ -598,7 +537,7 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
                 }
 
                 result += "<table width=605 background=\"L2UI_CH3.refinewnd_back_Pattern\">" + formatTable(tds, pageCols, false) + "</table>";
-                result += "<br><table><tr><td>" + htmlButton((player.isLangRus() ? "Назад" : "Back"), 125, 25, "editset", "edit", name) + "</td></tr></table>";
+                result += "<br><table><tr><td>" + htmlButton("Back", 125, 25, "editset", "edit", name) + "</td></tr></table>";
                 return result;
             }
         } else
@@ -612,35 +551,24 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
             String buff_str = "<td FIXWIDTH=5>&nbsp;</td>";
             buff_str = "<td FIXWIDTH=35 valign=top><img src=\"" + _buff.getIcon() + "\" width=32 height=32><br></td>";
             buff_str += "<td>" + htmlButton("-", 25, 32, "editset", "rem", _buff.getId(), name) + "</td>";
-            if (player.isLangRus())
-                buff_str += "<td FIXWIDTH=125><font color=3399FF>" + _buff.getName(player) + "</font><br1><font color=LEVEL> Уровень " + _buff.getLevel() + "</font></td>";
-            else
-                buff_str += "<td FIXWIDTH=125><font color=3399FF>" + _buff.getName(player) + "</font><br1><font color=LEVEL> Level " + _buff.getLevel() + "</font></td>";
+            buff_str += "<td FIXWIDTH=125><font color=3399FF>" + _buff.getName(player) + "</font><br1><font color=LEVEL> Level " + _buff.getLevel() + "</font></td>";
             tds.add(buff_str);
         }
 
         result += "<table><tr>";
-        if (player.isLangRus()) {
-            result += "<td width=300 align=center><font color=DDD3B6>Редактирование: " + name + "</font></td></tr></table>";
-            result += "<table><tr>";
-            if (set.size() < BBSConfig.BUFF_SERVICE_MAX_BUFFS_IN_SET)
-                result += "<td width=120 align=center>" + htmlButton("Добавить бафф", 120, 25, "editset", "add", 0, 0, name) + "</td>";
-            result += "<td width=120 align=center>" + htmlButton("Удалить набор", 120, 25, "editset", "delconf", name) + "</td>";
-            result += "</tr></table>";
-        } else {
-            result += "<td width=300 align=center><font color=DDD3B6>Editing: " + name + "</font></td></tr></table>";
-            result += "<table><tr>";
-            if (set.size() < BBSConfig.BUFF_SERVICE_MAX_BUFFS_IN_SET)
-                result += "<td width=120 align=center>" + htmlButton("Add buff", 120, 25, "editset", "add", 0, 0, name) + "</td>";
-            result += "<td width=120 align=center>" + htmlButton("Delete set", 120, 25, "editset", "delconf", name) + "</td>";
-            result += "</tr></table>";
-        }
+        result += "<td width=300 align=center><font color=DDD3B6>Editing: " + name + "</font></td></tr></table>";
+        result += "<table><tr>";
+        if (set.size() < BBSConfig.BUFF_SERVICE_MAX_BUFFS_IN_SET)
+            result += "<td width=120 align=center>" + htmlButton("Add buff", 120, 25, "editset", "add", 0, 0, name) + "</td>";
+        result += "<td width=120 align=center>" + htmlButton("Delete set", 120, 25, "editset", "delconf", name) + "</td>";
+        result += "</tr></table>";
+
 
         if (tds.size() > 0) {
             result += "<table width=605 background=\"L2UI_CH3.refinewnd_back_Pattern\">" + formatTable(tds, pageCols, false) + "</table>";
         }
 
-        result += "<br><table><tr><td>" + htmlButton((player.isLangRus() ? "Назад" : "Back"), 125, 25, "list", "2_0", name) + "</td></tr></table>";
+        result += "<br><table><tr><td>" + htmlButton("Back", 125, 25, "list", "2_0", name) + "</td></tr></table>";
 
         return result;
     }
@@ -656,20 +584,14 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
         result.append("<td align=center>");
         result.append("<button value=\"");
 
-        if (player.isLangRus())
-            result.append("Исцелиться");
-        else
-            result.append("Heal");
+        result.append("Heal");
 
         result.append("\" action=\"bypass _bbsrestore\" width=150 height=25 back=\"L2UI_ct1.button_df_down\" fore=\"L2UI_ct1.button_df\">");
         result.append("</td>");
         result.append("<td align=center>");
         result.append("<button value=\"");
 
-        if (player.isLangRus())
-            result.append("Отменить эффекты");
-        else
-            result.append("Cancel effects");
+        result.append("Cancel effects");
 
         result.append("\" action=\"bypass _bbscancel\" width=150 height=25 back=\"L2UI_ct1.button_df_down\" fore=\"L2UI_ct1.button_df\">");
         result.append("</td>");
@@ -682,10 +604,7 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
         result.append("<td align=center width=40 height=38>&nbsp;</td>");
         result.append("<td align=center width=220 height=38>");
 
-        if (player.isLangRus())
-            result.append(htmlButton("Все Баффы", 200, 30, "list", "0_0"));
-        else
-            result.append(htmlButton("All Buffs", 200, 30, "list", "0_0"));
+        result.append(htmlButton("All Buffs", 200, 30, "list", "0_0"));
 
         result.append("</td>");
         result.append("<td align=center width=40 height=38>&nbsp;</td>");
@@ -699,11 +618,7 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
             result.append("<tr>");
             result.append("<td align=center width=40>&nbsp;</td>");
             result.append("<td align=center width=220>");
-
-            if (player.isLangRus())
-                result.append("Стандартные наборы");
-            else
-                result.append("Standart sets");
+            result.append("Standart sets");
 
             result.append("</td>");
             result.append("<td align=center width=40>&nbsp;</td>");
@@ -716,7 +631,7 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
                 String name = setname;
                 String[] langs = setname.split(";");
                 if (langs.length == 2)
-                    name = langs[player.isLangRus() ? 1 : 0];
+                    name = langs[0];
 
                 result.append("<br1>");
                 result.append("<table width=300 border=0 background=\"L2UI_CT1.editbox_df_bg\">");
@@ -741,19 +656,12 @@ public class CommunityBuffer extends ScriptsCommunityHandler {
         result.append("<table width=300 background=\"L2UI_CH3.refinewnd_back_Pattern\" border=0 cellpadding=0 cellspacing=0>");
         result.append("<tr>");
         result.append("<td align=center>");
-        if (player.isLangRus())
-            result.append("<br><br><font color=DDD3B6>Собственные наборы</font><br>");
-        else
-            result.append("<br><br><font color=DDD3B6>Own sets</font><br>");
+        result.append("<br><br><font color=DDD3B6>Own sets</font><br>");
         result.append("<table>");
 
         result.append("<tr><td align=center><edit var=\"newfname\" width=200><br></td></tr>");
         result.append("<tr><td align=center>");
-
-        if (player.isLangRus())
-            result.append(htmlButton("Сохранить", 100, 25, "editset", "new", "$newfname"));
-        else
-            result.append(htmlButton("Save", 100, 25, "editset", "new", "$newfname"));
+        result.append(htmlButton("Save", 100, 25, "editset", "new", "$newfname"));
 
         result.append("</td></tr>");
         result.append("</table><br>");
