@@ -13,6 +13,7 @@ module org.l2j.commons {
     requires java.compiler;
     requires dom4j;
     requires ecj;
+    requires cache.api;
 
     exports org.l2j.commons.util;
     exports org.l2j.commons.xml;
@@ -41,4 +42,5 @@ module org.l2j.commons {
     exports org.l2j.commons.data.xml;
     exports org.l2j.commons.text;
     exports org.l2j.commons.formats.dds;
+    exports org.l2j.commons.cache;
 }

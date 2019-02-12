@@ -1,8 +1,6 @@
 package org.l2j.gameserver.data.htm;
 
-import net.sf.ehcache.Cache;
-import net.sf.ehcache.CacheManager;
-import net.sf.ehcache.Element;
+import org.l2j.commons.cache.CacheFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.utils.ArabicConv;
@@ -12,6 +10,7 @@ import org.l2j.gameserver.utils.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.cache.Cache;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -46,7 +45,7 @@ public class HtmCache
     private HtmCache()
     {
         for(int i = 0; i < _cache.length; i++)
-            _cache[i] = CacheManager.getInstance().getCache(getClass().getName() + "." + Language.VALUES[i].name());
+            _cache[i] = CacheFactory.getInstance().getCache(getClass().getName() + "." + Language.VALUES[i].name());
     }
 
     public void reload()

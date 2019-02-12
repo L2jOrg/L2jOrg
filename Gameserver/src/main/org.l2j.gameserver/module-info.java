@@ -12,8 +12,8 @@ module org.l2j.gameserver {
     requires java.management;
     requires dom4j;
     requires async.mmocore;
-    requires ehcache;
     requires primitive;
+    requires cache.api;
 
     exports org.l2j.gameserver;
     exports org.l2j.gameserver.model.base;
