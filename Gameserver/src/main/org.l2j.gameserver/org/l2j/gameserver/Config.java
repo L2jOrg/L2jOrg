@@ -235,11 +235,6 @@ public class Config
 
     public static boolean BAN_FOR_CFG_USAGE;
 
-    public static boolean ALLOW_TOTAL_ONLINE;
-    public static boolean ALLOW_ONLINE_PARSE;
-    public static int FIRST_UPDATE;
-    public static int DELAY_UPDATE;
-
     public static int EXCELLENT_SHIELD_BLOCK_CHANCE;
     public static int EXCELLENT_SHIELD_BLOCK_RECEIVED_DAMAGE;
 
@@ -1682,11 +1677,6 @@ public class Config
         ALLOW_CHANGE_PASSWORD_COMMAND = servicesSettings.getProperty("ALLOW_CHANGE_PASSWORD_COMMAND", false);
         ALLOW_CHANGE_PHONE_NUMBER_COMMAND = servicesSettings.getProperty("ALLOW_CHANGE_PHONE_NUMBER_COMMAND", false);
         FORCIBLY_SPECIFY_PHONE_NUMBER = servicesSettings.getProperty("FORCIBLY_SPECIFY_PHONE_NUMBER", false);
-
-        ALLOW_TOTAL_ONLINE = servicesSettings.getProperty("AllowVoiceCommandOnline", false);
-        ALLOW_ONLINE_PARSE = servicesSettings.getProperty("AllowParsTotalOnline", false);
-        FIRST_UPDATE = servicesSettings.getProperty("FirstOnlineUpdate", 1);
-        DELAY_UPDATE = servicesSettings.getProperty("OnlineUpdate", 5);
 
         SERVICES_CHANGE_NICK_COLOR_PRICE = servicesSettings.getProperty("NickColorChangePrice", 100);
         SERVICES_CHANGE_NICK_COLOR_ITEM = servicesSettings.getProperty("NickColorChangeItem", 4037);
