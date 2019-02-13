@@ -128,4 +128,9 @@ public class NpcHtmlMessagePacket extends L2GameServerPacket
         buffer.putInt(_itemId);
         buffer.putInt(!_playVoice ? 0x01 : 0x00);
     }
+
+    @Override
+    protected int size(GameClient client) {
+        return _html.length() * 2 + 16;
+    }
 }

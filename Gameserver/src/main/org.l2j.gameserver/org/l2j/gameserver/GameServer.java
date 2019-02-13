@@ -197,10 +197,8 @@ public class GameServer {
         logger.info("Maximum Numbers of Connected Players: " + getOnlineLimit());
 
         final GamePacketHandler gph = new GamePacketHandler();
-        connectionHandler = ConnectionBuilder.create(new InetSocketAddress(serverSettings.port()), gph, gph, gph).bufferLargeSize(64 * 1024).build();
+        connectionHandler = ConnectionBuilder.create(new InetSocketAddress(serverSettings.port()), gph, gph, gph).bufferLargeSize(24 * 1024).build();
         connectionHandler.start();
-
-        AsynchronousSocketChannel c;
 
         getListeners().onStart();
 

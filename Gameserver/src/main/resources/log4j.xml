@@ -6,7 +6,7 @@
     <Appenders>
         <Console name="console" target="SYSTEM_OUT">
             <PatternLayout pattern="${pattern}"/>
-            <ThresholdFilter level="ALL"/>
+            <ThresholdFilter level="INFO"/>
         </Console>
 
         <RollingFile name="game" filename="logs/game.log" filepattern="logs/game.log.%i" append="true" >
@@ -20,6 +20,15 @@
 
         <RollingFile name="debug" filename="logs/debug.log" filepattern="logs/debug.log.%i" append="true" >
             <PatternLayout pattern="${pattern}" />
+            <Policies>
+                <SizeBasedTriggeringPolicy size="50 MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="100" fileIndex="min"/>
+            <ThresholdFilter level="debug"/>
+        </RollingFile>
+
+        <RollingFile name="packetSize" filename="logs/packetSize.log" filepattern="logs/packetSize.log.%i" append="true" >
+            <PatternLayout pattern="%msg%n" />
             <Policies>
                 <SizeBasedTriggeringPolicy size="50 MB" />
             </Policies>
@@ -47,6 +56,9 @@
         <Logger name="org.ehcache" level="error">
             <AppenderRef ref="game"/>
             <AppenderRef ref="debug"/>
+        </Logger>
+        <Logger name="org.l2j.gameserver.network.l2.s2c.L2GameServerPacket" level="debug">
+            <AppenderRef ref="packetSize"/>
         </Logger>
     </Loggers>
 </Configuration>

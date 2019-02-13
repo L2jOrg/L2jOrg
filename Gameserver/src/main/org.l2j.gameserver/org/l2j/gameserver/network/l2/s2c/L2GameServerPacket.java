@@ -33,6 +33,7 @@ public abstract class L2GameServerPacket extends WritablePacket<GameClient> impl
         try {
             if (writeOpcodes(buffer)) {
                 writeImpl(client, buffer);
+                _log.debug("{} {}", toString(), buffer.position());
                 return true;
             }
         } catch (Exception e) {
@@ -46,7 +47,7 @@ public abstract class L2GameServerPacket extends WritablePacket<GameClient> impl
         try {
             return ServerPacketOpcodes.valueOf(getClass().getSimpleName());
         } catch (Exception e) {
-            _log.error("Cannot find serverpacket opcode: " + getClass().getSimpleName() + "!");
+            _log.error("Cannot find serverpacket opcode: {}!",  toString());
         }
         return null;
     }

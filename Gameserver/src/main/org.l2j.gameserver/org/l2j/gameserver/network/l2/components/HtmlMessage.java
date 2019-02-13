@@ -30,8 +30,6 @@ import static org.l2j.commons.util.Util.*;
 public class HtmlMessage implements IBroadcastPacket {
 
     private static final Logger _log = LoggerFactory.getLogger(HtmlMessage.class);
-    private static final int MAX_HTML_SIZE = 4599;
-    private static final String HTML_IS_TOO_LONG = "<html><body>Text is too long!</body></html>";
 
     private String _filename;
 	private String _html;
@@ -180,19 +178,12 @@ public class HtmlMessage implements IBroadcastPacket {
         }
 
         Util.replaceAll(sb,"%playername%", player.getName());
-		if(_npcObjId != 0)
-		{
+		if(_npcObjId != 0) {
 			Util.replaceAll(sb,"%objectId%", String.valueOf(_npcObjId));
 			if(_npc != null)
 				Util.replaceAll(sb,"%npcId%", String.valueOf(_npc.getNpcId()));
 		}
 
-		content = HtmlUtils.evaluate(sb.toString(), _variables);
-
-		if(content.length() > MAX_HTML_SIZE) {
-		    content = HTML_IS_TOO_LONG;
-        }
-
-		return content;
+		return HtmlUtils.evaluate(sb.toString(), _variables);
 	}
 }
