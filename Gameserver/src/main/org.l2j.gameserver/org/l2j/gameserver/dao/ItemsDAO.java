@@ -1,8 +1,6 @@
 package org.l2j.gameserver.dao;
 
-import net.sf.ehcache.Cache;
-import net.sf.ehcache.CacheManager;
-import net.sf.ehcache.Element;
+import org.l2j.commons.cache.CacheFactory;
 import org.l2j.commons.dao.JdbcDAO;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.dao.JdbcEntityStats;
@@ -13,11 +11,18 @@ import org.l2j.gameserver.model.items.ItemInstance.ItemLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.*;
+import javax.cache.Cache;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.concurrent.atomic.AtomicLong;
+
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 
 public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 {
@@ -42,7 +47,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
     private AtomicLong update = new AtomicLong();
     private AtomicLong delete = new AtomicLong();
 
-    private final Cache cache;
+    private final Cache<Integer, ItemInstance> cache;
 
     private final JdbcEntityStats stats = new JdbcEntityStats(){
         @Override
@@ -70,12 +75,11 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
         }
     };
 
-    private ItemsDAO()
-    {
-        cache = CacheManager.getInstance().getCache(ItemInstance.class.getName());
+    private ItemsDAO() {
+        cache = CacheFactory.getInstance().getCache(ItemInstance.class.getName(), Integer.class, ItemInstance.class);
     }
 
-    public Cache getCache()
+    public Cache<Integer, ItemInstance> getCache()
     {
         return cache;
     }
@@ -236,32 +240,27 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
     }
 
     @Override
-    public ItemInstance load(Integer objectId)
-    {
-        ItemInstance item;
+    public ItemInstance load(Integer objectId) {
 
-        Element ce = cache.get(objectId);
-        if(ce != null)
-        {
-            item = (ItemInstance) ce.getObjectValue();
+        ItemInstance item = cache.get(objectId);
+
+        if(nonNull(item)) {
             return item;
         }
 
-        try
-        {
+        try {
             item = load0(objectId);
-            if(item == null)
+            if(isNull(item)) {
                 return null;
+            }
 
             item.setJdbcState(JdbcEntityState.STORED);
-        }
-        catch(SQLException e)
-        {
+        } catch(SQLException e) {
             logger.error("Error while restoring item : " + objectId, e);
             return null;
         }
 
-        cache.put(new Element(item.getObjectId(), item));
+        cache.put(objectId, item);
 
         return item;
     }
@@ -303,7 +302,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
             return;
         }
 
-        cache.put(new Element(item.getObjectId(), item));
+        cache.put(item.getObjectId(), item);
     }
 
     public void save(Collection<ItemInstance> items)
@@ -332,7 +331,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
             return;
         }
 
-        cache.putIfAbsent(new Element(item.getObjectId(), item));
+        cache.putIfAbsent(item.getObjectId(), item);
     }
 
     public void update(Collection<ItemInstance> items)

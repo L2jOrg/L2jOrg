@@ -1,9 +1,10 @@
 package org.l2j.gameserver.data.htm;
 
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.l2j.commons.cache.CacheFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.utils.ArabicConv;
 import org.l2j.gameserver.utils.HtmlUtils;
 import org.l2j.gameserver.utils.Language;
 import org.l2j.gameserver.utils.Util;
@@ -15,311 +16,152 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 
-/**
- * Кэширование html диалогов.
- *
- * В кеше список вот так
- * admin/admhelp.htm
- * admin/admin.htm
- * admin/admserver.htm
- * admin/banmenu.htm
- * admin/charmanage.htm
- */
-public class HtmCache
-{
-    public static final int DISABLED = 0; // кеширование отключено (только для тестирования)
-    public static final int LAZY = 1; // диалоги кешируются по мере обращения
-    public static final int ENABLED = 2; // все диалоги кешируются при загрузке сервера
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 
-    private static final Logger _log = LoggerFactory.getLogger(HtmCache.class);
+public class HtmCache {
 
-    private final static HtmCache _instance = new HtmCache();
+    private static final Logger LOGGER = LoggerFactory.getLogger(HtmCache.class);
+    private static final HtmCache INSTANCE = new HtmCache();
+
+    private final IntObjectMap<Cache<String, String>> caches = new HashIntObjectMap<>(Language.values().length);
+
+    public static final int DISABLED = 0;
+    public static final int LAZY = 1;
+
+    private HtmCache() { }
 
     public static HtmCache getInstance()
     {
-        return _instance;
+        return INSTANCE;
     }
 
-    private final Cache[] _cache = new Cache[Language.VALUES.length];
-
-    private HtmCache()
-    {
-        for(int i = 0; i < _cache.length; i++)
-            _cache[i] = CacheFactory.getInstance().getCache(getClass().getName() + "." + Language.VALUES[i].name());
-    }
-
-    public void reload()
-    {
+    public void reload() {
         clear();
 
-        switch(Config.HTM_CACHE_MODE)
-        {
-            case ENABLED:
-                for(Language lang : Language.VALUES)
-                {
-                    if(!Config.AVAILABLE_LANGUAGES.contains(lang))
-                        continue;
-
-                    File root = new File(Config.DATAPACK_ROOT, "data/html/" + lang.getShortName());
-                    if(!root.exists())
-                    {
-                        _log.info("HtmCache: Not find html dir for lang: " + lang);
-                        continue;
-                    }
-                    load(lang, root, root.getAbsolutePath() + "/");
-
-                    root = new File(Config.DATAPACK_ROOT, "custom/html/" + lang.getShortName());
-                    if(!root.exists())
-                    {
-                        //logger.info("HtmCache: Not find html dir for lang: " + lang);
-                        continue;
-                    }
-                    load(lang, root, root.getAbsolutePath() + "/");
-
-                    _log.info(String.format("HtmCache: parsing %d documents; lang: %s.", _cache[lang.ordinal()].getSize(), lang));
-                }
-                break;
-            case LAZY:
-                _log.info("HtmCache: lazy cache mode.");
-                break;
-            case DISABLED:
-                _log.info("HtmCache: disabled.");
-                break;
+        if (Config.HTM_CACHE_MODE == DISABLED) {
+            LOGGER.info("HtmCache: Disabled.");
+        } else {
+            LOGGER.info("HtmCache: Lazy Cache Enabled.");
         }
     }
 
-    private void load(Language lang, File f, final String rootPath)
-    {
-        if(!f.exists())
-        {
-            _log.info("HtmCache: dir not exists: " + f);
-            return;
+    public String getHtml(String fileName, Player player) {
+        var lang = isNull(player) ? Config.DEFAULT_LANG : player.getLanguage();
+        var cache = getCache(fileName, lang);
+
+        if(isNull(cache)) {
+            LOGGER.warn("Dialog: data/html/{}/{} not found", lang.getShortName(), fileName);
         }
-        File[] files = f.listFiles();
-
-        for(File file : files)
-        {
-            if(file.isDirectory())
-                load(lang, file, rootPath);
-            else
-            {
-                if(file.getName().endsWith(".htm"))
-                {
-                    try
-                    {
-                        putContent(lang, file, rootPath);
-                    }
-                    catch(IOException e)
-                    {
-                        _log.error("HtmCache: file error: " + e, e);
-                    }
-                }
-            }
-        }
-    }
-
-    private String putContent(Language lang, File f, final String rootPath) throws IOException
-    {
-        String content = readContent(f);
-
-        String path = f.getAbsolutePath().substring(rootPath.length()).replace("\\", "/");
-
-        content = HtmlUtils.bbParse(content);
-
-        _cache[lang.ordinal()].put(new Element(path.toLowerCase(), content));
-
-        return content;
-    }
-
-    /**
-     * Получить html.
-     *
-     * @param fileName путь до html относительно data/html/LANG
-     * @param player
-     * @return существующий диалог, либо null и сообщение об ошибке в лог, если диалога не существует
-     */
-    public String getHtml(String fileName, Player player)
-    {
-        Language lang = player == null ? Config.DEFAULT_LANG : player.getLanguage();
-        String cache = getCache(fileName, lang);
-
-        if(cache == null)
-            _log.warn("Dialog: " + "data/html/" + lang.getShortName() + "/" + fileName + " not found.");
 
         return cache;
     }
 
-    /**
-     * Получить существующий html.
-     *
-     * @param fileName путь до html относительно data/html/LANG
-     * @param player
-     * @return null если диалога не существует
-     */
-    public String getIfExists(String fileName, Player player)
-    {
-        Language lang = player == null ? Config.DEFAULT_LANG : player.getLanguage();
+    public String getIfExists(String fileName, Player player) {
+        var lang = isNull(player) ? Config.DEFAULT_LANG : player.getLanguage();
         return getCache(fileName, lang);
     }
 
-    public HtmTemplates getTemplates(String fileName, Player player)
-    {
-        Language lang = player == null ? Config.DEFAULT_LANG : player.getLanguage();
+    public HtmTemplates getTemplates(String fileName, Player player) {
+        Language lang = isNull(player) ? Config.DEFAULT_LANG : player.getLanguage();
         HtmTemplates templates = Util.parseTemplates(fileName, lang, getHtml(fileName, player));
-        if(templates == null)
+        if(isNull(templates))
             return HtmTemplates.EMPTY_TEMPLATES;
         return templates;
     }
 
-    public String getCache(String file, Language lang)
-    {
-        if(file == null)
+    public String getCache(String file, Language lang) {
+        if(isNull(file)) {
             return null;
-
-        final String fileLower = file.toLowerCase();
-        String cache = get(lang, fileLower);
-
-        if(cache == null)
-        {
-            switch(Config.HTM_CACHE_MODE)
-            {
-                case ENABLED:
-                    cache = get(lang, fileLower);
-                    if(lang == Language.ENGLISH)
-                        cache = get(Language.RUSSIAN, fileLower);
-                    else
-                        cache = get(Language.ENGLISH, fileLower);
-                    break;
-                case LAZY:
-                    cache = loadLazy(lang, file);
-                    if(cache == null)
-                    {
-                        if(lang == Language.ENGLISH)
-                            cache = loadLazy(Language.RUSSIAN, file);
-                        else
-                            cache = loadLazy(Language.ENGLISH, file);
-                    }
-                    break;
-                case DISABLED:
-                    cache = loadDisabled(lang, file);
-                    if(cache == null)
-                    {
-                        if(lang == Language.ENGLISH)
-                            cache = loadDisabled(Language.RUSSIAN, file);
-                        else
-                            cache = loadDisabled(Language.ENGLISH, file);
-                    }
-                    break;
-            }
         }
 
-        return cache;
-    }
+        String content;
 
-    private String loadDisabled(Language lang, String file)
-    {
-        String cache = null;
-        File f = getFile(new File(Config.DATAPACK_ROOT, "data/html/" + lang.getShortName() + "/" + file));
-        if(f.exists())
-        {
-            try
-            {
-                cache = readContent(f);
-
-                cache = HtmlUtils.bbParse(cache);
+        if(Config.HTM_CACHE_MODE == DISABLED) {
+            content = loadDisabled(lang, file);
+            if (isNull(content) && lang != Config.DEFAULT_LANG) {
+                content = loadDisabled(Config.DEFAULT_LANG, file);
             }
-            catch(IOException e)
-            {
-                _log.info("HtmCache: File error: " + file + " lang: " + lang);
-            }
-        }
-        f = getFile(new File(Config.DATAPACK_ROOT, "custom/html/" + lang.getShortName() + "/" + file));
-        if(f.exists())
-        {
-            try
-            {
-                cache = readContent(f);
-
-                cache = HtmlUtils.bbParse(cache);
-            }
-            catch(IOException e)
-            {
-                _log.info("HtmCache: File error: " + file + " lang: " + lang);
-            }
-        }
-        return cache;
-    }
-
-    private String loadLazy(Language lang, String file)
-    {
-        String cache = null;
-        File root = new File(Config.DATAPACK_ROOT, "data/html/" + lang.getShortName());
-        File f = getFile(new File(root, file));
-        if(f.exists())
-        {
-            try
-            {
-                cache = putContent(lang, f, root.getAbsolutePath() + "/");
-            }
-            catch(IOException e)
-            {
-                _log.info("HtmCache: File error: " + file + " lang: " + lang);
-            }
-        }
-        root = new File(Config.DATAPACK_ROOT, "custom/html/" + lang.getShortName());
-        f = getFile(new File(root, file));
-        if(f.exists())
-        {
-            try
-            {
-                cache = putContent(lang, f, root.getAbsolutePath() + "/");
-            }
-            catch(IOException e)
-            {
-                _log.info("HtmCache: File error: " + file + " lang: " + lang);
-            }
-        }
-        return cache;
-    }
-
-    private String get(Language lang, String f)
-    {
-        Element element = _cache[lang.ordinal()].get(f);
-
-        if(element == null)
-            element = _cache[Language.ENGLISH.ordinal()].get(f);
-
-        return element == null ? null : (String) element.getObjectValue();
-    }
-
-    public void clear()
-    {
-        for(int i = 0; i < _cache.length; i++)
-            _cache[i].removeAll();
-    }
-
-    private static String readContent(File file) throws IOException {
-        String content = Files.readString(file.toPath());
-        if(Config.HTM_SHAPE_ARABIC)
-            content = ArabicConv.shapeArabic(content);
-        return content;
-    }
-
-    private static File getFile(File file)
-    {
-        if(!file.exists())
-        {
-            File dir = file.getParentFile();
-            if(dir != null && dir.isDirectory())
-            {
-                for(File f : dir.listFiles())
-                {
-                    if(f.getName().equalsIgnoreCase(file.getName()))
-                        return f;
+        } else {
+            final var fileLower = file.toLowerCase();
+            content = get(lang, fileLower);
+            if(isNull(content)) {
+                content = loadLazy(lang, file);
+                if (isNull(content) && lang != Language.ENGLISH) {
+                    content = loadLazy(Language.ENGLISH, file);
                 }
             }
 
         }
-        return file;
+        return content;
+    }
+
+    private String loadDisabled(Language lang, String filePath) {
+        var file = new File(Config.DATAPACK_ROOT, String.format("data/html/%s/%s", lang.getShortName(), filePath));
+        String content = parseFile(lang, file);
+
+        if(isNull(content)) {
+            file= new File(Config.DATAPACK_ROOT, String.format("custom/html/%s/%s", lang.getShortName(), filePath));
+            content = parseFile(lang, file);
+        }
+        return content;
+    }
+
+    private String parseFile(Language lang, File file) {
+        try {
+            if(file.exists()) {
+                return HtmlUtils.bbParse(readContent(file));
+            }
+        } catch (IOException e) {
+            LOGGER.warn("HtmCache: File error: {} lang: {}", file.getAbsolutePath(), lang);
+        }
+        return null;
+    }
+
+    private String loadLazy(Language lang, String filePath) {
+        var root = new File(Config.DATAPACK_ROOT, "data/html/" + lang.getShortName());
+        var file = new File(root, filePath);
+        var cache = putContent(lang, file, root.getAbsolutePath());
+
+        if(nonNull(cache)) {
+            return cache;
+        }
+
+        root = new File(Config.DATAPACK_ROOT, "custom/html/" + lang.getShortName());
+        file = new File(root, filePath);
+        return putContent(lang, file, root.getAbsolutePath());
+    }
+
+    private String putContent(Language lang, File f, final String rootPath) {
+        var content = parseFile(lang, f);
+        if(isNull(content)) {
+            return null;
+        }
+
+        var path = f.getAbsolutePath().substring(rootPath.length() + 1).replace("\\", "/");
+        var cache = cacheOfLang(lang);
+        cache.put(path.toLowerCase(), content);
+        return content;
+    }
+
+    private Cache<String, String> cacheOfLang(Language lang) {
+        if(!caches.containsKey(lang.ordinal())) {
+            var cacheAlias = String.format("%s.%s", getClass().getName(), lang);
+            caches.put(lang.ordinal(), CacheFactory.getInstance().getCache(cacheAlias, String.class, String.class));
+        }
+        return caches.get(lang.ordinal());
+    }
+
+
+    private String get(Language lang, String filePath) {
+        return cacheOfLang(lang).get(filePath);
+    }
+
+    public void clear() {
+        caches.values().forEach(Cache::removeAll);
+    }
+
+    private static String readContent(File file) throws IOException {
+        return Files.readString(file.toPath());
     }
 }

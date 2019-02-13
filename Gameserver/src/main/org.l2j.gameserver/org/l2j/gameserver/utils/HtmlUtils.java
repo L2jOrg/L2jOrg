@@ -1,5 +1,6 @@
 package org.l2j.gameserver.utils;
 
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.HtmlMessage;
 import org.l2j.gameserver.network.l2.components.NpcString;
@@ -88,7 +89,7 @@ public class HtmlUtils {
 
 	public static String bbParse(String s)
 	{
-		if(s == null)
+		if(Util.isNullOrEmpty(s))
 			return null;
 
 		s = s.replaceAll("(\r|\n|\"<!--((?!TEMPLATE).*?)-->\")", "");

@@ -1,8 +1,5 @@
 package org.l2j.gameserver.dao;
 
-import net.sf.ehcache.Cache;
-import net.sf.ehcache.CacheManager;
-import net.sf.ehcache.Element;
 import org.l2j.commons.dao.JdbcDAO;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.dao.JdbcEntityStats;

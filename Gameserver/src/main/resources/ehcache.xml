@@ -9,6 +9,7 @@
 
 	<cache-template name="baseCache" >
 		<key-type>java.lang.String</key-type>
+		<value-type>java.lang.String</value-type>
 		<expiry>
 			<tti>1800</tti>
 		</expiry>
@@ -38,6 +39,8 @@
 	</cache>
 
 	<cache alias="org.l2j.gameserver.model.items.ItemInstance" uses-template="baseCache">
+		<key-type>java.lang.Integer</key-type>
+		<value-type>org.l2j.gameserver.model.items.ItemInstance</value-type>
 		<heap>200000</heap>
 	</cache>
 

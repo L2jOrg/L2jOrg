@@ -1,18 +1,6 @@
 package org.l2j.gameserver;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.StringTokenizer;
-import java.util.concurrent.Future;
-
 import org.l2j.commons.threading.RunnableImpl;
-import org.l2j.commons.util.Util;
 import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.ChatType;
@@ -21,11 +9,19 @@ import org.l2j.gameserver.network.l2.components.IBroadcastPacket;
 import org.l2j.gameserver.network.l2.components.NpcString;
 import org.l2j.gameserver.network.l2.s2c.SayPacket2;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
-import org.l2j.gameserver.utils.ArabicConv;
 import org.l2j.gameserver.utils.ChatUtils;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringTokenizer;
+import java.util.concurrent.Future;
 
 public class Announcements
 {
@@ -44,13 +40,12 @@ public class Announcements
 		@Override
 		public void runImpl() throws Exception
 		{
-            Announcements.announceToAll(Config.HTM_SHAPE_ARABIC ? ArabicConv.shapeArabic(_announce) : _announce);
+            Announcements.announceToAll(_announce);
 		}
 
 		public void showAnnounce(Player player)
 		{
-            String text = Config.HTM_SHAPE_ARABIC ? ArabicConv.shapeArabic(_announce) : _announce;
-			SayPacket2 cs = new SayPacket2(0, ChatType.ANNOUNCEMENT, player.getName(), text);
+			SayPacket2 cs = new SayPacket2(0, ChatType.ANNOUNCEMENT, player.getName(), _announce);
 			player.sendPacket(cs);
 		}
 

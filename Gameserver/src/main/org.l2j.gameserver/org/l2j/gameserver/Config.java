@@ -74,7 +74,6 @@ public class Config
     public static boolean ON_WRONG_QUESTION_KICK;
 
     public static int HTM_CACHE_MODE;
-    public static boolean HTM_SHAPE_ARABIC;
     public static int SHUTDOWN_ANN_TYPE;
 
     public static boolean DATABASE_AUTOUPDATE;
@@ -1049,7 +1048,6 @@ public class Config
         WEAR_DELAY = serverSettings.getProperty("WearDelay", 5);
 
         HTM_CACHE_MODE = serverSettings.getProperty("HtmCacheMode", HtmCache.LAZY);
-        HTM_SHAPE_ARABIC = serverSettings.getProperty("HtmShapeArabic", false);
         SHUTDOWN_ANN_TYPE = serverSettings.getProperty("ShutdownAnnounceType", Shutdown.OFFLIKE_ANNOUNCES);
         APASSWD_TEMPLATE = serverSettings.getProperty("PasswordTemplate", "[A-Za-z0-9]{4,16}");
 
