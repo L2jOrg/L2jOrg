@@ -44,5 +44,9 @@
             <AppenderRef ref="game"/>
             <AppenderRef ref="debug"/>
         </Logger>
+        <Logger name="org.ehcache" level="error">
+            <AppenderRef ref="game"/>
+            <AppenderRef ref="debug"/>
+        </Logger>
     </Loggers>
 </Configuration>

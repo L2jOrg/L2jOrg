@@ -1,13 +1,13 @@
 package org.l2j.gameserver.model.mail;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import org.l2j.commons.dao.JdbcEntity;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.gameserver.dao.MailDAO;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class Mail implements JdbcEntity, Comparable<Mail>
 {
@@ -38,8 +38,6 @@ public class Mail implements JdbcEntity, Comparable<Mail>
 	//Mail types (0 - Normal, ... - unk, 5 - commission buy)
 	public static final int NORMAL_POST = 0;
 	public static final int COMMISSION_POST = 5;
-
-	private static final MailDAO _mailDAO = MailDAO.getInstance();
 
 	private int _postType;
 	private int messageId;
@@ -298,17 +296,17 @@ public class Mail implements JdbcEntity, Comparable<Mail>
 
 	public void save()
 	{
-		_mailDAO.save(this);
+		MailDAO.getInstance().save(this);
 	}
 
 	public void update()
 	{
-		_mailDAO.update(this);
+		MailDAO.getInstance().update(this);
 	}
 
 	public void delete()
 	{
-		_mailDAO.delete(this);
+		MailDAO.getInstance().delete(this);
 	}
 
 	public Mail reject()

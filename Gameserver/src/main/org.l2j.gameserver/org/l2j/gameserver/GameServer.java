@@ -2,7 +2,7 @@ package org.l2j.gameserver;
 
 import io.github.joealisson.mmocore.ConnectionBuilder;
 import io.github.joealisson.mmocore.ConnectionHandler;
-import net.sf.ehcache.CacheManager;
+import org.l2j.commons.cache.CacheFactory;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.lang.StatsUtils;
 import org.l2j.commons.listener.Listener;
@@ -85,6 +85,8 @@ public class GameServer {
         // TODO remove this
         Config.load();
 
+        CacheFactory.getInstance().initialize("config/ehcache.xml");
+
         var serverSettings = getSettings(ServerSettings.class);
 
         licenseHost = serverSettings.externalAddress();
@@ -96,8 +98,6 @@ public class GameServer {
             logger.error("Could not read object IDs from DB. Please Check Your Data.");
             throw new Exception("Could not initialize the ID factory");
         }
-
-        CacheManager.getInstance();
 
         ThreadPoolManager.getInstance();
 
@@ -197,7 +197,7 @@ public class GameServer {
         logger.info("Maximum Numbers of Connected Players: " + getOnlineLimit());
 
         final GamePacketHandler gph = new GamePacketHandler();
-        connectionHandler = ConnectionBuilder.create(new InetSocketAddress(serverSettings.port()), gph, gph, gph).bufferLargeSize(17 * 1024).build();
+        connectionHandler = ConnectionBuilder.create(new InetSocketAddress(serverSettings.port()), gph, gph, gph).bufferLargeSize(64 * 1024).build();
         connectionHandler.start();
 
         AsynchronousSocketChannel c;

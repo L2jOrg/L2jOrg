@@ -5,6 +5,10 @@ import javax.cache.CacheManager;
 import javax.cache.Caching;
 import javax.cache.spi.CachingProvider;
 
+import java.net.URI;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
 import static java.util.Objects.isNull;
 
 public class CacheFactory {
@@ -13,8 +17,7 @@ public class CacheFactory {
     private CacheManager manager;
 
     private CacheFactory() {
-        CachingProvider cachingProvider = Caching.getCachingProvider();
-        manager = cachingProvider.getCacheManager();
+
     }
 
     public static CacheFactory getInstance() {
@@ -24,12 +27,25 @@ public class CacheFactory {
         return  instance;
     }
 
+    public void initialize(String configurationFilePath) {
+        CachingProvider cachingProvider = Caching.getCachingProvider();
+        manager = cachingProvider.getCacheManager(Path.of(configurationFilePath).toUri(), getClass().getClassLoader());
+    }
+
     public <K, V> Cache<K, V> getCache(String alias) {
+        checkInitilized();
         return manager.getCache(alias);
     }
 
     public <K, V> Cache<K, V> getCache(String alias, Class<K> keyClass, Class<V> valueClass) {
+        checkInitilized();
         return manager.getCache(alias, keyClass, valueClass);
+    }
+
+    private void checkInitilized() {
+        if (isNull(manager)) {
+            throw new IllegalStateException("CacheFactory not initialized. Call method initialize before use it");
+        }
     }
 
 }

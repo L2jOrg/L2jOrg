@@ -1,47 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="ehcache.xsd" updateCheck="false"
-         monitoring="autodetect">
+<config xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+		xmlns='http://www.ehcache.org/v3'
+		xsi:schemaLocation="
+        http://www.ehcache.org/v3 http://www.ehcache.org/schema/ehcache-core-3.6.xsd">
 
-	<diskStore path="java.io.tmpdir" />
+	<persistence directory="java.io.tmpdir" />
 
-	<defaultCache maxElementsInMemory="1000" eternal="false"
-		timeToIdleSeconds="120" timeToLiveSeconds="120" overflowToDisk="true"
-		diskPersistent="false" diskExpiryThreadIntervalSeconds="120" />
-
-	<!-- DropInfoCache -->
-	<cache name="DropInfoCache" maxElementsInMemory="30000" eternal="false"
-		overflowToDisk="false" timeToLiveSeconds="3600" timeToIdleSeconds="600" />
+	<cache-template name="baseCache" >
+		<key-type>java.lang.String</key-type>
+		<value-type>java.lang.String</value-type>
+		<expiry>
+			<tti>1800</tti>
+		</expiry>
+		<heap>5000</heap>
+	</cache-template>
 
 	<!-- HtmCache -->
-	<cache name="org.l2j.gameserver.data.htm.HtmCache.KOREAN" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
-	<cache name="org.l2j.gameserver.data.htm.HtmCache.ENGLISH" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
-	<cache name="org.l2j.gameserver.data.htm.HtmCache.CHINESE" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
-	<cache name="org.l2j.gameserver.data.htm.HtmCache.THAI" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
-	<cache name="org.l2j.gameserver.data.htm.HtmCache.RUSSIAN" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
-	<cache name="org.l2j.gameserver.data.htm.HtmCache.ENGLISH_EU" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
-	<cache name="org.l2j.gameserver.data.htm.HtmCache.PORTUGUESE" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
-	<cache name="org.l2j.gameserver.data.htm.HtmCache.SPANISH" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
-	<cache name="org.l2j.gameserver.data.htm.HtmCache.ARABIC" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
-	<cache name="org.l2j.gameserver.data.htm.HtmCache.GREEK" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
-	<cache name="org.l2j.gameserver.data.htm.HtmCache.GEORGIAN" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
-	<cache name="org.l2j.gameserver.data.htm.HtmCache.HUNGARIAN" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
-	<cache name="org.l2j.gameserver.data.htm.HtmCache.FINNISH" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
-	<cache name="org.l2j.gameserver.data.htm.HtmCache.UKRAINIAN" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
-	<cache name="org.l2j.gameserver.data.htm.HtmCache.VIETNAMESE" eternal="true" memoryStoreEvictionPolicy="LRU" maxElementsInMemory="100000" overflowToDisk="false"/>
+	<cache alias="org.l2j.gameserver.data.htm.HtmCache.KOREAN" uses-template="baseCache"/>
+	<cache alias="org.l2j.gameserver.data.htm.HtmCache.ENGLISH" uses-template="baseCache"/>
+	<cache alias="org.l2j.gameserver.data.htm.HtmCache.CHINESE" uses-template="baseCache"/>
+	<cache alias="org.l2j.gameserver.data.htm.HtmCache.THAI" uses-template="baseCache"/>
+	<cache alias="org.l2j.gameserver.data.htm.HtmCache.RUSSIAN" uses-template="baseCache"/>
+	<cache alias="org.l2j.gameserver.data.htm.HtmCache.ENGLISH_EU" uses-template="baseCache"/>
+	<cache alias="org.l2j.gameserver.data.htm.HtmCache.PORTUGUESE" uses-template="baseCache"/>
+	<cache alias="org.l2j.gameserver.data.htm.HtmCache.SPANISH" uses-template="baseCache"/>
+	<cache alias="org.l2j.gameserver.data.htm.HtmCache.ARABIC" uses-template="baseCache"/>
+	<cache alias="org.l2j.gameserver.data.htm.HtmCache.GREEK" uses-template="baseCache"/>
+	<cache alias="org.l2j.gameserver.data.htm.HtmCache.GEORGIAN" uses-template="baseCache"/>
+	<cache alias="org.l2j.gameserver.data.htm.HtmCache.HUNGARIAN" uses-template="baseCache"/>
+	<cache alias="org.l2j.gameserver.data.htm.HtmCache.FINNISH" uses-template="baseCache"/>
+	<cache alias="org.l2j.gameserver.data.htm.HtmCache.UKRAINIAN" uses-template="baseCache"/>
+	<cache alias="org.l2j.gameserver.data.htm.HtmCache.VIETNAMESE"  uses-template="baseCache"/>
 
 	<!-- ItemInfoCache -->
-	<cache name="org.l2j.gameserver.cache.ItemInfoCache"
-		maxElementsInMemory="10000" eternal="false" overflowToDisk="false"
-		timeToLiveSeconds="3600" timeToIdleSeconds="600" />
+	<cache alias="org.l2j.gameserver.cache.ItemInfoCache" uses-template="baseCache">
+		<key-type>java.lang.Integer</key-type>
+		<value-type>org.l2j.gameserver.model.items.ItemInfo</value-type>
+		<heap>10000</heap>
+	</cache>
 
-	<cache name="org.l2j.gameserver.model.items.ItemInstance"
-		maxElementsInMemory="200000" eternal="false"  timeToIdleSeconds="1800" memoryStoreEvictionPolicy="LRU"
-		timeToLiveSeconds="3600" overflowToDisk="false" statistics="true" />
+	<cache alias="org.l2j.gameserver.model.items.ItemInstance" uses-template="baseCache">
+		<key-type>java.lang.Integer</key-type>
+		<value-type>org.l2j.gameserver.model.items.ItemInstance</value-type>
+		<heap>200000</heap>
+	</cache>
 
-	<cache name="org.l2j.gameserver.model.mail.Mail"
-		maxElementsInMemory="100000" eternal="false" timeToIdleSeconds="3600" memoryStoreEvictionPolicy="LRU"
-		timeToLiveSeconds="28800" overflowToDisk="false" statistics="true" />
+	<cache alias="org.l2j.gameserver.model.mail.Mail" uses-template="baseCache">
+		<key-type>java.lang.Integer</key-type>
+		<value-type>org.l2j.gameserver.model.mail.Mail</value-type>
+	</cache>
 
-</ehcache>
+</config>

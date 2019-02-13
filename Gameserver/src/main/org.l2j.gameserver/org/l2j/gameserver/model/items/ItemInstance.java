@@ -51,8 +51,6 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 
 	private static final long serialVersionUID = 3162753878915133228L;
 
-	private static final ItemsDAO _itemsDAO = ItemsDAO.getInstance();
-
 	/** Enumeration of locations for item */
 	public static enum ItemLocation
 	{
@@ -1109,19 +1107,19 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	@Override
 	public void save()
 	{
-		_itemsDAO.save(this);
+		ItemsDAO.getInstance().save(this);
 	}
 
 	@Override
 	public void update()
 	{
-		_itemsDAO.update(this);
+		ItemsDAO.getInstance().update(this);
 	}
 
 	@Override
 	public void delete()
 	{
-		_itemsDAO.delete(this);
+		ItemsDAO.getInstance().delete(this);
 		ItemsEnsoulDAO.getInstance().delete(getObjectId());
 	}
 

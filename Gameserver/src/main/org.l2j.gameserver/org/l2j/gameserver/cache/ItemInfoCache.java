@@ -1,13 +1,12 @@
 package org.l2j.gameserver.cache;
 
-import net.sf.ehcache.Cache;
-import net.sf.ehcache.CacheManager;
-import net.sf.ehcache.Element;
-
+import org.l2j.commons.cache.CacheFactory;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.items.ItemInfo;
 import org.l2j.gameserver.model.items.ItemInstance;
+
+import javax.cache.Cache;
 
 public class ItemInfoCache
 {
@@ -18,16 +17,16 @@ public class ItemInfoCache
 		return _instance;
 	}
 
-	private Cache cache;
+	private Cache<Integer, ItemInfo> cache;
 
 	private ItemInfoCache()
 	{
-		cache = CacheManager.getInstance().getCache(this.getClass().getName());
+		cache = CacheFactory.getInstance().getCache(this.getClass().getName(), Integer.class, ItemInfo.class);
 	}
 
 	public void put(ItemInstance item)
 	{
-		cache.put(new Element(item.getObjectId(), new ItemInfo(item)));
+		cache.put(item.getObjectId(), new ItemInfo(item));
 	}
 
 	/**
@@ -37,18 +36,12 @@ public class ItemInfoCache
 	 * @param objectId - идентификатор предмета
 	 * @return возвращает описание вещи, или null если описания нет, или уже удалено из кеша
 	 */
-	public ItemInfo get(int objectId)
-	{
-		Element element = cache.get(objectId);
+	public ItemInfo get(int objectId) {
+		ItemInfo info = cache.get(objectId);
 
-		ItemInfo info = null;
-		if(element != null)
-			info = (ItemInfo) element.getObjectValue();
+		Player player;
 
-		Player player = null;
-
-		if(info != null)
-		{
+		if(info != null) {
 			player = World.getPlayer(info.getOwnerId());
 
 			ItemInstance item = null;
@@ -58,7 +51,7 @@ public class ItemInfoCache
 
 			if(item != null)
 				if(item.getItemId() == info.getItemId())
-					cache.put(new Element(item.getObjectId(), info = new ItemInfo(item)));
+					cache.put(item.getObjectId(), info = new ItemInfo(item));
 		}
 
 		return info;
