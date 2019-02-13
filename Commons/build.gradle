@@ -20,13 +20,13 @@ sourceSets {
 dependencies {
     compile 'org.slf4j:slf4j-api:1.8.0-beta2'
     compile 'org.springframework.data:spring-data-jdbc:1.0.3.RELEASE'
-    compile 'com.zaxxer:HikariCP:3.2.0'
+    compile 'com.zaxxer:HikariCP:3.3.1'
     compile 'org.glassfish.jaxb:jaxb-runtime:2.4.0-b180830.0438'
     compile 'org.dom4j:dom4j:2.1.1'
     compile 'org.eclipse.jdt:ecj:3.16.0'
     compile 'javax.cache:cache-api:1.1.0'
 
-    runtime ('mysql:mysql-connector-java:8.0.13') {
+    runtime ('mysql:mysql-connector-java:8.0.15') {
         transitive = false
     }
 }
