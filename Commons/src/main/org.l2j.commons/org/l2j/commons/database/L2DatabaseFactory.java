@@ -18,68 +18,36 @@
  */
 package org.l2j.commons.database;
 
+import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 
 import static java.util.Objects.isNull;
 
-
 public class L2DatabaseFactory {
-    private static Logger _log = LoggerFactory.getLogger(L2DatabaseFactory.class);
+    private static Logger LOGGER = LoggerFactory.getLogger(L2DatabaseFactory.class);
 
     private static L2DatabaseFactory instance;
     private final HikariDataSource _dataSource;
-    private final ApplicationContext context;
 
     public L2DatabaseFactory() throws SQLException {
-        context = new AnnotationConfigApplicationContext(DatabaseContextConfiguration.class);
-        _dataSource = context.getBean(HikariDataSource.class);
-
-        try {
-            _dataSource.getConnection().close();
-        } catch (SQLException e) {
-            _log.error(e.getMessage(), e);
-            throw  e;
-        }
-    }
-
-    public static String prepQuerySelect(String[] fields, String tableName, String whereClause, boolean returnOnlyTopRecord) {
-        String msSqlTop1 = "";
-        String mySqlTop1 = "";
-        if (returnOnlyTopRecord) {
-            mySqlTop1 = " Limit 1 ";
-        }
-        String query = "SELECT " + msSqlTop1 + safetyString(fields) + " FROM " + tableName + " WHERE " + whereClause + mySqlTop1;
-        return query;
+        _dataSource = new HikariDataSource(new HikariConfig());
+        _dataSource.getConnection().close();
     }
 
     public void shutdown() {
         try {
             _dataSource.close();
         } catch (Exception e) {
-            _log.info(e.getMessage(), e);
+            LOGGER.error(e.getMessage(), e);
         }
 
     }
 
-    public final static String safetyString(String[] whatToCheck) {
-        // NOTE: Use brace as a safty percaution just incase name is a reserved word
-        String braceLeft = "`";
-        String braceRight = "`";
-
-        String result = "";
-        for (String word : whatToCheck) {
-            if (result != "") result += ", ";
-            result += braceLeft + word + braceRight;
-        }
-        return result;
-    }
 
     // TODO remove access from external modules
     public static L2DatabaseFactory getInstance() throws SQLException {
@@ -89,28 +57,20 @@ public class L2DatabaseFactory {
         return instance;
     }
 
-    public Connection getConnection() //throws SQLException
-    {
-        Connection con = null;
-
-        while (con == null) {
-            try {
-                con = _dataSource.getConnection();
-            } catch (SQLException e) {
-                _log.warn("L2DatabaseFactory: getConnection() failed, trying again", e);
-            }
+    public Connection getConnection() {
+        try {
+            return _dataSource.getConnection();
+        } catch (SQLException e) {
+            LOGGER.error(e.getLocalizedMessage(), e);
         }
-        return con;
-    }
-
-    public static void close(Connection conn) {
+        return null;
     }
 
     public  <T> T getRepository(Class<T> repositoryClass) {
         try {
-            return context.getBean(repositoryClass);
+            return null;
         }catch (Exception e) {
-            _log.error("could.not.retrieve.repository", e);
+            LOGGER.error("could.not.retrieve.repository", e);
             throw  e;
         }
     }

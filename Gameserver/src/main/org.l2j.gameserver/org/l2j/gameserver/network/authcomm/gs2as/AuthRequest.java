@@ -13,7 +13,7 @@ public class AuthRequest extends SendablePacket {
 		var serverSettings = Configurator.getSettings(ServerSettings.class);
 		buffer.put((byte) 0x00);
 		buffer.put((byte) serverSettings.serverId());
-		buffer.put((byte) 0x00); // ACCEPT ALTERNATE ID
+		buffer.put((byte) 0x01); // ACCEPT ALTERNATE ID
 		writeString(serverSettings.internalAddress(), buffer);
 		writeString(serverSettings.externalAddress(), buffer);
 		buffer.putShort(serverSettings.port());

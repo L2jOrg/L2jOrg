@@ -1,7 +1,6 @@
 module org.l2j.commons {
     requires java.sql;
     requires java.naming;
-    requires java.desktop;
     requires org.slf4j;
     requires com.zaxxer.hikari;
     requires spring.data.commons;
@@ -14,6 +13,7 @@ module org.l2j.commons {
     requires dom4j;
     requires ecj;
     requires cache.api;
+    requires java.desktop;
 
     exports org.l2j.commons.util;
     exports org.l2j.commons.xml;
@@ -43,4 +43,12 @@ module org.l2j.commons {
     exports org.l2j.commons.text;
     exports org.l2j.commons.formats.dds;
     exports org.l2j.commons.cache;
+    exports org.l2j.commons.database.handler;
+
+    uses org.l2j.commons.database.handler.TypeHandler;
+    provides org.l2j.commons.database.handler.TypeHandler
+        with org.l2j.commons.database.handler.IntegerHandler,
+             org.l2j.commons.database.handler.VoidHandler,
+             org.l2j.commons.database.handler.ListHandler,
+             org.l2j.commons.database.handler.EntityHandler;
 }

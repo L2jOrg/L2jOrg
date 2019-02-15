@@ -41,6 +41,7 @@ subprojects {
             doFirst {
                 options.compilerArgs = [
                     '--module-path', classpath.asPath,
+                    '-parameters'
                 ]
                 options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
                 classpath = files()

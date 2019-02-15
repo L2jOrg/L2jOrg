@@ -48,10 +48,10 @@ public class AuthRequest extends GameserverReadablePacket {
         if (nonNull(gsi)) {
             authenticGameServer(gsi);
         } else {
-            processNewGameServer(gameServerManager);
+            gsi = processNewGameServer(gameServerManager);
         }
 
-        if(gsi.isAuthed()) {
+        if(nonNull(gsi) && gsi.isAuthed()) {
             client.sendPacket(new AuthResponse(gsi.getId()));
         }
 	}
@@ -64,19 +64,20 @@ public class AuthRequest extends GameserverReadablePacket {
         }
     }
 
-    private void processNewGameServer(GameServerManager gameServerManager) {
-        GameServerInfo gsi;
+    private GameServerInfo processNewGameServer(GameServerManager gameServerManager) {
         if (acceptNewGameServerEnabled() && acceptAlternativeId) {
-            gsi = new GameServerInfo(desiredId, client);
+            GameServerInfo gsi = new GameServerInfo(desiredId, client);
             if (gameServerManager.registerWithFirstAvaliableId(gsi)) {
                updateGameServerInfo(gsi);
                 gameServerManager.registerServerOnDB(gsi);
+                return  gsi;
             } else {
                 client.close(REASON_NO_FREE_ID);
             }
         } else {
             client.close(NOT_AUTHED);
         }
+        return null;
     }
 
     private void updateGameServerInfo(GameServerInfo gsi) {

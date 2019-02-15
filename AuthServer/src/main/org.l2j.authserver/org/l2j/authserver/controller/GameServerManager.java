@@ -1,6 +1,7 @@
 package org.l2j.authserver.controller;
 
 import org.l2j.authserver.GameServerInfo;
+import org.l2j.authserver.dao.GameserverDAO;
 import org.l2j.authserver.xml.ServerNameReader;
 import org.l2j.commons.database.GameserverRepository;
 import org.l2j.commons.database.model.GameServer;
@@ -17,6 +18,7 @@ import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static java.util.Objects.isNull;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.database.DatabaseAccess.getRepository;
 
 /**
@@ -58,7 +60,7 @@ public class GameServerManager {
     }
 
     private void loadRegisteredGameServers() {
-        getRepository(GameserverRepository.class).findAll().forEach(gameServer -> {
+        getDAO(GameserverDAO.class).findAll().forEach(gameServer -> {
             GameServerInfo gsi = new GameServerInfo(gameServer);
             gameservers.put(gameServer.getId(), gsi);
         });
@@ -116,8 +118,7 @@ public class GameServerManager {
     }
 
     public void registerServerOnDB(int id, String externalHost) {
-        GameServer gameServer = new GameServer(id, externalHost);
-        getRepository(GameserverRepository.class).save(gameServer);
+        getDAO(GameserverDAO.class).save(id, externalHost);
     }
 
     public String getServerNameById(int id) {

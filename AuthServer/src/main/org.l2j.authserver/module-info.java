@@ -5,9 +5,10 @@ module org.l2j.authserver {
     requires java.sql;
     requires org.slf4j;
     requires spring.data.commons;
-    requires async.mmocore;
     requires spring.data.jdbc;
+    requires io.github.joealisson.mmocore;
 
     exports org.l2j.authserver;
     opens org.l2j.authserver.xml to java.xml.bind;
+    opens org.l2j.authserver.settings to org.l2j.commons;
 }
