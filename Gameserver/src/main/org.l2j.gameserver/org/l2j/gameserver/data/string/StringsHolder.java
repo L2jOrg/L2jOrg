@@ -12,6 +12,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
 
+import static java.util.Objects.isNull;
+
 /**
  * Author: VISTALL
  * Date:  19:27/29.12.2010
@@ -27,15 +29,8 @@ public final class StringsHolder extends AbstractHolder
 		return _instance;
 	}
 
-	private StringsHolder()
-	{
+	private StringsHolder() {
 		//
-	}
-
-	public String getString(String name, Player player)
-	{
-		Language lang = player == null ? Config.DEFAULT_LANG : player.getLanguage();
-		return getString(name, lang);
 	}
 
 	public String getString(Player player, String name)
@@ -44,22 +39,12 @@ public final class StringsHolder extends AbstractHolder
 		return getString(name, lang);
 	}
 
-	public String getString(String address, Language lang)
-	{
+	public String getString(String address, Language lang) {
 		Map<String, String> strings = _strings.get(lang);
 		String value = strings == null ? null : strings.get(address);
-		if(value == null)
-		{
-			if(lang == Language.ENGLISH)
-			{
-				strings = _strings.get(Language.RUSSIAN);
-				value = strings == null ? null : strings.get(address);
-			}
-			else
-			{
-				strings = _strings.get(Language.ENGLISH);
-				value = strings == null ? null : strings.get(address);
-			}
+		if(isNull(value)) {
+			strings = _strings.get(Config.DEFAULT_LANG);
+			value = strings == null ? null : strings.get(address);
 		}
 		return value;
 	}

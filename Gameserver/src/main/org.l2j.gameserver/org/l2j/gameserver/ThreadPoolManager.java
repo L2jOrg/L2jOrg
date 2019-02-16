@@ -14,14 +14,11 @@ import org.slf4j.LoggerFactory;
 
 public class ThreadPoolManager
 {
-	private static final Logger _log = LoggerFactory.getLogger(ThreadPoolManager.class);
-
 	private static final long MAX_DELAY = TimeUnit.NANOSECONDS.toMillis(Long.MAX_VALUE - System.nanoTime()) / 2;
 
 	private static final ThreadPoolManager _instance = new ThreadPoolManager();
 
-	public static ThreadPoolManager getInstance()
-	{
+	public static ThreadPoolManager getInstance() {
 		return _instance;
 	}
 

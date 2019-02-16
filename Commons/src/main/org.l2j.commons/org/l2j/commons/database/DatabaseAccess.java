@@ -10,11 +10,25 @@ import java.util.Map;
 
 public class DatabaseAccess {
 
-    private static Logger logger = LoggerFactory.getLogger(DatabaseAccess.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(DatabaseAccess.class);
+    private static boolean initialized = false;
 
     private static Map<Class, DAO> cache = new HashMap<>();
     private static JDBCInvocation handler = new JDBCInvocation();
 
+    public static boolean initialize() {
+        if(initialized) {
+            return true;
+        }
+
+        try {
+            L2DatabaseFactory.getInstance();
+            return true;
+        } catch (SQLException e) {
+            LOGGER.error(e.getLocalizedMessage(), e);
+        }
+        return false;
+    }
 
     public static <T extends DAO> T getDAO(Class<T> daoClass) {
         if(cache.containsKey(daoClass)) {
@@ -30,7 +44,7 @@ public class DatabaseAccess {
         try {
             L2DatabaseFactory.getInstance().shutdown();
         } catch (SQLException e) {
-            logger.warn(e.getLocalizedMessage(), e);
+            LOGGER.warn(e.getLocalizedMessage(), e);
         }
     }
 }

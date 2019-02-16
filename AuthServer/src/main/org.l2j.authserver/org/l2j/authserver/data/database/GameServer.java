@@ -10,16 +10,7 @@ public class GameServer {
 
     public GameServer() { }
 
-    public GameServer(int id, String host) {
-        this.serverId = id;
-        this.host = host;
-    }
-
     public int getId() {
         return serverId;
-    }
-
-    public String getHost() {
-        return host;
     }
 }

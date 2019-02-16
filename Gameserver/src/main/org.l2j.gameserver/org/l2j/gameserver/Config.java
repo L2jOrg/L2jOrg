@@ -1319,7 +1319,7 @@ public class Config
 
         BBS_ENABLED = properties.getProperty("ENABLED", true);
         BBS_DEFAULT_PAGE = properties.getProperty("DEFAULT_PAGE", "_bbshome");
-        BBS_COPYRIGHT = properties.getProperty("COPYRIGHT", "(c) L2-Scripts.ru 2016");
+        BBS_COPYRIGHT = properties.getProperty("COPYRIGHT", "(c) L2j 2019");
         BBS_WAREHOUSE_ENABLED = properties.getProperty("WAREHOUSE_ENABLED", false);
         BBS_SELL_ITEMS_ENABLED = properties.getProperty("SELL_ITEMS_ENABLED", false);
         BBS_AUGMENTATION_ENABLED = properties.getProperty("AUGMENTATION_ENABLED", false);

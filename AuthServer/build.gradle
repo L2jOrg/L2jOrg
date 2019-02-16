@@ -9,11 +9,6 @@ plugins {
 ext.moduleName = 'org.l2j.authserver'
 mainClassName = "org.l2j.authserver.AuthServer"
 
-configurations.all {
-    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
-}
-
-
 sourceSets {
     main {
         java {

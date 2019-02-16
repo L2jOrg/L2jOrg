@@ -14,7 +14,7 @@ import static org.l2j.commons.util.Util.isNullOrEmpty;
  */
 public class BypassStorage
 {
-	public static enum BypassType
+	public enum BypassType
 	{
 		DEFAULT,
 		BBS,

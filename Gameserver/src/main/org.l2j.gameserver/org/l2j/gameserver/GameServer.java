@@ -3,7 +3,7 @@ package org.l2j.gameserver;
 import io.github.joealisson.mmocore.ConnectionBuilder;
 import io.github.joealisson.mmocore.ConnectionHandler;
 import org.l2j.commons.cache.CacheFactory;
-import org.l2j.commons.database.L2DatabaseFactory;
+import org.l2j.commons.database.DatabaseAccess;
 import org.l2j.commons.lang.StatsUtils;
 import org.l2j.commons.listener.Listener;
 import org.l2j.commons.listener.ListenerList;
@@ -47,13 +47,11 @@ import org.l2j.gameserver.tables.ClanTable;
 import org.l2j.gameserver.tables.EnchantHPBonusTable;
 import org.l2j.gameserver.taskmanager.AutomaticTasks;
 import org.l2j.gameserver.taskmanager.ItemsAutoDestroy;
-import org.l2j.gameserver.utils.TradeHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.nio.channels.AsynchronousSocketChannel;
 import java.util.Properties;
 
 import static java.util.Objects.nonNull;
@@ -68,95 +66,64 @@ public class GameServer {
 
     private static Logger logger;
     private static GameServer instance;
+    private static String version;
 
     private final ConnectionHandler<GameClient> connectionHandler;
     private final GameServerListenerList listeners;
 
     private final String licenseHost;
 
-    private String version;
     private int onlineLimit;
 
     public GameServer() throws Exception {
         instance = this;
         listeners = new GameServerListenerList();
 
-        logVersionInfo();
-        // TODO remove this
-        Config.load();
-
-        CacheFactory.getInstance().initialize("config/ehcache.xml");
-
         var serverSettings = getSettings(ServerSettings.class);
 
         licenseHost = serverSettings.externalAddress();
-        onlineLimit = serverSettings.maximumOnlineUsers();
-
-        L2DatabaseFactory.getInstance();
 
         if (!IdFactory.getInstance().isInitialized()) {
             logger.error("Could not read object IDs from DB. Please Check Your Data.");
             throw new Exception("Could not initialize the ID factory");
         }
 
-        ThreadPoolManager.getInstance();
+        GeoEngine.load();
+        GameTimeController.getInstance();
 
-        BotCheckManager.loadBotQuestions();
-
+        // TODO Remove
         HidenItemsDAO.LoadAllHiddenItems();
-
-        HWIDBan.getInstance().load();
-
         ItemHandler.getInstance();
-
-        DailyMissionHandlerHolder.getInstance();
 
         Scripts.getInstance();
 
-        GeoEngine.load();
-
-        GameTimeController.getInstance();
-
-        World.init();
-
-        // TODO remove this
         Parsers.parseAll();
 
         ItemsDAO.getInstance();
 
-        CrestCache.getInstance();
-
         ImagesCache.getInstance();
 
-        CharacterDAO.getInstance();
-
+        CrestCache.getInstance();
         ClanTable.getInstance();
 
         EnchantHPBonusTable.getInstance();
 
         SpawnManager.getInstance().spawnAll();
-
         StaticObjectHolder.getInstance().spawnAll();
-
+        HWIDBan.getInstance().load();
         RaidBossSpawnManager.getInstance();
 
         Scripts.getInstance().init();
 
         Announcements.getInstance();
 
-        PlayerMessageStack.getInstance();
-
         if (Config.AUTODESTROY_ITEM_AFTER > 0)
             ItemsAutoDestroy.getInstance();
-
-        MonsterRace.getInstance();
 
         if (Config.ENABLE_OLYMPIAD) {
             Olympiad.load();
             Hero.getInstance();
         }
-
-        PetitionManager.getInstance();
 
         if (Config.ALLOW_WEDDING)
             CoupleManager.getInstance();
@@ -179,14 +146,13 @@ public class GameServer {
 
         BoatHolder.getInstance().spawnAll();
 
-        Runtime.getRuntime().addShutdownHook(Shutdown.getInstance());
-
         logger.info("IdFactory: Free ObjectID's remaining: " + IdFactory.getInstance().size());
 
         MiniGameScoreManager.getInstance();
 
         ClanSearchManager.getInstance().load();
 
+        BotCheckManager.loadBotQuestions();
         BotReportManager.getInstance();
 
         TrainingCampManager.getInstance().init();
@@ -194,20 +160,17 @@ public class GameServer {
         Shutdown.getInstance().schedule(Config.RESTART_AT_TIME, Shutdown.RESTART);
 
         logger.info("GameServer Started");
-        logger.info("Maximum Numbers of Connected Players: " + getOnlineLimit());
+        onlineLimit = serverSettings.maximumOnlineUsers();
+        logger.info("Maximum Numbers of Connected Players: {}" + onlineLimit);
 
         final GamePacketHandler gph = new GamePacketHandler();
         connectionHandler = ConnectionBuilder.create(new InetSocketAddress(serverSettings.port()), gph, gph, gph).bufferLargeSize(24 * 1024).build();
         connectionHandler.start();
 
         getListeners().onStart();
-
-        ThreadPoolManager.getInstance().execute(AuthServerCommunication.getInstance());
-
-        logMemoryUsage();
     }
 
-    private void logMemoryUsage() {
+    private static void logMemoryUsage() {
         logger.info("=================================================");
         String memUsage = String.valueOf(StatsUtils.getMemUsage());
         for (String line : memUsage.split("\n"))
@@ -216,7 +179,7 @@ public class GameServer {
         logger.info("=================================================");
     }
 
-    private void logVersionInfo() {
+    private static void logVersionInfo() {
         try {
             var versionProperties = new Properties();
             var versionFile = ClassLoader.getSystemResourceAsStream("version.properties");
@@ -270,17 +233,36 @@ public class GameServer {
 
 
     public static void main(String[] args) {
-        configureLogger();
-        configureDatabase();
         try {
+
+            initializeResources();
+
             new GameServer();
+
+            ThreadPoolManager.getInstance().execute(AuthServerCommunication.getInstance());
+
+            Runtime.getRuntime().addShutdownHook(Shutdown.getInstance());
+            logMemoryUsage();
         } catch (Exception e) {
             logger.error(e.getLocalizedMessage(), e);
         }
     }
 
-    private static void configureDatabase() {
+    private static void initializeResources() throws Exception {
+        configureLogger();
+        logVersionInfo();
+        configureDatabase();
+        CacheFactory.getInstance().initialize("config/ehcache.xml");
+        // TODO remove this
+        Config.load();
+        ThreadPoolManager.getInstance();
+    }
+
+    private static void configureDatabase() throws Exception {
         System.setProperty("hikaricp.configurationFile", "config/database.properties");
+        if(!DatabaseAccess.initialize()) {
+            throw new Exception("Database Access could not be initialized");
+        }
     }
 
     private static void configureLogger() {

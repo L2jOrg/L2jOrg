@@ -379,7 +379,7 @@ public abstract class CustomInstantTeamEvent extends SingleMatchEvent implements
     protected void announceToPlayersWithValidLevel(String str) {
         for (Player player : GameObjectsStorage.getPlayers())
             if (player.isGM() || player.getLevel() >= _minLevel && player.getLevel() <= _maxLevel)
-                player.sendPacket(new SayPacket2(0, ChatType.ANNOUNCEMENT, "", String.format(StringsHolder.getInstance().getString(str, player), _minLevel, _maxLevel)));
+                player.sendPacket(new SayPacket2(0, ChatType.ANNOUNCEMENT, "", String.format(StringsHolder.getInstance().getString(player, str), _minLevel, _maxLevel)));
     }
 
     @Override

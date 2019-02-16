@@ -22,8 +22,8 @@ import java.util.List;
  *
  * @author G1ta0
  */
-public class World
-{
+public class World {
+
 	private static final Logger _log = LoggerFactory.getLogger(World.class);
 
 	/** Map dimensions */
@@ -52,8 +52,7 @@ public class World
 
 	private static volatile WorldRegion[][][] _worldRegions = new WorldRegion[REGIONS_X + 1][REGIONS_Y + 1][REGIONS_Z + 1];
 
-	public static void init()
-	{
+	public static void init() {
 		_log.info("World: Creating regions: [" + (REGIONS_X + 1) + "][" + (REGIONS_Y + 1) + "][" + (REGIONS_Z + 1) + "].");
 	}
 

@@ -101,8 +101,10 @@ public class Scripts
 
         List<Class<?>> classes = load(new File(Config.DATAPACK_ROOT, "data/scripts"));
 
-        if(classes.isEmpty())
-            throw new Error("Failed loading scripts!");
+        if(classes.isEmpty()) {
+            _log.warn("No Scripts loaded");
+            return;
+        }
 
         for(Class<?> clazz : classes)
             _classes.put(clazz.getName(), clazz);

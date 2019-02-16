@@ -10,10 +10,6 @@ plugins {
 ext.moduleName = 'org.l2j.gameserver'
 mainClassName = "org.l2j.gameserver.GameServer"
 
-configurations.all {
-    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
-}
-
 sourceSets {
     main {
         java {

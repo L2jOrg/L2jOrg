@@ -17,6 +17,7 @@ public class PlayerInGame extends SendablePacket
 	@Override
 	protected void writeImpl(AuthServerClient client, ByteBuffer buffer) {
 		buffer.put((byte)0x03);
+		buffer.putShort((short) 0x01);
 		writeString(account, buffer);
 	}
 }
