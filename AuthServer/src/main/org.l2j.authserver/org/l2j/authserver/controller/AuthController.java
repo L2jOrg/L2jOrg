@@ -1,6 +1,8 @@
 package org.l2j.authserver.controller;
 
-import org.l2j.authserver.GameServerInfo;
+import org.l2j.authserver.data.database.Account;
+import org.l2j.authserver.data.database.dao.AccountDAO;
+import org.l2j.authserver.network.GameServerInfo;
 import org.l2j.authserver.network.SessionKey;
 import org.l2j.authserver.network.client.AuthClient;
 import org.l2j.authserver.network.client.packet.auth2client.LoginOk;
@@ -8,8 +10,6 @@ import org.l2j.authserver.network.crypt.AuthCrypt;
 import org.l2j.authserver.network.crypt.ScrambledKeyPair;
 import org.l2j.authserver.network.gameserver.packet.game2auth.ServerStatus;
 import org.l2j.authserver.settings.AuthServerSettings;
-import org.l2j.authserver.AccountRepository;
-import org.l2j.authserver.Account;
 import org.l2j.commons.util.Rnd;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,7 +35,7 @@ import static org.l2j.authserver.network.client.packet.auth2client.AccountKicked
 import static org.l2j.authserver.network.client.packet.auth2client.LoginFail.LoginFailReason.*;
 import static org.l2j.authserver.settings.AuthServerSettings.*;
 import static org.l2j.commons.configuration.Configurator.getSettings;
-import static org.l2j.commons.database.DatabaseAccess.getRepository;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.hash;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
@@ -108,7 +108,7 @@ public class AuthController {
     private void assignSessionKeyToClient(AuthClient client) {
         var key = new SessionKey(Rnd.nextInt(), Rnd.nextInt(), Rnd.nextInt(), Rnd.nextInt());
         client.setSessionKey(key);
-        authedClients.put(client.getAccount().getId(), client);
+        authedClients.put(client.getAccount().getLogin(), client);
     }
 
     public void removeAuthedClient(String account) {
@@ -124,9 +124,9 @@ public class AuthController {
             return;
         }
 
-        var accountOptional = getRepository(AccountRepository.class).findById(username);
-        if(accountOptional.isPresent()) {
-           verifyAccountInfo(client, accountOptional.get(), password);
+        var account = getDAO(AccountDAO.class).findById(username);
+        if(nonNull(account)) {
+           verifyAccountInfo(client, account, password);
         } else if(isAutoCreateAccount()) {
             createNewAccount(client, username, password);
         } else {
@@ -139,17 +139,17 @@ public class AuthController {
             if(hash(password).equals(account.getPassword())) {
                 if(account.isBanned()) {
                     client.close(REASON_PERMANENTLY_BANNED);
-                    loginLogger.info(ACCOUNT_LOGIN_FAILED, account.getId(), "Banned Account");
+                    loginLogger.info(ACCOUNT_LOGIN_FAILED, account.getLogin(), "Banned Account");
                 } else if( verifyAccountInUse(account)) {
                     client.close(REASON_ACCOUNT_IN_USE);
-                    loginLogger.info(ACCOUNT_LOGIN_FAILED, account.getId(), "Account Already In Use");
+                    loginLogger.info(ACCOUNT_LOGIN_FAILED, account.getLogin(), "Account Already In Use");
                 } else {
                     processAuth(client, account);
                 }
             } else {
                 client.close(REASON_ACCOUNT_INFO_INCORR);
                 addLoginFailed(account, password, client);
-                loginLogger.info(ACCOUNT_LOGIN_FAILED, account.getId(), "Wrong Username or Password");
+                loginLogger.info(ACCOUNT_LOGIN_FAILED, account.getLogin(), "Wrong Username or Password");
             }
         } catch (NoSuchAlgorithmException e) {
             logger.error(e.getLocalizedMessage(), e);
@@ -158,17 +158,17 @@ public class AuthController {
     }
 
     private boolean verifyAccountInUse(Account account) {
-        var authedClient = authedClients.get(account.getId());
+        var authedClient = authedClients.get(account.getLogin());
         if(nonNull(authedClient)) {
             authedClient.close(REASON_ACCOUNT_IN_USE);
-            authedClients.remove(account.getId());
+            authedClients.remove(account.getLogin());
             return true;
         }
 
         var result = false;
         for (GameServerInfo gameServer : GameServerManager.getInstance().getRegisteredGameServers().values()) {
-            if(nonNull(gameServer) && gameServer.accountIsConnected(account.getId())) {
-                gameServer.sendKickPlayer(account.getId());
+            if(nonNull(gameServer) && gameServer.accountIsConnected(account.getLogin())) {
+                gameServer.sendKickPlayer(account.getLogin());
                 result = true;
             }
         }
@@ -178,19 +178,18 @@ public class AuthController {
     private void processAuth(AuthClient client, Account account) {
         requestAccountInfo(client, account);
         updateClientInfo(client, account);
-        authedClients.put(account.getId(), client);
+        authedClients.put(account.getLogin(), client);
         if(client.getRequestdServersInfo() == 0) {
             client.sendPacket(new LoginOk());
         }
-        bruteForceProtection.remove(account.getId());
-        getRepository(AccountRepository.class).save(account);
-        loginLogger.info("Account Logged {}", account.getId());
+        bruteForceProtection.remove(account.getLogin());
+        loginLogger.info("Account Logged {}", account.getLogin());
     }
 
     private void requestAccountInfo(AuthClient client, Account account) {
         var gameservers = GameServerManager.getInstance().getRegisteredGameServers().values().stream().filter(GameServerInfo::isAuthed).collect(Collectors.toList());
         client.setRequestedServerInfo(gameservers.size());
-        gameservers.forEach(gameServer -> gameServer.requestAccountInfo(account.getId()));
+        gameservers.forEach(gameServer -> gameServer.requestAccountInfo(account.getLogin()));
     }
 
     private void updateClientInfo(AuthClient client, Account account) {
@@ -199,12 +198,13 @@ public class AuthController {
         client.setState(AUTHED_LOGIN);
         account.setLastAccess(currentTimeMillis());
         account.setLastIP(client.getHostAddress());
+        getDAO(AccountDAO.class).updateAccess(account.getLogin(), account.getLastAccess(), client.getHostAddress());
     }
 
     private void createNewAccount(AuthClient client, String username, String password) {
         try {
+            getDAO(AccountDAO.class).save(username, hash(password), currentTimeMillis(), client.getHostAddress());
             var account = new Account(username, hash(password), currentTimeMillis(), client.getHostAddress());
-            getRepository(AccountRepository.class).save(account);
             processAuth(client, account);
         } catch (NoSuchAlgorithmException e) {
             logger.error(e.getLocalizedMessage(), e);
@@ -236,8 +236,8 @@ public class AuthController {
             boolean loginOk = ((gsi.getOnlinePlayersCount() < gsi.getMaxPlayers()) && (gsi.getStatus() != ServerStatus.STATUS_GM_ONLY)) || (access >= getSettings(AuthServerSettings.class).gmMinimumLevel());
 
             if (loginOk && (client.getLastServer() != serverId)) {
-                if(getRepository(AccountRepository.class).updateLastServer(client.getAccount().getId(), serverId) < 1) {
-                    logger.warn("Could not set lastServer of account {} ", client.getAccount().getId());
+                if(getDAO(AccountDAO.class).updateLastServer(client.getAccount().getLogin(), serverId) < 1) {
+                    logger.warn("Could not set lastServer of account {} ", client.getAccount().getLogin());
                 }
             }
             return loginOk;
@@ -245,8 +245,8 @@ public class AuthController {
         return false;
     }
 
-    public void setAccountAccessLevel(String login, short acessLevel) {
-        if(getRepository(AccountRepository.class).updateAccessLevel(login, acessLevel) < 1) {
+    public void setAccountAccessLevel(String login, short accessLevel) {
+        if(getDAO(AccountDAO.class).updateAccessLevel(login, accessLevel) < 1) {
             logger.warn("Could not set accessLevel of account {}", login);
         }
     }
@@ -258,12 +258,12 @@ public class AuthController {
     }
 
     private void addLoginFailed(Account account, String password, AuthClient client) {
-        FailedLoginAttempt failedAttempt = bruteForceProtection.get(account.getId());
+        FailedLoginAttempt failedAttempt = bruteForceProtection.get(account.getLogin());
         if(nonNull(failedAttempt)) {
             failedAttempt.increaseCounter(password);
         } else {
             failedAttempt = new FailedLoginAttempt(password);
-            bruteForceProtection.put(account.getId(), failedAttempt);
+            bruteForceProtection.put(account.getLogin(), failedAttempt);
         }
 
         if(failedAttempt.getCount() >= authTriesBeforeBan())  {

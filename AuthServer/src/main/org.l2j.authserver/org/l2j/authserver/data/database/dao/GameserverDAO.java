@@ -1,8 +1,8 @@
-package org.l2j.authserver.dao;
+package org.l2j.authserver.data.database.dao;
 
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
-import org.l2j.commons.database.model.GameServer;
+import org.l2j.authserver.data.database.GameServer;
 
 import java.util.List;
 

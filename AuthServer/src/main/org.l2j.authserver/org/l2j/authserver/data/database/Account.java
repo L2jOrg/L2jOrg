@@ -1,17 +1,14 @@
-package org.l2j.authserver;
+package org.l2j.authserver.data.database;
 
 import org.l2j.authserver.settings.AuthServerSettings;
 import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.Table;
-import org.l2j.commons.database.model.Entity;
-import org.springframework.data.annotation.Id;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
 @Table("accounts")
-public class Account extends Entity<String> {
+public class Account  {
 
-    @Id
     private String login;
     private String password;
     @Column("last_access")
@@ -34,8 +31,7 @@ public class Account extends Entity<String> {
         this.lastServer = 1;
     }
 
-    @Override
-    public String getId() {
+    public String getLogin() {
         return login;
     }
 
@@ -57,6 +53,10 @@ public class Account extends Entity<String> {
 
     public void setLastAccess(long lastAccess) {
         this.lastAccess= lastAccess;
+    }
+
+    public Long getLastAccess() {
+        return lastAccess;
     }
 
     public void setLastIP(String lastIP) {

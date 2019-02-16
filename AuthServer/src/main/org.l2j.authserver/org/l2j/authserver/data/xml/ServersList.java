@@ -6,7 +6,7 @@
 //
 
 
-package org.l2j.authserver.xml;
+package org.l2j.authserver.data.xml;
 
 import java.util.ArrayList;
 import java.util.List;

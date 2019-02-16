@@ -45,7 +45,7 @@ public class AuthServer {
         var bindAddress = listenHost().equals("*") ? new InetSocketAddress(listenPort()) : new InetSocketAddress(listenHost(), listenPort()) ;
         final AuthPacketHandler lph = new AuthPacketHandler();
         final SelectorHelper sh = new SelectorHelper();
-        connectionHandler = ConnectionBuilder.create(bindAddress, AuthClient::new, lph, sh).threadPoolSize(4).build();
+        connectionHandler = ConnectionBuilder.create(bindAddress, AuthClient::new, lph, sh).threadPoolSize(4).bufferLargeSize(20 * 1024).build();
         connectionHandler.start();
         logger.info("Login Server ready on {}:{}", bindAddress.getHostString(), listenPort());
     }

@@ -1,10 +1,8 @@
 package org.l2j.authserver.controller;
 
-import org.l2j.authserver.GameServerInfo;
-import org.l2j.authserver.dao.GameserverDAO;
-import org.l2j.authserver.xml.ServerNameReader;
-import org.l2j.commons.database.GameserverRepository;
-import org.l2j.commons.database.model.GameServer;
+import org.l2j.authserver.network.GameServerInfo;
+import org.l2j.authserver.data.database.dao.GameserverDAO;
+import org.l2j.authserver.data.xml.ServerNameReader;
 import org.l2j.commons.util.Rnd;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +17,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import static java.util.Objects.isNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
-import static org.l2j.commons.database.DatabaseAccess.getRepository;
 
 /**
  * @author KenM
@@ -55,7 +52,7 @@ public class GameServerManager {
             _serverNames  = serverNameReader.getServerNames();
             _log.info("Loaded {} server names", _serverNames.size());
         } catch (Exception e) {
-            _log.warn("servername.xml could not be loaded.");
+            _log.warn("servername.xml could not be loaded.", e);
         }
     }
 

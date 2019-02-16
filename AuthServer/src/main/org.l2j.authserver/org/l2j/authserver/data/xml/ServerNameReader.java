@@ -1,4 +1,4 @@
-package org.l2j.authserver.xml;
+package org.l2j.authserver.data.xml;
 
 import org.l2j.commons.xml.XMLReader;
 

@@ -1,6 +1,6 @@
 package org.l2j.authserver.network.gameserver;
 
-import org.l2j.authserver.GameServerInfo;
+import org.l2j.authserver.network.GameServerInfo;
 import org.l2j.authserver.controller.GameServerManager;
 import org.l2j.authserver.network.crypt.AuthServerCrypt;
 import org.l2j.authserver.network.gameserver.packet.auth2game.GameServerWritablePacket;

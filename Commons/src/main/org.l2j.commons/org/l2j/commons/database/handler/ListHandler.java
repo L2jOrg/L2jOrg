@@ -19,6 +19,7 @@ public class ListHandler implements TypeHandler<List> {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public List handleResult(QueryDescriptor queryDescriptor) throws SQLException {
         Class<?> genericType = (Class<?>) ((ParameterizedType)queryDescriptor.getGenericReturnType()).getActualTypeArguments()[0];
 

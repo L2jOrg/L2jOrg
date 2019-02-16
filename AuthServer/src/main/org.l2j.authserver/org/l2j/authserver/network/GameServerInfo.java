@@ -1,11 +1,11 @@
-package org.l2j.authserver;
+package org.l2j.authserver.network;
 
 import org.l2j.authserver.controller.GameServerManager;
+import org.l2j.authserver.data.database.GameServer;
 import org.l2j.authserver.network.gameserver.ServerClient;
 import org.l2j.authserver.network.gameserver.packet.auth2game.KickPlayer;
 import org.l2j.authserver.network.gameserver.packet.auth2game.RequestAccountInfo;
 import org.l2j.authserver.network.gameserver.packet.game2auth.ServerStatus;
-import org.l2j.commons.database.model.GameServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

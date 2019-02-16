@@ -1,13 +1,9 @@
-package org.l2j.commons.database.model;
+package org.l2j.authserver.data.database;
 
 import org.l2j.commons.database.annotation.Column;
-import org.l2j.commons.database.annotation.Table;
-import org.springframework.data.annotation.Id;
 
-@Table("gameservers")
 public class GameServer {
 
-    @Id
     @Column("server_id")
     private int serverId;
     private String host;

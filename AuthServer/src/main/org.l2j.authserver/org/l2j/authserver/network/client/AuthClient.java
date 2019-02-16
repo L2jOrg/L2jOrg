@@ -1,7 +1,7 @@
 package org.l2j.authserver.network.client;
 
+import org.l2j.authserver.data.database.Account;
 import org.l2j.authserver.network.SessionKey;
-import org.l2j.authserver.Account;
 import org.l2j.authserver.controller.AuthController;
 import org.l2j.authserver.network.crypt.AuthCrypt;
 import org.l2j.authserver.network.crypt.ScrambledKeyPair;
@@ -121,7 +121,7 @@ public final class AuthClient extends Client<Connection<AuthClient>> {
         AuthController.getInstance().removeClient(this);
 
         if(!isJoinedGameSever && nonNull(account)) {
-            AuthController.getInstance().removeAuthedClient(account.getId());
+            AuthController.getInstance().removeAuthedClient(account.getLogin());
         }
 	}
 
@@ -234,7 +234,7 @@ public final class AuthClient extends Client<Connection<AuthClient>> {
     public String toString() {
         String address =  getHostAddress();
         if (getState() == AUTHED_LOGIN) {
-            return "[" + getAccount().getId() + " (" + (address.equals("") ? "disconnect" : address) + ")]";
+            return "[" + getAccount().getLogin() + " (" + (address.equals("") ? "disconnect" : address) + ")]";
         }
         return "[" + (address.equals("") ? "disconnect" : address) + "]";
     }

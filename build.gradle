@@ -22,14 +22,6 @@ subprojects {
         maven {
             url 'https://oss.sonatype.org/content/repositories/snapshots/'
         }
-
-        maven {
-            url 'http://maven.java.net/content/repositories/releases/'
-        }
-
-        maven {
-            url 'http://maven.java.net/content/repositories/staging/'
-        }
     }
 
     sourceCompatibility = JavaVersion.VERSION_11

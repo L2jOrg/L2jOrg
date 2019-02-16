@@ -1,21 +1,3 @@
-/*
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2, or (at your option)
- * any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
- * 02111-1307, USA.
- *
- * http://www.gnu.org/copyleft/gpl.html
- */
 package org.l2j.commons.database;
 
 import com.zaxxer.hikari.HikariConfig;
@@ -45,9 +27,7 @@ public class L2DatabaseFactory {
         } catch (Exception e) {
             LOGGER.error(e.getMessage(), e);
         }
-
     }
-
 
     // TODO remove access from external modules
     public static L2DatabaseFactory getInstance() throws SQLException {
@@ -65,14 +45,4 @@ public class L2DatabaseFactory {
         }
         return null;
     }
-
-    public  <T> T getRepository(Class<T> repositoryClass) {
-        try {
-            return null;
-        }catch (Exception e) {
-            LOGGER.error("could.not.retrieve.repository", e);
-            throw  e;
-        }
-    }
-
 }

@@ -117,9 +117,7 @@ import org.l2j.gameserver.utils.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.awt.*;
 import java.sql.*;
-import java.util.List;
 import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -6309,7 +6307,7 @@ public final class Player extends Playable implements PlayerGroup
     public int getNameColor()
     {
         if(isInObserverMode())
-            return Color.black.getRGB();
+            return 0x00;
 
         return _nameColor;
     }

@@ -4,14 +4,8 @@ module org.l2j.gameserver {
     requires java.sql;
     requires java.desktop;
     requires org.slf4j;
-    requires java.scripting;
-    requires spring.data.commons;
-    requires spring.data.jdbc;
-    requires spring.context;
-    requires java.xml.bind;
-    requires java.management;
     requires dom4j;
-    requires async.mmocore;
+    requires io.github.joealisson.mmocore;
     requires primitive;
     requires cache.api;
 
