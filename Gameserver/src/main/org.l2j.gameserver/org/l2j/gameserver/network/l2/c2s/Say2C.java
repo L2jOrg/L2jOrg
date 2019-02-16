@@ -3,7 +3,6 @@ package org.l2j.gameserver.network.l2.c2s;
 import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.ItemInfoCache;
-import org.l2j.gameserver.dao.HidenItemsDAO;
 import org.l2j.gameserver.handler.voicecommands.IVoicedCommandHandler;
 import org.l2j.gameserver.handler.voicecommands.VoicedCommandHandler;
 import org.l2j.gameserver.instancemanager.PetitionManager;
@@ -156,10 +155,6 @@ public class Say2C extends L2GameClientPacket {
             if (item == null) {
                 activeChar.sendActionFailed();
                 break;
-            }
-            if (HidenItemsDAO.isHidden(item)) {
-                activeChar.sendActionFailed();
-                return;
             }
             ItemInfoCache.getInstance().put(item);
         }

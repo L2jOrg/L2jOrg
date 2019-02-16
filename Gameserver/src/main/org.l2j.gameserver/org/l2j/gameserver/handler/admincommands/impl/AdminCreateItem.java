@@ -2,12 +2,10 @@ package org.l2j.gameserver.handler.admincommands.impl;
 
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;
-import org.l2j.gameserver.dao.HidenItemsDAO;
 import org.l2j.gameserver.handler.admincommands.IAdminCommandHandler;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.base.Element;
 import org.l2j.gameserver.model.items.ItemInstance;
-import org.l2j.gameserver.network.l2.components.CustomMessage;
 import org.l2j.gameserver.network.l2.components.HtmlMessage;
 import org.l2j.gameserver.network.l2.s2c.InventoryUpdatePacket;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
@@ -17,11 +15,9 @@ import org.l2j.gameserver.utils.Log;
 
 public class AdminCreateItem implements IAdminCommandHandler
 {
-	private enum Commands
-	{
+	private enum Commands {
 		admin_itemcreate,
 		admin_create_item,
-		admin_hidden_item,
 		admin_ci,
 		admin_spreaditem,
 		admin_create_item_element
@@ -68,31 +64,6 @@ public class AdminCreateItem implements IAdminCommandHandler
 					activeChar.sendMessage("USAGE: create_item id [count]");
 				}
 				activeChar.sendPacket(new HtmlMessage(5).setFile("admin/itemcreation.htm"));
-				break;
-			case admin_hidden_item:
-				try
-				{
-					if(wordList.length < 2)
-					{
-						activeChar.sendMessage(new CustomMessage("common.Admin.Createitem.CreateItemUssage"));
-						return false;
-					}
-					int item_id = Integer.parseInt(wordList[1]);
-					long item_count = wordList.length < 3 ? 1 : Long.parseLong(wordList[2]);
-					
-					if(activeChar.getTarget() == null || activeChar.getTarget() == activeChar)
-						createItemH(activeChar, item_id, item_count);
-						
-					else if(activeChar.getTarget().isPlayer())
-						createItemH(activeChar.getTarget().getPlayer(), item_id, item_count);
-						
-					else
-						createItemH(activeChar, item_id, item_count);
-				}
-				catch(NumberFormatException nfe)
-				{
-					activeChar.sendMessage(new CustomMessage("common.Admin.Createitem.CreateItemUssage"));
-				}
 				break;
 			case admin_spreaditem:
 				try
@@ -193,22 +164,4 @@ public class AdminCreateItem implements IAdminCommandHandler
 		activeChar.sendPacket(SystemMessagePacket.obtainItems(itemId, count, 0));
 		return createditem;
 	}
-	
-	private ItemInstance createItemH(Player activeChar, int itemId, long count)
-	{
-		ItemInstance createditem = ItemFunctions.createItem(itemId);
-		createditem.setCount(count);
-		//Log.LogItem(activeChar, Log.Create, createditem);
-		activeChar.getInventory().addItem(createditem);
-		HidenItemsDAO.addHiddenItem(createditem);
-		if(!createditem.isStackable())
-			for(long i = 0; i < count - 1; i++)
-			{
-				createditem = ItemFunctions.createItem(itemId);
-				//Log.LogItem(activeChar, Log.Create, createditem);
-				activeChar.getInventory().addItem(createditem);
-			}	
-		activeChar.sendPacket(SystemMessagePacket.obtainItems(itemId, count, 0));
-		return createditem;
-	}		
 }

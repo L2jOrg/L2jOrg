@@ -9,8 +9,6 @@ import org.l2j.commons.listener.Listener;
 import org.l2j.commons.listener.ListenerList;
 import org.l2j.gameserver.cache.CrestCache;
 import org.l2j.gameserver.cache.ImagesCache;
-import org.l2j.gameserver.dao.CharacterDAO;
-import org.l2j.gameserver.dao.HidenItemsDAO;
 import org.l2j.gameserver.dao.ItemsDAO;
 import org.l2j.gameserver.data.BoatHolder;
 import org.l2j.gameserver.data.xml.Parsers;
@@ -21,7 +19,6 @@ import org.l2j.gameserver.geodata.GeoEngine;
 import org.l2j.gameserver.handler.admincommands.AdminCommandHandler;
 import org.l2j.gameserver.handler.bbs.BbsHandlerHolder;
 import org.l2j.gameserver.handler.bypass.BypassHolder;
-import org.l2j.gameserver.handler.dailymissions.DailyMissionHandlerHolder;
 import org.l2j.gameserver.handler.items.ItemHandler;
 import org.l2j.gameserver.handler.onshiftaction.OnShiftActionHolder;
 import org.l2j.gameserver.handler.usercommands.UserCommandHandler;
@@ -33,9 +30,7 @@ import org.l2j.gameserver.instancemanager.games.MiniGameScoreManager;
 import org.l2j.gameserver.listener.GameListener;
 import org.l2j.gameserver.listener.game.OnShutdownListener;
 import org.l2j.gameserver.listener.game.OnStartListener;
-import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.entity.Hero;
-import org.l2j.gameserver.model.entity.MonsterRace;
 import org.l2j.gameserver.model.entity.olympiad.Olympiad;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.l2.GameClient;
@@ -91,8 +86,6 @@ public class GameServer {
         GeoEngine.load();
         GameTimeController.getInstance();
 
-        // TODO Remove
-        HidenItemsDAO.LoadAllHiddenItems();
         ItemHandler.getInstance();
 
         Scripts.getInstance();
@@ -161,7 +154,7 @@ public class GameServer {
 
         logger.info("GameServer Started");
         onlineLimit = serverSettings.maximumOnlineUsers();
-        logger.info("Maximum Numbers of Connected Players: {}" + onlineLimit);
+        logger.info("Maximum Numbers of Connected Players: {}", onlineLimit);
 
         final GamePacketHandler gph = new GamePacketHandler();
         connectionHandler = ConnectionBuilder.create(new InetSocketAddress(serverSettings.port()), gph, gph, gph).bufferLargeSize(24 * 1024).build();

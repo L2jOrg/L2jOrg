@@ -1,13 +1,14 @@
 package org.l2j.gameserver.model.items;
 
+import io.github.joealisson.primitive.Containers;
+import io.github.joealisson.primitive.sets.IntSet;
+import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.l2j.commons.collections.CollectionUtils;
 import org.l2j.commons.dao.JdbcEntity;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.Contants;
 import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.dao.HidenItemsDAO;
 import org.l2j.gameserver.dao.ItemsDAO;
 import org.l2j.gameserver.dao.ItemsEnsoulDAO;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;
@@ -34,9 +35,6 @@ import org.l2j.gameserver.templates.item.ItemType;
 import org.l2j.gameserver.templates.item.support.Ensoul;
 import org.l2j.gameserver.utils.ItemFunctions;
 import org.l2j.gameserver.utils.Location;
-import io.github.joealisson.primitive.Containers;
-import io.github.joealisson.primitive.sets.IntSet;
-import io.github.joealisson.primitive.sets.impl.HashIntSet;
 
 import java.util.Collections;
 import java.util.List;
@@ -606,9 +604,6 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		if(player.isGM())
 			return true;
-
-		if(HidenItemsDAO.isHidden(this))
-			return false;
 			
 		if((customFlags & FLAG_NO_DROP) == FLAG_NO_DROP)
 			return false;
@@ -633,11 +628,8 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		if(isEquipped())
 			return false;
 
-		if(player.isGM() || Config.LIST_OF_TRABLE_ITEMS.equals(getItemId()))
+		if(player.isGM() || Config.LIST_OF_TRABLE_ITEMS.contains(getItemId()))
 			return true;
-			
-		if(HidenItemsDAO.isHidden(this))
-			return false;
 			
 		if((customFlags & FLAG_NO_TRADE) == FLAG_NO_TRADE)
 			return false;
@@ -681,11 +673,8 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 
 		if(getItemId() == Items.ADENA)
 			return false;
-
-		if(HidenItemsDAO.isHidden(this))
-			return false;			
 			
-		if(Config.LIST_OF_SELLABLE_ITEMS.equals(getItemId()))
+		if(Config.LIST_OF_SELLABLE_ITEMS.contains(getItemId()))
 			return true;
 			
 		if(isShadowItem())
@@ -730,9 +719,6 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 			return false;
 
 		if(!ItemFunctions.checkIfCanDiscard(player, this))
-			return false;
-
-		if(HidenItemsDAO.isHidden(this))
 			return false;
 			
 		return privatewh || template.isTradeable();
@@ -817,9 +803,6 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 
 		if(!ItemFunctions.checkIfCanDiscard(player, this))
 			return false;
-
-		if(HidenItemsDAO.isHidden(this))
-			return false;
 			
 		return template.isDestroyable();
 	}
@@ -856,10 +839,6 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		return template.isCommonItem();
 	}
 
-	public boolean isHiddenItem()
-	{
-		return HidenItemsDAO.isHidden(this);
-	}		
 	/**
 	 * Бросает на землю лут с NPC
 	 */
