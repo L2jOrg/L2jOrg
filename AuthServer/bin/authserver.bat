@@ -3,7 +3,7 @@ title Login Server Console
 :start
 echo Starting L2J Auth Server.
 echo.
-java -Xmx256m -cp ./lib/* org.l2j.authserver.AuthServer
+java -Xmx256m -p ./lib -cp ./lib/* -m org.l2j.authserver/org.l2j.authserver.AuthServer
 if ERRORLEVEL 2 goto restart
 if ERRORLEVEL 1 goto error
 goto end
