@@ -31,6 +31,7 @@ import org.l2j.gameserver.network.l2.s2c.updatetype.NpcInfoType;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.skills.AbnormalEffect;
 import org.l2j.gameserver.stats.triggers.TriggerType;
+import org.l2j.gameserver.tables.GmListTable;
 import org.l2j.gameserver.utils.GameStats;
 import org.l2j.gameserver.utils.HtmlUtils;
 import org.l2j.gameserver.utils.ItemFunctions;
@@ -175,6 +176,7 @@ public class EnterWorld extends L2GameClientPacket {
 				day = 28;
 
 			int myBirthdayReceiveYear = activeChar.getVarInt(Player.MY_BIRTHDAY_RECEIVE_YEAR, 0);
+
 			if(create.get(Calendar.MONTH) == now.get(Calendar.MONTH) && create.get(Calendar.DAY_OF_MONTH) == day)
 			{
 				if((myBirthdayReceiveYear == 0 && create.get(Calendar.YEAR) != now.get(Calendar.YEAR)) || myBirthdayReceiveYear > 0 && myBirthdayReceiveYear != now.get(Calendar.YEAR))
@@ -277,36 +279,35 @@ public class EnterWorld extends L2GameClientPacket {
 		// на всякий случай
 		activeChar.sendActionFailed();
 
-		if(first && activeChar.isGM() && getSettings(ServerSettings.class).saveGMEffects() && activeChar.getPlayerAccess().CanUseGMCommand)
-		{
-			//silence
-			if(activeChar.getVarBoolean("gm_silence"))
-			{
-				activeChar.setMessageRefusal(true);
-				activeChar.sendPacket(SystemMsg.MESSAGE_REFUSAL_MODE);
+		if(first && activeChar.isGM()) {
+			GmListTable.add(activeChar);
+
+			if(getSettings(ServerSettings.class).saveGMEffects() && activeChar.getPlayerAccess().CanUseGMCommand) {
+
+				//silence
+				if (activeChar.getVarBoolean("gm_silence")) {
+					activeChar.setMessageRefusal(true);
+					activeChar.sendPacket(SystemMsg.MESSAGE_REFUSAL_MODE);
+				}
+				//invul
+				if (activeChar.getVarBoolean("gm_invul")) {
+					activeChar.getFlags().getInvulnerable().start();
+					activeChar.startAbnormalEffect(AbnormalEffect.INVINCIBILITY);
+					activeChar.sendMessage(activeChar.getName() + " is now immortal.");
+				}
+				//undying
+				if (activeChar.getVarBoolean("gm_undying")) {
+					activeChar.setGMUndying(true);
+					activeChar.sendMessage("Undying state has been enabled.");
+				}
+				//gmspeed
+				try {
+					int var_gmspeed = Integer.parseInt(activeChar.getVar("gm_gmspeed"));
+					if (var_gmspeed >= 1 && var_gmspeed <= 4)
+						activeChar.doCast(SkillHolder.getInstance().getSkillEntry(7029, var_gmspeed), activeChar, true);
+				} catch (Exception E) {
+				}
 			}
-			//invul
-			if(activeChar.getVarBoolean("gm_invul"))
-			{
-				activeChar.getFlags().getInvulnerable().start();
-				activeChar.startAbnormalEffect(AbnormalEffect.INVINCIBILITY);
-				activeChar.sendMessage(activeChar.getName() + " is now immortal.");
-			}
-			//undying
-			if(activeChar.getVarBoolean("gm_undying"))
-			{
-				activeChar.setGMUndying(true);
-				activeChar.sendMessage("Undying state has been enabled.");
-			}
-			//gmspeed
-			try
-			{
-				int var_gmspeed = Integer.parseInt(activeChar.getVar("gm_gmspeed"));
-				if(var_gmspeed >= 1 && var_gmspeed <= 4)
-					activeChar.doCast(SkillHolder.getInstance().getSkillEntry(7029, var_gmspeed), activeChar, true);
-			}
-			catch(Exception E)
-			{}
 		}
 
 		PlayerMessageStack.getInstance().CheckMessages(activeChar);

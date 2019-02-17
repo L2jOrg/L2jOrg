@@ -49,6 +49,8 @@ public class ShowBoardPacket extends L2GameServerPacket {
 
 	private ShowBoardPacket() {
 		_show = false;
+		_html = "";
+		_fav = "";
 	}
 
 	public static void separateAndSend(String html, Player player) {

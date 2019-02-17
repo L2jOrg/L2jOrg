@@ -96,6 +96,7 @@ import org.l2j.gameserver.stats.Formulas;
 import org.l2j.gameserver.stats.Stats;
 import org.l2j.gameserver.stats.funcs.FuncTemplate;
 import org.l2j.gameserver.tables.ClanTable;
+import org.l2j.gameserver.tables.GmListTable;
 import org.l2j.gameserver.taskmanager.AutoSaveManager;
 import org.l2j.gameserver.taskmanager.LazyPrecisionTaskManager;
 import org.l2j.gameserver.templates.CreatureTemplate;
@@ -906,6 +907,10 @@ public final class Player extends Playable implements PlayerGroup
 
         setNetConnection(null);
         setIsOnline(false);
+
+        if(isGM()) {
+            GmListTable.remove(this);
+        }
 
         getListeners().onExit();
 
