@@ -6,8 +6,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.l2j.commons.math.PrimeFinder;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.gameserver.ThreadPoolManager;
+import org.l2j.gameserver.dao.IdFactoryDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 public class BitSetIDFactory extends IdFactory
 {
@@ -27,7 +30,6 @@ public class BitSetIDFactory extends IdFactory
 
 	protected BitSetIDFactory() {
 		initialize();
-
 		ThreadPoolManager.getInstance().scheduleAtFixedRate(new BitSetCapacityCheck(), 30000, 30000);
 	}
 

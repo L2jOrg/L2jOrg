@@ -186,41 +186,4 @@ public class CharacterDAO
 
 		return number;
 	}
-
-	public List<String> getPlayersNameByAccount(String account)
-	{
-		List<String> list = new ArrayList<String>();
-
-		Connection con = null;
-		PreparedStatement statement = null;
-		ResultSet rset = null;
-		try
-		{
-			con = L2DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement("SELECT char_name FROM characters WHERE account_name=?");
-			statement.setString(1, account);
-			rset = statement.executeQuery();
-			if(rset.next())
-				list.add(rset.getString(1));
-		}
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}
-		finally
-		{
-			DbUtils.closeQuietly(con, statement, rset);
-		}
-
-		return list;
-	}
-
-	public void updateCharactersOfflineStatus() {
-		try(Connection con = L2DatabaseFactory.getInstance().getConnection();
-			Statement st = con.createStatement()) {
-			st.executeUpdate("UPDATE characters SET online = 0");
-		} catch(SQLException e) {
-			_log.error(e.getLocalizedMessage(), e);
-		}
-	}
 }

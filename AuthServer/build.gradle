@@ -72,8 +72,6 @@ startScripts {
     }
 }
 
-
-
 task dist(type: Copy) {
     from([configurations.runtime, jar]) {
         include "*.jar"

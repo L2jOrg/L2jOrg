@@ -1,4 +1,5 @@
 import java.text.SimpleDateFormat
+import java.util.regex.Matcher
 
 plugins {
     id "java"
@@ -62,6 +63,36 @@ jar {
                    'Main-Class'     : 'org.l2j.gameserver.GameServer')
     }
 }
+
+run {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        def args = jvmArgs
+        args << "--module-path" << classpath.asPath << '--class-path' << classpath.asPath << '--module' << "$moduleName/$mainClassName".toString()
+        jvmArgs = args
+    }
+}
+
+startScripts {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        classpath = files()
+        defaultJvmOpts = [
+                '--module-path', 'APP_HOME_LIBS',
+                '--module', "$moduleName/$mainClassName"
+        ]
+    }
+    doLast{
+        def bashFile = new File(outputDir, applicationName)
+        String bashContent = bashFile.text
+        bashFile.text = bashContent.replaceFirst('APP_HOME_LIBS', Matcher.quoteReplacement('$APP_HOME/lib'))
+
+        def batFile = new File(outputDir, applicationName + ".bat")
+        String batContent = batFile.text
+        batFile.text = batContent.replaceFirst('APP_HOME_LIBS', Matcher.quoteReplacement('%APP_HOME%\\lib'))
+    }
+}
+
 
 task dist(type: Copy) {
     from([configurations.runtime, jar]) {

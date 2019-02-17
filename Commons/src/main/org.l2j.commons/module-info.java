@@ -9,6 +9,7 @@ module org.l2j.commons {
     requires ecj;
     requires cache.api;
     requires java.desktop;
+    requires primitive;
 
     exports org.l2j.commons.util;
     exports org.l2j.commons.xml;
@@ -44,5 +45,6 @@ module org.l2j.commons {
         with org.l2j.commons.database.handler.IntegerHandler,
              org.l2j.commons.database.handler.VoidHandler,
              org.l2j.commons.database.handler.ListHandler,
+             org.l2j.commons.database.handler.IntSetHandler,
              org.l2j.commons.database.handler.EntityHandler;
 }

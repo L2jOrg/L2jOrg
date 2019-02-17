@@ -8,6 +8,7 @@ module org.l2j.gameserver {
     requires io.github.joealisson.mmocore;
     requires primitive;
     requires cache.api;
+    requires jdk.unsupported;
 
     exports org.l2j.gameserver;
     exports org.l2j.gameserver.model.base;
@@ -80,4 +81,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.templates.player;
     exports org.l2j.gameserver.model.actor.flags.flag;
     exports org.l2j.gameserver.settings to org.l2j.scripts;
+
+    opens org.l2j.gameserver.dao to org.l2j.commons;
+    opens org.l2j.gameserver.settings to org.l2j.commons;
 }

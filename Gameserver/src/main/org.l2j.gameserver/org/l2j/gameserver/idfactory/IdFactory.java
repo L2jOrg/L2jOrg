@@ -1,30 +1,19 @@
 package org.l2j.gameserver.idfactory;
 
-import io.github.joealisson.primitive.sets.IntSet;
-import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.l2j.commons.database.L2DatabaseFactory;
-import org.l2j.gameserver.dao.CharacterDAO;
-import org.l2j.gameserver.dao.ItemsDAO;
+import org.l2j.gameserver.dao.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.SQLException;
-import java.util.Arrays;
 
 import static java.util.Objects.isNull;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 public abstract class IdFactory
 {
 	private static final Logger logger = LoggerFactory.getLogger(IdFactory.class);
 	private static IdFactory instance;
-
-	private static final String[][] EXTRACT_OBJ_ID_TABLES = {
-			{ "characters", "obj_id" },
-			{ "items", "object_id" },
-			{ "clan_data", "clan_id" },
-			{ "ally_data", "ally_id" },
-			{ "pets", "objId" },
-			{ "couples", "id" } };
 
 	protected static final int FIRST_OID = 0x10000000;
 	protected static final int LAST_OID = 0x7FFFFFFF;
@@ -41,12 +30,11 @@ public abstract class IdFactory
 
 	private void resetOnlineStatus() {
 		logger.info("Clearing characters online status.");
-		CharacterDAO.getInstance().updateCharactersOfflineStatus();
+		getDAO(ICharacterDAO.class).updateCharactersOfflineStatus();
 	}
 
 	private void globalRemoveItems() {
-		var itemsRemoved = ItemsDAO.getInstance().deleteGlobalItemsToRemove();
-		logger.info("Global removed {} items.", itemsRemoved);
+		logger.info("Global removed {} items.", getDAO(IItemsDAO.class).deleteGlobalItemsToRemove());
 	}
 
 	private void cleanUpDB() {
@@ -61,6 +49,7 @@ public abstract class IdFactory
 			//
 
 			//Чистим по аккаунту.
+			// TODO This should be handled by the DB using foreign keys
 			cleanCount += st.executeUpdate("DELETE FROM premium_accounts WHERE premium_accounts.account NOT IN (SELECT account_name FROM characters);");
 			cleanCount += st.executeUpdate("DELETE FROM account_variables WHERE account_variables.account_name NOT IN (SELECT account_name FROM characters);");
 			cleanCount += st.executeUpdate("DELETE FROM bbs_memo WHERE bbs_memo.account_name NOT IN (SELECT account_name FROM characters);");
@@ -100,8 +89,8 @@ public abstract class IdFactory
 			cleanCount += st.executeUpdate("DELETE FROM heroes WHERE heroes.char_id NOT IN (SELECT obj_Id FROM characters);");
 			cleanCount += st.executeUpdate("DELETE FROM heroes_diary WHERE heroes_diary.charId NOT IN (SELECT obj_Id FROM characters);");
 
-			//Чистим итемы.
-			cleanCount += st.executeUpdate("DELETE FROM items WHERE items.loc != 'MAIL' AND items.owner_id NOT IN (SELECT obj_Id FROM characters) AND items.owner_id NOT IN (SELECT clan_id FROM clan_data);");
+			cleanCount += getDAO(IItemsDAO.class).deleteItemsWithoutOwner();
+
 			cleanCount += st.executeUpdate("DELETE FROM items_delayed WHERE items_delayed.owner_id NOT IN (SELECT obj_Id FROM characters);");
 			cleanCount += st.executeUpdate("DELETE FROM pets WHERE pets.item_obj_id NOT IN (SELECT object_id FROM items);");
 
@@ -140,33 +129,8 @@ public abstract class IdFactory
 		}
 	}
 
-	protected int[] extractUsedObjectIDTable() throws SQLException {
-		IntSet objectIds = new HashIntSet();
-
-		try(var con = L2DatabaseFactory.getInstance().getConnection();
-			var st = con.createStatement()) {
-
-			for(String[] table : EXTRACT_OBJ_ID_TABLES) {
-				try(var rs = st.executeQuery(String.format("SELECT %s FROM %s", table[1], table[0]))) {
-					int size = objectIds.size();
-					while(rs.next()) {
-						objectIds.add(rs.getInt(1));
-					}
-					size = objectIds.size() - size;
-					if(size > 0) {
-						logger.info("Extracted {} used id's from {}", size, table[0]);
-					}
-				}
-			}
-		}
-
-		int[] extracted = objectIds.toArray();
-
-		Arrays.sort(extracted);
-
-		logger.info("IdFactory: Extracted total {} used id's.", extracted.length);
-
-		return extracted;
+	protected int[] extractUsedObjectIDTable() {
+		return getDAO(IdFactoryDAO.class).findUsedObjectIds().toArray();
 	}
 
 	public boolean isInitialized() {

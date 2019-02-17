@@ -72,16 +72,16 @@ public class GameServer {
 
     public GameServer() throws Exception {
         instance = this;
+        if (!IdFactory.getInstance().isInitialized()) {
+            logger.error("Could not read object IDs from DB. Please Check Your Data.");
+            throw new Exception("Could not initialize the ID factory");
+        }
+
         listeners = new GameServerListenerList();
 
         var serverSettings = getSettings(ServerSettings.class);
 
         licenseHost = serverSettings.externalAddress();
-
-        if (!IdFactory.getInstance().isInitialized()) {
-            logger.error("Could not read object IDs from DB. Please Check Your Data.");
-            throw new Exception("Could not initialize the ID factory");
-        }
 
         GeoEngine.load();
         GameTimeController.getInstance();

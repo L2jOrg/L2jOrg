@@ -3,7 +3,6 @@ package org.l2j.commons.database.handler;
 import org.l2j.commons.database.QueryDescriptor;
 
 import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -37,7 +36,7 @@ public class ListHandler implements TypeHandler<List> {
 
     @Override
     public List handle(ResultSet resultSet, Class<?> type) {
-        return null;
+        return new ArrayList();
     }
 
     @Override

@@ -442,18 +442,4 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
             DbUtils.closeQuietly(con, statement);
         }
     }
-
-    public int deleteGlobalItemsToRemove() {
-        var removed = 0;
-        try(var con = L2DatabaseFactory.getInstance().getConnection();
-            var statement = con.createStatement()) {
-            removed = statement.executeUpdate("DELETE i, id FROM items i JOIN items_delayed id ON i.item_id = id.item_id WHERE i.item_id IN (SELECT item_id FROM items_to_delete)");
-            statement.executeUpdate("DELETE FROM items_to_delete");
-            return removed;
-        } catch (SQLException e) {
-            logger.error("Error while global remove items:", e);
-        }
-        return removed;
-
-    }
 }
