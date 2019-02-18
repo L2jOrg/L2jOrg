@@ -5,5 +5,6 @@ CREATE TABLE IF NOT EXISTS `character_training_camp` (
 	`level` INT NOT NULL,
 	`start_time` INT NOT NULL,
 	`end_time` INT NOT NULL,
-	PRIMARY KEY  (`account_name`)
+	PRIMARY KEY  (`account_name`),
+	FOREIGN KEY FK_TRAINING_CHARACTER_F(char_id) REFERENCES characters(obj_Id) ON DELETE CASCADE
 );

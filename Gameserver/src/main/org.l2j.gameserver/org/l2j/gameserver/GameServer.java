@@ -224,18 +224,13 @@ public class GameServer {
         connectionHandler.shutdown();
     }
 
-
     public static void main(String[] args) {
         try {
-
             initializeResources();
-
             new GameServer();
-
             ThreadPoolManager.getInstance().execute(AuthServerCommunication.getInstance());
-
-            Runtime.getRuntime().addShutdownHook(Shutdown.getInstance());
             logMemoryUsage();
+            Runtime.getRuntime().addShutdownHook(Shutdown.getInstance());
         } catch (Exception e) {
             logger.error(e.getLocalizedMessage(), e);
         }

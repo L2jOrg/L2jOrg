@@ -1,18 +1,15 @@
 @echo off
 
-if exist mysql_settings.bat goto settings
+if exist mysql_settings.conf goto settings
 
-echo Can't find mysql_settings.bat file!
+echo Can't find mysql_settings.conf file!
 goto end
 
 :settings
 
-call mysql_settings.bat
-if errorlevel 1 goto end
-
 for /r install %%f in (*.sql) do ( 
                 echo Loading %%~nf ...
-		mysql -h %DBHOST% -u %USER% --password=%PASS% -D %DBNAME% < %%f
+		mysql --defaults-extra-file=mysql_settings.conf < %%f
 	)
 :end
 

@@ -7,5 +7,6 @@ CREATE TABLE IF NOT EXISTS `character_bookmarks` (
 	`x` INT NOT NULL,
 	`y` INT NOT NULL,
 	`z` INT NOT NULL,
-	PRIMARY KEY  (`char_Id`,`idx`)
+	PRIMARY KEY  (`char_Id`,`idx`),
+	FOREIGN KEY FK_BOOKMARK_CHARACTER (char_Id) REFERENCES characters(obj_Id) ON DELETE CASCADE
 );

@@ -5,5 +5,6 @@ CREATE TABLE IF NOT EXISTS `character_skills_save` (
 	`class_index` SMALLINT NOT NULL DEFAULT '0',
 	`end_time` bigint NOT NULL DEFAULT '0',
 	`reuse_delay_org` INT NOT NULL DEFAULT '0',
-	PRIMARY KEY  (`char_obj_id`,`skill_id`,`class_index`)
+	PRIMARY KEY  (`char_obj_id`,`skill_id`,`class_index`),
+	FOREIGN KEY FK_SKILL_SAVE_CHARACTER(char_obj_id) REFERENCES characters(obj_Id) ON DELETE CASCADE
 );

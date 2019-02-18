@@ -6,5 +6,6 @@ CREATE TABLE IF NOT EXISTS `character_effects_save` (
 	`left_time` INT NOT NULL,
 	`id` INT NOT NULL,
 	`is_self` TINYINT(1) NOT NULL,
-	PRIMARY KEY (`object_id`,`skill_id`,`id`,`is_self`)
+	PRIMARY KEY (`object_id`,`skill_id`,`id`,`is_self`),
+	FOREIGN KEY  FK_EFFECTS_CHARACTER(object_id) REFERENCES characters(obj_Id) ON DELETE CASCADE
 );

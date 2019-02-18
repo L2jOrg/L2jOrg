@@ -2,5 +2,7 @@ CREATE TABLE IF NOT EXISTS `character_friends` (
 	`char_id` INT NOT NULL DEFAULT '0',
 	`friend_id` INT NOT NULL DEFAULT '0',
 	`memo` VARCHAR(50) CHARACTER SET UTF8 NOT NULL DEFAULT '',
-	PRIMARY KEY  (`char_id`,`friend_id`)
+	PRIMARY KEY  (`char_id`,`friend_id`),
+	FOREIGN KEY FK_FRIEND_CHARACTER (char_id) REFERENCES characters(obj_Id) ON DELETE CASCADE,
+	FOREIGN KEY FK_FRIEND_CHARACTER_F (friend_id) REFERENCES characters(obj_Id) ON DELETE CASCADE
 );

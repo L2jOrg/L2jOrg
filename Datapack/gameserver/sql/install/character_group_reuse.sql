@@ -8,5 +8,6 @@ CREATE TABLE `character_group_reuse` (
   `item_id` int(11) NOT NULL,
   `end_time` bigint(20) NOT NULL,
   `reuse` bigint(20) NOT NULL,
-  PRIMARY KEY (`object_id`,`reuse_group`)
+  PRIMARY KEY (`object_id`,`reuse_group`),
+  FOREIGN KEY FK_GROUP_CHARACTER (`object_id`) REFERENCES characters(obj_Id) ON DELETE CASCADE
 );

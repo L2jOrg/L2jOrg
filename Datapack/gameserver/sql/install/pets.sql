@@ -8,5 +8,6 @@ CREATE TABLE IF NOT EXISTS `pets` (
 	`sp` INT UNSIGNED,
 	`fed` INT UNSIGNED,
 	`max_fed` SMALLINT UNSIGNED,
-	PRIMARY KEY (item_obj_id)
+	PRIMARY KEY (item_obj_id),
+	FOREIGN KEY FK_PET_ITEMS(item_obj_id) REFERENCES items(object_id) ON DELETE CASCADE
 );

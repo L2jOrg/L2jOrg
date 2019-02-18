@@ -5,5 +5,8 @@ CREATE TABLE IF NOT EXISTS `couples` (
 	`maried` VARCHAR(5) DEFAULT NULL,
 	`affiancedDate` bigint DEFAULT '0',
 	`weddingDate` bigint DEFAULT '0',
-	PRIMARY KEY  (`id`)
+	PRIMARY KEY  (`id`),
+	FOREIGN KEY FK_COUPLE_CHARACTER(player1Id) REFERENCES characters(obj_Id) ON DELETE CASCADE,
+	FOREIGN KEY FK_COUPLE_CHARACTER_F(player2Id) REFERENCES characters(obj_Id) ON DELETE CASCADE
+
 );

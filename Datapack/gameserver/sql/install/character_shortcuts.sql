@@ -8,5 +8,6 @@ CREATE TABLE IF NOT EXISTS `character_shortcuts` (
 	`class_index` TINYINT UNSIGNED NOT NULL DEFAULT '0',
 	`character_type` INT(11) NOT NULL DEFAULT '1',
 	PRIMARY KEY (`object_id`,`slot`,`page`,`class_index`),
-	KEY `shortcut_id` (`shortcut_id`)
+	KEY `shortcut_id` (`shortcut_id`),
+	FOREIGN KEY FK_SHORTCUT_CHARACTER_F(object_id) REFERENCES characters(obj_Id) ON DELETE CASCADE
 );

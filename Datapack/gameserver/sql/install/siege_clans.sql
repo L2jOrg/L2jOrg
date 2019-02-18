@@ -5,6 +5,7 @@ CREATE TABLE `siege_clans` (
   `type` varchar(255) NOT NULL,
   `param` bigint(20) NOT NULL,
   `date` bigint(20) NOT NULL,
-  PRIMARY KEY (`residence_id`,`clan_id`)
+  PRIMARY KEY (`residence_id`,`clan_id`),
+  FOREIGN KEY FK_SIEGE_CLAN(clan_id) REFERENCES clan_data(clan_id) ON DELETE CASCADE
 );
 

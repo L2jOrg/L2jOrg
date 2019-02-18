@@ -3,5 +3,6 @@ CREATE TABLE IF NOT EXISTS `character_quests` (
 	`id` INT NOT NULL,
 	`var` VARCHAR(40) CHARACTER SET UTF8 NOT NULL,
 	`value` VARCHAR(255) CHARACTER SET UTF8,
-	PRIMARY KEY  (`char_id`,`id`,`var`)
+	PRIMARY KEY  (`char_id`,`id`,`var`),
+	FOREIGN KEY FK_QUEST_CHARACTER(char_id) REFERENCES characters(obj_Id) ON DELETE CASCADE
 );

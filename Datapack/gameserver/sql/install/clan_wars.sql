@@ -8,6 +8,7 @@ CREATE TABLE `clan_wars` (
   `attackers_kill_counter` int(11) NOT NULL DEFAULT '0',
   `opposers_kill_counter` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`attacker_clan`,`opposing_clan`),
-  UNIQUE KEY `attacker_clan` (`attacker_clan`),
-  UNIQUE KEY `opposing_clan` (`opposing_clan`)
+  UNIQUE KEY `opposing_clan` (`opposing_clan`),
+  FOREIGN KEY FK_WAR_CLAN(attacker_clan) REFERENCES clan_data(clan_id) ON DELETE CASCADE,
+  FOREIGN KEY FK_WAR_CLAN_O(opposing_clan) REFERENCES clan_data(clan_id) ON DELETE CASCADE
 );

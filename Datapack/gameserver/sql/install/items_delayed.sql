@@ -11,5 +11,6 @@ CREATE TABLE IF NOT EXISTS `items_delayed` (
 	`description` VARCHAR(255) DEFAULT NULL,
 	PRIMARY KEY (`payment_id`),
 	KEY `key_owner_id` (`owner_id`),
-	KEY `key_item_id` (`item_id`)
+	KEY `key_item_id` (`item_id`),
+	FOREIGN KEY FK_ITEMS_DELAYED_CHARACTER(owner_id) REFERENCES characters(obj_Id) ON DELETE CASCADE
 );

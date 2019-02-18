@@ -2,5 +2,7 @@ CREATE TABLE IF NOT EXISTS `character_blocklist` (
 	`obj_Id` INT NOT NULL,
 	`target_Id` INT NOT NULL,
 	`memo` VARCHAR(50) CHARACTER SET UTF8 NOT NULL DEFAULT '',
-	PRIMARY KEY  (`obj_Id`,`target_Id`)
+	PRIMARY KEY  (`obj_Id`,`target_Id`),
+	FOREIGN KEY FK_BLOCKLIST_CHARACTERS (`obj_Id`) REFERENCES characters (obj_Id) ON DELETE CASCADE,
+	FOREIGN KEY FK_BLOCKLIST_CHARACTERS_T (target_Id) REFERENCES characters (obj_Id) ON DELETE CASCADE
 );

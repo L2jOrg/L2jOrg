@@ -4,8 +4,7 @@ CREATE TABLE IF NOT EXISTS `character_variables` (
 	`value` VARCHAR(300) CHARACTER SET UTF8 NOT NULL DEFAULT '0',
 	`expire_time` bigint(20) NOT NULL DEFAULT '0',
 	UNIQUE KEY `prim` (`obj_id`,`name`),
-	KEY `obj_id` (`obj_id`),
+	FOREIGN KEY FK_VARIABLES_CHARACTER(obj_id) REFERENCES characters(obj_Id) ON DELETE CASCADE ,
 	KEY `name` (`name`),
-	KEY `value` (`value`),
 	KEY `expire_time` (`expire_time`)
 );

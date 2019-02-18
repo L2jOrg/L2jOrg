@@ -2,5 +2,6 @@ CREATE TABLE IF NOT EXISTS `clan_skills` (
 	`clan_id` INT NOT NULL DEFAULT '0',
 	`skill_id` SMALLINT UNSIGNED NOT NULL DEFAULT '0',
 	`skill_level` TINYINT UNSIGNED NOT NULL DEFAULT '0',
-	PRIMARY KEY  (`clan_id`,`skill_id`)
+	PRIMARY KEY  (`clan_id`,`skill_id`),
+	FOREIGN KEY FK_SKILL_CLAN(clan_id) REFERENCES clan_data(clan_id) ON DELETE CASCADE
 );

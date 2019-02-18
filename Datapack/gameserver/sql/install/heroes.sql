@@ -4,5 +4,6 @@ CREATE TABLE IF NOT EXISTS `heroes` (
 	`played` TINYINT NOT NULL DEFAULT '0',
 	`active` TINYINT NOT NULL DEFAULT '0',
 	`message` varchar(300) NOT NULL default '',
-	PRIMARY KEY  (`char_id`)
+	PRIMARY KEY  (`char_id`),
+	FOREIGN KEY FK_HERO_CHARACTER(char_id) REFERENCES characters(obj_Id) ON DELETE CASCADE
 );

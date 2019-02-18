@@ -8,5 +8,6 @@ CREATE TABLE IF NOT EXISTS `olympiad_participants` (
 	`competitions_loose` smallint(6) unsigned NOT NULL DEFAULT '0',
 	`game_classes_count` int(11) NOT NULL,
 	`game_noclasses_count` int(11) NOT NULL,
-	PRIMARY KEY  (`char_id`)
+	PRIMARY KEY  (`char_id`),
+	FOREIGN KEY FK_OLYMPIAD_CHARACTER(char_id) REFERENCES characters(obj_Id) ON DELETE CASCADE
 );

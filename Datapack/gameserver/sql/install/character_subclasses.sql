@@ -12,5 +12,6 @@ CREATE TABLE IF NOT EXISTS `character_subclasses` (
 	`maxCp` MEDIUMINT	UNSIGNED NOT NULL DEFAULT '0',
 	`active` BOOLEAN NOT NULL DEFAULT '0',
 	`type` TINYINT UNSIGNED NOT NULL DEFAULT '0',
-	PRIMARY KEY  (`char_obj_id`,`class_id`)
+	PRIMARY KEY  (`char_obj_id`,`class_id`),
+	FOREIGN KEY FK_SUBCLASS_CHARACTER(char_obj_id) REFERENCES characters(obj_Id) ON DELETE CASCADE
 );
