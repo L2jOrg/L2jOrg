@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS `pets` (
 	`fed` INT UNSIGNED,
 	`max_fed` SMALLINT UNSIGNED,
 	PRIMARY KEY (item_obj_id)
-) ENGINE=MyISAM;
+);

@@ -3,4 +3,4 @@ CREATE TABLE IF NOT EXISTS `character_friends` (
 	`friend_id` INT NOT NULL DEFAULT '0',
 	`memo` VARCHAR(50) CHARACTER SET UTF8 NOT NULL DEFAULT '',
 	PRIMARY KEY  (`char_id`,`friend_id`)
-) ENGINE=MyISAM;
+);

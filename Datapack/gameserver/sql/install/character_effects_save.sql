@@ -7,4 +7,4 @@ CREATE TABLE IF NOT EXISTS `character_effects_save` (
 	`id` INT NOT NULL,
 	`is_self` TINYINT(1) NOT NULL,
 	PRIMARY KEY (`object_id`,`skill_id`,`id`,`is_self`)
-) ENGINE=MyISAM;
+);

@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `items_ensoul` (
   `ensoul_id` int(3) NOT NULL,
   PRIMARY KEY  (`object_id`, `type`, `id`),
   FOREIGN KEY (`object_id`) REFERENCES `items` (`object_id`) ON DELETE CASCADE
-) ENGINE=InnoDB;
+);

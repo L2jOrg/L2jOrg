@@ -3,4 +3,4 @@ CREATE TABLE IF NOT EXISTS `clan_skills` (
 	`skill_id` SMALLINT UNSIGNED NOT NULL DEFAULT '0',
 	`skill_level` TINYINT UNSIGNED NOT NULL DEFAULT '0',
 	PRIMARY KEY  (`clan_id`,`skill_id`)
-) ENGINE=MyISAM;
+);

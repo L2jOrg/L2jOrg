@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `character_hennas` (
 	`draw_time` INT UNSIGNED NOT NULL DEFAULT '0',
 	`is_premium` TINYINT UNSIGNED NOT NULL DEFAULT '0',
 	PRIMARY KEY  (`char_obj_id`,`class_index`,`draw_time`)
-) ENGINE=MyISAM;
+);

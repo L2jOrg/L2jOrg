@@ -15,4 +15,4 @@ INDEX(`to_object_id`),
 INDEX(`from_object_id`),
 INDEX(`read`),
 INDEX(`box_type`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+);

@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `residence_functions` (
 	`end_time` INT NOT NULL DEFAULT '0',
 	`in_debt` TINYINT NOT NULL DEFAULT '0',
 	PRIMARY KEY  (`residence_id`,`type`)
-) ENGINE=MyISAM;
+);

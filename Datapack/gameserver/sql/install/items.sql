@@ -17,4 +17,4 @@ CREATE TABLE IF NOT EXISTS `items` (
   KEY `owner_id` (`owner_id`),
   KEY `loc` (`loc`),
   KEY `item_id` (`item_id`)
-) ENGINE=InnoDB;
+);

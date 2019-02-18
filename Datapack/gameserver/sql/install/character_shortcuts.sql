@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS `character_shortcuts` (
 	`character_type` INT(11) NOT NULL DEFAULT '1',
 	PRIMARY KEY (`object_id`,`slot`,`page`,`class_index`),
 	KEY `shortcut_id` (`shortcut_id`)
-) ENGINE=MyISAM;
+);

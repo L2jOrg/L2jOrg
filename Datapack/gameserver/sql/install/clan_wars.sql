@@ -10,4 +10,4 @@ CREATE TABLE `clan_wars` (
   PRIMARY KEY (`attacker_clan`,`opposing_clan`),
   UNIQUE KEY `attacker_clan` (`attacker_clan`),
   UNIQUE KEY `opposing_clan` (`opposing_clan`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+);

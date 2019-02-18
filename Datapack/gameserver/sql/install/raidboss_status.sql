@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `raidboss_status` (
 	`death_time` INT NOT NULL DEFAULT '0',
 	`respawn_delay` INT NOT NULL DEFAULT '0',
 	PRIMARY KEY  (`id`)
-) ENGINE=MyISAM;
+);

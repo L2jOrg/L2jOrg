@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `couples` (
 	`affiancedDate` bigint DEFAULT '0',
 	`weddingDate` bigint DEFAULT '0',
 	PRIMARY KEY  (`id`)
-) ENGINE=MyISAM;
+);

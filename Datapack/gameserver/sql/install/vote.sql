@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `vote` (
 	INDEX `Index 2` (`id`, `vote`),
 	INDEX `Index 3` (`id`),
 	INDEX `Index 4` (`HWID`)
-) ENGINE=MyISAM;
+);

@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `character_summons_save` (
 	`curMp` MEDIUMINT UNSIGNED,
 	`time` INT UNSIGNED NOT NULL,
 	PRIMARY KEY (owner_obj_id, skill_id)
-) ENGINE=MyISAM;
+);

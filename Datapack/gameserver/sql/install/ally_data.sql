@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `ally_data` (
 	`crest` VARBINARY(192) NULL DEFAULT NULL,
 	PRIMARY KEY  (`ally_id`),
 	KEY `leader_id` (`leader_id`)
-) ENGINE=MyISAM;
+);

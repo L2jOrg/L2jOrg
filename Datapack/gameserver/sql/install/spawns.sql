@@ -7,4 +7,4 @@ CREATE TABLE IF NOT EXISTS `spawns` (
 	`respawn` INT NOT NULL,
 	`count` INT NOT NULL,
 	PRIMARY KEY  (`npc_id`, `x`, `y`, `z`)
-) ENGINE=MyISAM;
+);

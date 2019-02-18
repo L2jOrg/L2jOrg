@@ -13,4 +13,4 @@ CREATE TABLE IF NOT EXISTS `character_subclasses` (
 	`active` BOOLEAN NOT NULL DEFAULT '0',
 	`type` TINYINT UNSIGNED NOT NULL DEFAULT '0',
 	PRIMARY KEY  (`char_obj_id`,`class_id`)
-) ENGINE=MyISAM;
+);

@@ -30,7 +30,7 @@ import org.slf4j.LoggerFactory;
  */
 public final class PetitionManager implements IPetitionHandler
 {
-	private static final Logger _log = LoggerFactory.getLogger(PetitionManager.class.getName());
+	private static final Logger _log = LoggerFactory.getLogger(PetitionManager.class);
 
 	public static enum PetitionState
 	{

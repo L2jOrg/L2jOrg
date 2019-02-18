@@ -1,23 +1,3 @@
-/*
-Navicat MySQL Data Transfer
-
-Source Server         : eoa
-Source Server Version : 50166
-Source Host           : localhost:3306
-Source Database       : sovereign
-
-Target Server Type    : MYSQL
-Target Server Version : 50166
-File Encoding         : 65001
-
-Date: 2014-07-21 17:42:02
-*/
-
-SET FOREIGN_KEY_CHECKS=0;
-
--- ----------------------------
--- Table structure for `npcbuffer_buff_list`
--- ----------------------------
 DROP TABLE IF EXISTS `npcbuffer_buff_list`;
 CREATE TABLE `npcbuffer_buff_list` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -28,7 +8,7 @@ CREATE TABLE `npcbuffer_buff_list` (
   `forClass` tinyint(1) DEFAULT NULL,
   `canUse` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=145 DEFAULT CHARSET=latin1;
+);
 
 -- ----------------------------
 -- Records of npcbuffer_buff_list

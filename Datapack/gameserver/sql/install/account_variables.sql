@@ -3,4 +3,4 @@ CREATE TABLE IF NOT EXISTS `account_variables` (
   `var`  VARCHAR(50) NOT NULL DEFAULT '',
   `value` VARCHAR(255) ,
   PRIMARY KEY (`account_name`,`var`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)

@@ -1,20 +1,3 @@
-/*
-Navicat MySQL Data Transfer
-
-Source Server         : eoa
-Source Server Version : 50166
-Source Host           : localhost:3306
-Source Database       : sovereign
-
-Target Server Type    : MYSQL
-Target Server Version : 50166
-File Encoding         : 65001
-
-Date: 2014-07-22 01:21:30
-*/
-
-SET FOREIGN_KEY_CHECKS=0;
-
 -- ----------------------------
 -- Table structure for `npcbuffer_scheme_list`
 -- ----------------------------
@@ -25,7 +8,7 @@ CREATE TABLE `npcbuffer_scheme_list` (
   `scheme_name` varchar(36) DEFAULT NULL,
   `mod_accepted` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=101881 DEFAULT CHARSET=latin1;
+);
 
 -- ----------------------------
 -- Records of npcbuffer_scheme_list

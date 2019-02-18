@@ -18,4 +18,4 @@ CREATE TABLE IF NOT EXISTS `clan_data` (
 	`yesterday_attendance_reward` INT NOT NULL DEFAULT '0',
 	PRIMARY KEY (`clan_id`),
 	KEY `ally_id` (`ally_id`)
-) ENGINE=MyISAM;
+);

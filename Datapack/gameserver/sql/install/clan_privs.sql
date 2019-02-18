@@ -3,4 +3,4 @@ CREATE TABLE IF NOT EXISTS `clan_privs` (
 	`rank` INT NOT NULL DEFAULT '0',
 	`privilleges` INT NOT NULL DEFAULT '0',
 	PRIMARY KEY  (`clan_id`,`rank`)
-) ENGINE=MyISAM;
+);

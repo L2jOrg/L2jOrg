@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS `character_variables` (
 	KEY `name` (`name`),
 	KEY `value` (`value`),
 	KEY `expire_time` (`expire_time`)
-) ENGINE=MyISAM;
+);

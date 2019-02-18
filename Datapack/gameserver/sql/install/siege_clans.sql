@@ -1,6 +1,3 @@
--- ----------------------------
--- Table structure for `siege_clans`
--- ----------------------------
 DROP TABLE IF EXISTS `siege_clans`;
 CREATE TABLE `siege_clans` (
   `residence_id` int(11) NOT NULL DEFAULT '0',

@@ -7,4 +7,4 @@ CREATE TABLE IF NOT EXISTS `character_macroses` (
 	`acronym` VARCHAR(4) CHARACTER SET UTF8 DEFAULT NULL,
 	`commands` VARCHAR(1024) CHARACTER SET UTF8 DEFAULT NULL,
 	PRIMARY KEY  (`char_obj_id`,`id`)
-) ENGINE=MyISAM;
+);

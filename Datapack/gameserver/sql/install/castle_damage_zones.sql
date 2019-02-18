@@ -7,7 +7,3 @@ CREATE TABLE `castle_damage_zones` (
   `zone` varchar(255) NOT NULL,
   PRIMARY KEY (`residence_id`,`zone`)
 );
-
--- ----------------------------
--- Records of castle_damage_zones
--- ----------------------------

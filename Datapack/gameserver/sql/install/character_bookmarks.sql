@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS `character_bookmarks` (
 	`y` INT NOT NULL,
 	`z` INT NOT NULL,
 	PRIMARY KEY  (`char_Id`,`idx`)
-) ENGINE=MyISAM;
+);

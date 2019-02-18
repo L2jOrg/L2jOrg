@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `character_training_camp` (
 	`start_time` INT NOT NULL,
 	`end_time` INT NOT NULL,
 	PRIMARY KEY  (`account_name`)
-) ENGINE=MyISAM;
+);

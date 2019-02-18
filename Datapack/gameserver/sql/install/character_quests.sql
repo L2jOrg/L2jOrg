@@ -4,4 +4,4 @@ CREATE TABLE IF NOT EXISTS `character_quests` (
 	`var` VARCHAR(40) CHARACTER SET UTF8 NOT NULL,
 	`value` VARCHAR(255) CHARACTER SET UTF8,
 	PRIMARY KEY  (`char_id`,`id`,`var`)
-) ENGINE=MyISAM;
+);

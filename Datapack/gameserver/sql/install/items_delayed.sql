@@ -12,4 +12,4 @@ CREATE TABLE IF NOT EXISTS `items_delayed` (
 	PRIMARY KEY (`payment_id`),
 	KEY `key_owner_id` (`owner_id`),
 	KEY `key_item_id` (`item_id`)
-) ENGINE=MyISAM;
+);

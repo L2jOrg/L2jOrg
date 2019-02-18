@@ -44,4 +44,4 @@ CREATE TABLE IF NOT EXISTS `characters` (
 	UNIQUE KEY `char_name` (`char_name`),
 	KEY `account_name` (`account_name`),
 	KEY `clanid` (`clanid`)
-) ENGINE=MyISAM;
+)

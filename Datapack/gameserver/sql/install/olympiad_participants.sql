@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS `olympiad_participants` (
 	`game_classes_count` int(11) NOT NULL,
 	`game_noclasses_count` int(11) NOT NULL,
 	PRIMARY KEY  (`char_id`)
-) ENGINE=MyISAM;
+);

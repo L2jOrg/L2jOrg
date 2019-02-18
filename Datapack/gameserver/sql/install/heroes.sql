@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `heroes` (
 	`active` TINYINT NOT NULL DEFAULT '0',
 	`message` varchar(300) NOT NULL default '',
 	PRIMARY KEY  (`char_id`)
-) ENGINE=MyISAM;
+);

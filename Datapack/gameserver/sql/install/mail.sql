@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS `mail` (
   PRIMARY KEY (`message_id`),
   KEY `sender_id` (`sender_id`),
   KEY `receiver_id` (`receiver_id`)
-) ENGINE=InnoDB;
+);
 
 CREATE TABLE IF NOT EXISTS `mail_attachments` (
   `message_id` int(11) NOT NULL,
@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `mail_attachments` (
   UNIQUE KEY `item_id` (`item_id`),
   KEY `messageId` (`message_id`),
   FOREIGN KEY (`message_id`) REFERENCES `mail` (`message_id`) ON DELETE CASCADE
-) ENGINE=InnoDB;
+);
 
 CREATE TABLE IF NOT EXISTS `character_mail` (
   `char_id` int(11) NOT NULL,
@@ -34,4 +34,4 @@ CREATE TABLE IF NOT EXISTS `character_mail` (
   PRIMARY KEY (`char_id`,`message_id`),
   KEY `message_id` (`message_id`),
   FOREIGN KEY (`message_id`) REFERENCES `mail` (`message_id`) ON DELETE CASCADE
-) ENGINE=InnoDB;
+);

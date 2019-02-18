@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `clan_subpledges` (
 	`leader_id` INT UNSIGNED NOT NULL DEFAULT '0',
 	`upgraded` INT NOT NULL DEFAULT '0',
 	PRIMARY KEY  (`clan_id`,`type`)
-) ENGINE=MyISAM;
+);
