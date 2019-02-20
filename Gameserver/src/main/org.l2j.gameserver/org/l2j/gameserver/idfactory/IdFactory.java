@@ -1,10 +1,7 @@
 package org.l2j.gameserver.idfactory;
 
 import org.l2j.commons.database.L2DatabaseFactory;
-import org.l2j.gameserver.dao.*;
-import org.l2j.gameserver.data.dao.ICharacterDAO;
-import org.l2j.gameserver.data.dao.IItemsDAO;
-import org.l2j.gameserver.data.dao.IdFactoryDAO;
+import org.l2j.gameserver.data.dao.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,8 +10,7 @@ import java.sql.SQLException;
 import static java.util.Objects.isNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
-public abstract class IdFactory
-{
+public abstract class IdFactory {
     private static final Logger logger = LoggerFactory.getLogger(IdFactory.class);
     private static IdFactory instance;
 
@@ -23,7 +19,7 @@ public abstract class IdFactory
     protected static final int FREE_OBJECT_ID_SIZE = LAST_OID - FIRST_OID;
 
     protected boolean initialized;
-    protected long releasedCount = 0;
+    private long releasedCount = 0;
 
     protected IdFactory() {
         resetOnlineStatus();
@@ -47,33 +43,23 @@ public abstract class IdFactory
             long cleanupStart = System.currentTimeMillis();
             int cleanCount = 0;
 
-            //
-            //Начинаем чистить таблицы последствия после удаления персонажа.
-            //
-
-            //Чистим по аккаунту.
-            cleanCount += st.executeUpdate("DELETE FROM premium_accounts WHERE premium_accounts.account NOT IN (SELECT account_name FROM characters);");
-            cleanCount += st.executeUpdate("DELETE FROM account_variables WHERE account_variables.account_name NOT IN (SELECT account_name FROM characters);");
-            cleanCount += st.executeUpdate("DELETE FROM bbs_memo WHERE bbs_memo.account_name NOT IN (SELECT account_name FROM characters);");
-
-            //Чистим по Object ID персонажа.
-
             cleanCount += getDAO(IItemsDAO.class).deleteItemsWithoutOwner();
 
             //Clean clans and alliances.
-            cleanCount += st.executeUpdate("DELETE FROM clan_data WHERE clan_data.clan_id NOT IN (SELECT clanid FROM characters);");
-            cleanCount += st.executeUpdate("DELETE FROM clan_subpledges WHERE clan_subpledges.type = 0 AND clan_subpledges.leader_id NOT IN (SELECT obj_Id FROM characters);");
-            cleanCount += st.executeUpdate("DELETE FROM clan_data WHERE clan_data.clan_id NOT IN (SELECT clan_id FROM clan_subpledges WHERE clan_subpledges.type = 0);");
-            cleanCount += st.executeUpdate("DELETE FROM ally_data WHERE ally_data.ally_id NOT IN (SELECT ally_id FROM clan_data);");
-            cleanCount += st.executeUpdate("DELETE FROM clan_subpledges WHERE clan_subpledges.clan_id NOT IN (SELECT clan_id FROM clan_data);");
+            cleanCount += getDAO(ClanDAO.class).deleteWithoutPlayers();
+            cleanCount += getDAO(ClanDAO.class).deleteMainSubpledgeWithoutLeader();
+            cleanCount += getDAO(ClanDAO.class).deleteClanWithoutMainSubpledge();
+            cleanCount += getDAO(ClanDAO.class).deleteAllyWithoutClan();
+            cleanCount += getDAO(ClanDAO.class).deleteSubpledgeWithoutClan();
 
             //Чистим почту.
 
-            cleanCount += st.executeUpdate("DELETE FROM mail WHERE mail.message_id NOT IN (SELECT message_id FROM character_mail);");
+            cleanCount += getDAO(IMailDAO.class).deleteWithoutPlayer();
 
-            st.executeUpdate("UPDATE clan_subpledges SET leader_id=0 WHERE leader_id > 0 AND clan_subpledges.leader_id NOT IN (SELECT obj_Id FROM characters);");
-            st.executeUpdate("UPDATE characters SET clanid = '0', title = '', pledge_type = '0', pledge_rank = '0', lvl_joined_academy = '0', apprentice = '0' WHERE characters.clanid > 0 AND characters.clanid NOT IN (SELECT clan_id FROM clan_data);");
-            st.executeUpdate("UPDATE items SET loc = 'WAREHOUSE' WHERE loc = 'MAIL' AND items.object_id NOT IN (SELECT item_id FROM mail_attachments);");
+            getDAO(ClanDAO.class).updateSubpledgeWithoutLeader();
+            getDAO(ClanDAO.class).updateMemberInfoOfMissingClan();
+            getDAO(IItemsDAO.class).updateItemMailWithoutAttachment();
+
 
             logger.info("IdFactory: Cleaned {}  elements from database in {} sec.", cleanCount, (System.currentTimeMillis() - cleanupStart) / 1000);
         } catch(SQLException e) {

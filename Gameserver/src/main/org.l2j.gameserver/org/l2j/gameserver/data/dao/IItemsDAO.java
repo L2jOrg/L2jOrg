@@ -13,4 +13,7 @@ public interface IItemsDAO extends DAO {
 
     @Query("DELETE FROM items WHERE items.loc != 'MAIL' AND items.owner_id NOT IN (SELECT obj_Id FROM characters) AND items.owner_id NOT IN (SELECT clan_id FROM clan_data);")
     int deleteItemsWithoutOwner();
+
+    @Query("UPDATE items SET loc = 'WAREHOUSE' WHERE loc = 'MAIL' AND items.object_id NOT IN (SELECT item_id FROM mail_attachments)")
+    void updateItemMailWithoutAttachment();
 }

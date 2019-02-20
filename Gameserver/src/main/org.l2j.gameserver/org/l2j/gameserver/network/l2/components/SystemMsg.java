@@ -1,10 +1,10 @@
 package org.l2j.gameserver.network.l2.components;
 
-import java.util.NoSuchElementException;
-
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.s2c.L2GameServerPacket;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
+
+import java.util.NoSuchElementException;
 
 /**
  * @author VISTALL

@@ -1,13 +1,13 @@
 package org.l2j.gameserver.idfactory;
 
-import java.util.BitSet;
-import java.util.concurrent.atomic.AtomicInteger;
-
 import org.l2j.commons.math.PrimeFinder;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.BitSet;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class BitSetIDFactory extends IdFactory
 {
@@ -49,7 +49,7 @@ public class BitSetIDFactory extends IdFactory
 			nextFreeId = new AtomicInteger(freeIds.nextClearBit(0));
 			initialized = true;
 
-			logger.info("{} id's available.", freeIds.size());
+			logger.info("{} id's available. {} id's used", freeIds.size(), usedIdCount());
 
 		} catch(Exception e) {
 			initialized = false;

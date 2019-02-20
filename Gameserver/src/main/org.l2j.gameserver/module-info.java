@@ -82,6 +82,7 @@ module org.l2j.gameserver {
 
     exports org.l2j.gameserver.settings to org.l2j.scripts;
     exports org.l2j.gameserver.data.dao to org.l2j.scripts;
+    exports org.l2j.gameserver.data.database to org.l2j.scripts;
 
     opens org.l2j.gameserver.data.dao to org.l2j.commons;
     opens org.l2j.gameserver.settings to org.l2j.commons;

@@ -10,7 +10,7 @@ public interface AccountInfoDAO extends DAO {
     AccountInfo findById(String account);
 
     @Query("DELETE FROM account_info WHERE account=:account:")
-    void remove(String account);
+    void delete(String account);
 
     @Query("INSERT INTO account_info (account, premium, premium_expire) VALUES (:account:,:premium:,:premiumExpire:)")
     void save(String account, int premium, long premiumExpire);
