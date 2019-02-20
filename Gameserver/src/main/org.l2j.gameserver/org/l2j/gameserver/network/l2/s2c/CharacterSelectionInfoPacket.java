@@ -37,7 +37,7 @@ public class CharacterSelectionInfoPacket extends L2GameServerPacket
 	public CharacterSelectionInfoPacket(GameClient client)
 	{
 		_loginName = client.getLogin();
-		_sessionId = client.getSessionKey().playOkID1;
+		_sessionId = client.getSessionKey().gameserverSession;
 		_characterPackages = loadCharacterSelectInfo(_loginName);
 		_hasPremiumAccount = client.getPremiumAccountType() > 0 && client.getPremiumAccountExpire() > System.currentTimeMillis() / 1000L;
 	}

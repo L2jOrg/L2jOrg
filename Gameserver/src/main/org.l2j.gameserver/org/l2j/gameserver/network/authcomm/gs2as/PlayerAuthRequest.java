@@ -14,10 +14,10 @@ public class PlayerAuthRequest extends SendablePacket
 	public PlayerAuthRequest(GameClient client)
 	{
 		account = client.getLogin();
-		playOkID1 = client.getSessionKey().playOkID1;
-		playOkID2 = client.getSessionKey().playOkID2;
-		loginOkID1 = client.getSessionKey().loginOkID1;
-		loginOkID2 = client.getSessionKey().loginOkID2;
+		playOkID1 = client.getSessionKey().gameserverSession;
+		playOkID2 = client.getSessionKey().gameserverAccountId;
+		loginOkID1 = client.getSessionKey().authAccountId;
+		loginOkID2 = client.getSessionKey().authKey;
 	}
 
 	protected void writeImpl(AuthServerClient client, ByteBuffer buffer) {

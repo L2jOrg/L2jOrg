@@ -8,27 +8,27 @@ package org.l2j.gameserver.network.authcomm;
  */
 public class SessionKey
 {
-	public final int playOkID1;
-	public final int playOkID2;
-	public final int loginOkID1;
-	public final int loginOkID2;
+	public final int gameserverSession;
+	public final int gameserverAccountId;
+	public final int authAccountId;
+	public final int authKey;
 
 	private final int hashCode;
 
-	public SessionKey(int loginOK1, int loginOK2, int playOK1, int playOK2)
+	public SessionKey(int authAccountId, int authKey, int gameserverSession, int gameserverAccountId)
 	{
-		playOkID1 = playOK1;
-		playOkID2 = playOK2;
-		loginOkID1 = loginOK1;
-		loginOkID2 = loginOK2;
+		this.gameserverSession = gameserverSession;
+		this.gameserverAccountId = gameserverAccountId;
+		this.authAccountId = authAccountId;
+		this.authKey = authKey;
 
-		int hashCode = playOK1;
+		int hashCode = gameserverSession;
 		hashCode *= 17;
-		hashCode += playOK2;
+		hashCode += gameserverAccountId;
 		hashCode *= 37;
-		hashCode += loginOK1;
+		hashCode += authAccountId;
 		hashCode *= 51;
-		hashCode += loginOK2;
+		hashCode += authKey;
 
 		this.hashCode = hashCode;
 	}
@@ -42,7 +42,7 @@ public class SessionKey
 		if(o.getClass() == this.getClass())
 		{
 			SessionKey skey = (SessionKey) o;
-			return playOkID1 == skey.playOkID1 && playOkID2 == skey.playOkID2 && loginOkID1 == skey.loginOkID1 && loginOkID2 == skey.loginOkID2;
+			return gameserverSession == skey.gameserverSession && gameserverAccountId == skey.gameserverAccountId && authAccountId == skey.authAccountId && authKey == skey.authKey;
 		}
 		return false;
 	}
@@ -54,6 +54,6 @@ public class SessionKey
 
 	public String toString()
 	{
-		return new StringBuilder().append("[playOkID1: ").append(playOkID1).append(" playOkID2: ").append(playOkID2).append(" loginOkID1: ").append(loginOkID1).append(" loginOkID2: ").append(loginOkID2).append("]").toString();
+		return new StringBuilder().append("[gameserverSession: ").append(gameserverSession).append(" gameserverAccountId: ").append(gameserverAccountId).append(" authAccountId: ").append(authAccountId).append(" authKey: ").append(authKey).append("]").toString();
 	}
 }

@@ -1,7 +1,6 @@
 package org.l2j.gameserver.network.l2.c2s;
 
 import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.network.l2.GameClient.GameClientState;
 import org.l2j.gameserver.network.l2.s2c.ActionFailPacket;
 import org.l2j.gameserver.network.l2.s2c.CharacterSelectedPacket;
@@ -54,6 +53,6 @@ public class CharacterSelected extends L2GameClientPacket
 
 		client.setState(GameClientState.IN_GAME);
 
-		sendPacket(new CharacterSelectedPacket(activeChar, client.getSessionKey().playOkID1));
+		sendPacket(new CharacterSelectedPacket(activeChar, client.getSessionKey().gameserverSession));
 	}
 }
