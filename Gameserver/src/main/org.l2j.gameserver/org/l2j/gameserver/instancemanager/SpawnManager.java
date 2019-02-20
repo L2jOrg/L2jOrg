@@ -8,7 +8,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.GameTimeController;
-import org.l2j.gameserver.dao.SpawnsDAO;
+import org.l2j.gameserver.data.dao.SpawnsDAO;
 import org.l2j.gameserver.data.xml.holder.NpcHolder;
 import org.l2j.gameserver.data.xml.holder.SpawnHolder;
 import org.l2j.gameserver.listener.game.OnDayNightChangeListener;

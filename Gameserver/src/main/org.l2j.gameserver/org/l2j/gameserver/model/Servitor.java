@@ -15,7 +15,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.ServitorAI;
-import org.l2j.gameserver.dao.EffectsDAO;
+import org.l2j.gameserver.data.dao.EffectsDAO;
 import org.l2j.gameserver.handler.onshiftaction.OnShiftActionHolder;
 import org.l2j.gameserver.instancemanager.ReflectionManager;
 import org.l2j.gameserver.model.actor.instances.creature.Abnormal;

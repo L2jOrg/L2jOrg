@@ -1,7 +1,6 @@
 package org.l2j.gameserver.model.actor.instances.player;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -9,7 +8,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-import org.l2j.gameserver.dao.CharacterPremiumItemsDAO;
+import org.l2j.gameserver.data.dao.CharacterPremiumItemsDAO;
 import org.l2j.gameserver.model.Player;
 
 /**

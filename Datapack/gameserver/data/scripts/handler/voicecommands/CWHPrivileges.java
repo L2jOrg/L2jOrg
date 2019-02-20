@@ -3,7 +3,7 @@ package handler.voicecommands;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;
-import org.l2j.gameserver.database.mysql;
+import org.l2j.gameserver.data.database.mysql;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.pledge.UnitMember;

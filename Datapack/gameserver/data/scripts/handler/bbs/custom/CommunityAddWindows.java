@@ -2,7 +2,7 @@ package handler.bbs.custom;
 
 import handler.bbs.ScriptsCommunityHandler;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.dao.HardwareLimitsDAO;
+import org.l2j.gameserver.data.dao.HardwareLimitsDAO;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.htm.HtmTemplates;
 import org.l2j.gameserver.model.Player;

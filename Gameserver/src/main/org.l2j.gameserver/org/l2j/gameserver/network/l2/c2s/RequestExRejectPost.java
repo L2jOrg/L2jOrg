@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.l2.c2s;
 
-import org.l2j.gameserver.dao.MailDAO;
+import org.l2j.gameserver.data.dao.MailDAO;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.mail.Mail;

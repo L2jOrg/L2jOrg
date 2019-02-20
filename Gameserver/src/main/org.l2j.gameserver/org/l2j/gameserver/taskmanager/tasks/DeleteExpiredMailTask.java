@@ -3,7 +3,7 @@ package org.l2j.gameserver.taskmanager.tasks;
 import java.util.List;
 
 import org.l2j.commons.dao.JdbcEntityState;
-import org.l2j.gameserver.dao.MailDAO;
+import org.l2j.gameserver.data.dao.MailDAO;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.mail.Mail;

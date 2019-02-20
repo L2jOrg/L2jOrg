@@ -2,7 +2,7 @@ package handler.bbs.custom;
 
 import handler.bbs.ScriptsCommunityHandler;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.dao.CharacterDAO;
+import org.l2j.gameserver.data.dao.CharacterDAO;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.htm.HtmTemplates;
 import org.l2j.gameserver.data.xml.holder.PremiumAccountHolder;
@@ -13,7 +13,6 @@ import org.l2j.gameserver.handler.voicecommands.VoicedCommandHandler;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.instances.PetInstance;
 import org.l2j.gameserver.model.pledge.Clan;
-import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.*;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -362,83 +361,80 @@ public class CommunityServices extends ScriptsCommunityHandler
 								return;
 							}
 
-							if(!Config.PREMIUM_ACCOUNT_BASED_ON_GAMESERVER && AuthServerCommunication.getInstance().isShutdown())
-								content.append(tpls.get(4));
-							else
-							{
-								if(!st.hasMoreTokens())
-									return;
 
-								final int schemeId = Integer.parseInt(st.nextToken());
-								final PremiumAccountTemplate paTemplate = PremiumAccountHolder.getInstance().getPremiumAccount(schemeId);
-								if(paTemplate == null)
-								{
-									_log.warn(getClass().getSimpleName() + ": Error while open info about premium account scheme ID[" + schemeId + "]! Scheme is null.");
-									return;
-								}
+                            if(!st.hasMoreTokens())
+                                return;
 
-								final int schemeDelay = Integer.parseInt(st.nextToken());
+                            final int schemeId = Integer.parseInt(st.nextToken());
+                            final PremiumAccountTemplate paTemplate = PremiumAccountHolder.getInstance().getPremiumAccount(schemeId);
+                            if(paTemplate == null)
+                            {
+                                _log.warn(getClass().getSimpleName() + ": Error while open info about premium account scheme ID[" + schemeId + "]! Scheme is null.");
+                                return;
+                            }
 
-								ItemData[] feeItems = paTemplate.getFeeItems(schemeDelay);
-								if(feeItems == null)
-									return;
+                            final int schemeDelay = Integer.parseInt(st.nextToken());
 
-								if(player.hasPremiumAccount() && player.getPremiumAccount() != paTemplate)
-								{
-									int premiumAccountExpire = player.getNetConnection().getPremiumAccountExpire();
-									if(premiumAccountExpire != Integer.MAX_VALUE)
-									{
-										String expireBlock = tpls.get(5);
-										expireBlock = expireBlock.replace("<?date_expire?>", TimeUtils.toSimpleFormat(premiumAccountExpire * 1000L));
-										content.append(expireBlock);
-									}
-									else
-										content.append(tpls.get(8));
-								}
-								else
-								{
-									boolean success = true;
+                            ItemData[] feeItems = paTemplate.getFeeItems(schemeDelay);
+                            if(feeItems == null)
+                                return;
 
-									if(feeItems.length > 0)
-									{
-										for(ItemData feeItem : feeItems)
-										{
-											if(!ItemFunctions.haveItem(player, feeItem.getId(), feeItem.getCount()))
-											{
-												success = false;
-												break;
-											}
-										}
+                            if(player.hasPremiumAccount() && player.getPremiumAccount() != paTemplate)
+                            {
+                                long premiumAccountExpire = player.getNetConnection().getPremiumAccountExpire();
+                                if(premiumAccountExpire != Integer.MAX_VALUE)
+                                {
+                                    String expireBlock = tpls.get(5);
+                                    expireBlock = expireBlock.replace("<?date_expire?>", TimeUtils.toSimpleFormat(premiumAccountExpire * 1000L));
+                                    content.append(expireBlock);
+                                }
+                                else
+                                    content.append(tpls.get(8));
+                            }
+                            else
+                            {
+                                boolean success = true;
 
-										if(success)
-										{
-											for(ItemData feeItem : feeItems)
-												ItemFunctions.deleteItem(player, feeItem.getId(), feeItem.getCount());
-										}
-										else
-											content.append(tpls.get(7));
-									}
-		
-									if(success)
-									{
-										if(player.givePremiumAccount(paTemplate, schemeDelay))
-											player.broadcastPacket(new MagicSkillUse(player, player, 23128, 1, 1, 0));
-										else
-										{
-											if(feeItems.length > 0)
-											{
-												for(ItemData feeItem : feeItems)
-													ItemFunctions.addItem(player, feeItem.getId(), feeItem.getCount());
-											}
-										}
+                                if(feeItems.length > 0)
+                                {
+                                    for(ItemData feeItem : feeItems)
+                                    {
+                                        if(!ItemFunctions.haveItem(player, feeItem.getId(), feeItem.getCount()))
+                                        {
+                                            success = false;
+                                            break;
+                                        }
+                                    }
 
-										IBbsHandler handler = BbsHandlerHolder.getInstance().getCommunityHandler("_cbbsservices_pa");
-										if(handler != null)
-											onBypassCommand(player, "_cbbsservices_pa");
-										return;
-									}
-								}
-							}
+                                    if(success)
+                                    {
+                                        for(ItemData feeItem : feeItems)
+                                            ItemFunctions.deleteItem(player, feeItem.getId(), feeItem.getCount());
+                                    }
+                                    else
+                                        content.append(tpls.get(7));
+                                }
+
+                                if(success)
+                                {
+                                    if(player.givePremiumAccount(paTemplate, schemeDelay))
+                                        player.broadcastPacket(new MagicSkillUse(player, player, 23128, 1, 1, 0));
+                                    else
+                                    {
+                                        if(feeItems.length > 0)
+                                        {
+                                            for(ItemData feeItem : feeItems)
+                                                ItemFunctions.addItem(player, feeItem.getId(), feeItem.getCount());
+                                        }
+                                    }
+
+                                    IBbsHandler handler = BbsHandlerHolder.getInstance().getCommunityHandler("_cbbsservices_pa");
+                                    if(handler != null)
+                                        onBypassCommand(player, "_cbbsservices_pa");
+                                    return;
+                                }
+                            }
+
 						}
 					}
 					else
@@ -446,7 +442,7 @@ public class CommunityServices extends ScriptsCommunityHandler
 						if(player.hasPremiumAccount())
 						{
 							PremiumAccountTemplate paTemplate = player.getPremiumAccount();
-							int premiumAccountExpire = player.getNetConnection().getPremiumAccountExpire();
+							long premiumAccountExpire = player.getNetConnection().getPremiumAccountExpire();
 							if(premiumAccountExpire != Integer.MAX_VALUE)
 							{
 								String expireBlock = tpls.get(15);

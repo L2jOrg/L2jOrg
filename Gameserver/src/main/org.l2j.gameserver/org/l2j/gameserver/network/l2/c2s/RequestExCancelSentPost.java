@@ -4,7 +4,7 @@ import java.nio.ByteBuffer;
 import java.util.Set;
 
 import org.l2j.commons.math.SafeMath;
-import org.l2j.gameserver.dao.MailDAO;
+import org.l2j.gameserver.data.dao.MailDAO;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.model.mail.Mail;

@@ -30,12 +30,10 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.listener.script;
     exports org.l2j.gameserver.handler.petition;
     exports org.l2j.gameserver.data.htm;
-    exports org.l2j.gameserver.database;
     exports org.l2j.gameserver.handler.bbs;
     exports org.l2j.gameserver.model.entity.events.impl;
     exports org.l2j.gameserver.model.entity.olympiad;
     exports org.l2j.gameserver.templates.item;
-    exports org.l2j.gameserver.dao;
     exports org.l2j.gameserver.handler.voicecommands;
     exports org.l2j.gameserver.model.pledge;
     exports org.l2j.gameserver.network.authcomm;
@@ -80,8 +78,11 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.model.actor.flags;
     exports org.l2j.gameserver.templates.player;
     exports org.l2j.gameserver.model.actor.flags.flag;
-    exports org.l2j.gameserver.settings to org.l2j.scripts;
 
-    opens org.l2j.gameserver.dao to org.l2j.commons;
+
+    exports org.l2j.gameserver.settings to org.l2j.scripts;
+    exports org.l2j.gameserver.data.dao to org.l2j.scripts;
+
+    opens org.l2j.gameserver.data.dao to org.l2j.commons;
     opens org.l2j.gameserver.settings to org.l2j.commons;
 }

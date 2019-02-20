@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import org.l2j.gameserver.dao.OlympiadHistoryDAO;
+import org.l2j.gameserver.data.dao.OlympiadHistoryDAO;
 import org.l2j.gameserver.data.string.StringsHolder;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.Hero;

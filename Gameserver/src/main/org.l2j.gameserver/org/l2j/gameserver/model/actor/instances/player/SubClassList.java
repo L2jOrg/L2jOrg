@@ -4,10 +4,8 @@ import java.util.Collection;
 import java.util.List;
 import java.util.TreeMap;
 
-import org.l2j.gameserver.dao.CharacterSubclassDAO;
+import org.l2j.gameserver.data.dao.CharacterSubclassDAO;
 import org.l2j.gameserver.model.Player;
-import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.model.base.ClassLevel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

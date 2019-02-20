@@ -5,7 +5,7 @@ import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.commons.database.L2DatabaseFactory;
-import org.l2j.gameserver.database.mysql;
+import org.l2j.gameserver.data.database.mysql;
 import org.l2j.gameserver.handler.voicecommands.IVoicedCommandHandler;
 import org.l2j.gameserver.handler.voicecommands.VoicedCommandHandler;
 import org.l2j.gameserver.listener.script.OnInitScriptListener;

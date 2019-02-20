@@ -6,10 +6,10 @@ import java.util.List;
 
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.gameserver.Contants.Items;
-import org.l2j.gameserver.dao.CharacterDAO;
+import org.l2j.gameserver.data.dao.CharacterDAO;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;
 import org.l2j.gameserver.data.xml.holder.ProductDataHolder;
-import org.l2j.gameserver.database.mysql;
+import org.l2j.gameserver.data.database.mysql;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.model.mail.Mail;

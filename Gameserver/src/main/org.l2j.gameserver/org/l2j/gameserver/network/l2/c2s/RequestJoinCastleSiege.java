@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.l2.c2s;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.dao.SiegeClanDAO;
+import org.l2j.gameserver.data.dao.SiegeClanDAO;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.events.impl.CastleSiegeEvent;

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.l2.c2s;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.database.mysql;
+import org.l2j.gameserver.data.database.mysql;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.network.l2.s2c.CharacterDeleteFailPacket;
 import org.l2j.gameserver.network.l2.s2c.CharacterDeleteSuccessPacket;

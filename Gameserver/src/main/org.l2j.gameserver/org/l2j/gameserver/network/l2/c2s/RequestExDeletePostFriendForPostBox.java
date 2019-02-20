@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.l2.c2s;
 
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.dao.CharacterPostFriendDAO;
+import org.l2j.gameserver.data.dao.CharacterPostFriendDAO;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;

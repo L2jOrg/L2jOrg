@@ -4,7 +4,7 @@ import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.dao.ClanLeaderRequestDAO;
+import org.l2j.gameserver.data.dao.ClanLeaderRequestDAO;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.ServerVariables;
 import org.l2j.gameserver.model.GameObjectsStorage;

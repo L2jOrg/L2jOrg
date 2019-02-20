@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.Collections;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.dao.CharacterDailyMissionsDAO;
+import org.l2j.gameserver.data.dao.CharacterDailyMissionsDAO;
 import org.l2j.gameserver.data.xml.holder.DailyMissionsHolder;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.SystemMsg;

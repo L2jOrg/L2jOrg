@@ -1,7 +1,7 @@
 package org.l2j.gameserver.handler.items.impl;
 
 import org.l2j.commons.dao.JdbcEntityState;
-import org.l2j.gameserver.dao.CastleHiredGuardDAO;
+import org.l2j.gameserver.data.dao.CastleHiredGuardDAO;
 import org.l2j.gameserver.instancemanager.ReflectionManager;
 import org.l2j.gameserver.model.Playable;
 import org.l2j.gameserver.model.Player;

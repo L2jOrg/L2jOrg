@@ -148,7 +148,6 @@ public class Config
     public static boolean BANCHAT_ANNOUNCE_NICK;
 
     public static boolean PREMIUM_ACCOUNT_ENABLED;
-    public static boolean PREMIUM_ACCOUNT_BASED_ON_GAMESERVER;
     public static int FREE_PA_TYPE;
     public static int FREE_PA_DELAY;
     public static boolean ENABLE_FREE_PA_NOTIFICATION;

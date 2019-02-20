@@ -6,7 +6,7 @@ import org.l2j.commons.lang.reference.HardReference;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.dao.SummonsDAO;
+import org.l2j.gameserver.data.dao.SummonsDAO;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.Player;

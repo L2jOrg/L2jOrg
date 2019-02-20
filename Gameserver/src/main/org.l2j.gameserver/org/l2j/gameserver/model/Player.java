@@ -27,10 +27,10 @@ import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.PlayableAI.AINextAction;
 import org.l2j.gameserver.ai.PlayerAI;
-import org.l2j.gameserver.dao.*;
 import org.l2j.gameserver.data.QuestHolder;
+import org.l2j.gameserver.data.dao.*;
+import org.l2j.gameserver.data.database.mysql;
 import org.l2j.gameserver.data.xml.holder.*;
-import org.l2j.gameserver.database.mysql;
 import org.l2j.gameserver.handler.items.IItemHandler;
 import org.l2j.gameserver.handler.onshiftaction.OnShiftActionHolder;
 import org.l2j.gameserver.idfactory.IdFactory;
@@ -80,7 +80,6 @@ import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestEventType;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
-import org.l2j.gameserver.network.authcomm.gs2as.BonusRequest;
 import org.l2j.gameserver.network.authcomm.gs2as.ReduceAccountPoints;
 import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.network.l2.components.*;
@@ -127,6 +126,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.gameserver.network.l2.s2c.ExSetCompassZoneCode.*;
 
 public final class Player extends Playable implements PlayerGroup
@@ -7163,22 +7163,15 @@ public final class Player extends Playable implements PlayerGroup
         int expireTime = (delay > 0) ? (int) ((delay * 60 * 60) + (System.currentTimeMillis() / 1000)) : Integer.MAX_VALUE;
         boolean extended = false;
         int oldAccountType = getNetConnection().getPremiumAccountType();
-        int oldAccountExpire = getNetConnection().getPremiumAccountExpire();
+        long oldAccountExpire = getNetConnection().getPremiumAccountExpire();
         if(oldAccountType == type && oldAccountExpire > (System.currentTimeMillis() / 1000))
         {
             expireTime += (int) (oldAccountExpire - (System.currentTimeMillis() / 1000));
             extended = true;
         }
 
-        if(Config.PREMIUM_ACCOUNT_BASED_ON_GAMESERVER)
-            PremiumAccountDAO.getInstance().insert(getAccountName(), type, expireTime);
-        else
-        {
-            if(AuthServerCommunication.getInstance().isShutdown())
-                return false;
 
-            AuthServerCommunication.getInstance().sendPacket(new BonusRequest(getAccountName(), type, expireTime));
-        }
+        getDAO(AccountInfoDAO.class).save(getAccountName(), type, expireTime);
 
         getNetConnection().setPremiumAccountType(type);
         getNetConnection().setPremiumAccountExpire(expireTime);
@@ -7229,10 +7222,7 @@ public final class Player extends Playable implements PlayerGroup
         if(getParty() != null)
             getParty().recalculatePartyData();
 
-        if(Config.PREMIUM_ACCOUNT_BASED_ON_GAMESERVER)
-            PremiumAccountDAO.getInstance().delete(getAccountName());
-        else
-            AuthServerCommunication.getInstance().sendPacket(new BonusRequest(getAccountName(), 0, 0));
+        getDAO(AccountInfoDAO.class).remove(getAccountName());
 
         if(getNetConnection() != null)
         {
@@ -7266,7 +7256,7 @@ public final class Player extends Playable implements PlayerGroup
             if(Config.ENABLE_FREE_PA_NOTIFICATION)
             {
                 CustomMessage message = null;
-                int accountExpire = getNetConnection().getPremiumAccountExpire();
+                long accountExpire = getNetConnection().getPremiumAccountExpire();
                 if(accountExpire != Integer.MAX_VALUE)
                 {
                     message = new CustomMessage("org.l2j.gameserver.model.Player.GiveFreePA");
@@ -7297,7 +7287,7 @@ public final class Player extends Playable implements PlayerGroup
         PremiumAccountTemplate premiumAccount = accountType == 0 ? null : PremiumAccountHolder.getInstance().getPremiumAccount(accountType);
         if(premiumAccount != null)
         {
-            int accountExpire = getNetConnection().getPremiumAccountExpire();
+            long accountExpire = getNetConnection().getPremiumAccountExpire();
             if(accountExpire > System.currentTimeMillis() / 1000L)
             {
                 _premiumAccount = premiumAccount;
@@ -7346,16 +7336,13 @@ public final class Player extends Playable implements PlayerGroup
 
                 return true;
             }
-            if(!Config.PREMIUM_ACCOUNT_BASED_ON_GAMESERVER)
-                AuthServerCommunication.getInstance().sendPacket(new BonusRequest(getAccountName(), 0, 0));
         }
 
         removePremiumAccountItems(true);
         if(tryGiveFreePremiumAccount())
             return false;
 
-        if(Config.PREMIUM_ACCOUNT_BASED_ON_GAMESERVER)
-            PremiumAccountDAO.getInstance().delete(getAccountName());
+        getDAO(AccountInfoDAO.class).remove(getAccountName());
 
         if(getNetConnection() != null)
         {

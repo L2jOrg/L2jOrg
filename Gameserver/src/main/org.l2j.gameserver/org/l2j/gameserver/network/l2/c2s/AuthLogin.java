@@ -39,8 +39,6 @@ public class AuthLogin extends L2GameClientPacket
     @Override
     protected void runImpl()
     {
-
-
         SessionKey key = new SessionKey(_loginKey1, _loginKey2, _playKey1, _playKey2);
         client.setSessionId(key);
         client.setLoginName(_loginName);

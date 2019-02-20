@@ -3,9 +3,8 @@ package npc.model.residences.clanhall;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.Contants;
 import org.l2j.gameserver.Contants.Items;
-import org.l2j.gameserver.dao.SiegeClanDAO;
+import org.l2j.gameserver.data.dao.SiegeClanDAO;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.events.impl.ClanHallAuctionEvent;
@@ -22,7 +21,6 @@ import org.l2j.gameserver.model.pledge.Privilege;
 import org.l2j.gameserver.network.l2.components.HtmlMessage;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
-import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.templates.npc.NpcTemplate;
 import org.l2j.gameserver.utils.HtmlUtils;
 

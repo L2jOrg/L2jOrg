@@ -6,7 +6,7 @@
 	<!--free_type - тип премиум аккаунта, выдаваемого бесплатно, при создании первого персонажа.-->
 	<!--free_delay - время действия премиум аккаунта, выдаваемого бесплатно, при создании первого персонажа (в часах).-->
 	<!--notify_free - сообщать персонажу о выдаче бесплатного премиум аккаунта.-->
-	<config enabled="false" based_on_gameserver="true" free_type="0" free_delay="0" notify_free="true"/>
+	<config enabled="false" free_type="0" free_delay="0" notify_free="true"/>
 	<account type="1">
 		<name>
 			<en>Rates x1.5</en>

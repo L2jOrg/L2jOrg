@@ -7,7 +7,6 @@ import org.l2j.gameserver.data.xml.holder.PremiumAccountHolder;
 import org.l2j.gameserver.handler.bypass.Bypass;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.instances.NpcInstance;
-import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.templates.item.data.ItemData;
 import org.l2j.gameserver.templates.premiumaccount.PremiumAccountTemplate;
@@ -83,12 +82,6 @@ public class RateBonus
 		if(!Config.PREMIUM_ACCOUNT_ENABLED)
 		{
 			Functions.show(HtmCache.getInstance().getHtml("npcdefault.htm", player), player);
-			return;
-		}
-
-		if(!Config.PREMIUM_ACCOUNT_BASED_ON_GAMESERVER && AuthServerCommunication.getInstance().isShutdown())
-		{
-			list(player, npc, new String[0]);
 			return;
 		}
 

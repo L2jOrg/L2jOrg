@@ -2,7 +2,7 @@ package org.l2j.gameserver.handler.admincommands.impl;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.dao.OlympiadParticipantsDAO;
+import org.l2j.gameserver.data.dao.OlympiadParticipantsDAO;
 import org.l2j.gameserver.data.string.ItemNameHolder;
 import org.l2j.gameserver.data.string.SkillNameHolder;
 import org.l2j.gameserver.data.string.StringsHolder;
@@ -19,7 +19,6 @@ import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.network.l2.components.HtmlMessage;
 import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.utils.Strings;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 

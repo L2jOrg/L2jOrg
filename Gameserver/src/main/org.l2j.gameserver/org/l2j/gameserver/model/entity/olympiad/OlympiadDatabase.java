@@ -4,7 +4,7 @@ import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Announcements;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.dao.OlympiadParticipantsDAO;
+import org.l2j.gameserver.data.dao.OlympiadParticipantsDAO;
 import org.l2j.gameserver.instancemanager.ServerVariables;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.base.ClassLevel;

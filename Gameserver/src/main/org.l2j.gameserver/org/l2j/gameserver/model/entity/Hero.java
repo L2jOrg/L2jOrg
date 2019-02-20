@@ -7,7 +7,7 @@ import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.string.StringsHolder;
-import org.l2j.gameserver.database.mysql;
+import org.l2j.gameserver.data.database.mysql;
 import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.base.SubClassType;

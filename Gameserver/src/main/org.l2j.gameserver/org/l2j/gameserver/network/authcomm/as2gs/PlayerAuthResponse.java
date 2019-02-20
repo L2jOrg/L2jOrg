@@ -2,8 +2,8 @@ package org.l2j.gameserver.network.authcomm.as2gs;
 
 import org.l2j.commons.network.SessionKey;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.dao.HardwareLimitsDAO;
-import org.l2j.gameserver.dao.PremiumAccountDAO;
+import org.l2j.gameserver.data.dao.AccountInfoDAO;
+import org.l2j.gameserver.data.dao.HardwareLimitsDAO;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
@@ -18,6 +18,7 @@ import java.util.List;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 public class PlayerAuthResponse extends ReceivablePacket {
     private String account;
@@ -26,8 +27,6 @@ public class PlayerAuthResponse extends ReceivablePacket {
     private int gameserverAccountId;
     private int authAccountId;
     private int authKey;
-    private int bonus;
-    private int bonusExpire;
     private int points;
     private String hwid;
     private long phoneNumber;
@@ -99,15 +98,8 @@ public class PlayerAuthResponse extends ReceivablePacket {
 
             client.setState(GameClient.GameClientState.AUTHED);
             client.sendPacket(LoginResultPacket.SUCCESS);
+            client.setAccountInfo(getDAO(AccountInfoDAO.class).findById(account));
 
-            if(Config.PREMIUM_ACCOUNT_BASED_ON_GAMESERVER) {
-                int[] bonuses = PremiumAccountDAO.getInstance().select(account);
-                bonus = bonuses[0];
-                bonusExpire = bonuses[1];
-            }
-
-            client.setPremiumAccountType(bonus);
-            client.setPremiumAccountExpire(bonusExpire);
             client.setPoints(points);
 
             GameClient oldClient = AuthServerCommunication.getInstance().addAuthedClient(client);

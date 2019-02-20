@@ -5,7 +5,7 @@ import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.dao.CharacterDAO;
+import org.l2j.gameserver.data.dao.CharacterDAO;
 import org.l2j.gameserver.handler.admincommands.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.ReflectionManager;
 import org.l2j.gameserver.model.GameObject;

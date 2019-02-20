@@ -14,7 +14,7 @@ import org.l2j.gameserver.cache.CrestCache;
 import org.l2j.gameserver.data.xml.holder.EventHolder;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
-import org.l2j.gameserver.database.mysql;
+import org.l2j.gameserver.data.database.mysql;
 import org.l2j.gameserver.instancemanager.clansearch.ClanSearchManager;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Skill;

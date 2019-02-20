@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.items;
 
 import java.util.Calendar;
 
-import org.l2j.gameserver.dao.CharacterDAO;
+import org.l2j.gameserver.data.dao.CharacterDAO;
 
 /**
  * @author Bonux

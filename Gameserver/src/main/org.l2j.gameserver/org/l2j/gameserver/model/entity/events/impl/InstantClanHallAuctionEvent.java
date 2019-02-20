@@ -8,9 +8,8 @@ import java.util.List;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.Contants;
 import org.l2j.gameserver.Contants.Items;
-import org.l2j.gameserver.dao.SiegeClanDAO;
+import org.l2j.gameserver.data.dao.SiegeClanDAO;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.events.actions.StartStopAction;
 import org.l2j.gameserver.model.entity.events.objects.SiegeClanObject;
@@ -18,7 +17,6 @@ import org.l2j.gameserver.model.entity.residence.Residence;
 import org.l2j.gameserver.model.entity.residence.clanhall.InstantClanHall;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
-import org.l2j.gameserver.templates.item.ItemTemplate;
 
 public class InstantClanHallAuctionEvent extends SiegeEvent<InstantClanHall, SiegeClanObject>
 {

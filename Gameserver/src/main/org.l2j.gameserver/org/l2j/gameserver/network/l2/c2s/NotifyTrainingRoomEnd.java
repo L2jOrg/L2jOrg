@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.l2.c2s;
 
-import org.l2j.gameserver.dao.CharacterTrainingCampDAO;
+import org.l2j.gameserver.data.dao.CharacterTrainingCampDAO;
 import org.l2j.gameserver.instancemanager.TrainingCampManager;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.actor.instances.player.TrainingCamp;

@@ -5,7 +5,7 @@ import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import io.github.joealisson.primitive.pair.IntIntPair;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.dao.CharacterHennaDAO;
+import org.l2j.gameserver.data.dao.CharacterHennaDAO;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.s2c.ExPeriodicHenna;

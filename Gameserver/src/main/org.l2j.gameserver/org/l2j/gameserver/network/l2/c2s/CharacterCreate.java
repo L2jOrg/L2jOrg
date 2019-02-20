@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.l2.c2s;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.dao.CharacterDAO;
+import org.l2j.gameserver.data.dao.CharacterDAO;
 import org.l2j.gameserver.listener.hooks.ListenerHook;
 import org.l2j.gameserver.listener.hooks.ListenerHookType;
 import org.l2j.gameserver.model.Player;

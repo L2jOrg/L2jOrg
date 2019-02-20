@@ -4,7 +4,7 @@ import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.listener.Listener;
 import org.l2j.commons.listener.ListenerList;
 import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.dao.ItemsDAO;
+import org.l2j.gameserver.data.dao.ItemsDAO;
 import org.l2j.gameserver.instancemanager.ReflectionManager;
 import org.l2j.gameserver.listener.event.OnStartStopListener;
 import org.l2j.gameserver.model.*;

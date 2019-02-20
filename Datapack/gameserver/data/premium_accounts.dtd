@@ -4,7 +4,6 @@
 	<!ELEMENT config (#PCDATA)>
 	<!ATTLIST config
 		enabled CDATA #REQUIRED
-		based_on_gameserver CDATA #REQUIRED
 		free_type CDATA #IMPLIED
 		free_delay CDATA #IMPLIED
 		notify_free CDATA #IMPLIED>

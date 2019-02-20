@@ -9,8 +9,7 @@ import java.util.regex.Pattern;
 
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.gameserver.ai.CharacterAI;
-import org.l2j.gameserver.ai.NpcAI;
-import org.l2j.gameserver.dao.SpawnsDAO;
+import org.l2j.gameserver.data.dao.SpawnsDAO;
 import org.l2j.gameserver.data.xml.holder.NpcHolder;
 import org.l2j.gameserver.handler.admincommands.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.RaidBossSpawnManager;

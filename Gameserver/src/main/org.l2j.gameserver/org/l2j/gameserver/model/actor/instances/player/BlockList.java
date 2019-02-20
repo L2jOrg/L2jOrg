@@ -3,8 +3,8 @@ package org.l2j.gameserver.model.actor.instances.player;
 import java.util.Collection;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.dao.CharacterBlockListDAO;
-import org.l2j.gameserver.dao.CharacterDAO;
+import org.l2j.gameserver.data.dao.CharacterBlockListDAO;
+import org.l2j.gameserver.data.dao.CharacterDAO;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.network.l2.components.SystemMsg;

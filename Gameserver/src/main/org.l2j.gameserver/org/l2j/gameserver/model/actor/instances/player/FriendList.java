@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.actor.instances.player;
 import java.util.Collection;
 
 import org.l2j.gameserver.network.l2.s2c.*;
-import org.l2j.gameserver.dao.CharacterFriendDAO;
+import org.l2j.gameserver.data.dao.CharacterFriendDAO;
 import org.l2j.gameserver.model.GameObject;
 import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;

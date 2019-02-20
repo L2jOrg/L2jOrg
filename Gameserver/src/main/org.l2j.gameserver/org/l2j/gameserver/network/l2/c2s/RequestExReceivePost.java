@@ -6,7 +6,7 @@ import java.util.Set;
 import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.math.SafeMath;
 import org.l2j.gameserver.Contants.Items;
-import org.l2j.gameserver.dao.MailDAO;
+import org.l2j.gameserver.data.dao.MailDAO;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.items.ItemInstance;

@@ -11,7 +11,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.holder.NpcHolder;
 import org.l2j.gameserver.data.xml.holder.SpawnHolder;
-import org.l2j.gameserver.database.mysql;
+import org.l2j.gameserver.data.database.mysql;
 import org.l2j.gameserver.geodata.GeoEngine;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.EventTriggersManager;

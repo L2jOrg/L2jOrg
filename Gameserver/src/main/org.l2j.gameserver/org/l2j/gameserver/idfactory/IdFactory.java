@@ -2,6 +2,9 @@ package org.l2j.gameserver.idfactory;
 
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.gameserver.dao.*;
+import org.l2j.gameserver.data.dao.ICharacterDAO;
+import org.l2j.gameserver.data.dao.IItemsDAO;
+import org.l2j.gameserver.data.dao.IdFactoryDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

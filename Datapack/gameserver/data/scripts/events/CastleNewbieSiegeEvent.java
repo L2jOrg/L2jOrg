@@ -1,7 +1,7 @@
 package events;
 
 import org.l2j.commons.collections.MultiValueSet;
-import org.l2j.gameserver.dao.SiegeClanDAO;
+import org.l2j.gameserver.data.dao.SiegeClanDAO;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.events.impl.CastleSiegeEvent;
 import org.l2j.gameserver.model.entity.events.objects.SiegeClanObject;

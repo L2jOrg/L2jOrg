@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.dao.ItemsDAO;
+import org.l2j.gameserver.data.dao.ItemsDAO;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.items.Inventory;
 import org.l2j.gameserver.model.items.ItemInstance;

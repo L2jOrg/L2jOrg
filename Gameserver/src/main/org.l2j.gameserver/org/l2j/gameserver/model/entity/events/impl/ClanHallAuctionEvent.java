@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.dao.JdbcEntityState;
-import org.l2j.gameserver.dao.SiegeClanDAO;
+import org.l2j.gameserver.data.dao.SiegeClanDAO;
 import org.l2j.gameserver.instancemanager.PlayerMessageStack;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.events.actions.StartStopAction;

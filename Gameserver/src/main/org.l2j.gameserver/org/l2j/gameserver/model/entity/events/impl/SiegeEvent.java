@@ -5,7 +5,7 @@ import org.l2j.commons.dao.JdbcEntityState;
 import org.l2j.commons.lang.reference.HardReference;
 import org.l2j.commons.lang.reference.HardReferences;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.dao.SiegeClanDAO;
+import org.l2j.gameserver.data.dao.SiegeClanDAO;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.instancemanager.ReflectionManager;
 import org.l2j.gameserver.listener.actor.OnDeathListener;

@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import org.l2j.gameserver.dao.CharacterProductHistoryDAO;
+import org.l2j.gameserver.data.dao.CharacterProductHistoryDAO;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.templates.item.product.ProductItem;
 import io.github.joealisson.primitive.maps.IntObjectMap;

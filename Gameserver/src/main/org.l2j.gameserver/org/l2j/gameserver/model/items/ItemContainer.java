@@ -7,7 +7,7 @@ import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 import org.l2j.commons.math.SafeMath;
-import org.l2j.gameserver.dao.ItemsDAO;
+import org.l2j.gameserver.data.dao.ItemsDAO;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.utils.ItemFunctions;
 import org.slf4j.Logger;

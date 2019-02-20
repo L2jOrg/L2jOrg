@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.l2j.commons.collections.CollectionUtils;
 import org.l2j.commons.collections.MultiValueSet;
-import org.l2j.gameserver.dao.SiegeClanDAO;
-import org.l2j.gameserver.dao.SiegePlayerDAO;
+import org.l2j.gameserver.data.dao.SiegeClanDAO;
+import org.l2j.gameserver.data.dao.SiegePlayerDAO;
 import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.base.RestartType;

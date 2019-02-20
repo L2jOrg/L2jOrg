@@ -10,7 +10,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 import org.l2j.commons.time.cron.SchedulingPattern;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.dao.AccountVariablesDAO;
+import org.l2j.gameserver.data.dao.AccountVariablesDAO;
 import org.l2j.gameserver.data.xml.holder.AttendanceRewardHolder;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.SystemMsg;

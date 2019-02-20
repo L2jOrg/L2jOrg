@@ -1,19 +1,15 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.io.File;
-import java.util.Iterator;
-
+import org.dom4j.Element;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.PremiumAccountHolder;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.templates.item.data.ItemData;
-import org.l2j.gameserver.templates.premiumaccount.PremiumAccountBonus;
-import org.l2j.gameserver.templates.premiumaccount.PremiumAccountModifiers;
-import org.l2j.gameserver.templates.premiumaccount.PremiumAccountProperties;
-import org.l2j.gameserver.templates.premiumaccount.PremiumAccountRates;
-import org.l2j.gameserver.templates.premiumaccount.PremiumAccountTemplate;
+import org.l2j.gameserver.templates.premiumaccount.*;
 import org.l2j.gameserver.utils.Language;
-import org.dom4j.Element;
+
+import java.io.File;
+import java.util.Iterator;
 
 /**
  * @author Bonux
@@ -52,7 +48,6 @@ public final class PremiumAccountParser extends StatParser<PremiumAccountHolder>
 			Element element = iterator.next();
 
 			Config.PREMIUM_ACCOUNT_ENABLED = Boolean.parseBoolean(element.attributeValue("enabled"));
-			Config.PREMIUM_ACCOUNT_BASED_ON_GAMESERVER = Boolean.parseBoolean(element.attributeValue("based_on_gameserver"));
 			Config.FREE_PA_TYPE = element.attributeValue("free_type") == null ? 0 : Integer.parseInt(element.attributeValue("free_type"));
 			Config.FREE_PA_DELAY = element.attributeValue("free_delay") == null ? 0 : Integer.parseInt(element.attributeValue("free_delay"));
 			Config.ENABLE_FREE_PA_NOTIFICATION = element.attributeValue("notify_free") == null ? false : Boolean.parseBoolean(element.attributeValue("notify_free"));

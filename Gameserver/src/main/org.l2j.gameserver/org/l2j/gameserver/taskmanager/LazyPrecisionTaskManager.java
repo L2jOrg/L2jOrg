@@ -47,7 +47,7 @@ public class LazyPrecisionTaskManager extends SteppingRunnableQueueManager
 		}, delay, delay);
 	}
 
-	public Future<?> startPremiumAccountExpirationTask(Player player, int expire)
+	public Future<?> startPremiumAccountExpirationTask(Player player, long expire)
 	{
 		long delay = expire * 1000L - System.currentTimeMillis();
 

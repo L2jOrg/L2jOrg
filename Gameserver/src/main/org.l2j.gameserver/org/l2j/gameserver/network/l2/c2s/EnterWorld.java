@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.l2.c2s;
 import io.github.joealisson.primitive.pair.IntObjectPair;
 import org.l2j.gameserver.Announcements;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.dao.MailDAO;
+import org.l2j.gameserver.data.dao.MailDAO;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.string.StringsHolder;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;

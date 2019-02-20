@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.entity.residence;
 
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.model.entity.residence.clanhall.InstantClanHall;
-import org.l2j.gameserver.dao.ClanHallDAO;
+import org.l2j.gameserver.data.dao.ClanHallDAO;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.templates.StatsSet;

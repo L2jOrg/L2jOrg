@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.l2.c2s;
 
-import org.l2j.gameserver.dao.PetDAO;
+import org.l2j.gameserver.data.dao.PetDAO;
 import org.l2j.gameserver.data.xml.holder.PetDataHolder;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInstance;

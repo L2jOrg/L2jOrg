@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.mail;
 
 import org.l2j.commons.dao.JdbcEntity;
 import org.l2j.commons.dao.JdbcEntityState;
-import org.l2j.gameserver.dao.MailDAO;
+import org.l2j.gameserver.data.dao.MailDAO;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 

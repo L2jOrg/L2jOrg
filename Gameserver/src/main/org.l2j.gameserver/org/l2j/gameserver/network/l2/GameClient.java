@@ -5,7 +5,8 @@ import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.network.SessionKey;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.dao.CharacterDAO;
+import org.l2j.gameserver.data.dao.CharacterDAO;
+import org.l2j.gameserver.data.model.AccountInfo;
 import org.l2j.gameserver.model.CharSelectInfoPackage;
 import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
@@ -33,22 +34,12 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
 	private static final Logger _log = LoggerFactory.getLogger(GameClient.class);
 	private static final String NO_IP = "?.?.?.?";
 
-	public GameCrypt _crypt = null;
+	private GameCrypt _crypt;
 
 	public GameClientState _state;
+	private AccountInfo accountInfo;
 
-	public static enum GameClientState
-	{
-		CONNECTED,
-		AUTHED,
-		IN_GAME,
-		DISCONNECTED
-	}
-
-	/** Данные аккаунта */
 	private String _login;
-	private int _premiumAccountType = 0;
-	private int _premiumAccountExpire;
 	private int _points = 0;
 	private Language _language = Config.DEFAULT_LANG;
 	private long _phoneNumber = 0L;
@@ -70,6 +61,10 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
 
 		_state = GameClientState.CONNECTED;
 		_crypt = new GameCrypt();
+	}
+
+	public void setAccountInfo(AccountInfo accountInfo) {
+		this.accountInfo = accountInfo;
 	}
 
 	@Override
@@ -335,29 +330,24 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
 		return key;
 	}
 
-	public boolean hasPremiumAccount()
-	{
-		return _premiumAccountType != 0 && _premiumAccountExpire > System.currentTimeMillis() / 1000L;
+	public boolean hasPremiumAccount() {
+		return accountInfo.getPremium() != 0 && accountInfo.getPremiumExpire() > System.currentTimeMillis() / 1000L;
 	}
 
-	public void setPremiumAccountType(int type)
-	{
-		_premiumAccountType = type;
+	public void setPremiumAccountType(int type) {
+		accountInfo.setPremium(type);
 	}
 
-	public int getPremiumAccountType()
-	{
-		return _premiumAccountType;
+	public int getPremiumAccountType() {
+		return accountInfo.getPremium();
 	}
 
-	public void setPremiumAccountExpire(int expire)
-	{
-		_premiumAccountExpire = expire;
+	public void setPremiumAccountExpire(long expire) {
+		accountInfo.setPremiumExpire(expire);
 	}
 
-	public int getPremiumAccountExpire()
-	{
-		return _premiumAccountExpire;
+	public long getPremiumAccountExpire() {
+		return accountInfo.getPremiumExpire();
 	}
 
 	public int getPoints()
@@ -463,4 +453,11 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
     public void closeNow() {
         close(ServerCloseSocketPacket.STATIC);
     }
+
+	public enum GameClientState {
+		CONNECTED,
+		AUTHED,
+		IN_GAME,
+		DISCONNECTED
+	}
 }

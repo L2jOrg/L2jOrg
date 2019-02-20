@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.entity.residence.clanhall;
 import java.util.Calendar;
 import java.util.Collection;
 
-import org.l2j.gameserver.dao.InstantClanHallDAO;
+import org.l2j.gameserver.data.dao.InstantClanHallDAO;
 import org.l2j.gameserver.data.xml.holder.InstantZoneHolder;
 import org.l2j.gameserver.listener.reflection.OnReflectionCollapseListener;
 import org.l2j.gameserver.listener.zone.impl.ResidenceEnterLeaveListenerImpl;

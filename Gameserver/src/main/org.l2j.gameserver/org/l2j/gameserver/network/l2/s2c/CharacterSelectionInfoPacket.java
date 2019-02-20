@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.l2.s2c;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.dao.CharacterDAO;
+import org.l2j.gameserver.data.dao.CharacterDAO;
 import org.l2j.gameserver.model.CharSelectInfoPackage;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.base.Experience;

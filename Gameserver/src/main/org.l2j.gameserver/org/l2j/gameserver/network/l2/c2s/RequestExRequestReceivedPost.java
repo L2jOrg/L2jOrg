@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.l2.c2s;
 
 import org.l2j.commons.dao.JdbcEntityState;
-import org.l2j.gameserver.dao.MailDAO;
+import org.l2j.gameserver.data.dao.MailDAO;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.mail.Mail;
 import org.l2j.gameserver.network.l2.s2c.ExChangePostState;

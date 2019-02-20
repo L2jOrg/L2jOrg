@@ -2,7 +2,7 @@ package org.l2j.gameserver.handler.admincommands.impl;
 
 import org.l2j.commons.util.Converter;
 import org.l2j.gameserver.instancemanager.RaidBossSpawnManager;
-import org.l2j.gameserver.dao.SpawnsDAO;
+import org.l2j.gameserver.data.dao.SpawnsDAO;
 import org.l2j.gameserver.handler.admincommands.IAdminCommandHandler;
 import org.l2j.gameserver.model.GameObject;
 import org.l2j.gameserver.model.GameObjectsStorage;

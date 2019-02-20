@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.entity.events.actions;
 
-import org.l2j.gameserver.dao.ItemsDAO;
+import org.l2j.gameserver.data.dao.ItemsDAO;
 import org.l2j.gameserver.model.entity.events.Event;
 import org.l2j.gameserver.model.entity.events.EventAction;
 import org.l2j.gameserver.model.entity.events.objects.ItemObject;

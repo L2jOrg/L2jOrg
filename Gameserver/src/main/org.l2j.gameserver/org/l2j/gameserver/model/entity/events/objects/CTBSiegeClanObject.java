@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.entity.events.objects;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2j.gameserver.dao.SiegePlayerDAO;
+import org.l2j.gameserver.data.dao.SiegePlayerDAO;
 import org.l2j.gameserver.model.pledge.Clan;
 import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;

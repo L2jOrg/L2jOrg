@@ -2,7 +2,7 @@ package org.l2j.gameserver.handler.admincommands.impl;
 
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
-import org.l2j.gameserver.dao.CharacterVariablesDAO;
+import org.l2j.gameserver.data.dao.CharacterVariablesDAO;
 import org.l2j.gameserver.handler.admincommands.IAdminCommandHandler;
 import org.l2j.gameserver.model.Player;
 

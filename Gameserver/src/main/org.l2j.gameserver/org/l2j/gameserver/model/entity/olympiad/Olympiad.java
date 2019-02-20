@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.entity.olympiad;
 import org.l2j.commons.configuration.ExProperties;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
-import org.l2j.gameserver.dao.OlympiadParticipantsDAO;
+import org.l2j.gameserver.data.dao.OlympiadParticipantsDAO;
 import org.l2j.gameserver.instancemanager.OlympiadHistoryManager;
 import org.l2j.gameserver.instancemanager.ServerVariables;
 import org.l2j.gameserver.model.GameObjectsStorage;

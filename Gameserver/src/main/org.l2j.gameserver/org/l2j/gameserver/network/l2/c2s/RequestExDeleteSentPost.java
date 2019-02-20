@@ -4,7 +4,7 @@ import java.nio.ByteBuffer;
 import java.util.Collection;
 
 import org.l2j.commons.lang.ArrayUtils;
-import org.l2j.gameserver.dao.MailDAO;
+import org.l2j.gameserver.data.dao.MailDAO;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.mail.Mail;
 import org.l2j.gameserver.network.l2.s2c.ExShowSentPostList;

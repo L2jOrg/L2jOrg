@@ -6,7 +6,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.dao.AccountVariablesDAO;
+import org.l2j.gameserver.data.dao.AccountVariablesDAO;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.gs2as.ChangeAccessLevel;
 import org.l2j.gameserver.network.l2.GameClient;
