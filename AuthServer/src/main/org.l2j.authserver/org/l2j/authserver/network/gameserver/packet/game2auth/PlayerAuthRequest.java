@@ -1,7 +1,7 @@
 package org.l2j.authserver.network.gameserver.packet.game2auth;
 
 import org.l2j.authserver.controller.AuthController;
-import org.l2j.authserver.network.SessionKey;
+import org.l2j.commons.network.SessionKey;
 import org.l2j.authserver.network.gameserver.packet.auth2game.PlayerAuthResponse;
 
 import java.nio.ByteBuffer;

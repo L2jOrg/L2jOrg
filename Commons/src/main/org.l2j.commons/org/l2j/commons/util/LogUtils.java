@@ -1,4 +1,4 @@
-package org.l2j.commons.logging;
+package org.l2j.commons.util;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

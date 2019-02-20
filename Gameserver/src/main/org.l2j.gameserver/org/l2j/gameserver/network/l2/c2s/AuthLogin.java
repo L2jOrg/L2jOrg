@@ -1,8 +1,8 @@
 package org.l2j.gameserver.network.l2.c2s;
 
+import org.l2j.commons.network.SessionKey;
 import org.l2j.gameserver.Shutdown;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
-import org.l2j.gameserver.network.authcomm.SessionKey;
 import org.l2j.gameserver.network.authcomm.gs2as.PlayerAuthRequest;
 import org.l2j.gameserver.network.l2.GameClient;
 import org.l2j.gameserver.network.l2.s2c.LoginResultPacket;

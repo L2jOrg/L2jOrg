@@ -3,7 +3,7 @@ package org.l2j.authserver.controller;
 import org.l2j.authserver.data.database.Account;
 import org.l2j.authserver.data.database.dao.AccountDAO;
 import org.l2j.authserver.network.GameServerInfo;
-import org.l2j.authserver.network.SessionKey;
+import org.l2j.commons.network.SessionKey;
 import org.l2j.authserver.network.client.AuthClient;
 import org.l2j.authserver.network.client.packet.auth2client.LoginOk;
 import org.l2j.authserver.network.crypt.AuthCrypt;

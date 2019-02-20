@@ -14,8 +14,8 @@ public final class LoginOk extends L2LoginServerPacket {
 	protected void writeImpl(AuthClient client, ByteBuffer buffer) {
 		var sessionKey = client.getSessionKey();
 		buffer.put((byte)0x03);
-		buffer.putInt(sessionKey.authAccountId);
-		buffer.putInt(sessionKey.authKey);
+		buffer.putInt(sessionKey.getAuthAccountId());
+		buffer.putInt(sessionKey.getAuthKey());
 		buffer.put(new byte[8]);
 		buffer.putInt(0x000003ea); // billing type: 1002 Free, x200 paid time, x500 flat rate pre paid, others subscription
 		buffer.putInt(0x00); // paid time

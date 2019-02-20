@@ -22,15 +22,15 @@ public class PlayerAuthResponse extends GameServerWritablePacket {
 		buffer.put((byte) (response ? 0x01 : 0x00));
 		if(response) {
 			var key  = AuthController.getInstance().getKeyForAccount(account);
-			buffer.putInt(key.gameServerSessionId);
-			buffer.putInt(key.gameServerAccountId);
-			buffer.putInt(key.authAccountId);
-			buffer.putInt(key.authKey);
+			buffer.putInt(key.getGameServerSessionId());
+			buffer.putInt(key.getGameServerAccountId());
+			buffer.putInt(key.getAuthAccountId());
+			buffer.putInt(key.getAuthKey());
 		}
 	}
 
 	@Override
 	protected int size(ServerClient client) {
-		return super.size(client) + 4 + 2 * account.length();
+		return super.size(client) + 16 + 2 * account.length();
 	}
 }

@@ -1,7 +1,7 @@
 package org.l2j.authserver.network.client.packet.client2auth;
 
 import org.l2j.authserver.controller.AuthController;
-import org.l2j.authserver.network.SessionKey;
+import org.l2j.commons.network.SessionKey;
 import org.l2j.authserver.network.client.packet.L2LoginClientPacket;
 import org.l2j.authserver.network.client.packet.auth2client.PlayOk;
 

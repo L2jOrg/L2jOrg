@@ -3,9 +3,8 @@ package org.l2j.gameserver.model.quest;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.commons.lang.ArrayUtils;
-import org.l2j.commons.logging.LogUtils;
+import org.l2j.commons.util.LogUtils;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.Contants;
 import org.l2j.gameserver.Contants.Items;
 import org.l2j.gameserver.data.QuestHolder;
 import org.l2j.gameserver.data.htm.HtmCache;
@@ -1200,7 +1199,7 @@ public class Quest implements OnInitScriptListener
 	 */
 	private void showError(Player player, Throwable t)
 	{
-		_log.error("", t);
+		_log.error(t.getLocalizedMessage(), t);
 		if(player != null && player.isGM())
 		{
 			String res = "<html><body><title>Script error</title>" + LogUtils.dumpStack(t).replace("\n", "<br>") + "</body></html>";

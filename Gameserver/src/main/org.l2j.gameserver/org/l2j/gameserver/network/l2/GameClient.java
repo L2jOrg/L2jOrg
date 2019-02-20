@@ -1,14 +1,15 @@
 package org.l2j.gameserver.network.l2;
 
+import io.github.joealisson.mmocore.Client;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
+import org.l2j.commons.network.SessionKey;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.dao.CharacterDAO;
 import org.l2j.gameserver.model.CharSelectInfoPackage;
 import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
-import org.l2j.gameserver.network.authcomm.SessionKey;
 import org.l2j.gameserver.network.authcomm.gs2as.PlayerLogout;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.L2GameServerPacket;
@@ -16,7 +17,6 @@ import org.l2j.gameserver.network.l2.s2c.ServerCloseSocketPacket;
 import org.l2j.gameserver.security.HWIDUtils;
 import org.l2j.gameserver.security.SecondaryPasswordAuth;
 import org.l2j.gameserver.utils.Language;
-import io.github.joealisson.mmocore.Client;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

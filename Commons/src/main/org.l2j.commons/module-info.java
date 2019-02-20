@@ -17,7 +17,6 @@ module org.l2j.commons {
     exports org.l2j.commons.database;
     exports org.l2j.commons.database.annotation;
     exports org.l2j.commons.configuration;
-    exports org.l2j.commons.settings;
     exports org.l2j.commons.geometry;
     exports org.l2j.commons.collections;
     exports org.l2j.commons.lang;
@@ -31,7 +30,6 @@ module org.l2j.commons {
     exports org.l2j.commons.time.cron;
     exports org.l2j.commons.string;
     exports org.l2j.commons.math.random;
-    exports org.l2j.commons.logging;
     exports org.l2j.commons.compiler;
     exports org.l2j.commons.annotations;
     exports org.l2j.commons.data.xml;
@@ -39,6 +37,7 @@ module org.l2j.commons {
     exports org.l2j.commons.formats.dds;
     exports org.l2j.commons.cache;
     exports org.l2j.commons.database.handler;
+    exports org.l2j.commons.network;
 
     uses org.l2j.commons.database.handler.TypeHandler;
     provides org.l2j.commons.database.handler.TypeHandler
