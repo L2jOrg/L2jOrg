@@ -44,6 +44,7 @@ module org.l2j.commons {
         with org.l2j.commons.database.handler.IntegerHandler,
              org.l2j.commons.database.handler.VoidHandler,
              org.l2j.commons.database.handler.ListHandler,
+             org.l2j.commons.database.handler.StringHandler,
              org.l2j.commons.database.handler.IntSetHandler,
              org.l2j.commons.database.handler.EntityHandler;
 }

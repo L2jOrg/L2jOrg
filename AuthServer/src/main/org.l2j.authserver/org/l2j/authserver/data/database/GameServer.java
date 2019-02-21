@@ -7,6 +7,8 @@ public class GameServer {
     @Column("server_id")
     private int serverId;
     private String host;
+    @Column("server_type")
+    private int serverType;
 
     public GameServer() { }
 

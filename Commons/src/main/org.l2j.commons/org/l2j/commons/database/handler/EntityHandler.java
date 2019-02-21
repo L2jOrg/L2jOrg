@@ -27,6 +27,7 @@ public class EntityHandler implements TypeHandler<Object> {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public Object handle(ResultSet resultSet, Class<?> type) throws SQLException {
         try {
             var instance = type.getDeclaredConstructor().newInstance();
@@ -41,7 +42,9 @@ public class EntityHandler implements TypeHandler<Object> {
                     throw  new SQLException("There is no field with name " +  columnName + " on Type " + type.getName());
                 }
                 if(f.trySetAccessible()) {
-                    f.set(instance, resultSet.getObject(i));
+                    var fieldType = f.getType();
+                    var handler = TypeHandler.MAP.getOrDefault(f.getType().getName(), TypeHandler.MAP.get(Object.class.getName()));
+                    f.set(instance, handler.handle(resultSet, fieldType));
                 } else {
                     throw  new SQLException("No accessible field " + f.getName() + " On type " + type );
                 }
