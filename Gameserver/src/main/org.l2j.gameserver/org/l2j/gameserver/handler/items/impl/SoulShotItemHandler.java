@@ -13,11 +13,11 @@ import org.l2j.gameserver.skills.SkillEntry;
 import org.l2j.gameserver.templates.item.ItemGrade;
 import org.l2j.gameserver.templates.item.WeaponTemplate;
 
-public class SoulShotItemHandler extends DefaultItemHandler
-{
+public class SoulShotItemHandler extends DefaultItemHandler {
+
 	private static final IntIntMap SHOT_SKILLS = new HashIntIntMap();
-	static
-	{
+
+	static {
 		SHOT_SKILLS.put(ItemGrade.NONE.ordinal(), 2039); // None Grade
 		SHOT_SKILLS.put(ItemGrade.D.ordinal(), 2150); // D Grade
 		SHOT_SKILLS.put(ItemGrade.C.ordinal(), 2151); // C Grade

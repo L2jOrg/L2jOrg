@@ -13,7 +13,7 @@ import java.util.Map;
  */
 public class ItemHandler extends AbstractHolder {
 
-	private static final Logger _log = LoggerFactory.getLogger(ItemHandler.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(ItemHandler.class);
 
 	public static final IItemHandler DEFAULT_HANDLER = new DefaultItemHandler();
 	public static final IItemHandler EQUIPABLE_HANDLER = new EquipableItemHandler();
@@ -75,7 +75,7 @@ public class ItemHandler extends AbstractHolder {
 			handler = handler.replace("ItemHandler", "");
 
 		if(_handlers.isEmpty() || !_handlers.containsKey(handler)) {
-			_log.warn("ItemHandler: Cannot find handler [" + handler + "]!");
+			LOGGER.warn("ItemHandler: Cannot find handler [" + handler + "]!");
 			return DEFAULT_HANDLER;
 		}
 

@@ -13,8 +13,8 @@ import org.l2j.gameserver.utils.Log;
  * @author VISTALL
  * @date 21:09/12.07.2011
  */
-public class DefaultItemHandler implements IItemHandler
-{
+public class DefaultItemHandler implements IItemHandler {
+
 	@Override
 	public SystemMsg checkCondition(Playable playable, ItemInstance item)
 	{

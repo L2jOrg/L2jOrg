@@ -2,7 +2,6 @@ package  org.l2j.gameserver.scripts;
 
 import org.l2j.commons.compiler.Compiler;
 import org.l2j.commons.compiler.MemoryClassLoader;
-import org.l2j.commons.listener.Listener;
 import org.l2j.commons.listener.ListenerList;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.bypass.Bypass;
@@ -27,67 +26,48 @@ import java.util.jar.JarInputStream;
 
 import static java.util.Objects.isNull;
 
-public class Scripts
-{
-    public class ScriptListenerImpl extends ListenerList<Scripts>
-    {
-        public void load()
-        {
-            for(Listener<Scripts> listener : getListeners())
-                if(OnLoadScriptListener.class.isInstance(listener))
-                    ((OnLoadScriptListener) listener).onLoad();
-        }
+public class Scripts {
 
-        public void init()
-        {
-            for(Listener<Scripts> listener : getListeners())
-                if(OnInitScriptListener.class.isInstance(listener))
-                    ((OnInitScriptListener) listener).onInit();
-        }
-    }
-
-    private static final Logger _log = LoggerFactory.getLogger(Scripts.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(Scripts.class);
     private static final String INNER_CLASS_SEPARATOR = "$";
 
-    private static final Scripts _instance = new Scripts();
+    private static final Scripts INSTANCE = new Scripts();
 
-    public static Scripts getInstance()
-    {
-        return _instance;
-    }
-
-    private final Map<String, Class<?>> _classes = new TreeMap<String, Class<?>>();
+    private final Map<String, Class<?>> _classes = new TreeMap<>();
     private final ScriptListenerImpl _listeners = new ScriptListenerImpl();
 
-    private Scripts()
-    {
+    private Scripts() {
         load();
     }
 
+    public static Scripts getInstance() {
+        return INSTANCE;
+    }
+
     /**
-     * Вызывается при загрузке сервера. Загрузает все скрипты в data/scripts. Не инициирует объекты и обработчики.
+     * Loads all scripts in data/scripts. Does not trigger objects and handlers.
      *
-     * @return true, если загрузка прошла успешно
      */
-    private void load()
-    {
+    private void load() {
         File f = new File("./lib/scripts.jar");
-        if(f.exists())
-        {
-            _log.info("Scripts: Loading library...");
+
+        if(f.exists()) {
+            LOGGER.info("Scripts: Loading library...");
 
             try(JarInputStream stream = new JarInputStream(new FileInputStream(f))) {
                 JarEntry entry = null;
                 while((entry = stream.getNextJarEntry()) != null) {
                     //Вложенные класс
-                    if(entry.getName().contains(INNER_CLASS_SEPARATOR) || !entry.getName().endsWith(".class"))
+                    if(entry.getName().contains(INNER_CLASS_SEPARATOR) || !entry.getName().endsWith(".class")) {
                         continue;
+                    }
 
                     String name = entry.getName().replace(".class", "").replace("/", ".");
 
                     Class<?> clazz = getClass().getClassLoader().loadClass(name);
-                    if(Modifier.isAbstract(clazz.getModifiers()))
+                    if(Modifier.isAbstract(clazz.getModifiers())) {
                         continue;
+                    }
 
                     _classes.put(clazz.getName(), clazz);
                 }
@@ -97,19 +77,20 @@ public class Scripts
 
         }
 
-        _log.info("Scripts: Loading...");
+        LOGGER.info("Scripts: Loading...");
 
         List<Class<?>> classes = load(new File(Config.DATAPACK_ROOT, "data/scripts"));
 
-        if(classes.isEmpty()) {
-            _log.warn("No Scripts loaded");
+        if(classes.isEmpty() && _classes.isEmpty()) {
+            LOGGER.warn("No Scripts loaded");
             return;
         }
 
-        for(Class<?> clazz : classes)
+        for(Class<?> clazz : classes) {
             _classes.put(clazz.getName(), clazz);
+        }
 
-        _log.info("Scripts: Loaded " + _classes.size() + " classes.");
+        LOGGER.info("Scripts: Loaded {} classes.", _classes.size());
 
         _listeners.load();
     }
@@ -135,14 +116,12 @@ public class Scripts
         File[] scriptFiles = null;
         if(target.isFile()) {
             scriptFiles = new File[] { target} ;
-        }
-        else if(target.isDirectory())
-        {
-            _log.debug("Loading Scripts from {} ", target.getAbsolutePath());
+        } else if(target.isDirectory()) {
+            LOGGER.debug("Loading Scripts from {} ", target.getAbsolutePath());
             try(var paths = Files.walk(target.toPath())) {
                 scriptFiles = paths.filter(this::acceptJavaFile).map(Path::toFile).toArray(File[]::new);
             } catch (IOException e) {
-                _log.error(e.getLocalizedMessage(), e);
+                LOGGER.error(e.getLocalizedMessage(), e);
             }
 
         }
@@ -160,7 +139,7 @@ public class Scripts
             for(String name : classLoader.getLoadedClasses())
             {
                 //Вложенные класс
-                if(name.contains(INNER_CLASS_SEPARATOR))
+                if(name.contains(INNER_CLASS_SEPARATOR) || name.equalsIgnoreCase("module-info"))
                     continue;
 
                 try
@@ -175,13 +154,13 @@ public class Scripts
                         if(OnLoadScriptListener.class.isAssignableFrom(clazz))
                         {
                             if(OnInitScriptListener.class.isAssignableFrom(clazz))
-                                _log.warn("Scripts: Error in class: " + clazz.getName() + ". Can not use OnLoad and OnInit listeners together!");
+                                LOGGER.warn("Scripts: Error in class: " + clazz.getName() + ". Can not use OnLoad and OnInit listeners together!");
 
                             for(Method method : clazz.getMethods())
                             {
                                 if(method.isAnnotationPresent(Bypass.class))
                                 {
-                                    _log.warn("Scripts: Error in class: " + clazz.getName() + ". Can not use OnLoad listener and bypass annotation together!");
+                                    LOGGER.warn("Scripts: Error in class: " + clazz.getName() + ". Can not use OnLoad listener and bypass annotation together!");
                                     break;
                                 }
                             }
@@ -191,12 +170,12 @@ public class Scripts
                     }
                     catch(Exception e)
                     {
-                        _log.error("", e);
+                        LOGGER.error("", e);
                     }
                 }
                 catch(ClassNotFoundException e)
                 {
-                    _log.error("Scripts: Can't load script class: " + name, e);
+                    LOGGER.error("Scripts: Can't load script class: " + name, e);
                     classes.clear();
                     break;
                 }
@@ -208,7 +187,7 @@ public class Scripts
 
     private boolean acceptJavaFile(Path p) {
         var stringPath = p.toString();
-        return stringPath.endsWith(".java") && !stringPath.endsWith("module-info.java");
+        return stringPath.endsWith(".java");
     }
 
     private Object init(Class<?> clazz)
@@ -234,7 +213,7 @@ public class Scripts
                     Class<?>[] par = method.getParameterTypes();
                     if(par.length == 0 || par[0] != Player.class || par[1] != NpcInstance.class || par[2] != String[].class)
                     {
-                        _log.error("Wrong parameters for bypass method: " + method.getName() + ", class: " + clazz.getSimpleName());
+                        LOGGER.error("Wrong parameters for bypass method: " + method.getName() + ", class: " + clazz.getSimpleName());
                         continue;
                     }
 
@@ -243,7 +222,7 @@ public class Scripts
         }
         catch(Exception e)
         {
-            _log.error("", e);
+            LOGGER.error("", e);
         }
         return o;
     }
@@ -252,5 +231,15 @@ public class Scripts
     public Map<String, Class<?>> getClasses()
     {
         return _classes;
+    }
+
+    public class ScriptListenerImpl extends ListenerList<Scripts> {
+        public void load() {
+            listeners.stream().filter(l -> l instanceof OnLoadScriptListener).forEach(l -> ((OnLoadScriptListener)l).onLoad());
+        }
+
+        public void init() {
+            listeners.stream().filter(l -> l instanceof OnInitScriptListener).forEach(l -> ((OnInitScriptListener)l).onInit());
+        }
     }
 }

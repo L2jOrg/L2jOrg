@@ -1,7 +1,5 @@
 package org.l2j.gameserver.handler.items.impl;
 
-import java.util.List;
-
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.model.Playable;
 import org.l2j.gameserver.model.Player;
@@ -11,11 +9,13 @@ import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.skills.SkillEntry;
 
+import java.util.List;
+
 /**
  * @author Bonux
  **/
-public class BeastSoulShotItemHandler extends DefaultItemHandler
-{
+public class BeastSoulShotItemHandler extends DefaultItemHandler {
+
 	private static final int SHOT_SKILL_ID = 2033;
 
 	@Override

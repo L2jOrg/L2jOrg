@@ -1,7 +1,5 @@
 package org.l2j.gameserver.handler.items.impl;
 
-import java.util.List;
-
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.Playable;
 import org.l2j.gameserver.model.Player;
@@ -10,11 +8,13 @@ import org.l2j.gameserver.network.l2.s2c.SystemMessagePacket;
 import org.l2j.gameserver.templates.item.data.CapsuledItemData;
 import org.l2j.gameserver.utils.ItemFunctions;
 
+import java.util.List;
+
 /**
  * @author Bonux
  */
-public class CapsuledItemHandler extends DefaultItemHandler
-{
+public class CapsuledItemHandler extends DefaultItemHandler {
+
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{

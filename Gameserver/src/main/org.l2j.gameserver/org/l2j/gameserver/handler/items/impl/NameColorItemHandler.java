@@ -5,8 +5,8 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.network.l2.s2c.ExChangeNicknameNColor;
 
-public class NameColorItemHandler extends DefaultItemHandler
-{
+public class NameColorItemHandler extends DefaultItemHandler {
+
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{

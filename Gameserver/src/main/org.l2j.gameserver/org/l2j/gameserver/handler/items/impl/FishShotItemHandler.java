@@ -13,8 +13,8 @@ import org.l2j.gameserver.templates.item.WeaponTemplate;
 /**
  * @author Bonux
  **/
-public class FishShotItemHandler extends DefaultItemHandler
-{
+public class FishShotItemHandler extends DefaultItemHandler {
+
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{

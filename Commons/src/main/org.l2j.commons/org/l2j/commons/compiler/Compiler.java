@@ -1,7 +1,5 @@
 package org.l2j.commons.compiler;
 
-import org.eclipse.jdt.internal.compiler.tool.EclipseCompiler;
-import org.eclipse.jdt.internal.compiler.tool.EclipseFileManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,7 +8,6 @@ import java.io.File;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.nio.charset.Charset;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Locale;
@@ -25,23 +22,15 @@ public class Compiler
 {
 	private static final Logger _log = LoggerFactory.getLogger(Compiler.class);
 
-	private static final JavaCompiler javac = new EclipseCompiler();
-
-	private final DiagnosticListener<JavaFileObject> listener = new DefaultDiagnosticListener();
-	private final StandardJavaFileManager fileManager = new EclipseFileManager(Locale.getDefault(), Charset.defaultCharset());
+	private static final JavaCompiler javac = ToolProvider.getSystemJavaCompiler();
+	private static final DiagnosticListener<JavaFileObject> listener = new DefaultDiagnosticListener();
+	private final StandardJavaFileManager fileManager =  javac.getStandardFileManager(listener, Locale.getDefault(), Charset.defaultCharset());
 	private final MemoryClassLoader memClassLoader = new MemoryClassLoader();
 	private final MemoryJavaFileManager memFileManager = new MemoryJavaFileManager(fileManager, memClassLoader);
 
-	public boolean compile(File... files)
-	{
-		// javac options
-		List<String> options = new ArrayList<String>();
-		options.add("-Xlint:all");
-		options.add("-warn:none");
-		//options.add("-g:none");
-		options.add("-g");
-		options.add("-11");
-		//options.add("-deprecation");
+	public boolean compile(File... files) {
+
+	    List<String> options =  List.of("--module-path", System.getProperty("jdk.module.path"));
 
 		Writer writer = new StringWriter();
 		JavaCompiler.CompilationTask compile = javac.getTask(writer, memFileManager, listener, options, null, fileManager.getJavaFileObjects(files));
@@ -64,7 +53,7 @@ public class Compiler
 		return memClassLoader;
 	}
 
-	private class DefaultDiagnosticListener implements DiagnosticListener<JavaFileObject>
+	private static class DefaultDiagnosticListener implements DiagnosticListener<JavaFileObject>
 	{
 		@Override
 		public void report(Diagnostic<? extends JavaFileObject> diagnostic)

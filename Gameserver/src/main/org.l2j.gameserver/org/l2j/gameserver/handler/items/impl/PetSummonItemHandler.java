@@ -5,8 +5,8 @@ import org.l2j.gameserver.model.Playable;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInstance;
 
-public class PetSummonItemHandler extends DefaultItemHandler
-{
+public class PetSummonItemHandler extends DefaultItemHandler {
+
 	private static final int SUMMON_SKILL_ID = 2046;
 
 	@Override

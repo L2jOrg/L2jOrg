@@ -8,8 +8,8 @@ import org.l2j.gameserver.network.l2.s2c.ShowCalcPacket;
  * @author VISTALL
  * @date 18:22/11.03.2011
  */
-public class CalculatorItemHandler extends DefaultItemHandler
-{
+public class CalculatorItemHandler extends DefaultItemHandler {
+
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{

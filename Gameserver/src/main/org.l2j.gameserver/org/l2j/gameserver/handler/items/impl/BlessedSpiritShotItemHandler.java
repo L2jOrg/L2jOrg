@@ -13,11 +13,11 @@ import org.l2j.gameserver.skills.SkillEntry;
 import org.l2j.gameserver.templates.item.ItemGrade;
 import org.l2j.gameserver.templates.item.WeaponTemplate;
 
-public class BlessedSpiritShotItemHandler extends DefaultItemHandler
-{
+public class BlessedSpiritShotItemHandler extends DefaultItemHandler {
+
     private static final IntIntMap SHOT_SKILLS = new HashIntIntMap();
-	static
-	{
+
+    static {
 		SHOT_SKILLS.put(ItemGrade.NONE.ordinal(), 2061); // None Grade
 		SHOT_SKILLS.put(ItemGrade.D.ordinal(), 2160); // D Grade
 		SHOT_SKILLS.put(ItemGrade.C.ordinal(), 2161); // C Grade
@@ -25,7 +25,7 @@ public class BlessedSpiritShotItemHandler extends DefaultItemHandler
 		SHOT_SKILLS.put(ItemGrade.A.ordinal(), 2163); // A Grade
 		SHOT_SKILLS.put(ItemGrade.S.ordinal(), 2164); // S Grade
 		SHOT_SKILLS.put(ItemGrade.R.ordinal(), 9195); // R Grade
-	};
+	}
 
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)

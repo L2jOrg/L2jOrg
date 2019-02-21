@@ -19,8 +19,8 @@ import org.l2j.gameserver.utils.PositionUtils;
 /**
  * @author VISTALL
  */
-public class MercenaryTicketItemHandler extends DefaultItemHandler
-{
+public class MercenaryTicketItemHandler extends DefaultItemHandler {
+
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{

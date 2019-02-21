@@ -12,9 +12,9 @@ import org.l2j.gameserver.templates.item.RecipeTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class RecipeItemHandler extends DefaultItemHandler
-{
-	protected static final Logger _log = LoggerFactory.getLogger(RecipeItemHandler.class);
+public class RecipeItemHandler extends DefaultItemHandler {
+
+	protected static final Logger LOGGER = LoggerFactory.getLogger(RecipeItemHandler.class);
 
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
@@ -26,7 +26,7 @@ public class RecipeItemHandler extends DefaultItemHandler
 		RecipeTemplate rp = RecipeHolder.getInstance().getRecipeByRecipeItem(item.getItemId());
 		if(rp == null)
 		{
-			_log.warn("RecipeTemplate: Recipe " + item.getItemId() + " is not working or not a recipe.");
+			LOGGER.warn("RecipeTemplate: Recipe " + item.getItemId() + " is not working or not a recipe.");
 			return false;
 		}
 

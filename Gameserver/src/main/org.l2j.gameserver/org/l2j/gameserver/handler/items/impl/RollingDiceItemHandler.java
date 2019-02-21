@@ -8,8 +8,8 @@ import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.DicePacket;
 import org.l2j.gameserver.network.l2.s2c.SystemMessage;
 
-public class RollingDiceItemHandler extends DefaultItemHandler
-{
+public class RollingDiceItemHandler extends DefaultItemHandler {
+
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{

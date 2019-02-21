@@ -17,8 +17,8 @@ import org.l2j.gameserver.utils.ItemFunctions;
  * @author VISTALL
  * @date 7:27/17.03.2011
  */
-public class EquipableItemHandler extends DefaultItemHandler
-{
+public class EquipableItemHandler extends DefaultItemHandler {
+
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{

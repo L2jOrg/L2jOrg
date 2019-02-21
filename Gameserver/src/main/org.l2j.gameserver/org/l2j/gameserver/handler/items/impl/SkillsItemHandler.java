@@ -16,8 +16,8 @@ import java.util.Arrays;
  * @author VISTALL
  * @date 7:34/17.03.2011
  */
-public class SkillsItemHandler extends DefaultItemHandler
-{
+public class SkillsItemHandler extends DefaultItemHandler {
+
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{

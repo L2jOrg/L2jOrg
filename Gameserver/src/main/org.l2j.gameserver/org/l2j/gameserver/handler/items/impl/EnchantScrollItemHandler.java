@@ -5,8 +5,8 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.network.l2.s2c.ChooseInventoryItemPacket;
 
-public class EnchantScrollItemHandler extends DefaultItemHandler
-{
+public class EnchantScrollItemHandler extends DefaultItemHandler {
+
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{

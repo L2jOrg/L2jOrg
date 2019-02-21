@@ -6,7 +6,6 @@ module org.l2j.commons {
     requires java.management;
     requires java.compiler;
     requires dom4j;
-    requires ecj;
     requires cache.api;
     requires java.desktop;
     requires primitive;

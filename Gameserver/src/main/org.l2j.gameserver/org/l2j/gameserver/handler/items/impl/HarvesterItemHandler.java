@@ -9,8 +9,8 @@ import org.l2j.gameserver.model.instances.MonsterInstance;
 import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 
-public class HarvesterItemHandler extends DefaultItemHandler
-{
+public class HarvesterItemHandler extends DefaultItemHandler {
+
 	private static final int HARVESTER_SKILL_ID = 2098;
 
 	@Override
