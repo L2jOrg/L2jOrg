@@ -25,6 +25,8 @@ public class Util {
     public static final byte[] BYTE_ARRAY_EMPTY = new byte[0];
     public static final Object[] OBJECT_ARRAY_EMPTY = new Object[0];
 
+    public static final int HOUR_IN_MILLIS = 60 * 60 * 1000;
+
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDateTime( FormatStyle.SHORT )
             .withLocale( Locale.getDefault() )
             .withZone( ZoneId.systemDefault() );

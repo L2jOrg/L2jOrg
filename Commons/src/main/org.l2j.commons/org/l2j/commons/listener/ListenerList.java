@@ -11,12 +11,11 @@ import java.util.concurrent.CopyOnWriteArraySet;
  *
  * @param <T> базовый интерфейс слушателя
  */
-public class ListenerList<T>
-{
-	protected Set<Listener<T>> listeners = new CopyOnWriteArraySet<Listener<T>>();
+public class ListenerList<T> {
 
-	public Collection<Listener<T>> getListeners()
-	{
+	protected Set<Listener<T>> listeners = new CopyOnWriteArraySet<>();
+
+	public Collection<Listener<T>> getListeners() {
 		return listeners;
 	}
 	

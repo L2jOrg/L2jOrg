@@ -7222,7 +7222,7 @@ public final class Player extends Playable implements PlayerGroup
         if(getParty() != null)
             getParty().recalculatePartyData();
 
-        getDAO(AccountInfoDAO.class).remove(getAccountName());
+        getDAO(AccountInfoDAO.class).delete(getAccountName());
 
         if(getNetConnection() != null)
         {
@@ -7342,7 +7342,7 @@ public final class Player extends Playable implements PlayerGroup
         if(tryGiveFreePremiumAccount())
             return false;
 
-        getDAO(AccountInfoDAO.class).remove(getAccountName());
+        getDAO(AccountInfoDAO.class).delete(getAccountName());
 
         if(getNetConnection() != null)
         {

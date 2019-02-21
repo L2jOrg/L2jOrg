@@ -1,6 +1,5 @@
 package org.l2j.gameserver;
 
-import org.l2j.commons.listener.Listener;
 import org.l2j.commons.listener.ListenerList;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.gameserver.listener.GameListener;
@@ -14,45 +13,42 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Calendar;
 
-public class GameTimeController
-{
+import static org.l2j.commons.util.Util.HOUR_IN_MILLIS;
+
+public class GameTimeController {
+
 	private static final Logger LOGGER = LoggerFactory.getLogger(GameTimeController.class);
 
 	private static final int TICKS_PER_SECOND = 10;
 	private static final int MILLIS_IN_TICK = 1000 / TICKS_PER_SECOND;
-
 	private static final GameTimeController _instance = new GameTimeController();
-
-	private long _gameStartTime;
 
 	private GameTimeListenerList listenerEngine = new GameTimeListenerList();
 	private Runnable _dayChangeNotify = new CheckSunState();
-
-	public static GameTimeController getInstance() {
-		return _instance;
-	}
+	private long _gameStartTime;
 
 	private GameTimeController() {
 		_gameStartTime = getDayStartTime();
 
-		GameServer.getInstance().addListener(new OnStartListenerImpl());
+		GameServer.getInstance().addListener((OnStartListener) () -> ThreadPoolManager.getInstance().execute(_dayChangeNotify));
 		var min = getGameMin();
 		LOGGER.info("Time Controller Initialized. Current time is {}:{} in the {}.", getGameHour(), min < 10 ? "0" + min : min, isNowNight() ? "night" : "day");
 
 		long nightStart = 0;
-		long dayStart = 60 * 60 * 1000;
+		long dayStart = HOUR_IN_MILLIS;
 
-		while(_gameStartTime + nightStart < System.currentTimeMillis())
-			nightStart += 4 * 60 * 60 * 1000;
+		var currentTime = System.currentTimeMillis();
+		while(_gameStartTime + nightStart < currentTime)
+			nightStart += 4 * HOUR_IN_MILLIS;
 
-		while(_gameStartTime + dayStart < System.currentTimeMillis())
-			dayStart += 4 * 60 * 60 * 1000;
+		while(_gameStartTime + dayStart < currentTime)
+			dayStart += 4 * HOUR_IN_MILLIS;
 
-		dayStart -= System.currentTimeMillis() - _gameStartTime;
-		nightStart -= System.currentTimeMillis() - _gameStartTime;
+		dayStart -= currentTime - _gameStartTime;
+		nightStart -= currentTime - _gameStartTime;
 
-		ThreadPoolManager.getInstance().scheduleAtFixedRate(_dayChangeNotify, nightStart, 4 * 60 * 60 * 1000L);
-		ThreadPoolManager.getInstance().scheduleAtFixedRate(_dayChangeNotify, dayStart, 4 * 60 * 60 * 1000L);
+		ThreadPoolManager.getInstance().scheduleAtFixedRate(_dayChangeNotify, nightStart, 4 * HOUR_IN_MILLIS);
+		ThreadPoolManager.getInstance().scheduleAtFixedRate(_dayChangeNotify, dayStart, 4 * HOUR_IN_MILLIS);
 	}
 
 	private long getDayStartTime() {
@@ -68,87 +64,66 @@ public class GameTimeController
 		return dayStart.getTimeInMillis();
 	}
 
-	public boolean isNowNight()
-	{
+	public boolean isNowNight() {
 		return getGameHour() < 6;
 	}
 
-	public int getGameTime()
-	{
+	public int getGameTime() {
 		return getGameTicks() / MILLIS_IN_TICK;
 	}
 
-	public int getGameHour()
-	{
+	public int getGameHour() {
 		return getGameTime() / 60 % 24;
 	}
 
-	public int getGameMin()
-	{
+	public int getGameMin() {
 		return getGameTime() % 60;
 	}
 
-	public int getGameTicks()
-	{
+	private int getGameTicks() {
 		return (int) ((System.currentTimeMillis() - _gameStartTime) / MILLIS_IN_TICK);
 	}
 
-	public GameTimeListenerList getListenerEngine()
-	{
+	private GameTimeListenerList getListenerEngine() {
 		return listenerEngine;
 	}
 
-	public <T extends GameListener> boolean addListener(T listener)
-	{
+	public <T extends GameListener> boolean addListener(T listener) {
 		return listenerEngine.add(listener);
 	}
 
-	public <T extends GameListener> boolean removeListener(T listener)
-	{
+	public <T extends GameListener> boolean removeListener(T listener) {
 		return listenerEngine.remove(listener);
 	}
 
-	private class OnStartListenerImpl implements OnStartListener
-	{
+	public class CheckSunState extends RunnableImpl {
 		@Override
-		public void onStart()
-		{
-			ThreadPoolManager.getInstance().execute(_dayChangeNotify);
-		}
-	}
-
-	public class CheckSunState extends RunnableImpl
-	{
-		@Override
-		public void runImpl() throws Exception
-		{
-			if(isNowNight())
+		public void runImpl() throws Exception {
+			if(isNowNight()) {
 				getInstance().getListenerEngine().onNight();
-			else
+			} else {
 				getInstance().getListenerEngine().onDay();
+			}
 
-			for(Player player : GameObjectsStorage.getPlayers())
-			{
+			for(Player player : GameObjectsStorage.getPlayers()) {
 				player.checkDayNightMessages();
 				player.sendPacket(new ClientSetTimePacket());
 			}
 		}
 	}
 
-	protected class GameTimeListenerList extends ListenerList<GameServer>
-	{
-		public void onDay()
-		{
-			for(Listener<GameServer> listener : getListeners())
-				if(OnDayNightChangeListener.class.isInstance(listener))
-					((OnDayNightChangeListener) listener).onDay();
+
+	public static GameTimeController getInstance() {
+		return _instance;
+	}
+
+	private class GameTimeListenerList extends ListenerList<GameServer> {
+		private void onDay() {
+			listeners.stream().filter( l -> l instanceof OnDayNightChangeListener).forEach(l -> ((OnDayNightChangeListener)l).onDay());
 		}
 
-		public void onNight()
-		{
-			for(Listener<GameServer> listener : getListeners())
-				if(OnDayNightChangeListener.class.isInstance(listener))
-					((OnDayNightChangeListener) listener).onNight();
+		private void onNight() {
+			listeners.stream().filter( l -> l instanceof OnDayNightChangeListener).forEach(l -> ((OnDayNightChangeListener)l).onNight());
 		}
 	}
 }

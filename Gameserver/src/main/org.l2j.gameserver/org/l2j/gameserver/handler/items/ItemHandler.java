@@ -1,18 +1,18 @@
 package org.l2j.gameserver.handler.items;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.handler.items.impl.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @author Bonux
  */
-public class ItemHandler extends AbstractHolder
-{
+public class ItemHandler extends AbstractHolder {
+
 	private static final Logger _log = LoggerFactory.getLogger(ItemHandler.class);
 
 	public static final IItemHandler DEFAULT_HANDLER = new DefaultItemHandler();
@@ -34,15 +34,13 @@ public class ItemHandler extends AbstractHolder
 
 	private static final ItemHandler _instance = new ItemHandler();
 
-	private final Map<String, IItemHandler> _handlers = new HashMap<String, IItemHandler>();
+	private final Map<String, IItemHandler> _handlers = new HashMap<>();
 
-	public static ItemHandler getInstance()
-	{
+	public static ItemHandler getInstance() {
 		return _instance;
 	}
 
-	private ItemHandler()
-	{
+	private ItemHandler() {
 		registerItemHandler(DEFAULT_HANDLER);
 		registerItemHandler(ENCHANT_SCROLL_HANDLER);
 		registerItemHandler(EQUIPABLE_HANDLER);
@@ -68,23 +66,15 @@ public class ItemHandler extends AbstractHolder
 		registerItemHandler(new WorldMapItemHandler());
 	}
 
-	public void registerItemHandler(IItemHandler handler)
-	{
+	public void registerItemHandler(IItemHandler handler) {
 		_handlers.put(handler.getClass().getSimpleName().replace("ItemHandler", ""), handler);
 	}
 
-	public void removeHandler(IItemHandler handler)
-	{
-		_handlers.remove(handler.getClass().getSimpleName().replace("ItemHandler", ""));
-	}
-
-	public IItemHandler getItemHandler(String handler)
-	{
+	public IItemHandler getItemHandler(String handler) {
 		if(handler.contains("ItemHandler"))
 			handler = handler.replace("ItemHandler", "");
 
-		if(_handlers.isEmpty() || !_handlers.containsKey(handler))
-		{
+		if(_handlers.isEmpty() || !_handlers.containsKey(handler)) {
 			_log.warn("ItemHandler: Cannot find handler [" + handler + "]!");
 			return DEFAULT_HANDLER;
 		}
