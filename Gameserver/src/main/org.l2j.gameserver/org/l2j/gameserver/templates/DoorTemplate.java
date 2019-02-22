@@ -1,18 +1,17 @@
 package org.l2j.gameserver.templates;
 
-import java.lang.reflect.Constructor;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import org.l2j.commons.geometry.Polygon;
 import org.l2j.gameserver.ai.CharacterAI;
 import org.l2j.gameserver.ai.DoorAI;
 import org.l2j.gameserver.model.instances.DoorInstance;
 import org.l2j.gameserver.scripts.Scripts;
 import org.l2j.gameserver.utils.Location;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.lang.reflect.Constructor;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author VISTALL
@@ -92,7 +91,7 @@ public class DoorTemplate extends CreatureTemplate
 		}
 		catch(ClassNotFoundException e)
 		{
-			classAI = (Class<DoorAI>) Scripts.getInstance().getClasses().get("ai.door." + ai);
+			classAI = (Class<DoorAI>) Scripts.getInstance().getClasses().get("org.l2j.scripts.ai.door." + ai);
 		}
 
 		if(classAI == null)

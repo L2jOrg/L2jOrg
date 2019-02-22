@@ -15,7 +15,7 @@ public class PetitionSubGroup extends PetitionGroup
 	{
 		super(id);
 
-		Class<?> clazz = Scripts.getInstance().getClasses().get("handler.petition." + handler);
+		Class<?> clazz = Scripts.getInstance().getClasses().get("org.l2j.scripts.handler.petition." + handler);
 
 		try
 		{

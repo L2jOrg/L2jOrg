@@ -15,7 +15,7 @@ dependencies {
 sourceSets {
     main {
         java {
-            srcDirs = ['gameserver/data/scripts']
+            srcDirs = ['gameserver/data/scripts/org.l2j.scripts']
         }
     }
 }

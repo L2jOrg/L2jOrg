@@ -4,6 +4,8 @@ import org.l2j.commons.configuration.Settings;
 import org.l2j.commons.configuration.SettingsFile;
 import org.l2j.gameserver.ServerType;
 
+import java.nio.file.Path;
+
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 public class ServerSettings implements Settings {
@@ -70,6 +72,7 @@ public class ServerSettings implements Settings {
     private String authServerAddress;
     private int authServerPort;
     private int maximumOnlineUsers;
+    private Path dataPackRootPath;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -144,6 +147,8 @@ public class ServerSettings implements Settings {
         rateRaidAttack = settingsFile.getFloat("RateRaidAttack", 1.f);
         rateEpicDefense = settingsFile.getFloat("RateEpicDefense", 1.f);
         rateEpicAttack = settingsFile.getFloat("RateEpicAttack", 1.f);
+
+        dataPackRootPath = Path.of(settingsFile.getString("DatapackRoot", "."));
     }
 
     private void parseServerType(SettingsFile settingsFile) {
@@ -161,6 +166,10 @@ public class ServerSettings implements Settings {
             }
 
         }
+    }
+
+    public Path dataPackRootPath() {
+        return dataPackRootPath;
     }
 
     public int serverId() {

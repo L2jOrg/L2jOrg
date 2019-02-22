@@ -76,7 +76,7 @@ public final class EventParser extends AbstractParser<EventHolder>
 			}
 			catch(ClassNotFoundException e)
 			{
-				eventClass = (Class<Event>) Scripts.getInstance().getClasses().get("events." + impl + "Event");
+				eventClass = (Class<Event>) Scripts.getInstance().getClasses().get("org.l2j.scripts.events." + impl + "Event");
 			}
 
 			if(eventClass == null)

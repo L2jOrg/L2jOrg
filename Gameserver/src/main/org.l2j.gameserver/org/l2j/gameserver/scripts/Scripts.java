@@ -124,6 +124,8 @@ public class Scripts {
 
         if(compiler.compile(scriptFiles)) {
             MemoryClassLoader classLoader = compiler.getClassLoader();
+
+            classLoader.getUnnamedModule().
             for(String name : classLoader.getLoadedClasses()) {
 
                 if(name.contains(INNER_CLASS_SEPARATOR) || name.equalsIgnoreCase("module-info")) {

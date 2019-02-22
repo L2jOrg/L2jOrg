@@ -1,9 +1,7 @@
 package org.l2j.gameserver.templates.npc;
 
-import java.lang.reflect.Constructor;
-import java.util.*;
-import java.util.concurrent.CopyOnWriteArrayList;
-
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.lang.ArrayUtils;
 import org.l2j.gameserver.ai.NpcAI;
@@ -23,11 +21,12 @@ import org.l2j.gameserver.templates.CreatureTemplate;
 import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.templates.TeleportLocation;
 import org.l2j.gameserver.templates.skill.EffectTemplate;
-
-import io.github.joealisson.primitive.maps.IntObjectMap;
-import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.lang.reflect.Constructor;
+import java.util.*;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class NpcTemplate extends CreatureTemplate
 {
@@ -190,7 +189,7 @@ public class NpcTemplate extends CreatureTemplate
 			}
 			catch(ClassNotFoundException e)
 			{
-				classAI = (Class<NpcAI>) Scripts.getInstance().getClasses().get("ai." + ai);
+				classAI = (Class<NpcAI>) Scripts.getInstance().getClasses().get("org.l2j.scripts.ai." + ai);
 			}
 
 			if(classAI == null)
@@ -229,7 +228,7 @@ public class NpcTemplate extends CreatureTemplate
 		}
 		catch(ClassNotFoundException e)
 		{
-			classType = (Class<NpcInstance>) Scripts.getInstance().getClasses().get("npc.model." + type + "Instance");
+			classType = (Class<NpcInstance>) Scripts.getInstance().getClasses().get("org.l2j.scripts.npc.model." + type + "Instance");
 		}
 
 		if(classType == null)
