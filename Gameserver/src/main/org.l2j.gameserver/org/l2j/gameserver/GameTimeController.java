@@ -31,7 +31,7 @@ public class GameTimeController {
 		_gameStartTime = getDayStartTime();
 
 		GameServer.getInstance().addListener((OnStartListener) () -> ThreadPoolManager.getInstance().execute(_dayChangeNotify));
-		var min = getGameMin();
+		var min = getGameMinutes();
 		LOGGER.info("Time Controller Initialized. Current time is {}:{} in the {}.", getGameHour(), min < 10 ? "0" + min : min, isNowNight() ? "night" : "day");
 
 		long nightStart = 0;
@@ -76,7 +76,7 @@ public class GameTimeController {
 		return getGameTime() / 60 % 24;
 	}
 
-	public int getGameMin() {
+	public int getGameMinutes() {
 		return getGameTime() % 60;
 	}
 

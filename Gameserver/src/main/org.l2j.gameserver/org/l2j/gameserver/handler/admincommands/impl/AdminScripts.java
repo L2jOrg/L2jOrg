@@ -48,7 +48,7 @@ public class AdminScripts implements IAdminCommandHandler
 		if(!file.exists())
 			return false;
 
-		List<Class<?>> classes = Scripts.getInstance().load(file);
+		List<Class<?>> classes = Scripts.getInstance().loadScriptsFromFile(file);
 		for(Class<?> clazz : classes)
 		{
 

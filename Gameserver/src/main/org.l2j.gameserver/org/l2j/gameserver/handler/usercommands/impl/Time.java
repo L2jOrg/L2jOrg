@@ -33,7 +33,7 @@ public class Time implements IUserCommandHandler
 			return false;
 
 		int h = GameTimeController.getInstance().getGameHour();
-		int m = GameTimeController.getInstance().getGameMin();
+		int m = GameTimeController.getInstance().getGameMinutes();
 
 		SystemMessage sm;
 		if(GameTimeController.getInstance().isNowNight())

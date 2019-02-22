@@ -25,6 +25,7 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarInputStream;
 
 import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 
 public class Scripts {
 
@@ -45,41 +46,19 @@ public class Scripts {
     }
 
     /**
-     * Loads all scripts in data/scripts. Does not trigger objects and handlers.
+     * Loads all scripts in data/scripts and lib/scripts.jar. Does not trigger objects and handlers.
      *
      */
     private void load() {
         File f = new File("./lib/scripts.jar");
 
         if(f.exists()) {
-            LOGGER.info("Scripts: Loading library...");
-
-            try(JarInputStream stream = new JarInputStream(new FileInputStream(f))) {
-                JarEntry entry = null;
-                while((entry = stream.getNextJarEntry()) != null) {
-                    //Вложенные класс
-                    if(entry.getName().contains(INNER_CLASS_SEPARATOR) || !entry.getName().endsWith(".class")) {
-                        continue;
-                    }
-
-                    String name = entry.getName().replace(".class", "").replace("/", ".");
-
-                    Class<?> clazz = getClass().getClassLoader().loadClass(name);
-                    if(Modifier.isAbstract(clazz.getModifiers())) {
-                        continue;
-                    }
-
-                    _classes.put(clazz.getName(), clazz);
-                }
-            } catch(Exception e) {
-                throw new Error("Failed loading scripts library!");
-            }
-
+            LOGGER.info("Loading Script library...");
+            loadScriptsFromJar(f);
         }
 
-        LOGGER.info("Scripts: Loading...");
-
-        List<Class<?>> classes = load(new File(Config.DATAPACK_ROOT, "data/scripts"));
+        LOGGER.info("Loading Scripts...");
+        List<Class<?>> classes = loadScriptsFromFile(new File(Config.DATAPACK_ROOT, "data/scripts"));
 
         if(classes.isEmpty() && _classes.isEmpty()) {
             LOGGER.warn("No Scripts loaded");
@@ -95,36 +74,46 @@ public class Scripts {
         _listeners.load();
     }
 
-    /**
-     * Вызывается при загрузке сервера. Инициализирует объекты и обработчики.
-     */
-    public void init()
-    {
-        for(Class<?> clazz : _classes.values())
-            init(clazz);
+    private void loadScriptsFromJar(File f) {
+        try(JarInputStream stream = new JarInputStream(new FileInputStream(f))) {
+            JarEntry entry ;
+            while(nonNull((entry = stream.getNextJarEntry()))) {
+                if(entry.getName().contains(INNER_CLASS_SEPARATOR) || !entry.getName().endsWith(".class")) {
+                    continue;
+                }
 
-        _listeners.init();
+                String name = entry.getName().replace(".class", "").replace("/", ".");
+
+                Class<?> clazz = getClass().getClassLoader().loadClass(name);
+                if(Modifier.isAbstract(clazz.getModifiers())) {
+                    continue;
+                }
+
+                _classes.put(clazz.getName(), clazz);
+                try {
+                    processOnLoadScriptClass(clazz);
+                } catch (Exception e) {
+                    LOGGER.error("Can't load script class: " + name, e);
+                }
+
+            }
+        } catch(Exception e) {
+            LOGGER.error("Failed loading scripts library!", e);
+        }
     }
 
-    /**
-     * Загрузить все классы в data/scripts/target
-     *
-     * @param target путь до класса, или каталога со скриптами
-     * @return список загруженых скриптов
-     */
-    public List<Class<?>> load(File target) {
-        File[] scriptFiles = null;
-        if(target.isFile()) {
-            scriptFiles = new File[] { target} ;
-        } else if(target.isDirectory()) {
-            LOGGER.debug("Loading Scripts from {} ", target.getAbsolutePath());
-            try(var paths = Files.walk(target.toPath())) {
-                scriptFiles = paths.filter(this::acceptJavaFile).map(Path::toFile).toArray(File[]::new);
-            } catch (IOException e) {
-                LOGGER.error(e.getLocalizedMessage(), e);
+    private void processOnLoadScriptClass(Class<?> clazz) throws InstantiationException, IllegalAccessException, java.lang.reflect.InvocationTargetException, NoSuchMethodException {
+        if(OnLoadScriptListener.class.isAssignableFrom(clazz)) {
+            if(OnInitScriptListener.class.isAssignableFrom(clazz)) {
+                LOGGER.warn("Scripts: Error in class: {}. Can not use OnLoad and OnInit listeners together!", clazz.getName());
+                return;
             }
-
+            _listeners.add((OnLoadScriptListener) clazz.getDeclaredConstructor().newInstance());
         }
+    }
+
+    public List<Class<?>> loadScriptsFromFile(File target) {
+        Path[] scriptFiles = fileToScriptsPath(target);
 
         if(isNull(scriptFiles)) {
             return Collections.emptyList();
@@ -133,103 +122,88 @@ public class Scripts {
         List<Class<?>> classes = new ArrayList<>();
         Compiler compiler = new Compiler();
 
-        if(compiler.compile(scriptFiles))
-        {
+        if(compiler.compile(scriptFiles)) {
             MemoryClassLoader classLoader = compiler.getClassLoader();
-            for(String name : classLoader.getLoadedClasses())
-            {
-                //Вложенные класс
-                if(name.contains(INNER_CLASS_SEPARATOR) || name.equalsIgnoreCase("module-info"))
+            for(String name : classLoader.getLoadedClasses()) {
+
+                if(name.contains(INNER_CLASS_SEPARATOR) || name.equalsIgnoreCase("module-info")) {
                     continue;
-
-                try
-                {
-                    Class<?> clazz = classLoader.loadClass(name);
-                    if(Modifier.isAbstract(clazz.getModifiers()))
-                        continue;
-                    classes.add(clazz);
-
-                    try
-                    {
-                        if(OnLoadScriptListener.class.isAssignableFrom(clazz))
-                        {
-                            if(OnInitScriptListener.class.isAssignableFrom(clazz))
-                                LOGGER.warn("Scripts: Error in class: " + clazz.getName() + ". Can not use OnLoad and OnInit listeners together!");
-
-                            for(Method method : clazz.getMethods())
-                            {
-                                if(method.isAnnotationPresent(Bypass.class))
-                                {
-                                    LOGGER.warn("Scripts: Error in class: " + clazz.getName() + ". Can not use OnLoad listener and bypass annotation together!");
-                                    break;
-                                }
-                            }
-
-                            _listeners.add((OnLoadScriptListener) clazz.getDeclaredConstructor().newInstance());
-                        }
-                    }
-                    catch(Exception e)
-                    {
-                        LOGGER.error("", e);
-                    }
                 }
-                catch(ClassNotFoundException e)
-                {
-                    LOGGER.error("Scripts: Can't load script class: " + name, e);
-                    classes.clear();
+
+                try {
+                    Class<?> clazz = classLoader.loadClass(name);
+                    if(Modifier.isAbstract(clazz.getModifiers())) {
+                        continue;
+                    }
+
+                    classes.add(clazz);
+                    processOnLoadScriptClass(clazz);
+                }
+                catch(Exception e) {
+                    LOGGER.error("Can't load script class: " + name, e);
                     break;
                 }
             }
         }
-
         return classes;
     }
 
-    private boolean acceptJavaFile(Path p) {
-        var stringPath = p.toString();
-        return stringPath.endsWith(".java");
-    }
+    private Path[] fileToScriptsPath(File target) {
+        Path[] scriptFiles = null;
+        if(target.isFile()) {
+            scriptFiles = new Path[] { target.toPath() } ;
+        } else if(target.isDirectory()) {
+            LOGGER.debug("Loading Scripts from {} ", target.getAbsolutePath());
 
-    private Object init(Class<?> clazz)
-    {
-        if(OnLoadScriptListener.class.isAssignableFrom(clazz))
-            return null;
-
-        Object o = null;
-        try
-        {
-            if(OnInitScriptListener.class.isAssignableFrom(clazz))
-            {
-                o = clazz.getDeclaredConstructor().newInstance();
-                _listeners.add((OnInitScriptListener)o);
+            try(var paths = Files.walk(target.toPath())) {
+                scriptFiles = paths.filter(this::acceptJavaFile).toArray(Path[]::new);
+            } catch (IOException e) {
+                LOGGER.error(e.getLocalizedMessage(), e);
             }
 
-            for(Method method : clazz.getMethods())
-                if(method.isAnnotationPresent(Bypass.class))
-                {
-                    Bypass an = method.getAnnotation(Bypass.class);
-                    if(o == null)
-                        o = clazz.getDeclaredConstructor().newInstance();
-                    Class<?>[] par = method.getParameterTypes();
-                    if(par.length == 0 || par[0] != Player.class || par[1] != NpcInstance.class || par[2] != String[].class)
-                    {
-                        LOGGER.error("Wrong parameters for bypass method: " + method.getName() + ", class: " + clazz.getSimpleName());
-                        continue;
-                    }
-
-                    BypassHolder.getInstance().registerBypass(an.value(), o, method);
-                }
         }
-        catch(Exception e)
-        {
-            LOGGER.error("", e);
-        }
-        return o;
+        return scriptFiles;
     }
 
+    private boolean acceptJavaFile(Path p) {
+        return p.toString().endsWith(".java");
+    }
 
-    public Map<String, Class<?>> getClasses()
-    {
+    public void init() {
+        for (Class<?> clazz : _classes.values()) {
+            try {
+                processBypassClass(clazz);
+
+                if(OnLoadScriptListener.class.isAssignableFrom(clazz)) {
+                    continue;
+                }
+
+                if(OnInitScriptListener.class.isAssignableFrom(clazz)) {
+                    _listeners.add((OnInitScriptListener) clazz.getDeclaredConstructor().newInstance());
+                }
+
+            } catch (Exception e) {
+                LOGGER.error("Can't init script class: " + clazz.getName(), e);
+            }
+        }
+        _listeners.init();
+    }
+
+    private void processBypassClass(Class<?> clazz) throws Exception {
+        for(Method method : clazz.getMethods()) {
+            if (method.isAnnotationPresent(Bypass.class)) {
+                Bypass bypass = method.getAnnotation(Bypass.class);
+                Class<?>[] parameters = method.getParameterTypes();
+                if (parameters.length == 0 || parameters[0] != Player.class || parameters[1] != NpcInstance.class || parameters[2] != String[].class) {
+                    LOGGER.error("Wrong parameters for bypass method: {}, class: {}", method.getName(), clazz.getSimpleName());
+                    continue;
+                }
+                BypassHolder.getInstance().registerBypass(bypass.value(), clazz.getDeclaredConstructor().newInstance(), method);
+            }
+        }
+    }
+
+    public Map<String, Class<?>> getClasses() {
         return _classes;
     }
 
