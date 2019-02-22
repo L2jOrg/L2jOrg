@@ -6,8 +6,7 @@ import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.utils.Language;
 
 import java.io.File;
-import java.io.FileReader;
-import java.io.LineNumberReader;
+import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
@@ -23,11 +22,6 @@ public final class StringsHolder extends AbstractHolder
 	private static final StringsHolder _instance = new StringsHolder();
 
 	private final Map<Language, Map<String, String>> _strings = new HashMap<Language, Map<String, String>>();
-
-	public static StringsHolder getInstance()
-	{
-		return _instance;
-	}
 
 	private StringsHolder() {
 		//
@@ -49,83 +43,50 @@ public final class StringsHolder extends AbstractHolder
 		return value;
 	}
 
-	public void load()
-	{
-		for(Language lang : Language.VALUES)
-		{
-			_strings.put(lang, new HashMap<>());
+	public void load() {
+		for(Language lang : Language.VALUES) {
 
 			if(!Config.AVAILABLE_LANGUAGES.contains(lang))
 				continue;
 
-			File file = new File(Config.DATAPACK_ROOT, "data/string/strings/" + lang.getShortName() + ".properties");
+			_strings.put(lang, new HashMap<>());
+
+			File file = new File(Config.DATAPACK_ROOT, String.format("data/string/strings/%s.properties", lang.getShortName()));
 			if(!file.exists()) {
-				if(lang == Language.ENGLISH)
-					logger.warn("Not find file: " + file.getAbsolutePath());
-			}
-			else
-			{
-				LineNumberReader reader = null;
-				try
-				{
-					reader = new LineNumberReader(new FileReader(file));
-					String line = null;
-					while((line = reader.readLine()) != null)
-					{
-						if(line.startsWith("#"))
+				if(lang == Config.DEFAULT_LANG) {
+					logger.warn("Not find file: {}", file.getAbsolutePath());
+				}
+			} else {
+				try {
+					for(var line : Files.readAllLines(file.toPath())) {
+						if (line.startsWith("#"))
 							continue;
 
 						StringTokenizer token = new StringTokenizer(line, "=");
-						if(token.countTokens() < 2)
-						{
-							logger.error("Error on line: " + line + "; file: " + file.getName());
+						if (token.countTokens() < 2) {
+							logger.error("Error on line: {}; file {}", line, file.getName());
 							continue;
 						}
 
 						String name = token.nextToken();
-						String value = token.nextToken();
-						while(token.hasMoreTokens())
-							value += "=" + token.nextToken();
+						StringBuilder value = new StringBuilder(token.nextToken());
 
-						_strings.get(lang).put(name, value);
+						while (token.hasMoreTokens()) {
+							value.append("=").append(token.nextToken());
+						}
+						_strings.get(lang).put(name, value.toString());
 					}
-				}
-				catch(Exception e)
-				{
-					logger.error("Exception: " + e, e);
-				}
-				finally
-				{
-					try
-					{
-						reader.close();
-					}
-					catch(Exception e)
-					{
-						//
-					}
+				} catch (Exception e) {
+					logger.error(e.getLocalizedMessage(), e);
 				}
 			}
+			logger.info("Load strings: {} for lang: {}", _strings.get(lang).size(), lang);
 		}
-
-		log();
 	}
 
-	public void reload()
-	{
+	public void reload() {
 		clear();
 		load();
-	}
-
-	@Override
-	public void log()
-	{
-		for(Map.Entry<Language, Map<String, String>> entry : _strings.entrySet())
-		{
-			if(!Config.AVAILABLE_LANGUAGES.contains(entry.getKey()))
-				continue;
-			logger.info("load strings: " + entry.getValue().size() + " for lang: " + entry.getKey());
-		}
 	}
 
 	@Override
@@ -138,5 +99,9 @@ public final class StringsHolder extends AbstractHolder
 	public void clear()
 	{
 		_strings.clear();
+	}
+
+	public static StringsHolder getInstance() {
+		return _instance;
 	}
 }

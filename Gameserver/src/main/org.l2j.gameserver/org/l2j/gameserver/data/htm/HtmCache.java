@@ -29,21 +29,20 @@ public class HtmCache {
     public static final int DISABLED = 0;
     public static final int LAZY = 1;
 
-    private HtmCache() { }
-
-    public static HtmCache getInstance()
-    {
-        return INSTANCE;
-    }
-
-    public void reload() {
-        clear();
-
+    private HtmCache() {
         if (Config.HTM_CACHE_MODE == DISABLED) {
             LOGGER.info("HtmCache: Disabled.");
         } else {
             LOGGER.info("HtmCache: Lazy Cache Enabled.");
         }
+    }
+
+    public static HtmCache getInstance() {
+        return INSTANCE;
+    }
+
+    public void reload() {
+        clear();
     }
 
     public String getHtml(String fileName, Player player) {

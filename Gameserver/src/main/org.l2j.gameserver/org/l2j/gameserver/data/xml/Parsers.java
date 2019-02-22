@@ -1,6 +1,5 @@
 package org.l2j.gameserver.data.xml;
 
-import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.string.ItemNameHolder;
 import org.l2j.gameserver.data.string.SkillNameHolder;
 import org.l2j.gameserver.data.string.StringsHolder;
@@ -15,8 +14,7 @@ public abstract class Parsers
 {
     public static void parseAll()
     {
-        HtmCache.getInstance().reload();
-        StringsHolder.getInstance().load();
+
         ItemNameHolder.getInstance().load();
         SkillNameHolder.getInstance().load();
         //

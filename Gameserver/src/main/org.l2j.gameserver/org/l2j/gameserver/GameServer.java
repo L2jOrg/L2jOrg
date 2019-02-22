@@ -9,8 +9,8 @@ import org.l2j.commons.listener.Listener;
 import org.l2j.commons.listener.ListenerList;
 import org.l2j.gameserver.cache.CrestCache;
 import org.l2j.gameserver.cache.ImagesCache;
-import org.l2j.gameserver.data.dao.ItemsDAO;
 import org.l2j.gameserver.data.BoatHolder;
+import org.l2j.gameserver.data.string.StringsHolder;
 import org.l2j.gameserver.data.xml.Parsers;
 import org.l2j.gameserver.data.xml.holder.EventHolder;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
@@ -70,6 +70,18 @@ public class GameServer {
 
     private int onlineLimit;
 
+    public static void main(String[] args) {
+        try {
+            initializeResources();
+            new GameServer();
+            Runtime.getRuntime().addShutdownHook(Shutdown.getInstance());
+            logMemoryUsage();
+            ThreadPoolManager.getInstance().execute(AuthServerCommunication.getInstance());
+        } catch (Exception e) {
+            logger.error(e.getLocalizedMessage(), e);
+        }
+    }
+
     public GameServer() throws Exception {
         instance = this;
         if (!IdFactory.getInstance().isInitialized()) {
@@ -90,9 +102,9 @@ public class GameServer {
 
         Scripts.getInstance();
 
-        Parsers.parseAll();
+        loadData();
 
-        ItemsDAO.getInstance();
+        Parsers.parseAll();
 
         ImagesCache.getInstance();
 
@@ -163,6 +175,10 @@ public class GameServer {
         getListeners().onStart();
     }
 
+    private void loadData() {
+        StringsHolder.getInstance().load();
+    }
+
     private static void logMemoryUsage() {
         logger.info("=================================================");
         String memUsage = String.valueOf(StatsUtils.getMemUsage());
@@ -224,17 +240,7 @@ public class GameServer {
         connectionHandler.shutdown();
     }
 
-    public static void main(String[] args) {
-        try {
-            initializeResources();
-            new GameServer();
-            ThreadPoolManager.getInstance().execute(AuthServerCommunication.getInstance());
-            logMemoryUsage();
-            Runtime.getRuntime().addShutdownHook(Shutdown.getInstance());
-        } catch (Exception e) {
-            logger.error(e.getLocalizedMessage(), e);
-        }
-    }
+
 
     private static void initializeResources() throws Exception {
         configureLogger();

@@ -15,39 +15,39 @@ import static java.util.Objects.nonNull;
 
 public class Compiler {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(Compiler.class);
-	private static final JavaCompiler javac = ToolProvider.getSystemJavaCompiler();
-	private static final DiagnosticListener<JavaFileObject> listener = new DefaultDiagnosticListener();
+    private static final Logger LOGGER = LoggerFactory.getLogger(Compiler.class);
+    private static final JavaCompiler javac = ToolProvider.getSystemJavaCompiler();
+    private static final DiagnosticListener<JavaFileObject> listener = new DefaultDiagnosticListener();
 
-	private final StandardJavaFileManager fileManager =  javac.getStandardFileManager(listener, Locale.getDefault(), Charset.defaultCharset());
-	private final MemoryClassLoader memClassLoader = new MemoryClassLoader();
-	private final MemoryJavaFileManager memFileManager = new MemoryJavaFileManager(fileManager, memClassLoader);
+    private final StandardJavaFileManager fileManager =  javac.getStandardFileManager(listener, Locale.getDefault(), Charset.defaultCharset());
+    private final MemoryClassLoader memClassLoader = new MemoryClassLoader();
+    private final MemoryJavaFileManager memFileManager = new MemoryJavaFileManager(fileManager, memClassLoader);
 
-	public boolean compile(Path... files) {
-	    List<String> options =  List.of("--module-path", System.getProperty("jdk.module.path"));
-		Writer writer = new StringWriter();
-		JavaCompiler.CompilationTask compile = javac.getTask(writer, memFileManager, listener, options, null, fileManager.getJavaFileObjects(files));
+    public boolean compile(Path... files) {
+        List<String> options =  List.of("--module-path", System.getProperty("jdk.module.path"));
+        Writer writer = new StringWriter();
+        JavaCompiler.CompilationTask compile = javac.getTask(writer, memFileManager, listener, options, null, fileManager.getJavaFileObjects(files));
 
-		if(compile.call())
-			return true;
+        if(compile.call())
+            return true;
 
-		LOGGER.warn(writer.toString());
+        LOGGER.warn(writer.toString());
 
-		return false;
-	}
+        return false;
+    }
 
-	public MemoryClassLoader getClassLoader() {
-		return memClassLoader;
-	}
+    public MemoryClassLoader getClassLoader() {
+        return memClassLoader;
+    }
 
-	private static class DefaultDiagnosticListener implements DiagnosticListener<JavaFileObject> {
-		@Override
-		public void report(Diagnostic<? extends JavaFileObject> diagnostic) {
-			if(nonNull(diagnostic.getSource())) {
-				LOGGER.error("Error on {} {}:{} - {}", diagnostic.getSource().getName(), diagnostic.getLineNumber(), diagnostic.getColumnNumber(), diagnostic.getMessage(Locale.getDefault()));
-			} else {
-				LOGGER.error("Error {}", diagnostic.getMessage(Locale.getDefault()));
-			}
-		}
-	}
+    private static class DefaultDiagnosticListener implements DiagnosticListener<JavaFileObject> {
+        @Override
+        public void report(Diagnostic<? extends JavaFileObject> diagnostic) {
+            if(nonNull(diagnostic.getSource())) {
+                LOGGER.error("Error on {} {}:{} - {}", diagnostic.getSource().getName(), diagnostic.getLineNumber(), diagnostic.getColumnNumber(), diagnostic.getMessage(Locale.getDefault()));
+            } else {
+                LOGGER.error("Error {}", diagnostic.getMessage(Locale.getDefault()));
+            }
+        }
+    }
 }
