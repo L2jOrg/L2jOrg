@@ -11,6 +11,9 @@ public interface GameserverDAO extends DAO {
     @Query("SELECT * FROM gameservers")
     List<GameServer> findAll();
 
-    @Query("INSERT INTO gameservers VALUES (:id:, :host:)")
-    void save(int id, String host);
+    @Query("INSERT INTO gameservers VALUES (:id:, :host:, :serverType:)")
+    void save(int id, String host, int serverType);
+
+    @Query("UPDATE gameservers  SET server_type = :serverType: WHERE server_id = :id:")
+    void updateServerType(int id, int serverType);
 }

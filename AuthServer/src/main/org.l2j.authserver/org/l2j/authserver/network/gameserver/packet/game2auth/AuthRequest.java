@@ -1,5 +1,6 @@
 package org.l2j.authserver.network.gameserver.packet.game2auth;
 
+import org.l2j.authserver.data.database.dao.GameserverDAO;
 import org.l2j.authserver.network.GameServerInfo;
 import org.l2j.authserver.controller.GameServerManager;
 import org.l2j.authserver.network.gameserver.ServerClientState;
@@ -10,6 +11,7 @@ import java.nio.ByteBuffer;
 import static java.util.Objects.nonNull;
 import static org.l2j.authserver.network.gameserver.packet.auth2game.LoginGameServerFail.*;
 import static org.l2j.authserver.settings.AuthServerSettings.acceptNewGameServerEnabled;
+import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
 public class AuthRequest extends GameserverReadablePacket {
 
@@ -89,6 +91,7 @@ public class AuthRequest extends GameserverReadablePacket {
         gsi.setMaxPlayers(maxPlayers);
         gsi.setAuthed(true);
         gsi.setServerType(serverType);
+        getDAO(GameserverDAO.class).updateServerType(gsi.getId(), serverType);
         gsi.setAgeLimit(ageLimit);
         gsi.setShowingBrackets(showBrackets);
         gsi.setIsPvp(isPvp);

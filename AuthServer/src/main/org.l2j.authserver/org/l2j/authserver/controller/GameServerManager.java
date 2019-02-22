@@ -111,11 +111,11 @@ public class GameServerManager {
     }
 
     public void registerServerOnDB(GameServerInfo gsi) {
-        registerServerOnDB(gsi.getId(), gsi.getExternalHost());
+        registerServerOnDB(gsi.getId(), gsi.getExternalHost(), gsi.getServerType());
     }
 
-    public void registerServerOnDB(int id, String externalHost) {
-        getDAO(GameserverDAO.class).save(id, externalHost);
+    public void registerServerOnDB(int id, String externalHost, int serverType) {
+        getDAO(GameserverDAO.class).save(id, externalHost, serverType);
     }
 
     public String getServerNameById(int id) {
