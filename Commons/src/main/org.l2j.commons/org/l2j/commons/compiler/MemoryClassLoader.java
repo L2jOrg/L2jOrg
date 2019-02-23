@@ -9,8 +9,7 @@ public class MemoryClassLoader extends ClassLoader
 	private final Map<String, MemoryByteCode> loaded = new HashMap<String, MemoryByteCode>();
 	
 	@Override
-	protected Class<?> findClass(String name) throws ClassNotFoundException
-	{
+	protected Class<?> findClass(String name) throws ClassNotFoundException {
 		MemoryByteCode mbc = classes.get(name);
 		if(mbc == null)
 		{

@@ -9,14 +9,15 @@ import java.nio.ByteBuffer;
 
 public abstract class GameserverReadablePacket extends ReadablePacket<ServerClient> {
 
-    private static final Logger logger = LoggerFactory.getLogger(GameserverReadablePacket.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(GameserverReadablePacket.class);
 
     @Override
     protected boolean read(ByteBuffer buffer) {
         try {
             readImpl(buffer);
         } catch (Exception e) {
-            logger.error("Reading {} : {} ", getClass().getSimpleName(), e);
+            LOGGER.error("Reading {} : {} ", getClass().getSimpleName(), e);
+            LOGGER.error(e.getLocalizedMessage(), e);
             return false;
         }
         return true;
@@ -27,7 +28,8 @@ public abstract class GameserverReadablePacket extends ReadablePacket<ServerClie
         try {
             runImpl();
         } catch (Exception e) {
-            logger.error("Running {} : {} ", getClass().getSimpleName(), e);
+            LOGGER.error("Running {} : {} ", getClass().getSimpleName(), e);
+            LOGGER.error(e.getLocalizedMessage(), e);
         }
     }
 

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.entity.olympiad;
 
-import org.l2j.gameserver.data.string.StringsHolder;
+import org.l2j.gameserver.data.string.Messages;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.utils.TimeUtils;
 
@@ -66,11 +66,11 @@ public class OlympiadHistory
 		int team = _objectId1 == target ? 1 : 2;
 		String main = null;
 		if(_gameStatus == 0)
-			main = StringsHolder.getInstance().getString(player, "hero.history.tie");
+			main = Messages.getInstance().getMessage(player, "hero.history.tie");
 		else if(team == _gameStatus)
-			main = StringsHolder.getInstance().getString(player, "hero.history.win");
+			main = Messages.getInstance().getMessage(player, "hero.history.win");
 		else
-			main = StringsHolder.getInstance().getString(player, "hero.history.loss");
+			main = Messages.getInstance().getMessage(player, "hero.history.loss");
 
 		main = main.replace("%classId%", String.valueOf(team == 1 ? _classId2 : _classId1));
 		main = main.replace("%name%", team == 1 ? _name2 : _name1);

@@ -6,7 +6,7 @@ import io.github.joealisson.primitive.pair.IntObjectPair;
 import org.l2j.commons.database.L2DatabaseFactory;
 import org.l2j.commons.dbutils.DbUtils;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.string.StringsHolder;
+import org.l2j.gameserver.data.string.Messages;
 import org.l2j.gameserver.data.database.mysql;
 import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
@@ -351,7 +351,7 @@ public class Hero
 		{
 			HtmlMessage html = new HtmlMessage(5);
 			html.setFile("olympiad/monument_hero_info.htm");
-			html.replace("%title%", StringsHolder.getInstance().getString(activeChar, "hero.diary"));
+			html.replace("%title%", Messages.getInstance().getMessage(activeChar, "hero.diary"));
 			html.replace("%heroname%", hero.getString(CHAR_NAME));
 			String message = _heroMessage.get(charid);
 			html.replace("%message%", message == null ? "" : message);

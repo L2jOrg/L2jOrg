@@ -80,9 +80,9 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.model.actor.flags.flag;
 
 
-    exports org.l2j.gameserver.settings to org.l2j.scripts;
-    exports org.l2j.gameserver.data.dao to org.l2j.scripts;
-    exports org.l2j.gameserver.data.database to org.l2j.scripts;
+    exports org.l2j.gameserver.settings;
+    exports org.l2j.gameserver.data.dao;
+    exports org.l2j.gameserver.data.database;
 
     opens org.l2j.gameserver.data.dao to org.l2j.commons;
     opens org.l2j.gameserver.settings to org.l2j.commons;

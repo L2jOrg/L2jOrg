@@ -5,7 +5,7 @@ import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.data.dao.OlympiadParticipantsDAO;
 import org.l2j.gameserver.data.string.ItemNameHolder;
 import org.l2j.gameserver.data.string.SkillNameHolder;
-import org.l2j.gameserver.data.string.StringsHolder;
+import org.l2j.gameserver.data.string.Messages;
 import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.data.xml.parser.*;
 import org.l2j.gameserver.data.xml.holder.EventHolder;
@@ -177,7 +177,7 @@ public class AdminReload implements IAdminCommandHandler
             {
                 ItemNameHolder.getInstance().reload();
                 SkillNameHolder.getInstance().reload();
-                StringsHolder.getInstance().reload();
+                Messages.getInstance().reload();
                 break;
             }
             case admin_reload_nobles:

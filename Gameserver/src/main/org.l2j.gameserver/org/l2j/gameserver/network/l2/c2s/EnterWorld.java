@@ -5,7 +5,7 @@ import org.l2j.gameserver.Announcements;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.dao.MailDAO;
 import org.l2j.gameserver.data.htm.HtmCache;
-import org.l2j.gameserver.data.string.StringsHolder;
+import org.l2j.gameserver.data.string.Messages;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.instancemanager.CoupleManager;
@@ -183,11 +183,11 @@ public class EnterWorld extends L2GameClientPacket {
 				{
 					Mail mail = new Mail();
 					mail.setSenderId(1);
-					mail.setSenderName(StringsHolder.getInstance().getString(activeChar, "birthday.npc"));
+					mail.setSenderName(Messages.getInstance().getMessage(activeChar, "birthday.npc"));
 					mail.setReceiverId(activeChar.getObjectId());
 					mail.setReceiverName(activeChar.getName());
-					mail.setTopic(StringsHolder.getInstance().getString(activeChar, "birthday.title"));
-					mail.setBody(StringsHolder.getInstance().getString(activeChar, "birthday.text"));
+					mail.setTopic(Messages.getInstance().getMessage(activeChar, "birthday.title"));
+					mail.setBody(Messages.getInstance().getMessage(activeChar, "birthday.text"));
 
 					ItemInstance item = ItemFunctions.createItem(21169);
 					item.setLocation(ItemInstance.ItemLocation.MAIL);

@@ -1,36 +1,29 @@
 package org.l2j.commons.compiler;
 
-import java.io.IOException;
-import java.net.URI;
-
 import javax.tools.FileObject;
 import javax.tools.ForwardingJavaFileManager;
 import javax.tools.JavaFileObject;
 import javax.tools.JavaFileObject.Kind;
 import javax.tools.StandardJavaFileManager;
+import java.io.IOException;
+import java.util.HashSet;
+import java.util.Set;
 
-public class MemoryJavaFileManager extends ForwardingJavaFileManager<StandardJavaFileManager>
-{
-	private MemoryClassLoader cl;
+public class MemoryJavaFileManager extends ForwardingJavaFileManager<StandardJavaFileManager> {
 
-	public MemoryJavaFileManager(StandardJavaFileManager sjfm, MemoryClassLoader xcl)
-	{
+	private Set<String> loadedClasses = new HashSet<>();
+
+	public MemoryJavaFileManager(StandardJavaFileManager sjfm) {
 		super(sjfm);
-		cl = xcl;
 	}
 
 	@Override
-	public JavaFileObject getJavaFileForOutput(Location location, String className, Kind kind, FileObject sibling) throws IOException
-	{
-		MemoryByteCode mbc = new MemoryByteCode(className.replace('/', '.').replace('\\', '.'), URI.create("file:///" + className.replace('.', '/').replace('\\', '/') + kind.extension));
-		cl.addClass(mbc);
-
-		return mbc;
+	public JavaFileObject getJavaFileForOutput(Location location, String className, Kind kind, FileObject sibling) throws IOException {
+		loadedClasses.add(className);
+		return super.getJavaFileForOutput(location, className, kind, sibling);
 	}
 
-	@Override
-	public ClassLoader getClassLoader(Location location)
-	{
-		return cl;
+	public Set<String> getLoadedClasses() {
+		return loadedClasses;
 	}
 }

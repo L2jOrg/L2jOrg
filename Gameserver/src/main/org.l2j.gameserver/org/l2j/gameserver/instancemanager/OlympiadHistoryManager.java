@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.l2j.gameserver.data.dao.OlympiadHistoryDAO;
-import org.l2j.gameserver.data.string.StringsHolder;
+import org.l2j.gameserver.data.string.Messages;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.entity.olympiad.OlympiadHistory;
@@ -95,7 +95,7 @@ public class OlympiadHistoryManager
 
 		HtmlMessage html = new HtmlMessage(5);
 		html.setFile("olympiad/monument_hero_info.htm");
-		html.replace("%title%", StringsHolder.getInstance().getString(player, "hero.history"));
+		html.replace("%title%", Messages.getInstance().getMessage(player, "hero.history"));
 
 		int allStatWinner = 0;
 		int allStatLoss = 0;

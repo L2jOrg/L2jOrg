@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.l2.components;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2j.gameserver.data.string.StringsHolder;
+import org.l2j.gameserver.data.string.Messages;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.s2c.L2GameServerPacket;
 import org.l2j.gameserver.network.l2.s2c.SystemMessage;
@@ -66,7 +66,7 @@ public class CustomMessage implements IBroadcastPacket
 	{
 		StringBuilder msg = null;
 
-		String text = StringsHolder.getInstance().getString(_address, lang);
+		String text = Messages.getInstance().getMessage(_address, lang);
 		if(text != null)
 		{
 			msg = new StringBuilder(text);

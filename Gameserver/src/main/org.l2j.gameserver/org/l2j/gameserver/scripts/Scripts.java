@@ -1,7 +1,6 @@
 package  org.l2j.gameserver.scripts;
 
 import org.l2j.commons.compiler.Compiler;
-import org.l2j.commons.compiler.MemoryClassLoader;
 import org.l2j.commons.listener.ListenerList;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.bypass.Bypass;
@@ -16,9 +15,10 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.lang.module.Configuration;
+import java.lang.module.ModuleFinder;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.*;
 import java.util.jar.JarEntry;
@@ -113,62 +113,47 @@ public class Scripts {
     }
 
     public List<Class<?>> loadScriptsFromFile(File target) {
-        Path[] scriptFiles = fileToScriptsPath(target);
-
-        if(isNull(scriptFiles)) {
-            return Collections.emptyList();
-        }
-
         List<Class<?>> classes = new ArrayList<>();
         Compiler compiler = new Compiler();
 
-        if(compiler.compile(scriptFiles)) {
-            MemoryClassLoader classLoader = compiler.getClassLoader();
+        try {
+            var classDir = Path.of("compiledScript");
+            if(compiler.compile(target.toPath(), classDir,
+                    "--module-path", System.getProperty("jdk.module.path"), "--module-source-path", target.getAbsolutePath())) {
 
-            classLoader.getUnnamedModule().
-            for(String name : classLoader.getLoadedClasses()) {
+                Configuration configuration = ModuleLayer.boot().configuration().resolve(ModuleFinder.of(classDir), ModuleFinder.of(), Set.of("org.l2j.scripts"));
+                ModuleLayer layer = ModuleLayer.boot().defineModulesWithOneLoader(configuration, ClassLoader.getSystemClassLoader());
+                ClassLoader loader = layer.findLoader("org.l2j.scripts");
 
-                if(name.contains(INNER_CLASS_SEPARATOR) || name.equalsIgnoreCase("module-info")) {
-                    continue;
+                if(isNull(loader)) {
+                    return classes;
                 }
 
-                try {
-                    Class<?> clazz = classLoader.loadClass(name);
-                    if(Modifier.isAbstract(clazz.getModifiers())) {
+                for(String name : compiler.getLoadedClasses()) {
+
+                    if(name.contains(INNER_CLASS_SEPARATOR) || name.equalsIgnoreCase("module-info")) {
                         continue;
                     }
 
-                    classes.add(clazz);
-                    processOnLoadScriptClass(clazz);
-                }
-                catch(Exception e) {
-                    LOGGER.error("Can't load script class: " + name, e);
-                    break;
+                    try {
+                        Class<?> clazz = loader.loadClass(name);
+                        if(Modifier.isAbstract(clazz.getModifiers())) {
+                            continue;
+                        }
+
+                        classes.add(clazz);
+                        processOnLoadScriptClass(clazz);
+                    }
+                    catch(Exception e) {
+                        LOGGER.error("Can't load script class: " + name, e);
+                        break;
+                    }
                 }
             }
+        } catch (IOException e) {
+            LOGGER.error(e.getLocalizedMessage(), e);
         }
         return classes;
-    }
-
-    private Path[] fileToScriptsPath(File target) {
-        Path[] scriptFiles = null;
-        if(target.isFile()) {
-            scriptFiles = new Path[] { target.toPath() } ;
-        } else if(target.isDirectory()) {
-            LOGGER.debug("Loading Scripts from {} ", target.getAbsolutePath());
-
-            try(var paths = Files.walk(target.toPath())) {
-                scriptFiles = paths.filter(this::acceptJavaFile).toArray(Path[]::new);
-            } catch (IOException e) {
-                LOGGER.error(e.getLocalizedMessage(), e);
-            }
-
-        }
-        return scriptFiles;
-    }
-
-    private boolean acceptJavaFile(Path p) {
-        return p.toString().endsWith(".java");
     }
 
     public void init() {

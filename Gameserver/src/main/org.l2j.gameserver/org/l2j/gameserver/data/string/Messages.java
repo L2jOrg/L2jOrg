@@ -1,5 +1,7 @@
 package org.l2j.gameserver.data.string;
 
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
@@ -17,27 +19,27 @@ import static java.util.Objects.isNull;
  * Author: VISTALL
  * Date:  19:27/29.12.2010
  */
-public final class StringsHolder extends AbstractHolder
-{
-	private static final StringsHolder _instance = new StringsHolder();
+public final class Messages extends AbstractHolder {
 
-	private final Map<Language, Map<String, String>> _strings = new HashMap<Language, Map<String, String>>();
+	private static final Messages _instance = new Messages();
 
-	private StringsHolder() {
+	private final IntObjectMap<Map<String, String>> resources = new HashIntObjectMap<>();
+
+	private Messages() {
 		//
 	}
 
-	public String getString(Player player, String name)
+	public String getMessage(Player player, String name)
 	{
 		Language lang = player == null ? Config.DEFAULT_LANG : player.getLanguage();
-		return getString(name, lang);
+		return getMessage(name, lang);
 	}
 
-	public String getString(String address, Language lang) {
-		Map<String, String> strings = _strings.get(lang);
+	public String getMessage(String address, Language lang) {
+		Map<String, String> strings = resources.get(lang.getId());
 		String value = strings == null ? null : strings.get(address);
 		if(isNull(value)) {
-			strings = _strings.get(Config.DEFAULT_LANG);
+			strings = resources.get(Config.DEFAULT_LANG.getId());
 			value = strings == null ? null : strings.get(address);
 		}
 		return value;
@@ -49,7 +51,7 @@ public final class StringsHolder extends AbstractHolder
 			if(!Config.AVAILABLE_LANGUAGES.contains(lang))
 				continue;
 
-			_strings.put(lang, new HashMap<>());
+			resources.put(lang.getId(), new HashMap<>());
 
 			File file = new File(Config.DATAPACK_ROOT, String.format("data/string/strings/%s.properties", lang.getShortName()));
 			if(!file.exists()) {
@@ -74,13 +76,13 @@ public final class StringsHolder extends AbstractHolder
 						while (token.hasMoreTokens()) {
 							value.append("=").append(token.nextToken());
 						}
-						_strings.get(lang).put(name, value.toString());
+						resources.get(lang.getId()).put(name, value.toString());
 					}
 				} catch (Exception e) {
 					logger.error(e.getLocalizedMessage(), e);
 				}
 			}
-			logger.info("Load strings: {} for lang: {}", _strings.get(lang).size(), lang);
+			logger.info("Load strings: {} for lang: {}", resources.get(lang.getId()).size(), lang);
 		}
 	}
 
@@ -92,16 +94,16 @@ public final class StringsHolder extends AbstractHolder
 	@Override
 	public int size()
 	{
-		return _strings.size();
+		return resources.size();
 	}
 
 	@Override
 	public void clear()
 	{
-		_strings.clear();
+		resources.clear();
 	}
 
-	public static StringsHolder getInstance() {
+	public static Messages getInstance() {
 		return _instance;
 	}
 }
