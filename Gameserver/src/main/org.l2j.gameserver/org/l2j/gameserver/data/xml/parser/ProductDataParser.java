@@ -7,6 +7,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Iterator;
 
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.item.product.ProductPointsType;
 import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
@@ -14,6 +15,8 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.ProductDataHolder;
 import org.l2j.gameserver.templates.item.product.ProductItem;
 import org.l2j.gameserver.templates.item.product.ProductItemComponent;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Bonux
@@ -37,9 +40,8 @@ public final class ProductDataParser extends AbstractParser<ProductDataHolder>
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/product_data.xml");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/product_data.xml").toFile();
 	}
 
 	@Override

@@ -9,7 +9,10 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.PetitionGroupHolder;
 import org.l2j.gameserver.model.petition.PetitionMainGroup;
 import org.l2j.gameserver.model.petition.PetitionSubGroup;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.utils.Language;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author VISTALL
@@ -30,9 +33,8 @@ public class PetitionGroupParser extends AbstractParser<PetitionGroupHolder>
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/petition_group.xml");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/petition_group.xml").toFile();
 	}
 
 	@Override

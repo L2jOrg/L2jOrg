@@ -6,6 +6,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.nio.ByteBuffer;
+import java.nio.file.Files;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -20,8 +21,11 @@ import org.l2j.gameserver.Config;
 
 import io.github.joealisson.primitive.maps.IntObjectMap;
 import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Bonux
@@ -61,14 +65,14 @@ public class ImagesCache
 	{
 		_log.info("ImagesCache: Loading images...");
 
-		File dir = new File(Config.DATAPACK_ROOT, "images");
-		if(!dir.exists() || !dir.isDirectory())
+		var dir = getSettings(ServerSettings.class).dataPackRootPath().resolve("images");
+		if(Files.notExists(dir) || !Files.isDirectory(dir))
 		{
 			_log.info("ImagesCache: Files missing, loading aborted.");
 			return;
 		}
 
-		int count = loadImagesDir(dir);
+		int count = loadImagesDir(dir.toFile());
 
 		_log.info("ImagesCache: Loaded " + count + " images");
 	}

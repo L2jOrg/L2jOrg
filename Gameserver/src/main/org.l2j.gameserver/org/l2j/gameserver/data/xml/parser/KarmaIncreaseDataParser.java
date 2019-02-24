@@ -7,6 +7,9 @@ import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.KarmaIncreaseDataHolder;
+import org.l2j.gameserver.settings.ServerSettings;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Bonux
@@ -26,9 +29,8 @@ public final class KarmaIncreaseDataParser extends AbstractParser<KarmaIncreaseD
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/pc_parameters/pc_karma_increase_data.xml");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/pc_parameters/pc_karma_increase_data.xml").toFile();
 	}
 
 	@Override

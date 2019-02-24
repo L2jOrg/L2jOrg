@@ -9,6 +9,7 @@ import org.l2j.commons.geometry.Rectangle;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.SpawnHolder;
 import org.l2j.gameserver.model.Territory;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.templates.npc.MinionData;
 import org.l2j.gameserver.templates.spawn.PeriodOfDay;
@@ -18,6 +19,8 @@ import org.l2j.gameserver.utils.Location;
 
 import java.io.File;
 import java.util.*;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author VISTALL
@@ -38,15 +41,13 @@ public final class SpawnParser extends AbstractParser<SpawnHolder>
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/spawn/");
+	public File getXMLPath(){
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/spawn/").toFile();
 	}
 
 	@Override
-	public File getCustomXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "custom/spawn/");
+	public File getCustomXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("custom/spawn/").toFile();
 	}
 
 	@Override

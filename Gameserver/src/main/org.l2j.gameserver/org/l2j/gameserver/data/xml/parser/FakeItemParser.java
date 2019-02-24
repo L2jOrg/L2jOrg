@@ -10,11 +10,14 @@ import java.util.Map;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.FakeItemHolder;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.item.ArmorTemplate.ArmorType;
 import org.l2j.gameserver.templates.item.ItemGrade;
 import org.dom4j.Element;
 import io.github.joealisson.primitive.lists.IntList;
 import io.github.joealisson.primitive.lists.impl.ArrayIntList;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class FakeItemParser extends AbstractParser<FakeItemHolder>
 {
@@ -31,9 +34,8 @@ public class FakeItemParser extends AbstractParser<FakeItemHolder>
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/fake_players/fake_item.xml");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/fake_players/fake_item.xml").toFile();
 	}
 
 	@Override

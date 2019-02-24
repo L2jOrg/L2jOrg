@@ -7,8 +7,11 @@ import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.StaticObjectHolder;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.StaticObjectTemplate;
 import org.l2j.gameserver.templates.StatsSet;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author VISTALL
@@ -29,9 +32,8 @@ public final class StaticObjectParser extends AbstractParser<StaticObjectHolder>
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/staticobjects.xml");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/staticobjects.xml").toFile();
 	}
 
 	@Override

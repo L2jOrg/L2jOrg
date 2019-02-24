@@ -9,6 +9,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.ZoneHolder;
 import org.l2j.gameserver.model.Territory;
 import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.templates.ZoneTemplate;
 import org.l2j.gameserver.utils.Location;
@@ -19,6 +20,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author G1ta0
@@ -40,15 +43,13 @@ public class ZoneParser extends StatParser<ZoneHolder>
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/zone/");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/zone/").toFile();
 	}
 
 	@Override
-	public File getCustomXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "custom/zone/");
+	public File getCustomXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("custom/zone/").toFile();
 	}
 
 	@Override

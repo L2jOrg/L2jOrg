@@ -8,11 +8,14 @@ import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;
 import org.l2j.gameserver.data.xml.holder.RecipeHolder;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.item.ItemGrade;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.templates.item.RecipeTemplate;
 import org.l2j.gameserver.templates.item.data.ChancedItemData;
 import org.l2j.gameserver.templates.item.data.ItemData;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public final class RecipeParser extends AbstractParser<RecipeHolder>
 {
@@ -29,9 +32,8 @@ public final class RecipeParser extends AbstractParser<RecipeHolder>
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/recipes.xml");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/recipes.xml").toFile();
 	}
 
 	@Override

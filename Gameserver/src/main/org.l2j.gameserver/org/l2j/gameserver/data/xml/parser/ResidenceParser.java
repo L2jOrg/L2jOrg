@@ -12,6 +12,7 @@ import org.l2j.gameserver.model.base.ResidenceFunctionType;
 import org.l2j.gameserver.model.entity.residence.Castle;
 import org.l2j.gameserver.model.entity.residence.Residence;
 import org.l2j.gameserver.model.entity.residence.ResidenceFunction;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.templates.item.support.MerchantGuard;
 import org.l2j.gameserver.templates.residence.ResidenceFunctionTemplate;
@@ -20,6 +21,8 @@ import org.l2j.gameserver.utils.Location;
 import java.io.File;
 import java.lang.reflect.Constructor;
 import java.util.Iterator;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author VISTALL
@@ -40,9 +43,8 @@ public final class ResidenceParser extends AbstractParser<ResidenceHolder>
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/residences/");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/residences/").toFile();
 	}
 
 	@Override

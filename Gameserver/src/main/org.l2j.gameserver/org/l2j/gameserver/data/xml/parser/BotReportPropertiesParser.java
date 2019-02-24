@@ -7,8 +7,11 @@ import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.BotReportPropertiesHolder;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.BotPunishment;
 import org.dom4j.Element;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class BotReportPropertiesParser extends AbstractParser<BotReportPropertiesHolder>
 {
@@ -25,9 +28,8 @@ public class BotReportPropertiesParser extends AbstractParser<BotReportPropertie
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/bot_report_properties.xml");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/bot_report_properties.xml").toFile();
 	}
 
 	@Override

@@ -11,11 +11,14 @@ import org.l2j.gameserver.data.xml.holder.PlayerTemplateHolder;
 import org.l2j.gameserver.model.base.ClassType;
 import org.l2j.gameserver.model.base.Race;
 import org.l2j.gameserver.model.base.Sex;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.templates.item.StartItem;
 import org.l2j.gameserver.templates.player.HpMpCpData;
 import org.l2j.gameserver.templates.player.PlayerTemplate;
 import org.l2j.gameserver.utils.Location;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Bonux
@@ -35,9 +38,8 @@ public final class PlayerTemplateParser extends AbstractParser<PlayerTemplateHol
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/pc_parameters/template_data/");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/pc_parameters/template_data/").toFile();
 	}
 
 	@Override

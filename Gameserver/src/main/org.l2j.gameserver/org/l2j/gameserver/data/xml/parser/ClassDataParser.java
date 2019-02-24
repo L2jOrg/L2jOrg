@@ -7,7 +7,10 @@ import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.ClassDataHolder;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.player.ClassData;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Bonux
@@ -27,9 +30,8 @@ public final class ClassDataParser extends AbstractParser<ClassDataHolder>
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/pc_parameters/class_data/");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/pc_parameters/class_data/").toFile();
 	}
 
 	@Override

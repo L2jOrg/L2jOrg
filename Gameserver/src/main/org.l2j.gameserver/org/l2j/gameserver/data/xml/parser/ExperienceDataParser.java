@@ -5,10 +5,13 @@ import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.ExperienceDataHolder;
 import org.l2j.gameserver.model.base.Experience;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.ExperienceData;
 
 import java.io.File;
 import java.util.Iterator;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public final class ExperienceDataParser extends AbstractParser<ExperienceDataHolder>
 {
@@ -25,9 +28,8 @@ public final class ExperienceDataParser extends AbstractParser<ExperienceDataHol
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/pc_parameters/experience.xml");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/pc_parameters/experience.xml").toFile();
 	}
 
 	@Override

@@ -11,12 +11,15 @@ import org.l2j.gameserver.instancemanager.MapRegionManager;
 import org.l2j.gameserver.model.Territory;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.base.Race;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.mapregion.RestartArea;
 import org.l2j.gameserver.templates.mapregion.RestartPoint;
 import org.l2j.gameserver.utils.Location;
 
 import java.io.File;
 import java.util.*;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class RestartPointParser extends AbstractParser<MapRegionManager>
 {
@@ -33,9 +36,8 @@ public class RestartPointParser extends AbstractParser<MapRegionManager>
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/mapregion/restart_points.xml");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/mapregion/restart_points.xml").toFile();
 	}
 
 	@Override

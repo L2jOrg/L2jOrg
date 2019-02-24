@@ -7,7 +7,10 @@ import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.SoulCrystalHolder;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.SoulCrystal;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author VISTALL
@@ -28,9 +31,8 @@ public final class SoulCrystalParser extends AbstractParser<SoulCrystalHolder>
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/soul_crystals.xml");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/soul_crystals.xml").toFile();
 	}
 
 	@Override

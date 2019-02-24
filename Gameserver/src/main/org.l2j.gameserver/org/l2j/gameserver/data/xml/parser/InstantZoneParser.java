@@ -10,6 +10,7 @@ import org.l2j.gameserver.data.xml.holder.InstantZoneHolder;
 import org.l2j.gameserver.data.xml.holder.SpawnHolder;
 import org.l2j.gameserver.data.xml.holder.ZoneHolder;
 import org.l2j.gameserver.model.Territory;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.DoorTemplate;
 import org.l2j.gameserver.templates.InstantZone;
 import org.l2j.gameserver.templates.InstantZone.SpawnInfo;
@@ -23,6 +24,8 @@ import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
 import java.io.File;
 import java.util.*;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author VISTALL
@@ -42,9 +45,8 @@ public class InstantZoneParser extends AbstractParser<InstantZoneHolder>
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/instances/");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/instances/").toFile();
 	}
 
 	@Override

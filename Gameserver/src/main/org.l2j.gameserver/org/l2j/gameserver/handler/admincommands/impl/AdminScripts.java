@@ -5,9 +5,13 @@ import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.handler.admincommands.IAdminCommandHandler;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.scripts.Scripts;
+import org.l2j.gameserver.settings.ServerSettings;
 
 import java.io.File;
+import java.nio.file.Files;
 import java.util.List;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class AdminScripts implements IAdminCommandHandler
 {
@@ -42,13 +46,13 @@ public class AdminScripts implements IAdminCommandHandler
 		return true;
 	}
 
-	private boolean run(String target)
-	{
-		File file = new File(Config.DATAPACK_ROOT, "data/scripts/" + target.replace(".", "/") + ".java");
-		if(!file.exists())
+	private boolean run(String target) {
+		var filePath = getSettings(ServerSettings.class).dataPackRootPath().resolve(String.format("data/scripts/%s.java",target.replace(".", "/")));
+		if(Files.notExists(filePath)) {
 			return false;
+		}
 
-		List<Class<?>> classes = Scripts.getInstance().loadScriptsFromFile(file);
+		List<Class<?>> classes = Scripts.getInstance().loadScriptsFromFile(filePath);
 		for(Class<?> clazz : classes)
 		{
 

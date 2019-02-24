@@ -5,6 +5,7 @@ import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.channels.FileChannel;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.zip.CRC32;
@@ -12,8 +13,11 @@ import java.util.zip.CRC32;
 import org.l2j.commons.threading.RunnableImpl;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class GeoOptimizer
 {
@@ -37,9 +41,8 @@ public class GeoOptimizer
 			fileName = "geodata/matches/" + rx + "_" + ry + ".matches";
 		}
 
-		private boolean exists()
-		{
-			return new File(Config.DATAPACK_ROOT, fileName).exists();
+		private boolean exists() {
+			return Files.exists(getSettings(ServerSettings.class).dataPackRootPath().resolve(fileName));
 		}
 
 		private void saveToFile(BlockLink[] links)
@@ -47,10 +50,10 @@ public class GeoOptimizer
 			log.info("Saving matches to: " + fileName);
 			try
 			{
-				File f = new File(Config.DATAPACK_ROOT, fileName);
-				if(f.exists())
-					f.delete();
-				FileChannel wChannel = new RandomAccessFile(f, "rw").getChannel();
+				var f = getSettings(ServerSettings.class).dataPackRootPath().resolve(fileName);
+				if(Files.exists(f))
+					Files.delete(f);
+				FileChannel wChannel = new RandomAccessFile(f.toFile(), "rw").getChannel();
 				ByteBuffer buffer = wChannel.map(FileChannel.MapMode.READ_WRITE, 0, links.length * 6 + 1);
 				buffer.order(ByteOrder.LITTLE_ENDIAN);
 				buffer.put(version);
@@ -152,12 +155,12 @@ public class GeoOptimizer
 
 		private boolean loadFromFile()
 		{
-			File GeoCrc = new File(Config.DATAPACK_ROOT, fileName);
-			if(!GeoCrc.exists())
+			var GeoCrc = getSettings(ServerSettings.class).dataPackRootPath().resolve(fileName);
+			if(Files.notExists(GeoCrc))
 				return false;
 			try
 			{
-				FileChannel roChannel = new RandomAccessFile(GeoCrc, "r").getChannel();
+				FileChannel roChannel = new RandomAccessFile(GeoCrc.toFile(), "r").getChannel();
 				if(roChannel.size() != GeoEngine.BLOCKS_IN_MAP * 4)
 				{
 					roChannel.close();
@@ -187,10 +190,10 @@ public class GeoOptimizer
 			FileChannel wChannel;
 			try
 			{
-				File f = new File(Config.DATAPACK_ROOT, fileName);
-				if(f.exists())
-					f.delete();
-				wChannel = new RandomAccessFile(f, "rw").getChannel();
+				var f = getSettings(ServerSettings.class).dataPackRootPath().resolve(fileName);
+				if(Files.exists(f))
+					Files.delete(f);
+				wChannel = new RandomAccessFile(f.toFile(), "rw").getChannel();
 				ByteBuffer buffer = wChannel.map(FileChannel.MapMode.READ_WRITE, 0, GeoEngine.BLOCKS_IN_MAP * 4);
 				buffer.order(ByteOrder.LITTLE_ENDIAN);
 				int[] _checkSums = checkSums[geoX][geoY];
@@ -253,12 +256,12 @@ public class GeoOptimizer
 
 	public static BlockLink[] loadBlockMatches(String fileName)
 	{
-		File f = new File(Config.DATAPACK_ROOT, fileName);
-		if(!f.exists())
+		var f = getSettings(ServerSettings.class).dataPackRootPath().resolve(fileName);
+		if(Files.notExists(f))
 			return null;
 		try
 		{
-			FileChannel roChannel = new RandomAccessFile(f, "r").getChannel();
+			FileChannel roChannel = new RandomAccessFile(f.toFile(), "r").getChannel();
 
 			int count = (int) ((roChannel.size() - 1) / 6);
 			ByteBuffer buffer = roChannel.map(FileChannel.MapMode.READ_ONLY, 0, roChannel.size());

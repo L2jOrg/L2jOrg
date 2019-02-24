@@ -2,25 +2,28 @@ package org.l2j.gameserver.data.string;
 
 import io.github.joealisson.primitive.maps.IntObjectMap;
 import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
-import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.utils.Language;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.io.File;
 import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
 
 import static java.util.Objects.isNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * Author: VISTALL
  * Date:  19:27/29.12.2010
  */
-public final class Messages extends AbstractHolder {
+public final class Messages  {
 
+	private static final Logger  logger = LoggerFactory.getLogger(Messages.class);
 	private static final Messages _instance = new Messages();
 
 	private final IntObjectMap<Map<String, String>> resources = new HashIntObjectMap<>();
@@ -29,9 +32,8 @@ public final class Messages extends AbstractHolder {
 		//
 	}
 
-	public String getMessage(Player player, String name)
-	{
-		Language lang = player == null ? Config.DEFAULT_LANG : player.getLanguage();
+	public String getMessage(Player player, String name) {
+		Language lang = isNull(player) ? Config.DEFAULT_LANG : player.getLanguage();
 		return getMessage(name, lang);
 	}
 
@@ -53,20 +55,20 @@ public final class Messages extends AbstractHolder {
 
 			resources.put(lang.getId(), new HashMap<>());
 
-			File file = new File(Config.DATAPACK_ROOT, String.format("data/string/strings/%s.properties", lang.getShortName()));
-			if(!file.exists()) {
+			var filePath= getSettings(ServerSettings.class).dataPackRootPath().resolve(String.format("data/string/strings/%s.properties", lang.getShortName()));
+			if(Files.notExists(filePath)) {
 				if(lang == Config.DEFAULT_LANG) {
-					logger.warn("Not find file: {}", file.getAbsolutePath());
+					logger.warn("Not find file: {}", filePath);
 				}
 			} else {
 				try {
-					for(var line : Files.readAllLines(file.toPath())) {
+					for(var line : Files.readAllLines(filePath)) {
 						if (line.startsWith("#"))
 							continue;
 
 						StringTokenizer token = new StringTokenizer(line, "=");
 						if (token.countTokens() < 2) {
-							logger.error("Error on line: {}; file {}", line, file.getName());
+							logger.error("Error on line: {}; file {}", line, filePath);
 							continue;
 						}
 
@@ -91,13 +93,6 @@ public final class Messages extends AbstractHolder {
 		load();
 	}
 
-	@Override
-	public int size()
-	{
-		return resources.size();
-	}
-
-	@Override
 	public void clear()
 	{
 		resources.clear();

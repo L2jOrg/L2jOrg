@@ -1,22 +1,23 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.io.File;
-import java.util.Iterator;
-
 import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.Contants;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;
 import org.l2j.gameserver.data.xml.holder.MultiSellHolder;
-import org.l2j.gameserver.model.items.ItemInstance;
 import org.l2j.gameserver.model.MultiSellListContainer;
 import org.l2j.gameserver.model.MultiSellListContainer.MultisellType;
 import org.l2j.gameserver.model.base.MultiSellEntry;
 import org.l2j.gameserver.model.base.MultiSellIngredient;
+import org.l2j.gameserver.model.items.ItemInstance;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 
-import static org.l2j.gameserver.Contants.*;
+import java.io.File;
+import java.util.Iterator;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.gameserver.Contants.Items;
 
 /**
  * @author VISTALL
@@ -37,15 +38,13 @@ public class MultiSellParser extends AbstractParser<MultiSellHolder>
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/multisell");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/multisell").toFile();
 	}
 
 	@Override
-	public File getCustomXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "custom/multisell");
+	public File getCustomXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("custom/multisell").toFile();
 	}
 
 	@Override

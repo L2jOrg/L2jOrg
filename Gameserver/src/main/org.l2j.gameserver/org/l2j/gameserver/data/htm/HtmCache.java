@@ -5,6 +5,7 @@ import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.l2j.commons.cache.CacheFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.utils.HtmlUtils;
 import org.l2j.gameserver.utils.Language;
 import org.l2j.gameserver.utils.Util;
@@ -12,12 +13,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.cache.Cache;
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class HtmCache {
 
@@ -96,48 +98,48 @@ public class HtmCache {
     }
 
     private String loadDisabled(Language lang, String filePath) {
-        var file = new File(Config.DATAPACK_ROOT, String.format("data/html/%s/%s", lang.getShortName(), filePath));
+        var file = getSettings(ServerSettings.class).dataPackRootPath().resolve(String.format("data/html/%s/%s", lang.getShortName(), filePath));
         String content = parseFile(lang, file);
 
         if(isNull(content)) {
-            file= new File(Config.DATAPACK_ROOT, String.format("custom/html/%s/%s", lang.getShortName(), filePath));
+            file= getSettings(ServerSettings.class).dataPackRootPath().resolve(String.format("custom/html/%s/%s", lang.getShortName(), filePath));
             content = parseFile(lang, file);
         }
         return content;
     }
 
-    private String parseFile(Language lang, File file) {
+    private String parseFile(Language lang, Path path) {
         try {
-            if(file.exists()) {
-                return HtmlUtils.bbParse(readContent(file));
+            if(Files.exists(path)) {
+                return HtmlUtils.bbParse(Files.readString(path));
             }
         } catch (IOException e) {
-            LOGGER.warn("HtmCache: File error: {} lang: {}", file.getAbsolutePath(), lang);
+            LOGGER.warn("HtmCache: File error: {} lang: {}", path, lang);
         }
         return null;
     }
 
     private String loadLazy(Language lang, String filePath) {
-        var root = new File(Config.DATAPACK_ROOT, "data/html/" + lang.getShortName());
-        var file = new File(root, filePath);
-        var cache = putContent(lang, file, root.getAbsolutePath());
+        var root = getSettings(ServerSettings.class).dataPackRootPath().resolve("data/html/" + lang.getShortName());
+        var file = root.resolve(filePath);
+        var cache = putContent(lang, file, root);
 
         if(nonNull(cache)) {
             return cache;
         }
 
-        root = new File(Config.DATAPACK_ROOT, "custom/html/" + lang.getShortName());
-        file = new File(root, filePath);
-        return putContent(lang, file, root.getAbsolutePath());
+        root = getSettings(ServerSettings.class).dataPackRootPath().resolve("custom/html/" + lang.getShortName());
+        file = root.resolve(filePath);
+        return putContent(lang, file, root);
     }
 
-    private String putContent(Language lang, File f, final String rootPath) {
-        var content = parseFile(lang, f);
+    private String putContent(Language lang, Path file, final Path rootPath) {
+        var content = parseFile(lang, file);
         if(isNull(content)) {
             return null;
         }
 
-        var path = f.getAbsolutePath().substring(rootPath.length() + 1).replace("\\", "/");
+        var path = file.toString().substring(rootPath.toString().length() + 1).replace("\\", "/");
         var cache = cacheOfLang(lang);
         cache.put(path.toLowerCase(), content);
         return content;
@@ -158,9 +160,5 @@ public class HtmCache {
 
     public void clear() {
         caches.values().forEach(Cache::removeAll);
-    }
-
-    private static String readContent(File file) throws IOException {
-        return Files.readString(file.toPath());
     }
 }

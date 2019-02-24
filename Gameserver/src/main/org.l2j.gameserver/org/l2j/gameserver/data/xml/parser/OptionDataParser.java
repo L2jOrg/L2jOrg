@@ -4,11 +4,14 @@ import org.dom4j.Element;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.OptionDataHolder;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.skills.SkillEntry;
 import org.l2j.gameserver.templates.OptionDataTemplate;
 
 import java.io.File;
 import java.util.Iterator;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author VISTALL
@@ -29,9 +32,8 @@ public final class OptionDataParser extends StatParser<OptionDataHolder>
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/option_data");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/option_data").toFile();
 	}
 
 	@Override

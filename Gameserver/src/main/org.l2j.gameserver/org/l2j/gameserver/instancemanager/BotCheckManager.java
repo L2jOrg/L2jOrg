@@ -8,14 +8,17 @@ import org.l2j.gameserver.model.Creature;
 import org.l2j.gameserver.model.GameObjectsStorage;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import javax.xml.parsers.DocumentBuilderFactory;
-import java.io.File;
+import java.nio.file.Files;
 import java.util.concurrent.CopyOnWriteArrayList;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class BotCheckManager
 {
@@ -28,9 +31,8 @@ public class BotCheckManager
 		if(!Config.ENABLE_ANTI_BOT_SYSTEM)
 			return;
 		Document doc = null;
-		File file = new File(Config.DATAPACK_ROOT, "data/bot_questions.xml");
-		if(!file.exists())
-		{
+		var file = getSettings(ServerSettings.class).dataPackRootPath().resolve("data/bot_questions.xml");
+		if(Files.notExists(file)) {
 			_log.warn("BotManager: bot_questions.xml file is missing.");
 			return;
 		}
@@ -40,7 +42,7 @@ public class BotCheckManager
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			factory.setValidating(false);
 			factory.setIgnoringComments(true);
-			doc = factory.newDocumentBuilder().parse(file);
+			doc = factory.newDocumentBuilder().parse(file.toFile());
 		}
 		catch(Exception e)
 		{

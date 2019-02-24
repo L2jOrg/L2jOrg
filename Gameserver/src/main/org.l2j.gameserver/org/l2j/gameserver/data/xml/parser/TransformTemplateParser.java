@@ -12,10 +12,13 @@ import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.base.Sex;
 import org.l2j.gameserver.model.base.TransformType;
 import org.l2j.gameserver.model.items.LockType;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.BaseStatsBonus;
 import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.templates.player.HpMpCpData;
 import org.l2j.gameserver.templates.player.transform.TransformTemplate;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Bonux
@@ -35,9 +38,8 @@ public final class TransformTemplateParser extends AbstractParser<TransformTempl
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/pc_parameters/transform_data/");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/pc_parameters/transform_data/").toFile();
 	}
 
 	@Override

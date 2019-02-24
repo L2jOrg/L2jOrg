@@ -5,11 +5,14 @@ import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.OptionDataHolder;
 import org.l2j.gameserver.data.xml.holder.VariationDataHolder;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.item.WeaponFightType;
 import org.l2j.gameserver.templates.item.support.variation.*;
 
 import java.io.File;
 import java.util.Iterator;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Bonux
@@ -29,9 +32,8 @@ public final class VariationDataParser extends AbstractParser<VariationDataHolde
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/variationdata/");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/variationdata/").toFile();
 	}
 
 	@Override

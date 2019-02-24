@@ -6,9 +6,12 @@ import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.LevelUpRewardHolder;
+import org.l2j.gameserver.settings.ServerSettings;
 
 import java.io.File;
 import java.util.Iterator;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Bonux
@@ -28,9 +31,8 @@ public final class LevelUpRewardParser extends AbstractParser<LevelUpRewardHolde
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/pc_parameters/lvl_up_reward_data.xml");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/pc_parameters/lvl_up_reward_data.xml").toFile();
 	}
 
 	@Override

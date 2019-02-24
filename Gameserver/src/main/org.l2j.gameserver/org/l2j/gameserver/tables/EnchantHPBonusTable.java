@@ -3,6 +3,7 @@ package org.l2j.gameserver.tables;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.items.ItemInstance;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.item.ItemGrade;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
@@ -15,6 +16,8 @@ import org.w3c.dom.Node;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.util.StringTokenizer;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class EnchantHPBonusTable
 {
@@ -45,7 +48,7 @@ public class EnchantHPBonusTable
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			factory.setValidating(false);
 			factory.setIgnoringComments(true);
-			File file = new File(Config.DATAPACK_ROOT, "data/enchant_bonus.xml");
+			File file = getSettings(ServerSettings.class).dataPackRootPath().resolve("data/enchant_bonus.xml").toFile();
 			Document doc = factory.newDocumentBuilder().parse(file);
 
 			for(Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())

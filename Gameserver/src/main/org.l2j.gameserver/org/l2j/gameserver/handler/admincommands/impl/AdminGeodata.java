@@ -78,7 +78,7 @@ public class AdminGeodata implements IAdminCommandHandler
 								return false;
 							}
 
-							File geoFile = new File(Config.DATAPACK_ROOT, String.format("%2d_%2d.l2j", rx, ry));
+							File geoFile = new File(Config.GEODATA_ROOT, String.format("%2d_%2d.l2j", rx, ry));
 							if(!geoFile.exists())
 							{
 								activeChar.sendMessage("Region [" + rx + "," + ry + "] not found!");

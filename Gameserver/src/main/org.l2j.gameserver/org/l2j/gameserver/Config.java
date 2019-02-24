@@ -416,9 +416,6 @@ public class Config
 
     public static int CHARACTER_DELETE_AFTER_HOURS;
 
-
-    /** Datapack root directory */
-    public static File DATAPACK_ROOT;
     public static File GEODATA_ROOT;
 
     public static double BUFFTIME_MODIFIER;
@@ -960,16 +957,6 @@ public class Config
         AUTODESTROY_ITEM_AFTER = serverSettings.getProperty("AutoDestroyDroppedItemAfter", 0);
         AUTODESTROY_PLAYER_ITEM_AFTER = serverSettings.getProperty("AutoDestroyPlayerDroppedItemAfter", 0);
         CHARACTER_DELETE_AFTER_HOURS = serverSettings.getProperty("DeleteCharAfterHours", 168);
-
-
-        try
-        {
-            DATAPACK_ROOT = new File(serverSettings.getProperty("DatapackRoot", ".")).getCanonicalFile();
-        }
-        catch(IOException e)
-        {
-            _log.error("", e);
-        }
 
         ALLOW_DISCARDITEM = serverSettings.getProperty("AllowDiscardItem", true);
         ALLOW_MAIL = serverSettings.getProperty("AllowMail", true);

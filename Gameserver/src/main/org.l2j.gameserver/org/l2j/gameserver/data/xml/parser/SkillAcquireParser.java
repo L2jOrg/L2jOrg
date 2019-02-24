@@ -12,7 +12,10 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.SkillAcquireHolder;
 import org.l2j.gameserver.model.SkillLearn;
 import org.l2j.gameserver.model.base.Race;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.stats.conditions.Condition;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author: VISTALL
@@ -33,9 +36,8 @@ public final class SkillAcquireParser extends StatParser<SkillAcquireHolder>
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/skill_tree/");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/skill_tree/").toFile();
 	}
 
 	@Override

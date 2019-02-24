@@ -13,6 +13,7 @@ import org.l2j.gameserver.model.reward.RewardGroup;
 import org.l2j.gameserver.model.reward.RewardList;
 import org.l2j.gameserver.model.reward.RewardType;
 import org.l2j.gameserver.network.l2.components.NpcString;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.templates.TeleportLocation;
 import org.l2j.gameserver.templates.item.ItemTemplate;
@@ -25,6 +26,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public final class NpcParser extends AbstractParser<NpcHolder>
 {
@@ -42,15 +45,13 @@ public final class NpcParser extends AbstractParser<NpcHolder>
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/npc/");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/npc/").toFile();
 	}
 
 	@Override
-	public File getCustomXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "custom/npc/");
+	public File getCustomXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("custom/npc/").toFile();
 	}
 
 	@Override

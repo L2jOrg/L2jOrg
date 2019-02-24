@@ -6,6 +6,7 @@ import org.l2j.gameserver.data.xml.holder.OptionDataHolder;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.handler.items.impl.SkillsItemHandler;
 import org.l2j.gameserver.model.base.Element;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.skills.SkillEntry;
 import org.l2j.gameserver.stats.conditions.Condition;
 import org.l2j.gameserver.templates.OptionDataTemplate;
@@ -16,6 +17,7 @@ import org.l2j.gameserver.templates.item.data.CapsuledItemData;
 import java.io.File;
 import java.util.Iterator;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.util.Util.STRING_EMPTY;
 
 /**
@@ -37,15 +39,13 @@ public final class ItemParser extends StatParser<ItemHolder>
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/items/");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/items/").toFile();
 	}
 
 	@Override
-	public File getCustomXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "custom/items/");
+	public File getCustomXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("custom/items/").toFile();
 	}
 
 	@Override

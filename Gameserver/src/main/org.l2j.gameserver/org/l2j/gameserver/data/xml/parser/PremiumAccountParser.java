@@ -4,12 +4,15 @@ import org.dom4j.Element;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.PremiumAccountHolder;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.item.data.ItemData;
 import org.l2j.gameserver.templates.premiumaccount.*;
 import org.l2j.gameserver.utils.Language;
 
 import java.io.File;
 import java.util.Iterator;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Bonux
@@ -29,9 +32,8 @@ public final class PremiumAccountParser extends StatParser<PremiumAccountHolder>
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/premium_accounts.xml");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/premium_accounts.xml").toFile();
 	}
 
 	@Override

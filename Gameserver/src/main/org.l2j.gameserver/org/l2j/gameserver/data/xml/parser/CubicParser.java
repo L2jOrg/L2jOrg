@@ -8,10 +8,13 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.CubicHolder;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.model.Skill;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.CubicTemplate;
 
 import java.io.File;
 import java.util.Iterator;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author VISTALL
@@ -32,9 +35,8 @@ public final class CubicParser extends AbstractParser<CubicHolder>
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/cubics.xml");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/cubics.xml").toFile();
 	}
 
 	@Override

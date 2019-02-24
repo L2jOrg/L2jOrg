@@ -8,12 +8,15 @@ import java.util.List;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.EnsoulHolder;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.item.ItemGrade;
 import org.l2j.gameserver.templates.item.support.Ensoul;
 import org.l2j.gameserver.templates.item.support.EnsoulFee;
 import org.l2j.gameserver.templates.item.support.EnsoulFee.EnsoulFeeInfo;
 import org.l2j.gameserver.templates.item.support.EnsoulFee.EnsoulFeeItem;
 import org.dom4j.Element;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Bonux
@@ -33,9 +36,8 @@ public final class EnsoulParser extends AbstractParser<EnsoulHolder>
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/ensoul_data.xml");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/ensoul_data.xml").toFile();
 	}
 
 	@Override

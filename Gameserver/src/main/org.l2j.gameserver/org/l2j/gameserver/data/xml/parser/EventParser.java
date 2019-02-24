@@ -15,6 +15,7 @@ import org.l2j.gameserver.network.l2.components.SysString;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 import org.l2j.gameserver.network.l2.s2c.PlaySoundPacket;
 import org.l2j.gameserver.scripts.Scripts;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.skills.AbnormalEffect;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.Util;
@@ -22,6 +23,8 @@ import org.l2j.gameserver.utils.Util;
 import java.io.File;
 import java.lang.reflect.Constructor;
 import java.util.*;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author VISTALL
@@ -42,15 +45,13 @@ public final class EventParser extends AbstractParser<EventHolder>
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/events/");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/events/").toFile();
 	}
 
 	@Override
-	public File getCustomXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "custom/events/");
+	public File getCustomXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("custom/events/").toFile();
 	}
 
 	@Override

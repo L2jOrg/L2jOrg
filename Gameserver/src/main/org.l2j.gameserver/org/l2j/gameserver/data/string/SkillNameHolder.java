@@ -4,6 +4,7 @@ import org.l2j.commons.data.xml.AbstractHolder;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.model.Skill;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.utils.Language;
 import org.l2j.gameserver.utils.SkillUtils;
 import io.github.joealisson.primitive.maps.IntObjectMap;
@@ -12,9 +13,12 @@ import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import java.io.File;
 import java.io.FileReader;
 import java.io.LineNumberReader;
+import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * Author: VISTALL
@@ -91,24 +95,24 @@ public final class SkillNameHolder extends AbstractHolder
 			if(!Config.AVAILABLE_LANGUAGES.contains(lang))
 				continue;
 
-			File file = new File(Config.DATAPACK_ROOT, "data/string/skillname/" + lang.getShortName() + ".txt");
-			if(!file.exists()) {
+			var file = getSettings(ServerSettings.class).dataPackRootPath().resolve("data/string/skillname/" + lang.getShortName() + ".txt");
+			if(Files.notExists(file)) {
 				if(lang == Language.ENGLISH)
-					logger.warn("Not find file: " + file.getAbsolutePath());
+					logger.warn("Not find file: {}", file);
 			}
 			else
 			{
 				LineNumberReader reader = null;
 				try
 				{
-					reader = new LineNumberReader(new FileReader(file));
+					reader = new LineNumberReader(new FileReader(file.toFile()));
 					String line = null;
 					while((line = reader.readLine()) != null)
 					{
 						StringTokenizer token = new StringTokenizer(line, "\t");
 						if(token.countTokens() < 2)
 						{
-							logger.error("Error on line: " + line + "; file: " + file.getName());
+							logger.error("Error on line: {}; file: {}", line, file);
 							continue;
 						}
 

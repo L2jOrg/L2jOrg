@@ -4,6 +4,7 @@ import org.dom4j.Element;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.model.Skill;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.skills.EffectUseType;
 import org.l2j.gameserver.stats.StatTemplate;
 import org.l2j.gameserver.stats.conditions.Condition;
@@ -21,6 +22,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.StringTokenizer;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Bonux
@@ -42,15 +45,13 @@ public final class SkillParser extends StatParser<SkillHolder>
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/skills/");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/skills/").toFile();
 	}
 
 	@Override
-	public File getCustomXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "custom/skills/");
+	public File getCustomXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("custom/skills/").toFile();
 	}
 
 	@Override

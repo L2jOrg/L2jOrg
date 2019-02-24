@@ -3,6 +3,7 @@ package org.l2j.gameserver.data.xml.parser;
 import java.io.File;
 import java.util.Iterator;
 
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.item.data.RewardItemData;
 import org.l2j.gameserver.templates.pet.PetSkillData;
 import org.dom4j.Element;
@@ -14,6 +15,8 @@ import org.l2j.gameserver.model.base.PetType;
 import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.templates.pet.PetData;
 import org.l2j.gameserver.templates.pet.PetLevelData;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Bonux
@@ -33,9 +36,8 @@ public final class PetDataParser extends AbstractParser<PetDataHolder>
 	}
 
 	@Override
-	public File getXMLPath()
-	{
-		return new File(Config.DATAPACK_ROOT, "data/pets/");
+	public File getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/pets/").toFile();
 	}
 
 	@Override
