@@ -88,30 +88,22 @@ public final class SkillNameHolder extends AbstractHolder
 
 	public void load()
 	{
-		for(Language lang : Language.VALUES)
-		{
-			_skillNames.put(lang, new HashIntObjectMap<String>());
-
-			if(!Config.AVAILABLE_LANGUAGES.contains(lang))
-				continue;
-
-			var file = getSettings(ServerSettings.class).dataPackRootPath().resolve("data/string/skillname/" + lang.getShortName() + ".txt");
+		var serverSettings = getSettings(ServerSettings.class);
+		for(Language lang : serverSettings.availableLanguages()) {
+			var file = serverSettings.dataPackRootPath().resolve("data/string/skillname/" + lang.getShortName() + ".txt");
 			if(Files.notExists(file)) {
-				if(lang == Language.ENGLISH)
+				if(lang == Language.ENGLISH) {
 					logger.warn("Not find file: {}", file);
+				}
 			}
 			else
 			{
-				LineNumberReader reader = null;
-				try
-				{
-					reader = new LineNumberReader(new FileReader(file.toFile()));
+				_skillNames.put(lang, new HashIntObjectMap<String>());
+				try (LineNumberReader reader = new LineNumberReader(new FileReader(file.toFile()))) {
 					String line = null;
-					while((line = reader.readLine()) != null)
-					{
+					while ((line = reader.readLine()) != null) {
 						StringTokenizer token = new StringTokenizer(line, "\t");
-						if(token.countTokens() < 2)
-						{
+						if (token.countTokens() < 2) {
 							logger.error("Error on line: {}; file: {}", line, file);
 							continue;
 						}
@@ -123,22 +115,10 @@ public final class SkillNameHolder extends AbstractHolder
 
 						_skillNames.get(lang).put(hashCode, value);
 					}
-				}
-				catch(Exception e)
-				{
+				} catch (Exception e) {
 					logger.error("Exception: " + e, e);
 				}
-				finally
-				{
-					try
-					{
-						reader.close();
-					}
-					catch(Exception e)
-					{
-						//
-					}
-				}
+				//
 			}
 		}
 
@@ -154,9 +134,8 @@ public final class SkillNameHolder extends AbstractHolder
 	@Override
 	public void log()
 	{
-		for(Map.Entry<Language, IntObjectMap<String>> entry : _skillNames.entrySet())
-		{
-			if(!Config.AVAILABLE_LANGUAGES.contains(entry.getKey()))
+		for(Map.Entry<Language, IntObjectMap<String>> entry : _skillNames.entrySet()) {
+			if(!getSettings(ServerSettings.class).availableLanguages().contains(entry.getKey()))
 				continue;
 			logger.info("load skill names: " + entry.getValue().size() + " for lang: " + entry.getKey());
 		}

@@ -17,7 +17,7 @@ public final class SettingsFile extends Properties {
 
     private static final long serialVersionUID = -4599023842346938325L;
     private static final Logger logger = LoggerFactory.getLogger(SettingsFile.class);
-    private static final String DEFAULT_DELIMITER = ",";
+    private static final String DEFAULT_DELIMITER = "[,;]";
 
 
     SettingsFile(String filePath) {

@@ -7,8 +7,11 @@ import org.l2j.gameserver.data.htm.HtmTemplates;
 import org.l2j.gameserver.data.string.Messages;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.CustomMessage;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.utils.Functions;
 import org.l2j.gameserver.utils.Language;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class Cfg extends ScriptVoiceCommandHandler
 {
@@ -100,8 +103,7 @@ public class Cfg extends ScriptVoiceCommandHandler
             StringBuilder languagesButtons = new StringBuilder();
 
             final String langButton = templates.get(2);
-            for(Language lang : Config.AVAILABLE_LANGUAGES)
-            {
+            for(Language lang : getSettings(ServerSettings.class).availableLanguages()) {
                 if(activeChar.getLanguage() == lang)
                     continue;
 

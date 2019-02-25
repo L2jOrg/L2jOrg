@@ -14,7 +14,7 @@ public abstract class Parsers
 {
     public static void parseAll()
     {
-        ItemNameHolder.getInstance().load();
+
         SkillNameHolder.getInstance().load();
         //
         SkillParser.getInstance().load();

@@ -8,7 +8,6 @@ import org.l2j.gameserver.utils.Language;
 import io.github.joealisson.primitive.maps.IntObjectMap;
 import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
-import java.io.File;
 import java.io.FileReader;
 import java.io.LineNumberReader;
 import java.nio.file.Files;
@@ -19,26 +18,18 @@ import java.util.StringTokenizer;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
- * @author: Bonux
+ * @author Bonux
  */
-public final class ItemNameHolder extends AbstractHolder
-{
-	private static final ItemNameHolder _instance = new ItemNameHolder();
+public final class ItemNameHolder extends AbstractHolder {
+	private static final ItemNameHolder INSTANCE = new ItemNameHolder();
 
 	private final Map<Language, IntObjectMap<String>> _itemNames = new HashMap<>();
 
-	public static ItemNameHolder getInstance()
-	{
-		return _instance;
-	}
-
-	private ItemNameHolder()
-	{
+	private ItemNameHolder() {
 		//
 	}
 
-	public String getItemName(Language lang, int itemId)
-	{
+	public String getItemName(Language lang, int itemId) {
 		IntObjectMap<String> itemNames = _itemNames.get(lang);
 		String name = itemNames.get(itemId);
 		if(name == null)
@@ -63,33 +54,25 @@ public final class ItemNameHolder extends AbstractHolder
 		return getItemName(lang, itemId);
 	}
 
-	public void load()
-	{
-		for(Language lang : Language.VALUES)
-		{
-			_itemNames.put(lang, new HashIntObjectMap<>());
+	public void load() {
+		var serverSettings = getSettings(ServerSettings.class);
+		for(Language lang : Language.VALUES) {
 
-			if(!Config.AVAILABLE_LANGUAGES.contains(lang))
-				continue;
-
-			var file = getSettings(ServerSettings.class).dataPackRootPath().resolve("data/string/itemname/" + lang.getShortName() + ".txt");
-			if(Files.notExists(file)) {
-				if(lang == Config.DEFAULT_LANG)
-					logger.warn("Not find file: {}", file);
+			var filePath = serverSettings.dataPackRootPath().resolve("data/string/itemname/" + lang.getShortName() + ".txt");
+			if(Files.notExists(filePath)) {
+				if(lang == Language.ENGLISH) {
+					logger.warn("Not find file: {}", filePath);
+				}
 			}
 			else
 			{
-				LineNumberReader reader = null;
-				try
-				{
-					reader = new LineNumberReader(new FileReader(file.toFile()));
+				_itemNames.put(lang, new HashIntObjectMap<>());
+				try (LineNumberReader reader = new LineNumberReader(new FileReader(filePath.toFile()))) {
 					String line = null;
-					while((line = reader.readLine()) != null)
-					{
+					while ((line = reader.readLine()) != null) {
 						StringTokenizer token = new StringTokenizer(line, "\t");
-						if(token.countTokens() < 2)
-						{
-							logger.error("Error on line: {}; file {}", line, file);
+						if (token.countTokens() < 2) {
+							logger.error("Error on line: {}; file {}", line, filePath);
 							continue;
 						}
 
@@ -98,22 +81,10 @@ public final class ItemNameHolder extends AbstractHolder
 
 						_itemNames.get(lang).put(id, value);
 					}
-				}
-				catch(Exception e)
-				{
+				} catch (Exception e) {
 					logger.error("Exception: " + e, e);
 				}
-				finally
-				{
-					try
-					{
-						reader.close();
-					}
-					catch(Exception e)
-					{
-						//
-					}
-				}
+				//
 			}
 		}
 
@@ -131,8 +102,9 @@ public final class ItemNameHolder extends AbstractHolder
 	{
 		for(Map.Entry<Language, IntObjectMap<String>> entry : _itemNames.entrySet())
 		{
-			if(!Config.AVAILABLE_LANGUAGES.contains(entry.getKey()))
+			if(!getSettings(ServerSettings.class).availableLanguages().contains(entry.getKey()))
 				continue;
+
 			logger.info("load item names: " + entry.getValue().size() + " for lang: " + entry.getKey());
 		}
 	}
@@ -147,5 +119,9 @@ public final class ItemNameHolder extends AbstractHolder
 	public void clear()
 	{
 		_itemNames.clear();
+	}
+
+	public static ItemNameHolder getInstance() {
+		return INSTANCE;
 	}
 }

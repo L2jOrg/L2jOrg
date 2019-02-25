@@ -10,6 +10,7 @@ import org.l2j.commons.listener.ListenerList;
 import org.l2j.gameserver.cache.CrestCache;
 import org.l2j.gameserver.cache.ImagesCache;
 import org.l2j.gameserver.data.BoatHolder;
+import org.l2j.gameserver.data.string.ItemNameHolder;
 import org.l2j.gameserver.data.string.Messages;
 import org.l2j.gameserver.data.xml.Parsers;
 import org.l2j.gameserver.data.xml.holder.EventHolder;
@@ -177,6 +178,7 @@ public class GameServer {
 
     private void loadData() {
         Messages.getInstance().load();
+        ItemNameHolder.getInstance().load();
     }
 
     private static void logMemoryUsage() {

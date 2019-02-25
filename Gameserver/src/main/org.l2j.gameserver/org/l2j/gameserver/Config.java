@@ -877,8 +877,6 @@ public class Config
 
     public static boolean ALT_PETS_NOT_STARVING;
 
-    public static Set<Language> AVAILABLE_LANGUAGES;
-
     public static int MAX_ACTIVE_ACCOUNTS_ON_ONE_IP;
     public static String[] MAX_ACTIVE_ACCOUNTS_IGNORED_IP;
     public static int MAX_ACTIVE_ACCOUNTS_ON_ONE_HWID;
@@ -1038,15 +1036,6 @@ public class Config
         APASSWD_TEMPLATE = serverSettings.getProperty("PasswordTemplate", "[A-Za-z0-9]{4,16}");
 
         ALLOW_MONSTER_RACE = serverSettings.getProperty("AllowMonsterRace", false);
-
-
-        AVAILABLE_LANGUAGES = new HashSet<>();
-        AVAILABLE_LANGUAGES.add(Language.ENGLISH);
-        AVAILABLE_LANGUAGES.add(DEFAULT_LANG);
-
-        String[] availableLanguages = serverSettings.getProperty("AVAILABLE_LANGUAGES", new String[0], ";");
-        for(String availableLanguage : availableLanguages)
-            AVAILABLE_LANGUAGES.add(Language.valueOf(availableLanguage.toUpperCase()));
 
         MAX_ACTIVE_ACCOUNTS_ON_ONE_IP = serverSettings.getProperty("MAX_ACTIVE_ACCOUNTS_ON_ONE_IP", -1);
         MAX_ACTIVE_ACCOUNTS_IGNORED_IP = serverSettings.getProperty("MAX_ACTIVE_ACCOUNTS_IGNORED_IP", new String[0], ";");

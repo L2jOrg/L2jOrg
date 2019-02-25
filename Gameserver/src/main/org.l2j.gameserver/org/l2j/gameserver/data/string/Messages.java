@@ -32,35 +32,31 @@ public final class Messages  {
 		//
 	}
 
-	public String getMessage(Player player, String name) {
-		Language lang = isNull(player) ? Config.DEFAULT_LANG : player.getLanguage();
-		return getMessage(name, lang);
+	public String getMessage(Player player, String key) {
+		var lang = isNull(player) ? Config.DEFAULT_LANG : player.getLanguage();
+		return getMessage(key, lang);
 	}
 
-	public String getMessage(String address, Language lang) {
-		Map<String, String> strings = resources.get(lang.getId());
-		String value = strings == null ? null : strings.get(address);
+	public String getMessage(String key, Language lang) {
+		var resource = resources.get(lang.getId());
+		String value = isNull(resource) ? null : resource.get(key);
 		if(isNull(value)) {
-			strings = resources.get(Config.DEFAULT_LANG.getId());
-			value = strings == null ? null : strings.get(address);
+			resource = resources.get(Config.DEFAULT_LANG.getId());
+			value = isNull(resource) ? null : resource.get(key);
 		}
 		return value;
 	}
 
 	public void load() {
-		for(Language lang : Language.VALUES) {
-
-			if(!Config.AVAILABLE_LANGUAGES.contains(lang))
-				continue;
-
-			resources.put(lang.getId(), new HashMap<>());
-
-			var filePath= getSettings(ServerSettings.class).dataPackRootPath().resolve(String.format("data/string/strings/%s.properties", lang.getShortName()));
+		var serverSettings = getSettings(ServerSettings.class);
+		for(Language lang : serverSettings.availableLanguages()) {
+			var filePath = serverSettings.dataPackRootPath().resolve(String.format("data/string/strings/%s.properties", lang.getShortName()));
 			if(Files.notExists(filePath)) {
-				if(lang == Config.DEFAULT_LANG) {
+				if(lang == Language.ENGLISH) {
 					logger.warn("Not find file: {}", filePath);
 				}
 			} else {
+				resources.put(lang.getId(), new HashMap<>());
 				try {
 					for(var line : Files.readAllLines(filePath)) {
 						if (line.startsWith("#"))
