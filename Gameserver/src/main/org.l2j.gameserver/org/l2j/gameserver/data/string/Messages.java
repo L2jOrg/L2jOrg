@@ -2,7 +2,6 @@ package org.l2j.gameserver.data.string;
 
 import io.github.joealisson.primitive.maps.IntObjectMap;
 import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.utils.Language;
@@ -33,7 +32,7 @@ public final class Messages  {
 	}
 
 	public String getMessage(Player player, String key) {
-		var lang = isNull(player) ? Config.DEFAULT_LANG : player.getLanguage();
+		var lang = isNull(player) ? Language.ENGLISH: player.getLanguage();
 		return getMessage(key, lang);
 	}
 
@@ -41,7 +40,7 @@ public final class Messages  {
 		var resource = resources.get(lang.getId());
 		String value = isNull(resource) ? null : resource.get(key);
 		if(isNull(value)) {
-			resource = resources.get(Config.DEFAULT_LANG.getId());
+			resource = resources.get(Language.ENGLISH.getId());
 			value = isNull(resource) ? null : resource.get(key);
 		}
 		return value;

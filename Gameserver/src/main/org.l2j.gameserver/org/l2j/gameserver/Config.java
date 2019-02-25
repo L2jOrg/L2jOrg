@@ -11,7 +11,6 @@ import org.l2j.gameserver.data.htm.HtmCache;
 import org.l2j.gameserver.model.base.AcquireType;
 import org.l2j.gameserver.model.base.PlayerAccess;
 import org.l2j.gameserver.utils.HtmlUtils;
-import org.l2j.gameserver.utils.Language;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -451,7 +450,6 @@ public class Config
     public static int MAX_NPC_ANIMATION;
 
     public static boolean USE_CLIENT_LANG;
-    public static Language DEFAULT_LANG;
 
     /** Время запланированного на определенное время суток рестарта */
     public static String RESTART_AT_TIME;
@@ -1000,7 +998,7 @@ public class Config
         ABUSEWORD_BANTIME = serverSettings.getProperty("ABUSEWORD_UNBAN_TIMER", 30);
 
         USE_CLIENT_LANG = serverSettings.getProperty("UseClientLang", false);
-        DEFAULT_LANG = Language.valueOf(serverSettings.getProperty("DefaultLang", "ENGLISH").toUpperCase());
+
         RESTART_AT_TIME = serverSettings.getProperty("AutoRestartAt", "0 5 * * *");
         SHIFT_BY = serverSettings.getProperty("HShift", 12);
 

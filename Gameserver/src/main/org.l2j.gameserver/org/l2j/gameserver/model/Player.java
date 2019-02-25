@@ -424,7 +424,7 @@ public final class Player extends Playable implements PlayerGroup
     private PetitionMainGroup _petitionGroup;
     private final Map<Integer, Long> _instancesReuses = new ConcurrentHashMap<Integer, Long>();
 
-    private Language _language = Config.DEFAULT_LANG;
+    private Language _language = Language.ENGLISH;
 
     private int _npcDialogEndTime = 0;
 

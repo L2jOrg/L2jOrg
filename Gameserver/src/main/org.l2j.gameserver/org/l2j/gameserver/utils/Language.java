@@ -1,7 +1,5 @@
 package org.l2j.gameserver.utils;
 
-import org.l2j.gameserver.Config;
-
 /**
  * @author B0nux
  * @date 16:03/10.10.2011
@@ -61,7 +59,7 @@ public enum Language
 		for(Language lang : VALUES)
 			if(lang.getId() == langId)
 				return lang;
-		return Config.DEFAULT_LANG;
+		return Language.ENGLISH;
 	}
 
 	public static Language getLanguage(String shortName)
@@ -74,6 +72,6 @@ public enum Language
 					return lang;
 			}
 		}
-		return Config.DEFAULT_LANG;
+		return Language.ENGLISH;
 	}
 }

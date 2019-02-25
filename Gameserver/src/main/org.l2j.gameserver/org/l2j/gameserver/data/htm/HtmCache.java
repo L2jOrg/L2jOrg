@@ -48,7 +48,7 @@ public class HtmCache {
     }
 
     public String getHtml(String fileName, Player player) {
-        var lang = isNull(player) ? Config.DEFAULT_LANG : player.getLanguage();
+        var lang = isNull(player) ? Language.ENGLISH : player.getLanguage();
         var cache = getCache(fileName, lang);
 
         if(isNull(cache)) {
@@ -59,12 +59,12 @@ public class HtmCache {
     }
 
     public String getIfExists(String fileName, Player player) {
-        var lang = isNull(player) ? Config.DEFAULT_LANG : player.getLanguage();
+        var lang = isNull(player) ? Language.ENGLISH: player.getLanguage();
         return getCache(fileName, lang);
     }
 
     public HtmTemplates getTemplates(String fileName, Player player) {
-        Language lang = isNull(player) ? Config.DEFAULT_LANG : player.getLanguage();
+        Language lang = isNull(player) ? Language.ENGLISH: player.getLanguage();
         HtmTemplates templates = Util.parseTemplates(fileName, lang, getHtml(fileName, player));
         if(isNull(templates))
             return HtmTemplates.EMPTY_TEMPLATES;
@@ -80,8 +80,8 @@ public class HtmCache {
 
         if(Config.HTM_CACHE_MODE == DISABLED) {
             content = loadDisabled(lang, file);
-            if (isNull(content) && lang != Config.DEFAULT_LANG) {
-                content = loadDisabled(Config.DEFAULT_LANG, file);
+            if (isNull(content) && lang != Language.ENGLISH) {
+                content = loadDisabled(Language.ENGLISH, file);
             }
         } else {
             final var fileLower = file.toLowerCase();

@@ -41,7 +41,7 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
 
 	private String _login;
 	private int _points = 0;
-	private Language _language = Config.DEFAULT_LANG;
+	private Language _language = Language.ENGLISH;
 	private long _phoneNumber = 0L;
 
 	private Player _activeChar;
