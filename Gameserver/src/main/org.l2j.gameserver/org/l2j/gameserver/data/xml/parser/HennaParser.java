@@ -6,12 +6,11 @@ import io.github.joealisson.primitive.sets.IntSet;
 import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.HennaHolder;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.HennaTemplate;
 
-import java.io.File;
+import java.nio.file.Path;
 import java.util.Iterator;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -35,8 +34,8 @@ public final class HennaParser extends AbstractParser<HennaHolder>
 	}
 
 	@Override
-	public File getXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve( "data/hennas.xml").toFile();
+	public Path getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve( "data/hennas.xml");
 	}
 
 	@Override

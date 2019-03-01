@@ -10,7 +10,7 @@ import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.templates.npc.BuyListTemplate;
 
-import java.io.File;
+import java.nio.file.Path;
 import java.util.Iterator;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -33,8 +33,8 @@ public final class BuyListParser extends AbstractParser<BuyListHolder>
 	}
 
 	@Override
-	public File getXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/buylists/").toFile();
+	public Path getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/buylists/");
 	}
 
 	@Override

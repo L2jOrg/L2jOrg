@@ -1,12 +1,7 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.io.File;
-import java.util.Iterator;
-import java.util.StringTokenizer;
-
 import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.PlayerTemplateHolder;
 import org.l2j.gameserver.model.base.ClassType;
 import org.l2j.gameserver.model.base.Race;
@@ -17,6 +12,10 @@ import org.l2j.gameserver.templates.item.StartItem;
 import org.l2j.gameserver.templates.player.HpMpCpData;
 import org.l2j.gameserver.templates.player.PlayerTemplate;
 import org.l2j.gameserver.utils.Location;
+
+import java.nio.file.Path;
+import java.util.Iterator;
+import java.util.StringTokenizer;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
@@ -38,8 +37,8 @@ public final class PlayerTemplateParser extends AbstractParser<PlayerTemplateHol
 	}
 
 	@Override
-	public File getXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/pc_parameters/template_data/").toFile();
+	public Path getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/pc_parameters/template_data/");
 	}
 
 	@Override

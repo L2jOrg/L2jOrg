@@ -1,16 +1,15 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.io.File;
-import java.util.Iterator;
-
 import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.PetitionGroupHolder;
 import org.l2j.gameserver.model.petition.PetitionMainGroup;
 import org.l2j.gameserver.model.petition.PetitionSubGroup;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.utils.Language;
+
+import java.nio.file.Path;
+import java.util.Iterator;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
@@ -33,8 +32,8 @@ public class PetitionGroupParser extends AbstractParser<PetitionGroupHolder>
 	}
 
 	@Override
-	public File getXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/petition_group.xml").toFile();
+	public Path getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/petition_group.xml");
 	}
 
 	@Override

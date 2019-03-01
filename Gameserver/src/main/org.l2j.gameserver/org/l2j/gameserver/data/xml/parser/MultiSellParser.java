@@ -2,7 +2,6 @@ package org.l2j.gameserver.data.xml.parser;
 
 import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.ItemHolder;
 import org.l2j.gameserver.data.xml.holder.MultiSellHolder;
 import org.l2j.gameserver.model.MultiSellListContainer;
@@ -14,6 +13,7 @@ import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.item.ItemTemplate;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.Iterator;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -38,13 +38,13 @@ public class MultiSellParser extends AbstractParser<MultiSellHolder>
 	}
 
 	@Override
-	public File getXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/multisell").toFile();
+	public Path getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/multisell");
 	}
 
 	@Override
-	public File getCustomXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("custom/multisell").toFile();
+	public Path getCustomXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("custom/multisell");
 	}
 
 	@Override

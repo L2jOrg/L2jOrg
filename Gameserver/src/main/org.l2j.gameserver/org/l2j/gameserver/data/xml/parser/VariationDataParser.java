@@ -9,7 +9,7 @@ import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.item.WeaponFightType;
 import org.l2j.gameserver.templates.item.support.variation.*;
 
-import java.io.File;
+import java.nio.file.Path;
 import java.util.Iterator;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -32,8 +32,8 @@ public final class VariationDataParser extends AbstractParser<VariationDataHolde
 	}
 
 	@Override
-	public File getXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/variationdata/").toFile();
+	public Path getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/variationdata/");
 	}
 
 	@Override

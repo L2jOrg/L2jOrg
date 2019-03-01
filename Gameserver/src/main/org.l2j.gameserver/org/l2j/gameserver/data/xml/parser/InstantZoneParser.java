@@ -1,10 +1,12 @@
 package org.l2j.gameserver.data.xml.parser;
 
+import io.github.joealisson.primitive.Containers;
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.commons.geometry.Polygon;
 import org.l2j.commons.time.cron.SchedulingPattern;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.DoorHolder;
 import org.l2j.gameserver.data.xml.holder.InstantZoneHolder;
 import org.l2j.gameserver.data.xml.holder.SpawnHolder;
@@ -18,11 +20,8 @@ import org.l2j.gameserver.templates.StatsSet;
 import org.l2j.gameserver.templates.ZoneTemplate;
 import org.l2j.gameserver.templates.spawn.SpawnTemplate;
 import org.l2j.gameserver.utils.Location;
-import io.github.joealisson.primitive.Containers;
-import io.github.joealisson.primitive.maps.IntObjectMap;
-import io.github.joealisson.primitive.maps.impl.HashIntObjectMap;
 
-import java.io.File;
+import java.nio.file.Path;
 import java.util.*;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -45,8 +44,8 @@ public class InstantZoneParser extends AbstractParser<InstantZoneHolder>
 	}
 
 	@Override
-	public File getXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/instances/").toFile();
+	public Path getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/instances/");
 	}
 
 	@Override

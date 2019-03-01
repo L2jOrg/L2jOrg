@@ -3,13 +3,12 @@ package org.l2j.gameserver.data.xml.parser;
 import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.commons.geometry.Polygon;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.instancemanager.MapRegionManager;
 import org.l2j.gameserver.model.Territory;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.mapregion.DomainArea;
 
-import java.io.File;
+import java.nio.file.Path;
 import java.util.Iterator;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -29,8 +28,8 @@ public class DomainParser extends AbstractParser<MapRegionManager>
 	}
 
 	@Override
-	public File getXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/mapregion/domains.xml").toFile();
+	public Path getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/mapregion/domains.xml");
 	}
 
 	@Override

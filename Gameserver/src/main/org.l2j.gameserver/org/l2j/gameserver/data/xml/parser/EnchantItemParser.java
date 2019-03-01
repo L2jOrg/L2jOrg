@@ -1,14 +1,8 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.io.File;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
-
 import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.commons.string.StringArrayUtils;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.EnchantItemHolder;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.item.ItemGrade;
@@ -17,6 +11,11 @@ import org.l2j.gameserver.templates.item.support.EnchantType;
 import org.l2j.gameserver.templates.item.support.EnchantVariation;
 import org.l2j.gameserver.templates.item.support.EnchantVariation.EnchantLevel;
 import org.l2j.gameserver.templates.item.support.FailResultType;
+
+import java.nio.file.Path;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
@@ -39,8 +38,8 @@ public class EnchantItemParser extends AbstractParser<EnchantItemHolder>
 	}
 
 	@Override
-	public File getXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/enchant_items.xml").toFile();
+	public Path getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/enchant_items.xml");
 	}
 
 	@Override

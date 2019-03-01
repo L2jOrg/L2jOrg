@@ -16,6 +16,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 
 /**
  * Author: VISTALL
@@ -36,9 +37,9 @@ public abstract class AbstractParser<H extends AbstractHolder> {
         _reader.setErrorHandler(new ErrorHandlerImpl(this));
     }
 
-    public abstract File getXMLPath();
+    public abstract Path getXMLPath();
 
-    public File getCustomXMLPath()
+    public Path getCustomXMLPath()
     {
         return null;
     }
@@ -65,42 +66,42 @@ public abstract class AbstractParser<H extends AbstractHolder> {
     }
 
     protected void parse() {
-        File path = getXMLPath();
-        if(!path.exists()) {
-            logger.warn("directory or file {} not exists", path.getAbsolutePath());
+        var path = getXMLPath();
+        if(Files.notExists(path)) {
+            logger.warn("directory or file {} not exists", path);
             return;
         }
 
-        if(path.isDirectory()) {
-            File dtd = new File(path, getDTDFileName());
-            if(!dtd.exists()) {
-                logger.warn("DTD file: {} not exists.", dtd.getName());
+        if(Files.isDirectory(path)) {
+            var dtd =  path.resolve(getDTDFileName());
+            if(Files.notExists(dtd)) {
+                logger.warn("DTD file: {} not exists.", dtd);
                 return;
             }
 
-            initDTD(dtd);
+            initDTD(dtd.toFile());
 
             parseDir(path);
             parseDir(getCustomXMLPath());
         } else {
-            File dtd = new File(path.getParent(), getDTDFileName());
-            if(!dtd.exists()) {
-                logger.info("DTD file: {} not exists.", dtd.getName());
+            var dtd = path.getParent().resolve(getDTDFileName());
+            if(Files.notExists(dtd)) {
+                logger.info("DTD file: {} not exists.", dtd);
                 return;
             }
 
-            initDTD(dtd);
+            initDTD(dtd.toFile());
 
             try {
-                parseDocument(new FileInputStream(path), path.getName());
+                parseDocument(new FileInputStream(path.toFile()), path.getFileName().toString());
             } catch(Exception e) {
                 logger.warn(e.getLocalizedMessage(), e);
             }
 
-            File customPath = getCustomXMLPath();
-            if(customPath != null && customPath.exists()) {
+            var customPath = getCustomXMLPath();
+            if(nonNull(customPath) && Files.exists(customPath)){
                 try {
-                    parseDocument(new FileInputStream(customPath), customPath.getName());
+                    parseDocument(new FileInputStream(customPath.toFile()), customPath.getFileName().toString());
                 } catch(Exception e) {
                     logger.warn(e.getLocalizedMessage(), e);
                 }
@@ -134,17 +135,17 @@ public abstract class AbstractParser<H extends AbstractHolder> {
         load();
     }
 
-    private void parseDir(File dir) {
+    private void parseDir(Path dir) {
         if(isNull(dir)) {
             return;
         }
 
-        if(!dir.exists()) {
-            logger.warn("Dir {} not exists", dir.getAbsolutePath());
+        if(Files.notExists(dir)) {
+            logger.warn("Dir {} not exists", dir);
             return;
         }
 
-        try(var paths = Files.walk(dir.toPath())) {
+        try(var paths = Files.walk(dir)) {
             var files =  paths.filter(this::acceptFile).map(Path::toFile).toArray(File[]::new);
             for (File file : files) {
                 try {

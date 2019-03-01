@@ -2,7 +2,6 @@ package org.l2j.gameserver.data.xml.parser;
 
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.commons.string.StringArrayUtils;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.NpcHolder;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.model.Skill;
@@ -23,6 +22,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -45,13 +45,13 @@ public final class NpcParser extends AbstractParser<NpcHolder>
 	}
 
 	@Override
-	public File getXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/npc/").toFile();
+	public Path getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/npc/");
 	}
 
 	@Override
-	public File getCustomXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("custom/npc/").toFile();
+	public Path getCustomXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("custom/npc/");
 	}
 
 	@Override

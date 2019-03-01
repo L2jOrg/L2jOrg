@@ -8,7 +8,7 @@ import org.l2j.gameserver.data.xml.holder.ItemHolder;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.item.data.AttendanceRewardData;
 
-import java.io.File;
+import java.nio.file.Path;
 import java.util.Iterator;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -28,8 +28,8 @@ public final class AttendanceRewardParser extends AbstractParser<AttendanceRewar
 	}
 
 	@Override
-	public File getXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/pc_parameters/attendance_rewards.xml").toFile();
+	public Path getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/pc_parameters/attendance_rewards.xml");
 	}
 
 	@Override

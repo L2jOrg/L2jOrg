@@ -17,25 +17,16 @@ public final class GamePacketHandler implements PacketHandler<GameClient>, Clien
 
         ReadablePacket<GameClient> msg = null;
         int id = buf.get() & 0xFF;
-        int id2 = 0;
+        int id2;
 
         switch (client.getState()) {
             case CONNECTED:
                 switch (id) {
-                    case 0x00:
-                        msg = new RequestStatus();
-                        break;
-                    case 0x0e:
+                    case 0x0E:
                         msg = new ProtocolVersion();
                         break;
-                    case 0x2b:
+                    case 0x2B:
                         msg = new AuthLogin();
-                        break;
-                    case 0xcb:
-                        msg = new ReplyGameGuardQuery();
-                        break;
-                    case 0x1f:
-                        // TODO Vora - пусто, ну что-то закинуть
                         break;
                     default:
                         client.onUnknownPacket();

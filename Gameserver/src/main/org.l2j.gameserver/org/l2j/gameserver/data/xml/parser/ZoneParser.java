@@ -16,7 +16,7 @@ import org.l2j.gameserver.utils.Location;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.File;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -43,13 +43,13 @@ public class ZoneParser extends StatParser<ZoneHolder>
 	}
 
 	@Override
-	public File getXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/zone/").toFile();
+	public Path getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/zone/");
 	}
 
 	@Override
-	public File getCustomXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("custom/zone/").toFile();
+	public Path getCustomXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("custom/zone/");
 	}
 
 	@Override

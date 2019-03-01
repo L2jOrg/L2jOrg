@@ -1,14 +1,13 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.io.File;
-import java.util.Iterator;
-
 import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.SynthesisDataHolder;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.item.support.SynthesisData;
+
+import java.nio.file.Path;
+import java.util.Iterator;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
@@ -30,8 +29,8 @@ public class SynthesisDataParser extends AbstractParser<SynthesisDataHolder>
 	}
 
 	@Override
-	public File getXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/synthesis_data.xml").toFile();
+	public Path getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/synthesis_data.xml");
 	}
 
 	@Override

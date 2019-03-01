@@ -1,20 +1,20 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.io.File;
+import org.dom4j.Element;
+import org.l2j.commons.data.xml.AbstractParser;
+import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.xml.holder.ProductDataHolder;
+import org.l2j.gameserver.settings.ServerSettings;
+import org.l2j.gameserver.templates.item.product.ProductItem;
+import org.l2j.gameserver.templates.item.product.ProductItemComponent;
+import org.l2j.gameserver.templates.item.product.ProductPointsType;
+
+import java.nio.file.Path;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Iterator;
-
-import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.templates.item.product.ProductPointsType;
-import org.dom4j.Element;
-import org.l2j.commons.data.xml.AbstractParser;
-import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.holder.ProductDataHolder;
-import org.l2j.gameserver.templates.item.product.ProductItem;
-import org.l2j.gameserver.templates.item.product.ProductItemComponent;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
@@ -40,8 +40,8 @@ public final class ProductDataParser extends AbstractParser<ProductDataHolder>
 	}
 
 	@Override
-	public File getXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/product_data.xml").toFile();
+	public Path getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/product_data.xml");
 	}
 
 	@Override

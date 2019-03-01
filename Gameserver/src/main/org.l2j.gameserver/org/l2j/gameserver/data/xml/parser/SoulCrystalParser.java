@@ -1,14 +1,13 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.io.File;
-import java.util.Iterator;
-
 import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.SoulCrystalHolder;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.SoulCrystal;
+
+import java.nio.file.Path;
+import java.util.Iterator;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
@@ -31,8 +30,8 @@ public final class SoulCrystalParser extends AbstractParser<SoulCrystalHolder>
 	}
 
 	@Override
-	public File getXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/soul_crystals.xml").toFile();
+	public Path getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/soul_crystals.xml");
 	}
 
 	@Override

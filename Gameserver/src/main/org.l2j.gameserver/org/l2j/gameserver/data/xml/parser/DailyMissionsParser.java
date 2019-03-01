@@ -5,14 +5,13 @@ import io.github.joealisson.primitive.sets.impl.HashIntSet;
 import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.commons.string.StringArrayUtils;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.DailyMissionsHolder;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.dailymissions.DailyMissionTemplate;
 import org.l2j.gameserver.templates.dailymissions.DailyRewardTemplate;
 import org.l2j.gameserver.templates.item.data.ItemData;
 
-import java.io.File;
+import java.nio.file.Path;
 import java.util.Iterator;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -35,8 +34,8 @@ public final class DailyMissionsParser extends AbstractParser<DailyMissionsHolde
 	}
 
 	@Override
-	public File getXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/daily_missions.xml").toFile();
+	public Path getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/daily_missions.xml");
 	}
 
 	@Override

@@ -6,7 +6,6 @@ import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.commons.geometry.Circle;
 import org.l2j.commons.geometry.Polygon;
 import org.l2j.commons.geometry.Rectangle;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.SpawnHolder;
 import org.l2j.gameserver.model.Territory;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -18,6 +17,7 @@ import org.l2j.gameserver.templates.spawn.SpawnTemplate;
 import org.l2j.gameserver.utils.Location;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.util.*;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -41,13 +41,13 @@ public final class SpawnParser extends AbstractParser<SpawnHolder>
 	}
 
 	@Override
-	public File getXMLPath(){
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/spawn/").toFile();
+	public Path getXMLPath(){
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/spawn/");
 	}
 
 	@Override
-	public File getCustomXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("custom/spawn/").toFile();
+	public Path getCustomXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("custom/spawn/");
 	}
 
 	@Override

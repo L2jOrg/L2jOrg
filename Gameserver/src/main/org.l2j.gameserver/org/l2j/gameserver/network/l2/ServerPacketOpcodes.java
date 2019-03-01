@@ -22,6 +22,7 @@ public enum ServerPacketOpcodes
 	/*0x0D*/	NewCharacterSuccessPacket,
 	/*0x0E*/	NewCharacterFailPacket,
 	/*0x0F*/	CharacterCreateSuccessPacket,
+
 	/*0x10*/	CharacterCreateFailPacket,
 	/*0x11*/	ItemListPacket,
 	/*0x12*/	SunRisePacket,
@@ -38,6 +39,7 @@ public enum ServerPacketOpcodes
 	/*0x1D*/	CharacterDeleteSuccessPacket,
 	/*0x1E*/	CharacterDeleteFailPacket,
 	/*0x1F*/	ActionFailPacket,
+
 	/*0x20*/	SeverClosePacket,
 	/*0x21*/	InventoryUpdatePacket,
 	/*0x22*/	TeleportToLocationPacket,
@@ -54,6 +56,7 @@ public enum ServerPacketOpcodes
 	/*0x2D*/	JoinPledgePacket,
 	/*0x2E*/	VersionCheckPacket,
 	/*0x2F*/	MTLPacket,
+
 	/*0x30*/	NSPacket,
 	/*0x31*/	CIPacket,
 	/*0x32*/	UIPacket,
@@ -70,6 +73,7 @@ public enum ServerPacketOpcodes
 	/*0x3D*/	SetOustPartyMemberPacket,
 	/*0x3E*/	DismissPartyPacket,
 	/*0x3F*/	SetDismissPartyPacket,
+
 	/*0x40*/	MagicAndSkillList,
 	/*0x41*/	WareHouseDepositListPacket,
 	/*0x42*/	WareHouseWithdrawListPacket,
@@ -86,6 +90,7 @@ public enum ServerPacketOpcodes
 	/*0x4D*/	DoorStatusUpdatePacket,
 	/*0x4E*/	PartySmallWindowAllPacket,
 	/*0x4F*/	PartySmallWindowAddPacket,
+
 	/*0x50*/	PartySmallWindowDeleteAllPacket,
 	/*0x51*/	PartySmallWindowDeletePacket,
 	/*0x52*/	PartySmallWindowUpdatePacket,
@@ -102,6 +107,7 @@ public enum ServerPacketOpcodes
 	/*0x5D*/	PledgeShowMemberListDeletePacket,
 	/*0x5E*/	MagicListPacket,
 	/*0x5F*/	SkillListPacket,
+
 	/*0x60*/	VehicleInfoPacket,
 	/*0x61*/	FinishRotatingPacket,
 	/*0x62*/	SystemMessagePacket,
@@ -118,6 +124,7 @@ public enum ServerPacketOpcodes
 	/*0x6D*/	VehicleCheckLocationPacket,
 	/*0x6E*/	GetOnVehiclePacket,
 	/*0x6F*/	GetOffVehiclePacket,
+
 	/*0x70*/	TradeRequestPacket,
 	/*0x71*/	RestartResponsePacket,
 	/*0x72*/	MoveToPawnPacket,
@@ -134,6 +141,7 @@ public enum ServerPacketOpcodes
 	/*0x7D*/	DummyPacket1,
 	/*0x7E*/	MoveToLocationInVehiclePacket,
 	/*0x7F*/	StopMoveInVehiclePacket,
+
 	/*0x80*/	ValidateLocationInVehiclePacket,
 	/*0x81*/	TradeUpdatePacket,
 	/*0x82*/	TradePressOtherOkPacket,
@@ -150,6 +158,7 @@ public enum ServerPacketOpcodes
 	/*0x8D*/	DummyPacket2,
 	/*0x8E*/	PledgeShowInfoUpdatePacket,
 	/*0x8F*/	ClientActionPacket,
+
 	/*0x90*/	AcquireSkillListPacket,
 	/*0x91*/	AcquireSkillInfoPacket,
 	/*0x92*/	ServerObjectInfoPacket,
@@ -166,6 +175,7 @@ public enum ServerPacketOpcodes
 	/*0x9D*/	PartyRoomInfoPacket,
 	/*0x9E*/	PlaySoundPacket,
 	/*0x9F*/	StaticObjectPacket,
+
 	/*0xA0*/	PrivateStoreManageList,
 	/*0xA1*/	PrivateStoreList,
 	/*0xA2*/	PrivateStoreMsg,
@@ -182,6 +192,7 @@ public enum ServerPacketOpcodes
 	/*0xAD*/	DismissAlliancePacket,
 	/*0xAE*/	SetAllianceCrestPacket,
 	/*0xAF*/	AllianceCrestPacket,
+
 	/*0xB0*/	ServerCloseSocketPacket,
 	/*0xB1*/	PetStatusShowPacket,
 	/*0xB2*/	MyPetSummonInfoPacket,
@@ -198,6 +209,7 @@ public enum ServerPacketOpcodes
 	/*0xBD*/	PrivateStoreBuyManageList,
 	/*0xBE*/	PrivateStoreBuyList,
 	/*0xBF*/	PrivateStoreBuyMsg,
+
 	/*0xC0*/	VehicleStartPacket,
 	/*0xC1*/	NpcInfoState,
 	/*0xC2*/	StartAllianceWarPacket,
@@ -214,6 +226,7 @@ public enum ServerPacketOpcodes
 	/*0xCD*/	PledgeStatusChangedPacket,
 	/*0xCE*/	RelationChangedPacket,
 	/*0xCF*/	EventTriggerPacket,
+
 	/*0xD0*/	MultiSellListPacket,
 	/*0xD1*/	SetSummonRemainTimePacket,
 	/*0xD2*/	PackageSendableListPacket,
@@ -230,6 +243,7 @@ public enum ServerPacketOpcodes
 	/*0xDD*/	RecipeItemMakeInfoPacket,
 	/*0xDE*/	RecipeShopManageListPacket,
 	/*0xDF*/	RecipeShopSellListPacket,
+
 	/*0xE0*/	RecipeShopItemInfoPacket,
 	/*0xE1*/	RecipeShopMsgPacket,
 	/*0xE2*/	ShowCalcPacket,
@@ -246,6 +260,7 @@ public enum ServerPacketOpcodes
 	/*0xED*/	ChairSitPacket,
 	/*0xEE*/	HennaEquipListPacket,
 	/*0xEF*/	SellListProcurePacket,
+
 	/*0xF0*/	GMHennaInfoPacket,
 	/*0xF1*/	RadarControlPacket,
 	/*0xF2*/	ClientSetTimePacket,
@@ -260,6 +275,8 @@ public enum ServerPacketOpcodes
 	/*0xFB*/	SSQStatusPacket,
 	/*0xFC*/	PetitionVotePacket,
 	/*0xFD*/	AgitDecoInfoPacket,
+	/*0xFE*/    Dummy3,
+
 	/*0xFE*/	ExDummyPacket1(0x00),
 	/*0xFE*/	ExRegenMaxPacket(0x01),
 	/*0xFE*/	ExEventMatchUserInfoPacket(0x02),
@@ -276,6 +293,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExEventMatchListPacket(0xD),
 	/*0xFE*/	ExEventMatchObserverPacket(0xE),
 	/*0xFE*/	ExEventMatchMessagePacket(0xF),
+
 	/*0xFE*/	ExEventMatchScorePacket(0x10),
 	/*0xFE*/	ExServerPrimitivePacket(0x11),
 	/*0xFE*/	ExOpenMPCCPacket(0x12),
@@ -292,6 +310,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExEventMatchCreatePacket(0x1D),
 	/*0xFE*/	ExFishingStartPacket(0x1E),
 	/*0xFE*/	ExFishingEndPacket(0x1F),
+
 	/*0xFE*/	ExShowQuestInfoPacket(0x20),
 	/*0xFE*/	ExShowQuestMarkPacket(0x21),
 	/*0xFE*/	ExSendManorListPacket(0x22),
@@ -308,6 +327,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExOlympiadMatchEndPacket(0x2D),
 	/*0xFE*/	ExMailArrivedPacket(0x2E),
 	/*0xFE*/	ExStorageMaxCountPacket(0x2F),
+
 	/*0xFE*/	ExEventMatchManagePacket(0x30),
 	/*0xFE*/	ExMultiPartyCommandChannelInfoPacket(0x31),
 	/*0xFE*/	ExPCCafePointInfoPacket(0x32),
@@ -324,6 +344,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	PledgePowerGradeList(0x3D),
 	/*0xFE*/	PledgeReceivePowerInfo(0x3E),
 	/*0xFE*/	PledgeReceiveMemberInfo(0x3F),
+
 	/*0xFE*/	PledgeReceiveWarList(0x40),
 	/*0xFE*/	PledgeReceiveSubPledgeCreated(0x41),
 	/*0xFE*/	ExRedSkyPacket(0x42),
@@ -340,6 +361,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExDuelAskStart(0x4D),
 	/*0xFE*/	ExDuelReady(0x4E),
 	/*0xFE*/	ExDuelStart(0x4F),
+
 	/*0xFE*/	ExDuelEnd(0x50),
 	/*0xFE*/	ExDuelUpdateUserInfo(0x51),
 	/*0xFE*/	ExShowVariationMakeWindow(0x52),
@@ -356,6 +378,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExPlayScene(0x5D),
 	/*0xFE*/	ExSpawnEmitterPacket(0x5E),
 	/*0xFE*/	ExEnchantSkillInfoDetailPacket(0x5F),
+
 	/*0xFE*/	ExBasicActionList(0x60),
 	/*0xFE*/	ExAirShipInfo(0x61),
 	/*0xFE*/	ExAttributeEnchantResultPacket(0x62),
@@ -372,6 +395,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExRpItemLink(0x6D),
 	/*0xFE*/	ExMoveToLocationInAirShipPacket(0x6E),
 	/*0xFE*/	ExStopMoveInAirShipPacket(0x6F),
+
 	/*0xFE*/	ExValidateLocationInAirShipPacket(0x70),
 	/*0xFE*/	ExUISettingPacket(0x71),
 	/*0xFE*/	ExMoveToTargetInAirShipPacket(0x72),
@@ -388,6 +412,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExOlympiadModePacket(0x7D),
 	/*0xFE*/	ExShowFortressMapInfo(0x7E),
 	/*0xFE*/	ExPVPMatchRecord(0x7F),
+
 	/*0xFE*/	ExPVPMatchUserDie(0x80),
 	/*0xFE*/	ExPrivateStoreWholeMsg(0x81),
 	/*0xFE*/	ExPutEnchantTargetItemResult(0x82),
@@ -404,6 +429,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExShowTerritory(0x8D),
 	/*0xFE*/	ExNpcQuestHtmlMessage(0x8E),
 	/*0xFE*/	ExSendUIEventPacket(0x8F),
+
 	/*0xFE*/	ExNotifyBirthDay(0x90),
 	/*0xFE*/	ExShowDominionRegistry(0x91),
 	/*0xFE*/	ExReplyRegisterDominion(0x92),
@@ -420,6 +446,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExListMpccWaiting(0x9D),
 	/*0xFE*/	ExDissmissMpccRoom(0x9E),
 	/*0xFE*/	ExManageMpccRoomMember(0x9F),
+
 	/*0xFE*/	ExMpccRoomMember(0xA0),
 	/*0xFE*/	ExVitalityPointInfo(0xA1),
 	/*0xFE*/	ExShowSeedMapInfo(0xA2),
@@ -436,6 +463,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExShowSentPostList(0xAD),
 	/*0xFE*/	ExReplySentPost(0xAE),
 	/*0xFE*/	ExResponseShowStepOne(0xAF),
+
 	/*0xFE*/	ExResponseShowStepTwo(0xB0),
 	/*0xFE*/	ExResponseShowContents(0xB1),
 	/*0xFE*/	ExShowPetitionHtml(0xB2),
@@ -452,6 +480,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExBrBroadcastEventState(0xBD),
 	/*0xFE*/	ExBR_LoadEventTopRankersPacket(0xBE),
 	/*0xFE*/	ExChangeNPCState(0xBF),
+
 	/*0xFE*/	ExAskModifyPartyLooting(0xC0),
 	/*0xFE*/	ExSetPartyLooting(0xC1),
 	/*0xFE*/	ExRotation(0xC2),
@@ -468,6 +497,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExSuttleGetOffPacket(0xCD),
 	/*0xFE*/	ExSuttleMovePacket(0xCE),
 	/*0xFE*/	ExMTLInSuttlePacket(0xCF),
+
 	/*0xFE*/	ExStopMoveInShuttlePacket(0xD0),
 	/*0xFE*/	ExValidateLocationInShuttlePacket(0xD1),
 	/*0xFE*/	ExAgitAuctionCmdPacket(0xD2),
@@ -484,6 +514,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExBR_RecentProductListPacket(0xDD),
 	/*0xFE*/	ExBR_MinigameLoadScoresPacket(0xDE),
 	/*0xFE*/	ExBR_AgathionEnergyInfoPacket(0xDF),
+
 	/*0xFE*/	ExShowChannelingEffectPacket(0xE0),
 	/*0xFE*/	ExGetCrystalizingEstimation(0xE1),
 	/*0xFE*/	ExGetCrystalizingFail(0xE2),
@@ -500,6 +531,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExBlockAddResult(0xED),
 	/*0xFE*/	ExBlockRemoveResult(0xEE),
 	/*0xFE*/	ExBlockDefailInfo(0xEF),
+
 	/*0xFE*/	ExLoadInzonePartyHistory(0xF0),
 	/*0xFE*/	ExFriendNotifyNameChange(0xF1),
 	/*0xFE*/	ExShowCommission(0xF2),
@@ -516,6 +548,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExNewSkillToLearnByLevelUp(0xFD),
 	/*0xFE*/	ExCallToChangeClass(0xFE),
 	/*0xFE*/	ExChangeToAwakenedClass(0xFF),
+
 	/*0xFE*/	ExTacticalSign(0x100),
 	/*0xFE*/	ExLoadStatWorldRank(0x101),
 	/*0xFE*/	ExLoadStatUser(0x102),
@@ -532,6 +565,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExGoodsInventoryInfoPacket(0x10D),
 	/*0xFE*/	ExGoodsInventoryResultPacket(0x10E),
 	/*0xFE*/	ExAlterSkillRequest(0x10F),
+
 	/*0xFE*/	ExNotifyFlyMoveStart(0x110),
 	/*0xFE*/	ExDummyPacket2(0x111),
 	/*0xFE*/	ExCloseCommission(0x112),
@@ -548,6 +582,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ListMenteeWaitingPacket(0x11D),
 	/*0xFE*/	ExInzoneWaitingInfo(0x11E),
 	/*0xFE*/	ExCuriousHouseState(0x11F),
+
 	/*0xFE*/	ExCuriousHouseEnter(0x120),
 	/*0xFE*/	ExCuriousHouseLeave(0x121),
 	/*0xFE*/	ExCuriousHouseMemberList(0x122),
@@ -564,6 +599,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExCastleState(0x12D),
 	/*0xFE*/	ExNCGuardReceiveDataFromServer(0x12E),
 	/*0xFE*/	ExKalieEvent(0x12F),
+
 	/*0xFE*/	ExKalieEventJackpotUser(0x130),
 	/*0xFE*/	ExAbnormalVisualEffectInfo(0x131),
 	/*0xFE*/	ExNpcInfoSpeed(0x132),
@@ -580,6 +616,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExPledgeCount(0x13D),
 	/*0xFE*/	ExAdenaInvenCount(0x13E),
 	/*0xFE*/	ExPledgeRecruitInfo(0x13F),
+
 	/*0xFE*/	ExPledgeRecruitApplyInfo(0x140),
 	/*0xFE*/	ExPledgeRecruitBoardSearch(0x141),
 	/*0xFE*/	ExPledgeRecruitBoardDetail(0x142),
@@ -596,6 +633,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExInvitation_Event_UI_Setting(0x14D),
 	/*0xFE*/	ExInvitation_Event_Ink_Energy(0x14E),
 	/*0xFE*/	Ex_Check_Abusing(0x14F),
+
 	/*0xFE*/	ExGMVitalityEffectInfo(0x150),
 	/*0xFE*/	ExPathToAwakeningAlarm(0x151),
 	/*0xFE*/	ExPutEnchantScrollItemResult(0x152),
@@ -612,6 +650,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExDivideAdenaDone(0x15D),
 	/*0xFE*/	PetInfoPacket(0x15E),
 	/*0xFE*/	ExAcquireAPSkillList(0x15F),
+
 	/*0xFE*/	ExStartLuckyGame(0x160),
 	/*0xFE*/	ExBettingLuckyGameResult(0x161),
 	/*0xFE*/	ExTrainingZone_Admission(0x162),
@@ -628,6 +667,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExEnchantTwoFail(0x16D),
 	/*0xFE*/	ExEnchantTwoRemoveOK(0x16E),
 	/*0xFE*/	ExEnchantTwoRemoveFail(0x16F),
+
 	/*0xFE*/	ExEnchantSucess(0x170),
 	/*0xFE*/	ExEnchantFail(0x171),
 	/*0xFE*/	ExEnchantRetryToPutItemOk(0x172),
@@ -644,6 +684,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExChannlChatPlegeInfo(0x17D),
 	/*0xFE*/	ExVipAttendanceItemList(0x17E),
 	/*0xFE*/	ExConfirmVipAttendanceCheck(0x17F),
+
 	/*0xFE*/	ExShowEnsoulWindow(0x180),
 	/*0xFE*/	ExEnsoulResult(0x181),
 	/*0xFE*/	ExMultiSellResult(0x182),
@@ -660,6 +701,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExPledgeSigninForOpenJoiningMethod(0x18D),
 	/*0xFE*/	ExRequestMatchArena(0x18E),
 	/*0xFE*/	ExCompleteMatchArena(0x18F),
+
 	/*0xFE*/	ExConfirmMatchArena(0x190),
 	/*0xFE*/	ExCancelMatchArena(0x191),
 	/*0xFE*/	ExStartChooseClassArena(0x192),
@@ -676,6 +718,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExDieInArena(0x19D),
 	/*0xFE*/	DummyPacket(0x19E),
 	/*0xFE*/	ExArenaDashboard(0x19F),
+
 	/*0xFE*/	ExArenaUpdateEquipSlot(0x1A0),
 	/*0xFE*/	ExArenaKillInfo(0x1A1),
 	/*0xFE*/	ExExitArena(0x1A2),
@@ -692,6 +735,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExQueueTicket(0x1AD),
 	/*0xFE*/	ExPledgeBonusOpen(0x1AE),
 	/*0xFE*/	ExPledgeBonusList(0x1AF),
+
 	/*0xFE*/	ExPledgeBonusMarkReset(0x1B0),
 	/*0xFE*/	ExPledgeBonusUpdate(0x1B1),
 	/*0xFE*/	ExSSOAuthnToken(0x1B2),
@@ -708,6 +752,7 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExMonsterBook(0x1BD),
 	/*0xFE*/	ExMonsterBookRewardIcon(0x1BE),
 	/*0xFE*/	ExMonsterBookOnFactionUI(0x1BF),
+
 	/*0xFE*/	ExMonsterBookOpenResult(0x1C0),
 	/*0xFE*/	ExMonsterBookCloseForce(0x1C1),
 	/*0xFE*/	ExFactionLevelUpNotify(0x1C2),
@@ -721,11 +766,69 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExMatchGroupWithdraw(0x1CA),
 	/*0xFE*/	ExMatchGroupOust(0x1CB),
 	/*0xFE*/	ExArenaShowEnemyPartyLocation(0x1CC),
-	/*0xFE*/	ExDressRoomUIOpen(0x1CD),
-	/*0xFE*/	ExDressHangerList(0x1CE),
-	/*0xFE*/	ExShowUpgradeSystem(0x1CF),
-	/*0xFE*/	ExUpgradeSystemResult(0x1D0),
-	/*0xFE*/	ExUserBanInfo(0x1D1);
+
+	/*0xFE*/	ExShowUpgradeSystem(0x1CD),
+	/*0xFE*/	ExUpgradeSystemResult(0x1CE),
+
+	// New
+	/*0xFE*/	ExCardUpDownGameStart(0x1CF),
+	/*0xFE*/	ExCardUpDownPickResult(0x1D0),
+	/*0xFE*/	ExCardUpDownGamePrepareReward(0x1D1),
+	/*0xFE*/	ExCardUpDownGameRewardReply(0x1D2),
+	/*0xFE*/	ExCardUpDownGameQuit(0x1D3),
+	/*0xFE*/	ExArenaRankAll(0x1D4),
+	/*0xFE*/	ExArenaMyRank(0x1D5),
+	/*0xFE*/	ExPledgeClassicRaidInfo(0x1D6),
+	/*0xFE*/	ExArenaObserve(0x1D7),
+	/*0xFE*/	ExHmtlWithNPCViewport(0x1D8),
+	/*0xFE*/	ExPledgeContributionRank(0x1D9),
+	/*0xFE*/	ExPledgeContributionInfo(0x1DA),
+	/*0xFE*/	ExPledgeContributionReward(0x1DB),
+	/*0xFE*/	ExPledgeRaidInfo(0x1DC),
+	/*0xFE*/	ExPledgeRaidRank(0x1DD),
+	/*0xFE*/	ExPledgeLevelUp(0x1DE),
+	/*0xFE*/	ExPledgeShowInfoUpdate(0x1DF),
+
+	/*0xFE*/	ExPledgeMissionInfo(0x1E0),
+	/*0xFE*/	ExPledgeMissionRewardCount(0x1E1),
+	/*0xFE*/	ExPledgeMasteryInfo(0x1E2),
+	/*0xFE*/	ExPledgeMasterySet(0x1E3),
+	/*0xFE*/	ExPledgeMasteryReset(0x1E4),
+	/*0xFE*/	ExTutorialShowId(0x1E5),
+	/*0xFE*/	ExPledgeSkillInfo(0x1E6),
+	/*0xFE*/	ExPledgeSkillActivate(0x1E7),
+	/*0xFE*/	ExPledgeItemList(0x1E8),
+	/*0xFE*/	ExPledgeItemActivate(0x1E9),
+	/*0xFE*/	ExPledgeAnnounce(0x1EA),
+	/*0xFE*/	ExPledgeAnnounceSet(0x1EB),
+	/*0xFE*/	ExSetPledgeEmblem(0x1EC),
+	/*0xFE*/	ExShowCreatePledge(0x1ED),
+	/*0xFE*/	ExPledgeItemInfo(0x1EE),
+	/*0xFE*/	ExPledgeItemBuy(0x1EF),
+
+	/*0xFE*/	ExElementalSpiritInfo(0x1F0),
+	/*0xFE*/	ExElementalSpiritExtractInfo(0x1F1),
+	/*0xFE*/	ExElementalSpiritEvolutionInfo(0x1F2),
+	/*0xFE*/	ExElementalSpiritEvolution(0x1F3),
+	/*0xFE*/	ExElementalSpiritSetTalent(0x1F4),
+	/*0xFE*/	ExElementalSpiritAbsorbInfo(0x1F5),
+	/*0xFE*/	ExElementalSpiritAbsorb(0x1F6),
+	/*0xFE*/	ExChooseLockedItem(0x1F7),
+	/*0xFE*/	ExLockedResult(0x1F8),
+	/*0xFE*/	ExElementalSpiritExtract(0x1F9),
+	/*0xFE*/	ExOlympiadInfo(0x1FA),
+	/*0xFE*/	ExOlympiadRecord(0x1FB),
+	/*0xFE*/	ExOlympiadMatchInfo(0x1FC),
+	/*0xFE*/	ExElementalSpiritGetExp(0x1FD),
+	/*0xFE*/	ExItemAnnounce(0x1FE),
+	/*0xFE*/	ExDressRoomUIOpen(0x1FF),
+
+	/*0xFE*/	ExDressHangerList(0x200),
+	/*0xFE*/	ExUserBanInfo(0x201),
+	/*0xFE*/	ExTryEnchantArtifactResult(0x202),
+	/*0xFE*/	ExXignCode(0x203),
+	/*0xFE*/	ExMax(0x204),
+	;
 
 	public static final ServerPacketOpcodes[] VALUES = values();
 

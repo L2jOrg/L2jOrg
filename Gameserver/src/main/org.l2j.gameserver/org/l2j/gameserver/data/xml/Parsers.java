@@ -1,8 +1,5 @@
 package org.l2j.gameserver.data.xml;
 
-import org.l2j.gameserver.data.string.ItemNameHolder;
-import org.l2j.gameserver.data.string.Messages;
-import org.l2j.gameserver.data.string.SkillNameHolder;
 import org.l2j.gameserver.data.xml.parser.*;
 import org.l2j.gameserver.instancemanager.ReflectionManager;
 
@@ -15,8 +12,6 @@ public abstract class Parsers
     public static void parseAll()
     {
 
-        SkillNameHolder.getInstance().load();
-        //
         SkillParser.getInstance().load();
         OptionDataParser.getInstance().load();
         VariationDataParser.getInstance().load();

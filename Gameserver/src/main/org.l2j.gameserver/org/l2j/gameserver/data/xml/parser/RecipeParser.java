@@ -1,8 +1,5 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.io.File;
-import java.util.Iterator;
-
 import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
 import org.l2j.gameserver.Config;
@@ -14,6 +11,9 @@ import org.l2j.gameserver.templates.item.ItemTemplate;
 import org.l2j.gameserver.templates.item.RecipeTemplate;
 import org.l2j.gameserver.templates.item.data.ChancedItemData;
 import org.l2j.gameserver.templates.item.data.ItemData;
+
+import java.nio.file.Path;
+import java.util.Iterator;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
@@ -32,8 +32,8 @@ public final class RecipeParser extends AbstractParser<RecipeHolder>
 	}
 
 	@Override
-	public File getXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/recipes.xml").toFile();
+	public Path getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/recipes.xml");
 	}
 
 	@Override

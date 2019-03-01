@@ -3,7 +3,6 @@ package org.l2j.gameserver.data.xml.parser;
 import org.dom4j.Element;
 import org.l2j.commons.collections.MultiValueSet;
 import org.l2j.commons.data.xml.AbstractParser;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.EventHolder;
 import org.l2j.gameserver.model.entity.events.Event;
 import org.l2j.gameserver.model.entity.events.EventAction;
@@ -20,8 +19,8 @@ import org.l2j.gameserver.skills.AbnormalEffect;
 import org.l2j.gameserver.utils.Location;
 import org.l2j.gameserver.utils.Util;
 
-import java.io.File;
 import java.lang.reflect.Constructor;
+import java.nio.file.Path;
 import java.util.*;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -45,13 +44,13 @@ public final class EventParser extends AbstractParser<EventHolder>
 	}
 
 	@Override
-	public File getXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/events/").toFile();
+	public Path getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/events/");
 	}
 
 	@Override
-	public File getCustomXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("custom/events/").toFile();
+	public Path getCustomXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("custom/events/");
 	}
 
 	@Override

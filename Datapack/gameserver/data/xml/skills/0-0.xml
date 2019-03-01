@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<skills xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org"
+          xsi:schemaLocation="http://la2j.org ../schemas/skill.xsd">
+
+
+    <skill id="1" levels="40" name="Triple Slash">
+        <table name="#effectPoint">213 219 225 231 237 242 248 254 260 265 271 277 283 288 294 299 305 310 316 321 326 331 336 340 345 350 354 358 362 366 370 373 377 380 383 386</table>
+        <table name="#power">517 549 583 619 656 694 735 777 820 865 912 960 1010 1062 1115 1169 1225 1283 1342 1402 1464 1527 1591 1656 1722 1789 1010 1926 1995 2065 2135 2206 2277 2347 2417 2488 2557 2581 2604 2627</table>
+        <table name="#magicLevel">38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 76 77 78</table>
+        <table name="#mp_consume">42 43 45 45 46 47 49 50 52 53 55 56 58 58 59 61 62 64 65 67 68 70 71 71 73 74 75 77 78 79 80 82 83 84 85 86 86 95 96 97</table>
+        <icon>qjaslkdjf</icon>
+        <reuseDelay ref="power"/>
+
+    </skill>
+
+</skills>

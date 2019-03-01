@@ -7,7 +7,7 @@ import org.l2j.gameserver.data.xml.holder.FishDataHolder;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.templates.fish.*;
 
-import java.io.File;
+import java.nio.file.Path;
 import java.util.Iterator;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -30,8 +30,8 @@ public class FishDataParser extends AbstractParser<FishDataHolder>
 	}
 
 	@Override
-	public File getXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/fishdata.xml").toFile();
+	public Path getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/fishdata.xml");
 	}
 
 	@Override

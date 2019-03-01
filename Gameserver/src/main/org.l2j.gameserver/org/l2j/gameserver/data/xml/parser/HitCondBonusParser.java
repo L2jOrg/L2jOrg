@@ -1,14 +1,13 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.io.File;
-import java.util.Iterator;
-
 import org.dom4j.Element;
 import org.l2j.commons.data.xml.AbstractParser;
-import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.base.HitCondBonusType;
 import org.l2j.gameserver.data.xml.holder.HitCondBonusHolder;
+import org.l2j.gameserver.model.base.HitCondBonusType;
 import org.l2j.gameserver.settings.ServerSettings;
+
+import java.nio.file.Path;
+import java.util.Iterator;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
@@ -30,8 +29,8 @@ public final class HitCondBonusParser extends AbstractParser<HitCondBonusHolder>
 	}
 
 	@Override
-	public File getXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/pc_parameters/hit_cond_bonus.xml").toFile();
+	public Path getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/pc_parameters/hit_cond_bonus.xml");
 	}
 
 	@Override

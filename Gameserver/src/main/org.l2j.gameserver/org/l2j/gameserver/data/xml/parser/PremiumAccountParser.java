@@ -9,7 +9,7 @@ import org.l2j.gameserver.templates.item.data.ItemData;
 import org.l2j.gameserver.templates.premiumaccount.*;
 import org.l2j.gameserver.utils.Language;
 
-import java.io.File;
+import java.nio.file.Path;
 import java.util.Iterator;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -32,8 +32,8 @@ public final class PremiumAccountParser extends StatParser<PremiumAccountHolder>
 	}
 
 	@Override
-	public File getXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/premium_accounts.xml").toFile();
+	public Path getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/premium_accounts.xml");
 	}
 
 	@Override

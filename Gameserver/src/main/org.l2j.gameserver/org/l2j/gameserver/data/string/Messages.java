@@ -22,8 +22,8 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  */
 public final class Messages  {
 
-	private static final Logger  logger = LoggerFactory.getLogger(Messages.class);
-	private static final Messages _instance = new Messages();
+	private static final Logger LOGGER = LoggerFactory.getLogger(Messages.class);
+	private static final Messages INSTANCE = new Messages();
 
 	private final IntObjectMap<Map<String, String>> resources = new HashIntObjectMap<>();
 
@@ -32,7 +32,7 @@ public final class Messages  {
 	}
 
 	public String getMessage(Player player, String key) {
-		var lang = isNull(player) ? Language.ENGLISH: player.getLanguage();
+		var lang = isNull(player) ? Language.ENGLISH : player.getLanguage();
 		return getMessage(key, lang);
 	}
 
@@ -52,7 +52,7 @@ public final class Messages  {
 			var filePath = serverSettings.dataPackRootPath().resolve(String.format("data/string/strings/%s.properties", lang.getShortName()));
 			if(Files.notExists(filePath)) {
 				if(lang == Language.ENGLISH) {
-					logger.warn("Not find file: {}", filePath);
+					LOGGER.warn("Not find file: {}", filePath);
 				}
 			} else {
 				resources.put(lang.getId(), new HashMap<>());
@@ -63,7 +63,7 @@ public final class Messages  {
 
 						StringTokenizer token = new StringTokenizer(line, "=");
 						if (token.countTokens() < 2) {
-							logger.error("Error on line: {}; file {}", line, filePath);
+							LOGGER.error("Error on line: {}; file {}", line, filePath);
 							continue;
 						}
 
@@ -76,24 +76,19 @@ public final class Messages  {
 						resources.get(lang.getId()).put(name, value.toString());
 					}
 				} catch (Exception e) {
-					logger.error(e.getLocalizedMessage(), e);
+					LOGGER.error(e.getLocalizedMessage(), e);
 				}
 			}
-			logger.info("Load strings: {} for lang: {}", resources.get(lang.getId()).size(), lang);
+			LOGGER.info("Load strings: {} for lang: {}", resources.get(lang.getId()).size(), lang);
 		}
 	}
 
 	public void reload() {
-		clear();
+		resources.clear();
 		load();
 	}
 
-	public void clear()
-	{
-		resources.clear();
-	}
-
 	public static Messages getInstance() {
-		return _instance;
+		return INSTANCE;
 	}
 }

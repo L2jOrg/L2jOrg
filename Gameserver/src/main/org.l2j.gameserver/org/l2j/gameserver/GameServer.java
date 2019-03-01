@@ -12,6 +12,7 @@ import org.l2j.gameserver.cache.ImagesCache;
 import org.l2j.gameserver.data.BoatHolder;
 import org.l2j.gameserver.data.string.ItemNameHolder;
 import org.l2j.gameserver.data.string.Messages;
+import org.l2j.gameserver.data.string.SkillNameHolder;
 import org.l2j.gameserver.data.xml.Parsers;
 import org.l2j.gameserver.data.xml.holder.EventHolder;
 import org.l2j.gameserver.data.xml.holder.ResidenceHolder;
@@ -179,6 +180,7 @@ public class GameServer {
     private void loadData() {
         Messages.getInstance().load();
         ItemNameHolder.getInstance().load();
+        SkillNameHolder.getInstance().load();
     }
 
     private static void logMemoryUsage() {

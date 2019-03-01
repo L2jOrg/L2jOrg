@@ -1,19 +1,18 @@
 package org.l2j.gameserver.data.xml.parser;
 
-import java.io.File;
-import java.util.Iterator;
-import java.util.HashSet;
-import java.util.Set;
-
 import org.dom4j.Element;
-import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.model.base.ClassLevel;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.SkillAcquireHolder;
 import org.l2j.gameserver.model.SkillLearn;
+import org.l2j.gameserver.model.base.ClassId;
+import org.l2j.gameserver.model.base.ClassLevel;
 import org.l2j.gameserver.model.base.Race;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.stats.conditions.Condition;
+
+import java.nio.file.Path;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
@@ -36,8 +35,8 @@ public final class SkillAcquireParser extends StatParser<SkillAcquireHolder>
 	}
 
 	@Override
-	public File getXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/skill_tree/").toFile();
+	public Path getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/skill_tree/");
 	}
 
 	@Override

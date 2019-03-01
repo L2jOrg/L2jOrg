@@ -1,7 +1,8 @@
 package org.l2j.gameserver.data.xml.parser;
 
+import io.github.joealisson.primitive.maps.IntObjectMap;
+import io.github.joealisson.primitive.maps.impl.TreeIntObjectMap;
 import org.dom4j.Element;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.holder.SkillHolder;
 import org.l2j.gameserver.model.Skill;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -13,10 +14,8 @@ import org.l2j.gameserver.templates.skill.EffectTemplate;
 import org.l2j.gameserver.templates.skill.restoration.RestorationGroup;
 import org.l2j.gameserver.templates.skill.restoration.RestorationInfo;
 import org.l2j.gameserver.templates.skill.restoration.RestorationItem;
-import io.github.joealisson.primitive.maps.IntObjectMap;
-import io.github.joealisson.primitive.maps.impl.TreeIntObjectMap;
 
-import java.io.File;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -28,16 +27,11 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 /**
  * @author Bonux
  **/
-public final class SkillParser extends StatParser<SkillHolder>
-{
-	private static final SkillParser _instance = new SkillParser();
+public final class SkillParser extends StatParser<SkillHolder> {
 
-	private final IntObjectMap<IntObjectMap<StatsSet>> _skillsTables = new TreeIntObjectMap<IntObjectMap<StatsSet>>();
+	private static final SkillParser INSTANCE = new SkillParser();
 
-	public static SkillParser getInstance()
-	{
-		return _instance;
-	}
+	private final IntObjectMap<IntObjectMap<StatsSet>> _skillsTables = new TreeIntObjectMap<>();
 
 	protected SkillParser()
 	{
@@ -45,13 +39,13 @@ public final class SkillParser extends StatParser<SkillHolder>
 	}
 
 	@Override
-	public File getXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/skills/").toFile();
+	public Path getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/skills/");
 	}
 
 	@Override
-	public File getCustomXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("custom/skills/").toFile();
+	public Path getCustomXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("custom/skills/");
 	}
 
 	@Override
@@ -345,5 +339,9 @@ public final class SkillParser extends StatParser<SkillHolder>
 			set.set(name, values.get(Math.min(i, values.size() - 1)));
 			i++;
 		}
+	}
+
+	public static SkillParser getInstance() {
+		return INSTANCE;
 	}
 }

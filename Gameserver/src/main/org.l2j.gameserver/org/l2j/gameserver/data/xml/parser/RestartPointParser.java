@@ -16,7 +16,7 @@ import org.l2j.gameserver.templates.mapregion.RestartArea;
 import org.l2j.gameserver.templates.mapregion.RestartPoint;
 import org.l2j.gameserver.utils.Location;
 
-import java.io.File;
+import java.nio.file.Path;
 import java.util.*;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
@@ -36,8 +36,8 @@ public class RestartPointParser extends AbstractParser<MapRegionManager>
 	}
 
 	@Override
-	public File getXMLPath() {
-		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/mapregion/restart_points.xml").toFile();
+	public Path getXMLPath() {
+		return getSettings(ServerSettings.class).dataPackRootPath().resolve("data/mapregion/restart_points.xml");
 	}
 
 	@Override
