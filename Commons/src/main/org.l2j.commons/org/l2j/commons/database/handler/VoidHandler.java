@@ -18,7 +18,12 @@ public class VoidHandler implements TypeHandler<Void> {
     }
 
     @Override
-    public Void handle(ResultSet resultSet, Class<?> type) throws SQLException {
+    public Void handleType(ResultSet resultSet, Class<?> type) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public Void handleColumn(ResultSet resultSet, int column) throws SQLException {
         return null;
     }
 

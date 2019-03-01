@@ -12,11 +12,11 @@ public class Account  {
     private String login;
     private String password;
     @Column("last_access")
-    private Long lastAccess;
+    private long lastAccess;
     @Column("access_level")
-    private Integer accessLevel;
+    private int accessLevel;
     @Column("last_server")
-    private Integer lastServer;
+    private int lastServer;
     @Column("last_ip")
     private String lastIP;
 

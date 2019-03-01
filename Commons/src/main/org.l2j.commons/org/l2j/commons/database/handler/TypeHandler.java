@@ -13,7 +13,9 @@ public interface TypeHandler<T> {
 
     T defaultValue();
     T handleResult(QueryDescriptor queryDescriptor) throws SQLException;
-    T handle(ResultSet resultSet, Class<?> type) throws SQLException;
+    T handleType(ResultSet resultSet, Class<?> type) throws SQLException;
+    T handleColumn(ResultSet resultSet, int column) throws SQLException;
+
     String type();
 }
 

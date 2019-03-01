@@ -21,14 +21,14 @@ public class EntityHandler implements TypeHandler<Object> {
     public Object handleResult(QueryDescriptor queryDescriptor) throws SQLException {
         var resultSet = queryDescriptor.getStatement().getResultSet();
         if(resultSet.next()) {
-            return handle(resultSet, queryDescriptor.getReturnType());
+            return handleType(resultSet, queryDescriptor.getReturnType());
         }
-        return null;
+        return defaultValue();
     }
 
     @Override
     @SuppressWarnings("unchecked")
-    public Object handle(ResultSet resultSet, Class<?> type) throws SQLException {
+    public Object handleType(ResultSet resultSet, Class<?> type) throws SQLException {
         try {
             var instance = type.getDeclaredConstructor().newInstance();
             var fields = type.getDeclaredFields();
@@ -42,9 +42,8 @@ public class EntityHandler implements TypeHandler<Object> {
                     throw  new SQLException("There is no field with name " +  columnName + " on Type " + type.getName());
                 }
                 if(f.trySetAccessible()) {
-                    var fieldType = f.getType();
                     var handler = TypeHandler.MAP.getOrDefault(f.getType().getName(), TypeHandler.MAP.get(Object.class.getName()));
-                    f.set(instance, handler.handle(resultSet, fieldType));
+                    f.set(instance, handler.handleColumn(resultSet, i));
                 } else {
                     throw  new SQLException("No accessible field " + f.getName() + " On type " + type );
                 }
@@ -53,6 +52,11 @@ public class EntityHandler implements TypeHandler<Object> {
         } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
             throw new SQLException(e);
         }
+    }
+
+    @Override
+    public Object handleColumn(ResultSet resultSet, int column) {
+        return null;
     }
 
     private Field findField(Field[] fields, String columnName) {

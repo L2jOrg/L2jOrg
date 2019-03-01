@@ -26,7 +26,12 @@ public class IntSetHandler implements TypeHandler<IntSet> {
     }
 
     @Override
-    public IntSet handle(ResultSet resultSet, Class<?> type) {
+    public IntSet handleType(ResultSet resultSet, Class<?> type) {
+        return new HashIntSet();
+    }
+
+    @Override
+    public IntSet handleColumn(ResultSet resultSet, int column) throws SQLException {
         return new HashIntSet();
     }
 

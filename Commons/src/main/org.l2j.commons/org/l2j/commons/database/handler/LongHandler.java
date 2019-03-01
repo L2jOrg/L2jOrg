@@ -5,17 +5,16 @@ import org.l2j.commons.database.QueryDescriptor;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class IntegerHandler implements TypeHandler<Integer> {
-
+public class LongHandler implements  TypeHandler<Long> {
     @Override
-    public Integer defaultValue() {
-        return 0;
+    public Long defaultValue() {
+        return 0L;
     }
 
     @Override
-    public Integer handleResult(QueryDescriptor queryDescriptor) throws SQLException {
+    public Long handleResult(QueryDescriptor queryDescriptor) throws SQLException {
         if(queryDescriptor.isUpdate()) {
-            return queryDescriptor.getStatement().getUpdateCount();
+            return (long) queryDescriptor.getStatement().getUpdateCount();
         }
         var resultSet = queryDescriptor.getStatement().getResultSet();
         if(resultSet.next()) {
@@ -25,17 +24,17 @@ public class IntegerHandler implements TypeHandler<Integer> {
     }
 
     @Override
-    public Integer handleType(ResultSet resultSet, Class<?> type) throws SQLException {
+    public Long handleType(ResultSet resultSet, Class<?> type) throws SQLException {
         return handleColumn(resultSet, 1);
     }
 
     @Override
-    public Integer handleColumn(ResultSet resultSet, int column) throws SQLException {
-        return resultSet.getInt(column);
+    public Long handleColumn(ResultSet resultSet, int column) throws SQLException {
+        return resultSet.getLong(column);
     }
 
     @Override
     public String type() {
-        return Integer.TYPE.getName() ;
+        return Long.TYPE.toString();
     }
 }

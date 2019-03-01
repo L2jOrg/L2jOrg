@@ -17,14 +17,19 @@ public class StringHandler implements TypeHandler<String> {
     public String handleResult(QueryDescriptor queryDescriptor) throws SQLException {
         var resultSet = queryDescriptor.getStatement().getResultSet();
         if(resultSet.next()) {
-            return handle(resultSet, null);
+            return handleColumn(resultSet, 1);
         }
-        return Util.STRING_EMPTY;
+        return defaultValue();
     }
 
     @Override
-    public String handle(ResultSet resultSet, Class<?> type) throws SQLException {
-        return resultSet.getString(1);
+    public String handleType(ResultSet resultSet, Class<?> type) throws SQLException {
+        return handleColumn(resultSet, 1);
+    }
+
+    @Override
+    public String handleColumn(ResultSet resultSet, int column) throws SQLException {
+        return resultSet.getString(column);
     }
 
     @Override

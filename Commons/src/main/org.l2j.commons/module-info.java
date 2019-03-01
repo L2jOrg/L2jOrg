@@ -41,6 +41,7 @@ module org.l2j.commons {
     uses org.l2j.commons.database.handler.TypeHandler;
     provides org.l2j.commons.database.handler.TypeHandler
         with org.l2j.commons.database.handler.IntegerHandler,
+             org.l2j.commons.database.handler.LongHandler,
              org.l2j.commons.database.handler.VoidHandler,
              org.l2j.commons.database.handler.ListHandler,
              org.l2j.commons.database.handler.StringHandler,
