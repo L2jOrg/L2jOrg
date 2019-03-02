@@ -176,9 +176,9 @@ public class AuthController {
     }
 
     private void processAuth(AuthClient client, Account account) {
-        requestAccountInfo(client, account);
         updateClientInfo(client, account);
         authedClients.put(account.getLogin(), client);
+        requestAccountInfo(client, account);
         if(client.getRequestdServersInfo() == 0) {
             client.sendPacket(new LoginOk());
         }

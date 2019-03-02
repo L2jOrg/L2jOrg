@@ -25,439 +25,442 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+
+import static java.util.Objects.requireNonNullElseGet;
 
 /**
  * Represents a client connected on Game Server
  */
 public final class GameClient extends Client<io.github.joealisson.mmocore.Connection<GameClient>>
 {
-	private static final Logger _log = LoggerFactory.getLogger(GameClient.class);
-	private static final String NO_IP = "?.?.?.?";
+    private static final Logger _log = LoggerFactory.getLogger(GameClient.class);
+    private static final String NO_IP = "?.?.?.?";
 
-	private GameCrypt _crypt;
+    private GameCrypt _crypt;
 
-	public GameClientState _state;
-	private AccountInfo accountInfo;
+    public GameClientState _state;
+    private AccountInfo accountInfo;
 
-	private String _login;
-	private int _points = 0;
-	private Language _language = Language.ENGLISH;
-	private long _phoneNumber = 0L;
+    private String _login;
+    private int _points = 0;
+    private Language _language = Language.ENGLISH;
+    private long _phoneNumber = 0L;
 
-	private Player _activeChar;
-	private SessionKey _sessionKey;
-	private String _ip = NO_IP;
-	private int revision = 0;
+    private Player _activeChar;
+    private SessionKey _sessionKey;
+    private String _ip = NO_IP;
+    private int revision = 0;
 
-	private SecondaryPasswordAuth _secondaryAuth = null;
+    private SecondaryPasswordAuth _secondaryAuth = null;
 
-	private List<Integer> _charSlotMapping = new ArrayList<Integer>();
-	
-	private String _hwid = null;
-	
-	public GameClient(io.github.joealisson.mmocore.Connection<GameClient> con)
-	{
-		super(con);
+    private List<Integer> _charSlotMapping = new ArrayList<Integer>();
 
-		_state = GameClientState.CONNECTED;
-		_crypt = new GameCrypt();
-	}
+    private String _hwid = null;
 
-	public void setAccountInfo(AccountInfo accountInfo) {
-		this.accountInfo = accountInfo;
-	}
+    public GameClient(io.github.joealisson.mmocore.Connection<GameClient> con)
+    {
+        super(con);
 
-	@Override
-	public int encrypt(byte[] data, int offset, int size) {
+        _state = GameClientState.CONNECTED;
+        _crypt = new GameCrypt();
+    }
+
+    public void setAccountInfo(AccountInfo accountInfo) {
+        this.accountInfo = requireNonNullElseGet(accountInfo, AccountInfo::new);
+    }
+
+    @Override
+    public int encrypt(byte[] data, int offset, int size) {
         _crypt.encrypt(data, offset, size);
-		return size;
-	}
+        return size;
+    }
 
-	@Override
-	public boolean decrypt(byte[] data, int offset, int size) {
+    @Override
+    public boolean decrypt(byte[] data, int offset, int size) {
         return _crypt.decrypt(data, offset, size);
-	}
+    }
 
-	@Override
-	protected void onDisconnection()
-	{
-		final Player player;
+    @Override
+    protected void onDisconnection()
+    {
+        final Player player;
 
-		setState(GameClientState.DISCONNECTED);
-		player = getActiveChar();
-		setActiveChar(null);
+        setState(GameClientState.DISCONNECTED);
+        player = getActiveChar();
+        setActiveChar(null);
 
-		if(player != null)
-		{
-			player.setNetConnection(null);
-			player.scheduleDelete();
-		}
-
-		if(getSessionKey() != null)
-		{
-			if(_state == GameClientState.AUTHED)
-			{
-				AuthServerCommunication.getInstance().removeAuthedClient(getLogin());
-				AuthServerCommunication.getInstance().sendPacket(new PlayerLogout(getLogin()));
-			}
-			else
-			{
-				AuthServerCommunication.getInstance().removeWaitingClient(getLogin());
-			}
-		}
-	}
-
-	@Override
-	public void onConnected() {
-
-	}
-
-
-	// TODO move this
-	public void markRestoredChar(int charslot) throws Exception
-	{
-		int objid = getObjectIdForSlot(charslot);
-		if(objid < 0)
-			return;
-
-		if(_activeChar != null && _activeChar.getObjectId() == objid)
-			_activeChar.setDeleteTimer(0);
-
-		Connection con = null;
-		PreparedStatement statement = null;
-		try
-		{
-			con = L2DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement("UPDATE characters SET deletetime=0 WHERE obj_id=?");
-			statement.setInt(1, objid);
-			statement.execute();
-		}
-		catch(Exception e)
-		{
-			_log.error("", e);
-		}
-		finally
-		{
-			DbUtils.closeQuietly(con, statement);
-		}
-	}
-
-	// TODO Move this
-	public void markToDeleteChar(int charslot) throws Exception
-	{
-		int objid = getObjectIdForSlot(charslot);
-		if(objid < 0)
-			return;
-
-		if(_activeChar != null && _activeChar.getObjectId() == objid)
-			_activeChar.setDeleteTimer((int) (System.currentTimeMillis() / 1000));
-
-		Connection con = null;
-		PreparedStatement statement = null;
-		try
-		{
-			con = L2DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement("UPDATE characters SET deletetime=? WHERE obj_id=?");
-			statement.setLong(1, (int) (System.currentTimeMillis() / 1000L));
-			statement.setInt(2, objid);
-			statement.execute();
-		}
-		catch(Exception e)
-		{
-			_log.error("data error on update deletime char:", e);
-		}
-		finally
-		{
-			DbUtils.closeQuietly(con, statement);
-		}
-	}
-
-	// TODO Move this
-	public void deleteChar(int charslot) throws Exception
-	{
-		//have to make sure active character must be nulled
-		if(_activeChar != null)
-			return;
-
-		int objid = getObjectIdForSlot(charslot);
-		if(objid == -1)
-			return;
-
-		CharacterDAO.getInstance().deleteCharByObjId(objid);
-	}
-
-	// TODO Move this
-	public Player loadCharFromDisk(int charslot)
-	{
-		int objectId = getObjectIdForSlot(charslot);
-		if(objectId == -1)
-			return null;
-
-		Player character = null;
-		Player oldPlayer = GameObjectsStorage.getPlayer(objectId);
-
-		if(oldPlayer != null)
-			if(oldPlayer.isLogoutStarted())
-			{
-				// оффтрейдового чара проще выбить чем восстанавливать
-				oldPlayer.kick();
-				return null;
-			}
-			else
-			{
-				oldPlayer.sendPacket(SystemMsg.ANOTHER_PERSON_HAS_LOGGED_IN_WITH_THE_SAME_ACCOUNT);
-
-				GameClient oldClient = oldPlayer.getNetConnection();
-				if(oldClient != null)
-				{
-					oldClient.setActiveChar(null);
-					oldClient.closeNow();
-				}
-				oldPlayer.setNetConnection(this);
-				character = oldPlayer;
-			}
-
-		if(character == null)
-			character = Player.restore(objectId);
-
-		if(character != null)
-			setActiveChar(character);
-		else
-			_log.warn("could not restore obj_id: " + objectId + " in slot:" + charslot);
-
-		return character;
-	}
-
-	public int getObjectIdForSlot(int charslot)
-	{
-		if(charslot < 0 || charslot >= _charSlotMapping.size())
-		{
-			_log.warn(getLogin() + " tried to modify Character in slot " + charslot + " but no characters exits at that slot.");
-			return -1;
-		}
-		return _charSlotMapping.get(charslot);
-	}
-
-	public Player getActiveChar()
-	{
-		return _activeChar;
-	}
-
-	/**
-	 * @return Returns the sessionId.
-	 */
-	public SessionKey getSessionKey()
-	{
-		return _sessionKey;
-	}
-
-	public String getLogin()
-	{
-		return _login;
-	}
-
-	public void setLoginName(String loginName)
-	{
-		_login = loginName;
-
-		if(Config.EX_SECOND_AUTH_ENABLED)
-			_secondaryAuth = new SecondaryPasswordAuth(this);
-	}
-
-	public void setActiveChar(Player player)
-	{
-		_activeChar = player;
-		if(player != null)
-			player.setNetConnection(this);
-	}
-
-	public void setSessionId(SessionKey sessionKey)
-	{
-		_sessionKey = sessionKey;
-	}
-
-	public void setCharSelection(CharSelectInfoPackage[] chars)
-	{
-		_charSlotMapping.clear();
-
-		for(CharSelectInfoPackage element : chars)
-		{
-			int objectId = element.getObjectId();
-			_charSlotMapping.add(objectId);
-		}
-	}
-
-	public void setCharSelection(int c)
-	{
-		_charSlotMapping.clear();
-		_charSlotMapping.add(c);
-	}
-
-	public int getRevision()
-	{
-		return revision;
-	}
-
-	public void setRevision(int revision)
-	{
-		this.revision = revision;
-	}
-
-	public void sendPacket(L2GameServerPacket gsp) {
-		if(isConnected()) {
-		    writePacket(gsp);
+        if(player != null)
+        {
+            player.setNetConnection(null);
+            player.scheduleDelete();
         }
-	}
 
-	public void sendPacket(L2GameServerPacket... gsp) {
+        if(getSessionKey() != null)
+        {
+            if(_state == GameClientState.AUTHED)
+            {
+                AuthServerCommunication.getInstance().removeAuthedClient(getLogin());
+                AuthServerCommunication.getInstance().sendPacket(new PlayerLogout(getLogin()));
+            }
+            else
+            {
+                AuthServerCommunication.getInstance().removeWaitingClient(getLogin());
+            }
+        }
+    }
+
+    @Override
+    public void onConnected() {
+
+    }
+
+
+    // TODO move this
+    public void markRestoredChar(int charslot) throws Exception
+    {
+        int objid = getObjectIdForSlot(charslot);
+        if(objid < 0)
+            return;
+
+        if(_activeChar != null && _activeChar.getObjectId() == objid)
+            _activeChar.setDeleteTimer(0);
+
+        Connection con = null;
+        PreparedStatement statement = null;
+        try
+        {
+            con = L2DatabaseFactory.getInstance().getConnection();
+            statement = con.prepareStatement("UPDATE characters SET deletetime=0 WHERE obj_id=?");
+            statement.setInt(1, objid);
+            statement.execute();
+        }
+        catch(Exception e)
+        {
+            _log.error("", e);
+        }
+        finally
+        {
+            DbUtils.closeQuietly(con, statement);
+        }
+    }
+
+    // TODO Move this
+    public void markToDeleteChar(int charslot) throws Exception
+    {
+        int objid = getObjectIdForSlot(charslot);
+        if(objid < 0)
+            return;
+
+        if(_activeChar != null && _activeChar.getObjectId() == objid)
+            _activeChar.setDeleteTimer((int) (System.currentTimeMillis() / 1000));
+
+        Connection con = null;
+        PreparedStatement statement = null;
+        try
+        {
+            con = L2DatabaseFactory.getInstance().getConnection();
+            statement = con.prepareStatement("UPDATE characters SET deletetime=? WHERE obj_id=?");
+            statement.setLong(1, (int) (System.currentTimeMillis() / 1000L));
+            statement.setInt(2, objid);
+            statement.execute();
+        }
+        catch(Exception e)
+        {
+            _log.error("data error on update deletime char:", e);
+        }
+        finally
+        {
+            DbUtils.closeQuietly(con, statement);
+        }
+    }
+
+    // TODO Move this
+    public void deleteChar(int charslot) throws Exception
+    {
+        //have to make sure active character must be nulled
+        if(_activeChar != null)
+            return;
+
+        int objid = getObjectIdForSlot(charslot);
+        if(objid == -1)
+            return;
+
+        CharacterDAO.getInstance().deleteCharByObjId(objid);
+    }
+
+    // TODO Move this
+    public Player loadCharFromDisk(int charslot)
+    {
+        int objectId = getObjectIdForSlot(charslot);
+        if(objectId == -1)
+            return null;
+
+        Player character = null;
+        Player oldPlayer = GameObjectsStorage.getPlayer(objectId);
+
+        if(oldPlayer != null)
+            if(oldPlayer.isLogoutStarted())
+            {
+                // оффтрейдового чара проще выбить чем восстанавливать
+                oldPlayer.kick();
+                return null;
+            }
+            else
+            {
+                oldPlayer.sendPacket(SystemMsg.ANOTHER_PERSON_HAS_LOGGED_IN_WITH_THE_SAME_ACCOUNT);
+
+                GameClient oldClient = oldPlayer.getNetConnection();
+                if(oldClient != null)
+                {
+                    oldClient.setActiveChar(null);
+                    oldClient.closeNow();
+                }
+                oldPlayer.setNetConnection(this);
+                character = oldPlayer;
+            }
+
+        if(character == null)
+            character = Player.restore(objectId);
+
+        if(character != null)
+            setActiveChar(character);
+        else
+            _log.warn("could not restore obj_id: " + objectId + " in slot:" + charslot);
+
+        return character;
+    }
+
+    public int getObjectIdForSlot(int charslot)
+    {
+        if(charslot < 0 || charslot >= _charSlotMapping.size())
+        {
+            _log.warn(getLogin() + " tried to modify Character in slot " + charslot + " but no characters exits at that slot.");
+            return -1;
+        }
+        return _charSlotMapping.get(charslot);
+    }
+
+    public Player getActiveChar()
+    {
+        return _activeChar;
+    }
+
+    /**
+     * @return Returns the sessionId.
+     */
+    public SessionKey getSessionKey()
+    {
+        return _sessionKey;
+    }
+
+    public String getLogin()
+    {
+        return _login;
+    }
+
+    public void setLoginName(String loginName)
+    {
+        _login = loginName;
+
+        if(Config.EX_SECOND_AUTH_ENABLED)
+            _secondaryAuth = new SecondaryPasswordAuth(this);
+    }
+
+    public void setActiveChar(Player player)
+    {
+        _activeChar = player;
+        if(player != null)
+            player.setNetConnection(this);
+    }
+
+    public void setSessionId(SessionKey sessionKey)
+    {
+        _sessionKey = sessionKey;
+    }
+
+    public void setCharSelection(CharSelectInfoPackage[] chars)
+    {
+        _charSlotMapping.clear();
+
+        for(CharSelectInfoPackage element : chars)
+        {
+            int objectId = element.getObjectId();
+            _charSlotMapping.add(objectId);
+        }
+    }
+
+    public void setCharSelection(int c)
+    {
+        _charSlotMapping.clear();
+        _charSlotMapping.add(c);
+    }
+
+    public int getRevision()
+    {
+        return revision;
+    }
+
+    public void setRevision(int revision)
+    {
+        this.revision = revision;
+    }
+
+    public void sendPacket(L2GameServerPacket gsp) {
+        if(isConnected()) {
+            writePacket(gsp);
+        }
+    }
+
+    public void sendPacket(L2GameServerPacket... gsp) {
         if(!isConnected()) {
             return;
         }
         for (L2GameServerPacket packet : gsp) {
             writePacket(packet);
         }
-	}
+    }
 
-	public String getIpAddr()
-	{
-		return getHostAddress();
-	}
+    public String getIpAddr()
+    {
+        return getHostAddress();
+    }
 
-	public byte[] enableCrypt()
-	{
-		byte[] key = BlowFishKeygen.getRandomKey();
-		_crypt.setKey(key);
-		return key;
-	}
+    public byte[] enableCrypt()
+    {
+        byte[] key = BlowFishKeygen.getRandomKey();
+        _crypt.setKey(key);
+        return key;
+    }
 
-	public boolean hasPremiumAccount() {
-		return accountInfo.getPremium() != 0 && accountInfo.getPremiumExpire() > System.currentTimeMillis() / 1000L;
-	}
+    public boolean hasPremiumAccount() {
+        return accountInfo.getPremium() != 0 && accountInfo.getPremiumExpire() > System.currentTimeMillis() / 1000L;
+    }
 
-	public void setPremiumAccountType(int type) {
-		accountInfo.setPremium(type);
-	}
+    public void setPremiumAccountType(int type) {
+        accountInfo.setPremium(type);
+    }
 
-	public int getPremiumAccountType() {
-		return accountInfo.getPremium();
-	}
+    public int getPremiumAccountType() {
+        return accountInfo.getPremium();
+    }
 
-	public void setPremiumAccountExpire(long expire) {
-		accountInfo.setPremiumExpire(expire);
-	}
+    public void setPremiumAccountExpire(long expire) {
+        accountInfo.setPremiumExpire(expire);
+    }
 
-	public long getPremiumAccountExpire() {
-		return accountInfo.getPremiumExpire();
-	}
+    public long getPremiumAccountExpire() {
+        return accountInfo.getPremiumExpire();
+    }
 
-	public int getPoints()
-	{
-		return _points;
-	}
+    public int getPoints()
+    {
+        return _points;
+    }
 
-	public void setPoints(int points)
-	{
-		_points = points;
-	}
+    public void setPoints(int points)
+    {
+        _points = points;
+    }
 
-	public Language getLanguage()
-	{
-		return _language;
-	}
+    public Language getLanguage()
+    {
+        return _language;
+    }
 
-	public void setLanguage(Language language)
-	{
-		_language = language;
-	}
+    public void setLanguage(Language language)
+    {
+        _language = language;
+    }
 
-	public long getPhoneNumber()
-	{
-		return _phoneNumber;
-	}
+    public long getPhoneNumber()
+    {
+        return _phoneNumber;
+    }
 
-	public void setPhoneNumber(long value)
-	{
-		_phoneNumber = value;
-	}
+    public void setPhoneNumber(long value)
+    {
+        _phoneNumber = value;
+    }
 
-	public GameClientState getState()
-	{
-		return _state;
-	}
+    public GameClientState getState()
+    {
+        return _state;
+    }
 
-	public void setState(GameClientState state)
-	{
-		_state = state;
-	}
+    public void setState(GameClientState state)
+    {
+        _state = state;
+    }
 
-	public SecondaryPasswordAuth getSecondaryAuth()
-	{
-		return _secondaryAuth;
-	}
+    public SecondaryPasswordAuth getSecondaryAuth()
+    {
+        return _secondaryAuth;
+    }
 
-	private int _failedPackets = 0;
-	private int _unknownPackets = 0;
+    private int _failedPackets = 0;
+    private int _unknownPackets = 0;
 
-	public void onPacketReadFail()
-	{
-		if(_failedPackets++ >= 10)
-		{
-			_log.warn("Too many client packet fails, connection closed : " + this);
-			closeNow();
-		}
-	}
+    public void onPacketReadFail()
+    {
+        if(_failedPackets++ >= 10)
+        {
+            _log.warn("Too many client packet fails, connection closed : " + this);
+            closeNow();
+        }
+    }
 
-	public void onUnknownPacket()
-	{
-		if(_unknownPackets++ >= 10)
-		{
-			_log.warn("Too many client unknown packets, connection closed : " + this);
-			closeNow();
-		}
-	}
+    public void onUnknownPacket()
+    {
+        if(_unknownPackets++ >= 10)
+        {
+            _log.warn("Too many client unknown packets, connection closed : " + this);
+            closeNow();
+        }
+    }
 
-	@Override
-	public boolean isConnected() {
-		return super.isConnected();
-	}
+    @Override
+    public boolean isConnected() {
+        return super.isConnected();
+    }
 
-	@Override
-	public String toString()
-	{
-		return _state + " IP: " + getIpAddr() + (_login == null ? "" : " Account: " + _login) + (_activeChar == null ? "" : " Player : " + _activeChar);
-	}
+    @Override
+    public String toString()
+    {
+        return _state + " IP: " + getIpAddr() + (_login == null ? "" : " Account: " + _login) + (_activeChar == null ? "" : " Player : " + _activeChar);
+    }
 
-	public boolean secondaryAuthed()
-	{
-		if(!Config.EX_SECOND_AUTH_ENABLED)
-			return true;
+    public boolean secondaryAuthed()
+    {
+        if(!Config.EX_SECOND_AUTH_ENABLED)
+            return true;
 
-		return getSecondaryAuth().isAuthed();
-	}
+        return getSecondaryAuth().isAuthed();
+    }
 
-	public String getHWID()
-	{
-		return _hwid;
-	}
+    public String getHWID()
+    {
+        return _hwid;
+    }
 
-	public void setHWID(String hwid)
-	{
-		_hwid = hwid;
-	}
+    public void setHWID(String hwid)
+    {
+        _hwid = hwid;
+    }
 
-	public void checkHwid(String allowedHwid)
-	{
-		HWIDUtils.checkHWID(this, allowedHwid);
-	}
+    public void checkHwid(String allowedHwid)
+    {
+        HWIDUtils.checkHWID(this, allowedHwid);
+    }
 
     public void closeNow() {
         close(ServerCloseSocketPacket.STATIC);
     }
 
-	public enum GameClientState {
-		CONNECTED,
-		AUTHED,
-		IN_GAME,
-		DISCONNECTED
-	}
+    public enum GameClientState {
+        CONNECTED,
+        AUTHED,
+        IN_GAME,
+        DISCONNECTED
+    }
 }

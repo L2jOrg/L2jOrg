@@ -31,12 +31,10 @@ public class PlayerAuthRequest extends GameserverReadablePacket {
 
 		PlayerAuthResponse authResponse;
 		if(Objects.equals(sessionKey, authedkey)) {
-			AuthController.getInstance().removeAuthedClient(account);
 			authResponse = new PlayerAuthResponse(account, true);
 		} else {
 			authResponse = new PlayerAuthResponse(account, false);
 		}
-
 		client.sendPacket(authResponse);
 	}
 }
