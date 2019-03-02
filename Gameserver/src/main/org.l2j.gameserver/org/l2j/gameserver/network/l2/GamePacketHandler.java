@@ -1,6 +1,7 @@
 package org.l2j.gameserver.network.l2;
 
 import io.github.joealisson.mmocore.*;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ThreadPoolManager;
 import org.l2j.gameserver.network.l2.c2s.*;
@@ -22,15 +23,24 @@ public final class GamePacketHandler implements PacketHandler<GameClient>, Clien
         switch (client.getState()) {
             case CONNECTED:
                 switch (id) {
+                    case 0x00:
+                        msg = new RequestStatus();
+                        break;
                     case 0x0E:
                         msg = new ProtocolVersion();
                         break;
                     case 0x2B:
                         msg = new AuthLogin();
                         break;
+                    case 0xCB:
+                        msg = new ReplyGameGuardQuery();
+                        break;
+                    case 0x1F:
+                        // TODO Vora - пусто, ну что-то закинуть
+                        break;
                     default:
                         client.onUnknownPacket();
-                        _log.warn("Unknown client packet! State: CONNECTED, packet ID: " + Integer.toHexString(id).toUpperCase());
+                        _log.warn("Unknown client packet! State: CONNECTED, packet ID: {}, Data: {}", Integer.toHexString(id).toUpperCase(), Util.printData(buf.array(), buf.limit()));
                         break;
                 }
                 break;
@@ -96,18 +106,18 @@ public final class GamePacketHandler implements PacketHandler<GameClient>, Clien
                             case 0x11D:
                                 msg = new RequestTodoList();
                                 break;
-                            case 0x138:
+                            case 0x15F:
                                 msg = new RequestUserBanInfo();
                                 break;
                             default:
                                 client.onUnknownPacket();
-                                _log.warn("Unknown client packet! State: AUTHED, packet ID: " + Integer.toHexString(id).toUpperCase() + ":" + Integer.toHexString(id3).toUpperCase());
+                                _log.warn("Unknown client packet! State: AUTHED, packet ID: {}:{} Data: {}", Integer.toHexString(id).toUpperCase(), Integer.toHexString(id3).toUpperCase(), Util.printData(buf.array(), buf.limit()));
                                 break;
                         }
                         break;
                     default:
                         client.onUnknownPacket();
-                        _log.warn("Unknown client packet! State: AUTHED, packet ID: " + Integer.toHexString(id).toUpperCase());
+                        _log.warn("Unknown client packet! State: AUTHED, packet ID: {} Data: {}", Integer.toHexString(id).toUpperCase(), Util.printData(buf.array(), buf.limit()));
                         break;
                 }
                 break;
@@ -155,7 +165,7 @@ public final class GamePacketHandler implements PacketHandler<GameClient>, Clien
                     case 0x0d:
                         //	wtf???
                         break;
-                    case 0x0f:
+                    case 0x0F:
                         msg = new MoveBackwardToLocation();
                         break;
                     case 0x10:
@@ -186,13 +196,13 @@ public final class GamePacketHandler implements PacketHandler<GameClient>, Clien
                     case 0x19:
                         msg = new UseItem();
                         break;
-                    case 0x1a:
+                    case 0x1A:
                         msg = new TradeRequest();
                         break;
-                    case 0x1b:
+                    case 0x1B:
                         msg = new AddTradeItem();
                         break;
-                    case 0x1c:
+                    case 0x1C:
                         msg = new TradeDone();
                         break;
                     case 0x1d:
@@ -201,7 +211,7 @@ public final class GamePacketHandler implements PacketHandler<GameClient>, Clien
                     case 0x1e:
                         //	msg = new ?();
                         break;
-                    case 0x1f:
+                    case 0x1F:
                         msg = new Action();
                         break;
                     case 0x20:
@@ -217,7 +227,7 @@ public final class GamePacketHandler implements PacketHandler<GameClient>, Clien
                         msg = new RequestBypassToServer();
                         break;
                     case 0x24:
-                        msg = new RequestBBSwrite(); //RequestBBSWrite();
+                        msg = new RequestBBSwrite();
                         break;
                     case 0x25:
                         msg = new RequestCreatePledge();
@@ -237,16 +247,16 @@ public final class GamePacketHandler implements PacketHandler<GameClient>, Clien
                     case 0x2a:
                         //	msg = new ?();
                         break;
-                    case 0x2c:
+                    case 0x2C:
                         msg = new RequestGetItemFromPet();
                         break;
                     case 0x2d:
                         //	RequestDismissParty
                         break;
-                    case 0x2e:
+                    case 0x2E:
                         msg = new RequestAllyInfo();
                         break;
-                    case 0x2f:
+                    case 0x2F:
                         msg = new RequestCrystallizeItem();
                         break;
                     case 0x30:
@@ -256,7 +266,7 @@ public final class GamePacketHandler implements PacketHandler<GameClient>, Clien
                         msg = new SetPrivateStoreSellList();
                         break;
                     case 0x32:
-                        // RequestPrivateStoreManageCancel, устарел
+                        msg = new AttackRequest();
                         break;
                     case 0x33:
                         msg = new RequestTeleport();
@@ -279,8 +289,8 @@ public final class GamePacketHandler implements PacketHandler<GameClient>, Clien
                     case 0x39:
                         msg = new RequestMagicSkillUse();
                         break;
-                    case 0x3a:
-                        msg = new Appearing(); //Appering();
+                    case 0x3A:
+                        msg = new Appearing();
                         break;
                     case 0x3b:
                         if (Config.ALLOW_WAREHOUSE)
@@ -346,7 +356,7 @@ public final class GamePacketHandler implements PacketHandler<GameClient>, Clien
                                 break;
                             default:
                                 client.onUnknownPacket();
-                                _log.warn("Unknown client packet! State: IN_GAME, packet ID: " + Integer.toHexString(id).toUpperCase() + ":" + Integer.toHexString(id2).toUpperCase());
+                                _log.warn("Unknown client packet! State: IN_GAME, packet ID: {}:{} Data: {}", Integer.toHexString(id).toUpperCase(), Integer.toHexString(id2).toUpperCase(), Util.printData(buf.array(), buf.limit()));
                                 break;
                         }
                         break;
@@ -423,7 +433,7 @@ public final class GamePacketHandler implements PacketHandler<GameClient>, Clien
                         msg = new RequestQuestList();
                         break;
                     case 0x63:
-                        msg = new RequestQuestAbort(); //RequestDestroyQuest();
+                        msg = new RequestQuestAbort();
                         break;
                     case 0x64:
                         //	msg = new ?();
@@ -528,7 +538,7 @@ public final class GamePacketHandler implements PacketHandler<GameClient>, Clien
                         msg = new RequestTutorialPassCmdToServer();
                         break;
                     case 0x87:
-                        msg = new RequestTutorialQuestionMark(); //RequestTutorialQuestionMarkPressed();
+                        msg = new RequestTutorialQuestionMark();
                         break;
                     case 0x88:
                         msg = new RequestTutorialClientEvent();
@@ -549,15 +559,12 @@ public final class GamePacketHandler implements PacketHandler<GameClient>, Clien
                         msg = new RequestAnswerJoinAlly();
                         break;
                     case 0x8e:
-                        // Команда /allyleave - выйти из альянса
                         msg = new RequestWithdrawAlly();
                         break;
                     case 0x8f:
-                        // Команда /allydismiss - выгнать клан из альянса
                         msg = new RequestOustAlly();
                         break;
                     case 0x90:
-                        // Команда /allydissolve - распустить альянс
                         msg = new RequestDismissAlly();
                         break;
                     case 0x91:
@@ -817,7 +824,7 @@ public final class GamePacketHandler implements PacketHandler<GameClient>, Clien
                                         break;
                                     default:
                                         client.onUnknownPacket();
-                                        _log.warn("Unknown client packet! State: IN_GAME, packet ID: " + Integer.toHexString(id).toUpperCase() + ":" + Integer.toHexString(id3).toUpperCase() + ":" + Integer.toHexString(type).toUpperCase());
+                                        _log.warn("Unknown client packet! State: IN_GAME, packet ID: {}:{}:{} Data: {}", Integer.toHexString(id).toUpperCase(), Integer.toHexString(id3).toUpperCase(), Integer.toHexString(type).toUpperCase(), Util.printData(buf.array(), buf.limit()));
                                         break;
                                 }
                                 break;
@@ -1025,7 +1032,7 @@ public final class GamePacketHandler implements PacketHandler<GameClient>, Clien
                                         break;
                                     default:
                                         client.onUnknownPacket();
-                                        _log.warn("Unknown client packet! State: IN_GAME, packet ID: " + Integer.toHexString(id).toUpperCase() + ":" + Integer.toHexString(id3).toUpperCase() + ":" + Integer.toHexString(id4).toUpperCase());
+                                        _log.warn("Unknown client packet! State: IN_GAME, packet ID: {}:{}:{} Data: {}", Integer.toHexString(id).toUpperCase(), Integer.toHexString(id3).toUpperCase(), Integer.toHexString(id4).toUpperCase(), Util.printData(buf.array(), buf.limit()));
                                         break;
                                 }
                                 break;
@@ -1235,7 +1242,7 @@ public final class GamePacketHandler implements PacketHandler<GameClient>, Clien
                                         break;
                                     default:
                                         client.onUnknownPacket();
-                                        _log.warn("Unknown client packet! State: IN_GAME, packet ID: " + Integer.toHexString(id).toUpperCase() + ":" + Integer.toHexString(id3).toUpperCase() + ":" + Integer.toHexString(id5).toUpperCase());
+                                        _log.warn("Unknown client packet! State: IN_GAME, packet ID: {}:{}:{} Data: {}", Integer.toHexString(id).toUpperCase(), Integer.toHexString(id3).toUpperCase(), Integer.toHexString(id5).toUpperCase(), Util.printData(buf.array(), buf.limit()));
                                         break;
                                     //case 0x0A:
                                     //msg = new RequestExProceedCancelAgitBid chdd 0x0A
@@ -1310,7 +1317,7 @@ public final class GamePacketHandler implements PacketHandler<GameClient>, Clien
                                         break;
                                     default:
                                         client.onUnknownPacket();
-                                        _log.warn("Unknown client packet! State: IN_GAME, packet ID: " + Integer.toHexString(id).toUpperCase() + ":" + Integer.toHexString(id3).toUpperCase() + ":" + Integer.toHexString(id6).toUpperCase());
+                                        _log.warn("Unknown client packet! State: IN_GAME, packet ID: {}:{}:{} Data: {} ", Integer.toHexString(id).toUpperCase(), Integer.toHexString(id3).toUpperCase(), Integer.toHexString(id6).toUpperCase());
                                         break;
                                 }
                                 break;
@@ -1394,7 +1401,7 @@ public final class GamePacketHandler implements PacketHandler<GameClient>, Clien
                                         break;
                                     default:
                                         client.onUnknownPacket();
-                                        _log.warn("Unknown client packet! State: IN_GAME, packet ID: " + Integer.toHexString(id).toUpperCase() + ":" + Integer.toHexString(id7).toUpperCase());
+                                        _log.warn("Unknown client packet! State: IN_GAME, packet ID: {}:{} Data: {} ", Integer.toHexString(id).toUpperCase(), Integer.toHexString(id7).toUpperCase(), Util.printData(buf.array(), buf.limit()));
                                 }
                                 break;
                             case 0xAC:
@@ -1817,7 +1824,7 @@ public final class GamePacketHandler implements PacketHandler<GameClient>, Clien
                                 break;
                             default:
                                 client.onUnknownPacket();
-                                _log.warn("Unknown client packet! State: IN_GAME, packet ID: " + Integer.toHexString(id).toUpperCase() + ":" + Integer.toHexString(id3).toUpperCase());
+                                _log.warn("Unknown client packet! State: IN_GAME, packet ID:{}:{} Data: {} ", Integer.toHexString(id).toUpperCase(), Integer.toHexString(id3).toUpperCase(), Util.printData(buf.array(), buf.limit()));
                                 break;
                         }
                         break;

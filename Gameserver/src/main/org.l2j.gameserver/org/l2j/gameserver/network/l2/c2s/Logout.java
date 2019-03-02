@@ -1,10 +1,14 @@
 package org.l2j.gameserver.network.l2.c2s;
 
 import org.l2j.gameserver.model.Player;
+import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
+import org.l2j.gameserver.network.authcomm.gs2as.PlayerLogout;
 import org.l2j.gameserver.network.l2.components.CustomMessage;
 import org.l2j.gameserver.network.l2.components.SystemMsg;
 
 import java.nio.ByteBuffer;
+
+import static java.util.Objects.isNull;
 
 public class Logout extends L2GameClientPacket
 {
@@ -16,8 +20,10 @@ public class Logout extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = client.getActiveChar();
-		if(activeChar == null)
+		if(isNull(activeChar)) {
+			AuthServerCommunication.getInstance().sendPacket(new PlayerLogout(client.getLogin()));
 			return;
+		}
 
 		// Dont allow leaving if player is fighting
 		if(activeChar.isInCombat())
