@@ -240,14 +240,14 @@ public class CIPacket extends L2GameServerPacket
 		buffer.putInt(_inv[Inventory.PAPERDOLL_LHAND][1]);
 		buffer.putInt(_inv[Inventory.PAPERDOLL_LHAND][2]);
 
-		buffer.putInt(_inv[Inventory.PAPERDOLL_LRHAND][1]);
-		buffer.putInt(_inv[Inventory.PAPERDOLL_LRHAND][2]);
+		buffer.putInt(_inv[Inventory.PAPERDOLL_RHAND][1]);
+		buffer.putInt(_inv[Inventory.PAPERDOLL_RHAND][2]);
 
 		buffer.put((byte)_armorSetEnchant);	// Armor Enchant Effect
 
 		buffer.putInt(_inv[Inventory.PAPERDOLL_RHAND][3]);
 		buffer.putInt(_inv[Inventory.PAPERDOLL_LHAND][3]);
-		buffer.putInt(_inv[Inventory.PAPERDOLL_LRHAND][3]);
+		buffer.putInt(_inv[Inventory.PAPERDOLL_RHAND][3]);
 		buffer.putInt(_inv[Inventory.PAPERDOLL_GLOVES][3]);
 		buffer.putInt(_inv[Inventory.PAPERDOLL_CHEST][3]);
 		buffer.putInt(_inv[Inventory.PAPERDOLL_LEGS][3]);
@@ -352,7 +352,7 @@ public class CIPacket extends L2GameServerPacket
 		Inventory.PAPERDOLL_LEGS,
 		Inventory.PAPERDOLL_FEET,
 		Inventory.PAPERDOLL_BACK,
-		Inventory.PAPERDOLL_LRHAND,
+		Inventory.PAPERDOLL_RHAND,
 		Inventory.PAPERDOLL_HAIR,
 		Inventory.PAPERDOLL_DHAIR
 	};

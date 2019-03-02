@@ -414,7 +414,8 @@ public class RequestActionUse extends L2GameClientPacket
 						activeChar.sendActionFailed();
 						return;
 					}
-					activeChar.sendPacket(new PrivateStoreManageList(activeChar, _actionId == 61));
+					activeChar.sendPacket(new PrivateStoreManageList(1, activeChar, _actionId == 61));
+					activeChar.sendPacket(new PrivateStoreManageList(2, activeChar, _actionId == 61));
 					break;
 				}
 				case 28: // Запрос на создание приватного магазина покупки
@@ -436,7 +437,8 @@ public class RequestActionUse extends L2GameClientPacket
 						activeChar.sendActionFailed();
 						return;
 					}
-					activeChar.sendPacket(new PrivateStoreBuyManageList(activeChar));
+					activeChar.sendPacket(new PrivateStoreBuyManageList(1, activeChar));
+					activeChar.sendPacket(new PrivateStoreBuyManageList(2, activeChar));
 					break;
 				}
 				case 37: // Создание магазина Dwarven Craft

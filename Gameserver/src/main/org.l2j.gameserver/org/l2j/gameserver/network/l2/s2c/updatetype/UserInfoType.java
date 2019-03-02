@@ -25,11 +25,12 @@ public enum UserInfoType implements IUpdateTypeComponent
 	
 	SOCIAL(0x10, 22),
 	VITA_FAME(0x11, 15),
-	SLOTS(0x12, 9),
+	SLOTS(0x12, 12),
 	MOVEMENTS(0x13, 4),
 	COLOR(0x14, 10),
 	INVENTORY_LIMIT(0x15, 9),
-	UNK_3(0x16, 9);
+	TRUE_HERO(0x16, 9),
+	ATT_SPIRITS(0x17, 26);
 	
 	/** Int mask. */
 	private final int _mask;

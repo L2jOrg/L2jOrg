@@ -14,6 +14,7 @@ import org.l2j.gameserver.network.l2.GameClient;
 
 public class PrivateStoreBuyManageList extends L2GameServerPacket
 {
+	private final int sendType;
 	private int _buyerId;
 	private long _adena;
 	private List<TradeItem> _buyList0;
@@ -23,8 +24,8 @@ public class PrivateStoreBuyManageList extends L2GameServerPacket
 	 * Окно управления личным магазином покупки
 	 * @param buyer
 	 */
-	public PrivateStoreBuyManageList(Player buyer)
-	{
+	public PrivateStoreBuyManageList(int sendType, Player buyer) {
+		this.sendType = sendType;
 		_buyerId = buyer.getObjectId();
 		_adena = buyer.getAdena();
 		_buyList0 = buyer.getBuyList();
@@ -42,28 +43,35 @@ public class PrivateStoreBuyManageList extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl(GameClient client, ByteBuffer buffer)
-	{
-		//section 1
-		buffer.putInt(_buyerId);
-		buffer.putLong(_adena);
+	protected final void writeImpl(GameClient client, ByteBuffer buffer) {
 
-		//section2
-		buffer.putInt(_buyList.size());//for potential sells
-		for(TradeItem bi : _buyList)
-		{
-			writeItemInfo(buffer, bi);
-			buffer.putLong(bi.getStorePrice());
-		}
+		buffer.put((byte) sendType);
+		if(sendType == 2) {
+			buffer.putInt(_buyList.size());
+			buffer.putInt(_buyList.size());
 
-		//section 3
-		buffer.putInt(_buyList0.size());//count for any items already added for sell
-		for(TradeItem bi : _buyList0)
-		{
-			writeItemInfo(buffer, bi);
-			buffer.putLong(bi.getOwnersPrice());
-			buffer.putLong(bi.getStorePrice());
-			buffer.putLong(bi.getCount());
+			for(TradeItem bi : _buyList)
+			{
+				writeItemInfo(buffer, bi);
+				buffer.putLong(bi.getStorePrice());
+			}
+		} else {
+			buffer.putInt(_buyerId);
+			buffer.putLong(_adena);
+			buffer.putInt(0x00);
+			for(TradeItem bi : _buyList)
+			{
+				writeItemInfo(buffer, bi);
+				buffer.putLong(bi.getStorePrice());
+			}
+			buffer.putInt(0x00);
+			for(TradeItem bi : _buyList0)
+			{
+				writeItemInfo(buffer, bi);
+				buffer.putLong(bi.getOwnersPrice());
+				buffer.putLong(bi.getStorePrice());
+				buffer.putLong(bi.getCount());
+			}
 		}
 	}
 }

@@ -42,7 +42,7 @@ public class AcquireSkillListPacket extends L2GameServerPacket
 			buffer.putShort((short) sk.getLevel());
 			buffer.putLong(sk.getCost());
 			buffer.put((byte)sk.getMinLevel());
-			buffer.put((byte)0x00);
+			buffer.putShort((short) 0x00);
 
 			List<ItemData> requiredItems = sk.getRequiredItemsForLearn(AcquireType.NORMAL);
 			buffer.put((byte)requiredItems.size());

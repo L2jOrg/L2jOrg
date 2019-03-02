@@ -12,6 +12,7 @@ import org.l2j.gameserver.network.l2.GameClient;
 
 public class PrivateStoreManageList extends L2GameServerPacket
 {
+	private final int sendType;
 	private int _sellerId;
 	private long _adena;
 	private boolean _package;
@@ -22,8 +23,8 @@ public class PrivateStoreManageList extends L2GameServerPacket
 	 * Окно управления личным магазином продажи
 	 * @param seller
 	 */
-	public PrivateStoreManageList(Player seller, boolean pkg)
-	{
+	public PrivateStoreManageList(int sendType, Player seller, boolean pkg) {
+		this.sendType = sendType;
 		_sellerId = seller.getObjectId();
 		_adena = seller.getAdena();
 		_package = pkg;
@@ -75,28 +76,35 @@ public class PrivateStoreManageList extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl(GameClient client, ByteBuffer buffer)
-	{
-		//section 1
-		buffer.putInt(_sellerId);
-		buffer.putInt(_package ? 1 : 0);
-		buffer.putLong(_adena);
+	protected final void writeImpl(GameClient client, ByteBuffer buffer) {
 
-		//Список имеющихся вещей
-		buffer.putInt(_sellList.size());
-		for(TradeItem si : _sellList)
-		{
-			writeItemInfo(buffer, si);
-			buffer.putLong(si.getStorePrice());
-		}
+		buffer.put((byte) sendType);
+		if(sendType == 2) {
+			buffer.putInt(_sellList.size());
+			buffer.putInt(_sellList.size());
 
-		//Список вещей уже поставленых на продажу
-		buffer.putInt(_sellList0.size());
-		for(TradeItem si : _sellList0)
-		{
-			writeItemInfo(buffer, si);
-			buffer.putLong(si.getOwnersPrice());
-			buffer.putLong(si.getStorePrice());
+			for(TradeItem si : _sellList)
+			{
+				writeItemInfo(buffer, si);
+				buffer.putLong(si.getStorePrice());
+			}
+		} else {
+			buffer.putInt(_sellerId);
+			buffer.putInt(_package ? 1 : 0);
+			buffer.putLong(_adena);
+			buffer.putInt(0x00);
+
+			for(TradeItem si : _sellList) {
+				writeItemInfo(buffer, si);
+				buffer.putLong(si.getStorePrice());
+			}
+			buffer.putInt(0x00);
+			for(TradeItem si : _sellList0)
+			{
+				writeItemInfo(buffer, si);
+				buffer.putLong(si.getOwnersPrice());
+				buffer.putLong(si.getStorePrice());
+			}
 		}
 	}
 }

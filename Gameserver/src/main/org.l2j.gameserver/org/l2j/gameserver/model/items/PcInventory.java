@@ -104,7 +104,7 @@ public class PcInventory extends Inventory
 
 		if(player.isInTrainingCamp())
 		{
-			if(slot == PAPERDOLL_RHAND || slot == PAPERDOLL_LRHAND)
+			if(slot == PAPERDOLL_RHAND)
 				itemId = 135;
 		}
 		return itemId;

@@ -15,13 +15,14 @@ import org.l2j.gameserver.network.l2.GameClient;
 
 public class WareHouseWithdrawListPacket extends L2GameServerPacket
 {
+	private final int sendType;
 	private long _adena;
-	private List<ItemInfo> _itemList = new ArrayList<ItemInfo>();
+	private List<ItemInfo> _itemList;
 	private int _type;
 	private int _inventoryUsedSlots;
 
-	public WareHouseWithdrawListPacket(Player player, WarehouseType type)
-	{
+	public WareHouseWithdrawListPacket(int sendType, Player player, WarehouseType type) {
+		this.sendType = sendType;
 		_adena = player.getAdena();
 		_type = type.ordinal();
 
@@ -52,28 +53,24 @@ public class WareHouseWithdrawListPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl(GameClient client, ByteBuffer buffer)
-	{
-		buffer.putShort((short) _type);
-		buffer.putLong(_adena);
-		buffer.putShort((short) _itemList.size());
-		if(_type == 1 || _type == 2)
-		{
-			if(_itemList.size() > 0)
-			{
-				buffer.putShort((short) 0x01);
-				buffer.putInt(0x1063); // TODO: buffer.putInt(_itemList.get(0).getItemId()); первый предмет в списке.
+	protected final void writeImpl(GameClient client, ByteBuffer buffer) {
+		buffer.put((byte) sendType);
+		if(sendType == 2) {
+			buffer.putShort((short) 0x00);
+			buffer.putInt(_inventoryUsedSlots);
+			buffer.putInt(_itemList.size());
+
+			for(ItemInfo item : _itemList) {
+				writeItemInfo(buffer, item);
+				buffer.putInt(item.getObjectId());
+				buffer.putInt(0);
+				buffer.putInt(0);
 			}
-			else
-				buffer.putShort((short) 0x00);
-		}
-		buffer.putInt(_inventoryUsedSlots); //Количество занятых ячеек в инвентаре.
-		for(ItemInfo item : _itemList)
-		{
-			writeItemInfo(buffer, item);
-			buffer.putInt(item.getObjectId());
-			buffer.putInt(0);
-			buffer.putInt(0);
+		} else {
+			buffer.putShort((short) _type);
+			buffer.putLong(_adena);
+			buffer.putInt(_inventoryUsedSlots);
+			buffer.putInt(_itemList.size());
 		}
 	}
 }

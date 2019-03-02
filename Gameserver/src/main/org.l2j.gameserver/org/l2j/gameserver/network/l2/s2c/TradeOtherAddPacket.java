@@ -7,19 +7,23 @@ import java.nio.ByteBuffer;
 
 public class TradeOtherAddPacket extends L2GameServerPacket
 {
+	private final int sendType;
 	private ItemInfo _item;
 	private long _amount;
 
-	public TradeOtherAddPacket(ItemInfo item, long amount)
-	{
+	public TradeOtherAddPacket(int sendType, ItemInfo item, long amount) {
+		this.sendType = sendType;
 		_item = item;
 		_amount = amount;
 	}
 
 	@Override
-	protected final void writeImpl(GameClient client, ByteBuffer buffer)
-	{
-		buffer.putShort((short) 1); // item count
+	protected final void writeImpl(GameClient client, ByteBuffer buffer) {
+		buffer.put((byte) sendType);
+		if(sendType == 2) {
+			buffer.putInt(0x01);
+		}
+		buffer.putInt(0x01);
 		writeItemInfo(buffer, _item, _amount);
 	}
 }

@@ -12,14 +12,15 @@ import java.nio.ByteBuffer;
  */
 public class ExQuestItemListPacket extends L2GameServerPacket
 {
+	private int sendType;
 	private int _size;
 	private ItemInstance[] _items;
 
 	private LockType _lockType;
 	private int[] _lockItems;
 
-	public ExQuestItemListPacket(int size, ItemInstance[] t, LockType lockType, int[] lockItems)
-	{
+	public ExQuestItemListPacket(int sendType, int size, ItemInstance[] t, LockType lockType, int[] lockItems) {
+		this.sendType = sendType;
 		_size = size;
 		_items = t;
 		_lockType = lockType;
@@ -29,7 +30,13 @@ public class ExQuestItemListPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		buffer.putShort((short) _size);
+		buffer.put((byte) sendType);
+		if(sendType == 2) {
+			buffer.putInt(_size);
+		} else  {
+			buffer.putShort((short) 0x00);
+		}
+		buffer.putInt(_size);
 
 		for(ItemInstance temp : _items)
 		{

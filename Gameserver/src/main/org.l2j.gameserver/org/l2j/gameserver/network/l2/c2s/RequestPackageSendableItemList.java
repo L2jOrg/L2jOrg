@@ -26,6 +26,7 @@ public class RequestPackageSendableItemList extends L2GameClientPacket
 		if(player == null)
 			return;
 
-		player.sendPacket(new PackageSendableListPacket(_objectId, player));
+		player.sendPacket(new PackageSendableListPacket(1, _objectId, player));
+		player.sendPacket(new PackageSendableListPacket(2, _objectId, player));
 	}
 }

@@ -34,7 +34,8 @@ public class OnShiftAction_Player extends ScriptOnShiftActionHandler<Player>
 					if(item.getTemplate().isQuest())
 						questSize++;
 				}
-				player.sendPacket(new GMViewItemListPacket(p, items, items.length - questSize));
+				player.sendPacket(new GMViewItemListPacket(1, p, items, items.length - questSize));
+				player.sendPacket(new GMViewItemListPacket(2, p, items, items.length - questSize));
 				player.sendPacket(new ExGMViewQuestItemListPacket(p, items, questSize));
 				player.sendPacket(new GMHennaInfoPacket(p));
 			}

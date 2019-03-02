@@ -22,7 +22,7 @@ public class CharacterSelectedPacket extends L2GameServerPacket
 		_sessionId = sessionId;
 
 		_name = cha.getName();
-		char_id = cha.getObjectId(); //FIXME 0x00030b7a ??
+		char_id = cha.getObjectId();
 		_title = cha.getTitle();
 		clan_id = cha.getClanId();
 		sex = cha.getSex().ordinal();

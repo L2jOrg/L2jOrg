@@ -17,12 +17,13 @@ import org.l2j.gameserver.network.l2.GameClient;
  */
 public class PackageSendableListPacket extends L2GameServerPacket
 {
+	private final int sendType;
 	private int _targetObjectId;
 	private long _adena;
 	private List<ItemInfo> _itemList;
 
-	public PackageSendableListPacket(int objectId, Player cha)
-	{
+	public PackageSendableListPacket(int sendType, int objectId, Player cha) {
+		this.sendType = sendType;
 		_adena = cha.getAdena();
 		_targetObjectId = objectId;
 
@@ -37,13 +38,19 @@ public class PackageSendableListPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		buffer.putInt(_targetObjectId);
-		buffer.putLong(_adena);
-		buffer.putInt(_itemList.size());
-		for(ItemInfo item : _itemList)
-		{
-			writeItemInfo(buffer, item);
-			buffer.putInt(item.getObjectId());
+		buffer.put((byte) sendType);
+		if(sendType == 2) {
+			buffer.putInt(_itemList.size());
+			buffer.putInt(_itemList.size());
+
+			for(ItemInfo item : _itemList) {
+				writeItemInfo(buffer, item);
+				buffer.putInt(item.getObjectId());
+			}
+		} else {
+			buffer.putInt(_targetObjectId);
+			buffer.putLong(_adena);
+			buffer.putInt(_itemList.size());
 		}
 	}
 }

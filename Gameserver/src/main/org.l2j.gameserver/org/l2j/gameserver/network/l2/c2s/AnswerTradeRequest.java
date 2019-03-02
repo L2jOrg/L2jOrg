@@ -104,9 +104,9 @@ public class AnswerTradeRequest extends L2GameClientPacket
 				new Request(L2RequestType.TRADE, activeChar, requestor);
 
 				requestor.setTradeList(new CopyOnWriteArrayList<TradeItem>());
-				requestor.sendPacket(new SystemMessagePacket(SystemMsg.YOU_BEGIN_TRADING_WITH_C1).addString(activeChar.getName()), new TradeStartPacket(requestor, activeChar));
+				requestor.sendPacket(new SystemMessagePacket(SystemMsg.YOU_BEGIN_TRADING_WITH_C1).addString(activeChar.getName()), new TradeStartPacket(1, requestor, activeChar), new TradeStartPacket(2, requestor, activeChar));
 				activeChar.setTradeList(new CopyOnWriteArrayList<TradeItem>());
-				activeChar.sendPacket(new SystemMessagePacket(SystemMsg.YOU_BEGIN_TRADING_WITH_C1).addString(requestor.getName()), new TradeStartPacket(activeChar, requestor));
+				activeChar.sendPacket(new SystemMessagePacket(SystemMsg.YOU_BEGIN_TRADING_WITH_C1).addString(requestor.getName()), new TradeStartPacket(1, activeChar, requestor), new TradeStartPacket(2, activeChar, requestor));
 			}
 			finally
 			{

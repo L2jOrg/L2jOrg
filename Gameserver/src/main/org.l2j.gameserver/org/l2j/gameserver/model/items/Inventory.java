@@ -25,40 +25,67 @@ public abstract class Inventory extends ItemContainer
     private static final Logger _log = LoggerFactory.getLogger(Inventory.class);
 
     public static final int PAPERDOLL_PENDANT = 0;
-    public static final int PAPERDOLL_REAR = 1;
-    public static final int PAPERDOLL_LEAR = 2;
-    public static final int PAPERDOLL_NECK = 3;
-    public static final int PAPERDOLL_RFINGER = 4;
-    public static final int PAPERDOLL_LFINGER = 5;
-    public static final int PAPERDOLL_HEAD = 6;
-    public static final int PAPERDOLL_RHAND = 7;
-    public static final int PAPERDOLL_LHAND = 8;
-    public static final int PAPERDOLL_GLOVES = 9;
-    public static final int PAPERDOLL_CHEST = 10;
+    public static final int PAPERDOLL_HEAD = 1;
+    public static final int PAPERDOLL_HAIR = 2;
+    public static final int PAPERDOLL_DHAIR = 3;
+    public static final int PAPERDOLL_NECK = 4;
+    public static final int PAPERDOLL_RHAND = 5;
+    public static final int PAPERDOLL_CHEST = 6;
+    public static final int PAPERDOLL_LHAND = 7;
+    public static final int PAPERDOLL_REAR = 8;
+    public static final int PAPERDOLL_LEAR = 9;
+    public static final int PAPERDOLL_GLOVES = 10;
     public static final int PAPERDOLL_LEGS = 11;
     public static final int PAPERDOLL_FEET = 12;
-    public static final int PAPERDOLL_BACK = 13;
+    public static final int PAPERDOLL_RFINGER = 13;
+    public static final int PAPERDOLL_LFINGER = 14;
+    public static final int PAPERDOLL_LBRACELET = 15;
+    public static final int PAPERDOLL_RBRACELET = 16;
+    public static final int PAPERDOLL_AGATHION1 = 17;
+    public static final int PAPERDOLL_AGATHION2 = 18;
+    public static final int PAPERDOLL_AGATHION3 = 19;
+    public static final int PAPERDOLL_AGATHION4 = 20;
+    public static final int PAPERDOLL_AGATHION5 = 21;
+    public static final int PAPERDOLL_DECO1 = 22;
+    public static final int PAPERDOLL_DECO2 = 23;
+    public static final int PAPERDOLL_DECO3 = 24;
+    public static final int PAPERDOLL_DECO4 = 25;
+    public static final int PAPERDOLL_DECO5 = 26;
+    public static final int PAPERDOLL_DECO6 = 27;
+    public static final int PAPERDOLL_BACK = 28;
+    public static final int PAPERDOLL_BELT = 29;
+    public static final int PAPERDOLL_BROOCH = 30;
+    public static final int PAPERDOLL_JEWEL1 = 31;
+    public static final int PAPERDOLL_JEWEL2 = 32;
+    public static final int PAPERDOLL_JEWEL3 = 33;
+    public static final int PAPERDOLL_JEWEL4 = 34;
+    public static final int PAPERDOLL_JEWEL5 = 35;
+    public static final int PAPERDOLL_JEWEL6 = 36;
     public static final int PAPERDOLL_LRHAND = 14;
-    public static final int PAPERDOLL_HAIR = 15;
-    public static final int PAPERDOLL_DHAIR = 16;
-    public static final int PAPERDOLL_RBRACELET = 17;
-    public static final int PAPERDOLL_LBRACELET = 18;
-    public static final int PAPERDOLL_DECO1 = 19;
-    public static final int PAPERDOLL_DECO2 = 20;
-    public static final int PAPERDOLL_DECO3 = 21;
-    public static final int PAPERDOLL_DECO4 = 22;
-    public static final int PAPERDOLL_DECO5 = 23;
-    public static final int PAPERDOLL_DECO6 = 24;
-    public static final int PAPERDOLL_BELT = 25;
-    public static final int PAPERDOLL_BROOCH = 26;
-    public static final int PAPERDOLL_JEWEL1 = 27;
-    public static final int PAPERDOLL_JEWEL2 = 28;
-    public static final int PAPERDOLL_JEWEL3 = 29;
-    public static final int PAPERDOLL_JEWEL4 = 30;
-    public static final int PAPERDOLL_JEWEL5 = 31;
-    public static final int PAPERDOLL_JEWEL6 = 32;
+    public static final int PAPERDOLL_ARTIFACT_BOOK = 37;
+    public static final int PAPERDOLL_ARTIFACT1 = 38; // Artifact Balance
+    public static final int PAPERDOLL_ARTIFACT2 = 39; // Artifact Balance
+    public static final int PAPERDOLL_ARTIFACT3 = 40; // Artifact Balance
+    public static final int PAPERDOLL_ARTIFACT4 = 41; // Artifact Balance
+    public static final int PAPERDOLL_ARTIFACT5 = 42; // Artifact Balance
+    public static final int PAPERDOLL_ARTIFACT6 = 43; // Artifact Balance
+    public static final int PAPERDOLL_ARTIFACT7 = 44; // Artifact Balance
+    public static final int PAPERDOLL_ARTIFACT8 = 45; // Artifact Balance
+    public static final int PAPERDOLL_ARTIFACT9 = 46; // Artifact Balance
+    public static final int PAPERDOLL_ARTIFACT10 = 47; // Artifact Balance
+    public static final int PAPERDOLL_ARTIFACT11 = 48; // Artifact Balance
+    public static final int PAPERDOLL_ARTIFACT12 = 49; // Artifact Balance
+    public static final int PAPERDOLL_ARTIFACT13 = 50; // Artifact Spirit
+    public static final int PAPERDOLL_ARTIFACT14 = 51; // Artifact Spirit
+    public static final int PAPERDOLL_ARTIFACT15 = 52; // Artifact Spirit
+    public static final int PAPERDOLL_ARTIFACT16 = 53; // Artifact Protection
+    public static final int PAPERDOLL_ARTIFACT17 = 54; // Artifact Protection
+    public static final int PAPERDOLL_ARTIFACT18 = 55; // Artifact Protection
+    public static final int PAPERDOLL_ARTIFACT19 = 56; // Artifact Support
+    public static final int PAPERDOLL_ARTIFACT20 = 57; // Artifact Support
+    public static final int PAPERDOLL_ARTIFACT21 = 58; // Artifact Support
 
-    public static final int PAPERDOLL_MAX = 33;
+    public static final int PAPERDOLL_MAX = 59;
 
     public static final int[] PAPERDOLL_ORDER =
             {
@@ -76,11 +103,16 @@ public abstract class Inventory extends ItemContainer
                     Inventory.PAPERDOLL_LEGS,
                     Inventory.PAPERDOLL_FEET,
                     Inventory.PAPERDOLL_BACK,
-                    Inventory.PAPERDOLL_LRHAND,
+                    Inventory.PAPERDOLL_RHAND,
                     Inventory.PAPERDOLL_HAIR,
                     Inventory.PAPERDOLL_DHAIR,
                     Inventory.PAPERDOLL_RBRACELET,
                     Inventory.PAPERDOLL_LBRACELET,
+                    Inventory.PAPERDOLL_AGATHION1, // 152
+                    Inventory.PAPERDOLL_AGATHION2, // 152
+                    Inventory.PAPERDOLL_AGATHION3, // 152
+                    Inventory.PAPERDOLL_AGATHION4, // 152
+                    Inventory.PAPERDOLL_AGATHION5, // 152
                     Inventory.PAPERDOLL_DECO1,
                     Inventory.PAPERDOLL_DECO2,
                     Inventory.PAPERDOLL_DECO3,
@@ -94,7 +126,29 @@ public abstract class Inventory extends ItemContainer
                     Inventory.PAPERDOLL_JEWEL3,
                     Inventory.PAPERDOLL_JEWEL4,
                     Inventory.PAPERDOLL_JEWEL5,
-                    Inventory.PAPERDOLL_JEWEL6
+                    Inventory.PAPERDOLL_JEWEL6,
+                    Inventory.PAPERDOLL_ARTIFACT_BOOK, // 152
+                    Inventory.PAPERDOLL_ARTIFACT1, // 152
+                    Inventory.PAPERDOLL_ARTIFACT2, // 152
+                    Inventory.PAPERDOLL_ARTIFACT3, // 152
+                    Inventory.PAPERDOLL_ARTIFACT4, // 152
+                    Inventory.PAPERDOLL_ARTIFACT5, // 152
+                    Inventory.PAPERDOLL_ARTIFACT6, // 152
+                    Inventory.PAPERDOLL_ARTIFACT7, // 152
+                    Inventory.PAPERDOLL_ARTIFACT8, // 152
+                    Inventory.PAPERDOLL_ARTIFACT9, // 152
+                    Inventory.PAPERDOLL_ARTIFACT10, // 152
+                    Inventory.PAPERDOLL_ARTIFACT11, // 152
+                    Inventory.PAPERDOLL_ARTIFACT12, // 152
+                    Inventory.PAPERDOLL_ARTIFACT13, // 152
+                    Inventory.PAPERDOLL_ARTIFACT14, // 152
+                    Inventory.PAPERDOLL_ARTIFACT15, // 152
+                    Inventory.PAPERDOLL_ARTIFACT16, // 152
+                    Inventory.PAPERDOLL_ARTIFACT17, // 152
+                    Inventory.PAPERDOLL_ARTIFACT18, // 152
+                    Inventory.PAPERDOLL_ARTIFACT19, // 152
+                    Inventory.PAPERDOLL_ARTIFACT20, // 152
+                    Inventory.PAPERDOLL_ARTIFACT21 // 152
             };
 
     public class InventoryListenerList extends ListenerList<Playable>
@@ -759,7 +813,7 @@ public abstract class Inventory extends ItemContainer
                 break;
             case ItemTemplate.SLOT_LEGS:
             {
-                // handle full armor
+                // handleType full armor
                 ItemInstance chest = getPaperdollItem(PAPERDOLL_CHEST);
                 if(chest != null && chest.getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR)
                     setPaperdollItem(PAPERDOLL_CHEST, null);
@@ -1009,7 +1063,7 @@ public abstract class Inventory extends ItemContainer
             case ItemTemplate.SLOT_L_HAND:
                 return PAPERDOLL_LHAND;
             case ItemTemplate.SLOT_LR_HAND:
-                return PAPERDOLL_LRHAND;
+                return PAPERDOLL_RHAND;
             case ItemTemplate.SLOT_GLOVES:
                 return PAPERDOLL_GLOVES;
             case ItemTemplate.SLOT_CHEST:

@@ -21,11 +21,12 @@ public class TradeStartPacket extends L2GameServerPacket
 	private final List<ItemInfo> _tradelist = new ArrayList<ItemInfo>();
 	private final int _targetId;
 	private final int _targetLevel;
+	private final int sendType;
 
 	private int _flags = 0;
 
-	public TradeStartPacket(Player player, Player target)
-	{
+	public TradeStartPacket(int sendType, Player player, Player target) {
+		this.sendType =sendType;
 		_targetId = target.getObjectId();
 		_targetLevel = target.getLevel();
 
@@ -45,13 +46,19 @@ public class TradeStartPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl(GameClient client, ByteBuffer buffer)
-	{
-		buffer.putInt(_targetId);
-		buffer.put((byte)_flags); // UNK
-		buffer.put((byte)_targetLevel);
-		buffer.putShort((short) _tradelist.size());
-		for(ItemInfo item : _tradelist)
-			writeItemInfo(buffer, item);
+	protected final void writeImpl(GameClient client, ByteBuffer buffer) {
+		buffer.put((byte) sendType);
+		if(sendType == 2) {
+			buffer.putInt(_tradelist.size());
+			buffer.putInt(_tradelist.size());
+			for(ItemInfo item : _tradelist)
+				writeItemInfo(buffer, item);
+		}  else {
+			buffer.putInt(_targetId);
+			buffer.put((byte)_flags); // UNK
+			if((_flags & 0x10) == 0) {
+				buffer.put((byte) _targetLevel);
+			}
+		}
 	}
 }

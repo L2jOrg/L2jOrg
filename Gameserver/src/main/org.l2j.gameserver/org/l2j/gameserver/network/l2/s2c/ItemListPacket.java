@@ -12,14 +12,15 @@ public class ItemListPacket extends L2GameServerPacket
 	private final int _size;
 	private final ItemInstance[] _items;
 	private final boolean _showWindow;
+	private final int sendType;
 
 	private LockType _lockType;
 	private int[] _lockItems;
 
 	private Player _player;
 
-	public ItemListPacket(Player player, int size, ItemInstance[] items, boolean showWindow, LockType lockType, int[] lockItems)
-	{
+	public ItemListPacket(int sendType, Player player, int size, ItemInstance[] items, boolean showWindow, LockType lockType, int[] lockItems) {
+		this.sendType = sendType;
 		_player = player;
 		_size = size;
 		_items = items;
@@ -29,20 +30,26 @@ public class ItemListPacket extends L2GameServerPacket
 	}
 
 	@Override
-	protected final void writeImpl(GameClient client, ByteBuffer buffer)
-	{
-		buffer.putShort((short) (_showWindow ? 1 : 0));
+	protected final void writeImpl(GameClient client, ByteBuffer buffer) {
 
-		buffer.putShort((short) _size);
-		for(ItemInstance temp : _items)
-		{
-			if(temp.getTemplate().isQuest())
-				continue;
+		if(sendType == 2) {
+			buffer.put((byte) sendType);
+			buffer.putInt(_size);
+			buffer.putInt(_size);
 
-			writeItemInfo(buffer, _player, temp);
+			for(ItemInstance temp : _items)
+			{
+				if(temp.getTemplate().isQuest())
+					continue;
+
+				writeItemInfo(buffer, _player, temp);
+			}
+		} else {
+			buffer.put((byte) 0x01); // show windown
+			buffer.putInt(0);
+			buffer.putInt(_size);
 		}
 
-		buffer.putShort((short) _lockItems.length);
 		if(_lockItems.length > 0)
 		{
 			buffer.put((byte)_lockType.ordinal());

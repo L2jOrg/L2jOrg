@@ -97,6 +97,9 @@ public abstract class ItemTemplate extends StatTemplate
 	public static final int SLOT_BELT = 0x10000000;
 	public static final int SLOT_BROOCH = 0x20000000;
 	public static final int SLOT_JEWEL = 0x40000000;
+	public static final long SLOT_AGATHION = 0x3000000000L;
+	public static final long SLOT_ARTIFACT_BOOK = 0x20000000000L;
+	public static final long SLOT_ARTIFACT = 0x40000000000L;
 
 	// Все слоты, используемые броней.
 	public static final int SLOTS_ARMOR = SLOT_HEAD | SLOT_L_HAND | SLOT_GLOVES | SLOT_CHEST | SLOT_LEGS | SLOT_FEET | SLOT_FULL_ARMOR | SLOT_PENDANT;

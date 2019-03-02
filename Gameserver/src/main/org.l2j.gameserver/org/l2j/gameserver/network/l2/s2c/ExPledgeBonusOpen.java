@@ -43,11 +43,14 @@ public class ExPledgeBonusOpen extends L2GameServerPacket
 	{
 		buffer.putInt(PledgeBonusUtils.MAX_ATTENDANCE_PROGRESS);
 		buffer.putInt(_attendanceProgress);
+		buffer.put((byte) 0x00);
 		buffer.putInt(_yesterdayAttendanceRewardId);
 		buffer.put((byte)_yesterdayAttendanceReward);
 		buffer.put((byte) (_attendanceRewardReceivable ? 0x01 : 0x00));
+
 		buffer.putInt(PledgeBonusUtils.MAX_HUNTING_PROGRESS);
 		buffer.putInt(_huntingProgress);
+		buffer.put((byte) 0x00);
 		buffer.putInt(_yesterdayHuntingRewardId);
 		buffer.put((byte)_yesterdayHuntingReward);
 		buffer.put((byte) (_huntingRewardReceivable ? 0x01 : 0x00));

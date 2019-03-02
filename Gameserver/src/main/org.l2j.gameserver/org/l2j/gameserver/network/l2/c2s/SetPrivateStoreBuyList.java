@@ -126,14 +126,16 @@ public class SetPrivateStoreBuyList extends L2GameClientPacket
 		if(buyList.size() > buyer.getTradeLimit())
 		{
 			buyer.sendPacket(SystemMsg.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
-			buyer.sendPacket(new PrivateStoreBuyManageList(buyer));
+			buyer.sendPacket(new PrivateStoreBuyManageList(1, buyer));
+			buyer.sendPacket(new PrivateStoreBuyManageList(2, buyer));
 			return;
 		}
 
 		if(totalCost > buyer.getAdena())
 		{
 			buyer.sendPacket(SystemMsg.THE_PURCHASE_PRICE_IS_HIGHER_THAN_THE_AMOUNT_OF_MONEY_THAT_YOU_HAVE_AND_SO_YOU_CANNOT_OPEN_A_PERSONAL_STORE);
-			buyer.sendPacket(new PrivateStoreBuyManageList(buyer));
+			buyer.sendPacket(new PrivateStoreBuyManageList(1, buyer));
+			buyer.sendPacket(new PrivateStoreBuyManageList(2, buyer));
 			return;
 		}
 

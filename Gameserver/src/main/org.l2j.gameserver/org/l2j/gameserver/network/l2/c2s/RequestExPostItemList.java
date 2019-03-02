@@ -4,6 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Player;
 import org.l2j.gameserver.network.l2.components.CustomMessage;
 import org.l2j.gameserver.network.l2.s2c.ExReplyPostItemList;
+import org.l2j.gameserver.network.l2.s2c.ExShowReceivedPostList;
 
 import java.nio.ByteBuffer;
 
@@ -36,6 +37,7 @@ public class RequestExPostItemList extends L2GameClientPacket
 			return;
 		}
 
-		activeChar.sendPacket(new ExReplyPostItemList(activeChar));
+		activeChar.sendPacket(new ExReplyPostItemList(1, activeChar));
+		activeChar.sendPacket(new ExReplyPostItemList(2, activeChar));
 	}
 }

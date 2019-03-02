@@ -23,7 +23,8 @@ public final class WarehouseFunctions
 		}
 
 		player.setUsingWarehouseType(WarehouseType.FREIGHT);
-		player.sendPacket(new WareHouseWithdrawListPacket(player, WarehouseType.FREIGHT));
+		player.sendPacket(new WareHouseWithdrawListPacket(1, player, WarehouseType.FREIGHT));
+		player.sendPacket(new WareHouseWithdrawListPacket(2, player, WarehouseType.FREIGHT));
 	}
 
 	public static void showRetrieveWindow(Player player)
@@ -35,7 +36,8 @@ public final class WarehouseFunctions
 		}
 
 		player.setUsingWarehouseType(WarehouseType.PRIVATE);
-		player.sendPacket(new WareHouseWithdrawListPacket(player, WarehouseType.PRIVATE));
+		player.sendPacket(new WareHouseWithdrawListPacket(1, player, WarehouseType.PRIVATE));
+		player.sendPacket(new WareHouseWithdrawListPacket(2, player, WarehouseType.PRIVATE));
 	}
 
 	public static void showDepositWindow(Player player)
@@ -47,7 +49,8 @@ public final class WarehouseFunctions
 		}
 
 		player.setUsingWarehouseType(WarehouseType.PRIVATE);
-		player.sendPacket(new WareHouseDepositListPacket(player, WarehouseType.PRIVATE));
+		player.sendPacket(new WareHouseDepositListPacket(1, player, WarehouseType.PRIVATE));
+		player.sendPacket(new WareHouseDepositListPacket(2, player, WarehouseType.PRIVATE));
 	}
 
 	public static void showDepositWindowClan(Player player)
@@ -62,7 +65,8 @@ public final class WarehouseFunctions
 			player.sendPacket(SystemMsg.ITEMS_LEFT_AT_THE_CLAN_HALL_WAREHOUSE_CAN_ONLY_BE_RETRIEVED_BY_THE_CLAN_LEADER);
 
 		player.setUsingWarehouseType(WarehouseType.CLAN);
-		player.sendPacket(new WareHouseDepositListPacket(player, WarehouseType.CLAN));
+		player.sendPacket(new WareHouseDepositListPacket(1, player, WarehouseType.CLAN));
+		player.sendPacket(new WareHouseDepositListPacket(2, player, WarehouseType.CLAN));
 	}
 
 	public static void showWithdrawWindowClan(Player player)
@@ -74,7 +78,8 @@ public final class WarehouseFunctions
 		}
 
 		player.setUsingWarehouseType(WarehouseType.CLAN);
-		player.sendPacket(new WareHouseWithdrawListPacket(player, WarehouseType.CLAN));
+		player.sendPacket(new WareHouseWithdrawListPacket(1, player, WarehouseType.CLAN));
+		player.sendPacket(new WareHouseWithdrawListPacket(2, player, WarehouseType.CLAN));
 	}
 
 	public static boolean canShowWarehouseWithdrawList(Player player, WarehouseType type)

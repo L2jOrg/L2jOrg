@@ -44,5 +44,6 @@ public class ExStorageMaxCountPacket extends L2GameServerPacket
 		buffer.putInt(_questItemsLimit); //  quests list  by off 100 maximum
 		buffer.putInt(40); // ??? 40 slots
 		buffer.putInt(40); // ??? 40 slots
+		buffer.putInt(0x64); // artfact slots (fixed)
 	}
 }

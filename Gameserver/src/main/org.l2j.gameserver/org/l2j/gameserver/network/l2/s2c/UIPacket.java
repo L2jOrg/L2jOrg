@@ -276,7 +276,7 @@ public class UIPacket extends AbstractMaskPacket<UserInfoType>
 
 		buffer.putInt(obj_id);
 		buffer.putInt(_initSize);
-		buffer.putShort((short) 23);
+		buffer.putShort((short) 24);
 		buffer.put(_masks);
 
 		if(containsMask(UserInfoType.RELATION))
@@ -428,7 +428,7 @@ public class UIPacket extends AbstractMaskPacket<UserInfoType>
 			buffer.putShort((short) UserInfoType.SOCIAL.getBlockLength());
 			buffer.put((byte)pvp_flag);
 			buffer.putInt(karma);
-			buffer.put((byte)0x00);
+			buffer.put((byte)0x00); // is noble
 			buffer.put((byte)hero);
 			buffer.put((byte)pledge_class);
 			buffer.putInt(pk_kills);
@@ -451,6 +451,10 @@ public class UIPacket extends AbstractMaskPacket<UserInfoType>
 			buffer.put((byte)_jewelsLimit);
 			buffer.put((byte)_team.ordinal());
 			buffer.putInt(0x00); // Team mask ?
+
+			buffer.put((byte) 0x00); // charm slots
+			buffer.put((byte) 0x00); // agathion slots
+			buffer.put((byte) 0x00); // artifacts slots // 152
 		}
 
 		if(containsMask(UserInfoType.MOVEMENTS)) {
@@ -469,14 +473,25 @@ public class UIPacket extends AbstractMaskPacket<UserInfoType>
 			buffer.putShort((short) UserInfoType.INVENTORY_LIMIT.getBlockLength());
 			buffer.putInt(0x00);
 			buffer.putShort((short) InventoryLimit);
-			buffer.put((byte)0); // hide title - 1, 0 - no
+			buffer.put((byte)0); // cursed weapon level
 		}
 
-		if(containsMask(UserInfoType.UNK_3)) {
-			buffer.putShort((short) UserInfoType.UNK_3.getBlockLength());
+		if(containsMask(UserInfoType.TRUE_HERO)) {
+			buffer.putShort((short) UserInfoType.TRUE_HERO.getBlockLength());
 			buffer.putInt(0x00);
 			buffer.putShort((short) 0x00);
-			buffer.put((byte)0x00);
+			buffer.put((byte)0x00); // TRUE HERO ? 100
+		}
+
+		if (containsMask(UserInfoType.ATT_SPIRITS)) // 152
+		{
+			buffer.putShort((short) UserInfoType.ATT_SPIRITS.getBlockLength());
+			buffer.putInt(-1);
+			buffer.putInt(0x00);
+			buffer.putInt(0x00);
+			buffer.putInt(0x00);
+			buffer.putInt(0x00);
+			buffer.putInt(0x00);
 		}
 	}
 

@@ -1328,7 +1328,7 @@ public enum NpcString
 	DARKNESS_SWALLOW_EVERYTHING_AWAY(8888008),
 	// Text: Amazing... but this is the end. Full force advance!
 	AMAZING_BUT_THIS_IS_THE_END_FULL_FORCE_ADVANCE(8888009),
-	// Text: I now have to go and handle it.
+	// Text: I now have to go and handleType it.
 	I_NOW_HAVE_TO_GO_AND_HANDLE_IT(8888010),
 	// Text: For the eternal rest of the forgotten heroes!
 	FOR_THE_ETERNAL_REST_OF_THE_FORGOTTEN_HEROES(8888011),
@@ -1634,7 +1634,7 @@ public enum NpcString
 	THATS_A_BRATTY_KID_IF_IVE_EVER_SEEN_ONE_YOU_TWO_CLOSE(1802639),
 	// Text: Leave this to me. Go!
 	LEAVE_THIS_TO_ME_GO(1802646),
-	// Text: Go now! Kain can handle this.
+	// Text: Go now! Kain can handleType this.
 	GO_NOW_KAIN_CAN_HANDLE_THIS(1802647),
 	// Text: Immense Windima or Giant Windima
 	IMMENSE_WINDIMA_OR_GIANT_WINDIMA(575711),

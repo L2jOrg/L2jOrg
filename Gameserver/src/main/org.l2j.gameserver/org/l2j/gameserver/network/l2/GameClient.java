@@ -98,15 +98,12 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
 
         if(getSessionKey() != null)
         {
-            if(_state == GameClientState.AUTHED)
-            {
+            if(_state == GameClientState.AUTHED) {
                 AuthServerCommunication.getInstance().removeAuthedClient(getLogin());
-                AuthServerCommunication.getInstance().sendPacket(new PlayerLogout(getLogin()));
-            }
-            else
-            {
+            } else {
                 AuthServerCommunication.getInstance().removeWaitingClient(getLogin());
             }
+            AuthServerCommunication.getInstance().sendPacket(new PlayerLogout(getLogin()));
         }
     }
 

@@ -59,7 +59,8 @@ public class RequestGMCommand extends L2GameClientPacket
 				for(ItemInstance item : items)
 					if(item.getTemplate().isQuest())
 						questSize++;
-				player.sendPacket(new GMViewItemListPacket(target, items, items.length - questSize));
+				player.sendPacket(new GMViewItemListPacket(1, target, items, items.length - questSize));
+				player.sendPacket(new GMViewItemListPacket(2, target, items, items.length - questSize));
 				player.sendPacket(new ExGMViewQuestItemListPacket(target, items, questSize));
 
 				player.sendPacket(new GMHennaInfoPacket(target));

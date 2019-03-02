@@ -16,6 +16,9 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot>
 		(byte) 0x00,
 		(byte) 0x00,
 		(byte) 0x00,
+		(byte) 0x00,
+		(byte) 0x00,
+		(byte) 0x00,
 		(byte) 0x00
 	};
 

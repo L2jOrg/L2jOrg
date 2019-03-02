@@ -98,7 +98,8 @@ public class SetPrivateStoreSellList extends L2GameClientPacket
 		if(sellList.size() > seller.getTradeLimit())
 		{
 			seller.sendPacket(SystemMsg.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
-			seller.sendPacket(new PrivateStoreManageList(seller, _package));
+			seller.sendPacket(new PrivateStoreManageList(1, seller, _package));
+			seller.sendPacket(new PrivateStoreManageList(2, seller, _package));
 			return;
 		}
 

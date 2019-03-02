@@ -23,6 +23,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
 public class CharacterSelectionInfoPacket extends L2GameServerPacket
@@ -50,14 +51,15 @@ public class CharacterSelectionInfoPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		int size = _characterPackages != null ? _characterPackages.length : 0;
+		int size = nonNull(_characterPackages) ? _characterPackages.length : 0;
 
 		buffer.putInt(size);
-		buffer.putInt(0x07); // Максимальное количество персонажей на сервере
-		buffer.put((byte)0x00); // 0x00 - Разрешить, 0x01 - запретить. Разрешает или запрещает создание игроков
-		buffer.put((byte)0x00);
-		buffer.putInt(0x02); // 0x01 - Выводит окно, что нужно купить игру, что создавать более 2х чаров. 0х02 - обычное лобби.
-		buffer.put((byte)0x00); // 0x01 - Предлогает купить ПА.
+		buffer.putInt(0x07); // Max Character count
+		buffer.put((byte) (size >= 0x07 ? 0x01 : 0x00)); //x00 - Allow, 0x01 - disable. Allows or denies the creation of players
+		buffer.put((byte) 0x01);
+		buffer.putInt(0x02); // 0x01 - Displays a window that you need to buy the game, what to create more than 2 charms. 0x02 is a regular lobby.
+		buffer.put((byte) 0x00); // Gift message for inactive accounts // 152
+		buffer.put((byte) 0x01); // 0x01 - Offers to buy a PA.
 
 		long lastAccess = -1L;
 		int lastUsed = -1;
@@ -73,17 +75,17 @@ public class CharacterSelectionInfoPacket extends L2GameServerPacket
 			CharSelectInfoPackage charInfoPackage = _characterPackages[i];
 
 			writeString(charInfoPackage.getName(), buffer);
-			buffer.putInt(charInfoPackage.getCharId()); // ?
+			buffer.putInt(charInfoPackage.getObjectId());
 			writeString(_loginName, buffer);
 			buffer.putInt(_sessionId);
 			buffer.putInt(charInfoPackage.getClanId());
-			buffer.putInt(0x00); // ??
+			buffer.putInt(0x00); // Builder level ??
 
 			buffer.putInt(charInfoPackage.getSex());
 			buffer.putInt(charInfoPackage.getRace());
 			buffer.putInt(charInfoPackage.getBaseClassId());
 
-			buffer.putInt(getSettings(ServerSettings.class).serverId()); // active ??
+			buffer.putInt(getSettings(ServerSettings.class).serverId()); // servername ?
 
 			buffer.putInt(charInfoPackage.getX());
 			buffer.putInt(charInfoPackage.getY());
@@ -122,15 +124,15 @@ public class CharacterSelectionInfoPacket extends L2GameServerPacket
 			buffer.putInt(charInfoPackage.getPaperdollVisualId(Inventory.PAPERDOLL_CHEST)); //Внешний вид верха (ИД Итема).
 			buffer.putInt(charInfoPackage.getPaperdollVisualId(Inventory.PAPERDOLL_LEGS)); //Внешний вид низа (ИД Итема).
 			buffer.putInt(charInfoPackage.getPaperdollVisualId(Inventory.PAPERDOLL_FEET)); //Внешний вид ботинок (ИД Итема).
-			buffer.putInt(charInfoPackage.getPaperdollVisualId(Inventory.PAPERDOLL_LRHAND));
+			buffer.putInt(charInfoPackage.getPaperdollVisualId(Inventory.PAPERDOLL_RHAND));
 			buffer.putInt(charInfoPackage.getPaperdollVisualId(Inventory.PAPERDOLL_HAIR)); //Внешний вид шляпы (ИД итема).
 			buffer.putInt(charInfoPackage.getPaperdollVisualId(Inventory.PAPERDOLL_DHAIR)); //Внешний вид маски (ИД итема).
 
-			buffer.putShort((short) charInfoPackage.getPaperdollEnchantEffect(Inventory.PAPERDOLL_CHEST)); // unk Episodion
-			buffer.putShort((short) charInfoPackage.getPaperdollEnchantEffect(Inventory.PAPERDOLL_LEGS)); // unk Episodion
-			buffer.putShort((short) charInfoPackage.getPaperdollEnchantEffect(Inventory.PAPERDOLL_HEAD)); // unk Episodion
-			buffer.putShort((short) charInfoPackage.getPaperdollEnchantEffect(Inventory.PAPERDOLL_GLOVES)); // unk Episodion
-			buffer.putShort((short) charInfoPackage.getPaperdollEnchantEffect(Inventory.PAPERDOLL_FEET)); // unk Episodion
+			buffer.putShort((short) charInfoPackage.getPaperdollEnchantEffect(Inventory.PAPERDOLL_CHEST)); //Episodion
+			buffer.putShort((short) charInfoPackage.getPaperdollEnchantEffect(Inventory.PAPERDOLL_LEGS)); // Episodion
+			buffer.putShort((short) charInfoPackage.getPaperdollEnchantEffect(Inventory.PAPERDOLL_HEAD)); // Episodion
+			buffer.putShort((short) charInfoPackage.getPaperdollEnchantEffect(Inventory.PAPERDOLL_GLOVES)); //Episodion
+			buffer.putShort((short) charInfoPackage.getPaperdollEnchantEffect(Inventory.PAPERDOLL_FEET)); // Episodion
 
 			buffer.putInt(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_HAIR) > 0 ? charInfoPackage.getSex() : charInfoPackage.getHairStyle());
 			buffer.putInt(charInfoPackage.getHairColor());
@@ -150,19 +152,19 @@ public class CharacterSelectionInfoPacket extends L2GameServerPacket
 			buffer.putInt(0x00);
 
 			//TODO: Pet info?
-			buffer.putInt(0x00);
-			buffer.putInt(0x00);
-			buffer.putInt(0x00);
-			buffer.putInt(0x00);
-			buffer.putDouble(0x00);
-			buffer.putDouble(0x00);
+			buffer.putInt(0x00); // Pet npcId
+			buffer.putInt(0x00); // pet level
+			buffer.putInt(0x00); // pet food
+			buffer.putInt(0x00); // pet food level
+			buffer.putDouble(0x00); // pet current hp
+			buffer.putDouble(0x00); // pet current mp
 
-			buffer.putInt(0x00);
-			buffer.putInt(0x00);
-			buffer.putInt(0x00);
+			buffer.putInt(0x00); // vitality points
+			buffer.putInt(0x00);  // vitality percent
+			buffer.putInt(0x00); // vitality items used
 
 			buffer.putInt(charInfoPackage.isAvailable() ? 0x01 : 0);
-			buffer.put((byte)0x00); // UNK
+			buffer.put((byte)0x00); // Nobles
 			buffer.put((byte) (charInfoPackage.isHero() ? 1 : 0)); // hero glow
 			buffer.put((byte) (charInfoPackage.isHairAccessoryEnabled() ? 0x01 : 0x00)); // show hair accessory if enabled
 		}

@@ -763,7 +763,7 @@ public final class GamePacketHandler implements PacketHandler<GameClient>, Clien
                                 // msg = new ?();
                                 break;
                             case 0x01:
-                                //msg = new RequestManorList();
+                                msg = new RequestManorList();
                                 break;
                             case 0x02:
                                 //msg = new RequestProcureCropList();
@@ -1645,10 +1645,10 @@ public final class GamePacketHandler implements PacketHandler<GameClient>, Clien
                                 //TODO
                                 break;
                             case 0xFD:
-                                msg = new RequestTargetActionMenu();
+                                // TODO
                                 break;
                             case 0xFE:
-                                //msg = new ExSendSelectedQuestZoneID();
+                                msg = new RequestTargetActionMenu();
                                 break;
                             case 0xFF:
                                 msg = new ExSendSelectedQuestZoneID();

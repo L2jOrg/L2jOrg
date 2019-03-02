@@ -118,7 +118,9 @@ public class AddTradeItem extends L2GameClientPacket
 			tradeList.add(tradeItem);
 		}
 
-		parthner1.sendPacket(new TradeOwnAddPacket(tradeItem, tradeItem.getCount()), new TradeUpdatePacket(tradeItem, item.getCount() - tradeItem.getCount()));
-		parthner2.sendPacket(new TradeOtherAddPacket(tradeItem, tradeItem.getCount()));
+		parthner1.sendPacket(new TradeOwnAddPacket(1, tradeItem, tradeItem.getCount()), new TradeUpdatePacket(1, tradeItem, item.getCount() - tradeItem.getCount()));
+		parthner1.sendPacket(new TradeOwnAddPacket(2, tradeItem, tradeItem.getCount()), new TradeUpdatePacket(2, tradeItem, item.getCount() - tradeItem.getCount()));
+		parthner2.sendPacket(new TradeOtherAddPacket(1, tradeItem, tradeItem.getCount()));
+		parthner2.sendPacket(new TradeOtherAddPacket(2, tradeItem, tradeItem.getCount()));
 	}
 }

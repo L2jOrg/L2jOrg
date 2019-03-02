@@ -9297,8 +9297,10 @@ public final class Player extends Playable implements PlayerGroup
                 questItemsSize++;
         }
 
-        sendPacket(new ItemListPacket(this, allSize - questItemsSize, items, show, lockType, lockItems));
-        sendPacket(new ExQuestItemListPacket(questItemsSize, items, lockType, lockItems));
+        sendPacket(new ItemListPacket(1, this, allSize - questItemsSize, items, show, lockType, lockItems));
+        sendPacket(new ItemListPacket(2, this, allSize - questItemsSize, items, show, lockType, lockItems));
+        sendPacket(new ExQuestItemListPacket(1, questItemsSize, items, lockType, lockItems));
+        sendPacket(new ExQuestItemListPacket(2, questItemsSize, items, lockType, lockItems));
     }
 
     public int getBeltInventoryIncrease()

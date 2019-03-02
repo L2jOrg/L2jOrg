@@ -145,6 +145,9 @@ public abstract class L2GameServerPacket extends WritablePacket<GameClient> impl
         else
             buffer.put((byte)0x01);
 
+        buffer.put((byte) 0x00); // 140 protocol
+        buffer.put((byte) 0x00); // 140 protocol
+
         if ((flags & IS_AUGMENTED) == IS_AUGMENTED) {
             buffer.putInt(item.getVariation1Id());
             buffer.putInt(item.getVariation2Id());
@@ -224,6 +227,8 @@ public abstract class L2GameServerPacket extends WritablePacket<GameClient> impl
         buffer.putInt(item.getShadowLifeTime());
         buffer.putInt(item.getTemporalLifeTime());
         buffer.put((byte) (!item.isBlocked() ? 0x01 : 0x00));
+        buffer.put((byte) 0x00); // 140 protocol
+        buffer.put((byte) 0x00); // 140 protocol
 
         if ((flags & IS_AUGMENTED) == IS_AUGMENTED) {
             buffer.putInt(item.getVariation1Id());

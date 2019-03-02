@@ -8,14 +8,15 @@ import java.nio.ByteBuffer;
 
 public class GMViewItemListPacket extends L2GameServerPacket
 {
+	private final int sendType;
 	private int _size;
 	private ItemInstance[] _items;
 	private int _limit;
 	private String _name;
 	private Player _player;
 
-	public GMViewItemListPacket(Player cha, ItemInstance[] items, int size)
-	{
+	public GMViewItemListPacket(int sendType, Player cha, ItemInstance[] items, int size) {
+		this.sendType = sendType;
 		_size = size;
 		_items = items;
 		_name = cha.getName();
@@ -26,11 +27,15 @@ public class GMViewItemListPacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		writeString(_name, buffer);
-		buffer.putInt(_limit); //c4?
-		buffer.putShort((short) 1); // show window ??
+		buffer.put((byte) sendType);
+		if(sendType == 2) {
+			buffer.putInt(_size);
+		} else {
+			writeString(_name, buffer);
+			buffer.putInt(_limit); //c4?
+		}
 
-		buffer.putShort((short) _size);
+		buffer.putInt(_size);
 		for(ItemInstance temp : _items)
 		{
 			if(!temp.getTemplate().isQuest())

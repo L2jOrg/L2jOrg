@@ -46,7 +46,9 @@ public class InventoryUpdatePacket extends L2GameServerPacket
 	@Override
 	protected final void writeImpl(GameClient client, ByteBuffer buffer)
 	{
-		buffer.putShort((short) _items.size());
+		buffer.put((byte) 0x00); // 140
+		buffer.putInt(0x00); // 140
+		buffer.putInt(_items.size());
 		for(ItemInfo temp : _items)
 		{
 			buffer.putShort((short) temp.getLastChange());
