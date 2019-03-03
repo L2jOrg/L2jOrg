@@ -25,7 +25,7 @@ public enum ServerPacketOpcodes
 
 	/*0x10*/	CharacterCreateFailPacket,
 	/*0x11*/	ItemListPacket,
-	/*0x12*/	SunRisePacket,
+	/*0x12*/	SunRisePacket ,
 	/*0x13*/	SunSetPacket,
 	/*0x14*/	TradeStartPacket,
 	/*0x15*/	TradeStartOkPacket,

@@ -246,7 +246,7 @@ public class NpcInfoPacket extends AbstractMaskPacket<NpcInfoType>
 		if(_clanId > 0)
 			addComponentType(NpcInfoType.CLAN);
 
-		addComponentType(NpcInfoType.UNKNOWN8);
+		addComponentType(NpcInfoType.COLOR_EFFECT);
 
 		if(_creature.isInCombat())
 			_statusMask |= IS_IN_COMBAT;
@@ -351,7 +351,7 @@ public class NpcInfoPacket extends AbstractMaskPacket<NpcInfoType>
 			buffer.putInt(_loc.h);
 
 		if(containsMask(NpcInfoType.UNKNOWN2))
-			buffer.putInt(0x00); // Unknown
+			buffer.putInt(0x02); // Unknown
 
 		if(containsMask(NpcInfoType.ATK_CAST_SPEED))
 		{
@@ -393,10 +393,10 @@ public class NpcInfoPacket extends AbstractMaskPacket<NpcInfoType>
 		if(containsMask(NpcInfoType.CLONE))
 			buffer.putInt(0x00); // Player ObjectId with Decoy
 
-		if(containsMask(NpcInfoType.UNKNOWN8))
+		if(containsMask(NpcInfoType.COLOR_EFFECT))
 		{
 			// No visual effect
-			buffer.putInt(0x00); // Unknown
+			buffer.putInt(0x00); // color effect
 		}
 
 		if(containsMask(NpcInfoType.DISPLAY_EFFECT))
@@ -438,7 +438,7 @@ public class NpcInfoPacket extends AbstractMaskPacket<NpcInfoType>
 		if(containsMask(NpcInfoType.PVP_FLAG))
 			buffer.put((byte)_pvpFlag); // PVP flag
 
-		if(containsMask(NpcInfoType.NAME_COLOR))
+		if(containsMask(NpcInfoType.REPUTATION))
 			buffer.putInt(0x00); // Name color
 
 		if(containsMask(NpcInfoType.CLAN))

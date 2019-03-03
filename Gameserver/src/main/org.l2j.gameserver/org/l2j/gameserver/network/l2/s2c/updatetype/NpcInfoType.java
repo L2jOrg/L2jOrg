@@ -27,7 +27,7 @@ public enum NpcInfoType implements IUpdateTypeComponent
 	ENCHANT(0x10, 4),
 	FLYING(0x11, 4),
 	CLONE(0x12, 4),
-	UNKNOWN8(0x13, 4),
+	COLOR_EFFECT(0x13, 4),
 	DISPLAY_EFFECT(0x16, 4),
 	TRANSFORMATION(0x17, 4),
 	
@@ -44,7 +44,7 @@ public enum NpcInfoType implements IUpdateTypeComponent
 	// 4
 	TITLE_NPCSTRINGID(0x20, 4),
 	PVP_FLAG(0x21, 1),
-	NAME_COLOR(0x22, 4),
+	REPUTATION(0x22, 4),
 	CLAN(0x23, (5 * 4)),
 	ABNORMALS(0x24, 0),
 	VISUAL_STATE(0x25, 1);
